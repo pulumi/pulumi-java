@@ -25,6 +25,8 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.atLeastOnce;
 import static org.mockito.Mockito.verify;
 
+import io.pulumi.deployment.MocksTest;
+
 class StackTest {
 
     private static class ValidStack extends Stack {
@@ -101,8 +103,9 @@ class StackTest {
 
     private <T extends Stack> Tuple2<T, Map<String, Optional<Object>>> run(Supplier<T> factory) {
         var mock = DeploymentMockBuilder.builder()
-                .setOptions(new TestOptions("TestProject", "TestStack"))
-                .setSpyGlobalInstance();
+            .setMocks(new MocksTest.MyMocks())
+            .setOptions(new TestOptions("TestProject", "TestStack"))
+            .setSpyGlobalInstance();
 
         var stack = factory.get();
         Internal.from(stack).registerPropertyOutputs();

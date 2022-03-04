@@ -5,6 +5,8 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+import io.pulumi.deployment.MocksTest;
+
 import java.util.concurrent.CompletableFuture;
 
 import static io.pulumi.deployment.internal.DeploymentTests.*;
@@ -17,8 +19,9 @@ public class OutputsNormalTest {
     @BeforeAll
     public static void mockSetup() {
         mock = DeploymentMockBuilder.builder()
-                .setOptions(new TestOptions(false))
-                .setMockGlobalInstance();
+            .setMocks(new MocksTest.MyMocks())
+            .setOptions(new TestOptions(false))
+            .setMockGlobalInstance();
     }
 
     @AfterAll
