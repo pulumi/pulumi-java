@@ -49,7 +49,11 @@ public final class InputOutputData<T> implements Copyable<InputOutputData<T>> {
 
     private InputOutputData(ImmutableSet<Resource> resources, T value, boolean isKnown, boolean isSecret) {
         this.resources = Objects.requireNonNull(resources);
-        this.value = Objects.requireNonNull(value);
+        if (isKnown) {
+            this.value = Objects.requireNonNull(value);
+        } else {
+            this.value = value;
+        }
         this.known = isKnown; // can be true even with value == null (when empty)
         this.secret = isSecret;
     }
@@ -323,16 +327,22 @@ public final class InputOutputData<T> implements Copyable<InputOutputData<T>> {
 
         public Builder(ImmutableSet.Builder<Resource> resources, T value, boolean isKnown, boolean isSecret) {
             this.resources = Objects.requireNonNull(resources);
-            this.value = Objects.requireNonNull(value);
             this.isKnown = isKnown;
+            if (isKnown) {
+                this.value = Objects.requireNonNull(value);
+            } else {
+                this.value = null;
+            }
             this.isSecret = isSecret;
         }
 
         @CanIgnoreReturnValue
         public <E> Builder<T> accumulate(InputOutputData<E> data, BiFunction<T, E, T> reduce) {
             this.resources = this.resources.addAll(data.resources);
-            this.value = reduce.apply(this.value, data.value);
             this.isKnown = this.isKnown && data.known;
+            if (this.isKnown) {
+                this.value = reduce.apply(this.value, data.value);
+            }
             this.isSecret = this.isSecret || data.secret;
             return this;
         }
@@ -344,10 +354,15 @@ public final class InputOutputData<T> implements Copyable<InputOutputData<T>> {
         }
 
         public <U, R> Builder<R> transform(InputOutputData<U> data, BiFunction<T, U, R> reduce) {
+            var isKnown = this.isKnown && data.known;
+            R value = null;
+            if (isKnown) {
+                value = reduce.apply(this.value, data.value);
+            }
             return new Builder<>(
                     this.resources.addAll(data.resources),
-                    reduce.apply(this.value, data.value),
-                    this.isKnown && data.known,
+                    value,
+                    isKnown,
                     this.isSecret || data.secret
             );
         }
@@ -366,4 +381,3 @@ public final class InputOutputData<T> implements Copyable<InputOutputData<T>> {
         }
     }
 }
-
