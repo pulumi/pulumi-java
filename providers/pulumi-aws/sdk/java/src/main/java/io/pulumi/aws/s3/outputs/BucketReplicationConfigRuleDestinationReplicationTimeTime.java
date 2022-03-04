@@ -23,7 +23,7 @@ public final class BucketReplicationConfigRuleDestinationReplicationTimeTime {
     /**
      * Time in minutes. Valid values: `15`.
      * 
-     */
+    */
     public Integer getMinutes() {
         return this.minutes;
     }

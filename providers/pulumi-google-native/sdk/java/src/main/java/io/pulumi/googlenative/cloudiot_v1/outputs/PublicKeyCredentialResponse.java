@@ -31,14 +31,14 @@ public final class PublicKeyCredentialResponse {
     /**
      * The format of the key.
      * 
-     */
+    */
     public String getFormat() {
         return this.format;
     }
     /**
      * The key data.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }

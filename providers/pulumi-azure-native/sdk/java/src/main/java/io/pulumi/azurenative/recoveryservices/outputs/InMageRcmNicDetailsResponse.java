@@ -108,91 +108,91 @@ public final class InMageRcmNicDetailsResponse {
     /**
      * A value indicating whether this is the primary NIC.
      * 
-     */
+    */
     public String getIsPrimaryNic() {
         return this.isPrimaryNic;
     }
     /**
      * A value indicating whether this NIC is selected for failover.
      * 
-     */
+    */
     public String getIsSelectedForFailover() {
         return this.isSelectedForFailover;
     }
     /**
      * The NIC Id.
      * 
-     */
+    */
     public String getNicId() {
         return this.nicId;
     }
     /**
      * The source IP address.
      * 
-     */
+    */
     public String getSourceIPAddress() {
         return this.sourceIPAddress;
     }
     /**
      * The source IP address type.
      * 
-     */
+    */
     public String getSourceIPAddressType() {
         return this.sourceIPAddressType;
     }
     /**
      * Source network Id.
      * 
-     */
+    */
     public String getSourceNetworkId() {
         return this.sourceNetworkId;
     }
     /**
      * Source subnet name.
      * 
-     */
+    */
     public String getSourceSubnetName() {
         return this.sourceSubnetName;
     }
     /**
      * The target IP address.
      * 
-     */
+    */
     public String getTargetIPAddress() {
         return this.targetIPAddress;
     }
     /**
      * The target IP address type.
      * 
-     */
+    */
     public String getTargetIPAddressType() {
         return this.targetIPAddressType;
     }
     /**
      * Target subnet name.
      * 
-     */
+    */
     public String getTargetSubnetName() {
         return this.targetSubnetName;
     }
     /**
      * The test IP address.
      * 
-     */
+    */
     public String getTestIPAddress() {
         return this.testIPAddress;
     }
     /**
      * The test IP address type.
      * 
-     */
+    */
     public String getTestIPAddressType() {
         return this.testIPAddressType;
     }
     /**
      * Test subnet name.
      * 
-     */
+    */
     public String getTestSubnetName() {
         return this.testSubnetName;
     }

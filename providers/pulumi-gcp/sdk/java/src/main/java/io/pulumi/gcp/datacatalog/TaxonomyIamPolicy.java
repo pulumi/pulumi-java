@@ -124,6 +124,22 @@ public class TaxonomyIamPolicy extends io.pulumi.resources.CustomResource {
         return this.taxonomy;
     }
 
+    public interface BuilderApplicator {
+        public void apply(TaxonomyIamPolicyArgs.Builder a);
+    }
+    private static io.pulumi.gcp.datacatalog.TaxonomyIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.datacatalog.TaxonomyIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public TaxonomyIamPolicy(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

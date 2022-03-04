@@ -31,14 +31,14 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecRespo
     /**
      * Must be specified if type is `DOUBLE`. Maximum value of the parameter.
      * 
-     */
+    */
     public Double getMaxValue() {
         return this.maxValue;
     }
     /**
      * Must be specified if type is `DOUBLE`. Minimum value of the parameter.
      * 
-     */
+    */
     public Double getMinValue() {
         return this.minValue;
     }

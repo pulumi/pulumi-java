@@ -59,35 +59,35 @@ public final class HttpRequestResponse {
     /**
      * Gets or sets the authentication method of the request.
      * 
-     */
+    */
     public Optional<Object> getAuthentication() {
         return Optional.ofNullable(this.authentication);
     }
     /**
      * Gets or sets the request body.
      * 
-     */
+    */
     public Optional<String> getBody() {
         return Optional.ofNullable(this.body);
     }
     /**
      * Gets or sets the headers.
      * 
-     */
+    */
     public Map<String,String> getHeaders() {
         return this.headers == null ? Map.of() : this.headers;
     }
     /**
      * Gets or sets the method of the request.
      * 
-     */
+    */
     public Optional<String> getMethod() {
         return Optional.ofNullable(this.method);
     }
     /**
      * Gets or sets the URI of the request.
      * 
-     */
+    */
     public Optional<String> getUri() {
         return Optional.ofNullable(this.uri);
     }

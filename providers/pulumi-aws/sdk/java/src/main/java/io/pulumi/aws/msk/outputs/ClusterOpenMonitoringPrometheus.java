@@ -34,14 +34,14 @@ public final class ClusterOpenMonitoringPrometheus {
     /**
      * Configuration block for JMX Exporter. See below.
      * 
-     */
+    */
     public Optional<ClusterOpenMonitoringPrometheusJmxExporter> getJmxExporter() {
         return Optional.ofNullable(this.jmxExporter);
     }
     /**
      * Configuration block for Node Exporter. See below.
      * 
-     */
+    */
     public Optional<ClusterOpenMonitoringPrometheusNodeExporter> getNodeExporter() {
         return Optional.ofNullable(this.nodeExporter);
     }

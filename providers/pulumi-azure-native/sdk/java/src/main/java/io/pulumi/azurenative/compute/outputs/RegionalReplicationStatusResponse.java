@@ -46,28 +46,28 @@ public final class RegionalReplicationStatusResponse {
     /**
      * The details of the replication status.
      * 
-     */
+    */
     public String getDetails() {
         return this.details;
     }
     /**
      * It indicates progress of the replication job.
      * 
-     */
+    */
     public Integer getProgress() {
         return this.progress;
     }
     /**
      * The region to which the gallery image version is being replicated to.
      * 
-     */
+    */
     public String getRegion() {
         return this.region;
     }
     /**
      * This is the regional replication state.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }

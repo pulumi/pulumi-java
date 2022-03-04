@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetContainer {
-/**
- * Resource Type definition for AWS::Lightsail::Container
+    private GetContainer() {}
+    public interface BuilderApplicator {
+        public void apply(GetContainerArgs.Builder a);
+    }
+    private static GetContainerArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetContainerArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::Lightsail::Container
  * 
- */
+     */
+    public static CompletableFuture<GetContainerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::Lightsail::Container
+     * 
+     */
     public static CompletableFuture<GetContainerResult> invokeAsync(GetContainerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:lightsail:getContainer", TypeShape.of(GetContainerResult.class), args == null ? GetContainerArgs.Empty : args, Utilities.withVersion(options));
     }

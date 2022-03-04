@@ -34,14 +34,14 @@ public final class TableMagneticStoreWriteProperties {
     /**
      * A flag to enable magnetic store writes.
      * 
-     */
+    */
     public Optional<Boolean> getEnableMagneticStoreWrites() {
         return Optional.ofNullable(this.enableMagneticStoreWrites);
     }
     /**
      * The location to write error reports for records rejected asynchronously during magnetic store writes. See Magnetic Store Rejected Data Location below for more details.
      * 
-     */
+    */
     public Optional<TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocation> getMagneticStoreRejectedDataLocation() {
         return Optional.ofNullable(this.magneticStoreRejectedDataLocation);
     }

@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetScalingPlan {
-/**
- * Represents a scaling plan definition.
+    private GetScalingPlan() {}
+    public interface BuilderApplicator {
+        public void apply(GetScalingPlanArgs.Builder a);
+    }
+    private static GetScalingPlanArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetScalingPlanArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Represents a scaling plan definition.
  * API Version: 2021-02-01-preview.
  * 
- *
- * Represents a scaling plan definition.
+     *
+     * Represents a scaling plan definition.
  * 
- */
+     */
+    public static CompletableFuture<GetScalingPlanResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Represents a scaling plan definition.
+     * API Version: 2021-02-01-preview.
+     * 
+     *
+         * Represents a scaling plan definition.
+     * 
+     */
     public static CompletableFuture<GetScalingPlanResult> invokeAsync(GetScalingPlanArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:desktopvirtualization:getScalingPlan", TypeShape.of(GetScalingPlanResult.class), args == null ? GetScalingPlanArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -63,42 +63,42 @@ public final class GetWorkspaceResult {
     /**
      * The AMP Workspace alert manager definition data
      * 
-     */
+    */
     public Optional<String> getAlertManagerDefinition() {
         return Optional.ofNullable(this.alertManagerDefinition);
     }
     /**
      * AMP Workspace alias.
      * 
-     */
+    */
     public Optional<String> getAlias() {
         return Optional.ofNullable(this.alias);
     }
     /**
      * Workspace arn.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * AMP Workspace prometheus endpoint
      * 
-     */
+    */
     public Optional<String> getPrometheusEndpoint() {
         return Optional.ofNullable(this.prometheusEndpoint);
     }
     /**
      * An array of key-value pairs to apply to this resource.
      * 
-     */
+    */
     public List<WorkspaceTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * Required to identify a specific APS Workspace.
      * 
-     */
+    */
     public Optional<String> getWorkspaceId() {
         return Optional.ofNullable(this.workspaceId);
     }

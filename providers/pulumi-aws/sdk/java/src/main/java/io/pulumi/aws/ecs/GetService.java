@@ -13,19 +13,44 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetService {
-/**
- * The ECS Service data source allows access to details of a specific
+    private GetService() {}
+    public interface BuilderApplicator {
+        public void apply(GetServiceArgs.Builder a);
+    }
+    private static GetServiceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetServiceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The ECS Service data source allows access to details of a specific
  * Service within a AWS ECS Cluster.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getService.
+     *
+     * A collection of arguments for invoking getService.
  * 
- *
- * A collection of values returned by getService.
+     *
+     * A collection of values returned by getService.
  * 
- */
+     */
+    public static CompletableFuture<GetServiceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The ECS Service data source allows access to details of a specific
+     * Service within a AWS ECS Cluster.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getService.
+     * 
+     *
+         * A collection of values returned by getService.
+     * 
+     */
     public static CompletableFuture<GetServiceResult> invokeAsync(GetServiceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ecs/getService:getService", TypeShape.of(GetServiceResult.class), args == null ? GetServiceArgs.Empty : args, Utilities.withVersion(options));
     }

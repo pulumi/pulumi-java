@@ -41,14 +41,14 @@ public final class GuestPoliciesRecipeUpdateStepArchiveExtraction {
     /**
      * The id of the relevant artifact in the recipe.
      * 
-     */
+    */
     public String getArtifactId() {
         return this.artifactId;
     }
     /**
      * Directory to extract archive to. Defaults to / on Linux or C:\ on Windows.
      * 
-     */
+    */
     public Optional<String> getDestination() {
         return Optional.ofNullable(this.destination);
     }
@@ -56,7 +56,7 @@ public final class GuestPoliciesRecipeUpdateStepArchiveExtraction {
      * The type of the archive to extract.
      * Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZIP`.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

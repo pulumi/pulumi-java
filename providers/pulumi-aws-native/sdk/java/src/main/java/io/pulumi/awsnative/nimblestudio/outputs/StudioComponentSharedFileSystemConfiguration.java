@@ -54,35 +54,35 @@ public final class StudioComponentSharedFileSystemConfiguration {
     /**
      * <p>The endpoint of the shared file system that is accessed by the studio component resource.</p>
      * 
-     */
+    */
     public Optional<String> getEndpoint() {
         return Optional.ofNullable(this.endpoint);
     }
     /**
      * <p>The unique identifier for a file system.</p>
      * 
-     */
+    */
     public Optional<String> getFileSystemId() {
         return Optional.ofNullable(this.fileSystemId);
     }
     /**
      * <p>The mount location for a shared file system on a Linux virtual workstation.</p>
      * 
-     */
+    */
     public Optional<String> getLinuxMountPoint() {
         return Optional.ofNullable(this.linuxMountPoint);
     }
     /**
      * <p>The name of the file share.</p>
      * 
-     */
+    */
     public Optional<String> getShareName() {
         return Optional.ofNullable(this.shareName);
     }
     /**
      * <p>The mount location for a shared file system on a Windows virtual workstation.</p>
      * 
-     */
+    */
     public Optional<String> getWindowsMountDrive() {
         return Optional.ofNullable(this.windowsMountDrive);
     }

@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetQueryPack {
-/**
- * An Log Analytics QueryPack definition.
+    private GetQueryPack() {}
+    public interface BuilderApplicator {
+        public void apply(GetQueryPackArgs.Builder a);
+    }
+    private static GetQueryPackArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetQueryPackArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An Log Analytics QueryPack definition.
  * API Version: 2019-09-01-preview.
  * 
- *
- * An Log Analytics QueryPack definition.
+     *
+     * An Log Analytics QueryPack definition.
  * 
- */
+     */
+    public static CompletableFuture<GetQueryPackResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An Log Analytics QueryPack definition.
+     * API Version: 2019-09-01-preview.
+     * 
+     *
+         * An Log Analytics QueryPack definition.
+     * 
+     */
     public static CompletableFuture<GetQueryPackResult> invokeAsync(GetQueryPackArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:operationalinsights:getQueryPack", TypeShape.of(GetQueryPackResult.class), args == null ? GetQueryPackArgs.Empty : args, Utilities.withVersion(options));
     }

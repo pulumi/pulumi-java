@@ -82,7 +82,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRule {
     /**
      * A human-readable description of the resource.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
@@ -90,7 +90,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRule {
      * The header actions, including adding & removing headers, for requests that match this route.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAction> getHeaderAction() {
         return Optional.ofNullable(this.headerAction);
     }
@@ -99,7 +99,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRule {
      * within a given matchRule have AND semantics. All predicates within a matchRule must match for the request to match the rule.
      * Structure is documented below.
      * 
-     */
+    */
     public List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRule> getMatchRules() {
         return this.matchRules;
     }
@@ -107,7 +107,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRule {
      * The Origin resource that requests to this route should fetch from when a matching response is not in cache. Origins can be defined as short names ("my-origin") or fully-qualified resource URLs - e.g. "networkservices.googleapis.com/projects/my-project/global/edgecacheorigins/my-origin"
      * Only one of origin or urlRedirect can be set.
      * 
-     */
+    */
     public Optional<String> getOrigin() {
         return Optional.ofNullable(this.origin);
     }
@@ -117,7 +117,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRule {
      * Priority numbers can have gaps, which enable you to add or remove rules in the future without affecting the rest of the rules. For example, 1, 2, 3, 4, 5, 9, 12, 16 is a valid series of priority numbers
      * to which you could add rules numbered from 6 to 8, 10 to 11, and 13 to 15 in the future without any impact on existing rules.
      * 
-     */
+    */
     public String getPriority() {
         return this.priority;
     }
@@ -125,7 +125,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRule {
      * In response to a matching path, the routeAction performs advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request to the selected origin.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteAction> getRouteAction() {
         return Optional.ofNullable(this.routeAction);
     }
@@ -133,7 +133,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRule {
      * The URL redirect configuration for requests that match this route.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirect> getUrlRedirect() {
         return Optional.ofNullable(this.urlRedirect);
     }

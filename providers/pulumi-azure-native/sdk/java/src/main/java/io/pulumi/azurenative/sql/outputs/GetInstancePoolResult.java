@@ -85,63 +85,63 @@ public final class GetInstancePoolResult {
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The license type. Possible values are 'LicenseIncluded' (price for SQL license is included) and 'BasePrice' (without SQL license price).
      * 
-     */
+    */
     public String getLicenseType() {
         return this.licenseType;
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The name and tier of the SKU.
      * 
-     */
+    */
     public Optional<SkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Resource ID of the subnet to place this instance pool in.
      * 
-     */
+    */
     public String getSubnetId() {
         return this.subnetId;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Count of vCores belonging to this instance pool.
      * 
-     */
+    */
     public Integer getVCores() {
         return this.vCores;
     }

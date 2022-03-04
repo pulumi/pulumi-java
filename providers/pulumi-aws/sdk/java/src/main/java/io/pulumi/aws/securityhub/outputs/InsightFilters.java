@@ -722,616 +722,616 @@ public final class InsightFilters {
     /**
      * AWS account ID that a finding is generated in. See String_Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersAwsAccountId> getAwsAccountIds() {
         return this.awsAccountIds == null ? List.of() : this.awsAccountIds;
     }
     /**
      * The name of the findings provider (company) that owns the solution (product) that generates findings. See String_Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersCompanyName> getCompanyNames() {
         return this.companyNames == null ? List.of() : this.companyNames;
     }
     /**
      * Exclusive to findings that are generated as the result of a check run against a specific rule in a supported standard, such as CIS AWS Foundations. Contains security standard-related finding details. See String Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersComplianceStatus> getComplianceStatuses() {
         return this.complianceStatuses == null ? List.of() : this.complianceStatuses;
     }
     /**
      * A finding's confidence. Confidence is defined as the likelihood that a finding accurately identifies the behavior or issue that it was intended to identify. Confidence is scored on a 0-100 basis using a ratio scale, where 0 means zero percent confidence and 100 means 100 percent confidence. See Number Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersConfidence> getConfidences() {
         return this.confidences == null ? List.of() : this.confidences;
     }
     /**
      * An ISO8601-formatted timestamp that indicates when the security-findings provider captured the potential security issue that a finding captured. See Date Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersCreatedAt> getCreatedAts() {
         return this.createdAts == null ? List.of() : this.createdAts;
     }
     /**
      * The level of importance assigned to the resources associated with the finding. A score of 0 means that the underlying resources have no criticality, and a score of 100 is reserved for the most critical resources. See Number Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersCriticality> getCriticalities() {
         return this.criticalities == null ? List.of() : this.criticalities;
     }
     /**
      * A finding's description. See String Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersDescription> getDescriptions() {
         return this.descriptions == null ? List.of() : this.descriptions;
     }
     /**
      * The finding provider value for the finding confidence. Confidence is defined as the likelihood that a finding accurately identifies the behavior or issue that it was intended to identify. Confidence is scored on a 0-100 basis using a ratio scale, where 0 means zero percent confidence and 100 means 100 percent confidence. See Number Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersFindingProviderFieldsConfidence> getFindingProviderFieldsConfidences() {
         return this.findingProviderFieldsConfidences == null ? List.of() : this.findingProviderFieldsConfidences;
     }
     /**
      * The finding provider value for the level of importance assigned to the resources associated with the findings. A score of 0 means that the underlying resources have no criticality, and a score of 100 is reserved for the most critical resources. See Number Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersFindingProviderFieldsCriticality> getFindingProviderFieldsCriticalities() {
         return this.findingProviderFieldsCriticalities == null ? List.of() : this.findingProviderFieldsCriticalities;
     }
     /**
      * The finding identifier of a related finding that is identified by the finding provider. See String Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersFindingProviderFieldsRelatedFindingsId> getFindingProviderFieldsRelatedFindingsIds() {
         return this.findingProviderFieldsRelatedFindingsIds == null ? List.of() : this.findingProviderFieldsRelatedFindingsIds;
     }
     /**
      * The ARN of the solution that generated a related finding that is identified by the finding provider. See String Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersFindingProviderFieldsRelatedFindingsProductArn> getFindingProviderFieldsRelatedFindingsProductArns() {
         return this.findingProviderFieldsRelatedFindingsProductArns == null ? List.of() : this.findingProviderFieldsRelatedFindingsProductArns;
     }
     /**
      * The finding provider value for the severity label. See String Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersFindingProviderFieldsSeverityLabel> getFindingProviderFieldsSeverityLabels() {
         return this.findingProviderFieldsSeverityLabels == null ? List.of() : this.findingProviderFieldsSeverityLabels;
     }
     /**
      * The finding provider's original value for the severity. See String Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersFindingProviderFieldsSeverityOriginal> getFindingProviderFieldsSeverityOriginals() {
         return this.findingProviderFieldsSeverityOriginals == null ? List.of() : this.findingProviderFieldsSeverityOriginals;
     }
     /**
      * One or more finding types that the finding provider assigned to the finding. Uses the format of `namespace/category/classifier` that classify a finding. Valid namespace values include: `Software and Configuration Checks`, `TTPs`, `Effects`, `Unusual Behaviors`, and `Sensitive Data Identifications`. See String Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersFindingProviderFieldsType> getFindingProviderFieldsTypes() {
         return this.findingProviderFieldsTypes == null ? List.of() : this.findingProviderFieldsTypes;
     }
     /**
      * An ISO8601-formatted timestamp that indicates when the security-findings provider first observed the potential security issue that a finding captured. See Date Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersFirstObservedAt> getFirstObservedAts() {
         return this.firstObservedAts == null ? List.of() : this.firstObservedAts;
     }
     /**
      * The identifier for the solution-specific component (a discrete unit of logic) that generated a finding. See String Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersGeneratorId> getGeneratorIds() {
         return this.generatorIds == null ? List.of() : this.generatorIds;
     }
     /**
      * The security findings provider-specific identifier for a finding. See String Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersId> getIds() {
         return this.ids == null ? List.of() : this.ids;
     }
     /**
      * A keyword for a finding. See Keyword Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersKeyword> getKeywords() {
         return this.keywords == null ? List.of() : this.keywords;
     }
     /**
      * An ISO8601-formatted timestamp that indicates when the security-findings provider most recently observed the potential security issue that a finding captured. See Date Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersLastObservedAt> getLastObservedAts() {
         return this.lastObservedAts == null ? List.of() : this.lastObservedAts;
     }
     /**
      * The name of the malware that was observed. See String Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersMalwareName> getMalwareNames() {
         return this.malwareNames == null ? List.of() : this.malwareNames;
     }
     /**
      * The filesystem path of the malware that was observed. See String Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersMalwarePath> getMalwarePaths() {
         return this.malwarePaths == null ? List.of() : this.malwarePaths;
     }
     /**
      * The state of the malware that was observed. See String Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersMalwareState> getMalwareStates() {
         return this.malwareStates == null ? List.of() : this.malwareStates;
     }
     /**
      * The type of the malware that was observed. See String Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersMalwareType> getMalwareTypes() {
         return this.malwareTypes == null ? List.of() : this.malwareTypes;
     }
     /**
      * The destination domain of network-related information about a finding. See String Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersNetworkDestinationDomain> getNetworkDestinationDomains() {
         return this.networkDestinationDomains == null ? List.of() : this.networkDestinationDomains;
     }
     /**
      * The destination IPv4 address of network-related information about a finding. See Ip Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersNetworkDestinationIpv4> getNetworkDestinationIpv4s() {
         return this.networkDestinationIpv4s == null ? List.of() : this.networkDestinationIpv4s;
     }
     /**
      * The destination IPv6 address of network-related information about a finding. See Ip Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersNetworkDestinationIpv6> getNetworkDestinationIpv6s() {
         return this.networkDestinationIpv6s == null ? List.of() : this.networkDestinationIpv6s;
     }
     /**
      * The destination port of network-related information about a finding. See Number Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersNetworkDestinationPort> getNetworkDestinationPorts() {
         return this.networkDestinationPorts == null ? List.of() : this.networkDestinationPorts;
     }
     /**
      * Indicates the direction of network traffic associated with a finding. See String Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersNetworkDirection> getNetworkDirections() {
         return this.networkDirections == null ? List.of() : this.networkDirections;
     }
     /**
      * The protocol of network-related information about a finding. See String Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersNetworkProtocol> getNetworkProtocols() {
         return this.networkProtocols == null ? List.of() : this.networkProtocols;
     }
     /**
      * The source domain of network-related information about a finding. See String Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersNetworkSourceDomain> getNetworkSourceDomains() {
         return this.networkSourceDomains == null ? List.of() : this.networkSourceDomains;
     }
     /**
      * The source IPv4 address of network-related information about a finding. See Ip Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersNetworkSourceIpv4> getNetworkSourceIpv4s() {
         return this.networkSourceIpv4s == null ? List.of() : this.networkSourceIpv4s;
     }
     /**
      * The source IPv6 address of network-related information about a finding. See Ip Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersNetworkSourceIpv6> getNetworkSourceIpv6s() {
         return this.networkSourceIpv6s == null ? List.of() : this.networkSourceIpv6s;
     }
     /**
      * The source media access control (MAC) address of network-related information about a finding. See String Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersNetworkSourceMac> getNetworkSourceMacs() {
         return this.networkSourceMacs == null ? List.of() : this.networkSourceMacs;
     }
     /**
      * The source port of network-related information about a finding. See Number Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersNetworkSourcePort> getNetworkSourcePorts() {
         return this.networkSourcePorts == null ? List.of() : this.networkSourcePorts;
     }
     /**
      * The text of a note. See String Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersNoteText> getNoteTexts() {
         return this.noteTexts == null ? List.of() : this.noteTexts;
     }
     /**
      * The timestamp of when the note was updated. See Date Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersNoteUpdatedAt> getNoteUpdatedAts() {
         return this.noteUpdatedAts == null ? List.of() : this.noteUpdatedAts;
     }
     /**
      * The principal that created a note. See String Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersNoteUpdatedBy> getNoteUpdatedBies() {
         return this.noteUpdatedBies == null ? List.of() : this.noteUpdatedBies;
     }
     /**
      * The date/time that the process was launched. See Date Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersProcessLaunchedAt> getProcessLaunchedAts() {
         return this.processLaunchedAts == null ? List.of() : this.processLaunchedAts;
     }
     /**
      * The name of the process. See String Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersProcessName> getProcessNames() {
         return this.processNames == null ? List.of() : this.processNames;
     }
     /**
      * The parent process ID. See Number Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersProcessParentPid> getProcessParentPids() {
         return this.processParentPids == null ? List.of() : this.processParentPids;
     }
     /**
      * The path to the process executable. See String Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersProcessPath> getProcessPaths() {
         return this.processPaths == null ? List.of() : this.processPaths;
     }
     /**
      * The process ID. See Number Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersProcessPid> getProcessPids() {
         return this.processPids == null ? List.of() : this.processPids;
     }
     /**
      * The date/time that the process was terminated. See Date Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersProcessTerminatedAt> getProcessTerminatedAts() {
         return this.processTerminatedAts == null ? List.of() : this.processTerminatedAts;
     }
     /**
      * The ARN generated by Security Hub that uniquely identifies a third-party company (security findings provider) after this provider's product (solution that generates findings) is registered with Security Hub. See String Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersProductArn> getProductArns() {
         return this.productArns == null ? List.of() : this.productArns;
     }
     /**
      * A data type where security-findings providers can include additional solution-specific details that aren't part of the defined `AwsSecurityFinding` format. See Map Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersProductField> getProductFields() {
         return this.productFields == null ? List.of() : this.productFields;
     }
     /**
      * The name of the solution (product) that generates findings. See String Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersProductName> getProductNames() {
         return this.productNames == null ? List.of() : this.productNames;
     }
     /**
      * The recommendation of what to do about the issue described in a finding. See String Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersRecommendationText> getRecommendationTexts() {
         return this.recommendationTexts == null ? List.of() : this.recommendationTexts;
     }
     /**
      * The updated record state for the finding. See String Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersRecordState> getRecordStates() {
         return this.recordStates == null ? List.of() : this.recordStates;
     }
     /**
      * The solution-generated identifier for a related finding. See String Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersRelatedFindingsId> getRelatedFindingsIds() {
         return this.relatedFindingsIds == null ? List.of() : this.relatedFindingsIds;
     }
     /**
      * The ARN of the solution that generated a related finding. See String Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersRelatedFindingsProductArn> getRelatedFindingsProductArns() {
         return this.relatedFindingsProductArns == null ? List.of() : this.relatedFindingsProductArns;
     }
     /**
      * The IAM profile ARN of the instance. See String Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersResourceAwsEc2InstanceIamInstanceProfileArn> getResourceAwsEc2InstanceIamInstanceProfileArns() {
         return this.resourceAwsEc2InstanceIamInstanceProfileArns == null ? List.of() : this.resourceAwsEc2InstanceIamInstanceProfileArns;
     }
     /**
      * The Amazon Machine Image (AMI) ID of the instance. See String Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersResourceAwsEc2InstanceImageId> getResourceAwsEc2InstanceImageIds() {
         return this.resourceAwsEc2InstanceImageIds == null ? List.of() : this.resourceAwsEc2InstanceImageIds;
     }
     /**
      * The IPv4 addresses associated with the instance. See Ip Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersResourceAwsEc2InstanceIpv4Address> getResourceAwsEc2InstanceIpv4Addresses() {
         return this.resourceAwsEc2InstanceIpv4Addresses == null ? List.of() : this.resourceAwsEc2InstanceIpv4Addresses;
     }
     /**
      * The IPv6 addresses associated with the instance. See Ip Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersResourceAwsEc2InstanceIpv6Address> getResourceAwsEc2InstanceIpv6Addresses() {
         return this.resourceAwsEc2InstanceIpv6Addresses == null ? List.of() : this.resourceAwsEc2InstanceIpv6Addresses;
     }
     /**
      * The key name associated with the instance. See String Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersResourceAwsEc2InstanceKeyName> getResourceAwsEc2InstanceKeyNames() {
         return this.resourceAwsEc2InstanceKeyNames == null ? List.of() : this.resourceAwsEc2InstanceKeyNames;
     }
     /**
      * The date and time the instance was launched. See Date Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersResourceAwsEc2InstanceLaunchedAt> getResourceAwsEc2InstanceLaunchedAts() {
         return this.resourceAwsEc2InstanceLaunchedAts == null ? List.of() : this.resourceAwsEc2InstanceLaunchedAts;
     }
     /**
      * The identifier of the subnet that the instance was launched in. See String Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersResourceAwsEc2InstanceSubnetId> getResourceAwsEc2InstanceSubnetIds() {
         return this.resourceAwsEc2InstanceSubnetIds == null ? List.of() : this.resourceAwsEc2InstanceSubnetIds;
     }
     /**
      * The instance type of the instance. See String Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersResourceAwsEc2InstanceType> getResourceAwsEc2InstanceTypes() {
         return this.resourceAwsEc2InstanceTypes == null ? List.of() : this.resourceAwsEc2InstanceTypes;
     }
     /**
      * The identifier of the VPC that the instance was launched in. See String Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersResourceAwsEc2InstanceVpcId> getResourceAwsEc2InstanceVpcIds() {
         return this.resourceAwsEc2InstanceVpcIds == null ? List.of() : this.resourceAwsEc2InstanceVpcIds;
     }
     /**
      * The creation date/time of the IAM access key related to a finding. See Date Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersResourceAwsIamAccessKeyCreatedAt> getResourceAwsIamAccessKeyCreatedAts() {
         return this.resourceAwsIamAccessKeyCreatedAts == null ? List.of() : this.resourceAwsIamAccessKeyCreatedAts;
     }
     /**
      * The status of the IAM access key related to a finding. See String Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersResourceAwsIamAccessKeyStatus> getResourceAwsIamAccessKeyStatuses() {
         return this.resourceAwsIamAccessKeyStatuses == null ? List.of() : this.resourceAwsIamAccessKeyStatuses;
     }
     /**
      * The user associated with the IAM access key related to a finding. See String Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersResourceAwsIamAccessKeyUserName> getResourceAwsIamAccessKeyUserNames() {
         return this.resourceAwsIamAccessKeyUserNames == null ? List.of() : this.resourceAwsIamAccessKeyUserNames;
     }
     /**
      * The canonical user ID of the owner of the S3 bucket. See String Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersResourceAwsS3BucketOwnerId> getResourceAwsS3BucketOwnerIds() {
         return this.resourceAwsS3BucketOwnerIds == null ? List.of() : this.resourceAwsS3BucketOwnerIds;
     }
     /**
      * The display name of the owner of the S3 bucket. See String Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersResourceAwsS3BucketOwnerName> getResourceAwsS3BucketOwnerNames() {
         return this.resourceAwsS3BucketOwnerNames == null ? List.of() : this.resourceAwsS3BucketOwnerNames;
     }
     /**
      * The identifier of the image related to a finding. See String Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersResourceContainerImageId> getResourceContainerImageIds() {
         return this.resourceContainerImageIds == null ? List.of() : this.resourceContainerImageIds;
     }
     /**
      * The name of the image related to a finding. See String Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersResourceContainerImageName> getResourceContainerImageNames() {
         return this.resourceContainerImageNames == null ? List.of() : this.resourceContainerImageNames;
     }
     /**
      * The date/time that the container was started. See Date Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersResourceContainerLaunchedAt> getResourceContainerLaunchedAts() {
         return this.resourceContainerLaunchedAts == null ? List.of() : this.resourceContainerLaunchedAts;
     }
     /**
      * The name of the container related to a finding. See String Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersResourceContainerName> getResourceContainerNames() {
         return this.resourceContainerNames == null ? List.of() : this.resourceContainerNames;
     }
     /**
      * The details of a resource that doesn't have a specific subfield for the resource type defined. See Map Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersResourceDetailsOther> getResourceDetailsOthers() {
         return this.resourceDetailsOthers == null ? List.of() : this.resourceDetailsOthers;
     }
     /**
      * The canonical identifier for the given resource type. See String Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersResourceId> getResourceIds() {
         return this.resourceIds == null ? List.of() : this.resourceIds;
     }
     /**
      * The canonical AWS partition name that the Region is assigned to. See String Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersResourcePartition> getResourcePartitions() {
         return this.resourcePartitions == null ? List.of() : this.resourcePartitions;
     }
     /**
      * The canonical AWS external Region name where this resource is located. See String Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersResourceRegion> getResourceRegions() {
         return this.resourceRegions == null ? List.of() : this.resourceRegions;
     }
     /**
      * A list of AWS tags associated with a resource at the time the finding was processed. See Map Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersResourceTag> getResourceTags() {
         return this.resourceTags == null ? List.of() : this.resourceTags;
     }
     /**
      * Specifies the type of the resource that details are provided for. See String Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersResourceType> getResourceTypes() {
         return this.resourceTypes == null ? List.of() : this.resourceTypes;
     }
     /**
      * The label of a finding's severity. See String Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersSeverityLabel> getSeverityLabels() {
         return this.severityLabels == null ? List.of() : this.severityLabels;
     }
     /**
      * A URL that links to a page about the current finding in the security-findings provider's solution. See String Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersSourceUrl> getSourceUrls() {
         return this.sourceUrls == null ? List.of() : this.sourceUrls;
     }
     /**
      * The category of a threat intelligence indicator. See String Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersThreatIntelIndicatorCategory> getThreatIntelIndicatorCategories() {
         return this.threatIntelIndicatorCategories == null ? List.of() : this.threatIntelIndicatorCategories;
     }
     /**
      * The date/time of the last observation of a threat intelligence indicator. See Date Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersThreatIntelIndicatorLastObservedAt> getThreatIntelIndicatorLastObservedAts() {
         return this.threatIntelIndicatorLastObservedAts == null ? List.of() : this.threatIntelIndicatorLastObservedAts;
     }
     /**
      * The URL for more details from the source of the threat intelligence. See String Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersThreatIntelIndicatorSourceUrl> getThreatIntelIndicatorSourceUrls() {
         return this.threatIntelIndicatorSourceUrls == null ? List.of() : this.threatIntelIndicatorSourceUrls;
     }
     /**
      * The source of the threat intelligence. See String Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersThreatIntelIndicatorSource> getThreatIntelIndicatorSources() {
         return this.threatIntelIndicatorSources == null ? List.of() : this.threatIntelIndicatorSources;
     }
     /**
      * The type of a threat intelligence indicator. See String Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersThreatIntelIndicatorType> getThreatIntelIndicatorTypes() {
         return this.threatIntelIndicatorTypes == null ? List.of() : this.threatIntelIndicatorTypes;
     }
     /**
      * The value of a threat intelligence indicator. See String Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersThreatIntelIndicatorValue> getThreatIntelIndicatorValues() {
         return this.threatIntelIndicatorValues == null ? List.of() : this.threatIntelIndicatorValues;
     }
     /**
      * A finding's title. See String Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersTitle> getTitles() {
         return this.titles == null ? List.of() : this.titles;
     }
     /**
      * A finding type in the format of `namespace/category/classifier` that classifies a finding. See String Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersType> getTypes() {
         return this.types == null ? List.of() : this.types;
     }
     /**
      * An ISO8601-formatted timestamp that indicates when the security-findings provider last updated the finding record. See Date Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersUpdatedAt> getUpdatedAts() {
         return this.updatedAts == null ? List.of() : this.updatedAts;
     }
     /**
      * A list of name/value string pairs associated with the finding. These are custom, user-defined fields added to a finding. See Map Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersUserDefinedValue> getUserDefinedValues() {
         return this.userDefinedValues == null ? List.of() : this.userDefinedValues;
     }
     /**
      * The veracity of a finding. See String Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersVerificationState> getVerificationStates() {
         return this.verificationStates == null ? List.of() : this.verificationStates;
     }
     /**
      * The status of the investigation into a finding. See Workflow Status Filter below for more details.
      * 
-     */
+    */
     public List<InsightFiltersWorkflowStatus> getWorkflowStatuses() {
         return this.workflowStatuses == null ? List.of() : this.workflowStatuses;
     }

@@ -33,7 +33,7 @@ public final class ClusterClusterConfigEndpointConfig {
      * The flag to enable http access to specific ports
      * on the cluster from external sources (aka Component Gateway). Defaults to false.
      * 
-     */
+    */
     public Boolean getEnableHttpPortAccess() {
         return this.enableHttpPortAccess;
     }

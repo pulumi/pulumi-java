@@ -46,28 +46,28 @@ public final class HybridConnectionConfigResponse {
     /**
      * Timestamp when this token will be expired.
      * 
-     */
+    */
     public Double getExpirationTime() {
         return this.expirationTime;
     }
     /**
      * Name of the connection
      * 
-     */
+    */
     public String getHybridConnectionName() {
         return this.hybridConnectionName;
     }
     /**
      * Name of the relay.
      * 
-     */
+    */
     public String getRelay() {
         return this.relay;
     }
     /**
      * Sender access token
      * 
-     */
+    */
     public String getToken() {
         return this.token;
     }

@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAndroidMAMPolicyByName {
-/**
- * Android Policy entity for Intune MAM.
+    private GetAndroidMAMPolicyByName() {}
+    public interface BuilderApplicator {
+        public void apply(GetAndroidMAMPolicyByNameArgs.Builder a);
+    }
+    private static GetAndroidMAMPolicyByNameArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAndroidMAMPolicyByNameArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Android Policy entity for Intune MAM.
  * API Version: 2015-01-14-preview.
  * 
- *
- * Android Policy entity for Intune MAM.
+     *
+     * Android Policy entity for Intune MAM.
  * 
- */
+     */
+    public static CompletableFuture<GetAndroidMAMPolicyByNameResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Android Policy entity for Intune MAM.
+     * API Version: 2015-01-14-preview.
+     * 
+     *
+         * Android Policy entity for Intune MAM.
+     * 
+     */
     public static CompletableFuture<GetAndroidMAMPolicyByNameResult> invokeAsync(GetAndroidMAMPolicyByNameArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:intune:getAndroidMAMPolicyByName", TypeShape.of(GetAndroidMAMPolicyByNameResult.class), args == null ? GetAndroidMAMPolicyByNameArgs.Empty : args, Utilities.withVersion(options));
     }

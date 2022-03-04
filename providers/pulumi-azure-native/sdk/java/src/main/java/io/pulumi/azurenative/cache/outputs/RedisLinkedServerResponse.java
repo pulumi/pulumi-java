@@ -23,7 +23,7 @@ public final class RedisLinkedServerResponse {
     /**
      * Linked server Id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }

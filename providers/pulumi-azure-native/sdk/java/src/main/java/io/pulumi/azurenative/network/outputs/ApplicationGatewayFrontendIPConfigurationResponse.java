@@ -90,70 +90,70 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse {
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Name of the frontend IP configuration that is unique within an Application Gateway.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * PrivateIPAddress of the network interface IP Configuration.
      * 
-     */
+    */
     public Optional<String> getPrivateIPAddress() {
         return Optional.ofNullable(this.privateIPAddress);
     }
     /**
      * The private IP address allocation method.
      * 
-     */
+    */
     public Optional<String> getPrivateIPAllocationMethod() {
         return Optional.ofNullable(this.privateIPAllocationMethod);
     }
     /**
      * Reference to the application gateway private link configuration.
      * 
-     */
+    */
     public Optional<SubResourceResponse> getPrivateLinkConfiguration() {
         return Optional.ofNullable(this.privateLinkConfiguration);
     }
     /**
      * The provisioning state of the frontend IP configuration resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Reference to the PublicIP resource.
      * 
-     */
+    */
     public Optional<SubResourceResponse> getPublicIPAddress() {
         return Optional.ofNullable(this.publicIPAddress);
     }
     /**
      * Reference to the subnet resource.
      * 
-     */
+    */
     public Optional<SubResourceResponse> getSubnet() {
         return Optional.ofNullable(this.subnet);
     }
     /**
      * Type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

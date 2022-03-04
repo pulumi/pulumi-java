@@ -123,98 +123,98 @@ public final class GetAssignmentResult {
     /**
      * ID of the published version of a blueprint definition.
      * 
-     */
+    */
     public Optional<String> getBlueprintId() {
         return Optional.ofNullable(this.blueprintId);
     }
     /**
      * Multi-line explain this resource.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * One-liner string explain this resource.
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * String Id used to locate any resource on Azure.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Managed identity for this blueprint assignment.
      * 
-     */
+    */
     public ManagedServiceIdentityResponse getIdentity() {
         return this.identity;
     }
     /**
      * The location of this blueprint assignment.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Defines how resources deployed by a blueprint assignment are locked.
      * 
-     */
+    */
     public Optional<AssignmentLockSettingsResponse> getLocks() {
         return Optional.ofNullable(this.locks);
     }
     /**
      * Name of this resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Blueprint assignment parameter values.
      * 
-     */
+    */
     public Map<String,ParameterValueResponse> getParameters() {
         return this.parameters;
     }
     /**
      * State of the blueprint assignment.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Names and locations of resource group placeholders.
      * 
-     */
+    */
     public Map<String,ResourceGroupValueResponse> getResourceGroups() {
         return this.resourceGroups;
     }
     /**
      * The target subscription scope of the blueprint assignment (format: '/subscriptions/{subscriptionId}'). For management group level assignments, the property is required.
      * 
-     */
+    */
     public Optional<String> getScope() {
         return Optional.ofNullable(this.scope);
     }
     /**
      * Status of blueprint assignment. This field is readonly.
      * 
-     */
+    */
     public AssignmentStatusResponse getStatus() {
         return this.status;
     }
     /**
      * Type of this resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

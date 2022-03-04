@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
     /**
      * Knowledge documents to query from. Format: `projects//locations//knowledgeBases//documents/`. Currently, at most 5 documents are supported.
      * 
-     */
+    */
     public List<String> getDocuments() {
         return this.documents;
     }

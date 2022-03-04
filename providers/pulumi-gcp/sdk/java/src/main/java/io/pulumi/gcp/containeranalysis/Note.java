@@ -225,6 +225,22 @@ public class Note extends io.pulumi.resources.CustomResource {
         return this.updateTime;
     }
 
+    public interface BuilderApplicator {
+        public void apply(NoteArgs.Builder a);
+    }
+    private static io.pulumi.gcp.containeranalysis.NoteArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.containeranalysis.NoteArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Note(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

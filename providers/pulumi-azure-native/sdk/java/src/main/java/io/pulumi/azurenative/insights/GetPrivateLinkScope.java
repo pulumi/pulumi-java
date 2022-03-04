@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPrivateLinkScope {
-/**
- * An Azure Monitor PrivateLinkScope definition.
+    private GetPrivateLinkScope() {}
+    public interface BuilderApplicator {
+        public void apply(GetPrivateLinkScopeArgs.Builder a);
+    }
+    private static GetPrivateLinkScopeArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPrivateLinkScopeArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An Azure Monitor PrivateLinkScope definition.
  * API Version: 2019-10-17-preview.
  * 
- *
- * An Azure Monitor PrivateLinkScope definition.
+     *
+     * An Azure Monitor PrivateLinkScope definition.
  * 
- */
+     */
+    public static CompletableFuture<GetPrivateLinkScopeResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An Azure Monitor PrivateLinkScope definition.
+     * API Version: 2019-10-17-preview.
+     * 
+     *
+         * An Azure Monitor PrivateLinkScope definition.
+     * 
+     */
     public static CompletableFuture<GetPrivateLinkScopeResult> invokeAsync(GetPrivateLinkScopeArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getPrivateLinkScope", TypeShape.of(GetPrivateLinkScopeResult.class), args == null ? GetPrivateLinkScopeArgs.Empty : args, Utilities.withVersion(options));
     }

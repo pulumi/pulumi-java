@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetHoursOfOperation {
-/**
- * Provides details about a specific Amazon Connect Hours of Operation.
+    private GetHoursOfOperation() {}
+    public interface BuilderApplicator {
+        public void apply(GetHoursOfOperationArgs.Builder a);
+    }
+    private static GetHoursOfOperationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetHoursOfOperationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Provides details about a specific Amazon Connect Hours of Operation.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getHoursOfOperation.
+     *
+     * A collection of arguments for invoking getHoursOfOperation.
  * 
- *
- * A collection of values returned by getHoursOfOperation.
+     *
+     * A collection of values returned by getHoursOfOperation.
  * 
- */
+     */
+    public static CompletableFuture<GetHoursOfOperationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Provides details about a specific Amazon Connect Hours of Operation.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getHoursOfOperation.
+     * 
+     *
+         * A collection of values returned by getHoursOfOperation.
+     * 
+     */
     public static CompletableFuture<GetHoursOfOperationResult> invokeAsync(GetHoursOfOperationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:connect/getHoursOfOperation:getHoursOfOperation", TypeShape.of(GetHoursOfOperationResult.class), args == null ? GetHoursOfOperationArgs.Empty : args, Utilities.withVersion(options));
     }

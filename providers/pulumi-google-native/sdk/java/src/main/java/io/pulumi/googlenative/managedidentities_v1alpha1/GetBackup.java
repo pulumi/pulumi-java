@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBackup {
-/**
- * Gets details of a single Backup.
+    private GetBackup() {}
+    public interface BuilderApplicator {
+        public void apply(GetBackupArgs.Builder a);
+    }
+    private static GetBackupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetBackupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets details of a single Backup.
  * 
- */
+     */
+    public static CompletableFuture<GetBackupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets details of a single Backup.
+     * 
+     */
     public static CompletableFuture<GetBackupResult> invokeAsync(GetBackupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:managedidentities/v1alpha1:getBackup", TypeShape.of(GetBackupResult.class), args == null ? GetBackupArgs.Empty : args, Utilities.withVersion(options));
     }

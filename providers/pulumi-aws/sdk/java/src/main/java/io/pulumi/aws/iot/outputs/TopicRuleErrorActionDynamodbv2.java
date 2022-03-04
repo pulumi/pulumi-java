@@ -34,14 +34,14 @@ public final class TopicRuleErrorActionDynamodbv2 {
     /**
      * Configuration block with DynamoDB Table to which the message will be written. Nested arguments below.
      * 
-     */
+    */
     public Optional<TopicRuleErrorActionDynamodbv2PutItem> getPutItem() {
         return Optional.ofNullable(this.putItem);
     }
     /**
      * The IAM role ARN that allows access to the CloudWatch alarm.
      * 
-     */
+    */
     public String getRoleArn() {
         return this.roleArn;
     }

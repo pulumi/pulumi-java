@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWirelessDevice {
-/**
- * Create and manage wireless gateways, including LoRa gateways.
+    private GetWirelessDevice() {}
+    public interface BuilderApplicator {
+        public void apply(GetWirelessDeviceArgs.Builder a);
+    }
+    private static GetWirelessDeviceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetWirelessDeviceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Create and manage wireless gateways, including LoRa gateways.
  * 
- */
+     */
+    public static CompletableFuture<GetWirelessDeviceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Create and manage wireless gateways, including LoRa gateways.
+     * 
+     */
     public static CompletableFuture<GetWirelessDeviceResult> invokeAsync(GetWirelessDeviceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iotwireless:getWirelessDevice", TypeShape.of(GetWirelessDeviceResult.class), args == null ? GetWirelessDeviceArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -37,7 +37,7 @@ public final class AuthorityConfigSubjectConfig {
      * Contains distinguished name fields such as the location and organization.
      * Structure is documented below.
      * 
-     */
+    */
     public AuthorityConfigSubjectConfigSubject getSubject() {
         return this.subject;
     }
@@ -45,7 +45,7 @@ public final class AuthorityConfigSubjectConfig {
      * The subject alternative name fields.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<AuthorityConfigSubjectConfigSubjectAltName> getSubjectAltName() {
         return Optional.ofNullable(this.subjectAltName);
     }

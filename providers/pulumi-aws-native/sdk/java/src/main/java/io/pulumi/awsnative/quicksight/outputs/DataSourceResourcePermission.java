@@ -46,7 +46,7 @@ public final class DataSourceResourcePermission {
     /**
      * <p>The IAM action to grant or revoke permissions on.</p>
      * 
-     */
+    */
     public List<String> getActions() {
         return this.actions;
     }
@@ -67,7 +67,7 @@ public final class DataSourceResourcePermission {
      *             </li>
      *          </ul>
      * 
-     */
+    */
     public String getPrincipal() {
         return this.principal;
     }

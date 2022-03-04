@@ -85,63 +85,63 @@ public final class CSIPersistentVolumeSource {
     /**
      * ControllerExpandSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI ControllerExpandVolume call. This is an alpha field and requires enabling ExpandCSIVolumes feature gate. This field is optional, and may be empty if no secret is required. If the secret object contains more than one secret, all secrets are passed.
      * 
-     */
+    */
     public Optional<SecretReference> getControllerExpandSecretRef() {
         return Optional.ofNullable(this.controllerExpandSecretRef);
     }
     /**
      * ControllerPublishSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI ControllerPublishVolume and ControllerUnpublishVolume calls. This field is optional, and may be empty if no secret is required. If the secret object contains more than one secret, all secrets are passed.
      * 
-     */
+    */
     public Optional<SecretReference> getControllerPublishSecretRef() {
         return Optional.ofNullable(this.controllerPublishSecretRef);
     }
     /**
      * Driver is the name of the driver to use for this volume. Required.
      * 
-     */
+    */
     public String getDriver() {
         return this.driver;
     }
     /**
      * Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs".
      * 
-     */
+    */
     public Optional<String> getFsType() {
         return Optional.ofNullable(this.fsType);
     }
     /**
      * NodePublishSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI NodePublishVolume and NodeUnpublishVolume calls. This field is optional, and may be empty if no secret is required. If the secret object contains more than one secret, all secrets are passed.
      * 
-     */
+    */
     public Optional<SecretReference> getNodePublishSecretRef() {
         return Optional.ofNullable(this.nodePublishSecretRef);
     }
     /**
      * NodeStageSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI NodeStageVolume and NodeStageVolume and NodeUnstageVolume calls. This field is optional, and may be empty if no secret is required. If the secret object contains more than one secret, all secrets are passed.
      * 
-     */
+    */
     public Optional<SecretReference> getNodeStageSecretRef() {
         return Optional.ofNullable(this.nodeStageSecretRef);
     }
     /**
      * Optional: The value to pass to ControllerPublishVolumeRequest. Defaults to false (read/write).
      * 
-     */
+    */
     public Optional<Boolean> getReadOnly() {
         return Optional.ofNullable(this.readOnly);
     }
     /**
      * Attributes of the volume to publish.
      * 
-     */
+    */
     public Map<String,String> getVolumeAttributes() {
         return this.volumeAttributes == null ? Map.of() : this.volumeAttributes;
     }
     /**
      * VolumeHandle is the unique volume name returned by the CSI volume plugin’s CreateVolume to refer to the volume on all subsequent calls. Required.
      * 
-     */
+    */
     public String getVolumeHandle() {
         return this.volumeHandle;
     }

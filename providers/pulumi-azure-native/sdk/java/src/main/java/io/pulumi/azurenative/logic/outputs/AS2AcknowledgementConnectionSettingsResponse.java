@@ -45,28 +45,28 @@ public final class AS2AcknowledgementConnectionSettingsResponse {
     /**
      * Indicates whether to ignore mismatch in certificate name.
      * 
-     */
+    */
     public Boolean getIgnoreCertificateNameMismatch() {
         return this.ignoreCertificateNameMismatch;
     }
     /**
      * Indicates whether to keep the connection alive.
      * 
-     */
+    */
     public Boolean getKeepHttpConnectionAlive() {
         return this.keepHttpConnectionAlive;
     }
     /**
      * Indicates whether to support HTTP status code 'CONTINUE'.
      * 
-     */
+    */
     public Boolean getSupportHttpStatusCodeContinue() {
         return this.supportHttpStatusCodeContinue;
     }
     /**
      * Indicates whether to unfold the HTTP headers.
      * 
-     */
+    */
     public Boolean getUnfoldHttpHeaders() {
         return this.unfoldHttpHeaders;
     }

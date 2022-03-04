@@ -41,21 +41,21 @@ public final class StackStorageConnector {
     /**
      * Type of storage connector. Valid values are: `HOMEFOLDERS`, `GOOGLE_DRIVE`, `ONE_DRIVE`.
      * 
-     */
+    */
     public String getConnectorType() {
         return this.connectorType;
     }
     /**
      * Names of the domains for the account.
      * 
-     */
+    */
     public List<String> getDomains() {
         return this.domains == null ? List.of() : this.domains;
     }
     /**
      * ARN of the storage connector.
      * 
-     */
+    */
     public Optional<String> getResourceIdentifier() {
         return Optional.ofNullable(this.resourceIdentifier);
     }

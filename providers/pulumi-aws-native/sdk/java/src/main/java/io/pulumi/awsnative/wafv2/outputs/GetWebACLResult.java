@@ -88,7 +88,7 @@ public final class GetWebACLResult {
     /**
      * Collection of Rules.
      * 
-     */
+    */
     public List<WebACLRule> getRules() {
         return this.rules == null ? List.of() : this.rules;
     }

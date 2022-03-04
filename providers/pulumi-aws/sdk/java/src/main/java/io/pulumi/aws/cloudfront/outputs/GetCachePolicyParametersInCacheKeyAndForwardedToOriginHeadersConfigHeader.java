@@ -24,7 +24,7 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeaders
     /**
      * A list of item names (`cookies`, `headers`, or `query_strings`).
      * 
-     */
+    */
     public List<String> getItems() {
         return this.items;
     }

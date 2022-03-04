@@ -34,14 +34,14 @@ public final class WebAclRuleStatementAndStatementStatementOrStatementStatementA
     /**
      * The Amazon Resource Name (ARN) of the IP Set that this statement references.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
     /**
      * The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. See IPSet Forwarded IP Config below for more details.
      * 
-     */
+    */
     public Optional<WebAclRuleStatementAndStatementStatementOrStatementStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig> getIpSetForwardedIpConfig() {
         return Optional.ofNullable(this.ipSetForwardedIpConfig);
     }

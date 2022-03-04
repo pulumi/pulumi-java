@@ -40,21 +40,21 @@ public final class BackendProxyContractResponse {
     /**
      * Password to connect to the WebProxy Server
      * 
-     */
+    */
     public Optional<String> getPassword() {
         return Optional.ofNullable(this.password);
     }
     /**
      * WebProxy Server AbsoluteUri property which includes the entire URI stored in the Uri instance, including all fragments and query strings.
      * 
-     */
+    */
     public String getUrl() {
         return this.url;
     }
     /**
      * Username to connect to the WebProxy server
      * 
-     */
+    */
     public Optional<String> getUsername() {
         return Optional.ofNullable(this.username);
     }

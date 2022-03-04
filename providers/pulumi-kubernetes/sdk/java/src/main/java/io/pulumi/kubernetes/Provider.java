@@ -15,6 +15,22 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="pulumi:providers:kubernetes")
 public class Provider extends io.pulumi.resources.ProviderResource {
+    public interface BuilderApplicator {
+        public void apply(@Nullable ProviderArgs.Builder a);
+    }
+    private static io.pulumi.kubernetes.ProviderArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.kubernetes.ProviderArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Provider(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

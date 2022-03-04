@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetReadinessCheck {
-/**
- * Aws Route53 Recovery Readiness Check Schema and API specification.
+    private GetReadinessCheck() {}
+    public interface BuilderApplicator {
+        public void apply(GetReadinessCheckArgs.Builder a);
+    }
+    private static GetReadinessCheckArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetReadinessCheckArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Aws Route53 Recovery Readiness Check Schema and API specification.
  * 
- */
+     */
+    public static CompletableFuture<GetReadinessCheckResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Aws Route53 Recovery Readiness Check Schema and API specification.
+     * 
+     */
     public static CompletableFuture<GetReadinessCheckResult> invokeAsync(GetReadinessCheckArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:route53recoveryreadiness:getReadinessCheck", TypeShape.of(GetReadinessCheckResult.class), args == null ? GetReadinessCheckArgs.Empty : args, Utilities.withVersion(options));
     }

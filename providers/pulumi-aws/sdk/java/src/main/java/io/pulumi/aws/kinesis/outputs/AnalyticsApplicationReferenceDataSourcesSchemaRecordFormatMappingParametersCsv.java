@@ -31,14 +31,14 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMap
     /**
      * The Column Delimiter.
      * 
-     */
+    */
     public String getRecordColumnDelimiter() {
         return this.recordColumnDelimiter;
     }
     /**
      * The Row Delimiter.
      * 
-     */
+    */
     public String getRecordRowDelimiter() {
         return this.recordRowDelimiter;
     }

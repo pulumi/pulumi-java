@@ -31,14 +31,14 @@ public final class GraphParameterLinkResponse {
     /**
      * The graph node's identifier
      * 
-     */
+    */
     public String getNodeId() {
         return this.nodeId;
     }
     /**
      * The identifier of the node parameter that the global parameter maps to.
      * 
-     */
+    */
     public String getParameterKey() {
         return this.parameterKey;
     }

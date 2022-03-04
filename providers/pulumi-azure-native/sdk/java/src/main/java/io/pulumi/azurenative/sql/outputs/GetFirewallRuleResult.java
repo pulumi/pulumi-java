@@ -54,35 +54,35 @@ public final class GetFirewallRuleResult {
     /**
      * The end IP address of the firewall rule. Must be IPv4 format. Must be greater than or equal to startIpAddress. Use value '0.0.0.0' for all Azure-internal IP addresses.
      * 
-     */
+    */
     public Optional<String> getEndIpAddress() {
         return Optional.ofNullable(this.endIpAddress);
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The start IP address of the firewall rule. Must be IPv4 format. Use value '0.0.0.0' for all Azure-internal IP addresses.
      * 
-     */
+    */
     public Optional<String> getStartIpAddress() {
         return Optional.ofNullable(this.startIpAddress);
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

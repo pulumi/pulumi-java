@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAlias {
-/**
- * The AWS::GameLift::Alias resource creates an alias for an Amazon GameLift (GameLift) fleet destination.
+    private GetAlias() {}
+    public interface BuilderApplicator {
+        public void apply(GetAliasArgs.Builder a);
+    }
+    private static GetAliasArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAliasArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The AWS::GameLift::Alias resource creates an alias for an Amazon GameLift (GameLift) fleet destination.
  * 
- */
+     */
+    public static CompletableFuture<GetAliasResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The AWS::GameLift::Alias resource creates an alias for an Amazon GameLift (GameLift) fleet destination.
+     * 
+     */
     public static CompletableFuture<GetAliasResult> invokeAsync(GetAliasArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:gamelift:getAlias", TypeShape.of(GetAliasResult.class), args == null ? GetAliasArgs.Empty : args, Utilities.withVersion(options));
     }

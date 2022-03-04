@@ -99,7 +99,7 @@ public final class ServicePerimetersServicePerimeterSpec {
      * be empty.
      * Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}
      * 
-     */
+    */
     public List<String> getAccessLevels() {
         return this.accessLevels == null ? List.of() : this.accessLevels;
     }
@@ -110,7 +110,7 @@ public final class ServicePerimetersServicePerimeterSpec {
      * a perimeter bridge.
      * Structure is documented below.
      * 
-     */
+    */
     public List<ServicePerimetersServicePerimeterSpecEgressPolicy> getEgressPolicies() {
         return this.egressPolicies == null ? List.of() : this.egressPolicies;
     }
@@ -121,7 +121,7 @@ public final class ServicePerimetersServicePerimeterSpec {
      * Must be empty for a perimeter bridge.
      * Structure is documented below.
      * 
-     */
+    */
     public List<ServicePerimetersServicePerimeterSpecIngressPolicy> getIngressPolicies() {
         return this.ingressPolicies == null ? List.of() : this.ingressPolicies;
     }
@@ -132,7 +132,7 @@ public final class ServicePerimetersServicePerimeterSpec {
      * then this `EgressTo` rule will authorize access to all resources outside
      * the perimeter.
      * 
-     */
+    */
     public List<String> getResources() {
         return this.resources == null ? List.of() : this.resources;
     }
@@ -143,7 +143,7 @@ public final class ServicePerimetersServicePerimeterSpec {
      * buckets inside the perimeter must meet the perimeter's access
      * restrictions.
      * 
-     */
+    */
     public List<String> getRestrictedServices() {
         return this.restrictedServices == null ? List.of() : this.restrictedServices;
     }
@@ -152,7 +152,7 @@ public final class ServicePerimetersServicePerimeterSpec {
      * Perimeter.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<ServicePerimetersServicePerimeterSpecVpcAccessibleServices> getVpcAccessibleServices() {
         return Optional.ofNullable(this.vpcAccessibleServices);
     }

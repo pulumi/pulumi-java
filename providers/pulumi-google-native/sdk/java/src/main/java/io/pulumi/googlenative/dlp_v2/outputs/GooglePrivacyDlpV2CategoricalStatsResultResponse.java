@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2CategoricalStatsResultResponse {
     /**
      * Histogram of value frequencies in the column.
      * 
-     */
+    */
     public List<GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse> getValueFrequencyHistogramBuckets() {
         return this.valueFrequencyHistogramBuckets;
     }

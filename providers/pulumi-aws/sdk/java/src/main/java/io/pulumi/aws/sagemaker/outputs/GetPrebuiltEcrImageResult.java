@@ -55,7 +55,7 @@ public final class GetPrebuiltEcrImageResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -68,14 +68,14 @@ public final class GetPrebuiltEcrImageResult {
     /**
      * The account ID containing the image. For example, `469771592824`.
      * 
-     */
+    */
     public String getRegistryId() {
         return this.registryId;
     }
     /**
      * The Docker image URL. For example, `341280168497.dkr.ecr.ca-central-1.amazonaws.com/sagemaker-sparkml-serving:2.4`.
      * 
-     */
+    */
     public String getRegistryPath() {
         return this.registryPath;
     }

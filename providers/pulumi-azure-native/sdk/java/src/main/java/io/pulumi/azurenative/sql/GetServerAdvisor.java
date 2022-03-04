@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetServerAdvisor {
-/**
- * Database, Server or Elastic Pool Advisor.
+    private GetServerAdvisor() {}
+    public interface BuilderApplicator {
+        public void apply(GetServerAdvisorArgs.Builder a);
+    }
+    private static GetServerAdvisorArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetServerAdvisorArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Database, Server or Elastic Pool Advisor.
  * API Version: 2020-11-01-preview.
  * 
- *
- * Database, Server or Elastic Pool Advisor.
+     *
+     * Database, Server or Elastic Pool Advisor.
  * 
- */
+     */
+    public static CompletableFuture<GetServerAdvisorResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Database, Server or Elastic Pool Advisor.
+     * API Version: 2020-11-01-preview.
+     * 
+     *
+         * Database, Server or Elastic Pool Advisor.
+     * 
+     */
     public static CompletableFuture<GetServerAdvisorResult> invokeAsync(GetServerAdvisorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getServerAdvisor", TypeShape.of(GetServerAdvisorResult.class), args == null ? GetServerAdvisorArgs.Empty : args, Utilities.withVersion(options));
     }

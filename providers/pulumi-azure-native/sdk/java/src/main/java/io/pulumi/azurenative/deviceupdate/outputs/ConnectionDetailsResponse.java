@@ -52,35 +52,35 @@ public final class ConnectionDetailsResponse {
     /**
      * Group ID.
      * 
-     */
+    */
     public String getGroupId() {
         return this.groupId;
     }
     /**
      * Connection details ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Link ID.
      * 
-     */
+    */
     public String getLinkIdentifier() {
         return this.linkIdentifier;
     }
     /**
      * Member name.
      * 
-     */
+    */
     public String getMemberName() {
         return this.memberName;
     }
     /**
      * Private IP address.
      * 
-     */
+    */
     public String getPrivateIpAddress() {
         return this.privateIpAddress;
     }

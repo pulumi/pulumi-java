@@ -31,14 +31,14 @@ public final class EventDestinationKinesisDestination {
     /**
      * The ARN of the role that has permissions to access the Kinesis Stream
      * 
-     */
+    */
     public String getRoleArn() {
         return this.roleArn;
     }
     /**
      * The ARN of the Kinesis Stream
      * 
-     */
+    */
     public String getStreamArn() {
         return this.streamArn;
     }

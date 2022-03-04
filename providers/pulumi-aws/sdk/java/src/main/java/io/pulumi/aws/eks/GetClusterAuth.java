@@ -13,21 +13,48 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetClusterAuth {
-/**
- * Get an authentication token to communicate with an EKS cluster.
+    private GetClusterAuth() {}
+    public interface BuilderApplicator {
+        public void apply(GetClusterAuthArgs.Builder a);
+    }
+    private static GetClusterAuthArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetClusterAuthArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Get an authentication token to communicate with an EKS cluster.
  * 
  * Uses IAM credentials from the AWS provider to generate a temporary token that is compatible with
  * [AWS IAM Authenticator](https://github.com/kubernetes-sigs/aws-iam-authenticator) authentication.
  * This can be used to authenticate to an EKS cluster or to a cluster that has the AWS IAM Authenticator
  * server configured.
  * 
- *
- * A collection of arguments for invoking getClusterAuth.
+     *
+     * A collection of arguments for invoking getClusterAuth.
  * 
- *
- * A collection of values returned by getClusterAuth.
+     *
+     * A collection of values returned by getClusterAuth.
  * 
- */
+     */
+    public static CompletableFuture<GetClusterAuthResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Get an authentication token to communicate with an EKS cluster.
+     * 
+     * Uses IAM credentials from the AWS provider to generate a temporary token that is compatible with
+     * [AWS IAM Authenticator](https://github.com/kubernetes-sigs/aws-iam-authenticator) authentication.
+     * This can be used to authenticate to an EKS cluster or to a cluster that has the AWS IAM Authenticator
+     * server configured.
+     * 
+     *
+         * A collection of arguments for invoking getClusterAuth.
+     * 
+     *
+         * A collection of values returned by getClusterAuth.
+     * 
+     */
     public static CompletableFuture<GetClusterAuthResult> invokeAsync(GetClusterAuthArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:eks/getClusterAuth:getClusterAuth", TypeShape.of(GetClusterAuthResult.class), args == null ? GetClusterAuthArgs.Empty : args, Utilities.withVersion(options));
     }

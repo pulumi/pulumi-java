@@ -91,70 +91,70 @@ public final class ConnectionSettingPropertiesResponse {
     /**
      * Client Id associated with the Connection Setting.
      * 
-     */
+    */
     public Optional<String> getClientId() {
         return Optional.ofNullable(this.clientId);
     }
     /**
      * Client Secret associated with the Connection Setting
      * 
-     */
+    */
     public Optional<String> getClientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }
     /**
      * Id associated with the Connection Setting.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Name associated with the Connection Setting.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Service Provider Parameters associated with the Connection Setting
      * 
-     */
+    */
     public List<ConnectionSettingParameterResponse> getParameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
     /**
      * Provisioning state of the resource
      * 
-     */
+    */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * Scopes associated with the Connection Setting
      * 
-     */
+    */
     public Optional<String> getScopes() {
         return Optional.ofNullable(this.scopes);
     }
     /**
      * Service Provider Display Name associated with the Connection Setting
      * 
-     */
+    */
     public Optional<String> getServiceProviderDisplayName() {
         return Optional.ofNullable(this.serviceProviderDisplayName);
     }
     /**
      * Service Provider Id associated with the Connection Setting
      * 
-     */
+    */
     public Optional<String> getServiceProviderId() {
         return Optional.ofNullable(this.serviceProviderId);
     }
     /**
      * Setting Id set by the service for the Connection Setting.
      * 
-     */
+    */
     public String getSettingId() {
         return this.settingId;
     }

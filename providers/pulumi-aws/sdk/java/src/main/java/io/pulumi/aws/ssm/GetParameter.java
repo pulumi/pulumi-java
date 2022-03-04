@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetParameter {
-/**
- * Provides an SSM Parameter data source.
+    private GetParameter() {}
+    public interface BuilderApplicator {
+        public void apply(GetParameterArgs.Builder a);
+    }
+    private static GetParameterArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetParameterArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Provides an SSM Parameter data source.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getParameter.
+     *
+     * A collection of arguments for invoking getParameter.
  * 
- *
- * A collection of values returned by getParameter.
+     *
+     * A collection of values returned by getParameter.
  * 
- */
+     */
+    public static CompletableFuture<GetParameterResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Provides an SSM Parameter data source.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getParameter.
+     * 
+     *
+         * A collection of values returned by getParameter.
+     * 
+     */
     public static CompletableFuture<GetParameterResult> invokeAsync(GetParameterArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ssm/getParameter:getParameter", TypeShape.of(GetParameterResult.class), args == null ? GetParameterArgs.Empty : args, Utilities.withVersion(options));
     }

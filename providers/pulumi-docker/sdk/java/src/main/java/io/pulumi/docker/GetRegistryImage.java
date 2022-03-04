@@ -13,8 +13,17 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRegistryImage {
-/**
- * Reads the image metadata from a Docker Registry. Used in conjunction with the docker.RemoteImage resource to keep an image up to date on the latest available version of the tag.
+    private GetRegistryImage() {}
+    public interface BuilderApplicator {
+        public void apply(GetRegistryImageArgs.Builder a);
+    }
+    private static GetRegistryImageArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRegistryImageArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Reads the image metadata from a Docker Registry. Used in conjunction with the docker.RemoteImage resource to keep an image up to date on the latest available version of the tag.
  * 
  * ## Example Usage
  * ## Schema
@@ -32,13 +41,42 @@ public class GetRegistryImage {
  * 
  * - **sha256_digest** (String) The content digest of the image, as stored in the registry.
  * 
- *
- * A collection of arguments for invoking getRegistryImage.
+     *
+     * A collection of arguments for invoking getRegistryImage.
  * 
- *
- * A collection of values returned by getRegistryImage.
+     *
+     * A collection of values returned by getRegistryImage.
  * 
- */
+     */
+    public static CompletableFuture<GetRegistryImageResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Reads the image metadata from a Docker Registry. Used in conjunction with the docker.RemoteImage resource to keep an image up to date on the latest available version of the tag.
+     * 
+     * ## Example Usage
+     * ## Schema
+     * 
+     * ### Required
+     * 
+     * - **name** (String) The name of the Docker image, including any tags. e.g. `alpine:latest`
+     * 
+     * ### Optional
+     * 
+     * - **id** (String) The ID of this resource.
+     * - **insecure_skip_verify** (Boolean) If `true`, the verification of TLS certificates of the server/registry is disabled. Defaults to `false`
+     * 
+     * ### Read-Only
+     * 
+     * - **sha256_digest** (String) The content digest of the image, as stored in the registry.
+     * 
+     *
+         * A collection of arguments for invoking getRegistryImage.
+     * 
+     *
+         * A collection of values returned by getRegistryImage.
+     * 
+     */
     public static CompletableFuture<GetRegistryImageResult> invokeAsync(GetRegistryImageArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("docker:index/getRegistryImage:getRegistryImage", TypeShape.of(GetRegistryImageResult.class), args == null ? GetRegistryImageArgs.Empty : args, Utilities.withVersion(options));
     }

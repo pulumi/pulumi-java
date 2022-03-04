@@ -23,7 +23,7 @@ public final class AnnotationSourceResponse {
     /**
      * Cloud Healthcare API resource.
      * 
-     */
+    */
     public CloudHealthcareSourceResponse getCloudHealthcareSource() {
         return this.cloudHealthcareSource;
     }

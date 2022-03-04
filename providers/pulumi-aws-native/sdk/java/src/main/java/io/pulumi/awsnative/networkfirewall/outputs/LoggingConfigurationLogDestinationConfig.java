@@ -32,7 +32,7 @@ public final class LoggingConfigurationLogDestinationConfig {
     /**
      * A key-value pair to configure the logDestinations.
      * 
-     */
+    */
     public Object getLogDestination() {
         return this.logDestination;
     }

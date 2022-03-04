@@ -40,21 +40,21 @@ public final class RoboStartingIntentResponse {
     /**
      * An intent that starts the main launcher activity.
      * 
-     */
+    */
     public LauncherActivityIntentResponse getLauncherActivity() {
         return this.launcherActivity;
     }
     /**
      * An intent that starts an activity with specific details.
      * 
-     */
+    */
     public StartActivityIntentResponse getStartActivity() {
         return this.startActivity;
     }
     /**
      * Timeout in seconds for each intent.
      * 
-     */
+    */
     public String getTimeout() {
         return this.timeout;
     }

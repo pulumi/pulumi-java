@@ -35,14 +35,14 @@ public final class EncryptionImagesResponse {
     /**
      * A list of encryption specifications for data disk images.
      * 
-     */
+    */
     public List<DataDiskImageEncryptionResponse> getDataDiskImages() {
         return this.dataDiskImages == null ? List.of() : this.dataDiskImages;
     }
     /**
      * Contains encryption settings for an OS disk image.
      * 
-     */
+    */
     public Optional<OSDiskImageEncryptionResponse> getOsDiskImage() {
         return Optional.ofNullable(this.osDiskImage);
     }

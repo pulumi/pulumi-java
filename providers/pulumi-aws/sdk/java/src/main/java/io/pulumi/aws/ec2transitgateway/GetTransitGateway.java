@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTransitGateway {
-/**
- * Get information on an EC2 Transit Gateway.
+    private GetTransitGateway() {}
+    public interface BuilderApplicator {
+        public void apply(GetTransitGatewayArgs.Builder a);
+    }
+    private static GetTransitGatewayArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTransitGatewayArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Get information on an EC2 Transit Gateway.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getTransitGateway.
+     *
+     * A collection of arguments for invoking getTransitGateway.
  * 
- *
- * A collection of values returned by getTransitGateway.
+     *
+     * A collection of values returned by getTransitGateway.
  * 
- */
+     */
+    public static CompletableFuture<GetTransitGatewayResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Get information on an EC2 Transit Gateway.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getTransitGateway.
+     * 
+     *
+         * A collection of values returned by getTransitGateway.
+     * 
+     */
     public static CompletableFuture<GetTransitGatewayResult> invokeAsync(@Nullable GetTransitGatewayArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2transitgateway/getTransitGateway:getTransitGateway", TypeShape.of(GetTransitGatewayResult.class), args == null ? GetTransitGatewayArgs.Empty : args, Utilities.withVersion(options));
     }

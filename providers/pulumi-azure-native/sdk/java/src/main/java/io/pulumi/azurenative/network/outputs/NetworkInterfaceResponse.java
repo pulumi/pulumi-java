@@ -198,168 +198,168 @@ public final class NetworkInterfaceResponse {
     /**
      * The DNS settings in network interface.
      * 
-     */
+    */
     public Optional<NetworkInterfaceDnsSettingsResponse> getDnsSettings() {
         return Optional.ofNullable(this.dnsSettings);
     }
     /**
      * A reference to the dscp configuration to which the network interface is linked.
      * 
-     */
+    */
     public SubResourceResponse getDscpConfiguration() {
         return this.dscpConfiguration;
     }
     /**
      * If the network interface is accelerated networking enabled.
      * 
-     */
+    */
     public Optional<Boolean> getEnableAcceleratedNetworking() {
         return Optional.ofNullable(this.enableAcceleratedNetworking);
     }
     /**
      * Indicates whether IP forwarding is enabled on this network interface.
      * 
-     */
+    */
     public Optional<Boolean> getEnableIPForwarding() {
         return Optional.ofNullable(this.enableIPForwarding);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * The extended location of the network interface.
      * 
-     */
+    */
     public Optional<ExtendedLocationResponse> getExtendedLocation() {
         return Optional.ofNullable(this.extendedLocation);
     }
     /**
      * A list of references to linked BareMetal resources.
      * 
-     */
+    */
     public List<String> getHostedWorkloads() {
         return this.hostedWorkloads;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * A list of IPConfigurations of the network interface.
      * 
-     */
+    */
     public List<NetworkInterfaceIPConfigurationResponse> getIpConfigurations() {
         return this.ipConfigurations == null ? List.of() : this.ipConfigurations;
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The MAC address of the network interface.
      * 
-     */
+    */
     public String getMacAddress() {
         return this.macAddress;
     }
     /**
      * Migration phase of Network Interface resource.
      * 
-     */
+    */
     public Optional<String> getMigrationPhase() {
         return Optional.ofNullable(this.migrationPhase);
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The reference to the NetworkSecurityGroup resource.
      * 
-     */
+    */
     public Optional<NetworkSecurityGroupResponse> getNetworkSecurityGroup() {
         return Optional.ofNullable(this.networkSecurityGroup);
     }
     /**
      * Type of Network Interface resource.
      * 
-     */
+    */
     public Optional<String> getNicType() {
         return Optional.ofNullable(this.nicType);
     }
     /**
      * Whether this is a primary network interface on a virtual machine.
      * 
-     */
+    */
     public Boolean getPrimary() {
         return this.primary;
     }
     /**
      * A reference to the private endpoint to which the network interface is linked.
      * 
-     */
+    */
     public PrivateEndpointResponse getPrivateEndpoint() {
         return this.privateEndpoint;
     }
     /**
      * Privatelinkservice of the network interface resource.
      * 
-     */
+    */
     public Optional<PrivateLinkServiceResponse> getPrivateLinkService() {
         return Optional.ofNullable(this.privateLinkService);
     }
     /**
      * The provisioning state of the network interface resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The resource GUID property of the network interface resource.
      * 
-     */
+    */
     public String getResourceGuid() {
         return this.resourceGuid;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * A list of TapConfigurations of the network interface.
      * 
-     */
+    */
     public List<NetworkInterfaceTapConfigurationResponse> getTapConfigurations() {
         return this.tapConfigurations;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The reference to a virtual machine.
      * 
-     */
+    */
     public SubResourceResponse getVirtualMachine() {
         return this.virtualMachine;
     }

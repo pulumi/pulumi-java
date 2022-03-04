@@ -25,7 +25,7 @@ public final class GetFactoryGitHubAccessTokenResult {
     /**
      * GitHub access token.
      * 
-     */
+    */
     public Optional<String> getGitHubAccessToken() {
         return Optional.ofNullable(this.gitHubAccessToken);
     }

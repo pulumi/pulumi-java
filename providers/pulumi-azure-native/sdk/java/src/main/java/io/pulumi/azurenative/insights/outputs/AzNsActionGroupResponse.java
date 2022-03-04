@@ -41,21 +41,21 @@ public final class AzNsActionGroupResponse {
     /**
      * Azure Action Group reference.
      * 
-     */
+    */
     public List<String> getActionGroup() {
         return this.actionGroup == null ? List.of() : this.actionGroup;
     }
     /**
      * Custom payload to be sent for all webhook URI in Azure action group
      * 
-     */
+    */
     public Optional<String> getCustomWebhookPayload() {
         return Optional.ofNullable(this.customWebhookPayload);
     }
     /**
      * Custom subject override for all email ids in Azure action group
      * 
-     */
+    */
     public Optional<String> getEmailSubject() {
         return Optional.ofNullable(this.emailSubject);
     }

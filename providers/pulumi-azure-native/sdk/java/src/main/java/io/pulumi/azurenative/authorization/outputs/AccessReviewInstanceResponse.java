@@ -61,42 +61,42 @@ public final class AccessReviewInstanceResponse {
     /**
      * The DateTime when the review instance is scheduled to end.
      * 
-     */
+    */
     public Optional<String> getEndDateTime() {
         return Optional.ofNullable(this.endDateTime);
     }
     /**
      * The access review instance id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The access review instance name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The DateTime when the review instance is scheduled to be start.
      * 
-     */
+    */
     public Optional<String> getStartDateTime() {
         return Optional.ofNullable(this.startDateTime);
     }
     /**
      * This read-only field specifies the status of an access review instance.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * The resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

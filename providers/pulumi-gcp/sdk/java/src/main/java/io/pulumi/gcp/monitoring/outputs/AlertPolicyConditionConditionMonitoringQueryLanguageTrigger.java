@@ -40,7 +40,7 @@ public final class AlertPolicyConditionConditionMonitoringQueryLanguageTrigger {
      * that must fail the predicate for the
      * condition to be triggered.
      * 
-     */
+    */
     public Optional<Integer> getCount() {
         return Optional.ofNullable(this.count);
     }
@@ -49,7 +49,7 @@ public final class AlertPolicyConditionConditionMonitoringQueryLanguageTrigger {
      * must fail the predicate for the
      * condition to be triggered.
      * 
-     */
+    */
     public Optional<Double> getPercent() {
         return Optional.ofNullable(this.percent);
     }

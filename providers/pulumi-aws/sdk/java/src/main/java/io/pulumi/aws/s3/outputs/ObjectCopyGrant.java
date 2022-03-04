@@ -55,35 +55,35 @@ public final class ObjectCopyGrant {
     /**
      * Email address of the grantee. Used only when `type` is `AmazonCustomerByEmail`.
      * 
-     */
+    */
     public Optional<String> getEmail() {
         return Optional.ofNullable(this.email);
     }
     /**
      * The canonical user ID of the grantee. Used only when `type` is `CanonicalUser`.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * List of permissions to grant to grantee. Valid values are `READ`, `READ_ACP`, `WRITE_ACP`, `FULL_CONTROL`.
      * 
-     */
+    */
     public List<String> getPermissions() {
         return this.permissions;
     }
     /**
      * - Type of grantee. Valid values are `CanonicalUser`, `Group`, and `AmazonCustomerByEmail`.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * URI of the grantee group. Used only when `type` is `Group`.
      * 
-     */
+    */
     public Optional<String> getUri() {
         return Optional.ofNullable(this.uri);
     }

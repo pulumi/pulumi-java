@@ -38,21 +38,21 @@ public final class PatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObj
     /**
      * Bucket of the Cloud Storage object.
      * 
-     */
+    */
     public String getBucket() {
         return this.bucket;
     }
     /**
      * Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
      * 
-     */
+    */
     public String getGenerationNumber() {
         return this.generationNumber;
     }
     /**
      * Name of the Cloud Storage object.
      * 
-     */
+    */
     public String getObject() {
         return this.object;
     }

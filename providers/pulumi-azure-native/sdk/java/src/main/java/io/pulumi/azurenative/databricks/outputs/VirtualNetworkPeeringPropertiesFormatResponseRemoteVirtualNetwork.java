@@ -25,7 +25,7 @@ public final class VirtualNetworkPeeringPropertiesFormatResponseRemoteVirtualNet
     /**
      * The Id of the remote virtual network.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }

@@ -25,7 +25,7 @@ public final class NodePlacementConfigurationResponse {
     /**
      * Allocation policy used by Batch Service to provision the nodes. If not specified, Batch will use the regional policy.
      * 
-     */
+    */
     public Optional<String> getPolicy() {
         return Optional.ofNullable(this.policy);
     }

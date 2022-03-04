@@ -53,7 +53,7 @@ public final class TableLocalSecondaryIndex {
     /**
      * The name of the index
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -62,7 +62,7 @@ public final class TableLocalSecondaryIndex {
      * projection type; a list of attributes to project into the index. These
      * do not need to be defined as attributes on the table.
      * 
-     */
+    */
     public List<String> getNonKeyAttributes() {
         return this.nonKeyAttributes == null ? List.of() : this.nonKeyAttributes;
     }
@@ -73,14 +73,14 @@ public final class TableLocalSecondaryIndex {
      * projects only the keys specified in the _non_key_attributes_
      * parameter.
      * 
-     */
+    */
     public String getProjectionType() {
         return this.projectionType;
     }
     /**
      * The name of the range key; must be defined
      * 
-     */
+    */
     public String getRangeKey() {
         return this.rangeKey;
     }

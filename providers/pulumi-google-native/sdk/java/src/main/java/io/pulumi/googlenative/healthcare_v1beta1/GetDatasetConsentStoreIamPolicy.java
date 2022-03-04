@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDatasetConsentStoreIamPolicy {
-/**
- * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+    private GetDatasetConsentStoreIamPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetDatasetConsentStoreIamPolicyArgs.Builder a);
+    }
+    private static GetDatasetConsentStoreIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDatasetConsentStoreIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
  * 
- */
+     */
+    public static CompletableFuture<GetDatasetConsentStoreIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetDatasetConsentStoreIamPolicyResult> invokeAsync(GetDatasetConsentStoreIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:healthcare/v1beta1:getDatasetConsentStoreIamPolicy", TypeShape.of(GetDatasetConsentStoreIamPolicyResult.class), args == null ? GetDatasetConsentStoreIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

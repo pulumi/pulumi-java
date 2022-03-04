@@ -62,28 +62,28 @@ public final class GetResponseHeadersPolicyResult {
     /**
      * A comment to describe the response headers policy. The comment cannot be longer than 128 characters.
      * 
-     */
+    */
     public String getComment() {
         return this.comment;
     }
     /**
      * A configuration for a set of HTTP response headers that are used for Cross-Origin Resource Sharing (CORS). See Cors Config for more information.
      * 
-     */
+    */
     public List<GetResponseHeadersPolicyCorsConfig> getCorsConfigs() {
         return this.corsConfigs;
     }
     /**
      * Object that contains an attribute `items` that contains a list of Custom Headers See Custom Header for more information.
      * 
-     */
+    */
     public List<GetResponseHeadersPolicyCustomHeadersConfig> getCustomHeadersConfigs() {
         return this.customHeadersConfigs;
     }
     /**
      * The current version of the response headers policy.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
@@ -96,7 +96,7 @@ public final class GetResponseHeadersPolicyResult {
     /**
      * A configuration for a set of security-related HTTP response headers. See Security Headers Config for more information.
      * 
-     */
+    */
     public List<GetResponseHeadersPolicySecurityHeadersConfig> getSecurityHeadersConfigs() {
         return this.securityHeadersConfigs;
     }

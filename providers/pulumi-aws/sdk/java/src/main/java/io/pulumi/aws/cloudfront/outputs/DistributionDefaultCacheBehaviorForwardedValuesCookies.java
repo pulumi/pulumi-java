@@ -41,7 +41,7 @@ public final class DistributionDefaultCacheBehaviorForwardedValuesCookies {
      * specify `all`, `none` or `whitelist`. If `whitelist`, you must include the
      * subsequent `whitelisted_names`
      * 
-     */
+    */
     public String getForward() {
         return this.forward;
     }
@@ -50,7 +50,7 @@ public final class DistributionDefaultCacheBehaviorForwardedValuesCookies {
      * `forward`, the whitelisted cookies that you want CloudFront to forward to
      * your origin.
      * 
-     */
+    */
     public List<String> getWhitelistedNames() {
         return this.whitelistedNames == null ? List.of() : this.whitelistedNames;
     }

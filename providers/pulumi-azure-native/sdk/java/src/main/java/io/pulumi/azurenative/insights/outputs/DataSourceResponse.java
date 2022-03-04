@@ -36,7 +36,7 @@ public final class DataSourceResponse {
     /**
      * Datasource kind
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }

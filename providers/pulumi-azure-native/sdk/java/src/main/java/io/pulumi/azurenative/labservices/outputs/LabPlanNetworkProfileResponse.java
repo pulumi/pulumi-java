@@ -25,7 +25,7 @@ public final class LabPlanNetworkProfileResponse {
     /**
      * The external subnet resource id
      * 
-     */
+    */
     public Optional<String> getSubnetId() {
         return Optional.ofNullable(this.subnetId);
     }

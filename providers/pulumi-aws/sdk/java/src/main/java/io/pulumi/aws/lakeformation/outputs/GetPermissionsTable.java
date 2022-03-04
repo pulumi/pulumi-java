@@ -48,28 +48,28 @@ public final class GetPermissionsTable {
     /**
      * Identifier for the Data Catalog. By default, it is the account ID of the caller.
      * 
-     */
+    */
     public String getCatalogId() {
         return this.catalogId;
     }
     /**
      * Name of the database for the table with columns resource. Unique to the Data Catalog.
      * 
-     */
+    */
     public String getDatabaseName() {
         return this.databaseName;
     }
     /**
      * Name of the table resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Whether to use a wildcard representing every table under a database. At least one of `name` or `wildcard` is required. Defaults to `false`.
      * 
-     */
+    */
     public Optional<Boolean> getWildcard() {
         return Optional.ofNullable(this.wildcard);
     }

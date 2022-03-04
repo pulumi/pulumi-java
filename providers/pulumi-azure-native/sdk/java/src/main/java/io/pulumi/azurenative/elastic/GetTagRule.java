@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTagRule {
-/**
- * Capture logs and metrics of Azure resources based on ARM tags.
+    private GetTagRule() {}
+    public interface BuilderApplicator {
+        public void apply(GetTagRuleArgs.Builder a);
+    }
+    private static GetTagRuleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTagRuleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Capture logs and metrics of Azure resources based on ARM tags.
  * API Version: 2020-07-01.
  * 
- *
- * Capture logs and metrics of Azure resources based on ARM tags.
+     *
+     * Capture logs and metrics of Azure resources based on ARM tags.
  * 
- */
+     */
+    public static CompletableFuture<GetTagRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Capture logs and metrics of Azure resources based on ARM tags.
+     * API Version: 2020-07-01.
+     * 
+     *
+         * Capture logs and metrics of Azure resources based on ARM tags.
+     * 
+     */
     public static CompletableFuture<GetTagRuleResult> invokeAsync(GetTagRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:elastic:getTagRule", TypeShape.of(GetTagRuleResult.class), args == null ? GetTagRuleArgs.Empty : args, Utilities.withVersion(options));
     }

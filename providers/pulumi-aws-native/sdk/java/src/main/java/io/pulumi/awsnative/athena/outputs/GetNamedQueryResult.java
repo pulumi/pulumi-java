@@ -25,7 +25,7 @@ public final class GetNamedQueryResult {
     /**
      * The unique ID of the query.
      * 
-     */
+    */
     public Optional<String> getNamedQueryId() {
         return Optional.ofNullable(this.namedQueryId);
     }

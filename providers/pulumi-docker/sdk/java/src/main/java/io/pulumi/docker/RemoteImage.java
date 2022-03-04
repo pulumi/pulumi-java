@@ -113,7 +113,7 @@ public class RemoteImage extends io.pulumi.resources.CustomResource {
     /**
      * The ID of the image in the form of `sha256:<hash>` image digest. Do not confuse it with the default `latest` tag.
      * 
-     * @deprecated
+     * @Deprecated
      * Use repo_digest instead
      * 
      */
@@ -143,7 +143,7 @@ public class RemoteImage extends io.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * @deprecated
+     * @Deprecated
      * Is unused and will be removed.
      * 
      */
@@ -157,7 +157,7 @@ public class RemoteImage extends io.pulumi.resources.CustomResource {
     /**
      * A value which cause an image pull when changed
      * 
-     * @deprecated
+     * @Deprecated
      * Use field pull_triggers instead
      * 
      */
@@ -203,6 +203,22 @@ public class RemoteImage extends io.pulumi.resources.CustomResource {
         return this.repoDigest;
     }
 
+    public interface BuilderApplicator {
+        public void apply(RemoteImageArgs.Builder a);
+    }
+    private static io.pulumi.docker.RemoteImageArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.docker.RemoteImageArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public RemoteImage(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -56,7 +56,7 @@ public final class LaunchTemplateInstanceMarketOptionsSpotOptions {
     /**
      * The required duration in minutes. This value must be a multiple of 60.
      * 
-     */
+    */
     public Optional<Integer> getBlockDurationMinutes() {
         return Optional.ofNullable(this.blockDurationMinutes);
     }
@@ -64,28 +64,28 @@ public final class LaunchTemplateInstanceMarketOptionsSpotOptions {
      * The behavior when a Spot Instance is interrupted. Can be `hibernate`,
      * `stop`, or `terminate`. (Default: `terminate`).
      * 
-     */
+    */
     public Optional<String> getInstanceInterruptionBehavior() {
         return Optional.ofNullable(this.instanceInterruptionBehavior);
     }
     /**
      * The maximum hourly price you're willing to pay for the Spot Instances.
      * 
-     */
+    */
     public Optional<String> getMaxPrice() {
         return Optional.ofNullable(this.maxPrice);
     }
     /**
      * The Spot Instance request type. Can be `one-time`, or `persistent`.
      * 
-     */
+    */
     public Optional<String> getSpotInstanceType() {
         return Optional.ofNullable(this.spotInstanceType);
     }
     /**
      * The end date of the request.
      * 
-     */
+    */
     public Optional<String> getValidUntil() {
         return Optional.ofNullable(this.validUntil);
     }

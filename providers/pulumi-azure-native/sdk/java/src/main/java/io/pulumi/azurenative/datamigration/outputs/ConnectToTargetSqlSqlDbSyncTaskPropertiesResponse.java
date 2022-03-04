@@ -69,35 +69,35 @@ public final class ConnectToTargetSqlSqlDbSyncTaskPropertiesResponse {
     /**
      * Array of command properties.
      * 
-     */
+    */
     public List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> getCommands() {
         return this.commands;
     }
     /**
      * Array of errors. This is ignored if submitted.
      * 
-     */
+    */
     public List<ODataErrorResponse> getErrors() {
         return this.errors;
     }
     /**
      * Task input
      * 
-     */
+    */
     public Optional<ConnectToTargetSqlSqlDbSyncTaskInputResponse> getInput() {
         return Optional.ofNullable(this.input);
     }
     /**
      * Task output. This is ignored if submitted.
      * 
-     */
+    */
     public List<ConnectToTargetSqlDbTaskOutputResponse> getOutput() {
         return this.output;
     }
     /**
      * The state of the task. This is ignored if submitted.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
@@ -105,7 +105,7 @@ public final class ConnectToTargetSqlSqlDbSyncTaskPropertiesResponse {
      * Task type.
      * Expected value is 'ConnectToTarget.SqlDb.Sync'.
      * 
-     */
+    */
     public String getTaskType() {
         return this.taskType;
     }

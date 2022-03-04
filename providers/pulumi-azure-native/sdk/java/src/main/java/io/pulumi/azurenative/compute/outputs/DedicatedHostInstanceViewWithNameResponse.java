@@ -50,28 +50,28 @@ public final class DedicatedHostInstanceViewWithNameResponse {
     /**
      * Specifies the unique id of the dedicated physical machine on which the dedicated host resides.
      * 
-     */
+    */
     public String getAssetId() {
         return this.assetId;
     }
     /**
      * Unutilized capacity of the dedicated host.
      * 
-     */
+    */
     public Optional<DedicatedHostAvailableCapacityResponse> getAvailableCapacity() {
         return Optional.ofNullable(this.availableCapacity);
     }
     /**
      * The name of the dedicated host.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The resource status information.
      * 
-     */
+    */
     public List<InstanceViewStatusResponse> getStatuses() {
         return this.statuses == null ? List.of() : this.statuses;
     }

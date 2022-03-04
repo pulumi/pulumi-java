@@ -34,14 +34,14 @@ public final class UrlSigningActionResponse {
      * The name of the action for the delivery rule.
      * Expected value is 'UrlSigning'.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Defines the parameters for the action.
      * 
-     */
+    */
     public UrlSigningActionParametersResponse getParameters() {
         return this.parameters;
     }

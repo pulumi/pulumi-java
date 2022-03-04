@@ -33,14 +33,14 @@ public final class EnvironmentStateDetailsResponse {
     /**
      * Contains the code that represents the reason of an environment being in a particular state. Can be used to programmatically handle specific cases.
      * 
-     */
+    */
     public Optional<String> getCode() {
         return Optional.ofNullable(this.code);
     }
     /**
      * A message that describes the state in detail.
      * 
-     */
+    */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }

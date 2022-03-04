@@ -89,49 +89,49 @@ public final class AzureDataExplorerCommandActivityResponse {
     /**
      * A control command, according to the Azure Data Explorer command syntax. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Object getCommand() {
         return this.command;
     }
     /**
      * Control command timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9]))..)
      * 
-     */
+    */
     public Optional<Object> getCommandTimeout() {
         return Optional.ofNullable(this.commandTimeout);
     }
     /**
      * Activity depends on condition.
      * 
-     */
+    */
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Activity description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Linked service reference.
      * 
-     */
+    */
     public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
     /**
      * Activity name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Activity policy.
      * 
-     */
+    */
     public Optional<ActivityPolicyResponse> getPolicy() {
         return Optional.ofNullable(this.policy);
     }
@@ -139,14 +139,14 @@ public final class AzureDataExplorerCommandActivityResponse {
      * Type of activity.
      * Expected value is 'AzureDataExplorerCommand'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Activity user properties.
      * 
-     */
+    */
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }

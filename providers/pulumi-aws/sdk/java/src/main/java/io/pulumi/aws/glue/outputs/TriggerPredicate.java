@@ -35,14 +35,14 @@ public final class TriggerPredicate {
     /**
      * A list of the conditions that determine when the trigger will fire. See Conditions.
      * 
-     */
+    */
     public List<TriggerPredicateCondition> getConditions() {
         return this.conditions;
     }
     /**
      * How to handle multiple conditions. Defaults to `AND`. Valid values are `AND` or `ANY`.
      * 
-     */
+    */
     public Optional<String> getLogical() {
         return Optional.ofNullable(this.logical);
     }

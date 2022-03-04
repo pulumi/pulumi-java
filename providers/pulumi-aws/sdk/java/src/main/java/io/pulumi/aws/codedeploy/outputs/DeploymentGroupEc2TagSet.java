@@ -25,7 +25,7 @@ public final class DeploymentGroupEc2TagSet {
     /**
      * Tag filters associated with the deployment group. See the AWS docs for details.
      * 
-     */
+    */
     public List<DeploymentGroupEc2TagSetEc2TagFilter> getEc2TagFilters() {
         return this.ec2TagFilters == null ? List.of() : this.ec2TagFilters;
     }

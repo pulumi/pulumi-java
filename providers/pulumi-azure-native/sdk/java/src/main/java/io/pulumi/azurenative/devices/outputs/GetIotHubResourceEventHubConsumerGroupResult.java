@@ -53,35 +53,35 @@ public final class GetIotHubResourceEventHubConsumerGroupResult {
     /**
      * The etag.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * The Event Hub-compatible consumer group identifier.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The Event Hub-compatible consumer group name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The tags.
      * 
-     */
+    */
     public Map<String,String> getProperties() {
         return this.properties;
     }
     /**
      * the resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

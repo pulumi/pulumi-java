@@ -40,21 +40,21 @@ public final class JobStepActionResponse {
     /**
      * The source of the action to execute.
      * 
-     */
+    */
     public Optional<String> getSource() {
         return Optional.ofNullable(this.source);
     }
     /**
      * Type of action being executed by the job step.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
     /**
      * The action value, for example the text of the T-SQL script to execute.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }

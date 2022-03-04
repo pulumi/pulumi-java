@@ -68,49 +68,49 @@ public final class OsProfileResponse {
     /**
      * Gets or sets administrator username.
      * 
-     */
+    */
     public Optional<String> getAdminUsername() {
         return Optional.ofNullable(this.adminUsername);
     }
     /**
      * Gets or sets computer name.
      * 
-     */
+    */
     public Optional<String> getComputerName() {
         return Optional.ofNullable(this.computerName);
     }
     /**
      * Gets or sets os name.
      * 
-     */
+    */
     public String getOsName() {
         return this.osName;
     }
     /**
      * Gets or sets the type of the os.
      * 
-     */
+    */
     public Optional<String> getOsType() {
         return Optional.ofNullable(this.osType);
     }
     /**
      * Gets or sets the current running status of VMware Tools running in the guest operating system.
      * 
-     */
+    */
     public String getToolsRunningStatus() {
         return this.toolsRunningStatus;
     }
     /**
      * Gets or sets the current version of VMware Tools.
      * 
-     */
+    */
     public String getToolsVersion() {
         return this.toolsVersion;
     }
     /**
      * Gets or sets the current version status of VMware Tools installed in the guest operating system.
      * 
-     */
+    */
     public String getToolsVersionStatus() {
         return this.toolsVersionStatus;
     }

@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetChannel {
-/**
- * Resource schema for AWS::MediaPackage::Channel
+    private GetChannel() {}
+    public interface BuilderApplicator {
+        public void apply(GetChannelArgs.Builder a);
+    }
+    private static GetChannelArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetChannelArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource schema for AWS::MediaPackage::Channel
  * 
- */
+     */
+    public static CompletableFuture<GetChannelResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource schema for AWS::MediaPackage::Channel
+     * 
+     */
     public static CompletableFuture<GetChannelResult> invokeAsync(GetChannelArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:mediapackage:getChannel", TypeShape.of(GetChannelResult.class), args == null ? GetChannelArgs.Empty : args, Utilities.withVersion(options));
     }

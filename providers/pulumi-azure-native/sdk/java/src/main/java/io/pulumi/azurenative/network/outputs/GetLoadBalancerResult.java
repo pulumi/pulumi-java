@@ -149,119 +149,119 @@ public final class GetLoadBalancerResult {
     /**
      * Collection of backend address pools used by a load balancer.
      * 
-     */
+    */
     public List<BackendAddressPoolResponse> getBackendAddressPools() {
         return this.backendAddressPools == null ? List.of() : this.backendAddressPools;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * The extended location of the load balancer.
      * 
-     */
+    */
     public Optional<ExtendedLocationResponse> getExtendedLocation() {
         return Optional.ofNullable(this.extendedLocation);
     }
     /**
      * Object representing the frontend IPs to be used for the load balancer.
      * 
-     */
+    */
     public List<FrontendIPConfigurationResponse> getFrontendIPConfigurations() {
         return this.frontendIPConfigurations == null ? List.of() : this.frontendIPConfigurations;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Defines an external port range for inbound NAT to a single backend port on NICs associated with a load balancer. Inbound NAT rules are created automatically for each NIC associated with the Load Balancer using an external port from this range. Defining an Inbound NAT pool on your Load Balancer is mutually exclusive with defining inbound Nat rules. Inbound NAT pools are referenced from virtual machine scale sets. NICs that are associated with individual virtual machines cannot reference an inbound NAT pool. They have to reference individual inbound NAT rules.
      * 
-     */
+    */
     public List<InboundNatPoolResponse> getInboundNatPools() {
         return this.inboundNatPools == null ? List.of() : this.inboundNatPools;
     }
     /**
      * Collection of inbound NAT Rules used by a load balancer. Defining inbound NAT rules on your load balancer is mutually exclusive with defining an inbound NAT pool. Inbound NAT pools are referenced from virtual machine scale sets. NICs that are associated with individual virtual machines cannot reference an Inbound NAT pool. They have to reference individual inbound NAT rules.
      * 
-     */
+    */
     public List<InboundNatRuleResponse> getInboundNatRules() {
         return this.inboundNatRules == null ? List.of() : this.inboundNatRules;
     }
     /**
      * Object collection representing the load balancing rules Gets the provisioning.
      * 
-     */
+    */
     public List<LoadBalancingRuleResponse> getLoadBalancingRules() {
         return this.loadBalancingRules == null ? List.of() : this.loadBalancingRules;
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The outbound rules.
      * 
-     */
+    */
     public List<OutboundRuleResponse> getOutboundRules() {
         return this.outboundRules == null ? List.of() : this.outboundRules;
     }
     /**
      * Collection of probe objects used in the load balancer.
      * 
-     */
+    */
     public List<ProbeResponse> getProbes() {
         return this.probes == null ? List.of() : this.probes;
     }
     /**
      * The provisioning state of the load balancer resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The resource GUID property of the load balancer resource.
      * 
-     */
+    */
     public String getResourceGuid() {
         return this.resourceGuid;
     }
     /**
      * The load balancer SKU.
      * 
-     */
+    */
     public Optional<LoadBalancerSkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

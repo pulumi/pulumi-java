@@ -47,28 +47,28 @@ public final class GitHubActionContainerConfigurationResponse {
     /**
      * The image name for the build.
      * 
-     */
+    */
     public Optional<String> getImageName() {
         return Optional.ofNullable(this.imageName);
     }
     /**
      * The password used to upload the image to the container registry.
      * 
-     */
+    */
     public Optional<String> getPassword() {
         return Optional.ofNullable(this.password);
     }
     /**
      * The server URL for the container registry where the build will be hosted.
      * 
-     */
+    */
     public Optional<String> getServerUrl() {
         return Optional.ofNullable(this.serverUrl);
     }
     /**
      * The username used to upload the image to the container registry.
      * 
-     */
+    */
     public Optional<String> getUsername() {
         return Optional.ofNullable(this.username);
     }

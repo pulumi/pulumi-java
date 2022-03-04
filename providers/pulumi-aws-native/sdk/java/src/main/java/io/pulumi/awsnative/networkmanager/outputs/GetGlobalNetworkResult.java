@@ -49,28 +49,28 @@ public final class GetGlobalNetworkResult {
     /**
      * The Amazon Resource Name (ARN) of the global network.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The description of the global network.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The ID of the global network.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The tags for the global network.
      * 
-     */
+    */
     public List<GlobalNetworkTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

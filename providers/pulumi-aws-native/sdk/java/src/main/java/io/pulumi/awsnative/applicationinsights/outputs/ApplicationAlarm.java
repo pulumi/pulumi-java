@@ -34,14 +34,14 @@ public final class ApplicationAlarm {
     /**
      * The name of the CloudWatch alarm to be monitored for the component.
      * 
-     */
+    */
     public String getAlarmName() {
         return this.alarmName;
     }
     /**
      * Indicates the degree of outage when the alarm goes off.
      * 
-     */
+    */
     public Optional<ApplicationAlarmSeverity> getSeverity() {
         return Optional.ofNullable(this.severity);
     }

@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVirtualNetworkGatewayLearnedRoutes {
-/**
- * List of virtual network gateway routes.
+    private GetVirtualNetworkGatewayLearnedRoutes() {}
+    public interface BuilderApplicator {
+        public void apply(GetVirtualNetworkGatewayLearnedRoutesArgs.Builder a);
+    }
+    private static GetVirtualNetworkGatewayLearnedRoutesArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetVirtualNetworkGatewayLearnedRoutesArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * List of virtual network gateway routes.
  * API Version: 2020-11-01.
  * 
- *
- * List of virtual network gateway routes.
+     *
+     * List of virtual network gateway routes.
  * 
- */
+     */
+    public static CompletableFuture<GetVirtualNetworkGatewayLearnedRoutesResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * List of virtual network gateway routes.
+     * API Version: 2020-11-01.
+     * 
+     *
+         * List of virtual network gateway routes.
+     * 
+     */
     public static CompletableFuture<GetVirtualNetworkGatewayLearnedRoutesResult> invokeAsync(GetVirtualNetworkGatewayLearnedRoutesArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getVirtualNetworkGatewayLearnedRoutes", TypeShape.of(GetVirtualNetworkGatewayLearnedRoutesResult.class), args == null ? GetVirtualNetworkGatewayLearnedRoutesArgs.Empty : args, Utilities.withVersion(options));
     }

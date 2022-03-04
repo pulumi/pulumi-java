@@ -33,14 +33,14 @@ public final class SlotTypeEnumerationValue {
     /**
      * Additional values related to the slot type value. Each item must be less than or equal to 140 characters in length.
      * 
-     */
+    */
     public List<String> getSynonyms() {
         return this.synonyms == null ? List.of() : this.synonyms;
     }
     /**
      * The value of the slot type. Must be less than or equal to 140 characters in length.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }

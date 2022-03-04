@@ -130,35 +130,35 @@ public final class GetGen1EnvironmentResult {
     /**
      * The time the resource was created.
      * 
-     */
+    */
     public String getCreationTime() {
         return this.creationTime;
     }
     /**
      * The fully qualified domain name used to access the environment data, e.g. to query the environment's events or upload reference data for the environment.
      * 
-     */
+    */
     public String getDataAccessFqdn() {
         return this.dataAccessFqdn;
     }
     /**
      * An id used to access the environment data, e.g. to query the environment's events or upload reference data for the environment.
      * 
-     */
+    */
     public String getDataAccessId() {
         return this.dataAccessId;
     }
     /**
      * ISO8601 timespan specifying the minimum number of days the environment's events will be available for query.
      * 
-     */
+    */
     public String getDataRetentionTime() {
         return this.dataRetentionTime;
     }
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -166,70 +166,70 @@ public final class GetGen1EnvironmentResult {
      * The kind of the environment.
      * Expected value is 'Gen1'.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Resource location
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The list of event properties which will be used to partition data in the environment. Currently, only a single partition key property is supported.
      * 
-     */
+    */
     public List<TimeSeriesIdPropertyResponse> getPartitionKeyProperties() {
         return this.partitionKeyProperties == null ? List.of() : this.partitionKeyProperties;
     }
     /**
      * Provisioning state of the resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The sku determines the type of environment, either Gen1 (S1 or S2) or Gen2 (L1). For Gen1 environments the sku determines the capacity of the environment, the ingress rate, and the billing rate.
      * 
-     */
+    */
     public SkuResponse getSku() {
         return this.sku;
     }
     /**
      * An object that represents the status of the environment, and its internal state in the Time Series Insights service.
      * 
-     */
+    */
     public EnvironmentStatusResponse getStatus() {
         return this.status;
     }
     /**
      * The behavior the Time Series Insights service should take when the environment's capacity has been exceeded. If "PauseIngress" is specified, new events will not be read from the event source. If "PurgeOldData" is specified, new events will continue to be read and old events will be deleted from the environment. The default behavior is PurgeOldData.
      * 
-     */
+    */
     public Optional<String> getStorageLimitExceededBehavior() {
         return Optional.ofNullable(this.storageLimitExceededBehavior);
     }
     /**
      * Resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

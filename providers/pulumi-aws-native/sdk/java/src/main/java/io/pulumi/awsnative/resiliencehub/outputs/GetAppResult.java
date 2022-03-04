@@ -60,35 +60,35 @@ public final class GetAppResult {
     /**
      * Amazon Resource Name (ARN) of the App.
      * 
-     */
+    */
     public Optional<String> getAppArn() {
         return Optional.ofNullable(this.appArn);
     }
     /**
      * A string containing full ResilienceHub app template body.
      * 
-     */
+    */
     public Optional<String> getAppTemplateBody() {
         return Optional.ofNullable(this.appTemplateBody);
     }
     /**
      * App description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Amazon Resource Name (ARN) of the Resiliency Policy.
      * 
-     */
+    */
     public Optional<String> getResiliencyPolicyArn() {
         return Optional.ofNullable(this.resiliencyPolicyArn);
     }
     /**
      * An array of ResourceMapping objects.
      * 
-     */
+    */
     public List<AppResourceMapping> getResourceMappings() {
         return this.resourceMappings == null ? List.of() : this.resourceMappings;
     }

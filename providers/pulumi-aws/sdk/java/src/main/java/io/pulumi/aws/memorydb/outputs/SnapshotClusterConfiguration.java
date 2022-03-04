@@ -111,91 +111,91 @@ public final class SnapshotClusterConfiguration {
     /**
      * Description for the cluster.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Version number of the Redis engine used by the cluster.
      * 
-     */
+    */
     public Optional<String> getEngineVersion() {
         return Optional.ofNullable(this.engineVersion);
     }
     /**
      * The weekly time range during which maintenance on the cluster is performed.
      * 
-     */
+    */
     public Optional<String> getMaintenanceWindow() {
         return Optional.ofNullable(this.maintenanceWindow);
     }
     /**
      * Name of the cluster.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Compute and memory capacity of the nodes in the cluster.
      * 
-     */
+    */
     public Optional<String> getNodeType() {
         return Optional.ofNullable(this.nodeType);
     }
     /**
      * Number of shards in the cluster.
      * 
-     */
+    */
     public Optional<Integer> getNumShards() {
         return Optional.ofNullable(this.numShards);
     }
     /**
      * Name of the parameter group associated with the cluster.
      * 
-     */
+    */
     public Optional<String> getParameterGroupName() {
         return Optional.ofNullable(this.parameterGroupName);
     }
     /**
      * Port number on which the cluster accepts connections.
      * 
-     */
+    */
     public Optional<Integer> getPort() {
         return Optional.ofNullable(this.port);
     }
     /**
      * Number of days for which MemoryDB retains automatic snapshots before deleting them.
      * 
-     */
+    */
     public Optional<Integer> getSnapshotRetentionLimit() {
         return Optional.ofNullable(this.snapshotRetentionLimit);
     }
     /**
      * The daily time range (in UTC) during which MemoryDB begins taking a daily snapshot of the shard.
      * 
-     */
+    */
     public Optional<String> getSnapshotWindow() {
         return Optional.ofNullable(this.snapshotWindow);
     }
     /**
      * Name of the subnet group used by the cluster.
      * 
-     */
+    */
     public Optional<String> getSubnetGroupName() {
         return Optional.ofNullable(this.subnetGroupName);
     }
     /**
      * ARN of the SNS topic to which cluster notifications are sent.
      * 
-     */
+    */
     public Optional<String> getTopicArn() {
         return Optional.ofNullable(this.topicArn);
     }
     /**
      * The VPC in which the cluster exists.
      * 
-     */
+    */
     public Optional<String> getVpcId() {
         return Optional.ofNullable(this.vpcId);
     }

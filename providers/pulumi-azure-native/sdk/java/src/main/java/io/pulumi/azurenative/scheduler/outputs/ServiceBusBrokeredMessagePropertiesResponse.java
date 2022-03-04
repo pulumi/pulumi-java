@@ -111,91 +111,91 @@ public final class ServiceBusBrokeredMessagePropertiesResponse {
     /**
      * Gets or sets the content type.
      * 
-     */
+    */
     public Optional<String> getContentType() {
         return Optional.ofNullable(this.contentType);
     }
     /**
      * Gets or sets the correlation ID.
      * 
-     */
+    */
     public Optional<String> getCorrelationId() {
         return Optional.ofNullable(this.correlationId);
     }
     /**
      * Gets or sets the force persistence.
      * 
-     */
+    */
     public Optional<Boolean> getForcePersistence() {
         return Optional.ofNullable(this.forcePersistence);
     }
     /**
      * Gets or sets the label.
      * 
-     */
+    */
     public Optional<String> getLabel() {
         return Optional.ofNullable(this.label);
     }
     /**
      * Gets or sets the message ID.
      * 
-     */
+    */
     public Optional<String> getMessageId() {
         return Optional.ofNullable(this.messageId);
     }
     /**
      * Gets or sets the partition key.
      * 
-     */
+    */
     public Optional<String> getPartitionKey() {
         return Optional.ofNullable(this.partitionKey);
     }
     /**
      * Gets or sets the reply to.
      * 
-     */
+    */
     public Optional<String> getReplyTo() {
         return Optional.ofNullable(this.replyTo);
     }
     /**
      * Gets or sets the reply to session ID.
      * 
-     */
+    */
     public Optional<String> getReplyToSessionId() {
         return Optional.ofNullable(this.replyToSessionId);
     }
     /**
      * Gets or sets the scheduled enqueue time UTC.
      * 
-     */
+    */
     public Optional<String> getScheduledEnqueueTimeUtc() {
         return Optional.ofNullable(this.scheduledEnqueueTimeUtc);
     }
     /**
      * Gets or sets the session ID.
      * 
-     */
+    */
     public Optional<String> getSessionId() {
         return Optional.ofNullable(this.sessionId);
     }
     /**
      * Gets or sets the time to live.
      * 
-     */
+    */
     public Optional<String> getTimeToLive() {
         return Optional.ofNullable(this.timeToLive);
     }
     /**
      * Gets or sets the to.
      * 
-     */
+    */
     public Optional<String> getTo() {
         return Optional.ofNullable(this.to);
     }
     /**
      * Gets or sets the via partition key.
      * 
-     */
+    */
     public Optional<String> getViaPartitionKey() {
         return Optional.ofNullable(this.viaPartitionKey);
     }

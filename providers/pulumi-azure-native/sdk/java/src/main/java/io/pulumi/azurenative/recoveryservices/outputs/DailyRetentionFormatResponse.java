@@ -25,7 +25,7 @@ public final class DailyRetentionFormatResponse {
     /**
      * List of days of the month.
      * 
-     */
+    */
     public List<DayResponse> getDaysOfTheMonth() {
         return this.daysOfTheMonth == null ? List.of() : this.daysOfTheMonth;
     }

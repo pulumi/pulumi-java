@@ -31,14 +31,14 @@ public final class GoogleCloudDialogflowCxV3TestRunDifferenceResponse {
     /**
      * A description of the diff, showing the actual output vs expected output.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The type of diff.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

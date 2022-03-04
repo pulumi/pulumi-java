@@ -64,7 +64,7 @@ public final class GetResiliencyPolicyResult {
     /**
      * Data Location Constraint of the Policy.
      * 
-     */
+    */
     public Optional<ResiliencyPolicyDataLocationConstraint> getDataLocationConstraint() {
         return Optional.ofNullable(this.dataLocationConstraint);
     }
@@ -74,21 +74,21 @@ public final class GetResiliencyPolicyResult {
     /**
      * Amazon Resource Name (ARN) of the Resiliency Policy.
      * 
-     */
+    */
     public Optional<String> getPolicyArn() {
         return Optional.ofNullable(this.policyArn);
     }
     /**
      * Description of Resiliency Policy.
      * 
-     */
+    */
     public Optional<String> getPolicyDescription() {
         return Optional.ofNullable(this.policyDescription);
     }
     /**
      * Name of Resiliency Policy.
      * 
-     */
+    */
     public Optional<String> getPolicyName() {
         return Optional.ofNullable(this.policyName);
     }
@@ -98,7 +98,7 @@ public final class GetResiliencyPolicyResult {
     /**
      * Resiliency Policy Tier.
      * 
-     */
+    */
     public Optional<ResiliencyPolicyTier> getTier() {
         return Optional.ofNullable(this.tier);
     }

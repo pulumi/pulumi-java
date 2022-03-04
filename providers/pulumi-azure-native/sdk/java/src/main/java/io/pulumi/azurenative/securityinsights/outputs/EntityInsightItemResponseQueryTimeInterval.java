@@ -33,14 +33,14 @@ public final class EntityInsightItemResponseQueryTimeInterval {
     /**
      * Insight query end time
      * 
-     */
+    */
     public Optional<String> getEndTime() {
         return Optional.ofNullable(this.endTime);
     }
     /**
      * Insight query start time
      * 
-     */
+    */
     public Optional<String> getStartTime() {
         return Optional.ofNullable(this.startTime);
     }

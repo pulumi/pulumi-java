@@ -96,7 +96,7 @@ public final class DomainMappingMetadata {
      * If the provider plan shows a diff where a server-side annotation is added, you can add it to your config
      * or apply the lifecycle.ignore_changes rule to the metadata.0.annotations field.
      * 
-     */
+    */
     public Map<String,String> getAnnotations() {
         return this.annotations == null ? Map.of() : this.annotations;
     }
@@ -104,7 +104,7 @@ public final class DomainMappingMetadata {
      * - 
      * A sequence number representing a specific generation of the desired state.
      * 
-     */
+    */
     public Optional<Integer> getGeneration() {
         return Optional.ofNullable(this.generation);
     }
@@ -114,7 +114,7 @@ public final class DomainMappingMetadata {
      * and routes.
      * More info: http://kubernetes.io/docs/user-guide/labels
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels == null ? Map.of() : this.labels;
     }
@@ -122,7 +122,7 @@ public final class DomainMappingMetadata {
      * In Cloud Run the namespace must be equal to either the
      * project ID or project number.
      * 
-     */
+    */
     public String getNamespace() {
         return this.namespace;
     }
@@ -136,7 +136,7 @@ public final class DomainMappingMetadata {
      * More info:
      * https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency
      * 
-     */
+    */
     public Optional<String> getResourceVersion() {
         return Optional.ofNullable(this.resourceVersion);
     }
@@ -144,7 +144,7 @@ public final class DomainMappingMetadata {
      * - 
      * SelfLink is a URL representing this object.
      * 
-     */
+    */
     public Optional<String> getSelfLink() {
         return Optional.ofNullable(this.selfLink);
     }
@@ -154,7 +154,7 @@ public final class DomainMappingMetadata {
      * allowed to change on PUT operations.
      * More info: http://kubernetes.io/docs/user-guide/identifiers#uids
      * 
-     */
+    */
     public Optional<String> getUid() {
         return Optional.ofNullable(this.uid);
     }

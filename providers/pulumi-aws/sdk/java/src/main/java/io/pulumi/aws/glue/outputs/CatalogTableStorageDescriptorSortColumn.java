@@ -32,14 +32,14 @@ public final class CatalogTableStorageDescriptorSortColumn {
     /**
      * Name of the column.
      * 
-     */
+    */
     public String getColumn() {
         return this.column;
     }
     /**
      * Whether the column is sorted in ascending (`1`) or descending order (`0`).
      * 
-     */
+    */
     public Integer getSortOrder() {
         return this.sortOrder;
     }

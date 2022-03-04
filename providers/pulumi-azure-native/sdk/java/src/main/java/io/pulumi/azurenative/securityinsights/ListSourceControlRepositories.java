@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListSourceControlRepositories {
-/**
- * List all the source controls.
+    private ListSourceControlRepositories() {}
+    public interface BuilderApplicator {
+        public void apply(ListSourceControlRepositoriesArgs.Builder a);
+    }
+    private static ListSourceControlRepositoriesArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListSourceControlRepositoriesArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * List all the source controls.
  * API Version: 2021-03-01-preview.
  * 
- *
- * List all the source controls.
+     *
+     * List all the source controls.
  * 
- */
+     */
+    public static CompletableFuture<ListSourceControlRepositoriesResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * List all the source controls.
+     * API Version: 2021-03-01-preview.
+     * 
+     *
+         * List all the source controls.
+     * 
+     */
     public static CompletableFuture<ListSourceControlRepositoriesResult> invokeAsync(ListSourceControlRepositoriesArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:listSourceControlRepositories", TypeShape.of(ListSourceControlRepositoriesResult.class), args == null ? ListSourceControlRepositoriesArgs.Empty : args, Utilities.withVersion(options));
     }

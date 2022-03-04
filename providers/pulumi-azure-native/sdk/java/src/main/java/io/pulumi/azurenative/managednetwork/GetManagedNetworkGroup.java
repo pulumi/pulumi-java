@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetManagedNetworkGroup {
-/**
- * The Managed Network Group resource
+    private GetManagedNetworkGroup() {}
+    public interface BuilderApplicator {
+        public void apply(GetManagedNetworkGroupArgs.Builder a);
+    }
+    private static GetManagedNetworkGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetManagedNetworkGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The Managed Network Group resource
  * API Version: 2019-06-01-preview.
  * 
- *
- * The Managed Network Group resource
+     *
+     * The Managed Network Group resource
  * 
- */
+     */
+    public static CompletableFuture<GetManagedNetworkGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The Managed Network Group resource
+     * API Version: 2019-06-01-preview.
+     * 
+     *
+         * The Managed Network Group resource
+     * 
+     */
     public static CompletableFuture<GetManagedNetworkGroupResult> invokeAsync(GetManagedNetworkGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:managednetwork:getManagedNetworkGroup", TypeShape.of(GetManagedNetworkGroupResult.class), args == null ? GetManagedNetworkGroupArgs.Empty : args, Utilities.withVersion(options));
     }

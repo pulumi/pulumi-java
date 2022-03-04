@@ -47,28 +47,28 @@ public final class ConnectivityGroupItemResponse {
     /**
      * Group connectivity type.
      * 
-     */
+    */
     public Optional<String> getGroupConnectivity() {
         return Optional.ofNullable(this.groupConnectivity);
     }
     /**
      * Flag if global is supported.
      * 
-     */
+    */
     public Optional<String> getIsGlobal() {
         return Optional.ofNullable(this.isGlobal);
     }
     /**
      * Network group Id.
      * 
-     */
+    */
     public Optional<String> getNetworkGroupId() {
         return Optional.ofNullable(this.networkGroupId);
     }
     /**
      * Flag if need to use hub gateway.
      * 
-     */
+    */
     public Optional<String> getUseHubGateway() {
         return Optional.ofNullable(this.useHubGateway);
     }

@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIntegrationAccountAgreement {
-/**
- * The integration account agreement.
+    private GetIntegrationAccountAgreement() {}
+    public interface BuilderApplicator {
+        public void apply(GetIntegrationAccountAgreementArgs.Builder a);
+    }
+    private static GetIntegrationAccountAgreementArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetIntegrationAccountAgreementArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The integration account agreement.
  * API Version: 2019-05-01.
  * 
- *
- * The integration account agreement.
+     *
+     * The integration account agreement.
  * 
- */
+     */
+    public static CompletableFuture<GetIntegrationAccountAgreementResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The integration account agreement.
+     * API Version: 2019-05-01.
+     * 
+     *
+         * The integration account agreement.
+     * 
+     */
     public static CompletableFuture<GetIntegrationAccountAgreementResult> invokeAsync(GetIntegrationAccountAgreementArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logic:getIntegrationAccountAgreement", TypeShape.of(GetIntegrationAccountAgreementResult.class), args == null ? GetIntegrationAccountAgreementArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -31,14 +31,14 @@ public final class AddressDetailsResponse {
     /**
      * Customer address and contact details. It should be address resource
      * 
-     */
+    */
     public AddressPropertiesResponse getForwardAddress() {
         return this.forwardAddress;
     }
     /**
      * Return shipping address
      * 
-     */
+    */
     public AddressPropertiesResponse getReturnAddress() {
         return this.returnAddress;
     }

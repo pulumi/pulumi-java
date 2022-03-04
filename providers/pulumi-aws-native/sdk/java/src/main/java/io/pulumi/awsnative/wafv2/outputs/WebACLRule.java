@@ -70,7 +70,7 @@ public final class WebACLRule {
     /**
      * Collection of Rule Labels.
      * 
-     */
+    */
     public List<WebACLLabel> getRuleLabels() {
         return this.ruleLabels == null ? List.of() : this.ruleLabels;
     }

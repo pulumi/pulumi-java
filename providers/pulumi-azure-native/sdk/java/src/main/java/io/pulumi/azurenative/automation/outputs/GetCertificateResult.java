@@ -83,63 +83,63 @@ public final class GetCertificateResult {
     /**
      * Gets the creation time.
      * 
-     */
+    */
     public String getCreationTime() {
         return this.creationTime;
     }
     /**
      * Gets or sets the description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Gets the expiry time of the certificate.
      * 
-     */
+    */
     public String getExpiryTime() {
         return this.expiryTime;
     }
     /**
      * Fully qualified resource Id for the resource
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Gets the is exportable flag of the certificate.
      * 
-     */
+    */
     public Boolean getIsExportable() {
         return this.isExportable;
     }
     /**
      * Gets the last modified time.
      * 
-     */
+    */
     public String getLastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Gets the thumbprint of the certificate.
      * 
-     */
+    */
     public String getThumbprint() {
         return this.thumbprint;
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

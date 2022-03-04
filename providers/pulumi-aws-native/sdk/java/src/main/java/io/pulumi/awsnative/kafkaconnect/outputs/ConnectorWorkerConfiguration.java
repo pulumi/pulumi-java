@@ -32,14 +32,14 @@ public final class ConnectorWorkerConfiguration {
     /**
      * The revision of the worker configuration to use.
      * 
-     */
+    */
     public Integer getRevision() {
         return this.revision;
     }
     /**
      * The Amazon Resource Name (ARN) of the worker configuration to use.
      * 
-     */
+    */
     public String getWorkerConfigurationArn() {
         return this.workerConfigurationArn;
     }

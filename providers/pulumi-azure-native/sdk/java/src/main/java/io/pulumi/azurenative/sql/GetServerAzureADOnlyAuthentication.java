@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetServerAzureADOnlyAuthentication {
-/**
- * Azure Active Directory only authentication.
+    private GetServerAzureADOnlyAuthentication() {}
+    public interface BuilderApplicator {
+        public void apply(GetServerAzureADOnlyAuthenticationArgs.Builder a);
+    }
+    private static GetServerAzureADOnlyAuthenticationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetServerAzureADOnlyAuthenticationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Azure Active Directory only authentication.
  * API Version: 2020-11-01-preview.
  * 
- *
- * Azure Active Directory only authentication.
+     *
+     * Azure Active Directory only authentication.
  * 
- */
+     */
+    public static CompletableFuture<GetServerAzureADOnlyAuthenticationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Azure Active Directory only authentication.
+     * API Version: 2020-11-01-preview.
+     * 
+     *
+         * Azure Active Directory only authentication.
+     * 
+     */
     public static CompletableFuture<GetServerAzureADOnlyAuthenticationResult> invokeAsync(GetServerAzureADOnlyAuthenticationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getServerAzureADOnlyAuthentication", TypeShape.of(GetServerAzureADOnlyAuthenticationResult.class), args == null ? GetServerAzureADOnlyAuthenticationArgs.Empty : args, Utilities.withVersion(options));
     }

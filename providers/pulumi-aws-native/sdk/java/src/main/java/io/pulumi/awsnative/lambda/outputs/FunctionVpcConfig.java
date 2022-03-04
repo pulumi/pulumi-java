@@ -33,14 +33,14 @@ public final class FunctionVpcConfig {
     /**
      * A list of VPC security groups IDs.
      * 
-     */
+    */
     public List<String> getSecurityGroupIds() {
         return this.securityGroupIds == null ? List.of() : this.securityGroupIds;
     }
     /**
      * A list of VPC subnet IDs.
      * 
-     */
+    */
     public List<String> getSubnetIds() {
         return this.subnetIds == null ? List.of() : this.subnetIds;
     }

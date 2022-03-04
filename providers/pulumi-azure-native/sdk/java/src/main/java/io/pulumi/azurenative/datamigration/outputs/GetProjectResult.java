@@ -111,84 +111,84 @@ public final class GetProjectResult {
     /**
      * UTC Date and time when project was created
      * 
-     */
+    */
     public String getCreationTime() {
         return this.creationTime;
     }
     /**
      * List of DatabaseInfo
      * 
-     */
+    */
     public List<DatabaseInfoResponse> getDatabasesInfo() {
         return this.databasesInfo == null ? List.of() : this.databasesInfo;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The project's provisioning state
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Information for connecting to source
      * 
-     */
+    */
     public Optional<Object> getSourceConnectionInfo() {
         return Optional.ofNullable(this.sourceConnectionInfo);
     }
     /**
      * Source platform for the project
      * 
-     */
+    */
     public String getSourcePlatform() {
         return this.sourcePlatform;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Information for connecting to target
      * 
-     */
+    */
     public Optional<Object> getTargetConnectionInfo() {
         return Optional.ofNullable(this.targetConnectionInfo);
     }
     /**
      * Target platform for the project
      * 
-     */
+    */
     public String getTargetPlatform() {
         return this.targetPlatform;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

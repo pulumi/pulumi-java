@@ -31,14 +31,14 @@ public final class StageAccessLogSettings {
     /**
      * The ARN of the CloudWatch Logs log group to receive access logs. Any trailing `:*` is trimmed from the ARN.
      * 
-     */
+    */
     public String getDestinationArn() {
         return this.destinationArn;
     }
     /**
      * A single line [format](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#apigateway-cloudwatch-log-formats) of the access logs of data, as specified by [selected $context variables](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-logging.html).
      * 
-     */
+    */
     public String getFormat() {
         return this.format;
     }

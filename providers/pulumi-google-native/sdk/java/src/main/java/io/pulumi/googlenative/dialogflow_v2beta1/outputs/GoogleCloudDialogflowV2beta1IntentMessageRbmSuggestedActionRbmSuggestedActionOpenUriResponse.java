@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRb
     /**
      * The uri to open on the user device
      * 
-     */
+    */
     public String getUri() {
         return this.uri;
     }

@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAccessPolicyIamPolicy {
-/**
- * Gets the IAM policy for the specified Access Context Manager access policy.
+    private GetAccessPolicyIamPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetAccessPolicyIamPolicyArgs.Builder a);
+    }
+    private static GetAccessPolicyIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAccessPolicyIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the IAM policy for the specified Access Context Manager access policy.
  * 
- */
+     */
+    public static CompletableFuture<GetAccessPolicyIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the IAM policy for the specified Access Context Manager access policy.
+     * 
+     */
     public static CompletableFuture<GetAccessPolicyIamPolicyResult> invokeAsync(GetAccessPolicyIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:accesscontextmanager/v1:getAccessPolicyIamPolicy", TypeShape.of(GetAccessPolicyIamPolicyResult.class), args == null ? GetAccessPolicyIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -215,7 +215,7 @@ public final class JobLoad {
      * If false, records with missing trailing columns are treated as bad records, and if there are too many bad records,
      * an invalid error is returned in the job result. The default value is false. Only applicable to CSV, ignored for other formats.
      * 
-     */
+    */
     public Optional<Boolean> getAllowJaggedRows() {
         return Optional.ofNullable(this.allowJaggedRows);
     }
@@ -223,14 +223,14 @@ public final class JobLoad {
      * Indicates if BigQuery should allow quoted data sections that contain newline characters in a CSV file.
      * The default value is false.
      * 
-     */
+    */
     public Optional<Boolean> getAllowQuotedNewlines() {
         return Optional.ofNullable(this.allowQuotedNewlines);
     }
     /**
      * Indicates if we should automatically infer the options and schema for CSV and JSON sources.
      * 
-     */
+    */
     public Optional<Boolean> getAutodetect() {
         return Optional.ofNullable(this.autodetect);
     }
@@ -242,7 +242,7 @@ public final class JobLoad {
      * Default value is `CREATE_IF_NEEDED`.
      * Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
      * 
-     */
+    */
     public Optional<String> getCreateDisposition() {
         return Optional.ofNullable(this.createDisposition);
     }
@@ -250,7 +250,7 @@ public final class JobLoad {
      * Custom encryption configuration (e.g., Cloud KMS keys)
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<JobLoadDestinationEncryptionConfiguration> getDestinationEncryptionConfiguration() {
         return Optional.ofNullable(this.destinationEncryptionConfiguration);
     }
@@ -258,7 +258,7 @@ public final class JobLoad {
      * The destination table.
      * Structure is documented below.
      * 
-     */
+    */
     public JobLoadDestinationTable getDestinationTable() {
         return this.destinationTable;
     }
@@ -267,7 +267,7 @@ public final class JobLoad {
      * The default value is UTF-8. BigQuery decodes the data after the raw, binary data
      * has been split using the values of the quote and fieldDelimiter properties.
      * 
-     */
+    */
     public Optional<String> getEncoding() {
         return Optional.ofNullable(this.encoding);
     }
@@ -275,7 +275,7 @@ public final class JobLoad {
      * When extracting data in CSV format, this defines the delimiter to use between fields in the exported data.
      * Default is ','
      * 
-     */
+    */
     public Optional<String> getFieldDelimiter() {
         return Optional.ofNullable(this.fieldDelimiter);
     }
@@ -287,7 +287,7 @@ public final class JobLoad {
      * CSV: Trailing columns
      * JSON: Named values that don't match any column names
      * 
-     */
+    */
     public Optional<Boolean> getIgnoreUnknownValues() {
         return Optional.ofNullable(this.ignoreUnknownValues);
     }
@@ -295,7 +295,7 @@ public final class JobLoad {
      * The maximum number of bad records that BigQuery can ignore when running the job. If the number of bad records exceeds this value,
      * an invalid error is returned in the job result. The default value is 0, which requires that all records are valid.
      * 
-     */
+    */
     public Optional<Integer> getMaxBadRecords() {
         return Optional.ofNullable(this.maxBadRecords);
     }
@@ -305,7 +305,7 @@ public final class JobLoad {
      * empty string is present for all data types except for STRING and BYTE. For STRING and BYTE columns, BigQuery interprets the empty string as
      * an empty value.
      * 
-     */
+    */
     public Optional<String> getNullMarker() {
         return Optional.ofNullable(this.nullMarker);
     }
@@ -314,7 +314,7 @@ public final class JobLoad {
      * Property names are case sensitive and must be top-level properties. If no properties are specified, BigQuery loads all properties.
      * If any named property isn't found in the Cloud Datastore backup, an invalid error is returned in the job result.
      * 
-     */
+    */
     public List<String> getProjectionFields() {
         return this.projectionFields == null ? List.of() : this.projectionFields;
     }
@@ -324,7 +324,7 @@ public final class JobLoad {
      * The default value is a double-quote ('"'). If your data does not contain quoted sections, set the property value to an empty string.
      * If your data contains quoted newline characters, you must also set the allowQuotedNewlines property to true.
      * 
-     */
+    */
     public Optional<String> getQuote() {
         return Optional.ofNullable(this.quote);
     }
@@ -336,7 +336,7 @@ public final class JobLoad {
      * ALLOW_FIELD_ADDITION: allow adding a nullable field to the schema.
      * ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema to nullable.
      * 
-     */
+    */
     public List<String> getSchemaUpdateOptions() {
         return this.schemaUpdateOptions == null ? List.of() : this.schemaUpdateOptions;
     }
@@ -350,7 +350,7 @@ public final class JobLoad {
      * skipLeadingRows = N > 0 - Autodetect skips N-1 rows and tries to detect headers in row N. If headers are not detected,
      * row N is just skipped. Otherwise row N is used to extract column names for the detected schema.
      * 
-     */
+    */
     public Optional<Integer> getSkipLeadingRows() {
         return Optional.ofNullable(this.skipLeadingRows);
     }
@@ -360,7 +360,7 @@ public final class JobLoad {
      * For orc, specify "ORC". [Beta] For Bigtable, specify "BIGTABLE".
      * The default value is CSV.
      * 
-     */
+    */
     public Optional<String> getSourceFormat() {
         return Optional.ofNullable(this.sourceFormat);
     }
@@ -372,7 +372,7 @@ public final class JobLoad {
      * specified and it has be a fully specified and valid HTTPS URL for a Google Cloud Bigtable table.
      * For Google Cloud Datastore backups: Exactly one URI can be specified. Also, the '*' wildcard character is not allowed.
      * 
-     */
+    */
     public List<String> getSourceUris() {
         return this.sourceUris;
     }
@@ -380,7 +380,7 @@ public final class JobLoad {
      * Time-based partitioning specification for the destination table.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<JobLoadTimePartitioning> getTimePartitioning() {
         return Optional.ofNullable(this.timePartitioning);
     }
@@ -394,7 +394,7 @@ public final class JobLoad {
      * Default value is `WRITE_EMPTY`.
      * Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
      * 
-     */
+    */
     public Optional<String> getWriteDisposition() {
         return Optional.ofNullable(this.writeDisposition);
     }

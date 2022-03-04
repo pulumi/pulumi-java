@@ -25,7 +25,7 @@ public final class SelfSubjectRulesReviewSpec {
     /**
      * Namespace to evaluate rules for. Required.
      * 
-     */
+    */
     public Optional<String> getNamespace() {
         return Optional.ofNullable(this.namespace);
     }

@@ -75,56 +75,56 @@ public final class GetGlobalReachConnectionResult {
     /**
      * The network used for global reach carved out from the original network block provided for the private cloud
      * 
-     */
+    */
     public String getAddressPrefix() {
         return this.addressPrefix;
     }
     /**
      * Authorization key from the peer express route used for the global reach connection
      * 
-     */
+    */
     public Optional<String> getAuthorizationKey() {
         return Optional.ofNullable(this.authorizationKey);
     }
     /**
      * The connection status of the global reach connection
      * 
-     */
+    */
     public String getCircuitConnectionStatus() {
         return this.circuitConnectionStatus;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Identifier of the ExpressRoute Circuit to peer with in the global reach connection
      * 
-     */
+    */
     public Optional<String> getPeerExpressRouteCircuit() {
         return Optional.ofNullable(this.peerExpressRouteCircuit);
     }
     /**
      * The state of the  ExpressRoute Circuit Authorization provisioning
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

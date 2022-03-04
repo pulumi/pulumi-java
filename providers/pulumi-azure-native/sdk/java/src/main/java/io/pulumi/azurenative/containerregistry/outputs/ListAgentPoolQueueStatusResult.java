@@ -25,7 +25,7 @@ public final class ListAgentPoolQueueStatusResult {
     /**
      * The number of pending runs in the queue
      * 
-     */
+    */
     public Optional<Integer> getCount() {
         return Optional.ofNullable(this.count);
     }

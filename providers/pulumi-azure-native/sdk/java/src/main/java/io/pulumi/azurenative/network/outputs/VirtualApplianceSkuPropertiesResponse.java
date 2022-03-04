@@ -40,21 +40,21 @@ public final class VirtualApplianceSkuPropertiesResponse {
     /**
      * Virtual Appliance Scale Unit.
      * 
-     */
+    */
     public Optional<String> getBundledScaleUnit() {
         return Optional.ofNullable(this.bundledScaleUnit);
     }
     /**
      * Virtual Appliance Version.
      * 
-     */
+    */
     public Optional<String> getMarketPlaceVersion() {
         return Optional.ofNullable(this.marketPlaceVersion);
     }
     /**
      * Virtual Appliance Vendor.
      * 
-     */
+    */
     public Optional<String> getVendor() {
         return Optional.ofNullable(this.vendor);
     }

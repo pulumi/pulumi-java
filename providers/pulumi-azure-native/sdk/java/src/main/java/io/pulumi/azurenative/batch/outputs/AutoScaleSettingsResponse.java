@@ -29,7 +29,7 @@ public final class AutoScaleSettingsResponse {
     /**
      * If omitted, the default value is 15 minutes (PT15M).
      * 
-     */
+    */
     public Optional<String> getEvaluationInterval() {
         return Optional.ofNullable(this.evaluationInterval);
     }

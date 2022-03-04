@@ -46,7 +46,7 @@ public final class SubscriptionPushConfigOidcToken {
      * token audience here: https://tools.ietf.org/html/rfc7519#section-4.1.3
      * Note: if not specified, the Push endpoint URL will be used.
      * 
-     */
+    */
     public Optional<String> getAudience() {
         return Optional.ofNullable(this.audience);
     }
@@ -56,7 +56,7 @@ public final class SubscriptionPushConfigOidcToken {
      * subscriptions.modifyPushConfig RPCs) must have the
      * iam.serviceAccounts.actAs permission for the service account.
      * 
-     */
+    */
     public String getServiceAccountEmail() {
         return this.serviceAccountEmail;
     }

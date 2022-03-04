@@ -23,7 +23,7 @@ public final class FHIRDatastorePreloadDataConfig {
     /**
      * The type of preloaded data. Only Synthea preloaded data is supported.
      * 
-     */
+    */
     public FHIRDatastorePreloadDataConfigPreloadDataType getPreloadDataType() {
         return this.preloadDataType;
     }

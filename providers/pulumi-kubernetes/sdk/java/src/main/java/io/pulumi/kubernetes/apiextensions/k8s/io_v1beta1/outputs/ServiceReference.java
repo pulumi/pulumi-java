@@ -48,28 +48,28 @@ public final class ServiceReference {
     /**
      * name is the name of the service. Required
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * namespace is the namespace of the service. Required
      * 
-     */
+    */
     public String getNamespace() {
         return this.namespace;
     }
     /**
      * path is an optional URL path at which the webhook will be contacted.
      * 
-     */
+    */
     public Optional<String> getPath() {
         return Optional.ofNullable(this.path);
     }
     /**
      * port is an optional service port at which the webhook will be contacted. `port` should be a valid port number (1-65535, inclusive). Defaults to 443 for backward compatibility.
      * 
-     */
+    */
     public Optional<Integer> getPort() {
         return Optional.ofNullable(this.port);
     }

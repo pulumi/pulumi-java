@@ -33,14 +33,14 @@ public final class X509CertificateNameResponse {
     /**
      * Thumbprint for the Issuer of the Certificate.
      * 
-     */
+    */
     public Optional<String> getIssuerCertificateThumbprint() {
         return Optional.ofNullable(this.issuerCertificateThumbprint);
     }
     /**
      * Common Name of the Certificate.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

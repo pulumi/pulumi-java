@@ -34,14 +34,14 @@ public final class ListenerRuleActionForwardTargetGroup {
     /**
      * The Amazon Resource Name (ARN) of the target group.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
     /**
      * The weight. The range is 0 to 999.
      * 
-     */
+    */
     public Optional<Integer> getWeight() {
         return Optional.ofNullable(this.weight);
     }

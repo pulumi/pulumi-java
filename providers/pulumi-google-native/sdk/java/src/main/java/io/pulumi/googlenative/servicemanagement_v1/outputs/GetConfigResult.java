@@ -222,182 +222,182 @@ public final class GetConfigResult {
     /**
      * A list of API interfaces exported by this service. Only the `name` field of the google.protobuf.Api needs to be provided by the configuration author, as the remaining fields will be derived from the IDL during the normalization process. It is an error to specify an API interface here which cannot be resolved against the associated IDL files.
      * 
-     */
+    */
     public List<ApiResponse> getApis() {
         return this.apis;
     }
     /**
      * Auth configuration.
      * 
-     */
+    */
     public AuthenticationResponse getAuthentication() {
         return this.authentication;
     }
     /**
      * API backend configuration.
      * 
-     */
+    */
     public BackendResponse getBackend() {
         return this.backend;
     }
     /**
      * Billing configuration.
      * 
-     */
+    */
     public BillingResponse getBilling() {
         return this.billing;
     }
     /**
      * Obsolete. Do not use. This field has no semantic meaning. The service config compiler always sets this field to `3`.
      * 
-     */
+    */
     public Integer getConfigVersion() {
         return this.configVersion;
     }
     /**
      * Context configuration.
      * 
-     */
+    */
     public ContextResponse getContext() {
         return this.context;
     }
     /**
      * Configuration for the service control plane.
      * 
-     */
+    */
     public ControlResponse getControl() {
         return this.control;
     }
     /**
      * Custom error configuration.
      * 
-     */
+    */
     public CustomErrorResponse getCustomError() {
         return this.customError;
     }
     /**
      * Additional API documentation.
      * 
-     */
+    */
     public DocumentationResponse getDocumentation() {
         return this.documentation;
     }
     /**
      * Configuration for network endpoints. If this is empty, then an endpoint with the same name as the service is automatically generated to service all defined APIs.
      * 
-     */
+    */
     public List<EndpointResponse> getEndpoints() {
         return this.endpoints;
     }
     /**
      * A list of all enum types included in this API service. Enums referenced directly or indirectly by the `apis` are automatically included. Enums which are not referenced but shall be included should be listed here by name by the configuration author. Example: enums: - name: google.someapi.v1.SomeEnum
      * 
-     */
+    */
     public List<EnumResponse> getEnums() {
         return this.enums;
     }
     /**
      * HTTP configuration.
      * 
-     */
+    */
     public HttpResponse getHttp() {
         return this.http;
     }
     /**
      * Logging configuration.
      * 
-     */
+    */
     public LoggingResponse getLogging() {
         return this.logging;
     }
     /**
      * Defines the logs used by this service.
      * 
-     */
+    */
     public List<LogDescriptorResponse> getLogs() {
         return this.logs;
     }
     /**
      * Defines the metrics used by this service.
      * 
-     */
+    */
     public List<MetricDescriptorResponse> getMetrics() {
         return this.metrics;
     }
     /**
      * Defines the monitored resources used by this service. This is required by the Service.monitoring and Service.logging configurations.
      * 
-     */
+    */
     public List<MonitoredResourceDescriptorResponse> getMonitoredResources() {
         return this.monitoredResources;
     }
     /**
      * Monitoring configuration.
      * 
-     */
+    */
     public MonitoringResponse getMonitoring() {
         return this.monitoring;
     }
     /**
      * The service name, which is a DNS-like logical identifier for the service, such as `calendar.googleapis.com`. The service name typically goes through DNS verification to make sure the owner of the service also owns the DNS name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The Google project that owns this service.
      * 
-     */
+    */
     public String getProducerProjectId() {
         return this.producerProjectId;
     }
     /**
      * Quota configuration.
      * 
-     */
+    */
     public QuotaResponse getQuota() {
         return this.quota;
     }
     /**
      * The source information for this configuration if available.
      * 
-     */
+    */
     public SourceInfoResponse getSourceInfo() {
         return this.sourceInfo;
     }
     /**
      * System parameter configuration.
      * 
-     */
+    */
     public SystemParametersResponse getSystemParameters() {
         return this.systemParameters;
     }
     /**
      * A list of all proto message types included in this API service. It serves similar purpose as [google.api.Service.types], except that these types are not needed by user-defined APIs. Therefore, they will not show up in the generated discovery doc. This field should only be used to define system APIs in ESF.
      * 
-     */
+    */
     public List<TypeResponse> getSystemTypes() {
         return this.systemTypes;
     }
     /**
      * The product title for this service, it is the name displayed in Google Cloud Console.
      * 
-     */
+    */
     public String getTitle() {
         return this.title;
     }
     /**
      * A list of all proto message types included in this API service. Types referenced directly or indirectly by the `apis` are automatically included. Messages which are not referenced but shall be included, such as types used by the `google.protobuf.Any` type, should be listed here by name by the configuration author. Example: types: - name: google.protobuf.Int32
      * 
-     */
+    */
     public List<TypeResponse> getTypes() {
         return this.types;
     }
     /**
      * Configuration controlling usage of this service.
      * 
-     */
+    */
     public UsageResponse getUsage() {
         return this.usage;
     }

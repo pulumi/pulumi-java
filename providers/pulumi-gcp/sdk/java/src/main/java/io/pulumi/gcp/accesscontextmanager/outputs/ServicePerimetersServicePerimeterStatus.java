@@ -99,7 +99,7 @@ public final class ServicePerimetersServicePerimeterStatus {
      * be empty.
      * Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}
      * 
-     */
+    */
     public List<String> getAccessLevels() {
         return this.accessLevels == null ? List.of() : this.accessLevels;
     }
@@ -110,7 +110,7 @@ public final class ServicePerimetersServicePerimeterStatus {
      * a perimeter bridge.
      * Structure is documented below.
      * 
-     */
+    */
     public List<ServicePerimetersServicePerimeterStatusEgressPolicy> getEgressPolicies() {
         return this.egressPolicies == null ? List.of() : this.egressPolicies;
     }
@@ -121,7 +121,7 @@ public final class ServicePerimetersServicePerimeterStatus {
      * Must be empty for a perimeter bridge.
      * Structure is documented below.
      * 
-     */
+    */
     public List<ServicePerimetersServicePerimeterStatusIngressPolicy> getIngressPolicies() {
         return this.ingressPolicies == null ? List.of() : this.ingressPolicies;
     }
@@ -132,7 +132,7 @@ public final class ServicePerimetersServicePerimeterStatus {
      * then this `EgressTo` rule will authorize access to all resources outside
      * the perimeter.
      * 
-     */
+    */
     public List<String> getResources() {
         return this.resources == null ? List.of() : this.resources;
     }
@@ -143,7 +143,7 @@ public final class ServicePerimetersServicePerimeterStatus {
      * buckets inside the perimeter must meet the perimeter's access
      * restrictions.
      * 
-     */
+    */
     public List<String> getRestrictedServices() {
         return this.restrictedServices == null ? List.of() : this.restrictedServices;
     }
@@ -152,7 +152,7 @@ public final class ServicePerimetersServicePerimeterStatus {
      * Perimeter.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<ServicePerimetersServicePerimeterStatusVpcAccessibleServices> getVpcAccessibleServices() {
         return Optional.ofNullable(this.vpcAccessibleServices);
     }

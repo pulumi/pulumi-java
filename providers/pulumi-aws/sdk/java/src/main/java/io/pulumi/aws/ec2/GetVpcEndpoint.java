@@ -13,19 +13,44 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVpcEndpoint {
-/**
- * The VPC Endpoint data source provides details about
+    private GetVpcEndpoint() {}
+    public interface BuilderApplicator {
+        public void apply(GetVpcEndpointArgs.Builder a);
+    }
+    private static GetVpcEndpointArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetVpcEndpointArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The VPC Endpoint data source provides details about
  * a specific VPC endpoint.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getVpcEndpoint.
+     *
+     * A collection of arguments for invoking getVpcEndpoint.
  * 
- *
- * A collection of values returned by getVpcEndpoint.
+     *
+     * A collection of values returned by getVpcEndpoint.
  * 
- */
+     */
+    public static CompletableFuture<GetVpcEndpointResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The VPC Endpoint data source provides details about
+     * a specific VPC endpoint.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getVpcEndpoint.
+     * 
+     *
+         * A collection of values returned by getVpcEndpoint.
+     * 
+     */
     public static CompletableFuture<GetVpcEndpointResult> invokeAsync(@Nullable GetVpcEndpointArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getVpcEndpoint:getVpcEndpoint", TypeShape.of(GetVpcEndpointResult.class), args == null ? GetVpcEndpointArgs.Empty : args, Utilities.withVersion(options));
     }

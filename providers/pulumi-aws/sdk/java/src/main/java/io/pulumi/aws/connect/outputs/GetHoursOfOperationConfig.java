@@ -41,21 +41,21 @@ public final class GetHoursOfOperationConfig {
     /**
      * Specifies the day that the hours of operation applies to.
      * 
-     */
+    */
     public String getDay() {
         return this.day;
     }
     /**
      * A end time block specifies the time that your contact center closes. The `end_time` is documented below.
      * 
-     */
+    */
     public List<GetHoursOfOperationConfigEndTime> getEndTimes() {
         return this.endTimes;
     }
     /**
      * A start time block specifies the time that your contact center opens. The `start_time` is documented below.
      * 
-     */
+    */
     public List<GetHoursOfOperationConfigStartTime> getStartTimes() {
         return this.startTimes;
     }

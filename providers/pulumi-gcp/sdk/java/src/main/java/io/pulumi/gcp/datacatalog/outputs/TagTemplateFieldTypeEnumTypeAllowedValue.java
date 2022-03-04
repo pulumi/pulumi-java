@@ -23,7 +23,7 @@ public final class TagTemplateFieldTypeEnumTypeAllowedValue {
     /**
      * The display name for this template.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }

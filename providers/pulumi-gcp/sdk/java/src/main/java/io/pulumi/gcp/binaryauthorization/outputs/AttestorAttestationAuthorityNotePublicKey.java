@@ -74,14 +74,14 @@ public final class AttestorAttestationAuthorityNotePublicKey {
      * upper-case hex. If id is provided by the caller, it will
      * be overwritten by the API-calculated ID.
      * 
-     */
+    */
     public Optional<String> getAsciiArmoredPgpPublicKey() {
         return Optional.ofNullable(this.asciiArmoredPgpPublicKey);
     }
     /**
      * A descriptive comment. This field may be updated.
      * 
-     */
+    */
     public Optional<String> getComment() {
         return Optional.ofNullable(this.comment);
     }
@@ -93,7 +93,7 @@ public final class AttestorAttestationAuthorityNotePublicKey {
      * be imposed based on which public key type is encapsulated.
      * See the documentation on publicKey cases below for details.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
@@ -105,7 +105,7 @@ public final class AttestorAttestationAuthorityNotePublicKey {
      * encoding of the public key.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<AttestorAttestationAuthorityNotePublicKeyPkixPublicKey> getPkixPublicKey() {
         return Optional.ofNullable(this.pkixPublicKey);
     }

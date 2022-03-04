@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPublicKey {
-/**
- * Use this data source to get the public key about the specified KMS Key with flexible key id input. This can be useful to reference key alias without having to hard code the ARN as input.
+    private GetPublicKey() {}
+    public interface BuilderApplicator {
+        public void apply(GetPublicKeyArgs.Builder a);
+    }
+    private static GetPublicKeyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPublicKeyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Use this data source to get the public key about the specified KMS Key with flexible key id input. This can be useful to reference key alias without having to hard code the ARN as input.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getPublicKey.
+     *
+     * A collection of arguments for invoking getPublicKey.
  * 
- *
- * A collection of values returned by getPublicKey.
+     *
+     * A collection of values returned by getPublicKey.
  * 
- */
+     */
+    public static CompletableFuture<GetPublicKeyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Use this data source to get the public key about the specified KMS Key with flexible key id input. This can be useful to reference key alias without having to hard code the ARN as input.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getPublicKey.
+     * 
+     *
+         * A collection of values returned by getPublicKey.
+     * 
+     */
     public static CompletableFuture<GetPublicKeyResult> invokeAsync(GetPublicKeyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:kms/getPublicKey:getPublicKey", TypeShape.of(GetPublicKeyResult.class), args == null ? GetPublicKeyArgs.Empty : args, Utilities.withVersion(options));
     }

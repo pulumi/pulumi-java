@@ -31,14 +31,14 @@ public final class UrlMapTestHeaderResponse {
     /**
      * Header name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Header value.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }

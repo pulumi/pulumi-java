@@ -100,77 +100,77 @@ public final class GetDedicatedHsmResult {
     /**
      * The Azure Resource Manager resource ID for the dedicated HSM.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The supported Azure location where the dedicated HSM should be created.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The name of the dedicated HSM.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Specifies the network interfaces of the dedicated hsm.
      * 
-     */
+    */
     public Optional<NetworkProfileResponse> getNetworkProfile() {
         return Optional.ofNullable(this.networkProfile);
     }
     /**
      * Provisioning state.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * SKU details
      * 
-     */
+    */
     public SkuResponse getSku() {
         return this.sku;
     }
     /**
      * This field will be used when RP does not support Availability zones.
      * 
-     */
+    */
     public Optional<String> getStampId() {
         return Optional.ofNullable(this.stampId);
     }
     /**
      * Resource Status Message.
      * 
-     */
+    */
     public String getStatusMessage() {
         return this.statusMessage;
     }
     /**
      * Resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The resource type of the dedicated HSM.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The Dedicated Hsm zones.
      * 
-     */
+    */
     public List<String> getZones() {
         return this.zones == null ? List.of() : this.zones;
     }

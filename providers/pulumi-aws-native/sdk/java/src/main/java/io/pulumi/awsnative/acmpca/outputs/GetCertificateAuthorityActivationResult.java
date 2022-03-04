@@ -33,14 +33,14 @@ public final class GetCertificateAuthorityActivationResult {
     /**
      * The complete certificate chain, including the Certificate Authority certificate.
      * 
-     */
+    */
     public Optional<String> getCompleteCertificateChain() {
         return Optional.ofNullable(this.completeCertificateChain);
     }
     /**
      * The status of the Certificate Authority.
      * 
-     */
+    */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }

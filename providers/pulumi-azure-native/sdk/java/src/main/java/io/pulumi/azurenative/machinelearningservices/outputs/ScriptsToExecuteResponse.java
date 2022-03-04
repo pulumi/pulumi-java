@@ -33,14 +33,14 @@ public final class ScriptsToExecuteResponse {
     /**
      * Script that's run only once during provision of the compute.
      * 
-     */
+    */
     public Optional<ScriptReferenceResponse> getCreationScript() {
         return Optional.ofNullable(this.creationScript);
     }
     /**
      * Script that's run every time the machine starts.
      * 
-     */
+    */
     public Optional<ScriptReferenceResponse> getStartupScript() {
         return Optional.ofNullable(this.startupScript);
     }

@@ -74,7 +74,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRule {
     /**
      * For satisfying the matchRule condition, the path of the request must exactly match the value specified in fullPathMatch after removing any query parameters and anchor that may be part of the original URL.
      * 
-     */
+    */
     public Optional<String> getFullPathMatch() {
         return Optional.ofNullable(this.fullPathMatch);
     }
@@ -82,14 +82,14 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRule {
      * Specifies a list of header match criteria, all of which must match corresponding headers in the request.
      * Structure is documented below.
      * 
-     */
+    */
     public List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatch> getHeaderMatches() {
         return this.headerMatches == null ? List.of() : this.headerMatches;
     }
     /**
      * Specifies that prefixMatch and fullPathMatch matches are case sensitive.
      * 
-     */
+    */
     public Optional<Boolean> getIgnoreCase() {
         return Optional.ofNullable(this.ignoreCase);
     }
@@ -103,14 +103,14 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRule {
      * have at most 5 wildcard operators and at most 5 variable
      * captures in total.
      * 
-     */
+    */
     public Optional<String> getPathTemplateMatch() {
         return Optional.ofNullable(this.pathTemplateMatch);
     }
     /**
      * The value of the header must start with the contents of prefixMatch.
      * 
-     */
+    */
     public Optional<String> getPrefixMatch() {
         return Optional.ofNullable(this.prefixMatch);
     }
@@ -118,7 +118,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRule {
      * Specifies a list of query parameter match criteria, all of which must match corresponding query parameters in the request.
      * Structure is documented below.
      * 
-     */
+    */
     public List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatch> getQueryParameterMatches() {
         return this.queryParameterMatches == null ? List.of() : this.queryParameterMatches;
     }

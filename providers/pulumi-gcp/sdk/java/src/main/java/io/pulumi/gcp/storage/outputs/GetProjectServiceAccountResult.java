@@ -41,14 +41,14 @@ public final class GetProjectServiceAccountResult {
      * The email address of the service account. This value is often used to refer to the service account
      * in order to grant IAM permissions.
      * 
-     */
+    */
     public String getEmailAddress() {
         return this.emailAddress;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }

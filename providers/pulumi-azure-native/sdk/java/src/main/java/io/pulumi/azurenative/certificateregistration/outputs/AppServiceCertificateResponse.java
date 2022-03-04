@@ -40,21 +40,21 @@ public final class AppServiceCertificateResponse {
     /**
      * Key Vault resource Id.
      * 
-     */
+    */
     public Optional<String> getKeyVaultId() {
         return Optional.ofNullable(this.keyVaultId);
     }
     /**
      * Key Vault secret name.
      * 
-     */
+    */
     public Optional<String> getKeyVaultSecretName() {
         return Optional.ofNullable(this.keyVaultSecretName);
     }
     /**
      * Status of the Key Vault secret.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }

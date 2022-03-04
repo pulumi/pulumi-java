@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMigrationConfig {
-/**
- * Single item in List or Get Migration Config operation
+    private GetMigrationConfig() {}
+    public interface BuilderApplicator {
+        public void apply(GetMigrationConfigArgs.Builder a);
+    }
+    private static GetMigrationConfigArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetMigrationConfigArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Single item in List or Get Migration Config operation
  * API Version: 2017-04-01.
  * 
- *
- * Single item in List or Get Migration Config operation
+     *
+     * Single item in List or Get Migration Config operation
  * 
- */
+     */
+    public static CompletableFuture<GetMigrationConfigResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Single item in List or Get Migration Config operation
+     * API Version: 2017-04-01.
+     * 
+     *
+         * Single item in List or Get Migration Config operation
+     * 
+     */
     public static CompletableFuture<GetMigrationConfigResult> invokeAsync(GetMigrationConfigArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicebus:getMigrationConfig", TypeShape.of(GetMigrationConfigResult.class), args == null ? GetMigrationConfigArgs.Empty : args, Utilities.withVersion(options));
     }

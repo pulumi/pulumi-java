@@ -100,77 +100,77 @@ public final class GetPublishedBlueprintResult {
     /**
      * Name of the published blueprint definition.
      * 
-     */
+    */
     public Optional<String> getBlueprintName() {
         return Optional.ofNullable(this.blueprintName);
     }
     /**
      * Version-specific change notes.
      * 
-     */
+    */
     public Optional<String> getChangeNotes() {
         return Optional.ofNullable(this.changeNotes);
     }
     /**
      * Multi-line explain this resource.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * One-liner string explain this resource.
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * String Id used to locate any resource on Azure.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Name of this resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Parameters required by this blueprint definition.
      * 
-     */
+    */
     public Map<String,ParameterDefinitionResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Resource group placeholders defined by this blueprint definition.
      * 
-     */
+    */
     public Map<String,ResourceGroupDefinitionResponse> getResourceGroups() {
         return this.resourceGroups == null ? Map.of() : this.resourceGroups;
     }
     /**
      * Status of the blueprint. This field is readonly.
      * 
-     */
+    */
     public BlueprintStatusResponse getStatus() {
         return this.status;
     }
     /**
      * The scope where this blueprint definition can be assigned.
      * 
-     */
+    */
     public Optional<String> getTargetScope() {
         return Optional.ofNullable(this.targetScope);
     }
     /**
      * Type of this resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

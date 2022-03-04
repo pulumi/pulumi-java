@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNetwork {
-/**
- * Returns the specified network. Gets a list of available networks by making a list() request.
+    private GetNetwork() {}
+    public interface BuilderApplicator {
+        public void apply(GetNetworkArgs.Builder a);
+    }
+    private static GetNetworkArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetNetworkArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Returns the specified network. Gets a list of available networks by making a list() request.
  * 
- */
+     */
+    public static CompletableFuture<GetNetworkResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Returns the specified network. Gets a list of available networks by making a list() request.
+     * 
+     */
     public static CompletableFuture<GetNetworkResult> invokeAsync(GetNetworkArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getNetwork", TypeShape.of(GetNetworkResult.class), args == null ? GetNetworkArgs.Empty : args, Utilities.withVersion(options));
     }

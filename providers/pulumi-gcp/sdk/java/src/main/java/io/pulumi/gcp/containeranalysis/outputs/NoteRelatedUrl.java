@@ -33,14 +33,14 @@ public final class NoteRelatedUrl {
     /**
      * Label to describe usage of the URL
      * 
-     */
+    */
     public Optional<String> getLabel() {
         return Optional.ofNullable(this.label);
     }
     /**
      * Specific URL associated with the resource.
      * 
-     */
+    */
     public String getUrl() {
         return this.url;
     }

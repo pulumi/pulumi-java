@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLocalGatewayVirtualInterface {
-/**
- * Provides details about an EC2 Local Gateway Virtual Interface. More information can be found in the [Outposts User Guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#routing).
+    private GetLocalGatewayVirtualInterface() {}
+    public interface BuilderApplicator {
+        public void apply(GetLocalGatewayVirtualInterfaceArgs.Builder a);
+    }
+    private static GetLocalGatewayVirtualInterfaceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetLocalGatewayVirtualInterfaceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Provides details about an EC2 Local Gateway Virtual Interface. More information can be found in the [Outposts User Guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#routing).
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getLocalGatewayVirtualInterface.
+     *
+     * A collection of arguments for invoking getLocalGatewayVirtualInterface.
  * 
- *
- * A collection of values returned by getLocalGatewayVirtualInterface.
+     *
+     * A collection of values returned by getLocalGatewayVirtualInterface.
  * 
- */
+     */
+    public static CompletableFuture<GetLocalGatewayVirtualInterfaceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Provides details about an EC2 Local Gateway Virtual Interface. More information can be found in the [Outposts User Guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#routing).
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getLocalGatewayVirtualInterface.
+     * 
+     *
+         * A collection of values returned by getLocalGatewayVirtualInterface.
+     * 
+     */
     public static CompletableFuture<GetLocalGatewayVirtualInterfaceResult> invokeAsync(@Nullable GetLocalGatewayVirtualInterfaceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getLocalGatewayVirtualInterface:getLocalGatewayVirtualInterface", TypeShape.of(GetLocalGatewayVirtualInterfaceResult.class), args == null ? GetLocalGatewayVirtualInterfaceArgs.Empty : args, Utilities.withVersion(options));
     }

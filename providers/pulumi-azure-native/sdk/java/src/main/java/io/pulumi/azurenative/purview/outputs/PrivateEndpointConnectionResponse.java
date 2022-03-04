@@ -63,42 +63,42 @@ public final class PrivateEndpointConnectionResponse {
     /**
      * Gets or sets the identifier.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Gets or sets the name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The private endpoint information.
      * 
-     */
+    */
     public Optional<PrivateEndpointResponse> getPrivateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
     /**
      * The private link service connection state.
      * 
-     */
+    */
     public Optional<PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
     /**
      * The provisioning state.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Gets or sets the type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

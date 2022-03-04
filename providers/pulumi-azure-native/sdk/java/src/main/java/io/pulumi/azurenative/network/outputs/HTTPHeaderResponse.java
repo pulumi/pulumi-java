@@ -33,14 +33,14 @@ public final class HTTPHeaderResponse {
     /**
      * The name in HTTP header.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The value in HTTP header.
      * 
-     */
+    */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }

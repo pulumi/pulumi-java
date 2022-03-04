@@ -123,7 +123,7 @@ public final class DatabaseInstanceSettings {
      * This specifies when the instance should be
      * active. Can be either `ALWAYS`, `NEVER` or `ON_DEMAND`.
      * 
-     */
+    */
     public Optional<String> getActivationPolicy() {
         return Optional.ofNullable(this.activationPolicy);
     }
@@ -133,7 +133,7 @@ public final class DatabaseInstanceSettings {
      * instances, ensure that `settings.backup_configuration.enabled` and
      * `settings.backup_configuration.binary_log_enabled` are both set to `true`.
      * 
-     */
+    */
     public Optional<String> getAvailabilityType() {
         return Optional.ofNullable(this.availabilityType);
     }
@@ -143,7 +143,7 @@ public final class DatabaseInstanceSettings {
     /**
      * The name of server instance collation.
      * 
-     */
+    */
     public Optional<String> getCollation() {
         return Optional.ofNullable(this.collation);
     }
@@ -153,7 +153,7 @@ public final class DatabaseInstanceSettings {
     /**
      * Configuration to increase storage size automatically.  Note that future apply calls will attempt to resize the disk to the value specified in `disk_size` - if this is set, do not set `disk_size`.
      * 
-     */
+    */
     public Optional<Boolean> getDiskAutoresize() {
         return Optional.ofNullable(this.diskAutoresize);
     }
@@ -163,14 +163,14 @@ public final class DatabaseInstanceSettings {
     /**
      * The size of data disk, in GB. Size of a running instance cannot be reduced but can be increased.
      * 
-     */
+    */
     public Optional<Integer> getDiskSize() {
         return Optional.ofNullable(this.diskSize);
     }
     /**
      * The type of data disk: PD_SSD or PD_HDD.
      * 
-     */
+    */
     public Optional<String> getDiskType() {
         return Optional.ofNullable(this.diskType);
     }
@@ -189,7 +189,7 @@ public final class DatabaseInstanceSettings {
     /**
      * Pricing plan for this instance, can only be `PER_USE`.
      * 
-     */
+    */
     public Optional<String> getPricingPlan() {
         return Optional.ofNullable(this.pricingPlan);
     }
@@ -198,14 +198,14 @@ public final class DatabaseInstanceSettings {
      * for more details and supported versions. Postgres supports only shared-core machine types,
      * and custom machine types such as `db-custom-2-13312`. See the [Custom Machine Type Documentation](https://cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-type#create) to learn about specifying custom machine types.
      * 
-     */
+    */
     public String getTier() {
         return this.tier;
     }
     /**
      * A set of key/value user label pairs to assign to the instance.
      * 
-     */
+    */
     public Map<String,String> getUserLabels() {
         return this.userLabels == null ? Map.of() : this.userLabels;
     }

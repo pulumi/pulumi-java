@@ -31,14 +31,14 @@ public final class SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse {
     /**
      * The name of the header to set.
      * 
-     */
+    */
     public String getHeaderName() {
         return this.headerName;
     }
     /**
      * The value to set the named header to.
      * 
-     */
+    */
     public String getHeaderValue() {
         return this.headerValue;
     }

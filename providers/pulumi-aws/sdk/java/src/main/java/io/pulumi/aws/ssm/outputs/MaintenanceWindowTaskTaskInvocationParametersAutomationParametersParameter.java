@@ -32,14 +32,14 @@ public final class MaintenanceWindowTaskTaskInvocationParametersAutomationParame
     /**
      * The parameter name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The array of strings.
      * 
-     */
+    */
     public List<String> getValues() {
         return this.values;
     }

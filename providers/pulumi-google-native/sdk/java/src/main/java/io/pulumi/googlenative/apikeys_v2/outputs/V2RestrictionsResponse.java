@@ -57,35 +57,35 @@ public final class V2RestrictionsResponse {
     /**
      * The Android apps that are allowed to use the key.
      * 
-     */
+    */
     public V2AndroidKeyRestrictionsResponse getAndroidKeyRestrictions() {
         return this.androidKeyRestrictions;
     }
     /**
      * A restriction for a specific service and optionally one or more specific methods. Requests are allowed if they match any of these restrictions. If no restrictions are specified, all targets are allowed.
      * 
-     */
+    */
     public List<V2ApiTargetResponse> getApiTargets() {
         return this.apiTargets;
     }
     /**
      * The HTTP referrers (websites) that are allowed to use the key.
      * 
-     */
+    */
     public V2BrowserKeyRestrictionsResponse getBrowserKeyRestrictions() {
         return this.browserKeyRestrictions;
     }
     /**
      * The iOS apps that are allowed to use the key.
      * 
-     */
+    */
     public V2IosKeyRestrictionsResponse getIosKeyRestrictions() {
         return this.iosKeyRestrictions;
     }
     /**
      * The IP addresses of callers that are allowed to use the key.
      * 
-     */
+    */
     public V2ServerKeyRestrictionsResponse getServerKeyRestrictions() {
         return this.serverKeyRestrictions;
     }

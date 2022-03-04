@@ -34,14 +34,14 @@ public final class WorkbookManagedIdentityResponse {
     /**
      * The identity type.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
     /**
      * Customer Managed Identity
      * 
-     */
+    */
     public Optional<WorkbookUserAssignedIdentitiesResponse> getUserAssignedIdentities() {
         return Optional.ofNullable(this.userAssignedIdentities);
     }

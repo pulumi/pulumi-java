@@ -34,14 +34,14 @@ public final class MongoDBDatabaseGetPropertiesResponseOptions {
     /**
      * Specifies the Autoscale settings.
      * 
-     */
+    */
     public Optional<AutoscaleSettingsResponse> getAutoscaleSettings() {
         return Optional.ofNullable(this.autoscaleSettings);
     }
     /**
      * Value of the Cosmos DB resource throughput or autoscaleSettings. Use the ThroughputSetting resource when retrieving offer details.
      * 
-     */
+    */
     public Optional<Integer> getThroughput() {
         return Optional.ofNullable(this.throughput);
     }

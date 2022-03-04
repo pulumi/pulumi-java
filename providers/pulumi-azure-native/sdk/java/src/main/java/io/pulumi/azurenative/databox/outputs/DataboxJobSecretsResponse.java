@@ -51,14 +51,14 @@ public final class DataboxJobSecretsResponse {
     /**
      * Dc Access Security Code for Customer Managed Shipping
      * 
-     */
+    */
     public DcAccessSecurityCodeResponse getDcAccessSecurityCode() {
         return this.dcAccessSecurityCode;
     }
     /**
      * Error while fetching the secrets.
      * 
-     */
+    */
     public CloudErrorResponse getError() {
         return this.error;
     }
@@ -66,14 +66,14 @@ public final class DataboxJobSecretsResponse {
      * Used to indicate what type of job secrets object.
      * Expected value is 'DataBox'.
      * 
-     */
+    */
     public String getJobSecretsType() {
         return this.jobSecretsType;
     }
     /**
      * Contains the list of secret objects for a job.
      * 
-     */
+    */
     public List<DataBoxSecretResponse> getPodSecrets() {
         return this.podSecrets == null ? List.of() : this.podSecrets;
     }

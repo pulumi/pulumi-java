@@ -54,35 +54,35 @@ public final class InstanceS3Import {
     /**
      * The bucket name where your backup is stored
      * 
-     */
+    */
     public String getBucketName() {
         return this.bucketName;
     }
     /**
      * Can be blank, but is the path to your backup
      * 
-     */
+    */
     public Optional<String> getBucketPrefix() {
         return Optional.ofNullable(this.bucketPrefix);
     }
     /**
      * Role applied to load the data.
      * 
-     */
+    */
     public String getIngestionRole() {
         return this.ingestionRole;
     }
     /**
      * Source engine for the backup
      * 
-     */
+    */
     public String getSourceEngine() {
         return this.sourceEngine;
     }
     /**
      * Version of the source engine used to make the backup
      * 
-     */
+    */
     public String getSourceEngineVersion() {
         return this.sourceEngineVersion;
     }

@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetManager {
-/**
- * The StorSimple Manager.
+    private GetManager() {}
+    public interface BuilderApplicator {
+        public void apply(GetManagerArgs.Builder a);
+    }
+    private static GetManagerArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetManagerArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The StorSimple Manager.
  * API Version: 2017-06-01.
  * 
- *
- * The StorSimple Manager.
+     *
+     * The StorSimple Manager.
  * 
- */
+     */
+    public static CompletableFuture<GetManagerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The StorSimple Manager.
+     * API Version: 2017-06-01.
+     * 
+     *
+         * The StorSimple Manager.
+     * 
+     */
     public static CompletableFuture<GetManagerResult> invokeAsync(GetManagerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storsimple:getManager", TypeShape.of(GetManagerResult.class), args == null ? GetManagerArgs.Empty : args, Utilities.withVersion(options));
     }

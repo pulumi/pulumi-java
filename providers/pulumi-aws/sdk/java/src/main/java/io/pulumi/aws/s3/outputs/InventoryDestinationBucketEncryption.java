@@ -34,14 +34,14 @@ public final class InventoryDestinationBucketEncryption {
     /**
      * Specifies to use server-side encryption with AWS KMS-managed keys to encrypt the inventory file (documented below).
      * 
-     */
+    */
     public Optional<InventoryDestinationBucketEncryptionSseKms> getSseKms() {
         return Optional.ofNullable(this.sseKms);
     }
     /**
      * Specifies to use server-side encryption with Amazon S3-managed keys (SSE-S3) to encrypt the inventory file.
      * 
-     */
+    */
     public Optional<InventoryDestinationBucketEncryptionSseS3> getSseS3() {
         return Optional.ofNullable(this.sseS3);
     }

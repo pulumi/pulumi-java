@@ -56,35 +56,35 @@ public final class PolicyTargetTrackingConfigurationCustomizedMetricSpecificatio
     /**
      * The dimensions of the metric.
      * 
-     */
+    */
     public List<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricDimension> getMetricDimensions() {
         return this.metricDimensions == null ? List.of() : this.metricDimensions;
     }
     /**
      * The name of the metric.
      * 
-     */
+    */
     public String getMetricName() {
         return this.metricName;
     }
     /**
      * The namespace of the metric.
      * 
-     */
+    */
     public String getNamespace() {
         return this.namespace;
     }
     /**
      * The statistic of the metric.
      * 
-     */
+    */
     public String getStatistic() {
         return this.statistic;
     }
     /**
      * The unit of the metric.
      * 
-     */
+    */
     public Optional<String> getUnit() {
         return Optional.ofNullable(this.unit);
     }

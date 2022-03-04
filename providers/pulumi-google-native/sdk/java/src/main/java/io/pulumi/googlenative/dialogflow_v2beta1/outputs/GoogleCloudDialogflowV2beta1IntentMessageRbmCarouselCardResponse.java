@@ -33,14 +33,14 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardRespo
     /**
      * The cards in the carousel. A carousel must have at least 2 cards and at most 10.
      * 
-     */
+    */
     public List<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse> getCardContents() {
         return this.cardContents;
     }
     /**
      * The width of the cards in the carousel.
      * 
-     */
+    */
     public String getCardWidth() {
         return this.cardWidth;
     }

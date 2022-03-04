@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListWebAppConnectionStringsSlot {
-/**
- * String dictionary resource.
+    private ListWebAppConnectionStringsSlot() {}
+    public interface BuilderApplicator {
+        public void apply(ListWebAppConnectionStringsSlotArgs.Builder a);
+    }
+    private static ListWebAppConnectionStringsSlotArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListWebAppConnectionStringsSlotArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * String dictionary resource.
  * API Version: 2020-12-01.
  * 
- *
- * String dictionary resource.
+     *
+     * String dictionary resource.
  * 
- */
+     */
+    public static CompletableFuture<ListWebAppConnectionStringsSlotResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * String dictionary resource.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * String dictionary resource.
+     * 
+     */
     public static CompletableFuture<ListWebAppConnectionStringsSlotResult> invokeAsync(ListWebAppConnectionStringsSlotArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppConnectionStringsSlot", TypeShape.of(ListWebAppConnectionStringsSlotResult.class), args == null ? ListWebAppConnectionStringsSlotArgs.Empty : args, Utilities.withVersion(options));
     }

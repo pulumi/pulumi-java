@@ -34,14 +34,14 @@ public final class MongoIndexResponse {
     /**
      * Cosmos DB MongoDB collection index keys
      * 
-     */
+    */
     public Optional<MongoIndexKeysResponse> getKey() {
         return Optional.ofNullable(this.key);
     }
     /**
      * Cosmos DB MongoDB collection index key options
      * 
-     */
+    */
     public Optional<MongoIndexOptionsResponse> getOptions() {
         return Optional.ofNullable(this.options);
     }

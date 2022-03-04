@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListIntegrationRuntimeAuthKey {
-/**
- * The integration runtime authentication keys.
+    private ListIntegrationRuntimeAuthKey() {}
+    public interface BuilderApplicator {
+        public void apply(ListIntegrationRuntimeAuthKeyArgs.Builder a);
+    }
+    private static ListIntegrationRuntimeAuthKeyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListIntegrationRuntimeAuthKeyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The integration runtime authentication keys.
  * API Version: 2021-03-01.
  * 
- *
- * The integration runtime authentication keys.
+     *
+     * The integration runtime authentication keys.
  * 
- */
+     */
+    public static CompletableFuture<ListIntegrationRuntimeAuthKeyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The integration runtime authentication keys.
+     * API Version: 2021-03-01.
+     * 
+     *
+         * The integration runtime authentication keys.
+     * 
+     */
     public static CompletableFuture<ListIntegrationRuntimeAuthKeyResult> invokeAsync(ListIntegrationRuntimeAuthKeyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:listIntegrationRuntimeAuthKey", TypeShape.of(ListIntegrationRuntimeAuthKeyResult.class), args == null ? ListIntegrationRuntimeAuthKeyArgs.Empty : args, Utilities.withVersion(options));
     }

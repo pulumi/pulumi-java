@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDevice {
-/**
- * Gets details about a device.
+    private GetDevice() {}
+    public interface BuilderApplicator {
+        public void apply(GetDeviceArgs.Builder a);
+    }
+    private static GetDeviceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDeviceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets details about a device.
  * 
- */
+     */
+    public static CompletableFuture<GetDeviceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets details about a device.
+     * 
+     */
     public static CompletableFuture<GetDeviceResult> invokeAsync(GetDeviceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudiot/v1:getDevice", TypeShape.of(GetDeviceResult.class), args == null ? GetDeviceArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -59,28 +59,28 @@ public final class ManagedClusterPodIdentityResponse {
     /**
      * Binding selector to use for the AzureIdentityBinding resource.
      * 
-     */
+    */
     public Optional<String> getBindingSelector() {
         return Optional.ofNullable(this.bindingSelector);
     }
     /**
      * Information of the user assigned identity.
      * 
-     */
+    */
     public UserAssignedIdentityResponse getIdentity() {
         return this.identity;
     }
     /**
      * Name of the pod identity.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Namespace of the pod identity.
      * 
-     */
+    */
     public String getNamespace() {
         return this.namespace;
     }
@@ -90,7 +90,7 @@ public final class ManagedClusterPodIdentityResponse {
     /**
      * The current provisioning state of the pod identity.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }

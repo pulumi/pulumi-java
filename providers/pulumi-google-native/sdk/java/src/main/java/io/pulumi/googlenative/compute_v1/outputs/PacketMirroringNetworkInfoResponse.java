@@ -31,14 +31,14 @@ public final class PacketMirroringNetworkInfoResponse {
     /**
      * Unique identifier for the network; defined by the server.
      * 
-     */
+    */
     public String getCanonicalUrl() {
         return this.canonicalUrl;
     }
     /**
      * URL of the network resource.
      * 
-     */
+    */
     public String getUrl() {
         return this.url;
     }

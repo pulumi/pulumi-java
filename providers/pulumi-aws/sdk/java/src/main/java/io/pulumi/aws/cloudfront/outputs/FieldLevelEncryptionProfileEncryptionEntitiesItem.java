@@ -39,21 +39,21 @@ public final class FieldLevelEncryptionProfileEncryptionEntitiesItem {
     /**
      * Object that contains an attribute `items` that contains the list of field patterns in a field-level encryption content type profile specify the fields that you want to be encrypted.
      * 
-     */
+    */
     public FieldLevelEncryptionProfileEncryptionEntitiesItemFieldPatterns getFieldPatterns() {
         return this.fieldPatterns;
     }
     /**
      * The provider associated with the public key being used for encryption.
      * 
-     */
+    */
     public String getProviderId() {
         return this.providerId;
     }
     /**
      * The public key associated with a set of field-level encryption patterns, to be used when encrypting the fields that match the patterns.
      * 
-     */
+    */
     public String getPublicKeyId() {
         return this.publicKeyId;
     }

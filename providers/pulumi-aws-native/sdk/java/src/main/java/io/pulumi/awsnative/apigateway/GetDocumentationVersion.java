@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDocumentationVersion {
-/**
- * A snapshot of the documentation of an API.
+    private GetDocumentationVersion() {}
+    public interface BuilderApplicator {
+        public void apply(GetDocumentationVersionArgs.Builder a);
+    }
+    private static GetDocumentationVersionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDocumentationVersionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A snapshot of the documentation of an API.
  * 
- */
+     */
+    public static CompletableFuture<GetDocumentationVersionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A snapshot of the documentation of an API.
+     * 
+     */
     public static CompletableFuture<GetDocumentationVersionResult> invokeAsync(GetDocumentationVersionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:apigateway:getDocumentationVersion", TypeShape.of(GetDocumentationVersionResult.class), args == null ? GetDocumentationVersionArgs.Empty : args, Utilities.withVersion(options));
     }

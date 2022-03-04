@@ -41,21 +41,21 @@ public final class GlusterfsVolumeSource {
     /**
      * EndpointsName is the endpoint name that details Glusterfs topology. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod
      * 
-     */
+    */
     public String getEndpoints() {
         return this.endpoints;
     }
     /**
      * Path is the Glusterfs volume path. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod
      * 
-     */
+    */
     public String getPath() {
         return this.path;
     }
     /**
      * ReadOnly here will force the Glusterfs volume to be mounted with read-only permissions. Defaults to false. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod
      * 
-     */
+    */
     public Optional<Boolean> getReadOnly() {
         return Optional.ofNullable(this.readOnly);
     }

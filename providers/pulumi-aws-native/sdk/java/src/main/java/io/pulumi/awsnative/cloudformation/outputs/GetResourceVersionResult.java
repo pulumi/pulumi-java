@@ -70,35 +70,35 @@ public final class GetResourceVersionResult {
     /**
      * The Amazon Resource Name (ARN) of the type, here the ResourceVersion. This is used to uniquely identify a ResourceVersion resource
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Indicates if this type version is the current default version
      * 
-     */
+    */
     public Optional<Boolean> getIsDefaultVersion() {
         return Optional.ofNullable(this.isDefaultVersion);
     }
     /**
      * The provisioning behavior of the type. AWS CloudFormation determines the provisioning type during registration, based on the types of handlers in the schema handler package submitted.
      * 
-     */
+    */
     public Optional<ResourceVersionProvisioningType> getProvisioningType() {
         return Optional.ofNullable(this.provisioningType);
     }
     /**
      * The Amazon Resource Name (ARN) of the type without the versionID.
      * 
-     */
+    */
     public Optional<String> getTypeArn() {
         return Optional.ofNullable(this.typeArn);
     }
     /**
      * The ID of the version of the type represented by this resource instance.
      * 
-     */
+    */
     public Optional<String> getVersionId() {
         return Optional.ofNullable(this.versionId);
     }
@@ -111,7 +111,7 @@ public final class GetResourceVersionResult {
      * 
      * PUBLIC: The type is publically visible and usable within any Amazon account.
      * 
-     */
+    */
     public Optional<ResourceVersionVisibility> getVisibility() {
         return Optional.ofNullable(this.visibility);
     }

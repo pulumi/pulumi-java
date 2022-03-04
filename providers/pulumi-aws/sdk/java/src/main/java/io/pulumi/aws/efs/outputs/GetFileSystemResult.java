@@ -116,21 +116,21 @@ public final class GetFileSystemResult {
     /**
      * Amazon Resource Name of the file system.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
     /**
      * The identifier of the Availability Zone in which the file system's One Zone storage classes exist.
      * 
-     */
+    */
     public String getAvailabilityZoneId() {
         return this.availabilityZoneId;
     }
     /**
      * The Availability Zone name in which the file system's One Zone storage classes exist.
      * 
-     */
+    */
     public String getAvailabilityZoneName() {
         return this.availabilityZoneName;
     }
@@ -140,14 +140,14 @@ public final class GetFileSystemResult {
     /**
      * The DNS name for the filesystem per [documented convention](http://docs.aws.amazon.com/efs/latest/ug/mounting-fs-mount-cmd-dns-name.html).
      * 
-     */
+    */
     public String getDnsName() {
         return this.dnsName;
     }
     /**
      * Whether EFS is encrypted.
      * 
-     */
+    */
     public Boolean getEncrypted() {
         return this.encrypted;
     }
@@ -157,28 +157,28 @@ public final class GetFileSystemResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The ARN for the KMS encryption key.
      * 
-     */
+    */
     public String getKmsKeyId() {
         return this.kmsKeyId;
     }
     /**
      * A file system [lifecycle policy](https://docs.aws.amazon.com/efs/latest/ug/API_LifecyclePolicy.html) object.
      * 
-     */
+    */
     public GetFileSystemLifecyclePolicy getLifecyclePolicy() {
         return this.lifecyclePolicy;
     }
     /**
      * The file system performance mode.
      * 
-     */
+    */
     public String getPerformanceMode() {
         return this.performanceMode;
     }
@@ -186,14 +186,14 @@ public final class GetFileSystemResult {
      * The throughput, measured in MiB/s, that you want to provision for the file system.
      * * `tags` -A map of tags to assign to the file system.
      * 
-     */
+    */
     public Double getProvisionedThroughputInMibps() {
         return this.provisionedThroughputInMibps;
     }
     /**
      * The current byte count used by the file system.
      * 
-     */
+    */
     public Integer getSizeInBytes() {
         return this.sizeInBytes;
     }
@@ -203,7 +203,7 @@ public final class GetFileSystemResult {
     /**
      * Throughput mode for the file system.
      * 
-     */
+    */
     public String getThroughputMode() {
         return this.throughputMode;
     }

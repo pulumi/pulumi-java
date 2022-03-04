@@ -13,21 +13,48 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetStream {
-/**
- * Use this data source to get information about a Kinesis Stream for use in other
+    private GetStream() {}
+    public interface BuilderApplicator {
+        public void apply(GetStreamArgs.Builder a);
+    }
+    private static GetStreamArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetStreamArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Use this data source to get information about a Kinesis Stream for use in other
  * resources.
  * 
  * For more details, see the [Amazon Kinesis Documentation](https://aws.amazon.com/documentation/kinesis/).
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getStream.
+     *
+     * A collection of arguments for invoking getStream.
  * 
- *
- * A collection of values returned by getStream.
+     *
+     * A collection of values returned by getStream.
  * 
- */
+     */
+    public static CompletableFuture<GetStreamResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Use this data source to get information about a Kinesis Stream for use in other
+     * resources.
+     * 
+     * For more details, see the [Amazon Kinesis Documentation](https://aws.amazon.com/documentation/kinesis/).
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getStream.
+     * 
+     *
+         * A collection of values returned by getStream.
+     * 
+     */
     public static CompletableFuture<GetStreamResult> invokeAsync(GetStreamArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:kinesis/getStream:getStream", TypeShape.of(GetStreamResult.class), args == null ? GetStreamArgs.Empty : args, Utilities.withVersion(options));
     }

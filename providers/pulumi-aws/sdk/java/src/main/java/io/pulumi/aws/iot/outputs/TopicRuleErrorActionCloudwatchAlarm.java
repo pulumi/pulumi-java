@@ -45,28 +45,28 @@ public final class TopicRuleErrorActionCloudwatchAlarm {
     /**
      * The CloudWatch alarm name.
      * 
-     */
+    */
     public String getAlarmName() {
         return this.alarmName;
     }
     /**
      * The IAM role ARN that allows access to the CloudWatch alarm.
      * 
-     */
+    */
     public String getRoleArn() {
         return this.roleArn;
     }
     /**
      * The reason for the alarm change.
      * 
-     */
+    */
     public String getStateReason() {
         return this.stateReason;
     }
     /**
      * The value of the alarm state. Acceptable values are: OK, ALARM, INSUFFICIENT_DATA.
      * 
-     */
+    */
     public String getStateValue() {
         return this.stateValue;
     }

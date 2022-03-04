@@ -135,6 +135,22 @@ public class InstanceFleet extends io.pulumi.resources.CustomResource {
         return this.targetSpotCapacity;
     }
 
+    public interface BuilderApplicator {
+        public void apply(InstanceFleetArgs.Builder a);
+    }
+    private static io.pulumi.aws.emr.InstanceFleetArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.aws.emr.InstanceFleetArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public InstanceFleet(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

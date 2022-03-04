@@ -40,21 +40,21 @@ public final class JitApproverDefinitionResponse {
     /**
      * The approver display name.
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * The approver service principal Id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The approver type.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

@@ -34,14 +34,14 @@ public final class RouteSpecHttp2RouteTimeout {
     /**
      * The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
      * 
-     */
+    */
     public Optional<RouteSpecHttp2RouteTimeoutIdle> getIdle() {
         return Optional.ofNullable(this.idle);
     }
     /**
      * The per request timeout.
      * 
-     */
+    */
     public Optional<RouteSpecHttp2RouteTimeoutPerRequest> getPerRequest() {
         return Optional.ofNullable(this.perRequest);
     }

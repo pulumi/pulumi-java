@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetOrganizationalUnits {
-/**
- * Get all direct child organizational units under a parent organizational unit. This only provides immediate children, not all children.
+    private GetOrganizationalUnits() {}
+    public interface BuilderApplicator {
+        public void apply(GetOrganizationalUnitsArgs.Builder a);
+    }
+    private static GetOrganizationalUnitsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetOrganizationalUnitsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Get all direct child organizational units under a parent organizational unit. This only provides immediate children, not all children.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getOrganizationalUnits.
+     *
+     * A collection of arguments for invoking getOrganizationalUnits.
  * 
- *
- * A collection of values returned by getOrganizationalUnits.
+     *
+     * A collection of values returned by getOrganizationalUnits.
  * 
- */
+     */
+    public static CompletableFuture<GetOrganizationalUnitsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Get all direct child organizational units under a parent organizational unit. This only provides immediate children, not all children.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getOrganizationalUnits.
+     * 
+     *
+         * A collection of values returned by getOrganizationalUnits.
+     * 
+     */
     public static CompletableFuture<GetOrganizationalUnitsResult> invokeAsync(GetOrganizationalUnitsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:organizations/getOrganizationalUnits:getOrganizationalUnits", TypeShape.of(GetOrganizationalUnitsResult.class), args == null ? GetOrganizationalUnitsArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListConnectionConsentLinks {
-/**
- * Collection of consent links
+    private ListConnectionConsentLinks() {}
+    public interface BuilderApplicator {
+        public void apply(ListConnectionConsentLinksArgs.Builder a);
+    }
+    private static ListConnectionConsentLinksArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListConnectionConsentLinksArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Collection of consent links
  * API Version: 2016-06-01.
  * 
- *
- * Collection of consent links
+     *
+     * Collection of consent links
  * 
- */
+     */
+    public static CompletableFuture<ListConnectionConsentLinksResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Collection of consent links
+     * API Version: 2016-06-01.
+     * 
+     *
+         * Collection of consent links
+     * 
+     */
     public static CompletableFuture<ListConnectionConsentLinksResult> invokeAsync(ListConnectionConsentLinksArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listConnectionConsentLinks", TypeShape.of(ListConnectionConsentLinksResult.class), args == null ? ListConnectionConsentLinksArgs.Empty : args, Utilities.withVersion(options));
     }

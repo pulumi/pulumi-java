@@ -41,21 +41,21 @@ public final class FlowLogDestinationOptions {
     /**
      * The format for the flow log. Default value: `plain-text`. Valid values: `plain-text`, `parquet`.
      * 
-     */
+    */
     public Optional<String> getFileFormat() {
         return Optional.ofNullable(this.fileFormat);
     }
     /**
      * Indicates whether to use Hive-compatible prefixes for flow logs stored in Amazon S3. Default value: `false`.
      * 
-     */
+    */
     public Optional<Boolean> getHiveCompatiblePartitions() {
         return Optional.ofNullable(this.hiveCompatiblePartitions);
     }
     /**
      * Indicates whether to partition the flow log per hour. This reduces the cost and response time for queries. Default value: `false`.
      * 
-     */
+    */
     public Optional<Boolean> getPerHourPartition() {
         return Optional.ofNullable(this.perHourPartition);
     }

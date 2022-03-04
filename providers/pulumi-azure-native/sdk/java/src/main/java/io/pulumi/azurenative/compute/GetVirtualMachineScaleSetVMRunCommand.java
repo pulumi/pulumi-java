@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVirtualMachineScaleSetVMRunCommand {
-/**
- * Describes a Virtual Machine run command.
+    private GetVirtualMachineScaleSetVMRunCommand() {}
+    public interface BuilderApplicator {
+        public void apply(GetVirtualMachineScaleSetVMRunCommandArgs.Builder a);
+    }
+    private static GetVirtualMachineScaleSetVMRunCommandArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetVirtualMachineScaleSetVMRunCommandArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Describes a Virtual Machine run command.
  * API Version: 2021-03-01.
  * 
- *
- * Describes a Virtual Machine run command.
+     *
+     * Describes a Virtual Machine run command.
  * 
- */
+     */
+    public static CompletableFuture<GetVirtualMachineScaleSetVMRunCommandResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Describes a Virtual Machine run command.
+     * API Version: 2021-03-01.
+     * 
+     *
+         * Describes a Virtual Machine run command.
+     * 
+     */
     public static CompletableFuture<GetVirtualMachineScaleSetVMRunCommandResult> invokeAsync(GetVirtualMachineScaleSetVMRunCommandArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getVirtualMachineScaleSetVMRunCommand", TypeShape.of(GetVirtualMachineScaleSetVMRunCommandResult.class), args == null ? GetVirtualMachineScaleSetVMRunCommandArgs.Empty : args, Utilities.withVersion(options));
     }

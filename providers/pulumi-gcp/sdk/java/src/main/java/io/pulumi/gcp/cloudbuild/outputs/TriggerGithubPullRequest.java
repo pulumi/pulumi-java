@@ -42,7 +42,7 @@ public final class TriggerGithubPullRequest {
     /**
      * Regex of branches to match.  Specify only one of branch or tag.
      * 
-     */
+    */
     public String getBranch() {
         return this.branch;
     }
@@ -50,14 +50,14 @@ public final class TriggerGithubPullRequest {
      * Whether to block builds on a "/gcbrun" comment from a repository owner or collaborator.
      * Possible values are `COMMENTS_DISABLED`, `COMMENTS_ENABLED`, and `COMMENTS_ENABLED_FOR_EXTERNAL_CONTRIBUTORS_ONLY`.
      * 
-     */
+    */
     public Optional<String> getCommentControl() {
         return Optional.ofNullable(this.commentControl);
     }
     /**
      * Only trigger a build if the revision regex does NOT match the revision regex.
      * 
-     */
+    */
     public Optional<Boolean> getInvertRegex() {
         return Optional.ofNullable(this.invertRegex);
     }

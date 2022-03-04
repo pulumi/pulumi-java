@@ -41,21 +41,21 @@ public final class ConfigMapKeySelector {
     /**
      * The key to select.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Specify whether the ConfigMap or its key must be defined
      * 
-     */
+    */
     public Optional<Boolean> getOptional() {
         return Optional.ofNullable(this.optional);
     }

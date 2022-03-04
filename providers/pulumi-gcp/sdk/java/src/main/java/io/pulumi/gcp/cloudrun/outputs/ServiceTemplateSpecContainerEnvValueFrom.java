@@ -25,7 +25,7 @@ public final class ServiceTemplateSpecContainerEnvValueFrom {
      * Selects a key (version) of a secret in Secret Manager.
      * Structure is documented below.
      * 
-     */
+    */
     public ServiceTemplateSpecContainerEnvValueFromSecretKeyRef getSecretKeyRef() {
         return this.secretKeyRef;
     }

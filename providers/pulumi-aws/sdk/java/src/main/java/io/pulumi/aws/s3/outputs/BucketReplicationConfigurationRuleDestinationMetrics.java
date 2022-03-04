@@ -34,14 +34,14 @@ public final class BucketReplicationConfigurationRuleDestinationMetrics {
     /**
      * Threshold within which objects are to be replicated. The only valid value is `15`.
      * 
-     */
+    */
     public Optional<Integer> getMinutes() {
         return Optional.ofNullable(this.minutes);
     }
     /**
      * The status of replication metrics. Either `Enabled` or `Disabled`.
      * 
-     */
+    */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }

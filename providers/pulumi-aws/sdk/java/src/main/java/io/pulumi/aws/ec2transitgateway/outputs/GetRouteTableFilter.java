@@ -32,14 +32,14 @@ public final class GetRouteTableFilter {
     /**
      * Name of the filter.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * List of one or more values for the filter.
      * 
-     */
+    */
     public List<String> getValues() {
         return this.values;
     }

@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTestBaseAccountFileUploadUrl {
-/**
- * The URL response
+    private GetTestBaseAccountFileUploadUrl() {}
+    public interface BuilderApplicator {
+        public void apply(GetTestBaseAccountFileUploadUrlArgs.Builder a);
+    }
+    private static GetTestBaseAccountFileUploadUrlArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTestBaseAccountFileUploadUrlArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The URL response
  * API Version: 2020-12-16-preview.
  * 
- *
- * The URL response
+     *
+     * The URL response
  * 
- */
+     */
+    public static CompletableFuture<GetTestBaseAccountFileUploadUrlResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The URL response
+     * API Version: 2020-12-16-preview.
+     * 
+     *
+         * The URL response
+     * 
+     */
     public static CompletableFuture<GetTestBaseAccountFileUploadUrlResult> invokeAsync(GetTestBaseAccountFileUploadUrlArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:testbase:getTestBaseAccountFileUploadUrl", TypeShape.of(GetTestBaseAccountFileUploadUrlResult.class), args == null ? GetTestBaseAccountFileUploadUrlArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -57,21 +57,21 @@ public final class RestHealthCheckStepAttributesResponse {
     /**
      * The list of checks that form the health check step.
      * 
-     */
+    */
     public List<RestHealthCheckResponse> getHealthChecks() {
         return this.healthChecks;
     }
     /**
      * The duration in ISO 8601 format for which the resource is expected to be continuously healthy. If maxElasticDuration is specified, healthy state duration is enforced after the detection of first healthy signal.
      * 
-     */
+    */
     public String getHealthyStateDuration() {
         return this.healthyStateDuration;
     }
     /**
      * The duration in ISO 8601 format for which the health check waits for the resource to become healthy. Health check fails if it doesn't. Health check starts to enforce healthyStateDuration once resource becomes healthy.
      * 
-     */
+    */
     public Optional<String> getMaxElasticDuration() {
         return Optional.ofNullable(this.maxElasticDuration);
     }
@@ -79,14 +79,14 @@ public final class RestHealthCheckStepAttributesResponse {
      * The type of health check.
      * Expected value is 'REST'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The duration in ISO 8601 format for which health check waits idly without any checks.
      * 
-     */
+    */
     public Optional<String> getWaitDuration() {
         return Optional.ofNullable(this.waitDuration);
     }

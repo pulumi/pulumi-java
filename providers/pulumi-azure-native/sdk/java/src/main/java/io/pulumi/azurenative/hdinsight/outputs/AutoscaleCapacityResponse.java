@@ -33,14 +33,14 @@ public final class AutoscaleCapacityResponse {
     /**
      * The maximum instance count of the cluster
      * 
-     */
+    */
     public Optional<Integer> getMaxInstanceCount() {
         return Optional.ofNullable(this.maxInstanceCount);
     }
     /**
      * The minimum instance count of the cluster
      * 
-     */
+    */
     public Optional<Integer> getMinInstanceCount() {
         return Optional.ofNullable(this.minInstanceCount);
     }

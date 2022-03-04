@@ -33,14 +33,14 @@ public final class DatasetStateResponseDeprecatedBy {
     /**
      * Unique Dataset identifier.
      * 
-     */
+    */
     public String getDatasetId() {
         return this.datasetId;
     }
     /**
      * Definition Version
      * 
-     */
+    */
     public Optional<String> getDefinitionVersion() {
         return Optional.ofNullable(this.definitionVersion);
     }

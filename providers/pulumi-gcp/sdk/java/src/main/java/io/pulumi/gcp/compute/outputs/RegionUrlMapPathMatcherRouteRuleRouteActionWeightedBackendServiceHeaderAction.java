@@ -56,7 +56,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendSer
      * backendService.
      * Structure is documented below.
      * 
-     */
+    */
     public List<RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAdd> getRequestHeadersToAdds() {
         return this.requestHeadersToAdds == null ? List.of() : this.requestHeadersToAdds;
     }
@@ -64,7 +64,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendSer
      * A list of header names for headers that need to be removed from the request
      * prior to forwarding the request to the backendService.
      * 
-     */
+    */
     public List<String> getRequestHeadersToRemoves() {
         return this.requestHeadersToRemoves == null ? List.of() : this.requestHeadersToRemoves;
     }
@@ -72,7 +72,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendSer
      * Headers to add the response prior to sending the response back to the client.
      * Structure is documented below.
      * 
-     */
+    */
     public List<RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAdd> getResponseHeadersToAdds() {
         return this.responseHeadersToAdds == null ? List.of() : this.responseHeadersToAdds;
     }
@@ -80,7 +80,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendSer
      * A list of header names for headers that need to be removed from the response
      * prior to sending the response back to the client.
      * 
-     */
+    */
     public List<String> getResponseHeadersToRemoves() {
         return this.responseHeadersToRemoves == null ? List.of() : this.responseHeadersToRemoves;
     }

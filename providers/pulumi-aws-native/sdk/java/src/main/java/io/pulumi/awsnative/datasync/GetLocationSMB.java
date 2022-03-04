@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLocationSMB {
-/**
- * Resource schema for AWS::DataSync::LocationSMB.
+    private GetLocationSMB() {}
+    public interface BuilderApplicator {
+        public void apply(GetLocationSMBArgs.Builder a);
+    }
+    private static GetLocationSMBArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetLocationSMBArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource schema for AWS::DataSync::LocationSMB.
  * 
- */
+     */
+    public static CompletableFuture<GetLocationSMBResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource schema for AWS::DataSync::LocationSMB.
+     * 
+     */
     public static CompletableFuture<GetLocationSMBResult> invokeAsync(GetLocationSMBArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:datasync:getLocationSMB", TypeShape.of(GetLocationSMBResult.class), args == null ? GetLocationSMBArgs.Empty : args, Utilities.withVersion(options));
     }

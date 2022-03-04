@@ -40,21 +40,21 @@ public final class QueryParameterTypeResponse {
     /**
      * [Optional] The type of the array's elements, if this is an array.
      * 
-     */
+    */
     public QueryParameterTypeResponse getArrayType() {
         return this.arrayType;
     }
     /**
      * [Optional] The types of the fields of this struct, in order, if this is a struct.
      * 
-     */
+    */
     public List<QueryParameterTypeStructTypesItemResponse> getStructTypes() {
         return this.structTypes;
     }
     /**
      * [Required] The top level type of this field.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

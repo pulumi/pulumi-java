@@ -42,21 +42,21 @@ public final class AzureIaaSVMProtectedItemExtendedInfoResponse {
     /**
      * The oldest backup copy available for this backup item.
      * 
-     */
+    */
     public Optional<String> getOldestRecoveryPoint() {
         return Optional.ofNullable(this.oldestRecoveryPoint);
     }
     /**
      * Specifies if backup policy associated with the backup item is inconsistent.
      * 
-     */
+    */
     public Optional<Boolean> getPolicyInconsistent() {
         return Optional.ofNullable(this.policyInconsistent);
     }
     /**
      * Number of backup copies available for this backup item.
      * 
-     */
+    */
     public Optional<Integer> getRecoveryPointCount() {
         return Optional.ofNullable(this.recoveryPointCount);
     }

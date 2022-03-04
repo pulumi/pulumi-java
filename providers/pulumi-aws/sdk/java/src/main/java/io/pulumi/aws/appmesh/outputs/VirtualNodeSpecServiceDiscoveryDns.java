@@ -23,7 +23,7 @@ public final class VirtualNodeSpecServiceDiscoveryDns {
     /**
      * The DNS host name for your virtual node.
      * 
-     */
+    */
     public String getHostname() {
         return this.hostname;
     }

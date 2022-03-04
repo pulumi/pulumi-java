@@ -23,7 +23,7 @@ public final class SdsConfigResponse {
     /**
      * The configuration to access the SDS server over GRPC.
      * 
-     */
+    */
     public GrpcServiceConfigResponse getGrpcServiceConfig() {
         return this.grpcServiceConfig;
     }

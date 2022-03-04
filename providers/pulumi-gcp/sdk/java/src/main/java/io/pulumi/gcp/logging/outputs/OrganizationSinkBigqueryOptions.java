@@ -29,7 +29,7 @@ public final class OrganizationSinkBigqueryOptions {
      * tables the date suffix is no longer present and [special query syntax](https://cloud.google.com/bigquery/docs/querying-partitioned-tables)
      * has to be used instead. In both cases, tables are sharded based on UTC timezone.
      * 
-     */
+    */
     public Boolean getUsePartitionedTables() {
         return this.usePartitionedTables;
     }

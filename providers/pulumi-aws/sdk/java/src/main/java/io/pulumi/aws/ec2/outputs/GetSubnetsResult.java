@@ -44,14 +44,14 @@ public final class GetSubnetsResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * A list of all the subnet ids found.
      * 
-     */
+    */
     public List<String> getIds() {
         return this.ids;
     }

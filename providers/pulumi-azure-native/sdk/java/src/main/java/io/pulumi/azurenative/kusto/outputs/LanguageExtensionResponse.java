@@ -25,7 +25,7 @@ public final class LanguageExtensionResponse {
     /**
      * The language extension name.
      * 
-     */
+    */
     public Optional<String> getLanguageExtensionName() {
         return Optional.ofNullable(this.languageExtensionName);
     }

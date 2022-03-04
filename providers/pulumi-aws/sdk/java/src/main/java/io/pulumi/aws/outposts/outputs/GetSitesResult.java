@@ -32,14 +32,14 @@ public final class GetSitesResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Set of Outposts Site identifiers.
      * 
-     */
+    */
     public List<String> getIds() {
         return this.ids;
     }

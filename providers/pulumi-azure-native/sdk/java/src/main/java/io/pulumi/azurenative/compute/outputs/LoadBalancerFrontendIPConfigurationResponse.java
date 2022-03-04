@@ -32,14 +32,14 @@ public final class LoadBalancerFrontendIPConfigurationResponse {
     /**
      * The name of the resource that is unique within the set of frontend IP configurations used by the load balancer. This name can be used to access the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Properties of load balancer frontend ip configuration.
      * 
-     */
+    */
     public LoadBalancerFrontendIPConfigurationPropertiesResponse getProperties() {
         return this.properties;
     }

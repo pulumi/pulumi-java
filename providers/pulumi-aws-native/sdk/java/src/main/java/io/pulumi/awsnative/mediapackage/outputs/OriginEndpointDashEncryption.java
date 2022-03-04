@@ -30,7 +30,7 @@ public final class OriginEndpointDashEncryption {
     /**
      * Time (in seconds) between each encryption key rotation.
      * 
-     */
+    */
     public Optional<Integer> getKeyRotationIntervalSeconds() {
         return Optional.ofNullable(this.keyRotationIntervalSeconds);
     }

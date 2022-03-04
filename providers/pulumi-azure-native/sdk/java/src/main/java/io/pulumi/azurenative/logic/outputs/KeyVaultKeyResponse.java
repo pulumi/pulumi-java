@@ -34,14 +34,14 @@ public final class KeyVaultKeyResponse {
     /**
      * The key attributes.
      * 
-     */
+    */
     public Optional<KeyVaultKeyResponseAttributes> getAttributes() {
         return Optional.ofNullable(this.attributes);
     }
     /**
      * The key id.
      * 
-     */
+    */
     public Optional<String> getKid() {
         return Optional.ofNullable(this.kid);
     }

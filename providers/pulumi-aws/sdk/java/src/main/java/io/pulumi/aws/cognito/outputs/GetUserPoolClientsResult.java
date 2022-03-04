@@ -42,21 +42,21 @@ public final class GetUserPoolClientsResult {
     /**
      * List of Cognito user pool client IDs.
      * 
-     */
+    */
     public List<String> getClientIds() {
         return this.clientIds;
     }
     /**
      * List of Cognito user pool client names.
      * 
-     */
+    */
     public List<String> getClientNames() {
         return this.clientNames;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }

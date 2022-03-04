@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWebAppSourceControlSlot {
-/**
- * Source control configuration for an app.
+    private GetWebAppSourceControlSlot() {}
+    public interface BuilderApplicator {
+        public void apply(GetWebAppSourceControlSlotArgs.Builder a);
+    }
+    private static GetWebAppSourceControlSlotArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetWebAppSourceControlSlotArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Source control configuration for an app.
  * API Version: 2020-12-01.
  * 
- *
- * Source control configuration for an app.
+     *
+     * Source control configuration for an app.
  * 
- */
+     */
+    public static CompletableFuture<GetWebAppSourceControlSlotResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Source control configuration for an app.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Source control configuration for an app.
+     * 
+     */
     public static CompletableFuture<GetWebAppSourceControlSlotResult> invokeAsync(GetWebAppSourceControlSlotArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppSourceControlSlot", TypeShape.of(GetWebAppSourceControlSlotResult.class), args == null ? GetWebAppSourceControlSlotArgs.Empty : args, Utilities.withVersion(options));
     }

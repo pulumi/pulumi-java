@@ -48,28 +48,28 @@ public final class WsdlDefinitionResponse {
     /**
      * The WSDL content
      * 
-     */
+    */
     public Optional<String> getContent() {
         return Optional.ofNullable(this.content);
     }
     /**
      * The WSDL import method
      * 
-     */
+    */
     public Optional<String> getImportMethod() {
         return Optional.ofNullable(this.importMethod);
     }
     /**
      * The service with name and endpoint names
      * 
-     */
+    */
     public Optional<WsdlServiceResponse> getService() {
         return Optional.ofNullable(this.service);
     }
     /**
      * The WSDL URL
      * 
-     */
+    */
     public Optional<String> getUrl() {
         return Optional.ofNullable(this.url);
     }

@@ -25,7 +25,7 @@ public final class ClusterServerSideEncryption {
     /**
      * Whether to enable encryption at rest. Defaults to `false`.
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }

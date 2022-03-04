@@ -43,21 +43,21 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     /**
      * The input stream used by the application.
      * 
-     */
+    */
     public Optional<ApplicationApplicationConfigurationSqlApplicationConfigurationInput> getInput() {
         return Optional.ofNullable(this.input);
     }
     /**
      * The destination streams used by the application.
      * 
-     */
+    */
     public List<ApplicationApplicationConfigurationSqlApplicationConfigurationOutput> getOutputs() {
         return this.outputs == null ? List.of() : this.outputs;
     }
     /**
      * The reference data source used by the application.
      * 
-     */
+    */
     public Optional<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSource> getReferenceDataSource() {
         return Optional.ofNullable(this.referenceDataSource);
     }

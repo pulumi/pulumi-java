@@ -40,21 +40,21 @@ public final class TcpConfigResponse {
     /**
      * Describes destination endpoint for routing traffic.
      * 
-     */
+    */
     public GatewayDestinationResponse getDestination() {
         return this.destination;
     }
     /**
      * tcp gateway config name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Specifies the port at which the service endpoint below needs to be exposed.
      * 
-     */
+    */
     public Integer getPort() {
         return this.port;
     }

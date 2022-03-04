@@ -62,42 +62,42 @@ public final class GetAccessPolicyResult {
     /**
      * An description of the access policy.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The objectId of the principal in Azure Active Directory.
      * 
-     */
+    */
     public Optional<String> getPrincipalObjectId() {
         return Optional.ofNullable(this.principalObjectId);
     }
     /**
      * The list of roles the principal is assigned on the environment.
      * 
-     */
+    */
     public List<String> getRoles() {
         return this.roles == null ? List.of() : this.roles;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

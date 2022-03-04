@@ -150,6 +150,22 @@ public class AppEngineVersionIamPolicy extends io.pulumi.resources.CustomResourc
         return this.versionId;
     }
 
+    public interface BuilderApplicator {
+        public void apply(AppEngineVersionIamPolicyArgs.Builder a);
+    }
+    private static io.pulumi.gcp.iap.AppEngineVersionIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.iap.AppEngineVersionIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public AppEngineVersionIamPolicy(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

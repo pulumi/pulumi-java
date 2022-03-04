@@ -32,14 +32,14 @@ public final class LogConfigCloudAuditOptionsResponse {
     /**
      * This is deprecated and has no effect. Do not use.
      * 
-     */
+    */
     public AuthorizationLoggingOptionsResponse getAuthorizationLoggingOptions() {
         return this.authorizationLoggingOptions;
     }
     /**
      * This is deprecated and has no effect. Do not use.
      * 
-     */
+    */
     public String getLogName() {
         return this.logName;
     }

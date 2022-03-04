@@ -31,14 +31,14 @@ public final class ServiceSourceConfigurationCodeRepositorySourceCodeVersion {
     /**
      * The type of version identifier. For a git-based repository, branches represent versions. Valid values: `BRANCH`.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * A source code version. For a git-based repository, a branch name maps to a specific version. App Runner uses the most recent commit to the branch.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }

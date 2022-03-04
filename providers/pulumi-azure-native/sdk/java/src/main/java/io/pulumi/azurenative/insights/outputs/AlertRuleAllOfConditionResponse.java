@@ -24,7 +24,7 @@ public final class AlertRuleAllOfConditionResponse {
     /**
      * The list of Activity Log Alert rule conditions.
      * 
-     */
+    */
     public List<AlertRuleAnyOfOrLeafConditionResponse> getAllOf() {
         return this.allOf;
     }

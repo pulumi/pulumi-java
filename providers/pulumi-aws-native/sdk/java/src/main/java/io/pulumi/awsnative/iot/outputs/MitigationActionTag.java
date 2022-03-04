@@ -31,14 +31,14 @@ public final class MitigationActionTag {
     /**
      * The tag's key.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * The tag's value.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }

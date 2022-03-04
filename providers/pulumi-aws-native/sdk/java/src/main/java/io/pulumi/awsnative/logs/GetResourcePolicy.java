@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetResourcePolicy {
-/**
- * The resource schema for AWSLogs ResourcePolicy
+    private GetResourcePolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetResourcePolicyArgs.Builder a);
+    }
+    private static GetResourcePolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetResourcePolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The resource schema for AWSLogs ResourcePolicy
  * 
- */
+     */
+    public static CompletableFuture<GetResourcePolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The resource schema for AWSLogs ResourcePolicy
+     * 
+     */
     public static CompletableFuture<GetResourcePolicyResult> invokeAsync(GetResourcePolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:logs:getResourcePolicy", TypeShape.of(GetResourcePolicyResult.class), args == null ? GetResourcePolicyArgs.Empty : args, Utilities.withVersion(options));
     }

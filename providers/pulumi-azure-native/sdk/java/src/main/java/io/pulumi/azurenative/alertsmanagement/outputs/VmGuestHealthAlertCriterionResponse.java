@@ -49,21 +49,21 @@ public final class VmGuestHealthAlertCriterionResponse {
     /**
      * Health states to alert on
      * 
-     */
+    */
     public List<HealthStateResponse> getHealthStates() {
         return this.healthStates;
     }
     /**
      * Names of health monitor on which to define alert
      * 
-     */
+    */
     public List<String> getMonitorNames() {
         return this.monitorNames == null ? List.of() : this.monitorNames;
     }
     /**
      * Names of health monitor type on which to define alert
      * 
-     */
+    */
     public List<String> getMonitorTypes() {
         return this.monitorTypes == null ? List.of() : this.monitorTypes;
     }
@@ -71,7 +71,7 @@ public final class VmGuestHealthAlertCriterionResponse {
      * specifies the type of the alert criterion.
      * Expected value is 'GuestVmHealth'.
      * 
-     */
+    */
     public String getNamespace() {
         return this.namespace;
     }

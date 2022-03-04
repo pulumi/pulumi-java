@@ -56,14 +56,14 @@ public final class Object {
     /**
      * List of lists of other objects
      * 
-     */
+    */
     public List<List<SomeOtherObject>> getOthers() {
         return this.others == null ? List.of() : this.others;
     }
     /**
      * Mapping from string to list of some other object
      * 
-     */
+    */
     public Map<String,List<SomeOtherObject>> getStillOthers() {
         return this.stillOthers == null ? Map.of() : this.stillOthers;
     }

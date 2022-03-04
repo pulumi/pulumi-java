@@ -82,63 +82,63 @@ public final class OracleColumnResponse {
     /**
      * Column name.
      * 
-     */
+    */
     public String getColumnName() {
         return this.columnName;
     }
     /**
      * The Oracle data type.
      * 
-     */
+    */
     public String getDataType() {
         return this.dataType;
     }
     /**
      * Column encoding.
      * 
-     */
+    */
     public String getEncoding() {
         return this.encoding;
     }
     /**
      * Column length.
      * 
-     */
+    */
     public Integer getLength() {
         return this.length;
     }
     /**
      * Whether or not the column can accept a null value.
      * 
-     */
+    */
     public Boolean getNullable() {
         return this.nullable;
     }
     /**
      * The ordinal position of the column in the table.
      * 
-     */
+    */
     public Integer getOrdinalPosition() {
         return this.ordinalPosition;
     }
     /**
      * Column precision.
      * 
-     */
+    */
     public Integer getPrecision() {
         return this.precision;
     }
     /**
      * Whether or not the column represents a primary key.
      * 
-     */
+    */
     public Boolean getPrimaryKey() {
         return this.primaryKey;
     }
     /**
      * Column scale.
      * 
-     */
+    */
     public Integer getScale() {
         return this.scale;
     }

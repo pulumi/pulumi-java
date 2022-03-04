@@ -34,7 +34,7 @@ public final class GetTaskDefinitionResult {
     /**
      * The Amazon Resource Name (ARN) of the Amazon ECS task definition
      * 
-     */
+    */
     public Optional<String> getTaskDefinitionArn() {
         return Optional.ofNullable(this.taskDefinitionArn);
     }

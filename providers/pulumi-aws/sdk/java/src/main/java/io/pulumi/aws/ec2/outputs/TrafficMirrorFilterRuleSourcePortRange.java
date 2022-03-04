@@ -33,14 +33,14 @@ public final class TrafficMirrorFilterRuleSourcePortRange {
     /**
      * Starting port of the range
      * 
-     */
+    */
     public Optional<Integer> getFromPort() {
         return Optional.ofNullable(this.fromPort);
     }
     /**
      * Ending port of the range
      * 
-     */
+    */
     public Optional<Integer> getToPort() {
         return Optional.ofNullable(this.toPort);
     }

@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInstance {
-/**
- * Device Update instance details.
+    private GetInstance() {}
+    public interface BuilderApplicator {
+        public void apply(GetInstanceArgs.Builder a);
+    }
+    private static GetInstanceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetInstanceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Device Update instance details.
  * API Version: 2020-03-01-preview.
  * 
- *
- * Device Update instance details.
+     *
+     * Device Update instance details.
  * 
- */
+     */
+    public static CompletableFuture<GetInstanceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Device Update instance details.
+     * API Version: 2020-03-01-preview.
+     * 
+     *
+         * Device Update instance details.
+     * 
+     */
     public static CompletableFuture<GetInstanceResult> invokeAsync(GetInstanceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:deviceupdate:getInstance", TypeShape.of(GetInstanceResult.class), args == null ? GetInstanceArgs.Empty : args, Utilities.withVersion(options));
     }

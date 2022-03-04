@@ -34,14 +34,14 @@ public final class VirtualNetworkPropertiesResponse {
     /**
      * Uri of the virtual network.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Properties of a subnet.
      * 
-     */
+    */
     public Optional<SubnetPropertiesResponse> getSubnet() {
         return Optional.ofNullable(this.subnet);
     }

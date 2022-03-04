@@ -49,28 +49,28 @@ public final class BotWaitAndContinueSpecification {
     /**
      * The response that Amazon Lex sends to indicate that the bot is ready to continue the conversation.
      * 
-     */
+    */
     public BotResponseSpecification getContinueResponse() {
         return this.continueResponse;
     }
     /**
      * Specifies whether the bot will wait for a user to respond.
      * 
-     */
+    */
     public Optional<Boolean> getIsActive() {
         return Optional.ofNullable(this.isActive);
     }
     /**
      * The response that Amazon Lex sends periodically to the user to indicate that the bot is still waiting for input from the user.
      * 
-     */
+    */
     public Optional<BotStillWaitingResponseSpecification> getStillWaitingResponse() {
         return Optional.ofNullable(this.stillWaitingResponse);
     }
     /**
      * The response that Amazon Lex sends to indicate that the bot is waiting for the conversation to continue.
      * 
-     */
+    */
     public BotResponseSpecification getWaitingResponse() {
         return this.waitingResponse;
     }

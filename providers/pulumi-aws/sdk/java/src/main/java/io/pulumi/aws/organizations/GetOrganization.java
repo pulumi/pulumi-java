@@ -12,15 +12,16 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetOrganization {
-/**
- * Get information about the organization that the user's account belongs to
- * 
- * ## Example Usage
- * 
- *
- * A collection of values returned by getOrganization.
- * 
- */
+    private GetOrganization() {}
+    /**
+         * Get information about the organization that the user's account belongs to
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of values returned by getOrganization.
+     * 
+     */
     public static CompletableFuture<GetOrganizationResult> invokeAsync(@Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:organizations/getOrganization:getOrganization", TypeShape.of(GetOrganizationResult.class), io.pulumi.resources.InvokeArgs.Empty, Utilities.withVersion(options));
     }

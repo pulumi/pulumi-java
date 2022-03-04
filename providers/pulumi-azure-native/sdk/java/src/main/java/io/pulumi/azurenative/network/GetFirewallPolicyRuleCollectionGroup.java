@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFirewallPolicyRuleCollectionGroup {
-/**
- * Rule Collection Group resource.
+    private GetFirewallPolicyRuleCollectionGroup() {}
+    public interface BuilderApplicator {
+        public void apply(GetFirewallPolicyRuleCollectionGroupArgs.Builder a);
+    }
+    private static GetFirewallPolicyRuleCollectionGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetFirewallPolicyRuleCollectionGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Rule Collection Group resource.
  * API Version: 2020-11-01.
  * 
- *
- * Rule Collection Group resource.
+     *
+     * Rule Collection Group resource.
  * 
- */
+     */
+    public static CompletableFuture<GetFirewallPolicyRuleCollectionGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Rule Collection Group resource.
+     * API Version: 2020-11-01.
+     * 
+     *
+         * Rule Collection Group resource.
+     * 
+     */
     public static CompletableFuture<GetFirewallPolicyRuleCollectionGroupResult> invokeAsync(GetFirewallPolicyRuleCollectionGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getFirewallPolicyRuleCollectionGroup", TypeShape.of(GetFirewallPolicyRuleCollectionGroupResult.class), args == null ? GetFirewallPolicyRuleCollectionGroupArgs.Empty : args, Utilities.withVersion(options));
     }

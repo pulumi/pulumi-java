@@ -54,28 +54,28 @@ public final class WorkflowStep {
     /**
      * Details for a step that performs a file copy.
      * 
-     */
+    */
     public Optional<WorkflowStepCopyStepDetailsProperties> getCopyStepDetails() {
         return Optional.ofNullable(this.copyStepDetails);
     }
     /**
      * Details for a step that invokes a lambda function.
      * 
-     */
+    */
     public Optional<WorkflowStepCustomStepDetailsProperties> getCustomStepDetails() {
         return Optional.ofNullable(this.customStepDetails);
     }
     /**
      * Details for a step that deletes the file.
      * 
-     */
+    */
     public Optional<WorkflowStepDeleteStepDetailsProperties> getDeleteStepDetails() {
         return Optional.ofNullable(this.deleteStepDetails);
     }
     /**
      * Details for a step that creates one or more tags.
      * 
-     */
+    */
     public Optional<WorkflowStepTagStepDetailsProperties> getTagStepDetails() {
         return Optional.ofNullable(this.tagStepDetails);
     }

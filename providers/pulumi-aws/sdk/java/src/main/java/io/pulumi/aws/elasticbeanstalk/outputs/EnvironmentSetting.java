@@ -37,7 +37,7 @@ public final class EnvironmentSetting {
      * A unique name for this Environment. This name is used
      * in the application URL
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }

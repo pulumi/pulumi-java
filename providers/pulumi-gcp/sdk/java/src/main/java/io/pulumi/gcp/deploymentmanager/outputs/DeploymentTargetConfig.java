@@ -23,7 +23,7 @@ public final class DeploymentTargetConfig {
     /**
      * The full contents of the template that you want to import.
      * 
-     */
+    */
     public String getContent() {
         return this.content;
     }

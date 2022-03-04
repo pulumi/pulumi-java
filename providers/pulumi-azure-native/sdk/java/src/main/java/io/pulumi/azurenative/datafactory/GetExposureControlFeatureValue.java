@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetExposureControlFeatureValue {
-/**
- * The exposure control response.
+    private GetExposureControlFeatureValue() {}
+    public interface BuilderApplicator {
+        public void apply(GetExposureControlFeatureValueArgs.Builder a);
+    }
+    private static GetExposureControlFeatureValueArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetExposureControlFeatureValueArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The exposure control response.
  * API Version: 2018-06-01.
  * 
- *
- * The exposure control response.
+     *
+     * The exposure control response.
  * 
- */
+     */
+    public static CompletableFuture<GetExposureControlFeatureValueResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The exposure control response.
+     * API Version: 2018-06-01.
+     * 
+     *
+         * The exposure control response.
+     * 
+     */
     public static CompletableFuture<GetExposureControlFeatureValueResult> invokeAsync(GetExposureControlFeatureValueArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datafactory:getExposureControlFeatureValue", TypeShape.of(GetExposureControlFeatureValueResult.class), args == null ? GetExposureControlFeatureValueArgs.Empty : args, Utilities.withVersion(options));
     }

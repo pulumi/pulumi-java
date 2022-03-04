@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDeploymentLogFileUrl {
-/**
- * Log file URL payload
+    private GetDeploymentLogFileUrl() {}
+    public interface BuilderApplicator {
+        public void apply(GetDeploymentLogFileUrlArgs.Builder a);
+    }
+    private static GetDeploymentLogFileUrlArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDeploymentLogFileUrlArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Log file URL payload
  * API Version: 2020-07-01.
  * 
- *
- * Log file URL payload
+     *
+     * Log file URL payload
  * 
- */
+     */
+    public static CompletableFuture<GetDeploymentLogFileUrlResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Log file URL payload
+     * API Version: 2020-07-01.
+     * 
+     *
+         * Log file URL payload
+     * 
+     */
     public static CompletableFuture<GetDeploymentLogFileUrlResult> invokeAsync(GetDeploymentLogFileUrlArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getDeploymentLogFileUrl", TypeShape.of(GetDeploymentLogFileUrlResult.class), args == null ? GetDeploymentLogFileUrlArgs.Empty : args, Utilities.withVersion(options));
     }

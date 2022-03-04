@@ -177,6 +177,22 @@ public class Task extends io.pulumi.resources.CustomResource {
         return this.view;
     }
 
+    public interface BuilderApplicator {
+        public void apply(TaskArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.cloudtasks_v2.TaskArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.cloudtasks_v2.TaskArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Task(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

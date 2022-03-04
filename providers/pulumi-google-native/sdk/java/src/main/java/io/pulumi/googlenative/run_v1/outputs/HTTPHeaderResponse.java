@@ -31,14 +31,14 @@ public final class HTTPHeaderResponse {
     /**
      * The header field name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The header field value
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }

@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAuthorizationPolicyIamPolicy {
-/**
- * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+    private GetAuthorizationPolicyIamPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetAuthorizationPolicyIamPolicyArgs.Builder a);
+    }
+    private static GetAuthorizationPolicyIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAuthorizationPolicyIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
  * 
- */
+     */
+    public static CompletableFuture<GetAuthorizationPolicyIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetAuthorizationPolicyIamPolicyResult> invokeAsync(GetAuthorizationPolicyIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:networksecurity/v1beta1:getAuthorizationPolicyIamPolicy", TypeShape.of(GetAuthorizationPolicyIamPolicyResult.class), args == null ? GetAuthorizationPolicyIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

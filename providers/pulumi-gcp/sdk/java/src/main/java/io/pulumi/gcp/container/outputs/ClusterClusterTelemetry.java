@@ -23,7 +23,7 @@ public final class ClusterClusterTelemetry {
     /**
      * The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

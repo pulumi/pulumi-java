@@ -25,7 +25,7 @@ public final class DomainRetentionPolicy {
     /**
      * The retention policy for data stored on an Amazon Elastic File System (EFS) volume. Default value is `Retain`.
      * 
-     */
+    */
     public Optional<String> getHomeEfsFileSystem() {
         return Optional.ofNullable(this.homeEfsFileSystem);
     }

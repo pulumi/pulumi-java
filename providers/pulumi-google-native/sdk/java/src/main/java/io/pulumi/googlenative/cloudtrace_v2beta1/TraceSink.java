@@ -62,6 +62,22 @@ public class TraceSink extends io.pulumi.resources.CustomResource {
         return this.writerIdentity;
     }
 
+    public interface BuilderApplicator {
+        public void apply(TraceSinkArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.cloudtrace_v2beta1.TraceSinkArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.cloudtrace_v2beta1.TraceSinkArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public TraceSink(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -25,7 +25,7 @@ public final class GetBuildServiceBuildResultLogResult {
     /**
      * The public download URL of this build result log
      * 
-     */
+    */
     public Optional<String> getBlobUrl() {
         return Optional.ofNullable(this.blobUrl);
     }

@@ -32,14 +32,14 @@ public final class PipelineReadyConditionResponse {
     /**
      * True if the Pipeline is in a valid state. Otherwise at least one condition in `PipelineCondition` is in an invalid state. Iterate over those conditions and see which condition(s) has status = false to find out what is wrong with the Pipeline.
      * 
-     */
+    */
     public Boolean getStatus() {
         return this.status;
     }
     /**
      * Last time the condition was updated.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }

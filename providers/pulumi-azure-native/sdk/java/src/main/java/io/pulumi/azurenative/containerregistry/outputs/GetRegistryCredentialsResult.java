@@ -33,14 +33,14 @@ public final class GetRegistryCredentialsResult {
     /**
      * The administrator password.
      * 
-     */
+    */
     public Optional<String> getPassword() {
         return Optional.ofNullable(this.password);
     }
     /**
      * The administrator username.
      * 
-     */
+    */
     public Optional<String> getUsername() {
         return Optional.ofNullable(this.username);
     }

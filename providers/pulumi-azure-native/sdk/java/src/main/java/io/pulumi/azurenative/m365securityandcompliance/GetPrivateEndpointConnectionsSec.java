@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPrivateEndpointConnectionsSec {
-/**
- * The Private Endpoint Connection resource.
+    private GetPrivateEndpointConnectionsSec() {}
+    public interface BuilderApplicator {
+        public void apply(GetPrivateEndpointConnectionsSecArgs.Builder a);
+    }
+    private static GetPrivateEndpointConnectionsSecArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPrivateEndpointConnectionsSecArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The Private Endpoint Connection resource.
  * API Version: 2021-03-25-preview.
  * 
- *
- * The Private Endpoint Connection resource.
+     *
+     * The Private Endpoint Connection resource.
  * 
- */
+     */
+    public static CompletableFuture<GetPrivateEndpointConnectionsSecResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The Private Endpoint Connection resource.
+     * API Version: 2021-03-25-preview.
+     * 
+     *
+         * The Private Endpoint Connection resource.
+     * 
+     */
     public static CompletableFuture<GetPrivateEndpointConnectionsSecResult> invokeAsync(GetPrivateEndpointConnectionsSecArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:m365securityandcompliance:getPrivateEndpointConnectionsSec", TypeShape.of(GetPrivateEndpointConnectionsSecResult.class), args == null ? GetPrivateEndpointConnectionsSecArgs.Empty : args, Utilities.withVersion(options));
     }

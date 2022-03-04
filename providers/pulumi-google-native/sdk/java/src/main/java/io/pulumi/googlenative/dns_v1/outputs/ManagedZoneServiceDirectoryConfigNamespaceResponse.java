@@ -34,7 +34,7 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceResponse {
     /**
      * The time that the namespace backing this zone was deleted; an empty string if it still exists. This is in RFC3339 text format. Output only.
      * 
-     */
+    */
     public String getDeletionTime() {
         return this.deletionTime;
     }
@@ -44,7 +44,7 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceResponse {
     /**
      * The fully qualified URL of the namespace associated with the zone. Format must be https://servicedirectory.googleapis.com/v1/projects/{project}/locations/{location}/namespaces/{namespace}
      * 
-     */
+    */
     public String getNamespaceUrl() {
         return this.namespaceUrl;
     }

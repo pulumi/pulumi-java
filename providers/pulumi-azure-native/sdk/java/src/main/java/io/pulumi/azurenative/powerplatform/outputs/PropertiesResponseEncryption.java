@@ -34,14 +34,14 @@ public final class PropertiesResponseEncryption {
     /**
      * Key vault properties.
      * 
-     */
+    */
     public Optional<KeyVaultPropertiesResponse> getKeyVault() {
         return Optional.ofNullable(this.keyVault);
     }
     /**
      * The state of onboarding, which only appears in the response.
      * 
-     */
+    */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }

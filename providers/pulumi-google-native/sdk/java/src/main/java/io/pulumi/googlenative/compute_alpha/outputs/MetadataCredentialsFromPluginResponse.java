@@ -31,14 +31,14 @@ public final class MetadataCredentialsFromPluginResponse {
     /**
      * Plugin name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * A text proto that conforms to a Struct type definition interpreted by the plugin.
      * 
-     */
+    */
     public String getStructConfig() {
         return this.structConfig;
     }

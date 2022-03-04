@@ -35,14 +35,14 @@ public final class NodeGroupResource {
     /**
      * List of objects containing information about AutoScaling Groups.
      * 
-     */
+    */
     public List<NodeGroupResourceAutoscalingGroup> getAutoscalingGroups() {
         return this.autoscalingGroups == null ? List.of() : this.autoscalingGroups;
     }
     /**
      * Identifier of the remote access EC2 Security Group.
      * 
-     */
+    */
     public Optional<String> getRemoteAccessSecurityGroupId() {
         return Optional.ofNullable(this.remoteAccessSecurityGroupId);
     }

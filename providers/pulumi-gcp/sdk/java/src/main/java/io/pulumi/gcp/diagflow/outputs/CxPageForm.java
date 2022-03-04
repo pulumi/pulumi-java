@@ -27,7 +27,7 @@ public final class CxPageForm {
      * Parameters to collect from the user.
      * Structure is documented below.
      * 
-     */
+    */
     public List<CxPageFormParameter> getParameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }

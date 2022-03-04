@@ -31,14 +31,14 @@ public final class ActingUserResponse {
     /**
      * The email address of the user when the user performed the action.
      * 
-     */
+    */
     public String getEmail() {
         return this.email;
     }
     /**
      * A profile image URL for the user. May not be present if the user has changed their email address or deleted their account.
      * 
-     */
+    */
     public String getImageUrl() {
         return this.imageUrl;
     }

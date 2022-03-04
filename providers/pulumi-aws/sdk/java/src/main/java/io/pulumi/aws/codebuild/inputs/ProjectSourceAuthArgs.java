@@ -17,7 +17,7 @@ public final class ProjectSourceAuthArgs extends io.pulumi.resources.ResourceArg
     /**
      * Resource value that applies to the specified authorization type. Use the `aws.codebuild.SourceCredential` resource instead.
      * 
-     * @deprecated
+     * @Deprecated
      * Use the aws_codebuild_source_credential resource instead
      * 
      */
@@ -33,7 +33,7 @@ public final class ProjectSourceAuthArgs extends io.pulumi.resources.ResourceArg
     /**
      * Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
      * 
-     * @deprecated
+     * @Deprecated
      * Use the aws_codebuild_source_credential resource instead
      * 
      */

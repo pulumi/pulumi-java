@@ -31,14 +31,14 @@ public final class ImportFileResponse {
     /**
      * The contents of the file.
      * 
-     */
+    */
     public String getContent() {
         return this.content;
     }
     /**
      * The name of the file.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }

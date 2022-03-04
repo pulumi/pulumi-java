@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSubnetIds {
-/**
- * `aws.ec2.getSubnetIds` provides a set of ids for a vpc_id
+    private GetSubnetIds() {}
+    public interface BuilderApplicator {
+        public void apply(GetSubnetIdsArgs.Builder a);
+    }
+    private static GetSubnetIdsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSubnetIdsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * `aws.ec2.getSubnetIds` provides a set of ids for a vpc_id
  * 
  * This resource can be useful for getting back a set of subnet ids for a vpc.
  * 
- *
- * A collection of arguments for invoking getSubnetIds.
+     *
+     * A collection of arguments for invoking getSubnetIds.
  * 
- *
- * A collection of values returned by getSubnetIds.
+     *
+     * A collection of values returned by getSubnetIds.
  * 
- */
+     */
+    public static CompletableFuture<GetSubnetIdsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * `aws.ec2.getSubnetIds` provides a set of ids for a vpc_id
+     * 
+     * This resource can be useful for getting back a set of subnet ids for a vpc.
+     * 
+     *
+         * A collection of arguments for invoking getSubnetIds.
+     * 
+     *
+         * A collection of values returned by getSubnetIds.
+     * 
+     */
     public static CompletableFuture<GetSubnetIdsResult> invokeAsync(GetSubnetIdsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getSubnetIds:getSubnetIds", TypeShape.of(GetSubnetIdsResult.class), args == null ? GetSubnetIdsArgs.Empty : args, Utilities.withVersion(options));
     }

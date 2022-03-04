@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListWebAppAzureStorageAccounts {
-/**
- * AzureStorageInfo dictionary resource.
+    private ListWebAppAzureStorageAccounts() {}
+    public interface BuilderApplicator {
+        public void apply(ListWebAppAzureStorageAccountsArgs.Builder a);
+    }
+    private static ListWebAppAzureStorageAccountsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListWebAppAzureStorageAccountsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * AzureStorageInfo dictionary resource.
  * API Version: 2020-12-01.
  * 
- *
- * AzureStorageInfo dictionary resource.
+     *
+     * AzureStorageInfo dictionary resource.
  * 
- */
+     */
+    public static CompletableFuture<ListWebAppAzureStorageAccountsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * AzureStorageInfo dictionary resource.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * AzureStorageInfo dictionary resource.
+     * 
+     */
     public static CompletableFuture<ListWebAppAzureStorageAccountsResult> invokeAsync(ListWebAppAzureStorageAccountsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppAzureStorageAccounts", TypeShape.of(ListWebAppAzureStorageAccountsResult.class), args == null ? ListWebAppAzureStorageAccountsArgs.Empty : args, Utilities.withVersion(options));
     }

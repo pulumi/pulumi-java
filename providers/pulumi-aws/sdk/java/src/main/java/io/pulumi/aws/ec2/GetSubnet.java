@@ -13,20 +13,46 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSubnet {
-/**
- * `aws.ec2.Subnet` provides details about a specific VPC subnet.
+    private GetSubnet() {}
+    public interface BuilderApplicator {
+        public void apply(GetSubnetArgs.Builder a);
+    }
+    private static GetSubnetArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSubnetArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * `aws.ec2.Subnet` provides details about a specific VPC subnet.
  * 
  * This resource can prove useful when a module accepts a subnet ID as an input variable and needs to, for example, determine the ID of the VPC that the subnet belongs to.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getSubnet.
+     *
+     * A collection of arguments for invoking getSubnet.
  * 
- *
- * A collection of values returned by getSubnet.
+     *
+     * A collection of values returned by getSubnet.
  * 
- */
+     */
+    public static CompletableFuture<GetSubnetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * `aws.ec2.Subnet` provides details about a specific VPC subnet.
+     * 
+     * This resource can prove useful when a module accepts a subnet ID as an input variable and needs to, for example, determine the ID of the VPC that the subnet belongs to.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getSubnet.
+     * 
+     *
+         * A collection of values returned by getSubnet.
+     * 
+     */
     public static CompletableFuture<GetSubnetResult> invokeAsync(@Nullable GetSubnetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getSubnet:getSubnet", TypeShape.of(GetSubnetResult.class), args == null ? GetSubnetArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -203,6 +203,22 @@ public class Workspace extends io.pulumi.resources.CustomResource {
         return this.workspaceProperties;
     }
 
+    public interface BuilderApplicator {
+        public void apply(WorkspaceArgs.Builder a);
+    }
+    private static io.pulumi.aws.workspaces.WorkspaceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.aws.workspaces.WorkspaceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Workspace(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

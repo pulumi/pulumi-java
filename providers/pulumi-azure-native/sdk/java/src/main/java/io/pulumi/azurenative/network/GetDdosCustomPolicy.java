@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDdosCustomPolicy {
-/**
- * A DDoS custom policy in a resource group.
+    private GetDdosCustomPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetDdosCustomPolicyArgs.Builder a);
+    }
+    private static GetDdosCustomPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDdosCustomPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A DDoS custom policy in a resource group.
  * API Version: 2020-11-01.
  * 
- *
- * A DDoS custom policy in a resource group.
+     *
+     * A DDoS custom policy in a resource group.
  * 
- */
+     */
+    public static CompletableFuture<GetDdosCustomPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A DDoS custom policy in a resource group.
+     * API Version: 2020-11-01.
+     * 
+     *
+         * A DDoS custom policy in a resource group.
+     * 
+     */
     public static CompletableFuture<GetDdosCustomPolicyResult> invokeAsync(GetDdosCustomPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getDdosCustomPolicy", TypeShape.of(GetDdosCustomPolicyResult.class), args == null ? GetDdosCustomPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

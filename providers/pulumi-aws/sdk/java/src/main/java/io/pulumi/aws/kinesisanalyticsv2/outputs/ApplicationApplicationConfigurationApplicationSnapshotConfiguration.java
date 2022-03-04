@@ -23,7 +23,7 @@ public final class ApplicationApplicationConfigurationApplicationSnapshotConfigu
     /**
      * Describes whether snapshots are enabled for a Flink-based Kinesis Data Analytics application.
      * 
-     */
+    */
     public Boolean getSnapshotsEnabled() {
         return this.snapshotsEnabled;
     }

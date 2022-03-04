@@ -30,7 +30,7 @@ public final class SecurityProfileMetricToRetain {
     /**
      * What is measured by the behavior.
      * 
-     */
+    */
     public String getMetric() {
         return this.metric;
     }

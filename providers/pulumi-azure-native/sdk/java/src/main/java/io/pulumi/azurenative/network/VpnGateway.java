@@ -222,6 +222,22 @@ public class VpnGateway extends io.pulumi.resources.CustomResource {
         return this.vpnGatewayScaleUnit;
     }
 
+    public interface BuilderApplicator {
+        public void apply(VpnGatewayArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.network.VpnGatewayArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.network.VpnGatewayArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public VpnGateway(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

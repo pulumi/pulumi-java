@@ -34,14 +34,14 @@ public final class VirtualNodeSpecListenerTimeoutHttp2 {
     /**
      * The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
      * 
-     */
+    */
     public Optional<VirtualNodeSpecListenerTimeoutHttp2Idle> getIdle() {
         return Optional.ofNullable(this.idle);
     }
     /**
      * The per request timeout.
      * 
-     */
+    */
     public Optional<VirtualNodeSpecListenerTimeoutHttp2PerRequest> getPerRequest() {
         return Optional.ofNullable(this.perRequest);
     }

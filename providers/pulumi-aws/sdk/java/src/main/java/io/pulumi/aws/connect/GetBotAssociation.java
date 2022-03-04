@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBotAssociation {
-/**
- * Provides details about a specific Lex (V1) Bot associated with an Amazon Connect instance.
+    private GetBotAssociation() {}
+    public interface BuilderApplicator {
+        public void apply(GetBotAssociationArgs.Builder a);
+    }
+    private static GetBotAssociationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetBotAssociationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Provides details about a specific Lex (V1) Bot associated with an Amazon Connect instance.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getBotAssociation.
+     *
+     * A collection of arguments for invoking getBotAssociation.
  * 
- *
- * A collection of values returned by getBotAssociation.
+     *
+     * A collection of values returned by getBotAssociation.
  * 
- */
+     */
+    public static CompletableFuture<GetBotAssociationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Provides details about a specific Lex (V1) Bot associated with an Amazon Connect instance.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getBotAssociation.
+     * 
+     *
+         * A collection of values returned by getBotAssociation.
+     * 
+     */
     public static CompletableFuture<GetBotAssociationResult> invokeAsync(GetBotAssociationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:connect/getBotAssociation:getBotAssociation", TypeShape.of(GetBotAssociationResult.class), args == null ? GetBotAssociationArgs.Empty : args, Utilities.withVersion(options));
     }

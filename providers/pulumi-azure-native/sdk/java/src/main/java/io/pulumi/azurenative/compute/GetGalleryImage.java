@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGalleryImage {
-/**
- * Specifies information about the gallery image definition that you want to create or update.
+    private GetGalleryImage() {}
+    public interface BuilderApplicator {
+        public void apply(GetGalleryImageArgs.Builder a);
+    }
+    private static GetGalleryImageArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetGalleryImageArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Specifies information about the gallery image definition that you want to create or update.
  * API Version: 2020-09-30.
  * 
- *
- * Specifies information about the gallery image definition that you want to create or update.
+     *
+     * Specifies information about the gallery image definition that you want to create or update.
  * 
- */
+     */
+    public static CompletableFuture<GetGalleryImageResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Specifies information about the gallery image definition that you want to create or update.
+     * API Version: 2020-09-30.
+     * 
+     *
+         * Specifies information about the gallery image definition that you want to create or update.
+     * 
+     */
     public static CompletableFuture<GetGalleryImageResult> invokeAsync(GetGalleryImageArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getGalleryImage", TypeShape.of(GetGalleryImageResult.class), args == null ? GetGalleryImageArgs.Empty : args, Utilities.withVersion(options));
     }

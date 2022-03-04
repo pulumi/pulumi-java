@@ -71,49 +71,49 @@ public final class DomainSamlOptionsSamlOptions {
     /**
      * Whether SAML authentication is enabled.
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * Information from your identity provider.
      * 
-     */
+    */
     public Optional<DomainSamlOptionsSamlOptionsIdp> getIdp() {
         return Optional.ofNullable(this.idp);
     }
     /**
      * This backend role from the SAML IdP receives full permissions to the cluster, equivalent to a new master user.
      * 
-     */
+    */
     public Optional<String> getMasterBackendRole() {
         return Optional.ofNullable(this.masterBackendRole);
     }
     /**
      * This username from the SAML IdP receives full permissions to the cluster, equivalent to a new master user.
      * 
-     */
+    */
     public Optional<String> getMasterUserName() {
         return Optional.ofNullable(this.masterUserName);
     }
     /**
      * Element of the SAML assertion to use for backend roles. Default is roles.
      * 
-     */
+    */
     public Optional<String> getRolesKey() {
         return Optional.ofNullable(this.rolesKey);
     }
     /**
      * Duration of a session in minutes after a user logs in. Default is 60. Maximum value is 1,440.
      * 
-     */
+    */
     public Optional<Integer> getSessionTimeoutMinutes() {
         return Optional.ofNullable(this.sessionTimeoutMinutes);
     }
     /**
      * Element of the SAML assertion to use for username. Default is NameID.
      * 
-     */
+    */
     public Optional<String> getSubjectKey() {
         return Optional.ofNullable(this.subjectKey);
     }

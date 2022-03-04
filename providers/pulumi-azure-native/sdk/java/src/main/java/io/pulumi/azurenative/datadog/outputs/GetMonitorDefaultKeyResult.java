@@ -47,28 +47,28 @@ public final class GetMonitorDefaultKeyResult {
     /**
      * The time of creation of the API key.
      * 
-     */
+    */
     public Optional<String> getCreated() {
         return Optional.ofNullable(this.created);
     }
     /**
      * The user that created the API key.
      * 
-     */
+    */
     public Optional<String> getCreatedBy() {
         return Optional.ofNullable(this.createdBy);
     }
     /**
      * The value of the API key.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * The name of the API key.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

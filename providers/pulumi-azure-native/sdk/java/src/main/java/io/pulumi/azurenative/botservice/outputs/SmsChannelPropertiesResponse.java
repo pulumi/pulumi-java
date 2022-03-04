@@ -55,35 +55,35 @@ public final class SmsChannelPropertiesResponse {
     /**
      * The Sms account SID. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
-     */
+    */
     public String getAccountSID() {
         return this.accountSID;
     }
     /**
      * The Sms auth token. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
-     */
+    */
     public Optional<String> getAuthToken() {
         return Optional.ofNullable(this.authToken);
     }
     /**
      * Whether this channel is enabled for the bot
      * 
-     */
+    */
     public Boolean getIsEnabled() {
         return this.isEnabled;
     }
     /**
      * Whether this channel is validated for the bot
      * 
-     */
+    */
     public Optional<Boolean> getIsValidated() {
         return Optional.ofNullable(this.isValidated);
     }
     /**
      * The Sms phone
      * 
-     */
+    */
     public String getPhone() {
         return this.phone;
     }

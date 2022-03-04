@@ -51,28 +51,28 @@ public final class DaprResponse {
     /**
      * Dapr application identifier
      * 
-     */
+    */
     public Optional<String> getAppId() {
         return Optional.ofNullable(this.appId);
     }
     /**
      * Port on which the Dapr side car
      * 
-     */
+    */
     public Optional<Integer> getAppPort() {
         return Optional.ofNullable(this.appPort);
     }
     /**
      * Collection of Dapr components
      * 
-     */
+    */
     public List<DaprComponentResponse> getComponents() {
         return this.components == null ? List.of() : this.components;
     }
     /**
      * Boolean indicating if the Dapr side car is enabled
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }

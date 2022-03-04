@@ -41,21 +41,21 @@ public final class PipelineThumbnailConfigPermission {
     /**
      * The permission that you want to give to the AWS user that you specified in `thumbnail_config_permissions.grantee`. Valid values are `Read`, `ReadAcp`, `WriteAcp` or `FullControl`.
      * 
-     */
+    */
     public List<String> getAccesses() {
         return this.accesses == null ? List.of() : this.accesses;
     }
     /**
      * The AWS user or group that you want to have access to thumbnail files.
      * 
-     */
+    */
     public Optional<String> getGrantee() {
         return Optional.ofNullable(this.grantee);
     }
     /**
      * Specify the type of value that appears in the `thumbnail_config_permissions.grantee` object. Valid values are `Canonical`, `Email` or `Group`.
      * 
-     */
+    */
     public Optional<String> getGranteeType() {
         return Optional.ofNullable(this.granteeType);
     }

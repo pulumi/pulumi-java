@@ -50,7 +50,7 @@ public final class SloWindowsBasedSliMetricSumInRange {
      * `range.min <= X <= range.max` for a good window.
      * Structure is documented below.
      * 
-     */
+    */
     public SloWindowsBasedSliMetricSumInRangeRange getRange() {
         return this.range;
     }
@@ -63,7 +63,7 @@ public final class SloWindowsBasedSliMetricSumInRange {
      * Summed value `X` should satisfy
      * `range.min <= X <= range.max` for a good window.
      * 
-     */
+    */
     public String getTimeSeries() {
         return this.timeSeries;
     }

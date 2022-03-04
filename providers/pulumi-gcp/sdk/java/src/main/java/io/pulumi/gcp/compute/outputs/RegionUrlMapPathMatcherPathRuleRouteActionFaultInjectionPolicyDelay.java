@@ -36,7 +36,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolic
      * Specifies the value of the fixed delay interval.
      * Structure is documented below.
      * 
-     */
+    */
     public RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay getFixedDelay() {
         return this.fixedDelay;
     }
@@ -45,7 +45,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolic
      * be introduced as part of fault injection. The value must be between 0.0 and
      * 100.0 inclusive.
      * 
-     */
+    */
     public Double getPercentage() {
         return this.percentage;
     }

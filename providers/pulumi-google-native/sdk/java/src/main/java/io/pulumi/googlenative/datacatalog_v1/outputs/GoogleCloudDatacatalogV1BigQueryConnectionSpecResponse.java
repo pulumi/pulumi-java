@@ -40,21 +40,21 @@ public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse {
     /**
      * Specification for the BigQuery connection to a Cloud SQL instance.
      * 
-     */
+    */
     public GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse getCloudSql() {
         return this.cloudSql;
     }
     /**
      * The type of the BigQuery connection.
      * 
-     */
+    */
     public String getConnectionType() {
         return this.connectionType;
     }
     /**
      * True if there are credentials attached to the BigQuery connection; false otherwise.
      * 
-     */
+    */
     public Boolean getHasCredential() {
         return this.hasCredential;
     }

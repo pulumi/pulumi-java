@@ -23,7 +23,7 @@ public final class GetVpcPeeringConnectionCidrBlockSet {
     /**
      * The primary CIDR block of the requester VPC of the specific VPC Peering Connection to retrieve.
      * 
-     */
+    */
     public String getCidrBlock() {
         return this.cidrBlock;
     }

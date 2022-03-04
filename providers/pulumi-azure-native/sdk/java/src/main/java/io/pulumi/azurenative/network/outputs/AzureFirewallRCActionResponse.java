@@ -25,7 +25,7 @@ public final class AzureFirewallRCActionResponse {
     /**
      * The type of action.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

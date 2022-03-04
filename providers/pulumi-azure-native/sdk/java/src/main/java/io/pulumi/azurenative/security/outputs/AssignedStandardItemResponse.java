@@ -25,7 +25,7 @@ public final class AssignedStandardItemResponse {
     /**
      * full resourceId of the Microsoft.Security/standard object
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }

@@ -23,7 +23,7 @@ public final class SubResourceReadOnlyResponse {
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }

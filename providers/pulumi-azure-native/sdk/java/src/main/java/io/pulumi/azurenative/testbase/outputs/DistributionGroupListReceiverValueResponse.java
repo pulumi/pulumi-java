@@ -25,7 +25,7 @@ public final class DistributionGroupListReceiverValueResponse {
     /**
      * The list of distribution groups.
      * 
-     */
+    */
     public List<String> getDistributionGroups() {
         return this.distributionGroups == null ? List.of() : this.distributionGroups;
     }

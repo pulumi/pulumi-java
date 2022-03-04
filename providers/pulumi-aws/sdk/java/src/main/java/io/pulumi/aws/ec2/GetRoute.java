@@ -13,20 +13,46 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRoute {
-/**
- * `aws.ec2.Route` provides details about a specific Route.
+    private GetRoute() {}
+    public interface BuilderApplicator {
+        public void apply(GetRouteArgs.Builder a);
+    }
+    private static GetRouteArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRouteArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * `aws.ec2.Route` provides details about a specific Route.
  * 
  * This resource can prove useful when finding the resource associated with a CIDR. For example, finding the peering connection associated with a CIDR value.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getRoute.
+     *
+     * A collection of arguments for invoking getRoute.
  * 
- *
- * A collection of values returned by getRoute.
+     *
+     * A collection of values returned by getRoute.
  * 
- */
+     */
+    public static CompletableFuture<GetRouteResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * `aws.ec2.Route` provides details about a specific Route.
+     * 
+     * This resource can prove useful when finding the resource associated with a CIDR. For example, finding the peering connection associated with a CIDR value.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getRoute.
+     * 
+     *
+         * A collection of values returned by getRoute.
+     * 
+     */
     public static CompletableFuture<GetRouteResult> invokeAsync(GetRouteArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getRoute:getRoute", TypeShape.of(GetRouteResult.class), args == null ? GetRouteArgs.Empty : args, Utilities.withVersion(options));
     }

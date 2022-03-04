@@ -37,7 +37,7 @@ public final class GetOIDCProviderResult {
     /**
      * Amazon Resource Name (ARN) of the OIDC provider
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }

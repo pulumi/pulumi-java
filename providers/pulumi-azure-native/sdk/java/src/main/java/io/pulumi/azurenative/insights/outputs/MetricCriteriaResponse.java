@@ -88,63 +88,63 @@ public final class MetricCriteriaResponse {
      * Specifies the type of threshold criteria
      * Expected value is 'StaticThresholdCriterion'.
      * 
-     */
+    */
     public String getCriterionType() {
         return this.criterionType;
     }
     /**
      * List of dimension conditions.
      * 
-     */
+    */
     public List<MetricDimensionResponse> getDimensions() {
         return this.dimensions == null ? List.of() : this.dimensions;
     }
     /**
      * Name of the metric.
      * 
-     */
+    */
     public String getMetricName() {
         return this.metricName;
     }
     /**
      * Namespace of the metric.
      * 
-     */
+    */
     public Optional<String> getMetricNamespace() {
         return Optional.ofNullable(this.metricNamespace);
     }
     /**
      * Name of the criteria.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * the criteria operator.
      * 
-     */
+    */
     public String getOperator() {
         return this.operator;
     }
     /**
      * Allows creating an alert rule on a custom metric that isn't yet emitted, by causing the metric validation to be skipped.
      * 
-     */
+    */
     public Optional<Boolean> getSkipMetricValidation() {
         return Optional.ofNullable(this.skipMetricValidation);
     }
     /**
      * the criteria threshold value that activates the alert.
      * 
-     */
+    */
     public Double getThreshold() {
         return this.threshold;
     }
     /**
      * the criteria time aggregation types.
      * 
-     */
+    */
     public String getTimeAggregation() {
         return this.timeAggregation;
     }

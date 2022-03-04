@@ -64,42 +64,42 @@ public final class IntegrationServiceEnvironmentPropertiesResponse {
     /**
      * The encryption configuration.
      * 
-     */
+    */
     public Optional<IntegrationServiceEnvironmenEncryptionConfigurationResponse> getEncryptionConfiguration() {
         return Optional.ofNullable(this.encryptionConfiguration);
     }
     /**
      * The endpoints configuration.
      * 
-     */
+    */
     public Optional<FlowEndpointsConfigurationResponse> getEndpointsConfiguration() {
         return Optional.ofNullable(this.endpointsConfiguration);
     }
     /**
      * Gets the tracking id.
      * 
-     */
+    */
     public Optional<String> getIntegrationServiceEnvironmentId() {
         return Optional.ofNullable(this.integrationServiceEnvironmentId);
     }
     /**
      * The network configuration.
      * 
-     */
+    */
     public Optional<NetworkConfigurationResponse> getNetworkConfiguration() {
         return Optional.ofNullable(this.networkConfiguration);
     }
     /**
      * The provisioning state.
      * 
-     */
+    */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * The integration service environment state.
      * 
-     */
+    */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }

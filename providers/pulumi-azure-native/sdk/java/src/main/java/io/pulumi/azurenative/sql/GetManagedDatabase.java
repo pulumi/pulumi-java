@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetManagedDatabase {
-/**
- * A managed database resource.
+    private GetManagedDatabase() {}
+    public interface BuilderApplicator {
+        public void apply(GetManagedDatabaseArgs.Builder a);
+    }
+    private static GetManagedDatabaseArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetManagedDatabaseArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A managed database resource.
  * API Version: 2020-11-01-preview.
  * 
- *
- * A managed database resource.
+     *
+     * A managed database resource.
  * 
- */
+     */
+    public static CompletableFuture<GetManagedDatabaseResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A managed database resource.
+     * API Version: 2020-11-01-preview.
+     * 
+     *
+         * A managed database resource.
+     * 
+     */
     public static CompletableFuture<GetManagedDatabaseResult> invokeAsync(GetManagedDatabaseArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getManagedDatabase", TypeShape.of(GetManagedDatabaseResult.class), args == null ? GetManagedDatabaseArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -13,8 +13,17 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRegion {
-/**
- * `aws.getRegion` provides details about a specific AWS region.
+    private GetRegion() {}
+    public interface BuilderApplicator {
+        public void apply(GetRegionArgs.Builder a);
+    }
+    private static GetRegionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRegionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * `aws.getRegion` provides details about a specific AWS region.
  * 
  * As well as validating a given region name this resource can be used to
  * discover the name of the region configured within the provider. The latter
@@ -23,13 +32,33 @@ public class GetRegion {
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getRegion.
+     *
+     * A collection of arguments for invoking getRegion.
  * 
- *
- * A collection of values returned by getRegion.
+     *
+     * A collection of values returned by getRegion.
  * 
- */
+     */
+    public static CompletableFuture<GetRegionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * `aws.getRegion` provides details about a specific AWS region.
+     * 
+     * As well as validating a given region name this resource can be used to
+     * discover the name of the region configured within the provider. The latter
+     * can be useful in a child module which is inheriting an AWS provider
+     * configuration from its parent module.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getRegion.
+     * 
+     *
+         * A collection of values returned by getRegion.
+     * 
+     */
     public static CompletableFuture<GetRegionResult> invokeAsync(@Nullable GetRegionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:index/getRegion:getRegion", TypeShape.of(GetRegionResult.class), args == null ? GetRegionArgs.Empty : args, Utilities.withVersion(options));
     }

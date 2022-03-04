@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetApplication {
-/**
- * Retrieve information about an Elastic Beanstalk Application.
+    private GetApplication() {}
+    public interface BuilderApplicator {
+        public void apply(GetApplicationArgs.Builder a);
+    }
+    private static GetApplicationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetApplicationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Retrieve information about an Elastic Beanstalk Application.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getApplication.
+     *
+     * A collection of arguments for invoking getApplication.
  * 
- *
- * A collection of values returned by getApplication.
+     *
+     * A collection of values returned by getApplication.
  * 
- */
+     */
+    public static CompletableFuture<GetApplicationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Retrieve information about an Elastic Beanstalk Application.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getApplication.
+     * 
+     *
+         * A collection of values returned by getApplication.
+     * 
+     */
     public static CompletableFuture<GetApplicationResult> invokeAsync(GetApplicationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:elasticbeanstalk/getApplication:getApplication", TypeShape.of(GetApplicationResult.class), args == null ? GetApplicationArgs.Empty : args, Utilities.withVersion(options));
     }

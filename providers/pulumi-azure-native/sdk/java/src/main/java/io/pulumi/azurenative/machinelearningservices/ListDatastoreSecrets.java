@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListDatastoreSecrets {
-/**
- * Base definition for datastore secrets.
+    private ListDatastoreSecrets() {}
+    public interface BuilderApplicator {
+        public void apply(ListDatastoreSecretsArgs.Builder a);
+    }
+    private static ListDatastoreSecretsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListDatastoreSecretsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Base definition for datastore secrets.
  * API Version: 2021-03-01-preview.
  * 
- *
- * Base definition for datastore secrets.
+     *
+     * Base definition for datastore secrets.
  * 
- */
+     */
+    public static CompletableFuture<ListDatastoreSecretsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Base definition for datastore secrets.
+     * API Version: 2021-03-01-preview.
+     * 
+     *
+         * Base definition for datastore secrets.
+     * 
+     */
     public static CompletableFuture<ListDatastoreSecretsResult> invokeAsync(ListDatastoreSecretsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:listDatastoreSecrets", TypeShape.of(ListDatastoreSecretsResult.class), args == null ? ListDatastoreSecretsArgs.Empty : args, Utilities.withVersion(options));
     }

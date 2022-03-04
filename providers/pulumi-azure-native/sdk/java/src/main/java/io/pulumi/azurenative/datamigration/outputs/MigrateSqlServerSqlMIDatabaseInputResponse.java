@@ -49,28 +49,28 @@ public final class MigrateSqlServerSqlMIDatabaseInputResponse {
     /**
      * The list of backup files to be used in case of existing backups.
      * 
-     */
+    */
     public List<String> getBackupFilePaths() {
         return this.backupFilePaths == null ? List.of() : this.backupFilePaths;
     }
     /**
      * Backup file share information for backing up this database.
      * 
-     */
+    */
     public Optional<FileShareResponse> getBackupFileShare() {
         return Optional.ofNullable(this.backupFileShare);
     }
     /**
      * Name of the database
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Name of the database at destination
      * 
-     */
+    */
     public String getRestoreDatabaseName() {
         return this.restoreDatabaseName;
     }

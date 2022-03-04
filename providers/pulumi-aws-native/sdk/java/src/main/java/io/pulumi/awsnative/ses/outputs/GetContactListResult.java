@@ -43,21 +43,21 @@ public final class GetContactListResult {
     /**
      * The description of the contact list.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The tags (keys and values) associated with the contact list.
      * 
-     */
+    */
     public List<ContactListTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * The topics associated with the contact list.
      * 
-     */
+    */
     public List<ContactListTopic> getTopics() {
         return this.topics == null ? List.of() : this.topics;
     }

@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetApp {
-/**
- * Returns the details for a developer app.
+    private GetApp() {}
+    public interface BuilderApplicator {
+        public void apply(GetAppArgs.Builder a);
+    }
+    private static GetAppArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAppArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Returns the details for a developer app.
  * 
- */
+     */
+    public static CompletableFuture<GetAppResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Returns the details for a developer app.
+     * 
+     */
     public static CompletableFuture<GetAppResult> invokeAsync(GetAppArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:apigee/v1:getApp", TypeShape.of(GetAppResult.class), args == null ? GetAppArgs.Empty : args, Utilities.withVersion(options));
     }

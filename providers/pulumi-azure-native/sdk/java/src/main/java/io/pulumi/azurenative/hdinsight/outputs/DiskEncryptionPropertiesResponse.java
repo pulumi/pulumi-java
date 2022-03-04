@@ -62,42 +62,42 @@ public final class DiskEncryptionPropertiesResponse {
     /**
      * Algorithm identifier for encryption, default RSA-OAEP.
      * 
-     */
+    */
     public Optional<String> getEncryptionAlgorithm() {
         return Optional.ofNullable(this.encryptionAlgorithm);
     }
     /**
      * Indicates whether or not resource disk encryption is enabled.
      * 
-     */
+    */
     public Optional<Boolean> getEncryptionAtHost() {
         return Optional.ofNullable(this.encryptionAtHost);
     }
     /**
      * Key name that is used for enabling disk encryption.
      * 
-     */
+    */
     public Optional<String> getKeyName() {
         return Optional.ofNullable(this.keyName);
     }
     /**
      * Specific key version that is used for enabling disk encryption.
      * 
-     */
+    */
     public Optional<String> getKeyVersion() {
         return Optional.ofNullable(this.keyVersion);
     }
     /**
      * Resource ID of Managed Identity that is used to access the key vault.
      * 
-     */
+    */
     public Optional<String> getMsiResourceId() {
         return Optional.ofNullable(this.msiResourceId);
     }
     /**
      * Base key vault URI where the customers key is located eg. https://myvault.vault.azure.net
      * 
-     */
+    */
     public Optional<String> getVaultUri() {
         return Optional.ofNullable(this.vaultUri);
     }

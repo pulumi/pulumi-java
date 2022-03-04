@@ -34,14 +34,14 @@ public final class OntapFileSystemEndpointIntercluster {
     /**
      * The Domain Name Service (DNS) name for the file system. You can mount your file system using its DNS name.
      * 
-     */
+    */
     public Optional<String> getDnsName() {
         return Optional.ofNullable(this.dnsName);
     }
     /**
      * IP addresses of the file system endpoint.
      * 
-     */
+    */
     public List<String> getIpAddresses() {
         return this.ipAddresses == null ? List.of() : this.ipAddresses;
     }

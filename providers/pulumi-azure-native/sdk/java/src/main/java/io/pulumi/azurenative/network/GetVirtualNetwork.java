@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVirtualNetwork {
-/**
- * Virtual Network resource.
+    private GetVirtualNetwork() {}
+    public interface BuilderApplicator {
+        public void apply(GetVirtualNetworkArgs.Builder a);
+    }
+    private static GetVirtualNetworkArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetVirtualNetworkArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Virtual Network resource.
  * API Version: 2020-11-01.
  * 
- *
- * Virtual Network resource.
+     *
+     * Virtual Network resource.
  * 
- */
+     */
+    public static CompletableFuture<GetVirtualNetworkResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Virtual Network resource.
+     * API Version: 2020-11-01.
+     * 
+     *
+         * Virtual Network resource.
+     * 
+     */
     public static CompletableFuture<GetVirtualNetworkResult> invokeAsync(GetVirtualNetworkArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getVirtualNetwork", TypeShape.of(GetVirtualNetworkResult.class), args == null ? GetVirtualNetworkArgs.Empty : args, Utilities.withVersion(options));
     }

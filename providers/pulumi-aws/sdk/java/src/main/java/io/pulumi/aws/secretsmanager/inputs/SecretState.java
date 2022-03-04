@@ -122,7 +122,7 @@ public final class SecretState extends io.pulumi.resources.ResourceArgs {
     /**
      * Whether automatic rotation is enabled for this secret.
      * 
-     * @deprecated
+     * @Deprecated
      * Use the aws_secretsmanager_secret_rotation resource instead
      * 
      */
@@ -138,7 +138,7 @@ public final class SecretState extends io.pulumi.resources.ResourceArgs {
     /**
      * ARN of the Lambda function that can rotate the secret. Use the `aws.secretsmanager.SecretRotation` resource to manage this configuration instead. As of version 2.67.0, removal of this configuration will no longer remove rotation due to supporting the new resource. Either import the new resource and remove the configuration or manually remove rotation.
      * 
-     * @deprecated
+     * @Deprecated
      * Use the aws_secretsmanager_secret_rotation resource instead
      * 
      */
@@ -154,7 +154,7 @@ public final class SecretState extends io.pulumi.resources.ResourceArgs {
     /**
      * Configuration block for the rotation configuration of this secret. Defined below. Use the `aws.secretsmanager.SecretRotation` resource to manage this configuration instead. As of version 2.67.0, removal of this configuration will no longer remove rotation due to supporting the new resource. Either import the new resource and remove the configuration or manually remove rotation.
      * 
-     * @deprecated
+     * @Deprecated
      * Use the aws_secretsmanager_secret_rotation resource instead
      * 
      */

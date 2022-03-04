@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGroup {
-/**
- * Schema for ResourceGroups::Group
+    private GetGroup() {}
+    public interface BuilderApplicator {
+        public void apply(GetGroupArgs.Builder a);
+    }
+    private static GetGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Schema for ResourceGroups::Group
  * 
- */
+     */
+    public static CompletableFuture<GetGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Schema for ResourceGroups::Group
+     * 
+     */
     public static CompletableFuture<GetGroupResult> invokeAsync(GetGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:resourcegroups:getGroup", TypeShape.of(GetGroupResult.class), args == null ? GetGroupArgs.Empty : args, Utilities.withVersion(options));
     }

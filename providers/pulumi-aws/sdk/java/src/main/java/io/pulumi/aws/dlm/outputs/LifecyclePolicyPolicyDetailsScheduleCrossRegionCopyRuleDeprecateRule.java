@@ -32,14 +32,14 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprec
     /**
      * The amount of time to retain each snapshot. The maximum is 100 years. This is equivalent to 1200 months, 5200 weeks, or 36500 days.
      * 
-     */
+    */
     public Integer getInterval() {
         return this.interval;
     }
     /**
      * The unit of time for time-based retention. Valid values: `DAYS`, `WEEKS`, `MONTHS`, or `YEARS`.
      * 
-     */
+    */
     public String getIntervalUnit() {
         return this.intervalUnit;
     }

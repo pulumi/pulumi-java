@@ -92,70 +92,70 @@ public final class GetOrderItemByNameResult {
     /**
      * Represents shipping and return address for order item
      * 
-     */
+    */
     public AddressDetailsResponse getAddressDetails() {
         return this.addressDetails;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The geo-location where the resource lives
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Id of the order to which order item belongs to
      * 
-     */
+    */
     public String getOrderId() {
         return this.orderId;
     }
     /**
      * Represents order item details.
      * 
-     */
+    */
     public OrderItemDetailsResponse getOrderItemDetails() {
         return this.orderItemDetails;
     }
     /**
      * Start time of order item
      * 
-     */
+    */
     public String getStartTime() {
         return this.startTime;
     }
     /**
      * Represents resource creation and update time
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

@@ -25,7 +25,7 @@ public final class SignalRCorsSettingsResponse {
     /**
      * Gets or sets the list of origins that should be allowed to make cross-origin calls (for example: http://example.com:12345). Use "*" to allow all. If omitted, allow all by default.
      * 
-     */
+    */
     public List<String> getAllowedOrigins() {
         return this.allowedOrigins == null ? List.of() : this.allowedOrigins;
     }

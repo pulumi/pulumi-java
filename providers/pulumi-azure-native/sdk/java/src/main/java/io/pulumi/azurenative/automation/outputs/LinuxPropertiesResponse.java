@@ -48,28 +48,28 @@ public final class LinuxPropertiesResponse {
     /**
      * packages excluded from the software update configuration.
      * 
-     */
+    */
     public List<String> getExcludedPackageNameMasks() {
         return this.excludedPackageNameMasks == null ? List.of() : this.excludedPackageNameMasks;
     }
     /**
      * Update classifications included in the software update configuration.
      * 
-     */
+    */
     public Optional<String> getIncludedPackageClassifications() {
         return Optional.ofNullable(this.includedPackageClassifications);
     }
     /**
      * packages included from the software update configuration.
      * 
-     */
+    */
     public List<String> getIncludedPackageNameMasks() {
         return this.includedPackageNameMasks == null ? List.of() : this.includedPackageNameMasks;
     }
     /**
      * Reboot setting for the software update configuration.
      * 
-     */
+    */
     public Optional<String> getRebootSetting() {
         return Optional.ofNullable(this.rebootSetting);
     }

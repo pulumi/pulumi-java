@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetModelVersion {
-/**
- * Azure Resource Manager resource envelope.
+    private GetModelVersion() {}
+    public interface BuilderApplicator {
+        public void apply(GetModelVersionArgs.Builder a);
+    }
+    private static GetModelVersionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetModelVersionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Azure Resource Manager resource envelope.
  * API Version: 2021-03-01-preview.
  * 
- *
- * Azure Resource Manager resource envelope.
+     *
+     * Azure Resource Manager resource envelope.
  * 
- */
+     */
+    public static CompletableFuture<GetModelVersionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Azure Resource Manager resource envelope.
+     * API Version: 2021-03-01-preview.
+     * 
+     *
+         * Azure Resource Manager resource envelope.
+     * 
+     */
     public static CompletableFuture<GetModelVersionResult> invokeAsync(GetModelVersionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:getModelVersion", TypeShape.of(GetModelVersionResult.class), args == null ? GetModelVersionArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -121,35 +121,35 @@ public final class GetProductResult {
     /**
      * ARN of the product.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
     /**
      * Time when the product was created.
      * 
-     */
+    */
     public String getCreatedTime() {
         return this.createdTime;
     }
     /**
      * Description of the product.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * Distributor (i.e., vendor) of the product.
      * 
-     */
+    */
     public String getDistributor() {
         return this.distributor;
     }
     /**
      * Whether the product has a default path.
      * 
-     */
+    */
     public Boolean getHasDefaultPath() {
         return this.hasDefaultPath;
     }
@@ -159,56 +159,56 @@ public final class GetProductResult {
     /**
      * Name of the product.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Owner of the product.
      * 
-     */
+    */
     public String getOwner() {
         return this.owner;
     }
     /**
      * Status of the product.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * Support information about the product.
      * 
-     */
+    */
     public String getSupportDescription() {
         return this.supportDescription;
     }
     /**
      * Contact email for product support.
      * 
-     */
+    */
     public String getSupportEmail() {
         return this.supportEmail;
     }
     /**
      * Contact URL for product support.
      * 
-     */
+    */
     public String getSupportUrl() {
         return this.supportUrl;
     }
     /**
      * Tags to apply to the product.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags;
     }
     /**
      * Type of product.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListRemediationDeploymentsAtSubscription {
-/**
- * List of deployments for a remediation.
+    private ListRemediationDeploymentsAtSubscription() {}
+    public interface BuilderApplicator {
+        public void apply(ListRemediationDeploymentsAtSubscriptionArgs.Builder a);
+    }
+    private static ListRemediationDeploymentsAtSubscriptionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListRemediationDeploymentsAtSubscriptionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * List of deployments for a remediation.
  * API Version: 2019-07-01.
  * 
- *
- * List of deployments for a remediation.
+     *
+     * List of deployments for a remediation.
  * 
- */
+     */
+    public static CompletableFuture<ListRemediationDeploymentsAtSubscriptionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * List of deployments for a remediation.
+     * API Version: 2019-07-01.
+     * 
+     *
+         * List of deployments for a remediation.
+     * 
+     */
     public static CompletableFuture<ListRemediationDeploymentsAtSubscriptionResult> invokeAsync(ListRemediationDeploymentsAtSubscriptionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:policyinsights:listRemediationDeploymentsAtSubscription", TypeShape.of(ListRemediationDeploymentsAtSubscriptionResult.class), args == null ? ListRemediationDeploymentsAtSubscriptionArgs.Empty : args, Utilities.withVersion(options));
     }

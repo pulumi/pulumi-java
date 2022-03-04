@@ -91,49 +91,49 @@ public final class NetworkRuleResponse {
     /**
      * Description of the rule.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * List of destination IP addresses or Service Tags.
      * 
-     */
+    */
     public List<String> getDestinationAddresses() {
         return this.destinationAddresses == null ? List.of() : this.destinationAddresses;
     }
     /**
      * List of destination FQDNs.
      * 
-     */
+    */
     public List<String> getDestinationFqdns() {
         return this.destinationFqdns == null ? List.of() : this.destinationFqdns;
     }
     /**
      * List of destination IpGroups for this rule.
      * 
-     */
+    */
     public List<String> getDestinationIpGroups() {
         return this.destinationIpGroups == null ? List.of() : this.destinationIpGroups;
     }
     /**
      * List of destination ports.
      * 
-     */
+    */
     public List<String> getDestinationPorts() {
         return this.destinationPorts == null ? List.of() : this.destinationPorts;
     }
     /**
      * Array of FirewallPolicyRuleNetworkProtocols.
      * 
-     */
+    */
     public List<String> getIpProtocols() {
         return this.ipProtocols == null ? List.of() : this.ipProtocols;
     }
     /**
      * Name of the rule.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
@@ -141,21 +141,21 @@ public final class NetworkRuleResponse {
      * Rule Type.
      * Expected value is 'NetworkRule'.
      * 
-     */
+    */
     public String getRuleType() {
         return this.ruleType;
     }
     /**
      * List of source IP addresses for this rule.
      * 
-     */
+    */
     public List<String> getSourceAddresses() {
         return this.sourceAddresses == null ? List.of() : this.sourceAddresses;
     }
     /**
      * List of source IpGroups for this rule.
      * 
-     */
+    */
     public List<String> getSourceIpGroups() {
         return this.sourceIpGroups == null ? List.of() : this.sourceIpGroups;
     }

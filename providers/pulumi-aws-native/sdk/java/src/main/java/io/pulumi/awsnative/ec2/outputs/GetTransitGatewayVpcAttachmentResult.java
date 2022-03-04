@@ -47,7 +47,7 @@ public final class GetTransitGatewayVpcAttachmentResult {
     /**
      * The options for the transit gateway vpc attachment.
      * 
-     */
+    */
     public Optional<OptionsProperties> getOptions() {
         return Optional.ofNullable(this.options);
     }

@@ -40,21 +40,21 @@ public final class TopicRuleKinesis {
     /**
      * The partition key.
      * 
-     */
+    */
     public Optional<String> getPartitionKey() {
         return Optional.ofNullable(this.partitionKey);
     }
     /**
      * The ARN of the IAM role that grants access to the Amazon Kinesis stream.
      * 
-     */
+    */
     public String getRoleArn() {
         return this.roleArn;
     }
     /**
      * The name of the Amazon Kinesis stream.
      * 
-     */
+    */
     public String getStreamName() {
         return this.streamName;
     }

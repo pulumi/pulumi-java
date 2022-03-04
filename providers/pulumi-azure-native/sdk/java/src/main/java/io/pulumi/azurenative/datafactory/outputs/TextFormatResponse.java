@@ -105,77 +105,77 @@ public final class TextFormatResponse {
     /**
      * The column delimiter. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getColumnDelimiter() {
         return Optional.ofNullable(this.columnDelimiter);
     }
     /**
      * Deserializer. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getDeserializer() {
         return Optional.ofNullable(this.deserializer);
     }
     /**
      * The code page name of the preferred encoding. If miss, the default value is ΓÇ£utf-8ΓÇ¥, unless BOM denotes another Unicode encoding. Refer to the ΓÇ£NameΓÇ¥ column of the table in the following link to set supported values: https://msdn.microsoft.com/library/system.text.encoding.aspx. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getEncodingName() {
         return Optional.ofNullable(this.encodingName);
     }
     /**
      * The escape character. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getEscapeChar() {
         return Optional.ofNullable(this.escapeChar);
     }
     /**
      * When used as input, treat the first row of data as headers. When used as output,write the headers into the output as the first row of data. The default value is false. Type: boolean (or Expression with resultType boolean).
      * 
-     */
+    */
     public Optional<Object> getFirstRowAsHeader() {
         return Optional.ofNullable(this.firstRowAsHeader);
     }
     /**
      * The null value string. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getNullValue() {
         return Optional.ofNullable(this.nullValue);
     }
     /**
      * The quote character. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getQuoteChar() {
         return Optional.ofNullable(this.quoteChar);
     }
     /**
      * The row delimiter. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getRowDelimiter() {
         return Optional.ofNullable(this.rowDelimiter);
     }
     /**
      * Serializer. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getSerializer() {
         return Optional.ofNullable(this.serializer);
     }
     /**
      * The number of lines/rows to be skipped when parsing text files. The default value is 0. Type: integer (or Expression with resultType integer).
      * 
-     */
+    */
     public Optional<Object> getSkipLineCount() {
         return Optional.ofNullable(this.skipLineCount);
     }
     /**
      * Treat empty column values in the text file as null. The default value is true. Type: boolean (or Expression with resultType boolean).
      * 
-     */
+    */
     public Optional<Object> getTreatEmptyAsNull() {
         return Optional.ofNullable(this.treatEmptyAsNull);
     }
@@ -183,7 +183,7 @@ public final class TextFormatResponse {
      * Type of dataset storage format.
      * Expected value is 'TextFormat'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

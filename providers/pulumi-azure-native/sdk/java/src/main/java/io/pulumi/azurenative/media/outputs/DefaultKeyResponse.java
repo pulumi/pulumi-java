@@ -33,14 +33,14 @@ public final class DefaultKeyResponse {
     /**
      * Label can be used to specify Content Key when creating a Streaming Locator
      * 
-     */
+    */
     public Optional<String> getLabel() {
         return Optional.ofNullable(this.label);
     }
     /**
      * Policy used by Default Key
      * 
-     */
+    */
     public Optional<String> getPolicyName() {
         return Optional.ofNullable(this.policyName);
     }

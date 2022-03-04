@@ -91,7 +91,7 @@ public final class BudgetBudgetFilter {
      * If the field is omitted, the report will include usage from the parent
      * account and all subaccounts, if they exist.
      * 
-     */
+    */
     public List<String> getCreditTypes() {
         return this.creditTypes == null ? List.of() : this.creditTypes;
     }
@@ -101,7 +101,7 @@ public final class BudgetBudgetFilter {
      * Default value is `INCLUDE_ALL_CREDITS`.
      * Possible values are `INCLUDE_ALL_CREDITS`, `EXCLUDE_ALL_CREDITS`, and `INCLUDE_SPECIFIED_CREDITS`.
      * 
-     */
+    */
     public Optional<String> getCreditTypesTreatment() {
         return Optional.ofNullable(this.creditTypesTreatment);
     }
@@ -109,7 +109,7 @@ public final class BudgetBudgetFilter {
      * A single label and value pair specifying that usage from only
      * this set of labeled resources should be included in the budget.
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels == null ? Map.of() : this.labels;
     }
@@ -120,7 +120,7 @@ public final class BudgetBudgetFilter {
      * all usage for the billing account, regardless of which project
      * the usage occurred on.
      * 
-     */
+    */
     public List<String> getProjects() {
         return this.projects == null ? List.of() : this.projects;
     }
@@ -132,7 +132,7 @@ public final class BudgetBudgetFilter {
      * through the Catalog API:
      * https://cloud.google.com/billing/v1/how-tos/catalog-api.
      * 
-     */
+    */
     public List<String> getServices() {
         return this.services == null ? List.of() : this.services;
     }
@@ -144,7 +144,7 @@ public final class BudgetBudgetFilter {
      * If the field is omitted, the report will include usage from the parent
      * account and all subaccounts, if they exist.
      * 
-     */
+    */
     public List<String> getSubaccounts() {
         return this.subaccounts == null ? List.of() : this.subaccounts;
     }

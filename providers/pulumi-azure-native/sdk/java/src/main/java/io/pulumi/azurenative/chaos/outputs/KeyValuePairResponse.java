@@ -31,14 +31,14 @@ public final class KeyValuePairResponse {
     /**
      * The name of the setting for the action.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * The value of the setting for the action.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }

@@ -69,49 +69,49 @@ public final class VirtualNodeSpecListenerHealthCheck {
     /**
      * The number of consecutive successful health checks that must occur before declaring listener healthy.
      * 
-     */
+    */
     public Integer getHealthyThreshold() {
         return this.healthyThreshold;
     }
     /**
      * The time period in milliseconds between each health check execution.
      * 
-     */
+    */
     public Integer getIntervalMillis() {
         return this.intervalMillis;
     }
     /**
      * The destination path for the health check request. This is only required if the specified protocol is `http` or `http2`.
      * 
-     */
+    */
     public Optional<String> getPath() {
         return Optional.ofNullable(this.path);
     }
     /**
      * The destination port for the health check request. This port must match the port defined in the `port_mapping` for the listener.
      * 
-     */
+    */
     public Optional<Integer> getPort() {
         return Optional.ofNullable(this.port);
     }
     /**
      * The protocol for the health check request. Valid values are `http`, `http2`, `tcp` and `grpc`.
      * 
-     */
+    */
     public String getProtocol() {
         return this.protocol;
     }
     /**
      * The amount of time to wait when receiving a response from the health check, in milliseconds.
      * 
-     */
+    */
     public Integer getTimeoutMillis() {
         return this.timeoutMillis;
     }
     /**
      * The number of consecutive failed health checks that must occur before declaring a virtual node unhealthy.
      * 
-     */
+    */
     public Integer getUnhealthyThreshold() {
         return this.unhealthyThreshold;
     }

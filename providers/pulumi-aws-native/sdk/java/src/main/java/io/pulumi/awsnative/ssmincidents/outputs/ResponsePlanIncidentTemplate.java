@@ -57,35 +57,35 @@ public final class ResponsePlanIncidentTemplate {
     /**
      * The deduplication string.
      * 
-     */
+    */
     public Optional<String> getDedupeString() {
         return Optional.ofNullable(this.dedupeString);
     }
     /**
      * The impact value.
      * 
-     */
+    */
     public Integer getImpact() {
         return this.impact;
     }
     /**
      * The list of notification targets.
      * 
-     */
+    */
     public List<ResponsePlanNotificationTargetItem> getNotificationTargets() {
         return this.notificationTargets == null ? List.of() : this.notificationTargets;
     }
     /**
      * The summary string.
      * 
-     */
+    */
     public Optional<String> getSummary() {
         return Optional.ofNullable(this.summary);
     }
     /**
      * The title string.
      * 
-     */
+    */
     public String getTitle() {
         return this.title;
     }

@@ -37,7 +37,7 @@ public final class TriggerBuildStepVolume {
      * Volume names must be unique per build step and must be valid names for Docker volumes.
      * Each named volume must be used by at least two build steps.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -46,7 +46,7 @@ public final class TriggerBuildStepVolume {
      * Paths must be absolute and cannot conflict with other volume paths on the same
      * build step or with certain reserved volume paths.
      * 
-     */
+    */
     public String getPath() {
         return this.path;
     }

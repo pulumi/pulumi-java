@@ -95,70 +95,70 @@ public final class AKSVariantResponseResponse {
      * The compute environment type for the service.
      * Expected value is 'Custom'.
      * 
-     */
+    */
     public String getComputeType() {
         return this.computeType;
     }
     /**
      * The deployment type for the service.
      * 
-     */
+    */
     public Optional<String> getDeploymentType() {
         return Optional.ofNullable(this.deploymentType);
     }
     /**
      * The service description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The error details.
      * 
-     */
+    */
     public ServiceResponseBaseResponseError getError() {
         return this.error;
     }
     /**
      * Is this the default variant.
      * 
-     */
+    */
     public Optional<Boolean> getIsDefault() {
         return Optional.ofNullable(this.isDefault);
     }
     /**
      * The service tag dictionary. Tags are mutable.
      * 
-     */
+    */
     public Map<String,String> getKvTags() {
         return this.kvTags == null ? Map.of() : this.kvTags;
     }
     /**
      * The service property dictionary. Properties are immutable.
      * 
-     */
+    */
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
      * The current state of the service.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * The amount of traffic variant receives.
      * 
-     */
+    */
     public Optional<Double> getTrafficPercentile() {
         return Optional.ofNullable(this.trafficPercentile);
     }
     /**
      * The type of the variant.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

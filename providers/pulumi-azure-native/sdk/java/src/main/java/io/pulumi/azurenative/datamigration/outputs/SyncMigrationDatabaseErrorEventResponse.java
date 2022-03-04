@@ -38,21 +38,21 @@ public final class SyncMigrationDatabaseErrorEventResponse {
     /**
      * Event text.
      * 
-     */
+    */
     public String getEventText() {
         return this.eventText;
     }
     /**
      * Event type.
      * 
-     */
+    */
     public String getEventTypeString() {
         return this.eventTypeString;
     }
     /**
      * String value of timestamp.
      * 
-     */
+    */
     public String getTimestampString() {
         return this.timestampString;
     }

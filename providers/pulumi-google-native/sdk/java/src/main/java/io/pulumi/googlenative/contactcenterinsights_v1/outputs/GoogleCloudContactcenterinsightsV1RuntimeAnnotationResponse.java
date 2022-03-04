@@ -94,70 +94,70 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse {
     /**
      * The unique identifier of the annotation. Format: projects/{project}/locations/{location}/conversationDatasets/{dataset}/conversationDataItems/{data_item}/conversationAnnotations/{annotation}
      * 
-     */
+    */
     public String getAnnotationId() {
         return this.annotationId;
     }
     /**
      * The feedback that the customer has about the answer in `data`.
      * 
-     */
+    */
     public GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse getAnswerFeedback() {
         return this.answerFeedback;
     }
     /**
      * Agent Assist Article Suggestion data.
      * 
-     */
+    */
     public GoogleCloudContactcenterinsightsV1ArticleSuggestionDataResponse getArticleSuggestion() {
         return this.articleSuggestion;
     }
     /**
      * The time at which this annotation was created.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * Dialogflow interaction data.
      * 
-     */
+    */
     public GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse getDialogflowInteraction() {
         return this.dialogflowInteraction;
     }
     /**
      * The boundary in the conversation where the annotation ends, inclusive.
      * 
-     */
+    */
     public GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse getEndBoundary() {
         return this.endBoundary;
     }
     /**
      * Agent Assist FAQ answer data.
      * 
-     */
+    */
     public GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse getFaqAnswer() {
         return this.faqAnswer;
     }
     /**
      * Agent Assist Smart Compose suggestion data.
      * 
-     */
+    */
     public GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataResponse getSmartComposeSuggestion() {
         return this.smartComposeSuggestion;
     }
     /**
      * Agent Assist Smart Reply data.
      * 
-     */
+    */
     public GoogleCloudContactcenterinsightsV1SmartReplyDataResponse getSmartReply() {
         return this.smartReply;
     }
     /**
      * The boundary in the conversation where the annotation starts, inclusive.
      * 
-     */
+    */
     public GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse getStartBoundary() {
         return this.startBoundary;
     }

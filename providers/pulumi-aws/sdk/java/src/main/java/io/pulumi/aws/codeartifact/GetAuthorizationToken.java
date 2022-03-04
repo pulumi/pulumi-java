@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAuthorizationToken {
-/**
- * The CodeArtifact Authorization Token data source generates a temporary authentication token for accessing repositories in a CodeArtifact domain.
+    private GetAuthorizationToken() {}
+    public interface BuilderApplicator {
+        public void apply(GetAuthorizationTokenArgs.Builder a);
+    }
+    private static GetAuthorizationTokenArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAuthorizationTokenArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The CodeArtifact Authorization Token data source generates a temporary authentication token for accessing repositories in a CodeArtifact domain.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getAuthorizationToken.
+     *
+     * A collection of arguments for invoking getAuthorizationToken.
  * 
- *
- * A collection of values returned by getAuthorizationToken.
+     *
+     * A collection of values returned by getAuthorizationToken.
  * 
- */
+     */
+    public static CompletableFuture<GetAuthorizationTokenResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The CodeArtifact Authorization Token data source generates a temporary authentication token for accessing repositories in a CodeArtifact domain.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getAuthorizationToken.
+     * 
+     *
+         * A collection of values returned by getAuthorizationToken.
+     * 
+     */
     public static CompletableFuture<GetAuthorizationTokenResult> invokeAsync(GetAuthorizationTokenArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:codeartifact/getAuthorizationToken:getAuthorizationToken", TypeShape.of(GetAuthorizationTokenResult.class), args == null ? GetAuthorizationTokenArgs.Empty : args, Utilities.withVersion(options));
     }

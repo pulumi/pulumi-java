@@ -25,7 +25,7 @@ public final class IpAddressResponse {
     /**
      * Specifies the IP address of the network interface.
      * 
-     */
+    */
     public Optional<String> getIpAddress() {
         return Optional.ofNullable(this.ipAddress);
     }

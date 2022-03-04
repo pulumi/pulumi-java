@@ -85,63 +85,63 @@ public final class TestExecutionResponse {
     /**
      * How the host machine(s) are configured.
      * 
-     */
+    */
     public EnvironmentResponse getEnvironment() {
         return this.environment;
     }
     /**
      * Id of the containing TestMatrix.
      * 
-     */
+    */
     public String getMatrixId() {
         return this.matrixId;
     }
     /**
      * The cloud project that owns the test execution.
      * 
-     */
+    */
     public String getProject() {
         return this.project;
     }
     /**
      * Details about the shard.
      * 
-     */
+    */
     public ShardResponse getShard() {
         return this.shard;
     }
     /**
      * Indicates the current progress of the test execution (e.g., FINISHED).
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * Additional details about the running test.
      * 
-     */
+    */
     public TestDetailsResponse getTestDetails() {
         return this.testDetails;
     }
     /**
      * How to run the test.
      * 
-     */
+    */
     public TestSpecificationResponse getTestSpecification() {
         return this.testSpecification;
     }
     /**
      * The time this test execution was initially created.
      * 
-     */
+    */
     public String getTimestamp() {
         return this.timestamp;
     }
     /**
      * Where the results for this execution are written.
      * 
-     */
+    */
     public ToolResultsStepResponse getToolResultsStep() {
         return this.toolResultsStep;
     }

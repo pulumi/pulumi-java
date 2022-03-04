@@ -85,21 +85,21 @@ public final class ServersProjectSummaryResponse {
     /**
      * Gets or sets the count of entities assessed.
      * 
-     */
+    */
     public Optional<Integer> getAssessedCount() {
         return Optional.ofNullable(this.assessedCount);
     }
     /**
      * Gets or sets the count of entities discovered.
      * 
-     */
+    */
     public Optional<Integer> getDiscoveredCount() {
         return Optional.ofNullable(this.discoveredCount);
     }
     /**
      * Gets or sets the extended summary.
      * 
-     */
+    */
     public Map<String,String> getExtendedSummary() {
         return this.extendedSummary == null ? Map.of() : this.extendedSummary;
     }
@@ -107,42 +107,42 @@ public final class ServersProjectSummaryResponse {
      * Gets the Instance type.
      * Expected value is 'Servers'.
      * 
-     */
+    */
     public String getInstanceType() {
         return this.instanceType;
     }
     /**
      * Gets or sets the time when summary was last refreshed.
      * 
-     */
+    */
     public Optional<String> getLastSummaryRefreshedTime() {
         return Optional.ofNullable(this.lastSummaryRefreshedTime);
     }
     /**
      * Gets or sets the count of entities migrated.
      * 
-     */
+    */
     public Optional<Integer> getMigratedCount() {
         return Optional.ofNullable(this.migratedCount);
     }
     /**
      * Gets or sets the state of refresh summary.
      * 
-     */
+    */
     public Optional<String> getRefreshSummaryState() {
         return Optional.ofNullable(this.refreshSummaryState);
     }
     /**
      * Gets or sets the count of entities being replicated.
      * 
-     */
+    */
     public Optional<Integer> getReplicatingCount() {
         return Optional.ofNullable(this.replicatingCount);
     }
     /**
      * Gets or sets the count of entities test migrated.
      * 
-     */
+    */
     public Optional<Integer> getTestMigratedCount() {
         return Optional.ofNullable(this.testMigratedCount);
     }

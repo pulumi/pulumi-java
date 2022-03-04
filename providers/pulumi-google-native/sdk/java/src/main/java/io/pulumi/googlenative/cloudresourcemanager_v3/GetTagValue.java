@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTagValue {
-/**
- * Retrieves TagValue. If the TagValue or namespaced name does not exist, or if the user does not have permission to view it, this method will return `PERMISSION_DENIED`.
+    private GetTagValue() {}
+    public interface BuilderApplicator {
+        public void apply(GetTagValueArgs.Builder a);
+    }
+    private static GetTagValueArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTagValueArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Retrieves TagValue. If the TagValue or namespaced name does not exist, or if the user does not have permission to view it, this method will return `PERMISSION_DENIED`.
  * 
- */
+     */
+    public static CompletableFuture<GetTagValueResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Retrieves TagValue. If the TagValue or namespaced name does not exist, or if the user does not have permission to view it, this method will return `PERMISSION_DENIED`.
+     * 
+     */
     public static CompletableFuture<GetTagValueResult> invokeAsync(GetTagValueArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudresourcemanager/v3:getTagValue", TypeShape.of(GetTagValueResult.class), args == null ? GetTagValueArgs.Empty : args, Utilities.withVersion(options));
     }

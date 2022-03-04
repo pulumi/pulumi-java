@@ -33,14 +33,14 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetri
     /**
      * The metric type.
      * 
-     */
+    */
     public String getPredefinedMetricType() {
         return this.predefinedMetricType;
     }
     /**
      * Reserved for future use. Must be less than or equal to 1023 characters in length.
      * 
-     */
+    */
     public Optional<String> getResourceLabel() {
         return Optional.ofNullable(this.resourceLabel);
     }

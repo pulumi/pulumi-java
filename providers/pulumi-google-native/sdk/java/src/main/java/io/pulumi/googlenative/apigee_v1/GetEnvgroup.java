@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEnvgroup {
-/**
- * Gets an environment group.
+    private GetEnvgroup() {}
+    public interface BuilderApplicator {
+        public void apply(GetEnvgroupArgs.Builder a);
+    }
+    private static GetEnvgroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetEnvgroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets an environment group.
  * 
- */
+     */
+    public static CompletableFuture<GetEnvgroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets an environment group.
+     * 
+     */
     public static CompletableFuture<GetEnvgroupResult> invokeAsync(GetEnvgroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:apigee/v1:getEnvgroup", TypeShape.of(GetEnvgroupResult.class), args == null ? GetEnvgroupArgs.Empty : args, Utilities.withVersion(options));
     }

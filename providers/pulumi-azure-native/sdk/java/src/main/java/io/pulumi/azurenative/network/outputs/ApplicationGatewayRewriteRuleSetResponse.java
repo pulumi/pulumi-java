@@ -56,35 +56,35 @@ public final class ApplicationGatewayRewriteRuleSetResponse {
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Name of the rewrite rule set that is unique within an Application Gateway.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The provisioning state of the rewrite rule set resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Rewrite rules in the rewrite rule set.
      * 
-     */
+    */
     public List<ApplicationGatewayRewriteRuleResponse> getRewriteRules() {
         return this.rewriteRules == null ? List.of() : this.rewriteRules;
     }

@@ -33,14 +33,14 @@ public final class ConnectionMonitorEndpointScopeResponse {
     /**
      * List of items which needs to be excluded from the endpoint scope.
      * 
-     */
+    */
     public List<ConnectionMonitorEndpointScopeItemResponse> getExclude() {
         return this.exclude == null ? List.of() : this.exclude;
     }
     /**
      * List of items which needs to be included to the endpoint scope.
      * 
-     */
+    */
     public List<ConnectionMonitorEndpointScopeItemResponse> getInclude() {
         return this.include == null ? List.of() : this.include;
     }

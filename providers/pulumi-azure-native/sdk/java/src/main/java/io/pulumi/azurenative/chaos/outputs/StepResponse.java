@@ -33,14 +33,14 @@ public final class StepResponse {
     /**
      * List of branches.
      * 
-     */
+    */
     public List<BranchResponse> getBranches() {
         return this.branches;
     }
     /**
      * String of the step name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }

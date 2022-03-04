@@ -55,35 +55,35 @@ public final class AutoScaleSettingsResponse {
     /**
      * Maximum number of instances for this deployment.
      * 
-     */
+    */
     public Optional<Integer> getMaxInstances() {
         return Optional.ofNullable(this.maxInstances);
     }
     /**
      * Minimum number of instances for this deployment.
      * 
-     */
+    */
     public Optional<Integer> getMinInstances() {
         return Optional.ofNullable(this.minInstances);
     }
     /**
      * The polling interval in ISO 8691 format. Only supports duration with precision as low as Seconds.
      * 
-     */
+    */
     public Optional<String> getPollingInterval() {
         return Optional.ofNullable(this.pollingInterval);
     }
     /**
      * Expected value is 'Auto'.
      * 
-     */
+    */
     public String getScaleType() {
         return this.scaleType;
     }
     /**
      * Target CPU usage for the autoscaler.
      * 
-     */
+    */
     public Optional<Integer> getTargetUtilizationPercentage() {
         return Optional.ofNullable(this.targetUtilizationPercentage);
     }

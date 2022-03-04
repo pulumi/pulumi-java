@@ -33,14 +33,14 @@ public final class PutAliasResponsePropertiesResponse {
     /**
      * The provisioning state of the resource.
      * 
-     */
+    */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * Newly created subscription Id.
      * 
-     */
+    */
     public String getSubscriptionId() {
         return this.subscriptionId;
     }

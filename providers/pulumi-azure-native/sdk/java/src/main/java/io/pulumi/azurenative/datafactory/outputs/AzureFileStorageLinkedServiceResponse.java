@@ -133,91 +133,91 @@ public final class AzureFileStorageLinkedServiceResponse {
     /**
      * The Azure key vault secret reference of accountKey in connection string.
      * 
-     */
+    */
     public Optional<AzureKeyVaultSecretReferenceResponse> getAccountKey() {
         return Optional.ofNullable(this.accountKey);
     }
     /**
      * List of tags that can be used for describing the linked service.
      * 
-     */
+    */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * The integration runtime reference.
      * 
-     */
+    */
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
      * The connection string. It is mutually exclusive with sasUri property. Type: string, SecureString or AzureKeyVaultSecretReference.
      * 
-     */
+    */
     public Optional<Object> getConnectionString() {
         return Optional.ofNullable(this.connectionString);
     }
     /**
      * Linked service description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getEncryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
      * The azure file share name. It is required when auth with accountKey/sasToken. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getFileShare() {
         return Optional.ofNullable(this.fileShare);
     }
     /**
      * Host name of the server. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getHost() {
         return Optional.ofNullable(this.host);
     }
     /**
      * Parameters for linked service.
      * 
-     */
+    */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Password to logon the server.
      * 
-     */
+    */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getPassword() {
         return Optional.ofNullable(this.password);
     }
     /**
      * The Azure key vault secret reference of sasToken in sas uri.
      * 
-     */
+    */
     public Optional<AzureKeyVaultSecretReferenceResponse> getSasToken() {
         return Optional.ofNullable(this.sasToken);
     }
     /**
      * SAS URI of the Azure File resource. It is mutually exclusive with connectionString property. Type: string, SecureString or AzureKeyVaultSecretReference.
      * 
-     */
+    */
     public Optional<Object> getSasUri() {
         return Optional.ofNullable(this.sasUri);
     }
     /**
      * The azure file share snapshot version. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getSnapshot() {
         return Optional.ofNullable(this.snapshot);
     }
@@ -225,14 +225,14 @@ public final class AzureFileStorageLinkedServiceResponse {
      * Type of linked service.
      * Expected value is 'AzureFileStorage'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * User ID to logon the server. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getUserId() {
         return Optional.ofNullable(this.userId);
     }

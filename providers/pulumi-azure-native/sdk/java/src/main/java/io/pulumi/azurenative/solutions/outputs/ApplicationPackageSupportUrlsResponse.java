@@ -33,14 +33,14 @@ public final class ApplicationPackageSupportUrlsResponse {
     /**
      * The government cloud support URL.
      * 
-     */
+    */
     public Optional<String> getGovernmentCloud() {
         return Optional.ofNullable(this.governmentCloud);
     }
     /**
      * The public azure support URL.
      * 
-     */
+    */
     public Optional<String> getPublicAzure() {
         return Optional.ofNullable(this.publicAzure);
     }

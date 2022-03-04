@@ -35,14 +35,14 @@ public final class SyncGroupSchemaTableResponse {
     /**
      * List of columns in sync group schema.
      * 
-     */
+    */
     public List<SyncGroupSchemaTableColumnResponse> getColumns() {
         return this.columns == null ? List.of() : this.columns;
     }
     /**
      * Quoted name of sync group schema table.
      * 
-     */
+    */
     public Optional<String> getQuotedName() {
         return Optional.ofNullable(this.quotedName);
     }

@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCertificateTemplate {
-/**
- * Returns a CertificateTemplate.
+    private GetCertificateTemplate() {}
+    public interface BuilderApplicator {
+        public void apply(GetCertificateTemplateArgs.Builder a);
+    }
+    private static GetCertificateTemplateArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetCertificateTemplateArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Returns a CertificateTemplate.
  * 
- */
+     */
+    public static CompletableFuture<GetCertificateTemplateResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Returns a CertificateTemplate.
+     * 
+     */
     public static CompletableFuture<GetCertificateTemplateResult> invokeAsync(GetCertificateTemplateArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:privateca/v1:getCertificateTemplate", TypeShape.of(GetCertificateTemplateResult.class), args == null ? GetCertificateTemplateArgs.Empty : args, Utilities.withVersion(options));
     }

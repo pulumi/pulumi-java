@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetJob {
-/**
- * Contains the job information.
+    private GetJob() {}
+    public interface BuilderApplicator {
+        public void apply(GetJobArgs.Builder a);
+    }
+    private static GetJobArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetJobArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Contains the job information.
  * API Version: 2020-08-01.
  * 
- *
- * Contains the job information.
+     *
+     * Contains the job information.
  * 
- */
+     */
+    public static CompletableFuture<GetJobResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Contains the job information.
+     * API Version: 2020-08-01.
+     * 
+     *
+         * Contains the job information.
+     * 
+     */
     public static CompletableFuture<GetJobResult> invokeAsync(GetJobArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:importexport:getJob", TypeShape.of(GetJobResult.class), args == null ? GetJobArgs.Empty : args, Utilities.withVersion(options));
     }

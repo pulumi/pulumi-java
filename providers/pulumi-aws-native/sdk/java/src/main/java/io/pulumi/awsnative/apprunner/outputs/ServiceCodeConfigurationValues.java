@@ -53,21 +53,21 @@ public final class ServiceCodeConfigurationValues {
     /**
      * Build Command
      * 
-     */
+    */
     public Optional<String> getBuildCommand() {
         return Optional.ofNullable(this.buildCommand);
     }
     /**
      * Port
      * 
-     */
+    */
     public Optional<String> getPort() {
         return Optional.ofNullable(this.port);
     }
     /**
      * Runtime
      * 
-     */
+    */
     public ServiceCodeConfigurationValuesRuntime getRuntime() {
         return this.runtime;
     }
@@ -77,7 +77,7 @@ public final class ServiceCodeConfigurationValues {
     /**
      * Start Command
      * 
-     */
+    */
     public Optional<String> getStartCommand() {
         return Optional.ofNullable(this.startCommand);
     }

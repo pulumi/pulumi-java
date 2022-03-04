@@ -68,49 +68,49 @@ public final class GetDataCollectionRuleAssociationResult {
     /**
      * The resource ID of the data collection rule that is to be associated.
      * 
-     */
+    */
     public Optional<String> getDataCollectionRuleId() {
         return Optional.ofNullable(this.dataCollectionRuleId);
     }
     /**
      * Description of the association.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Resource entity tag (ETag).
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Fully qualified ID of the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The resource provisioning state.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

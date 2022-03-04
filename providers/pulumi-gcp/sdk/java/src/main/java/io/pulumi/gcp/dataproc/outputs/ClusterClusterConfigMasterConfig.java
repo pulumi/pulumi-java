@@ -75,14 +75,14 @@ public final class ClusterClusterConfigMasterConfig {
     /**
      * The Compute Engine accelerator configuration for these instances. Can be specified multiple times.
      * 
-     */
+    */
     public List<ClusterClusterConfigMasterConfigAccelerator> getAccelerators() {
         return this.accelerators == null ? List.of() : this.accelerators;
     }
     /**
      * Disk Config
      * 
-     */
+    */
     public Optional<ClusterClusterConfigMasterConfigDiskConfig> getDiskConfig() {
         return Optional.ofNullable(this.diskConfig);
     }
@@ -90,7 +90,7 @@ public final class ClusterClusterConfigMasterConfig {
      * The URI for the image to use for this worker.  See [the guide](https://cloud.google.com/dataproc/docs/guides/dataproc-images)
      * for more information.
      * 
-     */
+    */
     public Optional<String> getImageUri() {
         return Optional.ofNullable(this.imageUri);
     }
@@ -102,7 +102,7 @@ public final class ClusterClusterConfigMasterConfig {
      * to create for the worker nodes. If not specified, GCP will default to a predetermined
      * computed value (currently `n1-standard-4`).
      * 
-     */
+    */
     public Optional<String> getMachineType() {
         return Optional.ofNullable(this.machineType);
     }
@@ -112,7 +112,7 @@ public final class ClusterClusterConfigMasterConfig {
      * for each zone. See [the guide](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform)
      * for details about which CPU families are available (and defaulted) for each zone.
      * 
-     */
+    */
     public Optional<String> getMinCpuPlatform() {
         return Optional.ofNullable(this.minCpuPlatform);
     }
@@ -120,7 +120,7 @@ public final class ClusterClusterConfigMasterConfig {
      * Specifies the number of preemptible nodes to create.
      * Defaults to 0.
      * 
-     */
+    */
     public Optional<Integer> getNumInstances() {
         return Optional.ofNullable(this.numInstances);
     }

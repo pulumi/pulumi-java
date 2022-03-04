@@ -34,14 +34,14 @@ public final class AccountEncryptionResponse {
     /**
      * The properties of the key used to encrypt the account.
      * 
-     */
+    */
     public Optional<KeyVaultPropertiesResponse> getKeyVaultProperties() {
         return Optional.ofNullable(this.keyVaultProperties);
     }
     /**
      * The type of key used to encrypt the Account Key.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

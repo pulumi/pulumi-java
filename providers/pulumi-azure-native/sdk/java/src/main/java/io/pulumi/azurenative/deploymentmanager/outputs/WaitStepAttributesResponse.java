@@ -23,7 +23,7 @@ public final class WaitStepAttributesResponse {
     /**
      * The duration in ISO 8601 format of how long the wait should be.
      * 
-     */
+    */
     public String getDuration() {
         return this.duration;
     }

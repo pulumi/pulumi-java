@@ -23,7 +23,7 @@ public final class ClusterClusterConfigMetastoreConfig {
     /**
      * Resource name of an existing Dataproc Metastore service.
      * 
-     */
+    */
     public String getDataprocMetastoreService() {
         return this.dataprocMetastoreService;
     }

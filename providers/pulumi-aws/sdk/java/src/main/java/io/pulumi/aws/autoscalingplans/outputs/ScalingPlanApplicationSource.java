@@ -35,14 +35,14 @@ public final class ScalingPlanApplicationSource {
     /**
      * The Amazon Resource Name (ARN) of a AWS CloudFormation stack.
      * 
-     */
+    */
     public Optional<String> getCloudformationStackArn() {
         return Optional.ofNullable(this.cloudformationStackArn);
     }
     /**
      * A set of tags.
      * 
-     */
+    */
     public List<ScalingPlanApplicationSourceTagFilter> getTagFilters() {
         return this.tagFilters == null ? List.of() : this.tagFilters;
     }

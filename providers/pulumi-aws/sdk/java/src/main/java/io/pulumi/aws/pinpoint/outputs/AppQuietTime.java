@@ -33,14 +33,14 @@ public final class AppQuietTime {
     /**
      * The default end time for quiet time in ISO 8601 format. Required if `start` is set
      * 
-     */
+    */
     public Optional<String> getEnd() {
         return Optional.ofNullable(this.end);
     }
     /**
      * The default start time for quiet time in ISO 8601 format. Required if `end` is set
      * 
-     */
+    */
     public Optional<String> getStart() {
         return Optional.ofNullable(this.start);
     }

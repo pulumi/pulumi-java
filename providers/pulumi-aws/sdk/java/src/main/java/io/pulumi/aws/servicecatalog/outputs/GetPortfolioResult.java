@@ -71,21 +71,21 @@ public final class GetPortfolioResult {
     /**
      * Portfolio ARN.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
     /**
      * Time the portfolio was created.
      * 
-     */
+    */
     public String getCreatedTime() {
         return this.createdTime;
     }
     /**
      * Description of the portfolio
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
@@ -95,21 +95,21 @@ public final class GetPortfolioResult {
     /**
      * Portfolio name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Name of the person or organization who owns the portfolio.
      * 
-     */
+    */
     public String getProviderName() {
         return this.providerName;
     }
     /**
      * Tags applied to the portfolio.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags;
     }

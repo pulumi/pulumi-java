@@ -46,7 +46,7 @@ public final class DatasetParameter {
     /**
      * Add the value of this parameter as a column in a dataset.
      * 
-     */
+    */
     public Optional<Boolean> getCreateColumn() {
         return Optional.ofNullable(this.createColumn);
     }
@@ -62,7 +62,7 @@ public final class DatasetParameter {
     /**
      * Parameter type
      * 
-     */
+    */
     public DatasetParameterType getType() {
         return this.type;
     }

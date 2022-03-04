@@ -49,28 +49,28 @@ public final class RestorePolicyPropertiesResponse {
     /**
      * how long this blob can be restored. It should be great than zero and less than DeleteRetentionPolicy.days.
      * 
-     */
+    */
     public Optional<Integer> getDays() {
         return Optional.ofNullable(this.days);
     }
     /**
      * Blob restore is enabled if set to true.
      * 
-     */
+    */
     public Boolean getEnabled() {
         return this.enabled;
     }
     /**
      * Deprecated in favor of minRestoreTime property.
      * 
-     */
+    */
     public String getLastEnabledTime() {
         return this.lastEnabledTime;
     }
     /**
      * Returns the minimum date and time that the restore can be started.
      * 
-     */
+    */
     public String getMinRestoreTime() {
         return this.minRestoreTime;
     }

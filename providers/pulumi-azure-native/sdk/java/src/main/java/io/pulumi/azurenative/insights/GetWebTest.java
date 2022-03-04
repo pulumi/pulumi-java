@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWebTest {
-/**
- * An Application Insights web test definition.
+    private GetWebTest() {}
+    public interface BuilderApplicator {
+        public void apply(GetWebTestArgs.Builder a);
+    }
+    private static GetWebTestArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetWebTestArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An Application Insights web test definition.
  * API Version: 2015-05-01.
  * 
- *
- * An Application Insights web test definition.
+     *
+     * An Application Insights web test definition.
  * 
- */
+     */
+    public static CompletableFuture<GetWebTestResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An Application Insights web test definition.
+     * API Version: 2015-05-01.
+     * 
+     *
+         * An Application Insights web test definition.
+     * 
+     */
     public static CompletableFuture<GetWebTestResult> invokeAsync(GetWebTestArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getWebTest", TypeShape.of(GetWebTestResult.class), args == null ? GetWebTestArgs.Empty : args, Utilities.withVersion(options));
     }

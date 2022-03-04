@@ -32,7 +32,7 @@ public final class NodePoolAutoscaling {
     /**
      * Maximum number of nodes in the NodePool. Must be >= min_node_count.
      * 
-     */
+    */
     public Integer getMaxNodeCount() {
         return this.maxNodeCount;
     }
@@ -40,7 +40,7 @@ public final class NodePoolAutoscaling {
      * Minimum number of nodes in the NodePool. Must be >=0 and
      * <= `max_node_count`.
      * 
-     */
+    */
     public Integer getMinNodeCount() {
         return this.minNodeCount;
     }

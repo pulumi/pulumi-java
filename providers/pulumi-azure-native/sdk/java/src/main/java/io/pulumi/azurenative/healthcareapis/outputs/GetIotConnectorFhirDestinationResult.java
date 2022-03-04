@@ -84,63 +84,63 @@ public final class GetIotConnectorFhirDestinationResult {
     /**
      * An etag associated with the resource, used for optimistic concurrency when editing it.
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * FHIR Mappings
      * 
-     */
+    */
     public IotMappingPropertiesResponse getFhirMapping() {
         return this.fhirMapping;
     }
     /**
      * Fully qualified resource id of the FHIR service to connect to.
      * 
-     */
+    */
     public String getFhirServiceResourceId() {
         return this.fhirServiceResourceId;
     }
     /**
      * The resource identifier.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The resource location.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Determines how resource identity is resolved on the destination.
      * 
-     */
+    */
     public String getResourceIdentityResolutionType() {
         return this.resourceIdentityResolutionType;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListWorkflowRunActionRepetitionExpressionTraces {
-/**
- * The expression traces.
+    private ListWorkflowRunActionRepetitionExpressionTraces() {}
+    public interface BuilderApplicator {
+        public void apply(ListWorkflowRunActionRepetitionExpressionTracesArgs.Builder a);
+    }
+    private static ListWorkflowRunActionRepetitionExpressionTracesArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListWorkflowRunActionRepetitionExpressionTracesArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The expression traces.
  * API Version: 2019-05-01.
  * 
- *
- * The expression traces.
+     *
+     * The expression traces.
  * 
- */
+     */
+    public static CompletableFuture<ListWorkflowRunActionRepetitionExpressionTracesResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The expression traces.
+     * API Version: 2019-05-01.
+     * 
+     *
+         * The expression traces.
+     * 
+     */
     public static CompletableFuture<ListWorkflowRunActionRepetitionExpressionTracesResult> invokeAsync(ListWorkflowRunActionRepetitionExpressionTracesArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logic:listWorkflowRunActionRepetitionExpressionTraces", TypeShape.of(ListWorkflowRunActionRepetitionExpressionTracesResult.class), args == null ? ListWorkflowRunActionRepetitionExpressionTracesArgs.Empty : args, Utilities.withVersion(options));
     }

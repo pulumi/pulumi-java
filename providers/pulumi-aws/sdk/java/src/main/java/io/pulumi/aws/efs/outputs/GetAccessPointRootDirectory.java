@@ -33,14 +33,14 @@ public final class GetAccessPointRootDirectory {
     /**
      * Single element list containing information on the creation permissions of the directory
      * 
-     */
+    */
     public List<GetAccessPointRootDirectoryCreationInfo> getCreationInfos() {
         return this.creationInfos;
     }
     /**
      * Path exposed as the root directory
      * 
-     */
+    */
     public String getPath() {
         return this.path;
     }

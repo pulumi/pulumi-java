@@ -41,21 +41,21 @@ public final class ScaleSettingsResponse {
     /**
      * Max number of nodes to use
      * 
-     */
+    */
     public Integer getMaxNodeCount() {
         return this.maxNodeCount;
     }
     /**
      * Min number of nodes to use
      * 
-     */
+    */
     public Optional<Integer> getMinNodeCount() {
         return Optional.ofNullable(this.minNodeCount);
     }
     /**
      * Node Idle Time before scaling down amlCompute. This string needs to be in the RFC Format.
      * 
-     */
+    */
     public Optional<String> getNodeIdleTimeBeforeScaleDown() {
         return Optional.ofNullable(this.nodeIdleTimeBeforeScaleDown);
     }

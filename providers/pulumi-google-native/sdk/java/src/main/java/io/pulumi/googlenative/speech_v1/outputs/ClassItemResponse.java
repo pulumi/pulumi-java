@@ -23,7 +23,7 @@ public final class ClassItemResponse {
     /**
      * The class item's value.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }

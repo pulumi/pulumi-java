@@ -38,21 +38,21 @@ public final class StateHistoryResponse {
     /**
      * The state of the batch at this point in history.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * Details about the state at this point in history.
      * 
-     */
+    */
     public String getStateMessage() {
         return this.stateMessage;
     }
     /**
      * The time when the batch entered the historical state.
      * 
-     */
+    */
     public String getStateStartTime() {
         return this.stateStartTime;
     }

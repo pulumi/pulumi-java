@@ -24,7 +24,7 @@ public final class AssignmentGroupLabelResponse {
     /**
      * Google Compute Engine instance labels that must be present for an instance to be included in this assignment group.
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels;
     }

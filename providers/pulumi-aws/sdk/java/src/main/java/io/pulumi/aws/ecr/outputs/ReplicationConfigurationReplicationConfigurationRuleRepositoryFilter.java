@@ -31,14 +31,14 @@ public final class ReplicationConfigurationReplicationConfigurationRuleRepositor
     /**
      * The repository filter details.
      * 
-     */
+    */
     public String getFilter() {
         return this.filter;
     }
     /**
      * The repository filter type. The only supported value is `PREFIX_MATCH`, which is a repository name prefix specified with the filter parameter.
      * 
-     */
+    */
     public String getFilterType() {
         return this.filterType;
     }

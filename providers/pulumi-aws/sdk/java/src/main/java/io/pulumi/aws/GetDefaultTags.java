@@ -13,6 +13,18 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDefaultTags {
+    private GetDefaultTags() {}
+    public interface BuilderApplicator {
+        public void apply(GetDefaultTagsArgs.Builder a);
+    }
+    private static GetDefaultTagsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDefaultTagsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    public static CompletableFuture<GetDefaultTagsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
     public static CompletableFuture<GetDefaultTagsResult> invokeAsync(@Nullable GetDefaultTagsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:index/getDefaultTags:getDefaultTags", TypeShape.of(GetDefaultTagsResult.class), args == null ? GetDefaultTagsArgs.Empty : args, Utilities.withVersion(options));
     }

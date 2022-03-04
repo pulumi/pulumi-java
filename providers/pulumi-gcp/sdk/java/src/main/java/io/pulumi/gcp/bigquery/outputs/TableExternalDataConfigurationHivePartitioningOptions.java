@@ -64,7 +64,7 @@ public final class TableExternalDataConfigurationHivePartitioningOptions {
      *   Currently supported formats are: JSON, CSV, ORC, Avro and Parquet.
      * * CUSTOM: when set to `CUSTOM`, you must encode the partition key schema within the `source_uri_prefix` by setting `source_uri_prefix` to `gs://bucket/path_to_table/{key1:TYPE1}/{key2:TYPE2}/{key3:TYPE3}`.
      * 
-     */
+    */
     public Optional<String> getMode() {
         return Optional.ofNullable(this.mode);
     }
@@ -73,7 +73,7 @@ public final class TableExternalDataConfigurationHivePartitioningOptions {
      * require a partition filter that can be used for partition elimination to be
      * specified.
      * 
-     */
+    */
     public Optional<Boolean> getRequirePartitionFilter() {
         return Optional.ofNullable(this.requirePartitionFilter);
     }
@@ -87,7 +87,7 @@ public final class TableExternalDataConfigurationHivePartitioningOptions {
      * can be either of `gs://bucket/path_to_table` or `gs://bucket/path_to_table/`.
      * Note that when `mode` is set to `CUSTOM`, you must encode the partition key schema within the `source_uri_prefix` by setting `source_uri_prefix` to `gs://bucket/path_to_table/{key1:TYPE1}/{key2:TYPE2}/{key3:TYPE3}`.
      * 
-     */
+    */
     public Optional<String> getSourceUriPrefix() {
         return Optional.ofNullable(this.sourceUriPrefix);
     }

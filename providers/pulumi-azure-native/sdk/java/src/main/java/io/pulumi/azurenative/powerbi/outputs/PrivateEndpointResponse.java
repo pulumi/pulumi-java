@@ -25,7 +25,7 @@ public final class PrivateEndpointResponse {
     /**
      * Specifies the id of private endpoint.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }

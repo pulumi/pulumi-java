@@ -31,14 +31,14 @@ public final class GetRepositoryEncryptionConfiguration {
     /**
      * The encryption type to use for the repository, either `AES256` or `KMS`.
      * 
-     */
+    */
     public String getEncryptionType() {
         return this.encryptionType;
     }
     /**
      * If `encryption_type` is `KMS`, the ARN of the KMS key used.
      * 
-     */
+    */
     public String getKmsKey() {
         return this.kmsKey;
     }

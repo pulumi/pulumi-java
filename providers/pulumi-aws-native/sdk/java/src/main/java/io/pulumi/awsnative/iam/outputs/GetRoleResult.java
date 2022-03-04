@@ -87,63 +87,63 @@ public final class GetRoleResult {
     /**
      * The Amazon Resource Name (ARN) for the role.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The trust policy that is associated with this role.
      * 
-     */
+    */
     public Optional<Object> getAssumeRolePolicyDocument() {
         return Optional.ofNullable(this.assumeRolePolicyDocument);
     }
     /**
      * A description of the role that you provide.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * A list of Amazon Resource Names (ARNs) of the IAM managed policies that you want to attach to the role.
      * 
-     */
+    */
     public List<String> getManagedPolicyArns() {
         return this.managedPolicyArns == null ? List.of() : this.managedPolicyArns;
     }
     /**
      * The maximum session duration (in seconds) that you want to set for the specified role. If you do not specify a value for this setting, the default maximum of one hour is applied. This setting can have a value from 1 hour to 12 hours.
      * 
-     */
+    */
     public Optional<Integer> getMaxSessionDuration() {
         return Optional.ofNullable(this.maxSessionDuration);
     }
     /**
      * The ARN of the policy used to set the permissions boundary for the role.
      * 
-     */
+    */
     public Optional<String> getPermissionsBoundary() {
         return Optional.ofNullable(this.permissionsBoundary);
     }
     /**
      * Adds or updates an inline policy document that is embedded in the specified IAM role.
      * 
-     */
+    */
     public List<RolePolicy> getPolicies() {
         return this.policies == null ? List.of() : this.policies;
     }
     /**
      * The stable and unique string identifying the role.
      * 
-     */
+    */
     public Optional<String> getRoleId() {
         return Optional.ofNullable(this.roleId);
     }
     /**
      * A list of tags that are attached to the role.
      * 
-     */
+    */
     public List<RoleTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

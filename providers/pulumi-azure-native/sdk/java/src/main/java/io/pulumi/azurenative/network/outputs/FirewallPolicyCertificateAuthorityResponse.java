@@ -33,14 +33,14 @@ public final class FirewallPolicyCertificateAuthorityResponse {
     /**
      * Secret Id of (base-64 encoded unencrypted pfx) 'Secret' or 'Certificate' object stored in KeyVault.
      * 
-     */
+    */
     public Optional<String> getKeyVaultSecretId() {
         return Optional.ofNullable(this.keyVaultSecretId);
     }
     /**
      * Name of the CA certificate.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

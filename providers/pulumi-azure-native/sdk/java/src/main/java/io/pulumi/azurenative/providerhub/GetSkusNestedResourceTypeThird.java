@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSkusNestedResourceTypeThird {
-/**
- * API Version: 2020-11-20.
+    private GetSkusNestedResourceTypeThird() {}
+    public interface BuilderApplicator {
+        public void apply(GetSkusNestedResourceTypeThirdArgs.Builder a);
+    }
+    private static GetSkusNestedResourceTypeThirdArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSkusNestedResourceTypeThirdArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * API Version: 2020-11-20.
  * 
- */
+     */
+    public static CompletableFuture<GetSkusNestedResourceTypeThirdResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * API Version: 2020-11-20.
+     * 
+     */
     public static CompletableFuture<GetSkusNestedResourceTypeThirdResult> invokeAsync(GetSkusNestedResourceTypeThirdArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:providerhub:getSkusNestedResourceTypeThird", TypeShape.of(GetSkusNestedResourceTypeThirdResult.class), args == null ? GetSkusNestedResourceTypeThirdArgs.Empty : args, Utilities.withVersion(options));
     }

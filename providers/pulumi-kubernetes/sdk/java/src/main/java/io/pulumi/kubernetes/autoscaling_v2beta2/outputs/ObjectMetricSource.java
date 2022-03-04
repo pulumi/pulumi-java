@@ -39,14 +39,14 @@ public final class ObjectMetricSource {
     /**
      * metric identifies the target metric by name and selector
      * 
-     */
+    */
     public MetricIdentifier getMetric() {
         return this.metric;
     }
     /**
      * target specifies the target value for the given metric
      * 
-     */
+    */
     public MetricTarget getTarget() {
         return this.target;
     }

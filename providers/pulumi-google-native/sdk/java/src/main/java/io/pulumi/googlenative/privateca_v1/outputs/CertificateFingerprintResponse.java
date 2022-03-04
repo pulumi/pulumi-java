@@ -23,7 +23,7 @@ public final class CertificateFingerprintResponse {
     /**
      * The SHA 256 hash, encoded in hexadecimal, of the DER x509 certificate.
      * 
-     */
+    */
     public String getSha256Hash() {
         return this.sha256Hash;
     }

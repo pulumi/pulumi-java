@@ -34,14 +34,14 @@ public final class GetMultiRegionAccessPointPolicyResult {
     /**
      * Policy document to apply to a Multi Region Access Point
      * 
-     */
+    */
     public Optional<Object> getPolicy() {
         return Optional.ofNullable(this.policy);
     }
     /**
      * The Policy Status associated with this Multi Region Access Point
      * 
-     */
+    */
     public Optional<PolicyStatusProperties> getPolicyStatus() {
         return Optional.ofNullable(this.policyStatus);
     }

@@ -38,21 +38,21 @@ public final class AccountPropertiesResponseEndpoints {
     /**
      * Gets the catalog endpoint.
      * 
-     */
+    */
     public String getCatalog() {
         return this.catalog;
     }
     /**
      * Gets the guardian endpoint.
      * 
-     */
+    */
     public String getGuardian() {
         return this.guardian;
     }
     /**
      * Gets the scan endpoint.
      * 
-     */
+    */
     public String getScan() {
         return this.scan;
     }

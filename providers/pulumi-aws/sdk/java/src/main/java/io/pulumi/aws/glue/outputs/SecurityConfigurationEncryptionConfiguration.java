@@ -38,7 +38,7 @@ public final class SecurityConfigurationEncryptionConfiguration {
     /**
      * A ` s3_encryption  ` block as described below, which contains encryption configuration for S3 data.
      * 
-     */
+    */
     public SecurityConfigurationEncryptionConfigurationS3Encryption getS3Encryption() {
         return this.s3Encryption;
     }

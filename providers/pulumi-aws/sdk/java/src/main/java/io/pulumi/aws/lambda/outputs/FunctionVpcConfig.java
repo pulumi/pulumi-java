@@ -37,14 +37,14 @@ public final class FunctionVpcConfig {
     /**
      * List of security group IDs associated with the Lambda function.
      * 
-     */
+    */
     public List<String> getSecurityGroupIds() {
         return this.securityGroupIds;
     }
     /**
      * List of subnet IDs associated with the Lambda function.
      * 
-     */
+    */
     public List<String> getSubnetIds() {
         return this.subnetIds;
     }

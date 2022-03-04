@@ -82,21 +82,21 @@ public final class GetLocalGatewayVirtualInterfaceResult {
     /**
      * Local address.
      * 
-     */
+    */
     public String getLocalAddress() {
         return this.localAddress;
     }
     /**
      * Border Gateway Protocol (BGP) Autonomous System Number (ASN) of the EC2 Local Gateway.
      * 
-     */
+    */
     public Integer getLocalBgpAsn() {
         return this.localBgpAsn;
     }
     /**
      * Identifier of the EC2 Local Gateway.
      * 
-     */
+    */
     public String getLocalGatewayId() {
         return this.localGatewayId;
     }
@@ -106,14 +106,14 @@ public final class GetLocalGatewayVirtualInterfaceResult {
     /**
      * Peer address.
      * 
-     */
+    */
     public String getPeerAddress() {
         return this.peerAddress;
     }
     /**
      * Border Gateway Protocol (BGP) Autonomous System Number (ASN) of the peer.
      * 
-     */
+    */
     public Integer getPeerBgpAsn() {
         return this.peerBgpAsn;
     }
@@ -123,7 +123,7 @@ public final class GetLocalGatewayVirtualInterfaceResult {
     /**
      * Virtual Local Area Network.
      * 
-     */
+    */
     public Integer getVlan() {
         return this.vlan;
     }

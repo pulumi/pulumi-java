@@ -61,14 +61,14 @@ public final class GetInstancesResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * IDs of instances found through the filter
      * 
-     */
+    */
     public List<String> getIds() {
         return this.ids;
     }
@@ -81,14 +81,14 @@ public final class GetInstancesResult {
     /**
      * Private IP addresses of instances found through the filter
      * 
-     */
+    */
     public List<String> getPrivateIps() {
         return this.privateIps;
     }
     /**
      * Public IP addresses of instances found through the filter
      * 
-     */
+    */
     public List<String> getPublicIps() {
         return this.publicIps;
     }

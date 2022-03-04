@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRegionSslCertificate {
-/**
- * Get info about a Region Google Compute SSL Certificate from its name.
+    private GetRegionSslCertificate() {}
+    public interface BuilderApplicator {
+        public void apply(GetRegionSslCertificateArgs.Builder a);
+    }
+    private static GetRegionSslCertificateArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRegionSslCertificateArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Get info about a Region Google Compute SSL Certificate from its name.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getRegionSslCertificate.
+     *
+     * A collection of arguments for invoking getRegionSslCertificate.
  * 
- *
- * A collection of values returned by getRegionSslCertificate.
+     *
+     * A collection of values returned by getRegionSslCertificate.
  * 
- */
+     */
+    public static CompletableFuture<GetRegionSslCertificateResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Get info about a Region Google Compute SSL Certificate from its name.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getRegionSslCertificate.
+     * 
+     *
+         * A collection of values returned by getRegionSslCertificate.
+     * 
+     */
     public static CompletableFuture<GetRegionSslCertificateResult> invokeAsync(GetRegionSslCertificateArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getRegionSslCertificate:getRegionSslCertificate", TypeShape.of(GetRegionSslCertificateResult.class), args == null ? GetRegionSslCertificateArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -86,63 +86,63 @@ public final class ListWebAppBackupConfigurationResult {
     /**
      * Name of the backup.
      * 
-     */
+    */
     public Optional<String> getBackupName() {
         return Optional.ofNullable(this.backupName);
     }
     /**
      * Schedule for the backup if it is executed periodically.
      * 
-     */
+    */
     public Optional<BackupScheduleResponse> getBackupSchedule() {
         return Optional.ofNullable(this.backupSchedule);
     }
     /**
      * Databases included in the backup.
      * 
-     */
+    */
     public List<DatabaseBackupSettingResponse> getDatabases() {
         return this.databases == null ? List.of() : this.databases;
     }
     /**
      * True if the backup schedule is enabled (must be included in that case), false if the backup schedule should be disabled.
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * Resource Id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Kind of resource.
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource Name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * SAS URL to the container.
      * 
-     */
+    */
     public String getStorageAccountUrl() {
         return this.storageAccountUrl;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

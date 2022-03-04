@@ -23,7 +23,7 @@ public final class GetClusterIdentityOidc {
     /**
      * Issuer URL for the OpenID Connect identity provider.
      * 
-     */
+    */
     public String getIssuer() {
         return this.issuer;
     }

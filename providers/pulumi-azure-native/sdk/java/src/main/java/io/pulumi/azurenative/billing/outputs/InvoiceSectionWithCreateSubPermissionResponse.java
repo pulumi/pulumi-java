@@ -90,70 +90,70 @@ public final class InvoiceSectionWithCreateSubPermissionResponse {
     /**
      * The name of the billing profile for the invoice section.
      * 
-     */
+    */
     public String getBillingProfileDisplayName() {
         return this.billingProfileDisplayName;
     }
     /**
      * The ID of the billing profile for the invoice section.
      * 
-     */
+    */
     public String getBillingProfileId() {
         return this.billingProfileId;
     }
     /**
      * The billing profile spending limit.
      * 
-     */
+    */
     public String getBillingProfileSpendingLimit() {
         return this.billingProfileSpendingLimit;
     }
     /**
      * The status of the billing profile.
      * 
-     */
+    */
     public String getBillingProfileStatus() {
         return this.billingProfileStatus;
     }
     /**
      * Reason for the specified billing profile status.
      * 
-     */
+    */
     public String getBillingProfileStatusReasonCode() {
         return this.billingProfileStatusReasonCode;
     }
     /**
      * The system generated unique identifier for a billing profile.
      * 
-     */
+    */
     public String getBillingProfileSystemId() {
         return this.billingProfileSystemId;
     }
     /**
      * Enabled azure plans for the associated billing profile.
      * 
-     */
+    */
     public List<AzurePlanResponse> getEnabledAzurePlans() {
         return this.enabledAzurePlans == null ? List.of() : this.enabledAzurePlans;
     }
     /**
      * The name of the invoice section.
      * 
-     */
+    */
     public String getInvoiceSectionDisplayName() {
         return this.invoiceSectionDisplayName;
     }
     /**
      * The ID of the invoice section.
      * 
-     */
+    */
     public String getInvoiceSectionId() {
         return this.invoiceSectionId;
     }
     /**
      * The system generated unique identifier for an invoice section.
      * 
-     */
+    */
     public String getInvoiceSectionSystemId() {
         return this.invoiceSectionSystemId;
     }

@@ -50,28 +50,28 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingCo
     /**
      * Batch size for the first step to turn on traffic on the new endpoint fleet. Value must be less than or equal to 50% of the variant's total instance count. See Canary Size.
      * 
-     */
+    */
     public Optional<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationCanarySize> getCanarySize() {
         return Optional.ofNullable(this.canarySize);
     }
     /**
      * Batch size for each step to turn on traffic on the new endpoint fleet. Value must be 10-50% of the variant's total instance count. See Linear Step Size.
      * 
-     */
+    */
     public Optional<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSize> getLinearStepSize() {
         return Optional.ofNullable(this.linearStepSize);
     }
     /**
      * Specifies the endpoint capacity type. Valid values are: `INSTANCE_COUNT`, or `CAPACITY_PERCENT`.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The waiting time (in seconds) between incremental steps to turn on traffic on the new endpoint fleet. Valid values are between `0` and `3600`.
      * 
-     */
+    */
     public Integer getWaitIntervalInSeconds() {
         return this.waitIntervalInSeconds;
     }

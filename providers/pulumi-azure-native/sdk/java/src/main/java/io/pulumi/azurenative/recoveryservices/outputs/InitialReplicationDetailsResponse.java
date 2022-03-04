@@ -33,14 +33,14 @@ public final class InitialReplicationDetailsResponse {
     /**
      * The initial replication progress percentage.
      * 
-     */
+    */
     public Optional<String> getInitialReplicationProgressPercentage() {
         return Optional.ofNullable(this.initialReplicationProgressPercentage);
     }
     /**
      * Initial replication type.
      * 
-     */
+    */
     public Optional<String> getInitialReplicationType() {
         return Optional.ofNullable(this.initialReplicationType);
     }

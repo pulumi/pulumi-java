@@ -32,14 +32,14 @@ public final class EnvironmentResponse {
     /**
      * An Android device which must be used with an Android test.
      * 
-     */
+    */
     public AndroidDeviceResponse getAndroidDevice() {
         return this.androidDevice;
     }
     /**
      * An iOS device which must be used with an iOS test.
      * 
-     */
+    */
     public IosDeviceResponse getIosDevice() {
         return this.iosDevice;
     }

@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListSqlMigrationServiceAuthKeys {
-/**
- * An authentication key.
+    private ListSqlMigrationServiceAuthKeys() {}
+    public interface BuilderApplicator {
+        public void apply(ListSqlMigrationServiceAuthKeysArgs.Builder a);
+    }
+    private static ListSqlMigrationServiceAuthKeysArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListSqlMigrationServiceAuthKeysArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An authentication key.
  * API Version: 2021-10-30-preview.
  * 
- *
- * An authentication key.
+     *
+     * An authentication key.
  * 
- */
+     */
+    public static CompletableFuture<ListSqlMigrationServiceAuthKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An authentication key.
+     * API Version: 2021-10-30-preview.
+     * 
+     *
+         * An authentication key.
+     * 
+     */
     public static CompletableFuture<ListSqlMigrationServiceAuthKeysResult> invokeAsync(ListSqlMigrationServiceAuthKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datamigration:listSqlMigrationServiceAuthKeys", TypeShape.of(ListSqlMigrationServiceAuthKeysResult.class), args == null ? ListSqlMigrationServiceAuthKeysArgs.Empty : args, Utilities.withVersion(options));
     }

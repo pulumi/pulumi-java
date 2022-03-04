@@ -42,21 +42,21 @@ public final class VirtualGatewaySpecListenerTls {
     /**
      * The listener's TLS certificate.
      * 
-     */
+    */
     public VirtualGatewaySpecListenerTlsCertificate getCertificate() {
         return this.certificate;
     }
     /**
      * The listener's TLS mode. Valid values: `DISABLED`, `PERMISSIVE`, `STRICT`.
      * 
-     */
+    */
     public String getMode() {
         return this.mode;
     }
     /**
      * The listener's Transport Layer Security (TLS) validation context.
      * 
-     */
+    */
     public Optional<VirtualGatewaySpecListenerTlsValidation> getValidation() {
         return Optional.ofNullable(this.validation);
     }

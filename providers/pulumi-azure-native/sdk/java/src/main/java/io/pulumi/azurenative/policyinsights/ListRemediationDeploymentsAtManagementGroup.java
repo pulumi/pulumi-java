@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListRemediationDeploymentsAtManagementGroup {
-/**
- * List of deployments for a remediation.
+    private ListRemediationDeploymentsAtManagementGroup() {}
+    public interface BuilderApplicator {
+        public void apply(ListRemediationDeploymentsAtManagementGroupArgs.Builder a);
+    }
+    private static ListRemediationDeploymentsAtManagementGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListRemediationDeploymentsAtManagementGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * List of deployments for a remediation.
  * API Version: 2019-07-01.
  * 
- *
- * List of deployments for a remediation.
+     *
+     * List of deployments for a remediation.
  * 
- */
+     */
+    public static CompletableFuture<ListRemediationDeploymentsAtManagementGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * List of deployments for a remediation.
+     * API Version: 2019-07-01.
+     * 
+     *
+         * List of deployments for a remediation.
+     * 
+     */
     public static CompletableFuture<ListRemediationDeploymentsAtManagementGroupResult> invokeAsync(ListRemediationDeploymentsAtManagementGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:policyinsights:listRemediationDeploymentsAtManagementGroup", TypeShape.of(ListRemediationDeploymentsAtManagementGroupResult.class), args == null ? ListRemediationDeploymentsAtManagementGroupArgs.Empty : args, Utilities.withVersion(options));
     }

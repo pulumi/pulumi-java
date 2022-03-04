@@ -93,7 +93,7 @@ public final class AccessLevelBasicCondition {
      * allowed.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<AccessLevelBasicConditionDevicePolicy> getDevicePolicy() {
         return Optional.ofNullable(this.devicePolicy);
     }
@@ -109,7 +109,7 @@ public final class AccessLevelBasicCondition {
      * listed subnets in order for this Condition to be true.
      * If empty, all IP addresses are allowed.
      * 
-     */
+    */
     public List<String> getIpSubnetworks() {
         return this.ipSubnetworks == null ? List.of() : this.ipSubnetworks;
     }
@@ -122,7 +122,7 @@ public final class AccessLevelBasicCondition {
      * groups, etc.).
      * Formats: `user:{emailid}`, `serviceAccount:{emailid}`
      * 
-     */
+    */
     public List<String> getMembers() {
         return this.members == null ? List.of() : this.members;
     }
@@ -131,7 +131,7 @@ public final class AccessLevelBasicCondition {
      * a NAND over its non-empty fields, each field must be false for
      * the Condition overall to be satisfied. Defaults to false.
      * 
-     */
+    */
     public Optional<Boolean> getNegate() {
         return Optional.ofNullable(this.negate);
     }
@@ -140,7 +140,7 @@ public final class AccessLevelBasicCondition {
      * countries/regions.
      * Format: A valid ISO 3166-1 alpha-2 code.
      * 
-     */
+    */
     public List<String> getRegions() {
         return this.regions == null ? List.of() : this.regions;
     }
@@ -151,7 +151,7 @@ public final class AccessLevelBasicCondition {
      * granted for the Condition to be true.
      * Format: accessPolicies/{policy_id}/accessLevels/{short_name}
      * 
-     */
+    */
     public List<String> getRequiredAccessLevels() {
         return this.requiredAccessLevels == null ? List.of() : this.requiredAccessLevels;
     }

@@ -99,77 +99,77 @@ public final class VpnGatewayNatRuleResponse {
     /**
      * List of egress VpnSiteLinkConnections.
      * 
-     */
+    */
     public List<SubResourceResponse> getEgressVpnSiteLinkConnections() {
         return this.egressVpnSiteLinkConnections;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * The private IP address external mapping for NAT.
      * 
-     */
+    */
     public List<VpnNatRuleMappingResponse> getExternalMappings() {
         return this.externalMappings == null ? List.of() : this.externalMappings;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * List of ingress VpnSiteLinkConnections.
      * 
-     */
+    */
     public List<SubResourceResponse> getIngressVpnSiteLinkConnections() {
         return this.ingressVpnSiteLinkConnections;
     }
     /**
      * The private IP address internal mapping for NAT.
      * 
-     */
+    */
     public List<VpnNatRuleMappingResponse> getInternalMappings() {
         return this.internalMappings == null ? List.of() : this.internalMappings;
     }
     /**
      * The IP Configuration ID this NAT rule applies to.
      * 
-     */
+    */
     public Optional<String> getIpConfigurationId() {
         return Optional.ofNullable(this.ipConfigurationId);
     }
     /**
      * The Source NAT direction of a VPN NAT.
      * 
-     */
+    */
     public Optional<String> getMode() {
         return Optional.ofNullable(this.mode);
     }
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The provisioning state of the NAT Rule resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

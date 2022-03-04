@@ -13,6 +13,18 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCredentials {
+    private GetCredentials() {}
+    public interface BuilderApplicator {
+        public void apply(GetCredentialsArgs.Builder a);
+    }
+    private static GetCredentialsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetCredentialsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    public static CompletableFuture<GetCredentialsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
     public static CompletableFuture<GetCredentialsResult> invokeAsync(GetCredentialsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ecr/getCredentials:getCredentials", TypeShape.of(GetCredentialsResult.class), args == null ? GetCredentialsArgs.Empty : args, Utilities.withVersion(options));
     }

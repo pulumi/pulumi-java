@@ -33,14 +33,14 @@ public final class AppRegistrationResponse {
     /**
      * The App ID of the app used for login.
      * 
-     */
+    */
     public Optional<String> getAppId() {
         return Optional.ofNullable(this.appId);
     }
     /**
      * The app setting name that contains the app secret.
      * 
-     */
+    */
     public Optional<String> getAppSecretSettingName() {
         return Optional.ofNullable(this.appSecretSettingName);
     }

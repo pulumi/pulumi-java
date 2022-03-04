@@ -75,49 +75,49 @@ public final class GetDistributionConfigurationResult {
     /**
      * Date the distribution configuration was created.
      * 
-     */
+    */
     public String getDateCreated() {
         return this.dateCreated;
     }
     /**
      * Date the distribution configuration was updated.
      * 
-     */
+    */
     public String getDateUpdated() {
         return this.dateUpdated;
     }
     /**
      * Description to apply to distributed AMI.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * Set of distributions.
      * 
-     */
+    */
     public List<GetDistributionConfigurationDistribution> getDistributions() {
         return this.distributions;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Name of the distribution configuration.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Key-value map of resource tags for the distribution configuration.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags;
     }

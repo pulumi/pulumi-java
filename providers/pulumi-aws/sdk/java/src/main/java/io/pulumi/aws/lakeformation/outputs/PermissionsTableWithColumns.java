@@ -55,21 +55,21 @@ public final class PermissionsTableWithColumns {
     /**
      * Identifier for the Data Catalog. By default, it is the account ID of the caller.
      * 
-     */
+    */
     public Optional<String> getCatalogId() {
         return Optional.ofNullable(this.catalogId);
     }
     /**
      * Set of column names for the table.
      * 
-     */
+    */
     public List<String> getColumnNames() {
         return this.columnNames == null ? List.of() : this.columnNames;
     }
     /**
      * Name of the database for the table with columns resource. Unique to the Data Catalog.
      * 
-     */
+    */
     public String getDatabaseName() {
         return this.databaseName;
     }
@@ -79,7 +79,7 @@ public final class PermissionsTableWithColumns {
     /**
      * Name of the table resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }

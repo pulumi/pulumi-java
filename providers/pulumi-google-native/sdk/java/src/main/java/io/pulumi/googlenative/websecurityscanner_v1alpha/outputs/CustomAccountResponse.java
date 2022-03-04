@@ -38,21 +38,21 @@ public final class CustomAccountResponse {
     /**
      * The login form URL of the website.
      * 
-     */
+    */
     public String getLoginUrl() {
         return this.loginUrl;
     }
     /**
      * Input only. The password of the custom account. The credential is stored encrypted and not returned in any response nor included in audit logs.
      * 
-     */
+    */
     public String getPassword() {
         return this.password;
     }
     /**
      * The user name of the custom account.
      * 
-     */
+    */
     public String getUsername() {
         return this.username;
     }

@@ -13,19 +13,44 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetResourceShare {
-/**
- * `aws.ram.ResourceShare` Retrieve information about a RAM Resource Share.
+    private GetResourceShare() {}
+    public interface BuilderApplicator {
+        public void apply(GetResourceShareArgs.Builder a);
+    }
+    private static GetResourceShareArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetResourceShareArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * `aws.ram.ResourceShare` Retrieve information about a RAM Resource Share.
  * 
  * ## Example Usage
  * ## Search by filters
  * 
- *
- * A collection of arguments for invoking getResourceShare.
+     *
+     * A collection of arguments for invoking getResourceShare.
  * 
- *
- * A collection of values returned by getResourceShare.
+     *
+     * A collection of values returned by getResourceShare.
  * 
- */
+     */
+    public static CompletableFuture<GetResourceShareResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * `aws.ram.ResourceShare` Retrieve information about a RAM Resource Share.
+     * 
+     * ## Example Usage
+     * ## Search by filters
+     * 
+     *
+         * A collection of arguments for invoking getResourceShare.
+     * 
+     *
+         * A collection of values returned by getResourceShare.
+     * 
+     */
     public static CompletableFuture<GetResourceShareResult> invokeAsync(GetResourceShareArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ram/getResourceShare:getResourceShare", TypeShape.of(GetResourceShareResult.class), args == null ? GetResourceShareArgs.Empty : args, Utilities.withVersion(options));
     }

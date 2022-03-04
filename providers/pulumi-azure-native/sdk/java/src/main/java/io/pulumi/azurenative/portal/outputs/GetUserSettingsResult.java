@@ -23,7 +23,7 @@ public final class GetUserSettingsResult {
     /**
      * The cloud shell user settings properties.
      * 
-     */
+    */
     public UserPropertiesResponse getProperties() {
         return this.properties;
     }

@@ -98,77 +98,77 @@ public final class ListenerDefaultActionAuthenticateOidc {
     /**
      * Query parameters to include in the redirect request to the authorization endpoint. Max: 10.
      * 
-     */
+    */
     public Map<String,String> getAuthenticationRequestExtraParams() {
         return this.authenticationRequestExtraParams == null ? Map.of() : this.authenticationRequestExtraParams;
     }
     /**
      * Authorization endpoint of the IdP.
      * 
-     */
+    */
     public String getAuthorizationEndpoint() {
         return this.authorizationEndpoint;
     }
     /**
      * OAuth 2.0 client identifier.
      * 
-     */
+    */
     public String getClientId() {
         return this.clientId;
     }
     /**
      * OAuth 2.0 client secret.
      * 
-     */
+    */
     public String getClientSecret() {
         return this.clientSecret;
     }
     /**
      * OIDC issuer identifier of the IdP.
      * 
-     */
+    */
     public String getIssuer() {
         return this.issuer;
     }
     /**
      * Behavior if the user is not authenticated. Valid values: `deny`, `allow` and `authenticate`
      * 
-     */
+    */
     public Optional<String> getOnUnauthenticatedRequest() {
         return Optional.ofNullable(this.onUnauthenticatedRequest);
     }
     /**
      * Set of user claims to be requested from the IdP.
      * 
-     */
+    */
     public Optional<String> getScope() {
         return Optional.ofNullable(this.scope);
     }
     /**
      * Name of the cookie used to maintain session information.
      * 
-     */
+    */
     public Optional<String> getSessionCookieName() {
         return Optional.ofNullable(this.sessionCookieName);
     }
     /**
      * Maximum duration of the authentication session, in seconds.
      * 
-     */
+    */
     public Optional<Integer> getSessionTimeout() {
         return Optional.ofNullable(this.sessionTimeout);
     }
     /**
      * Token endpoint of the IdP.
      * 
-     */
+    */
     public String getTokenEndpoint() {
         return this.tokenEndpoint;
     }
     /**
      * User info endpoint of the IdP.
      * 
-     */
+    */
     public String getUserInfoEndpoint() {
         return this.userInfoEndpoint;
     }

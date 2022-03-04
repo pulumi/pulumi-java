@@ -100,6 +100,22 @@ public class UsagePlanKey extends io.pulumi.resources.CustomResource {
         return this.value;
     }
 
+    public interface BuilderApplicator {
+        public void apply(UsagePlanKeyArgs.Builder a);
+    }
+    private static io.pulumi.aws.apigateway.UsagePlanKeyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.aws.apigateway.UsagePlanKeyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public UsagePlanKey(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -38,7 +38,7 @@ public final class PackagingConfigurationMssPackage {
     /**
      * A list of MSS manifest configurations.
      * 
-     */
+    */
     public List<PackagingConfigurationMssManifest> getMssManifests() {
         return this.mssManifests;
     }

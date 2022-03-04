@@ -52,35 +52,35 @@ public final class GetGroupResult {
     /**
      * The create time timestamp.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * User-provided description of the group.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * Display name is a user defined name for this group which can be updated.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * The Group name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The update time timestamp.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }

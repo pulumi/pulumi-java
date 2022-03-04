@@ -33,7 +33,7 @@ public final class MediaGraphPemCertificateListResponse {
     /**
      * PEM formatted public certificates, one per entry.
      * 
-     */
+    */
     public List<String> getCertificates() {
         return this.certificates;
     }
@@ -41,7 +41,7 @@ public final class MediaGraphPemCertificateListResponse {
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.MediaGraphPemCertificateList'.
      * 
-     */
+    */
     public String getOdataType() {
         return this.odataType;
     }

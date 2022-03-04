@@ -48,28 +48,28 @@ public final class GooglePrivacyDlpV2ExclusionRuleResponse {
     /**
      * Dictionary which defines the rule.
      * 
-     */
+    */
     public GooglePrivacyDlpV2DictionaryResponse getDictionary() {
         return this.dictionary;
     }
     /**
      * Set of infoTypes for which findings would affect this rule.
      * 
-     */
+    */
     public GooglePrivacyDlpV2ExcludeInfoTypesResponse getExcludeInfoTypes() {
         return this.excludeInfoTypes;
     }
     /**
      * How the rule is applied, see MatchingType documentation for details.
      * 
-     */
+    */
     public String getMatchingType() {
         return this.matchingType;
     }
     /**
      * Regular expression which defines the rule.
      * 
-     */
+    */
     public GooglePrivacyDlpV2RegexResponse getRegex() {
         return this.regex;
     }

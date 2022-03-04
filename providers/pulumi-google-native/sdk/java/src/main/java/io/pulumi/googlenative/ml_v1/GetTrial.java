@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTrial {
-/**
- * Gets a trial.
+    private GetTrial() {}
+    public interface BuilderApplicator {
+        public void apply(GetTrialArgs.Builder a);
+    }
+    private static GetTrialArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTrialArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets a trial.
  * 
- */
+     */
+    public static CompletableFuture<GetTrialResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets a trial.
+     * 
+     */
     public static CompletableFuture<GetTrialResult> invokeAsync(GetTrialArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:ml/v1:getTrial", TypeShape.of(GetTrialResult.class), args == null ? GetTrialArgs.Empty : args, Utilities.withVersion(options));
     }

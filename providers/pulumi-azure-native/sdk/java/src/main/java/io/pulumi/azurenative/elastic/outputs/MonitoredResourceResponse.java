@@ -40,21 +40,21 @@ public final class MonitoredResourceResponse {
     /**
      * The ARM id of the resource.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Reason for why the resource is sending logs (or why it is not sending).
      * 
-     */
+    */
     public Optional<String> getReasonForLogsStatus() {
         return Optional.ofNullable(this.reasonForLogsStatus);
     }
     /**
      * Flag indicating the status of the resource for sending logs operation to Elastic.
      * 
-     */
+    */
     public Optional<String> getSendingLogs() {
         return Optional.ofNullable(this.sendingLogs);
     }

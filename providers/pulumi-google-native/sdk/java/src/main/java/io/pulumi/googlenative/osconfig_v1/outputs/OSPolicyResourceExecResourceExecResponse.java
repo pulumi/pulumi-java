@@ -54,35 +54,35 @@ public final class OSPolicyResourceExecResourceExecResponse {
     /**
      * Optional arguments to pass to the source during execution.
      * 
-     */
+    */
     public List<String> getArgs() {
         return this.args;
     }
     /**
      * A remote or local file.
      * 
-     */
+    */
     public OSPolicyResourceFileResponse getFile() {
         return this.file;
     }
     /**
      * The script interpreter to use.
      * 
-     */
+    */
     public String getInterpreter() {
         return this.interpreter;
     }
     /**
      * Only recorded for enforce Exec. Path to an output file (that is created by this Exec) whose content will be recorded in OSPolicyResourceCompliance after a successful run. Absence or failure to read this file will result in this ExecResource being non-compliant. Output file size is limited to 100K bytes.
      * 
-     */
+    */
     public String getOutputFilePath() {
         return this.outputFilePath;
     }
     /**
      * An inline script. The size of the script is limited to 1024 characters.
      * 
-     */
+    */
     public String getScript() {
         return this.script;
     }

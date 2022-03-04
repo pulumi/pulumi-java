@@ -46,14 +46,14 @@ public final class IndexField {
      * be specified.
      * Possible values are `CONTAINS`.
      * 
-     */
+    */
     public Optional<String> getArrayConfig() {
         return Optional.ofNullable(this.arrayConfig);
     }
     /**
      * Name of the field.
      * 
-     */
+    */
     public Optional<String> getFieldPath() {
         return Optional.ofNullable(this.fieldPath);
     }
@@ -62,7 +62,7 @@ public final class IndexField {
      * Only one of `order` and `arrayConfig` can be specified.
      * Possible values are `ASCENDING` and `DESCENDING`.
      * 
-     */
+    */
     public Optional<String> getOrder() {
         return Optional.ofNullable(this.order);
     }

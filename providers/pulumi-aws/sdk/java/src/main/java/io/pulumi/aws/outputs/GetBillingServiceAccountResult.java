@@ -31,14 +31,14 @@ public final class GetBillingServiceAccountResult {
     /**
      * The ARN of the AWS billing service account.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }

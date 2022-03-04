@@ -34,14 +34,14 @@ public final class WorkflowTemplateParameterValidation {
     /**
      * Validation based on regular expressions.
      * 
-     */
+    */
     public Optional<WorkflowTemplateParameterValidationRegex> getRegex() {
         return Optional.ofNullable(this.regex);
     }
     /**
      * Optional. Corresponds to the label values of reservation resource.
      * 
-     */
+    */
     public Optional<WorkflowTemplateParameterValidationValues> getValues() {
         return Optional.ofNullable(this.values);
     }

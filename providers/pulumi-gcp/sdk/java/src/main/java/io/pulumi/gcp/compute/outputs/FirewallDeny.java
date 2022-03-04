@@ -46,7 +46,7 @@ public final class FirewallDeny {
      * Example inputs include: ["22"], ["80","443"], and
      * ["12345-12349"].
      * 
-     */
+    */
     public List<String> getPorts() {
         return this.ports == null ? List.of() : this.ports;
     }
@@ -56,7 +56,7 @@ public final class FirewallDeny {
      * one of the following well known protocol strings (tcp, udp,
      * icmp, esp, ah, sctp, ipip, all), or the IP protocol number.
      * 
-     */
+    */
     public String getProtocol() {
         return this.protocol;
     }

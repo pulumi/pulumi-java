@@ -70,49 +70,49 @@ public final class InstanceDisk {
     /**
      * Instance attached to the disk.
      * 
-     */
+    */
     public Optional<String> getAttachedTo() {
         return Optional.ofNullable(this.attachedTo);
     }
     /**
      * Attachment state of the disk.
      * 
-     */
+    */
     public Optional<String> getAttachmentState() {
         return Optional.ofNullable(this.attachmentState);
     }
     /**
      * The names to use for your new Lightsail disk.
      * 
-     */
+    */
     public String getDiskName() {
         return this.diskName;
     }
     /**
      * IOPS of disk.
      * 
-     */
+    */
     public Optional<Integer> getIOPS() {
         return Optional.ofNullable(this.iOPS);
     }
     /**
      * Is the Attached disk is the system disk of the Instance.
      * 
-     */
+    */
     public Optional<Boolean> getIsSystemDisk() {
         return Optional.ofNullable(this.isSystemDisk);
     }
     /**
      * Path of the disk attached to the instance.
      * 
-     */
+    */
     public String getPath() {
         return this.path;
     }
     /**
      * Size of the disk attached to the Instance.
      * 
-     */
+    */
     public Optional<String> getSizeInGb() {
         return Optional.ofNullable(this.sizeInGb);
     }

@@ -56,35 +56,35 @@ public final class RecurrenceScheduleResponse {
     /**
      * The hours.
      * 
-     */
+    */
     public List<Integer> getHours() {
         return this.hours == null ? List.of() : this.hours;
     }
     /**
      * The minutes.
      * 
-     */
+    */
     public List<Integer> getMinutes() {
         return this.minutes == null ? List.of() : this.minutes;
     }
     /**
      * The month days.
      * 
-     */
+    */
     public List<Integer> getMonthDays() {
         return this.monthDays == null ? List.of() : this.monthDays;
     }
     /**
      * The monthly occurrences.
      * 
-     */
+    */
     public List<RecurrenceScheduleOccurrenceResponse> getMonthlyOccurrences() {
         return this.monthlyOccurrences == null ? List.of() : this.monthlyOccurrences;
     }
     /**
      * The days of the week.
      * 
-     */
+    */
     public List<String> getWeekDays() {
         return this.weekDays == null ? List.of() : this.weekDays;
     }

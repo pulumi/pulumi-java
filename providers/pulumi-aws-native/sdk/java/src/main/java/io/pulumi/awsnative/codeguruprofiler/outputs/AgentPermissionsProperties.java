@@ -24,7 +24,7 @@ public final class AgentPermissionsProperties {
     /**
      * The principals for the agent permissions.
      * 
-     */
+    */
     public List<String> getPrincipals() {
         return this.principals;
     }

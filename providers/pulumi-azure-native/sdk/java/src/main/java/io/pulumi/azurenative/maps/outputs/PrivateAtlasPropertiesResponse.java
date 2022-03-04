@@ -25,7 +25,7 @@ public final class PrivateAtlasPropertiesResponse {
     /**
      * The state of the resource provisioning, terminal states: Succeeded, Failed, Canceled
      * 
-     */
+    */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }

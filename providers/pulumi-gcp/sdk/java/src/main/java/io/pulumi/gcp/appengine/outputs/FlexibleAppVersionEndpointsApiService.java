@@ -60,21 +60,21 @@ public final class FlexibleAppVersionEndpointsApiService {
      * Endpoints also has a rollout strategy called "MANAGED". When using this, Endpoints fetches the latest configuration and does not need
      * the configuration ID. In this case, configId must be omitted.
      * 
-     */
+    */
     public Optional<String> getConfigId() {
         return Optional.ofNullable(this.configId);
     }
     /**
      * Enable or disable trace sampling. By default, this is set to false for enabled.
      * 
-     */
+    */
     public Optional<Boolean> getDisableTraceSampling() {
         return Optional.ofNullable(this.disableTraceSampling);
     }
     /**
      * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -83,7 +83,7 @@ public final class FlexibleAppVersionEndpointsApiService {
      * Default value is `FIXED`.
      * Possible values are `FIXED` and `MANAGED`.
      * 
-     */
+    */
     public Optional<String> getRolloutStrategy() {
         return Optional.ofNullable(this.rolloutStrategy);
     }

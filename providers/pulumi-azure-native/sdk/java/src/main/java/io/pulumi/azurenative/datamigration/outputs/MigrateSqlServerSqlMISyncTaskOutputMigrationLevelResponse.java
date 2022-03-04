@@ -110,28 +110,28 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse {
     /**
      * Count of databases
      * 
-     */
+    */
     public Integer getDatabaseCount() {
         return this.databaseCount;
     }
     /**
      * Number of database level errors
      * 
-     */
+    */
     public Integer getDatabaseErrorCount() {
         return this.databaseErrorCount;
     }
     /**
      * Migration end time
      * 
-     */
+    */
     public String getEndedOn() {
         return this.endedOn;
     }
     /**
      * Result identifier
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -139,63 +139,63 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse {
      * Result type
      * Expected value is 'MigrationLevelOutput'.
      * 
-     */
+    */
     public String getResultType() {
         return this.resultType;
     }
     /**
      * Source server brand version
      * 
-     */
+    */
     public String getSourceServerBrandVersion() {
         return this.sourceServerBrandVersion;
     }
     /**
      * Source server name
      * 
-     */
+    */
     public String getSourceServerName() {
         return this.sourceServerName;
     }
     /**
      * Source server version
      * 
-     */
+    */
     public String getSourceServerVersion() {
         return this.sourceServerVersion;
     }
     /**
      * Migration start time
      * 
-     */
+    */
     public String getStartedOn() {
         return this.startedOn;
     }
     /**
      * Current state of migration
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * Target server brand version
      * 
-     */
+    */
     public String getTargetServerBrandVersion() {
         return this.targetServerBrandVersion;
     }
     /**
      * Target server name
      * 
-     */
+    */
     public String getTargetServerName() {
         return this.targetServerName;
     }
     /**
      * Target server version
      * 
-     */
+    */
     public String getTargetServerVersion() {
         return this.targetServerVersion;
     }

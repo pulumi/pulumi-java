@@ -32,14 +32,14 @@ public final class GoogleCloudMlV1__MetricSpecResponse {
     /**
      * metric name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Target specifies the target value for the given metric; once real metric deviates from the threshold by a certain percentage, the node count changes.
      * 
-     */
+    */
     public Integer getTarget() {
         return this.target;
     }

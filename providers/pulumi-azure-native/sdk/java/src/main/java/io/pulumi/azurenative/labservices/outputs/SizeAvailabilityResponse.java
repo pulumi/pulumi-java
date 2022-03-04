@@ -34,14 +34,14 @@ public final class SizeAvailabilityResponse {
     /**
      * Whether or not this size category is available
      * 
-     */
+    */
     public Optional<Boolean> getIsAvailable() {
         return Optional.ofNullable(this.isAvailable);
     }
     /**
      * The category of the size (Basic, Standard, Performance).
      * 
-     */
+    */
     public Optional<String> getSizeCategory() {
         return Optional.ofNullable(this.sizeCategory);
     }

@@ -97,7 +97,7 @@ public final class FlowLogState extends io.pulumi.resources.ResourceArgs {
     /**
      * *Deprecated:* Use `log_destination` instead. The name of the CloudWatch log group.
      * 
-     * @deprecated
+     * @Deprecated
      * use 'log_destination' argument instead
      * 
      */

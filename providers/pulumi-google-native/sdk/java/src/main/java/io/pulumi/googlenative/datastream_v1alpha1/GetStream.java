@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetStream {
-/**
- * Use this method to get details about a stream.
+    private GetStream() {}
+    public interface BuilderApplicator {
+        public void apply(GetStreamArgs.Builder a);
+    }
+    private static GetStreamArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetStreamArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Use this method to get details about a stream.
  * 
- */
+     */
+    public static CompletableFuture<GetStreamResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Use this method to get details about a stream.
+     * 
+     */
     public static CompletableFuture<GetStreamResult> invokeAsync(GetStreamArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:datastream/v1alpha1:getStream", TypeShape.of(GetStreamResult.class), args == null ? GetStreamArgs.Empty : args, Utilities.withVersion(options));
     }

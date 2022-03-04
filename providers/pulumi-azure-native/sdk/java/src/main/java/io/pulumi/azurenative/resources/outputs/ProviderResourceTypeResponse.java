@@ -91,63 +91,63 @@ public final class ProviderResourceTypeResponse {
     /**
      * The aliases that are supported by this resource type.
      * 
-     */
+    */
     public List<AliasResponse> getAliases() {
         return this.aliases == null ? List.of() : this.aliases;
     }
     /**
      * The API profiles for the resource provider.
      * 
-     */
+    */
     public List<ApiProfileResponse> getApiProfiles() {
         return this.apiProfiles;
     }
     /**
      * The API version.
      * 
-     */
+    */
     public List<String> getApiVersions() {
         return this.apiVersions == null ? List.of() : this.apiVersions;
     }
     /**
      * The additional capabilities offered by this resource type.
      * 
-     */
+    */
     public Optional<String> getCapabilities() {
         return Optional.ofNullable(this.capabilities);
     }
     /**
      * The default API version.
      * 
-     */
+    */
     public String getDefaultApiVersion() {
         return this.defaultApiVersion;
     }
     /**
      * The location mappings that are supported by this resource type.
      * 
-     */
+    */
     public List<ProviderExtendedLocationResponse> getLocationMappings() {
         return this.locationMappings == null ? List.of() : this.locationMappings;
     }
     /**
      * The collection of locations where this resource type can be created.
      * 
-     */
+    */
     public List<String> getLocations() {
         return this.locations == null ? List.of() : this.locations;
     }
     /**
      * The properties.
      * 
-     */
+    */
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
      * The resource type.
      * 
-     */
+    */
     public Optional<String> getPropResourceType() {
         return Optional.ofNullable(this.resourceType);
     }

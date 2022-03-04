@@ -53,7 +53,7 @@ public final class GetMitigationActionResult {
     /**
      * An array of key-value pairs to apply to this resource.
      * 
-     */
+    */
     public List<MitigationActionTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

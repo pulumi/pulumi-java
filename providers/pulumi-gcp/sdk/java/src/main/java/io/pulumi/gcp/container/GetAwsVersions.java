@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAwsVersions {
-/**
- * Provides access to available Kubernetes versions in a location for a given project.
+    private GetAwsVersions() {}
+    public interface BuilderApplicator {
+        public void apply(GetAwsVersionsArgs.Builder a);
+    }
+    private static GetAwsVersionsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAwsVersionsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Provides access to available Kubernetes versions in a location for a given project.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getAwsVersions.
+     *
+     * A collection of arguments for invoking getAwsVersions.
  * 
- *
- * A collection of values returned by getAwsVersions.
+     *
+     * A collection of values returned by getAwsVersions.
  * 
- */
+     */
+    public static CompletableFuture<GetAwsVersionsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Provides access to available Kubernetes versions in a location for a given project.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getAwsVersions.
+     * 
+     *
+         * A collection of values returned by getAwsVersions.
+     * 
+     */
     public static CompletableFuture<GetAwsVersionsResult> invokeAsync(@Nullable GetAwsVersionsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:container/getAwsVersions:getAwsVersions", TypeShape.of(GetAwsVersionsResult.class), args == null ? GetAwsVersionsArgs.Empty : args, Utilities.withVersion(options));
     }

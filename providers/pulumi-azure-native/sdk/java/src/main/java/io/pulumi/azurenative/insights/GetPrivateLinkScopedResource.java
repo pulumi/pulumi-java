@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPrivateLinkScopedResource {
-/**
- * A private link scoped resource
+    private GetPrivateLinkScopedResource() {}
+    public interface BuilderApplicator {
+        public void apply(GetPrivateLinkScopedResourceArgs.Builder a);
+    }
+    private static GetPrivateLinkScopedResourceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPrivateLinkScopedResourceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A private link scoped resource
  * API Version: 2019-10-17-preview.
  * 
- *
- * A private link scoped resource
+     *
+     * A private link scoped resource
  * 
- */
+     */
+    public static CompletableFuture<GetPrivateLinkScopedResourceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A private link scoped resource
+     * API Version: 2019-10-17-preview.
+     * 
+     *
+         * A private link scoped resource
+     * 
+     */
     public static CompletableFuture<GetPrivateLinkScopedResourceResult> invokeAsync(GetPrivateLinkScopedResourceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getPrivateLinkScopedResource", TypeShape.of(GetPrivateLinkScopedResourceResult.class), args == null ? GetPrivateLinkScopedResourceArgs.Empty : args, Utilities.withVersion(options));
     }

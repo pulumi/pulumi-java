@@ -51,28 +51,28 @@ public final class BgpSettingsResponse {
     /**
      * The BGP speaker's ASN.
      * 
-     */
+    */
     public Optional<Double> getAsn() {
         return Optional.ofNullable(this.asn);
     }
     /**
      * The BGP peering address and BGP identifier of this BGP speaker.
      * 
-     */
+    */
     public Optional<String> getBgpPeeringAddress() {
         return Optional.ofNullable(this.bgpPeeringAddress);
     }
     /**
      * BGP peering address with IP configuration ID for virtual network gateway.
      * 
-     */
+    */
     public List<IPConfigurationBgpPeeringAddressResponse> getBgpPeeringAddresses() {
         return this.bgpPeeringAddresses == null ? List.of() : this.bgpPeeringAddresses;
     }
     /**
      * The weight added to routes learned from this BGP speaker.
      * 
-     */
+    */
     public Optional<Integer> getPeerWeight() {
         return Optional.ofNullable(this.peerWeight);
     }

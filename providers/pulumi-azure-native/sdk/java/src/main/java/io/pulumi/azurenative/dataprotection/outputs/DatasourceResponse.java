@@ -68,49 +68,49 @@ public final class DatasourceResponse {
     /**
      * DatasourceType of the resource.
      * 
-     */
+    */
     public Optional<String> getDatasourceType() {
         return Optional.ofNullable(this.datasourceType);
     }
     /**
      * Type of Datasource object, used to initialize the right inherited type
      * 
-     */
+    */
     public Optional<String> getObjectType() {
         return Optional.ofNullable(this.objectType);
     }
     /**
      * Full ARM ID of the resource. For azure resources, this is ARM ID. For non azure resources, this will be the ID created by backup service via Fabric/Vault.
      * 
-     */
+    */
     public String getResourceID() {
         return this.resourceID;
     }
     /**
      * Location of datasource.
      * 
-     */
+    */
     public Optional<String> getResourceLocation() {
         return Optional.ofNullable(this.resourceLocation);
     }
     /**
      * Unique identifier of the resource in the context of parent.
      * 
-     */
+    */
     public Optional<String> getPropResourceName() {
         return Optional.ofNullable(this.resourceName);
     }
     /**
      * Resource Type of Datasource.
      * 
-     */
+    */
     public Optional<String> getPropResourceType() {
         return Optional.ofNullable(this.resourceType);
     }
     /**
      * Uri of the resource.
      * 
-     */
+    */
     public Optional<String> getResourceUri() {
         return Optional.ofNullable(this.resourceUri);
     }

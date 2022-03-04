@@ -42,21 +42,21 @@ public final class DeploymentGroupBlueGreenDeploymentConfig {
     /**
      * Information about the action to take when newly provisioned instances are ready to receive traffic in a blue/green deployment (documented below).
      * 
-     */
+    */
     public Optional<DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOption> getDeploymentReadyOption() {
         return Optional.ofNullable(this.deploymentReadyOption);
     }
     /**
      * Information about how instances are provisioned for a replacement environment in a blue/green deployment (documented below).
      * 
-     */
+    */
     public Optional<DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOption> getGreenFleetProvisioningOption() {
         return Optional.ofNullable(this.greenFleetProvisioningOption);
     }
     /**
      * Information about whether to terminate instances in the original fleet during a blue/green deployment (documented below).
      * 
-     */
+    */
     public Optional<DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccess> getTerminateBlueInstancesOnDeploymentSuccess() {
         return Optional.ofNullable(this.terminateBlueInstancesOnDeploymentSuccess);
     }

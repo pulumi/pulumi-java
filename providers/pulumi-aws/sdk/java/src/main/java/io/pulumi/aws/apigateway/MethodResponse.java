@@ -120,6 +120,22 @@ public class MethodResponse extends io.pulumi.resources.CustomResource {
         return this.statusCode;
     }
 
+    public interface BuilderApplicator {
+        public void apply(MethodResponseArgs.Builder a);
+    }
+    private static io.pulumi.aws.apigateway.MethodResponseArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.aws.apigateway.MethodResponseArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public MethodResponse(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

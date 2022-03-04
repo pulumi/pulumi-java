@@ -54,35 +54,35 @@ public final class GetWebPubSubHubResult {
     /**
      * Fully qualified resource Id for the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Properties of a hub.
      * 
-     */
+    */
     public WebPubSubHubPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

@@ -30,7 +30,7 @@ public final class DetectorModelIotTopicPublish {
     /**
      * The MQTT topic of the message. You can use a string expression that includes variables (`$variable.<variable-name>`) and input values (`$input.<input-name>.<path-to-datum>`) as the topic string.
      * 
-     */
+    */
     public String getMqttTopic() {
         return this.mqttTopic;
     }

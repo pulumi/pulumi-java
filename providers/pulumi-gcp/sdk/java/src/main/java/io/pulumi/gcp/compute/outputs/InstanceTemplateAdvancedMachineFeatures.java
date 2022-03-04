@@ -34,14 +34,14 @@ public final class InstanceTemplateAdvancedMachineFeatures {
     /**
      * Defines whether the instance should have nested virtualization enabled. Defaults to false.
      * 
-     */
+    */
     public Optional<Boolean> getEnableNestedVirtualization() {
         return Optional.ofNullable(this.enableNestedVirtualization);
     }
     /**
      * he number of threads per physical core. To disable [simultaneous multithreading (SMT)](https://cloud.google.com/compute/docs/instances/disabling-smt) set this to 1.
      * 
-     */
+    */
     public Optional<Integer> getThreadsPerCore() {
         return Optional.ofNullable(this.threadsPerCore);
     }

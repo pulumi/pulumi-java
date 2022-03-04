@@ -89,6 +89,22 @@ public class CertificateAuthorityActivation extends io.pulumi.resources.CustomRe
         return this.status;
     }
 
+    public interface BuilderApplicator {
+        public void apply(CertificateAuthorityActivationArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.acmpca.CertificateAuthorityActivationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.acmpca.CertificateAuthorityActivationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public CertificateAuthorityActivation(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

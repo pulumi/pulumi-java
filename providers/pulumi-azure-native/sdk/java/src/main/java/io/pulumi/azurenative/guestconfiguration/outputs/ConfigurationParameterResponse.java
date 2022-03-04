@@ -33,14 +33,14 @@ public final class ConfigurationParameterResponse {
     /**
      * Name of the configuration parameter.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Value of the configuration parameter.
      * 
-     */
+    */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }

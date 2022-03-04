@@ -44,7 +44,7 @@ public final class GetAutoscalingGroupsResult {
     /**
      * A list of the Autoscaling Groups Arns in the current region.
      * 
-     */
+    */
     public List<String> getArns() {
         return this.arns;
     }
@@ -54,14 +54,14 @@ public final class GetAutoscalingGroupsResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * A list of the Autoscaling Groups in the current region.
      * 
-     */
+    */
     public List<String> getNames() {
         return this.names;
     }

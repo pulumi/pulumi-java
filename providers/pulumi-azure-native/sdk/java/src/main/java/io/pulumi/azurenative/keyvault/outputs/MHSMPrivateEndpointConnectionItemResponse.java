@@ -42,21 +42,21 @@ public final class MHSMPrivateEndpointConnectionItemResponse {
     /**
      * Properties of the private endpoint object.
      * 
-     */
+    */
     public Optional<MHSMPrivateEndpointResponse> getPrivateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
     /**
      * Approval state of the private link connection.
      * 
-     */
+    */
     public Optional<MHSMPrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
     /**
      * Provisioning state of the private endpoint connection.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }

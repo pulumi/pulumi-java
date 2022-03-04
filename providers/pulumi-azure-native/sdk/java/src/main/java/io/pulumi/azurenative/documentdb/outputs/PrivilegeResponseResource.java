@@ -33,14 +33,14 @@ public final class PrivilegeResponseResource {
     /**
      * The collection name the role is applied.
      * 
-     */
+    */
     public Optional<String> getCollection() {
         return Optional.ofNullable(this.collection);
     }
     /**
      * The database name the role is applied.
      * 
-     */
+    */
     public Optional<String> getDb() {
         return Optional.ofNullable(this.db);
     }

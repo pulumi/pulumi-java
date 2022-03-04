@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNotification {
-/**
- * View a notification configuration.
+    private GetNotification() {}
+    public interface BuilderApplicator {
+        public void apply(GetNotificationArgs.Builder a);
+    }
+    private static GetNotificationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetNotificationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * View a notification configuration.
  * 
- */
+     */
+    public static CompletableFuture<GetNotificationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * View a notification configuration.
+     * 
+     */
     public static CompletableFuture<GetNotificationResult> invokeAsync(GetNotificationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:storage/v1:getNotification", TypeShape.of(GetNotificationResult.class), args == null ? GetNotificationArgs.Empty : args, Utilities.withVersion(options));
     }

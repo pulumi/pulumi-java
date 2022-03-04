@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPrivateEndpointConnection {
-/**
- * A private endpoint connection class.
+    private GetPrivateEndpointConnection() {}
+    public interface BuilderApplicator {
+        public void apply(GetPrivateEndpointConnectionArgs.Builder a);
+    }
+    private static GetPrivateEndpointConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPrivateEndpointConnectionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A private endpoint connection class.
  * API Version: 2020-12-01-preview.
  * 
- *
- * A private endpoint connection class.
+     *
+     * A private endpoint connection class.
  * 
- */
+     */
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A private endpoint connection class.
+     * API Version: 2020-12-01-preview.
+     * 
+     *
+         * A private endpoint connection class.
+     * 
+     */
     public static CompletableFuture<GetPrivateEndpointConnectionResult> invokeAsync(GetPrivateEndpointConnectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:purview:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args == null ? GetPrivateEndpointConnectionArgs.Empty : args, Utilities.withVersion(options));
     }

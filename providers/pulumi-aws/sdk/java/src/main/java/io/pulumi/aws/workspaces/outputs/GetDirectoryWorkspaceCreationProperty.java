@@ -53,35 +53,35 @@ public final class GetDirectoryWorkspaceCreationProperty {
     /**
      * The identifier of your custom security group. Should relate to the same VPC, where workspaces reside in.
      * 
-     */
+    */
     public String getCustomSecurityGroupId() {
         return this.customSecurityGroupId;
     }
     /**
      * The default organizational unit (OU) for your WorkSpace directories.
      * 
-     */
+    */
     public String getDefaultOu() {
         return this.defaultOu;
     }
     /**
      * Indicates whether internet access is enabled for your WorkSpaces.
      * 
-     */
+    */
     public Boolean getEnableInternetAccess() {
         return this.enableInternetAccess;
     }
     /**
      * Indicates whether maintenance mode is enabled for your WorkSpaces. For more information, see [WorkSpace Maintenance](https://docs.aws.amazon.com/workspaces/latest/adminguide/workspace-maintenance.html).
      * 
-     */
+    */
     public Boolean getEnableMaintenanceMode() {
         return this.enableMaintenanceMode;
     }
     /**
      * Indicates whether users are local administrators of their WorkSpaces.
      * 
-     */
+    */
     public Boolean getUserEnabledAsLocalAdministrator() {
         return this.userEnabledAsLocalAdministrator;
     }

@@ -32,14 +32,14 @@ public final class PartitionStorageDescriptorSortColumn {
     /**
      * The name of the column.
      * 
-     */
+    */
     public String getColumn() {
         return this.column;
     }
     /**
      * Indicates that the column is sorted in ascending order (== 1), or in descending order (==0).
      * 
-     */
+    */
     public Integer getSortOrder() {
         return this.sortOrder;
     }

@@ -45,14 +45,14 @@ public final class GameServerConfigFleetConfig {
      *   The format of the spec can be found :
      *   `https://agones.dev/site/docs/reference/fleet/`.
      * 
-     */
+    */
     public String getFleetSpec() {
         return this.fleetSpec;
     }
     /**
      * The name of the ScalingConfig
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

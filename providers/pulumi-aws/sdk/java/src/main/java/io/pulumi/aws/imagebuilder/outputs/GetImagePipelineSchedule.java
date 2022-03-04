@@ -31,14 +31,14 @@ public final class GetImagePipelineSchedule {
     /**
      * Condition when the pipeline should trigger a new image build.
      * 
-     */
+    */
     public String getPipelineExecutionStartCondition() {
         return this.pipelineExecutionStartCondition;
     }
     /**
      * Cron expression of how often the pipeline start condition is evaluated.
      * 
-     */
+    */
     public String getScheduleExpression() {
         return this.scheduleExpression;
     }

@@ -45,28 +45,28 @@ public final class GetServerDnsAliasResult {
     /**
      * The fully qualified DNS record for alias
      * 
-     */
+    */
     public String getAzureDnsRecord() {
         return this.azureDnsRecord;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

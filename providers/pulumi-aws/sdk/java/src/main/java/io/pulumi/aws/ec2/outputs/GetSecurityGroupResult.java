@@ -50,14 +50,14 @@ public final class GetSecurityGroupResult {
     /**
      * The computed ARN of the security group.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
     /**
      * The description of the security group.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }

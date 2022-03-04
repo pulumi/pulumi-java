@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListWebAppSyncFunctionTriggersSlot {
-/**
- * Function secrets.
+    private ListWebAppSyncFunctionTriggersSlot() {}
+    public interface BuilderApplicator {
+        public void apply(ListWebAppSyncFunctionTriggersSlotArgs.Builder a);
+    }
+    private static ListWebAppSyncFunctionTriggersSlotArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListWebAppSyncFunctionTriggersSlotArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Function secrets.
  * API Version: 2020-12-01.
  * 
- *
- * Function secrets.
+     *
+     * Function secrets.
  * 
- */
+     */
+    public static CompletableFuture<ListWebAppSyncFunctionTriggersSlotResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Function secrets.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Function secrets.
+     * 
+     */
     public static CompletableFuture<ListWebAppSyncFunctionTriggersSlotResult> invokeAsync(ListWebAppSyncFunctionTriggersSlotArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppSyncFunctionTriggersSlot", TypeShape.of(ListWebAppSyncFunctionTriggersSlotResult.class), args == null ? ListWebAppSyncFunctionTriggersSlotArgs.Empty : args, Utilities.withVersion(options));
     }

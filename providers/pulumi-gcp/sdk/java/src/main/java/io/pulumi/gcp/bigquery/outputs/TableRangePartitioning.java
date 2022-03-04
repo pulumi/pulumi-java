@@ -35,7 +35,7 @@ public final class TableRangePartitioning {
      * The field used to determine how to create a range-based
      * partition.
      * 
-     */
+    */
     public String getField() {
         return this.field;
     }
@@ -43,7 +43,7 @@ public final class TableRangePartitioning {
      * Information required to partition based on ranges.
      * Structure is documented below.
      * 
-     */
+    */
     public TableRangePartitioningRange getRange() {
         return this.range;
     }

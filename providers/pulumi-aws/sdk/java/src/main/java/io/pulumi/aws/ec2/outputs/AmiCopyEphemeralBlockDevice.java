@@ -34,7 +34,7 @@ public final class AmiCopyEphemeralBlockDevice {
     /**
      * The path at which the device is exposed to created instances.
      * 
-     */
+    */
     public Optional<String> getDeviceName() {
         return Optional.ofNullable(this.deviceName);
     }
@@ -42,7 +42,7 @@ public final class AmiCopyEphemeralBlockDevice {
      * A name for the ephemeral device, of the form "ephemeralN" where
      * *N* is a volume number starting from zero.
      * 
-     */
+    */
     public Optional<String> getVirtualName() {
         return Optional.ofNullable(this.virtualName);
     }

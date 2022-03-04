@@ -25,7 +25,7 @@ public final class DependsOnDefinitionResponse {
     /**
      * Name of the kustomization to claim dependency on
      * 
-     */
+    */
     public Optional<String> getKustomizationName() {
         return Optional.ofNullable(this.kustomizationName);
     }

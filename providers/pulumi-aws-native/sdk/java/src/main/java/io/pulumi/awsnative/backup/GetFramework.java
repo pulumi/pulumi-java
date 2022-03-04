@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFramework {
-/**
- * Contains detailed information about a framework. Frameworks contain controls, which evaluate and report on your backup events and resources. Frameworks generate daily compliance results.
+    private GetFramework() {}
+    public interface BuilderApplicator {
+        public void apply(GetFrameworkArgs.Builder a);
+    }
+    private static GetFrameworkArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetFrameworkArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Contains detailed information about a framework. Frameworks contain controls, which evaluate and report on your backup events and resources. Frameworks generate daily compliance results.
  * 
- */
+     */
+    public static CompletableFuture<GetFrameworkResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Contains detailed information about a framework. Frameworks contain controls, which evaluate and report on your backup events and resources. Frameworks generate daily compliance results.
+     * 
+     */
     public static CompletableFuture<GetFrameworkResult> invokeAsync(GetFrameworkArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:backup:getFramework", TypeShape.of(GetFrameworkResult.class), args == null ? GetFrameworkArgs.Empty : args, Utilities.withVersion(options));
     }

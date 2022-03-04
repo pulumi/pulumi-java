@@ -39,21 +39,21 @@ public final class ContainerResourceMetricSource {
     /**
      * container is the name of the container in the pods of the scaling target
      * 
-     */
+    */
     public String getContainer() {
         return this.container;
     }
     /**
      * name is the name of the resource in question.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * target specifies the target value for the given metric
      * 
-     */
+    */
     public MetricTarget getTarget() {
         return this.target;
     }

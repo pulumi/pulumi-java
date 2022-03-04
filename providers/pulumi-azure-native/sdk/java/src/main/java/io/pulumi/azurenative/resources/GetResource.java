@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetResource {
-/**
- * Resource information.
+    private GetResource() {}
+    public interface BuilderApplicator {
+        public void apply(GetResourceArgs.Builder a);
+    }
+    private static GetResourceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetResourceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource information.
  * API Version: 2019-05-01.
  * 
- *
- * Resource information.
+     *
+     * Resource information.
  * 
- */
+     */
+    public static CompletableFuture<GetResourceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource information.
+     * API Version: 2019-05-01.
+     * 
+     *
+         * Resource information.
+     * 
+     */
     public static CompletableFuture<GetResourceResult> invokeAsync(GetResourceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:resources:getResource", TypeShape.of(GetResourceResult.class), args == null ? GetResourceArgs.Empty : args, Utilities.withVersion(options));
     }

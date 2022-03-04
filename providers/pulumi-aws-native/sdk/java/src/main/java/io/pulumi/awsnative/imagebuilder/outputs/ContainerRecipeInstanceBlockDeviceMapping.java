@@ -48,28 +48,28 @@ public final class ContainerRecipeInstanceBlockDeviceMapping {
     /**
      * The device to which these mappings apply.
      * 
-     */
+    */
     public Optional<String> getDeviceName() {
         return Optional.ofNullable(this.deviceName);
     }
     /**
      * Use to manage Amazon EBS-specific configuration for this mapping.
      * 
-     */
+    */
     public Optional<ContainerRecipeEbsInstanceBlockDeviceSpecification> getEbs() {
         return Optional.ofNullable(this.ebs);
     }
     /**
      * Use to remove a mapping from the parent image.
      * 
-     */
+    */
     public Optional<String> getNoDevice() {
         return Optional.ofNullable(this.noDevice);
     }
     /**
      * Use to manage instance ephemeral devices.
      * 
-     */
+    */
     public Optional<String> getVirtualName() {
         return Optional.ofNullable(this.virtualName);
     }

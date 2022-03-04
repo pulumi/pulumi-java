@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetKustoClusterDataSetMapping {
-/**
- * A Kusto cluster data set mapping
+    private GetKustoClusterDataSetMapping() {}
+    public interface BuilderApplicator {
+        public void apply(GetKustoClusterDataSetMappingArgs.Builder a);
+    }
+    private static GetKustoClusterDataSetMappingArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetKustoClusterDataSetMappingArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A Kusto cluster data set mapping
  * API Version: 2020-09-01.
  * 
- *
- * A Kusto cluster data set mapping
+     *
+     * A Kusto cluster data set mapping
  * 
- */
+     */
+    public static CompletableFuture<GetKustoClusterDataSetMappingResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A Kusto cluster data set mapping
+     * API Version: 2020-09-01.
+     * 
+     *
+         * A Kusto cluster data set mapping
+     * 
+     */
     public static CompletableFuture<GetKustoClusterDataSetMappingResult> invokeAsync(GetKustoClusterDataSetMappingArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datashare:getKustoClusterDataSetMapping", TypeShape.of(GetKustoClusterDataSetMappingResult.class), args == null ? GetKustoClusterDataSetMappingArgs.Empty : args, Utilities.withVersion(options));
     }

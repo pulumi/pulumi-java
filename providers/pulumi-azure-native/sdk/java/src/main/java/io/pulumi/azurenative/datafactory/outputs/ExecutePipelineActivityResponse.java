@@ -83,35 +83,35 @@ public final class ExecutePipelineActivityResponse {
     /**
      * Activity depends on condition.
      * 
-     */
+    */
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Activity description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Activity name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Pipeline parameters.
      * 
-     */
+    */
     public Map<String,Object> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Pipeline reference.
      * 
-     */
+    */
     public PipelineReferenceResponse getPipeline() {
         return this.pipeline;
     }
@@ -119,21 +119,21 @@ public final class ExecutePipelineActivityResponse {
      * Type of activity.
      * Expected value is 'ExecutePipeline'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Activity user properties.
      * 
-     */
+    */
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
     /**
      * Defines whether activity execution will wait for the dependent pipeline execution to finish. Default is false.
      * 
-     */
+    */
     public Optional<Boolean> getWaitOnCompletion() {
         return Optional.ofNullable(this.waitOnCompletion);
     }

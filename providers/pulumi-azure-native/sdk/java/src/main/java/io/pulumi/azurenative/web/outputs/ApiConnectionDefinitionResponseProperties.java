@@ -86,56 +86,56 @@ public final class ApiConnectionDefinitionResponseProperties {
     /**
      * Timestamp of last connection change
      * 
-     */
+    */
     public Optional<String> getChangedTime() {
         return Optional.ofNullable(this.changedTime);
     }
     /**
      * Timestamp of the connection creation
      * 
-     */
+    */
     public Optional<String> getCreatedTime() {
         return Optional.ofNullable(this.createdTime);
     }
     /**
      * Dictionary of custom parameter values
      * 
-     */
+    */
     public Map<String,String> getCustomParameterValues() {
         return this.customParameterValues == null ? Map.of() : this.customParameterValues;
     }
     /**
      * Display name
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * Dictionary of nonsecret parameter values
      * 
-     */
+    */
     public Map<String,String> getNonSecretParameterValues() {
         return this.nonSecretParameterValues == null ? Map.of() : this.nonSecretParameterValues;
     }
     /**
      * Dictionary of parameter values
      * 
-     */
+    */
     public Map<String,String> getParameterValues() {
         return this.parameterValues == null ? Map.of() : this.parameterValues;
     }
     /**
      * Status of the connection
      * 
-     */
+    */
     public List<ConnectionStatusDefinitionResponse> getStatuses() {
         return this.statuses == null ? List.of() : this.statuses;
     }
     /**
      * Links to test the API connection
      * 
-     */
+    */
     public List<ApiConnectionTestLinkResponse> getTestLinks() {
         return this.testLinks == null ? List.of() : this.testLinks;
     }

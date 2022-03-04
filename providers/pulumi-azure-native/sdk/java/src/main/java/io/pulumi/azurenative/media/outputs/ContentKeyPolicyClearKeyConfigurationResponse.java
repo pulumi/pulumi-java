@@ -25,7 +25,7 @@ public final class ContentKeyPolicyClearKeyConfigurationResponse {
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration'.
      * 
-     */
+    */
     public String getOdataType() {
         return this.odataType;
     }

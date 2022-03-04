@@ -40,21 +40,21 @@ public final class CommonFeatureSpecResponse {
     /**
      * Appdevexperience specific spec.
      * 
-     */
+    */
     public AppDevExperienceFeatureSpecResponse getAppdevexperience() {
         return this.appdevexperience;
     }
     /**
      * Cloud Audit Logging-specific spec.
      * 
-     */
+    */
     public CloudAuditLoggingFeatureSpecResponse getCloudauditlogging() {
         return this.cloudauditlogging;
     }
     /**
      * Multicluster Ingress-specific spec.
      * 
-     */
+    */
     public MultiClusterIngressFeatureSpecResponse getMulticlusteringress() {
         return this.multiclusteringress;
     }

@@ -42,21 +42,21 @@ public final class WebAclRuleAction {
     /**
      * Instructs AWS WAF to allow the web request. See Allow below for details.
      * 
-     */
+    */
     public Optional<WebAclRuleActionAllow> getAllow() {
         return Optional.ofNullable(this.allow);
     }
     /**
      * Instructs AWS WAF to block the web request. See Block below for details.
      * 
-     */
+    */
     public Optional<WebAclRuleActionBlock> getBlock() {
         return Optional.ofNullable(this.block);
     }
     /**
      * Instructs AWS WAF to count the web request and allow it. See Count below for details.
      * 
-     */
+    */
     public Optional<WebAclRuleActionCount> getCount() {
         return Optional.ofNullable(this.count);
     }

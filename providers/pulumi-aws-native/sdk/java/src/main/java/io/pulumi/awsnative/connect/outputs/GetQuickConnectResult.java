@@ -64,42 +64,42 @@ public final class GetQuickConnectResult {
     /**
      * The description of the quick connect.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The identifier of the Amazon Connect instance.
      * 
-     */
+    */
     public Optional<String> getInstanceArn() {
         return Optional.ofNullable(this.instanceArn);
     }
     /**
      * The name of the quick connect.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The Amazon Resource Name (ARN) for the quick connect.
      * 
-     */
+    */
     public Optional<String> getQuickConnectArn() {
         return Optional.ofNullable(this.quickConnectArn);
     }
     /**
      * Configuration settings for the quick connect.
      * 
-     */
+    */
     public Optional<QuickConnectConfig> getQuickConnectConfig() {
         return Optional.ofNullable(this.quickConnectConfig);
     }
     /**
      * One or more tags.
      * 
-     */
+    */
     public List<QuickConnectTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

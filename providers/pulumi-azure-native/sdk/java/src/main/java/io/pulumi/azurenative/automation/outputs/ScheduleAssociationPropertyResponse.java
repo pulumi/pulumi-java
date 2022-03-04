@@ -25,7 +25,7 @@ public final class ScheduleAssociationPropertyResponse {
     /**
      * Gets or sets the name of the Schedule.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

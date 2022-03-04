@@ -48,28 +48,28 @@ public final class WindowsPropertiesResponse {
     /**
      * KB numbers excluded from the software update configuration.
      * 
-     */
+    */
     public List<String> getExcludedKbNumbers() {
         return this.excludedKbNumbers == null ? List.of() : this.excludedKbNumbers;
     }
     /**
      * KB numbers included from the software update configuration.
      * 
-     */
+    */
     public List<String> getIncludedKbNumbers() {
         return this.includedKbNumbers == null ? List.of() : this.includedKbNumbers;
     }
     /**
      * Update classification included in the software update configuration. A comma separated string with required values
      * 
-     */
+    */
     public Optional<String> getIncludedUpdateClassifications() {
         return Optional.ofNullable(this.includedUpdateClassifications);
     }
     /**
      * Reboot setting for the software update configuration.
      * 
-     */
+    */
     public Optional<String> getRebootSetting() {
         return Optional.ofNullable(this.rebootSetting);
     }

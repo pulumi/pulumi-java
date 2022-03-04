@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3EventInputResponse {
     /**
      * Name of the event.
      * 
-     */
+    */
     public String getEvent() {
         return this.event;
     }

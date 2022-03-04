@@ -32,14 +32,14 @@ public final class InsightFiltersCreatedAtDateRange {
     /**
      * A date range unit for the date filter. Valid values: `DAYS`.
      * 
-     */
+    */
     public String getUnit() {
         return this.unit;
     }
     /**
      * A date range value for the date filter, provided as an Integer.
      * 
-     */
+    */
     public Integer getValue() {
         return this.value;
     }

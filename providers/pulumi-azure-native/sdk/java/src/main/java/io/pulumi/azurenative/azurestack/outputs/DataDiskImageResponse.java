@@ -32,14 +32,14 @@ public final class DataDiskImageResponse {
     /**
      * The LUN.
      * 
-     */
+    */
     public Integer getLun() {
         return this.lun;
     }
     /**
      * SAS key for source blob.
      * 
-     */
+    */
     public String getSourceBlobSasUri() {
         return this.sourceBlobSasUri;
     }

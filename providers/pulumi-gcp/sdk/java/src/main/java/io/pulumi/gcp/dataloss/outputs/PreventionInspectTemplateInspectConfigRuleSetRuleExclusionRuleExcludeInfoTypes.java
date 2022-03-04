@@ -26,7 +26,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
      * If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
      * Structure is documented below.
      * 
-     */
+    */
     public List<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesInfoType> getInfoTypes() {
         return this.infoTypes;
     }

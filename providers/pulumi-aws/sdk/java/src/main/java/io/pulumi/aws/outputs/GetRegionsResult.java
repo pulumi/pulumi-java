@@ -48,14 +48,14 @@ public final class GetRegionsResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Names of regions that meets the criteria.
      * 
-     */
+    */
     public List<String> getNames() {
         return this.names;
     }

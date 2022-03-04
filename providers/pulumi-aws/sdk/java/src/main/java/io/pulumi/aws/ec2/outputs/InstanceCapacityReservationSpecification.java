@@ -34,14 +34,14 @@ public final class InstanceCapacityReservationSpecification {
     /**
      * Indicates the instance's Capacity Reservation preferences. Can be `"open"` or `"none"`. (Default: `"open"`).
      * 
-     */
+    */
     public Optional<String> getCapacityReservationPreference() {
         return Optional.ofNullable(this.capacityReservationPreference);
     }
     /**
      * Information about the target Capacity Reservation. See Capacity Reservation Target below for more details.
      * 
-     */
+    */
     public Optional<InstanceCapacityReservationSpecificationCapacityReservationTarget> getCapacityReservationTarget() {
         return Optional.ofNullable(this.capacityReservationTarget);
     }

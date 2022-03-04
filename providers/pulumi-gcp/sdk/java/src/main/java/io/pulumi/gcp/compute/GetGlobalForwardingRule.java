@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGlobalForwardingRule {
-/**
- * Get a global forwarding rule within GCE from its name.
+    private GetGlobalForwardingRule() {}
+    public interface BuilderApplicator {
+        public void apply(GetGlobalForwardingRuleArgs.Builder a);
+    }
+    private static GetGlobalForwardingRuleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetGlobalForwardingRuleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Get a global forwarding rule within GCE from its name.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getGlobalForwardingRule.
+     *
+     * A collection of arguments for invoking getGlobalForwardingRule.
  * 
- *
- * A collection of values returned by getGlobalForwardingRule.
+     *
+     * A collection of values returned by getGlobalForwardingRule.
  * 
- */
+     */
+    public static CompletableFuture<GetGlobalForwardingRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Get a global forwarding rule within GCE from its name.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getGlobalForwardingRule.
+     * 
+     *
+         * A collection of values returned by getGlobalForwardingRule.
+     * 
+     */
     public static CompletableFuture<GetGlobalForwardingRuleResult> invokeAsync(GetGlobalForwardingRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getGlobalForwardingRule:getGlobalForwardingRule", TypeShape.of(GetGlobalForwardingRuleResult.class), args == null ? GetGlobalForwardingRuleArgs.Empty : args, Utilities.withVersion(options));
     }

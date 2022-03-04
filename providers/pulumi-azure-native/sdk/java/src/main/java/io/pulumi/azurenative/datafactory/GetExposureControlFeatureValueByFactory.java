@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetExposureControlFeatureValueByFactory {
-/**
- * The exposure control response.
+    private GetExposureControlFeatureValueByFactory() {}
+    public interface BuilderApplicator {
+        public void apply(GetExposureControlFeatureValueByFactoryArgs.Builder a);
+    }
+    private static GetExposureControlFeatureValueByFactoryArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetExposureControlFeatureValueByFactoryArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The exposure control response.
  * API Version: 2018-06-01.
  * 
- *
- * The exposure control response.
+     *
+     * The exposure control response.
  * 
- */
+     */
+    public static CompletableFuture<GetExposureControlFeatureValueByFactoryResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The exposure control response.
+     * API Version: 2018-06-01.
+     * 
+     *
+         * The exposure control response.
+     * 
+     */
     public static CompletableFuture<GetExposureControlFeatureValueByFactoryResult> invokeAsync(GetExposureControlFeatureValueByFactoryArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datafactory:getExposureControlFeatureValueByFactory", TypeShape.of(GetExposureControlFeatureValueByFactoryResult.class), args == null ? GetExposureControlFeatureValueByFactoryArgs.Empty : args, Utilities.withVersion(options));
     }

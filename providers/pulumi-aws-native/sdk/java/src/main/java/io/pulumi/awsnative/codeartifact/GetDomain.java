@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDomain {
-/**
- * The resource schema to create a CodeArtifact domain.
+    private GetDomain() {}
+    public interface BuilderApplicator {
+        public void apply(GetDomainArgs.Builder a);
+    }
+    private static GetDomainArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDomainArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The resource schema to create a CodeArtifact domain.
  * 
- */
+     */
+    public static CompletableFuture<GetDomainResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The resource schema to create a CodeArtifact domain.
+     * 
+     */
     public static CompletableFuture<GetDomainResult> invokeAsync(GetDomainArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:codeartifact:getDomain", TypeShape.of(GetDomainResult.class), args == null ? GetDomainArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -45,28 +45,28 @@ public final class GetJobCredentialResult {
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The credential user name.
      * 
-     */
+    */
     public String getUsername() {
         return this.username;
     }

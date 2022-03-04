@@ -74,42 +74,42 @@ public final class GetWebAppPrivateEndpointConnectionResult {
     /**
      * Resource Id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Private IPAddresses mapped to the remote private endpoint
      * 
-     */
+    */
     public List<String> getIpAddresses() {
         return this.ipAddresses == null ? List.of() : this.ipAddresses;
     }
     /**
      * Kind of resource.
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource Name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * PrivateEndpoint of a remote private endpoint connection
      * 
-     */
+    */
     public Optional<ArmIdWrapperResponse> getPrivateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
     /**
      * The state of a private link connection
      * 
-     */
+    */
     public Optional<PrivateLinkConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
@@ -119,7 +119,7 @@ public final class GetWebAppPrivateEndpointConnectionResult {
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

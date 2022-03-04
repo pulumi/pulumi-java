@@ -46,7 +46,7 @@ public final class RuntimeAccessConfig {
      * `https://cloud.google.com/vertex-ai/docs/workbench/reference/
      * rest/v1/projects.locations.runtimes#RuntimeAccessType`.
      * 
-     */
+    */
     public Optional<String> getAccessType() {
         return Optional.ofNullable(this.accessType);
     }
@@ -54,7 +54,7 @@ public final class RuntimeAccessConfig {
      * - 
      * The proxy endpoint that is used to access the runtime.
      * 
-     */
+    */
     public Optional<String> getProxyUri() {
         return Optional.ofNullable(this.proxyUri);
     }
@@ -62,7 +62,7 @@ public final class RuntimeAccessConfig {
      * The owner of this runtime after creation. Format: `alias@example.com`.
      * Currently supports one owner only.
      * 
-     */
+    */
     public Optional<String> getRuntimeOwner() {
         return Optional.ofNullable(this.runtimeOwner);
     }

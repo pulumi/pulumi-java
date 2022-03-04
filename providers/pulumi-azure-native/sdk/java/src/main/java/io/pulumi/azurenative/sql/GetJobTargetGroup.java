@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetJobTargetGroup {
-/**
- * A group of job targets.
+    private GetJobTargetGroup() {}
+    public interface BuilderApplicator {
+        public void apply(GetJobTargetGroupArgs.Builder a);
+    }
+    private static GetJobTargetGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetJobTargetGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A group of job targets.
  * API Version: 2020-11-01-preview.
  * 
- *
- * A group of job targets.
+     *
+     * A group of job targets.
  * 
- */
+     */
+    public static CompletableFuture<GetJobTargetGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A group of job targets.
+     * API Version: 2020-11-01-preview.
+     * 
+     *
+         * A group of job targets.
+     * 
+     */
     public static CompletableFuture<GetJobTargetGroupResult> invokeAsync(GetJobTargetGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getJobTargetGroup", TypeShape.of(GetJobTargetGroupResult.class), args == null ? GetJobTargetGroupArgs.Empty : args, Utilities.withVersion(options));
     }

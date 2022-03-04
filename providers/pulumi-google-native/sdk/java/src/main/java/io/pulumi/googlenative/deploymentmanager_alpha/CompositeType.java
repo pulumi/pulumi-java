@@ -127,6 +127,22 @@ public class CompositeType extends io.pulumi.resources.CustomResource {
         return this.templateContents;
     }
 
+    public interface BuilderApplicator {
+        public void apply(@Nullable CompositeTypeArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.deploymentmanager_alpha.CompositeTypeArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.deploymentmanager_alpha.CompositeTypeArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public CompositeType(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -68,7 +68,7 @@ public final class GetKMSCryptoKeyResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -87,7 +87,7 @@ public final class GetKMSCryptoKeyResult {
     /**
      * Defines the cryptographic capabilities of the key.
      * 
-     */
+    */
     public String getPurpose() {
         return this.purpose;
     }
@@ -96,7 +96,7 @@ public final class GetKMSCryptoKeyResult {
      * the primary. The first rotation will take place after the specified period. The rotation period has the format
      * of a decimal number with up to 9 fractional digits, followed by the letter s (seconds).
      * 
-     */
+    */
     public String getRotationPeriod() {
         return this.rotationPeriod;
     }

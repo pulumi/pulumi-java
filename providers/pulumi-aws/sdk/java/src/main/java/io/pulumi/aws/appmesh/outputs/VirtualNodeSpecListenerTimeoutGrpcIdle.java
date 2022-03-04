@@ -32,14 +32,14 @@ public final class VirtualNodeSpecListenerTimeoutGrpcIdle {
     /**
      * The unit of time. Valid values: `ms`, `s`.
      * 
-     */
+    */
     public String getUnit() {
         return this.unit;
     }
     /**
      * The number of time units. Minimum value of `0`.
      * 
-     */
+    */
     public Integer getValue() {
         return this.value;
     }

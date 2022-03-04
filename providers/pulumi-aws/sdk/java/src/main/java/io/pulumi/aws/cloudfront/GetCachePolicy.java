@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCachePolicy {
-/**
- * Use this data source to retrieve information about a CloudFront cache policy.
+    private GetCachePolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetCachePolicyArgs.Builder a);
+    }
+    private static GetCachePolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetCachePolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Use this data source to retrieve information about a CloudFront cache policy.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getCachePolicy.
+     *
+     * A collection of arguments for invoking getCachePolicy.
  * 
- *
- * A collection of values returned by getCachePolicy.
+     *
+     * A collection of values returned by getCachePolicy.
  * 
- */
+     */
+    public static CompletableFuture<GetCachePolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Use this data source to retrieve information about a CloudFront cache policy.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getCachePolicy.
+     * 
+     *
+         * A collection of values returned by getCachePolicy.
+     * 
+     */
     public static CompletableFuture<GetCachePolicyResult> invokeAsync(@Nullable GetCachePolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:cloudfront/getCachePolicy:getCachePolicy", TypeShape.of(GetCachePolicyResult.class), args == null ? GetCachePolicyArgs.Empty : args, Utilities.withVersion(options));
     }

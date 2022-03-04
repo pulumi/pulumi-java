@@ -96,7 +96,7 @@ public final class GetAFDCustomDomainResult {
     /**
      * Resource reference to the Azure DNS zone
      * 
-     */
+    */
     public Optional<ResourceReferenceResponse> getAzureDnsZone() {
         return Optional.ofNullable(this.azureDnsZone);
     }
@@ -106,63 +106,63 @@ public final class GetAFDCustomDomainResult {
     /**
      * Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step. DCV stands for DomainControlValidation.
      * 
-     */
+    */
     public String getDomainValidationState() {
         return this.domainValidationState;
     }
     /**
      * The host name of the domain. Must be a domain name.
      * 
-     */
+    */
     public String getHostName() {
         return this.hostName;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Provisioning status
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Read only system data
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The configuration specifying how to enable HTTPS for the domain - using AzureFrontDoor managed certificate or user's own certificate. If not specified, enabling ssl uses AzureFrontDoor managed certificate by default.
      * 
-     */
+    */
     public Optional<AFDDomainHttpsParametersResponse> getTlsSettings() {
         return Optional.ofNullable(this.tlsSettings);
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Values the customer needs to validate domain ownership
      * 
-     */
+    */
     public DomainValidationPropertiesResponse getValidationProperties() {
         return this.validationProperties;
     }

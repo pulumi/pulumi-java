@@ -41,14 +41,14 @@ public final class JobDatabaseOutput {
     /**
      * Database table name
      * 
-     */
+    */
     public Optional<JobDatabaseOutputDatabaseOutputMode> getDatabaseOutputMode() {
         return Optional.ofNullable(this.databaseOutputMode);
     }
     /**
      * Glue connection name
      * 
-     */
+    */
     public String getGlueConnectionName() {
         return this.glueConnectionName;
     }

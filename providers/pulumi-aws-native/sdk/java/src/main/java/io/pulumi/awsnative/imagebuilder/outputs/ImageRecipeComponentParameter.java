@@ -32,14 +32,14 @@ public final class ImageRecipeComponentParameter {
     /**
      * The name of the component parameter to set.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Sets the value for the named component parameter.
      * 
-     */
+    */
     public List<String> getValue() {
         return this.value;
     }

@@ -32,14 +32,14 @@ public final class CapacityReservationPropertiesResponse {
     /**
      * The last time Sku was updated.
      * 
-     */
+    */
     public String getLastSkuUpdate() {
         return this.lastSkuUpdate;
     }
     /**
      * Minimum CapacityReservation value in GB.
      * 
-     */
+    */
     public Double getMinCapacity() {
         return this.minCapacity;
     }

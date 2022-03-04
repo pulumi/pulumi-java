@@ -43,21 +43,21 @@ public final class MultiRegionAccessPointDetails {
     /**
      * The name of the Multi-Region Access Point.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Configuration block to manage the `PublicAccessBlock` configuration that you want to apply to this Multi-Region Access Point. You can enable the configuration options in any combination. See Public Access Block Configuration below for more details.
      * 
-     */
+    */
     public Optional<MultiRegionAccessPointDetailsPublicAccessBlock> getPublicAccessBlock() {
         return Optional.ofNullable(this.publicAccessBlock);
     }
     /**
      * The Region configuration block to specify the bucket associated with the Multi-Region Access Point. See Region Configuration below for more details.
      * 
-     */
+    */
     public List<MultiRegionAccessPointDetailsRegion> getRegions() {
         return this.regions;
     }

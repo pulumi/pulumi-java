@@ -64,35 +64,35 @@ public final class GetConfigurationResult {
     /**
      * Amazon Resource Name (ARN) of the configuration.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
     /**
      * Description of the configuration.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * List of Apache Kafka versions which can use this configuration.
      * 
-     */
+    */
     public List<String> getKafkaVersions() {
         return this.kafkaVersions;
     }
     /**
      * Latest revision of the configuration.
      * 
-     */
+    */
     public Integer getLatestRevision() {
         return this.latestRevision;
     }
@@ -102,7 +102,7 @@ public final class GetConfigurationResult {
     /**
      * Contents of the server.properties file.
      * 
-     */
+    */
     public String getServerProperties() {
         return this.serverProperties;
     }

@@ -23,7 +23,7 @@ public final class AutopilotResponse {
     /**
      * Enable Autopilot
      * 
-     */
+    */
     public Boolean getEnabled() {
         return this.enabled;
     }

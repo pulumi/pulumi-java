@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetStorageAccountCredential {
-/**
- * The storage account credential.
+    private GetStorageAccountCredential() {}
+    public interface BuilderApplicator {
+        public void apply(GetStorageAccountCredentialArgs.Builder a);
+    }
+    private static GetStorageAccountCredentialArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetStorageAccountCredentialArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The storage account credential.
  * API Version: 2017-06-01.
  * 
- *
- * The storage account credential.
+     *
+     * The storage account credential.
  * 
- */
+     */
+    public static CompletableFuture<GetStorageAccountCredentialResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The storage account credential.
+     * API Version: 2017-06-01.
+     * 
+     *
+         * The storage account credential.
+     * 
+     */
     public static CompletableFuture<GetStorageAccountCredentialResult> invokeAsync(GetStorageAccountCredentialArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storsimple:getStorageAccountCredential", TypeShape.of(GetStorageAccountCredentialResult.class), args == null ? GetStorageAccountCredentialArgs.Empty : args, Utilities.withVersion(options));
     }

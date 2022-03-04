@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
     /**
      * Knowledge documents to query from. Format: `projects//locations//knowledgeBases//documents/`. Currently, only one document is supported.
      * 
-     */
+    */
     public List<String> getDocuments() {
         return this.documents;
     }

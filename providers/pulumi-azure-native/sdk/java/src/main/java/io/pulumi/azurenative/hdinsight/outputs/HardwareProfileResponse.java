@@ -25,7 +25,7 @@ public final class HardwareProfileResponse {
     /**
      * The size of the VM
      * 
-     */
+    */
     public Optional<String> getVmSize() {
         return Optional.ofNullable(this.vmSize);
     }

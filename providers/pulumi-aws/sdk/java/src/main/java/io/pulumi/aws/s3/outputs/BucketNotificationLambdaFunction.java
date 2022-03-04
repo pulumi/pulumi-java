@@ -55,35 +55,35 @@ public final class BucketNotificationLambdaFunction {
     /**
      * [Event](http://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html#notification-how-to-event-types-and-destinations) for which to send notifications.
      * 
-     */
+    */
     public List<String> getEvents() {
         return this.events;
     }
     /**
      * Object key name prefix.
      * 
-     */
+    */
     public Optional<String> getFilterPrefix() {
         return Optional.ofNullable(this.filterPrefix);
     }
     /**
      * Object key name suffix.
      * 
-     */
+    */
     public Optional<String> getFilterSuffix() {
         return Optional.ofNullable(this.filterSuffix);
     }
     /**
      * Unique identifier for each of the notification configurations.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Lambda function ARN.
      * 
-     */
+    */
     public Optional<String> getLambdaFunctionArn() {
         return Optional.ofNullable(this.lambdaFunctionArn);
     }

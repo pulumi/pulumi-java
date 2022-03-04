@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInstanceIamPolicy {
-/**
- * Gets the access control policy for an instance resource. Returns an empty policy if an instance exists but does not have a policy set.
+    private GetInstanceIamPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetInstanceIamPolicyArgs.Builder a);
+    }
+    private static GetInstanceIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetInstanceIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the access control policy for an instance resource. Returns an empty policy if an instance exists but does not have a policy set.
  * 
- */
+     */
+    public static CompletableFuture<GetInstanceIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the access control policy for an instance resource. Returns an empty policy if an instance exists but does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetInstanceIamPolicyResult> invokeAsync(GetInstanceIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:bigtableadmin/v2:getInstanceIamPolicy", TypeShape.of(GetInstanceIamPolicyResult.class), args == null ? GetInstanceIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

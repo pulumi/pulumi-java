@@ -48,28 +48,28 @@ public final class FulfillmentGenericWebService {
     /**
      * The password for HTTP Basic authentication.
      * 
-     */
+    */
     public Optional<String> getPassword() {
         return Optional.ofNullable(this.password);
     }
     /**
      * The HTTP request headers to send together with fulfillment requests.
      * 
-     */
+    */
     public Map<String,String> getRequestHeaders() {
         return this.requestHeaders == null ? Map.of() : this.requestHeaders;
     }
     /**
      * The fulfillment URI for receiving POST requests. It must use https protocol.
      * 
-     */
+    */
     public String getUri() {
         return this.uri;
     }
     /**
      * The user name for HTTP Basic authentication.
      * 
-     */
+    */
     public Optional<String> getUsername() {
         return Optional.ofNullable(this.username);
     }

@@ -23,7 +23,7 @@ public final class ConnectorScaleInPolicy {
     /**
      * Specifies the CPU utilization percentage threshold at which connector scale in should trigger.
      * 
-     */
+    */
     public Integer getCpuUtilizationPercentage() {
         return this.cpuUtilizationPercentage;
     }

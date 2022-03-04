@@ -25,7 +25,7 @@ public final class PrivateEndpointResponse {
     /**
      * This is private endpoint resource created with Microsoft.Network resource provider.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }

@@ -54,14 +54,14 @@ public final class GetCostCategoryResult {
     /**
      * Cost category ARN
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The default value for the cost category
      * 
-     */
+    */
     public Optional<String> getDefaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
@@ -74,14 +74,14 @@ public final class GetCostCategoryResult {
     /**
      * JSON array format of Expression in Billing and Cost Management API
      * 
-     */
+    */
     public Optional<String> getRules() {
         return Optional.ofNullable(this.rules);
     }
     /**
      * Json array format of CostCategorySplitChargeRule in Billing and Cost Management API
      * 
-     */
+    */
     public Optional<String> getSplitChargeRules() {
         return Optional.ofNullable(this.splitChargeRules);
     }

@@ -34,14 +34,14 @@ public final class FirewallPolicyLogAnalyticsWorkspaceResponse {
     /**
      * Region to configure the Workspace.
      * 
-     */
+    */
     public Optional<String> getRegion() {
         return Optional.ofNullable(this.region);
     }
     /**
      * The workspace Id for Firewall Policy Insights.
      * 
-     */
+    */
     public Optional<SubResourceResponse> getWorkspaceId() {
         return Optional.ofNullable(this.workspaceId);
     }

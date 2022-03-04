@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBackupInstance {
-/**
- * BackupInstance Resource
+    private GetBackupInstance() {}
+    public interface BuilderApplicator {
+        public void apply(GetBackupInstanceArgs.Builder a);
+    }
+    private static GetBackupInstanceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetBackupInstanceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * BackupInstance Resource
  * API Version: 2021-01-01.
  * 
- *
- * BackupInstance Resource
+     *
+     * BackupInstance Resource
  * 
- */
+     */
+    public static CompletableFuture<GetBackupInstanceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * BackupInstance Resource
+     * API Version: 2021-01-01.
+     * 
+     *
+         * BackupInstance Resource
+     * 
+     */
     public static CompletableFuture<GetBackupInstanceResult> invokeAsync(GetBackupInstanceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:dataprotection:getBackupInstance", TypeShape.of(GetBackupInstanceResult.class), args == null ? GetBackupInstanceArgs.Empty : args, Utilities.withVersion(options));
     }

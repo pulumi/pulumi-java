@@ -34,14 +34,14 @@ public final class FlexibleAppVersionAutomaticScalingRequestUtilization {
     /**
      * Target number of concurrent requests.
      * 
-     */
+    */
     public Optional<Double> getTargetConcurrentRequests() {
         return Optional.ofNullable(this.targetConcurrentRequests);
     }
     /**
      * Target requests per second.
      * 
-     */
+    */
     public Optional<String> getTargetRequestCountPerSecond() {
         return Optional.ofNullable(this.targetRequestCountPerSecond);
     }

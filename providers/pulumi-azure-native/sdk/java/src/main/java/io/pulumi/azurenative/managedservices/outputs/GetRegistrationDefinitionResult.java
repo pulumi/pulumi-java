@@ -56,35 +56,35 @@ public final class GetRegistrationDefinitionResult {
     /**
      * Fully qualified path of the registration definition.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Name of the registration definition.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Plan details for the managed services.
      * 
-     */
+    */
     public Optional<PlanResponse> getPlan() {
         return Optional.ofNullable(this.plan);
     }
     /**
      * Properties of a registration definition.
      * 
-     */
+    */
     public RegistrationDefinitionPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * Type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

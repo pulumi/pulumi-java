@@ -35,14 +35,14 @@ public final class ListMonitorHostsResult {
     /**
      * Link to the next set of results, if any.
      * 
-     */
+    */
     public Optional<String> getNextLink() {
         return Optional.ofNullable(this.nextLink);
     }
     /**
      * Results of a list operation.
      * 
-     */
+    */
     public List<DatadogHostResponse> getValue() {
         return this.value == null ? List.of() : this.value;
     }

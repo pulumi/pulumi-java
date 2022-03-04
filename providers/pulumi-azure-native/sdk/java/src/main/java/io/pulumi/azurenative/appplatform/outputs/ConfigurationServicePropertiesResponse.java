@@ -51,28 +51,28 @@ public final class ConfigurationServicePropertiesResponse {
     /**
      * Collection of instances belong to Application Configuration Service.
      * 
-     */
+    */
     public List<ConfigurationServiceInstanceResponse> getInstances() {
         return this.instances;
     }
     /**
      * State of the Application Configuration Service.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The requested resource quantity for required CPU and Memory.
      * 
-     */
+    */
     public ConfigurationServiceResourceRequestsResponse getResourceRequests() {
         return this.resourceRequests;
     }
     /**
      * The settings of Application Configuration Service.
      * 
-     */
+    */
     public Optional<ConfigurationServiceSettingsResponse> getSettings() {
         return Optional.ofNullable(this.settings);
     }

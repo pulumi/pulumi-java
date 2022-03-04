@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSnapshotPolicy {
-/**
- * Snapshot policy information
+    private GetSnapshotPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetSnapshotPolicyArgs.Builder a);
+    }
+    private static GetSnapshotPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSnapshotPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Snapshot policy information
  * API Version: 2020-12-01.
  * 
- *
- * Snapshot policy information
+     *
+     * Snapshot policy information
  * 
- */
+     */
+    public static CompletableFuture<GetSnapshotPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Snapshot policy information
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Snapshot policy information
+     * 
+     */
     public static CompletableFuture<GetSnapshotPolicyResult> invokeAsync(GetSnapshotPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:netapp:getSnapshotPolicy", TypeShape.of(GetSnapshotPolicyResult.class), args == null ? GetSnapshotPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -36,14 +36,14 @@ public final class TriggerPipelineReferenceResponse {
     /**
      * Pipeline parameters.
      * 
-     */
+    */
     public Map<String,Object> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Pipeline reference.
      * 
-     */
+    */
     public Optional<PipelineReferenceResponse> getPipelineReference() {
         return Optional.ofNullable(this.pipelineReference);
     }

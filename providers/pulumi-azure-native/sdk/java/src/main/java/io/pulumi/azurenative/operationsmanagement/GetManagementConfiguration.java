@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetManagementConfiguration {
-/**
- * The container for solution.
+    private GetManagementConfiguration() {}
+    public interface BuilderApplicator {
+        public void apply(GetManagementConfigurationArgs.Builder a);
+    }
+    private static GetManagementConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetManagementConfigurationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The container for solution.
  * API Version: 2015-11-01-preview.
  * 
- *
- * The container for solution.
+     *
+     * The container for solution.
  * 
- */
+     */
+    public static CompletableFuture<GetManagementConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The container for solution.
+     * API Version: 2015-11-01-preview.
+     * 
+     *
+         * The container for solution.
+     * 
+     */
     public static CompletableFuture<GetManagementConfigurationResult> invokeAsync(GetManagementConfigurationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:operationsmanagement:getManagementConfiguration", TypeShape.of(GetManagementConfigurationResult.class), args == null ? GetManagementConfigurationArgs.Empty : args, Utilities.withVersion(options));
     }

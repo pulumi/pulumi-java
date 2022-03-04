@@ -34,14 +34,14 @@ public final class SchemaVersion {
     /**
      * Indicates if the latest version needs to be updated.
      * 
-     */
+    */
     public Optional<Boolean> getIsLatest() {
         return Optional.ofNullable(this.isLatest);
     }
     /**
      * Indicates the version number in the schema to update.
      * 
-     */
+    */
     public Optional<Integer> getVersionNumber() {
         return Optional.ofNullable(this.versionNumber);
     }

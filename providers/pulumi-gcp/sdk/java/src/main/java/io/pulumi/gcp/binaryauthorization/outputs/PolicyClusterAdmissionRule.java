@@ -56,7 +56,7 @@ public final class PolicyClusterAdmissionRule {
     /**
      * The identifier for this object. Format specified above.
      * 
-     */
+    */
     public String getCluster() {
         return this.cluster;
     }
@@ -64,7 +64,7 @@ public final class PolicyClusterAdmissionRule {
      * The action when a pod creation is denied by the admission rule.
      * Possible values are `ENFORCED_BLOCK_AND_AUDIT_LOG` and `DRYRUN_AUDIT_LOG_ONLY`.
      * 
-     */
+    */
     public String getEnforcementMode() {
         return this.enforcementMode;
     }
@@ -72,7 +72,7 @@ public final class PolicyClusterAdmissionRule {
      * How this admission rule will be evaluated.
      * Possible values are `ALWAYS_ALLOW`, `REQUIRE_ATTESTATION`, and `ALWAYS_DENY`.
      * 
-     */
+    */
     public String getEvaluationMode() {
         return this.evaluationMode;
     }
@@ -86,7 +86,7 @@ public final class PolicyClusterAdmissionRule {
      * Note: this field must be non-empty when the evaluation_mode field
      * specifies REQUIRE_ATTESTATION, otherwise it must be empty.
      * 
-     */
+    */
     public List<String> getRequireAttestationsBies() {
         return this.requireAttestationsBies == null ? List.of() : this.requireAttestationsBies;
     }

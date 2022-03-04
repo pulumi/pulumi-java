@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSecurityPolicy {
-/**
- * SecurityPolicy association for AzureFrontDoor profile
+    private GetSecurityPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetSecurityPolicyArgs.Builder a);
+    }
+    private static GetSecurityPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSecurityPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * SecurityPolicy association for AzureFrontDoor profile
  * API Version: 2020-09-01.
  * 
- *
- * SecurityPolicy association for AzureFrontDoor profile
+     *
+     * SecurityPolicy association for AzureFrontDoor profile
  * 
- */
+     */
+    public static CompletableFuture<GetSecurityPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * SecurityPolicy association for AzureFrontDoor profile
+     * API Version: 2020-09-01.
+     * 
+     *
+         * SecurityPolicy association for AzureFrontDoor profile
+     * 
+     */
     public static CompletableFuture<GetSecurityPolicyResult> invokeAsync(GetSecurityPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cdn:getSecurityPolicy", TypeShape.of(GetSecurityPolicyResult.class), args == null ? GetSecurityPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

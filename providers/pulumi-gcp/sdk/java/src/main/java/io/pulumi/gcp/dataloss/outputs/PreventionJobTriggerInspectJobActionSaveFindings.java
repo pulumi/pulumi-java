@@ -25,7 +25,7 @@ public final class PreventionJobTriggerInspectJobActionSaveFindings {
      * Information on where to store output
      * Structure is documented below.
      * 
-     */
+    */
     public PreventionJobTriggerInspectJobActionSaveFindingsOutputConfig getOutputConfig() {
         return this.outputConfig;
     }

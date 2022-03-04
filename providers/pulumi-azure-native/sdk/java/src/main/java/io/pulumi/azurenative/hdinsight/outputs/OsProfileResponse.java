@@ -25,7 +25,7 @@ public final class OsProfileResponse {
     /**
      * The Linux OS profile.
      * 
-     */
+    */
     public Optional<LinuxOperatingSystemProfileResponse> getLinuxOperatingSystemProfile() {
         return Optional.ofNullable(this.linuxOperatingSystemProfile);
     }

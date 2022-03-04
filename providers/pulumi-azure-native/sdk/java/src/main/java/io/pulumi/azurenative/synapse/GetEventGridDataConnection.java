@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEventGridDataConnection {
-/**
- * Class representing an Event Grid data connection.
+    private GetEventGridDataConnection() {}
+    public interface BuilderApplicator {
+        public void apply(GetEventGridDataConnectionArgs.Builder a);
+    }
+    private static GetEventGridDataConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetEventGridDataConnectionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Class representing an Event Grid data connection.
  * API Version: 2021-04-01-preview.
  * 
- *
- * Class representing an Event Grid data connection.
+     *
+     * Class representing an Event Grid data connection.
  * 
- */
+     */
+    public static CompletableFuture<GetEventGridDataConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Class representing an Event Grid data connection.
+     * API Version: 2021-04-01-preview.
+     * 
+     *
+         * Class representing an Event Grid data connection.
+     * 
+     */
     public static CompletableFuture<GetEventGridDataConnectionResult> invokeAsync(GetEventGridDataConnectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getEventGridDataConnection", TypeShape.of(GetEventGridDataConnectionResult.class), args == null ? GetEventGridDataConnectionArgs.Empty : args, Utilities.withVersion(options));
     }

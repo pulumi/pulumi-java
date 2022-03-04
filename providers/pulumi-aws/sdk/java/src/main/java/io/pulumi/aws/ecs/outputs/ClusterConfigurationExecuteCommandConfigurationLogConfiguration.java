@@ -55,35 +55,35 @@ public final class ClusterConfigurationExecuteCommandConfigurationLogConfigurati
     /**
      * Whether or not to enable encryption on the CloudWatch logs. If not specified, encryption will be disabled.
      * 
-     */
+    */
     public Optional<Boolean> getCloudWatchEncryptionEnabled() {
         return Optional.ofNullable(this.cloudWatchEncryptionEnabled);
     }
     /**
      * The name of the CloudWatch log group to send logs to.
      * 
-     */
+    */
     public Optional<String> getCloudWatchLogGroupName() {
         return Optional.ofNullable(this.cloudWatchLogGroupName);
     }
     /**
      * Whether or not to enable encryption on the logs sent to S3. If not specified, encryption will be disabled.
      * 
-     */
+    */
     public Optional<Boolean> getS3BucketEncryptionEnabled() {
         return Optional.ofNullable(this.s3BucketEncryptionEnabled);
     }
     /**
      * The name of the S3 bucket to send logs to.
      * 
-     */
+    */
     public Optional<String> getS3BucketName() {
         return Optional.ofNullable(this.s3BucketName);
     }
     /**
      * An optional folder in the S3 bucket to place logs in.
      * 
-     */
+    */
     public Optional<String> getS3KeyPrefix() {
         return Optional.ofNullable(this.s3KeyPrefix);
     }

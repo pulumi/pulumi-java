@@ -59,35 +59,35 @@ public final class BotSlotValueElicitationSetting {
     /**
      * A list of default values for a slot.
      * 
-     */
+    */
     public Optional<BotSlotDefaultValueSpecification> getDefaultValueSpecification() {
         return Optional.ofNullable(this.defaultValueSpecification);
     }
     /**
      * The prompt that Amazon Lex uses to elicit the slot value from the user.
      * 
-     */
+    */
     public Optional<BotPromptSpecification> getPromptSpecification() {
         return Optional.ofNullable(this.promptSpecification);
     }
     /**
      * If you know a specific pattern that users might respond to an Amazon Lex request for a slot value, you can provide those utterances to improve accuracy.
      * 
-     */
+    */
     public List<BotSampleUtterance> getSampleUtterances() {
         return this.sampleUtterances == null ? List.of() : this.sampleUtterances;
     }
     /**
      * Specifies whether the slot is required or optional.
      * 
-     */
+    */
     public BotSlotConstraint getSlotConstraint() {
         return this.slotConstraint;
     }
     /**
      * Specifies the prompts that Amazon Lex uses while a bot is waiting for customer input.
      * 
-     */
+    */
     public Optional<BotWaitAndContinueSpecification> getWaitAndContinueSpecification() {
         return Optional.ofNullable(this.waitAndContinueSpecification);
     }

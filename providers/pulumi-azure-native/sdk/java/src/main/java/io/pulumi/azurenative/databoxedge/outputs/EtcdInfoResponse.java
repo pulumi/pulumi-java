@@ -31,14 +31,14 @@ public final class EtcdInfoResponse {
     /**
      * Etcd type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Etcd version
      * 
-     */
+    */
     public String getVersion() {
         return this.version;
     }

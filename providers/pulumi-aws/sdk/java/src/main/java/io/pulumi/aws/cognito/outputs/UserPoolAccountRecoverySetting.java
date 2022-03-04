@@ -24,7 +24,7 @@ public final class UserPoolAccountRecoverySetting {
     /**
      * List of Account Recovery Options of the following structure:
      * 
-     */
+    */
     public List<UserPoolAccountRecoverySettingRecoveryMechanism> getRecoveryMechanisms() {
         return this.recoveryMechanisms;
     }

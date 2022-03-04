@@ -23,7 +23,7 @@ public final class PosixFilesystemResponse {
     /**
      * Root directory path to the filesystem.
      * 
-     */
+    */
     public String getRootDirectory() {
         return this.rootDirectory;
     }

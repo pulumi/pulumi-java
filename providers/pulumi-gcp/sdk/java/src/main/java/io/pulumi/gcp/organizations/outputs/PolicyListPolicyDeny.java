@@ -35,14 +35,14 @@ public final class PolicyListPolicyDeny {
     /**
      * The policy allows or denies all values.
      * 
-     */
+    */
     public Optional<Boolean> getAll() {
         return Optional.ofNullable(this.all);
     }
     /**
      * The policy can define specific values that are allowed or denied.
      * 
-     */
+    */
     public List<String> getValues() {
         return this.values == null ? List.of() : this.values;
     }

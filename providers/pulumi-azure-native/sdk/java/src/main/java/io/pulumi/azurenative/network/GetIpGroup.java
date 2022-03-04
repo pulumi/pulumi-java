@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIpGroup {
-/**
- * The IpGroups resource information.
+    private GetIpGroup() {}
+    public interface BuilderApplicator {
+        public void apply(GetIpGroupArgs.Builder a);
+    }
+    private static GetIpGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetIpGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The IpGroups resource information.
  * API Version: 2020-11-01.
  * 
- *
- * The IpGroups resource information.
+     *
+     * The IpGroups resource information.
  * 
- */
+     */
+    public static CompletableFuture<GetIpGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The IpGroups resource information.
+     * API Version: 2020-11-01.
+     * 
+     *
+         * The IpGroups resource information.
+     * 
+     */
     public static CompletableFuture<GetIpGroupResult> invokeAsync(GetIpGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getIpGroup", TypeShape.of(GetIpGroupResult.class), args == null ? GetIpGroupArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -25,7 +25,7 @@ public final class LinuxConfigurationResponse {
     /**
      * Specifies the ssh key configuration for a Linux OS.
      * 
-     */
+    */
     public Optional<SshConfigurationResponse> getSsh() {
         return Optional.ofNullable(this.ssh);
     }

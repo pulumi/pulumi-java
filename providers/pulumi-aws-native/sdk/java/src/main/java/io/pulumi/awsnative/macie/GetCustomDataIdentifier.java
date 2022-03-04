@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCustomDataIdentifier {
-/**
- * Macie CustomDataIdentifier resource schema
+    private GetCustomDataIdentifier() {}
+    public interface BuilderApplicator {
+        public void apply(GetCustomDataIdentifierArgs.Builder a);
+    }
+    private static GetCustomDataIdentifierArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetCustomDataIdentifierArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Macie CustomDataIdentifier resource schema
  * 
- */
+     */
+    public static CompletableFuture<GetCustomDataIdentifierResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Macie CustomDataIdentifier resource schema
+     * 
+     */
     public static CompletableFuture<GetCustomDataIdentifierResult> invokeAsync(GetCustomDataIdentifierArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:macie:getCustomDataIdentifier", TypeShape.of(GetCustomDataIdentifierResult.class), args == null ? GetCustomDataIdentifierArgs.Empty : args, Utilities.withVersion(options));
     }

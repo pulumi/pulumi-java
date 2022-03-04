@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetApis {
-/**
- * Provides details about multiple Amazon API Gateway Version 2 APIs.
+    private GetApis() {}
+    public interface BuilderApplicator {
+        public void apply(GetApisArgs.Builder a);
+    }
+    private static GetApisArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetApisArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Provides details about multiple Amazon API Gateway Version 2 APIs.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getApis.
+     *
+     * A collection of arguments for invoking getApis.
  * 
- *
- * A collection of values returned by getApis.
+     *
+     * A collection of values returned by getApis.
  * 
- */
+     */
+    public static CompletableFuture<GetApisResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Provides details about multiple Amazon API Gateway Version 2 APIs.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getApis.
+     * 
+     *
+         * A collection of values returned by getApis.
+     * 
+     */
     public static CompletableFuture<GetApisResult> invokeAsync(@Nullable GetApisArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:apigatewayv2/getApis:getApis", TypeShape.of(GetApisResult.class), args == null ? GetApisArgs.Empty : args, Utilities.withVersion(options));
     }

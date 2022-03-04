@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetExtension {
-/**
- * Details of a particular extension in HCI Cluster.
+    private GetExtension() {}
+    public interface BuilderApplicator {
+        public void apply(GetExtensionArgs.Builder a);
+    }
+    private static GetExtensionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetExtensionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Details of a particular extension in HCI Cluster.
  * API Version: 2021-01-01-preview.
  * 
- *
- * Details of a particular extension in HCI Cluster.
+     *
+     * Details of a particular extension in HCI Cluster.
  * 
- */
+     */
+    public static CompletableFuture<GetExtensionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Details of a particular extension in HCI Cluster.
+     * API Version: 2021-01-01-preview.
+     * 
+     *
+         * Details of a particular extension in HCI Cluster.
+     * 
+     */
     public static CompletableFuture<GetExtensionResult> invokeAsync(GetExtensionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:azurestackhci:getExtension", TypeShape.of(GetExtensionResult.class), args == null ? GetExtensionArgs.Empty : args, Utilities.withVersion(options));
     }

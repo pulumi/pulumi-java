@@ -25,7 +25,7 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStrin
     /**
      * A list of item names (cookies, headers, or query strings).
      * 
-     */
+    */
     public List<String> getItems() {
         return this.items == null ? List.of() : this.items;
     }

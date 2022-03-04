@@ -40,21 +40,21 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     /**
      * A reference to the data element in the streaming input or the reference data source.
      * 
-     */
+    */
     public Optional<String> getMapping() {
         return Optional.ofNullable(this.mapping);
     }
     /**
      * The name of the column that is created in the in-application input stream or reference table.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The type of column created in the in-application input stream or reference table.
      * 
-     */
+    */
     public String getSqlType() {
         return this.sqlType;
     }

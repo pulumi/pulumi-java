@@ -24,7 +24,7 @@ public final class LatencyDistributionResponse {
     /**
      * Representative latency percentiles.
      * 
-     */
+    */
     public List<LatencyPercentileResponse> getLatencyPercentiles() {
         return this.latencyPercentiles;
     }

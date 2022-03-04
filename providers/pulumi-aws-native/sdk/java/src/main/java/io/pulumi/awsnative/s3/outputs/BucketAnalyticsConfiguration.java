@@ -42,14 +42,14 @@ public final class BucketAnalyticsConfiguration {
     /**
      * The ID that identifies the analytics configuration.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The prefix that an object must have to be included in the analytics results.
      * 
-     */
+    */
     public Optional<String> getPrefix() {
         return Optional.ofNullable(this.prefix);
     }

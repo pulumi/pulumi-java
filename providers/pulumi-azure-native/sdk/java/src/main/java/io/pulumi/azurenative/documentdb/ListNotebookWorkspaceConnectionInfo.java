@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListNotebookWorkspaceConnectionInfo {
-/**
- * The connection info for the given notebook workspace
+    private ListNotebookWorkspaceConnectionInfo() {}
+    public interface BuilderApplicator {
+        public void apply(ListNotebookWorkspaceConnectionInfoArgs.Builder a);
+    }
+    private static ListNotebookWorkspaceConnectionInfoArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListNotebookWorkspaceConnectionInfoArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The connection info for the given notebook workspace
  * API Version: 2021-03-15.
  * 
- *
- * The connection info for the given notebook workspace
+     *
+     * The connection info for the given notebook workspace
  * 
- */
+     */
+    public static CompletableFuture<ListNotebookWorkspaceConnectionInfoResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The connection info for the given notebook workspace
+     * API Version: 2021-03-15.
+     * 
+     *
+         * The connection info for the given notebook workspace
+     * 
+     */
     public static CompletableFuture<ListNotebookWorkspaceConnectionInfoResult> invokeAsync(ListNotebookWorkspaceConnectionInfoArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:documentdb:listNotebookWorkspaceConnectionInfo", TypeShape.of(ListNotebookWorkspaceConnectionInfoResult.class), args == null ? ListNotebookWorkspaceConnectionInfoArgs.Empty : args, Utilities.withVersion(options));
     }

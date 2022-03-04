@@ -41,21 +41,21 @@ public final class ListWebAppHostKeysSlotResult {
     /**
      * Host level function keys.
      * 
-     */
+    */
     public Map<String,String> getFunctionKeys() {
         return this.functionKeys == null ? Map.of() : this.functionKeys;
     }
     /**
      * Secret key.
      * 
-     */
+    */
     public Optional<String> getMasterKey() {
         return Optional.ofNullable(this.masterKey);
     }
     /**
      * System keys.
      * 
-     */
+    */
     public Map<String,String> getSystemKeys() {
         return this.systemKeys == null ? Map.of() : this.systemKeys;
     }

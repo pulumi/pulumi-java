@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListGatewayKeys {
-/**
- * Gateway authentication keys.
+    private ListGatewayKeys() {}
+    public interface BuilderApplicator {
+        public void apply(ListGatewayKeysArgs.Builder a);
+    }
+    private static ListGatewayKeysArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListGatewayKeysArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gateway authentication keys.
  * API Version: 2020-12-01.
  * 
- *
- * Gateway authentication keys.
+     *
+     * Gateway authentication keys.
  * 
- */
+     */
+    public static CompletableFuture<ListGatewayKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gateway authentication keys.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Gateway authentication keys.
+     * 
+     */
     public static CompletableFuture<ListGatewayKeysResult> invokeAsync(ListGatewayKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:listGatewayKeys", TypeShape.of(ListGatewayKeysResult.class), args == null ? ListGatewayKeysArgs.Empty : args, Utilities.withVersion(options));
     }

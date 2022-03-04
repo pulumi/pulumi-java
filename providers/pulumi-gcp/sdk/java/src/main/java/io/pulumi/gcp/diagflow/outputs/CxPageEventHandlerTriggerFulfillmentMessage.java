@@ -25,7 +25,7 @@ public final class CxPageEventHandlerTriggerFulfillmentMessage {
     /**
      * A collection of text responses.
      * 
-     */
+    */
     public Optional<CxPageEventHandlerTriggerFulfillmentMessageText> getText() {
         return Optional.ofNullable(this.text);
     }

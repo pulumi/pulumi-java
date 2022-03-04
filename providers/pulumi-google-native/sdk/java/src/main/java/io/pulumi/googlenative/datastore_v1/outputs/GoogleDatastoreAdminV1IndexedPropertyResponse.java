@@ -31,14 +31,14 @@ public final class GoogleDatastoreAdminV1IndexedPropertyResponse {
     /**
      * The indexed property's direction. Must not be DIRECTION_UNSPECIFIED.
      * 
-     */
+    */
     public String getDirection() {
         return this.direction;
     }
     /**
      * The property name to index.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }

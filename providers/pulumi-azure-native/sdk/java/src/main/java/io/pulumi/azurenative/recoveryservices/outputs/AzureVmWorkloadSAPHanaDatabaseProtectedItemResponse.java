@@ -214,147 +214,147 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemResponse {
     /**
      * Type of backup management for the backed up item.
      * 
-     */
+    */
     public Optional<String> getBackupManagementType() {
         return Optional.ofNullable(this.backupManagementType);
     }
     /**
      * Name of the backup set the backup item belongs to
      * 
-     */
+    */
     public Optional<String> getBackupSetName() {
         return Optional.ofNullable(this.backupSetName);
     }
     /**
      * Unique name of container
      * 
-     */
+    */
     public Optional<String> getContainerName() {
         return Optional.ofNullable(this.containerName);
     }
     /**
      * Create mode to indicate recovery of existing soft deleted data source or creation of new data source.
      * 
-     */
+    */
     public Optional<String> getCreateMode() {
         return Optional.ofNullable(this.createMode);
     }
     /**
      * Time for deferred deletion in UTC
      * 
-     */
+    */
     public Optional<String> getDeferredDeleteTimeInUTC() {
         return Optional.ofNullable(this.deferredDeleteTimeInUTC);
     }
     /**
      * Time remaining before the DS marked for deferred delete is permanently deleted
      * 
-     */
+    */
     public Optional<String> getDeferredDeleteTimeRemaining() {
         return Optional.ofNullable(this.deferredDeleteTimeRemaining);
     }
     /**
      * Additional information for this backup item.
      * 
-     */
+    */
     public Optional<AzureVmWorkloadProtectedItemExtendedInfoResponse> getExtendedInfo() {
         return Optional.ofNullable(this.extendedInfo);
     }
     /**
      * Friendly name of the DB represented by this backup item.
      * 
-     */
+    */
     public Optional<String> getFriendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
      * Flag to identify whether the deferred deleted DS is to be purged soon
      * 
-     */
+    */
     public Optional<Boolean> getIsDeferredDeleteScheduleUpcoming() {
         return Optional.ofNullable(this.isDeferredDeleteScheduleUpcoming);
     }
     /**
      * Flag to identify that deferred deleted DS is to be moved into Pause state
      * 
-     */
+    */
     public Optional<Boolean> getIsRehydrate() {
         return Optional.ofNullable(this.isRehydrate);
     }
     /**
      * Flag to identify whether the DS is scheduled for deferred delete
      * 
-     */
+    */
     public Optional<Boolean> getIsScheduledForDeferredDelete() {
         return Optional.ofNullable(this.isScheduledForDeferredDelete);
     }
     /**
      * Health details of different KPIs
      * 
-     */
+    */
     public Map<String,KPIResourceHealthDetailsResponse> getKpisHealths() {
         return this.kpisHealths == null ? Map.of() : this.kpisHealths;
     }
     /**
      * Error details in last backup
      * 
-     */
+    */
     public Optional<ErrorDetailResponse> getLastBackupErrorDetail() {
         return Optional.ofNullable(this.lastBackupErrorDetail);
     }
     /**
      * Last backup operation status. Possible values: Healthy, Unhealthy.
      * 
-     */
+    */
     public Optional<String> getLastBackupStatus() {
         return Optional.ofNullable(this.lastBackupStatus);
     }
     /**
      * Timestamp of the last backup operation on this backup item.
      * 
-     */
+    */
     public Optional<String> getLastBackupTime() {
         return Optional.ofNullable(this.lastBackupTime);
     }
     /**
      * Timestamp when the last (latest) backup copy was created for this backup item.
      * 
-     */
+    */
     public Optional<String> getLastRecoveryPoint() {
         return Optional.ofNullable(this.lastRecoveryPoint);
     }
     /**
      * Parent name of the DB such as Instance or Availability Group.
      * 
-     */
+    */
     public Optional<String> getParentName() {
         return Optional.ofNullable(this.parentName);
     }
     /**
      * Parent type of protected item, example: for a DB, standalone server or distributed
      * 
-     */
+    */
     public Optional<String> getParentType() {
         return Optional.ofNullable(this.parentType);
     }
     /**
      * ID of the backup policy with which this item is backed up.
      * 
-     */
+    */
     public Optional<String> getPolicyId() {
         return Optional.ofNullable(this.policyId);
     }
     /**
      * Data ID of the protected item.
      * 
-     */
+    */
     public Optional<String> getProtectedItemDataSourceId() {
         return Optional.ofNullable(this.protectedItemDataSourceId);
     }
     /**
      * Health status of the backup item, evaluated based on last heartbeat received
      * 
-     */
+    */
     public Optional<String> getProtectedItemHealthStatus() {
         return Optional.ofNullable(this.protectedItemHealthStatus);
     }
@@ -362,42 +362,42 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemResponse {
      * backup item type.
      * Expected value is 'AzureVmWorkloadSAPHanaDatabase'.
      * 
-     */
+    */
     public String getProtectedItemType() {
         return this.protectedItemType;
     }
     /**
      * Backup state of this backup item.
      * 
-     */
+    */
     public Optional<String> getProtectionState() {
         return Optional.ofNullable(this.protectionState);
     }
     /**
      * Backup status of this backup item.
      * 
-     */
+    */
     public Optional<String> getProtectionStatus() {
         return Optional.ofNullable(this.protectionStatus);
     }
     /**
      * Host/Cluster Name for instance or AG
      * 
-     */
+    */
     public Optional<String> getServerName() {
         return Optional.ofNullable(this.serverName);
     }
     /**
      * ARM ID of the resource to be backed up.
      * 
-     */
+    */
     public Optional<String> getSourceResourceId() {
         return Optional.ofNullable(this.sourceResourceId);
     }
     /**
      * Type of workload this item represents.
      * 
-     */
+    */
     public Optional<String> getWorkloadType() {
         return Optional.ofNullable(this.workloadType);
     }

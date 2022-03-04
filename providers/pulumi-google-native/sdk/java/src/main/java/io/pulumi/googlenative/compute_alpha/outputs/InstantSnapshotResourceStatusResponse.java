@@ -23,7 +23,7 @@ public final class InstantSnapshotResourceStatusResponse {
     /**
      * The storage size of this instant snapshot.
      * 
-     */
+    */
     public String getStorageSizeBytes() {
         return this.storageSizeBytes;
     }

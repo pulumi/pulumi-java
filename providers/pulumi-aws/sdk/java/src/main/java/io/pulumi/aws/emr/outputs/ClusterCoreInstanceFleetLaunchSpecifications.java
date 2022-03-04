@@ -34,14 +34,14 @@ public final class ClusterCoreInstanceFleetLaunchSpecifications {
     /**
      * Configuration block for on demand instances launch specifications.
      * 
-     */
+    */
     public List<ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecification> getOnDemandSpecifications() {
         return this.onDemandSpecifications == null ? List.of() : this.onDemandSpecifications;
     }
     /**
      * Configuration block for spot instances launch specifications.
      * 
-     */
+    */
     public List<ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecification> getSpotSpecifications() {
         return this.spotSpecifications == null ? List.of() : this.spotSpecifications;
     }

@@ -49,7 +49,7 @@ public final class UniformInt64RangePartitionSchemeDescriptionResponse {
     /**
      * The number of partitions.
      * 
-     */
+    */
     public Integer getCount() {
         return this.count;
     }
@@ -57,7 +57,7 @@ public final class UniformInt64RangePartitionSchemeDescriptionResponse {
      * String indicating the upper bound of the partition key range that
      * should be split between the partition ‘count’
      * 
-     */
+    */
     public String getHighKey() {
         return this.highKey;
     }
@@ -65,7 +65,7 @@ public final class UniformInt64RangePartitionSchemeDescriptionResponse {
      * String indicating the lower bound of the partition key range that
      * should be split between the partition ‘count’
      * 
-     */
+    */
     public String getLowKey() {
         return this.lowKey;
     }
@@ -73,7 +73,7 @@ public final class UniformInt64RangePartitionSchemeDescriptionResponse {
      * Enumerates the ways that a service can be partitioned.
      * Expected value is 'UniformInt64Range'.
      * 
-     */
+    */
     public String getPartitionScheme() {
         return this.partitionScheme;
     }

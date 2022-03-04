@@ -32,14 +32,14 @@ public final class GetEncryptionByDefaultResult {
     /**
      * Whether or not default EBS encryption is enabled. Returns as `true` or `false`.
      * 
-     */
+    */
     public Boolean getEnabled() {
         return this.enabled;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }

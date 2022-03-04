@@ -34,14 +34,14 @@ public final class GetInsightsResultsMetadataResponse {
     /**
      * information about the failed queries
      * 
-     */
+    */
     public List<GetInsightsErrorResponse> getErrors() {
         return this.errors == null ? List.of() : this.errors;
     }
     /**
      * the total items found for the insights request
      * 
-     */
+    */
     public Integer getTotalCount() {
         return this.totalCount;
     }

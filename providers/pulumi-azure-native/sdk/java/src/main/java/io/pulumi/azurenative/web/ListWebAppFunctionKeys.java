@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListWebAppFunctionKeys {
-/**
- * String dictionary resource.
+    private ListWebAppFunctionKeys() {}
+    public interface BuilderApplicator {
+        public void apply(ListWebAppFunctionKeysArgs.Builder a);
+    }
+    private static ListWebAppFunctionKeysArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListWebAppFunctionKeysArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * String dictionary resource.
  * API Version: 2020-12-01.
  * 
- *
- * String dictionary resource.
+     *
+     * String dictionary resource.
  * 
- */
+     */
+    public static CompletableFuture<ListWebAppFunctionKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * String dictionary resource.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * String dictionary resource.
+     * 
+     */
     public static CompletableFuture<ListWebAppFunctionKeysResult> invokeAsync(ListWebAppFunctionKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppFunctionKeys", TypeShape.of(ListWebAppFunctionKeysResult.class), args == null ? ListWebAppFunctionKeysArgs.Empty : args, Utilities.withVersion(options));
     }

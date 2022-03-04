@@ -23,7 +23,7 @@ public final class BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploa
     /**
      * Number of days after which Amazon S3 aborts an incomplete multipart upload.
      * 
-     */
+    */
     public Integer getDaysAfterInitiation() {
         return this.daysAfterInitiation;
     }

@@ -40,21 +40,21 @@ public final class EnvironmentVariableResponse {
     /**
      * The name of the environment variable.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The value of the secure environment variable.
      * 
-     */
+    */
     public Optional<String> getSecureValue() {
         return Optional.ofNullable(this.secureValue);
     }
     /**
      * The value of the environment variable.
      * 
-     */
+    */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }

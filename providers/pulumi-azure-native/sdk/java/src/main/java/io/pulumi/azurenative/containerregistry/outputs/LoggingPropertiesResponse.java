@@ -33,14 +33,14 @@ public final class LoggingPropertiesResponse {
     /**
      * Indicates whether audit logs are enabled on the connected registry.
      * 
-     */
+    */
     public Optional<String> getAuditLogStatus() {
         return Optional.ofNullable(this.auditLogStatus);
     }
     /**
      * The verbosity of logs persisted on the connected registry.
      * 
-     */
+    */
     public Optional<String> getLogLevel() {
         return Optional.ofNullable(this.logLevel);
     }

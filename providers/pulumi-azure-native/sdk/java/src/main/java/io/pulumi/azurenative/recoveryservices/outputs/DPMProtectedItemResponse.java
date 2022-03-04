@@ -148,98 +148,98 @@ public final class DPMProtectedItemResponse {
     /**
      * Backup Management server protecting this backup item
      * 
-     */
+    */
     public Optional<String> getBackupEngineName() {
         return Optional.ofNullable(this.backupEngineName);
     }
     /**
      * Type of backup management for the backed up item.
      * 
-     */
+    */
     public Optional<String> getBackupManagementType() {
         return Optional.ofNullable(this.backupManagementType);
     }
     /**
      * Name of the backup set the backup item belongs to
      * 
-     */
+    */
     public Optional<String> getBackupSetName() {
         return Optional.ofNullable(this.backupSetName);
     }
     /**
      * Unique name of container
      * 
-     */
+    */
     public Optional<String> getContainerName() {
         return Optional.ofNullable(this.containerName);
     }
     /**
      * Create mode to indicate recovery of existing soft deleted data source or creation of new data source.
      * 
-     */
+    */
     public Optional<String> getCreateMode() {
         return Optional.ofNullable(this.createMode);
     }
     /**
      * Time for deferred deletion in UTC
      * 
-     */
+    */
     public Optional<String> getDeferredDeleteTimeInUTC() {
         return Optional.ofNullable(this.deferredDeleteTimeInUTC);
     }
     /**
      * Time remaining before the DS marked for deferred delete is permanently deleted
      * 
-     */
+    */
     public Optional<String> getDeferredDeleteTimeRemaining() {
         return Optional.ofNullable(this.deferredDeleteTimeRemaining);
     }
     /**
      * Extended info of the backup item.
      * 
-     */
+    */
     public Optional<DPMProtectedItemExtendedInfoResponse> getExtendedInfo() {
         return Optional.ofNullable(this.extendedInfo);
     }
     /**
      * Friendly name of the managed item
      * 
-     */
+    */
     public Optional<String> getFriendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
      * Flag to identify whether the deferred deleted DS is to be purged soon
      * 
-     */
+    */
     public Optional<Boolean> getIsDeferredDeleteScheduleUpcoming() {
         return Optional.ofNullable(this.isDeferredDeleteScheduleUpcoming);
     }
     /**
      * Flag to identify that deferred deleted DS is to be moved into Pause state
      * 
-     */
+    */
     public Optional<Boolean> getIsRehydrate() {
         return Optional.ofNullable(this.isRehydrate);
     }
     /**
      * Flag to identify whether the DS is scheduled for deferred delete
      * 
-     */
+    */
     public Optional<Boolean> getIsScheduledForDeferredDelete() {
         return Optional.ofNullable(this.isScheduledForDeferredDelete);
     }
     /**
      * Timestamp when the last (latest) backup copy was created for this backup item.
      * 
-     */
+    */
     public Optional<String> getLastRecoveryPoint() {
         return Optional.ofNullable(this.lastRecoveryPoint);
     }
     /**
      * ID of the backup policy with which this item is backed up.
      * 
-     */
+    */
     public Optional<String> getPolicyId() {
         return Optional.ofNullable(this.policyId);
     }
@@ -247,28 +247,28 @@ public final class DPMProtectedItemResponse {
      * backup item type.
      * Expected value is 'DPMProtectedItem'.
      * 
-     */
+    */
     public String getProtectedItemType() {
         return this.protectedItemType;
     }
     /**
      * Protection state of the backup engine
      * 
-     */
+    */
     public Optional<String> getProtectionState() {
         return Optional.ofNullable(this.protectionState);
     }
     /**
      * ARM ID of the resource to be backed up.
      * 
-     */
+    */
     public Optional<String> getSourceResourceId() {
         return Optional.ofNullable(this.sourceResourceId);
     }
     /**
      * Type of workload this item represents.
      * 
-     */
+    */
     public Optional<String> getWorkloadType() {
         return Optional.ofNullable(this.workloadType);
     }

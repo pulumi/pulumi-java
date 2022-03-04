@@ -30,7 +30,7 @@ public final class PolicyAlternativeNameServerConfig {
      * are not available when an alternative name server is specified.
      * Structure is documented below.
      * 
-     */
+    */
     public List<PolicyAlternativeNameServerConfigTargetNameServer> getTargetNameServers() {
         return this.targetNameServers;
     }

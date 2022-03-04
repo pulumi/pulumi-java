@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListAgentPoolQueueStatus {
-/**
- * The QueueStatus of Agent Pool
+    private ListAgentPoolQueueStatus() {}
+    public interface BuilderApplicator {
+        public void apply(ListAgentPoolQueueStatusArgs.Builder a);
+    }
+    private static ListAgentPoolQueueStatusArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListAgentPoolQueueStatusArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The QueueStatus of Agent Pool
  * API Version: 2019-06-01-preview.
  * 
- *
- * The QueueStatus of Agent Pool
+     *
+     * The QueueStatus of Agent Pool
  * 
- */
+     */
+    public static CompletableFuture<ListAgentPoolQueueStatusResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The QueueStatus of Agent Pool
+     * API Version: 2019-06-01-preview.
+     * 
+     *
+         * The QueueStatus of Agent Pool
+     * 
+     */
     public static CompletableFuture<ListAgentPoolQueueStatusResult> invokeAsync(ListAgentPoolQueueStatusArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerregistry:listAgentPoolQueueStatus", TypeShape.of(ListAgentPoolQueueStatusResult.class), args == null ? ListAgentPoolQueueStatusArgs.Empty : args, Utilities.withVersion(options));
     }

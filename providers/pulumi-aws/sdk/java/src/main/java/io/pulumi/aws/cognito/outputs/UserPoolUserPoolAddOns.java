@@ -23,7 +23,7 @@ public final class UserPoolUserPoolAddOns {
     /**
      * Mode for advanced security, must be one of `OFF`, `AUDIT` or `ENFORCED`.
      * 
-     */
+    */
     public String getAdvancedSecurityMode() {
         return this.advancedSecurityMode;
     }

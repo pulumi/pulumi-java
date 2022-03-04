@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTargetProject {
-/**
- * Gets details of a single TargetProject. NOTE: TargetProject is a global resource; hence the only supported value for location is `global`.
+    private GetTargetProject() {}
+    public interface BuilderApplicator {
+        public void apply(GetTargetProjectArgs.Builder a);
+    }
+    private static GetTargetProjectArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTargetProjectArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets details of a single TargetProject. NOTE: TargetProject is a global resource; hence the only supported value for location is `global`.
  * 
- */
+     */
+    public static CompletableFuture<GetTargetProjectResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets details of a single TargetProject. NOTE: TargetProject is a global resource; hence the only supported value for location is `global`.
+     * 
+     */
     public static CompletableFuture<GetTargetProjectResult> invokeAsync(GetTargetProjectArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:vmmigration/v1alpha1:getTargetProject", TypeShape.of(GetTargetProjectResult.class), args == null ? GetTargetProjectArgs.Empty : args, Utilities.withVersion(options));
     }
