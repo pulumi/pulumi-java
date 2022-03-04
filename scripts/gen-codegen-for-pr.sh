@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+# When committing new PRs, this script builds and commits:
+# - the new output codegen tests
+# - each provider in providers(if it's added to make providers_all)
+
 set -euo pipefail
 
 git pull 2&> /dev/null || true
