@@ -7,7 +7,7 @@ import com.google.gson.JsonElement;
 import io.pulumi.core.Archive;
 import io.pulumi.core.AssetOrArchive;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -24,896 +24,896 @@ public final class Res1Args extends io.pulumi.resources.ResourceArgs {
     public static final Res1Args Empty = new Res1Args();
 
     @InputImport(name="p0")
-    private final @Nullable Boolean p0;
+      private final @Nullable Boolean p0;
 
     public Optional<Boolean> getP0() {
         return this.p0 == null ? Optional.empty() : Optional.ofNullable(this.p0);
     }
 
     @InputImport(name="p1")
-    private final @Nullable Boolean p1;
+      private final @Nullable Boolean p1;
 
     public Optional<Boolean> getP1() {
         return this.p1 == null ? Optional.empty() : Optional.ofNullable(this.p1);
     }
 
     @InputImport(name="p10")
-    private final @Nullable Input<Double> p10;
+      private final @Nullable Input<Double> p10;
 
     public Input<Double> getP10() {
         return this.p10 == null ? Input.empty() : this.p10;
     }
 
     @InputImport(name="p100")
-    private final @Nullable List<List<Integer>> p100;
+      private final @Nullable List<List<Integer>> p100;
 
     public List<List<Integer>> getP100() {
         return this.p100 == null ? List.of() : this.p100;
     }
 
     @InputImport(name="p101")
-    private final @Nullable List<List<Integer>> p101;
+      private final @Nullable List<List<Integer>> p101;
 
     public List<List<Integer>> getP101() {
         return this.p101 == null ? List.of() : this.p101;
     }
 
     @InputImport(name="p102")
-    private final @Nullable Input<List<List<Integer>>> p102;
+      private final @Nullable Input<List<List<Integer>>> p102;
 
     public Input<List<List<Integer>>> getP102() {
         return this.p102 == null ? Input.empty() : this.p102;
     }
 
     @InputImport(name="p103")
-    private final @Nullable Input<List<List<Integer>>> p103;
+      private final @Nullable Input<List<List<Integer>>> p103;
 
     public Input<List<List<Integer>>> getP103() {
         return this.p103 == null ? Input.empty() : this.p103;
     }
 
     @InputImport(name="p104")
-    private final @Nullable List<List<Double>> p104;
+      private final @Nullable List<List<Double>> p104;
 
     public List<List<Double>> getP104() {
         return this.p104 == null ? List.of() : this.p104;
     }
 
     @InputImport(name="p105")
-    private final @Nullable List<List<Double>> p105;
+      private final @Nullable List<List<Double>> p105;
 
     public List<List<Double>> getP105() {
         return this.p105 == null ? List.of() : this.p105;
     }
 
     @InputImport(name="p106")
-    private final @Nullable Input<List<List<Double>>> p106;
+      private final @Nullable Input<List<List<Double>>> p106;
 
     public Input<List<List<Double>>> getP106() {
         return this.p106 == null ? Input.empty() : this.p106;
     }
 
     @InputImport(name="p107")
-    private final @Nullable Input<List<List<Double>>> p107;
+      private final @Nullable Input<List<List<Double>>> p107;
 
     public Input<List<List<Double>>> getP107() {
         return this.p107 == null ? Input.empty() : this.p107;
     }
 
     @InputImport(name="p108")
-    private final @Nullable List<List<String>> p108;
+      private final @Nullable List<List<String>> p108;
 
     public List<List<String>> getP108() {
         return this.p108 == null ? List.of() : this.p108;
     }
 
     @InputImport(name="p109")
-    private final @Nullable List<List<String>> p109;
+      private final @Nullable List<List<String>> p109;
 
     public List<List<String>> getP109() {
         return this.p109 == null ? List.of() : this.p109;
     }
 
     @InputImport(name="p11")
-    private final @Nullable Input<Double> p11;
+      private final @Nullable Input<Double> p11;
 
     public Input<Double> getP11() {
         return this.p11 == null ? Input.empty() : this.p11;
     }
 
     @InputImport(name="p110")
-    private final @Nullable Input<List<List<String>>> p110;
+      private final @Nullable Input<List<List<String>>> p110;
 
     public Input<List<List<String>>> getP110() {
         return this.p110 == null ? Input.empty() : this.p110;
     }
 
     @InputImport(name="p111")
-    private final @Nullable Input<List<List<String>>> p111;
+      private final @Nullable Input<List<List<String>>> p111;
 
     public Input<List<List<String>>> getP111() {
         return this.p111 == null ? Input.empty() : this.p111;
     }
 
     @InputImport(name="p112")
-    private final @Nullable List<List<Object>> p112;
+      private final @Nullable List<List<Object>> p112;
 
     public List<List<Object>> getP112() {
         return this.p112 == null ? List.of() : this.p112;
     }
 
     @InputImport(name="p113")
-    private final @Nullable List<List<Object>> p113;
+      private final @Nullable List<List<Object>> p113;
 
     public List<List<Object>> getP113() {
         return this.p113 == null ? List.of() : this.p113;
     }
 
     @InputImport(name="p114")
-    private final @Nullable Input<List<List<Object>>> p114;
+      private final @Nullable Input<List<List<Object>>> p114;
 
     public Input<List<List<Object>>> getP114() {
         return this.p114 == null ? Input.empty() : this.p114;
     }
 
     @InputImport(name="p115")
-    private final @Nullable Input<List<List<Object>>> p115;
+      private final @Nullable Input<List<List<Object>>> p115;
 
     public Input<List<List<Object>>> getP115() {
         return this.p115 == null ? Input.empty() : this.p115;
     }
 
     @InputImport(name="p116")
-    private final @Nullable List<List<Archive>> p116;
+      private final @Nullable List<List<Archive>> p116;
 
     public List<List<Archive>> getP116() {
         return this.p116 == null ? List.of() : this.p116;
     }
 
     @InputImport(name="p117")
-    private final @Nullable List<List<Archive>> p117;
+      private final @Nullable List<List<Archive>> p117;
 
     public List<List<Archive>> getP117() {
         return this.p117 == null ? List.of() : this.p117;
     }
 
     @InputImport(name="p118")
-    private final @Nullable Input<List<List<Archive>>> p118;
+      private final @Nullable Input<List<List<Archive>>> p118;
 
     public Input<List<List<Archive>>> getP118() {
         return this.p118 == null ? Input.empty() : this.p118;
     }
 
     @InputImport(name="p119")
-    private final @Nullable Input<List<List<Archive>>> p119;
+      private final @Nullable Input<List<List<Archive>>> p119;
 
     public Input<List<List<Archive>>> getP119() {
         return this.p119 == null ? Input.empty() : this.p119;
     }
 
     @InputImport(name="p12")
-    private final @Nullable String p12;
+      private final @Nullable String p12;
 
     public Optional<String> getP12() {
         return this.p12 == null ? Optional.empty() : Optional.ofNullable(this.p12);
     }
 
     @InputImport(name="p120")
-    private final @Nullable List<List<AssetOrArchive>> p120;
+      private final @Nullable List<List<AssetOrArchive>> p120;
 
     public List<List<AssetOrArchive>> getP120() {
         return this.p120 == null ? List.of() : this.p120;
     }
 
     @InputImport(name="p121")
-    private final @Nullable List<List<AssetOrArchive>> p121;
+      private final @Nullable List<List<AssetOrArchive>> p121;
 
     public List<List<AssetOrArchive>> getP121() {
         return this.p121 == null ? List.of() : this.p121;
     }
 
     @InputImport(name="p122")
-    private final @Nullable Input<List<List<AssetOrArchive>>> p122;
+      private final @Nullable Input<List<List<AssetOrArchive>>> p122;
 
     public Input<List<List<AssetOrArchive>>> getP122() {
         return this.p122 == null ? Input.empty() : this.p122;
     }
 
     @InputImport(name="p123")
-    private final @Nullable Input<List<List<AssetOrArchive>>> p123;
+      private final @Nullable Input<List<List<AssetOrArchive>>> p123;
 
     public Input<List<List<AssetOrArchive>>> getP123() {
         return this.p123 == null ? Input.empty() : this.p123;
     }
 
     @InputImport(name="p124")
-    private final @Nullable List<List<JsonElement>> p124;
+      private final @Nullable List<List<JsonElement>> p124;
 
     public List<List<JsonElement>> getP124() {
         return this.p124 == null ? List.of() : this.p124;
     }
 
     @InputImport(name="p125")
-    private final @Nullable List<List<JsonElement>> p125;
+      private final @Nullable List<List<JsonElement>> p125;
 
     public List<List<JsonElement>> getP125() {
         return this.p125 == null ? List.of() : this.p125;
     }
 
     @InputImport(name="p126", required=true)
-    private final Input<List<List<JsonElement>>> p126;
+      private final Input<List<List<JsonElement>>> p126;
 
     public Input<List<List<JsonElement>>> getP126() {
         return this.p126;
     }
 
     @InputImport(name="p127")
-    private final @Nullable Input<List<List<JsonElement>>> p127;
+      private final @Nullable Input<List<List<JsonElement>>> p127;
 
     public Input<List<List<JsonElement>>> getP127() {
         return this.p127 == null ? Input.empty() : this.p127;
     }
 
     @InputImport(name="p13")
-    private final @Nullable String p13;
+      private final @Nullable String p13;
 
     public Optional<String> getP13() {
         return this.p13 == null ? Optional.empty() : Optional.ofNullable(this.p13);
     }
 
     @InputImport(name="p14")
-    private final @Nullable Input<String> p14;
+      private final @Nullable Input<String> p14;
 
     public Input<String> getP14() {
         return this.p14 == null ? Input.empty() : this.p14;
     }
 
     @InputImport(name="p15")
-    private final @Nullable Input<String> p15;
+      private final @Nullable Input<String> p15;
 
     public Input<String> getP15() {
         return this.p15 == null ? Input.empty() : this.p15;
     }
 
     @InputImport(name="p16")
-    private final @Nullable Object p16;
+      private final @Nullable Object p16;
 
     public Optional<Object> getP16() {
         return this.p16 == null ? Optional.empty() : Optional.ofNullable(this.p16);
     }
 
     @InputImport(name="p17")
-    private final @Nullable Object p17;
+      private final @Nullable Object p17;
 
     public Optional<Object> getP17() {
         return this.p17 == null ? Optional.empty() : Optional.ofNullable(this.p17);
     }
 
     @InputImport(name="p18")
-    private final @Nullable Input<Object> p18;
+      private final @Nullable Input<Object> p18;
 
     public Input<Object> getP18() {
         return this.p18 == null ? Input.empty() : this.p18;
     }
 
     @InputImport(name="p19")
-    private final @Nullable Input<Object> p19;
+      private final @Nullable Input<Object> p19;
 
     public Input<Object> getP19() {
         return this.p19 == null ? Input.empty() : this.p19;
     }
 
     @InputImport(name="p2")
-    private final @Nullable Input<Boolean> p2;
+      private final @Nullable Input<Boolean> p2;
 
     public Input<Boolean> getP2() {
         return this.p2 == null ? Input.empty() : this.p2;
     }
 
     @InputImport(name="p20")
-    private final @Nullable Archive p20;
+      private final @Nullable Archive p20;
 
     public Optional<Archive> getP20() {
         return this.p20 == null ? Optional.empty() : Optional.ofNullable(this.p20);
     }
 
     @InputImport(name="p21")
-    private final @Nullable Archive p21;
+      private final @Nullable Archive p21;
 
     public Optional<Archive> getP21() {
         return this.p21 == null ? Optional.empty() : Optional.ofNullable(this.p21);
     }
 
     @InputImport(name="p22")
-    private final @Nullable Input<Archive> p22;
+      private final @Nullable Input<Archive> p22;
 
     public Input<Archive> getP22() {
         return this.p22 == null ? Input.empty() : this.p22;
     }
 
     @InputImport(name="p23")
-    private final @Nullable Input<Archive> p23;
+      private final @Nullable Input<Archive> p23;
 
     public Input<Archive> getP23() {
         return this.p23 == null ? Input.empty() : this.p23;
     }
 
     @InputImport(name="p24")
-    private final @Nullable AssetOrArchive p24;
+      private final @Nullable AssetOrArchive p24;
 
     public Optional<AssetOrArchive> getP24() {
         return this.p24 == null ? Optional.empty() : Optional.ofNullable(this.p24);
     }
 
     @InputImport(name="p25")
-    private final @Nullable AssetOrArchive p25;
+      private final @Nullable AssetOrArchive p25;
 
     public Optional<AssetOrArchive> getP25() {
         return this.p25 == null ? Optional.empty() : Optional.ofNullable(this.p25);
     }
 
     @InputImport(name="p26")
-    private final @Nullable Input<AssetOrArchive> p26;
+      private final @Nullable Input<AssetOrArchive> p26;
 
     public Input<AssetOrArchive> getP26() {
         return this.p26 == null ? Input.empty() : this.p26;
     }
 
     @InputImport(name="p27")
-    private final @Nullable Input<AssetOrArchive> p27;
+      private final @Nullable Input<AssetOrArchive> p27;
 
     public Input<AssetOrArchive> getP27() {
         return this.p27 == null ? Input.empty() : this.p27;
     }
 
     @InputImport(name="p28")
-    private final @Nullable JsonElement p28;
+      private final @Nullable JsonElement p28;
 
     public Optional<JsonElement> getP28() {
         return this.p28 == null ? Optional.empty() : Optional.ofNullable(this.p28);
     }
 
     @InputImport(name="p29")
-    private final @Nullable JsonElement p29;
+      private final @Nullable JsonElement p29;
 
     public Optional<JsonElement> getP29() {
         return this.p29 == null ? Optional.empty() : Optional.ofNullable(this.p29);
     }
 
     @InputImport(name="p3")
-    private final @Nullable Input<Boolean> p3;
+      private final @Nullable Input<Boolean> p3;
 
     public Input<Boolean> getP3() {
         return this.p3 == null ? Input.empty() : this.p3;
     }
 
     @InputImport(name="p30")
-    private final @Nullable Input<JsonElement> p30;
+      private final @Nullable Input<JsonElement> p30;
 
     public Input<JsonElement> getP30() {
         return this.p30 == null ? Input.empty() : this.p30;
     }
 
     @InputImport(name="p31")
-    private final @Nullable Input<JsonElement> p31;
+      private final @Nullable Input<JsonElement> p31;
 
     public Input<JsonElement> getP31() {
         return this.p31 == null ? Input.empty() : this.p31;
     }
 
     @InputImport(name="p32")
-    private final @Nullable List<Boolean> p32;
+      private final @Nullable List<Boolean> p32;
 
     public List<Boolean> getP32() {
         return this.p32 == null ? List.of() : this.p32;
     }
 
     @InputImport(name="p33")
-    private final @Nullable List<Boolean> p33;
+      private final @Nullable List<Boolean> p33;
 
     public List<Boolean> getP33() {
         return this.p33 == null ? List.of() : this.p33;
     }
 
     @InputImport(name="p34")
-    private final @Nullable Input<List<Boolean>> p34;
+      private final @Nullable Input<List<Boolean>> p34;
 
     public Input<List<Boolean>> getP34() {
         return this.p34 == null ? Input.empty() : this.p34;
     }
 
     @InputImport(name="p35")
-    private final @Nullable Input<List<Boolean>> p35;
+      private final @Nullable Input<List<Boolean>> p35;
 
     public Input<List<Boolean>> getP35() {
         return this.p35 == null ? Input.empty() : this.p35;
     }
 
     @InputImport(name="p36")
-    private final @Nullable List<Integer> p36;
+      private final @Nullable List<Integer> p36;
 
     public List<Integer> getP36() {
         return this.p36 == null ? List.of() : this.p36;
     }
 
     @InputImport(name="p37")
-    private final @Nullable List<Integer> p37;
+      private final @Nullable List<Integer> p37;
 
     public List<Integer> getP37() {
         return this.p37 == null ? List.of() : this.p37;
     }
 
     @InputImport(name="p38")
-    private final @Nullable Input<List<Integer>> p38;
+      private final @Nullable Input<List<Integer>> p38;
 
     public Input<List<Integer>> getP38() {
         return this.p38 == null ? Input.empty() : this.p38;
     }
 
     @InputImport(name="p39")
-    private final @Nullable Input<List<Integer>> p39;
+      private final @Nullable Input<List<Integer>> p39;
 
     public Input<List<Integer>> getP39() {
         return this.p39 == null ? Input.empty() : this.p39;
     }
 
     @InputImport(name="p4")
-    private final @Nullable Integer p4;
+      private final @Nullable Integer p4;
 
     public Optional<Integer> getP4() {
         return this.p4 == null ? Optional.empty() : Optional.ofNullable(this.p4);
     }
 
     @InputImport(name="p40")
-    private final @Nullable List<Double> p40;
+      private final @Nullable List<Double> p40;
 
     public List<Double> getP40() {
         return this.p40 == null ? List.of() : this.p40;
     }
 
     @InputImport(name="p41")
-    private final @Nullable List<Double> p41;
+      private final @Nullable List<Double> p41;
 
     public List<Double> getP41() {
         return this.p41 == null ? List.of() : this.p41;
     }
 
     @InputImport(name="p42")
-    private final @Nullable Input<List<Double>> p42;
+      private final @Nullable Input<List<Double>> p42;
 
     public Input<List<Double>> getP42() {
         return this.p42 == null ? Input.empty() : this.p42;
     }
 
     @InputImport(name="p43")
-    private final @Nullable Input<List<Double>> p43;
+      private final @Nullable Input<List<Double>> p43;
 
     public Input<List<Double>> getP43() {
         return this.p43 == null ? Input.empty() : this.p43;
     }
 
     @InputImport(name="p44")
-    private final @Nullable List<String> p44;
+      private final @Nullable List<String> p44;
 
     public List<String> getP44() {
         return this.p44 == null ? List.of() : this.p44;
     }
 
     @InputImport(name="p45")
-    private final @Nullable List<String> p45;
+      private final @Nullable List<String> p45;
 
     public List<String> getP45() {
         return this.p45 == null ? List.of() : this.p45;
     }
 
     @InputImport(name="p46")
-    private final @Nullable Input<List<String>> p46;
+      private final @Nullable Input<List<String>> p46;
 
     public Input<List<String>> getP46() {
         return this.p46 == null ? Input.empty() : this.p46;
     }
 
     @InputImport(name="p47")
-    private final @Nullable Input<List<String>> p47;
+      private final @Nullable Input<List<String>> p47;
 
     public Input<List<String>> getP47() {
         return this.p47 == null ? Input.empty() : this.p47;
     }
 
     @InputImport(name="p48")
-    private final @Nullable List<Object> p48;
+      private final @Nullable List<Object> p48;
 
     public List<Object> getP48() {
         return this.p48 == null ? List.of() : this.p48;
     }
 
     @InputImport(name="p49")
-    private final @Nullable List<Object> p49;
+      private final @Nullable List<Object> p49;
 
     public List<Object> getP49() {
         return this.p49 == null ? List.of() : this.p49;
     }
 
     @InputImport(name="p5")
-    private final @Nullable Integer p5;
+      private final @Nullable Integer p5;
 
     public Optional<Integer> getP5() {
         return this.p5 == null ? Optional.empty() : Optional.ofNullable(this.p5);
     }
 
     @InputImport(name="p50")
-    private final @Nullable Input<List<Object>> p50;
+      private final @Nullable Input<List<Object>> p50;
 
     public Input<List<Object>> getP50() {
         return this.p50 == null ? Input.empty() : this.p50;
     }
 
     @InputImport(name="p51")
-    private final @Nullable Input<List<Object>> p51;
+      private final @Nullable Input<List<Object>> p51;
 
     public Input<List<Object>> getP51() {
         return this.p51 == null ? Input.empty() : this.p51;
     }
 
     @InputImport(name="p52")
-    private final @Nullable List<Archive> p52;
+      private final @Nullable List<Archive> p52;
 
     public List<Archive> getP52() {
         return this.p52 == null ? List.of() : this.p52;
     }
 
     @InputImport(name="p53")
-    private final @Nullable List<Archive> p53;
+      private final @Nullable List<Archive> p53;
 
     public List<Archive> getP53() {
         return this.p53 == null ? List.of() : this.p53;
     }
 
     @InputImport(name="p54")
-    private final @Nullable Input<List<Archive>> p54;
+      private final @Nullable Input<List<Archive>> p54;
 
     public Input<List<Archive>> getP54() {
         return this.p54 == null ? Input.empty() : this.p54;
     }
 
     @InputImport(name="p55")
-    private final @Nullable Input<List<Archive>> p55;
+      private final @Nullable Input<List<Archive>> p55;
 
     public Input<List<Archive>> getP55() {
         return this.p55 == null ? Input.empty() : this.p55;
     }
 
     @InputImport(name="p56")
-    private final @Nullable List<AssetOrArchive> p56;
+      private final @Nullable List<AssetOrArchive> p56;
 
     public List<AssetOrArchive> getP56() {
         return this.p56 == null ? List.of() : this.p56;
     }
 
     @InputImport(name="p57")
-    private final @Nullable List<AssetOrArchive> p57;
+      private final @Nullable List<AssetOrArchive> p57;
 
     public List<AssetOrArchive> getP57() {
         return this.p57 == null ? List.of() : this.p57;
     }
 
     @InputImport(name="p58")
-    private final @Nullable Input<List<AssetOrArchive>> p58;
+      private final @Nullable Input<List<AssetOrArchive>> p58;
 
     public Input<List<AssetOrArchive>> getP58() {
         return this.p58 == null ? Input.empty() : this.p58;
     }
 
     @InputImport(name="p59")
-    private final @Nullable Input<List<AssetOrArchive>> p59;
+      private final @Nullable Input<List<AssetOrArchive>> p59;
 
     public Input<List<AssetOrArchive>> getP59() {
         return this.p59 == null ? Input.empty() : this.p59;
     }
 
     @InputImport(name="p6")
-    private final @Nullable Input<Integer> p6;
+      private final @Nullable Input<Integer> p6;
 
     public Input<Integer> getP6() {
         return this.p6 == null ? Input.empty() : this.p6;
     }
 
     @InputImport(name="p60")
-    private final @Nullable List<JsonElement> p60;
+      private final @Nullable List<JsonElement> p60;
 
     public List<JsonElement> getP60() {
         return this.p60 == null ? List.of() : this.p60;
     }
 
     @InputImport(name="p61")
-    private final @Nullable List<JsonElement> p61;
+      private final @Nullable List<JsonElement> p61;
 
     public List<JsonElement> getP61() {
         return this.p61 == null ? List.of() : this.p61;
     }
 
     @InputImport(name="p62")
-    private final @Nullable Input<List<JsonElement>> p62;
+      private final @Nullable Input<List<JsonElement>> p62;
 
     public Input<List<JsonElement>> getP62() {
         return this.p62 == null ? Input.empty() : this.p62;
     }
 
     @InputImport(name="p63")
-    private final @Nullable Input<List<JsonElement>> p63;
+      private final @Nullable Input<List<JsonElement>> p63;
 
     public Input<List<JsonElement>> getP63() {
         return this.p63 == null ? Input.empty() : this.p63;
     }
 
     @InputImport(name="p64")
-    private final @Nullable List<Boolean> p64;
+      private final @Nullable List<Boolean> p64;
 
     public List<Boolean> getP64() {
         return this.p64 == null ? List.of() : this.p64;
     }
 
     @InputImport(name="p65")
-    private final @Nullable List<Boolean> p65;
+      private final @Nullable List<Boolean> p65;
 
     public List<Boolean> getP65() {
         return this.p65 == null ? List.of() : this.p65;
     }
 
     @InputImport(name="p66")
-    private final @Nullable Input<List<Boolean>> p66;
+      private final @Nullable Input<List<Boolean>> p66;
 
     public Input<List<Boolean>> getP66() {
         return this.p66 == null ? Input.empty() : this.p66;
     }
 
     @InputImport(name="p67")
-    private final @Nullable Input<List<Boolean>> p67;
+      private final @Nullable Input<List<Boolean>> p67;
 
     public Input<List<Boolean>> getP67() {
         return this.p67 == null ? Input.empty() : this.p67;
     }
 
     @InputImport(name="p68")
-    private final @Nullable List<Integer> p68;
+      private final @Nullable List<Integer> p68;
 
     public List<Integer> getP68() {
         return this.p68 == null ? List.of() : this.p68;
     }
 
     @InputImport(name="p69")
-    private final @Nullable List<Integer> p69;
+      private final @Nullable List<Integer> p69;
 
     public List<Integer> getP69() {
         return this.p69 == null ? List.of() : this.p69;
     }
 
     @InputImport(name="p7")
-    private final @Nullable Input<Integer> p7;
+      private final @Nullable Input<Integer> p7;
 
     public Input<Integer> getP7() {
         return this.p7 == null ? Input.empty() : this.p7;
     }
 
     @InputImport(name="p70")
-    private final @Nullable Input<List<Integer>> p70;
+      private final @Nullable Input<List<Integer>> p70;
 
     public Input<List<Integer>> getP70() {
         return this.p70 == null ? Input.empty() : this.p70;
     }
 
     @InputImport(name="p71")
-    private final @Nullable Input<List<Integer>> p71;
+      private final @Nullable Input<List<Integer>> p71;
 
     public Input<List<Integer>> getP71() {
         return this.p71 == null ? Input.empty() : this.p71;
     }
 
     @InputImport(name="p72")
-    private final @Nullable List<Double> p72;
+      private final @Nullable List<Double> p72;
 
     public List<Double> getP72() {
         return this.p72 == null ? List.of() : this.p72;
     }
 
     @InputImport(name="p73")
-    private final @Nullable List<Double> p73;
+      private final @Nullable List<Double> p73;
 
     public List<Double> getP73() {
         return this.p73 == null ? List.of() : this.p73;
     }
 
     @InputImport(name="p74")
-    private final @Nullable Input<List<Double>> p74;
+      private final @Nullable Input<List<Double>> p74;
 
     public Input<List<Double>> getP74() {
         return this.p74 == null ? Input.empty() : this.p74;
     }
 
     @InputImport(name="p75")
-    private final @Nullable Input<List<Double>> p75;
+      private final @Nullable Input<List<Double>> p75;
 
     public Input<List<Double>> getP75() {
         return this.p75 == null ? Input.empty() : this.p75;
     }
 
     @InputImport(name="p76")
-    private final @Nullable List<String> p76;
+      private final @Nullable List<String> p76;
 
     public List<String> getP76() {
         return this.p76 == null ? List.of() : this.p76;
     }
 
     @InputImport(name="p77")
-    private final @Nullable List<String> p77;
+      private final @Nullable List<String> p77;
 
     public List<String> getP77() {
         return this.p77 == null ? List.of() : this.p77;
     }
 
     @InputImport(name="p78")
-    private final @Nullable Input<List<String>> p78;
+      private final @Nullable Input<List<String>> p78;
 
     public Input<List<String>> getP78() {
         return this.p78 == null ? Input.empty() : this.p78;
     }
 
     @InputImport(name="p79")
-    private final @Nullable Input<List<String>> p79;
+      private final @Nullable Input<List<String>> p79;
 
     public Input<List<String>> getP79() {
         return this.p79 == null ? Input.empty() : this.p79;
     }
 
     @InputImport(name="p8")
-    private final @Nullable Double p8;
+      private final @Nullable Double p8;
 
     public Optional<Double> getP8() {
         return this.p8 == null ? Optional.empty() : Optional.ofNullable(this.p8);
     }
 
     @InputImport(name="p80")
-    private final @Nullable List<Object> p80;
+      private final @Nullable List<Object> p80;
 
     public List<Object> getP80() {
         return this.p80 == null ? List.of() : this.p80;
     }
 
     @InputImport(name="p81")
-    private final @Nullable List<Object> p81;
+      private final @Nullable List<Object> p81;
 
     public List<Object> getP81() {
         return this.p81 == null ? List.of() : this.p81;
     }
 
     @InputImport(name="p82")
-    private final @Nullable Input<List<Object>> p82;
+      private final @Nullable Input<List<Object>> p82;
 
     public Input<List<Object>> getP82() {
         return this.p82 == null ? Input.empty() : this.p82;
     }
 
     @InputImport(name="p83")
-    private final @Nullable Input<List<Object>> p83;
+      private final @Nullable Input<List<Object>> p83;
 
     public Input<List<Object>> getP83() {
         return this.p83 == null ? Input.empty() : this.p83;
     }
 
     @InputImport(name="p84")
-    private final @Nullable List<Archive> p84;
+      private final @Nullable List<Archive> p84;
 
     public List<Archive> getP84() {
         return this.p84 == null ? List.of() : this.p84;
     }
 
     @InputImport(name="p85")
-    private final @Nullable List<Archive> p85;
+      private final @Nullable List<Archive> p85;
 
     public List<Archive> getP85() {
         return this.p85 == null ? List.of() : this.p85;
     }
 
     @InputImport(name="p86")
-    private final @Nullable Input<List<Archive>> p86;
+      private final @Nullable Input<List<Archive>> p86;
 
     public Input<List<Archive>> getP86() {
         return this.p86 == null ? Input.empty() : this.p86;
     }
 
     @InputImport(name="p87")
-    private final @Nullable Input<List<Archive>> p87;
+      private final @Nullable Input<List<Archive>> p87;
 
     public Input<List<Archive>> getP87() {
         return this.p87 == null ? Input.empty() : this.p87;
     }
 
     @InputImport(name="p88")
-    private final @Nullable List<AssetOrArchive> p88;
+      private final @Nullable List<AssetOrArchive> p88;
 
     public List<AssetOrArchive> getP88() {
         return this.p88 == null ? List.of() : this.p88;
     }
 
     @InputImport(name="p89")
-    private final @Nullable List<AssetOrArchive> p89;
+      private final @Nullable List<AssetOrArchive> p89;
 
     public List<AssetOrArchive> getP89() {
         return this.p89 == null ? List.of() : this.p89;
     }
 
     @InputImport(name="p9")
-    private final @Nullable Double p9;
+      private final @Nullable Double p9;
 
     public Optional<Double> getP9() {
         return this.p9 == null ? Optional.empty() : Optional.ofNullable(this.p9);
     }
 
     @InputImport(name="p90")
-    private final @Nullable Input<List<AssetOrArchive>> p90;
+      private final @Nullable Input<List<AssetOrArchive>> p90;
 
     public Input<List<AssetOrArchive>> getP90() {
         return this.p90 == null ? Input.empty() : this.p90;
     }
 
     @InputImport(name="p91")
-    private final @Nullable Input<List<AssetOrArchive>> p91;
+      private final @Nullable Input<List<AssetOrArchive>> p91;
 
     public Input<List<AssetOrArchive>> getP91() {
         return this.p91 == null ? Input.empty() : this.p91;
     }
 
     @InputImport(name="p92")
-    private final @Nullable List<JsonElement> p92;
+      private final @Nullable List<JsonElement> p92;
 
     public List<JsonElement> getP92() {
         return this.p92 == null ? List.of() : this.p92;
     }
 
     @InputImport(name="p93")
-    private final @Nullable List<JsonElement> p93;
+      private final @Nullable List<JsonElement> p93;
 
     public List<JsonElement> getP93() {
         return this.p93 == null ? List.of() : this.p93;
     }
 
     @InputImport(name="p94")
-    private final @Nullable Input<List<JsonElement>> p94;
+      private final @Nullable Input<List<JsonElement>> p94;
 
     public Input<List<JsonElement>> getP94() {
         return this.p94 == null ? Input.empty() : this.p94;
     }
 
     @InputImport(name="p95")
-    private final @Nullable Input<List<JsonElement>> p95;
+      private final @Nullable Input<List<JsonElement>> p95;
 
     public Input<List<JsonElement>> getP95() {
         return this.p95 == null ? Input.empty() : this.p95;
     }
 
     @InputImport(name="p96")
-    private final @Nullable List<List<Boolean>> p96;
+      private final @Nullable List<List<Boolean>> p96;
 
     public List<List<Boolean>> getP96() {
         return this.p96 == null ? List.of() : this.p96;
     }
 
     @InputImport(name="p97")
-    private final @Nullable List<List<Boolean>> p97;
+      private final @Nullable List<List<Boolean>> p97;
 
     public List<List<Boolean>> getP97() {
         return this.p97 == null ? List.of() : this.p97;
     }
 
     @InputImport(name="p98")
-    private final @Nullable Input<List<List<Boolean>>> p98;
+      private final @Nullable Input<List<List<Boolean>>> p98;
 
     public Input<List<List<Boolean>>> getP98() {
         return this.p98 == null ? Input.empty() : this.p98;
     }
 
     @InputImport(name="p99")
-    private final @Nullable Input<List<List<Boolean>>> p99;
+      private final @Nullable Input<List<List<Boolean>>> p99;
 
     public Input<List<List<Boolean>>> getP99() {
         return this.p99 == null ? Input.empty() : this.p99;
@@ -2542,7 +2542,6 @@ public final class Res1Args extends io.pulumi.resources.ResourceArgs {
             this.p99 = Input.ofNullable(p99);
             return this;
         }
-
         public Res1Args build() {
             return new Res1Args(p0, p1, p10, p100, p101, p102, p103, p104, p105, p106, p107, p108, p109, p11, p110, p111, p112, p113, p114, p115, p116, p117, p118, p119, p12, p120, p121, p122, p123, p124, p125, p126, p127, p13, p14, p15, p16, p17, p18, p19, p2, p20, p21, p22, p23, p24, p25, p26, p27, p28, p29, p3, p30, p31, p32, p33, p34, p35, p36, p37, p38, p39, p4, p40, p41, p42, p43, p44, p45, p46, p47, p48, p49, p5, p50, p51, p52, p53, p54, p55, p56, p57, p58, p59, p6, p60, p61, p62, p63, p64, p65, p66, p67, p68, p69, p7, p70, p71, p72, p73, p74, p75, p76, p77, p78, p79, p8, p80, p81, p82, p83, p84, p85, p86, p87, p88, p89, p9, p90, p91, p92, p93, p94, p95, p96, p97, p98, p99);
         }
