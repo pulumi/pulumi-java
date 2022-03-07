@@ -60,7 +60,7 @@ class InputOutputDataTest {
                 .accumulate(InputOutputData.unknownSecret(), (o1, __) -> o1)
                 .build();
 
-        assertThat(result.getValueNullable()).isNotNull().isEqualTo("foo");
+        assertThat(result.getValueNullable()).isNull();
         assertThat(result.isKnown()).isFalse();
         assertThat(result.isSecret()).isTrue();
         assertThat(result.getResources()).isEmpty();
