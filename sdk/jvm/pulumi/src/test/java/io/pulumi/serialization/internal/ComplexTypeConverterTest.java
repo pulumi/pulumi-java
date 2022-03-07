@@ -2,20 +2,28 @@ package io.pulumi.serialization.internal;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
+import io.pulumi.Log;
 import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.deployment.internal.DeploymentTests;
+import io.pulumi.deployment.internal.InMemoryLogger;
 import io.pulumi.serialization.internal.ConverterTests.ContainerSize;
 import org.junit.jupiter.api.Test;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.logging.Level;
 
 import static io.pulumi.serialization.internal.ConverterTests.ContainerColor;
 import static io.pulumi.serialization.internal.ConverterTests.ContainerColor.Blue;
 import static io.pulumi.serialization.internal.ConverterTests.serializeToValueAsync;
+import static io.pulumi.test.internal.assertj.PulumiConditions.containsString;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class ComplexTypeConverterTest {
+
+    private final static Log log = DeploymentTests.mockLog();
 
     @OutputCustomType
     public static class ComplexType1 {
@@ -49,6 +57,7 @@ class ComplexTypeConverterTest {
 
     @Test
     void testTestComplexType1() {
+        var converter = new Converter(log);
         var serialized = serializeToValueAsync(ImmutableMap.<String, Object>builder()
                 .put("s", "str")
                 .put("b", true)
@@ -61,7 +70,7 @@ class ComplexTypeConverterTest {
                 .put("color", "blue")
                 .build()
         ).join();
-        var data = Converter.convertValue(
+        var data = converter.convertValue(
                 "ComplexTypeConverterTest", serialized, ComplexType1.class
         );
 
@@ -89,8 +98,7 @@ class ComplexTypeConverterTest {
         public ComplexType2(
                 ComplexType1 c,
                 ImmutableList<ComplexType1> c2List,
-                ImmutableMap<String, ComplexType1> c2Map)
-        {
+                ImmutableMap<String, ComplexType1> c2Map) {
             this.c = c;
             this.c2List = c2List;
             this.c2Map = c2Map;
@@ -99,6 +107,7 @@ class ComplexTypeConverterTest {
 
     @Test
     void testTestComplexType2() {
+        var converter = new Converter(log);
         var serialized = serializeToValueAsync(ImmutableMap.<String, Object>builder()
                 .put("c", ImmutableMap.<String, Object>builder()
                         .put("s", "str1")
@@ -133,14 +142,14 @@ class ComplexTypeConverterTest {
                                 .put("d", 3.3)
                                 .put("list", List.of(true, false))
                                 .put("map", Map.of("k", 3))
-                                .put("obj", Map.of( "o", 5.5))
+                                .put("obj", Map.of("o", 5.5))
                                 .put("size", 6)
                                 .put("color", "blue")
                                 .build()
                 ))
                 .build()
         ).join();
-        var data = Converter.convertValue(
+        var data = converter.convertValue(
                 "ComplexTypeConverterTest", serialized, ComplexType2.class
         ).getValueNullable();
 
@@ -185,5 +194,40 @@ class ComplexTypeConverterTest {
         assertThat((Map<String, Object>) value.obj).containsAllEntriesOf(Map.of("o", Optional.of(5.5))); // C# didn't have Optional, it has Nullable type.
         assertThat(value.size).isEqualTo(ContainerSize.SixInch);
         assertThat(value.color).isEqualTo(ContainerColor.Blue);
+    }
+
+    @OutputCustomType
+    public static class UnexpectedNullableComplexType {
+        public final String s;
+
+        @OutputCustomType.Constructor({"s"})
+        public UnexpectedNullableComplexType(String s) {
+            this.s = s;
+        }
+    }
+
+    @Test
+    void testUnexpectedNullableComplexType() {
+        var logger = InMemoryLogger.getLogger(Level.FINEST, "ComplexTypeConverterTest#testUnexpectedNullableComplexType");
+        var inMemoryLog = DeploymentTests.mockLog(logger);
+        var converter = new Converter(inMemoryLog);
+
+        var map = new HashMap<String, Object>();
+        map.put("s", null);
+        var serialized = serializeToValueAsync(map).join();
+
+        var data = converter.convertValue(
+                "ComplexTypeConverterTest", serialized, UnexpectedNullableComplexType.class
+        ).getValueNullable();
+
+        assertThat(data).isNotNull();
+
+        var value = data.s;
+        assertThat(value).isNull();
+
+        var messages = logger.getMessages();
+        assertThat(messages).haveAtLeastOne(containsString(
+                "parameter named 's' (nr 0 starting from 0) lacks @javax.annotation.Nullable annotation, so the value is required, but there is no value to deserialize."
+        ));
     }
 }

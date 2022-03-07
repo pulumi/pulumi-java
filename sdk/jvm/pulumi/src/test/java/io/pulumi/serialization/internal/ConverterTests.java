@@ -122,8 +122,9 @@ class ConverterTests {
         void testInvokeArgs() {
             var gson = new Gson();
             var args = new ComplexInvokeArgs1(new SimpleInvokeArgs1("value1"));
+            var converter = new Converter(log);
             serializeToValueAsync(args)
-                    .thenApply(value -> Converter.convertValue("ArgsConverterTests", value, JsonElement.class))
+                    .thenApply(value -> converter.convertValue("ArgsConverterTests", value, JsonElement.class))
                     .thenAccept(data ->
                             assertThat(data.getValueNullable())
                                     .isEqualTo(gson.fromJson("{\"v\"={\"s\"=\"value1\"}}", JsonElement.class))
@@ -134,8 +135,9 @@ class ConverterTests {
         void testResourceArgs() {
             var gson = new Gson();
             var args = new ComplexResourceArgs1(Input.of(new SimpleResourceArgs1(Input.of("value2"))));
+            var converter = new Converter(log);
             serializeToValueAsync(args)
-                    .thenApply(value -> Converter.convertValue("ArgsConverterTests", value, JsonElement.class))
+                    .thenApply(value -> converter.convertValue("ArgsConverterTests", value, JsonElement.class))
                     .thenAccept(data ->
                             assertThat(data.getValueNullable())
                                     .isEqualTo(gson.fromJson("{\"v\"={\"s\"=\"value2\"}}", JsonElement.class))
@@ -154,7 +156,8 @@ class ConverterTests {
         @Test
         void testTrue() {
             var trueValue = Value.newBuilder().setBoolValue(true).build();
-            var data = Converter.convertValue(
+            var converter = new Converter(log);
+            var data = converter.convertValue(
                     "BooleanConverterTests", trueValue, Boolean.class
             );
             assertThat(data.getValueNullable()).isNotNull().isTrue();
@@ -164,7 +167,8 @@ class ConverterTests {
         @Test
         void testFalse() {
             var falseValue = Value.newBuilder().setBoolValue(false).build();
-            var data = Converter.convertValue(
+            var converter = new Converter(log);
+            var data = converter.convertValue(
                     "BooleanConverterTests", falseValue, Boolean.class
             );
             assertThat(data.getValueNullable()).isNotNull().isFalse();
@@ -174,7 +178,8 @@ class ConverterTests {
         @Test
         void testTrueSecret() {
             var secretValue = createSecretValue(Value.newBuilder().setBoolValue(true).build());
-            var data = Converter.convertValue(
+            var converter = new Converter(log);
+            var data = converter.convertValue(
                     "BooleanConverterTests", secretValue, Boolean.class
             );
             assertThat(data.getValueNullable()).isNotNull().isTrue();
@@ -185,7 +190,8 @@ class ConverterTests {
         @Test
         void testFalseSecret() {
             var secretValue = createSecretValue(Value.newBuilder().setBoolValue(false).build());
-            var data = Converter.convertValue(
+            var converter = new Converter(log);
+            var data = converter.convertValue(
                     "BooleanConverterTests", secretValue, Boolean.class
             );
             assertThat(data.getValueNullable()).isNotNull().isFalse();
@@ -196,8 +202,9 @@ class ConverterTests {
         @Test
         void testNonBooleanThrows() {
             var wrongValue = Value.newBuilder().setStringValue("").build();
+            var converter = new Converter(log);
             assertThatThrownBy(
-                    () -> Converter.convertValue("BooleanConverterTests", wrongValue, Boolean.class)
+                    () -> converter.convertValue("BooleanConverterTests", wrongValue, Boolean.class)
             ).isInstanceOf(UnsupportedOperationException.class)
                     .hasMessageContaining("Expected 'java.lang.Boolean' but got 'java.lang.String' while deserializing");
         }
@@ -209,8 +216,9 @@ class ConverterTests {
                 .setOptions(new TestOptions(true))
                 .setMockGlobalInstance();
 
+            var converter = new Converter(log);
             var nullValue = Value.newBuilder().setNullValue(NullValue.NULL_VALUE).build();
-            var data = Converter.convertValue(
+            var data = converter.convertValue(
                     "BooleanConverterTests", nullValue, Boolean.class
             );
             assertThat(data.getValueNullable()).isNotNull().isFalse();
@@ -224,8 +232,9 @@ class ConverterTests {
                 .setOptions(new TestOptions(false))
                 .setMockGlobalInstance();
 
+            var converter = new Converter(log);
             var nullValue = Value.newBuilder().setNullValue(NullValue.NULL_VALUE).build();
-            var data = Converter.convertValue(
+            var data = converter.convertValue(
                     "BooleanConverterTests", nullValue, Boolean.class
             );
             assertThat(data.getValueNullable()).isNotNull().isFalse();
@@ -234,8 +243,9 @@ class ConverterTests {
 
         @Test
         void testUnknownProducesFalseUnknown() {
+            var converter = new Converter(log);
             var unknownValue = Value.newBuilder().setStringValue(Constants.UnknownValue).build();
-            var data = Converter.convertValue(
+            var data = converter.convertValue(
                     "BooleanConverterTests", unknownValue, Boolean.class
             );
             assertThat(data.getValueNullable()).isNotNull().isFalse();
@@ -244,9 +254,10 @@ class ConverterTests {
 
         @Test
         void testEmptyStringThrows() {
+            var converter = new Converter(log);
             var wrongValue = Value.newBuilder().setStringValue("").build();
             assertThatThrownBy(
-                    () -> Converter.convertValue("BooleanConverterTests", wrongValue, Boolean.class)
+                    () -> converter.convertValue("BooleanConverterTests", wrongValue, Boolean.class)
             ).isInstanceOf(UnsupportedOperationException.class)
                     .hasMessageContaining("Expected 'java.lang.Boolean' but got 'java.lang.String' while deserializing");
 
@@ -254,8 +265,9 @@ class ConverterTests {
 
         @Test
         void testOptionalTrueWrapped() {
+            var converter = new Converter(log);
             var trueValue = Value.newBuilder().setBoolValue(true).build();
-            var data = Converter.convertValue(
+            var data = converter.convertValue(
                     "BooleanConverterTests", trueValue, TypeShape.optional(Boolean.class)
             );
             assertThat(data.getValueNullable()).isNotNull().isPresent().contains(true);
@@ -264,8 +276,9 @@ class ConverterTests {
 
         @Test
         void testOptionalTrueUnwrapped() {
+            var converter = new Converter(log);
             var trueValue = Value.newBuilder().setBoolValue(true).build();
-            var data = Converter.convertValue(
+            var data = converter.convertValue(
                     "BooleanConverterTests", trueValue, Boolean.class
             );
             assertThat(data.getValueNullable()).isNotNull().isTrue();
@@ -274,8 +287,9 @@ class ConverterTests {
 
         @Test
         void testOptionalFalseWrapped() {
+            var converter = new Converter(log);
             var trueValue = Value.newBuilder().setBoolValue(false).build();
-            var data = Converter.convertValue(
+            var data = converter.convertValue(
                     "BooleanConverterTests", trueValue, TypeShape.optional(Boolean.class)
             );
             assertThat(data.getValueNullable()).isNotNull().isPresent().contains(false);
@@ -284,8 +298,9 @@ class ConverterTests {
 
         @Test
         void testOptionalFalseUnwrapped() {
+            var converter = new Converter(log);
             var trueValue = Value.newBuilder().setBoolValue(false).build();
-            var data = Converter.convertValue(
+            var data = converter.convertValue(
                     "BooleanConverterTests", trueValue, Boolean.class
             );
             assertThat(data.getValueNullable()).isNotNull().isFalse();
@@ -294,8 +309,9 @@ class ConverterTests {
 
         @Test
         void testNullToOptionalEmpty() {
+            var converter = new Converter(log);
             var nullValue = Value.newBuilder().setNullValue(NullValue.NULL_VALUE).build();
-            var data = Converter.convertValue(
+            var data = converter.convertValue(
                     "BooleanConverterTests", nullValue, TypeShape.optional(Boolean.class)
             );
             assertThat(data.getValueNullable()).isNotNull().isEmpty();
@@ -304,8 +320,9 @@ class ConverterTests {
 
         @Test
         void testNullToNullUnwrapped() {
+            var converter = new Converter(log);
             var nullValue = Value.newBuilder().setNullValue(NullValue.NULL_VALUE).build();
-            var data = Converter.convertValue(
+            var data = converter.convertValue(
                     "BooleanConverterTests", nullValue, Boolean.class
             );
             assertThat(data.getValueNullable()).isFalse();
@@ -319,8 +336,9 @@ class ConverterTests {
         @ParameterizedTest
         @EnumSource(ContainerSize.class)
         void testCustomIntEnum(ContainerSize input) {
+            var converter = new Converter(log);
             serializeToValueAsync(input)
-                    .thenApply(value -> Converter.convertValue("EnumConverterTests", value, ContainerSize.class))
+                    .thenApply(value -> converter.convertValue("EnumConverterTests", value, ContainerSize.class))
                     .thenAccept(data -> {
                         assertThat(data.getValueNullable()).isNotNull();
                         assertThat(input.asDouble()).isEqualTo(data.getValueNullable().asDouble());
@@ -331,8 +349,9 @@ class ConverterTests {
         @ParameterizedTest
         @EnumSource(JarSize.class)
         void testStandardIntEnum(JarSize input) {
+            var converter = new Converter(log);
             serializeToValueAsync(input)
-                    .thenApply(value -> Converter.convertValue("EnumConverterTests", value, JarSize.class))
+                    .thenApply(value -> converter.convertValue("EnumConverterTests", value, JarSize.class))
                     .thenAccept(data -> {
                         assertThat(data.getValueNullable()).isNotNull();
                         assertThat(input.asDouble()).isEqualTo(data.getValueNullable().asDouble());
@@ -343,8 +362,9 @@ class ConverterTests {
         @ParameterizedTest
         @EnumSource(ContainerColor.class)
         void testCustomStringEnum(ContainerColor input) {
+            var converter = new Converter(log);
             serializeToValueAsync(input)
-                    .thenApply(value -> Converter.convertValue("EnumConverterTests", value, ContainerColor.class))
+                    .thenApply(value -> converter.convertValue("EnumConverterTests", value, ContainerColor.class))
                     .thenAccept(data -> {
                         assertThat(data.getValueNullable()).isNotNull();
                         assertThat(input.getValue()).isEqualTo(data.getValueNullable().getValue());
@@ -355,8 +375,9 @@ class ConverterTests {
         @ParameterizedTest
         @EnumSource(ContainerBrightness.class)
         void testCustomDoubleEnum(ContainerBrightness input) {
+            var converter = new Converter(log);
             serializeToValueAsync(input)
-                    .thenApply(value -> Converter.convertValue("EnumConverterTests", value, ContainerBrightness.class))
+                    .thenApply(value -> converter.convertValue("EnumConverterTests", value, ContainerBrightness.class))
                     .thenAccept(data -> {
                         assertThat(data.getValueNullable()).isNotNull();
                         assertThat(input.getValue()).isEqualTo(data.getValueNullable().getValue());
@@ -377,7 +398,8 @@ class ConverterTests {
         @ParameterizedTest
         @MethodSource("io.pulumi.serialization.internal.ConverterTests#testConvertingNonconvertibleValuesThrows")
         void testConvertingNonconvertibleValuesThrows(Class<?> targetType, Value value) {
-            assertThatThrownBy(() -> Converter.convertValue("EnumConverterTests", value, targetType))
+            var converter = new Converter(log);
+            assertThatThrownBy(() -> converter.convertValue("EnumConverterTests", value, targetType))
                     .isInstanceOf(UnsupportedOperationException.class)
                     .hasMessageContaining("Expected value that match any of enum");
         }
@@ -388,7 +410,8 @@ class ConverterTests {
 
         @Test
         void testLeft() {
-            var data = Converter.convertValue(
+            var converter = new Converter(log);
+            var data = converter.convertValue(
                     "EitherConverterTests", Value.newBuilder().setNumberValue(1).build(), TypeShape.either(Integer.class, String.class));
             assertThat(data.isKnown()).isTrue();
             assertThat(data.getValueNullable()).isNotNull();
@@ -398,8 +421,9 @@ class ConverterTests {
 
         @Test
         void testRight() {
+            var converter = new Converter(log);
             var value = Value.newBuilder().setStringValue("foo").build();
-            var data = Converter.convertValue(
+            var data = converter.convertValue(
                     "EitherConverterTests", value, TypeShape.either(Integer.class, String.class));
             assertThat(data.isKnown()).isTrue();
             assertThat(data.getValueNullable()).isNotNull();
@@ -413,6 +437,7 @@ class ConverterTests {
 
         @Test
         public void ignoreInternalProperty() {
+            var converter = new Converter(log);
             var value = Value.newBuilder().setStructValue(
                     Struct.newBuilder()
                             .putFields("a", Value.newBuilder().setStringValue("b").build())
@@ -423,7 +448,7 @@ class ConverterTests {
                     .addParameter(String.class)
                     .addParameter(String.class)
                     .build();
-            var data = Converter.convertValue("InternalPropertyTests", value, shape);
+            var data = converter.convertValue("InternalPropertyTests", value, shape);
             assertThat(data.isKnown()).isTrue();
             //noinspection unchecked
             assertThat(data.getValueNullable()).isNotNull();
@@ -443,10 +468,11 @@ class ConverterTests {
         @ParameterizedTest
         @MethodSource("io.pulumi.serialization.internal.ConverterTests#testJsons")
         void testJsons(String json, String expected) {
+            var converter = new Converter(log);
             var element = gson.fromJson(json, JsonElement.class);
             serializeToValueAsync(element)
                     .thenAccept(serialized -> {
-                        var converted = Converter.convertValue("JsonConverterTests", serialized, JsonElement.class);
+                        var converted = converter.convertValue("JsonConverterTests", serialized, JsonElement.class);
                         assertThat(converted.getValueNullable()).isNotNull();
                         assertThat(converted.getValueNullable().toString()).isEqualTo(expected);
                     })
@@ -459,9 +485,10 @@ class ConverterTests {
 
         @Test
         void testEmptyList() {
+            var converter = new Converter(log);
             List<Boolean> emptyList = List.of();
             serializeToValueAsync(emptyList)
-                    .thenApply(value -> Converter.convertValue("ListConverterTests", value, TypeShape.list(Boolean.class)))
+                    .thenApply(value -> converter.convertValue("ListConverterTests", value, TypeShape.list(Boolean.class)))
                     .thenAccept(data -> {
                         assertThat(data.getValueNullable()).isNotNull().isEmpty();
                         assertThat(data.isKnown()).isTrue();
@@ -470,9 +497,10 @@ class ConverterTests {
 
         @Test
         void testListWithElement() {
+            var converter = new Converter(log);
             var listWithElement = List.of(true);
             serializeToValueAsync(listWithElement)
-                    .thenApply(value -> Converter.convertValue("ListConverterTests", value, TypeShape.list(Boolean.class)))
+                    .thenApply(value -> converter.convertValue("ListConverterTests", value, TypeShape.list(Boolean.class)))
                     .thenAccept(data -> {
                         assertThat(data.getValueNullable())
                                 .isNotNull()
@@ -484,9 +512,10 @@ class ConverterTests {
 
         @Test
         void testSecretListWithElement() {
+            var converter = new Converter(log);
             var secretListWithElement = Output.ofSecret(List.of(true));
             serializeToValueAsync(secretListWithElement)
-                    .thenApply(value -> Converter.convertValue("ListConverterTests", value, TypeShape.list(Boolean.class)))
+                    .thenApply(value -> converter.convertValue("ListConverterTests", value, TypeShape.list(Boolean.class)))
                     .thenAccept(data -> {
                         assertThat(data.getValueNullable())
                                 .isNotNull()
@@ -500,9 +529,10 @@ class ConverterTests {
 
         @Test
         void testListWithSecretElement() {
+            var converter = new Converter(log);
             var listWithSecretElement = List.of(Output.ofSecret(true));
             serializeToValueAsync(listWithSecretElement)
-                    .thenApply(value -> Converter.convertValue("ListConverterTests", value, TypeShape.list(Boolean.class)))
+                    .thenApply(value -> converter.convertValue("ListConverterTests", value, TypeShape.list(Boolean.class)))
                     .thenAccept(data -> {
                         assertThat(data.getValueNullable())
                                 .isNotNull()
@@ -515,9 +545,10 @@ class ConverterTests {
 
         @Test
         void testListWithUnknownElement() {
+            var converter = new Converter(log);
             var listWithUnknownElement = List.of(InputOutputTests.unknown(true));
             serializeToValueAsync(listWithUnknownElement)
-                    .thenApply(value -> Converter.convertValue("ListConverterTests", value, TypeShape.list(Boolean.class)))
+                    .thenApply(value -> converter.convertValue("ListConverterTests", value, TypeShape.list(Boolean.class)))
                     .thenAccept(data -> {
                         assertThat(data.getValueNullable())
                                 .isNotNull()
@@ -534,6 +565,7 @@ class ConverterTests {
 
         @Test
         void testSimpleCase() {
+            var converter = new Converter(log);
             var value = Value.newBuilder()
                     .setStructValue(
                             Struct.newBuilder()
@@ -553,7 +585,7 @@ class ConverterTests {
                                             ).build()
                                     ).build()
                     ).build();
-            var data = Converter.convertValue("", value, RecursiveType.class);
+            var data = converter.convertValue("", value, RecursiveType.class);
 
             assertThat(data.isKnown()).isTrue();
             assertThat(data.getValueNullable()).isNotNull();
