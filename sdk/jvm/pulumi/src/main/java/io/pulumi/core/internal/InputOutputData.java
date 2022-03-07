@@ -323,29 +323,19 @@ public final class InputOutputData<T> implements Copyable<InputOutputData<T>> {
 
     @InternalUse
     public static final class Builder<T> {
-        private ImmutableSet.Builder<Resource> resources;
-        @Nullable
-        private T value;
-        private boolean isKnown;
-        private boolean isSecret;
+        private InputOutputData<T> value;
 
         public Builder(@Nullable T start) {
-            this(ImmutableSet.builder(), start, true, false);
+            this(InputOutputData.of(start));
         }
 
-        public Builder(ImmutableSet.Builder<Resource> resources, @Nullable T value, boolean isKnown, boolean isSecret) {
-            this.resources = Objects.requireNonNull(resources);
-            this.value = value;
-            this.isKnown = isKnown;
-            this.isSecret = isSecret;
+        public Builder(InputOutputData<T> start) {
+            value = start;
         }
 
         @CanIgnoreReturnValue
         public <E> Builder<T> accumulate(InputOutputData<E> data, BiFunction<T, E, T> reduce) {
-            this.resources = this.resources.addAll(data.resources);
-            this.value = reduce.apply(this.value, data.value);
-            this.isKnown = this.isKnown && data.known;
-            this.isSecret = this.isSecret || data.secret;
+            value = value.combine(data, reduce);
             return this;
         }
 
@@ -356,20 +346,11 @@ public final class InputOutputData<T> implements Copyable<InputOutputData<T>> {
         }
 
         public <U, R> Builder<R> transform(InputOutputData<U> data, BiFunction<T, U, R> reduce) {
-            var resources = this.resources.addAll(data.resources);
-            var value = reduce.apply(this.value, data.value);
-            var isKnown = this.isKnown && data.known;
-            var isSecret = this.isSecret || data.secret;
-            return new Builder<>(resources, value, isKnown, isSecret);
+            return new Builder<>(value.combine(data, reduce));
         }
 
         public <R> InputOutputData<R> build(Function<T, R> valuesBuilder) {
-            return new InputOutputData<>(
-                    this.resources.build(),
-                    valuesBuilder.apply(this.value),
-                    this.isKnown,
-                    this.isSecret
-            );
+            return this.value.apply(valuesBuilder);
         }
 
         public InputOutputData<T> build() {
