@@ -3,14 +3,12 @@ package io.pulumi.core.internal;
 import com.google.common.base.MoreObjects;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
-import com.google.common.collect.Sets;
 import com.google.errorprone.annotations.CanIgnoreReturnValue;
 import io.pulumi.core.Input;
 import io.pulumi.core.InputOutput;
 import io.pulumi.core.Output;
 import io.pulumi.core.Tuples.*;
 import io.pulumi.core.internal.annotations.InternalUse;
-import io.pulumi.deployment.Deployment;
 import io.pulumi.resources.Resource;
 
 import javax.annotation.Nullable;
@@ -126,15 +124,16 @@ public final class InputOutputData<T> implements Copyable<InputOutputData<T>> {
         return ofNullable(this.resources, this.value, this.known, isSecret);
     }
 
-    public <U> InputOutputData<U> apply(Function<? super T,? extends U> function) {
+    public <U> InputOutputData<U> apply(Function<? super T, ? extends U> function) {
         if (known) {
             return ofNullable(resources, function.apply(value), true, secret);
         } else {
             return ofNullable(resources, null, false, secret);
         }
     }
-    public <U,V> InputOutputData<V> combine(InputOutputData<? extends U> other,
-                                            BiFunction<? super T,? super U,? extends V> fn) {
+
+    public <U, V> InputOutputData<V> combine(InputOutputData<? extends U> other,
+                                             BiFunction<? super T, ? super U, ? extends V> fn) {
         var combinedResources = ImmutableSet.<Resource>builder()
                 .addAll(this.resources)
                 .addAll(other.resources)
@@ -148,7 +147,7 @@ public final class InputOutputData<T> implements Copyable<InputOutputData<T>> {
         }
     }
 
-    public <U> InputOutputData<U> compose(Function<T,InputOutputData<U>> function) {
+    public <U> InputOutputData<U> compose(Function<T, InputOutputData<U>> function) {
         if (known) {
             return combine(function.apply(value), ($, x) -> x);
         } else {
@@ -160,7 +159,9 @@ public final class InputOutputData<T> implements Copyable<InputOutputData<T>> {
         return this.resources;
     }
 
-    public Optional<T> getValueOptional() { return Optional.ofNullable(this.value); }
+    public Optional<T> getValueOptional() {
+        return Optional.ofNullable(this.value);
+    }
 
     @Nullable
     public T getValueOrDefault(@Nullable T defaultValue) {
