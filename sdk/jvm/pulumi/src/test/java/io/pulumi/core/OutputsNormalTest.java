@@ -5,6 +5,8 @@ import io.pulumi.deployment.MocksTest;
 import io.pulumi.deployment.internal.TestOptions;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.atomic.AtomicInteger;
+
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -81,16 +83,16 @@ public class OutputsNormalTest {
     @Test
     void testApplyFutureTerminatesOnUnknown() {
         var o1 = InputOutputTests.unknown();
-        final var hasRun = List.of(false);
+        var runCounter = new AtomicInteger(0);
         var o2 = o1.applyFuture(a ->
                                 {
-                                    hasRun.set(0, true);
+                                    runCounter.incrementAndGet();
                                     return CompletableFuture.completedFuture("inner");
                                 });
         var data = InputOutputTests.waitFor(o2);
         assertThat(data.isKnown()).isFalse();
         assertThat(data.getValueNullable()).isNull();
-        assertThat(hasRun.get(0)).isFalse();
+        assertThat(runCounter.get()).isEqualTo(0);
     }
 
     @Test

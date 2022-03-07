@@ -125,17 +125,41 @@ public final class InputOutputData<T> implements Copyable<InputOutputData<T>> {
         return ofNullable(this.resources, this.value, this.known, isSecret);
     }
 
-    public <U> InputOutputData<U> apply(Function</* @Nullable */ T, U> function) {
-        return ofNullable(this.resources, function.apply(this.value), this.known, this.secret);
+    public <U> InputOutputData<U> apply(Function<? super T,? extends U> function) {
+        if (known) {
+            return ofNullable(resources, function.apply(value), true, secret);
+        } else {
+            return ofNullable(resources, null, false, secret);
+        }
+    }
+    public <U,V> InputOutputData<V> combine(InputOutputData<? extends U> other,
+                                            BiFunction<? super T,? super U,? extends V> fn) {
+        var combinedResources = ImmutableSet.<Resource>builder()
+                .addAll(this.resources)
+                .addAll(other.resources)
+                .build();
+        var combinedSecret = secret || other.isSecret();
+        if (known && other.known) {
+            var combinedValue = fn.apply(value, other.value);
+            return ofNullable(combinedResources, combinedValue, true, combinedSecret);
+        } else {
+            return ofNullable(combinedResources, null, false, combinedSecret);
+        }
+    }
+
+    public <U> InputOutputData<U> compose(Function<T,InputOutputData<U>> function) {
+        if (known) {
+            return combine(function.apply(value), ($, x) -> x);
+        } else {
+            return ofNullable(resources, null, false, secret);
+        }
     }
 
     public ImmutableSet<Resource> getResources() {
         return this.resources;
     }
 
-    public Optional<T> getValueOptional() {
-        return Optional.ofNullable(this.value);
-    }
+    public Optional<T> getValueOptional() { return Optional.ofNullable(this.value); }
 
     @Nullable
     public T getValueOrDefault(@Nullable T defaultValue) {
@@ -195,30 +219,21 @@ public final class InputOutputData<T> implements Copyable<InputOutputData<T>> {
                 .toString();
     }
 
+    public <V> CompletableFuture<InputOutputData<V>> traverseFuture(Function<T, CompletableFuture<V>> fn) {
+        if (known) {
+            return fn.apply(value).thenApply(x -> apply($ -> x));
+        } else {
+            return CompletableFuture.completedFuture(ofNullable(resources, null, false, secret));
+        }
+    }
+
     public static <T, U> CompletableFuture<InputOutputData<U>> apply(
             CompletableFuture<InputOutputData<T>> dataFuture,
-            Function</* @Nullable */ T, CompletableFuture<InputOutputData<U>>> func
-    ) {
-        return dataFuture.thenCompose((InputOutputData<T> data) -> {
-            ImmutableSet<Resource> resources = data.getResources();
-
-            // During previews only, perform the apply only if the engine was able to
-            // give us an actual value for this Output.
-            if (!data.isKnown() && Deployment.getInstance().isDryRun()) {
-                return CompletableFuture.completedFuture(
-                        InputOutputData.ofNullable(resources, null, false, data.isSecret())
-                );
-            }
-
-            CompletableFuture<InputOutputData<U>> inner = func.apply(data.value);
-            Objects.requireNonNull(inner);
-            return inner.thenApply(innerData -> InputOutputData.ofNullable(
-                    ImmutableSet.copyOf(Sets.union(resources, innerData.getResources())),
-                    innerData.getValueNullable(),
-                    data.known && innerData.known,
-                    data.secret || innerData.secret
-            ));
-        });
+            Function<T, CompletableFuture<InputOutputData<U>>> func) {
+        return dataFuture.thenCompose(inputOutputData ->
+                inputOutputData
+                        .traverseFuture(func)
+                        .thenApply(nested -> nested.compose(data -> data)));
     }
 
     @InternalUse
