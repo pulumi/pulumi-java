@@ -58,15 +58,15 @@ public class OutputsNormalTest {
     @Test
     void testApplyCanRunOnKnownUnknownOutputValue() {
         var o1 = Output.of(0);
-        var o2 = o1.apply(a -> InputOutputTests.unknown("inner"));
+        var o2 = o1.apply(a -> InputOutputTests.unknown());
         var data = InputOutputTests.waitFor(o2);
         assertThat(data.isKnown()).isFalse();
-        assertThat(data.getValueNullable()).isNotNull().isEqualTo("inner");
+        assertThat(data.getValueNullable()).isNull();
     }
 
     @Test
     void testApplyProducesKnownOnUnknown() {
-        var o1 = InputOutputTests.unknown(0);
+        var o1 = InputOutputTests.unknown();
         var o2 = o1.applyValue(a -> a + 1);
         var data = InputOutputTests.waitFor(o2);
         assertThat(data.isKnown()).isFalse();
@@ -133,11 +133,12 @@ public class OutputsNormalTest {
     @Test
     void testApplyPreservesSecretOnKnownUnknownOutput() {
         var o1 = Output.ofSecret(0);
-        var o2 = o1.apply(a -> InputOutputTests.unknown("inner"));
+        var o2 = o1.apply(a -> InputOutputTests.unknown());
         var data = InputOutputTests.waitFor(o2);
         assertThat(data.isKnown()).isFalse();
+        // TODO should unkown values ever be secret? What does Node do?
         assertThat(data.isSecret()).isTrue();
-        assertThat(data.getValueNullable()).isNotNull().isEqualTo("inner");
+        assertThat(data.getValueNullable()).isNull();
     }
 
     @Test

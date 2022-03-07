@@ -1,5 +1,8 @@
 package io.pulumi.core;
 
+
+import java.util.List;
+
 import io.pulumi.core.internal.Internal;
 import io.pulumi.deployment.internal.TestOptions;
 import org.junit.jupiter.api.AfterAll;
@@ -57,48 +60,57 @@ public class OutputsPreviewTest {
     }
 
     @Test
-    void testApplyCanRunOnKnownUnknownOutputValue() {
+    void testApplyFloatsUnknown() {
         var o1 = Output.of(0);
-        var o2 = o1.apply(a -> InputOutputTests.unknown("inner"));
-        var data = InputOutputTests.waitFor(o2);
-        assertThat(data.isKnown()).isFalse();
-        assertThat(data.getValueNullable()).isNotNull().isEqualTo("inner");
-    }
-
-    @Test
-    void testApplyProducesUnknownNullOnUnknown() {
-        var o1 = InputOutputTests.unknown(0);
-        var o2 = o1.applyValue(a -> a + 1);
+        var o2 = o1.apply(a -> InputOutputTests.unknown());
         var data = InputOutputTests.waitFor(o2);
         assertThat(data.isKnown()).isFalse();
         assertThat(data.getValueNullable()).isNull();
     }
 
     @Test
-    void testApplyProducesUnknownNullOnUnknownAwaitable() {
-        var o1 = InputOutputTests.unknown(0);
-        var o2 = o1.applyFuture(a -> CompletableFuture.completedFuture("inner"));
+    void testApplyDoesNotRunContinuationOnUnknown() {
+        final var hasRun = List.of(false);
+        Output<Integer> o1 = InputOutputTests.unknown();
+        var o2 = o1.applyValue(a ->
+                               {
+                                   hasRun.set(0, true);
+                                   return (a + 1);
+                               });
         var data = InputOutputTests.waitFor(o2);
         assertThat(data.isKnown()).isFalse();
         assertThat(data.getValueNullable()).isNull();
+        assertThat(hasRun.get(0)).isFalse();
     }
 
     @Test
-    void testApplyProducesUnknownNullOnUnknownKnownOutput() {
-        var o1 = InputOutputTests.unknown(0);
-        var o2 = o1.apply(a -> Output.of("inner"));
+    void testApplyFutureTerminatesOnUnknown() {
+        var o1 = InputOutputTests.unknown();
+        final var hasRun = List.of(false);
+        var o2 = o1.applyFuture(a ->
+                                {
+                                    hasRun.set(0, true);
+                                    return CompletableFuture.completedFuture("inner");
+                                });
         var data = InputOutputTests.waitFor(o2);
         assertThat(data.isKnown()).isFalse();
         assertThat(data.getValueNullable()).isNull();
+        assertThat(hasRun.get(0)).isFalse();
     }
 
     @Test
-    void testApplyProducesUnknownNullOnUnknownUnknownOutput() {
-        var o1 = InputOutputTests.unknown(0);
-        var o2 = o1.apply(a -> InputOutputTests.unknown("inner"));
+    void testApplyTerminatesOnUnkonwn() {
+        var o1 = InputOutputTests.unknown();
+        final var hasRun = List.of(false);
+        var o2 = o1.apply(a ->
+                          {
+                              hasRun.set(0, true);
+                              return Output.of("inner");
+                          });
         var data = InputOutputTests.waitFor(o2);
         assertThat(data.isKnown()).isFalse();
         assertThat(data.getValueNullable()).isNull();
+        assertThat(hasRun.get(0)).isFalse();
     }
 
     @Test
@@ -134,48 +146,40 @@ public class OutputsPreviewTest {
     @Test
     void testApplyPreservesSecretOnKnownUnknownOutput() {
         var o1 = Output.ofSecret(0);
-        var o2 = o1.apply(a -> InputOutputTests.unknown("inner"));
+        var o2 = o1.apply(a -> InputOutputTests.unknown());
         var data = InputOutputTests.waitFor(o2);
         assertThat(data.isKnown()).isFalse();
         assertThat(data.isSecret()).isTrue();
-        assertThat(data.getValueNullable()).isNotNull().isEqualTo("inner");
+        assertThat(data.getValueNullable()).isNull();
     }
 
     @Test
     void testApplyPreservesSecretOnUnknown() {
-        var o1 = InputOutputTests.unknownSecret(0);
-        var o2 = o1.applyValue(a -> a + 1);
+        Output<Integer> o1 = InputOutputTests.unknownSecret();
+        final var hasRun = List.of(false);
+        var o2 = o1.applyValue(a ->
+                               {
+                                   hasRun.set(0, true);
+                                   return a + 1;
+                               });
         var data = InputOutputTests.waitFor(o2);
         assertThat(data.isKnown()).isFalse();
         assertThat(data.isSecret()).isTrue();
         assertThat(data.getValueNullable()).isNull();
+        assertThat(hasRun.get(0)).isFalse();
     }
 
     @Test
     void testApplyPreservesSecretOnUnknownAwaitable() {
-        var o1 = InputOutputTests.unknownSecret(0);
-        var o2 = o1.applyFuture(a -> CompletableFuture.completedFuture("inner"));
+        var o1 = InputOutputTests.unknownSecret();
+        var hasRun = List.of(false);
+        var o2 = o1.applyFuture(a ->
+                                {
+                                    hasRun.set(0, true);
+                                    return CompletableFuture.completedFuture("inner");
+                                });
         var data = InputOutputTests.waitFor(o2);
-        assertThat(data.isKnown()).isFalse();
-        assertThat(data.isSecret()).isTrue();
-        assertThat(data.getValueNullable()).isNull();
-    }
-
-    @Test
-    void testApplyPreservesSecretOnUnknownKnownOutput() {
-        var o1 = InputOutputTests.unknownSecret(0);
-        var o2 = o1.apply(a -> Output.of("inner"));
-        var data = InputOutputTests.waitFor(o2);
-        assertThat(data.isKnown()).isFalse();
-        assertThat(data.isSecret()).isTrue();
-        assertThat(data.getValueNullable()).isNull();
-    }
-
-    @Test
-    void testApplyPreservesSecretOnUnknownUnknownOutput() {
-        var o1 = InputOutputTests.unknownSecret(0);
-        var o2 = o1.apply(a -> InputOutputTests.unknown("inner"));
-        var data = InputOutputTests.waitFor(o2);
+        assertThat(hasRun.get(0)).isFalse();
         assertThat(data.isKnown()).isFalse();
         assertThat(data.isSecret()).isTrue();
         assertThat(data.getValueNullable()).isNull();
@@ -194,30 +198,10 @@ public class OutputsPreviewTest {
     @Test
     void testApplyPropagatesSecretOnKnownUnknownOutput() {
         var o1 = Output.of(0);
-        var o2 = o1.apply(a -> InputOutputTests.unknownSecret("inner"));
+        var o2 = o1.apply(a -> InputOutputTests.unknownSecret());
         var data = InputOutputTests.waitFor(o2);
         assertThat(data.isKnown()).isFalse();
         assertThat(data.isSecret()).isTrue();
-        assertThat(data.getValueNullable()).isNotNull().isEqualTo("inner");
-    }
-
-    @Test
-    void testApplyDoesNotPropagateSecretOnUnknownKnownOutput() {
-        var o1 = InputOutputTests.unknown(0);
-        var o2 = o1.apply(a -> Output.ofSecret("inner"));
-        var data = InputOutputTests.waitFor(o2);
-        assertThat(data.isKnown()).isFalse();
-        assertThat(data.isSecret()).isFalse();
-        assertThat(data.getValueNullable()).isNull();
-    }
-
-    @Test
-    void testApplyDoesNotPropagateSecretOnUnknownUnknownOutput() {
-        var o1 = InputOutputTests.unknown(0);
-        var o2 = o1.apply(a -> InputOutputTests.unknownSecret("inner"));
-        var data = InputOutputTests.waitFor(o2);
-        assertThat(data.isKnown()).isFalse();
-        assertThat(data.isSecret()).isFalse();
         assertThat(data.getValueNullable()).isNull();
     }
 
@@ -284,18 +268,6 @@ public class OutputsPreviewTest {
         var notSecretData = Internal.of(notSecret).getDataAsync().join();
         assertThat(notSecretData.isSecret()).isFalse();
         assertThat(notSecretData.getValueNullable()).isNotNull().isEqualTo(2);
-    }
-
-    @Test
-    void testCreateUnknownSkipsValueFactory() {
-        var output = InputOutputTests.unknown(
-                () -> CompletableFuture.supplyAsync(() -> {
-                    throw new IllegalStateException("unexpected");
-                })
-        );
-        var data = InputOutputTests.waitFor(output);
-        assertThat(data.isKnown()).isFalse();
-        assertThat(data.getValueNullable()).isNull();
     }
 
     @Test

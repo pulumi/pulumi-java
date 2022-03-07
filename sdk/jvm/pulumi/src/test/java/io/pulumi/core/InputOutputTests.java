@@ -39,19 +39,11 @@ public class InputOutputTests {
     }
 
     public static <T> Output<T> unknown() {
-        return unknown((T) null);
+        return new OutputDefault<>(InputOutputData.ofNullable(ImmutableSet.of(), null, false, false));
     }
 
-    public static <T> Output<T> unknown(T value) {
-        return new OutputDefault<>(InputOutputData.ofNullable(ImmutableSet.of(), value, false, false));
-    }
-
-    public static <T> Output<T> unknown(Supplier<CompletableFuture<T>> valueFactory) {
-        return unknown().applyFuture(__ -> valueFactory.get());
-    }
-
-    public static <T> Output<T> unknownSecret(T value) {
-        return new OutputDefault<>(InputOutputData.ofNullable(ImmutableSet.of(), value, false, true));
+    public static <T> Output<T> unknownSecret() {
+        return new OutputDefault<>(InputOutputData.ofNullable(ImmutableSet.of(), null, false, true));
     }
 
 }

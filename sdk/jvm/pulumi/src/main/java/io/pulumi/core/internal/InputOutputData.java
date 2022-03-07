@@ -28,10 +28,10 @@ import java.util.function.Predicate;
 @ParametersAreNonnullByDefault
 @InternalUse
 public final class InputOutputData<T> implements Copyable<InputOutputData<T>> {
-    private static final InputOutputData<?> Empty = new InputOutputData<>(ImmutableSet.of(), true, false);
-    private static final InputOutputData<?> Unknown = new InputOutputData<>(ImmutableSet.of(), false, false);
-    private static final InputOutputData<?> EmptySecret = new InputOutputData<>(ImmutableSet.of(), true, true);
-    private static final InputOutputData<?> UnknownSecret = new InputOutputData<>(ImmutableSet.of(), false, true);
+    private static final InputOutputData<?> Empty = new InputOutputData<>(ImmutableSet.of(), null, true, false);
+    private static final InputOutputData<?> Unknown = new InputOutputData<>(ImmutableSet.of(), null, false, false);
+    private static final InputOutputData<?> EmptySecret = new InputOutputData<>(ImmutableSet.of(), null, true, true);
+    private static final InputOutputData<?> UnknownSecret = new InputOutputData<>(ImmutableSet.of(), null, false, true);
 
     private final ImmutableSet<Resource> resources;
     @Nullable
@@ -39,17 +39,11 @@ public final class InputOutputData<T> implements Copyable<InputOutputData<T>> {
     private final boolean known;
     private final boolean secret;
 
-    /**
-     * See also: {@link #ofNullable(ImmutableSet, Object, boolean, boolean)},
-     * {@link #Empty}, {@link #Unknown}, {@link #EmptySecret}, {@link #UnknownSecret}
-     */
-    @InternalUse
-    private InputOutputData(ImmutableSet<Resource> resources, boolean isKnown, boolean isSecret) {
-        this(resources, null, isKnown, isSecret);
-    }
-
     private InputOutputData(ImmutableSet<Resource> resources, @Nullable T value, boolean isKnown, boolean isSecret) {
         this.resources = Objects.requireNonNull(resources);
+        if (!isKnown && value != null) {
+            throw new IllegalArgumentException("Unknown Output should not carry a non-null value");
+        }
         this.value = value;
         this.known = isKnown; // can be true even with value == null (when empty)
         this.secret = isSecret;
@@ -98,7 +92,7 @@ public final class InputOutputData<T> implements Copyable<InputOutputData<T>> {
         }
         if (value == null) {
             // rare case, of unknown or empty value but with resources
-            return new InputOutputData<>(resources, isKnown, isSecret);
+            return new InputOutputData<>(resources, null, isKnown, isSecret);
         }
         return new InputOutputData<>(resources, value, isKnown, isSecret);
     }

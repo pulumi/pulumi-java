@@ -515,7 +515,7 @@ class ConverterTests {
 
         @Test
         void testListWithUnknownElement() {
-            var listWithUnknownElement = List.of(InputOutputTests.unknown(true));
+            var listWithUnknownElement = List.of(InputOutputTests.unknown());
             serializeToValueAsync(listWithUnknownElement)
                     .thenApply(value -> Converter.convertValue("ListConverterTests", value, TypeShape.list(Boolean.class)))
                     .thenAccept(data -> {
