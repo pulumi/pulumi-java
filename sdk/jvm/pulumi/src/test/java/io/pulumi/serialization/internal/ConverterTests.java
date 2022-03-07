@@ -233,12 +233,12 @@ class ConverterTests {
         }
 
         @Test
-        void testUnknownProducesFalseUnknown() {
+        void testUnknownValueDeserializesCorrectly() {
             var unknownValue = Value.newBuilder().setStringValue(Constants.UnknownValue).build();
             var data = Converter.convertValue(
                     "BooleanConverterTests", unknownValue, Boolean.class
             );
-            assertThat(data.getValueNullable()).isNotNull().isFalse();
+            assertThat(data.getValueNullable()).isNull();
             assertThat(data.isKnown()).isFalse();
         }
 
