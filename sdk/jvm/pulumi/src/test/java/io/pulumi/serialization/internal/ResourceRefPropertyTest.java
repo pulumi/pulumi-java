@@ -57,7 +57,7 @@ class ResourceRefPropertyTest {
         assertThat(res).isNotNull();
 
         var urn = InputOutputTests.waitFor(res.getUrn()).getValueNullable();
-        var id = InputOutputTests.waitFor(res.getId()).getValueNullable();
+        var id = InputOutputTests.waitFor(res.getId()).getValueOrDefault("");
 
         var v = serializeToValueAsync(res).join();
 
