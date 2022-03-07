@@ -6,6 +6,8 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.InputOutputData;
 import org.junit.jupiter.api.*;
 
+import io.pulumi.deployment.MocksTest;
+
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -26,7 +28,8 @@ class ReSerializerTest {
     @BeforeAll
     public static void mockSetup() {
         mock = DeploymentMockBuilder.builder()
-                .setMockGlobalInstance();
+            .setMocks(new MocksTest.MyMocks())
+            .setMockGlobalInstance();
     }
 
     @AfterAll

@@ -18,6 +18,7 @@ import io.pulumi.core.annotations.EnumType;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.core.internal.Constants;
+import io.pulumi.deployment.MocksTest;
 import io.pulumi.deployment.internal.DeploymentTests;
 import io.pulumi.deployment.internal.TestOptions;
 import io.pulumi.resources.InvokeArgs;
@@ -204,8 +205,9 @@ class ConverterTests {
         @Test
         void testNullInPreviewProducesFalseKnown() {
             DeploymentTests.DeploymentMockBuilder.builder()
-                    .setOptions(new TestOptions(true))
-                    .setMockGlobalInstance();
+                .setMocks(new MocksTest.MyMocks())
+                .setOptions(new TestOptions(true))
+                .setMockGlobalInstance();
 
             var nullValue = Value.newBuilder().setNullValue(NullValue.NULL_VALUE).build();
             var data = Converter.convertValue(
@@ -218,8 +220,9 @@ class ConverterTests {
         @Test
         void testNullInNormalProducesFalseKnown() {
             DeploymentTests.DeploymentMockBuilder.builder()
-                    .setOptions(new TestOptions(false))
-                    .setMockGlobalInstance();
+                .setMocks(new MocksTest.MyMocks())
+                .setOptions(new TestOptions(false))
+                .setMockGlobalInstance();
 
             var nullValue = Value.newBuilder().setNullValue(NullValue.NULL_VALUE).build();
             var data = Converter.convertValue(
