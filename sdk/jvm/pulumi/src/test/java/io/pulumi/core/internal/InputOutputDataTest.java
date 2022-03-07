@@ -46,8 +46,8 @@ class InputOutputDataTest {
                 InputOutputTests.unknown(), InputOutputTests.unknown()
         ).join();
 
-        assertThat(result.getValueNullable()).isNotNull()
-                .isEqualTo(Tuples.of(null, null, null, null, null, null, null, null));
+        assertThat(result.isKnown()).isFalse();
+        assertThat(result.getValueNullable()).isNull();
     }
 
     @Test
