@@ -4,6 +4,7 @@ import io.pulumi.Stack;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.internal.Internal;
+import io.pulumi.deployment.MocksTest;
 import io.pulumi.deployment.internal.DeploymentTests;
 import io.pulumi.deployment.internal.InMemoryLogger;
 import io.pulumi.exceptions.RunException;
@@ -31,7 +32,8 @@ public class DeploymentRunnerTest {
     @Test
     void testTerminatesEarlyOnException() {
         var mock = DeploymentTests.DeploymentMockBuilder.builder()
-                .setSpyGlobalInstance();
+            .setMocks(new MocksTest.MyMocks())
+            .setSpyGlobalInstance();
 
         mock.standardLogger.setLevel(Level.OFF);
         var result = mock.tryTestAsync(TerminatesEarlyOnExceptionStack.class).join();
@@ -68,8 +70,9 @@ public class DeploymentRunnerTest {
         var logger = InMemoryLogger.getLogger(Level.FINEST, "DeploymentRunnerTest#testLogsTaskDescriptions");
 
         var mock = DeploymentTests.DeploymentMockBuilder.builder()
-                .setStandardLogger(logger)
-                .setSpyGlobalInstance();
+            .setMocks(new MocksTest.MyMocks())
+            .setStandardLogger(logger)
+            .setSpyGlobalInstance();
 
         for (var i = 0; i < 2; i++) {
             final var delay = 100L + i;

@@ -1,6 +1,7 @@
 package io.pulumi.core;
 
 import io.pulumi.core.internal.Internal;
+import io.pulumi.deployment.MocksTest;
 import io.pulumi.deployment.internal.DeploymentTests;
 import io.pulumi.deployment.internal.TestOptions;
 import org.junit.jupiter.api.AfterAll;
@@ -17,8 +18,9 @@ class UrnTest {
     @BeforeAll
     public static void mockSetup() {
         mock = DeploymentTests.DeploymentMockBuilder.builder()
-                .setOptions(new TestOptions(false))
-                .setMockGlobalInstance();
+            .setMocks(new MocksTest.MyMocks())
+            .setOptions(new TestOptions(false))
+            .setMockGlobalInstance();
     }
 
     @AfterAll
