@@ -260,8 +260,8 @@ class ResourceRefPropertyTest {
         public DeserializeCustomResourceStack() {
             var res = new MyCustomResource("test", null, null);
 
-            var urn = InputOutputTests.waitFor(res.getUrn()).getValueNullable();
-            var id = InputOutputTests.waitFor(res.getId()).getValueNullable();
+            var urn = InputOutputTests.waitFor(res.getUrn()).getValueOrDefault("");
+            var id = InputOutputTests.waitFor(res.getId()).getValueOrDefault("");
 
             var v = deserializeFromValue(
                     createCustomResourceReference(urn, ""),
@@ -271,8 +271,8 @@ class ResourceRefPropertyTest {
             this.values = Output.of(ImmutableMap.of(
                     "expectedUrn", urn,
                     "expectedId", id,
-                    "actualUrn", InputOutputTests.waitFor(v.getUrn()).getValueNullable(),
-                    "actualId", InputOutputTests.waitFor(v.getId()).getValueNullable()
+                    "actualUrn", InputOutputTests.waitFor(v.getUrn()).getValueOrDefault(""),
+                    "actualId", InputOutputTests.waitFor(v.getId()).getValueOrDefault("")
             ));
         }
     }
