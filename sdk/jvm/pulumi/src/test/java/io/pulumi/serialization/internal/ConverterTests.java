@@ -519,10 +519,7 @@ class ConverterTests {
             serializeToValueAsync(listWithUnknownElement)
                     .thenApply(value -> Converter.convertValue("ListConverterTests", value, TypeShape.list(Boolean.class)))
                     .thenAccept(data -> {
-                        assertThat(data.getValueNullable())
-                                .isNotNull()
-                                .hasSize(1)
-                                .containsOnly(false); // yes, false, because we lose the value through a null of the unknown
+                        assertThat(data.getValueNullable()).isNull();
                         assertThat(data.isKnown()).isFalse();
                         assertThat(data.isSecret()).isFalse();
                     }).join();
