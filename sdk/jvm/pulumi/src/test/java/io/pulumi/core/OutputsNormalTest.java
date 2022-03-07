@@ -17,7 +17,7 @@ public class OutputsNormalTest {
 
     @BeforeAll
     public static void mockSetup() {
-        mock = DeploymentMockBuilder.builder()
+        DeploymentMockBuilder.builder()
             .setMocks(new MocksTest.MyMocks())
             .setOptions(new TestOptions(false))
             .setMockGlobalInstance();
