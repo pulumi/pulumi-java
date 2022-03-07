@@ -23,7 +23,7 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 
 /**
- * Immutable internal type
+ * Immutable internal data type
  */
 @ParametersAreNonnullByDefault
 @InternalUse
@@ -39,17 +39,18 @@ public final class InputOutputData<T> implements Copyable<InputOutputData<T>> {
     private final boolean known;
     private final boolean secret;
 
+    /**
+     * See also: {@link #ofNullable(ImmutableSet, Object, boolean, boolean)},
+     * {@link #Empty}, {@link #Unknown}, {@link #EmptySecret}, {@link #UnknownSecret}
+     */
     @InternalUse
     private InputOutputData(ImmutableSet<Resource> resources, boolean isKnown, boolean isSecret) {
-        this.resources = Objects.requireNonNull(resources);
-        this.value = null;
-        this.known = isKnown;
-        this.secret = isSecret;
+        this(resources, null, isKnown, isSecret);
     }
 
-    private InputOutputData(ImmutableSet<Resource> resources, T value, boolean isKnown, boolean isSecret) {
+    private InputOutputData(ImmutableSet<Resource> resources, @Nullable T value, boolean isKnown, boolean isSecret) {
         this.resources = Objects.requireNonNull(resources);
-        this.value = Objects.requireNonNull(value);
+        this.value = value;
         this.known = isKnown; // can be true even with value == null (when empty)
         this.secret = isSecret;
     }
@@ -204,16 +205,14 @@ public final class InputOutputData<T> implements Copyable<InputOutputData<T>> {
             CompletableFuture<InputOutputData<T>> dataFuture,
             Function</* @Nullable */ T, CompletableFuture<InputOutputData<U>>> func
     ) {
-        return dataFuture.thenApply((InputOutputData<T> data) -> {
+        return dataFuture.thenCompose((InputOutputData<T> data) -> {
             ImmutableSet<Resource> resources = data.getResources();
 
-            // TODO: reference implementation had a special case for previews here
-            //       but is it really needed or can it be done differently?
             // During previews only, perform the apply only if the engine was able to
             // give us an actual value for this Output.
             if (!data.isKnown() && Deployment.getInstance().isDryRun()) {
                 return CompletableFuture.completedFuture(
-                        InputOutputData.ofNullable(resources, (U) null, false, data.isSecret())
+                        InputOutputData.ofNullable(resources, null, false, data.isSecret())
                 );
             }
 
@@ -225,12 +224,13 @@ public final class InputOutputData<T> implements Copyable<InputOutputData<T>> {
                     data.known && innerData.known,
                     data.secret || innerData.secret
             ));
-        }).thenCompose(Function.identity()); // TODO: this looks ugly, what am I doing wrong?
+        });
     }
 
     @InternalUse
-    public static <T> CompletableFuture<InputOutputData<List<T>>> internalAllHelperAsync(
-            List<CompletableFuture<InputOutputData<T>>> values) {
+    public static <T> CompletableFuture<InputOutputData<List<T>>> allHelperAsync(
+            List<CompletableFuture<InputOutputData<T>>> values
+    ) {
         return CompletableFutures.allOf(values)
                 .thenApply(dataList ->
                         builder(new ArrayList<T>(dataList.size()))
@@ -245,7 +245,9 @@ public final class InputOutputData<T> implements Copyable<InputOutputData<T>> {
     }
 
     @InternalUse
-    public static CompletableFuture<InputOutputData<Object>> internalCopyInputOutputData(@SuppressWarnings("rawtypes") @Nullable InputOutput obj) {
+    public static CompletableFuture<InputOutputData<Object>> copyInputOutputData(
+            @SuppressWarnings("rawtypes") @Nullable InputOutput obj
+    ) {
         if (obj == null) {
             return CompletableFuture.completedFuture(InputOutputData.empty());
         }
@@ -257,7 +259,7 @@ public final class InputOutputData<T> implements Copyable<InputOutputData<T>> {
             Input<T1> input1, Input<T2> input2, Input<T3> input3, Input<T4> input4,
             Input<T5> input5, Input<T6> input6, Input<T7> input7, Input<T8> input8
     ) {
-        return internalTupleHelperAsync(
+        return tupleHelperAsync(
                 (Internal.of(input1)).getDataAsync(),
                 (Internal.of(input2)).getDataAsync(),
                 (Internal.of(input3)).getDataAsync(),
@@ -273,7 +275,7 @@ public final class InputOutputData<T> implements Copyable<InputOutputData<T>> {
             Output<T1> output1, Output<T2> output2, Output<T3> output3, Output<T4> output4,
             Output<T5> output5, Output<T6> output6, Output<T7> output7, Output<T8> output8
     ) {
-        return internalTupleHelperAsync(
+        return tupleHelperAsync(
                 (Internal.of(output1)).getDataAsync(),
                 (Internal.of(output2)).getDataAsync(),
                 (Internal.of(output3)).getDataAsync(),
@@ -286,7 +288,7 @@ public final class InputOutputData<T> implements Copyable<InputOutputData<T>> {
     }
 
     @InternalUse
-    private static <T1, T2, T3, T4, T5, T6, T7, T8> CompletableFuture<InputOutputData<Tuple8<T1, T2, T3, T4, T5, T6, T7, T8>>> internalTupleHelperAsync(
+    private static <T1, T2, T3, T4, T5, T6, T7, T8> CompletableFuture<InputOutputData<Tuple8<T1, T2, T3, T4, T5, T6, T7, T8>>> tupleHelperAsync(
             CompletableFuture<InputOutputData<T1>> data1, CompletableFuture<InputOutputData<T2>> data2,
             CompletableFuture<InputOutputData<T3>> data3, CompletableFuture<InputOutputData<T4>> data4,
             CompletableFuture<InputOutputData<T5>> data5, CompletableFuture<InputOutputData<T6>> data6,
@@ -306,24 +308,25 @@ public final class InputOutputData<T> implements Copyable<InputOutputData<T>> {
     }
 
     @InternalUse
-    public static <T> Builder<T> builder(T start) {
+    public static <T> Builder<T> builder(@Nullable T start) {
         return new Builder<>(start);
     }
 
     @InternalUse
     public static final class Builder<T> {
         private ImmutableSet.Builder<Resource> resources;
+        @Nullable
         private T value;
         private boolean isKnown;
         private boolean isSecret;
 
-        public Builder(T start) {
+        public Builder(@Nullable T start) {
             this(ImmutableSet.builder(), start, true, false);
         }
 
-        public Builder(ImmutableSet.Builder<Resource> resources, T value, boolean isKnown, boolean isSecret) {
+        public Builder(ImmutableSet.Builder<Resource> resources, @Nullable T value, boolean isKnown, boolean isSecret) {
             this.resources = Objects.requireNonNull(resources);
-            this.value = Objects.requireNonNull(value);
+            this.value = value;
             this.isKnown = isKnown;
             this.isSecret = isSecret;
         }
@@ -344,12 +347,11 @@ public final class InputOutputData<T> implements Copyable<InputOutputData<T>> {
         }
 
         public <U, R> Builder<R> transform(InputOutputData<U> data, BiFunction<T, U, R> reduce) {
-            return new Builder<>(
-                    this.resources.addAll(data.resources),
-                    reduce.apply(this.value, data.value),
-                    this.isKnown && data.known,
-                    this.isSecret || data.secret
-            );
+            var resources = this.resources.addAll(data.resources);
+            var value = reduce.apply(this.value, data.value);
+            var isKnown = this.isKnown && data.known;
+            var isSecret = this.isSecret || data.secret;
+            return new Builder<>(resources, value, isKnown, isSecret);
         }
 
         public <R> InputOutputData<R> build(Function<T, R> valuesBuilder) {
@@ -366,4 +368,3 @@ public final class InputOutputData<T> implements Copyable<InputOutputData<T>> {
         }
     }
 }
-
