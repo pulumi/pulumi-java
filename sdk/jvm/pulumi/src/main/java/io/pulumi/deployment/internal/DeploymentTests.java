@@ -8,7 +8,6 @@ import io.pulumi.Stack;
 import io.pulumi.deployment.MockEngine;
 import io.pulumi.deployment.MockMonitor;
 import io.pulumi.deployment.Mocks;
-import io.pulumi.deployment.MocksTest;
 import io.pulumi.deployment.internal.DeploymentImpl.DefaultEngineLogger;
 import io.pulumi.exceptions.RunException;
 import io.pulumi.resources.Resource;
@@ -24,8 +23,8 @@ import java.util.stream.Collectors;
 
 import static com.google.common.collect.ImmutableList.toImmutableList;
 import static java.util.Objects.requireNonNull;
-import static org.mockito.ArgumentMatchers.anyString;
-import static org.mockito.Mockito.*;
+import org.mockito.ArgumentMatchers;
+import org.mockito.Mockito;
 
 public class DeploymentTests {
 
@@ -245,13 +244,13 @@ public class DeploymentTests {
                 this.options = new TestOptions();
             }
             if (this.runner == null) {
-                this.runner = mock(Runner.class);
+                this.runner = Mockito.mock(Runner.class);
             }
             if (this.engine == null) {
                 this.engine = new MockEngine();
             }
             if (this.mocks == null) {
-                this.mocks = new MocksTest.MyMocks();
+                throw new IllegalArgumentException("mocks are required");
             }
             if (this.monitor == null) {
                 this.monitor = new MockMonitor(this.mocks, this.log);
@@ -276,7 +275,7 @@ public class DeploymentTests {
         public DeploymentMock setSpyGlobalInstance() {
             initUnset();
 
-            this.deployment = spy(new DeploymentImpl(this.state));
+            this.deployment = Mockito.spy(new DeploymentImpl(this.state));
             this.runner = this.deployment.getRunner();
 
             DeploymentImpl.setInstance(new DeploymentInstanceInternal(this.deployment));
@@ -286,18 +285,18 @@ public class DeploymentTests {
         public DeploymentMock setMockGlobalInstance() {
             initUnset();
 
-            var mock = mock(DeploymentImpl.class);
+            var mock = Mockito.mock(DeploymentImpl.class);
             //noinspection ConstantConditions
-            when(mock.isDryRun()).thenReturn(this.state.isDryRun);
-            when(mock.getProjectName()).thenReturn(this.state.projectName);
-            when(mock.getStackName()).thenReturn(this.state.stackName);
-            when(mock.getConfig(anyString())).then(invocation ->
+            Mockito.when(mock.isDryRun()).thenReturn(this.state.isDryRun);
+            Mockito.when(mock.getProjectName()).thenReturn(this.state.projectName);
+            Mockito.when(mock.getStackName()).thenReturn(this.state.stackName);
+            Mockito.when(mock.getConfig(ArgumentMatchers.anyString())).then(invocation ->
                     this.state.config.getConfig((String) invocation.getArguments()[0])
             );
-            when(mock.isConfigSecret(anyString())).then(invocation ->
+            Mockito.when(mock.isConfigSecret(ArgumentMatchers.anyString())).then(invocation ->
                     this.state.config.isConfigSecret((String) invocation.getArguments()[0])
             );
-            when(mock.getRunner()).thenReturn(this.runner);
+            Mockito.when(mock.getRunner()).thenReturn(this.runner);
 
             this.deployment = mock;
 
@@ -332,10 +331,10 @@ public class DeploymentTests {
     }
 
     public static Log mockLog() {
-        return mockLog(defaultLogger(), () -> mock(Engine.class));
+        return mockLog(defaultLogger(), () -> Mockito.mock(Engine.class));
     }
 
     public static Log mockLog(Logger logger, Supplier<Engine> engine) {
-        return new Log(new DefaultEngineLogger(logger, () -> mock(Runner.class), engine));
+        return new Log(new DefaultEngineLogger(logger, () -> Mockito.mock(Runner.class), engine));
     }
 }
