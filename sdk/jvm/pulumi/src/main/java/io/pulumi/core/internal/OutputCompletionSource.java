@@ -80,8 +80,10 @@ public class OutputCompletionSource<T> {
         ));
     }
 
-    public void setValue(String context, Value value, ImmutableSet<Resource> depsOrEmpty) {
-        setValue(Converter.convertValue(
+    public void setValue(Converter converter, String context, Value value, ImmutableSet<Resource> depsOrEmpty) {
+        // we need to call the converter here, inside this class where we know the T,
+        // the T type will get lost at the call site due to Java generics limitations
+        setValue(converter.convertValue(
                 context,
                 value,
                 getTypeShape(),

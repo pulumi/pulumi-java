@@ -11,6 +11,8 @@ import io.pulumi.deployment.Mocks;
 import io.pulumi.deployment.internal.DeploymentImpl.DefaultEngineLogger;
 import io.pulumi.exceptions.RunException;
 import io.pulumi.resources.Resource;
+import org.mockito.ArgumentMatchers;
+import org.mockito.Mockito;
 
 import javax.annotation.Nullable;
 import java.util.Map;
@@ -23,8 +25,6 @@ import java.util.stream.Collectors;
 
 import static com.google.common.collect.ImmutableList.toImmutableList;
 import static java.util.Objects.requireNonNull;
-import org.mockito.ArgumentMatchers;
-import org.mockito.Mockito;
 
 public class DeploymentTests {
 
@@ -332,6 +332,10 @@ public class DeploymentTests {
 
     public static Log mockLog() {
         return mockLog(defaultLogger(), () -> Mockito.mock(Engine.class));
+    }
+
+    public static Log mockLog(Logger logger) {
+        return mockLog(logger, () -> Mockito.mock(Engine.class));
     }
 
     public static Log mockLog(Logger logger, Supplier<Engine> engine) {

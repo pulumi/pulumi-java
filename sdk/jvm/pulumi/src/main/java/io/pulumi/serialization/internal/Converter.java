@@ -8,6 +8,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonNull;
 import com.google.gson.stream.JsonWriter;
 import com.google.protobuf.Value;
+import io.pulumi.Log;
 import io.pulumi.core.Archive;
 import io.pulumi.core.Archive.InvalidArchive;
 import io.pulumi.core.Asset.InvalidAsset;
@@ -29,6 +30,7 @@ import java.lang.reflect.Parameter;
 import java.util.*;
 import java.util.function.Function;
 
+import static java.util.Objects.requireNonNull;
 import static java.util.stream.Collectors.joining;
 
 /**
@@ -37,25 +39,27 @@ import static java.util.stream.Collectors.joining;
 @ParametersAreNonnullByDefault
 public class Converter {
 
-    private Converter() {
-        throw new UnsupportedOperationException("static class");
+    private final Log log;
+
+    public Converter(Log log) {
+        this.log = requireNonNull(log);
     }
 
-    public static <T> InputOutputData<T> convertValue(String context, Value value, Class<T> targetType) {
+    public <T> InputOutputData<T> convertValue(String context, Value value, Class<T> targetType) {
         return convertValue(context, value, TypeShape.of(targetType));
     }
 
-    public static <T> InputOutputData<T> convertValue(String context, Value value, TypeShape<T> targetType) {
+    public <T> InputOutputData<T> convertValue(String context, Value value, TypeShape<T> targetType) {
         return convertValue(context, value, targetType, ImmutableSet.of());
     }
 
-    public static <T> InputOutputData<T> convertValue(
+    public <T> InputOutputData<T> convertValue(
             String context, Value value, TypeShape<T> targetType, ImmutableSet<Resource> resources
     ) {
-        Objects.requireNonNull(context);
-        Objects.requireNonNull(value);
-        Objects.requireNonNull(targetType);
-        Objects.requireNonNull(resources);
+        requireNonNull(context);
+        requireNonNull(value);
+        requireNonNull(targetType);
+        requireNonNull(resources);
 
         checkTargetType(context, targetType);
 
@@ -88,7 +92,7 @@ public class Converter {
     }
 
     @Nullable
-    private static Object convertObjectUntyped(String context, @Nullable Object value, TypeShape<?> targetType) {
+    private Object convertObjectUntyped(String context, @Nullable Object value, TypeShape<?> targetType) {
         try {
             return tryConvertObjectInner(context, value, targetType);
         } catch (UnsupportedOperationException ex) {
@@ -105,7 +109,7 @@ public class Converter {
     }
 
     @Nullable
-    private static Object tryConvertObjectInner(
+    private Object tryConvertObjectInner(
             String context, @Nullable Object value, TypeShape<?> targetType
     ) {
         var targetIsOptional = Optional.class.isAssignableFrom(targetType.getType());
@@ -331,22 +335,23 @@ public class Converter {
                             argValue,
                             TypeShape.extract(parameter)
                     );
-                } else if (parameter.isAnnotationPresent(Nullable.class)) {
-                    arguments[i] = null;
                 } else {
-                    throw new IllegalStateException(String.format(
-                            "Expected type '%s' (annotated with '%s') to provide a constructor annotated with '%s', " +
-                                    "and the parameter names in the annotation matching the parameters being deserialized. " +
-                                    "Constructor '%s' parameter named '%s' (nr %d starting from 0) lacks @%s annotation, " +
-                                    "so the value is required, but there is no value to deserialize.",
-                            targetType.getTypeName(),
-                            OutputCustomType.class.getTypeName(),
-                            OutputCustomType.Constructor.class.getTypeName(),
-                            constructor,
-                            parameterName,
-                            i,
-                            Nullable.class.getTypeName()
-                    ));
+                    arguments[i] = null;
+                    if (!parameter.isAnnotationPresent(Nullable.class)) {
+                        log.debug(String.format(
+                                "Expected type '%s' (annotated with '%s') to provide a constructor annotated with '%s', " +
+                                        "and the parameter names in the annotation matching the parameters being deserialized. " +
+                                        "Constructor '%s' parameter named '%s' (nr %d starting from 0) lacks @%s annotation, " +
+                                        "so the value is required, but there is no value to deserialize.",
+                                targetType.getTypeName(),
+                                OutputCustomType.class.getTypeName(),
+                                OutputCustomType.Constructor.class.getTypeName(),
+                                constructor,
+                                parameterName,
+                                i,
+                                Nullable.class.getTypeName()
+                        ));
+                    }
                 }
             }
 
@@ -366,7 +371,7 @@ public class Converter {
         }
     }
 
-    private static JsonElement tryConvertJsonElement(String context, Object value) {
+    private JsonElement tryConvertJsonElement(String context, Object value) {
         var gson = new Gson();
         StringWriter stringWriter = new StringWriter();
         try {
@@ -378,7 +383,7 @@ public class Converter {
         return gson.fromJson(stringWriter.toString(), JsonElement.class);
     }
 
-    private static void tryWriteJson(String context, JsonWriter jsonWriter, @Nullable Object value) throws IOException {
+    private void tryWriteJson(String context, JsonWriter jsonWriter, @Nullable Object value) throws IOException {
         if (value == null) {
             jsonWriter.nullValue();
             return;
@@ -425,7 +430,7 @@ public class Converter {
         ));
     }
 
-    private static <T> T tryEnsureType(String context, Object value, TypeShape<T> targetType) {
+    private <T> T tryEnsureType(String context, Object value, TypeShape<T> targetType) {
         if (targetType.getType().isInstance(value)
                 || (boolean.class.isAssignableFrom(targetType.getType()) && value instanceof Boolean)
                 || (double.class.isAssignableFrom(targetType.getType()) && value instanceof Double)
@@ -441,7 +446,7 @@ public class Converter {
         }
     }
 
-    private static Either<Object, Object> tryConvertOneOf(String context, Object value, TypeShape<?> targetType) {
+    private Either<Object, Object> tryConvertOneOf(String context, Object value, TypeShape<?> targetType) {
         var leftType = targetType.getParameter(0)
                 .orElseThrow(() -> new IllegalStateException("Expected a left parameter type for the Either, got none"));
         var rightType = targetType.getParameter(1)
@@ -473,7 +478,7 @@ public class Converter {
         }
     }
 
-    private static ImmutableList<Object> tryConvertList(String context, Object value, TypeShape<?> targetType) {
+    private ImmutableList<Object> tryConvertList(String context, Object value, TypeShape<?> targetType) {
         if (!List.class.isAssignableFrom(value.getClass())) {
             throw new IllegalArgumentException(String.format(
                     "%s; Expected List but got '%s' while deserializing", context, value.getClass().getTypeName()
@@ -495,7 +500,7 @@ public class Converter {
         return builder.build();
     }
 
-    private static ImmutableMap<String, Object> tryConvertMap(String context, Object value, TypeShape<?> targetType) {
+    private ImmutableMap<String, Object> tryConvertMap(String context, Object value, TypeShape<?> targetType) {
         if (!Map.class.isAssignableFrom(value.getClass())) {
             throw new IllegalArgumentException(String.format(
                     "%s; Expected Map but got '%s' while deserializing", context, value.getClass().getTypeName()
@@ -518,14 +523,12 @@ public class Converter {
         return builder.build();
     }
 
-    // TODO
-
-    public static void checkTargetType(String context, TypeShape<?> targetType) {
+    public void checkTargetType(String context, TypeShape<?> targetType) {
         checkTargetType(context, targetType, new HashSet<>());
     }
 
     // pre-check for performance reasons
-    public static void checkTargetType(String context, TypeShape<?> targetType, HashSet<Class<?>> seenTypes) {
+    public void checkTargetType(String context, TypeShape<?> targetType, HashSet<Class<?>> seenTypes) {
 
         // types can be recursive.  So only dive into a type if it's the first time we're seeing it.
         if (!seenTypes.add(targetType.getType())) {
