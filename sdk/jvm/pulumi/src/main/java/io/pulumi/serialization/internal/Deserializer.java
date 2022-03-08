@@ -127,12 +127,21 @@ public class Deserializer {
                 isSecret = isSecret || elementData.isSecret();
             }
 
-            return InputOutputData.ofNullable(
-                    ImmutableSet.copyOf(resources),
-                    ImmutableList.copyOf(result),
-                    isKnown,
-                    isSecret
-            );
+            if (isKnown) {
+                return InputOutputData.ofNullable(
+                        ImmutableSet.copyOf(resources),
+                        ImmutableList.copyOf(result),
+                        true,
+                        isSecret
+                );
+            } else {
+                return InputOutputData.ofNullable(
+                        ImmutableSet.copyOf(resources),
+                        null,
+                        false,
+                        isSecret
+                );
+            }
         });
     }
 
