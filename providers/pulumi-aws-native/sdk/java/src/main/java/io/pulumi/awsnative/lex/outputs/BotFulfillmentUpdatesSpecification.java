@@ -33,7 +33,7 @@ public final class BotFulfillmentUpdatesSpecification {
         @Nullable BotFulfillmentStartResponseSpecification startResponse,
         @Nullable Integer timeoutInSeconds,
         @Nullable BotFulfillmentUpdateResponseSpecification updateResponse) {
-        this.active = Objects.requireNonNull(active);
+        this.active = active;
         this.startResponse = startResponse;
         this.timeoutInSeconds = timeoutInSeconds;
         this.updateResponse = updateResponse;

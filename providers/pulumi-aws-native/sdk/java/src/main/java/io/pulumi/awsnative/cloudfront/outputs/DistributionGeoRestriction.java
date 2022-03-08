@@ -19,7 +19,7 @@ public final class DistributionGeoRestriction {
         @Nullable List<String> locations,
         String restrictionType) {
         this.locations = locations;
-        this.restrictionType = Objects.requireNonNull(restrictionType);
+        this.restrictionType = restrictionType;
     }
 
     public List<String> getLocations() {

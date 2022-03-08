@@ -23,7 +23,7 @@ public final class BucketRoutingRule {
     private BucketRoutingRule(
         BucketRedirectRule redirectRule,
         @Nullable BucketRoutingRuleCondition routingRuleCondition) {
-        this.redirectRule = Objects.requireNonNull(redirectRule);
+        this.redirectRule = redirectRule;
         this.routingRuleCondition = routingRuleCondition;
     }
 

@@ -24,8 +24,8 @@ public final class RulesetSubstitutionValue {
     private RulesetSubstitutionValue(
         String value,
         String valueReference) {
-        this.value = Objects.requireNonNull(value);
-        this.valueReference = Objects.requireNonNull(valueReference);
+        this.value = value;
+        this.valueReference = valueReference;
     }
 
     /**

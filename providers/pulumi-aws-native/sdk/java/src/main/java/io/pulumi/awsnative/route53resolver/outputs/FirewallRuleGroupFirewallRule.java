@@ -60,13 +60,13 @@ public final class FirewallRuleGroupFirewallRule {
         @Nullable FirewallRuleGroupFirewallRuleBlockResponse blockResponse,
         String firewallDomainListId,
         Integer priority) {
-        this.action = Objects.requireNonNull(action);
+        this.action = action;
         this.blockOverrideDnsType = blockOverrideDnsType;
         this.blockOverrideDomain = blockOverrideDomain;
         this.blockOverrideTtl = blockOverrideTtl;
         this.blockResponse = blockResponse;
-        this.firewallDomainListId = Objects.requireNonNull(firewallDomainListId);
-        this.priority = Objects.requireNonNull(priority);
+        this.firewallDomainListId = firewallDomainListId;
+        this.priority = priority;
     }
 
     /**

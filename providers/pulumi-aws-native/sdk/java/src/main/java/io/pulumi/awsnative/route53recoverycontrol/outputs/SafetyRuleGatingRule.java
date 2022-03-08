@@ -33,9 +33,9 @@ public final class SafetyRuleGatingRule {
         List<String> gatingControls,
         List<String> targetControls,
         Integer waitPeriodMs) {
-        this.gatingControls = Objects.requireNonNull(gatingControls);
-        this.targetControls = Objects.requireNonNull(targetControls);
-        this.waitPeriodMs = Objects.requireNonNull(waitPeriodMs);
+        this.gatingControls = gatingControls;
+        this.targetControls = targetControls;
+        this.waitPeriodMs = waitPeriodMs;
     }
 
     /**

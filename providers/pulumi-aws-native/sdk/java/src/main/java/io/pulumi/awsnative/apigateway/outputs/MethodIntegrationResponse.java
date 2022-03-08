@@ -50,7 +50,7 @@ public final class MethodIntegrationResponse {
         this.responseParameters = responseParameters;
         this.responseTemplates = responseTemplates;
         this.selectionPattern = selectionPattern;
-        this.statusCode = Objects.requireNonNull(statusCode);
+        this.statusCode = statusCode;
     }
 
     /**

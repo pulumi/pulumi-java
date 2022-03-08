@@ -19,9 +19,9 @@ public final class TaskDefinitionUlimit {
         Integer hardLimit,
         String name,
         Integer softLimit) {
-        this.hardLimit = Objects.requireNonNull(hardLimit);
-        this.name = Objects.requireNonNull(name);
-        this.softLimit = Objects.requireNonNull(softLimit);
+        this.hardLimit = hardLimit;
+        this.name = name;
+        this.softLimit = softLimit;
     }
 
     public Integer getHardLimit() {

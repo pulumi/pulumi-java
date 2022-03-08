@@ -29,7 +29,7 @@ public final class FlowVeevaSourceProperties {
         this.includeAllVersions = includeAllVersions;
         this.includeRenditions = includeRenditions;
         this.includeSourceFiles = includeSourceFiles;
-        this.object = Objects.requireNonNull(object);
+        this.object = object;
     }
 
     public Optional<String> getDocumentType() {

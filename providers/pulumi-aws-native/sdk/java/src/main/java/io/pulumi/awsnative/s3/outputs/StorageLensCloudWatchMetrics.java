@@ -17,7 +17,7 @@ public final class StorageLensCloudWatchMetrics {
 
     @OutputCustomType.Constructor({"isEnabled"})
     private StorageLensCloudWatchMetrics(Boolean isEnabled) {
-        this.isEnabled = Objects.requireNonNull(isEnabled);
+        this.isEnabled = isEnabled;
     }
 
     /**

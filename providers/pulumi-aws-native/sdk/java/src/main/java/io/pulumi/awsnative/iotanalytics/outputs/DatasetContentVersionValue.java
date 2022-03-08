@@ -13,7 +13,7 @@ public final class DatasetContentVersionValue {
 
     @OutputCustomType.Constructor({"datasetName"})
     private DatasetContentVersionValue(String datasetName) {
-        this.datasetName = Objects.requireNonNull(datasetName);
+        this.datasetName = datasetName;
     }
 
     public String getDatasetName() {

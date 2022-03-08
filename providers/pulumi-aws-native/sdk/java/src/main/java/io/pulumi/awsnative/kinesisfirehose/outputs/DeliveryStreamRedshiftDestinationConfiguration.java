@@ -43,16 +43,16 @@ public final class DeliveryStreamRedshiftDestinationConfiguration {
         DeliveryStreamS3DestinationConfiguration s3Configuration,
         String username) {
         this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
-        this.clusterJDBCURL = Objects.requireNonNull(clusterJDBCURL);
-        this.copyCommand = Objects.requireNonNull(copyCommand);
-        this.password = Objects.requireNonNull(password);
+        this.clusterJDBCURL = clusterJDBCURL;
+        this.copyCommand = copyCommand;
+        this.password = password;
         this.processingConfiguration = processingConfiguration;
         this.retryOptions = retryOptions;
-        this.roleARN = Objects.requireNonNull(roleARN);
+        this.roleARN = roleARN;
         this.s3BackupConfiguration = s3BackupConfiguration;
         this.s3BackupMode = s3BackupMode;
-        this.s3Configuration = Objects.requireNonNull(s3Configuration);
-        this.username = Objects.requireNonNull(username);
+        this.s3Configuration = s3Configuration;
+        this.username = username;
     }
 
     public Optional<DeliveryStreamCloudWatchLoggingOptions> getCloudWatchLoggingOptions() {

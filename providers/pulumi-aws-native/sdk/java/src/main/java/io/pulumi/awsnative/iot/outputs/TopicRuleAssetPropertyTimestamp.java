@@ -19,7 +19,7 @@ public final class TopicRuleAssetPropertyTimestamp {
         @Nullable String offsetInNanos,
         String timeInSeconds) {
         this.offsetInNanos = offsetInNanos;
-        this.timeInSeconds = Objects.requireNonNull(timeInSeconds);
+        this.timeInSeconds = timeInSeconds;
     }
 
     public Optional<String> getOffsetInNanos() {

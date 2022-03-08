@@ -18,7 +18,7 @@ public final class ClusterLoggingProperties {
     private ClusterLoggingProperties(
         String bucketName,
         @Nullable String s3KeyPrefix) {
-        this.bucketName = Objects.requireNonNull(bucketName);
+        this.bucketName = bucketName;
         this.s3KeyPrefix = s3KeyPrefix;
     }
 

@@ -21,9 +21,9 @@ public final class WebACLRegexPatternSetReferenceStatement {
         String arn,
         WebACLFieldToMatch fieldToMatch,
         List<WebACLTextTransformation> textTransformations) {
-        this.arn = Objects.requireNonNull(arn);
-        this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
-        this.textTransformations = Objects.requireNonNull(textTransformations);
+        this.arn = arn;
+        this.fieldToMatch = fieldToMatch;
+        this.textTransformations = textTransformations;
     }
 
     public String getArn() {

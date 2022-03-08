@@ -45,7 +45,7 @@ public final class DetectorModelIotSiteWise {
         this.entryId = entryId;
         this.propertyAlias = propertyAlias;
         this.propertyId = propertyId;
-        this.propertyValue = Objects.requireNonNull(propertyValue);
+        this.propertyValue = propertyValue;
     }
 
     /**

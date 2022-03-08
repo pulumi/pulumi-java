@@ -17,7 +17,7 @@ public final class BucketSseKmsEncryptedObjects {
 
     @OutputCustomType.Constructor({"status"})
     private BucketSseKmsEncryptedObjects(BucketSseKmsEncryptedObjectsStatus status) {
-        this.status = Objects.requireNonNull(status);
+        this.status = status;
     }
 
     /**

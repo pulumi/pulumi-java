@@ -13,7 +13,7 @@ public final class ConnectorKafkaCluster {
 
     @OutputCustomType.Constructor({"apacheKafkaCluster"})
     private ConnectorKafkaCluster(ConnectorApacheKafkaCluster apacheKafkaCluster) {
-        this.apacheKafkaCluster = Objects.requireNonNull(apacheKafkaCluster);
+        this.apacheKafkaCluster = apacheKafkaCluster;
     }
 
     public ConnectorApacheKafkaCluster getApacheKafkaCluster() {

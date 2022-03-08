@@ -24,8 +24,8 @@ public final class AlertLambdaConfiguration {
     private AlertLambdaConfiguration(
         String lambdaArn,
         String roleArn) {
-        this.lambdaArn = Objects.requireNonNull(lambdaArn);
-        this.roleArn = Objects.requireNonNull(roleArn);
+        this.lambdaArn = lambdaArn;
+        this.roleArn = roleArn;
     }
 
     /**

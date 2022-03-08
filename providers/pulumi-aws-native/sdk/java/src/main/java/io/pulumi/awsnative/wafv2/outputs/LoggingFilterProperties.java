@@ -26,8 +26,8 @@ public final class LoggingFilterProperties {
     private LoggingFilterProperties(
         LoggingConfigurationLoggingFilterPropertiesDefaultBehavior defaultBehavior,
         List<LoggingConfigurationFilter> filters) {
-        this.defaultBehavior = Objects.requireNonNull(defaultBehavior);
-        this.filters = Objects.requireNonNull(filters);
+        this.defaultBehavior = defaultBehavior;
+        this.filters = filters;
     }
 
     /**

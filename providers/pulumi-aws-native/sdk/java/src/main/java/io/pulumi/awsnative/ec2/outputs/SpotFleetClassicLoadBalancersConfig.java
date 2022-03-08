@@ -14,7 +14,7 @@ public final class SpotFleetClassicLoadBalancersConfig {
 
     @OutputCustomType.Constructor({"classicLoadBalancers"})
     private SpotFleetClassicLoadBalancersConfig(List<SpotFleetClassicLoadBalancer> classicLoadBalancers) {
-        this.classicLoadBalancers = Objects.requireNonNull(classicLoadBalancers);
+        this.classicLoadBalancers = classicLoadBalancers;
     }
 
     public List<SpotFleetClassicLoadBalancer> getClassicLoadBalancers() {

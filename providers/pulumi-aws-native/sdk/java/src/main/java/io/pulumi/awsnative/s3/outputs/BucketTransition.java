@@ -22,7 +22,7 @@ public final class BucketTransition {
         BucketTransitionStorageClass storageClass,
         @Nullable String transitionDate,
         @Nullable Integer transitionInDays) {
-        this.storageClass = Objects.requireNonNull(storageClass);
+        this.storageClass = storageClass;
         this.transitionDate = transitionDate;
         this.transitionInDays = transitionInDays;
     }

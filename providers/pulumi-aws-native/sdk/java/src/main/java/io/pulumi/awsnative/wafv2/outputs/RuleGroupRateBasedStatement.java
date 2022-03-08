@@ -25,9 +25,9 @@ public final class RuleGroupRateBasedStatement {
         @Nullable RuleGroupForwardedIPConfiguration forwardedIPConfig,
         Integer limit,
         @Nullable RuleGroupStatement scopeDownStatement) {
-        this.aggregateKeyType = Objects.requireNonNull(aggregateKeyType);
+        this.aggregateKeyType = aggregateKeyType;
         this.forwardedIPConfig = forwardedIPConfig;
-        this.limit = Objects.requireNonNull(limit);
+        this.limit = limit;
         this.scopeDownStatement = scopeDownStatement;
     }
 

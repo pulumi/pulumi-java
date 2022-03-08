@@ -13,7 +13,7 @@ public final class DatasetOutputFileUriValue {
 
     @OutputCustomType.Constructor({"fileName"})
     private DatasetOutputFileUriValue(String fileName) {
-        this.fileName = Objects.requireNonNull(fileName);
+        this.fileName = fileName;
     }
 
     public String getFileName() {

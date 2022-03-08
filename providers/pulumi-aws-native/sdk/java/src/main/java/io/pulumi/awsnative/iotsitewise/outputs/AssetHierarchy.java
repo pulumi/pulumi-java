@@ -24,8 +24,8 @@ public final class AssetHierarchy {
     private AssetHierarchy(
         String childAssetId,
         String logicalId) {
-        this.childAssetId = Objects.requireNonNull(childAssetId);
-        this.logicalId = Objects.requireNonNull(logicalId);
+        this.childAssetId = childAssetId;
+        this.logicalId = logicalId;
     }
 
     /**

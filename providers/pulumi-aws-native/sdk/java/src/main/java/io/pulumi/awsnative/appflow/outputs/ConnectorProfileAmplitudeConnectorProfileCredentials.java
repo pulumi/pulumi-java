@@ -20,8 +20,8 @@ public final class ConnectorProfileAmplitudeConnectorProfileCredentials {
     private ConnectorProfileAmplitudeConnectorProfileCredentials(
         String apiKey,
         String secretKey) {
-        this.apiKey = Objects.requireNonNull(apiKey);
-        this.secretKey = Objects.requireNonNull(secretKey);
+        this.apiKey = apiKey;
+        this.secretKey = secretKey;
     }
 
     /**

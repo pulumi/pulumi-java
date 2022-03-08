@@ -93,16 +93,16 @@ public final class DetectorModelDynamoDB {
         @Nullable String rangeKeyType,
         @Nullable String rangeKeyValue,
         String tableName) {
-        this.hashKeyField = Objects.requireNonNull(hashKeyField);
+        this.hashKeyField = hashKeyField;
         this.hashKeyType = hashKeyType;
-        this.hashKeyValue = Objects.requireNonNull(hashKeyValue);
+        this.hashKeyValue = hashKeyValue;
         this.operation = operation;
         this.payload = payload;
         this.payloadField = payloadField;
         this.rangeKeyField = rangeKeyField;
         this.rangeKeyType = rangeKeyType;
         this.rangeKeyValue = rangeKeyValue;
-        this.tableName = Objects.requireNonNull(tableName);
+        this.tableName = tableName;
     }
 
     /**

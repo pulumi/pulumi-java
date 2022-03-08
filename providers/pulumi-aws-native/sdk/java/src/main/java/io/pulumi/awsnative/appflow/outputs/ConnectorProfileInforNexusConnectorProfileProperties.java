@@ -17,7 +17,7 @@ public final class ConnectorProfileInforNexusConnectorProfileProperties {
 
     @OutputCustomType.Constructor({"instanceUrl"})
     private ConnectorProfileInforNexusConnectorProfileProperties(String instanceUrl) {
-        this.instanceUrl = Objects.requireNonNull(instanceUrl);
+        this.instanceUrl = instanceUrl;
     }
 
     /**

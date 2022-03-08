@@ -20,7 +20,7 @@ public final class BotSlotValueSelectionSetting {
         @Nullable BotSlotValueRegexFilter regexFilter,
         BotSlotValueResolutionStrategy resolutionStrategy) {
         this.regexFilter = regexFilter;
-        this.resolutionStrategy = Objects.requireNonNull(resolutionStrategy);
+        this.resolutionStrategy = resolutionStrategy;
     }
 
     public Optional<BotSlotValueRegexFilter> getRegexFilter() {

@@ -14,7 +14,7 @@ public final class ResponseHeadersPolicyAccessControlAllowMethods {
 
     @OutputCustomType.Constructor({"items"})
     private ResponseHeadersPolicyAccessControlAllowMethods(List<String> items) {
-        this.items = Objects.requireNonNull(items);
+        this.items = items;
     }
 
     public List<String> getItems() {

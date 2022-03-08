@@ -18,7 +18,7 @@ public final class DatastoreTimestampPartition {
     private DatastoreTimestampPartition(
         String attributeName,
         @Nullable String timestampFormat) {
-        this.attributeName = Objects.requireNonNull(attributeName);
+        this.attributeName = attributeName;
         this.timestampFormat = timestampFormat;
     }
 

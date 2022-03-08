@@ -33,7 +33,7 @@ public final class Device {
         String deviceName,
         @Nullable String iotThingName) {
         this.description = description;
-        this.deviceName = Objects.requireNonNull(deviceName);
+        this.deviceName = deviceName;
         this.iotThingName = iotThingName;
     }
 

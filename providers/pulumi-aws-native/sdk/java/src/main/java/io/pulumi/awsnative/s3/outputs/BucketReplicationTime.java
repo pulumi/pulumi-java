@@ -17,8 +17,8 @@ public final class BucketReplicationTime {
     private BucketReplicationTime(
         BucketReplicationTimeStatus status,
         BucketReplicationTimeValue time) {
-        this.status = Objects.requireNonNull(status);
-        this.time = Objects.requireNonNull(time);
+        this.status = status;
+        this.time = time;
     }
 
     public BucketReplicationTimeStatus getStatus() {

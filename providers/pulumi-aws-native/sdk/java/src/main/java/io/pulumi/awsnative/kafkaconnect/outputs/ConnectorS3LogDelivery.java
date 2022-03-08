@@ -34,7 +34,7 @@ public final class ConnectorS3LogDelivery {
         Boolean enabled,
         @Nullable String prefix) {
         this.bucket = bucket;
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
         this.prefix = prefix;
     }
 

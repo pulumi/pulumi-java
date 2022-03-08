@@ -24,7 +24,7 @@ public final class RulesetThreshold {
         Double value) {
         this.type = type;
         this.unit = unit;
-        this.value = Objects.requireNonNull(value);
+        this.value = value;
     }
 
     public Optional<RulesetThresholdType> getType() {

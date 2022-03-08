@@ -20,7 +20,7 @@ public final class IntegrationTriggerConfig {
         @Nullable IntegrationTriggerProperties triggerProperties,
         IntegrationTriggerType triggerType) {
         this.triggerProperties = triggerProperties;
-        this.triggerType = Objects.requireNonNull(triggerType);
+        this.triggerType = triggerType;
     }
 
     public Optional<IntegrationTriggerProperties> getTriggerProperties() {

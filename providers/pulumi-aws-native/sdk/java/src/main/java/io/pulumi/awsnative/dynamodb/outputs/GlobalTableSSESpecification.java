@@ -19,7 +19,7 @@ public final class GlobalTableSSESpecification {
     private GlobalTableSSESpecification(
         Boolean sSEEnabled,
         @Nullable String sSEType) {
-        this.sSEEnabled = Objects.requireNonNull(sSEEnabled);
+        this.sSEEnabled = sSEEnabled;
         this.sSEType = sSEType;
     }
 

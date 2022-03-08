@@ -17,7 +17,7 @@ public final class SentimentAnalysisSettingsProperties {
 
     @OutputCustomType.Constructor({"detectSentiment"})
     private SentimentAnalysisSettingsProperties(Boolean detectSentiment) {
-        this.detectSentiment = Objects.requireNonNull(detectSentiment);
+        this.detectSentiment = detectSentiment;
     }
 
     /**

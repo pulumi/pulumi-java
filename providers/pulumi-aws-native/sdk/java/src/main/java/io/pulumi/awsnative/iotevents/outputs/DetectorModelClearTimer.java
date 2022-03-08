@@ -13,7 +13,7 @@ public final class DetectorModelClearTimer {
 
     @OutputCustomType.Constructor({"timerName"})
     private DetectorModelClearTimer(String timerName) {
-        this.timerName = Objects.requireNonNull(timerName);
+        this.timerName = timerName;
     }
 
     public String getTimerName() {

@@ -33,8 +33,8 @@ public final class BotGrammarSlotTypeSource {
         String s3BucketName,
         String s3ObjectKey) {
         this.kmsKeyArn = kmsKeyArn;
-        this.s3BucketName = Objects.requireNonNull(s3BucketName);
-        this.s3ObjectKey = Objects.requireNonNull(s3ObjectKey);
+        this.s3BucketName = s3BucketName;
+        this.s3ObjectKey = s3ObjectKey;
     }
 
     /**

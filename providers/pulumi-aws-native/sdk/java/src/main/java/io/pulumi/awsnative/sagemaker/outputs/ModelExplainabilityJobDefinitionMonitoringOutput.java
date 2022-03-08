@@ -13,7 +13,7 @@ public final class ModelExplainabilityJobDefinitionMonitoringOutput {
 
     @OutputCustomType.Constructor({"s3Output"})
     private ModelExplainabilityJobDefinitionMonitoringOutput(ModelExplainabilityJobDefinitionS3Output s3Output) {
-        this.s3Output = Objects.requireNonNull(s3Output);
+        this.s3Output = s3Output;
     }
 
     public ModelExplainabilityJobDefinitionS3Output getS3Output() {

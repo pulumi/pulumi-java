@@ -19,7 +19,7 @@ public final class TableClusteringKeyColumn {
     private TableClusteringKeyColumn(
         TableColumn column,
         @Nullable TableClusteringKeyColumnOrderBy orderBy) {
-        this.column = Objects.requireNonNull(column);
+        this.column = column;
         this.orderBy = orderBy;
     }
 

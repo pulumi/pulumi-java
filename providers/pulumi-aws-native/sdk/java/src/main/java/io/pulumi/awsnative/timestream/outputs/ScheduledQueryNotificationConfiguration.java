@@ -13,7 +13,7 @@ public final class ScheduledQueryNotificationConfiguration {
 
     @OutputCustomType.Constructor({"snsConfiguration"})
     private ScheduledQueryNotificationConfiguration(ScheduledQuerySnsConfiguration snsConfiguration) {
-        this.snsConfiguration = Objects.requireNonNull(snsConfiguration);
+        this.snsConfiguration = snsConfiguration;
     }
 
     public ScheduledQuerySnsConfiguration getSnsConfiguration() {

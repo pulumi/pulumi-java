@@ -14,7 +14,7 @@ public final class BucketOwnershipControls {
 
     @OutputCustomType.Constructor({"rules"})
     private BucketOwnershipControls(List<BucketOwnershipControlsRule> rules) {
-        this.rules = Objects.requireNonNull(rules);
+        this.rules = rules;
     }
 
     public List<BucketOwnershipControlsRule> getRules() {

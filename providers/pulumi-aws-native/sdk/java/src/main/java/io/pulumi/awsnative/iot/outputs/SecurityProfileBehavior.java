@@ -42,7 +42,7 @@ public final class SecurityProfileBehavior {
         this.criteria = criteria;
         this.metric = metric;
         this.metricDimension = metricDimension;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.suppressAlerts = suppressAlerts;
     }
 

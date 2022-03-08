@@ -31,11 +31,11 @@ public final class IntegrationFlowDefinition {
         List<IntegrationTask> tasks,
         IntegrationTriggerConfig triggerConfig) {
         this.description = description;
-        this.flowName = Objects.requireNonNull(flowName);
-        this.kmsArn = Objects.requireNonNull(kmsArn);
-        this.sourceFlowConfig = Objects.requireNonNull(sourceFlowConfig);
-        this.tasks = Objects.requireNonNull(tasks);
-        this.triggerConfig = Objects.requireNonNull(triggerConfig);
+        this.flowName = flowName;
+        this.kmsArn = kmsArn;
+        this.sourceFlowConfig = sourceFlowConfig;
+        this.tasks = tasks;
+        this.triggerConfig = triggerConfig;
     }
 
     public Optional<String> getDescription() {

@@ -18,7 +18,7 @@ public final class RuleGroupTCPFlagField {
     private RuleGroupTCPFlagField(
         List<RuleGroupTCPFlag> flags,
         @Nullable List<RuleGroupTCPFlag> masks) {
-        this.flags = Objects.requireNonNull(flags);
+        this.flags = flags;
         this.masks = masks;
     }
 

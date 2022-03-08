@@ -17,8 +17,8 @@ public final class ModelBiasJobDefinitionModelBiasJobInput {
     private ModelBiasJobDefinitionModelBiasJobInput(
         ModelBiasJobDefinitionEndpointInput endpointInput,
         ModelBiasJobDefinitionMonitoringGroundTruthS3Input groundTruthS3Input) {
-        this.endpointInput = Objects.requireNonNull(endpointInput);
-        this.groundTruthS3Input = Objects.requireNonNull(groundTruthS3Input);
+        this.endpointInput = endpointInput;
+        this.groundTruthS3Input = groundTruthS3Input;
     }
 
     public ModelBiasJobDefinitionEndpointInput getEndpointInput() {

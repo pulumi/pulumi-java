@@ -26,8 +26,8 @@ public final class SafetyRuleAssertionRule {
     private SafetyRuleAssertionRule(
         List<String> assertedControls,
         Integer waitPeriodMs) {
-        this.assertedControls = Objects.requireNonNull(assertedControls);
-        this.waitPeriodMs = Objects.requireNonNull(waitPeriodMs);
+        this.assertedControls = assertedControls;
+        this.waitPeriodMs = waitPeriodMs;
     }
 
     /**

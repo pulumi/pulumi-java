@@ -13,7 +13,7 @@ public final class RecordingConfigurationS3DestinationConfiguration {
 
     @OutputCustomType.Constructor({"bucketName"})
     private RecordingConfigurationS3DestinationConfiguration(String bucketName) {
-        this.bucketName = Objects.requireNonNull(bucketName);
+        this.bucketName = bucketName;
     }
 
     public String getBucketName() {

@@ -17,8 +17,8 @@ public final class AnomalyDetectorVpcConfiguration {
     private AnomalyDetectorVpcConfiguration(
         List<String> securityGroupIdList,
         List<String> subnetIdList) {
-        this.securityGroupIdList = Objects.requireNonNull(securityGroupIdList);
-        this.subnetIdList = Objects.requireNonNull(subnetIdList);
+        this.securityGroupIdList = securityGroupIdList;
+        this.subnetIdList = subnetIdList;
     }
 
     public List<String> getSecurityGroupIdList() {

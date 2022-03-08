@@ -27,7 +27,7 @@ public final class ApplicationAlarm {
     private ApplicationAlarm(
         String alarmName,
         @Nullable ApplicationAlarmSeverity severity) {
-        this.alarmName = Objects.requireNonNull(alarmName);
+        this.alarmName = alarmName;
         this.severity = severity;
     }
 

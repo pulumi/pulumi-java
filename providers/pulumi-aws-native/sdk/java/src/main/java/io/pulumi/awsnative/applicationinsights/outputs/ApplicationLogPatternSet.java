@@ -26,8 +26,8 @@ public final class ApplicationLogPatternSet {
     private ApplicationLogPatternSet(
         List<ApplicationLogPattern> logPatterns,
         String patternSetName) {
-        this.logPatterns = Objects.requireNonNull(logPatterns);
-        this.patternSetName = Objects.requireNonNull(patternSetName);
+        this.logPatterns = logPatterns;
+        this.patternSetName = patternSetName;
     }
 
     /**

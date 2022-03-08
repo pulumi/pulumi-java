@@ -16,8 +16,8 @@ public final class PipelineDatastore {
     private PipelineDatastore(
         String datastoreName,
         String name) {
-        this.datastoreName = Objects.requireNonNull(datastoreName);
-        this.name = Objects.requireNonNull(name);
+        this.datastoreName = datastoreName;
+        this.name = name;
     }
 
     public String getDatastoreName() {

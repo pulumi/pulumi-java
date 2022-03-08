@@ -17,8 +17,8 @@ public final class ReplicationConfigurationRepositoryFilter {
     private ReplicationConfigurationRepositoryFilter(
         String filter,
         ReplicationConfigurationFilterType filterType) {
-        this.filter = Objects.requireNonNull(filter);
-        this.filterType = Objects.requireNonNull(filterType);
+        this.filter = filter;
+        this.filterType = filterType;
     }
 
     public String getFilter() {

@@ -55,14 +55,14 @@ public final class MonitoringScheduleMonitoringExecutionSummary {
         String monitoringScheduleName,
         @Nullable String processingJobArn,
         String scheduledTime) {
-        this.creationTime = Objects.requireNonNull(creationTime);
+        this.creationTime = creationTime;
         this.endpointName = endpointName;
         this.failureReason = failureReason;
-        this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
-        this.monitoringExecutionStatus = Objects.requireNonNull(monitoringExecutionStatus);
-        this.monitoringScheduleName = Objects.requireNonNull(monitoringScheduleName);
+        this.lastModifiedTime = lastModifiedTime;
+        this.monitoringExecutionStatus = monitoringExecutionStatus;
+        this.monitoringScheduleName = monitoringScheduleName;
         this.processingJobArn = processingJobArn;
-        this.scheduledTime = Objects.requireNonNull(scheduledTime);
+        this.scheduledTime = scheduledTime;
     }
 
     /**

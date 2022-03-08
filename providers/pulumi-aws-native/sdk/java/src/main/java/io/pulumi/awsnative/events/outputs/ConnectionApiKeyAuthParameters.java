@@ -16,8 +16,8 @@ public final class ConnectionApiKeyAuthParameters {
     private ConnectionApiKeyAuthParameters(
         String apiKeyName,
         String apiKeyValue) {
-        this.apiKeyName = Objects.requireNonNull(apiKeyName);
-        this.apiKeyValue = Objects.requireNonNull(apiKeyValue);
+        this.apiKeyName = apiKeyName;
+        this.apiKeyValue = apiKeyValue;
     }
 
     public String getApiKeyName() {

@@ -33,9 +33,9 @@ public final class ModelBiasJobDefinitionModelBiasAppSpecification {
         String configUri,
         @Nullable Object environment,
         String imageUri) {
-        this.configUri = Objects.requireNonNull(configUri);
+        this.configUri = configUri;
         this.environment = environment;
-        this.imageUri = Objects.requireNonNull(imageUri);
+        this.imageUri = imageUri;
     }
 
     /**

@@ -18,8 +18,8 @@ public final class AccessPointTransformationConfiguration {
     private AccessPointTransformationConfiguration(
         List<String> actions,
         Object contentTransformation) {
-        this.actions = Objects.requireNonNull(actions);
-        this.contentTransformation = Objects.requireNonNull(contentTransformation);
+        this.actions = actions;
+        this.contentTransformation = contentTransformation;
     }
 
     public List<String> getActions() {

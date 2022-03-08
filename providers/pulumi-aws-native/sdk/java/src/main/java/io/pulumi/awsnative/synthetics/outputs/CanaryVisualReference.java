@@ -27,7 +27,7 @@ public final class CanaryVisualReference {
     private CanaryVisualReference(
         String baseCanaryRunId,
         @Nullable List<CanaryBaseScreenshot> baseScreenshots) {
-        this.baseCanaryRunId = Objects.requireNonNull(baseCanaryRunId);
+        this.baseCanaryRunId = baseCanaryRunId;
         this.baseScreenshots = baseScreenshots;
     }
 

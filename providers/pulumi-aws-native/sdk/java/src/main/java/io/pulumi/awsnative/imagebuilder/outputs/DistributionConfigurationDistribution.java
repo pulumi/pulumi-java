@@ -52,7 +52,7 @@ public final class DistributionConfigurationDistribution {
         this.containerDistributionConfiguration = containerDistributionConfiguration;
         this.launchTemplateConfigurations = launchTemplateConfigurations;
         this.licenseConfigurationArns = licenseConfigurationArns;
-        this.region = Objects.requireNonNull(region);
+        this.region = region;
     }
 
     /**

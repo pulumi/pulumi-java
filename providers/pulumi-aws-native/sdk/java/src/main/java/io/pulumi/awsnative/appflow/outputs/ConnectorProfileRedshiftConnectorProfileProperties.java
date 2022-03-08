@@ -38,10 +38,10 @@ public final class ConnectorProfileRedshiftConnectorProfileProperties {
         @Nullable String bucketPrefix,
         String databaseUrl,
         String roleArn) {
-        this.bucketName = Objects.requireNonNull(bucketName);
+        this.bucketName = bucketName;
         this.bucketPrefix = bucketPrefix;
-        this.databaseUrl = Objects.requireNonNull(databaseUrl);
-        this.roleArn = Objects.requireNonNull(roleArn);
+        this.databaseUrl = databaseUrl;
+        this.roleArn = roleArn;
     }
 
     /**

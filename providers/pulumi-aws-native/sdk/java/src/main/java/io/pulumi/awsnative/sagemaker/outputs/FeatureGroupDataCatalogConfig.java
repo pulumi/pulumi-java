@@ -18,9 +18,9 @@ public final class FeatureGroupDataCatalogConfig {
         String catalog,
         String database,
         String tableName) {
-        this.catalog = Objects.requireNonNull(catalog);
-        this.database = Objects.requireNonNull(database);
-        this.tableName = Objects.requireNonNull(tableName);
+        this.catalog = catalog;
+        this.database = database;
+        this.tableName = tableName;
     }
 
     public String getCatalog() {

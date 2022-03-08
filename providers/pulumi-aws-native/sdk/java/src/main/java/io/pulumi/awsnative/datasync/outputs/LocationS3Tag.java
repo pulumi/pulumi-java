@@ -24,8 +24,8 @@ public final class LocationS3Tag {
     private LocationS3Tag(
         String key,
         String value) {
-        this.key = Objects.requireNonNull(key);
-        this.value = Objects.requireNonNull(value);
+        this.key = key;
+        this.value = value;
     }
 
     /**

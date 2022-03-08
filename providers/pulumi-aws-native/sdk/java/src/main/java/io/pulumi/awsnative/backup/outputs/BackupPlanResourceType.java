@@ -23,8 +23,8 @@ public final class BackupPlanResourceType {
         String backupPlanName,
         List<BackupPlanBackupRuleResourceType> backupPlanRule) {
         this.advancedBackupSettings = advancedBackupSettings;
-        this.backupPlanName = Objects.requireNonNull(backupPlanName);
-        this.backupPlanRule = Objects.requireNonNull(backupPlanRule);
+        this.backupPlanName = backupPlanName;
+        this.backupPlanRule = backupPlanRule;
     }
 
     public List<BackupPlanAdvancedBackupSettingResourceType> getAdvancedBackupSettings() {

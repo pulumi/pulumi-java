@@ -25,8 +25,8 @@ public final class StreamEncryption {
     private StreamEncryption(
         StreamEncryptionEncryptionType encryptionType,
         String keyId) {
-        this.encryptionType = Objects.requireNonNull(encryptionType);
-        this.keyId = Objects.requireNonNull(keyId);
+        this.encryptionType = encryptionType;
+        this.keyId = keyId;
     }
 
     /**

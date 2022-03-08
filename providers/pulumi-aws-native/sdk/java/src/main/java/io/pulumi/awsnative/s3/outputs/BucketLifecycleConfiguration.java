@@ -18,7 +18,7 @@ public final class BucketLifecycleConfiguration {
 
     @OutputCustomType.Constructor({"rules"})
     private BucketLifecycleConfiguration(List<BucketRule> rules) {
-        this.rules = Objects.requireNonNull(rules);
+        this.rules = rules;
     }
 
     /**

@@ -13,7 +13,7 @@ public final class MapConfiguration {
 
     @OutputCustomType.Constructor({"style"})
     private MapConfiguration(String style) {
-        this.style = Objects.requireNonNull(style);
+        this.style = style;
     }
 
     public String getStyle() {

@@ -17,8 +17,8 @@ public final class WebACLLabelMatchStatement {
     private WebACLLabelMatchStatement(
         String key,
         WebACLLabelMatchScope scope) {
-        this.key = Objects.requireNonNull(key);
-        this.scope = Objects.requireNonNull(scope);
+        this.key = key;
+        this.scope = scope;
     }
 
     public String getKey() {

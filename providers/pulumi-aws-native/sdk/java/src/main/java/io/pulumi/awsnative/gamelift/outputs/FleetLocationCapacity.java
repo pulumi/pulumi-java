@@ -30,9 +30,9 @@ public final class FleetLocationCapacity {
         Integer desiredEC2Instances,
         Integer maxSize,
         Integer minSize) {
-        this.desiredEC2Instances = Objects.requireNonNull(desiredEC2Instances);
-        this.maxSize = Objects.requireNonNull(maxSize);
-        this.minSize = Objects.requireNonNull(minSize);
+        this.desiredEC2Instances = desiredEC2Instances;
+        this.maxSize = maxSize;
+        this.minSize = minSize;
     }
 
     /**

@@ -13,7 +13,7 @@ public final class DataQualityJobDefinitionDataQualityJobInput {
 
     @OutputCustomType.Constructor({"endpointInput"})
     private DataQualityJobDefinitionDataQualityJobInput(DataQualityJobDefinitionEndpointInput endpointInput) {
-        this.endpointInput = Objects.requireNonNull(endpointInput);
+        this.endpointInput = endpointInput;
     }
 
     public DataQualityJobDefinitionEndpointInput getEndpointInput() {

@@ -31,9 +31,9 @@ public final class DataSourcePrestoParameters {
         String catalog,
         String host,
         Double port) {
-        this.catalog = Objects.requireNonNull(catalog);
-        this.host = Objects.requireNonNull(host);
-        this.port = Objects.requireNonNull(port);
+        this.catalog = catalog;
+        this.host = host;
+        this.port = port;
     }
 
     /**

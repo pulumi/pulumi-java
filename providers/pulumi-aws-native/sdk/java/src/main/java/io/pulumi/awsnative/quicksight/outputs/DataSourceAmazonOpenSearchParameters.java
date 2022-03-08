@@ -17,7 +17,7 @@ public final class DataSourceAmazonOpenSearchParameters {
 
     @OutputCustomType.Constructor({"domain"})
     private DataSourceAmazonOpenSearchParameters(String domain) {
-        this.domain = Objects.requireNonNull(domain);
+        this.domain = domain;
     }
 
     /**

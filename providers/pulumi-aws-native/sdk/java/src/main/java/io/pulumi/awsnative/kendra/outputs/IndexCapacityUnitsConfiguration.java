@@ -16,8 +16,8 @@ public final class IndexCapacityUnitsConfiguration {
     private IndexCapacityUnitsConfiguration(
         Integer queryCapacityUnits,
         Integer storageCapacityUnits) {
-        this.queryCapacityUnits = Objects.requireNonNull(queryCapacityUnits);
-        this.storageCapacityUnits = Objects.requireNonNull(storageCapacityUnits);
+        this.queryCapacityUnits = queryCapacityUnits;
+        this.storageCapacityUnits = storageCapacityUnits;
     }
 
     public Integer getQueryCapacityUnits() {

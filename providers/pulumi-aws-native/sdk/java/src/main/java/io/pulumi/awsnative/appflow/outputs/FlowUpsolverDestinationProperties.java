@@ -21,9 +21,9 @@ public final class FlowUpsolverDestinationProperties {
         String bucketName,
         @Nullable String bucketPrefix,
         FlowUpsolverS3OutputFormatConfig s3OutputFormatConfig) {
-        this.bucketName = Objects.requireNonNull(bucketName);
+        this.bucketName = bucketName;
         this.bucketPrefix = bucketPrefix;
-        this.s3OutputFormatConfig = Objects.requireNonNull(s3OutputFormatConfig);
+        this.s3OutputFormatConfig = s3OutputFormatConfig;
     }
 
     public String getBucketName() {

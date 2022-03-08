@@ -14,7 +14,7 @@ public final class ResponseHeadersPolicyAccessControlExposeHeaders {
 
     @OutputCustomType.Constructor({"items"})
     private ResponseHeadersPolicyAccessControlExposeHeaders(List<String> items) {
-        this.items = Objects.requireNonNull(items);
+        this.items = items;
     }
 
     public List<String> getItems() {

@@ -13,7 +13,7 @@ public final class FirewallPolicyDimension {
 
     @OutputCustomType.Constructor({"value"})
     private FirewallPolicyDimension(String value) {
-        this.value = Objects.requireNonNull(value);
+        this.value = value;
     }
 
     public String getValue() {

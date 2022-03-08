@@ -21,8 +21,8 @@ public final class BucketDataExport {
     private BucketDataExport(
         BucketDestination destination,
         String outputSchemaVersion) {
-        this.destination = Objects.requireNonNull(destination);
-        this.outputSchemaVersion = Objects.requireNonNull(outputSchemaVersion);
+        this.destination = destination;
+        this.outputSchemaVersion = outputSchemaVersion;
     }
 
     public BucketDestination getDestination() {

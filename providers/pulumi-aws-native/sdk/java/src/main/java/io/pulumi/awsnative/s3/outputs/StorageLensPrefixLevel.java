@@ -13,7 +13,7 @@ public final class StorageLensPrefixLevel {
 
     @OutputCustomType.Constructor({"storageMetrics"})
     private StorageLensPrefixLevel(StorageLensPrefixLevelStorageMetrics storageMetrics) {
-        this.storageMetrics = Objects.requireNonNull(storageMetrics);
+        this.storageMetrics = storageMetrics;
     }
 
     public StorageLensPrefixLevelStorageMetrics getStorageMetrics() {

@@ -16,8 +16,8 @@ public final class DeliveryStreamKinesisStreamSourceConfiguration {
     private DeliveryStreamKinesisStreamSourceConfiguration(
         String kinesisStreamARN,
         String roleARN) {
-        this.kinesisStreamARN = Objects.requireNonNull(kinesisStreamARN);
-        this.roleARN = Objects.requireNonNull(roleARN);
+        this.kinesisStreamARN = kinesisStreamARN;
+        this.roleARN = roleARN;
     }
 
     public String getKinesisStreamARN() {

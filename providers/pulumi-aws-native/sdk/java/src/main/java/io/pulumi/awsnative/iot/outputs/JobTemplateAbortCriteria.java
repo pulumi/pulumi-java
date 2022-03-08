@@ -39,10 +39,10 @@ public final class JobTemplateAbortCriteria {
         JobTemplateFailureType failureType,
         Integer minNumberOfExecutedThings,
         Double thresholdPercentage) {
-        this.action = Objects.requireNonNull(action);
-        this.failureType = Objects.requireNonNull(failureType);
-        this.minNumberOfExecutedThings = Objects.requireNonNull(minNumberOfExecutedThings);
-        this.thresholdPercentage = Objects.requireNonNull(thresholdPercentage);
+        this.action = action;
+        this.failureType = failureType;
+        this.minNumberOfExecutedThings = minNumberOfExecutedThings;
+        this.thresholdPercentage = thresholdPercentage;
     }
 
     /**

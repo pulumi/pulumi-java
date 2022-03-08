@@ -25,8 +25,8 @@ public final class ConnectorWorkerConfiguration {
     private ConnectorWorkerConfiguration(
         Integer revision,
         String workerConfigurationArn) {
-        this.revision = Objects.requireNonNull(revision);
-        this.workerConfigurationArn = Objects.requireNonNull(workerConfigurationArn);
+        this.revision = revision;
+        this.workerConfigurationArn = workerConfigurationArn;
     }
 
     /**

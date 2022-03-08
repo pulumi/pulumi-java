@@ -17,7 +17,7 @@ public final class BucketAccelerateConfiguration {
 
     @OutputCustomType.Constructor({"accelerationStatus"})
     private BucketAccelerateConfiguration(BucketAccelerateConfigurationAccelerationStatus accelerationStatus) {
-        this.accelerationStatus = Objects.requireNonNull(accelerationStatus);
+        this.accelerationStatus = accelerationStatus;
     }
 
     /**

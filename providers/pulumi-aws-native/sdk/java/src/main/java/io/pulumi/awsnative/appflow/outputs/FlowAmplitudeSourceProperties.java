@@ -13,7 +13,7 @@ public final class FlowAmplitudeSourceProperties {
 
     @OutputCustomType.Constructor({"object"})
     private FlowAmplitudeSourceProperties(String object) {
-        this.object = Objects.requireNonNull(object);
+        this.object = object;
     }
 
     public String getObject() {

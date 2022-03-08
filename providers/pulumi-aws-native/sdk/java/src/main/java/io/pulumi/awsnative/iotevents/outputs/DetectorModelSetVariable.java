@@ -24,8 +24,8 @@ public final class DetectorModelSetVariable {
     private DetectorModelSetVariable(
         String value,
         String variableName) {
-        this.value = Objects.requireNonNull(value);
-        this.variableName = Objects.requireNonNull(variableName);
+        this.value = value;
+        this.variableName = variableName;
     }
 
     /**

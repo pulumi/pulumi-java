@@ -17,7 +17,7 @@ public final class ConnectorProfileDatadogConnectorProfileProperties {
 
     @OutputCustomType.Constructor({"instanceUrl"})
     private ConnectorProfileDatadogConnectorProfileProperties(String instanceUrl) {
-        this.instanceUrl = Objects.requireNonNull(instanceUrl);
+        this.instanceUrl = instanceUrl;
     }
 
     /**

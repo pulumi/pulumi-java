@@ -18,7 +18,7 @@ public final class BotSlotDefaultValueSpecification {
 
     @OutputCustomType.Constructor({"defaultValueList"})
     private BotSlotDefaultValueSpecification(List<BotSlotDefaultValue> defaultValueList) {
-        this.defaultValueList = Objects.requireNonNull(defaultValueList);
+        this.defaultValueList = defaultValueList;
     }
 
     /**

@@ -43,13 +43,13 @@ public final class StorageLensConfiguration {
         @Nullable StorageLensBucketsAndRegions include,
         Boolean isEnabled,
         @Nullable String storageLensArn) {
-        this.accountLevel = Objects.requireNonNull(accountLevel);
+        this.accountLevel = accountLevel;
         this.awsOrg = awsOrg;
         this.dataExport = dataExport;
         this.exclude = exclude;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.include = include;
-        this.isEnabled = Objects.requireNonNull(isEnabled);
+        this.isEnabled = isEnabled;
         this.storageLensArn = storageLensArn;
     }
 

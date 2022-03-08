@@ -23,11 +23,11 @@ public final class DataSourceConnectionConfiguration {
         Integer databasePort,
         String secretArn,
         String tableName) {
-        this.databaseHost = Objects.requireNonNull(databaseHost);
-        this.databaseName = Objects.requireNonNull(databaseName);
-        this.databasePort = Objects.requireNonNull(databasePort);
-        this.secretArn = Objects.requireNonNull(secretArn);
-        this.tableName = Objects.requireNonNull(tableName);
+        this.databaseHost = databaseHost;
+        this.databaseName = databaseName;
+        this.databasePort = databasePort;
+        this.secretArn = secretArn;
+        this.tableName = tableName;
     }
 
     public String getDatabaseHost() {

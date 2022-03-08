@@ -27,9 +27,9 @@ public final class TestGridProjectVpcConfig {
         List<String> securityGroupIds,
         List<String> subnetIds,
         String vpcId) {
-        this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
-        this.subnetIds = Objects.requireNonNull(subnetIds);
-        this.vpcId = Objects.requireNonNull(vpcId);
+        this.securityGroupIds = securityGroupIds;
+        this.subnetIds = subnetIds;
+        this.vpcId = vpcId;
     }
 
     /**

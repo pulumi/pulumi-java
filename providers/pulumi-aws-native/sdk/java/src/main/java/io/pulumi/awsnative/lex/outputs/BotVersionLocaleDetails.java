@@ -13,7 +13,7 @@ public final class BotVersionLocaleDetails {
 
     @OutputCustomType.Constructor({"sourceBotVersion"})
     private BotVersionLocaleDetails(String sourceBotVersion) {
-        this.sourceBotVersion = Objects.requireNonNull(sourceBotVersion);
+        this.sourceBotVersion = sourceBotVersion;
     }
 
     public String getSourceBotVersion() {

@@ -48,10 +48,10 @@ public final class ApplicationHANAPrometheusExporter {
         String hANASID,
         String hANASecretName,
         @Nullable String prometheusPort) {
-        this.agreeToInstallHANADBClient = Objects.requireNonNull(agreeToInstallHANADBClient);
-        this.hANAPort = Objects.requireNonNull(hANAPort);
-        this.hANASID = Objects.requireNonNull(hANASID);
-        this.hANASecretName = Objects.requireNonNull(hANASecretName);
+        this.agreeToInstallHANADBClient = agreeToInstallHANADBClient;
+        this.hANAPort = hANAPort;
+        this.hANASID = hANASID;
+        this.hANASecretName = hANASecretName;
         this.prometheusPort = prometheusPort;
     }
 

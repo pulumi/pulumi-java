@@ -17,7 +17,7 @@ public final class BucketVersioningConfiguration {
 
     @OutputCustomType.Constructor({"status"})
     private BucketVersioningConfiguration(BucketVersioningConfigurationStatus status) {
-        this.status = Objects.requireNonNull(status);
+        this.status = status;
     }
 
     /**

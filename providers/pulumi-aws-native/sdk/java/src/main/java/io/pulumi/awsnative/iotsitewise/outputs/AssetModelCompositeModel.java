@@ -42,8 +42,8 @@ public final class AssetModelCompositeModel {
         String type) {
         this.compositeModelProperties = compositeModelProperties;
         this.description = description;
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.name = name;
+        this.type = type;
     }
 
     /**

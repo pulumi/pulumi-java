@@ -18,7 +18,7 @@ public final class PrefixListEntry {
     private PrefixListEntry(
         String cidr,
         @Nullable String description) {
-        this.cidr = Objects.requireNonNull(cidr);
+        this.cidr = cidr;
         this.description = description;
     }
 

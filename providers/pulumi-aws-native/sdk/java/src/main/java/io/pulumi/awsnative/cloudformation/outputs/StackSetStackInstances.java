@@ -30,9 +30,9 @@ public final class StackSetStackInstances {
         StackSetDeploymentTargets deploymentTargets,
         @Nullable List<StackSetParameter> parameterOverrides,
         List<String> regions) {
-        this.deploymentTargets = Objects.requireNonNull(deploymentTargets);
+        this.deploymentTargets = deploymentTargets;
         this.parameterOverrides = parameterOverrides;
-        this.regions = Objects.requireNonNull(regions);
+        this.regions = regions;
     }
 
     public StackSetDeploymentTargets getDeploymentTargets() {

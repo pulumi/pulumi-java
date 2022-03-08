@@ -13,7 +13,7 @@ public final class IntegrationMarketoSourceProperties {
 
     @OutputCustomType.Constructor({"object"})
     private IntegrationMarketoSourceProperties(String object) {
-        this.object = Objects.requireNonNull(object);
+        this.object = object;
     }
 
     public String getObject() {

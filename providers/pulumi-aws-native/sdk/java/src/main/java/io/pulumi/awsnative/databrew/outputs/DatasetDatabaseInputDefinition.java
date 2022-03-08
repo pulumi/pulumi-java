@@ -36,7 +36,7 @@ public final class DatasetDatabaseInputDefinition {
         @Nullable String queryString,
         @Nullable DatasetS3Location tempDirectory) {
         this.databaseTableName = databaseTableName;
-        this.glueConnectionName = Objects.requireNonNull(glueConnectionName);
+        this.glueConnectionName = glueConnectionName;
         this.queryString = queryString;
         this.tempDirectory = tempDirectory;
     }

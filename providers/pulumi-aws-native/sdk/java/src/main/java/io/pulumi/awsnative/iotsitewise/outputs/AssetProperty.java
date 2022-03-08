@@ -34,7 +34,7 @@ public final class AssetProperty {
         String logicalId,
         @Nullable AssetPropertyNotificationState notificationState) {
         this.alias = alias;
-        this.logicalId = Objects.requireNonNull(logicalId);
+        this.logicalId = logicalId;
         this.notificationState = notificationState;
     }
 

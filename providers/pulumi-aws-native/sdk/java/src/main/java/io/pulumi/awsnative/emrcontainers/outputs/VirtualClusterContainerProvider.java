@@ -27,9 +27,9 @@ public final class VirtualClusterContainerProvider {
         String id,
         VirtualClusterContainerInfo info,
         String type) {
-        this.id = Objects.requireNonNull(id);
-        this.info = Objects.requireNonNull(info);
-        this.type = Objects.requireNonNull(type);
+        this.id = id;
+        this.info = info;
+        this.type = type;
     }
 
     /**

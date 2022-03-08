@@ -13,7 +13,7 @@ public final class PackagingConfigurationDashEncryption {
 
     @OutputCustomType.Constructor({"spekeKeyProvider"})
     private PackagingConfigurationDashEncryption(PackagingConfigurationSpekeKeyProvider spekeKeyProvider) {
-        this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
+        this.spekeKeyProvider = spekeKeyProvider;
     }
 
     public PackagingConfigurationSpekeKeyProvider getSpekeKeyProvider() {

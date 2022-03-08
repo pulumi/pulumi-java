@@ -41,8 +41,8 @@ public final class DistributionOrigin {
         this.connectionAttempts = connectionAttempts;
         this.connectionTimeout = connectionTimeout;
         this.customOriginConfig = customOriginConfig;
-        this.domainName = Objects.requireNonNull(domainName);
-        this.id = Objects.requireNonNull(id);
+        this.domainName = domainName;
+        this.id = id;
         this.originCustomHeaders = originCustomHeaders;
         this.originPath = originPath;
         this.originShield = originShield;

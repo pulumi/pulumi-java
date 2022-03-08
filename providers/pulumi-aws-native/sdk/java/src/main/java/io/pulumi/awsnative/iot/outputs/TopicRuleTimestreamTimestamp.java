@@ -16,8 +16,8 @@ public final class TopicRuleTimestreamTimestamp {
     private TopicRuleTimestreamTimestamp(
         String unit,
         String value) {
-        this.unit = Objects.requireNonNull(unit);
-        this.value = Objects.requireNonNull(value);
+        this.unit = unit;
+        this.value = value;
     }
 
     public String getUnit() {

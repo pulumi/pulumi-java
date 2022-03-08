@@ -17,7 +17,7 @@ public final class ConnectorProfileSlackConnectorProfileProperties {
 
     @OutputCustomType.Constructor({"instanceUrl"})
     private ConnectorProfileSlackConnectorProfileProperties(String instanceUrl) {
-        this.instanceUrl = Objects.requireNonNull(instanceUrl);
+        this.instanceUrl = instanceUrl;
     }
 
     /**

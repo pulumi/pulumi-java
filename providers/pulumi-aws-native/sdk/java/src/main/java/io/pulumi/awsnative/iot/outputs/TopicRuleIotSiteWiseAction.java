@@ -18,8 +18,8 @@ public final class TopicRuleIotSiteWiseAction {
     private TopicRuleIotSiteWiseAction(
         List<TopicRulePutAssetPropertyValueEntry> putAssetPropertyValueEntries,
         String roleArn) {
-        this.putAssetPropertyValueEntries = Objects.requireNonNull(putAssetPropertyValueEntries);
-        this.roleArn = Objects.requireNonNull(roleArn);
+        this.putAssetPropertyValueEntries = putAssetPropertyValueEntries;
+        this.roleArn = roleArn;
     }
 
     public List<TopicRulePutAssetPropertyValueEntry> getPutAssetPropertyValueEntries() {

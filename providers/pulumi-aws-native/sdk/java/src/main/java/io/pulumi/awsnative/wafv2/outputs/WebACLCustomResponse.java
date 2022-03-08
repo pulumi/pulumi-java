@@ -32,7 +32,7 @@ public final class WebACLCustomResponse {
         Integer responseCode,
         @Nullable List<WebACLCustomHTTPHeader> responseHeaders) {
         this.customResponseBodyKey = customResponseBodyKey;
-        this.responseCode = Objects.requireNonNull(responseCode);
+        this.responseCode = responseCode;
         this.responseHeaders = responseHeaders;
     }
 

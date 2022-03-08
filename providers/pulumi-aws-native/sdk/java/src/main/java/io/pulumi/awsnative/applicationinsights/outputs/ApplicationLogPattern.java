@@ -31,9 +31,9 @@ public final class ApplicationLogPattern {
         String pattern,
         String patternName,
         Integer rank) {
-        this.pattern = Objects.requireNonNull(pattern);
-        this.patternName = Objects.requireNonNull(patternName);
-        this.rank = Objects.requireNonNull(rank);
+        this.pattern = pattern;
+        this.patternName = patternName;
+        this.rank = rank;
     }
 
     /**

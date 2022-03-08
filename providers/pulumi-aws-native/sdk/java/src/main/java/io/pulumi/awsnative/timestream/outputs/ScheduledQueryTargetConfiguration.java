@@ -13,7 +13,7 @@ public final class ScheduledQueryTargetConfiguration {
 
     @OutputCustomType.Constructor({"timestreamConfiguration"})
     private ScheduledQueryTargetConfiguration(ScheduledQueryTimestreamConfiguration timestreamConfiguration) {
-        this.timestreamConfiguration = Objects.requireNonNull(timestreamConfiguration);
+        this.timestreamConfiguration = timestreamConfiguration;
     }
 
     public ScheduledQueryTimestreamConfiguration getTimestreamConfiguration() {

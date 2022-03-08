@@ -22,7 +22,7 @@ public final class DeliveryStreamCopyCommand {
         String dataTableName) {
         this.copyOptions = copyOptions;
         this.dataTableColumns = dataTableColumns;
-        this.dataTableName = Objects.requireNonNull(dataTableName);
+        this.dataTableName = dataTableName;
     }
 
     public Optional<String> getCopyOptions() {

@@ -13,7 +13,7 @@ public final class PackagingConfigurationMssEncryption {
 
     @OutputCustomType.Constructor({"spekeKeyProvider"})
     private PackagingConfigurationMssEncryption(PackagingConfigurationSpekeKeyProvider spekeKeyProvider) {
-        this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
+        this.spekeKeyProvider = spekeKeyProvider;
     }
 
     public PackagingConfigurationSpekeKeyProvider getSpekeKeyProvider() {

@@ -13,7 +13,7 @@ public final class FlowDynatraceSourceProperties {
 
     @OutputCustomType.Constructor({"object"})
     private FlowDynatraceSourceProperties(String object) {
-        this.object = Objects.requireNonNull(object);
+        this.object = object;
     }
 
     public String getObject() {

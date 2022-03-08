@@ -43,8 +43,8 @@ public final class DataSourceSalesforceConfiguration {
         this.excludeAttachmentFilePatterns = excludeAttachmentFilePatterns;
         this.includeAttachmentFilePatterns = includeAttachmentFilePatterns;
         this.knowledgeArticleConfiguration = knowledgeArticleConfiguration;
-        this.secretArn = Objects.requireNonNull(secretArn);
-        this.serverUrl = Objects.requireNonNull(serverUrl);
+        this.secretArn = secretArn;
+        this.serverUrl = serverUrl;
         this.standardObjectAttachmentConfiguration = standardObjectAttachmentConfiguration;
         this.standardObjectConfigurations = standardObjectConfigurations;
     }

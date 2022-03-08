@@ -32,7 +32,7 @@ public final class DatasetDatetimeOptions {
         String format,
         @Nullable String localeCode,
         @Nullable String timezoneOffset) {
-        this.format = Objects.requireNonNull(format);
+        this.format = format;
         this.localeCode = localeCode;
         this.timezoneOffset = timezoneOffset;
     }

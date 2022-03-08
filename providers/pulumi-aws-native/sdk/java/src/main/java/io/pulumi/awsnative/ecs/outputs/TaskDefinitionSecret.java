@@ -16,8 +16,8 @@ public final class TaskDefinitionSecret {
     private TaskDefinitionSecret(
         String name,
         String valueFrom) {
-        this.name = Objects.requireNonNull(name);
-        this.valueFrom = Objects.requireNonNull(valueFrom);
+        this.name = name;
+        this.valueFrom = valueFrom;
     }
 
     public String getName() {

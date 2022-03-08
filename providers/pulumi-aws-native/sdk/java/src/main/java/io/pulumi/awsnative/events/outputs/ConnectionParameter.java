@@ -22,8 +22,8 @@ public final class ConnectionParameter {
         String key,
         String value) {
         this.isValueSecret = isValueSecret;
-        this.key = Objects.requireNonNull(key);
-        this.value = Objects.requireNonNull(value);
+        this.key = key;
+        this.value = value;
     }
 
     public Optional<Boolean> getIsValueSecret() {

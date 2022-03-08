@@ -14,7 +14,7 @@ public final class ResponseHeadersPolicyAccessControlAllowOrigins {
 
     @OutputCustomType.Constructor({"items"})
     private ResponseHeadersPolicyAccessControlAllowOrigins(List<String> items) {
-        this.items = Objects.requireNonNull(items);
+        this.items = items;
     }
 
     public List<String> getItems() {

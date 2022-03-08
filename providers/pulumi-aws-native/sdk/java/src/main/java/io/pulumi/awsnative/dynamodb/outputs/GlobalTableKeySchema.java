@@ -16,8 +16,8 @@ public final class GlobalTableKeySchema {
     private GlobalTableKeySchema(
         String attributeName,
         String keyType) {
-        this.attributeName = Objects.requireNonNull(attributeName);
-        this.keyType = Objects.requireNonNull(keyType);
+        this.attributeName = attributeName;
+        this.keyType = keyType;
     }
 
     public String getAttributeName() {

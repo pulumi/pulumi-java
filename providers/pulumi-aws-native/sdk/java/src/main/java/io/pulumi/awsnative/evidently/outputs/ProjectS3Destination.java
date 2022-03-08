@@ -18,7 +18,7 @@ public final class ProjectS3Destination {
     private ProjectS3Destination(
         String bucketName,
         @Nullable String prefix) {
-        this.bucketName = Objects.requireNonNull(bucketName);
+        this.bucketName = bucketName;
         this.prefix = prefix;
     }
 

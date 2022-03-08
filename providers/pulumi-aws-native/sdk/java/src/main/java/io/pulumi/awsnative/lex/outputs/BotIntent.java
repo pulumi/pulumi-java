@@ -62,7 +62,7 @@ public final class BotIntent {
         this.intentClosingSetting = intentClosingSetting;
         this.intentConfirmationSetting = intentConfirmationSetting;
         this.kendraConfiguration = kendraConfiguration;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.outputContexts = outputContexts;
         this.parentIntentSignature = parentIntentSignature;
         this.sampleUtterances = sampleUtterances;

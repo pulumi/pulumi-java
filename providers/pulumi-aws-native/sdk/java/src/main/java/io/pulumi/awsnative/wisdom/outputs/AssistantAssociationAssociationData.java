@@ -13,7 +13,7 @@ public final class AssistantAssociationAssociationData {
 
     @OutputCustomType.Constructor({"knowledgeBaseId"})
     private AssistantAssociationAssociationData(String knowledgeBaseId) {
-        this.knowledgeBaseId = Objects.requireNonNull(knowledgeBaseId);
+        this.knowledgeBaseId = knowledgeBaseId;
     }
 
     public String getKnowledgeBaseId() {

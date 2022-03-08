@@ -30,7 +30,7 @@ public final class TopicRulePutAssetPropertyValueEntry {
         this.entryId = entryId;
         this.propertyAlias = propertyAlias;
         this.propertyId = propertyId;
-        this.propertyValues = Objects.requireNonNull(propertyValues);
+        this.propertyValues = propertyValues;
     }
 
     public Optional<String> getAssetId() {

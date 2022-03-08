@@ -22,7 +22,7 @@ public final class ListenerRuleFixedResponseConfig {
         String statusCode) {
         this.contentType = contentType;
         this.messageBody = messageBody;
-        this.statusCode = Objects.requireNonNull(statusCode);
+        this.statusCode = statusCode;
     }
 
     public Optional<String> getContentType() {

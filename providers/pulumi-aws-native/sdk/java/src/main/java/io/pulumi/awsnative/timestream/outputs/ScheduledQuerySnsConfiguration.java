@@ -13,7 +13,7 @@ public final class ScheduledQuerySnsConfiguration {
 
     @OutputCustomType.Constructor({"topicArn"})
     private ScheduledQuerySnsConfiguration(String topicArn) {
-        this.topicArn = Objects.requireNonNull(topicArn);
+        this.topicArn = topicArn;
     }
 
     public String getTopicArn() {

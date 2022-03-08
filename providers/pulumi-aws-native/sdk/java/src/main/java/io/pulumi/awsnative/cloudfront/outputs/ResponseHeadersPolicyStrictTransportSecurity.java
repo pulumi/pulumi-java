@@ -23,9 +23,9 @@ public final class ResponseHeadersPolicyStrictTransportSecurity {
         @Nullable Boolean includeSubdomains,
         Boolean override,
         @Nullable Boolean preload) {
-        this.accessControlMaxAgeSec = Objects.requireNonNull(accessControlMaxAgeSec);
+        this.accessControlMaxAgeSec = accessControlMaxAgeSec;
         this.includeSubdomains = includeSubdomains;
-        this.override = Objects.requireNonNull(override);
+        this.override = override;
         this.preload = preload;
     }
 

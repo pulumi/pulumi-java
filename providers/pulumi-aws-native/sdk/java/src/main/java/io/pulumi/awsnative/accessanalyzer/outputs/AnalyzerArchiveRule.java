@@ -22,8 +22,8 @@ public final class AnalyzerArchiveRule {
     private AnalyzerArchiveRule(
         List<AnalyzerFilter> filter,
         String ruleName) {
-        this.filter = Objects.requireNonNull(filter);
-        this.ruleName = Objects.requireNonNull(ruleName);
+        this.filter = filter;
+        this.ruleName = ruleName;
     }
 
     public List<AnalyzerFilter> getFilter() {

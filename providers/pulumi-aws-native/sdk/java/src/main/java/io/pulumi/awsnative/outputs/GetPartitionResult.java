@@ -13,7 +13,7 @@ public final class GetPartitionResult {
 
     @OutputCustomType.Constructor({"partition"})
     private GetPartitionResult(String partition) {
-        this.partition = Objects.requireNonNull(partition);
+        this.partition = partition;
     }
 
     public String getPartition() {

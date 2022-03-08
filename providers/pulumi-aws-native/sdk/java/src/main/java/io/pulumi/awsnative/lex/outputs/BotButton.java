@@ -24,8 +24,8 @@ public final class BotButton {
     private BotButton(
         String text,
         String value) {
-        this.text = Objects.requireNonNull(text);
-        this.value = Objects.requireNonNull(value);
+        this.text = text;
+        this.value = value;
     }
 
     /**

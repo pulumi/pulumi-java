@@ -16,8 +16,8 @@ public final class DeliveryStreamHttpEndpointCommonAttribute {
     private DeliveryStreamHttpEndpointCommonAttribute(
         String attributeName,
         String attributeValue) {
-        this.attributeName = Objects.requireNonNull(attributeName);
-        this.attributeValue = Objects.requireNonNull(attributeValue);
+        this.attributeName = attributeName;
+        this.attributeValue = attributeValue;
     }
 
     public String getAttributeName() {

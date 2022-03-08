@@ -17,8 +17,8 @@ public final class NetworkInterfacePrivateIpAddressSpecification {
     private NetworkInterfacePrivateIpAddressSpecification(
         Boolean primary,
         String privateIpAddress) {
-        this.primary = Objects.requireNonNull(primary);
-        this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
+        this.primary = primary;
+        this.privateIpAddress = privateIpAddress;
     }
 
     public Boolean getPrimary() {

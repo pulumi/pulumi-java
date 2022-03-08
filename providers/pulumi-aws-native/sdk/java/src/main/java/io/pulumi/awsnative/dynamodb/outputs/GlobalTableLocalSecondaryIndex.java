@@ -21,9 +21,9 @@ public final class GlobalTableLocalSecondaryIndex {
         String indexName,
         List<GlobalTableKeySchema> keySchema,
         GlobalTableProjection projection) {
-        this.indexName = Objects.requireNonNull(indexName);
-        this.keySchema = Objects.requireNonNull(keySchema);
-        this.projection = Objects.requireNonNull(projection);
+        this.indexName = indexName;
+        this.keySchema = keySchema;
+        this.projection = projection;
     }
 
     public String getIndexName() {

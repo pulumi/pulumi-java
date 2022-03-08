@@ -22,8 +22,8 @@ public final class KeyGroupConfig {
         List<String> items,
         String name) {
         this.comment = comment;
-        this.items = Objects.requireNonNull(items);
-        this.name = Objects.requireNonNull(name);
+        this.items = items;
+        this.name = name;
     }
 
     public Optional<String> getComment() {

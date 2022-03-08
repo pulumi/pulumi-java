@@ -22,8 +22,8 @@ public final class BranchBasicAuthConfig {
         String password,
         String username) {
         this.enableBasicAuth = enableBasicAuth;
-        this.password = Objects.requireNonNull(password);
-        this.username = Objects.requireNonNull(username);
+        this.password = password;
+        this.username = username;
     }
 
     public Optional<Boolean> getEnableBasicAuth() {

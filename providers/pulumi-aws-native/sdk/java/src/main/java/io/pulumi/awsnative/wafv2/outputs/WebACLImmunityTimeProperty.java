@@ -13,7 +13,7 @@ public final class WebACLImmunityTimeProperty {
 
     @OutputCustomType.Constructor({"immunityTime"})
     private WebACLImmunityTimeProperty(Integer immunityTime) {
-        this.immunityTime = Objects.requireNonNull(immunityTime);
+        this.immunityTime = immunityTime;
     }
 
     public Integer getImmunityTime() {

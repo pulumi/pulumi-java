@@ -28,10 +28,10 @@ public final class OriginRequestPolicyConfig {
         String name,
         OriginRequestPolicyQueryStringsConfig queryStringsConfig) {
         this.comment = comment;
-        this.cookiesConfig = Objects.requireNonNull(cookiesConfig);
-        this.headersConfig = Objects.requireNonNull(headersConfig);
-        this.name = Objects.requireNonNull(name);
-        this.queryStringsConfig = Objects.requireNonNull(queryStringsConfig);
+        this.cookiesConfig = cookiesConfig;
+        this.headersConfig = headersConfig;
+        this.name = name;
+        this.queryStringsConfig = queryStringsConfig;
     }
 
     public Optional<String> getComment() {

@@ -32,7 +32,7 @@ public final class PackagingConfigurationHlsEncryption {
         PackagingConfigurationSpekeKeyProvider spekeKeyProvider) {
         this.constantInitializationVector = constantInitializationVector;
         this.encryptionMethod = encryptionMethod;
-        this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
+        this.spekeKeyProvider = spekeKeyProvider;
     }
 
     /**

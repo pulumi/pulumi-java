@@ -24,10 +24,10 @@ public final class DataSourceSalesforceCustomKnowledgeArticleTypeConfiguration {
         @Nullable String documentTitleFieldName,
         @Nullable List<DataSourceToIndexFieldMapping> fieldMappings,
         String name) {
-        this.documentDataFieldName = Objects.requireNonNull(documentDataFieldName);
+        this.documentDataFieldName = documentDataFieldName;
         this.documentTitleFieldName = documentTitleFieldName;
         this.fieldMappings = fieldMappings;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     public String getDocumentDataFieldName() {

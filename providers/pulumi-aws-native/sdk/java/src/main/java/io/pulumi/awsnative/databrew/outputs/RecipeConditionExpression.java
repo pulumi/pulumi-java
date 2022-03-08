@@ -32,8 +32,8 @@ public final class RecipeConditionExpression {
         String condition,
         String targetColumn,
         @Nullable String value) {
-        this.condition = Objects.requireNonNull(condition);
-        this.targetColumn = Objects.requireNonNull(targetColumn);
+        this.condition = condition;
+        this.targetColumn = targetColumn;
         this.value = value;
     }
 

@@ -25,8 +25,8 @@ public final class ApplicationSubComponentTypeConfiguration {
     private ApplicationSubComponentTypeConfiguration(
         ApplicationSubComponentConfigurationDetails subComponentConfigurationDetails,
         ApplicationSubComponentTypeConfigurationSubComponentType subComponentType) {
-        this.subComponentConfigurationDetails = Objects.requireNonNull(subComponentConfigurationDetails);
-        this.subComponentType = Objects.requireNonNull(subComponentType);
+        this.subComponentConfigurationDetails = subComponentConfigurationDetails;
+        this.subComponentType = subComponentType;
     }
 
     /**

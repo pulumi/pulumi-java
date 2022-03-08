@@ -24,7 +24,7 @@ public final class DetectorModelSns {
         @Nullable DetectorModelPayload payload,
         String targetArn) {
         this.payload = payload;
-        this.targetArn = Objects.requireNonNull(targetArn);
+        this.targetArn = targetArn;
     }
 
     public Optional<DetectorModelPayload> getPayload() {

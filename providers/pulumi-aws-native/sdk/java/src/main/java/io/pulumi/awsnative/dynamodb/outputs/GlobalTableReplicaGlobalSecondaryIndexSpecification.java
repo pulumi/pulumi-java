@@ -23,7 +23,7 @@ public final class GlobalTableReplicaGlobalSecondaryIndexSpecification {
         String indexName,
         @Nullable GlobalTableReadProvisionedThroughputSettings readProvisionedThroughputSettings) {
         this.contributorInsightsSpecification = contributorInsightsSpecification;
-        this.indexName = Objects.requireNonNull(indexName);
+        this.indexName = indexName;
         this.readProvisionedThroughputSettings = readProvisionedThroughputSettings;
     }
 

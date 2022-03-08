@@ -13,7 +13,7 @@ public final class RuleGroupAddress {
 
     @OutputCustomType.Constructor({"addressDefinition"})
     private RuleGroupAddress(String addressDefinition) {
-        this.addressDefinition = Objects.requireNonNull(addressDefinition);
+        this.addressDefinition = addressDefinition;
     }
 
     public String getAddressDefinition() {

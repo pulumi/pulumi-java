@@ -25,7 +25,7 @@ public final class InstanceNetworking {
         @Nullable InstanceMonthlyTransfer monthlyTransfer,
         List<InstancePort> ports) {
         this.monthlyTransfer = monthlyTransfer;
-        this.ports = Objects.requireNonNull(ports);
+        this.ports = ports;
     }
 
     public Optional<InstanceMonthlyTransfer> getMonthlyTransfer() {

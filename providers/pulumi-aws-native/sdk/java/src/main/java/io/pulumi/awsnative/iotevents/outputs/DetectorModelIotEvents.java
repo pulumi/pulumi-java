@@ -23,7 +23,7 @@ public final class DetectorModelIotEvents {
     private DetectorModelIotEvents(
         String inputName,
         @Nullable DetectorModelPayload payload) {
-        this.inputName = Objects.requireNonNull(inputName);
+        this.inputName = inputName;
         this.payload = payload;
     }
 

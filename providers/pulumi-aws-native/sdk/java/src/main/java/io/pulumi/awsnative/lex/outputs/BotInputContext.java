@@ -17,7 +17,7 @@ public final class BotInputContext {
 
     @OutputCustomType.Constructor({"name"})
     private BotInputContext(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

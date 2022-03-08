@@ -23,7 +23,7 @@ public final class SecurityProfileMetricToRetain {
     private SecurityProfileMetricToRetain(
         String metric,
         @Nullable SecurityProfileMetricDimension metricDimension) {
-        this.metric = Objects.requireNonNull(metric);
+        this.metric = metric;
         this.metricDimension = metricDimension;
     }
 

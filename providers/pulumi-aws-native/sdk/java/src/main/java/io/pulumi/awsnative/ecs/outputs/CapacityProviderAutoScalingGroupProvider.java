@@ -22,7 +22,7 @@ public final class CapacityProviderAutoScalingGroupProvider {
         String autoScalingGroupArn,
         @Nullable CapacityProviderManagedScaling managedScaling,
         @Nullable CapacityProviderAutoScalingGroupProviderManagedTerminationProtection managedTerminationProtection) {
-        this.autoScalingGroupArn = Objects.requireNonNull(autoScalingGroupArn);
+        this.autoScalingGroupArn = autoScalingGroupArn;
         this.managedScaling = managedScaling;
         this.managedTerminationProtection = managedTerminationProtection;
     }

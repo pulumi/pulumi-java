@@ -13,7 +13,7 @@ public final class MitigationActionReplaceDefaultPolicyVersionParams {
 
     @OutputCustomType.Constructor({"templateName"})
     private MitigationActionReplaceDefaultPolicyVersionParams(MitigationActionReplaceDefaultPolicyVersionParamsTemplateName templateName) {
-        this.templateName = Objects.requireNonNull(templateName);
+        this.templateName = templateName;
     }
 
     public MitigationActionReplaceDefaultPolicyVersionParamsTemplateName getTemplateName() {

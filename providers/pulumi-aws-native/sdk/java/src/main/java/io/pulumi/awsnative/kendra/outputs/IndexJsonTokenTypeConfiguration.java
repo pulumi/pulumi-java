@@ -16,8 +16,8 @@ public final class IndexJsonTokenTypeConfiguration {
     private IndexJsonTokenTypeConfiguration(
         String groupAttributeField,
         String userNameAttributeField) {
-        this.groupAttributeField = Objects.requireNonNull(groupAttributeField);
-        this.userNameAttributeField = Objects.requireNonNull(userNameAttributeField);
+        this.groupAttributeField = groupAttributeField;
+        this.userNameAttributeField = userNameAttributeField;
     }
 
     public String getGroupAttributeField() {

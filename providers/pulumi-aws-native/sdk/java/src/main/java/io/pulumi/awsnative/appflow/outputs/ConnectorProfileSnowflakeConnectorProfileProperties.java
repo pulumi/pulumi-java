@@ -58,12 +58,12 @@ public final class ConnectorProfileSnowflakeConnectorProfileProperties {
         String stage,
         String warehouse) {
         this.accountName = accountName;
-        this.bucketName = Objects.requireNonNull(bucketName);
+        this.bucketName = bucketName;
         this.bucketPrefix = bucketPrefix;
         this.privateLinkServiceName = privateLinkServiceName;
         this.region = region;
-        this.stage = Objects.requireNonNull(stage);
-        this.warehouse = Objects.requireNonNull(warehouse);
+        this.stage = stage;
+        this.warehouse = warehouse;
     }
 
     /**

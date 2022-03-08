@@ -18,8 +18,8 @@ public final class WebACLXssMatchStatement {
     private WebACLXssMatchStatement(
         WebACLFieldToMatch fieldToMatch,
         List<WebACLTextTransformation> textTransformations) {
-        this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
-        this.textTransformations = Objects.requireNonNull(textTransformations);
+        this.fieldToMatch = fieldToMatch;
+        this.textTransformations = textTransformations;
     }
 
     public WebACLFieldToMatch getFieldToMatch() {

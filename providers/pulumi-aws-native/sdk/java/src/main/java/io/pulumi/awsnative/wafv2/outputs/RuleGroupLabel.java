@@ -13,7 +13,7 @@ public final class RuleGroupLabel {
 
     @OutputCustomType.Constructor({"name"})
     private RuleGroupLabel(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     public String getName() {

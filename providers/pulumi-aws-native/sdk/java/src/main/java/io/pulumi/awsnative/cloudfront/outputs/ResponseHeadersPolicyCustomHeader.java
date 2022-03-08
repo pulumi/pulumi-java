@@ -19,9 +19,9 @@ public final class ResponseHeadersPolicyCustomHeader {
         String header,
         Boolean override,
         String value) {
-        this.header = Objects.requireNonNull(header);
-        this.override = Objects.requireNonNull(override);
-        this.value = Objects.requireNonNull(value);
+        this.header = header;
+        this.override = override;
+        this.value = value;
     }
 
     public String getHeader() {

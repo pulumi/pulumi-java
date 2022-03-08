@@ -27,7 +27,7 @@ public final class DistributionForwardedValues {
         @Nullable List<String> queryStringCacheKeys) {
         this.cookies = cookies;
         this.headers = headers;
-        this.queryString = Objects.requireNonNull(queryString);
+        this.queryString = queryString;
         this.queryStringCacheKeys = queryStringCacheKeys;
     }
 

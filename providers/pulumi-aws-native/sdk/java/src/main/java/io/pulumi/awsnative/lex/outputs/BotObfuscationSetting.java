@@ -17,7 +17,7 @@ public final class BotObfuscationSetting {
 
     @OutputCustomType.Constructor({"obfuscationSettingType"})
     private BotObfuscationSetting(BotObfuscationSettingObfuscationSettingType obfuscationSettingType) {
-        this.obfuscationSettingType = Objects.requireNonNull(obfuscationSettingType);
+        this.obfuscationSettingType = obfuscationSettingType;
     }
 
     /**

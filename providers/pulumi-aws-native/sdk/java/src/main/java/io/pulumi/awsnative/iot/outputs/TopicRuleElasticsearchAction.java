@@ -22,11 +22,11 @@ public final class TopicRuleElasticsearchAction {
         String index,
         String roleArn,
         String type) {
-        this.endpoint = Objects.requireNonNull(endpoint);
-        this.id = Objects.requireNonNull(id);
-        this.index = Objects.requireNonNull(index);
-        this.roleArn = Objects.requireNonNull(roleArn);
-        this.type = Objects.requireNonNull(type);
+        this.endpoint = endpoint;
+        this.id = id;
+        this.index = index;
+        this.roleArn = roleArn;
+        this.type = type;
     }
 
     public String getEndpoint() {

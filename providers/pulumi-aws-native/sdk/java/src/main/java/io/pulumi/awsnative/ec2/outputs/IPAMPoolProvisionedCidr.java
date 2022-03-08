@@ -13,7 +13,7 @@ public final class IPAMPoolProvisionedCidr {
 
     @OutputCustomType.Constructor({"cidr"})
     private IPAMPoolProvisionedCidr(String cidr) {
-        this.cidr = Objects.requireNonNull(cidr);
+        this.cidr = cidr;
     }
 
     public String getCidr() {

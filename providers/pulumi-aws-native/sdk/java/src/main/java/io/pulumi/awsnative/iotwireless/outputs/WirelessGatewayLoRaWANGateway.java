@@ -16,8 +16,8 @@ public final class WirelessGatewayLoRaWANGateway {
     private WirelessGatewayLoRaWANGateway(
         String gatewayEui,
         String rfRegion) {
-        this.gatewayEui = Objects.requireNonNull(gatewayEui);
-        this.rfRegion = Objects.requireNonNull(rfRegion);
+        this.gatewayEui = gatewayEui;
+        this.rfRegion = rfRegion;
     }
 
     public String getGatewayEui() {

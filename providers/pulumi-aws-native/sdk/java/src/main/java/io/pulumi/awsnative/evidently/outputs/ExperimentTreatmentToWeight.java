@@ -17,8 +17,8 @@ public final class ExperimentTreatmentToWeight {
     private ExperimentTreatmentToWeight(
         Integer splitWeight,
         String treatment) {
-        this.splitWeight = Objects.requireNonNull(splitWeight);
-        this.treatment = Objects.requireNonNull(treatment);
+        this.splitWeight = splitWeight;
+        this.treatment = treatment;
     }
 
     public Integer getSplitWeight() {

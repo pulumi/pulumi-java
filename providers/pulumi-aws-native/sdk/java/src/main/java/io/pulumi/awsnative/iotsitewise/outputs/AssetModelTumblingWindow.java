@@ -18,7 +18,7 @@ public final class AssetModelTumblingWindow {
     private AssetModelTumblingWindow(
         String interval,
         @Nullable String offset) {
-        this.interval = Objects.requireNonNull(interval);
+        this.interval = interval;
         this.offset = offset;
     }
 

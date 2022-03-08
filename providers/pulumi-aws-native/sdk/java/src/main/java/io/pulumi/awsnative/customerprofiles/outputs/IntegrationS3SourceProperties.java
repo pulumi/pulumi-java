@@ -18,7 +18,7 @@ public final class IntegrationS3SourceProperties {
     private IntegrationS3SourceProperties(
         String bucketName,
         @Nullable String bucketPrefix) {
-        this.bucketName = Objects.requireNonNull(bucketName);
+        this.bucketName = bucketName;
         this.bucketPrefix = bucketPrefix;
     }
 

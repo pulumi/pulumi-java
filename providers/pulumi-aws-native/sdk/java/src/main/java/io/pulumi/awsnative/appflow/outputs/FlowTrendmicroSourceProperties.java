@@ -13,7 +13,7 @@ public final class FlowTrendmicroSourceProperties {
 
     @OutputCustomType.Constructor({"object"})
     private FlowTrendmicroSourceProperties(String object) {
-        this.object = Objects.requireNonNull(object);
+        this.object = object;
     }
 
     public String getObject() {

@@ -30,7 +30,7 @@ public final class EC2FleetTargetCapacitySpecificationRequest {
         this.onDemandTargetCapacity = onDemandTargetCapacity;
         this.spotTargetCapacity = spotTargetCapacity;
         this.targetCapacityUnitType = targetCapacityUnitType;
-        this.totalTargetCapacity = Objects.requireNonNull(totalTargetCapacity);
+        this.totalTargetCapacity = totalTargetCapacity;
     }
 
     public Optional<EC2FleetTargetCapacitySpecificationRequestDefaultTargetCapacityType> getDefaultTargetCapacityType() {

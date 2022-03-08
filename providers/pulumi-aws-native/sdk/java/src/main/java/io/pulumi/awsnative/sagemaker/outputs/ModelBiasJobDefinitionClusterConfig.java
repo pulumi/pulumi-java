@@ -39,10 +39,10 @@ public final class ModelBiasJobDefinitionClusterConfig {
         String instanceType,
         @Nullable String volumeKmsKeyId,
         Integer volumeSizeInGB) {
-        this.instanceCount = Objects.requireNonNull(instanceCount);
-        this.instanceType = Objects.requireNonNull(instanceType);
+        this.instanceCount = instanceCount;
+        this.instanceType = instanceType;
         this.volumeKmsKeyId = volumeKmsKeyId;
-        this.volumeSizeInGB = Objects.requireNonNull(volumeSizeInGB);
+        this.volumeSizeInGB = volumeSizeInGB;
     }
 
     /**

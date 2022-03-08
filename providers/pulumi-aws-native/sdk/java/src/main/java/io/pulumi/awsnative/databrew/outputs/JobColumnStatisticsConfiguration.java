@@ -20,7 +20,7 @@ public final class JobColumnStatisticsConfiguration {
         @Nullable List<JobColumnSelector> selectors,
         JobStatisticsConfiguration statistics) {
         this.selectors = selectors;
-        this.statistics = Objects.requireNonNull(statistics);
+        this.statistics = statistics;
     }
 
     public List<JobColumnSelector> getSelectors() {

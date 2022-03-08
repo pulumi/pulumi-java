@@ -27,7 +27,7 @@ public final class ContactStage {
     private ContactStage(
         Integer durationInMinutes,
         @Nullable List<ContactTargets> targets) {
-        this.durationInMinutes = Objects.requireNonNull(durationInMinutes);
+        this.durationInMinutes = durationInMinutes;
         this.targets = targets;
     }
 

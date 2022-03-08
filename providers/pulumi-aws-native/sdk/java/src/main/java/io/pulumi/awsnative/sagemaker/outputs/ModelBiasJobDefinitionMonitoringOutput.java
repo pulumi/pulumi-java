@@ -13,7 +13,7 @@ public final class ModelBiasJobDefinitionMonitoringOutput {
 
     @OutputCustomType.Constructor({"s3Output"})
     private ModelBiasJobDefinitionMonitoringOutput(ModelBiasJobDefinitionS3Output s3Output) {
-        this.s3Output = Objects.requireNonNull(s3Output);
+        this.s3Output = s3Output;
     }
 
     public ModelBiasJobDefinitionS3Output getS3Output() {

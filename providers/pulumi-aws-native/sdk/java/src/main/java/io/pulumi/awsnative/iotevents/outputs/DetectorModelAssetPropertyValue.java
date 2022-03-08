@@ -28,7 +28,7 @@ public final class DetectorModelAssetPropertyValue {
         DetectorModelAssetPropertyVariant value) {
         this.quality = quality;
         this.timestamp = timestamp;
-        this.value = Objects.requireNonNull(value);
+        this.value = value;
     }
 
     /**

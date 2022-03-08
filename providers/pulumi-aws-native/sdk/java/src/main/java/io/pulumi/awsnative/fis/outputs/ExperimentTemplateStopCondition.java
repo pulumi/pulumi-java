@@ -18,7 +18,7 @@ public final class ExperimentTemplateStopCondition {
     private ExperimentTemplateStopCondition(
         String source,
         @Nullable String value) {
-        this.source = Objects.requireNonNull(source);
+        this.source = source;
         this.value = value;
     }
 

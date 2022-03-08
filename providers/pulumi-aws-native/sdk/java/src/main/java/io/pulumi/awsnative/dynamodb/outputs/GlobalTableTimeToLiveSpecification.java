@@ -20,7 +20,7 @@ public final class GlobalTableTimeToLiveSpecification {
         @Nullable String attributeName,
         Boolean enabled) {
         this.attributeName = attributeName;
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
     }
 
     public Optional<String> getAttributeName() {

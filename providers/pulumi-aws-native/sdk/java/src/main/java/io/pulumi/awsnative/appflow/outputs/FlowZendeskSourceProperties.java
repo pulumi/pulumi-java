@@ -13,7 +13,7 @@ public final class FlowZendeskSourceProperties {
 
     @OutputCustomType.Constructor({"object"})
     private FlowZendeskSourceProperties(String object) {
-        this.object = Objects.requireNonNull(object);
+        this.object = object;
     }
 
     public String getObject() {

@@ -35,8 +35,8 @@ public final class LoggingConfigurationFieldToMatchJsonBodyProperties {
         LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternProperties matchPattern,
         LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchScope matchScope) {
         this.invalidFallbackBehavior = invalidFallbackBehavior;
-        this.matchPattern = Objects.requireNonNull(matchPattern);
-        this.matchScope = Objects.requireNonNull(matchScope);
+        this.matchPattern = matchPattern;
+        this.matchScope = matchScope;
     }
 
     /**

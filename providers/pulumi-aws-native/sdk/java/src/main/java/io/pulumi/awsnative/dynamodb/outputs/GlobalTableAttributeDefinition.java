@@ -16,8 +16,8 @@ public final class GlobalTableAttributeDefinition {
     private GlobalTableAttributeDefinition(
         String attributeName,
         String attributeType) {
-        this.attributeName = Objects.requireNonNull(attributeName);
-        this.attributeType = Objects.requireNonNull(attributeType);
+        this.attributeName = attributeName;
+        this.attributeType = attributeType;
     }
 
     public String getAttributeName() {

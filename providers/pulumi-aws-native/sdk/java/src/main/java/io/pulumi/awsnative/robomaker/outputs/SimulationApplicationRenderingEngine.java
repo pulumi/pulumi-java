@@ -25,8 +25,8 @@ public final class SimulationApplicationRenderingEngine {
     private SimulationApplicationRenderingEngine(
         SimulationApplicationRenderingEngineName name,
         String version) {
-        this.name = Objects.requireNonNull(name);
-        this.version = Objects.requireNonNull(version);
+        this.name = name;
+        this.version = version;
     }
 
     /**

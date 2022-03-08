@@ -31,7 +31,7 @@ public final class FlowZendeskDestinationProperties {
         @Nullable FlowWriteOperationType writeOperationType) {
         this.errorHandlingConfig = errorHandlingConfig;
         this.idFieldNames = idFieldNames;
-        this.object = Objects.requireNonNull(object);
+        this.object = object;
         this.writeOperationType = writeOperationType;
     }
 

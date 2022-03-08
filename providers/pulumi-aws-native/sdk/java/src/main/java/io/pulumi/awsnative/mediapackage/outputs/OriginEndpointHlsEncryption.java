@@ -48,7 +48,7 @@ public final class OriginEndpointHlsEncryption {
         this.encryptionMethod = encryptionMethod;
         this.keyRotationIntervalSeconds = keyRotationIntervalSeconds;
         this.repeatExtXKey = repeatExtXKey;
-        this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
+        this.spekeKeyProvider = spekeKeyProvider;
     }
 
     /**

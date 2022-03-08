@@ -16,8 +16,8 @@ public final class OrganizationConformancePackConformancePackInputParameter {
     private OrganizationConformancePackConformancePackInputParameter(
         String parameterName,
         String parameterValue) {
-        this.parameterName = Objects.requireNonNull(parameterName);
-        this.parameterValue = Objects.requireNonNull(parameterValue);
+        this.parameterName = parameterName;
+        this.parameterValue = parameterValue;
     }
 
     public String getParameterName() {

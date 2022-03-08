@@ -23,9 +23,9 @@ public final class AnomalyDetectorS3SourceConfig {
         @Nullable List<String> historicalDataPathList,
         String roleArn,
         @Nullable List<String> templatedPathList) {
-        this.fileFormatDescriptor = Objects.requireNonNull(fileFormatDescriptor);
+        this.fileFormatDescriptor = fileFormatDescriptor;
         this.historicalDataPathList = historicalDataPathList;
-        this.roleArn = Objects.requireNonNull(roleArn);
+        this.roleArn = roleArn;
         this.templatedPathList = templatedPathList;
     }
 

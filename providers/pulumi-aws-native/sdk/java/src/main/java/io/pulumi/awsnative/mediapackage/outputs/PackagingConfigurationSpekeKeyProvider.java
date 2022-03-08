@@ -27,9 +27,9 @@ public final class PackagingConfigurationSpekeKeyProvider {
         String roleArn,
         List<String> systemIds,
         String url) {
-        this.roleArn = Objects.requireNonNull(roleArn);
-        this.systemIds = Objects.requireNonNull(systemIds);
-        this.url = Objects.requireNonNull(url);
+        this.roleArn = roleArn;
+        this.systemIds = systemIds;
+        this.url = url;
     }
 
     public String getRoleArn() {

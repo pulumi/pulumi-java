@@ -17,7 +17,7 @@ public final class LocationS3S3Config {
 
     @OutputCustomType.Constructor({"bucketAccessRoleArn"})
     private LocationS3S3Config(String bucketAccessRoleArn) {
-        this.bucketAccessRoleArn = Objects.requireNonNull(bucketAccessRoleArn);
+        this.bucketAccessRoleArn = bucketAccessRoleArn;
     }
 
     /**

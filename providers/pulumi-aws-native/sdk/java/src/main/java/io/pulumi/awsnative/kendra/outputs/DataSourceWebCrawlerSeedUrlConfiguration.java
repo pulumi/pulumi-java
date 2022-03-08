@@ -20,7 +20,7 @@ public final class DataSourceWebCrawlerSeedUrlConfiguration {
     private DataSourceWebCrawlerSeedUrlConfiguration(
         List<String> seedUrls,
         @Nullable DataSourceWebCrawlerSeedUrlConfigurationWebCrawlerMode webCrawlerMode) {
-        this.seedUrls = Objects.requireNonNull(seedUrls);
+        this.seedUrls = seedUrls;
         this.webCrawlerMode = webCrawlerMode;
     }
 

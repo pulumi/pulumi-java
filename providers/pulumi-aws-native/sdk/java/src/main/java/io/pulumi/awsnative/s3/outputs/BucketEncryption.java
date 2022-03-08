@@ -18,7 +18,7 @@ public final class BucketEncryption {
 
     @OutputCustomType.Constructor({"serverSideEncryptionConfiguration"})
     private BucketEncryption(List<BucketServerSideEncryptionRule> serverSideEncryptionConfiguration) {
-        this.serverSideEncryptionConfiguration = Objects.requireNonNull(serverSideEncryptionConfiguration);
+        this.serverSideEncryptionConfiguration = serverSideEncryptionConfiguration;
     }
 
     /**

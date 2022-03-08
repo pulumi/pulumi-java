@@ -18,7 +18,7 @@ public final class DistributionLegacyS3Origin {
     private DistributionLegacyS3Origin(
         String dNSName,
         @Nullable String originAccessIdentity) {
-        this.dNSName = Objects.requireNonNull(dNSName);
+        this.dNSName = dNSName;
         this.originAccessIdentity = originAccessIdentity;
     }
 

@@ -39,7 +39,7 @@ public final class GlobalTableReplicaSpecification {
         this.globalSecondaryIndexes = globalSecondaryIndexes;
         this.pointInTimeRecoverySpecification = pointInTimeRecoverySpecification;
         this.readProvisionedThroughputSettings = readProvisionedThroughputSettings;
-        this.region = Objects.requireNonNull(region);
+        this.region = region;
         this.sSESpecification = sSESpecification;
         this.tags = tags;
     }

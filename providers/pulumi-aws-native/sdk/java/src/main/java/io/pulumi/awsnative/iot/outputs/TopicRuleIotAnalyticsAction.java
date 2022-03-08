@@ -22,8 +22,8 @@ public final class TopicRuleIotAnalyticsAction {
         String channelName,
         String roleArn) {
         this.batchMode = batchMode;
-        this.channelName = Objects.requireNonNull(channelName);
-        this.roleArn = Objects.requireNonNull(roleArn);
+        this.channelName = channelName;
+        this.roleArn = roleArn;
     }
 
     public Optional<Boolean> getBatchMode() {
