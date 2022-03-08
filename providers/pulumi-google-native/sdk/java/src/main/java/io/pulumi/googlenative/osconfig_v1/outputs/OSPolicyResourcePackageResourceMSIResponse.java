@@ -33,14 +33,14 @@ public final class OSPolicyResourcePackageResourceMSIResponse {
     /**
      * Additional properties to use during installation. This should be in the format of Property=Setting. Appended to the defaults of `ACTION=INSTALL REBOOT=ReallySuppress`.
      * 
-     */
+    */
     public List<String> getProperties() {
         return this.properties;
     }
     /**
      * The MSI package.
      * 
-     */
+    */
     public OSPolicyResourceFileResponse getSource() {
         return this.source;
     }

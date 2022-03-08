@@ -70,7 +70,7 @@ public final class GetInstanceProfileResult {
     /**
      * The Amazon Resource Name (ARN) specifying the instance profile.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
@@ -78,14 +78,14 @@ public final class GetInstanceProfileResult {
      * The string representation of the date the instance profile
      * was created.
      * 
-     */
+    */
     public String getCreateDate() {
         return this.createDate;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -95,28 +95,28 @@ public final class GetInstanceProfileResult {
     /**
      * The path to the instance profile.
      * 
-     */
+    */
     public String getPath() {
         return this.path;
     }
     /**
      * The role arn associated with this instance profile.
      * 
-     */
+    */
     public String getRoleArn() {
         return this.roleArn;
     }
     /**
      * The role id associated with this instance profile.
      * 
-     */
+    */
     public String getRoleId() {
         return this.roleId;
     }
     /**
      * The role name associated with this instance profile.
      * 
-     */
+    */
     public String getRoleName() {
         return this.roleName;
     }

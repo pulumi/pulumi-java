@@ -32,14 +32,14 @@ public final class RetentionPolicyResponse {
     /**
      * The number of days for the retention in days. A value of 0 will retain the events indefinitely.
      * 
-     */
+    */
     public Integer getDays() {
         return this.days;
     }
     /**
      * A value indicating whether the retention policy is enabled.
      * 
-     */
+    */
     public Boolean getEnabled() {
         return this.enabled;
     }

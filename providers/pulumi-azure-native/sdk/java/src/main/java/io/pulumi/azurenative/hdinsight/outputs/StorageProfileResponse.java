@@ -25,7 +25,7 @@ public final class StorageProfileResponse {
     /**
      * The list of storage accounts in the cluster.
      * 
-     */
+    */
     public List<StorageAccountResponse> getStorageaccounts() {
         return this.storageaccounts == null ? List.of() : this.storageaccounts;
     }

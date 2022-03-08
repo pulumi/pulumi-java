@@ -13,16 +13,38 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCoipPools {
-/**
- * Provides information for multiple EC2 Customer-Owned IP Pools, such as their identifiers.
+    private GetCoipPools() {}
+    public interface BuilderApplicator {
+        public void apply(GetCoipPoolsArgs.Builder a);
+    }
+    private static GetCoipPoolsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetCoipPoolsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Provides information for multiple EC2 Customer-Owned IP Pools, such as their identifiers.
  * 
- *
- * A collection of arguments for invoking getCoipPools.
+     *
+     * A collection of arguments for invoking getCoipPools.
  * 
- *
- * A collection of values returned by getCoipPools.
+     *
+     * A collection of values returned by getCoipPools.
  * 
- */
+     */
+    public static CompletableFuture<GetCoipPoolsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Provides information for multiple EC2 Customer-Owned IP Pools, such as their identifiers.
+     * 
+     *
+         * A collection of arguments for invoking getCoipPools.
+     * 
+     *
+         * A collection of values returned by getCoipPools.
+     * 
+     */
     public static CompletableFuture<GetCoipPoolsResult> invokeAsync(@Nullable GetCoipPoolsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getCoipPools:getCoipPools", TypeShape.of(GetCoipPoolsResult.class), args == null ? GetCoipPoolsArgs.Empty : args, Utilities.withVersion(options));
     }

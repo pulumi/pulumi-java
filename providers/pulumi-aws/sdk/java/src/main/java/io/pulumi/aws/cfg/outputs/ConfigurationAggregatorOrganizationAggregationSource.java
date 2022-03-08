@@ -42,21 +42,21 @@ public final class ConfigurationAggregatorOrganizationAggregationSource {
     /**
      * If true, aggregate existing AWS Config regions and future regions.
      * 
-     */
+    */
     public Optional<Boolean> getAllRegions() {
         return Optional.ofNullable(this.allRegions);
     }
     /**
      * List of source regions being aggregated.
      * 
-     */
+    */
     public List<String> getRegions() {
         return this.regions == null ? List.of() : this.regions;
     }
     /**
      * ARN of the IAM role used to retrieve AWS Organization details associated with the aggregator account.
      * 
-     */
+    */
     public String getRoleArn() {
         return this.roleArn;
     }

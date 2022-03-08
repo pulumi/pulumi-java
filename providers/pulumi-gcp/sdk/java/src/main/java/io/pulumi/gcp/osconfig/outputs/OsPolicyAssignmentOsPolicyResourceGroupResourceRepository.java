@@ -50,28 +50,28 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepository {
     /**
      * An Apt Repository.
      * 
-     */
+    */
     public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryApt> getApt() {
         return Optional.ofNullable(this.apt);
     }
     /**
      * A Goo Repository.
      * 
-     */
+    */
     public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGoo> getGoo() {
         return Optional.ofNullable(this.goo);
     }
     /**
      * A Yum Repository.
      * 
-     */
+    */
     public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYum> getYum() {
         return Optional.ofNullable(this.yum);
     }
     /**
      * A Zypper Repository.
      * 
-     */
+    */
     public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypper> getZypper() {
         return Optional.ofNullable(this.zypper);
     }

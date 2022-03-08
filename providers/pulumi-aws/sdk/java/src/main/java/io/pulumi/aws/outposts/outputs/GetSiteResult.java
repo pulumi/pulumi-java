@@ -37,14 +37,14 @@ public final class GetSiteResult {
     /**
      * AWS Account identifier.
      * 
-     */
+    */
     public String getAccountId() {
         return this.accountId;
     }
     /**
      * Description.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }

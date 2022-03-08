@@ -13,6 +13,18 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPrefixList {
+    private GetPrefixList() {}
+    public interface BuilderApplicator {
+        public void apply(GetPrefixListArgs.Builder a);
+    }
+    private static GetPrefixListArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPrefixListArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    public static CompletableFuture<GetPrefixListResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
     public static CompletableFuture<GetPrefixListResult> invokeAsync(@Nullable GetPrefixListArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getPrefixList:getPrefixList", TypeShape.of(GetPrefixListResult.class), args == null ? GetPrefixListArgs.Empty : args, Utilities.withVersion(options));
     }

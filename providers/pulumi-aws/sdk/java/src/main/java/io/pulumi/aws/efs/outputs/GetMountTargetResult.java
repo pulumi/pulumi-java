@@ -109,28 +109,28 @@ public final class GetMountTargetResult {
     /**
      * The unique and consistent identifier of the Availability Zone (AZ) that the mount target resides in.
      * 
-     */
+    */
     public String getAvailabilityZoneId() {
         return this.availabilityZoneId;
     }
     /**
      * The name of the Availability Zone (AZ) that the mount target resides in.
      * 
-     */
+    */
     public String getAvailabilityZoneName() {
         return this.availabilityZoneName;
     }
     /**
      * The DNS name for the EFS file system.
      * 
-     */
+    */
     public String getDnsName() {
         return this.dnsName;
     }
     /**
      * Amazon Resource Name of the file system for which the mount target is intended.
      * 
-     */
+    */
     public String getFileSystemArn() {
         return this.fileSystemArn;
     }
@@ -140,21 +140,21 @@ public final class GetMountTargetResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Address at which the file system may be mounted via the mount target.
      * 
-     */
+    */
     public String getIpAddress() {
         return this.ipAddress;
     }
     /**
      * The DNS name for the given subnet/AZ per [documented convention](http://docs.aws.amazon.com/efs/latest/ug/mounting-fs-mount-cmd-dns-name.html).
      * 
-     */
+    */
     public String getMountTargetDnsName() {
         return this.mountTargetDnsName;
     }
@@ -164,28 +164,28 @@ public final class GetMountTargetResult {
     /**
      * The ID of the network interface that Amazon EFS created when it created the mount target.
      * 
-     */
+    */
     public String getNetworkInterfaceId() {
         return this.networkInterfaceId;
     }
     /**
      * AWS account ID that owns the resource.
      * 
-     */
+    */
     public String getOwnerId() {
         return this.ownerId;
     }
     /**
      * List of VPC security group IDs attached to the mount target.
      * 
-     */
+    */
     public List<String> getSecurityGroups() {
         return this.securityGroups;
     }
     /**
      * ID of the mount target's subnet.
      * 
-     */
+    */
     public String getSubnetId() {
         return this.subnetId;
     }

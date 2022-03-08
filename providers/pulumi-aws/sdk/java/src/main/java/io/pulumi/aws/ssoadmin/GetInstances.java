@@ -12,13 +12,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInstances {
-/**
- * Use this data source to get ARNs and Identity Store IDs of Single Sign-On (SSO) Instances.
- * 
- *
- * A collection of values returned by getInstances.
- * 
- */
+    private GetInstances() {}
+    /**
+         * Use this data source to get ARNs and Identity Store IDs of Single Sign-On (SSO) Instances.
+     * 
+     *
+         * A collection of values returned by getInstances.
+     * 
+     */
     public static CompletableFuture<GetInstancesResult> invokeAsync(@Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ssoadmin/getInstances:getInstances", TypeShape.of(GetInstancesResult.class), io.pulumi.resources.InvokeArgs.Empty, Utilities.withVersion(options));
     }

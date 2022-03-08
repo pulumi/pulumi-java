@@ -84,63 +84,63 @@ public final class GetIncidentCommentResult {
     /**
      * Describes the client that created the comment
      * 
-     */
+    */
     public ClientInfoResponse getAuthor() {
         return this.author;
     }
     /**
      * The time the comment was created
      * 
-     */
+    */
     public String getCreatedTimeUtc() {
         return this.createdTimeUtc;
     }
     /**
      * Etag of the azure resource
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Azure resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The time the comment was updated
      * 
-     */
+    */
     public String getLastModifiedTimeUtc() {
         return this.lastModifiedTimeUtc;
     }
     /**
      * The comment message
      * 
-     */
+    */
     public String getMessage() {
         return this.message;
     }
     /**
      * Azure resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Azure resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

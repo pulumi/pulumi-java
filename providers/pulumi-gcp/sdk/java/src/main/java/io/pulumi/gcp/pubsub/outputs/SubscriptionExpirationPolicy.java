@@ -31,7 +31,7 @@ public final class SubscriptionExpirationPolicy {
      * A duration in seconds with up to nine fractional digits, terminated by 's'.
      * Example - "3.5s".
      * 
-     */
+    */
     public String getTtl() {
         return this.ttl;
     }

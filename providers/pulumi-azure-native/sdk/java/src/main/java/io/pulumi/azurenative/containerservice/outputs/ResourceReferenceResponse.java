@@ -25,7 +25,7 @@ public final class ResourceReferenceResponse {
     /**
      * The fully qualified Azure resource id.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }

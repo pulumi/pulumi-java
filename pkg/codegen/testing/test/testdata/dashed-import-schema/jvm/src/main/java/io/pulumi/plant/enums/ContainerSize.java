@@ -16,7 +16,7 @@ import java.util.StringJoiner;
         FourInch(4),
         SixInch(6),
         /**
-         * @deprecated
+         * @Deprecated
          * Eight inch pots are no longer supported.
          */
         @Deprecated /* Eight inch pots are no longer supported. */

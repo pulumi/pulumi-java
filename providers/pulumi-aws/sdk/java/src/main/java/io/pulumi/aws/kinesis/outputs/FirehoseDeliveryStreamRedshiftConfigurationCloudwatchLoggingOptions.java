@@ -41,21 +41,21 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationCloudwatchLoggingO
     /**
      * Enables or disables the logging. Defaults to `false`.
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * The CloudWatch group name for logging. This value is required if `enabled` is true.
      * 
-     */
+    */
     public Optional<String> getLogGroupName() {
         return Optional.ofNullable(this.logGroupName);
     }
     /**
      * The CloudWatch log stream name for logging. This value is required if `enabled` is true.
      * 
-     */
+    */
     public Optional<String> getLogStreamName() {
         return Optional.ofNullable(this.logStreamName);
     }

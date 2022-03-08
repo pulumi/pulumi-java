@@ -25,7 +25,7 @@ public final class ResourceSetResourceDnsTargetResourceTargetResourceNlbResource
     /**
      * NLB resource ARN.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }

@@ -61,14 +61,14 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesResponse {
     /**
      * The ID of the cloud account
      * 
-     */
+    */
     public String getAccountId() {
         return this.accountId;
     }
     /**
      * State of the multi-cloud connector
      * 
-     */
+    */
     public String getAuthenticationProvisioningState() {
         return this.authenticationProvisioningState;
     }
@@ -76,28 +76,28 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesResponse {
      * Connect to your cloud account, for AWS use either account credentials or role-based authentication. For GCP use account organization credentials.
      * Expected value is 'awsAssumeRole'.
      * 
-     */
+    */
     public String getAuthenticationType() {
         return this.authenticationType;
     }
     /**
      * Assumed role ID is an identifier that you can use to create temporary security credentials.
      * 
-     */
+    */
     public String getAwsAssumeRoleArn() {
         return this.awsAssumeRoleArn;
     }
     /**
      * A unique identifier that is required when you assume a role in another account.
      * 
-     */
+    */
     public String getAwsExternalId() {
         return this.awsExternalId;
     }
     /**
      * The permissions detected in the cloud account.
      * 
-     */
+    */
     public List<String> getGrantedPermissions() {
         return this.grantedPermissions;
     }

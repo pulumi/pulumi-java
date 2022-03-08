@@ -115,91 +115,91 @@ public final class GetSmartDetectorAlertRuleResult {
     /**
      * The alert rule actions.
      * 
-     */
+    */
     public ActionGroupsInformationResponse getActionGroups() {
         return this.actionGroups;
     }
     /**
      * The alert rule description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The alert rule's detector.
      * 
-     */
+    */
     public DetectorResponse getDetector() {
         return this.detector;
     }
     /**
      * The alert rule frequency in ISO8601 format. The time granularity must be in minutes and minimum value is 5 minutes.
      * 
-     */
+    */
     public String getFrequency() {
         return this.frequency;
     }
     /**
      * The resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The resource location.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The alert rule resources scope.
      * 
-     */
+    */
     public List<String> getScope() {
         return this.scope;
     }
     /**
      * The alert rule severity.
      * 
-     */
+    */
     public String getSeverity() {
         return this.severity;
     }
     /**
      * The alert rule state.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * The resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The alert rule throttling information.
      * 
-     */
+    */
     public Optional<ThrottlingInformationResponse> getThrottling() {
         return Optional.ofNullable(this.throttling);
     }
     /**
      * The resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

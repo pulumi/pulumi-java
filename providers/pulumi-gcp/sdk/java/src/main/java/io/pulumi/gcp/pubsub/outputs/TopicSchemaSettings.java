@@ -40,7 +40,7 @@ public final class TopicSchemaSettings {
      * Default value is `ENCODING_UNSPECIFIED`.
      * Possible values are `ENCODING_UNSPECIFIED`, `JSON`, and `BINARY`.
      * 
-     */
+    */
     public Optional<String> getEncoding() {
         return Optional.ofNullable(this.encoding);
     }
@@ -50,7 +50,7 @@ public final class TopicSchemaSettings {
      * The value of this field will be _deleted-schema_
      * if the schema has been deleted.
      * 
-     */
+    */
     public String getSchema() {
         return this.schema;
     }

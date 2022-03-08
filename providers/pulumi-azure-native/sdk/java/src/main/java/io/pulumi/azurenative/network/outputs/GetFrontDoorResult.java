@@ -154,126 +154,126 @@ public final class GetFrontDoorResult {
     /**
      * Backend pools available to routing rules.
      * 
-     */
+    */
     public List<BackendPoolResponse> getBackendPools() {
         return this.backendPools == null ? List.of() : this.backendPools;
     }
     /**
      * Settings for all backendPools
      * 
-     */
+    */
     public Optional<BackendPoolsSettingsResponse> getBackendPoolsSettings() {
         return Optional.ofNullable(this.backendPoolsSettings);
     }
     /**
      * The host that each frontendEndpoint must CNAME to.
      * 
-     */
+    */
     public String getCname() {
         return this.cname;
     }
     /**
      * Operational status of the Front Door load balancer. Permitted values are 'Enabled' or 'Disabled'
      * 
-     */
+    */
     public Optional<String> getEnabledState() {
         return Optional.ofNullable(this.enabledState);
     }
     /**
      * A friendly name for the frontDoor
      * 
-     */
+    */
     public Optional<String> getFriendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
      * The Id of the frontdoor.
      * 
-     */
+    */
     public String getFrontdoorId() {
         return this.frontdoorId;
     }
     /**
      * Frontend endpoints available to routing rules.
      * 
-     */
+    */
     public List<FrontendEndpointResponse> getFrontendEndpoints() {
         return this.frontendEndpoints == null ? List.of() : this.frontendEndpoints;
     }
     /**
      * Health probe settings associated with this Front Door instance.
      * 
-     */
+    */
     public List<HealthProbeSettingsModelResponse> getHealthProbeSettings() {
         return this.healthProbeSettings == null ? List.of() : this.healthProbeSettings;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Load balancing settings associated with this Front Door instance.
      * 
-     */
+    */
     public List<LoadBalancingSettingsModelResponse> getLoadBalancingSettings() {
         return this.loadBalancingSettings == null ? List.of() : this.loadBalancingSettings;
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Provisioning state of the Front Door.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource status of the Front Door.
      * 
-     */
+    */
     public String getResourceState() {
         return this.resourceState;
     }
     /**
      * Routing rules associated with this Front Door.
      * 
-     */
+    */
     public List<RoutingRuleResponse> getRoutingRules() {
         return this.routingRules == null ? List.of() : this.routingRules;
     }
     /**
      * Rules Engine Configurations available to routing rules.
      * 
-     */
+    */
     public List<RulesEngineResponse> getRulesEngines() {
         return this.rulesEngines;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

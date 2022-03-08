@@ -23,7 +23,7 @@ public final class ModelInferenceExecutionConfig {
     /**
      * The container hosts value `SingleModel/MultiModel`. The default value is `SingleModel`.
      * 
-     */
+    */
     public String getMode() {
         return this.mode;
     }

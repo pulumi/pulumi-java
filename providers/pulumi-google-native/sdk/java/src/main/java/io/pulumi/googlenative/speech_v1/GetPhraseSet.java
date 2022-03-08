@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPhraseSet {
-/**
- * Get a phrase set.
+    private GetPhraseSet() {}
+    public interface BuilderApplicator {
+        public void apply(GetPhraseSetArgs.Builder a);
+    }
+    private static GetPhraseSetArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPhraseSetArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Get a phrase set.
  * 
- */
+     */
+    public static CompletableFuture<GetPhraseSetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Get a phrase set.
+     * 
+     */
     public static CompletableFuture<GetPhraseSetResult> invokeAsync(GetPhraseSetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:speech/v1:getPhraseSet", TypeShape.of(GetPhraseSetResult.class), args == null ? GetPhraseSetArgs.Empty : args, Utilities.withVersion(options));
     }

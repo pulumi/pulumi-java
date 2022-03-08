@@ -32,14 +32,14 @@ public final class SimulationApplicationRenderingEngine {
     /**
      * The name of the rendering engine.
      * 
-     */
+    */
     public SimulationApplicationRenderingEngineName getName() {
         return this.name;
     }
     /**
      * The version of the rendering engine.
      * 
-     */
+    */
     public String getVersion() {
         return this.version;
     }

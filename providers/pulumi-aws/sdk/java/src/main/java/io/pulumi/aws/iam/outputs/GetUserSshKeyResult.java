@@ -57,21 +57,21 @@ public final class GetUserSshKeyResult {
     /**
      * The MD5 message digest of the SSH public key.
      * 
-     */
+    */
     public String getFingerprint() {
         return this.fingerprint;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The SSH public key.
      * 
-     */
+    */
     public String getPublicKey() {
         return this.publicKey;
     }
@@ -81,7 +81,7 @@ public final class GetUserSshKeyResult {
     /**
      * The status of the SSH public key. Active means that the key can be used for authentication with an CodeCommit repository. Inactive means that the key cannot be used.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }

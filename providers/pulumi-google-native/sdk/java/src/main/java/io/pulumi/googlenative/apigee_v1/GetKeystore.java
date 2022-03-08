@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetKeystore {
-/**
- * Gets a keystore or truststore.
+    private GetKeystore() {}
+    public interface BuilderApplicator {
+        public void apply(GetKeystoreArgs.Builder a);
+    }
+    private static GetKeystoreArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetKeystoreArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets a keystore or truststore.
  * 
- */
+     */
+    public static CompletableFuture<GetKeystoreResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets a keystore or truststore.
+     * 
+     */
     public static CompletableFuture<GetKeystoreResult> invokeAsync(GetKeystoreArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:apigee/v1:getKeystore", TypeShape.of(GetKeystoreResult.class), args == null ? GetKeystoreArgs.Empty : args, Utilities.withVersion(options));
     }

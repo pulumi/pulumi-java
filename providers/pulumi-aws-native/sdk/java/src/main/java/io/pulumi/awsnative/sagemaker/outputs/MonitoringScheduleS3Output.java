@@ -41,21 +41,21 @@ public final class MonitoringScheduleS3Output {
     /**
      * The local path to the Amazon S3 storage location where Amazon SageMaker saves the results of a monitoring job. LocalPath is an absolute path for the output data.
      * 
-     */
+    */
     public String getLocalPath() {
         return this.localPath;
     }
     /**
      * Whether to upload the results of the monitoring job continuously or after the job completes.
      * 
-     */
+    */
     public Optional<MonitoringScheduleS3OutputS3UploadMode> getS3UploadMode() {
         return Optional.ofNullable(this.s3UploadMode);
     }
     /**
      * A URI that identifies the Amazon S3 storage location where Amazon SageMaker saves the results of a monitoring job.
      * 
-     */
+    */
     public String getS3Uri() {
         return this.s3Uri;
     }

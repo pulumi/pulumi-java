@@ -40,21 +40,21 @@ public final class VmUtilizationInfoResponse {
     /**
      * Utilization metrics for this VM.
      * 
-     */
+    */
     public VmUtilizationMetricsResponse getUtilization() {
         return this.utilization;
     }
     /**
      * The VM's ID in the source.
      * 
-     */
+    */
     public String getVmId() {
         return this.vmId;
     }
     /**
      * The description of the VM in a Source of type Vmware.
      * 
-     */
+    */
     public VmwareVmDetailsResponse getVmwareVmDetails() {
         return this.vmwareVmDetails;
     }

@@ -62,42 +62,42 @@ public final class SpotFleetRequestLaunchTemplateConfigOverride {
     /**
      * The availability zone in which to place the request.
      * 
-     */
+    */
     public Optional<String> getAvailabilityZone() {
         return Optional.ofNullable(this.availabilityZone);
     }
     /**
      * The type of instance to request.
      * 
-     */
+    */
     public Optional<String> getInstanceType() {
         return Optional.ofNullable(this.instanceType);
     }
     /**
      * The priority for the launch template override. The lower the number, the higher the priority. If no number is set, the launch template override has the lowest priority.
      * 
-     */
+    */
     public Optional<Double> getPriority() {
         return Optional.ofNullable(this.priority);
     }
     /**
      * The maximum spot bid for this override request.
      * 
-     */
+    */
     public Optional<String> getSpotPrice() {
         return Optional.ofNullable(this.spotPrice);
     }
     /**
      * The subnet in which to launch the requested instance.
      * 
-     */
+    */
     public Optional<String> getSubnetId() {
         return Optional.ofNullable(this.subnetId);
     }
     /**
      * The capacity added to the fleet by a fulfilled request.
      * 
-     */
+    */
     public Optional<Double> getWeightedCapacity() {
         return Optional.ofNullable(this.weightedCapacity);
     }

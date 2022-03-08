@@ -54,7 +54,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
      * 
-     * @deprecated
+     * @Deprecated
      * This field is no longer in use, disk interfaces will be automatically determined on attachment. To resolve this issue, remove this field from your config.
      * 
      */

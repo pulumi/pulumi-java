@@ -52,35 +52,35 @@ public final class GetTargetProjectResult {
     /**
      * The time this target project resource was created (not related to when the Compute Engine project it points to was created).
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * The target project's description.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The name of the target project.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The target project ID (number) or project name.
      * 
-     */
+    */
     public String getProject() {
         return this.project;
     }
     /**
      * The last time the target project resource was updated.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }

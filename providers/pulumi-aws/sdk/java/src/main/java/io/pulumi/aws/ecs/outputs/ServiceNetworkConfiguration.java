@@ -42,21 +42,21 @@ public final class ServiceNetworkConfiguration {
     /**
      * Assign a public IP address to the ENI (Fargate launch type only). Valid values are `true` or `false`. Default `false`.
      * 
-     */
+    */
     public Optional<Boolean> getAssignPublicIp() {
         return Optional.ofNullable(this.assignPublicIp);
     }
     /**
      * Security groups associated with the task or service. If you do not specify a security group, the default security group for the VPC is used.
      * 
-     */
+    */
     public List<String> getSecurityGroups() {
         return this.securityGroups == null ? List.of() : this.securityGroups;
     }
     /**
      * Subnets associated with the task or service.
      * 
-     */
+    */
     public List<String> getSubnets() {
         return this.subnets;
     }

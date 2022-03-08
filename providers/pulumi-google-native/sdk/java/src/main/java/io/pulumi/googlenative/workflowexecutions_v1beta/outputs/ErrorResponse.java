@@ -39,21 +39,21 @@ public final class ErrorResponse {
     /**
      * Human-readable stack trace string.
      * 
-     */
+    */
     public String getContext() {
         return this.context;
     }
     /**
      * Error message and data returned represented as a JSON string.
      * 
-     */
+    */
     public String getPayload() {
         return this.payload;
     }
     /**
      * Stack trace with detailed information of where error was generated.
      * 
-     */
+    */
     public StackTraceResponse getStackTrace() {
         return this.stackTrace;
     }

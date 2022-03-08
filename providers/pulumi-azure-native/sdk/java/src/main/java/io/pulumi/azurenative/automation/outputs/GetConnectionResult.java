@@ -77,56 +77,56 @@ public final class GetConnectionResult {
     /**
      * Gets or sets the connectionType of the connection.
      * 
-     */
+    */
     public Optional<ConnectionTypeAssociationPropertyResponse> getConnectionType() {
         return Optional.ofNullable(this.connectionType);
     }
     /**
      * Gets the creation time.
      * 
-     */
+    */
     public String getCreationTime() {
         return this.creationTime;
     }
     /**
      * Gets or sets the description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Gets the field definition values of the connection.
      * 
-     */
+    */
     public Map<String,String> getFieldDefinitionValues() {
         return this.fieldDefinitionValues;
     }
     /**
      * Fully qualified resource Id for the resource
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Gets the last modified time.
      * 
-     */
+    */
     public String getLastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

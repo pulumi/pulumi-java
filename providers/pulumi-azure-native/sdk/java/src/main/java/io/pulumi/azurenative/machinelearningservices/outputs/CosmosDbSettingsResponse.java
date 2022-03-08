@@ -25,7 +25,7 @@ public final class CosmosDbSettingsResponse {
     /**
      * The throughput of the collections in cosmosdb database
      * 
-     */
+    */
     public Optional<Integer> getCollectionsThroughput() {
         return Optional.ofNullable(this.collectionsThroughput);
     }

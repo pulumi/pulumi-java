@@ -32,7 +32,7 @@ public final class ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifie
     /**
      * The content key ID.
      * 
-     */
+    */
     public String getKeyId() {
         return this.keyId;
     }
@@ -40,7 +40,7 @@ public final class ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifie
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifier'.
      * 
-     */
+    */
     public String getOdataType() {
         return this.odataType;
     }

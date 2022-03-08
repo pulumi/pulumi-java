@@ -39,21 +39,21 @@ public final class ODataErrorResponse {
     /**
      * The machine-readable description of the error, such as 'InvalidRequest' or 'InternalServerError'
      * 
-     */
+    */
     public String getCode() {
         return this.code;
     }
     /**
      * Inner errors that caused this error
      * 
-     */
+    */
     public List<ODataErrorResponse> getDetails() {
         return this.details;
     }
     /**
      * The human-readable description of the error
      * 
-     */
+    */
     public String getMessage() {
         return this.message;
     }

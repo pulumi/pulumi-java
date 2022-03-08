@@ -23,7 +23,7 @@ public final class AcceleratorResponse {
     /**
      * The type of an accelator for a CDF instance.
      * 
-     */
+    */
     public String getAcceleratorType() {
         return this.acceleratorType;
     }

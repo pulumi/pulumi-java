@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNatAddress {
-/**
- * Gets the details of a NAT address. **Note:** Not supported for Apigee hybrid.
+    private GetNatAddress() {}
+    public interface BuilderApplicator {
+        public void apply(GetNatAddressArgs.Builder a);
+    }
+    private static GetNatAddressArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetNatAddressArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the details of a NAT address. **Note:** Not supported for Apigee hybrid.
  * 
- */
+     */
+    public static CompletableFuture<GetNatAddressResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the details of a NAT address. **Note:** Not supported for Apigee hybrid.
+     * 
+     */
     public static CompletableFuture<GetNatAddressResult> invokeAsync(GetNatAddressArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:apigee/v1:getNatAddress", TypeShape.of(GetNatAddressResult.class), args == null ? GetNatAddressArgs.Empty : args, Utilities.withVersion(options));
     }

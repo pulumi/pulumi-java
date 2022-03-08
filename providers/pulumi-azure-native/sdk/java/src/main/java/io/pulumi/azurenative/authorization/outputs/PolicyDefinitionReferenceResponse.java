@@ -50,28 +50,28 @@ public final class PolicyDefinitionReferenceResponse {
     /**
      * The name of the groups that this policy definition reference belongs to.
      * 
-     */
+    */
     public List<String> getGroupNames() {
         return this.groupNames == null ? List.of() : this.groupNames;
     }
     /**
      * The parameter values for the referenced policy rule. The keys are the parameter names.
      * 
-     */
+    */
     public Map<String,ParameterValuesValueResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * The ID of the policy definition or policy set definition.
      * 
-     */
+    */
     public String getPolicyDefinitionId() {
         return this.policyDefinitionId;
     }
     /**
      * A unique id (within the policy set definition) for this policy definition reference.
      * 
-     */
+    */
     public Optional<String> getPolicyDefinitionReferenceId() {
         return Optional.ofNullable(this.policyDefinitionReferenceId);
     }

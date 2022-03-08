@@ -25,7 +25,7 @@ public final class EventTargetKinesisTarget {
     /**
      * The JSON path to be extracted from the event and used as the partition key.
      * 
-     */
+    */
     public Optional<String> getPartitionKeyPath() {
         return Optional.ofNullable(this.partitionKeyPath);
     }

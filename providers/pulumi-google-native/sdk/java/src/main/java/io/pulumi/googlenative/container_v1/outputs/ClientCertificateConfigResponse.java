@@ -23,7 +23,7 @@ public final class ClientCertificateConfigResponse {
     /**
      * Issue a client certificate.
      * 
-     */
+    */
     public Boolean getIssueClientCertificate() {
         return this.issueClientCertificate;
     }

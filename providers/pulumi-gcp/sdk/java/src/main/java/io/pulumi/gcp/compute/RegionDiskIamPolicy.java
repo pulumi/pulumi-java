@@ -124,6 +124,22 @@ public class RegionDiskIamPolicy extends io.pulumi.resources.CustomResource {
         return this.region;
     }
 
+    public interface BuilderApplicator {
+        public void apply(RegionDiskIamPolicyArgs.Builder a);
+    }
+    private static io.pulumi.gcp.compute.RegionDiskIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.compute.RegionDiskIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public RegionDiskIamPolicy(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

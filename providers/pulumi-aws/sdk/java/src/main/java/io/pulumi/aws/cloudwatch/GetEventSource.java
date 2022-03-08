@@ -13,20 +13,46 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEventSource {
-/**
- * Use this data source to get information about an EventBridge Partner Event Source. This data source will only return one partner event source. An error will be returned if multiple sources match the same name prefix.
+    private GetEventSource() {}
+    public interface BuilderApplicator {
+        public void apply(GetEventSourceArgs.Builder a);
+    }
+    private static GetEventSourceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetEventSourceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Use this data source to get information about an EventBridge Partner Event Source. This data source will only return one partner event source. An error will be returned if multiple sources match the same name prefix.
  * 
  * > **Note:** EventBridge was formerly known as CloudWatch Events. The functionality is identical.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getEventSource.
+     *
+     * A collection of arguments for invoking getEventSource.
  * 
- *
- * A collection of values returned by getEventSource.
+     *
+     * A collection of values returned by getEventSource.
  * 
- */
+     */
+    public static CompletableFuture<GetEventSourceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Use this data source to get information about an EventBridge Partner Event Source. This data source will only return one partner event source. An error will be returned if multiple sources match the same name prefix.
+     * 
+     * > **Note:** EventBridge was formerly known as CloudWatch Events. The functionality is identical.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getEventSource.
+     * 
+     *
+         * A collection of values returned by getEventSource.
+     * 
+     */
     public static CompletableFuture<GetEventSourceResult> invokeAsync(@Nullable GetEventSourceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:cloudwatch/getEventSource:getEventSource", TypeShape.of(GetEventSourceResult.class), args == null ? GetEventSourceArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -38,21 +38,21 @@ public final class HealthMonitorResponse {
     /**
      * Health Monitor Details
      * 
-     */
+    */
     public String getDetails() {
         return this.details;
     }
     /**
      * Health Monitor Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Health Monitor Name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }

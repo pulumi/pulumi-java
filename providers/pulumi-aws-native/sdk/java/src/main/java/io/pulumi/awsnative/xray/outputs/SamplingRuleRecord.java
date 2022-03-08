@@ -37,14 +37,14 @@ public final class SamplingRuleRecord {
     /**
      * When the rule was created, in Unix time seconds.
      * 
-     */
+    */
     public Optional<String> getCreatedAt() {
         return Optional.ofNullable(this.createdAt);
     }
     /**
      * When the rule was modified, in Unix time seconds.
      * 
-     */
+    */
     public Optional<String> getModifiedAt() {
         return Optional.ofNullable(this.modifiedAt);
     }

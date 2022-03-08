@@ -40,21 +40,21 @@ public final class AliasPatternResponse {
     /**
      * The alias pattern phrase.
      * 
-     */
+    */
     public Optional<String> getPhrase() {
         return Optional.ofNullable(this.phrase);
     }
     /**
      * The type of alias pattern
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
     /**
      * The alias pattern variable.
      * 
-     */
+    */
     public Optional<String> getVariable() {
         return Optional.ofNullable(this.variable);
     }

@@ -147,126 +147,126 @@ public final class EndpointKafkaSettings {
     /**
      * Kafka broker location. Specify in the form broker-hostname-or-ip:port.
      * 
-     */
+    */
     public String getBroker() {
         return this.broker;
     }
     /**
      * Shows detailed control information for table definition, column definition, and table and column changes in the Kafka message output. The default is `false`.
      * 
-     */
+    */
     public Optional<Boolean> getIncludeControlDetails() {
         return Optional.ofNullable(this.includeControlDetails);
     }
     /**
      * Include NULL and empty columns for records migrated to the endpoint. The default is `false`.
      * 
-     */
+    */
     public Optional<Boolean> getIncludeNullAndEmpty() {
         return Optional.ofNullable(this.includeNullAndEmpty);
     }
     /**
      * Shows the partition value within the Kafka message output unless the partition type is `schema-table-type`. The default is `false`.
      * 
-     */
+    */
     public Optional<Boolean> getIncludePartitionValue() {
         return Optional.ofNullable(this.includePartitionValue);
     }
     /**
      * Includes any data definition language (DDL) operations that change the table in the control data, such as `rename-table`, `drop-table`, `add-column`, `drop-column`, and `rename-column`. The default is `false`.
      * 
-     */
+    */
     public Optional<Boolean> getIncludeTableAlterOperations() {
         return Optional.ofNullable(this.includeTableAlterOperations);
     }
     /**
      * Provides detailed transaction information from the source database. This information includes a commit timestamp, a log position, and values for `transaction_id`, previous `transaction_id`, and `transaction_record_id` (the record offset within a transaction). The default is `false`.
      * 
-     */
+    */
     public Optional<Boolean> getIncludeTransactionDetails() {
         return Optional.ofNullable(this.includeTransactionDetails);
     }
     /**
      * The output format for the records created on the endpoint. The message format is `JSON` (default) or `JSON_UNFORMATTED` (a single line with no tab).
      * 
-     */
+    */
     public Optional<String> getMessageFormat() {
         return Optional.ofNullable(this.messageFormat);
     }
     /**
      * The maximum size in bytes for records created on the endpoint The default is `1,000,000`.
      * 
-     */
+    */
     public Optional<Integer> getMessageMaxBytes() {
         return Optional.ofNullable(this.messageMaxBytes);
     }
     /**
      * Set this optional parameter to true to avoid adding a '0x' prefix to raw data in hexadecimal format. For example, by default, AWS DMS adds a '0x' prefix to the LOB column type in hexadecimal format moving from an Oracle source to a Kafka target. Use the `no_hex_prefix` endpoint setting to enable migration of RAW data type columns without adding the `'0x'` prefix.
      * 
-     */
+    */
     public Optional<Boolean> getNoHexPrefix() {
         return Optional.ofNullable(this.noHexPrefix);
     }
     /**
      * Prefixes schema and table names to partition values, when the partition type is `primary-key-type`. Doing this increases data distribution among Kafka partitions. For example, suppose that a SysBench schema has thousands of tables and each table has only limited range for a primary key. In this case, the same primary key is sent from thousands of tables to the same partition, which causes throttling. The default is `false`.
      * 
-     */
+    */
     public Optional<Boolean> getPartitionIncludeSchemaTable() {
         return Optional.ofNullable(this.partitionIncludeSchemaTable);
     }
     /**
      * The secure password you created when you first set up your MSK cluster to validate a client identity and make an encrypted connection between server and client using SASL-SSL authentication.
      * 
-     */
+    */
     public Optional<String> getSaslPassword() {
         return Optional.ofNullable(this.saslPassword);
     }
     /**
      * The secure user name you created when you first set up your MSK cluster to validate a client identity and make an encrypted connection between server and client using SASL-SSL authentication.
      * 
-     */
+    */
     public Optional<String> getSaslUsername() {
         return Optional.ofNullable(this.saslUsername);
     }
     /**
      * Set secure connection to a Kafka target endpoint using Transport Layer Security (TLS). Options include `ssl-encryption`, `ssl-authentication`, and `sasl-ssl`. `sasl-ssl` requires `sasl_username` and `sasl_password`.
      * 
-     */
+    */
     public Optional<String> getSecurityProtocol() {
         return Optional.ofNullable(this.securityProtocol);
     }
     /**
      * The Amazon Resource Name (ARN) for the private certificate authority (CA) cert that AWS DMS uses to securely connect to your Kafka target endpoint.
      * 
-     */
+    */
     public Optional<String> getSslCaCertificateArn() {
         return Optional.ofNullable(this.sslCaCertificateArn);
     }
     /**
      * The Amazon Resource Name (ARN) of the client certificate used to securely connect to a Kafka target endpoint.
      * 
-     */
+    */
     public Optional<String> getSslClientCertificateArn() {
         return Optional.ofNullable(this.sslClientCertificateArn);
     }
     /**
      * The Amazon Resource Name (ARN) for the client private key used to securely connect to a Kafka target endpoint.
      * 
-     */
+    */
     public Optional<String> getSslClientKeyArn() {
         return Optional.ofNullable(this.sslClientKeyArn);
     }
     /**
      * The password for the client private key used to securely connect to a Kafka target endpoint.
      * 
-     */
+    */
     public Optional<String> getSslClientKeyPassword() {
         return Optional.ofNullable(this.sslClientKeyPassword);
     }
     /**
      * Kafka topic for migration. Defaults to `kafka-default-topic`.
      * 
-     */
+    */
     public Optional<String> getTopic() {
         return Optional.ofNullable(this.topic);
     }

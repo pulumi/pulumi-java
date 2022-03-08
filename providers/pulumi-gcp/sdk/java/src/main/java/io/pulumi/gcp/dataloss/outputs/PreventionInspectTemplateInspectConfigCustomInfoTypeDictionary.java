@@ -37,7 +37,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionar
      * Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePath> getCloudStoragePath() {
         return Optional.ofNullable(this.cloudStoragePath);
     }
@@ -45,7 +45,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionar
      * List of words or phrases to search for.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordList> getWordList() {
         return Optional.ofNullable(this.wordList);
     }

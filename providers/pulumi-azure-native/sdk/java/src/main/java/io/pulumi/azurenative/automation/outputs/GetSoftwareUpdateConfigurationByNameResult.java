@@ -107,84 +107,84 @@ public final class GetSoftwareUpdateConfigurationByNameResult {
     /**
      * CreatedBy property, which only appears in the response.
      * 
-     */
+    */
     public String getCreatedBy() {
         return this.createdBy;
     }
     /**
      * Creation time of the resource, which only appears in the response.
      * 
-     */
+    */
     public String getCreationTime() {
         return this.creationTime;
     }
     /**
      * Details of provisioning error
      * 
-     */
+    */
     public Optional<ErrorResponseResponse> getError() {
         return Optional.ofNullable(this.error);
     }
     /**
      * Resource Id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * LastModifiedBy property, which only appears in the response.
      * 
-     */
+    */
     public String getLastModifiedBy() {
         return this.lastModifiedBy;
     }
     /**
      * Last time resource was modified, which only appears in the response.
      * 
-     */
+    */
     public String getLastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Provisioning state for the software update configuration, which only appears in the response.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Schedule information for the Software update configuration
      * 
-     */
+    */
     public SUCSchedulePropertiesResponse getScheduleInfo() {
         return this.scheduleInfo;
     }
     /**
      * Tasks information for the Software update configuration.
      * 
-     */
+    */
     public Optional<SoftwareUpdateConfigurationTasksResponse> getTasks() {
         return Optional.ofNullable(this.tasks);
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * update specific properties for the Software update configuration
      * 
-     */
+    */
     public UpdateConfigurationResponse getUpdateConfiguration() {
         return this.updateConfiguration;
     }

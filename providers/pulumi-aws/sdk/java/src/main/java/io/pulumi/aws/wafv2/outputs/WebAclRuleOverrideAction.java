@@ -34,14 +34,14 @@ public final class WebAclRuleOverrideAction {
     /**
      * Override the rule action setting to count (i.e., only count matches). Configured as an empty block `{}`.
      * 
-     */
+    */
     public Optional<WebAclRuleOverrideActionCount> getCount() {
         return Optional.ofNullable(this.count);
     }
     /**
      * Don't override the rule action setting. Configured as an empty block `{}`.
      * 
-     */
+    */
     public Optional<WebAclRuleOverrideActionNone> getNone() {
         return Optional.ofNullable(this.none);
     }

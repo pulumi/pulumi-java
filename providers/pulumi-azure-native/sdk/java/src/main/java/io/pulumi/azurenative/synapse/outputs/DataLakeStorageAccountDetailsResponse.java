@@ -33,14 +33,14 @@ public final class DataLakeStorageAccountDetailsResponse {
     /**
      * Account URL
      * 
-     */
+    */
     public Optional<String> getAccountUrl() {
         return Optional.ofNullable(this.accountUrl);
     }
     /**
      * Filesystem name
      * 
-     */
+    */
     public Optional<String> getFilesystem() {
         return Optional.ofNullable(this.filesystem);
     }

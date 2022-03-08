@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInstanceGroup {
-/**
- * Get a Compute Instance Group within GCE.
+    private GetInstanceGroup() {}
+    public interface BuilderApplicator {
+        public void apply(GetInstanceGroupArgs.Builder a);
+    }
+    private static GetInstanceGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetInstanceGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Get a Compute Instance Group within GCE.
  * For more information, see [the official documentation](https://cloud.google.com/compute/docs/instance-groups/#unmanaged_instance_groups)
  * and [API](https://cloud.google.com/compute/docs/reference/latest/instanceGroups)
  * 
- *
- * A collection of arguments for invoking getInstanceGroup.
+     *
+     * A collection of arguments for invoking getInstanceGroup.
  * 
- *
- * A collection of values returned by getInstanceGroup.
+     *
+     * A collection of values returned by getInstanceGroup.
  * 
- */
+     */
+    public static CompletableFuture<GetInstanceGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Get a Compute Instance Group within GCE.
+     * For more information, see [the official documentation](https://cloud.google.com/compute/docs/instance-groups/#unmanaged_instance_groups)
+     * and [API](https://cloud.google.com/compute/docs/reference/latest/instanceGroups)
+     * 
+     *
+         * A collection of arguments for invoking getInstanceGroup.
+     * 
+     *
+         * A collection of values returned by getInstanceGroup.
+     * 
+     */
     public static CompletableFuture<GetInstanceGroupResult> invokeAsync(@Nullable GetInstanceGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getInstanceGroup:getInstanceGroup", TypeShape.of(GetInstanceGroupResult.class), args == null ? GetInstanceGroupArgs.Empty : args, Utilities.withVersion(options));
     }

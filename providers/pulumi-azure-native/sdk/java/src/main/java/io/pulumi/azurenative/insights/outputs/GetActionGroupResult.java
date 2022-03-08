@@ -164,133 +164,133 @@ public final class GetActionGroupResult {
     /**
      * The list of ARM role receivers that are part of this action group. Roles are Azure RBAC roles and only built-in roles are supported.
      * 
-     */
+    */
     public List<ArmRoleReceiverResponse> getArmRoleReceivers() {
         return this.armRoleReceivers == null ? List.of() : this.armRoleReceivers;
     }
     /**
      * The list of AutomationRunbook receivers that are part of this action group.
      * 
-     */
+    */
     public List<AutomationRunbookReceiverResponse> getAutomationRunbookReceivers() {
         return this.automationRunbookReceivers == null ? List.of() : this.automationRunbookReceivers;
     }
     /**
      * The list of AzureAppPush receivers that are part of this action group.
      * 
-     */
+    */
     public List<AzureAppPushReceiverResponse> getAzureAppPushReceivers() {
         return this.azureAppPushReceivers == null ? List.of() : this.azureAppPushReceivers;
     }
     /**
      * The list of azure function receivers that are part of this action group.
      * 
-     */
+    */
     public List<AzureFunctionReceiverResponse> getAzureFunctionReceivers() {
         return this.azureFunctionReceivers == null ? List.of() : this.azureFunctionReceivers;
     }
     /**
      * The list of email receivers that are part of this action group.
      * 
-     */
+    */
     public List<EmailReceiverResponse> getEmailReceivers() {
         return this.emailReceivers == null ? List.of() : this.emailReceivers;
     }
     /**
      * Indicates whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications.
      * 
-     */
+    */
     public Boolean getEnabled() {
         return this.enabled;
     }
     /**
      * The short name of the action group. This will be used in SMS messages.
      * 
-     */
+    */
     public String getGroupShortName() {
         return this.groupShortName;
     }
     /**
      * Azure resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Azure resource identity
      * 
-     */
+    */
     public String getIdentity() {
         return this.identity;
     }
     /**
      * The list of ITSM receivers that are part of this action group.
      * 
-     */
+    */
     public List<ItsmReceiverResponse> getItsmReceivers() {
         return this.itsmReceivers == null ? List.of() : this.itsmReceivers;
     }
     /**
      * Azure resource kind
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Resource location
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The list of logic app receivers that are part of this action group.
      * 
-     */
+    */
     public List<LogicAppReceiverResponse> getLogicAppReceivers() {
         return this.logicAppReceivers == null ? List.of() : this.logicAppReceivers;
     }
     /**
      * Azure resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The list of SMS receivers that are part of this action group.
      * 
-     */
+    */
     public List<SmsReceiverResponse> getSmsReceivers() {
         return this.smsReceivers == null ? List.of() : this.smsReceivers;
     }
     /**
      * Resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Azure resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The list of voice receivers that are part of this action group.
      * 
-     */
+    */
     public List<VoiceReceiverResponse> getVoiceReceivers() {
         return this.voiceReceivers == null ? List.of() : this.voiceReceivers;
     }
     /**
      * The list of webhook receivers that are part of this action group.
      * 
-     */
+    */
     public List<WebhookReceiverResponse> getWebhookReceivers() {
         return this.webhookReceivers == null ? List.of() : this.webhookReceivers;
     }

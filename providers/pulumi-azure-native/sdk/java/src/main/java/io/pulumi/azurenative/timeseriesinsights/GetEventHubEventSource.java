@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEventHubEventSource {
-/**
- * An event source that receives its data from an Azure EventHub.
+    private GetEventHubEventSource() {}
+    public interface BuilderApplicator {
+        public void apply(GetEventHubEventSourceArgs.Builder a);
+    }
+    private static GetEventHubEventSourceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetEventHubEventSourceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An event source that receives its data from an Azure EventHub.
  * API Version: 2020-05-15.
  * 
- *
- * An event source that receives its data from an Azure EventHub.
+     *
+     * An event source that receives its data from an Azure EventHub.
  * 
- */
+     */
+    public static CompletableFuture<GetEventHubEventSourceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An event source that receives its data from an Azure EventHub.
+     * API Version: 2020-05-15.
+     * 
+     *
+         * An event source that receives its data from an Azure EventHub.
+     * 
+     */
     public static CompletableFuture<GetEventHubEventSourceResult> invokeAsync(GetEventHubEventSourceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:timeseriesinsights:getEventHubEventSource", TypeShape.of(GetEventHubEventSourceResult.class), args == null ? GetEventHubEventSourceArgs.Empty : args, Utilities.withVersion(options));
     }

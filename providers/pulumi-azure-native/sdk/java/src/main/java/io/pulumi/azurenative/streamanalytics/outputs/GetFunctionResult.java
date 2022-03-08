@@ -48,28 +48,28 @@ public final class GetFunctionResult {
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The properties that are associated with a function.
      * 
-     */
+    */
     public ScalarFunctionPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

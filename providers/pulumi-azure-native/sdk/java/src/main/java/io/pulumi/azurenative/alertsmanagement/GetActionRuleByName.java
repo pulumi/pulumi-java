@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetActionRuleByName {
-/**
- * Action rule object containing target scope, conditions and suppression logic
+    private GetActionRuleByName() {}
+    public interface BuilderApplicator {
+        public void apply(GetActionRuleByNameArgs.Builder a);
+    }
+    private static GetActionRuleByNameArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetActionRuleByNameArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Action rule object containing target scope, conditions and suppression logic
  * API Version: 2019-05-05-preview.
  * 
- *
- * Action rule object containing target scope, conditions and suppression logic
+     *
+     * Action rule object containing target scope, conditions and suppression logic
  * 
- */
+     */
+    public static CompletableFuture<GetActionRuleByNameResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Action rule object containing target scope, conditions and suppression logic
+     * API Version: 2019-05-05-preview.
+     * 
+     *
+         * Action rule object containing target scope, conditions and suppression logic
+     * 
+     */
     public static CompletableFuture<GetActionRuleByNameResult> invokeAsync(GetActionRuleByNameArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:alertsmanagement:getActionRuleByName", TypeShape.of(GetActionRuleByNameResult.class), args == null ? GetActionRuleByNameArgs.Empty : args, Utilities.withVersion(options));
     }

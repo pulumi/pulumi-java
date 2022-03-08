@@ -72,49 +72,49 @@ public final class GetEndpointAccessResult {
     /**
      * The DNS address of the endpoint.
      * 
-     */
+    */
     public Optional<String> getAddress() {
         return Optional.ofNullable(this.address);
     }
     /**
      * The time (UTC) that the endpoint was created.
      * 
-     */
+    */
     public Optional<String> getEndpointCreateTime() {
         return Optional.ofNullable(this.endpointCreateTime);
     }
     /**
      * The status of the endpoint.
      * 
-     */
+    */
     public Optional<String> getEndpointStatus() {
         return Optional.ofNullable(this.endpointStatus);
     }
     /**
      * The port number on which the cluster accepts incoming connections.
      * 
-     */
+    */
     public Optional<Integer> getPort() {
         return Optional.ofNullable(this.port);
     }
     /**
      * The connection endpoint for connecting to an Amazon Redshift cluster through the proxy.
      * 
-     */
+    */
     public Optional<VpcEndpointProperties> getVpcEndpoint() {
         return Optional.ofNullable(this.vpcEndpoint);
     }
     /**
      * A list of vpc security group ids to apply to the created endpoint access.
      * 
-     */
+    */
     public List<String> getVpcSecurityGroupIds() {
         return this.vpcSecurityGroupIds == null ? List.of() : this.vpcSecurityGroupIds;
     }
     /**
      * A list of Virtual Private Cloud (VPC) security groups to be associated with the endpoint.
      * 
-     */
+    */
     public List<EndpointAccessVpcSecurityGroup> getVpcSecurityGroups() {
         return this.vpcSecurityGroups == null ? List.of() : this.vpcSecurityGroups;
     }

@@ -55,14 +55,14 @@ public final class AzureBackupRuleResponse {
     /**
      * BackupParameters base
      * 
-     */
+    */
     public Optional<AzureBackupParamsResponse> getBackupParameters() {
         return Optional.ofNullable(this.backupParameters);
     }
     /**
      * DataStoreInfo base
      * 
-     */
+    */
     public DataStoreInfoBaseResponse getDataStore() {
         return this.dataStore;
     }
@@ -72,14 +72,14 @@ public final class AzureBackupRuleResponse {
     /**
      * Expected value is 'AzureBackupRule'.
      * 
-     */
+    */
     public String getObjectType() {
         return this.objectType;
     }
     /**
      * Trigger context
      * 
-     */
+    */
     public Either<AdhocBasedTriggerContextResponse,ScheduleBasedTriggerContextResponse> getTrigger() {
         return this.trigger;
     }

@@ -33,14 +33,14 @@ public final class DataDiskStorageTypeInfoResponse {
     /**
      * Disk Lun
      * 
-     */
+    */
     public Optional<String> getLun() {
         return Optional.ofNullable(this.lun);
     }
     /**
      * Disk Storage Type
      * 
-     */
+    */
     public Optional<String> getStorageType() {
         return Optional.ofNullable(this.storageType);
     }

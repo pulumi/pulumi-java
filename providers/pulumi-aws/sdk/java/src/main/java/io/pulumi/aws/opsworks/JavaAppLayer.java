@@ -386,6 +386,22 @@ public class JavaAppLayer extends io.pulumi.resources.CustomResource {
         return this.useEbsOptimizedInstances;
     }
 
+    public interface BuilderApplicator {
+        public void apply(JavaAppLayerArgs.Builder a);
+    }
+    private static io.pulumi.aws.opsworks.JavaAppLayerArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.aws.opsworks.JavaAppLayerArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public JavaAppLayer(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -56,28 +56,28 @@ public final class GetCustomPluginResult {
     /**
      * the Amazon Resource Name (ARN) of the custom plugin.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
     /**
      * a summary description of the custom plugin.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * an ID of the latest successfully created revision of the custom plugin.
      * 
-     */
+    */
     public Integer getLatestRevision() {
         return this.latestRevision;
     }
@@ -87,7 +87,7 @@ public final class GetCustomPluginResult {
     /**
      * the state of the custom plugin.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }

@@ -24,7 +24,7 @@ public final class VirtualGatewaySpecListenerTlsValidationSubjectAlternativeName
     /**
      * The values sent must match the specified values exactly.
      * 
-     */
+    */
     public List<String> getExacts() {
         return this.exacts;
     }

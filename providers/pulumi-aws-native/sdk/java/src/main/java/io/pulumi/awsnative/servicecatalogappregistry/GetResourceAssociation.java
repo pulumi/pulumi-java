@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetResourceAssociation {
-/**
- * Resource Schema for AWS::ServiceCatalogAppRegistry::ResourceAssociation
+    private GetResourceAssociation() {}
+    public interface BuilderApplicator {
+        public void apply(GetResourceAssociationArgs.Builder a);
+    }
+    private static GetResourceAssociationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetResourceAssociationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Schema for AWS::ServiceCatalogAppRegistry::ResourceAssociation
  * 
- */
+     */
+    public static CompletableFuture<GetResourceAssociationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Schema for AWS::ServiceCatalogAppRegistry::ResourceAssociation
+     * 
+     */
     public static CompletableFuture<GetResourceAssociationResult> invokeAsync(GetResourceAssociationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:servicecatalogappregistry:getResourceAssociation", TypeShape.of(GetResourceAssociationResult.class), args == null ? GetResourceAssociationArgs.Empty : args, Utilities.withVersion(options));
     }

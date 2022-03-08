@@ -25,7 +25,7 @@ public final class CnameRecordResponse {
     /**
      * The canonical name for this CNAME record.
      * 
-     */
+    */
     public Optional<String> getCname() {
         return Optional.ofNullable(this.cname);
     }

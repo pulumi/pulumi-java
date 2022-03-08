@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAddressByName {
-/**
- * Address Resource.
+    private GetAddressByName() {}
+    public interface BuilderApplicator {
+        public void apply(GetAddressByNameArgs.Builder a);
+    }
+    private static GetAddressByNameArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAddressByNameArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Address Resource.
  * API Version: 2021-12-01.
  * 
- *
- * Address Resource.
+     *
+     * Address Resource.
  * 
- */
+     */
+    public static CompletableFuture<GetAddressByNameResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Address Resource.
+     * API Version: 2021-12-01.
+     * 
+     *
+         * Address Resource.
+     * 
+     */
     public static CompletableFuture<GetAddressByNameResult> invokeAsync(GetAddressByNameArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:edgeorder:getAddressByName", TypeShape.of(GetAddressByNameResult.class), args == null ? GetAddressByNameArgs.Empty : args, Utilities.withVersion(options));
     }

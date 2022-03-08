@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPage {
-/**
- * Retrieves the specified page.
+    private GetPage() {}
+    public interface BuilderApplicator {
+        public void apply(GetPageArgs.Builder a);
+    }
+    private static GetPageArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPageArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Retrieves the specified page.
  * 
- */
+     */
+    public static CompletableFuture<GetPageResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Retrieves the specified page.
+     * 
+     */
     public static CompletableFuture<GetPageResult> invokeAsync(GetPageArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v3beta1:getPage", TypeShape.of(GetPageResult.class), args == null ? GetPageArgs.Empty : args, Utilities.withVersion(options));
     }

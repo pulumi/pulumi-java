@@ -13,8 +13,17 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetKMSCryptoKey {
-/**
- * Provides access to a Google Cloud Platform KMS CryptoKey. For more information see
+    private GetKMSCryptoKey() {}
+    public interface BuilderApplicator {
+        public void apply(GetKMSCryptoKeyArgs.Builder a);
+    }
+    private static GetKMSCryptoKeyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetKMSCryptoKeyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Provides access to a Google Cloud Platform KMS CryptoKey. For more information see
  * [the official documentation](https://cloud.google.com/kms/docs/object-hierarchy#key)
  * and
  * [API](https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys).
@@ -24,13 +33,34 @@ public class GetKMSCryptoKey {
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getKMSCryptoKey.
+     *
+     * A collection of arguments for invoking getKMSCryptoKey.
  * 
- *
- * A collection of values returned by getKMSCryptoKey.
+     *
+     * A collection of values returned by getKMSCryptoKey.
  * 
- */
+     */
+    public static CompletableFuture<GetKMSCryptoKeyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Provides access to a Google Cloud Platform KMS CryptoKey. For more information see
+     * [the official documentation](https://cloud.google.com/kms/docs/object-hierarchy#key)
+     * and
+     * [API](https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys).
+     * 
+     * A CryptoKey is an interface to key material which can be used to encrypt and decrypt data. A CryptoKey belongs to a
+     * Google Cloud KMS KeyRing.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getKMSCryptoKey.
+     * 
+     *
+         * A collection of values returned by getKMSCryptoKey.
+     * 
+     */
     public static CompletableFuture<GetKMSCryptoKeyResult> invokeAsync(GetKMSCryptoKeyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:kms/getKMSCryptoKey:getKMSCryptoKey", TypeShape.of(GetKMSCryptoKeyResult.class), args == null ? GetKMSCryptoKeyArgs.Empty : args, Utilities.withVersion(options));
     }

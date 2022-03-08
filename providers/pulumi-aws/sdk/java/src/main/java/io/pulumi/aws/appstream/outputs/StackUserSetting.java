@@ -31,14 +31,14 @@ public final class StackUserSetting {
     /**
      * Action that is enabled or disabled. Valid values are: `CLIPBOARD_COPY_FROM_LOCAL_DEVICE`,  `CLIPBOARD_COPY_TO_LOCAL_DEVICE`, `FILE_UPLOAD`, `FILE_DOWNLOAD`, `PRINTING_TO_LOCAL_DEVICE`, `DOMAIN_PASSWORD_SIGNIN`, `DOMAIN_SMART_CARD_SIGNIN`.
      * 
-     */
+    */
     public String getAction() {
         return this.action;
     }
     /**
      * Indicates whether the action is enabled or disabled. Valid values are: `ENABLED`, `DISABLED`.
      * 
-     */
+    */
     public String getPermission() {
         return this.permission;
     }

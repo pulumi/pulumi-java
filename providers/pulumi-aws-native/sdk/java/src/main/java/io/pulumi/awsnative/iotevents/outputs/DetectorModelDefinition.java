@@ -33,14 +33,14 @@ public final class DetectorModelDefinition {
     /**
      * The state that is entered at the creation of each detector (instance).
      * 
-     */
+    */
     public String getInitialStateName() {
         return this.initialStateName;
     }
     /**
      * Information about the states of the detector.
      * 
-     */
+    */
     public List<DetectorModelState> getStates() {
         return this.states;
     }

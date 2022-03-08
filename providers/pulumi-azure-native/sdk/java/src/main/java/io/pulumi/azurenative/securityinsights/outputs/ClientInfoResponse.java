@@ -47,28 +47,28 @@ public final class ClientInfoResponse {
     /**
      * The email of the client.
      * 
-     */
+    */
     public Optional<String> getEmail() {
         return Optional.ofNullable(this.email);
     }
     /**
      * The name of the client.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The object id of the client.
      * 
-     */
+    */
     public Optional<String> getObjectId() {
         return Optional.ofNullable(this.objectId);
     }
     /**
      * The user principal name of the client.
      * 
-     */
+    */
     public Optional<String> getUserPrincipalName() {
         return Optional.ofNullable(this.userPrincipalName);
     }

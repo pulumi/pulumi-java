@@ -162,6 +162,22 @@ public class Deployment extends io.pulumi.resources.CustomResource {
         return this.variables;
     }
 
+    public interface BuilderApplicator {
+        public void apply(DeploymentArgs.Builder a);
+    }
+    private static io.pulumi.aws.apigateway.DeploymentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.aws.apigateway.DeploymentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Deployment(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

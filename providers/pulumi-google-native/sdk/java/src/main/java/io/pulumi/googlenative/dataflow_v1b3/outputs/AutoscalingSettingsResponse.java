@@ -32,14 +32,14 @@ public final class AutoscalingSettingsResponse {
     /**
      * The algorithm to use for autoscaling.
      * 
-     */
+    */
     public String getAlgorithm() {
         return this.algorithm;
     }
     /**
      * The maximum number of workers to cap scaling at.
      * 
-     */
+    */
     public Integer getMaxNumWorkers() {
         return this.maxNumWorkers;
     }

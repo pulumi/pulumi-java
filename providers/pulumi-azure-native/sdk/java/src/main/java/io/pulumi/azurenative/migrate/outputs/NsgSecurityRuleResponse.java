@@ -102,14 +102,14 @@ public final class NsgSecurityRuleResponse {
      * Gets or sets whether network traffic is allowed or denied.
      * Possible values are “Allow” and “Deny”.
      * 
-     */
+    */
     public Optional<String> getAccess() {
         return Optional.ofNullable(this.access);
     }
     /**
      * Gets or sets a description for this rule. Restricted to 140 chars.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
@@ -118,7 +118,7 @@ public final class NsgSecurityRuleResponse {
      *  A “*” can also be used to match all source IPs. Default tags such
      * as ‘VirtualNetwork’, ‘AzureLoadBalancer’ and ‘Internet’ can also be used.
      * 
-     */
+    */
     public Optional<String> getDestinationAddressPrefix() {
         return Optional.ofNullable(this.destinationAddressPrefix);
     }
@@ -126,7 +126,7 @@ public final class NsgSecurityRuleResponse {
      * Gets or sets Destination Port or Range. Integer or range between
      * 0 and 65535. A “*” can also be used to match all ports.
      * 
-     */
+    */
     public Optional<String> getDestinationPortRange() {
         return Optional.ofNullable(this.destinationPortRange);
     }
@@ -134,14 +134,14 @@ public final class NsgSecurityRuleResponse {
      * Gets or sets the direction of the rule.InBound or Outbound. The
      * direction specifies if rule will be evaluated on incoming or outgoing traffic.
      * 
-     */
+    */
     public Optional<String> getDirection() {
         return Optional.ofNullable(this.direction);
     }
     /**
      * Gets or sets the Security rule name.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
@@ -150,14 +150,14 @@ public final class NsgSecurityRuleResponse {
      * 100 and 4096. The priority number must be unique for each rule in the collection.
      * The lower the priority number, the higher the priority of the rule.
      * 
-     */
+    */
     public Optional<Integer> getPriority() {
         return Optional.ofNullable(this.priority);
     }
     /**
      * Gets or sets Network protocol this rule applies to. Can be Tcp, Udp or All(*).
      * 
-     */
+    */
     public Optional<String> getProtocol() {
         return Optional.ofNullable(this.protocol);
     }
@@ -167,7 +167,7 @@ public final class NsgSecurityRuleResponse {
      * ‘AzureLoadBalancer’ and ‘Internet’ can also be used. If this is an ingress
      * rule, specifies where network traffic originates from.
      * 
-     */
+    */
     public Optional<String> getSourceAddressPrefix() {
         return Optional.ofNullable(this.sourceAddressPrefix);
     }
@@ -175,7 +175,7 @@ public final class NsgSecurityRuleResponse {
      * Gets or sets Source Port or Range. Integer or range between 0 and
      * 65535. A “*” can also be used to match all ports.
      * 
-     */
+    */
     public Optional<String> getSourcePortRange() {
         return Optional.ofNullable(this.sourcePortRange);
     }

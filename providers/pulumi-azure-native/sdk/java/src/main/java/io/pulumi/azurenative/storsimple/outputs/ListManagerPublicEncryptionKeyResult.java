@@ -40,21 +40,21 @@ public final class ListManagerPublicEncryptionKeyResult {
     /**
      * The algorithm used to encrypt the "Value".
      * 
-     */
+    */
     public String getEncryptionAlgorithm() {
         return this.encryptionAlgorithm;
     }
     /**
      * The value of the secret itself. If the secret is in plaintext or null then EncryptionAlgorithm will be none.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
     /**
      * The thumbprint of the cert that was used to encrypt "Value".
      * 
-     */
+    */
     public Optional<String> getValueCertificateThumbprint() {
         return Optional.ofNullable(this.valueCertificateThumbprint);
     }

@@ -25,7 +25,7 @@ public final class DisallowedResponse {
     /**
      * A list of disk types.
      * 
-     */
+    */
     public List<String> getDiskTypes() {
         return this.diskTypes == null ? List.of() : this.diskTypes;
     }

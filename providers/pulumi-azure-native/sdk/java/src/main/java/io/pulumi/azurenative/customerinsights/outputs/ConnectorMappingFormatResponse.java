@@ -61,42 +61,42 @@ public final class ConnectorMappingFormatResponse {
     /**
      * The oData language.
      * 
-     */
+    */
     public Optional<String> getAcceptLanguage() {
         return Optional.ofNullable(this.acceptLanguage);
     }
     /**
      * Character separating array elements.
      * 
-     */
+    */
     public Optional<String> getArraySeparator() {
         return Optional.ofNullable(this.arraySeparator);
     }
     /**
      * The character that signifies a break between columns.
      * 
-     */
+    */
     public Optional<String> getColumnDelimiter() {
         return Optional.ofNullable(this.columnDelimiter);
     }
     /**
      * The type mapping format.
      * 
-     */
+    */
     public String getFormatType() {
         return this.formatType;
     }
     /**
      * Quote character, used to indicate enquoted fields.
      * 
-     */
+    */
     public Optional<String> getQuoteCharacter() {
         return Optional.ofNullable(this.quoteCharacter);
     }
     /**
      * Escape character for quotes, can be the same as the quoteCharacter.
      * 
-     */
+    */
     public Optional<String> getQuoteEscapeCharacter() {
         return Optional.ofNullable(this.quoteEscapeCharacter);
     }

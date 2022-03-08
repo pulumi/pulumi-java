@@ -31,14 +31,14 @@ public final class ComplianceVersionResponse {
     /**
      * The CPE URI (https://cpe.mitre.org/specification/) this benchmark is applicable to.
      * 
-     */
+    */
     public String getCpeUri() {
         return this.cpeUri;
     }
     /**
      * The version of the benchmark. This is set to the version of the OS-specific CIS document the benchmark is defined in.
      * 
-     */
+    */
     public String getVersion() {
         return this.version;
     }

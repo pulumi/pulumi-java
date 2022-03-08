@@ -50,28 +50,28 @@ public final class DistributionConfigurationDistribution {
     /**
      * Configuration block with Amazon Machine Image (AMI) distribution settings. Detailed below.
      * 
-     */
+    */
     public Optional<DistributionConfigurationDistributionAmiDistributionConfiguration> getAmiDistributionConfiguration() {
         return Optional.ofNullable(this.amiDistributionConfiguration);
     }
     /**
      * Configuration block with container distribution settings. Detailed below.
      * 
-     */
+    */
     public Optional<DistributionConfigurationDistributionContainerDistributionConfiguration> getContainerDistributionConfiguration() {
         return Optional.ofNullable(this.containerDistributionConfiguration);
     }
     /**
      * Set of Amazon Resource Names (ARNs) of License Manager License Configurations.
      * 
-     */
+    */
     public List<String> getLicenseConfigurationArns() {
         return this.licenseConfigurationArns == null ? List.of() : this.licenseConfigurationArns;
     }
     /**
      * AWS Region for the distribution.
      * 
-     */
+    */
     public String getRegion() {
         return this.region;
     }

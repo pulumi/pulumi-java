@@ -47,28 +47,28 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigResponse {
     /**
      * Configuration for agent assistance of end user participant. Currently, this feature is not general available, please contact Google to get access.
      * 
-     */
+    */
     public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigResponse getEndUserSuggestionConfig() {
         return this.endUserSuggestionConfig;
     }
     /**
      * Configuration for agent assistance of human agent participant.
      * 
-     */
+    */
     public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigResponse getHumanAgentSuggestionConfig() {
         return this.humanAgentSuggestionConfig;
     }
     /**
      * Configuration for message analysis.
      * 
-     */
+    */
     public GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalysisConfigResponse getMessageAnalysisConfig() {
         return this.messageAnalysisConfig;
     }
     /**
      * Pub/Sub topic on which to publish new agent assistant events.
      * 
-     */
+    */
     public GoogleCloudDialogflowV2NotificationConfigResponse getNotificationConfig() {
         return this.notificationConfig;
     }

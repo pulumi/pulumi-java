@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAccountAuditConfiguration {
-/**
- * Configures the Device Defender audit settings for this account. Settings include how audit notifications are sent and which audit checks are enabled or disabled.
+    private GetAccountAuditConfiguration() {}
+    public interface BuilderApplicator {
+        public void apply(GetAccountAuditConfigurationArgs.Builder a);
+    }
+    private static GetAccountAuditConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAccountAuditConfigurationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Configures the Device Defender audit settings for this account. Settings include how audit notifications are sent and which audit checks are enabled or disabled.
  * 
- */
+     */
+    public static CompletableFuture<GetAccountAuditConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Configures the Device Defender audit settings for this account. Settings include how audit notifications are sent and which audit checks are enabled or disabled.
+     * 
+     */
     public static CompletableFuture<GetAccountAuditConfigurationResult> invokeAsync(GetAccountAuditConfigurationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iot:getAccountAuditConfiguration", TypeShape.of(GetAccountAuditConfigurationResult.class), args == null ? GetAccountAuditConfigurationArgs.Empty : args, Utilities.withVersion(options));
     }

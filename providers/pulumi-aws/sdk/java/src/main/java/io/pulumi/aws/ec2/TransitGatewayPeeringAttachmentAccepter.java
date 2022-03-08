@@ -121,6 +121,22 @@ public class TransitGatewayPeeringAttachmentAccepter extends io.pulumi.resources
         return this.transitGatewayId;
     }
 
+    public interface BuilderApplicator {
+        public void apply(TransitGatewayPeeringAttachmentAccepterArgs.Builder a);
+    }
+    private static io.pulumi.aws.ec2.TransitGatewayPeeringAttachmentAccepterArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.aws.ec2.TransitGatewayPeeringAttachmentAccepterArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public TransitGatewayPeeringAttachmentAccepter(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

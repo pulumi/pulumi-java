@@ -25,7 +25,7 @@ public final class MigrateMISyncCompleteCommandOutputResponse {
     /**
      * List of errors that happened during the command execution
      * 
-     */
+    */
     public List<ReportableExceptionResponse> getErrors() {
         return this.errors == null ? List.of() : this.errors;
     }

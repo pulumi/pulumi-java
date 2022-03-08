@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPrimaryTaskSet {
-/**
- * A pseudo-resource that manages which of your ECS task sets is primary.
+    private GetPrimaryTaskSet() {}
+    public interface BuilderApplicator {
+        public void apply(GetPrimaryTaskSetArgs.Builder a);
+    }
+    private static GetPrimaryTaskSetArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPrimaryTaskSetArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A pseudo-resource that manages which of your ECS task sets is primary.
  * 
- */
+     */
+    public static CompletableFuture<GetPrimaryTaskSetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A pseudo-resource that manages which of your ECS task sets is primary.
+     * 
+     */
     public static CompletableFuture<GetPrimaryTaskSetResult> invokeAsync(GetPrimaryTaskSetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ecs:getPrimaryTaskSet", TypeShape.of(GetPrimaryTaskSetResult.class), args == null ? GetPrimaryTaskSetArgs.Empty : args, Utilities.withVersion(options));
     }

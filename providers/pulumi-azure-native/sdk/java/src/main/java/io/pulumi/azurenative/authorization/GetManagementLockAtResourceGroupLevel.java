@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetManagementLockAtResourceGroupLevel {
-/**
- * The lock information.
+    private GetManagementLockAtResourceGroupLevel() {}
+    public interface BuilderApplicator {
+        public void apply(GetManagementLockAtResourceGroupLevelArgs.Builder a);
+    }
+    private static GetManagementLockAtResourceGroupLevelArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetManagementLockAtResourceGroupLevelArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The lock information.
  * API Version: 2017-04-01.
  * 
- *
- * The lock information.
+     *
+     * The lock information.
  * 
- */
+     */
+    public static CompletableFuture<GetManagementLockAtResourceGroupLevelResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The lock information.
+     * API Version: 2017-04-01.
+     * 
+     *
+         * The lock information.
+     * 
+     */
     public static CompletableFuture<GetManagementLockAtResourceGroupLevelResult> invokeAsync(GetManagementLockAtResourceGroupLevelArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getManagementLockAtResourceGroupLevel", TypeShape.of(GetManagementLockAtResourceGroupLevelResult.class), args == null ? GetManagementLockAtResourceGroupLevelArgs.Empty : args, Utilities.withVersion(options));
     }

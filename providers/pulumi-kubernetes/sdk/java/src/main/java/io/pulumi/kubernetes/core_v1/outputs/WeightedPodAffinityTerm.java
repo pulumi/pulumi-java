@@ -32,14 +32,14 @@ public final class WeightedPodAffinityTerm {
     /**
      * Required. A pod affinity term, associated with the corresponding weight.
      * 
-     */
+    */
     public PodAffinityTerm getPodAffinityTerm() {
         return this.podAffinityTerm;
     }
     /**
      * weight associated with matching the corresponding podAffinityTerm, in the range 1-100.
      * 
-     */
+    */
     public Integer getWeight() {
         return this.weight;
     }

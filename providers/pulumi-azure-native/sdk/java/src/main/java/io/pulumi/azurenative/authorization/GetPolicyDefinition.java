@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPolicyDefinition {
-/**
- * The policy definition.
+    private GetPolicyDefinition() {}
+    public interface BuilderApplicator {
+        public void apply(GetPolicyDefinitionArgs.Builder a);
+    }
+    private static GetPolicyDefinitionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPolicyDefinitionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The policy definition.
  * API Version: 2020-09-01.
  * 
- *
- * The policy definition.
+     *
+     * The policy definition.
  * 
- */
+     */
+    public static CompletableFuture<GetPolicyDefinitionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The policy definition.
+     * API Version: 2020-09-01.
+     * 
+     *
+         * The policy definition.
+     * 
+     */
     public static CompletableFuture<GetPolicyDefinitionResult> invokeAsync(GetPolicyDefinitionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getPolicyDefinition", TypeShape.of(GetPolicyDefinitionResult.class), args == null ? GetPolicyDefinitionArgs.Empty : args, Utilities.withVersion(options));
     }

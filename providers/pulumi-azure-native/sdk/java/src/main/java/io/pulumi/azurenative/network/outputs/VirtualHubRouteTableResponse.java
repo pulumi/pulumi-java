@@ -25,7 +25,7 @@ public final class VirtualHubRouteTableResponse {
     /**
      * List of all routes.
      * 
-     */
+    */
     public List<VirtualHubRouteResponse> getRoutes() {
         return this.routes == null ? List.of() : this.routes;
     }

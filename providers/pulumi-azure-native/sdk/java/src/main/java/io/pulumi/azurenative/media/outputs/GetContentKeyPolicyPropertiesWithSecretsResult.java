@@ -56,35 +56,35 @@ public final class GetContentKeyPolicyPropertiesWithSecretsResult {
     /**
      * The creation date of the Policy
      * 
-     */
+    */
     public String getCreated() {
         return this.created;
     }
     /**
      * A description for the Policy.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The last modified date of the Policy
      * 
-     */
+    */
     public String getLastModified() {
         return this.lastModified;
     }
     /**
      * The Key Policy options.
      * 
-     */
+    */
     public List<ContentKeyPolicyOptionResponse> getOptions() {
         return this.options;
     }
     /**
      * The legacy Policy ID.
      * 
-     */
+    */
     public String getPolicyId() {
         return this.policyId;
     }

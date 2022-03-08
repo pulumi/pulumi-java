@@ -40,21 +40,21 @@ public final class AzureActiveDirectoryResponse {
     /**
      * Azure active directory client application id.
      * 
-     */
+    */
     public Optional<String> getClientApplication() {
         return Optional.ofNullable(this.clientApplication);
     }
     /**
      * Azure active directory cluster application id.
      * 
-     */
+    */
     public Optional<String> getClusterApplication() {
         return Optional.ofNullable(this.clusterApplication);
     }
     /**
      * Azure active directory tenant id.
      * 
-     */
+    */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }

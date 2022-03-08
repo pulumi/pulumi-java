@@ -47,28 +47,28 @@ public final class AccountCredentialDetailsResponse {
     /**
      * Connection string of the account endpoint to use the account as a storage endpoint on the device.
      * 
-     */
+    */
     public String getAccountConnectionString() {
         return this.accountConnectionString;
     }
     /**
      * Name of the account.
      * 
-     */
+    */
     public String getAccountName() {
         return this.accountName;
     }
     /**
      * Type of the account.
      * 
-     */
+    */
     public String getDataAccountType() {
         return this.dataAccountType;
     }
     /**
      * Per share level unencrypted access credentials.
      * 
-     */
+    */
     public List<ShareCredentialDetailsResponse> getShareCredentialDetails() {
         return this.shareCredentialDetails;
     }

@@ -90,70 +90,70 @@ public final class GetViewResult {
     /**
      * Date time when view was last modified.
      * 
-     */
+    */
     public String getChanged() {
         return this.changed;
     }
     /**
      * Date time when view was created.
      * 
-     */
+    */
     public String getCreated() {
         return this.created;
     }
     /**
      * View definition.
      * 
-     */
+    */
     public String getDefinition() {
         return this.definition;
     }
     /**
      * Localized display name for the view.
      * 
-     */
+    */
     public Map<String,String> getDisplayName() {
         return this.displayName == null ? Map.of() : this.displayName;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * the hub name.
      * 
-     */
+    */
     public String getTenantId() {
         return this.tenantId;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * the user ID.
      * 
-     */
+    */
     public Optional<String> getUserId() {
         return Optional.ofNullable(this.userId);
     }
     /**
      * Name of the view.
      * 
-     */
+    */
     public String getViewName() {
         return this.viewName;
     }

@@ -25,7 +25,7 @@ public final class VirtualGatewaySpecLogging {
     /**
      * The access log configuration for a virtual gateway.
      * 
-     */
+    */
     public Optional<VirtualGatewaySpecLoggingAccessLog> getAccessLog() {
         return Optional.ofNullable(this.accessLog);
     }

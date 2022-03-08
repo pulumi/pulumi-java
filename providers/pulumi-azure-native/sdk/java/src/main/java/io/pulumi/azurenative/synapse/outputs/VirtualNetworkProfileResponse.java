@@ -25,7 +25,7 @@ public final class VirtualNetworkProfileResponse {
     /**
      * Subnet ID used for computes in workspace
      * 
-     */
+    */
     public Optional<String> getComputeSubnetId() {
         return Optional.ofNullable(this.computeSubnetId);
     }

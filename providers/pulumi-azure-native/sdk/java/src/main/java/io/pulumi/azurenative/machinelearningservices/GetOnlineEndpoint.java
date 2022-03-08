@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetOnlineEndpoint {
-/**
- * API Version: 2021-03-01-preview.
+    private GetOnlineEndpoint() {}
+    public interface BuilderApplicator {
+        public void apply(GetOnlineEndpointArgs.Builder a);
+    }
+    private static GetOnlineEndpointArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetOnlineEndpointArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * API Version: 2021-03-01-preview.
  * 
- */
+     */
+    public static CompletableFuture<GetOnlineEndpointResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * API Version: 2021-03-01-preview.
+     * 
+     */
     public static CompletableFuture<GetOnlineEndpointResult> invokeAsync(GetOnlineEndpointArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:getOnlineEndpoint", TypeShape.of(GetOnlineEndpointResult.class), args == null ? GetOnlineEndpointArgs.Empty : args, Utilities.withVersion(options));
     }

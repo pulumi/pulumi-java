@@ -32,14 +32,14 @@ public final class KeyVaultAndSecretReferenceResponse {
     /**
      * Url pointing to a key or secret in KeyVault
      * 
-     */
+    */
     public String getSecretUrl() {
         return this.secretUrl;
     }
     /**
      * Resource id of the KeyVault containing the key or secret
      * 
-     */
+    */
     public SourceVaultResponse getSourceVault() {
         return this.sourceVault;
     }

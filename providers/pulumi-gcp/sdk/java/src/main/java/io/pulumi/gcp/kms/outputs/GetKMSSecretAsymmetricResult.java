@@ -49,7 +49,7 @@ public final class GetKMSSecretAsymmetricResult {
     /**
      * Contains the crc32 checksum of the provided ciphertext.
      * 
-     */
+    */
     public Optional<String> getCrc32() {
         return Optional.ofNullable(this.crc32);
     }
@@ -59,14 +59,14 @@ public final class GetKMSSecretAsymmetricResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Contains the result of decrypting the provided ciphertext.
      * 
-     */
+    */
     public String getPlaintext() {
         return this.plaintext;
     }

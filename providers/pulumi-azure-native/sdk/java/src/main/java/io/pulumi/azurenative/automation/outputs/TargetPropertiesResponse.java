@@ -34,14 +34,14 @@ public final class TargetPropertiesResponse {
     /**
      * List of Azure queries in the software update configuration.
      * 
-     */
+    */
     public List<AzureQueryPropertiesResponse> getAzureQueries() {
         return this.azureQueries == null ? List.of() : this.azureQueries;
     }
     /**
      * List of non Azure queries in the software update configuration.
      * 
-     */
+    */
     public List<NonAzureQueryPropertiesResponse> getNonAzureQueries() {
         return this.nonAzureQueries == null ? List.of() : this.nonAzureQueries;
     }

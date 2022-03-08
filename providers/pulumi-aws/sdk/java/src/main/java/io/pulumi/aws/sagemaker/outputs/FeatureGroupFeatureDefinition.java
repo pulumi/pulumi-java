@@ -33,14 +33,14 @@ public final class FeatureGroupFeatureDefinition {
     /**
      * The name of a feature. `feature_name` cannot be any of the following: `is_deleted`, `write_time`, `api_invocation_time`.
      * 
-     */
+    */
     public Optional<String> getFeatureName() {
         return Optional.ofNullable(this.featureName);
     }
     /**
      * The value type of a feature. Valid values are `Integral`, `Fractional`, or `String`.
      * 
-     */
+    */
     public Optional<String> getFeatureType() {
         return Optional.ofNullable(this.featureType);
     }

@@ -37,7 +37,7 @@ public final class PatchDeploymentPatchConfigPostStep {
      * The ExecStepConfig for all Linux VMs targeted by the PatchJob.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<PatchDeploymentPatchConfigPostStepLinuxExecStepConfig> getLinuxExecStepConfig() {
         return Optional.ofNullable(this.linuxExecStepConfig);
     }
@@ -45,7 +45,7 @@ public final class PatchDeploymentPatchConfigPostStep {
      * The ExecStepConfig for all Windows VMs targeted by the PatchJob.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<PatchDeploymentPatchConfigPostStepWindowsExecStepConfig> getWindowsExecStepConfig() {
         return Optional.ofNullable(this.windowsExecStepConfig);
     }

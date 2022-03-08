@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetApplicationGatewayBackendHealthOnDemand {
-/**
- * Result of on demand test probe.
+    private GetApplicationGatewayBackendHealthOnDemand() {}
+    public interface BuilderApplicator {
+        public void apply(GetApplicationGatewayBackendHealthOnDemandArgs.Builder a);
+    }
+    private static GetApplicationGatewayBackendHealthOnDemandArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetApplicationGatewayBackendHealthOnDemandArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Result of on demand test probe.
  * API Version: 2020-11-01.
  * 
- *
- * Result of on demand test probe.
+     *
+     * Result of on demand test probe.
  * 
- */
+     */
+    public static CompletableFuture<GetApplicationGatewayBackendHealthOnDemandResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Result of on demand test probe.
+     * API Version: 2020-11-01.
+     * 
+     *
+         * Result of on demand test probe.
+     * 
+     */
     public static CompletableFuture<GetApplicationGatewayBackendHealthOnDemandResult> invokeAsync(GetApplicationGatewayBackendHealthOnDemandArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getApplicationGatewayBackendHealthOnDemand", TypeShape.of(GetApplicationGatewayBackendHealthOnDemandResult.class), args == null ? GetApplicationGatewayBackendHealthOnDemandArgs.Empty : args, Utilities.withVersion(options));
     }

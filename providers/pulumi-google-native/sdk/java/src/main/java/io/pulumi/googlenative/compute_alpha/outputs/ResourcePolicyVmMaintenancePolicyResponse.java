@@ -31,7 +31,7 @@ public final class ResourcePolicyVmMaintenancePolicyResponse {
     /**
      * Maintenance windows that are applied to VMs covered by this policy.
      * 
-     */
+    */
     public ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse getMaintenanceWindow() {
         return this.maintenanceWindow;
     }

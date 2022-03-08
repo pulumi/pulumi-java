@@ -32,14 +32,14 @@ public final class GetImageVersionsImageVersion {
     /**
      * The string identifier of the image version, in the form: "composer-x.y.z-airflow-a.b(.c)"
      * 
-     */
+    */
     public String getImageVersionId() {
         return this.imageVersionId;
     }
     /**
      * Supported python versions for this image version
      * 
-     */
+    */
     public List<String> getSupportedPythonVersions() {
         return this.supportedPythonVersions;
     }

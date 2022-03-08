@@ -64,6 +64,22 @@ public class VpcEndpointSubnetAssociation extends io.pulumi.resources.CustomReso
         return this.vpcEndpointId;
     }
 
+    public interface BuilderApplicator {
+        public void apply(VpcEndpointSubnetAssociationArgs.Builder a);
+    }
+    private static io.pulumi.aws.ec2.VpcEndpointSubnetAssociationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.aws.ec2.VpcEndpointSubnetAssociationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public VpcEndpointSubnetAssociation(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

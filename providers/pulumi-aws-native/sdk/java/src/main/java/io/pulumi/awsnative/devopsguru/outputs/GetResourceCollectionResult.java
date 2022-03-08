@@ -33,7 +33,7 @@ public final class GetResourceCollectionResult {
     /**
      * The type of ResourceCollection
      * 
-     */
+    */
     public Optional<ResourceCollectionType> getResourceCollectionType() {
         return Optional.ofNullable(this.resourceCollectionType);
     }

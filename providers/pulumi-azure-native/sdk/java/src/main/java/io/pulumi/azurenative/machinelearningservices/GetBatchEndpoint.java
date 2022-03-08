@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBatchEndpoint {
-/**
- * API Version: 2021-03-01-preview.
+    private GetBatchEndpoint() {}
+    public interface BuilderApplicator {
+        public void apply(GetBatchEndpointArgs.Builder a);
+    }
+    private static GetBatchEndpointArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetBatchEndpointArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * API Version: 2021-03-01-preview.
  * 
- */
+     */
+    public static CompletableFuture<GetBatchEndpointResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * API Version: 2021-03-01-preview.
+     * 
+     */
     public static CompletableFuture<GetBatchEndpointResult> invokeAsync(GetBatchEndpointArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:getBatchEndpoint", TypeShape.of(GetBatchEndpointResult.class), args == null ? GetBatchEndpointArgs.Empty : args, Utilities.withVersion(options));
     }

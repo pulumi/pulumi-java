@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFactoryGitHubAccessToken {
-/**
- * Get GitHub access token response definition.
+    private GetFactoryGitHubAccessToken() {}
+    public interface BuilderApplicator {
+        public void apply(GetFactoryGitHubAccessTokenArgs.Builder a);
+    }
+    private static GetFactoryGitHubAccessTokenArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetFactoryGitHubAccessTokenArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Get GitHub access token response definition.
  * API Version: 2018-06-01.
  * 
- *
- * Get GitHub access token response definition.
+     *
+     * Get GitHub access token response definition.
  * 
- */
+     */
+    public static CompletableFuture<GetFactoryGitHubAccessTokenResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Get GitHub access token response definition.
+     * API Version: 2018-06-01.
+     * 
+     *
+         * Get GitHub access token response definition.
+     * 
+     */
     public static CompletableFuture<GetFactoryGitHubAccessTokenResult> invokeAsync(GetFactoryGitHubAccessTokenArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datafactory:getFactoryGitHubAccessToken", TypeShape.of(GetFactoryGitHubAccessTokenResult.class), args == null ? GetFactoryGitHubAccessTokenArgs.Empty : args, Utilities.withVersion(options));
     }

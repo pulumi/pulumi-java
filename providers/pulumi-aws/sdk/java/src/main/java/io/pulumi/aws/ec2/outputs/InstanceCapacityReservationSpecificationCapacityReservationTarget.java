@@ -25,7 +25,7 @@ public final class InstanceCapacityReservationSpecificationCapacityReservationTa
     /**
      * The ID of the Capacity Reservation in which to run the instance.
      * 
-     */
+    */
     public Optional<String> getCapacityReservationId() {
         return Optional.ofNullable(this.capacityReservationId);
     }

@@ -86,6 +86,22 @@ public class RouteTablePropagation extends io.pulumi.resources.CustomResource {
         return this.transitGatewayRouteTableId;
     }
 
+    public interface BuilderApplicator {
+        public void apply(RouteTablePropagationArgs.Builder a);
+    }
+    private static io.pulumi.aws.ec2transitgateway.RouteTablePropagationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.aws.ec2transitgateway.RouteTablePropagationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public RouteTablePropagation(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

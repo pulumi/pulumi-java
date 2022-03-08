@@ -45,7 +45,7 @@ public final class GetEbsVolumesResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -53,7 +53,7 @@ public final class GetEbsVolumesResult {
      * A set of all the EBS Volume IDs found. This data source will fail if
      * no volumes match the provided criteria.
      * 
-     */
+    */
     public List<String> getIds() {
         return this.ids;
     }

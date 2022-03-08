@@ -45,28 +45,28 @@ public final class VirtualDiskControllerResponse {
     /**
      * Controller's id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The display name of Controller
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * dik controller subtype (VMWARE_PARAVIRTUAL, BUS_PARALLEL, LSI_PARALLEL, LSI_SAS)
      * 
-     */
+    */
     public String getSubType() {
         return this.subType;
     }
     /**
      * disk controller type (SCSI)
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

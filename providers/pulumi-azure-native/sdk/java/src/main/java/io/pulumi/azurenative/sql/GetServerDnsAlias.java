@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetServerDnsAlias {
-/**
- * A server DNS alias.
+    private GetServerDnsAlias() {}
+    public interface BuilderApplicator {
+        public void apply(GetServerDnsAliasArgs.Builder a);
+    }
+    private static GetServerDnsAliasArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetServerDnsAliasArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A server DNS alias.
  * API Version: 2020-11-01-preview.
  * 
- *
- * A server DNS alias.
+     *
+     * A server DNS alias.
  * 
- */
+     */
+    public static CompletableFuture<GetServerDnsAliasResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A server DNS alias.
+     * API Version: 2020-11-01-preview.
+     * 
+     *
+         * A server DNS alias.
+     * 
+     */
     public static CompletableFuture<GetServerDnsAliasResult> invokeAsync(GetServerDnsAliasArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getServerDnsAlias", TypeShape.of(GetServerDnsAliasResult.class), args == null ? GetServerDnsAliasArgs.Empty : args, Utilities.withVersion(options));
     }

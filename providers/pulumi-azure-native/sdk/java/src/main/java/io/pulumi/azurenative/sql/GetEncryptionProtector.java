@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEncryptionProtector {
-/**
- * The server encryption protector.
+    private GetEncryptionProtector() {}
+    public interface BuilderApplicator {
+        public void apply(GetEncryptionProtectorArgs.Builder a);
+    }
+    private static GetEncryptionProtectorArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetEncryptionProtectorArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The server encryption protector.
  * API Version: 2020-11-01-preview.
  * 
- *
- * The server encryption protector.
+     *
+     * The server encryption protector.
  * 
- */
+     */
+    public static CompletableFuture<GetEncryptionProtectorResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The server encryption protector.
+     * API Version: 2020-11-01-preview.
+     * 
+     *
+         * The server encryption protector.
+     * 
+     */
     public static CompletableFuture<GetEncryptionProtectorResult> invokeAsync(GetEncryptionProtectorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getEncryptionProtector", TypeShape.of(GetEncryptionProtectorResult.class), args == null ? GetEncryptionProtectorArgs.Empty : args, Utilities.withVersion(options));
     }

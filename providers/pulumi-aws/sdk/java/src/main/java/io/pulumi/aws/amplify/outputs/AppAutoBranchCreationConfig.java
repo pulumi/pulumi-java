@@ -91,70 +91,70 @@ public final class AppAutoBranchCreationConfig {
     /**
      * The basic authorization credentials for the autocreated branch.
      * 
-     */
+    */
     public Optional<String> getBasicAuthCredentials() {
         return Optional.ofNullable(this.basicAuthCredentials);
     }
     /**
      * The build specification (build spec) for the autocreated branch.
      * 
-     */
+    */
     public Optional<String> getBuildSpec() {
         return Optional.ofNullable(this.buildSpec);
     }
     /**
      * Enables auto building for the autocreated branch.
      * 
-     */
+    */
     public Optional<Boolean> getEnableAutoBuild() {
         return Optional.ofNullable(this.enableAutoBuild);
     }
     /**
      * Enables basic authorization for the autocreated branch.
      * 
-     */
+    */
     public Optional<Boolean> getEnableBasicAuth() {
         return Optional.ofNullable(this.enableBasicAuth);
     }
     /**
      * Enables performance mode for the branch.
      * 
-     */
+    */
     public Optional<Boolean> getEnablePerformanceMode() {
         return Optional.ofNullable(this.enablePerformanceMode);
     }
     /**
      * Enables pull request previews for the autocreated branch.
      * 
-     */
+    */
     public Optional<Boolean> getEnablePullRequestPreview() {
         return Optional.ofNullable(this.enablePullRequestPreview);
     }
     /**
      * The environment variables for the autocreated branch.
      * 
-     */
+    */
     public Map<String,String> getEnvironmentVariables() {
         return this.environmentVariables == null ? Map.of() : this.environmentVariables;
     }
     /**
      * The framework for the autocreated branch.
      * 
-     */
+    */
     public Optional<String> getFramework() {
         return Optional.ofNullable(this.framework);
     }
     /**
      * The Amplify environment name for the pull request.
      * 
-     */
+    */
     public Optional<String> getPullRequestEnvironmentName() {
         return Optional.ofNullable(this.pullRequestEnvironmentName);
     }
     /**
      * Describes the current stage for the autocreated branch. Valid values: `PRODUCTION`, `BETA`, `DEVELOPMENT`, `EXPERIMENTAL`, `PULL_REQUEST`.
      * 
-     */
+    */
     public Optional<String> getStage() {
         return Optional.ofNullable(this.stage);
     }

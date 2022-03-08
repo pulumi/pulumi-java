@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3VersionVariantsResponse {
     /**
      * A list of flow version variants.
      * 
-     */
+    */
     public List<GoogleCloudDialogflowCxV3VersionVariantsVariantResponse> getVariants() {
         return this.variants;
     }

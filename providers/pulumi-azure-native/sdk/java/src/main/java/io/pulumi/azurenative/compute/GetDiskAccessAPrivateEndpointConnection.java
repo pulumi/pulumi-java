@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDiskAccessAPrivateEndpointConnection {
-/**
- * The Private Endpoint Connection resource.
+    private GetDiskAccessAPrivateEndpointConnection() {}
+    public interface BuilderApplicator {
+        public void apply(GetDiskAccessAPrivateEndpointConnectionArgs.Builder a);
+    }
+    private static GetDiskAccessAPrivateEndpointConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDiskAccessAPrivateEndpointConnectionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The Private Endpoint Connection resource.
  * API Version: 2020-12-01.
  * 
- *
- * The Private Endpoint Connection resource.
+     *
+     * The Private Endpoint Connection resource.
  * 
- */
+     */
+    public static CompletableFuture<GetDiskAccessAPrivateEndpointConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The Private Endpoint Connection resource.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * The Private Endpoint Connection resource.
+     * 
+     */
     public static CompletableFuture<GetDiskAccessAPrivateEndpointConnectionResult> invokeAsync(GetDiskAccessAPrivateEndpointConnectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getDiskAccessAPrivateEndpointConnection", TypeShape.of(GetDiskAccessAPrivateEndpointConnectionResult.class), args == null ? GetDiskAccessAPrivateEndpointConnectionArgs.Empty : args, Utilities.withVersion(options));
     }

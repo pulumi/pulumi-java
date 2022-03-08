@@ -67,42 +67,42 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskInputResponse {
     /**
      * Azure Active Directory Application the DMS instance will use to connect to the target instance of Azure SQL Database Managed Instance and the Azure Storage Account
      * 
-     */
+    */
     public AzureActiveDirectoryAppResponse getAzureApp() {
         return this.azureApp;
     }
     /**
      * Backup file share information for all selected databases.
      * 
-     */
+    */
     public Optional<FileShareResponse> getBackupFileShare() {
         return Optional.ofNullable(this.backupFileShare);
     }
     /**
      * Databases to migrate
      * 
-     */
+    */
     public List<MigrateSqlServerSqlMIDatabaseInputResponse> getSelectedDatabases() {
         return this.selectedDatabases;
     }
     /**
      * Connection information for source SQL Server
      * 
-     */
+    */
     public SqlConnectionInfoResponse getSourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
     /**
      * Fully qualified resourceId of storage
      * 
-     */
+    */
     public String getStorageResourceId() {
         return this.storageResourceId;
     }
     /**
      * Connection information for Azure SQL Database Managed Instance
      * 
-     */
+    */
     public MiSqlConnectionInfoResponse getTargetConnectionInfo() {
         return this.targetConnectionInfo;
     }

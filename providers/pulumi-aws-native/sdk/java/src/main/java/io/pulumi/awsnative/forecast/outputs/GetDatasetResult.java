@@ -61,21 +61,21 @@ public final class GetDatasetResult {
     /**
      * Frequency of data collection. This parameter is required for RELATED_TIME_SERIES
      * 
-     */
+    */
     public Optional<String> getDataFrequency() {
         return Optional.ofNullable(this.dataFrequency);
     }
     /**
      * The dataset type
      * 
-     */
+    */
     public Optional<DatasetType> getDatasetType() {
         return Optional.ofNullable(this.datasetType);
     }
     /**
      * The domain associated with the dataset
      * 
-     */
+    */
     public Optional<DatasetDomain> getDomain() {
         return Optional.ofNullable(this.domain);
     }

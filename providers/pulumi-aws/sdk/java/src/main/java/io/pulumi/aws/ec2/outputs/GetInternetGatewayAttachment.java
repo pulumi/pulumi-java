@@ -31,14 +31,14 @@ public final class GetInternetGatewayAttachment {
     /**
      * The current state of the attachment between the gateway and the VPC. Present only if a VPC is attached
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * The ID of an attached VPC.
      * 
-     */
+    */
     public String getVpcId() {
         return this.vpcId;
     }

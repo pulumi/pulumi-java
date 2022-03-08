@@ -23,7 +23,7 @@ public final class BotSSMLMessage {
     /**
      * The SSML text that defines the prompt.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }

@@ -52,7 +52,7 @@ public final class Hl7StoreParserConfig {
     /**
      * Determines whether messages with no header are allowed.
      * 
-     */
+    */
     public Optional<Boolean> getAllowNullHeader() {
         return Optional.ofNullable(this.allowNullHeader);
     }
@@ -60,7 +60,7 @@ public final class Hl7StoreParserConfig {
      * JSON encoded string for schemas used to parse messages in this
      * store if schematized parsing is desired.
      * 
-     */
+    */
     public Optional<String> getSchema() {
         return Optional.ofNullable(this.schema);
     }
@@ -68,7 +68,7 @@ public final class Hl7StoreParserConfig {
      * Byte(s) to be used as the segment terminator. If this is unset, '\r' will be used as segment terminator.
      * A base64-encoded string.
      * 
-     */
+    */
     public Optional<String> getSegmentTerminator() {
         return Optional.ofNullable(this.segmentTerminator);
     }
@@ -77,7 +77,7 @@ public final class Hl7StoreParserConfig {
      * Default value is `V1`.
      * Possible values are `V1` and `V2`.
      * 
-     */
+    */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }

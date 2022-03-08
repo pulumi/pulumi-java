@@ -48,7 +48,7 @@ public final class ClusterNodePoolNodeConfigKubeletConfig {
      * If true, enables CPU CFS quota enforcement for
      * containers that specify CPU limits.
      * 
-     */
+    */
     public Optional<Boolean> getCpuCfsQuota() {
         return Optional.ofNullable(this.cpuCfsQuota);
     }
@@ -58,7 +58,7 @@ public final class ClusterNodePoolNodeConfigKubeletConfig {
      * such as `"300ms"`. Valid time units are "ns", "us" (or "µs"), "ms", "s", "m",
      * "h". The value must be a positive duration.
      * 
-     */
+    */
     public Optional<String> getCpuCfsQuotaPeriod() {
         return Optional.ofNullable(this.cpuCfsQuotaPeriod);
     }
@@ -67,7 +67,7 @@ public final class ClusterNodePoolNodeConfigKubeletConfig {
      * [K8S CPU Management Policies](https://kubernetes.io/docs/tasks/administer-cluster/cpu-management-policies/).
      * One of `"none"` or `"static"`. Defaults to `none` when `kubelet_config` is unset.
      * 
-     */
+    */
     public String getCpuManagerPolicy() {
         return this.cpuManagerPolicy;
     }

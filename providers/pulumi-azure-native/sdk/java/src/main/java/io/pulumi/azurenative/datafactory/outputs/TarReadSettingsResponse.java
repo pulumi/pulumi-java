@@ -35,7 +35,7 @@ public final class TarReadSettingsResponse {
     /**
      * Preserve the compression file name as folder path. Type: boolean (or Expression with resultType boolean).
      * 
-     */
+    */
     public Optional<Object> getPreserveCompressionFileNameAsFolder() {
         return Optional.ofNullable(this.preserveCompressionFileNameAsFolder);
     }
@@ -43,7 +43,7 @@ public final class TarReadSettingsResponse {
      * The Compression setting type.
      * Expected value is 'TarReadSettings'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

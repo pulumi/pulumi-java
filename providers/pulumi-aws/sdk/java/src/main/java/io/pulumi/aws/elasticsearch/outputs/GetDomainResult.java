@@ -184,70 +184,70 @@ public final class GetDomainResult {
     /**
      * The policy document attached to the domain.
      * 
-     */
+    */
     public String getAccessPolicies() {
         return this.accessPolicies;
     }
     /**
      * Key-value string pairs to specify advanced configuration options.
      * 
-     */
+    */
     public Map<String,String> getAdvancedOptions() {
         return this.advancedOptions;
     }
     /**
      * Status of the Elasticsearch domain's advanced security options. The block consists of the following attributes:
      * 
-     */
+    */
     public List<GetDomainAdvancedSecurityOption> getAdvancedSecurityOptions() {
         return this.advancedSecurityOptions;
     }
     /**
      * The Amazon Resource Name (ARN) of the domain.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
     /**
      * Configuration of the Auto-Tune options of the domain.
      * 
-     */
+    */
     public List<GetDomainAutoTuneOption> getAutoTuneOptions() {
         return this.autoTuneOptions;
     }
     /**
      * Cluster configuration of the domain.
      * 
-     */
+    */
     public List<GetDomainClusterConfig> getClusterConfigs() {
         return this.clusterConfigs;
     }
     /**
      * Domain Amazon Cognito Authentication options for Kibana.
      * 
-     */
+    */
     public List<GetDomainCognitoOption> getCognitoOptions() {
         return this.cognitoOptions;
     }
     /**
      * Status of the creation of the domain.
      * 
-     */
+    */
     public Boolean getCreated() {
         return this.created;
     }
     /**
      * Status of the deletion of the domain.
      * 
-     */
+    */
     public Boolean getDeleted() {
         return this.deleted;
     }
     /**
      * Unique identifier for the domain.
      * 
-     */
+    */
     public String getDomainId() {
         return this.domainId;
     }
@@ -257,56 +257,56 @@ public final class GetDomainResult {
     /**
      * EBS Options for the instances in the domain.
      * 
-     */
+    */
     public List<GetDomainEbsOption> getEbsOptions() {
         return this.ebsOptions;
     }
     /**
      * Elasticsearch version for the domain.
      * 
-     */
+    */
     public String getElasticsearchVersion() {
         return this.elasticsearchVersion;
     }
     /**
      * Domain encryption at rest related options.
      * 
-     */
+    */
     public List<GetDomainEncryptionAtRest> getEncryptionAtRests() {
         return this.encryptionAtRests;
     }
     /**
      * Domain-specific endpoint used to submit index, search, and data upload requests.
      * 
-     */
+    */
     public String getEndpoint() {
         return this.endpoint;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Domain-specific endpoint used to access the Kibana application.
      * 
-     */
+    */
     public String getKibanaEndpoint() {
         return this.kibanaEndpoint;
     }
     /**
      * Domain log publishing related options.
      * 
-     */
+    */
     public List<GetDomainLogPublishingOption> getLogPublishingOptions() {
         return this.logPublishingOptions;
     }
     /**
      * Domain in transit encryption related options.
      * 
-     */
+    */
     public List<GetDomainNodeToNodeEncryption> getNodeToNodeEncryptions() {
         return this.nodeToNodeEncryptions;
     }
@@ -314,7 +314,7 @@ public final class GetDomainResult {
      * Status of a configuration change in the domain.
      * * `snapshot_options` – Domain snapshot related options.
      * 
-     */
+    */
     public Boolean getProcessing() {
         return this.processing;
     }
@@ -324,14 +324,14 @@ public final class GetDomainResult {
     /**
      * The tags assigned to the domain.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags;
     }
     /**
      * VPC Options for private Elasticsearch domains.
      * 
-     */
+    */
     public List<GetDomainVpcOption> getVpcOptions() {
         return this.vpcOptions;
     }

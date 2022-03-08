@@ -38,21 +38,21 @@ public final class NodeTaintResponse {
     /**
      * Effect for taint.
      * 
-     */
+    */
     public String getEffect() {
         return this.effect;
     }
     /**
      * Key for taint.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * Value for taint.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }

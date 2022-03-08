@@ -47,7 +47,7 @@ public final class PeeringConnectionOptionsRequester {
      * with instances in a peer VPC. This enables an outbound communication from the local ClassicLink connection
      * to the remote VPC. This option is not supported for inter-region VPC peering.
      * 
-     */
+    */
     public Optional<Boolean> getAllowClassicLinkToRemoteVpc() {
         return Optional.ofNullable(this.allowClassicLinkToRemoteVpc);
     }
@@ -55,7 +55,7 @@ public final class PeeringConnectionOptionsRequester {
      * Allow a local VPC to resolve public DNS hostnames to
      * private IP addresses when queried from instances in the peer VPC.
      * 
-     */
+    */
     public Optional<Boolean> getAllowRemoteVpcDnsResolution() {
         return Optional.ofNullable(this.allowRemoteVpcDnsResolution);
     }
@@ -64,7 +64,7 @@ public final class PeeringConnectionOptionsRequester {
      * instance in a peer VPC. This enables an outbound communication from the local VPC to the remote ClassicLink
      * connection. This option is not supported for inter-region VPC peering.
      * 
-     */
+    */
     public Optional<Boolean> getAllowVpcToRemoteClassicLink() {
         return Optional.ofNullable(this.allowVpcToRemoteClassicLink);
     }

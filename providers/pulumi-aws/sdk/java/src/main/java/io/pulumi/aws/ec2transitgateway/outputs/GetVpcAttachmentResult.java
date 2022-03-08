@@ -87,14 +87,14 @@ public final class GetVpcAttachmentResult {
     /**
      * Whether Appliance Mode support is enabled.
      * 
-     */
+    */
     public String getApplianceModeSupport() {
         return this.applianceModeSupport;
     }
     /**
      * Whether DNS support is enabled.
      * 
-     */
+    */
     public String getDnsSupport() {
         return this.dnsSupport;
     }
@@ -104,49 +104,49 @@ public final class GetVpcAttachmentResult {
     /**
      * EC2 Transit Gateway VPC Attachment identifier
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Whether IPv6 support is enabled.
      * 
-     */
+    */
     public String getIpv6Support() {
         return this.ipv6Support;
     }
     /**
      * Identifiers of EC2 Subnets.
      * 
-     */
+    */
     public List<String> getSubnetIds() {
         return this.subnetIds;
     }
     /**
      * Key-value tags for the EC2 Transit Gateway VPC Attachment
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags;
     }
     /**
      * EC2 Transit Gateway identifier
      * 
-     */
+    */
     public String getTransitGatewayId() {
         return this.transitGatewayId;
     }
     /**
      * Identifier of EC2 VPC.
      * 
-     */
+    */
     public String getVpcId() {
         return this.vpcId;
     }
     /**
      * Identifier of the AWS account that owns the EC2 VPC.
      * 
-     */
+    */
     public String getVpcOwnerId() {
         return this.vpcOwnerId;
     }

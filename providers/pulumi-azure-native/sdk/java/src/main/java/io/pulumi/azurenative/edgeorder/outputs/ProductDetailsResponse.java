@@ -59,35 +59,35 @@ public final class ProductDetailsResponse {
     /**
      * Quantity of the product
      * 
-     */
+    */
     public Integer getCount() {
         return this.count;
     }
     /**
      * list of device details
      * 
-     */
+    */
     public List<DeviceDetailsResponse> getDeviceDetails() {
         return this.deviceDetails;
     }
     /**
      * Display details of the product
      * 
-     */
+    */
     public Optional<DisplayInfoResponse> getDisplayInfo() {
         return Optional.ofNullable(this.displayInfo);
     }
     /**
      * Hierarchy of the product which uniquely identifies the product
      * 
-     */
+    */
     public HierarchyInformationResponse getHierarchyInformation() {
         return this.hierarchyInformation;
     }
     /**
      * Double encryption status of the configuration. Read-only field.
      * 
-     */
+    */
     public String getProductDoubleEncryptionStatus() {
         return this.productDoubleEncryptionStatus;
     }

@@ -25,7 +25,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigBigQueryOptions {
      * Set of files to scan.
      * Structure is documented below.
      * 
-     */
+    */
     public PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReference getTableReference() {
         return this.tableReference;
     }

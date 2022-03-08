@@ -38,18 +38,12 @@ public class InputOutputTests {
         );
     }
 
-    public static <T> Output<T> unknown(T value) {
-        return new OutputDefault<>(InputOutputData.ofNullable(ImmutableSet.of(), value, false, false));
+    public static <T> Output<T> unknown() {
+        return new OutputDefault<>(InputOutputData.ofNullable(ImmutableSet.of(), null, false, false));
     }
 
-    public static <T> Output<T> unknown(Supplier<CompletableFuture<T>> valueFactory) {
-        return new OutputDefault<>(valueFactory.get().thenApply(
-                v -> InputOutputData.ofNullable(ImmutableSet.of(), v, false, false)
-        ));
-    }
-
-    public static <T> Output<T> unknownSecret(T value) {
-        return new OutputDefault<>(InputOutputData.ofNullable(ImmutableSet.of(), value, false, true));
+    public static <T> Output<T> unknownSecret() {
+        return new OutputDefault<>(InputOutputData.ofNullable(ImmutableSet.of(), null, false, true));
     }
 
 }

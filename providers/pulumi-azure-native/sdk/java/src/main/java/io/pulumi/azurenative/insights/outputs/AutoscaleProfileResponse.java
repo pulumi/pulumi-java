@@ -59,35 +59,35 @@ public final class AutoscaleProfileResponse {
     /**
      * the number of instances that can be used during this profile.
      * 
-     */
+    */
     public ScaleCapacityResponse getCapacity() {
         return this.capacity;
     }
     /**
      * the specific date-time for the profile. This element is not used if the Recurrence element is used.
      * 
-     */
+    */
     public Optional<TimeWindowResponse> getFixedDate() {
         return Optional.ofNullable(this.fixedDate);
     }
     /**
      * the name of the profile.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * the repeating times at which this profile begins. This element is not used if the FixedDate element is used.
      * 
-     */
+    */
     public Optional<RecurrenceResponse> getRecurrence() {
         return Optional.ofNullable(this.recurrence);
     }
     /**
      * the collection of rules that provide the triggers and parameters for the scaling action. A maximum of 10 rules can be specified.
      * 
-     */
+    */
     public List<ScaleRuleResponse> getRules() {
         return this.rules;
     }

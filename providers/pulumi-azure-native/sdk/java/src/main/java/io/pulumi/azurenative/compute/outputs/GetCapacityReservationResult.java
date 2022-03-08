@@ -107,84 +107,84 @@ public final class GetCapacityReservationResult {
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The Capacity reservation instance view.
      * 
-     */
+    */
     public CapacityReservationInstanceViewResponse getInstanceView() {
         return this.instanceView;
     }
     /**
      * Resource location
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioning state, which only appears in the response.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The date time when the capacity reservation was last updated.
      * 
-     */
+    */
     public String getProvisioningTime() {
         return this.provisioningTime;
     }
     /**
      * A unique id generated and assigned to the capacity reservation by the platform which does not change throughout the lifetime of the resource.
      * 
-     */
+    */
     public String getReservationId() {
         return this.reservationId;
     }
     /**
      * SKU of the resource for which capacity needs be reserved. The SKU name and capacity is required to be set. Currently VM Skus with the capability called 'CapacityReservationSupported' set to true are supported. Refer to List Microsoft.Compute SKUs in a region (https://docs.microsoft.com/rest/api/compute/resourceskus/list) for supported values.
      * 
-     */
+    */
     public SkuResponse getSku() {
         return this.sku;
     }
     /**
      * Resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * A list of all virtual machine resource ids that are associated with the capacity reservation.
      * 
-     */
+    */
     public List<SubResourceReadOnlyResponse> getVirtualMachinesAssociated() {
         return this.virtualMachinesAssociated;
     }
     /**
      * Availability Zone to use for this capacity reservation. The zone has to be single value and also should be part for the list of zones specified during the capacity reservation group creation. The zone can be assigned only during creation. If not provided, the reservation supports only non-zonal deployments. If provided, enforces VM/VMSS using this capacity reservation to be in same zone.
      * 
-     */
+    */
     public List<String> getZones() {
         return this.zones == null ? List.of() : this.zones;
     }

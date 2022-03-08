@@ -25,7 +25,7 @@ public final class ListBitLockerKeyResult {
     /**
      * drive status
      * 
-     */
+    */
     public List<DriveBitLockerKeyResponse> getValue() {
         return this.value == null ? List.of() : this.value;
     }

@@ -128,105 +128,105 @@ public final class GetOuContainerResult {
     /**
      * The list of container accounts
      * 
-     */
+    */
     public List<ContainerAccountResponse> getAccounts() {
         return this.accounts == null ? List.of() : this.accounts;
     }
     /**
      * The OuContainer name
      * 
-     */
+    */
     public String getContainerId() {
         return this.containerId;
     }
     /**
      * The Deployment id
      * 
-     */
+    */
     public String getDeploymentId() {
         return this.deploymentId;
     }
     /**
      * Distinguished Name of OuContainer instance
      * 
-     */
+    */
     public String getDistinguishedName() {
         return this.distinguishedName;
     }
     /**
      * The domain name of Domain Services.
      * 
-     */
+    */
     public String getDomainName() {
         return this.domainName;
     }
     /**
      * Resource etag
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The current deployment or provisioning state, which only appears in the response.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Status of OuContainer instance
      * 
-     */
+    */
     public String getServiceStatus() {
         return this.serviceStatus;
     }
     /**
      * The system meta data relating to this resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Azure Active Directory tenant id
      * 
-     */
+    */
     public String getTenantId() {
         return this.tenantId;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

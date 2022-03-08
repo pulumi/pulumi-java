@@ -50,28 +50,28 @@ public final class GetInputResult {
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The properties that are associated with an input. Required on PUT (CreateOrReplace) requests.
      * 
-     */
+    */
     public Either<ReferenceInputPropertiesResponse,StreamInputPropertiesResponse> getProperties() {
         return this.properties;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

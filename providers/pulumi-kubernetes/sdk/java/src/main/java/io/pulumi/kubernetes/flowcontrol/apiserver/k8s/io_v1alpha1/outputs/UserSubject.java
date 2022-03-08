@@ -23,7 +23,7 @@ public final class UserSubject {
     /**
      * `name` is the username that matches, or "*" to match all usernames. Required.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }

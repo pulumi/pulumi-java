@@ -23,7 +23,7 @@ public final class ParallelismConfigurationProperties {
     /**
      * Maximum parallel execution steps
      * 
-     */
+    */
     public Integer getMaxParallelExecutionSteps() {
         return this.maxParallelExecutionSteps;
     }

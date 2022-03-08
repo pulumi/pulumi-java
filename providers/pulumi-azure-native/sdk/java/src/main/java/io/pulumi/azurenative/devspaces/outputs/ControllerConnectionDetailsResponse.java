@@ -25,7 +25,7 @@ public final class ControllerConnectionDetailsResponse {
     /**
      * Base class for types that supply values used to connect to container orchestrators
      * 
-     */
+    */
     public Optional<KubernetesConnectionDetailsResponse> getOrchestratorSpecificConnectionDetails() {
         return Optional.ofNullable(this.orchestratorSpecificConnectionDetails);
     }

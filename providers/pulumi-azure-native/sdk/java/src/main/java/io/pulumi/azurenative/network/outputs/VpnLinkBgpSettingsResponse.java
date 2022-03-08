@@ -34,14 +34,14 @@ public final class VpnLinkBgpSettingsResponse {
     /**
      * The BGP speaker's ASN.
      * 
-     */
+    */
     public Optional<Double> getAsn() {
         return Optional.ofNullable(this.asn);
     }
     /**
      * The BGP peering address and BGP identifier of this BGP speaker.
      * 
-     */
+    */
     public Optional<String> getBgpPeeringAddress() {
         return Optional.ofNullable(this.bgpPeeringAddress);
     }

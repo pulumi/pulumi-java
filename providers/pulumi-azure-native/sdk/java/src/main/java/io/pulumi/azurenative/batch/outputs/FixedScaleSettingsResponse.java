@@ -48,28 +48,28 @@ public final class FixedScaleSettingsResponse {
     /**
      * If omitted, the default value is Requeue.
      * 
-     */
+    */
     public Optional<String> getNodeDeallocationOption() {
         return Optional.ofNullable(this.nodeDeallocationOption);
     }
     /**
      * The default value is 15 minutes. Timeout values use ISO 8601 format. For example, use PT10M for 10 minutes. The minimum value is 5 minutes. If you specify a value less than 5 minutes, the Batch service rejects the request with an error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).
      * 
-     */
+    */
     public Optional<String> getResizeTimeout() {
         return Optional.ofNullable(this.resizeTimeout);
     }
     /**
      * At least one of targetDedicatedNodes, targetLowPriorityNodes must be set.
      * 
-     */
+    */
     public Optional<Integer> getTargetDedicatedNodes() {
         return Optional.ofNullable(this.targetDedicatedNodes);
     }
     /**
      * At least one of targetDedicatedNodes, targetLowPriorityNodes must be set.
      * 
-     */
+    */
     public Optional<Integer> getTargetLowPriorityNodes() {
         return Optional.ofNullable(this.targetLowPriorityNodes);
     }

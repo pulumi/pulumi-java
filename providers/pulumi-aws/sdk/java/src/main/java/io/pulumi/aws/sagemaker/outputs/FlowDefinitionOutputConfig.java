@@ -33,14 +33,14 @@ public final class FlowDefinitionOutputConfig {
     /**
      * The Amazon Key Management Service (KMS) key ARN for server-side encryption.
      * 
-     */
+    */
     public Optional<String> getKmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }
     /**
      * The Amazon S3 path where the object containing human output will be made available.
      * 
-     */
+    */
     public String getS3OutputPath() {
         return this.s3OutputPath;
     }

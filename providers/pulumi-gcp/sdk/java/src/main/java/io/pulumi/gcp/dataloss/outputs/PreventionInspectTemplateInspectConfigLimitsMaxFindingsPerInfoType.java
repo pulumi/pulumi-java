@@ -40,14 +40,14 @@ public final class PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInf
      * treated as a custom info type.
      * Structure is documented below.
      * 
-     */
+    */
     public PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoType getInfoType() {
         return this.infoType;
     }
     /**
      * Max findings limit for the given infoType.
      * 
-     */
+    */
     public Integer getMaxFindings() {
         return this.maxFindings;
     }

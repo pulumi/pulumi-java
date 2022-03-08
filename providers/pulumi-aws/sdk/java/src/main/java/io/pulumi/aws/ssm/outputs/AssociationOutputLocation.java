@@ -40,21 +40,21 @@ public final class AssociationOutputLocation {
     /**
      * The S3 bucket name.
      * 
-     */
+    */
     public String getS3BucketName() {
         return this.s3BucketName;
     }
     /**
      * The S3 bucket prefix. Results stored in the root if not configured.
      * 
-     */
+    */
     public Optional<String> getS3KeyPrefix() {
         return Optional.ofNullable(this.s3KeyPrefix);
     }
     /**
      * The S3 bucket region.
      * 
-     */
+    */
     public Optional<String> getS3Region() {
         return Optional.ofNullable(this.s3Region);
     }

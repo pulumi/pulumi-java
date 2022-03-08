@@ -55,35 +55,35 @@ public final class AzureFunctionReceiverResponse {
     /**
      * The azure resource id of the function app.
      * 
-     */
+    */
     public String getFunctionAppResourceId() {
         return this.functionAppResourceId;
     }
     /**
      * The function name in the function app.
      * 
-     */
+    */
     public String getFunctionName() {
         return this.functionName;
     }
     /**
      * The http trigger url where http request sent to.
      * 
-     */
+    */
     public String getHttpTriggerUrl() {
         return this.httpTriggerUrl;
     }
     /**
      * The name of the azure function receiver. Names must be unique across all receivers within an action group.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Indicates whether to use common alert schema.
      * 
-     */
+    */
     public Optional<Boolean> getUseCommonAlertSchema() {
         return Optional.ofNullable(this.useCommonAlertSchema);
     }

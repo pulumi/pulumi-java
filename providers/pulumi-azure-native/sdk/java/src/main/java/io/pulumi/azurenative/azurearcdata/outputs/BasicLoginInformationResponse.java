@@ -25,7 +25,7 @@ public final class BasicLoginInformationResponse {
     /**
      * Login username.
      * 
-     */
+    */
     public Optional<String> getUsername() {
         return Optional.ofNullable(this.username);
     }

@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetOrganizationSourceIamPolicy {
-/**
- * Gets the access control policy on the specified Source.
+    private GetOrganizationSourceIamPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetOrganizationSourceIamPolicyArgs.Builder a);
+    }
+    private static GetOrganizationSourceIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetOrganizationSourceIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the access control policy on the specified Source.
  * 
- */
+     */
+    public static CompletableFuture<GetOrganizationSourceIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the access control policy on the specified Source.
+     * 
+     */
     public static CompletableFuture<GetOrganizationSourceIamPolicyResult> invokeAsync(GetOrganizationSourceIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:securitycenter/v1:getOrganizationSourceIamPolicy", TypeShape.of(GetOrganizationSourceIamPolicyResult.class), args == null ? GetOrganizationSourceIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

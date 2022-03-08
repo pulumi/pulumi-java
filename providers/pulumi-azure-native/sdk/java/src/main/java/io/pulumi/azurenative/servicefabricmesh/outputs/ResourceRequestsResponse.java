@@ -31,14 +31,14 @@ public final class ResourceRequestsResponse {
     /**
      * Requested number of CPU cores. At present, only full cores are supported.
      * 
-     */
+    */
     public Double getCpu() {
         return this.cpu;
     }
     /**
      * The memory request in GB for this container.
      * 
-     */
+    */
     public Double getMemoryInGB() {
         return this.memoryInGB;
     }

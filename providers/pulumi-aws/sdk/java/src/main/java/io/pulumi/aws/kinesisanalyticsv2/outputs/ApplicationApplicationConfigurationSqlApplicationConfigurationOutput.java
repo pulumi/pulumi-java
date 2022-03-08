@@ -61,35 +61,35 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     /**
      * Describes the data format when records are written to the destination.
      * 
-     */
+    */
     public ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchema getDestinationSchema() {
         return this.destinationSchema;
     }
     /**
      * Identifies a Kinesis Data Firehose delivery stream as the destination.
      * 
-     */
+    */
     public Optional<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutput> getKinesisFirehoseOutput() {
         return Optional.ofNullable(this.kinesisFirehoseOutput);
     }
     /**
      * Identifies a Kinesis data stream as the destination.
      * 
-     */
+    */
     public Optional<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisStreamsOutput> getKinesisStreamsOutput() {
         return Optional.ofNullable(this.kinesisStreamsOutput);
     }
     /**
      * Identifies a Lambda function as the destination.
      * 
-     */
+    */
     public Optional<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutput> getLambdaOutput() {
         return Optional.ofNullable(this.lambdaOutput);
     }
     /**
      * The name of the in-application stream.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }

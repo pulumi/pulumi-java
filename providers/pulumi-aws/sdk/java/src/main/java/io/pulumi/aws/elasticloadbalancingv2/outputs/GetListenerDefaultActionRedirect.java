@@ -45,7 +45,7 @@ public final class GetListenerDefaultActionRedirect {
     /**
      * Port of the listener. Required if `arn` is not set.
      * 
-     */
+    */
     public String getPort() {
         return this.port;
     }

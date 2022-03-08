@@ -14,17 +14,40 @@ import javax.annotation.Nullable;
 
 @Deprecated /* Please use one of the variants: FileEventTrigger, PeriodicTimerEventTrigger. */
 public class GetTrigger {
-/**
- * Trigger details.
+    private GetTrigger() {}
+    public interface BuilderApplicator {
+        public void apply(GetTriggerArgs.Builder a);
+    }
+    private static GetTriggerArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTriggerArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Trigger details.
  * API Version: 2020-12-01.
  * 
- *
- * Trigger details.
+     *
+     * Trigger details.
  * 
- * @deprecated
- * Please use one of the variants: FileEventTrigger, PeriodicTimerEventTrigger.
+     * @Deprecated
+     * Please use one of the variants: FileEventTrigger, PeriodicTimerEventTrigger.
  * 
- */
+     */
+    public static CompletableFuture<GetTriggerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Trigger details.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Trigger details.
+     * 
+     * @Deprecated
+         * Please use one of the variants: FileEventTrigger, PeriodicTimerEventTrigger.
+     * 
+     */
     @Deprecated /* Please use one of the variants: FileEventTrigger, PeriodicTimerEventTrigger. */
     public static CompletableFuture<GetTriggerResult> invokeAsync(GetTriggerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getTrigger", TypeShape.of(GetTriggerResult.class), args == null ? GetTriggerArgs.Empty : args, Utilities.withVersion(options));

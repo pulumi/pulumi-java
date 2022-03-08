@@ -56,14 +56,14 @@ public final class GetDocumentResult {
     /**
      * The ARN of the document.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
     /**
      * The contents of the document.
      * 
-     */
+    */
     public String getContent() {
         return this.content;
     }
@@ -73,7 +73,7 @@ public final class GetDocumentResult {
     /**
      * The type of the document.
      * 
-     */
+    */
     public String getDocumentType() {
         return this.documentType;
     }
@@ -83,7 +83,7 @@ public final class GetDocumentResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }

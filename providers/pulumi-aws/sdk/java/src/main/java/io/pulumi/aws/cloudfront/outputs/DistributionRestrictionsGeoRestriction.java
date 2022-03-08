@@ -39,7 +39,7 @@ public final class DistributionRestrictionsGeoRestriction {
      * want CloudFront either to distribute your content (`whitelist`) or not
      * distribute your content (`blacklist`).
      * 
-     */
+    */
     public List<String> getLocations() {
         return this.locations == null ? List.of() : this.locations;
     }
@@ -48,7 +48,7 @@ public final class DistributionRestrictionsGeoRestriction {
      * distribution of your content by country: `none`, `whitelist`, or
      * `blacklist`.
      * 
-     */
+    */
     public String getRestrictionType() {
         return this.restrictionType;
     }

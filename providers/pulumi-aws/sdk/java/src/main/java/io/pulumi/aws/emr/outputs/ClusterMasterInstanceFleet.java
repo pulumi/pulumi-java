@@ -71,28 +71,28 @@ public final class ClusterMasterInstanceFleet {
     /**
      * ID of the cluster.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Configuration block for instance fleet.
      * 
-     */
+    */
     public List<ClusterMasterInstanceFleetInstanceTypeConfig> getInstanceTypeConfigs() {
         return this.instanceTypeConfigs == null ? List.of() : this.instanceTypeConfigs;
     }
     /**
      * Configuration block for launch specification.
      * 
-     */
+    */
     public Optional<ClusterMasterInstanceFleetLaunchSpecifications> getLaunchSpecifications() {
         return Optional.ofNullable(this.launchSpecifications);
     }
     /**
      * Name of the step.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
@@ -105,14 +105,14 @@ public final class ClusterMasterInstanceFleet {
     /**
      * Target capacity of On-Demand units for the instance fleet, which determines how many On-Demand instances to provision.
      * 
-     */
+    */
     public Optional<Integer> getTargetOnDemandCapacity() {
         return Optional.ofNullable(this.targetOnDemandCapacity);
     }
     /**
      * Target capacity of Spot units for the instance fleet, which determines how many Spot instances to provision.
      * 
-     */
+    */
     public Optional<Integer> getTargetSpotCapacity() {
         return Optional.ofNullable(this.targetSpotCapacity);
     }

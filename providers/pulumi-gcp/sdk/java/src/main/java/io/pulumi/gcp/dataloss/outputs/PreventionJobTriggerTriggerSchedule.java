@@ -31,7 +31,7 @@ public final class PreventionJobTriggerTriggerSchedule {
      * This value must be set to a time duration greater than or equal to 1 day and can be no longer than 60 days.
      * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
      * 
-     */
+    */
     public Optional<String> getRecurrencePeriodDuration() {
         return Optional.ofNullable(this.recurrencePeriodDuration);
     }

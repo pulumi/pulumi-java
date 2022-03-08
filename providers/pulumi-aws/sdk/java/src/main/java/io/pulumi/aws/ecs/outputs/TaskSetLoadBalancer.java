@@ -48,28 +48,28 @@ public final class TaskSetLoadBalancer {
     /**
      * The name of the container to associate with the load balancer (as it appears in a container definition).
      * 
-     */
+    */
     public String getContainerName() {
         return this.containerName;
     }
     /**
      * The port on the container to associate with the load balancer. Defaults to `0` if not specified.
      * 
-     */
+    */
     public Optional<Integer> getContainerPort() {
         return Optional.ofNullable(this.containerPort);
     }
     /**
      * The name of the ELB (Classic) to associate with the service.
      * 
-     */
+    */
     public Optional<String> getLoadBalancerName() {
         return Optional.ofNullable(this.loadBalancerName);
     }
     /**
      * The ARN of the Load Balancer target group to associate with the service.
      * 
-     */
+    */
     public Optional<String> getTargetGroupArn() {
         return Optional.ofNullable(this.targetGroupArn);
     }

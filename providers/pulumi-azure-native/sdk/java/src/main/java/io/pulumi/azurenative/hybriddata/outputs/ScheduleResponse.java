@@ -34,14 +34,14 @@ public final class ScheduleResponse {
     /**
      * Name of the schedule.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * A list of repetition intervals in ISO 8601 format.
      * 
-     */
+    */
     public List<String> getPolicyList() {
         return this.policyList == null ? List.of() : this.policyList;
     }

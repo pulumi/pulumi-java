@@ -24,7 +24,7 @@ public final class BucketCustomPlacementConfigResponse {
     /**
      * The list of regional locations in which data is placed.
      * 
-     */
+    */
     public List<String> getDataLocations() {
         return this.dataLocations;
     }

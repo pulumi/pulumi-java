@@ -93,70 +93,70 @@ public final class GetRouteFilterResult {
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * A collection of references to express route circuit ipv6 peerings.
      * 
-     */
+    */
     public List<ExpressRouteCircuitPeeringResponse> getIpv6Peerings() {
         return this.ipv6Peerings;
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * A collection of references to express route circuit peerings.
      * 
-     */
+    */
     public List<ExpressRouteCircuitPeeringResponse> getPeerings() {
         return this.peerings;
     }
     /**
      * The provisioning state of the route filter resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Collection of RouteFilterRules contained within a route filter.
      * 
-     */
+    */
     public List<RouteFilterRuleResponse> getRules() {
         return this.rules == null ? List.of() : this.rules;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

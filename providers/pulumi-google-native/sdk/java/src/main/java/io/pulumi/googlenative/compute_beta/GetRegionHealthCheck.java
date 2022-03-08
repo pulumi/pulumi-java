@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRegionHealthCheck {
-/**
- * Returns the specified HealthCheck resource. Gets a list of available health checks by making a list() request.
+    private GetRegionHealthCheck() {}
+    public interface BuilderApplicator {
+        public void apply(GetRegionHealthCheckArgs.Builder a);
+    }
+    private static GetRegionHealthCheckArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRegionHealthCheckArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Returns the specified HealthCheck resource. Gets a list of available health checks by making a list() request.
  * 
- */
+     */
+    public static CompletableFuture<GetRegionHealthCheckResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Returns the specified HealthCheck resource. Gets a list of available health checks by making a list() request.
+     * 
+     */
     public static CompletableFuture<GetRegionHealthCheckResult> invokeAsync(GetRegionHealthCheckArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/beta:getRegionHealthCheck", TypeShape.of(GetRegionHealthCheckResult.class), args == null ? GetRegionHealthCheckArgs.Empty : args, Utilities.withVersion(options));
     }

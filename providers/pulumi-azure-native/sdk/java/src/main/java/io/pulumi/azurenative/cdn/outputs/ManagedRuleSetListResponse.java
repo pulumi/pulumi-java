@@ -25,7 +25,7 @@ public final class ManagedRuleSetListResponse {
     /**
      * List of rule sets.
      * 
-     */
+    */
     public List<ManagedRuleSetResponse> getManagedRuleSets() {
         return this.managedRuleSets == null ? List.of() : this.managedRuleSets;
     }

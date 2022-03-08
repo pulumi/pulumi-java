@@ -36,7 +36,7 @@ public final class AzureActiveDirectoryLoginResponse {
     /**
      * <code>true</code> if the www-authenticate provider should be omitted from the request; otherwise, <code>false</code>.
      * 
-     */
+    */
     public Optional<Boolean> getDisableWWWAuthenticate() {
         return Optional.ofNullable(this.disableWWWAuthenticate);
     }
@@ -44,7 +44,7 @@ public final class AzureActiveDirectoryLoginResponse {
      * Login parameters to send to the OpenID Connect authorization endpoint when
      * a user logs in. Each parameter must be in the form "key=value".
      * 
-     */
+    */
     public List<String> getLoginParameters() {
         return this.loginParameters == null ? List.of() : this.loginParameters;
     }

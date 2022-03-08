@@ -55,35 +55,35 @@ public final class ResourceSetResourceDnsTargetResource {
     /**
      * Domain name that is targeted.
      * 
-     */
+    */
     public String getDomainName() {
         return this.domainName;
     }
     /**
      * Hosted Zone ARN that contains the DNS record with the provided name of target resource.
      * 
-     */
+    */
     public Optional<String> getHostedZoneArn() {
         return Optional.ofNullable(this.hostedZoneArn);
     }
     /**
      * Resource record set ID that is targeted.
      * 
-     */
+    */
     public Optional<String> getRecordSetId() {
         return Optional.ofNullable(this.recordSetId);
     }
     /**
      * Type of DNS Record of target resource.
      * 
-     */
+    */
     public Optional<String> getRecordType() {
         return Optional.ofNullable(this.recordType);
     }
     /**
      * Target resource the R53 record specified with the above params points to.
      * 
-     */
+    */
     public Optional<ResourceSetResourceDnsTargetResourceTargetResource> getTargetResource() {
         return Optional.ofNullable(this.targetResource);
     }

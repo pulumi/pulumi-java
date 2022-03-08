@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLabAccountRegionalAvailability {
-/**
- * The response model from the GetRegionalAvailability action
+    private GetLabAccountRegionalAvailability() {}
+    public interface BuilderApplicator {
+        public void apply(GetLabAccountRegionalAvailabilityArgs.Builder a);
+    }
+    private static GetLabAccountRegionalAvailabilityArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetLabAccountRegionalAvailabilityArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The response model from the GetRegionalAvailability action
  * API Version: 2018-10-15.
  * 
- *
- * The response model from the GetRegionalAvailability action
+     *
+     * The response model from the GetRegionalAvailability action
  * 
- */
+     */
+    public static CompletableFuture<GetLabAccountRegionalAvailabilityResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The response model from the GetRegionalAvailability action
+     * API Version: 2018-10-15.
+     * 
+     *
+         * The response model from the GetRegionalAvailability action
+     * 
+     */
     public static CompletableFuture<GetLabAccountRegionalAvailabilityResult> invokeAsync(GetLabAccountRegionalAvailabilityArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:labservices:getLabAccountRegionalAvailability", TypeShape.of(GetLabAccountRegionalAvailabilityResult.class), args == null ? GetLabAccountRegionalAvailabilityArgs.Empty : args, Utilities.withVersion(options));
     }

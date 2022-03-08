@@ -33,14 +33,14 @@ public final class Capabilities {
     /**
      * Added capabilities
      * 
-     */
+    */
     public List<String> getAdd() {
         return this.add == null ? List.of() : this.add;
     }
     /**
      * Removed capabilities
      * 
-     */
+    */
     public List<String> getDrop() {
         return this.drop == null ? List.of() : this.drop;
     }

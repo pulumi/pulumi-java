@@ -39,7 +39,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistribut
      * will be set to "infinity", defining an open range
      * ">= range.min"
      * 
-     */
+    */
     public Optional<Double> getMax() {
         return Optional.ofNullable(this.max);
     }
@@ -48,7 +48,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistribut
      * will be set to "-infinity", defining an open range
      * "< range.max"
      * 
-     */
+    */
     public Optional<Double> getMin() {
         return Optional.ofNullable(this.min);
     }

@@ -41,21 +41,21 @@ public final class DocumentAttachmentsSource {
     /**
      * The key describing the location of an attachment to a document. Valid key types include: `SourceUrl` and `S3FileUrl`
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * The name of the document attachment file
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The value describing the location of an attachment to a document
      * 
-     */
+    */
     public List<String> getValues() {
         return this.values;
     }

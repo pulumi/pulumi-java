@@ -41,21 +41,21 @@ public final class CrawlerMongodbTarget {
     /**
      * The name of the connection to use to connect to the Delta table target.
      * 
-     */
+    */
     public String getConnectionName() {
         return this.connectionName;
     }
     /**
      * The path of the Amazon DocumentDB or MongoDB target (database/collection).
      * 
-     */
+    */
     public String getPath() {
         return this.path;
     }
     /**
      * Indicates whether to scan all the records, or to sample rows from the table. Scanning all the records can take a long time when the table is not a high throughput table. Default value is `true`.
      * 
-     */
+    */
     public Optional<Boolean> getScanAll() {
         return Optional.ofNullable(this.scanAll);
     }

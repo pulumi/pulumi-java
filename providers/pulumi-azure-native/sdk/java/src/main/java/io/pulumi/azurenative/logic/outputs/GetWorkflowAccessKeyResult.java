@@ -54,35 +54,35 @@ public final class GetWorkflowAccessKeyResult {
     /**
      * Gets or sets the resource id.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Gets the workflow access key name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Gets or sets the not-after time.
      * 
-     */
+    */
     public Optional<String> getNotAfter() {
         return Optional.ofNullable(this.notAfter);
     }
     /**
      * Gets or sets the not-before time.
      * 
-     */
+    */
     public Optional<String> getNotBefore() {
         return Optional.ofNullable(this.notBefore);
     }
     /**
      * Gets the workflow access key type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

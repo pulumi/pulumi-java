@@ -41,21 +41,21 @@ public final class HttpConfigResponse {
     /**
      * description for routing.
      * 
-     */
+    */
     public List<HttpHostConfigResponse> getHosts() {
         return this.hosts;
     }
     /**
      * http gateway config name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Specifies the port at which the service endpoint below needs to be exposed.
      * 
-     */
+    */
     public Integer getPort() {
         return this.port;
     }

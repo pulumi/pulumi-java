@@ -31,14 +31,14 @@ public final class SecurityPolicyRuleRateLimitOptionsRateLimitThreshold {
     /**
      * Number of HTTP(S) requests for calculating the threshold.
      * 
-     */
+    */
     public Integer getCount() {
         return this.count;
     }
     /**
      * Interval over which the threshold is computed.
      * 
-     */
+    */
     public Integer getIntervalSec() {
         return this.intervalSec;
     }

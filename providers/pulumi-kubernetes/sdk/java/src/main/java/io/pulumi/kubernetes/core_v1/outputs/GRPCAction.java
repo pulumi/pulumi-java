@@ -36,7 +36,7 @@ public final class GRPCAction {
     /**
      * Port number of the gRPC service. Number must be in the range 1 to 65535.
      * 
-     */
+    */
     public Integer getPort() {
         return this.port;
     }
@@ -45,7 +45,7 @@ public final class GRPCAction {
      * 
      * If this is not specified, the default behavior is defined by gRPC.
      * 
-     */
+    */
     public Optional<String> getService() {
         return Optional.ofNullable(this.service);
     }

@@ -44,21 +44,21 @@ public final class DatasetDataCatalogInputDefinition {
     /**
      * Catalog id
      * 
-     */
+    */
     public Optional<String> getCatalogId() {
         return Optional.ofNullable(this.catalogId);
     }
     /**
      * Database name
      * 
-     */
+    */
     public Optional<String> getDatabaseName() {
         return Optional.ofNullable(this.databaseName);
     }
     /**
      * Table name
      * 
-     */
+    */
     public Optional<String> getTableName() {
         return Optional.ofNullable(this.tableName);
     }

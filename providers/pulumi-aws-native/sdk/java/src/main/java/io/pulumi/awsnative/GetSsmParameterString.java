@@ -13,6 +13,18 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSsmParameterString {
+    private GetSsmParameterString() {}
+    public interface BuilderApplicator {
+        public void apply(GetSsmParameterStringArgs.Builder a);
+    }
+    private static GetSsmParameterStringArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSsmParameterStringArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    public static CompletableFuture<GetSsmParameterStringResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
     public static CompletableFuture<GetSsmParameterStringResult> invokeAsync(GetSsmParameterStringArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:index:getSsmParameterString", TypeShape.of(GetSsmParameterStringResult.class), args == null ? GetSsmParameterStringArgs.Empty : args, Utilities.withVersion(options));
     }

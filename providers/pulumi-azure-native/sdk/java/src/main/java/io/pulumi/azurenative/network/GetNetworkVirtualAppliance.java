@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNetworkVirtualAppliance {
-/**
- * NetworkVirtualAppliance Resource.
+    private GetNetworkVirtualAppliance() {}
+    public interface BuilderApplicator {
+        public void apply(GetNetworkVirtualApplianceArgs.Builder a);
+    }
+    private static GetNetworkVirtualApplianceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetNetworkVirtualApplianceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * NetworkVirtualAppliance Resource.
  * API Version: 2020-11-01.
  * 
- *
- * NetworkVirtualAppliance Resource.
+     *
+     * NetworkVirtualAppliance Resource.
  * 
- */
+     */
+    public static CompletableFuture<GetNetworkVirtualApplianceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * NetworkVirtualAppliance Resource.
+     * API Version: 2020-11-01.
+     * 
+     *
+         * NetworkVirtualAppliance Resource.
+     * 
+     */
     public static CompletableFuture<GetNetworkVirtualApplianceResult> invokeAsync(GetNetworkVirtualApplianceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getNetworkVirtualAppliance", TypeShape.of(GetNetworkVirtualApplianceResult.class), args == null ? GetNetworkVirtualApplianceArgs.Empty : args, Utilities.withVersion(options));
     }

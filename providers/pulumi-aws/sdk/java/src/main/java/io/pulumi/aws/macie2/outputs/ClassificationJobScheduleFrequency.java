@@ -42,21 +42,21 @@ public final class ClassificationJobScheduleFrequency {
     /**
      * Specifies a daily recurrence pattern for running the job.
      * 
-     */
+    */
     public Optional<Boolean> getDailySchedule() {
         return Optional.ofNullable(this.dailySchedule);
     }
     /**
      * Specifies a monthly recurrence pattern for running the job.
      * 
-     */
+    */
     public Optional<Integer> getMonthlySchedule() {
         return Optional.ofNullable(this.monthlySchedule);
     }
     /**
      * Specifies a weekly recurrence pattern for running the job.
      * 
-     */
+    */
     public Optional<String> getWeeklySchedule() {
         return Optional.ofNullable(this.weeklySchedule);
     }

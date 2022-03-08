@@ -25,7 +25,7 @@ public final class ContainerGroupDiagnosticsResponse {
     /**
      * Container group log analytics information.
      * 
-     */
+    */
     public Optional<LogAnalyticsResponse> getLogAnalytics() {
         return Optional.ofNullable(this.logAnalytics);
     }

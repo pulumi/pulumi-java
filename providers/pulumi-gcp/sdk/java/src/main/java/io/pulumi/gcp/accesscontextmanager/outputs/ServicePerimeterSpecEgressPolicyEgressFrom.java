@@ -41,7 +41,7 @@ public final class ServicePerimeterSpecEgressPolicyEgressFrom {
      * Should be in the format of email address. The email address should
      * represent individual user or service account only.
      * 
-     */
+    */
     public List<String> getIdentities() {
         return this.identities == null ? List.of() : this.identities;
     }
@@ -51,7 +51,7 @@ public final class ServicePerimeterSpecEgressPolicyEgressFrom {
      * be allowed access.
      * Possible values are `IDENTITY_TYPE_UNSPECIFIED`, `ANY_IDENTITY`, `ANY_USER_ACCOUNT`, and `ANY_SERVICE_ACCOUNT`.
      * 
-     */
+    */
     public Optional<String> getIdentityType() {
         return Optional.ofNullable(this.identityType);
     }

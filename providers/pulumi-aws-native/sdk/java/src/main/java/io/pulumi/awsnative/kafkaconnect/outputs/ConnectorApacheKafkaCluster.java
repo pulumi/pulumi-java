@@ -28,7 +28,7 @@ public final class ConnectorApacheKafkaCluster {
     /**
      * The bootstrap servers string of the Apache Kafka cluster.
      * 
-     */
+    */
     public String getBootstrapServers() {
         return this.bootstrapServers;
     }

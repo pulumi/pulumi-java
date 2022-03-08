@@ -39,21 +39,21 @@ public final class DataSourceTeradataParameters {
     /**
      * <p>Database.</p>
      * 
-     */
+    */
     public String getDatabase() {
         return this.database;
     }
     /**
      * <p>Host.</p>
      * 
-     */
+    */
     public String getHost() {
         return this.host;
     }
     /**
      * <p>Port.</p>
      * 
-     */
+    */
     public Double getPort() {
         return this.port;
     }

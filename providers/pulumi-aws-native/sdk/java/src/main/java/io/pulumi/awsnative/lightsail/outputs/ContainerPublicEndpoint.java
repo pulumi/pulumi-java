@@ -42,21 +42,21 @@ public final class ContainerPublicEndpoint {
     /**
      * The name of the container for the endpoint.
      * 
-     */
+    */
     public Optional<String> getContainerName() {
         return Optional.ofNullable(this.containerName);
     }
     /**
      * The port of the container to which traffic is forwarded to.
      * 
-     */
+    */
     public Optional<Integer> getContainerPort() {
         return Optional.ofNullable(this.containerPort);
     }
     /**
      * An object that describes the health check configuration of the container.
      * 
-     */
+    */
     public Optional<ContainerHealthCheckConfig> getHealthCheckConfig() {
         return Optional.ofNullable(this.healthCheckConfig);
     }

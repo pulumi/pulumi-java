@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetApiVersionSet {
-/**
- * Api Version Set Contract details.
+    private GetApiVersionSet() {}
+    public interface BuilderApplicator {
+        public void apply(GetApiVersionSetArgs.Builder a);
+    }
+    private static GetApiVersionSetArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetApiVersionSetArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Api Version Set Contract details.
  * API Version: 2020-12-01.
  * 
- *
- * Api Version Set Contract details.
+     *
+     * Api Version Set Contract details.
  * 
- */
+     */
+    public static CompletableFuture<GetApiVersionSetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Api Version Set Contract details.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Api Version Set Contract details.
+     * 
+     */
     public static CompletableFuture<GetApiVersionSetResult> invokeAsync(GetApiVersionSetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getApiVersionSet", TypeShape.of(GetApiVersionSetResult.class), args == null ? GetApiVersionSetArgs.Empty : args, Utilities.withVersion(options));
     }

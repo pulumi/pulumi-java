@@ -40,21 +40,21 @@ public final class FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountIn
     /**
      * The fractional portion, in cents, of the amount. Valid value range between `0` and `99`.
      * 
-     */
+    */
     public Optional<Integer> getCents() {
         return Optional.ofNullable(this.cents);
     }
     /**
      * The whole number of dollars in the amount. Valid value range between `0` and `2`.
      * 
-     */
+    */
     public Optional<Integer> getDollars() {
         return Optional.ofNullable(this.dollars);
     }
     /**
      * Fractions of a cent, in tenths. Valid value range between `0` and `9`.
      * 
-     */
+    */
     public Optional<Integer> getTenthFractionsOfACent() {
         return Optional.ofNullable(this.tenthFractionsOfACent);
     }

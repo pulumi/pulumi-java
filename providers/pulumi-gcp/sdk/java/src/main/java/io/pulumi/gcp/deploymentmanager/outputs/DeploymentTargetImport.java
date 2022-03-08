@@ -34,7 +34,7 @@ public final class DeploymentTargetImport {
     /**
      * The full contents of the template that you want to import.
      * 
-     */
+    */
     public Optional<String> getContent() {
         return Optional.ofNullable(this.content);
     }
@@ -42,7 +42,7 @@ public final class DeploymentTargetImport {
      * The name of the template to import, as declared in the YAML
      * configuration.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

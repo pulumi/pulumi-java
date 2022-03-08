@@ -58,35 +58,35 @@ public final class GetReportPlanResult {
     /**
      * A structure that contains information about where and how to deliver your reports, specifically your Amazon S3 bucket name, S3 key prefix, and the formats of your reports.
      * 
-     */
+    */
     public Optional<ReportDeliveryChannelProperties> getReportDeliveryChannel() {
         return Optional.ofNullable(this.reportDeliveryChannel);
     }
     /**
      * An Amazon Resource Name (ARN) that uniquely identifies a resource. The format of the ARN depends on the resource type.
      * 
-     */
+    */
     public Optional<String> getReportPlanArn() {
         return Optional.ofNullable(this.reportPlanArn);
     }
     /**
      * An optional description of the report plan with a maximum of 1,024 characters.
      * 
-     */
+    */
     public Optional<String> getReportPlanDescription() {
         return Optional.ofNullable(this.reportPlanDescription);
     }
     /**
      * Metadata that you can assign to help organize the report plans that you create. Each tag is a key-value pair.
      * 
-     */
+    */
     public List<ReportPlanTag> getReportPlanTags() {
         return this.reportPlanTags == null ? List.of() : this.reportPlanTags;
     }
     /**
      * Identifies the report template for the report. Reports are built using a report template.
      * 
-     */
+    */
     public Optional<ReportSettingProperties> getReportSetting() {
         return Optional.ofNullable(this.reportSetting);
     }

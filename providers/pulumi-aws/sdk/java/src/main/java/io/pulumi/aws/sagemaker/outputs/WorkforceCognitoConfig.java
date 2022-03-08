@@ -31,14 +31,14 @@ public final class WorkforceCognitoConfig {
     /**
      * The OIDC IdP client ID used to configure your private workforce.
      * 
-     */
+    */
     public String getClientId() {
         return this.clientId;
     }
     /**
      * The id for your Amazon Cognito user pool.
      * 
-     */
+    */
     public String getUserPool() {
         return this.userPool;
     }

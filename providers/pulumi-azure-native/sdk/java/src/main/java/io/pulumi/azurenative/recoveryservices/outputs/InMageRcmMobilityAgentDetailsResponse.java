@@ -81,63 +81,63 @@ public final class InMageRcmMobilityAgentDetailsResponse {
     /**
      * The agent version expiry date.
      * 
-     */
+    */
     public String getAgentVersionExpiryDate() {
         return this.agentVersionExpiryDate;
     }
     /**
      * The driver version.
      * 
-     */
+    */
     public String getDriverVersion() {
         return this.driverVersion;
     }
     /**
      * The driver version expiry date.
      * 
-     */
+    */
     public String getDriverVersionExpiryDate() {
         return this.driverVersionExpiryDate;
     }
     /**
      * A value indicating whether agent is upgradeable or not.
      * 
-     */
+    */
     public String getIsUpgradeable() {
         return this.isUpgradeable;
     }
     /**
      * The time of the last heartbeat received from the agent.
      * 
-     */
+    */
     public String getLastHeartbeatUtc() {
         return this.lastHeartbeatUtc;
     }
     /**
      * The latest upgradeable version available without reboot.
      * 
-     */
+    */
     public String getLatestUpgradableVersionWithoutReboot() {
         return this.latestUpgradableVersionWithoutReboot;
     }
     /**
      * The latest agent version available.
      * 
-     */
+    */
     public String getLatestVersion() {
         return this.latestVersion;
     }
     /**
      * The whether update is possible or not.
      * 
-     */
+    */
     public List<String> getReasonsBlockingUpgrade() {
         return this.reasonsBlockingUpgrade;
     }
     /**
      * The agent version.
      * 
-     */
+    */
     public String getVersion() {
         return this.version;
     }

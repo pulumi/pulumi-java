@@ -98,77 +98,77 @@ public final class GetVolumeResult {
     /**
      * This type describes a volume provided by an Azure Files file share.
      * 
-     */
+    */
     public Optional<VolumeProviderParametersAzureFileResponse> getAzureFileParameters() {
         return Optional.ofNullable(this.azureFileParameters);
     }
     /**
      * User readable description of the volume.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Fully qualified identifier for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The geo-location where the resource lives
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Provider of the volume.
      * 
-     */
+    */
     public String getProvider() {
         return this.provider;
     }
     /**
      * State of the resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Status of the volume.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * Gives additional information about the current status of the volume.
      * 
-     */
+    */
     public String getStatusDetails() {
         return this.statusDetails;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

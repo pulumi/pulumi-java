@@ -72,49 +72,49 @@ public final class SoftwareRecipeStepResponse {
     /**
      * Extracts an archive into the specified directory.
      * 
-     */
+    */
     public SoftwareRecipeStepExtractArchiveResponse getArchiveExtraction() {
         return this.archiveExtraction;
     }
     /**
      * Installs a deb file via dpkg.
      * 
-     */
+    */
     public SoftwareRecipeStepInstallDpkgResponse getDpkgInstallation() {
         return this.dpkgInstallation;
     }
     /**
      * Copies a file onto the instance.
      * 
-     */
+    */
     public SoftwareRecipeStepCopyFileResponse getFileCopy() {
         return this.fileCopy;
     }
     /**
      * Executes an artifact or local file.
      * 
-     */
+    */
     public SoftwareRecipeStepExecFileResponse getFileExec() {
         return this.fileExec;
     }
     /**
      * Installs an MSI file.
      * 
-     */
+    */
     public SoftwareRecipeStepInstallMsiResponse getMsiInstallation() {
         return this.msiInstallation;
     }
     /**
      * Installs an rpm file via the rpm utility.
      * 
-     */
+    */
     public SoftwareRecipeStepInstallRpmResponse getRpmInstallation() {
         return this.rpmInstallation;
     }
     /**
      * Runs commands in a shell.
      * 
-     */
+    */
     public SoftwareRecipeStepRunScriptResponse getScriptRun() {
         return this.scriptRun;
     }

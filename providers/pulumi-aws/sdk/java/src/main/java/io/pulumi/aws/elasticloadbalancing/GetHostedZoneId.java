@@ -14,22 +14,50 @@ import javax.annotation.Nullable;
 
 @Deprecated /* aws.elasticloadbalancing.getHostedZoneId has been deprecated in favor of aws.elb.getHostedZoneId */
 public class GetHostedZoneId {
-/**
- * Use this data source to get the HostedZoneId of the AWS Elastic Load Balancing HostedZoneId
+    private GetHostedZoneId() {}
+    public interface BuilderApplicator {
+        public void apply(GetHostedZoneIdArgs.Builder a);
+    }
+    private static GetHostedZoneIdArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetHostedZoneIdArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Use this data source to get the HostedZoneId of the AWS Elastic Load Balancing HostedZoneId
  * in a given region for the purpose of using in an AWS Route53 Alias.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getHostedZoneId.
+     *
+     * A collection of arguments for invoking getHostedZoneId.
  * 
- *
- * A collection of values returned by getHostedZoneId.
+     *
+     * A collection of values returned by getHostedZoneId.
  * 
- * @deprecated
- * aws.elasticloadbalancing.getHostedZoneId has been deprecated in favor of aws.elb.getHostedZoneId
+     * @Deprecated
+     * aws.elasticloadbalancing.getHostedZoneId has been deprecated in favor of aws.elb.getHostedZoneId
  * 
- */
+     */
+    public static CompletableFuture<GetHostedZoneIdResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Use this data source to get the HostedZoneId of the AWS Elastic Load Balancing HostedZoneId
+     * in a given region for the purpose of using in an AWS Route53 Alias.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getHostedZoneId.
+     * 
+     *
+         * A collection of values returned by getHostedZoneId.
+     * 
+     * @Deprecated
+         * aws.elasticloadbalancing.getHostedZoneId has been deprecated in favor of aws.elb.getHostedZoneId
+     * 
+     */
     @Deprecated /* aws.elasticloadbalancing.getHostedZoneId has been deprecated in favor of aws.elb.getHostedZoneId */
     public static CompletableFuture<GetHostedZoneIdResult> invokeAsync(@Nullable GetHostedZoneIdArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:elasticloadbalancing/getHostedZoneId:getHostedZoneId", TypeShape.of(GetHostedZoneIdResult.class), args == null ? GetHostedZoneIdArgs.Empty : args, Utilities.withVersion(options));

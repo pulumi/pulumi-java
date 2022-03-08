@@ -32,7 +32,7 @@ public final class FunctionSourceRepository {
     /**
      * The URL pointing to the hosted repository where the function is defined. There are supported Cloud Source Repository URLs in the following formats:
      * 
-     */
+    */
     public String getUrl() {
         return this.url;
     }

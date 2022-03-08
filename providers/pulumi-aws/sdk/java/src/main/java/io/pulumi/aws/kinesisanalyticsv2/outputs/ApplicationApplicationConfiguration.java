@@ -74,49 +74,49 @@ public final class ApplicationApplicationConfiguration {
     /**
      * The code location and type parameters for the application.
      * 
-     */
+    */
     public ApplicationApplicationConfigurationApplicationCodeConfiguration getApplicationCodeConfiguration() {
         return this.applicationCodeConfiguration;
     }
     /**
      * Describes whether snapshots are enabled for a Flink-based application.
      * 
-     */
+    */
     public Optional<ApplicationApplicationConfigurationApplicationSnapshotConfiguration> getApplicationSnapshotConfiguration() {
         return Optional.ofNullable(this.applicationSnapshotConfiguration);
     }
     /**
      * Describes execution properties for a Flink-based application.
      * 
-     */
+    */
     public Optional<ApplicationApplicationConfigurationEnvironmentProperties> getEnvironmentProperties() {
         return Optional.ofNullable(this.environmentProperties);
     }
     /**
      * The configuration of a Flink-based application.
      * 
-     */
+    */
     public Optional<ApplicationApplicationConfigurationFlinkApplicationConfiguration> getFlinkApplicationConfiguration() {
         return Optional.ofNullable(this.flinkApplicationConfiguration);
     }
     /**
      * Describes the starting properties for a Flink-based application.
      * 
-     */
+    */
     public Optional<ApplicationApplicationConfigurationRunConfiguration> getRunConfiguration() {
         return Optional.ofNullable(this.runConfiguration);
     }
     /**
      * The configuration of a SQL-based application.
      * 
-     */
+    */
     public Optional<ApplicationApplicationConfigurationSqlApplicationConfiguration> getSqlApplicationConfiguration() {
         return Optional.ofNullable(this.sqlApplicationConfiguration);
     }
     /**
      * The VPC configuration of a Flink-based application.
      * 
-     */
+    */
     public Optional<ApplicationApplicationConfigurationVpcConfiguration> getVpcConfiguration() {
         return Optional.ofNullable(this.vpcConfiguration);
     }

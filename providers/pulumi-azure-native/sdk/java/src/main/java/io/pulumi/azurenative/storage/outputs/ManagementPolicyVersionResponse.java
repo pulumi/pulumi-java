@@ -40,21 +40,21 @@ public final class ManagementPolicyVersionResponse {
     /**
      * The function to delete the blob version
      * 
-     */
+    */
     public Optional<DateAfterCreationResponse> getDelete() {
         return Optional.ofNullable(this.delete);
     }
     /**
      * The function to tier blob version to archive storage. Support blob version currently at Hot or Cool tier
      * 
-     */
+    */
     public Optional<DateAfterCreationResponse> getTierToArchive() {
         return Optional.ofNullable(this.tierToArchive);
     }
     /**
      * The function to tier blob version to cool storage. Support blob version currently at Hot tier
      * 
-     */
+    */
     public Optional<DateAfterCreationResponse> getTierToCool() {
         return Optional.ofNullable(this.tierToCool);
     }

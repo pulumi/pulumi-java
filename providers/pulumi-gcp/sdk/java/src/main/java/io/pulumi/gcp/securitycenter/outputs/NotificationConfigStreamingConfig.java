@@ -59,7 +59,7 @@ public final class NotificationConfigStreamingConfig {
      *   [Filtering notifications](https://cloud.google.com/security-command-center/docs/how-to-api-filter-notifications)
      *   for information on how to write a filter.
      * 
-     */
+    */
     public String getFilter() {
         return this.filter;
     }

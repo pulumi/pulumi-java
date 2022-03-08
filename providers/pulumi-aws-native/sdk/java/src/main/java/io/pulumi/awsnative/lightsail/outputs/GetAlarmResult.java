@@ -92,63 +92,63 @@ public final class GetAlarmResult {
     /**
      * The arithmetic operation to use when comparing the specified statistic to the threshold. The specified statistic value is used as the first operand.
      * 
-     */
+    */
     public Optional<String> getComparisonOperator() {
         return Optional.ofNullable(this.comparisonOperator);
     }
     /**
      * The contact protocols to use for the alarm, such as Email, SMS (text messaging), or both.
      * 
-     */
+    */
     public List<String> getContactProtocols() {
         return this.contactProtocols == null ? List.of() : this.contactProtocols;
     }
     /**
      * The number of data points that must be not within the specified threshold to trigger the alarm. If you are setting an "M out of N" alarm, this value (datapointsToAlarm) is the M.
      * 
-     */
+    */
     public Optional<Integer> getDatapointsToAlarm() {
         return Optional.ofNullable(this.datapointsToAlarm);
     }
     /**
      * The number of most recent periods over which data is compared to the specified threshold. If you are setting an "M out of N" alarm, this value (evaluationPeriods) is the N.
      * 
-     */
+    */
     public Optional<Integer> getEvaluationPeriods() {
         return Optional.ofNullable(this.evaluationPeriods);
     }
     /**
      * Indicates whether the alarm is enabled. Notifications are enabled by default if you don't specify this parameter.
      * 
-     */
+    */
     public Optional<Boolean> getNotificationEnabled() {
         return Optional.ofNullable(this.notificationEnabled);
     }
     /**
      * The alarm states that trigger a notification.
      * 
-     */
+    */
     public List<String> getNotificationTriggers() {
         return this.notificationTriggers == null ? List.of() : this.notificationTriggers;
     }
     /**
      * The current state of the alarm.
      * 
-     */
+    */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }
     /**
      * The value against which the specified statistic is compared.
      * 
-     */
+    */
     public Optional<Double> getThreshold() {
         return Optional.ofNullable(this.threshold);
     }
     /**
      * Sets how this alarm will handle missing data points.
      * 
-     */
+    */
     public Optional<String> getTreatMissingData() {
         return Optional.ofNullable(this.treatMissingData);
     }

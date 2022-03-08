@@ -84,63 +84,63 @@ public final class BucketLifecycleRuleCondition {
     /**
      * Minimum age of an object in days to satisfy this condition.
      * 
-     */
+    */
     public Optional<Integer> getAge() {
         return Optional.ofNullable(this.age);
     }
     /**
      * A date in the RFC 3339 format YYYY-MM-DD. This condition is satisfied when an object is created before midnight of the specified date in UTC.
      * 
-     */
+    */
     public Optional<String> getCreatedBefore() {
         return Optional.ofNullable(this.createdBefore);
     }
     /**
      * A date in the RFC 3339 format YYYY-MM-DD. This condition is satisfied when the customTime metadata for the object is set to an earlier date than the date used in this lifecycle condition.
      * 
-     */
+    */
     public Optional<String> getCustomTimeBefore() {
         return Optional.ofNullable(this.customTimeBefore);
     }
     /**
      * Days since the date set in the `customTime` metadata for the object. This condition is satisfied when the current date and time is at least the specified number of days after the `customTime`.
      * 
-     */
+    */
     public Optional<Integer> getDaysSinceCustomTime() {
         return Optional.ofNullable(this.daysSinceCustomTime);
     }
     /**
      * Relevant only for versioned objects. Number of days elapsed since the noncurrent timestamp of an object.
      * 
-     */
+    */
     public Optional<Integer> getDaysSinceNoncurrentTime() {
         return Optional.ofNullable(this.daysSinceNoncurrentTime);
     }
     /**
      * [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects to satisfy this condition. Supported values include: `STANDARD`, `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`, `DURABLE_REDUCED_AVAILABILITY`.
      * 
-     */
+    */
     public List<String> getMatchesStorageClasses() {
         return this.matchesStorageClasses == null ? List.of() : this.matchesStorageClasses;
     }
     /**
      * Relevant only for versioned objects. The date in RFC 3339 (e.g. `2017-06-13`) when the object became nonconcurrent.
      * 
-     */
+    */
     public Optional<String> getNoncurrentTimeBefore() {
         return Optional.ofNullable(this.noncurrentTimeBefore);
     }
     /**
      * Relevant only for versioned objects. The number of newer versions of an object to satisfy this condition.
      * 
-     */
+    */
     public Optional<Integer> getNumNewerVersions() {
         return Optional.ofNullable(this.numNewerVersions);
     }
     /**
      * Match to live and/or archived objects. Unversioned buckets have only live objects. Supported values include: `"LIVE"`, `"ARCHIVED"`, `"ANY"`.
      * 
-     */
+    */
     public Optional<String> getWithState() {
         return Optional.ofNullable(this.withState);
     }

@@ -137,6 +137,22 @@ public class CutoverJob extends io.pulumi.resources.CustomResource {
         return this.stateTime;
     }
 
+    public interface BuilderApplicator {
+        public void apply(CutoverJobArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.vmmigration_v1.CutoverJobArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.vmmigration_v1.CutoverJobArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public CutoverJob(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

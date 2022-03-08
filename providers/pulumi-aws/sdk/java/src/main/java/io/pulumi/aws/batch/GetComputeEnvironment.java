@@ -13,19 +13,44 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetComputeEnvironment {
-/**
- * The Batch Compute Environment data source allows access to details of a specific
+    private GetComputeEnvironment() {}
+    public interface BuilderApplicator {
+        public void apply(GetComputeEnvironmentArgs.Builder a);
+    }
+    private static GetComputeEnvironmentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetComputeEnvironmentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The Batch Compute Environment data source allows access to details of a specific
  * compute environment within AWS Batch.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getComputeEnvironment.
+     *
+     * A collection of arguments for invoking getComputeEnvironment.
  * 
- *
- * A collection of values returned by getComputeEnvironment.
+     *
+     * A collection of values returned by getComputeEnvironment.
  * 
- */
+     */
+    public static CompletableFuture<GetComputeEnvironmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The Batch Compute Environment data source allows access to details of a specific
+     * compute environment within AWS Batch.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getComputeEnvironment.
+     * 
+     *
+         * A collection of values returned by getComputeEnvironment.
+     * 
+     */
     public static CompletableFuture<GetComputeEnvironmentResult> invokeAsync(GetComputeEnvironmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:batch/getComputeEnvironment:getComputeEnvironment", TypeShape.of(GetComputeEnvironmentResult.class), args == null ? GetComputeEnvironmentArgs.Empty : args, Utilities.withVersion(options));
     }

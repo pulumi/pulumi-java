@@ -47,28 +47,28 @@ public final class RectangleResponse {
     /**
      * The height of the rectangular region in pixels. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).
      * 
-     */
+    */
     public Optional<String> getHeight() {
         return Optional.ofNullable(this.height);
     }
     /**
      * The number of pixels from the left-margin. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).
      * 
-     */
+    */
     public Optional<String> getLeft() {
         return Optional.ofNullable(this.left);
     }
     /**
      * The number of pixels from the top-margin. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).
      * 
-     */
+    */
     public Optional<String> getTop() {
         return Optional.ofNullable(this.top);
     }
     /**
      * The width of the rectangular region in pixels. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).
      * 
-     */
+    */
     public Optional<String> getWidth() {
         return Optional.ofNullable(this.width);
     }

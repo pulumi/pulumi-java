@@ -40,14 +40,14 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputErrorRespo
     /**
      * Migration error
      * 
-     */
+    */
     public ReportableExceptionResponse getError() {
         return this.error;
     }
     /**
      * Result identifier
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -55,7 +55,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputErrorRespo
      * Result type
      * Expected value is 'ErrorOutput'.
      * 
-     */
+    */
     public String getResultType() {
         return this.resultType;
     }

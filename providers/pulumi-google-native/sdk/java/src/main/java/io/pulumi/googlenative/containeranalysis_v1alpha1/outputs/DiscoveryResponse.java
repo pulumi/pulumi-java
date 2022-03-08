@@ -23,7 +23,7 @@ public final class DiscoveryResponse {
     /**
      * The kind of analysis that is handled by this discovery.
      * 
-     */
+    */
     public String getAnalysisKind() {
         return this.analysisKind;
     }

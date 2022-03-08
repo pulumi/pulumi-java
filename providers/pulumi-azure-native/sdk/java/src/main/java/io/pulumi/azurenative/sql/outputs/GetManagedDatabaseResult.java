@@ -104,84 +104,84 @@ public final class GetManagedDatabaseResult {
     /**
      * Collation of the metadata catalog.
      * 
-     */
+    */
     public Optional<String> getCatalogCollation() {
         return Optional.ofNullable(this.catalogCollation);
     }
     /**
      * Collation of the managed database.
      * 
-     */
+    */
     public Optional<String> getCollation() {
         return Optional.ofNullable(this.collation);
     }
     /**
      * Creation date of the database.
      * 
-     */
+    */
     public String getCreationDate() {
         return this.creationDate;
     }
     /**
      * Geo paired region.
      * 
-     */
+    */
     public String getDefaultSecondaryLocation() {
         return this.defaultSecondaryLocation;
     }
     /**
      * Earliest restore point in time for point in time restore.
      * 
-     */
+    */
     public String getEarliestRestorePoint() {
         return this.earliestRestorePoint;
     }
     /**
      * Instance Failover Group resource identifier that this managed database belongs to.
      * 
-     */
+    */
     public String getFailoverGroupId() {
         return this.failoverGroupId;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Status of the database.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

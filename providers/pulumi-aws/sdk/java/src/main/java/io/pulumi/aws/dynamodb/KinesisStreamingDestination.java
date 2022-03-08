@@ -60,6 +60,22 @@ public class KinesisStreamingDestination extends io.pulumi.resources.CustomResou
         return this.tableName;
     }
 
+    public interface BuilderApplicator {
+        public void apply(KinesisStreamingDestinationArgs.Builder a);
+    }
+    private static io.pulumi.aws.dynamodb.KinesisStreamingDestinationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.aws.dynamodb.KinesisStreamingDestinationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public KinesisStreamingDestination(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

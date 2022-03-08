@@ -23,7 +23,7 @@ public final class CxEnvironmentVersionConfig {
     /**
      * Format: projects/{{project}}/locations/{{location}}/agents/{{agent}}/flows/{{flow}}/versions/{{version}}.
      * 
-     */
+    */
     public String getVersion() {
         return this.version;
     }

@@ -40,21 +40,21 @@ public final class NodeGroupTaint {
     /**
      * The effect of the taint. Valid values: `NO_SCHEDULE`, `NO_EXECUTE`, `PREFER_NO_SCHEDULE`.
      * 
-     */
+    */
     public String getEffect() {
         return this.effect;
     }
     /**
      * The key of the taint. Maximum length of 63.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * The value of the taint. Maximum length of 63.
      * 
-     */
+    */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }

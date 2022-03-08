@@ -14,17 +14,40 @@ import javax.annotation.Nullable;
 
 @Deprecated /* Please use one of the variants: EventGridDataConnection, EventHubDataConnection, IotHubDataConnection. */
 public class GetDataConnection {
-/**
- * Class representing an data connection.
+    private GetDataConnection() {}
+    public interface BuilderApplicator {
+        public void apply(GetDataConnectionArgs.Builder a);
+    }
+    private static GetDataConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDataConnectionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Class representing an data connection.
  * API Version: 2021-01-01.
  * 
- *
- * Class representing an data connection.
+     *
+     * Class representing an data connection.
  * 
- * @deprecated
- * Please use one of the variants: EventGridDataConnection, EventHubDataConnection, IotHubDataConnection.
+     * @Deprecated
+     * Please use one of the variants: EventGridDataConnection, EventHubDataConnection, IotHubDataConnection.
  * 
- */
+     */
+    public static CompletableFuture<GetDataConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Class representing an data connection.
+     * API Version: 2021-01-01.
+     * 
+     *
+         * Class representing an data connection.
+     * 
+     * @Deprecated
+         * Please use one of the variants: EventGridDataConnection, EventHubDataConnection, IotHubDataConnection.
+     * 
+     */
     @Deprecated /* Please use one of the variants: EventGridDataConnection, EventHubDataConnection, IotHubDataConnection. */
     public static CompletableFuture<GetDataConnectionResult> invokeAsync(GetDataConnectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:kusto:getDataConnection", TypeShape.of(GetDataConnectionResult.class), args == null ? GetDataConnectionArgs.Empty : args, Utilities.withVersion(options));

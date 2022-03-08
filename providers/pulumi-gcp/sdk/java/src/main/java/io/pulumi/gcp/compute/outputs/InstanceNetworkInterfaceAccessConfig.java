@@ -44,7 +44,7 @@ public final class InstanceNetworkInterfaceAccessConfig {
      * The IP address that will be 1:1 mapped to the instance's
      * network ip. If not given, one will be generated.
      * 
-     */
+    */
     public Optional<String> getNatIp() {
         return Optional.ofNullable(this.natIp);
     }
@@ -52,7 +52,7 @@ public final class InstanceNetworkInterfaceAccessConfig {
      * The service-level to be provided for IPv6 traffic when the
      * subnet has an external subnet. Only PREMIUM tier is valid for IPv6.
      * 
-     */
+    */
     public Optional<String> getNetworkTier() {
         return Optional.ofNullable(this.networkTier);
     }
@@ -60,7 +60,7 @@ public final class InstanceNetworkInterfaceAccessConfig {
      * The domain name to be used when creating DNSv6
      * records for the external IPv6 ranges..
      * 
-     */
+    */
     public Optional<String> getPublicPtrDomainName() {
         return Optional.ofNullable(this.publicPtrDomainName);
     }

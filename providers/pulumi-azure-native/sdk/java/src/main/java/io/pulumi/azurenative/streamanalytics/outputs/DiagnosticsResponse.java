@@ -24,7 +24,7 @@ public final class DiagnosticsResponse {
     /**
      * A collection of zero or more conditions applicable to the resource, or to the job overall, that warrant customer attention.
      * 
-     */
+    */
     public List<DiagnosticConditionResponse> getConditions() {
         return this.conditions;
     }

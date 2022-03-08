@@ -33,14 +33,14 @@ public final class ServicePrincipalProfileResponse {
     /**
      * The client ID used for the cluster (immutable).
      * 
-     */
+    */
     public Optional<String> getClientId() {
         return Optional.ofNullable(this.clientId);
     }
     /**
      * The client secret used for the cluster (immutable).
      * 
-     */
+    */
     public Optional<String> getClientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }

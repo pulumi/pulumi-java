@@ -66,42 +66,42 @@ public final class AutoHealTriggersResponse {
     /**
      * A rule based on private bytes.
      * 
-     */
+    */
     public Optional<Integer> getPrivateBytesInKB() {
         return Optional.ofNullable(this.privateBytesInKB);
     }
     /**
      * A rule based on total requests.
      * 
-     */
+    */
     public Optional<RequestsBasedTriggerResponse> getRequests() {
         return Optional.ofNullable(this.requests);
     }
     /**
      * A rule based on request execution time.
      * 
-     */
+    */
     public Optional<SlowRequestsBasedTriggerResponse> getSlowRequests() {
         return Optional.ofNullable(this.slowRequests);
     }
     /**
      * A rule based on multiple Slow Requests Rule with path
      * 
-     */
+    */
     public List<SlowRequestsBasedTriggerResponse> getSlowRequestsWithPath() {
         return this.slowRequestsWithPath == null ? List.of() : this.slowRequestsWithPath;
     }
     /**
      * A rule based on status codes.
      * 
-     */
+    */
     public List<StatusCodesBasedTriggerResponse> getStatusCodes() {
         return this.statusCodes == null ? List.of() : this.statusCodes;
     }
     /**
      * A rule based on status codes ranges.
      * 
-     */
+    */
     public List<StatusCodesRangeBasedTriggerResponse> getStatusCodesRange() {
         return this.statusCodesRange == null ? List.of() : this.statusCodesRange;
     }

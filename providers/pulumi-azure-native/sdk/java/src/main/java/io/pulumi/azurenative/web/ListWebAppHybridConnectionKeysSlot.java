@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListWebAppHybridConnectionKeysSlot {
-/**
- * Hybrid Connection key contract. This has the send key name and value for a Hybrid Connection.
+    private ListWebAppHybridConnectionKeysSlot() {}
+    public interface BuilderApplicator {
+        public void apply(ListWebAppHybridConnectionKeysSlotArgs.Builder a);
+    }
+    private static ListWebAppHybridConnectionKeysSlotArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListWebAppHybridConnectionKeysSlotArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Hybrid Connection key contract. This has the send key name and value for a Hybrid Connection.
  * API Version: 2018-11-01.
  * 
- *
- * Hybrid Connection key contract. This has the send key name and value for a Hybrid Connection.
+     *
+     * Hybrid Connection key contract. This has the send key name and value for a Hybrid Connection.
  * 
- */
+     */
+    public static CompletableFuture<ListWebAppHybridConnectionKeysSlotResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Hybrid Connection key contract. This has the send key name and value for a Hybrid Connection.
+     * API Version: 2018-11-01.
+     * 
+     *
+         * Hybrid Connection key contract. This has the send key name and value for a Hybrid Connection.
+     * 
+     */
     public static CompletableFuture<ListWebAppHybridConnectionKeysSlotResult> invokeAsync(ListWebAppHybridConnectionKeysSlotArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppHybridConnectionKeysSlot", TypeShape.of(ListWebAppHybridConnectionKeysSlotResult.class), args == null ? ListWebAppHybridConnectionKeysSlotArgs.Empty : args, Utilities.withVersion(options));
     }

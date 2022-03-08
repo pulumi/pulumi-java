@@ -33,14 +33,14 @@ public final class ClusterDatabaseEncryption {
     /**
      * the key to use to encrypt/decrypt secrets.  See the [DatabaseEncryption definition](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#Cluster.DatabaseEncryption) for more information.
      * 
-     */
+    */
     public Optional<String> getKeyName() {
         return Optional.ofNullable(this.keyName);
     }
     /**
      * `ENCRYPTED` or `DECRYPTED`
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }

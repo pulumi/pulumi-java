@@ -35,6 +35,7 @@ dependencies {
     implementation("com.google.code.gson:gson:2.8.6") // make sure we don't clash with grpc deps
     implementation("com.google.protobuf:protobuf-java:3.12.0") // make sure we don't clash with grpc deps
     implementation("com.google.protobuf:protobuf-java-util:3.12.0") // make sure we don't clash with grpc deps
+    implementation("org.mockito:mockito-core:3.+")
 
     testImplementation("io.grpc:grpc-testing:${grpcVersion}")
 
@@ -43,7 +44,7 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter-params:${junitVersion}")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
     testImplementation("org.assertj:assertj-core:3.20.2")
-    testImplementation("org.mockito:mockito-core:3.+")
+
     testImplementation("nl.jqno.equalsverifier:equalsverifier:3.6.1")
 }
 

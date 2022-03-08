@@ -38,21 +38,21 @@ public final class ComponentTransformResponse {
     /**
      * Dataflow service generated name for this source.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * User name for the original user transform with which this transform is most closely associated.
      * 
-     */
+    */
     public String getOriginalTransform() {
         return this.originalTransform;
     }
     /**
      * Human-readable name for this transform; may be user or system generated.
      * 
-     */
+    */
     public String getUserName() {
         return this.userName;
     }

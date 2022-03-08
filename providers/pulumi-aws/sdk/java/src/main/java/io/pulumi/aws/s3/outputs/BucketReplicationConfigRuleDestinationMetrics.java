@@ -34,14 +34,14 @@ public final class BucketReplicationConfigRuleDestinationMetrics {
     /**
      * A configuration block that specifies the time threshold for emitting the `s3:Replication:OperationMissedThreshold` event documented below.
      * 
-     */
+    */
     public Optional<BucketReplicationConfigRuleDestinationMetricsEventThreshold> getEventThreshold() {
         return Optional.ofNullable(this.eventThreshold);
     }
     /**
      * The status of the Destination Metrics. Either `"Enabled"` or `"Disabled"`.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }

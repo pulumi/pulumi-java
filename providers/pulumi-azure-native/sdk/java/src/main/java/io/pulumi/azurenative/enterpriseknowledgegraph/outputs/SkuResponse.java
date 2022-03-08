@@ -23,7 +23,7 @@ public final class SkuResponse {
     /**
      * The sku name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }

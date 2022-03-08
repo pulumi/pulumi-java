@@ -71,42 +71,42 @@ public final class LoginResponse {
      * This is an advanced setting typically only needed by Windows Store application backends.
      * Note that URLs within the current domain are always implicitly allowed.
      * 
-     */
+    */
     public List<String> getAllowedExternalRedirectUrls() {
         return this.allowedExternalRedirectUrls == null ? List.of() : this.allowedExternalRedirectUrls;
     }
     /**
      * The configuration settings of the session cookie's expiration.
      * 
-     */
+    */
     public Optional<CookieExpirationResponse> getCookieExpiration() {
         return Optional.ofNullable(this.cookieExpiration);
     }
     /**
      * The configuration settings of the nonce used in the login flow.
      * 
-     */
+    */
     public Optional<NonceResponse> getNonce() {
         return Optional.ofNullable(this.nonce);
     }
     /**
      * <code>true</code> if the fragments from the request are preserved after the login request is made; otherwise, <code>false</code>.
      * 
-     */
+    */
     public Optional<Boolean> getPreserveUrlFragmentsForLogins() {
         return Optional.ofNullable(this.preserveUrlFragmentsForLogins);
     }
     /**
      * The routes that specify the endpoints used for login and logout requests.
      * 
-     */
+    */
     public Optional<LoginRoutesResponse> getRoutes() {
         return Optional.ofNullable(this.routes);
     }
     /**
      * The configuration settings of the token store.
      * 
-     */
+    */
     public Optional<TokenStoreResponse> getTokenStore() {
         return Optional.ofNullable(this.tokenStore);
     }

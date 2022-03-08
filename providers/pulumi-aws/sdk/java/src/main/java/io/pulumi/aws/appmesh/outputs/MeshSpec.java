@@ -25,7 +25,7 @@ public final class MeshSpec {
     /**
      * The egress filter rules for the service mesh.
      * 
-     */
+    */
     public Optional<MeshSpecEgressFilter> getEgressFilter() {
         return Optional.ofNullable(this.egressFilter);
     }

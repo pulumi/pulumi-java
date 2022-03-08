@@ -25,7 +25,7 @@ public final class NodeDaemonEndpoints {
     /**
      * Endpoint on which Kubelet is listening.
      * 
-     */
+    */
     public Optional<DaemonEndpoint> getKubeletEndpoint() {
         return Optional.ofNullable(this.kubeletEndpoint);
     }

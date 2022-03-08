@@ -43,21 +43,21 @@ public final class NetworkSecurityGroupResourceSettingsResponse {
      * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
      * Expected value is 'Microsoft.Network/networkSecurityGroups'.
      * 
-     */
+    */
     public String getPropResourceType() {
         return this.resourceType;
     }
     /**
      * Gets or sets Security rules of network security group.
      * 
-     */
+    */
     public List<NsgSecurityRuleResponse> getSecurityRules() {
         return this.securityRules == null ? List.of() : this.securityRules;
     }
     /**
      * Gets or sets the target Resource name.
      * 
-     */
+    */
     public String getTargetResourceName() {
         return this.targetResourceName;
     }

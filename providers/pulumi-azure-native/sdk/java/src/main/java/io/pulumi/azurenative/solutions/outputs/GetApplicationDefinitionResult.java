@@ -178,147 +178,147 @@ public final class GetApplicationDefinitionResult {
     /**
      * The collection of managed application artifacts. The portal will use the files specified as artifacts to construct the user experience of creating a managed application from a managed application definition.
      * 
-     */
+    */
     public List<ApplicationDefinitionArtifactResponse> getArtifacts() {
         return this.artifacts == null ? List.of() : this.artifacts;
     }
     /**
      * The managed application provider authorizations.
      * 
-     */
+    */
     public List<ApplicationAuthorizationResponse> getAuthorizations() {
         return this.authorizations == null ? List.of() : this.authorizations;
     }
     /**
      * The createUiDefinition json for the backing template with Microsoft.Solutions/applications resource. It can be a JObject or well-formed JSON string.
      * 
-     */
+    */
     public Optional<Object> getCreateUiDefinition() {
         return Optional.ofNullable(this.createUiDefinition);
     }
     /**
      * The managed application deployment policy.
      * 
-     */
+    */
     public Optional<ApplicationDeploymentPolicyResponse> getDeploymentPolicy() {
         return Optional.ofNullable(this.deploymentPolicy);
     }
     /**
      * The managed application definition description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The managed application definition display name.
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * Resource ID
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * A value indicating whether the package is enabled or not.
      * 
-     */
+    */
     public Optional<Boolean> getIsEnabled() {
         return Optional.ofNullable(this.isEnabled);
     }
     /**
      * Resource location
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The managed application lock level.
      * 
-     */
+    */
     public String getLockLevel() {
         return this.lockLevel;
     }
     /**
      * The managed application locking policy.
      * 
-     */
+    */
     public Optional<ApplicationPackageLockingPolicyDefinitionResponse> getLockingPolicy() {
         return Optional.ofNullable(this.lockingPolicy);
     }
     /**
      * The inline main template json which has resources to be provisioned. It can be a JObject or well-formed JSON string.
      * 
-     */
+    */
     public Optional<Object> getMainTemplate() {
         return Optional.ofNullable(this.mainTemplate);
     }
     /**
      * ID of the resource that manages this resource.
      * 
-     */
+    */
     public Optional<String> getManagedBy() {
         return Optional.ofNullable(this.managedBy);
     }
     /**
      * The managed application management policy that determines publisher's access to the managed resource group.
      * 
-     */
+    */
     public Optional<ApplicationManagementPolicyResponse> getManagementPolicy() {
         return Optional.ofNullable(this.managementPolicy);
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The managed application notification policy.
      * 
-     */
+    */
     public Optional<ApplicationNotificationPolicyResponse> getNotificationPolicy() {
         return Optional.ofNullable(this.notificationPolicy);
     }
     /**
      * The managed application definition package file Uri. Use this element
      * 
-     */
+    */
     public Optional<String> getPackageFileUri() {
         return Optional.ofNullable(this.packageFileUri);
     }
     /**
      * The managed application provider policies.
      * 
-     */
+    */
     public List<ApplicationPolicyResponse> getPolicies() {
         return this.policies == null ? List.of() : this.policies;
     }
     /**
      * The SKU of the resource.
      * 
-     */
+    */
     public Optional<SkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

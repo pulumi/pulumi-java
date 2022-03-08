@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWebAppPremierAddOnSlot {
-/**
- * Premier add-on.
+    private GetWebAppPremierAddOnSlot() {}
+    public interface BuilderApplicator {
+        public void apply(GetWebAppPremierAddOnSlotArgs.Builder a);
+    }
+    private static GetWebAppPremierAddOnSlotArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetWebAppPremierAddOnSlotArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Premier add-on.
  * API Version: 2020-12-01.
  * 
- *
- * Premier add-on.
+     *
+     * Premier add-on.
  * 
- */
+     */
+    public static CompletableFuture<GetWebAppPremierAddOnSlotResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Premier add-on.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Premier add-on.
+     * 
+     */
     public static CompletableFuture<GetWebAppPremierAddOnSlotResult> invokeAsync(GetWebAppPremierAddOnSlotArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppPremierAddOnSlot", TypeShape.of(GetWebAppPremierAddOnSlotResult.class), args == null ? GetWebAppPremierAddOnSlotArgs.Empty : args, Utilities.withVersion(options));
     }

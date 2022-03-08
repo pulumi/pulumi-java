@@ -31,14 +31,14 @@ public final class ApiPortalInstanceResponse {
     /**
      * Name of the API portal instance
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Status of the API portal instance
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }

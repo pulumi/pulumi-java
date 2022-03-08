@@ -63,42 +63,42 @@ public final class ListIntegrationAccountMapContentCallbackUrlResult {
     /**
      * Gets the workflow trigger callback URL base path.
      * 
-     */
+    */
     public String getBasePath() {
         return this.basePath;
     }
     /**
      * Gets the workflow trigger callback URL HTTP method.
      * 
-     */
+    */
     public String getMethod() {
         return this.method;
     }
     /**
      * Gets the workflow trigger callback URL query parameters.
      * 
-     */
+    */
     public Optional<WorkflowTriggerListCallbackUrlQueriesResponse> getQueries() {
         return Optional.ofNullable(this.queries);
     }
     /**
      * Gets the workflow trigger callback URL relative path.
      * 
-     */
+    */
     public String getRelativePath() {
         return this.relativePath;
     }
     /**
      * Gets the workflow trigger callback URL relative path parameters.
      * 
-     */
+    */
     public List<String> getRelativePathParameters() {
         return this.relativePathParameters == null ? List.of() : this.relativePathParameters;
     }
     /**
      * Gets the workflow trigger callback URL.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }

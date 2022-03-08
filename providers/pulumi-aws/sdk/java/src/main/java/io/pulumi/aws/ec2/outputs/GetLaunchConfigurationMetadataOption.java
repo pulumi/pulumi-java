@@ -39,21 +39,21 @@ public final class GetLaunchConfigurationMetadataOption {
     /**
      * The state of the metadata service: `enabled`, `disabled`.
      * 
-     */
+    */
     public String getHttpEndpoint() {
         return this.httpEndpoint;
     }
     /**
      * The desired HTTP PUT response hop limit for instance metadata requests.
      * 
-     */
+    */
     public Integer getHttpPutResponseHopLimit() {
         return this.httpPutResponseHopLimit;
     }
     /**
      * If session tokens are required: `optional`, `required`.
      * 
-     */
+    */
     public String getHttpTokens() {
         return this.httpTokens;
     }

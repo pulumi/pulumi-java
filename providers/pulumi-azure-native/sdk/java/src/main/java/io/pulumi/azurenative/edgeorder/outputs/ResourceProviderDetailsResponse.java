@@ -23,7 +23,7 @@ public final class ResourceProviderDetailsResponse {
     /**
      * Resource provider namespace
      * 
-     */
+    */
     public String getResourceProviderNamespace() {
         return this.resourceProviderNamespace;
     }

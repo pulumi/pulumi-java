@@ -133,6 +133,22 @@ public class BillingAccountBucketConfig extends io.pulumi.resources.CustomResour
         return this.retentionDays;
     }
 
+    public interface BuilderApplicator {
+        public void apply(BillingAccountBucketConfigArgs.Builder a);
+    }
+    private static io.pulumi.gcp.logging.BillingAccountBucketConfigArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.logging.BillingAccountBucketConfigArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public BillingAccountBucketConfig(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

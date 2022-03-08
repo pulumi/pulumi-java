@@ -32,14 +32,14 @@ public final class GetClustersResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Set of EKS clusters names
      * 
-     */
+    */
     public List<String> getNames() {
         return this.names;
     }

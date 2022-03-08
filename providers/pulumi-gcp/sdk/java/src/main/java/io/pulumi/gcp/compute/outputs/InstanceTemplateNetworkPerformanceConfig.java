@@ -23,7 +23,7 @@ public final class InstanceTemplateNetworkPerformanceConfig {
     /**
      * The egress bandwidth tier to enable. Possible values: TIER_1, DEFAULT
      * 
-     */
+    */
     public String getTotalEgressBandwidthTier() {
         return this.totalEgressBandwidthTier;
     }

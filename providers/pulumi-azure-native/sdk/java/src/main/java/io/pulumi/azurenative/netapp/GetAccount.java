@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAccount {
-/**
- * NetApp account resource
+    private GetAccount() {}
+    public interface BuilderApplicator {
+        public void apply(GetAccountArgs.Builder a);
+    }
+    private static GetAccountArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAccountArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * NetApp account resource
  * API Version: 2020-12-01.
  * 
- *
- * NetApp account resource
+     *
+     * NetApp account resource
  * 
- */
+     */
+    public static CompletableFuture<GetAccountResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * NetApp account resource
+     * API Version: 2020-12-01.
+     * 
+     *
+         * NetApp account resource
+     * 
+     */
     public static CompletableFuture<GetAccountResult> invokeAsync(GetAccountArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:netapp:getAccount", TypeShape.of(GetAccountResult.class), args == null ? GetAccountArgs.Empty : args, Utilities.withVersion(options));
     }

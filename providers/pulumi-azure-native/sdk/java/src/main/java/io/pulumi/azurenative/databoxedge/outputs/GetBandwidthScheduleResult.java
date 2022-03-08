@@ -76,56 +76,56 @@ public final class GetBandwidthScheduleResult {
     /**
      * The days of the week when this schedule is applicable.
      * 
-     */
+    */
     public List<String> getDays() {
         return this.days;
     }
     /**
      * The path ID that uniquely identifies the object.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The object name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The bandwidth rate in Mbps.
      * 
-     */
+    */
     public Integer getRateInMbps() {
         return this.rateInMbps;
     }
     /**
      * The start time of the schedule in UTC.
      * 
-     */
+    */
     public String getStart() {
         return this.start;
     }
     /**
      * The stop time of the schedule in UTC.
      * 
-     */
+    */
     public String getStop() {
         return this.stop;
     }
     /**
      * Bandwidth object related to ASE resource
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The hierarchical type of the object.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

@@ -76,35 +76,35 @@ public final class AnomalyDetectorMetricSet {
     /**
      * Dimensions for this MetricSet.
      * 
-     */
+    */
     public List<String> getDimensionList() {
         return this.dimensionList == null ? List.of() : this.dimensionList;
     }
     /**
      * Metrics captured by this MetricSet.
      * 
-     */
+    */
     public List<AnomalyDetectorMetric> getMetricList() {
         return this.metricList;
     }
     /**
      * A description for the MetricSet.
      * 
-     */
+    */
     public Optional<String> getMetricSetDescription() {
         return Optional.ofNullable(this.metricSetDescription);
     }
     /**
      * A frequency period to aggregate the data
      * 
-     */
+    */
     public Optional<AnomalyDetectorMetricSetMetricSetFrequency> getMetricSetFrequency() {
         return Optional.ofNullable(this.metricSetFrequency);
     }
     /**
      * The name of the MetricSet.
      * 
-     */
+    */
     public String getMetricSetName() {
         return this.metricSetName;
     }
@@ -114,7 +114,7 @@ public final class AnomalyDetectorMetricSet {
     /**
      * Offset, in seconds, between the frequency interval and the time at which the metrics are available.
      * 
-     */
+    */
     public Optional<Integer> getOffset() {
         return Optional.ofNullable(this.offset);
     }

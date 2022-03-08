@@ -56,35 +56,35 @@ public final class CloudErrorResponse {
     /**
      * Cloud error additional info.
      * 
-     */
+    */
     public List<AdditionalErrorInfoResponse> getAdditionalInfo() {
         return this.additionalInfo;
     }
     /**
      * Cloud error code.
      * 
-     */
+    */
     public Optional<String> getCode() {
         return Optional.ofNullable(this.code);
     }
     /**
      * Cloud error details.
      * 
-     */
+    */
     public List<CloudErrorResponse> getDetails() {
         return this.details;
     }
     /**
      * Cloud error message.
      * 
-     */
+    */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
     /**
      * Cloud error target.
      * 
-     */
+    */
     public Optional<String> getTarget() {
         return Optional.ofNullable(this.target);
     }

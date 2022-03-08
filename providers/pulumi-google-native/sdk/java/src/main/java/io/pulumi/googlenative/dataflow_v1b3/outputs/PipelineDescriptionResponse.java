@@ -41,21 +41,21 @@ public final class PipelineDescriptionResponse {
     /**
      * Pipeline level display data.
      * 
-     */
+    */
     public List<DisplayDataResponse> getDisplayData() {
         return this.displayData;
     }
     /**
      * Description of each stage of execution of the pipeline.
      * 
-     */
+    */
     public List<ExecutionStageSummaryResponse> getExecutionPipelineStage() {
         return this.executionPipelineStage;
     }
     /**
      * Description of each transform in the pipeline and collections between them.
      * 
-     */
+    */
     public List<TransformSummaryResponse> getOriginalPipelineTransform() {
         return this.originalPipelineTransform;
     }

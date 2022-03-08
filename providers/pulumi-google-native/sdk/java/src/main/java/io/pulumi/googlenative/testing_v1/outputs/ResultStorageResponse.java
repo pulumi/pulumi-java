@@ -48,28 +48,28 @@ public final class ResultStorageResponse {
     /**
      * Required.
      * 
-     */
+    */
     public GoogleCloudStorageResponse getGoogleCloudStorage() {
         return this.googleCloudStorage;
     }
     /**
      * URL to the results in the Firebase Web Console.
      * 
-     */
+    */
     public String getResultsUrl() {
         return this.resultsUrl;
     }
     /**
      * The tool results execution that results are written to.
      * 
-     */
+    */
     public ToolResultsExecutionResponse getToolResultsExecution() {
         return this.toolResultsExecution;
     }
     /**
      * The tool results history that contains the tool results execution that results are written to. If not provided, the service will choose an appropriate value.
      * 
-     */
+    */
     public ToolResultsHistoryResponse getToolResultsHistory() {
         return this.toolResultsHistory;
     }

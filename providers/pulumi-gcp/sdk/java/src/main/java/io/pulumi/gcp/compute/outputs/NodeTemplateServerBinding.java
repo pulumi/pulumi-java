@@ -45,7 +45,7 @@ public final class NodeTemplateServerBinding {
      * nodes will experience outages while maintenance is applied.
      * Possible values are `RESTART_NODE_ON_ANY_SERVER` and `RESTART_NODE_ON_MINIMAL_SERVERS`.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

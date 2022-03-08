@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBillingRoleAssignmentByBillingAccount {
-/**
- * The role assignment
+    private GetBillingRoleAssignmentByBillingAccount() {}
+    public interface BuilderApplicator {
+        public void apply(GetBillingRoleAssignmentByBillingAccountArgs.Builder a);
+    }
+    private static GetBillingRoleAssignmentByBillingAccountArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetBillingRoleAssignmentByBillingAccountArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The role assignment
  * API Version: 2019-10-01-preview.
  * 
- *
- * The role assignment
+     *
+     * The role assignment
  * 
- */
+     */
+    public static CompletableFuture<GetBillingRoleAssignmentByBillingAccountResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The role assignment
+     * API Version: 2019-10-01-preview.
+     * 
+     *
+         * The role assignment
+     * 
+     */
     public static CompletableFuture<GetBillingRoleAssignmentByBillingAccountResult> invokeAsync(GetBillingRoleAssignmentByBillingAccountArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:billing:getBillingRoleAssignmentByBillingAccount", TypeShape.of(GetBillingRoleAssignmentByBillingAccountResult.class), args == null ? GetBillingRoleAssignmentByBillingAccountArgs.Empty : args, Utilities.withVersion(options));
     }

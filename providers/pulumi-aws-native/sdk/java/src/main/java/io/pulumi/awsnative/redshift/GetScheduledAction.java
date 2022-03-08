@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetScheduledAction {
-/**
- * The `AWS::Redshift::ScheduledAction` resource creates an Amazon Redshift Scheduled Action.
+    private GetScheduledAction() {}
+    public interface BuilderApplicator {
+        public void apply(GetScheduledActionArgs.Builder a);
+    }
+    private static GetScheduledActionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetScheduledActionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The `AWS::Redshift::ScheduledAction` resource creates an Amazon Redshift Scheduled Action.
  * 
- */
+     */
+    public static CompletableFuture<GetScheduledActionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The `AWS::Redshift::ScheduledAction` resource creates an Amazon Redshift Scheduled Action.
+     * 
+     */
     public static CompletableFuture<GetScheduledActionResult> invokeAsync(GetScheduledActionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:redshift:getScheduledAction", TypeShape.of(GetScheduledActionResult.class), args == null ? GetScheduledActionArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -113,91 +113,91 @@ public final class GetFuotaTaskResult {
     /**
      * FUOTA task arn. Returned after successful create.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Multicast group to associate. Only for update request.
      * 
-     */
+    */
     public Optional<String> getAssociateMulticastGroup() {
         return Optional.ofNullable(this.associateMulticastGroup);
     }
     /**
      * Wireless device to associate. Only for update request.
      * 
-     */
+    */
     public Optional<String> getAssociateWirelessDevice() {
         return Optional.ofNullable(this.associateWirelessDevice);
     }
     /**
      * FUOTA task description
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Multicast group to disassociate. Only for update request.
      * 
-     */
+    */
     public Optional<String> getDisassociateMulticastGroup() {
         return Optional.ofNullable(this.disassociateMulticastGroup);
     }
     /**
      * Wireless device to disassociate. Only for update request.
      * 
-     */
+    */
     public Optional<String> getDisassociateWirelessDevice() {
         return Optional.ofNullable(this.disassociateWirelessDevice);
     }
     /**
      * FUOTA task firmware update image binary S3 link
      * 
-     */
+    */
     public Optional<String> getFirmwareUpdateImage() {
         return Optional.ofNullable(this.firmwareUpdateImage);
     }
     /**
      * FUOTA task firmware IAM role for reading S3
      * 
-     */
+    */
     public Optional<String> getFirmwareUpdateRole() {
         return Optional.ofNullable(this.firmwareUpdateRole);
     }
     /**
      * FUOTA task status. Returned after successful read.
      * 
-     */
+    */
     public Optional<String> getFuotaTaskStatus() {
         return Optional.ofNullable(this.fuotaTaskStatus);
     }
     /**
      * FUOTA task id. Returned after successful create.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * FUOTA task LoRaWAN
      * 
-     */
+    */
     public Optional<FuotaTaskLoRaWAN> getLoRaWAN() {
         return Optional.ofNullable(this.loRaWAN);
     }
     /**
      * Name of FUOTA task
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * A list of key-value pairs that contain metadata for the FUOTA task.
      * 
-     */
+    */
     public List<FuotaTaskTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

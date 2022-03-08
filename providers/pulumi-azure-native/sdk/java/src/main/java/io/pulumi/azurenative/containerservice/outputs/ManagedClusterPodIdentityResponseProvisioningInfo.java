@@ -25,7 +25,7 @@ public final class ManagedClusterPodIdentityResponseProvisioningInfo {
     /**
      * Pod identity assignment error (if any).
      * 
-     */
+    */
     public Optional<CloudErrorResponse> getError() {
         return Optional.ofNullable(this.error);
     }

@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWebPubSubPrivateEndpointConnection {
-/**
- * A private endpoint connection to an azure resource
+    private GetWebPubSubPrivateEndpointConnection() {}
+    public interface BuilderApplicator {
+        public void apply(GetWebPubSubPrivateEndpointConnectionArgs.Builder a);
+    }
+    private static GetWebPubSubPrivateEndpointConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetWebPubSubPrivateEndpointConnectionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A private endpoint connection to an azure resource
  * API Version: 2021-04-01-preview.
  * 
- *
- * A private endpoint connection to an azure resource
+     *
+     * A private endpoint connection to an azure resource
  * 
- */
+     */
+    public static CompletableFuture<GetWebPubSubPrivateEndpointConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A private endpoint connection to an azure resource
+     * API Version: 2021-04-01-preview.
+     * 
+     *
+         * A private endpoint connection to an azure resource
+     * 
+     */
     public static CompletableFuture<GetWebPubSubPrivateEndpointConnectionResult> invokeAsync(GetWebPubSubPrivateEndpointConnectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:webpubsub:getWebPubSubPrivateEndpointConnection", TypeShape.of(GetWebPubSubPrivateEndpointConnectionResult.class), args == null ? GetWebPubSubPrivateEndpointConnectionArgs.Empty : args, Utilities.withVersion(options));
     }

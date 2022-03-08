@@ -31,7 +31,7 @@ import javax.annotation.Nullable;
  * $ pulumi import azure-native:resources:DeploymentScript myresource1 /subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.Resources/deploymentScripts/{scriptName} 
  * ```
  * 
- * @deprecated
+ * @Deprecated
  * Please use one of the variants: AzureCliScript, AzurePowerShellScript.
  * 
  */
@@ -137,6 +137,22 @@ public class DeploymentScript extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
+    public interface BuilderApplicator {
+        public void apply(DeploymentScriptArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.resources.DeploymentScriptArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.resources.DeploymentScriptArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public DeploymentScript(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

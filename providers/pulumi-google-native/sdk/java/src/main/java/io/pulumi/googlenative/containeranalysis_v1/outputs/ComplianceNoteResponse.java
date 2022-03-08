@@ -68,42 +68,42 @@ public final class ComplianceNoteResponse {
     /**
      * A description about this compliance check.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * A rationale for the existence of this compliance check.
      * 
-     */
+    */
     public String getRationale() {
         return this.rationale;
     }
     /**
      * A description of remediation steps if the compliance check fails.
      * 
-     */
+    */
     public String getRemediation() {
         return this.remediation;
     }
     /**
      * Serialized scan instructions with a predefined format.
      * 
-     */
+    */
     public String getScanInstructions() {
         return this.scanInstructions;
     }
     /**
      * The title that identifies this compliance check.
      * 
-     */
+    */
     public String getTitle() {
         return this.title;
     }
     /**
      * The OS and config versions the benchmark applies to.
      * 
-     */
+    */
     public List<ComplianceVersionResponse> getVersion() {
         return this.version;
     }

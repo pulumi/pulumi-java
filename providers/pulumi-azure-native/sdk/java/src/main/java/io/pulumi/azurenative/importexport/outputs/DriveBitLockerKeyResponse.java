@@ -33,14 +33,14 @@ public final class DriveBitLockerKeyResponse {
     /**
      * BitLocker recovery key or password
      * 
-     */
+    */
     public Optional<String> getBitLockerKey() {
         return Optional.ofNullable(this.bitLockerKey);
     }
     /**
      * Drive ID
      * 
-     */
+    */
     public Optional<String> getDriveId() {
         return Optional.ofNullable(this.driveId);
     }

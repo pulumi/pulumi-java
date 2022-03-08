@@ -25,7 +25,7 @@ public final class ApiConfigGatewayConfig {
      * Backend settings that are applied to all backends of the Gateway.
      * Structure is documented below.
      * 
-     */
+    */
     public ApiConfigGatewayConfigBackendConfig getBackendConfig() {
         return this.backendConfig;
     }

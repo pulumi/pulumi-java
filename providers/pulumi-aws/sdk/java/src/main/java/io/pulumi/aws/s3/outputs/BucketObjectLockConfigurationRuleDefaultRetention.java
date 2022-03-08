@@ -41,21 +41,21 @@ public final class BucketObjectLockConfigurationRuleDefaultRetention {
     /**
      * The number of days that you want to specify for the default retention period.
      * 
-     */
+    */
     public Optional<Integer> getDays() {
         return Optional.ofNullable(this.days);
     }
     /**
      * The default Object Lock retention mode you want to apply to new objects placed in this bucket. Valid values are `GOVERNANCE` and `COMPLIANCE`.
      * 
-     */
+    */
     public String getMode() {
         return this.mode;
     }
     /**
      * The number of years that you want to specify for the default retention period.
      * 
-     */
+    */
     public Optional<Integer> getYears() {
         return Optional.ofNullable(this.years);
     }

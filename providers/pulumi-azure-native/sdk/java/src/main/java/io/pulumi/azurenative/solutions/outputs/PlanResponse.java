@@ -54,35 +54,35 @@ public final class PlanResponse {
     /**
      * The plan name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The product code.
      * 
-     */
+    */
     public String getProduct() {
         return this.product;
     }
     /**
      * The promotion code.
      * 
-     */
+    */
     public Optional<String> getPromotionCode() {
         return Optional.ofNullable(this.promotionCode);
     }
     /**
      * The publisher ID.
      * 
-     */
+    */
     public String getPublisher() {
         return this.publisher;
     }
     /**
      * The plan's version.
      * 
-     */
+    */
     public String getVersion() {
         return this.version;
     }

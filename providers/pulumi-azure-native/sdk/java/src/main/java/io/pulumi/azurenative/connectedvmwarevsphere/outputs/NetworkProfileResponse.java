@@ -25,7 +25,7 @@ public final class NetworkProfileResponse {
     /**
      * Gets or sets the list of network interfaces associated with the virtual machine.
      * 
-     */
+    */
     public List<NetworkInterfaceResponse> getNetworkInterfaces() {
         return this.networkInterfaces == null ? List.of() : this.networkInterfaces;
     }

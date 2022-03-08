@@ -144,56 +144,56 @@ public final class GetActivityCustomEntityQueryResult {
     /**
      * The entity query content to display in timeline
      * 
-     */
+    */
     public Optional<String> getContent() {
         return Optional.ofNullable(this.content);
     }
     /**
      * The time the activity was created
      * 
-     */
+    */
     public String getCreatedTimeUtc() {
         return this.createdTimeUtc;
     }
     /**
      * The entity query description
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Determines whether this activity is enabled or disabled.
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * The query applied only to entities matching to all filters
      * 
-     */
+    */
     public Map<String,List<String>> getEntitiesFilter() {
         return this.entitiesFilter == null ? Map.of() : this.entitiesFilter;
     }
     /**
      * Etag of the azure resource
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Azure resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The type of the query's source entity
      * 
-     */
+    */
     public Optional<String> getInputEntityType() {
         return Optional.ofNullable(this.inputEntityType);
     }
@@ -201,63 +201,63 @@ public final class GetActivityCustomEntityQueryResult {
      * The kind of the entity query
      * Expected value is 'Activity'.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * The last time the activity was updated
      * 
-     */
+    */
     public String getLastModifiedTimeUtc() {
         return this.lastModifiedTimeUtc;
     }
     /**
      * Azure resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The Activity query definitions
      * 
-     */
+    */
     public Optional<ActivityEntityQueriesPropertiesResponseQueryDefinitions> getQueryDefinitions() {
         return Optional.ofNullable(this.queryDefinitions);
     }
     /**
      * List of the fields of the source entity that are required to run the query
      * 
-     */
+    */
     public List<List<String>> getRequiredInputFieldsSets() {
         return this.requiredInputFieldsSets == null ? List.of() : this.requiredInputFieldsSets;
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The template id this activity was created from
      * 
-     */
+    */
     public Optional<String> getTemplateName() {
         return Optional.ofNullable(this.templateName);
     }
     /**
      * The entity query title
      * 
-     */
+    */
     public Optional<String> getTitle() {
         return Optional.ofNullable(this.title);
     }
     /**
      * Azure resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

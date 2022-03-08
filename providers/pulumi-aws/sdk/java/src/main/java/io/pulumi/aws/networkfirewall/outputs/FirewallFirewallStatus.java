@@ -25,7 +25,7 @@ public final class FirewallFirewallStatus {
     /**
      * Set of subnets configured for use by the firewall.
      * 
-     */
+    */
     public List<FirewallFirewallStatusSyncState> getSyncStates() {
         return this.syncStates == null ? List.of() : this.syncStates;
     }

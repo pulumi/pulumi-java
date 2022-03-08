@@ -68,42 +68,42 @@ public final class GetAcceleratorResult {
     /**
      * The Amazon Resource Name (ARN) of the accelerator.
      * 
-     */
+    */
     public Optional<String> getAcceleratorArn() {
         return Optional.ofNullable(this.acceleratorArn);
     }
     /**
      * The Domain Name System (DNS) name that Global Accelerator creates that points to your accelerator's static IP addresses.
      * 
-     */
+    */
     public Optional<String> getDnsName() {
         return Optional.ofNullable(this.dnsName);
     }
     /**
      * Indicates whether an accelerator is enabled. The value is true or false.
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * IP Address type.
      * 
-     */
+    */
     public Optional<AcceleratorIpAddressType> getIpAddressType() {
         return Optional.ofNullable(this.ipAddressType);
     }
     /**
      * The IP addresses from BYOIP Prefix pool.
      * 
-     */
+    */
     public List<String> getIpAddresses() {
         return this.ipAddresses == null ? List.of() : this.ipAddresses;
     }
     /**
      * Name of accelerator.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

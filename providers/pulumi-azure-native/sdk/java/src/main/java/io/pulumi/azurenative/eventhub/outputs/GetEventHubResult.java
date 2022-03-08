@@ -92,70 +92,70 @@ public final class GetEventHubResult {
     /**
      * Properties of capture description
      * 
-     */
+    */
     public Optional<CaptureDescriptionResponse> getCaptureDescription() {
         return Optional.ofNullable(this.captureDescription);
     }
     /**
      * Exact time the Event Hub was created.
      * 
-     */
+    */
     public String getCreatedAt() {
         return this.createdAt;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Number of days to retain the events for this Event Hub, value should be 1 to 7 days
      * 
-     */
+    */
     public Optional<Double> getMessageRetentionInDays() {
         return Optional.ofNullable(this.messageRetentionInDays);
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Number of partitions created for the Event Hub, allowed values are from 1 to 32 partitions.
      * 
-     */
+    */
     public Optional<Double> getPartitionCount() {
         return Optional.ofNullable(this.partitionCount);
     }
     /**
      * Current number of shards on the Event Hub.
      * 
-     */
+    */
     public List<String> getPartitionIds() {
         return this.partitionIds;
     }
     /**
      * Enumerates the possible values for the status of the Event Hub.
      * 
-     */
+    */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The exact time the message was updated.
      * 
-     */
+    */
     public String getUpdatedAt() {
         return this.updatedAt;
     }

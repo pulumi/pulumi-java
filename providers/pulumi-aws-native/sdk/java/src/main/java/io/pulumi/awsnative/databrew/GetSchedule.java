@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSchedule {
-/**
- * Resource schema for AWS::DataBrew::Schedule.
+    private GetSchedule() {}
+    public interface BuilderApplicator {
+        public void apply(GetScheduleArgs.Builder a);
+    }
+    private static GetScheduleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetScheduleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource schema for AWS::DataBrew::Schedule.
  * 
- */
+     */
+    public static CompletableFuture<GetScheduleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource schema for AWS::DataBrew::Schedule.
+     * 
+     */
     public static CompletableFuture<GetScheduleResult> invokeAsync(GetScheduleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:databrew:getSchedule", TypeShape.of(GetScheduleResult.class), args == null ? GetScheduleArgs.Empty : args, Utilities.withVersion(options));
     }

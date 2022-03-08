@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCreator {
-/**
- * An Azure resource which represents Maps Creator product and provides ability to manage private location data.
+    private GetCreator() {}
+    public interface BuilderApplicator {
+        public void apply(GetCreatorArgs.Builder a);
+    }
+    private static GetCreatorArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetCreatorArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An Azure resource which represents Maps Creator product and provides ability to manage private location data.
  * API Version: 2020-02-01-preview.
  * 
- *
- * An Azure resource which represents Maps Creator product and provides ability to manage private location data.
+     *
+     * An Azure resource which represents Maps Creator product and provides ability to manage private location data.
  * 
- */
+     */
+    public static CompletableFuture<GetCreatorResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An Azure resource which represents Maps Creator product and provides ability to manage private location data.
+     * API Version: 2020-02-01-preview.
+     * 
+     *
+         * An Azure resource which represents Maps Creator product and provides ability to manage private location data.
+     * 
+     */
     public static CompletableFuture<GetCreatorResult> invokeAsync(GetCreatorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:maps:getCreator", TypeShape.of(GetCreatorResult.class), args == null ? GetCreatorArgs.Empty : args, Utilities.withVersion(options));
     }

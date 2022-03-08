@@ -126,105 +126,105 @@ public final class X12AcknowledgementSettingsResponse {
     /**
      * The acknowledgement control number lower bound.
      * 
-     */
+    */
     public Integer getAcknowledgementControlNumberLowerBound() {
         return this.acknowledgementControlNumberLowerBound;
     }
     /**
      * The acknowledgement control number prefix.
      * 
-     */
+    */
     public Optional<String> getAcknowledgementControlNumberPrefix() {
         return Optional.ofNullable(this.acknowledgementControlNumberPrefix);
     }
     /**
      * The acknowledgement control number suffix.
      * 
-     */
+    */
     public Optional<String> getAcknowledgementControlNumberSuffix() {
         return Optional.ofNullable(this.acknowledgementControlNumberSuffix);
     }
     /**
      * The acknowledgement control number upper bound.
      * 
-     */
+    */
     public Integer getAcknowledgementControlNumberUpperBound() {
         return this.acknowledgementControlNumberUpperBound;
     }
     /**
      * The value indicating whether to batch functional acknowledgements.
      * 
-     */
+    */
     public Boolean getBatchFunctionalAcknowledgements() {
         return this.batchFunctionalAcknowledgements;
     }
     /**
      * The value indicating whether to batch implementation acknowledgements.
      * 
-     */
+    */
     public Boolean getBatchImplementationAcknowledgements() {
         return this.batchImplementationAcknowledgements;
     }
     /**
      * The value indicating whether to batch the technical acknowledgements.
      * 
-     */
+    */
     public Boolean getBatchTechnicalAcknowledgements() {
         return this.batchTechnicalAcknowledgements;
     }
     /**
      * The functional acknowledgement version.
      * 
-     */
+    */
     public Optional<String> getFunctionalAcknowledgementVersion() {
         return Optional.ofNullable(this.functionalAcknowledgementVersion);
     }
     /**
      * The implementation acknowledgement version.
      * 
-     */
+    */
     public Optional<String> getImplementationAcknowledgementVersion() {
         return Optional.ofNullable(this.implementationAcknowledgementVersion);
     }
     /**
      * The value indicating whether functional acknowledgement is needed.
      * 
-     */
+    */
     public Boolean getNeedFunctionalAcknowledgement() {
         return this.needFunctionalAcknowledgement;
     }
     /**
      * The value indicating whether implementation acknowledgement is needed.
      * 
-     */
+    */
     public Boolean getNeedImplementationAcknowledgement() {
         return this.needImplementationAcknowledgement;
     }
     /**
      * The value indicating whether a loop is needed for valid messages.
      * 
-     */
+    */
     public Boolean getNeedLoopForValidMessages() {
         return this.needLoopForValidMessages;
     }
     /**
      * The value indicating whether technical acknowledgement is needed.
      * 
-     */
+    */
     public Boolean getNeedTechnicalAcknowledgement() {
         return this.needTechnicalAcknowledgement;
     }
     /**
      * The value indicating whether to rollover acknowledgement control number.
      * 
-     */
+    */
     public Boolean getRolloverAcknowledgementControlNumber() {
         return this.rolloverAcknowledgementControlNumber;
     }
     /**
      * The value indicating whether to send synchronous acknowledgement.
      * 
-     */
+    */
     public Boolean getSendSynchronousAcknowledgement() {
         return this.sendSynchronousAcknowledgement;
     }

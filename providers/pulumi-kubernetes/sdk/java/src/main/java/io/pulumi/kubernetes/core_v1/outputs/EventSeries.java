@@ -41,21 +41,21 @@ public final class EventSeries {
     /**
      * Number of occurrences in this series up to the last heartbeat time
      * 
-     */
+    */
     public Optional<Integer> getCount() {
         return Optional.ofNullable(this.count);
     }
     /**
      * Time of the last occurrence observed
      * 
-     */
+    */
     public Optional<String> getLastObservedTime() {
         return Optional.ofNullable(this.lastObservedTime);
     }
     /**
      * State of this Series: Ongoing or Finished Deprecated. Planned removal for 1.18
      * 
-     */
+    */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }

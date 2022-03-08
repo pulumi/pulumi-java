@@ -73,6 +73,22 @@ public class SecretPolicy extends io.pulumi.resources.CustomResource {
         return this.secretArn;
     }
 
+    public interface BuilderApplicator {
+        public void apply(SecretPolicyArgs.Builder a);
+    }
+    private static io.pulumi.aws.secretsmanager.SecretPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.aws.secretsmanager.SecretPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public SecretPolicy(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRepositoryIamPolicy {
-/**
- * Gets the IAM policy for a given resource.
+    private GetRepositoryIamPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetRepositoryIamPolicyArgs.Builder a);
+    }
+    private static GetRepositoryIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRepositoryIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the IAM policy for a given resource.
  * 
- */
+     */
+    public static CompletableFuture<GetRepositoryIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the IAM policy for a given resource.
+     * 
+     */
     public static CompletableFuture<GetRepositoryIamPolicyResult> invokeAsync(GetRepositoryIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:artifactregistry/v1beta1:getRepositoryIamPolicy", TypeShape.of(GetRepositoryIamPolicyResult.class), args == null ? GetRepositoryIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

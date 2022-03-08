@@ -77,56 +77,56 @@ public final class GetRoleDefinitionResult {
     /**
      * Role definition assignable scopes.
      * 
-     */
+    */
     public List<String> getAssignableScopes() {
         return this.assignableScopes == null ? List.of() : this.assignableScopes;
     }
     /**
      * The role definition description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The role definition ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The role definition name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Role definition permissions.
      * 
-     */
+    */
     public List<PermissionResponse> getPermissions() {
         return this.permissions == null ? List.of() : this.permissions;
     }
     /**
      * The role name.
      * 
-     */
+    */
     public Optional<String> getRoleName() {
         return Optional.ofNullable(this.roleName);
     }
     /**
      * The role type.
      * 
-     */
+    */
     public Optional<String> getRoleType() {
         return Optional.ofNullable(this.roleType);
     }
     /**
      * The role definition type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

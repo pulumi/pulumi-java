@@ -23,7 +23,7 @@ public final class BucketReplicationConfigRuleExistingObjectReplication {
     /**
      * Whether the existing objects should be replicated. Either `"Enabled"` or `"Disabled"`.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }

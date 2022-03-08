@@ -59,14 +59,14 @@ public final class RequestHeaderMatchConditionParametersResponse {
     /**
      * The match value for the condition of the delivery rule
      * 
-     */
+    */
     public List<String> getMatchValues() {
         return this.matchValues == null ? List.of() : this.matchValues;
     }
     /**
      * Describes if this is negate condition or not
      * 
-     */
+    */
     public Optional<Boolean> getNegateCondition() {
         return Optional.ofNullable(this.negateCondition);
     }
@@ -76,21 +76,21 @@ public final class RequestHeaderMatchConditionParametersResponse {
     /**
      * Describes operator to be matched
      * 
-     */
+    */
     public String getOperator() {
         return this.operator;
     }
     /**
      * Name of Header to be matched
      * 
-     */
+    */
     public Optional<String> getSelector() {
         return Optional.ofNullable(this.selector);
     }
     /**
      * List of transforms
      * 
-     */
+    */
     public List<String> getTransforms() {
         return this.transforms == null ? List.of() : this.transforms;
     }

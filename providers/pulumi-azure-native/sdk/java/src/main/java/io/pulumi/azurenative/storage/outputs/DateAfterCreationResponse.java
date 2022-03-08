@@ -23,7 +23,7 @@ public final class DateAfterCreationResponse {
     /**
      * Value indicating the age in days after creation
      * 
-     */
+    */
     public Double getDaysAfterCreationGreaterThan() {
         return this.daysAfterCreationGreaterThan;
     }

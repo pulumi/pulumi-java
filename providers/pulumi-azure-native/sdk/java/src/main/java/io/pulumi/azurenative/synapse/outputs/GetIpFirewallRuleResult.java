@@ -61,42 +61,42 @@ public final class GetIpFirewallRuleResult {
     /**
      * The end IP address of the firewall rule. Must be IPv4 format. Must be greater than or equal to startIpAddress
      * 
-     */
+    */
     public Optional<String> getEndIpAddress() {
         return Optional.ofNullable(this.endIpAddress);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Resource provisioning state
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The start IP address of the firewall rule. Must be IPv4 format
      * 
-     */
+    */
     public Optional<String> getStartIpAddress() {
         return Optional.ofNullable(this.startIpAddress);
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

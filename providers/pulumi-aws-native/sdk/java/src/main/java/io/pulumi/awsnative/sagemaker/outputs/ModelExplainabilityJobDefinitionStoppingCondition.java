@@ -23,7 +23,7 @@ public final class ModelExplainabilityJobDefinitionStoppingCondition {
     /**
      * The maximum runtime allowed in seconds.
      * 
-     */
+    */
     public Integer getMaxRuntimeInSeconds() {
         return this.maxRuntimeInSeconds;
     }

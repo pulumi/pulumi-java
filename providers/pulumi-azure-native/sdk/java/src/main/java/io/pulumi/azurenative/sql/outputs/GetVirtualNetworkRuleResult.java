@@ -62,42 +62,42 @@ public final class GetVirtualNetworkRuleResult {
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Create firewall rule before the virtual network has vnet service endpoint enabled.
      * 
-     */
+    */
     public Optional<Boolean> getIgnoreMissingVnetServiceEndpoint() {
         return Optional.ofNullable(this.ignoreMissingVnetServiceEndpoint);
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Virtual Network Rule State
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The ARM resource id of the virtual network subnet.
      * 
-     */
+    */
     public String getVirtualNetworkSubnetId() {
         return this.virtualNetworkSubnetId;
     }

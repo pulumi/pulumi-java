@@ -40,21 +40,21 @@ public final class CrawlerJdbcTarget {
     /**
      * The name of the connection to use to connect to the Delta table target.
      * 
-     */
+    */
     public String getConnectionName() {
         return this.connectionName;
     }
     /**
      * A list of glob patterns used to exclude from the crawl.
      * 
-     */
+    */
     public List<String> getExclusions() {
         return this.exclusions == null ? List.of() : this.exclusions;
     }
     /**
      * The path of the Amazon DocumentDB or MongoDB target (database/collection).
      * 
-     */
+    */
     public String getPath() {
         return this.path;
     }

@@ -31,14 +31,14 @@ public final class IpSetIpSetDescriptor {
     /**
      * Type of the IP address - `IPV4` or `IPV6`.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * An IPv4 or IPv6 address specified via CIDR notationE.g., `192.0.2.44/32` or `1111:0000:0000:0000:0000:0000:0000:0000/64`
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }

@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetHostedZone {
-/**
- * Resource schema for AWS::Route53::HostedZone.
+    private GetHostedZone() {}
+    public interface BuilderApplicator {
+        public void apply(GetHostedZoneArgs.Builder a);
+    }
+    private static GetHostedZoneArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetHostedZoneArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource schema for AWS::Route53::HostedZone.
  * 
- */
+     */
+    public static CompletableFuture<GetHostedZoneResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource schema for AWS::Route53::HostedZone.
+     * 
+     */
     public static CompletableFuture<GetHostedZoneResult> invokeAsync(GetHostedZoneArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:route53:getHostedZone", TypeShape.of(GetHostedZoneResult.class), args == null ? GetHostedZoneArgs.Empty : args, Utilities.withVersion(options));
     }

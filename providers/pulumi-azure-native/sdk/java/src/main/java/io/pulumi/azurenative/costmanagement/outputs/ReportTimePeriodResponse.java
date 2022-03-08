@@ -31,14 +31,14 @@ public final class ReportTimePeriodResponse {
     /**
      * The start date to pull data from.
      * 
-     */
+    */
     public String getFrom() {
         return this.from;
     }
     /**
      * The end date to pull data to.
      * 
-     */
+    */
     public String getTo() {
         return this.to;
     }

@@ -71,49 +71,49 @@ public final class BackendPoolResponse {
     /**
      * The set of backends for this pool
      * 
-     */
+    */
     public List<BackendResponse> getBackends() {
         return this.backends == null ? List.of() : this.backends;
     }
     /**
      * L7 health probe settings for a backend pool
      * 
-     */
+    */
     public Optional<SubResourceResponse> getHealthProbeSettings() {
         return Optional.ofNullable(this.healthProbeSettings);
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Load balancing settings for a backend pool
      * 
-     */
+    */
     public Optional<SubResourceResponse> getLoadBalancingSettings() {
         return Optional.ofNullable(this.loadBalancingSettings);
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Resource status.
      * 
-     */
+    */
     public String getResourceState() {
         return this.resourceState;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

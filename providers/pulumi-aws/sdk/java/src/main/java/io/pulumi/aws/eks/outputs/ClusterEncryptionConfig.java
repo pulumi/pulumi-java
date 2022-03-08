@@ -33,14 +33,14 @@ public final class ClusterEncryptionConfig {
     /**
      * Configuration block with provider for encryption. Detailed below.
      * 
-     */
+    */
     public ClusterEncryptionConfigProvider getProvider() {
         return this.provider;
     }
     /**
      * List of strings with resources to be encrypted. Valid values: `secrets`.
      * 
-     */
+    */
     public List<String> getResources() {
         return this.resources;
     }

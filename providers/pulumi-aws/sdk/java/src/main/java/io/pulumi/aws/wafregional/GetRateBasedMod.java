@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRateBasedMod {
-/**
- * `aws.wafregional.RateBasedRule` Retrieves a WAF Regional Rate Based Rule Resource Id.
+    private GetRateBasedMod() {}
+    public interface BuilderApplicator {
+        public void apply(GetRateBasedModArgs.Builder a);
+    }
+    private static GetRateBasedModArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRateBasedModArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * `aws.wafregional.RateBasedRule` Retrieves a WAF Regional Rate Based Rule Resource Id.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getRateBasedMod.
+     *
+     * A collection of arguments for invoking getRateBasedMod.
  * 
- *
- * A collection of values returned by getRateBasedMod.
+     *
+     * A collection of values returned by getRateBasedMod.
  * 
- */
+     */
+    public static CompletableFuture<GetRateBasedModResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * `aws.wafregional.RateBasedRule` Retrieves a WAF Regional Rate Based Rule Resource Id.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getRateBasedMod.
+     * 
+     *
+         * A collection of values returned by getRateBasedMod.
+     * 
+     */
     public static CompletableFuture<GetRateBasedModResult> invokeAsync(GetRateBasedModArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:wafregional/getRateBasedMod:getRateBasedMod", TypeShape.of(GetRateBasedModResult.class), args == null ? GetRateBasedModArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -3,7 +3,6 @@ package random;
 import io.pulumi.Stack;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
-import io.pulumi.resources.CustomResourceOptions;
 import io.pulumi.random.*;
 
 import java.util.List;
@@ -14,7 +13,7 @@ public final class MyStack extends Stack {
     @OutputExport(type = String.class)
     private final Output<String> randomPassword;
 
-    // TODO this does not seem to be showing up in stack outputs.
+    // FIXME: this does show up in stack outputs on the first run.
     @OutputExport(type = Map.class, parameters = {String.class, Object.class})
     private final Output<Map<String, Object>> randomPetKeepers;
 
@@ -33,13 +32,17 @@ public final class MyStack extends Stack {
     @OutputExport(type = List.class, parameters = {String.class})
     private final Output<List<String>> shuffled;
 
+    @OutputExport(type = String.class)
+    private final Output<String> randomTuple;
+
+    @OutputExport(type = List.class, parameters = {String.class})
+    private final Output<List<String>> randomAll;
+
     public MyStack() {
         var randomPassword = new RandomPassword("my-password",
-                RandomPasswordArgs.builder()
-                        .setLength(16)
+                $ -> $.setLength(16)
                         .setSpecial(true)
-                        .setOverrideSpecial("_%@")
-                        .build());
+                        .setOverrideSpecial("_@"));
 
         this.randomPassword = randomPassword.getResult();
 
@@ -48,24 +51,17 @@ public final class MyStack extends Stack {
         this.randomPetKeepers = randomPet.getKeepers();
 
         var randomInteger = new RandomInteger("my-int",
-                RandomIntegerArgs.builder()
-                        .setMax(100)
+                $ -> $.setMax(100)
                         .setMin(0)
-                        .build());
+        );
 
         this.randomInteger = randomInteger.getResult();
 
-        var randomString = new RandomString("my-string",
-                RandomStringArgs.builder()
-                        .setLength(10)
-                        .build());
+        var randomString = new RandomString("my-string", $ -> $.setLength(10));
 
         this.randomString = randomString.getResult();
 
-        var randomId = new RandomId("my-id",
-                RandomIdArgs.builder()
-                        .setByteLength(10)
-                        .build());
+        var randomId = new RandomId("my-id", $ -> $.setByteLength(10));
 
         this.randomIdHex = randomId.getHex();
 
@@ -74,10 +70,14 @@ public final class MyStack extends Stack {
         this.randomUuid = randomUuid.getResult();
 
         var randomShuffle = new RandomShuffle("my-shuffle",
-                RandomShuffleArgs.builder()
-                        .setInputs(List.of("A", "B", "C"))
-                        .build());
+                $ -> $.setInputs(List.of("A", "B", "C"))
+        );
 
         this.shuffled = randomShuffle.getResults();
+
+        this.randomTuple = Output.tuple(this.randomString, this.randomUuid)
+                .applyValue(t -> t.t1 + t.t2);
+
+        this.randomAll = Output.allOutputs(this.randomString, this.randomUuid);
     }
 }

@@ -34,14 +34,14 @@ public final class ListEASubscriptionListMigrationDatePostResult {
     /**
      * Is subscription in the grand fatherable subscription list.
      * 
-     */
+    */
     public Optional<Boolean> getIsGrandFatherableSubscription() {
         return Optional.ofNullable(this.isGrandFatherableSubscription);
     }
     /**
      * Time to start using new pricing model.
      * 
-     */
+    */
     public Optional<String> getOptedInDate() {
         return Optional.ofNullable(this.optedInDate);
     }

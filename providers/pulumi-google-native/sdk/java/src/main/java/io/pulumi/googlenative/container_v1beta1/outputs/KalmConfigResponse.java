@@ -23,7 +23,7 @@ public final class KalmConfigResponse {
     /**
      * Whether KALM is enabled for this cluster.
      * 
-     */
+    */
     public Boolean getEnabled() {
         return this.enabled;
     }

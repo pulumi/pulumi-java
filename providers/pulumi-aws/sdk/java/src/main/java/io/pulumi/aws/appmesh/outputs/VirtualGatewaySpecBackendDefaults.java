@@ -25,7 +25,7 @@ public final class VirtualGatewaySpecBackendDefaults {
     /**
      * The default client policy for virtual gateway backends.
      * 
-     */
+    */
     public Optional<VirtualGatewaySpecBackendDefaultsClientPolicy> getClientPolicy() {
         return Optional.ofNullable(this.clientPolicy);
     }

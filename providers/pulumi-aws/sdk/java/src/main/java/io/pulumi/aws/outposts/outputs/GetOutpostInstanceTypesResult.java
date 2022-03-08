@@ -38,14 +38,14 @@ public final class GetOutpostInstanceTypesResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Set of instance types.
      * 
-     */
+    */
     public List<String> getInstanceTypes() {
         return this.instanceTypes;
     }

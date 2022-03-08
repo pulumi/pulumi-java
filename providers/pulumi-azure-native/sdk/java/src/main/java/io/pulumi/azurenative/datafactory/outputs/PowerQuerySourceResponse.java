@@ -71,49 +71,49 @@ public final class PowerQuerySourceResponse {
     /**
      * Dataset reference.
      * 
-     */
+    */
     public Optional<DatasetReferenceResponse> getDataset() {
         return Optional.ofNullable(this.dataset);
     }
     /**
      * Transformation description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Flowlet Reference
      * 
-     */
+    */
     public Optional<DataFlowReferenceResponse> getFlowlet() {
         return Optional.ofNullable(this.flowlet);
     }
     /**
      * Linked service reference.
      * 
-     */
+    */
     public Optional<LinkedServiceReferenceResponse> getLinkedService() {
         return Optional.ofNullable(this.linkedService);
     }
     /**
      * Transformation name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Schema linked service reference.
      * 
-     */
+    */
     public Optional<LinkedServiceReferenceResponse> getSchemaLinkedService() {
         return Optional.ofNullable(this.schemaLinkedService);
     }
     /**
      * source script.
      * 
-     */
+    */
     public Optional<String> getScript() {
         return Optional.ofNullable(this.script);
     }

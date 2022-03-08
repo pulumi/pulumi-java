@@ -45,21 +45,21 @@ public final class LoggingConfigurationLoggingConfigurationLogDestinationConfig 
      * * For a CloudWatch log group, specify the key `logGroup` with the name of the CloudWatch log group.
      * * For a Kinesis Data Firehose delivery stream, specify the key `deliveryStream` with the name of the delivery stream.
      * 
-     */
+    */
     public Map<String,String> getLogDestination() {
         return this.logDestination;
     }
     /**
      * The location to send logs to. Valid values: `S3`, `CloudWatchLogs`, `KinesisDataFirehose`.
      * 
-     */
+    */
     public String getLogDestinationType() {
         return this.logDestinationType;
     }
     /**
      * The type of log to send. Valid values: `ALERT` or `FLOW`. Alert logs report traffic that matches a `StatefulRule` with an action setting that sends a log message. Flow logs are standard network traffic flow logs.
      * 
-     */
+    */
     public String getLogType() {
         return this.logType;
     }

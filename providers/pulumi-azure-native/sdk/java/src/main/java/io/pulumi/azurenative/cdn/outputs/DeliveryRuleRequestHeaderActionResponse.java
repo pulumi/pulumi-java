@@ -34,14 +34,14 @@ public final class DeliveryRuleRequestHeaderActionResponse {
      * The name of the action for the delivery rule.
      * Expected value is 'ModifyRequestHeader'.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Defines the parameters for the action.
      * 
-     */
+    */
     public HeaderActionParametersResponse getParameters() {
         return this.parameters;
     }

@@ -33,14 +33,14 @@ public final class FirewallFirewallStatusSyncStateAttachment {
     /**
      * The identifier of the firewall endpoint that AWS Network Firewall has instantiated in the subnet. You use this to identify the firewall endpoint in the VPC route tables, when you redirect the VPC traffic through the endpoint.
      * 
-     */
+    */
     public Optional<String> getEndpointId() {
         return Optional.ofNullable(this.endpointId);
     }
     /**
      * The unique identifier for the subnet.
      * 
-     */
+    */
     public Optional<String> getSubnetId() {
         return Optional.ofNullable(this.subnetId);
     }

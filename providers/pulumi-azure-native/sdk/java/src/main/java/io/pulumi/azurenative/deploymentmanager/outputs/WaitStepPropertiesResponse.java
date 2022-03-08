@@ -33,7 +33,7 @@ public final class WaitStepPropertiesResponse {
     /**
      * The Wait attributes
      * 
-     */
+    */
     public WaitStepAttributesResponse getAttributes() {
         return this.attributes;
     }
@@ -41,7 +41,7 @@ public final class WaitStepPropertiesResponse {
      * The type of step.
      * Expected value is 'Wait'.
      * 
-     */
+    */
     public String getStepType() {
         return this.stepType;
     }

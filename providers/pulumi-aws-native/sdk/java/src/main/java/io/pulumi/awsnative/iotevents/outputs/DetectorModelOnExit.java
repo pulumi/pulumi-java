@@ -25,7 +25,7 @@ public final class DetectorModelOnExit {
     /**
      * Specifies the `actions` that are performed when the state is exited and the `condition` is `TRUE`.
      * 
-     */
+    */
     public List<DetectorModelEvent> getEvents() {
         return this.events == null ? List.of() : this.events;
     }

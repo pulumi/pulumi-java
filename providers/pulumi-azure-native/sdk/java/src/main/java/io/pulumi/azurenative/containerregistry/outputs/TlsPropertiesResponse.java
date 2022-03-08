@@ -32,14 +32,14 @@ public final class TlsPropertiesResponse {
     /**
      * The certificate used to configure HTTPS for the login server.
      * 
-     */
+    */
     public TlsCertificatePropertiesResponse getCertificate() {
         return this.certificate;
     }
     /**
      * Indicates whether HTTPS is enabled for the login server.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }

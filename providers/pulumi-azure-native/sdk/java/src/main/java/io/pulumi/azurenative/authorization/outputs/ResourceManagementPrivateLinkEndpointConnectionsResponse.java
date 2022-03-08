@@ -25,7 +25,7 @@ public final class ResourceManagementPrivateLinkEndpointConnectionsResponse {
     /**
      * The private endpoint connections.
      * 
-     */
+    */
     public List<String> getPrivateEndpointConnections() {
         return this.privateEndpointConnections == null ? List.of() : this.privateEndpointConnections;
     }

@@ -128,7 +128,7 @@ public final class GetInfrastructureConfigurationResult {
     /**
      * Date the infrastructure configuration was updated.
      * 
-     */
+    */
     public String getDateCreated() {
         return this.dateCreated;
     }
@@ -138,91 +138,91 @@ public final class GetInfrastructureConfigurationResult {
     /**
      * Description of the infrastructure configuration.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Name of the IAM Instance Profile associated with the configuration.
      * 
-     */
+    */
     public String getInstanceProfileName() {
         return this.instanceProfileName;
     }
     /**
      * Set of EC2 Instance Types associated with the configuration.
      * 
-     */
+    */
     public List<String> getInstanceTypes() {
         return this.instanceTypes;
     }
     /**
      * Name of the EC2 Key Pair associated with the configuration.
      * 
-     */
+    */
     public String getKeyPair() {
         return this.keyPair;
     }
     /**
      * Nested list of logging settings.
      * 
-     */
+    */
     public List<GetInfrastructureConfigurationLogging> getLoggings() {
         return this.loggings;
     }
     /**
      * Name of the infrastructure configuration.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Key-value map of resource tags for the infrastructure created by the infrastructure configuration.
      * 
-     */
+    */
     public Map<String,String> getResourceTags() {
         return this.resourceTags;
     }
     /**
      * Set of EC2 Security Group identifiers associated with the configuration.
      * 
-     */
+    */
     public List<String> getSecurityGroupIds() {
         return this.securityGroupIds;
     }
     /**
      * Amazon Resource Name (ARN) of the SNS Topic associated with the configuration.
      * 
-     */
+    */
     public String getSnsTopicArn() {
         return this.snsTopicArn;
     }
     /**
      * Identifier of the EC2 Subnet associated with the configuration.
      * 
-     */
+    */
     public String getSubnetId() {
         return this.subnetId;
     }
     /**
      * Key-value map of resource tags for the infrastructure configuration.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags;
     }
     /**
      * Whether instances are terminated on failure.
      * 
-     */
+    */
     public Boolean getTerminateInstanceOnFailure() {
         return this.terminateInstanceOnFailure;
     }

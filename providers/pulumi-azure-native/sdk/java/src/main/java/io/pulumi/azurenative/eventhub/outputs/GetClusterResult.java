@@ -91,70 +91,70 @@ public final class GetClusterResult {
     /**
      * The UTC time when the Event Hubs Cluster was created.
      * 
-     */
+    */
     public String getCreatedAt() {
         return this.createdAt;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The metric ID of the cluster resource. Provided by the service and not modifiable by the user.
      * 
-     */
+    */
     public String getMetricId() {
         return this.metricId;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Properties of the cluster SKU.
      * 
-     */
+    */
     public Optional<ClusterSkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Status of the Cluster resource
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The UTC time when the Event Hubs Cluster was last updated.
      * 
-     */
+    */
     public String getUpdatedAt() {
         return this.updatedAt;
     }

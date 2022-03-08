@@ -34,14 +34,14 @@ public final class IngressEnvironmentStatusResponse {
     /**
      * This string represents the state of ingress operations on an environment. It can be "Disabled", "Ready", "Running", "Paused" or "Unknown"
      * 
-     */
+    */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }
     /**
      * An object that contains the details about an environment's state.
      * 
-     */
+    */
     public EnvironmentStateDetailsResponse getStateDetails() {
         return this.stateDetails;
     }

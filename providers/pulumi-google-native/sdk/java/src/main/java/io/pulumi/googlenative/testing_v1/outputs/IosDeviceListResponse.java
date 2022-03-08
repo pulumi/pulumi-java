@@ -24,7 +24,7 @@ public final class IosDeviceListResponse {
     /**
      * A list of iOS devices.
      * 
-     */
+    */
     public List<IosDeviceResponse> getIosDevices() {
         return this.iosDevices;
     }

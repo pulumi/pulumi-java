@@ -77,7 +77,7 @@ public final class DetectorEventVariable {
     /**
      * The time when the event variable was created.
      * 
-     */
+    */
     public Optional<String> getCreatedTime() {
         return Optional.ofNullable(this.createdTime);
     }
@@ -93,7 +93,7 @@ public final class DetectorEventVariable {
     /**
      * The description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
@@ -103,7 +103,7 @@ public final class DetectorEventVariable {
     /**
      * The time when the event variable was last updated.
      * 
-     */
+    */
     public Optional<String> getLastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
@@ -113,7 +113,7 @@ public final class DetectorEventVariable {
     /**
      * Tags associated with this event variable.
      * 
-     */
+    */
     public List<DetectorTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

@@ -41,21 +41,21 @@ public final class UserProfileResourceSpec {
     /**
      * The instance type that the image version runs on.
      * 
-     */
+    */
     public Optional<UserProfileResourceSpecInstanceType> getInstanceType() {
         return Optional.ofNullable(this.instanceType);
     }
     /**
      * The ARN of the SageMaker image that the image version belongs to.
      * 
-     */
+    */
     public Optional<String> getSageMakerImageArn() {
         return Optional.ofNullable(this.sageMakerImageArn);
     }
     /**
      * The ARN of the image version created on the instance.
      * 
-     */
+    */
     public Optional<String> getSageMakerImageVersionArn() {
         return Optional.ofNullable(this.sageMakerImageVersionArn);
     }

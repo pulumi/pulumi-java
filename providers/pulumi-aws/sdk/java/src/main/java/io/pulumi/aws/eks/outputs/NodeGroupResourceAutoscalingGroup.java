@@ -25,7 +25,7 @@ public final class NodeGroupResourceAutoscalingGroup {
     /**
      * Name of the EC2 Launch Template. Conflicts with `id`.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

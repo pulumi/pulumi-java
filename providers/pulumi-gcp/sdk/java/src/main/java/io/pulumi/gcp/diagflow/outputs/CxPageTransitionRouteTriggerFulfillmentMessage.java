@@ -25,7 +25,7 @@ public final class CxPageTransitionRouteTriggerFulfillmentMessage {
     /**
      * A collection of text responses.
      * 
-     */
+    */
     public Optional<CxPageTransitionRouteTriggerFulfillmentMessageText> getText() {
         return Optional.ofNullable(this.text);
     }

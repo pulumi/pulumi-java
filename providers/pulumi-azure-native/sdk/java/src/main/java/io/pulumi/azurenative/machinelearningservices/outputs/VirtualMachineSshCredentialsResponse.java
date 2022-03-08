@@ -47,28 +47,28 @@ public final class VirtualMachineSshCredentialsResponse {
     /**
      * Password of admin account
      * 
-     */
+    */
     public Optional<String> getPassword() {
         return Optional.ofNullable(this.password);
     }
     /**
      * Private key data
      * 
-     */
+    */
     public Optional<String> getPrivateKeyData() {
         return Optional.ofNullable(this.privateKeyData);
     }
     /**
      * Public key data
      * 
-     */
+    */
     public Optional<String> getPublicKeyData() {
         return Optional.ofNullable(this.publicKeyData);
     }
     /**
      * Username of admin account
      * 
-     */
+    */
     public Optional<String> getUsername() {
         return Optional.ofNullable(this.username);
     }

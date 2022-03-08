@@ -62,7 +62,7 @@ public final class GetResourcePolicyResult {
     /**
      * Description of this Resource Policy.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
@@ -72,7 +72,7 @@ public final class GetResourcePolicyResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -91,7 +91,7 @@ public final class GetResourcePolicyResult {
     /**
      * The URI of the resource.
      * 
-     */
+    */
     public String getSelfLink() {
         return this.selfLink;
     }

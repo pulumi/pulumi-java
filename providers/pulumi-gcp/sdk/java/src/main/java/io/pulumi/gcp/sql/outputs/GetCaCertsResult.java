@@ -46,21 +46,21 @@ public final class GetCaCertsResult {
     /**
      * SHA1 fingerprint of the currently active CA certificate.
      * 
-     */
+    */
     public String getActiveVersion() {
         return this.activeVersion;
     }
     /**
      * A list of server CA certificates for the instance. Each contains:
      * 
-     */
+    */
     public List<GetCaCertsCert> getCerts() {
         return this.certs;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }

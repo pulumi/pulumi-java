@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetChannel {
-/**
- * Bot channel resource definition
+    private GetChannel() {}
+    public interface BuilderApplicator {
+        public void apply(GetChannelArgs.Builder a);
+    }
+    private static GetChannelArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetChannelArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Bot channel resource definition
  * API Version: 2021-03-01.
  * 
- *
- * Bot channel resource definition
+     *
+     * Bot channel resource definition
  * 
- */
+     */
+    public static CompletableFuture<GetChannelResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Bot channel resource definition
+     * API Version: 2021-03-01.
+     * 
+     *
+         * Bot channel resource definition
+     * 
+     */
     public static CompletableFuture<GetChannelResult> invokeAsync(GetChannelArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:botservice:getChannel", TypeShape.of(GetChannelResult.class), args == null ? GetChannelArgs.Empty : args, Utilities.withVersion(options));
     }

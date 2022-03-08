@@ -49,28 +49,28 @@ public final class OrganizationRoot {
     /**
      * ARN of the root
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Identifier of the root
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The name of the policy type
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * List of policy types enabled for this root. All elements have these attributes:
      * 
-     */
+    */
     public List<OrganizationRootPolicyType> getPolicyTypes() {
         return this.policyTypes == null ? List.of() : this.policyTypes;
     }

@@ -34,14 +34,14 @@ public final class ClusterLoggingInfoBrokerLogsCloudwatchLogs {
     /**
      * Indicates whether you want to enable or disable streaming broker logs to Cloudwatch Logs.
      * 
-     */
+    */
     public Boolean getEnabled() {
         return this.enabled;
     }
     /**
      * Name of the Cloudwatch Log Group to deliver logs to.
      * 
-     */
+    */
     public Optional<String> getLogGroup() {
         return Optional.ofNullable(this.logGroup);
     }

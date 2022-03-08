@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGlobalCluster {
-/**
- * Resource Type definition for AWS::RDS::GlobalCluster
+    private GetGlobalCluster() {}
+    public interface BuilderApplicator {
+        public void apply(GetGlobalClusterArgs.Builder a);
+    }
+    private static GetGlobalClusterArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetGlobalClusterArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::RDS::GlobalCluster
  * 
- */
+     */
+    public static CompletableFuture<GetGlobalClusterResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::RDS::GlobalCluster
+     * 
+     */
     public static CompletableFuture<GetGlobalClusterResult> invokeAsync(GetGlobalClusterArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:rds:getGlobalCluster", TypeShape.of(GetGlobalClusterResult.class), args == null ? GetGlobalClusterArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -66,49 +66,49 @@ public final class FailureDetailResponse {
     /**
      * If the failure was severe because the system (app) under test crashed.
      * 
-     */
+    */
     public Boolean getCrashed() {
         return this.crashed;
     }
     /**
      * If the device ran out of memory during a test, causing the test to crash.
      * 
-     */
+    */
     public Boolean getDeviceOutOfMemory() {
         return this.deviceOutOfMemory;
     }
     /**
      * If the Roboscript failed to complete successfully, e.g., because a Roboscript action or assertion failed or a Roboscript action could not be matched during the entire crawl.
      * 
-     */
+    */
     public Boolean getFailedRoboscript() {
         return this.failedRoboscript;
     }
     /**
      * If an app is not installed and thus no test can be run with the app. This might be caused by trying to run a test on an unsupported platform.
      * 
-     */
+    */
     public Boolean getNotInstalled() {
         return this.notInstalled;
     }
     /**
      * If a native process (including any other than the app) crashed.
      * 
-     */
+    */
     public Boolean getOtherNativeCrash() {
         return this.otherNativeCrash;
     }
     /**
      * If the test overran some time limit, and that is why it failed.
      * 
-     */
+    */
     public Boolean getTimedOut() {
         return this.timedOut;
     }
     /**
      * If the robo was unable to crawl the app; perhaps because the app did not start.
      * 
-     */
+    */
     public Boolean getUnableToCrawl() {
         return this.unableToCrawl;
     }

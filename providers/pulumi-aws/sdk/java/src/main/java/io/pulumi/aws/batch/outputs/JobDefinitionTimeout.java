@@ -25,7 +25,7 @@ public final class JobDefinitionTimeout {
     /**
      * The time duration in seconds after which AWS Batch terminates your jobs if they have not finished. The minimum value for the timeout is `60` seconds.
      * 
-     */
+    */
     public Optional<Integer> getAttemptDurationSeconds() {
         return Optional.ofNullable(this.attemptDurationSeconds);
     }

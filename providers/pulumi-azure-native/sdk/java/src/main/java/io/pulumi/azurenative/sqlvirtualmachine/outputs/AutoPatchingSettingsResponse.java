@@ -49,28 +49,28 @@ public final class AutoPatchingSettingsResponse {
     /**
      * Day of week to apply the patch on.
      * 
-     */
+    */
     public Optional<String> getDayOfWeek() {
         return Optional.ofNullable(this.dayOfWeek);
     }
     /**
      * Enable or disable autopatching on SQL virtual machine.
      * 
-     */
+    */
     public Optional<Boolean> getEnable() {
         return Optional.ofNullable(this.enable);
     }
     /**
      * Duration of patching.
      * 
-     */
+    */
     public Optional<Integer> getMaintenanceWindowDuration() {
         return Optional.ofNullable(this.maintenanceWindowDuration);
     }
     /**
      * Hour of the day when patching is initiated. Local VM time.
      * 
-     */
+    */
     public Optional<Integer> getMaintenanceWindowStartingHour() {
         return Optional.ofNullable(this.maintenanceWindowStartingHour);
     }

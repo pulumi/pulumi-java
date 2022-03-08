@@ -73,42 +73,42 @@ public final class ChainingTriggerResponse {
     /**
      * List of tags that can be used for describing the trigger.
      * 
-     */
+    */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * Upstream Pipelines.
      * 
-     */
+    */
     public List<PipelineReferenceResponse> getDependsOn() {
         return this.dependsOn;
     }
     /**
      * Trigger description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Pipeline for which runs are created when all upstream pipelines complete successfully.
      * 
-     */
+    */
     public TriggerPipelineReferenceResponse getPipeline() {
         return this.pipeline;
     }
     /**
      * Run Dimension property that needs to be emitted by upstream pipelines.
      * 
-     */
+    */
     public String getRunDimension() {
         return this.runDimension;
     }
     /**
      * Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
      * 
-     */
+    */
     public String getRuntimeState() {
         return this.runtimeState;
     }
@@ -116,7 +116,7 @@ public final class ChainingTriggerResponse {
      * Trigger type.
      * Expected value is 'ChainingTrigger'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

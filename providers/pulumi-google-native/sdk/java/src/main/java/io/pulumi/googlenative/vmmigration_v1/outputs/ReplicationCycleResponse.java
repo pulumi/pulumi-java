@@ -32,14 +32,14 @@ public final class ReplicationCycleResponse {
     /**
      * The current progress in percentage of this cycle.
      * 
-     */
+    */
     public Integer getProgressPercent() {
         return this.progressPercent;
     }
     /**
      * The time the replication cycle has started.
      * 
-     */
+    */
     public String getStartTime() {
         return this.startTime;
     }

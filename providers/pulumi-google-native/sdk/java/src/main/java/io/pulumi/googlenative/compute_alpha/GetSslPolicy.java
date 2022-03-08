@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSslPolicy {
-/**
- * Lists all of the ordered rules present in a single specified policy.
+    private GetSslPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetSslPolicyArgs.Builder a);
+    }
+    private static GetSslPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSslPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Lists all of the ordered rules present in a single specified policy.
  * 
- */
+     */
+    public static CompletableFuture<GetSslPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Lists all of the ordered rules present in a single specified policy.
+     * 
+     */
     public static CompletableFuture<GetSslPolicyResult> invokeAsync(GetSslPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getSslPolicy", TypeShape.of(GetSslPolicyResult.class), args == null ? GetSslPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

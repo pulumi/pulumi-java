@@ -32,14 +32,14 @@ public final class BucketLifecycleRule {
     /**
      * The Lifecycle Rule's action configuration. A single block of this type is supported. Structure is documented below.
      * 
-     */
+    */
     public BucketLifecycleRuleAction getAction() {
         return this.action;
     }
     /**
      * The Lifecycle Rule's condition configuration. A single block of this type is supported. Structure is documented below.
      * 
-     */
+    */
     public BucketLifecycleRuleCondition getCondition() {
         return this.condition;
     }

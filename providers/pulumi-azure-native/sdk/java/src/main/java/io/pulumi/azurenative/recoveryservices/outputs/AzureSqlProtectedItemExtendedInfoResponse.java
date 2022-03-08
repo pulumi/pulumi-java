@@ -41,21 +41,21 @@ public final class AzureSqlProtectedItemExtendedInfoResponse {
     /**
      * The oldest backup copy available for this item in the service.
      * 
-     */
+    */
     public Optional<String> getOldestRecoveryPoint() {
         return Optional.ofNullable(this.oldestRecoveryPoint);
     }
     /**
      * State of the backup policy associated with this backup item.
      * 
-     */
+    */
     public Optional<String> getPolicyState() {
         return Optional.ofNullable(this.policyState);
     }
     /**
      * Number of available backup copies associated with this backup item.
      * 
-     */
+    */
     public Optional<Integer> getRecoveryPointCount() {
         return Optional.ofNullable(this.recoveryPointCount);
     }

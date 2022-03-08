@@ -42,14 +42,14 @@ public final class CspmMonitorAwsOfferingResponse {
     /**
      * The offering description.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The native cloud connection configuration
      * 
-     */
+    */
     public Optional<CspmMonitorAwsOfferingResponseNativeCloudConnection> getNativeCloudConnection() {
         return Optional.ofNullable(this.nativeCloudConnection);
     }
@@ -57,7 +57,7 @@ public final class CspmMonitorAwsOfferingResponse {
      * The type of the security offering.
      * Expected value is 'CspmMonitorAws'.
      * 
-     */
+    */
     public String getOfferingType() {
         return this.offeringType;
     }

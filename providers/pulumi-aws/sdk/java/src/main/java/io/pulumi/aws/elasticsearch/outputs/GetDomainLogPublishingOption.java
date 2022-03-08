@@ -39,21 +39,21 @@ public final class GetDomainLogPublishingOption {
     /**
      * The CloudWatch Log Group where the logs are published.
      * 
-     */
+    */
     public String getCloudwatchLogGroupArn() {
         return this.cloudwatchLogGroupArn;
     }
     /**
      * Whether node to node encryption is enabled.
      * 
-     */
+    */
     public Boolean getEnabled() {
         return this.enabled;
     }
     /**
      * The type of Elasticsearch log being published.
      * 
-     */
+    */
     public String getLogType() {
         return this.logType;
     }

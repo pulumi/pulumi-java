@@ -119,6 +119,22 @@ public class PrivateEndpointConnectionByWorkspace extends io.pulumi.resources.Cu
         return this.type;
     }
 
+    public interface BuilderApplicator {
+        public void apply(PrivateEndpointConnectionByWorkspaceArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.desktopvirtualization.PrivateEndpointConnectionByWorkspaceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.desktopvirtualization.PrivateEndpointConnectionByWorkspaceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public PrivateEndpointConnectionByWorkspace(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

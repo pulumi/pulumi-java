@@ -34,14 +34,14 @@ public final class GroupMixedInstancesPolicy {
     /**
      * Nested argument containing settings on how to mix on-demand and Spot instances in the Auto Scaling group. Defined below.
      * 
-     */
+    */
     public Optional<GroupMixedInstancesPolicyInstancesDistribution> getInstancesDistribution() {
         return Optional.ofNullable(this.instancesDistribution);
     }
     /**
      * Nested argument containing launch template settings along with the overrides to specify multiple instance types and weights. Defined below.
      * 
-     */
+    */
     public GroupMixedInstancesPolicyLaunchTemplate getLaunchTemplate() {
         return this.launchTemplate;
     }

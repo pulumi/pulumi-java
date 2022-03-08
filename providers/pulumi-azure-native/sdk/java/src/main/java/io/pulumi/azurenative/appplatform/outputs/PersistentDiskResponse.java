@@ -41,21 +41,21 @@ public final class PersistentDiskResponse {
     /**
      * Mount path of the persistent disk
      * 
-     */
+    */
     public Optional<String> getMountPath() {
         return Optional.ofNullable(this.mountPath);
     }
     /**
      * Size of the persistent disk in GB
      * 
-     */
+    */
     public Optional<Integer> getSizeInGB() {
         return Optional.ofNullable(this.sizeInGB);
     }
     /**
      * Size of the used persistent disk in GB
      * 
-     */
+    */
     public Integer getUsedInGB() {
         return this.usedInGB;
     }

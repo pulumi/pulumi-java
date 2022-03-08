@@ -256,6 +256,22 @@ public class MetastoreService extends io.pulumi.resources.CustomResource {
         return this.tier;
     }
 
+    public interface BuilderApplicator {
+        public void apply(MetastoreServiceArgs.Builder a);
+    }
+    private static io.pulumi.gcp.dataproc.MetastoreServiceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.dataproc.MetastoreServiceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public MetastoreService(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

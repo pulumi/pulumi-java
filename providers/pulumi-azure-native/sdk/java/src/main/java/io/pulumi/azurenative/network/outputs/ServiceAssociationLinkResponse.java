@@ -84,63 +84,63 @@ public final class ServiceAssociationLinkResponse {
     /**
      * If true, the resource can be deleted.
      * 
-     */
+    */
     public Optional<Boolean> getAllowDelete() {
         return Optional.ofNullable(this.allowDelete);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Link to the external resource.
      * 
-     */
+    */
     public Optional<String> getLink() {
         return Optional.ofNullable(this.link);
     }
     /**
      * Resource type of the linked resource.
      * 
-     */
+    */
     public Optional<String> getLinkedResourceType() {
         return Optional.ofNullable(this.linkedResourceType);
     }
     /**
      * A list of locations.
      * 
-     */
+    */
     public List<String> getLocations() {
         return this.locations == null ? List.of() : this.locations;
     }
     /**
      * Name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The provisioning state of the service association link resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

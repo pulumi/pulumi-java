@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVpcAttachment {
-/**
- * Get information on an EC2 Transit Gateway VPC Attachment.
+    private GetVpcAttachment() {}
+    public interface BuilderApplicator {
+        public void apply(GetVpcAttachmentArgs.Builder a);
+    }
+    private static GetVpcAttachmentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetVpcAttachmentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Get information on an EC2 Transit Gateway VPC Attachment.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getVpcAttachment.
+     *
+     * A collection of arguments for invoking getVpcAttachment.
  * 
- *
- * A collection of values returned by getVpcAttachment.
+     *
+     * A collection of values returned by getVpcAttachment.
  * 
- */
+     */
+    public static CompletableFuture<GetVpcAttachmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Get information on an EC2 Transit Gateway VPC Attachment.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getVpcAttachment.
+     * 
+     *
+         * A collection of values returned by getVpcAttachment.
+     * 
+     */
     public static CompletableFuture<GetVpcAttachmentResult> invokeAsync(@Nullable GetVpcAttachmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2transitgateway/getVpcAttachment:getVpcAttachment", TypeShape.of(GetVpcAttachmentResult.class), args == null ? GetVpcAttachmentArgs.Empty : args, Utilities.withVersion(options));
     }

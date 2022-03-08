@@ -31,14 +31,14 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
     /**
      * Do not trigger if last utterance is small talk.
      * 
-     */
+    */
     public Boolean getNoSmallTalk() {
         return this.noSmallTalk;
     }
     /**
      * Only trigger suggestion if participant role of last utterance is END_USER.
      * 
-     */
+    */
     public Boolean getOnlyEndUser() {
         return this.onlyEndUser;
     }

@@ -43,21 +43,21 @@ public final class GetResourceSetResult {
     /**
      * The Amazon Resource Name (ARN) of the resource set.
      * 
-     */
+    */
     public Optional<String> getResourceSetArn() {
         return Optional.ofNullable(this.resourceSetArn);
     }
     /**
      * A list of resource objects in the resource set.
      * 
-     */
+    */
     public List<ResourceSetResource> getResources() {
         return this.resources == null ? List.of() : this.resources;
     }
     /**
      * A tag to associate with the parameters for a resource set.
      * 
-     */
+    */
     public List<ResourceSetTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

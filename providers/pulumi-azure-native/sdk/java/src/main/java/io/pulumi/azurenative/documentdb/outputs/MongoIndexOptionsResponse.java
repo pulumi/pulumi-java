@@ -34,14 +34,14 @@ public final class MongoIndexOptionsResponse {
     /**
      * Expire after seconds
      * 
-     */
+    */
     public Optional<Integer> getExpireAfterSeconds() {
         return Optional.ofNullable(this.expireAfterSeconds);
     }
     /**
      * Is unique or not
      * 
-     */
+    */
     public Optional<Boolean> getUnique() {
         return Optional.ofNullable(this.unique);
     }

@@ -89,70 +89,70 @@ public final class TopicRuleErrorActionDynamodb {
     /**
      * The hash key name.
      * 
-     */
+    */
     public String getHashKeyField() {
         return this.hashKeyField;
     }
     /**
      * The hash key type. Valid values are "STRING" or "NUMBER".
      * 
-     */
+    */
     public Optional<String> getHashKeyType() {
         return Optional.ofNullable(this.hashKeyType);
     }
     /**
      * The hash key value.
      * 
-     */
+    */
     public String getHashKeyValue() {
         return this.hashKeyValue;
     }
     /**
      * The operation. Valid values are "INSERT", "UPDATE", or "DELETE".
      * 
-     */
+    */
     public Optional<String> getOperation() {
         return Optional.ofNullable(this.operation);
     }
     /**
      * The action payload.
      * 
-     */
+    */
     public Optional<String> getPayloadField() {
         return Optional.ofNullable(this.payloadField);
     }
     /**
      * The range key name.
      * 
-     */
+    */
     public Optional<String> getRangeKeyField() {
         return Optional.ofNullable(this.rangeKeyField);
     }
     /**
      * The range key type. Valid values are "STRING" or "NUMBER".
      * 
-     */
+    */
     public Optional<String> getRangeKeyType() {
         return Optional.ofNullable(this.rangeKeyType);
     }
     /**
      * The range key value.
      * 
-     */
+    */
     public Optional<String> getRangeKeyValue() {
         return Optional.ofNullable(this.rangeKeyValue);
     }
     /**
      * The ARN of the IAM role that grants access to the DynamoDB table.
      * 
-     */
+    */
     public String getRoleArn() {
         return this.roleArn;
     }
     /**
      * The name of the DynamoDB table.
      * 
-     */
+    */
     public String getTableName() {
         return this.tableName;
     }

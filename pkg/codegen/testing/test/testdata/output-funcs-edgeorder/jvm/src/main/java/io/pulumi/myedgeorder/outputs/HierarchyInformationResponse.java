@@ -47,28 +47,28 @@ public final class HierarchyInformationResponse {
     /**
      * Represents configuration name that uniquely identifies configuration
      * 
-     */
+    */
     public Optional<String> getConfigurationName() {
         return Optional.ofNullable(this.configurationName);
     }
     /**
      * Represents product family name that uniquely identifies product family
      * 
-     */
+    */
     public Optional<String> getProductFamilyName() {
         return Optional.ofNullable(this.productFamilyName);
     }
     /**
      * Represents product line name that uniquely identifies product line
      * 
-     */
+    */
     public Optional<String> getProductLineName() {
         return Optional.ofNullable(this.productLineName);
     }
     /**
      * Represents product name that uniquely identifies product
      * 
-     */
+    */
     public Optional<String> getProductName() {
         return Optional.ofNullable(this.productName);
     }

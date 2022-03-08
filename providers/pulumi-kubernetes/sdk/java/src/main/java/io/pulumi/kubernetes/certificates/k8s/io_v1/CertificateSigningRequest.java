@@ -92,6 +92,22 @@ public class CertificateSigningRequest extends io.pulumi.resources.CustomResourc
         return this.status;
     }
 
+    public interface BuilderApplicator {
+        public void apply(CertificateSigningRequestArgs.Builder a);
+    }
+    private static io.pulumi.kubernetes.certificates.k8s.io_v1.CertificateSigningRequestArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.kubernetes.certificates.k8s.io_v1.CertificateSigningRequestArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public CertificateSigningRequest(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

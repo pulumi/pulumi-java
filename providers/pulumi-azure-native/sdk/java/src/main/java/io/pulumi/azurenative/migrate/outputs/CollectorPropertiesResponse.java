@@ -47,21 +47,21 @@ public final class CollectorPropertiesResponse {
     /**
      * Time when this collector was created. Date-Time represented in ISO-8601 format.
      * 
-     */
+    */
     public String getCreatedTimestamp() {
         return this.createdTimestamp;
     }
     /**
      * The ARM id of the discovery service site.
      * 
-     */
+    */
     public Optional<String> getDiscoverySiteId() {
         return Optional.ofNullable(this.discoverySiteId);
     }
     /**
      * Time when this collector was updated. Date-Time represented in ISO-8601 format.
      * 
-     */
+    */
     public String getUpdatedTimestamp() {
         return this.updatedTimestamp;
     }

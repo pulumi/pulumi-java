@@ -41,21 +41,21 @@ public final class DomainCustomImage {
     /**
      * The Name of the AppImageConfig.
      * 
-     */
+    */
     public String getAppImageConfigName() {
         return this.appImageConfigName;
     }
     /**
      * The name of the CustomImage. Must be unique to your account.
      * 
-     */
+    */
     public String getImageName() {
         return this.imageName;
     }
     /**
      * The version number of the CustomImage.
      * 
-     */
+    */
     public Optional<Integer> getImageVersionNumber() {
         return Optional.ofNullable(this.imageVersionNumber);
     }

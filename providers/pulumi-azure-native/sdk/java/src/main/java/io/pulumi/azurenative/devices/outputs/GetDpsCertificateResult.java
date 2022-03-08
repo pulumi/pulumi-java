@@ -53,35 +53,35 @@ public final class GetDpsCertificateResult {
     /**
      * The entity tag.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * The resource identifier.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the certificate.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * properties of a certificate
      * 
-     */
+    */
     public CertificatePropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * The resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

@@ -163,140 +163,140 @@ public final class GetSubscriptionResult {
     /**
      * Last time there was a receive request to this subscription.
      * 
-     */
+    */
     public String getAccessedAt() {
         return this.accessedAt;
     }
     /**
      * ISO 8061 timeSpan idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes.
      * 
-     */
+    */
     public Optional<String> getAutoDeleteOnIdle() {
         return Optional.ofNullable(this.autoDeleteOnIdle);
     }
     /**
      * Message count details
      * 
-     */
+    */
     public MessageCountDetailsResponse getCountDetails() {
         return this.countDetails;
     }
     /**
      * Exact time the message was created.
      * 
-     */
+    */
     public String getCreatedAt() {
         return this.createdAt;
     }
     /**
      * Value that indicates whether a subscription has dead letter support on filter evaluation exceptions.
      * 
-     */
+    */
     public Optional<Boolean> getDeadLetteringOnFilterEvaluationExceptions() {
         return Optional.ofNullable(this.deadLetteringOnFilterEvaluationExceptions);
     }
     /**
      * Value that indicates whether a subscription has dead letter support when a message expires.
      * 
-     */
+    */
     public Optional<Boolean> getDeadLetteringOnMessageExpiration() {
         return Optional.ofNullable(this.deadLetteringOnMessageExpiration);
     }
     /**
      * ISO 8061 Default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.
      * 
-     */
+    */
     public Optional<String> getDefaultMessageTimeToLive() {
         return Optional.ofNullable(this.defaultMessageTimeToLive);
     }
     /**
      * ISO 8601 timeSpan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.
      * 
-     */
+    */
     public Optional<String> getDuplicateDetectionHistoryTimeWindow() {
         return Optional.ofNullable(this.duplicateDetectionHistoryTimeWindow);
     }
     /**
      * Value that indicates whether server-side batched operations are enabled.
      * 
-     */
+    */
     public Optional<Boolean> getEnableBatchedOperations() {
         return Optional.ofNullable(this.enableBatchedOperations);
     }
     /**
      * Queue/Topic name to forward the Dead Letter message
      * 
-     */
+    */
     public Optional<String> getForwardDeadLetteredMessagesTo() {
         return Optional.ofNullable(this.forwardDeadLetteredMessagesTo);
     }
     /**
      * Queue/Topic name to forward the messages
      * 
-     */
+    */
     public Optional<String> getForwardTo() {
         return Optional.ofNullable(this.forwardTo);
     }
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * ISO 8061 lock duration timespan for the subscription. The default value is 1 minute.
      * 
-     */
+    */
     public Optional<String> getLockDuration() {
         return Optional.ofNullable(this.lockDuration);
     }
     /**
      * Number of maximum deliveries.
      * 
-     */
+    */
     public Optional<Integer> getMaxDeliveryCount() {
         return Optional.ofNullable(this.maxDeliveryCount);
     }
     /**
      * Number of messages.
      * 
-     */
+    */
     public Double getMessageCount() {
         return this.messageCount;
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Value indicating if a subscription supports the concept of sessions.
      * 
-     */
+    */
     public Optional<Boolean> getRequiresSession() {
         return Optional.ofNullable(this.requiresSession);
     }
     /**
      * Enumerates the possible values for the status of a messaging entity.
      * 
-     */
+    */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The exact time the message was updated.
      * 
-     */
+    */
     public String getUpdatedAt() {
         return this.updatedAt;
     }

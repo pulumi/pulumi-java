@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoff
     /**
      * Custom metadata for your handoff procedure. Dialogflow doesn't impose any structure on this.
      * 
-     */
+    */
     public Map<String,String> getMetadata() {
         return this.metadata;
     }

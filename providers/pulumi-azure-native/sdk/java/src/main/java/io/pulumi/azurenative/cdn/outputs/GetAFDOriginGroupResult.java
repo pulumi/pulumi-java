@@ -100,70 +100,70 @@ public final class GetAFDOriginGroupResult {
     /**
      * Health probe settings to the origin that is used to determine the health of the origin.
      * 
-     */
+    */
     public Optional<HealthProbeParametersResponse> getHealthProbeSettings() {
         return Optional.ofNullable(this.healthProbeSettings);
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Load balancing settings for a backend pool
      * 
-     */
+    */
     public Optional<LoadBalancingSettingsParametersResponse> getLoadBalancingSettings() {
         return Optional.ofNullable(this.loadBalancingSettings);
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Provisioning status
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The JSON object that contains the properties to determine origin health using real requests/responses. This property is currently not supported.
      * 
-     */
+    */
     public Optional<ResponseBasedOriginErrorDetectionParametersResponse> getResponseBasedAfdOriginErrorDetectionSettings() {
         return Optional.ofNullable(this.responseBasedAfdOriginErrorDetectionSettings);
     }
     /**
      * Whether to allow session affinity on this host. Valid options are 'Enabled' or 'Disabled'
      * 
-     */
+    */
     public Optional<String> getSessionAffinityState() {
         return Optional.ofNullable(this.sessionAffinityState);
     }
     /**
      * Read only system data
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.
      * 
-     */
+    */
     public Optional<Integer> getTrafficRestorationTimeToHealedOrNewEndpointsInMinutes() {
         return Optional.ofNullable(this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes);
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

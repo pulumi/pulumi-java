@@ -41,21 +41,21 @@ public final class BuildpackBindingPropertiesResponse {
     /**
      * Buildpack Binding Type
      * 
-     */
+    */
     public Optional<String> getBindingType() {
         return Optional.ofNullable(this.bindingType);
     }
     /**
      * The object describes the buildpack binding launch properties
      * 
-     */
+    */
     public Optional<BuildpackBindingLaunchPropertiesResponse> getLaunchProperties() {
         return Optional.ofNullable(this.launchProperties);
     }
     /**
      * State of the Buildpack Binding.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }

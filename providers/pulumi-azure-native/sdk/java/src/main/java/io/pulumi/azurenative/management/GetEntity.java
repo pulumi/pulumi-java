@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEntity {
-/**
- * Describes the result of the request to view entities.
+    private GetEntity() {}
+    public interface BuilderApplicator {
+        public void apply(GetEntityArgs.Builder a);
+    }
+    private static GetEntityArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetEntityArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Describes the result of the request to view entities.
  * API Version: 2020-05-01.
  * 
- *
- * Describes the result of the request to view entities.
+     *
+     * Describes the result of the request to view entities.
  * 
- */
+     */
+    public static CompletableFuture<GetEntityResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Describes the result of the request to view entities.
+     * API Version: 2020-05-01.
+     * 
+     *
+         * Describes the result of the request to view entities.
+     * 
+     */
     public static CompletableFuture<GetEntityResult> invokeAsync(@Nullable GetEntityArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:management:getEntity", TypeShape.of(GetEntityResult.class), args == null ? GetEntityArgs.Empty : args, Utilities.withVersion(options));
     }

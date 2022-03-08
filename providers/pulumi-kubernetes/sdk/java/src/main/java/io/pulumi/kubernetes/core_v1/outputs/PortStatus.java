@@ -52,14 +52,14 @@ public final class PortStatus {
      * - cloud provider specific error values must have names that comply with the
      *   format foo.example.com/CamelCase.
      * 
-     */
+    */
     public Optional<String> getError() {
         return Optional.ofNullable(this.error);
     }
     /**
      * Port is the port number of the service port of which status is recorded here
      * 
-     */
+    */
     public Integer getPort() {
         return this.port;
     }
@@ -71,7 +71,7 @@ public final class PortStatus {
      *  - `"TCP"` is the TCP protocol.
      *  - `"UDP"` is the UDP protocol.
      * 
-     */
+    */
     public String getProtocol() {
         return this.protocol;
     }

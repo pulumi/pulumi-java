@@ -42,21 +42,21 @@ public final class BucketLifecycleConfigurationRuleExpiration {
     /**
      * Date the object is to be deleted. Should be in `YYYY-MM-DD` date format, e.g., `2020-09-30`.
      * 
-     */
+    */
     public Optional<String> getDate() {
         return Optional.ofNullable(this.date);
     }
     /**
      * Number of days before the object is to be deleted.
      * 
-     */
+    */
     public Optional<Integer> getDays() {
         return Optional.ofNullable(this.days);
     }
     /**
      * Enable to remove a delete marker with no noncurrent versions. Cannot be specified with `date` or `days`.
      * 
-     */
+    */
     public Optional<Boolean> getExpiredObjectDeleteMarker() {
         return Optional.ofNullable(this.expiredObjectDeleteMarker);
     }

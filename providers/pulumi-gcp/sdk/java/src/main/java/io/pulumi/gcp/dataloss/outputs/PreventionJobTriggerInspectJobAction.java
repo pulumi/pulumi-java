@@ -25,7 +25,7 @@ public final class PreventionJobTriggerInspectJobAction {
      * Schedule for triggered jobs
      * Structure is documented below.
      * 
-     */
+    */
     public PreventionJobTriggerInspectJobActionSaveFindings getSaveFindings() {
         return this.saveFindings;
     }

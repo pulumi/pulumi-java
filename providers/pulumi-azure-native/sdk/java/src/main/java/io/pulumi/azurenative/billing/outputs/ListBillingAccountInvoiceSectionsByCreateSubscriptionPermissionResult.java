@@ -34,14 +34,14 @@ public final class ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissi
     /**
      * The link (url) to the next page of results.
      * 
-     */
+    */
     public String getNextLink() {
         return this.nextLink;
     }
     /**
      * The list of invoice section properties with create subscription permission.
      * 
-     */
+    */
     public List<InvoiceSectionWithCreateSubPermissionResponse> getValue() {
         return this.value == null ? List.of() : this.value;
     }

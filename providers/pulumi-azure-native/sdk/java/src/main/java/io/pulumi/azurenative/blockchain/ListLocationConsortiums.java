@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListLocationConsortiums {
-/**
- * Collection of the consortium payload.
+    private ListLocationConsortiums() {}
+    public interface BuilderApplicator {
+        public void apply(ListLocationConsortiumsArgs.Builder a);
+    }
+    private static ListLocationConsortiumsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListLocationConsortiumsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Collection of the consortium payload.
  * API Version: 2018-06-01-preview.
  * 
- *
- * Collection of the consortium payload.
+     *
+     * Collection of the consortium payload.
  * 
- */
+     */
+    public static CompletableFuture<ListLocationConsortiumsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Collection of the consortium payload.
+     * API Version: 2018-06-01-preview.
+     * 
+     *
+         * Collection of the consortium payload.
+     * 
+     */
     public static CompletableFuture<ListLocationConsortiumsResult> invokeAsync(ListLocationConsortiumsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:blockchain:listLocationConsortiums", TypeShape.of(ListLocationConsortiumsResult.class), args == null ? ListLocationConsortiumsArgs.Empty : args, Utilities.withVersion(options));
     }

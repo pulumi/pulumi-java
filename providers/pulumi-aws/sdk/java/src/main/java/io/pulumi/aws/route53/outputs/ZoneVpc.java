@@ -33,14 +33,14 @@ public final class ZoneVpc {
     /**
      * ID of the VPC to associate.
      * 
-     */
+    */
     public String getVpcId() {
         return this.vpcId;
     }
     /**
      * Region of the VPC to associate. Defaults to AWS provider region.
      * 
-     */
+    */
     public Optional<String> getVpcRegion() {
         return Optional.ofNullable(this.vpcRegion);
     }

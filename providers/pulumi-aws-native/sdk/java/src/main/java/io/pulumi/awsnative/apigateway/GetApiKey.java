@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetApiKey {
-/**
- * Resource Type definition for AWS::ApiGateway::ApiKey
+    private GetApiKey() {}
+    public interface BuilderApplicator {
+        public void apply(GetApiKeyArgs.Builder a);
+    }
+    private static GetApiKeyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetApiKeyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::ApiGateway::ApiKey
  * 
- */
+     */
+    public static CompletableFuture<GetApiKeyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::ApiGateway::ApiKey
+     * 
+     */
     public static CompletableFuture<GetApiKeyResult> invokeAsync(GetApiKeyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:apigateway:getApiKey", TypeShape.of(GetApiKeyResult.class), args == null ? GetApiKeyArgs.Empty : args, Utilities.withVersion(options));
     }

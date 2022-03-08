@@ -41,21 +41,21 @@ public final class MetricBucketOptionsLinearBuckets {
     /**
      * Must be greater than 0.
      * 
-     */
+    */
     public Optional<Integer> getNumFiniteBuckets() {
         return Optional.ofNullable(this.numFiniteBuckets);
     }
     /**
      * Lower bound of the first bucket.
      * 
-     */
+    */
     public Optional<Double> getOffset() {
         return Optional.ofNullable(this.offset);
     }
     /**
      * Must be greater than 0.
      * 
-     */
+    */
     public Optional<Double> getWidth() {
         return Optional.ofNullable(this.width);
     }

@@ -60,42 +60,42 @@ public final class GooglePrivacyDlpV2InspectTemplateResponse {
     /**
      * The creation timestamp of an inspectTemplate.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * Short description (max 256 chars).
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * Display name (max 256 chars).
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * The core content of the template. Configuration of the scanning process.
      * 
-     */
+    */
     public GooglePrivacyDlpV2InspectConfigResponse getInspectConfig() {
         return this.inspectConfig;
     }
     /**
      * The template name. The template will have one of the following formats: `projects/PROJECT_ID/inspectTemplates/TEMPLATE_ID` OR `organizations/ORGANIZATION_ID/inspectTemplates/TEMPLATE_ID`;
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The last update timestamp of an inspectTemplate.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }

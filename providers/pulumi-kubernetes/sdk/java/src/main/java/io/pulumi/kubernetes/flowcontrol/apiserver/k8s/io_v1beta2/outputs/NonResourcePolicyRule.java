@@ -44,14 +44,14 @@ public final class NonResourcePolicyRule {
      *   - "/healthz/*" matches all per-component health checks.
      *     "*" matches all non-resource urls. if it is present, it must be the only entry. Required.
      * 
-     */
+    */
     public List<String> getNonResourceURLs() {
         return this.nonResourceURLs;
     }
     /**
      * `verbs` is a list of matching verbs and may not be empty. "*" matches all verbs. If it is present, it must be the only entry. Required.
      * 
-     */
+    */
     public List<String> getVerbs() {
         return this.verbs;
     }

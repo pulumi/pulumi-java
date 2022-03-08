@@ -31,14 +31,14 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardButtonResponse {
     /**
      * Optional. The text to send back to the Dialogflow API or a URI to open.
      * 
-     */
+    */
     public String getPostback() {
         return this.postback;
     }
     /**
      * Optional. The text to show on the button.
      * 
-     */
+    */
     public String getText() {
         return this.text;
     }

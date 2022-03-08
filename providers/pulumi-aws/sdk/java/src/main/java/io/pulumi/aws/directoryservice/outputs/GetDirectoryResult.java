@@ -123,14 +123,14 @@ public final class GetDirectoryResult {
     /**
      * The access URL for the directory/connector, such as http://alias.awsapps.com.
      * 
-     */
+    */
     public String getAccessUrl() {
         return this.accessUrl;
     }
     /**
      * The alias for the directory/connector, such as `d-991708b282.awsapps.com`.
      * 
-     */
+    */
     public String getAlias() {
         return this.alias;
     }
@@ -140,7 +140,7 @@ public final class GetDirectoryResult {
     /**
      * A textual description for the directory/connector.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
@@ -150,70 +150,70 @@ public final class GetDirectoryResult {
     /**
      * A list of IP addresses of the DNS servers for the directory/connector.
      * 
-     */
+    */
     public List<String> getDnsIpAddresses() {
         return this.dnsIpAddresses;
     }
     /**
      * (for `MicrosoftAD`) The Microsoft AD edition (`Standard` or `Enterprise`).
      * 
-     */
+    */
     public String getEdition() {
         return this.edition;
     }
     /**
      * The directory/connector single-sign on status.
      * 
-     */
+    */
     public Boolean getEnableSso() {
         return this.enableSso;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The fully qualified name for the directory/connector.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The ID of the security group created by the directory/connector.
      * 
-     */
+    */
     public String getSecurityGroupId() {
         return this.securityGroupId;
     }
     /**
      * The short name of the directory/connector, such as `CORP`.
      * 
-     */
+    */
     public String getShortName() {
         return this.shortName;
     }
     /**
      * (for `SimpleAD` and `ADConnector`) The size of the directory/connector (`Small` or `Large`).
      * 
-     */
+    */
     public String getSize() {
         return this.size;
     }
     /**
      * A map of tags assigned to the directory/connector.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The directory type (`SimpleAD`, `ADConnector` or `MicrosoftAD`).
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

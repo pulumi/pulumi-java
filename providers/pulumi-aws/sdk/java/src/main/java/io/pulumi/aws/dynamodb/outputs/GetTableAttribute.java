@@ -27,7 +27,7 @@ public final class GetTableAttribute {
     /**
      * The name of the DynamoDB table.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }

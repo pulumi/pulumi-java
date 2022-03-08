@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetConstraint {
-/**
- * Provides information on a Service Catalog Constraint.
+    private GetConstraint() {}
+    public interface BuilderApplicator {
+        public void apply(GetConstraintArgs.Builder a);
+    }
+    private static GetConstraintArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetConstraintArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Provides information on a Service Catalog Constraint.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getConstraint.
+     *
+     * A collection of arguments for invoking getConstraint.
  * 
- *
- * A collection of values returned by getConstraint.
+     *
+     * A collection of values returned by getConstraint.
  * 
- */
+     */
+    public static CompletableFuture<GetConstraintResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Provides information on a Service Catalog Constraint.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getConstraint.
+     * 
+     *
+         * A collection of values returned by getConstraint.
+     * 
+     */
     public static CompletableFuture<GetConstraintResult> invokeAsync(GetConstraintArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:servicecatalog/getConstraint:getConstraint", TypeShape.of(GetConstraintResult.class), args == null ? GetConstraintArgs.Empty : args, Utilities.withVersion(options));
     }

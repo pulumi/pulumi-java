@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetOccurrence {
-/**
- * Gets the specified occurrence.
+    private GetOccurrence() {}
+    public interface BuilderApplicator {
+        public void apply(GetOccurrenceArgs.Builder a);
+    }
+    private static GetOccurrenceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetOccurrenceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the specified occurrence.
  * 
- */
+     */
+    public static CompletableFuture<GetOccurrenceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the specified occurrence.
+     * 
+     */
     public static CompletableFuture<GetOccurrenceResult> invokeAsync(GetOccurrenceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:containeranalysis/v1beta1:getOccurrence", TypeShape.of(GetOccurrenceResult.class), args == null ? GetOccurrenceArgs.Empty : args, Utilities.withVersion(options));
     }

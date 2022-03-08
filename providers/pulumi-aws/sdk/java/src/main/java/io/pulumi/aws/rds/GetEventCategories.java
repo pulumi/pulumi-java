@@ -13,16 +13,38 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEventCategories {
-/**
- * ## Example Usage
+    private GetEventCategories() {}
+    public interface BuilderApplicator {
+        public void apply(GetEventCategoriesArgs.Builder a);
+    }
+    private static GetEventCategoriesArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetEventCategoriesArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getEventCategories.
+     *
+     * A collection of arguments for invoking getEventCategories.
  * 
- *
- * A collection of values returned by getEventCategories.
+     *
+     * A collection of values returned by getEventCategories.
  * 
- */
+     */
+    public static CompletableFuture<GetEventCategoriesResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getEventCategories.
+     * 
+     *
+         * A collection of values returned by getEventCategories.
+     * 
+     */
     public static CompletableFuture<GetEventCategoriesResult> invokeAsync(@Nullable GetEventCategoriesArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:rds/getEventCategories:getEventCategories", TypeShape.of(GetEventCategoriesResult.class), args == null ? GetEventCategoriesArgs.Empty : args, Utilities.withVersion(options));
     }

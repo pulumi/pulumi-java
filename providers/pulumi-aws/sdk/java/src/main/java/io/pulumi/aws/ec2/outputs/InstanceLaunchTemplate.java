@@ -40,21 +40,21 @@ public final class InstanceLaunchTemplate {
     /**
      * The ID of the launch template. Conflicts with `name`.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The name of the launch template. Conflicts with `id`.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Template version. Can be a specific version number, `$Latest` or `$Default`. The default value is `$Default`.
      * 
-     */
+    */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }

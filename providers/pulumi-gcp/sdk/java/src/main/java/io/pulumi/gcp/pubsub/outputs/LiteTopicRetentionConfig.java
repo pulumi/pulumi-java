@@ -40,7 +40,7 @@ public final class LiteTopicRetentionConfig {
      * in any of the topic's partitions grows beyond this value, older messages will be
      * dropped to make room for newer ones, regardless of the value of period.
      * 
-     */
+    */
     public String getPerPartitionBytes() {
         return this.perPartitionBytes;
     }
@@ -50,7 +50,7 @@ public final class LiteTopicRetentionConfig {
      * duration in seconds with up to nine fractional digits, terminated by 's'.
      * Example: "3.5s".
      * 
-     */
+    */
     public Optional<String> getPeriod() {
         return Optional.ofNullable(this.period);
     }

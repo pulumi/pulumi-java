@@ -74,6 +74,22 @@ public class IdentityPoolProviderPrincipalTag extends io.pulumi.resources.Custom
         return this.useDefaults;
     }
 
+    public interface BuilderApplicator {
+        public void apply(IdentityPoolProviderPrincipalTagArgs.Builder a);
+    }
+    private static io.pulumi.aws.cognito.IdentityPoolProviderPrincipalTagArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.aws.cognito.IdentityPoolProviderPrincipalTagArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public IdentityPoolProviderPrincipalTag(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

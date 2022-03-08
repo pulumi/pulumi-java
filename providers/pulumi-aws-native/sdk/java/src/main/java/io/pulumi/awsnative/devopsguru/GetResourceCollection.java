@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetResourceCollection {
-/**
- * This resource schema represents the ResourceCollection resource in the Amazon DevOps Guru.
+    private GetResourceCollection() {}
+    public interface BuilderApplicator {
+        public void apply(GetResourceCollectionArgs.Builder a);
+    }
+    private static GetResourceCollectionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetResourceCollectionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * This resource schema represents the ResourceCollection resource in the Amazon DevOps Guru.
  * 
- */
+     */
+    public static CompletableFuture<GetResourceCollectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * This resource schema represents the ResourceCollection resource in the Amazon DevOps Guru.
+     * 
+     */
     public static CompletableFuture<GetResourceCollectionResult> invokeAsync(GetResourceCollectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:devopsguru:getResourceCollection", TypeShape.of(GetResourceCollectionResult.class), args == null ? GetResourceCollectionArgs.Empty : args, Utilities.withVersion(options));
     }

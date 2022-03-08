@@ -33,14 +33,14 @@ public final class ManagedRuleOverrideResponse {
     /**
      * Identifier for the managed rule.
      * 
-     */
+    */
     public String getRuleId() {
         return this.ruleId;
     }
     /**
      * The state of the managed rule. Defaults to Disabled if not specified.
      * 
-     */
+    */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }

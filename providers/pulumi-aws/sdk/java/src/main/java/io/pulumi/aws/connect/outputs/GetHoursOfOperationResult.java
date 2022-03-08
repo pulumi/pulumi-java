@@ -83,63 +83,63 @@ public final class GetHoursOfOperationResult {
     /**
      * Specifies configuration information for the hours of operation: day, start time, and end time . Config blocks are documented below. Config blocks are documented below.
      * 
-     */
+    */
     public List<GetHoursOfOperationConfig> getConfigs() {
         return this.configs;
     }
     /**
      * Specifies the description of the Hours of Operation.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The Amazon Resource Name (ARN) of the Hours of Operation.
      * 
-     */
+    */
     public String getHoursOfOperationArn() {
         return this.hoursOfOperationArn;
     }
     /**
      * The identifier for the hours of operation.
      * 
-     */
+    */
     public String getHoursOfOperationId() {
         return this.hoursOfOperationId;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Specifies the identifier of the hosting Amazon Connect Instance.
      * 
-     */
+    */
     public String getInstanceId() {
         return this.instanceId;
     }
     /**
      * Specifies the name of the Hours of Operation.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * A the map of tags to assign to the Hours of Operation.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags;
     }
     /**
      * Specifies the time zone of the Hours of Operation.
      * 
-     */
+    */
     public String getTimeZone() {
         return this.timeZone;
     }

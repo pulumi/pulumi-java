@@ -62,14 +62,14 @@ public final class RegionPerInstanceConfigPreservedStateDisk {
      * Default value is `NEVER`.
      * Possible values are `NEVER` and `ON_PERMANENT_INSTANCE_DELETION`.
      * 
-     */
+    */
     public Optional<String> getDeleteRule() {
         return Optional.ofNullable(this.deleteRule);
     }
     /**
      * A unique device name that is reflected into the /dev/ tree of a Linux operating system running within the instance.
      * 
-     */
+    */
     public String getDeviceName() {
         return this.deviceName;
     }
@@ -78,7 +78,7 @@ public final class RegionPerInstanceConfigPreservedStateDisk {
      * Default value is `READ_WRITE`.
      * Possible values are `READ_ONLY` and `READ_WRITE`.
      * 
-     */
+    */
     public Optional<String> getMode() {
         return Optional.ofNullable(this.mode);
     }
@@ -86,7 +86,7 @@ public final class RegionPerInstanceConfigPreservedStateDisk {
      * The URI of an existing persistent disk to attach under the specified device-name in the format
      * `projects/project-id/zones/zone/disks/disk-name`.
      * 
-     */
+    */
     public String getSource() {
         return this.source;
     }

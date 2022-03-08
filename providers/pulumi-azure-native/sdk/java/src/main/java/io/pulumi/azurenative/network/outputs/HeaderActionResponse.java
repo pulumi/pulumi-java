@@ -40,21 +40,21 @@ public final class HeaderActionResponse {
     /**
      * Which type of manipulation to apply to the header.
      * 
-     */
+    */
     public String getHeaderActionType() {
         return this.headerActionType;
     }
     /**
      * The name of the header this action will apply to.
      * 
-     */
+    */
     public String getHeaderName() {
         return this.headerName;
     }
     /**
      * The value to update the given header name with. This value is not used if the actionType is Delete.
      * 
-     */
+    */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }

@@ -35,7 +35,7 @@ public final class VirtualClusterContainerProvider {
     /**
      * The ID of the container cluster
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -45,7 +45,7 @@ public final class VirtualClusterContainerProvider {
     /**
      * The type of the container provider
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

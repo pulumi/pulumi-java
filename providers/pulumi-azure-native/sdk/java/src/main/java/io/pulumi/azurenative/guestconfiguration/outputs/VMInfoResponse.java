@@ -31,14 +31,14 @@ public final class VMInfoResponse {
     /**
      * Azure resource Id of the VM.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * UUID(Universally Unique Identifier) of the VM.
      * 
-     */
+    */
     public String getUuid() {
         return this.uuid;
     }

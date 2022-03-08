@@ -33,14 +33,14 @@ public final class GroupInsightsConfiguration {
     /**
      * Set the InsightsEnabled value to true to enable insights or false to disable insights.
      * 
-     */
+    */
     public Optional<Boolean> getInsightsEnabled() {
         return Optional.ofNullable(this.insightsEnabled);
     }
     /**
      * Set the NotificationsEnabled value to true to enable insights notifications. Notifications can only be enabled on a group with InsightsEnabled set to true.
      * 
-     */
+    */
     public Optional<Boolean> getNotificationsEnabled() {
         return Optional.ofNullable(this.notificationsEnabled);
     }

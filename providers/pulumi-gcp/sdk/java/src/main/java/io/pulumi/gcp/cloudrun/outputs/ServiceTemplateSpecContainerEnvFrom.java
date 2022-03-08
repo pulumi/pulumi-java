@@ -45,14 +45,14 @@ public final class ServiceTemplateSpecContainerEnvFrom {
      * The ConfigMap to select from.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<ServiceTemplateSpecContainerEnvFromConfigMapRef> getConfigMapRef() {
         return Optional.ofNullable(this.configMapRef);
     }
     /**
      * An optional identifier to prepend to each key in the ConfigMap.
      * 
-     */
+    */
     public Optional<String> getPrefix() {
         return Optional.ofNullable(this.prefix);
     }
@@ -60,7 +60,7 @@ public final class ServiceTemplateSpecContainerEnvFrom {
      * The Secret to select from.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<ServiceTemplateSpecContainerEnvFromSecretRef> getSecretRef() {
         return Optional.ofNullable(this.secretRef);
     }

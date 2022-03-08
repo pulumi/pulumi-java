@@ -34,14 +34,14 @@ public final class ConfigurationProfilePreferencePropertiesResponse {
     /**
      * The custom preferences for Azure Antimalware.
      * 
-     */
+    */
     public Optional<ConfigurationProfilePreferenceAntiMalwareResponse> getAntiMalware() {
         return Optional.ofNullable(this.antiMalware);
     }
     /**
      * The custom preferences for Azure VM Backup.
      * 
-     */
+    */
     public Optional<ConfigurationProfilePreferenceVmBackupResponse> getVmBackup() {
         return Optional.ofNullable(this.vmBackup);
     }

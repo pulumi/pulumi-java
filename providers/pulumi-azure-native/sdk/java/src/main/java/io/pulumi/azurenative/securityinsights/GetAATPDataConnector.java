@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAATPDataConnector {
-/**
- * Represents AATP (Azure Advanced Threat Protection) data connector.
+    private GetAATPDataConnector() {}
+    public interface BuilderApplicator {
+        public void apply(GetAATPDataConnectorArgs.Builder a);
+    }
+    private static GetAATPDataConnectorArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAATPDataConnectorArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Represents AATP (Azure Advanced Threat Protection) data connector.
  * API Version: 2020-01-01.
  * 
- *
- * Represents AATP (Azure Advanced Threat Protection) data connector.
+     *
+     * Represents AATP (Azure Advanced Threat Protection) data connector.
  * 
- */
+     */
+    public static CompletableFuture<GetAATPDataConnectorResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Represents AATP (Azure Advanced Threat Protection) data connector.
+     * API Version: 2020-01-01.
+     * 
+     *
+         * Represents AATP (Azure Advanced Threat Protection) data connector.
+     * 
+     */
     public static CompletableFuture<GetAATPDataConnectorResult> invokeAsync(GetAATPDataConnectorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getAATPDataConnector", TypeShape.of(GetAATPDataConnectorResult.class), args == null ? GetAATPDataConnectorArgs.Empty : args, Utilities.withVersion(options));
     }

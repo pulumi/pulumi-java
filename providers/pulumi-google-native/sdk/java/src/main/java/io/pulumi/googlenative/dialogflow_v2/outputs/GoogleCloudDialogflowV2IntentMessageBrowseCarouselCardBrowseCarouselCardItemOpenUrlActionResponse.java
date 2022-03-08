@@ -31,14 +31,14 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseC
     /**
      * URL
      * 
-     */
+    */
     public String getUrl() {
         return this.url;
     }
     /**
      * Optional. Specifies the type of viewer that is used when opening the URL. Defaults to opening via web browser.
      * 
-     */
+    */
     public String getUrlTypeHint() {
         return this.urlTypeHint;
     }

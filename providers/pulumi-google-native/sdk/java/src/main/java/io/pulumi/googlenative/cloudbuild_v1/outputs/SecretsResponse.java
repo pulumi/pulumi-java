@@ -33,14 +33,14 @@ public final class SecretsResponse {
     /**
      * Secrets encrypted with KMS key and the associated secret environment variable.
      * 
-     */
+    */
     public List<InlineSecretResponse> getInline() {
         return this.inline;
     }
     /**
      * Secrets in Secret Manager and associated secret environment variable.
      * 
-     */
+    */
     public List<SecretManagerSecretResponse> getSecretManager() {
         return this.secretManager;
     }

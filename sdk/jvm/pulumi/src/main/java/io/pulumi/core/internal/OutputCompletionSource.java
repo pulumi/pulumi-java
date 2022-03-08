@@ -46,13 +46,13 @@ public class OutputCompletionSource<T> {
     }
 
     public void setStringValue(String value, boolean isKnown) {
-        setObjectValue(value, TypeShape.of(value.getClass()), isKnown);
+        setObjectValue(value, TypeShape.of(String.class), isKnown);
     }
 
     public void setObjectValue(Object value, TypeShape<?> valueShape, boolean isKnown) {
-        if (!dataTypeShape.getType().isAssignableFrom(value.getClass())) {
+        if (value != null && !dataTypeShape.getType().isAssignableFrom(value.getClass())) {
             throw new IllegalArgumentException(String.format(
-                    "Expected 'setObjectValue' with matching types, got 'OutputCompletionSource<%s>' and value class '%s",
+                    "Expected 'setObjectValue' with matching types, got 'OutputCompletionSource<%s>' and value class '%s'",
                     value.getClass().getTypeName(), dataTypeShape.getType().getTypeName())
             );
         }
@@ -80,8 +80,10 @@ public class OutputCompletionSource<T> {
         ));
     }
 
-    public void setValue(String context, Value value, ImmutableSet<Resource> depsOrEmpty) {
-        setValue(Converter.convertValue(
+    public void setValue(Converter converter, String context, Value value, ImmutableSet<Resource> depsOrEmpty) {
+        // we need to call the converter here, inside this class where we know the T,
+        // the T type will get lost at the call site due to Java generics limitations
+        setValue(converter.convertValue(
                 context,
                 value,
                 getTypeShape(),

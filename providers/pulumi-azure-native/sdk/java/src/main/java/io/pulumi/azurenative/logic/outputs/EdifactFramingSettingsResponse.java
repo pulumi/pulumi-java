@@ -97,77 +97,77 @@ public final class EdifactFramingSettingsResponse {
     /**
      * The character encoding.
      * 
-     */
+    */
     public Optional<String> getCharacterEncoding() {
         return Optional.ofNullable(this.characterEncoding);
     }
     /**
      * The EDIFACT frame setting characterSet.
      * 
-     */
+    */
     public String getCharacterSet() {
         return this.characterSet;
     }
     /**
      * The component separator.
      * 
-     */
+    */
     public Integer getComponentSeparator() {
         return this.componentSeparator;
     }
     /**
      * The data element separator.
      * 
-     */
+    */
     public Integer getDataElementSeparator() {
         return this.dataElementSeparator;
     }
     /**
      * The EDIFACT frame setting decimal indicator.
      * 
-     */
+    */
     public String getDecimalPointIndicator() {
         return this.decimalPointIndicator;
     }
     /**
      * The protocol version.
      * 
-     */
+    */
     public Integer getProtocolVersion() {
         return this.protocolVersion;
     }
     /**
      * The release indicator.
      * 
-     */
+    */
     public Integer getReleaseIndicator() {
         return this.releaseIndicator;
     }
     /**
      * The repetition separator.
      * 
-     */
+    */
     public Integer getRepetitionSeparator() {
         return this.repetitionSeparator;
     }
     /**
      * The segment terminator.
      * 
-     */
+    */
     public Integer getSegmentTerminator() {
         return this.segmentTerminator;
     }
     /**
      * The EDIFACT frame setting segment terminator suffix.
      * 
-     */
+    */
     public String getSegmentTerminatorSuffix() {
         return this.segmentTerminatorSuffix;
     }
     /**
      * The service code list directory version.
      * 
-     */
+    */
     public Optional<String> getServiceCodeListDirectoryVersion() {
         return Optional.ofNullable(this.serviceCodeListDirectoryVersion);
     }

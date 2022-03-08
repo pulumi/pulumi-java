@@ -33,14 +33,14 @@ public final class IPBlock {
     /**
      * CIDR is a string representing the IP Block Valid examples are "192.168.1.1/24"
      * 
-     */
+    */
     public String getCidr() {
         return this.cidr;
     }
     /**
      * Except is a slice of CIDRs that should not be included within an IP Block Valid examples are "192.168.1.1/24" Except values will be rejected if they are outside the CIDR range
      * 
-     */
+    */
     public List<String> getExcept() {
         return this.except == null ? List.of() : this.except;
     }

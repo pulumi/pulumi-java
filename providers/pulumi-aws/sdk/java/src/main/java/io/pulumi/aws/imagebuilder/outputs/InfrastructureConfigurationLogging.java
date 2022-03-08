@@ -23,7 +23,7 @@ public final class InfrastructureConfigurationLogging {
     /**
      * Configuration block with S3 logging settings. Detailed below.
      * 
-     */
+    */
     public InfrastructureConfigurationLoggingS3Logs getS3Logs() {
         return this.s3Logs;
     }

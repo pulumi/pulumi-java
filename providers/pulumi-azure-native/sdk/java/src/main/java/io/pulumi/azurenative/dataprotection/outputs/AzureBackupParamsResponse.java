@@ -32,7 +32,7 @@ public final class AzureBackupParamsResponse {
     /**
      * BackupType ; Full/Incremental etc
      * 
-     */
+    */
     public String getBackupType() {
         return this.backupType;
     }
@@ -40,7 +40,7 @@ public final class AzureBackupParamsResponse {
      * Type of the specific object - used for deserializing
      * Expected value is 'AzureBackupParams'.
      * 
-     */
+    */
     public String getObjectType() {
         return this.objectType;
     }

@@ -64,35 +64,35 @@ public final class GetAuthorizationTokenResult {
     /**
      * Temporary IAM authentication credentials to access the ECR repository encoded in base64 in the form of `user_name:password`.
      * 
-     */
+    */
     public String getAuthorizationToken() {
         return this.authorizationToken;
     }
     /**
      * The time in UTC RFC3339 format when the authorization token expires.
      * 
-     */
+    */
     public String getExpiresAt() {
         return this.expiresAt;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Password decoded from the authorization token.
      * 
-     */
+    */
     public String getPassword() {
         return this.password;
     }
     /**
      * The registry URL to use in the docker login command.
      * 
-     */
+    */
     public String getProxyEndpoint() {
         return this.proxyEndpoint;
     }
@@ -102,7 +102,7 @@ public final class GetAuthorizationTokenResult {
     /**
      * User name decoded from the authorization token.
      * 
-     */
+    */
     public String getUserName() {
         return this.userName;
     }

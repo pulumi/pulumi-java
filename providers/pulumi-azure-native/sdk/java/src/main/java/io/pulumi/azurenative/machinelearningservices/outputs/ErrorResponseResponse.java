@@ -40,21 +40,21 @@ public final class ErrorResponseResponse {
     /**
      * Error code.
      * 
-     */
+    */
     public String getCode() {
         return this.code;
     }
     /**
      * An array of error detail objects.
      * 
-     */
+    */
     public List<ErrorDetailResponse> getDetails() {
         return this.details;
     }
     /**
      * Error message.
      * 
-     */
+    */
     public String getMessage() {
         return this.message;
     }

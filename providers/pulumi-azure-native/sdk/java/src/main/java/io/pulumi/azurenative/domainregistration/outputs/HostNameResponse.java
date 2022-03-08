@@ -62,42 +62,42 @@ public final class HostNameResponse {
     /**
      * Name of the Azure resource the hostname is assigned to. If it is assigned to a Traffic Manager then it will be the Traffic Manager name otherwise it will be the app name.
      * 
-     */
+    */
     public Optional<String> getAzureResourceName() {
         return Optional.ofNullable(this.azureResourceName);
     }
     /**
      * Type of the Azure resource the hostname is assigned to.
      * 
-     */
+    */
     public Optional<String> getAzureResourceType() {
         return Optional.ofNullable(this.azureResourceType);
     }
     /**
      * Type of the DNS record.
      * 
-     */
+    */
     public Optional<String> getCustomHostNameDnsRecordType() {
         return Optional.ofNullable(this.customHostNameDnsRecordType);
     }
     /**
      * Type of the hostname.
      * 
-     */
+    */
     public Optional<String> getHostNameType() {
         return Optional.ofNullable(this.hostNameType);
     }
     /**
      * Name of the hostname.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * List of apps the hostname is assigned to. This list will have more than one app only if the hostname is pointing to a Traffic Manager.
      * 
-     */
+    */
     public List<String> getSiteNames() {
         return this.siteNames == null ? List.of() : this.siteNames;
     }

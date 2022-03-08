@@ -61,7 +61,7 @@ public final class FlexibleAppVersionApiConfig {
      * Default value is `AUTH_FAIL_ACTION_REDIRECT`.
      * Possible values are `AUTH_FAIL_ACTION_REDIRECT` and `AUTH_FAIL_ACTION_UNAUTHORIZED`.
      * 
-     */
+    */
     public Optional<String> getAuthFailAction() {
         return Optional.ofNullable(this.authFailAction);
     }
@@ -70,14 +70,14 @@ public final class FlexibleAppVersionApiConfig {
      * Default value is `LOGIN_OPTIONAL`.
      * Possible values are `LOGIN_OPTIONAL`, `LOGIN_ADMIN`, and `LOGIN_REQUIRED`.
      * 
-     */
+    */
     public Optional<String> getLogin() {
         return Optional.ofNullable(this.login);
     }
     /**
      * Path to the script from the application root directory.
      * 
-     */
+    */
     public String getScript() {
         return this.script;
     }
@@ -85,14 +85,14 @@ public final class FlexibleAppVersionApiConfig {
      * Security (HTTPS) enforcement for this URL.
      * Possible values are `SECURE_DEFAULT`, `SECURE_NEVER`, `SECURE_OPTIONAL`, and `SECURE_ALWAYS`.
      * 
-     */
+    */
     public Optional<String> getSecurityLevel() {
         return Optional.ofNullable(this.securityLevel);
     }
     /**
      * URL to serve the endpoint at.
      * 
-     */
+    */
     public Optional<String> getUrl() {
         return Optional.ofNullable(this.url);
     }

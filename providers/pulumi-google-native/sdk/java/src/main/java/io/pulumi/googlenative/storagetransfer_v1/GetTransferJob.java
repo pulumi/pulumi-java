@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTransferJob {
-/**
- * Gets a transfer job.
+    private GetTransferJob() {}
+    public interface BuilderApplicator {
+        public void apply(GetTransferJobArgs.Builder a);
+    }
+    private static GetTransferJobArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTransferJobArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets a transfer job.
  * 
- */
+     */
+    public static CompletableFuture<GetTransferJobResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets a transfer job.
+     * 
+     */
     public static CompletableFuture<GetTransferJobResult> invokeAsync(GetTransferJobArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:storagetransfer/v1:getTransferJob", TypeShape.of(GetTransferJobResult.class), args == null ? GetTransferJobArgs.Empty : args, Utilities.withVersion(options));
     }

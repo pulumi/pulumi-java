@@ -13,6 +13,18 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ArgFunction {
+    private ArgFunction() {}
+    public interface BuilderApplicator {
+        public void apply(ArgFunctionArgs.Builder a);
+    }
+    private static ArgFunctionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ArgFunctionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    public static CompletableFuture<ArgFunctionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
     public static CompletableFuture<ArgFunctionResult> invokeAsync(@Nullable ArgFunctionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("example::argFunction", TypeShape.of(ArgFunctionResult.class), args == null ? ArgFunctionArgs.Empty : args, Utilities.withVersion(options));
     }

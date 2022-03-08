@@ -33,14 +33,14 @@ public final class StudioComponentComputeFarmConfiguration {
     /**
      * <p>The name of an Active Directory user that is used on ComputeFarm worker instances.</p>
      * 
-     */
+    */
     public Optional<String> getActiveDirectoryUser() {
         return Optional.ofNullable(this.activeDirectoryUser);
     }
     /**
      * <p>The endpoint of the ComputeFarm that is accessed by the studio component resource.</p>
      * 
-     */
+    */
     public Optional<String> getEndpoint() {
         return Optional.ofNullable(this.endpoint);
     }

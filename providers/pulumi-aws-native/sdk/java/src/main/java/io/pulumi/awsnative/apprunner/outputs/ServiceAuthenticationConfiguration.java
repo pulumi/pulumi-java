@@ -33,14 +33,14 @@ public final class ServiceAuthenticationConfiguration {
     /**
      * Access Role Arn
      * 
-     */
+    */
     public Optional<String> getAccessRoleArn() {
         return Optional.ofNullable(this.accessRoleArn);
     }
     /**
      * Connection Arn
      * 
-     */
+    */
     public Optional<String> getConnectionArn() {
         return Optional.ofNullable(this.connectionArn);
     }

@@ -56,7 +56,7 @@ public final class GetSqlMigrationServiceResult {
     /**
      * Current state of the Integration runtime.
      * 
-     */
+    */
     public String getIntegrationRuntimeState() {
         return this.integrationRuntimeState;
     }
@@ -69,7 +69,7 @@ public final class GetSqlMigrationServiceResult {
     /**
      * Provisioning state to track the async operation status.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }

@@ -37,7 +37,7 @@ public final class NodePoolUpgradeSettings {
      * an upgrade. Increasing `max_surge` raises the number of nodes that can be upgraded simultaneously.
      * Can be set to 0 or greater.
      * 
-     */
+    */
     public Integer getMaxSurge() {
         return this.maxSurge;
     }
@@ -46,7 +46,7 @@ public final class NodePoolUpgradeSettings {
      * an upgrade. Increasing `max_unavailable` raises the number of nodes that can be upgraded in
      * parallel. Can be set to 0 or greater.
      * 
-     */
+    */
     public Integer getMaxUnavailable() {
         return this.maxUnavailable;
     }

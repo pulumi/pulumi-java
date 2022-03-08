@@ -44,7 +44,7 @@ public final class GetLaunchPathsResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -54,7 +54,7 @@ public final class GetLaunchPathsResult {
     /**
      * Block with information about the launch path. See details below.
      * 
-     */
+    */
     public List<GetLaunchPathsSummary> getSummaries() {
         return this.summaries;
     }

@@ -38,14 +38,14 @@ public final class DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstance
      * * `TERMINATE`: Instances are terminated after a specified wait time.
      * * `KEEP_ALIVE`: Instances are left running after they are deregistered from the load balancer and removed from the deployment group.
      * 
-     */
+    */
     public Optional<String> getAction() {
         return Optional.ofNullable(this.action);
     }
     /**
      * The number of minutes to wait after a successful blue/green deployment before terminating instances from the original environment.
      * 
-     */
+    */
     public Optional<Integer> getTerminationWaitTimeInMinutes() {
         return Optional.ofNullable(this.terminationWaitTimeInMinutes);
     }

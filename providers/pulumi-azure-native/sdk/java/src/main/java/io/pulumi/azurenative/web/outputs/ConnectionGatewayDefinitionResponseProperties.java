@@ -71,49 +71,49 @@ public final class ConnectionGatewayDefinitionResponseProperties {
     /**
      * The URI of the backend
      * 
-     */
+    */
     public Optional<String> getBackendUri() {
         return Optional.ofNullable(this.backendUri);
     }
     /**
      * The gateway installation reference
      * 
-     */
+    */
     public Optional<ConnectionGatewayReferenceResponse> getConnectionGatewayInstallation() {
         return Optional.ofNullable(this.connectionGatewayInstallation);
     }
     /**
      * The gateway admin
      * 
-     */
+    */
     public List<String> getContactInformation() {
         return this.contactInformation == null ? List.of() : this.contactInformation;
     }
     /**
      * The gateway description
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The gateway display name
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * The machine name of the gateway
      * 
-     */
+    */
     public Optional<String> getMachineName() {
         return Optional.ofNullable(this.machineName);
     }
     /**
      * The gateway status
      * 
-     */
+    */
     public Optional<Object> getStatus() {
         return Optional.ofNullable(this.status);
     }

@@ -67,49 +67,49 @@ public final class GetManagedInstanceKeyResult {
     /**
      * Key auto rotation opt-in flag. Either true or false.
      * 
-     */
+    */
     public Boolean getAutoRotationEnabled() {
         return this.autoRotationEnabled;
     }
     /**
      * The key creation date.
      * 
-     */
+    */
     public String getCreationDate() {
         return this.creationDate;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Kind of encryption protector. This is metadata used for the Azure portal experience.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Thumbprint of the key.
      * 
-     */
+    */
     public String getThumbprint() {
         return this.thumbprint;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

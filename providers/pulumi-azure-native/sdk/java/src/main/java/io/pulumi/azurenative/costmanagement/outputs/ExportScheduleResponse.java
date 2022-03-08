@@ -41,21 +41,21 @@ public final class ExportScheduleResponse {
     /**
      * The schedule recurrence.
      * 
-     */
+    */
     public Optional<String> getRecurrence() {
         return Optional.ofNullable(this.recurrence);
     }
     /**
      * Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.
      * 
-     */
+    */
     public Optional<ExportRecurrencePeriodResponse> getRecurrencePeriod() {
         return Optional.ofNullable(this.recurrencePeriod);
     }
     /**
      * The status of the export's schedule. If 'Inactive', the export's schedule is paused.
      * 
-     */
+    */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }

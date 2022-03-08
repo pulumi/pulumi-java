@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSolutionStack {
-/**
- * Use this data source to get the name of a elastic beanstalk solution stack.
+    private GetSolutionStack() {}
+    public interface BuilderApplicator {
+        public void apply(GetSolutionStackArgs.Builder a);
+    }
+    private static GetSolutionStackArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSolutionStackArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Use this data source to get the name of a elastic beanstalk solution stack.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getSolutionStack.
+     *
+     * A collection of arguments for invoking getSolutionStack.
  * 
- *
- * A collection of values returned by getSolutionStack.
+     *
+     * A collection of values returned by getSolutionStack.
  * 
- */
+     */
+    public static CompletableFuture<GetSolutionStackResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Use this data source to get the name of a elastic beanstalk solution stack.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getSolutionStack.
+     * 
+     *
+         * A collection of values returned by getSolutionStack.
+     * 
+     */
     public static CompletableFuture<GetSolutionStackResult> invokeAsync(GetSolutionStackArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:elasticbeanstalk/getSolutionStack:getSolutionStack", TypeShape.of(GetSolutionStackResult.class), args == null ? GetSolutionStackArgs.Empty : args, Utilities.withVersion(options));
     }

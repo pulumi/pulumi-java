@@ -72,28 +72,28 @@ public final class SqlDedicatedGatewayServiceResourcePropertiesResponse {
     /**
      * Time of the last state change (ISO-8601 format).
      * 
-     */
+    */
     public String getCreationTime() {
         return this.creationTime;
     }
     /**
      * Instance count for the service.
      * 
-     */
+    */
     public Optional<Integer> getInstanceCount() {
         return Optional.ofNullable(this.instanceCount);
     }
     /**
      * Instance type for the service.
      * 
-     */
+    */
     public Optional<String> getInstanceSize() {
         return Optional.ofNullable(this.instanceSize);
     }
     /**
      * An array that contains all of the locations for the service.
      * 
-     */
+    */
     public List<SqlDedicatedGatewayRegionalServiceResourceResponse> getLocations() {
         return this.locations;
     }
@@ -101,21 +101,21 @@ public final class SqlDedicatedGatewayServiceResourcePropertiesResponse {
      * ServiceType for the service.
      * Expected value is 'SqlDedicatedGateway'.
      * 
-     */
+    */
     public String getServiceType() {
         return this.serviceType;
     }
     /**
      * SqlDedicatedGateway endpoint for the service.
      * 
-     */
+    */
     public Optional<String> getSqlDedicatedGatewayEndpoint() {
         return Optional.ofNullable(this.sqlDedicatedGatewayEndpoint);
     }
     /**
      * Describes the status of a service.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }

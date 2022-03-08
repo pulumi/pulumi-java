@@ -39,21 +39,21 @@ public final class TaskDefinitionVolumeFsxWindowsFileServerVolumeConfiguration {
     /**
      * Configuration block for authorization for the Amazon FSx for Windows File Server file system detailed below.
      * 
-     */
+    */
     public TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfig getAuthorizationConfig() {
         return this.authorizationConfig;
     }
     /**
      * The Amazon FSx for Windows File Server file system ID to use.
      * 
-     */
+    */
     public String getFileSystemId() {
         return this.fileSystemId;
     }
     /**
      * The directory within the Amazon FSx for Windows File Server file system to mount as the root directory inside the host.
      * 
-     */
+    */
     public String getRootDirectory() {
         return this.rootDirectory;
     }

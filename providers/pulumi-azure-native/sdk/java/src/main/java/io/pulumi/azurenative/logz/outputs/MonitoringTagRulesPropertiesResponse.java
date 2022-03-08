@@ -42,21 +42,21 @@ public final class MonitoringTagRulesPropertiesResponse {
     /**
      * Set of rules for sending logs for the Monitor resource.
      * 
-     */
+    */
     public Optional<LogRulesResponse> getLogRules() {
         return Optional.ofNullable(this.logRules);
     }
     /**
      * Flag specifying if the resource provisioning state as tracked by ARM.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }

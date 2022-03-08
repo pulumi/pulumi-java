@@ -45,7 +45,7 @@ public final class InquiryInfoResponse {
     /**
      * Error Details if the Status is non-success.
      * 
-     */
+    */
     public Optional<ErrorDetailResponse> getErrorDetail() {
         return Optional.ofNullable(this.errorDetail);
     }
@@ -53,7 +53,7 @@ public final class InquiryInfoResponse {
      * Inquiry Details which will have workload specific details.
      * For e.g. - For SQL and oracle this will contain different details.
      * 
-     */
+    */
     public List<WorkloadInquiryDetailsResponse> getInquiryDetails() {
         return this.inquiryDetails == null ? List.of() : this.inquiryDetails;
     }
@@ -61,7 +61,7 @@ public final class InquiryInfoResponse {
      * Inquiry Status for this container such as
      * InProgress | Failed | Succeeded
      * 
-     */
+    */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }

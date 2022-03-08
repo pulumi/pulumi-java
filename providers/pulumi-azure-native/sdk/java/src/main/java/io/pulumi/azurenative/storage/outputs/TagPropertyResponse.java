@@ -52,35 +52,35 @@ public final class TagPropertyResponse {
     /**
      * Returns the Object ID of the user who added the tag.
      * 
-     */
+    */
     public String getObjectIdentifier() {
         return this.objectIdentifier;
     }
     /**
      * The tag value.
      * 
-     */
+    */
     public String getTag() {
         return this.tag;
     }
     /**
      * Returns the Tenant ID that issued the token for the user who added the tag.
      * 
-     */
+    */
     public String getTenantId() {
         return this.tenantId;
     }
     /**
      * Returns the date and time the tag was added.
      * 
-     */
+    */
     public String getTimestamp() {
         return this.timestamp;
     }
     /**
      * Returns the User Principal Name of the user who added the tag.
      * 
-     */
+    */
     public String getUpn() {
         return this.upn;
     }

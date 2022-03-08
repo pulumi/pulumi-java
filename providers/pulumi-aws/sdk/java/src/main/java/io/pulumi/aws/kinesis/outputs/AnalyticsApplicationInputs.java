@@ -90,7 +90,7 @@ public final class AnalyticsApplicationInputs {
     /**
      * The ARN of the Kinesis Analytics Application.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
@@ -98,7 +98,7 @@ public final class AnalyticsApplicationInputs {
      * The Kinesis Firehose configuration for the streaming source. Conflicts with `kinesis_stream`.
      * See Kinesis Firehose below for more details.
      * 
-     */
+    */
     public Optional<AnalyticsApplicationInputsKinesisFirehose> getKinesisFirehose() {
         return Optional.ofNullable(this.kinesisFirehose);
     }
@@ -106,14 +106,14 @@ public final class AnalyticsApplicationInputs {
      * The Kinesis Stream configuration for the streaming source. Conflicts with `kinesis_firehose`.
      * See Kinesis Stream below for more details.
      * 
-     */
+    */
     public Optional<AnalyticsApplicationInputsKinesisStream> getKinesisStream() {
         return Optional.ofNullable(this.kinesisStream);
     }
     /**
      * The Name Prefix to use when creating an in-application stream.
      * 
-     */
+    */
     public String getNamePrefix() {
         return this.namePrefix;
     }
@@ -121,7 +121,7 @@ public final class AnalyticsApplicationInputs {
      * The number of Parallel in-application streams to create.
      * See Parallelism below for more details.
      * 
-     */
+    */
     public Optional<AnalyticsApplicationInputsParallelism> getParallelism() {
         return Optional.ofNullable(this.parallelism);
     }
@@ -129,14 +129,14 @@ public final class AnalyticsApplicationInputs {
      * The Processing Configuration to transform records as they are received from the stream.
      * See Processing Configuration below for more details.
      * 
-     */
+    */
     public Optional<AnalyticsApplicationInputsProcessingConfiguration> getProcessingConfiguration() {
         return Optional.ofNullable(this.processingConfiguration);
     }
     /**
      * The Schema format of the data in the streaming source. See Source Schema below for more details.
      * 
-     */
+    */
     public AnalyticsApplicationInputsSchema getSchema() {
         return this.schema;
     }
@@ -144,7 +144,7 @@ public final class AnalyticsApplicationInputs {
      * The point at which the application starts processing records from the streaming source.
      * See Starting Position Configuration below for more details.
      * 
-     */
+    */
     public List<AnalyticsApplicationInputsStartingPositionConfiguration> getStartingPositionConfigurations() {
         return this.startingPositionConfigurations == null ? List.of() : this.startingPositionConfigurations;
     }

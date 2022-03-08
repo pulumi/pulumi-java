@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAppliance {
-/**
- * Appliances definition.
+    private GetAppliance() {}
+    public interface BuilderApplicator {
+        public void apply(GetApplianceArgs.Builder a);
+    }
+    private static GetApplianceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetApplianceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Appliances definition.
  * API Version: 2021-10-31-preview.
  * 
- *
- * Appliances definition.
+     *
+     * Appliances definition.
  * 
- */
+     */
+    public static CompletableFuture<GetApplianceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Appliances definition.
+     * API Version: 2021-10-31-preview.
+     * 
+     *
+         * Appliances definition.
+     * 
+     */
     public static CompletableFuture<GetApplianceResult> invokeAsync(GetApplianceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:resourceconnector:getAppliance", TypeShape.of(GetApplianceResult.class), args == null ? GetApplianceArgs.Empty : args, Utilities.withVersion(options));
     }

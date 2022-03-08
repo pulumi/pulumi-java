@@ -53,35 +53,35 @@ public final class GetServicePerimeterResult {
     /**
      * Description of the `ServicePerimeter` and its use. Does not affect behavior.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * Resource name for the ServicePerimeter. The `short_name` component must begin with a letter and only include alphanumeric and '_'. Format: `accessPolicies/{policy_id}/servicePerimeters/{short_name}`
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Perimeter type indicator. A single project is allowed to be a member of single regular perimeter, but multiple service perimeter bridges. A project cannot be a included in a perimeter bridge without being included in regular perimeter. For perimeter bridges, restricted/unrestricted service lists as well as access lists must be empty.
      * 
-     */
+    */
     public String getPerimeterType() {
         return this.perimeterType;
     }
     /**
      * Current ServicePerimeter configuration. Specifies sets of resources, restricted/unrestricted services and access levels that determine perimeter content and boundaries.
      * 
-     */
+    */
     public ServicePerimeterConfigResponse getStatus() {
         return this.status;
     }
     /**
      * Human readable title. Must be unique within the Policy.
      * 
-     */
+    */
     public String getTitle() {
         return this.title;
     }

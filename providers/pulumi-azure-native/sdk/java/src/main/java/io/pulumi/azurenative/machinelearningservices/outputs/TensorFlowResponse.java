@@ -43,21 +43,21 @@ public final class TensorFlowResponse {
      * Enum to determine the job distribution type.
      * Expected value is 'TensorFlow'.
      * 
-     */
+    */
     public String getDistributionType() {
         return this.distributionType;
     }
     /**
      * Number of parameter server tasks.
      * 
-     */
+    */
     public Optional<Integer> getParameterServerCount() {
         return Optional.ofNullable(this.parameterServerCount);
     }
     /**
      * Number of workers. Overwrites the node count in compute binding.
      * 
-     */
+    */
     public Optional<Integer> getWorkerCount() {
         return Optional.ofNullable(this.workerCount);
     }

@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAlarm {
-/**
- * Resource Type definition for AWS::Lightsail::Alarm
+    private GetAlarm() {}
+    public interface BuilderApplicator {
+        public void apply(GetAlarmArgs.Builder a);
+    }
+    private static GetAlarmArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAlarmArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::Lightsail::Alarm
  * 
- */
+     */
+    public static CompletableFuture<GetAlarmResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::Lightsail::Alarm
+     * 
+     */
     public static CompletableFuture<GetAlarmResult> invokeAsync(GetAlarmArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:lightsail:getAlarm", TypeShape.of(GetAlarmResult.class), args == null ? GetAlarmArgs.Empty : args, Utilities.withVersion(options));
     }

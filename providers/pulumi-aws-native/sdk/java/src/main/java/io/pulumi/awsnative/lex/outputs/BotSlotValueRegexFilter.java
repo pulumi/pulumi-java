@@ -23,7 +23,7 @@ public final class BotSlotValueRegexFilter {
     /**
      * Regex pattern
      * 
-     */
+    */
     public String getPattern() {
         return this.pattern;
     }

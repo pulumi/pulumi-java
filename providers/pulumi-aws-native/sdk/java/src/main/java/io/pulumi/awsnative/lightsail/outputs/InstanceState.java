@@ -34,14 +34,14 @@ public final class InstanceState {
     /**
      * Status code of the Instance.
      * 
-     */
+    */
     public Optional<Integer> getCode() {
         return Optional.ofNullable(this.code);
     }
     /**
      * Status code of the Instance.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

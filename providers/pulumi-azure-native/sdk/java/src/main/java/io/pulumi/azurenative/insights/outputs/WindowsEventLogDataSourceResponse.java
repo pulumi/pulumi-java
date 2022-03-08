@@ -44,7 +44,7 @@ public final class WindowsEventLogDataSourceResponse {
      * A friendly name for the data source.
      * This name should be unique across all data sources (regardless of type) within the data collection rule.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
@@ -52,14 +52,14 @@ public final class WindowsEventLogDataSourceResponse {
      * List of streams that this data source will be sent to.
      * A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.
      * 
-     */
+    */
     public List<String> getStreams() {
         return this.streams == null ? List.of() : this.streams;
     }
     /**
      * A list of Windows Event Log queries in XPATH format.
      * 
-     */
+    */
     public List<String> getXPathQueries() {
         return this.xPathQueries == null ? List.of() : this.xPathQueries;
     }

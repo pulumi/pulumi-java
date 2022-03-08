@@ -25,7 +25,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     /**
      * The starting position on the stream. Valid values: `LAST_STOPPED_POINT`, `NOW`, `TRIM_HORIZON`.
      * 
-     */
+    */
     public Optional<String> getInputStartingPosition() {
         return Optional.ofNullable(this.inputStartingPosition);
     }

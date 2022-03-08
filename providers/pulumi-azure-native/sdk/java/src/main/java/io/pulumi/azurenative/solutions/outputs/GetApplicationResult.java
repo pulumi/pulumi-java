@@ -207,175 +207,175 @@ public final class GetApplicationResult {
     /**
      * The fully qualified path of managed application definition Id.
      * 
-     */
+    */
     public Optional<String> getApplicationDefinitionId() {
         return Optional.ofNullable(this.applicationDefinitionId);
     }
     /**
      * The collection of managed application artifacts.
      * 
-     */
+    */
     public List<ApplicationArtifactResponse> getArtifacts() {
         return this.artifacts;
     }
     /**
      * The  read-only authorizations property that is retrieved from the application package.
      * 
-     */
+    */
     public List<ApplicationAuthorizationResponse> getAuthorizations() {
         return this.authorizations;
     }
     /**
      * The managed application billing details.
      * 
-     */
+    */
     public ApplicationBillingDetailsDefinitionResponse getBillingDetails() {
         return this.billingDetails;
     }
     /**
      * The client entity that created the JIT request.
      * 
-     */
+    */
     public ApplicationClientDetailsResponse getCreatedBy() {
         return this.createdBy;
     }
     /**
      * The read-only customer support property that is retrieved from the application package.
      * 
-     */
+    */
     public ApplicationPackageContactResponse getCustomerSupport() {
         return this.customerSupport;
     }
     /**
      * Resource ID
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The identity of the resource.
      * 
-     */
+    */
     public Optional<IdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The managed application Jit access policy.
      * 
-     */
+    */
     public Optional<ApplicationJitAccessPolicyResponse> getJitAccessPolicy() {
         return Optional.ofNullable(this.jitAccessPolicy);
     }
     /**
      * The kind of the managed application. Allowed values are MarketPlace and ServiceCatalog.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Resource location
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * ID of the resource that manages this resource.
      * 
-     */
+    */
     public Optional<String> getManagedBy() {
         return Optional.ofNullable(this.managedBy);
     }
     /**
      * The managed resource group Id.
      * 
-     */
+    */
     public Optional<String> getManagedResourceGroupId() {
         return Optional.ofNullable(this.managedResourceGroupId);
     }
     /**
      * The managed application management mode.
      * 
-     */
+    */
     public String getManagementMode() {
         return this.managementMode;
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Name and value pairs that define the managed application outputs.
      * 
-     */
+    */
     public Object getOutputs() {
         return this.outputs;
     }
     /**
      * Name and value pairs that define the managed application parameters. It can be a JObject or a well formed JSON string.
      * 
-     */
+    */
     public Optional<Object> getParameters() {
         return Optional.ofNullable(this.parameters);
     }
     /**
      * The plan information.
      * 
-     */
+    */
     public Optional<PlanResponse> getPlan() {
         return Optional.ofNullable(this.plan);
     }
     /**
      * The managed application provisioning state.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The publisher tenant Id.
      * 
-     */
+    */
     public String getPublisherTenantId() {
         return this.publisherTenantId;
     }
     /**
      * The SKU of the resource.
      * 
-     */
+    */
     public Optional<SkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * The read-only support URLs property that is retrieved from the application package.
      * 
-     */
+    */
     public ApplicationPackageSupportUrlsResponse getSupportUrls() {
         return this.supportUrls;
     }
     /**
      * Resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The client entity that last updated the JIT request.
      * 
-     */
+    */
     public ApplicationClientDetailsResponse getUpdatedBy() {
         return this.updatedBy;
     }

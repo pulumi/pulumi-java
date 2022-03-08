@@ -31,14 +31,14 @@ public final class PipelineArtifactStoreEncryptionKey {
     /**
      * The KMS key ARN or ID
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The type of key; currently only `KMS` is supported
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

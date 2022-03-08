@@ -45,14 +45,14 @@ public final class WorkloadIdentityPoolProviderOidc {
      * resource name of the WorkloadIdentityPoolProvider, with or without the HTTPS prefix.
      * For example:
      * 
-     */
+    */
     public List<String> getAllowedAudiences() {
         return this.allowedAudiences == null ? List.of() : this.allowedAudiences;
     }
     /**
      * The OIDC issuer URL.
      * 
-     */
+    */
     public String getIssuerUri() {
         return this.issuerUri;
     }

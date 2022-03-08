@@ -36,7 +36,7 @@ public final class GetResourcesResourceTagMappingListComplianceDetail {
      * * ` keys_with_noncompliant_values  ` - Set of tag keys with non-compliant tag values.
      * * ` non_compliant_keys  ` - Set of non-compliant tag keys.
      * 
-     */
+    */
     public Boolean getComplianceStatus() {
         return this.complianceStatus;
     }

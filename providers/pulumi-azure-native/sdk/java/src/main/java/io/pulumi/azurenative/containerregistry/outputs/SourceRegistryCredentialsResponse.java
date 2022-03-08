@@ -29,7 +29,7 @@ public final class SourceRegistryCredentialsResponse {
      * will be generated using the given scope. These credentials will be used to login to
      * the source registry during the run.
      * 
-     */
+    */
     public Optional<String> getLoginMode() {
         return Optional.ofNullable(this.loginMode);
     }

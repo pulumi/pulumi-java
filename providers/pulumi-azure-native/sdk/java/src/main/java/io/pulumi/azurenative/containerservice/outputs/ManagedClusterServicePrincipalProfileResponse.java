@@ -33,14 +33,14 @@ public final class ManagedClusterServicePrincipalProfileResponse {
     /**
      * The ID for the service principal.
      * 
-     */
+    */
     public String getClientId() {
         return this.clientId;
     }
     /**
      * The secret password associated with the service principal in plain text.
      * 
-     */
+    */
     public Optional<String> getSecret() {
         return Optional.ofNullable(this.secret);
     }

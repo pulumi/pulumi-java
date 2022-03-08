@@ -41,21 +41,21 @@ public final class ReceiptRuleWorkmailAction {
     /**
      * The ARN of the WorkMail organization
      * 
-     */
+    */
     public String getOrganizationArn() {
         return this.organizationArn;
     }
     /**
      * The position of the action in the receipt rule
      * 
-     */
+    */
     public Integer getPosition() {
         return this.position;
     }
     /**
      * The ARN of an SNS topic to notify
      * 
-     */
+    */
     public Optional<String> getTopicArn() {
         return Optional.ofNullable(this.topicArn);
     }

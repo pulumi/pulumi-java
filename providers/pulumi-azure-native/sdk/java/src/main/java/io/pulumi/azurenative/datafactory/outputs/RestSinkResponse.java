@@ -105,63 +105,63 @@ public final class RestSinkResponse {
     /**
      * The additional HTTP headers in the request to the RESTful API. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getAdditionalHeaders() {
         return Optional.ofNullable(this.additionalHeaders);
     }
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
-     */
+    */
     public Optional<Object> getDisableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
     /**
      * Http Compression Type to Send data in compressed format with Optimal Compression Level, Default is None. And The Only Supported option is Gzip.
      * 
-     */
+    */
     public Optional<Object> getHttpCompressionType() {
         return Optional.ofNullable(this.httpCompressionType);
     }
     /**
      * The timeout (TimeSpan) to get an HTTP response. It is the timeout to get a response, not the timeout to read response data. Default value: 00:01:40. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
-     */
+    */
     public Optional<Object> getHttpRequestTimeout() {
         return Optional.ofNullable(this.httpRequestTimeout);
     }
     /**
      * The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
      * 
-     */
+    */
     public Optional<Object> getMaxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
      * The time to await before sending next request, in milliseconds
      * 
-     */
+    */
     public Optional<Object> getRequestInterval() {
         return Optional.ofNullable(this.requestInterval);
     }
     /**
      * The HTTP method used to call the RESTful API. The default is POST. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getRequestMethod() {
         return Optional.ofNullable(this.requestMethod);
     }
     /**
      * Sink retry count. Type: integer (or Expression with resultType integer).
      * 
-     */
+    */
     public Optional<Object> getSinkRetryCount() {
         return Optional.ofNullable(this.sinkRetryCount);
     }
     /**
      * Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
-     */
+    */
     public Optional<Object> getSinkRetryWait() {
         return Optional.ofNullable(this.sinkRetryWait);
     }
@@ -169,21 +169,21 @@ public final class RestSinkResponse {
      * Copy sink type.
      * Expected value is 'RestSink'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
      * 
-     */
+    */
     public Optional<Object> getWriteBatchSize() {
         return Optional.ofNullable(this.writeBatchSize);
     }
     /**
      * Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
-     */
+    */
     public Optional<Object> getWriteBatchTimeout() {
         return Optional.ofNullable(this.writeBatchTimeout);
     }

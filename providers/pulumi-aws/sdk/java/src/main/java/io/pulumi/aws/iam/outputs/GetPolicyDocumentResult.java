@@ -56,14 +56,14 @@ public final class GetPolicyDocumentResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Standard JSON policy document rendered based on the arguments above.
      * 
-     */
+    */
     public String getJson() {
         return this.json;
     }

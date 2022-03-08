@@ -24,7 +24,7 @@ public final class CSINodeSpec {
     /**
      * drivers is a list of information of all CSI Drivers existing on a node. If all drivers in the list are uninstalled, this can become empty.
      * 
-     */
+    */
     public List<CSINodeDriver> getDrivers() {
         return this.drivers;
     }

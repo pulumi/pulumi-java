@@ -85,7 +85,7 @@ public final class RegionHealthCheckSslHealthCheck {
      * Must be specified if portName and portSpecification are not set
      * or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
      * 
-     */
+    */
     public Optional<Integer> getPort() {
         return Optional.ofNullable(this.port);
     }
@@ -93,7 +93,7 @@ public final class RegionHealthCheckSslHealthCheck {
      * Port name as defined in InstanceGroup#NamedPort#name. If both port and
      * port_name are defined, port takes precedence.
      * 
-     */
+    */
     public Optional<String> getPortName() {
         return Optional.ofNullable(this.portName);
     }
@@ -110,7 +110,7 @@ public final class RegionHealthCheckSslHealthCheck {
      *   `portName` fields.
      *   Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
      * 
-     */
+    */
     public Optional<String> getPortSpecification() {
         return Optional.ofNullable(this.portSpecification);
     }
@@ -120,7 +120,7 @@ public final class RegionHealthCheckSslHealthCheck {
      * Default value is `NONE`.
      * Possible values are `NONE` and `PROXY_V1`.
      * 
-     */
+    */
     public Optional<String> getProxyHeader() {
         return Optional.ofNullable(this.proxyHeader);
     }
@@ -130,7 +130,7 @@ public final class RegionHealthCheckSslHealthCheck {
      * empty, the connection establishment alone will indicate health. The request
      * data can only be ASCII.
      * 
-     */
+    */
     public Optional<String> getRequest() {
         return Optional.ofNullable(this.request);
     }
@@ -139,7 +139,7 @@ public final class RegionHealthCheckSslHealthCheck {
      * (the default value), any response will indicate health. The response data
      * can only be ASCII.
      * 
-     */
+    */
     public Optional<String> getResponse() {
         return Optional.ofNullable(this.response);
     }

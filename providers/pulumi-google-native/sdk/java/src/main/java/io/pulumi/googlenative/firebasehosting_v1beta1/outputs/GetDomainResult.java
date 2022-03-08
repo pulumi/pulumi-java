@@ -61,42 +61,42 @@ public final class GetDomainResult {
     /**
      * The domain name of the association.
      * 
-     */
+    */
     public String getDomainName() {
         return this.domainName;
     }
     /**
      * If set, the domain should redirect with the provided parameters.
      * 
-     */
+    */
     public DomainRedirectResponse getDomainRedirect() {
         return this.domainRedirect;
     }
     /**
      * Information about the provisioning of certificates and the health of the DNS resolution for the domain.
      * 
-     */
+    */
     public DomainProvisioningResponse getProvisioning() {
         return this.provisioning;
     }
     /**
      * The site name of the association.
      * 
-     */
+    */
     public String getSite() {
         return this.site;
     }
     /**
      * Additional status of the domain association.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * The time at which the domain was last updated.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }

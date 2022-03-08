@@ -78,56 +78,56 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
     /**
      * Optional. The available quantity of the item.
      * 
-     */
+    */
     public String getAvailableQuantity() {
         return this.availableQuantity;
     }
     /**
      * Optional. Canonical URL directly linking to the item detail page with a length limit of 5 KiB..
      * 
-     */
+    */
     public String getCanonicalProductUri() {
         return this.canonicalProductUri;
     }
     /**
      * Optional. A map to pass the costs associated with the product. For example: {"manufacturing": 45.5} The profit of selling this item is computed like so: * If 'exactPrice' is provided, profit = displayPrice - sum(costs) * If 'priceRange' is provided, profit = minPrice - sum(costs)
      * 
-     */
+    */
     public Map<String,String> getCosts() {
         return this.costs;
     }
     /**
      * Optional. Only required if the price is set. Currency code for price/costs. Use three-character ISO-4217 code.
      * 
-     */
+    */
     public String getCurrencyCode() {
         return this.currencyCode;
     }
     /**
      * Optional. The exact product price.
      * 
-     */
+    */
     public GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse getExactPrice() {
         return this.exactPrice;
     }
     /**
      * Optional. Product images for the catalog item.
      * 
-     */
+    */
     public List<GoogleCloudRecommendationengineV1beta1ImageResponse> getImages() {
         return this.images;
     }
     /**
      * Optional. The product price range.
      * 
-     */
+    */
     public GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse getPriceRange() {
         return this.priceRange;
     }
     /**
      * Optional. Online stock state of the catalog item. Default is `IN_STOCK`.
      * 
-     */
+    */
     public String getStockState() {
         return this.stockState;
     }

@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCryptoKeyVersion {
-/**
- * Returns metadata for a given CryptoKeyVersion.
+    private GetCryptoKeyVersion() {}
+    public interface BuilderApplicator {
+        public void apply(GetCryptoKeyVersionArgs.Builder a);
+    }
+    private static GetCryptoKeyVersionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetCryptoKeyVersionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Returns metadata for a given CryptoKeyVersion.
  * 
- */
+     */
+    public static CompletableFuture<GetCryptoKeyVersionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Returns metadata for a given CryptoKeyVersion.
+     * 
+     */
     public static CompletableFuture<GetCryptoKeyVersionResult> invokeAsync(GetCryptoKeyVersionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudkms/v1:getCryptoKeyVersion", TypeShape.of(GetCryptoKeyVersionResult.class), args == null ? GetCryptoKeyVersionArgs.Empty : args, Utilities.withVersion(options));
     }

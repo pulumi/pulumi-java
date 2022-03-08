@@ -32,7 +32,7 @@ public final class RecipeAction {
     /**
      * Step action operation
      * 
-     */
+    */
     public String getOperation() {
         return this.operation;
     }

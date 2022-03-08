@@ -71,49 +71,49 @@ public final class GroupPropertiesResponse {
     /**
      * If the assessments are in running state.
      * 
-     */
+    */
     public Boolean getAreAssessmentsRunning() {
         return this.areAssessmentsRunning;
     }
     /**
      * List of References to Assessments created on this group.
      * 
-     */
+    */
     public List<String> getAssessments() {
         return this.assessments;
     }
     /**
      * Time when this group was created. Date-Time represented in ISO-8601 format.
      * 
-     */
+    */
     public String getCreatedTimestamp() {
         return this.createdTimestamp;
     }
     /**
      * Whether the group has been created and is valid.
      * 
-     */
+    */
     public String getGroupStatus() {
         return this.groupStatus;
     }
     /**
      * The type of group.
      * 
-     */
+    */
     public Optional<String> getGroupType() {
         return Optional.ofNullable(this.groupType);
     }
     /**
      * Number of machines part of this group.
      * 
-     */
+    */
     public Integer getMachineCount() {
         return this.machineCount;
     }
     /**
      * Time when this group was last updated. Date-Time represented in ISO-8601 format.
      * 
-     */
+    */
     public String getUpdatedTimestamp() {
         return this.updatedTimestamp;
     }

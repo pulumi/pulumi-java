@@ -23,7 +23,7 @@ public final class IntegrationAccountSkuResponse {
     /**
      * The sku name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }

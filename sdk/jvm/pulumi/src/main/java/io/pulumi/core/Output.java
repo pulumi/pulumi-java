@@ -14,7 +14,7 @@ import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-import static io.pulumi.core.internal.InputOutputData.internalAllHelperAsync;
+import static io.pulumi.core.internal.InputOutputData.allHelperAsync;
 import static io.pulumi.core.internal.InputOutputInternal.TupleZeroIn;
 import static io.pulumi.core.internal.InputOutputInternal.TupleZeroOut;
 
@@ -176,7 +176,7 @@ public interface Output<T> extends InputOutput<T, Output<T>> {
 
     private static <T> Output<List<T>> allInputs(List<Input<T>> inputs) {
         return new OutputDefault<>(
-                internalAllHelperAsync(inputs
+                allHelperAsync(inputs
                         .stream()
                         .map(input -> Internal.of(input).getDataAsync())
                         .collect(Collectors.toList()))
@@ -185,7 +185,7 @@ public interface Output<T> extends InputOutput<T, Output<T>> {
 
     private static <T> Output<List<T>> allOutputs(List<Output<T>> outputs) {
         return new OutputDefault<>(
-                internalAllHelperAsync(outputs
+                allHelperAsync(outputs
                         .stream()
                         .map(output -> Internal.of(output).getDataAsync())
                         .collect(Collectors.toList()))
@@ -355,11 +355,11 @@ public interface Output<T> extends InputOutput<T, Output<T>> {
     static Output<String> format(String formattableString, @SuppressWarnings("rawtypes") InputOutput... arguments) {
         var data = Lists.newArrayList(arguments)
                 .stream()
-                .map(InputOutputData::internalCopyInputOutputData)
+                .map(InputOutputData::copyInputOutputData)
                 .collect(Collectors.toList());
 
         return new OutputDefault<>(
-                internalAllHelperAsync(data)
+                allHelperAsync(data)
                         .thenApply(objs -> objs.apply(
                                 v -> v == null ? null : String.format(formattableString, v.toArray())))
         );

@@ -2,6 +2,7 @@ package io.pulumi.deployment;
 
 import io.pulumi.Config;
 import io.pulumi.core.Output;
+import io.pulumi.deployment.MocksTest;
 import io.pulumi.deployment.internal.DeploymentInternal;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
@@ -27,7 +28,8 @@ public class DeploymentTest {
     @BeforeAll
     public static void mockSetup() {
         mock = DeploymentMockBuilder.builder()
-                .setSpyGlobalInstance();
+            .setMocks(new MocksTest.MyMocks())
+            .setSpyGlobalInstance();
     }
 
     @AfterAll

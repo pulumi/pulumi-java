@@ -40,21 +40,21 @@ public final class CustomPluginLocationS3 {
     /**
      * The Amazon Resource Name (ARN) of an S3 bucket.
      * 
-     */
+    */
     public String getBucketArn() {
         return this.bucketArn;
     }
     /**
      * The file key for an object in an S3 bucket.
      * 
-     */
+    */
     public String getFileKey() {
         return this.fileKey;
     }
     /**
      * The version of an object in an S3 bucket.
      * 
-     */
+    */
     public Optional<String> getObjectVersion() {
         return Optional.ofNullable(this.objectVersion);
     }

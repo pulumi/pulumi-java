@@ -32,7 +32,7 @@ public final class AnalyzerArchiveRule {
     /**
      * The archive rule name
      * 
-     */
+    */
     public String getRuleName() {
         return this.ruleName;
     }

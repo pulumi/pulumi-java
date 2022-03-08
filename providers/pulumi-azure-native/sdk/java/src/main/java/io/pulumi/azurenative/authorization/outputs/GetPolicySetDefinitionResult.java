@@ -95,70 +95,70 @@ public final class GetPolicySetDefinitionResult {
     /**
      * The policy set definition description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The display name of the policy set definition.
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * The ID of the policy set definition.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The policy set definition metadata.  Metadata is an open ended object and is typically a collection of key value pairs.
      * 
-     */
+    */
     public Optional<Object> getMetadata() {
         return Optional.ofNullable(this.metadata);
     }
     /**
      * The name of the policy set definition.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The policy set definition parameters that can be used in policy definition references.
      * 
-     */
+    */
     public Map<String,ParameterDefinitionsValueResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * The metadata describing groups of policy definition references within the policy set definition.
      * 
-     */
+    */
     public List<PolicyDefinitionGroupResponse> getPolicyDefinitionGroups() {
         return this.policyDefinitionGroups == null ? List.of() : this.policyDefinitionGroups;
     }
     /**
      * An array of policy definition references.
      * 
-     */
+    */
     public List<PolicyDefinitionReferenceResponse> getPolicyDefinitions() {
         return this.policyDefinitions;
     }
     /**
      * The type of policy definition. Possible values are NotSpecified, BuiltIn, Custom, and Static.
      * 
-     */
+    */
     public Optional<String> getPolicyType() {
         return Optional.ofNullable(this.policyType);
     }
     /**
      * The type of the resource (Microsoft.Authorization/policySetDefinitions).
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

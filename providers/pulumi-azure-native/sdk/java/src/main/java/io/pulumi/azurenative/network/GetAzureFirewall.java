@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAzureFirewall {
-/**
- * Azure Firewall resource.
+    private GetAzureFirewall() {}
+    public interface BuilderApplicator {
+        public void apply(GetAzureFirewallArgs.Builder a);
+    }
+    private static GetAzureFirewallArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAzureFirewallArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Azure Firewall resource.
  * API Version: 2020-11-01.
  * 
- *
- * Azure Firewall resource.
+     *
+     * Azure Firewall resource.
  * 
- */
+     */
+    public static CompletableFuture<GetAzureFirewallResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Azure Firewall resource.
+     * API Version: 2020-11-01.
+     * 
+     *
+         * Azure Firewall resource.
+     * 
+     */
     public static CompletableFuture<GetAzureFirewallResult> invokeAsync(GetAzureFirewallArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getAzureFirewall", TypeShape.of(GetAzureFirewallResult.class), args == null ? GetAzureFirewallArgs.Empty : args, Utilities.withVersion(options));
     }

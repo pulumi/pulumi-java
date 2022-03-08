@@ -33,14 +33,14 @@ public final class FuotaTaskLoRaWAN {
     /**
      * FUOTA task LoRaWAN RF region
      * 
-     */
+    */
     public String getRfRegion() {
         return this.rfRegion;
     }
     /**
      * FUOTA task LoRaWAN start time
      * 
-     */
+    */
     public Optional<String> getStartTime() {
         return Optional.ofNullable(this.startTime);
     }

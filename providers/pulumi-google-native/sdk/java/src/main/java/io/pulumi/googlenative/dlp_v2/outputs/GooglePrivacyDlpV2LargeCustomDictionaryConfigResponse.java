@@ -40,21 +40,21 @@ public final class GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse {
     /**
      * Field in a BigQuery table where each cell represents a dictionary phrase.
      * 
-     */
+    */
     public GooglePrivacyDlpV2BigQueryFieldResponse getBigQueryField() {
         return this.bigQueryField;
     }
     /**
      * Set of files containing newline-delimited lists of dictionary phrases.
      * 
-     */
+    */
     public GooglePrivacyDlpV2CloudStorageFileSetResponse getCloudStorageFileSet() {
         return this.cloudStorageFileSet;
     }
     /**
      * Location to store dictionary artifacts in Google Cloud Storage. These files will only be accessible by project owners and the DLP API. If any of these artifacts are modified, the dictionary is considered invalid and can no longer be used.
      * 
-     */
+    */
     public GooglePrivacyDlpV2CloudStoragePathResponse getOutputPath() {
         return this.outputPath;
     }

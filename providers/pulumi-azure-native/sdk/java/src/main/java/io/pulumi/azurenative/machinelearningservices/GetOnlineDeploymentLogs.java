@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetOnlineDeploymentLogs {
-/**
- * API Version: 2021-03-01-preview.
+    private GetOnlineDeploymentLogs() {}
+    public interface BuilderApplicator {
+        public void apply(GetOnlineDeploymentLogsArgs.Builder a);
+    }
+    private static GetOnlineDeploymentLogsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetOnlineDeploymentLogsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * API Version: 2021-03-01-preview.
  * 
- */
+     */
+    public static CompletableFuture<GetOnlineDeploymentLogsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * API Version: 2021-03-01-preview.
+     * 
+     */
     public static CompletableFuture<GetOnlineDeploymentLogsResult> invokeAsync(GetOnlineDeploymentLogsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:getOnlineDeploymentLogs", TypeShape.of(GetOnlineDeploymentLogsResult.class), args == null ? GetOnlineDeploymentLogsArgs.Empty : args, Utilities.withVersion(options));
     }

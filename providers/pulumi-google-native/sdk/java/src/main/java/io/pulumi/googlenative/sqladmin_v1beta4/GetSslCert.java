@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSslCert {
-/**
- * Retrieves a particular SSL certificate. Does not include the private key (required for usage). The private key must be saved from the response to initial creation.
+    private GetSslCert() {}
+    public interface BuilderApplicator {
+        public void apply(GetSslCertArgs.Builder a);
+    }
+    private static GetSslCertArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSslCertArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Retrieves a particular SSL certificate. Does not include the private key (required for usage). The private key must be saved from the response to initial creation.
  * 
- */
+     */
+    public static CompletableFuture<GetSslCertResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Retrieves a particular SSL certificate. Does not include the private key (required for usage). The private key must be saved from the response to initial creation.
+     * 
+     */
     public static CompletableFuture<GetSslCertResult> invokeAsync(GetSslCertArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:sqladmin/v1beta4:getSslCert", TypeShape.of(GetSslCertResult.class), args == null ? GetSslCertArgs.Empty : args, Utilities.withVersion(options));
     }

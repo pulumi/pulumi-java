@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWebAppSlot {
-/**
- * A web app, a mobile app backend, or an API app.
+    private GetWebAppSlot() {}
+    public interface BuilderApplicator {
+        public void apply(GetWebAppSlotArgs.Builder a);
+    }
+    private static GetWebAppSlotArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetWebAppSlotArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A web app, a mobile app backend, or an API app.
  * API Version: 2020-12-01.
  * 
- *
- * A web app, a mobile app backend, or an API app.
+     *
+     * A web app, a mobile app backend, or an API app.
  * 
- */
+     */
+    public static CompletableFuture<GetWebAppSlotResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A web app, a mobile app backend, or an API app.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * A web app, a mobile app backend, or an API app.
+     * 
+     */
     public static CompletableFuture<GetWebAppSlotResult> invokeAsync(GetWebAppSlotArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppSlot", TypeShape.of(GetWebAppSlotResult.class), args == null ? GetWebAppSlotArgs.Empty : args, Utilities.withVersion(options));
     }

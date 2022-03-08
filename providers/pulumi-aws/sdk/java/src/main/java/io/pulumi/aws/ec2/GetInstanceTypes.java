@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInstanceTypes {
-/**
- * Information about EC2 Instance Types.
+    private GetInstanceTypes() {}
+    public interface BuilderApplicator {
+        public void apply(GetInstanceTypesArgs.Builder a);
+    }
+    private static GetInstanceTypesArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetInstanceTypesArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Information about EC2 Instance Types.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getInstanceTypes.
+     *
+     * A collection of arguments for invoking getInstanceTypes.
  * 
- *
- * A collection of values returned by getInstanceTypes.
+     *
+     * A collection of values returned by getInstanceTypes.
  * 
- */
+     */
+    public static CompletableFuture<GetInstanceTypesResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Information about EC2 Instance Types.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getInstanceTypes.
+     * 
+     *
+         * A collection of values returned by getInstanceTypes.
+     * 
+     */
     public static CompletableFuture<GetInstanceTypesResult> invokeAsync(@Nullable GetInstanceTypesArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getInstanceTypes:getInstanceTypes", TypeShape.of(GetInstanceTypesResult.class), args == null ? GetInstanceTypesArgs.Empty : args, Utilities.withVersion(options));
     }

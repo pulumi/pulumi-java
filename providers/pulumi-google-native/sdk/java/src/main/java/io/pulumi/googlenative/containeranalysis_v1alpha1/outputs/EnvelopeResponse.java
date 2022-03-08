@@ -40,21 +40,21 @@ public final class EnvelopeResponse {
     /**
      * The bytes being signed
      * 
-     */
+    */
     public String getPayload() {
         return this.payload;
     }
     /**
      * The type of payload being signed
      * 
-     */
+    */
     public String getPayloadType() {
         return this.payloadType;
     }
     /**
      * The signatures over the payload
      * 
-     */
+    */
     public List<EnvelopeSignatureResponse> getSignatures() {
         return this.signatures;
     }

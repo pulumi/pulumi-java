@@ -58,35 +58,35 @@ public final class ManagementGroupDetailsResponse {
     /**
      * (Optional) The ID of the parent management group.
      * 
-     */
+    */
     public Optional<ParentGroupInfoResponse> getParent() {
         return Optional.ofNullable(this.parent);
     }
     /**
      * The path from the root to the current group.
      * 
-     */
+    */
     public List<ManagementGroupPathElementResponse> getPath() {
         return this.path == null ? List.of() : this.path;
     }
     /**
      * The identity of the principal or process that updated the object.
      * 
-     */
+    */
     public Optional<String> getUpdatedBy() {
         return Optional.ofNullable(this.updatedBy);
     }
     /**
      * The date and time when this object was last updated.
      * 
-     */
+    */
     public Optional<String> getUpdatedTime() {
         return Optional.ofNullable(this.updatedTime);
     }
     /**
      * The version number of the object.
      * 
-     */
+    */
     public Optional<Double> getVersion() {
         return Optional.ofNullable(this.version);
     }

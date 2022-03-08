@@ -24,7 +24,7 @@ public final class FirewallPolicyFirewallPolicyStatelessCustomActionActionDefini
     /**
      * Set of configuration blocks describing dimension settings to use for Amazon CloudWatch custom metrics. See Dimension below for more details.
      * 
-     */
+    */
     public List<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimension> getDimensions() {
         return this.dimensions;
     }

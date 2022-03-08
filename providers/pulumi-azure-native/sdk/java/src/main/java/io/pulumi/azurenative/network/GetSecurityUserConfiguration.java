@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSecurityUserConfiguration {
-/**
- * Defines the security configuration
+    private GetSecurityUserConfiguration() {}
+    public interface BuilderApplicator {
+        public void apply(GetSecurityUserConfigurationArgs.Builder a);
+    }
+    private static GetSecurityUserConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSecurityUserConfigurationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Defines the security configuration
  * API Version: 2021-02-01-preview.
  * 
- *
- * Defines the security configuration
+     *
+     * Defines the security configuration
  * 
- */
+     */
+    public static CompletableFuture<GetSecurityUserConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Defines the security configuration
+     * API Version: 2021-02-01-preview.
+     * 
+     *
+         * Defines the security configuration
+     * 
+     */
     public static CompletableFuture<GetSecurityUserConfigurationResult> invokeAsync(GetSecurityUserConfigurationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getSecurityUserConfiguration", TypeShape.of(GetSecurityUserConfigurationResult.class), args == null ? GetSecurityUserConfigurationArgs.Empty : args, Utilities.withVersion(options));
     }

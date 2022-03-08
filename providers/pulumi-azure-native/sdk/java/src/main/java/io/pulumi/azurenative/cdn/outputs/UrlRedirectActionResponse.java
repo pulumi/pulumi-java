@@ -34,14 +34,14 @@ public final class UrlRedirectActionResponse {
      * The name of the action for the delivery rule.
      * Expected value is 'UrlRedirect'.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Defines the parameters for the action.
      * 
-     */
+    */
     public UrlRedirectActionParametersResponse getParameters() {
         return this.parameters;
     }

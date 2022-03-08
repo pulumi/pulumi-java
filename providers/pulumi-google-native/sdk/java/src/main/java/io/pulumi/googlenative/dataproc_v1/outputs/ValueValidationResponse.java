@@ -24,7 +24,7 @@ public final class ValueValidationResponse {
     /**
      * List of allowed values for the parameter.
      * 
-     */
+    */
     public List<String> getValues() {
         return this.values;
     }

@@ -33,14 +33,14 @@ public final class UserPoolSchemaStringAttributeConstraints {
     /**
      * Maximum length of an attribute value of the string type.
      * 
-     */
+    */
     public Optional<String> getMaxLength() {
         return Optional.ofNullable(this.maxLength);
     }
     /**
      * Minimum length of an attribute value of the string type.
      * 
-     */
+    */
     public Optional<String> getMinLength() {
         return Optional.ofNullable(this.minLength);
     }

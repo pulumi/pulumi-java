@@ -33,7 +33,7 @@ public final class ClusterReleaseChannel {
      * * REGULAR: Multiple per month upgrade cadence; Production users who need features not yet offered in the Stable channel.
      * * STABLE: Every few months upgrade cadence; Production users who need stability above all else, and for whom frequent upgrades are too risky.
      * 
-     */
+    */
     public String getChannel() {
         return this.channel;
     }

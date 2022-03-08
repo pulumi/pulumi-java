@@ -49,7 +49,7 @@ public final class SloRequestBasedSli {
      * measuring good service and total service.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<SloRequestBasedSliDistributionCut> getDistributionCut() {
         return Optional.ofNullable(this.distributionCut);
     }
@@ -61,7 +61,7 @@ public final class SloRequestBasedSli {
      * will be assumed.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<SloRequestBasedSliGoodTotalRatio> getGoodTotalRatio() {
         return Optional.ofNullable(this.goodTotalRatio);
     }

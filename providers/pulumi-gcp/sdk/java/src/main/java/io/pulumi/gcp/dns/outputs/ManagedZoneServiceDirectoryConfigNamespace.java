@@ -31,7 +31,7 @@ public final class ManagedZoneServiceDirectoryConfigNamespace {
      * or simply `projects/{project}/locations/{location}/namespaces/{namespace_id}`
      * Ignored for `public` visibility zones.
      * 
-     */
+    */
     public String getNamespaceUrl() {
         return this.namespaceUrl;
     }

@@ -33,14 +33,14 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
     /**
      * The actions of an Object Lambda Access Point configuration. Valid values: `GetObject`.
      * 
-     */
+    */
     public List<String> getActions() {
         return this.actions;
     }
     /**
      * The content transformation of an Object Lambda Access Point configuration. See Content Transformation below for more details.
      * 
-     */
+    */
     public ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformation getContentTransformation() {
         return this.contentTransformation;
     }

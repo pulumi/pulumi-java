@@ -13,19 +13,44 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetJobQueue {
-/**
- * The Batch Job Queue data source allows access to details of a specific
+    private GetJobQueue() {}
+    public interface BuilderApplicator {
+        public void apply(GetJobQueueArgs.Builder a);
+    }
+    private static GetJobQueueArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetJobQueueArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The Batch Job Queue data source allows access to details of a specific
  * job queue within AWS Batch.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getJobQueue.
+     *
+     * A collection of arguments for invoking getJobQueue.
  * 
- *
- * A collection of values returned by getJobQueue.
+     *
+     * A collection of values returned by getJobQueue.
  * 
- */
+     */
+    public static CompletableFuture<GetJobQueueResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The Batch Job Queue data source allows access to details of a specific
+     * job queue within AWS Batch.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getJobQueue.
+     * 
+     *
+         * A collection of values returned by getJobQueue.
+     * 
+     */
     public static CompletableFuture<GetJobQueueResult> invokeAsync(GetJobQueueArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:batch/getJobQueue:getJobQueue", TypeShape.of(GetJobQueueResult.class), args == null ? GetJobQueueArgs.Empty : args, Utilities.withVersion(options));
     }

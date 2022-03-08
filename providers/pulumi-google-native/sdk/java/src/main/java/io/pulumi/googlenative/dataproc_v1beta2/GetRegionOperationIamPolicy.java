@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRegionOperationIamPolicy {
-/**
- * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+    private GetRegionOperationIamPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetRegionOperationIamPolicyArgs.Builder a);
+    }
+    private static GetRegionOperationIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRegionOperationIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
  * 
- */
+     */
+    public static CompletableFuture<GetRegionOperationIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetRegionOperationIamPolicyResult> invokeAsync(GetRegionOperationIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dataproc/v1beta2:getRegionOperationIamPolicy", TypeShape.of(GetRegionOperationIamPolicyResult.class), args == null ? GetRegionOperationIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

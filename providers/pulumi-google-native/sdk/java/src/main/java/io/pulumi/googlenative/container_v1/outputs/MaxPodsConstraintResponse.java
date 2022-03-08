@@ -23,7 +23,7 @@ public final class MaxPodsConstraintResponse {
     /**
      * Constraint enforced on the max num of pods per node.
      * 
-     */
+    */
     public String getMaxPodsPerNode() {
         return this.maxPodsPerNode;
     }

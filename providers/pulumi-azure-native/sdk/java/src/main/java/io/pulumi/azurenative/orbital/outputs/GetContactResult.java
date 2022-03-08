@@ -160,140 +160,140 @@ public final class GetContactResult {
     /**
      * The reference to the contact profile resource.
      * 
-     */
+    */
     public ResourceReferenceResponse getContactProfile() {
         return this.contactProfile;
     }
     /**
      * Azimuth of the antenna at the end of the contact in decimal degrees.
      * 
-     */
+    */
     public Double getEndAzimuthDegrees() {
         return this.endAzimuthDegrees;
     }
     /**
      * Spacecraft elevation above the horizon at contact end.
      * 
-     */
+    */
     public Double getEndElevationDegrees() {
         return this.endElevationDegrees;
     }
     /**
      * Any error message while scheduling a contact.
      * 
-     */
+    */
     public String getErrorMessage() {
         return this.errorMessage;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Azure Ground Station name.
      * 
-     */
+    */
     public String getGroundStationName() {
         return this.groundStationName;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Maximum elevation of the antenna during the contact in decimal degrees.
      * 
-     */
+    */
     public Double getMaximumElevationDegrees() {
         return this.maximumElevationDegrees;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Reservation end time of a contact.
      * 
-     */
+    */
     public String getReservationEndTime() {
         return this.reservationEndTime;
     }
     /**
      * Reservation start time of a contact.
      * 
-     */
+    */
     public String getReservationStartTime() {
         return this.reservationStartTime;
     }
     /**
      * Receive end time of a contact.
      * 
-     */
+    */
     public String getRxEndTime() {
         return this.rxEndTime;
     }
     /**
      * Receive start time of a contact.
      * 
-     */
+    */
     public String getRxStartTime() {
         return this.rxStartTime;
     }
     /**
      * Azimuth of the antenna at the start of the contact in decimal degrees.
      * 
-     */
+    */
     public Double getStartAzimuthDegrees() {
         return this.startAzimuthDegrees;
     }
     /**
      * Spacecraft elevation above the horizon at contact start.
      * 
-     */
+    */
     public Double getStartElevationDegrees() {
         return this.startElevationDegrees;
     }
     /**
      * Status of a contact.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Transmit end time of a contact.
      * 
-     */
+    */
     public String getTxEndTime() {
         return this.txEndTime;
     }
     /**
      * Transmit start time of a contact.
      * 
-     */
+    */
     public String getTxStartTime() {
         return this.txStartTime;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

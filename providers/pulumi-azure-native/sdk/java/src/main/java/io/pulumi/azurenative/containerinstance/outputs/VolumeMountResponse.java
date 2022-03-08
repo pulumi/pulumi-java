@@ -41,21 +41,21 @@ public final class VolumeMountResponse {
     /**
      * The path within the container where the volume should be mounted. Must not contain colon (:).
      * 
-     */
+    */
     public String getMountPath() {
         return this.mountPath;
     }
     /**
      * The name of the volume mount.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The flag indicating whether the volume mount is read-only.
      * 
-     */
+    */
     public Optional<Boolean> getReadOnly() {
         return Optional.ofNullable(this.readOnly);
     }

@@ -51,21 +51,21 @@ public final class FlexibleAppVersionResources {
     /**
      * Number of CPU cores needed.
      * 
-     */
+    */
     public Optional<Integer> getCpu() {
         return Optional.ofNullable(this.cpu);
     }
     /**
      * Disk size (GB) needed.
      * 
-     */
+    */
     public Optional<Integer> getDiskGb() {
         return Optional.ofNullable(this.diskGb);
     }
     /**
      * Memory (GB) needed.
      * 
-     */
+    */
     public Optional<Double> getMemoryGb() {
         return Optional.ofNullable(this.memoryGb);
     }
@@ -73,7 +73,7 @@ public final class FlexibleAppVersionResources {
      * List of ports, or port pairs, to forward from the virtual machine to the application container.
      * Structure is documented below.
      * 
-     */
+    */
     public List<FlexibleAppVersionResourcesVolume> getVolumes() {
         return this.volumes == null ? List.of() : this.volumes;
     }

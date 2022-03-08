@@ -77,6 +77,22 @@ public class DelegationSet extends io.pulumi.resources.CustomResource {
         return this.referenceName;
     }
 
+    public interface BuilderApplicator {
+        public void apply(@Nullable DelegationSetArgs.Builder a);
+    }
+    private static io.pulumi.aws.route53.DelegationSetArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.aws.route53.DelegationSetArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public DelegationSet(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -50,28 +50,28 @@ public final class PolicyPredictiveScalingConfigurationMetricSpecification {
     /**
      * The load metric specification.
      * 
-     */
+    */
     public Optional<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedLoadMetricSpecification> getPredefinedLoadMetricSpecification() {
         return Optional.ofNullable(this.predefinedLoadMetricSpecification);
     }
     /**
      * The metric pair specification from which Amazon EC2 Auto Scaling determines the appropriate scaling metric and load metric to use.
      * 
-     */
+    */
     public Optional<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedMetricPairSpecification> getPredefinedMetricPairSpecification() {
         return Optional.ofNullable(this.predefinedMetricPairSpecification);
     }
     /**
      * The scaling metric specification.
      * 
-     */
+    */
     public Optional<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedScalingMetricSpecification> getPredefinedScalingMetricSpecification() {
         return Optional.ofNullable(this.predefinedScalingMetricSpecification);
     }
     /**
      * The target value for the metric.
      * 
-     */
+    */
     public Integer getTargetValue() {
         return this.targetValue;
     }

@@ -61,42 +61,42 @@ public final class RepositoryOpts {
     /**
      * The Repository's CA File
      * 
-     */
+    */
     public Optional<String> getCaFile() {
         return Optional.ofNullable(this.caFile);
     }
     /**
      * The repository's cert file
      * 
-     */
+    */
     public Optional<String> getCertFile() {
         return Optional.ofNullable(this.certFile);
     }
     /**
      * The repository's cert key file
      * 
-     */
+    */
     public Optional<String> getKeyFile() {
         return Optional.ofNullable(this.keyFile);
     }
     /**
      * Password for HTTP basic authentication
      * 
-     */
+    */
     public Optional<String> getPassword() {
         return Optional.ofNullable(this.password);
     }
     /**
      * Repository where to locate the requested chart. If is a URL the chart is installed without installing the repository.
      * 
-     */
+    */
     public Optional<String> getRepo() {
         return Optional.ofNullable(this.repo);
     }
     /**
      * Username for HTTP basic authentication
      * 
-     */
+    */
     public Optional<String> getUsername() {
         return Optional.ofNullable(this.username);
     }

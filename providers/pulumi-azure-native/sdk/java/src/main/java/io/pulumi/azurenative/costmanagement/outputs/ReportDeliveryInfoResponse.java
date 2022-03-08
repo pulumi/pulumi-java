@@ -23,7 +23,7 @@ public final class ReportDeliveryInfoResponse {
     /**
      * Has destination for the report being delivered.
      * 
-     */
+    */
     public ReportDeliveryDestinationResponse getDestination() {
         return this.destination;
     }

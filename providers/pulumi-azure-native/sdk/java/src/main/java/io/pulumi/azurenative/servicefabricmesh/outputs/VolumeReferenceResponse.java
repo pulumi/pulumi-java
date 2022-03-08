@@ -41,21 +41,21 @@ public final class VolumeReferenceResponse {
     /**
      * The path within the container at which the volume should be mounted. Only valid path characters are allowed.
      * 
-     */
+    */
     public String getDestinationPath() {
         return this.destinationPath;
     }
     /**
      * Name of the volume being referenced.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The flag indicating whether the volume is read only. Default is 'false'.
      * 
-     */
+    */
     public Optional<Boolean> getReadOnly() {
         return Optional.ofNullable(this.readOnly);
     }

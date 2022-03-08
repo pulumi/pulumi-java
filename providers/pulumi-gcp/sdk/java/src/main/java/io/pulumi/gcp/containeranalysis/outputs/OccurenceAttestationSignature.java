@@ -57,7 +57,7 @@ public final class OccurenceAttestationSignature {
      * * RFC6920 digest-named SubjectPublicKeyInfo (digest of the DER serialization):
      * * "ni:///sha-256;cD9o9Cq6LG3jD0iKXqEi_vdjJGecm_iXkbqVoScViaU"
      * 
-     */
+    */
     public String getPublicKeyId() {
         return this.publicKeyId;
     }
@@ -70,7 +70,7 @@ public final class OccurenceAttestationSignature {
      * have a canonical serialization that can always be
      * unambiguously computed to derive the payload.
      * 
-     */
+    */
     public Optional<String> getSignature() {
         return Optional.ofNullable(this.signature);
     }

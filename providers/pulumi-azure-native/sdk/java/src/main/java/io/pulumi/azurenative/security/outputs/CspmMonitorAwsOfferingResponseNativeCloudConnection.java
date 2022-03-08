@@ -25,7 +25,7 @@ public final class CspmMonitorAwsOfferingResponseNativeCloudConnection {
     /**
      * The cloud role ARN in AWS for this feature
      * 
-     */
+    */
     public Optional<String> getCloudRoleArn() {
         return Optional.ofNullable(this.cloudRoleArn);
     }

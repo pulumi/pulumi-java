@@ -36,14 +36,14 @@ public final class InstanceTemplateReservationAffinity {
      * Specifies the label selector for the reservation to use..
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<InstanceTemplateReservationAffinitySpecificReservation> getSpecificReservation() {
         return Optional.ofNullable(this.specificReservation);
     }
     /**
      * The type of reservation from which this instance can consume resources.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

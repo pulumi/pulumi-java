@@ -70,14 +70,14 @@ public final class BucketReplicationRule {
     /**
      * A unique identifier for the rule.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * An object key name prefix that identifies the object or objects to which the rule applies.
      * 
-     */
+    */
     public Optional<String> getPrefix() {
         return Optional.ofNullable(this.prefix);
     }
@@ -90,7 +90,7 @@ public final class BucketReplicationRule {
     /**
      * Specifies whether the rule is enabled.
      * 
-     */
+    */
     public BucketReplicationRuleStatus getStatus() {
         return this.status;
     }

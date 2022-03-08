@@ -58,35 +58,35 @@ public final class DistributionConfigurationDistribution {
     /**
      * The specific AMI settings (for example, launch permissions, AMI tags).
      * 
-     */
+    */
     public Optional<DistributionConfigurationDistributionAmiDistributionConfigurationProperties> getAmiDistributionConfiguration() {
         return Optional.ofNullable(this.amiDistributionConfiguration);
     }
     /**
      * Container distribution settings for encryption, licensing, and sharing in a specific Region.
      * 
-     */
+    */
     public Optional<DistributionConfigurationDistributionContainerDistributionConfigurationProperties> getContainerDistributionConfiguration() {
         return Optional.ofNullable(this.containerDistributionConfiguration);
     }
     /**
      * A group of launchTemplateConfiguration settings that apply to image distribution.
      * 
-     */
+    */
     public List<DistributionConfigurationLaunchTemplateConfiguration> getLaunchTemplateConfigurations() {
         return this.launchTemplateConfigurations == null ? List.of() : this.launchTemplateConfigurations;
     }
     /**
      * The License Manager Configuration to associate with the AMI in the specified Region.
      * 
-     */
+    */
     public List<String> getLicenseConfigurationArns() {
         return this.licenseConfigurationArns == null ? List.of() : this.licenseConfigurationArns;
     }
     /**
      * region
      * 
-     */
+    */
     public String getRegion() {
         return this.region;
     }

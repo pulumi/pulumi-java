@@ -31,14 +31,14 @@ public final class DataSourceCredentialsCredentialPair {
     /**
      * Password, maximum length of 1024 characters.
      * 
-     */
+    */
     public String getPassword() {
         return this.password;
     }
     /**
      * User name, maximum length of 64 characters.
      * 
-     */
+    */
     public String getUsername() {
         return this.username;
     }

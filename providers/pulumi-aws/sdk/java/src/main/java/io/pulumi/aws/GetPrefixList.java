@@ -14,18 +14,42 @@ import javax.annotation.Nullable;
 
 @Deprecated /* aws.getPrefixList has been deprecated in favor of aws.ec2.getPrefixList */
 public class GetPrefixList {
-/**
+    private GetPrefixList() {}
+    public interface BuilderApplicator {
+        public void apply(GetPrefixListArgs.Builder a);
+    }
+    private static GetPrefixListArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPrefixListArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * 
+     *
+     * A collection of arguments for invoking getPrefixList.
  * 
- *
- * A collection of arguments for invoking getPrefixList.
+     *
+     * A collection of values returned by getPrefixList.
  * 
- *
- * A collection of values returned by getPrefixList.
+     * @Deprecated
+     * aws.getPrefixList has been deprecated in favor of aws.ec2.getPrefixList
  * 
- * @deprecated
- * aws.getPrefixList has been deprecated in favor of aws.ec2.getPrefixList
- * 
- */
+     */
+    public static CompletableFuture<GetPrefixListResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * 
+     *
+         * A collection of arguments for invoking getPrefixList.
+     * 
+     *
+         * A collection of values returned by getPrefixList.
+     * 
+     * @Deprecated
+         * aws.getPrefixList has been deprecated in favor of aws.ec2.getPrefixList
+     * 
+     */
     @Deprecated /* aws.getPrefixList has been deprecated in favor of aws.ec2.getPrefixList */
     public static CompletableFuture<GetPrefixListResult> invokeAsync(@Nullable GetPrefixListArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:index/getPrefixList:getPrefixList", TypeShape.of(GetPrefixListResult.class), args == null ? GetPrefixListArgs.Empty : args, Utilities.withVersion(options));

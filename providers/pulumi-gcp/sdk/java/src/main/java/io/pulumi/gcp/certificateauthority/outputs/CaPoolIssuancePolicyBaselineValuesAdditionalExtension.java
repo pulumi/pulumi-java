@@ -43,7 +43,7 @@ public final class CaPoolIssuancePolicyBaselineValuesAdditionalExtension {
      * Indicates whether or not this extension is critical (i.e., if the client does not know how to
      * handle this extension, the client should consider this to be an error).
      * 
-     */
+    */
     public Boolean getCritical() {
         return this.critical;
     }
@@ -51,14 +51,14 @@ public final class CaPoolIssuancePolicyBaselineValuesAdditionalExtension {
      * Describes values that are relevant in a CA certificate.
      * Structure is documented below.
      * 
-     */
+    */
     public CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectId getObjectId() {
         return this.objectId;
     }
     /**
      * The value of this X.509 extension. A base64-encoded string.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }

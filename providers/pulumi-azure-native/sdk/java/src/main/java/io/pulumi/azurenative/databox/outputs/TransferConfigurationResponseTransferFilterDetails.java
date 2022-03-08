@@ -25,7 +25,7 @@ public final class TransferConfigurationResponseTransferFilterDetails {
     /**
      * Details of the filtering the transfer of data.
      * 
-     */
+    */
     public Optional<TransferFilterDetailsResponse> getInclude() {
         return Optional.ofNullable(this.include);
     }

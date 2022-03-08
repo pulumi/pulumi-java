@@ -58,14 +58,14 @@ public final class GetImageResult {
     /**
      * The description of the image.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -75,7 +75,7 @@ public final class GetImageResult {
     /**
      * The name of the image.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -85,14 +85,14 @@ public final class GetImageResult {
     /**
      * Specifies whether the image is running on dedicated hardware. When Bring Your Own License (BYOL) is enabled, this value is set to DEDICATED. For more information, see [Bring Your Own Windows Desktop Images](https://docs.aws.amazon.com/workspaces/latest/adminguide/byol-windows-images.html).
      * 
-     */
+    */
     public String getRequiredTenancy() {
         return this.requiredTenancy;
     }
     /**
      * The status of the image.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }

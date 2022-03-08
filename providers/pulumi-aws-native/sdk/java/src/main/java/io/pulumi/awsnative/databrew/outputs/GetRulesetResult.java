@@ -39,14 +39,14 @@ public final class GetRulesetResult {
     /**
      * Description of the Ruleset
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * List of the data quality rules in the ruleset
      * 
-     */
+    */
     public List<RulesetRule> getRules() {
         return this.rules == null ? List.of() : this.rules;
     }

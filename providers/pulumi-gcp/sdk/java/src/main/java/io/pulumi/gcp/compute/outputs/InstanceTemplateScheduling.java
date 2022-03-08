@@ -65,7 +65,7 @@ public final class InstanceTemplateScheduling {
      * automatically restarted if it is terminated by Compute Engine (not
      * terminated by a user). This defaults to true.
      * 
-     */
+    */
     public Optional<Boolean> getAutomaticRestart() {
         return Optional.ofNullable(this.automaticRestart);
     }
@@ -79,7 +79,7 @@ public final class InstanceTemplateScheduling {
      * [here](https://cloud.google.com/compute/docs/nodes/create-nodes).
      * Structure documented below.
      * 
-     */
+    */
     public List<InstanceTemplateSchedulingNodeAffinity> getNodeAffinities() {
         return this.nodeAffinities == null ? List.of() : this.nodeAffinities;
     }
@@ -87,7 +87,7 @@ public final class InstanceTemplateScheduling {
      * Defines the maintenance behavior for this
      * instance.
      * 
-     */
+    */
     public Optional<String> getOnHostMaintenance() {
         return Optional.ofNullable(this.onHostMaintenance);
     }
@@ -96,7 +96,7 @@ public final class InstanceTemplateScheduling {
      * false. Read more on this
      * [here](https://cloud.google.com/compute/docs/instances/preemptible).
      * 
-     */
+    */
     public Optional<Boolean> getPreemptible() {
         return Optional.ofNullable(this.preemptible);
     }

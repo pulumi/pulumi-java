@@ -25,7 +25,7 @@ public final class ApplicationHAClusterPrometheusExporter {
     /**
      * Prometheus exporter port.
      * 
-     */
+    */
     public Optional<String> getPrometheusPort() {
         return Optional.ofNullable(this.prometheusPort);
     }

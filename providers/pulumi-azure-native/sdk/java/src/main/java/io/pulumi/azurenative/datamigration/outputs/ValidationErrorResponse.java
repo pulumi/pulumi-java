@@ -31,14 +31,14 @@ public final class ValidationErrorResponse {
     /**
      * Severity of the error
      * 
-     */
+    */
     public String getSeverity() {
         return this.severity;
     }
     /**
      * Error Text
      * 
-     */
+    */
     public String getText() {
         return this.text;
     }

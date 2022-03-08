@@ -127,98 +127,98 @@ public final class GetJobResult {
     /**
      * Customer provided key, value pairs that will be returned in Job and JobOutput state events.
      * 
-     */
+    */
     public Map<String,String> getCorrelationData() {
         return this.correlationData == null ? Map.of() : this.correlationData;
     }
     /**
      * The UTC date and time when the customer has created the Job, in 'YYYY-MM-DDThh:mm:ssZ' format.
      * 
-     */
+    */
     public String getCreated() {
         return this.created;
     }
     /**
      * Optional customer supplied description of the Job.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The UTC date and time at which this Job finished processing.
      * 
-     */
+    */
     public String getEndTime() {
         return this.endTime;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The inputs for the Job.
      * 
-     */
+    */
     public Object getInput() {
         return this.input;
     }
     /**
      * The UTC date and time when the customer has last updated the Job, in 'YYYY-MM-DDThh:mm:ssZ' format.
      * 
-     */
+    */
     public String getLastModified() {
         return this.lastModified;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The outputs for the Job.
      * 
-     */
+    */
     public List<JobOutputAssetResponse> getOutputs() {
         return this.outputs;
     }
     /**
      * Priority with which the job should be processed. Higher priority jobs are processed before lower priority jobs. If not set, the default is normal.
      * 
-     */
+    */
     public Optional<String> getPriority() {
         return Optional.ofNullable(this.priority);
     }
     /**
      * The UTC date and time at which this Job began processing.
      * 
-     */
+    */
     public String getStartTime() {
         return this.startTime;
     }
     /**
      * The current state of the job.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * The system metadata relating to this resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

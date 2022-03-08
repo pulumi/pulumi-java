@@ -90,70 +90,70 @@ public final class ProjectArtifacts {
     /**
      * Artifact identifier. Must be the same specified inside the AWS CodeBuild build specification.
      * 
-     */
+    */
     public Optional<String> getArtifactIdentifier() {
         return Optional.ofNullable(this.artifactIdentifier);
     }
     /**
      * Specifies the bucket owner's access for objects that another account uploads to their Amazon S3 bucket. By default, only the account that uploads the objects to the bucket has access to these objects. This property allows you to give the bucket owner access to these objects. Valid values are `NONE`, `READ_ONLY`, and `FULL`. your CodeBuild service role must have the `s3:PutBucketAcl` permission. This permission allows CodeBuild to modify the access control list for the bucket.
      * 
-     */
+    */
     public Optional<String> getBucketOwnerAccess() {
         return Optional.ofNullable(this.bucketOwnerAccess);
     }
     /**
      * Whether to disable encrypting output artifacts. If `type` is set to `NO_ARTIFACTS`, this value is ignored. Defaults to `false`.
      * 
-     */
+    */
     public Optional<Boolean> getEncryptionDisabled() {
         return Optional.ofNullable(this.encryptionDisabled);
     }
     /**
      * Location of the source code from git or s3.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Name of the project. If `type` is set to `S3`, this is the name of the output artifact object
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Namespace to use in storing build artifacts. If `type` is set to `S3`, then valid values are `BUILD_ID` or `NONE`.
      * 
-     */
+    */
     public Optional<String> getNamespaceType() {
         return Optional.ofNullable(this.namespaceType);
     }
     /**
      * Whether a name specified in the build specification overrides the artifact name.
      * 
-     */
+    */
     public Optional<Boolean> getOverrideArtifactName() {
         return Optional.ofNullable(this.overrideArtifactName);
     }
     /**
      * Type of build output artifact to create. If `type` is set to `S3`, valid values are `NONE`, `ZIP`
      * 
-     */
+    */
     public Optional<String> getPackaging() {
         return Optional.ofNullable(this.packaging);
     }
     /**
      * If `type` is set to `S3`, this is the path to the output artifact.
      * 
-     */
+    */
     public Optional<String> getPath() {
         return Optional.ofNullable(this.path);
     }
     /**
      * Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

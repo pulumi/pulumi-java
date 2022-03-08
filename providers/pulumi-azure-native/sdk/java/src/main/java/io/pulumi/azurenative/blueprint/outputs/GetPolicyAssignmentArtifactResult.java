@@ -93,28 +93,28 @@ public final class GetPolicyAssignmentArtifactResult {
     /**
      * Artifacts which need to be deployed before the specified artifact.
      * 
-     */
+    */
     public List<String> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Multi-line explain this resource.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * One-liner string explain this resource.
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * String Id used to locate any resource on Azure.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -122,42 +122,42 @@ public final class GetPolicyAssignmentArtifactResult {
      * Specifies the kind of blueprint artifact.
      * Expected value is 'policyAssignment'.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Name of this resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Parameter values for the policy definition.
      * 
-     */
+    */
     public Map<String,ParameterValueResponse> getParameters() {
         return this.parameters;
     }
     /**
      * Azure resource ID of the policy definition.
      * 
-     */
+    */
     public String getPolicyDefinitionId() {
         return this.policyDefinitionId;
     }
     /**
      * Name of the resource group placeholder to which the policy will be assigned.
      * 
-     */
+    */
     public Optional<String> getResourceGroup() {
         return Optional.ofNullable(this.resourceGroup);
     }
     /**
      * Type of this resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

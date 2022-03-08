@@ -32,14 +32,14 @@ public final class ClientCertificateThumbprintResponse {
     /**
      * The thumbprint of the client certificate.
      * 
-     */
+    */
     public String getCertificateThumbprint() {
         return this.certificateThumbprint;
     }
     /**
      * Indicates if the client certificate has admin access to the cluster. Non admin clients can perform only read only operations on the cluster.
      * 
-     */
+    */
     public Boolean getIsAdmin() {
         return this.isAdmin;
     }

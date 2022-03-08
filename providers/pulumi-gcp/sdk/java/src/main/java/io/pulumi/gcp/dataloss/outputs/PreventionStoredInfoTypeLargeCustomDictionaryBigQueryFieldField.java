@@ -23,7 +23,7 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFie
     /**
      * Name describing the field.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }

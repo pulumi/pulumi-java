@@ -49,28 +49,28 @@ public final class AssignmentReportResourceResponse {
     /**
      * A value indicating compliance status of the machine for the assigned guest configuration.
      * 
-     */
+    */
     public String getComplianceStatus() {
         return this.complianceStatus;
     }
     /**
      * Properties of a guest configuration assignment resource.
      * 
-     */
+    */
     public Object getProperties() {
         return this.properties;
     }
     /**
      * Compliance reason and reason code for a resource.
      * 
-     */
+    */
     public List<AssignmentReportResourceComplianceReasonResponse> getReasons() {
         return this.reasons == null ? List.of() : this.reasons;
     }
     /**
      * Name of the guest configuration assignment resource setting.
      * 
-     */
+    */
     public String getResourceId() {
         return this.resourceId;
     }

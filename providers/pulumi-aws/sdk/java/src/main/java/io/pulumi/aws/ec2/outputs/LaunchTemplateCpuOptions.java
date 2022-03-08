@@ -34,7 +34,7 @@ public final class LaunchTemplateCpuOptions {
     /**
      * The number of CPU cores for the instance.
      * 
-     */
+    */
     public Optional<Integer> getCoreCount() {
         return Optional.ofNullable(this.coreCount);
     }
@@ -42,7 +42,7 @@ public final class LaunchTemplateCpuOptions {
      * The number of threads per CPU core. To disable Intel Hyper-Threading Technology for the instance, specify a value of 1.
      * Otherwise, specify the default value of 2.
      * 
-     */
+    */
     public Optional<Integer> getThreadsPerCore() {
         return Optional.ofNullable(this.threadsPerCore);
     }

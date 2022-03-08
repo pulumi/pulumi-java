@@ -33,14 +33,14 @@ public final class ResourceRangeResponse {
     /**
      * The maximum number of the resource.
      * 
-     */
+    */
     public Optional<Integer> getMax() {
         return Optional.ofNullable(this.max);
     }
     /**
      * The minimum number of the resource.
      * 
-     */
+    */
     public Optional<Integer> getMin() {
         return Optional.ofNullable(this.min);
     }

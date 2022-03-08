@@ -65,28 +65,28 @@ public final class CustomerCertificateParametersResponse {
     /**
      * Certificate issuing authority.
      * 
-     */
+    */
     public Optional<String> getCertificateAuthority() {
         return Optional.ofNullable(this.certificateAuthority);
     }
     /**
      * Resource reference to the KV secret
      * 
-     */
+    */
     public ResourceReferenceResponse getSecretSource() {
         return this.secretSource;
     }
     /**
      * Version of the secret to be used
      * 
-     */
+    */
     public Optional<String> getSecretVersion() {
         return Optional.ofNullable(this.secretVersion);
     }
     /**
      * The list of SANs.
      * 
-     */
+    */
     public List<String> getSubjectAlternativeNames() {
         return this.subjectAlternativeNames == null ? List.of() : this.subjectAlternativeNames;
     }
@@ -94,14 +94,14 @@ public final class CustomerCertificateParametersResponse {
      * The type of the Secret to create.
      * Expected value is 'CustomerCertificate'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Whether to use the latest version for the certificate
      * 
-     */
+    */
     public Optional<Boolean> getUseLatestVersion() {
         return Optional.ofNullable(this.useLatestVersion);
     }

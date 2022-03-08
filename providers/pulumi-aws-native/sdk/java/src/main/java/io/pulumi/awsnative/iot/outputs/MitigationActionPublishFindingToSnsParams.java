@@ -23,7 +23,7 @@ public final class MitigationActionPublishFindingToSnsParams {
     /**
      * The ARN of the topic to which you want to publish the findings.
      * 
-     */
+    */
     public String getTopicArn() {
         return this.topicArn;
     }

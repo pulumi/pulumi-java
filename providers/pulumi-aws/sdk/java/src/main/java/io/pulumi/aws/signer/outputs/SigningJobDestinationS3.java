@@ -33,14 +33,14 @@ public final class SigningJobDestinationS3 {
     /**
      * Name of the S3 bucket.
      * 
-     */
+    */
     public String getBucket() {
         return this.bucket;
     }
     /**
      * An Amazon S3 object key prefix that you can use to limit signed objects keys to begin with the specified prefix.
      * 
-     */
+    */
     public Optional<String> getPrefix() {
         return Optional.ofNullable(this.prefix);
     }

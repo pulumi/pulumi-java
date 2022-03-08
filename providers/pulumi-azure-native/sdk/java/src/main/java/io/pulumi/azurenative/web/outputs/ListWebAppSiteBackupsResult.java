@@ -33,14 +33,14 @@ public final class ListWebAppSiteBackupsResult {
     /**
      * Link to next page of resources.
      * 
-     */
+    */
     public String getNextLink() {
         return this.nextLink;
     }
     /**
      * Collection of resources.
      * 
-     */
+    */
     public List<BackupItemResponse> getValue() {
         return this.value;
     }

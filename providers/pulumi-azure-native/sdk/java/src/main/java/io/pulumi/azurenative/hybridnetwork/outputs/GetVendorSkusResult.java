@@ -92,70 +92,70 @@ public final class GetVendorSkusResult {
     /**
      * The sku deployment mode.
      * 
-     */
+    */
     public Optional<String> getDeploymentMode() {
         return Optional.ofNullable(this.deploymentMode);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The parameters for the managed application to be supplied by the vendor.
      * 
-     */
+    */
     public Optional<Object> getManagedApplicationParameters() {
         return Optional.ofNullable(this.managedApplicationParameters);
     }
     /**
      * The template for the managed application deployment.
      * 
-     */
+    */
     public Optional<Object> getManagedApplicationTemplate() {
         return Optional.ofNullable(this.managedApplicationTemplate);
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The template definition of the network function.
      * 
-     */
+    */
     public Optional<NetworkFunctionTemplateResponse> getNetworkFunctionTemplate() {
         return Optional.ofNullable(this.networkFunctionTemplate);
     }
     /**
      * Indicates if the vendor sku is in preview mode.
      * 
-     */
+    */
     public Optional<Boolean> getPreview() {
         return Optional.ofNullable(this.preview);
     }
     /**
      * The provisioning state of the vendor sku sub resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The sku type.
      * 
-     */
+    */
     public Optional<String> getSkuType() {
         return Optional.ofNullable(this.skuType);
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

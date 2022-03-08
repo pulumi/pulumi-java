@@ -49,28 +49,28 @@ public final class BudgetFilterResponse {
     /**
      * The logical "AND" expression. Must have at least 2 items.
      * 
-     */
+    */
     public List<BudgetFilterPropertiesResponse> getAnd() {
         return this.and == null ? List.of() : this.and;
     }
     /**
      * Has comparison expression for a dimension
      * 
-     */
+    */
     public Optional<BudgetComparisonExpressionResponse> getDimensions() {
         return Optional.ofNullable(this.dimensions);
     }
     /**
      * The logical "NOT" expression.
      * 
-     */
+    */
     public Optional<BudgetFilterPropertiesResponse> getNot() {
         return Optional.ofNullable(this.not);
     }
     /**
      * Has comparison expression for a tag
      * 
-     */
+    */
     public Optional<BudgetComparisonExpressionResponse> getTags() {
         return Optional.ofNullable(this.tags);
     }

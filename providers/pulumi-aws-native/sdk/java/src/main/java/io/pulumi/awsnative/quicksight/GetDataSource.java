@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDataSource {
-/**
- * Definition of the AWS::QuickSight::DataSource Resource Type.
+    private GetDataSource() {}
+    public interface BuilderApplicator {
+        public void apply(GetDataSourceArgs.Builder a);
+    }
+    private static GetDataSourceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDataSourceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Definition of the AWS::QuickSight::DataSource Resource Type.
  * 
- */
+     */
+    public static CompletableFuture<GetDataSourceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Definition of the AWS::QuickSight::DataSource Resource Type.
+     * 
+     */
     public static CompletableFuture<GetDataSourceResult> invokeAsync(GetDataSourceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:quicksight:getDataSource", TypeShape.of(GetDataSourceResult.class), args == null ? GetDataSourceArgs.Empty : args, Utilities.withVersion(options));
     }

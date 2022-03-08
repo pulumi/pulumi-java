@@ -36,14 +36,14 @@ public final class GetFoldersResult {
     /**
      * A list of projects matching the provided filter. Structure is defined below.
      * 
-     */
+    */
     public List<GetFoldersFolder> getFolders() {
         return this.folders;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }

@@ -56,35 +56,35 @@ public final class GetSigningProfileResult {
     /**
      * The Amazon Resource Name (ARN) of the specified signing profile.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * A name for the signing profile. AWS CloudFormation generates a unique physical ID and uses that ID for the signing profile name.
      * 
-     */
+    */
     public Optional<String> getProfileName() {
         return Optional.ofNullable(this.profileName);
     }
     /**
      * A version for the signing profile. AWS Signer generates a unique version for each profile of the same profile name.
      * 
-     */
+    */
     public Optional<String> getProfileVersion() {
         return Optional.ofNullable(this.profileVersion);
     }
     /**
      * The Amazon Resource Name (ARN) of the specified signing profile version.
      * 
-     */
+    */
     public Optional<String> getProfileVersionArn() {
         return Optional.ofNullable(this.profileVersionArn);
     }
     /**
      * A list of tags associated with the signing profile.
      * 
-     */
+    */
     public List<SigningProfileTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

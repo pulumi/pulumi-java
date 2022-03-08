@@ -33,14 +33,14 @@ public final class DataSourceHttpConfigAuthorizationConfigAwsIamConfig {
     /**
      * The signing Amazon Web Services Region for IAM authorization.
      * 
-     */
+    */
     public Optional<String> getSigningRegion() {
         return Optional.ofNullable(this.signingRegion);
     }
     /**
      * The signing service name for IAM authorization.
      * 
-     */
+    */
     public Optional<String> getSigningServiceName() {
         return Optional.ofNullable(this.signingServiceName);
     }

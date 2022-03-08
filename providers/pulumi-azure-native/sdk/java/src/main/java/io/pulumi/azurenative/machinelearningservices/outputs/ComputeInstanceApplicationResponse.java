@@ -33,14 +33,14 @@ public final class ComputeInstanceApplicationResponse {
     /**
      * Name of the ComputeInstance application.
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * Application' endpoint URI.
      * 
-     */
+    */
     public Optional<String> getEndpointUri() {
         return Optional.ofNullable(this.endpointUri);
     }

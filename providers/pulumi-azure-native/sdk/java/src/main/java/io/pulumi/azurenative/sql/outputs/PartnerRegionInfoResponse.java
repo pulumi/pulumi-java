@@ -33,14 +33,14 @@ public final class PartnerRegionInfoResponse {
     /**
      * Geo location of the partner managed instances.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Replication role of the partner managed instances.
      * 
-     */
+    */
     public String getReplicationRole() {
         return this.replicationRole;
     }

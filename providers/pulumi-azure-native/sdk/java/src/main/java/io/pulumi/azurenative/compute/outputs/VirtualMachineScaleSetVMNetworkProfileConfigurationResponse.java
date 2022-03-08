@@ -25,7 +25,7 @@ public final class VirtualMachineScaleSetVMNetworkProfileConfigurationResponse {
     /**
      * The list of network configurations.
      * 
-     */
+    */
     public List<VirtualMachineScaleSetNetworkConfigurationResponse> getNetworkInterfaceConfigurations() {
         return this.networkInterfaceConfigurations == null ? List.of() : this.networkInterfaceConfigurations;
     }

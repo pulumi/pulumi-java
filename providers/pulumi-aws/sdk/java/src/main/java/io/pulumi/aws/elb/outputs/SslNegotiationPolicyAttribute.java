@@ -31,14 +31,14 @@ public final class SslNegotiationPolicyAttribute {
     /**
      * The name of the attribute
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The value of the attribute
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }

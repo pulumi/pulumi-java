@@ -42,21 +42,21 @@ public final class VirtualNodeSpecListenerTls {
     /**
      * The listener's TLS certificate.
      * 
-     */
+    */
     public VirtualNodeSpecListenerTlsCertificate getCertificate() {
         return this.certificate;
     }
     /**
      * The listener's TLS mode. Valid values: `DISABLED`, `PERMISSIVE`, `STRICT`.
      * 
-     */
+    */
     public String getMode() {
         return this.mode;
     }
     /**
      * The listener's Transport Layer Security (TLS) validation context.
      * 
-     */
+    */
     public Optional<VirtualNodeSpecListenerTlsValidation> getValidation() {
         return Optional.ofNullable(this.validation);
     }

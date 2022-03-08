@@ -42,21 +42,21 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
     /**
      * Set of tags that are attached to the container distribution configuration.
      * 
-     */
+    */
     public List<String> getContainerTags() {
         return this.containerTags == null ? List.of() : this.containerTags;
     }
     /**
      * Description of the container distribution configuration.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Configuration block with the destination repository for the container distribution configuration.
      * 
-     */
+    */
     public DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepository getTargetRepository() {
         return this.targetRepository;
     }

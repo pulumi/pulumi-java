@@ -48,28 +48,28 @@ public final class KeyVaultPropertiesResponse {
     /**
      * The name of the key associated with the Log Analytics cluster.
      * 
-     */
+    */
     public Optional<String> getKeyName() {
         return Optional.ofNullable(this.keyName);
     }
     /**
      * Selected key minimum required size.
      * 
-     */
+    */
     public Optional<Integer> getKeyRsaSize() {
         return Optional.ofNullable(this.keyRsaSize);
     }
     /**
      * The Key Vault uri which holds they key associated with the Log Analytics cluster.
      * 
-     */
+    */
     public Optional<String> getKeyVaultUri() {
         return Optional.ofNullable(this.keyVaultUri);
     }
     /**
      * The version of the key associated with the Log Analytics cluster.
      * 
-     */
+    */
     public Optional<String> getKeyVersion() {
         return Optional.ofNullable(this.keyVersion);
     }

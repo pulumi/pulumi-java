@@ -32,14 +32,14 @@ public final class GooglePrivacyDlpV2InspectionRuleResponse {
     /**
      * Exclusion rule.
      * 
-     */
+    */
     public GooglePrivacyDlpV2ExclusionRuleResponse getExclusionRule() {
         return this.exclusionRule;
     }
     /**
      * Hotword-based detection rule.
      * 
-     */
+    */
     public GooglePrivacyDlpV2HotwordRuleResponse getHotwordRule() {
         return this.hotwordRule;
     }

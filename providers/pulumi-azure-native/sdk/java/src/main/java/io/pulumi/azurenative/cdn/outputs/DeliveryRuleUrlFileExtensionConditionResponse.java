@@ -34,14 +34,14 @@ public final class DeliveryRuleUrlFileExtensionConditionResponse {
      * The name of the condition for the delivery rule.
      * Expected value is 'UrlFileExtension'.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Defines the parameters for the condition.
      * 
-     */
+    */
     public UrlFileExtensionMatchConditionParametersResponse getParameters() {
         return this.parameters;
     }

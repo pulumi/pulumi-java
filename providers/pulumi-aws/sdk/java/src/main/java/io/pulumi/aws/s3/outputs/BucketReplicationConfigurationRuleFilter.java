@@ -35,7 +35,7 @@ public final class BucketReplicationConfigurationRuleFilter {
     /**
      * Object keyname prefix that identifies subset of objects to which the rule applies. Must be less than or equal to 1024 characters in length.
      * 
-     */
+    */
     public Optional<String> getPrefix() {
         return Optional.ofNullable(this.prefix);
     }
@@ -43,7 +43,7 @@ public final class BucketReplicationConfigurationRuleFilter {
      * A map of tags that identifies subset of objects to which the rule applies.
      * The rule applies only to objects having all the tags in its tagset.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }

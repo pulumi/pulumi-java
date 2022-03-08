@@ -24,7 +24,7 @@ public final class ColumnLayoutResponse {
     /**
      * The columns of content to display.
      * 
-     */
+    */
     public List<ColumnResponse> getColumns() {
         return this.columns;
     }

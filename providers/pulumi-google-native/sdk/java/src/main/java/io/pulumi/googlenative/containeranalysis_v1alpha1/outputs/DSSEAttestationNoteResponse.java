@@ -23,7 +23,7 @@ public final class DSSEAttestationNoteResponse {
     /**
      * DSSEHint hints at the purpose of the attestation authority.
      * 
-     */
+    */
     public DSSEHintResponse getHint() {
         return this.hint;
     }

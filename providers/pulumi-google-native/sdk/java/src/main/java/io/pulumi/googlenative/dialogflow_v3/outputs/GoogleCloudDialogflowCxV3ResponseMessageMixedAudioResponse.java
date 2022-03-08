@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageMixedAudioResponse {
     /**
      * Segments this audio response is composed of.
      * 
-     */
+    */
     public List<GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegmentResponse> getSegments() {
         return this.segments;
     }

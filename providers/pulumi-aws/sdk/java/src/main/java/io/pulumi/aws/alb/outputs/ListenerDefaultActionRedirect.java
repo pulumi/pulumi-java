@@ -61,42 +61,42 @@ public final class ListenerDefaultActionRedirect {
     /**
      * Hostname. This component is not percent-encoded. The hostname can contain `#{host}`. Defaults to `#{host}`.
      * 
-     */
+    */
     public Optional<String> getHost() {
         return Optional.ofNullable(this.host);
     }
     /**
      * Absolute path, starting with the leading "/". This component is not percent-encoded. The path can contain #{host}, #{path}, and #{port}. Defaults to `/#{path}`.
      * 
-     */
+    */
     public Optional<String> getPath() {
         return Optional.ofNullable(this.path);
     }
     /**
      * Port. Specify a value from `1` to `65535` or `#{port}`. Defaults to `#{port}`.
      * 
-     */
+    */
     public Optional<String> getPort() {
         return Optional.ofNullable(this.port);
     }
     /**
      * Protocol. Valid values are `HTTP`, `HTTPS`, or `#{protocol}`. Defaults to `#{protocol}`.
      * 
-     */
+    */
     public Optional<String> getProtocol() {
         return Optional.ofNullable(this.protocol);
     }
     /**
      * Query parameters, URL-encoded when necessary, but not percent-encoded. Do not include the leading "?". Defaults to `#{query}`.
      * 
-     */
+    */
     public Optional<String> getQuery() {
         return Optional.ofNullable(this.query);
     }
     /**
      * HTTP redirect code. The redirect is either permanent (`HTTP_301`) or temporary (`HTTP_302`).
      * 
-     */
+    */
     public String getStatusCode() {
         return this.statusCode;
     }

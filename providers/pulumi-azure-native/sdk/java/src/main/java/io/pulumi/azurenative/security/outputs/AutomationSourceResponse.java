@@ -35,14 +35,14 @@ public final class AutomationSourceResponse {
     /**
      * A valid event source type.
      * 
-     */
+    */
     public Optional<String> getEventSource() {
         return Optional.ofNullable(this.eventSource);
     }
     /**
      * A set of rules which evaluate upon event interception. A logical disjunction is applied between defined rule sets (logical 'or').
      * 
-     */
+    */
     public List<AutomationRuleSetResponse> getRuleSets() {
         return this.ruleSets == null ? List.of() : this.ruleSets;
     }

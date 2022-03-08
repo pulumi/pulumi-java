@@ -101,77 +101,77 @@ public final class GetConnectionProfileResult {
     /**
      * The create time of the resource.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * Display name.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * Forward SSH tunnel connectivity.
      * 
-     */
+    */
     public ForwardSshTunnelConnectivityResponse getForwardSshConnectivity() {
         return this.forwardSshConnectivity;
     }
     /**
      * Cloud Storage ConnectionProfile configuration.
      * 
-     */
+    */
     public GcsProfileResponse getGcsProfile() {
         return this.gcsProfile;
     }
     /**
      * Labels.
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels;
     }
     /**
      * MySQL ConnectionProfile configuration.
      * 
-     */
+    */
     public MysqlProfileResponse getMysqlProfile() {
         return this.mysqlProfile;
     }
     /**
      * The resource's name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Oracle ConnectionProfile configuration.
      * 
-     */
+    */
     public OracleProfileResponse getOracleProfile() {
         return this.oracleProfile;
     }
     /**
      * Private connectivity.
      * 
-     */
+    */
     public PrivateConnectivityResponse getPrivateConnectivity() {
         return this.privateConnectivity;
     }
     /**
      * Static Service IP connectivity.
      * 
-     */
+    */
     public StaticServiceIpConnectivityResponse getStaticServiceIpConnectivity() {
         return this.staticServiceIpConnectivity;
     }
     /**
      * The update time of the resource.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }

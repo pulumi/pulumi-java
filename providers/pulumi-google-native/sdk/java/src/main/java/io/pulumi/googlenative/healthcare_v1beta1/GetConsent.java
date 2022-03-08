@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetConsent {
-/**
- * Gets the specified revision of a Consent, or the latest revision if `revision_id` is not specified in the resource name.
+    private GetConsent() {}
+    public interface BuilderApplicator {
+        public void apply(GetConsentArgs.Builder a);
+    }
+    private static GetConsentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetConsentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the specified revision of a Consent, or the latest revision if `revision_id` is not specified in the resource name.
  * 
- */
+     */
+    public static CompletableFuture<GetConsentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the specified revision of a Consent, or the latest revision if `revision_id` is not specified in the resource name.
+     * 
+     */
     public static CompletableFuture<GetConsentResult> invokeAsync(GetConsentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:healthcare/v1beta1:getConsent", TypeShape.of(GetConsentResult.class), args == null ? GetConsentArgs.Empty : args, Utilities.withVersion(options));
     }

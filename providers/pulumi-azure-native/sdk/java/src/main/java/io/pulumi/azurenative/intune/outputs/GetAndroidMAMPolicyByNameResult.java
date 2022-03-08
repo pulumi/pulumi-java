@@ -155,7 +155,7 @@ public final class GetAndroidMAMPolicyByNameResult {
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -165,7 +165,7 @@ public final class GetAndroidMAMPolicyByNameResult {
     /**
      * Resource Location
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
@@ -175,7 +175,7 @@ public final class GetAndroidMAMPolicyByNameResult {
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -197,14 +197,14 @@ public final class GetAndroidMAMPolicyByNameResult {
     /**
      * Resource Tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

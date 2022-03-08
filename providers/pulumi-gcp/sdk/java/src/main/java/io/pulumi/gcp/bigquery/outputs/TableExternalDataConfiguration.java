@@ -125,7 +125,7 @@ public final class TableExternalDataConfiguration {
      * - Let BigQuery try to autodetect the schema
      *   and format of the table.
      * 
-     */
+    */
     public Boolean getAutodetect() {
         return this.autodetect;
     }
@@ -133,7 +133,7 @@ public final class TableExternalDataConfiguration {
      * The compression type of the data source.
      * Valid values are "NONE" or "GZIP".
      * 
-     */
+    */
     public Optional<String> getCompression() {
         return Optional.ofNullable(this.compression);
     }
@@ -141,7 +141,7 @@ public final class TableExternalDataConfiguration {
      * Additional properties to set if
      * `source_format` is set to "CSV". Structure is documented below.
      * 
-     */
+    */
     public Optional<TableExternalDataConfigurationCsvOptions> getCsvOptions() {
         return Optional.ofNullable(this.csvOptions);
     }
@@ -150,7 +150,7 @@ public final class TableExternalDataConfiguration {
      * `source_format` is set to "GOOGLE_SHEETS". Structure is
      * documented below.
      * 
-     */
+    */
     public Optional<TableExternalDataConfigurationGoogleSheetsOptions> getGoogleSheetsOptions() {
         return Optional.ofNullable(this.googleSheetsOptions);
     }
@@ -160,7 +160,7 @@ public final class TableExternalDataConfiguration {
      * partitioning on an unsupported format will lead to an error, as will providing
      * an invalid specification. Structure is documented below.
      * 
-     */
+    */
     public Optional<TableExternalDataConfigurationHivePartitioningOptions> getHivePartitioningOptions() {
         return Optional.ofNullable(this.hivePartitioningOptions);
     }
@@ -172,7 +172,7 @@ public final class TableExternalDataConfiguration {
      * many bad records, an invalid error is returned in the job result.
      * The default value is false.
      * 
-     */
+    */
     public Optional<Boolean> getIgnoreUnknownValues() {
         return Optional.ofNullable(this.ignoreUnknownValues);
     }
@@ -180,7 +180,7 @@ public final class TableExternalDataConfiguration {
      * The maximum number of bad records that
      * BigQuery can ignore when reading data.
      * 
-     */
+    */
     public Optional<Integer> getMaxBadRecords() {
         return Optional.ofNullable(this.maxBadRecords);
     }
@@ -197,7 +197,7 @@ public final class TableExternalDataConfiguration {
      * datasource, after creation the computed schema will be stored in
      * `google_bigquery_table.schema`
      * 
-     */
+    */
     public Optional<String> getSchema() {
         return Optional.ofNullable(this.schema);
     }
@@ -208,7 +208,7 @@ public final class TableExternalDataConfiguration {
      * the `scopes` must include
      * "https://www.googleapis.com/auth/drive.readonly".
      * 
-     */
+    */
     public String getSourceFormat() {
         return this.sourceFormat;
     }
@@ -216,7 +216,7 @@ public final class TableExternalDataConfiguration {
      * A list of the fully-qualified URIs that point to
      * your data in Google Cloud.
      * 
-     */
+    */
     public List<String> getSourceUris() {
         return this.sourceUris;
     }

@@ -58,35 +58,35 @@ public final class SimpleSchedulePolicyResponse {
      * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
      * Expected value is 'SimpleSchedulePolicy'.
      * 
-     */
+    */
     public String getSchedulePolicyType() {
         return this.schedulePolicyType;
     }
     /**
      * List of days of week this schedule has to be run.
      * 
-     */
+    */
     public List<String> getScheduleRunDays() {
         return this.scheduleRunDays == null ? List.of() : this.scheduleRunDays;
     }
     /**
      * Frequency of the schedule operation of this policy.
      * 
-     */
+    */
     public Optional<String> getScheduleRunFrequency() {
         return Optional.ofNullable(this.scheduleRunFrequency);
     }
     /**
      * List of times of day this schedule has to be run.
      * 
-     */
+    */
     public List<String> getScheduleRunTimes() {
         return this.scheduleRunTimes == null ? List.of() : this.scheduleRunTimes;
     }
     /**
      * At every number weeks this schedule has to be run.
      * 
-     */
+    */
     public Optional<Integer> getScheduleWeeklyFrequency() {
         return Optional.ofNullable(this.scheduleWeeklyFrequency);
     }

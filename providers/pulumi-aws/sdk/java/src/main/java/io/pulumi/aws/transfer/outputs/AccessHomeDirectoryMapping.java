@@ -31,14 +31,14 @@ public final class AccessHomeDirectoryMapping {
     /**
      * Represents an entry and a target.
      * 
-     */
+    */
     public String getEntry() {
         return this.entry;
     }
     /**
      * Represents the map target.
      * 
-     */
+    */
     public String getTarget() {
         return this.target;
     }

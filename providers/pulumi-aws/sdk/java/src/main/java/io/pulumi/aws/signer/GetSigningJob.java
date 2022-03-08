@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSigningJob {
-/**
- * Provides information about a Signer Signing Job.
+    private GetSigningJob() {}
+    public interface BuilderApplicator {
+        public void apply(GetSigningJobArgs.Builder a);
+    }
+    private static GetSigningJobArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSigningJobArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Provides information about a Signer Signing Job.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getSigningJob.
+     *
+     * A collection of arguments for invoking getSigningJob.
  * 
- *
- * A collection of values returned by getSigningJob.
+     *
+     * A collection of values returned by getSigningJob.
  * 
- */
+     */
+    public static CompletableFuture<GetSigningJobResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Provides information about a Signer Signing Job.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getSigningJob.
+     * 
+     *
+         * A collection of values returned by getSigningJob.
+     * 
+     */
     public static CompletableFuture<GetSigningJobResult> invokeAsync(GetSigningJobArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:signer/getSigningJob:getSigningJob", TypeShape.of(GetSigningJobResult.class), args == null ? GetSigningJobArgs.Empty : args, Utilities.withVersion(options));
     }

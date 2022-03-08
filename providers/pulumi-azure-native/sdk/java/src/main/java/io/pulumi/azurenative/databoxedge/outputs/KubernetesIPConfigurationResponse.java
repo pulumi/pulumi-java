@@ -33,14 +33,14 @@ public final class KubernetesIPConfigurationResponse {
     /**
      * IP address of the Kubernetes node.
      * 
-     */
+    */
     public Optional<String> getIpAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
     /**
      * Port of the Kubernetes node.
      * 
-     */
+    */
     public String getPort() {
         return this.port;
     }

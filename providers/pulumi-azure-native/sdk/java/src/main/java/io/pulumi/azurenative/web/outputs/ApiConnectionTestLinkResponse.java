@@ -33,14 +33,14 @@ public final class ApiConnectionTestLinkResponse {
     /**
      * HTTP Method
      * 
-     */
+    */
     public Optional<String> getMethod() {
         return Optional.ofNullable(this.method);
     }
     /**
      * Test link request URI
      * 
-     */
+    */
     public Optional<String> getRequestUri() {
         return Optional.ofNullable(this.requestUri);
     }

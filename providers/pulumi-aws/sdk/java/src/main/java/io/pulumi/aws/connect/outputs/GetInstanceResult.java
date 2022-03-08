@@ -104,7 +104,7 @@ public final class GetInstanceResult {
     /**
      * The Amazon Resource Name (ARN) of the instance.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
@@ -114,49 +114,49 @@ public final class GetInstanceResult {
     /**
      * Specifies Whether contact flow logs are enabled.
      * 
-     */
+    */
     public Boolean getContactFlowLogsEnabled() {
         return this.contactFlowLogsEnabled;
     }
     /**
      * Specifies Whether contact lens is enabled.
      * 
-     */
+    */
     public Boolean getContactLensEnabled() {
         return this.contactLensEnabled;
     }
     /**
      * Specifies When the instance was created.
      * 
-     */
+    */
     public String getCreatedTime() {
         return this.createdTime;
     }
     /**
      * Specifies Whether early media for outbound calls is enabled .
      * 
-     */
+    */
     public Boolean getEarlyMediaEnabled() {
         return this.earlyMediaEnabled;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Specifies The identity management type attached to the instance.
      * 
-     */
+    */
     public String getIdentityManagementType() {
         return this.identityManagementType;
     }
     /**
      * Specifies Whether inbound calls are enabled.
      * 
-     */
+    */
     public Boolean getInboundCallsEnabled() {
         return this.inboundCallsEnabled;
     }
@@ -169,21 +169,21 @@ public final class GetInstanceResult {
     /**
      * Specifies Whether outbound calls are enabled.
      * 
-     */
+    */
     public Boolean getOutboundCallsEnabled() {
         return this.outboundCallsEnabled;
     }
     /**
      * The service role of the instance.
      * 
-     */
+    */
     public String getServiceRole() {
         return this.serviceRole;
     }
     /**
      * Specifies The state of the instance.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }

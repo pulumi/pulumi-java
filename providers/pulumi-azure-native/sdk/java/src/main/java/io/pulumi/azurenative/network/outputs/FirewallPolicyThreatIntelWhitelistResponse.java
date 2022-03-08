@@ -33,14 +33,14 @@ public final class FirewallPolicyThreatIntelWhitelistResponse {
     /**
      * List of FQDNs for the ThreatIntel Whitelist.
      * 
-     */
+    */
     public List<String> getFqdns() {
         return this.fqdns == null ? List.of() : this.fqdns;
     }
     /**
      * List of IP addresses for the ThreatIntel Whitelist.
      * 
-     */
+    */
     public List<String> getIpAddresses() {
         return this.ipAddresses == null ? List.of() : this.ipAddresses;
     }

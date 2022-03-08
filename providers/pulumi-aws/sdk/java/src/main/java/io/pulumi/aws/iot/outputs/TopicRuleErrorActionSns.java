@@ -40,21 +40,21 @@ public final class TopicRuleErrorActionSns {
     /**
      * The message format of the message to publish. Accepted values are "JSON" and "RAW".
      * 
-     */
+    */
     public Optional<String> getMessageFormat() {
         return Optional.ofNullable(this.messageFormat);
     }
     /**
      * The ARN of the IAM role that grants access.
      * 
-     */
+    */
     public String getRoleArn() {
         return this.roleArn;
     }
     /**
      * The ARN of the SNS topic.
      * 
-     */
+    */
     public String getTargetArn() {
         return this.targetArn;
     }

@@ -49,28 +49,28 @@ public final class SourceContextResponse {
     /**
      * A SourceContext referring to a revision in a Google Cloud Source Repo.
      * 
-     */
+    */
     public CloudRepoSourceContextResponse getCloudRepo() {
         return this.cloudRepo;
     }
     /**
      * A SourceContext referring to a Gerrit project.
      * 
-     */
+    */
     public GerritSourceContextResponse getGerrit() {
         return this.gerrit;
     }
     /**
      * A SourceContext referring to any third party Git repo (e.g., GitHub).
      * 
-     */
+    */
     public GitSourceContextResponse getGit() {
         return this.git;
     }
     /**
      * Labels with user defined metadata.
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels;
     }

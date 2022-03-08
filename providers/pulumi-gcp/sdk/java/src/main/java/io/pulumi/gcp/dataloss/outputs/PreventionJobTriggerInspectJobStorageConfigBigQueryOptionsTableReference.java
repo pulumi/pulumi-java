@@ -39,14 +39,14 @@ public final class PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTab
     /**
      * Dataset ID of the table.
      * 
-     */
+    */
     public String getDatasetId() {
         return this.datasetId;
     }
     /**
      * The Google Cloud Platform project ID of the project containing the table.
      * 
-     */
+    */
     public String getProjectId() {
         return this.projectId;
     }
@@ -54,7 +54,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTab
      * Name of the table. If is not set a new one will be generated for you with the following format:
      * `dlp_googleapis_yyyy_mm_dd_[dlp_job_id]`. Pacific timezone will be used for generating the date details.
      * 
-     */
+    */
     public String getTableId() {
         return this.tableId;
     }

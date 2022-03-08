@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentInputResponse {
     /**
      * The unique identifier of the intent. Format: `projects//locations//agents//intents/`.
      * 
-     */
+    */
     public String getIntent() {
         return this.intent;
     }

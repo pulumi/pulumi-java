@@ -83,7 +83,7 @@ public final class TagField {
     /**
      * Holds the value for a tag field with boolean type.
      * 
-     */
+    */
     public Optional<Boolean> getBoolValue() {
         return Optional.ofNullable(this.boolValue);
     }
@@ -91,14 +91,14 @@ public final class TagField {
      * - 
      * The display name of this field
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * Holds the value for a tag field with double type.
      * 
-     */
+    */
     public Optional<Double> getDoubleValue() {
         return Optional.ofNullable(this.doubleValue);
     }
@@ -106,14 +106,14 @@ public final class TagField {
      * Holds the value for a tag field with enum type. This value must be one of the allowed values in the definition of this enum.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<String> getEnumValue() {
         return Optional.ofNullable(this.enumValue);
     }
     /**
      * The identifier for this object. Format specified above.
      * 
-     */
+    */
     public String getFieldName() {
         return this.fieldName;
     }
@@ -123,21 +123,21 @@ public final class TagField {
      * a more important field. The value can be negative. Multiple fields can have the same order, and field orders
      * within a tag do not have to be sequential.
      * 
-     */
+    */
     public Optional<Integer> getOrder() {
         return Optional.ofNullable(this.order);
     }
     /**
      * Holds the value for a tag field with string type.
      * 
-     */
+    */
     public Optional<String> getStringValue() {
         return Optional.ofNullable(this.stringValue);
     }
     /**
      * Holds the value for a tag field with timestamp type.
      * 
-     */
+    */
     public Optional<String> getTimestampValue() {
         return Optional.ofNullable(this.timestampValue);
     }

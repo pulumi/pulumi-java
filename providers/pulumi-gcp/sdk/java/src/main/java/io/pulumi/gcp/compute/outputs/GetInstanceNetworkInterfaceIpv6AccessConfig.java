@@ -43,14 +43,14 @@ public final class GetInstanceNetworkInterfaceIpv6AccessConfig {
     /**
      * The [networking tier][network-tier] used for configuring this instance. One of `PREMIUM` or `STANDARD`.
      * 
-     */
+    */
     public String getNetworkTier() {
         return this.networkTier;
     }
     /**
      * The DNS domain name for the public PTR record.
      * 
-     */
+    */
     public String getPublicPtrDomainName() {
         return this.publicPtrDomainName;
     }

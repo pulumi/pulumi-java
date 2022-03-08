@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVPNGateway {
-/**
- * Get a VPN gateway within GCE from its name.
+    private GetVPNGateway() {}
+    public interface BuilderApplicator {
+        public void apply(GetVPNGatewayArgs.Builder a);
+    }
+    private static GetVPNGatewayArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetVPNGatewayArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Get a VPN gateway within GCE from its name.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getVPNGateway.
+     *
+     * A collection of arguments for invoking getVPNGateway.
  * 
- *
- * A collection of values returned by getVPNGateway.
+     *
+     * A collection of values returned by getVPNGateway.
  * 
- */
+     */
+    public static CompletableFuture<GetVPNGatewayResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Get a VPN gateway within GCE from its name.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getVPNGateway.
+     * 
+     *
+         * A collection of values returned by getVPNGateway.
+     * 
+     */
     public static CompletableFuture<GetVPNGatewayResult> invokeAsync(GetVPNGatewayArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getVPNGateway:getVPNGateway", TypeShape.of(GetVPNGatewayResult.class), args == null ? GetVPNGatewayArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -47,28 +47,28 @@ public final class MetadataSupportResponse {
     /**
      * Email of support contact
      * 
-     */
+    */
     public Optional<String> getEmail() {
         return Optional.ofNullable(this.email);
     }
     /**
      * Link for support help, like to support page to open a ticket etc.
      * 
-     */
+    */
     public Optional<String> getLink() {
         return Optional.ofNullable(this.link);
     }
     /**
      * Name of the support contact. Company or person.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Type of support for content item
      * 
-     */
+    */
     public String getTier() {
         return this.tier;
     }

@@ -46,28 +46,28 @@ public final class StandardSchedulerSettingsResponse {
     /**
      * Maximum number of instances to run for this version. Set to zero to disable max_instances configuration.
      * 
-     */
+    */
     public Integer getMaxInstances() {
         return this.maxInstances;
     }
     /**
      * Minimum number of instances to run for this version. Set to zero to disable min_instances configuration.
      * 
-     */
+    */
     public Integer getMinInstances() {
         return this.minInstances;
     }
     /**
      * Target CPU utilization ratio to maintain when scaling.
      * 
-     */
+    */
     public Double getTargetCpuUtilization() {
         return this.targetCpuUtilization;
     }
     /**
      * Target throughput utilization ratio to maintain when scaling
      * 
-     */
+    */
     public Double getTargetThroughputUtilization() {
         return this.targetThroughputUtilization;
     }

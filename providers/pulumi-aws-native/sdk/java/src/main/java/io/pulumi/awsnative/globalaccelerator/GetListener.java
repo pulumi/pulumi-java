@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetListener {
-/**
- * Resource Type definition for AWS::GlobalAccelerator::Listener
+    private GetListener() {}
+    public interface BuilderApplicator {
+        public void apply(GetListenerArgs.Builder a);
+    }
+    private static GetListenerArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetListenerArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::GlobalAccelerator::Listener
  * 
- */
+     */
+    public static CompletableFuture<GetListenerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::GlobalAccelerator::Listener
+     * 
+     */
     public static CompletableFuture<GetListenerResult> invokeAsync(GetListenerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:globalaccelerator:getListener", TypeShape.of(GetListenerResult.class), args == null ? GetListenerArgs.Empty : args, Utilities.withVersion(options));
     }

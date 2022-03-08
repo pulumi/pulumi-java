@@ -29,7 +29,7 @@ public final class OrganizationRootPolicyType {
     /**
      * The status of the policy type as it relates to the associated root
      * 
-     */
+    */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }

@@ -65,7 +65,7 @@ public final class JobRetryConfig {
      * The maximum amount of time to wait before retrying a job after it fails.
      * A duration in seconds with up to nine fractional digits, terminated by 's'.
      * 
-     */
+    */
     public Optional<String> getMaxBackoffDuration() {
         return Optional.ofNullable(this.maxBackoffDuration);
     }
@@ -75,7 +75,7 @@ public final class JobRetryConfig {
      * then doubles maxDoublings times, then increases linearly,
      * and finally retries retries at intervals of maxBackoffDuration up to retryCount times.
      * 
-     */
+    */
     public Optional<Integer> getMaxDoublings() {
         return Optional.ofNullable(this.maxDoublings);
     }
@@ -84,7 +84,7 @@ public final class JobRetryConfig {
      * If specified with retryCount, the job will be retried until both limits are reached.
      * A duration in seconds with up to nine fractional digits, terminated by 's'.
      * 
-     */
+    */
     public Optional<String> getMaxRetryDuration() {
         return Optional.ofNullable(this.maxRetryDuration);
     }
@@ -92,7 +92,7 @@ public final class JobRetryConfig {
      * The minimum amount of time to wait before retrying a job after it fails.
      * A duration in seconds with up to nine fractional digits, terminated by 's'.
      * 
-     */
+    */
     public Optional<String> getMinBackoffDuration() {
         return Optional.ofNullable(this.minBackoffDuration);
     }
@@ -101,7 +101,7 @@ public final class JobRetryConfig {
      * job using the exponential backoff procedure described by maxDoublings.
      * Values greater than 5 and negative values are not allowed.
      * 
-     */
+    */
     public Optional<Integer> getRetryCount() {
         return Optional.ofNullable(this.retryCount);
     }
