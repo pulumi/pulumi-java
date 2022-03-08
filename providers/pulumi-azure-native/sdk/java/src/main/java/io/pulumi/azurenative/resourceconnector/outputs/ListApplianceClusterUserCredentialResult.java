@@ -26,8 +26,8 @@ public final class ListApplianceClusterUserCredentialResult {
     private ListApplianceClusterUserCredentialResult(
         HybridConnectionConfigResponse hybridConnectionConfig,
         List<ApplianceCredentialKubeconfigResponse> kubeconfigs) {
-        this.hybridConnectionConfig = Objects.requireNonNull(hybridConnectionConfig);
-        this.kubeconfigs = Objects.requireNonNull(kubeconfigs);
+        this.hybridConnectionConfig = hybridConnectionConfig;
+        this.kubeconfigs = kubeconfigs;
     }
 
     /**

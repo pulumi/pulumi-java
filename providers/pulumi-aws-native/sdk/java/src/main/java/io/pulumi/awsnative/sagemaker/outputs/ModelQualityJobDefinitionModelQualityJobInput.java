@@ -17,8 +17,8 @@ public final class ModelQualityJobDefinitionModelQualityJobInput {
     private ModelQualityJobDefinitionModelQualityJobInput(
         ModelQualityJobDefinitionEndpointInput endpointInput,
         ModelQualityJobDefinitionMonitoringGroundTruthS3Input groundTruthS3Input) {
-        this.endpointInput = Objects.requireNonNull(endpointInput);
-        this.groundTruthS3Input = Objects.requireNonNull(groundTruthS3Input);
+        this.endpointInput = endpointInput;
+        this.groundTruthS3Input = groundTruthS3Input;
     }
 
     public ModelQualityJobDefinitionEndpointInput getEndpointInput() {

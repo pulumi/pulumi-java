@@ -24,8 +24,8 @@ public final class ManagedHsmSkuResponse {
     private ManagedHsmSkuResponse(
         String family,
         String name) {
-        this.family = Objects.requireNonNull(family);
-        this.name = Objects.requireNonNull(name);
+        this.family = family;
+        this.name = name;
     }
 
     /**

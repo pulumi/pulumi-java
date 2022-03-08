@@ -25,8 +25,8 @@ public final class SourceDiskEncryptionKeyResponse {
     private SourceDiskEncryptionKeyResponse(
         CustomerEncryptionKeyResponse diskEncryptionKey,
         String sourceDisk) {
-        this.diskEncryptionKey = Objects.requireNonNull(diskEncryptionKey);
-        this.sourceDisk = Objects.requireNonNull(sourceDisk);
+        this.diskEncryptionKey = diskEncryptionKey;
+        this.sourceDisk = sourceDisk;
     }
 
     /**

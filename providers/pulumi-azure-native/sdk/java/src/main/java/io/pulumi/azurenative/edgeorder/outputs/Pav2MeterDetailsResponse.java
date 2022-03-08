@@ -38,10 +38,10 @@ public final class Pav2MeterDetailsResponse {
         String chargingType,
         String meterGuid,
         Double multiplier) {
-        this.billingType = Objects.requireNonNull(billingType);
-        this.chargingType = Objects.requireNonNull(chargingType);
-        this.meterGuid = Objects.requireNonNull(meterGuid);
-        this.multiplier = Objects.requireNonNull(multiplier);
+        this.billingType = billingType;
+        this.chargingType = chargingType;
+        this.meterGuid = meterGuid;
+        this.multiplier = multiplier;
     }
 
     /**

@@ -18,7 +18,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
 
     @OutputCustomType.Constructor({"documents"})
     private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceResponse(List<String> documents) {
-        this.documents = Objects.requireNonNull(documents);
+        this.documents = documents;
     }
 
     /**

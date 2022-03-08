@@ -30,9 +30,9 @@ public final class GetEmailIdentityResult {
         String arn,
         String email,
         String id) {
-        this.arn = Objects.requireNonNull(arn);
-        this.email = Objects.requireNonNull(email);
-        this.id = Objects.requireNonNull(id);
+        this.arn = arn;
+        this.email = email;
+        this.id = id;
     }
 
     /**

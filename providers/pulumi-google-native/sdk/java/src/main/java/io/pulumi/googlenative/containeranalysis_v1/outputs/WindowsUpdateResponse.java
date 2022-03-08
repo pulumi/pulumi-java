@@ -57,13 +57,13 @@ public final class WindowsUpdateResponse {
         String lastPublishedTimestamp,
         String supportUrl,
         String title) {
-        this.categories = Objects.requireNonNull(categories);
-        this.description = Objects.requireNonNull(description);
-        this.identity = Objects.requireNonNull(identity);
-        this.kbArticleIds = Objects.requireNonNull(kbArticleIds);
-        this.lastPublishedTimestamp = Objects.requireNonNull(lastPublishedTimestamp);
-        this.supportUrl = Objects.requireNonNull(supportUrl);
-        this.title = Objects.requireNonNull(title);
+        this.categories = categories;
+        this.description = description;
+        this.identity = identity;
+        this.kbArticleIds = kbArticleIds;
+        this.lastPublishedTimestamp = lastPublishedTimestamp;
+        this.supportUrl = supportUrl;
+        this.title = title;
     }
 
     /**

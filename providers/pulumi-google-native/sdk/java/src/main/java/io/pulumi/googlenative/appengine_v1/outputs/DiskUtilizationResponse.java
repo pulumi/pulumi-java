@@ -36,10 +36,10 @@ public final class DiskUtilizationResponse {
         Integer targetReadOpsPerSecond,
         Integer targetWriteBytesPerSecond,
         Integer targetWriteOpsPerSecond) {
-        this.targetReadBytesPerSecond = Objects.requireNonNull(targetReadBytesPerSecond);
-        this.targetReadOpsPerSecond = Objects.requireNonNull(targetReadOpsPerSecond);
-        this.targetWriteBytesPerSecond = Objects.requireNonNull(targetWriteBytesPerSecond);
-        this.targetWriteOpsPerSecond = Objects.requireNonNull(targetWriteOpsPerSecond);
+        this.targetReadBytesPerSecond = targetReadBytesPerSecond;
+        this.targetReadOpsPerSecond = targetReadOpsPerSecond;
+        this.targetWriteBytesPerSecond = targetWriteBytesPerSecond;
+        this.targetWriteOpsPerSecond = targetWriteOpsPerSecond;
     }
 
     /**

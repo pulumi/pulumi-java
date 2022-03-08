@@ -17,7 +17,7 @@ public final class ListIngestionSettingTokensResult {
 
     @OutputCustomType.Constructor({"token"})
     private ListIngestionSettingTokensResult(String token) {
-        this.token = Objects.requireNonNull(token);
+        this.token = token;
     }
 
     /**

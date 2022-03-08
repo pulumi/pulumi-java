@@ -79,10 +79,10 @@ public final class VirtualDiskResponse {
         this.deviceKey = deviceKey;
         this.deviceName = deviceName;
         this.diskMode = diskMode;
-        this.diskObjectId = Objects.requireNonNull(diskObjectId);
+        this.diskObjectId = diskObjectId;
         this.diskSizeGB = diskSizeGB;
         this.diskType = diskType;
-        this.label = Objects.requireNonNull(label);
+        this.label = label;
         this.name = name;
         this.unitNumber = unitNumber;
     }

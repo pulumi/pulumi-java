@@ -30,9 +30,9 @@ public final class VirtualNetworkConfigurationResponse {
         String dataManagementPublicIpId,
         String enginePublicIpId,
         String subnetId) {
-        this.dataManagementPublicIpId = Objects.requireNonNull(dataManagementPublicIpId);
-        this.enginePublicIpId = Objects.requireNonNull(enginePublicIpId);
-        this.subnetId = Objects.requireNonNull(subnetId);
+        this.dataManagementPublicIpId = dataManagementPublicIpId;
+        this.enginePublicIpId = enginePublicIpId;
+        this.subnetId = subnetId;
     }
 
     /**

@@ -240,28 +240,28 @@ public final class GetVirtualMachineResult {
         this.hardwareProfile = hardwareProfile;
         this.host = host;
         this.hostGroup = hostGroup;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.identity = identity;
-        this.instanceView = Objects.requireNonNull(instanceView);
+        this.instanceView = instanceView;
         this.licenseType = licenseType;
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
+        this.location = location;
+        this.name = name;
         this.networkProfile = networkProfile;
         this.osProfile = osProfile;
         this.plan = plan;
         this.platformFaultDomain = platformFaultDomain;
         this.priority = priority;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.proximityPlacementGroup = proximityPlacementGroup;
-        this.resources = Objects.requireNonNull(resources);
+        this.resources = resources;
         this.scheduledEventsProfile = scheduledEventsProfile;
         this.securityProfile = securityProfile;
         this.storageProfile = storageProfile;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.userData = userData;
         this.virtualMachineScaleSet = virtualMachineScaleSet;
-        this.vmId = Objects.requireNonNull(vmId);
+        this.vmId = vmId;
         this.zones = zones;
     }
 

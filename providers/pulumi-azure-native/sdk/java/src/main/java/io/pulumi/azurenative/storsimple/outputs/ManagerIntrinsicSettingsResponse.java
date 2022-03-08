@@ -17,7 +17,7 @@ public final class ManagerIntrinsicSettingsResponse {
 
     @OutputCustomType.Constructor({"type"})
     private ManagerIntrinsicSettingsResponse(String type) {
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

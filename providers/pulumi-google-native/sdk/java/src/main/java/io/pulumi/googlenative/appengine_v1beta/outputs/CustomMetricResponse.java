@@ -43,11 +43,11 @@ public final class CustomMetricResponse {
         Double singleInstanceAssignment,
         String targetType,
         Double targetUtilization) {
-        this.filter = Objects.requireNonNull(filter);
-        this.metricName = Objects.requireNonNull(metricName);
-        this.singleInstanceAssignment = Objects.requireNonNull(singleInstanceAssignment);
-        this.targetType = Objects.requireNonNull(targetType);
-        this.targetUtilization = Objects.requireNonNull(targetUtilization);
+        this.filter = filter;
+        this.metricName = metricName;
+        this.singleInstanceAssignment = singleInstanceAssignment;
+        this.targetType = targetType;
+        this.targetUtilization = targetUtilization;
     }
 
     /**

@@ -38,10 +38,10 @@ public final class WindowsDetailResponse {
         String description,
         List<KnowledgeBaseResponse> fixingKbs,
         String name) {
-        this.cpeUri = Objects.requireNonNull(cpeUri);
-        this.description = Objects.requireNonNull(description);
-        this.fixingKbs = Objects.requireNonNull(fixingKbs);
-        this.name = Objects.requireNonNull(name);
+        this.cpeUri = cpeUri;
+        this.description = description;
+        this.fixingKbs = fixingKbs;
+        this.name = name;
     }
 
     /**

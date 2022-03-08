@@ -32,9 +32,9 @@ public final class LogConfigResponse {
         CloudAuditOptionsResponse cloudAudit,
         CounterOptionsResponse counter,
         DataAccessOptionsResponse dataAccess) {
-        this.cloudAudit = Objects.requireNonNull(cloudAudit);
-        this.counter = Objects.requireNonNull(counter);
-        this.dataAccess = Objects.requireNonNull(dataAccess);
+        this.cloudAudit = cloudAudit;
+        this.counter = counter;
+        this.dataAccess = dataAccess;
     }
 
     /**

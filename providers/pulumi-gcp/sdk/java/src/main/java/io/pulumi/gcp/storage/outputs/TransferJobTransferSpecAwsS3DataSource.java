@@ -34,7 +34,7 @@ public final class TransferJobTransferSpecAwsS3DataSource {
         String bucketName,
         @Nullable String roleArn) {
         this.awsAccessKey = awsAccessKey;
-        this.bucketName = Objects.requireNonNull(bucketName);
+        this.bucketName = bucketName;
         this.roleArn = roleArn;
     }
 

@@ -28,7 +28,7 @@ public final class WebAclRuleStatementGeoMatchStatement {
     private WebAclRuleStatementGeoMatchStatement(
         List<String> countryCodes,
         @Nullable WebAclRuleStatementGeoMatchStatementForwardedIpConfig forwardedIpConfig) {
-        this.countryCodes = Objects.requireNonNull(countryCodes);
+        this.countryCodes = countryCodes;
         this.forwardedIpConfig = forwardedIpConfig;
     }
 

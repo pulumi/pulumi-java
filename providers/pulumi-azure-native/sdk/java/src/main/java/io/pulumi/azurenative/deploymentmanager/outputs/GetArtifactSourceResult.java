@@ -65,13 +65,13 @@ public final class GetArtifactSourceResult {
         @Nullable Map<String,String> tags,
         String type) {
         this.artifactRoot = artifactRoot;
-        this.authentication = Objects.requireNonNull(authentication);
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.sourceType = Objects.requireNonNull(sourceType);
+        this.authentication = authentication;
+        this.id = id;
+        this.location = location;
+        this.name = name;
+        this.sourceType = sourceType;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

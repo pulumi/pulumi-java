@@ -87,14 +87,14 @@ public final class GetBlueprintResult {
         @Nullable Object versions) {
         this.description = description;
         this.displayName = displayName;
-        this.id = Objects.requireNonNull(id);
-        this.layout = Objects.requireNonNull(layout);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.layout = layout;
+        this.name = name;
         this.parameters = parameters;
         this.resourceGroups = resourceGroups;
-        this.status = Objects.requireNonNull(status);
-        this.targetScope = Objects.requireNonNull(targetScope);
-        this.type = Objects.requireNonNull(type);
+        this.status = status;
+        this.targetScope = targetScope;
+        this.type = type;
         this.versions = versions;
     }
 

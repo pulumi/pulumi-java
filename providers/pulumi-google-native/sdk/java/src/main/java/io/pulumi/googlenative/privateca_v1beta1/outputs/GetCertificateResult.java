@@ -83,17 +83,17 @@ public final class GetCertificateResult {
         String pemCsr,
         RevocationDetailsResponse revocationDetails,
         String updateTime) {
-        this.certificateDescription = Objects.requireNonNull(certificateDescription);
-        this.config = Objects.requireNonNull(config);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.labels = Objects.requireNonNull(labels);
-        this.lifetime = Objects.requireNonNull(lifetime);
-        this.name = Objects.requireNonNull(name);
-        this.pemCertificate = Objects.requireNonNull(pemCertificate);
-        this.pemCertificateChain = Objects.requireNonNull(pemCertificateChain);
-        this.pemCsr = Objects.requireNonNull(pemCsr);
-        this.revocationDetails = Objects.requireNonNull(revocationDetails);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.certificateDescription = certificateDescription;
+        this.config = config;
+        this.createTime = createTime;
+        this.labels = labels;
+        this.lifetime = lifetime;
+        this.name = name;
+        this.pemCertificate = pemCertificate;
+        this.pemCertificateChain = pemCertificateChain;
+        this.pemCsr = pemCsr;
+        this.revocationDetails = revocationDetails;
+        this.updateTime = updateTime;
     }
 
     /**

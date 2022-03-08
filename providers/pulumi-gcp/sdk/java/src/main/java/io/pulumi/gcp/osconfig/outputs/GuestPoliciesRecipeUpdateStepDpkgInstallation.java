@@ -17,7 +17,7 @@ public final class GuestPoliciesRecipeUpdateStepDpkgInstallation {
 
     @OutputCustomType.Constructor({"artifactId"})
     private GuestPoliciesRecipeUpdateStepDpkgInstallation(String artifactId) {
-        this.artifactId = Objects.requireNonNull(artifactId);
+        this.artifactId = artifactId;
     }
 
     /**

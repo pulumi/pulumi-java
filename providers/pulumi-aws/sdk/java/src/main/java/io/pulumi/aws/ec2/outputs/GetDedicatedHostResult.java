@@ -89,20 +89,20 @@ public final class GetDedicatedHostResult {
         Integer sockets,
         Map<String,String> tags,
         Integer totalVcpus) {
-        this.arn = Objects.requireNonNull(arn);
-        this.autoPlacement = Objects.requireNonNull(autoPlacement);
-        this.availabilityZone = Objects.requireNonNull(availabilityZone);
-        this.cores = Objects.requireNonNull(cores);
+        this.arn = arn;
+        this.autoPlacement = autoPlacement;
+        this.availabilityZone = availabilityZone;
+        this.cores = cores;
         this.filters = filters;
-        this.hostId = Objects.requireNonNull(hostId);
-        this.hostRecovery = Objects.requireNonNull(hostRecovery);
-        this.id = Objects.requireNonNull(id);
-        this.instanceFamily = Objects.requireNonNull(instanceFamily);
-        this.instanceType = Objects.requireNonNull(instanceType);
-        this.ownerId = Objects.requireNonNull(ownerId);
-        this.sockets = Objects.requireNonNull(sockets);
-        this.tags = Objects.requireNonNull(tags);
-        this.totalVcpus = Objects.requireNonNull(totalVcpus);
+        this.hostId = hostId;
+        this.hostRecovery = hostRecovery;
+        this.id = id;
+        this.instanceFamily = instanceFamily;
+        this.instanceType = instanceType;
+        this.ownerId = ownerId;
+        this.sockets = sockets;
+        this.tags = tags;
+        this.totalVcpus = totalVcpus;
     }
 
     /**

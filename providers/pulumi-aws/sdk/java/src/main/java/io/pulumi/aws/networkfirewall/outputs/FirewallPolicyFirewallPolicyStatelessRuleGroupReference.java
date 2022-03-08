@@ -25,8 +25,8 @@ public final class FirewallPolicyFirewallPolicyStatelessRuleGroupReference {
     private FirewallPolicyFirewallPolicyStatelessRuleGroupReference(
         Integer priority,
         String resourceArn) {
-        this.priority = Objects.requireNonNull(priority);
-        this.resourceArn = Objects.requireNonNull(resourceArn);
+        this.priority = priority;
+        this.resourceArn = resourceArn;
     }
 
     /**

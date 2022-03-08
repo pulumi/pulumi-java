@@ -31,9 +31,9 @@ public final class StatefulPolicyPreservedStateResponse {
         Map<String,String> disks,
         Map<String,String> externalIPs,
         Map<String,String> internalIPs) {
-        this.disks = Objects.requireNonNull(disks);
-        this.externalIPs = Objects.requireNonNull(externalIPs);
-        this.internalIPs = Objects.requireNonNull(internalIPs);
+        this.disks = disks;
+        this.externalIPs = externalIPs;
+        this.internalIPs = internalIPs;
     }
 
     /**

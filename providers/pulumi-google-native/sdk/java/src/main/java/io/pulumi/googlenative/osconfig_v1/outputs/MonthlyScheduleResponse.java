@@ -25,8 +25,8 @@ public final class MonthlyScheduleResponse {
     private MonthlyScheduleResponse(
         Integer monthDay,
         WeekDayOfMonthResponse weekDayOfMonth) {
-        this.monthDay = Objects.requireNonNull(monthDay);
-        this.weekDayOfMonth = Objects.requireNonNull(weekDayOfMonth);
+        this.monthDay = monthDay;
+        this.weekDayOfMonth = weekDayOfMonth;
     }
 
     /**

@@ -80,14 +80,14 @@ public final class GetTemplateSpecResult {
         Map<String,TemplateSpecVersionInfoResponse> versions) {
         this.description = description;
         this.displayName = displayName;
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
+        this.id = id;
+        this.location = location;
         this.metadata = metadata;
-        this.name = Objects.requireNonNull(name);
-        this.systemData = Objects.requireNonNull(systemData);
+        this.name = name;
+        this.systemData = systemData;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
-        this.versions = Objects.requireNonNull(versions);
+        this.type = type;
+        this.versions = versions;
     }
 
     /**

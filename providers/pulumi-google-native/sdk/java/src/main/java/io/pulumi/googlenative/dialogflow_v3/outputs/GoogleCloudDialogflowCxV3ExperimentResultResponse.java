@@ -26,8 +26,8 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultResponse {
     private GoogleCloudDialogflowCxV3ExperimentResultResponse(
         String lastUpdateTime,
         List<GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsResponse> versionMetrics) {
-        this.lastUpdateTime = Objects.requireNonNull(lastUpdateTime);
-        this.versionMetrics = Objects.requireNonNull(versionMetrics);
+        this.lastUpdateTime = lastUpdateTime;
+        this.versionMetrics = versionMetrics;
     }
 
     /**

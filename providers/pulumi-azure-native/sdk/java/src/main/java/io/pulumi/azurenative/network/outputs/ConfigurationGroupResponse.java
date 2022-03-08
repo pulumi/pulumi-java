@@ -64,7 +64,7 @@ public final class ConfigurationGroupResponse {
         this.groupMembers = groupMembers;
         this.id = id;
         this.memberType = memberType;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
     }
 
     /**

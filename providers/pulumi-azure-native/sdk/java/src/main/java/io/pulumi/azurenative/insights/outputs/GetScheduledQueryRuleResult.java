@@ -129,24 +129,24 @@ public final class GetScheduledQueryRuleResult {
         SourceResponse source,
         @Nullable Map<String,String> tags,
         String type) {
-        this.action = Objects.requireNonNull(action);
+        this.action = action;
         this.autoMitigate = autoMitigate;
-        this.createdWithApiVersion = Objects.requireNonNull(createdWithApiVersion);
+        this.createdWithApiVersion = createdWithApiVersion;
         this.description = description;
         this.displayName = displayName;
         this.enabled = enabled;
-        this.etag = Objects.requireNonNull(etag);
-        this.id = Objects.requireNonNull(id);
-        this.isLegacyLogAnalyticsRule = Objects.requireNonNull(isLegacyLogAnalyticsRule);
-        this.kind = Objects.requireNonNull(kind);
-        this.lastUpdatedTime = Objects.requireNonNull(lastUpdatedTime);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.etag = etag;
+        this.id = id;
+        this.isLegacyLogAnalyticsRule = isLegacyLogAnalyticsRule;
+        this.kind = kind;
+        this.lastUpdatedTime = lastUpdatedTime;
+        this.location = location;
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.schedule = schedule;
-        this.source = Objects.requireNonNull(source);
+        this.source = source;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

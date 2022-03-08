@@ -30,9 +30,9 @@ public final class TimeSeriesRatioResponse {
         String badServiceFilter,
         String goodServiceFilter,
         String totalServiceFilter) {
-        this.badServiceFilter = Objects.requireNonNull(badServiceFilter);
-        this.goodServiceFilter = Objects.requireNonNull(goodServiceFilter);
-        this.totalServiceFilter = Objects.requireNonNull(totalServiceFilter);
+        this.badServiceFilter = badServiceFilter;
+        this.goodServiceFilter = goodServiceFilter;
+        this.totalServiceFilter = totalServiceFilter;
     }
 
     /**

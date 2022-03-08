@@ -69,7 +69,7 @@ public final class AssemblyPropertiesResponse {
         @Nullable String createdTime,
         @Nullable Object metadata) {
         this.assemblyCulture = assemblyCulture;
-        this.assemblyName = Objects.requireNonNull(assemblyName);
+        this.assemblyName = assemblyName;
         this.assemblyPublicKeyToken = assemblyPublicKeyToken;
         this.assemblyVersion = assemblyVersion;
         this.changedTime = changedTime;

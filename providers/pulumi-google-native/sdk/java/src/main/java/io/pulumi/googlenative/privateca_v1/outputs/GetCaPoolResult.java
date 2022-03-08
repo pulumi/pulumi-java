@@ -45,11 +45,11 @@ public final class GetCaPoolResult {
         String name,
         PublishingOptionsResponse publishingOptions,
         String tier) {
-        this.issuancePolicy = Objects.requireNonNull(issuancePolicy);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.publishingOptions = Objects.requireNonNull(publishingOptions);
-        this.tier = Objects.requireNonNull(tier);
+        this.issuancePolicy = issuancePolicy;
+        this.labels = labels;
+        this.name = name;
+        this.publishingOptions = publishingOptions;
+        this.tier = tier;
     }
 
     /**

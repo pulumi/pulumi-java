@@ -30,7 +30,7 @@ public final class EventTargetInputTransformer {
         @Nullable Map<String,String> inputPaths,
         String inputTemplate) {
         this.inputPaths = inputPaths;
-        this.inputTemplate = Objects.requireNonNull(inputTemplate);
+        this.inputTemplate = inputTemplate;
     }
 
     /**

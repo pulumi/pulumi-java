@@ -104,10 +104,10 @@ public final class CloudServicePropertiesResponse {
         this.networkProfile = networkProfile;
         this.osProfile = osProfile;
         this.packageUrl = packageUrl;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.roleProfile = roleProfile;
         this.startCloudService = startCloudService;
-        this.uniqueId = Objects.requireNonNull(uniqueId);
+        this.uniqueId = uniqueId;
         this.upgradeMode = upgradeMode;
     }
 

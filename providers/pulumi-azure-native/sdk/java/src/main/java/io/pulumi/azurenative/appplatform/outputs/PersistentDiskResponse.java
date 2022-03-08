@@ -35,7 +35,7 @@ public final class PersistentDiskResponse {
         Integer usedInGB) {
         this.mountPath = mountPath;
         this.sizeInGB = sizeInGB;
-        this.usedInGB = Objects.requireNonNull(usedInGB);
+        this.usedInGB = usedInGB;
     }
 
     /**

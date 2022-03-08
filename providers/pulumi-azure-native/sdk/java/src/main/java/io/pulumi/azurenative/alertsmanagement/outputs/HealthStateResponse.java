@@ -25,8 +25,8 @@ public final class HealthStateResponse {
     private HealthStateResponse(
         String healthStateName,
         Double severity) {
-        this.healthStateName = Objects.requireNonNull(healthStateName);
-        this.severity = Objects.requireNonNull(severity);
+        this.healthStateName = healthStateName;
+        this.severity = severity;
     }
 
     /**

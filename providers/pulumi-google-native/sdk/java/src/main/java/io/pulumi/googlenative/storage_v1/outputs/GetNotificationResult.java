@@ -62,14 +62,14 @@ public final class GetNotificationResult {
         String payloadFormat,
         String selfLink,
         String topic) {
-        this.customAttributes = Objects.requireNonNull(customAttributes);
-        this.etag = Objects.requireNonNull(etag);
-        this.eventTypes = Objects.requireNonNull(eventTypes);
-        this.kind = Objects.requireNonNull(kind);
-        this.objectNamePrefix = Objects.requireNonNull(objectNamePrefix);
-        this.payloadFormat = Objects.requireNonNull(payloadFormat);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.topic = Objects.requireNonNull(topic);
+        this.customAttributes = customAttributes;
+        this.etag = etag;
+        this.eventTypes = eventTypes;
+        this.kind = kind;
+        this.objectNamePrefix = objectNamePrefix;
+        this.payloadFormat = payloadFormat;
+        this.selfLink = selfLink;
+        this.topic = topic;
     }
 
     /**

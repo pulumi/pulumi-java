@@ -35,7 +35,7 @@ public final class AzureFabricSpecificDetailsResponse {
         String instanceType,
         @Nullable String location) {
         this.containerIds = containerIds;
-        this.instanceType = Objects.requireNonNull(instanceType);
+        this.instanceType = instanceType;
         this.location = location;
     }
 

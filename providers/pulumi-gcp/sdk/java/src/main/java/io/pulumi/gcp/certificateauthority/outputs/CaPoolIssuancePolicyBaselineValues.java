@@ -55,8 +55,8 @@ public final class CaPoolIssuancePolicyBaselineValues {
         @Nullable List<CaPoolIssuancePolicyBaselineValuesPolicyId> policyIds) {
         this.additionalExtensions = additionalExtensions;
         this.aiaOcspServers = aiaOcspServers;
-        this.caOptions = Objects.requireNonNull(caOptions);
-        this.keyUsage = Objects.requireNonNull(keyUsage);
+        this.caOptions = caOptions;
+        this.keyUsage = keyUsage;
         this.policyIds = policyIds;
     }
 

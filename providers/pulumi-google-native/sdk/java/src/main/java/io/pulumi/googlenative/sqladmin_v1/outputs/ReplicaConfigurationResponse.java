@@ -32,9 +32,9 @@ public final class ReplicaConfigurationResponse {
         Boolean failoverTarget,
         String kind,
         MySqlReplicaConfigurationResponse mysqlReplicaConfiguration) {
-        this.failoverTarget = Objects.requireNonNull(failoverTarget);
-        this.kind = Objects.requireNonNull(kind);
-        this.mysqlReplicaConfiguration = Objects.requireNonNull(mysqlReplicaConfiguration);
+        this.failoverTarget = failoverTarget;
+        this.kind = kind;
+        this.mysqlReplicaConfiguration = mysqlReplicaConfiguration;
     }
 
     /**

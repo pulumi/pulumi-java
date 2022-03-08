@@ -20,7 +20,7 @@ public final class PresignedUrlConfigProperties {
         @Nullable Integer expiresInSec,
         String roleArn) {
         this.expiresInSec = expiresInSec;
-        this.roleArn = Objects.requireNonNull(roleArn);
+        this.roleArn = roleArn;
     }
 
     public Optional<Integer> getExpiresInSec() {

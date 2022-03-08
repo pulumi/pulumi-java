@@ -17,7 +17,7 @@ public final class DataQualityJobDefinitionStoppingCondition {
 
     @OutputCustomType.Constructor({"maxRuntimeInSeconds"})
     private DataQualityJobDefinitionStoppingCondition(Integer maxRuntimeInSeconds) {
-        this.maxRuntimeInSeconds = Objects.requireNonNull(maxRuntimeInSeconds);
+        this.maxRuntimeInSeconds = maxRuntimeInSeconds;
     }
 
     /**

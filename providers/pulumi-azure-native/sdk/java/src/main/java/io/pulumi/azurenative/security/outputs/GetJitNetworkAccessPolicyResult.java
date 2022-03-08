@@ -61,14 +61,14 @@ public final class GetJitNetworkAccessPolicyResult {
         @Nullable List<JitNetworkAccessRequestResponse> requests,
         String type,
         List<JitNetworkAccessPolicyVirtualMachineResponse> virtualMachines) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.kind = kind;
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.location = location;
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.requests = requests;
-        this.type = Objects.requireNonNull(type);
-        this.virtualMachines = Objects.requireNonNull(virtualMachines);
+        this.type = type;
+        this.virtualMachines = virtualMachines;
     }
 
     /**

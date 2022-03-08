@@ -49,12 +49,12 @@ public final class MysqlSslConfigResponse {
         Boolean clientCertificateSet,
         String clientKey,
         Boolean clientKeySet) {
-        this.caCertificate = Objects.requireNonNull(caCertificate);
-        this.caCertificateSet = Objects.requireNonNull(caCertificateSet);
-        this.clientCertificate = Objects.requireNonNull(clientCertificate);
-        this.clientCertificateSet = Objects.requireNonNull(clientCertificateSet);
-        this.clientKey = Objects.requireNonNull(clientKey);
-        this.clientKeySet = Objects.requireNonNull(clientKeySet);
+        this.caCertificate = caCertificate;
+        this.caCertificateSet = caCertificateSet;
+        this.clientCertificate = clientCertificate;
+        this.clientCertificateSet = clientCertificateSet;
+        this.clientKey = clientKey;
+        this.clientKeySet = clientKeySet;
     }
 
     /**

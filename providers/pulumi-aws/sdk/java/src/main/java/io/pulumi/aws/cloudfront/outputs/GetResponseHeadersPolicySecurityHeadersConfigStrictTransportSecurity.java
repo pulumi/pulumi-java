@@ -37,10 +37,10 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigStrictTransportS
         Boolean includeSubdomains,
         Boolean override,
         Boolean preload) {
-        this.accessControlMaxAgeSec = Objects.requireNonNull(accessControlMaxAgeSec);
-        this.includeSubdomains = Objects.requireNonNull(includeSubdomains);
-        this.override = Objects.requireNonNull(override);
-        this.preload = Objects.requireNonNull(preload);
+        this.accessControlMaxAgeSec = accessControlMaxAgeSec;
+        this.includeSubdomains = includeSubdomains;
+        this.override = override;
+        this.preload = preload;
     }
 
     /**

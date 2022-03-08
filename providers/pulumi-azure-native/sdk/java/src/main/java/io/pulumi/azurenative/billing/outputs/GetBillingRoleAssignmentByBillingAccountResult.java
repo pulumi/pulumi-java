@@ -92,17 +92,17 @@ public final class GetBillingRoleAssignmentByBillingAccountResult {
         String type,
         @Nullable String userAuthenticationType,
         @Nullable String userEmailAddress) {
-        this.createdByPrincipalId = Objects.requireNonNull(createdByPrincipalId);
-        this.createdByPrincipalTenantId = Objects.requireNonNull(createdByPrincipalTenantId);
-        this.createdByUserEmailAddress = Objects.requireNonNull(createdByUserEmailAddress);
-        this.createdOn = Objects.requireNonNull(createdOn);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.createdByPrincipalId = createdByPrincipalId;
+        this.createdByPrincipalTenantId = createdByPrincipalTenantId;
+        this.createdByUserEmailAddress = createdByUserEmailAddress;
+        this.createdOn = createdOn;
+        this.id = id;
+        this.name = name;
         this.principalId = principalId;
         this.principalTenantId = principalTenantId;
         this.roleDefinitionId = roleDefinitionId;
-        this.scope = Objects.requireNonNull(scope);
-        this.type = Objects.requireNonNull(type);
+        this.scope = scope;
+        this.type = type;
         this.userAuthenticationType = userAuthenticationType;
         this.userEmailAddress = userEmailAddress;
     }

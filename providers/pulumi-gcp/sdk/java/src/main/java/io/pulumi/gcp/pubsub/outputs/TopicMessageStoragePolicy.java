@@ -23,7 +23,7 @@ public final class TopicMessageStoragePolicy {
 
     @OutputCustomType.Constructor({"allowedPersistenceRegions"})
     private TopicMessageStoragePolicy(List<String> allowedPersistenceRegions) {
-        this.allowedPersistenceRegions = Objects.requireNonNull(allowedPersistenceRegions);
+        this.allowedPersistenceRegions = allowedPersistenceRegions;
     }
 
     /**

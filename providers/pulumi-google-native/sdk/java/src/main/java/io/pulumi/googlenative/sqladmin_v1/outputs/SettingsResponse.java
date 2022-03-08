@@ -169,30 +169,30 @@ public final class SettingsResponse {
         String storageAutoResizeLimit,
         String tier,
         Map<String,String> userLabels) {
-        this.activationPolicy = Objects.requireNonNull(activationPolicy);
-        this.activeDirectoryConfig = Objects.requireNonNull(activeDirectoryConfig);
-        this.availabilityType = Objects.requireNonNull(availabilityType);
-        this.backupConfiguration = Objects.requireNonNull(backupConfiguration);
-        this.collation = Objects.requireNonNull(collation);
-        this.crashSafeReplicationEnabled = Objects.requireNonNull(crashSafeReplicationEnabled);
-        this.dataDiskSizeGb = Objects.requireNonNull(dataDiskSizeGb);
-        this.dataDiskType = Objects.requireNonNull(dataDiskType);
-        this.databaseFlags = Objects.requireNonNull(databaseFlags);
-        this.databaseReplicationEnabled = Objects.requireNonNull(databaseReplicationEnabled);
-        this.denyMaintenancePeriods = Objects.requireNonNull(denyMaintenancePeriods);
-        this.insightsConfig = Objects.requireNonNull(insightsConfig);
-        this.ipConfiguration = Objects.requireNonNull(ipConfiguration);
-        this.kind = Objects.requireNonNull(kind);
-        this.locationPreference = Objects.requireNonNull(locationPreference);
-        this.maintenanceWindow = Objects.requireNonNull(maintenanceWindow);
-        this.passwordValidationPolicy = Objects.requireNonNull(passwordValidationPolicy);
-        this.pricingPlan = Objects.requireNonNull(pricingPlan);
-        this.settingsVersion = Objects.requireNonNull(settingsVersion);
-        this.sqlServerAuditConfig = Objects.requireNonNull(sqlServerAuditConfig);
-        this.storageAutoResize = Objects.requireNonNull(storageAutoResize);
-        this.storageAutoResizeLimit = Objects.requireNonNull(storageAutoResizeLimit);
-        this.tier = Objects.requireNonNull(tier);
-        this.userLabels = Objects.requireNonNull(userLabels);
+        this.activationPolicy = activationPolicy;
+        this.activeDirectoryConfig = activeDirectoryConfig;
+        this.availabilityType = availabilityType;
+        this.backupConfiguration = backupConfiguration;
+        this.collation = collation;
+        this.crashSafeReplicationEnabled = crashSafeReplicationEnabled;
+        this.dataDiskSizeGb = dataDiskSizeGb;
+        this.dataDiskType = dataDiskType;
+        this.databaseFlags = databaseFlags;
+        this.databaseReplicationEnabled = databaseReplicationEnabled;
+        this.denyMaintenancePeriods = denyMaintenancePeriods;
+        this.insightsConfig = insightsConfig;
+        this.ipConfiguration = ipConfiguration;
+        this.kind = kind;
+        this.locationPreference = locationPreference;
+        this.maintenanceWindow = maintenanceWindow;
+        this.passwordValidationPolicy = passwordValidationPolicy;
+        this.pricingPlan = pricingPlan;
+        this.settingsVersion = settingsVersion;
+        this.sqlServerAuditConfig = sqlServerAuditConfig;
+        this.storageAutoResize = storageAutoResize;
+        this.storageAutoResizeLimit = storageAutoResizeLimit;
+        this.tier = tier;
+        this.userLabels = userLabels;
     }
 
     /**

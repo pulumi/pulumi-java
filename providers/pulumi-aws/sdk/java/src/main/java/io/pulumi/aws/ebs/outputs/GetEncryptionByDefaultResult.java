@@ -25,8 +25,8 @@ public final class GetEncryptionByDefaultResult {
     private GetEncryptionByDefaultResult(
         Boolean enabled,
         String id) {
-        this.enabled = Objects.requireNonNull(enabled);
-        this.id = Objects.requireNonNull(id);
+        this.enabled = enabled;
+        this.id = id;
     }
 
     /**

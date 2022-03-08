@@ -38,10 +38,10 @@ public final class GetApplicationAppversionLifecycle {
         Integer maxAgeInDays,
         Integer maxCount,
         String serviceRole) {
-        this.deleteSourceFromS3 = Objects.requireNonNull(deleteSourceFromS3);
-        this.maxAgeInDays = Objects.requireNonNull(maxAgeInDays);
-        this.maxCount = Objects.requireNonNull(maxCount);
-        this.serviceRole = Objects.requireNonNull(serviceRole);
+        this.deleteSourceFromS3 = deleteSourceFromS3;
+        this.maxAgeInDays = maxAgeInDays;
+        this.maxCount = maxCount;
+        this.serviceRole = serviceRole;
     }
 
     /**

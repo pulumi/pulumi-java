@@ -30,7 +30,7 @@ public final class DataSourceServiceNowServiceCatalogConfiguration {
         @Nullable List<DataSourceToIndexFieldMapping> fieldMappings,
         @Nullable List<String> includeAttachmentFilePatterns) {
         this.crawlAttachments = crawlAttachments;
-        this.documentDataFieldName = Objects.requireNonNull(documentDataFieldName);
+        this.documentDataFieldName = documentDataFieldName;
         this.documentTitleFieldName = documentTitleFieldName;
         this.excludeAttachmentFilePatterns = excludeAttachmentFilePatterns;
         this.fieldMappings = fieldMappings;

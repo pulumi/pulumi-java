@@ -35,7 +35,7 @@ public final class EncryptionSettingsCollectionResponse {
         Boolean enabled,
         @Nullable List<EncryptionSettingsElementResponse> encryptionSettings,
         @Nullable String encryptionSettingsVersion) {
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
         this.encryptionSettings = encryptionSettings;
         this.encryptionSettingsVersion = encryptionSettingsVersion;
     }

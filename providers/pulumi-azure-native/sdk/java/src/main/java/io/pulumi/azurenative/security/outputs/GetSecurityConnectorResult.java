@@ -97,15 +97,15 @@ public final class GetSecurityConnectorResult {
         this.cloudName = cloudName;
         this.etag = etag;
         this.hierarchyIdentifier = hierarchyIdentifier;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.kind = kind;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.offerings = offerings;
         this.organizationalData = organizationalData;
-        this.systemData = Objects.requireNonNull(systemData);
+        this.systemData = systemData;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

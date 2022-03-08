@@ -25,8 +25,8 @@ public final class AzPowerShellSetupResponse {
     private AzPowerShellSetupResponse(
         String type,
         String version) {
-        this.type = Objects.requireNonNull(type);
-        this.version = Objects.requireNonNull(version);
+        this.type = type;
+        this.version = version;
     }
 
     /**

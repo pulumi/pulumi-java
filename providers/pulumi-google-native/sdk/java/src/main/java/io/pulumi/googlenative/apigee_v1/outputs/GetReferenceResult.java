@@ -36,10 +36,10 @@ public final class GetReferenceResult {
         String name,
         String refers,
         String resourceType) {
-        this.description = Objects.requireNonNull(description);
-        this.name = Objects.requireNonNull(name);
-        this.refers = Objects.requireNonNull(refers);
-        this.resourceType = Objects.requireNonNull(resourceType);
+        this.description = description;
+        this.name = name;
+        this.refers = refers;
+        this.resourceType = resourceType;
     }
 
     /**

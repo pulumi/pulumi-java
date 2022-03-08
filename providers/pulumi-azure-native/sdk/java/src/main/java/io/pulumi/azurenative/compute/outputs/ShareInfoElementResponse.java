@@ -17,7 +17,7 @@ public final class ShareInfoElementResponse {
 
     @OutputCustomType.Constructor({"vmUri"})
     private ShareInfoElementResponse(String vmUri) {
-        this.vmUri = Objects.requireNonNull(vmUri);
+        this.vmUri = vmUri;
     }
 
     /**

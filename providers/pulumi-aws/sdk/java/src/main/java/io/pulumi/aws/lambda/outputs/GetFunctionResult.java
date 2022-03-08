@@ -190,36 +190,36 @@ public final class GetFunctionResult {
         GetFunctionTracingConfig tracingConfig,
         String version,
         GetFunctionVpcConfig vpcConfig) {
-        this.architectures = Objects.requireNonNull(architectures);
-        this.arn = Objects.requireNonNull(arn);
-        this.codeSigningConfigArn = Objects.requireNonNull(codeSigningConfigArn);
-        this.deadLetterConfig = Objects.requireNonNull(deadLetterConfig);
-        this.description = Objects.requireNonNull(description);
-        this.environment = Objects.requireNonNull(environment);
-        this.fileSystemConfigs = Objects.requireNonNull(fileSystemConfigs);
-        this.functionName = Objects.requireNonNull(functionName);
-        this.handler = Objects.requireNonNull(handler);
-        this.id = Objects.requireNonNull(id);
-        this.imageUri = Objects.requireNonNull(imageUri);
-        this.invokeArn = Objects.requireNonNull(invokeArn);
-        this.kmsKeyArn = Objects.requireNonNull(kmsKeyArn);
-        this.lastModified = Objects.requireNonNull(lastModified);
-        this.layers = Objects.requireNonNull(layers);
-        this.memorySize = Objects.requireNonNull(memorySize);
-        this.qualifiedArn = Objects.requireNonNull(qualifiedArn);
+        this.architectures = architectures;
+        this.arn = arn;
+        this.codeSigningConfigArn = codeSigningConfigArn;
+        this.deadLetterConfig = deadLetterConfig;
+        this.description = description;
+        this.environment = environment;
+        this.fileSystemConfigs = fileSystemConfigs;
+        this.functionName = functionName;
+        this.handler = handler;
+        this.id = id;
+        this.imageUri = imageUri;
+        this.invokeArn = invokeArn;
+        this.kmsKeyArn = kmsKeyArn;
+        this.lastModified = lastModified;
+        this.layers = layers;
+        this.memorySize = memorySize;
+        this.qualifiedArn = qualifiedArn;
         this.qualifier = qualifier;
-        this.reservedConcurrentExecutions = Objects.requireNonNull(reservedConcurrentExecutions);
-        this.role = Objects.requireNonNull(role);
-        this.runtime = Objects.requireNonNull(runtime);
-        this.signingJobArn = Objects.requireNonNull(signingJobArn);
-        this.signingProfileVersionArn = Objects.requireNonNull(signingProfileVersionArn);
-        this.sourceCodeHash = Objects.requireNonNull(sourceCodeHash);
-        this.sourceCodeSize = Objects.requireNonNull(sourceCodeSize);
-        this.tags = Objects.requireNonNull(tags);
-        this.timeout = Objects.requireNonNull(timeout);
-        this.tracingConfig = Objects.requireNonNull(tracingConfig);
-        this.version = Objects.requireNonNull(version);
-        this.vpcConfig = Objects.requireNonNull(vpcConfig);
+        this.reservedConcurrentExecutions = reservedConcurrentExecutions;
+        this.role = role;
+        this.runtime = runtime;
+        this.signingJobArn = signingJobArn;
+        this.signingProfileVersionArn = signingProfileVersionArn;
+        this.sourceCodeHash = sourceCodeHash;
+        this.sourceCodeSize = sourceCodeSize;
+        this.tags = tags;
+        this.timeout = timeout;
+        this.tracingConfig = tracingConfig;
+        this.version = version;
+        this.vpcConfig = vpcConfig;
     }
 
     /**

@@ -20,8 +20,8 @@ public final class ManagedZonePrivateVisibilityConfigNetworkResponse {
     private ManagedZonePrivateVisibilityConfigNetworkResponse(
         String kind,
         String networkUrl) {
-        this.kind = Objects.requireNonNull(kind);
-        this.networkUrl = Objects.requireNonNull(networkUrl);
+        this.kind = kind;
+        this.networkUrl = networkUrl;
     }
 
     public String getKind() {

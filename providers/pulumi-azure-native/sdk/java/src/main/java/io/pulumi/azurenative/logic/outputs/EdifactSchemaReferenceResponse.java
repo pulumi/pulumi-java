@@ -57,10 +57,10 @@ public final class EdifactSchemaReferenceResponse {
         @Nullable String senderApplicationId,
         @Nullable String senderApplicationQualifier) {
         this.associationAssignedCode = associationAssignedCode;
-        this.messageId = Objects.requireNonNull(messageId);
-        this.messageRelease = Objects.requireNonNull(messageRelease);
-        this.messageVersion = Objects.requireNonNull(messageVersion);
-        this.schemaName = Objects.requireNonNull(schemaName);
+        this.messageId = messageId;
+        this.messageRelease = messageRelease;
+        this.messageVersion = messageVersion;
+        this.schemaName = schemaName;
         this.senderApplicationId = senderApplicationId;
         this.senderApplicationQualifier = senderApplicationQualifier;
     }

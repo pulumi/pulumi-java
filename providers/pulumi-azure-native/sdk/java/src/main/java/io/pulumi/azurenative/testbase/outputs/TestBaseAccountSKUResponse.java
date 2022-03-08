@@ -46,11 +46,11 @@ public final class TestBaseAccountSKUResponse {
         String name,
         @Nullable String resourceType,
         String tier) {
-        this.capabilities = Objects.requireNonNull(capabilities);
+        this.capabilities = capabilities;
         this.locations = locations;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.resourceType = resourceType;
-        this.tier = Objects.requireNonNull(tier);
+        this.tier = tier;
     }
 
     /**

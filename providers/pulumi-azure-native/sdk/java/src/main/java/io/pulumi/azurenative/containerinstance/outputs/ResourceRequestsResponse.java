@@ -33,9 +33,9 @@ public final class ResourceRequestsResponse {
         Double cpu,
         @Nullable GpuResourceResponse gpu,
         Double memoryInGB) {
-        this.cpu = Objects.requireNonNull(cpu);
+        this.cpu = cpu;
         this.gpu = gpu;
-        this.memoryInGB = Objects.requireNonNull(memoryInGB);
+        this.memoryInGB = memoryInGB;
     }
 
     /**

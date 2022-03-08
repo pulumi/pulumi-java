@@ -13,7 +13,7 @@ public final class GetSecretReplicationUserManagedReplicaCustomerManagedEncrypti
 
     @OutputCustomType.Constructor({"kmsKeyName"})
     private GetSecretReplicationUserManagedReplicaCustomerManagedEncryption(String kmsKeyName) {
-        this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
+        this.kmsKeyName = kmsKeyName;
     }
 
     public String getKmsKeyName() {

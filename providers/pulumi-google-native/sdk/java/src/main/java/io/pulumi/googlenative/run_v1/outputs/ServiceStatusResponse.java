@@ -59,13 +59,13 @@ public final class ServiceStatusResponse {
         Integer observedGeneration,
         List<TrafficTargetResponse> traffic,
         String url) {
-        this.address = Objects.requireNonNull(address);
-        this.conditions = Objects.requireNonNull(conditions);
-        this.latestCreatedRevisionName = Objects.requireNonNull(latestCreatedRevisionName);
-        this.latestReadyRevisionName = Objects.requireNonNull(latestReadyRevisionName);
-        this.observedGeneration = Objects.requireNonNull(observedGeneration);
-        this.traffic = Objects.requireNonNull(traffic);
-        this.url = Objects.requireNonNull(url);
+        this.address = address;
+        this.conditions = conditions;
+        this.latestCreatedRevisionName = latestCreatedRevisionName;
+        this.latestReadyRevisionName = latestReadyRevisionName;
+        this.observedGeneration = observedGeneration;
+        this.traffic = traffic;
+        this.url = url;
     }
 
     /**

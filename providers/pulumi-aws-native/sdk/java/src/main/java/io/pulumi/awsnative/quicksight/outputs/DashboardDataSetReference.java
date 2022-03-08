@@ -24,8 +24,8 @@ public final class DashboardDataSetReference {
     private DashboardDataSetReference(
         String dataSetArn,
         String dataSetPlaceholder) {
-        this.dataSetArn = Objects.requireNonNull(dataSetArn);
-        this.dataSetPlaceholder = Objects.requireNonNull(dataSetPlaceholder);
+        this.dataSetArn = dataSetArn;
+        this.dataSetPlaceholder = dataSetPlaceholder;
     }
 
     /**

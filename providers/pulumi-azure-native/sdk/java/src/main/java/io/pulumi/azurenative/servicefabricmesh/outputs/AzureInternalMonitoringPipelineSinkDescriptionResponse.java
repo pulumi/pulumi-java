@@ -68,7 +68,7 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse {
         this.autoKeyConfigUrl = autoKeyConfigUrl;
         this.description = description;
         this.fluentdConfigUrl = fluentdConfigUrl;
-        this.kind = Objects.requireNonNull(kind);
+        this.kind = kind;
         this.maConfigUrl = maConfigUrl;
         this.name = name;
         this.namespace = namespace;

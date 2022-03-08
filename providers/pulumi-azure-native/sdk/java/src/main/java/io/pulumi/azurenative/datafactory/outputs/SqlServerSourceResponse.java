@@ -109,7 +109,7 @@ public final class SqlServerSourceResponse {
         this.sqlReaderQuery = sqlReaderQuery;
         this.sqlReaderStoredProcedureName = sqlReaderStoredProcedureName;
         this.storedProcedureParameters = storedProcedureParameters;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

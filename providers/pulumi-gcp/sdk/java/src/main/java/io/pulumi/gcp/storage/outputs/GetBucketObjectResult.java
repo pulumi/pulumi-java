@@ -110,27 +110,27 @@ public final class GetBucketObjectResult {
         String storageClass,
         Boolean temporaryHold) {
         this.bucket = bucket;
-        this.cacheControl = Objects.requireNonNull(cacheControl);
-        this.content = Objects.requireNonNull(content);
-        this.contentDisposition = Objects.requireNonNull(contentDisposition);
-        this.contentEncoding = Objects.requireNonNull(contentEncoding);
-        this.contentLanguage = Objects.requireNonNull(contentLanguage);
-        this.contentType = Objects.requireNonNull(contentType);
-        this.crc32c = Objects.requireNonNull(crc32c);
-        this.customerEncryptions = Objects.requireNonNull(customerEncryptions);
-        this.detectMd5hash = Objects.requireNonNull(detectMd5hash);
-        this.eventBasedHold = Objects.requireNonNull(eventBasedHold);
-        this.id = Objects.requireNonNull(id);
-        this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
-        this.md5hash = Objects.requireNonNull(md5hash);
-        this.mediaLink = Objects.requireNonNull(mediaLink);
-        this.metadata = Objects.requireNonNull(metadata);
+        this.cacheControl = cacheControl;
+        this.content = content;
+        this.contentDisposition = contentDisposition;
+        this.contentEncoding = contentEncoding;
+        this.contentLanguage = contentLanguage;
+        this.contentType = contentType;
+        this.crc32c = crc32c;
+        this.customerEncryptions = customerEncryptions;
+        this.detectMd5hash = detectMd5hash;
+        this.eventBasedHold = eventBasedHold;
+        this.id = id;
+        this.kmsKeyName = kmsKeyName;
+        this.md5hash = md5hash;
+        this.mediaLink = mediaLink;
+        this.metadata = metadata;
         this.name = name;
-        this.outputName = Objects.requireNonNull(outputName);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.source = Objects.requireNonNull(source);
-        this.storageClass = Objects.requireNonNull(storageClass);
-        this.temporaryHold = Objects.requireNonNull(temporaryHold);
+        this.outputName = outputName;
+        this.selfLink = selfLink;
+        this.source = source;
+        this.storageClass = storageClass;
+        this.temporaryHold = temporaryHold;
     }
 
     public Optional<String> getBucket() {

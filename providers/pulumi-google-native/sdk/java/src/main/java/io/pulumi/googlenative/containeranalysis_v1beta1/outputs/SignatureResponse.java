@@ -24,8 +24,8 @@ public final class SignatureResponse {
     private SignatureResponse(
         String publicKeyId,
         String signature) {
-        this.publicKeyId = Objects.requireNonNull(publicKeyId);
-        this.signature = Objects.requireNonNull(signature);
+        this.publicKeyId = publicKeyId;
+        this.signature = signature;
     }
 
     /**

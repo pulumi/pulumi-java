@@ -54,12 +54,12 @@ public final class DataBoxDiskJobSecretsResponse {
         Boolean isPasskeyUserDefined,
         String jobSecretsType,
         String passKey) {
-        this.dcAccessSecurityCode = Objects.requireNonNull(dcAccessSecurityCode);
-        this.diskSecrets = Objects.requireNonNull(diskSecrets);
-        this.error = Objects.requireNonNull(error);
-        this.isPasskeyUserDefined = Objects.requireNonNull(isPasskeyUserDefined);
-        this.jobSecretsType = Objects.requireNonNull(jobSecretsType);
-        this.passKey = Objects.requireNonNull(passKey);
+        this.dcAccessSecurityCode = dcAccessSecurityCode;
+        this.diskSecrets = diskSecrets;
+        this.error = error;
+        this.isPasskeyUserDefined = isPasskeyUserDefined;
+        this.jobSecretsType = jobSecretsType;
+        this.passKey = passKey;
     }
 
     /**

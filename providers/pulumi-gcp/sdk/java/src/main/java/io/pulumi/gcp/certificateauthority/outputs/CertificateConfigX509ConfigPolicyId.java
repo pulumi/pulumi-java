@@ -18,7 +18,7 @@ public final class CertificateConfigX509ConfigPolicyId {
 
     @OutputCustomType.Constructor({"objectIdPaths"})
     private CertificateConfigX509ConfigPolicyId(List<Integer> objectIdPaths) {
-        this.objectIdPaths = Objects.requireNonNull(objectIdPaths);
+        this.objectIdPaths = objectIdPaths;
     }
 
     /**

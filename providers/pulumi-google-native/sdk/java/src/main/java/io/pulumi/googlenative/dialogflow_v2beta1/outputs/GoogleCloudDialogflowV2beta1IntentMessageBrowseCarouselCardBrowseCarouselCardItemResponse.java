@@ -44,11 +44,11 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBr
         GoogleCloudDialogflowV2beta1IntentMessageImageResponse image,
         GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse openUriAction,
         String title) {
-        this.description = Objects.requireNonNull(description);
-        this.footer = Objects.requireNonNull(footer);
-        this.image = Objects.requireNonNull(image);
-        this.openUriAction = Objects.requireNonNull(openUriAction);
-        this.title = Objects.requireNonNull(title);
+        this.description = description;
+        this.footer = footer;
+        this.image = image;
+        this.openUriAction = openUriAction;
+        this.title = title;
     }
 
     /**

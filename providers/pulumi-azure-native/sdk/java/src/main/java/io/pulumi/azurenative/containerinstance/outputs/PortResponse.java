@@ -27,7 +27,7 @@ public final class PortResponse {
     private PortResponse(
         Integer port,
         @Nullable String protocol) {
-        this.port = Objects.requireNonNull(port);
+        this.port = port;
         this.protocol = protocol;
     }
 

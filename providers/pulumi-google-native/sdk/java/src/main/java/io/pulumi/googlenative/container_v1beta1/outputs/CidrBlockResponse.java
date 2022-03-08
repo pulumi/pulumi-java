@@ -24,8 +24,8 @@ public final class CidrBlockResponse {
     private CidrBlockResponse(
         String cidrBlock,
         String displayName) {
-        this.cidrBlock = Objects.requireNonNull(cidrBlock);
-        this.displayName = Objects.requireNonNull(displayName);
+        this.cidrBlock = cidrBlock;
+        this.displayName = displayName;
     }
 
     /**

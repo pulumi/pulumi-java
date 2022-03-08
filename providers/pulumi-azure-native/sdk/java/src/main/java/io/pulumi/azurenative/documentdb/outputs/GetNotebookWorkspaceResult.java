@@ -42,11 +42,11 @@ public final class GetNotebookWorkspaceResult {
         String notebookServerEndpoint,
         String status,
         String type) {
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.notebookServerEndpoint = Objects.requireNonNull(notebookServerEndpoint);
-        this.status = Objects.requireNonNull(status);
-        this.type = Objects.requireNonNull(type);
+        this.id = id;
+        this.name = name;
+        this.notebookServerEndpoint = notebookServerEndpoint;
+        this.status = status;
+        this.type = type;
     }
 
     /**

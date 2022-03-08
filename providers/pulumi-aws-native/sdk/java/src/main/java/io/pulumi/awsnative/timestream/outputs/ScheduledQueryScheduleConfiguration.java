@@ -13,7 +13,7 @@ public final class ScheduledQueryScheduleConfiguration {
 
     @OutputCustomType.Constructor({"scheduleExpression"})
     private ScheduledQueryScheduleConfiguration(String scheduleExpression) {
-        this.scheduleExpression = Objects.requireNonNull(scheduleExpression);
+        this.scheduleExpression = scheduleExpression;
     }
 
     public String getScheduleExpression() {

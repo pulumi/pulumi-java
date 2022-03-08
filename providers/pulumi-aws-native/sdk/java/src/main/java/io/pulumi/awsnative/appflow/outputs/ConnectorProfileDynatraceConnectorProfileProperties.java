@@ -17,7 +17,7 @@ public final class ConnectorProfileDynatraceConnectorProfileProperties {
 
     @OutputCustomType.Constructor({"instanceUrl"})
     private ConnectorProfileDynatraceConnectorProfileProperties(String instanceUrl) {
-        this.instanceUrl = Objects.requireNonNull(instanceUrl);
+        this.instanceUrl = instanceUrl;
     }
 
     /**

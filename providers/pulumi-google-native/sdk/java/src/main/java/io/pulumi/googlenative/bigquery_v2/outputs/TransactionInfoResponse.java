@@ -17,7 +17,7 @@ public final class TransactionInfoResponse {
 
     @OutputCustomType.Constructor({"transactionId"})
     private TransactionInfoResponse(String transactionId) {
-        this.transactionId = Objects.requireNonNull(transactionId);
+        this.transactionId = transactionId;
     }
 
     /**

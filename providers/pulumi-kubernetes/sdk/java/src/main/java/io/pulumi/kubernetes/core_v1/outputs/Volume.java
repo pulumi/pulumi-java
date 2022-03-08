@@ -254,7 +254,7 @@ public final class Volume {
         this.glusterfs = glusterfs;
         this.hostPath = hostPath;
         this.iscsi = iscsi;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.nfs = nfs;
         this.persistentVolumeClaim = persistentVolumeClaim;
         this.photonPersistentDisk = photonPersistentDisk;

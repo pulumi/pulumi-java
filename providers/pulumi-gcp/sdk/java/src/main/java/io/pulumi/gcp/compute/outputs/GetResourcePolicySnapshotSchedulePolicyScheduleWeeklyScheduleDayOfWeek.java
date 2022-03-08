@@ -16,8 +16,8 @@ public final class GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule
     private GetResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek(
         String day,
         String startTime) {
-        this.day = Objects.requireNonNull(day);
-        this.startTime = Objects.requireNonNull(startTime);
+        this.day = day;
+        this.startTime = startTime;
     }
 
     public String getDay() {

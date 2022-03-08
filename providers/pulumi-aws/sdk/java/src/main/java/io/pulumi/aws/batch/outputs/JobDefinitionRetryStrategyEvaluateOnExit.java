@@ -38,7 +38,7 @@ public final class JobDefinitionRetryStrategyEvaluateOnExit {
         @Nullable String onExitCode,
         @Nullable String onReason,
         @Nullable String onStatusReason) {
-        this.action = Objects.requireNonNull(action);
+        this.action = action;
         this.onExitCode = onExitCode;
         this.onReason = onReason;
         this.onStatusReason = onStatusReason;

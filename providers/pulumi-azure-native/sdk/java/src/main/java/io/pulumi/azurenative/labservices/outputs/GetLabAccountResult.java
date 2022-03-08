@@ -79,14 +79,14 @@ public final class GetLabAccountResult {
         String type,
         @Nullable String uniqueIdentifier) {
         this.enabledRegionSelection = enabledRegionSelection;
-        this.id = Objects.requireNonNull(id);
-        this.latestOperationResult = Objects.requireNonNull(latestOperationResult);
+        this.id = id;
+        this.latestOperationResult = latestOperationResult;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.provisioningState = provisioningState;
-        this.sizeConfiguration = Objects.requireNonNull(sizeConfiguration);
+        this.sizeConfiguration = sizeConfiguration;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.uniqueIdentifier = uniqueIdentifier;
     }
 

@@ -58,7 +58,7 @@ public final class TrailAdvancedEventSelectorFieldSelector {
         @Nullable List<String> startsWiths) {
         this.endsWiths = endsWiths;
         this.equals = equals;
-        this.field = Objects.requireNonNull(field);
+        this.field = field;
         this.notEndsWiths = notEndsWiths;
         this.notEquals = notEquals;
         this.notStartsWiths = notStartsWiths;

@@ -24,8 +24,8 @@ public final class ReportConfigAggregationResponse {
     private ReportConfigAggregationResponse(
         String function,
         String name) {
-        this.function = Objects.requireNonNull(function);
-        this.name = Objects.requireNonNull(name);
+        this.function = function;
+        this.name = name;
     }
 
     /**

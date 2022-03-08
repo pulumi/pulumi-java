@@ -17,7 +17,7 @@ public final class ResourceAnnotationResponse {
 
     @OutputCustomType.Constructor({"label"})
     private ResourceAnnotationResponse(String label) {
-        this.label = Objects.requireNonNull(label);
+        this.label = label;
     }
 
     /**

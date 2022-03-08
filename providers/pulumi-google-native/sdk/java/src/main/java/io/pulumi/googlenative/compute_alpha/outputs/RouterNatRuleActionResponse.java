@@ -37,10 +37,10 @@ public final class RouterNatRuleActionResponse {
         List<String> sourceNatActiveRanges,
         List<String> sourceNatDrainIps,
         List<String> sourceNatDrainRanges) {
-        this.sourceNatActiveIps = Objects.requireNonNull(sourceNatActiveIps);
-        this.sourceNatActiveRanges = Objects.requireNonNull(sourceNatActiveRanges);
-        this.sourceNatDrainIps = Objects.requireNonNull(sourceNatDrainIps);
-        this.sourceNatDrainRanges = Objects.requireNonNull(sourceNatDrainRanges);
+        this.sourceNatActiveIps = sourceNatActiveIps;
+        this.sourceNatActiveRanges = sourceNatActiveRanges;
+        this.sourceNatDrainIps = sourceNatDrainIps;
+        this.sourceNatDrainRanges = sourceNatDrainRanges;
     }
 
     /**

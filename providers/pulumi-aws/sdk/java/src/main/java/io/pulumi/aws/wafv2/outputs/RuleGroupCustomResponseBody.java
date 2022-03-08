@@ -30,9 +30,9 @@ public final class RuleGroupCustomResponseBody {
         String content,
         String contentType,
         String key) {
-        this.content = Objects.requireNonNull(content);
-        this.contentType = Objects.requireNonNull(contentType);
-        this.key = Objects.requireNonNull(key);
+        this.content = content;
+        this.contentType = contentType;
+        this.key = key;
     }
 
     /**

@@ -41,8 +41,8 @@ public final class EventTargetBatchTarget {
         String jobName) {
         this.arraySize = arraySize;
         this.jobAttempts = jobAttempts;
-        this.jobDefinition = Objects.requireNonNull(jobDefinition);
-        this.jobName = Objects.requireNonNull(jobName);
+        this.jobDefinition = jobDefinition;
+        this.jobName = jobName;
     }
 
     /**

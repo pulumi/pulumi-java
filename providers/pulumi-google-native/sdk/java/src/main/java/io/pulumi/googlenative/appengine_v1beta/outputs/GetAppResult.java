@@ -96,20 +96,20 @@ public final class GetAppResult {
         String name,
         String serviceAccount,
         String servingStatus) {
-        this.authDomain = Objects.requireNonNull(authDomain);
-        this.codeBucket = Objects.requireNonNull(codeBucket);
-        this.databaseType = Objects.requireNonNull(databaseType);
-        this.defaultBucket = Objects.requireNonNull(defaultBucket);
-        this.defaultCookieExpiration = Objects.requireNonNull(defaultCookieExpiration);
-        this.defaultHostname = Objects.requireNonNull(defaultHostname);
-        this.dispatchRules = Objects.requireNonNull(dispatchRules);
-        this.featureSettings = Objects.requireNonNull(featureSettings);
-        this.gcrDomain = Objects.requireNonNull(gcrDomain);
-        this.iap = Objects.requireNonNull(iap);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.serviceAccount = Objects.requireNonNull(serviceAccount);
-        this.servingStatus = Objects.requireNonNull(servingStatus);
+        this.authDomain = authDomain;
+        this.codeBucket = codeBucket;
+        this.databaseType = databaseType;
+        this.defaultBucket = defaultBucket;
+        this.defaultCookieExpiration = defaultCookieExpiration;
+        this.defaultHostname = defaultHostname;
+        this.dispatchRules = dispatchRules;
+        this.featureSettings = featureSettings;
+        this.gcrDomain = gcrDomain;
+        this.iap = iap;
+        this.location = location;
+        this.name = name;
+        this.serviceAccount = serviceAccount;
+        this.servingStatus = servingStatus;
     }
 
     /**

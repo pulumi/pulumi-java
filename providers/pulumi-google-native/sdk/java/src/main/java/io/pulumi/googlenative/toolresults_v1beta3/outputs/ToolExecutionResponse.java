@@ -40,10 +40,10 @@ public final class ToolExecutionResponse {
         ToolExitCodeResponse exitCode,
         List<FileReferenceResponse> toolLogs,
         List<ToolOutputReferenceResponse> toolOutputs) {
-        this.commandLineArguments = Objects.requireNonNull(commandLineArguments);
-        this.exitCode = Objects.requireNonNull(exitCode);
-        this.toolLogs = Objects.requireNonNull(toolLogs);
-        this.toolOutputs = Objects.requireNonNull(toolOutputs);
+        this.commandLineArguments = commandLineArguments;
+        this.exitCode = exitCode;
+        this.toolLogs = toolLogs;
+        this.toolOutputs = toolOutputs;
     }
 
     /**

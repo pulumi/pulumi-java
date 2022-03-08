@@ -30,9 +30,9 @@ public final class AzureRetentionRuleResponse {
         String name,
         String objectType) {
         this.isDefault = isDefault;
-        this.lifecycles = Objects.requireNonNull(lifecycles);
-        this.name = Objects.requireNonNull(name);
-        this.objectType = Objects.requireNonNull(objectType);
+        this.lifecycles = lifecycles;
+        this.name = name;
+        this.objectType = objectType;
     }
 
     public Optional<Boolean> getIsDefault() {

@@ -72,7 +72,7 @@ public final class FirehoseDeliveryStreamS3Configuration {
         @Nullable String kmsKeyArn,
         @Nullable String prefix,
         String roleArn) {
-        this.bucketArn = Objects.requireNonNull(bucketArn);
+        this.bucketArn = bucketArn;
         this.bufferInterval = bufferInterval;
         this.bufferSize = bufferSize;
         this.cloudwatchLoggingOptions = cloudwatchLoggingOptions;
@@ -80,7 +80,7 @@ public final class FirehoseDeliveryStreamS3Configuration {
         this.errorOutputPrefix = errorOutputPrefix;
         this.kmsKeyArn = kmsKeyArn;
         this.prefix = prefix;
-        this.roleArn = Objects.requireNonNull(roleArn);
+        this.roleArn = roleArn;
     }
 
     /**

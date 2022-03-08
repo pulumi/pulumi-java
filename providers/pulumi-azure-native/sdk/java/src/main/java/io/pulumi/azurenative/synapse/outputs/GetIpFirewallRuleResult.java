@@ -51,11 +51,11 @@ public final class GetIpFirewallRuleResult {
         @Nullable String startIpAddress,
         String type) {
         this.endIpAddress = endIpAddress;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.id = id;
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.startIpAddress = startIpAddress;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

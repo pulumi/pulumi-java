@@ -40,13 +40,13 @@ public final class RouterStatusResult {
         String network,
         @Nullable String project,
         String region) {
-        this.bestRoutes = Objects.requireNonNull(bestRoutes);
-        this.bestRoutesForRouters = Objects.requireNonNull(bestRoutesForRouters);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.network = Objects.requireNonNull(network);
+        this.bestRoutes = bestRoutes;
+        this.bestRoutesForRouters = bestRoutesForRouters;
+        this.id = id;
+        this.name = name;
+        this.network = network;
         this.project = project;
-        this.region = Objects.requireNonNull(region);
+        this.region = region;
     }
 
     public List<RouterStatusBestRoute> getBestRoutes() {

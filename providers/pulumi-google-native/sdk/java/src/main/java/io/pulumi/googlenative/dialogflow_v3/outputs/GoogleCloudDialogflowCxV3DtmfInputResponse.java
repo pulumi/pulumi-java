@@ -24,8 +24,8 @@ public final class GoogleCloudDialogflowCxV3DtmfInputResponse {
     private GoogleCloudDialogflowCxV3DtmfInputResponse(
         String digits,
         String finishDigit) {
-        this.digits = Objects.requireNonNull(digits);
-        this.finishDigit = Objects.requireNonNull(finishDigit);
+        this.digits = digits;
+        this.finishDigit = finishDigit;
     }
 
     /**

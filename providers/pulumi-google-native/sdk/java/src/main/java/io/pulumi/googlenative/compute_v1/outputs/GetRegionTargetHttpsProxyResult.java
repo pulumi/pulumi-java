@@ -98,20 +98,20 @@ public final class GetRegionTargetHttpsProxyResult {
         List<String> sslCertificates,
         String sslPolicy,
         String urlMap) {
-        this.authorizationPolicy = Objects.requireNonNull(authorizationPolicy);
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.description = Objects.requireNonNull(description);
-        this.fingerprint = Objects.requireNonNull(fingerprint);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.proxyBind = Objects.requireNonNull(proxyBind);
-        this.quicOverride = Objects.requireNonNull(quicOverride);
-        this.region = Objects.requireNonNull(region);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.serverTlsPolicy = Objects.requireNonNull(serverTlsPolicy);
-        this.sslCertificates = Objects.requireNonNull(sslCertificates);
-        this.sslPolicy = Objects.requireNonNull(sslPolicy);
-        this.urlMap = Objects.requireNonNull(urlMap);
+        this.authorizationPolicy = authorizationPolicy;
+        this.creationTimestamp = creationTimestamp;
+        this.description = description;
+        this.fingerprint = fingerprint;
+        this.kind = kind;
+        this.name = name;
+        this.proxyBind = proxyBind;
+        this.quicOverride = quicOverride;
+        this.region = region;
+        this.selfLink = selfLink;
+        this.serverTlsPolicy = serverTlsPolicy;
+        this.sslCertificates = sslCertificates;
+        this.sslPolicy = sslPolicy;
+        this.urlMap = urlMap;
     }
 
     /**

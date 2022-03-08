@@ -24,8 +24,8 @@ public final class RouteSpecHttpRouteMatchHeaderMatchRange {
     private RouteSpecHttpRouteMatchHeaderMatchRange(
         Integer end,
         Integer start) {
-        this.end = Objects.requireNonNull(end);
-        this.start = Objects.requireNonNull(start);
+        this.end = end;
+        this.start = start;
     }
 
     /**

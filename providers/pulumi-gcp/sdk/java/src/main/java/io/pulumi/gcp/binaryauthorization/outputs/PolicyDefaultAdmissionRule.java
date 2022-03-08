@@ -41,8 +41,8 @@ public final class PolicyDefaultAdmissionRule {
         String enforcementMode,
         String evaluationMode,
         @Nullable List<String> requireAttestationsBies) {
-        this.enforcementMode = Objects.requireNonNull(enforcementMode);
-        this.evaluationMode = Objects.requireNonNull(evaluationMode);
+        this.enforcementMode = enforcementMode;
+        this.evaluationMode = evaluationMode;
         this.requireAttestationsBies = requireAttestationsBies;
     }
 

@@ -118,23 +118,23 @@ public final class PackageInfoNoteResponse {
         String title,
         String verificationCode,
         String version) {
-        this.analyzed = Objects.requireNonNull(analyzed);
-        this.attribution = Objects.requireNonNull(attribution);
-        this.checksum = Objects.requireNonNull(checksum);
-        this.copyright = Objects.requireNonNull(copyright);
-        this.detailedDescription = Objects.requireNonNull(detailedDescription);
-        this.downloadLocation = Objects.requireNonNull(downloadLocation);
-        this.externalRefs = Objects.requireNonNull(externalRefs);
-        this.filesLicenseInfo = Objects.requireNonNull(filesLicenseInfo);
-        this.homePage = Objects.requireNonNull(homePage);
-        this.licenseDeclared = Objects.requireNonNull(licenseDeclared);
-        this.originator = Objects.requireNonNull(originator);
-        this.packageType = Objects.requireNonNull(packageType);
-        this.summaryDescription = Objects.requireNonNull(summaryDescription);
-        this.supplier = Objects.requireNonNull(supplier);
-        this.title = Objects.requireNonNull(title);
-        this.verificationCode = Objects.requireNonNull(verificationCode);
-        this.version = Objects.requireNonNull(version);
+        this.analyzed = analyzed;
+        this.attribution = attribution;
+        this.checksum = checksum;
+        this.copyright = copyright;
+        this.detailedDescription = detailedDescription;
+        this.downloadLocation = downloadLocation;
+        this.externalRefs = externalRefs;
+        this.filesLicenseInfo = filesLicenseInfo;
+        this.homePage = homePage;
+        this.licenseDeclared = licenseDeclared;
+        this.originator = originator;
+        this.packageType = packageType;
+        this.summaryDescription = summaryDescription;
+        this.supplier = supplier;
+        this.title = title;
+        this.verificationCode = verificationCode;
+        this.version = version;
     }
 
     /**

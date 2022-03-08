@@ -18,7 +18,7 @@ public final class OriginRequestPolicyHeadersConfig {
     private OriginRequestPolicyHeadersConfig(
         String headerBehavior,
         @Nullable List<String> headers) {
-        this.headerBehavior = Objects.requireNonNull(headerBehavior);
+        this.headerBehavior = headerBehavior;
         this.headers = headers;
     }
 

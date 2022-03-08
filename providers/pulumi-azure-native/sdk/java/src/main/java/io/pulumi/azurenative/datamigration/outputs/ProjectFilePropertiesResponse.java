@@ -47,9 +47,9 @@ public final class ProjectFilePropertiesResponse {
         Double size) {
         this.extension = extension;
         this.filePath = filePath;
-        this.lastModified = Objects.requireNonNull(lastModified);
+        this.lastModified = lastModified;
         this.mediaType = mediaType;
-        this.size = Objects.requireNonNull(size);
+        this.size = size;
     }
 
     /**

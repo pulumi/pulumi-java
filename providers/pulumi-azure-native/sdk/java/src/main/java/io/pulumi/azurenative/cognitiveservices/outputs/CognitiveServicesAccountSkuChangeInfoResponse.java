@@ -31,9 +31,9 @@ public final class CognitiveServicesAccountSkuChangeInfoResponse {
         Double countOfDowngrades,
         Double countOfUpgradesAfterDowngrades,
         String lastChangeDate) {
-        this.countOfDowngrades = Objects.requireNonNull(countOfDowngrades);
-        this.countOfUpgradesAfterDowngrades = Objects.requireNonNull(countOfUpgradesAfterDowngrades);
-        this.lastChangeDate = Objects.requireNonNull(lastChangeDate);
+        this.countOfDowngrades = countOfDowngrades;
+        this.countOfUpgradesAfterDowngrades = countOfUpgradesAfterDowngrades;
+        this.lastChangeDate = lastChangeDate;
     }
 
     /**

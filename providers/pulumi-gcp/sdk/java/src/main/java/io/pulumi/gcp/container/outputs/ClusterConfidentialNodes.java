@@ -18,7 +18,7 @@ public final class ClusterConfidentialNodes {
 
     @OutputCustomType.Constructor({"enabled"})
     private ClusterConfidentialNodes(Boolean enabled) {
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
     }
 
     /**

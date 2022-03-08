@@ -46,10 +46,10 @@ public final class NetworkResourcePropertiesResponse {
         String status,
         String statusDetails) {
         this.description = description;
-        this.kind = Objects.requireNonNull(kind);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.status = Objects.requireNonNull(status);
-        this.statusDetails = Objects.requireNonNull(statusDetails);
+        this.kind = kind;
+        this.provisioningState = provisioningState;
+        this.status = status;
+        this.statusDetails = statusDetails;
     }
 
     /**

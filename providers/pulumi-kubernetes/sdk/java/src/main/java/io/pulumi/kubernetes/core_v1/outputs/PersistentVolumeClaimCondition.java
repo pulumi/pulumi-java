@@ -52,8 +52,8 @@ public final class PersistentVolumeClaimCondition {
         this.lastTransitionTime = lastTransitionTime;
         this.message = message;
         this.reason = reason;
-        this.status = Objects.requireNonNull(status);
-        this.type = Objects.requireNonNull(type);
+        this.status = status;
+        this.type = type;
     }
 
     /**

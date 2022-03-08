@@ -166,29 +166,29 @@ public final class GetOccurrenceResult {
         String updateTime,
         UpgradeOccurrenceResponse upgrade,
         VulnerabilityDetailsResponse vulnerabilityDetails) {
-        this.attestation = Objects.requireNonNull(attestation);
-        this.buildDetails = Objects.requireNonNull(buildDetails);
-        this.compliance = Objects.requireNonNull(compliance);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.deployment = Objects.requireNonNull(deployment);
-        this.derivedImage = Objects.requireNonNull(derivedImage);
-        this.discovered = Objects.requireNonNull(discovered);
-        this.dsseAttestation = Objects.requireNonNull(dsseAttestation);
-        this.envelope = Objects.requireNonNull(envelope);
-        this.installation = Objects.requireNonNull(installation);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.noteName = Objects.requireNonNull(noteName);
-        this.remediation = Objects.requireNonNull(remediation);
-        this.resource = Objects.requireNonNull(resource);
-        this.resourceUrl = Objects.requireNonNull(resourceUrl);
-        this.sbom = Objects.requireNonNull(sbom);
-        this.spdxFile = Objects.requireNonNull(spdxFile);
-        this.spdxPackage = Objects.requireNonNull(spdxPackage);
-        this.spdxRelationship = Objects.requireNonNull(spdxRelationship);
-        this.updateTime = Objects.requireNonNull(updateTime);
-        this.upgrade = Objects.requireNonNull(upgrade);
-        this.vulnerabilityDetails = Objects.requireNonNull(vulnerabilityDetails);
+        this.attestation = attestation;
+        this.buildDetails = buildDetails;
+        this.compliance = compliance;
+        this.createTime = createTime;
+        this.deployment = deployment;
+        this.derivedImage = derivedImage;
+        this.discovered = discovered;
+        this.dsseAttestation = dsseAttestation;
+        this.envelope = envelope;
+        this.installation = installation;
+        this.kind = kind;
+        this.name = name;
+        this.noteName = noteName;
+        this.remediation = remediation;
+        this.resource = resource;
+        this.resourceUrl = resourceUrl;
+        this.sbom = sbom;
+        this.spdxFile = spdxFile;
+        this.spdxPackage = spdxPackage;
+        this.spdxRelationship = spdxRelationship;
+        this.updateTime = updateTime;
+        this.upgrade = upgrade;
+        this.vulnerabilityDetails = vulnerabilityDetails;
     }
 
     /**

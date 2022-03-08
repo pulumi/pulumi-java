@@ -33,9 +33,9 @@ public final class BucketTopicConfiguration {
         String event,
         @Nullable BucketNotificationFilter filter,
         String topic) {
-        this.event = Objects.requireNonNull(event);
+        this.event = event;
         this.filter = filter;
-        this.topic = Objects.requireNonNull(topic);
+        this.topic = topic;
     }
 
     /**

@@ -81,17 +81,17 @@ public final class GetJobResult {
         String state,
         String templateId,
         Integer ttlAfterCompletionDays) {
-        this.config = Objects.requireNonNull(config);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.endTime = Objects.requireNonNull(endTime);
-        this.error = Objects.requireNonNull(error);
-        this.inputUri = Objects.requireNonNull(inputUri);
-        this.name = Objects.requireNonNull(name);
-        this.outputUri = Objects.requireNonNull(outputUri);
-        this.startTime = Objects.requireNonNull(startTime);
-        this.state = Objects.requireNonNull(state);
-        this.templateId = Objects.requireNonNull(templateId);
-        this.ttlAfterCompletionDays = Objects.requireNonNull(ttlAfterCompletionDays);
+        this.config = config;
+        this.createTime = createTime;
+        this.endTime = endTime;
+        this.error = error;
+        this.inputUri = inputUri;
+        this.name = name;
+        this.outputUri = outputUri;
+        this.startTime = startTime;
+        this.state = state;
+        this.templateId = templateId;
+        this.ttlAfterCompletionDays = ttlAfterCompletionDays;
     }
 
     /**

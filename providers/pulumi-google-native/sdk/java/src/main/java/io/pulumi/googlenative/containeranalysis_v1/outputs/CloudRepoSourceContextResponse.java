@@ -32,9 +32,9 @@ public final class CloudRepoSourceContextResponse {
         AliasContextResponse aliasContext,
         RepoIdResponse repoId,
         String revisionId) {
-        this.aliasContext = Objects.requireNonNull(aliasContext);
-        this.repoId = Objects.requireNonNull(repoId);
-        this.revisionId = Objects.requireNonNull(revisionId);
+        this.aliasContext = aliasContext;
+        this.repoId = repoId;
+        this.revisionId = revisionId;
     }
 
     /**

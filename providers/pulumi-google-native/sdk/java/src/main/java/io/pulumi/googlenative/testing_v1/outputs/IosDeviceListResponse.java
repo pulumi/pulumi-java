@@ -18,7 +18,7 @@ public final class IosDeviceListResponse {
 
     @OutputCustomType.Constructor({"iosDevices"})
     private IosDeviceListResponse(List<IosDeviceResponse> iosDevices) {
-        this.iosDevices = Objects.requireNonNull(iosDevices);
+        this.iosDevices = iosDevices;
     }
 
     /**

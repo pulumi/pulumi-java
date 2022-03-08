@@ -64,14 +64,14 @@ public final class GetPrivateEndpointConnectionProxyResult {
         @Nullable String status,
         SystemDataResponse systemData,
         String type) {
-        this.eTag = Objects.requireNonNull(eTag);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.eTag = eTag;
+        this.id = id;
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.remotePrivateEndpoint = remotePrivateEndpoint;
         this.status = status;
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

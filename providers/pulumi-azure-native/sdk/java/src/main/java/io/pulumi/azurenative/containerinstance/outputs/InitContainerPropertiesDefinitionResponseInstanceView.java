@@ -39,10 +39,10 @@ public final class InitContainerPropertiesDefinitionResponseInstanceView {
         List<EventResponse> events,
         ContainerStateResponse previousState,
         Integer restartCount) {
-        this.currentState = Objects.requireNonNull(currentState);
-        this.events = Objects.requireNonNull(events);
-        this.previousState = Objects.requireNonNull(previousState);
-        this.restartCount = Objects.requireNonNull(restartCount);
+        this.currentState = currentState;
+        this.events = events;
+        this.previousState = previousState;
+        this.restartCount = restartCount;
     }
 
     /**

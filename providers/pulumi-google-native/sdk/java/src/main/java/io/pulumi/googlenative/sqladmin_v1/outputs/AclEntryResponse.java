@@ -36,10 +36,10 @@ public final class AclEntryResponse {
         String kind,
         String name,
         String value) {
-        this.expirationTime = Objects.requireNonNull(expirationTime);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.value = Objects.requireNonNull(value);
+        this.expirationTime = expirationTime;
+        this.kind = kind;
+        this.name = name;
+        this.value = value;
     }
 
     /**

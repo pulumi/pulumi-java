@@ -30,9 +30,9 @@ public final class AccessPointCreationInfo {
         String ownerGid,
         String ownerUid,
         String permissions) {
-        this.ownerGid = Objects.requireNonNull(ownerGid);
-        this.ownerUid = Objects.requireNonNull(ownerUid);
-        this.permissions = Objects.requireNonNull(permissions);
+        this.ownerGid = ownerGid;
+        this.ownerUid = ownerUid;
+        this.permissions = permissions;
     }
 
     /**

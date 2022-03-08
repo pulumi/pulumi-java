@@ -72,15 +72,15 @@ public final class GetPipelineResult {
         SystemDataResponse systemData,
         @Nullable Map<String,String> tags,
         String type) {
-        this.bootstrapConfiguration = Objects.requireNonNull(bootstrapConfiguration);
-        this.id = Objects.requireNonNull(id);
+        this.bootstrapConfiguration = bootstrapConfiguration;
+        this.id = id;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
-        this.pipelineId = Objects.requireNonNull(pipelineId);
-        this.pipelineType = Objects.requireNonNull(pipelineType);
-        this.systemData = Objects.requireNonNull(systemData);
+        this.name = name;
+        this.pipelineId = pipelineId;
+        this.pipelineType = pipelineType;
+        this.systemData = systemData;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

@@ -24,8 +24,8 @@ public final class SDKInfoResponse {
     private SDKInfoResponse(
         String language,
         String version) {
-        this.language = Objects.requireNonNull(language);
-        this.version = Objects.requireNonNull(version);
+        this.language = language;
+        this.version = version;
     }
 
     /**

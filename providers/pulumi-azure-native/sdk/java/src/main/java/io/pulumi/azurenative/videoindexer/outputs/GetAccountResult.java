@@ -91,17 +91,17 @@ public final class GetAccountResult {
         String tenantId,
         String type) {
         this.accountId = accountId;
-        this.accountName = Objects.requireNonNull(accountName);
-        this.id = Objects.requireNonNull(id);
+        this.accountName = accountName;
+        this.id = id;
         this.identity = identity;
-        this.location = Objects.requireNonNull(location);
+        this.location = location;
         this.mediaServices = mediaServices;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.systemData = Objects.requireNonNull(systemData);
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.systemData = systemData;
         this.tags = tags;
-        this.tenantId = Objects.requireNonNull(tenantId);
-        this.type = Objects.requireNonNull(type);
+        this.tenantId = tenantId;
+        this.type = type;
     }
 
     /**

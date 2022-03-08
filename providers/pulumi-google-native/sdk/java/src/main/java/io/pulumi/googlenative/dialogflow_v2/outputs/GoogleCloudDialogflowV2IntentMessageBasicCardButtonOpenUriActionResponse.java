@@ -17,7 +17,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriAct
 
     @OutputCustomType.Constructor({"uri"})
     private GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionResponse(String uri) {
-        this.uri = Objects.requireNonNull(uri);
+        this.uri = uri;
     }
 
     /**

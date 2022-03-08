@@ -70,15 +70,15 @@ public final class GetSqlPoolWorkloadGroupResult {
         String name,
         @Nullable Integer queryExecutionTimeout,
         String type) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.importance = importance;
-        this.maxResourcePercent = Objects.requireNonNull(maxResourcePercent);
+        this.maxResourcePercent = maxResourcePercent;
         this.maxResourcePercentPerRequest = maxResourcePercentPerRequest;
-        this.minResourcePercent = Objects.requireNonNull(minResourcePercent);
-        this.minResourcePercentPerRequest = Objects.requireNonNull(minResourcePercentPerRequest);
-        this.name = Objects.requireNonNull(name);
+        this.minResourcePercent = minResourcePercent;
+        this.minResourcePercentPerRequest = minResourcePercentPerRequest;
+        this.name = name;
         this.queryExecutionTimeout = queryExecutionTimeout;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

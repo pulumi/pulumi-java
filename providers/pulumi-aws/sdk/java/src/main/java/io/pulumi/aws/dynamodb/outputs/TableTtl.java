@@ -27,7 +27,7 @@ public final class TableTtl {
     private TableTtl(
         String attributeName,
         @Nullable Boolean enabled) {
-        this.attributeName = Objects.requireNonNull(attributeName);
+        this.attributeName = attributeName;
         this.enabled = enabled;
     }
 

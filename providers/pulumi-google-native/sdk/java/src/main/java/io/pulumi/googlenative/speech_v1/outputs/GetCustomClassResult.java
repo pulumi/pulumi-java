@@ -32,9 +32,9 @@ public final class GetCustomClassResult {
         String customClassId,
         List<ClassItemResponse> items,
         String name) {
-        this.customClassId = Objects.requireNonNull(customClassId);
-        this.items = Objects.requireNonNull(items);
-        this.name = Objects.requireNonNull(name);
+        this.customClassId = customClassId;
+        this.items = items;
+        this.name = name;
     }
 
     /**

@@ -29,7 +29,7 @@ public final class LiteTopicPartitionConfig {
         @Nullable LiteTopicPartitionConfigCapacity capacity,
         Integer count) {
         this.capacity = capacity;
-        this.count = Objects.requireNonNull(count);
+        this.count = count;
     }
 
     /**

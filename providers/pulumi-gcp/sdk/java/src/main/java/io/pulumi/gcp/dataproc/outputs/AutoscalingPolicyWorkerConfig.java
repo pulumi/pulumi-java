@@ -45,7 +45,7 @@ public final class AutoscalingPolicyWorkerConfig {
         Integer maxInstances,
         @Nullable Integer minInstances,
         @Nullable Integer weight) {
-        this.maxInstances = Objects.requireNonNull(maxInstances);
+        this.maxInstances = maxInstances;
         this.minInstances = minInstances;
         this.weight = weight;
     }

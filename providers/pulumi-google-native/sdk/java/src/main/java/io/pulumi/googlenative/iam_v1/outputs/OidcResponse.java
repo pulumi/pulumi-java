@@ -25,8 +25,8 @@ public final class OidcResponse {
     private OidcResponse(
         List<String> allowedAudiences,
         String issuerUri) {
-        this.allowedAudiences = Objects.requireNonNull(allowedAudiences);
-        this.issuerUri = Objects.requireNonNull(issuerUri);
+        this.allowedAudiences = allowedAudiences;
+        this.issuerUri = issuerUri;
     }
 
     /**

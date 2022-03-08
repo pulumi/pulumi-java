@@ -57,7 +57,7 @@ public final class MonitoredResourceResponse {
         this.reasonForMetricsStatus = reasonForMetricsStatus;
         this.sendingLogs = sendingLogs;
         this.sendingMetrics = sendingMetrics;
-        this.systemData = Objects.requireNonNull(systemData);
+        this.systemData = systemData;
     }
 
     /**

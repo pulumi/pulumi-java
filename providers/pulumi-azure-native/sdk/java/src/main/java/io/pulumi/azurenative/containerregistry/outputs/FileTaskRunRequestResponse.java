@@ -100,11 +100,11 @@ public final class FileTaskRunRequestResponse {
         this.credentials = credentials;
         this.isArchiveEnabled = isArchiveEnabled;
         this.logTemplate = logTemplate;
-        this.platform = Objects.requireNonNull(platform);
+        this.platform = platform;
         this.sourceLocation = sourceLocation;
-        this.taskFilePath = Objects.requireNonNull(taskFilePath);
+        this.taskFilePath = taskFilePath;
         this.timeout = timeout;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.values = values;
         this.valuesFilePath = valuesFilePath;
     }

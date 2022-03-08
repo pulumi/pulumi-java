@@ -35,14 +35,14 @@ public final class GetListenerDefaultAction {
         List<GetListenerDefaultActionRedirect> redirects,
         String targetGroupArn,
         String type) {
-        this.authenticateCognitos = Objects.requireNonNull(authenticateCognitos);
-        this.authenticateOidcs = Objects.requireNonNull(authenticateOidcs);
-        this.fixedResponses = Objects.requireNonNull(fixedResponses);
-        this.forwards = Objects.requireNonNull(forwards);
-        this.order = Objects.requireNonNull(order);
-        this.redirects = Objects.requireNonNull(redirects);
-        this.targetGroupArn = Objects.requireNonNull(targetGroupArn);
-        this.type = Objects.requireNonNull(type);
+        this.authenticateCognitos = authenticateCognitos;
+        this.authenticateOidcs = authenticateOidcs;
+        this.fixedResponses = fixedResponses;
+        this.forwards = forwards;
+        this.order = order;
+        this.redirects = redirects;
+        this.targetGroupArn = targetGroupArn;
+        this.type = type;
     }
 
     public List<GetListenerDefaultActionAuthenticateCognito> getAuthenticateCognitos() {

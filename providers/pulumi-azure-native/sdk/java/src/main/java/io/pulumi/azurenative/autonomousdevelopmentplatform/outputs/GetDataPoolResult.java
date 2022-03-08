@@ -57,13 +57,13 @@ public final class GetDataPoolResult {
         String provisioningState,
         SystemDataResponse systemData,
         String type) {
-        this.dataPoolId = Objects.requireNonNull(dataPoolId);
-        this.id = Objects.requireNonNull(id);
-        this.locations = Objects.requireNonNull(locations);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.dataPoolId = dataPoolId;
+        this.id = id;
+        this.locations = locations;
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

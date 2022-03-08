@@ -25,8 +25,8 @@ public final class BucketTiering {
     private BucketTiering(
         BucketTieringAccessTier accessTier,
         Integer days) {
-        this.accessTier = Objects.requireNonNull(accessTier);
-        this.days = Objects.requireNonNull(days);
+        this.accessTier = accessTier;
+        this.days = days;
     }
 
     /**

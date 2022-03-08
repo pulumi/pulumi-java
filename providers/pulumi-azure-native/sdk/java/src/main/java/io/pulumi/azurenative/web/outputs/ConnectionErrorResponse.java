@@ -65,12 +65,12 @@ public final class ConnectionErrorResponse {
         String type) {
         this.code = code;
         this.etag = etag;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.location = location;
         this.message = message;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

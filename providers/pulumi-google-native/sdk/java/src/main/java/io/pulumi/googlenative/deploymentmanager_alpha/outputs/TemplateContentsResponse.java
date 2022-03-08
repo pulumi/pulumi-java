@@ -44,11 +44,11 @@ public final class TemplateContentsResponse {
         String mainTemplate,
         String schema,
         String template) {
-        this.imports = Objects.requireNonNull(imports);
-        this.interpreter = Objects.requireNonNull(interpreter);
-        this.mainTemplate = Objects.requireNonNull(mainTemplate);
-        this.schema = Objects.requireNonNull(schema);
-        this.template = Objects.requireNonNull(template);
+        this.imports = imports;
+        this.interpreter = interpreter;
+        this.mainTemplate = mainTemplate;
+        this.schema = schema;
+        this.template = template;
     }
 
     /**

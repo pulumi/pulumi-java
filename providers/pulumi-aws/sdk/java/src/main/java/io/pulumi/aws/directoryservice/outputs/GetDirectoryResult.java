@@ -102,22 +102,22 @@ public final class GetDirectoryResult {
         @Nullable Map<String,String> tags,
         String type,
         List<GetDirectoryVpcSetting> vpcSettings) {
-        this.accessUrl = Objects.requireNonNull(accessUrl);
-        this.alias = Objects.requireNonNull(alias);
-        this.connectSettings = Objects.requireNonNull(connectSettings);
-        this.description = Objects.requireNonNull(description);
-        this.directoryId = Objects.requireNonNull(directoryId);
-        this.dnsIpAddresses = Objects.requireNonNull(dnsIpAddresses);
-        this.edition = Objects.requireNonNull(edition);
-        this.enableSso = Objects.requireNonNull(enableSso);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.securityGroupId = Objects.requireNonNull(securityGroupId);
-        this.shortName = Objects.requireNonNull(shortName);
-        this.size = Objects.requireNonNull(size);
+        this.accessUrl = accessUrl;
+        this.alias = alias;
+        this.connectSettings = connectSettings;
+        this.description = description;
+        this.directoryId = directoryId;
+        this.dnsIpAddresses = dnsIpAddresses;
+        this.edition = edition;
+        this.enableSso = enableSso;
+        this.id = id;
+        this.name = name;
+        this.securityGroupId = securityGroupId;
+        this.shortName = shortName;
+        this.size = size;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
-        this.vpcSettings = Objects.requireNonNull(vpcSettings);
+        this.type = type;
+        this.vpcSettings = vpcSettings;
     }
 
     /**

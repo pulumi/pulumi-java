@@ -34,7 +34,7 @@ public final class IntegrationScheduledTriggerProperties {
         this.dataPullMode = dataPullMode;
         this.firstExecutionFrom = firstExecutionFrom;
         this.scheduleEndTime = scheduleEndTime;
-        this.scheduleExpression = Objects.requireNonNull(scheduleExpression);
+        this.scheduleExpression = scheduleExpression;
         this.scheduleOffset = scheduleOffset;
         this.scheduleStartTime = scheduleStartTime;
         this.timezone = timezone;

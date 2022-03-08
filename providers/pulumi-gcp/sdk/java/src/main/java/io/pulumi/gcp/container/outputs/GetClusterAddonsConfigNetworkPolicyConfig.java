@@ -13,7 +13,7 @@ public final class GetClusterAddonsConfigNetworkPolicyConfig {
 
     @OutputCustomType.Constructor({"disabled"})
     private GetClusterAddonsConfigNetworkPolicyConfig(Boolean disabled) {
-        this.disabled = Objects.requireNonNull(disabled);
+        this.disabled = disabled;
     }
 
     public Boolean getDisabled() {

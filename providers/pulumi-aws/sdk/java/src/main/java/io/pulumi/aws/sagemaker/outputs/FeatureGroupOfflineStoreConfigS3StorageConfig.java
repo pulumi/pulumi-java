@@ -27,7 +27,7 @@ public final class FeatureGroupOfflineStoreConfigS3StorageConfig {
         @Nullable String kmsKeyId,
         String s3Uri) {
         this.kmsKeyId = kmsKeyId;
-        this.s3Uri = Objects.requireNonNull(s3Uri);
+        this.s3Uri = s3Uri;
     }
 
     /**

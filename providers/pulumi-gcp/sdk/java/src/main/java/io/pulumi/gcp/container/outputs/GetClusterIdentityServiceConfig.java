@@ -13,7 +13,7 @@ public final class GetClusterIdentityServiceConfig {
 
     @OutputCustomType.Constructor({"enabled"})
     private GetClusterIdentityServiceConfig(Boolean enabled) {
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
     }
 
     public Boolean getEnabled() {

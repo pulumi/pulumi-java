@@ -17,7 +17,7 @@ public final class CloudHealthcareSourceResponse {
 
     @OutputCustomType.Constructor({"name"})
     private CloudHealthcareSourceResponse(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

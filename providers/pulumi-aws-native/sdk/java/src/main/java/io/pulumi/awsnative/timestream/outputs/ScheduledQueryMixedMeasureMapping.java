@@ -28,7 +28,7 @@ public final class ScheduledQueryMixedMeasureMapping {
         @Nullable String sourceColumn,
         @Nullable String targetMeasureName) {
         this.measureName = measureName;
-        this.measureValueType = Objects.requireNonNull(measureValueType);
+        this.measureValueType = measureValueType;
         this.multiMeasureAttributeMappings = multiMeasureAttributeMappings;
         this.sourceColumn = sourceColumn;
         this.targetMeasureName = targetMeasureName;

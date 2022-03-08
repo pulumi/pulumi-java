@@ -13,7 +13,7 @@ public final class GetAppEngineServiceTelemetry {
 
     @OutputCustomType.Constructor({"resourceName"})
     private GetAppEngineServiceTelemetry(String resourceName) {
-        this.resourceName = Objects.requireNonNull(resourceName);
+        this.resourceName = resourceName;
     }
 
     public String getPropResourceName() {

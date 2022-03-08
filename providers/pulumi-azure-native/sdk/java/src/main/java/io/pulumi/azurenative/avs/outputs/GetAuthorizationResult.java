@@ -48,12 +48,12 @@ public final class GetAuthorizationResult {
         String name,
         String provisioningState,
         String type) {
-        this.expressRouteAuthorizationId = Objects.requireNonNull(expressRouteAuthorizationId);
-        this.expressRouteAuthorizationKey = Objects.requireNonNull(expressRouteAuthorizationKey);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.type = Objects.requireNonNull(type);
+        this.expressRouteAuthorizationId = expressRouteAuthorizationId;
+        this.expressRouteAuthorizationKey = expressRouteAuthorizationKey;
+        this.id = id;
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.type = type;
     }
 
     /**

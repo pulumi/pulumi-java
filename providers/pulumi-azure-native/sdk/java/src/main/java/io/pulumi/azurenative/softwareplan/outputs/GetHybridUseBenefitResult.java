@@ -62,14 +62,14 @@ public final class GetHybridUseBenefitResult {
         String provisioningState,
         SkuResponse sku,
         String type) {
-        this.createdDate = Objects.requireNonNull(createdDate);
-        this.etag = Objects.requireNonNull(etag);
-        this.id = Objects.requireNonNull(id);
-        this.lastUpdatedDate = Objects.requireNonNull(lastUpdatedDate);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.sku = Objects.requireNonNull(sku);
-        this.type = Objects.requireNonNull(type);
+        this.createdDate = createdDate;
+        this.etag = etag;
+        this.id = id;
+        this.lastUpdatedDate = lastUpdatedDate;
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.sku = sku;
+        this.type = type;
     }
 
     /**

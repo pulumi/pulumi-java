@@ -25,8 +25,8 @@ public final class ManagementGroupLogSettingsResponse {
     private ManagementGroupLogSettingsResponse(
         String category,
         Boolean enabled) {
-        this.category = Objects.requireNonNull(category);
-        this.enabled = Objects.requireNonNull(enabled);
+        this.category = category;
+        this.enabled = enabled;
     }
 
     /**

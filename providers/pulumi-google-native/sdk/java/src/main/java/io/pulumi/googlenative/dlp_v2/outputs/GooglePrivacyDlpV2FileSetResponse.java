@@ -25,8 +25,8 @@ public final class GooglePrivacyDlpV2FileSetResponse {
     private GooglePrivacyDlpV2FileSetResponse(
         GooglePrivacyDlpV2CloudStorageRegexFileSetResponse regexFileSet,
         String url) {
-        this.regexFileSet = Objects.requireNonNull(regexFileSet);
-        this.url = Objects.requireNonNull(url);
+        this.regexFileSet = regexFileSet;
+        this.url = url;
     }
 
     /**

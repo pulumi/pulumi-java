@@ -46,11 +46,11 @@ public final class SchemaPackageResponse {
         String schematizedParsingType,
         List<Hl7TypesConfigResponse> types,
         String unexpectedSegmentHandling) {
-        this.ignoreMinOccurs = Objects.requireNonNull(ignoreMinOccurs);
-        this.schemas = Objects.requireNonNull(schemas);
-        this.schematizedParsingType = Objects.requireNonNull(schematizedParsingType);
-        this.types = Objects.requireNonNull(types);
-        this.unexpectedSegmentHandling = Objects.requireNonNull(unexpectedSegmentHandling);
+        this.ignoreMinOccurs = ignoreMinOccurs;
+        this.schemas = schemas;
+        this.schematizedParsingType = schematizedParsingType;
+        this.types = types;
+        this.unexpectedSegmentHandling = unexpectedSegmentHandling;
     }
 
     /**

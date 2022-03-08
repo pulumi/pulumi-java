@@ -20,8 +20,8 @@ public final class ResponsePolicyGKEClusterResponse {
     private ResponsePolicyGKEClusterResponse(
         String gkeClusterName,
         String kind) {
-        this.gkeClusterName = Objects.requireNonNull(gkeClusterName);
-        this.kind = Objects.requireNonNull(kind);
+        this.gkeClusterName = gkeClusterName;
+        this.kind = kind;
     }
 
     /**

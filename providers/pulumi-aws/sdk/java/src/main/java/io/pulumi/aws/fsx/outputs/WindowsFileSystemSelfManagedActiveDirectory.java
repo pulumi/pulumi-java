@@ -51,12 +51,12 @@ public final class WindowsFileSystemSelfManagedActiveDirectory {
         @Nullable String organizationalUnitDistinguishedName,
         String password,
         String username) {
-        this.dnsIps = Objects.requireNonNull(dnsIps);
-        this.domainName = Objects.requireNonNull(domainName);
+        this.dnsIps = dnsIps;
+        this.domainName = domainName;
         this.fileSystemAdministratorsGroup = fileSystemAdministratorsGroup;
         this.organizationalUnitDistinguishedName = organizationalUnitDistinguishedName;
-        this.password = Objects.requireNonNull(password);
-        this.username = Objects.requireNonNull(username);
+        this.password = password;
+        this.username = username;
     }
 
     /**

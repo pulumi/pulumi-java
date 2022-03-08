@@ -32,10 +32,10 @@ public final class GetDetectorResult {
         String id,
         String serviceRoleArn,
         String status) {
-        this.findingPublishingFrequency = Objects.requireNonNull(findingPublishingFrequency);
-        this.id = Objects.requireNonNull(id);
-        this.serviceRoleArn = Objects.requireNonNull(serviceRoleArn);
-        this.status = Objects.requireNonNull(status);
+        this.findingPublishingFrequency = findingPublishingFrequency;
+        this.id = id;
+        this.serviceRoleArn = serviceRoleArn;
+        this.status = status;
     }
 
     /**

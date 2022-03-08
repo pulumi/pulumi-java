@@ -26,8 +26,8 @@ public final class AssetModelTransform {
     private AssetModelTransform(
         String expression,
         List<AssetModelExpressionVariable> variables) {
-        this.expression = Objects.requireNonNull(expression);
-        this.variables = Objects.requireNonNull(variables);
+        this.expression = expression;
+        this.variables = variables;
     }
 
     /**

@@ -109,7 +109,7 @@ public final class TableExternalDataConfiguration {
         @Nullable String schema,
         String sourceFormat,
         List<String> sourceUris) {
-        this.autodetect = Objects.requireNonNull(autodetect);
+        this.autodetect = autodetect;
         this.compression = compression;
         this.csvOptions = csvOptions;
         this.googleSheetsOptions = googleSheetsOptions;
@@ -117,8 +117,8 @@ public final class TableExternalDataConfiguration {
         this.ignoreUnknownValues = ignoreUnknownValues;
         this.maxBadRecords = maxBadRecords;
         this.schema = schema;
-        this.sourceFormat = Objects.requireNonNull(sourceFormat);
-        this.sourceUris = Objects.requireNonNull(sourceUris);
+        this.sourceFormat = sourceFormat;
+        this.sourceUris = sourceUris;
     }
 
     /**

@@ -31,9 +31,9 @@ public final class TopicRuleSqs {
         String queueUrl,
         String roleArn,
         Boolean useBase64) {
-        this.queueUrl = Objects.requireNonNull(queueUrl);
-        this.roleArn = Objects.requireNonNull(roleArn);
-        this.useBase64 = Objects.requireNonNull(useBase64);
+        this.queueUrl = queueUrl;
+        this.roleArn = roleArn;
+        this.useBase64 = useBase64;
     }
 
     /**

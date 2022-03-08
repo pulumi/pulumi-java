@@ -38,10 +38,10 @@ public final class GetSubscriptionResult {
         String name,
         PushConfigResponse pushConfig,
         String topic) {
-        this.ackDeadlineSeconds = Objects.requireNonNull(ackDeadlineSeconds);
-        this.name = Objects.requireNonNull(name);
-        this.pushConfig = Objects.requireNonNull(pushConfig);
-        this.topic = Objects.requireNonNull(topic);
+        this.ackDeadlineSeconds = ackDeadlineSeconds;
+        this.name = name;
+        this.pushConfig = pushConfig;
+        this.topic = topic;
     }
 
     /**

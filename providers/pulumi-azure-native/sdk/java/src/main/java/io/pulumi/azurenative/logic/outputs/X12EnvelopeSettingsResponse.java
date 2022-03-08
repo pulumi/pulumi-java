@@ -160,30 +160,30 @@ public final class X12EnvelopeSettingsResponse {
         Integer transactionSetControlNumberUpperBound,
         String usageIndicator,
         Boolean useControlStandardsIdAsRepetitionCharacter) {
-        this.controlStandardsId = Objects.requireNonNull(controlStandardsId);
-        this.controlVersionNumber = Objects.requireNonNull(controlVersionNumber);
-        this.enableDefaultGroupHeaders = Objects.requireNonNull(enableDefaultGroupHeaders);
+        this.controlStandardsId = controlStandardsId;
+        this.controlVersionNumber = controlVersionNumber;
+        this.enableDefaultGroupHeaders = enableDefaultGroupHeaders;
         this.functionalGroupId = functionalGroupId;
-        this.groupControlNumberLowerBound = Objects.requireNonNull(groupControlNumberLowerBound);
-        this.groupControlNumberUpperBound = Objects.requireNonNull(groupControlNumberUpperBound);
-        this.groupHeaderAgencyCode = Objects.requireNonNull(groupHeaderAgencyCode);
-        this.groupHeaderDateFormat = Objects.requireNonNull(groupHeaderDateFormat);
-        this.groupHeaderTimeFormat = Objects.requireNonNull(groupHeaderTimeFormat);
-        this.groupHeaderVersion = Objects.requireNonNull(groupHeaderVersion);
-        this.interchangeControlNumberLowerBound = Objects.requireNonNull(interchangeControlNumberLowerBound);
-        this.interchangeControlNumberUpperBound = Objects.requireNonNull(interchangeControlNumberUpperBound);
-        this.overwriteExistingTransactionSetControlNumber = Objects.requireNonNull(overwriteExistingTransactionSetControlNumber);
-        this.receiverApplicationId = Objects.requireNonNull(receiverApplicationId);
-        this.rolloverGroupControlNumber = Objects.requireNonNull(rolloverGroupControlNumber);
-        this.rolloverInterchangeControlNumber = Objects.requireNonNull(rolloverInterchangeControlNumber);
-        this.rolloverTransactionSetControlNumber = Objects.requireNonNull(rolloverTransactionSetControlNumber);
-        this.senderApplicationId = Objects.requireNonNull(senderApplicationId);
-        this.transactionSetControlNumberLowerBound = Objects.requireNonNull(transactionSetControlNumberLowerBound);
+        this.groupControlNumberLowerBound = groupControlNumberLowerBound;
+        this.groupControlNumberUpperBound = groupControlNumberUpperBound;
+        this.groupHeaderAgencyCode = groupHeaderAgencyCode;
+        this.groupHeaderDateFormat = groupHeaderDateFormat;
+        this.groupHeaderTimeFormat = groupHeaderTimeFormat;
+        this.groupHeaderVersion = groupHeaderVersion;
+        this.interchangeControlNumberLowerBound = interchangeControlNumberLowerBound;
+        this.interchangeControlNumberUpperBound = interchangeControlNumberUpperBound;
+        this.overwriteExistingTransactionSetControlNumber = overwriteExistingTransactionSetControlNumber;
+        this.receiverApplicationId = receiverApplicationId;
+        this.rolloverGroupControlNumber = rolloverGroupControlNumber;
+        this.rolloverInterchangeControlNumber = rolloverInterchangeControlNumber;
+        this.rolloverTransactionSetControlNumber = rolloverTransactionSetControlNumber;
+        this.senderApplicationId = senderApplicationId;
+        this.transactionSetControlNumberLowerBound = transactionSetControlNumberLowerBound;
         this.transactionSetControlNumberPrefix = transactionSetControlNumberPrefix;
         this.transactionSetControlNumberSuffix = transactionSetControlNumberSuffix;
-        this.transactionSetControlNumberUpperBound = Objects.requireNonNull(transactionSetControlNumberUpperBound);
-        this.usageIndicator = Objects.requireNonNull(usageIndicator);
-        this.useControlStandardsIdAsRepetitionCharacter = Objects.requireNonNull(useControlStandardsIdAsRepetitionCharacter);
+        this.transactionSetControlNumberUpperBound = transactionSetControlNumberUpperBound;
+        this.usageIndicator = usageIndicator;
+        this.useControlStandardsIdAsRepetitionCharacter = useControlStandardsIdAsRepetitionCharacter;
     }
 
     /**

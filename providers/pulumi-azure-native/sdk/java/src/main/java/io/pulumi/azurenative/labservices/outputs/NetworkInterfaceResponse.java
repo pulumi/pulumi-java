@@ -36,10 +36,10 @@ public final class NetworkInterfaceResponse {
         String rdpAuthority,
         String sshAuthority,
         String username) {
-        this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
-        this.rdpAuthority = Objects.requireNonNull(rdpAuthority);
-        this.sshAuthority = Objects.requireNonNull(sshAuthority);
-        this.username = Objects.requireNonNull(username);
+        this.privateIpAddress = privateIpAddress;
+        this.rdpAuthority = rdpAuthority;
+        this.sshAuthority = sshAuthority;
+        this.username = username;
     }
 
     /**

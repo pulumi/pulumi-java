@@ -18,7 +18,7 @@ public final class JobPlacement {
     private JobPlacement(
         String clusterName,
         @Nullable String clusterUuid) {
-        this.clusterName = Objects.requireNonNull(clusterName);
+        this.clusterName = clusterName;
         this.clusterUuid = clusterUuid;
     }
 

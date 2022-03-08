@@ -27,7 +27,7 @@ public final class ListIotHubResourceKeysResult {
     private ListIotHubResourceKeysResult(
         String nextLink,
         @Nullable List<SharedAccessSignatureAuthorizationRuleResponse> value) {
-        this.nextLink = Objects.requireNonNull(nextLink);
+        this.nextLink = nextLink;
         this.value = value;
     }
 

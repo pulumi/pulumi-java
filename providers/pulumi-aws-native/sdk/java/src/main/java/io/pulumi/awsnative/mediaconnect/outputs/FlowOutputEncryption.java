@@ -42,8 +42,8 @@ public final class FlowOutputEncryption {
         String secretArn) {
         this.algorithm = algorithm;
         this.keyType = keyType;
-        this.roleArn = Objects.requireNonNull(roleArn);
-        this.secretArn = Objects.requireNonNull(secretArn);
+        this.roleArn = roleArn;
+        this.secretArn = secretArn;
     }
 
     /**

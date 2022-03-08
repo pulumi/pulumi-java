@@ -56,9 +56,9 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRule {
         this.cmkArn = cmkArn;
         this.copyTags = copyTags;
         this.deprecateRule = deprecateRule;
-        this.encrypted = Objects.requireNonNull(encrypted);
+        this.encrypted = encrypted;
         this.retainRule = retainRule;
-        this.target = Objects.requireNonNull(target);
+        this.target = target;
     }
 
     /**

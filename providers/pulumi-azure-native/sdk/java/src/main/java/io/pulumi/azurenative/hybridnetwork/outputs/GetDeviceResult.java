@@ -70,15 +70,15 @@ public final class GetDeviceResult {
         String status,
         @Nullable Map<String,String> tags,
         String type) {
-        this.deviceType = Objects.requireNonNull(deviceType);
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.networkFunctions = Objects.requireNonNull(networkFunctions);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.status = Objects.requireNonNull(status);
+        this.deviceType = deviceType;
+        this.id = id;
+        this.location = location;
+        this.name = name;
+        this.networkFunctions = networkFunctions;
+        this.provisioningState = provisioningState;
+        this.status = status;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

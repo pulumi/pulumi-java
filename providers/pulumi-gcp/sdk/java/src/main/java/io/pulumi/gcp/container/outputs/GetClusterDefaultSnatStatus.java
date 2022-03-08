@@ -13,7 +13,7 @@ public final class GetClusterDefaultSnatStatus {
 
     @OutputCustomType.Constructor({"disabled"})
     private GetClusterDefaultSnatStatus(Boolean disabled) {
-        this.disabled = Objects.requireNonNull(disabled);
+        this.disabled = disabled;
     }
 
     public Boolean getDisabled() {

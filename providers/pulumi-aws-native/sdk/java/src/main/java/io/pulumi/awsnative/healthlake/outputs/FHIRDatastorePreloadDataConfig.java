@@ -17,7 +17,7 @@ public final class FHIRDatastorePreloadDataConfig {
 
     @OutputCustomType.Constructor({"preloadDataType"})
     private FHIRDatastorePreloadDataConfig(FHIRDatastorePreloadDataConfigPreloadDataType preloadDataType) {
-        this.preloadDataType = Objects.requireNonNull(preloadDataType);
+        this.preloadDataType = preloadDataType;
     }
 
     /**

@@ -24,8 +24,8 @@ public final class AxisResponse {
     private AxisResponse(
         String label,
         String scale) {
-        this.label = Objects.requireNonNull(label);
-        this.scale = Objects.requireNonNull(scale);
+        this.label = label;
+        this.scale = scale;
     }
 
     /**

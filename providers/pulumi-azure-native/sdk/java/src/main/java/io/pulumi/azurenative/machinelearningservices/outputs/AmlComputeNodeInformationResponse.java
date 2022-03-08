@@ -49,12 +49,12 @@ public final class AmlComputeNodeInformationResponse {
         String privateIpAddress,
         String publicIpAddress,
         String runId) {
-        this.nodeId = Objects.requireNonNull(nodeId);
-        this.nodeState = Objects.requireNonNull(nodeState);
-        this.port = Objects.requireNonNull(port);
-        this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
-        this.publicIpAddress = Objects.requireNonNull(publicIpAddress);
-        this.runId = Objects.requireNonNull(runId);
+        this.nodeId = nodeId;
+        this.nodeState = nodeState;
+        this.port = port;
+        this.privateIpAddress = privateIpAddress;
+        this.publicIpAddress = publicIpAddress;
+        this.runId = runId;
     }
 
     /**

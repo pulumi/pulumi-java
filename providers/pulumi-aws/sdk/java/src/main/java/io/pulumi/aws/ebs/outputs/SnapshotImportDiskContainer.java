@@ -40,7 +40,7 @@ public final class SnapshotImportDiskContainer {
         @Nullable String url,
         @Nullable SnapshotImportDiskContainerUserBucket userBucket) {
         this.description = description;
-        this.format = Objects.requireNonNull(format);
+        this.format = format;
         this.url = url;
         this.userBucket = userBucket;
     }

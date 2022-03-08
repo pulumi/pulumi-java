@@ -31,9 +31,9 @@ public final class ReservationAffinityResponse {
         String consumeReservationType,
         String key,
         List<String> values) {
-        this.consumeReservationType = Objects.requireNonNull(consumeReservationType);
-        this.key = Objects.requireNonNull(key);
-        this.values = Objects.requireNonNull(values);
+        this.consumeReservationType = consumeReservationType;
+        this.key = key;
+        this.values = values;
     }
 
     /**

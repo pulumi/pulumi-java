@@ -42,10 +42,10 @@ public final class WebAclRuleStatementAndStatementStatementAndStatementStatement
         @Nullable WebAclRuleStatementAndStatementStatementAndStatementStatementSizeConstraintStatementFieldToMatch fieldToMatch,
         Integer size,
         List<WebAclRuleStatementAndStatementStatementAndStatementStatementSizeConstraintStatementTextTransformation> textTransformations) {
-        this.comparisonOperator = Objects.requireNonNull(comparisonOperator);
+        this.comparisonOperator = comparisonOperator;
         this.fieldToMatch = fieldToMatch;
-        this.size = Objects.requireNonNull(size);
-        this.textTransformations = Objects.requireNonNull(textTransformations);
+        this.size = size;
+        this.textTransformations = textTransformations;
     }
 
     /**

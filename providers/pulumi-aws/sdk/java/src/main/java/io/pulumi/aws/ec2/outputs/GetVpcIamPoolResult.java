@@ -115,26 +115,26 @@ public final class GetVpcIamPoolResult {
         String sourceIpamPoolId,
         String state,
         Map<String,String> tags) {
-        this.addressFamily = Objects.requireNonNull(addressFamily);
-        this.allocationDefaultNetmaskLength = Objects.requireNonNull(allocationDefaultNetmaskLength);
-        this.allocationMaxNetmaskLength = Objects.requireNonNull(allocationMaxNetmaskLength);
-        this.allocationMinNetmaskLength = Objects.requireNonNull(allocationMinNetmaskLength);
-        this.allocationResourceTags = Objects.requireNonNull(allocationResourceTags);
-        this.arn = Objects.requireNonNull(arn);
-        this.autoImport = Objects.requireNonNull(autoImport);
-        this.awsService = Objects.requireNonNull(awsService);
-        this.description = Objects.requireNonNull(description);
+        this.addressFamily = addressFamily;
+        this.allocationDefaultNetmaskLength = allocationDefaultNetmaskLength;
+        this.allocationMaxNetmaskLength = allocationMaxNetmaskLength;
+        this.allocationMinNetmaskLength = allocationMinNetmaskLength;
+        this.allocationResourceTags = allocationResourceTags;
+        this.arn = arn;
+        this.autoImport = autoImport;
+        this.awsService = awsService;
+        this.description = description;
         this.filters = filters;
         this.id = id;
         this.ipamPoolId = ipamPoolId;
-        this.ipamScopeId = Objects.requireNonNull(ipamScopeId);
-        this.ipamScopeType = Objects.requireNonNull(ipamScopeType);
-        this.locale = Objects.requireNonNull(locale);
-        this.poolDepth = Objects.requireNonNull(poolDepth);
-        this.publiclyAdvertisable = Objects.requireNonNull(publiclyAdvertisable);
-        this.sourceIpamPoolId = Objects.requireNonNull(sourceIpamPoolId);
-        this.state = Objects.requireNonNull(state);
-        this.tags = Objects.requireNonNull(tags);
+        this.ipamScopeId = ipamScopeId;
+        this.ipamScopeType = ipamScopeType;
+        this.locale = locale;
+        this.poolDepth = poolDepth;
+        this.publiclyAdvertisable = publiclyAdvertisable;
+        this.sourceIpamPoolId = sourceIpamPoolId;
+        this.state = state;
+        this.tags = tags;
     }
 
     /**

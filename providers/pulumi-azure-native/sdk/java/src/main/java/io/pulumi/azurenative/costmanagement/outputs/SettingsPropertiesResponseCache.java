@@ -50,12 +50,12 @@ public final class SettingsPropertiesResponseCache {
         @Nullable String parent,
         @Nullable String status,
         String subchannel) {
-        this.channel = Objects.requireNonNull(channel);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.channel = channel;
+        this.id = id;
+        this.name = name;
         this.parent = parent;
         this.status = status;
-        this.subchannel = Objects.requireNonNull(subchannel);
+        this.subchannel = subchannel;
     }
 
     /**

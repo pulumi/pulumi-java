@@ -24,8 +24,8 @@ public final class GetUserFilter {
     private GetUserFilter(
         String attributePath,
         String attributeValue) {
-        this.attributePath = Objects.requireNonNull(attributePath);
-        this.attributeValue = Objects.requireNonNull(attributeValue);
+        this.attributePath = attributePath;
+        this.attributeValue = attributeValue;
     }
 
     /**

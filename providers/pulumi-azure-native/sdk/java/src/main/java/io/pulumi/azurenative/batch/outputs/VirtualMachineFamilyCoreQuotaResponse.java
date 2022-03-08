@@ -25,8 +25,8 @@ public final class VirtualMachineFamilyCoreQuotaResponse {
     private VirtualMachineFamilyCoreQuotaResponse(
         Integer coreQuota,
         String name) {
-        this.coreQuota = Objects.requireNonNull(coreQuota);
-        this.name = Objects.requireNonNull(name);
+        this.coreQuota = coreQuota;
+        this.name = name;
     }
 
     /**

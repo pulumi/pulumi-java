@@ -26,8 +26,8 @@ public final class ColumnResponse {
     private ColumnResponse(
         String weight,
         List<WidgetResponse> widgets) {
-        this.weight = Objects.requireNonNull(weight);
-        this.widgets = Objects.requireNonNull(widgets);
+        this.weight = weight;
+        this.widgets = widgets;
     }
 
     /**

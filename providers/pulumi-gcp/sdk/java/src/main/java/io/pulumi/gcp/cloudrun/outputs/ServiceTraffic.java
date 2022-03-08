@@ -38,7 +38,7 @@ public final class ServiceTraffic {
         Integer percent,
         @Nullable String revisionName) {
         this.latestRevision = latestRevision;
-        this.percent = Objects.requireNonNull(percent);
+        this.percent = percent;
         this.revisionName = revisionName;
     }
 

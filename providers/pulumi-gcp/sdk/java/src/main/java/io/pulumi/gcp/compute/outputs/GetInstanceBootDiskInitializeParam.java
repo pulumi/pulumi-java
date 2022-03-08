@@ -39,10 +39,10 @@ public final class GetInstanceBootDiskInitializeParam {
         Map<String,Object> labels,
         Integer size,
         String type) {
-        this.image = Objects.requireNonNull(image);
-        this.labels = Objects.requireNonNull(labels);
-        this.size = Objects.requireNonNull(size);
-        this.type = Objects.requireNonNull(type);
+        this.image = image;
+        this.labels = labels;
+        this.size = size;
+        this.type = type;
     }
 
     /**

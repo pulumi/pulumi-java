@@ -44,13 +44,13 @@ public final class GetDocumentResult {
         @Nullable String documentVersion,
         String id,
         String name) {
-        this.arn = Objects.requireNonNull(arn);
-        this.content = Objects.requireNonNull(content);
+        this.arn = arn;
+        this.content = content;
         this.documentFormat = documentFormat;
-        this.documentType = Objects.requireNonNull(documentType);
+        this.documentType = documentType;
         this.documentVersion = documentVersion;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
     }
 
     /**

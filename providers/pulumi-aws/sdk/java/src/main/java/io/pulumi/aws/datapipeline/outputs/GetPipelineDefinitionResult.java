@@ -43,11 +43,11 @@ public final class GetPipelineDefinitionResult {
         @Nullable List<GetPipelineDefinitionParameterValue> parameterValues,
         String pipelineId,
         List<GetPipelineDefinitionPipelineObject> pipelineObjects) {
-        this.id = Objects.requireNonNull(id);
-        this.parameterObjects = Objects.requireNonNull(parameterObjects);
+        this.id = id;
+        this.parameterObjects = parameterObjects;
         this.parameterValues = parameterValues;
-        this.pipelineId = Objects.requireNonNull(pipelineId);
-        this.pipelineObjects = Objects.requireNonNull(pipelineObjects);
+        this.pipelineId = pipelineId;
+        this.pipelineObjects = pipelineObjects;
     }
 
     /**

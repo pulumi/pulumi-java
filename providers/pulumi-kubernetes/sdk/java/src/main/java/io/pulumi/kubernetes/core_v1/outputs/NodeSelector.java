@@ -18,7 +18,7 @@ public final class NodeSelector {
 
     @OutputCustomType.Constructor({"nodeSelectorTerms"})
     private NodeSelector(List<NodeSelectorTerm> nodeSelectorTerms) {
-        this.nodeSelectorTerms = Objects.requireNonNull(nodeSelectorTerms);
+        this.nodeSelectorTerms = nodeSelectorTerms;
     }
 
     /**

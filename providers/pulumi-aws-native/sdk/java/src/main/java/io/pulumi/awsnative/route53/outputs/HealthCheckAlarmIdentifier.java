@@ -24,8 +24,8 @@ public final class HealthCheckAlarmIdentifier {
     private HealthCheckAlarmIdentifier(
         String name,
         String region) {
-        this.name = Objects.requireNonNull(name);
-        this.region = Objects.requireNonNull(region);
+        this.name = name;
+        this.region = region;
     }
 
     /**

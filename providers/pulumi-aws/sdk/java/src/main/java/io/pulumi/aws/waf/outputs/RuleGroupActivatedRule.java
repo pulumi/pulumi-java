@@ -40,9 +40,9 @@ public final class RuleGroupActivatedRule {
         Integer priority,
         String ruleId,
         @Nullable String type) {
-        this.action = Objects.requireNonNull(action);
-        this.priority = Objects.requireNonNull(priority);
-        this.ruleId = Objects.requireNonNull(ruleId);
+        this.action = action;
+        this.priority = priority;
+        this.ruleId = ruleId;
         this.type = type;
     }
 

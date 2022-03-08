@@ -105,13 +105,13 @@ public final class UntilActivityResponse {
         @Nullable Object timeout,
         String type,
         @Nullable List<UserPropertyResponse> userProperties) {
-        this.activities = Objects.requireNonNull(activities);
+        this.activities = activities;
         this.dependsOn = dependsOn;
         this.description = description;
-        this.expression = Objects.requireNonNull(expression);
-        this.name = Objects.requireNonNull(name);
+        this.expression = expression;
+        this.name = name;
         this.timeout = timeout;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.userProperties = userProperties;
     }
 

@@ -106,14 +106,14 @@ public final class TumblingWindowTriggerResponse {
         this.dependsOn = dependsOn;
         this.description = description;
         this.endTime = endTime;
-        this.frequency = Objects.requireNonNull(frequency);
-        this.interval = Objects.requireNonNull(interval);
-        this.maxConcurrency = Objects.requireNonNull(maxConcurrency);
-        this.pipeline = Objects.requireNonNull(pipeline);
+        this.frequency = frequency;
+        this.interval = interval;
+        this.maxConcurrency = maxConcurrency;
+        this.pipeline = pipeline;
         this.retryPolicy = retryPolicy;
-        this.runtimeState = Objects.requireNonNull(runtimeState);
-        this.startTime = Objects.requireNonNull(startTime);
-        this.type = Objects.requireNonNull(type);
+        this.runtimeState = runtimeState;
+        this.startTime = startTime;
+        this.type = type;
     }
 
     /**

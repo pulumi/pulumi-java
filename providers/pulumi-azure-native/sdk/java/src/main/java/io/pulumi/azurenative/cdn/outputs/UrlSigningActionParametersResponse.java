@@ -31,7 +31,7 @@ public final class UrlSigningActionParametersResponse {
         String odataType,
         @Nullable List<UrlSigningParamIdentifierResponse> parameterNameOverride) {
         this.algorithm = algorithm;
-        this.odataType = Objects.requireNonNull(odataType);
+        this.odataType = odataType;
         this.parameterNameOverride = parameterNameOverride;
     }
 

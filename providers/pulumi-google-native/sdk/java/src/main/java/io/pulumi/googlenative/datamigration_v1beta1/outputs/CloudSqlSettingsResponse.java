@@ -99,20 +99,20 @@ public final class CloudSqlSettingsResponse {
         String tier,
         Map<String,String> userLabels,
         String zone) {
-        this.activationPolicy = Objects.requireNonNull(activationPolicy);
-        this.autoStorageIncrease = Objects.requireNonNull(autoStorageIncrease);
-        this.dataDiskSizeGb = Objects.requireNonNull(dataDiskSizeGb);
-        this.dataDiskType = Objects.requireNonNull(dataDiskType);
-        this.databaseFlags = Objects.requireNonNull(databaseFlags);
-        this.databaseVersion = Objects.requireNonNull(databaseVersion);
-        this.ipConfig = Objects.requireNonNull(ipConfig);
-        this.rootPassword = Objects.requireNonNull(rootPassword);
-        this.rootPasswordSet = Objects.requireNonNull(rootPasswordSet);
-        this.sourceId = Objects.requireNonNull(sourceId);
-        this.storageAutoResizeLimit = Objects.requireNonNull(storageAutoResizeLimit);
-        this.tier = Objects.requireNonNull(tier);
-        this.userLabels = Objects.requireNonNull(userLabels);
-        this.zone = Objects.requireNonNull(zone);
+        this.activationPolicy = activationPolicy;
+        this.autoStorageIncrease = autoStorageIncrease;
+        this.dataDiskSizeGb = dataDiskSizeGb;
+        this.dataDiskType = dataDiskType;
+        this.databaseFlags = databaseFlags;
+        this.databaseVersion = databaseVersion;
+        this.ipConfig = ipConfig;
+        this.rootPassword = rootPassword;
+        this.rootPasswordSet = rootPasswordSet;
+        this.sourceId = sourceId;
+        this.storageAutoResizeLimit = storageAutoResizeLimit;
+        this.tier = tier;
+        this.userLabels = userLabels;
+        this.zone = zone;
     }
 
     /**

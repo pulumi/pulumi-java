@@ -28,7 +28,7 @@ public final class IngressEnvironmentStatusResponse {
         @Nullable String state,
         EnvironmentStateDetailsResponse stateDetails) {
         this.state = state;
-        this.stateDetails = Objects.requireNonNull(stateDetails);
+        this.stateDetails = stateDetails;
     }
 
     /**

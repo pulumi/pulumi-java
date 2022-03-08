@@ -66,7 +66,7 @@ public final class JobHttpTarget {
         this.httpMethod = httpMethod;
         this.oauthToken = oauthToken;
         this.oidcToken = oidcToken;
-        this.uri = Objects.requireNonNull(uri);
+        this.uri = uri;
     }
 
     /**

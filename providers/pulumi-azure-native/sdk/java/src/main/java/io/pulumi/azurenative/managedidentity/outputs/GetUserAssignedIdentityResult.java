@@ -62,14 +62,14 @@ public final class GetUserAssignedIdentityResult {
         @Nullable Map<String,String> tags,
         String tenantId,
         String type) {
-        this.clientId = Objects.requireNonNull(clientId);
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.principalId = Objects.requireNonNull(principalId);
+        this.clientId = clientId;
+        this.id = id;
+        this.location = location;
+        this.name = name;
+        this.principalId = principalId;
         this.tags = tags;
-        this.tenantId = Objects.requireNonNull(tenantId);
-        this.type = Objects.requireNonNull(type);
+        this.tenantId = tenantId;
+        this.type = type;
     }
 
     /**

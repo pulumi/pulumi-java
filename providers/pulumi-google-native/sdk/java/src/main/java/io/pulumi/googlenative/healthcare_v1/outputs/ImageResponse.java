@@ -24,8 +24,8 @@ public final class ImageResponse {
     private ImageResponse(
         String gcsUri,
         String rawBytes) {
-        this.gcsUri = Objects.requireNonNull(gcsUri);
-        this.rawBytes = Objects.requireNonNull(rawBytes);
+        this.gcsUri = gcsUri;
+        this.rawBytes = rawBytes;
     }
 
     /**

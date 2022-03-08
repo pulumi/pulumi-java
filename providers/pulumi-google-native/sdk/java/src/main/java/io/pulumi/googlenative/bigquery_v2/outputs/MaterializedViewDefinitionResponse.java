@@ -37,10 +37,10 @@ public final class MaterializedViewDefinitionResponse {
         String lastRefreshTime,
         String query,
         String refreshIntervalMs) {
-        this.enableRefresh = Objects.requireNonNull(enableRefresh);
-        this.lastRefreshTime = Objects.requireNonNull(lastRefreshTime);
-        this.query = Objects.requireNonNull(query);
-        this.refreshIntervalMs = Objects.requireNonNull(refreshIntervalMs);
+        this.enableRefresh = enableRefresh;
+        this.lastRefreshTime = lastRefreshTime;
+        this.query = query;
+        this.refreshIntervalMs = refreshIntervalMs;
     }
 
     /**

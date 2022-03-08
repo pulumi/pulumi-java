@@ -14,7 +14,7 @@ public final class LoggingConfiguration {
 
     @OutputCustomType.Constructor({"logDestinationConfigs"})
     private LoggingConfiguration(List<LoggingConfigurationLogDestinationConfig> logDestinationConfigs) {
-        this.logDestinationConfigs = Objects.requireNonNull(logDestinationConfigs);
+        this.logDestinationConfigs = logDestinationConfigs;
     }
 
     public List<LoggingConfigurationLogDestinationConfig> getLogDestinationConfigs() {

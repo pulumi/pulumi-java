@@ -51,12 +51,12 @@ public final class DevicePolicyResponse {
         Boolean requireAdminApproval,
         Boolean requireCorpOwned,
         Boolean requireScreenlock) {
-        this.allowedDeviceManagementLevels = Objects.requireNonNull(allowedDeviceManagementLevels);
-        this.allowedEncryptionStatuses = Objects.requireNonNull(allowedEncryptionStatuses);
-        this.osConstraints = Objects.requireNonNull(osConstraints);
-        this.requireAdminApproval = Objects.requireNonNull(requireAdminApproval);
-        this.requireCorpOwned = Objects.requireNonNull(requireCorpOwned);
-        this.requireScreenlock = Objects.requireNonNull(requireScreenlock);
+        this.allowedDeviceManagementLevels = allowedDeviceManagementLevels;
+        this.allowedEncryptionStatuses = allowedEncryptionStatuses;
+        this.osConstraints = osConstraints;
+        this.requireAdminApproval = requireAdminApproval;
+        this.requireCorpOwned = requireCorpOwned;
+        this.requireScreenlock = requireScreenlock;
     }
 
     /**

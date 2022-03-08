@@ -25,8 +25,8 @@ public final class FutureReservationSpecificSKUPropertiesResponse {
     private FutureReservationSpecificSKUPropertiesResponse(
         AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties,
         String totalCount) {
-        this.instanceProperties = Objects.requireNonNull(instanceProperties);
-        this.totalCount = Objects.requireNonNull(totalCount);
+        this.instanceProperties = instanceProperties;
+        this.totalCount = totalCount;
     }
 
     /**

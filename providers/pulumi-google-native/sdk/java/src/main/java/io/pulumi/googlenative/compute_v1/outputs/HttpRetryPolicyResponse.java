@@ -33,9 +33,9 @@ public final class HttpRetryPolicyResponse {
         Integer numRetries,
         DurationResponse perTryTimeout,
         List<String> retryConditions) {
-        this.numRetries = Objects.requireNonNull(numRetries);
-        this.perTryTimeout = Objects.requireNonNull(perTryTimeout);
-        this.retryConditions = Objects.requireNonNull(retryConditions);
+        this.numRetries = numRetries;
+        this.perTryTimeout = perTryTimeout;
+        this.retryConditions = retryConditions;
     }
 
     /**

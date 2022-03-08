@@ -81,19 +81,19 @@ public final class GetCertificateResult {
         @Nullable String thumbprint,
         @Nullable String thumbprintAlgorithm,
         String type) {
-        this.deleteCertificateError = Objects.requireNonNull(deleteCertificateError);
-        this.etag = Objects.requireNonNull(etag);
+        this.deleteCertificateError = deleteCertificateError;
+        this.etag = etag;
         this.format = format;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.previousProvisioningState = Objects.requireNonNull(previousProvisioningState);
-        this.previousProvisioningStateTransitionTime = Objects.requireNonNull(previousProvisioningStateTransitionTime);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.provisioningStateTransitionTime = Objects.requireNonNull(provisioningStateTransitionTime);
-        this.publicData = Objects.requireNonNull(publicData);
+        this.id = id;
+        this.name = name;
+        this.previousProvisioningState = previousProvisioningState;
+        this.previousProvisioningStateTransitionTime = previousProvisioningStateTransitionTime;
+        this.provisioningState = provisioningState;
+        this.provisioningStateTransitionTime = provisioningStateTransitionTime;
+        this.publicData = publicData;
         this.thumbprint = thumbprint;
         this.thumbprintAlgorithm = thumbprintAlgorithm;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

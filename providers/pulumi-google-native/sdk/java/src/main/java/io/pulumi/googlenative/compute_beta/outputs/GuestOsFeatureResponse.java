@@ -17,7 +17,7 @@ public final class GuestOsFeatureResponse {
 
     @OutputCustomType.Constructor({"type"})
     private GuestOsFeatureResponse(String type) {
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

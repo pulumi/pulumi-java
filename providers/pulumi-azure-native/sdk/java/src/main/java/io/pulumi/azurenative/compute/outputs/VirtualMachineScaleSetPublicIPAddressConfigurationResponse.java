@@ -72,7 +72,7 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationResponse {
         this.dnsSettings = dnsSettings;
         this.idleTimeoutInMinutes = idleTimeoutInMinutes;
         this.ipTags = ipTags;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.publicIPAddressVersion = publicIPAddressVersion;
         this.publicIPPrefix = publicIPPrefix;
         this.sku = sku;

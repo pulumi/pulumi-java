@@ -27,13 +27,13 @@ public final class GetEnvironmentConfigPrivateEnvironmentConfig {
         Boolean enablePrivatelyUsedPublicIps,
         String masterIpv4CidrBlock,
         String webServerIpv4CidrBlock) {
-        this.cloudComposerConnectionSubnetwork = Objects.requireNonNull(cloudComposerConnectionSubnetwork);
-        this.cloudComposerNetworkIpv4CidrBlock = Objects.requireNonNull(cloudComposerNetworkIpv4CidrBlock);
-        this.cloudSqlIpv4CidrBlock = Objects.requireNonNull(cloudSqlIpv4CidrBlock);
-        this.enablePrivateEndpoint = Objects.requireNonNull(enablePrivateEndpoint);
-        this.enablePrivatelyUsedPublicIps = Objects.requireNonNull(enablePrivatelyUsedPublicIps);
-        this.masterIpv4CidrBlock = Objects.requireNonNull(masterIpv4CidrBlock);
-        this.webServerIpv4CidrBlock = Objects.requireNonNull(webServerIpv4CidrBlock);
+        this.cloudComposerConnectionSubnetwork = cloudComposerConnectionSubnetwork;
+        this.cloudComposerNetworkIpv4CidrBlock = cloudComposerNetworkIpv4CidrBlock;
+        this.cloudSqlIpv4CidrBlock = cloudSqlIpv4CidrBlock;
+        this.enablePrivateEndpoint = enablePrivateEndpoint;
+        this.enablePrivatelyUsedPublicIps = enablePrivatelyUsedPublicIps;
+        this.masterIpv4CidrBlock = masterIpv4CidrBlock;
+        this.webServerIpv4CidrBlock = webServerIpv4CidrBlock;
     }
 
     public String getCloudComposerConnectionSubnetwork() {

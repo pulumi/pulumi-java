@@ -31,9 +31,9 @@ public final class InputResponse {
         String key,
         PreprocessingConfigResponse preprocessingConfig,
         String uri) {
-        this.key = Objects.requireNonNull(key);
-        this.preprocessingConfig = Objects.requireNonNull(preprocessingConfig);
-        this.uri = Objects.requireNonNull(uri);
+        this.key = key;
+        this.preprocessingConfig = preprocessingConfig;
+        this.uri = uri;
     }
 
     /**

@@ -18,7 +18,7 @@ public final class ServiceTaskSpecLogDriver {
     private ServiceTaskSpecLogDriver(
         String name,
         @Nullable Map<String,String> options) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.options = options;
     }
 

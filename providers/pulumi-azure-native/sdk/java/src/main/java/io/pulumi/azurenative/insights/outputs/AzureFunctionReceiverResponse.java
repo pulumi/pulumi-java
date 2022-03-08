@@ -45,10 +45,10 @@ public final class AzureFunctionReceiverResponse {
         String httpTriggerUrl,
         String name,
         @Nullable Boolean useCommonAlertSchema) {
-        this.functionAppResourceId = Objects.requireNonNull(functionAppResourceId);
-        this.functionName = Objects.requireNonNull(functionName);
-        this.httpTriggerUrl = Objects.requireNonNull(httpTriggerUrl);
-        this.name = Objects.requireNonNull(name);
+        this.functionAppResourceId = functionAppResourceId;
+        this.functionName = functionName;
+        this.httpTriggerUrl = httpTriggerUrl;
+        this.name = name;
         this.useCommonAlertSchema = useCommonAlertSchema;
     }
 

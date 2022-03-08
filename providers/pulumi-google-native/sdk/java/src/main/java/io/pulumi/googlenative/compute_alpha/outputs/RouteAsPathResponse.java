@@ -26,8 +26,8 @@ public final class RouteAsPathResponse {
     private RouteAsPathResponse(
         List<Integer> asLists,
         String pathSegmentType) {
-        this.asLists = Objects.requireNonNull(asLists);
-        this.pathSegmentType = Objects.requireNonNull(pathSegmentType);
+        this.asLists = asLists;
+        this.pathSegmentType = pathSegmentType;
     }
 
     /**

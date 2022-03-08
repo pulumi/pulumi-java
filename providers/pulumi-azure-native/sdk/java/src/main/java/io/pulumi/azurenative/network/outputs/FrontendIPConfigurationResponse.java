@@ -114,21 +114,21 @@ public final class FrontendIPConfigurationResponse {
         @Nullable SubnetResponse subnet,
         String type,
         @Nullable List<String> zones) {
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.id = id;
-        this.inboundNatPools = Objects.requireNonNull(inboundNatPools);
-        this.inboundNatRules = Objects.requireNonNull(inboundNatRules);
-        this.loadBalancingRules = Objects.requireNonNull(loadBalancingRules);
+        this.inboundNatPools = inboundNatPools;
+        this.inboundNatRules = inboundNatRules;
+        this.loadBalancingRules = loadBalancingRules;
         this.name = name;
-        this.outboundRules = Objects.requireNonNull(outboundRules);
+        this.outboundRules = outboundRules;
         this.privateIPAddress = privateIPAddress;
         this.privateIPAddressVersion = privateIPAddressVersion;
         this.privateIPAllocationMethod = privateIPAllocationMethod;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.publicIPAddress = publicIPAddress;
         this.publicIPPrefix = publicIPPrefix;
         this.subnet = subnet;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.zones = zones;
     }
 

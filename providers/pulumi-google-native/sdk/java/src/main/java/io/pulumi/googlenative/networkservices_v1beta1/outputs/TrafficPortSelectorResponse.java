@@ -18,7 +18,7 @@ public final class TrafficPortSelectorResponse {
 
     @OutputCustomType.Constructor({"ports"})
     private TrafficPortSelectorResponse(List<String> ports) {
-        this.ports = Objects.requireNonNull(ports);
+        this.ports = ports;
     }
 
     /**

@@ -34,7 +34,7 @@ public final class ReportDeliveryChannelProperties {
         String s3BucketName,
         @Nullable String s3KeyPrefix) {
         this.formats = formats;
-        this.s3BucketName = Objects.requireNonNull(s3BucketName);
+        this.s3BucketName = s3BucketName;
         this.s3KeyPrefix = s3KeyPrefix;
     }
 

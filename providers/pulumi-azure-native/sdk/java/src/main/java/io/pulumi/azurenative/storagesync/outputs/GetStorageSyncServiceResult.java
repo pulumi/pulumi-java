@@ -90,18 +90,18 @@ public final class GetStorageSyncServiceResult {
         String storageSyncServiceUid,
         @Nullable Map<String,String> tags,
         String type) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.incomingTrafficPolicy = incomingTrafficPolicy;
-        this.lastOperationName = Objects.requireNonNull(lastOperationName);
-        this.lastWorkflowId = Objects.requireNonNull(lastWorkflowId);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.storageSyncServiceStatus = Objects.requireNonNull(storageSyncServiceStatus);
-        this.storageSyncServiceUid = Objects.requireNonNull(storageSyncServiceUid);
+        this.lastOperationName = lastOperationName;
+        this.lastWorkflowId = lastWorkflowId;
+        this.location = location;
+        this.name = name;
+        this.privateEndpointConnections = privateEndpointConnections;
+        this.provisioningState = provisioningState;
+        this.storageSyncServiceStatus = storageSyncServiceStatus;
+        this.storageSyncServiceUid = storageSyncServiceUid;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

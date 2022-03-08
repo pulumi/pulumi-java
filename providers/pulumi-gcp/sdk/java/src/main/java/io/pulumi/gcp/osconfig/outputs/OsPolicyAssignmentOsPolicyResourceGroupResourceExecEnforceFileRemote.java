@@ -27,7 +27,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFil
         @Nullable String sha256Checksum,
         String uri) {
         this.sha256Checksum = sha256Checksum;
-        this.uri = Objects.requireNonNull(uri);
+        this.uri = uri;
     }
 
     /**

@@ -27,8 +27,8 @@ public final class GetTdeCertificatesSqlTaskOutputResponse {
     private GetTdeCertificatesSqlTaskOutputResponse(
         Map<String,List<String>> base64EncodedCertificates,
         List<ReportableExceptionResponse> validationErrors) {
-        this.base64EncodedCertificates = Objects.requireNonNull(base64EncodedCertificates);
-        this.validationErrors = Objects.requireNonNull(validationErrors);
+        this.base64EncodedCertificates = base64EncodedCertificates;
+        this.validationErrors = validationErrors;
     }
 
     /**

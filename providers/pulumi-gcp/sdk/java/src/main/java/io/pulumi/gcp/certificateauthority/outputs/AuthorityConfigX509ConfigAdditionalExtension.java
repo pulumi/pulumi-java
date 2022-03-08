@@ -34,9 +34,9 @@ public final class AuthorityConfigX509ConfigAdditionalExtension {
         Boolean critical,
         AuthorityConfigX509ConfigAdditionalExtensionObjectId objectId,
         String value) {
-        this.critical = Objects.requireNonNull(critical);
-        this.objectId = Objects.requireNonNull(objectId);
-        this.value = Objects.requireNonNull(value);
+        this.critical = critical;
+        this.objectId = objectId;
+        this.value = value;
     }
 
     /**

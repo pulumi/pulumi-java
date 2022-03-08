@@ -35,8 +35,8 @@ public final class ManagedClusterAddonProfileResponse {
         Boolean enabled,
         ManagedClusterAddonProfileResponseIdentity identity) {
         this.config = config;
-        this.enabled = Objects.requireNonNull(enabled);
-        this.identity = Objects.requireNonNull(identity);
+        this.enabled = enabled;
+        this.identity = identity;
     }
 
     /**

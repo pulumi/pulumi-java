@@ -32,9 +32,9 @@ public final class GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse {
         GooglePrivacyDlpV2BigQueryFieldResponse bigQueryField,
         GooglePrivacyDlpV2CloudStorageFileSetResponse cloudStorageFileSet,
         GooglePrivacyDlpV2CloudStoragePathResponse outputPath) {
-        this.bigQueryField = Objects.requireNonNull(bigQueryField);
-        this.cloudStorageFileSet = Objects.requireNonNull(cloudStorageFileSet);
-        this.outputPath = Objects.requireNonNull(outputPath);
+        this.bigQueryField = bigQueryField;
+        this.cloudStorageFileSet = cloudStorageFileSet;
+        this.outputPath = outputPath;
     }
 
     /**

@@ -266,45 +266,45 @@ public final class GetVirtualMachineResult {
         @Nullable String userName,
         String virtualMachineCreationSource) {
         this.allowClaim = allowClaim;
-        this.applicableSchedule = Objects.requireNonNull(applicableSchedule);
-        this.artifactDeploymentStatus = Objects.requireNonNull(artifactDeploymentStatus);
+        this.applicableSchedule = applicableSchedule;
+        this.artifactDeploymentStatus = artifactDeploymentStatus;
         this.artifacts = artifacts;
-        this.computeId = Objects.requireNonNull(computeId);
-        this.computeVm = Objects.requireNonNull(computeVm);
-        this.createdByUser = Objects.requireNonNull(createdByUser);
-        this.createdByUserId = Objects.requireNonNull(createdByUserId);
+        this.computeId = computeId;
+        this.computeVm = computeVm;
+        this.createdByUser = createdByUser;
+        this.createdByUserId = createdByUserId;
         this.createdDate = createdDate;
         this.customImageId = customImageId;
         this.dataDiskParameters = dataDiskParameters;
         this.disallowPublicIpAddress = disallowPublicIpAddress;
         this.environmentId = environmentId;
         this.expirationDate = expirationDate;
-        this.fqdn = Objects.requireNonNull(fqdn);
+        this.fqdn = fqdn;
         this.galleryImageReference = galleryImageReference;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.isAuthenticationWithSshKey = isAuthenticationWithSshKey;
         this.labSubnetName = labSubnetName;
         this.labVirtualNetworkId = labVirtualNetworkId;
-        this.lastKnownPowerState = Objects.requireNonNull(lastKnownPowerState);
+        this.lastKnownPowerState = lastKnownPowerState;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.networkInterface = networkInterface;
         this.notes = notes;
-        this.osType = Objects.requireNonNull(osType);
+        this.osType = osType;
         this.ownerObjectId = ownerObjectId;
         this.ownerUserPrincipalName = ownerUserPrincipalName;
         this.password = password;
         this.planId = planId;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.scheduleParameters = scheduleParameters;
         this.size = size;
         this.sshKey = sshKey;
         this.storageType = storageType;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
-        this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
+        this.type = type;
+        this.uniqueIdentifier = uniqueIdentifier;
         this.userName = userName;
-        this.virtualMachineCreationSource = Objects.requireNonNull(virtualMachineCreationSource);
+        this.virtualMachineCreationSource = virtualMachineCreationSource;
     }
 
     /**

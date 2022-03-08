@@ -43,7 +43,7 @@ public final class VideoEncoderH264Response {
         this.bitrateKbps = bitrateKbps;
         this.frameRate = frameRate;
         this.scale = scale;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

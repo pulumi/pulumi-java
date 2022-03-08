@@ -33,8 +33,8 @@ public final class PodsMetricStatus {
         String currentAverageValue,
         String metricName,
         @Nullable LabelSelector selector) {
-        this.currentAverageValue = Objects.requireNonNull(currentAverageValue);
-        this.metricName = Objects.requireNonNull(metricName);
+        this.currentAverageValue = currentAverageValue;
+        this.metricName = metricName;
         this.selector = selector;
     }
 

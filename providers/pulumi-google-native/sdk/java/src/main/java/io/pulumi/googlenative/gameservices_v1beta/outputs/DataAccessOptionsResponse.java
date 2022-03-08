@@ -13,7 +13,7 @@ public final class DataAccessOptionsResponse {
 
     @OutputCustomType.Constructor({"logMode"})
     private DataAccessOptionsResponse(String logMode) {
-        this.logMode = Objects.requireNonNull(logMode);
+        this.logMode = logMode;
     }
 
     public String getLogMode() {

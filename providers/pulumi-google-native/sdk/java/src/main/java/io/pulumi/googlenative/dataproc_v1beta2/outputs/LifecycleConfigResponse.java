@@ -36,10 +36,10 @@ public final class LifecycleConfigResponse {
         String autoDeleteTtl,
         String idleDeleteTtl,
         String idleStartTime) {
-        this.autoDeleteTime = Objects.requireNonNull(autoDeleteTime);
-        this.autoDeleteTtl = Objects.requireNonNull(autoDeleteTtl);
-        this.idleDeleteTtl = Objects.requireNonNull(idleDeleteTtl);
-        this.idleStartTime = Objects.requireNonNull(idleStartTime);
+        this.autoDeleteTime = autoDeleteTime;
+        this.autoDeleteTtl = autoDeleteTtl;
+        this.idleDeleteTtl = idleDeleteTtl;
+        this.idleStartTime = idleStartTime;
     }
 
     /**

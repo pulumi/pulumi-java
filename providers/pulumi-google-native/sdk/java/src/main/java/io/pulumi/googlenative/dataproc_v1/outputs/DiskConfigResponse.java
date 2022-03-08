@@ -37,10 +37,10 @@ public final class DiskConfigResponse {
         String bootDiskType,
         String localSsdInterface,
         Integer numLocalSsds) {
-        this.bootDiskSizeGb = Objects.requireNonNull(bootDiskSizeGb);
-        this.bootDiskType = Objects.requireNonNull(bootDiskType);
-        this.localSsdInterface = Objects.requireNonNull(localSsdInterface);
-        this.numLocalSsds = Objects.requireNonNull(numLocalSsds);
+        this.bootDiskSizeGb = bootDiskSizeGb;
+        this.bootDiskType = bootDiskType;
+        this.localSsdInterface = localSsdInterface;
+        this.numLocalSsds = numLocalSsds;
     }
 
     /**

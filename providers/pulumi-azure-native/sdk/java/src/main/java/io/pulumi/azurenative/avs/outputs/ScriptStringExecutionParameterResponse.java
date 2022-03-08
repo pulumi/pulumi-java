@@ -33,8 +33,8 @@ public final class ScriptStringExecutionParameterResponse {
         String name,
         String type,
         @Nullable String value) {
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.name = name;
+        this.type = type;
         this.value = value;
     }
 

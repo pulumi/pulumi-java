@@ -14,7 +14,7 @@ public final class WebACLAndStatement {
 
     @OutputCustomType.Constructor({"statements"})
     private WebACLAndStatement(List<WebACLStatement> statements) {
-        this.statements = Objects.requireNonNull(statements);
+        this.statements = statements;
     }
 
     public List<WebACLStatement> getStatements() {

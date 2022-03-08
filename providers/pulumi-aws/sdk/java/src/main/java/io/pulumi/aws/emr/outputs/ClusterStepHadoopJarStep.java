@@ -41,7 +41,7 @@ public final class ClusterStepHadoopJarStep {
         @Nullable String mainClass,
         @Nullable Map<String,String> properties) {
         this.args = args;
-        this.jar = Objects.requireNonNull(jar);
+        this.jar = jar;
         this.mainClass = mainClass;
         this.properties = properties;
     }

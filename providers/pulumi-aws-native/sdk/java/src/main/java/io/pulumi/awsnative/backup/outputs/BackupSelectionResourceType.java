@@ -30,11 +30,11 @@ public final class BackupSelectionResourceType {
         @Nullable List<String> resources,
         String selectionName) {
         this.conditions = conditions;
-        this.iamRoleArn = Objects.requireNonNull(iamRoleArn);
+        this.iamRoleArn = iamRoleArn;
         this.listOfTags = listOfTags;
         this.notResources = notResources;
         this.resources = resources;
-        this.selectionName = Objects.requireNonNull(selectionName);
+        this.selectionName = selectionName;
     }
 
     public Optional<BackupSelectionResourceTypeConditionsProperties> getConditions() {

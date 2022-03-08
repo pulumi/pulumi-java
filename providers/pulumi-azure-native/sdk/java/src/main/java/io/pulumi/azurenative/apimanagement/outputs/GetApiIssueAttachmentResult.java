@@ -48,12 +48,12 @@ public final class GetApiIssueAttachmentResult {
         String name,
         String title,
         String type) {
-        this.content = Objects.requireNonNull(content);
-        this.contentFormat = Objects.requireNonNull(contentFormat);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.title = Objects.requireNonNull(title);
-        this.type = Objects.requireNonNull(type);
+        this.content = content;
+        this.contentFormat = contentFormat;
+        this.id = id;
+        this.name = name;
+        this.title = title;
+        this.type = type;
     }
 
     /**

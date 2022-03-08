@@ -22,7 +22,7 @@ public final class ConfigurationAggregatorAccountAggregationSource {
         List<String> accountIds,
         @Nullable Boolean allAwsRegions,
         @Nullable List<String> awsRegions) {
-        this.accountIds = Objects.requireNonNull(accountIds);
+        this.accountIds = accountIds;
         this.allAwsRegions = allAwsRegions;
         this.awsRegions = awsRegions;
     }

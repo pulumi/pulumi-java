@@ -49,10 +49,10 @@ public final class AlertingActionResponse {
         @Nullable Integer throttlingInMin,
         TriggerConditionResponse trigger) {
         this.aznsAction = aznsAction;
-        this.odataType = Objects.requireNonNull(odataType);
-        this.severity = Objects.requireNonNull(severity);
+        this.odataType = odataType;
+        this.severity = severity;
         this.throttlingInMin = throttlingInMin;
-        this.trigger = Objects.requireNonNull(trigger);
+        this.trigger = trigger;
     }
 
     /**

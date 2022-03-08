@@ -35,7 +35,7 @@ public final class InstanceVmImage {
         String project) {
         this.imageFamily = imageFamily;
         this.imageName = imageName;
-        this.project = Objects.requireNonNull(project);
+        this.project = project;
     }
 
     /**

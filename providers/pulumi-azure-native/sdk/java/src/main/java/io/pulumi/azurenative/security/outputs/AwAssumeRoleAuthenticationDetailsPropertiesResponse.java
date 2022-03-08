@@ -50,12 +50,12 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesResponse {
         String awsAssumeRoleArn,
         String awsExternalId,
         List<String> grantedPermissions) {
-        this.accountId = Objects.requireNonNull(accountId);
-        this.authenticationProvisioningState = Objects.requireNonNull(authenticationProvisioningState);
-        this.authenticationType = Objects.requireNonNull(authenticationType);
-        this.awsAssumeRoleArn = Objects.requireNonNull(awsAssumeRoleArn);
-        this.awsExternalId = Objects.requireNonNull(awsExternalId);
-        this.grantedPermissions = Objects.requireNonNull(grantedPermissions);
+        this.accountId = accountId;
+        this.authenticationProvisioningState = authenticationProvisioningState;
+        this.authenticationType = authenticationType;
+        this.awsAssumeRoleArn = awsAssumeRoleArn;
+        this.awsExternalId = awsExternalId;
+        this.grantedPermissions = grantedPermissions;
     }
 
     /**

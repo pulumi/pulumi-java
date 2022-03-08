@@ -28,9 +28,9 @@ public final class AutoScaleRunErrorResponse {
         String code,
         @Nullable List<AutoScaleRunErrorResponse> details,
         String message) {
-        this.code = Objects.requireNonNull(code);
+        this.code = code;
         this.details = details;
-        this.message = Objects.requireNonNull(message);
+        this.message = message;
     }
 
     /**

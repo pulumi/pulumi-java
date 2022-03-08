@@ -26,8 +26,8 @@ public final class RegistryScanningConfigurationRule {
     private RegistryScanningConfigurationRule(
         List<RegistryScanningConfigurationRuleRepositoryFilter> repositoryFilters,
         String scanFrequency) {
-        this.repositoryFilters = Objects.requireNonNull(repositoryFilters);
-        this.scanFrequency = Objects.requireNonNull(scanFrequency);
+        this.repositoryFilters = repositoryFilters;
+        this.scanFrequency = scanFrequency;
     }
 
     /**

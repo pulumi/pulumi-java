@@ -20,10 +20,10 @@ public final class GetInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime 
         Integer minutes,
         Integer nanos,
         Integer seconds) {
-        this.hours = Objects.requireNonNull(hours);
-        this.minutes = Objects.requireNonNull(minutes);
-        this.nanos = Objects.requireNonNull(nanos);
-        this.seconds = Objects.requireNonNull(seconds);
+        this.hours = hours;
+        this.minutes = minutes;
+        this.nanos = nanos;
+        this.seconds = seconds;
     }
 
     public Integer getHours() {

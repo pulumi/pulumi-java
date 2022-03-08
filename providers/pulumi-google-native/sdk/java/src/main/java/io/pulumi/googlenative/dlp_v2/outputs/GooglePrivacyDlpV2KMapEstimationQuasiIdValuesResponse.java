@@ -26,8 +26,8 @@ public final class GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse {
     private GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse(
         String estimatedAnonymity,
         List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues) {
-        this.estimatedAnonymity = Objects.requireNonNull(estimatedAnonymity);
-        this.quasiIdsValues = Objects.requireNonNull(quasiIdsValues);
+        this.estimatedAnonymity = estimatedAnonymity;
+        this.quasiIdsValues = quasiIdsValues;
     }
 
     /**

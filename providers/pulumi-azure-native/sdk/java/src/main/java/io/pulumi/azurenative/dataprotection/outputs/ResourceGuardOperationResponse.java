@@ -24,8 +24,8 @@ public final class ResourceGuardOperationResponse {
     private ResourceGuardOperationResponse(
         String requestResourceType,
         String vaultCriticalOperation) {
-        this.requestResourceType = Objects.requireNonNull(requestResourceType);
-        this.vaultCriticalOperation = Objects.requireNonNull(vaultCriticalOperation);
+        this.requestResourceType = requestResourceType;
+        this.vaultCriticalOperation = vaultCriticalOperation;
     }
 
     /**

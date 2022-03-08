@@ -17,7 +17,7 @@ public final class FlowDefinitionHumanLoopRequestSource {
 
     @OutputCustomType.Constructor({"awsManagedHumanLoopRequestSource"})
     private FlowDefinitionHumanLoopRequestSource(String awsManagedHumanLoopRequestSource) {
-        this.awsManagedHumanLoopRequestSource = Objects.requireNonNull(awsManagedHumanLoopRequestSource);
+        this.awsManagedHumanLoopRequestSource = awsManagedHumanLoopRequestSource;
     }
 
     /**

@@ -111,7 +111,7 @@ public final class XeroLinkedServiceResponse {
         this.host = host;
         this.parameters = parameters;
         this.privateKey = privateKey;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.useEncryptedEndpoints = useEncryptedEndpoints;
         this.useHostVerification = useHostVerification;
         this.usePeerVerification = usePeerVerification;

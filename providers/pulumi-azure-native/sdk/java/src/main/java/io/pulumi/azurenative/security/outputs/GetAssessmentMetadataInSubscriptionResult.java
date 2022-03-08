@@ -99,20 +99,20 @@ public final class GetAssessmentMetadataInSubscriptionResult {
         @Nullable List<String> threats,
         String type,
         @Nullable String userImpact) {
-        this.assessmentType = Objects.requireNonNull(assessmentType);
+        this.assessmentType = assessmentType;
         this.categories = categories;
         this.description = description;
-        this.displayName = Objects.requireNonNull(displayName);
-        this.id = Objects.requireNonNull(id);
+        this.displayName = displayName;
+        this.id = id;
         this.implementationEffort = implementationEffort;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.partnerData = partnerData;
-        this.policyDefinitionId = Objects.requireNonNull(policyDefinitionId);
+        this.policyDefinitionId = policyDefinitionId;
         this.preview = preview;
         this.remediationDescription = remediationDescription;
-        this.severity = Objects.requireNonNull(severity);
+        this.severity = severity;
         this.threats = threats;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.userImpact = userImpact;
     }
 

@@ -25,8 +25,8 @@ public final class DicomServiceAuthenticationConfigurationResponse {
     private DicomServiceAuthenticationConfigurationResponse(
         List<String> audiences,
         String authority) {
-        this.audiences = Objects.requireNonNull(audiences);
-        this.authority = Objects.requireNonNull(authority);
+        this.audiences = audiences;
+        this.authority = authority;
     }
 
     /**

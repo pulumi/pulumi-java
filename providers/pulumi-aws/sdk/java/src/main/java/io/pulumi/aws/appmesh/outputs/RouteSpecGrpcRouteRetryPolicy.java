@@ -51,8 +51,8 @@ public final class RouteSpecGrpcRouteRetryPolicy {
         @Nullable List<String> tcpRetryEvents) {
         this.grpcRetryEvents = grpcRetryEvents;
         this.httpRetryEvents = httpRetryEvents;
-        this.maxRetries = Objects.requireNonNull(maxRetries);
-        this.perRetryTimeout = Objects.requireNonNull(perRetryTimeout);
+        this.maxRetries = maxRetries;
+        this.perRetryTimeout = perRetryTimeout;
         this.tcpRetryEvents = tcpRetryEvents;
     }
 

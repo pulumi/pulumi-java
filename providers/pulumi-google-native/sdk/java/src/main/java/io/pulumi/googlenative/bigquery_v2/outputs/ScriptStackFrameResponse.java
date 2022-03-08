@@ -49,12 +49,12 @@ public final class ScriptStackFrameResponse {
         Integer startColumn,
         Integer startLine,
         String text) {
-        this.endColumn = Objects.requireNonNull(endColumn);
-        this.endLine = Objects.requireNonNull(endLine);
-        this.procedureId = Objects.requireNonNull(procedureId);
-        this.startColumn = Objects.requireNonNull(startColumn);
-        this.startLine = Objects.requireNonNull(startLine);
-        this.text = Objects.requireNonNull(text);
+        this.endColumn = endColumn;
+        this.endLine = endLine;
+        this.procedureId = procedureId;
+        this.startColumn = startColumn;
+        this.startLine = startLine;
+        this.text = text;
     }
 
     /**

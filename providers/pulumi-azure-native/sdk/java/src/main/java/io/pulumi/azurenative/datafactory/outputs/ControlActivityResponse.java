@@ -50,8 +50,8 @@ public final class ControlActivityResponse {
         @Nullable List<UserPropertyResponse> userProperties) {
         this.dependsOn = dependsOn;
         this.description = description;
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.name = name;
+        this.type = type;
         this.userProperties = userProperties;
     }
 

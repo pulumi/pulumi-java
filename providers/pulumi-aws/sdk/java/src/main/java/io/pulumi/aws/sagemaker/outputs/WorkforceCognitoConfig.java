@@ -24,8 +24,8 @@ public final class WorkforceCognitoConfig {
     private WorkforceCognitoConfig(
         String clientId,
         String userPool) {
-        this.clientId = Objects.requireNonNull(clientId);
-        this.userPool = Objects.requireNonNull(userPool);
+        this.clientId = clientId;
+        this.userPool = userPool;
     }
 
     /**

@@ -76,15 +76,15 @@ public final class AS2ValidationSettingsResponse {
         Boolean overrideMessageProperties,
         Boolean signMessage,
         @Nullable String signingAlgorithm) {
-        this.checkCertificateRevocationListOnReceive = Objects.requireNonNull(checkCertificateRevocationListOnReceive);
-        this.checkCertificateRevocationListOnSend = Objects.requireNonNull(checkCertificateRevocationListOnSend);
-        this.checkDuplicateMessage = Objects.requireNonNull(checkDuplicateMessage);
-        this.compressMessage = Objects.requireNonNull(compressMessage);
-        this.encryptMessage = Objects.requireNonNull(encryptMessage);
-        this.encryptionAlgorithm = Objects.requireNonNull(encryptionAlgorithm);
-        this.interchangeDuplicatesValidityDays = Objects.requireNonNull(interchangeDuplicatesValidityDays);
-        this.overrideMessageProperties = Objects.requireNonNull(overrideMessageProperties);
-        this.signMessage = Objects.requireNonNull(signMessage);
+        this.checkCertificateRevocationListOnReceive = checkCertificateRevocationListOnReceive;
+        this.checkCertificateRevocationListOnSend = checkCertificateRevocationListOnSend;
+        this.checkDuplicateMessage = checkDuplicateMessage;
+        this.compressMessage = compressMessage;
+        this.encryptMessage = encryptMessage;
+        this.encryptionAlgorithm = encryptionAlgorithm;
+        this.interchangeDuplicatesValidityDays = interchangeDuplicatesValidityDays;
+        this.overrideMessageProperties = overrideMessageProperties;
+        this.signMessage = signMessage;
         this.signingAlgorithm = signingAlgorithm;
     }
 

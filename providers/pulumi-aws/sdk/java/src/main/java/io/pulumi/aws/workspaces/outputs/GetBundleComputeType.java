@@ -17,7 +17,7 @@ public final class GetBundleComputeType {
 
     @OutputCustomType.Constructor({"name"})
     private GetBundleComputeType(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

@@ -67,15 +67,15 @@ public final class GetExecutionResult {
         String startTime,
         String state,
         String workflowRevisionId) {
-        this.argument = Objects.requireNonNull(argument);
-        this.callLogLevel = Objects.requireNonNull(callLogLevel);
-        this.endTime = Objects.requireNonNull(endTime);
-        this.error = Objects.requireNonNull(error);
-        this.name = Objects.requireNonNull(name);
-        this.result = Objects.requireNonNull(result);
-        this.startTime = Objects.requireNonNull(startTime);
-        this.state = Objects.requireNonNull(state);
-        this.workflowRevisionId = Objects.requireNonNull(workflowRevisionId);
+        this.argument = argument;
+        this.callLogLevel = callLogLevel;
+        this.endTime = endTime;
+        this.error = error;
+        this.name = name;
+        this.result = result;
+        this.startTime = startTime;
+        this.state = state;
+        this.workflowRevisionId = workflowRevisionId;
     }
 
     /**

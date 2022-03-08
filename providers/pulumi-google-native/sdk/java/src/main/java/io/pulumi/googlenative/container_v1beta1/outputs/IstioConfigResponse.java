@@ -25,8 +25,8 @@ public final class IstioConfigResponse {
     private IstioConfigResponse(
         String auth,
         Boolean disabled) {
-        this.auth = Objects.requireNonNull(auth);
-        this.disabled = Objects.requireNonNull(disabled);
+        this.auth = auth;
+        this.disabled = disabled;
     }
 
     /**

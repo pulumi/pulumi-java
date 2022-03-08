@@ -53,11 +53,11 @@ public final class ApplicationComponentMonitoringSetting {
         @Nullable ApplicationComponentConfiguration defaultOverwriteComponentConfiguration,
         String tier) {
         this.componentARN = componentARN;
-        this.componentConfigurationMode = Objects.requireNonNull(componentConfigurationMode);
+        this.componentConfigurationMode = componentConfigurationMode;
         this.componentName = componentName;
         this.customComponentConfiguration = customComponentConfiguration;
         this.defaultOverwriteComponentConfiguration = defaultOverwriteComponentConfiguration;
-        this.tier = Objects.requireNonNull(tier);
+        this.tier = tier;
     }
 
     /**

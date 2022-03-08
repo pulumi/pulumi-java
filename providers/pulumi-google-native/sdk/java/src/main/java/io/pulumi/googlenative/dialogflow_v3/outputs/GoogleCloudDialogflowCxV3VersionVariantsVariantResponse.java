@@ -32,9 +32,9 @@ public final class GoogleCloudDialogflowCxV3VersionVariantsVariantResponse {
         Boolean isControlGroup,
         Double trafficAllocation,
         String version) {
-        this.isControlGroup = Objects.requireNonNull(isControlGroup);
-        this.trafficAllocation = Objects.requireNonNull(trafficAllocation);
-        this.version = Objects.requireNonNull(version);
+        this.isControlGroup = isControlGroup;
+        this.trafficAllocation = trafficAllocation;
+        this.version = version;
     }
 
     /**

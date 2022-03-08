@@ -24,8 +24,8 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMap
     private AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersCsv(
         String recordColumnDelimiter,
         String recordRowDelimiter) {
-        this.recordColumnDelimiter = Objects.requireNonNull(recordColumnDelimiter);
-        this.recordRowDelimiter = Objects.requireNonNull(recordRowDelimiter);
+        this.recordColumnDelimiter = recordColumnDelimiter;
+        this.recordRowDelimiter = recordRowDelimiter;
     }
 
     /**

@@ -35,7 +35,7 @@ public final class AliasRoutingStrategy {
         AliasRoutingStrategyType type) {
         this.fleetId = fleetId;
         this.message = message;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

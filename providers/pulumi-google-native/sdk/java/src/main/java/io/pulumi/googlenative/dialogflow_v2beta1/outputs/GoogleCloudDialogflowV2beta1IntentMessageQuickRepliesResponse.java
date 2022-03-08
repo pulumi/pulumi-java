@@ -25,8 +25,8 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse
     private GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse(
         List<String> quickReplies,
         String title) {
-        this.quickReplies = Objects.requireNonNull(quickReplies);
-        this.title = Objects.requireNonNull(title);
+        this.quickReplies = quickReplies;
+        this.title = title;
     }
 
     /**

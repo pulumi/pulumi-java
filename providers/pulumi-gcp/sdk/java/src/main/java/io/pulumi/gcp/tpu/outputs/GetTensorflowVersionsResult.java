@@ -29,10 +29,10 @@ public final class GetTensorflowVersionsResult {
         String project,
         List<String> versions,
         String zone) {
-        this.id = Objects.requireNonNull(id);
-        this.project = Objects.requireNonNull(project);
-        this.versions = Objects.requireNonNull(versions);
-        this.zone = Objects.requireNonNull(zone);
+        this.id = id;
+        this.project = project;
+        this.versions = versions;
+        this.zone = zone;
     }
 
     /**

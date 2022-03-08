@@ -24,8 +24,8 @@ public final class GoogleCloudDialogflowCxV3IntentTrainingPhrasePartResponse {
     private GoogleCloudDialogflowCxV3IntentTrainingPhrasePartResponse(
         String parameterId,
         String text) {
-        this.parameterId = Objects.requireNonNull(parameterId);
-        this.text = Objects.requireNonNull(text);
+        this.parameterId = parameterId;
+        this.text = text;
     }
 
     /**

@@ -30,9 +30,9 @@ public final class GetDebugTokenResult {
         String displayName,
         String name,
         String token) {
-        this.displayName = Objects.requireNonNull(displayName);
-        this.name = Objects.requireNonNull(name);
-        this.token = Objects.requireNonNull(token);
+        this.displayName = displayName;
+        this.name = name;
+        this.token = token;
     }
 
     /**

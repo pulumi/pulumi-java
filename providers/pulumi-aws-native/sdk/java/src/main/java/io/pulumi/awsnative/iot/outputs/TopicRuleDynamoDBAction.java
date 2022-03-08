@@ -32,15 +32,15 @@ public final class TopicRuleDynamoDBAction {
         @Nullable String rangeKeyValue,
         String roleArn,
         String tableName) {
-        this.hashKeyField = Objects.requireNonNull(hashKeyField);
+        this.hashKeyField = hashKeyField;
         this.hashKeyType = hashKeyType;
-        this.hashKeyValue = Objects.requireNonNull(hashKeyValue);
+        this.hashKeyValue = hashKeyValue;
         this.payloadField = payloadField;
         this.rangeKeyField = rangeKeyField;
         this.rangeKeyType = rangeKeyType;
         this.rangeKeyValue = rangeKeyValue;
-        this.roleArn = Objects.requireNonNull(roleArn);
-        this.tableName = Objects.requireNonNull(tableName);
+        this.roleArn = roleArn;
+        this.tableName = tableName;
     }
 
     public String getHashKeyField() {

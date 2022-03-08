@@ -81,16 +81,16 @@ public final class GetAFDCustomDomainResult {
         String type,
         DomainValidationPropertiesResponse validationProperties) {
         this.azureDnsZone = azureDnsZone;
-        this.deploymentStatus = Objects.requireNonNull(deploymentStatus);
-        this.domainValidationState = Objects.requireNonNull(domainValidationState);
-        this.hostName = Objects.requireNonNull(hostName);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.systemData = Objects.requireNonNull(systemData);
+        this.deploymentStatus = deploymentStatus;
+        this.domainValidationState = domainValidationState;
+        this.hostName = hostName;
+        this.id = id;
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.systemData = systemData;
         this.tlsSettings = tlsSettings;
-        this.type = Objects.requireNonNull(type);
-        this.validationProperties = Objects.requireNonNull(validationProperties);
+        this.type = type;
+        this.validationProperties = validationProperties;
     }
 
     /**

@@ -24,8 +24,8 @@ public final class GetLaunchConfigurationEphemeralBlockDevice {
     private GetLaunchConfigurationEphemeralBlockDevice(
         String deviceName,
         String virtualName) {
-        this.deviceName = Objects.requireNonNull(deviceName);
-        this.virtualName = Objects.requireNonNull(virtualName);
+        this.deviceName = deviceName;
+        this.virtualName = virtualName;
     }
 
     /**

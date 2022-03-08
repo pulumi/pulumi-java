@@ -17,7 +17,7 @@ public final class EdifactMessageIdentifierResponse {
 
     @OutputCustomType.Constructor({"messageId"})
     private EdifactMessageIdentifierResponse(String messageId) {
-        this.messageId = Objects.requireNonNull(messageId);
+        this.messageId = messageId;
     }
 
     /**

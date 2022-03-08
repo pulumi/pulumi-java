@@ -85,15 +85,15 @@ public final class GetUserResult {
         String type) {
         this.email = email;
         this.firstName = firstName;
-        this.groups = Objects.requireNonNull(groups);
-        this.id = Objects.requireNonNull(id);
+        this.groups = groups;
+        this.id = id;
         this.identities = identities;
         this.lastName = lastName;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.note = note;
         this.registrationDate = registrationDate;
         this.state = state;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

@@ -18,7 +18,7 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementAndSta
 
     @OutputCustomType.Constructor({"statements"})
     private WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementOrStatement(List<WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementOrStatementStatement> statements) {
-        this.statements = Objects.requireNonNull(statements);
+        this.statements = statements;
     }
 
     /**

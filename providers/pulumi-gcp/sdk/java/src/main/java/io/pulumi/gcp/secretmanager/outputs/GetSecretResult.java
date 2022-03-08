@@ -45,17 +45,17 @@ public final class GetSecretResult {
         String secretId,
         List<GetSecretTopic> topics,
         String ttl) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.expireTime = Objects.requireNonNull(expireTime);
-        this.id = Objects.requireNonNull(id);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
+        this.createTime = createTime;
+        this.expireTime = expireTime;
+        this.id = id;
+        this.labels = labels;
+        this.name = name;
         this.project = project;
-        this.replications = Objects.requireNonNull(replications);
-        this.rotations = Objects.requireNonNull(rotations);
-        this.secretId = Objects.requireNonNull(secretId);
-        this.topics = Objects.requireNonNull(topics);
-        this.ttl = Objects.requireNonNull(ttl);
+        this.replications = replications;
+        this.rotations = rotations;
+        this.secretId = secretId;
+        this.topics = topics;
+        this.ttl = ttl;
     }
 
     public String getCreateTime() {

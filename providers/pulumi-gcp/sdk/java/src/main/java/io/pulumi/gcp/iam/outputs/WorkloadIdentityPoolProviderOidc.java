@@ -33,7 +33,7 @@ public final class WorkloadIdentityPoolProviderOidc {
         @Nullable List<String> allowedAudiences,
         String issuerUri) {
         this.allowedAudiences = allowedAudiences;
-        this.issuerUri = Objects.requireNonNull(issuerUri);
+        this.issuerUri = issuerUri;
     }
 
     /**

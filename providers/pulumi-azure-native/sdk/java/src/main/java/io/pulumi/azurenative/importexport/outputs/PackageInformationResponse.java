@@ -37,10 +37,10 @@ public final class PackageInformationResponse {
         Double driveCount,
         String shipDate,
         String trackingNumber) {
-        this.carrierName = Objects.requireNonNull(carrierName);
-        this.driveCount = Objects.requireNonNull(driveCount);
-        this.shipDate = Objects.requireNonNull(shipDate);
-        this.trackingNumber = Objects.requireNonNull(trackingNumber);
+        this.carrierName = carrierName;
+        this.driveCount = driveCount;
+        this.shipDate = shipDate;
+        this.trackingNumber = trackingNumber;
     }
 
     /**

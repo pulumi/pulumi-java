@@ -42,11 +42,11 @@ public final class MetadataExportResponse {
         String endTime,
         String startTime,
         String state) {
-        this.databaseDumpType = Objects.requireNonNull(databaseDumpType);
-        this.destinationGcsUri = Objects.requireNonNull(destinationGcsUri);
-        this.endTime = Objects.requireNonNull(endTime);
-        this.startTime = Objects.requireNonNull(startTime);
-        this.state = Objects.requireNonNull(state);
+        this.databaseDumpType = databaseDumpType;
+        this.destinationGcsUri = destinationGcsUri;
+        this.endTime = endTime;
+        this.startTime = startTime;
+        this.state = state;
     }
 
     /**

@@ -68,7 +68,7 @@ public final class HyperVReplicaReplicationDetailsResponse {
         @Nullable String vmProtectionState,
         @Nullable String vmProtectionStateDescription) {
         this.initialReplicationDetails = initialReplicationDetails;
-        this.instanceType = Objects.requireNonNull(instanceType);
+        this.instanceType = instanceType;
         this.lastReplicatedTime = lastReplicatedTime;
         this.vMDiskDetails = vMDiskDetails;
         this.vmId = vmId;

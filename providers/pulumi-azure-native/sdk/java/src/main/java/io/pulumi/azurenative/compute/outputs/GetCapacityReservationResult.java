@@ -90,17 +90,17 @@ public final class GetCapacityReservationResult {
         String type,
         List<SubResourceReadOnlyResponse> virtualMachinesAssociated,
         @Nullable List<String> zones) {
-        this.id = Objects.requireNonNull(id);
-        this.instanceView = Objects.requireNonNull(instanceView);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.provisioningTime = Objects.requireNonNull(provisioningTime);
-        this.reservationId = Objects.requireNonNull(reservationId);
-        this.sku = Objects.requireNonNull(sku);
+        this.id = id;
+        this.instanceView = instanceView;
+        this.location = location;
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.provisioningTime = provisioningTime;
+        this.reservationId = reservationId;
+        this.sku = sku;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
-        this.virtualMachinesAssociated = Objects.requireNonNull(virtualMachinesAssociated);
+        this.type = type;
+        this.virtualMachinesAssociated = virtualMachinesAssociated;
         this.zones = zones;
     }
 

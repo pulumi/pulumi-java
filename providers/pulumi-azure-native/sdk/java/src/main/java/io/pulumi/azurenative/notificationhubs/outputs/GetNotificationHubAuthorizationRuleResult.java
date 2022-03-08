@@ -108,21 +108,21 @@ public final class GetNotificationHubAuthorizationRuleResult {
         @Nullable SkuResponse sku,
         @Nullable Map<String,String> tags,
         String type) {
-        this.claimType = Objects.requireNonNull(claimType);
-        this.claimValue = Objects.requireNonNull(claimValue);
-        this.createdTime = Objects.requireNonNull(createdTime);
-        this.id = Objects.requireNonNull(id);
-        this.keyName = Objects.requireNonNull(keyName);
+        this.claimType = claimType;
+        this.claimValue = claimValue;
+        this.createdTime = createdTime;
+        this.id = id;
+        this.keyName = keyName;
         this.location = location;
-        this.modifiedTime = Objects.requireNonNull(modifiedTime);
-        this.name = Objects.requireNonNull(name);
-        this.primaryKey = Objects.requireNonNull(primaryKey);
-        this.revision = Objects.requireNonNull(revision);
+        this.modifiedTime = modifiedTime;
+        this.name = name;
+        this.primaryKey = primaryKey;
+        this.revision = revision;
         this.rights = rights;
-        this.secondaryKey = Objects.requireNonNull(secondaryKey);
+        this.secondaryKey = secondaryKey;
         this.sku = sku;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

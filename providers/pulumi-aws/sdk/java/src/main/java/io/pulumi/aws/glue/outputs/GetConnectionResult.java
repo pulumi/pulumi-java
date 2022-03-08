@@ -67,16 +67,16 @@ public final class GetConnectionResult {
         String name,
         List<GetConnectionPhysicalConnectionRequirement> physicalConnectionRequirements,
         Map<String,String> tags) {
-        this.arn = Objects.requireNonNull(arn);
-        this.catalogId = Objects.requireNonNull(catalogId);
-        this.connectionProperties = Objects.requireNonNull(connectionProperties);
-        this.connectionType = Objects.requireNonNull(connectionType);
-        this.description = Objects.requireNonNull(description);
-        this.id = Objects.requireNonNull(id);
-        this.matchCriterias = Objects.requireNonNull(matchCriterias);
-        this.name = Objects.requireNonNull(name);
-        this.physicalConnectionRequirements = Objects.requireNonNull(physicalConnectionRequirements);
-        this.tags = Objects.requireNonNull(tags);
+        this.arn = arn;
+        this.catalogId = catalogId;
+        this.connectionProperties = connectionProperties;
+        this.connectionType = connectionType;
+        this.description = description;
+        this.id = id;
+        this.matchCriterias = matchCriterias;
+        this.name = name;
+        this.physicalConnectionRequirements = physicalConnectionRequirements;
+        this.tags = tags;
     }
 
     /**

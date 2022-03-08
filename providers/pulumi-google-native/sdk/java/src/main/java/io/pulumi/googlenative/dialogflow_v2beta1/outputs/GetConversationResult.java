@@ -55,13 +55,13 @@ public final class GetConversationResult {
         String name,
         GoogleCloudDialogflowV2beta1ConversationPhoneNumberResponse phoneNumber,
         String startTime) {
-        this.conversationProfile = Objects.requireNonNull(conversationProfile);
-        this.conversationStage = Objects.requireNonNull(conversationStage);
-        this.endTime = Objects.requireNonNull(endTime);
-        this.lifecycleState = Objects.requireNonNull(lifecycleState);
-        this.name = Objects.requireNonNull(name);
-        this.phoneNumber = Objects.requireNonNull(phoneNumber);
-        this.startTime = Objects.requireNonNull(startTime);
+        this.conversationProfile = conversationProfile;
+        this.conversationStage = conversationStage;
+        this.endTime = endTime;
+        this.lifecycleState = lifecycleState;
+        this.name = name;
+        this.phoneNumber = phoneNumber;
+        this.startTime = startTime;
     }
 
     /**

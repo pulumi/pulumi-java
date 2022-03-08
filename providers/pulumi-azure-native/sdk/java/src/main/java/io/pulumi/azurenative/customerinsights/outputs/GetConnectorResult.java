@@ -102,20 +102,20 @@ public final class GetConnectorResult {
         String state,
         String tenantId,
         String type) {
-        this.connectorId = Objects.requireNonNull(connectorId);
+        this.connectorId = connectorId;
         this.connectorName = connectorName;
-        this.connectorProperties = Objects.requireNonNull(connectorProperties);
-        this.connectorType = Objects.requireNonNull(connectorType);
-        this.created = Objects.requireNonNull(created);
+        this.connectorProperties = connectorProperties;
+        this.connectorType = connectorType;
+        this.created = created;
         this.description = description;
         this.displayName = displayName;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.isInternal = isInternal;
-        this.lastModified = Objects.requireNonNull(lastModified);
-        this.name = Objects.requireNonNull(name);
-        this.state = Objects.requireNonNull(state);
-        this.tenantId = Objects.requireNonNull(tenantId);
-        this.type = Objects.requireNonNull(type);
+        this.lastModified = lastModified;
+        this.name = name;
+        this.state = state;
+        this.tenantId = tenantId;
+        this.type = type;
     }
 
     /**

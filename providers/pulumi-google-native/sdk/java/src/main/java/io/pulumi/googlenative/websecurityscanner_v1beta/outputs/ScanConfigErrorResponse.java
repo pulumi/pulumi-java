@@ -24,8 +24,8 @@ public final class ScanConfigErrorResponse {
     private ScanConfigErrorResponse(
         String code,
         String fieldName) {
-        this.code = Objects.requireNonNull(code);
-        this.fieldName = Objects.requireNonNull(fieldName);
+        this.code = code;
+        this.fieldName = fieldName;
     }
 
     /**

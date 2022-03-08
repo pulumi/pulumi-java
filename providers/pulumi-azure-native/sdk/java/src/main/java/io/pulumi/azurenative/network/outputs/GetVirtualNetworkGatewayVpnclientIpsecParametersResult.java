@@ -61,14 +61,14 @@ public final class GetVirtualNetworkGatewayVpnclientIpsecParametersResult {
         String pfsGroup,
         Integer saDataSizeKilobytes,
         Integer saLifeTimeSeconds) {
-        this.dhGroup = Objects.requireNonNull(dhGroup);
-        this.ikeEncryption = Objects.requireNonNull(ikeEncryption);
-        this.ikeIntegrity = Objects.requireNonNull(ikeIntegrity);
-        this.ipsecEncryption = Objects.requireNonNull(ipsecEncryption);
-        this.ipsecIntegrity = Objects.requireNonNull(ipsecIntegrity);
-        this.pfsGroup = Objects.requireNonNull(pfsGroup);
-        this.saDataSizeKilobytes = Objects.requireNonNull(saDataSizeKilobytes);
-        this.saLifeTimeSeconds = Objects.requireNonNull(saLifeTimeSeconds);
+        this.dhGroup = dhGroup;
+        this.ikeEncryption = ikeEncryption;
+        this.ikeIntegrity = ikeIntegrity;
+        this.ipsecEncryption = ipsecEncryption;
+        this.ipsecIntegrity = ipsecIntegrity;
+        this.pfsGroup = pfsGroup;
+        this.saDataSizeKilobytes = saDataSizeKilobytes;
+        this.saLifeTimeSeconds = saLifeTimeSeconds;
     }
 
     /**

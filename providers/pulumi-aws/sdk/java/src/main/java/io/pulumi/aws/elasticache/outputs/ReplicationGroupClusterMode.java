@@ -27,7 +27,7 @@ public final class ReplicationGroupClusterMode {
         @Nullable Integer numNodeGroups,
         Integer replicasPerNodeGroup) {
         this.numNodeGroups = numNodeGroups;
-        this.replicasPerNodeGroup = Objects.requireNonNull(replicasPerNodeGroup);
+        this.replicasPerNodeGroup = replicasPerNodeGroup;
     }
 
     /**

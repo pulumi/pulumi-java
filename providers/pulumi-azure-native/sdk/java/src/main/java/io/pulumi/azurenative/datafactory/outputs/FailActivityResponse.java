@@ -63,10 +63,10 @@ public final class FailActivityResponse {
         @Nullable List<UserPropertyResponse> userProperties) {
         this.dependsOn = dependsOn;
         this.description = description;
-        this.errorCode = Objects.requireNonNull(errorCode);
-        this.message = Objects.requireNonNull(message);
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.errorCode = errorCode;
+        this.message = message;
+        this.name = name;
+        this.type = type;
         this.userProperties = userProperties;
     }
 

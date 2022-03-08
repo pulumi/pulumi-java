@@ -31,9 +31,9 @@ public final class GeoFilterResponse {
         String action,
         List<String> countryCodes,
         String relativePath) {
-        this.action = Objects.requireNonNull(action);
-        this.countryCodes = Objects.requireNonNull(countryCodes);
-        this.relativePath = Objects.requireNonNull(relativePath);
+        this.action = action;
+        this.countryCodes = countryCodes;
+        this.relativePath = relativePath;
     }
 
     /**

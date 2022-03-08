@@ -33,9 +33,9 @@ public final class DocumentAttachmentsSource {
         String key,
         @Nullable String name,
         List<String> values) {
-        this.key = Objects.requireNonNull(key);
+        this.key = key;
         this.name = name;
-        this.values = Objects.requireNonNull(values);
+        this.values = values;
     }
 
     /**

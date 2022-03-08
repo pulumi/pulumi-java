@@ -50,12 +50,12 @@ public final class JobSpecResponse {
         Integer parallelism,
         InstanceTemplateSpecResponse template,
         Integer ttlSecondsAfterFinished) {
-        this.activeDeadlineSeconds = Objects.requireNonNull(activeDeadlineSeconds);
-        this.backoffLimit = Objects.requireNonNull(backoffLimit);
-        this.completions = Objects.requireNonNull(completions);
-        this.parallelism = Objects.requireNonNull(parallelism);
-        this.template = Objects.requireNonNull(template);
-        this.ttlSecondsAfterFinished = Objects.requireNonNull(ttlSecondsAfterFinished);
+        this.activeDeadlineSeconds = activeDeadlineSeconds;
+        this.backoffLimit = backoffLimit;
+        this.completions = completions;
+        this.parallelism = parallelism;
+        this.template = template;
+        this.ttlSecondsAfterFinished = ttlSecondsAfterFinished;
     }
 
     /**

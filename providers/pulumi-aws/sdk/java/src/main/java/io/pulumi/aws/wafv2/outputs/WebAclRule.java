@@ -64,12 +64,12 @@ public final class WebAclRule {
         WebAclRuleStatement statement,
         WebAclRuleVisibilityConfig visibilityConfig) {
         this.action = action;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.overrideAction = overrideAction;
-        this.priority = Objects.requireNonNull(priority);
+        this.priority = priority;
         this.ruleLabels = ruleLabels;
-        this.statement = Objects.requireNonNull(statement);
-        this.visibilityConfig = Objects.requireNonNull(visibilityConfig);
+        this.statement = statement;
+        this.visibilityConfig = visibilityConfig;
     }
 
     /**

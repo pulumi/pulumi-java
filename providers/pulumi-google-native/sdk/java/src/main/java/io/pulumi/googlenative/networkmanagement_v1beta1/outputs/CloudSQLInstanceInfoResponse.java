@@ -48,12 +48,12 @@ public final class CloudSQLInstanceInfoResponse {
         String networkUri,
         String region,
         String uri) {
-        this.displayName = Objects.requireNonNull(displayName);
-        this.externalIp = Objects.requireNonNull(externalIp);
-        this.internalIp = Objects.requireNonNull(internalIp);
-        this.networkUri = Objects.requireNonNull(networkUri);
-        this.region = Objects.requireNonNull(region);
-        this.uri = Objects.requireNonNull(uri);
+        this.displayName = displayName;
+        this.externalIp = externalIp;
+        this.internalIp = internalIp;
+        this.networkUri = networkUri;
+        this.region = region;
+        this.uri = uri;
     }
 
     /**

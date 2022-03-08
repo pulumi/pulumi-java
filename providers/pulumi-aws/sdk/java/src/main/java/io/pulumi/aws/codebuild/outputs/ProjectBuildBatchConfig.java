@@ -43,7 +43,7 @@ public final class ProjectBuildBatchConfig {
         @Nullable Integer timeoutInMins) {
         this.combineArtifacts = combineArtifacts;
         this.restrictions = restrictions;
-        this.serviceRole = Objects.requireNonNull(serviceRole);
+        this.serviceRole = serviceRole;
         this.timeoutInMins = timeoutInMins;
     }
 

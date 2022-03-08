@@ -35,7 +35,7 @@ public final class CsvSerializationResponse {
         String type) {
         this.encoding = encoding;
         this.fieldDelimiter = fieldDelimiter;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

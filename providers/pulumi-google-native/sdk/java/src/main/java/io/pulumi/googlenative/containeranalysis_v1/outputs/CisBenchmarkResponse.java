@@ -17,8 +17,8 @@ public final class CisBenchmarkResponse {
     private CisBenchmarkResponse(
         Integer profileLevel,
         String severity) {
-        this.profileLevel = Objects.requireNonNull(profileLevel);
-        this.severity = Objects.requireNonNull(severity);
+        this.profileLevel = profileLevel;
+        this.severity = severity;
     }
 
     public Integer getProfileLevel() {

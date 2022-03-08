@@ -17,7 +17,7 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterConditionActionC
 
     @OutputCustomType.Constructor({"action"})
     private WebAclLoggingConfigurationLoggingFilterFilterConditionActionCondition(String action) {
-        this.action = Objects.requireNonNull(action);
+        this.action = action;
     }
 
     /**

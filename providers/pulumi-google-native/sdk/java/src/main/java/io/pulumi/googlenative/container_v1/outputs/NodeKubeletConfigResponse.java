@@ -31,9 +31,9 @@ public final class NodeKubeletConfigResponse {
         Boolean cpuCfsQuota,
         String cpuCfsQuotaPeriod,
         String cpuManagerPolicy) {
-        this.cpuCfsQuota = Objects.requireNonNull(cpuCfsQuota);
-        this.cpuCfsQuotaPeriod = Objects.requireNonNull(cpuCfsQuotaPeriod);
-        this.cpuManagerPolicy = Objects.requireNonNull(cpuManagerPolicy);
+        this.cpuCfsQuota = cpuCfsQuota;
+        this.cpuCfsQuotaPeriod = cpuCfsQuotaPeriod;
+        this.cpuManagerPolicy = cpuManagerPolicy;
     }
 
     /**

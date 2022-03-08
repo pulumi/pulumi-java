@@ -26,8 +26,8 @@ public final class UrlRewriteActionResponse {
     private UrlRewriteActionResponse(
         String name,
         UrlRewriteActionParametersResponse parameters) {
-        this.name = Objects.requireNonNull(name);
-        this.parameters = Objects.requireNonNull(parameters);
+        this.name = name;
+        this.parameters = parameters;
     }
 
     /**

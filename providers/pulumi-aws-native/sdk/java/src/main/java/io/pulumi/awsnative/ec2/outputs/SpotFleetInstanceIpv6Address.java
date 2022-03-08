@@ -13,7 +13,7 @@ public final class SpotFleetInstanceIpv6Address {
 
     @OutputCustomType.Constructor({"ipv6Address"})
     private SpotFleetInstanceIpv6Address(String ipv6Address) {
-        this.ipv6Address = Objects.requireNonNull(ipv6Address);
+        this.ipv6Address = ipv6Address;
     }
 
     public String getIpv6Address() {

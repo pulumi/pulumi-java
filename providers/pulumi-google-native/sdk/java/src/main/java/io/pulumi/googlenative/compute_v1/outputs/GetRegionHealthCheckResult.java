@@ -104,24 +104,24 @@ public final class GetRegionHealthCheckResult {
         Integer timeoutSec,
         String type,
         Integer unhealthyThreshold) {
-        this.checkIntervalSec = Objects.requireNonNull(checkIntervalSec);
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.description = Objects.requireNonNull(description);
-        this.grpcHealthCheck = Objects.requireNonNull(grpcHealthCheck);
-        this.healthyThreshold = Objects.requireNonNull(healthyThreshold);
-        this.http2HealthCheck = Objects.requireNonNull(http2HealthCheck);
-        this.httpHealthCheck = Objects.requireNonNull(httpHealthCheck);
-        this.httpsHealthCheck = Objects.requireNonNull(httpsHealthCheck);
-        this.kind = Objects.requireNonNull(kind);
-        this.logConfig = Objects.requireNonNull(logConfig);
-        this.name = Objects.requireNonNull(name);
-        this.region = Objects.requireNonNull(region);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.sslHealthCheck = Objects.requireNonNull(sslHealthCheck);
-        this.tcpHealthCheck = Objects.requireNonNull(tcpHealthCheck);
-        this.timeoutSec = Objects.requireNonNull(timeoutSec);
-        this.type = Objects.requireNonNull(type);
-        this.unhealthyThreshold = Objects.requireNonNull(unhealthyThreshold);
+        this.checkIntervalSec = checkIntervalSec;
+        this.creationTimestamp = creationTimestamp;
+        this.description = description;
+        this.grpcHealthCheck = grpcHealthCheck;
+        this.healthyThreshold = healthyThreshold;
+        this.http2HealthCheck = http2HealthCheck;
+        this.httpHealthCheck = httpHealthCheck;
+        this.httpsHealthCheck = httpsHealthCheck;
+        this.kind = kind;
+        this.logConfig = logConfig;
+        this.name = name;
+        this.region = region;
+        this.selfLink = selfLink;
+        this.sslHealthCheck = sslHealthCheck;
+        this.tcpHealthCheck = tcpHealthCheck;
+        this.timeoutSec = timeoutSec;
+        this.type = type;
+        this.unhealthyThreshold = unhealthyThreshold;
     }
 
     /**

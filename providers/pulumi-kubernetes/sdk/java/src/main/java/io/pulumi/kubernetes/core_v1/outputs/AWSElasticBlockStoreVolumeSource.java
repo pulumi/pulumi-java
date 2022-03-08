@@ -43,7 +43,7 @@ public final class AWSElasticBlockStoreVolumeSource {
         this.fsType = fsType;
         this.partition = partition;
         this.readOnly = readOnly;
-        this.volumeID = Objects.requireNonNull(volumeID);
+        this.volumeID = volumeID;
     }
 
     /**

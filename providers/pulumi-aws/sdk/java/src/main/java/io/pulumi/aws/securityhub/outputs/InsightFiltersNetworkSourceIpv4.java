@@ -17,7 +17,7 @@ public final class InsightFiltersNetworkSourceIpv4 {
 
     @OutputCustomType.Constructor({"cidr"})
     private InsightFiltersNetworkSourceIpv4(String cidr) {
-        this.cidr = Objects.requireNonNull(cidr);
+        this.cidr = cidr;
     }
 
     /**

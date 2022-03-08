@@ -123,24 +123,24 @@ public final class SelfHostedIntegrationRuntimeNodeResponse {
         String status,
         String version,
         String versionStatus) {
-        this.capabilities = Objects.requireNonNull(capabilities);
-        this.concurrentJobsLimit = Objects.requireNonNull(concurrentJobsLimit);
-        this.expiryTime = Objects.requireNonNull(expiryTime);
-        this.hostServiceUri = Objects.requireNonNull(hostServiceUri);
-        this.isActiveDispatcher = Objects.requireNonNull(isActiveDispatcher);
-        this.lastConnectTime = Objects.requireNonNull(lastConnectTime);
-        this.lastEndUpdateTime = Objects.requireNonNull(lastEndUpdateTime);
-        this.lastStartTime = Objects.requireNonNull(lastStartTime);
-        this.lastStartUpdateTime = Objects.requireNonNull(lastStartUpdateTime);
-        this.lastStopTime = Objects.requireNonNull(lastStopTime);
-        this.lastUpdateResult = Objects.requireNonNull(lastUpdateResult);
-        this.machineName = Objects.requireNonNull(machineName);
-        this.maxConcurrentJobs = Objects.requireNonNull(maxConcurrentJobs);
-        this.nodeName = Objects.requireNonNull(nodeName);
-        this.registerTime = Objects.requireNonNull(registerTime);
-        this.status = Objects.requireNonNull(status);
-        this.version = Objects.requireNonNull(version);
-        this.versionStatus = Objects.requireNonNull(versionStatus);
+        this.capabilities = capabilities;
+        this.concurrentJobsLimit = concurrentJobsLimit;
+        this.expiryTime = expiryTime;
+        this.hostServiceUri = hostServiceUri;
+        this.isActiveDispatcher = isActiveDispatcher;
+        this.lastConnectTime = lastConnectTime;
+        this.lastEndUpdateTime = lastEndUpdateTime;
+        this.lastStartTime = lastStartTime;
+        this.lastStartUpdateTime = lastStartUpdateTime;
+        this.lastStopTime = lastStopTime;
+        this.lastUpdateResult = lastUpdateResult;
+        this.machineName = machineName;
+        this.maxConcurrentJobs = maxConcurrentJobs;
+        this.nodeName = nodeName;
+        this.registerTime = registerTime;
+        this.status = status;
+        this.version = version;
+        this.versionStatus = versionStatus;
     }
 
     /**

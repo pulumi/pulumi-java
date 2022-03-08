@@ -42,9 +42,9 @@ public final class TaggingCriteriaResponse {
         RetentionTagResponse tagInfo,
         Double taggingPriority) {
         this.criteria = criteria;
-        this.isDefault = Objects.requireNonNull(isDefault);
-        this.tagInfo = Objects.requireNonNull(tagInfo);
-        this.taggingPriority = Objects.requireNonNull(taggingPriority);
+        this.isDefault = isDefault;
+        this.tagInfo = tagInfo;
+        this.taggingPriority = taggingPriority;
     }
 
     /**

@@ -25,8 +25,8 @@ public final class OsPolicyAssignmentRollout {
     private OsPolicyAssignmentRollout(
         OsPolicyAssignmentRolloutDisruptionBudget disruptionBudget,
         String minWaitDuration) {
-        this.disruptionBudget = Objects.requireNonNull(disruptionBudget);
-        this.minWaitDuration = Objects.requireNonNull(minWaitDuration);
+        this.disruptionBudget = disruptionBudget;
+        this.minWaitDuration = minWaitDuration;
     }
 
     /**

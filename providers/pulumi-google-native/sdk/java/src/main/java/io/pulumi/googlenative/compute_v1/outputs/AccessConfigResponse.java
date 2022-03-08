@@ -68,15 +68,15 @@ public final class AccessConfigResponse {
         String publicPtrDomainName,
         Boolean setPublicPtr,
         String type) {
-        this.externalIpv6 = Objects.requireNonNull(externalIpv6);
-        this.externalIpv6PrefixLength = Objects.requireNonNull(externalIpv6PrefixLength);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.natIP = Objects.requireNonNull(natIP);
-        this.networkTier = Objects.requireNonNull(networkTier);
-        this.publicPtrDomainName = Objects.requireNonNull(publicPtrDomainName);
-        this.setPublicPtr = Objects.requireNonNull(setPublicPtr);
-        this.type = Objects.requireNonNull(type);
+        this.externalIpv6 = externalIpv6;
+        this.externalIpv6PrefixLength = externalIpv6PrefixLength;
+        this.kind = kind;
+        this.name = name;
+        this.natIP = natIP;
+        this.networkTier = networkTier;
+        this.publicPtrDomainName = publicPtrDomainName;
+        this.setPublicPtr = setPublicPtr;
+        this.type = type;
     }
 
     /**

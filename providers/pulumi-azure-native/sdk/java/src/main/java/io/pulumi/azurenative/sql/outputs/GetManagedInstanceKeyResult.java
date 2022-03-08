@@ -55,13 +55,13 @@ public final class GetManagedInstanceKeyResult {
         String name,
         String thumbprint,
         String type) {
-        this.autoRotationEnabled = Objects.requireNonNull(autoRotationEnabled);
-        this.creationDate = Objects.requireNonNull(creationDate);
-        this.id = Objects.requireNonNull(id);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.thumbprint = Objects.requireNonNull(thumbprint);
-        this.type = Objects.requireNonNull(type);
+        this.autoRotationEnabled = autoRotationEnabled;
+        this.creationDate = creationDate;
+        this.id = id;
+        this.kind = kind;
+        this.name = name;
+        this.thumbprint = thumbprint;
+        this.type = type;
     }
 
     /**

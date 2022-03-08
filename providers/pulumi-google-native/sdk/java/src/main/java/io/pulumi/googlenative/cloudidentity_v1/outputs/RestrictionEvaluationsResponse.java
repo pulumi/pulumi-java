@@ -17,7 +17,7 @@ public final class RestrictionEvaluationsResponse {
 
     @OutputCustomType.Constructor({"memberRestrictionEvaluation"})
     private RestrictionEvaluationsResponse(MembershipRoleRestrictionEvaluationResponse memberRestrictionEvaluation) {
-        this.memberRestrictionEvaluation = Objects.requireNonNull(memberRestrictionEvaluation);
+        this.memberRestrictionEvaluation = memberRestrictionEvaluation;
     }
 
     /**

@@ -18,7 +18,7 @@ public final class ClusterAddonsConfigNetworkPolicyConfig {
 
     @OutputCustomType.Constructor({"disabled"})
     private ClusterAddonsConfigNetworkPolicyConfig(Boolean disabled) {
-        this.disabled = Objects.requireNonNull(disabled);
+        this.disabled = disabled;
     }
 
     /**

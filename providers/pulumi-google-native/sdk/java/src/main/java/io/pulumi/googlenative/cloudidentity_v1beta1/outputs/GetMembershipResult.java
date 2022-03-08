@@ -57,13 +57,13 @@ public final class GetMembershipResult {
         List<MembershipRoleResponse> roles,
         String type,
         String updateTime) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.memberKey = Objects.requireNonNull(memberKey);
-        this.name = Objects.requireNonNull(name);
-        this.preferredMemberKey = Objects.requireNonNull(preferredMemberKey);
-        this.roles = Objects.requireNonNull(roles);
-        this.type = Objects.requireNonNull(type);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.createTime = createTime;
+        this.memberKey = memberKey;
+        this.name = name;
+        this.preferredMemberKey = preferredMemberKey;
+        this.roles = roles;
+        this.type = type;
+        this.updateTime = updateTime;
     }
 
     /**

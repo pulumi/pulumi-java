@@ -26,8 +26,8 @@ public final class NfsAccessPolicyResponse {
     private NfsAccessPolicyResponse(
         List<NfsAccessRuleResponse> accessRules,
         String name) {
-        this.accessRules = Objects.requireNonNull(accessRules);
-        this.name = Objects.requireNonNull(name);
+        this.accessRules = accessRules;
+        this.name = name;
     }
 
     /**

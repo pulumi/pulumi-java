@@ -59,14 +59,14 @@ public final class GetClusterResult {
         Integer runningTasksCount,
         List<GetClusterSetting> settings,
         String status) {
-        this.arn = Objects.requireNonNull(arn);
-        this.clusterName = Objects.requireNonNull(clusterName);
-        this.id = Objects.requireNonNull(id);
-        this.pendingTasksCount = Objects.requireNonNull(pendingTasksCount);
-        this.registeredContainerInstancesCount = Objects.requireNonNull(registeredContainerInstancesCount);
-        this.runningTasksCount = Objects.requireNonNull(runningTasksCount);
-        this.settings = Objects.requireNonNull(settings);
-        this.status = Objects.requireNonNull(status);
+        this.arn = arn;
+        this.clusterName = clusterName;
+        this.id = id;
+        this.pendingTasksCount = pendingTasksCount;
+        this.registeredContainerInstancesCount = registeredContainerInstancesCount;
+        this.runningTasksCount = runningTasksCount;
+        this.settings = settings;
+        this.status = status;
     }
 
     /**

@@ -24,8 +24,8 @@ public final class VpnGatewayVpnGatewayInterfaceResponse {
     private VpnGatewayVpnGatewayInterfaceResponse(
         String interconnectAttachment,
         String ipAddress) {
-        this.interconnectAttachment = Objects.requireNonNull(interconnectAttachment);
-        this.ipAddress = Objects.requireNonNull(ipAddress);
+        this.interconnectAttachment = interconnectAttachment;
+        this.ipAddress = ipAddress;
     }
 
     /**

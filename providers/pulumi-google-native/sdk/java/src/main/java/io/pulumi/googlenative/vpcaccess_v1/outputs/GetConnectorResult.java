@@ -81,17 +81,17 @@ public final class GetConnectorResult {
         String network,
         String state,
         SubnetResponse subnet) {
-        this.connectedProjects = Objects.requireNonNull(connectedProjects);
-        this.ipCidrRange = Objects.requireNonNull(ipCidrRange);
-        this.machineType = Objects.requireNonNull(machineType);
-        this.maxInstances = Objects.requireNonNull(maxInstances);
-        this.maxThroughput = Objects.requireNonNull(maxThroughput);
-        this.minInstances = Objects.requireNonNull(minInstances);
-        this.minThroughput = Objects.requireNonNull(minThroughput);
-        this.name = Objects.requireNonNull(name);
-        this.network = Objects.requireNonNull(network);
-        this.state = Objects.requireNonNull(state);
-        this.subnet = Objects.requireNonNull(subnet);
+        this.connectedProjects = connectedProjects;
+        this.ipCidrRange = ipCidrRange;
+        this.machineType = machineType;
+        this.maxInstances = maxInstances;
+        this.maxThroughput = maxThroughput;
+        this.minInstances = minInstances;
+        this.minThroughput = minThroughput;
+        this.name = name;
+        this.network = network;
+        this.state = state;
+        this.subnet = subnet;
     }
 
     /**

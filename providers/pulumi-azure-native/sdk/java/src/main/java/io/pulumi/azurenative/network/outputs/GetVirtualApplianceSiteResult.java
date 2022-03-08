@@ -58,12 +58,12 @@ public final class GetVirtualApplianceSiteResult {
         String provisioningState,
         String type) {
         this.addressPrefix = addressPrefix;
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.id = id;
         this.name = name;
         this.o365Policy = o365Policy;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.type = Objects.requireNonNull(type);
+        this.provisioningState = provisioningState;
+        this.type = type;
     }
 
     /**

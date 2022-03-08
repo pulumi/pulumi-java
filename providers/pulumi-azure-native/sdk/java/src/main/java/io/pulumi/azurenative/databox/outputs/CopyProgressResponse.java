@@ -105,21 +105,21 @@ public final class CopyProgressResponse {
         Double totalBytesToProcess,
         Double totalFilesToProcess,
         String transferType) {
-        this.accountId = Objects.requireNonNull(accountId);
-        this.bytesProcessed = Objects.requireNonNull(bytesProcessed);
-        this.dataAccountType = Objects.requireNonNull(dataAccountType);
-        this.directoriesErroredOut = Objects.requireNonNull(directoriesErroredOut);
-        this.filesErroredOut = Objects.requireNonNull(filesErroredOut);
-        this.filesProcessed = Objects.requireNonNull(filesProcessed);
-        this.invalidDirectoriesProcessed = Objects.requireNonNull(invalidDirectoriesProcessed);
-        this.invalidFileBytesUploaded = Objects.requireNonNull(invalidFileBytesUploaded);
-        this.invalidFilesProcessed = Objects.requireNonNull(invalidFilesProcessed);
-        this.isEnumerationInProgress = Objects.requireNonNull(isEnumerationInProgress);
-        this.renamedContainerCount = Objects.requireNonNull(renamedContainerCount);
-        this.storageAccountName = Objects.requireNonNull(storageAccountName);
-        this.totalBytesToProcess = Objects.requireNonNull(totalBytesToProcess);
-        this.totalFilesToProcess = Objects.requireNonNull(totalFilesToProcess);
-        this.transferType = Objects.requireNonNull(transferType);
+        this.accountId = accountId;
+        this.bytesProcessed = bytesProcessed;
+        this.dataAccountType = dataAccountType;
+        this.directoriesErroredOut = directoriesErroredOut;
+        this.filesErroredOut = filesErroredOut;
+        this.filesProcessed = filesProcessed;
+        this.invalidDirectoriesProcessed = invalidDirectoriesProcessed;
+        this.invalidFileBytesUploaded = invalidFileBytesUploaded;
+        this.invalidFilesProcessed = invalidFilesProcessed;
+        this.isEnumerationInProgress = isEnumerationInProgress;
+        this.renamedContainerCount = renamedContainerCount;
+        this.storageAccountName = storageAccountName;
+        this.totalBytesToProcess = totalBytesToProcess;
+        this.totalFilesToProcess = totalFilesToProcess;
+        this.transferType = transferType;
     }
 
     /**

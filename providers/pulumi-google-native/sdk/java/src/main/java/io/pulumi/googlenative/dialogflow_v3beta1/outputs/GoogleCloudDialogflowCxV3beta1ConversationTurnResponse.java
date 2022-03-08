@@ -25,8 +25,8 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnResponse {
     private GoogleCloudDialogflowCxV3beta1ConversationTurnResponse(
         GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputResponse userInput,
         GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutputResponse virtualAgentOutput) {
-        this.userInput = Objects.requireNonNull(userInput);
-        this.virtualAgentOutput = Objects.requireNonNull(virtualAgentOutput);
+        this.userInput = userInput;
+        this.virtualAgentOutput = virtualAgentOutput;
     }
 
     /**

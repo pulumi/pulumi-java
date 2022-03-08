@@ -38,9 +38,9 @@ public final class X12SchemaReferenceResponse {
         String schemaName,
         String schemaVersion,
         @Nullable String senderApplicationId) {
-        this.messageId = Objects.requireNonNull(messageId);
-        this.schemaName = Objects.requireNonNull(schemaName);
-        this.schemaVersion = Objects.requireNonNull(schemaVersion);
+        this.messageId = messageId;
+        this.schemaName = schemaName;
+        this.schemaVersion = schemaVersion;
         this.senderApplicationId = senderApplicationId;
     }
 

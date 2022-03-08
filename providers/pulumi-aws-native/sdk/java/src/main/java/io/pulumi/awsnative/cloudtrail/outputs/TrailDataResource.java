@@ -26,7 +26,7 @@ public final class TrailDataResource {
     private TrailDataResource(
         String type,
         @Nullable List<String> values) {
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.values = values;
     }
 

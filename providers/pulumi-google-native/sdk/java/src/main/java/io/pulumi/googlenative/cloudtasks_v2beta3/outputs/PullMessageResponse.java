@@ -24,8 +24,8 @@ public final class PullMessageResponse {
     private PullMessageResponse(
         String payload,
         String tag) {
-        this.payload = Objects.requireNonNull(payload);
-        this.tag = Objects.requireNonNull(tag);
+        this.payload = payload;
+        this.tag = tag;
     }
 
     /**

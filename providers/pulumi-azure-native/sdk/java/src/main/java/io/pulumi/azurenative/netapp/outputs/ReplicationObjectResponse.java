@@ -46,9 +46,9 @@ public final class ReplicationObjectResponse {
         String replicationSchedule) {
         this.endpointType = endpointType;
         this.remoteVolumeRegion = remoteVolumeRegion;
-        this.remoteVolumeResourceId = Objects.requireNonNull(remoteVolumeResourceId);
+        this.remoteVolumeResourceId = remoteVolumeResourceId;
         this.replicationId = replicationId;
-        this.replicationSchedule = Objects.requireNonNull(replicationSchedule);
+        this.replicationSchedule = replicationSchedule;
     }
 
     /**

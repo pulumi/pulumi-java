@@ -44,11 +44,11 @@ public final class RedisInstanceDetailsResponse {
         Integer shardId,
         Integer sslPort,
         String zone) {
-        this.isMaster = Objects.requireNonNull(isMaster);
-        this.nonSslPort = Objects.requireNonNull(nonSslPort);
-        this.shardId = Objects.requireNonNull(shardId);
-        this.sslPort = Objects.requireNonNull(sslPort);
-        this.zone = Objects.requireNonNull(zone);
+        this.isMaster = isMaster;
+        this.nonSslPort = nonSslPort;
+        this.shardId = shardId;
+        this.sslPort = sslPort;
+        this.zone = zone;
     }
 
     /**

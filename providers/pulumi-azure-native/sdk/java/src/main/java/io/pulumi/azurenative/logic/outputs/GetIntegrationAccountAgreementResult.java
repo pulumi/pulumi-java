@@ -102,20 +102,20 @@ public final class GetIntegrationAccountAgreementResult {
         String name,
         @Nullable Map<String,String> tags,
         String type) {
-        this.agreementType = Objects.requireNonNull(agreementType);
-        this.changedTime = Objects.requireNonNull(changedTime);
-        this.content = Objects.requireNonNull(content);
-        this.createdTime = Objects.requireNonNull(createdTime);
-        this.guestIdentity = Objects.requireNonNull(guestIdentity);
-        this.guestPartner = Objects.requireNonNull(guestPartner);
-        this.hostIdentity = Objects.requireNonNull(hostIdentity);
-        this.hostPartner = Objects.requireNonNull(hostPartner);
-        this.id = Objects.requireNonNull(id);
+        this.agreementType = agreementType;
+        this.changedTime = changedTime;
+        this.content = content;
+        this.createdTime = createdTime;
+        this.guestIdentity = guestIdentity;
+        this.guestPartner = guestPartner;
+        this.hostIdentity = hostIdentity;
+        this.hostPartner = hostPartner;
+        this.id = id;
         this.location = location;
         this.metadata = metadata;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

@@ -24,8 +24,8 @@ public final class PacketMirroringForwardingRuleInfoResponse {
     private PacketMirroringForwardingRuleInfoResponse(
         String canonicalUrl,
         String url) {
-        this.canonicalUrl = Objects.requireNonNull(canonicalUrl);
-        this.url = Objects.requireNonNull(url);
+        this.canonicalUrl = canonicalUrl;
+        this.url = url;
     }
 
     /**

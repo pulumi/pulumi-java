@@ -62,7 +62,7 @@ public final class BucketReplicationConfigRuleDestination {
         @Nullable String storageClass) {
         this.accessControlTranslation = accessControlTranslation;
         this.account = account;
-        this.bucket = Objects.requireNonNull(bucket);
+        this.bucket = bucket;
         this.encryptionConfiguration = encryptionConfiguration;
         this.metrics = metrics;
         this.replicationTime = replicationTime;

@@ -58,7 +58,7 @@ public final class SsisEnvironmentResponse {
         this.folderId = folderId;
         this.id = id;
         this.name = name;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.variables = variables;
     }
 

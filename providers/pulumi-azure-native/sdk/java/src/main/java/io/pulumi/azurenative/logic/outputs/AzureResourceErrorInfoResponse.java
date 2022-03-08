@@ -32,9 +32,9 @@ public final class AzureResourceErrorInfoResponse {
         String code,
         @Nullable List<AzureResourceErrorInfoResponse> details,
         String message) {
-        this.code = Objects.requireNonNull(code);
+        this.code = code;
         this.details = details;
-        this.message = Objects.requireNonNull(message);
+        this.message = message;
     }
 
     /**

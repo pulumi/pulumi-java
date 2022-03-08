@@ -17,7 +17,7 @@ public final class RuleGroupActivatedRuleAction {
 
     @OutputCustomType.Constructor({"type"})
     private RuleGroupActivatedRuleAction(String type) {
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

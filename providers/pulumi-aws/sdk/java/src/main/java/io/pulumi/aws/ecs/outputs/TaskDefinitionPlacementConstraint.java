@@ -27,7 +27,7 @@ public final class TaskDefinitionPlacementConstraint {
         @Nullable String expression,
         String type) {
         this.expression = expression;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

@@ -33,9 +33,9 @@ public final class ModelQualityJobDefinitionS3Output {
         String localPath,
         @Nullable ModelQualityJobDefinitionS3OutputS3UploadMode s3UploadMode,
         String s3Uri) {
-        this.localPath = Objects.requireNonNull(localPath);
+        this.localPath = localPath;
         this.s3UploadMode = s3UploadMode;
-        this.s3Uri = Objects.requireNonNull(s3Uri);
+        this.s3Uri = s3Uri;
     }
 
     /**

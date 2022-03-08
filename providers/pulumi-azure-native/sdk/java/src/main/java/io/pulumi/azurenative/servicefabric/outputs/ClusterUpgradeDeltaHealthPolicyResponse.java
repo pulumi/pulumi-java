@@ -47,9 +47,9 @@ public final class ClusterUpgradeDeltaHealthPolicyResponse {
         Integer maxPercentDeltaUnhealthyNodes,
         Integer maxPercentUpgradeDomainDeltaUnhealthyNodes) {
         this.applicationDeltaHealthPolicies = applicationDeltaHealthPolicies;
-        this.maxPercentDeltaUnhealthyApplications = Objects.requireNonNull(maxPercentDeltaUnhealthyApplications);
-        this.maxPercentDeltaUnhealthyNodes = Objects.requireNonNull(maxPercentDeltaUnhealthyNodes);
-        this.maxPercentUpgradeDomainDeltaUnhealthyNodes = Objects.requireNonNull(maxPercentUpgradeDomainDeltaUnhealthyNodes);
+        this.maxPercentDeltaUnhealthyApplications = maxPercentDeltaUnhealthyApplications;
+        this.maxPercentDeltaUnhealthyNodes = maxPercentDeltaUnhealthyNodes;
+        this.maxPercentUpgradeDomainDeltaUnhealthyNodes = maxPercentUpgradeDomainDeltaUnhealthyNodes;
     }
 
     /**

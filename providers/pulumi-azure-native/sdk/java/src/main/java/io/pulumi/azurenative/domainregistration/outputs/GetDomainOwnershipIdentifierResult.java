@@ -51,12 +51,12 @@ public final class GetDomainOwnershipIdentifierResult {
         @Nullable String ownershipId,
         SystemDataResponse systemData,
         String type) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.kind = kind;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.ownershipId = ownershipId;
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

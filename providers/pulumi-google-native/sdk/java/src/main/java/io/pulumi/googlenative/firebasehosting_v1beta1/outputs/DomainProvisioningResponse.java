@@ -63,14 +63,14 @@ public final class DomainProvisioningResponse {
         String dnsFetchTime,
         String dnsStatus,
         List<String> expectedIps) {
-        this.certChallengeDiscoveredTxt = Objects.requireNonNull(certChallengeDiscoveredTxt);
-        this.certChallengeDns = Objects.requireNonNull(certChallengeDns);
-        this.certChallengeHttp = Objects.requireNonNull(certChallengeHttp);
-        this.certStatus = Objects.requireNonNull(certStatus);
-        this.discoveredIps = Objects.requireNonNull(discoveredIps);
-        this.dnsFetchTime = Objects.requireNonNull(dnsFetchTime);
-        this.dnsStatus = Objects.requireNonNull(dnsStatus);
-        this.expectedIps = Objects.requireNonNull(expectedIps);
+        this.certChallengeDiscoveredTxt = certChallengeDiscoveredTxt;
+        this.certChallengeDns = certChallengeDns;
+        this.certChallengeHttp = certChallengeHttp;
+        this.certStatus = certStatus;
+        this.discoveredIps = discoveredIps;
+        this.dnsFetchTime = dnsFetchTime;
+        this.dnsStatus = dnsStatus;
+        this.expectedIps = expectedIps;
     }
 
     /**

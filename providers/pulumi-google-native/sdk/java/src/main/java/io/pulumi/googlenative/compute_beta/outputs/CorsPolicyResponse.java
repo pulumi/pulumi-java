@@ -63,14 +63,14 @@ public final class CorsPolicyResponse {
         Boolean disabled,
         List<String> exposeHeaders,
         Integer maxAge) {
-        this.allowCredentials = Objects.requireNonNull(allowCredentials);
-        this.allowHeaders = Objects.requireNonNull(allowHeaders);
-        this.allowMethods = Objects.requireNonNull(allowMethods);
-        this.allowOriginRegexes = Objects.requireNonNull(allowOriginRegexes);
-        this.allowOrigins = Objects.requireNonNull(allowOrigins);
-        this.disabled = Objects.requireNonNull(disabled);
-        this.exposeHeaders = Objects.requireNonNull(exposeHeaders);
-        this.maxAge = Objects.requireNonNull(maxAge);
+        this.allowCredentials = allowCredentials;
+        this.allowHeaders = allowHeaders;
+        this.allowMethods = allowMethods;
+        this.allowOriginRegexes = allowOriginRegexes;
+        this.allowOrigins = allowOrigins;
+        this.disabled = disabled;
+        this.exposeHeaders = exposeHeaders;
+        this.maxAge = maxAge;
     }
 
     /**

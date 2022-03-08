@@ -25,8 +25,8 @@ public final class ExternalMetricSource {
     private ExternalMetricSource(
         MetricIdentifier metric,
         MetricTarget target) {
-        this.metric = Objects.requireNonNull(metric);
-        this.target = Objects.requireNonNull(target);
+        this.metric = metric;
+        this.target = target;
     }
 
     /**

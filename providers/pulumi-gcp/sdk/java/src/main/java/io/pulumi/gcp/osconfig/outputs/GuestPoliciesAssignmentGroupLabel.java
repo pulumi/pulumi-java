@@ -18,7 +18,7 @@ public final class GuestPoliciesAssignmentGroupLabel {
 
     @OutputCustomType.Constructor({"labels"})
     private GuestPoliciesAssignmentGroupLabel(Map<String,String> labels) {
-        this.labels = Objects.requireNonNull(labels);
+        this.labels = labels;
     }
 
     /**

@@ -57,13 +57,13 @@ public final class GetApplicationTypeResult {
         String provisioningState,
         @Nullable Map<String,String> tags,
         String type) {
-        this.etag = Objects.requireNonNull(etag);
-        this.id = Objects.requireNonNull(id);
+        this.etag = etag;
+        this.id = id;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

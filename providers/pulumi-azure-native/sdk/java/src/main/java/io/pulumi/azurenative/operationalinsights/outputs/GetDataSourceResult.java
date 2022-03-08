@@ -59,12 +59,12 @@ public final class GetDataSourceResult {
         @Nullable Map<String,String> tags,
         String type) {
         this.etag = etag;
-        this.id = Objects.requireNonNull(id);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.properties = Objects.requireNonNull(properties);
+        this.id = id;
+        this.kind = kind;
+        this.name = name;
+        this.properties = properties;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

@@ -32,7 +32,7 @@ public final class RegistryImageBuildAuthConfig {
         @Nullable String userName) {
         this.auth = auth;
         this.email = email;
-        this.hostName = Objects.requireNonNull(hostName);
+        this.hostName = hostName;
         this.identityToken = identityToken;
         this.password = password;
         this.registryToken = registryToken;

@@ -32,7 +32,7 @@ public final class AssetFileEncryptionMetadataResponse {
         String assetFileId,
         @Nullable String assetFileName,
         @Nullable String initializationVector) {
-        this.assetFileId = Objects.requireNonNull(assetFileId);
+        this.assetFileId = assetFileId;
         this.assetFileName = assetFileName;
         this.initializationVector = initializationVector;
     }

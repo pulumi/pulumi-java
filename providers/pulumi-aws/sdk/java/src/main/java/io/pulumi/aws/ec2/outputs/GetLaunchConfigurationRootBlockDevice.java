@@ -50,12 +50,12 @@ public final class GetLaunchConfigurationRootBlockDevice {
         Boolean throughput,
         Integer volumeSize,
         String volumeType) {
-        this.deleteOnTermination = Objects.requireNonNull(deleteOnTermination);
-        this.encrypted = Objects.requireNonNull(encrypted);
-        this.iops = Objects.requireNonNull(iops);
-        this.throughput = Objects.requireNonNull(throughput);
-        this.volumeSize = Objects.requireNonNull(volumeSize);
-        this.volumeType = Objects.requireNonNull(volumeType);
+        this.deleteOnTermination = deleteOnTermination;
+        this.encrypted = encrypted;
+        this.iops = iops;
+        this.throughput = throughput;
+        this.volumeSize = volumeSize;
+        this.volumeType = volumeType;
     }
 
     /**

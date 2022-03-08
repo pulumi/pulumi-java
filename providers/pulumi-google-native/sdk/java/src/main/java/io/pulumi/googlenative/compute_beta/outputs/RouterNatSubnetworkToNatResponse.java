@@ -31,9 +31,9 @@ public final class RouterNatSubnetworkToNatResponse {
         String name,
         List<String> secondaryIpRangeNames,
         List<String> sourceIpRangesToNat) {
-        this.name = Objects.requireNonNull(name);
-        this.secondaryIpRangeNames = Objects.requireNonNull(secondaryIpRangeNames);
-        this.sourceIpRangesToNat = Objects.requireNonNull(sourceIpRangesToNat);
+        this.name = name;
+        this.secondaryIpRangeNames = secondaryIpRangeNames;
+        this.sourceIpRangesToNat = sourceIpRangesToNat;
     }
 
     /**

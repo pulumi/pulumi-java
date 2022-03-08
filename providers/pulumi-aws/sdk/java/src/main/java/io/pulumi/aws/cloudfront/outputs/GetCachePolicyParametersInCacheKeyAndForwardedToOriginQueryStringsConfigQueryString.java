@@ -18,7 +18,7 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginQuerySt
 
     @OutputCustomType.Constructor({"items"})
     private GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryString(List<String> items) {
-        this.items = Objects.requireNonNull(items);
+        this.items = items;
     }
 
     /**

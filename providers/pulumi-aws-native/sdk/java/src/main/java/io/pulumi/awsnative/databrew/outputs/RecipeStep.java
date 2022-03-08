@@ -23,7 +23,7 @@ public final class RecipeStep {
     private RecipeStep(
         RecipeAction action,
         @Nullable List<RecipeConditionExpression> conditionExpressions) {
-        this.action = Objects.requireNonNull(action);
+        this.action = action;
         this.conditionExpressions = conditionExpressions;
     }
 

@@ -65,13 +65,13 @@ public final class GetNamedValueResult {
         @Nullable List<String> tags,
         String type,
         @Nullable String value) {
-        this.displayName = Objects.requireNonNull(displayName);
-        this.id = Objects.requireNonNull(id);
+        this.displayName = displayName;
+        this.id = id;
         this.keyVault = keyVault;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.secret = secret;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.value = value;
     }
 

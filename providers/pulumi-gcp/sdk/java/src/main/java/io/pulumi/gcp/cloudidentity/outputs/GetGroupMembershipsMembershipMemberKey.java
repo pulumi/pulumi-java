@@ -29,8 +29,8 @@ public final class GetGroupMembershipsMembershipMemberKey {
     private GetGroupMembershipsMembershipMemberKey(
         String id,
         String namespace) {
-        this.id = Objects.requireNonNull(id);
-        this.namespace = Objects.requireNonNull(namespace);
+        this.id = id;
+        this.namespace = namespace;
     }
 
     /**

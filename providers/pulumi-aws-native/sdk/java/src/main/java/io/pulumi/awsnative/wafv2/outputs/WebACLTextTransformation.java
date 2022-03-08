@@ -17,8 +17,8 @@ public final class WebACLTextTransformation {
     private WebACLTextTransformation(
         Integer priority,
         WebACLTextTransformationType type) {
-        this.priority = Objects.requireNonNull(priority);
-        this.type = Objects.requireNonNull(type);
+        this.priority = priority;
+        this.type = type;
     }
 
     public Integer getPriority() {

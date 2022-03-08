@@ -69,15 +69,15 @@ public final class DatasetAccessItemResponse {
         String specialGroup,
         String userByEmail,
         TableReferenceResponse view) {
-        this.dataset = Objects.requireNonNull(dataset);
-        this.domain = Objects.requireNonNull(domain);
-        this.groupByEmail = Objects.requireNonNull(groupByEmail);
-        this.iamMember = Objects.requireNonNull(iamMember);
-        this.role = Objects.requireNonNull(role);
-        this.routine = Objects.requireNonNull(routine);
-        this.specialGroup = Objects.requireNonNull(specialGroup);
-        this.userByEmail = Objects.requireNonNull(userByEmail);
-        this.view = Objects.requireNonNull(view);
+        this.dataset = dataset;
+        this.domain = domain;
+        this.groupByEmail = groupByEmail;
+        this.iamMember = iamMember;
+        this.role = role;
+        this.routine = routine;
+        this.specialGroup = specialGroup;
+        this.userByEmail = userByEmail;
+        this.view = view;
     }
 
     /**

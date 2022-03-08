@@ -20,10 +20,10 @@ public final class OperationsDefinitionResponseDisplay {
         String operation,
         String provider,
         String resource) {
-        this.description = Objects.requireNonNull(description);
-        this.operation = Objects.requireNonNull(operation);
-        this.provider = Objects.requireNonNull(provider);
-        this.resource = Objects.requireNonNull(resource);
+        this.description = description;
+        this.operation = operation;
+        this.provider = provider;
+        this.resource = resource;
     }
 
     public String getDescription() {

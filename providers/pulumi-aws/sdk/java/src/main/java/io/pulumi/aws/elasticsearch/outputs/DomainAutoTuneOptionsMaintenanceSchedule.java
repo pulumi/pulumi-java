@@ -31,9 +31,9 @@ public final class DomainAutoTuneOptionsMaintenanceSchedule {
         String cronExpressionForRecurrence,
         DomainAutoTuneOptionsMaintenanceScheduleDuration duration,
         String startAt) {
-        this.cronExpressionForRecurrence = Objects.requireNonNull(cronExpressionForRecurrence);
-        this.duration = Objects.requireNonNull(duration);
-        this.startAt = Objects.requireNonNull(startAt);
+        this.cronExpressionForRecurrence = cronExpressionForRecurrence;
+        this.duration = duration;
+        this.startAt = startAt;
     }
 
     /**

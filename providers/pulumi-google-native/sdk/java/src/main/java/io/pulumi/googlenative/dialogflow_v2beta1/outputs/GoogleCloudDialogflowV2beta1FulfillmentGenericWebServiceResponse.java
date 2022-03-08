@@ -44,11 +44,11 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceRespo
         Map<String,String> requestHeaders,
         String uri,
         String username) {
-        this.isCloudFunction = Objects.requireNonNull(isCloudFunction);
-        this.password = Objects.requireNonNull(password);
-        this.requestHeaders = Objects.requireNonNull(requestHeaders);
-        this.uri = Objects.requireNonNull(uri);
-        this.username = Objects.requireNonNull(username);
+        this.isCloudFunction = isCloudFunction;
+        this.password = password;
+        this.requestHeaders = requestHeaders;
+        this.uri = uri;
+        this.username = username;
     }
 
     /**

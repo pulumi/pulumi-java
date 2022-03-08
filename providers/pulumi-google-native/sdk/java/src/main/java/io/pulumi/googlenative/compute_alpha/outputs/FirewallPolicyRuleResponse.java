@@ -89,18 +89,18 @@ public final class FirewallPolicyRuleResponse {
         List<String> targetResources,
         List<FirewallPolicyRuleSecureTagResponse> targetSecureTags,
         List<String> targetServiceAccounts) {
-        this.action = Objects.requireNonNull(action);
-        this.description = Objects.requireNonNull(description);
-        this.direction = Objects.requireNonNull(direction);
-        this.disabled = Objects.requireNonNull(disabled);
-        this.enableLogging = Objects.requireNonNull(enableLogging);
-        this.kind = Objects.requireNonNull(kind);
-        this.match = Objects.requireNonNull(match);
-        this.priority = Objects.requireNonNull(priority);
-        this.ruleTupleCount = Objects.requireNonNull(ruleTupleCount);
-        this.targetResources = Objects.requireNonNull(targetResources);
-        this.targetSecureTags = Objects.requireNonNull(targetSecureTags);
-        this.targetServiceAccounts = Objects.requireNonNull(targetServiceAccounts);
+        this.action = action;
+        this.description = description;
+        this.direction = direction;
+        this.disabled = disabled;
+        this.enableLogging = enableLogging;
+        this.kind = kind;
+        this.match = match;
+        this.priority = priority;
+        this.ruleTupleCount = ruleTupleCount;
+        this.targetResources = targetResources;
+        this.targetSecureTags = targetSecureTags;
+        this.targetServiceAccounts = targetServiceAccounts;
     }
 
     /**

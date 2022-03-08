@@ -57,12 +57,12 @@ public final class LibraryInfoResponse {
         @Nullable String type,
         String uploadedTimestamp) {
         this.containerName = containerName;
-        this.creatorId = Objects.requireNonNull(creatorId);
+        this.creatorId = creatorId;
         this.name = name;
         this.path = path;
-        this.provisioningStatus = Objects.requireNonNull(provisioningStatus);
+        this.provisioningStatus = provisioningStatus;
         this.type = type;
-        this.uploadedTimestamp = Objects.requireNonNull(uploadedTimestamp);
+        this.uploadedTimestamp = uploadedTimestamp;
     }
 
     /**

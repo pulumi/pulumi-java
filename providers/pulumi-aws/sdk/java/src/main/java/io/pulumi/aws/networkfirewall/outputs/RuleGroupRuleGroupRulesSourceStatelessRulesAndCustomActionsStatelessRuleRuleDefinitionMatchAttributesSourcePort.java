@@ -26,7 +26,7 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
     private RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePort(
         Integer fromPort,
         @Nullable Integer toPort) {
-        this.fromPort = Objects.requireNonNull(fromPort);
+        this.fromPort = fromPort;
         this.toPort = toPort;
     }
 

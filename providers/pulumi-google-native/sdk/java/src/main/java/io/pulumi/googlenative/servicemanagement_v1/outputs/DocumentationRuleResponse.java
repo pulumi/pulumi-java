@@ -30,9 +30,9 @@ public final class DocumentationRuleResponse {
         String deprecationDescription,
         String description,
         String selector) {
-        this.deprecationDescription = Objects.requireNonNull(deprecationDescription);
-        this.description = Objects.requireNonNull(description);
-        this.selector = Objects.requireNonNull(selector);
+        this.deprecationDescription = deprecationDescription;
+        this.description = description;
+        this.selector = selector;
     }
 
     /**

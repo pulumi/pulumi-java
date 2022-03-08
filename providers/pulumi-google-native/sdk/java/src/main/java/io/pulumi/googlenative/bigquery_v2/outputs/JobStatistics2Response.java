@@ -196,34 +196,34 @@ public final class JobStatistics2Response {
         String totalPartitionsProcessed,
         String totalSlotMs,
         List<QueryParameterResponse> undeclaredQueryParameters) {
-        this.biEngineStatistics = Objects.requireNonNull(biEngineStatistics);
-        this.billingTier = Objects.requireNonNull(billingTier);
-        this.cacheHit = Objects.requireNonNull(cacheHit);
-        this.ddlAffectedRowAccessPolicyCount = Objects.requireNonNull(ddlAffectedRowAccessPolicyCount);
-        this.ddlDestinationTable = Objects.requireNonNull(ddlDestinationTable);
-        this.ddlOperationPerformed = Objects.requireNonNull(ddlOperationPerformed);
-        this.ddlTargetDataset = Objects.requireNonNull(ddlTargetDataset);
-        this.ddlTargetRoutine = Objects.requireNonNull(ddlTargetRoutine);
-        this.ddlTargetRowAccessPolicy = Objects.requireNonNull(ddlTargetRowAccessPolicy);
-        this.ddlTargetTable = Objects.requireNonNull(ddlTargetTable);
-        this.dmlStats = Objects.requireNonNull(dmlStats);
-        this.estimatedBytesProcessed = Objects.requireNonNull(estimatedBytesProcessed);
-        this.mlStatistics = Objects.requireNonNull(mlStatistics);
-        this.modelTraining = Objects.requireNonNull(modelTraining);
-        this.numDmlAffectedRows = Objects.requireNonNull(numDmlAffectedRows);
-        this.queryPlan = Objects.requireNonNull(queryPlan);
-        this.referencedRoutines = Objects.requireNonNull(referencedRoutines);
-        this.referencedTables = Objects.requireNonNull(referencedTables);
-        this.reservationUsage = Objects.requireNonNull(reservationUsage);
-        this.schema = Objects.requireNonNull(schema);
-        this.statementType = Objects.requireNonNull(statementType);
-        this.timeline = Objects.requireNonNull(timeline);
-        this.totalBytesBilled = Objects.requireNonNull(totalBytesBilled);
-        this.totalBytesProcessed = Objects.requireNonNull(totalBytesProcessed);
-        this.totalBytesProcessedAccuracy = Objects.requireNonNull(totalBytesProcessedAccuracy);
-        this.totalPartitionsProcessed = Objects.requireNonNull(totalPartitionsProcessed);
-        this.totalSlotMs = Objects.requireNonNull(totalSlotMs);
-        this.undeclaredQueryParameters = Objects.requireNonNull(undeclaredQueryParameters);
+        this.biEngineStatistics = biEngineStatistics;
+        this.billingTier = billingTier;
+        this.cacheHit = cacheHit;
+        this.ddlAffectedRowAccessPolicyCount = ddlAffectedRowAccessPolicyCount;
+        this.ddlDestinationTable = ddlDestinationTable;
+        this.ddlOperationPerformed = ddlOperationPerformed;
+        this.ddlTargetDataset = ddlTargetDataset;
+        this.ddlTargetRoutine = ddlTargetRoutine;
+        this.ddlTargetRowAccessPolicy = ddlTargetRowAccessPolicy;
+        this.ddlTargetTable = ddlTargetTable;
+        this.dmlStats = dmlStats;
+        this.estimatedBytesProcessed = estimatedBytesProcessed;
+        this.mlStatistics = mlStatistics;
+        this.modelTraining = modelTraining;
+        this.numDmlAffectedRows = numDmlAffectedRows;
+        this.queryPlan = queryPlan;
+        this.referencedRoutines = referencedRoutines;
+        this.referencedTables = referencedTables;
+        this.reservationUsage = reservationUsage;
+        this.schema = schema;
+        this.statementType = statementType;
+        this.timeline = timeline;
+        this.totalBytesBilled = totalBytesBilled;
+        this.totalBytesProcessed = totalBytesProcessed;
+        this.totalBytesProcessedAccuracy = totalBytesProcessedAccuracy;
+        this.totalPartitionsProcessed = totalPartitionsProcessed;
+        this.totalSlotMs = totalSlotMs;
+        this.undeclaredQueryParameters = undeclaredQueryParameters;
     }
 
     /**

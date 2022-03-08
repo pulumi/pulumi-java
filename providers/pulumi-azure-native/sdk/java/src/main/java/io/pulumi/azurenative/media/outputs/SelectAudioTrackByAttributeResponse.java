@@ -45,11 +45,11 @@ public final class SelectAudioTrackByAttributeResponse {
         String filter,
         @Nullable String filterValue,
         String odataType) {
-        this.attribute = Objects.requireNonNull(attribute);
+        this.attribute = attribute;
         this.channelMapping = channelMapping;
-        this.filter = Objects.requireNonNull(filter);
+        this.filter = filter;
         this.filterValue = filterValue;
-        this.odataType = Objects.requireNonNull(odataType);
+        this.odataType = odataType;
     }
 
     /**

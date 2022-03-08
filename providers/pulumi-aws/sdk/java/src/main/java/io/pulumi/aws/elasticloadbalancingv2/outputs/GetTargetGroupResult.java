@@ -59,25 +59,25 @@ public final class GetTargetGroupResult {
         Map<String,String> tags,
         String targetType,
         String vpcId) {
-        this.arn = Objects.requireNonNull(arn);
-        this.arnSuffix = Objects.requireNonNull(arnSuffix);
-        this.connectionTermination = Objects.requireNonNull(connectionTermination);
-        this.deregistrationDelay = Objects.requireNonNull(deregistrationDelay);
-        this.healthCheck = Objects.requireNonNull(healthCheck);
-        this.id = Objects.requireNonNull(id);
-        this.lambdaMultiValueHeadersEnabled = Objects.requireNonNull(lambdaMultiValueHeadersEnabled);
-        this.loadBalancingAlgorithmType = Objects.requireNonNull(loadBalancingAlgorithmType);
-        this.name = Objects.requireNonNull(name);
-        this.port = Objects.requireNonNull(port);
-        this.preserveClientIp = Objects.requireNonNull(preserveClientIp);
-        this.protocol = Objects.requireNonNull(protocol);
-        this.protocolVersion = Objects.requireNonNull(protocolVersion);
-        this.proxyProtocolV2 = Objects.requireNonNull(proxyProtocolV2);
-        this.slowStart = Objects.requireNonNull(slowStart);
-        this.stickiness = Objects.requireNonNull(stickiness);
-        this.tags = Objects.requireNonNull(tags);
-        this.targetType = Objects.requireNonNull(targetType);
-        this.vpcId = Objects.requireNonNull(vpcId);
+        this.arn = arn;
+        this.arnSuffix = arnSuffix;
+        this.connectionTermination = connectionTermination;
+        this.deregistrationDelay = deregistrationDelay;
+        this.healthCheck = healthCheck;
+        this.id = id;
+        this.lambdaMultiValueHeadersEnabled = lambdaMultiValueHeadersEnabled;
+        this.loadBalancingAlgorithmType = loadBalancingAlgorithmType;
+        this.name = name;
+        this.port = port;
+        this.preserveClientIp = preserveClientIp;
+        this.protocol = protocol;
+        this.protocolVersion = protocolVersion;
+        this.proxyProtocolV2 = proxyProtocolV2;
+        this.slowStart = slowStart;
+        this.stickiness = stickiness;
+        this.tags = tags;
+        this.targetType = targetType;
+        this.vpcId = vpcId;
     }
 
     public String getArn() {

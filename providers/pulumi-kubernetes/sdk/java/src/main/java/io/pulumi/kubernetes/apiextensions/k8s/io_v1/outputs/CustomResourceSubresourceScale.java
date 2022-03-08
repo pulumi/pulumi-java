@@ -33,8 +33,8 @@ public final class CustomResourceSubresourceScale {
         String specReplicasPath,
         String statusReplicasPath) {
         this.labelSelectorPath = labelSelectorPath;
-        this.specReplicasPath = Objects.requireNonNull(specReplicasPath);
-        this.statusReplicasPath = Objects.requireNonNull(statusReplicasPath);
+        this.specReplicasPath = specReplicasPath;
+        this.statusReplicasPath = statusReplicasPath;
     }
 
     /**

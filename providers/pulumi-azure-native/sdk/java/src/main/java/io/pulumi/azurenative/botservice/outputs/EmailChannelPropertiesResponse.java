@@ -33,8 +33,8 @@ public final class EmailChannelPropertiesResponse {
         String emailAddress,
         Boolean isEnabled,
         @Nullable String password) {
-        this.emailAddress = Objects.requireNonNull(emailAddress);
-        this.isEnabled = Objects.requireNonNull(isEnabled);
+        this.emailAddress = emailAddress;
+        this.isEnabled = isEnabled;
         this.password = password;
     }
 

@@ -19,7 +19,7 @@ public final class WebACLIPSetReferenceStatement {
     private WebACLIPSetReferenceStatement(
         String arn,
         @Nullable WebACLIPSetForwardedIPConfiguration iPSetForwardedIPConfig) {
-        this.arn = Objects.requireNonNull(arn);
+        this.arn = arn;
         this.iPSetForwardedIPConfig = iPSetForwardedIPConfig;
     }
 

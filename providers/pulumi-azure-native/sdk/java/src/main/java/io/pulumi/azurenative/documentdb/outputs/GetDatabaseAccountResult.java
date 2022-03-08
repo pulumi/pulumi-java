@@ -246,35 +246,35 @@ public final class GetDatabaseAccountResult {
         this.connectorOffer = connectorOffer;
         this.consistencyPolicy = consistencyPolicy;
         this.cors = cors;
-        this.databaseAccountOfferType = Objects.requireNonNull(databaseAccountOfferType);
+        this.databaseAccountOfferType = databaseAccountOfferType;
         this.defaultIdentity = defaultIdentity;
         this.disableKeyBasedMetadataWriteAccess = disableKeyBasedMetadataWriteAccess;
-        this.documentEndpoint = Objects.requireNonNull(documentEndpoint);
+        this.documentEndpoint = documentEndpoint;
         this.enableAnalyticalStorage = enableAnalyticalStorage;
         this.enableAutomaticFailover = enableAutomaticFailover;
         this.enableCassandraConnector = enableCassandraConnector;
         this.enableFreeTier = enableFreeTier;
         this.enableMultipleWriteLocations = enableMultipleWriteLocations;
-        this.failoverPolicies = Objects.requireNonNull(failoverPolicies);
-        this.id = Objects.requireNonNull(id);
+        this.failoverPolicies = failoverPolicies;
+        this.id = id;
         this.identity = identity;
         this.ipRules = ipRules;
         this.isVirtualNetworkFilterEnabled = isVirtualNetworkFilterEnabled;
         this.keyVaultKeyUri = keyVaultKeyUri;
         this.kind = kind;
         this.location = location;
-        this.locations = Objects.requireNonNull(locations);
-        this.name = Objects.requireNonNull(name);
+        this.locations = locations;
+        this.name = name;
         this.networkAclBypass = networkAclBypass;
         this.networkAclBypassResourceIds = networkAclBypassResourceIds;
-        this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.privateEndpointConnections = privateEndpointConnections;
+        this.provisioningState = provisioningState;
         this.publicNetworkAccess = publicNetworkAccess;
-        this.readLocations = Objects.requireNonNull(readLocations);
+        this.readLocations = readLocations;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.virtualNetworkRules = virtualNetworkRules;
-        this.writeLocations = Objects.requireNonNull(writeLocations);
+        this.writeLocations = writeLocations;
     }
 
     /**

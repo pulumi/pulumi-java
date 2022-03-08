@@ -32,9 +32,9 @@ public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse {
         GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse cloudSql,
         String connectionType,
         Boolean hasCredential) {
-        this.cloudSql = Objects.requireNonNull(cloudSql);
-        this.connectionType = Objects.requireNonNull(connectionType);
-        this.hasCredential = Objects.requireNonNull(hasCredential);
+        this.cloudSql = cloudSql;
+        this.connectionType = connectionType;
+        this.hasCredential = hasCredential;
     }
 
     /**

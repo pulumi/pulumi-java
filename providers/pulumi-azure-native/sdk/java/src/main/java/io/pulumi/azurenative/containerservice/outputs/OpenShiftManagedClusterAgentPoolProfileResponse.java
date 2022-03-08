@@ -51,12 +51,12 @@ public final class OpenShiftManagedClusterAgentPoolProfileResponse {
         @Nullable String role,
         @Nullable String subnetCidr,
         String vmSize) {
-        this.count = Objects.requireNonNull(count);
-        this.name = Objects.requireNonNull(name);
+        this.count = count;
+        this.name = name;
         this.osType = osType;
         this.role = role;
         this.subnetCidr = subnetCidr;
-        this.vmSize = Objects.requireNonNull(vmSize);
+        this.vmSize = vmSize;
     }
 
     /**

@@ -48,12 +48,12 @@ public final class X12ProcessingSettingsResponse {
         Boolean preserveInterchange,
         Boolean suspendInterchangeOnError,
         Boolean useDotAsDecimalSeparator) {
-        this.convertImpliedDecimal = Objects.requireNonNull(convertImpliedDecimal);
-        this.createEmptyXmlTagsForTrailingSeparators = Objects.requireNonNull(createEmptyXmlTagsForTrailingSeparators);
-        this.maskSecurityInfo = Objects.requireNonNull(maskSecurityInfo);
-        this.preserveInterchange = Objects.requireNonNull(preserveInterchange);
-        this.suspendInterchangeOnError = Objects.requireNonNull(suspendInterchangeOnError);
-        this.useDotAsDecimalSeparator = Objects.requireNonNull(useDotAsDecimalSeparator);
+        this.convertImpliedDecimal = convertImpliedDecimal;
+        this.createEmptyXmlTagsForTrailingSeparators = createEmptyXmlTagsForTrailingSeparators;
+        this.maskSecurityInfo = maskSecurityInfo;
+        this.preserveInterchange = preserveInterchange;
+        this.suspendInterchangeOnError = suspendInterchangeOnError;
+        this.useDotAsDecimalSeparator = useDotAsDecimalSeparator;
     }
 
     /**

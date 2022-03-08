@@ -36,7 +36,7 @@ public final class FrameworkControl {
         String controlName,
         @Nullable FrameworkControlControlScopeProperties controlScope) {
         this.controlInputParameters = controlInputParameters;
-        this.controlName = Objects.requireNonNull(controlName);
+        this.controlName = controlName;
         this.controlScope = controlScope;
     }
 

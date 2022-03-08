@@ -44,11 +44,11 @@ public final class PasswordValidationPolicyResponse {
         Integer minLength,
         String passwordChangeInterval,
         Integer reuseInterval) {
-        this.complexity = Objects.requireNonNull(complexity);
-        this.disallowUsernameSubstring = Objects.requireNonNull(disallowUsernameSubstring);
-        this.minLength = Objects.requireNonNull(minLength);
-        this.passwordChangeInterval = Objects.requireNonNull(passwordChangeInterval);
-        this.reuseInterval = Objects.requireNonNull(reuseInterval);
+        this.complexity = complexity;
+        this.disallowUsernameSubstring = disallowUsernameSubstring;
+        this.minLength = minLength;
+        this.passwordChangeInterval = passwordChangeInterval;
+        this.reuseInterval = reuseInterval;
     }
 
     /**

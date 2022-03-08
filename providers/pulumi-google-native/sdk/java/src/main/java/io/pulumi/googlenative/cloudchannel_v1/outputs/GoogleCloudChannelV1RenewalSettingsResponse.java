@@ -38,10 +38,10 @@ public final class GoogleCloudChannelV1RenewalSettingsResponse {
         GoogleCloudChannelV1PeriodResponse paymentCycle,
         String paymentPlan,
         Boolean resizeUnitCount) {
-        this.enableRenewal = Objects.requireNonNull(enableRenewal);
-        this.paymentCycle = Objects.requireNonNull(paymentCycle);
-        this.paymentPlan = Objects.requireNonNull(paymentPlan);
-        this.resizeUnitCount = Objects.requireNonNull(resizeUnitCount);
+        this.enableRenewal = enableRenewal;
+        this.paymentCycle = paymentCycle;
+        this.paymentPlan = paymentPlan;
+        this.resizeUnitCount = resizeUnitCount;
     }
 
     /**

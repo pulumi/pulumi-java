@@ -33,7 +33,7 @@ public final class ConfigMapKeySelector {
         String key,
         @Nullable String name,
         @Nullable Boolean optional) {
-        this.key = Objects.requireNonNull(key);
+        this.key = key;
         this.name = name;
         this.optional = optional;
     }

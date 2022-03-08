@@ -67,14 +67,14 @@ public final class MigrateSqlServerSqlMITaskInputResponse {
         @Nullable List<String> selectedLogins,
         SqlConnectionInfoResponse sourceConnectionInfo,
         SqlConnectionInfoResponse targetConnectionInfo) {
-        this.backupBlobShare = Objects.requireNonNull(backupBlobShare);
+        this.backupBlobShare = backupBlobShare;
         this.backupFileShare = backupFileShare;
         this.backupMode = backupMode;
         this.selectedAgentJobs = selectedAgentJobs;
-        this.selectedDatabases = Objects.requireNonNull(selectedDatabases);
+        this.selectedDatabases = selectedDatabases;
         this.selectedLogins = selectedLogins;
-        this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
-        this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
+        this.sourceConnectionInfo = sourceConnectionInfo;
+        this.targetConnectionInfo = targetConnectionInfo;
     }
 
     /**

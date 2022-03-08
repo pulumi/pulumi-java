@@ -98,12 +98,12 @@ public final class ParquetDatasetResponse {
         this.compressionCodec = compressionCodec;
         this.description = description;
         this.folder = folder;
-        this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
-        this.location = Objects.requireNonNull(location);
+        this.linkedServiceName = linkedServiceName;
+        this.location = location;
         this.parameters = parameters;
         this.schema = schema;
         this.structure = structure;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

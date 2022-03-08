@@ -14,7 +14,7 @@ public final class ParsedDataResponse {
 
     @OutputCustomType.Constructor({"segments"})
     private ParsedDataResponse(List<SegmentResponse> segments) {
-        this.segments = Objects.requireNonNull(segments);
+        this.segments = segments;
     }
 
     public List<SegmentResponse> getSegments() {

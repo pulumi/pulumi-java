@@ -37,10 +37,10 @@ public final class NodePoolAutoscalingResponse {
         Boolean enabled,
         Integer maxNodeCount,
         Integer minNodeCount) {
-        this.autoprovisioned = Objects.requireNonNull(autoprovisioned);
-        this.enabled = Objects.requireNonNull(enabled);
-        this.maxNodeCount = Objects.requireNonNull(maxNodeCount);
-        this.minNodeCount = Objects.requireNonNull(minNodeCount);
+        this.autoprovisioned = autoprovisioned;
+        this.enabled = enabled;
+        this.maxNodeCount = maxNodeCount;
+        this.minNodeCount = minNodeCount;
     }
 
     /**

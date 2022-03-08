@@ -35,9 +35,9 @@ public final class NetworkRuleSetPropertiesResponse {
         Boolean applyToBuiltInEventHubEndpoint,
         @Nullable String defaultAction,
         List<NetworkRuleSetIpRuleResponse> ipRules) {
-        this.applyToBuiltInEventHubEndpoint = Objects.requireNonNull(applyToBuiltInEventHubEndpoint);
+        this.applyToBuiltInEventHubEndpoint = applyToBuiltInEventHubEndpoint;
         this.defaultAction = defaultAction;
-        this.ipRules = Objects.requireNonNull(ipRules);
+        this.ipRules = ipRules;
     }
 
     /**

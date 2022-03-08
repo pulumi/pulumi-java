@@ -17,7 +17,7 @@ public final class HintResponse {
 
     @OutputCustomType.Constructor({"humanReadableName"})
     private HintResponse(String humanReadableName) {
-        this.humanReadableName = Objects.requireNonNull(humanReadableName);
+        this.humanReadableName = humanReadableName;
     }
 
     /**

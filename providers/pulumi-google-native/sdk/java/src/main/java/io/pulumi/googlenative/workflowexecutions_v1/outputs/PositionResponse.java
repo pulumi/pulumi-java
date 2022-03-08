@@ -30,9 +30,9 @@ public final class PositionResponse {
         String column,
         String length,
         String line) {
-        this.column = Objects.requireNonNull(column);
-        this.length = Objects.requireNonNull(length);
-        this.line = Objects.requireNonNull(line);
+        this.column = column;
+        this.length = length;
+        this.line = line;
     }
 
     /**

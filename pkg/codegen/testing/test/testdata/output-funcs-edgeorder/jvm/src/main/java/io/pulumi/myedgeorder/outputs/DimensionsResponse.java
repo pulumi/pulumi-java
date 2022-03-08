@@ -55,13 +55,13 @@ public final class DimensionsResponse {
         Double weight,
         String weightUnit,
         Double width) {
-        this.depth = Objects.requireNonNull(depth);
-        this.height = Objects.requireNonNull(height);
-        this.length = Objects.requireNonNull(length);
-        this.lengthHeightUnit = Objects.requireNonNull(lengthHeightUnit);
-        this.weight = Objects.requireNonNull(weight);
-        this.weightUnit = Objects.requireNonNull(weightUnit);
-        this.width = Objects.requireNonNull(width);
+        this.depth = depth;
+        this.height = height;
+        this.length = length;
+        this.lengthHeightUnit = lengthHeightUnit;
+        this.weight = weight;
+        this.weightUnit = weightUnit;
+        this.width = width;
     }
 
     /**

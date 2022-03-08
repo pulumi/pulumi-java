@@ -17,7 +17,7 @@ public final class PrivateLinkServiceProxyResponseRemotePrivateEndpointConnectio
 
     @OutputCustomType.Constructor({"id"})
     private PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection(String id) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
     }
 
     /**

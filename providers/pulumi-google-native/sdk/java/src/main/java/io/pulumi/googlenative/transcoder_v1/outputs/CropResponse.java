@@ -36,10 +36,10 @@ public final class CropResponse {
         Integer leftPixels,
         Integer rightPixels,
         Integer topPixels) {
-        this.bottomPixels = Objects.requireNonNull(bottomPixels);
-        this.leftPixels = Objects.requireNonNull(leftPixels);
-        this.rightPixels = Objects.requireNonNull(rightPixels);
-        this.topPixels = Objects.requireNonNull(topPixels);
+        this.bottomPixels = bottomPixels;
+        this.leftPixels = leftPixels;
+        this.rightPixels = rightPixels;
+        this.topPixels = topPixels;
     }
 
     /**

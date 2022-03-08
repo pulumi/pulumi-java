@@ -91,19 +91,19 @@ public final class VmwareVmDetailsResponse {
         String powerState,
         String uuid,
         String vmId) {
-        this.bootOption = Objects.requireNonNull(bootOption);
-        this.committedStorage = Objects.requireNonNull(committedStorage);
-        this.committedStorageMb = Objects.requireNonNull(committedStorageMb);
-        this.cpuCount = Objects.requireNonNull(cpuCount);
-        this.datacenterDescription = Objects.requireNonNull(datacenterDescription);
-        this.datacenterId = Objects.requireNonNull(datacenterId);
-        this.diskCount = Objects.requireNonNull(diskCount);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.guestDescription = Objects.requireNonNull(guestDescription);
-        this.memoryMb = Objects.requireNonNull(memoryMb);
-        this.powerState = Objects.requireNonNull(powerState);
-        this.uuid = Objects.requireNonNull(uuid);
-        this.vmId = Objects.requireNonNull(vmId);
+        this.bootOption = bootOption;
+        this.committedStorage = committedStorage;
+        this.committedStorageMb = committedStorageMb;
+        this.cpuCount = cpuCount;
+        this.datacenterDescription = datacenterDescription;
+        this.datacenterId = datacenterId;
+        this.diskCount = diskCount;
+        this.displayName = displayName;
+        this.guestDescription = guestDescription;
+        this.memoryMb = memoryMb;
+        this.powerState = powerState;
+        this.uuid = uuid;
+        this.vmId = vmId;
     }
 
     /**

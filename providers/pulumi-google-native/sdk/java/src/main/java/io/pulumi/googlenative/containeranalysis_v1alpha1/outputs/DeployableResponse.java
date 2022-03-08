@@ -18,7 +18,7 @@ public final class DeployableResponse {
 
     @OutputCustomType.Constructor({"resourceUri"})
     private DeployableResponse(List<String> resourceUri) {
-        this.resourceUri = Objects.requireNonNull(resourceUri);
+        this.resourceUri = resourceUri;
     }
 
     /**

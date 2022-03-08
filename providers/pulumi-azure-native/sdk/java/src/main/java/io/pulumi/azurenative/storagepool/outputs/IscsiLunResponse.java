@@ -24,8 +24,8 @@ public final class IscsiLunResponse {
     private IscsiLunResponse(
         String managedDiskAzureResourceId,
         String name) {
-        this.managedDiskAzureResourceId = Objects.requireNonNull(managedDiskAzureResourceId);
-        this.name = Objects.requireNonNull(name);
+        this.managedDiskAzureResourceId = managedDiskAzureResourceId;
+        this.name = name;
     }
 
     /**

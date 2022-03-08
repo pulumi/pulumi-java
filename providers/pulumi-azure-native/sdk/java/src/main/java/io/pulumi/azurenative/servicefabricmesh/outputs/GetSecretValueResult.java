@@ -57,12 +57,12 @@ public final class GetSecretValueResult {
         @Nullable Map<String,String> tags,
         String type,
         @Nullable String value) {
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.id = id;
+        this.location = location;
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.value = value;
     }
 

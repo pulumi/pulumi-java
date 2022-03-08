@@ -30,9 +30,9 @@ public final class CertificateInformationResponse {
         String expiry,
         String subject,
         String thumbprint) {
-        this.expiry = Objects.requireNonNull(expiry);
-        this.subject = Objects.requireNonNull(subject);
-        this.thumbprint = Objects.requireNonNull(thumbprint);
+        this.expiry = expiry;
+        this.subject = subject;
+        this.thumbprint = thumbprint;
     }
 
     /**

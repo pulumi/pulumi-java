@@ -79,14 +79,14 @@ public final class GetEndpointResult {
         this.createdAt = createdAt;
         this.createdBy = createdBy;
         this.createdByType = createdByType;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.lastModifiedAt = lastModifiedAt;
         this.lastModifiedBy = lastModifiedBy;
         this.lastModifiedByType = lastModifiedByType;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.resourceId = resourceId;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

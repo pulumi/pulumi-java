@@ -80,16 +80,16 @@ public final class GoogleCloudContactcenterinsightsV1CallAnnotationResponse {
         GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse phraseMatchData,
         GoogleCloudContactcenterinsightsV1SentimentDataResponse sentimentData,
         GoogleCloudContactcenterinsightsV1SilenceDataResponse silenceData) {
-        this.annotationEndBoundary = Objects.requireNonNull(annotationEndBoundary);
-        this.annotationStartBoundary = Objects.requireNonNull(annotationStartBoundary);
-        this.channelTag = Objects.requireNonNull(channelTag);
-        this.entityMentionData = Objects.requireNonNull(entityMentionData);
-        this.holdData = Objects.requireNonNull(holdData);
-        this.intentMatchData = Objects.requireNonNull(intentMatchData);
-        this.interruptionData = Objects.requireNonNull(interruptionData);
-        this.phraseMatchData = Objects.requireNonNull(phraseMatchData);
-        this.sentimentData = Objects.requireNonNull(sentimentData);
-        this.silenceData = Objects.requireNonNull(silenceData);
+        this.annotationEndBoundary = annotationEndBoundary;
+        this.annotationStartBoundary = annotationStartBoundary;
+        this.channelTag = channelTag;
+        this.entityMentionData = entityMentionData;
+        this.holdData = holdData;
+        this.intentMatchData = intentMatchData;
+        this.interruptionData = interruptionData;
+        this.phraseMatchData = phraseMatchData;
+        this.sentimentData = sentimentData;
+        this.silenceData = silenceData;
     }
 
     /**

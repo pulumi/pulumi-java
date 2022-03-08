@@ -25,8 +25,8 @@ public final class RecurrenceResponse {
     private RecurrenceResponse(
         String frequency,
         RecurrentScheduleResponse schedule) {
-        this.frequency = Objects.requireNonNull(frequency);
-        this.schedule = Objects.requireNonNull(schedule);
+        this.frequency = frequency;
+        this.schedule = schedule;
     }
 
     /**

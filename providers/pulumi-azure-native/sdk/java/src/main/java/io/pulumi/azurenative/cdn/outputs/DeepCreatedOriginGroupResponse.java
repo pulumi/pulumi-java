@@ -50,8 +50,8 @@ public final class DeepCreatedOriginGroupResponse {
         @Nullable ResponseBasedOriginErrorDetectionParametersResponse responseBasedOriginErrorDetectionSettings,
         @Nullable Integer trafficRestorationTimeToHealedOrNewEndpointsInMinutes) {
         this.healthProbeSettings = healthProbeSettings;
-        this.name = Objects.requireNonNull(name);
-        this.origins = Objects.requireNonNull(origins);
+        this.name = name;
+        this.origins = origins;
         this.responseBasedOriginErrorDetectionSettings = responseBasedOriginErrorDetectionSettings;
         this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes = trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
     }

@@ -90,15 +90,15 @@ public final class SapBWLinkedServiceResponse {
         String type,
         @Nullable Object userName) {
         this.annotations = annotations;
-        this.clientId = Objects.requireNonNull(clientId);
+        this.clientId = clientId;
         this.connectVia = connectVia;
         this.description = description;
         this.encryptedCredential = encryptedCredential;
         this.parameters = parameters;
         this.password = password;
-        this.server = Objects.requireNonNull(server);
-        this.systemNumber = Objects.requireNonNull(systemNumber);
-        this.type = Objects.requireNonNull(type);
+        this.server = server;
+        this.systemNumber = systemNumber;
+        this.type = type;
         this.userName = userName;
     }
 

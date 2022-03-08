@@ -33,7 +33,7 @@ public final class RegionInstanceGroupManagerVersion {
         String instanceTemplate,
         @Nullable String name,
         @Nullable RegionInstanceGroupManagerVersionTargetSize targetSize) {
-        this.instanceTemplate = Objects.requireNonNull(instanceTemplate);
+        this.instanceTemplate = instanceTemplate;
         this.name = name;
         this.targetSize = targetSize;
     }

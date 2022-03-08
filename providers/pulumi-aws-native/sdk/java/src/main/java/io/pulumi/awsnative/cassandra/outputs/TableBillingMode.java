@@ -19,7 +19,7 @@ public final class TableBillingMode {
     private TableBillingMode(
         TableMode mode,
         @Nullable TableProvisionedThroughput provisionedThroughput) {
-        this.mode = Objects.requireNonNull(mode);
+        this.mode = mode;
         this.provisionedThroughput = provisionedThroughput;
     }
 

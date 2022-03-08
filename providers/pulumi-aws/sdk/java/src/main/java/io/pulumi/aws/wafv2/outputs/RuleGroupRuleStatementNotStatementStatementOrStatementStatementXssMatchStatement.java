@@ -29,7 +29,7 @@ public final class RuleGroupRuleStatementNotStatementStatementOrStatementStateme
         @Nullable RuleGroupRuleStatementNotStatementStatementOrStatementStatementXssMatchStatementFieldToMatch fieldToMatch,
         List<RuleGroupRuleStatementNotStatementStatementOrStatementStatementXssMatchStatementTextTransformation> textTransformations) {
         this.fieldToMatch = fieldToMatch;
-        this.textTransformations = Objects.requireNonNull(textTransformations);
+        this.textTransformations = textTransformations;
     }
 
     /**

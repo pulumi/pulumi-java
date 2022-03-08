@@ -17,7 +17,7 @@ public final class BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncry
 
     @OutputCustomType.Constructor({"status"})
     private BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjects(String status) {
-        this.status = Objects.requireNonNull(status);
+        this.status = status;
     }
 
     /**

@@ -62,15 +62,15 @@ public final class GetNetworkEdgeSecurityServiceResult {
         String securityPolicy,
         String selfLink,
         String selfLinkWithId) {
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.description = Objects.requireNonNull(description);
-        this.fingerprint = Objects.requireNonNull(fingerprint);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.region = Objects.requireNonNull(region);
-        this.securityPolicy = Objects.requireNonNull(securityPolicy);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
+        this.creationTimestamp = creationTimestamp;
+        this.description = description;
+        this.fingerprint = fingerprint;
+        this.kind = kind;
+        this.name = name;
+        this.region = region;
+        this.securityPolicy = securityPolicy;
+        this.selfLink = selfLink;
+        this.selfLinkWithId = selfLinkWithId;
     }
 
     /**

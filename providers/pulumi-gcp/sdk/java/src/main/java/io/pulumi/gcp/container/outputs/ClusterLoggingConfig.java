@@ -18,7 +18,7 @@ public final class ClusterLoggingConfig {
 
     @OutputCustomType.Constructor({"enableComponents"})
     private ClusterLoggingConfig(List<String> enableComponents) {
-        this.enableComponents = Objects.requireNonNull(enableComponents);
+        this.enableComponents = enableComponents;
     }
 
     /**

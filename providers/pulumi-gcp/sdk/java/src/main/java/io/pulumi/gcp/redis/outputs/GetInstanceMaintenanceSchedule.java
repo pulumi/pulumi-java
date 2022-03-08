@@ -18,9 +18,9 @@ public final class GetInstanceMaintenanceSchedule {
         String endTime,
         String scheduleDeadlineTime,
         String startTime) {
-        this.endTime = Objects.requireNonNull(endTime);
-        this.scheduleDeadlineTime = Objects.requireNonNull(scheduleDeadlineTime);
-        this.startTime = Objects.requireNonNull(startTime);
+        this.endTime = endTime;
+        this.scheduleDeadlineTime = scheduleDeadlineTime;
+        this.startTime = startTime;
     }
 
     public String getEndTime() {

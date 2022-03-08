@@ -39,10 +39,10 @@ public final class VirtualNodeSpecListenerOutlierDetection {
         VirtualNodeSpecListenerOutlierDetectionInterval interval,
         Integer maxEjectionPercent,
         Integer maxServerErrors) {
-        this.baseEjectionDuration = Objects.requireNonNull(baseEjectionDuration);
-        this.interval = Objects.requireNonNull(interval);
-        this.maxEjectionPercent = Objects.requireNonNull(maxEjectionPercent);
-        this.maxServerErrors = Objects.requireNonNull(maxServerErrors);
+        this.baseEjectionDuration = baseEjectionDuration;
+        this.interval = interval;
+        this.maxEjectionPercent = maxEjectionPercent;
+        this.maxServerErrors = maxServerErrors;
     }
 
     /**

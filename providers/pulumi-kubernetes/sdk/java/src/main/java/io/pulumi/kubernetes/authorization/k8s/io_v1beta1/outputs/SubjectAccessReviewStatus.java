@@ -39,7 +39,7 @@ public final class SubjectAccessReviewStatus {
         @Nullable Boolean denied,
         @Nullable String evaluationError,
         @Nullable String reason) {
-        this.allowed = Objects.requireNonNull(allowed);
+        this.allowed = allowed;
         this.denied = denied;
         this.evaluationError = evaluationError;
         this.reason = reason;

@@ -186,32 +186,32 @@ public final class GetVolumeResult {
         Double usageThreshold,
         @Nullable String volumeType) {
         this.backupId = backupId;
-        this.baremetalTenantId = Objects.requireNonNull(baremetalTenantId);
-        this.creationToken = Objects.requireNonNull(creationToken);
+        this.baremetalTenantId = baremetalTenantId;
+        this.creationToken = creationToken;
         this.dataProtection = dataProtection;
         this.encryptionKeySource = encryptionKeySource;
         this.exportPolicy = exportPolicy;
-        this.fileSystemId = Objects.requireNonNull(fileSystemId);
-        this.id = Objects.requireNonNull(id);
+        this.fileSystemId = fileSystemId;
+        this.id = id;
         this.isRestoring = isRestoring;
         this.kerberosEnabled = kerberosEnabled;
         this.ldapEnabled = ldapEnabled;
-        this.location = Objects.requireNonNull(location);
-        this.mountTargets = Objects.requireNonNull(mountTargets);
-        this.name = Objects.requireNonNull(name);
+        this.location = location;
+        this.mountTargets = mountTargets;
+        this.name = name;
         this.protocolTypes = protocolTypes;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.securityStyle = securityStyle;
         this.serviceLevel = serviceLevel;
         this.smbContinuouslyAvailable = smbContinuouslyAvailable;
         this.smbEncryption = smbEncryption;
         this.snapshotDirectoryVisible = snapshotDirectoryVisible;
         this.snapshotId = snapshotId;
-        this.subnetId = Objects.requireNonNull(subnetId);
+        this.subnetId = subnetId;
         this.tags = tags;
         this.throughputMibps = throughputMibps;
-        this.type = Objects.requireNonNull(type);
-        this.usageThreshold = Objects.requireNonNull(usageThreshold);
+        this.type = type;
+        this.usageThreshold = usageThreshold;
         this.volumeType = volumeType;
     }
 

@@ -41,9 +41,9 @@ public final class SSISLogLocationResponse {
         @Nullable Object logRefreshInterval,
         String type) {
         this.accessCredential = accessCredential;
-        this.logPath = Objects.requireNonNull(logPath);
+        this.logPath = logPath;
         this.logRefreshInterval = logRefreshInterval;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

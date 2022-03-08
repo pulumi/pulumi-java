@@ -102,20 +102,20 @@ public final class GetDomainNameResult {
         String regionalZoneId,
         String securityPolicy,
         @Nullable Map<String,String> tags) {
-        this.arn = Objects.requireNonNull(arn);
-        this.certificateArn = Objects.requireNonNull(certificateArn);
-        this.certificateName = Objects.requireNonNull(certificateName);
-        this.certificateUploadDate = Objects.requireNonNull(certificateUploadDate);
-        this.cloudfrontDomainName = Objects.requireNonNull(cloudfrontDomainName);
-        this.cloudfrontZoneId = Objects.requireNonNull(cloudfrontZoneId);
-        this.domainName = Objects.requireNonNull(domainName);
-        this.endpointConfigurations = Objects.requireNonNull(endpointConfigurations);
-        this.id = Objects.requireNonNull(id);
-        this.regionalCertificateArn = Objects.requireNonNull(regionalCertificateArn);
-        this.regionalCertificateName = Objects.requireNonNull(regionalCertificateName);
-        this.regionalDomainName = Objects.requireNonNull(regionalDomainName);
-        this.regionalZoneId = Objects.requireNonNull(regionalZoneId);
-        this.securityPolicy = Objects.requireNonNull(securityPolicy);
+        this.arn = arn;
+        this.certificateArn = certificateArn;
+        this.certificateName = certificateName;
+        this.certificateUploadDate = certificateUploadDate;
+        this.cloudfrontDomainName = cloudfrontDomainName;
+        this.cloudfrontZoneId = cloudfrontZoneId;
+        this.domainName = domainName;
+        this.endpointConfigurations = endpointConfigurations;
+        this.id = id;
+        this.regionalCertificateArn = regionalCertificateArn;
+        this.regionalCertificateName = regionalCertificateName;
+        this.regionalDomainName = regionalDomainName;
+        this.regionalZoneId = regionalZoneId;
+        this.securityPolicy = securityPolicy;
         this.tags = tags;
     }
 

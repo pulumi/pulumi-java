@@ -24,7 +24,7 @@ public final class BucketServerSideEncryptionByDefault {
         @Nullable String kMSMasterKeyID,
         BucketServerSideEncryptionByDefaultSSEAlgorithm sSEAlgorithm) {
         this.kMSMasterKeyID = kMSMasterKeyID;
-        this.sSEAlgorithm = Objects.requireNonNull(sSEAlgorithm);
+        this.sSEAlgorithm = sSEAlgorithm;
     }
 
     /**

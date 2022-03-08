@@ -19,9 +19,9 @@ public final class GetBrokerInstance {
         String consoleUrl,
         List<String> endpoints,
         String ipAddress) {
-        this.consoleUrl = Objects.requireNonNull(consoleUrl);
-        this.endpoints = Objects.requireNonNull(endpoints);
-        this.ipAddress = Objects.requireNonNull(ipAddress);
+        this.consoleUrl = consoleUrl;
+        this.endpoints = endpoints;
+        this.ipAddress = ipAddress;
     }
 
     public String getConsoleUrl() {

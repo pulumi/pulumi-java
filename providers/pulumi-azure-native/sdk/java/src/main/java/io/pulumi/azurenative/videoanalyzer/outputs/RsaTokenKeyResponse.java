@@ -43,11 +43,11 @@ public final class RsaTokenKeyResponse {
         String kid,
         String n,
         String type) {
-        this.alg = Objects.requireNonNull(alg);
-        this.e = Objects.requireNonNull(e);
-        this.kid = Objects.requireNonNull(kid);
-        this.n = Objects.requireNonNull(n);
-        this.type = Objects.requireNonNull(type);
+        this.alg = alg;
+        this.e = e;
+        this.kid = kid;
+        this.n = n;
+        this.type = type;
     }
 
     /**

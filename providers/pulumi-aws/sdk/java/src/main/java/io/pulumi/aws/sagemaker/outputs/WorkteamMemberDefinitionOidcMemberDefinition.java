@@ -18,7 +18,7 @@ public final class WorkteamMemberDefinitionOidcMemberDefinition {
 
     @OutputCustomType.Constructor({"groups"})
     private WorkteamMemberDefinitionOidcMemberDefinition(List<String> groups) {
-        this.groups = Objects.requireNonNull(groups);
+        this.groups = groups;
     }
 
     /**

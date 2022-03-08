@@ -25,8 +25,8 @@ public final class AzureMLWebServiceFileResponse {
     private AzureMLWebServiceFileResponse(
         Object filePath,
         LinkedServiceReferenceResponse linkedServiceName) {
-        this.filePath = Objects.requireNonNull(filePath);
-        this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
+        this.filePath = filePath;
+        this.linkedServiceName = linkedServiceName;
     }
 
     /**

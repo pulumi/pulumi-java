@@ -16,8 +16,8 @@ public final class GetBucketLifecycleRuleAction {
     private GetBucketLifecycleRuleAction(
         String storageClass,
         String type) {
-        this.storageClass = Objects.requireNonNull(storageClass);
-        this.type = Objects.requireNonNull(type);
+        this.storageClass = storageClass;
+        this.type = type;
     }
 
     public String getStorageClass() {

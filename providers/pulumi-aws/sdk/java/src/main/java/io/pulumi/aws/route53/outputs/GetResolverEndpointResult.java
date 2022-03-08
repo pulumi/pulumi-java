@@ -38,15 +38,15 @@ public final class GetResolverEndpointResult {
         @Nullable String resolverEndpointId,
         String status,
         String vpcId) {
-        this.arn = Objects.requireNonNull(arn);
-        this.direction = Objects.requireNonNull(direction);
+        this.arn = arn;
+        this.direction = direction;
         this.filters = filters;
-        this.id = Objects.requireNonNull(id);
-        this.ipAddresses = Objects.requireNonNull(ipAddresses);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.ipAddresses = ipAddresses;
+        this.name = name;
         this.resolverEndpointId = resolverEndpointId;
-        this.status = Objects.requireNonNull(status);
-        this.vpcId = Objects.requireNonNull(vpcId);
+        this.status = status;
+        this.vpcId = vpcId;
     }
 
     public String getArn() {

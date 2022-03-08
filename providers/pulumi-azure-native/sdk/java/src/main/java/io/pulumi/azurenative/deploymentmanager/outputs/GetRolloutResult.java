@@ -106,19 +106,19 @@ public final class GetRolloutResult {
         Integer totalRetryAttempts,
         String type) {
         this.artifactSourceId = artifactSourceId;
-        this.buildVersion = Objects.requireNonNull(buildVersion);
-        this.id = Objects.requireNonNull(id);
+        this.buildVersion = buildVersion;
+        this.id = id;
         this.identity = identity;
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.operationInfo = Objects.requireNonNull(operationInfo);
-        this.services = Objects.requireNonNull(services);
-        this.status = Objects.requireNonNull(status);
-        this.stepGroups = Objects.requireNonNull(stepGroups);
+        this.location = location;
+        this.name = name;
+        this.operationInfo = operationInfo;
+        this.services = services;
+        this.status = status;
+        this.stepGroups = stepGroups;
         this.tags = tags;
-        this.targetServiceTopologyId = Objects.requireNonNull(targetServiceTopologyId);
-        this.totalRetryAttempts = Objects.requireNonNull(totalRetryAttempts);
-        this.type = Objects.requireNonNull(type);
+        this.targetServiceTopologyId = targetServiceTopologyId;
+        this.totalRetryAttempts = totalRetryAttempts;
+        this.type = type;
     }
 
     /**

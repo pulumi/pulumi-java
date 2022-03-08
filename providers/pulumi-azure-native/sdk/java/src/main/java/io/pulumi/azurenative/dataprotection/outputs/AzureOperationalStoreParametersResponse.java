@@ -33,8 +33,8 @@ public final class AzureOperationalStoreParametersResponse {
         String dataStoreType,
         String objectType,
         @Nullable String resourceGroupId) {
-        this.dataStoreType = Objects.requireNonNull(dataStoreType);
-        this.objectType = Objects.requireNonNull(objectType);
+        this.dataStoreType = dataStoreType;
+        this.objectType = objectType;
         this.resourceGroupId = resourceGroupId;
     }
 

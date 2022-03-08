@@ -31,9 +31,9 @@ public final class KpiThresholdsResponse {
         Boolean increasingKpi,
         Double lowerLimit,
         Double upperLimit) {
-        this.increasingKpi = Objects.requireNonNull(increasingKpi);
-        this.lowerLimit = Objects.requireNonNull(lowerLimit);
-        this.upperLimit = Objects.requireNonNull(upperLimit);
+        this.increasingKpi = increasingKpi;
+        this.lowerLimit = lowerLimit;
+        this.upperLimit = upperLimit;
     }
 
     /**

@@ -43,11 +43,11 @@ public final class GetRouteTableAssociation {
         String routeTableAssociationId,
         String routeTableId,
         String subnetId) {
-        this.gatewayId = Objects.requireNonNull(gatewayId);
-        this.main = Objects.requireNonNull(main);
-        this.routeTableAssociationId = Objects.requireNonNull(routeTableAssociationId);
-        this.routeTableId = Objects.requireNonNull(routeTableId);
-        this.subnetId = Objects.requireNonNull(subnetId);
+        this.gatewayId = gatewayId;
+        this.main = main;
+        this.routeTableAssociationId = routeTableAssociationId;
+        this.routeTableId = routeTableId;
+        this.subnetId = subnetId;
     }
 
     /**

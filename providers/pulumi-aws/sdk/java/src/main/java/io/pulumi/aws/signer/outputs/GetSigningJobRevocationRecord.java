@@ -18,9 +18,9 @@ public final class GetSigningJobRevocationRecord {
         String reason,
         String revokedAt,
         String revokedBy) {
-        this.reason = Objects.requireNonNull(reason);
-        this.revokedAt = Objects.requireNonNull(revokedAt);
-        this.revokedBy = Objects.requireNonNull(revokedBy);
+        this.reason = reason;
+        this.revokedAt = revokedAt;
+        this.revokedBy = revokedBy;
     }
 
     public String getReason() {

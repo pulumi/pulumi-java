@@ -25,8 +25,8 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFe
     private GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse(
         List<String> allowedValues,
         String policy) {
-        this.allowedValues = Objects.requireNonNull(allowedValues);
-        this.policy = Objects.requireNonNull(policy);
+        this.allowedValues = allowedValues;
+        this.policy = policy;
     }
 
     /**

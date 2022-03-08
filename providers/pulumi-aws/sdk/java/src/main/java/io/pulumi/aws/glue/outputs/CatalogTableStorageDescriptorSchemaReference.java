@@ -36,7 +36,7 @@ public final class CatalogTableStorageDescriptorSchemaReference {
         Integer schemaVersionNumber) {
         this.schemaId = schemaId;
         this.schemaVersionId = schemaVersionId;
-        this.schemaVersionNumber = Objects.requireNonNull(schemaVersionNumber);
+        this.schemaVersionNumber = schemaVersionNumber;
     }
 
     /**

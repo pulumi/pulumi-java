@@ -13,7 +13,7 @@ public final class GetClusterIstioServiceTelemetry {
 
     @OutputCustomType.Constructor({"resourceName"})
     private GetClusterIstioServiceTelemetry(String resourceName) {
-        this.resourceName = Objects.requireNonNull(resourceName);
+        this.resourceName = resourceName;
     }
 
     public String getPropResourceName() {

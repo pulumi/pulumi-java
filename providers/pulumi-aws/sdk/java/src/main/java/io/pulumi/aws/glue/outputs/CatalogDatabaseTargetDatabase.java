@@ -24,8 +24,8 @@ public final class CatalogDatabaseTargetDatabase {
     private CatalogDatabaseTargetDatabase(
         String catalogId,
         String databaseName) {
-        this.catalogId = Objects.requireNonNull(catalogId);
-        this.databaseName = Objects.requireNonNull(databaseName);
+        this.catalogId = catalogId;
+        this.databaseName = databaseName;
     }
 
     /**

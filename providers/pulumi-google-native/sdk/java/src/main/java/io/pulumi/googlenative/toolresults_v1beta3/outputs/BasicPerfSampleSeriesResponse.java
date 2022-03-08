@@ -18,9 +18,9 @@ public final class BasicPerfSampleSeriesResponse {
         String perfMetricType,
         String perfUnit,
         String sampleSeriesLabel) {
-        this.perfMetricType = Objects.requireNonNull(perfMetricType);
-        this.perfUnit = Objects.requireNonNull(perfUnit);
-        this.sampleSeriesLabel = Objects.requireNonNull(sampleSeriesLabel);
+        this.perfMetricType = perfMetricType;
+        this.perfUnit = perfUnit;
+        this.sampleSeriesLabel = sampleSeriesLabel;
     }
 
     public String getPerfMetricType() {

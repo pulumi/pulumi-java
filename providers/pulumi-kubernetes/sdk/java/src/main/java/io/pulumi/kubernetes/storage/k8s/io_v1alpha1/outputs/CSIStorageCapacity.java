@@ -72,7 +72,7 @@ public final class CSIStorageCapacity {
         this.maximumVolumeSize = maximumVolumeSize;
         this.metadata = metadata;
         this.nodeTopology = nodeTopology;
-        this.storageClassName = Objects.requireNonNull(storageClassName);
+        this.storageClassName = storageClassName;
     }
 
     /**

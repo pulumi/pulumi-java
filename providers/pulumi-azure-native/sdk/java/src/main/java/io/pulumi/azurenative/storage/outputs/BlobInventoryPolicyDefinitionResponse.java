@@ -17,7 +17,7 @@ public final class BlobInventoryPolicyDefinitionResponse {
 
     @OutputCustomType.Constructor({"filters"})
     private BlobInventoryPolicyDefinitionResponse(BlobInventoryPolicyFilterResponse filters) {
-        this.filters = Objects.requireNonNull(filters);
+        this.filters = filters;
     }
 
     /**

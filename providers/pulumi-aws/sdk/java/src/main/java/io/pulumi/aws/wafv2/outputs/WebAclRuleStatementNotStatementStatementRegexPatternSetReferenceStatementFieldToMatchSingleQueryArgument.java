@@ -17,7 +17,7 @@ public final class WebAclRuleStatementNotStatementStatementRegexPatternSetRefere
 
     @OutputCustomType.Constructor({"name"})
     private WebAclRuleStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgument(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

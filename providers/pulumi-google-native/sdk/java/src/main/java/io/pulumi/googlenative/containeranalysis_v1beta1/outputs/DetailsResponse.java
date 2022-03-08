@@ -17,7 +17,7 @@ public final class DetailsResponse {
 
     @OutputCustomType.Constructor({"attestation"})
     private DetailsResponse(AttestationResponse attestation) {
-        this.attestation = Objects.requireNonNull(attestation);
+        this.attestation = attestation;
     }
 
     /**

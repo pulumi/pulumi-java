@@ -28,7 +28,7 @@ public final class GroupMixedInstancesPolicy {
         @Nullable GroupMixedInstancesPolicyInstancesDistribution instancesDistribution,
         GroupMixedInstancesPolicyLaunchTemplate launchTemplate) {
         this.instancesDistribution = instancesDistribution;
-        this.launchTemplate = Objects.requireNonNull(launchTemplate);
+        this.launchTemplate = launchTemplate;
     }
 
     /**

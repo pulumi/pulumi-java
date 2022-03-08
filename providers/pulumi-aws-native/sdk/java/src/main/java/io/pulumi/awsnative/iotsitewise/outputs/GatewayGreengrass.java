@@ -17,7 +17,7 @@ public final class GatewayGreengrass {
 
     @OutputCustomType.Constructor({"groupArn"})
     private GatewayGreengrass(String groupArn) {
-        this.groupArn = Objects.requireNonNull(groupArn);
+        this.groupArn = groupArn;
     }
 
     /**

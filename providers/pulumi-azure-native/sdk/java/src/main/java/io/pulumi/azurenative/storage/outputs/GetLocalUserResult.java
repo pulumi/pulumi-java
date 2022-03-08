@@ -89,13 +89,13 @@ public final class GetLocalUserResult {
         this.hasSshKey = hasSshKey;
         this.hasSshPassword = hasSshPassword;
         this.homeDirectory = homeDirectory;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.permissionScopes = permissionScopes;
-        this.sid = Objects.requireNonNull(sid);
+        this.sid = sid;
         this.sshAuthorizedKeys = sshAuthorizedKeys;
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

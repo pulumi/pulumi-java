@@ -70,15 +70,15 @@ public final class GetTokenResult {
         @Nullable String status,
         SystemDataResponse systemData,
         String type) {
-        this.creationDate = Objects.requireNonNull(creationDate);
+        this.creationDate = creationDate;
         this.credentials = credentials;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.id = id;
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.scopeMapId = scopeMapId;
         this.status = status;
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

@@ -42,11 +42,11 @@ public final class GetImageOutputResourceAmi {
         String image,
         String name,
         String region) {
-        this.accountId = Objects.requireNonNull(accountId);
-        this.description = Objects.requireNonNull(description);
-        this.image = Objects.requireNonNull(image);
-        this.name = Objects.requireNonNull(name);
-        this.region = Objects.requireNonNull(region);
+        this.accountId = accountId;
+        this.description = description;
+        this.image = image;
+        this.name = name;
+        this.region = region;
     }
 
     /**

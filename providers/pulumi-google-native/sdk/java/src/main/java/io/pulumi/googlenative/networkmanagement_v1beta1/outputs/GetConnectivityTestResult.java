@@ -89,18 +89,18 @@ public final class GetConnectivityTestResult {
         List<String> relatedProjects,
         EndpointResponse source,
         String updateTime) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.description = Objects.requireNonNull(description);
-        this.destination = Objects.requireNonNull(destination);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.probingDetails = Objects.requireNonNull(probingDetails);
-        this.protocol = Objects.requireNonNull(protocol);
-        this.reachabilityDetails = Objects.requireNonNull(reachabilityDetails);
-        this.relatedProjects = Objects.requireNonNull(relatedProjects);
-        this.source = Objects.requireNonNull(source);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.createTime = createTime;
+        this.description = description;
+        this.destination = destination;
+        this.displayName = displayName;
+        this.labels = labels;
+        this.name = name;
+        this.probingDetails = probingDetails;
+        this.protocol = protocol;
+        this.reachabilityDetails = reachabilityDetails;
+        this.relatedProjects = relatedProjects;
+        this.source = source;
+        this.updateTime = updateTime;
     }
 
     /**

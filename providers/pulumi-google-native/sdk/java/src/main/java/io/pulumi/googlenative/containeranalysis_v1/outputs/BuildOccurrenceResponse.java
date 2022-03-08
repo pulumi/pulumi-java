@@ -32,9 +32,9 @@ public final class BuildOccurrenceResponse {
         InTotoStatementResponse intotoStatement,
         BuildProvenanceResponse provenance,
         String provenanceBytes) {
-        this.intotoStatement = Objects.requireNonNull(intotoStatement);
-        this.provenance = Objects.requireNonNull(provenance);
-        this.provenanceBytes = Objects.requireNonNull(provenanceBytes);
+        this.intotoStatement = intotoStatement;
+        this.provenance = provenance;
+        this.provenanceBytes = provenanceBytes;
     }
 
     /**

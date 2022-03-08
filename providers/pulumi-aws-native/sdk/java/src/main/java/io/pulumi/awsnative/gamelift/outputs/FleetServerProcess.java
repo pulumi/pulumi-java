@@ -37,8 +37,8 @@ public final class FleetServerProcess {
         Integer concurrentExecutions,
         String launchPath,
         @Nullable String parameters) {
-        this.concurrentExecutions = Objects.requireNonNull(concurrentExecutions);
-        this.launchPath = Objects.requireNonNull(launchPath);
+        this.concurrentExecutions = concurrentExecutions;
+        this.launchPath = launchPath;
         this.parameters = parameters;
     }
 

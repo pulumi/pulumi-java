@@ -28,7 +28,7 @@ public final class SSISPropertyOverrideResponse {
         @Nullable Boolean isSensitive,
         Object value) {
         this.isSensitive = isSensitive;
-        this.value = Objects.requireNonNull(value);
+        this.value = value;
     }
 
     /**

@@ -33,10 +33,10 @@ public final class TimePartitioningResponse {
         String field,
         Boolean requirePartitionFilter,
         String type) {
-        this.expirationMs = Objects.requireNonNull(expirationMs);
-        this.field = Objects.requireNonNull(field);
-        this.requirePartitionFilter = Objects.requireNonNull(requirePartitionFilter);
-        this.type = Objects.requireNonNull(type);
+        this.expirationMs = expirationMs;
+        this.field = field;
+        this.requirePartitionFilter = requirePartitionFilter;
+        this.type = type;
     }
 
     /**

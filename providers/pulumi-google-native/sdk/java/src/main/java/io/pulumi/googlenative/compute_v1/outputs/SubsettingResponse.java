@@ -13,7 +13,7 @@ public final class SubsettingResponse {
 
     @OutputCustomType.Constructor({"policy"})
     private SubsettingResponse(String policy) {
-        this.policy = Objects.requireNonNull(policy);
+        this.policy = policy;
     }
 
     public String getPolicy() {

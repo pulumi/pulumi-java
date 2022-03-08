@@ -24,8 +24,8 @@ public final class InstanceNodeConfig {
     private InstanceNodeConfig(
         Integer cpuCount,
         Integer memorySizeMb) {
-        this.cpuCount = Objects.requireNonNull(cpuCount);
-        this.memorySizeMb = Objects.requireNonNull(memorySizeMb);
+        this.cpuCount = cpuCount;
+        this.memorySizeMb = memorySizeMb;
     }
 
     /**

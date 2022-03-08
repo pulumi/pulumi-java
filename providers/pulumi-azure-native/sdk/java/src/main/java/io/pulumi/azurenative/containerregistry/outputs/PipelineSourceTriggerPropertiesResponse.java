@@ -17,7 +17,7 @@ public final class PipelineSourceTriggerPropertiesResponse {
 
     @OutputCustomType.Constructor({"status"})
     private PipelineSourceTriggerPropertiesResponse(String status) {
-        this.status = Objects.requireNonNull(status);
+        this.status = status;
     }
 
     /**

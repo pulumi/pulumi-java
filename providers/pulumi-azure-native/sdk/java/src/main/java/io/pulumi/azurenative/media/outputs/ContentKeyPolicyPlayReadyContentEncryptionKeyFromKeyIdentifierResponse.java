@@ -25,8 +25,8 @@ public final class ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifie
     private ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierResponse(
         String keyId,
         String odataType) {
-        this.keyId = Objects.requireNonNull(keyId);
-        this.odataType = Objects.requireNonNull(odataType);
+        this.keyId = keyId;
+        this.odataType = odataType;
     }
 
     /**

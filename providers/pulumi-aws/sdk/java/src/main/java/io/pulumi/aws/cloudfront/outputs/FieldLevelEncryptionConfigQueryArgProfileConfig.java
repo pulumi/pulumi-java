@@ -27,7 +27,7 @@ public final class FieldLevelEncryptionConfigQueryArgProfileConfig {
     private FieldLevelEncryptionConfigQueryArgProfileConfig(
         Boolean forwardWhenQueryArgProfileIsUnknown,
         @Nullable FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfiles queryArgProfiles) {
-        this.forwardWhenQueryArgProfileIsUnknown = Objects.requireNonNull(forwardWhenQueryArgProfileIsUnknown);
+        this.forwardWhenQueryArgProfileIsUnknown = forwardWhenQueryArgProfileIsUnknown;
         this.queryArgProfiles = queryArgProfiles;
     }
 

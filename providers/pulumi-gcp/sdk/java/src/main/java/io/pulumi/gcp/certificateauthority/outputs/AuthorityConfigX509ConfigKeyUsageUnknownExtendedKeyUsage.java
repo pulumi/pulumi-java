@@ -18,7 +18,7 @@ public final class AuthorityConfigX509ConfigKeyUsageUnknownExtendedKeyUsage {
 
     @OutputCustomType.Constructor({"objectIdPaths"})
     private AuthorityConfigX509ConfigKeyUsageUnknownExtendedKeyUsage(List<Integer> objectIdPaths) {
-        this.objectIdPaths = Objects.requireNonNull(objectIdPaths);
+        this.objectIdPaths = objectIdPaths;
     }
 
     /**

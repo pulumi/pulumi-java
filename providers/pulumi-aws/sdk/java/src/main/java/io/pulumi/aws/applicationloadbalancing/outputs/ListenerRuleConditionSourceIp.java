@@ -18,7 +18,7 @@ public final class ListenerRuleConditionSourceIp {
 
     @OutputCustomType.Constructor({"values"})
     private ListenerRuleConditionSourceIp(List<String> values) {
-        this.values = Objects.requireNonNull(values);
+        this.values = values;
     }
 
     /**

@@ -92,7 +92,7 @@ public final class SapOpenHubSourceResponse {
         this.sapDataColumnDelimiter = sapDataColumnDelimiter;
         this.sourceRetryCount = sourceRetryCount;
         this.sourceRetryWait = sourceRetryWait;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

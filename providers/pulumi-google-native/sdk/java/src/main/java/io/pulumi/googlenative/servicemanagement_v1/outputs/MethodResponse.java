@@ -57,13 +57,13 @@ public final class MethodResponse {
         Boolean responseStreaming,
         String responseTypeUrl,
         String syntax) {
-        this.name = Objects.requireNonNull(name);
-        this.options = Objects.requireNonNull(options);
-        this.requestStreaming = Objects.requireNonNull(requestStreaming);
-        this.requestTypeUrl = Objects.requireNonNull(requestTypeUrl);
-        this.responseStreaming = Objects.requireNonNull(responseStreaming);
-        this.responseTypeUrl = Objects.requireNonNull(responseTypeUrl);
-        this.syntax = Objects.requireNonNull(syntax);
+        this.name = name;
+        this.options = options;
+        this.requestStreaming = requestStreaming;
+        this.requestTypeUrl = requestTypeUrl;
+        this.responseStreaming = responseStreaming;
+        this.responseTypeUrl = responseTypeUrl;
+        this.syntax = syntax;
     }
 
     /**

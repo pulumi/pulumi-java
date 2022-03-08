@@ -29,11 +29,11 @@ public final class CachePolicyConfig {
         String name,
         CachePolicyParametersInCacheKeyAndForwardedToOrigin parametersInCacheKeyAndForwardedToOrigin) {
         this.comment = comment;
-        this.defaultTTL = Objects.requireNonNull(defaultTTL);
-        this.maxTTL = Objects.requireNonNull(maxTTL);
-        this.minTTL = Objects.requireNonNull(minTTL);
-        this.name = Objects.requireNonNull(name);
-        this.parametersInCacheKeyAndForwardedToOrigin = Objects.requireNonNull(parametersInCacheKeyAndForwardedToOrigin);
+        this.defaultTTL = defaultTTL;
+        this.maxTTL = maxTTL;
+        this.minTTL = minTTL;
+        this.name = name;
+        this.parametersInCacheKeyAndForwardedToOrigin = parametersInCacheKeyAndForwardedToOrigin;
     }
 
     public Optional<String> getComment() {

@@ -119,7 +119,7 @@ public final class Db2LinkedServiceResponse {
         this.parameters = parameters;
         this.password = password;
         this.server = server;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.username = username;
     }
 

@@ -49,8 +49,8 @@ public final class DaemonSetSpec {
         @Nullable DaemonSetUpdateStrategy updateStrategy) {
         this.minReadySeconds = minReadySeconds;
         this.revisionHistoryLimit = revisionHistoryLimit;
-        this.selector = Objects.requireNonNull(selector);
-        this.template = Objects.requireNonNull(template);
+        this.selector = selector;
+        this.template = template;
         this.updateStrategy = updateStrategy;
     }
 

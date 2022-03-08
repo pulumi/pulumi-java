@@ -24,8 +24,8 @@ public final class MigrationReportResultResponse {
     private MigrationReportResultResponse(
         String id,
         String reportUrl) {
-        this.id = Objects.requireNonNull(id);
-        this.reportUrl = Objects.requireNonNull(reportUrl);
+        this.id = id;
+        this.reportUrl = reportUrl;
     }
 
     /**

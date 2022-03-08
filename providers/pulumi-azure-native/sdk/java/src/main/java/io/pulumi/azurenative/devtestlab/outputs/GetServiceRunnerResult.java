@@ -52,12 +52,12 @@ public final class GetServiceRunnerResult {
         String name,
         @Nullable Map<String,String> tags,
         String type) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.identity = identity;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

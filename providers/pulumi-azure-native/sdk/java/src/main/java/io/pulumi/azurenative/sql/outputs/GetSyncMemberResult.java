@@ -101,16 +101,16 @@ public final class GetSyncMemberResult {
         @Nullable String userName) {
         this.databaseName = databaseName;
         this.databaseType = databaseType;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.privateEndpointName = Objects.requireNonNull(privateEndpointName);
+        this.id = id;
+        this.name = name;
+        this.privateEndpointName = privateEndpointName;
         this.serverName = serverName;
         this.sqlServerDatabaseId = sqlServerDatabaseId;
         this.syncAgentId = syncAgentId;
         this.syncDirection = syncDirection;
         this.syncMemberAzureDatabaseResourceId = syncMemberAzureDatabaseResourceId;
-        this.syncState = Objects.requireNonNull(syncState);
-        this.type = Objects.requireNonNull(type);
+        this.syncState = syncState;
+        this.type = type;
         this.usePrivateLinkConnection = usePrivateLinkConnection;
         this.userName = userName;
     }

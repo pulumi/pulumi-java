@@ -33,7 +33,7 @@ public final class JitApproverDefinitionResponse {
         String id,
         @Nullable String type) {
         this.displayName = displayName;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.type = type;
     }
 

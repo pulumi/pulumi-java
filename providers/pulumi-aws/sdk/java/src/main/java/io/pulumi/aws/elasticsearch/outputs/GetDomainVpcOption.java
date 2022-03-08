@@ -37,10 +37,10 @@ public final class GetDomainVpcOption {
         List<String> securityGroupIds,
         List<String> subnetIds,
         String vpcId) {
-        this.availabilityZones = Objects.requireNonNull(availabilityZones);
-        this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
-        this.subnetIds = Objects.requireNonNull(subnetIds);
-        this.vpcId = Objects.requireNonNull(vpcId);
+        this.availabilityZones = availabilityZones;
+        this.securityGroupIds = securityGroupIds;
+        this.subnetIds = subnetIds;
+        this.vpcId = vpcId;
     }
 
     /**

@@ -51,12 +51,12 @@ public final class StepOperationInfoResponse {
         @Nullable CloudErrorBodyResponse error,
         String lastUpdatedTime,
         String startTime) {
-        this.correlationId = Objects.requireNonNull(correlationId);
-        this.deploymentName = Objects.requireNonNull(deploymentName);
-        this.endTime = Objects.requireNonNull(endTime);
+        this.correlationId = correlationId;
+        this.deploymentName = deploymentName;
+        this.endTime = endTime;
         this.error = error;
-        this.lastUpdatedTime = Objects.requireNonNull(lastUpdatedTime);
-        this.startTime = Objects.requireNonNull(startTime);
+        this.lastUpdatedTime = lastUpdatedTime;
+        this.startTime = startTime;
     }
 
     /**

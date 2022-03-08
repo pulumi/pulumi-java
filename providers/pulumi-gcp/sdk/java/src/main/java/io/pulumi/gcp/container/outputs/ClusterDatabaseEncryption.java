@@ -27,7 +27,7 @@ public final class ClusterDatabaseEncryption {
         @Nullable String keyName,
         String state) {
         this.keyName = keyName;
-        this.state = Objects.requireNonNull(state);
+        this.state = state;
     }
 
     /**

@@ -22,7 +22,7 @@ public final class GetLogDeliveryCanonicalUserIdResult {
     private GetLogDeliveryCanonicalUserIdResult(
         String id,
         @Nullable String region) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.region = region;
     }
 

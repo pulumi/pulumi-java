@@ -52,12 +52,12 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse {
         String customAlphabet,
         Integer radix,
         GooglePrivacyDlpV2InfoTypeResponse surrogateInfoType) {
-        this.commonAlphabet = Objects.requireNonNull(commonAlphabet);
-        this.context = Objects.requireNonNull(context);
-        this.cryptoKey = Objects.requireNonNull(cryptoKey);
-        this.customAlphabet = Objects.requireNonNull(customAlphabet);
-        this.radix = Objects.requireNonNull(radix);
-        this.surrogateInfoType = Objects.requireNonNull(surrogateInfoType);
+        this.commonAlphabet = commonAlphabet;
+        this.context = context;
+        this.cryptoKey = cryptoKey;
+        this.customAlphabet = customAlphabet;
+        this.radix = radix;
+        this.surrogateInfoType = surrogateInfoType;
     }
 
     /**

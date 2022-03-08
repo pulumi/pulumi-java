@@ -24,8 +24,8 @@ public final class DiskEncryptionStatusResponse {
     private DiskEncryptionStatusResponse(
         String kind,
         String kmsKeyVersionName) {
-        this.kind = Objects.requireNonNull(kind);
-        this.kmsKeyVersionName = Objects.requireNonNull(kmsKeyVersionName);
+        this.kind = kind;
+        this.kmsKeyVersionName = kmsKeyVersionName;
     }
 
     /**

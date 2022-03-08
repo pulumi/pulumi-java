@@ -24,8 +24,8 @@ public final class NetworkEndpointGroupCloudFunctionResponse {
     private NetworkEndpointGroupCloudFunctionResponse(
         String function,
         String urlMask) {
-        this.function = Objects.requireNonNull(function);
-        this.urlMask = Objects.requireNonNull(urlMask);
+        this.function = function;
+        this.urlMask = urlMask;
     }
 
     /**

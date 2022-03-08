@@ -45,11 +45,11 @@ public final class CostAllocationRulePropertiesResponse {
         CostAllocationRuleDetailsResponse details,
         String status,
         String updatedDate) {
-        this.createdDate = Objects.requireNonNull(createdDate);
+        this.createdDate = createdDate;
         this.description = description;
-        this.details = Objects.requireNonNull(details);
-        this.status = Objects.requireNonNull(status);
-        this.updatedDate = Objects.requireNonNull(updatedDate);
+        this.details = details;
+        this.status = status;
+        this.updatedDate = updatedDate;
     }
 
     /**

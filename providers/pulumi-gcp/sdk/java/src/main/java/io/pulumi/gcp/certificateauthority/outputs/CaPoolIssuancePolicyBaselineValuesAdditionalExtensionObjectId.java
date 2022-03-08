@@ -18,7 +18,7 @@ public final class CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectId
 
     @OutputCustomType.Constructor({"objectIdPaths"})
     private CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectId(List<Integer> objectIdPaths) {
-        this.objectIdPaths = Objects.requireNonNull(objectIdPaths);
+        this.objectIdPaths = objectIdPaths;
     }
 
     /**

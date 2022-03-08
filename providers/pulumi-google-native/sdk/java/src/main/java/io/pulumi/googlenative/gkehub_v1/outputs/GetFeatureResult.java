@@ -76,16 +76,16 @@ public final class GetFeatureResult {
         CommonFeatureSpecResponse spec,
         CommonFeatureStateResponse state,
         String updateTime) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.deleteTime = Objects.requireNonNull(deleteTime);
-        this.labels = Objects.requireNonNull(labels);
-        this.membershipSpecs = Objects.requireNonNull(membershipSpecs);
-        this.membershipStates = Objects.requireNonNull(membershipStates);
-        this.name = Objects.requireNonNull(name);
-        this.resourceState = Objects.requireNonNull(resourceState);
-        this.spec = Objects.requireNonNull(spec);
-        this.state = Objects.requireNonNull(state);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.createTime = createTime;
+        this.deleteTime = deleteTime;
+        this.labels = labels;
+        this.membershipSpecs = membershipSpecs;
+        this.membershipStates = membershipStates;
+        this.name = name;
+        this.resourceState = resourceState;
+        this.spec = spec;
+        this.state = state;
+        this.updateTime = updateTime;
     }
 
     /**

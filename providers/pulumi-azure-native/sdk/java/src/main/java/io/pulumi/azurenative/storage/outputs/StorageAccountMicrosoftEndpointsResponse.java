@@ -48,12 +48,12 @@ public final class StorageAccountMicrosoftEndpointsResponse {
         String queue,
         String table,
         String web) {
-        this.blob = Objects.requireNonNull(blob);
-        this.dfs = Objects.requireNonNull(dfs);
-        this.file = Objects.requireNonNull(file);
-        this.queue = Objects.requireNonNull(queue);
-        this.table = Objects.requireNonNull(table);
-        this.web = Objects.requireNonNull(web);
+        this.blob = blob;
+        this.dfs = dfs;
+        this.file = file;
+        this.queue = queue;
+        this.table = table;
+        this.web = web;
     }
 
     /**

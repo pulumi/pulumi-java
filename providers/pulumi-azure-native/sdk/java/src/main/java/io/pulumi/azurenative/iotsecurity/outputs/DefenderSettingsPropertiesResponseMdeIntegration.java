@@ -17,7 +17,7 @@ public final class DefenderSettingsPropertiesResponseMdeIntegration {
 
     @OutputCustomType.Constructor({"status"})
     private DefenderSettingsPropertiesResponseMdeIntegration(String status) {
-        this.status = Objects.requireNonNull(status);
+        this.status = status;
     }
 
     /**

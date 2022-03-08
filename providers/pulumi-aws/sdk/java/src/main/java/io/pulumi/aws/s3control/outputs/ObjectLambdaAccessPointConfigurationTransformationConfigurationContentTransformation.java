@@ -17,7 +17,7 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
 
     @OutputCustomType.Constructor({"awsLambda"})
     private ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformation(ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambda awsLambda) {
-        this.awsLambda = Objects.requireNonNull(awsLambda);
+        this.awsLambda = awsLambda;
     }
 
     /**

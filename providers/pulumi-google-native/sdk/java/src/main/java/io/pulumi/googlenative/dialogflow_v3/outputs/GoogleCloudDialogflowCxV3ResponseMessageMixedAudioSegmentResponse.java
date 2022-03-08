@@ -31,9 +31,9 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegmentResp
         Boolean allowPlaybackInterruption,
         String audio,
         String uri) {
-        this.allowPlaybackInterruption = Objects.requireNonNull(allowPlaybackInterruption);
-        this.audio = Objects.requireNonNull(audio);
-        this.uri = Objects.requireNonNull(uri);
+        this.allowPlaybackInterruption = allowPlaybackInterruption;
+        this.audio = audio;
+        this.uri = uri;
     }
 
     /**

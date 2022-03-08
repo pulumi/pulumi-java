@@ -57,12 +57,12 @@ public final class GetScopeAssignmentResult {
         String provisioningState,
         String type) {
         this.assignedManagedNetwork = assignedManagedNetwork;
-        this.etag = Objects.requireNonNull(etag);
-        this.id = Objects.requireNonNull(id);
+        this.etag = etag;
+        this.id = id;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.type = Objects.requireNonNull(type);
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.type = type;
     }
 
     /**

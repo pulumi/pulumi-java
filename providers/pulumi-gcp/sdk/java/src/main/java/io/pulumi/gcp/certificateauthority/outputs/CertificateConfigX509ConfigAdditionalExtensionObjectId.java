@@ -18,7 +18,7 @@ public final class CertificateConfigX509ConfigAdditionalExtensionObjectId {
 
     @OutputCustomType.Constructor({"objectIdPaths"})
     private CertificateConfigX509ConfigAdditionalExtensionObjectId(List<Integer> objectIdPaths) {
-        this.objectIdPaths = Objects.requireNonNull(objectIdPaths);
+        this.objectIdPaths = objectIdPaths;
     }
 
     /**

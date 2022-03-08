@@ -43,11 +43,11 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentResponseMedia
         GoogleCloudDialogflowV2IntentMessageImageResponse icon,
         GoogleCloudDialogflowV2IntentMessageImageResponse largeImage,
         String name) {
-        this.contentUrl = Objects.requireNonNull(contentUrl);
-        this.description = Objects.requireNonNull(description);
-        this.icon = Objects.requireNonNull(icon);
-        this.largeImage = Objects.requireNonNull(largeImage);
-        this.name = Objects.requireNonNull(name);
+        this.contentUrl = contentUrl;
+        this.description = description;
+        this.icon = icon;
+        this.largeImage = largeImage;
+        this.name = name;
     }
 
     /**

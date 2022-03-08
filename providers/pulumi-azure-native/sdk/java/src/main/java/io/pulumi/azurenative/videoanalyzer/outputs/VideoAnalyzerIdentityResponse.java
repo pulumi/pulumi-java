@@ -27,7 +27,7 @@ public final class VideoAnalyzerIdentityResponse {
     private VideoAnalyzerIdentityResponse(
         String type,
         @Nullable Map<String,UserAssignedManagedIdentityResponse> userAssignedIdentities) {
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.userAssignedIdentities = userAssignedIdentities;
     }
 

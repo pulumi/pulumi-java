@@ -45,11 +45,11 @@ public final class GetApiResult {
         GoogleCloudApigeeV1EntityMetadataResponse metaData,
         String name,
         List<String> revision) {
-        this.labels = Objects.requireNonNull(labels);
-        this.latestRevisionId = Objects.requireNonNull(latestRevisionId);
-        this.metaData = Objects.requireNonNull(metaData);
-        this.name = Objects.requireNonNull(name);
-        this.revision = Objects.requireNonNull(revision);
+        this.labels = labels;
+        this.latestRevisionId = latestRevisionId;
+        this.metaData = metaData;
+        this.name = name;
+        this.revision = revision;
     }
 
     /**

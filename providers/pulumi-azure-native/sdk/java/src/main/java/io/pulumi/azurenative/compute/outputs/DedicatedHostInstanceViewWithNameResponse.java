@@ -41,9 +41,9 @@ public final class DedicatedHostInstanceViewWithNameResponse {
         @Nullable DedicatedHostAvailableCapacityResponse availableCapacity,
         String name,
         @Nullable List<InstanceViewStatusResponse> statuses) {
-        this.assetId = Objects.requireNonNull(assetId);
+        this.assetId = assetId;
         this.availableCapacity = availableCapacity;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.statuses = statuses;
     }
 

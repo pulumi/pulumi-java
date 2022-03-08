@@ -17,7 +17,7 @@ public final class ListMachineLearningComputeKeysResult {
 
     @OutputCustomType.Constructor({"computeType"})
     private ListMachineLearningComputeKeysResult(String computeType) {
-        this.computeType = Objects.requireNonNull(computeType);
+        this.computeType = computeType;
     }
 
     /**

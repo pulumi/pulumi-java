@@ -30,10 +30,10 @@ public final class GetImageVersionsResult {
         List<GetImageVersionsImageVersion> imageVersions,
         String project,
         String region) {
-        this.id = Objects.requireNonNull(id);
-        this.imageVersions = Objects.requireNonNull(imageVersions);
-        this.project = Objects.requireNonNull(project);
-        this.region = Objects.requireNonNull(region);
+        this.id = id;
+        this.imageVersions = imageVersions;
+        this.project = project;
+        this.region = region;
     }
 
     /**

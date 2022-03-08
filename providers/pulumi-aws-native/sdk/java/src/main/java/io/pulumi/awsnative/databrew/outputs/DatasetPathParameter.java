@@ -17,8 +17,8 @@ public final class DatasetPathParameter {
     private DatasetPathParameter(
         DatasetParameter datasetParameter,
         String pathParameterName) {
-        this.datasetParameter = Objects.requireNonNull(datasetParameter);
-        this.pathParameterName = Objects.requireNonNull(pathParameterName);
+        this.datasetParameter = datasetParameter;
+        this.pathParameterName = pathParameterName;
     }
 
     public DatasetParameter getDatasetParameter() {

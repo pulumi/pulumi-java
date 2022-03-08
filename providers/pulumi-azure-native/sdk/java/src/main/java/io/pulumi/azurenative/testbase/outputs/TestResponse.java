@@ -41,10 +41,10 @@ public final class TestResponse {
         @Nullable Boolean isActive,
         String testType,
         String validationRunStatus) {
-        this.commands = Objects.requireNonNull(commands);
+        this.commands = commands;
         this.isActive = isActive;
-        this.testType = Objects.requireNonNull(testType);
-        this.validationRunStatus = Objects.requireNonNull(validationRunStatus);
+        this.testType = testType;
+        this.validationRunStatus = validationRunStatus;
     }
 
     /**

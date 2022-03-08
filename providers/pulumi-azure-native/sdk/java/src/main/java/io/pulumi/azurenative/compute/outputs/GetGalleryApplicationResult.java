@@ -84,14 +84,14 @@ public final class GetGalleryApplicationResult {
         this.description = description;
         this.endOfLifeDate = endOfLifeDate;
         this.eula = eula;
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.location = location;
+        this.name = name;
         this.privacyStatementUri = privacyStatementUri;
         this.releaseNoteUri = releaseNoteUri;
-        this.supportedOSType = Objects.requireNonNull(supportedOSType);
+        this.supportedOSType = supportedOSType;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

@@ -41,10 +41,10 @@ public final class DataBoxHeavyJobSecretsResponse {
         DcAccessSecurityCodeResponse dcAccessSecurityCode,
         CloudErrorResponse error,
         String jobSecretsType) {
-        this.cabinetPodSecrets = Objects.requireNonNull(cabinetPodSecrets);
-        this.dcAccessSecurityCode = Objects.requireNonNull(dcAccessSecurityCode);
-        this.error = Objects.requireNonNull(error);
-        this.jobSecretsType = Objects.requireNonNull(jobSecretsType);
+        this.cabinetPodSecrets = cabinetPodSecrets;
+        this.dcAccessSecurityCode = dcAccessSecurityCode;
+        this.error = error;
+        this.jobSecretsType = jobSecretsType;
     }
 
     /**

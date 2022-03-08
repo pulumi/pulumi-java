@@ -40,10 +40,10 @@ public final class ImageOccurrenceResponse {
         Integer distance,
         FingerprintResponse fingerprint,
         List<LayerResponse> layerInfo) {
-        this.baseResourceUrl = Objects.requireNonNull(baseResourceUrl);
-        this.distance = Objects.requireNonNull(distance);
-        this.fingerprint = Objects.requireNonNull(fingerprint);
-        this.layerInfo = Objects.requireNonNull(layerInfo);
+        this.baseResourceUrl = baseResourceUrl;
+        this.distance = distance;
+        this.fingerprint = fingerprint;
+        this.layerInfo = layerInfo;
     }
 
     /**

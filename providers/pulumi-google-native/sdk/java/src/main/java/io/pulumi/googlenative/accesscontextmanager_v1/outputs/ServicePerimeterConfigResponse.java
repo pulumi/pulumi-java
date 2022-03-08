@@ -52,12 +52,12 @@ public final class ServicePerimeterConfigResponse {
         List<String> resources,
         List<String> restrictedServices,
         VpcAccessibleServicesResponse vpcAccessibleServices) {
-        this.accessLevels = Objects.requireNonNull(accessLevels);
-        this.egressPolicies = Objects.requireNonNull(egressPolicies);
-        this.ingressPolicies = Objects.requireNonNull(ingressPolicies);
-        this.resources = Objects.requireNonNull(resources);
-        this.restrictedServices = Objects.requireNonNull(restrictedServices);
-        this.vpcAccessibleServices = Objects.requireNonNull(vpcAccessibleServices);
+        this.accessLevels = accessLevels;
+        this.egressPolicies = egressPolicies;
+        this.ingressPolicies = ingressPolicies;
+        this.resources = resources;
+        this.restrictedServices = restrictedServices;
+        this.vpcAccessibleServices = vpcAccessibleServices;
     }
 
     /**

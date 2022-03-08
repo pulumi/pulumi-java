@@ -18,7 +18,7 @@ public final class AuthorityConfigX509ConfigPolicyId {
 
     @OutputCustomType.Constructor({"objectIdPaths"})
     private AuthorityConfigX509ConfigPolicyId(List<Integer> objectIdPaths) {
-        this.objectIdPaths = Objects.requireNonNull(objectIdPaths);
+        this.objectIdPaths = objectIdPaths;
     }
 
     /**

@@ -20,7 +20,7 @@ public final class BucketMetrics {
         @Nullable BucketReplicationTimeValue eventThreshold,
         BucketMetricsStatus status) {
         this.eventThreshold = eventThreshold;
-        this.status = Objects.requireNonNull(status);
+        this.status = status;
     }
 
     public Optional<BucketReplicationTimeValue> getEventThreshold() {

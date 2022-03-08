@@ -87,15 +87,15 @@ public final class GetKeyValueResult {
         String type,
         @Nullable String value) {
         this.contentType = contentType;
-        this.eTag = Objects.requireNonNull(eTag);
-        this.id = Objects.requireNonNull(id);
-        this.key = Objects.requireNonNull(key);
-        this.label = Objects.requireNonNull(label);
-        this.lastModified = Objects.requireNonNull(lastModified);
-        this.locked = Objects.requireNonNull(locked);
-        this.name = Objects.requireNonNull(name);
+        this.eTag = eTag;
+        this.id = id;
+        this.key = key;
+        this.label = label;
+        this.lastModified = lastModified;
+        this.locked = locked;
+        this.name = name;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.value = value;
     }
 

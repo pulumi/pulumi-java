@@ -21,8 +21,8 @@ public final class GetLaunchTemplateTagSpecification {
     private GetLaunchTemplateTagSpecification(
         String resourceType,
         Map<String,String> tags) {
-        this.resourceType = Objects.requireNonNull(resourceType);
-        this.tags = Objects.requireNonNull(tags);
+        this.resourceType = resourceType;
+        this.tags = tags;
     }
 
     public String getPropResourceType() {

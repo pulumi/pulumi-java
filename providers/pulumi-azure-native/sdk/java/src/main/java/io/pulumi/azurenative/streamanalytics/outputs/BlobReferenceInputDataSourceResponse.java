@@ -58,7 +58,7 @@ public final class BlobReferenceInputDataSourceResponse {
         this.pathPattern = pathPattern;
         this.storageAccounts = storageAccounts;
         this.timeFormat = timeFormat;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

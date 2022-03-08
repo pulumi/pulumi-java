@@ -41,9 +41,9 @@ public final class SourcePropertiesResponse {
         @Nullable AuthInfoResponse sourceControlAuthProperties,
         String sourceControlType) {
         this.branch = branch;
-        this.repositoryUrl = Objects.requireNonNull(repositoryUrl);
+        this.repositoryUrl = repositoryUrl;
         this.sourceControlAuthProperties = sourceControlAuthProperties;
-        this.sourceControlType = Objects.requireNonNull(sourceControlType);
+        this.sourceControlType = sourceControlType;
     }
 
     /**

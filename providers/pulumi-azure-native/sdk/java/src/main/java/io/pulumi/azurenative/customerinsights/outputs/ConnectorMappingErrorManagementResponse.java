@@ -28,7 +28,7 @@ public final class ConnectorMappingErrorManagementResponse {
         @Nullable Integer errorLimit,
         String errorManagementType) {
         this.errorLimit = errorLimit;
-        this.errorManagementType = Objects.requireNonNull(errorManagementType);
+        this.errorManagementType = errorManagementType;
     }
 
     /**

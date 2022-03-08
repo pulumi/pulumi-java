@@ -25,8 +25,8 @@ public final class GoogleCloudDialogflowCxV3beta1TestConfigResponse {
     private GoogleCloudDialogflowCxV3beta1TestConfigResponse(
         String flow,
         List<String> trackingParameters) {
-        this.flow = Objects.requireNonNull(flow);
-        this.trackingParameters = Objects.requireNonNull(trackingParameters);
+        this.flow = flow;
+        this.trackingParameters = trackingParameters;
     }
 
     /**

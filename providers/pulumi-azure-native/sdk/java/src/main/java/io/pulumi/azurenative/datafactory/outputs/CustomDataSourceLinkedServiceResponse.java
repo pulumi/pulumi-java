@@ -54,7 +54,7 @@ public final class CustomDataSourceLinkedServiceResponse {
         this.connectVia = connectVia;
         this.description = description;
         this.parameters = parameters;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

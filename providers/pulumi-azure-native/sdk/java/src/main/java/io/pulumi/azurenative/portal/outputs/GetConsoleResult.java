@@ -17,7 +17,7 @@ public final class GetConsoleResult {
 
     @OutputCustomType.Constructor({"properties"})
     private GetConsoleResult(ConsolePropertiesResponse properties) {
-        this.properties = Objects.requireNonNull(properties);
+        this.properties = properties;
     }
 
     /**

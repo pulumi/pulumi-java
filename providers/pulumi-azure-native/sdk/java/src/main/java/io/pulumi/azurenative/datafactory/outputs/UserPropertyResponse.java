@@ -25,8 +25,8 @@ public final class UserPropertyResponse {
     private UserPropertyResponse(
         String name,
         Object value) {
-        this.name = Objects.requireNonNull(name);
-        this.value = Objects.requireNonNull(value);
+        this.name = name;
+        this.value = value;
     }
 
     /**

@@ -17,7 +17,7 @@ public final class LaunchTemplateHibernationOptions {
 
     @OutputCustomType.Constructor({"configured"})
     private LaunchTemplateHibernationOptions(Boolean configured) {
-        this.configured = Objects.requireNonNull(configured);
+        this.configured = configured;
     }
 
     /**

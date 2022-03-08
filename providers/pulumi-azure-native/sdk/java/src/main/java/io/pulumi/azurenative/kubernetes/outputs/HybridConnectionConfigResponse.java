@@ -37,10 +37,10 @@ public final class HybridConnectionConfigResponse {
         String hybridConnectionName,
         String relay,
         String token) {
-        this.expirationTime = Objects.requireNonNull(expirationTime);
-        this.hybridConnectionName = Objects.requireNonNull(hybridConnectionName);
-        this.relay = Objects.requireNonNull(relay);
-        this.token = Objects.requireNonNull(token);
+        this.expirationTime = expirationTime;
+        this.hybridConnectionName = hybridConnectionName;
+        this.relay = relay;
+        this.token = token;
     }
 
     /**

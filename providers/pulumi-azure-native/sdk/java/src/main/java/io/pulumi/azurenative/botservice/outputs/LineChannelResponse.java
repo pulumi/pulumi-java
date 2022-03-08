@@ -46,11 +46,11 @@ public final class LineChannelResponse {
         @Nullable String location,
         @Nullable LineChannelPropertiesResponse properties,
         String provisioningState) {
-        this.channelName = Objects.requireNonNull(channelName);
+        this.channelName = channelName;
         this.etag = etag;
         this.location = location;
         this.properties = properties;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
     }
 
     /**

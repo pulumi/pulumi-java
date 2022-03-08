@@ -33,9 +33,9 @@ public final class MaintenanceWindowResponse {
         DailyMaintenanceWindowResponse dailyMaintenanceWindow,
         Map<String,String> maintenanceExclusions,
         RecurringTimeWindowResponse recurringWindow) {
-        this.dailyMaintenanceWindow = Objects.requireNonNull(dailyMaintenanceWindow);
-        this.maintenanceExclusions = Objects.requireNonNull(maintenanceExclusions);
-        this.recurringWindow = Objects.requireNonNull(recurringWindow);
+        this.dailyMaintenanceWindow = dailyMaintenanceWindow;
+        this.maintenanceExclusions = maintenanceExclusions;
+        this.recurringWindow = recurringWindow;
     }
 
     /**

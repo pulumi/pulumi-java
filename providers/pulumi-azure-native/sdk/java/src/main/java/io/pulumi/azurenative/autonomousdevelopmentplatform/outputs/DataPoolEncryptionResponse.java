@@ -38,10 +38,10 @@ public final class DataPoolEncryptionResponse {
         String keyVaultUri,
         @Nullable String keyVersion,
         String userAssignedIdentity) {
-        this.keyName = Objects.requireNonNull(keyName);
-        this.keyVaultUri = Objects.requireNonNull(keyVaultUri);
+        this.keyName = keyName;
+        this.keyVaultUri = keyVaultUri;
         this.keyVersion = keyVersion;
-        this.userAssignedIdentity = Objects.requireNonNull(userAssignedIdentity);
+        this.userAssignedIdentity = userAssignedIdentity;
     }
 
     /**

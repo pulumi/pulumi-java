@@ -75,16 +75,16 @@ public final class AzureDataExplorerConnectionPropertiesResponse {
         String eventHubEntityPath,
         String eventHubNamespaceResourceId,
         String provisioningState) {
-        this.adxDatabaseName = Objects.requireNonNull(adxDatabaseName);
-        this.adxEndpointUri = Objects.requireNonNull(adxEndpointUri);
-        this.adxResourceId = Objects.requireNonNull(adxResourceId);
+        this.adxDatabaseName = adxDatabaseName;
+        this.adxEndpointUri = adxEndpointUri;
+        this.adxResourceId = adxResourceId;
         this.adxTableName = adxTableName;
-        this.connectionType = Objects.requireNonNull(connectionType);
+        this.connectionType = connectionType;
         this.eventHubConsumerGroup = eventHubConsumerGroup;
-        this.eventHubEndpointUri = Objects.requireNonNull(eventHubEndpointUri);
-        this.eventHubEntityPath = Objects.requireNonNull(eventHubEntityPath);
-        this.eventHubNamespaceResourceId = Objects.requireNonNull(eventHubNamespaceResourceId);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.eventHubEndpointUri = eventHubEndpointUri;
+        this.eventHubEntityPath = eventHubEntityPath;
+        this.eventHubNamespaceResourceId = eventHubNamespaceResourceId;
+        this.provisioningState = provisioningState;
     }
 
     /**

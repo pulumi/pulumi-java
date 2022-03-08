@@ -80,13 +80,13 @@ public final class GetRoleAssignmentArtifactResult {
         this.dependsOn = dependsOn;
         this.description = description;
         this.displayName = displayName;
-        this.id = Objects.requireNonNull(id);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.principalIds = Objects.requireNonNull(principalIds);
+        this.id = id;
+        this.kind = kind;
+        this.name = name;
+        this.principalIds = principalIds;
         this.resourceGroup = resourceGroup;
-        this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId);
-        this.type = Objects.requireNonNull(type);
+        this.roleDefinitionId = roleDefinitionId;
+        this.type = type;
     }
 
     /**

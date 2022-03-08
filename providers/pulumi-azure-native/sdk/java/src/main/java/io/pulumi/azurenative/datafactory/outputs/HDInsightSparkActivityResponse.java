@@ -116,16 +116,16 @@ public final class HDInsightSparkActivityResponse {
         this.className = className;
         this.dependsOn = dependsOn;
         this.description = description;
-        this.entryFilePath = Objects.requireNonNull(entryFilePath);
+        this.entryFilePath = entryFilePath;
         this.getDebugInfo = getDebugInfo;
         this.linkedServiceName = linkedServiceName;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.policy = policy;
         this.proxyUser = proxyUser;
-        this.rootPath = Objects.requireNonNull(rootPath);
+        this.rootPath = rootPath;
         this.sparkConfig = sparkConfig;
         this.sparkJobLinkedService = sparkJobLinkedService;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.userProperties = userProperties;
     }
 

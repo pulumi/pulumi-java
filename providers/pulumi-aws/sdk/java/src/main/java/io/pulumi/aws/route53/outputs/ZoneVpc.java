@@ -26,7 +26,7 @@ public final class ZoneVpc {
     private ZoneVpc(
         String vpcId,
         @Nullable String vpcRegion) {
-        this.vpcId = Objects.requireNonNull(vpcId);
+        this.vpcId = vpcId;
         this.vpcRegion = vpcRegion;
     }
 

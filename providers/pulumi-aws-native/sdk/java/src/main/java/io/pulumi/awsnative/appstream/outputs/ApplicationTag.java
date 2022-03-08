@@ -16,8 +16,8 @@ public final class ApplicationTag {
     private ApplicationTag(
         String tagKey,
         String tagValue) {
-        this.tagKey = Objects.requireNonNull(tagKey);
-        this.tagValue = Objects.requireNonNull(tagValue);
+        this.tagKey = tagKey;
+        this.tagValue = tagValue;
     }
 
     public String getTagKey() {

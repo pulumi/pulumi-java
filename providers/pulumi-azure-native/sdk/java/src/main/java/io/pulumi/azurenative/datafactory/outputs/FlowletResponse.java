@@ -83,7 +83,7 @@ public final class FlowletResponse {
         this.sinks = sinks;
         this.sources = sources;
         this.transformations = transformations;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

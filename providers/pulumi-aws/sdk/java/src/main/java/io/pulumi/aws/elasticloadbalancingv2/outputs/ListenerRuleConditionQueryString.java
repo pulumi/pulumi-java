@@ -27,7 +27,7 @@ public final class ListenerRuleConditionQueryString {
         @Nullable String key,
         String value) {
         this.key = key;
-        this.value = Objects.requireNonNull(value);
+        this.value = value;
     }
 
     /**

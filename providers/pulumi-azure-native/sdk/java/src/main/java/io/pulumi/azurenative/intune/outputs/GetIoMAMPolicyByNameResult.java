@@ -97,20 +97,20 @@ public final class GetIoMAMPolicyByNameResult {
         this.deviceCompliance = deviceCompliance;
         this.fileEncryptionLevel = fileEncryptionLevel;
         this.fileSharingSaveAs = fileSharingSaveAs;
-        this.friendlyName = Objects.requireNonNull(friendlyName);
-        this.groupStatus = Objects.requireNonNull(groupStatus);
-        this.id = Objects.requireNonNull(id);
-        this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
+        this.friendlyName = friendlyName;
+        this.groupStatus = groupStatus;
+        this.id = id;
+        this.lastModifiedTime = lastModifiedTime;
         this.location = location;
         this.managedBrowser = managedBrowser;
-        this.name = Objects.requireNonNull(name);
-        this.numOfApps = Objects.requireNonNull(numOfApps);
+        this.name = name;
+        this.numOfApps = numOfApps;
         this.offlineWipeTimeout = offlineWipeTimeout;
         this.pin = pin;
         this.pinNumRetry = pinNumRetry;
         this.tags = tags;
         this.touchId = touchId;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     public Optional<String> getAccessRecheckOfflineTimeout() {

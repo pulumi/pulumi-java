@@ -157,28 +157,28 @@ public final class GetEntryResult {
         GoogleCloudDatacatalogV1UsageSignalResponse usageSignal,
         String userSpecifiedSystem,
         String userSpecifiedType) {
-        this.bigqueryDateShardedSpec = Objects.requireNonNull(bigqueryDateShardedSpec);
-        this.bigqueryTableSpec = Objects.requireNonNull(bigqueryTableSpec);
-        this.businessContext = Objects.requireNonNull(businessContext);
-        this.dataSource = Objects.requireNonNull(dataSource);
-        this.dataSourceConnectionSpec = Objects.requireNonNull(dataSourceConnectionSpec);
-        this.databaseTableSpec = Objects.requireNonNull(databaseTableSpec);
-        this.description = Objects.requireNonNull(description);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.fullyQualifiedName = Objects.requireNonNull(fullyQualifiedName);
-        this.gcsFilesetSpec = Objects.requireNonNull(gcsFilesetSpec);
-        this.integratedSystem = Objects.requireNonNull(integratedSystem);
-        this.labels = Objects.requireNonNull(labels);
-        this.linkedResource = Objects.requireNonNull(linkedResource);
-        this.name = Objects.requireNonNull(name);
-        this.personalDetails = Objects.requireNonNull(personalDetails);
-        this.routineSpec = Objects.requireNonNull(routineSpec);
-        this.schema = Objects.requireNonNull(schema);
-        this.sourceSystemTimestamps = Objects.requireNonNull(sourceSystemTimestamps);
-        this.type = Objects.requireNonNull(type);
-        this.usageSignal = Objects.requireNonNull(usageSignal);
-        this.userSpecifiedSystem = Objects.requireNonNull(userSpecifiedSystem);
-        this.userSpecifiedType = Objects.requireNonNull(userSpecifiedType);
+        this.bigqueryDateShardedSpec = bigqueryDateShardedSpec;
+        this.bigqueryTableSpec = bigqueryTableSpec;
+        this.businessContext = businessContext;
+        this.dataSource = dataSource;
+        this.dataSourceConnectionSpec = dataSourceConnectionSpec;
+        this.databaseTableSpec = databaseTableSpec;
+        this.description = description;
+        this.displayName = displayName;
+        this.fullyQualifiedName = fullyQualifiedName;
+        this.gcsFilesetSpec = gcsFilesetSpec;
+        this.integratedSystem = integratedSystem;
+        this.labels = labels;
+        this.linkedResource = linkedResource;
+        this.name = name;
+        this.personalDetails = personalDetails;
+        this.routineSpec = routineSpec;
+        this.schema = schema;
+        this.sourceSystemTimestamps = sourceSystemTimestamps;
+        this.type = type;
+        this.usageSignal = usageSignal;
+        this.userSpecifiedSystem = userSpecifiedSystem;
+        this.userSpecifiedType = userSpecifiedType;
     }
 
     /**

@@ -76,16 +76,16 @@ public final class GetNotificationChannelResult {
         String type,
         Map<String,String> userLabels,
         String verificationStatus) {
-        this.creationRecord = Objects.requireNonNull(creationRecord);
-        this.description = Objects.requireNonNull(description);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.enabled = Objects.requireNonNull(enabled);
-        this.labels = Objects.requireNonNull(labels);
-        this.mutationRecords = Objects.requireNonNull(mutationRecords);
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
-        this.userLabels = Objects.requireNonNull(userLabels);
-        this.verificationStatus = Objects.requireNonNull(verificationStatus);
+        this.creationRecord = creationRecord;
+        this.description = description;
+        this.displayName = displayName;
+        this.enabled = enabled;
+        this.labels = labels;
+        this.mutationRecords = mutationRecords;
+        this.name = name;
+        this.type = type;
+        this.userLabels = userLabels;
+        this.verificationStatus = verificationStatus;
     }
 
     /**

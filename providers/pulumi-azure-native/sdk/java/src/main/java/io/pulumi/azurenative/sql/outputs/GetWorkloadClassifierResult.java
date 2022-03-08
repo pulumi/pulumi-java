@@ -70,13 +70,13 @@ public final class GetWorkloadClassifierResult {
         String type) {
         this.context = context;
         this.endTime = endTime;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.importance = importance;
         this.label = label;
-        this.memberName = Objects.requireNonNull(memberName);
-        this.name = Objects.requireNonNull(name);
+        this.memberName = memberName;
+        this.name = name;
         this.startTime = startTime;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

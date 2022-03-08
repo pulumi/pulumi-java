@@ -23,10 +23,10 @@ public final class GlobalTableCapacityAutoScalingSettings {
         Integer minCapacity,
         @Nullable Integer seedCapacity,
         GlobalTableTargetTrackingScalingPolicyConfiguration targetTrackingScalingPolicyConfiguration) {
-        this.maxCapacity = Objects.requireNonNull(maxCapacity);
-        this.minCapacity = Objects.requireNonNull(minCapacity);
+        this.maxCapacity = maxCapacity;
+        this.minCapacity = minCapacity;
         this.seedCapacity = seedCapacity;
-        this.targetTrackingScalingPolicyConfiguration = Objects.requireNonNull(targetTrackingScalingPolicyConfiguration);
+        this.targetTrackingScalingPolicyConfiguration = targetTrackingScalingPolicyConfiguration;
     }
 
     public Integer getMaxCapacity() {

@@ -20,7 +20,7 @@ public final class FargateProfileSelector {
         @Nullable List<FargateProfileLabel> labels,
         String namespace) {
         this.labels = labels;
-        this.namespace = Objects.requireNonNull(namespace);
+        this.namespace = namespace;
     }
 
     public List<FargateProfileLabel> getLabels() {

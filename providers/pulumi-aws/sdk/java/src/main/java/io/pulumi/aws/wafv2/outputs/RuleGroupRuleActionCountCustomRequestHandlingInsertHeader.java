@@ -24,8 +24,8 @@ public final class RuleGroupRuleActionCountCustomRequestHandlingInsertHeader {
     private RuleGroupRuleActionCountCustomRequestHandlingInsertHeader(
         String name,
         String value) {
-        this.name = Objects.requireNonNull(name);
-        this.value = Objects.requireNonNull(value);
+        this.name = name;
+        this.value = value;
     }
 
     /**

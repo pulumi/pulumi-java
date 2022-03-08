@@ -26,8 +26,8 @@ public final class GetVirtualServiceSpecProvider {
     private GetVirtualServiceSpecProvider(
         List<GetVirtualServiceSpecProviderVirtualNode> virtualNodes,
         List<GetVirtualServiceSpecProviderVirtualRouter> virtualRouters) {
-        this.virtualNodes = Objects.requireNonNull(virtualNodes);
-        this.virtualRouters = Objects.requireNonNull(virtualRouters);
+        this.virtualNodes = virtualNodes;
+        this.virtualRouters = virtualRouters;
     }
 
     /**

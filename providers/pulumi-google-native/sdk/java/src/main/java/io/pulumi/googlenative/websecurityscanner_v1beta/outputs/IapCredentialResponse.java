@@ -17,7 +17,7 @@ public final class IapCredentialResponse {
 
     @OutputCustomType.Constructor({"iapTestServiceAccountInfo"})
     private IapCredentialResponse(IapTestServiceAccountInfoResponse iapTestServiceAccountInfo) {
-        this.iapTestServiceAccountInfo = Objects.requireNonNull(iapTestServiceAccountInfo);
+        this.iapTestServiceAccountInfo = iapTestServiceAccountInfo;
     }
 
     /**

@@ -18,7 +18,7 @@ public final class StackAccessEndpoint {
     private StackAccessEndpoint(
         String endpointType,
         @Nullable String vpceId) {
-        this.endpointType = Objects.requireNonNull(endpointType);
+        this.endpointType = endpointType;
         this.vpceId = vpceId;
     }
 

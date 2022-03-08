@@ -124,23 +124,23 @@ public final class GetBatchResult {
         String stateMessage,
         String stateTime,
         String uuid) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.creator = Objects.requireNonNull(creator);
-        this.environmentConfig = Objects.requireNonNull(environmentConfig);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.operation = Objects.requireNonNull(operation);
-        this.pysparkBatch = Objects.requireNonNull(pysparkBatch);
-        this.runtimeConfig = Objects.requireNonNull(runtimeConfig);
-        this.runtimeInfo = Objects.requireNonNull(runtimeInfo);
-        this.sparkBatch = Objects.requireNonNull(sparkBatch);
-        this.sparkRBatch = Objects.requireNonNull(sparkRBatch);
-        this.sparkSqlBatch = Objects.requireNonNull(sparkSqlBatch);
-        this.state = Objects.requireNonNull(state);
-        this.stateHistory = Objects.requireNonNull(stateHistory);
-        this.stateMessage = Objects.requireNonNull(stateMessage);
-        this.stateTime = Objects.requireNonNull(stateTime);
-        this.uuid = Objects.requireNonNull(uuid);
+        this.createTime = createTime;
+        this.creator = creator;
+        this.environmentConfig = environmentConfig;
+        this.labels = labels;
+        this.name = name;
+        this.operation = operation;
+        this.pysparkBatch = pysparkBatch;
+        this.runtimeConfig = runtimeConfig;
+        this.runtimeInfo = runtimeInfo;
+        this.sparkBatch = sparkBatch;
+        this.sparkRBatch = sparkRBatch;
+        this.sparkSqlBatch = sparkSqlBatch;
+        this.state = state;
+        this.stateHistory = stateHistory;
+        this.stateMessage = stateMessage;
+        this.stateTime = stateTime;
+        this.uuid = uuid;
     }
 
     /**

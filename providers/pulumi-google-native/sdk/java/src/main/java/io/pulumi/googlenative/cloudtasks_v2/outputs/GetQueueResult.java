@@ -58,13 +58,13 @@ public final class GetQueueResult {
         RetryConfigResponse retryConfig,
         StackdriverLoggingConfigResponse stackdriverLoggingConfig,
         String state) {
-        this.appEngineRoutingOverride = Objects.requireNonNull(appEngineRoutingOverride);
-        this.name = Objects.requireNonNull(name);
-        this.purgeTime = Objects.requireNonNull(purgeTime);
-        this.rateLimits = Objects.requireNonNull(rateLimits);
-        this.retryConfig = Objects.requireNonNull(retryConfig);
-        this.stackdriverLoggingConfig = Objects.requireNonNull(stackdriverLoggingConfig);
-        this.state = Objects.requireNonNull(state);
+        this.appEngineRoutingOverride = appEngineRoutingOverride;
+        this.name = name;
+        this.purgeTime = purgeTime;
+        this.rateLimits = rateLimits;
+        this.retryConfig = retryConfig;
+        this.stackdriverLoggingConfig = stackdriverLoggingConfig;
+        this.state = state;
     }
 
     /**

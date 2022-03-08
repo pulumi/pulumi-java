@@ -19,7 +19,7 @@ public final class EnvironmentConfigWebServerNetworkAccessControlAllowedIpRange 
         @Nullable String description,
         String value) {
         this.description = description;
-        this.value = Objects.requireNonNull(value);
+        this.value = value;
     }
 
     public Optional<String> getDescription() {

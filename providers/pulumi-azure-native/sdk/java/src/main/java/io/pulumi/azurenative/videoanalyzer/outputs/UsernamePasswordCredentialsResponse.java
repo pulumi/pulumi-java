@@ -31,9 +31,9 @@ public final class UsernamePasswordCredentialsResponse {
         String password,
         String type,
         String username) {
-        this.password = Objects.requireNonNull(password);
-        this.type = Objects.requireNonNull(type);
-        this.username = Objects.requireNonNull(username);
+        this.password = password;
+        this.type = type;
+        this.username = username;
     }
 
     /**

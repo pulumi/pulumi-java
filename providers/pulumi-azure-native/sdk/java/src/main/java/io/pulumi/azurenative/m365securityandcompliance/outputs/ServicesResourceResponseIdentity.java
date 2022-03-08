@@ -32,8 +32,8 @@ public final class ServicesResourceResponseIdentity {
         String principalId,
         String tenantId,
         @Nullable String type) {
-        this.principalId = Objects.requireNonNull(principalId);
-        this.tenantId = Objects.requireNonNull(tenantId);
+        this.principalId = principalId;
+        this.tenantId = tenantId;
         this.type = type;
     }
 

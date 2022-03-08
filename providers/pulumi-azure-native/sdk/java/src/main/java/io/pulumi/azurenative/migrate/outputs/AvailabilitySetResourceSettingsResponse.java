@@ -41,8 +41,8 @@ public final class AvailabilitySetResourceSettingsResponse {
         String targetResourceName,
         @Nullable Integer updateDomain) {
         this.faultDomain = faultDomain;
-        this.resourceType = Objects.requireNonNull(resourceType);
-        this.targetResourceName = Objects.requireNonNull(targetResourceName);
+        this.resourceType = resourceType;
+        this.targetResourceName = targetResourceName;
         this.updateDomain = updateDomain;
     }
 

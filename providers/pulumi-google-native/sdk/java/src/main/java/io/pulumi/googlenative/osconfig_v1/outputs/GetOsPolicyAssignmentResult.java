@@ -95,19 +95,19 @@ public final class GetOsPolicyAssignmentResult {
         OSPolicyAssignmentRolloutResponse rollout,
         String rolloutState,
         String uid) {
-        this.baseline = Objects.requireNonNull(baseline);
-        this.deleted = Objects.requireNonNull(deleted);
-        this.description = Objects.requireNonNull(description);
-        this.etag = Objects.requireNonNull(etag);
-        this.instanceFilter = Objects.requireNonNull(instanceFilter);
-        this.name = Objects.requireNonNull(name);
-        this.osPolicies = Objects.requireNonNull(osPolicies);
-        this.reconciling = Objects.requireNonNull(reconciling);
-        this.revisionCreateTime = Objects.requireNonNull(revisionCreateTime);
-        this.revisionId = Objects.requireNonNull(revisionId);
-        this.rollout = Objects.requireNonNull(rollout);
-        this.rolloutState = Objects.requireNonNull(rolloutState);
-        this.uid = Objects.requireNonNull(uid);
+        this.baseline = baseline;
+        this.deleted = deleted;
+        this.description = description;
+        this.etag = etag;
+        this.instanceFilter = instanceFilter;
+        this.name = name;
+        this.osPolicies = osPolicies;
+        this.reconciling = reconciling;
+        this.revisionCreateTime = revisionCreateTime;
+        this.revisionId = revisionId;
+        this.rollout = rollout;
+        this.rolloutState = rolloutState;
+        this.uid = uid;
     }
 
     /**

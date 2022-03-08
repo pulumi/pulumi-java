@@ -70,13 +70,13 @@ public final class FlowSourceEncryption {
         String roleArn,
         @Nullable String secretArn,
         @Nullable String url) {
-        this.algorithm = Objects.requireNonNull(algorithm);
+        this.algorithm = algorithm;
         this.constantInitializationVector = constantInitializationVector;
         this.deviceId = deviceId;
         this.keyType = keyType;
         this.region = region;
         this.resourceId = resourceId;
-        this.roleArn = Objects.requireNonNull(roleArn);
+        this.roleArn = roleArn;
         this.secretArn = secretArn;
         this.url = url;
     }

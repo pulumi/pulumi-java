@@ -13,7 +13,7 @@ public final class DataQualityJobDefinitionMonitoringResources {
 
     @OutputCustomType.Constructor({"clusterConfig"})
     private DataQualityJobDefinitionMonitoringResources(DataQualityJobDefinitionClusterConfig clusterConfig) {
-        this.clusterConfig = Objects.requireNonNull(clusterConfig);
+        this.clusterConfig = clusterConfig;
     }
 
     public DataQualityJobDefinitionClusterConfig getClusterConfig() {

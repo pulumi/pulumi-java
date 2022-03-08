@@ -30,9 +30,9 @@ public final class GetEnvgroupAttachmentResult {
         String createdAt,
         String environment,
         String name) {
-        this.createdAt = Objects.requireNonNull(createdAt);
-        this.environment = Objects.requireNonNull(environment);
-        this.name = Objects.requireNonNull(name);
+        this.createdAt = createdAt;
+        this.environment = environment;
+        this.name = name;
     }
 
     /**

@@ -25,8 +25,8 @@ public final class MaintenancePolicyResponse {
     private MaintenancePolicyResponse(
         String resourceVersion,
         MaintenanceWindowResponse window) {
-        this.resourceVersion = Objects.requireNonNull(resourceVersion);
-        this.window = Objects.requireNonNull(window);
+        this.resourceVersion = resourceVersion;
+        this.window = window;
     }
 
     /**

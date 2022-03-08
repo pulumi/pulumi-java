@@ -25,8 +25,8 @@ public final class GatewayRouteSpecGrpcRoute {
     private GatewayRouteSpecGrpcRoute(
         GatewayRouteSpecGrpcRouteAction action,
         GatewayRouteSpecGrpcRouteMatch match) {
-        this.action = Objects.requireNonNull(action);
-        this.match = Objects.requireNonNull(match);
+        this.action = action;
+        this.match = match;
     }
 
     /**

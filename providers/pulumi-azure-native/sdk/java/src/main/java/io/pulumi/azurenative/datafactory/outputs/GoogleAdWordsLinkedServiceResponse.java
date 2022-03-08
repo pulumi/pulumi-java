@@ -140,7 +140,7 @@ public final class GoogleAdWordsLinkedServiceResponse {
         this.parameters = parameters;
         this.refreshToken = refreshToken;
         this.trustedCertPath = trustedCertPath;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.useSystemTrustStore = useSystemTrustStore;
     }
 

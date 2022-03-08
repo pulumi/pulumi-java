@@ -92,17 +92,17 @@ public final class GetContactProfileResult {
         @Nullable Map<String,String> tags,
         String type) {
         this.autoTrackingConfiguration = autoTrackingConfiguration;
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.eventHubUri = eventHubUri;
-        this.id = Objects.requireNonNull(id);
-        this.links = Objects.requireNonNull(links);
-        this.location = Objects.requireNonNull(location);
+        this.id = id;
+        this.links = links;
+        this.location = location;
         this.minimumElevationDegrees = minimumElevationDegrees;
         this.minimumViableContactDuration = minimumViableContactDuration;
-        this.name = Objects.requireNonNull(name);
-        this.systemData = Objects.requireNonNull(systemData);
+        this.name = name;
+        this.systemData = systemData;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

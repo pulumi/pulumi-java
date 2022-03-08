@@ -30,9 +30,9 @@ public final class DataIntegrationScheduleConfig {
         String firstExecutionFrom,
         String object,
         String scheduleExpression) {
-        this.firstExecutionFrom = Objects.requireNonNull(firstExecutionFrom);
-        this.object = Objects.requireNonNull(object);
-        this.scheduleExpression = Objects.requireNonNull(scheduleExpression);
+        this.firstExecutionFrom = firstExecutionFrom;
+        this.object = object;
+        this.scheduleExpression = scheduleExpression;
     }
 
     /**

@@ -31,9 +31,9 @@ public final class NodeGroupMaintenanceWindowResponse {
         String duration,
         DurationResponse maintenanceDuration,
         String startTime) {
-        this.duration = Objects.requireNonNull(duration);
-        this.maintenanceDuration = Objects.requireNonNull(maintenanceDuration);
-        this.startTime = Objects.requireNonNull(startTime);
+        this.duration = duration;
+        this.maintenanceDuration = maintenanceDuration;
+        this.startTime = startTime;
     }
 
     /**

@@ -21,8 +21,8 @@ public final class ThrottlingRuleResponse {
         String action,
         List<ThrottlingMetricResponse> metrics,
         @Nullable List<String> requiredFeatures) {
-        this.action = Objects.requireNonNull(action);
-        this.metrics = Objects.requireNonNull(metrics);
+        this.action = action;
+        this.metrics = metrics;
         this.requiredFeatures = requiredFeatures;
     }
 

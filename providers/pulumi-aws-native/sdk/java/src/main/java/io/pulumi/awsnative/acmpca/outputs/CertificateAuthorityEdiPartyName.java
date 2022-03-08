@@ -16,8 +16,8 @@ public final class CertificateAuthorityEdiPartyName {
     private CertificateAuthorityEdiPartyName(
         String nameAssigner,
         String partyName) {
-        this.nameAssigner = Objects.requireNonNull(nameAssigner);
-        this.partyName = Objects.requireNonNull(partyName);
+        this.nameAssigner = nameAssigner;
+        this.partyName = partyName;
     }
 
     public String getNameAssigner() {

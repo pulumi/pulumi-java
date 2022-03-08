@@ -99,7 +99,7 @@ public final class AmazonS3LinkedServiceResponse {
         this.secretAccessKey = secretAccessKey;
         this.serviceUrl = serviceUrl;
         this.sessionToken = sessionToken;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

@@ -32,9 +32,9 @@ public final class MetadataResponse {
         String fingerprint,
         List<MetadataItemsItemResponse> items,
         String kind) {
-        this.fingerprint = Objects.requireNonNull(fingerprint);
-        this.items = Objects.requireNonNull(items);
-        this.kind = Objects.requireNonNull(kind);
+        this.fingerprint = fingerprint;
+        this.items = items;
+        this.kind = kind;
     }
 
     /**

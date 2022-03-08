@@ -49,12 +49,12 @@ public final class GoogleCloudApigeeV1QueryMetadataResponse {
         String outputFormat,
         String startTimestamp,
         String timeUnit) {
-        this.dimensions = Objects.requireNonNull(dimensions);
-        this.endTimestamp = Objects.requireNonNull(endTimestamp);
-        this.metrics = Objects.requireNonNull(metrics);
-        this.outputFormat = Objects.requireNonNull(outputFormat);
-        this.startTimestamp = Objects.requireNonNull(startTimestamp);
-        this.timeUnit = Objects.requireNonNull(timeUnit);
+        this.dimensions = dimensions;
+        this.endTimestamp = endTimestamp;
+        this.metrics = metrics;
+        this.outputFormat = outputFormat;
+        this.startTimestamp = startTimestamp;
+        this.timeUnit = timeUnit;
     }
 
     /**

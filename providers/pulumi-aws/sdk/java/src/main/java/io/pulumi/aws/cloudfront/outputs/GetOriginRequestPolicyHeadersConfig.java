@@ -18,8 +18,8 @@ public final class GetOriginRequestPolicyHeadersConfig {
     private GetOriginRequestPolicyHeadersConfig(
         String headerBehavior,
         List<GetOriginRequestPolicyHeadersConfigHeader> headers) {
-        this.headerBehavior = Objects.requireNonNull(headerBehavior);
-        this.headers = Objects.requireNonNull(headers);
+        this.headerBehavior = headerBehavior;
+        this.headers = headers;
     }
 
     public String getHeaderBehavior() {

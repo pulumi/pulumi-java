@@ -26,7 +26,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupInventoryFilter {
     private OsPolicyAssignmentOsPolicyResourceGroupInventoryFilter(
         String osShortName,
         @Nullable String osVersion) {
-        this.osShortName = Objects.requireNonNull(osShortName);
+        this.osShortName = osShortName;
         this.osVersion = osVersion;
     }
 

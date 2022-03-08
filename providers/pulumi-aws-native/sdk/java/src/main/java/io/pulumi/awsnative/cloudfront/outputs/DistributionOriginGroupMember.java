@@ -13,7 +13,7 @@ public final class DistributionOriginGroupMember {
 
     @OutputCustomType.Constructor({"originId"})
     private DistributionOriginGroupMember(String originId) {
-        this.originId = Objects.requireNonNull(originId);
+        this.originId = originId;
     }
 
     public String getOriginId() {

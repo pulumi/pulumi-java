@@ -30,9 +30,9 @@ public final class StreamingbufferResponse {
         String estimatedBytes,
         String estimatedRows,
         String oldestEntryTime) {
-        this.estimatedBytes = Objects.requireNonNull(estimatedBytes);
-        this.estimatedRows = Objects.requireNonNull(estimatedRows);
-        this.oldestEntryTime = Objects.requireNonNull(oldestEntryTime);
+        this.estimatedBytes = estimatedBytes;
+        this.estimatedRows = estimatedRows;
+        this.oldestEntryTime = oldestEntryTime;
     }
 
     /**

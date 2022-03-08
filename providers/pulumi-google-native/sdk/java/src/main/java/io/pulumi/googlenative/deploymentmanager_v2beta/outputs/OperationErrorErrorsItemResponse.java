@@ -30,9 +30,9 @@ public final class OperationErrorErrorsItemResponse {
         String code,
         String location,
         String message) {
-        this.code = Objects.requireNonNull(code);
-        this.location = Objects.requireNonNull(location);
-        this.message = Objects.requireNonNull(message);
+        this.code = code;
+        this.location = location;
+        this.message = message;
     }
 
     /**

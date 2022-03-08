@@ -25,8 +25,8 @@ public final class ReusableConfigWrapperResponse {
     private ReusableConfigWrapperResponse(
         String reusableConfig,
         ReusableConfigValuesResponse reusableConfigValues) {
-        this.reusableConfig = Objects.requireNonNull(reusableConfig);
-        this.reusableConfigValues = Objects.requireNonNull(reusableConfigValues);
+        this.reusableConfig = reusableConfig;
+        this.reusableConfigValues = reusableConfigValues;
     }
 
     /**

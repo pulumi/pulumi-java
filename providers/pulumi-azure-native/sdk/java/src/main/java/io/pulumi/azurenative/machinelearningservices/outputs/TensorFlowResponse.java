@@ -34,7 +34,7 @@ public final class TensorFlowResponse {
         String distributionType,
         @Nullable Integer parameterServerCount,
         @Nullable Integer workerCount) {
-        this.distributionType = Objects.requireNonNull(distributionType);
+        this.distributionType = distributionType;
         this.parameterServerCount = parameterServerCount;
         this.workerCount = workerCount;
     }

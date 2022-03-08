@@ -26,7 +26,7 @@ public final class HostPathVolumeSource {
     private HostPathVolumeSource(
         String path,
         @Nullable String type) {
-        this.path = Objects.requireNonNull(path);
+        this.path = path;
         this.type = type;
     }
 

@@ -99,14 +99,14 @@ public final class OracleServiceCloudLinkedServiceResponse {
         this.connectVia = connectVia;
         this.description = description;
         this.encryptedCredential = encryptedCredential;
-        this.host = Objects.requireNonNull(host);
+        this.host = host;
         this.parameters = parameters;
-        this.password = Objects.requireNonNull(password);
-        this.type = Objects.requireNonNull(type);
+        this.password = password;
+        this.type = type;
         this.useEncryptedEndpoints = useEncryptedEndpoints;
         this.useHostVerification = useHostVerification;
         this.usePeerVerification = usePeerVerification;
-        this.username = Objects.requireNonNull(username);
+        this.username = username;
     }
 
     /**

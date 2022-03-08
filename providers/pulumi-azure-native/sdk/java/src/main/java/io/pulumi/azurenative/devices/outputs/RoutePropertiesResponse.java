@@ -47,10 +47,10 @@ public final class RoutePropertiesResponse {
         String name,
         String source) {
         this.condition = condition;
-        this.endpointNames = Objects.requireNonNull(endpointNames);
-        this.isEnabled = Objects.requireNonNull(isEnabled);
-        this.name = Objects.requireNonNull(name);
-        this.source = Objects.requireNonNull(source);
+        this.endpointNames = endpointNames;
+        this.isEnabled = isEnabled;
+        this.name = name;
+        this.source = source;
     }
 
     /**

@@ -56,13 +56,13 @@ public final class GetServicePerimeterResult {
         ServicePerimeterConfigResponse status,
         String title,
         Boolean useExplicitDryRunSpec) {
-        this.description = Objects.requireNonNull(description);
-        this.name = Objects.requireNonNull(name);
-        this.perimeterType = Objects.requireNonNull(perimeterType);
-        this.spec = Objects.requireNonNull(spec);
-        this.status = Objects.requireNonNull(status);
-        this.title = Objects.requireNonNull(title);
-        this.useExplicitDryRunSpec = Objects.requireNonNull(useExplicitDryRunSpec);
+        this.description = description;
+        this.name = name;
+        this.perimeterType = perimeterType;
+        this.spec = spec;
+        this.status = status;
+        this.title = title;
+        this.useExplicitDryRunSpec = useExplicitDryRunSpec;
     }
 
     /**

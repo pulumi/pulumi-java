@@ -27,7 +27,7 @@ public final class DeviceFleetEdgeOutputConfig {
         @Nullable String kmsKeyId,
         String s3OutputLocation) {
         this.kmsKeyId = kmsKeyId;
-        this.s3OutputLocation = Objects.requireNonNull(s3OutputLocation);
+        this.s3OutputLocation = s3OutputLocation;
     }
 
     /**

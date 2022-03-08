@@ -56,7 +56,7 @@ public final class SftpWriteSettingsResponse {
         this.disableMetricsCollection = disableMetricsCollection;
         this.maxConcurrentConnections = maxConcurrentConnections;
         this.operationTimeout = operationTimeout;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.useTempFileRename = useTempFileRename;
     }
 

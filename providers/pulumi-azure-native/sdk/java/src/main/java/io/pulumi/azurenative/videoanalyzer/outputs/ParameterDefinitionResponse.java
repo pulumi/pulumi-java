@@ -26,7 +26,7 @@ public final class ParameterDefinitionResponse {
     private ParameterDefinitionResponse(
         String name,
         @Nullable String value) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.value = value;
     }
 

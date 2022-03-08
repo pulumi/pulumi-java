@@ -45,11 +45,11 @@ public final class RuntimeScriptActionResponse {
         @Nullable String parameters,
         List<String> roles,
         String uri) {
-        this.applicationName = Objects.requireNonNull(applicationName);
-        this.name = Objects.requireNonNull(name);
+        this.applicationName = applicationName;
+        this.name = name;
         this.parameters = parameters;
-        this.roles = Objects.requireNonNull(roles);
-        this.uri = Objects.requireNonNull(uri);
+        this.roles = roles;
+        this.uri = uri;
     }
 
     /**

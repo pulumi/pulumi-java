@@ -52,11 +52,11 @@ public final class ReportableExceptionResponse {
         String message,
         String stackTrace) {
         this.actionableMessage = actionableMessage;
-        this.filePath = Objects.requireNonNull(filePath);
-        this.hResult = Objects.requireNonNull(hResult);
-        this.lineNumber = Objects.requireNonNull(lineNumber);
-        this.message = Objects.requireNonNull(message);
-        this.stackTrace = Objects.requireNonNull(stackTrace);
+        this.filePath = filePath;
+        this.hResult = hResult;
+        this.lineNumber = lineNumber;
+        this.message = message;
+        this.stackTrace = stackTrace;
     }
 
     /**

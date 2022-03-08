@@ -25,7 +25,7 @@ public final class ClusterClusterConfigEndpointConfig {
     private ClusterClusterConfigEndpointConfig(
         Boolean enableHttpPortAccess,
         @Nullable Map<String,Object> httpPorts) {
-        this.enableHttpPortAccess = Objects.requireNonNull(enableHttpPortAccess);
+        this.enableHttpPortAccess = enableHttpPortAccess;
         this.httpPorts = httpPorts;
     }
 

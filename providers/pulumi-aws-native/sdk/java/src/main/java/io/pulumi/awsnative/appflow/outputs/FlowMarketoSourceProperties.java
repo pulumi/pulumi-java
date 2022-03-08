@@ -13,7 +13,7 @@ public final class FlowMarketoSourceProperties {
 
     @OutputCustomType.Constructor({"object"})
     private FlowMarketoSourceProperties(String object) {
-        this.object = Objects.requireNonNull(object);
+        this.object = object;
     }
 
     public String getObject() {

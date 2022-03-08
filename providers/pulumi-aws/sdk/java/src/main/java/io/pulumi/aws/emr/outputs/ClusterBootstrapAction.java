@@ -33,8 +33,8 @@ public final class ClusterBootstrapAction {
         String name,
         String path) {
         this.args = args;
-        this.name = Objects.requireNonNull(name);
-        this.path = Objects.requireNonNull(path);
+        this.name = name;
+        this.path = path;
     }
 
     /**

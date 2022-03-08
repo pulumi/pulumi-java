@@ -28,7 +28,7 @@ public final class AppImageConfigKernelGatewayImageConfig {
         @Nullable AppImageConfigKernelGatewayImageConfigFileSystemConfig fileSystemConfig,
         AppImageConfigKernelGatewayImageConfigKernelSpec kernelSpec) {
         this.fileSystemConfig = fileSystemConfig;
-        this.kernelSpec = Objects.requireNonNull(kernelSpec);
+        this.kernelSpec = kernelSpec;
     }
 
     /**

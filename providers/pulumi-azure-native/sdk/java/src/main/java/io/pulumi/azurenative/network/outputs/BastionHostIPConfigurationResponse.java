@@ -63,14 +63,14 @@ public final class BastionHostIPConfigurationResponse {
         SubResourceResponse publicIPAddress,
         SubResourceResponse subnet,
         String type) {
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.id = id;
         this.name = name;
         this.privateIPAllocationMethod = privateIPAllocationMethod;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.publicIPAddress = Objects.requireNonNull(publicIPAddress);
-        this.subnet = Objects.requireNonNull(subnet);
-        this.type = Objects.requireNonNull(type);
+        this.provisioningState = provisioningState;
+        this.publicIPAddress = publicIPAddress;
+        this.subnet = subnet;
+        this.type = type;
     }
 
     /**

@@ -17,7 +17,7 @@ public final class UserPoolUsernameConfiguration {
 
     @OutputCustomType.Constructor({"caseSensitive"})
     private UserPoolUsernameConfiguration(Boolean caseSensitive) {
-        this.caseSensitive = Objects.requireNonNull(caseSensitive);
+        this.caseSensitive = caseSensitive;
     }
 
     /**

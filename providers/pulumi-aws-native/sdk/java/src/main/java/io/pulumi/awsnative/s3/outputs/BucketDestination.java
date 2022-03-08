@@ -40,8 +40,8 @@ public final class BucketDestination {
         BucketDestinationFormat format,
         @Nullable String prefix) {
         this.bucketAccountId = bucketAccountId;
-        this.bucketArn = Objects.requireNonNull(bucketArn);
-        this.format = Objects.requireNonNull(format);
+        this.bucketArn = bucketArn;
+        this.format = format;
         this.prefix = prefix;
     }
 

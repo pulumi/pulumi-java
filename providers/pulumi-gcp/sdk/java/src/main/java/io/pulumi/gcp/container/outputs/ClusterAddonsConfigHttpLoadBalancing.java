@@ -18,7 +18,7 @@ public final class ClusterAddonsConfigHttpLoadBalancing {
 
     @OutputCustomType.Constructor({"disabled"})
     private ClusterAddonsConfigHttpLoadBalancing(Boolean disabled) {
-        this.disabled = Objects.requireNonNull(disabled);
+        this.disabled = disabled;
     }
 
     /**

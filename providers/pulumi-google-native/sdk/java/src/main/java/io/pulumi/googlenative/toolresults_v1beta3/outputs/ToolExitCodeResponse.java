@@ -17,7 +17,7 @@ public final class ToolExitCodeResponse {
 
     @OutputCustomType.Constructor({"number"})
     private ToolExitCodeResponse(Integer number) {
-        this.number = Objects.requireNonNull(number);
+        this.number = number;
     }
 
     /**

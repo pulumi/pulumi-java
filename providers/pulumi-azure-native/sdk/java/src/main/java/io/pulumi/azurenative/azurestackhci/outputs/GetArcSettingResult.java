@@ -94,19 +94,19 @@ public final class GetArcSettingResult {
         List<PerNodeStateResponse> perNodeDetails,
         String provisioningState,
         String type) {
-        this.aggregateState = Objects.requireNonNull(aggregateState);
-        this.arcInstanceResourceGroup = Objects.requireNonNull(arcInstanceResourceGroup);
+        this.aggregateState = aggregateState;
+        this.arcInstanceResourceGroup = arcInstanceResourceGroup;
         this.createdAt = createdAt;
         this.createdBy = createdBy;
         this.createdByType = createdByType;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.lastModifiedAt = lastModifiedAt;
         this.lastModifiedBy = lastModifiedBy;
         this.lastModifiedByType = lastModifiedByType;
-        this.name = Objects.requireNonNull(name);
-        this.perNodeDetails = Objects.requireNonNull(perNodeDetails);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.type = Objects.requireNonNull(type);
+        this.name = name;
+        this.perNodeDetails = perNodeDetails;
+        this.provisioningState = provisioningState;
+        this.type = type;
     }
 
     /**

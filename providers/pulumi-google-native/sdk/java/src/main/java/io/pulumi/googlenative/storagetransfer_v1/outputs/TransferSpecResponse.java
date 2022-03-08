@@ -98,19 +98,19 @@ public final class TransferSpecResponse {
         String sourceAgentPoolName,
         TransferManifestResponse transferManifest,
         TransferOptionsResponse transferOptions) {
-        this.awsS3DataSource = Objects.requireNonNull(awsS3DataSource);
-        this.azureBlobStorageDataSource = Objects.requireNonNull(azureBlobStorageDataSource);
-        this.gcsDataSink = Objects.requireNonNull(gcsDataSink);
-        this.gcsDataSource = Objects.requireNonNull(gcsDataSource);
-        this.gcsIntermediateDataLocation = Objects.requireNonNull(gcsIntermediateDataLocation);
-        this.httpDataSource = Objects.requireNonNull(httpDataSource);
-        this.objectConditions = Objects.requireNonNull(objectConditions);
-        this.posixDataSink = Objects.requireNonNull(posixDataSink);
-        this.posixDataSource = Objects.requireNonNull(posixDataSource);
-        this.sinkAgentPoolName = Objects.requireNonNull(sinkAgentPoolName);
-        this.sourceAgentPoolName = Objects.requireNonNull(sourceAgentPoolName);
-        this.transferManifest = Objects.requireNonNull(transferManifest);
-        this.transferOptions = Objects.requireNonNull(transferOptions);
+        this.awsS3DataSource = awsS3DataSource;
+        this.azureBlobStorageDataSource = azureBlobStorageDataSource;
+        this.gcsDataSink = gcsDataSink;
+        this.gcsDataSource = gcsDataSource;
+        this.gcsIntermediateDataLocation = gcsIntermediateDataLocation;
+        this.httpDataSource = httpDataSource;
+        this.objectConditions = objectConditions;
+        this.posixDataSink = posixDataSink;
+        this.posixDataSource = posixDataSource;
+        this.sinkAgentPoolName = sinkAgentPoolName;
+        this.sourceAgentPoolName = sourceAgentPoolName;
+        this.transferManifest = transferManifest;
+        this.transferOptions = transferOptions;
     }
 
     /**

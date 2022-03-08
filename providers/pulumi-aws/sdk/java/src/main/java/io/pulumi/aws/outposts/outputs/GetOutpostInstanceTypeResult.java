@@ -26,9 +26,9 @@ public final class GetOutpostInstanceTypeResult {
         String id,
         String instanceType,
         @Nullable List<String> preferredInstanceTypes) {
-        this.arn = Objects.requireNonNull(arn);
-        this.id = Objects.requireNonNull(id);
-        this.instanceType = Objects.requireNonNull(instanceType);
+        this.arn = arn;
+        this.id = id;
+        this.instanceType = instanceType;
         this.preferredInstanceTypes = preferredInstanceTypes;
     }
 

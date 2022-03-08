@@ -27,7 +27,7 @@ public final class InstanceFailoverGroupReadWriteEndpointResponse {
     private InstanceFailoverGroupReadWriteEndpointResponse(
         String failoverPolicy,
         @Nullable Integer failoverWithDataLossGracePeriodMinutes) {
-        this.failoverPolicy = Objects.requireNonNull(failoverPolicy);
+        this.failoverPolicy = failoverPolicy;
         this.failoverWithDataLossGracePeriodMinutes = failoverWithDataLossGracePeriodMinutes;
     }
 

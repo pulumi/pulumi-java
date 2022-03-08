@@ -43,7 +43,7 @@ public final class ListenerRuleAction {
         this.order = order;
         this.redirectConfig = redirectConfig;
         this.targetGroupArn = targetGroupArn;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     public Optional<ListenerRuleAuthenticateCognitoConfig> getAuthenticateCognitoConfig() {

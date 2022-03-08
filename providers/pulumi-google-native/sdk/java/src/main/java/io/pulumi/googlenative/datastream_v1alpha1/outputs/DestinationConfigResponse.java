@@ -25,8 +25,8 @@ public final class DestinationConfigResponse {
     private DestinationConfigResponse(
         String destinationConnectionProfileName,
         GcsDestinationConfigResponse gcsDestinationConfig) {
-        this.destinationConnectionProfileName = Objects.requireNonNull(destinationConnectionProfileName);
-        this.gcsDestinationConfig = Objects.requireNonNull(gcsDestinationConfig);
+        this.destinationConnectionProfileName = destinationConnectionProfileName;
+        this.gcsDestinationConfig = gcsDestinationConfig;
     }
 
     /**

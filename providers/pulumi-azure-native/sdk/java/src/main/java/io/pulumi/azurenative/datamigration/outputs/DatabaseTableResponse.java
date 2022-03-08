@@ -25,8 +25,8 @@ public final class DatabaseTableResponse {
     private DatabaseTableResponse(
         Boolean hasRows,
         String name) {
-        this.hasRows = Objects.requireNonNull(hasRows);
-        this.name = Objects.requireNonNull(name);
+        this.hasRows = hasRows;
+        this.name = name;
     }
 
     /**

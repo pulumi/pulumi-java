@@ -30,9 +30,9 @@ public final class GetActiveReceiptRuleSetResult {
         String arn,
         String id,
         String ruleSetName) {
-        this.arn = Objects.requireNonNull(arn);
-        this.id = Objects.requireNonNull(id);
-        this.ruleSetName = Objects.requireNonNull(ruleSetName);
+        this.arn = arn;
+        this.id = id;
+        this.ruleSetName = ruleSetName;
     }
 
     /**

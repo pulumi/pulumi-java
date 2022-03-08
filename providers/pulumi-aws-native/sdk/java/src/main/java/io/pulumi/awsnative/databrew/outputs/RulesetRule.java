@@ -35,10 +35,10 @@ public final class RulesetRule {
         String name,
         @Nullable List<RulesetSubstitutionValue> substitutionMap,
         @Nullable RulesetThreshold threshold) {
-        this.checkExpression = Objects.requireNonNull(checkExpression);
+        this.checkExpression = checkExpression;
         this.columnSelectors = columnSelectors;
         this.disabled = disabled;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.substitutionMap = substitutionMap;
         this.threshold = threshold;
     }

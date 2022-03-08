@@ -35,14 +35,14 @@ public final class GetWorkloadIdentityPoolResult {
         @Nullable String project,
         String state,
         String workloadIdentityPoolId) {
-        this.description = Objects.requireNonNull(description);
-        this.disabled = Objects.requireNonNull(disabled);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.description = description;
+        this.disabled = disabled;
+        this.displayName = displayName;
+        this.id = id;
+        this.name = name;
         this.project = project;
-        this.state = Objects.requireNonNull(state);
-        this.workloadIdentityPoolId = Objects.requireNonNull(workloadIdentityPoolId);
+        this.state = state;
+        this.workloadIdentityPoolId = workloadIdentityPoolId;
     }
 
     public String getDescription() {

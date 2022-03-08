@@ -77,16 +77,16 @@ public final class GetLoadTestResult {
         SystemDataResponse systemData,
         @Nullable Map<String,String> tags,
         String type) {
-        this.dataPlaneURI = Objects.requireNonNull(dataPlaneURI);
+        this.dataPlaneURI = dataPlaneURI;
         this.description = description;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.identity = identity;
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.systemData = Objects.requireNonNull(systemData);
+        this.location = location;
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.systemData = systemData;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

@@ -30,9 +30,9 @@ public final class ToolResultsExecutionResponse {
         String executionId,
         String historyId,
         String project) {
-        this.executionId = Objects.requireNonNull(executionId);
-        this.historyId = Objects.requireNonNull(historyId);
-        this.project = Objects.requireNonNull(project);
+        this.executionId = executionId;
+        this.historyId = historyId;
+        this.project = project;
     }
 
     /**

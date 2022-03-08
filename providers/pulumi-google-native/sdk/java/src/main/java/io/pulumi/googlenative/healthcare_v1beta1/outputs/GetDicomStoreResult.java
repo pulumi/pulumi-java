@@ -40,10 +40,10 @@ public final class GetDicomStoreResult {
         String name,
         NotificationConfigResponse notificationConfig,
         List<GoogleCloudHealthcareV1beta1DicomStreamConfigResponse> streamConfigs) {
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.notificationConfig = Objects.requireNonNull(notificationConfig);
-        this.streamConfigs = Objects.requireNonNull(streamConfigs);
+        this.labels = labels;
+        this.name = name;
+        this.notificationConfig = notificationConfig;
+        this.streamConfigs = streamConfigs;
     }
 
     /**

@@ -38,10 +38,10 @@ public final class SoftwareRecipeStepExecFileResponse {
         List<String> args,
         String artifactId,
         String localPath) {
-        this.allowedExitCodes = Objects.requireNonNull(allowedExitCodes);
-        this.args = Objects.requireNonNull(args);
-        this.artifactId = Objects.requireNonNull(artifactId);
-        this.localPath = Objects.requireNonNull(localPath);
+        this.allowedExitCodes = allowedExitCodes;
+        this.args = args;
+        this.artifactId = artifactId;
+        this.localPath = localPath;
     }
 
     /**

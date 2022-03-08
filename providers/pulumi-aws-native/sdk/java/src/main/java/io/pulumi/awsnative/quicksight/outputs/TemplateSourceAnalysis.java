@@ -27,8 +27,8 @@ public final class TemplateSourceAnalysis {
     private TemplateSourceAnalysis(
         String arn,
         List<TemplateDataSetReference> dataSetReferences) {
-        this.arn = Objects.requireNonNull(arn);
-        this.dataSetReferences = Objects.requireNonNull(dataSetReferences);
+        this.arn = arn;
+        this.dataSetReferences = dataSetReferences;
     }
 
     /**

@@ -17,7 +17,7 @@ public final class ExternalVpnGatewayInterfaceResponse {
 
     @OutputCustomType.Constructor({"ipAddress"})
     private ExternalVpnGatewayInterfaceResponse(String ipAddress) {
-        this.ipAddress = Objects.requireNonNull(ipAddress);
+        this.ipAddress = ipAddress;
     }
 
     /**

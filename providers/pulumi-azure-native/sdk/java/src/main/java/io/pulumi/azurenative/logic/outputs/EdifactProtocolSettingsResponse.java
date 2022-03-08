@@ -90,17 +90,17 @@ public final class EdifactProtocolSettingsResponse {
         List<EdifactSchemaReferenceResponse> schemaReferences,
         @Nullable List<EdifactValidationOverrideResponse> validationOverrides,
         EdifactValidationSettingsResponse validationSettings) {
-        this.acknowledgementSettings = Objects.requireNonNull(acknowledgementSettings);
+        this.acknowledgementSettings = acknowledgementSettings;
         this.edifactDelimiterOverrides = edifactDelimiterOverrides;
         this.envelopeOverrides = envelopeOverrides;
-        this.envelopeSettings = Objects.requireNonNull(envelopeSettings);
-        this.framingSettings = Objects.requireNonNull(framingSettings);
-        this.messageFilter = Objects.requireNonNull(messageFilter);
+        this.envelopeSettings = envelopeSettings;
+        this.framingSettings = framingSettings;
+        this.messageFilter = messageFilter;
         this.messageFilterList = messageFilterList;
-        this.processingSettings = Objects.requireNonNull(processingSettings);
-        this.schemaReferences = Objects.requireNonNull(schemaReferences);
+        this.processingSettings = processingSettings;
+        this.schemaReferences = schemaReferences;
         this.validationOverrides = validationOverrides;
-        this.validationSettings = Objects.requireNonNull(validationSettings);
+        this.validationSettings = validationSettings;
     }
 
     /**

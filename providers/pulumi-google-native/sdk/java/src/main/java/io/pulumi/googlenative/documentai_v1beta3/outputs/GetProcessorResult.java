@@ -60,14 +60,14 @@ public final class GetProcessorResult {
         String processEndpoint,
         String state,
         String type) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.defaultProcessorVersion = Objects.requireNonNull(defaultProcessorVersion);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
-        this.name = Objects.requireNonNull(name);
-        this.processEndpoint = Objects.requireNonNull(processEndpoint);
-        this.state = Objects.requireNonNull(state);
-        this.type = Objects.requireNonNull(type);
+        this.createTime = createTime;
+        this.defaultProcessorVersion = defaultProcessorVersion;
+        this.displayName = displayName;
+        this.kmsKeyName = kmsKeyName;
+        this.name = name;
+        this.processEndpoint = processEndpoint;
+        this.state = state;
+        this.type = type;
     }
 
     /**

@@ -18,8 +18,8 @@ public final class RuleGroupRuleDefinition {
     private RuleGroupRuleDefinition(
         List<String> actions,
         RuleGroupMatchAttributes matchAttributes) {
-        this.actions = Objects.requireNonNull(actions);
-        this.matchAttributes = Objects.requireNonNull(matchAttributes);
+        this.actions = actions;
+        this.matchAttributes = matchAttributes;
     }
 
     public List<String> getActions() {

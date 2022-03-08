@@ -43,11 +43,11 @@ public final class NfsExportOptionsResponse {
         String anonUid,
         List<String> ipRanges,
         String squashMode) {
-        this.accessMode = Objects.requireNonNull(accessMode);
-        this.anonGid = Objects.requireNonNull(anonGid);
-        this.anonUid = Objects.requireNonNull(anonUid);
-        this.ipRanges = Objects.requireNonNull(ipRanges);
-        this.squashMode = Objects.requireNonNull(squashMode);
+        this.accessMode = accessMode;
+        this.anonGid = anonGid;
+        this.anonUid = anonUid;
+        this.ipRanges = ipRanges;
+        this.squashMode = squashMode;
     }
 
     /**

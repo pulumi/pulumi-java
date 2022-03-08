@@ -81,10 +81,10 @@ public final class FileServerLinkedServiceResponse {
         this.connectVia = connectVia;
         this.description = description;
         this.encryptedCredential = encryptedCredential;
-        this.host = Objects.requireNonNull(host);
+        this.host = host;
         this.parameters = parameters;
         this.password = password;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.userId = userId;
     }
 

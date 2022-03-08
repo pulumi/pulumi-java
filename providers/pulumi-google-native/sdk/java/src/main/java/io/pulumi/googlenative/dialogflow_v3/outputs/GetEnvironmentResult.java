@@ -51,12 +51,12 @@ public final class GetEnvironmentResult {
         GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigResponse testCasesConfig,
         String updateTime,
         List<GoogleCloudDialogflowCxV3EnvironmentVersionConfigResponse> versionConfigs) {
-        this.description = Objects.requireNonNull(description);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.name = Objects.requireNonNull(name);
-        this.testCasesConfig = Objects.requireNonNull(testCasesConfig);
-        this.updateTime = Objects.requireNonNull(updateTime);
-        this.versionConfigs = Objects.requireNonNull(versionConfigs);
+        this.description = description;
+        this.displayName = displayName;
+        this.name = name;
+        this.testCasesConfig = testCasesConfig;
+        this.updateTime = updateTime;
+        this.versionConfigs = versionConfigs;
     }
 
     /**

@@ -55,13 +55,13 @@ public final class VMwareCbtProtectionContainerMappingDetailsResponse {
         String storageAccountId,
         String storageAccountSasSecretName,
         String targetLocation) {
-        this.instanceType = Objects.requireNonNull(instanceType);
-        this.keyVaultId = Objects.requireNonNull(keyVaultId);
-        this.keyVaultUri = Objects.requireNonNull(keyVaultUri);
-        this.serviceBusConnectionStringSecretName = Objects.requireNonNull(serviceBusConnectionStringSecretName);
-        this.storageAccountId = Objects.requireNonNull(storageAccountId);
-        this.storageAccountSasSecretName = Objects.requireNonNull(storageAccountSasSecretName);
-        this.targetLocation = Objects.requireNonNull(targetLocation);
+        this.instanceType = instanceType;
+        this.keyVaultId = keyVaultId;
+        this.keyVaultUri = keyVaultUri;
+        this.serviceBusConnectionStringSecretName = serviceBusConnectionStringSecretName;
+        this.storageAccountId = storageAccountId;
+        this.storageAccountSasSecretName = storageAccountSasSecretName;
+        this.targetLocation = targetLocation;
     }
 
     /**

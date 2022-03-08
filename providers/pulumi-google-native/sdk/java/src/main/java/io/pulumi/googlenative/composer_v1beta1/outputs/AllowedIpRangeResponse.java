@@ -24,8 +24,8 @@ public final class AllowedIpRangeResponse {
     private AllowedIpRangeResponse(
         String description,
         String value) {
-        this.description = Objects.requireNonNull(description);
-        this.value = Objects.requireNonNull(value);
+        this.description = description;
+        this.value = value;
     }
 
     /**

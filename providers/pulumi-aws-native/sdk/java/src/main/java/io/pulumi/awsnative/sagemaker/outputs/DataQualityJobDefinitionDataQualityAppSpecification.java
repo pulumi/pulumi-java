@@ -55,7 +55,7 @@ public final class DataQualityJobDefinitionDataQualityAppSpecification {
         this.containerArguments = containerArguments;
         this.containerEntrypoint = containerEntrypoint;
         this.environment = environment;
-        this.imageUri = Objects.requireNonNull(imageUri);
+        this.imageUri = imageUri;
         this.postAnalyticsProcessorSourceUri = postAnalyticsProcessorSourceUri;
         this.recordPreprocessorSourceUri = recordPreprocessorSourceUri;
     }

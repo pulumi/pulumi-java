@@ -38,16 +38,16 @@ public final class ListenerAuthenticateOidcConfig {
         String tokenEndpoint,
         String userInfoEndpoint) {
         this.authenticationRequestExtraParams = authenticationRequestExtraParams;
-        this.authorizationEndpoint = Objects.requireNonNull(authorizationEndpoint);
-        this.clientId = Objects.requireNonNull(clientId);
-        this.clientSecret = Objects.requireNonNull(clientSecret);
-        this.issuer = Objects.requireNonNull(issuer);
+        this.authorizationEndpoint = authorizationEndpoint;
+        this.clientId = clientId;
+        this.clientSecret = clientSecret;
+        this.issuer = issuer;
         this.onUnauthenticatedRequest = onUnauthenticatedRequest;
         this.scope = scope;
         this.sessionCookieName = sessionCookieName;
         this.sessionTimeout = sessionTimeout;
-        this.tokenEndpoint = Objects.requireNonNull(tokenEndpoint);
-        this.userInfoEndpoint = Objects.requireNonNull(userInfoEndpoint);
+        this.tokenEndpoint = tokenEndpoint;
+        this.userInfoEndpoint = userInfoEndpoint;
     }
 
     public Optional<Object> getAuthenticationRequestExtraParams() {

@@ -25,8 +25,8 @@ public final class NotificationPreferenceResponse {
     private NotificationPreferenceResponse(
         Boolean sendNotification,
         String stageName) {
-        this.sendNotification = Objects.requireNonNull(sendNotification);
-        this.stageName = Objects.requireNonNull(stageName);
+        this.sendNotification = sendNotification;
+        this.stageName = stageName;
     }
 
     /**

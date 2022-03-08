@@ -18,7 +18,7 @@ public final class GetGlobalUserOperationBatchStatusResult {
 
     @OutputCustomType.Constructor({"items"})
     private GetGlobalUserOperationBatchStatusResult(List<OperationBatchStatusResponseItemResponse> items) {
-        this.items = Objects.requireNonNull(items);
+        this.items = items;
     }
 
     /**

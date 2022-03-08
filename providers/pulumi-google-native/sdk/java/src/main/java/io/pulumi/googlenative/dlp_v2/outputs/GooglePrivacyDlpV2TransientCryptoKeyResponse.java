@@ -17,7 +17,7 @@ public final class GooglePrivacyDlpV2TransientCryptoKeyResponse {
 
     @OutputCustomType.Constructor({"name"})
     private GooglePrivacyDlpV2TransientCryptoKeyResponse(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

@@ -43,11 +43,11 @@ public final class RecommendedActionImpactRecordResponse {
         Double changeValueRelative,
         String dimensionName,
         String unit) {
-        this.absoluteValue = Objects.requireNonNull(absoluteValue);
-        this.changeValueAbsolute = Objects.requireNonNull(changeValueAbsolute);
-        this.changeValueRelative = Objects.requireNonNull(changeValueRelative);
-        this.dimensionName = Objects.requireNonNull(dimensionName);
-        this.unit = Objects.requireNonNull(unit);
+        this.absoluteValue = absoluteValue;
+        this.changeValueAbsolute = changeValueAbsolute;
+        this.changeValueRelative = changeValueRelative;
+        this.dimensionName = dimensionName;
+        this.unit = unit;
     }
 
     /**

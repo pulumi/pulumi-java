@@ -24,8 +24,8 @@ public final class ConfigurationInfoResponse {
     private ConfigurationInfoResponse(
         String name,
         String version) {
-        this.name = Objects.requireNonNull(name);
-        this.version = Objects.requireNonNull(version);
+        this.name = name;
+        this.version = version;
     }
 
     /**

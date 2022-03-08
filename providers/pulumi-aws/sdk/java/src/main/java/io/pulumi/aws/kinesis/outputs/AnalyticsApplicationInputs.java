@@ -79,10 +79,10 @@ public final class AnalyticsApplicationInputs {
         this.id = id;
         this.kinesisFirehose = kinesisFirehose;
         this.kinesisStream = kinesisStream;
-        this.namePrefix = Objects.requireNonNull(namePrefix);
+        this.namePrefix = namePrefix;
         this.parallelism = parallelism;
         this.processingConfiguration = processingConfiguration;
-        this.schema = Objects.requireNonNull(schema);
+        this.schema = schema;
         this.startingPositionConfigurations = startingPositionConfigurations;
         this.streamNames = streamNames;
     }

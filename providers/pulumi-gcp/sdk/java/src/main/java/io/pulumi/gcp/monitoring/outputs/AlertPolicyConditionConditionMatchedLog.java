@@ -32,7 +32,7 @@ public final class AlertPolicyConditionConditionMatchedLog {
     private AlertPolicyConditionConditionMatchedLog(
         String filter,
         @Nullable Map<String,String> labelExtractors) {
-        this.filter = Objects.requireNonNull(filter);
+        this.filter = filter;
         this.labelExtractors = labelExtractors;
     }
 

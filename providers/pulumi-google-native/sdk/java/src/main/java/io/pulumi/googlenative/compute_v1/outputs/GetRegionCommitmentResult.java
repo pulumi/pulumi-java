@@ -119,23 +119,23 @@ public final class GetRegionCommitmentResult {
         String status,
         String statusMessage,
         String type) {
-        this.autoRenew = Objects.requireNonNull(autoRenew);
-        this.category = Objects.requireNonNull(category);
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.description = Objects.requireNonNull(description);
-        this.endTimestamp = Objects.requireNonNull(endTimestamp);
-        this.kind = Objects.requireNonNull(kind);
-        this.licenseResource = Objects.requireNonNull(licenseResource);
-        this.name = Objects.requireNonNull(name);
-        this.plan = Objects.requireNonNull(plan);
-        this.region = Objects.requireNonNull(region);
-        this.reservations = Objects.requireNonNull(reservations);
-        this.resources = Objects.requireNonNull(resources);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.startTimestamp = Objects.requireNonNull(startTimestamp);
-        this.status = Objects.requireNonNull(status);
-        this.statusMessage = Objects.requireNonNull(statusMessage);
-        this.type = Objects.requireNonNull(type);
+        this.autoRenew = autoRenew;
+        this.category = category;
+        this.creationTimestamp = creationTimestamp;
+        this.description = description;
+        this.endTimestamp = endTimestamp;
+        this.kind = kind;
+        this.licenseResource = licenseResource;
+        this.name = name;
+        this.plan = plan;
+        this.region = region;
+        this.reservations = reservations;
+        this.resources = resources;
+        this.selfLink = selfLink;
+        this.startTimestamp = startTimestamp;
+        this.status = status;
+        this.statusMessage = statusMessage;
+        this.type = type;
     }
 
     /**

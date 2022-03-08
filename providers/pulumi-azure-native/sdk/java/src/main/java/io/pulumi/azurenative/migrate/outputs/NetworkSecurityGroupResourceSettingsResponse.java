@@ -34,9 +34,9 @@ public final class NetworkSecurityGroupResourceSettingsResponse {
         String resourceType,
         @Nullable List<NsgSecurityRuleResponse> securityRules,
         String targetResourceName) {
-        this.resourceType = Objects.requireNonNull(resourceType);
+        this.resourceType = resourceType;
         this.securityRules = securityRules;
-        this.targetResourceName = Objects.requireNonNull(targetResourceName);
+        this.targetResourceName = targetResourceName;
     }
 
     /**

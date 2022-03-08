@@ -69,15 +69,15 @@ public final class GetHoursOfOperationResult {
         String name,
         Map<String,String> tags,
         String timeZone) {
-        this.configs = Objects.requireNonNull(configs);
-        this.description = Objects.requireNonNull(description);
-        this.hoursOfOperationArn = Objects.requireNonNull(hoursOfOperationArn);
-        this.hoursOfOperationId = Objects.requireNonNull(hoursOfOperationId);
-        this.id = Objects.requireNonNull(id);
-        this.instanceId = Objects.requireNonNull(instanceId);
-        this.name = Objects.requireNonNull(name);
-        this.tags = Objects.requireNonNull(tags);
-        this.timeZone = Objects.requireNonNull(timeZone);
+        this.configs = configs;
+        this.description = description;
+        this.hoursOfOperationArn = hoursOfOperationArn;
+        this.hoursOfOperationId = hoursOfOperationId;
+        this.id = id;
+        this.instanceId = instanceId;
+        this.name = name;
+        this.tags = tags;
+        this.timeZone = timeZone;
     }
 
     /**

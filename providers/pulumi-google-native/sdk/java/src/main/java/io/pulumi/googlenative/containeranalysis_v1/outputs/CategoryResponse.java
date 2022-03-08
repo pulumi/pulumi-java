@@ -24,8 +24,8 @@ public final class CategoryResponse {
     private CategoryResponse(
         String categoryId,
         String name) {
-        this.categoryId = Objects.requireNonNull(categoryId);
-        this.name = Objects.requireNonNull(name);
+        this.categoryId = categoryId;
+        this.name = name;
     }
 
     /**

@@ -45,11 +45,11 @@ public final class GetBucketIamPolicyResult {
         String kind,
         String resourceId,
         Integer version) {
-        this.bindings = Objects.requireNonNull(bindings);
-        this.etag = Objects.requireNonNull(etag);
-        this.kind = Objects.requireNonNull(kind);
-        this.resourceId = Objects.requireNonNull(resourceId);
-        this.version = Objects.requireNonNull(version);
+        this.bindings = bindings;
+        this.etag = etag;
+        this.kind = kind;
+        this.resourceId = resourceId;
+        this.version = version;
     }
 
     /**

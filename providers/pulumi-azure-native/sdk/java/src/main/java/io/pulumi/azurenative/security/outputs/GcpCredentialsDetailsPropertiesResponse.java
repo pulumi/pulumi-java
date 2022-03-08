@@ -98,20 +98,20 @@ public final class GcpCredentialsDetailsPropertiesResponse {
         String projectId,
         String tokenUri,
         String type) {
-        this.authProviderX509CertUrl = Objects.requireNonNull(authProviderX509CertUrl);
-        this.authUri = Objects.requireNonNull(authUri);
-        this.authenticationProvisioningState = Objects.requireNonNull(authenticationProvisioningState);
-        this.authenticationType = Objects.requireNonNull(authenticationType);
-        this.clientEmail = Objects.requireNonNull(clientEmail);
-        this.clientId = Objects.requireNonNull(clientId);
-        this.clientX509CertUrl = Objects.requireNonNull(clientX509CertUrl);
-        this.grantedPermissions = Objects.requireNonNull(grantedPermissions);
-        this.organizationId = Objects.requireNonNull(organizationId);
-        this.privateKey = Objects.requireNonNull(privateKey);
-        this.privateKeyId = Objects.requireNonNull(privateKeyId);
-        this.projectId = Objects.requireNonNull(projectId);
-        this.tokenUri = Objects.requireNonNull(tokenUri);
-        this.type = Objects.requireNonNull(type);
+        this.authProviderX509CertUrl = authProviderX509CertUrl;
+        this.authUri = authUri;
+        this.authenticationProvisioningState = authenticationProvisioningState;
+        this.authenticationType = authenticationType;
+        this.clientEmail = clientEmail;
+        this.clientId = clientId;
+        this.clientX509CertUrl = clientX509CertUrl;
+        this.grantedPermissions = grantedPermissions;
+        this.organizationId = organizationId;
+        this.privateKey = privateKey;
+        this.privateKeyId = privateKeyId;
+        this.projectId = projectId;
+        this.tokenUri = tokenUri;
+        this.type = type;
     }
 
     /**

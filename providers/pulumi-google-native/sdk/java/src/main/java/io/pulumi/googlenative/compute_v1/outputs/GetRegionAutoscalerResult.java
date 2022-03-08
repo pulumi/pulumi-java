@@ -95,19 +95,19 @@ public final class GetRegionAutoscalerResult {
         List<AutoscalerStatusDetailsResponse> statusDetails,
         String target,
         String zone) {
-        this.autoscalingPolicy = Objects.requireNonNull(autoscalingPolicy);
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.description = Objects.requireNonNull(description);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.recommendedSize = Objects.requireNonNull(recommendedSize);
-        this.region = Objects.requireNonNull(region);
-        this.scalingScheduleStatus = Objects.requireNonNull(scalingScheduleStatus);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.status = Objects.requireNonNull(status);
-        this.statusDetails = Objects.requireNonNull(statusDetails);
-        this.target = Objects.requireNonNull(target);
-        this.zone = Objects.requireNonNull(zone);
+        this.autoscalingPolicy = autoscalingPolicy;
+        this.creationTimestamp = creationTimestamp;
+        this.description = description;
+        this.kind = kind;
+        this.name = name;
+        this.recommendedSize = recommendedSize;
+        this.region = region;
+        this.scalingScheduleStatus = scalingScheduleStatus;
+        this.selfLink = selfLink;
+        this.status = status;
+        this.statusDetails = statusDetails;
+        this.target = target;
+        this.zone = zone;
     }
 
     /**

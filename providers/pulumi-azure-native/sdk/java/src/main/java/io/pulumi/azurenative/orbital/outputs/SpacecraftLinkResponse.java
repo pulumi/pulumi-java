@@ -37,10 +37,10 @@ public final class SpacecraftLinkResponse {
         Double centerFrequencyMHz,
         String direction,
         String polarization) {
-        this.bandwidthMHz = Objects.requireNonNull(bandwidthMHz);
-        this.centerFrequencyMHz = Objects.requireNonNull(centerFrequencyMHz);
-        this.direction = Objects.requireNonNull(direction);
-        this.polarization = Objects.requireNonNull(polarization);
+        this.bandwidthMHz = bandwidthMHz;
+        this.centerFrequencyMHz = centerFrequencyMHz;
+        this.direction = direction;
+        this.polarization = polarization;
     }
 
     /**

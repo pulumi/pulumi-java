@@ -24,8 +24,8 @@ public final class CompensationRangeResponse {
     private CompensationRangeResponse(
         MoneyResponse maxCompensation,
         MoneyResponse minCompensation) {
-        this.maxCompensation = Objects.requireNonNull(maxCompensation);
-        this.minCompensation = Objects.requireNonNull(minCompensation);
+        this.maxCompensation = maxCompensation;
+        this.minCompensation = minCompensation;
     }
 
     /**

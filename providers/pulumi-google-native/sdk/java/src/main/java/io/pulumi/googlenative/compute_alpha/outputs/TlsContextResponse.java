@@ -25,8 +25,8 @@ public final class TlsContextResponse {
     private TlsContextResponse(
         TlsCertificateContextResponse certificateContext,
         TlsValidationContextResponse validationContext) {
-        this.certificateContext = Objects.requireNonNull(certificateContext);
-        this.validationContext = Objects.requireNonNull(validationContext);
+        this.certificateContext = certificateContext;
+        this.validationContext = validationContext;
     }
 
     /**

@@ -18,9 +18,9 @@ public final class GetClusterMaintenancePolicyMaintenanceExclusion {
         String endTime,
         String exclusionName,
         String startTime) {
-        this.endTime = Objects.requireNonNull(endTime);
-        this.exclusionName = Objects.requireNonNull(exclusionName);
-        this.startTime = Objects.requireNonNull(startTime);
+        this.endTime = endTime;
+        this.exclusionName = exclusionName;
+        this.startTime = startTime;
     }
 
     public String getEndTime() {

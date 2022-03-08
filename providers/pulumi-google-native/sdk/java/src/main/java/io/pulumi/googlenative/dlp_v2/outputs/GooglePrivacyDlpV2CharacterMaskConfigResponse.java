@@ -40,10 +40,10 @@ public final class GooglePrivacyDlpV2CharacterMaskConfigResponse {
         String maskingCharacter,
         Integer numberToMask,
         Boolean reverseOrder) {
-        this.charactersToIgnore = Objects.requireNonNull(charactersToIgnore);
-        this.maskingCharacter = Objects.requireNonNull(maskingCharacter);
-        this.numberToMask = Objects.requireNonNull(numberToMask);
-        this.reverseOrder = Objects.requireNonNull(reverseOrder);
+        this.charactersToIgnore = charactersToIgnore;
+        this.maskingCharacter = maskingCharacter;
+        this.numberToMask = numberToMask;
+        this.reverseOrder = reverseOrder;
     }
 
     /**

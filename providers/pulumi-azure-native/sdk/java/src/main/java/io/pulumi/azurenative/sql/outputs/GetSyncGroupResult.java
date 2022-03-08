@@ -112,16 +112,16 @@ public final class GetSyncGroupResult {
         this.conflictResolutionPolicy = conflictResolutionPolicy;
         this.enableConflictLogging = enableConflictLogging;
         this.hubDatabaseUserName = hubDatabaseUserName;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.interval = interval;
-        this.lastSyncTime = Objects.requireNonNull(lastSyncTime);
-        this.name = Objects.requireNonNull(name);
-        this.privateEndpointName = Objects.requireNonNull(privateEndpointName);
+        this.lastSyncTime = lastSyncTime;
+        this.name = name;
+        this.privateEndpointName = privateEndpointName;
         this.schema = schema;
         this.sku = sku;
         this.syncDatabaseId = syncDatabaseId;
-        this.syncState = Objects.requireNonNull(syncState);
-        this.type = Objects.requireNonNull(type);
+        this.syncState = syncState;
+        this.type = type;
         this.usePrivateLinkConnection = usePrivateLinkConnection;
     }
 

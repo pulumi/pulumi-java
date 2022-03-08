@@ -20,7 +20,7 @@ public final class DistributionOriginGroups {
         @Nullable List<DistributionOriginGroup> items,
         Integer quantity) {
         this.items = items;
-        this.quantity = Objects.requireNonNull(quantity);
+        this.quantity = quantity;
     }
 
     public List<DistributionOriginGroup> getItems() {

@@ -48,9 +48,9 @@ public final class IotHubDefinitionDescriptionResponse {
         String name) {
         this.allocationWeight = allocationWeight;
         this.applyAllocationPolicy = applyAllocationPolicy;
-        this.connectionString = Objects.requireNonNull(connectionString);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
+        this.connectionString = connectionString;
+        this.location = location;
+        this.name = name;
     }
 
     /**

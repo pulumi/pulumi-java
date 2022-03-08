@@ -109,16 +109,16 @@ public final class GetLabPlanResult {
         this.defaultAutoShutdownProfile = defaultAutoShutdownProfile;
         this.defaultConnectionProfile = defaultConnectionProfile;
         this.defaultNetworkProfile = defaultNetworkProfile;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.linkedLmsInstance = linkedLmsInstance;
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.location = location;
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.sharedGalleryId = sharedGalleryId;
         this.supportInfo = supportInfo;
-        this.systemData = Objects.requireNonNull(systemData);
+        this.systemData = systemData;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

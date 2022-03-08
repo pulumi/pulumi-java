@@ -25,8 +25,8 @@ public final class PackageStoreResponse {
     private PackageStoreResponse(
         String name,
         EntityReferenceResponse packageStoreLinkedService) {
-        this.name = Objects.requireNonNull(name);
-        this.packageStoreLinkedService = Objects.requireNonNull(packageStoreLinkedService);
+        this.name = name;
+        this.packageStoreLinkedService = packageStoreLinkedService;
     }
 
     /**

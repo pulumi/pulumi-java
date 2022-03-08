@@ -42,7 +42,7 @@ public final class CertificateConfigurationResponse {
         this.certificate = certificate;
         this.certificatePassword = certificatePassword;
         this.encodedCertificate = encodedCertificate;
-        this.storeName = Objects.requireNonNull(storeName);
+        this.storeName = storeName;
     }
 
     /**

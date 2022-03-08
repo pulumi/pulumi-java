@@ -26,8 +26,8 @@ public final class BasicLevelResponse {
     private BasicLevelResponse(
         String combiningFunction,
         List<ConditionResponse> conditions) {
-        this.combiningFunction = Objects.requireNonNull(combiningFunction);
-        this.conditions = Objects.requireNonNull(conditions);
+        this.combiningFunction = combiningFunction;
+        this.conditions = conditions;
     }
 
     /**

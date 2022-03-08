@@ -17,7 +17,7 @@ public final class EcKeyTypeResponse {
 
     @OutputCustomType.Constructor({"signatureAlgorithm"})
     private EcKeyTypeResponse(String signatureAlgorithm) {
-        this.signatureAlgorithm = Objects.requireNonNull(signatureAlgorithm);
+        this.signatureAlgorithm = signatureAlgorithm;
     }
 
     /**

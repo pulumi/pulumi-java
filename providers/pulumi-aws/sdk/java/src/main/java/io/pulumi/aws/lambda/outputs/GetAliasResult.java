@@ -46,13 +46,13 @@ public final class GetAliasResult {
         String id,
         String invokeArn,
         String name) {
-        this.arn = Objects.requireNonNull(arn);
-        this.description = Objects.requireNonNull(description);
-        this.functionName = Objects.requireNonNull(functionName);
-        this.functionVersion = Objects.requireNonNull(functionVersion);
-        this.id = Objects.requireNonNull(id);
-        this.invokeArn = Objects.requireNonNull(invokeArn);
-        this.name = Objects.requireNonNull(name);
+        this.arn = arn;
+        this.description = description;
+        this.functionName = functionName;
+        this.functionVersion = functionVersion;
+        this.id = id;
+        this.invokeArn = invokeArn;
+        this.name = name;
     }
 
     /**

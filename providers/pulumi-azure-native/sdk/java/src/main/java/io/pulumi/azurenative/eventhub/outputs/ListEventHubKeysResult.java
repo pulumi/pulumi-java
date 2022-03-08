@@ -54,13 +54,13 @@ public final class ListEventHubKeysResult {
         String primaryKey,
         String secondaryConnectionString,
         String secondaryKey) {
-        this.aliasPrimaryConnectionString = Objects.requireNonNull(aliasPrimaryConnectionString);
-        this.aliasSecondaryConnectionString = Objects.requireNonNull(aliasSecondaryConnectionString);
-        this.keyName = Objects.requireNonNull(keyName);
-        this.primaryConnectionString = Objects.requireNonNull(primaryConnectionString);
-        this.primaryKey = Objects.requireNonNull(primaryKey);
-        this.secondaryConnectionString = Objects.requireNonNull(secondaryConnectionString);
-        this.secondaryKey = Objects.requireNonNull(secondaryKey);
+        this.aliasPrimaryConnectionString = aliasPrimaryConnectionString;
+        this.aliasSecondaryConnectionString = aliasSecondaryConnectionString;
+        this.keyName = keyName;
+        this.primaryConnectionString = primaryConnectionString;
+        this.primaryKey = primaryKey;
+        this.secondaryConnectionString = secondaryConnectionString;
+        this.secondaryKey = secondaryKey;
     }
 
     /**

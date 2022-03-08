@@ -26,8 +26,8 @@ public final class MlStatisticsResponse {
     private MlStatisticsResponse(
         List<IterationResultResponse> iterationResults,
         String maxIterations) {
-        this.iterationResults = Objects.requireNonNull(iterationResults);
-        this.maxIterations = Objects.requireNonNull(maxIterations);
+        this.iterationResults = iterationResults;
+        this.maxIterations = maxIterations;
     }
 
     /**

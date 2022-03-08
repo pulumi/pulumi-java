@@ -47,7 +47,7 @@ public final class TaskDefinitionVolumeEfsVolumeConfiguration {
         @Nullable String transitEncryption,
         @Nullable Integer transitEncryptionPort) {
         this.authorizationConfig = authorizationConfig;
-        this.fileSystemId = Objects.requireNonNull(fileSystemId);
+        this.fileSystemId = fileSystemId;
         this.rootDirectory = rootDirectory;
         this.transitEncryption = transitEncryption;
         this.transitEncryptionPort = transitEncryptionPort;

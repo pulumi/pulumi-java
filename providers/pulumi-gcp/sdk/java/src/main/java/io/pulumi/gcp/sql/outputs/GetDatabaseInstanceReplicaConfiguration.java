@@ -36,17 +36,17 @@ public final class GetDatabaseInstanceReplicaConfiguration {
         String sslCipher,
         String username,
         Boolean verifyServerCertificate) {
-        this.caCertificate = Objects.requireNonNull(caCertificate);
-        this.clientCertificate = Objects.requireNonNull(clientCertificate);
-        this.clientKey = Objects.requireNonNull(clientKey);
-        this.connectRetryInterval = Objects.requireNonNull(connectRetryInterval);
-        this.dumpFilePath = Objects.requireNonNull(dumpFilePath);
-        this.failoverTarget = Objects.requireNonNull(failoverTarget);
-        this.masterHeartbeatPeriod = Objects.requireNonNull(masterHeartbeatPeriod);
-        this.password = Objects.requireNonNull(password);
-        this.sslCipher = Objects.requireNonNull(sslCipher);
-        this.username = Objects.requireNonNull(username);
-        this.verifyServerCertificate = Objects.requireNonNull(verifyServerCertificate);
+        this.caCertificate = caCertificate;
+        this.clientCertificate = clientCertificate;
+        this.clientKey = clientKey;
+        this.connectRetryInterval = connectRetryInterval;
+        this.dumpFilePath = dumpFilePath;
+        this.failoverTarget = failoverTarget;
+        this.masterHeartbeatPeriod = masterHeartbeatPeriod;
+        this.password = password;
+        this.sslCipher = sslCipher;
+        this.username = username;
+        this.verifyServerCertificate = verifyServerCertificate;
     }
 
     public String getCaCertificate() {

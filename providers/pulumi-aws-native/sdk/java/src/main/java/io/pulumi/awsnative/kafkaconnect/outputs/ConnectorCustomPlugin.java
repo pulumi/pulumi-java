@@ -25,8 +25,8 @@ public final class ConnectorCustomPlugin {
     private ConnectorCustomPlugin(
         String customPluginArn,
         Integer revision) {
-        this.customPluginArn = Objects.requireNonNull(customPluginArn);
-        this.revision = Objects.requireNonNull(revision);
+        this.customPluginArn = customPluginArn;
+        this.revision = revision;
     }
 
     /**

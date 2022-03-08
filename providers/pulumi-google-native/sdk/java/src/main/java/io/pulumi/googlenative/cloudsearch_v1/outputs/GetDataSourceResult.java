@@ -69,15 +69,15 @@ public final class GetDataSourceResult {
         List<String> operationIds,
         Boolean returnThumbnailUrls,
         String shortName) {
-        this.disableModifications = Objects.requireNonNull(disableModifications);
-        this.disableServing = Objects.requireNonNull(disableServing);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.indexingServiceAccounts = Objects.requireNonNull(indexingServiceAccounts);
-        this.itemsVisibility = Objects.requireNonNull(itemsVisibility);
-        this.name = Objects.requireNonNull(name);
-        this.operationIds = Objects.requireNonNull(operationIds);
-        this.returnThumbnailUrls = Objects.requireNonNull(returnThumbnailUrls);
-        this.shortName = Objects.requireNonNull(shortName);
+        this.disableModifications = disableModifications;
+        this.disableServing = disableServing;
+        this.displayName = displayName;
+        this.indexingServiceAccounts = indexingServiceAccounts;
+        this.itemsVisibility = itemsVisibility;
+        this.name = name;
+        this.operationIds = operationIds;
+        this.returnThumbnailUrls = returnThumbnailUrls;
+        this.shortName = shortName;
     }
 
     /**

@@ -52,9 +52,9 @@ public final class GroupConnectivityInformationResponse {
         @Nullable String privateLinkServiceArmRegion,
         @Nullable String redirectMapId) {
         this.customerVisibleFqdns = customerVisibleFqdns;
-        this.groupId = Objects.requireNonNull(groupId);
-        this.internalFqdn = Objects.requireNonNull(internalFqdn);
-        this.memberName = Objects.requireNonNull(memberName);
+        this.groupId = groupId;
+        this.internalFqdn = internalFqdn;
+        this.memberName = memberName;
         this.privateLinkServiceArmRegion = privateLinkServiceArmRegion;
         this.redirectMapId = redirectMapId;
     }

@@ -47,9 +47,9 @@ public final class DistributionDefaultCacheBehaviorForwardedValues {
         @Nullable List<String> headers,
         Boolean queryString,
         @Nullable List<String> queryStringCacheKeys) {
-        this.cookies = Objects.requireNonNull(cookies);
+        this.cookies = cookies;
         this.headers = headers;
-        this.queryString = Objects.requireNonNull(queryString);
+        this.queryString = queryString;
         this.queryStringCacheKeys = queryStringCacheKeys;
     }
 

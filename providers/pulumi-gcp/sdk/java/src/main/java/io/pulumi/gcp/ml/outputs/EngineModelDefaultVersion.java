@@ -17,7 +17,7 @@ public final class EngineModelDefaultVersion {
 
     @OutputCustomType.Constructor({"name"})
     private EngineModelDefaultVersion(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

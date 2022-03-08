@@ -158,21 +158,21 @@ public final class GetApplicationDefinitionResult {
         this.deploymentPolicy = deploymentPolicy;
         this.description = description;
         this.displayName = displayName;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.isEnabled = isEnabled;
         this.location = location;
-        this.lockLevel = Objects.requireNonNull(lockLevel);
+        this.lockLevel = lockLevel;
         this.lockingPolicy = lockingPolicy;
         this.mainTemplate = mainTemplate;
         this.managedBy = managedBy;
         this.managementPolicy = managementPolicy;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.notificationPolicy = notificationPolicy;
         this.packageFileUri = packageFileUri;
         this.policies = policies;
         this.sku = sku;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

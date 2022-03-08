@@ -28,9 +28,9 @@ public final class WebACLManagedRuleGroupStatement {
         String vendorName,
         @Nullable String version) {
         this.excludedRules = excludedRules;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.scopeDownStatement = scopeDownStatement;
-        this.vendorName = Objects.requireNonNull(vendorName);
+        this.vendorName = vendorName;
         this.version = version;
     }
 

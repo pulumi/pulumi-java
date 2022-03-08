@@ -31,9 +31,9 @@ public final class GooglePrivacyDlpV2CloudStorageRegexFileSetResponse {
         String bucketName,
         List<String> excludeRegex,
         List<String> includeRegex) {
-        this.bucketName = Objects.requireNonNull(bucketName);
-        this.excludeRegex = Objects.requireNonNull(excludeRegex);
-        this.includeRegex = Objects.requireNonNull(includeRegex);
+        this.bucketName = bucketName;
+        this.excludeRegex = excludeRegex;
+        this.includeRegex = includeRegex;
     }
 
     /**

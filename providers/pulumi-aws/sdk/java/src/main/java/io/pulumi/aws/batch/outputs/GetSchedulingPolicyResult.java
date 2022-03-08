@@ -37,11 +37,11 @@ public final class GetSchedulingPolicyResult {
         String id,
         String name,
         Map<String,String> tags) {
-        this.arn = Objects.requireNonNull(arn);
-        this.fairSharePolicies = Objects.requireNonNull(fairSharePolicies);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.tags = Objects.requireNonNull(tags);
+        this.arn = arn;
+        this.fairSharePolicies = fairSharePolicies;
+        this.id = id;
+        this.name = name;
+        this.tags = tags;
     }
 
     public String getArn() {

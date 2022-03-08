@@ -51,7 +51,7 @@ public final class TransformationResponse {
         this.description = description;
         this.flowlet = flowlet;
         this.linkedService = linkedService;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

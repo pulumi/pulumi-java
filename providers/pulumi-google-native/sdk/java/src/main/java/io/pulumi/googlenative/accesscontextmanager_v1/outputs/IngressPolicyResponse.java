@@ -25,8 +25,8 @@ public final class IngressPolicyResponse {
     private IngressPolicyResponse(
         IngressFromResponse ingressFrom,
         IngressToResponse ingressTo) {
-        this.ingressFrom = Objects.requireNonNull(ingressFrom);
-        this.ingressTo = Objects.requireNonNull(ingressTo);
+        this.ingressFrom = ingressFrom;
+        this.ingressTo = ingressTo;
     }
 
     /**

@@ -22,7 +22,7 @@ public final class BotFulfillmentCodeHookSetting {
         Boolean enabled,
         @Nullable BotFulfillmentUpdatesSpecification fulfillmentUpdatesSpecification,
         @Nullable BotPostFulfillmentStatusSpecification postFulfillmentStatusSpecification) {
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
         this.fulfillmentUpdatesSpecification = fulfillmentUpdatesSpecification;
         this.postFulfillmentStatusSpecification = postFulfillmentStatusSpecification;
     }

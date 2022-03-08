@@ -19,7 +19,7 @@ public final class ServiceUrlEndpointInput {
         @Nullable String healthUrl,
         String url) {
         this.healthUrl = healthUrl;
-        this.url = Objects.requireNonNull(url);
+        this.url = url;
     }
 
     public Optional<String> getHealthUrl() {

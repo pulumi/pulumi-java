@@ -25,8 +25,8 @@ public final class DistributionOrderedCacheBehaviorFunctionAssociation {
     private DistributionOrderedCacheBehaviorFunctionAssociation(
         String eventType,
         String functionArn) {
-        this.eventType = Objects.requireNonNull(eventType);
-        this.functionArn = Objects.requireNonNull(functionArn);
+        this.eventType = eventType;
+        this.functionArn = functionArn;
     }
 
     /**

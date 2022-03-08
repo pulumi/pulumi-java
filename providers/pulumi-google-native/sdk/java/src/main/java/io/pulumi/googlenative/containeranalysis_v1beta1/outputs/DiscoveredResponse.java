@@ -31,9 +31,9 @@ public final class DiscoveredResponse {
         String analysisStatus,
         StatusResponse analysisStatusError,
         String continuousAnalysis) {
-        this.analysisStatus = Objects.requireNonNull(analysisStatus);
-        this.analysisStatusError = Objects.requireNonNull(analysisStatusError);
-        this.continuousAnalysis = Objects.requireNonNull(continuousAnalysis);
+        this.analysisStatus = analysisStatus;
+        this.analysisStatusError = analysisStatusError;
+        this.continuousAnalysis = continuousAnalysis;
     }
 
     /**

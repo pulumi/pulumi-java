@@ -76,16 +76,16 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse {
         String stage,
         String startedOn,
         String state) {
-        this.databaseName = Objects.requireNonNull(databaseName);
-        this.endedOn = Objects.requireNonNull(endedOn);
-        this.exceptionsAndWarnings = Objects.requireNonNull(exceptionsAndWarnings);
-        this.id = Objects.requireNonNull(id);
-        this.message = Objects.requireNonNull(message);
-        this.resultType = Objects.requireNonNull(resultType);
-        this.sizeMB = Objects.requireNonNull(sizeMB);
-        this.stage = Objects.requireNonNull(stage);
-        this.startedOn = Objects.requireNonNull(startedOn);
-        this.state = Objects.requireNonNull(state);
+        this.databaseName = databaseName;
+        this.endedOn = endedOn;
+        this.exceptionsAndWarnings = exceptionsAndWarnings;
+        this.id = id;
+        this.message = message;
+        this.resultType = resultType;
+        this.sizeMB = sizeMB;
+        this.stage = stage;
+        this.startedOn = startedOn;
+        this.state = state;
     }
 
     /**

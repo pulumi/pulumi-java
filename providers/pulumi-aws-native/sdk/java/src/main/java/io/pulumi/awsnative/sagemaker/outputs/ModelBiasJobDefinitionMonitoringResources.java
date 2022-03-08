@@ -13,7 +13,7 @@ public final class ModelBiasJobDefinitionMonitoringResources {
 
     @OutputCustomType.Constructor({"clusterConfig"})
     private ModelBiasJobDefinitionMonitoringResources(ModelBiasJobDefinitionClusterConfig clusterConfig) {
-        this.clusterConfig = Objects.requireNonNull(clusterConfig);
+        this.clusterConfig = clusterConfig;
     }
 
     public ModelBiasJobDefinitionClusterConfig getClusterConfig() {

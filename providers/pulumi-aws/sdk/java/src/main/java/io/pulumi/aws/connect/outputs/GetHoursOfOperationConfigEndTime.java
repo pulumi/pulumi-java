@@ -24,8 +24,8 @@ public final class GetHoursOfOperationConfigEndTime {
     private GetHoursOfOperationConfigEndTime(
         Integer hours,
         Integer minutes) {
-        this.hours = Objects.requireNonNull(hours);
-        this.minutes = Objects.requireNonNull(minutes);
+        this.hours = hours;
+        this.minutes = minutes;
     }
 
     /**

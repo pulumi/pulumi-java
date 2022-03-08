@@ -27,7 +27,7 @@ public final class RuntimeClassStrategyOptions {
     private RuntimeClassStrategyOptions(
         List<String> allowedRuntimeClassNames,
         @Nullable String defaultRuntimeClassName) {
-        this.allowedRuntimeClassNames = Objects.requireNonNull(allowedRuntimeClassNames);
+        this.allowedRuntimeClassNames = allowedRuntimeClassNames;
         this.defaultRuntimeClassName = defaultRuntimeClassName;
     }
 

@@ -76,16 +76,16 @@ public final class GetEvaluationJobResult {
         String name,
         String schedule,
         String state) {
-        this.annotationSpecSet = Objects.requireNonNull(annotationSpecSet);
-        this.attempts = Objects.requireNonNull(attempts);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.description = Objects.requireNonNull(description);
-        this.evaluationJobConfig = Objects.requireNonNull(evaluationJobConfig);
-        this.labelMissingGroundTruth = Objects.requireNonNull(labelMissingGroundTruth);
-        this.modelVersion = Objects.requireNonNull(modelVersion);
-        this.name = Objects.requireNonNull(name);
-        this.schedule = Objects.requireNonNull(schedule);
-        this.state = Objects.requireNonNull(state);
+        this.annotationSpecSet = annotationSpecSet;
+        this.attempts = attempts;
+        this.createTime = createTime;
+        this.description = description;
+        this.evaluationJobConfig = evaluationJobConfig;
+        this.labelMissingGroundTruth = labelMissingGroundTruth;
+        this.modelVersion = modelVersion;
+        this.name = name;
+        this.schedule = schedule;
+        this.state = state;
     }
 
     /**

@@ -25,11 +25,11 @@ public final class TopicRuleKafkaAction {
         @Nullable String key,
         @Nullable String partition,
         String topic) {
-        this.clientProperties = Objects.requireNonNull(clientProperties);
-        this.destinationArn = Objects.requireNonNull(destinationArn);
+        this.clientProperties = clientProperties;
+        this.destinationArn = destinationArn;
         this.key = key;
         this.partition = partition;
-        this.topic = Objects.requireNonNull(topic);
+        this.topic = topic;
     }
 
     public Object getClientProperties() {

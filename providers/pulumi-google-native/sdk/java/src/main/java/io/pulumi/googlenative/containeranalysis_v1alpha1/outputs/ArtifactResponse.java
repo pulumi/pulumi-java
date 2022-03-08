@@ -25,8 +25,8 @@ public final class ArtifactResponse {
     private ArtifactResponse(
         String checksum,
         List<String> names) {
-        this.checksum = Objects.requireNonNull(checksum);
-        this.names = Objects.requireNonNull(names);
+        this.checksum = checksum;
+        this.names = names;
     }
 
     /**

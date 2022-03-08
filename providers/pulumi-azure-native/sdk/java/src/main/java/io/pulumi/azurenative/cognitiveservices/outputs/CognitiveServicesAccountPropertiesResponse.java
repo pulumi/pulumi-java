@@ -108,18 +108,18 @@ public final class CognitiveServicesAccountPropertiesResponse {
         CognitiveServicesAccountSkuChangeInfoResponse skuChangeInfo,
         @Nullable List<UserOwnedStorageResponse> userOwnedStorage) {
         this.apiProperties = apiProperties;
-        this.capabilities = Objects.requireNonNull(capabilities);
+        this.capabilities = capabilities;
         this.customSubDomainName = customSubDomainName;
-        this.dateCreated = Objects.requireNonNull(dateCreated);
+        this.dateCreated = dateCreated;
         this.encryption = encryption;
-        this.endpoint = Objects.requireNonNull(endpoint);
-        this.internalId = Objects.requireNonNull(internalId);
-        this.isMigrated = Objects.requireNonNull(isMigrated);
+        this.endpoint = endpoint;
+        this.internalId = internalId;
+        this.isMigrated = isMigrated;
         this.networkAcls = networkAcls;
         this.privateEndpointConnections = privateEndpointConnections;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.publicNetworkAccess = publicNetworkAccess;
-        this.skuChangeInfo = Objects.requireNonNull(skuChangeInfo);
+        this.skuChangeInfo = skuChangeInfo;
         this.userOwnedStorage = userOwnedStorage;
     }
 

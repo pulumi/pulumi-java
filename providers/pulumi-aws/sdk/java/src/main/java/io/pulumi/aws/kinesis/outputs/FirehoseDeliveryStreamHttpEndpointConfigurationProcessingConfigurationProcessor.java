@@ -28,7 +28,7 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConf
         @Nullable List<FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessorParameter> parameters,
         String type) {
         this.parameters = parameters;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

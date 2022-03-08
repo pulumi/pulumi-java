@@ -30,9 +30,9 @@ public final class EndpointsResponse {
         String hcxCloudManager,
         String nsxtManager,
         String vcsa) {
-        this.hcxCloudManager = Objects.requireNonNull(hcxCloudManager);
-        this.nsxtManager = Objects.requireNonNull(nsxtManager);
-        this.vcsa = Objects.requireNonNull(vcsa);
+        this.hcxCloudManager = hcxCloudManager;
+        this.nsxtManager = nsxtManager;
+        this.vcsa = vcsa;
     }
 
     /**

@@ -32,9 +32,9 @@ public final class GoogleCloudDatalabelingV1beta1TextClassificationConfigRespons
         Boolean allowMultiLabel,
         String annotationSpecSet,
         GoogleCloudDatalabelingV1beta1SentimentConfigResponse sentimentConfig) {
-        this.allowMultiLabel = Objects.requireNonNull(allowMultiLabel);
-        this.annotationSpecSet = Objects.requireNonNull(annotationSpecSet);
-        this.sentimentConfig = Objects.requireNonNull(sentimentConfig);
+        this.allowMultiLabel = allowMultiLabel;
+        this.annotationSpecSet = annotationSpecSet;
+        this.sentimentConfig = sentimentConfig;
     }
 
     /**

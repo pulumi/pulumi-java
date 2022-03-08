@@ -22,9 +22,9 @@ public final class PrivateEndpointConnectionPropertiesResponse {
         ResourceIdResponse privateEndpoint,
         @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState,
         String provisioningState) {
-        this.privateEndpoint = Objects.requireNonNull(privateEndpoint);
+        this.privateEndpoint = privateEndpoint;
         this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
     }
 
     public ResourceIdResponse getPrivateEndpoint() {

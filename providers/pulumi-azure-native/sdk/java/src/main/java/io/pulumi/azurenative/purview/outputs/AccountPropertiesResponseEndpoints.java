@@ -30,9 +30,9 @@ public final class AccountPropertiesResponseEndpoints {
         String catalog,
         String guardian,
         String scan) {
-        this.catalog = Objects.requireNonNull(catalog);
-        this.guardian = Objects.requireNonNull(guardian);
-        this.scan = Objects.requireNonNull(scan);
+        this.catalog = catalog;
+        this.guardian = guardian;
+        this.scan = scan;
     }
 
     /**

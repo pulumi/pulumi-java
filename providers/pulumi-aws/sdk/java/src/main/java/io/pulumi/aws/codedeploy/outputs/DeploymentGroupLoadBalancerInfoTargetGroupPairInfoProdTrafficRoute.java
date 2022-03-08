@@ -18,7 +18,7 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTraffic
 
     @OutputCustomType.Constructor({"listenerArns"})
     private DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRoute(List<String> listenerArns) {
-        this.listenerArns = Objects.requireNonNull(listenerArns);
+        this.listenerArns = listenerArns;
     }
 
     /**

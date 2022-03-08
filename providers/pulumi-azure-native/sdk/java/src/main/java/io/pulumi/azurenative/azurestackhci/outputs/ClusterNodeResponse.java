@@ -67,15 +67,15 @@ public final class ClusterNodeResponse {
         String osName,
         String osVersion,
         String serialNumber) {
-        this.coreCount = Objects.requireNonNull(coreCount);
-        this.id = Objects.requireNonNull(id);
-        this.manufacturer = Objects.requireNonNull(manufacturer);
-        this.memoryInGiB = Objects.requireNonNull(memoryInGiB);
-        this.model = Objects.requireNonNull(model);
-        this.name = Objects.requireNonNull(name);
-        this.osName = Objects.requireNonNull(osName);
-        this.osVersion = Objects.requireNonNull(osVersion);
-        this.serialNumber = Objects.requireNonNull(serialNumber);
+        this.coreCount = coreCount;
+        this.id = id;
+        this.manufacturer = manufacturer;
+        this.memoryInGiB = memoryInGiB;
+        this.model = model;
+        this.name = name;
+        this.osName = osName;
+        this.osVersion = osVersion;
+        this.serialNumber = serialNumber;
     }
 
     /**

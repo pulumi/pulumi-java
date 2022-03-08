@@ -45,12 +45,12 @@ public final class GetDirectoryConnectSetting {
         String customerUsername,
         List<String> subnetIds,
         String vpcId) {
-        this.availabilityZones = Objects.requireNonNull(availabilityZones);
-        this.connectIps = Objects.requireNonNull(connectIps);
-        this.customerDnsIps = Objects.requireNonNull(customerDnsIps);
-        this.customerUsername = Objects.requireNonNull(customerUsername);
-        this.subnetIds = Objects.requireNonNull(subnetIds);
-        this.vpcId = Objects.requireNonNull(vpcId);
+        this.availabilityZones = availabilityZones;
+        this.connectIps = connectIps;
+        this.customerDnsIps = customerDnsIps;
+        this.customerUsername = customerUsername;
+        this.subnetIds = subnetIds;
+        this.vpcId = vpcId;
     }
 
     public List<String> getAvailabilityZones() {

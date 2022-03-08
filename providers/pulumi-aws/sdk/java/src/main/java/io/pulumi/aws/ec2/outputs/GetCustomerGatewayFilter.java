@@ -17,8 +17,8 @@ public final class GetCustomerGatewayFilter {
     private GetCustomerGatewayFilter(
         String name,
         List<String> values) {
-        this.name = Objects.requireNonNull(name);
-        this.values = Objects.requireNonNull(values);
+        this.name = name;
+        this.values = values;
     }
 
     public String getName() {

@@ -18,7 +18,7 @@ public final class GetVirtualServiceSpec {
 
     @OutputCustomType.Constructor({"providers"})
     private GetVirtualServiceSpec(List<GetVirtualServiceSpecProvider> providers) {
-        this.providers = Objects.requireNonNull(providers);
+        this.providers = providers;
     }
 
     /**

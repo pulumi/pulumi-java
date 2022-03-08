@@ -17,7 +17,7 @@ public final class InterconnectAttachmentPrivateInfoResponse {
 
     @OutputCustomType.Constructor({"tag8021q"})
     private InterconnectAttachmentPrivateInfoResponse(Integer tag8021q) {
-        this.tag8021q = Objects.requireNonNull(tag8021q);
+        this.tag8021q = tag8021q;
     }
 
     /**

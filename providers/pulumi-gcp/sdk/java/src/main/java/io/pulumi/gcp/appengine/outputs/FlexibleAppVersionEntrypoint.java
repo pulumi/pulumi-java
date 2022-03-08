@@ -17,7 +17,7 @@ public final class FlexibleAppVersionEntrypoint {
 
     @OutputCustomType.Constructor({"shell"})
     private FlexibleAppVersionEntrypoint(String shell) {
-        this.shell = Objects.requireNonNull(shell);
+        this.shell = shell;
     }
 
     /**

@@ -16,8 +16,8 @@ public final class GrafeasV1beta1IntotoSignatureResponse {
     private GrafeasV1beta1IntotoSignatureResponse(
         String keyid,
         String sig) {
-        this.keyid = Objects.requireNonNull(keyid);
-        this.sig = Objects.requireNonNull(sig);
+        this.keyid = keyid;
+        this.sig = sig;
     }
 
     public String getKeyid() {

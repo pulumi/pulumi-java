@@ -24,8 +24,8 @@ public final class TransferJobTransferSpecAwsS3DataSourceAwsAccessKey {
     private TransferJobTransferSpecAwsS3DataSourceAwsAccessKey(
         String accessKeyId,
         String secretAccessKey) {
-        this.accessKeyId = Objects.requireNonNull(accessKeyId);
-        this.secretAccessKey = Objects.requireNonNull(secretAccessKey);
+        this.accessKeyId = accessKeyId;
+        this.secretAccessKey = secretAccessKey;
     }
 
     /**

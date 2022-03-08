@@ -18,7 +18,7 @@ public final class GetCodeSigningConfigAllowedPublisher {
 
     @OutputCustomType.Constructor({"signingProfileVersionArns"})
     private GetCodeSigningConfigAllowedPublisher(List<String> signingProfileVersionArns) {
-        this.signingProfileVersionArns = Objects.requireNonNull(signingProfileVersionArns);
+        this.signingProfileVersionArns = signingProfileVersionArns;
     }
 
     /**

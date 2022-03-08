@@ -18,7 +18,7 @@ public final class ListenerRuleConditionHttpRequestMethod {
 
     @OutputCustomType.Constructor({"values"})
     private ListenerRuleConditionHttpRequestMethod(List<String> values) {
-        this.values = Objects.requireNonNull(values);
+        this.values = values;
     }
 
     /**

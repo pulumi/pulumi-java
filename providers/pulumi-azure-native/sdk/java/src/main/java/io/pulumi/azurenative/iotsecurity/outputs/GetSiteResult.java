@@ -51,12 +51,12 @@ public final class GetSiteResult {
         SystemDataResponse systemData,
         @Nullable Map<String,String> tags,
         String type) {
-        this.displayName = Objects.requireNonNull(displayName);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.systemData = Objects.requireNonNull(systemData);
+        this.displayName = displayName;
+        this.id = id;
+        this.name = name;
+        this.systemData = systemData;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

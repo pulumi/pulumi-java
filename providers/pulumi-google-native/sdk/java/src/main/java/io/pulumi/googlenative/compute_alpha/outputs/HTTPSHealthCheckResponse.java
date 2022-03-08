@@ -61,14 +61,14 @@ public final class HTTPSHealthCheckResponse {
         String requestPath,
         String response,
         String weightReportMode) {
-        this.host = Objects.requireNonNull(host);
-        this.port = Objects.requireNonNull(port);
-        this.portName = Objects.requireNonNull(portName);
-        this.portSpecification = Objects.requireNonNull(portSpecification);
-        this.proxyHeader = Objects.requireNonNull(proxyHeader);
-        this.requestPath = Objects.requireNonNull(requestPath);
-        this.response = Objects.requireNonNull(response);
-        this.weightReportMode = Objects.requireNonNull(weightReportMode);
+        this.host = host;
+        this.port = port;
+        this.portName = portName;
+        this.portSpecification = portSpecification;
+        this.proxyHeader = proxyHeader;
+        this.requestPath = requestPath;
+        this.response = response;
+        this.weightReportMode = weightReportMode;
     }
 
     /**

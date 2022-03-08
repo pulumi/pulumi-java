@@ -82,16 +82,16 @@ public final class GetDistributionResult {
         String lastModifiedTime,
         String status,
         @Nullable Map<String,String> tags) {
-        this.aliases = Objects.requireNonNull(aliases);
-        this.arn = Objects.requireNonNull(arn);
-        this.domainName = Objects.requireNonNull(domainName);
-        this.enabled = Objects.requireNonNull(enabled);
-        this.etag = Objects.requireNonNull(etag);
-        this.hostedZoneId = Objects.requireNonNull(hostedZoneId);
-        this.id = Objects.requireNonNull(id);
-        this.inProgressValidationBatches = Objects.requireNonNull(inProgressValidationBatches);
-        this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
-        this.status = Objects.requireNonNull(status);
+        this.aliases = aliases;
+        this.arn = arn;
+        this.domainName = domainName;
+        this.enabled = enabled;
+        this.etag = etag;
+        this.hostedZoneId = hostedZoneId;
+        this.id = id;
+        this.inProgressValidationBatches = inProgressValidationBatches;
+        this.lastModifiedTime = lastModifiedTime;
+        this.status = status;
         this.tags = tags;
     }
 

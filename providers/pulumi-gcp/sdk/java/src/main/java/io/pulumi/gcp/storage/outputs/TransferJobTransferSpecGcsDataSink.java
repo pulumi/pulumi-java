@@ -26,7 +26,7 @@ public final class TransferJobTransferSpecGcsDataSink {
     private TransferJobTransferSpecGcsDataSink(
         String bucketName,
         @Nullable String path) {
-        this.bucketName = Objects.requireNonNull(bucketName);
+        this.bucketName = bucketName;
         this.path = path;
     }
 

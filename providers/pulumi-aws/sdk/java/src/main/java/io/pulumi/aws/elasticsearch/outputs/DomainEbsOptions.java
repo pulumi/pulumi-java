@@ -40,7 +40,7 @@ public final class DomainEbsOptions {
         @Nullable Integer iops,
         @Nullable Integer volumeSize,
         @Nullable String volumeType) {
-        this.ebsEnabled = Objects.requireNonNull(ebsEnabled);
+        this.ebsEnabled = ebsEnabled;
         this.iops = iops;
         this.volumeSize = volumeSize;
         this.volumeType = volumeType;

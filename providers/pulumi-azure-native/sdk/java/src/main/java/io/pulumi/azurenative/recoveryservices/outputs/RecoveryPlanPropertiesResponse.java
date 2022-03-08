@@ -126,7 +126,7 @@ public final class RecoveryPlanPropertiesResponse {
         this.lastUnplannedFailoverTime = lastUnplannedFailoverTime;
         this.primaryFabricFriendlyName = primaryFabricFriendlyName;
         this.primaryFabricId = primaryFabricId;
-        this.providerSpecificDetails = Objects.requireNonNull(providerSpecificDetails);
+        this.providerSpecificDetails = providerSpecificDetails;
         this.recoveryFabricFriendlyName = recoveryFabricFriendlyName;
         this.recoveryFabricId = recoveryFabricId;
         this.replicationProviders = replicationProviders;

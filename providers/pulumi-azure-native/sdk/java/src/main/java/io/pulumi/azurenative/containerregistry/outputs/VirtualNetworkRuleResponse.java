@@ -27,7 +27,7 @@ public final class VirtualNetworkRuleResponse {
         @Nullable String action,
         String virtualNetworkResourceId) {
         this.action = action;
-        this.virtualNetworkResourceId = Objects.requireNonNull(virtualNetworkResourceId);
+        this.virtualNetworkResourceId = virtualNetworkResourceId;
     }
 
     /**

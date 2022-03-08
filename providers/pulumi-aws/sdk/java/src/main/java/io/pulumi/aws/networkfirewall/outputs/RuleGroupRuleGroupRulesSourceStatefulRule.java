@@ -33,9 +33,9 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRule {
         String action,
         RuleGroupRuleGroupRulesSourceStatefulRuleHeader header,
         List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOption> ruleOptions) {
-        this.action = Objects.requireNonNull(action);
-        this.header = Objects.requireNonNull(header);
-        this.ruleOptions = Objects.requireNonNull(ruleOptions);
+        this.action = action;
+        this.header = header;
+        this.ruleOptions = ruleOptions;
     }
 
     /**

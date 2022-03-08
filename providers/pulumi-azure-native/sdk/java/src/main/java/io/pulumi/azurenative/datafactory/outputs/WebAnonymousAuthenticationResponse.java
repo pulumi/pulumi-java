@@ -26,8 +26,8 @@ public final class WebAnonymousAuthenticationResponse {
     private WebAnonymousAuthenticationResponse(
         String authenticationType,
         Object url) {
-        this.authenticationType = Objects.requireNonNull(authenticationType);
-        this.url = Objects.requireNonNull(url);
+        this.authenticationType = authenticationType;
+        this.url = url;
     }
 
     /**

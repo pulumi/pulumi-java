@@ -18,7 +18,7 @@ public final class GetProfileSupportedOptimizationTypesResult {
 
     @OutputCustomType.Constructor({"supportedOptimizationTypes"})
     private GetProfileSupportedOptimizationTypesResult(List<String> supportedOptimizationTypes) {
-        this.supportedOptimizationTypes = Objects.requireNonNull(supportedOptimizationTypes);
+        this.supportedOptimizationTypes = supportedOptimizationTypes;
     }
 
     /**

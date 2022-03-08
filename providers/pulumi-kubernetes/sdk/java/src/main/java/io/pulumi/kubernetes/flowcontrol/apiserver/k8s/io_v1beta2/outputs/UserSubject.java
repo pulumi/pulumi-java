@@ -17,7 +17,7 @@ public final class UserSubject {
 
     @OutputCustomType.Constructor({"name"})
     private UserSubject(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

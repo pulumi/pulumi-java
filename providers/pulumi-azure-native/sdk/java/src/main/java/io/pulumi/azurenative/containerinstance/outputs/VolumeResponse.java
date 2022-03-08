@@ -51,7 +51,7 @@ public final class VolumeResponse {
         this.azureFile = azureFile;
         this.emptyDir = emptyDir;
         this.gitRepo = gitRepo;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.secret = secret;
     }
 

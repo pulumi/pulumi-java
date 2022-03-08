@@ -17,7 +17,7 @@ public final class GoogleCloudHealthcareV1beta1DicomStreamConfigResponse {
 
     @OutputCustomType.Constructor({"bigqueryDestination"})
     private GoogleCloudHealthcareV1beta1DicomStreamConfigResponse(GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse bigqueryDestination) {
-        this.bigqueryDestination = Objects.requireNonNull(bigqueryDestination);
+        this.bigqueryDestination = bigqueryDestination;
     }
 
     /**

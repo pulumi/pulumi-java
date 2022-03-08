@@ -27,7 +27,7 @@ public final class RouteSpecTcpRoute {
     private RouteSpecTcpRoute(
         RouteSpecTcpRouteAction action,
         @Nullable RouteSpecTcpRouteTimeout timeout) {
-        this.action = Objects.requireNonNull(action);
+        this.action = action;
         this.timeout = timeout;
     }
 

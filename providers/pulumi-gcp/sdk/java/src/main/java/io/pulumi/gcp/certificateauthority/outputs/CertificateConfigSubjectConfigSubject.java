@@ -62,10 +62,10 @@ public final class CertificateConfigSubjectConfigSubject {
         @Nullable String postalCode,
         @Nullable String province,
         @Nullable String streetAddress) {
-        this.commonName = Objects.requireNonNull(commonName);
+        this.commonName = commonName;
         this.countryCode = countryCode;
         this.locality = locality;
-        this.organization = Objects.requireNonNull(organization);
+        this.organization = organization;
         this.organizationalUnit = organizationalUnit;
         this.postalCode = postalCode;
         this.province = province;

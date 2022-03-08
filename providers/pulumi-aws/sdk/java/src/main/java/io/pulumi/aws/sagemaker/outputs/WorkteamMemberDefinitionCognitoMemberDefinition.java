@@ -30,9 +30,9 @@ public final class WorkteamMemberDefinitionCognitoMemberDefinition {
         String clientId,
         String userGroup,
         String userPool) {
-        this.clientId = Objects.requireNonNull(clientId);
-        this.userGroup = Objects.requireNonNull(userGroup);
-        this.userPool = Objects.requireNonNull(userPool);
+        this.clientId = clientId;
+        this.userGroup = userGroup;
+        this.userPool = userPool;
     }
 
     /**

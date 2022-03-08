@@ -71,15 +71,15 @@ public final class PipelineResourcesResponse {
         Boolean noAddress,
         Boolean preemptible,
         List<String> zones) {
-        this.acceleratorCount = Objects.requireNonNull(acceleratorCount);
-        this.acceleratorType = Objects.requireNonNull(acceleratorType);
-        this.bootDiskSizeGb = Objects.requireNonNull(bootDiskSizeGb);
-        this.disks = Objects.requireNonNull(disks);
-        this.minimumCpuCores = Objects.requireNonNull(minimumCpuCores);
-        this.minimumRamGb = Objects.requireNonNull(minimumRamGb);
-        this.noAddress = Objects.requireNonNull(noAddress);
-        this.preemptible = Objects.requireNonNull(preemptible);
-        this.zones = Objects.requireNonNull(zones);
+        this.acceleratorCount = acceleratorCount;
+        this.acceleratorType = acceleratorType;
+        this.bootDiskSizeGb = bootDiskSizeGb;
+        this.disks = disks;
+        this.minimumCpuCores = minimumCpuCores;
+        this.minimumRamGb = minimumRamGb;
+        this.noAddress = noAddress;
+        this.preemptible = preemptible;
+        this.zones = zones;
     }
 
     /**

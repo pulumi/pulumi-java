@@ -58,11 +58,11 @@ public final class GetExpressRouteCircuitAuthorizationResult {
         String type) {
         this.authorizationKey = authorizationKey;
         this.authorizationUseStatus = authorizationUseStatus;
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.id = id;
         this.name = name;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.type = Objects.requireNonNull(type);
+        this.provisioningState = provisioningState;
+        this.type = type;
     }
 
     /**

@@ -60,13 +60,13 @@ public final class SoftwareRecipeStepResponse {
         SoftwareRecipeStepInstallMsiResponse msiInstallation,
         SoftwareRecipeStepInstallRpmResponse rpmInstallation,
         SoftwareRecipeStepRunScriptResponse scriptRun) {
-        this.archiveExtraction = Objects.requireNonNull(archiveExtraction);
-        this.dpkgInstallation = Objects.requireNonNull(dpkgInstallation);
-        this.fileCopy = Objects.requireNonNull(fileCopy);
-        this.fileExec = Objects.requireNonNull(fileExec);
-        this.msiInstallation = Objects.requireNonNull(msiInstallation);
-        this.rpmInstallation = Objects.requireNonNull(rpmInstallation);
-        this.scriptRun = Objects.requireNonNull(scriptRun);
+        this.archiveExtraction = archiveExtraction;
+        this.dpkgInstallation = dpkgInstallation;
+        this.fileCopy = fileCopy;
+        this.fileExec = fileExec;
+        this.msiInstallation = msiInstallation;
+        this.rpmInstallation = rpmInstallation;
+        this.scriptRun = scriptRun;
     }
 
     /**

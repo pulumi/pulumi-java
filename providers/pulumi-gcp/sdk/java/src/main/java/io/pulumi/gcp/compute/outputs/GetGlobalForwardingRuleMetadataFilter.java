@@ -18,8 +18,8 @@ public final class GetGlobalForwardingRuleMetadataFilter {
     private GetGlobalForwardingRuleMetadataFilter(
         List<GetGlobalForwardingRuleMetadataFilterFilterLabel> filterLabels,
         String filterMatchCriteria) {
-        this.filterLabels = Objects.requireNonNull(filterLabels);
-        this.filterMatchCriteria = Objects.requireNonNull(filterMatchCriteria);
+        this.filterLabels = filterLabels;
+        this.filterMatchCriteria = filterMatchCriteria;
     }
 
     public List<GetGlobalForwardingRuleMetadataFilterFilterLabel> getFilterLabels() {

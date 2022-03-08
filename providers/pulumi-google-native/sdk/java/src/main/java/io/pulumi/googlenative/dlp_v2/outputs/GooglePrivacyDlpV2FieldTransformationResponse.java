@@ -40,10 +40,10 @@ public final class GooglePrivacyDlpV2FieldTransformationResponse {
         List<GooglePrivacyDlpV2FieldIdResponse> fields,
         GooglePrivacyDlpV2InfoTypeTransformationsResponse infoTypeTransformations,
         GooglePrivacyDlpV2PrimitiveTransformationResponse primitiveTransformation) {
-        this.condition = Objects.requireNonNull(condition);
-        this.fields = Objects.requireNonNull(fields);
-        this.infoTypeTransformations = Objects.requireNonNull(infoTypeTransformations);
-        this.primitiveTransformation = Objects.requireNonNull(primitiveTransformation);
+        this.condition = condition;
+        this.fields = fields;
+        this.infoTypeTransformations = infoTypeTransformations;
+        this.primitiveTransformation = primitiveTransformation;
     }
 
     /**

@@ -18,7 +18,7 @@ public final class TimeSeriesTableResponse {
 
     @OutputCustomType.Constructor({"dataSets"})
     private TimeSeriesTableResponse(List<TableDataSetResponse> dataSets) {
-        this.dataSets = Objects.requireNonNull(dataSets);
+        this.dataSets = dataSets;
     }
 
     /**

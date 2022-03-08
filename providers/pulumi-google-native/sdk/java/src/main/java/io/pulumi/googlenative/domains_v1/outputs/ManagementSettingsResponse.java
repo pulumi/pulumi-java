@@ -24,8 +24,8 @@ public final class ManagementSettingsResponse {
     private ManagementSettingsResponse(
         String renewalMethod,
         String transferLockState) {
-        this.renewalMethod = Objects.requireNonNull(renewalMethod);
-        this.transferLockState = Objects.requireNonNull(transferLockState);
+        this.renewalMethod = renewalMethod;
+        this.transferLockState = transferLockState;
     }
 
     /**

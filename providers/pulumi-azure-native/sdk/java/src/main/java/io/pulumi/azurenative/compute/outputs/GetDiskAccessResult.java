@@ -64,14 +64,14 @@ public final class GetDiskAccessResult {
         @Nullable Map<String,String> tags,
         String timeCreated,
         String type) {
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.id = id;
+        this.location = location;
+        this.name = name;
+        this.privateEndpointConnections = privateEndpointConnections;
+        this.provisioningState = provisioningState;
         this.tags = tags;
-        this.timeCreated = Objects.requireNonNull(timeCreated);
-        this.type = Objects.requireNonNull(type);
+        this.timeCreated = timeCreated;
+        this.type = type;
     }
 
     /**

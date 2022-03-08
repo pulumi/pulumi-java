@@ -32,9 +32,9 @@ public final class GoogleCloudMlV1__MeasurementResponse {
         String elapsedTime,
         List<GoogleCloudMlV1_Measurement_MetricResponse> metrics,
         String stepCount) {
-        this.elapsedTime = Objects.requireNonNull(elapsedTime);
-        this.metrics = Objects.requireNonNull(metrics);
-        this.stepCount = Objects.requireNonNull(stepCount);
+        this.elapsedTime = elapsedTime;
+        this.metrics = metrics;
+        this.stepCount = stepCount;
     }
 
     /**

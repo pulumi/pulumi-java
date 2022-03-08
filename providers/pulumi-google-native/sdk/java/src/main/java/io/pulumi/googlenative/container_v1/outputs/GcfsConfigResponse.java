@@ -17,7 +17,7 @@ public final class GcfsConfigResponse {
 
     @OutputCustomType.Constructor({"enabled"})
     private GcfsConfigResponse(Boolean enabled) {
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
     }
 
     /**

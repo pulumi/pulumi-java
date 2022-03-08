@@ -78,16 +78,16 @@ public final class GetProximityPlacementGroupResult {
         String type,
         List<SubResourceWithColocationStatusResponse> virtualMachineScaleSets,
         List<SubResourceWithColocationStatusResponse> virtualMachines) {
-        this.availabilitySets = Objects.requireNonNull(availabilitySets);
+        this.availabilitySets = availabilitySets;
         this.colocationStatus = colocationStatus;
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.location = location;
+        this.name = name;
         this.proximityPlacementGroupType = proximityPlacementGroupType;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
-        this.virtualMachineScaleSets = Objects.requireNonNull(virtualMachineScaleSets);
-        this.virtualMachines = Objects.requireNonNull(virtualMachines);
+        this.type = type;
+        this.virtualMachineScaleSets = virtualMachineScaleSets;
+        this.virtualMachines = virtualMachines;
     }
 
     /**

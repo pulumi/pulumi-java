@@ -17,7 +17,7 @@ public final class DiscoveryResponse {
 
     @OutputCustomType.Constructor({"analysisKind"})
     private DiscoveryResponse(String analysisKind) {
-        this.analysisKind = Objects.requireNonNull(analysisKind);
+        this.analysisKind = analysisKind;
     }
 
     /**

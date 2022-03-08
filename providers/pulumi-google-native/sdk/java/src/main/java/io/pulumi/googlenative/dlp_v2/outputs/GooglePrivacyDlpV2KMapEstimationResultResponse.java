@@ -18,7 +18,7 @@ public final class GooglePrivacyDlpV2KMapEstimationResultResponse {
 
     @OutputCustomType.Constructor({"kMapEstimationHistogram"})
     private GooglePrivacyDlpV2KMapEstimationResultResponse(List<GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse> kMapEstimationHistogram) {
-        this.kMapEstimationHistogram = Objects.requireNonNull(kMapEstimationHistogram);
+        this.kMapEstimationHistogram = kMapEstimationHistogram;
     }
 
     /**

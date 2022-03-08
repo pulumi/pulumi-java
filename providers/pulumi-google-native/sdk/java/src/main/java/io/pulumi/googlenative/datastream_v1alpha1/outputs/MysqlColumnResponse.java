@@ -56,13 +56,13 @@ public final class MysqlColumnResponse {
         Boolean nullable,
         Integer ordinalPosition,
         Boolean primaryKey) {
-        this.collation = Objects.requireNonNull(collation);
-        this.columnName = Objects.requireNonNull(columnName);
-        this.dataType = Objects.requireNonNull(dataType);
-        this.length = Objects.requireNonNull(length);
-        this.nullable = Objects.requireNonNull(nullable);
-        this.ordinalPosition = Objects.requireNonNull(ordinalPosition);
-        this.primaryKey = Objects.requireNonNull(primaryKey);
+        this.collation = collation;
+        this.columnName = columnName;
+        this.dataType = dataType;
+        this.length = length;
+        this.nullable = nullable;
+        this.ordinalPosition = ordinalPosition;
+        this.primaryKey = primaryKey;
     }
 
     /**

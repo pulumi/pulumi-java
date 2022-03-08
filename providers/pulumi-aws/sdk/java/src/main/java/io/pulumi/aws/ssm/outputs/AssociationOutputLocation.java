@@ -32,7 +32,7 @@ public final class AssociationOutputLocation {
         String s3BucketName,
         @Nullable String s3KeyPrefix,
         @Nullable String s3Region) {
-        this.s3BucketName = Objects.requireNonNull(s3BucketName);
+        this.s3BucketName = s3BucketName;
         this.s3KeyPrefix = s3KeyPrefix;
         this.s3Region = s3Region;
     }

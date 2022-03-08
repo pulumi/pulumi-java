@@ -43,11 +43,11 @@ public final class GetStudyResult {
         String name,
         String state,
         GoogleCloudMlV1__StudyConfigResponse studyConfig) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.inactiveReason = Objects.requireNonNull(inactiveReason);
-        this.name = Objects.requireNonNull(name);
-        this.state = Objects.requireNonNull(state);
-        this.studyConfig = Objects.requireNonNull(studyConfig);
+        this.createTime = createTime;
+        this.inactiveReason = inactiveReason;
+        this.name = name;
+        this.state = state;
+        this.studyConfig = studyConfig;
     }
 
     /**

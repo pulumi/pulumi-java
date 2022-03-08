@@ -69,27 +69,27 @@ public final class GetTableResult {
         Map<String,String> tags,
         GetTableTtl ttl,
         Integer writeCapacity) {
-        this.arn = Objects.requireNonNull(arn);
-        this.attributes = Objects.requireNonNull(attributes);
-        this.billingMode = Objects.requireNonNull(billingMode);
-        this.globalSecondaryIndexes = Objects.requireNonNull(globalSecondaryIndexes);
-        this.hashKey = Objects.requireNonNull(hashKey);
-        this.id = Objects.requireNonNull(id);
-        this.localSecondaryIndexes = Objects.requireNonNull(localSecondaryIndexes);
-        this.name = Objects.requireNonNull(name);
-        this.pointInTimeRecovery = Objects.requireNonNull(pointInTimeRecovery);
-        this.rangeKey = Objects.requireNonNull(rangeKey);
-        this.readCapacity = Objects.requireNonNull(readCapacity);
-        this.replicas = Objects.requireNonNull(replicas);
-        this.serverSideEncryption = Objects.requireNonNull(serverSideEncryption);
-        this.streamArn = Objects.requireNonNull(streamArn);
-        this.streamEnabled = Objects.requireNonNull(streamEnabled);
-        this.streamLabel = Objects.requireNonNull(streamLabel);
-        this.streamViewType = Objects.requireNonNull(streamViewType);
-        this.tableClass = Objects.requireNonNull(tableClass);
-        this.tags = Objects.requireNonNull(tags);
-        this.ttl = Objects.requireNonNull(ttl);
-        this.writeCapacity = Objects.requireNonNull(writeCapacity);
+        this.arn = arn;
+        this.attributes = attributes;
+        this.billingMode = billingMode;
+        this.globalSecondaryIndexes = globalSecondaryIndexes;
+        this.hashKey = hashKey;
+        this.id = id;
+        this.localSecondaryIndexes = localSecondaryIndexes;
+        this.name = name;
+        this.pointInTimeRecovery = pointInTimeRecovery;
+        this.rangeKey = rangeKey;
+        this.readCapacity = readCapacity;
+        this.replicas = replicas;
+        this.serverSideEncryption = serverSideEncryption;
+        this.streamArn = streamArn;
+        this.streamEnabled = streamEnabled;
+        this.streamLabel = streamLabel;
+        this.streamViewType = streamViewType;
+        this.tableClass = tableClass;
+        this.tags = tags;
+        this.ttl = ttl;
+        this.writeCapacity = writeCapacity;
     }
 
     public String getArn() {

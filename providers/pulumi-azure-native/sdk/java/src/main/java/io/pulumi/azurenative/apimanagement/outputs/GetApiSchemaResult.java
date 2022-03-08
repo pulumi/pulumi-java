@@ -51,11 +51,11 @@ public final class GetApiSchemaResult {
         String name,
         String type,
         @Nullable String value) {
-        this.contentType = Objects.requireNonNull(contentType);
+        this.contentType = contentType;
         this.definitions = definitions;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.id = id;
+        this.name = name;
+        this.type = type;
         this.value = value;
     }
 

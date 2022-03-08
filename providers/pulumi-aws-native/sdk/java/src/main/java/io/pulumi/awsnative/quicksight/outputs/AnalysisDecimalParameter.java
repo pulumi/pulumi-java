@@ -26,8 +26,8 @@ public final class AnalysisDecimalParameter {
     private AnalysisDecimalParameter(
         String name,
         List<Double> values) {
-        this.name = Objects.requireNonNull(name);
-        this.values = Objects.requireNonNull(values);
+        this.name = name;
+        this.values = values;
     }
 
     /**

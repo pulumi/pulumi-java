@@ -25,8 +25,8 @@ public final class InstanceGroupManagerStatusStatefulResponse {
     private InstanceGroupManagerStatusStatefulResponse(
         Boolean hasStatefulConfig,
         InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse perInstanceConfigs) {
-        this.hasStatefulConfig = Objects.requireNonNull(hasStatefulConfig);
-        this.perInstanceConfigs = Objects.requireNonNull(perInstanceConfigs);
+        this.hasStatefulConfig = hasStatefulConfig;
+        this.perInstanceConfigs = perInstanceConfigs;
     }
 
     /**

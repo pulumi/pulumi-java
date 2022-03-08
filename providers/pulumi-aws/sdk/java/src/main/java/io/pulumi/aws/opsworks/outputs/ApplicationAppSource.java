@@ -53,7 +53,7 @@ public final class ApplicationAppSource {
         this.password = password;
         this.revision = revision;
         this.sshKey = sshKey;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.url = url;
         this.username = username;
     }

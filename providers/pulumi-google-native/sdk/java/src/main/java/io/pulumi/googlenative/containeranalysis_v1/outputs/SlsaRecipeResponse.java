@@ -43,11 +43,11 @@ public final class SlsaRecipeResponse {
         String entryPoint,
         Map<String,String> environment,
         String type) {
-        this.arguments = Objects.requireNonNull(arguments);
-        this.definedInMaterial = Objects.requireNonNull(definedInMaterial);
-        this.entryPoint = Objects.requireNonNull(entryPoint);
-        this.environment = Objects.requireNonNull(environment);
-        this.type = Objects.requireNonNull(type);
+        this.arguments = arguments;
+        this.definedInMaterial = definedInMaterial;
+        this.entryPoint = entryPoint;
+        this.environment = environment;
+        this.type = type;
     }
 
     /**

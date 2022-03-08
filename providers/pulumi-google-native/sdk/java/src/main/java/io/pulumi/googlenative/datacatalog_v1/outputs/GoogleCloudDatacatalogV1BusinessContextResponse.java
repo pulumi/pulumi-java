@@ -25,8 +25,8 @@ public final class GoogleCloudDatacatalogV1BusinessContextResponse {
     private GoogleCloudDatacatalogV1BusinessContextResponse(
         GoogleCloudDatacatalogV1ContactsResponse contacts,
         GoogleCloudDatacatalogV1EntryOverviewResponse entryOverview) {
-        this.contacts = Objects.requireNonNull(contacts);
-        this.entryOverview = Objects.requireNonNull(entryOverview);
+        this.contacts = contacts;
+        this.entryOverview = entryOverview;
     }
 
     /**

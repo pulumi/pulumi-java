@@ -53,12 +53,12 @@ public final class GetMaintenanceConfigurationResult {
         SystemDataResponse systemData,
         @Nullable List<TimeInWeekResponse> timeInWeek,
         String type) {
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.notAllowedTime = notAllowedTime;
-        this.systemData = Objects.requireNonNull(systemData);
+        this.systemData = systemData;
         this.timeInWeek = timeInWeek;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

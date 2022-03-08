@@ -99,13 +99,13 @@ public final class GetBackupPolicyResult {
         @Nullable Integer yearlyBackupsToKeep) {
         this.dailyBackupsToKeep = dailyBackupsToKeep;
         this.enabled = enabled;
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
+        this.id = id;
+        this.location = location;
         this.monthlyBackupsToKeep = monthlyBackupsToKeep;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.volumeBackups = volumeBackups;
         this.volumesAssigned = volumesAssigned;
         this.weeklyBackupsToKeep = weeklyBackupsToKeep;

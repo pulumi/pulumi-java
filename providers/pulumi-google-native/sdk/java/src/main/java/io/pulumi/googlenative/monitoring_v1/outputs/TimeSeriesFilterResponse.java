@@ -38,10 +38,10 @@ public final class TimeSeriesFilterResponse {
         String filter,
         PickTimeSeriesFilterResponse pickTimeSeriesFilter,
         AggregationResponse secondaryAggregation) {
-        this.aggregation = Objects.requireNonNull(aggregation);
-        this.filter = Objects.requireNonNull(filter);
-        this.pickTimeSeriesFilter = Objects.requireNonNull(pickTimeSeriesFilter);
-        this.secondaryAggregation = Objects.requireNonNull(secondaryAggregation);
+        this.aggregation = aggregation;
+        this.filter = filter;
+        this.pickTimeSeriesFilter = pickTimeSeriesFilter;
+        this.secondaryAggregation = secondaryAggregation;
     }
 
     /**

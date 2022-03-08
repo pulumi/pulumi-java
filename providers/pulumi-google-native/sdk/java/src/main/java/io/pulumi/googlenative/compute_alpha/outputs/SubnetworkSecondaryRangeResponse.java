@@ -30,9 +30,9 @@ public final class SubnetworkSecondaryRangeResponse {
         String ipCidrRange,
         String rangeName,
         String reservedInternalRange) {
-        this.ipCidrRange = Objects.requireNonNull(ipCidrRange);
-        this.rangeName = Objects.requireNonNull(rangeName);
-        this.reservedInternalRange = Objects.requireNonNull(reservedInternalRange);
+        this.ipCidrRange = ipCidrRange;
+        this.rangeName = rangeName;
+        this.reservedInternalRange = reservedInternalRange;
     }
 
     /**

@@ -31,9 +31,9 @@ public final class GetOverrideResult {
         String apiProxy,
         String name,
         GoogleCloudApigeeV1TraceSamplingConfigResponse samplingConfig) {
-        this.apiProxy = Objects.requireNonNull(apiProxy);
-        this.name = Objects.requireNonNull(name);
-        this.samplingConfig = Objects.requireNonNull(samplingConfig);
+        this.apiProxy = apiProxy;
+        this.name = name;
+        this.samplingConfig = samplingConfig;
     }
 
     /**

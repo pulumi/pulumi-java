@@ -24,8 +24,8 @@ public final class AutoStoragePropertiesResponse {
     private AutoStoragePropertiesResponse(
         String lastKeySync,
         String storageAccountId) {
-        this.lastKeySync = Objects.requireNonNull(lastKeySync);
-        this.storageAccountId = Objects.requireNonNull(storageAccountId);
+        this.lastKeySync = lastKeySync;
+        this.storageAccountId = storageAccountId;
     }
 
     /**

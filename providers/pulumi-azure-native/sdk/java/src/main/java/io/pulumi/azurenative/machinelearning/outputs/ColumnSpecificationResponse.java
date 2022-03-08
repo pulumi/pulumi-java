@@ -49,7 +49,7 @@ public final class ColumnSpecificationResponse {
         @Nullable Boolean xMsIsordered) {
         this.$enum = $enum;
         this.format = format;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.xMsIsnullable = xMsIsnullable;
         this.xMsIsordered = xMsIsordered;
     }

@@ -24,8 +24,8 @@ public final class SqlServerAuditConfigResponse {
     private SqlServerAuditConfigResponse(
         String bucket,
         String kind) {
-        this.bucket = Objects.requireNonNull(bucket);
-        this.kind = Objects.requireNonNull(kind);
+        this.bucket = bucket;
+        this.kind = kind;
     }
 
     /**

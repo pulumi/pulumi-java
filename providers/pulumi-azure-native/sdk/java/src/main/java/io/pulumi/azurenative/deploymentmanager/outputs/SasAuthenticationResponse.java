@@ -25,8 +25,8 @@ public final class SasAuthenticationResponse {
     private SasAuthenticationResponse(
         String sasUri,
         String type) {
-        this.sasUri = Objects.requireNonNull(sasUri);
-        this.type = Objects.requireNonNull(type);
+        this.sasUri = sasUri;
+        this.type = type;
     }
 
     /**

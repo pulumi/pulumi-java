@@ -24,8 +24,8 @@ public final class ListWorkflowAccessKeySecretKeysResult {
     private ListWorkflowAccessKeySecretKeysResult(
         String primarySecretKey,
         String secondarySecretKey) {
-        this.primarySecretKey = Objects.requireNonNull(primarySecretKey);
-        this.secondarySecretKey = Objects.requireNonNull(secondarySecretKey);
+        this.primarySecretKey = primarySecretKey;
+        this.secondarySecretKey = secondarySecretKey;
     }
 
     /**

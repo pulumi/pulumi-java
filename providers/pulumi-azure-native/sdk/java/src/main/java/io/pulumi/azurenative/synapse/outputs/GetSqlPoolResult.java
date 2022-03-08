@@ -124,10 +124,10 @@ public final class GetSqlPoolResult {
         this.collation = collation;
         this.createMode = createMode;
         this.creationDate = creationDate;
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
+        this.id = id;
+        this.location = location;
         this.maxSizeBytes = maxSizeBytes;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.provisioningState = provisioningState;
         this.recoverableDatabaseId = recoverableDatabaseId;
         this.restorePointInTime = restorePointInTime;
@@ -136,7 +136,7 @@ public final class GetSqlPoolResult {
         this.status = status;
         this.storageAccountType = storageAccountType;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

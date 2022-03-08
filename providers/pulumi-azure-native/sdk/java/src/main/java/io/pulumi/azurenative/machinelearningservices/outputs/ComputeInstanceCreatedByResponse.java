@@ -30,9 +30,9 @@ public final class ComputeInstanceCreatedByResponse {
         String userId,
         String userName,
         String userOrgId) {
-        this.userId = Objects.requireNonNull(userId);
-        this.userName = Objects.requireNonNull(userName);
-        this.userOrgId = Objects.requireNonNull(userOrgId);
+        this.userId = userId;
+        this.userName = userName;
+        this.userOrgId = userOrgId;
     }
 
     /**

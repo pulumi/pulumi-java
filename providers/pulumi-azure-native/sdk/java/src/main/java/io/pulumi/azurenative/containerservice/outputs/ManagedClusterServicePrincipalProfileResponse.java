@@ -26,7 +26,7 @@ public final class ManagedClusterServicePrincipalProfileResponse {
     private ManagedClusterServicePrincipalProfileResponse(
         String clientId,
         @Nullable String secret) {
-        this.clientId = Objects.requireNonNull(clientId);
+        this.clientId = clientId;
         this.secret = secret;
     }
 

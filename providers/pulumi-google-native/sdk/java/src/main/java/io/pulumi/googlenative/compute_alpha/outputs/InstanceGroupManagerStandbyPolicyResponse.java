@@ -13,7 +13,7 @@ public final class InstanceGroupManagerStandbyPolicyResponse {
 
     @OutputCustomType.Constructor({"initialDelaySec"})
     private InstanceGroupManagerStandbyPolicyResponse(Integer initialDelaySec) {
-        this.initialDelaySec = Objects.requireNonNull(initialDelaySec);
+        this.initialDelaySec = initialDelaySec;
     }
 
     public Integer getInitialDelaySec() {

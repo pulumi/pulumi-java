@@ -17,7 +17,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
 
     @OutputCustomType.Constructor({"resourceArn"})
     private ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInput(String resourceArn) {
-        this.resourceArn = Objects.requireNonNull(resourceArn);
+        this.resourceArn = resourceArn;
     }
 
     /**

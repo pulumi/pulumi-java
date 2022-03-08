@@ -39,13 +39,13 @@ public final class GetExportResult {
         String outputType,
         String specification,
         @Nullable String stageName) {
-        this.apiId = Objects.requireNonNull(apiId);
-        this.body = Objects.requireNonNull(body);
+        this.apiId = apiId;
+        this.body = body;
         this.exportVersion = exportVersion;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.includeExtensions = includeExtensions;
-        this.outputType = Objects.requireNonNull(outputType);
-        this.specification = Objects.requireNonNull(specification);
+        this.outputType = outputType;
+        this.specification = specification;
         this.stageName = stageName;
     }
 

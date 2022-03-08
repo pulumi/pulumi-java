@@ -24,8 +24,8 @@ public final class UrlSigningParamIdentifierResponse {
     private UrlSigningParamIdentifierResponse(
         String paramIndicator,
         String paramName) {
-        this.paramIndicator = Objects.requireNonNull(paramIndicator);
-        this.paramName = Objects.requireNonNull(paramName);
+        this.paramIndicator = paramIndicator;
+        this.paramName = paramName;
     }
 
     /**

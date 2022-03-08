@@ -73,16 +73,16 @@ public final class GetDatacenterConnectorResult {
         String stateTime,
         String updateTime,
         String version) {
-        this.bucket = Objects.requireNonNull(bucket);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.error = Objects.requireNonNull(error);
-        this.name = Objects.requireNonNull(name);
-        this.registrationId = Objects.requireNonNull(registrationId);
-        this.serviceAccount = Objects.requireNonNull(serviceAccount);
-        this.state = Objects.requireNonNull(state);
-        this.stateTime = Objects.requireNonNull(stateTime);
-        this.updateTime = Objects.requireNonNull(updateTime);
-        this.version = Objects.requireNonNull(version);
+        this.bucket = bucket;
+        this.createTime = createTime;
+        this.error = error;
+        this.name = name;
+        this.registrationId = registrationId;
+        this.serviceAccount = serviceAccount;
+        this.state = state;
+        this.stateTime = stateTime;
+        this.updateTime = updateTime;
+        this.version = version;
     }
 
     /**

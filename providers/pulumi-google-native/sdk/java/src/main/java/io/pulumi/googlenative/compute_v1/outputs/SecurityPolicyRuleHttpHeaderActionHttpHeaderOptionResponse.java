@@ -24,8 +24,8 @@ public final class SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse {
     private SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse(
         String headerName,
         String headerValue) {
-        this.headerName = Objects.requireNonNull(headerName);
-        this.headerValue = Objects.requireNonNull(headerValue);
+        this.headerName = headerName;
+        this.headerValue = headerValue;
     }
 
     /**

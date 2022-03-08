@@ -16,8 +16,8 @@ public final class NetworkPerformanceConfigResponse {
     private NetworkPerformanceConfigResponse(
         String externalIpEgressBandwidthTier,
         String totalEgressBandwidthTier) {
-        this.externalIpEgressBandwidthTier = Objects.requireNonNull(externalIpEgressBandwidthTier);
-        this.totalEgressBandwidthTier = Objects.requireNonNull(totalEgressBandwidthTier);
+        this.externalIpEgressBandwidthTier = externalIpEgressBandwidthTier;
+        this.totalEgressBandwidthTier = totalEgressBandwidthTier;
     }
 
     public String getExternalIpEgressBandwidthTier() {

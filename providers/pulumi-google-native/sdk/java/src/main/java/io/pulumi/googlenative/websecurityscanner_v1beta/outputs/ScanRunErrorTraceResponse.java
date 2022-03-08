@@ -32,9 +32,9 @@ public final class ScanRunErrorTraceResponse {
         String code,
         Integer mostCommonHttpErrorCode,
         ScanConfigErrorResponse scanConfigError) {
-        this.code = Objects.requireNonNull(code);
-        this.mostCommonHttpErrorCode = Objects.requireNonNull(mostCommonHttpErrorCode);
-        this.scanConfigError = Objects.requireNonNull(scanConfigError);
+        this.code = code;
+        this.mostCommonHttpErrorCode = mostCommonHttpErrorCode;
+        this.scanConfigError = scanConfigError;
     }
 
     /**

@@ -21,9 +21,9 @@ public final class GetClusterMaintenancePolicy {
         List<GetClusterMaintenancePolicyDailyMaintenanceWindow> dailyMaintenanceWindows,
         List<GetClusterMaintenancePolicyMaintenanceExclusion> maintenanceExclusions,
         List<GetClusterMaintenancePolicyRecurringWindow> recurringWindows) {
-        this.dailyMaintenanceWindows = Objects.requireNonNull(dailyMaintenanceWindows);
-        this.maintenanceExclusions = Objects.requireNonNull(maintenanceExclusions);
-        this.recurringWindows = Objects.requireNonNull(recurringWindows);
+        this.dailyMaintenanceWindows = dailyMaintenanceWindows;
+        this.maintenanceExclusions = maintenanceExclusions;
+        this.recurringWindows = recurringWindows;
     }
 
     public List<GetClusterMaintenancePolicyDailyMaintenanceWindow> getDailyMaintenanceWindows() {

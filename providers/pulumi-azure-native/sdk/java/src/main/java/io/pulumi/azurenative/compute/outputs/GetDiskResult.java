@@ -239,39 +239,39 @@ public final class GetDiskResult {
         String uniqueId,
         @Nullable List<String> zones) {
         this.burstingEnabled = burstingEnabled;
-        this.creationData = Objects.requireNonNull(creationData);
+        this.creationData = creationData;
         this.diskAccessId = diskAccessId;
         this.diskIOPSReadOnly = diskIOPSReadOnly;
         this.diskIOPSReadWrite = diskIOPSReadWrite;
         this.diskMBpsReadOnly = diskMBpsReadOnly;
         this.diskMBpsReadWrite = diskMBpsReadWrite;
-        this.diskSizeBytes = Objects.requireNonNull(diskSizeBytes);
+        this.diskSizeBytes = diskSizeBytes;
         this.diskSizeGB = diskSizeGB;
-        this.diskState = Objects.requireNonNull(diskState);
+        this.diskState = diskState;
         this.encryption = encryption;
         this.encryptionSettingsCollection = encryptionSettingsCollection;
         this.extendedLocation = extendedLocation;
         this.hyperVGeneration = hyperVGeneration;
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.managedBy = Objects.requireNonNull(managedBy);
-        this.managedByExtended = Objects.requireNonNull(managedByExtended);
+        this.id = id;
+        this.location = location;
+        this.managedBy = managedBy;
+        this.managedByExtended = managedByExtended;
         this.maxShares = maxShares;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.networkAccessPolicy = networkAccessPolicy;
         this.osType = osType;
-        this.propertyUpdatesInProgress = Objects.requireNonNull(propertyUpdatesInProgress);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.propertyUpdatesInProgress = propertyUpdatesInProgress;
+        this.provisioningState = provisioningState;
         this.purchasePlan = purchasePlan;
         this.securityProfile = securityProfile;
-        this.shareInfo = Objects.requireNonNull(shareInfo);
+        this.shareInfo = shareInfo;
         this.sku = sku;
         this.supportsHibernation = supportsHibernation;
         this.tags = tags;
         this.tier = tier;
-        this.timeCreated = Objects.requireNonNull(timeCreated);
-        this.type = Objects.requireNonNull(type);
-        this.uniqueId = Objects.requireNonNull(uniqueId);
+        this.timeCreated = timeCreated;
+        this.type = type;
+        this.uniqueId = uniqueId;
         this.zones = zones;
     }
 

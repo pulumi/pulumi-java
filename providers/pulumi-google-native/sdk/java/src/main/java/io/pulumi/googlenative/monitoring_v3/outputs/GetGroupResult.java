@@ -43,11 +43,11 @@ public final class GetGroupResult {
         Boolean isCluster,
         String name,
         String parentName) {
-        this.displayName = Objects.requireNonNull(displayName);
-        this.filter = Objects.requireNonNull(filter);
-        this.isCluster = Objects.requireNonNull(isCluster);
-        this.name = Objects.requireNonNull(name);
-        this.parentName = Objects.requireNonNull(parentName);
+        this.displayName = displayName;
+        this.filter = filter;
+        this.isCluster = isCluster;
+        this.name = name;
+        this.parentName = parentName;
     }
 
     /**

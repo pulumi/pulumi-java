@@ -51,12 +51,12 @@ public final class AccessReviewScopeResponse {
         String principalType,
         String resourceId,
         String roleDefinitionId) {
-        this.assignmentState = Objects.requireNonNull(assignmentState);
+        this.assignmentState = assignmentState;
         this.expandNestedMemberships = expandNestedMemberships;
         this.inactiveDuration = inactiveDuration;
-        this.principalType = Objects.requireNonNull(principalType);
-        this.resourceId = Objects.requireNonNull(resourceId);
-        this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId);
+        this.principalType = principalType;
+        this.resourceId = resourceId;
+        this.roleDefinitionId = roleDefinitionId;
     }
 
     /**

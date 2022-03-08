@@ -24,8 +24,8 @@ public final class EventSourceMappingSourceAccessConfiguration {
     private EventSourceMappingSourceAccessConfiguration(
         String type,
         String uri) {
-        this.type = Objects.requireNonNull(type);
-        this.uri = Objects.requireNonNull(uri);
+        this.type = type;
+        this.uri = uri;
     }
 
     /**

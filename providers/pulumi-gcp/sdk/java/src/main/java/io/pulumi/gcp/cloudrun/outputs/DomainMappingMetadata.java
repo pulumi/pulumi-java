@@ -82,7 +82,7 @@ public final class DomainMappingMetadata {
         this.annotations = annotations;
         this.generation = generation;
         this.labels = labels;
-        this.namespace = Objects.requireNonNull(namespace);
+        this.namespace = namespace;
         this.resourceVersion = resourceVersion;
         this.selfLink = selfLink;
         this.uid = uid;

@@ -71,12 +71,12 @@ public final class BookmarkTimelineItemResponse {
         @Nullable List<String> labels,
         @Nullable String notes,
         @Nullable String startTimeUtc) {
-        this.azureResourceId = Objects.requireNonNull(azureResourceId);
+        this.azureResourceId = azureResourceId;
         this.createdBy = createdBy;
         this.displayName = displayName;
         this.endTimeUtc = endTimeUtc;
         this.eventTime = eventTime;
-        this.kind = Objects.requireNonNull(kind);
+        this.kind = kind;
         this.labels = labels;
         this.notes = notes;
         this.startTimeUtc = startTimeUtc;

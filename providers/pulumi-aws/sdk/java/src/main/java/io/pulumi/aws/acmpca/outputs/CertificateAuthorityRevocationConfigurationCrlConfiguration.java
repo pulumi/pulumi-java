@@ -48,7 +48,7 @@ public final class CertificateAuthorityRevocationConfigurationCrlConfiguration {
         @Nullable String s3ObjectAcl) {
         this.customCname = customCname;
         this.enabled = enabled;
-        this.expirationInDays = Objects.requireNonNull(expirationInDays);
+        this.expirationInDays = expirationInDays;
         this.s3BucketName = s3BucketName;
         this.s3ObjectAcl = s3ObjectAcl;
     }

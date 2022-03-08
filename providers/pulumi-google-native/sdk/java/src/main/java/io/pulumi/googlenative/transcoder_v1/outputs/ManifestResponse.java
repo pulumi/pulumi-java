@@ -31,9 +31,9 @@ public final class ManifestResponse {
         String fileName,
         List<String> muxStreams,
         String type) {
-        this.fileName = Objects.requireNonNull(fileName);
-        this.muxStreams = Objects.requireNonNull(muxStreams);
-        this.type = Objects.requireNonNull(type);
+        this.fileName = fileName;
+        this.muxStreams = muxStreams;
+        this.type = type;
     }
 
     /**

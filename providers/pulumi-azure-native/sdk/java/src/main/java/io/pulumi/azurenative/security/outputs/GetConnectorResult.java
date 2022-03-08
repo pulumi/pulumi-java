@@ -51,9 +51,9 @@ public final class GetConnectorResult {
         String type) {
         this.authenticationDetails = authenticationDetails;
         this.hybridComputeSettings = hybridComputeSettings;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.id = id;
+        this.name = name;
+        this.type = type;
     }
 
     /**

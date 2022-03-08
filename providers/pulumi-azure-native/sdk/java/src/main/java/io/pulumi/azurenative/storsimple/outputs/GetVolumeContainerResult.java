@@ -92,15 +92,15 @@ public final class GetVolumeContainerResult {
         this.bandWidthRateInMbps = bandWidthRateInMbps;
         this.bandwidthSettingId = bandwidthSettingId;
         this.encryptionKey = encryptionKey;
-        this.encryptionStatus = Objects.requireNonNull(encryptionStatus);
-        this.id = Objects.requireNonNull(id);
+        this.encryptionStatus = encryptionStatus;
+        this.id = id;
         this.kind = kind;
-        this.name = Objects.requireNonNull(name);
-        this.ownerShipStatus = Objects.requireNonNull(ownerShipStatus);
-        this.storageAccountCredentialId = Objects.requireNonNull(storageAccountCredentialId);
-        this.totalCloudStorageUsageInBytes = Objects.requireNonNull(totalCloudStorageUsageInBytes);
-        this.type = Objects.requireNonNull(type);
-        this.volumeCount = Objects.requireNonNull(volumeCount);
+        this.name = name;
+        this.ownerShipStatus = ownerShipStatus;
+        this.storageAccountCredentialId = storageAccountCredentialId;
+        this.totalCloudStorageUsageInBytes = totalCloudStorageUsageInBytes;
+        this.type = type;
+        this.volumeCount = volumeCount;
     }
 
     /**

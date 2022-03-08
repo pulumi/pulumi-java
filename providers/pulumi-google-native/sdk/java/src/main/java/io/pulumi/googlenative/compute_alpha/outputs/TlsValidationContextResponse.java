@@ -31,9 +31,9 @@ public final class TlsValidationContextResponse {
         String certificatePath,
         SdsConfigResponse sdsConfig,
         String validationSource) {
-        this.certificatePath = Objects.requireNonNull(certificatePath);
-        this.sdsConfig = Objects.requireNonNull(sdsConfig);
-        this.validationSource = Objects.requireNonNull(validationSource);
+        this.certificatePath = certificatePath;
+        this.sdsConfig = sdsConfig;
+        this.validationSource = validationSource;
     }
 
     /**

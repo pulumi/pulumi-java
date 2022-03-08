@@ -13,7 +13,7 @@ public final class AttestationResponse {
 
     @OutputCustomType.Constructor({"pgpSignedAttestation"})
     private AttestationResponse(PgpSignedAttestationResponse pgpSignedAttestation) {
-        this.pgpSignedAttestation = Objects.requireNonNull(pgpSignedAttestation);
+        this.pgpSignedAttestation = pgpSignedAttestation;
     }
 
     public PgpSignedAttestationResponse getPgpSignedAttestation() {

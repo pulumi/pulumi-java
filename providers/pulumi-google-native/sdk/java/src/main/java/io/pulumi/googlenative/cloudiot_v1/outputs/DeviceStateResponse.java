@@ -24,8 +24,8 @@ public final class DeviceStateResponse {
     private DeviceStateResponse(
         String binaryData,
         String updateTime) {
-        this.binaryData = Objects.requireNonNull(binaryData);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.binaryData = binaryData;
+        this.updateTime = updateTime;
     }
 
     /**

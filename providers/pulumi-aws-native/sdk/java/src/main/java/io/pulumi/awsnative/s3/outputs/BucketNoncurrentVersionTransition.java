@@ -34,8 +34,8 @@ public final class BucketNoncurrentVersionTransition {
         BucketNoncurrentVersionTransitionStorageClass storageClass,
         Integer transitionInDays) {
         this.newerNoncurrentVersions = newerNoncurrentVersions;
-        this.storageClass = Objects.requireNonNull(storageClass);
-        this.transitionInDays = Objects.requireNonNull(transitionInDays);
+        this.storageClass = storageClass;
+        this.transitionInDays = transitionInDays;
     }
 
     /**

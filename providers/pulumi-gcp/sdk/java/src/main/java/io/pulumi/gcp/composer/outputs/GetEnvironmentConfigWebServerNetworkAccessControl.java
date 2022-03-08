@@ -14,7 +14,7 @@ public final class GetEnvironmentConfigWebServerNetworkAccessControl {
 
     @OutputCustomType.Constructor({"allowedIpRanges"})
     private GetEnvironmentConfigWebServerNetworkAccessControl(List<GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange> allowedIpRanges) {
-        this.allowedIpRanges = Objects.requireNonNull(allowedIpRanges);
+        this.allowedIpRanges = allowedIpRanges;
     }
 
     public List<GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange> getAllowedIpRanges() {

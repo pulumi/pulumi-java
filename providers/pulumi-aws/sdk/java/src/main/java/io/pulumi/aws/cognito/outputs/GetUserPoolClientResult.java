@@ -139,29 +139,29 @@ public final class GetUserPoolClientResult {
         List<GetUserPoolClientTokenValidityUnit> tokenValidityUnits,
         String userPoolId,
         List<String> writeAttributes) {
-        this.accessTokenValidity = Objects.requireNonNull(accessTokenValidity);
-        this.allowedOauthFlows = Objects.requireNonNull(allowedOauthFlows);
-        this.allowedOauthFlowsUserPoolClient = Objects.requireNonNull(allowedOauthFlowsUserPoolClient);
-        this.allowedOauthScopes = Objects.requireNonNull(allowedOauthScopes);
-        this.analyticsConfigurations = Objects.requireNonNull(analyticsConfigurations);
-        this.callbackUrls = Objects.requireNonNull(callbackUrls);
-        this.clientId = Objects.requireNonNull(clientId);
-        this.clientSecret = Objects.requireNonNull(clientSecret);
-        this.defaultRedirectUri = Objects.requireNonNull(defaultRedirectUri);
-        this.enableTokenRevocation = Objects.requireNonNull(enableTokenRevocation);
-        this.explicitAuthFlows = Objects.requireNonNull(explicitAuthFlows);
-        this.generateSecret = Objects.requireNonNull(generateSecret);
-        this.id = Objects.requireNonNull(id);
-        this.idTokenValidity = Objects.requireNonNull(idTokenValidity);
-        this.logoutUrls = Objects.requireNonNull(logoutUrls);
-        this.name = Objects.requireNonNull(name);
-        this.preventUserExistenceErrors = Objects.requireNonNull(preventUserExistenceErrors);
-        this.readAttributes = Objects.requireNonNull(readAttributes);
-        this.refreshTokenValidity = Objects.requireNonNull(refreshTokenValidity);
-        this.supportedIdentityProviders = Objects.requireNonNull(supportedIdentityProviders);
-        this.tokenValidityUnits = Objects.requireNonNull(tokenValidityUnits);
-        this.userPoolId = Objects.requireNonNull(userPoolId);
-        this.writeAttributes = Objects.requireNonNull(writeAttributes);
+        this.accessTokenValidity = accessTokenValidity;
+        this.allowedOauthFlows = allowedOauthFlows;
+        this.allowedOauthFlowsUserPoolClient = allowedOauthFlowsUserPoolClient;
+        this.allowedOauthScopes = allowedOauthScopes;
+        this.analyticsConfigurations = analyticsConfigurations;
+        this.callbackUrls = callbackUrls;
+        this.clientId = clientId;
+        this.clientSecret = clientSecret;
+        this.defaultRedirectUri = defaultRedirectUri;
+        this.enableTokenRevocation = enableTokenRevocation;
+        this.explicitAuthFlows = explicitAuthFlows;
+        this.generateSecret = generateSecret;
+        this.id = id;
+        this.idTokenValidity = idTokenValidity;
+        this.logoutUrls = logoutUrls;
+        this.name = name;
+        this.preventUserExistenceErrors = preventUserExistenceErrors;
+        this.readAttributes = readAttributes;
+        this.refreshTokenValidity = refreshTokenValidity;
+        this.supportedIdentityProviders = supportedIdentityProviders;
+        this.tokenValidityUnits = tokenValidityUnits;
+        this.userPoolId = userPoolId;
+        this.writeAttributes = writeAttributes;
     }
 
     /**

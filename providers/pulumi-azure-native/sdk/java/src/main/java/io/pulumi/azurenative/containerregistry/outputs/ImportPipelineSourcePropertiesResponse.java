@@ -34,7 +34,7 @@ public final class ImportPipelineSourcePropertiesResponse {
         String keyVaultUri,
         @Nullable String type,
         @Nullable String uri) {
-        this.keyVaultUri = Objects.requireNonNull(keyVaultUri);
+        this.keyVaultUri = keyVaultUri;
         this.type = type;
         this.uri = uri;
     }

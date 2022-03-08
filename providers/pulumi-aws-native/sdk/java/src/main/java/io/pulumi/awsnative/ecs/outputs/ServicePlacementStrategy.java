@@ -20,7 +20,7 @@ public final class ServicePlacementStrategy {
         @Nullable String field,
         ServicePlacementStrategyType type) {
         this.field = field;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     public Optional<String> getField() {

@@ -84,7 +84,7 @@ public final class ShareSynchronizationResponse {
         this.startTime = startTime;
         this.status = status;
         this.synchronizationId = synchronizationId;
-        this.synchronizationMode = Objects.requireNonNull(synchronizationMode);
+        this.synchronizationMode = synchronizationMode;
     }
 
     /**

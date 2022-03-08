@@ -24,7 +24,7 @@ public final class CanaryCode {
         @Nullable String s3Key,
         @Nullable String s3ObjectVersion,
         @Nullable String script) {
-        this.handler = Objects.requireNonNull(handler);
+        this.handler = handler;
         this.s3Bucket = s3Bucket;
         this.s3Key = s3Key;
         this.s3ObjectVersion = s3ObjectVersion;

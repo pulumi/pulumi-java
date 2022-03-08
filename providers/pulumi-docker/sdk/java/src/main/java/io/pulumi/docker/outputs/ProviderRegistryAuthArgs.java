@@ -24,7 +24,7 @@ public final class ProviderRegistryAuthArgs {
         @Nullable Input<String> configFileContent,
         @Nullable Input<String> password,
         @Nullable Input<String> username) {
-        this.address = Objects.requireNonNull(address);
+        this.address = address;
         this.configFile = configFile;
         this.configFileContent = configFileContent;
         this.password = password;

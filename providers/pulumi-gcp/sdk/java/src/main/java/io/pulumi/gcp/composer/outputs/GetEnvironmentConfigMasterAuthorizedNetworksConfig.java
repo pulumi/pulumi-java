@@ -18,8 +18,8 @@ public final class GetEnvironmentConfigMasterAuthorizedNetworksConfig {
     private GetEnvironmentConfigMasterAuthorizedNetworksConfig(
         List<GetEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlock> cidrBlocks,
         Boolean enabled) {
-        this.cidrBlocks = Objects.requireNonNull(cidrBlocks);
-        this.enabled = Objects.requireNonNull(enabled);
+        this.cidrBlocks = cidrBlocks;
+        this.enabled = enabled;
     }
 
     public List<GetEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlock> getCidrBlocks() {

@@ -101,19 +101,19 @@ public final class AwsClusterControlPlane {
         List<String> subnetIds,
         @Nullable Map<String,String> tags,
         String version) {
-        this.awsServicesAuthentication = Objects.requireNonNull(awsServicesAuthentication);
-        this.configEncryption = Objects.requireNonNull(configEncryption);
-        this.databaseEncryption = Objects.requireNonNull(databaseEncryption);
-        this.iamInstanceProfile = Objects.requireNonNull(iamInstanceProfile);
+        this.awsServicesAuthentication = awsServicesAuthentication;
+        this.configEncryption = configEncryption;
+        this.databaseEncryption = databaseEncryption;
+        this.iamInstanceProfile = iamInstanceProfile;
         this.instanceType = instanceType;
         this.mainVolume = mainVolume;
         this.proxyConfig = proxyConfig;
         this.rootVolume = rootVolume;
         this.securityGroupIds = securityGroupIds;
         this.sshConfig = sshConfig;
-        this.subnetIds = Objects.requireNonNull(subnetIds);
+        this.subnetIds = subnetIds;
         this.tags = tags;
-        this.version = Objects.requireNonNull(version);
+        this.version = version;
     }
 
     /**

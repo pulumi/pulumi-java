@@ -24,8 +24,8 @@ public final class GitSourceContextResponse {
     private GitSourceContextResponse(
         String revisionId,
         String url) {
-        this.revisionId = Objects.requireNonNull(revisionId);
-        this.url = Objects.requireNonNull(url);
+        this.revisionId = revisionId;
+        this.url = url;
     }
 
     /**

@@ -100,20 +100,20 @@ public final class GetApiResult {
         String routeSelectionExpression,
         Map<String,String> tags,
         String version) {
-        this.apiEndpoint = Objects.requireNonNull(apiEndpoint);
-        this.apiId = Objects.requireNonNull(apiId);
-        this.apiKeySelectionExpression = Objects.requireNonNull(apiKeySelectionExpression);
-        this.arn = Objects.requireNonNull(arn);
-        this.corsConfigurations = Objects.requireNonNull(corsConfigurations);
-        this.description = Objects.requireNonNull(description);
-        this.disableExecuteApiEndpoint = Objects.requireNonNull(disableExecuteApiEndpoint);
-        this.executionArn = Objects.requireNonNull(executionArn);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.protocolType = Objects.requireNonNull(protocolType);
-        this.routeSelectionExpression = Objects.requireNonNull(routeSelectionExpression);
-        this.tags = Objects.requireNonNull(tags);
-        this.version = Objects.requireNonNull(version);
+        this.apiEndpoint = apiEndpoint;
+        this.apiId = apiId;
+        this.apiKeySelectionExpression = apiKeySelectionExpression;
+        this.arn = arn;
+        this.corsConfigurations = corsConfigurations;
+        this.description = description;
+        this.disableExecuteApiEndpoint = disableExecuteApiEndpoint;
+        this.executionArn = executionArn;
+        this.id = id;
+        this.name = name;
+        this.protocolType = protocolType;
+        this.routeSelectionExpression = routeSelectionExpression;
+        this.tags = tags;
+        this.version = version;
     }
 
     /**

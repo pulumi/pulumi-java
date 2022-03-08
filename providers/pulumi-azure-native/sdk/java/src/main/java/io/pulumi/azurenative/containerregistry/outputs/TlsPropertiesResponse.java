@@ -25,8 +25,8 @@ public final class TlsPropertiesResponse {
     private TlsPropertiesResponse(
         TlsCertificatePropertiesResponse certificate,
         String status) {
-        this.certificate = Objects.requireNonNull(certificate);
-        this.status = Objects.requireNonNull(status);
+        this.certificate = certificate;
+        this.status = status;
     }
 
     /**

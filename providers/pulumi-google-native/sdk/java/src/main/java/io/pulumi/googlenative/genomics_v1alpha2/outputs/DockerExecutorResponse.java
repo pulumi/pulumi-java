@@ -24,8 +24,8 @@ public final class DockerExecutorResponse {
     private DockerExecutorResponse(
         String cmd,
         String imageName) {
-        this.cmd = Objects.requireNonNull(cmd);
-        this.imageName = Objects.requireNonNull(imageName);
+        this.cmd = cmd;
+        this.imageName = imageName;
     }
 
     /**

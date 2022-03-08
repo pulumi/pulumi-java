@@ -25,8 +25,8 @@ public final class FirewallPolicyFirewallPolicyStatelessCustomAction {
     private FirewallPolicyFirewallPolicyStatelessCustomAction(
         FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinition actionDefinition,
         String actionName) {
-        this.actionDefinition = Objects.requireNonNull(actionDefinition);
-        this.actionName = Objects.requireNonNull(actionName);
+        this.actionDefinition = actionDefinition;
+        this.actionName = actionName;
     }
 
     /**

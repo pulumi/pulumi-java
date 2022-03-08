@@ -42,13 +42,13 @@ public final class GetUserSshKeyResult {
         String sshPublicKeyId,
         String status,
         String username) {
-        this.encoding = Objects.requireNonNull(encoding);
-        this.fingerprint = Objects.requireNonNull(fingerprint);
-        this.id = Objects.requireNonNull(id);
-        this.publicKey = Objects.requireNonNull(publicKey);
-        this.sshPublicKeyId = Objects.requireNonNull(sshPublicKeyId);
-        this.status = Objects.requireNonNull(status);
-        this.username = Objects.requireNonNull(username);
+        this.encoding = encoding;
+        this.fingerprint = fingerprint;
+        this.id = id;
+        this.publicKey = publicKey;
+        this.sshPublicKeyId = sshPublicKeyId;
+        this.status = status;
+        this.username = username;
     }
 
     public String getEncoding() {

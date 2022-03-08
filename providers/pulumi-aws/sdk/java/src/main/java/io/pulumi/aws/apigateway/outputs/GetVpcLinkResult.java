@@ -52,13 +52,13 @@ public final class GetVpcLinkResult {
         String statusMessage,
         Map<String,String> tags,
         List<String> targetArns) {
-        this.description = Objects.requireNonNull(description);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.status = Objects.requireNonNull(status);
-        this.statusMessage = Objects.requireNonNull(statusMessage);
-        this.tags = Objects.requireNonNull(tags);
-        this.targetArns = Objects.requireNonNull(targetArns);
+        this.description = description;
+        this.id = id;
+        this.name = name;
+        this.status = status;
+        this.statusMessage = statusMessage;
+        this.tags = tags;
+        this.targetArns = targetArns;
     }
 
     /**

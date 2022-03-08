@@ -25,8 +25,8 @@ public final class LinkedTemplateArtifactResponse {
     private LinkedTemplateArtifactResponse(
         String path,
         Object template) {
-        this.path = Objects.requireNonNull(path);
-        this.template = Objects.requireNonNull(template);
+        this.path = path;
+        this.template = template;
     }
 
     /**

@@ -124,7 +124,7 @@ public final class SftpServerLinkedServiceResponse {
         this.connectVia = connectVia;
         this.description = description;
         this.encryptedCredential = encryptedCredential;
-        this.host = Objects.requireNonNull(host);
+        this.host = host;
         this.hostKeyFingerprint = hostKeyFingerprint;
         this.parameters = parameters;
         this.passPhrase = passPhrase;
@@ -133,7 +133,7 @@ public final class SftpServerLinkedServiceResponse {
         this.privateKeyContent = privateKeyContent;
         this.privateKeyPath = privateKeyPath;
         this.skipHostKeyValidation = skipHostKeyValidation;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.userName = userName;
     }
 

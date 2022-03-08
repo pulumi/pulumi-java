@@ -34,8 +34,8 @@ public final class RestHealthCheckResponse {
         String name,
         RestRequestResponse request,
         @Nullable RestResponseResponse response) {
-        this.name = Objects.requireNonNull(name);
-        this.request = Objects.requireNonNull(request);
+        this.name = name;
+        this.request = request;
         this.response = response;
     }
 

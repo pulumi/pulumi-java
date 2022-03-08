@@ -25,8 +25,8 @@ public final class FHIRDatastoreCreatedAt {
     private FHIRDatastoreCreatedAt(
         Integer nanos,
         String seconds) {
-        this.nanos = Objects.requireNonNull(nanos);
-        this.seconds = Objects.requireNonNull(seconds);
+        this.nanos = nanos;
+        this.seconds = seconds;
     }
 
     /**

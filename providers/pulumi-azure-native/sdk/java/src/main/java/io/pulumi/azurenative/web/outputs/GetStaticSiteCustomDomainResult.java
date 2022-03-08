@@ -64,15 +64,15 @@ public final class GetStaticSiteCustomDomainResult {
         String status,
         String type,
         String validationToken) {
-        this.createdOn = Objects.requireNonNull(createdOn);
-        this.domainName = Objects.requireNonNull(domainName);
-        this.errorMessage = Objects.requireNonNull(errorMessage);
-        this.id = Objects.requireNonNull(id);
+        this.createdOn = createdOn;
+        this.domainName = domainName;
+        this.errorMessage = errorMessage;
+        this.id = id;
         this.kind = kind;
-        this.name = Objects.requireNonNull(name);
-        this.status = Objects.requireNonNull(status);
-        this.type = Objects.requireNonNull(type);
-        this.validationToken = Objects.requireNonNull(validationToken);
+        this.name = name;
+        this.status = status;
+        this.type = type;
+        this.validationToken = validationToken;
     }
 
     /**

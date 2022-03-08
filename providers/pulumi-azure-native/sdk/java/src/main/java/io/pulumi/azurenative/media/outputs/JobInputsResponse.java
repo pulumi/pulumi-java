@@ -33,7 +33,7 @@ public final class JobInputsResponse {
         @Nullable List<Object> inputs,
         String odataType) {
         this.inputs = inputs;
-        this.odataType = Objects.requireNonNull(odataType);
+        this.odataType = odataType;
     }
 
     /**

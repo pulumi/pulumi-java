@@ -19,9 +19,9 @@ public final class GetClusterNodeConfigGuestAccelerator {
         Integer count,
         String gpuPartitionSize,
         String type) {
-        this.count = Objects.requireNonNull(count);
-        this.gpuPartitionSize = Objects.requireNonNull(gpuPartitionSize);
-        this.type = Objects.requireNonNull(type);
+        this.count = count;
+        this.gpuPartitionSize = gpuPartitionSize;
+        this.type = type;
     }
 
     public Integer getCount() {

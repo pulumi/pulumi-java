@@ -63,11 +63,11 @@ public final class AnomalyDetectorMetricSet {
         @Nullable AnomalyDetectorTimestampColumn timestampColumn,
         @Nullable String timezone) {
         this.dimensionList = dimensionList;
-        this.metricList = Objects.requireNonNull(metricList);
+        this.metricList = metricList;
         this.metricSetDescription = metricSetDescription;
         this.metricSetFrequency = metricSetFrequency;
-        this.metricSetName = Objects.requireNonNull(metricSetName);
-        this.metricSource = Objects.requireNonNull(metricSource);
+        this.metricSetName = metricSetName;
+        this.metricSource = metricSource;
         this.offset = offset;
         this.timestampColumn = timestampColumn;
         this.timezone = timezone;

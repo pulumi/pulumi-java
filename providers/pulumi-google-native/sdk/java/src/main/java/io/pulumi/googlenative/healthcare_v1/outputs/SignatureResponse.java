@@ -38,10 +38,10 @@ public final class SignatureResponse {
         Map<String,String> metadata,
         String signatureTime,
         String userId) {
-        this.image = Objects.requireNonNull(image);
-        this.metadata = Objects.requireNonNull(metadata);
-        this.signatureTime = Objects.requireNonNull(signatureTime);
-        this.userId = Objects.requireNonNull(userId);
+        this.image = image;
+        this.metadata = metadata;
+        this.signatureTime = signatureTime;
+        this.userId = userId;
     }
 
     /**

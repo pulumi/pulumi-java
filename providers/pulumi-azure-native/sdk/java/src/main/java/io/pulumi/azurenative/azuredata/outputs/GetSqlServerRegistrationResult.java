@@ -70,15 +70,15 @@ public final class GetSqlServerRegistrationResult {
         SystemDataResponse systemData,
         @Nullable Map<String,String> tags,
         String type) {
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.location = location;
+        this.name = name;
         this.propertyBag = propertyBag;
         this.resourceGroup = resourceGroup;
         this.subscriptionId = subscriptionId;
-        this.systemData = Objects.requireNonNull(systemData);
+        this.systemData = systemData;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

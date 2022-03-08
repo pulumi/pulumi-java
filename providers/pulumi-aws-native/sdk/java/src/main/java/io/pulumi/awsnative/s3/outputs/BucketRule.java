@@ -67,7 +67,7 @@ public final class BucketRule {
         this.objectSizeGreaterThan = objectSizeGreaterThan;
         this.objectSizeLessThan = objectSizeLessThan;
         this.prefix = prefix;
-        this.status = Objects.requireNonNull(status);
+        this.status = status;
         this.tagFilters = tagFilters;
         this.transition = transition;
         this.transitions = transitions;

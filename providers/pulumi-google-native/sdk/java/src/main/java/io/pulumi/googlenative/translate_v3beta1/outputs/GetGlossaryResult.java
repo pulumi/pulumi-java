@@ -58,13 +58,13 @@ public final class GetGlossaryResult {
         LanguageCodePairResponse languagePair,
         String name,
         String submitTime) {
-        this.endTime = Objects.requireNonNull(endTime);
-        this.entryCount = Objects.requireNonNull(entryCount);
-        this.inputConfig = Objects.requireNonNull(inputConfig);
-        this.languageCodesSet = Objects.requireNonNull(languageCodesSet);
-        this.languagePair = Objects.requireNonNull(languagePair);
-        this.name = Objects.requireNonNull(name);
-        this.submitTime = Objects.requireNonNull(submitTime);
+        this.endTime = endTime;
+        this.entryCount = entryCount;
+        this.inputConfig = inputConfig;
+        this.languageCodesSet = languageCodesSet;
+        this.languagePair = languagePair;
+        this.name = name;
+        this.submitTime = submitTime;
     }
 
     /**

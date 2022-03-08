@@ -126,11 +126,11 @@ public final class Event {
         this.count = count;
         this.eventTime = eventTime;
         this.firstTimestamp = firstTimestamp;
-        this.involvedObject = Objects.requireNonNull(involvedObject);
+        this.involvedObject = involvedObject;
         this.kind = kind;
         this.lastTimestamp = lastTimestamp;
         this.message = message;
-        this.metadata = Objects.requireNonNull(metadata);
+        this.metadata = metadata;
         this.reason = reason;
         this.related = related;
         this.reportingComponent = reportingComponent;

@@ -207,37 +207,37 @@ public final class GetInstanceResult {
         String statusMessage,
         String tier,
         String transitEncryptionMode) {
-        this.alternativeLocationId = Objects.requireNonNull(alternativeLocationId);
-        this.authEnabled = Objects.requireNonNull(authEnabled);
-        this.authorizedNetwork = Objects.requireNonNull(authorizedNetwork);
-        this.connectMode = Objects.requireNonNull(connectMode);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.currentLocationId = Objects.requireNonNull(currentLocationId);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.host = Objects.requireNonNull(host);
-        this.labels = Objects.requireNonNull(labels);
-        this.location = Objects.requireNonNull(location);
-        this.maintenancePolicy = Objects.requireNonNull(maintenancePolicy);
-        this.maintenanceSchedule = Objects.requireNonNull(maintenanceSchedule);
-        this.memorySizeGb = Objects.requireNonNull(memorySizeGb);
-        this.name = Objects.requireNonNull(name);
-        this.nodes = Objects.requireNonNull(nodes);
-        this.persistenceConfig = Objects.requireNonNull(persistenceConfig);
-        this.persistenceIamIdentity = Objects.requireNonNull(persistenceIamIdentity);
-        this.port = Objects.requireNonNull(port);
-        this.readEndpoint = Objects.requireNonNull(readEndpoint);
-        this.readEndpointPort = Objects.requireNonNull(readEndpointPort);
-        this.readReplicasMode = Objects.requireNonNull(readReplicasMode);
-        this.redisConfigs = Objects.requireNonNull(redisConfigs);
-        this.redisVersion = Objects.requireNonNull(redisVersion);
-        this.replicaCount = Objects.requireNonNull(replicaCount);
-        this.reservedIpRange = Objects.requireNonNull(reservedIpRange);
-        this.secondaryIpRange = Objects.requireNonNull(secondaryIpRange);
-        this.serverCaCerts = Objects.requireNonNull(serverCaCerts);
-        this.state = Objects.requireNonNull(state);
-        this.statusMessage = Objects.requireNonNull(statusMessage);
-        this.tier = Objects.requireNonNull(tier);
-        this.transitEncryptionMode = Objects.requireNonNull(transitEncryptionMode);
+        this.alternativeLocationId = alternativeLocationId;
+        this.authEnabled = authEnabled;
+        this.authorizedNetwork = authorizedNetwork;
+        this.connectMode = connectMode;
+        this.createTime = createTime;
+        this.currentLocationId = currentLocationId;
+        this.displayName = displayName;
+        this.host = host;
+        this.labels = labels;
+        this.location = location;
+        this.maintenancePolicy = maintenancePolicy;
+        this.maintenanceSchedule = maintenanceSchedule;
+        this.memorySizeGb = memorySizeGb;
+        this.name = name;
+        this.nodes = nodes;
+        this.persistenceConfig = persistenceConfig;
+        this.persistenceIamIdentity = persistenceIamIdentity;
+        this.port = port;
+        this.readEndpoint = readEndpoint;
+        this.readEndpointPort = readEndpointPort;
+        this.readReplicasMode = readReplicasMode;
+        this.redisConfigs = redisConfigs;
+        this.redisVersion = redisVersion;
+        this.replicaCount = replicaCount;
+        this.reservedIpRange = reservedIpRange;
+        this.secondaryIpRange = secondaryIpRange;
+        this.serverCaCerts = serverCaCerts;
+        this.state = state;
+        this.statusMessage = statusMessage;
+        this.tier = tier;
+        this.transitEncryptionMode = transitEncryptionMode;
     }
 
     /**

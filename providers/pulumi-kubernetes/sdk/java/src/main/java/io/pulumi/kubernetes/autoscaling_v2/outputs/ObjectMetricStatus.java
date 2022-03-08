@@ -32,9 +32,9 @@ public final class ObjectMetricStatus {
         MetricValueStatus current,
         CrossVersionObjectReference describedObject,
         MetricIdentifier metric) {
-        this.current = Objects.requireNonNull(current);
-        this.describedObject = Objects.requireNonNull(describedObject);
-        this.metric = Objects.requireNonNull(metric);
+        this.current = current;
+        this.describedObject = describedObject;
+        this.metric = metric;
     }
 
     /**

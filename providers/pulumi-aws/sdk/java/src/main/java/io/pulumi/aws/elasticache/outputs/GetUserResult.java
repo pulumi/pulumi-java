@@ -48,10 +48,10 @@ public final class GetUserResult {
         @Nullable String userName) {
         this.accessString = accessString;
         this.engine = engine;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.noPasswordRequired = noPasswordRequired;
         this.passwords = passwords;
-        this.userId = Objects.requireNonNull(userId);
+        this.userId = userId;
         this.userName = userName;
     }
 

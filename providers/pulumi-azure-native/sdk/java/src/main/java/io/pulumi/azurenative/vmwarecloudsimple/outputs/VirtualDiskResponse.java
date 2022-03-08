@@ -45,11 +45,11 @@ public final class VirtualDiskResponse {
         Integer totalSize,
         @Nullable String virtualDiskId,
         String virtualDiskName) {
-        this.controllerId = Objects.requireNonNull(controllerId);
-        this.independenceMode = Objects.requireNonNull(independenceMode);
-        this.totalSize = Objects.requireNonNull(totalSize);
+        this.controllerId = controllerId;
+        this.independenceMode = independenceMode;
+        this.totalSize = totalSize;
         this.virtualDiskId = virtualDiskId;
-        this.virtualDiskName = Objects.requireNonNull(virtualDiskName);
+        this.virtualDiskName = virtualDiskName;
     }
 
     /**

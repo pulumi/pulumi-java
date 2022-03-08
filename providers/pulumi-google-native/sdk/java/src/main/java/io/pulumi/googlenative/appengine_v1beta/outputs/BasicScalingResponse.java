@@ -25,8 +25,8 @@ public final class BasicScalingResponse {
     private BasicScalingResponse(
         String idleTimeout,
         Integer maxInstances) {
-        this.idleTimeout = Objects.requireNonNull(idleTimeout);
-        this.maxInstances = Objects.requireNonNull(maxInstances);
+        this.idleTimeout = idleTimeout;
+        this.maxInstances = maxInstances;
     }
 
     /**

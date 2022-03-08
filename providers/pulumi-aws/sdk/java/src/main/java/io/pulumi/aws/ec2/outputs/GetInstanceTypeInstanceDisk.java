@@ -19,9 +19,9 @@ public final class GetInstanceTypeInstanceDisk {
         Integer count,
         Integer size,
         String type) {
-        this.count = Objects.requireNonNull(count);
-        this.size = Objects.requireNonNull(size);
-        this.type = Objects.requireNonNull(type);
+        this.count = count;
+        this.size = size;
+        this.type = type;
     }
 
     public Integer getCount() {

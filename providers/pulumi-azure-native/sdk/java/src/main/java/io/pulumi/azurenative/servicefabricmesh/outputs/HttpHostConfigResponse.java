@@ -26,8 +26,8 @@ public final class HttpHostConfigResponse {
     private HttpHostConfigResponse(
         String name,
         List<HttpRouteConfigResponse> routes) {
-        this.name = Objects.requireNonNull(name);
-        this.routes = Objects.requireNonNull(routes);
+        this.name = name;
+        this.routes = routes;
     }
 
     /**

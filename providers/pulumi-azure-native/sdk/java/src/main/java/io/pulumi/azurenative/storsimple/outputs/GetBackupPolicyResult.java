@@ -82,17 +82,17 @@ public final class GetBackupPolicyResult {
         String ssmHostName,
         String type,
         List<String> volumeIds) {
-        this.backupPolicyCreationType = Objects.requireNonNull(backupPolicyCreationType);
-        this.id = Objects.requireNonNull(id);
+        this.backupPolicyCreationType = backupPolicyCreationType;
+        this.id = id;
         this.kind = kind;
-        this.lastBackupTime = Objects.requireNonNull(lastBackupTime);
-        this.name = Objects.requireNonNull(name);
-        this.nextBackupTime = Objects.requireNonNull(nextBackupTime);
-        this.scheduledBackupStatus = Objects.requireNonNull(scheduledBackupStatus);
-        this.schedulesCount = Objects.requireNonNull(schedulesCount);
-        this.ssmHostName = Objects.requireNonNull(ssmHostName);
-        this.type = Objects.requireNonNull(type);
-        this.volumeIds = Objects.requireNonNull(volumeIds);
+        this.lastBackupTime = lastBackupTime;
+        this.name = name;
+        this.nextBackupTime = nextBackupTime;
+        this.scheduledBackupStatus = scheduledBackupStatus;
+        this.schedulesCount = schedulesCount;
+        this.ssmHostName = ssmHostName;
+        this.type = type;
+        this.volumeIds = volumeIds;
     }
 
     /**

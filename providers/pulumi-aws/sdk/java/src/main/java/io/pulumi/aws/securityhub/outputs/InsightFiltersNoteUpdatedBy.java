@@ -24,8 +24,8 @@ public final class InsightFiltersNoteUpdatedBy {
     private InsightFiltersNoteUpdatedBy(
         String comparison,
         String value) {
-        this.comparison = Objects.requireNonNull(comparison);
-        this.value = Objects.requireNonNull(value);
+        this.comparison = comparison;
+        this.value = value;
     }
 
     /**

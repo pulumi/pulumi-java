@@ -24,8 +24,8 @@ public final class VirtualNetworkBgpCommunitiesResponse {
     private VirtualNetworkBgpCommunitiesResponse(
         String regionalCommunity,
         String virtualNetworkCommunity) {
-        this.regionalCommunity = Objects.requireNonNull(regionalCommunity);
-        this.virtualNetworkCommunity = Objects.requireNonNull(virtualNetworkCommunity);
+        this.regionalCommunity = regionalCommunity;
+        this.virtualNetworkCommunity = virtualNetworkCommunity;
     }
 
     /**

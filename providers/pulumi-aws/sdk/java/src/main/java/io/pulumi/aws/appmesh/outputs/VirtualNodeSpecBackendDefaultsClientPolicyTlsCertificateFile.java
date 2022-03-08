@@ -24,8 +24,8 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsCertificateFile 
     private VirtualNodeSpecBackendDefaultsClientPolicyTlsCertificateFile(
         String certificateChain,
         String privateKey) {
-        this.certificateChain = Objects.requireNonNull(certificateChain);
-        this.privateKey = Objects.requireNonNull(privateKey);
+        this.certificateChain = certificateChain;
+        this.privateKey = privateKey;
     }
 
     /**

@@ -192,34 +192,34 @@ public final class JobConfigurationLoadResponse {
         TimePartitioningResponse timePartitioning,
         Boolean useAvroLogicalTypes,
         String writeDisposition) {
-        this.allowJaggedRows = Objects.requireNonNull(allowJaggedRows);
-        this.allowQuotedNewlines = Objects.requireNonNull(allowQuotedNewlines);
-        this.autodetect = Objects.requireNonNull(autodetect);
-        this.clustering = Objects.requireNonNull(clustering);
-        this.createDisposition = Objects.requireNonNull(createDisposition);
-        this.decimalTargetTypes = Objects.requireNonNull(decimalTargetTypes);
-        this.destinationEncryptionConfiguration = Objects.requireNonNull(destinationEncryptionConfiguration);
-        this.destinationTable = Objects.requireNonNull(destinationTable);
-        this.destinationTableProperties = Objects.requireNonNull(destinationTableProperties);
-        this.encoding = Objects.requireNonNull(encoding);
-        this.fieldDelimiter = Objects.requireNonNull(fieldDelimiter);
-        this.hivePartitioningOptions = Objects.requireNonNull(hivePartitioningOptions);
-        this.ignoreUnknownValues = Objects.requireNonNull(ignoreUnknownValues);
-        this.jsonExtension = Objects.requireNonNull(jsonExtension);
-        this.maxBadRecords = Objects.requireNonNull(maxBadRecords);
-        this.nullMarker = Objects.requireNonNull(nullMarker);
-        this.parquetOptions = Objects.requireNonNull(parquetOptions);
-        this.projectionFields = Objects.requireNonNull(projectionFields);
-        this.quote = Objects.requireNonNull(quote);
-        this.rangePartitioning = Objects.requireNonNull(rangePartitioning);
-        this.schema = Objects.requireNonNull(schema);
-        this.schemaUpdateOptions = Objects.requireNonNull(schemaUpdateOptions);
-        this.skipLeadingRows = Objects.requireNonNull(skipLeadingRows);
-        this.sourceFormat = Objects.requireNonNull(sourceFormat);
-        this.sourceUris = Objects.requireNonNull(sourceUris);
-        this.timePartitioning = Objects.requireNonNull(timePartitioning);
-        this.useAvroLogicalTypes = Objects.requireNonNull(useAvroLogicalTypes);
-        this.writeDisposition = Objects.requireNonNull(writeDisposition);
+        this.allowJaggedRows = allowJaggedRows;
+        this.allowQuotedNewlines = allowQuotedNewlines;
+        this.autodetect = autodetect;
+        this.clustering = clustering;
+        this.createDisposition = createDisposition;
+        this.decimalTargetTypes = decimalTargetTypes;
+        this.destinationEncryptionConfiguration = destinationEncryptionConfiguration;
+        this.destinationTable = destinationTable;
+        this.destinationTableProperties = destinationTableProperties;
+        this.encoding = encoding;
+        this.fieldDelimiter = fieldDelimiter;
+        this.hivePartitioningOptions = hivePartitioningOptions;
+        this.ignoreUnknownValues = ignoreUnknownValues;
+        this.jsonExtension = jsonExtension;
+        this.maxBadRecords = maxBadRecords;
+        this.nullMarker = nullMarker;
+        this.parquetOptions = parquetOptions;
+        this.projectionFields = projectionFields;
+        this.quote = quote;
+        this.rangePartitioning = rangePartitioning;
+        this.schema = schema;
+        this.schemaUpdateOptions = schemaUpdateOptions;
+        this.skipLeadingRows = skipLeadingRows;
+        this.sourceFormat = sourceFormat;
+        this.sourceUris = sourceUris;
+        this.timePartitioning = timePartitioning;
+        this.useAvroLogicalTypes = useAvroLogicalTypes;
+        this.writeDisposition = writeDisposition;
     }
 
     /**

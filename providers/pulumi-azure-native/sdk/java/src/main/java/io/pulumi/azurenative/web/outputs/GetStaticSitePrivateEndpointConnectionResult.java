@@ -61,14 +61,14 @@ public final class GetStaticSitePrivateEndpointConnectionResult {
         @Nullable PrivateLinkConnectionStateResponse privateLinkServiceConnectionState,
         String provisioningState,
         String type) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.ipAddresses = ipAddresses;
         this.kind = kind;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.privateEndpoint = privateEndpoint;
         this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.type = Objects.requireNonNull(type);
+        this.provisioningState = provisioningState;
+        this.type = type;
     }
 
     /**

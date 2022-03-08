@@ -132,30 +132,30 @@ public final class GetSnapshotResult {
         String status,
         String storageType,
         String vpcId) {
-        this.allocatedStorage = Objects.requireNonNull(allocatedStorage);
-        this.availabilityZone = Objects.requireNonNull(availabilityZone);
+        this.allocatedStorage = allocatedStorage;
+        this.availabilityZone = availabilityZone;
         this.dbInstanceIdentifier = dbInstanceIdentifier;
-        this.dbSnapshotArn = Objects.requireNonNull(dbSnapshotArn);
+        this.dbSnapshotArn = dbSnapshotArn;
         this.dbSnapshotIdentifier = dbSnapshotIdentifier;
-        this.encrypted = Objects.requireNonNull(encrypted);
-        this.engine = Objects.requireNonNull(engine);
-        this.engineVersion = Objects.requireNonNull(engineVersion);
-        this.id = Objects.requireNonNull(id);
+        this.encrypted = encrypted;
+        this.engine = engine;
+        this.engineVersion = engineVersion;
+        this.id = id;
         this.includePublic = includePublic;
         this.includeShared = includeShared;
-        this.iops = Objects.requireNonNull(iops);
-        this.kmsKeyId = Objects.requireNonNull(kmsKeyId);
-        this.licenseModel = Objects.requireNonNull(licenseModel);
+        this.iops = iops;
+        this.kmsKeyId = kmsKeyId;
+        this.licenseModel = licenseModel;
         this.mostRecent = mostRecent;
-        this.optionGroupName = Objects.requireNonNull(optionGroupName);
-        this.port = Objects.requireNonNull(port);
-        this.snapshotCreateTime = Objects.requireNonNull(snapshotCreateTime);
+        this.optionGroupName = optionGroupName;
+        this.port = port;
+        this.snapshotCreateTime = snapshotCreateTime;
         this.snapshotType = snapshotType;
-        this.sourceDbSnapshotIdentifier = Objects.requireNonNull(sourceDbSnapshotIdentifier);
-        this.sourceRegion = Objects.requireNonNull(sourceRegion);
-        this.status = Objects.requireNonNull(status);
-        this.storageType = Objects.requireNonNull(storageType);
-        this.vpcId = Objects.requireNonNull(vpcId);
+        this.sourceDbSnapshotIdentifier = sourceDbSnapshotIdentifier;
+        this.sourceRegion = sourceRegion;
+        this.status = status;
+        this.storageType = storageType;
+        this.vpcId = vpcId;
     }
 
     /**

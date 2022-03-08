@@ -17,7 +17,7 @@ public final class MaintenanceExclusionOptionsResponse {
 
     @OutputCustomType.Constructor({"scope"})
     private MaintenanceExclusionOptionsResponse(String scope) {
-        this.scope = Objects.requireNonNull(scope);
+        this.scope = scope;
     }
 
     /**

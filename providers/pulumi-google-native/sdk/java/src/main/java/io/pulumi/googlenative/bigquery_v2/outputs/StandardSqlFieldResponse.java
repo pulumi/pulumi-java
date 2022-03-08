@@ -25,8 +25,8 @@ public final class StandardSqlFieldResponse {
     private StandardSqlFieldResponse(
         String name,
         StandardSqlDataTypeResponse type) {
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.name = name;
+        this.type = type;
     }
 
     /**

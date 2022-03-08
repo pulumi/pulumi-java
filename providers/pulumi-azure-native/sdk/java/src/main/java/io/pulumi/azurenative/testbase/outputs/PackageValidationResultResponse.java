@@ -32,9 +32,9 @@ public final class PackageValidationResultResponse {
         List<String> errors,
         Boolean isValid,
         String validationName) {
-        this.errors = Objects.requireNonNull(errors);
-        this.isValid = Objects.requireNonNull(isValid);
-        this.validationName = Objects.requireNonNull(validationName);
+        this.errors = errors;
+        this.isValid = isValid;
+        this.validationName = validationName;
     }
 
     /**

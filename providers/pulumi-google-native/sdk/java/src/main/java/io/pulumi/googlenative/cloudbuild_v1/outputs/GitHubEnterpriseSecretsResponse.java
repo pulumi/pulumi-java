@@ -60,14 +60,14 @@ public final class GitHubEnterpriseSecretsResponse {
         String privateKeyVersionName,
         String webhookSecretName,
         String webhookSecretVersionName) {
-        this.oauthClientIdName = Objects.requireNonNull(oauthClientIdName);
-        this.oauthClientIdVersionName = Objects.requireNonNull(oauthClientIdVersionName);
-        this.oauthSecretName = Objects.requireNonNull(oauthSecretName);
-        this.oauthSecretVersionName = Objects.requireNonNull(oauthSecretVersionName);
-        this.privateKeyName = Objects.requireNonNull(privateKeyName);
-        this.privateKeyVersionName = Objects.requireNonNull(privateKeyVersionName);
-        this.webhookSecretName = Objects.requireNonNull(webhookSecretName);
-        this.webhookSecretVersionName = Objects.requireNonNull(webhookSecretVersionName);
+        this.oauthClientIdName = oauthClientIdName;
+        this.oauthClientIdVersionName = oauthClientIdVersionName;
+        this.oauthSecretName = oauthSecretName;
+        this.oauthSecretVersionName = oauthSecretVersionName;
+        this.privateKeyName = privateKeyName;
+        this.privateKeyVersionName = privateKeyVersionName;
+        this.webhookSecretName = webhookSecretName;
+        this.webhookSecretVersionName = webhookSecretVersionName;
     }
 
     /**

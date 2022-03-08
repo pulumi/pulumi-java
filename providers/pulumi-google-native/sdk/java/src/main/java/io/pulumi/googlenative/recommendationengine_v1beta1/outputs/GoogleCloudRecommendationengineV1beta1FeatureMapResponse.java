@@ -25,8 +25,8 @@ public final class GoogleCloudRecommendationengineV1beta1FeatureMapResponse {
     private GoogleCloudRecommendationengineV1beta1FeatureMapResponse(
         Map<String,String> categoricalFeatures,
         Map<String,String> numericalFeatures) {
-        this.categoricalFeatures = Objects.requireNonNull(categoricalFeatures);
-        this.numericalFeatures = Objects.requireNonNull(numericalFeatures);
+        this.categoricalFeatures = categoricalFeatures;
+        this.numericalFeatures = numericalFeatures;
     }
 
     /**

@@ -52,12 +52,12 @@ public final class TypeResponse {
         List<OptionResponse> options,
         SourceContextResponse sourceContext,
         String syntax) {
-        this.fields = Objects.requireNonNull(fields);
-        this.name = Objects.requireNonNull(name);
-        this.oneofs = Objects.requireNonNull(oneofs);
-        this.options = Objects.requireNonNull(options);
-        this.sourceContext = Objects.requireNonNull(sourceContext);
-        this.syntax = Objects.requireNonNull(syntax);
+        this.fields = fields;
+        this.name = name;
+        this.oneofs = oneofs;
+        this.options = options;
+        this.sourceContext = sourceContext;
+        this.syntax = syntax;
     }
 
     /**

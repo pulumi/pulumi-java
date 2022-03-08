@@ -30,9 +30,9 @@ public final class SyncMigrationDatabaseErrorEventResponse {
         String eventText,
         String eventTypeString,
         String timestampString) {
-        this.eventText = Objects.requireNonNull(eventText);
-        this.eventTypeString = Objects.requireNonNull(eventTypeString);
-        this.timestampString = Objects.requireNonNull(timestampString);
+        this.eventText = eventText;
+        this.eventTypeString = eventTypeString;
+        this.timestampString = timestampString;
     }
 
     /**

@@ -31,9 +31,9 @@ public final class AssignmentStatusResponse {
         String lastModified,
         List<String> managedResources,
         String timeCreated) {
-        this.lastModified = Objects.requireNonNull(lastModified);
-        this.managedResources = Objects.requireNonNull(managedResources);
-        this.timeCreated = Objects.requireNonNull(timeCreated);
+        this.lastModified = lastModified;
+        this.managedResources = managedResources;
+        this.timeCreated = timeCreated;
     }
 
     /**

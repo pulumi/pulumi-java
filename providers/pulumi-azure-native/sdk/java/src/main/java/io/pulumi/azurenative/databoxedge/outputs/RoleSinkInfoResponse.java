@@ -17,7 +17,7 @@ public final class RoleSinkInfoResponse {
 
     @OutputCustomType.Constructor({"roleId"})
     private RoleSinkInfoResponse(String roleId) {
-        this.roleId = Objects.requireNonNull(roleId);
+        this.roleId = roleId;
     }
 
     /**

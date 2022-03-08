@@ -18,7 +18,7 @@ public final class RuntimeMetricsResponse {
 
     @OutputCustomType.Constructor({"systemMetrics"})
     private RuntimeMetricsResponse(Map<String,String> systemMetrics) {
-        this.systemMetrics = Objects.requireNonNull(systemMetrics);
+        this.systemMetrics = systemMetrics;
     }
 
     /**

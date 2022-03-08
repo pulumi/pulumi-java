@@ -32,7 +32,7 @@ public final class CertificateDescriptionResponse {
         String thumbprint,
         @Nullable String thumbprintSecondary,
         @Nullable String x509StoreName) {
-        this.thumbprint = Objects.requireNonNull(thumbprint);
+        this.thumbprint = thumbprint;
         this.thumbprintSecondary = thumbprintSecondary;
         this.x509StoreName = x509StoreName;
     }

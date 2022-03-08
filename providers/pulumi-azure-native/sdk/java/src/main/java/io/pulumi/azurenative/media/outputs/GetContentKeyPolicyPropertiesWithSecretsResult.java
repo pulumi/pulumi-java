@@ -46,11 +46,11 @@ public final class GetContentKeyPolicyPropertiesWithSecretsResult {
         String lastModified,
         List<ContentKeyPolicyOptionResponse> options,
         String policyId) {
-        this.created = Objects.requireNonNull(created);
+        this.created = created;
         this.description = description;
-        this.lastModified = Objects.requireNonNull(lastModified);
-        this.options = Objects.requireNonNull(options);
-        this.policyId = Objects.requireNonNull(policyId);
+        this.lastModified = lastModified;
+        this.options = options;
+        this.policyId = policyId;
     }
 
     /**

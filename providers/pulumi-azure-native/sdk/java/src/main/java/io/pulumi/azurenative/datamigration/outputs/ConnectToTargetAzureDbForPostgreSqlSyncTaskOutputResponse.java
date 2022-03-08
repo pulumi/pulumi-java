@@ -44,11 +44,11 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse {
         String targetServerBrandVersion,
         String targetServerVersion,
         List<ReportableExceptionResponse> validationErrors) {
-        this.databases = Objects.requireNonNull(databases);
-        this.id = Objects.requireNonNull(id);
-        this.targetServerBrandVersion = Objects.requireNonNull(targetServerBrandVersion);
-        this.targetServerVersion = Objects.requireNonNull(targetServerVersion);
-        this.validationErrors = Objects.requireNonNull(validationErrors);
+        this.databases = databases;
+        this.id = id;
+        this.targetServerBrandVersion = targetServerBrandVersion;
+        this.targetServerVersion = targetServerVersion;
+        this.validationErrors = validationErrors;
     }
 
     /**

@@ -97,12 +97,12 @@ public final class WebHookActivityResponse {
         this.dependsOn = dependsOn;
         this.description = description;
         this.headers = headers;
-        this.method = Objects.requireNonNull(method);
-        this.name = Objects.requireNonNull(name);
+        this.method = method;
+        this.name = name;
         this.reportStatusOnCallBack = reportStatusOnCallBack;
         this.timeout = timeout;
-        this.type = Objects.requireNonNull(type);
-        this.url = Objects.requireNonNull(url);
+        this.type = type;
+        this.url = url;
         this.userProperties = userProperties;
     }
 

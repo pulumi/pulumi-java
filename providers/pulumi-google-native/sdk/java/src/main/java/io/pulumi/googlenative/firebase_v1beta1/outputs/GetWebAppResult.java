@@ -49,12 +49,12 @@ public final class GetWebAppResult {
         String name,
         String project,
         String webId) {
-        this.appId = Objects.requireNonNull(appId);
-        this.appUrls = Objects.requireNonNull(appUrls);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.name = Objects.requireNonNull(name);
-        this.project = Objects.requireNonNull(project);
-        this.webId = Objects.requireNonNull(webId);
+        this.appId = appId;
+        this.appUrls = appUrls;
+        this.displayName = displayName;
+        this.name = name;
+        this.project = project;
+        this.webId = webId;
     }
 
     /**

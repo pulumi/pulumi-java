@@ -17,7 +17,7 @@ public final class VirtualNodeSpecListenerConnectionPoolGrpc {
 
     @OutputCustomType.Constructor({"maxRequests"})
     private VirtualNodeSpecListenerConnectionPoolGrpc(Integer maxRequests) {
-        this.maxRequests = Objects.requireNonNull(maxRequests);
+        this.maxRequests = maxRequests;
     }
 
     /**

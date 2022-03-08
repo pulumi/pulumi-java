@@ -32,9 +32,9 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskInputResponse {
         List<MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse> selectedDatabases,
         MySqlConnectionInfoResponse sourceConnectionInfo,
         MySqlConnectionInfoResponse targetConnectionInfo) {
-        this.selectedDatabases = Objects.requireNonNull(selectedDatabases);
-        this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
-        this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
+        this.selectedDatabases = selectedDatabases;
+        this.sourceConnectionInfo = sourceConnectionInfo;
+        this.targetConnectionInfo = targetConnectionInfo;
     }
 
     /**

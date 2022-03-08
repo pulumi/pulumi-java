@@ -76,8 +76,8 @@ public final class HealthProbeSettingsModelResponse {
         this.name = name;
         this.path = path;
         this.protocol = protocol;
-        this.resourceState = Objects.requireNonNull(resourceState);
-        this.type = Objects.requireNonNull(type);
+        this.resourceState = resourceState;
+        this.type = type;
     }
 
     /**

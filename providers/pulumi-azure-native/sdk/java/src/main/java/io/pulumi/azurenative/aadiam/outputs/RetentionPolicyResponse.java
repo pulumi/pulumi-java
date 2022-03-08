@@ -25,8 +25,8 @@ public final class RetentionPolicyResponse {
     private RetentionPolicyResponse(
         Integer days,
         Boolean enabled) {
-        this.days = Objects.requireNonNull(days);
-        this.enabled = Objects.requireNonNull(enabled);
+        this.days = days;
+        this.enabled = enabled;
     }
 
     /**

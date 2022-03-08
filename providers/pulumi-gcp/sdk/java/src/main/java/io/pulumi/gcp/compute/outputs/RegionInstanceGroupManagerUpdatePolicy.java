@@ -76,9 +76,9 @@ public final class RegionInstanceGroupManagerUpdatePolicy {
         this.maxUnavailableFixed = maxUnavailableFixed;
         this.maxUnavailablePercent = maxUnavailablePercent;
         this.minReadySec = minReadySec;
-        this.minimalAction = Objects.requireNonNull(minimalAction);
+        this.minimalAction = minimalAction;
         this.replacementMethod = replacementMethod;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

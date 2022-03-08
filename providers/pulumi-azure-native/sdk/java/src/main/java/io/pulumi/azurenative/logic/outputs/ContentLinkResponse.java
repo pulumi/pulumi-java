@@ -47,10 +47,10 @@ public final class ContentLinkResponse {
         String contentVersion,
         Object metadata,
         @Nullable String uri) {
-        this.contentHash = Objects.requireNonNull(contentHash);
-        this.contentSize = Objects.requireNonNull(contentSize);
-        this.contentVersion = Objects.requireNonNull(contentVersion);
-        this.metadata = Objects.requireNonNull(metadata);
+        this.contentHash = contentHash;
+        this.contentSize = contentSize;
+        this.contentVersion = contentVersion;
+        this.metadata = metadata;
         this.uri = uri;
     }
 

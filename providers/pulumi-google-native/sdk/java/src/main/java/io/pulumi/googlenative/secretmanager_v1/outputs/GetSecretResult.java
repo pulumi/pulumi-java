@@ -71,15 +71,15 @@ public final class GetSecretResult {
         RotationResponse rotation,
         List<TopicResponse> topics,
         String ttl) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.etag = Objects.requireNonNull(etag);
-        this.expireTime = Objects.requireNonNull(expireTime);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.replication = Objects.requireNonNull(replication);
-        this.rotation = Objects.requireNonNull(rotation);
-        this.topics = Objects.requireNonNull(topics);
-        this.ttl = Objects.requireNonNull(ttl);
+        this.createTime = createTime;
+        this.etag = etag;
+        this.expireTime = expireTime;
+        this.labels = labels;
+        this.name = name;
+        this.replication = replication;
+        this.rotation = rotation;
+        this.topics = topics;
+        this.ttl = ttl;
     }
 
     /**

@@ -39,8 +39,8 @@ public final class StorageEndpointPropertiesResponse {
         String containerName,
         @Nullable String sasTtlAsIso8601) {
         this.authenticationType = authenticationType;
-        this.connectionString = Objects.requireNonNull(connectionString);
-        this.containerName = Objects.requireNonNull(containerName);
+        this.connectionString = connectionString;
+        this.containerName = containerName;
         this.sasTtlAsIso8601 = sasTtlAsIso8601;
     }
 

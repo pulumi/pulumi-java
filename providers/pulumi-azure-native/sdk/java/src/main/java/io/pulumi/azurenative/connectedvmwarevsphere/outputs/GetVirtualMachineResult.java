@@ -213,37 +213,37 @@ public final class GetVirtualMachineResult {
         String uuid,
         @Nullable String vCenterId,
         String vmId) {
-        this.customResourceName = Objects.requireNonNull(customResourceName);
+        this.customResourceName = customResourceName;
         this.extendedLocation = extendedLocation;
         this.firmwareType = firmwareType;
-        this.folderPath = Objects.requireNonNull(folderPath);
+        this.folderPath = folderPath;
         this.guestAgentProfile = guestAgentProfile;
         this.hardwareProfile = hardwareProfile;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.identity = identity;
-        this.instanceUuid = Objects.requireNonNull(instanceUuid);
+        this.instanceUuid = instanceUuid;
         this.inventoryItemId = inventoryItemId;
         this.kind = kind;
-        this.location = Objects.requireNonNull(location);
-        this.moName = Objects.requireNonNull(moName);
+        this.location = location;
+        this.moName = moName;
         this.moRefId = moRefId;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.networkProfile = networkProfile;
         this.osProfile = osProfile;
         this.placementProfile = placementProfile;
-        this.powerState = Objects.requireNonNull(powerState);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.powerState = powerState;
+        this.provisioningState = provisioningState;
         this.resourcePoolId = resourcePoolId;
         this.smbiosUuid = smbiosUuid;
-        this.statuses = Objects.requireNonNull(statuses);
+        this.statuses = statuses;
         this.storageProfile = storageProfile;
-        this.systemData = Objects.requireNonNull(systemData);
+        this.systemData = systemData;
         this.tags = tags;
         this.templateId = templateId;
-        this.type = Objects.requireNonNull(type);
-        this.uuid = Objects.requireNonNull(uuid);
+        this.type = type;
+        this.uuid = uuid;
         this.vCenterId = vCenterId;
-        this.vmId = Objects.requireNonNull(vmId);
+        this.vmId = vmId;
     }
 
     /**

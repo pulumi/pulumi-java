@@ -178,30 +178,30 @@ public final class GetApplicationResult {
         String type,
         ApplicationClientDetailsResponse updatedBy) {
         this.applicationDefinitionId = applicationDefinitionId;
-        this.artifacts = Objects.requireNonNull(artifacts);
-        this.authorizations = Objects.requireNonNull(authorizations);
-        this.billingDetails = Objects.requireNonNull(billingDetails);
-        this.createdBy = Objects.requireNonNull(createdBy);
-        this.customerSupport = Objects.requireNonNull(customerSupport);
-        this.id = Objects.requireNonNull(id);
+        this.artifacts = artifacts;
+        this.authorizations = authorizations;
+        this.billingDetails = billingDetails;
+        this.createdBy = createdBy;
+        this.customerSupport = customerSupport;
+        this.id = id;
         this.identity = identity;
         this.jitAccessPolicy = jitAccessPolicy;
-        this.kind = Objects.requireNonNull(kind);
+        this.kind = kind;
         this.location = location;
         this.managedBy = managedBy;
         this.managedResourceGroupId = managedResourceGroupId;
-        this.managementMode = Objects.requireNonNull(managementMode);
-        this.name = Objects.requireNonNull(name);
-        this.outputs = Objects.requireNonNull(outputs);
+        this.managementMode = managementMode;
+        this.name = name;
+        this.outputs = outputs;
         this.parameters = parameters;
         this.plan = plan;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.publisherTenantId = Objects.requireNonNull(publisherTenantId);
+        this.provisioningState = provisioningState;
+        this.publisherTenantId = publisherTenantId;
         this.sku = sku;
-        this.supportUrls = Objects.requireNonNull(supportUrls);
+        this.supportUrls = supportUrls;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
-        this.updatedBy = Objects.requireNonNull(updatedBy);
+        this.type = type;
+        this.updatedBy = updatedBy;
     }
 
     /**

@@ -42,7 +42,7 @@ public final class GraphQLApiOpenidConnectConfig {
         this.authTtl = authTtl;
         this.clientId = clientId;
         this.iatTtl = iatTtl;
-        this.issuer = Objects.requireNonNull(issuer);
+        this.issuer = issuer;
     }
 
     /**

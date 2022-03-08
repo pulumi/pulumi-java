@@ -104,20 +104,20 @@ public final class GetTableResult {
         SystemDataResponse systemData,
         @Nullable Integer totalRetentionInDays,
         String type) {
-        this.archiveRetentionInDays = Objects.requireNonNull(archiveRetentionInDays);
-        this.id = Objects.requireNonNull(id);
-        this.lastPlanModifiedDate = Objects.requireNonNull(lastPlanModifiedDate);
-        this.name = Objects.requireNonNull(name);
+        this.archiveRetentionInDays = archiveRetentionInDays;
+        this.id = id;
+        this.lastPlanModifiedDate = lastPlanModifiedDate;
+        this.name = name;
         this.plan = plan;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.restoredLogs = restoredLogs;
         this.resultStatistics = resultStatistics;
         this.retentionInDays = retentionInDays;
         this.schema = schema;
         this.searchResults = searchResults;
-        this.systemData = Objects.requireNonNull(systemData);
+        this.systemData = systemData;
         this.totalRetentionInDays = totalRetentionInDays;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

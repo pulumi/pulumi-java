@@ -14,7 +14,7 @@ public final class FilterFindingCriteria {
 
     @OutputCustomType.Constructor({"criterions"})
     private FilterFindingCriteria(List<FilterFindingCriteriaCriterion> criterions) {
-        this.criterions = Objects.requireNonNull(criterions);
+        this.criterions = criterions;
     }
 
     public List<FilterFindingCriteriaCriterion> getCriterions() {

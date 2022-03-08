@@ -25,8 +25,8 @@ public final class AzureResourceDetailsResponse {
     private AzureResourceDetailsResponse(
         String id,
         String source) {
-        this.id = Objects.requireNonNull(id);
-        this.source = Objects.requireNonNull(source);
+        this.id = id;
+        this.source = source;
     }
 
     /**

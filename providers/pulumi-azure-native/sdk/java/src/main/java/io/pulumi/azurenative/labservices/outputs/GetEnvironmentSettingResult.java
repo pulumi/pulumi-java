@@ -109,18 +109,18 @@ public final class GetEnvironmentSettingResult {
         @Nullable String uniqueIdentifier) {
         this.configurationState = configurationState;
         this.description = description;
-        this.id = Objects.requireNonNull(id);
-        this.lastChanged = Objects.requireNonNull(lastChanged);
-        this.lastPublished = Objects.requireNonNull(lastPublished);
-        this.latestOperationResult = Objects.requireNonNull(latestOperationResult);
+        this.id = id;
+        this.lastChanged = lastChanged;
+        this.lastPublished = lastPublished;
+        this.latestOperationResult = latestOperationResult;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.provisioningState = provisioningState;
-        this.publishingState = Objects.requireNonNull(publishingState);
-        this.resourceSettings = Objects.requireNonNull(resourceSettings);
+        this.publishingState = publishingState;
+        this.resourceSettings = resourceSettings;
         this.tags = tags;
         this.title = title;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.uniqueIdentifier = uniqueIdentifier;
     }
 

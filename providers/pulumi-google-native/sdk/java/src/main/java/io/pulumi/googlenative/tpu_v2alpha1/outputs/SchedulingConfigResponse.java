@@ -24,8 +24,8 @@ public final class SchedulingConfigResponse {
     private SchedulingConfigResponse(
         Boolean preemptible,
         Boolean reserved) {
-        this.preemptible = Objects.requireNonNull(preemptible);
-        this.reserved = Objects.requireNonNull(reserved);
+        this.preemptible = preemptible;
+        this.reserved = reserved;
     }
 
     /**

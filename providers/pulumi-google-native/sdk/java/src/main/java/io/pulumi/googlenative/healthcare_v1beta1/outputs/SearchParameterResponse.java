@@ -24,8 +24,8 @@ public final class SearchParameterResponse {
     private SearchParameterResponse(
         String canonicalUrl,
         String parameter) {
-        this.canonicalUrl = Objects.requireNonNull(canonicalUrl);
-        this.parameter = Objects.requireNonNull(parameter);
+        this.canonicalUrl = canonicalUrl;
+        this.parameter = parameter;
     }
 
     /**

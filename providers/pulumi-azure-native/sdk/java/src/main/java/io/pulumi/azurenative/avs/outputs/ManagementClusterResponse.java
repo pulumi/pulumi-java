@@ -38,10 +38,10 @@ public final class ManagementClusterResponse {
         Integer clusterSize,
         List<String> hosts,
         String provisioningState) {
-        this.clusterId = Objects.requireNonNull(clusterId);
-        this.clusterSize = Objects.requireNonNull(clusterSize);
-        this.hosts = Objects.requireNonNull(hosts);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.clusterId = clusterId;
+        this.clusterSize = clusterSize;
+        this.hosts = hosts;
+        this.provisioningState = provisioningState;
     }
 
     /**

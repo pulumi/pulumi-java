@@ -13,7 +13,7 @@ public final class GetSecretRotationRule {
 
     @OutputCustomType.Constructor({"automaticallyAfterDays"})
     private GetSecretRotationRule(Integer automaticallyAfterDays) {
-        this.automaticallyAfterDays = Objects.requireNonNull(automaticallyAfterDays);
+        this.automaticallyAfterDays = automaticallyAfterDays;
     }
 
     public Integer getAutomaticallyAfterDays() {

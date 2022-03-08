@@ -35,10 +35,10 @@ public final class GetSubnetIdsResult {
         Map<String,String> tags,
         String vpcId) {
         this.filters = filters;
-        this.id = Objects.requireNonNull(id);
-        this.ids = Objects.requireNonNull(ids);
-        this.tags = Objects.requireNonNull(tags);
-        this.vpcId = Objects.requireNonNull(vpcId);
+        this.id = id;
+        this.ids = ids;
+        this.tags = tags;
+        this.vpcId = vpcId;
     }
 
     public List<GetSubnetIdsFilter> getFilters() {

@@ -31,12 +31,12 @@ public final class GetPluginResult {
         String name,
         String pluginReference) {
         this.alias = alias;
-        this.enabled = Objects.requireNonNull(enabled);
-        this.envs = Objects.requireNonNull(envs);
-        this.grantAllPermissions = Objects.requireNonNull(grantAllPermissions);
+        this.enabled = enabled;
+        this.envs = envs;
+        this.grantAllPermissions = grantAllPermissions;
         this.id = id;
-        this.name = Objects.requireNonNull(name);
-        this.pluginReference = Objects.requireNonNull(pluginReference);
+        this.name = name;
+        this.pluginReference = pluginReference;
     }
 
     public Optional<String> getAlias() {

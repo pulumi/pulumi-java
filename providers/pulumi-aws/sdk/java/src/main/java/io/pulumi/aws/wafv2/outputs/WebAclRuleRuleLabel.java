@@ -17,7 +17,7 @@ public final class WebAclRuleRuleLabel {
 
     @OutputCustomType.Constructor({"name"})
     private WebAclRuleRuleLabel(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

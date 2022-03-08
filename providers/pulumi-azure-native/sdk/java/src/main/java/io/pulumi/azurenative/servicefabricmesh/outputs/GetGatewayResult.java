@@ -104,19 +104,19 @@ public final class GetGatewayResult {
         @Nullable List<TcpConfigResponse> tcp,
         String type) {
         this.description = description;
-        this.destinationNetwork = Objects.requireNonNull(destinationNetwork);
+        this.destinationNetwork = destinationNetwork;
         this.http = http;
-        this.id = Objects.requireNonNull(id);
-        this.ipAddress = Objects.requireNonNull(ipAddress);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.sourceNetwork = Objects.requireNonNull(sourceNetwork);
-        this.status = Objects.requireNonNull(status);
-        this.statusDetails = Objects.requireNonNull(statusDetails);
+        this.id = id;
+        this.ipAddress = ipAddress;
+        this.location = location;
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.sourceNetwork = sourceNetwork;
+        this.status = status;
+        this.statusDetails = statusDetails;
         this.tags = tags;
         this.tcp = tcp;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

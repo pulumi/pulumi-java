@@ -14,7 +14,7 @@ public final class GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsS
 
     @OutputCustomType.Constructor({"realms"})
     private GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector(List<String> realms) {
-        this.realms = Objects.requireNonNull(realms);
+        this.realms = realms;
     }
 
     public List<String> getRealms() {

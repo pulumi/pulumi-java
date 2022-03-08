@@ -25,8 +25,8 @@ public final class AutoscalingPolicyScaleDownControlResponse {
     private AutoscalingPolicyScaleDownControlResponse(
         FixedOrPercentResponse maxScaledDownReplicas,
         Integer timeWindowSec) {
-        this.maxScaledDownReplicas = Objects.requireNonNull(maxScaledDownReplicas);
-        this.timeWindowSec = Objects.requireNonNull(timeWindowSec);
+        this.maxScaledDownReplicas = maxScaledDownReplicas;
+        this.timeWindowSec = timeWindowSec;
     }
 
     /**

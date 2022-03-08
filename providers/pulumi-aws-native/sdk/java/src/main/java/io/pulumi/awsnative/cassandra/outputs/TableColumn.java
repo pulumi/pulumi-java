@@ -16,8 +16,8 @@ public final class TableColumn {
     private TableColumn(
         String columnName,
         String columnType) {
-        this.columnName = Objects.requireNonNull(columnName);
-        this.columnType = Objects.requireNonNull(columnType);
+        this.columnName = columnName;
+        this.columnType = columnType;
     }
 
     public String getColumnName() {

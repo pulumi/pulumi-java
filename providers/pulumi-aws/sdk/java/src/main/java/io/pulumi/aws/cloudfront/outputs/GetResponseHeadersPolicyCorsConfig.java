@@ -56,13 +56,13 @@ public final class GetResponseHeadersPolicyCorsConfig {
         List<GetResponseHeadersPolicyCorsConfigAccessControlExposeHeader> accessControlExposeHeaders,
         Integer accessControlMaxAgeSec,
         Boolean originOverride) {
-        this.accessControlAllowCredentials = Objects.requireNonNull(accessControlAllowCredentials);
-        this.accessControlAllowHeaders = Objects.requireNonNull(accessControlAllowHeaders);
-        this.accessControlAllowMethods = Objects.requireNonNull(accessControlAllowMethods);
-        this.accessControlAllowOrigins = Objects.requireNonNull(accessControlAllowOrigins);
-        this.accessControlExposeHeaders = Objects.requireNonNull(accessControlExposeHeaders);
-        this.accessControlMaxAgeSec = Objects.requireNonNull(accessControlMaxAgeSec);
-        this.originOverride = Objects.requireNonNull(originOverride);
+        this.accessControlAllowCredentials = accessControlAllowCredentials;
+        this.accessControlAllowHeaders = accessControlAllowHeaders;
+        this.accessControlAllowMethods = accessControlAllowMethods;
+        this.accessControlAllowOrigins = accessControlAllowOrigins;
+        this.accessControlExposeHeaders = accessControlExposeHeaders;
+        this.accessControlMaxAgeSec = accessControlMaxAgeSec;
+        this.originOverride = originOverride;
     }
 
     /**

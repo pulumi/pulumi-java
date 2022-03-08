@@ -24,8 +24,8 @@ public final class AwsClusterControlPlaneProxyConfig {
     private AwsClusterControlPlaneProxyConfig(
         String secretArn,
         String secretVersion) {
-        this.secretArn = Objects.requireNonNull(secretArn);
-        this.secretVersion = Objects.requireNonNull(secretVersion);
+        this.secretArn = secretArn;
+        this.secretVersion = secretVersion;
     }
 
     /**

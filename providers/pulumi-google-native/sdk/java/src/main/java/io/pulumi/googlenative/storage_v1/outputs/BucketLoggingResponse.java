@@ -24,8 +24,8 @@ public final class BucketLoggingResponse {
     private BucketLoggingResponse(
         String logBucket,
         String logObjectPrefix) {
-        this.logBucket = Objects.requireNonNull(logBucket);
-        this.logObjectPrefix = Objects.requireNonNull(logObjectPrefix);
+        this.logBucket = logBucket;
+        this.logObjectPrefix = logObjectPrefix;
     }
 
     /**

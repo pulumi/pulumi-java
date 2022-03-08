@@ -26,8 +26,8 @@ public final class CustomDnsResponse {
     private CustomDnsResponse(
         List<DsRecordResponse> dsRecords,
         List<String> nameServers) {
-        this.dsRecords = Objects.requireNonNull(dsRecords);
-        this.nameServers = Objects.requireNonNull(nameServers);
+        this.dsRecords = dsRecords;
+        this.nameServers = nameServers;
     }
 
     /**

@@ -38,9 +38,9 @@ public final class ScaleActionResponse {
         String direction,
         String type,
         @Nullable String value) {
-        this.cooldown = Objects.requireNonNull(cooldown);
-        this.direction = Objects.requireNonNull(direction);
-        this.type = Objects.requireNonNull(type);
+        this.cooldown = cooldown;
+        this.direction = direction;
+        this.type = type;
         this.value = value;
     }
 

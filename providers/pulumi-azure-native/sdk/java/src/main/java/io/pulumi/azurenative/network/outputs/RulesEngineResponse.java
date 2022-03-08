@@ -45,11 +45,11 @@ public final class RulesEngineResponse {
         String resourceState,
         @Nullable List<RulesEngineRuleResponse> rules,
         String type) {
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.resourceState = Objects.requireNonNull(resourceState);
+        this.id = id;
+        this.name = name;
+        this.resourceState = resourceState;
         this.rules = rules;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

@@ -27,7 +27,7 @@ public final class PermissionsDatabase {
         @Nullable String catalogId,
         String name) {
         this.catalogId = catalogId;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

@@ -18,7 +18,7 @@ public final class InstanceParamsResponse {
 
     @OutputCustomType.Constructor({"resourceManagerTags"})
     private InstanceParamsResponse(Map<String,String> resourceManagerTags) {
-        this.resourceManagerTags = Objects.requireNonNull(resourceManagerTags);
+        this.resourceManagerTags = resourceManagerTags;
     }
 
     /**

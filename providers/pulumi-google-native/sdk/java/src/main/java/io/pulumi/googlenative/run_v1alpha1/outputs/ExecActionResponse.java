@@ -18,7 +18,7 @@ public final class ExecActionResponse {
 
     @OutputCustomType.Constructor({"command"})
     private ExecActionResponse(List<String> command) {
-        this.command = Objects.requireNonNull(command);
+        this.command = command;
     }
 
     /**

@@ -31,9 +31,9 @@ public final class ResourcePolicyDailyCycleResponse {
         Integer daysInCycle,
         String duration,
         String startTime) {
-        this.daysInCycle = Objects.requireNonNull(daysInCycle);
-        this.duration = Objects.requireNonNull(duration);
-        this.startTime = Objects.requireNonNull(startTime);
+        this.daysInCycle = daysInCycle;
+        this.duration = duration;
+        this.startTime = startTime;
     }
 
     /**

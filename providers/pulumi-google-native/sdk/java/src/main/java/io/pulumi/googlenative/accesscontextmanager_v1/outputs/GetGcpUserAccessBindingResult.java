@@ -31,9 +31,9 @@ public final class GetGcpUserAccessBindingResult {
         List<String> accessLevels,
         String groupKey,
         String name) {
-        this.accessLevels = Objects.requireNonNull(accessLevels);
-        this.groupKey = Objects.requireNonNull(groupKey);
-        this.name = Objects.requireNonNull(name);
+        this.accessLevels = accessLevels;
+        this.groupKey = groupKey;
+        this.name = name;
     }
 
     /**

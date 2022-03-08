@@ -75,13 +75,13 @@ public final class GetHybridRunbookWorkerResult {
         @Nullable String vmResourceId,
         @Nullable String workerName,
         @Nullable String workerType) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.ip = ip;
         this.lastSeenDateTime = lastSeenDateTime;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.registeredDateTime = registeredDateTime;
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.systemData = systemData;
+        this.type = type;
         this.vmResourceId = vmResourceId;
         this.workerName = workerName;
         this.workerType = workerType;

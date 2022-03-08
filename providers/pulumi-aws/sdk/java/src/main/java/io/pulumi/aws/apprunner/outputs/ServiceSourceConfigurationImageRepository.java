@@ -35,8 +35,8 @@ public final class ServiceSourceConfigurationImageRepository {
         String imageIdentifier,
         String imageRepositoryType) {
         this.imageConfiguration = imageConfiguration;
-        this.imageIdentifier = Objects.requireNonNull(imageIdentifier);
-        this.imageRepositoryType = Objects.requireNonNull(imageRepositoryType);
+        this.imageIdentifier = imageIdentifier;
+        this.imageRepositoryType = imageRepositoryType;
     }
 
     /**

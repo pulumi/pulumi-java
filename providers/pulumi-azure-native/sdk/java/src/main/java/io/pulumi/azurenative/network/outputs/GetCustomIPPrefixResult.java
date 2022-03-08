@@ -98,16 +98,16 @@ public final class GetCustomIPPrefixResult {
         @Nullable List<String> zones) {
         this.cidr = cidr;
         this.commissionedState = commissionedState;
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.extendedLocation = extendedLocation;
         this.id = id;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.publicIpPrefixes = Objects.requireNonNull(publicIpPrefixes);
-        this.resourceGuid = Objects.requireNonNull(resourceGuid);
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.publicIpPrefixes = publicIpPrefixes;
+        this.resourceGuid = resourceGuid;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.zones = zones;
     }
 

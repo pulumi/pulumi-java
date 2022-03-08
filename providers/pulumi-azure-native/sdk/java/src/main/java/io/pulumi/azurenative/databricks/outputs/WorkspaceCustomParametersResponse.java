@@ -125,7 +125,7 @@ public final class WorkspaceCustomParametersResponse {
         this.prepareEncryption = prepareEncryption;
         this.publicIpName = publicIpName;
         this.requireInfrastructureEncryption = requireInfrastructureEncryption;
-        this.resourceTags = Objects.requireNonNull(resourceTags);
+        this.resourceTags = resourceTags;
         this.storageAccountName = storageAccountName;
         this.storageAccountSkuName = storageAccountSkuName;
         this.vnetAddressPrefix = vnetAddressPrefix;

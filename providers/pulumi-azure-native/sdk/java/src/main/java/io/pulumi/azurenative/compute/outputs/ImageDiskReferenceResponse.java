@@ -27,7 +27,7 @@ public final class ImageDiskReferenceResponse {
     private ImageDiskReferenceResponse(
         String id,
         @Nullable Integer lun) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.lun = lun;
     }
 

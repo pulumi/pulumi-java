@@ -53,12 +53,12 @@ public final class GoogleCloudDialogflowCxV3QueryInputResponse {
         GoogleCloudDialogflowCxV3IntentInputResponse intent,
         String languageCode,
         GoogleCloudDialogflowCxV3TextInputResponse text) {
-        this.audio = Objects.requireNonNull(audio);
-        this.dtmf = Objects.requireNonNull(dtmf);
-        this.event = Objects.requireNonNull(event);
-        this.intent = Objects.requireNonNull(intent);
-        this.languageCode = Objects.requireNonNull(languageCode);
-        this.text = Objects.requireNonNull(text);
+        this.audio = audio;
+        this.dtmf = dtmf;
+        this.event = event;
+        this.intent = intent;
+        this.languageCode = languageCode;
+        this.text = text;
     }
 
     /**

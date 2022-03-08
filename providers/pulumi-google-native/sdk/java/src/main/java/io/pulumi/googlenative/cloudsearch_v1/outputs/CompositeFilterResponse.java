@@ -26,8 +26,8 @@ public final class CompositeFilterResponse {
     private CompositeFilterResponse(
         String logicOperator,
         List<FilterResponse> subFilters) {
-        this.logicOperator = Objects.requireNonNull(logicOperator);
-        this.subFilters = Objects.requireNonNull(subFilters);
+        this.logicOperator = logicOperator;
+        this.subFilters = subFilters;
     }
 
     /**

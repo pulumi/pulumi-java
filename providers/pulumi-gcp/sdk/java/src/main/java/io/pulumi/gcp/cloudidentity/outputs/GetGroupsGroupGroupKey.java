@@ -16,8 +16,8 @@ public final class GetGroupsGroupGroupKey {
     private GetGroupsGroupGroupKey(
         String id,
         String namespace) {
-        this.id = Objects.requireNonNull(id);
-        this.namespace = Objects.requireNonNull(namespace);
+        this.id = id;
+        this.namespace = namespace;
     }
 
     public String getId() {

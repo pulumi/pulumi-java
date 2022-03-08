@@ -64,12 +64,12 @@ public final class AzureKeyVaultLinkedServiceResponse {
         @Nullable Map<String,ParameterSpecificationResponse> parameters,
         String type) {
         this.annotations = annotations;
-        this.baseUrl = Objects.requireNonNull(baseUrl);
+        this.baseUrl = baseUrl;
         this.connectVia = connectVia;
         this.credential = credential;
         this.description = description;
         this.parameters = parameters;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

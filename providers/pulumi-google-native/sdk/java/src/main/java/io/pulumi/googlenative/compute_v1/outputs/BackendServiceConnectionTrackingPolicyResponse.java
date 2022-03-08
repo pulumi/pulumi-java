@@ -31,9 +31,9 @@ public final class BackendServiceConnectionTrackingPolicyResponse {
         String connectionPersistenceOnUnhealthyBackends,
         Integer idleTimeoutSec,
         String trackingMode) {
-        this.connectionPersistenceOnUnhealthyBackends = Objects.requireNonNull(connectionPersistenceOnUnhealthyBackends);
-        this.idleTimeoutSec = Objects.requireNonNull(idleTimeoutSec);
-        this.trackingMode = Objects.requireNonNull(trackingMode);
+        this.connectionPersistenceOnUnhealthyBackends = connectionPersistenceOnUnhealthyBackends;
+        this.idleTimeoutSec = idleTimeoutSec;
+        this.trackingMode = trackingMode;
     }
 
     /**

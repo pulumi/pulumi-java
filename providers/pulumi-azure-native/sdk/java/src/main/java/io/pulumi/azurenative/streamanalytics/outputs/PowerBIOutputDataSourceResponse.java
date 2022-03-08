@@ -70,7 +70,7 @@ public final class PowerBIOutputDataSourceResponse {
         this.table = table;
         this.tokenUserDisplayName = tokenUserDisplayName;
         this.tokenUserPrincipalName = tokenUserPrincipalName;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

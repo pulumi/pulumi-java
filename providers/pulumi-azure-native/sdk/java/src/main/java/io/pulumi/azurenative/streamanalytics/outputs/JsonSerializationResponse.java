@@ -35,7 +35,7 @@ public final class JsonSerializationResponse {
         String type) {
         this.encoding = encoding;
         this.format = format;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

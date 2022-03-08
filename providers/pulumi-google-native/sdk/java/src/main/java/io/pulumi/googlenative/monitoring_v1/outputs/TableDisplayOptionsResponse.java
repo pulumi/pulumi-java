@@ -18,7 +18,7 @@ public final class TableDisplayOptionsResponse {
 
     @OutputCustomType.Constructor({"shownColumns"})
     private TableDisplayOptionsResponse(List<String> shownColumns) {
-        this.shownColumns = Objects.requireNonNull(shownColumns);
+        this.shownColumns = shownColumns;
     }
 
     /**

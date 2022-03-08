@@ -78,12 +78,12 @@ public final class AzureSearchIndexDatasetResponse {
         this.annotations = annotations;
         this.description = description;
         this.folder = folder;
-        this.indexName = Objects.requireNonNull(indexName);
-        this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
+        this.indexName = indexName;
+        this.linkedServiceName = linkedServiceName;
         this.parameters = parameters;
         this.schema = schema;
         this.structure = structure;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

@@ -17,7 +17,7 @@ public final class GkeBackupAgentConfigResponse {
 
     @OutputCustomType.Constructor({"enabled"})
     private GkeBackupAgentConfigResponse(Boolean enabled) {
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
     }
 
     /**

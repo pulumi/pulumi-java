@@ -24,8 +24,8 @@ public final class PacketMirroringMirroredResourceInfoSubnetInfoResponse {
     private PacketMirroringMirroredResourceInfoSubnetInfoResponse(
         String canonicalUrl,
         String url) {
-        this.canonicalUrl = Objects.requireNonNull(canonicalUrl);
-        this.url = Objects.requireNonNull(url);
+        this.canonicalUrl = canonicalUrl;
+        this.url = url;
     }
 
     /**

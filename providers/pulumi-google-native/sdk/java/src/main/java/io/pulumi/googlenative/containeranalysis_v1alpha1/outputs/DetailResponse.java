@@ -81,17 +81,17 @@ public final class DetailResponse {
         String severityName,
         String source,
         String vendor) {
-        this.cpeUri = Objects.requireNonNull(cpeUri);
-        this.description = Objects.requireNonNull(description);
-        this.fixedLocation = Objects.requireNonNull(fixedLocation);
-        this.isObsolete = Objects.requireNonNull(isObsolete);
-        this.maxAffectedVersion = Objects.requireNonNull(maxAffectedVersion);
-        this.minAffectedVersion = Objects.requireNonNull(minAffectedVersion);
-        this.$package = Objects.requireNonNull($package);
-        this.packageType = Objects.requireNonNull(packageType);
-        this.severityName = Objects.requireNonNull(severityName);
-        this.source = Objects.requireNonNull(source);
-        this.vendor = Objects.requireNonNull(vendor);
+        this.cpeUri = cpeUri;
+        this.description = description;
+        this.fixedLocation = fixedLocation;
+        this.isObsolete = isObsolete;
+        this.maxAffectedVersion = maxAffectedVersion;
+        this.minAffectedVersion = minAffectedVersion;
+        this.$package = $package;
+        this.packageType = packageType;
+        this.severityName = severityName;
+        this.source = source;
+        this.vendor = vendor;
     }
 
     /**

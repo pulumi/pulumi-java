@@ -31,9 +31,9 @@ public final class GooglePrivacyDlpV2NumericalStatsResultResponse {
         GooglePrivacyDlpV2ValueResponse maxValue,
         GooglePrivacyDlpV2ValueResponse minValue,
         List<GooglePrivacyDlpV2ValueResponse> quantileValues) {
-        this.maxValue = Objects.requireNonNull(maxValue);
-        this.minValue = Objects.requireNonNull(minValue);
-        this.quantileValues = Objects.requireNonNull(quantileValues);
+        this.maxValue = maxValue;
+        this.minValue = minValue;
+        this.quantileValues = quantileValues;
     }
 
     /**

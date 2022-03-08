@@ -32,9 +32,9 @@ public final class TlsCertificateContextResponse {
         TlsCertificatePathsResponse certificatePaths,
         String certificateSource,
         SdsConfigResponse sdsConfig) {
-        this.certificatePaths = Objects.requireNonNull(certificatePaths);
-        this.certificateSource = Objects.requireNonNull(certificateSource);
-        this.sdsConfig = Objects.requireNonNull(sdsConfig);
+        this.certificatePaths = certificatePaths;
+        this.certificateSource = certificateSource;
+        this.sdsConfig = sdsConfig;
     }
 
     /**

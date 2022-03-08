@@ -25,8 +25,8 @@ public final class RequestBasedSliResponse {
     private RequestBasedSliResponse(
         DistributionCutResponse distributionCut,
         TimeSeriesRatioResponse goodTotalRatio) {
-        this.distributionCut = Objects.requireNonNull(distributionCut);
-        this.goodTotalRatio = Objects.requireNonNull(goodTotalRatio);
+        this.distributionCut = distributionCut;
+        this.goodTotalRatio = goodTotalRatio;
     }
 
     /**

@@ -31,9 +31,9 @@ public final class ResourceOptionsResponse {
         String connectVersion,
         String k8sVersion,
         Boolean v1beta1Crd) {
-        this.connectVersion = Objects.requireNonNull(connectVersion);
-        this.k8sVersion = Objects.requireNonNull(k8sVersion);
-        this.v1beta1Crd = Objects.requireNonNull(v1beta1Crd);
+        this.connectVersion = connectVersion;
+        this.k8sVersion = k8sVersion;
+        this.v1beta1Crd = v1beta1Crd;
     }
 
     /**

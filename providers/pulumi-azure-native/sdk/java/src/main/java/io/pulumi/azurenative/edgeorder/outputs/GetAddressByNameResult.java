@@ -72,15 +72,15 @@ public final class GetAddressByNameResult {
         SystemDataResponse systemData,
         @Nullable Map<String,String> tags,
         String type) {
-        this.addressValidationStatus = Objects.requireNonNull(addressValidationStatus);
-        this.contactDetails = Objects.requireNonNull(contactDetails);
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
+        this.addressValidationStatus = addressValidationStatus;
+        this.contactDetails = contactDetails;
+        this.id = id;
+        this.location = location;
+        this.name = name;
         this.shippingAddress = shippingAddress;
-        this.systemData = Objects.requireNonNull(systemData);
+        this.systemData = systemData;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

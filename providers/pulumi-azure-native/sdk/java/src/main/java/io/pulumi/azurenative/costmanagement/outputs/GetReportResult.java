@@ -66,14 +66,14 @@ public final class GetReportResult {
         @Nullable ReportScheduleResponse schedule,
         Map<String,String> tags,
         String type) {
-        this.definition = Objects.requireNonNull(definition);
-        this.deliveryInfo = Objects.requireNonNull(deliveryInfo);
+        this.definition = definition;
+        this.deliveryInfo = deliveryInfo;
         this.format = format;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.schedule = schedule;
-        this.tags = Objects.requireNonNull(tags);
-        this.type = Objects.requireNonNull(type);
+        this.tags = tags;
+        this.type = type;
     }
 
     /**

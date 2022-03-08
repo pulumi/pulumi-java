@@ -17,7 +17,7 @@ public final class ClusterClusterConfigAutoscalingConfig {
 
     @OutputCustomType.Constructor({"policyUri"})
     private ClusterClusterConfigAutoscalingConfig(String policyUri) {
-        this.policyUri = Objects.requireNonNull(policyUri);
+        this.policyUri = policyUri;
     }
 
     /**

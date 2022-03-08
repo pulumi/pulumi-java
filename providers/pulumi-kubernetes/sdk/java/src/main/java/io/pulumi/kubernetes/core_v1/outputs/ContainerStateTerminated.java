@@ -58,7 +58,7 @@ public final class ContainerStateTerminated {
         @Nullable Integer signal,
         @Nullable String startedAt) {
         this.containerID = containerID;
-        this.exitCode = Objects.requireNonNull(exitCode);
+        this.exitCode = exitCode;
         this.finishedAt = finishedAt;
         this.message = message;
         this.reason = reason;

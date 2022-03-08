@@ -44,11 +44,11 @@ public final class GetVendorResult {
         String provisioningState,
         List<SubResourceResponse> skus,
         String type) {
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.skus = Objects.requireNonNull(skus);
-        this.type = Objects.requireNonNull(type);
+        this.id = id;
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.skus = skus;
+        this.type = type;
     }
 
     /**

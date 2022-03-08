@@ -26,8 +26,8 @@ public final class ListStaticSiteUsersResult {
     private ListStaticSiteUsersResult(
         String nextLink,
         List<StaticSiteUserARMResourceResponse> value) {
-        this.nextLink = Objects.requireNonNull(nextLink);
-        this.value = Objects.requireNonNull(value);
+        this.nextLink = nextLink;
+        this.value = value;
     }
 
     /**

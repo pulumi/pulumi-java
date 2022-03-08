@@ -177,31 +177,31 @@ public final class GetAppServiceCertificateOrderResult {
         @Nullable Map<String,String> tags,
         String type,
         @Nullable Integer validityInYears) {
-        this.appServiceCertificateNotRenewableReasons = Objects.requireNonNull(appServiceCertificateNotRenewableReasons);
+        this.appServiceCertificateNotRenewableReasons = appServiceCertificateNotRenewableReasons;
         this.autoRenew = autoRenew;
         this.certificates = certificates;
         this.csr = csr;
         this.distinguishedName = distinguishedName;
-        this.domainVerificationToken = Objects.requireNonNull(domainVerificationToken);
-        this.expirationTime = Objects.requireNonNull(expirationTime);
-        this.id = Objects.requireNonNull(id);
-        this.intermediate = Objects.requireNonNull(intermediate);
-        this.isPrivateKeyExternal = Objects.requireNonNull(isPrivateKeyExternal);
+        this.domainVerificationToken = domainVerificationToken;
+        this.expirationTime = expirationTime;
+        this.id = id;
+        this.intermediate = intermediate;
+        this.isPrivateKeyExternal = isPrivateKeyExternal;
         this.keySize = keySize;
         this.kind = kind;
-        this.lastCertificateIssuanceTime = Objects.requireNonNull(lastCertificateIssuanceTime);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.nextAutoRenewalTimeStamp = Objects.requireNonNull(nextAutoRenewalTimeStamp);
-        this.productType = Objects.requireNonNull(productType);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.root = Objects.requireNonNull(root);
-        this.serialNumber = Objects.requireNonNull(serialNumber);
-        this.signedCertificate = Objects.requireNonNull(signedCertificate);
-        this.status = Objects.requireNonNull(status);
-        this.systemData = Objects.requireNonNull(systemData);
+        this.lastCertificateIssuanceTime = lastCertificateIssuanceTime;
+        this.location = location;
+        this.name = name;
+        this.nextAutoRenewalTimeStamp = nextAutoRenewalTimeStamp;
+        this.productType = productType;
+        this.provisioningState = provisioningState;
+        this.root = root;
+        this.serialNumber = serialNumber;
+        this.signedCertificate = signedCertificate;
+        this.status = status;
+        this.systemData = systemData;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.validityInYears = validityInYears;
     }
 

@@ -17,7 +17,7 @@ public final class PlacementPolicyResponse {
 
     @OutputCustomType.Constructor({"type"})
     private PlacementPolicyResponse(String type) {
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

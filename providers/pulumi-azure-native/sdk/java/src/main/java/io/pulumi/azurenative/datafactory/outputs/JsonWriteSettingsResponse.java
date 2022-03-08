@@ -29,7 +29,7 @@ public final class JsonWriteSettingsResponse {
         @Nullable Object filePattern,
         String type) {
         this.filePattern = filePattern;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

@@ -25,8 +25,8 @@ public final class GoogleCloudMlV1__RequestLoggingConfigResponse {
     private GoogleCloudMlV1__RequestLoggingConfigResponse(
         String bigqueryTableName,
         Double samplingPercentage) {
-        this.bigqueryTableName = Objects.requireNonNull(bigqueryTableName);
-        this.samplingPercentage = Objects.requireNonNull(samplingPercentage);
+        this.bigqueryTableName = bigqueryTableName;
+        this.samplingPercentage = samplingPercentage;
     }
 
     /**

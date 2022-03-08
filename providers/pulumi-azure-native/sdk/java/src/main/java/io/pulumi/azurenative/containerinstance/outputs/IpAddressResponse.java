@@ -47,10 +47,10 @@ public final class IpAddressResponse {
         List<PortResponse> ports,
         String type) {
         this.dnsNameLabel = dnsNameLabel;
-        this.fqdn = Objects.requireNonNull(fqdn);
+        this.fqdn = fqdn;
         this.ip = ip;
-        this.ports = Objects.requireNonNull(ports);
-        this.type = Objects.requireNonNull(type);
+        this.ports = ports;
+        this.type = type;
     }
 
     /**

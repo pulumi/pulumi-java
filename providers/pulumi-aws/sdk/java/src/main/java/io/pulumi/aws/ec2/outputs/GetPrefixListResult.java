@@ -38,10 +38,10 @@ public final class GetPrefixListResult {
         String id,
         String name,
         @Nullable String prefixListId) {
-        this.cidrBlocks = Objects.requireNonNull(cidrBlocks);
+        this.cidrBlocks = cidrBlocks;
         this.filters = filters;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.prefixListId = prefixListId;
     }
 

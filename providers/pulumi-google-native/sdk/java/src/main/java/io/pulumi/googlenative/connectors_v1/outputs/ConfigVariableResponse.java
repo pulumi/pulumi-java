@@ -44,11 +44,11 @@ public final class ConfigVariableResponse {
         String key,
         SecretResponse secretValue,
         String stringValue) {
-        this.boolValue = Objects.requireNonNull(boolValue);
-        this.intValue = Objects.requireNonNull(intValue);
-        this.key = Objects.requireNonNull(key);
-        this.secretValue = Objects.requireNonNull(secretValue);
-        this.stringValue = Objects.requireNonNull(stringValue);
+        this.boolValue = boolValue;
+        this.intValue = intValue;
+        this.key = key;
+        this.secretValue = secretValue;
+        this.stringValue = stringValue;
     }
 
     /**

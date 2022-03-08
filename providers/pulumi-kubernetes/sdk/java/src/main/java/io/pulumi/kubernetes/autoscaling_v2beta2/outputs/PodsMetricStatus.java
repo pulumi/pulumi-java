@@ -25,8 +25,8 @@ public final class PodsMetricStatus {
     private PodsMetricStatus(
         MetricValueStatus current,
         MetricIdentifier metric) {
-        this.current = Objects.requireNonNull(current);
-        this.metric = Objects.requireNonNull(metric);
+        this.current = current;
+        this.metric = metric;
     }
 
     /**

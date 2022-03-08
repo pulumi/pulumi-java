@@ -24,8 +24,8 @@ public final class DeploymentGroupEcsService {
     private DeploymentGroupEcsService(
         String clusterName,
         String serviceName) {
-        this.clusterName = Objects.requireNonNull(clusterName);
-        this.serviceName = Objects.requireNonNull(serviceName);
+        this.clusterName = clusterName;
+        this.serviceName = serviceName;
     }
 
     /**

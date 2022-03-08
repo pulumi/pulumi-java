@@ -49,12 +49,12 @@ public final class ObjectConditionsResponse {
         String lastModifiedSince,
         String maxTimeElapsedSinceLastModification,
         String minTimeElapsedSinceLastModification) {
-        this.excludePrefixes = Objects.requireNonNull(excludePrefixes);
-        this.includePrefixes = Objects.requireNonNull(includePrefixes);
-        this.lastModifiedBefore = Objects.requireNonNull(lastModifiedBefore);
-        this.lastModifiedSince = Objects.requireNonNull(lastModifiedSince);
-        this.maxTimeElapsedSinceLastModification = Objects.requireNonNull(maxTimeElapsedSinceLastModification);
-        this.minTimeElapsedSinceLastModification = Objects.requireNonNull(minTimeElapsedSinceLastModification);
+        this.excludePrefixes = excludePrefixes;
+        this.includePrefixes = includePrefixes;
+        this.lastModifiedBefore = lastModifiedBefore;
+        this.lastModifiedSince = lastModifiedSince;
+        this.maxTimeElapsedSinceLastModification = maxTimeElapsedSinceLastModification;
+        this.minTimeElapsedSinceLastModification = minTimeElapsedSinceLastModification;
     }
 
     /**

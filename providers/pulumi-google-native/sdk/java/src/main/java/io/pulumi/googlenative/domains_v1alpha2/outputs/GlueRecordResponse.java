@@ -31,9 +31,9 @@ public final class GlueRecordResponse {
         String hostName,
         List<String> ipv4Addresses,
         List<String> ipv6Addresses) {
-        this.hostName = Objects.requireNonNull(hostName);
-        this.ipv4Addresses = Objects.requireNonNull(ipv4Addresses);
-        this.ipv6Addresses = Objects.requireNonNull(ipv6Addresses);
+        this.hostName = hostName;
+        this.ipv4Addresses = ipv4Addresses;
+        this.ipv6Addresses = ipv6Addresses;
     }
 
     /**

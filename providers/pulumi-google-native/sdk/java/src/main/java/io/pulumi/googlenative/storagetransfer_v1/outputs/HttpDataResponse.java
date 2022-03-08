@@ -17,7 +17,7 @@ public final class HttpDataResponse {
 
     @OutputCustomType.Constructor({"listUrl"})
     private HttpDataResponse(String listUrl) {
-        this.listUrl = Objects.requireNonNull(listUrl);
+        this.listUrl = listUrl;
     }
 
     /**

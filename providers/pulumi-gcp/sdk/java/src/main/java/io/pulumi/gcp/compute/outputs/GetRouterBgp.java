@@ -23,10 +23,10 @@ public final class GetRouterBgp {
         List<String> advertisedGroups,
         List<GetRouterBgpAdvertisedIpRange> advertisedIpRanges,
         Integer asn) {
-        this.advertiseMode = Objects.requireNonNull(advertiseMode);
-        this.advertisedGroups = Objects.requireNonNull(advertisedGroups);
-        this.advertisedIpRanges = Objects.requireNonNull(advertisedIpRanges);
-        this.asn = Objects.requireNonNull(asn);
+        this.advertiseMode = advertiseMode;
+        this.advertisedGroups = advertisedGroups;
+        this.advertisedIpRanges = advertisedIpRanges;
+        this.asn = asn;
     }
 
     public String getAdvertiseMode() {

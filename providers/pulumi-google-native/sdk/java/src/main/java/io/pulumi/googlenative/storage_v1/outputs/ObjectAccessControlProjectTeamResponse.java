@@ -24,8 +24,8 @@ public final class ObjectAccessControlProjectTeamResponse {
     private ObjectAccessControlProjectTeamResponse(
         String projectNumber,
         String team) {
-        this.projectNumber = Objects.requireNonNull(projectNumber);
-        this.team = Objects.requireNonNull(team);
+        this.projectNumber = projectNumber;
+        this.team = team;
     }
 
     /**

@@ -52,7 +52,7 @@ public final class URLMapPathMatcherRouteRuleRouteActionRetryPolicy {
         Integer numRetries,
         @Nullable URLMapPathMatcherRouteRuleRouteActionRetryPolicyPerTryTimeout perTryTimeout,
         @Nullable List<String> retryConditions) {
-        this.numRetries = Objects.requireNonNull(numRetries);
+        this.numRetries = numRetries;
         this.perTryTimeout = perTryTimeout;
         this.retryConditions = retryConditions;
     }

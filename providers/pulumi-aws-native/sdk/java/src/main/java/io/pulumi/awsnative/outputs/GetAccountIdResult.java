@@ -13,7 +13,7 @@ public final class GetAccountIdResult {
 
     @OutputCustomType.Constructor({"accountId"})
     private GetAccountIdResult(String accountId) {
-        this.accountId = Objects.requireNonNull(accountId);
+        this.accountId = accountId;
     }
 
     public String getAccountId() {

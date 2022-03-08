@@ -35,9 +35,9 @@ public final class MultiRegionAccessPointDetails {
         String name,
         @Nullable MultiRegionAccessPointDetailsPublicAccessBlock publicAccessBlock,
         List<MultiRegionAccessPointDetailsRegion> regions) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.publicAccessBlock = publicAccessBlock;
-        this.regions = Objects.requireNonNull(regions);
+        this.regions = regions;
     }
 
     /**

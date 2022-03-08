@@ -31,9 +31,9 @@ public final class MediaGraphUsernamePasswordCredentialsResponse {
         String odataType,
         String password,
         String username) {
-        this.odataType = Objects.requireNonNull(odataType);
-        this.password = Objects.requireNonNull(password);
-        this.username = Objects.requireNonNull(username);
+        this.odataType = odataType;
+        this.password = password;
+        this.username = username;
     }
 
     /**

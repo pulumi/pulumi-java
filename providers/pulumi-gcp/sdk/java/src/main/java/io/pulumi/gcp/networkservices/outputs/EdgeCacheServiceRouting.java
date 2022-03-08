@@ -27,8 +27,8 @@ public final class EdgeCacheServiceRouting {
     private EdgeCacheServiceRouting(
         List<EdgeCacheServiceRoutingHostRule> hostRules,
         List<EdgeCacheServiceRoutingPathMatcher> pathMatchers) {
-        this.hostRules = Objects.requireNonNull(hostRules);
-        this.pathMatchers = Objects.requireNonNull(pathMatchers);
+        this.hostRules = hostRules;
+        this.pathMatchers = pathMatchers;
     }
 
     /**

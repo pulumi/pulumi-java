@@ -61,8 +61,8 @@ public final class CronJobSpec {
         @Nullable Boolean suspend) {
         this.concurrencyPolicy = concurrencyPolicy;
         this.failedJobsHistoryLimit = failedJobsHistoryLimit;
-        this.jobTemplate = Objects.requireNonNull(jobTemplate);
-        this.schedule = Objects.requireNonNull(schedule);
+        this.jobTemplate = jobTemplate;
+        this.schedule = schedule;
         this.startingDeadlineSeconds = startingDeadlineSeconds;
         this.successfulJobsHistoryLimit = successfulJobsHistoryLimit;
         this.suspend = suspend;

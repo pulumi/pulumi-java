@@ -16,8 +16,8 @@ public final class TableProvisionedThroughput {
     private TableProvisionedThroughput(
         Integer readCapacityUnits,
         Integer writeCapacityUnits) {
-        this.readCapacityUnits = Objects.requireNonNull(readCapacityUnits);
-        this.writeCapacityUnits = Objects.requireNonNull(writeCapacityUnits);
+        this.readCapacityUnits = readCapacityUnits;
+        this.writeCapacityUnits = writeCapacityUnits;
     }
 
     public Integer getReadCapacityUnits() {

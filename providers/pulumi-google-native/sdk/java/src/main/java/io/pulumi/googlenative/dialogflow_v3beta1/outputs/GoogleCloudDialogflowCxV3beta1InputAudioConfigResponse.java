@@ -57,13 +57,13 @@ public final class GoogleCloudDialogflowCxV3beta1InputAudioConfigResponse {
         List<String> phraseHints,
         Integer sampleRateHertz,
         Boolean singleUtterance) {
-        this.audioEncoding = Objects.requireNonNull(audioEncoding);
-        this.enableWordInfo = Objects.requireNonNull(enableWordInfo);
-        this.model = Objects.requireNonNull(model);
-        this.modelVariant = Objects.requireNonNull(modelVariant);
-        this.phraseHints = Objects.requireNonNull(phraseHints);
-        this.sampleRateHertz = Objects.requireNonNull(sampleRateHertz);
-        this.singleUtterance = Objects.requireNonNull(singleUtterance);
+        this.audioEncoding = audioEncoding;
+        this.enableWordInfo = enableWordInfo;
+        this.model = model;
+        this.modelVariant = modelVariant;
+        this.phraseHints = phraseHints;
+        this.sampleRateHertz = sampleRateHertz;
+        this.singleUtterance = singleUtterance;
     }
 
     /**

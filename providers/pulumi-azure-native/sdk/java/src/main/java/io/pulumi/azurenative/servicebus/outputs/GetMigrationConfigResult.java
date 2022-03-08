@@ -61,14 +61,14 @@ public final class GetMigrationConfigResult {
         String provisioningState,
         String targetNamespace,
         String type) {
-        this.id = Objects.requireNonNull(id);
-        this.migrationState = Objects.requireNonNull(migrationState);
-        this.name = Objects.requireNonNull(name);
-        this.pendingReplicationOperationsCount = Objects.requireNonNull(pendingReplicationOperationsCount);
-        this.postMigrationName = Objects.requireNonNull(postMigrationName);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.targetNamespace = Objects.requireNonNull(targetNamespace);
-        this.type = Objects.requireNonNull(type);
+        this.id = id;
+        this.migrationState = migrationState;
+        this.name = name;
+        this.pendingReplicationOperationsCount = pendingReplicationOperationsCount;
+        this.postMigrationName = postMigrationName;
+        this.provisioningState = provisioningState;
+        this.targetNamespace = targetNamespace;
+        this.type = type;
     }
 
     /**

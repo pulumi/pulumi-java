@@ -30,9 +30,9 @@ public final class SoftwareRecipeArtifactGcsResponse {
         String bucket,
         String generation,
         String object) {
-        this.bucket = Objects.requireNonNull(bucket);
-        this.generation = Objects.requireNonNull(generation);
-        this.object = Objects.requireNonNull(object);
+        this.bucket = bucket;
+        this.generation = generation;
+        this.object = object;
     }
 
     /**

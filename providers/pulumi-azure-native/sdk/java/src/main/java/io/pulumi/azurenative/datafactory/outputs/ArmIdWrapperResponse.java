@@ -13,7 +13,7 @@ public final class ArmIdWrapperResponse {
 
     @OutputCustomType.Constructor({"id"})
     private ArmIdWrapperResponse(String id) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
     }
 
     public String getId() {

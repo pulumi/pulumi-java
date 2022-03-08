@@ -124,20 +124,20 @@ public final class GetCustomImageResult {
         @Nullable CustomImagePropertiesCustomResponse vhd,
         @Nullable CustomImagePropertiesFromVmResponse vm) {
         this.author = author;
-        this.creationDate = Objects.requireNonNull(creationDate);
+        this.creationDate = creationDate;
         this.customImagePlan = customImagePlan;
         this.dataDiskStorageInfo = dataDiskStorageInfo;
         this.description = description;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.isPlanAuthorized = isPlanAuthorized;
         this.location = location;
         this.managedImageId = managedImageId;
         this.managedSnapshotId = managedSnapshotId;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
-        this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
+        this.type = type;
+        this.uniqueIdentifier = uniqueIdentifier;
         this.vhd = vhd;
         this.vm = vm;
     }

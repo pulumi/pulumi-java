@@ -17,7 +17,7 @@ public final class GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppi
 
     @OutputCustomType.Constructor({"useElapsedTime"})
     private GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigResponse(Boolean useElapsedTime) {
-        this.useElapsedTime = Objects.requireNonNull(useElapsedTime);
+        this.useElapsedTime = useElapsedTime;
     }
 
     /**

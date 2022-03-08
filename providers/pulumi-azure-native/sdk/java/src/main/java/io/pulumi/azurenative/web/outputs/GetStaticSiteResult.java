@@ -158,25 +158,25 @@ public final class GetStaticSiteResult {
         this.allowConfigFileUpdates = allowConfigFileUpdates;
         this.branch = branch;
         this.buildProperties = buildProperties;
-        this.contentDistributionEndpoint = Objects.requireNonNull(contentDistributionEndpoint);
-        this.customDomains = Objects.requireNonNull(customDomains);
-        this.defaultHostname = Objects.requireNonNull(defaultHostname);
-        this.id = Objects.requireNonNull(id);
+        this.contentDistributionEndpoint = contentDistributionEndpoint;
+        this.customDomains = customDomains;
+        this.defaultHostname = defaultHostname;
+        this.id = id;
         this.identity = identity;
-        this.keyVaultReferenceIdentity = Objects.requireNonNull(keyVaultReferenceIdentity);
+        this.keyVaultReferenceIdentity = keyVaultReferenceIdentity;
         this.kind = kind;
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
-        this.provider = Objects.requireNonNull(provider);
+        this.location = location;
+        this.name = name;
+        this.privateEndpointConnections = privateEndpointConnections;
+        this.provider = provider;
         this.repositoryToken = repositoryToken;
         this.repositoryUrl = repositoryUrl;
         this.sku = sku;
         this.stagingEnvironmentPolicy = stagingEnvironmentPolicy;
         this.tags = tags;
         this.templateProperties = templateProperties;
-        this.type = Objects.requireNonNull(type);
-        this.userProvidedFunctionApps = Objects.requireNonNull(userProvidedFunctionApps);
+        this.type = type;
+        this.userProvidedFunctionApps = userProvidedFunctionApps;
     }
 
     /**

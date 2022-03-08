@@ -67,13 +67,13 @@ public final class GetDataControllerResult {
         @Nullable Map<String,String> tags,
         String type) {
         this.extendedLocation = extendedLocation;
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.properties = Objects.requireNonNull(properties);
-        this.systemData = Objects.requireNonNull(systemData);
+        this.id = id;
+        this.location = location;
+        this.name = name;
+        this.properties = properties;
+        this.systemData = systemData;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

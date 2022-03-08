@@ -23,7 +23,7 @@ public final class DetectorModelIotTopicPublish {
     private DetectorModelIotTopicPublish(
         String mqttTopic,
         @Nullable DetectorModelPayload payload) {
-        this.mqttTopic = Objects.requireNonNull(mqttTopic);
+        this.mqttTopic = mqttTopic;
         this.payload = payload;
     }
 

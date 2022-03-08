@@ -43,11 +43,11 @@ public final class DiscoveryOccurrenceResponse {
         String continuousAnalysis,
         String cpe,
         String lastScanTime) {
-        this.analysisStatus = Objects.requireNonNull(analysisStatus);
-        this.analysisStatusError = Objects.requireNonNull(analysisStatusError);
-        this.continuousAnalysis = Objects.requireNonNull(continuousAnalysis);
-        this.cpe = Objects.requireNonNull(cpe);
-        this.lastScanTime = Objects.requireNonNull(lastScanTime);
+        this.analysisStatus = analysisStatus;
+        this.analysisStatusError = analysisStatusError;
+        this.continuousAnalysis = continuousAnalysis;
+        this.cpe = cpe;
+        this.lastScanTime = lastScanTime;
     }
 
     /**

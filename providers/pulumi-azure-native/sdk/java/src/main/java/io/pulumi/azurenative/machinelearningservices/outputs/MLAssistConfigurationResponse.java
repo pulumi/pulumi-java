@@ -47,11 +47,11 @@ public final class MLAssistConfigurationResponse {
         String modelNamePrefix,
         @Nullable Double prelabelAccuracyThreshold,
         ComputeBindingResponse trainingComputeBinding) {
-        this.inferencingComputeBinding = Objects.requireNonNull(inferencingComputeBinding);
+        this.inferencingComputeBinding = inferencingComputeBinding;
         this.mlAssistEnabled = mlAssistEnabled;
-        this.modelNamePrefix = Objects.requireNonNull(modelNamePrefix);
+        this.modelNamePrefix = modelNamePrefix;
         this.prelabelAccuracyThreshold = prelabelAccuracyThreshold;
-        this.trainingComputeBinding = Objects.requireNonNull(trainingComputeBinding);
+        this.trainingComputeBinding = trainingComputeBinding;
     }
 
     /**

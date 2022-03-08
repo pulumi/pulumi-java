@@ -94,19 +94,19 @@ public final class BuildOptionsResponse {
         String substitutionOption,
         List<VolumeResponse> volumes,
         String workerPool) {
-        this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
-        this.dynamicSubstitutions = Objects.requireNonNull(dynamicSubstitutions);
-        this.env = Objects.requireNonNull(env);
-        this.logStreamingOption = Objects.requireNonNull(logStreamingOption);
-        this.logging = Objects.requireNonNull(logging);
-        this.machineType = Objects.requireNonNull(machineType);
-        this.pool = Objects.requireNonNull(pool);
-        this.requestedVerifyOption = Objects.requireNonNull(requestedVerifyOption);
-        this.secretEnv = Objects.requireNonNull(secretEnv);
-        this.sourceProvenanceHash = Objects.requireNonNull(sourceProvenanceHash);
-        this.substitutionOption = Objects.requireNonNull(substitutionOption);
-        this.volumes = Objects.requireNonNull(volumes);
-        this.workerPool = Objects.requireNonNull(workerPool);
+        this.diskSizeGb = diskSizeGb;
+        this.dynamicSubstitutions = dynamicSubstitutions;
+        this.env = env;
+        this.logStreamingOption = logStreamingOption;
+        this.logging = logging;
+        this.machineType = machineType;
+        this.pool = pool;
+        this.requestedVerifyOption = requestedVerifyOption;
+        this.secretEnv = secretEnv;
+        this.sourceProvenanceHash = sourceProvenanceHash;
+        this.substitutionOption = substitutionOption;
+        this.volumes = volumes;
+        this.workerPool = workerPool;
     }
 
     /**

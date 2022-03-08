@@ -53,11 +53,11 @@ public final class AssetModelProperty {
         String name,
         AssetModelPropertyType type,
         @Nullable String unit) {
-        this.dataType = Objects.requireNonNull(dataType);
+        this.dataType = dataType;
         this.dataTypeSpec = dataTypeSpec;
-        this.logicalId = Objects.requireNonNull(logicalId);
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.logicalId = logicalId;
+        this.name = name;
+        this.type = type;
         this.unit = unit;
     }
 

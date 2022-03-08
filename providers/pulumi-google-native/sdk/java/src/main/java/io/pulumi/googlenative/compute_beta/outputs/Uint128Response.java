@@ -16,8 +16,8 @@ public final class Uint128Response {
     private Uint128Response(
         String high,
         String low) {
-        this.high = Objects.requireNonNull(high);
-        this.low = Objects.requireNonNull(low);
+        this.high = high;
+        this.low = low;
     }
 
     public String getHigh() {

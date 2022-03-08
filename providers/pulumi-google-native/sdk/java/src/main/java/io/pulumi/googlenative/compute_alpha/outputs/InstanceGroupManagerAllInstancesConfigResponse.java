@@ -17,7 +17,7 @@ public final class InstanceGroupManagerAllInstancesConfigResponse {
 
     @OutputCustomType.Constructor({"properties"})
     private InstanceGroupManagerAllInstancesConfigResponse(InstancePropertiesPatchResponse properties) {
-        this.properties = Objects.requireNonNull(properties);
+        this.properties = properties;
     }
 
     /**

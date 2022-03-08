@@ -17,7 +17,7 @@ public final class GooglePrivacyDlpV2PublishToPubSubResponse {
 
     @OutputCustomType.Constructor({"topic"})
     private GooglePrivacyDlpV2PublishToPubSubResponse(String topic) {
-        this.topic = Objects.requireNonNull(topic);
+        this.topic = topic;
     }
 
     /**

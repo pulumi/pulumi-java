@@ -43,11 +43,11 @@ public final class GetEnvgroupResult {
         String lastModifiedAt,
         String name,
         String state) {
-        this.createdAt = Objects.requireNonNull(createdAt);
-        this.hostnames = Objects.requireNonNull(hostnames);
-        this.lastModifiedAt = Objects.requireNonNull(lastModifiedAt);
-        this.name = Objects.requireNonNull(name);
-        this.state = Objects.requireNonNull(state);
+        this.createdAt = createdAt;
+        this.hostnames = hostnames;
+        this.lastModifiedAt = lastModifiedAt;
+        this.name = name;
+        this.state = state;
     }
 
     /**

@@ -18,7 +18,7 @@ public final class EnvironmentSettingResponse {
     private EnvironmentSettingResponse(
         String name,
         @Nullable String value) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.value = value;
     }
 

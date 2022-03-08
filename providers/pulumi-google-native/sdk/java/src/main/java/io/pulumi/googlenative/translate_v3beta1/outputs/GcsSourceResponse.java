@@ -17,7 +17,7 @@ public final class GcsSourceResponse {
 
     @OutputCustomType.Constructor({"inputUri"})
     private GcsSourceResponse(String inputUri) {
-        this.inputUri = Objects.requireNonNull(inputUri);
+        this.inputUri = inputUri;
     }
 
     /**

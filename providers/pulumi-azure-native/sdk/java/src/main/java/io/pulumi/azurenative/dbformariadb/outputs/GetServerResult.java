@@ -137,12 +137,12 @@ public final class GetServerResult {
         this.administratorLogin = administratorLogin;
         this.earliestRestoreDate = earliestRestoreDate;
         this.fullyQualifiedDomainName = fullyQualifiedDomainName;
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
+        this.id = id;
+        this.location = location;
         this.masterServerId = masterServerId;
         this.minimalTlsVersion = minimalTlsVersion;
-        this.name = Objects.requireNonNull(name);
-        this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
+        this.name = name;
+        this.privateEndpointConnections = privateEndpointConnections;
         this.publicNetworkAccess = publicNetworkAccess;
         this.replicaCapacity = replicaCapacity;
         this.replicationRole = replicationRole;
@@ -150,7 +150,7 @@ public final class GetServerResult {
         this.sslEnforcement = sslEnforcement;
         this.storageProfile = storageProfile;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.userVisibleState = userVisibleState;
         this.version = version;
     }

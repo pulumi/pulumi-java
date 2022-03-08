@@ -17,7 +17,7 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageTelephonyTransferCall
 
     @OutputCustomType.Constructor({"phoneNumber"})
     private GoogleCloudDialogflowCxV3ResponseMessageTelephonyTransferCallResponse(String phoneNumber) {
-        this.phoneNumber = Objects.requireNonNull(phoneNumber);
+        this.phoneNumber = phoneNumber;
     }
 
     /**

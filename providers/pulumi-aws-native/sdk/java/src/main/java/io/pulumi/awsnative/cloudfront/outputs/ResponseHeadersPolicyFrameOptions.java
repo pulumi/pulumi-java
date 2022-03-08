@@ -17,8 +17,8 @@ public final class ResponseHeadersPolicyFrameOptions {
     private ResponseHeadersPolicyFrameOptions(
         String frameOption,
         Boolean override) {
-        this.frameOption = Objects.requireNonNull(frameOption);
-        this.override = Objects.requireNonNull(override);
+        this.frameOption = frameOption;
+        this.override = override;
     }
 
     public String getFrameOption() {

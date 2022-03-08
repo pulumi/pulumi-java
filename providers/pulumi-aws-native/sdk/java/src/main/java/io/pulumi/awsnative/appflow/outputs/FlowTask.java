@@ -50,9 +50,9 @@ public final class FlowTask {
         FlowTaskType taskType) {
         this.connectorOperator = connectorOperator;
         this.destinationField = destinationField;
-        this.sourceFields = Objects.requireNonNull(sourceFields);
+        this.sourceFields = sourceFields;
         this.taskProperties = taskProperties;
-        this.taskType = Objects.requireNonNull(taskType);
+        this.taskType = taskType;
     }
 
     /**

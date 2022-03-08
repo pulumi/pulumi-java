@@ -26,8 +26,8 @@ public final class AuthenticationResponse {
     private AuthenticationResponse(
         List<AuthProviderResponse> providers,
         List<AuthenticationRuleResponse> rules) {
-        this.providers = Objects.requireNonNull(providers);
-        this.rules = Objects.requireNonNull(rules);
+        this.providers = providers;
+        this.rules = rules;
     }
 
     /**

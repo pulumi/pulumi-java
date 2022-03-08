@@ -31,9 +31,9 @@ public final class RuleGroupRuleGroupRulesSourceRulesSourceList {
         String generatedRulesType,
         List<String> targetTypes,
         List<String> targets) {
-        this.generatedRulesType = Objects.requireNonNull(generatedRulesType);
-        this.targetTypes = Objects.requireNonNull(targetTypes);
-        this.targets = Objects.requireNonNull(targets);
+        this.generatedRulesType = generatedRulesType;
+        this.targetTypes = targetTypes;
+        this.targets = targets;
     }
 
     /**

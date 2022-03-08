@@ -17,7 +17,7 @@ public final class SecretResponse {
 
     @OutputCustomType.Constructor({"cloudSecret"})
     private SecretResponse(String cloudSecret) {
-        this.cloudSecret = Objects.requireNonNull(cloudSecret);
+        this.cloudSecret = cloudSecret;
     }
 
     /**

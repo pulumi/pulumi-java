@@ -67,14 +67,14 @@ public final class DeploymentResourcePropertiesResponse {
         String provisioningState,
         @Nullable UserSourceInfoResponse source,
         String status) {
-        this.active = Objects.requireNonNull(active);
-        this.appName = Objects.requireNonNull(appName);
-        this.createdTime = Objects.requireNonNull(createdTime);
+        this.active = active;
+        this.appName = appName;
+        this.createdTime = createdTime;
         this.deploymentSettings = deploymentSettings;
-        this.instances = Objects.requireNonNull(instances);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.instances = instances;
+        this.provisioningState = provisioningState;
         this.source = source;
-        this.status = Objects.requireNonNull(status);
+        this.status = status;
     }
 
     /**

@@ -25,8 +25,8 @@ public final class RouterNatRuleActionResponse {
     private RouterNatRuleActionResponse(
         List<String> sourceNatActiveIps,
         List<String> sourceNatDrainIps) {
-        this.sourceNatActiveIps = Objects.requireNonNull(sourceNatActiveIps);
-        this.sourceNatDrainIps = Objects.requireNonNull(sourceNatDrainIps);
+        this.sourceNatActiveIps = sourceNatActiveIps;
+        this.sourceNatDrainIps = sourceNatDrainIps;
     }
 
     /**

@@ -25,8 +25,8 @@ public final class WeightedPodAffinityTerm {
     private WeightedPodAffinityTerm(
         PodAffinityTerm podAffinityTerm,
         Integer weight) {
-        this.podAffinityTerm = Objects.requireNonNull(podAffinityTerm);
-        this.weight = Objects.requireNonNull(weight);
+        this.podAffinityTerm = podAffinityTerm;
+        this.weight = weight;
     }
 
     /**

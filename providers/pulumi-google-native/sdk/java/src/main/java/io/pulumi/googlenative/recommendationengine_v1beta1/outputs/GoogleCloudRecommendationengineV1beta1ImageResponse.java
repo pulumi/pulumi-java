@@ -31,9 +31,9 @@ public final class GoogleCloudRecommendationengineV1beta1ImageResponse {
         Integer height,
         String uri,
         Integer width) {
-        this.height = Objects.requireNonNull(height);
-        this.uri = Objects.requireNonNull(uri);
-        this.width = Objects.requireNonNull(width);
+        this.height = height;
+        this.uri = uri;
+        this.width = width;
     }
 
     /**

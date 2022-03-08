@@ -66,14 +66,14 @@ public final class PathMatcherResponse {
         String name,
         List<PathRuleResponse> pathRules,
         List<HttpRouteRuleResponse> routeRules) {
-        this.defaultRouteAction = Objects.requireNonNull(defaultRouteAction);
-        this.defaultService = Objects.requireNonNull(defaultService);
-        this.defaultUrlRedirect = Objects.requireNonNull(defaultUrlRedirect);
-        this.description = Objects.requireNonNull(description);
-        this.headerAction = Objects.requireNonNull(headerAction);
-        this.name = Objects.requireNonNull(name);
-        this.pathRules = Objects.requireNonNull(pathRules);
-        this.routeRules = Objects.requireNonNull(routeRules);
+        this.defaultRouteAction = defaultRouteAction;
+        this.defaultService = defaultService;
+        this.defaultUrlRedirect = defaultUrlRedirect;
+        this.description = description;
+        this.headerAction = headerAction;
+        this.name = name;
+        this.pathRules = pathRules;
+        this.routeRules = routeRules;
     }
 
     /**

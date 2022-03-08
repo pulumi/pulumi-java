@@ -39,9 +39,9 @@ public final class SolutionPropertiesResponse {
         @Nullable List<String> referencedResources,
         String workspaceResourceId) {
         this.containedResources = containedResources;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.referencedResources = referencedResources;
-        this.workspaceResourceId = Objects.requireNonNull(workspaceResourceId);
+        this.workspaceResourceId = workspaceResourceId;
     }
 
     /**

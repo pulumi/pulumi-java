@@ -13,7 +13,7 @@ public final class AttestationAuthorityResponse {
 
     @OutputCustomType.Constructor({"hint"})
     private AttestationAuthorityResponse(AttestationAuthorityHintResponse hint) {
-        this.hint = Objects.requireNonNull(hint);
+        this.hint = hint;
     }
 
     public AttestationAuthorityHintResponse getHint() {

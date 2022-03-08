@@ -31,9 +31,9 @@ public final class GetTraceSinkResult {
         String name,
         OutputConfigResponse outputConfig,
         String writerIdentity) {
-        this.name = Objects.requireNonNull(name);
-        this.outputConfig = Objects.requireNonNull(outputConfig);
-        this.writerIdentity = Objects.requireNonNull(writerIdentity);
+        this.name = name;
+        this.outputConfig = outputConfig;
+        this.writerIdentity = writerIdentity;
     }
 
     /**

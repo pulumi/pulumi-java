@@ -40,10 +40,10 @@ public final class SourceContextResponse {
         GerritSourceContextResponse gerrit,
         GitSourceContextResponse git,
         Map<String,String> labels) {
-        this.cloudRepo = Objects.requireNonNull(cloudRepo);
-        this.gerrit = Objects.requireNonNull(gerrit);
-        this.git = Objects.requireNonNull(git);
-        this.labels = Objects.requireNonNull(labels);
+        this.cloudRepo = cloudRepo;
+        this.gerrit = gerrit;
+        this.git = git;
+        this.labels = labels;
     }
 
     /**

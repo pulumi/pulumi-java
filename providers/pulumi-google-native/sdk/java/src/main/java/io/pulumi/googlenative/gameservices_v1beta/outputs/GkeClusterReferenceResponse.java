@@ -17,7 +17,7 @@ public final class GkeClusterReferenceResponse {
 
     @OutputCustomType.Constructor({"cluster"})
     private GkeClusterReferenceResponse(String cluster) {
-        this.cluster = Objects.requireNonNull(cluster);
+        this.cluster = cluster;
     }
 
     /**

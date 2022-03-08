@@ -24,8 +24,8 @@ public final class KeyVersionSpecResponse {
     private KeyVersionSpecResponse(
         String algorithm,
         String cloudKmsKeyVersion) {
-        this.algorithm = Objects.requireNonNull(algorithm);
-        this.cloudKmsKeyVersion = Objects.requireNonNull(cloudKmsKeyVersion);
+        this.algorithm = algorithm;
+        this.cloudKmsKeyVersion = cloudKmsKeyVersion;
     }
 
     /**

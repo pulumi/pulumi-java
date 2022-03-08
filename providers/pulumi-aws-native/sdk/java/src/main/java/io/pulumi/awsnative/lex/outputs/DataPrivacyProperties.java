@@ -13,7 +13,7 @@ public final class DataPrivacyProperties {
 
     @OutputCustomType.Constructor({"childDirected"})
     private DataPrivacyProperties(Boolean childDirected) {
-        this.childDirected = Objects.requireNonNull(childDirected);
+        this.childDirected = childDirected;
     }
 
     public Boolean getChildDirected() {

@@ -71,7 +71,7 @@ public final class JsonFormatResponse {
         this.jsonPathDefinition = jsonPathDefinition;
         this.nestingSeparator = nestingSeparator;
         this.serializer = serializer;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

@@ -24,8 +24,8 @@ public final class SandboxConfigResponse {
     private SandboxConfigResponse(
         String sandboxType,
         String type) {
-        this.sandboxType = Objects.requireNonNull(sandboxType);
-        this.type = Objects.requireNonNull(type);
+        this.sandboxType = sandboxType;
+        this.type = type;
     }
 
     /**

@@ -18,8 +18,8 @@ public final class GetBucketLifecycleRule {
     private GetBucketLifecycleRule(
         List<GetBucketLifecycleRuleAction> actions,
         List<GetBucketLifecycleRuleCondition> conditions) {
-        this.actions = Objects.requireNonNull(actions);
-        this.conditions = Objects.requireNonNull(conditions);
+        this.actions = actions;
+        this.conditions = conditions;
     }
 
     public List<GetBucketLifecycleRuleAction> getActions() {

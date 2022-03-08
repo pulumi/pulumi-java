@@ -62,13 +62,13 @@ public final class JobStepOutputResponse {
         @Nullable String subscriptionId,
         String tableName,
         @Nullable String type) {
-        this.credential = Objects.requireNonNull(credential);
-        this.databaseName = Objects.requireNonNull(databaseName);
+        this.credential = credential;
+        this.databaseName = databaseName;
         this.resourceGroupName = resourceGroupName;
         this.schemaName = schemaName;
-        this.serverName = Objects.requireNonNull(serverName);
+        this.serverName = serverName;
         this.subscriptionId = subscriptionId;
-        this.tableName = Objects.requireNonNull(tableName);
+        this.tableName = tableName;
         this.type = type;
     }
 

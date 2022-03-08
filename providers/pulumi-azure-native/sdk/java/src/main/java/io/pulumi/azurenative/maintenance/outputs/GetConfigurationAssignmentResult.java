@@ -57,13 +57,13 @@ public final class GetConfigurationAssignmentResult {
         @Nullable String resourceId,
         SystemDataResponse systemData,
         String type) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.location = location;
         this.maintenanceConfigurationId = maintenanceConfigurationId;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.resourceId = resourceId;
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

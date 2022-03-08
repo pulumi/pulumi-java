@@ -48,7 +48,7 @@ public final class TableTimePartitioning {
         this.expirationMs = expirationMs;
         this.field = field;
         this.requirePartitionFilter = requirePartitionFilter;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

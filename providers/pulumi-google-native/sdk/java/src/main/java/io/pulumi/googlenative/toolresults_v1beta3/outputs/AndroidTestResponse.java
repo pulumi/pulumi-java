@@ -46,11 +46,11 @@ public final class AndroidTestResponse {
         AndroidRoboTestResponse androidRoboTest,
         AndroidTestLoopResponse androidTestLoop,
         DurationResponse testTimeout) {
-        this.androidAppInfo = Objects.requireNonNull(androidAppInfo);
-        this.androidInstrumentationTest = Objects.requireNonNull(androidInstrumentationTest);
-        this.androidRoboTest = Objects.requireNonNull(androidRoboTest);
-        this.androidTestLoop = Objects.requireNonNull(androidTestLoop);
-        this.testTimeout = Objects.requireNonNull(testTimeout);
+        this.androidAppInfo = androidAppInfo;
+        this.androidInstrumentationTest = androidInstrumentationTest;
+        this.androidRoboTest = androidRoboTest;
+        this.androidTestLoop = androidTestLoop;
+        this.testTimeout = testTimeout;
     }
 
     /**

@@ -23,7 +23,7 @@ public final class JobValidationConfiguration {
     private JobValidationConfiguration(
         String rulesetArn,
         @Nullable JobValidationMode validationMode) {
-        this.rulesetArn = Objects.requireNonNull(rulesetArn);
+        this.rulesetArn = rulesetArn;
         this.validationMode = validationMode;
     }
 

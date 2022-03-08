@@ -25,8 +25,8 @@ public final class XssMatchSetXssMatchTuple {
     private XssMatchSetXssMatchTuple(
         XssMatchSetXssMatchTupleFieldToMatch fieldToMatch,
         String textTransformation) {
-        this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
-        this.textTransformation = Objects.requireNonNull(textTransformation);
+        this.fieldToMatch = fieldToMatch;
+        this.textTransformation = textTransformation;
     }
 
     /**

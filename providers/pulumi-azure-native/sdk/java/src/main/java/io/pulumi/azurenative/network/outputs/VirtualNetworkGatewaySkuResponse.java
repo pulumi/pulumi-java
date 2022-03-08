@@ -33,7 +33,7 @@ public final class VirtualNetworkGatewaySkuResponse {
         Integer capacity,
         @Nullable String name,
         @Nullable String tier) {
-        this.capacity = Objects.requireNonNull(capacity);
+        this.capacity = capacity;
         this.name = name;
         this.tier = tier;
     }

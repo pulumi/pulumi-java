@@ -57,13 +57,13 @@ public final class GetWaiterResult {
         String name,
         EndConditionResponse success,
         String timeout) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.done = Objects.requireNonNull(done);
-        this.error = Objects.requireNonNull(error);
-        this.failure = Objects.requireNonNull(failure);
-        this.name = Objects.requireNonNull(name);
-        this.success = Objects.requireNonNull(success);
-        this.timeout = Objects.requireNonNull(timeout);
+        this.createTime = createTime;
+        this.done = done;
+        this.error = error;
+        this.failure = failure;
+        this.name = name;
+        this.success = success;
+        this.timeout = timeout;
     }
 
     /**

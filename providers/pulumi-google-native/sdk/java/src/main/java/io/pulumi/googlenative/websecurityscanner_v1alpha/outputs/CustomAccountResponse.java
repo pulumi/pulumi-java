@@ -30,9 +30,9 @@ public final class CustomAccountResponse {
         String loginUrl,
         String password,
         String username) {
-        this.loginUrl = Objects.requireNonNull(loginUrl);
-        this.password = Objects.requireNonNull(password);
-        this.username = Objects.requireNonNull(username);
+        this.loginUrl = loginUrl;
+        this.password = password;
+        this.username = username;
     }
 
     /**

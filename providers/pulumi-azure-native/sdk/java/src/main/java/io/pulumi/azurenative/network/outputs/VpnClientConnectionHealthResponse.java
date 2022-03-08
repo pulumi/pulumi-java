@@ -42,8 +42,8 @@ public final class VpnClientConnectionHealthResponse {
         Double totalIngressBytesTransferred,
         @Nullable Integer vpnClientConnectionsCount) {
         this.allocatedIpAddresses = allocatedIpAddresses;
-        this.totalEgressBytesTransferred = Objects.requireNonNull(totalEgressBytesTransferred);
-        this.totalIngressBytesTransferred = Objects.requireNonNull(totalIngressBytesTransferred);
+        this.totalEgressBytesTransferred = totalEgressBytesTransferred;
+        this.totalIngressBytesTransferred = totalIngressBytesTransferred;
         this.vpnClientConnectionsCount = vpnClientConnectionsCount;
     }
 

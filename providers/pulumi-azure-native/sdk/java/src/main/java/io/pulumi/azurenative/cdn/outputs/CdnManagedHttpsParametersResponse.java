@@ -40,10 +40,10 @@ public final class CdnManagedHttpsParametersResponse {
         CdnCertificateSourceParametersResponse certificateSourceParameters,
         @Nullable String minimumTlsVersion,
         String protocolType) {
-        this.certificateSource = Objects.requireNonNull(certificateSource);
-        this.certificateSourceParameters = Objects.requireNonNull(certificateSourceParameters);
+        this.certificateSource = certificateSource;
+        this.certificateSourceParameters = certificateSourceParameters;
         this.minimumTlsVersion = minimumTlsVersion;
-        this.protocolType = Objects.requireNonNull(protocolType);
+        this.protocolType = protocolType;
     }
 
     /**

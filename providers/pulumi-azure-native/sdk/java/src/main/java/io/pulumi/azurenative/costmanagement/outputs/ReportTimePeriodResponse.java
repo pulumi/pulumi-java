@@ -24,8 +24,8 @@ public final class ReportTimePeriodResponse {
     private ReportTimePeriodResponse(
         String from,
         String to) {
-        this.from = Objects.requireNonNull(from);
-        this.to = Objects.requireNonNull(to);
+        this.from = from;
+        this.to = to;
     }
 
     /**

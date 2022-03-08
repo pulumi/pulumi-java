@@ -26,8 +26,8 @@ public final class GetNodeGroupResource {
     private GetNodeGroupResource(
         List<GetNodeGroupResourceAutoscalingGroup> autoscalingGroups,
         String remoteAccessSecurityGroupId) {
-        this.autoscalingGroups = Objects.requireNonNull(autoscalingGroups);
-        this.remoteAccessSecurityGroupId = Objects.requireNonNull(remoteAccessSecurityGroupId);
+        this.autoscalingGroups = autoscalingGroups;
+        this.remoteAccessSecurityGroupId = remoteAccessSecurityGroupId;
     }
 
     /**

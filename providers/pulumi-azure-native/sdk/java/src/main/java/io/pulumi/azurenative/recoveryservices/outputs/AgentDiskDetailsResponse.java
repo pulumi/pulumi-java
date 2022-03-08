@@ -44,11 +44,11 @@ public final class AgentDiskDetailsResponse {
         String diskName,
         String isOSDisk,
         Integer lunId) {
-        this.capacityInBytes = Objects.requireNonNull(capacityInBytes);
-        this.diskId = Objects.requireNonNull(diskId);
-        this.diskName = Objects.requireNonNull(diskName);
-        this.isOSDisk = Objects.requireNonNull(isOSDisk);
-        this.lunId = Objects.requireNonNull(lunId);
+        this.capacityInBytes = capacityInBytes;
+        this.diskId = diskId;
+        this.diskName = diskName;
+        this.isOSDisk = isOSDisk;
+        this.lunId = lunId;
     }
 
     /**

@@ -33,10 +33,10 @@ public final class DnsKeySpecResponse {
         Integer keyLength,
         String keyType,
         String kind) {
-        this.algorithm = Objects.requireNonNull(algorithm);
-        this.keyLength = Objects.requireNonNull(keyLength);
-        this.keyType = Objects.requireNonNull(keyType);
-        this.kind = Objects.requireNonNull(kind);
+        this.algorithm = algorithm;
+        this.keyLength = keyLength;
+        this.keyType = keyType;
+        this.kind = kind;
     }
 
     /**

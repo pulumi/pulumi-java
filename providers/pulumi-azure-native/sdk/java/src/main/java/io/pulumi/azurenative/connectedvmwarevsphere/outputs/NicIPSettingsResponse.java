@@ -68,9 +68,9 @@ public final class NicIPSettingsResponse {
         this.dnsServers = dnsServers;
         this.gateway = gateway;
         this.ipAddress = ipAddress;
-        this.ipAddressInfo = Objects.requireNonNull(ipAddressInfo);
-        this.primaryWinsServer = Objects.requireNonNull(primaryWinsServer);
-        this.secondaryWinsServer = Objects.requireNonNull(secondaryWinsServer);
+        this.ipAddressInfo = ipAddressInfo;
+        this.primaryWinsServer = primaryWinsServer;
+        this.secondaryWinsServer = secondaryWinsServer;
         this.subnetMask = subnetMask;
     }
 

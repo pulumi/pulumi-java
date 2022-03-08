@@ -40,10 +40,10 @@ public final class GoogleCloudApigeeV1OperationConfigResponse {
         List<GoogleCloudApigeeV1AttributeResponse> attributes,
         List<GoogleCloudApigeeV1OperationResponse> operations,
         GoogleCloudApigeeV1QuotaResponse quota) {
-        this.apiSource = Objects.requireNonNull(apiSource);
-        this.attributes = Objects.requireNonNull(attributes);
-        this.operations = Objects.requireNonNull(operations);
-        this.quota = Objects.requireNonNull(quota);
+        this.apiSource = apiSource;
+        this.attributes = attributes;
+        this.operations = operations;
+        this.quota = quota;
     }
 
     /**

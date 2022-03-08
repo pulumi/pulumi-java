@@ -30,9 +30,9 @@ public final class TemplateSpecVersionInfoResponse {
         String description,
         String timeCreated,
         String timeModified) {
-        this.description = Objects.requireNonNull(description);
-        this.timeCreated = Objects.requireNonNull(timeCreated);
-        this.timeModified = Objects.requireNonNull(timeModified);
+        this.description = description;
+        this.timeCreated = timeCreated;
+        this.timeModified = timeModified;
     }
 
     /**

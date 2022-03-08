@@ -82,7 +82,7 @@ public final class RedisCommonPropertiesResponseRedisConfiguration {
         @Nullable String rdbStorageConnectionString) {
         this.aofStorageConnectionString0 = aofStorageConnectionString0;
         this.aofStorageConnectionString1 = aofStorageConnectionString1;
-        this.maxclients = Objects.requireNonNull(maxclients);
+        this.maxclients = maxclients;
         this.maxfragmentationmemoryReserved = maxfragmentationmemoryReserved;
         this.maxmemoryDelta = maxmemoryDelta;
         this.maxmemoryPolicy = maxmemoryPolicy;

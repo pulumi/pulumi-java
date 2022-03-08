@@ -17,7 +17,7 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFie
 
     @OutputCustomType.Constructor({"name"})
     private PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldField(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

@@ -42,7 +42,7 @@ public final class StaticDeliveryAttributeMappingResponse {
         @Nullable String value) {
         this.isSecret = isSecret;
         this.name = name;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.value = value;
     }
 

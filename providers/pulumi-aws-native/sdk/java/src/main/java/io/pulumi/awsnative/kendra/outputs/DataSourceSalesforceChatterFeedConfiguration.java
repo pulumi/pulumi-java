@@ -25,7 +25,7 @@ public final class DataSourceSalesforceChatterFeedConfiguration {
         @Nullable String documentTitleFieldName,
         @Nullable List<DataSourceToIndexFieldMapping> fieldMappings,
         @Nullable List<DataSourceSalesforceChatterFeedIncludeFilterType> includeFilterTypes) {
-        this.documentDataFieldName = Objects.requireNonNull(documentDataFieldName);
+        this.documentDataFieldName = documentDataFieldName;
         this.documentTitleFieldName = documentTitleFieldName;
         this.fieldMappings = fieldMappings;
         this.includeFilterTypes = includeFilterTypes;

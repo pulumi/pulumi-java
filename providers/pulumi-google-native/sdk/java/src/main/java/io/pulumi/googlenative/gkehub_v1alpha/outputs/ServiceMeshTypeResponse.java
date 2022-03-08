@@ -24,8 +24,8 @@ public final class ServiceMeshTypeResponse {
     private ServiceMeshTypeResponse(
         String code,
         String displayName) {
-        this.code = Objects.requireNonNull(code);
-        this.displayName = Objects.requireNonNull(displayName);
+        this.code = code;
+        this.displayName = displayName;
     }
 
     /**

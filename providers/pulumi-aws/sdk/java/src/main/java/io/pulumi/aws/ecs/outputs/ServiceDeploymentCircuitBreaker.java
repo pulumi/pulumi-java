@@ -24,8 +24,8 @@ public final class ServiceDeploymentCircuitBreaker {
     private ServiceDeploymentCircuitBreaker(
         Boolean enable,
         Boolean rollback) {
-        this.enable = Objects.requireNonNull(enable);
-        this.rollback = Objects.requireNonNull(rollback);
+        this.enable = enable;
+        this.rollback = rollback;
     }
 
     /**

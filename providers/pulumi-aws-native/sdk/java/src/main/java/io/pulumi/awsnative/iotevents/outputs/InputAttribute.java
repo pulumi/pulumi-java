@@ -19,7 +19,7 @@ public final class InputAttribute {
 
     @OutputCustomType.Constructor({"jsonPath"})
     private InputAttribute(String jsonPath) {
-        this.jsonPath = Objects.requireNonNull(jsonPath);
+        this.jsonPath = jsonPath;
     }
 
     /**

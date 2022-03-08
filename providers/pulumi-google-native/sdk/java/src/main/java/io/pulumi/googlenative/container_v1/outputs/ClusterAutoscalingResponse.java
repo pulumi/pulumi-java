@@ -46,11 +46,11 @@ public final class ClusterAutoscalingResponse {
         String autoscalingProfile,
         Boolean enableNodeAutoprovisioning,
         List<ResourceLimitResponse> resourceLimits) {
-        this.autoprovisioningLocations = Objects.requireNonNull(autoprovisioningLocations);
-        this.autoprovisioningNodePoolDefaults = Objects.requireNonNull(autoprovisioningNodePoolDefaults);
-        this.autoscalingProfile = Objects.requireNonNull(autoscalingProfile);
-        this.enableNodeAutoprovisioning = Objects.requireNonNull(enableNodeAutoprovisioning);
-        this.resourceLimits = Objects.requireNonNull(resourceLimits);
+        this.autoprovisioningLocations = autoprovisioningLocations;
+        this.autoprovisioningNodePoolDefaults = autoprovisioningNodePoolDefaults;
+        this.autoscalingProfile = autoscalingProfile;
+        this.enableNodeAutoprovisioning = enableNodeAutoprovisioning;
+        this.resourceLimits = resourceLimits;
     }
 
     /**

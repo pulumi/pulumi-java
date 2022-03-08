@@ -27,8 +27,8 @@ public final class LogToMetricActionResponse {
     private LogToMetricActionResponse(
         List<CriteriaResponse> criteria,
         String odataType) {
-        this.criteria = Objects.requireNonNull(criteria);
-        this.odataType = Objects.requireNonNull(odataType);
+        this.criteria = criteria;
+        this.odataType = odataType;
     }
 
     /**

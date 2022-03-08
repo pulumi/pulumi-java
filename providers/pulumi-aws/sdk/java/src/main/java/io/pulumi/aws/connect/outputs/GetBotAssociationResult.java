@@ -23,9 +23,9 @@ public final class GetBotAssociationResult {
         String id,
         String instanceId,
         GetBotAssociationLexBot lexBot) {
-        this.id = Objects.requireNonNull(id);
-        this.instanceId = Objects.requireNonNull(instanceId);
-        this.lexBot = Objects.requireNonNull(lexBot);
+        this.id = id;
+        this.instanceId = instanceId;
+        this.lexBot = lexBot;
     }
 
     /**

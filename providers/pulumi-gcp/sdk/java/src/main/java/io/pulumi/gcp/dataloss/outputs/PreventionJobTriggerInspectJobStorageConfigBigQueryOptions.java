@@ -18,7 +18,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigBigQueryOptions {
 
     @OutputCustomType.Constructor({"tableReference"})
     private PreventionJobTriggerInspectJobStorageConfigBigQueryOptions(PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReference tableReference) {
-        this.tableReference = Objects.requireNonNull(tableReference);
+        this.tableReference = tableReference;
     }
 
     /**

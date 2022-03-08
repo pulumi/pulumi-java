@@ -44,11 +44,11 @@ public final class RequiredTrafficResponse {
         List<String> ips,
         Integer port,
         String protocol) {
-        this.direction = Objects.requireNonNull(direction);
-        this.fqdns = Objects.requireNonNull(fqdns);
-        this.ips = Objects.requireNonNull(ips);
-        this.port = Objects.requireNonNull(port);
-        this.protocol = Objects.requireNonNull(protocol);
+        this.direction = direction;
+        this.fqdns = fqdns;
+        this.ips = ips;
+        this.port = port;
+        this.protocol = protocol;
     }
 
     /**

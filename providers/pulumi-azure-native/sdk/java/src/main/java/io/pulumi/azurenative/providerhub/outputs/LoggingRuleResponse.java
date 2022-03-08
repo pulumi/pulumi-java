@@ -23,9 +23,9 @@ public final class LoggingRuleResponse {
         String detailLevel,
         String direction,
         @Nullable LoggingRuleResponseHiddenPropertyPaths hiddenPropertyPaths) {
-        this.action = Objects.requireNonNull(action);
-        this.detailLevel = Objects.requireNonNull(detailLevel);
-        this.direction = Objects.requireNonNull(direction);
+        this.action = action;
+        this.detailLevel = detailLevel;
+        this.direction = direction;
         this.hiddenPropertyPaths = hiddenPropertyPaths;
     }
 

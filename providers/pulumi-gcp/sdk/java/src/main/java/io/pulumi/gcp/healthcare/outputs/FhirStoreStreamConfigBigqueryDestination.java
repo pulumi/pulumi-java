@@ -26,8 +26,8 @@ public final class FhirStoreStreamConfigBigqueryDestination {
     private FhirStoreStreamConfigBigqueryDestination(
         String datasetUri,
         FhirStoreStreamConfigBigqueryDestinationSchemaConfig schemaConfig) {
-        this.datasetUri = Objects.requireNonNull(datasetUri);
-        this.schemaConfig = Objects.requireNonNull(schemaConfig);
+        this.datasetUri = datasetUri;
+        this.schemaConfig = schemaConfig;
     }
 
     /**

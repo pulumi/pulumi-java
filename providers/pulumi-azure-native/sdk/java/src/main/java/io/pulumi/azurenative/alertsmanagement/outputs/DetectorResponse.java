@@ -54,7 +54,7 @@ public final class DetectorResponse {
         @Nullable Map<String,Object> parameters,
         @Nullable List<String> supportedResourceTypes) {
         this.description = description;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.imagePaths = imagePaths;
         this.name = name;
         this.parameters = parameters;

@@ -41,10 +41,10 @@ public final class GetNetblockIPRangesResult {
         List<String> cidrBlocksIpv6s,
         String id,
         @Nullable String rangeType) {
-        this.cidrBlocks = Objects.requireNonNull(cidrBlocks);
-        this.cidrBlocksIpv4s = Objects.requireNonNull(cidrBlocksIpv4s);
-        this.cidrBlocksIpv6s = Objects.requireNonNull(cidrBlocksIpv6s);
-        this.id = Objects.requireNonNull(id);
+        this.cidrBlocks = cidrBlocks;
+        this.cidrBlocksIpv4s = cidrBlocksIpv4s;
+        this.cidrBlocksIpv6s = cidrBlocksIpv6s;
+        this.id = id;
         this.rangeType = rangeType;
     }
 

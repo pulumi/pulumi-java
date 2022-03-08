@@ -14,7 +14,7 @@ public final class GetOriginRequestPolicyCookiesConfigCookie {
 
     @OutputCustomType.Constructor({"items"})
     private GetOriginRequestPolicyCookiesConfigCookie(List<String> items) {
-        this.items = Objects.requireNonNull(items);
+        this.items = items;
     }
 
     public List<String> getItems() {

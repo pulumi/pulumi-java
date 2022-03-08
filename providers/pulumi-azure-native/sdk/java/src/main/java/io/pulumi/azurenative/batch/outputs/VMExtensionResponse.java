@@ -46,12 +46,12 @@ public final class VMExtensionResponse {
         String type,
         @Nullable String typeHandlerVersion) {
         this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.protectedSettings = protectedSettings;
         this.provisionAfterExtensions = provisionAfterExtensions;
-        this.publisher = Objects.requireNonNull(publisher);
+        this.publisher = publisher;
         this.settings = settings;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.typeHandlerVersion = typeHandlerVersion;
     }
 

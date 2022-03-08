@@ -132,25 +132,25 @@ public final class GetAccessReviewHistoryDefinitionByIdResult {
         String status,
         String type,
         String userPrincipalName) {
-        this.createdDateTime = Objects.requireNonNull(createdDateTime);
+        this.createdDateTime = createdDateTime;
         this.decisions = decisions;
         this.displayName = displayName;
         this.endDate = endDate;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.instances = instances;
         this.interval = interval;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.numberOfOccurrences = numberOfOccurrences;
-        this.principalId = Objects.requireNonNull(principalId);
-        this.principalName = Objects.requireNonNull(principalName);
-        this.principalType = Objects.requireNonNull(principalType);
-        this.reviewHistoryPeriodEndDateTime = Objects.requireNonNull(reviewHistoryPeriodEndDateTime);
-        this.reviewHistoryPeriodStartDateTime = Objects.requireNonNull(reviewHistoryPeriodStartDateTime);
+        this.principalId = principalId;
+        this.principalName = principalName;
+        this.principalType = principalType;
+        this.reviewHistoryPeriodEndDateTime = reviewHistoryPeriodEndDateTime;
+        this.reviewHistoryPeriodStartDateTime = reviewHistoryPeriodStartDateTime;
         this.scopes = scopes;
         this.startDate = startDate;
-        this.status = Objects.requireNonNull(status);
-        this.type = Objects.requireNonNull(type);
-        this.userPrincipalName = Objects.requireNonNull(userPrincipalName);
+        this.status = status;
+        this.type = type;
+        this.userPrincipalName = userPrincipalName;
     }
 
     /**

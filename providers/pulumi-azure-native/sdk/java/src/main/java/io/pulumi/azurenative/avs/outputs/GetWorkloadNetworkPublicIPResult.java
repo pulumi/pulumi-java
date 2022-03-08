@@ -58,12 +58,12 @@ public final class GetWorkloadNetworkPublicIPResult {
         String publicIPBlock,
         String type) {
         this.displayName = displayName;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.numberOfPublicIPs = numberOfPublicIPs;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.publicIPBlock = Objects.requireNonNull(publicIPBlock);
-        this.type = Objects.requireNonNull(type);
+        this.provisioningState = provisioningState;
+        this.publicIPBlock = publicIPBlock;
+        this.type = type;
     }
 
     /**

@@ -25,8 +25,8 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfig {
     private FieldLevelEncryptionConfigContentTypeProfileConfig(
         FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfiles contentTypeProfiles,
         Boolean forwardWhenContentTypeIsUnknown) {
-        this.contentTypeProfiles = Objects.requireNonNull(contentTypeProfiles);
-        this.forwardWhenContentTypeIsUnknown = Objects.requireNonNull(forwardWhenContentTypeIsUnknown);
+        this.contentTypeProfiles = contentTypeProfiles;
+        this.forwardWhenContentTypeIsUnknown = forwardWhenContentTypeIsUnknown;
     }
 
     /**

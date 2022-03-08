@@ -53,14 +53,14 @@ public final class GetServiceResult {
         String schedulingStrategy,
         String serviceName,
         String taskDefinition) {
-        this.arn = Objects.requireNonNull(arn);
-        this.clusterArn = Objects.requireNonNull(clusterArn);
-        this.desiredCount = Objects.requireNonNull(desiredCount);
-        this.id = Objects.requireNonNull(id);
-        this.launchType = Objects.requireNonNull(launchType);
-        this.schedulingStrategy = Objects.requireNonNull(schedulingStrategy);
-        this.serviceName = Objects.requireNonNull(serviceName);
-        this.taskDefinition = Objects.requireNonNull(taskDefinition);
+        this.arn = arn;
+        this.clusterArn = clusterArn;
+        this.desiredCount = desiredCount;
+        this.id = id;
+        this.launchType = launchType;
+        this.schedulingStrategy = schedulingStrategy;
+        this.serviceName = serviceName;
+        this.taskDefinition = taskDefinition;
     }
 
     /**

@@ -39,10 +39,10 @@ public final class OSPolicyResourceFileResponse {
         OSPolicyResourceFileGcsResponse gcs,
         String localPath,
         OSPolicyResourceFileRemoteResponse remote) {
-        this.allowInsecure = Objects.requireNonNull(allowInsecure);
-        this.gcs = Objects.requireNonNull(gcs);
-        this.localPath = Objects.requireNonNull(localPath);
-        this.remote = Objects.requireNonNull(remote);
+        this.allowInsecure = allowInsecure;
+        this.gcs = gcs;
+        this.localPath = localPath;
+        this.remote = remote;
     }
 
     /**

@@ -22,8 +22,8 @@ public final class TopicRuleRepublishAction {
         String roleArn,
         String topic) {
         this.qos = qos;
-        this.roleArn = Objects.requireNonNull(roleArn);
-        this.topic = Objects.requireNonNull(topic);
+        this.roleArn = roleArn;
+        this.topic = topic;
     }
 
     public Optional<Integer> getQos() {

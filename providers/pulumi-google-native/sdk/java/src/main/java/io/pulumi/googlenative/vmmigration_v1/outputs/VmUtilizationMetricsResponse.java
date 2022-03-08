@@ -61,14 +61,14 @@ public final class VmUtilizationMetricsResponse {
         Integer memoryMaxPercent,
         String networkThroughputAverageKbps,
         String networkThroughputMaxKbps) {
-        this.cpuAveragePercent = Objects.requireNonNull(cpuAveragePercent);
-        this.cpuMaxPercent = Objects.requireNonNull(cpuMaxPercent);
-        this.diskIoRateAverageKbps = Objects.requireNonNull(diskIoRateAverageKbps);
-        this.diskIoRateMaxKbps = Objects.requireNonNull(diskIoRateMaxKbps);
-        this.memoryAveragePercent = Objects.requireNonNull(memoryAveragePercent);
-        this.memoryMaxPercent = Objects.requireNonNull(memoryMaxPercent);
-        this.networkThroughputAverageKbps = Objects.requireNonNull(networkThroughputAverageKbps);
-        this.networkThroughputMaxKbps = Objects.requireNonNull(networkThroughputMaxKbps);
+        this.cpuAveragePercent = cpuAveragePercent;
+        this.cpuMaxPercent = cpuMaxPercent;
+        this.diskIoRateAverageKbps = diskIoRateAverageKbps;
+        this.diskIoRateMaxKbps = diskIoRateMaxKbps;
+        this.memoryAveragePercent = memoryAveragePercent;
+        this.memoryMaxPercent = memoryMaxPercent;
+        this.networkThroughputAverageKbps = networkThroughputAverageKbps;
+        this.networkThroughputMaxKbps = networkThroughputMaxKbps;
     }
 
     /**

@@ -43,11 +43,11 @@ public final class GetIotHubResourceEventHubConsumerGroupResult {
         String name,
         Map<String,String> properties,
         String type) {
-        this.etag = Objects.requireNonNull(etag);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.properties = Objects.requireNonNull(properties);
-        this.type = Objects.requireNonNull(type);
+        this.etag = etag;
+        this.id = id;
+        this.name = name;
+        this.properties = properties;
+        this.type = type;
     }
 
     /**

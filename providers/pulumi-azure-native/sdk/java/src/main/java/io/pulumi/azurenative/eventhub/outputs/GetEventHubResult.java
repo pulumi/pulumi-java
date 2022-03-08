@@ -78,15 +78,15 @@ public final class GetEventHubResult {
         String type,
         String updatedAt) {
         this.captureDescription = captureDescription;
-        this.createdAt = Objects.requireNonNull(createdAt);
-        this.id = Objects.requireNonNull(id);
+        this.createdAt = createdAt;
+        this.id = id;
         this.messageRetentionInDays = messageRetentionInDays;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.partitionCount = partitionCount;
-        this.partitionIds = Objects.requireNonNull(partitionIds);
+        this.partitionIds = partitionIds;
         this.status = status;
-        this.type = Objects.requireNonNull(type);
-        this.updatedAt = Objects.requireNonNull(updatedAt);
+        this.type = type;
+        this.updatedAt = updatedAt;
     }
 
     /**

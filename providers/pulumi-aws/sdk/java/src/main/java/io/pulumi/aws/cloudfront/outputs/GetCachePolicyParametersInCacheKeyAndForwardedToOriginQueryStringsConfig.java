@@ -26,8 +26,8 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginQuerySt
     private GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfig(
         String queryStringBehavior,
         List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryString> queryStrings) {
-        this.queryStringBehavior = Objects.requireNonNull(queryStringBehavior);
-        this.queryStrings = Objects.requireNonNull(queryStrings);
+        this.queryStringBehavior = queryStringBehavior;
+        this.queryStrings = queryStrings;
     }
 
     /**

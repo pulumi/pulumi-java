@@ -45,11 +45,11 @@ public final class GetKeyResult {
         @Nullable String keyVaultUrl,
         String name,
         String type) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.isActiveCMK = isActiveCMK;
         this.keyVaultUrl = keyVaultUrl;
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.name = name;
+        this.type = type;
     }
 
     /**

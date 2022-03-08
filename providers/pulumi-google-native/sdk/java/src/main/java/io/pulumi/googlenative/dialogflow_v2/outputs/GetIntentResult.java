@@ -140,26 +140,26 @@ public final class GetIntentResult {
         String rootFollowupIntentName,
         List<GoogleCloudDialogflowV2IntentTrainingPhraseResponse> trainingPhrases,
         String webhookState) {
-        this.action = Objects.requireNonNull(action);
-        this.defaultResponsePlatforms = Objects.requireNonNull(defaultResponsePlatforms);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.endInteraction = Objects.requireNonNull(endInteraction);
-        this.events = Objects.requireNonNull(events);
-        this.followupIntentInfo = Objects.requireNonNull(followupIntentInfo);
-        this.inputContextNames = Objects.requireNonNull(inputContextNames);
-        this.isFallback = Objects.requireNonNull(isFallback);
-        this.liveAgentHandoff = Objects.requireNonNull(liveAgentHandoff);
-        this.messages = Objects.requireNonNull(messages);
-        this.mlDisabled = Objects.requireNonNull(mlDisabled);
-        this.name = Objects.requireNonNull(name);
-        this.outputContexts = Objects.requireNonNull(outputContexts);
-        this.parameters = Objects.requireNonNull(parameters);
-        this.parentFollowupIntentName = Objects.requireNonNull(parentFollowupIntentName);
-        this.priority = Objects.requireNonNull(priority);
-        this.resetContexts = Objects.requireNonNull(resetContexts);
-        this.rootFollowupIntentName = Objects.requireNonNull(rootFollowupIntentName);
-        this.trainingPhrases = Objects.requireNonNull(trainingPhrases);
-        this.webhookState = Objects.requireNonNull(webhookState);
+        this.action = action;
+        this.defaultResponsePlatforms = defaultResponsePlatforms;
+        this.displayName = displayName;
+        this.endInteraction = endInteraction;
+        this.events = events;
+        this.followupIntentInfo = followupIntentInfo;
+        this.inputContextNames = inputContextNames;
+        this.isFallback = isFallback;
+        this.liveAgentHandoff = liveAgentHandoff;
+        this.messages = messages;
+        this.mlDisabled = mlDisabled;
+        this.name = name;
+        this.outputContexts = outputContexts;
+        this.parameters = parameters;
+        this.parentFollowupIntentName = parentFollowupIntentName;
+        this.priority = priority;
+        this.resetContexts = resetContexts;
+        this.rootFollowupIntentName = rootFollowupIntentName;
+        this.trainingPhrases = trainingPhrases;
+        this.webhookState = webhookState;
     }
 
     /**

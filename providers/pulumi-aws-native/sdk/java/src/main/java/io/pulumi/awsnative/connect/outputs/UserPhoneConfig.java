@@ -28,7 +28,7 @@ public final class UserPhoneConfig {
         this.afterContactWorkTimeLimit = afterContactWorkTimeLimit;
         this.autoAccept = autoAccept;
         this.deskPhoneNumber = deskPhoneNumber;
-        this.phoneType = Objects.requireNonNull(phoneType);
+        this.phoneType = phoneType;
     }
 
     public Optional<Integer> getAfterContactWorkTimeLimit() {

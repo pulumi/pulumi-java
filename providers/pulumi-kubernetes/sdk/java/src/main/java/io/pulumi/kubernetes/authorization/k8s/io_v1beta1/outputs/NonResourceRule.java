@@ -27,7 +27,7 @@ public final class NonResourceRule {
         @Nullable List<String> nonResourceURLs,
         List<String> verbs) {
         this.nonResourceURLs = nonResourceURLs;
-        this.verbs = Objects.requireNonNull(verbs);
+        this.verbs = verbs;
     }
 
     /**

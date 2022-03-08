@@ -17,7 +17,7 @@ public final class KalmConfigResponse {
 
     @OutputCustomType.Constructor({"enabled"})
     private KalmConfigResponse(Boolean enabled) {
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
     }
 
     /**

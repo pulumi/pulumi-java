@@ -66,15 +66,15 @@ public final class VpnTunnelInfoResponse {
         String sourceGateway,
         String sourceGatewayIp,
         String uri) {
-        this.displayName = Objects.requireNonNull(displayName);
-        this.networkUri = Objects.requireNonNull(networkUri);
-        this.region = Objects.requireNonNull(region);
-        this.remoteGateway = Objects.requireNonNull(remoteGateway);
-        this.remoteGatewayIp = Objects.requireNonNull(remoteGatewayIp);
-        this.routingType = Objects.requireNonNull(routingType);
-        this.sourceGateway = Objects.requireNonNull(sourceGateway);
-        this.sourceGatewayIp = Objects.requireNonNull(sourceGatewayIp);
-        this.uri = Objects.requireNonNull(uri);
+        this.displayName = displayName;
+        this.networkUri = networkUri;
+        this.region = region;
+        this.remoteGateway = remoteGateway;
+        this.remoteGatewayIp = remoteGatewayIp;
+        this.routingType = routingType;
+        this.sourceGateway = sourceGateway;
+        this.sourceGatewayIp = sourceGatewayIp;
+        this.uri = uri;
     }
 
     /**

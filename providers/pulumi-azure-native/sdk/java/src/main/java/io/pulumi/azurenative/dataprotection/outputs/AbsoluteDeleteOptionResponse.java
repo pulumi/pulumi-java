@@ -25,8 +25,8 @@ public final class AbsoluteDeleteOptionResponse {
     private AbsoluteDeleteOptionResponse(
         String duration,
         String objectType) {
-        this.duration = Objects.requireNonNull(duration);
-        this.objectType = Objects.requireNonNull(objectType);
+        this.duration = duration;
+        this.objectType = objectType;
     }
 
     /**

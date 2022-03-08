@@ -24,8 +24,8 @@ public final class SchemaSettingsResponse {
     private SchemaSettingsResponse(
         String encoding,
         String schema) {
-        this.encoding = Objects.requireNonNull(encoding);
-        this.schema = Objects.requireNonNull(schema);
+        this.encoding = encoding;
+        this.schema = schema;
     }
 
     /**

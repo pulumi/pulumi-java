@@ -25,8 +25,8 @@ public final class ApplicationApplicationConfigurationEnvironmentPropertiesPrope
     private ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroup(
         String propertyGroupId,
         Map<String,String> propertyMap) {
-        this.propertyGroupId = Objects.requireNonNull(propertyGroupId);
-        this.propertyMap = Objects.requireNonNull(propertyMap);
+        this.propertyGroupId = propertyGroupId;
+        this.propertyMap = propertyMap;
     }
 
     /**

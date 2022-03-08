@@ -23,9 +23,9 @@ public final class FutureReservationTimeWindowResponse {
         DurationResponse duration,
         String endTime,
         String startTime) {
-        this.duration = Objects.requireNonNull(duration);
-        this.endTime = Objects.requireNonNull(endTime);
-        this.startTime = Objects.requireNonNull(startTime);
+        this.duration = duration;
+        this.endTime = endTime;
+        this.startTime = startTime;
     }
 
     public DurationResponse getDuration() {

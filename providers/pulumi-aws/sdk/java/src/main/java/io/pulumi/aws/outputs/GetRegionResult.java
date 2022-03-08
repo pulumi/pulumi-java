@@ -36,10 +36,10 @@ public final class GetRegionResult {
         String endpoint,
         String id,
         String name) {
-        this.description = Objects.requireNonNull(description);
-        this.endpoint = Objects.requireNonNull(endpoint);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.description = description;
+        this.endpoint = endpoint;
+        this.id = id;
+        this.name = name;
     }
 
     /**

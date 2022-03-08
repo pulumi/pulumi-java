@@ -28,7 +28,7 @@ public final class TaskDefinitionEFSVolumeConfiguration {
         @Nullable TaskDefinitionEFSVolumeConfigurationTransitEncryption transitEncryption,
         @Nullable Integer transitEncryptionPort) {
         this.authorizationConfig = authorizationConfig;
-        this.filesystemId = Objects.requireNonNull(filesystemId);
+        this.filesystemId = filesystemId;
         this.rootDirectory = rootDirectory;
         this.transitEncryption = transitEncryption;
         this.transitEncryptionPort = transitEncryptionPort;

@@ -34,7 +34,7 @@ public final class FhirStoreStreamConfigBigqueryDestinationSchemaConfig {
     private FhirStoreStreamConfigBigqueryDestinationSchemaConfig(
         Integer recursiveStructureDepth,
         @Nullable String schemaType) {
-        this.recursiveStructureDepth = Objects.requireNonNull(recursiveStructureDepth);
+        this.recursiveStructureDepth = recursiveStructureDepth;
         this.schemaType = schemaType;
     }
 

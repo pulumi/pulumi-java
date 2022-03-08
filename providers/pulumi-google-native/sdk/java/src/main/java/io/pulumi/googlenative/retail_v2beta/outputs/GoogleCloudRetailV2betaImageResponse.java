@@ -31,9 +31,9 @@ public final class GoogleCloudRetailV2betaImageResponse {
         Integer height,
         String uri,
         Integer width) {
-        this.height = Objects.requireNonNull(height);
-        this.uri = Objects.requireNonNull(uri);
-        this.width = Objects.requireNonNull(width);
+        this.height = height;
+        this.uri = uri;
+        this.width = width;
     }
 
     /**

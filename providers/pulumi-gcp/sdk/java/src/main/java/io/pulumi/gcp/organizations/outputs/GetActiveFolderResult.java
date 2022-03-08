@@ -28,10 +28,10 @@ public final class GetActiveFolderResult {
         String id,
         String name,
         String parent) {
-        this.displayName = Objects.requireNonNull(displayName);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.parent = Objects.requireNonNull(parent);
+        this.displayName = displayName;
+        this.id = id;
+        this.name = name;
+        this.parent = parent;
     }
 
     public String getDisplayName() {

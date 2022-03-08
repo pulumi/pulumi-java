@@ -25,8 +25,8 @@ public final class BackfillAllStrategyResponse {
     private BackfillAllStrategyResponse(
         MysqlRdbmsResponse mysqlExcludedObjects,
         OracleRdbmsResponse oracleExcludedObjects) {
-        this.mysqlExcludedObjects = Objects.requireNonNull(mysqlExcludedObjects);
-        this.oracleExcludedObjects = Objects.requireNonNull(oracleExcludedObjects);
+        this.mysqlExcludedObjects = mysqlExcludedObjects;
+        this.oracleExcludedObjects = oracleExcludedObjects;
     }
 
     /**

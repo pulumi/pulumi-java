@@ -24,8 +24,8 @@ public final class ContentMatcherResponse {
     private ContentMatcherResponse(
         String content,
         String matcher) {
-        this.content = Objects.requireNonNull(content);
-        this.matcher = Objects.requireNonNull(matcher);
+        this.content = content;
+        this.matcher = matcher;
     }
 
     /**

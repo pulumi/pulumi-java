@@ -25,8 +25,8 @@ public final class DeviceCredentialPublicKey {
     private DeviceCredentialPublicKey(
         String format,
         String key) {
-        this.format = Objects.requireNonNull(format);
-        this.key = Objects.requireNonNull(key);
+        this.format = format;
+        this.key = key;
     }
 
     /**

@@ -24,7 +24,7 @@ public final class TaskDefinitionTmpfs {
         Integer size) {
         this.containerPath = containerPath;
         this.mountOptions = mountOptions;
-        this.size = Objects.requireNonNull(size);
+        this.size = size;
     }
 
     public Optional<String> getContainerPath() {

@@ -62,16 +62,16 @@ public final class GetServiceQuotaResult {
         String serviceCode,
         String serviceName,
         Double value) {
-        this.adjustable = Objects.requireNonNull(adjustable);
-        this.arn = Objects.requireNonNull(arn);
-        this.defaultValue = Objects.requireNonNull(defaultValue);
-        this.globalQuota = Objects.requireNonNull(globalQuota);
-        this.id = Objects.requireNonNull(id);
-        this.quotaCode = Objects.requireNonNull(quotaCode);
-        this.quotaName = Objects.requireNonNull(quotaName);
-        this.serviceCode = Objects.requireNonNull(serviceCode);
-        this.serviceName = Objects.requireNonNull(serviceName);
-        this.value = Objects.requireNonNull(value);
+        this.adjustable = adjustable;
+        this.arn = arn;
+        this.defaultValue = defaultValue;
+        this.globalQuota = globalQuota;
+        this.id = id;
+        this.quotaCode = quotaCode;
+        this.quotaName = quotaName;
+        this.serviceCode = serviceCode;
+        this.serviceName = serviceName;
+        this.value = value;
     }
 
     /**

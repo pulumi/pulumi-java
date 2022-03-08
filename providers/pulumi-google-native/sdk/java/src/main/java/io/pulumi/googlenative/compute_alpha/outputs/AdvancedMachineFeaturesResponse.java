@@ -43,11 +43,11 @@ public final class AdvancedMachineFeaturesResponse {
         Integer numaNodeCount,
         Integer threadsPerCore,
         Integer visibleCoreCount) {
-        this.enableNestedVirtualization = Objects.requireNonNull(enableNestedVirtualization);
-        this.enableUefiNetworking = Objects.requireNonNull(enableUefiNetworking);
-        this.numaNodeCount = Objects.requireNonNull(numaNodeCount);
-        this.threadsPerCore = Objects.requireNonNull(threadsPerCore);
-        this.visibleCoreCount = Objects.requireNonNull(visibleCoreCount);
+        this.enableNestedVirtualization = enableNestedVirtualization;
+        this.enableUefiNetworking = enableUefiNetworking;
+        this.numaNodeCount = numaNodeCount;
+        this.threadsPerCore = threadsPerCore;
+        this.visibleCoreCount = visibleCoreCount;
     }
 
     /**

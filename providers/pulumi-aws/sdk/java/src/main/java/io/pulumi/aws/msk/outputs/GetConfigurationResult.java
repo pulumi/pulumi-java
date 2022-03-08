@@ -52,13 +52,13 @@ public final class GetConfigurationResult {
         Integer latestRevision,
         String name,
         String serverProperties) {
-        this.arn = Objects.requireNonNull(arn);
-        this.description = Objects.requireNonNull(description);
-        this.id = Objects.requireNonNull(id);
-        this.kafkaVersions = Objects.requireNonNull(kafkaVersions);
-        this.latestRevision = Objects.requireNonNull(latestRevision);
-        this.name = Objects.requireNonNull(name);
-        this.serverProperties = Objects.requireNonNull(serverProperties);
+        this.arn = arn;
+        this.description = description;
+        this.id = id;
+        this.kafkaVersions = kafkaVersions;
+        this.latestRevision = latestRevision;
+        this.name = name;
+        this.serverProperties = serverProperties;
     }
 
     /**

@@ -77,17 +77,17 @@ public final class TableFieldSchemaResponse {
         String precision,
         String scale,
         String type) {
-        this.categories = Objects.requireNonNull(categories);
-        this.collationSpec = Objects.requireNonNull(collationSpec);
-        this.description = Objects.requireNonNull(description);
-        this.fields = Objects.requireNonNull(fields);
-        this.maxLength = Objects.requireNonNull(maxLength);
-        this.mode = Objects.requireNonNull(mode);
-        this.name = Objects.requireNonNull(name);
-        this.policyTags = Objects.requireNonNull(policyTags);
-        this.precision = Objects.requireNonNull(precision);
-        this.scale = Objects.requireNonNull(scale);
-        this.type = Objects.requireNonNull(type);
+        this.categories = categories;
+        this.collationSpec = collationSpec;
+        this.description = description;
+        this.fields = fields;
+        this.maxLength = maxLength;
+        this.mode = mode;
+        this.name = name;
+        this.policyTags = policyTags;
+        this.precision = precision;
+        this.scale = scale;
+        this.type = type;
     }
 
     /**

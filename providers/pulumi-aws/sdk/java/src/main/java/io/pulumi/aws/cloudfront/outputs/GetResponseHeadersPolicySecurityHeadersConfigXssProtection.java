@@ -37,10 +37,10 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigXssProtection {
         Boolean override,
         Boolean protection,
         String reportUri) {
-        this.modeBlock = Objects.requireNonNull(modeBlock);
-        this.override = Objects.requireNonNull(override);
-        this.protection = Objects.requireNonNull(protection);
-        this.reportUri = Objects.requireNonNull(reportUri);
+        this.modeBlock = modeBlock;
+        this.override = override;
+        this.protection = protection;
+        this.reportUri = reportUri;
     }
 
     /**

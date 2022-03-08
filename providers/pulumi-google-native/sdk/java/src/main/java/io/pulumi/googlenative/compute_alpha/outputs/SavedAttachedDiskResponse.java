@@ -113,22 +113,22 @@ public final class SavedAttachedDiskResponse {
         String storageBytes,
         String storageBytesStatus,
         String type) {
-        this.autoDelete = Objects.requireNonNull(autoDelete);
-        this.boot = Objects.requireNonNull(boot);
-        this.deviceName = Objects.requireNonNull(deviceName);
-        this.diskEncryptionKey = Objects.requireNonNull(diskEncryptionKey);
-        this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
-        this.diskType = Objects.requireNonNull(diskType);
-        this.guestOsFeatures = Objects.requireNonNull(guestOsFeatures);
-        this.index = Objects.requireNonNull(index);
-        this.$interface = Objects.requireNonNull($interface);
-        this.kind = Objects.requireNonNull(kind);
-        this.licenses = Objects.requireNonNull(licenses);
-        this.mode = Objects.requireNonNull(mode);
-        this.source = Objects.requireNonNull(source);
-        this.storageBytes = Objects.requireNonNull(storageBytes);
-        this.storageBytesStatus = Objects.requireNonNull(storageBytesStatus);
-        this.type = Objects.requireNonNull(type);
+        this.autoDelete = autoDelete;
+        this.boot = boot;
+        this.deviceName = deviceName;
+        this.diskEncryptionKey = diskEncryptionKey;
+        this.diskSizeGb = diskSizeGb;
+        this.diskType = diskType;
+        this.guestOsFeatures = guestOsFeatures;
+        this.index = index;
+        this.$interface = $interface;
+        this.kind = kind;
+        this.licenses = licenses;
+        this.mode = mode;
+        this.source = source;
+        this.storageBytes = storageBytes;
+        this.storageBytesStatus = storageBytesStatus;
+        this.type = type;
     }
 
     /**

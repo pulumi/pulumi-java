@@ -73,16 +73,16 @@ public final class GetTargetSslProxyResult {
         String service,
         List<String> sslCertificates,
         String sslPolicy) {
-        this.certificateMap = Objects.requireNonNull(certificateMap);
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.description = Objects.requireNonNull(description);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.proxyHeader = Objects.requireNonNull(proxyHeader);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.service = Objects.requireNonNull(service);
-        this.sslCertificates = Objects.requireNonNull(sslCertificates);
-        this.sslPolicy = Objects.requireNonNull(sslPolicy);
+        this.certificateMap = certificateMap;
+        this.creationTimestamp = creationTimestamp;
+        this.description = description;
+        this.kind = kind;
+        this.name = name;
+        this.proxyHeader = proxyHeader;
+        this.selfLink = selfLink;
+        this.service = service;
+        this.sslCertificates = sslCertificates;
+        this.sslPolicy = sslPolicy;
     }
 
     /**

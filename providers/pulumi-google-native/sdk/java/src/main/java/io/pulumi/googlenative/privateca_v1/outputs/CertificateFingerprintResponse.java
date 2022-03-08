@@ -17,7 +17,7 @@ public final class CertificateFingerprintResponse {
 
     @OutputCustomType.Constructor({"sha256Hash"})
     private CertificateFingerprintResponse(String sha256Hash) {
-        this.sha256Hash = Objects.requireNonNull(sha256Hash);
+        this.sha256Hash = sha256Hash;
     }
 
     /**

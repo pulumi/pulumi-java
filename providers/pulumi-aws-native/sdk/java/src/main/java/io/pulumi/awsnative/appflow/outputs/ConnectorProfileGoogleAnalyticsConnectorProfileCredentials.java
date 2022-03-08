@@ -46,8 +46,8 @@ public final class ConnectorProfileGoogleAnalyticsConnectorProfileCredentials {
         @Nullable ConnectorProfileConnectorOAuthRequest connectorOAuthRequest,
         @Nullable String refreshToken) {
         this.accessToken = accessToken;
-        this.clientId = Objects.requireNonNull(clientId);
-        this.clientSecret = Objects.requireNonNull(clientSecret);
+        this.clientId = clientId;
+        this.clientSecret = clientSecret;
         this.connectorOAuthRequest = connectorOAuthRequest;
         this.refreshToken = refreshToken;
     }

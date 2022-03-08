@@ -30,8 +30,8 @@ public final class SourceLifeCycleResponse {
         AbsoluteDeleteOptionResponse deleteAfter,
         DataStoreInfoBaseResponse sourceDataStore,
         @Nullable List<TargetCopySettingResponse> targetDataStoreCopySettings) {
-        this.deleteAfter = Objects.requireNonNull(deleteAfter);
-        this.sourceDataStore = Objects.requireNonNull(sourceDataStore);
+        this.deleteAfter = deleteAfter;
+        this.sourceDataStore = sourceDataStore;
         this.targetDataStoreCopySettings = targetDataStoreCopySettings;
     }
 

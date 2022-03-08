@@ -110,21 +110,21 @@ public final class VirtualMachineConfigResponse {
         String subnet,
         List<String> tags,
         String zone) {
-        this.acceleratorConfig = Objects.requireNonNull(acceleratorConfig);
-        this.containerImages = Objects.requireNonNull(containerImages);
-        this.dataDisk = Objects.requireNonNull(dataDisk);
-        this.encryptionConfig = Objects.requireNonNull(encryptionConfig);
-        this.guestAttributes = Objects.requireNonNull(guestAttributes);
-        this.internalIpOnly = Objects.requireNonNull(internalIpOnly);
-        this.labels = Objects.requireNonNull(labels);
-        this.machineType = Objects.requireNonNull(machineType);
-        this.metadata = Objects.requireNonNull(metadata);
-        this.network = Objects.requireNonNull(network);
-        this.nicType = Objects.requireNonNull(nicType);
-        this.shieldedInstanceConfig = Objects.requireNonNull(shieldedInstanceConfig);
-        this.subnet = Objects.requireNonNull(subnet);
-        this.tags = Objects.requireNonNull(tags);
-        this.zone = Objects.requireNonNull(zone);
+        this.acceleratorConfig = acceleratorConfig;
+        this.containerImages = containerImages;
+        this.dataDisk = dataDisk;
+        this.encryptionConfig = encryptionConfig;
+        this.guestAttributes = guestAttributes;
+        this.internalIpOnly = internalIpOnly;
+        this.labels = labels;
+        this.machineType = machineType;
+        this.metadata = metadata;
+        this.network = network;
+        this.nicType = nicType;
+        this.shieldedInstanceConfig = shieldedInstanceConfig;
+        this.subnet = subnet;
+        this.tags = tags;
+        this.zone = zone;
     }
 
     /**

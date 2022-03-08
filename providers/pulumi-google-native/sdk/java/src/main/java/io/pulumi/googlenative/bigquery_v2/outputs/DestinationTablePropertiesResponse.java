@@ -37,10 +37,10 @@ public final class DestinationTablePropertiesResponse {
         String expirationTime,
         String friendlyName,
         Map<String,String> labels) {
-        this.description = Objects.requireNonNull(description);
-        this.expirationTime = Objects.requireNonNull(expirationTime);
-        this.friendlyName = Objects.requireNonNull(friendlyName);
-        this.labels = Objects.requireNonNull(labels);
+        this.description = description;
+        this.expirationTime = expirationTime;
+        this.friendlyName = friendlyName;
+        this.labels = labels;
     }
 
     /**

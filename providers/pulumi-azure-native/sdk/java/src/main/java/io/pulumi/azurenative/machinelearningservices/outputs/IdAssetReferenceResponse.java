@@ -25,8 +25,8 @@ public final class IdAssetReferenceResponse {
     private IdAssetReferenceResponse(
         String assetId,
         String referenceType) {
-        this.assetId = Objects.requireNonNull(assetId);
-        this.referenceType = Objects.requireNonNull(referenceType);
+        this.assetId = assetId;
+        this.referenceType = referenceType;
     }
 
     /**

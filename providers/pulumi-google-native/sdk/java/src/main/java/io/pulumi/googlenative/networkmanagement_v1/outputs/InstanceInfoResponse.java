@@ -61,14 +61,14 @@ public final class InstanceInfoResponse {
         String networkUri,
         String serviceAccount,
         String uri) {
-        this.displayName = Objects.requireNonNull(displayName);
-        this.externalIp = Objects.requireNonNull(externalIp);
-        this.$interface = Objects.requireNonNull($interface);
-        this.internalIp = Objects.requireNonNull(internalIp);
-        this.networkTags = Objects.requireNonNull(networkTags);
-        this.networkUri = Objects.requireNonNull(networkUri);
-        this.serviceAccount = Objects.requireNonNull(serviceAccount);
-        this.uri = Objects.requireNonNull(uri);
+        this.displayName = displayName;
+        this.externalIp = externalIp;
+        this.$interface = $interface;
+        this.internalIp = internalIp;
+        this.networkTags = networkTags;
+        this.networkUri = networkUri;
+        this.serviceAccount = serviceAccount;
+        this.uri = uri;
     }
 
     /**

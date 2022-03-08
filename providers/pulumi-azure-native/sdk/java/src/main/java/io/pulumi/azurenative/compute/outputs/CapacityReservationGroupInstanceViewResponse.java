@@ -18,7 +18,7 @@ public final class CapacityReservationGroupInstanceViewResponse {
 
     @OutputCustomType.Constructor({"capacityReservations"})
     private CapacityReservationGroupInstanceViewResponse(List<CapacityReservationInstanceViewWithNameResponse> capacityReservations) {
-        this.capacityReservations = Objects.requireNonNull(capacityReservations);
+        this.capacityReservations = capacityReservations;
     }
 
     /**

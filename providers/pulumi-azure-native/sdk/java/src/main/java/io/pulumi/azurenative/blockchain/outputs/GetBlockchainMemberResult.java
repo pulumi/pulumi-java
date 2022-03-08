@@ -140,24 +140,24 @@ public final class GetBlockchainMemberResult {
         String userName,
         @Nullable BlockchainMemberNodesSkuResponse validatorNodesSku) {
         this.consortium = consortium;
-        this.consortiumManagementAccountAddress = Objects.requireNonNull(consortiumManagementAccountAddress);
+        this.consortiumManagementAccountAddress = consortiumManagementAccountAddress;
         this.consortiumManagementAccountPassword = consortiumManagementAccountPassword;
         this.consortiumMemberDisplayName = consortiumMemberDisplayName;
         this.consortiumRole = consortiumRole;
-        this.dns = Objects.requireNonNull(dns);
+        this.dns = dns;
         this.firewallRules = firewallRules;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.password = password;
         this.protocol = protocol;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.publicKey = Objects.requireNonNull(publicKey);
-        this.rootContractAddress = Objects.requireNonNull(rootContractAddress);
+        this.provisioningState = provisioningState;
+        this.publicKey = publicKey;
+        this.rootContractAddress = rootContractAddress;
         this.sku = sku;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
-        this.userName = Objects.requireNonNull(userName);
+        this.type = type;
+        this.userName = userName;
         this.validatorNodesSku = validatorNodesSku;
     }
 

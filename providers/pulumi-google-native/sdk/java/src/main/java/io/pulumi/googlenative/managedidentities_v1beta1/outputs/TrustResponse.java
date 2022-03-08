@@ -80,17 +80,17 @@ public final class TrustResponse {
         String trustHandshakeSecret,
         String trustType,
         String updateTime) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.lastTrustHeartbeatTime = Objects.requireNonNull(lastTrustHeartbeatTime);
-        this.selectiveAuthentication = Objects.requireNonNull(selectiveAuthentication);
-        this.state = Objects.requireNonNull(state);
-        this.stateDescription = Objects.requireNonNull(stateDescription);
-        this.targetDnsIpAddresses = Objects.requireNonNull(targetDnsIpAddresses);
-        this.targetDomainName = Objects.requireNonNull(targetDomainName);
-        this.trustDirection = Objects.requireNonNull(trustDirection);
-        this.trustHandshakeSecret = Objects.requireNonNull(trustHandshakeSecret);
-        this.trustType = Objects.requireNonNull(trustType);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.createTime = createTime;
+        this.lastTrustHeartbeatTime = lastTrustHeartbeatTime;
+        this.selectiveAuthentication = selectiveAuthentication;
+        this.state = state;
+        this.stateDescription = stateDescription;
+        this.targetDnsIpAddresses = targetDnsIpAddresses;
+        this.targetDomainName = targetDomainName;
+        this.trustDirection = trustDirection;
+        this.trustHandshakeSecret = trustHandshakeSecret;
+        this.trustType = trustType;
+        this.updateTime = updateTime;
     }
 
     /**

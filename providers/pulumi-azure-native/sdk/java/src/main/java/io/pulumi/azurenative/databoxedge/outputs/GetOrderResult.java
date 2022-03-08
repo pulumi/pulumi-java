@@ -85,17 +85,17 @@ public final class GetOrderResult {
         @Nullable String shipmentType,
         @Nullable AddressResponse shippingAddress,
         String type) {
-        this.contactInformation = Objects.requireNonNull(contactInformation);
-        this.currentStatus = Objects.requireNonNull(currentStatus);
-        this.deliveryTrackingInfo = Objects.requireNonNull(deliveryTrackingInfo);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.orderHistory = Objects.requireNonNull(orderHistory);
-        this.returnTrackingInfo = Objects.requireNonNull(returnTrackingInfo);
-        this.serialNumber = Objects.requireNonNull(serialNumber);
+        this.contactInformation = contactInformation;
+        this.currentStatus = currentStatus;
+        this.deliveryTrackingInfo = deliveryTrackingInfo;
+        this.id = id;
+        this.name = name;
+        this.orderHistory = orderHistory;
+        this.returnTrackingInfo = returnTrackingInfo;
+        this.serialNumber = serialNumber;
         this.shipmentType = shipmentType;
         this.shippingAddress = shippingAddress;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

@@ -30,9 +30,9 @@ public final class TagFilterResponse {
         String name,
         String op,
         String value) {
-        this.name = Objects.requireNonNull(name);
-        this.op = Objects.requireNonNull(op);
-        this.value = Objects.requireNonNull(value);
+        this.name = name;
+        this.op = op;
+        this.value = value;
     }
 
     /**

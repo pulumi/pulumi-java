@@ -126,9 +126,9 @@ public final class CommonDataServiceForAppsLinkedServiceResponse {
         String type,
         @Nullable Object username) {
         this.annotations = annotations;
-        this.authenticationType = Objects.requireNonNull(authenticationType);
+        this.authenticationType = authenticationType;
         this.connectVia = connectVia;
-        this.deploymentType = Objects.requireNonNull(deploymentType);
+        this.deploymentType = deploymentType;
         this.description = description;
         this.encryptedCredential = encryptedCredential;
         this.hostName = hostName;
@@ -140,7 +140,7 @@ public final class CommonDataServiceForAppsLinkedServiceResponse {
         this.servicePrincipalCredentialType = servicePrincipalCredentialType;
         this.servicePrincipalId = servicePrincipalId;
         this.serviceUri = serviceUri;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.username = username;
     }
 

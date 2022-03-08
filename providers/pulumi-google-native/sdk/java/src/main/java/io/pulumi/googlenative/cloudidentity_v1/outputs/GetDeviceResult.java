@@ -183,34 +183,34 @@ public final class GetDeviceResult {
         String securityPatchTime,
         String serialNumber,
         List<String> wifiMacAddresses) {
-        this.androidSpecificAttributes = Objects.requireNonNull(androidSpecificAttributes);
-        this.assetTag = Objects.requireNonNull(assetTag);
-        this.basebandVersion = Objects.requireNonNull(basebandVersion);
-        this.bootloaderVersion = Objects.requireNonNull(bootloaderVersion);
-        this.brand = Objects.requireNonNull(brand);
-        this.buildNumber = Objects.requireNonNull(buildNumber);
-        this.compromisedState = Objects.requireNonNull(compromisedState);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.deviceType = Objects.requireNonNull(deviceType);
-        this.enabledDeveloperOptions = Objects.requireNonNull(enabledDeveloperOptions);
-        this.enabledUsbDebugging = Objects.requireNonNull(enabledUsbDebugging);
-        this.encryptionState = Objects.requireNonNull(encryptionState);
-        this.imei = Objects.requireNonNull(imei);
-        this.kernelVersion = Objects.requireNonNull(kernelVersion);
-        this.lastSyncTime = Objects.requireNonNull(lastSyncTime);
-        this.managementState = Objects.requireNonNull(managementState);
-        this.manufacturer = Objects.requireNonNull(manufacturer);
-        this.meid = Objects.requireNonNull(meid);
-        this.model = Objects.requireNonNull(model);
-        this.name = Objects.requireNonNull(name);
-        this.networkOperator = Objects.requireNonNull(networkOperator);
-        this.osVersion = Objects.requireNonNull(osVersion);
-        this.otherAccounts = Objects.requireNonNull(otherAccounts);
-        this.ownerType = Objects.requireNonNull(ownerType);
-        this.releaseVersion = Objects.requireNonNull(releaseVersion);
-        this.securityPatchTime = Objects.requireNonNull(securityPatchTime);
-        this.serialNumber = Objects.requireNonNull(serialNumber);
-        this.wifiMacAddresses = Objects.requireNonNull(wifiMacAddresses);
+        this.androidSpecificAttributes = androidSpecificAttributes;
+        this.assetTag = assetTag;
+        this.basebandVersion = basebandVersion;
+        this.bootloaderVersion = bootloaderVersion;
+        this.brand = brand;
+        this.buildNumber = buildNumber;
+        this.compromisedState = compromisedState;
+        this.createTime = createTime;
+        this.deviceType = deviceType;
+        this.enabledDeveloperOptions = enabledDeveloperOptions;
+        this.enabledUsbDebugging = enabledUsbDebugging;
+        this.encryptionState = encryptionState;
+        this.imei = imei;
+        this.kernelVersion = kernelVersion;
+        this.lastSyncTime = lastSyncTime;
+        this.managementState = managementState;
+        this.manufacturer = manufacturer;
+        this.meid = meid;
+        this.model = model;
+        this.name = name;
+        this.networkOperator = networkOperator;
+        this.osVersion = osVersion;
+        this.otherAccounts = otherAccounts;
+        this.ownerType = ownerType;
+        this.releaseVersion = releaseVersion;
+        this.securityPatchTime = securityPatchTime;
+        this.serialNumber = serialNumber;
+        this.wifiMacAddresses = wifiMacAddresses;
     }
 
     /**

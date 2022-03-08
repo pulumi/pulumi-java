@@ -24,8 +24,8 @@ public final class UserPoolSmsConfiguration {
     private UserPoolSmsConfiguration(
         String externalId,
         String snsCallerArn) {
-        this.externalId = Objects.requireNonNull(externalId);
-        this.snsCallerArn = Objects.requireNonNull(snsCallerArn);
+        this.externalId = externalId;
+        this.snsCallerArn = snsCallerArn;
     }
 
     /**

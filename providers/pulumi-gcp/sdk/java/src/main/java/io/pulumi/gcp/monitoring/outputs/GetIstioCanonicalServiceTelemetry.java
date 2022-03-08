@@ -13,7 +13,7 @@ public final class GetIstioCanonicalServiceTelemetry {
 
     @OutputCustomType.Constructor({"resourceName"})
     private GetIstioCanonicalServiceTelemetry(String resourceName) {
-        this.resourceName = Objects.requireNonNull(resourceName);
+        this.resourceName = resourceName;
     }
 
     public String getPropResourceName() {

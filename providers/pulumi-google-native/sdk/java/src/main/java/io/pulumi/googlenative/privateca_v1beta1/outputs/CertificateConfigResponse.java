@@ -32,9 +32,9 @@ public final class CertificateConfigResponse {
         PublicKeyResponse publicKey,
         ReusableConfigWrapperResponse reusableConfig,
         SubjectConfigResponse subjectConfig) {
-        this.publicKey = Objects.requireNonNull(publicKey);
-        this.reusableConfig = Objects.requireNonNull(reusableConfig);
-        this.subjectConfig = Objects.requireNonNull(subjectConfig);
+        this.publicKey = publicKey;
+        this.reusableConfig = reusableConfig;
+        this.subjectConfig = subjectConfig;
     }
 
     /**

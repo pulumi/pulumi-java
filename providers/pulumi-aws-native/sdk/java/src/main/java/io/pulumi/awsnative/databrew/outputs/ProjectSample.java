@@ -28,7 +28,7 @@ public final class ProjectSample {
         @Nullable Integer size,
         ProjectSampleType type) {
         this.size = size;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

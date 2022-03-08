@@ -32,10 +32,10 @@ public final class GetExportResult {
         String id,
         String name,
         String value) {
-        this.exportingStackId = Objects.requireNonNull(exportingStackId);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.value = Objects.requireNonNull(value);
+        this.exportingStackId = exportingStackId;
+        this.id = id;
+        this.name = name;
+        this.value = value;
     }
 
     /**

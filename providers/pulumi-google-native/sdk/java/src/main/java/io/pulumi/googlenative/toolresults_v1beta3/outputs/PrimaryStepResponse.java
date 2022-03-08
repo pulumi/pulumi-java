@@ -26,8 +26,8 @@ public final class PrimaryStepResponse {
     private PrimaryStepResponse(
         List<IndividualOutcomeResponse> individualOutcome,
         String rollUp) {
-        this.individualOutcome = Objects.requireNonNull(individualOutcome);
-        this.rollUp = Objects.requireNonNull(rollUp);
+        this.individualOutcome = individualOutcome;
+        this.rollUp = rollUp;
     }
 
     /**

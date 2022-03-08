@@ -19,7 +19,7 @@ public final class PreventionStoredInfoTypeDictionaryWordList {
 
     @OutputCustomType.Constructor({"words"})
     private PreventionStoredInfoTypeDictionaryWordList(List<String> words) {
-        this.words = Objects.requireNonNull(words);
+        this.words = words;
     }
 
     /**

@@ -43,11 +43,11 @@ public final class ResourcePolicyInstanceSchedulePolicyResponse {
         String timeZone,
         ResourcePolicyInstanceSchedulePolicyScheduleResponse vmStartSchedule,
         ResourcePolicyInstanceSchedulePolicyScheduleResponse vmStopSchedule) {
-        this.expirationTime = Objects.requireNonNull(expirationTime);
-        this.startTime = Objects.requireNonNull(startTime);
-        this.timeZone = Objects.requireNonNull(timeZone);
-        this.vmStartSchedule = Objects.requireNonNull(vmStartSchedule);
-        this.vmStopSchedule = Objects.requireNonNull(vmStopSchedule);
+        this.expirationTime = expirationTime;
+        this.startTime = startTime;
+        this.timeZone = timeZone;
+        this.vmStartSchedule = vmStartSchedule;
+        this.vmStopSchedule = vmStopSchedule;
     }
 
     /**

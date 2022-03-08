@@ -81,17 +81,17 @@ public final class GetShareResult {
         String type,
         String userEmail,
         String userName) {
-        this.createdAt = Objects.requireNonNull(createdAt);
+        this.createdAt = createdAt;
         this.description = description;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.id = id;
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.shareKind = shareKind;
-        this.systemData = Objects.requireNonNull(systemData);
+        this.systemData = systemData;
         this.terms = terms;
-        this.type = Objects.requireNonNull(type);
-        this.userEmail = Objects.requireNonNull(userEmail);
-        this.userName = Objects.requireNonNull(userName);
+        this.type = type;
+        this.userEmail = userEmail;
+        this.userName = userName;
     }
 
     /**

@@ -35,9 +35,9 @@ public final class NetworkSecurityGroupRuleResponse {
         Integer priority,
         String sourceAddressPrefix,
         @Nullable List<String> sourcePortRanges) {
-        this.access = Objects.requireNonNull(access);
-        this.priority = Objects.requireNonNull(priority);
-        this.sourceAddressPrefix = Objects.requireNonNull(sourceAddressPrefix);
+        this.access = access;
+        this.priority = priority;
+        this.sourceAddressPrefix = sourceAddressPrefix;
         this.sourcePortRanges = sourcePortRanges;
     }
 

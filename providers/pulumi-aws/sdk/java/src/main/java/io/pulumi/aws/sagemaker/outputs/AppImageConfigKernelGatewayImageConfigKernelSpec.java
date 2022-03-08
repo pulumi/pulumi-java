@@ -27,7 +27,7 @@ public final class AppImageConfigKernelGatewayImageConfigKernelSpec {
         @Nullable String displayName,
         String name) {
         this.displayName = displayName;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

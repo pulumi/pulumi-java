@@ -40,10 +40,10 @@ public final class SlsaProvenanceResponse {
         List<MaterialResponse> materials,
         SlsaMetadataResponse metadata,
         SlsaRecipeResponse recipe) {
-        this.builder = Objects.requireNonNull(builder);
-        this.materials = Objects.requireNonNull(materials);
-        this.metadata = Objects.requireNonNull(metadata);
-        this.recipe = Objects.requireNonNull(recipe);
+        this.builder = builder;
+        this.materials = materials;
+        this.metadata = metadata;
+        this.recipe = recipe;
     }
 
     /**

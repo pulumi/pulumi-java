@@ -24,8 +24,8 @@ public final class ClassifierXmlClassifier {
     private ClassifierXmlClassifier(
         String classification,
         String rowTag) {
-        this.classification = Objects.requireNonNull(classification);
-        this.rowTag = Objects.requireNonNull(rowTag);
+        this.classification = classification;
+        this.rowTag = rowTag;
     }
 
     /**

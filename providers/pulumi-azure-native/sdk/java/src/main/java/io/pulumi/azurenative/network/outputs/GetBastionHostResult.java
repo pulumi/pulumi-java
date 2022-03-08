@@ -72,14 +72,14 @@ public final class GetBastionHostResult {
         @Nullable Map<String,String> tags,
         String type) {
         this.dnsName = dnsName;
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.id = id;
         this.ipConfigurations = ipConfigurations;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

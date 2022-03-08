@@ -42,9 +42,9 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
         FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfiguration outputFormatConfiguration,
         FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationSchemaConfiguration schemaConfiguration) {
         this.enabled = enabled;
-        this.inputFormatConfiguration = Objects.requireNonNull(inputFormatConfiguration);
-        this.outputFormatConfiguration = Objects.requireNonNull(outputFormatConfiguration);
-        this.schemaConfiguration = Objects.requireNonNull(schemaConfiguration);
+        this.inputFormatConfiguration = inputFormatConfiguration;
+        this.outputFormatConfiguration = outputFormatConfiguration;
+        this.schemaConfiguration = schemaConfiguration;
     }
 
     /**

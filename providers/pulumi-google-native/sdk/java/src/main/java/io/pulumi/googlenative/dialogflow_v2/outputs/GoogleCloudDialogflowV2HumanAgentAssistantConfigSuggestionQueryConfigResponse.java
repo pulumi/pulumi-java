@@ -53,12 +53,12 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
         GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceResponse documentQuerySource,
         GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySourceResponse knowledgeBaseQuerySource,
         Integer maxResults) {
-        this.confidenceThreshold = Objects.requireNonNull(confidenceThreshold);
-        this.contextFilterSettings = Objects.requireNonNull(contextFilterSettings);
-        this.dialogflowQuerySource = Objects.requireNonNull(dialogflowQuerySource);
-        this.documentQuerySource = Objects.requireNonNull(documentQuerySource);
-        this.knowledgeBaseQuerySource = Objects.requireNonNull(knowledgeBaseQuerySource);
-        this.maxResults = Objects.requireNonNull(maxResults);
+        this.confidenceThreshold = confidenceThreshold;
+        this.contextFilterSettings = contextFilterSettings;
+        this.dialogflowQuerySource = dialogflowQuerySource;
+        this.documentQuerySource = documentQuerySource;
+        this.knowledgeBaseQuerySource = knowledgeBaseQuerySource;
+        this.maxResults = maxResults;
     }
 
     /**

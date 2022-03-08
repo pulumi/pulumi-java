@@ -126,18 +126,18 @@ public final class GetPrivateRecordSetResult {
         this.aaaaRecords = aaaaRecords;
         this.cnameRecord = cnameRecord;
         this.etag = etag;
-        this.fqdn = Objects.requireNonNull(fqdn);
-        this.id = Objects.requireNonNull(id);
-        this.isAutoRegistered = Objects.requireNonNull(isAutoRegistered);
+        this.fqdn = fqdn;
+        this.id = id;
+        this.isAutoRegistered = isAutoRegistered;
         this.metadata = metadata;
         this.mxRecords = mxRecords;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.ptrRecords = ptrRecords;
         this.soaRecord = soaRecord;
         this.srvRecords = srvRecords;
         this.ttl = ttl;
         this.txtRecords = txtRecords;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

@@ -57,7 +57,7 @@ public final class ParameterDefinitionResponse {
         this.description = description;
         this.displayName = displayName;
         this.strongType = strongType;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

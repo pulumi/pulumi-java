@@ -109,7 +109,7 @@ public final class ApplicationGatewayHttpListenerResponse {
         @Nullable SubResourceResponse sslProfile,
         String type) {
         this.customErrorConfigurations = customErrorConfigurations;
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.firewallPolicy = firewallPolicy;
         this.frontendIPConfiguration = frontendIPConfiguration;
         this.frontendPort = frontendPort;
@@ -118,11 +118,11 @@ public final class ApplicationGatewayHttpListenerResponse {
         this.id = id;
         this.name = name;
         this.protocol = protocol;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.requireServerNameIndication = requireServerNameIndication;
         this.sslCertificate = sslCertificate;
         this.sslProfile = sslProfile;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

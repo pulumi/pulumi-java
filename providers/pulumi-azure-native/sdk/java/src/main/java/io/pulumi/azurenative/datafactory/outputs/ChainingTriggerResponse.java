@@ -62,12 +62,12 @@ public final class ChainingTriggerResponse {
         String runtimeState,
         String type) {
         this.annotations = annotations;
-        this.dependsOn = Objects.requireNonNull(dependsOn);
+        this.dependsOn = dependsOn;
         this.description = description;
-        this.pipeline = Objects.requireNonNull(pipeline);
-        this.runDimension = Objects.requireNonNull(runDimension);
-        this.runtimeState = Objects.requireNonNull(runtimeState);
-        this.type = Objects.requireNonNull(type);
+        this.pipeline = pipeline;
+        this.runDimension = runDimension;
+        this.runtimeState = runtimeState;
+        this.type = type;
     }
 
     /**

@@ -23,7 +23,7 @@ public final class BudgetsActionIamActionDefinition {
         @Nullable List<String> roles,
         @Nullable List<String> users) {
         this.groups = groups;
-        this.policyArn = Objects.requireNonNull(policyArn);
+        this.policyArn = policyArn;
         this.roles = roles;
         this.users = users;
     }

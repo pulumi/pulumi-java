@@ -25,8 +25,8 @@ public final class GameServerClusterConnectionInfoResponse {
     private GameServerClusterConnectionInfoResponse(
         GkeClusterReferenceResponse gkeClusterReference,
         String namespace) {
-        this.gkeClusterReference = Objects.requireNonNull(gkeClusterReference);
-        this.namespace = Objects.requireNonNull(namespace);
+        this.gkeClusterReference = gkeClusterReference;
+        this.namespace = namespace;
     }
 
     /**

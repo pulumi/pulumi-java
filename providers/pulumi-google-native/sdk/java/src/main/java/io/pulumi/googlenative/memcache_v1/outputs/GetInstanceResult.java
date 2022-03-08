@@ -115,22 +115,22 @@ public final class GetInstanceResult {
         String state,
         String updateTime,
         List<String> zones) {
-        this.authorizedNetwork = Objects.requireNonNull(authorizedNetwork);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.discoveryEndpoint = Objects.requireNonNull(discoveryEndpoint);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.instanceMessages = Objects.requireNonNull(instanceMessages);
-        this.labels = Objects.requireNonNull(labels);
-        this.memcacheFullVersion = Objects.requireNonNull(memcacheFullVersion);
-        this.memcacheNodes = Objects.requireNonNull(memcacheNodes);
-        this.memcacheVersion = Objects.requireNonNull(memcacheVersion);
-        this.name = Objects.requireNonNull(name);
-        this.nodeConfig = Objects.requireNonNull(nodeConfig);
-        this.nodeCount = Objects.requireNonNull(nodeCount);
-        this.parameters = Objects.requireNonNull(parameters);
-        this.state = Objects.requireNonNull(state);
-        this.updateTime = Objects.requireNonNull(updateTime);
-        this.zones = Objects.requireNonNull(zones);
+        this.authorizedNetwork = authorizedNetwork;
+        this.createTime = createTime;
+        this.discoveryEndpoint = discoveryEndpoint;
+        this.displayName = displayName;
+        this.instanceMessages = instanceMessages;
+        this.labels = labels;
+        this.memcacheFullVersion = memcacheFullVersion;
+        this.memcacheNodes = memcacheNodes;
+        this.memcacheVersion = memcacheVersion;
+        this.name = name;
+        this.nodeConfig = nodeConfig;
+        this.nodeCount = nodeCount;
+        this.parameters = parameters;
+        this.state = state;
+        this.updateTime = updateTime;
+        this.zones = zones;
     }
 
     /**

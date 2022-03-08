@@ -45,7 +45,7 @@ public final class PeeringPropertiesDirectResponse {
         this.connections = connections;
         this.directPeeringType = directPeeringType;
         this.peerAsn = peerAsn;
-        this.useForPeeringService = Objects.requireNonNull(useForPeeringService);
+        this.useForPeeringService = useForPeeringService;
     }
 
     /**

@@ -123,23 +123,23 @@ public final class GetMigratingVmResult {
         String state,
         String stateTime,
         String updateTime) {
-        this.computeEngineTargetDefaults = Objects.requireNonNull(computeEngineTargetDefaults);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.currentSyncInfo = Objects.requireNonNull(currentSyncInfo);
-        this.description = Objects.requireNonNull(description);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.error = Objects.requireNonNull(error);
-        this.group = Objects.requireNonNull(group);
-        this.labels = Objects.requireNonNull(labels);
-        this.lastSync = Objects.requireNonNull(lastSync);
-        this.name = Objects.requireNonNull(name);
-        this.policy = Objects.requireNonNull(policy);
-        this.recentCloneJobs = Objects.requireNonNull(recentCloneJobs);
-        this.recentCutoverJobs = Objects.requireNonNull(recentCutoverJobs);
-        this.sourceVmId = Objects.requireNonNull(sourceVmId);
-        this.state = Objects.requireNonNull(state);
-        this.stateTime = Objects.requireNonNull(stateTime);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.computeEngineTargetDefaults = computeEngineTargetDefaults;
+        this.createTime = createTime;
+        this.currentSyncInfo = currentSyncInfo;
+        this.description = description;
+        this.displayName = displayName;
+        this.error = error;
+        this.group = group;
+        this.labels = labels;
+        this.lastSync = lastSync;
+        this.name = name;
+        this.policy = policy;
+        this.recentCloneJobs = recentCloneJobs;
+        this.recentCutoverJobs = recentCutoverJobs;
+        this.sourceVmId = sourceVmId;
+        this.state = state;
+        this.stateTime = stateTime;
+        this.updateTime = updateTime;
     }
 
     /**

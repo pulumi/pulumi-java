@@ -45,11 +45,11 @@ public final class SecretAttributesResponse {
         @Nullable Integer expires,
         @Nullable Integer notBefore,
         Integer updated) {
-        this.created = Objects.requireNonNull(created);
+        this.created = created;
         this.enabled = enabled;
         this.expires = expires;
         this.notBefore = notBefore;
-        this.updated = Objects.requireNonNull(updated);
+        this.updated = updated;
     }
 
     /**

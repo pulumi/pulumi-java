@@ -18,7 +18,7 @@ public final class PoolEndpointConfigurationResponse {
 
     @OutputCustomType.Constructor({"inboundNatPools"})
     private PoolEndpointConfigurationResponse(List<InboundNatPoolResponse> inboundNatPools) {
-        this.inboundNatPools = Objects.requireNonNull(inboundNatPools);
+        this.inboundNatPools = inboundNatPools;
     }
 
     /**

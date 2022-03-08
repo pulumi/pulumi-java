@@ -35,9 +35,9 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationVpcConfig {
         List<String> securityGroupIds,
         List<String> subnetIds,
         @Nullable String vpcId) {
-        this.roleArn = Objects.requireNonNull(roleArn);
-        this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
-        this.subnetIds = Objects.requireNonNull(subnetIds);
+        this.roleArn = roleArn;
+        this.securityGroupIds = securityGroupIds;
+        this.subnetIds = subnetIds;
         this.vpcId = vpcId;
     }
 

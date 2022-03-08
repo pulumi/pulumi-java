@@ -24,8 +24,8 @@ public final class OSPolicyResourceRepositoryResourceGooRepositoryResponse {
     private OSPolicyResourceRepositoryResourceGooRepositoryResponse(
         String name,
         String url) {
-        this.name = Objects.requireNonNull(name);
-        this.url = Objects.requireNonNull(url);
+        this.name = name;
+        this.url = url;
     }
 
     /**

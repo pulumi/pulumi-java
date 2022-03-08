@@ -39,10 +39,10 @@ public final class GetLaunchPathsSummary {
         String name,
         String pathId,
         Map<String,String> tags) {
-        this.constraintSummaries = Objects.requireNonNull(constraintSummaries);
-        this.name = Objects.requireNonNull(name);
-        this.pathId = Objects.requireNonNull(pathId);
-        this.tags = Objects.requireNonNull(tags);
+        this.constraintSummaries = constraintSummaries;
+        this.name = name;
+        this.pathId = pathId;
+        this.tags = tags;
     }
 
     /**

@@ -36,10 +36,10 @@ public final class EnabledProtocolsResponse {
         Boolean download,
         Boolean hls,
         Boolean smoothStreaming) {
-        this.dash = Objects.requireNonNull(dash);
-        this.download = Objects.requireNonNull(download);
-        this.hls = Objects.requireNonNull(hls);
-        this.smoothStreaming = Objects.requireNonNull(smoothStreaming);
+        this.dash = dash;
+        this.download = download;
+        this.hls = hls;
+        this.smoothStreaming = smoothStreaming;
     }
 
     /**

@@ -17,8 +17,8 @@ public final class GetBackendServiceLogConfig {
     private GetBackendServiceLogConfig(
         Boolean enable,
         Double sampleRate) {
-        this.enable = Objects.requireNonNull(enable);
-        this.sampleRate = Objects.requireNonNull(sampleRate);
+        this.enable = enable;
+        this.sampleRate = sampleRate;
     }
 
     public Boolean getEnable() {

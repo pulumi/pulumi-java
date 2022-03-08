@@ -65,27 +65,27 @@ public final class GetLoadBalancerResult {
         List<String> subnets,
         Map<String,String> tags,
         String zoneId) {
-        this.accessLogs = Objects.requireNonNull(accessLogs);
-        this.arn = Objects.requireNonNull(arn);
-        this.availabilityZones = Objects.requireNonNull(availabilityZones);
-        this.connectionDraining = Objects.requireNonNull(connectionDraining);
-        this.connectionDrainingTimeout = Objects.requireNonNull(connectionDrainingTimeout);
-        this.crossZoneLoadBalancing = Objects.requireNonNull(crossZoneLoadBalancing);
-        this.desyncMitigationMode = Objects.requireNonNull(desyncMitigationMode);
-        this.dnsName = Objects.requireNonNull(dnsName);
-        this.healthCheck = Objects.requireNonNull(healthCheck);
-        this.id = Objects.requireNonNull(id);
-        this.idleTimeout = Objects.requireNonNull(idleTimeout);
-        this.instances = Objects.requireNonNull(instances);
-        this.internal = Objects.requireNonNull(internal);
-        this.listeners = Objects.requireNonNull(listeners);
-        this.name = Objects.requireNonNull(name);
-        this.securityGroups = Objects.requireNonNull(securityGroups);
-        this.sourceSecurityGroup = Objects.requireNonNull(sourceSecurityGroup);
-        this.sourceSecurityGroupId = Objects.requireNonNull(sourceSecurityGroupId);
-        this.subnets = Objects.requireNonNull(subnets);
-        this.tags = Objects.requireNonNull(tags);
-        this.zoneId = Objects.requireNonNull(zoneId);
+        this.accessLogs = accessLogs;
+        this.arn = arn;
+        this.availabilityZones = availabilityZones;
+        this.connectionDraining = connectionDraining;
+        this.connectionDrainingTimeout = connectionDrainingTimeout;
+        this.crossZoneLoadBalancing = crossZoneLoadBalancing;
+        this.desyncMitigationMode = desyncMitigationMode;
+        this.dnsName = dnsName;
+        this.healthCheck = healthCheck;
+        this.id = id;
+        this.idleTimeout = idleTimeout;
+        this.instances = instances;
+        this.internal = internal;
+        this.listeners = listeners;
+        this.name = name;
+        this.securityGroups = securityGroups;
+        this.sourceSecurityGroup = sourceSecurityGroup;
+        this.sourceSecurityGroupId = sourceSecurityGroupId;
+        this.subnets = subnets;
+        this.tags = tags;
+        this.zoneId = zoneId;
     }
 
     public GetLoadBalancerAccessLogs getAccessLogs() {

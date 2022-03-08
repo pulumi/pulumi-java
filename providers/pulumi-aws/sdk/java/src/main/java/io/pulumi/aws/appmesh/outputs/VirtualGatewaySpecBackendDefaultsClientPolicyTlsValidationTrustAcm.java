@@ -18,7 +18,7 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTru
 
     @OutputCustomType.Constructor({"certificateAuthorityArns"})
     private VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustAcm(List<String> certificateAuthorityArns) {
-        this.certificateAuthorityArns = Objects.requireNonNull(certificateAuthorityArns);
+        this.certificateAuthorityArns = certificateAuthorityArns;
     }
 
     /**

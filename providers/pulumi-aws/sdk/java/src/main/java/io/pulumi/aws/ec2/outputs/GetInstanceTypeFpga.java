@@ -25,10 +25,10 @@ public final class GetInstanceTypeFpga {
         String manufacturer,
         Integer memorySize,
         String name) {
-        this.count = Objects.requireNonNull(count);
-        this.manufacturer = Objects.requireNonNull(manufacturer);
-        this.memorySize = Objects.requireNonNull(memorySize);
-        this.name = Objects.requireNonNull(name);
+        this.count = count;
+        this.manufacturer = manufacturer;
+        this.memorySize = memorySize;
+        this.name = name;
     }
 
     public Integer getCount() {

@@ -42,11 +42,11 @@ public final class GetDirectorySelfServicePermission {
         Boolean rebuildWorkspace,
         Boolean restartWorkspace,
         Boolean switchRunningMode) {
-        this.changeComputeType = Objects.requireNonNull(changeComputeType);
-        this.increaseVolumeSize = Objects.requireNonNull(increaseVolumeSize);
-        this.rebuildWorkspace = Objects.requireNonNull(rebuildWorkspace);
-        this.restartWorkspace = Objects.requireNonNull(restartWorkspace);
-        this.switchRunningMode = Objects.requireNonNull(switchRunningMode);
+        this.changeComputeType = changeComputeType;
+        this.increaseVolumeSize = increaseVolumeSize;
+        this.rebuildWorkspace = rebuildWorkspace;
+        this.restartWorkspace = restartWorkspace;
+        this.switchRunningMode = switchRunningMode;
     }
 
     /**

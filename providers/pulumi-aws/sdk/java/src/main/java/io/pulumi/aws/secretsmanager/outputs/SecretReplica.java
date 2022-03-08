@@ -46,7 +46,7 @@ public final class SecretReplica {
         @Nullable String statusMessage) {
         this.kmsKeyId = kmsKeyId;
         this.lastAccessedDate = lastAccessedDate;
-        this.region = Objects.requireNonNull(region);
+        this.region = region;
         this.status = status;
         this.statusMessage = statusMessage;
     }

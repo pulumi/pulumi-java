@@ -17,7 +17,7 @@ public final class AwsClusterControlPlaneDatabaseEncryption {
 
     @OutputCustomType.Constructor({"kmsKeyArn"})
     private AwsClusterControlPlaneDatabaseEncryption(String kmsKeyArn) {
-        this.kmsKeyArn = Objects.requireNonNull(kmsKeyArn);
+        this.kmsKeyArn = kmsKeyArn;
     }
 
     /**

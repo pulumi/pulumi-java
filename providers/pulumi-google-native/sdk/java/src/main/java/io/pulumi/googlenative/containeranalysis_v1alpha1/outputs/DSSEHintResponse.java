@@ -17,7 +17,7 @@ public final class DSSEHintResponse {
 
     @OutputCustomType.Constructor({"humanReadableName"})
     private DSSEHintResponse(String humanReadableName) {
-        this.humanReadableName = Objects.requireNonNull(humanReadableName);
+        this.humanReadableName = humanReadableName;
     }
 
     /**

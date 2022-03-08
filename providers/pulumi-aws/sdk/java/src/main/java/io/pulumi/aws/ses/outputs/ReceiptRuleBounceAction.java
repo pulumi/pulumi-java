@@ -51,10 +51,10 @@ public final class ReceiptRuleBounceAction {
         String smtpReplyCode,
         @Nullable String statusCode,
         @Nullable String topicArn) {
-        this.message = Objects.requireNonNull(message);
-        this.position = Objects.requireNonNull(position);
-        this.sender = Objects.requireNonNull(sender);
-        this.smtpReplyCode = Objects.requireNonNull(smtpReplyCode);
+        this.message = message;
+        this.position = position;
+        this.sender = sender;
+        this.smtpReplyCode = smtpReplyCode;
         this.statusCode = statusCode;
         this.topicArn = topicArn;
     }

@@ -105,7 +105,7 @@ public final class AzureFileStorageReadSettingsResponse {
         this.partitionRootPath = partitionRootPath;
         this.prefix = prefix;
         this.recursive = recursive;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.wildcardFileName = wildcardFileName;
         this.wildcardFolderPath = wildcardFolderPath;
     }

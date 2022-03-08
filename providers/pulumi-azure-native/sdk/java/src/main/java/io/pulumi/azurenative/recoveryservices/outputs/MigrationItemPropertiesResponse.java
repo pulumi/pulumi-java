@@ -96,19 +96,19 @@ public final class MigrationItemPropertiesResponse {
         String recoveryServicesProviderId,
         String testMigrateState,
         String testMigrateStateDescription) {
-        this.allowedOperations = Objects.requireNonNull(allowedOperations);
-        this.currentJob = Objects.requireNonNull(currentJob);
-        this.health = Objects.requireNonNull(health);
-        this.healthErrors = Objects.requireNonNull(healthErrors);
-        this.machineName = Objects.requireNonNull(machineName);
-        this.migrationState = Objects.requireNonNull(migrationState);
-        this.migrationStateDescription = Objects.requireNonNull(migrationStateDescription);
-        this.policyFriendlyName = Objects.requireNonNull(policyFriendlyName);
-        this.policyId = Objects.requireNonNull(policyId);
+        this.allowedOperations = allowedOperations;
+        this.currentJob = currentJob;
+        this.health = health;
+        this.healthErrors = healthErrors;
+        this.machineName = machineName;
+        this.migrationState = migrationState;
+        this.migrationStateDescription = migrationStateDescription;
+        this.policyFriendlyName = policyFriendlyName;
+        this.policyId = policyId;
         this.providerSpecificDetails = providerSpecificDetails;
-        this.recoveryServicesProviderId = Objects.requireNonNull(recoveryServicesProviderId);
-        this.testMigrateState = Objects.requireNonNull(testMigrateState);
-        this.testMigrateStateDescription = Objects.requireNonNull(testMigrateStateDescription);
+        this.recoveryServicesProviderId = recoveryServicesProviderId;
+        this.testMigrateState = testMigrateState;
+        this.testMigrateStateDescription = testMigrateStateDescription;
     }
 
     /**

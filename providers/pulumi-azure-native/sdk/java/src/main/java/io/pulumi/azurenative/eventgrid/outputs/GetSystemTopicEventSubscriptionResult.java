@@ -130,14 +130,14 @@ public final class GetSystemTopicEventSubscriptionResult {
         this.eventDeliverySchema = eventDeliverySchema;
         this.expirationTimeUtc = expirationTimeUtc;
         this.filter = filter;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.labels = labels;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.retryPolicy = retryPolicy;
-        this.systemData = Objects.requireNonNull(systemData);
-        this.topic = Objects.requireNonNull(topic);
-        this.type = Objects.requireNonNull(type);
+        this.systemData = systemData;
+        this.topic = topic;
+        this.type = type;
     }
 
     /**

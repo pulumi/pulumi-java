@@ -24,8 +24,8 @@ public final class ScoringConfigResponse {
     private ScoringConfigResponse(
         Boolean disableFreshness,
         Boolean disablePersonalization) {
-        this.disableFreshness = Objects.requireNonNull(disableFreshness);
-        this.disablePersonalization = Objects.requireNonNull(disablePersonalization);
+        this.disableFreshness = disableFreshness;
+        this.disablePersonalization = disablePersonalization;
     }
 
     /**

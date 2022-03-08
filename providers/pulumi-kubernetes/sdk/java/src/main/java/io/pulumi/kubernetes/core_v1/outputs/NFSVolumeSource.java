@@ -33,9 +33,9 @@ public final class NFSVolumeSource {
         String path,
         @Nullable Boolean readOnly,
         String server) {
-        this.path = Objects.requireNonNull(path);
+        this.path = path;
         this.readOnly = readOnly;
-        this.server = Objects.requireNonNull(server);
+        this.server = server;
     }
 
     /**

@@ -41,9 +41,9 @@ public final class RestorePolicyPropertiesResponse {
         String lastEnabledTime,
         String minRestoreTime) {
         this.days = days;
-        this.enabled = Objects.requireNonNull(enabled);
-        this.lastEnabledTime = Objects.requireNonNull(lastEnabledTime);
-        this.minRestoreTime = Objects.requireNonNull(minRestoreTime);
+        this.enabled = enabled;
+        this.lastEnabledTime = lastEnabledTime;
+        this.minRestoreTime = minRestoreTime;
     }
 
     /**

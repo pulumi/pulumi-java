@@ -31,9 +31,9 @@ public final class SecureIotDeviceRemoteTunnelResponse {
         String deviceId,
         String iotHubName,
         String type) {
-        this.deviceId = Objects.requireNonNull(deviceId);
-        this.iotHubName = Objects.requireNonNull(iotHubName);
-        this.type = Objects.requireNonNull(type);
+        this.deviceId = deviceId;
+        this.iotHubName = iotHubName;
+        this.type = type;
     }
 
     /**

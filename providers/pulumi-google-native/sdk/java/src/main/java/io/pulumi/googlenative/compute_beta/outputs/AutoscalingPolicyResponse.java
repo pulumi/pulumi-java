@@ -72,16 +72,16 @@ public final class AutoscalingPolicyResponse {
         AutoscalingPolicyScaleDownControlResponse scaleDownControl,
         AutoscalingPolicyScaleInControlResponse scaleInControl,
         Map<String,String> scalingSchedules) {
-        this.coolDownPeriodSec = Objects.requireNonNull(coolDownPeriodSec);
-        this.cpuUtilization = Objects.requireNonNull(cpuUtilization);
-        this.customMetricUtilizations = Objects.requireNonNull(customMetricUtilizations);
-        this.loadBalancingUtilization = Objects.requireNonNull(loadBalancingUtilization);
-        this.maxNumReplicas = Objects.requireNonNull(maxNumReplicas);
-        this.minNumReplicas = Objects.requireNonNull(minNumReplicas);
-        this.mode = Objects.requireNonNull(mode);
-        this.scaleDownControl = Objects.requireNonNull(scaleDownControl);
-        this.scaleInControl = Objects.requireNonNull(scaleInControl);
-        this.scalingSchedules = Objects.requireNonNull(scalingSchedules);
+        this.coolDownPeriodSec = coolDownPeriodSec;
+        this.cpuUtilization = cpuUtilization;
+        this.customMetricUtilizations = customMetricUtilizations;
+        this.loadBalancingUtilization = loadBalancingUtilization;
+        this.maxNumReplicas = maxNumReplicas;
+        this.minNumReplicas = minNumReplicas;
+        this.mode = mode;
+        this.scaleDownControl = scaleDownControl;
+        this.scaleInControl = scaleInControl;
+        this.scalingSchedules = scalingSchedules;
     }
 
     /**

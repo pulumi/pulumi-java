@@ -26,9 +26,9 @@ public final class GetGroupLaunchTemplate {
         String id,
         String name,
         String version) {
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.version = Objects.requireNonNull(version);
+        this.id = id;
+        this.name = name;
+        this.version = version;
     }
 
     /**

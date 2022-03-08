@@ -53,12 +53,12 @@ public final class GetAnnotationResult {
         String name,
         ResourceAnnotationResponse resourceAnnotation,
         SensitiveTextAnnotationResponse textAnnotation) {
-        this.annotationSource = Objects.requireNonNull(annotationSource);
-        this.customData = Objects.requireNonNull(customData);
-        this.imageAnnotation = Objects.requireNonNull(imageAnnotation);
-        this.name = Objects.requireNonNull(name);
-        this.resourceAnnotation = Objects.requireNonNull(resourceAnnotation);
-        this.textAnnotation = Objects.requireNonNull(textAnnotation);
+        this.annotationSource = annotationSource;
+        this.customData = customData;
+        this.imageAnnotation = imageAnnotation;
+        this.name = name;
+        this.resourceAnnotation = resourceAnnotation;
+        this.textAnnotation = textAnnotation;
     }
 
     /**

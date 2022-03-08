@@ -68,15 +68,15 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse {
         String questionDuration,
         Integer replicaCount,
         String userEmailAddress) {
-        this.annotatedDatasetDescription = Objects.requireNonNull(annotatedDatasetDescription);
-        this.annotatedDatasetDisplayName = Objects.requireNonNull(annotatedDatasetDisplayName);
-        this.contributorEmails = Objects.requireNonNull(contributorEmails);
-        this.instruction = Objects.requireNonNull(instruction);
-        this.labelGroup = Objects.requireNonNull(labelGroup);
-        this.languageCode = Objects.requireNonNull(languageCode);
-        this.questionDuration = Objects.requireNonNull(questionDuration);
-        this.replicaCount = Objects.requireNonNull(replicaCount);
-        this.userEmailAddress = Objects.requireNonNull(userEmailAddress);
+        this.annotatedDatasetDescription = annotatedDatasetDescription;
+        this.annotatedDatasetDisplayName = annotatedDatasetDisplayName;
+        this.contributorEmails = contributorEmails;
+        this.instruction = instruction;
+        this.labelGroup = labelGroup;
+        this.languageCode = languageCode;
+        this.questionDuration = questionDuration;
+        this.replicaCount = replicaCount;
+        this.userEmailAddress = userEmailAddress;
     }
 
     /**

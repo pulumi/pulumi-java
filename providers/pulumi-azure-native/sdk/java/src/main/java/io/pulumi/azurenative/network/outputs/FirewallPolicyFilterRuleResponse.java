@@ -56,7 +56,7 @@ public final class FirewallPolicyFilterRuleResponse {
         this.name = name;
         this.priority = priority;
         this.ruleConditions = ruleConditions;
-        this.ruleType = Objects.requireNonNull(ruleType);
+        this.ruleType = ruleType;
     }
 
     /**

@@ -24,7 +24,7 @@ public final class RepositoryExternalConnections {
         String externalConnectionName,
         @Nullable String packageFormat,
         @Nullable String status) {
-        this.externalConnectionName = Objects.requireNonNull(externalConnectionName);
+        this.externalConnectionName = externalConnectionName;
         this.packageFormat = packageFormat;
         this.status = status;
     }

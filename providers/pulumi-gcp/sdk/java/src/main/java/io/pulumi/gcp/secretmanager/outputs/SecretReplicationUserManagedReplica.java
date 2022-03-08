@@ -29,7 +29,7 @@ public final class SecretReplicationUserManagedReplica {
         @Nullable SecretReplicationUserManagedReplicaCustomerManagedEncryption customerManagedEncryption,
         String location) {
         this.customerManagedEncryption = customerManagedEncryption;
-        this.location = Objects.requireNonNull(location);
+        this.location = location;
     }
 
     /**

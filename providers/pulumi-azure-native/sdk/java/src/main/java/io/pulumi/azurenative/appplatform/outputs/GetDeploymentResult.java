@@ -46,11 +46,11 @@ public final class GetDeploymentResult {
         DeploymentResourcePropertiesResponse properties,
         @Nullable SkuResponse sku,
         String type) {
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.properties = Objects.requireNonNull(properties);
+        this.id = id;
+        this.name = name;
+        this.properties = properties;
         this.sku = sku;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

@@ -30,9 +30,9 @@ public final class BitbucketServerSecretsResponse {
         String adminAccessTokenVersionName,
         String readAccessTokenVersionName,
         String webhookSecretVersionName) {
-        this.adminAccessTokenVersionName = Objects.requireNonNull(adminAccessTokenVersionName);
-        this.readAccessTokenVersionName = Objects.requireNonNull(readAccessTokenVersionName);
-        this.webhookSecretVersionName = Objects.requireNonNull(webhookSecretVersionName);
+        this.adminAccessTokenVersionName = adminAccessTokenVersionName;
+        this.readAccessTokenVersionName = readAccessTokenVersionName;
+        this.webhookSecretVersionName = webhookSecretVersionName;
     }
 
     /**

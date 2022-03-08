@@ -39,10 +39,10 @@ public final class MulticastGroupLoRaWAN {
         @Nullable Integer numberOfDevicesInGroup,
         @Nullable Integer numberOfDevicesRequested,
         String rfRegion) {
-        this.dlClass = Objects.requireNonNull(dlClass);
+        this.dlClass = dlClass;
         this.numberOfDevicesInGroup = numberOfDevicesInGroup;
         this.numberOfDevicesRequested = numberOfDevicesRequested;
-        this.rfRegion = Objects.requireNonNull(rfRegion);
+        this.rfRegion = rfRegion;
     }
 
     /**

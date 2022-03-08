@@ -25,8 +25,8 @@ public final class RoutingVPCResponse {
     private RoutingVPCResponse(
         Boolean requiredForNewSiteToSiteDataTransferSpokes,
         String uri) {
-        this.requiredForNewSiteToSiteDataTransferSpokes = Objects.requireNonNull(requiredForNewSiteToSiteDataTransferSpokes);
-        this.uri = Objects.requireNonNull(uri);
+        this.requiredForNewSiteToSiteDataTransferSpokes = requiredForNewSiteToSiteDataTransferSpokes;
+        this.uri = uri;
     }
 
     /**

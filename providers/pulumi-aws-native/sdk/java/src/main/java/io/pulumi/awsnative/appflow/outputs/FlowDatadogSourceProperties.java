@@ -13,7 +13,7 @@ public final class FlowDatadogSourceProperties {
 
     @OutputCustomType.Constructor({"object"})
     private FlowDatadogSourceProperties(String object) {
-        this.object = Objects.requireNonNull(object);
+        this.object = object;
     }
 
     public String getObject() {

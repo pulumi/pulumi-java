@@ -17,7 +17,7 @@ public final class ApplicationNotificationEndpointResponse {
 
     @OutputCustomType.Constructor({"uri"})
     private ApplicationNotificationEndpointResponse(String uri) {
-        this.uri = Objects.requireNonNull(uri);
+        this.uri = uri;
     }
 
     /**

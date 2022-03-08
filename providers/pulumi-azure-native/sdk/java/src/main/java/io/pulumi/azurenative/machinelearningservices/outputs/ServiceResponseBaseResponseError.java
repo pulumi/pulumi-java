@@ -17,7 +17,7 @@ public final class ServiceResponseBaseResponseError {
 
     @OutputCustomType.Constructor({"error"})
     private ServiceResponseBaseResponseError(ErrorResponseResponse error) {
-        this.error = Objects.requireNonNull(error);
+        this.error = error;
     }
 
     /**

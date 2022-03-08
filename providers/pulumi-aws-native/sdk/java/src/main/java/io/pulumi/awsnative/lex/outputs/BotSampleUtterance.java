@@ -13,7 +13,7 @@ public final class BotSampleUtterance {
 
     @OutputCustomType.Constructor({"utterance"})
     private BotSampleUtterance(String utterance) {
-        this.utterance = Objects.requireNonNull(utterance);
+        this.utterance = utterance;
     }
 
     public String getUtterance() {

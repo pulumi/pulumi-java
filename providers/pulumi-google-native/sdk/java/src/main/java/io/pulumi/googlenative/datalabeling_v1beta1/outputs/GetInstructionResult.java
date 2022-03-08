@@ -62,14 +62,14 @@ public final class GetInstructionResult {
         String name,
         GoogleCloudDatalabelingV1beta1PdfInstructionResponse pdfInstruction,
         String updateTime) {
-        this.blockingResources = Objects.requireNonNull(blockingResources);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.dataType = Objects.requireNonNull(dataType);
-        this.description = Objects.requireNonNull(description);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.name = Objects.requireNonNull(name);
-        this.pdfInstruction = Objects.requireNonNull(pdfInstruction);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.blockingResources = blockingResources;
+        this.createTime = createTime;
+        this.dataType = dataType;
+        this.description = description;
+        this.displayName = displayName;
+        this.name = name;
+        this.pdfInstruction = pdfInstruction;
+        this.updateTime = updateTime;
     }
 
     /**

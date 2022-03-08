@@ -37,10 +37,10 @@ public final class BastionShareableLinkResponse {
         String createdAt,
         String message,
         VMResponse vm) {
-        this.bsl = Objects.requireNonNull(bsl);
-        this.createdAt = Objects.requireNonNull(createdAt);
-        this.message = Objects.requireNonNull(message);
-        this.vm = Objects.requireNonNull(vm);
+        this.bsl = bsl;
+        this.createdAt = createdAt;
+        this.message = message;
+        this.vm = vm;
     }
 
     /**

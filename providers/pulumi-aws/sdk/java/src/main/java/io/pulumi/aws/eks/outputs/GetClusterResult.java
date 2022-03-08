@@ -104,21 +104,21 @@ public final class GetClusterResult {
         Map<String,String> tags,
         String version,
         GetClusterVpcConfig vpcConfig) {
-        this.arn = Objects.requireNonNull(arn);
-        this.certificateAuthority = Objects.requireNonNull(certificateAuthority);
-        this.createdAt = Objects.requireNonNull(createdAt);
-        this.enabledClusterLogTypes = Objects.requireNonNull(enabledClusterLogTypes);
-        this.endpoint = Objects.requireNonNull(endpoint);
-        this.id = Objects.requireNonNull(id);
-        this.identities = Objects.requireNonNull(identities);
-        this.kubernetesNetworkConfigs = Objects.requireNonNull(kubernetesNetworkConfigs);
-        this.name = Objects.requireNonNull(name);
-        this.platformVersion = Objects.requireNonNull(platformVersion);
-        this.roleArn = Objects.requireNonNull(roleArn);
-        this.status = Objects.requireNonNull(status);
-        this.tags = Objects.requireNonNull(tags);
-        this.version = Objects.requireNonNull(version);
-        this.vpcConfig = Objects.requireNonNull(vpcConfig);
+        this.arn = arn;
+        this.certificateAuthority = certificateAuthority;
+        this.createdAt = createdAt;
+        this.enabledClusterLogTypes = enabledClusterLogTypes;
+        this.endpoint = endpoint;
+        this.id = id;
+        this.identities = identities;
+        this.kubernetesNetworkConfigs = kubernetesNetworkConfigs;
+        this.name = name;
+        this.platformVersion = platformVersion;
+        this.roleArn = roleArn;
+        this.status = status;
+        this.tags = tags;
+        this.version = version;
+        this.vpcConfig = vpcConfig;
     }
 
     /**

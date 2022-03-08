@@ -24,8 +24,8 @@ public final class GetBillingServiceAccountResult {
     private GetBillingServiceAccountResult(
         String arn,
         String id) {
-        this.arn = Objects.requireNonNull(arn);
-        this.id = Objects.requireNonNull(id);
+        this.arn = arn;
+        this.id = id;
     }
 
     /**

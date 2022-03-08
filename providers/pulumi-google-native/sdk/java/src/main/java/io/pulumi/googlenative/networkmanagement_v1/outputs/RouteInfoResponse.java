@@ -68,15 +68,15 @@ public final class RouteInfoResponse {
         Integer priority,
         String routeType,
         String uri) {
-        this.destIpRange = Objects.requireNonNull(destIpRange);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.instanceTags = Objects.requireNonNull(instanceTags);
-        this.networkUri = Objects.requireNonNull(networkUri);
-        this.nextHop = Objects.requireNonNull(nextHop);
-        this.nextHopType = Objects.requireNonNull(nextHopType);
-        this.priority = Objects.requireNonNull(priority);
-        this.routeType = Objects.requireNonNull(routeType);
-        this.uri = Objects.requireNonNull(uri);
+        this.destIpRange = destIpRange;
+        this.displayName = displayName;
+        this.instanceTags = instanceTags;
+        this.networkUri = networkUri;
+        this.nextHop = nextHop;
+        this.nextHopType = nextHopType;
+        this.priority = priority;
+        this.routeType = routeType;
+        this.uri = uri;
     }
 
     /**

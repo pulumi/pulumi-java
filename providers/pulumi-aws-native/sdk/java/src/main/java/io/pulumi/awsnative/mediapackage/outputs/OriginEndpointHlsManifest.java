@@ -80,7 +80,7 @@ public final class OriginEndpointHlsManifest {
         this.adMarkers = adMarkers;
         this.adTriggers = adTriggers;
         this.adsOnDeliveryRestrictions = adsOnDeliveryRestrictions;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.includeIframeOnlyStream = includeIframeOnlyStream;
         this.manifestName = manifestName;
         this.playlistType = playlistType;

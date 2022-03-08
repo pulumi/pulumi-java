@@ -190,34 +190,34 @@ public final class RecommendedActionResponse {
         List<RecommendedActionMetricInfoResponse> timeSeries,
         String type,
         String validSince) {
-        this.details = Objects.requireNonNull(details);
-        this.errorDetails = Objects.requireNonNull(errorDetails);
-        this.estimatedImpact = Objects.requireNonNull(estimatedImpact);
-        this.executeActionDuration = Objects.requireNonNull(executeActionDuration);
-        this.executeActionInitiatedBy = Objects.requireNonNull(executeActionInitiatedBy);
-        this.executeActionInitiatedTime = Objects.requireNonNull(executeActionInitiatedTime);
-        this.executeActionStartTime = Objects.requireNonNull(executeActionStartTime);
-        this.id = Objects.requireNonNull(id);
-        this.implementationDetails = Objects.requireNonNull(implementationDetails);
-        this.isArchivedAction = Objects.requireNonNull(isArchivedAction);
-        this.isExecutableAction = Objects.requireNonNull(isExecutableAction);
-        this.isRevertableAction = Objects.requireNonNull(isRevertableAction);
-        this.kind = Objects.requireNonNull(kind);
-        this.lastRefresh = Objects.requireNonNull(lastRefresh);
-        this.linkedObjects = Objects.requireNonNull(linkedObjects);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.observedImpact = Objects.requireNonNull(observedImpact);
-        this.recommendationReason = Objects.requireNonNull(recommendationReason);
-        this.revertActionDuration = Objects.requireNonNull(revertActionDuration);
-        this.revertActionInitiatedBy = Objects.requireNonNull(revertActionInitiatedBy);
-        this.revertActionInitiatedTime = Objects.requireNonNull(revertActionInitiatedTime);
-        this.revertActionStartTime = Objects.requireNonNull(revertActionStartTime);
-        this.score = Objects.requireNonNull(score);
-        this.state = Objects.requireNonNull(state);
-        this.timeSeries = Objects.requireNonNull(timeSeries);
-        this.type = Objects.requireNonNull(type);
-        this.validSince = Objects.requireNonNull(validSince);
+        this.details = details;
+        this.errorDetails = errorDetails;
+        this.estimatedImpact = estimatedImpact;
+        this.executeActionDuration = executeActionDuration;
+        this.executeActionInitiatedBy = executeActionInitiatedBy;
+        this.executeActionInitiatedTime = executeActionInitiatedTime;
+        this.executeActionStartTime = executeActionStartTime;
+        this.id = id;
+        this.implementationDetails = implementationDetails;
+        this.isArchivedAction = isArchivedAction;
+        this.isExecutableAction = isExecutableAction;
+        this.isRevertableAction = isRevertableAction;
+        this.kind = kind;
+        this.lastRefresh = lastRefresh;
+        this.linkedObjects = linkedObjects;
+        this.location = location;
+        this.name = name;
+        this.observedImpact = observedImpact;
+        this.recommendationReason = recommendationReason;
+        this.revertActionDuration = revertActionDuration;
+        this.revertActionInitiatedBy = revertActionInitiatedBy;
+        this.revertActionInitiatedTime = revertActionInitiatedTime;
+        this.revertActionStartTime = revertActionStartTime;
+        this.score = score;
+        this.state = state;
+        this.timeSeries = timeSeries;
+        this.type = type;
+        this.validSince = validSince;
     }
 
     /**

@@ -27,7 +27,7 @@ public final class WsdlServiceResponse {
         @Nullable List<String> endpointQualifiedNames,
         String qualifiedName) {
         this.endpointQualifiedNames = endpointQualifiedNames;
-        this.qualifiedName = Objects.requireNonNull(qualifiedName);
+        this.qualifiedName = qualifiedName;
     }
 
     /**

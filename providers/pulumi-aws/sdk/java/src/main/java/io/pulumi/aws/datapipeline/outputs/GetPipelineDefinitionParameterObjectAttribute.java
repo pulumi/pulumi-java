@@ -24,8 +24,8 @@ public final class GetPipelineDefinitionParameterObjectAttribute {
     private GetPipelineDefinitionParameterObjectAttribute(
         String key,
         String stringValue) {
-        this.key = Objects.requireNonNull(key);
-        this.stringValue = Objects.requireNonNull(stringValue);
+        this.key = key;
+        this.stringValue = stringValue;
     }
 
     /**

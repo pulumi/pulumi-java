@@ -159,23 +159,23 @@ public final class GetStreamingEndpointResult {
         this.cdnEnabled = cdnEnabled;
         this.cdnProfile = cdnProfile;
         this.cdnProvider = cdnProvider;
-        this.created = Objects.requireNonNull(created);
+        this.created = created;
         this.crossSiteAccessPolicies = crossSiteAccessPolicies;
         this.customHostNames = customHostNames;
         this.description = description;
-        this.freeTrialEndTime = Objects.requireNonNull(freeTrialEndTime);
-        this.hostName = Objects.requireNonNull(hostName);
-        this.id = Objects.requireNonNull(id);
-        this.lastModified = Objects.requireNonNull(lastModified);
-        this.location = Objects.requireNonNull(location);
+        this.freeTrialEndTime = freeTrialEndTime;
+        this.hostName = hostName;
+        this.id = id;
+        this.lastModified = lastModified;
+        this.location = location;
         this.maxCacheAge = maxCacheAge;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.resourceState = Objects.requireNonNull(resourceState);
-        this.scaleUnits = Objects.requireNonNull(scaleUnits);
-        this.systemData = Objects.requireNonNull(systemData);
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.resourceState = resourceState;
+        this.scaleUnits = scaleUnits;
+        this.systemData = systemData;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

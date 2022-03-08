@@ -69,15 +69,15 @@ public final class GetManagedPrivateEndpointResult {
         @Nullable String requestMessage,
         SystemDataResponse systemData,
         String type) {
-        this.groupId = Objects.requireNonNull(groupId);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.privateLinkResourceId = Objects.requireNonNull(privateLinkResourceId);
+        this.groupId = groupId;
+        this.id = id;
+        this.name = name;
+        this.privateLinkResourceId = privateLinkResourceId;
         this.privateLinkResourceRegion = privateLinkResourceRegion;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.requestMessage = requestMessage;
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

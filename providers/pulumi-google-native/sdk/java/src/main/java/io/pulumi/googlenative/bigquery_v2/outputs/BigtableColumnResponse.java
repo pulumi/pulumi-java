@@ -45,12 +45,12 @@ public final class BigtableColumnResponse {
         String qualifierEncoded,
         String qualifierString,
         String type) {
-        this.encoding = Objects.requireNonNull(encoding);
-        this.fieldName = Objects.requireNonNull(fieldName);
-        this.onlyReadLatest = Objects.requireNonNull(onlyReadLatest);
-        this.qualifierEncoded = Objects.requireNonNull(qualifierEncoded);
-        this.qualifierString = Objects.requireNonNull(qualifierString);
-        this.type = Objects.requireNonNull(type);
+        this.encoding = encoding;
+        this.fieldName = fieldName;
+        this.onlyReadLatest = onlyReadLatest;
+        this.qualifierEncoded = qualifierEncoded;
+        this.qualifierString = qualifierString;
+        this.type = type;
     }
 
     /**

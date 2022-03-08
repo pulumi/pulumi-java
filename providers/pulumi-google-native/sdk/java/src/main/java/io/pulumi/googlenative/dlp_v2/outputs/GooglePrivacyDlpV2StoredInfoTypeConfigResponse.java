@@ -45,11 +45,11 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigResponse {
         String displayName,
         GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse largeCustomDictionary,
         GooglePrivacyDlpV2RegexResponse regex) {
-        this.description = Objects.requireNonNull(description);
-        this.dictionary = Objects.requireNonNull(dictionary);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.largeCustomDictionary = Objects.requireNonNull(largeCustomDictionary);
-        this.regex = Objects.requireNonNull(regex);
+        this.description = description;
+        this.dictionary = dictionary;
+        this.displayName = displayName;
+        this.largeCustomDictionary = largeCustomDictionary;
+        this.regex = regex;
     }
 
     /**

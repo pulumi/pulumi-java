@@ -41,12 +41,12 @@ public final class GetScriptResult {
         @Nullable String language,
         String pythonScript,
         String scalaCode) {
-        this.dagEdges = Objects.requireNonNull(dagEdges);
-        this.dagNodes = Objects.requireNonNull(dagNodes);
-        this.id = Objects.requireNonNull(id);
+        this.dagEdges = dagEdges;
+        this.dagNodes = dagNodes;
+        this.id = id;
         this.language = language;
-        this.pythonScript = Objects.requireNonNull(pythonScript);
-        this.scalaCode = Objects.requireNonNull(scalaCode);
+        this.pythonScript = pythonScript;
+        this.scalaCode = scalaCode;
     }
 
     public List<GetScriptDagEdge> getDagEdges() {

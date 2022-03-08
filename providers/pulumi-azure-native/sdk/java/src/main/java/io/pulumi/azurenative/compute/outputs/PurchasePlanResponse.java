@@ -38,10 +38,10 @@ public final class PurchasePlanResponse {
         String product,
         @Nullable String promotionCode,
         String publisher) {
-        this.name = Objects.requireNonNull(name);
-        this.product = Objects.requireNonNull(product);
+        this.name = name;
+        this.product = product;
         this.promotionCode = promotionCode;
-        this.publisher = Objects.requireNonNull(publisher);
+        this.publisher = publisher;
     }
 
     /**

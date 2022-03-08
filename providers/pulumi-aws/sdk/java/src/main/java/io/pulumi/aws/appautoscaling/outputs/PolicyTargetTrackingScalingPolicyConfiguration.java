@@ -59,7 +59,7 @@ public final class PolicyTargetTrackingScalingPolicyConfiguration {
         this.predefinedMetricSpecification = predefinedMetricSpecification;
         this.scaleInCooldown = scaleInCooldown;
         this.scaleOutCooldown = scaleOutCooldown;
-        this.targetValue = Objects.requireNonNull(targetValue);
+        this.targetValue = targetValue;
     }
 
     /**

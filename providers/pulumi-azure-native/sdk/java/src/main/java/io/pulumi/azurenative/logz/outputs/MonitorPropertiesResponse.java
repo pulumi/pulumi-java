@@ -50,13 +50,13 @@ public final class MonitorPropertiesResponse {
         @Nullable PlanDataResponse planData,
         String provisioningState,
         @Nullable UserInfoResponse userInfo) {
-        this.liftrResourceCategory = Objects.requireNonNull(liftrResourceCategory);
-        this.liftrResourcePreference = Objects.requireNonNull(liftrResourcePreference);
+        this.liftrResourceCategory = liftrResourceCategory;
+        this.liftrResourcePreference = liftrResourcePreference;
         this.logzOrganizationProperties = logzOrganizationProperties;
         this.marketplaceSubscriptionStatus = marketplaceSubscriptionStatus;
         this.monitoringStatus = monitoringStatus;
         this.planData = planData;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.userInfo = userInfo;
     }
 

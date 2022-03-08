@@ -17,7 +17,7 @@ public final class ShieldedVmIntegrityPolicyResponse {
 
     @OutputCustomType.Constructor({"updateAutoLearnPolicy"})
     private ShieldedVmIntegrityPolicyResponse(Boolean updateAutoLearnPolicy) {
-        this.updateAutoLearnPolicy = Objects.requireNonNull(updateAutoLearnPolicy);
+        this.updateAutoLearnPolicy = updateAutoLearnPolicy;
     }
 
     /**

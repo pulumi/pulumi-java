@@ -70,15 +70,15 @@ public final class GetIncidentCommentResult {
         String name,
         SystemDataResponse systemData,
         String type) {
-        this.author = Objects.requireNonNull(author);
-        this.createdTimeUtc = Objects.requireNonNull(createdTimeUtc);
+        this.author = author;
+        this.createdTimeUtc = createdTimeUtc;
         this.etag = etag;
-        this.id = Objects.requireNonNull(id);
-        this.lastModifiedTimeUtc = Objects.requireNonNull(lastModifiedTimeUtc);
-        this.message = Objects.requireNonNull(message);
-        this.name = Objects.requireNonNull(name);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.id = id;
+        this.lastModifiedTimeUtc = lastModifiedTimeUtc;
+        this.message = message;
+        this.name = name;
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

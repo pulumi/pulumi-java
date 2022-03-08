@@ -25,8 +25,8 @@ public final class GoogleCloudMlV1__MetricSpecResponse {
     private GoogleCloudMlV1__MetricSpecResponse(
         String name,
         Integer target) {
-        this.name = Objects.requireNonNull(name);
-        this.target = Objects.requireNonNull(target);
+        this.name = name;
+        this.target = target;
     }
 
     /**

@@ -135,10 +135,10 @@ public final class GetNamespaceResult {
         this.critical = critical;
         this.dataCenter = dataCenter;
         this.enabled = enabled;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.location = location;
-        this.metricId = Objects.requireNonNull(metricId);
-        this.name = Objects.requireNonNull(name);
+        this.metricId = metricId;
+        this.name = name;
         this.namespaceType = namespaceType;
         this.provisioningState = provisioningState;
         this.region = region;
@@ -148,7 +148,7 @@ public final class GetNamespaceResult {
         this.status = status;
         this.subscriptionId = subscriptionId;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.updatedAt = updatedAt;
     }
 

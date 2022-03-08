@@ -32,9 +32,9 @@ public final class AccessPointPosixUser {
         String gid,
         @Nullable List<String> secondaryGids,
         String uid) {
-        this.gid = Objects.requireNonNull(gid);
+        this.gid = gid;
         this.secondaryGids = secondaryGids;
-        this.uid = Objects.requireNonNull(uid);
+        this.uid = uid;
     }
 
     /**

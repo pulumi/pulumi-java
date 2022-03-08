@@ -65,10 +65,10 @@ public final class TableGlobalSecondaryIndex {
         @Nullable String rangeKey,
         @Nullable Integer readCapacity,
         @Nullable Integer writeCapacity) {
-        this.hashKey = Objects.requireNonNull(hashKey);
-        this.name = Objects.requireNonNull(name);
+        this.hashKey = hashKey;
+        this.name = name;
         this.nonKeyAttributes = nonKeyAttributes;
-        this.projectionType = Objects.requireNonNull(projectionType);
+        this.projectionType = projectionType;
         this.rangeKey = rangeKey;
         this.readCapacity = readCapacity;
         this.writeCapacity = writeCapacity;

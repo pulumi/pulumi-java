@@ -36,10 +36,10 @@ public final class IdentityPoolRoleAttachmentRoleMappingMappingRule {
         String matchType,
         String roleArn,
         String value) {
-        this.claim = Objects.requireNonNull(claim);
-        this.matchType = Objects.requireNonNull(matchType);
-        this.roleArn = Objects.requireNonNull(roleArn);
-        this.value = Objects.requireNonNull(value);
+        this.claim = claim;
+        this.matchType = matchType;
+        this.roleArn = roleArn;
+        this.value = value;
     }
 
     /**

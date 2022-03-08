@@ -184,7 +184,7 @@ public final class PodSecurityPolicySpec {
         this.defaultAddCapabilities = defaultAddCapabilities;
         this.defaultAllowPrivilegeEscalation = defaultAllowPrivilegeEscalation;
         this.forbiddenSysctls = forbiddenSysctls;
-        this.fsGroup = Objects.requireNonNull(fsGroup);
+        this.fsGroup = fsGroup;
         this.hostIPC = hostIPC;
         this.hostNetwork = hostNetwork;
         this.hostPID = hostPID;
@@ -193,10 +193,10 @@ public final class PodSecurityPolicySpec {
         this.readOnlyRootFilesystem = readOnlyRootFilesystem;
         this.requiredDropCapabilities = requiredDropCapabilities;
         this.runAsGroup = runAsGroup;
-        this.runAsUser = Objects.requireNonNull(runAsUser);
+        this.runAsUser = runAsUser;
         this.runtimeClass = runtimeClass;
-        this.seLinux = Objects.requireNonNull(seLinux);
-        this.supplementalGroups = Objects.requireNonNull(supplementalGroups);
+        this.seLinux = seLinux;
+        this.supplementalGroups = supplementalGroups;
         this.volumes = volumes;
     }
 

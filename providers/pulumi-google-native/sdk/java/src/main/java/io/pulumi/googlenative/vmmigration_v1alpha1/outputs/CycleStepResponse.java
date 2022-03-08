@@ -45,11 +45,11 @@ public final class CycleStepResponse {
         PostProcessingStepResponse postProcessing,
         ReplicatingStepResponse replicating,
         String startTime) {
-        this.endTime = Objects.requireNonNull(endTime);
-        this.initializingReplication = Objects.requireNonNull(initializingReplication);
-        this.postProcessing = Objects.requireNonNull(postProcessing);
-        this.replicating = Objects.requireNonNull(replicating);
-        this.startTime = Objects.requireNonNull(startTime);
+        this.endTime = endTime;
+        this.initializingReplication = initializingReplication;
+        this.postProcessing = postProcessing;
+        this.replicating = replicating;
+        this.startTime = startTime;
     }
 
     /**

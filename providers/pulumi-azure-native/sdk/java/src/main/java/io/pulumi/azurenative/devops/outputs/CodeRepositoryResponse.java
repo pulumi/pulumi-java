@@ -47,10 +47,10 @@ public final class CodeRepositoryResponse {
         @Nullable Map<String,String> properties,
         String repositoryType) {
         this.authorization = authorization;
-        this.defaultBranch = Objects.requireNonNull(defaultBranch);
-        this.id = Objects.requireNonNull(id);
+        this.defaultBranch = defaultBranch;
+        this.id = id;
         this.properties = properties;
-        this.repositoryType = Objects.requireNonNull(repositoryType);
+        this.repositoryType = repositoryType;
     }
 
     /**

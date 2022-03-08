@@ -160,28 +160,28 @@ public final class GetNoteResult {
         String updateTime,
         UpgradeNoteResponse upgrade,
         VulnerabilityTypeResponse vulnerabilityType) {
-        this.attestationAuthority = Objects.requireNonNull(attestationAuthority);
-        this.baseImage = Objects.requireNonNull(baseImage);
-        this.buildType = Objects.requireNonNull(buildType);
-        this.compliance = Objects.requireNonNull(compliance);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.deployable = Objects.requireNonNull(deployable);
-        this.discovery = Objects.requireNonNull(discovery);
-        this.dsseAttestation = Objects.requireNonNull(dsseAttestation);
-        this.expirationTime = Objects.requireNonNull(expirationTime);
-        this.kind = Objects.requireNonNull(kind);
-        this.longDescription = Objects.requireNonNull(longDescription);
-        this.name = Objects.requireNonNull(name);
-        this.$package = Objects.requireNonNull($package);
-        this.relatedUrl = Objects.requireNonNull(relatedUrl);
-        this.sbom = Objects.requireNonNull(sbom);
-        this.shortDescription = Objects.requireNonNull(shortDescription);
-        this.spdxFile = Objects.requireNonNull(spdxFile);
-        this.spdxPackage = Objects.requireNonNull(spdxPackage);
-        this.spdxRelationship = Objects.requireNonNull(spdxRelationship);
-        this.updateTime = Objects.requireNonNull(updateTime);
-        this.upgrade = Objects.requireNonNull(upgrade);
-        this.vulnerabilityType = Objects.requireNonNull(vulnerabilityType);
+        this.attestationAuthority = attestationAuthority;
+        this.baseImage = baseImage;
+        this.buildType = buildType;
+        this.compliance = compliance;
+        this.createTime = createTime;
+        this.deployable = deployable;
+        this.discovery = discovery;
+        this.dsseAttestation = dsseAttestation;
+        this.expirationTime = expirationTime;
+        this.kind = kind;
+        this.longDescription = longDescription;
+        this.name = name;
+        this.$package = $package;
+        this.relatedUrl = relatedUrl;
+        this.sbom = sbom;
+        this.shortDescription = shortDescription;
+        this.spdxFile = spdxFile;
+        this.spdxPackage = spdxPackage;
+        this.spdxRelationship = spdxRelationship;
+        this.updateTime = updateTime;
+        this.upgrade = upgrade;
+        this.vulnerabilityType = vulnerabilityType;
     }
 
     /**

@@ -24,8 +24,8 @@ public final class PublicKeyResponse {
     private PublicKeyResponse(
         String key,
         String type) {
-        this.key = Objects.requireNonNull(key);
-        this.type = Objects.requireNonNull(type);
+        this.key = key;
+        this.type = type;
     }
 
     /**

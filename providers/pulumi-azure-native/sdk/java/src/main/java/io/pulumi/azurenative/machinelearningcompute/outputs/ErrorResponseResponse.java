@@ -33,9 +33,9 @@ public final class ErrorResponseResponse {
         String code,
         @Nullable List<ErrorDetailResponse> details,
         String message) {
-        this.code = Objects.requireNonNull(code);
+        this.code = code;
         this.details = details;
-        this.message = Objects.requireNonNull(message);
+        this.message = message;
     }
 
     /**

@@ -32,9 +32,9 @@ public final class DatasetAccessView {
         String datasetId,
         String projectId,
         String tableId) {
-        this.datasetId = Objects.requireNonNull(datasetId);
-        this.projectId = Objects.requireNonNull(projectId);
-        this.tableId = Objects.requireNonNull(tableId);
+        this.datasetId = datasetId;
+        this.projectId = projectId;
+        this.tableId = tableId;
     }
 
     /**

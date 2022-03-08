@@ -29,8 +29,8 @@ public final class PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInf
     private PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoType(
         PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoType infoType,
         Integer maxFindings) {
-        this.infoType = Objects.requireNonNull(infoType);
-        this.maxFindings = Objects.requireNonNull(maxFindings);
+        this.infoType = infoType;
+        this.maxFindings = maxFindings;
     }
 
     /**

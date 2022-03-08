@@ -43,11 +43,11 @@ public final class GetApicategoryResult {
         String message,
         String requestId,
         String status) {
-        this.data = Objects.requireNonNull(data);
-        this.errorCode = Objects.requireNonNull(errorCode);
-        this.message = Objects.requireNonNull(message);
-        this.requestId = Objects.requireNonNull(requestId);
-        this.status = Objects.requireNonNull(status);
+        this.data = data;
+        this.errorCode = errorCode;
+        this.message = message;
+        this.requestId = requestId;
+        this.status = status;
     }
 
     /**

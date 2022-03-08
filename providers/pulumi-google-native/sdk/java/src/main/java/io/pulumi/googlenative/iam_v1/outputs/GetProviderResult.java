@@ -70,15 +70,15 @@ public final class GetProviderResult {
         String name,
         OidcResponse oidc,
         String state) {
-        this.attributeCondition = Objects.requireNonNull(attributeCondition);
-        this.attributeMapping = Objects.requireNonNull(attributeMapping);
-        this.aws = Objects.requireNonNull(aws);
-        this.description = Objects.requireNonNull(description);
-        this.disabled = Objects.requireNonNull(disabled);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.name = Objects.requireNonNull(name);
-        this.oidc = Objects.requireNonNull(oidc);
-        this.state = Objects.requireNonNull(state);
+        this.attributeCondition = attributeCondition;
+        this.attributeMapping = attributeMapping;
+        this.aws = aws;
+        this.description = description;
+        this.disabled = disabled;
+        this.displayName = displayName;
+        this.name = name;
+        this.oidc = oidc;
+        this.state = state;
     }
 
     /**

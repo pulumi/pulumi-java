@@ -30,9 +30,9 @@ public final class NetworkResponse {
         String network,
         String project,
         String subnetwork) {
-        this.network = Objects.requireNonNull(network);
-        this.project = Objects.requireNonNull(project);
-        this.subnetwork = Objects.requireNonNull(subnetwork);
+        this.network = network;
+        this.project = project;
+        this.subnetwork = subnetwork;
     }
 
     /**

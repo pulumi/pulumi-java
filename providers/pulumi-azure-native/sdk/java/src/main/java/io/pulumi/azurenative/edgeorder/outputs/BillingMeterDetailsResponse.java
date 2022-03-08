@@ -39,10 +39,10 @@ public final class BillingMeterDetailsResponse {
         Either<Pav2MeterDetailsResponse,PurchaseMeterDetailsResponse> meterDetails,
         String meteringType,
         String name) {
-        this.frequency = Objects.requireNonNull(frequency);
-        this.meterDetails = Objects.requireNonNull(meterDetails);
-        this.meteringType = Objects.requireNonNull(meteringType);
-        this.name = Objects.requireNonNull(name);
+        this.frequency = frequency;
+        this.meterDetails = meterDetails;
+        this.meteringType = meteringType;
+        this.name = name;
     }
 
     /**

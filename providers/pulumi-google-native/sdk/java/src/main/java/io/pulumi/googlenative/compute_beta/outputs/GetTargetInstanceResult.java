@@ -66,15 +66,15 @@ public final class GetTargetInstanceResult {
         String network,
         String selfLink,
         String zone) {
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.description = Objects.requireNonNull(description);
-        this.instance = Objects.requireNonNull(instance);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.natPolicy = Objects.requireNonNull(natPolicy);
-        this.network = Objects.requireNonNull(network);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.zone = Objects.requireNonNull(zone);
+        this.creationTimestamp = creationTimestamp;
+        this.description = description;
+        this.instance = instance;
+        this.kind = kind;
+        this.name = name;
+        this.natPolicy = natPolicy;
+        this.network = network;
+        this.selfLink = selfLink;
+        this.zone = zone;
     }
 
     /**

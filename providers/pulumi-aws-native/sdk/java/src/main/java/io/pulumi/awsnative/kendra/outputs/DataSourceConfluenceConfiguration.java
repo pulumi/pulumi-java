@@ -46,10 +46,10 @@ public final class DataSourceConfluenceConfiguration {
         this.exclusionPatterns = exclusionPatterns;
         this.inclusionPatterns = inclusionPatterns;
         this.pageConfiguration = pageConfiguration;
-        this.secretArn = Objects.requireNonNull(secretArn);
-        this.serverUrl = Objects.requireNonNull(serverUrl);
+        this.secretArn = secretArn;
+        this.serverUrl = serverUrl;
         this.spaceConfiguration = spaceConfiguration;
-        this.version = Objects.requireNonNull(version);
+        this.version = version;
         this.vpcConfiguration = vpcConfiguration;
     }
 

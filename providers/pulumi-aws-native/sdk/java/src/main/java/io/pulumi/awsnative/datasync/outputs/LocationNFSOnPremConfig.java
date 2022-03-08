@@ -18,7 +18,7 @@ public final class LocationNFSOnPremConfig {
 
     @OutputCustomType.Constructor({"agentArns"})
     private LocationNFSOnPremConfig(List<String> agentArns) {
-        this.agentArns = Objects.requireNonNull(agentArns);
+        this.agentArns = agentArns;
     }
 
     /**

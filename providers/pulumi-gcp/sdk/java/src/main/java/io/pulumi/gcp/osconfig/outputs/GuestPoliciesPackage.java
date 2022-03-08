@@ -49,7 +49,7 @@ public final class GuestPoliciesPackage {
         String name) {
         this.desiredState = desiredState;
         this.manager = manager;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

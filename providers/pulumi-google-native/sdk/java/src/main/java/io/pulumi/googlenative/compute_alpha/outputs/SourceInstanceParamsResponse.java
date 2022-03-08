@@ -18,7 +18,7 @@ public final class SourceInstanceParamsResponse {
 
     @OutputCustomType.Constructor({"diskConfigs"})
     private SourceInstanceParamsResponse(List<DiskInstantiationConfigResponse> diskConfigs) {
-        this.diskConfigs = Objects.requireNonNull(diskConfigs);
+        this.diskConfigs = diskConfigs;
     }
 
     /**

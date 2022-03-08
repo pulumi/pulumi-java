@@ -36,7 +36,7 @@ public final class DistributionLoggingConfig {
         String bucket,
         @Nullable Boolean includeCookies,
         @Nullable String prefix) {
-        this.bucket = Objects.requireNonNull(bucket);
+        this.bucket = bucket;
         this.includeCookies = includeCookies;
         this.prefix = prefix;
     }

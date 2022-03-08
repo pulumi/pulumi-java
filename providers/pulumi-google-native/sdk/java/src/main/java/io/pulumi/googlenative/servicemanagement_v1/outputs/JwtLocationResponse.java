@@ -30,9 +30,9 @@ public final class JwtLocationResponse {
         String header,
         String query,
         String valuePrefix) {
-        this.header = Objects.requireNonNull(header);
-        this.query = Objects.requireNonNull(query);
-        this.valuePrefix = Objects.requireNonNull(valuePrefix);
+        this.header = header;
+        this.query = query;
+        this.valuePrefix = valuePrefix;
     }
 
     /**

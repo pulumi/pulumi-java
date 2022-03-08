@@ -54,13 +54,13 @@ public final class GetSecurityPolicyResult {
         String provisioningState,
         SystemDataResponse systemData,
         String type) {
-        this.deploymentStatus = Objects.requireNonNull(deploymentStatus);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.deploymentStatus = deploymentStatus;
+        this.id = id;
+        this.name = name;
         this.parameters = parameters;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.provisioningState = provisioningState;
+        this.systemData = systemData;
+        this.type = type;
     }
 
     public String getDeploymentStatus() {

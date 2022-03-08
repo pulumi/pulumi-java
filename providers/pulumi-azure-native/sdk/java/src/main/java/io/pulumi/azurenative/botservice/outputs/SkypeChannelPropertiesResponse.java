@@ -84,7 +84,7 @@ public final class SkypeChannelPropertiesResponse {
         this.enableVideo = enableVideo;
         this.groupsMode = groupsMode;
         this.incomingCallRoute = incomingCallRoute;
-        this.isEnabled = Objects.requireNonNull(isEnabled);
+        this.isEnabled = isEnabled;
     }
 
     /**

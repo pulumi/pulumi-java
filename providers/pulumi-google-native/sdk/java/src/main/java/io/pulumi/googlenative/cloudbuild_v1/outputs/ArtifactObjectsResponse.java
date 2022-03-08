@@ -32,9 +32,9 @@ public final class ArtifactObjectsResponse {
         String location,
         List<String> paths,
         TimeSpanResponse timing) {
-        this.location = Objects.requireNonNull(location);
-        this.paths = Objects.requireNonNull(paths);
-        this.timing = Objects.requireNonNull(timing);
+        this.location = location;
+        this.paths = paths;
+        this.timing = timing;
     }
 
     /**

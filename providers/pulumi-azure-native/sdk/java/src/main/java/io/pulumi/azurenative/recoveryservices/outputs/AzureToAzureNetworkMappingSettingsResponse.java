@@ -33,7 +33,7 @@ public final class AzureToAzureNetworkMappingSettingsResponse {
         String instanceType,
         @Nullable String primaryFabricLocation,
         @Nullable String recoveryFabricLocation) {
-        this.instanceType = Objects.requireNonNull(instanceType);
+        this.instanceType = instanceType;
         this.primaryFabricLocation = primaryFabricLocation;
         this.recoveryFabricLocation = recoveryFabricLocation;
     }

@@ -49,7 +49,7 @@ public final class ImageTemplateRestartCustomizerResponse {
         this.restartCheckCommand = restartCheckCommand;
         this.restartCommand = restartCommand;
         this.restartTimeout = restartTimeout;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

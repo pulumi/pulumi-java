@@ -30,9 +30,9 @@ public final class GoogleCloudChannelV1ProvisionedServiceResponse {
         String productId,
         String provisioningId,
         String skuId) {
-        this.productId = Objects.requireNonNull(productId);
-        this.provisioningId = Objects.requireNonNull(provisioningId);
-        this.skuId = Objects.requireNonNull(skuId);
+        this.productId = productId;
+        this.provisioningId = provisioningId;
+        this.skuId = skuId;
     }
 
     /**

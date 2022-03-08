@@ -17,8 +17,8 @@ public final class DatasetResourceConfiguration {
     private DatasetResourceConfiguration(
         DatasetResourceConfigurationComputeType computeType,
         Integer volumeSizeInGB) {
-        this.computeType = Objects.requireNonNull(computeType);
-        this.volumeSizeInGB = Objects.requireNonNull(volumeSizeInGB);
+        this.computeType = computeType;
+        this.volumeSizeInGB = volumeSizeInGB;
     }
 
     public DatasetResourceConfigurationComputeType getComputeType() {

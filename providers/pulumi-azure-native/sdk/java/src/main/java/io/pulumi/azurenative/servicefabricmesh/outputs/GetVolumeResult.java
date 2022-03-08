@@ -84,15 +84,15 @@ public final class GetVolumeResult {
         String type) {
         this.azureFileParameters = azureFileParameters;
         this.description = description;
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.provider = Objects.requireNonNull(provider);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.status = Objects.requireNonNull(status);
-        this.statusDetails = Objects.requireNonNull(statusDetails);
+        this.id = id;
+        this.location = location;
+        this.name = name;
+        this.provider = provider;
+        this.provisioningState = provisioningState;
+        this.status = status;
+        this.statusDetails = statusDetails;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

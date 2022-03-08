@@ -17,7 +17,7 @@ public final class AzureClusterControlPlaneSshConfig {
 
     @OutputCustomType.Constructor({"authorizedKey"})
     private AzureClusterControlPlaneSshConfig(String authorizedKey) {
-        this.authorizedKey = Objects.requireNonNull(authorizedKey);
+        this.authorizedKey = authorizedKey;
     }
 
     /**

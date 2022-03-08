@@ -51,12 +51,12 @@ public final class PrivateEndpointConnectionResponse {
         String name,
         @Nullable PrivateEndpointConnectionPropertiesResponse properties,
         String type) {
-        this.etag = Objects.requireNonNull(etag);
-        this.id = Objects.requireNonNull(id);
+        this.etag = etag;
+        this.id = id;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.properties = properties;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

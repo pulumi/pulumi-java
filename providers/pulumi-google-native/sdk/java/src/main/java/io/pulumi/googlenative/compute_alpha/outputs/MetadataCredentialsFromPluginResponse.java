@@ -24,8 +24,8 @@ public final class MetadataCredentialsFromPluginResponse {
     private MetadataCredentialsFromPluginResponse(
         String name,
         String structConfig) {
-        this.name = Objects.requireNonNull(name);
-        this.structConfig = Objects.requireNonNull(structConfig);
+        this.name = name;
+        this.structConfig = structConfig;
     }
 
     /**

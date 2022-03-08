@@ -25,8 +25,8 @@ public final class KubernetesRoleNetworkResponse {
     private KubernetesRoleNetworkResponse(
         CniConfigResponse cniConfig,
         LoadBalancerConfigResponse loadBalancerConfig) {
-        this.cniConfig = Objects.requireNonNull(cniConfig);
-        this.loadBalancerConfig = Objects.requireNonNull(loadBalancerConfig);
+        this.cniConfig = cniConfig;
+        this.loadBalancerConfig = loadBalancerConfig;
     }
 
     /**

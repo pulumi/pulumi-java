@@ -72,14 +72,14 @@ public final class GetDelegatedSubnetServiceDetailsResult {
         @Nullable Map<String,String> tags,
         String type) {
         this.controllerDetails = controllerDetails;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.resourceGuid = Objects.requireNonNull(resourceGuid);
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.resourceGuid = resourceGuid;
         this.subnetDetails = subnetDetails;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

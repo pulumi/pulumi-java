@@ -17,7 +17,7 @@ public final class AdvancedMachineFeaturesResponse {
 
     @OutputCustomType.Constructor({"threadsPerCore"})
     private AdvancedMachineFeaturesResponse(String threadsPerCore) {
-        this.threadsPerCore = Objects.requireNonNull(threadsPerCore);
+        this.threadsPerCore = threadsPerCore;
     }
 
     /**

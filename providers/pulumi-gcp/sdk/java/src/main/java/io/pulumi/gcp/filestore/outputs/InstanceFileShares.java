@@ -36,8 +36,8 @@ public final class InstanceFileShares {
         Integer capacityGb,
         String name,
         @Nullable List<InstanceFileSharesNfsExportOption> nfsExportOptions) {
-        this.capacityGb = Objects.requireNonNull(capacityGb);
-        this.name = Objects.requireNonNull(name);
+        this.capacityGb = capacityGb;
+        this.name = name;
         this.nfsExportOptions = nfsExportOptions;
     }
 

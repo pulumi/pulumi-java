@@ -33,9 +33,9 @@ public final class KeyUsageResponse {
         KeyUsageOptionsResponse baseKeyUsage,
         ExtendedKeyUsageOptionsResponse extendedKeyUsage,
         List<ObjectIdResponse> unknownExtendedKeyUsages) {
-        this.baseKeyUsage = Objects.requireNonNull(baseKeyUsage);
-        this.extendedKeyUsage = Objects.requireNonNull(extendedKeyUsage);
-        this.unknownExtendedKeyUsages = Objects.requireNonNull(unknownExtendedKeyUsages);
+        this.baseKeyUsage = baseKeyUsage;
+        this.extendedKeyUsage = extendedKeyUsage;
+        this.unknownExtendedKeyUsages = unknownExtendedKeyUsages;
     }
 
     /**

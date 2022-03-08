@@ -17,7 +17,7 @@ public final class GoogleCloudDialogflowCxV3AdvancedSettingsResponse {
 
     @OutputCustomType.Constructor({"loggingSettings"})
     private GoogleCloudDialogflowCxV3AdvancedSettingsResponse(GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsResponse loggingSettings) {
-        this.loggingSettings = Objects.requireNonNull(loggingSettings);
+        this.loggingSettings = loggingSettings;
     }
 
     /**

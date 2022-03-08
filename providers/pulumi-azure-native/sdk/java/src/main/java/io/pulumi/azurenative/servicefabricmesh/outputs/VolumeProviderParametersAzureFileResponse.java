@@ -33,8 +33,8 @@ public final class VolumeProviderParametersAzureFileResponse {
         String accountName,
         String shareName) {
         this.accountKey = accountKey;
-        this.accountName = Objects.requireNonNull(accountName);
-        this.shareName = Objects.requireNonNull(shareName);
+        this.accountName = accountName;
+        this.shareName = shareName;
     }
 
     /**

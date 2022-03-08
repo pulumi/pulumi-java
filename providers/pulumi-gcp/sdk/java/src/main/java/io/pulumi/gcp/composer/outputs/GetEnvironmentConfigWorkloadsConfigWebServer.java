@@ -18,9 +18,9 @@ public final class GetEnvironmentConfigWorkloadsConfigWebServer {
         Double cpu,
         Double memoryGb,
         Double storageGb) {
-        this.cpu = Objects.requireNonNull(cpu);
-        this.memoryGb = Objects.requireNonNull(memoryGb);
-        this.storageGb = Objects.requireNonNull(storageGb);
+        this.cpu = cpu;
+        this.memoryGb = memoryGb;
+        this.storageGb = storageGb;
     }
 
     public Double getCpu() {

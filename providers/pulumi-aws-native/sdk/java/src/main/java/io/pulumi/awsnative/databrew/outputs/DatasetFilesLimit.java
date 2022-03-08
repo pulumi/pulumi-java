@@ -34,7 +34,7 @@ public final class DatasetFilesLimit {
         Integer maxFiles,
         @Nullable DatasetFilesLimitOrder order,
         @Nullable DatasetFilesLimitOrderedBy orderedBy) {
-        this.maxFiles = Objects.requireNonNull(maxFiles);
+        this.maxFiles = maxFiles;
         this.order = order;
         this.orderedBy = orderedBy;
     }

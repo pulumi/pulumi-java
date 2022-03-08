@@ -18,7 +18,7 @@ public final class BucketCustomPlacementConfigResponse {
 
     @OutputCustomType.Constructor({"dataLocations"})
     private BucketCustomPlacementConfigResponse(List<String> dataLocations) {
-        this.dataLocations = Objects.requireNonNull(dataLocations);
+        this.dataLocations = dataLocations;
     }
 
     /**

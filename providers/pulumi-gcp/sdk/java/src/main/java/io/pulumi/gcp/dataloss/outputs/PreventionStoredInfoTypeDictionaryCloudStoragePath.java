@@ -17,7 +17,7 @@ public final class PreventionStoredInfoTypeDictionaryCloudStoragePath {
 
     @OutputCustomType.Constructor({"path"})
     private PreventionStoredInfoTypeDictionaryCloudStoragePath(String path) {
-        this.path = Objects.requireNonNull(path);
+        this.path = path;
     }
 
     /**

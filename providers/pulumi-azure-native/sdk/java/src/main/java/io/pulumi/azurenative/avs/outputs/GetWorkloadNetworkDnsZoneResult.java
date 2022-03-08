@@ -80,12 +80,12 @@ public final class GetWorkloadNetworkDnsZoneResult {
         this.dnsServerIps = dnsServerIps;
         this.dnsServices = dnsServices;
         this.domain = domain;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.id = id;
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.revision = revision;
         this.sourceIp = sourceIp;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

@@ -30,9 +30,9 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse
         String displayName,
         String resourceId,
         String resourceType) {
-        this.displayName = Objects.requireNonNull(displayName);
-        this.resourceId = Objects.requireNonNull(resourceId);
-        this.resourceType = Objects.requireNonNull(resourceType);
+        this.displayName = displayName;
+        this.resourceId = resourceId;
+        this.resourceType = resourceType;
     }
 
     /**

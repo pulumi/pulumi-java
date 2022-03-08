@@ -26,7 +26,7 @@ public final class AzurePlanResponse {
     private AzurePlanResponse(
         String skuDescription,
         @Nullable String skuId) {
-        this.skuDescription = Objects.requireNonNull(skuDescription);
+        this.skuDescription = skuDescription;
         this.skuId = skuId;
     }
 

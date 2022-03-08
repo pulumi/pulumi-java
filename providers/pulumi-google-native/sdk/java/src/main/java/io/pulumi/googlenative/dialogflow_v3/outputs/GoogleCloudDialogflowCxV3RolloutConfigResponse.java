@@ -32,9 +32,9 @@ public final class GoogleCloudDialogflowCxV3RolloutConfigResponse {
         String failureCondition,
         String rolloutCondition,
         List<GoogleCloudDialogflowCxV3RolloutConfigRolloutStepResponse> rolloutSteps) {
-        this.failureCondition = Objects.requireNonNull(failureCondition);
-        this.rolloutCondition = Objects.requireNonNull(rolloutCondition);
-        this.rolloutSteps = Objects.requireNonNull(rolloutSteps);
+        this.failureCondition = failureCondition;
+        this.rolloutCondition = rolloutCondition;
+        this.rolloutSteps = rolloutSteps;
     }
 
     /**

@@ -33,8 +33,8 @@ public final class SqlElasticPoolResourceSettingsResponse {
         String resourceType,
         String targetResourceName,
         @Nullable String zoneRedundant) {
-        this.resourceType = Objects.requireNonNull(resourceType);
-        this.targetResourceName = Objects.requireNonNull(targetResourceName);
+        this.resourceType = resourceType;
+        this.targetResourceName = targetResourceName;
         this.zoneRedundant = zoneRedundant;
     }
 

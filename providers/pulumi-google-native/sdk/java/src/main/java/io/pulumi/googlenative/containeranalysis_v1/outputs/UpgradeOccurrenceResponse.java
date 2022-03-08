@@ -39,10 +39,10 @@ public final class UpgradeOccurrenceResponse {
         String $package,
         VersionResponse parsedVersion,
         WindowsUpdateResponse windowsUpdate) {
-        this.distribution = Objects.requireNonNull(distribution);
-        this.$package = Objects.requireNonNull($package);
-        this.parsedVersion = Objects.requireNonNull(parsedVersion);
-        this.windowsUpdate = Objects.requireNonNull(windowsUpdate);
+        this.distribution = distribution;
+        this.$package = $package;
+        this.parsedVersion = parsedVersion;
+        this.windowsUpdate = windowsUpdate;
     }
 
     /**

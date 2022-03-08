@@ -32,9 +32,9 @@ public final class GetSessionEntityTypeResult {
         List<GoogleCloudDialogflowCxV3beta1EntityTypeEntityResponse> entities,
         String entityOverrideMode,
         String name) {
-        this.entities = Objects.requireNonNull(entities);
-        this.entityOverrideMode = Objects.requireNonNull(entityOverrideMode);
-        this.name = Objects.requireNonNull(name);
+        this.entities = entities;
+        this.entityOverrideMode = entityOverrideMode;
+        this.name = name;
     }
 
     /**

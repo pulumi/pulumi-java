@@ -43,7 +43,7 @@ public final class CSIDriver {
         this.apiVersion = apiVersion;
         this.kind = kind;
         this.metadata = metadata;
-        this.spec = Objects.requireNonNull(spec);
+        this.spec = spec;
     }
 
     /**

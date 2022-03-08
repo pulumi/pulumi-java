@@ -46,8 +46,8 @@ public final class StepGroupResponse {
         @Nullable List<PrePostStepResponse> postDeploymentSteps,
         @Nullable List<PrePostStepResponse> preDeploymentSteps) {
         this.dependsOnStepGroups = dependsOnStepGroups;
-        this.deploymentTargetId = Objects.requireNonNull(deploymentTargetId);
-        this.name = Objects.requireNonNull(name);
+        this.deploymentTargetId = deploymentTargetId;
+        this.name = name;
         this.postDeploymentSteps = postDeploymentSteps;
         this.preDeploymentSteps = preDeploymentSteps;
     }

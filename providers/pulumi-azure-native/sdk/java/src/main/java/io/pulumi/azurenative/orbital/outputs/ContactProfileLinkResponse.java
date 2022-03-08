@@ -47,11 +47,11 @@ public final class ContactProfileLinkResponse {
         @Nullable Double eirpdBW,
         @Nullable Double gainOverTemperature,
         String polarization) {
-        this.channels = Objects.requireNonNull(channels);
-        this.direction = Objects.requireNonNull(direction);
+        this.channels = channels;
+        this.direction = direction;
         this.eirpdBW = eirpdBW;
         this.gainOverTemperature = gainOverTemperature;
-        this.polarization = Objects.requireNonNull(polarization);
+        this.polarization = polarization;
     }
 
     /**

@@ -42,11 +42,11 @@ public final class DeploymentInstanceResponse {
         String reason,
         String startTime,
         String status) {
-        this.discoveryStatus = Objects.requireNonNull(discoveryStatus);
-        this.name = Objects.requireNonNull(name);
-        this.reason = Objects.requireNonNull(reason);
-        this.startTime = Objects.requireNonNull(startTime);
-        this.status = Objects.requireNonNull(status);
+        this.discoveryStatus = discoveryStatus;
+        this.name = name;
+        this.reason = reason;
+        this.startTime = startTime;
+        this.status = status;
     }
 
     /**

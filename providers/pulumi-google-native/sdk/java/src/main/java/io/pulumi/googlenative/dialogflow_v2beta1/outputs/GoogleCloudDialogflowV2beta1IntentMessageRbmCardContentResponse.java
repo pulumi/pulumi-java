@@ -39,10 +39,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRespon
         GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse media,
         List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> suggestions,
         String title) {
-        this.description = Objects.requireNonNull(description);
-        this.media = Objects.requireNonNull(media);
-        this.suggestions = Objects.requireNonNull(suggestions);
-        this.title = Objects.requireNonNull(title);
+        this.description = description;
+        this.media = media;
+        this.suggestions = suggestions;
+        this.title = title;
     }
 
     /**

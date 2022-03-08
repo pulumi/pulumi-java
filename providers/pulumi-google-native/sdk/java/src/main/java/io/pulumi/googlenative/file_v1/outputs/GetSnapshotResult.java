@@ -49,12 +49,12 @@ public final class GetSnapshotResult {
         Map<String,String> labels,
         String name,
         String state) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.description = Objects.requireNonNull(description);
-        this.filesystemUsedBytes = Objects.requireNonNull(filesystemUsedBytes);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.state = Objects.requireNonNull(state);
+        this.createTime = createTime;
+        this.description = description;
+        this.filesystemUsedBytes = filesystemUsedBytes;
+        this.labels = labels;
+        this.name = name;
+        this.state = state;
     }
 
     /**

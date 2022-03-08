@@ -26,8 +26,8 @@ public final class DeliveryRuleUrlFileExtensionConditionResponse {
     private DeliveryRuleUrlFileExtensionConditionResponse(
         String name,
         UrlFileExtensionMatchConditionParametersResponse parameters) {
-        this.name = Objects.requireNonNull(name);
-        this.parameters = Objects.requireNonNull(parameters);
+        this.name = name;
+        this.parameters = parameters;
     }
 
     /**

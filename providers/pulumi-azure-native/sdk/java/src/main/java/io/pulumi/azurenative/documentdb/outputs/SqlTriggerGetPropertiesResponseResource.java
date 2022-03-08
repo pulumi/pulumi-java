@@ -58,12 +58,12 @@ public final class SqlTriggerGetPropertiesResponseResource {
         @Nullable String triggerType,
         Double ts) {
         this.body = body;
-        this.etag = Objects.requireNonNull(etag);
-        this.id = Objects.requireNonNull(id);
-        this.rid = Objects.requireNonNull(rid);
+        this.etag = etag;
+        this.id = id;
+        this.rid = rid;
         this.triggerOperation = triggerOperation;
         this.triggerType = triggerType;
-        this.ts = Objects.requireNonNull(ts);
+        this.ts = ts;
     }
 
     /**

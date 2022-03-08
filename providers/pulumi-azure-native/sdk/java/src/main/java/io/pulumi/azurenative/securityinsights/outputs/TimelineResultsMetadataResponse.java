@@ -34,9 +34,9 @@ public final class TimelineResultsMetadataResponse {
         List<TimelineAggregationResponse> aggregations,
         @Nullable List<TimelineErrorResponse> errors,
         Integer totalCount) {
-        this.aggregations = Objects.requireNonNull(aggregations);
+        this.aggregations = aggregations;
         this.errors = errors;
-        this.totalCount = Objects.requireNonNull(totalCount);
+        this.totalCount = totalCount;
     }
 
     /**

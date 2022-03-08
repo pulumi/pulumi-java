@@ -30,7 +30,7 @@ public final class AnalyzerFilter {
         this.eq = eq;
         this.exists = exists;
         this.neq = neq;
-        this.property = Objects.requireNonNull(property);
+        this.property = property;
     }
 
     public List<String> getContains() {

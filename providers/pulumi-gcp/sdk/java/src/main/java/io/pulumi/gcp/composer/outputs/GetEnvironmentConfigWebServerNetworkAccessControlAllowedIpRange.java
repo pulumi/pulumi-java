@@ -16,8 +16,8 @@ public final class GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRan
     private GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange(
         String description,
         String value) {
-        this.description = Objects.requireNonNull(description);
-        this.value = Objects.requireNonNull(value);
+        this.description = description;
+        this.value = value;
     }
 
     public String getDescription() {

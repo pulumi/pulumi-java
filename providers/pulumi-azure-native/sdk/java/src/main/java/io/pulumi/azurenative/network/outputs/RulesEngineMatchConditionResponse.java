@@ -53,9 +53,9 @@ public final class RulesEngineMatchConditionResponse {
         @Nullable String selector,
         @Nullable List<String> transforms) {
         this.negateCondition = negateCondition;
-        this.rulesEngineMatchValue = Objects.requireNonNull(rulesEngineMatchValue);
-        this.rulesEngineMatchVariable = Objects.requireNonNull(rulesEngineMatchVariable);
-        this.rulesEngineOperator = Objects.requireNonNull(rulesEngineOperator);
+        this.rulesEngineMatchValue = rulesEngineMatchValue;
+        this.rulesEngineMatchVariable = rulesEngineMatchVariable;
+        this.rulesEngineOperator = rulesEngineOperator;
         this.selector = selector;
         this.transforms = transforms;
     }

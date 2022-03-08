@@ -41,10 +41,10 @@ public final class SchemaComparisonValidationResultResponse {
         @Nullable Map<String,Double> sourceDatabaseObjectCount,
         @Nullable Map<String,Double> targetDatabaseObjectCount,
         ValidationErrorResponse validationErrors) {
-        this.schemaDifferences = Objects.requireNonNull(schemaDifferences);
+        this.schemaDifferences = schemaDifferences;
         this.sourceDatabaseObjectCount = sourceDatabaseObjectCount;
         this.targetDatabaseObjectCount = targetDatabaseObjectCount;
-        this.validationErrors = Objects.requireNonNull(validationErrors);
+        this.validationErrors = validationErrors;
     }
 
     /**

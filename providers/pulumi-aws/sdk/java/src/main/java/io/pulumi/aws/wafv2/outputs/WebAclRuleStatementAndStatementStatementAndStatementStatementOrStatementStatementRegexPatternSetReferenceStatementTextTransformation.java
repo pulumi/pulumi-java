@@ -25,8 +25,8 @@ public final class WebAclRuleStatementAndStatementStatementAndStatementStatement
     private WebAclRuleStatementAndStatementStatementAndStatementStatementOrStatementStatementRegexPatternSetReferenceStatementTextTransformation(
         Integer priority,
         String type) {
-        this.priority = Objects.requireNonNull(priority);
-        this.type = Objects.requireNonNull(type);
+        this.priority = priority;
+        this.type = type;
     }
 
     /**

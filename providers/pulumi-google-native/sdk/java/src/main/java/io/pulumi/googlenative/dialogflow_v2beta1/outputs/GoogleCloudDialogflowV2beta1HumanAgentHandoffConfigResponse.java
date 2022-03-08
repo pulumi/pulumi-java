@@ -25,8 +25,8 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigResponse {
     private GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigResponse(
         GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePersonConfigResponse livePersonConfig,
         GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse salesforceLiveAgentConfig) {
-        this.livePersonConfig = Objects.requireNonNull(livePersonConfig);
-        this.salesforceLiveAgentConfig = Objects.requireNonNull(salesforceLiveAgentConfig);
+        this.livePersonConfig = livePersonConfig;
+        this.salesforceLiveAgentConfig = salesforceLiveAgentConfig;
     }
 
     /**

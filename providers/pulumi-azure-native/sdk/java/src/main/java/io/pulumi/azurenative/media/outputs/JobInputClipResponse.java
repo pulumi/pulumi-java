@@ -63,7 +63,7 @@ public final class JobInputClipResponse {
         this.files = files;
         this.inputDefinitions = inputDefinitions;
         this.label = label;
-        this.odataType = Objects.requireNonNull(odataType);
+        this.odataType = odataType;
         this.start = start;
     }
 

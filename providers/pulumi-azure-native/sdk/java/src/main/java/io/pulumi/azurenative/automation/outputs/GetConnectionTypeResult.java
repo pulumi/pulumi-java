@@ -65,14 +65,14 @@ public final class GetConnectionTypeResult {
         @Nullable String lastModifiedTime,
         String name,
         String type) {
-        this.creationTime = Objects.requireNonNull(creationTime);
+        this.creationTime = creationTime;
         this.description = description;
-        this.fieldDefinitions = Objects.requireNonNull(fieldDefinitions);
-        this.id = Objects.requireNonNull(id);
+        this.fieldDefinitions = fieldDefinitions;
+        this.id = id;
         this.isGlobal = isGlobal;
         this.lastModifiedTime = lastModifiedTime;
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.name = name;
+        this.type = type;
     }
 
     /**

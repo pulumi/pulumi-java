@@ -21,7 +21,7 @@ public final class JobEntityDetectorConfiguration {
         @Nullable JobAllowedStatistics allowedStatistics,
         List<String> entityTypes) {
         this.allowedStatistics = allowedStatistics;
-        this.entityTypes = Objects.requireNonNull(entityTypes);
+        this.entityTypes = entityTypes;
     }
 
     public Optional<JobAllowedStatistics> getAllowedStatistics() {

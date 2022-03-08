@@ -33,10 +33,10 @@ public final class GetRegistryImageResult {
         @Nullable String region,
         @Nullable String tag) {
         this.digest = digest;
-        this.id = Objects.requireNonNull(id);
-        this.imageUrl = Objects.requireNonNull(imageUrl);
-        this.name = Objects.requireNonNull(name);
-        this.project = Objects.requireNonNull(project);
+        this.id = id;
+        this.imageUrl = imageUrl;
+        this.name = name;
+        this.project = project;
         this.region = region;
         this.tag = tag;
     }

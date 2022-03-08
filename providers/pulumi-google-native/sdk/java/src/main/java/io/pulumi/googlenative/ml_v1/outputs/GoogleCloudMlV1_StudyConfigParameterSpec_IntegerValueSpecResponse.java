@@ -24,8 +24,8 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResp
     private GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResponse(
         String maxValue,
         String minValue) {
-        this.maxValue = Objects.requireNonNull(maxValue);
-        this.minValue = Objects.requireNonNull(minValue);
+        this.maxValue = maxValue;
+        this.minValue = minValue;
     }
 
     /**

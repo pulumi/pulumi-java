@@ -17,8 +17,8 @@ public final class GetTableTtl {
     private GetTableTtl(
         String attributeName,
         Boolean enabled) {
-        this.attributeName = Objects.requireNonNull(attributeName);
-        this.enabled = Objects.requireNonNull(enabled);
+        this.attributeName = attributeName;
+        this.enabled = enabled;
     }
 
     public String getAttributeName() {

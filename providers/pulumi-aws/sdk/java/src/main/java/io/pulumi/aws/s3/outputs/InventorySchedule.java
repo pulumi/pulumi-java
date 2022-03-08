@@ -17,7 +17,7 @@ public final class InventorySchedule {
 
     @OutputCustomType.Constructor({"frequency"})
     private InventorySchedule(String frequency) {
-        this.frequency = Objects.requireNonNull(frequency);
+        this.frequency = frequency;
     }
 
     /**

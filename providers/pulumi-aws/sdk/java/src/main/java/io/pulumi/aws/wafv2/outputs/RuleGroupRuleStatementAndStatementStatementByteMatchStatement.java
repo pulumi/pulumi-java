@@ -42,9 +42,9 @@ public final class RuleGroupRuleStatementAndStatementStatementByteMatchStatement
         String searchString,
         List<RuleGroupRuleStatementAndStatementStatementByteMatchStatementTextTransformation> textTransformations) {
         this.fieldToMatch = fieldToMatch;
-        this.positionalConstraint = Objects.requireNonNull(positionalConstraint);
-        this.searchString = Objects.requireNonNull(searchString);
-        this.textTransformations = Objects.requireNonNull(textTransformations);
+        this.positionalConstraint = positionalConstraint;
+        this.searchString = searchString;
+        this.textTransformations = textTransformations;
     }
 
     /**

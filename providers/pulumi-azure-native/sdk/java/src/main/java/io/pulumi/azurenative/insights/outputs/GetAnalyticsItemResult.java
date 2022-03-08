@@ -72,12 +72,12 @@ public final class GetAnalyticsItemResult {
         this.content = content;
         this.id = id;
         this.name = name;
-        this.properties = Objects.requireNonNull(properties);
+        this.properties = properties;
         this.scope = scope;
-        this.timeCreated = Objects.requireNonNull(timeCreated);
-        this.timeModified = Objects.requireNonNull(timeModified);
+        this.timeCreated = timeCreated;
+        this.timeModified = timeModified;
         this.type = type;
-        this.version = Objects.requireNonNull(version);
+        this.version = version;
     }
 
     /**

@@ -37,10 +37,10 @@ public final class ServicePrincipalCertificateAuthInfoResponse {
         String certificate,
         String clientId,
         String principalId) {
-        this.authType = Objects.requireNonNull(authType);
-        this.certificate = Objects.requireNonNull(certificate);
-        this.clientId = Objects.requireNonNull(clientId);
-        this.principalId = Objects.requireNonNull(principalId);
+        this.authType = authType;
+        this.certificate = certificate;
+        this.clientId = clientId;
+        this.principalId = principalId;
     }
 
     /**

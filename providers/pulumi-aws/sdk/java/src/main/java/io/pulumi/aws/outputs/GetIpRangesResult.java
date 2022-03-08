@@ -53,13 +53,13 @@ public final class GetIpRangesResult {
         List<String> services,
         Integer syncToken,
         @Nullable String url) {
-        this.cidrBlocks = Objects.requireNonNull(cidrBlocks);
-        this.createDate = Objects.requireNonNull(createDate);
-        this.id = Objects.requireNonNull(id);
-        this.ipv6CidrBlocks = Objects.requireNonNull(ipv6CidrBlocks);
+        this.cidrBlocks = cidrBlocks;
+        this.createDate = createDate;
+        this.id = id;
+        this.ipv6CidrBlocks = ipv6CidrBlocks;
         this.regions = regions;
-        this.services = Objects.requireNonNull(services);
-        this.syncToken = Objects.requireNonNull(syncToken);
+        this.services = services;
+        this.syncToken = syncToken;
         this.url = url;
     }
 

@@ -32,8 +32,8 @@ public final class ClusterIdentityResponseUserAssignedIdentities {
         String clientId,
         String principalId,
         @Nullable String tenantId) {
-        this.clientId = Objects.requireNonNull(clientId);
-        this.principalId = Objects.requireNonNull(principalId);
+        this.clientId = clientId;
+        this.principalId = principalId;
         this.tenantId = tenantId;
     }
 

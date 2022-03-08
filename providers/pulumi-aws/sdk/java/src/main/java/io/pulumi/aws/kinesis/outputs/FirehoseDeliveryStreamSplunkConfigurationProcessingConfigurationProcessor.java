@@ -28,7 +28,7 @@ public final class FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurat
         @Nullable List<FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorParameter> parameters,
         String type) {
         this.parameters = parameters;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

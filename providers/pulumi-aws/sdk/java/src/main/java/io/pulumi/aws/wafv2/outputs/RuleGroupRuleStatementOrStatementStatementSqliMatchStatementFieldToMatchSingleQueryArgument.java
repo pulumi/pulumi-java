@@ -17,7 +17,7 @@ public final class RuleGroupRuleStatementOrStatementStatementSqliMatchStatementF
 
     @OutputCustomType.Constructor({"name"})
     private RuleGroupRuleStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgument(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

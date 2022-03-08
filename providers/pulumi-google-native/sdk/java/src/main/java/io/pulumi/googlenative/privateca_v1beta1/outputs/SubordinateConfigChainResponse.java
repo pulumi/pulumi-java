@@ -18,7 +18,7 @@ public final class SubordinateConfigChainResponse {
 
     @OutputCustomType.Constructor({"pemCertificates"})
     private SubordinateConfigChainResponse(List<String> pemCertificates) {
-        this.pemCertificates = Objects.requireNonNull(pemCertificates);
+        this.pemCertificates = pemCertificates;
     }
 
     /**

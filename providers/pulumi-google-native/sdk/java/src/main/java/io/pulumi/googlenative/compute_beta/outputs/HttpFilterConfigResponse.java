@@ -30,9 +30,9 @@ public final class HttpFilterConfigResponse {
         String config,
         String configTypeUrl,
         String filterName) {
-        this.config = Objects.requireNonNull(config);
-        this.configTypeUrl = Objects.requireNonNull(configTypeUrl);
-        this.filterName = Objects.requireNonNull(filterName);
+        this.config = config;
+        this.configTypeUrl = configTypeUrl;
+        this.filterName = filterName;
     }
 
     /**

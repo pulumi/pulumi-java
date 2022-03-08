@@ -25,8 +25,8 @@ public final class StorageAccountResponse {
     private StorageAccountResponse(
         String accountName,
         String storageType) {
-        this.accountName = Objects.requireNonNull(accountName);
-        this.storageType = Objects.requireNonNull(storageType);
+        this.accountName = accountName;
+        this.storageType = storageType;
     }
 
     /**

@@ -55,13 +55,13 @@ public final class DeploymentResponse {
         List<String> resourceUri,
         String undeployTime,
         String userEmail) {
-        this.address = Objects.requireNonNull(address);
-        this.config = Objects.requireNonNull(config);
-        this.deployTime = Objects.requireNonNull(deployTime);
-        this.platform = Objects.requireNonNull(platform);
-        this.resourceUri = Objects.requireNonNull(resourceUri);
-        this.undeployTime = Objects.requireNonNull(undeployTime);
-        this.userEmail = Objects.requireNonNull(userEmail);
+        this.address = address;
+        this.config = config;
+        this.deployTime = deployTime;
+        this.platform = platform;
+        this.resourceUri = resourceUri;
+        this.undeployTime = undeployTime;
+        this.userEmail = userEmail;
     }
 
     /**

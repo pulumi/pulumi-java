@@ -13,7 +13,7 @@ public final class GetClusterAddonsConfigHttpLoadBalancing {
 
     @OutputCustomType.Constructor({"disabled"})
     private GetClusterAddonsConfigHttpLoadBalancing(Boolean disabled) {
-        this.disabled = Objects.requireNonNull(disabled);
+        this.disabled = disabled;
     }
 
     public Boolean getDisabled() {

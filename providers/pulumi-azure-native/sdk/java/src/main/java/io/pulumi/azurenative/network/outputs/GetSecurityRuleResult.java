@@ -137,20 +137,20 @@ public final class GetSecurityRuleResult {
         @Nullable String sourcePortRange,
         @Nullable List<String> sourcePortRanges,
         @Nullable String type) {
-        this.access = Objects.requireNonNull(access);
+        this.access = access;
         this.description = description;
         this.destinationAddressPrefix = destinationAddressPrefix;
         this.destinationAddressPrefixes = destinationAddressPrefixes;
         this.destinationApplicationSecurityGroups = destinationApplicationSecurityGroups;
         this.destinationPortRange = destinationPortRange;
         this.destinationPortRanges = destinationPortRanges;
-        this.direction = Objects.requireNonNull(direction);
-        this.etag = Objects.requireNonNull(etag);
+        this.direction = direction;
+        this.etag = etag;
         this.id = id;
         this.name = name;
         this.priority = priority;
-        this.protocol = Objects.requireNonNull(protocol);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.protocol = protocol;
+        this.provisioningState = provisioningState;
         this.sourceAddressPrefix = sourceAddressPrefix;
         this.sourceAddressPrefixes = sourceAddressPrefixes;
         this.sourceApplicationSecurityGroups = sourceApplicationSecurityGroups;

@@ -25,8 +25,8 @@ public final class MonitoringConfigResponse {
     private MonitoringConfigResponse(
         MonitoringComponentConfigResponse componentConfig,
         ManagedPrometheusConfigResponse managedPrometheusConfig) {
-        this.componentConfig = Objects.requireNonNull(componentConfig);
-        this.managedPrometheusConfig = Objects.requireNonNull(managedPrometheusConfig);
+        this.componentConfig = componentConfig;
+        this.managedPrometheusConfig = managedPrometheusConfig;
     }
 
     /**

@@ -74,13 +74,13 @@ public final class DatasetResponseDataPath {
         String relativePath,
         @Nullable DatasetResponseSqlDataPath sqlDataPath) {
         this.additionalProperties = additionalProperties;
-        this.azureFilePath = Objects.requireNonNull(azureFilePath);
-        this.datastoreName = Objects.requireNonNull(datastoreName);
-        this.httpUrl = Objects.requireNonNull(httpUrl);
-        this.partitionFormat = Objects.requireNonNull(partitionFormat);
-        this.partitionFormatIgnoreError = Objects.requireNonNull(partitionFormatIgnoreError);
-        this.paths = Objects.requireNonNull(paths);
-        this.relativePath = Objects.requireNonNull(relativePath);
+        this.azureFilePath = azureFilePath;
+        this.datastoreName = datastoreName;
+        this.httpUrl = httpUrl;
+        this.partitionFormat = partitionFormat;
+        this.partitionFormatIgnoreError = partitionFormatIgnoreError;
+        this.paths = paths;
+        this.relativePath = relativePath;
         this.sqlDataPath = sqlDataPath;
     }
 

@@ -73,22 +73,22 @@ public final class GetVpcPeeringConnectionResult {
         String status,
         Map<String,String> tags,
         String vpcId) {
-        this.accepter = Objects.requireNonNull(accepter);
-        this.cidrBlock = Objects.requireNonNull(cidrBlock);
-        this.cidrBlockSets = Objects.requireNonNull(cidrBlockSets);
+        this.accepter = accepter;
+        this.cidrBlock = cidrBlock;
+        this.cidrBlockSets = cidrBlockSets;
         this.filters = filters;
-        this.id = Objects.requireNonNull(id);
-        this.ownerId = Objects.requireNonNull(ownerId);
-        this.peerCidrBlock = Objects.requireNonNull(peerCidrBlock);
-        this.peerCidrBlockSets = Objects.requireNonNull(peerCidrBlockSets);
-        this.peerOwnerId = Objects.requireNonNull(peerOwnerId);
-        this.peerRegion = Objects.requireNonNull(peerRegion);
-        this.peerVpcId = Objects.requireNonNull(peerVpcId);
-        this.region = Objects.requireNonNull(region);
-        this.requester = Objects.requireNonNull(requester);
-        this.status = Objects.requireNonNull(status);
-        this.tags = Objects.requireNonNull(tags);
-        this.vpcId = Objects.requireNonNull(vpcId);
+        this.id = id;
+        this.ownerId = ownerId;
+        this.peerCidrBlock = peerCidrBlock;
+        this.peerCidrBlockSets = peerCidrBlockSets;
+        this.peerOwnerId = peerOwnerId;
+        this.peerRegion = peerRegion;
+        this.peerVpcId = peerVpcId;
+        this.region = region;
+        this.requester = requester;
+        this.status = status;
+        this.tags = tags;
+        this.vpcId = vpcId;
     }
 
     /**

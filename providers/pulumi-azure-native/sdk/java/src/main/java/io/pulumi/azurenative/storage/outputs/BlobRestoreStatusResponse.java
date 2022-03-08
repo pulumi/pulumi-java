@@ -37,10 +37,10 @@ public final class BlobRestoreStatusResponse {
         BlobRestoreParametersResponse parameters,
         String restoreId,
         String status) {
-        this.failureReason = Objects.requireNonNull(failureReason);
-        this.parameters = Objects.requireNonNull(parameters);
-        this.restoreId = Objects.requireNonNull(restoreId);
-        this.status = Objects.requireNonNull(status);
+        this.failureReason = failureReason;
+        this.parameters = parameters;
+        this.restoreId = restoreId;
+        this.status = status;
     }
 
     /**

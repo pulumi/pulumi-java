@@ -17,7 +17,7 @@ public final class DataSourceParametersS3 {
 
     @OutputCustomType.Constructor({"manifestFileLocation"})
     private DataSourceParametersS3(DataSourceParametersS3ManifestFileLocation manifestFileLocation) {
-        this.manifestFileLocation = Objects.requireNonNull(manifestFileLocation);
+        this.manifestFileLocation = manifestFileLocation;
     }
 
     /**

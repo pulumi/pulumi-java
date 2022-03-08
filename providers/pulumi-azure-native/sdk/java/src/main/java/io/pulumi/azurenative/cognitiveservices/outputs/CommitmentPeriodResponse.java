@@ -47,9 +47,9 @@ public final class CommitmentPeriodResponse {
         String startDate,
         @Nullable String tier) {
         this.count = count;
-        this.endDate = Objects.requireNonNull(endDate);
-        this.quota = Objects.requireNonNull(quota);
-        this.startDate = Objects.requireNonNull(startDate);
+        this.endDate = endDate;
+        this.quota = quota;
+        this.startDate = startDate;
         this.tier = tier;
     }
 

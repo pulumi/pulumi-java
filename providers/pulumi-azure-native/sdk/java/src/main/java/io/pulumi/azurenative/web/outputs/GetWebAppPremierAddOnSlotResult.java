@@ -81,16 +81,16 @@ public final class GetWebAppPremierAddOnSlotResult {
         @Nullable Map<String,String> tags,
         String type,
         @Nullable String vendor) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.kind = kind;
-        this.location = Objects.requireNonNull(location);
+        this.location = location;
         this.marketplaceOffer = marketplaceOffer;
         this.marketplacePublisher = marketplacePublisher;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.product = product;
         this.sku = sku;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.vendor = vendor;
     }
 

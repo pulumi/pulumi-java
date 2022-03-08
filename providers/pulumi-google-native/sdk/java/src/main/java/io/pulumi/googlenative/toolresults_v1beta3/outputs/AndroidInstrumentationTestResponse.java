@@ -38,10 +38,10 @@ public final class AndroidInstrumentationTestResponse {
         String testRunnerClass,
         List<String> testTargets,
         Boolean useOrchestrator) {
-        this.testPackageId = Objects.requireNonNull(testPackageId);
-        this.testRunnerClass = Objects.requireNonNull(testRunnerClass);
-        this.testTargets = Objects.requireNonNull(testTargets);
-        this.useOrchestrator = Objects.requireNonNull(useOrchestrator);
+        this.testPackageId = testPackageId;
+        this.testRunnerClass = testRunnerClass;
+        this.testTargets = testTargets;
+        this.useOrchestrator = useOrchestrator;
     }
 
     /**

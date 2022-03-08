@@ -65,7 +65,7 @@ public final class PriorityClass {
         this.kind = kind;
         this.metadata = metadata;
         this.preemptionPolicy = preemptionPolicy;
-        this.value = Objects.requireNonNull(value);
+        this.value = value;
     }
 
     /**

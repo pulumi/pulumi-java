@@ -26,7 +26,7 @@ public final class ManagedRuleOverrideResponse {
     private ManagedRuleOverrideResponse(
         String ruleId,
         @Nullable String state) {
-        this.ruleId = Objects.requireNonNull(ruleId);
+        this.ruleId = ruleId;
         this.state = state;
     }
 

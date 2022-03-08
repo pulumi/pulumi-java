@@ -41,9 +41,9 @@ public final class ClusterResourcePropertiesResponse {
         String serviceId,
         Integer version) {
         this.networkProfile = networkProfile;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.serviceId = Objects.requireNonNull(serviceId);
-        this.version = Objects.requireNonNull(version);
+        this.provisioningState = provisioningState;
+        this.serviceId = serviceId;
+        this.version = version;
     }
 
     /**

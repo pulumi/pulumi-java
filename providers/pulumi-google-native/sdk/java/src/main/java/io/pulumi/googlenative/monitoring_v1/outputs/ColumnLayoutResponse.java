@@ -18,7 +18,7 @@ public final class ColumnLayoutResponse {
 
     @OutputCustomType.Constructor({"columns"})
     private ColumnLayoutResponse(List<ColumnResponse> columns) {
-        this.columns = Objects.requireNonNull(columns);
+        this.columns = columns;
     }
 
     /**

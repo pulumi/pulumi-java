@@ -72,15 +72,15 @@ public final class GetWorkflowTemplateResult {
         WorkflowTemplatePlacementResponse placement,
         String updateTime,
         Integer version) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.dagTimeout = Objects.requireNonNull(dagTimeout);
-        this.jobs = Objects.requireNonNull(jobs);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.parameters = Objects.requireNonNull(parameters);
-        this.placement = Objects.requireNonNull(placement);
-        this.updateTime = Objects.requireNonNull(updateTime);
-        this.version = Objects.requireNonNull(version);
+        this.createTime = createTime;
+        this.dagTimeout = dagTimeout;
+        this.jobs = jobs;
+        this.labels = labels;
+        this.name = name;
+        this.parameters = parameters;
+        this.placement = placement;
+        this.updateTime = updateTime;
+        this.version = version;
     }
 
     /**

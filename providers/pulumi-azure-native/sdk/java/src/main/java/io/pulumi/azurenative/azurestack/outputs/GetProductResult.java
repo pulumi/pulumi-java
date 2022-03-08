@@ -159,10 +159,10 @@ public final class GetProductResult {
         this.etag = etag;
         this.galleryItemIdentity = galleryItemIdentity;
         this.iconUris = iconUris;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.legalTerms = legalTerms;
         this.links = links;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.offer = offer;
         this.offerVersion = offerVersion;
         this.payloadLength = payloadLength;
@@ -172,7 +172,7 @@ public final class GetProductResult {
         this.publisherDisplayName = publisherDisplayName;
         this.publisherIdentifier = publisherIdentifier;
         this.sku = sku;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.vmExtensionType = vmExtensionType;
     }
 

@@ -24,8 +24,8 @@ public final class VpcPeeringConfigResponse {
     private VpcPeeringConfigResponse(
         String subnet,
         String vpc) {
-        this.subnet = Objects.requireNonNull(subnet);
-        this.vpc = Objects.requireNonNull(vpc);
+        this.subnet = subnet;
+        this.vpc = vpc;
     }
 
     /**

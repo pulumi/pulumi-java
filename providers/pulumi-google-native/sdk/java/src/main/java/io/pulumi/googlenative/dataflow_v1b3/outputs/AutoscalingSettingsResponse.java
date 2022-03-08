@@ -25,8 +25,8 @@ public final class AutoscalingSettingsResponse {
     private AutoscalingSettingsResponse(
         String algorithm,
         Integer maxNumWorkers) {
-        this.algorithm = Objects.requireNonNull(algorithm);
-        this.maxNumWorkers = Objects.requireNonNull(maxNumWorkers);
+        this.algorithm = algorithm;
+        this.maxNumWorkers = maxNumWorkers;
     }
 
     /**

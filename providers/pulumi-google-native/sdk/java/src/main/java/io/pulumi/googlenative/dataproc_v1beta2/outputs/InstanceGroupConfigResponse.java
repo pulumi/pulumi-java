@@ -85,17 +85,17 @@ public final class InstanceGroupConfigResponse {
         String minCpuPlatform,
         Integer numInstances,
         String preemptibility) {
-        this.accelerators = Objects.requireNonNull(accelerators);
-        this.diskConfig = Objects.requireNonNull(diskConfig);
-        this.imageUri = Objects.requireNonNull(imageUri);
-        this.instanceNames = Objects.requireNonNull(instanceNames);
-        this.instanceReferences = Objects.requireNonNull(instanceReferences);
-        this.isPreemptible = Objects.requireNonNull(isPreemptible);
-        this.machineTypeUri = Objects.requireNonNull(machineTypeUri);
-        this.managedGroupConfig = Objects.requireNonNull(managedGroupConfig);
-        this.minCpuPlatform = Objects.requireNonNull(minCpuPlatform);
-        this.numInstances = Objects.requireNonNull(numInstances);
-        this.preemptibility = Objects.requireNonNull(preemptibility);
+        this.accelerators = accelerators;
+        this.diskConfig = diskConfig;
+        this.imageUri = imageUri;
+        this.instanceNames = instanceNames;
+        this.instanceReferences = instanceReferences;
+        this.isPreemptible = isPreemptible;
+        this.machineTypeUri = machineTypeUri;
+        this.managedGroupConfig = managedGroupConfig;
+        this.minCpuPlatform = minCpuPlatform;
+        this.numInstances = numInstances;
+        this.preemptibility = preemptibility;
     }
 
     /**

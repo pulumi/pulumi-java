@@ -34,11 +34,11 @@ public final class GetResourceResult {
         String path,
         String pathPart,
         String restApiId) {
-        this.id = Objects.requireNonNull(id);
-        this.parentId = Objects.requireNonNull(parentId);
-        this.path = Objects.requireNonNull(path);
-        this.pathPart = Objects.requireNonNull(pathPart);
-        this.restApiId = Objects.requireNonNull(restApiId);
+        this.id = id;
+        this.parentId = parentId;
+        this.path = path;
+        this.pathPart = pathPart;
+        this.restApiId = restApiId;
     }
 
     /**

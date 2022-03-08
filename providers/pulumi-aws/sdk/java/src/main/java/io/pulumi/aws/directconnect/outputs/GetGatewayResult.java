@@ -32,10 +32,10 @@ public final class GetGatewayResult {
         String id,
         String name,
         String ownerAccountId) {
-        this.amazonSideAsn = Objects.requireNonNull(amazonSideAsn);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.ownerAccountId = Objects.requireNonNull(ownerAccountId);
+        this.amazonSideAsn = amazonSideAsn;
+        this.id = id;
+        this.name = name;
+        this.ownerAccountId = ownerAccountId;
     }
 
     /**

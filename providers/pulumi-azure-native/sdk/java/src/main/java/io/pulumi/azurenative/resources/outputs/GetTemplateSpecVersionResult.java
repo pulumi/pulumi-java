@@ -86,15 +86,15 @@ public final class GetTemplateSpecVersionResult {
         String type,
         @Nullable Object uiFormDefinition) {
         this.description = description;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.linkedTemplates = linkedTemplates;
-        this.location = Objects.requireNonNull(location);
+        this.location = location;
         this.mainTemplate = mainTemplate;
         this.metadata = metadata;
-        this.name = Objects.requireNonNull(name);
-        this.systemData = Objects.requireNonNull(systemData);
+        this.name = name;
+        this.systemData = systemData;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.uiFormDefinition = uiFormDefinition;
     }
 

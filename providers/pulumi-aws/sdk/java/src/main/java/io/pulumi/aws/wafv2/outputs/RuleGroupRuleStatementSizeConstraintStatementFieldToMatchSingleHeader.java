@@ -17,7 +17,7 @@ public final class RuleGroupRuleStatementSizeConstraintStatementFieldToMatchSing
 
     @OutputCustomType.Constructor({"name"})
     private RuleGroupRuleStatementSizeConstraintStatementFieldToMatchSingleHeader(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

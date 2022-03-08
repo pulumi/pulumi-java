@@ -41,11 +41,11 @@ public final class GetResponsePolicyResult {
         String kind,
         List<ResponsePolicyNetworkResponse> networks,
         String responsePolicyName) {
-        this.description = Objects.requireNonNull(description);
-        this.gkeClusters = Objects.requireNonNull(gkeClusters);
-        this.kind = Objects.requireNonNull(kind);
-        this.networks = Objects.requireNonNull(networks);
-        this.responsePolicyName = Objects.requireNonNull(responsePolicyName);
+        this.description = description;
+        this.gkeClusters = gkeClusters;
+        this.kind = kind;
+        this.networks = networks;
+        this.responsePolicyName = responsePolicyName;
     }
 
     /**

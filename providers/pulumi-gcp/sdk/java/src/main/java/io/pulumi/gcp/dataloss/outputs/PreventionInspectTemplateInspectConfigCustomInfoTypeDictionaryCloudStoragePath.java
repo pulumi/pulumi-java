@@ -17,7 +17,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionar
 
     @OutputCustomType.Constructor({"path"})
     private PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePath(String path) {
-        this.path = Objects.requireNonNull(path);
+        this.path = path;
     }
 
     /**

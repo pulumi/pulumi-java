@@ -32,7 +32,7 @@ public final class OriginEndpointCmafEncryption {
         OriginEndpointSpekeKeyProvider spekeKeyProvider) {
         this.constantInitializationVector = constantInitializationVector;
         this.keyRotationIntervalSeconds = keyRotationIntervalSeconds;
-        this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
+        this.spekeKeyProvider = spekeKeyProvider;
     }
 
     /**

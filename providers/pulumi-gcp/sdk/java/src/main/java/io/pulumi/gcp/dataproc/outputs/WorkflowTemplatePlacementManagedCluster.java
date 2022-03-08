@@ -33,8 +33,8 @@ public final class WorkflowTemplatePlacementManagedCluster {
         String clusterName,
         WorkflowTemplatePlacementManagedClusterConfig config,
         @Nullable Map<String,String> labels) {
-        this.clusterName = Objects.requireNonNull(clusterName);
-        this.config = Objects.requireNonNull(config);
+        this.clusterName = clusterName;
+        this.config = config;
         this.labels = labels;
     }
 

@@ -17,7 +17,7 @@ public final class AppSkuInfoResponse {
 
     @OutputCustomType.Constructor({"name"})
     private AppSkuInfoResponse(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

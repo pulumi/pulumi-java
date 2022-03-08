@@ -17,8 +17,8 @@ public final class GetClusterAddonsConfigIstioConfig {
     private GetClusterAddonsConfigIstioConfig(
         String auth,
         Boolean disabled) {
-        this.auth = Objects.requireNonNull(auth);
-        this.disabled = Objects.requireNonNull(disabled);
+        this.auth = auth;
+        this.disabled = disabled;
     }
 
     public String getAuth() {

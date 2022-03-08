@@ -13,7 +13,7 @@ public final class ResourceTypeEndpointResponseFeaturesRule {
 
     @OutputCustomType.Constructor({"requiredFeaturesPolicy"})
     private ResourceTypeEndpointResponseFeaturesRule(String requiredFeaturesPolicy) {
-        this.requiredFeaturesPolicy = Objects.requireNonNull(requiredFeaturesPolicy);
+        this.requiredFeaturesPolicy = requiredFeaturesPolicy;
     }
 
     public String getRequiredFeaturesPolicy() {

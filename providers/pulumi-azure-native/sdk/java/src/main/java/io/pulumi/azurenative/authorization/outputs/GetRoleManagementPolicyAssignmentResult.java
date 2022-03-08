@@ -57,13 +57,13 @@ public final class GetRoleManagementPolicyAssignmentResult {
         @Nullable String roleDefinitionId,
         @Nullable String scope,
         String type) {
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.policyAssignmentProperties = Objects.requireNonNull(policyAssignmentProperties);
+        this.id = id;
+        this.name = name;
+        this.policyAssignmentProperties = policyAssignmentProperties;
         this.policyId = policyId;
         this.roleDefinitionId = roleDefinitionId;
         this.scope = scope;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

@@ -40,9 +40,9 @@ public final class ReferenceVmResponse {
         String vmResourceId,
         VmStateDetailsResponse vmStateDetails) {
         this.password = password;
-        this.userName = Objects.requireNonNull(userName);
-        this.vmResourceId = Objects.requireNonNull(vmResourceId);
-        this.vmStateDetails = Objects.requireNonNull(vmStateDetails);
+        this.userName = userName;
+        this.vmResourceId = vmResourceId;
+        this.vmStateDetails = vmStateDetails;
     }
 
     /**

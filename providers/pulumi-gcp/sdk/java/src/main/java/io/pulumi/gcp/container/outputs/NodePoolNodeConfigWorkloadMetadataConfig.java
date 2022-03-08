@@ -13,7 +13,7 @@ public final class NodePoolNodeConfigWorkloadMetadataConfig {
 
     @OutputCustomType.Constructor({"mode"})
     private NodePoolNodeConfigWorkloadMetadataConfig(String mode) {
-        this.mode = Objects.requireNonNull(mode);
+        this.mode = mode;
     }
 
     public String getMode() {

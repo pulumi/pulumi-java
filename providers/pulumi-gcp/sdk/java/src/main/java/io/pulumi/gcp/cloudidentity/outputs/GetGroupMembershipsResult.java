@@ -28,9 +28,9 @@ public final class GetGroupMembershipsResult {
         String group,
         String id,
         List<GetGroupMembershipsMembership> memberships) {
-        this.group = Objects.requireNonNull(group);
-        this.id = Objects.requireNonNull(id);
-        this.memberships = Objects.requireNonNull(memberships);
+        this.group = group;
+        this.id = id;
+        this.memberships = memberships;
     }
 
     public String getGroup() {

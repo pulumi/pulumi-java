@@ -64,14 +64,14 @@ public final class ProbingDetailsResponse {
         Integer sentProbeCount,
         Integer successfulProbeCount,
         String verifyTime) {
-        this.abortCause = Objects.requireNonNull(abortCause);
-        this.endpointInfo = Objects.requireNonNull(endpointInfo);
-        this.error = Objects.requireNonNull(error);
-        this.probingLatency = Objects.requireNonNull(probingLatency);
-        this.result = Objects.requireNonNull(result);
-        this.sentProbeCount = Objects.requireNonNull(sentProbeCount);
-        this.successfulProbeCount = Objects.requireNonNull(successfulProbeCount);
-        this.verifyTime = Objects.requireNonNull(verifyTime);
+        this.abortCause = abortCause;
+        this.endpointInfo = endpointInfo;
+        this.error = error;
+        this.probingLatency = probingLatency;
+        this.result = result;
+        this.sentProbeCount = sentProbeCount;
+        this.successfulProbeCount = successfulProbeCount;
+        this.verifyTime = verifyTime;
     }
 
     /**

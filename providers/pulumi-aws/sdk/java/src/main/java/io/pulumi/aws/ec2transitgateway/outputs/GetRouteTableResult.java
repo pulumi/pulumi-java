@@ -55,13 +55,13 @@ public final class GetRouteTableResult {
         String id,
         Map<String,String> tags,
         String transitGatewayId) {
-        this.arn = Objects.requireNonNull(arn);
-        this.defaultAssociationRouteTable = Objects.requireNonNull(defaultAssociationRouteTable);
-        this.defaultPropagationRouteTable = Objects.requireNonNull(defaultPropagationRouteTable);
+        this.arn = arn;
+        this.defaultAssociationRouteTable = defaultAssociationRouteTable;
+        this.defaultPropagationRouteTable = defaultPropagationRouteTable;
         this.filters = filters;
-        this.id = Objects.requireNonNull(id);
-        this.tags = Objects.requireNonNull(tags);
-        this.transitGatewayId = Objects.requireNonNull(transitGatewayId);
+        this.id = id;
+        this.tags = tags;
+        this.transitGatewayId = transitGatewayId;
     }
 
     /**

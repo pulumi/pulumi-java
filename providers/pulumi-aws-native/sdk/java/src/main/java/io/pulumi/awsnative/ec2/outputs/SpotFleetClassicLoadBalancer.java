@@ -13,7 +13,7 @@ public final class SpotFleetClassicLoadBalancer {
 
     @OutputCustomType.Constructor({"name"})
     private SpotFleetClassicLoadBalancer(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     public String getName() {

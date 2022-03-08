@@ -44,11 +44,11 @@ public final class GoogleCloudDialogflowCxV3beta1TestCaseResultResponse {
         String name,
         String testResult,
         String testTime) {
-        this.conversationTurns = Objects.requireNonNull(conversationTurns);
-        this.environment = Objects.requireNonNull(environment);
-        this.name = Objects.requireNonNull(name);
-        this.testResult = Objects.requireNonNull(testResult);
-        this.testTime = Objects.requireNonNull(testTime);
+        this.conversationTurns = conversationTurns;
+        this.environment = environment;
+        this.name = name;
+        this.testResult = testResult;
+        this.testTime = testTime;
     }
 
     /**

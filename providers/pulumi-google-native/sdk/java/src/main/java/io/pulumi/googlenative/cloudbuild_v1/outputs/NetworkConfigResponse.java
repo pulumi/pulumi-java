@@ -24,8 +24,8 @@ public final class NetworkConfigResponse {
     private NetworkConfigResponse(
         String egressOption,
         String peeredNetwork) {
-        this.egressOption = Objects.requireNonNull(egressOption);
-        this.peeredNetwork = Objects.requireNonNull(peeredNetwork);
+        this.egressOption = egressOption;
+        this.peeredNetwork = peeredNetwork;
     }
 
     /**

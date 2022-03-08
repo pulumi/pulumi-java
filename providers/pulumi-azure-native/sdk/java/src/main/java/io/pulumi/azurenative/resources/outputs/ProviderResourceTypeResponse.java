@@ -77,10 +77,10 @@ public final class ProviderResourceTypeResponse {
         @Nullable String resourceType,
         @Nullable List<ZoneMappingResponse> zoneMappings) {
         this.aliases = aliases;
-        this.apiProfiles = Objects.requireNonNull(apiProfiles);
+        this.apiProfiles = apiProfiles;
         this.apiVersions = apiVersions;
         this.capabilities = capabilities;
-        this.defaultApiVersion = Objects.requireNonNull(defaultApiVersion);
+        this.defaultApiVersion = defaultApiVersion;
         this.locationMappings = locationMappings;
         this.locations = locations;
         this.properties = properties;

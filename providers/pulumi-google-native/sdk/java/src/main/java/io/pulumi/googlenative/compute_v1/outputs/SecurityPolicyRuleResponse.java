@@ -72,15 +72,15 @@ public final class SecurityPolicyRuleResponse {
         Integer priority,
         SecurityPolicyRuleRateLimitOptionsResponse rateLimitOptions,
         SecurityPolicyRuleRedirectOptionsResponse redirectOptions) {
-        this.action = Objects.requireNonNull(action);
-        this.description = Objects.requireNonNull(description);
-        this.headerAction = Objects.requireNonNull(headerAction);
-        this.kind = Objects.requireNonNull(kind);
-        this.match = Objects.requireNonNull(match);
-        this.preview = Objects.requireNonNull(preview);
-        this.priority = Objects.requireNonNull(priority);
-        this.rateLimitOptions = Objects.requireNonNull(rateLimitOptions);
-        this.redirectOptions = Objects.requireNonNull(redirectOptions);
+        this.action = action;
+        this.description = description;
+        this.headerAction = headerAction;
+        this.kind = kind;
+        this.match = match;
+        this.preview = preview;
+        this.priority = priority;
+        this.rateLimitOptions = rateLimitOptions;
+        this.redirectOptions = redirectOptions;
     }
 
     /**

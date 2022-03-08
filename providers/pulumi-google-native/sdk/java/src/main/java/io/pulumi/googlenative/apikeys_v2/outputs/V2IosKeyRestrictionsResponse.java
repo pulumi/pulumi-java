@@ -18,7 +18,7 @@ public final class V2IosKeyRestrictionsResponse {
 
     @OutputCustomType.Constructor({"allowedBundleIds"})
     private V2IosKeyRestrictionsResponse(List<String> allowedBundleIds) {
-        this.allowedBundleIds = Objects.requireNonNull(allowedBundleIds);
+        this.allowedBundleIds = allowedBundleIds;
     }
 
     /**

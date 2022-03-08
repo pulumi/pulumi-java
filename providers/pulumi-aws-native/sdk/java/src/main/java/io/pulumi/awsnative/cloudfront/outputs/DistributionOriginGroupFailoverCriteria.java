@@ -13,7 +13,7 @@ public final class DistributionOriginGroupFailoverCriteria {
 
     @OutputCustomType.Constructor({"statusCodes"})
     private DistributionOriginGroupFailoverCriteria(DistributionStatusCodes statusCodes) {
-        this.statusCodes = Objects.requireNonNull(statusCodes);
+        this.statusCodes = statusCodes;
     }
 
     public DistributionStatusCodes getStatusCodes() {

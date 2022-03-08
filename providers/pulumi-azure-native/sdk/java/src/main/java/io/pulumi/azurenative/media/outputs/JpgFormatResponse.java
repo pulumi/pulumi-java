@@ -25,8 +25,8 @@ public final class JpgFormatResponse {
     private JpgFormatResponse(
         String filenamePattern,
         String odataType) {
-        this.filenamePattern = Objects.requireNonNull(filenamePattern);
-        this.odataType = Objects.requireNonNull(odataType);
+        this.filenamePattern = filenamePattern;
+        this.odataType = odataType;
     }
 
     /**

@@ -64,15 +64,15 @@ public final class GetLicenseResult {
         String selfLink,
         String selfLinkWithId,
         Boolean transferable) {
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.description = Objects.requireNonNull(description);
-        this.kind = Objects.requireNonNull(kind);
-        this.licenseCode = Objects.requireNonNull(licenseCode);
-        this.name = Objects.requireNonNull(name);
-        this.resourceRequirements = Objects.requireNonNull(resourceRequirements);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
-        this.transferable = Objects.requireNonNull(transferable);
+        this.creationTimestamp = creationTimestamp;
+        this.description = description;
+        this.kind = kind;
+        this.licenseCode = licenseCode;
+        this.name = name;
+        this.resourceRequirements = resourceRequirements;
+        this.selfLink = selfLink;
+        this.selfLinkWithId = selfLinkWithId;
+        this.transferable = transferable;
     }
 
     /**

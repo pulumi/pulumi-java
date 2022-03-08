@@ -24,8 +24,8 @@ public final class DailyMaintenanceWindowResponse {
     private DailyMaintenanceWindowResponse(
         String duration,
         String startTime) {
-        this.duration = Objects.requireNonNull(duration);
-        this.startTime = Objects.requireNonNull(startTime);
+        this.duration = duration;
+        this.startTime = startTime;
     }
 
     /**

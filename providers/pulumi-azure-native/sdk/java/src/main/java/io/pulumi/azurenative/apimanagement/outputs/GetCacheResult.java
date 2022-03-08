@@ -56,13 +56,13 @@ public final class GetCacheResult {
         @Nullable String resourceId,
         String type,
         String useFromLocation) {
-        this.connectionString = Objects.requireNonNull(connectionString);
+        this.connectionString = connectionString;
         this.description = description;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.resourceId = resourceId;
-        this.type = Objects.requireNonNull(type);
-        this.useFromLocation = Objects.requireNonNull(useFromLocation);
+        this.type = type;
+        this.useFromLocation = useFromLocation;
     }
 
     /**

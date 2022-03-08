@@ -93,14 +93,14 @@ public final class AzureDataExplorerLinkedServiceResponse {
         this.annotations = annotations;
         this.connectVia = connectVia;
         this.credential = credential;
-        this.database = Objects.requireNonNull(database);
+        this.database = database;
         this.description = description;
-        this.endpoint = Objects.requireNonNull(endpoint);
+        this.endpoint = endpoint;
         this.parameters = parameters;
         this.servicePrincipalId = servicePrincipalId;
         this.servicePrincipalKey = servicePrincipalKey;
         this.tenant = tenant;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

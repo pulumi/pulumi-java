@@ -28,7 +28,7 @@ public final class BucketReplicationConfigRuleDestinationMetrics {
         @Nullable BucketReplicationConfigRuleDestinationMetricsEventThreshold eventThreshold,
         String status) {
         this.eventThreshold = eventThreshold;
-        this.status = Objects.requireNonNull(status);
+        this.status = status;
     }
 
     /**

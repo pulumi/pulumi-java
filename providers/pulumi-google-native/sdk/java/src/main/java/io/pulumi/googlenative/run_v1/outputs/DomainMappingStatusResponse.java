@@ -46,11 +46,11 @@ public final class DomainMappingStatusResponse {
         Integer observedGeneration,
         List<ResourceRecordResponse> resourceRecords,
         String url) {
-        this.conditions = Objects.requireNonNull(conditions);
-        this.mappedRouteName = Objects.requireNonNull(mappedRouteName);
-        this.observedGeneration = Objects.requireNonNull(observedGeneration);
-        this.resourceRecords = Objects.requireNonNull(resourceRecords);
-        this.url = Objects.requireNonNull(url);
+        this.conditions = conditions;
+        this.mappedRouteName = mappedRouteName;
+        this.observedGeneration = observedGeneration;
+        this.resourceRecords = resourceRecords;
+        this.url = url;
     }
 
     /**

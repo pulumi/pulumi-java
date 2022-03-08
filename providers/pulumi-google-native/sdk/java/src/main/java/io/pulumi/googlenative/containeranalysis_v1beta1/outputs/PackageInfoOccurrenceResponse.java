@@ -67,15 +67,15 @@ public final class PackageInfoOccurrenceResponse {
         String summaryDescription,
         String title,
         String version) {
-        this.comment = Objects.requireNonNull(comment);
-        this.filename = Objects.requireNonNull(filename);
-        this.homePage = Objects.requireNonNull(homePage);
-        this.licenseConcluded = Objects.requireNonNull(licenseConcluded);
-        this.packageType = Objects.requireNonNull(packageType);
-        this.sourceInfo = Objects.requireNonNull(sourceInfo);
-        this.summaryDescription = Objects.requireNonNull(summaryDescription);
-        this.title = Objects.requireNonNull(title);
-        this.version = Objects.requireNonNull(version);
+        this.comment = comment;
+        this.filename = filename;
+        this.homePage = homePage;
+        this.licenseConcluded = licenseConcluded;
+        this.packageType = packageType;
+        this.sourceInfo = sourceInfo;
+        this.summaryDescription = summaryDescription;
+        this.title = title;
+        this.version = version;
     }
 
     /**

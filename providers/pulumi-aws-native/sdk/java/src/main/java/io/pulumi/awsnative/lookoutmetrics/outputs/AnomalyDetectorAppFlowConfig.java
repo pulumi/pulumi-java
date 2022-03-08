@@ -16,8 +16,8 @@ public final class AnomalyDetectorAppFlowConfig {
     private AnomalyDetectorAppFlowConfig(
         String flowName,
         String roleArn) {
-        this.flowName = Objects.requireNonNull(flowName);
-        this.roleArn = Objects.requireNonNull(roleArn);
+        this.flowName = flowName;
+        this.roleArn = roleArn;
     }
 
     public String getFlowName() {

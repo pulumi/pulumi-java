@@ -41,7 +41,7 @@ public final class JobPubsubTarget {
         String topicName) {
         this.attributes = attributes;
         this.data = data;
-        this.topicName = Objects.requireNonNull(topicName);
+        this.topicName = topicName;
     }
 
     /**

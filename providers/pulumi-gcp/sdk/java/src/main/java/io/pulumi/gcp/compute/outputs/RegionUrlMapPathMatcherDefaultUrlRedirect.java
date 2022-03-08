@@ -78,7 +78,7 @@ public final class RegionUrlMapPathMatcherDefaultUrlRedirect {
         this.pathRedirect = pathRedirect;
         this.prefixRedirect = prefixRedirect;
         this.redirectResponseCode = redirectResponseCode;
-        this.stripQuery = Objects.requireNonNull(stripQuery);
+        this.stripQuery = stripQuery;
     }
 
     /**

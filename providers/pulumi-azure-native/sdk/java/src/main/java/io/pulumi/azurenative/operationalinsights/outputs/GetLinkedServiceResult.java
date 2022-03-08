@@ -57,12 +57,12 @@ public final class GetLinkedServiceResult {
         @Nullable Map<String,String> tags,
         String type,
         @Nullable String writeAccessResourceId) {
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.provisioningState = provisioningState;
         this.resourceId = resourceId;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.writeAccessResourceId = writeAccessResourceId;
     }
 

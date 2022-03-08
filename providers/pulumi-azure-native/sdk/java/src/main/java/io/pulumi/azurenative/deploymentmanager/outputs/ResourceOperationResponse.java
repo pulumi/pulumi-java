@@ -50,12 +50,12 @@ public final class ResourceOperationResponse {
         @Nullable String resourceType,
         String statusCode,
         String statusMessage) {
-        this.operationId = Objects.requireNonNull(operationId);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.operationId = operationId;
+        this.provisioningState = provisioningState;
         this.resourceName = resourceName;
         this.resourceType = resourceType;
-        this.statusCode = Objects.requireNonNull(statusCode);
-        this.statusMessage = Objects.requireNonNull(statusMessage);
+        this.statusCode = statusCode;
+        this.statusMessage = statusMessage;
     }
 
     /**

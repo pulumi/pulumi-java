@@ -42,7 +42,7 @@ public final class DatabasesSolutionSummaryResponse {
         @Nullable Integer migrationReadyCount) {
         this.databaseInstancesAssessedCount = databaseInstancesAssessedCount;
         this.databasesAssessedCount = databasesAssessedCount;
-        this.instanceType = Objects.requireNonNull(instanceType);
+        this.instanceType = instanceType;
         this.migrationReadyCount = migrationReadyCount;
     }
 

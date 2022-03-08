@@ -30,9 +30,9 @@ public final class BuildStorageLocation {
         String bucket,
         String key,
         String roleArn) {
-        this.bucket = Objects.requireNonNull(bucket);
-        this.key = Objects.requireNonNull(key);
-        this.roleArn = Objects.requireNonNull(roleArn);
+        this.bucket = bucket;
+        this.key = key;
+        this.roleArn = roleArn;
     }
 
     /**

@@ -68,15 +68,15 @@ public final class GetDataMaskingPolicyResult {
         String maskingLevel,
         String name,
         String type) {
-        this.applicationPrincipals = Objects.requireNonNull(applicationPrincipals);
-        this.dataMaskingState = Objects.requireNonNull(dataMaskingState);
+        this.applicationPrincipals = applicationPrincipals;
+        this.dataMaskingState = dataMaskingState;
         this.exemptPrincipals = exemptPrincipals;
-        this.id = Objects.requireNonNull(id);
-        this.kind = Objects.requireNonNull(kind);
-        this.location = Objects.requireNonNull(location);
-        this.maskingLevel = Objects.requireNonNull(maskingLevel);
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.id = id;
+        this.kind = kind;
+        this.location = location;
+        this.maskingLevel = maskingLevel;
+        this.name = name;
+        this.type = type;
     }
 
     /**

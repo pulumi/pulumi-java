@@ -96,18 +96,18 @@ public final class GetDiskPoolResult {
         String tier,
         String type) {
         this.additionalCapabilities = additionalCapabilities;
-        this.availabilityZones = Objects.requireNonNull(availabilityZones);
+        this.availabilityZones = availabilityZones;
         this.disks = disks;
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.status = Objects.requireNonNull(status);
-        this.subnetId = Objects.requireNonNull(subnetId);
-        this.systemData = Objects.requireNonNull(systemData);
+        this.id = id;
+        this.location = location;
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.status = status;
+        this.subnetId = subnetId;
+        this.systemData = systemData;
         this.tags = tags;
-        this.tier = Objects.requireNonNull(tier);
-        this.type = Objects.requireNonNull(type);
+        this.tier = tier;
+        this.type = type;
     }
 
     /**

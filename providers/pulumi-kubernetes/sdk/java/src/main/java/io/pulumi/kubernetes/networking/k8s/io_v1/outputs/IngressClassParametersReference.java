@@ -45,8 +45,8 @@ public final class IngressClassParametersReference {
         @Nullable String namespace,
         @Nullable String scope) {
         this.apiGroup = apiGroup;
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
+        this.kind = kind;
+        this.name = name;
         this.namespace = namespace;
         this.scope = scope;
     }

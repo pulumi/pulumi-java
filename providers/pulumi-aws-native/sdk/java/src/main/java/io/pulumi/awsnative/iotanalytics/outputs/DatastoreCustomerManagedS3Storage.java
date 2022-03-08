@@ -18,7 +18,7 @@ public final class DatastoreCustomerManagedS3Storage {
     private DatastoreCustomerManagedS3Storage(
         String bucket,
         @Nullable String keyPrefix) {
-        this.bucket = Objects.requireNonNull(bucket);
+        this.bucket = bucket;
         this.keyPrefix = keyPrefix;
     }
 

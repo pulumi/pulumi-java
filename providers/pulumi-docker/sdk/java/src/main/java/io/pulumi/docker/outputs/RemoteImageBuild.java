@@ -40,7 +40,7 @@ public final class RemoteImageBuild {
         this.forceRemove = forceRemove;
         this.label = label;
         this.noCache = noCache;
-        this.path = Objects.requireNonNull(path);
+        this.path = path;
         this.remove = remove;
         this.tags = tags;
         this.target = target;

@@ -45,11 +45,11 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesResp
         String locationHint,
         String machineType,
         String minCpuPlatform) {
-        this.guestAccelerators = Objects.requireNonNull(guestAccelerators);
-        this.localSsds = Objects.requireNonNull(localSsds);
-        this.locationHint = Objects.requireNonNull(locationHint);
-        this.machineType = Objects.requireNonNull(machineType);
-        this.minCpuPlatform = Objects.requireNonNull(minCpuPlatform);
+        this.guestAccelerators = guestAccelerators;
+        this.localSsds = localSsds;
+        this.locationHint = locationHint;
+        this.machineType = machineType;
+        this.minCpuPlatform = minCpuPlatform;
     }
 
     /**

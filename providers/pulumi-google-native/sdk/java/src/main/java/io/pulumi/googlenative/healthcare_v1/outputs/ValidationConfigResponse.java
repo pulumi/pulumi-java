@@ -44,11 +44,11 @@ public final class ValidationConfigResponse {
         Boolean disableReferenceTypeValidation,
         Boolean disableRequiredFieldValidation,
         List<String> enabledImplementationGuides) {
-        this.disableFhirpathValidation = Objects.requireNonNull(disableFhirpathValidation);
-        this.disableProfileValidation = Objects.requireNonNull(disableProfileValidation);
-        this.disableReferenceTypeValidation = Objects.requireNonNull(disableReferenceTypeValidation);
-        this.disableRequiredFieldValidation = Objects.requireNonNull(disableRequiredFieldValidation);
-        this.enabledImplementationGuides = Objects.requireNonNull(enabledImplementationGuides);
+        this.disableFhirpathValidation = disableFhirpathValidation;
+        this.disableProfileValidation = disableProfileValidation;
+        this.disableReferenceTypeValidation = disableReferenceTypeValidation;
+        this.disableRequiredFieldValidation = disableRequiredFieldValidation;
+        this.enabledImplementationGuides = enabledImplementationGuides;
     }
 
     /**

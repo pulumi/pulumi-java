@@ -28,7 +28,7 @@ public final class EnterpriseChannelPropertiesResponse {
     private EnterpriseChannelPropertiesResponse(
         List<EnterpriseChannelNodeResponse> nodes,
         @Nullable String state) {
-        this.nodes = Objects.requireNonNull(nodes);
+        this.nodes = nodes;
         this.state = state;
     }
 

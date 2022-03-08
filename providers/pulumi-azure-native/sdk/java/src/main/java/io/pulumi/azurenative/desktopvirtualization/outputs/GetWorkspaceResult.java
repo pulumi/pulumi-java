@@ -105,21 +105,21 @@ public final class GetWorkspaceResult {
         @Nullable Map<String,String> tags,
         String type) {
         this.applicationGroupReferences = applicationGroupReferences;
-        this.cloudPcResource = Objects.requireNonNull(cloudPcResource);
+        this.cloudPcResource = cloudPcResource;
         this.description = description;
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.friendlyName = friendlyName;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.identity = identity;
         this.kind = kind;
         this.location = location;
         this.managedBy = managedBy;
-        this.name = Objects.requireNonNull(name);
-        this.objectId = Objects.requireNonNull(objectId);
+        this.name = name;
+        this.objectId = objectId;
         this.plan = plan;
         this.sku = sku;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

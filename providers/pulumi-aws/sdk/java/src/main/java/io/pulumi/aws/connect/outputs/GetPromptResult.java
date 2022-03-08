@@ -34,11 +34,11 @@ public final class GetPromptResult {
         String instanceId,
         String name,
         String promptId) {
-        this.arn = Objects.requireNonNull(arn);
-        this.id = Objects.requireNonNull(id);
-        this.instanceId = Objects.requireNonNull(instanceId);
-        this.name = Objects.requireNonNull(name);
-        this.promptId = Objects.requireNonNull(promptId);
+        this.arn = arn;
+        this.id = id;
+        this.instanceId = instanceId;
+        this.name = name;
+        this.promptId = promptId;
     }
 
     /**

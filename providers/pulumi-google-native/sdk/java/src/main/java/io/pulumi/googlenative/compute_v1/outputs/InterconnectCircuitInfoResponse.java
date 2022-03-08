@@ -30,9 +30,9 @@ public final class InterconnectCircuitInfoResponse {
         String customerDemarcId,
         String googleCircuitId,
         String googleDemarcId) {
-        this.customerDemarcId = Objects.requireNonNull(customerDemarcId);
-        this.googleCircuitId = Objects.requireNonNull(googleCircuitId);
-        this.googleDemarcId = Objects.requireNonNull(googleDemarcId);
+        this.customerDemarcId = customerDemarcId;
+        this.googleCircuitId = googleCircuitId;
+        this.googleDemarcId = googleDemarcId;
     }
 
     /**

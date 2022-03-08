@@ -34,7 +34,7 @@ public final class NetworkRuleSetResponse {
         String defaultAction,
         @Nullable List<IPRuleResponse> ipRules,
         @Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules) {
-        this.defaultAction = Objects.requireNonNull(defaultAction);
+        this.defaultAction = defaultAction;
         this.ipRules = ipRules;
         this.virtualNetworkRules = virtualNetworkRules;
     }

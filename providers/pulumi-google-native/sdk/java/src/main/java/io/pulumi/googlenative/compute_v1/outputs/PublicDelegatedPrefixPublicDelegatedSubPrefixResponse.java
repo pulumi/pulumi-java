@@ -55,13 +55,13 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixResponse {
         String name,
         String region,
         String status) {
-        this.delegateeProject = Objects.requireNonNull(delegateeProject);
-        this.description = Objects.requireNonNull(description);
-        this.ipCidrRange = Objects.requireNonNull(ipCidrRange);
-        this.isAddress = Objects.requireNonNull(isAddress);
-        this.name = Objects.requireNonNull(name);
-        this.region = Objects.requireNonNull(region);
-        this.status = Objects.requireNonNull(status);
+        this.delegateeProject = delegateeProject;
+        this.description = description;
+        this.ipCidrRange = ipCidrRange;
+        this.isAddress = isAddress;
+        this.name = name;
+        this.region = region;
+        this.status = status;
     }
 
     /**

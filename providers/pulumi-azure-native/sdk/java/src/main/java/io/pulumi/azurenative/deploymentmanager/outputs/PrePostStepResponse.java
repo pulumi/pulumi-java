@@ -17,7 +17,7 @@ public final class PrePostStepResponse {
 
     @OutputCustomType.Constructor({"stepId"})
     private PrePostStepResponse(String stepId) {
-        this.stepId = Objects.requireNonNull(stepId);
+        this.stepId = stepId;
     }
 
     /**

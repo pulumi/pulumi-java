@@ -25,8 +25,8 @@ public final class GooglePrivacyDlpV2BigQueryFieldResponse {
     private GooglePrivacyDlpV2BigQueryFieldResponse(
         GooglePrivacyDlpV2FieldIdResponse field,
         GooglePrivacyDlpV2BigQueryTableResponse table) {
-        this.field = Objects.requireNonNull(field);
-        this.table = Objects.requireNonNull(table);
+        this.field = field;
+        this.table = table;
     }
 
     /**

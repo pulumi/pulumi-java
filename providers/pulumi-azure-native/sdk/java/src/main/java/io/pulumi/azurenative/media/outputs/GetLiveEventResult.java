@@ -137,24 +137,24 @@ public final class GetLiveEventResult {
         @Nullable List<LiveEventTranscriptionResponse> transcriptions,
         String type,
         @Nullable Boolean useStaticHostname) {
-        this.created = Objects.requireNonNull(created);
+        this.created = created;
         this.crossSiteAccessPolicies = crossSiteAccessPolicies;
         this.description = description;
         this.encoding = encoding;
         this.hostnamePrefix = hostnamePrefix;
-        this.id = Objects.requireNonNull(id);
-        this.input = Objects.requireNonNull(input);
-        this.lastModified = Objects.requireNonNull(lastModified);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.input = input;
+        this.lastModified = lastModified;
+        this.location = location;
+        this.name = name;
         this.preview = preview;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.resourceState = Objects.requireNonNull(resourceState);
+        this.provisioningState = provisioningState;
+        this.resourceState = resourceState;
         this.streamOptions = streamOptions;
-        this.systemData = Objects.requireNonNull(systemData);
+        this.systemData = systemData;
         this.tags = tags;
         this.transcriptions = transcriptions;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.useStaticHostname = useStaticHostname;
     }
 

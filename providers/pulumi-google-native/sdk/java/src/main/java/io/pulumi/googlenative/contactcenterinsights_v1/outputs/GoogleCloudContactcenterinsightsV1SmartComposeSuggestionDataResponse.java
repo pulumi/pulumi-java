@@ -38,10 +38,10 @@ public final class GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataR
         Map<String,String> metadata,
         String queryRecord,
         String suggestion) {
-        this.confidenceScore = Objects.requireNonNull(confidenceScore);
-        this.metadata = Objects.requireNonNull(metadata);
-        this.queryRecord = Objects.requireNonNull(queryRecord);
-        this.suggestion = Objects.requireNonNull(suggestion);
+        this.confidenceScore = confidenceScore;
+        this.metadata = metadata;
+        this.queryRecord = queryRecord;
+        this.suggestion = suggestion;
     }
 
     /**

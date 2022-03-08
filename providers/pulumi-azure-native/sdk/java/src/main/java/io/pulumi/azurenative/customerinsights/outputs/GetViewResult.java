@@ -75,16 +75,16 @@ public final class GetViewResult {
         String type,
         @Nullable String userId,
         String viewName) {
-        this.changed = Objects.requireNonNull(changed);
-        this.created = Objects.requireNonNull(created);
-        this.definition = Objects.requireNonNull(definition);
+        this.changed = changed;
+        this.created = created;
+        this.definition = definition;
         this.displayName = displayName;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.tenantId = Objects.requireNonNull(tenantId);
-        this.type = Objects.requireNonNull(type);
+        this.id = id;
+        this.name = name;
+        this.tenantId = tenantId;
+        this.type = type;
         this.userId = userId;
-        this.viewName = Objects.requireNonNull(viewName);
+        this.viewName = viewName;
     }
 
     /**

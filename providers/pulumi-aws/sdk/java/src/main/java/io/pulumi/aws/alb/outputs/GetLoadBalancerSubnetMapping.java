@@ -22,11 +22,11 @@ public final class GetLoadBalancerSubnetMapping {
         String outpostId,
         String privateIpv4Address,
         String subnetId) {
-        this.allocationId = Objects.requireNonNull(allocationId);
-        this.ipv6Address = Objects.requireNonNull(ipv6Address);
-        this.outpostId = Objects.requireNonNull(outpostId);
-        this.privateIpv4Address = Objects.requireNonNull(privateIpv4Address);
-        this.subnetId = Objects.requireNonNull(subnetId);
+        this.allocationId = allocationId;
+        this.ipv6Address = ipv6Address;
+        this.outpostId = outpostId;
+        this.privateIpv4Address = privateIpv4Address;
+        this.subnetId = subnetId;
     }
 
     public String getAllocationId() {

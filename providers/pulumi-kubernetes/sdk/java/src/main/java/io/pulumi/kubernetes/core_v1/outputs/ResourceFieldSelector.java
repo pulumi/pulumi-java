@@ -34,7 +34,7 @@ public final class ResourceFieldSelector {
         String resource) {
         this.containerName = containerName;
         this.divisor = divisor;
-        this.resource = Objects.requireNonNull(resource);
+        this.resource = resource;
     }
 
     /**

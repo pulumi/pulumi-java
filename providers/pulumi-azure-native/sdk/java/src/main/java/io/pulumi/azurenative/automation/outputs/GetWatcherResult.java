@@ -106,21 +106,21 @@ public final class GetWatcherResult {
         String status,
         @Nullable Map<String,String> tags,
         String type) {
-        this.creationTime = Objects.requireNonNull(creationTime);
+        this.creationTime = creationTime;
         this.description = description;
         this.etag = etag;
         this.executionFrequencyInSeconds = executionFrequencyInSeconds;
-        this.id = Objects.requireNonNull(id);
-        this.lastModifiedBy = Objects.requireNonNull(lastModifiedBy);
-        this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
+        this.id = id;
+        this.lastModifiedBy = lastModifiedBy;
+        this.lastModifiedTime = lastModifiedTime;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.scriptName = scriptName;
         this.scriptParameters = scriptParameters;
         this.scriptRunOn = scriptRunOn;
-        this.status = Objects.requireNonNull(status);
+        this.status = status;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

@@ -49,12 +49,12 @@ public final class UpdateHistoryPropertyResponse {
         String timestamp,
         String update,
         String upn) {
-        this.immutabilityPeriodSinceCreationInDays = Objects.requireNonNull(immutabilityPeriodSinceCreationInDays);
-        this.objectIdentifier = Objects.requireNonNull(objectIdentifier);
-        this.tenantId = Objects.requireNonNull(tenantId);
-        this.timestamp = Objects.requireNonNull(timestamp);
-        this.update = Objects.requireNonNull(update);
-        this.upn = Objects.requireNonNull(upn);
+        this.immutabilityPeriodSinceCreationInDays = immutabilityPeriodSinceCreationInDays;
+        this.objectIdentifier = objectIdentifier;
+        this.tenantId = tenantId;
+        this.timestamp = timestamp;
+        this.update = update;
+        this.upn = upn;
     }
 
     /**

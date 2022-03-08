@@ -17,7 +17,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
 
     @OutputCustomType.Constructor({"name"})
     private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransient(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

@@ -18,7 +18,7 @@ public final class BotSlotTypeValue {
     private BotSlotTypeValue(
         BotSampleValue sampleValue,
         @Nullable List<BotSampleValue> synonyms) {
-        this.sampleValue = Objects.requireNonNull(sampleValue);
+        this.sampleValue = sampleValue;
         this.synonyms = synonyms;
     }
 

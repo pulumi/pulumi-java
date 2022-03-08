@@ -31,9 +31,9 @@ public final class SdkHarnessContainerImageResponse {
         String containerImage,
         String environmentId,
         Boolean useSingleCorePerContainer) {
-        this.containerImage = Objects.requireNonNull(containerImage);
-        this.environmentId = Objects.requireNonNull(environmentId);
-        this.useSingleCorePerContainer = Objects.requireNonNull(useSingleCorePerContainer);
+        this.containerImage = containerImage;
+        this.environmentId = environmentId;
+        this.useSingleCorePerContainer = useSingleCorePerContainer;
     }
 
     /**

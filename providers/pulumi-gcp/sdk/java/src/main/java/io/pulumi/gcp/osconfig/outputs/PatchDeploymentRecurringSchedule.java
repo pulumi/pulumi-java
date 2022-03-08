@@ -82,8 +82,8 @@ public final class PatchDeploymentRecurringSchedule {
         this.monthly = monthly;
         this.nextExecuteTime = nextExecuteTime;
         this.startTime = startTime;
-        this.timeOfDay = Objects.requireNonNull(timeOfDay);
-        this.timeZone = Objects.requireNonNull(timeZone);
+        this.timeOfDay = timeOfDay;
+        this.timeZone = timeZone;
         this.weekly = weekly;
     }
 

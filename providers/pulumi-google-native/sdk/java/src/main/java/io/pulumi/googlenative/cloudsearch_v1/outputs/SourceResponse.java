@@ -24,8 +24,8 @@ public final class SourceResponse {
     private SourceResponse(
         String name,
         String predefinedSource) {
-        this.name = Objects.requireNonNull(name);
-        this.predefinedSource = Objects.requireNonNull(predefinedSource);
+        this.name = name;
+        this.predefinedSource = predefinedSource;
     }
 
     /**

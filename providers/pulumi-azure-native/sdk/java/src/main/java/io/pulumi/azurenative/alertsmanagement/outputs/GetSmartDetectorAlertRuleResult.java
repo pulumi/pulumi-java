@@ -97,19 +97,19 @@ public final class GetSmartDetectorAlertRuleResult {
         @Nullable Map<String,String> tags,
         @Nullable ThrottlingInformationResponse throttling,
         String type) {
-        this.actionGroups = Objects.requireNonNull(actionGroups);
+        this.actionGroups = actionGroups;
         this.description = description;
-        this.detector = Objects.requireNonNull(detector);
-        this.frequency = Objects.requireNonNull(frequency);
-        this.id = Objects.requireNonNull(id);
+        this.detector = detector;
+        this.frequency = frequency;
+        this.id = id;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
-        this.scope = Objects.requireNonNull(scope);
-        this.severity = Objects.requireNonNull(severity);
-        this.state = Objects.requireNonNull(state);
+        this.name = name;
+        this.scope = scope;
+        this.severity = severity;
+        this.state = state;
         this.tags = tags;
         this.throttling = throttling;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

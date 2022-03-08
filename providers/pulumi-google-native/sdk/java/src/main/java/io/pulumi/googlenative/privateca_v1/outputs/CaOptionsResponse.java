@@ -25,8 +25,8 @@ public final class CaOptionsResponse {
     private CaOptionsResponse(
         Boolean isCa,
         Integer maxIssuerPathLength) {
-        this.isCa = Objects.requireNonNull(isCa);
-        this.maxIssuerPathLength = Objects.requireNonNull(maxIssuerPathLength);
+        this.isCa = isCa;
+        this.maxIssuerPathLength = maxIssuerPathLength;
     }
 
     /**

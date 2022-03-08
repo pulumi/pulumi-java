@@ -123,24 +123,24 @@ public final class GetDatasetResult {
         Boolean satisfiesPZS,
         String selfLink,
         List<DatasetTagsItemResponse> tags) {
-        this.access = Objects.requireNonNull(access);
-        this.creationTime = Objects.requireNonNull(creationTime);
-        this.datasetReference = Objects.requireNonNull(datasetReference);
-        this.defaultCollation = Objects.requireNonNull(defaultCollation);
-        this.defaultEncryptionConfiguration = Objects.requireNonNull(defaultEncryptionConfiguration);
-        this.defaultPartitionExpirationMs = Objects.requireNonNull(defaultPartitionExpirationMs);
-        this.defaultTableExpirationMs = Objects.requireNonNull(defaultTableExpirationMs);
-        this.description = Objects.requireNonNull(description);
-        this.etag = Objects.requireNonNull(etag);
-        this.friendlyName = Objects.requireNonNull(friendlyName);
-        this.isCaseInsensitive = Objects.requireNonNull(isCaseInsensitive);
-        this.kind = Objects.requireNonNull(kind);
-        this.labels = Objects.requireNonNull(labels);
-        this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
-        this.location = Objects.requireNonNull(location);
-        this.satisfiesPZS = Objects.requireNonNull(satisfiesPZS);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.tags = Objects.requireNonNull(tags);
+        this.access = access;
+        this.creationTime = creationTime;
+        this.datasetReference = datasetReference;
+        this.defaultCollation = defaultCollation;
+        this.defaultEncryptionConfiguration = defaultEncryptionConfiguration;
+        this.defaultPartitionExpirationMs = defaultPartitionExpirationMs;
+        this.defaultTableExpirationMs = defaultTableExpirationMs;
+        this.description = description;
+        this.etag = etag;
+        this.friendlyName = friendlyName;
+        this.isCaseInsensitive = isCaseInsensitive;
+        this.kind = kind;
+        this.labels = labels;
+        this.lastModifiedTime = lastModifiedTime;
+        this.location = location;
+        this.satisfiesPZS = satisfiesPZS;
+        this.selfLink = selfLink;
+        this.tags = tags;
     }
 
     /**

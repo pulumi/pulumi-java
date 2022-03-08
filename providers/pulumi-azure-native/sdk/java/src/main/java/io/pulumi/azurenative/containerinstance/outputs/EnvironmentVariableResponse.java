@@ -32,7 +32,7 @@ public final class EnvironmentVariableResponse {
         String name,
         @Nullable String secureValue,
         @Nullable String value) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.secureValue = secureValue;
         this.value = value;
     }

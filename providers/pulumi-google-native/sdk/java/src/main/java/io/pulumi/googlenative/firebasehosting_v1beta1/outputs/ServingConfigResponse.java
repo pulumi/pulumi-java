@@ -60,13 +60,13 @@ public final class ServingConfigResponse {
         List<RedirectResponse> redirects,
         List<RewriteResponse> rewrites,
         String trailingSlashBehavior) {
-        this.appAssociation = Objects.requireNonNull(appAssociation);
-        this.cleanUrls = Objects.requireNonNull(cleanUrls);
-        this.headers = Objects.requireNonNull(headers);
-        this.i18n = Objects.requireNonNull(i18n);
-        this.redirects = Objects.requireNonNull(redirects);
-        this.rewrites = Objects.requireNonNull(rewrites);
-        this.trailingSlashBehavior = Objects.requireNonNull(trailingSlashBehavior);
+        this.appAssociation = appAssociation;
+        this.cleanUrls = cleanUrls;
+        this.headers = headers;
+        this.i18n = i18n;
+        this.redirects = redirects;
+        this.rewrites = rewrites;
+        this.trailingSlashBehavior = trailingSlashBehavior;
     }
 
     /**

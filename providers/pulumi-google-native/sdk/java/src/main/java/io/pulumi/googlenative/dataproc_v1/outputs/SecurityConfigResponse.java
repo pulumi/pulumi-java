@@ -25,8 +25,8 @@ public final class SecurityConfigResponse {
     private SecurityConfigResponse(
         IdentityConfigResponse identityConfig,
         KerberosConfigResponse kerberosConfig) {
-        this.identityConfig = Objects.requireNonNull(identityConfig);
-        this.kerberosConfig = Objects.requireNonNull(kerberosConfig);
+        this.identityConfig = identityConfig;
+        this.kerberosConfig = kerberosConfig;
     }
 
     /**

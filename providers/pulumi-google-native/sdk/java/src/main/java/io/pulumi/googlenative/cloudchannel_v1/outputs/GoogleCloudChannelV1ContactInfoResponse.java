@@ -48,12 +48,12 @@ public final class GoogleCloudChannelV1ContactInfoResponse {
         String lastName,
         String phone,
         String title) {
-        this.displayName = Objects.requireNonNull(displayName);
-        this.email = Objects.requireNonNull(email);
-        this.firstName = Objects.requireNonNull(firstName);
-        this.lastName = Objects.requireNonNull(lastName);
-        this.phone = Objects.requireNonNull(phone);
-        this.title = Objects.requireNonNull(title);
+        this.displayName = displayName;
+        this.email = email;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.phone = phone;
+        this.title = title;
     }
 
     /**

@@ -17,7 +17,7 @@ public final class CryptoKeyConfigResponse {
 
     @OutputCustomType.Constructor({"keyReference"})
     private CryptoKeyConfigResponse(String keyReference) {
-        this.keyReference = Objects.requireNonNull(keyReference);
+        this.keyReference = keyReference;
     }
 
     /**

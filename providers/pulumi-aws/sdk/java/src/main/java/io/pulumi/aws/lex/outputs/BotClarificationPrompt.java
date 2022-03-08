@@ -39,8 +39,8 @@ public final class BotClarificationPrompt {
         Integer maxAttempts,
         List<BotClarificationPromptMessage> messages,
         @Nullable String responseCard) {
-        this.maxAttempts = Objects.requireNonNull(maxAttempts);
-        this.messages = Objects.requireNonNull(messages);
+        this.maxAttempts = maxAttempts;
+        this.messages = messages;
         this.responseCard = responseCard;
     }
 

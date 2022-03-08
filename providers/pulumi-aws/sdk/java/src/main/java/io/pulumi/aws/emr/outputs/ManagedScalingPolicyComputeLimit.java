@@ -45,11 +45,11 @@ public final class ManagedScalingPolicyComputeLimit {
         @Nullable Integer maximumOndemandCapacityUnits,
         Integer minimumCapacityUnits,
         String unitType) {
-        this.maximumCapacityUnits = Objects.requireNonNull(maximumCapacityUnits);
+        this.maximumCapacityUnits = maximumCapacityUnits;
         this.maximumCoreCapacityUnits = maximumCoreCapacityUnits;
         this.maximumOndemandCapacityUnits = maximumOndemandCapacityUnits;
-        this.minimumCapacityUnits = Objects.requireNonNull(minimumCapacityUnits);
-        this.unitType = Objects.requireNonNull(unitType);
+        this.minimumCapacityUnits = minimumCapacityUnits;
+        this.unitType = unitType;
     }
 
     /**

@@ -18,7 +18,7 @@ public final class GooglePrivacyDlpV2LDiversityResultResponse {
 
     @OutputCustomType.Constructor({"sensitiveValueFrequencyHistogramBuckets"})
     private GooglePrivacyDlpV2LDiversityResultResponse(List<GooglePrivacyDlpV2LDiversityHistogramBucketResponse> sensitiveValueFrequencyHistogramBuckets) {
-        this.sensitiveValueFrequencyHistogramBuckets = Objects.requireNonNull(sensitiveValueFrequencyHistogramBuckets);
+        this.sensitiveValueFrequencyHistogramBuckets = sensitiveValueFrequencyHistogramBuckets;
     }
 
     /**

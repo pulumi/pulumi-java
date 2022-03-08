@@ -20,7 +20,7 @@ public final class FlowEventBridgeDestinationProperties {
         @Nullable FlowErrorHandlingConfig errorHandlingConfig,
         String object) {
         this.errorHandlingConfig = errorHandlingConfig;
-        this.object = Objects.requireNonNull(object);
+        this.object = object;
     }
 
     public Optional<FlowErrorHandlingConfig> getErrorHandlingConfig() {

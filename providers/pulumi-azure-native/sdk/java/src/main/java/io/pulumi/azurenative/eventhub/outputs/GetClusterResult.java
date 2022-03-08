@@ -76,16 +76,16 @@ public final class GetClusterResult {
         @Nullable Map<String,String> tags,
         String type,
         String updatedAt) {
-        this.createdAt = Objects.requireNonNull(createdAt);
-        this.id = Objects.requireNonNull(id);
+        this.createdAt = createdAt;
+        this.id = id;
         this.location = location;
-        this.metricId = Objects.requireNonNull(metricId);
-        this.name = Objects.requireNonNull(name);
+        this.metricId = metricId;
+        this.name = name;
         this.sku = sku;
-        this.status = Objects.requireNonNull(status);
+        this.status = status;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
-        this.updatedAt = Objects.requireNonNull(updatedAt);
+        this.type = type;
+        this.updatedAt = updatedAt;
     }
 
     /**

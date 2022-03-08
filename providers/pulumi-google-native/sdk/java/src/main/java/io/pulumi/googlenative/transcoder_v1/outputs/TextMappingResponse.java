@@ -31,9 +31,9 @@ public final class TextMappingResponse {
         String atomKey,
         String inputKey,
         Integer inputTrack) {
-        this.atomKey = Objects.requireNonNull(atomKey);
-        this.inputKey = Objects.requireNonNull(inputKey);
-        this.inputTrack = Objects.requireNonNull(inputTrack);
+        this.atomKey = atomKey;
+        this.inputKey = inputKey;
+        this.inputTrack = inputTrack;
     }
 
     /**

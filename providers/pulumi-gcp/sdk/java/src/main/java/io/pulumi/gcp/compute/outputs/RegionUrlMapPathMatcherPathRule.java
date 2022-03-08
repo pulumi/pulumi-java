@@ -53,7 +53,7 @@ public final class RegionUrlMapPathMatcherPathRule {
         @Nullable RegionUrlMapPathMatcherPathRuleRouteAction routeAction,
         @Nullable String service,
         @Nullable RegionUrlMapPathMatcherPathRuleUrlRedirect urlRedirect) {
-        this.paths = Objects.requireNonNull(paths);
+        this.paths = paths;
         this.routeAction = routeAction;
         this.service = service;
         this.urlRedirect = urlRedirect;

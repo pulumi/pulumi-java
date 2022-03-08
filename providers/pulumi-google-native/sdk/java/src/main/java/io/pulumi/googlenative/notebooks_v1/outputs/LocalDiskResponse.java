@@ -89,18 +89,18 @@ public final class LocalDiskResponse {
         String mode,
         String source,
         String type) {
-        this.autoDelete = Objects.requireNonNull(autoDelete);
-        this.boot = Objects.requireNonNull(boot);
-        this.deviceName = Objects.requireNonNull(deviceName);
-        this.guestOsFeatures = Objects.requireNonNull(guestOsFeatures);
-        this.index = Objects.requireNonNull(index);
-        this.initializeParams = Objects.requireNonNull(initializeParams);
-        this.$interface = Objects.requireNonNull($interface);
-        this.kind = Objects.requireNonNull(kind);
-        this.licenses = Objects.requireNonNull(licenses);
-        this.mode = Objects.requireNonNull(mode);
-        this.source = Objects.requireNonNull(source);
-        this.type = Objects.requireNonNull(type);
+        this.autoDelete = autoDelete;
+        this.boot = boot;
+        this.deviceName = deviceName;
+        this.guestOsFeatures = guestOsFeatures;
+        this.index = index;
+        this.initializeParams = initializeParams;
+        this.$interface = $interface;
+        this.kind = kind;
+        this.licenses = licenses;
+        this.mode = mode;
+        this.source = source;
+        this.type = type;
     }
 
     /**

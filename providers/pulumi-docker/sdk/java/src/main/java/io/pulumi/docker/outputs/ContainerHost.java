@@ -16,8 +16,8 @@ public final class ContainerHost {
     private ContainerHost(
         String host,
         String ip) {
-        this.host = Objects.requireNonNull(host);
-        this.ip = Objects.requireNonNull(ip);
+        this.host = host;
+        this.ip = ip;
     }
 
     public String getHost() {

@@ -63,10 +63,10 @@ public final class DeliveryRuleResponse {
         @Nullable List<Object> conditions,
         @Nullable String name,
         Integer order) {
-        this.actions = Objects.requireNonNull(actions);
+        this.actions = actions;
         this.conditions = conditions;
         this.name = name;
-        this.order = Objects.requireNonNull(order);
+        this.order = order;
     }
 
     /**

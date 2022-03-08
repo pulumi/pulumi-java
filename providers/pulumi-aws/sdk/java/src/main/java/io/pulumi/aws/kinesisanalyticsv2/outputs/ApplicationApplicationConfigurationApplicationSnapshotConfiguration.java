@@ -17,7 +17,7 @@ public final class ApplicationApplicationConfigurationApplicationSnapshotConfigu
 
     @OutputCustomType.Constructor({"snapshotsEnabled"})
     private ApplicationApplicationConfigurationApplicationSnapshotConfiguration(Boolean snapshotsEnabled) {
-        this.snapshotsEnabled = Objects.requireNonNull(snapshotsEnabled);
+        this.snapshotsEnabled = snapshotsEnabled;
     }
 
     /**

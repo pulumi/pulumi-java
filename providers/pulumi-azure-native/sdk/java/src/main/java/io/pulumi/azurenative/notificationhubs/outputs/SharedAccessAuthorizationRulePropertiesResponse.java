@@ -69,15 +69,15 @@ public final class SharedAccessAuthorizationRulePropertiesResponse {
         Integer revision,
         @Nullable List<String> rights,
         String secondaryKey) {
-        this.claimType = Objects.requireNonNull(claimType);
-        this.claimValue = Objects.requireNonNull(claimValue);
-        this.createdTime = Objects.requireNonNull(createdTime);
-        this.keyName = Objects.requireNonNull(keyName);
-        this.modifiedTime = Objects.requireNonNull(modifiedTime);
-        this.primaryKey = Objects.requireNonNull(primaryKey);
-        this.revision = Objects.requireNonNull(revision);
+        this.claimType = claimType;
+        this.claimValue = claimValue;
+        this.createdTime = createdTime;
+        this.keyName = keyName;
+        this.modifiedTime = modifiedTime;
+        this.primaryKey = primaryKey;
+        this.revision = revision;
         this.rights = rights;
-        this.secondaryKey = Objects.requireNonNull(secondaryKey);
+        this.secondaryKey = secondaryKey;
     }
 
     /**

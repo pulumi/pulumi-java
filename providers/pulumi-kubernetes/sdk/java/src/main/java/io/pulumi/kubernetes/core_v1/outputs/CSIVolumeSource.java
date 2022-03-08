@@ -47,7 +47,7 @@ public final class CSIVolumeSource {
         @Nullable LocalObjectReference nodePublishSecretRef,
         @Nullable Boolean readOnly,
         @Nullable Map<String,String> volumeAttributes) {
-        this.driver = Objects.requireNonNull(driver);
+        this.driver = driver;
         this.fsType = fsType;
         this.nodePublishSecretRef = nodePublishSecretRef;
         this.readOnly = readOnly;

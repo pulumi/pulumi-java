@@ -33,9 +33,9 @@ public final class GetRegionJobIamPolicyResult {
         List<BindingResponse> bindings,
         String etag,
         Integer version) {
-        this.bindings = Objects.requireNonNull(bindings);
-        this.etag = Objects.requireNonNull(etag);
-        this.version = Objects.requireNonNull(version);
+        this.bindings = bindings;
+        this.etag = etag;
+        this.version = version;
     }
 
     /**

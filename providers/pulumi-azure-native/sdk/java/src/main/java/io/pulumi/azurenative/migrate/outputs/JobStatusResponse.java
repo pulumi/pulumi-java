@@ -24,8 +24,8 @@ public final class JobStatusResponse {
     private JobStatusResponse(
         String jobName,
         String jobProgress) {
-        this.jobName = Objects.requireNonNull(jobName);
-        this.jobProgress = Objects.requireNonNull(jobProgress);
+        this.jobName = jobName;
+        this.jobProgress = jobProgress;
     }
 
     /**

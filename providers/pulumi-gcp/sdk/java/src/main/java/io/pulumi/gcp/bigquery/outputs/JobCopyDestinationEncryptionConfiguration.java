@@ -28,7 +28,7 @@ public final class JobCopyDestinationEncryptionConfiguration {
     private JobCopyDestinationEncryptionConfiguration(
         String kmsKeyName,
         @Nullable String kmsKeyVersion) {
-        this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
+        this.kmsKeyName = kmsKeyName;
         this.kmsKeyVersion = kmsKeyVersion;
     }
 

@@ -86,17 +86,17 @@ public final class GetSearchApplicationResult {
         Boolean returnResultThumbnailUrls,
         ScoringConfigResponse scoringConfig,
         List<SourceConfigResponse> sourceConfig) {
-        this.dataSourceRestrictions = Objects.requireNonNull(dataSourceRestrictions);
-        this.defaultFacetOptions = Objects.requireNonNull(defaultFacetOptions);
-        this.defaultSortOptions = Objects.requireNonNull(defaultSortOptions);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.enableAuditLog = Objects.requireNonNull(enableAuditLog);
-        this.name = Objects.requireNonNull(name);
-        this.operationIds = Objects.requireNonNull(operationIds);
-        this.queryInterpretationConfig = Objects.requireNonNull(queryInterpretationConfig);
-        this.returnResultThumbnailUrls = Objects.requireNonNull(returnResultThumbnailUrls);
-        this.scoringConfig = Objects.requireNonNull(scoringConfig);
-        this.sourceConfig = Objects.requireNonNull(sourceConfig);
+        this.dataSourceRestrictions = dataSourceRestrictions;
+        this.defaultFacetOptions = defaultFacetOptions;
+        this.defaultSortOptions = defaultSortOptions;
+        this.displayName = displayName;
+        this.enableAuditLog = enableAuditLog;
+        this.name = name;
+        this.operationIds = operationIds;
+        this.queryInterpretationConfig = queryInterpretationConfig;
+        this.returnResultThumbnailUrls = returnResultThumbnailUrls;
+        this.scoringConfig = scoringConfig;
+        this.sourceConfig = sourceConfig;
     }
 
     /**

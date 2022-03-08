@@ -25,8 +25,8 @@ public final class AuthenticatorGroupsConfigResponse {
     private AuthenticatorGroupsConfigResponse(
         Boolean enabled,
         String securityGroup) {
-        this.enabled = Objects.requireNonNull(enabled);
-        this.securityGroup = Objects.requireNonNull(securityGroup);
+        this.enabled = enabled;
+        this.securityGroup = securityGroup;
     }
 
     /**

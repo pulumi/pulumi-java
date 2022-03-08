@@ -29,7 +29,7 @@ public final class SecurityScanConfigSchedule {
     private SecurityScanConfigSchedule(
         Integer intervalDurationDays,
         @Nullable String scheduleTime) {
-        this.intervalDurationDays = Objects.requireNonNull(intervalDurationDays);
+        this.intervalDurationDays = intervalDurationDays;
         this.scheduleTime = scheduleTime;
     }
 

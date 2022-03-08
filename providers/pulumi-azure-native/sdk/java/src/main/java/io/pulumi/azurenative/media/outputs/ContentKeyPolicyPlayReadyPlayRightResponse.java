@@ -96,15 +96,15 @@ public final class ContentKeyPolicyPlayReadyPlayRightResponse {
         @Nullable Integer uncompressedDigitalAudioOpl,
         @Nullable Integer uncompressedDigitalVideoOpl) {
         this.agcAndColorStripeRestriction = agcAndColorStripeRestriction;
-        this.allowPassingVideoContentToUnknownOutput = Objects.requireNonNull(allowPassingVideoContentToUnknownOutput);
+        this.allowPassingVideoContentToUnknownOutput = allowPassingVideoContentToUnknownOutput;
         this.analogVideoOpl = analogVideoOpl;
         this.compressedDigitalAudioOpl = compressedDigitalAudioOpl;
         this.compressedDigitalVideoOpl = compressedDigitalVideoOpl;
-        this.digitalVideoOnlyContentRestriction = Objects.requireNonNull(digitalVideoOnlyContentRestriction);
+        this.digitalVideoOnlyContentRestriction = digitalVideoOnlyContentRestriction;
         this.explicitAnalogTelevisionOutputRestriction = explicitAnalogTelevisionOutputRestriction;
         this.firstPlayExpiration = firstPlayExpiration;
-        this.imageConstraintForAnalogComponentVideoRestriction = Objects.requireNonNull(imageConstraintForAnalogComponentVideoRestriction);
-        this.imageConstraintForAnalogComputerMonitorRestriction = Objects.requireNonNull(imageConstraintForAnalogComputerMonitorRestriction);
+        this.imageConstraintForAnalogComponentVideoRestriction = imageConstraintForAnalogComponentVideoRestriction;
+        this.imageConstraintForAnalogComputerMonitorRestriction = imageConstraintForAnalogComputerMonitorRestriction;
         this.scmsRestriction = scmsRestriction;
         this.uncompressedDigitalAudioOpl = uncompressedDigitalAudioOpl;
         this.uncompressedDigitalVideoOpl = uncompressedDigitalVideoOpl;

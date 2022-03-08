@@ -56,11 +56,11 @@ public final class CustomResourceDefinitionSpec {
         String scope,
         List<CustomResourceDefinitionVersion> versions) {
         this.conversion = conversion;
-        this.group = Objects.requireNonNull(group);
-        this.names = Objects.requireNonNull(names);
+        this.group = group;
+        this.names = names;
         this.preserveUnknownFields = preserveUnknownFields;
-        this.scope = Objects.requireNonNull(scope);
-        this.versions = Objects.requireNonNull(versions);
+        this.scope = scope;
+        this.versions = versions;
     }
 
     /**

@@ -54,9 +54,9 @@ public final class EndpointSlice {
         @Nullable String kind,
         @Nullable ObjectMeta metadata,
         @Nullable List<EndpointPort> ports) {
-        this.addressType = Objects.requireNonNull(addressType);
+        this.addressType = addressType;
         this.apiVersion = apiVersion;
-        this.endpoints = Objects.requireNonNull(endpoints);
+        this.endpoints = endpoints;
         this.kind = kind;
         this.metadata = metadata;
         this.ports = ports;

@@ -52,11 +52,11 @@ public final class ResourceSettingsResponse {
         String imageName,
         ReferenceVmResponse referenceVm,
         @Nullable String size) {
-        this.cores = Objects.requireNonNull(cores);
+        this.cores = cores;
         this.galleryImageResourceId = galleryImageResourceId;
-        this.id = Objects.requireNonNull(id);
-        this.imageName = Objects.requireNonNull(imageName);
-        this.referenceVm = Objects.requireNonNull(referenceVm);
+        this.id = id;
+        this.imageName = imageName;
+        this.referenceVm = referenceVm;
         this.size = size;
     }
 

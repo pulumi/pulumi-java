@@ -48,10 +48,10 @@ public final class ResponsePlanIncidentTemplate {
         @Nullable String summary,
         String title) {
         this.dedupeString = dedupeString;
-        this.impact = Objects.requireNonNull(impact);
+        this.impact = impact;
         this.notificationTargets = notificationTargets;
         this.summary = summary;
-        this.title = Objects.requireNonNull(title);
+        this.title = title;
     }
 
     /**

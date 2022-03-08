@@ -36,9 +36,9 @@ public final class CollectorPropertiesResponse {
         @Nullable String discoverySiteId,
         String updatedTimestamp) {
         this.agentProperties = agentProperties;
-        this.createdTimestamp = Objects.requireNonNull(createdTimestamp);
+        this.createdTimestamp = createdTimestamp;
         this.discoverySiteId = discoverySiteId;
-        this.updatedTimestamp = Objects.requireNonNull(updatedTimestamp);
+        this.updatedTimestamp = updatedTimestamp;
     }
 
     public Optional<CollectorAgentPropertiesResponse> getAgentProperties() {

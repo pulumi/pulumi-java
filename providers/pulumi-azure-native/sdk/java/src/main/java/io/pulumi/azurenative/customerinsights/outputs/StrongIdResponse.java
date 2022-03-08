@@ -41,8 +41,8 @@ public final class StrongIdResponse {
         String strongIdName) {
         this.description = description;
         this.displayName = displayName;
-        this.keyPropertyNames = Objects.requireNonNull(keyPropertyNames);
-        this.strongIdName = Objects.requireNonNull(strongIdName);
+        this.keyPropertyNames = keyPropertyNames;
+        this.strongIdName = strongIdName;
     }
 
     /**

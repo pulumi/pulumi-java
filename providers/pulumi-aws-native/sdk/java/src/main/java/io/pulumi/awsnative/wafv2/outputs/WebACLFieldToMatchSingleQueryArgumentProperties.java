@@ -13,7 +13,7 @@ public final class WebACLFieldToMatchSingleQueryArgumentProperties {
 
     @OutputCustomType.Constructor({"name"})
     private WebACLFieldToMatchSingleQueryArgumentProperties(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     public String getName() {

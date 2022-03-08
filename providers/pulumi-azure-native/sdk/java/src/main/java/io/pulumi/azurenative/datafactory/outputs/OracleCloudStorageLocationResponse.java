@@ -49,7 +49,7 @@ public final class OracleCloudStorageLocationResponse {
         this.bucketName = bucketName;
         this.fileName = fileName;
         this.folderPath = folderPath;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.version = version;
     }
 

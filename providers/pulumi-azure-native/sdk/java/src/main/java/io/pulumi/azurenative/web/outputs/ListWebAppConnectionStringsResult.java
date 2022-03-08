@@ -46,11 +46,11 @@ public final class ListWebAppConnectionStringsResult {
         String name,
         Map<String,ConnStringValueTypePairResponse> properties,
         String type) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.kind = kind;
-        this.name = Objects.requireNonNull(name);
-        this.properties = Objects.requireNonNull(properties);
-        this.type = Objects.requireNonNull(type);
+        this.name = name;
+        this.properties = properties;
+        this.type = type;
     }
 
     /**

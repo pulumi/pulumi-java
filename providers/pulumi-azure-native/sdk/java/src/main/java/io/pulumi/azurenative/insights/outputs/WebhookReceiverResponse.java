@@ -58,9 +58,9 @@ public final class WebhookReceiverResponse {
         @Nullable Boolean useAadAuth,
         @Nullable Boolean useCommonAlertSchema) {
         this.identifierUri = identifierUri;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.objectId = objectId;
-        this.serviceUri = Objects.requireNonNull(serviceUri);
+        this.serviceUri = serviceUri;
         this.tenantId = tenantId;
         this.useAadAuth = useAadAuth;
         this.useCommonAlertSchema = useCommonAlertSchema;

@@ -129,25 +129,25 @@ public final class GetGlobalAddressResult {
         String status,
         String subnetwork,
         List<String> users) {
-        this.address = Objects.requireNonNull(address);
-        this.addressType = Objects.requireNonNull(addressType);
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.description = Objects.requireNonNull(description);
-        this.ipVersion = Objects.requireNonNull(ipVersion);
-        this.kind = Objects.requireNonNull(kind);
-        this.labelFingerprint = Objects.requireNonNull(labelFingerprint);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.network = Objects.requireNonNull(network);
-        this.networkTier = Objects.requireNonNull(networkTier);
-        this.prefixLength = Objects.requireNonNull(prefixLength);
-        this.purpose = Objects.requireNonNull(purpose);
-        this.region = Objects.requireNonNull(region);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
-        this.status = Objects.requireNonNull(status);
-        this.subnetwork = Objects.requireNonNull(subnetwork);
-        this.users = Objects.requireNonNull(users);
+        this.address = address;
+        this.addressType = addressType;
+        this.creationTimestamp = creationTimestamp;
+        this.description = description;
+        this.ipVersion = ipVersion;
+        this.kind = kind;
+        this.labelFingerprint = labelFingerprint;
+        this.labels = labels;
+        this.name = name;
+        this.network = network;
+        this.networkTier = networkTier;
+        this.prefixLength = prefixLength;
+        this.purpose = purpose;
+        this.region = region;
+        this.selfLink = selfLink;
+        this.selfLinkWithId = selfLinkWithId;
+        this.status = status;
+        this.subnetwork = subnetwork;
+        this.users = users;
     }
 
     /**

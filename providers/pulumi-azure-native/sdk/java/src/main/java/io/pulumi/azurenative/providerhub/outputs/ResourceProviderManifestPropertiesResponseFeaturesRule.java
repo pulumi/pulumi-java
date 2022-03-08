@@ -13,7 +13,7 @@ public final class ResourceProviderManifestPropertiesResponseFeaturesRule {
 
     @OutputCustomType.Constructor({"requiredFeaturesPolicy"})
     private ResourceProviderManifestPropertiesResponseFeaturesRule(String requiredFeaturesPolicy) {
-        this.requiredFeaturesPolicy = Objects.requireNonNull(requiredFeaturesPolicy);
+        this.requiredFeaturesPolicy = requiredFeaturesPolicy;
     }
 
     public String getRequiredFeaturesPolicy() {

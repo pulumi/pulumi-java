@@ -32,9 +32,9 @@ public final class SelectorResponse {
         String id,
         List<TargetReferenceResponse> targets,
         String type) {
-        this.id = Objects.requireNonNull(id);
-        this.targets = Objects.requireNonNull(targets);
-        this.type = Objects.requireNonNull(type);
+        this.id = id;
+        this.targets = targets;
+        this.type = type;
     }
 
     /**

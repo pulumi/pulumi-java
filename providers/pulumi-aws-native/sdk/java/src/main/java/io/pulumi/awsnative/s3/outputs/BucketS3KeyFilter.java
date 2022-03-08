@@ -14,7 +14,7 @@ public final class BucketS3KeyFilter {
 
     @OutputCustomType.Constructor({"rules"})
     private BucketS3KeyFilter(List<BucketFilterRule> rules) {
-        this.rules = Objects.requireNonNull(rules);
+        this.rules = rules;
     }
 
     public List<BucketFilterRule> getRules() {

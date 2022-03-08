@@ -17,7 +17,7 @@ public final class ConfigFileResponse {
 
     @OutputCustomType.Constructor({"content"})
     private ConfigFileResponse(String content) {
-        this.content = Objects.requireNonNull(content);
+        this.content = content;
     }
 
     /**

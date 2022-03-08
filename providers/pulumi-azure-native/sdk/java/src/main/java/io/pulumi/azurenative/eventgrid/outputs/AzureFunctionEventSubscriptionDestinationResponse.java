@@ -40,7 +40,7 @@ public final class AzureFunctionEventSubscriptionDestinationResponse {
         @Nullable Integer maxEventsPerBatch,
         @Nullable Integer preferredBatchSizeInKilobytes,
         @Nullable String resourceId) {
-        this.endpointType = Objects.requireNonNull(endpointType);
+        this.endpointType = endpointType;
         this.maxEventsPerBatch = maxEventsPerBatch;
         this.preferredBatchSizeInKilobytes = preferredBatchSizeInKilobytes;
         this.resourceId = resourceId;

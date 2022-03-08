@@ -37,10 +37,10 @@ public final class CloudSqlConnectionProfileResponse {
         String privateIp,
         String publicIp,
         CloudSqlSettingsResponse settings) {
-        this.cloudSqlId = Objects.requireNonNull(cloudSqlId);
-        this.privateIp = Objects.requireNonNull(privateIp);
-        this.publicIp = Objects.requireNonNull(publicIp);
-        this.settings = Objects.requireNonNull(settings);
+        this.cloudSqlId = cloudSqlId;
+        this.privateIp = privateIp;
+        this.publicIp = publicIp;
+        this.settings = settings;
     }
 
     /**

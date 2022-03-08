@@ -212,38 +212,38 @@ public final class GetFunctionResult {
         String versionId,
         String vpcConnector,
         String vpcConnectorEgressSettings) {
-        this.availableMemoryMb = Objects.requireNonNull(availableMemoryMb);
-        this.buildEnvironmentVariables = Objects.requireNonNull(buildEnvironmentVariables);
-        this.buildId = Objects.requireNonNull(buildId);
-        this.buildName = Objects.requireNonNull(buildName);
-        this.buildWorkerPool = Objects.requireNonNull(buildWorkerPool);
-        this.description = Objects.requireNonNull(description);
-        this.dockerRepository = Objects.requireNonNull(dockerRepository);
-        this.entryPoint = Objects.requireNonNull(entryPoint);
-        this.environmentVariables = Objects.requireNonNull(environmentVariables);
-        this.eventTrigger = Objects.requireNonNull(eventTrigger);
-        this.httpsTrigger = Objects.requireNonNull(httpsTrigger);
-        this.ingressSettings = Objects.requireNonNull(ingressSettings);
-        this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
-        this.labels = Objects.requireNonNull(labels);
-        this.maxInstances = Objects.requireNonNull(maxInstances);
-        this.minInstances = Objects.requireNonNull(minInstances);
-        this.name = Objects.requireNonNull(name);
-        this.network = Objects.requireNonNull(network);
-        this.runtime = Objects.requireNonNull(runtime);
-        this.secretEnvironmentVariables = Objects.requireNonNull(secretEnvironmentVariables);
-        this.secretVolumes = Objects.requireNonNull(secretVolumes);
-        this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
-        this.sourceArchiveUrl = Objects.requireNonNull(sourceArchiveUrl);
-        this.sourceRepository = Objects.requireNonNull(sourceRepository);
-        this.sourceToken = Objects.requireNonNull(sourceToken);
-        this.sourceUploadUrl = Objects.requireNonNull(sourceUploadUrl);
-        this.status = Objects.requireNonNull(status);
-        this.timeout = Objects.requireNonNull(timeout);
-        this.updateTime = Objects.requireNonNull(updateTime);
-        this.versionId = Objects.requireNonNull(versionId);
-        this.vpcConnector = Objects.requireNonNull(vpcConnector);
-        this.vpcConnectorEgressSettings = Objects.requireNonNull(vpcConnectorEgressSettings);
+        this.availableMemoryMb = availableMemoryMb;
+        this.buildEnvironmentVariables = buildEnvironmentVariables;
+        this.buildId = buildId;
+        this.buildName = buildName;
+        this.buildWorkerPool = buildWorkerPool;
+        this.description = description;
+        this.dockerRepository = dockerRepository;
+        this.entryPoint = entryPoint;
+        this.environmentVariables = environmentVariables;
+        this.eventTrigger = eventTrigger;
+        this.httpsTrigger = httpsTrigger;
+        this.ingressSettings = ingressSettings;
+        this.kmsKeyName = kmsKeyName;
+        this.labels = labels;
+        this.maxInstances = maxInstances;
+        this.minInstances = minInstances;
+        this.name = name;
+        this.network = network;
+        this.runtime = runtime;
+        this.secretEnvironmentVariables = secretEnvironmentVariables;
+        this.secretVolumes = secretVolumes;
+        this.serviceAccountEmail = serviceAccountEmail;
+        this.sourceArchiveUrl = sourceArchiveUrl;
+        this.sourceRepository = sourceRepository;
+        this.sourceToken = sourceToken;
+        this.sourceUploadUrl = sourceUploadUrl;
+        this.status = status;
+        this.timeout = timeout;
+        this.updateTime = updateTime;
+        this.versionId = versionId;
+        this.vpcConnector = vpcConnector;
+        this.vpcConnectorEgressSettings = vpcConnectorEgressSettings;
     }
 
     /**

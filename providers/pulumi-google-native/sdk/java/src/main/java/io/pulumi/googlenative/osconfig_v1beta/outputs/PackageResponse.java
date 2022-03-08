@@ -30,9 +30,9 @@ public final class PackageResponse {
         String desiredState,
         String manager,
         String name) {
-        this.desiredState = Objects.requireNonNull(desiredState);
-        this.manager = Objects.requireNonNull(manager);
-        this.name = Objects.requireNonNull(name);
+        this.desiredState = desiredState;
+        this.manager = manager;
+        this.name = name;
     }
 
     /**

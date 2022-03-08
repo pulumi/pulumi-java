@@ -35,9 +35,9 @@ public final class ServiceTaskSpecContainerSpecMount {
         this.bindOptions = bindOptions;
         this.readOnly = readOnly;
         this.source = source;
-        this.target = Objects.requireNonNull(target);
+        this.target = target;
         this.tmpfsOptions = tmpfsOptions;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.volumeOptions = volumeOptions;
     }
 

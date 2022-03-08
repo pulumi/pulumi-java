@@ -74,16 +74,16 @@ public final class FirewallInfoResponse {
         List<String> targetServiceAccounts,
         List<String> targetTags,
         String uri) {
-        this.action = Objects.requireNonNull(action);
-        this.direction = Objects.requireNonNull(direction);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.firewallRuleType = Objects.requireNonNull(firewallRuleType);
-        this.networkUri = Objects.requireNonNull(networkUri);
-        this.policy = Objects.requireNonNull(policy);
-        this.priority = Objects.requireNonNull(priority);
-        this.targetServiceAccounts = Objects.requireNonNull(targetServiceAccounts);
-        this.targetTags = Objects.requireNonNull(targetTags);
-        this.uri = Objects.requireNonNull(uri);
+        this.action = action;
+        this.direction = direction;
+        this.displayName = displayName;
+        this.firewallRuleType = firewallRuleType;
+        this.networkUri = networkUri;
+        this.policy = policy;
+        this.priority = priority;
+        this.targetServiceAccounts = targetServiceAccounts;
+        this.targetTags = targetTags;
+        this.uri = uri;
     }
 
     /**

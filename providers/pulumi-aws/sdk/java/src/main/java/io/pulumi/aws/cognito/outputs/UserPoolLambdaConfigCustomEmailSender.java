@@ -24,8 +24,8 @@ public final class UserPoolLambdaConfigCustomEmailSender {
     private UserPoolLambdaConfigCustomEmailSender(
         String lambdaArn,
         String lambdaVersion) {
-        this.lambdaArn = Objects.requireNonNull(lambdaArn);
-        this.lambdaVersion = Objects.requireNonNull(lambdaVersion);
+        this.lambdaArn = lambdaArn;
+        this.lambdaVersion = lambdaVersion;
     }
 
     /**

@@ -13,7 +13,7 @@ public final class InstanceFromTemplateConfidentialInstanceConfig {
 
     @OutputCustomType.Constructor({"enableConfidentialCompute"})
     private InstanceFromTemplateConfidentialInstanceConfig(Boolean enableConfidentialCompute) {
-        this.enableConfidentialCompute = Objects.requireNonNull(enableConfidentialCompute);
+        this.enableConfidentialCompute = enableConfidentialCompute;
     }
 
     public Boolean getEnableConfidentialCompute() {

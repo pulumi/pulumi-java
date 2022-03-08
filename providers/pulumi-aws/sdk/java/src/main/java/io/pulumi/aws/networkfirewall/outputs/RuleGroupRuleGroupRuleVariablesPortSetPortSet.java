@@ -18,7 +18,7 @@ public final class RuleGroupRuleGroupRuleVariablesPortSetPortSet {
 
     @OutputCustomType.Constructor({"definitions"})
     private RuleGroupRuleGroupRuleVariablesPortSetPortSet(List<String> definitions) {
-        this.definitions = Objects.requireNonNull(definitions);
+        this.definitions = definitions;
     }
 
     /**

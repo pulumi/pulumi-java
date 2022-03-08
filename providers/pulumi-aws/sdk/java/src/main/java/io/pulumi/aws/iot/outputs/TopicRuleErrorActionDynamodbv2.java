@@ -28,7 +28,7 @@ public final class TopicRuleErrorActionDynamodbv2 {
         @Nullable TopicRuleErrorActionDynamodbv2PutItem putItem,
         String roleArn) {
         this.putItem = putItem;
-        this.roleArn = Objects.requireNonNull(roleArn);
+        this.roleArn = roleArn;
     }
 
     /**

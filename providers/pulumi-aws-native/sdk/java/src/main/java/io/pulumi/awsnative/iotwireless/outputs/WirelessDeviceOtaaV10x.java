@@ -16,8 +16,8 @@ public final class WirelessDeviceOtaaV10x {
     private WirelessDeviceOtaaV10x(
         String appEui,
         String appKey) {
-        this.appEui = Objects.requireNonNull(appEui);
-        this.appKey = Objects.requireNonNull(appKey);
+        this.appEui = appEui;
+        this.appKey = appKey;
     }
 
     public String getAppEui() {

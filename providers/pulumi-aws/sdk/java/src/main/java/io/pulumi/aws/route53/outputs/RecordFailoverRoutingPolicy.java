@@ -17,7 +17,7 @@ public final class RecordFailoverRoutingPolicy {
 
     @OutputCustomType.Constructor({"type"})
     private RecordFailoverRoutingPolicy(String type) {
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

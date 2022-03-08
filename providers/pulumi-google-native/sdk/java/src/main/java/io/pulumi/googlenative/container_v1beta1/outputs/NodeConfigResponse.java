@@ -190,33 +190,33 @@ public final class NodeConfigResponse {
         List<String> tags,
         List<NodeTaintResponse> taints,
         WorkloadMetadataConfigResponse workloadMetadataConfig) {
-        this.accelerators = Objects.requireNonNull(accelerators);
-        this.advancedMachineFeatures = Objects.requireNonNull(advancedMachineFeatures);
-        this.bootDiskKmsKey = Objects.requireNonNull(bootDiskKmsKey);
-        this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
-        this.diskType = Objects.requireNonNull(diskType);
-        this.ephemeralStorageConfig = Objects.requireNonNull(ephemeralStorageConfig);
-        this.gcfsConfig = Objects.requireNonNull(gcfsConfig);
-        this.gvnic = Objects.requireNonNull(gvnic);
-        this.imageType = Objects.requireNonNull(imageType);
-        this.kubeletConfig = Objects.requireNonNull(kubeletConfig);
-        this.labels = Objects.requireNonNull(labels);
-        this.linuxNodeConfig = Objects.requireNonNull(linuxNodeConfig);
-        this.localSsdCount = Objects.requireNonNull(localSsdCount);
-        this.machineType = Objects.requireNonNull(machineType);
-        this.metadata = Objects.requireNonNull(metadata);
-        this.minCpuPlatform = Objects.requireNonNull(minCpuPlatform);
-        this.nodeGroup = Objects.requireNonNull(nodeGroup);
-        this.oauthScopes = Objects.requireNonNull(oauthScopes);
-        this.preemptible = Objects.requireNonNull(preemptible);
-        this.reservationAffinity = Objects.requireNonNull(reservationAffinity);
-        this.sandboxConfig = Objects.requireNonNull(sandboxConfig);
-        this.serviceAccount = Objects.requireNonNull(serviceAccount);
-        this.shieldedInstanceConfig = Objects.requireNonNull(shieldedInstanceConfig);
-        this.spot = Objects.requireNonNull(spot);
-        this.tags = Objects.requireNonNull(tags);
-        this.taints = Objects.requireNonNull(taints);
-        this.workloadMetadataConfig = Objects.requireNonNull(workloadMetadataConfig);
+        this.accelerators = accelerators;
+        this.advancedMachineFeatures = advancedMachineFeatures;
+        this.bootDiskKmsKey = bootDiskKmsKey;
+        this.diskSizeGb = diskSizeGb;
+        this.diskType = diskType;
+        this.ephemeralStorageConfig = ephemeralStorageConfig;
+        this.gcfsConfig = gcfsConfig;
+        this.gvnic = gvnic;
+        this.imageType = imageType;
+        this.kubeletConfig = kubeletConfig;
+        this.labels = labels;
+        this.linuxNodeConfig = linuxNodeConfig;
+        this.localSsdCount = localSsdCount;
+        this.machineType = machineType;
+        this.metadata = metadata;
+        this.minCpuPlatform = minCpuPlatform;
+        this.nodeGroup = nodeGroup;
+        this.oauthScopes = oauthScopes;
+        this.preemptible = preemptible;
+        this.reservationAffinity = reservationAffinity;
+        this.sandboxConfig = sandboxConfig;
+        this.serviceAccount = serviceAccount;
+        this.shieldedInstanceConfig = shieldedInstanceConfig;
+        this.spot = spot;
+        this.tags = tags;
+        this.taints = taints;
+        this.workloadMetadataConfig = workloadMetadataConfig;
     }
 
     /**

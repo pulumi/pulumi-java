@@ -36,7 +36,7 @@ public final class LogSettingsResponse {
         LogLocationSettingsResponse logLocationSettings) {
         this.copyActivityLogSettings = copyActivityLogSettings;
         this.enableCopyActivityLog = enableCopyActivityLog;
-        this.logLocationSettings = Objects.requireNonNull(logLocationSettings);
+        this.logLocationSettings = logLocationSettings;
     }
 
     /**

@@ -42,9 +42,9 @@ public final class ConfigurationServicePropertiesResponse {
         String provisioningState,
         ConfigurationServiceResourceRequestsResponse resourceRequests,
         @Nullable ConfigurationServiceSettingsResponse settings) {
-        this.instances = Objects.requireNonNull(instances);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.resourceRequests = Objects.requireNonNull(resourceRequests);
+        this.instances = instances;
+        this.provisioningState = provisioningState;
+        this.resourceRequests = resourceRequests;
         this.settings = settings;
     }
 

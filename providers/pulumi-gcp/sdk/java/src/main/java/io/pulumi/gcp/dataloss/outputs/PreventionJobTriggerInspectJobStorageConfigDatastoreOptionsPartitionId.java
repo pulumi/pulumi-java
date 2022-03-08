@@ -27,7 +27,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPa
         @Nullable String namespaceId,
         String projectId) {
         this.namespaceId = namespaceId;
-        this.projectId = Objects.requireNonNull(projectId);
+        this.projectId = projectId;
     }
 
     /**

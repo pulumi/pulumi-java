@@ -18,8 +18,8 @@ public final class RuleGroupSqliMatchStatement {
     private RuleGroupSqliMatchStatement(
         RuleGroupFieldToMatch fieldToMatch,
         List<RuleGroupTextTransformation> textTransformations) {
-        this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
-        this.textTransformations = Objects.requireNonNull(textTransformations);
+        this.fieldToMatch = fieldToMatch;
+        this.textTransformations = textTransformations;
     }
 
     public RuleGroupFieldToMatch getFieldToMatch() {

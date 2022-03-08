@@ -43,7 +43,7 @@ public final class ConnectToSourceSqlServerTaskInputResponse {
         this.checkPermissionsGroup = checkPermissionsGroup;
         this.collectAgentJobs = collectAgentJobs;
         this.collectLogins = collectLogins;
-        this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
+        this.sourceConnectionInfo = sourceConnectionInfo;
     }
 
     /**

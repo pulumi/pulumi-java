@@ -30,14 +30,14 @@ public final class AnomalyDetectorRedshiftSourceConfig {
         String secretManagerArn,
         String tableName,
         AnomalyDetectorVpcConfiguration vpcConfiguration) {
-        this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier);
-        this.databaseHost = Objects.requireNonNull(databaseHost);
-        this.databaseName = Objects.requireNonNull(databaseName);
-        this.databasePort = Objects.requireNonNull(databasePort);
-        this.roleArn = Objects.requireNonNull(roleArn);
-        this.secretManagerArn = Objects.requireNonNull(secretManagerArn);
-        this.tableName = Objects.requireNonNull(tableName);
-        this.vpcConfiguration = Objects.requireNonNull(vpcConfiguration);
+        this.clusterIdentifier = clusterIdentifier;
+        this.databaseHost = databaseHost;
+        this.databaseName = databaseName;
+        this.databasePort = databasePort;
+        this.roleArn = roleArn;
+        this.secretManagerArn = secretManagerArn;
+        this.tableName = tableName;
+        this.vpcConfiguration = vpcConfiguration;
     }
 
     public String getClusterIdentifier() {

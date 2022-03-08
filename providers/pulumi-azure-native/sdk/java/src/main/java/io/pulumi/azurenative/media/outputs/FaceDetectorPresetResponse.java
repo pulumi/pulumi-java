@@ -49,7 +49,7 @@ public final class FaceDetectorPresetResponse {
         this.blurType = blurType;
         this.experimentalOptions = experimentalOptions;
         this.mode = mode;
-        this.odataType = Objects.requireNonNull(odataType);
+        this.odataType = odataType;
         this.resolution = resolution;
     }
 

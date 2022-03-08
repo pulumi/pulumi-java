@@ -33,9 +33,9 @@ public final class ApplicationEnvironment {
         String key,
         @Nullable Boolean secure,
         String value) {
-        this.key = Objects.requireNonNull(key);
+        this.key = key;
         this.secure = secure;
-        this.value = Objects.requireNonNull(value);
+        this.value = value;
     }
 
     /**

@@ -114,22 +114,22 @@ public final class GetTransferConfigResult {
         ScheduleOptionsResponse scheduleOptions,
         String state,
         String updateTime) {
-        this.dataRefreshWindowDays = Objects.requireNonNull(dataRefreshWindowDays);
-        this.dataSourceId = Objects.requireNonNull(dataSourceId);
-        this.datasetRegion = Objects.requireNonNull(datasetRegion);
-        this.destinationDatasetId = Objects.requireNonNull(destinationDatasetId);
-        this.disabled = Objects.requireNonNull(disabled);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.emailPreferences = Objects.requireNonNull(emailPreferences);
-        this.name = Objects.requireNonNull(name);
-        this.nextRunTime = Objects.requireNonNull(nextRunTime);
-        this.notificationPubsubTopic = Objects.requireNonNull(notificationPubsubTopic);
-        this.ownerInfo = Objects.requireNonNull(ownerInfo);
-        this.params = Objects.requireNonNull(params);
-        this.schedule = Objects.requireNonNull(schedule);
-        this.scheduleOptions = Objects.requireNonNull(scheduleOptions);
-        this.state = Objects.requireNonNull(state);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.dataRefreshWindowDays = dataRefreshWindowDays;
+        this.dataSourceId = dataSourceId;
+        this.datasetRegion = datasetRegion;
+        this.destinationDatasetId = destinationDatasetId;
+        this.disabled = disabled;
+        this.displayName = displayName;
+        this.emailPreferences = emailPreferences;
+        this.name = name;
+        this.nextRunTime = nextRunTime;
+        this.notificationPubsubTopic = notificationPubsubTopic;
+        this.ownerInfo = ownerInfo;
+        this.params = params;
+        this.schedule = schedule;
+        this.scheduleOptions = scheduleOptions;
+        this.state = state;
+        this.updateTime = updateTime;
     }
 
     /**

@@ -40,10 +40,10 @@ public final class AssignmentReportResourceResponse {
         Object properties,
         @Nullable List<AssignmentReportResourceComplianceReasonResponse> reasons,
         String resourceId) {
-        this.complianceStatus = Objects.requireNonNull(complianceStatus);
-        this.properties = Objects.requireNonNull(properties);
+        this.complianceStatus = complianceStatus;
+        this.properties = properties;
         this.reasons = reasons;
-        this.resourceId = Objects.requireNonNull(resourceId);
+        this.resourceId = resourceId;
     }
 
     /**

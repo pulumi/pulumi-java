@@ -91,14 +91,14 @@ public final class GetDeviceExtendedInformationResult {
         this.channelIntegrityKeyVersion = channelIntegrityKeyVersion;
         this.clientSecretStoreId = clientSecretStoreId;
         this.clientSecretStoreUrl = clientSecretStoreUrl;
-        this.deviceSecrets = Objects.requireNonNull(deviceSecrets);
+        this.deviceSecrets = deviceSecrets;
         this.encryptionKey = encryptionKey;
         this.encryptionKeyThumbprint = encryptionKeyThumbprint;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.keyVaultSyncStatus = keyVaultSyncStatus;
-        this.name = Objects.requireNonNull(name);
-        this.resourceKey = Objects.requireNonNull(resourceKey);
-        this.type = Objects.requireNonNull(type);
+        this.name = name;
+        this.resourceKey = resourceKey;
+        this.type = type;
     }
 
     /**

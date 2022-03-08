@@ -36,10 +36,10 @@ public final class AndroidAppInfoResponse {
         String packageName,
         String versionCode,
         String versionName) {
-        this.name = Objects.requireNonNull(name);
-        this.packageName = Objects.requireNonNull(packageName);
-        this.versionCode = Objects.requireNonNull(versionCode);
-        this.versionName = Objects.requireNonNull(versionName);
+        this.name = name;
+        this.packageName = packageName;
+        this.versionCode = versionCode;
+        this.versionName = versionName;
     }
 
     /**

@@ -47,10 +47,10 @@ public final class CommonExportPropertiesResponse {
         @Nullable String format,
         String nextRunTimeEstimate,
         @Nullable ExportExecutionListResultResponse runHistory) {
-        this.definition = Objects.requireNonNull(definition);
-        this.deliveryInfo = Objects.requireNonNull(deliveryInfo);
+        this.definition = definition;
+        this.deliveryInfo = deliveryInfo;
         this.format = format;
-        this.nextRunTimeEstimate = Objects.requireNonNull(nextRunTimeEstimate);
+        this.nextRunTimeEstimate = nextRunTimeEstimate;
         this.runHistory = runHistory;
     }
 

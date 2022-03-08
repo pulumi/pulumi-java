@@ -40,7 +40,7 @@ public final class LoadBalancerAccessLogs {
         @Nullable String bucketPrefix,
         @Nullable Boolean enabled,
         @Nullable Integer interval) {
-        this.bucket = Objects.requireNonNull(bucket);
+        this.bucket = bucket;
         this.bucketPrefix = bucketPrefix;
         this.enabled = enabled;
         this.interval = interval;

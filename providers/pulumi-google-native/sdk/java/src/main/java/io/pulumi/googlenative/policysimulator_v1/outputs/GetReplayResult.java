@@ -38,10 +38,10 @@ public final class GetReplayResult {
         String name,
         GoogleCloudPolicysimulatorV1ReplayResultsSummaryResponse resultsSummary,
         String state) {
-        this.config = Objects.requireNonNull(config);
-        this.name = Objects.requireNonNull(name);
-        this.resultsSummary = Objects.requireNonNull(resultsSummary);
-        this.state = Objects.requireNonNull(state);
+        this.config = config;
+        this.name = name;
+        this.resultsSummary = resultsSummary;
+        this.state = state;
     }
 
     /**

@@ -104,21 +104,21 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevel
         String state,
         String tableName,
         Double totalChangesApplied) {
-        this.cdcDeleteCounter = Objects.requireNonNull(cdcDeleteCounter);
-        this.cdcInsertCounter = Objects.requireNonNull(cdcInsertCounter);
-        this.cdcUpdateCounter = Objects.requireNonNull(cdcUpdateCounter);
-        this.dataErrorsCounter = Objects.requireNonNull(dataErrorsCounter);
-        this.databaseName = Objects.requireNonNull(databaseName);
-        this.fullLoadEndedOn = Objects.requireNonNull(fullLoadEndedOn);
-        this.fullLoadEstFinishTime = Objects.requireNonNull(fullLoadEstFinishTime);
-        this.fullLoadStartedOn = Objects.requireNonNull(fullLoadStartedOn);
-        this.fullLoadTotalRows = Objects.requireNonNull(fullLoadTotalRows);
-        this.id = Objects.requireNonNull(id);
-        this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
-        this.resultType = Objects.requireNonNull(resultType);
-        this.state = Objects.requireNonNull(state);
-        this.tableName = Objects.requireNonNull(tableName);
-        this.totalChangesApplied = Objects.requireNonNull(totalChangesApplied);
+        this.cdcDeleteCounter = cdcDeleteCounter;
+        this.cdcInsertCounter = cdcInsertCounter;
+        this.cdcUpdateCounter = cdcUpdateCounter;
+        this.dataErrorsCounter = dataErrorsCounter;
+        this.databaseName = databaseName;
+        this.fullLoadEndedOn = fullLoadEndedOn;
+        this.fullLoadEstFinishTime = fullLoadEstFinishTime;
+        this.fullLoadStartedOn = fullLoadStartedOn;
+        this.fullLoadTotalRows = fullLoadTotalRows;
+        this.id = id;
+        this.lastModifiedTime = lastModifiedTime;
+        this.resultType = resultType;
+        this.state = state;
+        this.tableName = tableName;
+        this.totalChangesApplied = totalChangesApplied;
     }
 
     /**

@@ -90,19 +90,19 @@ public final class GetProxyResult {
         String vpcId,
         List<String> vpcSecurityGroupIds,
         List<String> vpcSubnetIds) {
-        this.arn = Objects.requireNonNull(arn);
-        this.auths = Objects.requireNonNull(auths);
-        this.debugLogging = Objects.requireNonNull(debugLogging);
-        this.endpoint = Objects.requireNonNull(endpoint);
-        this.engineFamily = Objects.requireNonNull(engineFamily);
-        this.id = Objects.requireNonNull(id);
-        this.idleClientTimeout = Objects.requireNonNull(idleClientTimeout);
-        this.name = Objects.requireNonNull(name);
-        this.requireTls = Objects.requireNonNull(requireTls);
-        this.roleArn = Objects.requireNonNull(roleArn);
-        this.vpcId = Objects.requireNonNull(vpcId);
-        this.vpcSecurityGroupIds = Objects.requireNonNull(vpcSecurityGroupIds);
-        this.vpcSubnetIds = Objects.requireNonNull(vpcSubnetIds);
+        this.arn = arn;
+        this.auths = auths;
+        this.debugLogging = debugLogging;
+        this.endpoint = endpoint;
+        this.engineFamily = engineFamily;
+        this.id = id;
+        this.idleClientTimeout = idleClientTimeout;
+        this.name = name;
+        this.requireTls = requireTls;
+        this.roleArn = roleArn;
+        this.vpcId = vpcId;
+        this.vpcSecurityGroupIds = vpcSecurityGroupIds;
+        this.vpcSubnetIds = vpcSubnetIds;
     }
 
     /**

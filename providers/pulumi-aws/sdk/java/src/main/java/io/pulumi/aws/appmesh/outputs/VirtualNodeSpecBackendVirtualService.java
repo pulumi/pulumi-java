@@ -28,7 +28,7 @@ public final class VirtualNodeSpecBackendVirtualService {
         @Nullable VirtualNodeSpecBackendVirtualServiceClientPolicy clientPolicy,
         String virtualServiceName) {
         this.clientPolicy = clientPolicy;
-        this.virtualServiceName = Objects.requireNonNull(virtualServiceName);
+        this.virtualServiceName = virtualServiceName;
     }
 
     /**

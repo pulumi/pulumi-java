@@ -63,14 +63,14 @@ public final class GetObjectReplicationPolicyResult {
         @Nullable List<ObjectReplicationPolicyRuleResponse> rules,
         String sourceAccount,
         String type) {
-        this.destinationAccount = Objects.requireNonNull(destinationAccount);
-        this.enabledTime = Objects.requireNonNull(enabledTime);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.policyId = Objects.requireNonNull(policyId);
+        this.destinationAccount = destinationAccount;
+        this.enabledTime = enabledTime;
+        this.id = id;
+        this.name = name;
+        this.policyId = policyId;
         this.rules = rules;
-        this.sourceAccount = Objects.requireNonNull(sourceAccount);
-        this.type = Objects.requireNonNull(type);
+        this.sourceAccount = sourceAccount;
+        this.type = type;
     }
 
     /**

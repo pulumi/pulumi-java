@@ -21,8 +21,8 @@ public final class ScheduledQueryMultiMeasureAttributeMapping {
         ScheduledQueryMultiMeasureAttributeMappingMeasureValueType measureValueType,
         String sourceColumn,
         @Nullable String targetMultiMeasureAttributeName) {
-        this.measureValueType = Objects.requireNonNull(measureValueType);
-        this.sourceColumn = Objects.requireNonNull(sourceColumn);
+        this.measureValueType = measureValueType;
+        this.sourceColumn = sourceColumn;
         this.targetMultiMeasureAttributeName = targetMultiMeasureAttributeName;
     }
 

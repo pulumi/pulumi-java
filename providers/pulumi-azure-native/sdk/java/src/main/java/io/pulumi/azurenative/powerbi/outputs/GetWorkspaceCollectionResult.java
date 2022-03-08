@@ -54,7 +54,7 @@ public final class GetWorkspaceCollectionResult {
         this.id = id;
         this.location = location;
         this.name = name;
-        this.properties = Objects.requireNonNull(properties);
+        this.properties = properties;
         this.sku = sku;
         this.tags = tags;
         this.type = type;

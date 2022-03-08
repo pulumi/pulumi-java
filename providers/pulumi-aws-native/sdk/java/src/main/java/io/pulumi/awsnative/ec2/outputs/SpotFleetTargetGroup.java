@@ -13,7 +13,7 @@ public final class SpotFleetTargetGroup {
 
     @OutputCustomType.Constructor({"arn"})
     private SpotFleetTargetGroup(String arn) {
-        this.arn = Objects.requireNonNull(arn);
+        this.arn = arn;
     }
 
     public String getArn() {

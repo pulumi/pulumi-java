@@ -26,7 +26,7 @@ public final class NetworkInterfaceResponse {
     private NetworkInterfaceResponse(
         String id,
         @Nullable String privateIpAddress) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.privateIpAddress = privateIpAddress;
     }
 

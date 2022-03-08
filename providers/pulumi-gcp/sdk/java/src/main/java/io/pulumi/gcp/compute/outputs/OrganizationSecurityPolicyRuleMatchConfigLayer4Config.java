@@ -35,7 +35,7 @@ public final class OrganizationSecurityPolicyRuleMatchConfigLayer4Config {
     private OrganizationSecurityPolicyRuleMatchConfigLayer4Config(
         String ipProtocol,
         @Nullable List<String> ports) {
-        this.ipProtocol = Objects.requireNonNull(ipProtocol);
+        this.ipProtocol = ipProtocol;
         this.ports = ports;
     }
 

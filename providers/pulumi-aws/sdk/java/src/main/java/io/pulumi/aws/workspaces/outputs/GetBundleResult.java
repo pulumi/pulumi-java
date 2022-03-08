@@ -67,13 +67,13 @@ public final class GetBundleResult {
         List<GetBundleRootStorage> rootStorages,
         List<GetBundleUserStorage> userStorages) {
         this.bundleId = bundleId;
-        this.computeTypes = Objects.requireNonNull(computeTypes);
-        this.description = Objects.requireNonNull(description);
-        this.id = Objects.requireNonNull(id);
+        this.computeTypes = computeTypes;
+        this.description = description;
+        this.id = id;
         this.name = name;
         this.owner = owner;
-        this.rootStorages = Objects.requireNonNull(rootStorages);
-        this.userStorages = Objects.requireNonNull(userStorages);
+        this.rootStorages = rootStorages;
+        this.userStorages = userStorages;
     }
 
     /**

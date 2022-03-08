@@ -24,8 +24,8 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemPrice
     private GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse(
         Double max,
         Double min) {
-        this.max = Objects.requireNonNull(max);
-        this.min = Objects.requireNonNull(min);
+        this.max = max;
+        this.min = min;
     }
 
     /**

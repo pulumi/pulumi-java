@@ -82,17 +82,17 @@ public final class GetCryptoKeyResult {
         String purpose,
         String rotationPeriod,
         CryptoKeyVersionTemplateResponse versionTemplate) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.cryptoKeyBackend = Objects.requireNonNull(cryptoKeyBackend);
-        this.destroyScheduledDuration = Objects.requireNonNull(destroyScheduledDuration);
-        this.importOnly = Objects.requireNonNull(importOnly);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.nextRotationTime = Objects.requireNonNull(nextRotationTime);
-        this.primary = Objects.requireNonNull(primary);
-        this.purpose = Objects.requireNonNull(purpose);
-        this.rotationPeriod = Objects.requireNonNull(rotationPeriod);
-        this.versionTemplate = Objects.requireNonNull(versionTemplate);
+        this.createTime = createTime;
+        this.cryptoKeyBackend = cryptoKeyBackend;
+        this.destroyScheduledDuration = destroyScheduledDuration;
+        this.importOnly = importOnly;
+        this.labels = labels;
+        this.name = name;
+        this.nextRotationTime = nextRotationTime;
+        this.primary = primary;
+        this.purpose = purpose;
+        this.rotationPeriod = rotationPeriod;
+        this.versionTemplate = versionTemplate;
     }
 
     /**

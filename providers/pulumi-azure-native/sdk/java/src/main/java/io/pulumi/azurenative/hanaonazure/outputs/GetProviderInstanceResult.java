@@ -50,12 +50,12 @@ public final class GetProviderInstanceResult {
         String properties,
         String provisioningState,
         String type) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.metadata = metadata;
-        this.name = Objects.requireNonNull(name);
-        this.properties = Objects.requireNonNull(properties);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.type = Objects.requireNonNull(type);
+        this.name = name;
+        this.properties = properties;
+        this.provisioningState = provisioningState;
+        this.type = type;
     }
 
     /**

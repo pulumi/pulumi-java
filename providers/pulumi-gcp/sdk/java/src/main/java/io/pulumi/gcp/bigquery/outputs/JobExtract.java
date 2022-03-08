@@ -74,7 +74,7 @@ public final class JobExtract {
         @Nullable Boolean useAvroLogicalTypes) {
         this.compression = compression;
         this.destinationFormat = destinationFormat;
-        this.destinationUris = Objects.requireNonNull(destinationUris);
+        this.destinationUris = destinationUris;
         this.fieldDelimiter = fieldDelimiter;
         this.printHeader = printHeader;
         this.sourceModel = sourceModel;

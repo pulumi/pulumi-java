@@ -36,10 +36,10 @@ public final class InputMappingResponse {
         String location,
         String methodMatch,
         String value) {
-        this.fieldName = Objects.requireNonNull(fieldName);
-        this.location = Objects.requireNonNull(location);
-        this.methodMatch = Objects.requireNonNull(methodMatch);
-        this.value = Objects.requireNonNull(value);
+        this.fieldName = fieldName;
+        this.location = location;
+        this.methodMatch = methodMatch;
+        this.value = value;
     }
 
     /**

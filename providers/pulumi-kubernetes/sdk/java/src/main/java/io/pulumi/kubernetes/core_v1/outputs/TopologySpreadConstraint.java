@@ -48,9 +48,9 @@ public final class TopologySpreadConstraint {
         String topologyKey,
         String whenUnsatisfiable) {
         this.labelSelector = labelSelector;
-        this.maxSkew = Objects.requireNonNull(maxSkew);
-        this.topologyKey = Objects.requireNonNull(topologyKey);
-        this.whenUnsatisfiable = Objects.requireNonNull(whenUnsatisfiable);
+        this.maxSkew = maxSkew;
+        this.topologyKey = topologyKey;
+        this.whenUnsatisfiable = whenUnsatisfiable;
     }
 
     /**

@@ -81,14 +81,14 @@ public final class GetStreamingPolicyResult {
         String type) {
         this.commonEncryptionCbcs = commonEncryptionCbcs;
         this.commonEncryptionCenc = commonEncryptionCenc;
-        this.created = Objects.requireNonNull(created);
+        this.created = created;
         this.defaultContentKeyPolicyName = defaultContentKeyPolicyName;
         this.envelopeEncryption = envelopeEncryption;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.noEncryption = noEncryption;
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

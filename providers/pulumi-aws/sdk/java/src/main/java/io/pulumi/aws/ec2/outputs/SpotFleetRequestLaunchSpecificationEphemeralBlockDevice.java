@@ -16,8 +16,8 @@ public final class SpotFleetRequestLaunchSpecificationEphemeralBlockDevice {
     private SpotFleetRequestLaunchSpecificationEphemeralBlockDevice(
         String deviceName,
         String virtualName) {
-        this.deviceName = Objects.requireNonNull(deviceName);
-        this.virtualName = Objects.requireNonNull(virtualName);
+        this.deviceName = deviceName;
+        this.virtualName = virtualName;
     }
 
     public String getDeviceName() {

@@ -77,16 +77,16 @@ public final class GetLogProfileResult {
         @Nullable String storageAccountId,
         @Nullable Map<String,String> tags,
         String type) {
-        this.categories = Objects.requireNonNull(categories);
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.locations = Objects.requireNonNull(locations);
-        this.name = Objects.requireNonNull(name);
-        this.retentionPolicy = Objects.requireNonNull(retentionPolicy);
+        this.categories = categories;
+        this.id = id;
+        this.location = location;
+        this.locations = locations;
+        this.name = name;
+        this.retentionPolicy = retentionPolicy;
         this.serviceBusRuleId = serviceBusRuleId;
         this.storageAccountId = storageAccountId;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

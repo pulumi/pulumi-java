@@ -46,7 +46,7 @@ public final class DataSourceWebCrawlerConfiguration {
         this.proxyConfiguration = proxyConfiguration;
         this.urlExclusionPatterns = urlExclusionPatterns;
         this.urlInclusionPatterns = urlInclusionPatterns;
-        this.urls = Objects.requireNonNull(urls);
+        this.urls = urls;
     }
 
     public Optional<DataSourceWebCrawlerAuthenticationConfiguration> getAuthenticationConfiguration() {

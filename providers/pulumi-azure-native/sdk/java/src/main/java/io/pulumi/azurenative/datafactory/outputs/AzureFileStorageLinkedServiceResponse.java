@@ -126,7 +126,7 @@ public final class AzureFileStorageLinkedServiceResponse {
         this.sasToken = sasToken;
         this.sasUri = sasUri;
         this.snapshot = snapshot;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.userId = userId;
     }
 

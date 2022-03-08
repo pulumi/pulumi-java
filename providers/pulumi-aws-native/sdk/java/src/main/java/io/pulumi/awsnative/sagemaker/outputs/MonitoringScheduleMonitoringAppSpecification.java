@@ -47,7 +47,7 @@ public final class MonitoringScheduleMonitoringAppSpecification {
         @Nullable String recordPreprocessorSourceUri) {
         this.containerArguments = containerArguments;
         this.containerEntrypoint = containerEntrypoint;
-        this.imageUri = Objects.requireNonNull(imageUri);
+        this.imageUri = imageUri;
         this.postAnalyticsProcessorSourceUri = postAnalyticsProcessorSourceUri;
         this.recordPreprocessorSourceUri = recordPreprocessorSourceUri;
     }

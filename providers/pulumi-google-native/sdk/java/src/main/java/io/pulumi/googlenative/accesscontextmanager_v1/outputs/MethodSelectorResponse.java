@@ -24,8 +24,8 @@ public final class MethodSelectorResponse {
     private MethodSelectorResponse(
         String method,
         String permission) {
-        this.method = Objects.requireNonNull(method);
-        this.permission = Objects.requireNonNull(permission);
+        this.method = method;
+        this.permission = permission;
     }
 
     /**

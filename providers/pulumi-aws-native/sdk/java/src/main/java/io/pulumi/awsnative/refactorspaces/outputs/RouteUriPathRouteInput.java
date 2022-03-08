@@ -26,7 +26,7 @@ public final class RouteUriPathRouteInput {
         @Nullable Boolean includeChildPaths,
         @Nullable List<RouteMethod> methods,
         @Nullable String sourcePath) {
-        this.activationState = Objects.requireNonNull(activationState);
+        this.activationState = activationState;
         this.includeChildPaths = includeChildPaths;
         this.methods = methods;
         this.sourcePath = sourcePath;

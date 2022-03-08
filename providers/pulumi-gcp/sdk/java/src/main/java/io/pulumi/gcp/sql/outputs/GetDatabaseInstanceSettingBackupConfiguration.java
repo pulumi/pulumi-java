@@ -30,13 +30,13 @@ public final class GetDatabaseInstanceSettingBackupConfiguration {
         Boolean pointInTimeRecoveryEnabled,
         String startTime,
         Integer transactionLogRetentionDays) {
-        this.backupRetentionSettings = Objects.requireNonNull(backupRetentionSettings);
-        this.binaryLogEnabled = Objects.requireNonNull(binaryLogEnabled);
-        this.enabled = Objects.requireNonNull(enabled);
-        this.location = Objects.requireNonNull(location);
-        this.pointInTimeRecoveryEnabled = Objects.requireNonNull(pointInTimeRecoveryEnabled);
-        this.startTime = Objects.requireNonNull(startTime);
-        this.transactionLogRetentionDays = Objects.requireNonNull(transactionLogRetentionDays);
+        this.backupRetentionSettings = backupRetentionSettings;
+        this.binaryLogEnabled = binaryLogEnabled;
+        this.enabled = enabled;
+        this.location = location;
+        this.pointInTimeRecoveryEnabled = pointInTimeRecoveryEnabled;
+        this.startTime = startTime;
+        this.transactionLogRetentionDays = transactionLogRetentionDays;
     }
 
     public List<GetDatabaseInstanceSettingBackupConfigurationBackupRetentionSetting> getBackupRetentionSettings() {

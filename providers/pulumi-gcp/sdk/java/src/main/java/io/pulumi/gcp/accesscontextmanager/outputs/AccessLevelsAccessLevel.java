@@ -54,8 +54,8 @@ public final class AccessLevelsAccessLevel {
         this.basic = basic;
         this.custom = custom;
         this.description = description;
-        this.name = Objects.requireNonNull(name);
-        this.title = Objects.requireNonNull(title);
+        this.name = name;
+        this.title = title;
     }
 
     /**

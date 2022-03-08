@@ -16,8 +16,8 @@ public final class ConnectionClientParameters {
     private ConnectionClientParameters(
         String clientID,
         String clientSecret) {
-        this.clientID = Objects.requireNonNull(clientID);
-        this.clientSecret = Objects.requireNonNull(clientSecret);
+        this.clientID = clientID;
+        this.clientSecret = clientSecret;
     }
 
     public String getClientID() {

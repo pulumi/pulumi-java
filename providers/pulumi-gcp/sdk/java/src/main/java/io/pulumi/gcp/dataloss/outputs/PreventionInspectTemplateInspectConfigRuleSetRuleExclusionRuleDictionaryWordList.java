@@ -19,7 +19,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
 
     @OutputCustomType.Constructor({"words"})
     private PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryWordList(List<String> words) {
-        this.words = Objects.requireNonNull(words);
+        this.words = words;
     }
 
     /**

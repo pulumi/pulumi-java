@@ -57,12 +57,12 @@ public final class GetWebAppPublicCertificateSlotResult {
         String thumbprint,
         String type) {
         this.blob = blob;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.kind = kind;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.publicCertificateLocation = publicCertificateLocation;
-        this.thumbprint = Objects.requireNonNull(thumbprint);
-        this.type = Objects.requireNonNull(type);
+        this.thumbprint = thumbprint;
+        this.type = type;
     }
 
     /**

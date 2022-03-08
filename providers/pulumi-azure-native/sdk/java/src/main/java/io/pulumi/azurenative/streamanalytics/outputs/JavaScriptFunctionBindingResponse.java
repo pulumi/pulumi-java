@@ -28,7 +28,7 @@ public final class JavaScriptFunctionBindingResponse {
         @Nullable String script,
         String type) {
         this.script = script;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

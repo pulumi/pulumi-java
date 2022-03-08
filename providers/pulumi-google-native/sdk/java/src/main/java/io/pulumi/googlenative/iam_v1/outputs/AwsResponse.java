@@ -17,7 +17,7 @@ public final class AwsResponse {
 
     @OutputCustomType.Constructor({"accountId"})
     private AwsResponse(String accountId) {
-        this.accountId = Objects.requireNonNull(accountId);
+        this.accountId = accountId;
     }
 
     /**

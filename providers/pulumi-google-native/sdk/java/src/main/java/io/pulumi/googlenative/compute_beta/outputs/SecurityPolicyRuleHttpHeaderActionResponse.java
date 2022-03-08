@@ -18,7 +18,7 @@ public final class SecurityPolicyRuleHttpHeaderActionResponse {
 
     @OutputCustomType.Constructor({"requestHeadersToAdds"})
     private SecurityPolicyRuleHttpHeaderActionResponse(List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse> requestHeadersToAdds) {
-        this.requestHeadersToAdds = Objects.requireNonNull(requestHeadersToAdds);
+        this.requestHeadersToAdds = requestHeadersToAdds;
     }
 
     /**

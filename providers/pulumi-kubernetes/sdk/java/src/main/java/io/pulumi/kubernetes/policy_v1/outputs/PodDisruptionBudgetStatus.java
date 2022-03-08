@@ -69,11 +69,11 @@ public final class PodDisruptionBudgetStatus {
         Integer expectedPods,
         @Nullable Integer observedGeneration) {
         this.conditions = conditions;
-        this.currentHealthy = Objects.requireNonNull(currentHealthy);
-        this.desiredHealthy = Objects.requireNonNull(desiredHealthy);
+        this.currentHealthy = currentHealthy;
+        this.desiredHealthy = desiredHealthy;
         this.disruptedPods = disruptedPods;
-        this.disruptionsAllowed = Objects.requireNonNull(disruptionsAllowed);
-        this.expectedPods = Objects.requireNonNull(expectedPods);
+        this.disruptionsAllowed = disruptionsAllowed;
+        this.expectedPods = expectedPods;
         this.observedGeneration = observedGeneration;
     }
 

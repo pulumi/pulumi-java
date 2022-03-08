@@ -82,7 +82,7 @@ public final class GuestConfigurationNavigationResponse {
         this.configurationProtectedParameter = configurationProtectedParameter;
         this.configurationSetting = configurationSetting;
         this.contentHash = contentHash;
-        this.contentType = Objects.requireNonNull(contentType);
+        this.contentType = contentType;
         this.contentUri = contentUri;
         this.kind = kind;
         this.name = name;

@@ -94,13 +94,13 @@ public final class GetADCCatalogResult {
         this.admins = admins;
         this.enableAutomaticUnitAdjustment = enableAutomaticUnitAdjustment;
         this.etag = etag;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.sku = sku;
         this.successfullyProvisioned = successfullyProvisioned;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.units = units;
         this.users = users;
     }

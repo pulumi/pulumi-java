@@ -83,16 +83,16 @@ public final class GetSavedSearchResult {
         @Nullable List<TagResponse> tags,
         String type,
         @Nullable Double version) {
-        this.category = Objects.requireNonNull(category);
-        this.displayName = Objects.requireNonNull(displayName);
+        this.category = category;
+        this.displayName = displayName;
         this.etag = etag;
         this.functionAlias = functionAlias;
         this.functionParameters = functionParameters;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.query = Objects.requireNonNull(query);
+        this.id = id;
+        this.name = name;
+        this.query = query;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.version = version;
     }
 

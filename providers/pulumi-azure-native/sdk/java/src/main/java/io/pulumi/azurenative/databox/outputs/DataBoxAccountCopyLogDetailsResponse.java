@@ -37,10 +37,10 @@ public final class DataBoxAccountCopyLogDetailsResponse {
         String copyLogDetailsType,
         String copyLogLink,
         String copyVerboseLogLink) {
-        this.accountName = Objects.requireNonNull(accountName);
-        this.copyLogDetailsType = Objects.requireNonNull(copyLogDetailsType);
-        this.copyLogLink = Objects.requireNonNull(copyLogLink);
-        this.copyVerboseLogLink = Objects.requireNonNull(copyVerboseLogLink);
+        this.accountName = accountName;
+        this.copyLogDetailsType = copyLogDetailsType;
+        this.copyLogLink = copyLogLink;
+        this.copyVerboseLogLink = copyVerboseLogLink;
     }
 
     /**

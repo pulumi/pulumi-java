@@ -82,17 +82,17 @@ public final class EdifactAcknowledgementSettingsResponse {
         Boolean needTechnicalAcknowledgement,
         Boolean rolloverAcknowledgementControlNumber,
         Boolean sendSynchronousAcknowledgement) {
-        this.acknowledgementControlNumberLowerBound = Objects.requireNonNull(acknowledgementControlNumberLowerBound);
+        this.acknowledgementControlNumberLowerBound = acknowledgementControlNumberLowerBound;
         this.acknowledgementControlNumberPrefix = acknowledgementControlNumberPrefix;
         this.acknowledgementControlNumberSuffix = acknowledgementControlNumberSuffix;
-        this.acknowledgementControlNumberUpperBound = Objects.requireNonNull(acknowledgementControlNumberUpperBound);
-        this.batchFunctionalAcknowledgements = Objects.requireNonNull(batchFunctionalAcknowledgements);
-        this.batchTechnicalAcknowledgements = Objects.requireNonNull(batchTechnicalAcknowledgements);
-        this.needFunctionalAcknowledgement = Objects.requireNonNull(needFunctionalAcknowledgement);
-        this.needLoopForValidMessages = Objects.requireNonNull(needLoopForValidMessages);
-        this.needTechnicalAcknowledgement = Objects.requireNonNull(needTechnicalAcknowledgement);
-        this.rolloverAcknowledgementControlNumber = Objects.requireNonNull(rolloverAcknowledgementControlNumber);
-        this.sendSynchronousAcknowledgement = Objects.requireNonNull(sendSynchronousAcknowledgement);
+        this.acknowledgementControlNumberUpperBound = acknowledgementControlNumberUpperBound;
+        this.batchFunctionalAcknowledgements = batchFunctionalAcknowledgements;
+        this.batchTechnicalAcknowledgements = batchTechnicalAcknowledgements;
+        this.needFunctionalAcknowledgement = needFunctionalAcknowledgement;
+        this.needLoopForValidMessages = needLoopForValidMessages;
+        this.needTechnicalAcknowledgement = needTechnicalAcknowledgement;
+        this.rolloverAcknowledgementControlNumber = rolloverAcknowledgementControlNumber;
+        this.sendSynchronousAcknowledgement = sendSynchronousAcknowledgement;
     }
 
     /**

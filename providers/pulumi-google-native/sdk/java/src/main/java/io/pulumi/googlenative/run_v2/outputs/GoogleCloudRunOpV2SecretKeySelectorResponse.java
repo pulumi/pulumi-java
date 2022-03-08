@@ -24,8 +24,8 @@ public final class GoogleCloudRunOpV2SecretKeySelectorResponse {
     private GoogleCloudRunOpV2SecretKeySelectorResponse(
         String secret,
         String version) {
-        this.secret = Objects.requireNonNull(secret);
-        this.version = Objects.requireNonNull(version);
+        this.secret = secret;
+        this.version = version;
     }
 
     /**

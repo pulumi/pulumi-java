@@ -44,14 +44,14 @@ public final class GetOutpostResult {
         String name,
         String ownerId,
         String siteId) {
-        this.arn = Objects.requireNonNull(arn);
-        this.availabilityZone = Objects.requireNonNull(availabilityZone);
-        this.availabilityZoneId = Objects.requireNonNull(availabilityZoneId);
-        this.description = Objects.requireNonNull(description);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.ownerId = Objects.requireNonNull(ownerId);
-        this.siteId = Objects.requireNonNull(siteId);
+        this.arn = arn;
+        this.availabilityZone = availabilityZone;
+        this.availabilityZoneId = availabilityZoneId;
+        this.description = description;
+        this.id = id;
+        this.name = name;
+        this.ownerId = ownerId;
+        this.siteId = siteId;
     }
 
     public String getArn() {

@@ -17,7 +17,7 @@ public final class RowLevelSecurityStatisticsResponse {
 
     @OutputCustomType.Constructor({"rowLevelSecurityApplied"})
     private RowLevelSecurityStatisticsResponse(Boolean rowLevelSecurityApplied) {
-        this.rowLevelSecurityApplied = Objects.requireNonNull(rowLevelSecurityApplied);
+        this.rowLevelSecurityApplied = rowLevelSecurityApplied;
     }
 
     /**

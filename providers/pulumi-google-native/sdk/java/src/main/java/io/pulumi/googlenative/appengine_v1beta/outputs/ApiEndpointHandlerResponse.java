@@ -17,7 +17,7 @@ public final class ApiEndpointHandlerResponse {
 
     @OutputCustomType.Constructor({"scriptPath"})
     private ApiEndpointHandlerResponse(String scriptPath) {
-        this.scriptPath = Objects.requireNonNull(scriptPath);
+        this.scriptPath = scriptPath;
     }
 
     /**

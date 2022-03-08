@@ -25,8 +25,8 @@ public final class GoogleCloudRetailV2betaConditionQueryTermResponse {
     private GoogleCloudRetailV2betaConditionQueryTermResponse(
         Boolean fullMatch,
         String value) {
-        this.fullMatch = Objects.requireNonNull(fullMatch);
-        this.value = Objects.requireNonNull(value);
+        this.fullMatch = fullMatch;
+        this.value = value;
     }
 
     /**

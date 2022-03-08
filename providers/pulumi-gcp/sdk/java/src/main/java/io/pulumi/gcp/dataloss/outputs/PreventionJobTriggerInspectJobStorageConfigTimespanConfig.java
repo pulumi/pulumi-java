@@ -46,7 +46,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigTimespanConfig {
         this.enableAutoPopulationOfTimespanConfig = enableAutoPopulationOfTimespanConfig;
         this.endTime = endTime;
         this.startTime = startTime;
-        this.timestampField = Objects.requireNonNull(timestampField);
+        this.timestampField = timestampField;
     }
 
     /**

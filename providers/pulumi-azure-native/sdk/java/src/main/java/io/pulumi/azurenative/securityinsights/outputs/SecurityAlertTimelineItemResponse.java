@@ -75,16 +75,16 @@ public final class SecurityAlertTimelineItemResponse {
         String severity,
         String startTimeUtc,
         String timeGenerated) {
-        this.alertType = Objects.requireNonNull(alertType);
-        this.azureResourceId = Objects.requireNonNull(azureResourceId);
+        this.alertType = alertType;
+        this.azureResourceId = azureResourceId;
         this.description = description;
-        this.displayName = Objects.requireNonNull(displayName);
-        this.endTimeUtc = Objects.requireNonNull(endTimeUtc);
-        this.kind = Objects.requireNonNull(kind);
+        this.displayName = displayName;
+        this.endTimeUtc = endTimeUtc;
+        this.kind = kind;
         this.productName = productName;
-        this.severity = Objects.requireNonNull(severity);
-        this.startTimeUtc = Objects.requireNonNull(startTimeUtc);
-        this.timeGenerated = Objects.requireNonNull(timeGenerated);
+        this.severity = severity;
+        this.startTimeUtc = startTimeUtc;
+        this.timeGenerated = timeGenerated;
     }
 
     /**

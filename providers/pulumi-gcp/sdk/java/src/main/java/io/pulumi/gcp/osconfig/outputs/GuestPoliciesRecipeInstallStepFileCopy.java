@@ -45,8 +45,8 @@ public final class GuestPoliciesRecipeInstallStepFileCopy {
         String destination,
         @Nullable Boolean overwrite,
         @Nullable String permissions) {
-        this.artifactId = Objects.requireNonNull(artifactId);
-        this.destination = Objects.requireNonNull(destination);
+        this.artifactId = artifactId;
+        this.destination = destination;
         this.overwrite = overwrite;
         this.permissions = permissions;
     }

@@ -25,8 +25,8 @@ public final class ApplicationCustomComponent {
     private ApplicationCustomComponent(
         String componentName,
         List<String> resourceList) {
-        this.componentName = Objects.requireNonNull(componentName);
-        this.resourceList = Objects.requireNonNull(resourceList);
+        this.componentName = componentName;
+        this.resourceList = resourceList;
     }
 
     /**

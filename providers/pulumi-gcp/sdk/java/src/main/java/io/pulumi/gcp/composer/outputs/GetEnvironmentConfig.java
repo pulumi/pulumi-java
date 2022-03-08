@@ -54,21 +54,21 @@ public final class GetEnvironmentConfig {
         List<GetEnvironmentConfigWebServerConfig> webServerConfigs,
         List<GetEnvironmentConfigWebServerNetworkAccessControl> webServerNetworkAccessControls,
         List<GetEnvironmentConfigWorkloadsConfig> workloadsConfigs) {
-        this.airflowUri = Objects.requireNonNull(airflowUri);
-        this.dagGcsPrefix = Objects.requireNonNull(dagGcsPrefix);
-        this.databaseConfigs = Objects.requireNonNull(databaseConfigs);
-        this.encryptionConfigs = Objects.requireNonNull(encryptionConfigs);
-        this.environmentSize = Objects.requireNonNull(environmentSize);
-        this.gkeCluster = Objects.requireNonNull(gkeCluster);
-        this.maintenanceWindows = Objects.requireNonNull(maintenanceWindows);
-        this.masterAuthorizedNetworksConfigs = Objects.requireNonNull(masterAuthorizedNetworksConfigs);
-        this.nodeConfigs = Objects.requireNonNull(nodeConfigs);
-        this.nodeCount = Objects.requireNonNull(nodeCount);
-        this.privateEnvironmentConfigs = Objects.requireNonNull(privateEnvironmentConfigs);
-        this.softwareConfigs = Objects.requireNonNull(softwareConfigs);
-        this.webServerConfigs = Objects.requireNonNull(webServerConfigs);
-        this.webServerNetworkAccessControls = Objects.requireNonNull(webServerNetworkAccessControls);
-        this.workloadsConfigs = Objects.requireNonNull(workloadsConfigs);
+        this.airflowUri = airflowUri;
+        this.dagGcsPrefix = dagGcsPrefix;
+        this.databaseConfigs = databaseConfigs;
+        this.encryptionConfigs = encryptionConfigs;
+        this.environmentSize = environmentSize;
+        this.gkeCluster = gkeCluster;
+        this.maintenanceWindows = maintenanceWindows;
+        this.masterAuthorizedNetworksConfigs = masterAuthorizedNetworksConfigs;
+        this.nodeConfigs = nodeConfigs;
+        this.nodeCount = nodeCount;
+        this.privateEnvironmentConfigs = privateEnvironmentConfigs;
+        this.softwareConfigs = softwareConfigs;
+        this.webServerConfigs = webServerConfigs;
+        this.webServerNetworkAccessControls = webServerNetworkAccessControls;
+        this.workloadsConfigs = workloadsConfigs;
     }
 
     public String getAirflowUri() {

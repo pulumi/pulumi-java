@@ -16,8 +16,8 @@ public final class GetFileSystemLifecyclePolicy {
     private GetFileSystemLifecyclePolicy(
         String transitionToIa,
         String transitionToPrimaryStorageClass) {
-        this.transitionToIa = Objects.requireNonNull(transitionToIa);
-        this.transitionToPrimaryStorageClass = Objects.requireNonNull(transitionToPrimaryStorageClass);
+        this.transitionToIa = transitionToIa;
+        this.transitionToPrimaryStorageClass = transitionToPrimaryStorageClass;
     }
 
     public String getTransitionToIa() {

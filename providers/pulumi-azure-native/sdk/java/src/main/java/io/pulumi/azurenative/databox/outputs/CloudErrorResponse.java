@@ -46,9 +46,9 @@ public final class CloudErrorResponse {
         List<CloudErrorResponse> details,
         @Nullable String message,
         @Nullable String target) {
-        this.additionalInfo = Objects.requireNonNull(additionalInfo);
+        this.additionalInfo = additionalInfo;
         this.code = code;
-        this.details = Objects.requireNonNull(details);
+        this.details = details;
         this.message = message;
         this.target = target;
     }

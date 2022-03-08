@@ -71,12 +71,12 @@ public final class GetLinkerResult {
         String type) {
         this.authInfo = authInfo;
         this.clientType = clientType;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.systemData = Objects.requireNonNull(systemData);
+        this.id = id;
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.systemData = systemData;
         this.targetId = targetId;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

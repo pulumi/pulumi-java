@@ -23,7 +23,7 @@ public final class DetectorModelLambda {
     private DetectorModelLambda(
         String functionArn,
         @Nullable DetectorModelPayload payload) {
-        this.functionArn = Objects.requireNonNull(functionArn);
+        this.functionArn = functionArn;
         this.payload = payload;
     }
 

@@ -18,9 +18,9 @@ public final class GetSigningProfileRevocationRecord {
         String revocationEffectiveFrom,
         String revokedAt,
         String revokedBy) {
-        this.revocationEffectiveFrom = Objects.requireNonNull(revocationEffectiveFrom);
-        this.revokedAt = Objects.requireNonNull(revokedAt);
-        this.revokedBy = Objects.requireNonNull(revokedBy);
+        this.revocationEffectiveFrom = revocationEffectiveFrom;
+        this.revokedAt = revokedAt;
+        this.revokedBy = revokedBy;
     }
 
     public String getRevocationEffectiveFrom() {

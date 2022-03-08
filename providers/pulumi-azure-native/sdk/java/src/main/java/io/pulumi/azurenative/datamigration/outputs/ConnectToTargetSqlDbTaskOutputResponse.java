@@ -37,10 +37,10 @@ public final class ConnectToTargetSqlDbTaskOutputResponse {
         String id,
         String targetServerBrandVersion,
         String targetServerVersion) {
-        this.databases = Objects.requireNonNull(databases);
-        this.id = Objects.requireNonNull(id);
-        this.targetServerBrandVersion = Objects.requireNonNull(targetServerBrandVersion);
-        this.targetServerVersion = Objects.requireNonNull(targetServerVersion);
+        this.databases = databases;
+        this.id = id;
+        this.targetServerBrandVersion = targetServerBrandVersion;
+        this.targetServerVersion = targetServerVersion;
     }
 
     /**

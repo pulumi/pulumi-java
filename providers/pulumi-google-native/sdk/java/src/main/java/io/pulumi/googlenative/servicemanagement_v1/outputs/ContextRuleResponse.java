@@ -43,11 +43,11 @@ public final class ContextRuleResponse {
         List<String> provided,
         List<String> requested,
         String selector) {
-        this.allowedRequestExtensions = Objects.requireNonNull(allowedRequestExtensions);
-        this.allowedResponseExtensions = Objects.requireNonNull(allowedResponseExtensions);
-        this.provided = Objects.requireNonNull(provided);
-        this.requested = Objects.requireNonNull(requested);
-        this.selector = Objects.requireNonNull(selector);
+        this.allowedRequestExtensions = allowedRequestExtensions;
+        this.allowedResponseExtensions = allowedResponseExtensions;
+        this.provided = provided;
+        this.requested = requested;
+        this.selector = selector;
     }
 
     /**

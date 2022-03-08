@@ -26,8 +26,8 @@ public final class IntegrationResponseParameter {
     private IntegrationResponseParameter(
         Map<String,String> mappings,
         String statusCode) {
-        this.mappings = Objects.requireNonNull(mappings);
-        this.statusCode = Objects.requireNonNull(statusCode);
+        this.mappings = mappings;
+        this.statusCode = statusCode;
     }
 
     /**

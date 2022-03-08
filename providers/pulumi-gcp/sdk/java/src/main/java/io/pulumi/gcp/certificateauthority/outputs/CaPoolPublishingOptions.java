@@ -29,8 +29,8 @@ public final class CaPoolPublishingOptions {
     private CaPoolPublishingOptions(
         Boolean publishCaCert,
         Boolean publishCrl) {
-        this.publishCaCert = Objects.requireNonNull(publishCaCert);
-        this.publishCrl = Objects.requireNonNull(publishCrl);
+        this.publishCaCert = publishCaCert;
+        this.publishCrl = publishCrl;
     }
 
     /**

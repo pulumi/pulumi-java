@@ -138,17 +138,17 @@ public final class GetVirtualNetworkResult {
         this.dhcpOptions = dhcpOptions;
         this.enableDdosProtection = enableDdosProtection;
         this.enableVmProtection = enableVmProtection;
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.extendedLocation = extendedLocation;
         this.id = id;
         this.ipAllocations = ipAllocations;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.resourceGuid = Objects.requireNonNull(resourceGuid);
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.resourceGuid = resourceGuid;
         this.subnets = subnets;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.virtualNetworkPeerings = virtualNetworkPeerings;
     }
 

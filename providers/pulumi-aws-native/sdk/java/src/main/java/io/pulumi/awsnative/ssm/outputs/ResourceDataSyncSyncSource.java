@@ -27,8 +27,8 @@ public final class ResourceDataSyncSyncSource {
         String sourceType) {
         this.awsOrganizationsSource = awsOrganizationsSource;
         this.includeFutureRegions = includeFutureRegions;
-        this.sourceRegions = Objects.requireNonNull(sourceRegions);
-        this.sourceType = Objects.requireNonNull(sourceType);
+        this.sourceRegions = sourceRegions;
+        this.sourceType = sourceType;
     }
 
     public Optional<ResourceDataSyncAwsOrganizationsSource> getAwsOrganizationsSource() {

@@ -48,7 +48,7 @@ public final class DocumentationPartLocation {
         this.name = name;
         this.path = path;
         this.statusCode = statusCode;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

@@ -17,7 +17,7 @@ public final class GatewayRouteSpecGrpcRouteActionTargetVirtualService {
 
     @OutputCustomType.Constructor({"virtualServiceName"})
     private GatewayRouteSpecGrpcRouteActionTargetVirtualService(String virtualServiceName) {
-        this.virtualServiceName = Objects.requireNonNull(virtualServiceName);
+        this.virtualServiceName = virtualServiceName;
     }
 
     /**

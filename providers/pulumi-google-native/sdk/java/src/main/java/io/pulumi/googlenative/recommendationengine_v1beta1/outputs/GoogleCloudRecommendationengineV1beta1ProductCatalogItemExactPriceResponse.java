@@ -24,8 +24,8 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemExact
     private GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse(
         Double displayPrice,
         Double originalPrice) {
-        this.displayPrice = Objects.requireNonNull(displayPrice);
-        this.originalPrice = Objects.requireNonNull(originalPrice);
+        this.displayPrice = displayPrice;
+        this.originalPrice = originalPrice;
     }
 
     /**

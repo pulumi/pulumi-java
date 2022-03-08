@@ -38,10 +38,10 @@ public final class VideoSourceResponse {
         VideoSequenceAbsoluteTimeMarkersResponse timeSequences,
         String type,
         String videoName) {
-        this.name = Objects.requireNonNull(name);
-        this.timeSequences = Objects.requireNonNull(timeSequences);
-        this.type = Objects.requireNonNull(type);
-        this.videoName = Objects.requireNonNull(videoName);
+        this.name = name;
+        this.timeSequences = timeSequences;
+        this.type = type;
+        this.videoName = videoName;
     }
 
     /**

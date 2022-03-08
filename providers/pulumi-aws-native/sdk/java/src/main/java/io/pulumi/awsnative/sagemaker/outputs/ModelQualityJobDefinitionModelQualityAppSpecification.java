@@ -58,9 +58,9 @@ public final class ModelQualityJobDefinitionModelQualityAppSpecification {
         this.containerArguments = containerArguments;
         this.containerEntrypoint = containerEntrypoint;
         this.environment = environment;
-        this.imageUri = Objects.requireNonNull(imageUri);
+        this.imageUri = imageUri;
         this.postAnalyticsProcessorSourceUri = postAnalyticsProcessorSourceUri;
-        this.problemType = Objects.requireNonNull(problemType);
+        this.problemType = problemType;
         this.recordPreprocessorSourceUri = recordPreprocessorSourceUri;
     }
 

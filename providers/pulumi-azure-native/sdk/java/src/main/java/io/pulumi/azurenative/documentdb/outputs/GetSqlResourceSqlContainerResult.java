@@ -51,13 +51,13 @@ public final class GetSqlResourceSqlContainerResult {
         @Nullable SqlContainerGetPropertiesResponseResource resource,
         @Nullable Map<String,String> tags,
         String type) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.options = options;
         this.resource = resource;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

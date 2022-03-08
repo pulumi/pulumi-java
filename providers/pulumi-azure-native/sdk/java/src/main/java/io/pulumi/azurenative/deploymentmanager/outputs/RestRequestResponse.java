@@ -33,9 +33,9 @@ public final class RestRequestResponse {
         Either<ApiKeyAuthenticationResponse,RolloutIdentityAuthenticationResponse> authentication,
         String method,
         String uri) {
-        this.authentication = Objects.requireNonNull(authentication);
-        this.method = Objects.requireNonNull(method);
-        this.uri = Objects.requireNonNull(uri);
+        this.authentication = authentication;
+        this.method = method;
+        this.uri = uri;
     }
 
     /**

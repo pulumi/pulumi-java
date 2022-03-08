@@ -25,8 +25,8 @@ public final class HttpFaultAbortResponse {
     private HttpFaultAbortResponse(
         Integer httpStatus,
         Double percentage) {
-        this.httpStatus = Objects.requireNonNull(httpStatus);
-        this.percentage = Objects.requireNonNull(percentage);
+        this.httpStatus = httpStatus;
+        this.percentage = percentage;
     }
 
     /**

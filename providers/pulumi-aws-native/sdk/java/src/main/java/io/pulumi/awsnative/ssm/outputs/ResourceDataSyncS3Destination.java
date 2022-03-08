@@ -24,11 +24,11 @@ public final class ResourceDataSyncS3Destination {
         String bucketRegion,
         @Nullable String kMSKeyArn,
         String syncFormat) {
-        this.bucketName = Objects.requireNonNull(bucketName);
+        this.bucketName = bucketName;
         this.bucketPrefix = bucketPrefix;
-        this.bucketRegion = Objects.requireNonNull(bucketRegion);
+        this.bucketRegion = bucketRegion;
         this.kMSKeyArn = kMSKeyArn;
-        this.syncFormat = Objects.requireNonNull(syncFormat);
+        this.syncFormat = syncFormat;
     }
 
     public String getBucketName() {

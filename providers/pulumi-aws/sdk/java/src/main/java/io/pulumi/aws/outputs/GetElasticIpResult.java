@@ -108,22 +108,22 @@ public final class GetElasticIpResult {
         String publicIp,
         String publicIpv4Pool,
         Map<String,String> tags) {
-        this.associationId = Objects.requireNonNull(associationId);
-        this.carrierIp = Objects.requireNonNull(carrierIp);
-        this.customerOwnedIp = Objects.requireNonNull(customerOwnedIp);
-        this.customerOwnedIpv4Pool = Objects.requireNonNull(customerOwnedIpv4Pool);
-        this.domain = Objects.requireNonNull(domain);
+        this.associationId = associationId;
+        this.carrierIp = carrierIp;
+        this.customerOwnedIp = customerOwnedIp;
+        this.customerOwnedIpv4Pool = customerOwnedIpv4Pool;
+        this.domain = domain;
         this.filters = filters;
-        this.id = Objects.requireNonNull(id);
-        this.instanceId = Objects.requireNonNull(instanceId);
-        this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId);
-        this.networkInterfaceOwnerId = Objects.requireNonNull(networkInterfaceOwnerId);
-        this.privateDns = Objects.requireNonNull(privateDns);
-        this.privateIp = Objects.requireNonNull(privateIp);
-        this.publicDns = Objects.requireNonNull(publicDns);
-        this.publicIp = Objects.requireNonNull(publicIp);
-        this.publicIpv4Pool = Objects.requireNonNull(publicIpv4Pool);
-        this.tags = Objects.requireNonNull(tags);
+        this.id = id;
+        this.instanceId = instanceId;
+        this.networkInterfaceId = networkInterfaceId;
+        this.networkInterfaceOwnerId = networkInterfaceOwnerId;
+        this.privateDns = privateDns;
+        this.privateIp = privateIp;
+        this.publicDns = publicDns;
+        this.publicIp = publicIp;
+        this.publicIpv4Pool = publicIpv4Pool;
+        this.tags = tags;
     }
 
     /**

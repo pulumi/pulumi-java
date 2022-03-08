@@ -129,24 +129,24 @@ public final class GetCertificateAuthorityResult {
         String tier,
         String type,
         String updateTime) {
-        this.accessUrls = Objects.requireNonNull(accessUrls);
-        this.caCertificateDescriptions = Objects.requireNonNull(caCertificateDescriptions);
-        this.certificatePolicy = Objects.requireNonNull(certificatePolicy);
-        this.config = Objects.requireNonNull(config);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.deleteTime = Objects.requireNonNull(deleteTime);
-        this.gcsBucket = Objects.requireNonNull(gcsBucket);
-        this.issuingOptions = Objects.requireNonNull(issuingOptions);
-        this.keySpec = Objects.requireNonNull(keySpec);
-        this.labels = Objects.requireNonNull(labels);
-        this.lifetime = Objects.requireNonNull(lifetime);
-        this.name = Objects.requireNonNull(name);
-        this.pemCaCertificates = Objects.requireNonNull(pemCaCertificates);
-        this.state = Objects.requireNonNull(state);
-        this.subordinateConfig = Objects.requireNonNull(subordinateConfig);
-        this.tier = Objects.requireNonNull(tier);
-        this.type = Objects.requireNonNull(type);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.accessUrls = accessUrls;
+        this.caCertificateDescriptions = caCertificateDescriptions;
+        this.certificatePolicy = certificatePolicy;
+        this.config = config;
+        this.createTime = createTime;
+        this.deleteTime = deleteTime;
+        this.gcsBucket = gcsBucket;
+        this.issuingOptions = issuingOptions;
+        this.keySpec = keySpec;
+        this.labels = labels;
+        this.lifetime = lifetime;
+        this.name = name;
+        this.pemCaCertificates = pemCaCertificates;
+        this.state = state;
+        this.subordinateConfig = subordinateConfig;
+        this.tier = tier;
+        this.type = type;
+        this.updateTime = updateTime;
     }
 
     /**

@@ -25,8 +25,8 @@ public final class AccessSelectorResponse {
     private AccessSelectorResponse(
         List<String> permissions,
         List<String> roles) {
-        this.permissions = Objects.requireNonNull(permissions);
-        this.roles = Objects.requireNonNull(roles);
+        this.permissions = permissions;
+        this.roles = roles;
     }
 
     /**

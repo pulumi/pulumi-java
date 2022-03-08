@@ -24,7 +24,7 @@ public final class ServiceCodeConfiguration {
         @Nullable ServiceCodeConfigurationValues codeConfigurationValues,
         ServiceCodeConfigurationConfigurationSource configurationSource) {
         this.codeConfigurationValues = codeConfigurationValues;
-        this.configurationSource = Objects.requireNonNull(configurationSource);
+        this.configurationSource = configurationSource;
     }
 
     public Optional<ServiceCodeConfigurationValues> getCodeConfigurationValues() {

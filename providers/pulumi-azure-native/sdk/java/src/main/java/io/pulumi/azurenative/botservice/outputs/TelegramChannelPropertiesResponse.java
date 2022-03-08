@@ -34,7 +34,7 @@ public final class TelegramChannelPropertiesResponse {
         Boolean isEnabled,
         @Nullable Boolean isValidated) {
         this.accessToken = accessToken;
-        this.isEnabled = Objects.requireNonNull(isEnabled);
+        this.isEnabled = isEnabled;
         this.isValidated = isValidated;
     }
 

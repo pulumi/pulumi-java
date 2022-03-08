@@ -93,19 +93,19 @@ public final class BuildStepResponse {
         TimeSpanResponse timing,
         List<VolumeResponse> volumes,
         List<String> waitFor) {
-        this.args = Objects.requireNonNull(args);
-        this.dir = Objects.requireNonNull(dir);
-        this.entrypoint = Objects.requireNonNull(entrypoint);
-        this.env = Objects.requireNonNull(env);
-        this.name = Objects.requireNonNull(name);
-        this.pullTiming = Objects.requireNonNull(pullTiming);
-        this.script = Objects.requireNonNull(script);
-        this.secretEnv = Objects.requireNonNull(secretEnv);
-        this.status = Objects.requireNonNull(status);
-        this.timeout = Objects.requireNonNull(timeout);
-        this.timing = Objects.requireNonNull(timing);
-        this.volumes = Objects.requireNonNull(volumes);
-        this.waitFor = Objects.requireNonNull(waitFor);
+        this.args = args;
+        this.dir = dir;
+        this.entrypoint = entrypoint;
+        this.env = env;
+        this.name = name;
+        this.pullTiming = pullTiming;
+        this.script = script;
+        this.secretEnv = secretEnv;
+        this.status = status;
+        this.timeout = timeout;
+        this.timing = timing;
+        this.volumes = volumes;
+        this.waitFor = waitFor;
     }
 
     /**

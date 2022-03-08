@@ -56,11 +56,11 @@ public final class DefenderForContainersAwsOfferingResponse {
         @Nullable DefenderForContainersAwsOfferingResponseKubernetesService kubernetesService,
         String offeringType) {
         this.cloudWatchToKinesis = cloudWatchToKinesis;
-        this.description = Objects.requireNonNull(description);
+        this.description = description;
         this.kinesisToS3 = kinesisToS3;
         this.kubernetesScubaReader = kubernetesScubaReader;
         this.kubernetesService = kubernetesService;
-        this.offeringType = Objects.requireNonNull(offeringType);
+        this.offeringType = offeringType;
     }
 
     /**

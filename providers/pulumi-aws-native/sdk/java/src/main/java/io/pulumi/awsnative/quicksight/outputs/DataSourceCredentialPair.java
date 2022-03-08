@@ -42,8 +42,8 @@ public final class DataSourceCredentialPair {
         String password,
         String username) {
         this.alternateDataSourceParameters = alternateDataSourceParameters;
-        this.password = Objects.requireNonNull(password);
-        this.username = Objects.requireNonNull(username);
+        this.password = password;
+        this.username = username;
     }
 
     /**

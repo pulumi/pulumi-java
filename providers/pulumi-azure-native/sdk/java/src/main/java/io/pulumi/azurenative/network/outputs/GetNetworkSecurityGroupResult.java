@@ -98,19 +98,19 @@ public final class GetNetworkSecurityGroupResult {
         List<SubnetResponse> subnets,
         @Nullable Map<String,String> tags,
         String type) {
-        this.defaultSecurityRules = Objects.requireNonNull(defaultSecurityRules);
-        this.etag = Objects.requireNonNull(etag);
-        this.flowLogs = Objects.requireNonNull(flowLogs);
+        this.defaultSecurityRules = defaultSecurityRules;
+        this.etag = etag;
+        this.flowLogs = flowLogs;
         this.id = id;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
-        this.networkInterfaces = Objects.requireNonNull(networkInterfaces);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.resourceGuid = Objects.requireNonNull(resourceGuid);
+        this.name = name;
+        this.networkInterfaces = networkInterfaces;
+        this.provisioningState = provisioningState;
+        this.resourceGuid = resourceGuid;
         this.securityRules = securityRules;
-        this.subnets = Objects.requireNonNull(subnets);
+        this.subnets = subnets;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

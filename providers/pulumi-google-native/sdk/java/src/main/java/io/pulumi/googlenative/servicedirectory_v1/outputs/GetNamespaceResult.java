@@ -25,8 +25,8 @@ public final class GetNamespaceResult {
     private GetNamespaceResult(
         Map<String,String> labels,
         String name) {
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
+        this.labels = labels;
+        this.name = name;
     }
 
     /**

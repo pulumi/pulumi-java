@@ -24,9 +24,9 @@ public final class GetBrokerNodesResult {
         String clusterArn,
         String id,
         List<GetBrokerNodesNodeInfoList> nodeInfoLists) {
-        this.clusterArn = Objects.requireNonNull(clusterArn);
-        this.id = Objects.requireNonNull(id);
-        this.nodeInfoLists = Objects.requireNonNull(nodeInfoLists);
+        this.clusterArn = clusterArn;
+        this.id = id;
+        this.nodeInfoLists = nodeInfoLists;
     }
 
     public String getClusterArn() {

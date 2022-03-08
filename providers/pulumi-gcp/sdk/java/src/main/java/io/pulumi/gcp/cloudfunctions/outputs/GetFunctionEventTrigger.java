@@ -34,9 +34,9 @@ public final class GetFunctionEventTrigger {
         String eventType,
         List<GetFunctionEventTriggerFailurePolicy> failurePolicies,
         String resource) {
-        this.eventType = Objects.requireNonNull(eventType);
-        this.failurePolicies = Objects.requireNonNull(failurePolicies);
-        this.resource = Objects.requireNonNull(resource);
+        this.eventType = eventType;
+        this.failurePolicies = failurePolicies;
+        this.resource = resource;
     }
 
     /**

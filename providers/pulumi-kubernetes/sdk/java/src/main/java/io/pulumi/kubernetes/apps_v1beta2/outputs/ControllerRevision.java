@@ -51,7 +51,7 @@ public final class ControllerRevision {
         this.data = data;
         this.kind = kind;
         this.metadata = metadata;
-        this.revision = Objects.requireNonNull(revision);
+        this.revision = revision;
     }
 
     /**

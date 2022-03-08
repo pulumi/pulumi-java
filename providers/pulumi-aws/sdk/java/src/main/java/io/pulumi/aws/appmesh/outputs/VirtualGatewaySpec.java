@@ -35,7 +35,7 @@ public final class VirtualGatewaySpec {
         VirtualGatewaySpecListener listener,
         @Nullable VirtualGatewaySpecLogging logging) {
         this.backendDefaults = backendDefaults;
-        this.listener = Objects.requireNonNull(listener);
+        this.listener = listener;
         this.logging = logging;
     }
 

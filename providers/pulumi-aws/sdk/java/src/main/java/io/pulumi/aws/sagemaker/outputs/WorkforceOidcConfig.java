@@ -60,14 +60,14 @@ public final class WorkforceOidcConfig {
         String logoutEndpoint,
         String tokenEndpoint,
         String userInfoEndpoint) {
-        this.authorizationEndpoint = Objects.requireNonNull(authorizationEndpoint);
-        this.clientId = Objects.requireNonNull(clientId);
-        this.clientSecret = Objects.requireNonNull(clientSecret);
-        this.issuer = Objects.requireNonNull(issuer);
-        this.jwksUri = Objects.requireNonNull(jwksUri);
-        this.logoutEndpoint = Objects.requireNonNull(logoutEndpoint);
-        this.tokenEndpoint = Objects.requireNonNull(tokenEndpoint);
-        this.userInfoEndpoint = Objects.requireNonNull(userInfoEndpoint);
+        this.authorizationEndpoint = authorizationEndpoint;
+        this.clientId = clientId;
+        this.clientSecret = clientSecret;
+        this.issuer = issuer;
+        this.jwksUri = jwksUri;
+        this.logoutEndpoint = logoutEndpoint;
+        this.tokenEndpoint = tokenEndpoint;
+        this.userInfoEndpoint = userInfoEndpoint;
     }
 
     /**

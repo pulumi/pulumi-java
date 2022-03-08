@@ -88,16 +88,16 @@ public final class GetKeyResult {
         String type) {
         this.attributes = attributes;
         this.curveName = curveName;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.keyOps = keyOps;
         this.keySize = keySize;
-        this.keyUri = Objects.requireNonNull(keyUri);
-        this.keyUriWithVersion = Objects.requireNonNull(keyUriWithVersion);
+        this.keyUri = keyUri;
+        this.keyUriWithVersion = keyUriWithVersion;
         this.kty = kty;
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.tags = Objects.requireNonNull(tags);
-        this.type = Objects.requireNonNull(type);
+        this.location = location;
+        this.name = name;
+        this.tags = tags;
+        this.type = type;
     }
 
     /**

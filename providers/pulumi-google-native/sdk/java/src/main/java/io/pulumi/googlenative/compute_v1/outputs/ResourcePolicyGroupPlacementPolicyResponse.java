@@ -31,9 +31,9 @@ public final class ResourcePolicyGroupPlacementPolicyResponse {
         Integer availabilityDomainCount,
         String collocation,
         Integer vmCount) {
-        this.availabilityDomainCount = Objects.requireNonNull(availabilityDomainCount);
-        this.collocation = Objects.requireNonNull(collocation);
-        this.vmCount = Objects.requireNonNull(vmCount);
+        this.availabilityDomainCount = availabilityDomainCount;
+        this.collocation = collocation;
+        this.vmCount = vmCount;
     }
 
     /**

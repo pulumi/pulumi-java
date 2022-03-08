@@ -36,7 +36,7 @@ public final class PolicyRulesWithSubjects {
         List<Subject> subjects) {
         this.nonResourceRules = nonResourceRules;
         this.resourceRules = resourceRules;
-        this.subjects = Objects.requireNonNull(subjects);
+        this.subjects = subjects;
     }
 
     /**

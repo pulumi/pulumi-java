@@ -17,7 +17,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRb
 
     @OutputCustomType.Constructor({"phoneNumber"})
     private GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialResponse(String phoneNumber) {
-        this.phoneNumber = Objects.requireNonNull(phoneNumber);
+        this.phoneNumber = phoneNumber;
     }
 
     /**

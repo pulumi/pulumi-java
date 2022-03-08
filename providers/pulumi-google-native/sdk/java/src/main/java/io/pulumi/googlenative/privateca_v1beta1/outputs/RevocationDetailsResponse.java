@@ -24,8 +24,8 @@ public final class RevocationDetailsResponse {
     private RevocationDetailsResponse(
         String revocationState,
         String revocationTime) {
-        this.revocationState = Objects.requireNonNull(revocationState);
-        this.revocationTime = Objects.requireNonNull(revocationTime);
+        this.revocationState = revocationState;
+        this.revocationTime = revocationTime;
     }
 
     /**

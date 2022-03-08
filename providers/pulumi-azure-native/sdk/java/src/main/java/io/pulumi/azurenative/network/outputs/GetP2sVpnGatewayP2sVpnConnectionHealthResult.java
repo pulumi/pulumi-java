@@ -106,17 +106,17 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthResult {
         @Nullable Integer vpnGatewayScaleUnit,
         @Nullable SubResourceResponse vpnServerConfiguration) {
         this.customDnsServers = customDnsServers;
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.id = id;
         this.isRoutingPreferenceInternet = isRoutingPreferenceInternet;
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
+        this.location = location;
+        this.name = name;
         this.p2SConnectionConfigurations = p2SConnectionConfigurations;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.virtualHub = virtualHub;
-        this.vpnClientConnectionHealth = Objects.requireNonNull(vpnClientConnectionHealth);
+        this.vpnClientConnectionHealth = vpnClientConnectionHealth;
         this.vpnGatewayScaleUnit = vpnGatewayScaleUnit;
         this.vpnServerConfiguration = vpnServerConfiguration;
     }

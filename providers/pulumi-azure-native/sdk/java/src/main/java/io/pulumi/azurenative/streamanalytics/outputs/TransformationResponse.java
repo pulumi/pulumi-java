@@ -51,12 +51,12 @@ public final class TransformationResponse {
         @Nullable String query,
         @Nullable Integer streamingUnits,
         String type) {
-        this.etag = Objects.requireNonNull(etag);
-        this.id = Objects.requireNonNull(id);
+        this.etag = etag;
+        this.id = id;
         this.name = name;
         this.query = query;
         this.streamingUnits = streamingUnits;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

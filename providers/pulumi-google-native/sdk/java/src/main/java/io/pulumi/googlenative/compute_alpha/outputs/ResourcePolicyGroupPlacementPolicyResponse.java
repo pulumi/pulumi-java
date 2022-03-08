@@ -49,12 +49,12 @@ public final class ResourcePolicyGroupPlacementPolicyResponse {
         String scope,
         String style,
         Integer vmCount) {
-        this.availabilityDomainCount = Objects.requireNonNull(availabilityDomainCount);
-        this.collocation = Objects.requireNonNull(collocation);
-        this.locality = Objects.requireNonNull(locality);
-        this.scope = Objects.requireNonNull(scope);
-        this.style = Objects.requireNonNull(style);
-        this.vmCount = Objects.requireNonNull(vmCount);
+        this.availabilityDomainCount = availabilityDomainCount;
+        this.collocation = collocation;
+        this.locality = locality;
+        this.scope = scope;
+        this.style = style;
+        this.vmCount = vmCount;
     }
 
     /**

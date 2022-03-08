@@ -118,23 +118,23 @@ public final class ContainerResponse {
         String terminationMessagePolicy,
         List<VolumeMountResponse> volumeMounts,
         String workingDir) {
-        this.args = Objects.requireNonNull(args);
-        this.command = Objects.requireNonNull(command);
-        this.env = Objects.requireNonNull(env);
-        this.envFrom = Objects.requireNonNull(envFrom);
-        this.image = Objects.requireNonNull(image);
-        this.imagePullPolicy = Objects.requireNonNull(imagePullPolicy);
-        this.livenessProbe = Objects.requireNonNull(livenessProbe);
-        this.name = Objects.requireNonNull(name);
-        this.ports = Objects.requireNonNull(ports);
-        this.readinessProbe = Objects.requireNonNull(readinessProbe);
-        this.resources = Objects.requireNonNull(resources);
-        this.securityContext = Objects.requireNonNull(securityContext);
-        this.startupProbe = Objects.requireNonNull(startupProbe);
-        this.terminationMessagePath = Objects.requireNonNull(terminationMessagePath);
-        this.terminationMessagePolicy = Objects.requireNonNull(terminationMessagePolicy);
-        this.volumeMounts = Objects.requireNonNull(volumeMounts);
-        this.workingDir = Objects.requireNonNull(workingDir);
+        this.args = args;
+        this.command = command;
+        this.env = env;
+        this.envFrom = envFrom;
+        this.image = image;
+        this.imagePullPolicy = imagePullPolicy;
+        this.livenessProbe = livenessProbe;
+        this.name = name;
+        this.ports = ports;
+        this.readinessProbe = readinessProbe;
+        this.resources = resources;
+        this.securityContext = securityContext;
+        this.startupProbe = startupProbe;
+        this.terminationMessagePath = terminationMessagePath;
+        this.terminationMessagePolicy = terminationMessagePolicy;
+        this.volumeMounts = volumeMounts;
+        this.workingDir = workingDir;
     }
 
     /**

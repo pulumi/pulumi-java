@@ -56,11 +56,11 @@ public final class JitNetworkAccessRequestPortResponse {
         String statusReason) {
         this.allowedSourceAddressPrefix = allowedSourceAddressPrefix;
         this.allowedSourceAddressPrefixes = allowedSourceAddressPrefixes;
-        this.endTimeUtc = Objects.requireNonNull(endTimeUtc);
+        this.endTimeUtc = endTimeUtc;
         this.mappedPort = mappedPort;
-        this.number = Objects.requireNonNull(number);
-        this.status = Objects.requireNonNull(status);
-        this.statusReason = Objects.requireNonNull(statusReason);
+        this.number = number;
+        this.status = status;
+        this.statusReason = statusReason;
     }
 
     /**

@@ -35,9 +35,9 @@ public final class PreventionJobTriggerInspectJob {
         List<PreventionJobTriggerInspectJobAction> actions,
         String inspectTemplateName,
         PreventionJobTriggerInspectJobStorageConfig storageConfig) {
-        this.actions = Objects.requireNonNull(actions);
-        this.inspectTemplateName = Objects.requireNonNull(inspectTemplateName);
-        this.storageConfig = Objects.requireNonNull(storageConfig);
+        this.actions = actions;
+        this.inspectTemplateName = inspectTemplateName;
+        this.storageConfig = storageConfig;
     }
 
     /**

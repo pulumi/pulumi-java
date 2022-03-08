@@ -50,12 +50,12 @@ public final class GetIndexResult {
         String project,
         List<GoogleDatastoreAdminV1IndexedPropertyResponse> properties,
         String state) {
-        this.ancestor = Objects.requireNonNull(ancestor);
-        this.indexId = Objects.requireNonNull(indexId);
-        this.kind = Objects.requireNonNull(kind);
-        this.project = Objects.requireNonNull(project);
-        this.properties = Objects.requireNonNull(properties);
-        this.state = Objects.requireNonNull(state);
+        this.ancestor = ancestor;
+        this.indexId = indexId;
+        this.kind = kind;
+        this.project = project;
+        this.properties = properties;
+        this.state = state;
     }
 
     /**

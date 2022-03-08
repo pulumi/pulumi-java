@@ -78,12 +78,12 @@ public final class SapEccResourceDatasetResponse {
         this.annotations = annotations;
         this.description = description;
         this.folder = folder;
-        this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
+        this.linkedServiceName = linkedServiceName;
         this.parameters = parameters;
-        this.path = Objects.requireNonNull(path);
+        this.path = path;
         this.schema = schema;
         this.structure = structure;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

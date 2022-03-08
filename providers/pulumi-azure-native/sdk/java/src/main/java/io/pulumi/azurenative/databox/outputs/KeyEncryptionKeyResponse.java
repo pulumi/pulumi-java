@@ -40,7 +40,7 @@ public final class KeyEncryptionKeyResponse {
         @Nullable String kekUrl,
         @Nullable String kekVaultResourceID) {
         this.identityProperties = identityProperties;
-        this.kekType = Objects.requireNonNull(kekType);
+        this.kekType = kekType;
         this.kekUrl = kekUrl;
         this.kekVaultResourceID = kekVaultResourceID;
     }

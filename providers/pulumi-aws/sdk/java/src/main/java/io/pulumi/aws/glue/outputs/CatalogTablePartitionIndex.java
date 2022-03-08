@@ -29,9 +29,9 @@ public final class CatalogTablePartitionIndex {
         String indexName,
         @Nullable String indexStatus,
         List<String> keys) {
-        this.indexName = Objects.requireNonNull(indexName);
+        this.indexName = indexName;
         this.indexStatus = indexStatus;
-        this.keys = Objects.requireNonNull(keys);
+        this.keys = keys;
     }
 
     /**

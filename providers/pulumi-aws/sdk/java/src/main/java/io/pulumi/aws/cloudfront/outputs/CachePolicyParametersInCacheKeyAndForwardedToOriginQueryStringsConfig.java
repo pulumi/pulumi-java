@@ -27,7 +27,7 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStrin
     private CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfig(
         String queryStringBehavior,
         @Nullable CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryStrings queryStrings) {
-        this.queryStringBehavior = Objects.requireNonNull(queryStringBehavior);
+        this.queryStringBehavior = queryStringBehavior;
         this.queryStrings = queryStrings;
     }
 

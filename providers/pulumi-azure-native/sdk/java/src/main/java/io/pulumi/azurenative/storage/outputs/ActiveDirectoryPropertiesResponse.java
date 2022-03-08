@@ -48,12 +48,12 @@ public final class ActiveDirectoryPropertiesResponse {
         String domainSid,
         String forestName,
         String netBiosDomainName) {
-        this.azureStorageSid = Objects.requireNonNull(azureStorageSid);
-        this.domainGuid = Objects.requireNonNull(domainGuid);
-        this.domainName = Objects.requireNonNull(domainName);
-        this.domainSid = Objects.requireNonNull(domainSid);
-        this.forestName = Objects.requireNonNull(forestName);
-        this.netBiosDomainName = Objects.requireNonNull(netBiosDomainName);
+        this.azureStorageSid = azureStorageSid;
+        this.domainGuid = domainGuid;
+        this.domainName = domainName;
+        this.domainSid = domainSid;
+        this.forestName = forestName;
+        this.netBiosDomainName = netBiosDomainName;
     }
 
     /**

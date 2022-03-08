@@ -142,7 +142,7 @@ public final class CosmosDbLinkedServiceResponse {
         this.servicePrincipalCredentialType = servicePrincipalCredentialType;
         this.servicePrincipalId = servicePrincipalId;
         this.tenant = tenant;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

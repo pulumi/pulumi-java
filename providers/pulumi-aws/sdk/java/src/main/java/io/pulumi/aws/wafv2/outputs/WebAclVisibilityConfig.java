@@ -31,9 +31,9 @@ public final class WebAclVisibilityConfig {
         Boolean cloudwatchMetricsEnabled,
         String metricName,
         Boolean sampledRequestsEnabled) {
-        this.cloudwatchMetricsEnabled = Objects.requireNonNull(cloudwatchMetricsEnabled);
-        this.metricName = Objects.requireNonNull(metricName);
-        this.sampledRequestsEnabled = Objects.requireNonNull(sampledRequestsEnabled);
+        this.cloudwatchMetricsEnabled = cloudwatchMetricsEnabled;
+        this.metricName = metricName;
+        this.sampledRequestsEnabled = sampledRequestsEnabled;
     }
 
     /**

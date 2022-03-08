@@ -32,7 +32,7 @@ public final class IntentFollowUpPromptRejectionStatement {
     private IntentFollowUpPromptRejectionStatement(
         List<IntentFollowUpPromptRejectionStatementMessage> messages,
         @Nullable String responseCard) {
-        this.messages = Objects.requireNonNull(messages);
+        this.messages = messages;
         this.responseCard = responseCard;
     }
 

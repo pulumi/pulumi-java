@@ -70,15 +70,15 @@ public final class JobConfigurationExtractResponse {
         ModelReferenceResponse sourceModel,
         TableReferenceResponse sourceTable,
         Boolean useAvroLogicalTypes) {
-        this.compression = Objects.requireNonNull(compression);
-        this.destinationFormat = Objects.requireNonNull(destinationFormat);
-        this.destinationUri = Objects.requireNonNull(destinationUri);
-        this.destinationUris = Objects.requireNonNull(destinationUris);
-        this.fieldDelimiter = Objects.requireNonNull(fieldDelimiter);
-        this.printHeader = Objects.requireNonNull(printHeader);
-        this.sourceModel = Objects.requireNonNull(sourceModel);
-        this.sourceTable = Objects.requireNonNull(sourceTable);
-        this.useAvroLogicalTypes = Objects.requireNonNull(useAvroLogicalTypes);
+        this.compression = compression;
+        this.destinationFormat = destinationFormat;
+        this.destinationUri = destinationUri;
+        this.destinationUris = destinationUris;
+        this.fieldDelimiter = fieldDelimiter;
+        this.printHeader = printHeader;
+        this.sourceModel = sourceModel;
+        this.sourceTable = sourceTable;
+        this.useAvroLogicalTypes = useAvroLogicalTypes;
     }
 
     /**

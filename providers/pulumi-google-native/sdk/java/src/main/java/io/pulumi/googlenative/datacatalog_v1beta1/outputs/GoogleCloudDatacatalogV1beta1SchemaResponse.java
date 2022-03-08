@@ -18,7 +18,7 @@ public final class GoogleCloudDatacatalogV1beta1SchemaResponse {
 
     @OutputCustomType.Constructor({"columns"})
     private GoogleCloudDatacatalogV1beta1SchemaResponse(List<GoogleCloudDatacatalogV1beta1ColumnSchemaResponse> columns) {
-        this.columns = Objects.requireNonNull(columns);
+        this.columns = columns;
     }
 
     /**

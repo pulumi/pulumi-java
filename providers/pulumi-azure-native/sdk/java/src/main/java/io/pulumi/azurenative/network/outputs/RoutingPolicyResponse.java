@@ -31,9 +31,9 @@ public final class RoutingPolicyResponse {
         List<String> destinations,
         String name,
         String nextHop) {
-        this.destinations = Objects.requireNonNull(destinations);
-        this.name = Objects.requireNonNull(name);
-        this.nextHop = Objects.requireNonNull(nextHop);
+        this.destinations = destinations;
+        this.name = name;
+        this.nextHop = nextHop;
     }
 
     /**

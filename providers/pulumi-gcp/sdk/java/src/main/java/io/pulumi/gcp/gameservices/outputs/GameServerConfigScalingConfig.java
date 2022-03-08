@@ -46,8 +46,8 @@ public final class GameServerConfigScalingConfig {
         String name,
         @Nullable List<GameServerConfigScalingConfigSchedule> schedules,
         @Nullable List<GameServerConfigScalingConfigSelector> selectors) {
-        this.fleetAutoscalerSpec = Objects.requireNonNull(fleetAutoscalerSpec);
-        this.name = Objects.requireNonNull(name);
+        this.fleetAutoscalerSpec = fleetAutoscalerSpec;
+        this.name = name;
         this.schedules = schedules;
         this.selectors = selectors;
     }

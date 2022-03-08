@@ -13,7 +13,7 @@ public final class GetSecretTopic {
 
     @OutputCustomType.Constructor({"name"})
     private GetSecretTopic(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     public String getName() {

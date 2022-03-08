@@ -53,12 +53,12 @@ public final class PreprocessingConfigResponse {
         DeblockResponse deblock,
         DenoiseResponse denoise,
         PadResponse pad) {
-        this.audio = Objects.requireNonNull(audio);
-        this.color = Objects.requireNonNull(color);
-        this.crop = Objects.requireNonNull(crop);
-        this.deblock = Objects.requireNonNull(deblock);
-        this.denoise = Objects.requireNonNull(denoise);
-        this.pad = Objects.requireNonNull(pad);
+        this.audio = audio;
+        this.color = color;
+        this.crop = crop;
+        this.deblock = deblock;
+        this.denoise = denoise;
+        this.pad = pad;
     }
 
     /**

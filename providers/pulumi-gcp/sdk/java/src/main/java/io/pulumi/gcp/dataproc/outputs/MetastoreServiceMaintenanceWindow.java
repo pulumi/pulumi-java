@@ -26,8 +26,8 @@ public final class MetastoreServiceMaintenanceWindow {
     private MetastoreServiceMaintenanceWindow(
         String dayOfWeek,
         Integer hourOfDay) {
-        this.dayOfWeek = Objects.requireNonNull(dayOfWeek);
-        this.hourOfDay = Objects.requireNonNull(hourOfDay);
+        this.dayOfWeek = dayOfWeek;
+        this.hourOfDay = hourOfDay;
     }
 
     /**

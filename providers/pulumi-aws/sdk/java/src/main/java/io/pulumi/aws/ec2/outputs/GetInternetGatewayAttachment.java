@@ -24,8 +24,8 @@ public final class GetInternetGatewayAttachment {
     private GetInternetGatewayAttachment(
         String state,
         String vpcId) {
-        this.state = Objects.requireNonNull(state);
-        this.vpcId = Objects.requireNonNull(vpcId);
+        this.state = state;
+        this.vpcId = vpcId;
     }
 
     /**

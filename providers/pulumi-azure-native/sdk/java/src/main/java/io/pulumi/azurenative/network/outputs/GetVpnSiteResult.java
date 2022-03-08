@@ -122,17 +122,17 @@ public final class GetVpnSiteResult {
         this.addressSpace = addressSpace;
         this.bgpProperties = bgpProperties;
         this.deviceProperties = deviceProperties;
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.id = id;
         this.ipAddress = ipAddress;
         this.isSecuritySite = isSecuritySite;
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
+        this.location = location;
+        this.name = name;
         this.o365Policy = o365Policy;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.siteKey = siteKey;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.virtualWan = virtualWan;
         this.vpnSiteLinks = vpnSiteLinks;
     }

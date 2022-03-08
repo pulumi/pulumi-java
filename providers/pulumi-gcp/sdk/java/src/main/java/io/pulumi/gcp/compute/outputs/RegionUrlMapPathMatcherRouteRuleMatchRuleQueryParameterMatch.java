@@ -48,7 +48,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatch 
         @Nullable Boolean presentMatch,
         @Nullable String regexMatch) {
         this.exactMatch = exactMatch;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.presentMatch = presentMatch;
         this.regexMatch = regexMatch;
     }

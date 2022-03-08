@@ -30,9 +30,9 @@ public final class VideoFlagsResponse {
         Boolean canStream,
         Boolean hasData,
         Boolean isRecording) {
-        this.canStream = Objects.requireNonNull(canStream);
-        this.hasData = Objects.requireNonNull(hasData);
-        this.isRecording = Objects.requireNonNull(isRecording);
+        this.canStream = canStream;
+        this.hasData = hasData;
+        this.isRecording = isRecording;
     }
 
     /**

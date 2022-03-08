@@ -55,7 +55,7 @@ public final class ConfigurationProfileAssignmentPropertiesResponse {
         this.compliance = compliance;
         this.configurationProfile = configurationProfile;
         this.configurationProfilePreferenceId = configurationProfilePreferenceId;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.targetId = targetId;
     }
 

@@ -17,7 +17,7 @@ public final class StreamModeDetails {
 
     @OutputCustomType.Constructor({"streamMode"})
     private StreamModeDetails(StreamModeDetailsStreamMode streamMode) {
-        this.streamMode = Objects.requireNonNull(streamMode);
+        this.streamMode = streamMode;
     }
 
     /**

@@ -50,7 +50,7 @@ public final class InstanceCluster {
         @Nullable Integer numNodes,
         @Nullable String storageType,
         @Nullable String zone) {
-        this.clusterId = Objects.requireNonNull(clusterId);
+        this.clusterId = clusterId;
         this.kmsKeyName = kmsKeyName;
         this.numNodes = numNodes;
         this.storageType = storageType;

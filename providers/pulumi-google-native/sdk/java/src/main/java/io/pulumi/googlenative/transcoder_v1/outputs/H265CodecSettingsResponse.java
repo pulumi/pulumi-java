@@ -129,25 +129,25 @@ public final class H265CodecSettingsResponse {
         Integer vbvFullnessBits,
         Integer vbvSizeBits,
         Integer widthPixels) {
-        this.allowOpenGop = Objects.requireNonNull(allowOpenGop);
-        this.aqStrength = Objects.requireNonNull(aqStrength);
-        this.bFrameCount = Objects.requireNonNull(bFrameCount);
-        this.bPyramid = Objects.requireNonNull(bPyramid);
-        this.bitrateBps = Objects.requireNonNull(bitrateBps);
-        this.crfLevel = Objects.requireNonNull(crfLevel);
-        this.enableTwoPass = Objects.requireNonNull(enableTwoPass);
-        this.frameRate = Objects.requireNonNull(frameRate);
-        this.gopDuration = Objects.requireNonNull(gopDuration);
-        this.gopFrameCount = Objects.requireNonNull(gopFrameCount);
-        this.heightPixels = Objects.requireNonNull(heightPixels);
-        this.pixelFormat = Objects.requireNonNull(pixelFormat);
-        this.preset = Objects.requireNonNull(preset);
-        this.profile = Objects.requireNonNull(profile);
-        this.rateControlMode = Objects.requireNonNull(rateControlMode);
-        this.tune = Objects.requireNonNull(tune);
-        this.vbvFullnessBits = Objects.requireNonNull(vbvFullnessBits);
-        this.vbvSizeBits = Objects.requireNonNull(vbvSizeBits);
-        this.widthPixels = Objects.requireNonNull(widthPixels);
+        this.allowOpenGop = allowOpenGop;
+        this.aqStrength = aqStrength;
+        this.bFrameCount = bFrameCount;
+        this.bPyramid = bPyramid;
+        this.bitrateBps = bitrateBps;
+        this.crfLevel = crfLevel;
+        this.enableTwoPass = enableTwoPass;
+        this.frameRate = frameRate;
+        this.gopDuration = gopDuration;
+        this.gopFrameCount = gopFrameCount;
+        this.heightPixels = heightPixels;
+        this.pixelFormat = pixelFormat;
+        this.preset = preset;
+        this.profile = profile;
+        this.rateControlMode = rateControlMode;
+        this.tune = tune;
+        this.vbvFullnessBits = vbvFullnessBits;
+        this.vbvSizeBits = vbvSizeBits;
+        this.widthPixels = widthPixels;
     }
 
     /**

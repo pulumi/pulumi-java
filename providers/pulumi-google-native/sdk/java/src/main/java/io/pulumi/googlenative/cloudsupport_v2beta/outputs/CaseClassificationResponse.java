@@ -17,7 +17,7 @@ public final class CaseClassificationResponse {
 
     @OutputCustomType.Constructor({"displayName"})
     private CaseClassificationResponse(String displayName) {
-        this.displayName = Objects.requireNonNull(displayName);
+        this.displayName = displayName;
     }
 
     /**

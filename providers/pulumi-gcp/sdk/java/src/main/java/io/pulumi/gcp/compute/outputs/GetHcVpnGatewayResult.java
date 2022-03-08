@@ -36,14 +36,14 @@ public final class GetHcVpnGatewayResult {
         @Nullable String region,
         String selfLink,
         List<GetHcVpnGatewayVpnInterface> vpnInterfaces) {
-        this.description = Objects.requireNonNull(description);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.network = Objects.requireNonNull(network);
+        this.description = description;
+        this.id = id;
+        this.name = name;
+        this.network = network;
         this.project = project;
         this.region = region;
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.vpnInterfaces = Objects.requireNonNull(vpnInterfaces);
+        this.selfLink = selfLink;
+        this.vpnInterfaces = vpnInterfaces;
     }
 
     public String getDescription() {

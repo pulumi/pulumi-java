@@ -24,8 +24,8 @@ public final class ProjectRepoIdResponse {
     private ProjectRepoIdResponse(
         String project,
         String repoName) {
-        this.project = Objects.requireNonNull(project);
-        this.repoName = Objects.requireNonNull(repoName);
+        this.project = project;
+        this.repoName = repoName;
     }
 
     /**

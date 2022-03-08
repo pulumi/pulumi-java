@@ -49,12 +49,12 @@ public final class DistributionResponse {
         VersionResponse latestVersion,
         String maintainer,
         String url) {
-        this.architecture = Objects.requireNonNull(architecture);
-        this.cpeUri = Objects.requireNonNull(cpeUri);
-        this.description = Objects.requireNonNull(description);
-        this.latestVersion = Objects.requireNonNull(latestVersion);
-        this.maintainer = Objects.requireNonNull(maintainer);
-        this.url = Objects.requireNonNull(url);
+        this.architecture = architecture;
+        this.cpeUri = cpeUri;
+        this.description = description;
+        this.latestVersion = latestVersion;
+        this.maintainer = maintainer;
+        this.url = url;
     }
 
     /**

@@ -86,17 +86,17 @@ public final class PrivateEndpointConnectionResponse {
         SystemDataResponse systemData,
         @Nullable Map<String,String> tags,
         String type) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.identity = identity;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.privateEndpoint = privateEndpoint;
-        this.privateLinkServiceConnectionState = Objects.requireNonNull(privateLinkServiceConnectionState);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
+        this.provisioningState = provisioningState;
         this.sku = sku;
-        this.systemData = Objects.requireNonNull(systemData);
+        this.systemData = systemData;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

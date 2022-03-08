@@ -33,9 +33,9 @@ public final class IoTEdgeAgentInfoResponse {
         String imageName,
         @Nullable ImageRepositoryCredentialResponse imageRepository,
         String tag) {
-        this.imageName = Objects.requireNonNull(imageName);
+        this.imageName = imageName;
         this.imageRepository = imageRepository;
-        this.tag = Objects.requireNonNull(tag);
+        this.tag = tag;
     }
 
     /**

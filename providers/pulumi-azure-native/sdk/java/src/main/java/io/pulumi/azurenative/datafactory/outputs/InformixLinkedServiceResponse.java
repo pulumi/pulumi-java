@@ -92,13 +92,13 @@ public final class InformixLinkedServiceResponse {
         this.annotations = annotations;
         this.authenticationType = authenticationType;
         this.connectVia = connectVia;
-        this.connectionString = Objects.requireNonNull(connectionString);
+        this.connectionString = connectionString;
         this.credential = credential;
         this.description = description;
         this.encryptedCredential = encryptedCredential;
         this.parameters = parameters;
         this.password = password;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.userName = userName;
     }
 

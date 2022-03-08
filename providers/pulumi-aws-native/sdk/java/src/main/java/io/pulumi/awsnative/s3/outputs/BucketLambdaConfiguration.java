@@ -33,9 +33,9 @@ public final class BucketLambdaConfiguration {
         String event,
         @Nullable BucketNotificationFilter filter,
         String function) {
-        this.event = Objects.requireNonNull(event);
+        this.event = event;
         this.filter = filter;
-        this.function = Objects.requireNonNull(function);
+        this.function = function;
     }
 
     /**

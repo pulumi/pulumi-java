@@ -34,7 +34,7 @@ public final class CacheHealthResponse {
         List<ConditionResponse> conditions,
         @Nullable String state,
         @Nullable String statusDescription) {
-        this.conditions = Objects.requireNonNull(conditions);
+        this.conditions = conditions;
         this.state = state;
         this.statusDescription = statusDescription;
     }

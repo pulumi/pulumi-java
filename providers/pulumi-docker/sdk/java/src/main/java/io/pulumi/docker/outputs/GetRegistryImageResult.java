@@ -27,10 +27,10 @@ public final class GetRegistryImageResult {
         @Nullable Boolean insecureSkipVerify,
         String name,
         String sha256Digest) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.insecureSkipVerify = insecureSkipVerify;
-        this.name = Objects.requireNonNull(name);
-        this.sha256Digest = Objects.requireNonNull(sha256Digest);
+        this.name = name;
+        this.sha256Digest = sha256Digest;
     }
 
     /**

@@ -19,7 +19,7 @@ public final class FleetLocationConfiguration {
     private FleetLocationConfiguration(
         String location,
         @Nullable FleetLocationCapacity locationCapacity) {
-        this.location = Objects.requireNonNull(location);
+        this.location = location;
         this.locationCapacity = locationCapacity;
     }
 

@@ -24,8 +24,8 @@ public final class GetFluidRelayServerKeysResult {
     private GetFluidRelayServerKeysResult(
         String key1,
         String key2) {
-        this.key1 = Objects.requireNonNull(key1);
-        this.key2 = Objects.requireNonNull(key2);
+        this.key1 = key1;
+        this.key2 = key2;
     }
 
     /**

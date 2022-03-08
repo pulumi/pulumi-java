@@ -26,9 +26,9 @@ public final class GetUserPoolSigningCertificateResult {
         String certificate,
         String id,
         String userPoolId) {
-        this.certificate = Objects.requireNonNull(certificate);
-        this.id = Objects.requireNonNull(id);
-        this.userPoolId = Objects.requireNonNull(userPoolId);
+        this.certificate = certificate;
+        this.id = id;
+        this.userPoolId = userPoolId;
     }
 
     /**

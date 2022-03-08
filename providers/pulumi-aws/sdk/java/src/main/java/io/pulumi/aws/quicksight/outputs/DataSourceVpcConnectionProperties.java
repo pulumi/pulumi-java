@@ -17,7 +17,7 @@ public final class DataSourceVpcConnectionProperties {
 
     @OutputCustomType.Constructor({"vpcConnectionArn"})
     private DataSourceVpcConnectionProperties(String vpcConnectionArn) {
-        this.vpcConnectionArn = Objects.requireNonNull(vpcConnectionArn);
+        this.vpcConnectionArn = vpcConnectionArn;
     }
 
     /**

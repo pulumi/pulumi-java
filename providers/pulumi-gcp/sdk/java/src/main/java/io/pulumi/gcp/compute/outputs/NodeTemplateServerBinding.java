@@ -28,7 +28,7 @@ public final class NodeTemplateServerBinding {
 
     @OutputCustomType.Constructor({"type"})
     private NodeTemplateServerBinding(String type) {
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

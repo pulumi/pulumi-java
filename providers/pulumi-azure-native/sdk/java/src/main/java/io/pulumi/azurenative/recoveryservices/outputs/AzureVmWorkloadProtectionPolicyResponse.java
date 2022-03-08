@@ -56,7 +56,7 @@ public final class AzureVmWorkloadProtectionPolicyResponse {
         @Nullable SettingsResponse settings,
         @Nullable List<SubProtectionPolicyResponse> subProtectionPolicy,
         @Nullable String workLoadType) {
-        this.backupManagementType = Objects.requireNonNull(backupManagementType);
+        this.backupManagementType = backupManagementType;
         this.makePolicyConsistent = makePolicyConsistent;
         this.protectedItemsCount = protectedItemsCount;
         this.settings = settings;

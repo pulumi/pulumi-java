@@ -37,17 +37,17 @@ public final class GetBackendServiceOutlierDetection {
         Integer successRateMinimumHosts,
         Integer successRateRequestVolume,
         Integer successRateStdevFactor) {
-        this.baseEjectionTimes = Objects.requireNonNull(baseEjectionTimes);
-        this.consecutiveErrors = Objects.requireNonNull(consecutiveErrors);
-        this.consecutiveGatewayFailure = Objects.requireNonNull(consecutiveGatewayFailure);
-        this.enforcingConsecutiveErrors = Objects.requireNonNull(enforcingConsecutiveErrors);
-        this.enforcingConsecutiveGatewayFailure = Objects.requireNonNull(enforcingConsecutiveGatewayFailure);
-        this.enforcingSuccessRate = Objects.requireNonNull(enforcingSuccessRate);
-        this.intervals = Objects.requireNonNull(intervals);
-        this.maxEjectionPercent = Objects.requireNonNull(maxEjectionPercent);
-        this.successRateMinimumHosts = Objects.requireNonNull(successRateMinimumHosts);
-        this.successRateRequestVolume = Objects.requireNonNull(successRateRequestVolume);
-        this.successRateStdevFactor = Objects.requireNonNull(successRateStdevFactor);
+        this.baseEjectionTimes = baseEjectionTimes;
+        this.consecutiveErrors = consecutiveErrors;
+        this.consecutiveGatewayFailure = consecutiveGatewayFailure;
+        this.enforcingConsecutiveErrors = enforcingConsecutiveErrors;
+        this.enforcingConsecutiveGatewayFailure = enforcingConsecutiveGatewayFailure;
+        this.enforcingSuccessRate = enforcingSuccessRate;
+        this.intervals = intervals;
+        this.maxEjectionPercent = maxEjectionPercent;
+        this.successRateMinimumHosts = successRateMinimumHosts;
+        this.successRateRequestVolume = successRateRequestVolume;
+        this.successRateStdevFactor = successRateStdevFactor;
     }
 
     public List<GetBackendServiceOutlierDetectionBaseEjectionTime> getBaseEjectionTimes() {

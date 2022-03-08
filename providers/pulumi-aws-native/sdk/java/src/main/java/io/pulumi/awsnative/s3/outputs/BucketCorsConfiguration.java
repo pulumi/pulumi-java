@@ -14,7 +14,7 @@ public final class BucketCorsConfiguration {
 
     @OutputCustomType.Constructor({"corsRules"})
     private BucketCorsConfiguration(List<BucketCorsRule> corsRules) {
-        this.corsRules = Objects.requireNonNull(corsRules);
+        this.corsRules = corsRules;
     }
 
     public List<BucketCorsRule> getCorsRules() {

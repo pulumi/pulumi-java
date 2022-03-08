@@ -69,15 +69,15 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse {
         String stage,
         String startedOn,
         String state) {
-        this.endedOn = Objects.requireNonNull(endedOn);
-        this.exceptionsAndWarnings = Objects.requireNonNull(exceptionsAndWarnings);
-        this.id = Objects.requireNonNull(id);
-        this.loginName = Objects.requireNonNull(loginName);
-        this.message = Objects.requireNonNull(message);
-        this.resultType = Objects.requireNonNull(resultType);
-        this.stage = Objects.requireNonNull(stage);
-        this.startedOn = Objects.requireNonNull(startedOn);
-        this.state = Objects.requireNonNull(state);
+        this.endedOn = endedOn;
+        this.exceptionsAndWarnings = exceptionsAndWarnings;
+        this.id = id;
+        this.loginName = loginName;
+        this.message = message;
+        this.resultType = resultType;
+        this.stage = stage;
+        this.startedOn = startedOn;
+        this.state = state;
     }
 
     /**

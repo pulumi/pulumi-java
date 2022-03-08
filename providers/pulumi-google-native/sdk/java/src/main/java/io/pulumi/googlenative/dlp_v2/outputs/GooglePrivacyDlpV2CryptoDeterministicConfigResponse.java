@@ -32,9 +32,9 @@ public final class GooglePrivacyDlpV2CryptoDeterministicConfigResponse {
         GooglePrivacyDlpV2FieldIdResponse context,
         GooglePrivacyDlpV2CryptoKeyResponse cryptoKey,
         GooglePrivacyDlpV2InfoTypeResponse surrogateInfoType) {
-        this.context = Objects.requireNonNull(context);
-        this.cryptoKey = Objects.requireNonNull(cryptoKey);
-        this.surrogateInfoType = Objects.requireNonNull(surrogateInfoType);
+        this.context = context;
+        this.cryptoKey = cryptoKey;
+        this.surrogateInfoType = surrogateInfoType;
     }
 
     /**

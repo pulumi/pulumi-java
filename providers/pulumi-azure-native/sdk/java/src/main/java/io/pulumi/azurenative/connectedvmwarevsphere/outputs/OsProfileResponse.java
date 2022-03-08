@@ -58,11 +58,11 @@ public final class OsProfileResponse {
         String toolsVersionStatus) {
         this.adminUsername = adminUsername;
         this.computerName = computerName;
-        this.osName = Objects.requireNonNull(osName);
+        this.osName = osName;
         this.osType = osType;
-        this.toolsRunningStatus = Objects.requireNonNull(toolsRunningStatus);
-        this.toolsVersion = Objects.requireNonNull(toolsVersion);
-        this.toolsVersionStatus = Objects.requireNonNull(toolsVersionStatus);
+        this.toolsRunningStatus = toolsRunningStatus;
+        this.toolsVersion = toolsVersion;
+        this.toolsVersionStatus = toolsVersionStatus;
     }
 
     /**

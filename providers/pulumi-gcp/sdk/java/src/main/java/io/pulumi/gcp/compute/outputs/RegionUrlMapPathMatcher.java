@@ -75,7 +75,7 @@ public final class RegionUrlMapPathMatcher {
         this.defaultService = defaultService;
         this.defaultUrlRedirect = defaultUrlRedirect;
         this.description = description;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.pathRules = pathRules;
         this.routeRules = routeRules;
     }

@@ -67,15 +67,15 @@ public final class ExecutionResponse {
         String outputNotebookFile,
         String state,
         String updateTime) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.description = Objects.requireNonNull(description);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.executionTemplate = Objects.requireNonNull(executionTemplate);
-        this.jobUri = Objects.requireNonNull(jobUri);
-        this.name = Objects.requireNonNull(name);
-        this.outputNotebookFile = Objects.requireNonNull(outputNotebookFile);
-        this.state = Objects.requireNonNull(state);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.createTime = createTime;
+        this.description = description;
+        this.displayName = displayName;
+        this.executionTemplate = executionTemplate;
+        this.jobUri = jobUri;
+        this.name = name;
+        this.outputNotebookFile = outputNotebookFile;
+        this.state = state;
+        this.updateTime = updateTime;
     }
 
     /**

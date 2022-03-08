@@ -23,7 +23,7 @@ public final class ApplicationCloudwatchLoggingOptions {
         @Nullable String cloudwatchLoggingOptionId,
         String logStreamArn) {
         this.cloudwatchLoggingOptionId = cloudwatchLoggingOptionId;
-        this.logStreamArn = Objects.requireNonNull(logStreamArn);
+        this.logStreamArn = logStreamArn;
     }
 
     public Optional<String> getCloudwatchLoggingOptionId() {

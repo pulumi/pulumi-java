@@ -34,7 +34,7 @@ public final class ResourceSkuResponse {
         String name,
         @Nullable String tier) {
         this.capacity = capacity;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.tier = tier;
     }
 

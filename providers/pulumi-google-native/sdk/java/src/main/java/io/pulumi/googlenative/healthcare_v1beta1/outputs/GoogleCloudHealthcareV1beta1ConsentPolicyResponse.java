@@ -26,8 +26,8 @@ public final class GoogleCloudHealthcareV1beta1ConsentPolicyResponse {
     private GoogleCloudHealthcareV1beta1ConsentPolicyResponse(
         ExprResponse authorizationRule,
         List<AttributeResponse> resourceAttributes) {
-        this.authorizationRule = Objects.requireNonNull(authorizationRule);
-        this.resourceAttributes = Objects.requireNonNull(resourceAttributes);
+        this.authorizationRule = authorizationRule;
+        this.resourceAttributes = resourceAttributes;
     }
 
     /**

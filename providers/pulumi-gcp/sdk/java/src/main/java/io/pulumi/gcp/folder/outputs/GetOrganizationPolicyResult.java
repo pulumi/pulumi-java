@@ -39,15 +39,15 @@ public final class GetOrganizationPolicyResult {
         List<GetOrganizationPolicyRestorePolicy> restorePolicies,
         String updateTime,
         Integer version) {
-        this.booleanPolicies = Objects.requireNonNull(booleanPolicies);
-        this.constraint = Objects.requireNonNull(constraint);
-        this.etag = Objects.requireNonNull(etag);
-        this.folder = Objects.requireNonNull(folder);
-        this.id = Objects.requireNonNull(id);
-        this.listPolicies = Objects.requireNonNull(listPolicies);
-        this.restorePolicies = Objects.requireNonNull(restorePolicies);
-        this.updateTime = Objects.requireNonNull(updateTime);
-        this.version = Objects.requireNonNull(version);
+        this.booleanPolicies = booleanPolicies;
+        this.constraint = constraint;
+        this.etag = etag;
+        this.folder = folder;
+        this.id = id;
+        this.listPolicies = listPolicies;
+        this.restorePolicies = restorePolicies;
+        this.updateTime = updateTime;
+        this.version = version;
     }
 
     public List<GetOrganizationPolicyBooleanPolicy> getBooleanPolicies() {

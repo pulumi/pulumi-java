@@ -52,12 +52,12 @@ public final class ConditionResponse {
         MetricThresholdResponse conditionThreshold,
         String displayName,
         String name) {
-        this.conditionAbsent = Objects.requireNonNull(conditionAbsent);
-        this.conditionMatchedLog = Objects.requireNonNull(conditionMatchedLog);
-        this.conditionMonitoringQueryLanguage = Objects.requireNonNull(conditionMonitoringQueryLanguage);
-        this.conditionThreshold = Objects.requireNonNull(conditionThreshold);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.name = Objects.requireNonNull(name);
+        this.conditionAbsent = conditionAbsent;
+        this.conditionMatchedLog = conditionMatchedLog;
+        this.conditionMonitoringQueryLanguage = conditionMonitoringQueryLanguage;
+        this.conditionThreshold = conditionThreshold;
+        this.displayName = displayName;
+        this.name = name;
     }
 
     /**

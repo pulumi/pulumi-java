@@ -56,13 +56,13 @@ public final class GetIssueModelResult {
         String state,
         GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse trainingStats,
         String updateTime) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.inputDataConfig = Objects.requireNonNull(inputDataConfig);
-        this.name = Objects.requireNonNull(name);
-        this.state = Objects.requireNonNull(state);
-        this.trainingStats = Objects.requireNonNull(trainingStats);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.createTime = createTime;
+        this.displayName = displayName;
+        this.inputDataConfig = inputDataConfig;
+        this.name = name;
+        this.state = state;
+        this.trainingStats = trainingStats;
+        this.updateTime = updateTime;
     }
 
     /**

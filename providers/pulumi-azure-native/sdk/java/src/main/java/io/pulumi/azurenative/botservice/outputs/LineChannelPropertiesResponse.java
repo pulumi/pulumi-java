@@ -33,9 +33,9 @@ public final class LineChannelPropertiesResponse {
         String callbackUrl,
         Boolean isValidated,
         List<LineRegistrationResponse> lineRegistrations) {
-        this.callbackUrl = Objects.requireNonNull(callbackUrl);
-        this.isValidated = Objects.requireNonNull(isValidated);
-        this.lineRegistrations = Objects.requireNonNull(lineRegistrations);
+        this.callbackUrl = callbackUrl;
+        this.isValidated = isValidated;
+        this.lineRegistrations = lineRegistrations;
     }
 
     /**

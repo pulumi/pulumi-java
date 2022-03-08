@@ -51,10 +51,10 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
         String tableName,
         @Nullable String versionId) {
         this.catalogId = catalogId;
-        this.databaseName = Objects.requireNonNull(databaseName);
+        this.databaseName = databaseName;
         this.region = region;
-        this.roleArn = Objects.requireNonNull(roleArn);
-        this.tableName = Objects.requireNonNull(tableName);
+        this.roleArn = roleArn;
+        this.tableName = tableName;
         this.versionId = versionId;
     }
 

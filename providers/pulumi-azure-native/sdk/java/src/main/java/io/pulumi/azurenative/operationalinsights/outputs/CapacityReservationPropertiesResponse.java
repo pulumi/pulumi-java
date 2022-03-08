@@ -25,8 +25,8 @@ public final class CapacityReservationPropertiesResponse {
     private CapacityReservationPropertiesResponse(
         String lastSkuUpdate,
         Double minCapacity) {
-        this.lastSkuUpdate = Objects.requireNonNull(lastSkuUpdate);
-        this.minCapacity = Objects.requireNonNull(minCapacity);
+        this.lastSkuUpdate = lastSkuUpdate;
+        this.minCapacity = minCapacity;
     }
 
     /**

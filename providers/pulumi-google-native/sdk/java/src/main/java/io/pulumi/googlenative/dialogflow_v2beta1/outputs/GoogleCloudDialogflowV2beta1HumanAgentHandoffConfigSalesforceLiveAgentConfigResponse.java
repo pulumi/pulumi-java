@@ -36,10 +36,10 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforce
         String deploymentId,
         String endpointDomain,
         String organizationId) {
-        this.buttonId = Objects.requireNonNull(buttonId);
-        this.deploymentId = Objects.requireNonNull(deploymentId);
-        this.endpointDomain = Objects.requireNonNull(endpointDomain);
-        this.organizationId = Objects.requireNonNull(organizationId);
+        this.buttonId = buttonId;
+        this.deploymentId = deploymentId;
+        this.endpointDomain = endpointDomain;
+        this.organizationId = organizationId;
     }
 
     /**

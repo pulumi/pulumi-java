@@ -25,8 +25,8 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     private ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormat(
         ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParameters mappingParameters,
         String recordFormatType) {
-        this.mappingParameters = Objects.requireNonNull(mappingParameters);
-        this.recordFormatType = Objects.requireNonNull(recordFormatType);
+        this.mappingParameters = mappingParameters;
+        this.recordFormatType = recordFormatType;
     }
 
     /**

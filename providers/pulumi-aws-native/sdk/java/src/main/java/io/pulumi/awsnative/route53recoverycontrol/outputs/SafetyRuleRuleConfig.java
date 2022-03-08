@@ -28,9 +28,9 @@ public final class SafetyRuleRuleConfig {
         Boolean inverted,
         Integer threshold,
         SafetyRuleRuleType type) {
-        this.inverted = Objects.requireNonNull(inverted);
-        this.threshold = Objects.requireNonNull(threshold);
-        this.type = Objects.requireNonNull(type);
+        this.inverted = inverted;
+        this.threshold = threshold;
+        this.type = type;
     }
 
     /**

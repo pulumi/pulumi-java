@@ -17,7 +17,7 @@ public final class FeatureSpecMulticlusteringress {
 
     @OutputCustomType.Constructor({"configMembership"})
     private FeatureSpecMulticlusteringress(String configMembership) {
-        this.configMembership = Objects.requireNonNull(configMembership);
+        this.configMembership = configMembership;
     }
 
     /**

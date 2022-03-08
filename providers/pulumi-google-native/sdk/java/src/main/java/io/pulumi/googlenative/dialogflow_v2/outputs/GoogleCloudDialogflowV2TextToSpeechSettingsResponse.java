@@ -39,10 +39,10 @@ public final class GoogleCloudDialogflowV2TextToSpeechSettingsResponse {
         String outputAudioEncoding,
         Integer sampleRateHertz,
         Map<String,String> synthesizeSpeechConfigs) {
-        this.enableTextToSpeech = Objects.requireNonNull(enableTextToSpeech);
-        this.outputAudioEncoding = Objects.requireNonNull(outputAudioEncoding);
-        this.sampleRateHertz = Objects.requireNonNull(sampleRateHertz);
-        this.synthesizeSpeechConfigs = Objects.requireNonNull(synthesizeSpeechConfigs);
+        this.enableTextToSpeech = enableTextToSpeech;
+        this.outputAudioEncoding = outputAudioEncoding;
+        this.sampleRateHertz = sampleRateHertz;
+        this.synthesizeSpeechConfigs = synthesizeSpeechConfigs;
     }
 
     /**

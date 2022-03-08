@@ -38,11 +38,11 @@ public final class GetAliasResult {
         String name,
         String targetKeyArn,
         String targetKeyId) {
-        this.arn = Objects.requireNonNull(arn);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.targetKeyArn = Objects.requireNonNull(targetKeyArn);
-        this.targetKeyId = Objects.requireNonNull(targetKeyId);
+        this.arn = arn;
+        this.id = id;
+        this.name = name;
+        this.targetKeyArn = targetKeyArn;
+        this.targetKeyId = targetKeyId;
     }
 
     /**

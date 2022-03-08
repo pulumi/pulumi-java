@@ -25,8 +25,8 @@ public final class GoogleCloudRetailV2betaRuleBoostActionResponse {
     private GoogleCloudRetailV2betaRuleBoostActionResponse(
         Double boost,
         String productsFilter) {
-        this.boost = Objects.requireNonNull(boost);
-        this.productsFilter = Objects.requireNonNull(productsFilter);
+        this.boost = boost;
+        this.productsFilter = productsFilter;
     }
 
     /**

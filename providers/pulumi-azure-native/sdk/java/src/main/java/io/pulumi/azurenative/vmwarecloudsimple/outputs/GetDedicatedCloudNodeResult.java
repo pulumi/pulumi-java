@@ -131,25 +131,25 @@ public final class GetDedicatedCloudNodeResult {
         @Nullable Map<String,String> tags,
         String type,
         String vmwareClusterName) {
-        this.availabilityZoneId = Objects.requireNonNull(availabilityZoneId);
-        this.availabilityZoneName = Objects.requireNonNull(availabilityZoneName);
-        this.cloudRackName = Objects.requireNonNull(cloudRackName);
-        this.created = Objects.requireNonNull(created);
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.nodesCount = Objects.requireNonNull(nodesCount);
-        this.placementGroupId = Objects.requireNonNull(placementGroupId);
-        this.placementGroupName = Objects.requireNonNull(placementGroupName);
-        this.privateCloudId = Objects.requireNonNull(privateCloudId);
-        this.privateCloudName = Objects.requireNonNull(privateCloudName);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.purchaseId = Objects.requireNonNull(purchaseId);
+        this.availabilityZoneId = availabilityZoneId;
+        this.availabilityZoneName = availabilityZoneName;
+        this.cloudRackName = cloudRackName;
+        this.created = created;
+        this.id = id;
+        this.location = location;
+        this.name = name;
+        this.nodesCount = nodesCount;
+        this.placementGroupId = placementGroupId;
+        this.placementGroupName = placementGroupName;
+        this.privateCloudId = privateCloudId;
+        this.privateCloudName = privateCloudName;
+        this.provisioningState = provisioningState;
+        this.purchaseId = purchaseId;
         this.sku = sku;
-        this.status = Objects.requireNonNull(status);
+        this.status = status;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
-        this.vmwareClusterName = Objects.requireNonNull(vmwareClusterName);
+        this.type = type;
+        this.vmwareClusterName = vmwareClusterName;
     }
 
     /**

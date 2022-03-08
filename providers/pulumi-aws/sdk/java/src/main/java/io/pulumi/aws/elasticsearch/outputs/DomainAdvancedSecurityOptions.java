@@ -33,7 +33,7 @@ public final class DomainAdvancedSecurityOptions {
         Boolean enabled,
         @Nullable Boolean internalUserDatabaseEnabled,
         @Nullable DomainAdvancedSecurityOptionsMasterUserOptions masterUserOptions) {
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
         this.internalUserDatabaseEnabled = internalUserDatabaseEnabled;
         this.masterUserOptions = masterUserOptions;
     }

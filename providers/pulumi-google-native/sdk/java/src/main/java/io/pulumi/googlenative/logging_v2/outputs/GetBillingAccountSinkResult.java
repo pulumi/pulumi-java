@@ -82,17 +82,17 @@ public final class GetBillingAccountSinkResult {
         String name,
         String updateTime,
         String writerIdentity) {
-        this.bigqueryOptions = Objects.requireNonNull(bigqueryOptions);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.description = Objects.requireNonNull(description);
-        this.destination = Objects.requireNonNull(destination);
-        this.disabled = Objects.requireNonNull(disabled);
-        this.exclusions = Objects.requireNonNull(exclusions);
-        this.filter = Objects.requireNonNull(filter);
-        this.includeChildren = Objects.requireNonNull(includeChildren);
-        this.name = Objects.requireNonNull(name);
-        this.updateTime = Objects.requireNonNull(updateTime);
-        this.writerIdentity = Objects.requireNonNull(writerIdentity);
+        this.bigqueryOptions = bigqueryOptions;
+        this.createTime = createTime;
+        this.description = description;
+        this.destination = destination;
+        this.disabled = disabled;
+        this.exclusions = exclusions;
+        this.filter = filter;
+        this.includeChildren = includeChildren;
+        this.name = name;
+        this.updateTime = updateTime;
+        this.writerIdentity = writerIdentity;
     }
 
     /**

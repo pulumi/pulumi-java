@@ -31,9 +31,9 @@ public final class GetAliasResult {
         String alias,
         GoogleCloudApigeeV1CertificateResponse certsInfo,
         String type) {
-        this.alias = Objects.requireNonNull(alias);
-        this.certsInfo = Objects.requireNonNull(certsInfo);
-        this.type = Objects.requireNonNull(type);
+        this.alias = alias;
+        this.certsInfo = certsInfo;
+        this.type = type;
     }
 
     /**

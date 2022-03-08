@@ -14,7 +14,7 @@ public final class StandardSqlStructTypeResponse {
 
     @OutputCustomType.Constructor({"fields"})
     private StandardSqlStructTypeResponse(List<StandardSqlFieldResponse> fields) {
-        this.fields = Objects.requireNonNull(fields);
+        this.fields = fields;
     }
 
     public List<StandardSqlFieldResponse> getFields() {

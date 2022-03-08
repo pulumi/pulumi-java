@@ -55,13 +55,13 @@ public final class GetServiceBindingResult {
         String name,
         String service,
         String updateTime) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.description = Objects.requireNonNull(description);
-        this.endpointFilter = Objects.requireNonNull(endpointFilter);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.service = Objects.requireNonNull(service);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.createTime = createTime;
+        this.description = description;
+        this.endpointFilter = endpointFilter;
+        this.labels = labels;
+        this.name = name;
+        this.service = service;
+        this.updateTime = updateTime;
     }
 
     /**

@@ -179,27 +179,27 @@ public final class ACIServiceResponseResponse {
         this.appInsightsEnabled = appInsightsEnabled;
         this.authEnabled = authEnabled;
         this.cname = cname;
-        this.computeType = Objects.requireNonNull(computeType);
+        this.computeType = computeType;
         this.containerResourceRequirements = containerResourceRequirements;
         this.dataCollection = dataCollection;
         this.deploymentType = deploymentType;
         this.description = description;
         this.encryptionProperties = encryptionProperties;
         this.environmentImageRequest = environmentImageRequest;
-        this.error = Objects.requireNonNull(error);
+        this.error = error;
         this.kvTags = kvTags;
         this.location = location;
-        this.modelConfigMap = Objects.requireNonNull(modelConfigMap);
+        this.modelConfigMap = modelConfigMap;
         this.models = models;
         this.properties = properties;
         this.publicFqdn = publicFqdn;
         this.publicIp = publicIp;
-        this.scoringUri = Objects.requireNonNull(scoringUri);
+        this.scoringUri = scoringUri;
         this.sslCertificate = sslCertificate;
         this.sslEnabled = sslEnabled;
         this.sslKey = sslKey;
-        this.state = Objects.requireNonNull(state);
-        this.swaggerUri = Objects.requireNonNull(swaggerUri);
+        this.state = state;
+        this.swaggerUri = swaggerUri;
         this.vnetConfiguration = vnetConfiguration;
     }
 

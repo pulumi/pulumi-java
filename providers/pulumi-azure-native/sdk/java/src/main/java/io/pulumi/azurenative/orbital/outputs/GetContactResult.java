@@ -135,26 +135,26 @@ public final class GetContactResult {
         String txEndTime,
         String txStartTime,
         String type) {
-        this.contactProfile = Objects.requireNonNull(contactProfile);
-        this.endAzimuthDegrees = Objects.requireNonNull(endAzimuthDegrees);
-        this.endElevationDegrees = Objects.requireNonNull(endElevationDegrees);
-        this.errorMessage = Objects.requireNonNull(errorMessage);
-        this.etag = Objects.requireNonNull(etag);
-        this.groundStationName = Objects.requireNonNull(groundStationName);
-        this.id = Objects.requireNonNull(id);
-        this.maximumElevationDegrees = Objects.requireNonNull(maximumElevationDegrees);
-        this.name = Objects.requireNonNull(name);
-        this.reservationEndTime = Objects.requireNonNull(reservationEndTime);
-        this.reservationStartTime = Objects.requireNonNull(reservationStartTime);
-        this.rxEndTime = Objects.requireNonNull(rxEndTime);
-        this.rxStartTime = Objects.requireNonNull(rxStartTime);
-        this.startAzimuthDegrees = Objects.requireNonNull(startAzimuthDegrees);
-        this.startElevationDegrees = Objects.requireNonNull(startElevationDegrees);
-        this.status = Objects.requireNonNull(status);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.txEndTime = Objects.requireNonNull(txEndTime);
-        this.txStartTime = Objects.requireNonNull(txStartTime);
-        this.type = Objects.requireNonNull(type);
+        this.contactProfile = contactProfile;
+        this.endAzimuthDegrees = endAzimuthDegrees;
+        this.endElevationDegrees = endElevationDegrees;
+        this.errorMessage = errorMessage;
+        this.etag = etag;
+        this.groundStationName = groundStationName;
+        this.id = id;
+        this.maximumElevationDegrees = maximumElevationDegrees;
+        this.name = name;
+        this.reservationEndTime = reservationEndTime;
+        this.reservationStartTime = reservationStartTime;
+        this.rxEndTime = rxEndTime;
+        this.rxStartTime = rxStartTime;
+        this.startAzimuthDegrees = startAzimuthDegrees;
+        this.startElevationDegrees = startElevationDegrees;
+        this.status = status;
+        this.systemData = systemData;
+        this.txEndTime = txEndTime;
+        this.txStartTime = txStartTime;
+        this.type = type;
     }
 
     /**

@@ -42,11 +42,11 @@ public final class TagPropertyResponse {
         String tenantId,
         String timestamp,
         String upn) {
-        this.objectIdentifier = Objects.requireNonNull(objectIdentifier);
-        this.tag = Objects.requireNonNull(tag);
-        this.tenantId = Objects.requireNonNull(tenantId);
-        this.timestamp = Objects.requireNonNull(timestamp);
-        this.upn = Objects.requireNonNull(upn);
+        this.objectIdentifier = objectIdentifier;
+        this.tag = tag;
+        this.tenantId = tenantId;
+        this.timestamp = timestamp;
+        this.upn = upn;
     }
 
     /**

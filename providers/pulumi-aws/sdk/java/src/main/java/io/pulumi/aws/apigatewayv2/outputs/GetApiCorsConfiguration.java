@@ -51,12 +51,12 @@ public final class GetApiCorsConfiguration {
         List<String> allowOrigins,
         List<String> exposeHeaders,
         Integer maxAge) {
-        this.allowCredentials = Objects.requireNonNull(allowCredentials);
-        this.allowHeaders = Objects.requireNonNull(allowHeaders);
-        this.allowMethods = Objects.requireNonNull(allowMethods);
-        this.allowOrigins = Objects.requireNonNull(allowOrigins);
-        this.exposeHeaders = Objects.requireNonNull(exposeHeaders);
-        this.maxAge = Objects.requireNonNull(maxAge);
+        this.allowCredentials = allowCredentials;
+        this.allowHeaders = allowHeaders;
+        this.allowMethods = allowMethods;
+        this.allowOrigins = allowOrigins;
+        this.exposeHeaders = exposeHeaders;
+        this.maxAge = maxAge;
     }
 
     /**

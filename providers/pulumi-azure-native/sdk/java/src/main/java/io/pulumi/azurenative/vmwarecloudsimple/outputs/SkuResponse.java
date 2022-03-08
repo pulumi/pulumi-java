@@ -47,7 +47,7 @@ public final class SkuResponse {
         this.capacity = capacity;
         this.description = description;
         this.family = family;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.tier = tier;
     }
 

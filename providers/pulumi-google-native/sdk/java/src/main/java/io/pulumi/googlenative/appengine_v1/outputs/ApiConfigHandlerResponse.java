@@ -42,11 +42,11 @@ public final class ApiConfigHandlerResponse {
         String script,
         String securityLevel,
         String url) {
-        this.authFailAction = Objects.requireNonNull(authFailAction);
-        this.login = Objects.requireNonNull(login);
-        this.script = Objects.requireNonNull(script);
-        this.securityLevel = Objects.requireNonNull(securityLevel);
-        this.url = Objects.requireNonNull(url);
+        this.authFailAction = authFailAction;
+        this.login = login;
+        this.script = script;
+        this.securityLevel = securityLevel;
+        this.url = url;
     }
 
     /**

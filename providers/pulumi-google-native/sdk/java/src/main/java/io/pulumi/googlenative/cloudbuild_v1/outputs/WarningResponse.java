@@ -24,8 +24,8 @@ public final class WarningResponse {
     private WarningResponse(
         String priority,
         String text) {
-        this.priority = Objects.requireNonNull(priority);
-        this.text = Objects.requireNonNull(text);
+        this.priority = priority;
+        this.text = text;
     }
 
     /**

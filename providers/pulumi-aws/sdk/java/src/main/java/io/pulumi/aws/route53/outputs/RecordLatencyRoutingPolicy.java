@@ -17,7 +17,7 @@ public final class RecordLatencyRoutingPolicy {
 
     @OutputCustomType.Constructor({"region"})
     private RecordLatencyRoutingPolicy(String region) {
-        this.region = Objects.requireNonNull(region);
+        this.region = region;
     }
 
     /**

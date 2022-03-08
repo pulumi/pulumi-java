@@ -28,7 +28,7 @@ public final class AssetModelPropertyType {
         this.attribute = attribute;
         this.metric = metric;
         this.transform = transform;
-        this.typeName = Objects.requireNonNull(typeName);
+        this.typeName = typeName;
     }
 
     public Optional<AssetModelAttribute> getAttribute() {

@@ -97,14 +97,14 @@ public final class GetWebAppHostNameBindingSlotResult {
         this.customHostNameDnsRecordType = customHostNameDnsRecordType;
         this.domainId = domainId;
         this.hostNameType = hostNameType;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.kind = kind;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.siteName = siteName;
         this.sslState = sslState;
         this.thumbprint = thumbprint;
-        this.type = Objects.requireNonNull(type);
-        this.virtualIP = Objects.requireNonNull(virtualIP);
+        this.type = type;
+        this.virtualIP = virtualIP;
     }
 
     /**

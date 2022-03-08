@@ -74,13 +74,13 @@ public final class GetStorageInsightConfigResult {
         String type) {
         this.containers = containers;
         this.eTag = eTag;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.status = Objects.requireNonNull(status);
-        this.storageAccount = Objects.requireNonNull(storageAccount);
+        this.id = id;
+        this.name = name;
+        this.status = status;
+        this.storageAccount = storageAccount;
         this.tables = tables;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

@@ -37,10 +37,10 @@ public final class ActorResponse {
         String email,
         Boolean googleSupport,
         String principalId) {
-        this.displayName = Objects.requireNonNull(displayName);
-        this.email = Objects.requireNonNull(email);
-        this.googleSupport = Objects.requireNonNull(googleSupport);
-        this.principalId = Objects.requireNonNull(principalId);
+        this.displayName = displayName;
+        this.email = email;
+        this.googleSupport = googleSupport;
+        this.principalId = principalId;
     }
 
     /**

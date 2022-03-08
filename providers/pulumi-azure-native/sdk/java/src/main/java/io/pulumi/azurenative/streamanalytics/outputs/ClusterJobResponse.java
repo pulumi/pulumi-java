@@ -31,9 +31,9 @@ public final class ClusterJobResponse {
         String id,
         String jobState,
         Integer streamingUnits) {
-        this.id = Objects.requireNonNull(id);
-        this.jobState = Objects.requireNonNull(jobState);
-        this.streamingUnits = Objects.requireNonNull(streamingUnits);
+        this.id = id;
+        this.jobState = jobState;
+        this.streamingUnits = streamingUnits;
     }
 
     /**

@@ -61,16 +61,16 @@ public final class GetContactFlowModuleResult {
         String state,
         String status,
         Map<String,String> tags) {
-        this.arn = Objects.requireNonNull(arn);
-        this.contactFlowModuleId = Objects.requireNonNull(contactFlowModuleId);
-        this.content = Objects.requireNonNull(content);
-        this.description = Objects.requireNonNull(description);
-        this.id = Objects.requireNonNull(id);
-        this.instanceId = Objects.requireNonNull(instanceId);
-        this.name = Objects.requireNonNull(name);
-        this.state = Objects.requireNonNull(state);
-        this.status = Objects.requireNonNull(status);
-        this.tags = Objects.requireNonNull(tags);
+        this.arn = arn;
+        this.contactFlowModuleId = contactFlowModuleId;
+        this.content = content;
+        this.description = description;
+        this.id = id;
+        this.instanceId = instanceId;
+        this.name = name;
+        this.state = state;
+        this.status = status;
+        this.tags = tags;
     }
 
     /**

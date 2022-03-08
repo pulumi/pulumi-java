@@ -80,14 +80,14 @@ public final class GetWorkloadNetworkSegmentResult {
         String type) {
         this.connectedGateway = connectedGateway;
         this.displayName = displayName;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.portVif = Objects.requireNonNull(portVif);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.id = id;
+        this.name = name;
+        this.portVif = portVif;
+        this.provisioningState = provisioningState;
         this.revision = revision;
-        this.status = Objects.requireNonNull(status);
+        this.status = status;
         this.subnet = subnet;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

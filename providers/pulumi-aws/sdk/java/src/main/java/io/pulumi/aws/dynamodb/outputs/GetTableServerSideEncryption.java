@@ -17,8 +17,8 @@ public final class GetTableServerSideEncryption {
     private GetTableServerSideEncryption(
         Boolean enabled,
         String kmsKeyArn) {
-        this.enabled = Objects.requireNonNull(enabled);
-        this.kmsKeyArn = Objects.requireNonNull(kmsKeyArn);
+        this.enabled = enabled;
+        this.kmsKeyArn = kmsKeyArn;
     }
 
     public Boolean getEnabled() {

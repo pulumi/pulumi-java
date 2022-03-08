@@ -17,7 +17,7 @@ public final class MonitoringScheduleScheduleConfig {
 
     @OutputCustomType.Constructor({"scheduleExpression"})
     private MonitoringScheduleScheduleConfig(String scheduleExpression) {
-        this.scheduleExpression = Objects.requireNonNull(scheduleExpression);
+        this.scheduleExpression = scheduleExpression;
     }
 
     /**

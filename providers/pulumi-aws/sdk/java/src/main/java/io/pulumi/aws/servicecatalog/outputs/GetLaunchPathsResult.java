@@ -33,9 +33,9 @@ public final class GetLaunchPathsResult {
         String productId,
         List<GetLaunchPathsSummary> summaries) {
         this.acceptLanguage = acceptLanguage;
-        this.id = Objects.requireNonNull(id);
-        this.productId = Objects.requireNonNull(productId);
-        this.summaries = Objects.requireNonNull(summaries);
+        this.id = id;
+        this.productId = productId;
+        this.summaries = summaries;
     }
 
     public Optional<String> getAcceptLanguage() {

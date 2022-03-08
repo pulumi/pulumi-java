@@ -76,15 +76,15 @@ public final class GetEndpointVariantResult {
         SystemDataResponse systemData,
         @Nullable Map<String,String> tags,
         String type) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.identity = identity;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
-        this.properties = Objects.requireNonNull(properties);
+        this.name = name;
+        this.properties = properties;
         this.sku = sku;
-        this.systemData = Objects.requireNonNull(systemData);
+        this.systemData = systemData;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

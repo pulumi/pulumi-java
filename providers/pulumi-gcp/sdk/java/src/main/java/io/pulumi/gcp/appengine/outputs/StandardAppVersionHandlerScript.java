@@ -17,7 +17,7 @@ public final class StandardAppVersionHandlerScript {
 
     @OutputCustomType.Constructor({"scriptPath"})
     private StandardAppVersionHandlerScript(String scriptPath) {
-        this.scriptPath = Objects.requireNonNull(scriptPath);
+        this.scriptPath = scriptPath;
     }
 
     /**

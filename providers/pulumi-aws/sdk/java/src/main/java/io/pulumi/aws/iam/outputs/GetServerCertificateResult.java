@@ -41,17 +41,17 @@ public final class GetServerCertificateResult {
         String path,
         @Nullable String pathPrefix,
         String uploadDate) {
-        this.arn = Objects.requireNonNull(arn);
-        this.certificateBody = Objects.requireNonNull(certificateBody);
-        this.certificateChain = Objects.requireNonNull(certificateChain);
-        this.expirationDate = Objects.requireNonNull(expirationDate);
-        this.id = Objects.requireNonNull(id);
+        this.arn = arn;
+        this.certificateBody = certificateBody;
+        this.certificateChain = certificateChain;
+        this.expirationDate = expirationDate;
+        this.id = id;
         this.latest = latest;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.namePrefix = namePrefix;
-        this.path = Objects.requireNonNull(path);
+        this.path = path;
         this.pathPrefix = pathPrefix;
-        this.uploadDate = Objects.requireNonNull(uploadDate);
+        this.uploadDate = uploadDate;
     }
 
     public String getArn() {

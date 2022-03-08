@@ -99,15 +99,15 @@ public final class GetP2sVpnServerConfigurationResult {
         @Nullable String radiusServerSecret,
         @Nullable List<IpsecPolicyResponse> vpnClientIpsecPolicies,
         @Nullable List<String> vpnProtocols) {
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.id = id;
         this.name = name;
-        this.p2SVpnGateways = Objects.requireNonNull(p2SVpnGateways);
+        this.p2SVpnGateways = p2SVpnGateways;
         this.p2SVpnServerConfigRadiusClientRootCertificates = p2SVpnServerConfigRadiusClientRootCertificates;
         this.p2SVpnServerConfigRadiusServerRootCertificates = p2SVpnServerConfigRadiusServerRootCertificates;
         this.p2SVpnServerConfigVpnClientRevokedCertificates = p2SVpnServerConfigVpnClientRevokedCertificates;
         this.p2SVpnServerConfigVpnClientRootCertificates = p2SVpnServerConfigVpnClientRootCertificates;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.radiusServerAddress = radiusServerAddress;
         this.radiusServerSecret = radiusServerSecret;
         this.vpnClientIpsecPolicies = vpnClientIpsecPolicies;

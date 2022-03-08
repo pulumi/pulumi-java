@@ -36,10 +36,10 @@ public final class GetReleaseResult {
         String name,
         String rulesetName,
         String updateTime) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.name = Objects.requireNonNull(name);
-        this.rulesetName = Objects.requireNonNull(rulesetName);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.createTime = createTime;
+        this.name = name;
+        this.rulesetName = rulesetName;
+        this.updateTime = updateTime;
     }
 
     /**

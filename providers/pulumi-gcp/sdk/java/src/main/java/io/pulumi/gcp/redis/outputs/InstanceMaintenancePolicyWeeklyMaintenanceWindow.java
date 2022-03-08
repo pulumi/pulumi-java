@@ -49,9 +49,9 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindow {
         String day,
         @Nullable String duration,
         InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime startTime) {
-        this.day = Objects.requireNonNull(day);
+        this.day = day;
         this.duration = duration;
-        this.startTime = Objects.requireNonNull(startTime);
+        this.startTime = startTime;
     }
 
     /**

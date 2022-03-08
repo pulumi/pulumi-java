@@ -24,8 +24,8 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse {
     private GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse(
         String resourceId,
         String resourceType) {
-        this.resourceId = Objects.requireNonNull(resourceId);
-        this.resourceType = Objects.requireNonNull(resourceType);
+        this.resourceId = resourceId;
+        this.resourceType = resourceType;
     }
 
     /**

@@ -41,16 +41,16 @@ public final class GetRouterResult {
         @Nullable String project,
         @Nullable String region,
         String selfLink) {
-        this.bgps = Objects.requireNonNull(bgps);
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.description = Objects.requireNonNull(description);
-        this.encryptedInterconnectRouter = Objects.requireNonNull(encryptedInterconnectRouter);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.network = Objects.requireNonNull(network);
+        this.bgps = bgps;
+        this.creationTimestamp = creationTimestamp;
+        this.description = description;
+        this.encryptedInterconnectRouter = encryptedInterconnectRouter;
+        this.id = id;
+        this.name = name;
+        this.network = network;
         this.project = project;
         this.region = region;
-        this.selfLink = Objects.requireNonNull(selfLink);
+        this.selfLink = selfLink;
     }
 
     public List<GetRouterBgp> getBgps() {

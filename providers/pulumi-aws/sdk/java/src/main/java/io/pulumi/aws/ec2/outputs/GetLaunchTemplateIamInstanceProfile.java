@@ -24,8 +24,8 @@ public final class GetLaunchTemplateIamInstanceProfile {
     private GetLaunchTemplateIamInstanceProfile(
         String arn,
         String name) {
-        this.arn = Objects.requireNonNull(arn);
-        this.name = Objects.requireNonNull(name);
+        this.arn = arn;
+        this.name = name;
     }
 
     /**

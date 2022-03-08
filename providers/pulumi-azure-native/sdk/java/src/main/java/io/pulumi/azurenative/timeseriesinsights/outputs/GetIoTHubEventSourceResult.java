@@ -107,21 +107,21 @@ public final class GetIoTHubEventSourceResult {
         @Nullable String time,
         @Nullable String timestampPropertyName,
         String type) {
-        this.consumerGroupName = Objects.requireNonNull(consumerGroupName);
-        this.creationTime = Objects.requireNonNull(creationTime);
-        this.eventSourceResourceId = Objects.requireNonNull(eventSourceResourceId);
-        this.id = Objects.requireNonNull(id);
-        this.iotHubName = Objects.requireNonNull(iotHubName);
-        this.keyName = Objects.requireNonNull(keyName);
-        this.kind = Objects.requireNonNull(kind);
+        this.consumerGroupName = consumerGroupName;
+        this.creationTime = creationTime;
+        this.eventSourceResourceId = eventSourceResourceId;
+        this.id = id;
+        this.iotHubName = iotHubName;
+        this.keyName = keyName;
+        this.kind = kind;
         this.localTimestamp = localTimestamp;
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.location = location;
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.tags = tags;
         this.time = time;
         this.timestampPropertyName = timestampPropertyName;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

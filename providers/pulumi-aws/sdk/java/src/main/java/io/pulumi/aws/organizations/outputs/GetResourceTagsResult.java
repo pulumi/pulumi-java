@@ -27,9 +27,9 @@ public final class GetResourceTagsResult {
         String id,
         String resourceId,
         Map<String,String> tags) {
-        this.id = Objects.requireNonNull(id);
-        this.resourceId = Objects.requireNonNull(resourceId);
-        this.tags = Objects.requireNonNull(tags);
+        this.id = id;
+        this.resourceId = resourceId;
+        this.tags = tags;
     }
 
     /**

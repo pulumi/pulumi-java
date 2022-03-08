@@ -43,11 +43,11 @@ public final class GetPolicyTagResult {
         String displayName,
         String name,
         String parentPolicyTag) {
-        this.childPolicyTags = Objects.requireNonNull(childPolicyTags);
-        this.description = Objects.requireNonNull(description);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.name = Objects.requireNonNull(name);
-        this.parentPolicyTag = Objects.requireNonNull(parentPolicyTag);
+        this.childPolicyTags = childPolicyTags;
+        this.description = description;
+        this.displayName = displayName;
+        this.name = name;
+        this.parentPolicyTag = parentPolicyTag;
     }
 
     /**

@@ -26,8 +26,8 @@ public final class Hl7TypesConfigResponse {
     private Hl7TypesConfigResponse(
         List<TypeResponse> type,
         List<VersionSourceResponse> version) {
-        this.type = Objects.requireNonNull(type);
-        this.version = Objects.requireNonNull(version);
+        this.type = type;
+        this.version = version;
     }
 
     /**

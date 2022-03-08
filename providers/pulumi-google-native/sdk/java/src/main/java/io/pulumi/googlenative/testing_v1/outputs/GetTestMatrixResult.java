@@ -98,19 +98,19 @@ public final class GetTestMatrixResult {
         String testMatrixId,
         TestSpecificationResponse testSpecification,
         String timestamp) {
-        this.clientInfo = Objects.requireNonNull(clientInfo);
-        this.environmentMatrix = Objects.requireNonNull(environmentMatrix);
-        this.failFast = Objects.requireNonNull(failFast);
-        this.flakyTestAttempts = Objects.requireNonNull(flakyTestAttempts);
-        this.invalidMatrixDetails = Objects.requireNonNull(invalidMatrixDetails);
-        this.outcomeSummary = Objects.requireNonNull(outcomeSummary);
-        this.project = Objects.requireNonNull(project);
-        this.resultStorage = Objects.requireNonNull(resultStorage);
-        this.state = Objects.requireNonNull(state);
-        this.testExecutions = Objects.requireNonNull(testExecutions);
-        this.testMatrixId = Objects.requireNonNull(testMatrixId);
-        this.testSpecification = Objects.requireNonNull(testSpecification);
-        this.timestamp = Objects.requireNonNull(timestamp);
+        this.clientInfo = clientInfo;
+        this.environmentMatrix = environmentMatrix;
+        this.failFast = failFast;
+        this.flakyTestAttempts = flakyTestAttempts;
+        this.invalidMatrixDetails = invalidMatrixDetails;
+        this.outcomeSummary = outcomeSummary;
+        this.project = project;
+        this.resultStorage = resultStorage;
+        this.state = state;
+        this.testExecutions = testExecutions;
+        this.testMatrixId = testMatrixId;
+        this.testSpecification = testSpecification;
+        this.timestamp = timestamp;
     }
 
     /**

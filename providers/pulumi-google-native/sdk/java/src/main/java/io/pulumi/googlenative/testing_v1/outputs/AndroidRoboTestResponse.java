@@ -65,14 +65,14 @@ public final class AndroidRoboTestResponse {
         String roboMode,
         FileReferenceResponse roboScript,
         List<RoboStartingIntentResponse> startingIntents) {
-        this.appApk = Objects.requireNonNull(appApk);
-        this.appBundle = Objects.requireNonNull(appBundle);
-        this.appInitialActivity = Objects.requireNonNull(appInitialActivity);
-        this.appPackageId = Objects.requireNonNull(appPackageId);
-        this.roboDirectives = Objects.requireNonNull(roboDirectives);
-        this.roboMode = Objects.requireNonNull(roboMode);
-        this.roboScript = Objects.requireNonNull(roboScript);
-        this.startingIntents = Objects.requireNonNull(startingIntents);
+        this.appApk = appApk;
+        this.appBundle = appBundle;
+        this.appInitialActivity = appInitialActivity;
+        this.appPackageId = appPackageId;
+        this.roboDirectives = roboDirectives;
+        this.roboMode = roboMode;
+        this.roboScript = roboScript;
+        this.startingIntents = startingIntents;
     }
 
     /**

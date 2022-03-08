@@ -205,7 +205,7 @@ public final class GetAccessReviewScheduleDefinitionByIdResult {
         String status,
         String type,
         String userPrincipalName) {
-        this.assignmentState = Objects.requireNonNull(assignmentState);
+        this.assignmentState = assignmentState;
         this.autoApplyDecisionsEnabled = autoApplyDecisionsEnabled;
         this.backupReviewers = backupReviewers;
         this.defaultDecision = defaultDecision;
@@ -214,28 +214,28 @@ public final class GetAccessReviewScheduleDefinitionByIdResult {
         this.descriptionForReviewers = descriptionForReviewers;
         this.displayName = displayName;
         this.endDate = endDate;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.inactiveDuration = inactiveDuration;
         this.instanceDurationInDays = instanceDurationInDays;
         this.instances = instances;
         this.interval = interval;
         this.justificationRequiredOnApproval = justificationRequiredOnApproval;
         this.mailNotificationsEnabled = mailNotificationsEnabled;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.numberOfOccurrences = numberOfOccurrences;
-        this.principalId = Objects.requireNonNull(principalId);
-        this.principalName = Objects.requireNonNull(principalName);
-        this.principalType = Objects.requireNonNull(principalType);
+        this.principalId = principalId;
+        this.principalName = principalName;
+        this.principalType = principalType;
         this.recommendationsEnabled = recommendationsEnabled;
         this.reminderNotificationsEnabled = reminderNotificationsEnabled;
-        this.resourceId = Objects.requireNonNull(resourceId);
+        this.resourceId = resourceId;
         this.reviewers = reviewers;
-        this.reviewersType = Objects.requireNonNull(reviewersType);
-        this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId);
+        this.reviewersType = reviewersType;
+        this.roleDefinitionId = roleDefinitionId;
         this.startDate = startDate;
-        this.status = Objects.requireNonNull(status);
-        this.type = Objects.requireNonNull(type);
-        this.userPrincipalName = Objects.requireNonNull(userPrincipalName);
+        this.status = status;
+        this.type = type;
+        this.userPrincipalName = userPrincipalName;
     }
 
     /**

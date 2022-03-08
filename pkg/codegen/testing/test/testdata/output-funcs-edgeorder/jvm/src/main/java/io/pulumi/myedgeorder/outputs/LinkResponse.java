@@ -24,8 +24,8 @@ public final class LinkResponse {
     private LinkResponse(
         String linkType,
         String linkUrl) {
-        this.linkType = Objects.requireNonNull(linkType);
-        this.linkUrl = Objects.requireNonNull(linkUrl);
+        this.linkType = linkType;
+        this.linkUrl = linkUrl;
     }
 
     /**

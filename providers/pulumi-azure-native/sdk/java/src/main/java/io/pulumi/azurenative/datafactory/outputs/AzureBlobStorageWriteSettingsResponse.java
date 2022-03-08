@@ -50,7 +50,7 @@ public final class AzureBlobStorageWriteSettingsResponse {
         this.copyBehavior = copyBehavior;
         this.disableMetricsCollection = disableMetricsCollection;
         this.maxConcurrentConnections = maxConcurrentConnections;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

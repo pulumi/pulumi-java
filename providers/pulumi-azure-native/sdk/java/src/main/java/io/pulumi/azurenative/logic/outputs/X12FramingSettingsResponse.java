@@ -56,13 +56,13 @@ public final class X12FramingSettingsResponse {
         Boolean replaceSeparatorsInPayload,
         Integer segmentTerminator,
         String segmentTerminatorSuffix) {
-        this.characterSet = Objects.requireNonNull(characterSet);
-        this.componentSeparator = Objects.requireNonNull(componentSeparator);
-        this.dataElementSeparator = Objects.requireNonNull(dataElementSeparator);
-        this.replaceCharacter = Objects.requireNonNull(replaceCharacter);
-        this.replaceSeparatorsInPayload = Objects.requireNonNull(replaceSeparatorsInPayload);
-        this.segmentTerminator = Objects.requireNonNull(segmentTerminator);
-        this.segmentTerminatorSuffix = Objects.requireNonNull(segmentTerminatorSuffix);
+        this.characterSet = characterSet;
+        this.componentSeparator = componentSeparator;
+        this.dataElementSeparator = dataElementSeparator;
+        this.replaceCharacter = replaceCharacter;
+        this.replaceSeparatorsInPayload = replaceSeparatorsInPayload;
+        this.segmentTerminator = segmentTerminator;
+        this.segmentTerminatorSuffix = segmentTerminatorSuffix;
     }
 
     /**

@@ -14,7 +14,7 @@ public final class ProviderHubMetadataResponseProviderAuthentication {
 
     @OutputCustomType.Constructor({"allowedAudiences"})
     private ProviderHubMetadataResponseProviderAuthentication(List<String> allowedAudiences) {
-        this.allowedAudiences = Objects.requireNonNull(allowedAudiences);
+        this.allowedAudiences = allowedAudiences;
     }
 
     public List<String> getAllowedAudiences() {

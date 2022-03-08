@@ -18,7 +18,7 @@ public final class ClusterDefaultSnatStatus {
 
     @OutputCustomType.Constructor({"disabled"})
     private ClusterDefaultSnatStatus(Boolean disabled) {
-        this.disabled = Objects.requireNonNull(disabled);
+        this.disabled = disabled;
     }
 
     /**

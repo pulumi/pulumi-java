@@ -24,8 +24,8 @@ public final class RecommendedActionErrorInfoResponse {
     private RecommendedActionErrorInfoResponse(
         String errorCode,
         String isRetryable) {
-        this.errorCode = Objects.requireNonNull(errorCode);
-        this.isRetryable = Objects.requireNonNull(isRetryable);
+        this.errorCode = errorCode;
+        this.isRetryable = isRetryable;
     }
 
     /**

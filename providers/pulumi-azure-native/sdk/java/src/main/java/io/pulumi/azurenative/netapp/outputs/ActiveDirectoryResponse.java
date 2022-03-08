@@ -146,8 +146,8 @@ public final class ActiveDirectoryResponse {
         this.serverRootCACertificate = serverRootCACertificate;
         this.site = site;
         this.smbServerName = smbServerName;
-        this.status = Objects.requireNonNull(status);
-        this.statusDetails = Objects.requireNonNull(statusDetails);
+        this.status = status;
+        this.statusDetails = statusDetails;
         this.username = username;
     }
 

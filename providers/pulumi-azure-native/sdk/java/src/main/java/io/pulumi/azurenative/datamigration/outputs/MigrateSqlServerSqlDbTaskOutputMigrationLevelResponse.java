@@ -115,22 +115,22 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse {
         String statusMessage,
         String targetServerBrandVersion,
         String targetServerVersion) {
-        this.databaseSummary = Objects.requireNonNull(databaseSummary);
-        this.databases = Objects.requireNonNull(databases);
-        this.durationInSeconds = Objects.requireNonNull(durationInSeconds);
-        this.endedOn = Objects.requireNonNull(endedOn);
-        this.exceptionsAndWarnings = Objects.requireNonNull(exceptionsAndWarnings);
-        this.id = Objects.requireNonNull(id);
-        this.message = Objects.requireNonNull(message);
-        this.migrationReport = Objects.requireNonNull(migrationReport);
-        this.resultType = Objects.requireNonNull(resultType);
-        this.sourceServerBrandVersion = Objects.requireNonNull(sourceServerBrandVersion);
-        this.sourceServerVersion = Objects.requireNonNull(sourceServerVersion);
-        this.startedOn = Objects.requireNonNull(startedOn);
-        this.status = Objects.requireNonNull(status);
-        this.statusMessage = Objects.requireNonNull(statusMessage);
-        this.targetServerBrandVersion = Objects.requireNonNull(targetServerBrandVersion);
-        this.targetServerVersion = Objects.requireNonNull(targetServerVersion);
+        this.databaseSummary = databaseSummary;
+        this.databases = databases;
+        this.durationInSeconds = durationInSeconds;
+        this.endedOn = endedOn;
+        this.exceptionsAndWarnings = exceptionsAndWarnings;
+        this.id = id;
+        this.message = message;
+        this.migrationReport = migrationReport;
+        this.resultType = resultType;
+        this.sourceServerBrandVersion = sourceServerBrandVersion;
+        this.sourceServerVersion = sourceServerVersion;
+        this.startedOn = startedOn;
+        this.status = status;
+        this.statusMessage = statusMessage;
+        this.targetServerBrandVersion = targetServerBrandVersion;
+        this.targetServerVersion = targetServerVersion;
     }
 
     /**

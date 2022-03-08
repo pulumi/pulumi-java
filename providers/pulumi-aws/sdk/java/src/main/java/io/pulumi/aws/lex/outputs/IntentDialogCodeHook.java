@@ -26,8 +26,8 @@ public final class IntentDialogCodeHook {
     private IntentDialogCodeHook(
         String messageVersion,
         String uri) {
-        this.messageVersion = Objects.requireNonNull(messageVersion);
-        this.uri = Objects.requireNonNull(uri);
+        this.messageVersion = messageVersion;
+        this.uri = uri;
     }
 
     /**

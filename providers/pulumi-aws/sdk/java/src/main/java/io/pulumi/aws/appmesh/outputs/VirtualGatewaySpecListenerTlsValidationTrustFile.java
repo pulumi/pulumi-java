@@ -17,7 +17,7 @@ public final class VirtualGatewaySpecListenerTlsValidationTrustFile {
 
     @OutputCustomType.Constructor({"certificateChain"})
     private VirtualGatewaySpecListenerTlsValidationTrustFile(String certificateChain) {
-        this.certificateChain = Objects.requireNonNull(certificateChain);
+        this.certificateChain = certificateChain;
     }
 
     /**

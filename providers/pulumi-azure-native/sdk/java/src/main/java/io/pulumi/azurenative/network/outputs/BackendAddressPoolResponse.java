@@ -84,17 +84,17 @@ public final class BackendAddressPoolResponse {
         List<SubResourceResponse> outboundRules,
         String provisioningState,
         String type) {
-        this.backendIPConfigurations = Objects.requireNonNull(backendIPConfigurations);
-        this.etag = Objects.requireNonNull(etag);
+        this.backendIPConfigurations = backendIPConfigurations;
+        this.etag = etag;
         this.id = id;
         this.loadBalancerBackendAddresses = loadBalancerBackendAddresses;
-        this.loadBalancingRules = Objects.requireNonNull(loadBalancingRules);
+        this.loadBalancingRules = loadBalancingRules;
         this.location = location;
         this.name = name;
-        this.outboundRule = Objects.requireNonNull(outboundRule);
-        this.outboundRules = Objects.requireNonNull(outboundRules);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.type = Objects.requireNonNull(type);
+        this.outboundRule = outboundRule;
+        this.outboundRules = outboundRules;
+        this.provisioningState = provisioningState;
+        this.type = type;
     }
 
     /**

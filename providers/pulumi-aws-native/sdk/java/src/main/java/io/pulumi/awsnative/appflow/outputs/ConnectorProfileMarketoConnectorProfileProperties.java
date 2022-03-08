@@ -17,7 +17,7 @@ public final class ConnectorProfileMarketoConnectorProfileProperties {
 
     @OutputCustomType.Constructor({"instanceUrl"})
     private ConnectorProfileMarketoConnectorProfileProperties(String instanceUrl) {
-        this.instanceUrl = Objects.requireNonNull(instanceUrl);
+        this.instanceUrl = instanceUrl;
     }
 
     /**

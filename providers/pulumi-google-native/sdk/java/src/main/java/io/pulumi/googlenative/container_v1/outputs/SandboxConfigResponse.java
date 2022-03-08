@@ -17,7 +17,7 @@ public final class SandboxConfigResponse {
 
     @OutputCustomType.Constructor({"type"})
     private SandboxConfigResponse(String type) {
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

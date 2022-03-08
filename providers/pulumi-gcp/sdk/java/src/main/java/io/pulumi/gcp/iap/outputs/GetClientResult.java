@@ -26,11 +26,11 @@ public final class GetClientResult {
         String displayName,
         String id,
         String secret) {
-        this.brand = Objects.requireNonNull(brand);
-        this.clientId = Objects.requireNonNull(clientId);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.id = Objects.requireNonNull(id);
-        this.secret = Objects.requireNonNull(secret);
+        this.brand = brand;
+        this.clientId = clientId;
+        this.displayName = displayName;
+        this.id = id;
+        this.secret = secret;
     }
 
     public String getBrand() {

@@ -30,9 +30,9 @@ public final class ScaleCapacityResponse {
         String $default,
         String maximum,
         String minimum) {
-        this.$default = Objects.requireNonNull($default);
-        this.maximum = Objects.requireNonNull(maximum);
-        this.minimum = Objects.requireNonNull(minimum);
+        this.$default = $default;
+        this.maximum = maximum;
+        this.minimum = minimum;
     }
 
     /**

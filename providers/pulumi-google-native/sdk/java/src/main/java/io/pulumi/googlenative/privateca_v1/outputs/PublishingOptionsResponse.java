@@ -24,8 +24,8 @@ public final class PublishingOptionsResponse {
     private PublishingOptionsResponse(
         Boolean publishCaCert,
         Boolean publishCrl) {
-        this.publishCaCert = Objects.requireNonNull(publishCaCert);
-        this.publishCrl = Objects.requireNonNull(publishCrl);
+        this.publishCaCert = publishCaCert;
+        this.publishCrl = publishCrl;
     }
 
     /**

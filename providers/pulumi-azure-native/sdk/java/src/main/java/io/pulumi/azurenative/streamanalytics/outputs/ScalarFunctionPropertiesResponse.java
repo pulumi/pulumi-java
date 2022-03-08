@@ -52,10 +52,10 @@ public final class ScalarFunctionPropertiesResponse {
         @Nullable FunctionOutputResponse output,
         String type) {
         this.binding = binding;
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.inputs = inputs;
         this.output = output;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

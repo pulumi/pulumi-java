@@ -102,19 +102,19 @@ public final class GetInvitationResult {
         String userEmail,
         String userName) {
         this.expirationDate = expirationDate;
-        this.id = Objects.requireNonNull(id);
-        this.invitationId = Objects.requireNonNull(invitationId);
-        this.invitationStatus = Objects.requireNonNull(invitationStatus);
-        this.name = Objects.requireNonNull(name);
-        this.respondedAt = Objects.requireNonNull(respondedAt);
-        this.sentAt = Objects.requireNonNull(sentAt);
-        this.systemData = Objects.requireNonNull(systemData);
+        this.id = id;
+        this.invitationId = invitationId;
+        this.invitationStatus = invitationStatus;
+        this.name = name;
+        this.respondedAt = respondedAt;
+        this.sentAt = sentAt;
+        this.systemData = systemData;
         this.targetActiveDirectoryId = targetActiveDirectoryId;
         this.targetEmail = targetEmail;
         this.targetObjectId = targetObjectId;
-        this.type = Objects.requireNonNull(type);
-        this.userEmail = Objects.requireNonNull(userEmail);
-        this.userName = Objects.requireNonNull(userName);
+        this.type = type;
+        this.userEmail = userEmail;
+        this.userName = userName;
     }
 
     /**

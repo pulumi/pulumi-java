@@ -27,7 +27,7 @@ public final class GlobalTableTargetTrackingScalingPolicyConfiguration {
         this.disableScaleIn = disableScaleIn;
         this.scaleInCooldown = scaleInCooldown;
         this.scaleOutCooldown = scaleOutCooldown;
-        this.targetValue = Objects.requireNonNull(targetValue);
+        this.targetValue = targetValue;
     }
 
     public Optional<Boolean> getDisableScaleIn() {

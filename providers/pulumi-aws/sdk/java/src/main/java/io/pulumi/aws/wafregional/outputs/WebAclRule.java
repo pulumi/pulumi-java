@@ -50,8 +50,8 @@ public final class WebAclRule {
         @Nullable String type) {
         this.action = action;
         this.overrideAction = overrideAction;
-        this.priority = Objects.requireNonNull(priority);
-        this.ruleId = Objects.requireNonNull(ruleId);
+        this.priority = priority;
+        this.ruleId = ruleId;
         this.type = type;
     }
 

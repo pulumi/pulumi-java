@@ -32,9 +32,9 @@ public final class GetRegionInstanceGroupInstance {
         String instance,
         List<GetRegionInstanceGroupInstanceNamedPort> namedPorts,
         String status) {
-        this.instance = Objects.requireNonNull(instance);
-        this.namedPorts = Objects.requireNonNull(namedPorts);
-        this.status = Objects.requireNonNull(status);
+        this.instance = instance;
+        this.namedPorts = namedPorts;
+        this.status = status;
     }
 
     /**

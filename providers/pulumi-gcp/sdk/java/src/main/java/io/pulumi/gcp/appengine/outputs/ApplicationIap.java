@@ -42,8 +42,8 @@ public final class ApplicationIap {
         String oauth2ClientSecret,
         @Nullable String oauth2ClientSecretSha256) {
         this.enabled = enabled;
-        this.oauth2ClientId = Objects.requireNonNull(oauth2ClientId);
-        this.oauth2ClientSecret = Objects.requireNonNull(oauth2ClientSecret);
+        this.oauth2ClientId = oauth2ClientId;
+        this.oauth2ClientSecret = oauth2ClientSecret;
         this.oauth2ClientSecretSha256 = oauth2ClientSecretSha256;
     }
 

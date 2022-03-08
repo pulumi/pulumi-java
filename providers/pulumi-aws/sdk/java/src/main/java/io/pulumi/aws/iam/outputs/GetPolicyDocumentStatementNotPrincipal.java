@@ -25,8 +25,8 @@ public final class GetPolicyDocumentStatementNotPrincipal {
     private GetPolicyDocumentStatementNotPrincipal(
         List<String> identifiers,
         String type) {
-        this.identifiers = Objects.requireNonNull(identifiers);
-        this.type = Objects.requireNonNull(type);
+        this.identifiers = identifiers;
+        this.type = type;
     }
 
     /**

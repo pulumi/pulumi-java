@@ -43,11 +43,11 @@ public final class ErrorResponse {
         String errorUuid,
         String message,
         String reason) {
-        this.details = Objects.requireNonNull(details);
-        this.errorTime = Objects.requireNonNull(errorTime);
-        this.errorUuid = Objects.requireNonNull(errorUuid);
-        this.message = Objects.requireNonNull(message);
-        this.reason = Objects.requireNonNull(reason);
+        this.details = details;
+        this.errorTime = errorTime;
+        this.errorUuid = errorUuid;
+        this.message = message;
+        this.reason = reason;
     }
 
     /**

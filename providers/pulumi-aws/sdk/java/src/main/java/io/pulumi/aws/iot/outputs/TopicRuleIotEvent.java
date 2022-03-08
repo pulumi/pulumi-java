@@ -32,9 +32,9 @@ public final class TopicRuleIotEvent {
         String inputName,
         @Nullable String messageId,
         String roleArn) {
-        this.inputName = Objects.requireNonNull(inputName);
+        this.inputName = inputName;
         this.messageId = messageId;
-        this.roleArn = Objects.requireNonNull(roleArn);
+        this.roleArn = roleArn;
     }
 
     /**

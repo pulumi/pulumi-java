@@ -31,9 +31,9 @@ public final class UsageRuleResponse {
         Boolean allowUnregisteredCalls,
         String selector,
         Boolean skipServiceControl) {
-        this.allowUnregisteredCalls = Objects.requireNonNull(allowUnregisteredCalls);
-        this.selector = Objects.requireNonNull(selector);
-        this.skipServiceControl = Objects.requireNonNull(skipServiceControl);
+        this.allowUnregisteredCalls = allowUnregisteredCalls;
+        this.selector = selector;
+        this.skipServiceControl = skipServiceControl;
     }
 
     /**

@@ -24,8 +24,8 @@ public final class KeyVaultReferenceResponse {
     private KeyVaultReferenceResponse(
         String id,
         String url) {
-        this.id = Objects.requireNonNull(id);
-        this.url = Objects.requireNonNull(url);
+        this.id = id;
+        this.url = url;
     }
 
     /**

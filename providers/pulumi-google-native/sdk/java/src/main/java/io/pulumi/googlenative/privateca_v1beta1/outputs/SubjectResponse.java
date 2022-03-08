@@ -54,13 +54,13 @@ public final class SubjectResponse {
         String postalCode,
         String province,
         String streetAddress) {
-        this.countryCode = Objects.requireNonNull(countryCode);
-        this.locality = Objects.requireNonNull(locality);
-        this.organization = Objects.requireNonNull(organization);
-        this.organizationalUnit = Objects.requireNonNull(organizationalUnit);
-        this.postalCode = Objects.requireNonNull(postalCode);
-        this.province = Objects.requireNonNull(province);
-        this.streetAddress = Objects.requireNonNull(streetAddress);
+        this.countryCode = countryCode;
+        this.locality = locality;
+        this.organization = organization;
+        this.organizationalUnit = organizationalUnit;
+        this.postalCode = postalCode;
+        this.province = province;
+        this.streetAddress = streetAddress;
     }
 
     /**

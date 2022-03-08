@@ -30,9 +30,9 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseRespon
         String displayText,
         String ssml,
         String textToSpeech) {
-        this.displayText = Objects.requireNonNull(displayText);
-        this.ssml = Objects.requireNonNull(ssml);
-        this.textToSpeech = Objects.requireNonNull(textToSpeech);
+        this.displayText = displayText;
+        this.ssml = ssml;
+        this.textToSpeech = textToSpeech;
     }
 
     /**

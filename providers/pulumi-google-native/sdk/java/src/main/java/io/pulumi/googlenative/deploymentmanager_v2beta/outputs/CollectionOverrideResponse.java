@@ -25,8 +25,8 @@ public final class CollectionOverrideResponse {
     private CollectionOverrideResponse(
         String collection,
         OptionsResponse options) {
-        this.collection = Objects.requireNonNull(collection);
-        this.options = Objects.requireNonNull(options);
+        this.collection = collection;
+        this.options = options;
     }
 
     /**

@@ -24,8 +24,8 @@ public final class ReturnShippingResponse {
     private ReturnShippingResponse(
         String carrierAccountNumber,
         String carrierName) {
-        this.carrierAccountNumber = Objects.requireNonNull(carrierAccountNumber);
-        this.carrierName = Objects.requireNonNull(carrierName);
+        this.carrierAccountNumber = carrierAccountNumber;
+        this.carrierName = carrierName;
     }
 
     /**

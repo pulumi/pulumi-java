@@ -17,7 +17,7 @@ public final class GooglePrivacyDlpV2ReplaceValueConfigResponse {
 
     @OutputCustomType.Constructor({"newValue"})
     private GooglePrivacyDlpV2ReplaceValueConfigResponse(GooglePrivacyDlpV2ValueResponse newValue) {
-        this.newValue = Objects.requireNonNull(newValue);
+        this.newValue = newValue;
     }
 
     /**

@@ -29,7 +29,7 @@ public final class ListBotConnectionServiceProvidersResult {
         @Nullable String nextLink,
         List<ServiceProviderResponse> value) {
         this.nextLink = nextLink;
-        this.value = Objects.requireNonNull(value);
+        this.value = value;
     }
 
     /**

@@ -24,8 +24,8 @@ public final class ExternalProtectionLevelOptionsResponse {
     private ExternalProtectionLevelOptionsResponse(
         String ekmConnectionKeyPath,
         String externalKeyUri) {
-        this.ekmConnectionKeyPath = Objects.requireNonNull(ekmConnectionKeyPath);
-        this.externalKeyUri = Objects.requireNonNull(externalKeyUri);
+        this.ekmConnectionKeyPath = ekmConnectionKeyPath;
+        this.externalKeyUri = externalKeyUri;
     }
 
     /**

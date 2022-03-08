@@ -32,9 +32,9 @@ public final class BigtableOptionsResponse {
         List<BigtableColumnFamilyResponse> columnFamilies,
         Boolean ignoreUnspecifiedColumnFamilies,
         Boolean readRowkeyAsString) {
-        this.columnFamilies = Objects.requireNonNull(columnFamilies);
-        this.ignoreUnspecifiedColumnFamilies = Objects.requireNonNull(ignoreUnspecifiedColumnFamilies);
-        this.readRowkeyAsString = Objects.requireNonNull(readRowkeyAsString);
+        this.columnFamilies = columnFamilies;
+        this.ignoreUnspecifiedColumnFamilies = ignoreUnspecifiedColumnFamilies;
+        this.readRowkeyAsString = readRowkeyAsString;
     }
 
     /**

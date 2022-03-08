@@ -82,8 +82,8 @@ public final class VideoOverlayResponse {
         this.end = end;
         this.fadeInDuration = fadeInDuration;
         this.fadeOutDuration = fadeOutDuration;
-        this.inputLabel = Objects.requireNonNull(inputLabel);
-        this.odataType = Objects.requireNonNull(odataType);
+        this.inputLabel = inputLabel;
+        this.odataType = odataType;
         this.opacity = opacity;
         this.position = position;
         this.start = start;

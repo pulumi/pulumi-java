@@ -17,7 +17,7 @@ public final class NotificationConfigResponse {
 
     @OutputCustomType.Constructor({"pubsubTopic"})
     private NotificationConfigResponse(String pubsubTopic) {
-        this.pubsubTopic = Objects.requireNonNull(pubsubTopic);
+        this.pubsubTopic = pubsubTopic;
     }
 
     /**

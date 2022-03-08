@@ -128,7 +128,7 @@ public final class NetworkInterfaceIPConfigurationResponse {
         @Nullable List<VirtualNetworkTapResponse> virtualNetworkTaps) {
         this.applicationGatewayBackendAddressPools = applicationGatewayBackendAddressPools;
         this.applicationSecurityGroups = applicationSecurityGroups;
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.id = id;
         this.loadBalancerBackendAddressPools = loadBalancerBackendAddressPools;
         this.loadBalancerInboundNatRules = loadBalancerInboundNatRules;
@@ -137,8 +137,8 @@ public final class NetworkInterfaceIPConfigurationResponse {
         this.privateIPAddress = privateIPAddress;
         this.privateIPAddressVersion = privateIPAddressVersion;
         this.privateIPAllocationMethod = privateIPAllocationMethod;
-        this.privateLinkConnectionProperties = Objects.requireNonNull(privateLinkConnectionProperties);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.privateLinkConnectionProperties = privateLinkConnectionProperties;
+        this.provisioningState = provisioningState;
         this.publicIPAddress = publicIPAddress;
         this.subnet = subnet;
         this.type = type;

@@ -45,10 +45,10 @@ public final class ReceiptRuleS3Action {
         @Nullable String objectKeyPrefix,
         Integer position,
         @Nullable String topicArn) {
-        this.bucketName = Objects.requireNonNull(bucketName);
+        this.bucketName = bucketName;
         this.kmsKeyArn = kmsKeyArn;
         this.objectKeyPrefix = objectKeyPrefix;
-        this.position = Objects.requireNonNull(position);
+        this.position = position;
         this.topicArn = topicArn;
     }
 

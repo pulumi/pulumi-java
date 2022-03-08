@@ -154,29 +154,29 @@ public final class GetSnapshotResult {
         String storageBytes,
         String storageBytesStatus,
         List<String> storageLocations) {
-        this.autoCreated = Objects.requireNonNull(autoCreated);
-        this.chainName = Objects.requireNonNull(chainName);
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.description = Objects.requireNonNull(description);
-        this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
-        this.downloadBytes = Objects.requireNonNull(downloadBytes);
-        this.kind = Objects.requireNonNull(kind);
-        this.labelFingerprint = Objects.requireNonNull(labelFingerprint);
-        this.labels = Objects.requireNonNull(labels);
-        this.licenseCodes = Objects.requireNonNull(licenseCodes);
-        this.licenses = Objects.requireNonNull(licenses);
-        this.locationHint = Objects.requireNonNull(locationHint);
-        this.name = Objects.requireNonNull(name);
-        this.satisfiesPzs = Objects.requireNonNull(satisfiesPzs);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.snapshotEncryptionKey = Objects.requireNonNull(snapshotEncryptionKey);
-        this.sourceDisk = Objects.requireNonNull(sourceDisk);
-        this.sourceDiskEncryptionKey = Objects.requireNonNull(sourceDiskEncryptionKey);
-        this.sourceDiskId = Objects.requireNonNull(sourceDiskId);
-        this.status = Objects.requireNonNull(status);
-        this.storageBytes = Objects.requireNonNull(storageBytes);
-        this.storageBytesStatus = Objects.requireNonNull(storageBytesStatus);
-        this.storageLocations = Objects.requireNonNull(storageLocations);
+        this.autoCreated = autoCreated;
+        this.chainName = chainName;
+        this.creationTimestamp = creationTimestamp;
+        this.description = description;
+        this.diskSizeGb = diskSizeGb;
+        this.downloadBytes = downloadBytes;
+        this.kind = kind;
+        this.labelFingerprint = labelFingerprint;
+        this.labels = labels;
+        this.licenseCodes = licenseCodes;
+        this.licenses = licenses;
+        this.locationHint = locationHint;
+        this.name = name;
+        this.satisfiesPzs = satisfiesPzs;
+        this.selfLink = selfLink;
+        this.snapshotEncryptionKey = snapshotEncryptionKey;
+        this.sourceDisk = sourceDisk;
+        this.sourceDiskEncryptionKey = sourceDiskEncryptionKey;
+        this.sourceDiskId = sourceDiskId;
+        this.status = status;
+        this.storageBytes = storageBytes;
+        this.storageBytesStatus = storageBytesStatus;
+        this.storageLocations = storageLocations;
     }
 
     /**

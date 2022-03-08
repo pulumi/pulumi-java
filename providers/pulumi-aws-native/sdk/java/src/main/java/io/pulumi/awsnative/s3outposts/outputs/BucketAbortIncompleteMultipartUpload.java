@@ -17,7 +17,7 @@ public final class BucketAbortIncompleteMultipartUpload {
 
     @OutputCustomType.Constructor({"daysAfterInitiation"})
     private BucketAbortIncompleteMultipartUpload(Integer daysAfterInitiation) {
-        this.daysAfterInitiation = Objects.requireNonNull(daysAfterInitiation);
+        this.daysAfterInitiation = daysAfterInitiation;
     }
 
     /**

@@ -25,8 +25,8 @@ public final class CardinalityResponse {
     private CardinalityResponse(
         Integer number,
         String path) {
-        this.number = Objects.requireNonNull(number);
-        this.path = Objects.requireNonNull(path);
+        this.number = number;
+        this.path = path;
     }
 
     /**

@@ -24,8 +24,8 @@ public final class KpiAliasResponse {
     private KpiAliasResponse(
         String aliasName,
         String expression) {
-        this.aliasName = Objects.requireNonNull(aliasName);
-        this.expression = Objects.requireNonNull(expression);
+        this.aliasName = aliasName;
+        this.expression = expression;
     }
 
     /**

@@ -52,12 +52,12 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigResponse {
         String dataType,
         GoogleCloudDatalabelingV1beta1GcsSourceResponse gcsSource,
         GoogleCloudDatalabelingV1beta1TextMetadataResponse textMetadata) {
-        this.annotationType = Objects.requireNonNull(annotationType);
-        this.bigquerySource = Objects.requireNonNull(bigquerySource);
-        this.classificationMetadata = Objects.requireNonNull(classificationMetadata);
-        this.dataType = Objects.requireNonNull(dataType);
-        this.gcsSource = Objects.requireNonNull(gcsSource);
-        this.textMetadata = Objects.requireNonNull(textMetadata);
+        this.annotationType = annotationType;
+        this.bigquerySource = bigquerySource;
+        this.classificationMetadata = classificationMetadata;
+        this.dataType = dataType;
+        this.gcsSource = gcsSource;
+        this.textMetadata = textMetadata;
     }
 
     /**

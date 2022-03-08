@@ -33,9 +33,9 @@ public final class GetLocalGatewayRouteTablesResult {
         List<String> ids,
         Map<String,String> tags) {
         this.filters = filters;
-        this.id = Objects.requireNonNull(id);
-        this.ids = Objects.requireNonNull(ids);
-        this.tags = Objects.requireNonNull(tags);
+        this.id = id;
+        this.ids = ids;
+        this.tags = tags;
     }
 
     public List<GetLocalGatewayRouteTablesFilter> getFilters() {

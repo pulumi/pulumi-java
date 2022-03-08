@@ -33,7 +33,7 @@ public final class DnsConfigResponse {
         String fqdn,
         @Nullable String relativeName,
         @Nullable Double ttl) {
-        this.fqdn = Objects.requireNonNull(fqdn);
+        this.fqdn = fqdn;
         this.relativeName = relativeName;
         this.ttl = ttl;
     }

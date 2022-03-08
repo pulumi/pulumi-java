@@ -21,8 +21,8 @@ public final class TopicRuleStepFunctionsAction {
         String roleArn,
         String stateMachineName) {
         this.executionNamePrefix = executionNamePrefix;
-        this.roleArn = Objects.requireNonNull(roleArn);
-        this.stateMachineName = Objects.requireNonNull(stateMachineName);
+        this.roleArn = roleArn;
+        this.stateMachineName = stateMachineName;
     }
 
     public Optional<String> getExecutionNamePrefix() {

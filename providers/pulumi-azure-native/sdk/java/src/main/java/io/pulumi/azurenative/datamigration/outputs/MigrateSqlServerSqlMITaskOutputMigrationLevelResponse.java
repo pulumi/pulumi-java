@@ -120,23 +120,23 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse {
         String status,
         String targetServerBrandVersion,
         String targetServerVersion) {
-        this.agentJobs = Objects.requireNonNull(agentJobs);
-        this.databases = Objects.requireNonNull(databases);
-        this.endedOn = Objects.requireNonNull(endedOn);
-        this.exceptionsAndWarnings = Objects.requireNonNull(exceptionsAndWarnings);
-        this.id = Objects.requireNonNull(id);
-        this.logins = Objects.requireNonNull(logins);
-        this.message = Objects.requireNonNull(message);
-        this.orphanedUsersInfo = Objects.requireNonNull(orphanedUsersInfo);
-        this.resultType = Objects.requireNonNull(resultType);
-        this.serverRoleResults = Objects.requireNonNull(serverRoleResults);
-        this.sourceServerBrandVersion = Objects.requireNonNull(sourceServerBrandVersion);
-        this.sourceServerVersion = Objects.requireNonNull(sourceServerVersion);
-        this.startedOn = Objects.requireNonNull(startedOn);
-        this.state = Objects.requireNonNull(state);
-        this.status = Objects.requireNonNull(status);
-        this.targetServerBrandVersion = Objects.requireNonNull(targetServerBrandVersion);
-        this.targetServerVersion = Objects.requireNonNull(targetServerVersion);
+        this.agentJobs = agentJobs;
+        this.databases = databases;
+        this.endedOn = endedOn;
+        this.exceptionsAndWarnings = exceptionsAndWarnings;
+        this.id = id;
+        this.logins = logins;
+        this.message = message;
+        this.orphanedUsersInfo = orphanedUsersInfo;
+        this.resultType = resultType;
+        this.serverRoleResults = serverRoleResults;
+        this.sourceServerBrandVersion = sourceServerBrandVersion;
+        this.sourceServerVersion = sourceServerVersion;
+        this.startedOn = startedOn;
+        this.state = state;
+        this.status = status;
+        this.targetServerBrandVersion = targetServerBrandVersion;
+        this.targetServerVersion = targetServerVersion;
     }
 
     /**

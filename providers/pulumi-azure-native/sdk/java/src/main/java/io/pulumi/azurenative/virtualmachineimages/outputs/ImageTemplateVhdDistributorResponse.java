@@ -34,8 +34,8 @@ public final class ImageTemplateVhdDistributorResponse {
         String runOutputName,
         String type) {
         this.artifactTags = artifactTags;
-        this.runOutputName = Objects.requireNonNull(runOutputName);
-        this.type = Objects.requireNonNull(type);
+        this.runOutputName = runOutputName;
+        this.type = type;
     }
 
     /**

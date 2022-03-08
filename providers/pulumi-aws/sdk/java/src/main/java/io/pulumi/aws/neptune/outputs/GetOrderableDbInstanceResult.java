@@ -126,28 +126,28 @@ public final class GetOrderableDbInstanceResult {
         Boolean supportsPerformanceInsights,
         Boolean supportsStorageEncryption,
         Boolean vpc) {
-        this.availabilityZones = Objects.requireNonNull(availabilityZones);
+        this.availabilityZones = availabilityZones;
         this.engine = engine;
-        this.engineVersion = Objects.requireNonNull(engineVersion);
-        this.id = Objects.requireNonNull(id);
-        this.instanceClass = Objects.requireNonNull(instanceClass);
+        this.engineVersion = engineVersion;
+        this.id = id;
+        this.instanceClass = instanceClass;
         this.licenseModel = licenseModel;
-        this.maxIopsPerDbInstance = Objects.requireNonNull(maxIopsPerDbInstance);
-        this.maxIopsPerGib = Objects.requireNonNull(maxIopsPerGib);
-        this.maxStorageSize = Objects.requireNonNull(maxStorageSize);
-        this.minIopsPerDbInstance = Objects.requireNonNull(minIopsPerDbInstance);
-        this.minIopsPerGib = Objects.requireNonNull(minIopsPerGib);
-        this.minStorageSize = Objects.requireNonNull(minStorageSize);
-        this.multiAzCapable = Objects.requireNonNull(multiAzCapable);
+        this.maxIopsPerDbInstance = maxIopsPerDbInstance;
+        this.maxIopsPerGib = maxIopsPerGib;
+        this.maxStorageSize = maxStorageSize;
+        this.minIopsPerDbInstance = minIopsPerDbInstance;
+        this.minIopsPerGib = minIopsPerGib;
+        this.minStorageSize = minStorageSize;
+        this.multiAzCapable = multiAzCapable;
         this.preferredInstanceClasses = preferredInstanceClasses;
-        this.readReplicaCapable = Objects.requireNonNull(readReplicaCapable);
-        this.storageType = Objects.requireNonNull(storageType);
-        this.supportsEnhancedMonitoring = Objects.requireNonNull(supportsEnhancedMonitoring);
-        this.supportsIamDatabaseAuthentication = Objects.requireNonNull(supportsIamDatabaseAuthentication);
-        this.supportsIops = Objects.requireNonNull(supportsIops);
-        this.supportsPerformanceInsights = Objects.requireNonNull(supportsPerformanceInsights);
-        this.supportsStorageEncryption = Objects.requireNonNull(supportsStorageEncryption);
-        this.vpc = Objects.requireNonNull(vpc);
+        this.readReplicaCapable = readReplicaCapable;
+        this.storageType = storageType;
+        this.supportsEnhancedMonitoring = supportsEnhancedMonitoring;
+        this.supportsIamDatabaseAuthentication = supportsIamDatabaseAuthentication;
+        this.supportsIops = supportsIops;
+        this.supportsPerformanceInsights = supportsPerformanceInsights;
+        this.supportsStorageEncryption = supportsStorageEncryption;
+        this.vpc = vpc;
     }
 
     /**

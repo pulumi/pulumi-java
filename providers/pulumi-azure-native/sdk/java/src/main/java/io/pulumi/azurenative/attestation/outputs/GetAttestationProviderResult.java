@@ -79,15 +79,15 @@ public final class GetAttestationProviderResult {
         @Nullable String trustModel,
         String type) {
         this.attestUri = attestUri;
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
+        this.id = id;
+        this.location = location;
+        this.name = name;
+        this.privateEndpointConnections = privateEndpointConnections;
         this.status = status;
-        this.systemData = Objects.requireNonNull(systemData);
+        this.systemData = systemData;
         this.tags = tags;
         this.trustModel = trustModel;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

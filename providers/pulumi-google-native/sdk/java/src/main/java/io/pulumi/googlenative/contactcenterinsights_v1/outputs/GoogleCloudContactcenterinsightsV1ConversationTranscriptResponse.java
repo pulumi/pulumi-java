@@ -18,7 +18,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptRespo
 
     @OutputCustomType.Constructor({"transcriptSegments"})
     private GoogleCloudContactcenterinsightsV1ConversationTranscriptResponse(List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse> transcriptSegments) {
-        this.transcriptSegments = Objects.requireNonNull(transcriptSegments);
+        this.transcriptSegments = transcriptSegments;
     }
 
     /**

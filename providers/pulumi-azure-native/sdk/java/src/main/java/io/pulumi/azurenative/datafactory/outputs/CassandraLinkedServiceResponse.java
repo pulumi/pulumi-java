@@ -94,11 +94,11 @@ public final class CassandraLinkedServiceResponse {
         this.connectVia = connectVia;
         this.description = description;
         this.encryptedCredential = encryptedCredential;
-        this.host = Objects.requireNonNull(host);
+        this.host = host;
         this.parameters = parameters;
         this.password = password;
         this.port = port;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.username = username;
     }
 

@@ -22,7 +22,7 @@ public final class DatasetAction {
         String actionName,
         @Nullable DatasetContainerAction containerAction,
         @Nullable DatasetQueryAction queryAction) {
-        this.actionName = Objects.requireNonNull(actionName);
+        this.actionName = actionName;
         this.containerAction = containerAction;
         this.queryAction = queryAction;
     }

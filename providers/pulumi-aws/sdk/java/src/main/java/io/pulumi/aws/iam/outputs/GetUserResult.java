@@ -55,13 +55,13 @@ public final class GetUserResult {
         Map<String,String> tags,
         String userId,
         String userName) {
-        this.arn = Objects.requireNonNull(arn);
-        this.id = Objects.requireNonNull(id);
-        this.path = Objects.requireNonNull(path);
-        this.permissionsBoundary = Objects.requireNonNull(permissionsBoundary);
-        this.tags = Objects.requireNonNull(tags);
-        this.userId = Objects.requireNonNull(userId);
-        this.userName = Objects.requireNonNull(userName);
+        this.arn = arn;
+        this.id = id;
+        this.path = path;
+        this.permissionsBoundary = permissionsBoundary;
+        this.tags = tags;
+        this.userId = userId;
+        this.userName = userName;
     }
 
     /**

@@ -77,7 +77,7 @@ public final class SnowflakeSinkResponse {
         this.preCopyScript = preCopyScript;
         this.sinkRetryCount = sinkRetryCount;
         this.sinkRetryWait = sinkRetryWait;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.writeBatchSize = writeBatchSize;
         this.writeBatchTimeout = writeBatchTimeout;
     }

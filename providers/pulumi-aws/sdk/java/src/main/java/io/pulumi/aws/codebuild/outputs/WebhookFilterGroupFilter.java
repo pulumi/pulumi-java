@@ -34,8 +34,8 @@ public final class WebhookFilterGroupFilter {
         String pattern,
         String type) {
         this.excludeMatchedPattern = excludeMatchedPattern;
-        this.pattern = Objects.requireNonNull(pattern);
-        this.type = Objects.requireNonNull(type);
+        this.pattern = pattern;
+        this.type = type;
     }
 
     /**

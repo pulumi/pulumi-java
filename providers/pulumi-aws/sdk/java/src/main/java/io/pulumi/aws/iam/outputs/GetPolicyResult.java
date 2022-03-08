@@ -57,15 +57,15 @@ public final class GetPolicyResult {
         String policy,
         String policyId,
         Map<String,String> tags) {
-        this.arn = Objects.requireNonNull(arn);
-        this.description = Objects.requireNonNull(description);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.path = Objects.requireNonNull(path);
+        this.arn = arn;
+        this.description = description;
+        this.id = id;
+        this.name = name;
+        this.path = path;
         this.pathPrefix = pathPrefix;
-        this.policy = Objects.requireNonNull(policy);
-        this.policyId = Objects.requireNonNull(policyId);
-        this.tags = Objects.requireNonNull(tags);
+        this.policy = policy;
+        this.policyId = policyId;
+        this.tags = tags;
     }
 
     public String getArn() {

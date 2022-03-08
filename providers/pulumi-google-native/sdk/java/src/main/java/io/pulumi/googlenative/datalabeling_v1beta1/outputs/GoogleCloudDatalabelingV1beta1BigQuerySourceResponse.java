@@ -17,7 +17,7 @@ public final class GoogleCloudDatalabelingV1beta1BigQuerySourceResponse {
 
     @OutputCustomType.Constructor({"inputUri"})
     private GoogleCloudDatalabelingV1beta1BigQuerySourceResponse(String inputUri) {
-        this.inputUri = Objects.requireNonNull(inputUri);
+        this.inputUri = inputUri;
     }
 
     /**

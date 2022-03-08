@@ -85,12 +85,12 @@ public final class AzureDatabricksDeltaLakeDatasetResponse {
         this.database = database;
         this.description = description;
         this.folder = folder;
-        this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
+        this.linkedServiceName = linkedServiceName;
         this.parameters = parameters;
         this.schema = schema;
         this.structure = structure;
         this.table = table;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

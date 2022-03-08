@@ -24,8 +24,8 @@ public final class KpiExtractResponse {
     private KpiExtractResponse(
         String expression,
         String extractName) {
-        this.expression = Objects.requireNonNull(expression);
-        this.extractName = Objects.requireNonNull(extractName);
+        this.expression = expression;
+        this.extractName = extractName;
     }
 
     /**

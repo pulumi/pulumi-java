@@ -25,8 +25,8 @@ public final class GoogleCloudDialogflowCxV3ResponseMessagePlayAudioResponse {
     private GoogleCloudDialogflowCxV3ResponseMessagePlayAudioResponse(
         Boolean allowPlaybackInterruption,
         String audioUri) {
-        this.allowPlaybackInterruption = Objects.requireNonNull(allowPlaybackInterruption);
-        this.audioUri = Objects.requireNonNull(audioUri);
+        this.allowPlaybackInterruption = allowPlaybackInterruption;
+        this.audioUri = audioUri;
     }
 
     /**

@@ -36,7 +36,7 @@ public final class PermissionsTable {
         @Nullable String name,
         @Nullable Boolean wildcard) {
         this.catalogId = catalogId;
-        this.databaseName = Objects.requireNonNull(databaseName);
+        this.databaseName = databaseName;
         this.name = name;
         this.wildcard = wildcard;
     }

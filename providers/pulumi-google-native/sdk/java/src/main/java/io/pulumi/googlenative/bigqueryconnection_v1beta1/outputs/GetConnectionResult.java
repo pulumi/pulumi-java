@@ -56,13 +56,13 @@ public final class GetConnectionResult {
         Boolean hasCredential,
         String lastModifiedTime,
         String name) {
-        this.cloudSql = Objects.requireNonNull(cloudSql);
-        this.creationTime = Objects.requireNonNull(creationTime);
-        this.description = Objects.requireNonNull(description);
-        this.friendlyName = Objects.requireNonNull(friendlyName);
-        this.hasCredential = Objects.requireNonNull(hasCredential);
-        this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
-        this.name = Objects.requireNonNull(name);
+        this.cloudSql = cloudSql;
+        this.creationTime = creationTime;
+        this.description = description;
+        this.friendlyName = friendlyName;
+        this.hasCredential = hasCredential;
+        this.lastModifiedTime = lastModifiedTime;
+        this.name = name;
     }
 
     /**

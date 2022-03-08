@@ -51,12 +51,12 @@ public final class DenylistCustomAlertRuleResponse {
         Boolean isEnabled,
         String ruleType,
         String valueType) {
-        this.denylistValues = Objects.requireNonNull(denylistValues);
-        this.description = Objects.requireNonNull(description);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.isEnabled = Objects.requireNonNull(isEnabled);
-        this.ruleType = Objects.requireNonNull(ruleType);
-        this.valueType = Objects.requireNonNull(valueType);
+        this.denylistValues = denylistValues;
+        this.description = description;
+        this.displayName = displayName;
+        this.isEnabled = isEnabled;
+        this.ruleType = ruleType;
+        this.valueType = valueType;
     }
 
     /**

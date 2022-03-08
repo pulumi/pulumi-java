@@ -43,7 +43,7 @@ public final class QuickConnectQuickConnectConfig {
         @Nullable List<QuickConnectQuickConnectConfigUserConfig> userConfigs) {
         this.phoneConfigs = phoneConfigs;
         this.queueConfigs = queueConfigs;
-        this.quickConnectType = Objects.requireNonNull(quickConnectType);
+        this.quickConnectType = quickConnectType;
         this.userConfigs = userConfigs;
     }
 

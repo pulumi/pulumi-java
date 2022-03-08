@@ -17,7 +17,7 @@ public final class ClusterNotificationConfig {
 
     @OutputCustomType.Constructor({"pubsub"})
     private ClusterNotificationConfig(ClusterNotificationConfigPubsub pubsub) {
-        this.pubsub = Objects.requireNonNull(pubsub);
+        this.pubsub = pubsub;
     }
 
     /**

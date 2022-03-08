@@ -32,11 +32,11 @@ public final class GetGroupResult {
         String groupId,
         String id,
         String identityStoreId) {
-        this.displayName = Objects.requireNonNull(displayName);
-        this.filters = Objects.requireNonNull(filters);
-        this.groupId = Objects.requireNonNull(groupId);
-        this.id = Objects.requireNonNull(id);
-        this.identityStoreId = Objects.requireNonNull(identityStoreId);
+        this.displayName = displayName;
+        this.filters = filters;
+        this.groupId = groupId;
+        this.id = id;
+        this.identityStoreId = identityStoreId;
     }
 
     /**

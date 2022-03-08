@@ -154,26 +154,26 @@ public final class GetKpiResult {
         String type,
         @Nullable String unit) {
         this.aliases = aliases;
-        this.calculationWindow = Objects.requireNonNull(calculationWindow);
+        this.calculationWindow = calculationWindow;
         this.calculationWindowFieldName = calculationWindowFieldName;
         this.description = description;
         this.displayName = displayName;
-        this.entityType = Objects.requireNonNull(entityType);
-        this.entityTypeName = Objects.requireNonNull(entityTypeName);
-        this.expression = Objects.requireNonNull(expression);
+        this.entityType = entityType;
+        this.entityTypeName = entityTypeName;
+        this.expression = expression;
         this.extracts = extracts;
         this.filter = filter;
-        this.function = Objects.requireNonNull(function);
+        this.function = function;
         this.groupBy = groupBy;
-        this.groupByMetadata = Objects.requireNonNull(groupByMetadata);
-        this.id = Objects.requireNonNull(id);
-        this.kpiName = Objects.requireNonNull(kpiName);
-        this.name = Objects.requireNonNull(name);
-        this.participantProfilesMetadata = Objects.requireNonNull(participantProfilesMetadata);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.tenantId = Objects.requireNonNull(tenantId);
+        this.groupByMetadata = groupByMetadata;
+        this.id = id;
+        this.kpiName = kpiName;
+        this.name = name;
+        this.participantProfilesMetadata = participantProfilesMetadata;
+        this.provisioningState = provisioningState;
+        this.tenantId = tenantId;
         this.thresHolds = thresHolds;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.unit = unit;
     }
 

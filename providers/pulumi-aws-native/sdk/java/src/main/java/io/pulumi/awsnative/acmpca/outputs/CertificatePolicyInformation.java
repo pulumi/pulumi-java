@@ -19,7 +19,7 @@ public final class CertificatePolicyInformation {
     private CertificatePolicyInformation(
         String certPolicyId,
         @Nullable List<CertificatePolicyQualifierInfo> policyQualifiers) {
-        this.certPolicyId = Objects.requireNonNull(certPolicyId);
+        this.certPolicyId = certPolicyId;
         this.policyQualifiers = policyQualifiers;
     }
 

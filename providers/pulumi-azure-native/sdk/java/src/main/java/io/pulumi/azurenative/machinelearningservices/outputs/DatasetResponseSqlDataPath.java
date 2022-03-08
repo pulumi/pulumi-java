@@ -37,10 +37,10 @@ public final class DatasetResponseSqlDataPath {
         String sqlQuery,
         String sqlStoredProcedureName,
         String sqlTableName) {
-        this.queryTimeout = Objects.requireNonNull(queryTimeout);
-        this.sqlQuery = Objects.requireNonNull(sqlQuery);
-        this.sqlStoredProcedureName = Objects.requireNonNull(sqlStoredProcedureName);
-        this.sqlTableName = Objects.requireNonNull(sqlTableName);
+        this.queryTimeout = queryTimeout;
+        this.sqlQuery = sqlQuery;
+        this.sqlStoredProcedureName = sqlStoredProcedureName;
+        this.sqlTableName = sqlTableName;
     }
 
     /**

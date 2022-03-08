@@ -63,14 +63,14 @@ public final class GetCloudEdgeManagementRoleResult {
         String roleStatus,
         SystemDataResponse systemData,
         String type) {
-        this.edgeProfile = Objects.requireNonNull(edgeProfile);
-        this.id = Objects.requireNonNull(id);
-        this.kind = Objects.requireNonNull(kind);
-        this.localManagementStatus = Objects.requireNonNull(localManagementStatus);
-        this.name = Objects.requireNonNull(name);
-        this.roleStatus = Objects.requireNonNull(roleStatus);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.edgeProfile = edgeProfile;
+        this.id = id;
+        this.kind = kind;
+        this.localManagementStatus = localManagementStatus;
+        this.name = name;
+        this.roleStatus = roleStatus;
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

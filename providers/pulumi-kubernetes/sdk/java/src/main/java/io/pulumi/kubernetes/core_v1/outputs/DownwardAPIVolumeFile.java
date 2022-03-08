@@ -43,7 +43,7 @@ public final class DownwardAPIVolumeFile {
         @Nullable ResourceFieldSelector resourceFieldRef) {
         this.fieldRef = fieldRef;
         this.mode = mode;
-        this.path = Objects.requireNonNull(path);
+        this.path = path;
         this.resourceFieldRef = resourceFieldRef;
     }
 

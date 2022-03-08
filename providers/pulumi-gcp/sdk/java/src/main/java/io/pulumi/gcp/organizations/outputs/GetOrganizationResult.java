@@ -54,13 +54,13 @@ public final class GetOrganizationResult {
         String name,
         String orgId,
         @Nullable String organization) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.directoryCustomerId = Objects.requireNonNull(directoryCustomerId);
-        this.domain = Objects.requireNonNull(domain);
-        this.id = Objects.requireNonNull(id);
-        this.lifecycleState = Objects.requireNonNull(lifecycleState);
-        this.name = Objects.requireNonNull(name);
-        this.orgId = Objects.requireNonNull(orgId);
+        this.createTime = createTime;
+        this.directoryCustomerId = directoryCustomerId;
+        this.domain = domain;
+        this.id = id;
+        this.lifecycleState = lifecycleState;
+        this.name = name;
+        this.orgId = orgId;
         this.organization = organization;
     }
 

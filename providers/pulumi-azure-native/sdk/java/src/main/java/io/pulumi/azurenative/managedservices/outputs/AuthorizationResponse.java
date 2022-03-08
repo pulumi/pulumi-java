@@ -40,9 +40,9 @@ public final class AuthorizationResponse {
         @Nullable String principalIdDisplayName,
         String roleDefinitionId) {
         this.delegatedRoleDefinitionIds = delegatedRoleDefinitionIds;
-        this.principalId = Objects.requireNonNull(principalId);
+        this.principalId = principalId;
         this.principalIdDisplayName = principalIdDisplayName;
-        this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId);
+        this.roleDefinitionId = roleDefinitionId;
     }
 
     /**

@@ -31,9 +31,9 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardRes
         GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse cardContent,
         String cardOrientation,
         String thumbnailImageAlignment) {
-        this.cardContent = Objects.requireNonNull(cardContent);
-        this.cardOrientation = Objects.requireNonNull(cardOrientation);
-        this.thumbnailImageAlignment = Objects.requireNonNull(thumbnailImageAlignment);
+        this.cardContent = cardContent;
+        this.cardOrientation = cardOrientation;
+        this.thumbnailImageAlignment = thumbnailImageAlignment;
     }
 
     /**

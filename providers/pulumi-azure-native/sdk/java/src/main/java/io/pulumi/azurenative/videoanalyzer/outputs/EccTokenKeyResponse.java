@@ -43,11 +43,11 @@ public final class EccTokenKeyResponse {
         String type,
         String x,
         String y) {
-        this.alg = Objects.requireNonNull(alg);
-        this.kid = Objects.requireNonNull(kid);
-        this.type = Objects.requireNonNull(type);
-        this.x = Objects.requireNonNull(x);
-        this.y = Objects.requireNonNull(y);
+        this.alg = alg;
+        this.kid = kid;
+        this.type = type;
+        this.x = x;
+        this.y = y;
     }
 
     /**

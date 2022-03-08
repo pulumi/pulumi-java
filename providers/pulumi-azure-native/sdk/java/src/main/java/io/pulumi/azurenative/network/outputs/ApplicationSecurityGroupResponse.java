@@ -63,14 +63,14 @@ public final class ApplicationSecurityGroupResponse {
         String resourceGuid,
         @Nullable Map<String,String> tags,
         String type) {
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.id = id;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.resourceGuid = Objects.requireNonNull(resourceGuid);
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.resourceGuid = resourceGuid;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

@@ -42,11 +42,11 @@ public final class PublicAdvertisedPrefixPublicDelegatedPrefixResponse {
         String project,
         String region,
         String status) {
-        this.ipRange = Objects.requireNonNull(ipRange);
-        this.name = Objects.requireNonNull(name);
-        this.project = Objects.requireNonNull(project);
-        this.region = Objects.requireNonNull(region);
-        this.status = Objects.requireNonNull(status);
+        this.ipRange = ipRange;
+        this.name = name;
+        this.project = project;
+        this.region = region;
+        this.status = status;
     }
 
     /**

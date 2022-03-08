@@ -22,8 +22,8 @@ public final class GetPipelineDefinitionParameterObject {
     private GetPipelineDefinitionParameterObject(
         List<GetPipelineDefinitionParameterObjectAttribute> attributes,
         String id) {
-        this.attributes = Objects.requireNonNull(attributes);
-        this.id = Objects.requireNonNull(id);
+        this.attributes = attributes;
+        this.id = id;
     }
 
     public List<GetPipelineDefinitionParameterObjectAttribute> getAttributes() {

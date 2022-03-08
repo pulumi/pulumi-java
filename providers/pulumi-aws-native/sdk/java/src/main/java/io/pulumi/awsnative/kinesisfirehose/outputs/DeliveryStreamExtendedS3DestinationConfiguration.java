@@ -49,7 +49,7 @@ public final class DeliveryStreamExtendedS3DestinationConfiguration {
         String roleARN,
         @Nullable DeliveryStreamS3DestinationConfiguration s3BackupConfiguration,
         @Nullable DeliveryStreamExtendedS3DestinationConfigurationS3BackupMode s3BackupMode) {
-        this.bucketARN = Objects.requireNonNull(bucketARN);
+        this.bucketARN = bucketARN;
         this.bufferingHints = bufferingHints;
         this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
         this.compressionFormat = compressionFormat;
@@ -59,7 +59,7 @@ public final class DeliveryStreamExtendedS3DestinationConfiguration {
         this.errorOutputPrefix = errorOutputPrefix;
         this.prefix = prefix;
         this.processingConfiguration = processingConfiguration;
-        this.roleARN = Objects.requireNonNull(roleARN);
+        this.roleARN = roleARN;
         this.s3BackupConfiguration = s3BackupConfiguration;
         this.s3BackupMode = s3BackupMode;
     }

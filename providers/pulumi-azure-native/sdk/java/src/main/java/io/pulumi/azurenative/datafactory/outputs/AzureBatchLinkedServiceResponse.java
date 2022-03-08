@@ -98,17 +98,17 @@ public final class AzureBatchLinkedServiceResponse {
         Object poolName,
         String type) {
         this.accessKey = accessKey;
-        this.accountName = Objects.requireNonNull(accountName);
+        this.accountName = accountName;
         this.annotations = annotations;
-        this.batchUri = Objects.requireNonNull(batchUri);
+        this.batchUri = batchUri;
         this.connectVia = connectVia;
         this.credential = credential;
         this.description = description;
         this.encryptedCredential = encryptedCredential;
-        this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
+        this.linkedServiceName = linkedServiceName;
         this.parameters = parameters;
-        this.poolName = Objects.requireNonNull(poolName);
-        this.type = Objects.requireNonNull(type);
+        this.poolName = poolName;
+        this.type = type;
     }
 
     /**

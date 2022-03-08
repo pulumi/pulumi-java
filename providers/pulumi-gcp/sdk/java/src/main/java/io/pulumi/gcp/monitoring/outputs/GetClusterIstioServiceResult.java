@@ -40,16 +40,16 @@ public final class GetClusterIstioServiceResult {
         String serviceName,
         String serviceNamespace,
         List<GetClusterIstioServiceTelemetry> telemetries) {
-        this.clusterName = Objects.requireNonNull(clusterName);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
+        this.clusterName = clusterName;
+        this.displayName = displayName;
+        this.id = id;
+        this.location = location;
+        this.name = name;
         this.project = project;
-        this.serviceId = Objects.requireNonNull(serviceId);
-        this.serviceName = Objects.requireNonNull(serviceName);
-        this.serviceNamespace = Objects.requireNonNull(serviceNamespace);
-        this.telemetries = Objects.requireNonNull(telemetries);
+        this.serviceId = serviceId;
+        this.serviceName = serviceName;
+        this.serviceNamespace = serviceNamespace;
+        this.telemetries = telemetries;
     }
 
     public String getClusterName() {

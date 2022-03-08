@@ -21,8 +21,8 @@ public final class FlowS3SourceProperties {
         String bucketName,
         String bucketPrefix,
         @Nullable FlowS3InputFormatConfig s3InputFormatConfig) {
-        this.bucketName = Objects.requireNonNull(bucketName);
-        this.bucketPrefix = Objects.requireNonNull(bucketPrefix);
+        this.bucketName = bucketName;
+        this.bucketPrefix = bucketPrefix;
         this.s3InputFormatConfig = s3InputFormatConfig;
     }
 

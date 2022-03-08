@@ -30,9 +30,9 @@ public final class GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecResponse 
         String dataset,
         String shardCount,
         String tablePrefix) {
-        this.dataset = Objects.requireNonNull(dataset);
-        this.shardCount = Objects.requireNonNull(shardCount);
-        this.tablePrefix = Objects.requireNonNull(tablePrefix);
+        this.dataset = dataset;
+        this.shardCount = shardCount;
+        this.tablePrefix = tablePrefix;
     }
 
     /**

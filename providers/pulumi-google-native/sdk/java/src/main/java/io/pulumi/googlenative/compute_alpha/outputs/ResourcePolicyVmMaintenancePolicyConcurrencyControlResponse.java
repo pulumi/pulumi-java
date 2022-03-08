@@ -13,7 +13,7 @@ public final class ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse {
 
     @OutputCustomType.Constructor({"concurrencyLimit"})
     private ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse(Integer concurrencyLimit) {
-        this.concurrencyLimit = Objects.requireNonNull(concurrencyLimit);
+        this.concurrencyLimit = concurrencyLimit;
     }
 
     public Integer getConcurrencyLimit() {

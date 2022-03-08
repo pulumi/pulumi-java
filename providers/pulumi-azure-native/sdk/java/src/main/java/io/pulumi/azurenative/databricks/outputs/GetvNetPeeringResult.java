@@ -101,13 +101,13 @@ public final class GetvNetPeeringResult {
         this.allowVirtualNetworkAccess = allowVirtualNetworkAccess;
         this.databricksAddressSpace = databricksAddressSpace;
         this.databricksVirtualNetwork = databricksVirtualNetwork;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.peeringState = Objects.requireNonNull(peeringState);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.id = id;
+        this.name = name;
+        this.peeringState = peeringState;
+        this.provisioningState = provisioningState;
         this.remoteAddressSpace = remoteAddressSpace;
-        this.remoteVirtualNetwork = Objects.requireNonNull(remoteVirtualNetwork);
-        this.type = Objects.requireNonNull(type);
+        this.remoteVirtualNetwork = remoteVirtualNetwork;
+        this.type = type;
         this.useRemoteGateways = useRemoteGateways;
     }
 

@@ -17,8 +17,8 @@ public final class GetClusterNetworkPolicy {
     private GetClusterNetworkPolicy(
         Boolean enabled,
         String provider) {
-        this.enabled = Objects.requireNonNull(enabled);
-        this.provider = Objects.requireNonNull(provider);
+        this.enabled = enabled;
+        this.provider = provider;
     }
 
     public Boolean getEnabled() {

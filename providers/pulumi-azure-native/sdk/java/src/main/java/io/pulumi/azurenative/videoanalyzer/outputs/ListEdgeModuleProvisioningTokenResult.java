@@ -24,8 +24,8 @@ public final class ListEdgeModuleProvisioningTokenResult {
     private ListEdgeModuleProvisioningTokenResult(
         String expirationDate,
         String token) {
-        this.expirationDate = Objects.requireNonNull(expirationDate);
-        this.token = Objects.requireNonNull(token);
+        this.expirationDate = expirationDate;
+        this.token = token;
     }
 
     /**

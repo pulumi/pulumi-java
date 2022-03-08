@@ -83,16 +83,16 @@ public final class GetServiceResult {
         String type,
         String virtualSubnetId) {
         this.etag = etag;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.kind = kind;
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.location = location;
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.publicKey = publicKey;
         this.sku = sku;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
-        this.virtualSubnetId = Objects.requireNonNull(virtualSubnetId);
+        this.type = type;
+        this.virtualSubnetId = virtualSubnetId;
     }
 
     /**

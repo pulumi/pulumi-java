@@ -31,9 +31,9 @@ public final class RecordAlias {
         Boolean evaluateTargetHealth,
         String name,
         String zoneId) {
-        this.evaluateTargetHealth = Objects.requireNonNull(evaluateTargetHealth);
-        this.name = Objects.requireNonNull(name);
-        this.zoneId = Objects.requireNonNull(zoneId);
+        this.evaluateTargetHealth = evaluateTargetHealth;
+        this.name = name;
+        this.zoneId = zoneId;
     }
 
     /**

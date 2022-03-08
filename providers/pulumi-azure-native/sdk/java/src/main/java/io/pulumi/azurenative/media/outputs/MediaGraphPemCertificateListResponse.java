@@ -26,8 +26,8 @@ public final class MediaGraphPemCertificateListResponse {
     private MediaGraphPemCertificateListResponse(
         List<String> certificates,
         String odataType) {
-        this.certificates = Objects.requireNonNull(certificates);
-        this.odataType = Objects.requireNonNull(odataType);
+        this.certificates = certificates;
+        this.odataType = odataType;
     }
 
     /**

@@ -17,7 +17,7 @@ public final class CustomerManagedEncryptionResponse {
 
     @OutputCustomType.Constructor({"kmsKeyName"})
     private CustomerManagedEncryptionResponse(String kmsKeyName) {
-        this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
+        this.kmsKeyName = kmsKeyName;
     }
 
     /**

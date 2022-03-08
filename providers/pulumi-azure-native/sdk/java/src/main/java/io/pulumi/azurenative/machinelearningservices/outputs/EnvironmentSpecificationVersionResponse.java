@@ -73,7 +73,7 @@ public final class EnvironmentSpecificationVersionResponse {
         this.condaFile = condaFile;
         this.description = description;
         this.docker = docker;
-        this.environmentSpecificationType = Objects.requireNonNull(environmentSpecificationType);
+        this.environmentSpecificationType = environmentSpecificationType;
         this.inferenceContainerProperties = inferenceContainerProperties;
         this.isAnonymous = isAnonymous;
         this.properties = properties;

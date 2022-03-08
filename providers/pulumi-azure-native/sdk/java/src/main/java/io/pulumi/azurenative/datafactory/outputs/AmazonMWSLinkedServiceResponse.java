@@ -113,18 +113,18 @@ public final class AmazonMWSLinkedServiceResponse {
         @Nullable Object useEncryptedEndpoints,
         @Nullable Object useHostVerification,
         @Nullable Object usePeerVerification) {
-        this.accessKeyId = Objects.requireNonNull(accessKeyId);
+        this.accessKeyId = accessKeyId;
         this.annotations = annotations;
         this.connectVia = connectVia;
         this.description = description;
         this.encryptedCredential = encryptedCredential;
-        this.endpoint = Objects.requireNonNull(endpoint);
-        this.marketplaceID = Objects.requireNonNull(marketplaceID);
+        this.endpoint = endpoint;
+        this.marketplaceID = marketplaceID;
         this.mwsAuthToken = mwsAuthToken;
         this.parameters = parameters;
         this.secretKey = secretKey;
-        this.sellerID = Objects.requireNonNull(sellerID);
-        this.type = Objects.requireNonNull(type);
+        this.sellerID = sellerID;
+        this.type = type;
         this.useEncryptedEndpoints = useEncryptedEndpoints;
         this.useHostVerification = useHostVerification;
         this.usePeerVerification = usePeerVerification;

@@ -18,7 +18,7 @@ public final class TestTargetsForShardResponse {
 
     @OutputCustomType.Constructor({"testTargets"})
     private TestTargetsForShardResponse(List<String> testTargets) {
-        this.testTargets = Objects.requireNonNull(testTargets);
+        this.testTargets = testTargets;
     }
 
     /**

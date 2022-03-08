@@ -19,9 +19,9 @@ public final class ModelDefinitionModelOptionsResponse {
         List<String> labels,
         String lossType,
         String modelType) {
-        this.labels = Objects.requireNonNull(labels);
-        this.lossType = Objects.requireNonNull(lossType);
-        this.modelType = Objects.requireNonNull(modelType);
+        this.labels = labels;
+        this.lossType = lossType;
+        this.modelType = modelType;
     }
 
     public List<String> getLabels() {

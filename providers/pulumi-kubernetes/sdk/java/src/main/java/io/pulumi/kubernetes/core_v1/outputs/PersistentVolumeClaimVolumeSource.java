@@ -27,7 +27,7 @@ public final class PersistentVolumeClaimVolumeSource {
     private PersistentVolumeClaimVolumeSource(
         String claimName,
         @Nullable Boolean readOnly) {
-        this.claimName = Objects.requireNonNull(claimName);
+        this.claimName = claimName;
         this.readOnly = readOnly;
     }
 

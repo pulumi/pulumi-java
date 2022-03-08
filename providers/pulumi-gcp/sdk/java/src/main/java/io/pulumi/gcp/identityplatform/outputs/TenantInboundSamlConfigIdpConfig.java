@@ -42,10 +42,10 @@ public final class TenantInboundSamlConfigIdpConfig {
         String idpEntityId,
         @Nullable Boolean signRequest,
         String ssoUrl) {
-        this.idpCertificates = Objects.requireNonNull(idpCertificates);
-        this.idpEntityId = Objects.requireNonNull(idpEntityId);
+        this.idpCertificates = idpCertificates;
+        this.idpEntityId = idpEntityId;
         this.signRequest = signRequest;
-        this.ssoUrl = Objects.requireNonNull(ssoUrl);
+        this.ssoUrl = ssoUrl;
     }
 
     /**

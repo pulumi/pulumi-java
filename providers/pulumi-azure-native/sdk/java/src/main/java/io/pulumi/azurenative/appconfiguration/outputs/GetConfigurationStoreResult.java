@@ -98,19 +98,19 @@ public final class GetConfigurationStoreResult {
         SkuResponse sku,
         @Nullable Map<String,String> tags,
         String type) {
-        this.creationDate = Objects.requireNonNull(creationDate);
+        this.creationDate = creationDate;
         this.encryption = encryption;
-        this.endpoint = Objects.requireNonNull(endpoint);
-        this.id = Objects.requireNonNull(id);
+        this.endpoint = endpoint;
+        this.id = id;
         this.identity = identity;
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.location = location;
+        this.name = name;
+        this.privateEndpointConnections = privateEndpointConnections;
+        this.provisioningState = provisioningState;
         this.publicNetworkAccess = publicNetworkAccess;
-        this.sku = Objects.requireNonNull(sku);
+        this.sku = sku;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

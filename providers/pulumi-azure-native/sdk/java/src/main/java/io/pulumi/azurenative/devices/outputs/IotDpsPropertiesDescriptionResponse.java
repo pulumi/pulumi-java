@@ -87,14 +87,14 @@ public final class IotDpsPropertiesDescriptionResponse {
         @Nullable String state) {
         this.allocationPolicy = allocationPolicy;
         this.authorizationPolicies = authorizationPolicies;
-        this.deviceProvisioningHostName = Objects.requireNonNull(deviceProvisioningHostName);
-        this.idScope = Objects.requireNonNull(idScope);
+        this.deviceProvisioningHostName = deviceProvisioningHostName;
+        this.idScope = idScope;
         this.iotHubs = iotHubs;
         this.ipFilterRules = ipFilterRules;
         this.privateEndpointConnections = privateEndpointConnections;
         this.provisioningState = provisioningState;
         this.publicNetworkAccess = publicNetworkAccess;
-        this.serviceOperationsHostName = Objects.requireNonNull(serviceOperationsHostName);
+        this.serviceOperationsHostName = serviceOperationsHostName;
         this.state = state;
     }
 

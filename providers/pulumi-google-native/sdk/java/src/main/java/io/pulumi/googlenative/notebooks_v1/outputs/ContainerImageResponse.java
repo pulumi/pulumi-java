@@ -24,8 +24,8 @@ public final class ContainerImageResponse {
     private ContainerImageResponse(
         String repository,
         String tag) {
-        this.repository = Objects.requireNonNull(repository);
-        this.tag = Objects.requireNonNull(tag);
+        this.repository = repository;
+        this.tag = tag;
     }
 
     /**

@@ -24,7 +24,7 @@ public final class StreamingImageEncryptionConfiguration {
         @Nullable String keyArn,
         StreamingImageEncryptionConfigurationKeyType keyType) {
         this.keyArn = keyArn;
-        this.keyType = Objects.requireNonNull(keyType);
+        this.keyType = keyType;
     }
 
     /**

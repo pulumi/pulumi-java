@@ -17,7 +17,7 @@ public final class WrappingPublicKeyResponse {
 
     @OutputCustomType.Constructor({"pem"})
     private WrappingPublicKeyResponse(String pem) {
-        this.pem = Objects.requireNonNull(pem);
+        this.pem = pem;
     }
 
     /**

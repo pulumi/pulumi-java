@@ -24,8 +24,8 @@ public final class TimeSpanResponse {
     private TimeSpanResponse(
         String endTime,
         String startTime) {
-        this.endTime = Objects.requireNonNull(endTime);
-        this.startTime = Objects.requireNonNull(startTime);
+        this.endTime = endTime;
+        this.startTime = startTime;
     }
 
     /**

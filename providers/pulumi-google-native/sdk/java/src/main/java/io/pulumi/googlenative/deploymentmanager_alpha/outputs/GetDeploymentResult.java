@@ -97,19 +97,19 @@ public final class GetDeploymentResult {
         TargetConfigurationResponse target,
         DeploymentUpdateResponse update,
         String updateTime) {
-        this.credential = Objects.requireNonNull(credential);
-        this.description = Objects.requireNonNull(description);
-        this.fingerprint = Objects.requireNonNull(fingerprint);
-        this.insertTime = Objects.requireNonNull(insertTime);
-        this.labels = Objects.requireNonNull(labels);
-        this.manifest = Objects.requireNonNull(manifest);
-        this.name = Objects.requireNonNull(name);
-        this.operation = Objects.requireNonNull(operation);
-        this.outputs = Objects.requireNonNull(outputs);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.target = Objects.requireNonNull(target);
-        this.update = Objects.requireNonNull(update);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.credential = credential;
+        this.description = description;
+        this.fingerprint = fingerprint;
+        this.insertTime = insertTime;
+        this.labels = labels;
+        this.manifest = manifest;
+        this.name = name;
+        this.operation = operation;
+        this.outputs = outputs;
+        this.selfLink = selfLink;
+        this.target = target;
+        this.update = update;
+        this.updateTime = updateTime;
     }
 
     /**

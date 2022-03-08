@@ -43,16 +43,16 @@ public final class GetObjectSignedUrlResult {
         String id,
         String path,
         String signedUrl) {
-        this.bucket = Objects.requireNonNull(bucket);
+        this.bucket = bucket;
         this.contentMd5 = contentMd5;
         this.contentType = contentType;
         this.credentials = credentials;
         this.duration = duration;
         this.extensionHeaders = extensionHeaders;
         this.httpMethod = httpMethod;
-        this.id = Objects.requireNonNull(id);
-        this.path = Objects.requireNonNull(path);
-        this.signedUrl = Objects.requireNonNull(signedUrl);
+        this.id = id;
+        this.path = path;
+        this.signedUrl = signedUrl;
     }
 
     public String getBucket() {

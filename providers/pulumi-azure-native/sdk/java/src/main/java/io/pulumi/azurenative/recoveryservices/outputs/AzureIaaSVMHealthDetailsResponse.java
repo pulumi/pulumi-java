@@ -38,10 +38,10 @@ public final class AzureIaaSVMHealthDetailsResponse {
         String message,
         List<String> recommendations,
         String title) {
-        this.code = Objects.requireNonNull(code);
-        this.message = Objects.requireNonNull(message);
-        this.recommendations = Objects.requireNonNull(recommendations);
-        this.title = Objects.requireNonNull(title);
+        this.code = code;
+        this.message = message;
+        this.recommendations = recommendations;
+        this.title = title;
     }
 
     /**

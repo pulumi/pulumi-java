@@ -17,7 +17,7 @@ public final class GooglePrivacyDlpV2CloudStorageFileSetResponse {
 
     @OutputCustomType.Constructor({"url"})
     private GooglePrivacyDlpV2CloudStorageFileSetResponse(String url) {
-        this.url = Objects.requireNonNull(url);
+        this.url = url;
     }
 
     /**

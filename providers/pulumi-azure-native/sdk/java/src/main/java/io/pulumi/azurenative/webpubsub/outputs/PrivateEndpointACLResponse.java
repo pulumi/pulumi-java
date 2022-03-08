@@ -34,7 +34,7 @@ public final class PrivateEndpointACLResponse {
         String name) {
         this.allow = allow;
         this.deny = deny;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

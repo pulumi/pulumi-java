@@ -76,16 +76,16 @@ public final class GetJobTriggerResult {
         String status,
         List<GooglePrivacyDlpV2TriggerResponse> triggers,
         String updateTime) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.description = Objects.requireNonNull(description);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.errors = Objects.requireNonNull(errors);
-        this.inspectJob = Objects.requireNonNull(inspectJob);
-        this.lastRunTime = Objects.requireNonNull(lastRunTime);
-        this.name = Objects.requireNonNull(name);
-        this.status = Objects.requireNonNull(status);
-        this.triggers = Objects.requireNonNull(triggers);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.createTime = createTime;
+        this.description = description;
+        this.displayName = displayName;
+        this.errors = errors;
+        this.inspectJob = inspectJob;
+        this.lastRunTime = lastRunTime;
+        this.name = name;
+        this.status = status;
+        this.triggers = triggers;
+        this.updateTime = updateTime;
     }
 
     /**

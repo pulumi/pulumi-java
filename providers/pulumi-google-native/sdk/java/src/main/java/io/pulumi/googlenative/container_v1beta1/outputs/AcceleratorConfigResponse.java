@@ -30,9 +30,9 @@ public final class AcceleratorConfigResponse {
         String acceleratorCount,
         String acceleratorType,
         String gpuPartitionSize) {
-        this.acceleratorCount = Objects.requireNonNull(acceleratorCount);
-        this.acceleratorType = Objects.requireNonNull(acceleratorType);
-        this.gpuPartitionSize = Objects.requireNonNull(gpuPartitionSize);
+        this.acceleratorCount = acceleratorCount;
+        this.acceleratorType = acceleratorType;
+        this.gpuPartitionSize = gpuPartitionSize;
     }
 
     /**

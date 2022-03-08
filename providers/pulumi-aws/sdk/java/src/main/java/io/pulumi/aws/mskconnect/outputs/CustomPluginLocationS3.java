@@ -32,8 +32,8 @@ public final class CustomPluginLocationS3 {
         String bucketArn,
         String fileKey,
         @Nullable String objectVersion) {
-        this.bucketArn = Objects.requireNonNull(bucketArn);
-        this.fileKey = Objects.requireNonNull(fileKey);
+        this.bucketArn = bucketArn;
+        this.fileKey = fileKey;
         this.objectVersion = objectVersion;
     }
 

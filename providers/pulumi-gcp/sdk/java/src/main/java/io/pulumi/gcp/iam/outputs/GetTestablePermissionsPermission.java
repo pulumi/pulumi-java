@@ -43,11 +43,11 @@ public final class GetTestablePermissionsPermission {
         String name,
         String stage,
         String title) {
-        this.apiDisabled = Objects.requireNonNull(apiDisabled);
-        this.customSupportLevel = Objects.requireNonNull(customSupportLevel);
-        this.name = Objects.requireNonNull(name);
-        this.stage = Objects.requireNonNull(stage);
-        this.title = Objects.requireNonNull(title);
+        this.apiDisabled = apiDisabled;
+        this.customSupportLevel = customSupportLevel;
+        this.name = name;
+        this.stage = stage;
+        this.title = title;
     }
 
     /**

@@ -143,17 +143,17 @@ public final class HDInsightStreamingActivityResponse {
         this.dependsOn = dependsOn;
         this.description = description;
         this.fileLinkedService = fileLinkedService;
-        this.filePaths = Objects.requireNonNull(filePaths);
+        this.filePaths = filePaths;
         this.getDebugInfo = getDebugInfo;
-        this.input = Objects.requireNonNull(input);
+        this.input = input;
         this.linkedServiceName = linkedServiceName;
-        this.mapper = Objects.requireNonNull(mapper);
-        this.name = Objects.requireNonNull(name);
-        this.output = Objects.requireNonNull(output);
+        this.mapper = mapper;
+        this.name = name;
+        this.output = output;
         this.policy = policy;
-        this.reducer = Objects.requireNonNull(reducer);
+        this.reducer = reducer;
         this.storageLinkedServices = storageLinkedServices;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.userProperties = userProperties;
     }
 

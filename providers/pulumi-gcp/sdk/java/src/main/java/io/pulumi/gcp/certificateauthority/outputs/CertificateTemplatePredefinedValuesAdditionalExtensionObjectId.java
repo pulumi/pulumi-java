@@ -18,7 +18,7 @@ public final class CertificateTemplatePredefinedValuesAdditionalExtensionObjectI
 
     @OutputCustomType.Constructor({"objectIdPaths"})
     private CertificateTemplatePredefinedValuesAdditionalExtensionObjectId(List<Integer> objectIdPaths) {
-        this.objectIdPaths = Objects.requireNonNull(objectIdPaths);
+        this.objectIdPaths = objectIdPaths;
     }
 
     /**

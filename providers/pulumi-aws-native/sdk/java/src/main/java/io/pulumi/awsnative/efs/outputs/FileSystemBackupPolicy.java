@@ -13,7 +13,7 @@ public final class FileSystemBackupPolicy {
 
     @OutputCustomType.Constructor({"status"})
     private FileSystemBackupPolicy(String status) {
-        this.status = Objects.requireNonNull(status);
+        this.status = status;
     }
 
     public String getStatus() {

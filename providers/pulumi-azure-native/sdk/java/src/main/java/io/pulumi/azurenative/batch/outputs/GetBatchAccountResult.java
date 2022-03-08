@@ -136,26 +136,26 @@ public final class GetBatchAccountResult {
         String publicNetworkAccess,
         Map<String,String> tags,
         String type) {
-        this.accountEndpoint = Objects.requireNonNull(accountEndpoint);
-        this.activeJobAndJobScheduleQuota = Objects.requireNonNull(activeJobAndJobScheduleQuota);
-        this.autoStorage = Objects.requireNonNull(autoStorage);
-        this.dedicatedCoreQuota = Objects.requireNonNull(dedicatedCoreQuota);
-        this.dedicatedCoreQuotaPerVMFamily = Objects.requireNonNull(dedicatedCoreQuotaPerVMFamily);
-        this.dedicatedCoreQuotaPerVMFamilyEnforced = Objects.requireNonNull(dedicatedCoreQuotaPerVMFamilyEnforced);
-        this.encryption = Objects.requireNonNull(encryption);
-        this.id = Objects.requireNonNull(id);
+        this.accountEndpoint = accountEndpoint;
+        this.activeJobAndJobScheduleQuota = activeJobAndJobScheduleQuota;
+        this.autoStorage = autoStorage;
+        this.dedicatedCoreQuota = dedicatedCoreQuota;
+        this.dedicatedCoreQuotaPerVMFamily = dedicatedCoreQuotaPerVMFamily;
+        this.dedicatedCoreQuotaPerVMFamilyEnforced = dedicatedCoreQuotaPerVMFamilyEnforced;
+        this.encryption = encryption;
+        this.id = id;
         this.identity = identity;
-        this.keyVaultReference = Objects.requireNonNull(keyVaultReference);
-        this.location = Objects.requireNonNull(location);
-        this.lowPriorityCoreQuota = Objects.requireNonNull(lowPriorityCoreQuota);
-        this.name = Objects.requireNonNull(name);
-        this.poolAllocationMode = Objects.requireNonNull(poolAllocationMode);
-        this.poolQuota = Objects.requireNonNull(poolQuota);
-        this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.publicNetworkAccess = Objects.requireNonNull(publicNetworkAccess);
-        this.tags = Objects.requireNonNull(tags);
-        this.type = Objects.requireNonNull(type);
+        this.keyVaultReference = keyVaultReference;
+        this.location = location;
+        this.lowPriorityCoreQuota = lowPriorityCoreQuota;
+        this.name = name;
+        this.poolAllocationMode = poolAllocationMode;
+        this.poolQuota = poolQuota;
+        this.privateEndpointConnections = privateEndpointConnections;
+        this.provisioningState = provisioningState;
+        this.publicNetworkAccess = publicNetworkAccess;
+        this.tags = tags;
+        this.type = type;
     }
 
     /**

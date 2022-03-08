@@ -53,10 +53,10 @@ public final class LogMetricFilterMetricTransformation {
         String value) {
         this.defaultValue = defaultValue;
         this.dimensions = dimensions;
-        this.name = Objects.requireNonNull(name);
-        this.namespace = Objects.requireNonNull(namespace);
+        this.name = name;
+        this.namespace = namespace;
         this.unit = unit;
-        this.value = Objects.requireNonNull(value);
+        this.value = value;
     }
 
     /**

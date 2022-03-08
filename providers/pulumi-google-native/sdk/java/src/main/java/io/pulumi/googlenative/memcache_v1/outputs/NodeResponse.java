@@ -50,12 +50,12 @@ public final class NodeResponse {
         Integer port,
         String state,
         String zone) {
-        this.host = Objects.requireNonNull(host);
-        this.nodeId = Objects.requireNonNull(nodeId);
-        this.parameters = Objects.requireNonNull(parameters);
-        this.port = Objects.requireNonNull(port);
-        this.state = Objects.requireNonNull(state);
-        this.zone = Objects.requireNonNull(zone);
+        this.host = host;
+        this.nodeId = nodeId;
+        this.parameters = parameters;
+        this.port = port;
+        this.state = state;
+        this.zone = zone;
     }
 
     /**

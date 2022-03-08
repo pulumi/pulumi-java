@@ -48,12 +48,12 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleHeader {
         String protocol,
         String source,
         String sourcePort) {
-        this.destination = Objects.requireNonNull(destination);
-        this.destinationPort = Objects.requireNonNull(destinationPort);
-        this.direction = Objects.requireNonNull(direction);
-        this.protocol = Objects.requireNonNull(protocol);
-        this.source = Objects.requireNonNull(source);
-        this.sourcePort = Objects.requireNonNull(sourcePort);
+        this.destination = destination;
+        this.destinationPort = destinationPort;
+        this.direction = direction;
+        this.protocol = protocol;
+        this.source = source;
+        this.sourcePort = sourcePort;
     }
 
     /**

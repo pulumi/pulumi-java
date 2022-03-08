@@ -29,7 +29,7 @@ public final class EndpointPropertiesUpdateParametersResponseDeliveryPolicy {
         @Nullable String description,
         List<DeliveryRuleResponse> rules) {
         this.description = description;
-        this.rules = Objects.requireNonNull(rules);
+        this.rules = rules;
     }
 
     /**

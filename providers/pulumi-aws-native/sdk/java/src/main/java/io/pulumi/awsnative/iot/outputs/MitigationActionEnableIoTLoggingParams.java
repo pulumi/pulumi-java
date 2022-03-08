@@ -25,8 +25,8 @@ public final class MitigationActionEnableIoTLoggingParams {
     private MitigationActionEnableIoTLoggingParams(
         MitigationActionEnableIoTLoggingParamsLogLevel logLevel,
         String roleArnForLogging) {
-        this.logLevel = Objects.requireNonNull(logLevel);
-        this.roleArnForLogging = Objects.requireNonNull(roleArnForLogging);
+        this.logLevel = logLevel;
+        this.roleArnForLogging = roleArnForLogging;
     }
 
     /**

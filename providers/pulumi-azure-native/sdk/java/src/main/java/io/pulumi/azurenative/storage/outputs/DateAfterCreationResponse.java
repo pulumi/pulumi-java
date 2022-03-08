@@ -17,7 +17,7 @@ public final class DateAfterCreationResponse {
 
     @OutputCustomType.Constructor({"daysAfterCreationGreaterThan"})
     private DateAfterCreationResponse(Double daysAfterCreationGreaterThan) {
-        this.daysAfterCreationGreaterThan = Objects.requireNonNull(daysAfterCreationGreaterThan);
+        this.daysAfterCreationGreaterThan = daysAfterCreationGreaterThan;
     }
 
     /**

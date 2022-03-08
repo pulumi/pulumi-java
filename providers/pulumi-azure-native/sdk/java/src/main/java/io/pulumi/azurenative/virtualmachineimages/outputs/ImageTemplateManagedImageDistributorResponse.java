@@ -46,10 +46,10 @@ public final class ImageTemplateManagedImageDistributorResponse {
         String runOutputName,
         String type) {
         this.artifactTags = artifactTags;
-        this.imageId = Objects.requireNonNull(imageId);
-        this.location = Objects.requireNonNull(location);
-        this.runOutputName = Objects.requireNonNull(runOutputName);
-        this.type = Objects.requireNonNull(type);
+        this.imageId = imageId;
+        this.location = location;
+        this.runOutputName = runOutputName;
+        this.type = type;
     }
 
     /**

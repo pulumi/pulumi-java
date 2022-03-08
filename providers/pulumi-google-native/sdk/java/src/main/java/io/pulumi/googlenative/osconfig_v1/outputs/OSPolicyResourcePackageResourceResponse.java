@@ -67,14 +67,14 @@ public final class OSPolicyResourcePackageResourceResponse {
         OSPolicyResourcePackageResourceRPMResponse rpm,
         OSPolicyResourcePackageResourceYUMResponse yum,
         OSPolicyResourcePackageResourceZypperResponse zypper) {
-        this.apt = Objects.requireNonNull(apt);
-        this.deb = Objects.requireNonNull(deb);
-        this.desiredState = Objects.requireNonNull(desiredState);
-        this.googet = Objects.requireNonNull(googet);
-        this.msi = Objects.requireNonNull(msi);
-        this.rpm = Objects.requireNonNull(rpm);
-        this.yum = Objects.requireNonNull(yum);
-        this.zypper = Objects.requireNonNull(zypper);
+        this.apt = apt;
+        this.deb = deb;
+        this.desiredState = desiredState;
+        this.googet = googet;
+        this.msi = msi;
+        this.rpm = rpm;
+        this.yum = yum;
+        this.zypper = zypper;
     }
 
     /**

@@ -23,8 +23,8 @@ public final class RuleGroupJsonBody {
         RuleGroupJsonMatchPattern matchPattern,
         RuleGroupJsonMatchScope matchScope) {
         this.invalidFallbackBehavior = invalidFallbackBehavior;
-        this.matchPattern = Objects.requireNonNull(matchPattern);
-        this.matchScope = Objects.requireNonNull(matchScope);
+        this.matchPattern = matchPattern;
+        this.matchScope = matchScope;
     }
 
     public Optional<RuleGroupBodyParsingFallbackBehavior> getInvalidFallbackBehavior() {

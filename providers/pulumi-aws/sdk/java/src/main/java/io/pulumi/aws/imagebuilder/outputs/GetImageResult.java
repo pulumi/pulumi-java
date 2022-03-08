@@ -103,21 +103,21 @@ public final class GetImageResult {
         String platform,
         Map<String,String> tags,
         String version) {
-        this.arn = Objects.requireNonNull(arn);
-        this.buildVersionArn = Objects.requireNonNull(buildVersionArn);
-        this.dateCreated = Objects.requireNonNull(dateCreated);
-        this.distributionConfigurationArn = Objects.requireNonNull(distributionConfigurationArn);
-        this.enhancedImageMetadataEnabled = Objects.requireNonNull(enhancedImageMetadataEnabled);
-        this.id = Objects.requireNonNull(id);
-        this.imageRecipeArn = Objects.requireNonNull(imageRecipeArn);
-        this.imageTestsConfigurations = Objects.requireNonNull(imageTestsConfigurations);
-        this.infrastructureConfigurationArn = Objects.requireNonNull(infrastructureConfigurationArn);
-        this.name = Objects.requireNonNull(name);
-        this.osVersion = Objects.requireNonNull(osVersion);
-        this.outputResources = Objects.requireNonNull(outputResources);
-        this.platform = Objects.requireNonNull(platform);
-        this.tags = Objects.requireNonNull(tags);
-        this.version = Objects.requireNonNull(version);
+        this.arn = arn;
+        this.buildVersionArn = buildVersionArn;
+        this.dateCreated = dateCreated;
+        this.distributionConfigurationArn = distributionConfigurationArn;
+        this.enhancedImageMetadataEnabled = enhancedImageMetadataEnabled;
+        this.id = id;
+        this.imageRecipeArn = imageRecipeArn;
+        this.imageTestsConfigurations = imageTestsConfigurations;
+        this.infrastructureConfigurationArn = infrastructureConfigurationArn;
+        this.name = name;
+        this.osVersion = osVersion;
+        this.outputResources = outputResources;
+        this.platform = platform;
+        this.tags = tags;
+        this.version = version;
     }
 
     public String getArn() {

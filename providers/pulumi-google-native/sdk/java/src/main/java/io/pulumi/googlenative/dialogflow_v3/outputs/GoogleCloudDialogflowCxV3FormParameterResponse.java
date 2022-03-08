@@ -57,13 +57,13 @@ public final class GoogleCloudDialogflowCxV3FormParameterResponse {
         Boolean isList,
         Boolean redact,
         Boolean required) {
-        this.defaultValue = Objects.requireNonNull(defaultValue);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.entityType = Objects.requireNonNull(entityType);
-        this.fillBehavior = Objects.requireNonNull(fillBehavior);
-        this.isList = Objects.requireNonNull(isList);
-        this.redact = Objects.requireNonNull(redact);
-        this.required = Objects.requireNonNull(required);
+        this.defaultValue = defaultValue;
+        this.displayName = displayName;
+        this.entityType = entityType;
+        this.fillBehavior = fillBehavior;
+        this.isList = isList;
+        this.redact = redact;
+        this.required = required;
     }
 
     /**

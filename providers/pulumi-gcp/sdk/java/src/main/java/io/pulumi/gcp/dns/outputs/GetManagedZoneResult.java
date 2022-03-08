@@ -52,13 +52,13 @@ public final class GetManagedZoneResult {
         List<String> nameServers,
         @Nullable String project,
         String visibility) {
-        this.description = Objects.requireNonNull(description);
-        this.dnsName = Objects.requireNonNull(dnsName);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.nameServers = Objects.requireNonNull(nameServers);
+        this.description = description;
+        this.dnsName = dnsName;
+        this.id = id;
+        this.name = name;
+        this.nameServers = nameServers;
         this.project = project;
-        this.visibility = Objects.requireNonNull(visibility);
+        this.visibility = visibility;
     }
 
     /**

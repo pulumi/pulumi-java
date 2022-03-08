@@ -41,7 +41,7 @@ public final class LabDetailsResponse {
         this.id = id;
         this.name = name;
         this.provisioningState = provisioningState;
-        this.usageQuota = Objects.requireNonNull(usageQuota);
+        this.usageQuota = usageQuota;
     }
 
     /**

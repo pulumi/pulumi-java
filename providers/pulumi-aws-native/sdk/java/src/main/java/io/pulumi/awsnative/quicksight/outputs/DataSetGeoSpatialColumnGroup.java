@@ -30,9 +30,9 @@ public final class DataSetGeoSpatialColumnGroup {
         List<String> columns,
         @Nullable DataSetGeoSpatialCountryCode countryCode,
         String name) {
-        this.columns = Objects.requireNonNull(columns);
+        this.columns = columns;
         this.countryCode = countryCode;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

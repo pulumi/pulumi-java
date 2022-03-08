@@ -18,7 +18,7 @@ public final class StandardSqlTableTypeResponse {
 
     @OutputCustomType.Constructor({"columns"})
     private StandardSqlTableTypeResponse(List<StandardSqlFieldResponse> columns) {
-        this.columns = Objects.requireNonNull(columns);
+        this.columns = columns;
     }
 
     /**

@@ -81,15 +81,15 @@ public final class GetOriginGroupResult {
         @Nullable Integer trafficRestorationTimeToHealedOrNewEndpointsInMinutes,
         String type) {
         this.healthProbeSettings = healthProbeSettings;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.origins = Objects.requireNonNull(origins);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.resourceState = Objects.requireNonNull(resourceState);
+        this.id = id;
+        this.name = name;
+        this.origins = origins;
+        this.provisioningState = provisioningState;
+        this.resourceState = resourceState;
         this.responseBasedOriginErrorDetectionSettings = responseBasedOriginErrorDetectionSettings;
-        this.systemData = Objects.requireNonNull(systemData);
+        this.systemData = systemData;
         this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes = trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

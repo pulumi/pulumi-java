@@ -153,7 +153,7 @@ public final class GenericProtectedItemResponse {
         this.policyId = policyId;
         this.policyState = policyState;
         this.protectedItemId = protectedItemId;
-        this.protectedItemType = Objects.requireNonNull(protectedItemType);
+        this.protectedItemType = protectedItemType;
         this.protectionState = protectionState;
         this.sourceAssociations = sourceAssociations;
         this.sourceResourceId = sourceResourceId;

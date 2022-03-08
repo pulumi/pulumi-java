@@ -26,8 +26,8 @@ public final class GooglePrivacyDlpV2ErrorResponse {
     private GooglePrivacyDlpV2ErrorResponse(
         GoogleRpcStatusResponse details,
         List<String> timestamps) {
-        this.details = Objects.requireNonNull(details);
-        this.timestamps = Objects.requireNonNull(timestamps);
+        this.details = details;
+        this.timestamps = timestamps;
     }
 
     /**

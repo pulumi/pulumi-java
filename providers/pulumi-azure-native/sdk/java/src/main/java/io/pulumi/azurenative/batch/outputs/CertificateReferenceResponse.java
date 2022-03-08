@@ -31,7 +31,7 @@ public final class CertificateReferenceResponse {
         @Nullable String storeLocation,
         @Nullable String storeName,
         @Nullable List<String> visibility) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.storeLocation = storeLocation;
         this.storeName = storeName;
         this.visibility = visibility;

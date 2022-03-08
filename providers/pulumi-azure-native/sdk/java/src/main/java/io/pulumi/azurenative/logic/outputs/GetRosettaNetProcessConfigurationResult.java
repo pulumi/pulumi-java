@@ -107,21 +107,21 @@ public final class GetRosettaNetProcessConfigurationResult {
         RosettaNetPipRoleSettingsResponse responderRoleSettings,
         @Nullable Map<String,String> tags,
         String type) {
-        this.activitySettings = Objects.requireNonNull(activitySettings);
-        this.changedTime = Objects.requireNonNull(changedTime);
-        this.createdTime = Objects.requireNonNull(createdTime);
+        this.activitySettings = activitySettings;
+        this.changedTime = changedTime;
+        this.createdTime = createdTime;
         this.description = description;
-        this.id = Objects.requireNonNull(id);
-        this.initiatorRoleSettings = Objects.requireNonNull(initiatorRoleSettings);
+        this.id = id;
+        this.initiatorRoleSettings = initiatorRoleSettings;
         this.location = location;
         this.metadata = metadata;
-        this.name = Objects.requireNonNull(name);
-        this.processCode = Objects.requireNonNull(processCode);
-        this.processName = Objects.requireNonNull(processName);
-        this.processVersion = Objects.requireNonNull(processVersion);
-        this.responderRoleSettings = Objects.requireNonNull(responderRoleSettings);
+        this.name = name;
+        this.processCode = processCode;
+        this.processName = processName;
+        this.processVersion = processVersion;
+        this.responderRoleSettings = responderRoleSettings;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

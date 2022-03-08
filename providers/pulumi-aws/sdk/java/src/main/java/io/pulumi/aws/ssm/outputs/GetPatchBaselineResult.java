@@ -42,12 +42,12 @@ public final class GetPatchBaselineResult {
         @Nullable String operatingSystem,
         String owner) {
         this.defaultBaseline = defaultBaseline;
-        this.description = Objects.requireNonNull(description);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.description = description;
+        this.id = id;
+        this.name = name;
         this.namePrefix = namePrefix;
         this.operatingSystem = operatingSystem;
-        this.owner = Objects.requireNonNull(owner);
+        this.owner = owner;
     }
 
     public Optional<Boolean> getDefaultBaseline() {

@@ -26,7 +26,7 @@ public final class ScalingPlanScalingInstructionPredefinedLoadMetricSpecificatio
     private ScalingPlanScalingInstructionPredefinedLoadMetricSpecification(
         String predefinedLoadMetricType,
         @Nullable String resourceLabel) {
-        this.predefinedLoadMetricType = Objects.requireNonNull(predefinedLoadMetricType);
+        this.predefinedLoadMetricType = predefinedLoadMetricType;
         this.resourceLabel = resourceLabel;
     }
 

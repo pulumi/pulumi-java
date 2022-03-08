@@ -75,16 +75,16 @@ public final class BucketLifecycleRuleItemConditionResponse {
         List<String> matchesStorageClass,
         String noncurrentTimeBefore,
         Integer numNewerVersions) {
-        this.age = Objects.requireNonNull(age);
-        this.createdBefore = Objects.requireNonNull(createdBefore);
-        this.customTimeBefore = Objects.requireNonNull(customTimeBefore);
-        this.daysSinceCustomTime = Objects.requireNonNull(daysSinceCustomTime);
-        this.daysSinceNoncurrentTime = Objects.requireNonNull(daysSinceNoncurrentTime);
-        this.isLive = Objects.requireNonNull(isLive);
-        this.matchesPattern = Objects.requireNonNull(matchesPattern);
-        this.matchesStorageClass = Objects.requireNonNull(matchesStorageClass);
-        this.noncurrentTimeBefore = Objects.requireNonNull(noncurrentTimeBefore);
-        this.numNewerVersions = Objects.requireNonNull(numNewerVersions);
+        this.age = age;
+        this.createdBefore = createdBefore;
+        this.customTimeBefore = customTimeBefore;
+        this.daysSinceCustomTime = daysSinceCustomTime;
+        this.daysSinceNoncurrentTime = daysSinceNoncurrentTime;
+        this.isLive = isLive;
+        this.matchesPattern = matchesPattern;
+        this.matchesStorageClass = matchesStorageClass;
+        this.noncurrentTimeBefore = noncurrentTimeBefore;
+        this.numNewerVersions = numNewerVersions;
     }
 
     /**

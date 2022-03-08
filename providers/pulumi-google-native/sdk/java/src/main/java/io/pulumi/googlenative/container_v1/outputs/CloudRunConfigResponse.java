@@ -25,8 +25,8 @@ public final class CloudRunConfigResponse {
     private CloudRunConfigResponse(
         Boolean disabled,
         String loadBalancerType) {
-        this.disabled = Objects.requireNonNull(disabled);
-        this.loadBalancerType = Objects.requireNonNull(loadBalancerType);
+        this.disabled = disabled;
+        this.loadBalancerType = loadBalancerType;
     }
 
     /**

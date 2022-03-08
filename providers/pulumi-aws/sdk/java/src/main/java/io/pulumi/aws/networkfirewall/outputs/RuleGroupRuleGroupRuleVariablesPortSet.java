@@ -25,8 +25,8 @@ public final class RuleGroupRuleGroupRuleVariablesPortSet {
     private RuleGroupRuleGroupRuleVariablesPortSet(
         String key,
         RuleGroupRuleGroupRuleVariablesPortSetPortSet portSet) {
-        this.key = Objects.requireNonNull(key);
-        this.portSet = Objects.requireNonNull(portSet);
+        this.key = key;
+        this.portSet = portSet;
     }
 
     /**

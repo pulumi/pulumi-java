@@ -38,10 +38,10 @@ public final class LogDescriptorResponse {
         String displayName,
         List<LabelDescriptorResponse> labels,
         String name) {
-        this.description = Objects.requireNonNull(description);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
+        this.description = description;
+        this.displayName = displayName;
+        this.labels = labels;
+        this.name = name;
     }
 
     /**

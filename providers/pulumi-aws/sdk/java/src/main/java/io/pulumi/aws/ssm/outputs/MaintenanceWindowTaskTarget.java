@@ -21,8 +21,8 @@ public final class MaintenanceWindowTaskTarget {
     private MaintenanceWindowTaskTarget(
         String key,
         List<String> values) {
-        this.key = Objects.requireNonNull(key);
-        this.values = Objects.requireNonNull(values);
+        this.key = key;
+        this.values = values;
     }
 
     public String getKey() {

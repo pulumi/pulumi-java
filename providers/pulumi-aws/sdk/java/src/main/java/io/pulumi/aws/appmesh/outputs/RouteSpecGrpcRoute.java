@@ -41,7 +41,7 @@ public final class RouteSpecGrpcRoute {
         @Nullable RouteSpecGrpcRouteMatch match,
         @Nullable RouteSpecGrpcRouteRetryPolicy retryPolicy,
         @Nullable RouteSpecGrpcRouteTimeout timeout) {
-        this.action = Objects.requireNonNull(action);
+        this.action = action;
         this.match = match;
         this.retryPolicy = retryPolicy;
         this.timeout = timeout;

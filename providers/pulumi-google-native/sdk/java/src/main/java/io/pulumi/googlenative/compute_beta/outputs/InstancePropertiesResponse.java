@@ -167,29 +167,29 @@ public final class InstancePropertiesResponse {
         ShieldedInstanceConfigResponse shieldedInstanceConfig,
         ShieldedVmConfigResponse shieldedVmConfig,
         TagsResponse tags) {
-        this.advancedMachineFeatures = Objects.requireNonNull(advancedMachineFeatures);
-        this.canIpForward = Objects.requireNonNull(canIpForward);
-        this.confidentialInstanceConfig = Objects.requireNonNull(confidentialInstanceConfig);
-        this.description = Objects.requireNonNull(description);
-        this.disks = Objects.requireNonNull(disks);
-        this.displayDevice = Objects.requireNonNull(displayDevice);
-        this.guestAccelerators = Objects.requireNonNull(guestAccelerators);
-        this.labels = Objects.requireNonNull(labels);
-        this.machineType = Objects.requireNonNull(machineType);
-        this.metadata = Objects.requireNonNull(metadata);
-        this.minCpuPlatform = Objects.requireNonNull(minCpuPlatform);
-        this.networkInterfaces = Objects.requireNonNull(networkInterfaces);
-        this.networkPerformanceConfig = Objects.requireNonNull(networkPerformanceConfig);
-        this.postKeyRevocationActionType = Objects.requireNonNull(postKeyRevocationActionType);
-        this.privateIpv6GoogleAccess = Objects.requireNonNull(privateIpv6GoogleAccess);
-        this.reservationAffinity = Objects.requireNonNull(reservationAffinity);
-        this.resourceManagerTags = Objects.requireNonNull(resourceManagerTags);
-        this.resourcePolicies = Objects.requireNonNull(resourcePolicies);
-        this.scheduling = Objects.requireNonNull(scheduling);
-        this.serviceAccounts = Objects.requireNonNull(serviceAccounts);
-        this.shieldedInstanceConfig = Objects.requireNonNull(shieldedInstanceConfig);
-        this.shieldedVmConfig = Objects.requireNonNull(shieldedVmConfig);
-        this.tags = Objects.requireNonNull(tags);
+        this.advancedMachineFeatures = advancedMachineFeatures;
+        this.canIpForward = canIpForward;
+        this.confidentialInstanceConfig = confidentialInstanceConfig;
+        this.description = description;
+        this.disks = disks;
+        this.displayDevice = displayDevice;
+        this.guestAccelerators = guestAccelerators;
+        this.labels = labels;
+        this.machineType = machineType;
+        this.metadata = metadata;
+        this.minCpuPlatform = minCpuPlatform;
+        this.networkInterfaces = networkInterfaces;
+        this.networkPerformanceConfig = networkPerformanceConfig;
+        this.postKeyRevocationActionType = postKeyRevocationActionType;
+        this.privateIpv6GoogleAccess = privateIpv6GoogleAccess;
+        this.reservationAffinity = reservationAffinity;
+        this.resourceManagerTags = resourceManagerTags;
+        this.resourcePolicies = resourcePolicies;
+        this.scheduling = scheduling;
+        this.serviceAccounts = serviceAccounts;
+        this.shieldedInstanceConfig = shieldedInstanceConfig;
+        this.shieldedVmConfig = shieldedVmConfig;
+        this.tags = tags;
     }
 
     /**

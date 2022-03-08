@@ -13,7 +13,7 @@ public final class GetOrganizationPolicyBooleanPolicy {
 
     @OutputCustomType.Constructor({"enforced"})
     private GetOrganizationPolicyBooleanPolicy(Boolean enforced) {
-        this.enforced = Objects.requireNonNull(enforced);
+        this.enforced = enforced;
     }
 
     public Boolean getEnforced() {

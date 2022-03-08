@@ -38,16 +38,16 @@ public final class GetWebAppConfigResult {
         @Nullable String project,
         String storageBucket,
         String webAppId) {
-        this.apiKey = Objects.requireNonNull(apiKey);
-        this.authDomain = Objects.requireNonNull(authDomain);
-        this.databaseUrl = Objects.requireNonNull(databaseUrl);
-        this.id = Objects.requireNonNull(id);
-        this.locationId = Objects.requireNonNull(locationId);
-        this.measurementId = Objects.requireNonNull(measurementId);
-        this.messagingSenderId = Objects.requireNonNull(messagingSenderId);
+        this.apiKey = apiKey;
+        this.authDomain = authDomain;
+        this.databaseUrl = databaseUrl;
+        this.id = id;
+        this.locationId = locationId;
+        this.measurementId = measurementId;
+        this.messagingSenderId = messagingSenderId;
         this.project = project;
-        this.storageBucket = Objects.requireNonNull(storageBucket);
-        this.webAppId = Objects.requireNonNull(webAppId);
+        this.storageBucket = storageBucket;
+        this.webAppId = webAppId;
     }
 
     public String getApiKey() {

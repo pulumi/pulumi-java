@@ -22,10 +22,10 @@ public final class GetClusterMasterAuth {
         List<GetClusterMasterAuthClientCertificateConfig> clientCertificateConfigs,
         String clientKey,
         String clusterCaCertificate) {
-        this.clientCertificate = Objects.requireNonNull(clientCertificate);
-        this.clientCertificateConfigs = Objects.requireNonNull(clientCertificateConfigs);
-        this.clientKey = Objects.requireNonNull(clientKey);
-        this.clusterCaCertificate = Objects.requireNonNull(clusterCaCertificate);
+        this.clientCertificate = clientCertificate;
+        this.clientCertificateConfigs = clientCertificateConfigs;
+        this.clientKey = clientKey;
+        this.clusterCaCertificate = clusterCaCertificate;
     }
 
     public String getClientCertificate() {

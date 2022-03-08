@@ -26,10 +26,10 @@ public final class ConfigurationTemplateSetting {
         String namespace,
         @Nullable String resource,
         String value) {
-        this.name = Objects.requireNonNull(name);
-        this.namespace = Objects.requireNonNull(namespace);
+        this.name = name;
+        this.namespace = namespace;
         this.resource = resource;
-        this.value = Objects.requireNonNull(value);
+        this.value = value;
     }
 
     /**

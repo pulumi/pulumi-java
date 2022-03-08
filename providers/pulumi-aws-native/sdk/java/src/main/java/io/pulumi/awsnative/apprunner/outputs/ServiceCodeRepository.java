@@ -27,8 +27,8 @@ public final class ServiceCodeRepository {
         String repositoryUrl,
         ServiceSourceCodeVersion sourceCodeVersion) {
         this.codeConfiguration = codeConfiguration;
-        this.repositoryUrl = Objects.requireNonNull(repositoryUrl);
-        this.sourceCodeVersion = Objects.requireNonNull(sourceCodeVersion);
+        this.repositoryUrl = repositoryUrl;
+        this.sourceCodeVersion = sourceCodeVersion;
     }
 
     public Optional<ServiceCodeConfiguration> getCodeConfiguration() {

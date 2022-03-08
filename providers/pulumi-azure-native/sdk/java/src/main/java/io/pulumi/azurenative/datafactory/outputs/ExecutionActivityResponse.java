@@ -65,9 +65,9 @@ public final class ExecutionActivityResponse {
         this.dependsOn = dependsOn;
         this.description = description;
         this.linkedServiceName = linkedServiceName;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.policy = policy;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.userProperties = userProperties;
     }
 

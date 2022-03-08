@@ -13,7 +13,7 @@ public final class ReplicationSetRegionConfiguration {
 
     @OutputCustomType.Constructor({"sseKmsKeyId"})
     private ReplicationSetRegionConfiguration(String sseKmsKeyId) {
-        this.sseKmsKeyId = Objects.requireNonNull(sseKmsKeyId);
+        this.sseKmsKeyId = sseKmsKeyId;
     }
 
     public String getSseKmsKeyId() {

@@ -109,22 +109,22 @@ public final class GetManagedZoneResult {
         ManagedZoneReverseLookupConfigResponse reverseLookupConfig,
         ManagedZoneServiceDirectoryConfigResponse serviceDirectoryConfig,
         String visibility) {
-        this.cloudLoggingConfig = Objects.requireNonNull(cloudLoggingConfig);
-        this.creationTime = Objects.requireNonNull(creationTime);
-        this.description = Objects.requireNonNull(description);
-        this.dnsName = Objects.requireNonNull(dnsName);
-        this.dnssecConfig = Objects.requireNonNull(dnssecConfig);
-        this.forwardingConfig = Objects.requireNonNull(forwardingConfig);
-        this.kind = Objects.requireNonNull(kind);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.nameServerSet = Objects.requireNonNull(nameServerSet);
-        this.nameServers = Objects.requireNonNull(nameServers);
-        this.peeringConfig = Objects.requireNonNull(peeringConfig);
-        this.privateVisibilityConfig = Objects.requireNonNull(privateVisibilityConfig);
-        this.reverseLookupConfig = Objects.requireNonNull(reverseLookupConfig);
-        this.serviceDirectoryConfig = Objects.requireNonNull(serviceDirectoryConfig);
-        this.visibility = Objects.requireNonNull(visibility);
+        this.cloudLoggingConfig = cloudLoggingConfig;
+        this.creationTime = creationTime;
+        this.description = description;
+        this.dnsName = dnsName;
+        this.dnssecConfig = dnssecConfig;
+        this.forwardingConfig = forwardingConfig;
+        this.kind = kind;
+        this.labels = labels;
+        this.name = name;
+        this.nameServerSet = nameServerSet;
+        this.nameServers = nameServers;
+        this.peeringConfig = peeringConfig;
+        this.privateVisibilityConfig = privateVisibilityConfig;
+        this.reverseLookupConfig = reverseLookupConfig;
+        this.serviceDirectoryConfig = serviceDirectoryConfig;
+        this.visibility = visibility;
     }
 
     public ManagedZoneCloudLoggingConfigResponse getCloudLoggingConfig() {

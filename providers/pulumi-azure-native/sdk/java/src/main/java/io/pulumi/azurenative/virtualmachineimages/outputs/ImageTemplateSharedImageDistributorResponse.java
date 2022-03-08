@@ -62,11 +62,11 @@ public final class ImageTemplateSharedImageDistributorResponse {
         String type) {
         this.artifactTags = artifactTags;
         this.excludeFromLatest = excludeFromLatest;
-        this.galleryImageId = Objects.requireNonNull(galleryImageId);
-        this.replicationRegions = Objects.requireNonNull(replicationRegions);
-        this.runOutputName = Objects.requireNonNull(runOutputName);
+        this.galleryImageId = galleryImageId;
+        this.replicationRegions = replicationRegions;
+        this.runOutputName = runOutputName;
         this.storageAccountType = storageAccountType;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

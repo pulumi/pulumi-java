@@ -118,19 +118,19 @@ public final class GetDscConfigurationResult {
         this.creationTime = creationTime;
         this.description = description;
         this.etag = etag;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.jobCount = jobCount;
         this.lastModifiedTime = lastModifiedTime;
         this.location = location;
         this.logVerbose = logVerbose;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.nodeConfigurationCount = nodeConfigurationCount;
         this.parameters = parameters;
         this.provisioningState = provisioningState;
         this.source = source;
         this.state = state;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

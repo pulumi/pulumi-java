@@ -17,7 +17,7 @@ public final class NotificationRateLimitResponse {
 
     @OutputCustomType.Constructor({"period"})
     private NotificationRateLimitResponse(String period) {
-        this.period = Objects.requireNonNull(period);
+        this.period = period;
     }
 
     /**

@@ -74,12 +74,12 @@ public final class GetUserRuleCollectionResult {
         this.appliesToGroups = appliesToGroups;
         this.description = description;
         this.displayName = displayName;
-        this.etag = Objects.requireNonNull(etag);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.etag = etag;
+        this.id = id;
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

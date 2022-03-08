@@ -106,21 +106,21 @@ public final class ObjectMetaResponse {
         String resourceVersion,
         String selfLink,
         String uid) {
-        this.annotations = Objects.requireNonNull(annotations);
-        this.clusterName = Objects.requireNonNull(clusterName);
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.deletionGracePeriodSeconds = Objects.requireNonNull(deletionGracePeriodSeconds);
-        this.deletionTimestamp = Objects.requireNonNull(deletionTimestamp);
-        this.finalizers = Objects.requireNonNull(finalizers);
-        this.generateName = Objects.requireNonNull(generateName);
-        this.generation = Objects.requireNonNull(generation);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.namespace = Objects.requireNonNull(namespace);
-        this.ownerReferences = Objects.requireNonNull(ownerReferences);
-        this.resourceVersion = Objects.requireNonNull(resourceVersion);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.uid = Objects.requireNonNull(uid);
+        this.annotations = annotations;
+        this.clusterName = clusterName;
+        this.creationTimestamp = creationTimestamp;
+        this.deletionGracePeriodSeconds = deletionGracePeriodSeconds;
+        this.deletionTimestamp = deletionTimestamp;
+        this.finalizers = finalizers;
+        this.generateName = generateName;
+        this.generation = generation;
+        this.labels = labels;
+        this.name = name;
+        this.namespace = namespace;
+        this.ownerReferences = ownerReferences;
+        this.resourceVersion = resourceVersion;
+        this.selfLink = selfLink;
+        this.uid = uid;
     }
 
     /**

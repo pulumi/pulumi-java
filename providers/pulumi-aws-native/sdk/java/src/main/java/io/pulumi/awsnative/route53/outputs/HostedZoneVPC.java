@@ -24,8 +24,8 @@ public final class HostedZoneVPC {
     private HostedZoneVPC(
         String vPCId,
         String vPCRegion) {
-        this.vPCId = Objects.requireNonNull(vPCId);
-        this.vPCRegion = Objects.requireNonNull(vPCRegion);
+        this.vPCId = vPCId;
+        this.vPCRegion = vPCRegion;
     }
 
     /**

@@ -24,8 +24,8 @@ public final class EndpointRangeDescriptionResponse {
     private EndpointRangeDescriptionResponse(
         Integer endPort,
         Integer startPort) {
-        this.endPort = Objects.requireNonNull(endPort);
-        this.startPort = Objects.requireNonNull(startPort);
+        this.endPort = endPort;
+        this.startPort = startPort;
     }
 
     /**

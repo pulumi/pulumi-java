@@ -20,9 +20,9 @@ public final class EnvelopeResponse {
         String payload,
         String payloadType,
         List<EnvelopeSignatureResponse> signatures) {
-        this.payload = Objects.requireNonNull(payload);
-        this.payloadType = Objects.requireNonNull(payloadType);
-        this.signatures = Objects.requireNonNull(signatures);
+        this.payload = payload;
+        this.payloadType = payloadType;
+        this.signatures = signatures;
     }
 
     public String getPayload() {

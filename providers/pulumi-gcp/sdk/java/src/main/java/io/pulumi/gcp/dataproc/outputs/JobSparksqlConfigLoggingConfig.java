@@ -14,7 +14,7 @@ public final class JobSparksqlConfigLoggingConfig {
 
     @OutputCustomType.Constructor({"driverLogLevels"})
     private JobSparksqlConfigLoggingConfig(Map<String,String> driverLogLevels) {
-        this.driverLogLevels = Objects.requireNonNull(driverLogLevels);
+        this.driverLogLevels = driverLogLevels;
     }
 
     public Map<String,String> getDriverLogLevels() {

@@ -22,9 +22,9 @@ public final class GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork {
         String expirationTime,
         String name,
         String value) {
-        this.expirationTime = Objects.requireNonNull(expirationTime);
-        this.name = Objects.requireNonNull(name);
-        this.value = Objects.requireNonNull(value);
+        this.expirationTime = expirationTime;
+        this.name = name;
+        this.value = value;
     }
 
     public String getExpirationTime() {

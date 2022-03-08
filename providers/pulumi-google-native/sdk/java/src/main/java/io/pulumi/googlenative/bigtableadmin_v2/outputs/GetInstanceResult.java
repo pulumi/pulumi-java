@@ -49,12 +49,12 @@ public final class GetInstanceResult {
         String name,
         String state,
         String type) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.state = Objects.requireNonNull(state);
-        this.type = Objects.requireNonNull(type);
+        this.createTime = createTime;
+        this.displayName = displayName;
+        this.labels = labels;
+        this.name = name;
+        this.state = state;
+        this.type = type;
     }
 
     /**

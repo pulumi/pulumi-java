@@ -70,15 +70,15 @@ public final class GetVirtualNetworkGatewayNatRuleResult {
         @Nullable String name,
         String provisioningState,
         String type) {
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.externalMappings = externalMappings;
         this.id = id;
         this.internalMappings = internalMappings;
         this.ipConfigurationId = ipConfigurationId;
         this.mode = mode;
         this.name = name;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.type = Objects.requireNonNull(type);
+        this.provisioningState = provisioningState;
+        this.type = type;
     }
 
     /**

@@ -110,20 +110,20 @@ public final class GetPolicyResult {
         @Nullable Map<String,String> tags,
         String type) {
         this.customRules = customRules;
-        this.endpointLinks = Objects.requireNonNull(endpointLinks);
+        this.endpointLinks = endpointLinks;
         this.etag = etag;
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
+        this.id = id;
+        this.location = location;
         this.managedRules = managedRules;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.policySettings = policySettings;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.rateLimitRules = rateLimitRules;
-        this.resourceState = Objects.requireNonNull(resourceState);
-        this.sku = Objects.requireNonNull(sku);
-        this.systemData = Objects.requireNonNull(systemData);
+        this.resourceState = resourceState;
+        this.sku = sku;
+        this.systemData = systemData;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

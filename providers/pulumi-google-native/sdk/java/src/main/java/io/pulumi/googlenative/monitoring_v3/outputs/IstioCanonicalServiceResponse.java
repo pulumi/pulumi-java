@@ -30,9 +30,9 @@ public final class IstioCanonicalServiceResponse {
         String canonicalService,
         String canonicalServiceNamespace,
         String meshUid) {
-        this.canonicalService = Objects.requireNonNull(canonicalService);
-        this.canonicalServiceNamespace = Objects.requireNonNull(canonicalServiceNamespace);
-        this.meshUid = Objects.requireNonNull(meshUid);
+        this.canonicalService = canonicalService;
+        this.canonicalServiceNamespace = canonicalServiceNamespace;
+        this.meshUid = meshUid;
     }
 
     /**

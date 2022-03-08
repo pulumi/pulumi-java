@@ -44,11 +44,11 @@ public final class ClusterReportedPropertiesResponse {
         String clusterVersion,
         String lastUpdated,
         List<ClusterNodeResponse> nodes) {
-        this.clusterId = Objects.requireNonNull(clusterId);
-        this.clusterName = Objects.requireNonNull(clusterName);
-        this.clusterVersion = Objects.requireNonNull(clusterVersion);
-        this.lastUpdated = Objects.requireNonNull(lastUpdated);
-        this.nodes = Objects.requireNonNull(nodes);
+        this.clusterId = clusterId;
+        this.clusterName = clusterName;
+        this.clusterVersion = clusterVersion;
+        this.lastUpdated = lastUpdated;
+        this.nodes = nodes;
     }
 
     /**

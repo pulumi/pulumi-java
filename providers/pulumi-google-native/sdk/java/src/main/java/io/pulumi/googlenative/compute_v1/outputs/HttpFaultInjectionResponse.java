@@ -25,8 +25,8 @@ public final class HttpFaultInjectionResponse {
     private HttpFaultInjectionResponse(
         HttpFaultAbortResponse abort,
         HttpFaultDelayResponse delay) {
-        this.abort = Objects.requireNonNull(abort);
-        this.delay = Objects.requireNonNull(delay);
+        this.abort = abort;
+        this.delay = delay;
     }
 
     /**

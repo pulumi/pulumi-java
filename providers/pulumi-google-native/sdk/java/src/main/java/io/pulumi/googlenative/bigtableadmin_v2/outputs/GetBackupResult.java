@@ -61,14 +61,14 @@ public final class GetBackupResult {
         String sourceTable,
         String startTime,
         String state) {
-        this.encryptionInfo = Objects.requireNonNull(encryptionInfo);
-        this.endTime = Objects.requireNonNull(endTime);
-        this.expireTime = Objects.requireNonNull(expireTime);
-        this.name = Objects.requireNonNull(name);
-        this.sizeBytes = Objects.requireNonNull(sizeBytes);
-        this.sourceTable = Objects.requireNonNull(sourceTable);
-        this.startTime = Objects.requireNonNull(startTime);
-        this.state = Objects.requireNonNull(state);
+        this.encryptionInfo = encryptionInfo;
+        this.endTime = endTime;
+        this.expireTime = expireTime;
+        this.name = name;
+        this.sizeBytes = sizeBytes;
+        this.sourceTable = sourceTable;
+        this.startTime = startTime;
+        this.state = state;
     }
 
     /**

@@ -34,10 +34,10 @@ public final class CacheExpirationActionParametersResponse {
         @Nullable String cacheDuration,
         String cacheType,
         String odataType) {
-        this.cacheBehavior = Objects.requireNonNull(cacheBehavior);
+        this.cacheBehavior = cacheBehavior;
         this.cacheDuration = cacheDuration;
-        this.cacheType = Objects.requireNonNull(cacheType);
-        this.odataType = Objects.requireNonNull(odataType);
+        this.cacheType = cacheType;
+        this.odataType = odataType;
     }
 
     /**

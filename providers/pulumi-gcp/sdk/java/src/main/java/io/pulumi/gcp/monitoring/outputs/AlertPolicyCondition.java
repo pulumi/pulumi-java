@@ -75,7 +75,7 @@ public final class AlertPolicyCondition {
         this.conditionMatchedLog = conditionMatchedLog;
         this.conditionMonitoringQueryLanguage = conditionMonitoringQueryLanguage;
         this.conditionThreshold = conditionThreshold;
-        this.displayName = Objects.requireNonNull(displayName);
+        this.displayName = displayName;
         this.name = name;
     }
 

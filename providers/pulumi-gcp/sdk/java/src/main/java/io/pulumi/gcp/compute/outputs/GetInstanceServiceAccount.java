@@ -25,8 +25,8 @@ public final class GetInstanceServiceAccount {
     private GetInstanceServiceAccount(
         String email,
         List<String> scopes) {
-        this.email = Objects.requireNonNull(email);
-        this.scopes = Objects.requireNonNull(scopes);
+        this.email = email;
+        this.scopes = scopes;
     }
 
     /**

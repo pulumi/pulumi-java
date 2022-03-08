@@ -24,8 +24,8 @@ public final class GoogleCloudDialogflowV2IntentMessageImageResponse {
     private GoogleCloudDialogflowV2IntentMessageImageResponse(
         String accessibilityText,
         String imageUri) {
-        this.accessibilityText = Objects.requireNonNull(accessibilityText);
-        this.imageUri = Objects.requireNonNull(imageUri);
+        this.accessibilityText = accessibilityText;
+        this.imageUri = imageUri;
     }
 
     /**

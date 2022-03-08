@@ -52,10 +52,10 @@ public final class GetContentTypeResult {
         String type,
         @Nullable String version) {
         this.description = description;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.schema = schema;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.version = version;
     }
 

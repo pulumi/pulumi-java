@@ -37,10 +37,10 @@ public final class GoogleCloudRunOpV2TrafficTargetResponse {
         String revision,
         String tag,
         String type) {
-        this.percent = Objects.requireNonNull(percent);
-        this.revision = Objects.requireNonNull(revision);
-        this.tag = Objects.requireNonNull(tag);
-        this.type = Objects.requireNonNull(type);
+        this.percent = percent;
+        this.revision = revision;
+        this.tag = tag;
+        this.type = type;
     }
 
     /**

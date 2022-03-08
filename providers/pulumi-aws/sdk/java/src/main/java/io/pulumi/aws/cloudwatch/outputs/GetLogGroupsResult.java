@@ -33,10 +33,10 @@ public final class GetLogGroupsResult {
         String id,
         String logGroupNamePrefix,
         List<String> logGroupNames) {
-        this.arns = Objects.requireNonNull(arns);
-        this.id = Objects.requireNonNull(id);
-        this.logGroupNamePrefix = Objects.requireNonNull(logGroupNamePrefix);
-        this.logGroupNames = Objects.requireNonNull(logGroupNames);
+        this.arns = arns;
+        this.id = id;
+        this.logGroupNamePrefix = logGroupNamePrefix;
+        this.logGroupNames = logGroupNames;
     }
 
     /**

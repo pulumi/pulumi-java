@@ -44,8 +44,8 @@ public final class GetIAMPolicyBinding {
         List<String> members,
         String role) {
         this.condition = condition;
-        this.members = Objects.requireNonNull(members);
-        this.role = Objects.requireNonNull(role);
+        this.members = members;
+        this.role = role;
     }
 
     /**

@@ -34,11 +34,11 @@ public final class GetCertificateResult {
         String certificateAuthorityArn,
         String certificateChain,
         String id) {
-        this.arn = Objects.requireNonNull(arn);
-        this.certificate = Objects.requireNonNull(certificate);
-        this.certificateAuthorityArn = Objects.requireNonNull(certificateAuthorityArn);
-        this.certificateChain = Objects.requireNonNull(certificateChain);
-        this.id = Objects.requireNonNull(id);
+        this.arn = arn;
+        this.certificate = certificate;
+        this.certificateAuthorityArn = certificateAuthorityArn;
+        this.certificateChain = certificateChain;
+        this.id = id;
     }
 
     public String getArn() {

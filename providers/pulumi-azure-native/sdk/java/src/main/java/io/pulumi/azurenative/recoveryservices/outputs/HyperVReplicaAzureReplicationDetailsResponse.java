@@ -188,7 +188,7 @@ public final class HyperVReplicaAzureReplicationDetailsResponse {
         this.enableRdpOnTargetOption = enableRdpOnTargetOption;
         this.encryption = encryption;
         this.initialReplicationDetails = initialReplicationDetails;
-        this.instanceType = Objects.requireNonNull(instanceType);
+        this.instanceType = instanceType;
         this.lastReplicatedTime = lastReplicatedTime;
         this.lastRpoCalculatedTime = lastRpoCalculatedTime;
         this.licenseType = licenseType;

@@ -72,16 +72,16 @@ public final class NodeSystemInfo {
         String operatingSystem,
         String osImage,
         String systemUUID) {
-        this.architecture = Objects.requireNonNull(architecture);
-        this.bootID = Objects.requireNonNull(bootID);
-        this.containerRuntimeVersion = Objects.requireNonNull(containerRuntimeVersion);
-        this.kernelVersion = Objects.requireNonNull(kernelVersion);
-        this.kubeProxyVersion = Objects.requireNonNull(kubeProxyVersion);
-        this.kubeletVersion = Objects.requireNonNull(kubeletVersion);
-        this.machineID = Objects.requireNonNull(machineID);
-        this.operatingSystem = Objects.requireNonNull(operatingSystem);
-        this.osImage = Objects.requireNonNull(osImage);
-        this.systemUUID = Objects.requireNonNull(systemUUID);
+        this.architecture = architecture;
+        this.bootID = bootID;
+        this.containerRuntimeVersion = containerRuntimeVersion;
+        this.kernelVersion = kernelVersion;
+        this.kubeProxyVersion = kubeProxyVersion;
+        this.kubeletVersion = kubeletVersion;
+        this.machineID = machineID;
+        this.operatingSystem = operatingSystem;
+        this.osImage = osImage;
+        this.systemUUID = systemUUID;
     }
 
     /**

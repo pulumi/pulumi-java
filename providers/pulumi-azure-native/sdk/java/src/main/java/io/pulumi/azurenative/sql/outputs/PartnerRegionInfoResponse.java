@@ -27,7 +27,7 @@ public final class PartnerRegionInfoResponse {
         @Nullable String location,
         String replicationRole) {
         this.location = location;
-        this.replicationRole = Objects.requireNonNull(replicationRole);
+        this.replicationRole = replicationRole;
     }
 
     /**

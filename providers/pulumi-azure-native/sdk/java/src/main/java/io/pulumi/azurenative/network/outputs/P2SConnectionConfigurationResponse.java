@@ -60,10 +60,10 @@ public final class P2SConnectionConfigurationResponse {
         @Nullable RoutingConfigurationResponse routingConfiguration,
         @Nullable AddressSpaceResponse vpnClientAddressPool) {
         this.enableInternetSecurity = enableInternetSecurity;
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.id = id;
         this.name = name;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.routingConfiguration = routingConfiguration;
         this.vpnClientAddressPool = vpnClientAddressPool;
     }

@@ -33,9 +33,9 @@ public final class GetTdeCertificatesSqlTaskInputResponse {
         FileShareResponse backupFileShare,
         SqlConnectionInfoResponse connectionInfo,
         List<SelectedCertificateInputResponse> selectedCertificates) {
-        this.backupFileShare = Objects.requireNonNull(backupFileShare);
-        this.connectionInfo = Objects.requireNonNull(connectionInfo);
-        this.selectedCertificates = Objects.requireNonNull(selectedCertificates);
+        this.backupFileShare = backupFileShare;
+        this.connectionInfo = connectionInfo;
+        this.selectedCertificates = selectedCertificates;
     }
 
     /**

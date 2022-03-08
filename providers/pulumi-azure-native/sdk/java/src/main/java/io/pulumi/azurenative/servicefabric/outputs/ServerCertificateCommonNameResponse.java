@@ -24,8 +24,8 @@ public final class ServerCertificateCommonNameResponse {
     private ServerCertificateCommonNameResponse(
         String certificateCommonName,
         String certificateIssuerThumbprint) {
-        this.certificateCommonName = Objects.requireNonNull(certificateCommonName);
-        this.certificateIssuerThumbprint = Objects.requireNonNull(certificateIssuerThumbprint);
+        this.certificateCommonName = certificateCommonName;
+        this.certificateIssuerThumbprint = certificateIssuerThumbprint;
     }
 
     /**

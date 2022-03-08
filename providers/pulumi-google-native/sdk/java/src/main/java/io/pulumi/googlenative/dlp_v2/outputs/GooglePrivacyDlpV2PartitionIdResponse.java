@@ -24,8 +24,8 @@ public final class GooglePrivacyDlpV2PartitionIdResponse {
     private GooglePrivacyDlpV2PartitionIdResponse(
         String namespaceId,
         String project) {
-        this.namespaceId = Objects.requireNonNull(namespaceId);
-        this.project = Objects.requireNonNull(project);
+        this.namespaceId = namespaceId;
+        this.project = project;
     }
 
     /**

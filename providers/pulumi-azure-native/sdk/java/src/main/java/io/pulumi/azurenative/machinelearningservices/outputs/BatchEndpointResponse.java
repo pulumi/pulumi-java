@@ -55,8 +55,8 @@ public final class BatchEndpointResponse {
         this.authMode = authMode;
         this.description = description;
         this.properties = properties;
-        this.scoringUri = Objects.requireNonNull(scoringUri);
-        this.swaggerUri = Objects.requireNonNull(swaggerUri);
+        this.scoringUri = scoringUri;
+        this.swaggerUri = swaggerUri;
         this.traffic = traffic;
     }
 

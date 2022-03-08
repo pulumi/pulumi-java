@@ -89,16 +89,16 @@ public final class GetIdentityProviderResult {
         String type) {
         this.allowedTenants = allowedTenants;
         this.authority = authority;
-        this.clientId = Objects.requireNonNull(clientId);
+        this.clientId = clientId;
         this.clientSecret = clientSecret;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.passwordResetPolicyName = passwordResetPolicyName;
         this.profileEditingPolicyName = profileEditingPolicyName;
         this.signinPolicyName = signinPolicyName;
         this.signinTenant = signinTenant;
         this.signupPolicyName = signupPolicyName;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

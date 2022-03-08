@@ -111,20 +111,20 @@ public final class ServiceResourceDescriptionResponse {
         String type,
         String unhealthyEvaluation) {
         this.autoScalingPolicies = autoScalingPolicies;
-        this.codePackages = Objects.requireNonNull(codePackages);
+        this.codePackages = codePackages;
         this.description = description;
         this.diagnostics = diagnostics;
-        this.healthState = Objects.requireNonNull(healthState);
-        this.id = Objects.requireNonNull(id);
+        this.healthState = healthState;
+        this.id = id;
         this.name = name;
         this.networkRefs = networkRefs;
-        this.osType = Objects.requireNonNull(osType);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.osType = osType;
+        this.provisioningState = provisioningState;
         this.replicaCount = replicaCount;
-        this.status = Objects.requireNonNull(status);
-        this.statusDetails = Objects.requireNonNull(statusDetails);
-        this.type = Objects.requireNonNull(type);
-        this.unhealthyEvaluation = Objects.requireNonNull(unhealthyEvaluation);
+        this.status = status;
+        this.statusDetails = statusDetails;
+        this.type = type;
+        this.unhealthyEvaluation = unhealthyEvaluation;
     }
 
     /**

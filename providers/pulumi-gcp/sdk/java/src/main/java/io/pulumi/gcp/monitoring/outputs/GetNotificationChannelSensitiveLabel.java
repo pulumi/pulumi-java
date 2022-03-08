@@ -18,9 +18,9 @@ public final class GetNotificationChannelSensitiveLabel {
         String authToken,
         String password,
         String serviceKey) {
-        this.authToken = Objects.requireNonNull(authToken);
-        this.password = Objects.requireNonNull(password);
-        this.serviceKey = Objects.requireNonNull(serviceKey);
+        this.authToken = authToken;
+        this.password = password;
+        this.serviceKey = serviceKey;
     }
 
     public String getAuthToken() {

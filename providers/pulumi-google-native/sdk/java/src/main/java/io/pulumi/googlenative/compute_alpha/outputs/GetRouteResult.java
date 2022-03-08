@@ -161,30 +161,30 @@ public final class GetRouteResult {
         String selfLinkWithId,
         List<String> tags,
         List<RouteWarningsItemResponse> warnings) {
-        this.allowConflictingSubnetworks = Objects.requireNonNull(allowConflictingSubnetworks);
-        this.asPaths = Objects.requireNonNull(asPaths);
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.description = Objects.requireNonNull(description);
-        this.destRange = Objects.requireNonNull(destRange);
-        this.ilbRouteBehaviorOnUnhealthy = Objects.requireNonNull(ilbRouteBehaviorOnUnhealthy);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.network = Objects.requireNonNull(network);
-        this.nextHopGateway = Objects.requireNonNull(nextHopGateway);
-        this.nextHopIlb = Objects.requireNonNull(nextHopIlb);
-        this.nextHopInstance = Objects.requireNonNull(nextHopInstance);
-        this.nextHopInterconnectAttachment = Objects.requireNonNull(nextHopInterconnectAttachment);
-        this.nextHopIp = Objects.requireNonNull(nextHopIp);
-        this.nextHopNetwork = Objects.requireNonNull(nextHopNetwork);
-        this.nextHopPeering = Objects.requireNonNull(nextHopPeering);
-        this.nextHopVpnTunnel = Objects.requireNonNull(nextHopVpnTunnel);
-        this.priority = Objects.requireNonNull(priority);
-        this.routeStatus = Objects.requireNonNull(routeStatus);
-        this.routeType = Objects.requireNonNull(routeType);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
-        this.tags = Objects.requireNonNull(tags);
-        this.warnings = Objects.requireNonNull(warnings);
+        this.allowConflictingSubnetworks = allowConflictingSubnetworks;
+        this.asPaths = asPaths;
+        this.creationTimestamp = creationTimestamp;
+        this.description = description;
+        this.destRange = destRange;
+        this.ilbRouteBehaviorOnUnhealthy = ilbRouteBehaviorOnUnhealthy;
+        this.kind = kind;
+        this.name = name;
+        this.network = network;
+        this.nextHopGateway = nextHopGateway;
+        this.nextHopIlb = nextHopIlb;
+        this.nextHopInstance = nextHopInstance;
+        this.nextHopInterconnectAttachment = nextHopInterconnectAttachment;
+        this.nextHopIp = nextHopIp;
+        this.nextHopNetwork = nextHopNetwork;
+        this.nextHopPeering = nextHopPeering;
+        this.nextHopVpnTunnel = nextHopVpnTunnel;
+        this.priority = priority;
+        this.routeStatus = routeStatus;
+        this.routeType = routeType;
+        this.selfLink = selfLink;
+        this.selfLinkWithId = selfLinkWithId;
+        this.tags = tags;
+        this.warnings = warnings;
     }
 
     /**

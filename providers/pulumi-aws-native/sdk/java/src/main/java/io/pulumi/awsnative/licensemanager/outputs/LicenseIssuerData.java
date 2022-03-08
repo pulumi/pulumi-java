@@ -18,7 +18,7 @@ public final class LicenseIssuerData {
     private LicenseIssuerData(
         String name,
         @Nullable String signKey) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.signKey = signKey;
     }
 

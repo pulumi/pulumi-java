@@ -37,10 +37,10 @@ public final class ServicePrincipalSecretAuthInfoResponse {
         String clientId,
         String principalId,
         String secret) {
-        this.authType = Objects.requireNonNull(authType);
-        this.clientId = Objects.requireNonNull(clientId);
-        this.principalId = Objects.requireNonNull(principalId);
-        this.secret = Objects.requireNonNull(secret);
+        this.authType = authType;
+        this.clientId = clientId;
+        this.principalId = principalId;
+        this.secret = secret;
     }
 
     /**

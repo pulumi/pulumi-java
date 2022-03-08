@@ -32,9 +32,9 @@ public final class UserOwnedDrydockNoteResponse {
         String delegationServiceAccountEmail,
         String noteReference,
         List<AttestorPublicKeyResponse> publicKeys) {
-        this.delegationServiceAccountEmail = Objects.requireNonNull(delegationServiceAccountEmail);
-        this.noteReference = Objects.requireNonNull(noteReference);
-        this.publicKeys = Objects.requireNonNull(publicKeys);
+        this.delegationServiceAccountEmail = delegationServiceAccountEmail;
+        this.noteReference = noteReference;
+        this.publicKeys = publicKeys;
     }
 
     /**

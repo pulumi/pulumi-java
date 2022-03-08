@@ -174,30 +174,30 @@ public final class GetRedisResult {
         @Nullable Map<String,String> tenantSettings,
         String type,
         @Nullable List<String> zones) {
-        this.accessKeys = Objects.requireNonNull(accessKeys);
+        this.accessKeys = accessKeys;
         this.enableNonSslPort = enableNonSslPort;
-        this.hostName = Objects.requireNonNull(hostName);
-        this.id = Objects.requireNonNull(id);
-        this.instances = Objects.requireNonNull(instances);
-        this.linkedServers = Objects.requireNonNull(linkedServers);
-        this.location = Objects.requireNonNull(location);
+        this.hostName = hostName;
+        this.id = id;
+        this.instances = instances;
+        this.linkedServers = linkedServers;
+        this.location = location;
         this.minimumTlsVersion = minimumTlsVersion;
-        this.name = Objects.requireNonNull(name);
-        this.port = Objects.requireNonNull(port);
-        this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.name = name;
+        this.port = port;
+        this.privateEndpointConnections = privateEndpointConnections;
+        this.provisioningState = provisioningState;
         this.publicNetworkAccess = publicNetworkAccess;
         this.redisConfiguration = redisConfiguration;
-        this.redisVersion = Objects.requireNonNull(redisVersion);
+        this.redisVersion = redisVersion;
         this.replicasPerMaster = replicasPerMaster;
         this.shardCount = shardCount;
-        this.sku = Objects.requireNonNull(sku);
-        this.sslPort = Objects.requireNonNull(sslPort);
+        this.sku = sku;
+        this.sslPort = sslPort;
         this.staticIP = staticIP;
         this.subnetId = subnetId;
         this.tags = tags;
         this.tenantSettings = tenantSettings;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.zones = zones;
     }
 

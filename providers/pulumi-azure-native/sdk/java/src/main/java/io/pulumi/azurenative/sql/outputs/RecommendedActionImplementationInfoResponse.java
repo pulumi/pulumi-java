@@ -24,8 +24,8 @@ public final class RecommendedActionImplementationInfoResponse {
     private RecommendedActionImplementationInfoResponse(
         String method,
         String script) {
-        this.method = Objects.requireNonNull(method);
-        this.script = Objects.requireNonNull(script);
+        this.method = method;
+        this.script = script;
     }
 
     /**

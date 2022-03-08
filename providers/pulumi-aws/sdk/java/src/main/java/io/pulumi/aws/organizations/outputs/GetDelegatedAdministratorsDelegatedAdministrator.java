@@ -60,14 +60,14 @@ public final class GetDelegatedAdministratorsDelegatedAdministrator {
         String joinedTimestamp,
         String name,
         String status) {
-        this.arn = Objects.requireNonNull(arn);
-        this.delegationEnabledDate = Objects.requireNonNull(delegationEnabledDate);
-        this.email = Objects.requireNonNull(email);
-        this.id = Objects.requireNonNull(id);
-        this.joinedMethod = Objects.requireNonNull(joinedMethod);
-        this.joinedTimestamp = Objects.requireNonNull(joinedTimestamp);
-        this.name = Objects.requireNonNull(name);
-        this.status = Objects.requireNonNull(status);
+        this.arn = arn;
+        this.delegationEnabledDate = delegationEnabledDate;
+        this.email = email;
+        this.id = id;
+        this.joinedMethod = joinedMethod;
+        this.joinedTimestamp = joinedTimestamp;
+        this.name = name;
+        this.status = status;
     }
 
     /**

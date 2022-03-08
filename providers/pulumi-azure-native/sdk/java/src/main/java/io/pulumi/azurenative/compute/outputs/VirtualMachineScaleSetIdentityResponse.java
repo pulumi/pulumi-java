@@ -40,8 +40,8 @@ public final class VirtualMachineScaleSetIdentityResponse {
         String tenantId,
         @Nullable String type,
         @Nullable Map<String,VirtualMachineScaleSetIdentityResponseUserAssignedIdentities> userAssignedIdentities) {
-        this.principalId = Objects.requireNonNull(principalId);
-        this.tenantId = Objects.requireNonNull(tenantId);
+        this.principalId = principalId;
+        this.tenantId = tenantId;
         this.type = type;
         this.userAssignedIdentities = userAssignedIdentities;
     }

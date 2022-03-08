@@ -54,9 +54,9 @@ public final class PostgreSqlConnectionInfoResponse {
         @Nullable String userName) {
         this.databaseName = databaseName;
         this.password = password;
-        this.port = Objects.requireNonNull(port);
-        this.serverName = Objects.requireNonNull(serverName);
-        this.type = Objects.requireNonNull(type);
+        this.port = port;
+        this.serverName = serverName;
+        this.type = type;
         this.userName = userName;
     }
 

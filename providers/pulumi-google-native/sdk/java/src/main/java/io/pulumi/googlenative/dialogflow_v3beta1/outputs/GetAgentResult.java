@@ -94,19 +94,19 @@ public final class GetAgentResult {
         String startFlow,
         List<String> supportedLanguageCodes,
         String timeZone) {
-        this.advancedSettings = Objects.requireNonNull(advancedSettings);
-        this.avatarUri = Objects.requireNonNull(avatarUri);
-        this.defaultLanguageCode = Objects.requireNonNull(defaultLanguageCode);
-        this.description = Objects.requireNonNull(description);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.enableSpellCorrection = Objects.requireNonNull(enableSpellCorrection);
-        this.enableStackdriverLogging = Objects.requireNonNull(enableStackdriverLogging);
-        this.name = Objects.requireNonNull(name);
-        this.securitySettings = Objects.requireNonNull(securitySettings);
-        this.speechToTextSettings = Objects.requireNonNull(speechToTextSettings);
-        this.startFlow = Objects.requireNonNull(startFlow);
-        this.supportedLanguageCodes = Objects.requireNonNull(supportedLanguageCodes);
-        this.timeZone = Objects.requireNonNull(timeZone);
+        this.advancedSettings = advancedSettings;
+        this.avatarUri = avatarUri;
+        this.defaultLanguageCode = defaultLanguageCode;
+        this.description = description;
+        this.displayName = displayName;
+        this.enableSpellCorrection = enableSpellCorrection;
+        this.enableStackdriverLogging = enableStackdriverLogging;
+        this.name = name;
+        this.securitySettings = securitySettings;
+        this.speechToTextSettings = speechToTextSettings;
+        this.startFlow = startFlow;
+        this.supportedLanguageCodes = supportedLanguageCodes;
+        this.timeZone = timeZone;
     }
 
     /**

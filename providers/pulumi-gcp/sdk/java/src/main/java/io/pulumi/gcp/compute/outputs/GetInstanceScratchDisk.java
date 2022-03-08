@@ -17,7 +17,7 @@ public final class GetInstanceScratchDisk {
 
     @OutputCustomType.Constructor({"$interface"})
     private GetInstanceScratchDisk(String $interface) {
-        this.$interface = Objects.requireNonNull($interface);
+        this.$interface = $interface;
     }
 
     /**

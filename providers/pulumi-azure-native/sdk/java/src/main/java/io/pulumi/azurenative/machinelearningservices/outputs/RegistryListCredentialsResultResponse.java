@@ -21,9 +21,9 @@ public final class RegistryListCredentialsResultResponse {
         String location,
         @Nullable List<PasswordResponse> passwords,
         String username) {
-        this.location = Objects.requireNonNull(location);
+        this.location = location;
         this.passwords = passwords;
-        this.username = Objects.requireNonNull(username);
+        this.username = username;
     }
 
     public String getLocation() {

@@ -18,7 +18,7 @@ public final class WorkflowTemplateJobHiveJobQueryList {
 
     @OutputCustomType.Constructor({"queries"})
     private WorkflowTemplateJobHiveJobQueryList(List<String> queries) {
-        this.queries = Objects.requireNonNull(queries);
+        this.queries = queries;
     }
 
     /**

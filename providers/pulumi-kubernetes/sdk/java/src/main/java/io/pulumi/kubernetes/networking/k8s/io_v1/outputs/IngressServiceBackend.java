@@ -27,7 +27,7 @@ public final class IngressServiceBackend {
     private IngressServiceBackend(
         String name,
         @Nullable ServiceBackendPort port) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.port = port;
     }
 

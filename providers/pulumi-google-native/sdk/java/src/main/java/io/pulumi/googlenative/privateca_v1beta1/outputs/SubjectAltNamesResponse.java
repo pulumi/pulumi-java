@@ -44,11 +44,11 @@ public final class SubjectAltNamesResponse {
         List<String> emailAddresses,
         List<String> ipAddresses,
         List<String> uris) {
-        this.customSans = Objects.requireNonNull(customSans);
-        this.dnsNames = Objects.requireNonNull(dnsNames);
-        this.emailAddresses = Objects.requireNonNull(emailAddresses);
-        this.ipAddresses = Objects.requireNonNull(ipAddresses);
-        this.uris = Objects.requireNonNull(uris);
+        this.customSans = customSans;
+        this.dnsNames = dnsNames;
+        this.emailAddresses = emailAddresses;
+        this.ipAddresses = ipAddresses;
+        this.uris = uris;
     }
 
     /**

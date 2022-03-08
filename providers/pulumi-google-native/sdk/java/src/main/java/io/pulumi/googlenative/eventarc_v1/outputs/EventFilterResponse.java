@@ -24,8 +24,8 @@ public final class EventFilterResponse {
     private EventFilterResponse(
         String attribute,
         String value) {
-        this.attribute = Objects.requireNonNull(attribute);
-        this.value = Objects.requireNonNull(value);
+        this.attribute = attribute;
+        this.value = value;
     }
 
     /**

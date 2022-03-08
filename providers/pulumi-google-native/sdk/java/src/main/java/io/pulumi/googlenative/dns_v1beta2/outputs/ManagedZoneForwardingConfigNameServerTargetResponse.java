@@ -32,10 +32,10 @@ public final class ManagedZoneForwardingConfigNameServerTargetResponse {
         String ipv4Address,
         String ipv6Address,
         String kind) {
-        this.forwardingPath = Objects.requireNonNull(forwardingPath);
-        this.ipv4Address = Objects.requireNonNull(ipv4Address);
-        this.ipv6Address = Objects.requireNonNull(ipv6Address);
-        this.kind = Objects.requireNonNull(kind);
+        this.forwardingPath = forwardingPath;
+        this.ipv4Address = ipv4Address;
+        this.ipv6Address = ipv6Address;
+        this.kind = kind;
     }
 
     /**

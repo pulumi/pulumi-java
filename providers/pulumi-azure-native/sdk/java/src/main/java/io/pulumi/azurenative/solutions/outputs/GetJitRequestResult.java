@@ -97,19 +97,19 @@ public final class GetJitRequestResult {
         @Nullable Map<String,String> tags,
         String type,
         ApplicationClientDetailsResponse updatedBy) {
-        this.applicationResourceId = Objects.requireNonNull(applicationResourceId);
-        this.createdBy = Objects.requireNonNull(createdBy);
-        this.id = Objects.requireNonNull(id);
-        this.jitAuthorizationPolicies = Objects.requireNonNull(jitAuthorizationPolicies);
-        this.jitRequestState = Objects.requireNonNull(jitRequestState);
-        this.jitSchedulingPolicy = Objects.requireNonNull(jitSchedulingPolicy);
+        this.applicationResourceId = applicationResourceId;
+        this.createdBy = createdBy;
+        this.id = id;
+        this.jitAuthorizationPolicies = jitAuthorizationPolicies;
+        this.jitRequestState = jitRequestState;
+        this.jitSchedulingPolicy = jitSchedulingPolicy;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.publisherTenantId = Objects.requireNonNull(publisherTenantId);
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.publisherTenantId = publisherTenantId;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
-        this.updatedBy = Objects.requireNonNull(updatedBy);
+        this.type = type;
+        this.updatedBy = updatedBy;
     }
 
     /**

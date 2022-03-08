@@ -71,15 +71,15 @@ public final class TestExecutionResponse {
         TestSpecificationResponse testSpecification,
         String timestamp,
         ToolResultsStepResponse toolResultsStep) {
-        this.environment = Objects.requireNonNull(environment);
-        this.matrixId = Objects.requireNonNull(matrixId);
-        this.project = Objects.requireNonNull(project);
-        this.shard = Objects.requireNonNull(shard);
-        this.state = Objects.requireNonNull(state);
-        this.testDetails = Objects.requireNonNull(testDetails);
-        this.testSpecification = Objects.requireNonNull(testSpecification);
-        this.timestamp = Objects.requireNonNull(timestamp);
-        this.toolResultsStep = Objects.requireNonNull(toolResultsStep);
+        this.environment = environment;
+        this.matrixId = matrixId;
+        this.project = project;
+        this.shard = shard;
+        this.state = state;
+        this.testDetails = testDetails;
+        this.testSpecification = testSpecification;
+        this.timestamp = timestamp;
+        this.toolResultsStep = toolResultsStep;
     }
 
     /**

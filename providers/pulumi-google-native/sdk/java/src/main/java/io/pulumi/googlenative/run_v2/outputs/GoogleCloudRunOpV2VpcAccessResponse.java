@@ -24,8 +24,8 @@ public final class GoogleCloudRunOpV2VpcAccessResponse {
     private GoogleCloudRunOpV2VpcAccessResponse(
         String connector,
         String egress) {
-        this.connector = Objects.requireNonNull(connector);
-        this.egress = Objects.requireNonNull(egress);
+        this.connector = connector;
+        this.egress = egress;
     }
 
     /**

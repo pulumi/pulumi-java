@@ -17,7 +17,7 @@ public final class GoogleCloudMlV1__ManualScalingResponse {
 
     @OutputCustomType.Constructor({"nodes"})
     private GoogleCloudMlV1__ManualScalingResponse(Integer nodes) {
-        this.nodes = Objects.requireNonNull(nodes);
+        this.nodes = nodes;
     }
 
     /**

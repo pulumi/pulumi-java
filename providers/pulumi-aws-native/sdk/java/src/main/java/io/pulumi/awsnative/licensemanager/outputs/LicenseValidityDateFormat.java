@@ -24,8 +24,8 @@ public final class LicenseValidityDateFormat {
     private LicenseValidityDateFormat(
         String begin,
         String end) {
-        this.begin = Objects.requireNonNull(begin);
-        this.end = Objects.requireNonNull(end);
+        this.begin = begin;
+        this.end = end;
     }
 
     /**

@@ -56,13 +56,13 @@ public final class StaticFilesHandlerResponse {
         String path,
         Boolean requireMatchingFile,
         String uploadPathRegex) {
-        this.applicationReadable = Objects.requireNonNull(applicationReadable);
-        this.expiration = Objects.requireNonNull(expiration);
-        this.httpHeaders = Objects.requireNonNull(httpHeaders);
-        this.mimeType = Objects.requireNonNull(mimeType);
-        this.path = Objects.requireNonNull(path);
-        this.requireMatchingFile = Objects.requireNonNull(requireMatchingFile);
-        this.uploadPathRegex = Objects.requireNonNull(uploadPathRegex);
+        this.applicationReadable = applicationReadable;
+        this.expiration = expiration;
+        this.httpHeaders = httpHeaders;
+        this.mimeType = mimeType;
+        this.path = path;
+        this.requireMatchingFile = requireMatchingFile;
+        this.uploadPathRegex = uploadPathRegex;
     }
 
     /**

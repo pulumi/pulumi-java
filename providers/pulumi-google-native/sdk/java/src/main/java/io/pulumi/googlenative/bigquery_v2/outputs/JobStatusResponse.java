@@ -32,9 +32,9 @@ public final class JobStatusResponse {
         ErrorProtoResponse errorResult,
         List<ErrorProtoResponse> errors,
         String state) {
-        this.errorResult = Objects.requireNonNull(errorResult);
-        this.errors = Objects.requireNonNull(errors);
-        this.state = Objects.requireNonNull(state);
+        this.errorResult = errorResult;
+        this.errors = errors;
+        this.state = state;
     }
 
     /**

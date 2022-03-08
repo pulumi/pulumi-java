@@ -36,11 +36,11 @@ public final class GetCaCertsResult {
         String id,
         String instance,
         String project) {
-        this.activeVersion = Objects.requireNonNull(activeVersion);
-        this.certs = Objects.requireNonNull(certs);
-        this.id = Objects.requireNonNull(id);
-        this.instance = Objects.requireNonNull(instance);
-        this.project = Objects.requireNonNull(project);
+        this.activeVersion = activeVersion;
+        this.certs = certs;
+        this.id = id;
+        this.instance = instance;
+        this.project = project;
     }
 
     /**

@@ -17,7 +17,7 @@ public final class DataSourceParametersServiceNow {
 
     @OutputCustomType.Constructor({"siteBaseUrl"})
     private DataSourceParametersServiceNow(String siteBaseUrl) {
-        this.siteBaseUrl = Objects.requireNonNull(siteBaseUrl);
+        this.siteBaseUrl = siteBaseUrl;
     }
 
     /**

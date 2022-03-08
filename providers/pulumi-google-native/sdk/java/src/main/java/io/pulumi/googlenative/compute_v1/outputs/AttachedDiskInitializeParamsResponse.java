@@ -93,19 +93,19 @@ public final class AttachedDiskInitializeParamsResponse {
         CustomerEncryptionKeyResponse sourceImageEncryptionKey,
         String sourceSnapshot,
         CustomerEncryptionKeyResponse sourceSnapshotEncryptionKey) {
-        this.description = Objects.requireNonNull(description);
-        this.diskName = Objects.requireNonNull(diskName);
-        this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
-        this.diskType = Objects.requireNonNull(diskType);
-        this.labels = Objects.requireNonNull(labels);
-        this.licenses = Objects.requireNonNull(licenses);
-        this.onUpdateAction = Objects.requireNonNull(onUpdateAction);
-        this.provisionedIops = Objects.requireNonNull(provisionedIops);
-        this.resourcePolicies = Objects.requireNonNull(resourcePolicies);
-        this.sourceImage = Objects.requireNonNull(sourceImage);
-        this.sourceImageEncryptionKey = Objects.requireNonNull(sourceImageEncryptionKey);
-        this.sourceSnapshot = Objects.requireNonNull(sourceSnapshot);
-        this.sourceSnapshotEncryptionKey = Objects.requireNonNull(sourceSnapshotEncryptionKey);
+        this.description = description;
+        this.diskName = diskName;
+        this.diskSizeGb = diskSizeGb;
+        this.diskType = diskType;
+        this.labels = labels;
+        this.licenses = licenses;
+        this.onUpdateAction = onUpdateAction;
+        this.provisionedIops = provisionedIops;
+        this.resourcePolicies = resourcePolicies;
+        this.sourceImage = sourceImage;
+        this.sourceImageEncryptionKey = sourceImageEncryptionKey;
+        this.sourceSnapshot = sourceSnapshot;
+        this.sourceSnapshotEncryptionKey = sourceSnapshotEncryptionKey;
     }
 
     /**

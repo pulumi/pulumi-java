@@ -26,8 +26,8 @@ public final class ContainerGroupResponseInstanceView {
     private ContainerGroupResponseInstanceView(
         List<EventResponse> events,
         String state) {
-        this.events = Objects.requireNonNull(events);
-        this.state = Objects.requireNonNull(state);
+        this.events = events;
+        this.state = state;
     }
 
     /**

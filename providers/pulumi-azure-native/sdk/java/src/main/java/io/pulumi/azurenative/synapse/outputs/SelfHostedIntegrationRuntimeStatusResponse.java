@@ -138,26 +138,26 @@ public final class SelfHostedIntegrationRuntimeStatusResponse {
         String updateDelayOffset,
         String version,
         String versionStatus) {
-        this.autoUpdate = Objects.requireNonNull(autoUpdate);
-        this.autoUpdateETA = Objects.requireNonNull(autoUpdateETA);
-        this.capabilities = Objects.requireNonNull(capabilities);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.dataFactoryName = Objects.requireNonNull(dataFactoryName);
-        this.internalChannelEncryption = Objects.requireNonNull(internalChannelEncryption);
-        this.latestVersion = Objects.requireNonNull(latestVersion);
+        this.autoUpdate = autoUpdate;
+        this.autoUpdateETA = autoUpdateETA;
+        this.capabilities = capabilities;
+        this.createTime = createTime;
+        this.dataFactoryName = dataFactoryName;
+        this.internalChannelEncryption = internalChannelEncryption;
+        this.latestVersion = latestVersion;
         this.links = links;
-        this.localTimeZoneOffset = Objects.requireNonNull(localTimeZoneOffset);
-        this.nodeCommunicationChannelEncryptionMode = Objects.requireNonNull(nodeCommunicationChannelEncryptionMode);
+        this.localTimeZoneOffset = localTimeZoneOffset;
+        this.nodeCommunicationChannelEncryptionMode = nodeCommunicationChannelEncryptionMode;
         this.nodes = nodes;
-        this.pushedVersion = Objects.requireNonNull(pushedVersion);
-        this.scheduledUpdateDate = Objects.requireNonNull(scheduledUpdateDate);
-        this.serviceUrls = Objects.requireNonNull(serviceUrls);
-        this.state = Objects.requireNonNull(state);
-        this.taskQueueId = Objects.requireNonNull(taskQueueId);
-        this.type = Objects.requireNonNull(type);
-        this.updateDelayOffset = Objects.requireNonNull(updateDelayOffset);
-        this.version = Objects.requireNonNull(version);
-        this.versionStatus = Objects.requireNonNull(versionStatus);
+        this.pushedVersion = pushedVersion;
+        this.scheduledUpdateDate = scheduledUpdateDate;
+        this.serviceUrls = serviceUrls;
+        this.state = state;
+        this.taskQueueId = taskQueueId;
+        this.type = type;
+        this.updateDelayOffset = updateDelayOffset;
+        this.version = version;
+        this.versionStatus = versionStatus;
     }
 
     /**

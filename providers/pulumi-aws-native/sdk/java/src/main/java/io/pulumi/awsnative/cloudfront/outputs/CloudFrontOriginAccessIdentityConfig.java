@@ -13,7 +13,7 @@ public final class CloudFrontOriginAccessIdentityConfig {
 
     @OutputCustomType.Constructor({"comment"})
     private CloudFrontOriginAccessIdentityConfig(String comment) {
-        this.comment = Objects.requireNonNull(comment);
+        this.comment = comment;
     }
 
     public String getComment() {

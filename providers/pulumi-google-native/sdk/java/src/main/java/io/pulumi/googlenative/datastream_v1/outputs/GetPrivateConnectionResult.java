@@ -63,14 +63,14 @@ public final class GetPrivateConnectionResult {
         String state,
         String updateTime,
         VpcPeeringConfigResponse vpcPeeringConfig) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.error = Objects.requireNonNull(error);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.state = Objects.requireNonNull(state);
-        this.updateTime = Objects.requireNonNull(updateTime);
-        this.vpcPeeringConfig = Objects.requireNonNull(vpcPeeringConfig);
+        this.createTime = createTime;
+        this.displayName = displayName;
+        this.error = error;
+        this.labels = labels;
+        this.name = name;
+        this.state = state;
+        this.updateTime = updateTime;
+        this.vpcPeeringConfig = vpcPeeringConfig;
     }
 
     /**

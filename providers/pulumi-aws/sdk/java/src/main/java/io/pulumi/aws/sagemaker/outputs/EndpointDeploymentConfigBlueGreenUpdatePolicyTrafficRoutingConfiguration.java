@@ -43,8 +43,8 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingCo
         Integer waitIntervalInSeconds) {
         this.canarySize = canarySize;
         this.linearStepSize = linearStepSize;
-        this.type = Objects.requireNonNull(type);
-        this.waitIntervalInSeconds = Objects.requireNonNull(waitIntervalInSeconds);
+        this.type = type;
+        this.waitIntervalInSeconds = waitIntervalInSeconds;
     }
 
     /**

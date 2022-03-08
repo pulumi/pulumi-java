@@ -19,7 +19,7 @@ public final class SecretReplicationUserManaged {
 
     @OutputCustomType.Constructor({"replicas"})
     private SecretReplicationUserManaged(List<SecretReplicationUserManagedReplica> replicas) {
-        this.replicas = Objects.requireNonNull(replicas);
+        this.replicas = replicas;
     }
 
     /**

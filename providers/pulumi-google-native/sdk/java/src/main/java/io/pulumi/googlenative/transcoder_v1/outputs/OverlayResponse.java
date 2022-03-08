@@ -26,8 +26,8 @@ public final class OverlayResponse {
     private OverlayResponse(
         List<AnimationResponse> animations,
         ImageResponse image) {
-        this.animations = Objects.requireNonNull(animations);
-        this.image = Objects.requireNonNull(image);
+        this.animations = animations;
+        this.image = image;
     }
 
     /**

@@ -17,8 +17,8 @@ public final class DatasetRetentionPeriod {
     private DatasetRetentionPeriod(
         Integer numberOfDays,
         Boolean unlimited) {
-        this.numberOfDays = Objects.requireNonNull(numberOfDays);
-        this.unlimited = Objects.requireNonNull(unlimited);
+        this.numberOfDays = numberOfDays;
+        this.unlimited = unlimited;
     }
 
     public Integer getNumberOfDays() {

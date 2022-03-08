@@ -17,8 +17,8 @@ public final class ResponseHeadersPolicyContentSecurityPolicy {
     private ResponseHeadersPolicyContentSecurityPolicy(
         String contentSecurityPolicy,
         Boolean override) {
-        this.contentSecurityPolicy = Objects.requireNonNull(contentSecurityPolicy);
-        this.override = Objects.requireNonNull(override);
+        this.contentSecurityPolicy = contentSecurityPolicy;
+        this.override = override;
     }
 
     public String getContentSecurityPolicy() {

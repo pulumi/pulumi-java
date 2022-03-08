@@ -28,7 +28,7 @@ public final class PersistentVolumeClaimTemplate {
         @Nullable ObjectMeta metadata,
         PersistentVolumeClaimSpec spec) {
         this.metadata = metadata;
-        this.spec = Objects.requireNonNull(spec);
+        this.spec = spec;
     }
 
     /**

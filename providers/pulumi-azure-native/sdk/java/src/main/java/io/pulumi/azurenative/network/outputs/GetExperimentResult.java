@@ -92,14 +92,14 @@ public final class GetExperimentResult {
         this.enabledState = enabledState;
         this.endpointA = endpointA;
         this.endpointB = endpointB;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
-        this.resourceState = Objects.requireNonNull(resourceState);
-        this.scriptFileUri = Objects.requireNonNull(scriptFileUri);
-        this.status = Objects.requireNonNull(status);
+        this.name = name;
+        this.resourceState = resourceState;
+        this.scriptFileUri = scriptFileUri;
+        this.status = status;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

@@ -16,8 +16,8 @@ public final class GetKMSCryptoKeyVersionTemplate {
     private GetKMSCryptoKeyVersionTemplate(
         String algorithm,
         String protectionLevel) {
-        this.algorithm = Objects.requireNonNull(algorithm);
-        this.protectionLevel = Objects.requireNonNull(protectionLevel);
+        this.algorithm = algorithm;
+        this.protectionLevel = protectionLevel;
     }
 
     public String getAlgorithm() {

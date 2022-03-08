@@ -35,7 +35,7 @@ public final class ClusterLogging {
         Boolean enable,
         @Nullable String s3KeyPrefix) {
         this.bucketName = bucketName;
-        this.enable = Objects.requireNonNull(enable);
+        this.enable = enable;
         this.s3KeyPrefix = s3KeyPrefix;
     }
 

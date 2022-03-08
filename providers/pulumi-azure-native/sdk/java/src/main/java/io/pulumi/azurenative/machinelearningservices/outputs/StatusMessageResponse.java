@@ -36,10 +36,10 @@ public final class StatusMessageResponse {
         String createdTimeUtc,
         String level,
         String message) {
-        this.code = Objects.requireNonNull(code);
-        this.createdTimeUtc = Objects.requireNonNull(createdTimeUtc);
-        this.level = Objects.requireNonNull(level);
-        this.message = Objects.requireNonNull(message);
+        this.code = code;
+        this.createdTimeUtc = createdTimeUtc;
+        this.level = level;
+        this.message = message;
     }
 
     /**

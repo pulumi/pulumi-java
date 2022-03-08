@@ -141,19 +141,19 @@ public final class GetGalleryImageResult {
         this.eula = eula;
         this.features = features;
         this.hyperVGeneration = hyperVGeneration;
-        this.id = Objects.requireNonNull(id);
-        this.identifier = Objects.requireNonNull(identifier);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.osState = Objects.requireNonNull(osState);
-        this.osType = Objects.requireNonNull(osType);
+        this.id = id;
+        this.identifier = identifier;
+        this.location = location;
+        this.name = name;
+        this.osState = osState;
+        this.osType = osType;
         this.privacyStatementUri = privacyStatementUri;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.purchasePlan = purchasePlan;
         this.recommended = recommended;
         this.releaseNoteUri = releaseNoteUri;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

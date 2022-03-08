@@ -24,7 +24,7 @@ public final class DataSourceSalesforceKnowledgeArticleConfiguration {
         List<DataSourceSalesforceKnowledgeArticleState> includedStates,
         @Nullable DataSourceSalesforceStandardKnowledgeArticleTypeConfiguration standardKnowledgeArticleTypeConfiguration) {
         this.customKnowledgeArticleTypeConfigurations = customKnowledgeArticleTypeConfigurations;
-        this.includedStates = Objects.requireNonNull(includedStates);
+        this.includedStates = includedStates;
         this.standardKnowledgeArticleTypeConfiguration = standardKnowledgeArticleTypeConfiguration;
     }
 

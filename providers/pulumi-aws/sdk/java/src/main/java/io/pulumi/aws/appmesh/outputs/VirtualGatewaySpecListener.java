@@ -43,7 +43,7 @@ public final class VirtualGatewaySpecListener {
         @Nullable VirtualGatewaySpecListenerTls tls) {
         this.connectionPool = connectionPool;
         this.healthCheck = healthCheck;
-        this.portMapping = Objects.requireNonNull(portMapping);
+        this.portMapping = portMapping;
         this.tls = tls;
     }
 

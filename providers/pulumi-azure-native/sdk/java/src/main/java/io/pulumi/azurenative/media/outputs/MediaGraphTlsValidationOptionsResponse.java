@@ -24,8 +24,8 @@ public final class MediaGraphTlsValidationOptionsResponse {
     private MediaGraphTlsValidationOptionsResponse(
         Boolean ignoreHostname,
         Boolean ignoreSignature) {
-        this.ignoreHostname = Objects.requireNonNull(ignoreHostname);
-        this.ignoreSignature = Objects.requireNonNull(ignoreSignature);
+        this.ignoreHostname = ignoreHostname;
+        this.ignoreSignature = ignoreSignature;
     }
 
     /**

@@ -34,8 +34,8 @@ public final class MultiBitrateFormatResponse {
         String filenamePattern,
         String odataType,
         @Nullable List<OutputFileResponse> outputFiles) {
-        this.filenamePattern = Objects.requireNonNull(filenamePattern);
-        this.odataType = Objects.requireNonNull(odataType);
+        this.filenamePattern = filenamePattern;
+        this.odataType = odataType;
         this.outputFiles = outputFiles;
     }
 

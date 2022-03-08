@@ -53,11 +53,11 @@ public final class GetAccessPolicyResult {
         SystemDataResponse systemData,
         String type) {
         this.authentication = authentication;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.role = role;
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

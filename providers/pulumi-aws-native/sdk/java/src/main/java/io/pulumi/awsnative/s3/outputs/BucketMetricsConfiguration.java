@@ -25,7 +25,7 @@ public final class BucketMetricsConfiguration {
         @Nullable String prefix,
         @Nullable List<BucketTagFilter> tagFilters) {
         this.accessPointArn = accessPointArn;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.prefix = prefix;
         this.tagFilters = tagFilters;
     }

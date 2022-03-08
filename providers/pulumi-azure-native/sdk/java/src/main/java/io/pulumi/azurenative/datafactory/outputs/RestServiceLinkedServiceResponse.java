@@ -135,7 +135,7 @@ public final class RestServiceLinkedServiceResponse {
         this.aadResourceId = aadResourceId;
         this.annotations = annotations;
         this.authHeaders = authHeaders;
-        this.authenticationType = Objects.requireNonNull(authenticationType);
+        this.authenticationType = authenticationType;
         this.azureCloudType = azureCloudType;
         this.connectVia = connectVia;
         this.credential = credential;
@@ -147,8 +147,8 @@ public final class RestServiceLinkedServiceResponse {
         this.servicePrincipalId = servicePrincipalId;
         this.servicePrincipalKey = servicePrincipalKey;
         this.tenant = tenant;
-        this.type = Objects.requireNonNull(type);
-        this.url = Objects.requireNonNull(url);
+        this.type = type;
+        this.url = url;
         this.userName = userName;
     }
 

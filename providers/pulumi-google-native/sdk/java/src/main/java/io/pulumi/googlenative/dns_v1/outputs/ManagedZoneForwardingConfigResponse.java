@@ -22,8 +22,8 @@ public final class ManagedZoneForwardingConfigResponse {
     private ManagedZoneForwardingConfigResponse(
         String kind,
         List<ManagedZoneForwardingConfigNameServerTargetResponse> targetNameServers) {
-        this.kind = Objects.requireNonNull(kind);
-        this.targetNameServers = Objects.requireNonNull(targetNameServers);
+        this.kind = kind;
+        this.targetNameServers = targetNameServers;
     }
 
     public String getKind() {

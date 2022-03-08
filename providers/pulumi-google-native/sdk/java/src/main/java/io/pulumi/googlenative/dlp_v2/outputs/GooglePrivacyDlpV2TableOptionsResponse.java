@@ -18,7 +18,7 @@ public final class GooglePrivacyDlpV2TableOptionsResponse {
 
     @OutputCustomType.Constructor({"identifyingFields"})
     private GooglePrivacyDlpV2TableOptionsResponse(List<GooglePrivacyDlpV2FieldIdResponse> identifyingFields) {
-        this.identifyingFields = Objects.requireNonNull(identifyingFields);
+        this.identifyingFields = identifyingFields;
     }
 
     /**

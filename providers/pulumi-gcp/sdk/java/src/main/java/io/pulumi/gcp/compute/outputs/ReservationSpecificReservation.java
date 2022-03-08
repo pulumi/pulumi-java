@@ -35,9 +35,9 @@ public final class ReservationSpecificReservation {
         Integer count,
         @Nullable Integer inUseCount,
         ReservationSpecificReservationInstanceProperties instanceProperties) {
-        this.count = Objects.requireNonNull(count);
+        this.count = count;
         this.inUseCount = inUseCount;
-        this.instanceProperties = Objects.requireNonNull(instanceProperties);
+        this.instanceProperties = instanceProperties;
     }
 
     /**

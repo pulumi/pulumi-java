@@ -56,13 +56,13 @@ public final class GetRouteResult {
         Map<String,String> labels,
         String name,
         String updateTime) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.destinationAddress = Objects.requireNonNull(destinationAddress);
-        this.destinationPort = Objects.requireNonNull(destinationPort);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.createTime = createTime;
+        this.destinationAddress = destinationAddress;
+        this.destinationPort = destinationPort;
+        this.displayName = displayName;
+        this.labels = labels;
+        this.name = name;
+        this.updateTime = updateTime;
     }
 
     /**

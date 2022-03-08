@@ -41,10 +41,10 @@ public final class RecoveryPlanActionResponse {
         Object customDetails,
         List<String> failoverDirections,
         List<String> failoverTypes) {
-        this.actionName = Objects.requireNonNull(actionName);
-        this.customDetails = Objects.requireNonNull(customDetails);
-        this.failoverDirections = Objects.requireNonNull(failoverDirections);
-        this.failoverTypes = Objects.requireNonNull(failoverTypes);
+        this.actionName = actionName;
+        this.customDetails = customDetails;
+        this.failoverDirections = failoverDirections;
+        this.failoverTypes = failoverTypes;
     }
 
     /**

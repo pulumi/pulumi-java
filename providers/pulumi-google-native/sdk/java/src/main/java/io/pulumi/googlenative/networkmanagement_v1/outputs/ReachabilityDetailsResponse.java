@@ -39,10 +39,10 @@ public final class ReachabilityDetailsResponse {
         String result,
         List<TraceResponse> traces,
         String verifyTime) {
-        this.error = Objects.requireNonNull(error);
-        this.result = Objects.requireNonNull(result);
-        this.traces = Objects.requireNonNull(traces);
-        this.verifyTime = Objects.requireNonNull(verifyTime);
+        this.error = error;
+        this.result = result;
+        this.traces = traces;
+        this.verifyTime = verifyTime;
     }
 
     /**

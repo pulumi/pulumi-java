@@ -25,8 +25,8 @@ public final class MonitoringResponse {
     private MonitoringResponse(
         List<MonitoringDestinationResponse> consumerDestinations,
         List<MonitoringDestinationResponse> producerDestinations) {
-        this.consumerDestinations = Objects.requireNonNull(consumerDestinations);
-        this.producerDestinations = Objects.requireNonNull(producerDestinations);
+        this.consumerDestinations = consumerDestinations;
+        this.producerDestinations = producerDestinations;
     }
 
     /**

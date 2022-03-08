@@ -36,11 +36,11 @@ public final class ConnectorAutoScaling {
         Integer minWorkerCount,
         ConnectorScaleInPolicy scaleInPolicy,
         ConnectorScaleOutPolicy scaleOutPolicy) {
-        this.maxWorkerCount = Objects.requireNonNull(maxWorkerCount);
-        this.mcuCount = Objects.requireNonNull(mcuCount);
-        this.minWorkerCount = Objects.requireNonNull(minWorkerCount);
-        this.scaleInPolicy = Objects.requireNonNull(scaleInPolicy);
-        this.scaleOutPolicy = Objects.requireNonNull(scaleOutPolicy);
+        this.maxWorkerCount = maxWorkerCount;
+        this.mcuCount = mcuCount;
+        this.minWorkerCount = minWorkerCount;
+        this.scaleInPolicy = scaleInPolicy;
+        this.scaleOutPolicy = scaleOutPolicy;
     }
 
     /**

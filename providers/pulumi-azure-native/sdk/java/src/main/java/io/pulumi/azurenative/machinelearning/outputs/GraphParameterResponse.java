@@ -35,8 +35,8 @@ public final class GraphParameterResponse {
         List<GraphParameterLinkResponse> links,
         String type) {
         this.description = description;
-        this.links = Objects.requireNonNull(links);
-        this.type = Objects.requireNonNull(type);
+        this.links = links;
+        this.type = type;
     }
 
     /**

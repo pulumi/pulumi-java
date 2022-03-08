@@ -24,8 +24,8 @@ public final class ProjectSecondarySourceVersion {
     private ProjectSecondarySourceVersion(
         String sourceIdentifier,
         String sourceVersion) {
-        this.sourceIdentifier = Objects.requireNonNull(sourceIdentifier);
-        this.sourceVersion = Objects.requireNonNull(sourceVersion);
+        this.sourceIdentifier = sourceIdentifier;
+        this.sourceVersion = sourceVersion;
     }
 
     /**

@@ -87,17 +87,17 @@ public final class GetCloudEndpointResult {
         @Nullable String storageAccountTenantId,
         String type) {
         this.azureFileShareName = azureFileShareName;
-        this.backupEnabled = Objects.requireNonNull(backupEnabled);
+        this.backupEnabled = backupEnabled;
         this.friendlyName = friendlyName;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.lastOperationName = lastOperationName;
         this.lastWorkflowId = lastWorkflowId;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.partnershipId = partnershipId;
         this.provisioningState = provisioningState;
         this.storageAccountResourceId = storageAccountResourceId;
         this.storageAccountTenantId = storageAccountTenantId;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

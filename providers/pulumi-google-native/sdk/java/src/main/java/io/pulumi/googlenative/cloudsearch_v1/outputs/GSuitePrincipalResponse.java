@@ -31,9 +31,9 @@ public final class GSuitePrincipalResponse {
         Boolean gsuiteDomain,
         String gsuiteGroupEmail,
         String gsuiteUserEmail) {
-        this.gsuiteDomain = Objects.requireNonNull(gsuiteDomain);
-        this.gsuiteGroupEmail = Objects.requireNonNull(gsuiteGroupEmail);
-        this.gsuiteUserEmail = Objects.requireNonNull(gsuiteUserEmail);
+        this.gsuiteDomain = gsuiteDomain;
+        this.gsuiteGroupEmail = gsuiteGroupEmail;
+        this.gsuiteUserEmail = gsuiteUserEmail;
     }
 
     /**

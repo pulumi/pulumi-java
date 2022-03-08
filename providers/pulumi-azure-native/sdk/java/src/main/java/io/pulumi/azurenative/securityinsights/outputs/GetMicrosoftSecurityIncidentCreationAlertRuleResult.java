@@ -103,18 +103,18 @@ public final class GetMicrosoftSecurityIncidentCreationAlertRuleResult {
         String type) {
         this.alertRuleTemplateName = alertRuleTemplateName;
         this.description = description;
-        this.displayName = Objects.requireNonNull(displayName);
+        this.displayName = displayName;
         this.displayNamesExcludeFilter = displayNamesExcludeFilter;
         this.displayNamesFilter = displayNamesFilter;
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
         this.etag = etag;
-        this.id = Objects.requireNonNull(id);
-        this.kind = Objects.requireNonNull(kind);
-        this.lastModifiedUtc = Objects.requireNonNull(lastModifiedUtc);
-        this.name = Objects.requireNonNull(name);
-        this.productFilter = Objects.requireNonNull(productFilter);
+        this.id = id;
+        this.kind = kind;
+        this.lastModifiedUtc = lastModifiedUtc;
+        this.name = name;
+        this.productFilter = productFilter;
         this.severitiesFilter = severitiesFilter;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

@@ -25,8 +25,8 @@ public final class ServiceSourceCodeVersion {
     private ServiceSourceCodeVersion(
         ServiceSourceCodeVersionType type,
         String value) {
-        this.type = Objects.requireNonNull(type);
-        this.value = Objects.requireNonNull(value);
+        this.type = type;
+        this.value = value;
     }
 
     /**

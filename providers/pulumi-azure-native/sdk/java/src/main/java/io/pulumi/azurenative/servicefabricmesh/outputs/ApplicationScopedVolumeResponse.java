@@ -40,9 +40,9 @@ public final class ApplicationScopedVolumeResponse {
         String destinationPath,
         String name,
         @Nullable Boolean readOnly) {
-        this.creationParameters = Objects.requireNonNull(creationParameters);
-        this.destinationPath = Objects.requireNonNull(destinationPath);
-        this.name = Objects.requireNonNull(name);
+        this.creationParameters = creationParameters;
+        this.destinationPath = destinationPath;
+        this.name = name;
         this.readOnly = readOnly;
     }
 

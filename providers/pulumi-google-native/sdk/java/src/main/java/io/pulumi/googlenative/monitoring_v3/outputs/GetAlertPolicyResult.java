@@ -92,18 +92,18 @@ public final class GetAlertPolicyResult {
         List<String> notificationChannels,
         Map<String,String> userLabels,
         StatusResponse validity) {
-        this.alertStrategy = Objects.requireNonNull(alertStrategy);
-        this.combiner = Objects.requireNonNull(combiner);
-        this.conditions = Objects.requireNonNull(conditions);
-        this.creationRecord = Objects.requireNonNull(creationRecord);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.documentation = Objects.requireNonNull(documentation);
-        this.enabled = Objects.requireNonNull(enabled);
-        this.mutationRecord = Objects.requireNonNull(mutationRecord);
-        this.name = Objects.requireNonNull(name);
-        this.notificationChannels = Objects.requireNonNull(notificationChannels);
-        this.userLabels = Objects.requireNonNull(userLabels);
-        this.validity = Objects.requireNonNull(validity);
+        this.alertStrategy = alertStrategy;
+        this.combiner = combiner;
+        this.conditions = conditions;
+        this.creationRecord = creationRecord;
+        this.displayName = displayName;
+        this.documentation = documentation;
+        this.enabled = enabled;
+        this.mutationRecord = mutationRecord;
+        this.name = name;
+        this.notificationChannels = notificationChannels;
+        this.userLabels = userLabels;
+        this.validity = validity;
     }
 
     /**

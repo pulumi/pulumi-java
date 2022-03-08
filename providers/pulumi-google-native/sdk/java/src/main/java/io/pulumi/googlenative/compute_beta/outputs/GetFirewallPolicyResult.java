@@ -88,18 +88,18 @@ public final class GetFirewallPolicyResult {
         String selfLink,
         String selfLinkWithId,
         String shortName) {
-        this.associations = Objects.requireNonNull(associations);
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.description = Objects.requireNonNull(description);
-        this.fingerprint = Objects.requireNonNull(fingerprint);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.parent = Objects.requireNonNull(parent);
-        this.ruleTupleCount = Objects.requireNonNull(ruleTupleCount);
-        this.rules = Objects.requireNonNull(rules);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
-        this.shortName = Objects.requireNonNull(shortName);
+        this.associations = associations;
+        this.creationTimestamp = creationTimestamp;
+        this.description = description;
+        this.fingerprint = fingerprint;
+        this.kind = kind;
+        this.name = name;
+        this.parent = parent;
+        this.ruleTupleCount = ruleTupleCount;
+        this.rules = rules;
+        this.selfLink = selfLink;
+        this.selfLinkWithId = selfLinkWithId;
+        this.shortName = shortName;
     }
 
     /**

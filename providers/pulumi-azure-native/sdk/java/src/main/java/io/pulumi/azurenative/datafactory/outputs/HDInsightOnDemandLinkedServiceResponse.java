@@ -264,8 +264,8 @@ public final class HDInsightOnDemandLinkedServiceResponse {
         this.annotations = annotations;
         this.clusterNamePrefix = clusterNamePrefix;
         this.clusterPassword = clusterPassword;
-        this.clusterResourceGroup = Objects.requireNonNull(clusterResourceGroup);
-        this.clusterSize = Objects.requireNonNull(clusterSize);
+        this.clusterResourceGroup = clusterResourceGroup;
+        this.clusterSize = clusterSize;
         this.clusterSshPassword = clusterSshPassword;
         this.clusterSshUserName = clusterSshUserName;
         this.clusterType = clusterType;
@@ -281,8 +281,8 @@ public final class HDInsightOnDemandLinkedServiceResponse {
         this.hdfsConfiguration = hdfsConfiguration;
         this.headNodeSize = headNodeSize;
         this.hiveConfiguration = hiveConfiguration;
-        this.hostSubscriptionId = Objects.requireNonNull(hostSubscriptionId);
-        this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
+        this.hostSubscriptionId = hostSubscriptionId;
+        this.linkedServiceName = linkedServiceName;
         this.mapReduceConfiguration = mapReduceConfiguration;
         this.oozieConfiguration = oozieConfiguration;
         this.parameters = parameters;
@@ -292,10 +292,10 @@ public final class HDInsightOnDemandLinkedServiceResponse {
         this.sparkVersion = sparkVersion;
         this.stormConfiguration = stormConfiguration;
         this.subnetName = subnetName;
-        this.tenant = Objects.requireNonNull(tenant);
-        this.timeToLive = Objects.requireNonNull(timeToLive);
-        this.type = Objects.requireNonNull(type);
-        this.version = Objects.requireNonNull(version);
+        this.tenant = tenant;
+        this.timeToLive = timeToLive;
+        this.type = type;
+        this.version = version;
         this.virtualNetworkId = virtualNetworkId;
         this.yarnConfiguration = yarnConfiguration;
         this.zookeeperNodeSize = zookeeperNodeSize;

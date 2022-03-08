@@ -26,8 +26,8 @@ public final class GoogleCloudApigeeV1ReportPropertyResponse {
     private GoogleCloudApigeeV1ReportPropertyResponse(
         String property,
         List<GoogleCloudApigeeV1AttributeResponse> value) {
-        this.property = Objects.requireNonNull(property);
-        this.value = Objects.requireNonNull(value);
+        this.property = property;
+        this.value = value;
     }
 
     /**

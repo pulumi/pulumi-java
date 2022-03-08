@@ -82,17 +82,17 @@ public final class GetSpokeResult {
         String state,
         String uniqueId,
         String updateTime) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.description = Objects.requireNonNull(description);
-        this.hub = Objects.requireNonNull(hub);
-        this.labels = Objects.requireNonNull(labels);
-        this.linkedInterconnectAttachments = Objects.requireNonNull(linkedInterconnectAttachments);
-        this.linkedRouterApplianceInstances = Objects.requireNonNull(linkedRouterApplianceInstances);
-        this.linkedVpnTunnels = Objects.requireNonNull(linkedVpnTunnels);
-        this.name = Objects.requireNonNull(name);
-        this.state = Objects.requireNonNull(state);
-        this.uniqueId = Objects.requireNonNull(uniqueId);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.createTime = createTime;
+        this.description = description;
+        this.hub = hub;
+        this.labels = labels;
+        this.linkedInterconnectAttachments = linkedInterconnectAttachments;
+        this.linkedRouterApplianceInstances = linkedRouterApplianceInstances;
+        this.linkedVpnTunnels = linkedVpnTunnels;
+        this.name = name;
+        this.state = state;
+        this.uniqueId = uniqueId;
+        this.updateTime = updateTime;
     }
 
     /**

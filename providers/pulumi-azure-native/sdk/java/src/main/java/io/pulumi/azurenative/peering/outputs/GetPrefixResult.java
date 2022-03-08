@@ -76,16 +76,16 @@ public final class GetPrefixResult {
         String prefixValidationState,
         String provisioningState,
         String type) {
-        this.errorMessage = Objects.requireNonNull(errorMessage);
-        this.events = Objects.requireNonNull(events);
-        this.id = Objects.requireNonNull(id);
-        this.learnedType = Objects.requireNonNull(learnedType);
-        this.name = Objects.requireNonNull(name);
+        this.errorMessage = errorMessage;
+        this.events = events;
+        this.id = id;
+        this.learnedType = learnedType;
+        this.name = name;
         this.peeringServicePrefixKey = peeringServicePrefixKey;
         this.prefix = prefix;
-        this.prefixValidationState = Objects.requireNonNull(prefixValidationState);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.type = Objects.requireNonNull(type);
+        this.prefixValidationState = prefixValidationState;
+        this.provisioningState = provisioningState;
+        this.type = type;
     }
 
     /**

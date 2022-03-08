@@ -88,18 +88,18 @@ public final class GetCommunicationServiceResult {
         @Nullable Map<String,String> tags,
         String type,
         String version) {
-        this.dataLocation = Objects.requireNonNull(dataLocation);
-        this.hostName = Objects.requireNonNull(hostName);
-        this.id = Objects.requireNonNull(id);
-        this.immutableResourceId = Objects.requireNonNull(immutableResourceId);
+        this.dataLocation = dataLocation;
+        this.hostName = hostName;
+        this.id = id;
+        this.immutableResourceId = immutableResourceId;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
-        this.notificationHubId = Objects.requireNonNull(notificationHubId);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.systemData = Objects.requireNonNull(systemData);
+        this.name = name;
+        this.notificationHubId = notificationHubId;
+        this.provisioningState = provisioningState;
+        this.systemData = systemData;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
-        this.version = Objects.requireNonNull(version);
+        this.type = type;
+        this.version = version;
     }
 
     /**

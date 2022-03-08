@@ -17,7 +17,7 @@ public final class ConnectorProfileTrendmicroConnectorProfileCredentials {
 
     @OutputCustomType.Constructor({"apiSecretKey"})
     private ConnectorProfileTrendmicroConnectorProfileCredentials(String apiSecretKey) {
-        this.apiSecretKey = Objects.requireNonNull(apiSecretKey);
+        this.apiSecretKey = apiSecretKey;
     }
 
     /**

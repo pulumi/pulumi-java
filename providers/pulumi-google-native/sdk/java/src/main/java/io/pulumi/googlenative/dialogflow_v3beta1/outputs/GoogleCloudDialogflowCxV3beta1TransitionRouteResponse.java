@@ -49,12 +49,12 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRouteResponse {
         String targetFlow,
         String targetPage,
         GoogleCloudDialogflowCxV3beta1FulfillmentResponse triggerFulfillment) {
-        this.condition = Objects.requireNonNull(condition);
-        this.intent = Objects.requireNonNull(intent);
-        this.name = Objects.requireNonNull(name);
-        this.targetFlow = Objects.requireNonNull(targetFlow);
-        this.targetPage = Objects.requireNonNull(targetPage);
-        this.triggerFulfillment = Objects.requireNonNull(triggerFulfillment);
+        this.condition = condition;
+        this.intent = intent;
+        this.name = name;
+        this.targetFlow = targetFlow;
+        this.targetPage = targetPage;
+        this.triggerFulfillment = triggerFulfillment;
     }
 
     /**

@@ -32,9 +32,9 @@ public final class BlobInventoryPolicyRuleResponse {
         BlobInventoryPolicyDefinitionResponse definition,
         Boolean enabled,
         String name) {
-        this.definition = Objects.requireNonNull(definition);
-        this.enabled = Objects.requireNonNull(enabled);
-        this.name = Objects.requireNonNull(name);
+        this.definition = definition;
+        this.enabled = enabled;
+        this.name = name;
     }
 
     /**

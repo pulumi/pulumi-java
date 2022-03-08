@@ -43,7 +43,7 @@ public final class SsisFolderResponse {
         this.description = description;
         this.id = id;
         this.name = name;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

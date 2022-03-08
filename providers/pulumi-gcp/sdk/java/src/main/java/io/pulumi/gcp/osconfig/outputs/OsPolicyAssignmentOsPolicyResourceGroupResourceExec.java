@@ -28,7 +28,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExec {
         @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforce enforce,
         OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidate validate) {
         this.enforce = enforce;
-        this.validate = Objects.requireNonNull(validate);
+        this.validate = validate;
     }
 
     /**

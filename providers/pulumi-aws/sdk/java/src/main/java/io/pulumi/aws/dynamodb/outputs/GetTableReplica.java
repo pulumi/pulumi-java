@@ -16,8 +16,8 @@ public final class GetTableReplica {
     private GetTableReplica(
         String kmsKeyArn,
         String regionName) {
-        this.kmsKeyArn = Objects.requireNonNull(kmsKeyArn);
-        this.regionName = Objects.requireNonNull(regionName);
+        this.kmsKeyArn = kmsKeyArn;
+        this.regionName = regionName;
     }
 
     public String getKmsKeyArn() {

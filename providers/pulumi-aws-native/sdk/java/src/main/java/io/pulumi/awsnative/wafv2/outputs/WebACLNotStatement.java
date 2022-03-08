@@ -13,7 +13,7 @@ public final class WebACLNotStatement {
 
     @OutputCustomType.Constructor({"statement"})
     private WebACLNotStatement(WebACLStatement statement) {
-        this.statement = Objects.requireNonNull(statement);
+        this.statement = statement;
     }
 
     public WebACLStatement getStatement() {

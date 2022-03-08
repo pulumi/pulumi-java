@@ -78,16 +78,16 @@ public final class GetRouteFilterResult {
         @Nullable List<RouteFilterRuleResponse> rules,
         @Nullable Map<String,String> tags,
         String type) {
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.id = id;
-        this.ipv6Peerings = Objects.requireNonNull(ipv6Peerings);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.peerings = Objects.requireNonNull(peerings);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.ipv6Peerings = ipv6Peerings;
+        this.location = location;
+        this.name = name;
+        this.peerings = peerings;
+        this.provisioningState = provisioningState;
         this.rules = rules;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

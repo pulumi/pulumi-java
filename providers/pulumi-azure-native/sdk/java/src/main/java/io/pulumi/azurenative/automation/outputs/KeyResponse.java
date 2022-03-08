@@ -30,9 +30,9 @@ public final class KeyResponse {
         String keyName,
         String permissions,
         String value) {
-        this.keyName = Objects.requireNonNull(keyName);
-        this.permissions = Objects.requireNonNull(permissions);
-        this.value = Objects.requireNonNull(value);
+        this.keyName = keyName;
+        this.permissions = permissions;
+        this.value = value;
     }
 
     /**

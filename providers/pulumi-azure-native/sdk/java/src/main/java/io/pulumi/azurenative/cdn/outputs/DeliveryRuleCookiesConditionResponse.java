@@ -26,8 +26,8 @@ public final class DeliveryRuleCookiesConditionResponse {
     private DeliveryRuleCookiesConditionResponse(
         String name,
         CookiesMatchConditionParametersResponse parameters) {
-        this.name = Objects.requireNonNull(name);
-        this.parameters = Objects.requireNonNull(parameters);
+        this.name = name;
+        this.parameters = parameters;
     }
 
     /**

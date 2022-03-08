@@ -76,19 +76,19 @@ public final class GetZoneResult {
         Map<String,String> tags,
         String vpcId,
         String zoneId) {
-        this.arn = Objects.requireNonNull(arn);
-        this.callerReference = Objects.requireNonNull(callerReference);
-        this.comment = Objects.requireNonNull(comment);
-        this.id = Objects.requireNonNull(id);
-        this.linkedServiceDescription = Objects.requireNonNull(linkedServiceDescription);
-        this.linkedServicePrincipal = Objects.requireNonNull(linkedServicePrincipal);
-        this.name = Objects.requireNonNull(name);
-        this.nameServers = Objects.requireNonNull(nameServers);
+        this.arn = arn;
+        this.callerReference = callerReference;
+        this.comment = comment;
+        this.id = id;
+        this.linkedServiceDescription = linkedServiceDescription;
+        this.linkedServicePrincipal = linkedServicePrincipal;
+        this.name = name;
+        this.nameServers = nameServers;
         this.privateZone = privateZone;
-        this.resourceRecordSetCount = Objects.requireNonNull(resourceRecordSetCount);
-        this.tags = Objects.requireNonNull(tags);
-        this.vpcId = Objects.requireNonNull(vpcId);
-        this.zoneId = Objects.requireNonNull(zoneId);
+        this.resourceRecordSetCount = resourceRecordSetCount;
+        this.tags = tags;
+        this.vpcId = vpcId;
+        this.zoneId = zoneId;
     }
 
     /**

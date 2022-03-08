@@ -30,9 +30,9 @@ public final class EventDestinationCloudwatchDestination {
         String defaultValue,
         String dimensionName,
         String valueSource) {
-        this.defaultValue = Objects.requireNonNull(defaultValue);
-        this.dimensionName = Objects.requireNonNull(dimensionName);
-        this.valueSource = Objects.requireNonNull(valueSource);
+        this.defaultValue = defaultValue;
+        this.dimensionName = dimensionName;
+        this.valueSource = valueSource;
     }
 
     /**

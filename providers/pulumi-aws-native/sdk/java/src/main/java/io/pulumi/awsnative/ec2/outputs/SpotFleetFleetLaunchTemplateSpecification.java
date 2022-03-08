@@ -22,7 +22,7 @@ public final class SpotFleetFleetLaunchTemplateSpecification {
         String version) {
         this.launchTemplateId = launchTemplateId;
         this.launchTemplateName = launchTemplateName;
-        this.version = Objects.requireNonNull(version);
+        this.version = version;
     }
 
     public Optional<String> getLaunchTemplateId() {

@@ -29,14 +29,14 @@ public final class ListWorkspaceNotebookAccessTokenResult {
         String refreshToken,
         String scope,
         String tokenType) {
-        this.accessToken = Objects.requireNonNull(accessToken);
-        this.expiresIn = Objects.requireNonNull(expiresIn);
-        this.hostName = Objects.requireNonNull(hostName);
-        this.notebookResourceId = Objects.requireNonNull(notebookResourceId);
-        this.publicDns = Objects.requireNonNull(publicDns);
-        this.refreshToken = Objects.requireNonNull(refreshToken);
-        this.scope = Objects.requireNonNull(scope);
-        this.tokenType = Objects.requireNonNull(tokenType);
+        this.accessToken = accessToken;
+        this.expiresIn = expiresIn;
+        this.hostName = hostName;
+        this.notebookResourceId = notebookResourceId;
+        this.publicDns = publicDns;
+        this.refreshToken = refreshToken;
+        this.scope = scope;
+        this.tokenType = tokenType;
     }
 
     public String getAccessToken() {

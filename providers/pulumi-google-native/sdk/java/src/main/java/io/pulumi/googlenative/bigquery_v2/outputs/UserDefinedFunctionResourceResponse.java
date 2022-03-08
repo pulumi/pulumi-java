@@ -24,8 +24,8 @@ public final class UserDefinedFunctionResourceResponse {
     private UserDefinedFunctionResourceResponse(
         String inlineCode,
         String resourceUri) {
-        this.inlineCode = Objects.requireNonNull(inlineCode);
-        this.resourceUri = Objects.requireNonNull(resourceUri);
+        this.inlineCode = inlineCode;
+        this.resourceUri = resourceUri;
     }
 
     /**

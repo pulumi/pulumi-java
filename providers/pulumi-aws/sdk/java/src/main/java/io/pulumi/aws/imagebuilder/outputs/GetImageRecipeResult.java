@@ -97,20 +97,20 @@ public final class GetImageRecipeResult {
         String userDataBase64,
         String version,
         String workingDirectory) {
-        this.arn = Objects.requireNonNull(arn);
-        this.blockDeviceMappings = Objects.requireNonNull(blockDeviceMappings);
-        this.components = Objects.requireNonNull(components);
-        this.dateCreated = Objects.requireNonNull(dateCreated);
-        this.description = Objects.requireNonNull(description);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.owner = Objects.requireNonNull(owner);
-        this.parentImage = Objects.requireNonNull(parentImage);
-        this.platform = Objects.requireNonNull(platform);
+        this.arn = arn;
+        this.blockDeviceMappings = blockDeviceMappings;
+        this.components = components;
+        this.dateCreated = dateCreated;
+        this.description = description;
+        this.id = id;
+        this.name = name;
+        this.owner = owner;
+        this.parentImage = parentImage;
+        this.platform = platform;
         this.tags = tags;
-        this.userDataBase64 = Objects.requireNonNull(userDataBase64);
-        this.version = Objects.requireNonNull(version);
-        this.workingDirectory = Objects.requireNonNull(workingDirectory);
+        this.userDataBase64 = userDataBase64;
+        this.version = version;
+        this.workingDirectory = workingDirectory;
     }
 
     public String getArn() {

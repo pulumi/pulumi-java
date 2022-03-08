@@ -24,8 +24,8 @@ public final class AnyResponse {
     private AnyResponse(
         String typeUrl,
         String value) {
-        this.typeUrl = Objects.requireNonNull(typeUrl);
-        this.value = Objects.requireNonNull(value);
+        this.typeUrl = typeUrl;
+        this.value = value;
     }
 
     /**

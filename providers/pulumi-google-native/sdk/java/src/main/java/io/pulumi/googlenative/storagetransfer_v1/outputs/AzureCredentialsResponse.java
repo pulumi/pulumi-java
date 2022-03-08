@@ -17,7 +17,7 @@ public final class AzureCredentialsResponse {
 
     @OutputCustomType.Constructor({"sasToken"})
     private AzureCredentialsResponse(String sasToken) {
-        this.sasToken = Objects.requireNonNull(sasToken);
+        this.sasToken = sasToken;
     }
 
     /**

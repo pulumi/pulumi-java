@@ -76,16 +76,16 @@ public final class GetDocumentResult {
         String mimeType,
         String name,
         String rawContent) {
-        this.content = Objects.requireNonNull(content);
-        this.contentUri = Objects.requireNonNull(contentUri);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.enableAutoReload = Objects.requireNonNull(enableAutoReload);
-        this.knowledgeTypes = Objects.requireNonNull(knowledgeTypes);
-        this.latestReloadStatus = Objects.requireNonNull(latestReloadStatus);
-        this.metadata = Objects.requireNonNull(metadata);
-        this.mimeType = Objects.requireNonNull(mimeType);
-        this.name = Objects.requireNonNull(name);
-        this.rawContent = Objects.requireNonNull(rawContent);
+        this.content = content;
+        this.contentUri = contentUri;
+        this.displayName = displayName;
+        this.enableAutoReload = enableAutoReload;
+        this.knowledgeTypes = knowledgeTypes;
+        this.latestReloadStatus = latestReloadStatus;
+        this.metadata = metadata;
+        this.mimeType = mimeType;
+        this.name = name;
+        this.rawContent = rawContent;
     }
 
     /**

@@ -13,7 +13,7 @@ public final class GetMeshIstioServiceTelemetry {
 
     @OutputCustomType.Constructor({"resourceName"})
     private GetMeshIstioServiceTelemetry(String resourceName) {
-        this.resourceName = Objects.requireNonNull(resourceName);
+        this.resourceName = resourceName;
     }
 
     public String getPropResourceName() {

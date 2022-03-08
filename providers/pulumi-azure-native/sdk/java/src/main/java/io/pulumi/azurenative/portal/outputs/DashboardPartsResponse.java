@@ -28,7 +28,7 @@ public final class DashboardPartsResponse {
         @Nullable MarkdownPartMetadataResponse metadata,
         DashboardPartsResponsePosition position) {
         this.metadata = metadata;
-        this.position = Objects.requireNonNull(position);
+        this.position = position;
     }
 
     /**

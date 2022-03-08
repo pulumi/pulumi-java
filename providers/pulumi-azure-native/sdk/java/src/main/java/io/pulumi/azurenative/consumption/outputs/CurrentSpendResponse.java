@@ -25,8 +25,8 @@ public final class CurrentSpendResponse {
     private CurrentSpendResponse(
         Double amount,
         String unit) {
-        this.amount = Objects.requireNonNull(amount);
-        this.unit = Objects.requireNonNull(unit);
+        this.amount = amount;
+        this.unit = unit;
     }
 
     /**

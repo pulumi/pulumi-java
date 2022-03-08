@@ -160,26 +160,26 @@ public final class GetWebPubSubResult {
         String type,
         String version) {
         this.eventHandler = eventHandler;
-        this.externalIP = Objects.requireNonNull(externalIP);
+        this.externalIP = externalIP;
         this.features = features;
-        this.hostName = Objects.requireNonNull(hostName);
-        this.id = Objects.requireNonNull(id);
+        this.hostName = hostName;
+        this.id = id;
         this.identity = identity;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.networkACLs = networkACLs;
-        this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.privateEndpointConnections = privateEndpointConnections;
+        this.provisioningState = provisioningState;
         this.publicNetworkAccess = publicNetworkAccess;
-        this.publicPort = Objects.requireNonNull(publicPort);
-        this.serverPort = Objects.requireNonNull(serverPort);
-        this.sharedPrivateLinkResources = Objects.requireNonNull(sharedPrivateLinkResources);
+        this.publicPort = publicPort;
+        this.serverPort = serverPort;
+        this.sharedPrivateLinkResources = sharedPrivateLinkResources;
         this.sku = sku;
-        this.systemData = Objects.requireNonNull(systemData);
+        this.systemData = systemData;
         this.tags = tags;
         this.tls = tls;
-        this.type = Objects.requireNonNull(type);
-        this.version = Objects.requireNonNull(version);
+        this.type = type;
+        this.version = version;
     }
 
     /**

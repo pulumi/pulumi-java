@@ -45,11 +45,11 @@ public final class GetServiceResult {
         Map<String,String> metadata,
         String name,
         String updateTime) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.endpoints = Objects.requireNonNull(endpoints);
-        this.metadata = Objects.requireNonNull(metadata);
-        this.name = Objects.requireNonNull(name);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.createTime = createTime;
+        this.endpoints = endpoints;
+        this.metadata = metadata;
+        this.name = name;
+        this.updateTime = updateTime;
     }
 
     /**

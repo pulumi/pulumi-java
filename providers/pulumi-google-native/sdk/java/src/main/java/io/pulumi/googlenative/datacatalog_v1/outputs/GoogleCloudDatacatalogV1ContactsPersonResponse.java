@@ -24,8 +24,8 @@ public final class GoogleCloudDatacatalogV1ContactsPersonResponse {
     private GoogleCloudDatacatalogV1ContactsPersonResponse(
         String designation,
         String email) {
-        this.designation = Objects.requireNonNull(designation);
-        this.email = Objects.requireNonNull(email);
+        this.designation = designation;
+        this.email = email;
     }
 
     /**

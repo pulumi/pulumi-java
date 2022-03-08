@@ -35,8 +35,8 @@ public final class URLMapPathMatcherRouteRuleMatchRuleMetadataFilter {
     private URLMapPathMatcherRouteRuleMatchRuleMetadataFilter(
         List<URLMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabel> filterLabels,
         String filterMatchCriteria) {
-        this.filterLabels = Objects.requireNonNull(filterLabels);
-        this.filterMatchCriteria = Objects.requireNonNull(filterMatchCriteria);
+        this.filterLabels = filterLabels;
+        this.filterMatchCriteria = filterMatchCriteria;
     }
 
     /**

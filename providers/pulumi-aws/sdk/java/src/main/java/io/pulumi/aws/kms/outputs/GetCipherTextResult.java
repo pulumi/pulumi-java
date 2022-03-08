@@ -32,11 +32,11 @@ public final class GetCipherTextResult {
         String id,
         String keyId,
         String plaintext) {
-        this.ciphertextBlob = Objects.requireNonNull(ciphertextBlob);
+        this.ciphertextBlob = ciphertextBlob;
         this.context = context;
-        this.id = Objects.requireNonNull(id);
-        this.keyId = Objects.requireNonNull(keyId);
-        this.plaintext = Objects.requireNonNull(plaintext);
+        this.id = id;
+        this.keyId = keyId;
+        this.plaintext = plaintext;
     }
 
     /**

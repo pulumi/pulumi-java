@@ -35,7 +35,7 @@ public final class DetectorModelSetTimer {
         String timerName) {
         this.durationExpression = durationExpression;
         this.seconds = seconds;
-        this.timerName = Objects.requireNonNull(timerName);
+        this.timerName = timerName;
     }
 
     /**

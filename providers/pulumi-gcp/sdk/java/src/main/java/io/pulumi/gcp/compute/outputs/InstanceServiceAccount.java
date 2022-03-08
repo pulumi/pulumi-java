@@ -33,7 +33,7 @@ public final class InstanceServiceAccount {
         @Nullable String email,
         List<String> scopes) {
         this.email = email;
-        this.scopes = Objects.requireNonNull(scopes);
+        this.scopes = scopes;
     }
 
     /**

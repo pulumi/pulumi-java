@@ -63,14 +63,14 @@ public final class ActionGroupResponse {
         String lastModifiedBy,
         @Nullable String status,
         String type) {
-        this.actionGroupId = Objects.requireNonNull(actionGroupId);
-        this.createdAt = Objects.requireNonNull(createdAt);
-        this.createdBy = Objects.requireNonNull(createdBy);
+        this.actionGroupId = actionGroupId;
+        this.createdAt = createdAt;
+        this.createdBy = createdBy;
         this.description = description;
-        this.lastModifiedAt = Objects.requireNonNull(lastModifiedAt);
-        this.lastModifiedBy = Objects.requireNonNull(lastModifiedBy);
+        this.lastModifiedAt = lastModifiedAt;
+        this.lastModifiedBy = lastModifiedBy;
         this.status = status;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

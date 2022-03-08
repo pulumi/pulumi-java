@@ -31,9 +31,9 @@ public final class TaskDefinitionVolumeFsxWindowsFileServerVolumeConfiguration {
         TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfig authorizationConfig,
         String fileSystemId,
         String rootDirectory) {
-        this.authorizationConfig = Objects.requireNonNull(authorizationConfig);
-        this.fileSystemId = Objects.requireNonNull(fileSystemId);
-        this.rootDirectory = Objects.requireNonNull(rootDirectory);
+        this.authorizationConfig = authorizationConfig;
+        this.fileSystemId = fileSystemId;
+        this.rootDirectory = rootDirectory;
     }
 
     /**

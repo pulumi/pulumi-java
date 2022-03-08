@@ -18,9 +18,9 @@ public final class GetRepositoryPubsubConfig {
         String messageFormat,
         String serviceAccountEmail,
         String topic) {
-        this.messageFormat = Objects.requireNonNull(messageFormat);
-        this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
-        this.topic = Objects.requireNonNull(topic);
+        this.messageFormat = messageFormat;
+        this.serviceAccountEmail = serviceAccountEmail;
+        this.topic = topic;
     }
 
     public String getMessageFormat() {

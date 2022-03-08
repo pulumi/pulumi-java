@@ -18,7 +18,7 @@ public final class FirewallPolicyFirewallPolicyStatelessCustomActionActionDefini
 
     @OutputCustomType.Constructor({"dimensions"})
     private FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricAction(List<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimension> dimensions) {
-        this.dimensions = Objects.requireNonNull(dimensions);
+        this.dimensions = dimensions;
     }
 
     /**

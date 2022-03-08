@@ -36,10 +36,10 @@ public final class RelationshipOccurrenceResponse {
         String source,
         String target,
         String type) {
-        this.comment = Objects.requireNonNull(comment);
-        this.source = Objects.requireNonNull(source);
-        this.target = Objects.requireNonNull(target);
-        this.type = Objects.requireNonNull(type);
+        this.comment = comment;
+        this.source = source;
+        this.target = target;
+        this.type = type;
     }
 
     /**

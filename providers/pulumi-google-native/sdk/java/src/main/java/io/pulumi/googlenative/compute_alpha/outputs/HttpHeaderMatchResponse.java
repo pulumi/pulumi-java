@@ -62,14 +62,14 @@ public final class HttpHeaderMatchResponse {
         Int64RangeMatchResponse rangeMatch,
         String regexMatch,
         String suffixMatch) {
-        this.exactMatch = Objects.requireNonNull(exactMatch);
-        this.headerName = Objects.requireNonNull(headerName);
-        this.invertMatch = Objects.requireNonNull(invertMatch);
-        this.prefixMatch = Objects.requireNonNull(prefixMatch);
-        this.presentMatch = Objects.requireNonNull(presentMatch);
-        this.rangeMatch = Objects.requireNonNull(rangeMatch);
-        this.regexMatch = Objects.requireNonNull(regexMatch);
-        this.suffixMatch = Objects.requireNonNull(suffixMatch);
+        this.exactMatch = exactMatch;
+        this.headerName = headerName;
+        this.invertMatch = invertMatch;
+        this.prefixMatch = prefixMatch;
+        this.presentMatch = presentMatch;
+        this.rangeMatch = rangeMatch;
+        this.regexMatch = regexMatch;
+        this.suffixMatch = suffixMatch;
     }
 
     /**

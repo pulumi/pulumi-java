@@ -32,9 +32,9 @@ public final class CommonFeatureStateResponse {
         AppDevExperienceFeatureStateResponse appdevexperience,
         ServiceMeshFeatureStateResponse servicemesh,
         FeatureStateResponse state) {
-        this.appdevexperience = Objects.requireNonNull(appdevexperience);
-        this.servicemesh = Objects.requireNonNull(servicemesh);
-        this.state = Objects.requireNonNull(state);
+        this.appdevexperience = appdevexperience;
+        this.servicemesh = servicemesh;
+        this.state = state;
     }
 
     /**

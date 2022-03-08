@@ -13,7 +13,7 @@ public final class ModelExplainabilityJobDefinitionModelExplainabilityJobInput {
 
     @OutputCustomType.Constructor({"endpointInput"})
     private ModelExplainabilityJobDefinitionModelExplainabilityJobInput(ModelExplainabilityJobDefinitionEndpointInput endpointInput) {
-        this.endpointInput = Objects.requireNonNull(endpointInput);
+        this.endpointInput = endpointInput;
     }
 
     public ModelExplainabilityJobDefinitionEndpointInput getEndpointInput() {

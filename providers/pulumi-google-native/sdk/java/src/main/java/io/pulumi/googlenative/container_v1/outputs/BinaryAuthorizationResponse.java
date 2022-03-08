@@ -17,7 +17,7 @@ public final class BinaryAuthorizationResponse {
 
     @OutputCustomType.Constructor({"enabled"})
     private BinaryAuthorizationResponse(Boolean enabled) {
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
     }
 
     /**

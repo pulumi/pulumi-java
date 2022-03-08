@@ -77,7 +77,7 @@ public final class ParquetSourceResponse {
         this.sourceRetryCount = sourceRetryCount;
         this.sourceRetryWait = sourceRetryWait;
         this.storeSettings = storeSettings;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

@@ -27,8 +27,8 @@ public final class AuthorityConfig {
     private AuthorityConfig(
         AuthorityConfigSubjectConfig subjectConfig,
         AuthorityConfigX509Config x509Config) {
-        this.subjectConfig = Objects.requireNonNull(subjectConfig);
-        this.x509Config = Objects.requireNonNull(x509Config);
+        this.subjectConfig = subjectConfig;
+        this.x509Config = x509Config;
     }
 
     /**

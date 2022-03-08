@@ -34,8 +34,8 @@ public final class LoadBalancerConfigurationResponse {
         String name,
         LoadBalancerConfigurationPropertiesResponse properties) {
         this.id = id;
-        this.name = Objects.requireNonNull(name);
-        this.properties = Objects.requireNonNull(properties);
+        this.name = name;
+        this.properties = properties;
     }
 
     /**

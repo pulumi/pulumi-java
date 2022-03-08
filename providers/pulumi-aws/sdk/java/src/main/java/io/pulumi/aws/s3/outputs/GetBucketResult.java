@@ -62,15 +62,15 @@ public final class GetBucketResult {
         String region,
         String websiteDomain,
         String websiteEndpoint) {
-        this.arn = Objects.requireNonNull(arn);
-        this.bucket = Objects.requireNonNull(bucket);
-        this.bucketDomainName = Objects.requireNonNull(bucketDomainName);
-        this.bucketRegionalDomainName = Objects.requireNonNull(bucketRegionalDomainName);
-        this.hostedZoneId = Objects.requireNonNull(hostedZoneId);
-        this.id = Objects.requireNonNull(id);
-        this.region = Objects.requireNonNull(region);
-        this.websiteDomain = Objects.requireNonNull(websiteDomain);
-        this.websiteEndpoint = Objects.requireNonNull(websiteEndpoint);
+        this.arn = arn;
+        this.bucket = bucket;
+        this.bucketDomainName = bucketDomainName;
+        this.bucketRegionalDomainName = bucketRegionalDomainName;
+        this.hostedZoneId = hostedZoneId;
+        this.id = id;
+        this.region = region;
+        this.websiteDomain = websiteDomain;
+        this.websiteEndpoint = websiteEndpoint;
     }
 
     /**

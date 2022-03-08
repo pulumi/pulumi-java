@@ -83,7 +83,7 @@ public final class RegionUrlMapPathMatcherRouteRule {
         @Nullable RegionUrlMapPathMatcherRouteRuleUrlRedirect urlRedirect) {
         this.headerAction = headerAction;
         this.matchRules = matchRules;
-        this.priority = Objects.requireNonNull(priority);
+        this.priority = priority;
         this.routeAction = routeAction;
         this.service = service;
         this.urlRedirect = urlRedirect;

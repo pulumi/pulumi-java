@@ -116,23 +116,23 @@ public final class RouterNatResponse {
         Integer tcpTimeWaitTimeoutSec,
         Integer tcpTransitoryIdleTimeoutSec,
         Integer udpIdleTimeoutSec) {
-        this.drainNatIps = Objects.requireNonNull(drainNatIps);
-        this.enableDynamicPortAllocation = Objects.requireNonNull(enableDynamicPortAllocation);
-        this.enableEndpointIndependentMapping = Objects.requireNonNull(enableEndpointIndependentMapping);
-        this.icmpIdleTimeoutSec = Objects.requireNonNull(icmpIdleTimeoutSec);
-        this.logConfig = Objects.requireNonNull(logConfig);
-        this.maxPortsPerVm = Objects.requireNonNull(maxPortsPerVm);
-        this.minPortsPerVm = Objects.requireNonNull(minPortsPerVm);
-        this.name = Objects.requireNonNull(name);
-        this.natIpAllocateOption = Objects.requireNonNull(natIpAllocateOption);
-        this.natIps = Objects.requireNonNull(natIps);
-        this.rules = Objects.requireNonNull(rules);
-        this.sourceSubnetworkIpRangesToNat = Objects.requireNonNull(sourceSubnetworkIpRangesToNat);
-        this.subnetworks = Objects.requireNonNull(subnetworks);
-        this.tcpEstablishedIdleTimeoutSec = Objects.requireNonNull(tcpEstablishedIdleTimeoutSec);
-        this.tcpTimeWaitTimeoutSec = Objects.requireNonNull(tcpTimeWaitTimeoutSec);
-        this.tcpTransitoryIdleTimeoutSec = Objects.requireNonNull(tcpTransitoryIdleTimeoutSec);
-        this.udpIdleTimeoutSec = Objects.requireNonNull(udpIdleTimeoutSec);
+        this.drainNatIps = drainNatIps;
+        this.enableDynamicPortAllocation = enableDynamicPortAllocation;
+        this.enableEndpointIndependentMapping = enableEndpointIndependentMapping;
+        this.icmpIdleTimeoutSec = icmpIdleTimeoutSec;
+        this.logConfig = logConfig;
+        this.maxPortsPerVm = maxPortsPerVm;
+        this.minPortsPerVm = minPortsPerVm;
+        this.name = name;
+        this.natIpAllocateOption = natIpAllocateOption;
+        this.natIps = natIps;
+        this.rules = rules;
+        this.sourceSubnetworkIpRangesToNat = sourceSubnetworkIpRangesToNat;
+        this.subnetworks = subnetworks;
+        this.tcpEstablishedIdleTimeoutSec = tcpEstablishedIdleTimeoutSec;
+        this.tcpTimeWaitTimeoutSec = tcpTimeWaitTimeoutSec;
+        this.tcpTransitoryIdleTimeoutSec = tcpTransitoryIdleTimeoutSec;
+        this.udpIdleTimeoutSec = udpIdleTimeoutSec;
     }
 
     /**

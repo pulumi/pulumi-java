@@ -66,7 +66,7 @@ public final class JobCopy {
         this.createDisposition = createDisposition;
         this.destinationEncryptionConfiguration = destinationEncryptionConfiguration;
         this.destinationTable = destinationTable;
-        this.sourceTables = Objects.requireNonNull(sourceTables);
+        this.sourceTables = sourceTables;
         this.writeDisposition = writeDisposition;
     }
 

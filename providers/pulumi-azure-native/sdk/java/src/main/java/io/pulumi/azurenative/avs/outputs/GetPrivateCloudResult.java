@@ -142,25 +142,25 @@ public final class GetPrivateCloudResult {
         @Nullable String vcenterPassword,
         String vmotionNetwork) {
         this.circuit = circuit;
-        this.endpoints = Objects.requireNonNull(endpoints);
-        this.id = Objects.requireNonNull(id);
+        this.endpoints = endpoints;
+        this.id = id;
         this.identitySources = identitySources;
         this.internet = internet;
-        this.location = Objects.requireNonNull(location);
-        this.managementCluster = Objects.requireNonNull(managementCluster);
-        this.managementNetwork = Objects.requireNonNull(managementNetwork);
-        this.name = Objects.requireNonNull(name);
-        this.networkBlock = Objects.requireNonNull(networkBlock);
-        this.nsxtCertificateThumbprint = Objects.requireNonNull(nsxtCertificateThumbprint);
+        this.location = location;
+        this.managementCluster = managementCluster;
+        this.managementNetwork = managementNetwork;
+        this.name = name;
+        this.networkBlock = networkBlock;
+        this.nsxtCertificateThumbprint = nsxtCertificateThumbprint;
         this.nsxtPassword = nsxtPassword;
-        this.provisioningNetwork = Objects.requireNonNull(provisioningNetwork);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.sku = Objects.requireNonNull(sku);
+        this.provisioningNetwork = provisioningNetwork;
+        this.provisioningState = provisioningState;
+        this.sku = sku;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
-        this.vcenterCertificateThumbprint = Objects.requireNonNull(vcenterCertificateThumbprint);
+        this.type = type;
+        this.vcenterCertificateThumbprint = vcenterCertificateThumbprint;
         this.vcenterPassword = vcenterPassword;
-        this.vmotionNetwork = Objects.requireNonNull(vmotionNetwork);
+        this.vmotionNetwork = vmotionNetwork;
     }
 
     /**

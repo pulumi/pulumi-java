@@ -35,8 +35,8 @@ public final class CertificateTemplatePredefinedValuesAdditionalExtension {
         CertificateTemplatePredefinedValuesAdditionalExtensionObjectId objectId,
         String value) {
         this.critical = critical;
-        this.objectId = Objects.requireNonNull(objectId);
-        this.value = Objects.requireNonNull(value);
+        this.objectId = objectId;
+        this.value = value;
     }
 
     /**

@@ -18,9 +18,9 @@ public final class GetSigningJobSourceS3 {
         String bucket,
         String key,
         String version) {
-        this.bucket = Objects.requireNonNull(bucket);
-        this.key = Objects.requireNonNull(key);
-        this.version = Objects.requireNonNull(version);
+        this.bucket = bucket;
+        this.key = key;
+        this.version = version;
     }
 
     public String getBucket() {

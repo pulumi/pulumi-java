@@ -43,11 +43,11 @@ public final class FieldResponse {
         String name,
         String table,
         String type) {
-        this.maxOccurs = Objects.requireNonNull(maxOccurs);
-        this.minOccurs = Objects.requireNonNull(minOccurs);
-        this.name = Objects.requireNonNull(name);
-        this.table = Objects.requireNonNull(table);
-        this.type = Objects.requireNonNull(type);
+        this.maxOccurs = maxOccurs;
+        this.minOccurs = minOccurs;
+        this.name = name;
+        this.table = table;
+        this.type = type;
     }
 
     /**

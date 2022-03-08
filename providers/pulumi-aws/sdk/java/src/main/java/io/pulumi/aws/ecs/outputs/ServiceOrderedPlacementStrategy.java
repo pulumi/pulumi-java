@@ -30,7 +30,7 @@ public final class ServiceOrderedPlacementStrategy {
         @Nullable String field,
         String type) {
         this.field = field;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

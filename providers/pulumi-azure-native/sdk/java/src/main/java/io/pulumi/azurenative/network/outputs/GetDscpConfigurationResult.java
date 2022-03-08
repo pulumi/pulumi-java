@@ -116,22 +116,22 @@ public final class GetDscpConfigurationResult {
         @Nullable List<QosPortRangeResponse> sourcePortRanges,
         @Nullable Map<String,String> tags,
         String type) {
-        this.associatedNetworkInterfaces = Objects.requireNonNull(associatedNetworkInterfaces);
+        this.associatedNetworkInterfaces = associatedNetworkInterfaces;
         this.destinationIpRanges = destinationIpRanges;
         this.destinationPortRanges = destinationPortRanges;
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.id = id;
         this.location = location;
         this.markings = markings;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.protocol = protocol;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.qosCollectionId = Objects.requireNonNull(qosCollectionId);
-        this.resourceGuid = Objects.requireNonNull(resourceGuid);
+        this.provisioningState = provisioningState;
+        this.qosCollectionId = qosCollectionId;
+        this.resourceGuid = resourceGuid;
         this.sourceIpRanges = sourceIpRanges;
         this.sourcePortRanges = sourcePortRanges;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

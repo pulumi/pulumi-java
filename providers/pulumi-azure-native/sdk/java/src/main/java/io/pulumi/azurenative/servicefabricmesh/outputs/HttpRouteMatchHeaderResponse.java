@@ -32,7 +32,7 @@ public final class HttpRouteMatchHeaderResponse {
         String name,
         @Nullable String type,
         @Nullable String value) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.type = type;
         this.value = value;
     }

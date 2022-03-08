@@ -111,19 +111,19 @@ public final class GetPolicyResult {
         String type) {
         this.customRules = customRules;
         this.etag = etag;
-        this.frontendEndpointLinks = Objects.requireNonNull(frontendEndpointLinks);
-        this.id = Objects.requireNonNull(id);
+        this.frontendEndpointLinks = frontendEndpointLinks;
+        this.id = id;
         this.location = location;
         this.managedRules = managedRules;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.policySettings = policySettings;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.resourceState = Objects.requireNonNull(resourceState);
-        this.routingRuleLinks = Objects.requireNonNull(routingRuleLinks);
-        this.securityPolicyLinks = Objects.requireNonNull(securityPolicyLinks);
+        this.provisioningState = provisioningState;
+        this.resourceState = resourceState;
+        this.routingRuleLinks = routingRuleLinks;
+        this.securityPolicyLinks = securityPolicyLinks;
         this.sku = sku;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

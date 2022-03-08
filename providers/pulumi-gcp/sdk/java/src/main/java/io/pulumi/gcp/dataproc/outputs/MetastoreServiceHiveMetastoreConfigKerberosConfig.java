@@ -32,9 +32,9 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfig {
         MetastoreServiceHiveMetastoreConfigKerberosConfigKeytab keytab,
         String krb5ConfigGcsUri,
         String principal) {
-        this.keytab = Objects.requireNonNull(keytab);
-        this.krb5ConfigGcsUri = Objects.requireNonNull(krb5ConfigGcsUri);
-        this.principal = Objects.requireNonNull(principal);
+        this.keytab = keytab;
+        this.krb5ConfigGcsUri = krb5ConfigGcsUri;
+        this.principal = principal;
     }
 
     /**

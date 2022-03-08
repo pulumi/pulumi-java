@@ -28,7 +28,7 @@ public final class PyTorchResponse {
     private PyTorchResponse(
         String distributionType,
         @Nullable Integer processCount) {
-        this.distributionType = Objects.requireNonNull(distributionType);
+        this.distributionType = distributionType;
         this.processCount = processCount;
     }
 

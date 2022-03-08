@@ -24,8 +24,8 @@ public final class GoogleCloudDialogflowCxV3beta1TestRunDifferenceResponse {
     private GoogleCloudDialogflowCxV3beta1TestRunDifferenceResponse(
         String description,
         String type) {
-        this.description = Objects.requireNonNull(description);
-        this.type = Objects.requireNonNull(type);
+        this.description = description;
+        this.type = type;
     }
 
     /**

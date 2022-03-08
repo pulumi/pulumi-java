@@ -32,9 +32,9 @@ public final class QueryParameterValueResponse {
         List<QueryParameterValueResponse> arrayValues,
         Map<String,String> structValues,
         String value) {
-        this.arrayValues = Objects.requireNonNull(arrayValues);
-        this.structValues = Objects.requireNonNull(structValues);
-        this.value = Objects.requireNonNull(value);
+        this.arrayValues = arrayValues;
+        this.structValues = structValues;
+        this.value = value;
     }
 
     /**

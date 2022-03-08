@@ -37,10 +37,10 @@ public final class ProgressMetricsResponse {
         String incrementalDatasetLastRefreshTime,
         Double skippedDatapointCount,
         Double totalDatapointCount) {
-        this.completedDatapointCount = Objects.requireNonNull(completedDatapointCount);
-        this.incrementalDatasetLastRefreshTime = Objects.requireNonNull(incrementalDatasetLastRefreshTime);
-        this.skippedDatapointCount = Objects.requireNonNull(skippedDatapointCount);
-        this.totalDatapointCount = Objects.requireNonNull(totalDatapointCount);
+        this.completedDatapointCount = completedDatapointCount;
+        this.incrementalDatasetLastRefreshTime = incrementalDatasetLastRefreshTime;
+        this.skippedDatapointCount = skippedDatapointCount;
+        this.totalDatapointCount = totalDatapointCount;
     }
 
     /**

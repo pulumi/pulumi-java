@@ -56,7 +56,7 @@ public final class GalleryImageVersionPublishingProfileResponse {
         @Nullable List<TargetRegionResponse> targetRegions) {
         this.endOfLifeDate = endOfLifeDate;
         this.excludeFromLatest = excludeFromLatest;
-        this.publishedDate = Objects.requireNonNull(publishedDate);
+        this.publishedDate = publishedDate;
         this.replicaCount = replicaCount;
         this.storageAccountType = storageAccountType;
         this.targetRegions = targetRegions;

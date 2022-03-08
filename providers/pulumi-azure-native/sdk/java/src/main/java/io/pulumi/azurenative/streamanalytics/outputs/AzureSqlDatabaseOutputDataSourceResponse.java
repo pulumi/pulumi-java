@@ -55,7 +55,7 @@ public final class AzureSqlDatabaseOutputDataSourceResponse {
         this.password = password;
         this.server = server;
         this.table = table;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.user = user;
     }
 

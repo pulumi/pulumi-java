@@ -19,9 +19,9 @@ public final class DestinationOptionsProperties {
         FlowLogDestinationOptionsPropertiesFileFormat fileFormat,
         Boolean hiveCompatiblePartitions,
         Boolean perHourPartition) {
-        this.fileFormat = Objects.requireNonNull(fileFormat);
-        this.hiveCompatiblePartitions = Objects.requireNonNull(hiveCompatiblePartitions);
-        this.perHourPartition = Objects.requireNonNull(perHourPartition);
+        this.fileFormat = fileFormat;
+        this.hiveCompatiblePartitions = hiveCompatiblePartitions;
+        this.perHourPartition = perHourPartition;
     }
 
     public FlowLogDestinationOptionsPropertiesFileFormat getFileFormat() {

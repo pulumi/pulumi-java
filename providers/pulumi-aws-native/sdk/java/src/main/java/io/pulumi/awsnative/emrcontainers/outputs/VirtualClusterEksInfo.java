@@ -13,7 +13,7 @@ public final class VirtualClusterEksInfo {
 
     @OutputCustomType.Constructor({"namespace"})
     private VirtualClusterEksInfo(String namespace) {
-        this.namespace = Objects.requireNonNull(namespace);
+        this.namespace = namespace;
     }
 
     public String getNamespace() {

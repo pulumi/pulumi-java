@@ -34,8 +34,8 @@ public final class GetEbsVolumesResult {
         List<String> ids,
         @Nullable Map<String,String> tags) {
         this.filters = filters;
-        this.id = Objects.requireNonNull(id);
-        this.ids = Objects.requireNonNull(ids);
+        this.id = id;
+        this.ids = ids;
         this.tags = tags;
     }
 

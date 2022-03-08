@@ -52,13 +52,13 @@ public final class GetOriginRequestPolicyResult {
         @Nullable String id,
         @Nullable String name,
         List<GetOriginRequestPolicyQueryStringsConfig> queryStringsConfigs) {
-        this.comment = Objects.requireNonNull(comment);
-        this.cookiesConfigs = Objects.requireNonNull(cookiesConfigs);
-        this.etag = Objects.requireNonNull(etag);
-        this.headersConfigs = Objects.requireNonNull(headersConfigs);
+        this.comment = comment;
+        this.cookiesConfigs = cookiesConfigs;
+        this.etag = etag;
+        this.headersConfigs = headersConfigs;
         this.id = id;
         this.name = name;
-        this.queryStringsConfigs = Objects.requireNonNull(queryStringsConfigs);
+        this.queryStringsConfigs = queryStringsConfigs;
     }
 
     /**

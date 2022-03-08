@@ -17,7 +17,7 @@ public final class ResourceReferenceResponse {
 
     @OutputCustomType.Constructor({"id"})
     private ResourceReferenceResponse(String id) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
     }
 
     /**

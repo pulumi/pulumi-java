@@ -95,19 +95,19 @@ public final class GetInstanceResult {
         String statusMessage,
         List<String> suspensionReasons,
         String tier) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.description = Objects.requireNonNull(description);
-        this.etag = Objects.requireNonNull(etag);
-        this.fileShares = Objects.requireNonNull(fileShares);
-        this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.networks = Objects.requireNonNull(networks);
-        this.satisfiesPzs = Objects.requireNonNull(satisfiesPzs);
-        this.state = Objects.requireNonNull(state);
-        this.statusMessage = Objects.requireNonNull(statusMessage);
-        this.suspensionReasons = Objects.requireNonNull(suspensionReasons);
-        this.tier = Objects.requireNonNull(tier);
+        this.createTime = createTime;
+        this.description = description;
+        this.etag = etag;
+        this.fileShares = fileShares;
+        this.kmsKeyName = kmsKeyName;
+        this.labels = labels;
+        this.name = name;
+        this.networks = networks;
+        this.satisfiesPzs = satisfiesPzs;
+        this.state = state;
+        this.statusMessage = statusMessage;
+        this.suspensionReasons = suspensionReasons;
+        this.tier = tier;
     }
 
     /**

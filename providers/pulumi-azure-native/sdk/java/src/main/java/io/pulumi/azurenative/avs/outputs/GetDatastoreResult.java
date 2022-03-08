@@ -53,11 +53,11 @@ public final class GetDatastoreResult {
         String provisioningState,
         String type) {
         this.diskPoolVolume = diskPoolVolume;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.netAppVolume = netAppVolume;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.type = Objects.requireNonNull(type);
+        this.provisioningState = provisioningState;
+        this.type = type;
     }
 
     /**

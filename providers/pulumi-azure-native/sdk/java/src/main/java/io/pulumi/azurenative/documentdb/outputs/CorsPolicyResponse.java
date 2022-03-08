@@ -47,7 +47,7 @@ public final class CorsPolicyResponse {
         @Nullable Double maxAgeInSeconds) {
         this.allowedHeaders = allowedHeaders;
         this.allowedMethods = allowedMethods;
-        this.allowedOrigins = Objects.requireNonNull(allowedOrigins);
+        this.allowedOrigins = allowedOrigins;
         this.exposedHeaders = exposedHeaders;
         this.maxAgeInSeconds = maxAgeInSeconds;
     }

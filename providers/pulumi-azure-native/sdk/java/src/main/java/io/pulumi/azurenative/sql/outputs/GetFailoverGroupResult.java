@@ -86,16 +86,16 @@ public final class GetFailoverGroupResult {
         @Nullable Map<String,String> tags,
         String type) {
         this.databases = databases;
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.partnerServers = Objects.requireNonNull(partnerServers);
+        this.id = id;
+        this.location = location;
+        this.name = name;
+        this.partnerServers = partnerServers;
         this.readOnlyEndpoint = readOnlyEndpoint;
-        this.readWriteEndpoint = Objects.requireNonNull(readWriteEndpoint);
-        this.replicationRole = Objects.requireNonNull(replicationRole);
-        this.replicationState = Objects.requireNonNull(replicationState);
+        this.readWriteEndpoint = readWriteEndpoint;
+        this.replicationRole = replicationRole;
+        this.replicationState = replicationState;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

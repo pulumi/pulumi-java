@@ -112,18 +112,18 @@ public final class GetKubeEnvironmentResult {
         this.aksResourceID = aksResourceID;
         this.appLogsConfiguration = appLogsConfiguration;
         this.arcConfiguration = arcConfiguration;
-        this.defaultDomain = Objects.requireNonNull(defaultDomain);
-        this.deploymentErrors = Objects.requireNonNull(deploymentErrors);
+        this.defaultDomain = defaultDomain;
+        this.deploymentErrors = deploymentErrors;
         this.extendedLocation = extendedLocation;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.internalLoadBalancerEnabled = internalLoadBalancerEnabled;
         this.kind = kind;
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.location = location;
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.staticIp = staticIp;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     public Optional<String> getAksResourceID() {

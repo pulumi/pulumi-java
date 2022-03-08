@@ -54,7 +54,7 @@ public final class AliasResponse {
         @Nullable String name,
         @Nullable List<AliasPathResponse> paths,
         @Nullable String type) {
-        this.defaultMetadata = Objects.requireNonNull(defaultMetadata);
+        this.defaultMetadata = defaultMetadata;
         this.defaultPath = defaultPath;
         this.defaultPattern = defaultPattern;
         this.name = name;

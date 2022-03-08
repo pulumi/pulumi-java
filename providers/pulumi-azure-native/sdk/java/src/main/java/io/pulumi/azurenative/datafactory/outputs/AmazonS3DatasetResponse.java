@@ -124,20 +124,20 @@ public final class AmazonS3DatasetResponse {
         String type,
         @Nullable Object version) {
         this.annotations = annotations;
-        this.bucketName = Objects.requireNonNull(bucketName);
+        this.bucketName = bucketName;
         this.compression = compression;
         this.description = description;
         this.folder = folder;
         this.format = format;
         this.key = key;
-        this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
+        this.linkedServiceName = linkedServiceName;
         this.modifiedDatetimeEnd = modifiedDatetimeEnd;
         this.modifiedDatetimeStart = modifiedDatetimeStart;
         this.parameters = parameters;
         this.prefix = prefix;
         this.schema = schema;
         this.structure = structure;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.version = version;
     }
 

@@ -52,12 +52,12 @@ public final class HiveJobResponse {
         String queryFileUri,
         QueryListResponse queryList,
         Map<String,String> scriptVariables) {
-        this.continueOnFailure = Objects.requireNonNull(continueOnFailure);
-        this.jarFileUris = Objects.requireNonNull(jarFileUris);
-        this.properties = Objects.requireNonNull(properties);
-        this.queryFileUri = Objects.requireNonNull(queryFileUri);
-        this.queryList = Objects.requireNonNull(queryList);
-        this.scriptVariables = Objects.requireNonNull(scriptVariables);
+        this.continueOnFailure = continueOnFailure;
+        this.jarFileUris = jarFileUris;
+        this.properties = properties;
+        this.queryFileUri = queryFileUri;
+        this.queryList = queryList;
+        this.scriptVariables = scriptVariables;
     }
 
     /**

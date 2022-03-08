@@ -42,7 +42,7 @@ public final class LastAccessTimeTrackingPolicyResponse {
         @Nullable String name,
         @Nullable Integer trackingGranularityInDays) {
         this.blobType = blobType;
-        this.enable = Objects.requireNonNull(enable);
+        this.enable = enable;
         this.name = name;
         this.trackingGranularityInDays = trackingGranularityInDays;
     }

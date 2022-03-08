@@ -91,17 +91,17 @@ public final class FirehoseDeliveryStreamRedshiftConfiguration {
         @Nullable String s3BackupMode,
         String username) {
         this.cloudwatchLoggingOptions = cloudwatchLoggingOptions;
-        this.clusterJdbcurl = Objects.requireNonNull(clusterJdbcurl);
+        this.clusterJdbcurl = clusterJdbcurl;
         this.copyOptions = copyOptions;
         this.dataTableColumns = dataTableColumns;
-        this.dataTableName = Objects.requireNonNull(dataTableName);
-        this.password = Objects.requireNonNull(password);
+        this.dataTableName = dataTableName;
+        this.password = password;
         this.processingConfiguration = processingConfiguration;
         this.retryDuration = retryDuration;
-        this.roleArn = Objects.requireNonNull(roleArn);
+        this.roleArn = roleArn;
         this.s3BackupConfiguration = s3BackupConfiguration;
         this.s3BackupMode = s3BackupMode;
-        this.username = Objects.requireNonNull(username);
+        this.username = username;
     }
 
     /**

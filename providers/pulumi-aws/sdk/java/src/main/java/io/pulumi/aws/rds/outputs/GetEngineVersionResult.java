@@ -113,25 +113,25 @@ public final class GetEngineVersionResult {
         List<String> validUpgradeTargets,
         String version,
         String versionDescription) {
-        this.defaultCharacterSet = Objects.requireNonNull(defaultCharacterSet);
-        this.engine = Objects.requireNonNull(engine);
-        this.engineDescription = Objects.requireNonNull(engineDescription);
-        this.exportableLogTypes = Objects.requireNonNull(exportableLogTypes);
-        this.id = Objects.requireNonNull(id);
-        this.parameterGroupFamily = Objects.requireNonNull(parameterGroupFamily);
+        this.defaultCharacterSet = defaultCharacterSet;
+        this.engine = engine;
+        this.engineDescription = engineDescription;
+        this.exportableLogTypes = exportableLogTypes;
+        this.id = id;
+        this.parameterGroupFamily = parameterGroupFamily;
         this.preferredVersions = preferredVersions;
-        this.status = Objects.requireNonNull(status);
-        this.supportedCharacterSets = Objects.requireNonNull(supportedCharacterSets);
-        this.supportedFeatureNames = Objects.requireNonNull(supportedFeatureNames);
-        this.supportedModes = Objects.requireNonNull(supportedModes);
-        this.supportedTimezones = Objects.requireNonNull(supportedTimezones);
-        this.supportsGlobalDatabases = Objects.requireNonNull(supportsGlobalDatabases);
-        this.supportsLogExportsToCloudwatch = Objects.requireNonNull(supportsLogExportsToCloudwatch);
-        this.supportsParallelQuery = Objects.requireNonNull(supportsParallelQuery);
-        this.supportsReadReplica = Objects.requireNonNull(supportsReadReplica);
-        this.validUpgradeTargets = Objects.requireNonNull(validUpgradeTargets);
-        this.version = Objects.requireNonNull(version);
-        this.versionDescription = Objects.requireNonNull(versionDescription);
+        this.status = status;
+        this.supportedCharacterSets = supportedCharacterSets;
+        this.supportedFeatureNames = supportedFeatureNames;
+        this.supportedModes = supportedModes;
+        this.supportedTimezones = supportedTimezones;
+        this.supportsGlobalDatabases = supportsGlobalDatabases;
+        this.supportsLogExportsToCloudwatch = supportsLogExportsToCloudwatch;
+        this.supportsParallelQuery = supportsParallelQuery;
+        this.supportsReadReplica = supportsReadReplica;
+        this.validUpgradeTargets = validUpgradeTargets;
+        this.version = version;
+        this.versionDescription = versionDescription;
     }
 
     /**

@@ -25,8 +25,8 @@ public final class GetKeystoreResult {
     private GetKeystoreResult(
         List<String> aliases,
         String name) {
-        this.aliases = Objects.requireNonNull(aliases);
-        this.name = Objects.requireNonNull(name);
+        this.aliases = aliases;
+        this.name = name;
     }
 
     /**

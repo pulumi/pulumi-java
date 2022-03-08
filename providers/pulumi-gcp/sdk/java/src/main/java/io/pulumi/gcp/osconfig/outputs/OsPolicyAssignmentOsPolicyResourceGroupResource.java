@@ -50,7 +50,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResource {
         @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepository repository) {
         this.exec = exec;
         this.file = file;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.pkg = pkg;
         this.repository = repository;
     }

@@ -37,7 +37,7 @@ public final class ServiceTaskSpec {
         @Nullable ServiceTaskSpecResources resources,
         @Nullable ServiceTaskSpecRestartPolicy restartPolicy,
         @Nullable String runtime) {
-        this.containerSpec = Objects.requireNonNull(containerSpec);
+        this.containerSpec = containerSpec;
         this.forceUpdate = forceUpdate;
         this.logDriver = logDriver;
         this.networks = networks;

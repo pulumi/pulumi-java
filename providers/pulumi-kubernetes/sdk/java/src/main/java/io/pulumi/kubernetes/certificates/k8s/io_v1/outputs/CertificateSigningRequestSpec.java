@@ -114,8 +114,8 @@ public final class CertificateSigningRequestSpec {
         this.expirationSeconds = expirationSeconds;
         this.extra = extra;
         this.groups = groups;
-        this.request = Objects.requireNonNull(request);
-        this.signerName = Objects.requireNonNull(signerName);
+        this.request = request;
+        this.signerName = signerName;
         this.uid = uid;
         this.usages = usages;
         this.username = username;

@@ -17,7 +17,7 @@ public final class DaemonEndpoint {
 
     @OutputCustomType.Constructor({"Port"})
     private DaemonEndpoint(Integer Port) {
-        this.Port = Objects.requireNonNull(Port);
+        this.Port = Port;
     }
 
     /**

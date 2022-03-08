@@ -28,7 +28,7 @@ public final class LimitResponse {
         @Nullable QueuingConfiguration queuing,
         String type) {
         this.queuing = queuing;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

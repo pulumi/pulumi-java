@@ -25,8 +25,8 @@ public final class CustomErrorRuleResponse {
     private CustomErrorRuleResponse(
         Boolean isErrorType,
         String selector) {
-        this.isErrorType = Objects.requireNonNull(isErrorType);
-        this.selector = Objects.requireNonNull(selector);
+        this.isErrorType = isErrorType;
+        this.selector = selector;
     }
 
     /**

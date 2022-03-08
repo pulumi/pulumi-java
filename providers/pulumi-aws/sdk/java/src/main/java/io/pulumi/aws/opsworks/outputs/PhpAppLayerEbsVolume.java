@@ -56,10 +56,10 @@ public final class PhpAppLayerEbsVolume {
         @Nullable String type) {
         this.encrypted = encrypted;
         this.iops = iops;
-        this.mountPoint = Objects.requireNonNull(mountPoint);
-        this.numberOfDisks = Objects.requireNonNull(numberOfDisks);
+        this.mountPoint = mountPoint;
+        this.numberOfDisks = numberOfDisks;
         this.raidLevel = raidLevel;
-        this.size = Objects.requireNonNull(size);
+        this.size = size;
         this.type = type;
     }
 

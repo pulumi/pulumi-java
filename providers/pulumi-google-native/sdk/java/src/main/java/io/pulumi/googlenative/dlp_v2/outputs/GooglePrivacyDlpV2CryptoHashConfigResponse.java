@@ -17,7 +17,7 @@ public final class GooglePrivacyDlpV2CryptoHashConfigResponse {
 
     @OutputCustomType.Constructor({"cryptoKey"})
     private GooglePrivacyDlpV2CryptoHashConfigResponse(GooglePrivacyDlpV2CryptoKeyResponse cryptoKey) {
-        this.cryptoKey = Objects.requireNonNull(cryptoKey);
+        this.cryptoKey = cryptoKey;
     }
 
     /**

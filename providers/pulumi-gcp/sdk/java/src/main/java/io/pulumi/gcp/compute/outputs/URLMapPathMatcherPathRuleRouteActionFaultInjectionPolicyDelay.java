@@ -27,8 +27,8 @@ public final class URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay
     private URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay(
         URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay fixedDelay,
         Double percentage) {
-        this.fixedDelay = Objects.requireNonNull(fixedDelay);
-        this.percentage = Objects.requireNonNull(percentage);
+        this.fixedDelay = fixedDelay;
+        this.percentage = percentage;
     }
 
     /**

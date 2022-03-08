@@ -29,7 +29,7 @@ public final class ListConfigurationsResult {
         @Nullable String nextLink,
         List<ConfigurationResponse> value) {
         this.nextLink = nextLink;
-        this.value = Objects.requireNonNull(value);
+        this.value = value;
     }
 
     /**

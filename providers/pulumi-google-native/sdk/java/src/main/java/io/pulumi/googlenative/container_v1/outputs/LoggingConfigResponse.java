@@ -17,7 +17,7 @@ public final class LoggingConfigResponse {
 
     @OutputCustomType.Constructor({"componentConfig"})
     private LoggingConfigResponse(LoggingComponentConfigResponse componentConfig) {
-        this.componentConfig = Objects.requireNonNull(componentConfig);
+        this.componentConfig = componentConfig;
     }
 
     /**

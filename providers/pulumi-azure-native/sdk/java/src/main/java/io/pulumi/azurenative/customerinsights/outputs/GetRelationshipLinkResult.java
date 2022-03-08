@@ -103,18 +103,18 @@ public final class GetRelationshipLinkResult {
         String type) {
         this.description = description;
         this.displayName = displayName;
-        this.id = Objects.requireNonNull(id);
-        this.interactionType = Objects.requireNonNull(interactionType);
-        this.linkName = Objects.requireNonNull(linkName);
+        this.id = id;
+        this.interactionType = interactionType;
+        this.linkName = linkName;
         this.mappings = mappings;
-        this.name = Objects.requireNonNull(name);
-        this.profilePropertyReferences = Objects.requireNonNull(profilePropertyReferences);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.relatedProfilePropertyReferences = Objects.requireNonNull(relatedProfilePropertyReferences);
-        this.relationshipGuidId = Objects.requireNonNull(relationshipGuidId);
-        this.relationshipName = Objects.requireNonNull(relationshipName);
-        this.tenantId = Objects.requireNonNull(tenantId);
-        this.type = Objects.requireNonNull(type);
+        this.name = name;
+        this.profilePropertyReferences = profilePropertyReferences;
+        this.provisioningState = provisioningState;
+        this.relatedProfilePropertyReferences = relatedProfilePropertyReferences;
+        this.relationshipGuidId = relationshipGuidId;
+        this.relationshipName = relationshipName;
+        this.tenantId = tenantId;
+        this.type = type;
     }
 
     /**

@@ -24,8 +24,8 @@ public final class GetImagePipelineSchedule {
     private GetImagePipelineSchedule(
         String pipelineExecutionStartCondition,
         String scheduleExpression) {
-        this.pipelineExecutionStartCondition = Objects.requireNonNull(pipelineExecutionStartCondition);
-        this.scheduleExpression = Objects.requireNonNull(scheduleExpression);
+        this.pipelineExecutionStartCondition = pipelineExecutionStartCondition;
+        this.scheduleExpression = scheduleExpression;
     }
 
     /**

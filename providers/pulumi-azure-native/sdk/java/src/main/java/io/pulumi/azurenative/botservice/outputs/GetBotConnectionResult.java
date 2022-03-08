@@ -79,15 +79,15 @@ public final class GetBotConnectionResult {
         String type,
         List<String> zones) {
         this.etag = etag;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.kind = kind;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
-        this.properties = Objects.requireNonNull(properties);
+        this.name = name;
+        this.properties = properties;
         this.sku = sku;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
-        this.zones = Objects.requireNonNull(zones);
+        this.type = type;
+        this.zones = zones;
     }
 
     /**

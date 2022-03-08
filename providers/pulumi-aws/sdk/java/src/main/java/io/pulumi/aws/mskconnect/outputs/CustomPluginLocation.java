@@ -17,7 +17,7 @@ public final class CustomPluginLocation {
 
     @OutputCustomType.Constructor({"s3"})
     private CustomPluginLocation(CustomPluginLocationS3 s3) {
-        this.s3 = Objects.requireNonNull(s3);
+        this.s3 = s3;
     }
 
     /**

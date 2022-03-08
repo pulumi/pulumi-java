@@ -66,14 +66,14 @@ public final class GoogleCloudMlV1__TrainingOutputResponse {
         Boolean isHyperparameterTuningJob,
         List<GoogleCloudMlV1__HyperparameterOutputResponse> trials,
         Map<String,String> webAccessUris) {
-        this.builtInAlgorithmOutput = Objects.requireNonNull(builtInAlgorithmOutput);
-        this.completedTrialCount = Objects.requireNonNull(completedTrialCount);
-        this.consumedMLUnits = Objects.requireNonNull(consumedMLUnits);
-        this.hyperparameterMetricTag = Objects.requireNonNull(hyperparameterMetricTag);
-        this.isBuiltInAlgorithmJob = Objects.requireNonNull(isBuiltInAlgorithmJob);
-        this.isHyperparameterTuningJob = Objects.requireNonNull(isHyperparameterTuningJob);
-        this.trials = Objects.requireNonNull(trials);
-        this.webAccessUris = Objects.requireNonNull(webAccessUris);
+        this.builtInAlgorithmOutput = builtInAlgorithmOutput;
+        this.completedTrialCount = completedTrialCount;
+        this.consumedMLUnits = consumedMLUnits;
+        this.hyperparameterMetricTag = hyperparameterMetricTag;
+        this.isBuiltInAlgorithmJob = isBuiltInAlgorithmJob;
+        this.isHyperparameterTuningJob = isHyperparameterTuningJob;
+        this.trials = trials;
+        this.webAccessUris = webAccessUris;
     }
 
     /**

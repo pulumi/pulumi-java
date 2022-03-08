@@ -39,11 +39,11 @@ public final class GetRuleResult {
         String name,
         String stage,
         String title) {
-        this.id = Objects.requireNonNull(id);
-        this.includedPermissions = Objects.requireNonNull(includedPermissions);
-        this.name = Objects.requireNonNull(name);
-        this.stage = Objects.requireNonNull(stage);
-        this.title = Objects.requireNonNull(title);
+        this.id = id;
+        this.includedPermissions = includedPermissions;
+        this.name = name;
+        this.stage = stage;
+        this.title = title;
     }
 
     /**

@@ -33,9 +33,9 @@ public final class KubernetesClusterInfoResponse {
         EtcdInfoResponse etcdInfo,
         List<NodeInfoResponse> nodes,
         String version) {
-        this.etcdInfo = Objects.requireNonNull(etcdInfo);
-        this.nodes = Objects.requireNonNull(nodes);
-        this.version = Objects.requireNonNull(version);
+        this.etcdInfo = etcdInfo;
+        this.nodes = nodes;
+        this.version = version;
     }
 
     /**

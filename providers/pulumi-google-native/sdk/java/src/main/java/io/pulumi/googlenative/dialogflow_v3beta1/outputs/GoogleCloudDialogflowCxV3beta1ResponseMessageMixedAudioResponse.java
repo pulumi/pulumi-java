@@ -18,7 +18,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioRespon
 
     @OutputCustomType.Constructor({"segments"})
     private GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioResponse(List<GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmentResponse> segments) {
-        this.segments = Objects.requireNonNull(segments);
+        this.segments = segments;
     }
 
     /**

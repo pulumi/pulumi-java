@@ -41,9 +41,9 @@ public final class IdentityPoolRoleAttachmentRoleMapping {
         @Nullable List<IdentityPoolRoleAttachmentRoleMappingMappingRule> mappingRules,
         String type) {
         this.ambiguousRoleResolution = ambiguousRoleResolution;
-        this.identityProvider = Objects.requireNonNull(identityProvider);
+        this.identityProvider = identityProvider;
         this.mappingRules = mappingRules;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

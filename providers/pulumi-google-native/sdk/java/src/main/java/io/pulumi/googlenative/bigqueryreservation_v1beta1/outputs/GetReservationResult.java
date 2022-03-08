@@ -43,11 +43,11 @@ public final class GetReservationResult {
         String name,
         String slotCapacity,
         String updateTime) {
-        this.creationTime = Objects.requireNonNull(creationTime);
-        this.ignoreIdleSlots = Objects.requireNonNull(ignoreIdleSlots);
-        this.name = Objects.requireNonNull(name);
-        this.slotCapacity = Objects.requireNonNull(slotCapacity);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.creationTime = creationTime;
+        this.ignoreIdleSlots = ignoreIdleSlots;
+        this.name = name;
+        this.slotCapacity = slotCapacity;
+        this.updateTime = updateTime;
     }
 
     /**

@@ -32,9 +32,9 @@ public final class ToolOutputReferenceResponse {
         TimestampResponse creationTime,
         FileReferenceResponse output,
         TestCaseReferenceResponse testCase) {
-        this.creationTime = Objects.requireNonNull(creationTime);
-        this.output = Objects.requireNonNull(output);
-        this.testCase = Objects.requireNonNull(testCase);
+        this.creationTime = creationTime;
+        this.output = output;
+        this.testCase = testCase;
     }
 
     /**

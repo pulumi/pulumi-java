@@ -13,7 +13,7 @@ public final class WebACLLabel {
 
     @OutputCustomType.Constructor({"name"})
     private WebACLLabel(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     public String getName() {

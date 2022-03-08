@@ -51,12 +51,12 @@ public final class GetCustomerEventResult {
         List<NotificationEventReceiverResponse> receivers,
         SystemDataResponse systemData,
         String type) {
-        this.eventName = Objects.requireNonNull(eventName);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.receivers = Objects.requireNonNull(receivers);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.eventName = eventName;
+        this.id = id;
+        this.name = name;
+        this.receivers = receivers;
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

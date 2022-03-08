@@ -128,7 +128,7 @@ public final class GetLoadBalancerResult {
         @Nullable Map<String,String> tags,
         String type) {
         this.backendAddressPools = backendAddressPools;
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.extendedLocation = extendedLocation;
         this.frontendIPConfigurations = frontendIPConfigurations;
         this.id = id;
@@ -136,14 +136,14 @@ public final class GetLoadBalancerResult {
         this.inboundNatRules = inboundNatRules;
         this.loadBalancingRules = loadBalancingRules;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.outboundRules = outboundRules;
         this.probes = probes;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.resourceGuid = Objects.requireNonNull(resourceGuid);
+        this.provisioningState = provisioningState;
+        this.resourceGuid = resourceGuid;
         this.sku = sku;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

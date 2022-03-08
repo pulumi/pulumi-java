@@ -28,7 +28,7 @@ public final class BucketLifecycleRuleNoncurrentVersionTransition {
         @Nullable Integer days,
         String storageClass) {
         this.days = days;
-        this.storageClass = Objects.requireNonNull(storageClass);
+        this.storageClass = storageClass;
     }
 
     /**

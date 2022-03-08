@@ -42,13 +42,13 @@ public final class GetAddressResult {
         String region,
         String selfLink,
         String status) {
-        this.address = Objects.requireNonNull(address);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.project = Objects.requireNonNull(project);
-        this.region = Objects.requireNonNull(region);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.status = Objects.requireNonNull(status);
+        this.address = address;
+        this.id = id;
+        this.name = name;
+        this.project = project;
+        this.region = region;
+        this.selfLink = selfLink;
+        this.status = status;
     }
 
     /**

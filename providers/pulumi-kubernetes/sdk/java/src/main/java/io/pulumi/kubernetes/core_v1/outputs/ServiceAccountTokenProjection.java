@@ -35,7 +35,7 @@ public final class ServiceAccountTokenProjection {
         String path) {
         this.audience = audience;
         this.expirationSeconds = expirationSeconds;
-        this.path = Objects.requireNonNull(path);
+        this.path = path;
     }
 
     /**

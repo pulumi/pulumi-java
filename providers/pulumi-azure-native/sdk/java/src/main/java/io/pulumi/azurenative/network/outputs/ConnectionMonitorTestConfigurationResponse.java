@@ -69,9 +69,9 @@ public final class ConnectionMonitorTestConfigurationResponse {
         @Nullable Integer testFrequencySec) {
         this.httpConfiguration = httpConfiguration;
         this.icmpConfiguration = icmpConfiguration;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.preferredIPVersion = preferredIPVersion;
-        this.protocol = Objects.requireNonNull(protocol);
+        this.protocol = protocol;
         this.successThreshold = successThreshold;
         this.tcpConfiguration = tcpConfiguration;
         this.testFrequencySec = testFrequencySec;

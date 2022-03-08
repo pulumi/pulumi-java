@@ -26,7 +26,7 @@ public final class CloudServiceConfigurationResponse {
     private CloudServiceConfigurationResponse(
         String osFamily,
         @Nullable String osVersion) {
-        this.osFamily = Objects.requireNonNull(osFamily);
+        this.osFamily = osFamily;
         this.osVersion = osVersion;
     }
 

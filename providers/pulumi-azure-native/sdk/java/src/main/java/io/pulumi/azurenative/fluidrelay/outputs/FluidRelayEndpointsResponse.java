@@ -25,8 +25,8 @@ public final class FluidRelayEndpointsResponse {
     private FluidRelayEndpointsResponse(
         List<String> ordererEndpoints,
         List<String> storageEndpoints) {
-        this.ordererEndpoints = Objects.requireNonNull(ordererEndpoints);
-        this.storageEndpoints = Objects.requireNonNull(storageEndpoints);
+        this.ordererEndpoints = ordererEndpoints;
+        this.storageEndpoints = storageEndpoints;
     }
 
     /**

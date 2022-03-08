@@ -42,11 +42,11 @@ public final class VMSSVMInfoResponse {
         String latestReportId,
         String vmId,
         String vmResourceId) {
-        this.complianceStatus = Objects.requireNonNull(complianceStatus);
-        this.lastComplianceChecked = Objects.requireNonNull(lastComplianceChecked);
-        this.latestReportId = Objects.requireNonNull(latestReportId);
-        this.vmId = Objects.requireNonNull(vmId);
-        this.vmResourceId = Objects.requireNonNull(vmResourceId);
+        this.complianceStatus = complianceStatus;
+        this.lastComplianceChecked = lastComplianceChecked;
+        this.latestReportId = latestReportId;
+        this.vmId = vmId;
+        this.vmResourceId = vmResourceId;
     }
 
     /**

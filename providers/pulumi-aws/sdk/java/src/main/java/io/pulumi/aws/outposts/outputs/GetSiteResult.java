@@ -28,10 +28,10 @@ public final class GetSiteResult {
         String description,
         String id,
         String name) {
-        this.accountId = Objects.requireNonNull(accountId);
-        this.description = Objects.requireNonNull(description);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.accountId = accountId;
+        this.description = description;
+        this.id = id;
+        this.name = name;
     }
 
     /**

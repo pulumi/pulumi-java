@@ -58,13 +58,13 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse {
         String name,
         String resultType,
         Double sizeMB) {
-        this.compatibilityLevel = Objects.requireNonNull(compatibilityLevel);
-        this.databaseFiles = Objects.requireNonNull(databaseFiles);
-        this.databaseState = Objects.requireNonNull(databaseState);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.resultType = Objects.requireNonNull(resultType);
-        this.sizeMB = Objects.requireNonNull(sizeMB);
+        this.compatibilityLevel = compatibilityLevel;
+        this.databaseFiles = databaseFiles;
+        this.databaseState = databaseState;
+        this.id = id;
+        this.name = name;
+        this.resultType = resultType;
+        this.sizeMB = sizeMB;
     }
 
     /**

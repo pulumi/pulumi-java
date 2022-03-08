@@ -21,8 +21,8 @@ public final class TopicRuleSnsAction {
         String roleArn,
         String targetArn) {
         this.messageFormat = messageFormat;
-        this.roleArn = Objects.requireNonNull(roleArn);
-        this.targetArn = Objects.requireNonNull(targetArn);
+        this.roleArn = roleArn;
+        this.targetArn = targetArn;
     }
 
     public Optional<String> getMessageFormat() {

@@ -32,9 +32,9 @@ public final class SoftwareConfigResponse {
         String imageVersion,
         List<String> optionalComponents,
         Map<String,String> properties) {
-        this.imageVersion = Objects.requireNonNull(imageVersion);
-        this.optionalComponents = Objects.requireNonNull(optionalComponents);
-        this.properties = Objects.requireNonNull(properties);
+        this.imageVersion = imageVersion;
+        this.optionalComponents = optionalComponents;
+        this.properties = properties;
     }
 
     /**

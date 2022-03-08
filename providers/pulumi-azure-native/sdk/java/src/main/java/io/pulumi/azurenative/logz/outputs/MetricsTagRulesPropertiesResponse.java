@@ -39,9 +39,9 @@ public final class MetricsTagRulesPropertiesResponse {
         @Nullable Boolean sendMetrics,
         SystemDataResponse systemData) {
         this.metricRules = metricRules;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.sendMetrics = sendMetrics;
-        this.systemData = Objects.requireNonNull(systemData);
+        this.systemData = systemData;
     }
 
     public List<MetricRulesResponse> getMetricRules() {

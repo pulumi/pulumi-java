@@ -48,7 +48,7 @@ public final class PackagingConfigurationDashPackage {
         @Nullable List<PackagingConfigurationDashPackagePeriodTriggersItem> periodTriggers,
         @Nullable Integer segmentDurationSeconds,
         @Nullable PackagingConfigurationDashPackageSegmentTemplateFormat segmentTemplateFormat) {
-        this.dashManifests = Objects.requireNonNull(dashManifests);
+        this.dashManifests = dashManifests;
         this.encryption = encryption;
         this.includeEncoderConfigurationInSegments = includeEncoderConfigurationInSegments;
         this.periodTriggers = periodTriggers;

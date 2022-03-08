@@ -57,10 +57,10 @@ public final class WaitActivityResponse {
         Object waitTimeInSeconds) {
         this.dependsOn = dependsOn;
         this.description = description;
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.name = name;
+        this.type = type;
         this.userProperties = userProperties;
-        this.waitTimeInSeconds = Objects.requireNonNull(waitTimeInSeconds);
+        this.waitTimeInSeconds = waitTimeInSeconds;
     }
 
     /**

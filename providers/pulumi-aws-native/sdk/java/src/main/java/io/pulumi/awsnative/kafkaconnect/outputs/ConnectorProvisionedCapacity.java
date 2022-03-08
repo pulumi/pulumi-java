@@ -27,7 +27,7 @@ public final class ConnectorProvisionedCapacity {
         @Nullable Integer mcuCount,
         Integer workerCount) {
         this.mcuCount = mcuCount;
-        this.workerCount = Objects.requireNonNull(workerCount);
+        this.workerCount = workerCount;
     }
 
     /**

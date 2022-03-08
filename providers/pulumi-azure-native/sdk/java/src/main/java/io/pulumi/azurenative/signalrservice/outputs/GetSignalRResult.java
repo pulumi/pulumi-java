@@ -144,24 +144,24 @@ public final class GetSignalRResult {
         @Nullable ServerlessUpstreamSettingsResponse upstream,
         String version) {
         this.cors = cors;
-        this.externalIP = Objects.requireNonNull(externalIP);
+        this.externalIP = externalIP;
         this.features = features;
-        this.hostName = Objects.requireNonNull(hostName);
-        this.hostNamePrefix = Objects.requireNonNull(hostNamePrefix);
-        this.id = Objects.requireNonNull(id);
+        this.hostName = hostName;
+        this.hostNamePrefix = hostNamePrefix;
+        this.id = id;
         this.kind = kind;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.networkACLs = networkACLs;
-        this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.publicPort = Objects.requireNonNull(publicPort);
-        this.serverPort = Objects.requireNonNull(serverPort);
+        this.privateEndpointConnections = privateEndpointConnections;
+        this.provisioningState = provisioningState;
+        this.publicPort = publicPort;
+        this.serverPort = serverPort;
         this.sku = sku;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.upstream = upstream;
-        this.version = Objects.requireNonNull(version);
+        this.version = version;
     }
 
     /**

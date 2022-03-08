@@ -84,18 +84,18 @@ public final class GetRestApiResult {
         String policy,
         String rootResourceId,
         Map<String,String> tags) {
-        this.apiKeySource = Objects.requireNonNull(apiKeySource);
-        this.arn = Objects.requireNonNull(arn);
-        this.binaryMediaTypes = Objects.requireNonNull(binaryMediaTypes);
-        this.description = Objects.requireNonNull(description);
-        this.endpointConfigurations = Objects.requireNonNull(endpointConfigurations);
-        this.executionArn = Objects.requireNonNull(executionArn);
-        this.id = Objects.requireNonNull(id);
-        this.minimumCompressionSize = Objects.requireNonNull(minimumCompressionSize);
-        this.name = Objects.requireNonNull(name);
-        this.policy = Objects.requireNonNull(policy);
-        this.rootResourceId = Objects.requireNonNull(rootResourceId);
-        this.tags = Objects.requireNonNull(tags);
+        this.apiKeySource = apiKeySource;
+        this.arn = arn;
+        this.binaryMediaTypes = binaryMediaTypes;
+        this.description = description;
+        this.endpointConfigurations = endpointConfigurations;
+        this.executionArn = executionArn;
+        this.id = id;
+        this.minimumCompressionSize = minimumCompressionSize;
+        this.name = name;
+        this.policy = policy;
+        this.rootResourceId = rootResourceId;
+        this.tags = tags;
     }
 
     /**

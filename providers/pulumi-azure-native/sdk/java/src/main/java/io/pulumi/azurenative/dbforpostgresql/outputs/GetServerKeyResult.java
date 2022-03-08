@@ -56,12 +56,12 @@ public final class GetServerKeyResult {
         String serverKeyType,
         String type,
         @Nullable String uri) {
-        this.creationDate = Objects.requireNonNull(creationDate);
-        this.id = Objects.requireNonNull(id);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.serverKeyType = Objects.requireNonNull(serverKeyType);
-        this.type = Objects.requireNonNull(type);
+        this.creationDate = creationDate;
+        this.id = id;
+        this.kind = kind;
+        this.name = name;
+        this.serverKeyType = serverKeyType;
+        this.type = type;
         this.uri = uri;
     }
 

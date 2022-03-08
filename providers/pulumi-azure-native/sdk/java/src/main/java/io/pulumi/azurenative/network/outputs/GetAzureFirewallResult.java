@@ -146,22 +146,22 @@ public final class GetAzureFirewallResult {
         @Nullable List<String> zones) {
         this.additionalProperties = additionalProperties;
         this.applicationRuleCollections = applicationRuleCollections;
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.firewallPolicy = firewallPolicy;
         this.hubIPAddresses = hubIPAddresses;
         this.id = id;
         this.ipConfigurations = ipConfigurations;
-        this.ipGroups = Objects.requireNonNull(ipGroups);
+        this.ipGroups = ipGroups;
         this.location = location;
         this.managementIpConfiguration = managementIpConfiguration;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.natRuleCollections = natRuleCollections;
         this.networkRuleCollections = networkRuleCollections;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.sku = sku;
         this.tags = tags;
         this.threatIntelMode = threatIntelMode;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.virtualHub = virtualHub;
         this.zones = zones;
     }

@@ -263,10 +263,10 @@ public final class EdifactEnvelopeSettingsResponse {
         @Nullable String transactionSetControlNumberSuffix,
         Double transactionSetControlNumberUpperBound) {
         this.applicationReferenceId = applicationReferenceId;
-        this.applyDelimiterStringAdvice = Objects.requireNonNull(applyDelimiterStringAdvice);
+        this.applyDelimiterStringAdvice = applyDelimiterStringAdvice;
         this.communicationAgreementId = communicationAgreementId;
-        this.createGroupingSegments = Objects.requireNonNull(createGroupingSegments);
-        this.enableDefaultGroupHeaders = Objects.requireNonNull(enableDefaultGroupHeaders);
+        this.createGroupingSegments = createGroupingSegments;
+        this.enableDefaultGroupHeaders = enableDefaultGroupHeaders;
         this.functionalGroupId = functionalGroupId;
         this.groupApplicationPassword = groupApplicationPassword;
         this.groupApplicationReceiverId = groupApplicationReceiverId;
@@ -274,35 +274,35 @@ public final class EdifactEnvelopeSettingsResponse {
         this.groupApplicationSenderId = groupApplicationSenderId;
         this.groupApplicationSenderQualifier = groupApplicationSenderQualifier;
         this.groupAssociationAssignedCode = groupAssociationAssignedCode;
-        this.groupControlNumberLowerBound = Objects.requireNonNull(groupControlNumberLowerBound);
+        this.groupControlNumberLowerBound = groupControlNumberLowerBound;
         this.groupControlNumberPrefix = groupControlNumberPrefix;
         this.groupControlNumberSuffix = groupControlNumberSuffix;
-        this.groupControlNumberUpperBound = Objects.requireNonNull(groupControlNumberUpperBound);
+        this.groupControlNumberUpperBound = groupControlNumberUpperBound;
         this.groupControllingAgencyCode = groupControllingAgencyCode;
         this.groupMessageRelease = groupMessageRelease;
         this.groupMessageVersion = groupMessageVersion;
-        this.interchangeControlNumberLowerBound = Objects.requireNonNull(interchangeControlNumberLowerBound);
+        this.interchangeControlNumberLowerBound = interchangeControlNumberLowerBound;
         this.interchangeControlNumberPrefix = interchangeControlNumberPrefix;
         this.interchangeControlNumberSuffix = interchangeControlNumberSuffix;
-        this.interchangeControlNumberUpperBound = Objects.requireNonNull(interchangeControlNumberUpperBound);
-        this.isTestInterchange = Objects.requireNonNull(isTestInterchange);
-        this.overwriteExistingTransactionSetControlNumber = Objects.requireNonNull(overwriteExistingTransactionSetControlNumber);
+        this.interchangeControlNumberUpperBound = interchangeControlNumberUpperBound;
+        this.isTestInterchange = isTestInterchange;
+        this.overwriteExistingTransactionSetControlNumber = overwriteExistingTransactionSetControlNumber;
         this.processingPriorityCode = processingPriorityCode;
         this.receiverInternalIdentification = receiverInternalIdentification;
         this.receiverInternalSubIdentification = receiverInternalSubIdentification;
         this.receiverReverseRoutingAddress = receiverReverseRoutingAddress;
         this.recipientReferencePasswordQualifier = recipientReferencePasswordQualifier;
         this.recipientReferencePasswordValue = recipientReferencePasswordValue;
-        this.rolloverGroupControlNumber = Objects.requireNonNull(rolloverGroupControlNumber);
-        this.rolloverInterchangeControlNumber = Objects.requireNonNull(rolloverInterchangeControlNumber);
-        this.rolloverTransactionSetControlNumber = Objects.requireNonNull(rolloverTransactionSetControlNumber);
+        this.rolloverGroupControlNumber = rolloverGroupControlNumber;
+        this.rolloverInterchangeControlNumber = rolloverInterchangeControlNumber;
+        this.rolloverTransactionSetControlNumber = rolloverTransactionSetControlNumber;
         this.senderInternalIdentification = senderInternalIdentification;
         this.senderInternalSubIdentification = senderInternalSubIdentification;
         this.senderReverseRoutingAddress = senderReverseRoutingAddress;
-        this.transactionSetControlNumberLowerBound = Objects.requireNonNull(transactionSetControlNumberLowerBound);
+        this.transactionSetControlNumberLowerBound = transactionSetControlNumberLowerBound;
         this.transactionSetControlNumberPrefix = transactionSetControlNumberPrefix;
         this.transactionSetControlNumberSuffix = transactionSetControlNumberSuffix;
-        this.transactionSetControlNumberUpperBound = Objects.requireNonNull(transactionSetControlNumberUpperBound);
+        this.transactionSetControlNumberUpperBound = transactionSetControlNumberUpperBound;
     }
 
     /**

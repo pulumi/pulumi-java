@@ -24,8 +24,8 @@ public final class IngestionConnectionStringResponse {
     private IngestionConnectionStringResponse(
         String location,
         String value) {
-        this.location = Objects.requireNonNull(location);
-        this.value = Objects.requireNonNull(value);
+        this.location = location;
+        this.value = value;
     }
 
     /**

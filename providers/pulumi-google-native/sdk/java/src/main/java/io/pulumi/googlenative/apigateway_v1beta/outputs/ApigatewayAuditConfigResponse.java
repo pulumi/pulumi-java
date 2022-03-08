@@ -26,8 +26,8 @@ public final class ApigatewayAuditConfigResponse {
     private ApigatewayAuditConfigResponse(
         List<ApigatewayAuditLogConfigResponse> auditLogConfigs,
         String service) {
-        this.auditLogConfigs = Objects.requireNonNull(auditLogConfigs);
-        this.service = Objects.requireNonNull(service);
+        this.auditLogConfigs = auditLogConfigs;
+        this.service = service;
     }
 
     /**

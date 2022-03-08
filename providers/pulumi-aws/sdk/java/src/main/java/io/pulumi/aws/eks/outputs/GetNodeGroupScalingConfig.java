@@ -30,9 +30,9 @@ public final class GetNodeGroupScalingConfig {
         Integer desiredSize,
         Integer maxSize,
         Integer minSize) {
-        this.desiredSize = Objects.requireNonNull(desiredSize);
-        this.maxSize = Objects.requireNonNull(maxSize);
-        this.minSize = Objects.requireNonNull(minSize);
+        this.desiredSize = desiredSize;
+        this.maxSize = maxSize;
+        this.minSize = minSize;
     }
 
     /**

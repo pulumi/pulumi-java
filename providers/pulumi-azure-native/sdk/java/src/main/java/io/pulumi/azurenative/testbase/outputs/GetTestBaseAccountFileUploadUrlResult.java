@@ -24,8 +24,8 @@ public final class GetTestBaseAccountFileUploadUrlResult {
     private GetTestBaseAccountFileUploadUrlResult(
         String blobPath,
         String uploadUrl) {
-        this.blobPath = Objects.requireNonNull(blobPath);
-        this.uploadUrl = Objects.requireNonNull(uploadUrl);
+        this.blobPath = blobPath;
+        this.uploadUrl = uploadUrl;
     }
 
     /**

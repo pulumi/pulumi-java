@@ -31,9 +31,9 @@ public final class GoogleCloudRetailV2betaRuleReplacementActionResponse {
         List<String> queryTerms,
         String replacementTerm,
         String term) {
-        this.queryTerms = Objects.requireNonNull(queryTerms);
-        this.replacementTerm = Objects.requireNonNull(replacementTerm);
-        this.term = Objects.requireNonNull(term);
+        this.queryTerms = queryTerms;
+        this.replacementTerm = replacementTerm;
+        this.term = term;
     }
 
     /**

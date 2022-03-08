@@ -17,7 +17,7 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTru
 
     @OutputCustomType.Constructor({"certificateChain"})
     private VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFile(String certificateChain) {
-        this.certificateChain = Objects.requireNonNull(certificateChain);
+        this.certificateChain = certificateChain;
     }
 
     /**

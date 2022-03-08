@@ -26,7 +26,7 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
     private ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambda(
         String functionArn,
         @Nullable String functionPayload) {
-        this.functionArn = Objects.requireNonNull(functionArn);
+        this.functionArn = functionArn;
         this.functionPayload = functionPayload;
     }
 

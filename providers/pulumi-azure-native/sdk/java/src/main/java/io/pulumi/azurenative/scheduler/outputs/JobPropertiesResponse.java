@@ -51,7 +51,7 @@ public final class JobPropertiesResponse {
         this.recurrence = recurrence;
         this.startTime = startTime;
         this.state = state;
-        this.status = Objects.requireNonNull(status);
+        this.status = status;
     }
 
     /**

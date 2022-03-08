@@ -24,8 +24,8 @@ public final class JsonFileFormatResponse {
     private JsonFileFormatResponse(
         String compression,
         String schemaFileFormat) {
-        this.compression = Objects.requireNonNull(compression);
-        this.schemaFileFormat = Objects.requireNonNull(schemaFileFormat);
+        this.compression = compression;
+        this.schemaFileFormat = schemaFileFormat;
     }
 
     /**

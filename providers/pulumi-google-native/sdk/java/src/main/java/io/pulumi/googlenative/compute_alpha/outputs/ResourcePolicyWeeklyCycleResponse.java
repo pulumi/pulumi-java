@@ -18,7 +18,7 @@ public final class ResourcePolicyWeeklyCycleResponse {
 
     @OutputCustomType.Constructor({"dayOfWeeks"})
     private ResourcePolicyWeeklyCycleResponse(List<ResourcePolicyWeeklyCycleDayOfWeekResponse> dayOfWeeks) {
-        this.dayOfWeeks = Objects.requireNonNull(dayOfWeeks);
+        this.dayOfWeeks = dayOfWeeks;
     }
 
     /**

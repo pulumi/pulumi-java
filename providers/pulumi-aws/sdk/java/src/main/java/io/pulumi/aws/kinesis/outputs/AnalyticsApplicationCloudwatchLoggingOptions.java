@@ -33,8 +33,8 @@ public final class AnalyticsApplicationCloudwatchLoggingOptions {
         String logStreamArn,
         String roleArn) {
         this.id = id;
-        this.logStreamArn = Objects.requireNonNull(logStreamArn);
-        this.roleArn = Objects.requireNonNull(roleArn);
+        this.logStreamArn = logStreamArn;
+        this.roleArn = roleArn;
     }
 
     /**

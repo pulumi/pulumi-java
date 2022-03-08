@@ -44,11 +44,11 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultMetricResponse 
         String countType,
         Double ratio,
         String type) {
-        this.confidenceInterval = Objects.requireNonNull(confidenceInterval);
-        this.count = Objects.requireNonNull(count);
-        this.countType = Objects.requireNonNull(countType);
-        this.ratio = Objects.requireNonNull(ratio);
-        this.type = Objects.requireNonNull(type);
+        this.confidenceInterval = confidenceInterval;
+        this.count = count;
+        this.countType = countType;
+        this.ratio = ratio;
+        this.type = type;
     }
 
     /**

@@ -13,7 +13,7 @@ public final class ConnectorPlugin {
 
     @OutputCustomType.Constructor({"customPlugin"})
     private ConnectorPlugin(ConnectorCustomPlugin customPlugin) {
-        this.customPlugin = Objects.requireNonNull(customPlugin);
+        this.customPlugin = customPlugin;
     }
 
     public ConnectorCustomPlugin getCustomPlugin() {

@@ -27,7 +27,7 @@ public final class RecordingConfigurationThumbnailConfiguration {
     private RecordingConfigurationThumbnailConfiguration(
         RecordingConfigurationThumbnailConfigurationRecordingMode recordingMode,
         @Nullable Integer targetIntervalSeconds) {
-        this.recordingMode = Objects.requireNonNull(recordingMode);
+        this.recordingMode = recordingMode;
         this.targetIntervalSeconds = targetIntervalSeconds;
     }
 

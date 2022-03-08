@@ -64,14 +64,14 @@ public final class GetJobResult {
         JobStatisticsResponse statistics,
         JobStatusResponse status,
         String userEmail) {
-        this.configuration = Objects.requireNonNull(configuration);
-        this.etag = Objects.requireNonNull(etag);
-        this.jobReference = Objects.requireNonNull(jobReference);
-        this.kind = Objects.requireNonNull(kind);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.statistics = Objects.requireNonNull(statistics);
-        this.status = Objects.requireNonNull(status);
-        this.userEmail = Objects.requireNonNull(userEmail);
+        this.configuration = configuration;
+        this.etag = etag;
+        this.jobReference = jobReference;
+        this.kind = kind;
+        this.selfLink = selfLink;
+        this.statistics = statistics;
+        this.status = status;
+        this.userEmail = userEmail;
     }
 
     /**

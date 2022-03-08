@@ -69,15 +69,15 @@ public final class GetKeyResult {
         String issuedAt,
         List<String> scopes,
         String status) {
-        this.apiProducts = Objects.requireNonNull(apiProducts);
-        this.attributes = Objects.requireNonNull(attributes);
-        this.consumerKey = Objects.requireNonNull(consumerKey);
-        this.consumerSecret = Objects.requireNonNull(consumerSecret);
-        this.expiresAt = Objects.requireNonNull(expiresAt);
-        this.expiresInSeconds = Objects.requireNonNull(expiresInSeconds);
-        this.issuedAt = Objects.requireNonNull(issuedAt);
-        this.scopes = Objects.requireNonNull(scopes);
-        this.status = Objects.requireNonNull(status);
+        this.apiProducts = apiProducts;
+        this.attributes = attributes;
+        this.consumerKey = consumerKey;
+        this.consumerSecret = consumerSecret;
+        this.expiresAt = expiresAt;
+        this.expiresInSeconds = expiresInSeconds;
+        this.issuedAt = issuedAt;
+        this.scopes = scopes;
+        this.status = status;
     }
 
     /**

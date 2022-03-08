@@ -25,8 +25,8 @@ public final class BucketLifecycleRuleItemResponse {
     private BucketLifecycleRuleItemResponse(
         BucketLifecycleRuleItemActionResponse action,
         BucketLifecycleRuleItemConditionResponse condition) {
-        this.action = Objects.requireNonNull(action);
-        this.condition = Objects.requireNonNull(condition);
+        this.action = action;
+        this.condition = condition;
     }
 
     /**

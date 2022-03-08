@@ -119,7 +119,7 @@ public final class AzureDataLakeStoreLinkedServiceResponse {
         this.azureCloudType = azureCloudType;
         this.connectVia = connectVia;
         this.credential = credential;
-        this.dataLakeStoreUri = Objects.requireNonNull(dataLakeStoreUri);
+        this.dataLakeStoreUri = dataLakeStoreUri;
         this.description = description;
         this.encryptedCredential = encryptedCredential;
         this.parameters = parameters;
@@ -128,7 +128,7 @@ public final class AzureDataLakeStoreLinkedServiceResponse {
         this.servicePrincipalKey = servicePrincipalKey;
         this.subscriptionId = subscriptionId;
         this.tenant = tenant;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

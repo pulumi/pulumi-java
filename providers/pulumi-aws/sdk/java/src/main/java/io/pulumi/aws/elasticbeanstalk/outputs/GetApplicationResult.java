@@ -35,11 +35,11 @@ public final class GetApplicationResult {
         String description,
         String id,
         String name) {
-        this.appversionLifecycle = Objects.requireNonNull(appversionLifecycle);
-        this.arn = Objects.requireNonNull(arn);
-        this.description = Objects.requireNonNull(description);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.appversionLifecycle = appversionLifecycle;
+        this.arn = arn;
+        this.description = description;
+        this.id = id;
+        this.name = name;
     }
 
     public GetApplicationAppversionLifecycle getAppversionLifecycle() {

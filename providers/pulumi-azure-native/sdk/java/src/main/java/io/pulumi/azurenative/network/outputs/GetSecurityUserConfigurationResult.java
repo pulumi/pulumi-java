@@ -78,13 +78,13 @@ public final class GetSecurityUserConfigurationResult {
         this.deleteExistingNSGs = deleteExistingNSGs;
         this.description = description;
         this.displayName = displayName;
-        this.etag = Objects.requireNonNull(etag);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.etag = etag;
+        this.id = id;
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.securityType = securityType;
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

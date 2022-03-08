@@ -24,8 +24,8 @@ public final class OracleSourceConfigResponse {
     private OracleSourceConfigResponse(
         OracleRdbmsResponse allowlist,
         OracleRdbmsResponse rejectlist) {
-        this.allowlist = Objects.requireNonNull(allowlist);
-        this.rejectlist = Objects.requireNonNull(rejectlist);
+        this.allowlist = allowlist;
+        this.rejectlist = rejectlist;
     }
 
     /**

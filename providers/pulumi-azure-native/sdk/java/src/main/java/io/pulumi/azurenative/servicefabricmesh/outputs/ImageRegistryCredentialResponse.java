@@ -33,8 +33,8 @@ public final class ImageRegistryCredentialResponse {
         String server,
         String username) {
         this.password = password;
-        this.server = Objects.requireNonNull(server);
-        this.username = Objects.requireNonNull(username);
+        this.server = server;
+        this.username = username;
     }
 
     /**

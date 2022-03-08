@@ -17,7 +17,7 @@ public final class ChartOptionsResponse {
 
     @OutputCustomType.Constructor({"mode"})
     private ChartOptionsResponse(String mode) {
-        this.mode = Objects.requireNonNull(mode);
+        this.mode = mode;
     }
 
     /**

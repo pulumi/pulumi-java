@@ -45,13 +45,13 @@ public final class GetRegionInstanceGroupResult {
         String region,
         String selfLink,
         Integer size) {
-        this.id = Objects.requireNonNull(id);
-        this.instances = Objects.requireNonNull(instances);
-        this.name = Objects.requireNonNull(name);
-        this.project = Objects.requireNonNull(project);
-        this.region = Objects.requireNonNull(region);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.size = Objects.requireNonNull(size);
+        this.id = id;
+        this.instances = instances;
+        this.name = name;
+        this.project = project;
+        this.region = region;
+        this.selfLink = selfLink;
+        this.size = size;
     }
 
     /**

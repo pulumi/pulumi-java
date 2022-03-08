@@ -30,9 +30,9 @@ public final class MirrorConfigResponse {
         String deployKeyId,
         String url,
         String webhookId) {
-        this.deployKeyId = Objects.requireNonNull(deployKeyId);
-        this.url = Objects.requireNonNull(url);
-        this.webhookId = Objects.requireNonNull(webhookId);
+        this.deployKeyId = deployKeyId;
+        this.url = url;
+        this.webhookId = webhookId;
     }
 
     /**

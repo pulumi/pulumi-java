@@ -42,11 +42,11 @@ public final class GetSyncGroupResult {
         String syncGroupStatus,
         String type,
         String uniqueId) {
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.syncGroupStatus = Objects.requireNonNull(syncGroupStatus);
-        this.type = Objects.requireNonNull(type);
-        this.uniqueId = Objects.requireNonNull(uniqueId);
+        this.id = id;
+        this.name = name;
+        this.syncGroupStatus = syncGroupStatus;
+        this.type = type;
+        this.uniqueId = uniqueId;
     }
 
     /**

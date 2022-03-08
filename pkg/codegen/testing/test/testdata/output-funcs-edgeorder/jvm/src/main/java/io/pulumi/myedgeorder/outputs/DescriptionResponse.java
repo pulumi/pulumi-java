@@ -50,12 +50,12 @@ public final class DescriptionResponse {
         List<LinkResponse> links,
         String longDescription,
         String shortDescription) {
-        this.attributes = Objects.requireNonNull(attributes);
-        this.descriptionType = Objects.requireNonNull(descriptionType);
-        this.keywords = Objects.requireNonNull(keywords);
-        this.links = Objects.requireNonNull(links);
-        this.longDescription = Objects.requireNonNull(longDescription);
-        this.shortDescription = Objects.requireNonNull(shortDescription);
+        this.attributes = attributes;
+        this.descriptionType = descriptionType;
+        this.keywords = keywords;
+        this.links = links;
+        this.longDescription = longDescription;
+        this.shortDescription = shortDescription;
     }
 
     /**

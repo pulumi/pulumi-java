@@ -75,16 +75,16 @@ public final class CertificatePropertiesResponse {
         String subjectName,
         String thumbprint,
         String vaultUri) {
-        this.activateDate = Objects.requireNonNull(activateDate);
+        this.activateDate = activateDate;
         this.certVersion = certVersion;
-        this.dnsNames = Objects.requireNonNull(dnsNames);
-        this.expirationDate = Objects.requireNonNull(expirationDate);
-        this.issuedDate = Objects.requireNonNull(issuedDate);
-        this.issuer = Objects.requireNonNull(issuer);
-        this.keyVaultCertName = Objects.requireNonNull(keyVaultCertName);
-        this.subjectName = Objects.requireNonNull(subjectName);
-        this.thumbprint = Objects.requireNonNull(thumbprint);
-        this.vaultUri = Objects.requireNonNull(vaultUri);
+        this.dnsNames = dnsNames;
+        this.expirationDate = expirationDate;
+        this.issuedDate = issuedDate;
+        this.issuer = issuer;
+        this.keyVaultCertName = keyVaultCertName;
+        this.subjectName = subjectName;
+        this.thumbprint = thumbprint;
+        this.vaultUri = vaultUri;
     }
 
     /**

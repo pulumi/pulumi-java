@@ -37,10 +37,10 @@ public final class EndpointsApiServiceResponse {
         Boolean disableTraceSampling,
         String name,
         String rolloutStrategy) {
-        this.configId = Objects.requireNonNull(configId);
-        this.disableTraceSampling = Objects.requireNonNull(disableTraceSampling);
-        this.name = Objects.requireNonNull(name);
-        this.rolloutStrategy = Objects.requireNonNull(rolloutStrategy);
+        this.configId = configId;
+        this.disableTraceSampling = disableTraceSampling;
+        this.name = name;
+        this.rolloutStrategy = rolloutStrategy;
     }
 
     /**

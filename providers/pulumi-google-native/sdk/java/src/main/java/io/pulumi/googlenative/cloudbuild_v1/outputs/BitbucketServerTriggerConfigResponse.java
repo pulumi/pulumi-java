@@ -51,12 +51,12 @@ public final class BitbucketServerTriggerConfigResponse {
         PullRequestFilterResponse pullRequest,
         PushFilterResponse push,
         String repoSlug) {
-        this.bitbucketServerConfig = Objects.requireNonNull(bitbucketServerConfig);
-        this.bitbucketServerConfigResource = Objects.requireNonNull(bitbucketServerConfigResource);
-        this.projectKey = Objects.requireNonNull(projectKey);
-        this.pullRequest = Objects.requireNonNull(pullRequest);
-        this.push = Objects.requireNonNull(push);
-        this.repoSlug = Objects.requireNonNull(repoSlug);
+        this.bitbucketServerConfig = bitbucketServerConfig;
+        this.bitbucketServerConfigResource = bitbucketServerConfigResource;
+        this.projectKey = projectKey;
+        this.pullRequest = pullRequest;
+        this.push = push;
+        this.repoSlug = repoSlug;
     }
 
     /**

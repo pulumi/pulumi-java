@@ -18,8 +18,8 @@ public final class GetSecretReplicationUserManagedReplica {
     private GetSecretReplicationUserManagedReplica(
         List<GetSecretReplicationUserManagedReplicaCustomerManagedEncryption> customerManagedEncryptions,
         String location) {
-        this.customerManagedEncryptions = Objects.requireNonNull(customerManagedEncryptions);
-        this.location = Objects.requireNonNull(location);
+        this.customerManagedEncryptions = customerManagedEncryptions;
+        this.location = location;
     }
 
     public List<GetSecretReplicationUserManagedReplicaCustomerManagedEncryption> getCustomerManagedEncryptions() {

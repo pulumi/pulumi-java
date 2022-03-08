@@ -31,9 +31,9 @@ public final class GoogleCloudMlV1__SchedulingResponse {
         String maxRunningTime,
         String maxWaitTime,
         Integer priority) {
-        this.maxRunningTime = Objects.requireNonNull(maxRunningTime);
-        this.maxWaitTime = Objects.requireNonNull(maxWaitTime);
-        this.priority = Objects.requireNonNull(priority);
+        this.maxRunningTime = maxRunningTime;
+        this.maxWaitTime = maxWaitTime;
+        this.priority = priority;
     }
 
     /**

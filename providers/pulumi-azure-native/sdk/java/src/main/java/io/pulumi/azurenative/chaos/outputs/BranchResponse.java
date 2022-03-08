@@ -29,8 +29,8 @@ public final class BranchResponse {
     private BranchResponse(
         List<Object> actions,
         String name) {
-        this.actions = Objects.requireNonNull(actions);
-        this.name = Objects.requireNonNull(name);
+        this.actions = actions;
+        this.name = name;
     }
 
     /**

@@ -96,19 +96,19 @@ public final class TargetResponse {
         String targetId,
         String uid,
         String updateTime) {
-        this.annotations = Objects.requireNonNull(annotations);
-        this.anthosCluster = Objects.requireNonNull(anthosCluster);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.description = Objects.requireNonNull(description);
-        this.etag = Objects.requireNonNull(etag);
-        this.executionConfigs = Objects.requireNonNull(executionConfigs);
-        this.gke = Objects.requireNonNull(gke);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.requireApproval = Objects.requireNonNull(requireApproval);
-        this.targetId = Objects.requireNonNull(targetId);
-        this.uid = Objects.requireNonNull(uid);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.annotations = annotations;
+        this.anthosCluster = anthosCluster;
+        this.createTime = createTime;
+        this.description = description;
+        this.etag = etag;
+        this.executionConfigs = executionConfigs;
+        this.gke = gke;
+        this.labels = labels;
+        this.name = name;
+        this.requireApproval = requireApproval;
+        this.targetId = targetId;
+        this.uid = uid;
+        this.updateTime = updateTime;
     }
 
     /**

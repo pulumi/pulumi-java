@@ -13,7 +13,7 @@ public final class ConnectorKafkaClusterEncryptionInTransit {
 
     @OutputCustomType.Constructor({"encryptionType"})
     private ConnectorKafkaClusterEncryptionInTransit(ConnectorKafkaClusterEncryptionInTransitType encryptionType) {
-        this.encryptionType = Objects.requireNonNull(encryptionType);
+        this.encryptionType = encryptionType;
     }
 
     public ConnectorKafkaClusterEncryptionInTransitType getEncryptionType() {

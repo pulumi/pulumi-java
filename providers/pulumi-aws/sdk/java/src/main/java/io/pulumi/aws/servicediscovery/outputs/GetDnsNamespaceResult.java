@@ -40,12 +40,12 @@ public final class GetDnsNamespaceResult {
         String id,
         String name,
         String type) {
-        this.arn = Objects.requireNonNull(arn);
-        this.description = Objects.requireNonNull(description);
-        this.hostedZone = Objects.requireNonNull(hostedZone);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.arn = arn;
+        this.description = description;
+        this.hostedZone = hostedZone;
+        this.id = id;
+        this.name = name;
+        this.type = type;
     }
 
     /**

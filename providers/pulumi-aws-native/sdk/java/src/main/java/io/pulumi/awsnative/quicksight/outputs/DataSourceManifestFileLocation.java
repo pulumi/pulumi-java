@@ -24,8 +24,8 @@ public final class DataSourceManifestFileLocation {
     private DataSourceManifestFileLocation(
         String bucket,
         String key) {
-        this.bucket = Objects.requireNonNull(bucket);
-        this.key = Objects.requireNonNull(key);
+        this.bucket = bucket;
+        this.key = key;
     }
 
     /**

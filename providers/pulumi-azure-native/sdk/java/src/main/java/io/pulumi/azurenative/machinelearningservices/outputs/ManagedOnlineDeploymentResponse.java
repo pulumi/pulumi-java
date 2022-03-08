@@ -114,14 +114,14 @@ public final class ManagedOnlineDeploymentResponse {
         this.appInsightsEnabled = appInsightsEnabled;
         this.codeConfiguration = codeConfiguration;
         this.description = description;
-        this.endpointComputeType = Objects.requireNonNull(endpointComputeType);
+        this.endpointComputeType = endpointComputeType;
         this.environmentId = environmentId;
         this.environmentVariables = environmentVariables;
         this.instanceType = instanceType;
         this.livenessProbe = livenessProbe;
         this.model = model;
         this.properties = properties;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.readinessProbe = readinessProbe;
         this.requestSettings = requestSettings;
         this.scaleSettings = scaleSettings;

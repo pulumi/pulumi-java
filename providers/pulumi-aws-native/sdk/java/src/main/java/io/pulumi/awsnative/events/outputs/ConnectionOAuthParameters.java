@@ -25,9 +25,9 @@ public final class ConnectionOAuthParameters {
         ConnectionClientParameters clientParameters,
         ConnectionOAuthParametersHttpMethod httpMethod,
         @Nullable ConnectionHttpParameters oAuthHttpParameters) {
-        this.authorizationEndpoint = Objects.requireNonNull(authorizationEndpoint);
-        this.clientParameters = Objects.requireNonNull(clientParameters);
-        this.httpMethod = Objects.requireNonNull(httpMethod);
+        this.authorizationEndpoint = authorizationEndpoint;
+        this.clientParameters = clientParameters;
+        this.httpMethod = httpMethod;
         this.oAuthHttpParameters = oAuthHttpParameters;
     }
 

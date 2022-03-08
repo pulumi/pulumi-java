@@ -24,8 +24,8 @@ public final class FirewallPolicyRuleSecureTagResponse {
     private FirewallPolicyRuleSecureTagResponse(
         String name,
         String state) {
-        this.name = Objects.requireNonNull(name);
-        this.state = Objects.requireNonNull(state);
+        this.name = name;
+        this.state = state;
     }
 
     /**

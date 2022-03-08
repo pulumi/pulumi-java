@@ -26,8 +26,8 @@ public final class EndpointConfigResponse {
     private EndpointConfigResponse(
         Boolean enableHttpPortAccess,
         Map<String,String> httpPorts) {
-        this.enableHttpPortAccess = Objects.requireNonNull(enableHttpPortAccess);
-        this.httpPorts = Objects.requireNonNull(httpPorts);
+        this.enableHttpPortAccess = enableHttpPortAccess;
+        this.httpPorts = httpPorts;
     }
 
     /**

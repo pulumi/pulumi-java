@@ -82,18 +82,18 @@ public final class GetInstanceTemplateNetworkInterface {
         String stackType,
         String subnetwork,
         String subnetworkProject) {
-        this.accessConfigs = Objects.requireNonNull(accessConfigs);
-        this.aliasIpRanges = Objects.requireNonNull(aliasIpRanges);
-        this.ipv6AccessConfigs = Objects.requireNonNull(ipv6AccessConfigs);
-        this.ipv6AccessType = Objects.requireNonNull(ipv6AccessType);
-        this.name = Objects.requireNonNull(name);
-        this.network = Objects.requireNonNull(network);
-        this.networkIp = Objects.requireNonNull(networkIp);
-        this.nicType = Objects.requireNonNull(nicType);
-        this.queueCount = Objects.requireNonNull(queueCount);
-        this.stackType = Objects.requireNonNull(stackType);
-        this.subnetwork = Objects.requireNonNull(subnetwork);
-        this.subnetworkProject = Objects.requireNonNull(subnetworkProject);
+        this.accessConfigs = accessConfigs;
+        this.aliasIpRanges = aliasIpRanges;
+        this.ipv6AccessConfigs = ipv6AccessConfigs;
+        this.ipv6AccessType = ipv6AccessType;
+        this.name = name;
+        this.network = network;
+        this.networkIp = networkIp;
+        this.nicType = nicType;
+        this.queueCount = queueCount;
+        this.stackType = stackType;
+        this.subnetwork = subnetwork;
+        this.subnetworkProject = subnetworkProject;
     }
 
     /**

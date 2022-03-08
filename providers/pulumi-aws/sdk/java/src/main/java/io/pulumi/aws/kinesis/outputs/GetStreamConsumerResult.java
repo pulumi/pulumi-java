@@ -36,12 +36,12 @@ public final class GetStreamConsumerResult {
         String name,
         String status,
         String streamArn) {
-        this.arn = Objects.requireNonNull(arn);
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.status = Objects.requireNonNull(status);
-        this.streamArn = Objects.requireNonNull(streamArn);
+        this.arn = arn;
+        this.creationTimestamp = creationTimestamp;
+        this.id = id;
+        this.name = name;
+        this.status = status;
+        this.streamArn = streamArn;
     }
 
     public String getArn() {

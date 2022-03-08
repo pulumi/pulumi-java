@@ -48,12 +48,12 @@ public final class X509CertificateDetailsResponse {
         String signatureAlgorithm,
         String startTime,
         String subject) {
-        this.expiryTime = Objects.requireNonNull(expiryTime);
-        this.issuer = Objects.requireNonNull(issuer);
-        this.publicKeyType = Objects.requireNonNull(publicKeyType);
-        this.signatureAlgorithm = Objects.requireNonNull(signatureAlgorithm);
-        this.startTime = Objects.requireNonNull(startTime);
-        this.subject = Objects.requireNonNull(subject);
+        this.expiryTime = expiryTime;
+        this.issuer = issuer;
+        this.publicKeyType = publicKeyType;
+        this.signatureAlgorithm = signatureAlgorithm;
+        this.startTime = startTime;
+        this.subject = subject;
     }
 
     /**

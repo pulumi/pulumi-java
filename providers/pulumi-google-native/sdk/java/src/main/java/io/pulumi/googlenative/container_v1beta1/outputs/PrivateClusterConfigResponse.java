@@ -56,13 +56,13 @@ public final class PrivateClusterConfigResponse {
         String peeringName,
         String privateEndpoint,
         String publicEndpoint) {
-        this.enablePrivateEndpoint = Objects.requireNonNull(enablePrivateEndpoint);
-        this.enablePrivateNodes = Objects.requireNonNull(enablePrivateNodes);
-        this.masterGlobalAccessConfig = Objects.requireNonNull(masterGlobalAccessConfig);
-        this.masterIpv4CidrBlock = Objects.requireNonNull(masterIpv4CidrBlock);
-        this.peeringName = Objects.requireNonNull(peeringName);
-        this.privateEndpoint = Objects.requireNonNull(privateEndpoint);
-        this.publicEndpoint = Objects.requireNonNull(publicEndpoint);
+        this.enablePrivateEndpoint = enablePrivateEndpoint;
+        this.enablePrivateNodes = enablePrivateNodes;
+        this.masterGlobalAccessConfig = masterGlobalAccessConfig;
+        this.masterIpv4CidrBlock = masterIpv4CidrBlock;
+        this.peeringName = peeringName;
+        this.privateEndpoint = privateEndpoint;
+        this.publicEndpoint = publicEndpoint;
     }
 
     /**

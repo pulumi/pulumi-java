@@ -24,8 +24,8 @@ public final class ErrorDetailsResponse {
     private ErrorDetailsResponse(
         String code,
         String message) {
-        this.code = Objects.requireNonNull(code);
-        this.message = Objects.requireNonNull(message);
+        this.code = code;
+        this.message = message;
     }
 
     /**

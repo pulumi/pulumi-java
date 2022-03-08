@@ -83,16 +83,16 @@ public final class GetMediaServiceResult {
         @Nullable Map<String,String> tags,
         String type) {
         this.encryption = encryption;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.identity = identity;
-        this.location = Objects.requireNonNull(location);
-        this.mediaServiceId = Objects.requireNonNull(mediaServiceId);
-        this.name = Objects.requireNonNull(name);
+        this.location = location;
+        this.mediaServiceId = mediaServiceId;
+        this.name = name;
         this.storageAccounts = storageAccounts;
         this.storageAuthentication = storageAuthentication;
-        this.systemData = Objects.requireNonNull(systemData);
+        this.systemData = systemData;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

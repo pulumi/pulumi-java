@@ -31,9 +31,9 @@ public final class ContentKeyPolicyRsaTokenKeyResponse {
         String exponent,
         String modulus,
         String odataType) {
-        this.exponent = Objects.requireNonNull(exponent);
-        this.modulus = Objects.requireNonNull(modulus);
-        this.odataType = Objects.requireNonNull(odataType);
+        this.exponent = exponent;
+        this.modulus = modulus;
+        this.odataType = odataType;
     }
 
     /**

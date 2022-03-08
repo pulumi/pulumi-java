@@ -56,7 +56,7 @@ public final class EventHubOutputDataSourceResponse {
         this.serviceBusNamespace = serviceBusNamespace;
         this.sharedAccessPolicyKey = sharedAccessPolicyKey;
         this.sharedAccessPolicyName = sharedAccessPolicyName;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

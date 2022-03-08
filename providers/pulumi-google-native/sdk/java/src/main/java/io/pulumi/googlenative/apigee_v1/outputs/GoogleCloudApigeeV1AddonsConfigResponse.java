@@ -39,10 +39,10 @@ public final class GoogleCloudApigeeV1AddonsConfigResponse {
         GoogleCloudApigeeV1ConnectorsPlatformConfigResponse connectorsPlatformConfig,
         GoogleCloudApigeeV1IntegrationConfigResponse integrationConfig,
         GoogleCloudApigeeV1MonetizationConfigResponse monetizationConfig) {
-        this.advancedApiOpsConfig = Objects.requireNonNull(advancedApiOpsConfig);
-        this.connectorsPlatformConfig = Objects.requireNonNull(connectorsPlatformConfig);
-        this.integrationConfig = Objects.requireNonNull(integrationConfig);
-        this.monetizationConfig = Objects.requireNonNull(monetizationConfig);
+        this.advancedApiOpsConfig = advancedApiOpsConfig;
+        this.connectorsPlatformConfig = connectorsPlatformConfig;
+        this.integrationConfig = integrationConfig;
+        this.monetizationConfig = monetizationConfig;
     }
 
     /**

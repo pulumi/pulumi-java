@@ -25,8 +25,8 @@ public final class FirewallAllowedItemResponse {
     private FirewallAllowedItemResponse(
         String ipProtocol,
         List<String> ports) {
-        this.ipProtocol = Objects.requireNonNull(ipProtocol);
-        this.ports = Objects.requireNonNull(ports);
+        this.ipProtocol = ipProtocol;
+        this.ports = ports;
     }
 
     /**

@@ -21,8 +21,8 @@ public final class ResourcePolicyVmMaintenancePolicyResponse {
     private ResourcePolicyVmMaintenancePolicyResponse(
         ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse concurrencyControlGroup,
         ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse maintenanceWindow) {
-        this.concurrencyControlGroup = Objects.requireNonNull(concurrencyControlGroup);
-        this.maintenanceWindow = Objects.requireNonNull(maintenanceWindow);
+        this.concurrencyControlGroup = concurrencyControlGroup;
+        this.maintenanceWindow = maintenanceWindow;
     }
 
     public ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse getConcurrencyControlGroup() {

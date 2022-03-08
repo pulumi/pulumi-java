@@ -17,7 +17,7 @@ public final class AuthorityResponse {
 
     @OutputCustomType.Constructor({"hint"})
     private AuthorityResponse(HintResponse hint) {
-        this.hint = Objects.requireNonNull(hint);
+        this.hint = hint;
     }
 
     /**

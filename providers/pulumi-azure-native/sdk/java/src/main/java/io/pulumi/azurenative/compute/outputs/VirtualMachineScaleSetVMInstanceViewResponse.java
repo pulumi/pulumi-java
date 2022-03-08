@@ -95,7 +95,7 @@ public final class VirtualMachineScaleSetVMInstanceViewResponse {
         @Nullable List<InstanceViewStatusResponse> statuses,
         @Nullable VirtualMachineAgentInstanceViewResponse vmAgent,
         VirtualMachineHealthStatusResponse vmHealth) {
-        this.assignedHost = Objects.requireNonNull(assignedHost);
+        this.assignedHost = assignedHost;
         this.bootDiagnostics = bootDiagnostics;
         this.disks = disks;
         this.extensions = extensions;
@@ -106,7 +106,7 @@ public final class VirtualMachineScaleSetVMInstanceViewResponse {
         this.rdpThumbPrint = rdpThumbPrint;
         this.statuses = statuses;
         this.vmAgent = vmAgent;
-        this.vmHealth = Objects.requireNonNull(vmHealth);
+        this.vmHealth = vmHealth;
     }
 
     /**

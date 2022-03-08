@@ -100,13 +100,13 @@ public final class GetWebAppDeploymentResult {
         this.deployer = deployer;
         this.details = details;
         this.endTime = endTime;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.kind = kind;
         this.message = message;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.startTime = startTime;
         this.status = status;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

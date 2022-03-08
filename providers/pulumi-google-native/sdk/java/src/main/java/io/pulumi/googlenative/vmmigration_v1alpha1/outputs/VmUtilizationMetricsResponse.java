@@ -109,22 +109,22 @@ public final class VmUtilizationMetricsResponse {
         String networkThroughputAverageKbps,
         String networkThroughputMax,
         String networkThroughputMaxKbps) {
-        this.cpuAverage = Objects.requireNonNull(cpuAverage);
-        this.cpuAveragePercent = Objects.requireNonNull(cpuAveragePercent);
-        this.cpuMax = Objects.requireNonNull(cpuMax);
-        this.cpuMaxPercent = Objects.requireNonNull(cpuMaxPercent);
-        this.diskIoRateAverage = Objects.requireNonNull(diskIoRateAverage);
-        this.diskIoRateAverageKbps = Objects.requireNonNull(diskIoRateAverageKbps);
-        this.diskIoRateMax = Objects.requireNonNull(diskIoRateMax);
-        this.diskIoRateMaxKbps = Objects.requireNonNull(diskIoRateMaxKbps);
-        this.memoryAverage = Objects.requireNonNull(memoryAverage);
-        this.memoryAveragePercent = Objects.requireNonNull(memoryAveragePercent);
-        this.memoryMax = Objects.requireNonNull(memoryMax);
-        this.memoryMaxPercent = Objects.requireNonNull(memoryMaxPercent);
-        this.networkThroughputAverage = Objects.requireNonNull(networkThroughputAverage);
-        this.networkThroughputAverageKbps = Objects.requireNonNull(networkThroughputAverageKbps);
-        this.networkThroughputMax = Objects.requireNonNull(networkThroughputMax);
-        this.networkThroughputMaxKbps = Objects.requireNonNull(networkThroughputMaxKbps);
+        this.cpuAverage = cpuAverage;
+        this.cpuAveragePercent = cpuAveragePercent;
+        this.cpuMax = cpuMax;
+        this.cpuMaxPercent = cpuMaxPercent;
+        this.diskIoRateAverage = diskIoRateAverage;
+        this.diskIoRateAverageKbps = diskIoRateAverageKbps;
+        this.diskIoRateMax = diskIoRateMax;
+        this.diskIoRateMaxKbps = diskIoRateMaxKbps;
+        this.memoryAverage = memoryAverage;
+        this.memoryAveragePercent = memoryAveragePercent;
+        this.memoryMax = memoryMax;
+        this.memoryMaxPercent = memoryMaxPercent;
+        this.networkThroughputAverage = networkThroughputAverage;
+        this.networkThroughputAverageKbps = networkThroughputAverageKbps;
+        this.networkThroughputMax = networkThroughputMax;
+        this.networkThroughputMaxKbps = networkThroughputMaxKbps;
     }
 
     /**

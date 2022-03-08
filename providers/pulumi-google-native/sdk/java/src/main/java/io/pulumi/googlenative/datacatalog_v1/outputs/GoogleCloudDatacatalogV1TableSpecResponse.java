@@ -17,7 +17,7 @@ public final class GoogleCloudDatacatalogV1TableSpecResponse {
 
     @OutputCustomType.Constructor({"groupedEntry"})
     private GoogleCloudDatacatalogV1TableSpecResponse(String groupedEntry) {
-        this.groupedEntry = Objects.requireNonNull(groupedEntry);
+        this.groupedEntry = groupedEntry;
     }
 
     /**

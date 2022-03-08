@@ -25,8 +25,8 @@ public final class RouteSpecHttpRouteActionWeightedTarget {
     private RouteSpecHttpRouteActionWeightedTarget(
         String virtualNode,
         Integer weight) {
-        this.virtualNode = Objects.requireNonNull(virtualNode);
-        this.weight = Objects.requireNonNull(weight);
+        this.virtualNode = virtualNode;
+        this.weight = weight;
     }
 
     /**

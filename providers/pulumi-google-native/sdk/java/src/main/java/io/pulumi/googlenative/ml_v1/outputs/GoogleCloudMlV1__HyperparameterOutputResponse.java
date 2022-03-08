@@ -77,16 +77,16 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse {
         String state,
         String trialId,
         Map<String,String> webAccessUris) {
-        this.allMetrics = Objects.requireNonNull(allMetrics);
-        this.builtInAlgorithmOutput = Objects.requireNonNull(builtInAlgorithmOutput);
-        this.endTime = Objects.requireNonNull(endTime);
-        this.finalMetric = Objects.requireNonNull(finalMetric);
-        this.hyperparameters = Objects.requireNonNull(hyperparameters);
-        this.isTrialStoppedEarly = Objects.requireNonNull(isTrialStoppedEarly);
-        this.startTime = Objects.requireNonNull(startTime);
-        this.state = Objects.requireNonNull(state);
-        this.trialId = Objects.requireNonNull(trialId);
-        this.webAccessUris = Objects.requireNonNull(webAccessUris);
+        this.allMetrics = allMetrics;
+        this.builtInAlgorithmOutput = builtInAlgorithmOutput;
+        this.endTime = endTime;
+        this.finalMetric = finalMetric;
+        this.hyperparameters = hyperparameters;
+        this.isTrialStoppedEarly = isTrialStoppedEarly;
+        this.startTime = startTime;
+        this.state = state;
+        this.trialId = trialId;
+        this.webAccessUris = webAccessUris;
     }
 
     /**

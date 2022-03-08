@@ -29,7 +29,7 @@ public final class DataQualityJobDefinitionMonitoringOutputConfig {
         @Nullable String kmsKeyId,
         List<DataQualityJobDefinitionMonitoringOutput> monitoringOutputs) {
         this.kmsKeyId = kmsKeyId;
-        this.monitoringOutputs = Objects.requireNonNull(monitoringOutputs);
+        this.monitoringOutputs = monitoringOutputs;
     }
 
     /**

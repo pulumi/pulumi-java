@@ -101,20 +101,20 @@ public final class GetJobResult {
         StatusResponse status,
         String timeZone,
         String userUpdateTime) {
-        this.appEngineHttpTarget = Objects.requireNonNull(appEngineHttpTarget);
-        this.attemptDeadline = Objects.requireNonNull(attemptDeadline);
-        this.description = Objects.requireNonNull(description);
-        this.httpTarget = Objects.requireNonNull(httpTarget);
-        this.lastAttemptTime = Objects.requireNonNull(lastAttemptTime);
-        this.name = Objects.requireNonNull(name);
-        this.pubsubTarget = Objects.requireNonNull(pubsubTarget);
-        this.retryConfig = Objects.requireNonNull(retryConfig);
-        this.schedule = Objects.requireNonNull(schedule);
-        this.scheduleTime = Objects.requireNonNull(scheduleTime);
-        this.state = Objects.requireNonNull(state);
-        this.status = Objects.requireNonNull(status);
-        this.timeZone = Objects.requireNonNull(timeZone);
-        this.userUpdateTime = Objects.requireNonNull(userUpdateTime);
+        this.appEngineHttpTarget = appEngineHttpTarget;
+        this.attemptDeadline = attemptDeadline;
+        this.description = description;
+        this.httpTarget = httpTarget;
+        this.lastAttemptTime = lastAttemptTime;
+        this.name = name;
+        this.pubsubTarget = pubsubTarget;
+        this.retryConfig = retryConfig;
+        this.schedule = schedule;
+        this.scheduleTime = scheduleTime;
+        this.state = state;
+        this.status = status;
+        this.timeZone = timeZone;
+        this.userUpdateTime = userUpdateTime;
     }
 
     /**

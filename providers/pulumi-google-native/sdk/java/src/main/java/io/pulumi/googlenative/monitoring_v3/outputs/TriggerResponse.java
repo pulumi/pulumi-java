@@ -25,8 +25,8 @@ public final class TriggerResponse {
     private TriggerResponse(
         Integer count,
         Double percent) {
-        this.count = Objects.requireNonNull(count);
-        this.percent = Objects.requireNonNull(percent);
+        this.count = count;
+        this.percent = percent;
     }
 
     /**

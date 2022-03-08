@@ -17,7 +17,7 @@ public final class ToolExecutionStepResponse {
 
     @OutputCustomType.Constructor({"toolExecution"})
     private ToolExecutionStepResponse(ToolExecutionResponse toolExecution) {
-        this.toolExecution = Objects.requireNonNull(toolExecution);
+        this.toolExecution = toolExecution;
     }
 
     /**

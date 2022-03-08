@@ -36,10 +36,10 @@ public final class AndroidDeviceResponse {
         String androidVersionId,
         String locale,
         String orientation) {
-        this.androidModelId = Objects.requireNonNull(androidModelId);
-        this.androidVersionId = Objects.requireNonNull(androidVersionId);
-        this.locale = Objects.requireNonNull(locale);
-        this.orientation = Objects.requireNonNull(orientation);
+        this.androidModelId = androidModelId;
+        this.androidVersionId = androidVersionId;
+        this.locale = locale;
+        this.orientation = orientation;
     }
 
     /**

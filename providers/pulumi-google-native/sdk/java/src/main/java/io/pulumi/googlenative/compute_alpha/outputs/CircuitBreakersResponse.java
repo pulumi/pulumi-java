@@ -49,12 +49,12 @@ public final class CircuitBreakersResponse {
         Integer maxRequests,
         Integer maxRequestsPerConnection,
         Integer maxRetries) {
-        this.connectTimeout = Objects.requireNonNull(connectTimeout);
-        this.maxConnections = Objects.requireNonNull(maxConnections);
-        this.maxPendingRequests = Objects.requireNonNull(maxPendingRequests);
-        this.maxRequests = Objects.requireNonNull(maxRequests);
-        this.maxRequestsPerConnection = Objects.requireNonNull(maxRequestsPerConnection);
-        this.maxRetries = Objects.requireNonNull(maxRetries);
+        this.connectTimeout = connectTimeout;
+        this.maxConnections = maxConnections;
+        this.maxPendingRequests = maxPendingRequests;
+        this.maxRequests = maxRequests;
+        this.maxRequestsPerConnection = maxRequestsPerConnection;
+        this.maxRetries = maxRetries;
     }
 
     /**

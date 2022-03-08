@@ -90,18 +90,18 @@ public final class DatasetResponse {
         String modifiedTime,
         String name,
         Map<String,String> tags) {
-        this.createdTime = Objects.requireNonNull(createdTime);
-        this.datasetId = Objects.requireNonNull(datasetId);
+        this.createdTime = createdTime;
+        this.datasetId = datasetId;
         this.datasetState = datasetState;
-        this.datasetType = Objects.requireNonNull(datasetType);
-        this.defaultCompute = Objects.requireNonNull(defaultCompute);
-        this.description = Objects.requireNonNull(description);
-        this.etag = Objects.requireNonNull(etag);
-        this.isVisible = Objects.requireNonNull(isVisible);
+        this.datasetType = datasetType;
+        this.defaultCompute = defaultCompute;
+        this.description = description;
+        this.etag = etag;
+        this.isVisible = isVisible;
         this.latest = latest;
-        this.modifiedTime = Objects.requireNonNull(modifiedTime);
-        this.name = Objects.requireNonNull(name);
-        this.tags = Objects.requireNonNull(tags);
+        this.modifiedTime = modifiedTime;
+        this.name = name;
+        this.tags = tags;
     }
 
     /**

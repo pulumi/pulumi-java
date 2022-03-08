@@ -61,9 +61,9 @@ public final class MetricMetricDescriptor {
         String valueType) {
         this.displayName = displayName;
         this.labels = labels;
-        this.metricKind = Objects.requireNonNull(metricKind);
+        this.metricKind = metricKind;
         this.unit = unit;
-        this.valueType = Objects.requireNonNull(valueType);
+        this.valueType = valueType;
     }
 
     /**

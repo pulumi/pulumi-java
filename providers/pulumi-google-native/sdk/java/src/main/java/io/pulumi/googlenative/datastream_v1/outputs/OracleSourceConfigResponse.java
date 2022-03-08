@@ -24,8 +24,8 @@ public final class OracleSourceConfigResponse {
     private OracleSourceConfigResponse(
         OracleRdbmsResponse excludeObjects,
         OracleRdbmsResponse includeObjects) {
-        this.excludeObjects = Objects.requireNonNull(excludeObjects);
-        this.includeObjects = Objects.requireNonNull(includeObjects);
+        this.excludeObjects = excludeObjects;
+        this.includeObjects = includeObjects;
     }
 
     /**

@@ -37,10 +37,10 @@ public final class ContactSettingsResponse {
         String privacy,
         ContactResponse registrantContact,
         ContactResponse technicalContact) {
-        this.adminContact = Objects.requireNonNull(adminContact);
-        this.privacy = Objects.requireNonNull(privacy);
-        this.registrantContact = Objects.requireNonNull(registrantContact);
-        this.technicalContact = Objects.requireNonNull(technicalContact);
+        this.adminContact = adminContact;
+        this.privacy = privacy;
+        this.registrantContact = registrantContact;
+        this.technicalContact = technicalContact;
     }
 
     /**

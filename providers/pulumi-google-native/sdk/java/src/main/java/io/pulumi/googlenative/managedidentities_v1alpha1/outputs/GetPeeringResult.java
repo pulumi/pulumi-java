@@ -61,14 +61,14 @@ public final class GetPeeringResult {
         String state,
         String statusMessage,
         String updateTime) {
-        this.authorizedNetwork = Objects.requireNonNull(authorizedNetwork);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.domainResource = Objects.requireNonNull(domainResource);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.state = Objects.requireNonNull(state);
-        this.statusMessage = Objects.requireNonNull(statusMessage);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.authorizedNetwork = authorizedNetwork;
+        this.createTime = createTime;
+        this.domainResource = domainResource;
+        this.labels = labels;
+        this.name = name;
+        this.state = state;
+        this.statusMessage = statusMessage;
+        this.updateTime = updateTime;
     }
 
     /**

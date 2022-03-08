@@ -24,8 +24,8 @@ public final class FilterFileDetailsResponse {
     private FilterFileDetailsResponse(
         String filterFilePath,
         String filterFileType) {
-        this.filterFilePath = Objects.requireNonNull(filterFilePath);
-        this.filterFileType = Objects.requireNonNull(filterFileType);
+        this.filterFilePath = filterFilePath;
+        this.filterFileType = filterFileType;
     }
 
     /**

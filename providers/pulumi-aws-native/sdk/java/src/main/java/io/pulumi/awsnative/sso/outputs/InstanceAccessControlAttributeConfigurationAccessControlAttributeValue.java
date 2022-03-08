@@ -14,7 +14,7 @@ public final class InstanceAccessControlAttributeConfigurationAccessControlAttri
 
     @OutputCustomType.Constructor({"source"})
     private InstanceAccessControlAttributeConfigurationAccessControlAttributeValue(List<String> source) {
-        this.source = Objects.requireNonNull(source);
+        this.source = source;
     }
 
     public List<String> getSource() {

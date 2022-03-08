@@ -18,7 +18,7 @@ public final class WebAclRuleStatementAndStatementStatementOrStatementStatementN
 
     @OutputCustomType.Constructor({"statements"})
     private WebAclRuleStatementAndStatementStatementOrStatementStatementNotStatement(List<WebAclRuleStatementAndStatementStatementOrStatementStatementNotStatementStatement> statements) {
-        this.statements = Objects.requireNonNull(statements);
+        this.statements = statements;
     }
 
     /**

@@ -17,7 +17,7 @@ public final class GetGlobalUserEnvironmentResult {
 
     @OutputCustomType.Constructor({"environment"})
     private GetGlobalUserEnvironmentResult(EnvironmentDetailsResponse environment) {
-        this.environment = Objects.requireNonNull(environment);
+        this.environment = environment;
     }
 
     /**

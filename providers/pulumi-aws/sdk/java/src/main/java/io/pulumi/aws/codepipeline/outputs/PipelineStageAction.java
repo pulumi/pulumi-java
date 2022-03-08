@@ -89,18 +89,18 @@ public final class PipelineStageAction {
         @Nullable String roleArn,
         @Nullable Integer runOrder,
         String version) {
-        this.category = Objects.requireNonNull(category);
+        this.category = category;
         this.configuration = configuration;
         this.inputArtifacts = inputArtifacts;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.namespace = namespace;
         this.outputArtifacts = outputArtifacts;
-        this.owner = Objects.requireNonNull(owner);
-        this.provider = Objects.requireNonNull(provider);
+        this.owner = owner;
+        this.provider = provider;
         this.region = region;
         this.roleArn = roleArn;
         this.runOrder = runOrder;
-        this.version = Objects.requireNonNull(version);
+        this.version = version;
     }
 
     /**

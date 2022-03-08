@@ -30,9 +30,9 @@ public final class ExecutionStageStateResponse {
         String currentStateTime,
         String executionStageName,
         String executionStageState) {
-        this.currentStateTime = Objects.requireNonNull(currentStateTime);
-        this.executionStageName = Objects.requireNonNull(executionStageName);
-        this.executionStageState = Objects.requireNonNull(executionStageState);
+        this.currentStateTime = currentStateTime;
+        this.executionStageName = executionStageName;
+        this.executionStageState = executionStageState;
     }
 
     /**

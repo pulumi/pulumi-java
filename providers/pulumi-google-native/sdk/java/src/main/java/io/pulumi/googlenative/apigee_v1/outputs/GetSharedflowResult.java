@@ -38,10 +38,10 @@ public final class GetSharedflowResult {
         GoogleCloudApigeeV1EntityMetadataResponse metaData,
         String name,
         List<String> revision) {
-        this.latestRevisionId = Objects.requireNonNull(latestRevisionId);
-        this.metaData = Objects.requireNonNull(metaData);
-        this.name = Objects.requireNonNull(name);
-        this.revision = Objects.requireNonNull(revision);
+        this.latestRevisionId = latestRevisionId;
+        this.metaData = metaData;
+        this.name = name;
+        this.revision = revision;
     }
 
     /**

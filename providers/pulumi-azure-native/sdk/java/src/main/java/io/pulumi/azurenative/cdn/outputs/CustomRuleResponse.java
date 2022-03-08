@@ -47,11 +47,11 @@ public final class CustomRuleResponse {
         List<MatchConditionResponse> matchConditions,
         String name,
         Integer priority) {
-        this.action = Objects.requireNonNull(action);
+        this.action = action;
         this.enabledState = enabledState;
-        this.matchConditions = Objects.requireNonNull(matchConditions);
-        this.name = Objects.requireNonNull(name);
-        this.priority = Objects.requireNonNull(priority);
+        this.matchConditions = matchConditions;
+        this.name = name;
+        this.priority = priority;
     }
 
     /**

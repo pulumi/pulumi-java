@@ -13,7 +13,7 @@ public final class EnvironmentConfigEncryptionConfig {
 
     @OutputCustomType.Constructor({"kmsKeyName"})
     private EnvironmentConfigEncryptionConfig(String kmsKeyName) {
-        this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
+        this.kmsKeyName = kmsKeyName;
     }
 
     public String getKmsKeyName() {

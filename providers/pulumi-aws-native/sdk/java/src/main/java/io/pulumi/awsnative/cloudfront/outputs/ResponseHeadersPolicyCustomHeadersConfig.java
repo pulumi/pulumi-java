@@ -14,7 +14,7 @@ public final class ResponseHeadersPolicyCustomHeadersConfig {
 
     @OutputCustomType.Constructor({"items"})
     private ResponseHeadersPolicyCustomHeadersConfig(List<ResponseHeadersPolicyCustomHeader> items) {
-        this.items = Objects.requireNonNull(items);
+        this.items = items;
     }
 
     public List<ResponseHeadersPolicyCustomHeader> getItems() {

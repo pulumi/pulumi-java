@@ -64,14 +64,14 @@ public final class JobConfigurationTableCopyResponse {
         TableReferenceResponse sourceTable,
         List<TableReferenceResponse> sourceTables,
         String writeDisposition) {
-        this.createDisposition = Objects.requireNonNull(createDisposition);
-        this.destinationEncryptionConfiguration = Objects.requireNonNull(destinationEncryptionConfiguration);
-        this.destinationExpirationTime = Objects.requireNonNull(destinationExpirationTime);
-        this.destinationTable = Objects.requireNonNull(destinationTable);
-        this.operationType = Objects.requireNonNull(operationType);
-        this.sourceTable = Objects.requireNonNull(sourceTable);
-        this.sourceTables = Objects.requireNonNull(sourceTables);
-        this.writeDisposition = Objects.requireNonNull(writeDisposition);
+        this.createDisposition = createDisposition;
+        this.destinationEncryptionConfiguration = destinationEncryptionConfiguration;
+        this.destinationExpirationTime = destinationExpirationTime;
+        this.destinationTable = destinationTable;
+        this.operationType = operationType;
+        this.sourceTable = sourceTable;
+        this.sourceTables = sourceTables;
+        this.writeDisposition = writeDisposition;
     }
 
     /**

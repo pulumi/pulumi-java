@@ -17,7 +17,7 @@ public final class FolderFeedFeedOutputConfigPubsubDestination {
 
     @OutputCustomType.Constructor({"topic"})
     private FolderFeedFeedOutputConfigPubsubDestination(String topic) {
-        this.topic = Objects.requireNonNull(topic);
+        this.topic = topic;
     }
 
     /**

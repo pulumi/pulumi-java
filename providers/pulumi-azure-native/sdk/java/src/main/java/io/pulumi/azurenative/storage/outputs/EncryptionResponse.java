@@ -49,7 +49,7 @@ public final class EncryptionResponse {
         @Nullable Boolean requireInfrastructureEncryption,
         @Nullable EncryptionServicesResponse services) {
         this.encryptionIdentity = encryptionIdentity;
-        this.keySource = Objects.requireNonNull(keySource);
+        this.keySource = keySource;
         this.keyVaultProperties = keyVaultProperties;
         this.requireInfrastructureEncryption = requireInfrastructureEncryption;
         this.services = services;

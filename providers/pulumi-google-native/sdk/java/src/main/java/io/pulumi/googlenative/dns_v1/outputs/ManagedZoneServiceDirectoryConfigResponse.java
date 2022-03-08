@@ -21,8 +21,8 @@ public final class ManagedZoneServiceDirectoryConfigResponse {
     private ManagedZoneServiceDirectoryConfigResponse(
         String kind,
         ManagedZoneServiceDirectoryConfigNamespaceResponse namespace) {
-        this.kind = Objects.requireNonNull(kind);
-        this.namespace = Objects.requireNonNull(namespace);
+        this.kind = kind;
+        this.namespace = namespace;
     }
 
     public String getKind() {

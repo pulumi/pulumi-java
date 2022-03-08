@@ -17,7 +17,7 @@ public final class FirewallPolicyFirewallPolicyStatefulEngineOptions {
 
     @OutputCustomType.Constructor({"ruleOrder"})
     private FirewallPolicyFirewallPolicyStatefulEngineOptions(String ruleOrder) {
-        this.ruleOrder = Objects.requireNonNull(ruleOrder);
+        this.ruleOrder = ruleOrder;
     }
 
     /**

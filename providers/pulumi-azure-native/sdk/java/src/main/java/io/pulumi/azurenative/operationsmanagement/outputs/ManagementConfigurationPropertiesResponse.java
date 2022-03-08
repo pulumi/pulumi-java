@@ -48,10 +48,10 @@ public final class ManagementConfigurationPropertiesResponse {
         String provisioningState,
         Object template) {
         this.applicationId = applicationId;
-        this.parameters = Objects.requireNonNull(parameters);
-        this.parentResourceType = Objects.requireNonNull(parentResourceType);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.template = Objects.requireNonNull(template);
+        this.parameters = parameters;
+        this.parentResourceType = parentResourceType;
+        this.provisioningState = provisioningState;
+        this.template = template;
     }
 
     /**

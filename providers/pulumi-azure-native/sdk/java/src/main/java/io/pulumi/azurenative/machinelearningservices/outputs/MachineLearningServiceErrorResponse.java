@@ -17,7 +17,7 @@ public final class MachineLearningServiceErrorResponse {
 
     @OutputCustomType.Constructor({"error"})
     private MachineLearningServiceErrorResponse(ErrorResponseResponse error) {
-        this.error = Objects.requireNonNull(error);
+        this.error = error;
     }
 
     /**

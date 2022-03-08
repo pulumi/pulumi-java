@@ -56,13 +56,13 @@ public final class GetOrganizationRoleResult {
         String name,
         String stage,
         String title) {
-        this.deleted = Objects.requireNonNull(deleted);
-        this.description = Objects.requireNonNull(description);
-        this.etag = Objects.requireNonNull(etag);
-        this.includedPermissions = Objects.requireNonNull(includedPermissions);
-        this.name = Objects.requireNonNull(name);
-        this.stage = Objects.requireNonNull(stage);
-        this.title = Objects.requireNonNull(title);
+        this.deleted = deleted;
+        this.description = description;
+        this.etag = etag;
+        this.includedPermissions = includedPermissions;
+        this.name = name;
+        this.stage = stage;
+        this.title = title;
     }
 
     /**

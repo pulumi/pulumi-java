@@ -18,7 +18,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
 
     @OutputCustomType.Constructor({"key"})
     private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped(String key) {
-        this.key = Objects.requireNonNull(key);
+        this.key = key;
     }
 
     /**

@@ -31,7 +31,7 @@ public final class DatasetVariable {
         this.doubleValue = doubleValue;
         this.outputFileUriValue = outputFileUriValue;
         this.stringValue = stringValue;
-        this.variableName = Objects.requireNonNull(variableName);
+        this.variableName = variableName;
     }
 
     public Optional<DatasetContentVersionValue> getDatasetContentVersionValue() {

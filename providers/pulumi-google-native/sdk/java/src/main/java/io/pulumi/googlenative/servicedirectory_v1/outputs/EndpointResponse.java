@@ -44,11 +44,11 @@ public final class EndpointResponse {
         String name,
         String network,
         Integer port) {
-        this.address = Objects.requireNonNull(address);
-        this.annotations = Objects.requireNonNull(annotations);
-        this.name = Objects.requireNonNull(name);
-        this.network = Objects.requireNonNull(network);
-        this.port = Objects.requireNonNull(port);
+        this.address = address;
+        this.annotations = annotations;
+        this.name = name;
+        this.network = network;
+        this.port = port;
     }
 
     /**

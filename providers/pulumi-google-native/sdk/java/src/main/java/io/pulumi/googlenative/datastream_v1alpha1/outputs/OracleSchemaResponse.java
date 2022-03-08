@@ -26,8 +26,8 @@ public final class OracleSchemaResponse {
     private OracleSchemaResponse(
         List<OracleTableResponse> oracleTables,
         String schemaName) {
-        this.oracleTables = Objects.requireNonNull(oracleTables);
-        this.schemaName = Objects.requireNonNull(schemaName);
+        this.oracleTables = oracleTables;
+        this.schemaName = schemaName;
     }
 
     /**

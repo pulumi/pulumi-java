@@ -25,8 +25,8 @@ public final class PreferredSchedulingTerm {
     private PreferredSchedulingTerm(
         NodeSelectorTerm preference,
         Integer weight) {
-        this.preference = Objects.requireNonNull(preference);
-        this.weight = Objects.requireNonNull(weight);
+        this.preference = preference;
+        this.weight = weight;
     }
 
     /**

@@ -26,8 +26,8 @@ public final class DataIntegrityValidationResultResponse {
     private DataIntegrityValidationResultResponse(
         Map<String,String> failedObjects,
         ValidationErrorResponse validationErrors) {
-        this.failedObjects = Objects.requireNonNull(failedObjects);
-        this.validationErrors = Objects.requireNonNull(validationErrors);
+        this.failedObjects = failedObjects;
+        this.validationErrors = validationErrors;
     }
 
     /**

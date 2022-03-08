@@ -44,11 +44,11 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse {
         Boolean denyAll,
         Boolean enforce,
         GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesResponse values) {
-        this.allowAll = Objects.requireNonNull(allowAll);
-        this.condition = Objects.requireNonNull(condition);
-        this.denyAll = Objects.requireNonNull(denyAll);
-        this.enforce = Objects.requireNonNull(enforce);
-        this.values = Objects.requireNonNull(values);
+        this.allowAll = allowAll;
+        this.condition = condition;
+        this.denyAll = denyAll;
+        this.enforce = enforce;
+        this.values = values;
     }
 
     /**

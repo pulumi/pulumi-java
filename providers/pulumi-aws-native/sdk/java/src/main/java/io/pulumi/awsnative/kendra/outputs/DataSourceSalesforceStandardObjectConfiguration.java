@@ -25,10 +25,10 @@ public final class DataSourceSalesforceStandardObjectConfiguration {
         @Nullable String documentTitleFieldName,
         @Nullable List<DataSourceToIndexFieldMapping> fieldMappings,
         DataSourceSalesforceStandardObjectName name) {
-        this.documentDataFieldName = Objects.requireNonNull(documentDataFieldName);
+        this.documentDataFieldName = documentDataFieldName;
         this.documentTitleFieldName = documentTitleFieldName;
         this.fieldMappings = fieldMappings;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     public String getDocumentDataFieldName() {

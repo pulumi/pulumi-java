@@ -25,8 +25,8 @@ public final class RestoreInfoResponse {
     private RestoreInfoResponse(
         BackupInfoResponse backupInfo,
         String sourceType) {
-        this.backupInfo = Objects.requireNonNull(backupInfo);
-        this.sourceType = Objects.requireNonNull(sourceType);
+        this.backupInfo = backupInfo;
+        this.sourceType = sourceType;
     }
 
     /**

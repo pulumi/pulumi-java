@@ -30,9 +30,9 @@ public final class CreatedByResponse {
         String applicationId,
         String oid,
         String puid) {
-        this.applicationId = Objects.requireNonNull(applicationId);
-        this.oid = Objects.requireNonNull(oid);
-        this.puid = Objects.requireNonNull(puid);
+        this.applicationId = applicationId;
+        this.oid = oid;
+        this.puid = puid;
     }
 
     /**

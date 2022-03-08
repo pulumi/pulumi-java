@@ -36,10 +36,10 @@ public final class LocationPreferenceResponse {
         String kind,
         String secondaryZone,
         String zone) {
-        this.followGaeApplication = Objects.requireNonNull(followGaeApplication);
-        this.kind = Objects.requireNonNull(kind);
-        this.secondaryZone = Objects.requireNonNull(secondaryZone);
-        this.zone = Objects.requireNonNull(zone);
+        this.followGaeApplication = followGaeApplication;
+        this.kind = kind;
+        this.secondaryZone = secondaryZone;
+        this.zone = zone;
     }
 
     /**

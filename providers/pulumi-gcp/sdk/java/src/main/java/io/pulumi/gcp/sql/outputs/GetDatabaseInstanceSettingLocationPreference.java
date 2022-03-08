@@ -16,8 +16,8 @@ public final class GetDatabaseInstanceSettingLocationPreference {
     private GetDatabaseInstanceSettingLocationPreference(
         String followGaeApplication,
         String zone) {
-        this.followGaeApplication = Objects.requireNonNull(followGaeApplication);
-        this.zone = Objects.requireNonNull(zone);
+        this.followGaeApplication = followGaeApplication;
+        this.zone = zone;
     }
 
     public String getFollowGaeApplication() {

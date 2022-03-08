@@ -82,14 +82,14 @@ public final class GetPolicySetDefinitionResult {
         String type) {
         this.description = description;
         this.displayName = displayName;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.metadata = metadata;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.parameters = parameters;
         this.policyDefinitionGroups = policyDefinitionGroups;
-        this.policyDefinitions = Objects.requireNonNull(policyDefinitions);
+        this.policyDefinitions = policyDefinitions;
         this.policyType = policyType;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

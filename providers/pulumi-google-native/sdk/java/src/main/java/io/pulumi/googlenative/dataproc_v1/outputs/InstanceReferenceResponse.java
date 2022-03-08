@@ -36,10 +36,10 @@ public final class InstanceReferenceResponse {
         String instanceName,
         String publicEciesKey,
         String publicKey) {
-        this.instanceId = Objects.requireNonNull(instanceId);
-        this.instanceName = Objects.requireNonNull(instanceName);
-        this.publicEciesKey = Objects.requireNonNull(publicEciesKey);
-        this.publicKey = Objects.requireNonNull(publicKey);
+        this.instanceId = instanceId;
+        this.instanceName = instanceName;
+        this.publicEciesKey = publicEciesKey;
+        this.publicKey = publicKey;
     }
 
     /**

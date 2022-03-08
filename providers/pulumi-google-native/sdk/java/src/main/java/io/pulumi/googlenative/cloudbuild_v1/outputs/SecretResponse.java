@@ -25,8 +25,8 @@ public final class SecretResponse {
     private SecretResponse(
         String kmsKeyName,
         Map<String,String> secretEnv) {
-        this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
-        this.secretEnv = Objects.requireNonNull(secretEnv);
+        this.kmsKeyName = kmsKeyName;
+        this.secretEnv = secretEnv;
     }
 
     /**

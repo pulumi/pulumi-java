@@ -46,11 +46,11 @@ public final class GetPredictionTrainingResultsResult {
         Double primaryProfileInstanceCount,
         String scoreName,
         String tenantId) {
-        this.canonicalProfiles = Objects.requireNonNull(canonicalProfiles);
-        this.predictionDistribution = Objects.requireNonNull(predictionDistribution);
-        this.primaryProfileInstanceCount = Objects.requireNonNull(primaryProfileInstanceCount);
-        this.scoreName = Objects.requireNonNull(scoreName);
-        this.tenantId = Objects.requireNonNull(tenantId);
+        this.canonicalProfiles = canonicalProfiles;
+        this.predictionDistribution = predictionDistribution;
+        this.primaryProfileInstanceCount = primaryProfileInstanceCount;
+        this.scoreName = scoreName;
+        this.tenantId = tenantId;
     }
 
     /**

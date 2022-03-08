@@ -70,15 +70,15 @@ public final class GetVirtualHubIpConfigurationResult {
         @Nullable PublicIPAddressResponse publicIPAddress,
         @Nullable SubnetResponse subnet,
         String type) {
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.id = id;
         this.name = name;
         this.privateIPAddress = privateIPAddress;
         this.privateIPAllocationMethod = privateIPAllocationMethod;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.publicIPAddress = publicIPAddress;
         this.subnet = subnet;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

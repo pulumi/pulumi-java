@@ -44,9 +44,9 @@ public final class ConfigMapNodeConfigSource {
         String namespace,
         @Nullable String resourceVersion,
         @Nullable String uid) {
-        this.kubeletConfigKey = Objects.requireNonNull(kubeletConfigKey);
-        this.name = Objects.requireNonNull(name);
-        this.namespace = Objects.requireNonNull(namespace);
+        this.kubeletConfigKey = kubeletConfigKey;
+        this.name = name;
+        this.namespace = namespace;
         this.resourceVersion = resourceVersion;
         this.uid = uid;
     }

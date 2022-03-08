@@ -25,7 +25,7 @@ public final class RecipeAction {
     private RecipeAction(
         String operation,
         @Nullable Either<RecipeParameters,RecipeParameterMap> parameters) {
-        this.operation = Objects.requireNonNull(operation);
+        this.operation = operation;
         this.parameters = parameters;
     }
 

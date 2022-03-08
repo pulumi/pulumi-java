@@ -45,11 +45,11 @@ public final class SmsChannelPropertiesResponse {
         Boolean isEnabled,
         @Nullable Boolean isValidated,
         String phone) {
-        this.accountSID = Objects.requireNonNull(accountSID);
+        this.accountSID = accountSID;
         this.authToken = authToken;
-        this.isEnabled = Objects.requireNonNull(isEnabled);
+        this.isEnabled = isEnabled;
         this.isValidated = isValidated;
-        this.phone = Objects.requireNonNull(phone);
+        this.phone = phone;
     }
 
     /**

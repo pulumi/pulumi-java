@@ -17,7 +17,7 @@ public final class ExpirationPolicyResponse {
 
     @OutputCustomType.Constructor({"ttl"})
     private ExpirationPolicyResponse(String ttl) {
-        this.ttl = Objects.requireNonNull(ttl);
+        this.ttl = ttl;
     }
 
     /**

@@ -24,8 +24,8 @@ public final class GoogleCloudContactcenterinsightsV1SentimentDataResponse {
     private GoogleCloudContactcenterinsightsV1SentimentDataResponse(
         Double magnitude,
         Double score) {
-        this.magnitude = Objects.requireNonNull(magnitude);
-        this.score = Objects.requireNonNull(score);
+        this.magnitude = magnitude;
+        this.score = score;
     }
 
     /**

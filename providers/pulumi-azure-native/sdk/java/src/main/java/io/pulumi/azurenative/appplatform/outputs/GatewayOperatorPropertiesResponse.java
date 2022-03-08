@@ -26,8 +26,8 @@ public final class GatewayOperatorPropertiesResponse {
     private GatewayOperatorPropertiesResponse(
         List<GatewayInstanceResponse> instances,
         GatewayOperatorResourceRequestsResponse resourceRequests) {
-        this.instances = Objects.requireNonNull(instances);
-        this.resourceRequests = Objects.requireNonNull(resourceRequests);
+        this.instances = instances;
+        this.resourceRequests = resourceRequests;
     }
 
     /**

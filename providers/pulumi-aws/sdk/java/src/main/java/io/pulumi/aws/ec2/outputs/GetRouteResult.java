@@ -44,20 +44,20 @@ public final class GetRouteResult {
         String routeTableId,
         String transitGatewayId,
         String vpcPeeringConnectionId) {
-        this.carrierGatewayId = Objects.requireNonNull(carrierGatewayId);
-        this.destinationCidrBlock = Objects.requireNonNull(destinationCidrBlock);
-        this.destinationIpv6CidrBlock = Objects.requireNonNull(destinationIpv6CidrBlock);
-        this.destinationPrefixListId = Objects.requireNonNull(destinationPrefixListId);
-        this.egressOnlyGatewayId = Objects.requireNonNull(egressOnlyGatewayId);
-        this.gatewayId = Objects.requireNonNull(gatewayId);
-        this.id = Objects.requireNonNull(id);
-        this.instanceId = Objects.requireNonNull(instanceId);
-        this.localGatewayId = Objects.requireNonNull(localGatewayId);
-        this.natGatewayId = Objects.requireNonNull(natGatewayId);
-        this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId);
-        this.routeTableId = Objects.requireNonNull(routeTableId);
-        this.transitGatewayId = Objects.requireNonNull(transitGatewayId);
-        this.vpcPeeringConnectionId = Objects.requireNonNull(vpcPeeringConnectionId);
+        this.carrierGatewayId = carrierGatewayId;
+        this.destinationCidrBlock = destinationCidrBlock;
+        this.destinationIpv6CidrBlock = destinationIpv6CidrBlock;
+        this.destinationPrefixListId = destinationPrefixListId;
+        this.egressOnlyGatewayId = egressOnlyGatewayId;
+        this.gatewayId = gatewayId;
+        this.id = id;
+        this.instanceId = instanceId;
+        this.localGatewayId = localGatewayId;
+        this.natGatewayId = natGatewayId;
+        this.networkInterfaceId = networkInterfaceId;
+        this.routeTableId = routeTableId;
+        this.transitGatewayId = transitGatewayId;
+        this.vpcPeeringConnectionId = vpcPeeringConnectionId;
     }
 
     public String getCarrierGatewayId() {

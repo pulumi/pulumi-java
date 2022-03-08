@@ -175,31 +175,31 @@ public final class GetCertificateResult {
         String type,
         Boolean valid) {
         this.canonicalName = canonicalName;
-        this.cerBlob = Objects.requireNonNull(cerBlob);
+        this.cerBlob = cerBlob;
         this.domainValidationMethod = domainValidationMethod;
-        this.expirationDate = Objects.requireNonNull(expirationDate);
-        this.friendlyName = Objects.requireNonNull(friendlyName);
+        this.expirationDate = expirationDate;
+        this.friendlyName = friendlyName;
         this.hostNames = hostNames;
-        this.hostingEnvironmentProfile = Objects.requireNonNull(hostingEnvironmentProfile);
-        this.id = Objects.requireNonNull(id);
-        this.issueDate = Objects.requireNonNull(issueDate);
-        this.issuer = Objects.requireNonNull(issuer);
+        this.hostingEnvironmentProfile = hostingEnvironmentProfile;
+        this.id = id;
+        this.issueDate = issueDate;
+        this.issuer = issuer;
         this.keyVaultId = keyVaultId;
         this.keyVaultSecretName = keyVaultSecretName;
-        this.keyVaultSecretStatus = Objects.requireNonNull(keyVaultSecretStatus);
+        this.keyVaultSecretStatus = keyVaultSecretStatus;
         this.kind = kind;
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
+        this.location = location;
+        this.name = name;
         this.pfxBlob = pfxBlob;
-        this.publicKeyHash = Objects.requireNonNull(publicKeyHash);
-        this.selfLink = Objects.requireNonNull(selfLink);
+        this.publicKeyHash = publicKeyHash;
+        this.selfLink = selfLink;
         this.serverFarmId = serverFarmId;
-        this.siteName = Objects.requireNonNull(siteName);
-        this.subjectName = Objects.requireNonNull(subjectName);
+        this.siteName = siteName;
+        this.subjectName = subjectName;
         this.tags = tags;
-        this.thumbprint = Objects.requireNonNull(thumbprint);
-        this.type = Objects.requireNonNull(type);
-        this.valid = Objects.requireNonNull(valid);
+        this.thumbprint = thumbprint;
+        this.type = type;
+        this.valid = valid;
     }
 
     /**

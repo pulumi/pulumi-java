@@ -28,7 +28,7 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActions {
         @Nullable List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomAction> customActions,
         List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRule> statelessRules) {
         this.customActions = customActions;
-        this.statelessRules = Objects.requireNonNull(statelessRules);
+        this.statelessRules = statelessRules;
     }
 
     /**
