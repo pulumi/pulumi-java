@@ -3,11 +3,13 @@ package io.pulumi.core;
 import io.pulumi.core.internal.Internal;
 import io.pulumi.deployment.MocksTest;
 import io.pulumi.deployment.internal.TestOptions;
-import java.util.List;
-import java.util.concurrent.CompletableFuture;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.atomic.AtomicInteger;
+
 import static io.pulumi.deployment.internal.DeploymentTests.DeploymentMockBuilder;
 import static io.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -17,9 +19,9 @@ public class OutputsPreviewTest {
     @BeforeAll
     public static void mockSetup() {
         DeploymentMockBuilder.builder()
-            .setMocks(new MocksTest.MyMocks())
-            .setOptions(new TestOptions(true))
-            .setMockGlobalInstance();
+                .setMocks(new MocksTest.MyMocks())
+                .setOptions(new TestOptions(true))
+                .setMockGlobalInstance();
     }
 
     @AfterAll
@@ -65,47 +67,47 @@ public class OutputsPreviewTest {
 
     @Test
     void testApplyValueTerminatesOnUnknown() {
-        final var hasRun = List.of(false);
+        var runCounter = new AtomicInteger(0);
         Output<Integer> o1 = InputOutputTests.unknown();
         var o2 = o1.applyValue(a ->
-                               {
-                                   hasRun.set(0, true);
-                                   return (a + 1);
-                               });
+        {
+            runCounter.incrementAndGet();
+            return (a + 1);
+        });
         var data = InputOutputTests.waitFor(o2);
         assertThat(data.isKnown()).isFalse();
         assertThat(data.getValueNullable()).isNull();
-        assertThat(hasRun.get(0)).isFalse();
+        assertThat(runCounter.get()).isEqualTo(0);
     }
 
     @Test
     void testApplyFutureTerminatesOnUnknown() {
         var o1 = InputOutputTests.unknown();
-        final var hasRun = List.of(false);
+        var runCounter = new AtomicInteger(0);
         var o2 = o1.applyFuture(a ->
-                                {
-                                    hasRun.set(0, true);
-                                    return CompletableFuture.completedFuture("inner");
-                                });
+        {
+            runCounter.incrementAndGet();
+            return CompletableFuture.completedFuture("inner");
+        });
         var data = InputOutputTests.waitFor(o2);
         assertThat(data.isKnown()).isFalse();
         assertThat(data.getValueNullable()).isNull();
-        assertThat(hasRun.get(0)).isFalse();
+        assertThat(runCounter.get()).isEqualTo(0);
     }
 
     @Test
     void testApplyTerminatesOnUnkonwn() {
         var o1 = InputOutputTests.unknown();
-        final var hasRun = List.of(false);
+        var runCounter = new AtomicInteger(0);
         var o2 = o1.apply(a ->
-                          {
-                              hasRun.set(0, true);
-                              return Output.of("inner");
-                          });
+        {
+            runCounter.incrementAndGet();
+            return Output.of("inner");
+        });
         var data = InputOutputTests.waitFor(o2);
         assertThat(data.isKnown()).isFalse();
         assertThat(data.getValueNullable()).isNull();
-        assertThat(hasRun.get(0)).isFalse();
+        assertThat(runCounter.get()).isEqualTo(0);
     }
 
     @Test
