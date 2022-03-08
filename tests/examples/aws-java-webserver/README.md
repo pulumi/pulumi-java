@@ -1,5 +1,3 @@
-[![Deploy](https://get.pulumi.com/new/button.svg)](https://app.pulumi.com/new?template=https://github.com/pulumi/examples/blob/master/aws-ts-webserver/README.md)
-
 # Web Server Using Amazon EC2
 
 This example deploys a simple AWS EC2 virtual machine running a Python web server.
