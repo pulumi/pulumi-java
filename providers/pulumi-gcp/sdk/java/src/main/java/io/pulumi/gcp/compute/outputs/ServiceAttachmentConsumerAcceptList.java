@@ -26,8 +26,8 @@ public final class ServiceAttachmentConsumerAcceptList {
     private ServiceAttachmentConsumerAcceptList(
         Integer connectionLimit,
         String projectIdOrNum) {
-        this.connectionLimit = Objects.requireNonNull(connectionLimit);
-        this.projectIdOrNum = Objects.requireNonNull(projectIdOrNum);
+        this.connectionLimit = connectionLimit;
+        this.projectIdOrNum = projectIdOrNum;
     }
 
     /**

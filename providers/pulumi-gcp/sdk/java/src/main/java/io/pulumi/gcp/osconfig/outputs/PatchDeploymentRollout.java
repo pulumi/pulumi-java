@@ -31,8 +31,8 @@ public final class PatchDeploymentRollout {
     private PatchDeploymentRollout(
         PatchDeploymentRolloutDisruptionBudget disruptionBudget,
         String mode) {
-        this.disruptionBudget = Objects.requireNonNull(disruptionBudget);
-        this.mode = Objects.requireNonNull(mode);
+        this.disruptionBudget = disruptionBudget;
+        this.mode = mode;
     }
 
     /**

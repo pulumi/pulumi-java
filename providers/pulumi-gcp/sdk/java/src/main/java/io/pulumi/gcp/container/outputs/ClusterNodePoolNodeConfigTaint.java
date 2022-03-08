@@ -30,9 +30,9 @@ public final class ClusterNodePoolNodeConfigTaint {
         String effect,
         String key,
         String value) {
-        this.effect = Objects.requireNonNull(effect);
-        this.key = Objects.requireNonNull(key);
-        this.value = Objects.requireNonNull(value);
+        this.effect = effect;
+        this.key = key;
+        this.value = value;
     }
 
     /**

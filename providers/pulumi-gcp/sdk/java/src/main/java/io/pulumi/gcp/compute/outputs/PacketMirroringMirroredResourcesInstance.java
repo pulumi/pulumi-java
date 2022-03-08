@@ -17,7 +17,7 @@ public final class PacketMirroringMirroredResourcesInstance {
 
     @OutputCustomType.Constructor({"url"})
     private PacketMirroringMirroredResourcesInstance(String url) {
-        this.url = Objects.requireNonNull(url);
+        this.url = url;
     }
 
     /**

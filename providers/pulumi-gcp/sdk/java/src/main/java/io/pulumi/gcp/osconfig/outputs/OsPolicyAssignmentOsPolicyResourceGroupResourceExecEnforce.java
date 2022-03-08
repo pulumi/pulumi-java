@@ -48,7 +48,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforce {
         @Nullable String script) {
         this.args = args;
         this.file = file;
-        this.interpreter = Objects.requireNonNull(interpreter);
+        this.interpreter = interpreter;
         this.outputFilePath = outputFilePath;
         this.script = script;
     }

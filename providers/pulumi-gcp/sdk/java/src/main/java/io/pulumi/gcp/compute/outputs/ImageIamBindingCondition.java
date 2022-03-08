@@ -33,8 +33,8 @@ public final class ImageIamBindingCondition {
         String expression,
         String title) {
         this.description = description;
-        this.expression = Objects.requireNonNull(expression);
-        this.title = Objects.requireNonNull(title);
+        this.expression = expression;
+        this.title = title;
     }
 
     /**

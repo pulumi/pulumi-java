@@ -84,7 +84,7 @@ public final class URLMapPathMatcherRouteRule {
         @Nullable URLMapPathMatcherRouteRuleUrlRedirect urlRedirect) {
         this.headerAction = headerAction;
         this.matchRules = matchRules;
-        this.priority = Objects.requireNonNull(priority);
+        this.priority = priority;
         this.routeAction = routeAction;
         this.service = service;
         this.urlRedirect = urlRedirect;

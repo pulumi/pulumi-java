@@ -25,8 +25,8 @@ public final class GetImageVersionsImageVersion {
     private GetImageVersionsImageVersion(
         String imageVersionId,
         List<String> supportedPythonVersions) {
-        this.imageVersionId = Objects.requireNonNull(imageVersionId);
-        this.supportedPythonVersions = Objects.requireNonNull(supportedPythonVersions);
+        this.imageVersionId = imageVersionId;
+        this.supportedPythonVersions = supportedPythonVersions;
     }
 
     /**

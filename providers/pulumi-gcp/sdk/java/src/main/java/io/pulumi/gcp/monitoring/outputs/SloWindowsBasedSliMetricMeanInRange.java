@@ -37,8 +37,8 @@ public final class SloWindowsBasedSliMetricMeanInRange {
     private SloWindowsBasedSliMetricMeanInRange(
         SloWindowsBasedSliMetricMeanInRangeRange range,
         String timeSeries) {
-        this.range = Objects.requireNonNull(range);
-        this.timeSeries = Objects.requireNonNull(timeSeries);
+        this.range = range;
+        this.timeSeries = timeSeries;
     }
 
     /**

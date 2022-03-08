@@ -34,7 +34,7 @@ public final class TriggerGithubPullRequest {
         String branch,
         @Nullable String commentControl,
         @Nullable Boolean invertRegex) {
-        this.branch = Objects.requireNonNull(branch);
+        this.branch = branch;
         this.commentControl = commentControl;
         this.invertRegex = invertRegex;
     }

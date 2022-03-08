@@ -18,7 +18,7 @@ public final class PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInf
 
     @OutputCustomType.Constructor({"name"})
     private PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoType(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

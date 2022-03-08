@@ -31,7 +31,7 @@ public final class InstanceTemplateServiceAccount {
         @Nullable String email,
         List<String> scopes) {
         this.email = email;
-        this.scopes = Objects.requireNonNull(scopes);
+        this.scopes = scopes;
     }
 
     /**

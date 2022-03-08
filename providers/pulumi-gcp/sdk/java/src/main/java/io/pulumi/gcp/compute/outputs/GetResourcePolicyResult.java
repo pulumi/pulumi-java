@@ -48,15 +48,15 @@ public final class GetResourcePolicyResult {
         @Nullable String region,
         String selfLink,
         List<GetResourcePolicySnapshotSchedulePolicy> snapshotSchedulePolicies) {
-        this.description = Objects.requireNonNull(description);
-        this.groupPlacementPolicies = Objects.requireNonNull(groupPlacementPolicies);
-        this.id = Objects.requireNonNull(id);
-        this.instanceSchedulePolicies = Objects.requireNonNull(instanceSchedulePolicies);
-        this.name = Objects.requireNonNull(name);
+        this.description = description;
+        this.groupPlacementPolicies = groupPlacementPolicies;
+        this.id = id;
+        this.instanceSchedulePolicies = instanceSchedulePolicies;
+        this.name = name;
         this.project = project;
         this.region = region;
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.snapshotSchedulePolicies = Objects.requireNonNull(snapshotSchedulePolicies);
+        this.selfLink = selfLink;
+        this.snapshotSchedulePolicies = snapshotSchedulePolicies;
     }
 
     /**

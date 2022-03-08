@@ -27,7 +27,7 @@ public final class CertificateConfigPublicKey {
     private CertificateConfigPublicKey(
         String format,
         @Nullable String key) {
-        this.format = Objects.requireNonNull(format);
+        this.format = format;
         this.key = key;
     }
 

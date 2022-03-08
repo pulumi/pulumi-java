@@ -26,9 +26,9 @@ public final class GetConfigResult {
         String id,
         String name,
         @Nullable String project) {
-        this.description = Objects.requireNonNull(description);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.description = description;
+        this.id = id;
+        this.name = name;
         this.project = project;
     }
 

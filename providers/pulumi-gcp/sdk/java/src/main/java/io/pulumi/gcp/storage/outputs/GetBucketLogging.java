@@ -16,8 +16,8 @@ public final class GetBucketLogging {
     private GetBucketLogging(
         String logBucket,
         String logObjectPrefix) {
-        this.logBucket = Objects.requireNonNull(logBucket);
-        this.logObjectPrefix = Objects.requireNonNull(logObjectPrefix);
+        this.logBucket = logBucket;
+        this.logObjectPrefix = logObjectPrefix;
     }
 
     public String getLogBucket() {

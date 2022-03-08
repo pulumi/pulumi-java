@@ -18,7 +18,7 @@ public final class WorkflowTemplateParameterValidationRegex {
 
     @OutputCustomType.Constructor({"regexes"})
     private WorkflowTemplateParameterValidationRegex(List<String> regexes) {
-        this.regexes = Objects.requireNonNull(regexes);
+        this.regexes = regexes;
     }
 
     /**

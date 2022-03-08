@@ -18,7 +18,7 @@ public final class WorkflowTemplateJobPrestoJobQueryList {
 
     @OutputCustomType.Constructor({"queries"})
     private WorkflowTemplateJobPrestoJobQueryList(List<String> queries) {
-        this.queries = Objects.requireNonNull(queries);
+        this.queries = queries;
     }
 
     /**

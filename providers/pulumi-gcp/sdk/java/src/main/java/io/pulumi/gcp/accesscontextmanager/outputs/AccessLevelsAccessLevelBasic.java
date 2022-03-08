@@ -36,7 +36,7 @@ public final class AccessLevelsAccessLevelBasic {
         @Nullable String combiningFunction,
         List<AccessLevelsAccessLevelBasicCondition> conditions) {
         this.combiningFunction = combiningFunction;
-        this.conditions = Objects.requireNonNull(conditions);
+        this.conditions = conditions;
     }
 
     /**

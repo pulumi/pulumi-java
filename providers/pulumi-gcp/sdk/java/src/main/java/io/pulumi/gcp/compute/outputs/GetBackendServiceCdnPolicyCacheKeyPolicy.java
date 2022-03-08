@@ -24,11 +24,11 @@ public final class GetBackendServiceCdnPolicyCacheKeyPolicy {
         Boolean includeQueryString,
         List<String> queryStringBlacklists,
         List<String> queryStringWhitelists) {
-        this.includeHost = Objects.requireNonNull(includeHost);
-        this.includeProtocol = Objects.requireNonNull(includeProtocol);
-        this.includeQueryString = Objects.requireNonNull(includeQueryString);
-        this.queryStringBlacklists = Objects.requireNonNull(queryStringBlacklists);
-        this.queryStringWhitelists = Objects.requireNonNull(queryStringWhitelists);
+        this.includeHost = includeHost;
+        this.includeProtocol = includeProtocol;
+        this.includeQueryString = includeQueryString;
+        this.queryStringBlacklists = queryStringBlacklists;
+        this.queryStringWhitelists = queryStringWhitelists;
     }
 
     public Boolean getIncludeHost() {

@@ -28,7 +28,7 @@ public final class ClusterNetworkPolicy {
     private ClusterNetworkPolicy(
         Boolean enabled,
         @Nullable String provider) {
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
         this.provider = provider;
     }
 

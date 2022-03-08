@@ -133,26 +133,26 @@ public final class GetImageResult {
         String sourceDiskId,
         String sourceImageId,
         String status) {
-        this.archiveSizeBytes = Objects.requireNonNull(archiveSizeBytes);
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.description = Objects.requireNonNull(description);
-        this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
-        this.family = Objects.requireNonNull(family);
+        this.archiveSizeBytes = archiveSizeBytes;
+        this.creationTimestamp = creationTimestamp;
+        this.description = description;
+        this.diskSizeGb = diskSizeGb;
+        this.family = family;
         this.filter = filter;
-        this.id = Objects.requireNonNull(id);
-        this.imageEncryptionKeySha256 = Objects.requireNonNull(imageEncryptionKeySha256);
-        this.imageId = Objects.requireNonNull(imageId);
-        this.labelFingerprint = Objects.requireNonNull(labelFingerprint);
-        this.labels = Objects.requireNonNull(labels);
-        this.licenses = Objects.requireNonNull(licenses);
-        this.name = Objects.requireNonNull(name);
-        this.project = Objects.requireNonNull(project);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.sourceDisk = Objects.requireNonNull(sourceDisk);
-        this.sourceDiskEncryptionKeySha256 = Objects.requireNonNull(sourceDiskEncryptionKeySha256);
-        this.sourceDiskId = Objects.requireNonNull(sourceDiskId);
-        this.sourceImageId = Objects.requireNonNull(sourceImageId);
-        this.status = Objects.requireNonNull(status);
+        this.id = id;
+        this.imageEncryptionKeySha256 = imageEncryptionKeySha256;
+        this.imageId = imageId;
+        this.labelFingerprint = labelFingerprint;
+        this.labels = labels;
+        this.licenses = licenses;
+        this.name = name;
+        this.project = project;
+        this.selfLink = selfLink;
+        this.sourceDisk = sourceDisk;
+        this.sourceDiskEncryptionKeySha256 = sourceDiskEncryptionKeySha256;
+        this.sourceDiskId = sourceDiskId;
+        this.sourceImageId = sourceImageId;
+        this.status = status;
     }
 
     /**

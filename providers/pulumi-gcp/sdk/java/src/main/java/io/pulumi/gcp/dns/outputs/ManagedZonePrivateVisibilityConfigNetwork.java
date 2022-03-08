@@ -19,7 +19,7 @@ public final class ManagedZonePrivateVisibilityConfigNetwork {
 
     @OutputCustomType.Constructor({"networkUrl"})
     private ManagedZonePrivateVisibilityConfigNetwork(String networkUrl) {
-        this.networkUrl = Objects.requireNonNull(networkUrl);
+        this.networkUrl = networkUrl;
     }
 
     /**

@@ -42,7 +42,7 @@ public final class ImageRawDisk {
         String source) {
         this.containerType = containerType;
         this.sha1 = sha1;
-        this.source = Objects.requireNonNull(source);
+        this.source = source;
     }
 
     /**

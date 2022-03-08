@@ -13,7 +13,7 @@ public final class GetClusterResourceUsageExportConfigBigqueryDestination {
 
     @OutputCustomType.Constructor({"datasetId"})
     private GetClusterResourceUsageExportConfigBigqueryDestination(String datasetId) {
-        this.datasetId = Objects.requireNonNull(datasetId);
+        this.datasetId = datasetId;
     }
 
     public String getDatasetId() {

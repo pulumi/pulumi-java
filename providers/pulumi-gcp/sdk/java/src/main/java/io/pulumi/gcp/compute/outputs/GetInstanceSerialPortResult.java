@@ -33,12 +33,12 @@ public final class GetInstanceSerialPortResult {
         Integer port,
         String project,
         String zone) {
-        this.contents = Objects.requireNonNull(contents);
-        this.id = Objects.requireNonNull(id);
-        this.instance = Objects.requireNonNull(instance);
-        this.port = Objects.requireNonNull(port);
-        this.project = Objects.requireNonNull(project);
-        this.zone = Objects.requireNonNull(zone);
+        this.contents = contents;
+        this.id = id;
+        this.instance = instance;
+        this.port = port;
+        this.project = project;
+        this.zone = zone;
     }
 
     /**

@@ -51,7 +51,7 @@ public final class FlexibleAppVersionApiConfig {
         @Nullable String url) {
         this.authFailAction = authFailAction;
         this.login = login;
-        this.script = Objects.requireNonNull(script);
+        this.script = script;
         this.securityLevel = securityLevel;
         this.url = url;
     }

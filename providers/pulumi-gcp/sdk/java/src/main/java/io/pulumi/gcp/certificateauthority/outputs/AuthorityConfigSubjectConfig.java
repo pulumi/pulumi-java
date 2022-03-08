@@ -29,7 +29,7 @@ public final class AuthorityConfigSubjectConfig {
     private AuthorityConfigSubjectConfig(
         AuthorityConfigSubjectConfigSubject subject,
         @Nullable AuthorityConfigSubjectConfigSubjectAltName subjectAltName) {
-        this.subject = Objects.requireNonNull(subject);
+        this.subject = subject;
         this.subjectAltName = subjectAltName;
     }
 

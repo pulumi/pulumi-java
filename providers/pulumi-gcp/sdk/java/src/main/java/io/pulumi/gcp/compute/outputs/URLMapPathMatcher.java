@@ -98,7 +98,7 @@ public final class URLMapPathMatcher {
         this.defaultUrlRedirect = defaultUrlRedirect;
         this.description = description;
         this.headerAction = headerAction;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.pathRules = pathRules;
         this.routeRules = routeRules;
     }

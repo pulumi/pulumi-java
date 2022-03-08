@@ -18,9 +18,9 @@ public final class GetBackendServiceIap {
         String oauth2ClientId,
         String oauth2ClientSecret,
         String oauth2ClientSecretSha256) {
-        this.oauth2ClientId = Objects.requireNonNull(oauth2ClientId);
-        this.oauth2ClientSecret = Objects.requireNonNull(oauth2ClientSecret);
-        this.oauth2ClientSecretSha256 = Objects.requireNonNull(oauth2ClientSecretSha256);
+        this.oauth2ClientId = oauth2ClientId;
+        this.oauth2ClientSecret = oauth2ClientSecret;
+        this.oauth2ClientSecretSha256 = oauth2ClientSecretSha256;
     }
 
     public String getOauth2ClientId() {

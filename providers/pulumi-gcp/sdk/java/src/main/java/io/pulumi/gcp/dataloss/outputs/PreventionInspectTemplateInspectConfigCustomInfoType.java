@@ -67,7 +67,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoType {
         @Nullable PreventionInspectTemplateInspectConfigCustomInfoTypeStoredType storedType) {
         this.dictionary = dictionary;
         this.exclusionType = exclusionType;
-        this.infoType = Objects.requireNonNull(infoType);
+        this.infoType = infoType;
         this.likelihood = likelihood;
         this.regex = regex;
         this.storedType = storedType;

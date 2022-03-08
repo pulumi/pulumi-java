@@ -38,14 +38,14 @@ public final class GetTopicResult {
         String name,
         @Nullable String project,
         List<GetTopicSchemaSetting> schemaSettings) {
-        this.id = Objects.requireNonNull(id);
-        this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
-        this.labels = Objects.requireNonNull(labels);
-        this.messageRetentionDuration = Objects.requireNonNull(messageRetentionDuration);
-        this.messageStoragePolicies = Objects.requireNonNull(messageStoragePolicies);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.kmsKeyName = kmsKeyName;
+        this.labels = labels;
+        this.messageRetentionDuration = messageRetentionDuration;
+        this.messageStoragePolicies = messageStoragePolicies;
+        this.name = name;
         this.project = project;
-        this.schemaSettings = Objects.requireNonNull(schemaSettings);
+        this.schemaSettings = schemaSettings;
     }
 
     /**

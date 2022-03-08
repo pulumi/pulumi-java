@@ -38,9 +38,9 @@ public final class RepositoryPubsubConfig {
         String messageFormat,
         @Nullable String serviceAccountEmail,
         String topic) {
-        this.messageFormat = Objects.requireNonNull(messageFormat);
+        this.messageFormat = messageFormat;
         this.serviceAccountEmail = serviceAccountEmail;
-        this.topic = Objects.requireNonNull(topic);
+        this.topic = topic;
     }
 
     /**

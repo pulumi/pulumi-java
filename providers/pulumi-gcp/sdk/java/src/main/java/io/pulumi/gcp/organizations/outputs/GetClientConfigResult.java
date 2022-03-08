@@ -42,11 +42,11 @@ public final class GetClientConfigResult {
         String project,
         String region,
         String zone) {
-        this.accessToken = Objects.requireNonNull(accessToken);
-        this.id = Objects.requireNonNull(id);
-        this.project = Objects.requireNonNull(project);
-        this.region = Objects.requireNonNull(region);
-        this.zone = Objects.requireNonNull(zone);
+        this.accessToken = accessToken;
+        this.id = id;
+        this.project = project;
+        this.region = region;
+        this.zone = zone;
     }
 
     /**

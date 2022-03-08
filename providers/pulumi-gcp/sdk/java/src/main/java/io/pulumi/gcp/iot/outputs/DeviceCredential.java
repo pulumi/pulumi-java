@@ -29,7 +29,7 @@ public final class DeviceCredential {
         @Nullable String expirationTime,
         DeviceCredentialPublicKey publicKey) {
         this.expirationTime = expirationTime;
-        this.publicKey = Objects.requireNonNull(publicKey);
+        this.publicKey = publicKey;
     }
 
     /**

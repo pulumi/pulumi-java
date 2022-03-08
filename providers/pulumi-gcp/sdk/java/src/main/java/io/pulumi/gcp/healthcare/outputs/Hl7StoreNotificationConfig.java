@@ -22,7 +22,7 @@ public final class Hl7StoreNotificationConfig {
 
     @OutputCustomType.Constructor({"pubsubTopic"})
     private Hl7StoreNotificationConfig(String pubsubTopic) {
-        this.pubsubTopic = Objects.requireNonNull(pubsubTopic);
+        this.pubsubTopic = pubsubTopic;
     }
 
     /**

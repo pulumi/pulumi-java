@@ -32,7 +32,7 @@ public final class BudgetThresholdRule {
         @Nullable String spendBasis,
         Double thresholdPercent) {
         this.spendBasis = spendBasis;
-        this.thresholdPercent = Objects.requireNonNull(thresholdPercent);
+        this.thresholdPercent = thresholdPercent;
     }
 
     /**

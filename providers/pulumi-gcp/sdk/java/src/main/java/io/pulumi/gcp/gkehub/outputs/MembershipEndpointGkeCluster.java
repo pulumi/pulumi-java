@@ -13,7 +13,7 @@ public final class MembershipEndpointGkeCluster {
 
     @OutputCustomType.Constructor({"resourceLink"})
     private MembershipEndpointGkeCluster(String resourceLink) {
-        this.resourceLink = Objects.requireNonNull(resourceLink);
+        this.resourceLink = resourceLink;
     }
 
     public String getResourceLink() {

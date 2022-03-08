@@ -25,8 +25,8 @@ public final class UptimeCheckConfigMonitoredResource {
     private UptimeCheckConfigMonitoredResource(
         Map<String,String> labels,
         String type) {
-        this.labels = Objects.requireNonNull(labels);
-        this.type = Objects.requireNonNull(type);
+        this.labels = labels;
+        this.type = type;
     }
 
     /**

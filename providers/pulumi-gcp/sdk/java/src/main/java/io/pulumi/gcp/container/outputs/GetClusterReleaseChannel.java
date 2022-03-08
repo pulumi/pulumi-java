@@ -13,7 +13,7 @@ public final class GetClusterReleaseChannel {
 
     @OutputCustomType.Constructor({"channel"})
     private GetClusterReleaseChannel(String channel) {
-        this.channel = Objects.requireNonNull(channel);
+        this.channel = channel;
     }
 
     public String getChannel() {

@@ -25,8 +25,8 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrapped(
         String cryptoKeyName,
         String wrappedKey) {
-        this.cryptoKeyName = Objects.requireNonNull(cryptoKeyName);
-        this.wrappedKey = Objects.requireNonNull(wrappedKey);
+        this.cryptoKeyName = cryptoKeyName;
+        this.wrappedKey = wrappedKey;
     }
 
     /**

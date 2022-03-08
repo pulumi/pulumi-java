@@ -18,7 +18,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
 
     @OutputCustomType.Constructor({"name"})
     private PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesInfoType(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

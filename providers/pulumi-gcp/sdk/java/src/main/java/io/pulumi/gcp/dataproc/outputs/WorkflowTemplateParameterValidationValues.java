@@ -18,7 +18,7 @@ public final class WorkflowTemplateParameterValidationValues {
 
     @OutputCustomType.Constructor({"values"})
     private WorkflowTemplateParameterValidationValues(List<String> values) {
-        this.values = Objects.requireNonNull(values);
+        this.values = values;
     }
 
     /**

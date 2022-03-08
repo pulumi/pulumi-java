@@ -52,7 +52,7 @@ public final class FlexibleAppVersionNetwork {
         @Nullable String subnetwork) {
         this.forwardedPorts = forwardedPorts;
         this.instanceTag = instanceTag;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.sessionAffinity = sessionAffinity;
         this.subnetwork = subnetwork;
     }

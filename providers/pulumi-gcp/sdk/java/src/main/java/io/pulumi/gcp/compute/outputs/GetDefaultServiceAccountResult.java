@@ -44,12 +44,12 @@ public final class GetDefaultServiceAccountResult {
         String name,
         String project,
         String uniqueId) {
-        this.displayName = Objects.requireNonNull(displayName);
-        this.email = Objects.requireNonNull(email);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.project = Objects.requireNonNull(project);
-        this.uniqueId = Objects.requireNonNull(uniqueId);
+        this.displayName = displayName;
+        this.email = email;
+        this.id = id;
+        this.name = name;
+        this.project = project;
+        this.uniqueId = uniqueId;
     }
 
     /**

@@ -33,7 +33,7 @@ public final class ServiceTemplateSpecContainerPort {
         Integer containerPort,
         @Nullable String name,
         @Nullable String protocol) {
-        this.containerPort = Objects.requireNonNull(containerPort);
+        this.containerPort = containerPort;
         this.name = name;
         this.protocol = protocol;
     }

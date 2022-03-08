@@ -28,9 +28,9 @@ public final class GetProjectResult {
         String filter,
         String id,
         List<GetProjectProject> projects) {
-        this.filter = Objects.requireNonNull(filter);
-        this.id = Objects.requireNonNull(id);
-        this.projects = Objects.requireNonNull(projects);
+        this.filter = filter;
+        this.id = id;
+        this.projects = projects;
     }
 
     public String getFilter() {

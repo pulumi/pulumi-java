@@ -13,7 +13,7 @@ public final class NodePoolNodeConfigGcfsConfig {
 
     @OutputCustomType.Constructor({"enabled"})
     private NodePoolNodeConfigGcfsConfig(Boolean enabled) {
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
     }
 
     public Boolean getEnabled() {

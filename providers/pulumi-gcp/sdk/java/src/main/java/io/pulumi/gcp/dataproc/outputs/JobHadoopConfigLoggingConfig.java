@@ -14,7 +14,7 @@ public final class JobHadoopConfigLoggingConfig {
 
     @OutputCustomType.Constructor({"driverLogLevels"})
     private JobHadoopConfigLoggingConfig(Map<String,String> driverLogLevels) {
-        this.driverLogLevels = Objects.requireNonNull(driverLogLevels);
+        this.driverLogLevels = driverLogLevels;
     }
 
     public Map<String,String> getDriverLogLevels() {

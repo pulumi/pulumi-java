@@ -35,15 +35,15 @@ public final class GetSecretVersionResult {
         String secret,
         String secretData,
         String version) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.destroyTime = Objects.requireNonNull(destroyTime);
-        this.enabled = Objects.requireNonNull(enabled);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.project = Objects.requireNonNull(project);
-        this.secret = Objects.requireNonNull(secret);
-        this.secretData = Objects.requireNonNull(secretData);
-        this.version = Objects.requireNonNull(version);
+        this.createTime = createTime;
+        this.destroyTime = destroyTime;
+        this.enabled = enabled;
+        this.id = id;
+        this.name = name;
+        this.project = project;
+        this.secret = secret;
+        this.secretData = secretData;
+        this.version = version;
     }
 
     public String getCreateTime() {

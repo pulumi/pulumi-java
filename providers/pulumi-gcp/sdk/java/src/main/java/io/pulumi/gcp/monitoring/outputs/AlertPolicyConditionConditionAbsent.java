@@ -77,7 +77,7 @@ public final class AlertPolicyConditionConditionAbsent {
         @Nullable String filter,
         @Nullable AlertPolicyConditionConditionAbsentTrigger trigger) {
         this.aggregations = aggregations;
-        this.duration = Objects.requireNonNull(duration);
+        this.duration = duration;
         this.filter = filter;
         this.trigger = trigger;
     }

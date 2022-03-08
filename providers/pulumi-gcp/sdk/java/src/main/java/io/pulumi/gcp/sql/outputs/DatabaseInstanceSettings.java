@@ -114,7 +114,7 @@ public final class DatabaseInstanceSettings {
         this.locationPreference = locationPreference;
         this.maintenanceWindow = maintenanceWindow;
         this.pricingPlan = pricingPlan;
-        this.tier = Objects.requireNonNull(tier);
+        this.tier = tier;
         this.userLabels = userLabels;
         this.version = version;
     }

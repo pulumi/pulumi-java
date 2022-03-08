@@ -41,11 +41,11 @@ public final class GetBillingAccountResult {
         Boolean open,
         List<String> projectIds) {
         this.billingAccount = billingAccount;
-        this.displayName = Objects.requireNonNull(displayName);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.open = Objects.requireNonNull(open);
-        this.projectIds = Objects.requireNonNull(projectIds);
+        this.displayName = displayName;
+        this.id = id;
+        this.name = name;
+        this.open = open;
+        this.projectIds = projectIds;
     }
 
     public Optional<String> getBillingAccount() {

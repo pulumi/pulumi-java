@@ -18,7 +18,7 @@ public final class AwsClusterAuthorization {
 
     @OutputCustomType.Constructor({"adminUsers"})
     private AwsClusterAuthorization(List<AwsClusterAuthorizationAdminUser> adminUsers) {
-        this.adminUsers = Objects.requireNonNull(adminUsers);
+        this.adminUsers = adminUsers;
     }
 
     /**

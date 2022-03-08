@@ -20,8 +20,8 @@ public final class GetServiceTemplateSpecContainerVolumeMount {
     private GetServiceTemplateSpecContainerVolumeMount(
         String mountPath,
         String name) {
-        this.mountPath = Objects.requireNonNull(mountPath);
-        this.name = Objects.requireNonNull(name);
+        this.mountPath = mountPath;
+        this.name = name;
     }
 
     public String getMountPath() {

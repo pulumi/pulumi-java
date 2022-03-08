@@ -20,7 +20,7 @@ public final class PolicyAdmissionWhitelistPattern {
 
     @OutputCustomType.Constructor({"namePattern"})
     private PolicyAdmissionWhitelistPattern(String namePattern) {
-        this.namePattern = Objects.requireNonNull(namePattern);
+        this.namePattern = namePattern;
     }
 
     /**

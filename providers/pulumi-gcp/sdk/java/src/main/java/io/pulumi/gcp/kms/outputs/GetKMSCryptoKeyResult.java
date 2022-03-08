@@ -50,16 +50,16 @@ public final class GetKMSCryptoKeyResult {
         String rotationPeriod,
         Boolean skipInitialVersionCreation,
         List<GetKMSCryptoKeyVersionTemplate> versionTemplates) {
-        this.destroyScheduledDuration = Objects.requireNonNull(destroyScheduledDuration);
-        this.id = Objects.requireNonNull(id);
-        this.importOnly = Objects.requireNonNull(importOnly);
-        this.keyRing = Objects.requireNonNull(keyRing);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.purpose = Objects.requireNonNull(purpose);
-        this.rotationPeriod = Objects.requireNonNull(rotationPeriod);
-        this.skipInitialVersionCreation = Objects.requireNonNull(skipInitialVersionCreation);
-        this.versionTemplates = Objects.requireNonNull(versionTemplates);
+        this.destroyScheduledDuration = destroyScheduledDuration;
+        this.id = id;
+        this.importOnly = importOnly;
+        this.keyRing = keyRing;
+        this.labels = labels;
+        this.name = name;
+        this.purpose = purpose;
+        this.rotationPeriod = rotationPeriod;
+        this.skipInitialVersionCreation = skipInitialVersionCreation;
+        this.versionTemplates = versionTemplates;
     }
 
     public String getDestroyScheduledDuration() {

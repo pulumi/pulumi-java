@@ -35,7 +35,7 @@ public final class SubscriptionPushConfigOidcToken {
         @Nullable String audience,
         String serviceAccountEmail) {
         this.audience = audience;
-        this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
+        this.serviceAccountEmail = serviceAccountEmail;
     }
 
     /**

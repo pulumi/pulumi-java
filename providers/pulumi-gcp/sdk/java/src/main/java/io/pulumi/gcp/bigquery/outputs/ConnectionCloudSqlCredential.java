@@ -25,8 +25,8 @@ public final class ConnectionCloudSqlCredential {
     private ConnectionCloudSqlCredential(
         String password,
         String username) {
-        this.password = Objects.requireNonNull(password);
-        this.username = Objects.requireNonNull(username);
+        this.password = password;
+        this.username = username;
     }
 
     /**

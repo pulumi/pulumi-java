@@ -56,7 +56,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicy {
         Integer numRetries,
         @Nullable RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyPerTryTimeout perTryTimeout,
         @Nullable List<String> retryConditions) {
-        this.numRetries = Objects.requireNonNull(numRetries);
+        this.numRetries = numRetries;
         this.perTryTimeout = perTryTimeout;
         this.retryConditions = retryConditions;
     }

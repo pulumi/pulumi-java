@@ -108,7 +108,7 @@ public final class WorkflowTemplateJob {
         this.sparkJob = sparkJob;
         this.sparkRJob = sparkRJob;
         this.sparkSqlJob = sparkSqlJob;
-        this.stepId = Objects.requireNonNull(stepId);
+        this.stepId = stepId;
     }
 
     /**

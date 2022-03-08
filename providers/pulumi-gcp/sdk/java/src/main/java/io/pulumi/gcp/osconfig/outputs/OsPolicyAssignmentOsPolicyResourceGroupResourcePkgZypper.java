@@ -17,7 +17,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypper {
 
     @OutputCustomType.Constructor({"name"})
     private OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypper(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

@@ -18,7 +18,7 @@ public final class CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsage {
 
     @OutputCustomType.Constructor({"objectIdPaths"})
     private CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsage(List<Integer> objectIdPaths) {
-        this.objectIdPaths = Objects.requireNonNull(objectIdPaths);
+        this.objectIdPaths = objectIdPaths;
     }
 
     /**

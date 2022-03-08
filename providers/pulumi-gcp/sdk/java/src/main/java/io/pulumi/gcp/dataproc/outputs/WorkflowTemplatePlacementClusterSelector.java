@@ -27,7 +27,7 @@ public final class WorkflowTemplatePlacementClusterSelector {
     private WorkflowTemplatePlacementClusterSelector(
         Map<String,String> clusterLabels,
         @Nullable String zone) {
-        this.clusterLabels = Objects.requireNonNull(clusterLabels);
+        this.clusterLabels = clusterLabels;
         this.zone = zone;
     }
 

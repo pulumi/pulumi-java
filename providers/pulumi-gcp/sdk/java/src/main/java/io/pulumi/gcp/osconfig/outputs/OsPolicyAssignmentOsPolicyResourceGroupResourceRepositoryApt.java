@@ -45,11 +45,11 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryApt 
         String distribution,
         @Nullable String gpgKey,
         String uri) {
-        this.archiveType = Objects.requireNonNull(archiveType);
-        this.components = Objects.requireNonNull(components);
-        this.distribution = Objects.requireNonNull(distribution);
+        this.archiveType = archiveType;
+        this.components = components;
+        this.distribution = distribution;
         this.gpgKey = gpgKey;
-        this.uri = Objects.requireNonNull(uri);
+        this.uri = uri;
     }
 
     /**

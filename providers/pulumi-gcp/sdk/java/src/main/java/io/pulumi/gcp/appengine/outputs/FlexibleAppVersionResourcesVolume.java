@@ -31,9 +31,9 @@ public final class FlexibleAppVersionResourcesVolume {
         String name,
         Integer sizeGb,
         String volumeType) {
-        this.name = Objects.requireNonNull(name);
-        this.sizeGb = Objects.requireNonNull(sizeGb);
-        this.volumeType = Objects.requireNonNull(volumeType);
+        this.name = name;
+        this.sizeGb = sizeGb;
+        this.volumeType = volumeType;
     }
 
     /**

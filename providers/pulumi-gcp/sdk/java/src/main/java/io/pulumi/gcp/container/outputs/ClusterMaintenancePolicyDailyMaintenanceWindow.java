@@ -19,7 +19,7 @@ public final class ClusterMaintenancePolicyDailyMaintenanceWindow {
         @Nullable String duration,
         String startTime) {
         this.duration = duration;
-        this.startTime = Objects.requireNonNull(startTime);
+        this.startTime = startTime;
     }
 
     public Optional<String> getDuration() {

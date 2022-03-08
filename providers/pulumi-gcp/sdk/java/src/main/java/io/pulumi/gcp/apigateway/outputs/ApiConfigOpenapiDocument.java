@@ -18,7 +18,7 @@ public final class ApiConfigOpenapiDocument {
 
     @OutputCustomType.Constructor({"document"})
     private ApiConfigOpenapiDocument(ApiConfigOpenapiDocumentDocument document) {
-        this.document = Objects.requireNonNull(document);
+        this.document = document;
     }
 
     /**

@@ -13,7 +13,7 @@ public final class GetBucketVersioning {
 
     @OutputCustomType.Constructor({"enabled"})
     private GetBucketVersioning(Boolean enabled) {
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
     }
 
     public Boolean getEnabled() {

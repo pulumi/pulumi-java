@@ -28,9 +28,9 @@ public final class GetGroupsResult {
         List<GetGroupsGroup> groups,
         String id,
         String parent) {
-        this.groups = Objects.requireNonNull(groups);
-        this.id = Objects.requireNonNull(id);
-        this.parent = Objects.requireNonNull(parent);
+        this.groups = groups;
+        this.id = id;
+        this.parent = parent;
     }
 
     /**

@@ -17,7 +17,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGooget {
 
     @OutputCustomType.Constructor({"name"})
     private OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGooget(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

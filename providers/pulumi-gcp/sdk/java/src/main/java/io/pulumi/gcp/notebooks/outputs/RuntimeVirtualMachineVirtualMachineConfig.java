@@ -155,12 +155,12 @@ public final class RuntimeVirtualMachineVirtualMachineConfig {
         @Nullable String zone) {
         this.acceleratorConfig = acceleratorConfig;
         this.containerImages = containerImages;
-        this.dataDisk = Objects.requireNonNull(dataDisk);
+        this.dataDisk = dataDisk;
         this.encryptionConfig = encryptionConfig;
         this.guestAttributes = guestAttributes;
         this.internalIpOnly = internalIpOnly;
         this.labels = labels;
-        this.machineType = Objects.requireNonNull(machineType);
+        this.machineType = machineType;
         this.metadata = metadata;
         this.network = network;
         this.nicType = nicType;

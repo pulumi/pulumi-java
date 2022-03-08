@@ -28,7 +28,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsi {
         @Nullable List<String> properties,
         OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSource source) {
         this.properties = properties;
-        this.source = Objects.requireNonNull(source);
+        this.source = source;
     }
 
     /**

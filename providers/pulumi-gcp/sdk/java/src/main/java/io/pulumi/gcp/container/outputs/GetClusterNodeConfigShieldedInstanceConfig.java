@@ -16,8 +16,8 @@ public final class GetClusterNodeConfigShieldedInstanceConfig {
     private GetClusterNodeConfigShieldedInstanceConfig(
         Boolean enableIntegrityMonitoring,
         Boolean enableSecureBoot) {
-        this.enableIntegrityMonitoring = Objects.requireNonNull(enableIntegrityMonitoring);
-        this.enableSecureBoot = Objects.requireNonNull(enableSecureBoot);
+        this.enableIntegrityMonitoring = enableIntegrityMonitoring;
+        this.enableSecureBoot = enableSecureBoot;
     }
 
     public Boolean getEnableIntegrityMonitoring() {

@@ -28,9 +28,9 @@ public final class GetFoldersResult {
         List<GetFoldersFolder> folders,
         String id,
         String parentId) {
-        this.folders = Objects.requireNonNull(folders);
-        this.id = Objects.requireNonNull(id);
-        this.parentId = Objects.requireNonNull(parentId);
+        this.folders = folders;
+        this.id = id;
+        this.parentId = parentId;
     }
 
     /**

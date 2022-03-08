@@ -29,7 +29,7 @@ public final class ClusterAddonsConfigCloudrunConfig {
     private ClusterAddonsConfigCloudrunConfig(
         Boolean disabled,
         @Nullable String loadBalancerType) {
-        this.disabled = Objects.requireNonNull(disabled);
+        this.disabled = disabled;
         this.loadBalancerType = loadBalancerType;
     }
 

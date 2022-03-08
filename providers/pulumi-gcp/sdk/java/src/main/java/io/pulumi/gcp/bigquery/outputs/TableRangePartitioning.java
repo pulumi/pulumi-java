@@ -27,8 +27,8 @@ public final class TableRangePartitioning {
     private TableRangePartitioning(
         String field,
         TableRangePartitioningRange range) {
-        this.field = Objects.requireNonNull(field);
-        this.range = Objects.requireNonNull(range);
+        this.field = field;
+        this.range = range;
     }
 
     /**

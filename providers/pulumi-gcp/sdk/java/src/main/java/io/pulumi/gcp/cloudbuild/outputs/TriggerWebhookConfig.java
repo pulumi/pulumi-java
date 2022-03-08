@@ -29,7 +29,7 @@ public final class TriggerWebhookConfig {
     private TriggerWebhookConfig(
         String secret,
         @Nullable String state) {
-        this.secret = Objects.requireNonNull(secret);
+        this.secret = secret;
         this.state = state;
     }
 

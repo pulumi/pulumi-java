@@ -62,7 +62,7 @@ public final class FlexibleAppVersionLivenessCheck {
         this.failureThreshold = failureThreshold;
         this.host = host;
         this.initialDelay = initialDelay;
-        this.path = Objects.requireNonNull(path);
+        this.path = path;
         this.successThreshold = successThreshold;
         this.timeout = timeout;
     }

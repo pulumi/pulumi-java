@@ -35,9 +35,9 @@ public final class TenantInboundSamlConfigSpConfig {
         String callbackUri,
         @Nullable List<TenantInboundSamlConfigSpConfigSpCertificate> spCertificates,
         String spEntityId) {
-        this.callbackUri = Objects.requireNonNull(callbackUri);
+        this.callbackUri = callbackUri;
         this.spCertificates = spCertificates;
-        this.spEntityId = Objects.requireNonNull(spEntityId);
+        this.spEntityId = spEntityId;
     }
 
     /**

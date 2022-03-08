@@ -24,8 +24,8 @@ public final class GetKMSCryptoKeyVersionPublicKey {
     private GetKMSCryptoKeyVersionPublicKey(
         String algorithm,
         String pem) {
-        this.algorithm = Objects.requireNonNull(algorithm);
-        this.pem = Objects.requireNonNull(pem);
+        this.algorithm = algorithm;
+        this.pem = pem;
     }
 
     /**

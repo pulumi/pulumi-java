@@ -17,7 +17,7 @@ public final class UptimeCheckConfigTcpCheck {
 
     @OutputCustomType.Constructor({"port"})
     private UptimeCheckConfigTcpCheck(Integer port) {
-        this.port = Objects.requireNonNull(port);
+        this.port = port;
     }
 
     /**

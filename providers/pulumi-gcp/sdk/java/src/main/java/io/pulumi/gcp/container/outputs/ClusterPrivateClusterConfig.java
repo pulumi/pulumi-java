@@ -72,7 +72,7 @@ public final class ClusterPrivateClusterConfig {
         @Nullable String peeringName,
         @Nullable String privateEndpoint,
         @Nullable String publicEndpoint) {
-        this.enablePrivateEndpoint = Objects.requireNonNull(enablePrivateEndpoint);
+        this.enablePrivateEndpoint = enablePrivateEndpoint;
         this.enablePrivateNodes = enablePrivateNodes;
         this.masterGlobalAccessConfig = masterGlobalAccessConfig;
         this.masterIpv4CidrBlock = masterIpv4CidrBlock;

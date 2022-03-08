@@ -18,7 +18,7 @@ public final class DicomStoreStreamConfig {
 
     @OutputCustomType.Constructor({"bigqueryDestination"})
     private DicomStoreStreamConfig(DicomStoreStreamConfigBigqueryDestination bigqueryDestination) {
-        this.bigqueryDestination = Objects.requireNonNull(bigqueryDestination);
+        this.bigqueryDestination = bigqueryDestination;
     }
 
     /**

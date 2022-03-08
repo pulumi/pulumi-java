@@ -34,7 +34,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryPara
         String name,
         @Nullable Boolean presentMatch) {
         this.exactMatch = exactMatch;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.presentMatch = presentMatch;
     }
 

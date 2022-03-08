@@ -34,7 +34,7 @@ public final class InstanceReservationAffinity {
         String consumeReservationType,
         @Nullable String key,
         @Nullable List<String> values) {
-        this.consumeReservationType = Objects.requireNonNull(consumeReservationType);
+        this.consumeReservationType = consumeReservationType;
         this.key = key;
         this.values = values;
     }

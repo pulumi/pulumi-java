@@ -31,7 +31,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTi
         @Nullable Integer nanos,
         String seconds) {
         this.nanos = nanos;
-        this.seconds = Objects.requireNonNull(seconds);
+        this.seconds = seconds;
     }
 
     /**

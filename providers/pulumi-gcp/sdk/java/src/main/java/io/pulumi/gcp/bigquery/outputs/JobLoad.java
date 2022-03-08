@@ -194,7 +194,7 @@ public final class JobLoad {
         this.autodetect = autodetect;
         this.createDisposition = createDisposition;
         this.destinationEncryptionConfiguration = destinationEncryptionConfiguration;
-        this.destinationTable = Objects.requireNonNull(destinationTable);
+        this.destinationTable = destinationTable;
         this.encoding = encoding;
         this.fieldDelimiter = fieldDelimiter;
         this.ignoreUnknownValues = ignoreUnknownValues;
@@ -205,7 +205,7 @@ public final class JobLoad {
         this.schemaUpdateOptions = schemaUpdateOptions;
         this.skipLeadingRows = skipLeadingRows;
         this.sourceFormat = sourceFormat;
-        this.sourceUris = Objects.requireNonNull(sourceUris);
+        this.sourceUris = sourceUris;
         this.timePartitioning = timePartitioning;
         this.writeDisposition = writeDisposition;
     }

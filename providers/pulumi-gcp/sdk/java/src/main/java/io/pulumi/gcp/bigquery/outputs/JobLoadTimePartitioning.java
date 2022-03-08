@@ -37,7 +37,7 @@ public final class JobLoadTimePartitioning {
         String type) {
         this.expirationMs = expirationMs;
         this.field = field;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

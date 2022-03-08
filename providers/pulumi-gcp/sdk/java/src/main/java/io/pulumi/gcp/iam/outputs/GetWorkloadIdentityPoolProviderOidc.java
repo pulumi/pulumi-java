@@ -17,8 +17,8 @@ public final class GetWorkloadIdentityPoolProviderOidc {
     private GetWorkloadIdentityPoolProviderOidc(
         List<String> allowedAudiences,
         String issuerUri) {
-        this.allowedAudiences = Objects.requireNonNull(allowedAudiences);
-        this.issuerUri = Objects.requireNonNull(issuerUri);
+        this.allowedAudiences = allowedAudiences;
+        this.issuerUri = issuerUri;
     }
 
     public List<String> getAllowedAudiences() {

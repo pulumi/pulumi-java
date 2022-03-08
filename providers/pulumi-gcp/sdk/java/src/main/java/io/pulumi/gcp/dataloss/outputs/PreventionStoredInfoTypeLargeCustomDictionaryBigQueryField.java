@@ -27,8 +27,8 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryField {
     private PreventionStoredInfoTypeLargeCustomDictionaryBigQueryField(
         PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldField field,
         PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTable table) {
-        this.field = Objects.requireNonNull(field);
-        this.table = Objects.requireNonNull(table);
+        this.field = field;
+        this.table = table;
     }
 
     /**

@@ -13,7 +13,7 @@ public final class InstanceFromTemplateScratchDisk {
 
     @OutputCustomType.Constructor({"$interface"})
     private InstanceFromTemplateScratchDisk(String $interface) {
-        this.$interface = Objects.requireNonNull($interface);
+        this.$interface = $interface;
     }
 
     public String get$interface() {

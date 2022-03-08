@@ -21,9 +21,9 @@ public final class NodePoolNodeConfigGuestAccelerator {
         Integer count,
         @Nullable String gpuPartitionSize,
         String type) {
-        this.count = Objects.requireNonNull(count);
+        this.count = count;
         this.gpuPartitionSize = gpuPartitionSize;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     public Integer getCount() {

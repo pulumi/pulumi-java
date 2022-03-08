@@ -35,7 +35,7 @@ public final class NotificationConfigStreamingConfig {
 
     @OutputCustomType.Constructor({"filter"})
     private NotificationConfigStreamingConfig(String filter) {
-        this.filter = Objects.requireNonNull(filter);
+        this.filter = filter;
     }
 
     /**

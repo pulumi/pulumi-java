@@ -44,7 +44,7 @@ public final class TriggerPubsubConfig {
         this.serviceAccountEmail = serviceAccountEmail;
         this.state = state;
         this.subscription = subscription;
-        this.topic = Objects.requireNonNull(topic);
+        this.topic = topic;
     }
 
     /**

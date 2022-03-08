@@ -18,7 +18,7 @@ public final class CaPoolIssuancePolicyBaselineValuesPolicyId {
 
     @OutputCustomType.Constructor({"objectIdPaths"})
     private CaPoolIssuancePolicyBaselineValuesPolicyId(List<Integer> objectIdPaths) {
-        this.objectIdPaths = Objects.requireNonNull(objectIdPaths);
+        this.objectIdPaths = objectIdPaths;
     }
 
     /**

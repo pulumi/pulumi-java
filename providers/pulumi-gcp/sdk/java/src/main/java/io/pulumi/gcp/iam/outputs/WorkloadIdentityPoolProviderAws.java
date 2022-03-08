@@ -17,7 +17,7 @@ public final class WorkloadIdentityPoolProviderAws {
 
     @OutputCustomType.Constructor({"accountId"})
     private WorkloadIdentityPoolProviderAws(String accountId) {
-        this.accountId = Objects.requireNonNull(accountId);
+        this.accountId = accountId;
     }
 
     /**

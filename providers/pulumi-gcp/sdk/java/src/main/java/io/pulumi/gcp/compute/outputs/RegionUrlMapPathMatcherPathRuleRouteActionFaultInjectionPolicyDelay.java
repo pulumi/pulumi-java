@@ -28,8 +28,8 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolic
     private RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay(
         RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay fixedDelay,
         Double percentage) {
-        this.fixedDelay = Objects.requireNonNull(fixedDelay);
-        this.percentage = Objects.requireNonNull(percentage);
+        this.fixedDelay = fixedDelay;
+        this.percentage = percentage;
     }
 
     /**

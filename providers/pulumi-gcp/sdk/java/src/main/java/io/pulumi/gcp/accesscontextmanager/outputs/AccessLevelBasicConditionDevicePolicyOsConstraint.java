@@ -37,7 +37,7 @@ public final class AccessLevelBasicConditionDevicePolicyOsConstraint {
         String osType,
         @Nullable Boolean requireVerifiedChromeOs) {
         this.minimumVersion = minimumVersion;
-        this.osType = Objects.requireNonNull(osType);
+        this.osType = osType;
         this.requireVerifiedChromeOs = requireVerifiedChromeOs;
     }
 

@@ -53,14 +53,14 @@ public final class GetInstanceBootDisk {
         String kmsKeySelfLink,
         String mode,
         String source) {
-        this.autoDelete = Objects.requireNonNull(autoDelete);
-        this.deviceName = Objects.requireNonNull(deviceName);
-        this.diskEncryptionKeyRaw = Objects.requireNonNull(diskEncryptionKeyRaw);
-        this.diskEncryptionKeySha256 = Objects.requireNonNull(diskEncryptionKeySha256);
-        this.initializeParams = Objects.requireNonNull(initializeParams);
-        this.kmsKeySelfLink = Objects.requireNonNull(kmsKeySelfLink);
-        this.mode = Objects.requireNonNull(mode);
-        this.source = Objects.requireNonNull(source);
+        this.autoDelete = autoDelete;
+        this.deviceName = deviceName;
+        this.diskEncryptionKeyRaw = diskEncryptionKeyRaw;
+        this.diskEncryptionKeySha256 = diskEncryptionKeySha256;
+        this.initializeParams = initializeParams;
+        this.kmsKeySelfLink = kmsKeySelfLink;
+        this.mode = mode;
+        this.source = source;
     }
 
     /**

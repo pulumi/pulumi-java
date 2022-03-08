@@ -35,8 +35,8 @@ public final class GetIAMPolicyResult {
         String policyData) {
         this.auditConfigs = auditConfigs;
         this.bindings = bindings;
-        this.id = Objects.requireNonNull(id);
-        this.policyData = Objects.requireNonNull(policyData);
+        this.id = id;
+        this.policyData = policyData;
     }
 
     public List<GetIAMPolicyAuditConfig> getAuditConfigs() {

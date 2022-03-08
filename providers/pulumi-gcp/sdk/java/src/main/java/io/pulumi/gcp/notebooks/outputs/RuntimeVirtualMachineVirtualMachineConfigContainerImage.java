@@ -27,7 +27,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigContainerImage {
     private RuntimeVirtualMachineVirtualMachineConfigContainerImage(
         String repository,
         @Nullable String tag) {
-        this.repository = Objects.requireNonNull(repository);
+        this.repository = repository;
         this.tag = tag;
     }
 

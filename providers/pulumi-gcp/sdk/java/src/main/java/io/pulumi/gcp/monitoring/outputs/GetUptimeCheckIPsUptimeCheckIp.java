@@ -34,9 +34,9 @@ public final class GetUptimeCheckIPsUptimeCheckIp {
         String ipAddress,
         String location,
         String region) {
-        this.ipAddress = Objects.requireNonNull(ipAddress);
-        this.location = Objects.requireNonNull(location);
-        this.region = Objects.requireNonNull(region);
+        this.ipAddress = ipAddress;
+        this.location = location;
+        this.region = region;
     }
 
     /**

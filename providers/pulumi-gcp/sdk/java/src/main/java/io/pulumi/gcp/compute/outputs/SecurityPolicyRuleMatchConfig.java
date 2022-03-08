@@ -20,7 +20,7 @@ public final class SecurityPolicyRuleMatchConfig {
 
     @OutputCustomType.Constructor({"srcIpRanges"})
     private SecurityPolicyRuleMatchConfig(List<String> srcIpRanges) {
-        this.srcIpRanges = Objects.requireNonNull(srcIpRanges);
+        this.srcIpRanges = srcIpRanges;
     }
 
     /**

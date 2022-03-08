@@ -47,7 +47,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
         @Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegex regex) {
         this.dictionary = dictionary;
         this.excludeInfoTypes = excludeInfoTypes;
-        this.matchingType = Objects.requireNonNull(matchingType);
+        this.matchingType = matchingType;
         this.regex = regex;
     }
 

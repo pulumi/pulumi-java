@@ -28,10 +28,10 @@ public final class GetKMSSecretCiphertextResult {
         String cryptoKey,
         String id,
         String plaintext) {
-        this.ciphertext = Objects.requireNonNull(ciphertext);
-        this.cryptoKey = Objects.requireNonNull(cryptoKey);
-        this.id = Objects.requireNonNull(id);
-        this.plaintext = Objects.requireNonNull(plaintext);
+        this.ciphertext = ciphertext;
+        this.cryptoKey = cryptoKey;
+        this.id = id;
+        this.plaintext = plaintext;
     }
 
     /**

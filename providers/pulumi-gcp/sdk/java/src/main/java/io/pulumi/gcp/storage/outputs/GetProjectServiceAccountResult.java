@@ -31,9 +31,9 @@ public final class GetProjectServiceAccountResult {
         String id,
         String project,
         @Nullable String userProject) {
-        this.emailAddress = Objects.requireNonNull(emailAddress);
-        this.id = Objects.requireNonNull(id);
-        this.project = Objects.requireNonNull(project);
+        this.emailAddress = emailAddress;
+        this.id = id;
+        this.project = project;
         this.userProject = userProject;
     }
 

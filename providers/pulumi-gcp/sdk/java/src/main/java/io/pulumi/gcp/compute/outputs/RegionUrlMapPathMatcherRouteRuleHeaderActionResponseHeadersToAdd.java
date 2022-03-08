@@ -33,9 +33,9 @@ public final class RegionUrlMapPathMatcherRouteRuleHeaderActionResponseHeadersTo
         String headerName,
         String headerValue,
         Boolean replace) {
-        this.headerName = Objects.requireNonNull(headerName);
-        this.headerValue = Objects.requireNonNull(headerValue);
-        this.replace = Objects.requireNonNull(replace);
+        this.headerName = headerName;
+        this.headerValue = headerValue;
+        this.replace = replace;
     }
 
     /**

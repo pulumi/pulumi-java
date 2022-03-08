@@ -27,7 +27,7 @@ public final class BucketObjectCustomerEncryption {
         @Nullable String encryptionAlgorithm,
         String encryptionKey) {
         this.encryptionAlgorithm = encryptionAlgorithm;
-        this.encryptionKey = Objects.requireNonNull(encryptionKey);
+        this.encryptionKey = encryptionKey;
     }
 
     /**

@@ -29,7 +29,7 @@ public final class InstanceTemplateNetworkInterfaceIpv6AccessConfig {
         @Nullable String publicPtrDomainName) {
         this.externalIpv6 = externalIpv6;
         this.externalIpv6PrefixLength = externalIpv6PrefixLength;
-        this.networkTier = Objects.requireNonNull(networkTier);
+        this.networkTier = networkTier;
         this.publicPtrDomainName = publicPtrDomainName;
     }
 

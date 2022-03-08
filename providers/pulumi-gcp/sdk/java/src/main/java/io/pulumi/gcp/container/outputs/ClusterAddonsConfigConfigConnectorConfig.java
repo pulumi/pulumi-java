@@ -18,7 +18,7 @@ public final class ClusterAddonsConfigConfigConnectorConfig {
 
     @OutputCustomType.Constructor({"enabled"})
     private ClusterAddonsConfigConfigConnectorConfig(Boolean enabled) {
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
     }
 
     /**

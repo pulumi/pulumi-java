@@ -17,7 +17,7 @@ public final class BucketVersioning {
 
     @OutputCustomType.Constructor({"enabled"})
     private BucketVersioning(Boolean enabled) {
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
     }
 
     /**

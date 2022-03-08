@@ -36,15 +36,15 @@ public final class GetServiceTemplateSpecContainer {
         List<GetServiceTemplateSpecContainerResource> resources,
         List<GetServiceTemplateSpecContainerVolumeMount> volumeMounts,
         String workingDir) {
-        this.args = Objects.requireNonNull(args);
-        this.commands = Objects.requireNonNull(commands);
-        this.envFroms = Objects.requireNonNull(envFroms);
-        this.envs = Objects.requireNonNull(envs);
-        this.image = Objects.requireNonNull(image);
-        this.ports = Objects.requireNonNull(ports);
-        this.resources = Objects.requireNonNull(resources);
-        this.volumeMounts = Objects.requireNonNull(volumeMounts);
-        this.workingDir = Objects.requireNonNull(workingDir);
+        this.args = args;
+        this.commands = commands;
+        this.envFroms = envFroms;
+        this.envs = envs;
+        this.image = image;
+        this.ports = ports;
+        this.resources = resources;
+        this.volumeMounts = volumeMounts;
+        this.workingDir = workingDir;
     }
 
     public List<String> getArgs() {

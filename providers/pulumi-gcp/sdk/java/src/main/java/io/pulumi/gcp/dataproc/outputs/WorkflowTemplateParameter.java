@@ -41,8 +41,8 @@ public final class WorkflowTemplateParameter {
         String name,
         @Nullable WorkflowTemplateParameterValidation validation) {
         this.description = description;
-        this.fields = Objects.requireNonNull(fields);
-        this.name = Objects.requireNonNull(name);
+        this.fields = fields;
+        this.name = name;
         this.validation = validation;
     }
 

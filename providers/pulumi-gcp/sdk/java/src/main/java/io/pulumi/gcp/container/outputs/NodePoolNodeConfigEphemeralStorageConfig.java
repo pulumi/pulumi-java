@@ -13,7 +13,7 @@ public final class NodePoolNodeConfigEphemeralStorageConfig {
 
     @OutputCustomType.Constructor({"localSsdCount"})
     private NodePoolNodeConfigEphemeralStorageConfig(Integer localSsdCount) {
-        this.localSsdCount = Objects.requireNonNull(localSsdCount);
+        this.localSsdCount = localSsdCount;
     }
 
     public Integer getLocalSsdCount() {

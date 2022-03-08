@@ -36,8 +36,8 @@ public final class EdgeCacheServiceRoutingPathMatcher {
         String name,
         List<EdgeCacheServiceRoutingPathMatcherRouteRule> routeRules) {
         this.description = description;
-        this.name = Objects.requireNonNull(name);
-        this.routeRules = Objects.requireNonNull(routeRules);
+        this.name = name;
+        this.routeRules = routeRules;
     }
 
     /**

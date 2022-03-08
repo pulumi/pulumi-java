@@ -18,7 +18,7 @@ public final class WorkflowTemplateJobSparkSqlJobQueryList {
 
     @OutputCustomType.Constructor({"queries"})
     private WorkflowTemplateJobSparkSqlJobQueryList(List<String> queries) {
-        this.queries = Objects.requireNonNull(queries);
+        this.queries = queries;
     }
 
     /**

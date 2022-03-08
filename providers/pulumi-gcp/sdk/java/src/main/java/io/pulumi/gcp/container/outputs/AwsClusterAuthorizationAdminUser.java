@@ -17,7 +17,7 @@ public final class AwsClusterAuthorizationAdminUser {
 
     @OutputCustomType.Constructor({"username"})
     private AwsClusterAuthorizationAdminUser(String username) {
-        this.username = Objects.requireNonNull(username);
+        this.username = username;
     }
 
     /**

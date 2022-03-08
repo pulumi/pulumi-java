@@ -64,7 +64,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
         @Nullable String sampleMethod) {
         this.bytesLimitPerFile = bytesLimitPerFile;
         this.bytesLimitPerFilePercent = bytesLimitPerFilePercent;
-        this.fileSet = Objects.requireNonNull(fileSet);
+        this.fileSet = fileSet;
         this.fileTypes = fileTypes;
         this.filesLimitPercent = filesLimitPercent;
         this.sampleMethod = sampleMethod;

@@ -29,9 +29,9 @@ public final class GetInstanceTemplateNetworkInterfaceAccessConfig {
         String natIp,
         String networkTier,
         String publicPtrDomainName) {
-        this.natIp = Objects.requireNonNull(natIp);
-        this.networkTier = Objects.requireNonNull(networkTier);
-        this.publicPtrDomainName = Objects.requireNonNull(publicPtrDomainName);
+        this.natIp = natIp;
+        this.networkTier = networkTier;
+        this.publicPtrDomainName = publicPtrDomainName;
     }
 
     /**

@@ -44,9 +44,9 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServ
         String backendService,
         @Nullable RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderAction headerAction,
         Integer weight) {
-        this.backendService = Objects.requireNonNull(backendService);
+        this.backendService = backendService;
         this.headerAction = headerAction;
-        this.weight = Objects.requireNonNull(weight);
+        this.weight = weight;
     }
 
     /**

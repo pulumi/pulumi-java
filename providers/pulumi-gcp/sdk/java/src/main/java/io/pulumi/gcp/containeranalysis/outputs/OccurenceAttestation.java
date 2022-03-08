@@ -32,8 +32,8 @@ public final class OccurenceAttestation {
     private OccurenceAttestation(
         String serializedPayload,
         List<OccurenceAttestationSignature> signatures) {
-        this.serializedPayload = Objects.requireNonNull(serializedPayload);
-        this.signatures = Objects.requireNonNull(signatures);
+        this.serializedPayload = serializedPayload;
+        this.signatures = signatures;
     }
 
     /**

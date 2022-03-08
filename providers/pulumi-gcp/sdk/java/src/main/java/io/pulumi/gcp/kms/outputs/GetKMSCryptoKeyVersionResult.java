@@ -57,13 +57,13 @@ public final class GetKMSCryptoKeyVersionResult {
         List<GetKMSCryptoKeyVersionPublicKey> publicKeys,
         String state,
         @Nullable Integer version) {
-        this.algorithm = Objects.requireNonNull(algorithm);
-        this.cryptoKey = Objects.requireNonNull(cryptoKey);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.protectionLevel = Objects.requireNonNull(protectionLevel);
-        this.publicKeys = Objects.requireNonNull(publicKeys);
-        this.state = Objects.requireNonNull(state);
+        this.algorithm = algorithm;
+        this.cryptoKey = cryptoKey;
+        this.id = id;
+        this.name = name;
+        this.protectionLevel = protectionLevel;
+        this.publicKeys = publicKeys;
+        this.state = state;
         this.version = version;
     }
 

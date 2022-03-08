@@ -60,7 +60,7 @@ public final class InstanceAttachedDisk {
         this.diskEncryptionKeySha256 = diskEncryptionKeySha256;
         this.kmsKeySelfLink = kmsKeySelfLink;
         this.mode = mode;
-        this.source = Objects.requireNonNull(source);
+        this.source = source;
     }
 
     /**

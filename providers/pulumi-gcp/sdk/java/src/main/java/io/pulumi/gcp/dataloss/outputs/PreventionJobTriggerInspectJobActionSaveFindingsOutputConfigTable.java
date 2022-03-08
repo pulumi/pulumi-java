@@ -33,8 +33,8 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigT
         String datasetId,
         String projectId,
         @Nullable String tableId) {
-        this.datasetId = Objects.requireNonNull(datasetId);
-        this.projectId = Objects.requireNonNull(projectId);
+        this.datasetId = datasetId;
+        this.projectId = projectId;
         this.tableId = tableId;
     }
 

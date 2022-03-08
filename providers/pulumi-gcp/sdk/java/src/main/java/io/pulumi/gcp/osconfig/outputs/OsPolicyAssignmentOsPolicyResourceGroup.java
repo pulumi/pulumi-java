@@ -28,7 +28,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroup {
         @Nullable List<OsPolicyAssignmentOsPolicyResourceGroupInventoryFilter> inventoryFilters,
         List<OsPolicyAssignmentOsPolicyResourceGroupResource> resources) {
         this.inventoryFilters = inventoryFilters;
-        this.resources = Objects.requireNonNull(resources);
+        this.resources = resources;
     }
 
     /**

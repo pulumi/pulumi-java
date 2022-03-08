@@ -21,9 +21,9 @@ public final class GetEnvironmentConfigWorkloadsConfig {
         List<GetEnvironmentConfigWorkloadsConfigScheduler> schedulers,
         List<GetEnvironmentConfigWorkloadsConfigWebServer> webServers,
         List<GetEnvironmentConfigWorkloadsConfigWorker> workers) {
-        this.schedulers = Objects.requireNonNull(schedulers);
-        this.webServers = Objects.requireNonNull(webServers);
-        this.workers = Objects.requireNonNull(workers);
+        this.schedulers = schedulers;
+        this.webServers = webServers;
+        this.workers = workers;
     }
 
     public List<GetEnvironmentConfigWorkloadsConfigScheduler> getSchedulers() {

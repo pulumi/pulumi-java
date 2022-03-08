@@ -30,8 +30,8 @@ public final class GetInstanceTemplateNetworkInterfaceAliasIpRange {
     private GetInstanceTemplateNetworkInterfaceAliasIpRange(
         String ipCidrRange,
         String subnetworkRangeName) {
-        this.ipCidrRange = Objects.requireNonNull(ipCidrRange);
-        this.subnetworkRangeName = Objects.requireNonNull(subnetworkRangeName);
+        this.ipCidrRange = ipCidrRange;
+        this.subnetworkRangeName = subnetworkRangeName;
     }
 
     /**

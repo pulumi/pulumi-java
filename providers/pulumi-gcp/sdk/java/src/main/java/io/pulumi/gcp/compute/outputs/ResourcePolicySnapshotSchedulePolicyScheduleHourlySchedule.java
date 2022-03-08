@@ -25,8 +25,8 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule {
     private ResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule(
         Integer hoursInCycle,
         String startTime) {
-        this.hoursInCycle = Objects.requireNonNull(hoursInCycle);
-        this.startTime = Objects.requireNonNull(startTime);
+        this.hoursInCycle = hoursInCycle;
+        this.startTime = startTime;
     }
 
     /**

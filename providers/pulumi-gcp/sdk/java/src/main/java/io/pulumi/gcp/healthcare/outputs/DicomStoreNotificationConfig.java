@@ -22,7 +22,7 @@ public final class DicomStoreNotificationConfig {
 
     @OutputCustomType.Constructor({"pubsubTopic"})
     private DicomStoreNotificationConfig(String pubsubTopic) {
-        this.pubsubTopic = Objects.requireNonNull(pubsubTopic);
+        this.pubsubTopic = pubsubTopic;
     }
 
     /**

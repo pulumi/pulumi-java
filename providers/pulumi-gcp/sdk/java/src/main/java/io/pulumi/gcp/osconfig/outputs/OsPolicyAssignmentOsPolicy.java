@@ -49,9 +49,9 @@ public final class OsPolicyAssignmentOsPolicy {
         List<OsPolicyAssignmentOsPolicyResourceGroup> resourceGroups) {
         this.allowNoResourceGroupMatch = allowNoResourceGroupMatch;
         this.description = description;
-        this.id = Objects.requireNonNull(id);
-        this.mode = Objects.requireNonNull(mode);
-        this.resourceGroups = Objects.requireNonNull(resourceGroups);
+        this.id = id;
+        this.mode = mode;
+        this.resourceGroups = resourceGroups;
     }
 
     /**

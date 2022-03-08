@@ -13,7 +13,7 @@ public final class InstanceFromMachineImageConfidentialInstanceConfig {
 
     @OutputCustomType.Constructor({"enableConfidentialCompute"})
     private InstanceFromMachineImageConfidentialInstanceConfig(Boolean enableConfidentialCompute) {
-        this.enableConfidentialCompute = Objects.requireNonNull(enableConfidentialCompute);
+        this.enableConfidentialCompute = enableConfidentialCompute;
     }
 
     public Boolean getEnableConfidentialCompute() {

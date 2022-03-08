@@ -39,10 +39,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYum 
         @Nullable String displayName,
         @Nullable List<String> gpgKeys,
         String id) {
-        this.baseUrl = Objects.requireNonNull(baseUrl);
+        this.baseUrl = baseUrl;
         this.displayName = displayName;
         this.gpgKeys = gpgKeys;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
     }
 
     /**

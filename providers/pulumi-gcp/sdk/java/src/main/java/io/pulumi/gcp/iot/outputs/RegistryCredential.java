@@ -19,7 +19,7 @@ public final class RegistryCredential {
 
     @OutputCustomType.Constructor({"publicKeyCertificate"})
     private RegistryCredential(Map<String,Object> publicKeyCertificate) {
-        this.publicKeyCertificate = Objects.requireNonNull(publicKeyCertificate);
+        this.publicKeyCertificate = publicKeyCertificate;
     }
 
     /**

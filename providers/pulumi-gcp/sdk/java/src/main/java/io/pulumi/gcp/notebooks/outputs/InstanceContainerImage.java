@@ -27,7 +27,7 @@ public final class InstanceContainerImage {
     private InstanceContainerImage(
         String repository,
         @Nullable String tag) {
-        this.repository = Objects.requireNonNull(repository);
+        this.repository = repository;
         this.tag = tag;
     }
 

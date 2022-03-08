@@ -17,7 +17,7 @@ public final class DeploymentTargetConfig {
 
     @OutputCustomType.Constructor({"content"})
     private DeploymentTargetConfig(String content) {
-        this.content = Objects.requireNonNull(content);
+        this.content = content;
     }
 
     /**

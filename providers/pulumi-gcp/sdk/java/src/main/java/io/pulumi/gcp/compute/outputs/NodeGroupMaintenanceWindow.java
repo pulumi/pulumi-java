@@ -17,7 +17,7 @@ public final class NodeGroupMaintenanceWindow {
 
     @OutputCustomType.Constructor({"startTime"})
     private NodeGroupMaintenanceWindow(String startTime) {
-        this.startTime = Objects.requireNonNull(startTime);
+        this.startTime = startTime;
     }
 
     /**

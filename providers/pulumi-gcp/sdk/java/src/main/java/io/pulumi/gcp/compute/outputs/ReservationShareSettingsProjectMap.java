@@ -26,7 +26,7 @@ public final class ReservationShareSettingsProjectMap {
     private ReservationShareSettingsProjectMap(
         String id,
         @Nullable String projectId) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.projectId = projectId;
     }
 

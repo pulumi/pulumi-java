@@ -28,7 +28,7 @@ public final class BucketRetentionPolicy {
         @Nullable Boolean isLocked,
         Integer retentionPeriod) {
         this.isLocked = isLocked;
-        this.retentionPeriod = Objects.requireNonNull(retentionPeriod);
+        this.retentionPeriod = retentionPeriod;
     }
 
     /**

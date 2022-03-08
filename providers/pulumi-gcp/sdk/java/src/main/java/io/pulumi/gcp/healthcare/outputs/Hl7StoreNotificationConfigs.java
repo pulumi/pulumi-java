@@ -40,7 +40,7 @@ public final class Hl7StoreNotificationConfigs {
         @Nullable String filter,
         String pubsubTopic) {
         this.filter = filter;
-        this.pubsubTopic = Objects.requireNonNull(pubsubTopic);
+        this.pubsubTopic = pubsubTopic;
     }
 
     /**

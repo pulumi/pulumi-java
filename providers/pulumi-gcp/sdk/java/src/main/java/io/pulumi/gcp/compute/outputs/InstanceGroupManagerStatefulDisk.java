@@ -27,7 +27,7 @@ public final class InstanceGroupManagerStatefulDisk {
         @Nullable String deleteRule,
         String deviceName) {
         this.deleteRule = deleteRule;
-        this.deviceName = Objects.requireNonNull(deviceName);
+        this.deviceName = deviceName;
     }
 
     /**

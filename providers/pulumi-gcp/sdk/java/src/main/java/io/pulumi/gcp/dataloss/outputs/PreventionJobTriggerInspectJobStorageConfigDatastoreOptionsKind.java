@@ -17,7 +17,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKi
 
     @OutputCustomType.Constructor({"name"})
     private PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKind(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

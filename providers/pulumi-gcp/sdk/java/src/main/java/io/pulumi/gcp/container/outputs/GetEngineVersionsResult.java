@@ -64,15 +64,15 @@ public final class GetEngineVersionsResult {
         List<String> validMasterVersions,
         List<String> validNodeVersions,
         @Nullable String versionPrefix) {
-        this.defaultClusterVersion = Objects.requireNonNull(defaultClusterVersion);
-        this.id = Objects.requireNonNull(id);
-        this.latestMasterVersion = Objects.requireNonNull(latestMasterVersion);
-        this.latestNodeVersion = Objects.requireNonNull(latestNodeVersion);
+        this.defaultClusterVersion = defaultClusterVersion;
+        this.id = id;
+        this.latestMasterVersion = latestMasterVersion;
+        this.latestNodeVersion = latestNodeVersion;
         this.location = location;
         this.project = project;
-        this.releaseChannelDefaultVersion = Objects.requireNonNull(releaseChannelDefaultVersion);
-        this.validMasterVersions = Objects.requireNonNull(validMasterVersions);
-        this.validNodeVersions = Objects.requireNonNull(validNodeVersions);
+        this.releaseChannelDefaultVersion = releaseChannelDefaultVersion;
+        this.validMasterVersions = validMasterVersions;
+        this.validNodeVersions = validNodeVersions;
         this.versionPrefix = versionPrefix;
     }
 

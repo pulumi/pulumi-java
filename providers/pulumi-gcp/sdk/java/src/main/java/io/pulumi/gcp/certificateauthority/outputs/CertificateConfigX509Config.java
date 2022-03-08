@@ -57,7 +57,7 @@ public final class CertificateConfigX509Config {
         this.additionalExtensions = additionalExtensions;
         this.aiaOcspServers = aiaOcspServers;
         this.caOptions = caOptions;
-        this.keyUsage = Objects.requireNonNull(keyUsage);
+        this.keyUsage = keyUsage;
         this.policyIds = policyIds;
     }
 

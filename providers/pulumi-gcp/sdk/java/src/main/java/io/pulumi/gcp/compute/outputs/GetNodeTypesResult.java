@@ -29,10 +29,10 @@ public final class GetNodeTypesResult {
         List<String> names,
         String project,
         String zone) {
-        this.id = Objects.requireNonNull(id);
-        this.names = Objects.requireNonNull(names);
-        this.project = Objects.requireNonNull(project);
-        this.zone = Objects.requireNonNull(zone);
+        this.id = id;
+        this.names = names;
+        this.project = project;
+        this.zone = zone;
     }
 
     /**

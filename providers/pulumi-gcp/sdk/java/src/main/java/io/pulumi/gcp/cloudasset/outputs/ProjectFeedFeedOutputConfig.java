@@ -18,7 +18,7 @@ public final class ProjectFeedFeedOutputConfig {
 
     @OutputCustomType.Constructor({"pubsubDestination"})
     private ProjectFeedFeedOutputConfig(ProjectFeedFeedOutputConfigPubsubDestination pubsubDestination) {
-        this.pubsubDestination = Objects.requireNonNull(pubsubDestination);
+        this.pubsubDestination = pubsubDestination;
     }
 
     /**

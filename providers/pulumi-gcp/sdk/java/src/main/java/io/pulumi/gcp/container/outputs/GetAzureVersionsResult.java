@@ -37,11 +37,11 @@ public final class GetAzureVersionsResult {
         @Nullable String project,
         List<String> supportedRegions,
         List<String> validVersions) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.location = location;
         this.project = project;
-        this.supportedRegions = Objects.requireNonNull(supportedRegions);
-        this.validVersions = Objects.requireNonNull(validVersions);
+        this.supportedRegions = supportedRegions;
+        this.validVersions = validVersions;
     }
 
     /**

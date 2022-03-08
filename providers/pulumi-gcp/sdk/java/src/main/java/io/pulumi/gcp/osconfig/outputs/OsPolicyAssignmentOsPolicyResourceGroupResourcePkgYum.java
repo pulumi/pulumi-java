@@ -17,7 +17,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYum {
 
     @OutputCustomType.Constructor({"name"})
     private OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYum(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

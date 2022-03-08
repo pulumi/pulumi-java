@@ -17,7 +17,7 @@ public final class ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectRef
 
     @OutputCustomType.Constructor({"name"})
     private ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReference(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

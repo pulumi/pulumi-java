@@ -37,7 +37,7 @@ public final class OrganizationSecurityPolicyRuleMatchConfig {
         List<OrganizationSecurityPolicyRuleMatchConfigLayer4Config> layer4Configs,
         @Nullable List<String> srcIpRanges) {
         this.destIpRanges = destIpRanges;
-        this.layer4Configs = Objects.requireNonNull(layer4Configs);
+        this.layer4Configs = layer4Configs;
         this.srcIpRanges = srcIpRanges;
     }
 

@@ -14,7 +14,7 @@ public final class GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule
 
     @OutputCustomType.Constructor({"dayOfWeeks"})
     private GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule(List<GetResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek> dayOfWeeks) {
-        this.dayOfWeeks = Objects.requireNonNull(dayOfWeeks);
+        this.dayOfWeeks = dayOfWeeks;
     }
 
     public List<GetResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek> getDayOfWeeks() {

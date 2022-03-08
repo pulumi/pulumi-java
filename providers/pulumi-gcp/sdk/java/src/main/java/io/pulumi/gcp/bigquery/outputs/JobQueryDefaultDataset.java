@@ -26,7 +26,7 @@ public final class JobQueryDefaultDataset {
     private JobQueryDefaultDataset(
         String datasetId,
         @Nullable String projectId) {
-        this.datasetId = Objects.requireNonNull(datasetId);
+        this.datasetId = datasetId;
         this.projectId = projectId;
     }
 

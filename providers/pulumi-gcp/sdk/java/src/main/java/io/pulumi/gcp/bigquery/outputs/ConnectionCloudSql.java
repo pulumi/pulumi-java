@@ -39,10 +39,10 @@ public final class ConnectionCloudSql {
         String database,
         String instanceId,
         String type) {
-        this.credential = Objects.requireNonNull(credential);
-        this.database = Objects.requireNonNull(database);
-        this.instanceId = Objects.requireNonNull(instanceId);
-        this.type = Objects.requireNonNull(type);
+        this.credential = credential;
+        this.database = database;
+        this.instanceId = instanceId;
+        this.type = type;
     }
 
     /**

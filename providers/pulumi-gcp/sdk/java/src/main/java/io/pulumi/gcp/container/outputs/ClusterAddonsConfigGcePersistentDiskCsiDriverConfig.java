@@ -18,7 +18,7 @@ public final class ClusterAddonsConfigGcePersistentDiskCsiDriverConfig {
 
     @OutputCustomType.Constructor({"enabled"})
     private ClusterAddonsConfigGcePersistentDiskCsiDriverConfig(Boolean enabled) {
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
     }
 
     /**

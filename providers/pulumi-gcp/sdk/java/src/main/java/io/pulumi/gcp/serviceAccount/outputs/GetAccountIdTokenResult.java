@@ -37,10 +37,10 @@ public final class GetAccountIdTokenResult {
         String targetAudience,
         @Nullable String targetServiceAccount) {
         this.delegates = delegates;
-        this.id = Objects.requireNonNull(id);
-        this.idToken = Objects.requireNonNull(idToken);
+        this.id = id;
+        this.idToken = idToken;
         this.includeEmail = includeEmail;
-        this.targetAudience = Objects.requireNonNull(targetAudience);
+        this.targetAudience = targetAudience;
         this.targetServiceAccount = targetServiceAccount;
     }
 

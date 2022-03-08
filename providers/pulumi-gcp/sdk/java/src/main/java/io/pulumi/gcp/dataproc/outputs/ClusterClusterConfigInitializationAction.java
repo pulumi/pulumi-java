@@ -30,7 +30,7 @@ public final class ClusterClusterConfigInitializationAction {
     private ClusterClusterConfigInitializationAction(
         String script,
         @Nullable Integer timeoutSec) {
-        this.script = Objects.requireNonNull(script);
+        this.script = script;
         this.timeoutSec = timeoutSec;
     }
 

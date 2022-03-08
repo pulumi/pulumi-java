@@ -28,7 +28,7 @@ public final class FlexibleAppVersionAutomaticScalingCpuUtilization {
         @Nullable String aggregationWindowLength,
         Double targetUtilization) {
         this.aggregationWindowLength = aggregationWindowLength;
-        this.targetUtilization = Objects.requireNonNull(targetUtilization);
+        this.targetUtilization = targetUtilization;
     }
 
     /**

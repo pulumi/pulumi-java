@@ -18,7 +18,7 @@ public final class PreventionJobTriggerInspectJobAction {
 
     @OutputCustomType.Constructor({"saveFindings"})
     private PreventionJobTriggerInspectJobAction(PreventionJobTriggerInspectJobActionSaveFindings saveFindings) {
-        this.saveFindings = Objects.requireNonNull(saveFindings);
+        this.saveFindings = saveFindings;
     }
 
     /**

@@ -24,9 +24,9 @@ public final class GetServiceTemplateSpecContainerEnv {
         String name,
         String value,
         List<GetServiceTemplateSpecContainerEnvValueFrom> valueFroms) {
-        this.name = Objects.requireNonNull(name);
-        this.value = Objects.requireNonNull(value);
-        this.valueFroms = Objects.requireNonNull(valueFroms);
+        this.name = name;
+        this.value = value;
+        this.valueFroms = valueFroms;
     }
 
     /**

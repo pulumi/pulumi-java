@@ -24,8 +24,8 @@ public final class AzureClusterControlPlaneReplicaPlacement {
     private AzureClusterControlPlaneReplicaPlacement(
         String azureAvailabilityZone,
         String subnetId) {
-        this.azureAvailabilityZone = Objects.requireNonNull(azureAvailabilityZone);
-        this.subnetId = Objects.requireNonNull(subnetId);
+        this.azureAvailabilityZone = azureAvailabilityZone;
+        this.subnetId = subnetId;
     }
 
     /**

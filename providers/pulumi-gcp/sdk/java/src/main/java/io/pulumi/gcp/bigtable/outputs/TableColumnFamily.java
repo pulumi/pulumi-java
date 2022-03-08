@@ -17,7 +17,7 @@ public final class TableColumnFamily {
 
     @OutputCustomType.Constructor({"family"})
     private TableColumnFamily(String family) {
-        this.family = Objects.requireNonNull(family);
+        this.family = family;
     }
 
     /**

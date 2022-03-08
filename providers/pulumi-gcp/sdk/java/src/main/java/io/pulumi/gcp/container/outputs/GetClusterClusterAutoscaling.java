@@ -24,10 +24,10 @@ public final class GetClusterClusterAutoscaling {
         String autoscalingProfile,
         Boolean enabled,
         List<GetClusterClusterAutoscalingResourceLimit> resourceLimits) {
-        this.autoProvisioningDefaults = Objects.requireNonNull(autoProvisioningDefaults);
-        this.autoscalingProfile = Objects.requireNonNull(autoscalingProfile);
-        this.enabled = Objects.requireNonNull(enabled);
-        this.resourceLimits = Objects.requireNonNull(resourceLimits);
+        this.autoProvisioningDefaults = autoProvisioningDefaults;
+        this.autoscalingProfile = autoscalingProfile;
+        this.enabled = enabled;
+        this.resourceLimits = resourceLimits;
     }
 
     public List<GetClusterClusterAutoscalingAutoProvisioningDefault> getAutoProvisioningDefaults() {

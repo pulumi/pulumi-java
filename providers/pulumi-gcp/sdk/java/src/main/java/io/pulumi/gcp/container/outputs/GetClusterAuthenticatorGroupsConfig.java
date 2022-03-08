@@ -13,7 +13,7 @@ public final class GetClusterAuthenticatorGroupsConfig {
 
     @OutputCustomType.Constructor({"securityGroup"})
     private GetClusterAuthenticatorGroupsConfig(String securityGroup) {
-        this.securityGroup = Objects.requireNonNull(securityGroup);
+        this.securityGroup = securityGroup;
     }
 
     public String getSecurityGroup() {

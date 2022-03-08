@@ -21,9 +21,9 @@ public final class GetServiceTemplateSpecContainerEnvFrom {
         List<GetServiceTemplateSpecContainerEnvFromConfigMapRef> configMapReves,
         String prefix,
         List<GetServiceTemplateSpecContainerEnvFromSecretRef> secretReves) {
-        this.configMapReves = Objects.requireNonNull(configMapReves);
-        this.prefix = Objects.requireNonNull(prefix);
-        this.secretReves = Objects.requireNonNull(secretReves);
+        this.configMapReves = configMapReves;
+        this.prefix = prefix;
+        this.secretReves = secretReves;
     }
 
     public List<GetServiceTemplateSpecContainerEnvFromConfigMapRef> getConfigMapReves() {

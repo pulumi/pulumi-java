@@ -27,7 +27,7 @@ public final class BucketLogging {
     private BucketLogging(
         String logBucket,
         @Nullable String logObjectPrefix) {
-        this.logBucket = Objects.requireNonNull(logBucket);
+        this.logBucket = logBucket;
         this.logObjectPrefix = logObjectPrefix;
     }
 

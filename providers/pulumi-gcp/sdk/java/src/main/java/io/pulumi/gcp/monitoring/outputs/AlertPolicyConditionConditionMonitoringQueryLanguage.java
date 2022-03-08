@@ -55,8 +55,8 @@ public final class AlertPolicyConditionConditionMonitoringQueryLanguage {
         String duration,
         String query,
         @Nullable AlertPolicyConditionConditionMonitoringQueryLanguageTrigger trigger) {
-        this.duration = Objects.requireNonNull(duration);
-        this.query = Objects.requireNonNull(query);
+        this.duration = duration;
+        this.query = query;
         this.trigger = trigger;
     }
 

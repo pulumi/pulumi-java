@@ -32,15 +32,15 @@ public final class GetBucketLifecycleRuleCondition {
         String noncurrentTimeBefore,
         Integer numNewerVersions,
         String withState) {
-        this.age = Objects.requireNonNull(age);
-        this.createdBefore = Objects.requireNonNull(createdBefore);
-        this.customTimeBefore = Objects.requireNonNull(customTimeBefore);
-        this.daysSinceCustomTime = Objects.requireNonNull(daysSinceCustomTime);
-        this.daysSinceNoncurrentTime = Objects.requireNonNull(daysSinceNoncurrentTime);
-        this.matchesStorageClasses = Objects.requireNonNull(matchesStorageClasses);
-        this.noncurrentTimeBefore = Objects.requireNonNull(noncurrentTimeBefore);
-        this.numNewerVersions = Objects.requireNonNull(numNewerVersions);
-        this.withState = Objects.requireNonNull(withState);
+        this.age = age;
+        this.createdBefore = createdBefore;
+        this.customTimeBefore = customTimeBefore;
+        this.daysSinceCustomTime = daysSinceCustomTime;
+        this.daysSinceNoncurrentTime = daysSinceNoncurrentTime;
+        this.matchesStorageClasses = matchesStorageClasses;
+        this.noncurrentTimeBefore = noncurrentTimeBefore;
+        this.numNewerVersions = numNewerVersions;
+        this.withState = withState;
     }
 
     public Integer getAge() {

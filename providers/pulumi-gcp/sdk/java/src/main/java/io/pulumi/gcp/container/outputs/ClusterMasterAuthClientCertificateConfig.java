@@ -13,7 +13,7 @@ public final class ClusterMasterAuthClientCertificateConfig {
 
     @OutputCustomType.Constructor({"issueClientCertificate"})
     private ClusterMasterAuthClientCertificateConfig(Boolean issueClientCertificate) {
-        this.issueClientCertificate = Objects.requireNonNull(issueClientCertificate);
+        this.issueClientCertificate = issueClientCertificate;
     }
 
     public Boolean getIssueClientCertificate() {

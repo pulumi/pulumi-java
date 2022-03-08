@@ -20,7 +20,7 @@ public final class InstanceFromTemplateReservationAffinity {
         @Nullable InstanceFromTemplateReservationAffinitySpecificReservation specificReservation,
         String type) {
         this.specificReservation = specificReservation;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     public Optional<InstanceFromTemplateReservationAffinitySpecificReservation> getSpecificReservation() {

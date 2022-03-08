@@ -20,9 +20,9 @@ public final class GetClusterResourceUsageExportConfig {
         List<GetClusterResourceUsageExportConfigBigqueryDestination> bigqueryDestinations,
         Boolean enableNetworkEgressMetering,
         Boolean enableResourceConsumptionMetering) {
-        this.bigqueryDestinations = Objects.requireNonNull(bigqueryDestinations);
-        this.enableNetworkEgressMetering = Objects.requireNonNull(enableNetworkEgressMetering);
-        this.enableResourceConsumptionMetering = Objects.requireNonNull(enableResourceConsumptionMetering);
+        this.bigqueryDestinations = bigqueryDestinations;
+        this.enableNetworkEgressMetering = enableNetworkEgressMetering;
+        this.enableResourceConsumptionMetering = enableResourceConsumptionMetering;
     }
 
     public List<GetClusterResourceUsageExportConfigBigqueryDestination> getBigqueryDestinations() {

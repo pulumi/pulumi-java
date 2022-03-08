@@ -17,7 +17,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigTimespanConfigTime
 
     @OutputCustomType.Constructor({"name"})
     private PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampField(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

@@ -19,9 +19,9 @@ public final class GetHcVpnGatewayVpnInterface {
         Integer id,
         String interconnectAttachment,
         String ipAddress) {
-        this.id = Objects.requireNonNull(id);
-        this.interconnectAttachment = Objects.requireNonNull(interconnectAttachment);
-        this.ipAddress = Objects.requireNonNull(ipAddress);
+        this.id = id;
+        this.interconnectAttachment = interconnectAttachment;
+        this.ipAddress = ipAddress;
     }
 
     public Integer getId() {

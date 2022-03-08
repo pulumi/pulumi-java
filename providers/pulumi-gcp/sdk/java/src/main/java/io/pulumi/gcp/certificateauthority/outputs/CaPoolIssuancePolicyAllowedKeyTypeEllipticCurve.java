@@ -18,7 +18,7 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeEllipticCurve {
 
     @OutputCustomType.Constructor({"signatureAlgorithm"})
     private CaPoolIssuancePolicyAllowedKeyTypeEllipticCurve(String signatureAlgorithm) {
-        this.signatureAlgorithm = Objects.requireNonNull(signatureAlgorithm);
+        this.signatureAlgorithm = signatureAlgorithm;
     }
 
     /**

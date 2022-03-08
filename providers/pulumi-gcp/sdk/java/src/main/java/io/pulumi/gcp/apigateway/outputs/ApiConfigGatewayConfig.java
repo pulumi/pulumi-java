@@ -18,7 +18,7 @@ public final class ApiConfigGatewayConfig {
 
     @OutputCustomType.Constructor({"backendConfig"})
     private ApiConfigGatewayConfig(ApiConfigGatewayConfigBackendConfig backendConfig) {
-        this.backendConfig = Objects.requireNonNull(backendConfig);
+        this.backendConfig = backendConfig;
     }
 
     /**

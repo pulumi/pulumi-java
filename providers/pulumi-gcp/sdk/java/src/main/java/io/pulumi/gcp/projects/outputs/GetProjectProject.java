@@ -31,13 +31,13 @@ public final class GetProjectProject {
         String number,
         Map<String,String> parent,
         String projectId) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.labels = Objects.requireNonNull(labels);
-        this.lifecycleState = Objects.requireNonNull(lifecycleState);
-        this.name = Objects.requireNonNull(name);
-        this.number = Objects.requireNonNull(number);
-        this.parent = Objects.requireNonNull(parent);
-        this.projectId = Objects.requireNonNull(projectId);
+        this.createTime = createTime;
+        this.labels = labels;
+        this.lifecycleState = lifecycleState;
+        this.name = name;
+        this.number = number;
+        this.parent = parent;
+        this.projectId = projectId;
     }
 
     public String getCreateTime() {

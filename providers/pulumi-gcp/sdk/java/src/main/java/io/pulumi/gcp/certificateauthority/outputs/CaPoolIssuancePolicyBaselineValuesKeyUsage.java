@@ -37,8 +37,8 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsage {
         CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsage baseKeyUsage,
         CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsage extendedKeyUsage,
         @Nullable List<CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsage> unknownExtendedKeyUsages) {
-        this.baseKeyUsage = Objects.requireNonNull(baseKeyUsage);
-        this.extendedKeyUsage = Objects.requireNonNull(extendedKeyUsage);
+        this.baseKeyUsage = baseKeyUsage;
+        this.extendedKeyUsage = extendedKeyUsage;
         this.unknownExtendedKeyUsages = unknownExtendedKeyUsages;
     }
 

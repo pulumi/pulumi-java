@@ -41,8 +41,8 @@ public final class CxIntentParameter {
         String id,
         @Nullable Boolean isList,
         @Nullable Boolean redact) {
-        this.entityType = Objects.requireNonNull(entityType);
-        this.id = Objects.requireNonNull(id);
+        this.entityType = entityType;
+        this.id = id;
         this.isList = isList;
         this.redact = redact;
     }

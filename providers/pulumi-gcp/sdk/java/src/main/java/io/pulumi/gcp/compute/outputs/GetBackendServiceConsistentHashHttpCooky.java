@@ -24,9 +24,9 @@ public final class GetBackendServiceConsistentHashHttpCooky {
         String name,
         String path,
         List<GetBackendServiceConsistentHashHttpCookyTtl> ttls) {
-        this.name = Objects.requireNonNull(name);
-        this.path = Objects.requireNonNull(path);
-        this.ttls = Objects.requireNonNull(ttls);
+        this.name = name;
+        this.path = path;
+        this.ttls = ttls;
     }
 
     /**

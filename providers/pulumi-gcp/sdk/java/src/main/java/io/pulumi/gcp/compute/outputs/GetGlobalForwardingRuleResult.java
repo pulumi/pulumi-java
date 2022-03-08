@@ -51,21 +51,21 @@ public final class GetGlobalForwardingRuleResult {
         @Nullable String project,
         String selfLink,
         String target) {
-        this.description = Objects.requireNonNull(description);
-        this.id = Objects.requireNonNull(id);
-        this.ipAddress = Objects.requireNonNull(ipAddress);
-        this.ipProtocol = Objects.requireNonNull(ipProtocol);
-        this.ipVersion = Objects.requireNonNull(ipVersion);
-        this.labelFingerprint = Objects.requireNonNull(labelFingerprint);
-        this.labels = Objects.requireNonNull(labels);
-        this.loadBalancingScheme = Objects.requireNonNull(loadBalancingScheme);
-        this.metadataFilters = Objects.requireNonNull(metadataFilters);
-        this.name = Objects.requireNonNull(name);
-        this.network = Objects.requireNonNull(network);
-        this.portRange = Objects.requireNonNull(portRange);
+        this.description = description;
+        this.id = id;
+        this.ipAddress = ipAddress;
+        this.ipProtocol = ipProtocol;
+        this.ipVersion = ipVersion;
+        this.labelFingerprint = labelFingerprint;
+        this.labels = labels;
+        this.loadBalancingScheme = loadBalancingScheme;
+        this.metadataFilters = metadataFilters;
+        this.name = name;
+        this.network = network;
+        this.portRange = portRange;
         this.project = project;
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.target = Objects.requireNonNull(target);
+        this.selfLink = selfLink;
+        this.target = target;
     }
 
     public String getDescription() {

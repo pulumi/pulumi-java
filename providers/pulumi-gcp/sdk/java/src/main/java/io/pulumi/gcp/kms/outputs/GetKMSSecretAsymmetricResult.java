@@ -36,11 +36,11 @@ public final class GetKMSSecretAsymmetricResult {
         String cryptoKeyVersion,
         String id,
         String plaintext) {
-        this.ciphertext = Objects.requireNonNull(ciphertext);
+        this.ciphertext = ciphertext;
         this.crc32 = crc32;
-        this.cryptoKeyVersion = Objects.requireNonNull(cryptoKeyVersion);
-        this.id = Objects.requireNonNull(id);
-        this.plaintext = Objects.requireNonNull(plaintext);
+        this.cryptoKeyVersion = cryptoKeyVersion;
+        this.id = id;
+        this.plaintext = plaintext;
     }
 
     public String getCiphertext() {

@@ -25,8 +25,8 @@ public final class BucketLifecycleRule {
     private BucketLifecycleRule(
         BucketLifecycleRuleAction action,
         BucketLifecycleRuleCondition condition) {
-        this.action = Objects.requireNonNull(action);
-        this.condition = Objects.requireNonNull(condition);
+        this.action = action;
+        this.condition = condition;
     }
 
     /**

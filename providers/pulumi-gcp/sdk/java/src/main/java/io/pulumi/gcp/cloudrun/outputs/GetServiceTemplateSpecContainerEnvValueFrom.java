@@ -14,7 +14,7 @@ public final class GetServiceTemplateSpecContainerEnvValueFrom {
 
     @OutputCustomType.Constructor({"secretKeyReves"})
     private GetServiceTemplateSpecContainerEnvValueFrom(List<GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef> secretKeyReves) {
-        this.secretKeyReves = Objects.requireNonNull(secretKeyReves);
+        this.secretKeyReves = secretKeyReves;
     }
 
     public List<GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef> getSecretKeyReves() {

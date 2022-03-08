@@ -19,7 +19,7 @@ public final class QueueStackdriverLoggingConfig {
 
     @OutputCustomType.Constructor({"samplingRatio"})
     private QueueStackdriverLoggingConfig(Double samplingRatio) {
-        this.samplingRatio = Objects.requireNonNull(samplingRatio);
+        this.samplingRatio = samplingRatio;
     }
 
     /**

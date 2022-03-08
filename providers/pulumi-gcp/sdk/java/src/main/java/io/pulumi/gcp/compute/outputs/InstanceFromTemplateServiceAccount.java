@@ -20,7 +20,7 @@ public final class InstanceFromTemplateServiceAccount {
         @Nullable String email,
         List<String> scopes) {
         this.email = email;
-        this.scopes = Objects.requireNonNull(scopes);
+        this.scopes = scopes;
     }
 
     public Optional<String> getEmail() {

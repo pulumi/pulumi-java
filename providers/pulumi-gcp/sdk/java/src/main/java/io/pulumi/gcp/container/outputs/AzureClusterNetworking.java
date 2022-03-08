@@ -31,9 +31,9 @@ public final class AzureClusterNetworking {
         List<String> podAddressCidrBlocks,
         List<String> serviceAddressCidrBlocks,
         String virtualNetworkId) {
-        this.podAddressCidrBlocks = Objects.requireNonNull(podAddressCidrBlocks);
-        this.serviceAddressCidrBlocks = Objects.requireNonNull(serviceAddressCidrBlocks);
-        this.virtualNetworkId = Objects.requireNonNull(virtualNetworkId);
+        this.podAddressCidrBlocks = podAddressCidrBlocks;
+        this.serviceAddressCidrBlocks = serviceAddressCidrBlocks;
+        this.virtualNetworkId = virtualNetworkId;
     }
 
     /**

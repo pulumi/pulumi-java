@@ -18,7 +18,7 @@ public final class PreventionInspectTemplateInspectConfigInfoType {
 
     @OutputCustomType.Constructor({"name"})
     private PreventionInspectTemplateInspectConfigInfoType(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

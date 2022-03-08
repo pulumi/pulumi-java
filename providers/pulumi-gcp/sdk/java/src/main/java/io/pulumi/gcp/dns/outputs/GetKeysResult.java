@@ -37,11 +37,11 @@ public final class GetKeysResult {
         String managedZone,
         String project,
         List<GetKeysZoneSigningKey> zoneSigningKeys) {
-        this.id = Objects.requireNonNull(id);
-        this.keySigningKeys = Objects.requireNonNull(keySigningKeys);
-        this.managedZone = Objects.requireNonNull(managedZone);
-        this.project = Objects.requireNonNull(project);
-        this.zoneSigningKeys = Objects.requireNonNull(zoneSigningKeys);
+        this.id = id;
+        this.keySigningKeys = keySigningKeys;
+        this.managedZone = managedZone;
+        this.project = project;
+        this.zoneSigningKeys = zoneSigningKeys;
     }
 
     /**

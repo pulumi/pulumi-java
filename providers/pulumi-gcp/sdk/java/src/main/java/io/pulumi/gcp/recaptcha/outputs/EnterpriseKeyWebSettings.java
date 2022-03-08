@@ -50,7 +50,7 @@ public final class EnterpriseKeyWebSettings {
         this.allowAmpTraffic = allowAmpTraffic;
         this.allowedDomains = allowedDomains;
         this.challengeSecurityPreference = challengeSecurityPreference;
-        this.integrationType = Objects.requireNonNull(integrationType);
+        this.integrationType = integrationType;
     }
 
     /**

@@ -22,10 +22,10 @@ public final class GetBucketCor {
         List<String> methods,
         List<String> origins,
         List<String> responseHeaders) {
-        this.maxAgeSeconds = Objects.requireNonNull(maxAgeSeconds);
-        this.methods = Objects.requireNonNull(methods);
-        this.origins = Objects.requireNonNull(origins);
-        this.responseHeaders = Objects.requireNonNull(responseHeaders);
+        this.maxAgeSeconds = maxAgeSeconds;
+        this.methods = methods;
+        this.origins = origins;
+        this.responseHeaders = responseHeaders;
     }
 
     public Integer getMaxAgeSeconds() {

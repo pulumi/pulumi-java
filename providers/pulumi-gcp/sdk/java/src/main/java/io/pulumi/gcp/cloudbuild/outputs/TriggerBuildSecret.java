@@ -28,7 +28,7 @@ public final class TriggerBuildSecret {
     private TriggerBuildSecret(
         String kmsKeyName,
         @Nullable Map<String,String> secretEnv) {
-        this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
+        this.kmsKeyName = kmsKeyName;
         this.secretEnv = secretEnv;
     }
 

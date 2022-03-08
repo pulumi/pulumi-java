@@ -42,11 +42,11 @@ public final class GetCaCertsCert {
         String createTime,
         String expirationTime,
         String sha1Fingerprint) {
-        this.cert = Objects.requireNonNull(cert);
-        this.commonName = Objects.requireNonNull(commonName);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.expirationTime = Objects.requireNonNull(expirationTime);
-        this.sha1Fingerprint = Objects.requireNonNull(sha1Fingerprint);
+        this.cert = cert;
+        this.commonName = commonName;
+        this.createTime = createTime;
+        this.expirationTime = expirationTime;
+        this.sha1Fingerprint = sha1Fingerprint;
     }
 
     /**

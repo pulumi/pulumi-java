@@ -39,9 +39,9 @@ public final class GetTestablePermissionsResult {
         List<GetTestablePermissionsPermission> permissions,
         @Nullable List<String> stages) {
         this.customSupportLevel = customSupportLevel;
-        this.fullResourceName = Objects.requireNonNull(fullResourceName);
-        this.id = Objects.requireNonNull(id);
-        this.permissions = Objects.requireNonNull(permissions);
+        this.fullResourceName = fullResourceName;
+        this.id = id;
+        this.permissions = permissions;
         this.stages = stages;
     }
 

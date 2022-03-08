@@ -18,7 +18,7 @@ public final class ClusterAddonsConfigGcpFilestoreCsiDriverConfig {
 
     @OutputCustomType.Constructor({"enabled"})
     private ClusterAddonsConfigGcpFilestoreCsiDriverConfig(Boolean enabled) {
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
     }
 
     /**

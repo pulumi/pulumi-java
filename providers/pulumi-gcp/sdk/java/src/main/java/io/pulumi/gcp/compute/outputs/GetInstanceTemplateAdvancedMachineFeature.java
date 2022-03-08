@@ -17,8 +17,8 @@ public final class GetInstanceTemplateAdvancedMachineFeature {
     private GetInstanceTemplateAdvancedMachineFeature(
         Boolean enableNestedVirtualization,
         Integer threadsPerCore) {
-        this.enableNestedVirtualization = Objects.requireNonNull(enableNestedVirtualization);
-        this.threadsPerCore = Objects.requireNonNull(threadsPerCore);
+        this.enableNestedVirtualization = enableNestedVirtualization;
+        this.threadsPerCore = threadsPerCore;
     }
 
     public Boolean getEnableNestedVirtualization() {
