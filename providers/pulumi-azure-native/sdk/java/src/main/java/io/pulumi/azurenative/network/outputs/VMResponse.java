@@ -47,9 +47,9 @@ public final class VMResponse {
         String type) {
         this.id = id;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

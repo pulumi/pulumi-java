@@ -36,7 +36,7 @@ public final class NumberInAdvancedFilterResponse {
         String operatorType,
         @Nullable List<Double> values) {
         this.key = key;
-        this.operatorType = Objects.requireNonNull(operatorType);
+        this.operatorType = operatorType;
         this.values = values;
     }
 

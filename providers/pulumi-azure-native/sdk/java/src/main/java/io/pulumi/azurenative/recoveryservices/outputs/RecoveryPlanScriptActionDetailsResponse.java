@@ -39,9 +39,9 @@ public final class RecoveryPlanScriptActionDetailsResponse {
         String instanceType,
         String path,
         @Nullable String timeout) {
-        this.fabricLocation = Objects.requireNonNull(fabricLocation);
-        this.instanceType = Objects.requireNonNull(instanceType);
-        this.path = Objects.requireNonNull(path);
+        this.fabricLocation = fabricLocation;
+        this.instanceType = instanceType;
+        this.path = path;
         this.timeout = timeout;
     }
 

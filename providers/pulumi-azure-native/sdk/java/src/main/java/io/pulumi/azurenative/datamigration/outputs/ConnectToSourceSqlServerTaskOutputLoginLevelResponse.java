@@ -57,13 +57,13 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse {
         MigrationEligibilityInfoResponse migrationEligibility,
         String name,
         String resultType) {
-        this.defaultDatabase = Objects.requireNonNull(defaultDatabase);
-        this.id = Objects.requireNonNull(id);
-        this.isEnabled = Objects.requireNonNull(isEnabled);
-        this.loginType = Objects.requireNonNull(loginType);
-        this.migrationEligibility = Objects.requireNonNull(migrationEligibility);
-        this.name = Objects.requireNonNull(name);
-        this.resultType = Objects.requireNonNull(resultType);
+        this.defaultDatabase = defaultDatabase;
+        this.id = id;
+        this.isEnabled = isEnabled;
+        this.loginType = loginType;
+        this.migrationEligibility = migrationEligibility;
+        this.name = name;
+        this.resultType = resultType;
     }
 
     /**

@@ -55,7 +55,7 @@ public final class PostgresInstanceSkuResponse {
         this.capacity = capacity;
         this.dev = dev;
         this.family = family;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.size = size;
         this.tier = tier;
     }

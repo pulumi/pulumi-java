@@ -68,15 +68,15 @@ public final class GetKustoDatabaseDataSetResult {
         String provisioningState,
         SystemDataResponse systemData,
         String type) {
-        this.dataSetId = Objects.requireNonNull(dataSetId);
-        this.id = Objects.requireNonNull(id);
-        this.kind = Objects.requireNonNull(kind);
-        this.kustoDatabaseResourceId = Objects.requireNonNull(kustoDatabaseResourceId);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.dataSetId = dataSetId;
+        this.id = id;
+        this.kind = kind;
+        this.kustoDatabaseResourceId = kustoDatabaseResourceId;
+        this.location = location;
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

@@ -78,7 +78,7 @@ public final class AzureBlobFSSinkResponse {
         this.metadata = metadata;
         this.sinkRetryCount = sinkRetryCount;
         this.sinkRetryWait = sinkRetryWait;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.writeBatchSize = writeBatchSize;
         this.writeBatchTimeout = writeBatchTimeout;
     }

@@ -27,7 +27,7 @@ public final class AccessReviewReviewerResponse {
         @Nullable String principalId,
         String principalType) {
         this.principalId = principalId;
-        this.principalType = Objects.requireNonNull(principalType);
+        this.principalType = principalType;
     }
 
     /**

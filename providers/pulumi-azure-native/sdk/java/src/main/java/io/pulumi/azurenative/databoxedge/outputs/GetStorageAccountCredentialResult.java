@@ -89,16 +89,16 @@ public final class GetStorageAccountCredentialResult {
         String type,
         @Nullable String userName) {
         this.accountKey = accountKey;
-        this.accountType = Objects.requireNonNull(accountType);
-        this.alias = Objects.requireNonNull(alias);
+        this.accountType = accountType;
+        this.alias = alias;
         this.blobDomainName = blobDomainName;
         this.connectionString = connectionString;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.sslStatus = Objects.requireNonNull(sslStatus);
+        this.id = id;
+        this.name = name;
+        this.sslStatus = sslStatus;
         this.storageAccountId = storageAccountId;
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.systemData = systemData;
+        this.type = type;
         this.userName = userName;
     }
 

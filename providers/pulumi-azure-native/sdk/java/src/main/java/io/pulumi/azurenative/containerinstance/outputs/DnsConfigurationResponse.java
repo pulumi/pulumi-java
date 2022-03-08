@@ -33,7 +33,7 @@ public final class DnsConfigurationResponse {
         List<String> nameServers,
         @Nullable String options,
         @Nullable String searchDomains) {
-        this.nameServers = Objects.requireNonNull(nameServers);
+        this.nameServers = nameServers;
         this.options = options;
         this.searchDomains = searchDomains;
     }

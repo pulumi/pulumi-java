@@ -54,7 +54,7 @@ public final class ServersSolutionSummaryResponse {
         @Nullable Integer testMigratedCount) {
         this.assessedCount = assessedCount;
         this.discoveredCount = discoveredCount;
-        this.instanceType = Objects.requireNonNull(instanceType);
+        this.instanceType = instanceType;
         this.migratedCount = migratedCount;
         this.replicatingCount = replicatingCount;
         this.testMigratedCount = testMigratedCount;

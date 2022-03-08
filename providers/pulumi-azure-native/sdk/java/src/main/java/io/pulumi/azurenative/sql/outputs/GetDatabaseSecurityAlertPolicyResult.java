@@ -90,18 +90,18 @@ public final class GetDatabaseSecurityAlertPolicyResult {
         @Nullable String storageEndpoint,
         SystemDataResponse systemData,
         String type) {
-        this.creationTime = Objects.requireNonNull(creationTime);
+        this.creationTime = creationTime;
         this.disabledAlerts = disabledAlerts;
         this.emailAccountAdmins = emailAccountAdmins;
         this.emailAddresses = emailAddresses;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.retentionDays = retentionDays;
-        this.state = Objects.requireNonNull(state);
+        this.state = state;
         this.storageAccountAccessKey = storageAccountAccessKey;
         this.storageEndpoint = storageEndpoint;
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

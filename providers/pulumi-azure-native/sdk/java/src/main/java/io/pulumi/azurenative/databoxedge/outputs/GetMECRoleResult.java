@@ -60,12 +60,12 @@ public final class GetMECRoleResult {
         SystemDataResponse systemData,
         String type) {
         this.connectionString = connectionString;
-        this.id = Objects.requireNonNull(id);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.roleStatus = Objects.requireNonNull(roleStatus);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.id = id;
+        this.kind = kind;
+        this.name = name;
+        this.roleStatus = roleStatus;
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

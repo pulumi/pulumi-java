@@ -40,8 +40,8 @@ public final class IoTDeviceInfoResponse {
         String ioTHostHub,
         @Nullable String ioTHostHubId) {
         this.authentication = authentication;
-        this.deviceId = Objects.requireNonNull(deviceId);
-        this.ioTHostHub = Objects.requireNonNull(ioTHostHub);
+        this.deviceId = deviceId;
+        this.ioTHostHub = ioTHostHub;
         this.ioTHostHubId = ioTHostHubId;
     }
 

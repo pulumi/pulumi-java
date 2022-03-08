@@ -24,8 +24,8 @@ public final class PrivateEndpointResponse {
     private PrivateEndpointResponse(
         String id,
         String subnetArmId) {
-        this.id = Objects.requireNonNull(id);
-        this.subnetArmId = Objects.requireNonNull(subnetArmId);
+        this.id = id;
+        this.subnetArmId = subnetArmId;
     }
 
     /**

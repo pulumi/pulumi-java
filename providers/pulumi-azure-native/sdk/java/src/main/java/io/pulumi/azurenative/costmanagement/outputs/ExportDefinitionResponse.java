@@ -42,8 +42,8 @@ public final class ExportDefinitionResponse {
         String type) {
         this.dataSet = dataSet;
         this.timePeriod = timePeriod;
-        this.timeframe = Objects.requireNonNull(timeframe);
-        this.type = Objects.requireNonNull(type);
+        this.timeframe = timeframe;
+        this.type = type;
     }
 
     /**

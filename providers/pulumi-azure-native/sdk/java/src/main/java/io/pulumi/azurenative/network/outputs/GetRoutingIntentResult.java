@@ -52,12 +52,12 @@ public final class GetRoutingIntentResult {
         String provisioningState,
         @Nullable List<RoutingPolicyResponse> routingPolicies,
         String type) {
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.id = id;
         this.name = name;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.routingPolicies = routingPolicies;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

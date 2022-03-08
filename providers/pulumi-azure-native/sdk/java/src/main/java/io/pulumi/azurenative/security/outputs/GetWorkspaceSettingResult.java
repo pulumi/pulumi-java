@@ -42,11 +42,11 @@ public final class GetWorkspaceSettingResult {
         String scope,
         String type,
         String workspaceId) {
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.scope = Objects.requireNonNull(scope);
-        this.type = Objects.requireNonNull(type);
-        this.workspaceId = Objects.requireNonNull(workspaceId);
+        this.id = id;
+        this.name = name;
+        this.scope = scope;
+        this.type = type;
+        this.workspaceId = workspaceId;
     }
 
     /**

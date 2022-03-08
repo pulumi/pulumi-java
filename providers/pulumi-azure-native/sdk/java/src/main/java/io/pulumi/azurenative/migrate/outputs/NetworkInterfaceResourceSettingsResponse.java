@@ -44,8 +44,8 @@ public final class NetworkInterfaceResourceSettingsResponse {
         String targetResourceName) {
         this.enableAcceleratedNetworking = enableAcceleratedNetworking;
         this.ipConfigurations = ipConfigurations;
-        this.resourceType = Objects.requireNonNull(resourceType);
-        this.targetResourceName = Objects.requireNonNull(targetResourceName);
+        this.resourceType = resourceType;
+        this.targetResourceName = targetResourceName;
     }
 
     /**

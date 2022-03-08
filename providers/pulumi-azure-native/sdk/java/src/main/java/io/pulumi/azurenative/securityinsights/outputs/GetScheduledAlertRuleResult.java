@@ -134,23 +134,23 @@ public final class GetScheduledAlertRuleResult {
         String type) {
         this.alertRuleTemplateName = alertRuleTemplateName;
         this.description = description;
-        this.displayName = Objects.requireNonNull(displayName);
-        this.enabled = Objects.requireNonNull(enabled);
+        this.displayName = displayName;
+        this.enabled = enabled;
         this.etag = etag;
-        this.id = Objects.requireNonNull(id);
-        this.kind = Objects.requireNonNull(kind);
-        this.lastModifiedUtc = Objects.requireNonNull(lastModifiedUtc);
-        this.name = Objects.requireNonNull(name);
-        this.query = Objects.requireNonNull(query);
-        this.queryFrequency = Objects.requireNonNull(queryFrequency);
-        this.queryPeriod = Objects.requireNonNull(queryPeriod);
-        this.severity = Objects.requireNonNull(severity);
-        this.suppressionDuration = Objects.requireNonNull(suppressionDuration);
-        this.suppressionEnabled = Objects.requireNonNull(suppressionEnabled);
+        this.id = id;
+        this.kind = kind;
+        this.lastModifiedUtc = lastModifiedUtc;
+        this.name = name;
+        this.query = query;
+        this.queryFrequency = queryFrequency;
+        this.queryPeriod = queryPeriod;
+        this.severity = severity;
+        this.suppressionDuration = suppressionDuration;
+        this.suppressionEnabled = suppressionEnabled;
         this.tactics = tactics;
-        this.triggerOperator = Objects.requireNonNull(triggerOperator);
-        this.triggerThreshold = Objects.requireNonNull(triggerThreshold);
-        this.type = Objects.requireNonNull(type);
+        this.triggerOperator = triggerOperator;
+        this.triggerThreshold = triggerThreshold;
+        this.type = type;
     }
 
     /**

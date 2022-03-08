@@ -60,7 +60,7 @@ public final class AzureMachineLearningWebServiceFunctionBindingResponse {
         this.endpoint = endpoint;
         this.inputs = inputs;
         this.outputs = outputs;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

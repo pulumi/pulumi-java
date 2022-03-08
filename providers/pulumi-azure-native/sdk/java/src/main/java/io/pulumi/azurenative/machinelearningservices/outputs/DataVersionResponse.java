@@ -62,7 +62,7 @@ public final class DataVersionResponse {
         this.datastoreId = datastoreId;
         this.description = description;
         this.isAnonymous = isAnonymous;
-        this.path = Objects.requireNonNull(path);
+        this.path = path;
         this.properties = properties;
         this.tags = tags;
     }

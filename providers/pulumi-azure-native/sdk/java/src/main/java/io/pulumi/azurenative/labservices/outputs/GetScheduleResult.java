@@ -76,16 +76,16 @@ public final class GetScheduleResult {
         SystemDataResponse systemData,
         String timeZoneId,
         String type) {
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.notes = notes;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.recurrencePattern = recurrencePattern;
         this.startAt = startAt;
-        this.stopAt = Objects.requireNonNull(stopAt);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.timeZoneId = Objects.requireNonNull(timeZoneId);
-        this.type = Objects.requireNonNull(type);
+        this.stopAt = stopAt;
+        this.systemData = systemData;
+        this.timeZoneId = timeZoneId;
+        this.type = type;
     }
 
     /**

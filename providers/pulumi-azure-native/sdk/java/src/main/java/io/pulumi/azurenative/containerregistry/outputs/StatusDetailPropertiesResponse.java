@@ -42,11 +42,11 @@ public final class StatusDetailPropertiesResponse {
         String description,
         String timestamp,
         String type) {
-        this.code = Objects.requireNonNull(code);
-        this.correlationId = Objects.requireNonNull(correlationId);
-        this.description = Objects.requireNonNull(description);
-        this.timestamp = Objects.requireNonNull(timestamp);
-        this.type = Objects.requireNonNull(type);
+        this.code = code;
+        this.correlationId = correlationId;
+        this.description = description;
+        this.timestamp = timestamp;
+        this.type = type;
     }
 
     /**

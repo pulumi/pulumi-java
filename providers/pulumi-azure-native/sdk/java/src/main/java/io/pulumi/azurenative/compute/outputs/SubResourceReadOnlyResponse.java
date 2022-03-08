@@ -17,7 +17,7 @@ public final class SubResourceReadOnlyResponse {
 
     @OutputCustomType.Constructor({"id"})
     private SubResourceReadOnlyResponse(String id) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
     }
 
     /**

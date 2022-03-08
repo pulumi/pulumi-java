@@ -24,8 +24,8 @@ public final class DomainValidationPropertiesResponse {
     private DomainValidationPropertiesResponse(
         String expirationDate,
         String validationToken) {
-        this.expirationDate = Objects.requireNonNull(expirationDate);
-        this.validationToken = Objects.requireNonNull(validationToken);
+        this.expirationDate = expirationDate;
+        this.validationToken = validationToken;
     }
 
     /**

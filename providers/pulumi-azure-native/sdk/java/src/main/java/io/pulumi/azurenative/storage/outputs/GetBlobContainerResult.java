@@ -140,25 +140,25 @@ public final class GetBlobContainerResult {
         String type,
         String version) {
         this.defaultEncryptionScope = defaultEncryptionScope;
-        this.deleted = Objects.requireNonNull(deleted);
-        this.deletedTime = Objects.requireNonNull(deletedTime);
+        this.deleted = deleted;
+        this.deletedTime = deletedTime;
         this.denyEncryptionScopeOverride = denyEncryptionScopeOverride;
-        this.etag = Objects.requireNonNull(etag);
-        this.hasImmutabilityPolicy = Objects.requireNonNull(hasImmutabilityPolicy);
-        this.hasLegalHold = Objects.requireNonNull(hasLegalHold);
-        this.id = Objects.requireNonNull(id);
-        this.immutabilityPolicy = Objects.requireNonNull(immutabilityPolicy);
-        this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
-        this.leaseDuration = Objects.requireNonNull(leaseDuration);
-        this.leaseState = Objects.requireNonNull(leaseState);
-        this.leaseStatus = Objects.requireNonNull(leaseStatus);
-        this.legalHold = Objects.requireNonNull(legalHold);
+        this.etag = etag;
+        this.hasImmutabilityPolicy = hasImmutabilityPolicy;
+        this.hasLegalHold = hasLegalHold;
+        this.id = id;
+        this.immutabilityPolicy = immutabilityPolicy;
+        this.lastModifiedTime = lastModifiedTime;
+        this.leaseDuration = leaseDuration;
+        this.leaseState = leaseState;
+        this.leaseStatus = leaseStatus;
+        this.legalHold = legalHold;
         this.metadata = metadata;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.publicAccess = publicAccess;
-        this.remainingRetentionDays = Objects.requireNonNull(remainingRetentionDays);
-        this.type = Objects.requireNonNull(type);
-        this.version = Objects.requireNonNull(version);
+        this.remainingRetentionDays = remainingRetentionDays;
+        this.type = type;
+        this.version = version;
     }
 
     /**

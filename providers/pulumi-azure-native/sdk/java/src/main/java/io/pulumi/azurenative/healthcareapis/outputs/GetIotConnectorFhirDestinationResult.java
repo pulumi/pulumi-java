@@ -71,14 +71,14 @@ public final class GetIotConnectorFhirDestinationResult {
         SystemDataResponse systemData,
         String type) {
         this.etag = etag;
-        this.fhirMapping = Objects.requireNonNull(fhirMapping);
-        this.fhirServiceResourceId = Objects.requireNonNull(fhirServiceResourceId);
-        this.id = Objects.requireNonNull(id);
+        this.fhirMapping = fhirMapping;
+        this.fhirServiceResourceId = fhirServiceResourceId;
+        this.id = id;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
-        this.resourceIdentityResolutionType = Objects.requireNonNull(resourceIdentityResolutionType);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.name = name;
+        this.resourceIdentityResolutionType = resourceIdentityResolutionType;
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

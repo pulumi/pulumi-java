@@ -75,16 +75,16 @@ public final class GetAlertsSuppressionRuleResult {
         String state,
         @Nullable SuppressionAlertsScopeResponse suppressionAlertsScope,
         String type) {
-        this.alertType = Objects.requireNonNull(alertType);
+        this.alertType = alertType;
         this.comment = comment;
         this.expirationDateUtc = expirationDateUtc;
-        this.id = Objects.requireNonNull(id);
-        this.lastModifiedUtc = Objects.requireNonNull(lastModifiedUtc);
-        this.name = Objects.requireNonNull(name);
-        this.reason = Objects.requireNonNull(reason);
-        this.state = Objects.requireNonNull(state);
+        this.id = id;
+        this.lastModifiedUtc = lastModifiedUtc;
+        this.name = name;
+        this.reason = reason;
+        this.state = state;
         this.suppressionAlertsScope = suppressionAlertsScope;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

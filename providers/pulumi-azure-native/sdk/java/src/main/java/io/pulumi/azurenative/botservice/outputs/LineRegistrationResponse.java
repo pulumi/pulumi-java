@@ -34,7 +34,7 @@ public final class LineRegistrationResponse {
         String generatedId) {
         this.channelAccessToken = channelAccessToken;
         this.channelSecret = channelSecret;
-        this.generatedId = Objects.requireNonNull(generatedId);
+        this.generatedId = generatedId;
     }
 
     /**

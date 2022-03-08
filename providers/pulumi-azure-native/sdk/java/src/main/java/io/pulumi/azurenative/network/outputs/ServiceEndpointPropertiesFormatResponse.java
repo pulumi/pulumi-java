@@ -34,7 +34,7 @@ public final class ServiceEndpointPropertiesFormatResponse {
         String provisioningState,
         @Nullable String service) {
         this.locations = locations;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.service = service;
     }
 

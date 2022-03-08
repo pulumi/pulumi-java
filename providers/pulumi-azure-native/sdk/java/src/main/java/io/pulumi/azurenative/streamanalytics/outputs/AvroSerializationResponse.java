@@ -18,7 +18,7 @@ public final class AvroSerializationResponse {
 
     @OutputCustomType.Constructor({"type"})
     private AvroSerializationResponse(String type) {
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

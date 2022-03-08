@@ -128,24 +128,24 @@ public final class GetScriptExecutionLogsResult {
         String timeout,
         String type,
         List<String> warnings) {
-        this.errors = Objects.requireNonNull(errors);
+        this.errors = errors;
         this.failureReason = failureReason;
-        this.finishedAt = Objects.requireNonNull(finishedAt);
+        this.finishedAt = finishedAt;
         this.hiddenParameters = hiddenParameters;
-        this.id = Objects.requireNonNull(id);
-        this.information = Objects.requireNonNull(information);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.information = information;
+        this.name = name;
         this.namedOutputs = namedOutputs;
         this.output = output;
         this.parameters = parameters;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.retention = retention;
         this.scriptCmdletId = scriptCmdletId;
-        this.startedAt = Objects.requireNonNull(startedAt);
-        this.submittedAt = Objects.requireNonNull(submittedAt);
-        this.timeout = Objects.requireNonNull(timeout);
-        this.type = Objects.requireNonNull(type);
-        this.warnings = Objects.requireNonNull(warnings);
+        this.startedAt = startedAt;
+        this.submittedAt = submittedAt;
+        this.timeout = timeout;
+        this.type = type;
+        this.warnings = warnings;
     }
 
     /**

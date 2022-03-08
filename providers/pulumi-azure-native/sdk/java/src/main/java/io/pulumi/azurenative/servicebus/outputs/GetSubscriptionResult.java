@@ -138,10 +138,10 @@ public final class GetSubscriptionResult {
         @Nullable String status,
         String type,
         String updatedAt) {
-        this.accessedAt = Objects.requireNonNull(accessedAt);
+        this.accessedAt = accessedAt;
         this.autoDeleteOnIdle = autoDeleteOnIdle;
-        this.countDetails = Objects.requireNonNull(countDetails);
-        this.createdAt = Objects.requireNonNull(createdAt);
+        this.countDetails = countDetails;
+        this.createdAt = createdAt;
         this.deadLetteringOnFilterEvaluationExceptions = deadLetteringOnFilterEvaluationExceptions;
         this.deadLetteringOnMessageExpiration = deadLetteringOnMessageExpiration;
         this.defaultMessageTimeToLive = defaultMessageTimeToLive;
@@ -149,15 +149,15 @@ public final class GetSubscriptionResult {
         this.enableBatchedOperations = enableBatchedOperations;
         this.forwardDeadLetteredMessagesTo = forwardDeadLetteredMessagesTo;
         this.forwardTo = forwardTo;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.lockDuration = lockDuration;
         this.maxDeliveryCount = maxDeliveryCount;
-        this.messageCount = Objects.requireNonNull(messageCount);
-        this.name = Objects.requireNonNull(name);
+        this.messageCount = messageCount;
+        this.name = name;
         this.requiresSession = requiresSession;
         this.status = status;
-        this.type = Objects.requireNonNull(type);
-        this.updatedAt = Objects.requireNonNull(updatedAt);
+        this.type = type;
+        this.updatedAt = updatedAt;
     }
 
     /**

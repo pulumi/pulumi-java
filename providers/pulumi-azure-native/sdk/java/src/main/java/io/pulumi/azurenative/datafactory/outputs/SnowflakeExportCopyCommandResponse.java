@@ -36,7 +36,7 @@ public final class SnowflakeExportCopyCommandResponse {
         String type) {
         this.additionalCopyOptions = additionalCopyOptions;
         this.additionalFormatOptions = additionalFormatOptions;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

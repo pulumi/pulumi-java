@@ -26,8 +26,8 @@ public final class DeliveryRuleRequestHeaderActionResponse {
     private DeliveryRuleRequestHeaderActionResponse(
         String name,
         HeaderActionParametersResponse parameters) {
-        this.name = Objects.requireNonNull(name);
-        this.parameters = Objects.requireNonNull(parameters);
+        this.name = name;
+        this.parameters = parameters;
     }
 
     /**

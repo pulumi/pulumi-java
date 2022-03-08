@@ -63,14 +63,14 @@ public final class AzureFirewallIPConfigurationResponse {
         @Nullable SubResourceResponse publicIPAddress,
         @Nullable SubResourceResponse subnet,
         String type) {
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.id = id;
         this.name = name;
-        this.privateIPAddress = Objects.requireNonNull(privateIPAddress);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.privateIPAddress = privateIPAddress;
+        this.provisioningState = provisioningState;
         this.publicIPAddress = publicIPAddress;
         this.subnet = subnet;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

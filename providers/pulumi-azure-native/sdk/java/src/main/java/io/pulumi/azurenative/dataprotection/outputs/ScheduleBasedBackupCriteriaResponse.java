@@ -63,7 +63,7 @@ public final class ScheduleBasedBackupCriteriaResponse {
         this.daysOfMonth = daysOfMonth;
         this.daysOfTheWeek = daysOfTheWeek;
         this.monthsOfYear = monthsOfYear;
-        this.objectType = Objects.requireNonNull(objectType);
+        this.objectType = objectType;
         this.scheduleTimes = scheduleTimes;
         this.weeksOfTheMonth = weeksOfTheMonth;
     }

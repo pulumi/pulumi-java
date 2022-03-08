@@ -39,9 +39,9 @@ public final class OSProfileResponse {
         @Nullable String sshPublicKey,
         String version) {
         this.computerName = computerName;
-        this.osType = Objects.requireNonNull(osType);
+        this.osType = osType;
         this.sshPublicKey = sshPublicKey;
-        this.version = Objects.requireNonNull(version);
+        this.version = version;
     }
 
     /**

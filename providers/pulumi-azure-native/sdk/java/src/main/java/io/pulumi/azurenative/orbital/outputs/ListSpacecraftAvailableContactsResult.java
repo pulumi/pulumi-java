@@ -27,7 +27,7 @@ public final class ListSpacecraftAvailableContactsResult {
     private ListSpacecraftAvailableContactsResult(
         String nextLink,
         @Nullable List<AvailableContactsResponse> value) {
-        this.nextLink = Objects.requireNonNull(nextLink);
+        this.nextLink = nextLink;
         this.value = value;
     }
 

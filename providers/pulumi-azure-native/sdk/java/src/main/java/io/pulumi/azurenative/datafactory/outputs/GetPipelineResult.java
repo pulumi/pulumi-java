@@ -142,14 +142,14 @@ public final class GetPipelineResult {
         this.annotations = annotations;
         this.concurrency = concurrency;
         this.description = description;
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.folder = folder;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.parameters = parameters;
         this.policy = policy;
         this.runDimensions = runDimensions;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.variables = variables;
     }
 

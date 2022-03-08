@@ -94,19 +94,19 @@ public final class GetIotHubDataConnectionResult {
         String sharedAccessPolicyName,
         @Nullable String tableName,
         String type) {
-        this.consumerGroup = Objects.requireNonNull(consumerGroup);
+        this.consumerGroup = consumerGroup;
         this.dataFormat = dataFormat;
         this.eventSystemProperties = eventSystemProperties;
-        this.id = Objects.requireNonNull(id);
-        this.iotHubResourceId = Objects.requireNonNull(iotHubResourceId);
-        this.kind = Objects.requireNonNull(kind);
+        this.id = id;
+        this.iotHubResourceId = iotHubResourceId;
+        this.kind = kind;
         this.location = location;
         this.mappingRuleName = mappingRuleName;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.sharedAccessPolicyName = Objects.requireNonNull(sharedAccessPolicyName);
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.sharedAccessPolicyName = sharedAccessPolicyName;
         this.tableName = tableName;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

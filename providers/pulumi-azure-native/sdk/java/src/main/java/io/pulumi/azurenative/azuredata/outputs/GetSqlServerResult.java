@@ -65,11 +65,11 @@ public final class GetSqlServerResult {
         @Nullable String version) {
         this.cores = cores;
         this.edition = edition;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.propertyBag = propertyBag;
         this.registrationID = registrationID;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.version = version;
     }
 

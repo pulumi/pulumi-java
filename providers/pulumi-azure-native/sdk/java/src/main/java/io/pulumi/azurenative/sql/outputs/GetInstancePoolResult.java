@@ -71,15 +71,15 @@ public final class GetInstancePoolResult {
         @Nullable Map<String,String> tags,
         String type,
         Integer vCores) {
-        this.id = Objects.requireNonNull(id);
-        this.licenseType = Objects.requireNonNull(licenseType);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.licenseType = licenseType;
+        this.location = location;
+        this.name = name;
         this.sku = sku;
-        this.subnetId = Objects.requireNonNull(subnetId);
+        this.subnetId = subnetId;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
-        this.vCores = Objects.requireNonNull(vCores);
+        this.type = type;
+        this.vCores = vCores;
     }
 
     /**

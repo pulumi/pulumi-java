@@ -30,9 +30,9 @@ public final class FollowerDatabaseDefinitionResponse {
         String attachedDatabaseConfigurationName,
         String databaseName,
         String kustoPoolResourceId) {
-        this.attachedDatabaseConfigurationName = Objects.requireNonNull(attachedDatabaseConfigurationName);
-        this.databaseName = Objects.requireNonNull(databaseName);
-        this.kustoPoolResourceId = Objects.requireNonNull(kustoPoolResourceId);
+        this.attachedDatabaseConfigurationName = attachedDatabaseConfigurationName;
+        this.databaseName = databaseName;
+        this.kustoPoolResourceId = kustoPoolResourceId;
     }
 
     /**

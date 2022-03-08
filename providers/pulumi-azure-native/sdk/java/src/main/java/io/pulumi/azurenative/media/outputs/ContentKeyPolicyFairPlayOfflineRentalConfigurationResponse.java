@@ -24,8 +24,8 @@ public final class ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse {
     private ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse(
         Double playbackDurationSeconds,
         Double storageDurationSeconds) {
-        this.playbackDurationSeconds = Objects.requireNonNull(playbackDurationSeconds);
-        this.storageDurationSeconds = Objects.requireNonNull(storageDurationSeconds);
+        this.playbackDurationSeconds = playbackDurationSeconds;
+        this.storageDurationSeconds = storageDurationSeconds;
     }
 
     /**

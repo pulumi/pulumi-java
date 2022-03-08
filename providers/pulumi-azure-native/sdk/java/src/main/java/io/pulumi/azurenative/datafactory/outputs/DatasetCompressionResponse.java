@@ -27,7 +27,7 @@ public final class DatasetCompressionResponse {
         @Nullable Object level,
         Object type) {
         this.level = level;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

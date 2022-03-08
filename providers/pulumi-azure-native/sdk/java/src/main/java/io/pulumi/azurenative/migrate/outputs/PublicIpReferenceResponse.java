@@ -17,7 +17,7 @@ public final class PublicIpReferenceResponse {
 
     @OutputCustomType.Constructor({"sourceArmResourceId"})
     private PublicIpReferenceResponse(String sourceArmResourceId) {
-        this.sourceArmResourceId = Objects.requireNonNull(sourceArmResourceId);
+        this.sourceArmResourceId = sourceArmResourceId;
     }
 
     /**

@@ -150,25 +150,25 @@ public final class GetContainerGroupResult {
         @Nullable Map<String,String> tags,
         String type,
         @Nullable List<VolumeResponse> volumes) {
-        this.containers = Objects.requireNonNull(containers);
+        this.containers = containers;
         this.diagnostics = diagnostics;
         this.dnsConfig = dnsConfig;
         this.encryptionProperties = encryptionProperties;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.identity = identity;
         this.imageRegistryCredentials = imageRegistryCredentials;
         this.initContainers = initContainers;
-        this.instanceView = Objects.requireNonNull(instanceView);
+        this.instanceView = instanceView;
         this.ipAddress = ipAddress;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.networkProfile = networkProfile;
-        this.osType = Objects.requireNonNull(osType);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.osType = osType;
+        this.provisioningState = provisioningState;
         this.restartPolicy = restartPolicy;
         this.sku = sku;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.volumes = volumes;
     }
 

@@ -17,7 +17,7 @@ public final class GetApiManagementServiceDomainOwnershipIdentifierResult {
 
     @OutputCustomType.Constructor({"domainOwnershipIdentifier"})
     private GetApiManagementServiceDomainOwnershipIdentifierResult(String domainOwnershipIdentifier) {
-        this.domainOwnershipIdentifier = Objects.requireNonNull(domainOwnershipIdentifier);
+        this.domainOwnershipIdentifier = domainOwnershipIdentifier;
     }
 
     /**

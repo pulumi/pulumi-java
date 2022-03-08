@@ -153,8 +153,8 @@ public final class ODataLinkedServiceResponse {
         this.servicePrincipalId = servicePrincipalId;
         this.servicePrincipalKey = servicePrincipalKey;
         this.tenant = tenant;
-        this.type = Objects.requireNonNull(type);
-        this.url = Objects.requireNonNull(url);
+        this.type = type;
+        this.url = url;
         this.userName = userName;
     }
 

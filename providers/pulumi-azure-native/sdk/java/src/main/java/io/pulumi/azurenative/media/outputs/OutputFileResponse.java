@@ -18,7 +18,7 @@ public final class OutputFileResponse {
 
     @OutputCustomType.Constructor({"labels"})
     private OutputFileResponse(List<String> labels) {
-        this.labels = Objects.requireNonNull(labels);
+        this.labels = labels;
     }
 
     /**

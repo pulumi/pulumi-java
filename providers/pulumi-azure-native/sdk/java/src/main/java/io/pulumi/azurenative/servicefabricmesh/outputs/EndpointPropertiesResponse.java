@@ -27,7 +27,7 @@ public final class EndpointPropertiesResponse {
     private EndpointPropertiesResponse(
         String name,
         @Nullable Integer port) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.port = port;
     }
 

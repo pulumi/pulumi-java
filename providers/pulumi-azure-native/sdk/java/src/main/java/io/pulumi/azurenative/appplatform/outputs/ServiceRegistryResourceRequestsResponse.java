@@ -31,9 +31,9 @@ public final class ServiceRegistryResourceRequestsResponse {
         String cpu,
         Integer instanceCount,
         String memory) {
-        this.cpu = Objects.requireNonNull(cpu);
-        this.instanceCount = Objects.requireNonNull(instanceCount);
-        this.memory = Objects.requireNonNull(memory);
+        this.cpu = cpu;
+        this.instanceCount = instanceCount;
+        this.memory = memory;
     }
 
     /**

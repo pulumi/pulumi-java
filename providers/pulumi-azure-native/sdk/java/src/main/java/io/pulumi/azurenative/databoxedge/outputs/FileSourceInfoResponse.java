@@ -17,7 +17,7 @@ public final class FileSourceInfoResponse {
 
     @OutputCustomType.Constructor({"shareId"})
     private FileSourceInfoResponse(String shareId) {
-        this.shareId = Objects.requireNonNull(shareId);
+        this.shareId = shareId;
     }
 
     /**

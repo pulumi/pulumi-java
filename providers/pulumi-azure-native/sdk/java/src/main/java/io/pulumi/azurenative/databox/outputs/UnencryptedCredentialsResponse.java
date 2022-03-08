@@ -28,8 +28,8 @@ public final class UnencryptedCredentialsResponse {
     private UnencryptedCredentialsResponse(
         String jobName,
         Object jobSecrets) {
-        this.jobName = Objects.requireNonNull(jobName);
-        this.jobSecrets = Objects.requireNonNull(jobSecrets);
+        this.jobName = jobName;
+        this.jobSecrets = jobSecrets;
     }
 
     /**

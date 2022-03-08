@@ -57,13 +57,13 @@ public final class GetGroupResult {
         String id,
         String name,
         String type) {
-        this.builtIn = Objects.requireNonNull(builtIn);
+        this.builtIn = builtIn;
         this.description = description;
-        this.displayName = Objects.requireNonNull(displayName);
+        this.displayName = displayName;
         this.externalId = externalId;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.id = id;
+        this.name = name;
+        this.type = type;
     }
 
     /**

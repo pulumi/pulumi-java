@@ -63,14 +63,14 @@ public final class GetVirtualHubBgpConnectionResult {
         @Nullable String peerIp,
         String provisioningState,
         String type) {
-        this.connectionState = Objects.requireNonNull(connectionState);
-        this.etag = Objects.requireNonNull(etag);
+        this.connectionState = connectionState;
+        this.etag = etag;
         this.id = id;
         this.name = name;
         this.peerAsn = peerAsn;
         this.peerIp = peerIp;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.type = Objects.requireNonNull(type);
+        this.provisioningState = provisioningState;
+        this.type = type;
     }
 
     /**

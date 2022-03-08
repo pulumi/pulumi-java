@@ -103,16 +103,16 @@ public final class ComputeInstanceResponseProperties {
         @Nullable ResourceIdResponse subnet,
         @Nullable String vmSize) {
         this.applicationSharingPolicy = applicationSharingPolicy;
-        this.applications = Objects.requireNonNull(applications);
+        this.applications = applications;
         this.computeInstanceAuthorizationType = computeInstanceAuthorizationType;
-        this.connectivityEndpoints = Objects.requireNonNull(connectivityEndpoints);
-        this.createdBy = Objects.requireNonNull(createdBy);
-        this.errors = Objects.requireNonNull(errors);
-        this.lastOperation = Objects.requireNonNull(lastOperation);
+        this.connectivityEndpoints = connectivityEndpoints;
+        this.createdBy = createdBy;
+        this.errors = errors;
+        this.lastOperation = lastOperation;
         this.personalComputeInstanceSettings = personalComputeInstanceSettings;
         this.setupScripts = setupScripts;
         this.sshSettings = sshSettings;
-        this.state = Objects.requireNonNull(state);
+        this.state = state;
         this.subnet = subnet;
         this.vmSize = vmSize;
     }

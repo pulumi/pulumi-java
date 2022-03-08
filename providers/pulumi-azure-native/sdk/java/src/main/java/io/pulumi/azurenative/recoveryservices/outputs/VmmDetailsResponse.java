@@ -18,7 +18,7 @@ public final class VmmDetailsResponse {
 
     @OutputCustomType.Constructor({"instanceType"})
     private VmmDetailsResponse(String instanceType) {
-        this.instanceType = Objects.requireNonNull(instanceType);
+        this.instanceType = instanceType;
     }
 
     /**

@@ -132,25 +132,25 @@ public final class GetConnectedClusterResult {
         Integer totalCoreCount,
         Integer totalNodeCount,
         String type) {
-        this.agentPublicKeyCertificate = Objects.requireNonNull(agentPublicKeyCertificate);
-        this.agentVersion = Objects.requireNonNull(agentVersion);
-        this.connectivityStatus = Objects.requireNonNull(connectivityStatus);
+        this.agentPublicKeyCertificate = agentPublicKeyCertificate;
+        this.agentVersion = agentVersion;
+        this.connectivityStatus = connectivityStatus;
         this.distribution = distribution;
-        this.id = Objects.requireNonNull(id);
-        this.identity = Objects.requireNonNull(identity);
+        this.id = id;
+        this.identity = identity;
         this.infrastructure = infrastructure;
-        this.kubernetesVersion = Objects.requireNonNull(kubernetesVersion);
-        this.lastConnectivityTime = Objects.requireNonNull(lastConnectivityTime);
-        this.location = Objects.requireNonNull(location);
-        this.managedIdentityCertificateExpirationTime = Objects.requireNonNull(managedIdentityCertificateExpirationTime);
-        this.name = Objects.requireNonNull(name);
-        this.offering = Objects.requireNonNull(offering);
+        this.kubernetesVersion = kubernetesVersion;
+        this.lastConnectivityTime = lastConnectivityTime;
+        this.location = location;
+        this.managedIdentityCertificateExpirationTime = managedIdentityCertificateExpirationTime;
+        this.name = name;
+        this.offering = offering;
         this.provisioningState = provisioningState;
-        this.systemData = Objects.requireNonNull(systemData);
+        this.systemData = systemData;
         this.tags = tags;
-        this.totalCoreCount = Objects.requireNonNull(totalCoreCount);
-        this.totalNodeCount = Objects.requireNonNull(totalNodeCount);
-        this.type = Objects.requireNonNull(type);
+        this.totalCoreCount = totalCoreCount;
+        this.totalNodeCount = totalNodeCount;
+        this.type = type;
     }
 
     /**

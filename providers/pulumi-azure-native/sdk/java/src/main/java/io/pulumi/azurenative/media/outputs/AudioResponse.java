@@ -49,7 +49,7 @@ public final class AudioResponse {
         this.bitrate = bitrate;
         this.channels = channels;
         this.label = label;
-        this.odataType = Objects.requireNonNull(odataType);
+        this.odataType = odataType;
         this.samplingRate = samplingRate;
     }
 

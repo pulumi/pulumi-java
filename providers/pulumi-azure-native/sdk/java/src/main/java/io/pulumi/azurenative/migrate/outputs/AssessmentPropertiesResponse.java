@@ -196,36 +196,36 @@ public final class AssessmentPropertiesResponse {
         String timeRange,
         String updatedTimestamp,
         VmUptimeResponse vmUptime) {
-        this.azureDiskType = Objects.requireNonNull(azureDiskType);
-        this.azureHybridUseBenefit = Objects.requireNonNull(azureHybridUseBenefit);
-        this.azureLocation = Objects.requireNonNull(azureLocation);
-        this.azureOfferCode = Objects.requireNonNull(azureOfferCode);
-        this.azurePricingTier = Objects.requireNonNull(azurePricingTier);
-        this.azureStorageRedundancy = Objects.requireNonNull(azureStorageRedundancy);
-        this.azureVmFamilies = Objects.requireNonNull(azureVmFamilies);
-        this.confidenceRatingInPercentage = Objects.requireNonNull(confidenceRatingInPercentage);
-        this.createdTimestamp = Objects.requireNonNull(createdTimestamp);
-        this.currency = Objects.requireNonNull(currency);
-        this.discountPercentage = Objects.requireNonNull(discountPercentage);
-        this.eaSubscriptionId = Objects.requireNonNull(eaSubscriptionId);
-        this.monthlyBandwidthCost = Objects.requireNonNull(monthlyBandwidthCost);
-        this.monthlyComputeCost = Objects.requireNonNull(monthlyComputeCost);
-        this.monthlyPremiumStorageCost = Objects.requireNonNull(monthlyPremiumStorageCost);
-        this.monthlyStandardSSDStorageCost = Objects.requireNonNull(monthlyStandardSSDStorageCost);
-        this.monthlyStorageCost = Objects.requireNonNull(monthlyStorageCost);
-        this.numberOfMachines = Objects.requireNonNull(numberOfMachines);
-        this.percentile = Objects.requireNonNull(percentile);
-        this.perfDataEndTime = Objects.requireNonNull(perfDataEndTime);
-        this.perfDataStartTime = Objects.requireNonNull(perfDataStartTime);
-        this.pricesTimestamp = Objects.requireNonNull(pricesTimestamp);
-        this.reservedInstance = Objects.requireNonNull(reservedInstance);
-        this.scalingFactor = Objects.requireNonNull(scalingFactor);
-        this.sizingCriterion = Objects.requireNonNull(sizingCriterion);
-        this.stage = Objects.requireNonNull(stage);
-        this.status = Objects.requireNonNull(status);
-        this.timeRange = Objects.requireNonNull(timeRange);
-        this.updatedTimestamp = Objects.requireNonNull(updatedTimestamp);
-        this.vmUptime = Objects.requireNonNull(vmUptime);
+        this.azureDiskType = azureDiskType;
+        this.azureHybridUseBenefit = azureHybridUseBenefit;
+        this.azureLocation = azureLocation;
+        this.azureOfferCode = azureOfferCode;
+        this.azurePricingTier = azurePricingTier;
+        this.azureStorageRedundancy = azureStorageRedundancy;
+        this.azureVmFamilies = azureVmFamilies;
+        this.confidenceRatingInPercentage = confidenceRatingInPercentage;
+        this.createdTimestamp = createdTimestamp;
+        this.currency = currency;
+        this.discountPercentage = discountPercentage;
+        this.eaSubscriptionId = eaSubscriptionId;
+        this.monthlyBandwidthCost = monthlyBandwidthCost;
+        this.monthlyComputeCost = monthlyComputeCost;
+        this.monthlyPremiumStorageCost = monthlyPremiumStorageCost;
+        this.monthlyStandardSSDStorageCost = monthlyStandardSSDStorageCost;
+        this.monthlyStorageCost = monthlyStorageCost;
+        this.numberOfMachines = numberOfMachines;
+        this.percentile = percentile;
+        this.perfDataEndTime = perfDataEndTime;
+        this.perfDataStartTime = perfDataStartTime;
+        this.pricesTimestamp = pricesTimestamp;
+        this.reservedInstance = reservedInstance;
+        this.scalingFactor = scalingFactor;
+        this.sizingCriterion = sizingCriterion;
+        this.stage = stage;
+        this.status = status;
+        this.timeRange = timeRange;
+        this.updatedTimestamp = updatedTimestamp;
+        this.vmUptime = vmUptime;
     }
 
     /**

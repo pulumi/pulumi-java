@@ -34,7 +34,7 @@ public final class ManagementPolicyFilterResponse {
         List<String> blobTypes,
         @Nullable List<String> prefixMatch) {
         this.blobIndexMatch = blobIndexMatch;
-        this.blobTypes = Objects.requireNonNull(blobTypes);
+        this.blobTypes = blobTypes;
         this.prefixMatch = prefixMatch;
     }
 

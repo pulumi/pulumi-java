@@ -26,8 +26,8 @@ public final class DeliveryRuleRemoteAddressConditionResponse {
     private DeliveryRuleRemoteAddressConditionResponse(
         String name,
         RemoteAddressMatchConditionParametersResponse parameters) {
-        this.name = Objects.requireNonNull(name);
-        this.parameters = Objects.requireNonNull(parameters);
+        this.name = name;
+        this.parameters = parameters;
     }
 
     /**

@@ -80,15 +80,15 @@ public final class GetAutoscaleSettingResult {
         @Nullable String targetResourceUri,
         String type) {
         this.enabled = enabled;
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.location = location;
+        this.name = name;
         this.notifications = notifications;
-        this.profiles = Objects.requireNonNull(profiles);
+        this.profiles = profiles;
         this.tags = tags;
         this.targetResourceLocation = targetResourceLocation;
         this.targetResourceUri = targetResourceUri;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

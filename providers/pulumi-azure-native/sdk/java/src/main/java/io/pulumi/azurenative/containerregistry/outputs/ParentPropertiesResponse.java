@@ -28,7 +28,7 @@ public final class ParentPropertiesResponse {
         @Nullable String id,
         SyncPropertiesResponse syncProperties) {
         this.id = id;
-        this.syncProperties = Objects.requireNonNull(syncProperties);
+        this.syncProperties = syncProperties;
     }
 
     /**

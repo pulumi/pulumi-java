@@ -65,11 +65,11 @@ public final class GetVariableResult {
         @Nullable String value) {
         this.creationTime = creationTime;
         this.description = description;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.isEncrypted = isEncrypted;
         this.lastModifiedTime = lastModifiedTime;
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.name = name;
+        this.type = type;
         this.value = value;
     }
 

@@ -32,9 +32,9 @@ public final class StreamingPathResponse {
         String encryptionScheme,
         @Nullable List<String> paths,
         String streamingProtocol) {
-        this.encryptionScheme = Objects.requireNonNull(encryptionScheme);
+        this.encryptionScheme = encryptionScheme;
         this.paths = paths;
-        this.streamingProtocol = Objects.requireNonNull(streamingProtocol);
+        this.streamingProtocol = streamingProtocol;
     }
 
     /**

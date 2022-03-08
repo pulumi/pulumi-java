@@ -26,8 +26,8 @@ public final class ListRemediationDeploymentsAtResourceResult {
     private ListRemediationDeploymentsAtResourceResult(
         String nextLink,
         List<RemediationDeploymentResponse> value) {
-        this.nextLink = Objects.requireNonNull(nextLink);
-        this.value = Objects.requireNonNull(value);
+        this.nextLink = nextLink;
+        this.value = value;
     }
 
     /**

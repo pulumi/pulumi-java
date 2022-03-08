@@ -41,7 +41,7 @@ public final class DatabaseProjectSummaryResponse {
         @Nullable String lastSummaryRefreshedTime,
         @Nullable String refreshSummaryState) {
         this.extendedSummary = extendedSummary;
-        this.instanceType = Objects.requireNonNull(instanceType);
+        this.instanceType = instanceType;
         this.lastSummaryRefreshedTime = lastSummaryRefreshedTime;
         this.refreshSummaryState = refreshSummaryState;
     }

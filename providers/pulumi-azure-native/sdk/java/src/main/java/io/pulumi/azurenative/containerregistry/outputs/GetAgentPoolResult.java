@@ -84,15 +84,15 @@ public final class GetAgentPoolResult {
         String type,
         @Nullable String virtualNetworkSubnetResourceId) {
         this.count = count;
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.location = location;
+        this.name = name;
         this.os = os;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.systemData = Objects.requireNonNull(systemData);
+        this.provisioningState = provisioningState;
+        this.systemData = systemData;
         this.tags = tags;
         this.tier = tier;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.virtualNetworkSubnetResourceId = virtualNetworkSubnetResourceId;
     }
 

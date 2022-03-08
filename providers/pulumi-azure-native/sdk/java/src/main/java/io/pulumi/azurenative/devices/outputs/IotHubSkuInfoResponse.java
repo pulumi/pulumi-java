@@ -34,8 +34,8 @@ public final class IotHubSkuInfoResponse {
         String name,
         String tier) {
         this.capacity = capacity;
-        this.name = Objects.requireNonNull(name);
-        this.tier = Objects.requireNonNull(tier);
+        this.name = name;
+        this.tier = tier;
     }
 
     /**

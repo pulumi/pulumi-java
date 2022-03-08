@@ -37,10 +37,10 @@ public final class OptimizedAutoscaleResponse {
         Integer maximum,
         Integer minimum,
         Integer version) {
-        this.isEnabled = Objects.requireNonNull(isEnabled);
-        this.maximum = Objects.requireNonNull(maximum);
-        this.minimum = Objects.requireNonNull(minimum);
-        this.version = Objects.requireNonNull(version);
+        this.isEnabled = isEnabled;
+        this.maximum = maximum;
+        this.minimum = minimum;
+        this.version = version;
     }
 
     /**

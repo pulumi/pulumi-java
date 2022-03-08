@@ -67,11 +67,11 @@ public final class AdditionalLocationResponse {
         @Nullable VirtualNetworkConfigurationResponse virtualNetworkConfiguration,
         @Nullable List<String> zones) {
         this.disableGateway = disableGateway;
-        this.gatewayRegionalUrl = Objects.requireNonNull(gatewayRegionalUrl);
-        this.location = Objects.requireNonNull(location);
-        this.privateIPAddresses = Objects.requireNonNull(privateIPAddresses);
-        this.publicIPAddresses = Objects.requireNonNull(publicIPAddresses);
-        this.sku = Objects.requireNonNull(sku);
+        this.gatewayRegionalUrl = gatewayRegionalUrl;
+        this.location = location;
+        this.privateIPAddresses = privateIPAddresses;
+        this.publicIPAddresses = publicIPAddresses;
+        this.sku = sku;
         this.virtualNetworkConfiguration = virtualNetworkConfiguration;
         this.zones = zones;
     }

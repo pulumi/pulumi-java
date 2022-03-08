@@ -76,15 +76,15 @@ public final class GetSecurityPartnerProviderResult {
         @Nullable Map<String,String> tags,
         String type,
         @Nullable SubResourceResponse virtualHub) {
-        this.connectionStatus = Objects.requireNonNull(connectionStatus);
-        this.etag = Objects.requireNonNull(etag);
+        this.connectionStatus = connectionStatus;
+        this.etag = etag;
         this.id = id;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.securityProviderName = securityProviderName;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.virtualHub = virtualHub;
     }
 

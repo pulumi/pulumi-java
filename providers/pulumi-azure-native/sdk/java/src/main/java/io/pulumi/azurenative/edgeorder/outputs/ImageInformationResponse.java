@@ -24,8 +24,8 @@ public final class ImageInformationResponse {
     private ImageInformationResponse(
         String imageType,
         String imageUrl) {
-        this.imageType = Objects.requireNonNull(imageType);
-        this.imageUrl = Objects.requireNonNull(imageUrl);
+        this.imageType = imageType;
+        this.imageUrl = imageUrl;
     }
 
     /**

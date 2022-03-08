@@ -18,7 +18,7 @@ public final class ManagedCertificateParametersResponse {
 
     @OutputCustomType.Constructor({"type"})
     private ManagedCertificateParametersResponse(String type) {
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

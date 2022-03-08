@@ -24,8 +24,8 @@ public final class RedisAccessKeysResponse {
     private RedisAccessKeysResponse(
         String primaryKey,
         String secondaryKey) {
-        this.primaryKey = Objects.requireNonNull(primaryKey);
-        this.secondaryKey = Objects.requireNonNull(secondaryKey);
+        this.primaryKey = primaryKey;
+        this.secondaryKey = secondaryKey;
     }
 
     /**

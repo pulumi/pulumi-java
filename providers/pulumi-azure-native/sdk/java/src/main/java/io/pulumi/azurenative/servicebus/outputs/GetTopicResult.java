@@ -132,25 +132,25 @@ public final class GetTopicResult {
         @Nullable Boolean supportOrdering,
         String type,
         String updatedAt) {
-        this.accessedAt = Objects.requireNonNull(accessedAt);
+        this.accessedAt = accessedAt;
         this.autoDeleteOnIdle = autoDeleteOnIdle;
-        this.countDetails = Objects.requireNonNull(countDetails);
-        this.createdAt = Objects.requireNonNull(createdAt);
+        this.countDetails = countDetails;
+        this.createdAt = createdAt;
         this.defaultMessageTimeToLive = defaultMessageTimeToLive;
         this.duplicateDetectionHistoryTimeWindow = duplicateDetectionHistoryTimeWindow;
         this.enableBatchedOperations = enableBatchedOperations;
         this.enableExpress = enableExpress;
         this.enablePartitioning = enablePartitioning;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.maxSizeInMegabytes = maxSizeInMegabytes;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.requiresDuplicateDetection = requiresDuplicateDetection;
-        this.sizeInBytes = Objects.requireNonNull(sizeInBytes);
+        this.sizeInBytes = sizeInBytes;
         this.status = status;
-        this.subscriptionCount = Objects.requireNonNull(subscriptionCount);
+        this.subscriptionCount = subscriptionCount;
         this.supportOrdering = supportOrdering;
-        this.type = Objects.requireNonNull(type);
-        this.updatedAt = Objects.requireNonNull(updatedAt);
+        this.type = type;
+        this.updatedAt = updatedAt;
     }
 
     /**

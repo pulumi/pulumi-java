@@ -40,9 +40,9 @@ public final class ConnectorCollectionInfoResponse {
         String lastUpdated,
         String sourceLastUpdated) {
         this.error = error;
-        this.lastChecked = Objects.requireNonNull(lastChecked);
-        this.lastUpdated = Objects.requireNonNull(lastUpdated);
-        this.sourceLastUpdated = Objects.requireNonNull(sourceLastUpdated);
+        this.lastChecked = lastChecked;
+        this.lastUpdated = lastUpdated;
+        this.sourceLastUpdated = sourceLastUpdated;
     }
 
     /**

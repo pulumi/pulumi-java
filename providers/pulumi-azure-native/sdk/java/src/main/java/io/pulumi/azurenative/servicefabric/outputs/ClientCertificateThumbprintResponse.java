@@ -25,8 +25,8 @@ public final class ClientCertificateThumbprintResponse {
     private ClientCertificateThumbprintResponse(
         String certificateThumbprint,
         Boolean isAdmin) {
-        this.certificateThumbprint = Objects.requireNonNull(certificateThumbprint);
-        this.isAdmin = Objects.requireNonNull(isAdmin);
+        this.certificateThumbprint = certificateThumbprint;
+        this.isAdmin = isAdmin;
     }
 
     /**

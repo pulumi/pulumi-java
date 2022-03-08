@@ -51,11 +51,11 @@ public final class PlanResponse {
         String skuId,
         String stackType) {
         this.accessibility = accessibility;
-        this.altStackReference = Objects.requireNonNull(altStackReference);
-        this.planDisplayName = Objects.requireNonNull(planDisplayName);
-        this.planId = Objects.requireNonNull(planId);
-        this.skuId = Objects.requireNonNull(skuId);
-        this.stackType = Objects.requireNonNull(stackType);
+        this.altStackReference = altStackReference;
+        this.planDisplayName = planDisplayName;
+        this.planId = planId;
+        this.skuId = skuId;
+        this.stackType = stackType;
     }
 
     /**

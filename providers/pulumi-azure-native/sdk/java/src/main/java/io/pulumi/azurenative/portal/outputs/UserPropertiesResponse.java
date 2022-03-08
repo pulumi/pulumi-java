@@ -44,11 +44,11 @@ public final class UserPropertiesResponse {
         String preferredShellType,
         StorageProfileResponse storageProfile,
         TerminalSettingsResponse terminalSettings) {
-        this.preferredLocation = Objects.requireNonNull(preferredLocation);
-        this.preferredOsType = Objects.requireNonNull(preferredOsType);
-        this.preferredShellType = Objects.requireNonNull(preferredShellType);
-        this.storageProfile = Objects.requireNonNull(storageProfile);
-        this.terminalSettings = Objects.requireNonNull(terminalSettings);
+        this.preferredLocation = preferredLocation;
+        this.preferredOsType = preferredOsType;
+        this.preferredShellType = preferredShellType;
+        this.storageProfile = storageProfile;
+        this.terminalSettings = terminalSettings;
     }
 
     /**

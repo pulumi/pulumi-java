@@ -84,7 +84,7 @@ public final class VirtualMachineScaleSetIPConfigurationResponse {
         this.id = id;
         this.loadBalancerBackendAddressPools = loadBalancerBackendAddressPools;
         this.loadBalancerInboundNatPools = loadBalancerInboundNatPools;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.primary = primary;
         this.privateIPAddressVersion = privateIPAddressVersion;
         this.publicIPAddressConfiguration = publicIPAddressConfiguration;

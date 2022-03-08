@@ -39,7 +39,7 @@ public final class DelimitedTextReadSettingsResponse {
         String type) {
         this.compressionProperties = compressionProperties;
         this.skipLineCount = skipLineCount;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

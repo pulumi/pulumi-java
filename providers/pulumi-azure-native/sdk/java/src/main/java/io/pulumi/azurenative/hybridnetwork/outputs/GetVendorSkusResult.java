@@ -78,15 +78,15 @@ public final class GetVendorSkusResult {
         @Nullable String skuType,
         String type) {
         this.deploymentMode = deploymentMode;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.managedApplicationParameters = managedApplicationParameters;
         this.managedApplicationTemplate = managedApplicationTemplate;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.networkFunctionTemplate = networkFunctionTemplate;
         this.preview = preview;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.skuType = skuType;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

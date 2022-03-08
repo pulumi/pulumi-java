@@ -72,15 +72,15 @@ public final class GetJobStepResult {
         @Nullable Integer stepId,
         String targetGroup,
         String type) {
-        this.action = Objects.requireNonNull(action);
-        this.credential = Objects.requireNonNull(credential);
+        this.action = action;
+        this.credential = credential;
         this.executionOptions = executionOptions;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.output = output;
         this.stepId = stepId;
-        this.targetGroup = Objects.requireNonNull(targetGroup);
-        this.type = Objects.requireNonNull(type);
+        this.targetGroup = targetGroup;
+        this.type = type;
     }
 
     /**

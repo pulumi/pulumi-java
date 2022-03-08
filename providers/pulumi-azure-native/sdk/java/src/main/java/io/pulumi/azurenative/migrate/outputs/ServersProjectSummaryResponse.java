@@ -74,7 +74,7 @@ public final class ServersProjectSummaryResponse {
         this.assessedCount = assessedCount;
         this.discoveredCount = discoveredCount;
         this.extendedSummary = extendedSummary;
-        this.instanceType = Objects.requireNonNull(instanceType);
+        this.instanceType = instanceType;
         this.lastSummaryRefreshedTime = lastSummaryRefreshedTime;
         this.migratedCount = migratedCount;
         this.refreshSummaryState = refreshSummaryState;

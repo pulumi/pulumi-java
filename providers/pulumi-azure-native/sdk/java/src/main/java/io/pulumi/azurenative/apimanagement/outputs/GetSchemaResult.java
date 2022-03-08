@@ -51,10 +51,10 @@ public final class GetSchemaResult {
         String type,
         @Nullable String value) {
         this.description = description;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.schemaType = Objects.requireNonNull(schemaType);
-        this.type = Objects.requireNonNull(type);
+        this.id = id;
+        this.name = name;
+        this.schemaType = schemaType;
+        this.type = type;
         this.value = value;
     }
 

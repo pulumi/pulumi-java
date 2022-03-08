@@ -111,14 +111,14 @@ public final class DataLakeAnalyticsUSQLActivityResponse {
         this.dependsOn = dependsOn;
         this.description = description;
         this.linkedServiceName = linkedServiceName;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.parameters = parameters;
         this.policy = policy;
         this.priority = priority;
         this.runtimeVersion = runtimeVersion;
-        this.scriptLinkedService = Objects.requireNonNull(scriptLinkedService);
-        this.scriptPath = Objects.requireNonNull(scriptPath);
-        this.type = Objects.requireNonNull(type);
+        this.scriptLinkedService = scriptLinkedService;
+        this.scriptPath = scriptPath;
+        this.type = type;
         this.userProperties = userProperties;
     }
 

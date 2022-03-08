@@ -54,13 +54,13 @@ public final class GetGeoBackupPolicyResult {
         String state,
         String storageType,
         String type) {
-        this.id = Objects.requireNonNull(id);
-        this.kind = Objects.requireNonNull(kind);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.state = Objects.requireNonNull(state);
-        this.storageType = Objects.requireNonNull(storageType);
-        this.type = Objects.requireNonNull(type);
+        this.id = id;
+        this.kind = kind;
+        this.location = location;
+        this.name = name;
+        this.state = state;
+        this.storageType = storageType;
+        this.type = type;
     }
 
     /**

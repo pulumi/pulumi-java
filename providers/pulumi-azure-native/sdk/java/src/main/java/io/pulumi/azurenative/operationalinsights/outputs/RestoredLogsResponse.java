@@ -33,7 +33,7 @@ public final class RestoredLogsResponse {
         String sourceTable,
         @Nullable String startRestoreTime) {
         this.endRestoreTime = endRestoreTime;
-        this.sourceTable = Objects.requireNonNull(sourceTable);
+        this.sourceTable = sourceTable;
         this.startRestoreTime = startRestoreTime;
     }
 

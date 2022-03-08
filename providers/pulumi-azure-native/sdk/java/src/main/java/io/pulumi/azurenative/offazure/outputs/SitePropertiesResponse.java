@@ -49,7 +49,7 @@ public final class SitePropertiesResponse {
         this.agentDetails = agentDetails;
         this.applianceName = applianceName;
         this.discoverySolutionId = discoverySolutionId;
-        this.serviceEndpoint = Objects.requireNonNull(serviceEndpoint);
+        this.serviceEndpoint = serviceEndpoint;
         this.servicePrincipalIdentityDetails = servicePrincipalIdentityDetails;
     }
 

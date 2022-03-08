@@ -88,18 +88,18 @@ public final class GetPoolResult {
         Double totalThroughputMibps,
         String type,
         Double utilizedThroughputMibps) {
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.poolId = Objects.requireNonNull(poolId);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.id = id;
+        this.location = location;
+        this.name = name;
+        this.poolId = poolId;
+        this.provisioningState = provisioningState;
         this.qosType = qosType;
-        this.serviceLevel = Objects.requireNonNull(serviceLevel);
-        this.size = Objects.requireNonNull(size);
+        this.serviceLevel = serviceLevel;
+        this.size = size;
         this.tags = tags;
-        this.totalThroughputMibps = Objects.requireNonNull(totalThroughputMibps);
-        this.type = Objects.requireNonNull(type);
-        this.utilizedThroughputMibps = Objects.requireNonNull(utilizedThroughputMibps);
+        this.totalThroughputMibps = totalThroughputMibps;
+        this.type = type;
+        this.utilizedThroughputMibps = utilizedThroughputMibps;
     }
 
     /**

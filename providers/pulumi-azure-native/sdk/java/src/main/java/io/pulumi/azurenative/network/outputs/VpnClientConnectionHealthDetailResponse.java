@@ -85,18 +85,18 @@ public final class VpnClientConnectionHealthDetailResponse {
         String vpnConnectionId,
         String vpnConnectionTime,
         String vpnUserName) {
-        this.egressBytesTransferred = Objects.requireNonNull(egressBytesTransferred);
-        this.egressPacketsTransferred = Objects.requireNonNull(egressPacketsTransferred);
-        this.ingressBytesTransferred = Objects.requireNonNull(ingressBytesTransferred);
-        this.ingressPacketsTransferred = Objects.requireNonNull(ingressPacketsTransferred);
-        this.maxBandwidth = Objects.requireNonNull(maxBandwidth);
-        this.maxPacketsPerSecond = Objects.requireNonNull(maxPacketsPerSecond);
-        this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
-        this.publicIpAddress = Objects.requireNonNull(publicIpAddress);
-        this.vpnConnectionDuration = Objects.requireNonNull(vpnConnectionDuration);
-        this.vpnConnectionId = Objects.requireNonNull(vpnConnectionId);
-        this.vpnConnectionTime = Objects.requireNonNull(vpnConnectionTime);
-        this.vpnUserName = Objects.requireNonNull(vpnUserName);
+        this.egressBytesTransferred = egressBytesTransferred;
+        this.egressPacketsTransferred = egressPacketsTransferred;
+        this.ingressBytesTransferred = ingressBytesTransferred;
+        this.ingressPacketsTransferred = ingressPacketsTransferred;
+        this.maxBandwidth = maxBandwidth;
+        this.maxPacketsPerSecond = maxPacketsPerSecond;
+        this.privateIpAddress = privateIpAddress;
+        this.publicIpAddress = publicIpAddress;
+        this.vpnConnectionDuration = vpnConnectionDuration;
+        this.vpnConnectionId = vpnConnectionId;
+        this.vpnConnectionTime = vpnConnectionTime;
+        this.vpnUserName = vpnUserName;
     }
 
     /**

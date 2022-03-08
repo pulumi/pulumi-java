@@ -73,13 +73,13 @@ public final class AssignmentReportResponse {
         String startTime,
         @Nullable VMInfoResponse vm) {
         this.assignment = assignment;
-        this.complianceStatus = Objects.requireNonNull(complianceStatus);
-        this.endTime = Objects.requireNonNull(endTime);
-        this.id = Objects.requireNonNull(id);
-        this.operationType = Objects.requireNonNull(operationType);
-        this.reportId = Objects.requireNonNull(reportId);
+        this.complianceStatus = complianceStatus;
+        this.endTime = endTime;
+        this.id = id;
+        this.operationType = operationType;
+        this.reportId = reportId;
         this.resources = resources;
-        this.startTime = Objects.requireNonNull(startTime);
+        this.startTime = startTime;
         this.vm = vm;
     }
 

@@ -49,11 +49,11 @@ public final class ProductDetailsResponse {
         @Nullable DisplayInfoResponse displayInfo,
         HierarchyInformationResponse hierarchyInformation,
         String productDoubleEncryptionStatus) {
-        this.count = Objects.requireNonNull(count);
-        this.deviceDetails = Objects.requireNonNull(deviceDetails);
+        this.count = count;
+        this.deviceDetails = deviceDetails;
         this.displayInfo = displayInfo;
-        this.hierarchyInformation = Objects.requireNonNull(hierarchyInformation);
-        this.productDoubleEncryptionStatus = Objects.requireNonNull(productDoubleEncryptionStatus);
+        this.hierarchyInformation = hierarchyInformation;
+        this.productDoubleEncryptionStatus = productDoubleEncryptionStatus;
     }
 
     /**

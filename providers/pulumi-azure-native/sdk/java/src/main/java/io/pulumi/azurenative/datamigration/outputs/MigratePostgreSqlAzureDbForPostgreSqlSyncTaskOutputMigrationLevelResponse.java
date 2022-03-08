@@ -61,14 +61,14 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputMigrationL
         String startedOn,
         String targetServer,
         String targetServerVersion) {
-        this.endedOn = Objects.requireNonNull(endedOn);
-        this.id = Objects.requireNonNull(id);
-        this.resultType = Objects.requireNonNull(resultType);
-        this.sourceServer = Objects.requireNonNull(sourceServer);
-        this.sourceServerVersion = Objects.requireNonNull(sourceServerVersion);
-        this.startedOn = Objects.requireNonNull(startedOn);
-        this.targetServer = Objects.requireNonNull(targetServer);
-        this.targetServerVersion = Objects.requireNonNull(targetServerVersion);
+        this.endedOn = endedOn;
+        this.id = id;
+        this.resultType = resultType;
+        this.sourceServer = sourceServer;
+        this.sourceServerVersion = sourceServerVersion;
+        this.startedOn = startedOn;
+        this.targetServer = targetServer;
+        this.targetServerVersion = targetServerVersion;
     }
 
     /**

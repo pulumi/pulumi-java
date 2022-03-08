@@ -44,11 +44,11 @@ public final class GetLinkedStorageAccountResult {
         String name,
         @Nullable List<String> storageAccountIds,
         String type) {
-        this.dataSourceType = Objects.requireNonNull(dataSourceType);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.dataSourceType = dataSourceType;
+        this.id = id;
+        this.name = name;
         this.storageAccountIds = storageAccountIds;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

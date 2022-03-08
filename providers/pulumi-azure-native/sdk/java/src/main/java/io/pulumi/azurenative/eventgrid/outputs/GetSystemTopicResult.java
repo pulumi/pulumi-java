@@ -83,17 +83,17 @@ public final class GetSystemTopicResult {
         @Nullable Map<String,String> tags,
         @Nullable String topicType,
         String type) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.identity = identity;
-        this.location = Objects.requireNonNull(location);
-        this.metricResourceId = Objects.requireNonNull(metricResourceId);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.location = location;
+        this.metricResourceId = metricResourceId;
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.source = source;
-        this.systemData = Objects.requireNonNull(systemData);
+        this.systemData = systemData;
         this.tags = tags;
         this.topicType = topicType;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

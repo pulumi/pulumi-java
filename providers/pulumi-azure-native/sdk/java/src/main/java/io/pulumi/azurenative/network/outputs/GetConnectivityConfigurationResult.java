@@ -97,18 +97,18 @@ public final class GetConnectivityConfigurationResult {
         SystemDataResponse systemData,
         String type) {
         this.appliesToGroups = appliesToGroups;
-        this.connectivityTopology = Objects.requireNonNull(connectivityTopology);
+        this.connectivityTopology = connectivityTopology;
         this.deleteExistingPeering = deleteExistingPeering;
         this.description = description;
         this.displayName = displayName;
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.hubs = hubs;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.isGlobal = isGlobal;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

@@ -27,7 +27,7 @@ public final class AzureTableStorageApplicationLogsConfigResponse {
         @Nullable String level,
         String sasUrl) {
         this.level = level;
-        this.sasUrl = Objects.requireNonNull(sasUrl);
+        this.sasUrl = sasUrl;
     }
 
     /**

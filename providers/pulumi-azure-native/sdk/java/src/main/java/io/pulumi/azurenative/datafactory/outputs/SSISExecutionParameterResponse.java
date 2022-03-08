@@ -17,7 +17,7 @@ public final class SSISExecutionParameterResponse {
 
     @OutputCustomType.Constructor({"value"})
     private SSISExecutionParameterResponse(Object value) {
-        this.value = Objects.requireNonNull(value);
+        this.value = value;
     }
 
     /**

@@ -134,25 +134,25 @@ public final class GetPackageResult {
         String type,
         List<PackageValidationResultResponse> validationResults,
         String version) {
-        this.applicationName = Objects.requireNonNull(applicationName);
-        this.blobPath = Objects.requireNonNull(blobPath);
-        this.etag = Objects.requireNonNull(etag);
-        this.flightingRing = Objects.requireNonNull(flightingRing);
-        this.id = Objects.requireNonNull(id);
-        this.isEnabled = Objects.requireNonNull(isEnabled);
-        this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.packageStatus = Objects.requireNonNull(packageStatus);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.systemData = Objects.requireNonNull(systemData);
+        this.applicationName = applicationName;
+        this.blobPath = blobPath;
+        this.etag = etag;
+        this.flightingRing = flightingRing;
+        this.id = id;
+        this.isEnabled = isEnabled;
+        this.lastModifiedTime = lastModifiedTime;
+        this.location = location;
+        this.name = name;
+        this.packageStatus = packageStatus;
+        this.provisioningState = provisioningState;
+        this.systemData = systemData;
         this.tags = tags;
-        this.targetOSList = Objects.requireNonNull(targetOSList);
-        this.testTypes = Objects.requireNonNull(testTypes);
-        this.tests = Objects.requireNonNull(tests);
-        this.type = Objects.requireNonNull(type);
-        this.validationResults = Objects.requireNonNull(validationResults);
-        this.version = Objects.requireNonNull(version);
+        this.targetOSList = targetOSList;
+        this.testTypes = testTypes;
+        this.tests = tests;
+        this.type = type;
+        this.validationResults = validationResults;
+        this.version = version;
     }
 
     /**

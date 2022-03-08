@@ -58,12 +58,12 @@ public final class ContactProfileLinkChannelResponse {
         @Nullable String encodingConfiguration,
         EndPointResponse endPoint,
         @Nullable String modulationConfiguration) {
-        this.bandwidthMHz = Objects.requireNonNull(bandwidthMHz);
-        this.centerFrequencyMHz = Objects.requireNonNull(centerFrequencyMHz);
+        this.bandwidthMHz = bandwidthMHz;
+        this.centerFrequencyMHz = centerFrequencyMHz;
         this.decodingConfiguration = decodingConfiguration;
         this.demodulationConfiguration = demodulationConfiguration;
         this.encodingConfiguration = encodingConfiguration;
-        this.endPoint = Objects.requireNonNull(endPoint);
+        this.endPoint = endPoint;
         this.modulationConfiguration = modulationConfiguration;
     }
 

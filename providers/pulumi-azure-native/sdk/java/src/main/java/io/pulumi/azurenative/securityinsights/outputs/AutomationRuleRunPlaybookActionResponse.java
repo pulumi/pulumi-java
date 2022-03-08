@@ -33,9 +33,9 @@ public final class AutomationRuleRunPlaybookActionResponse {
         AutomationRuleRunPlaybookActionResponseActionConfiguration actionConfiguration,
         String actionType,
         Integer order) {
-        this.actionConfiguration = Objects.requireNonNull(actionConfiguration);
-        this.actionType = Objects.requireNonNull(actionType);
-        this.order = Objects.requireNonNull(order);
+        this.actionConfiguration = actionConfiguration;
+        this.actionType = actionType;
+        this.order = order;
     }
 
     /**

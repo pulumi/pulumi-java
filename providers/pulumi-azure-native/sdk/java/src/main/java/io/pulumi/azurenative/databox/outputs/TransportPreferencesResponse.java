@@ -17,7 +17,7 @@ public final class TransportPreferencesResponse {
 
     @OutputCustomType.Constructor({"preferredShipmentType"})
     private TransportPreferencesResponse(String preferredShipmentType) {
-        this.preferredShipmentType = Objects.requireNonNull(preferredShipmentType);
+        this.preferredShipmentType = preferredShipmentType;
     }
 
     /**

@@ -41,11 +41,11 @@ public final class GetResourceManagementPrivateLinkResult {
         String name,
         ResourceManagementPrivateLinkEndpointConnectionsResponse properties,
         String type) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
-        this.properties = Objects.requireNonNull(properties);
-        this.type = Objects.requireNonNull(type);
+        this.name = name;
+        this.properties = properties;
+        this.type = type;
     }
 
     /**

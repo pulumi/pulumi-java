@@ -38,10 +38,10 @@ public final class VirtualNetworkProfileResponse {
         String name,
         @Nullable String subnet,
         String type) {
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.subnet = subnet;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

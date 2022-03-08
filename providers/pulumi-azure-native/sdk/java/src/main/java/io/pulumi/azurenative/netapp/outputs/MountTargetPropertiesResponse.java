@@ -38,9 +38,9 @@ public final class MountTargetPropertiesResponse {
         String ipAddress,
         String mountTargetId,
         @Nullable String smbServerFqdn) {
-        this.fileSystemId = Objects.requireNonNull(fileSystemId);
-        this.ipAddress = Objects.requireNonNull(ipAddress);
-        this.mountTargetId = Objects.requireNonNull(mountTargetId);
+        this.fileSystemId = fileSystemId;
+        this.ipAddress = ipAddress;
+        this.mountTargetId = mountTargetId;
         this.smbServerFqdn = smbServerFqdn;
     }
 

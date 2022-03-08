@@ -152,28 +152,28 @@ public final class ActiveDefaultSecurityAdminRuleResponse {
         @Nullable List<ConfigurationGroupResponse> ruleGroups,
         List<String> sourcePortRanges,
         List<AddressPrefixItemResponse> sources) {
-        this.access = Objects.requireNonNull(access);
+        this.access = access;
         this.commitTime = commitTime;
         this.configurationDescription = configurationDescription;
         this.configurationDisplayName = configurationDisplayName;
-        this.description = Objects.requireNonNull(description);
-        this.destinationPortRanges = Objects.requireNonNull(destinationPortRanges);
-        this.destinations = Objects.requireNonNull(destinations);
-        this.direction = Objects.requireNonNull(direction);
-        this.displayName = Objects.requireNonNull(displayName);
+        this.description = description;
+        this.destinationPortRanges = destinationPortRanges;
+        this.destinations = destinations;
+        this.direction = direction;
+        this.displayName = displayName;
         this.flag = flag;
         this.id = id;
-        this.kind = Objects.requireNonNull(kind);
-        this.priority = Objects.requireNonNull(priority);
-        this.protocol = Objects.requireNonNull(protocol);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.kind = kind;
+        this.priority = priority;
+        this.protocol = protocol;
+        this.provisioningState = provisioningState;
         this.region = region;
         this.ruleCollectionAppliesToGroups = ruleCollectionAppliesToGroups;
         this.ruleCollectionDescription = ruleCollectionDescription;
         this.ruleCollectionDisplayName = ruleCollectionDisplayName;
         this.ruleGroups = ruleGroups;
-        this.sourcePortRanges = Objects.requireNonNull(sourcePortRanges);
-        this.sources = Objects.requireNonNull(sources);
+        this.sourcePortRanges = sourcePortRanges;
+        this.sources = sources;
     }
 
     /**

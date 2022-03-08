@@ -53,12 +53,12 @@ public final class FacebookChannelPropertiesResponse {
         Boolean isEnabled,
         @Nullable List<FacebookPageResponse> pages,
         String verifyToken) {
-        this.appId = Objects.requireNonNull(appId);
+        this.appId = appId;
         this.appSecret = appSecret;
-        this.callbackUrl = Objects.requireNonNull(callbackUrl);
-        this.isEnabled = Objects.requireNonNull(isEnabled);
+        this.callbackUrl = callbackUrl;
+        this.isEnabled = isEnabled;
         this.pages = pages;
-        this.verifyToken = Objects.requireNonNull(verifyToken);
+        this.verifyToken = verifyToken;
     }
 
     /**

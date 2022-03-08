@@ -103,7 +103,7 @@ public final class ZohoLinkedServiceResponse {
         this.encryptedCredential = encryptedCredential;
         this.endpoint = endpoint;
         this.parameters = parameters;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.useEncryptedEndpoints = useEncryptedEndpoints;
         this.useHostVerification = useHostVerification;
         this.usePeerVerification = usePeerVerification;

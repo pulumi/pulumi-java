@@ -68,12 +68,12 @@ public final class RerunTumblingWindowTriggerResponse {
         String type) {
         this.annotations = annotations;
         this.description = description;
-        this.parentTrigger = Objects.requireNonNull(parentTrigger);
-        this.requestedEndTime = Objects.requireNonNull(requestedEndTime);
-        this.requestedStartTime = Objects.requireNonNull(requestedStartTime);
-        this.rerunConcurrency = Objects.requireNonNull(rerunConcurrency);
-        this.runtimeState = Objects.requireNonNull(runtimeState);
-        this.type = Objects.requireNonNull(type);
+        this.parentTrigger = parentTrigger;
+        this.requestedEndTime = requestedEndTime;
+        this.requestedStartTime = requestedStartTime;
+        this.rerunConcurrency = rerunConcurrency;
+        this.runtimeState = runtimeState;
+        this.type = type;
     }
 
     /**

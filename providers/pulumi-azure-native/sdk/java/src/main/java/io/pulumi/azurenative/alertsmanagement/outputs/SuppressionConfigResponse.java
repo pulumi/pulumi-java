@@ -27,7 +27,7 @@ public final class SuppressionConfigResponse {
     private SuppressionConfigResponse(
         String recurrenceType,
         @Nullable SuppressionScheduleResponse schedule) {
-        this.recurrenceType = Objects.requireNonNull(recurrenceType);
+        this.recurrenceType = recurrenceType;
         this.schedule = schedule;
     }
 

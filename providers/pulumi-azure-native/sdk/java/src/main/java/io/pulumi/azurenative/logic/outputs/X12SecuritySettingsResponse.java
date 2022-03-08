@@ -38,10 +38,10 @@ public final class X12SecuritySettingsResponse {
         @Nullable String authorizationValue,
         @Nullable String passwordValue,
         String securityQualifier) {
-        this.authorizationQualifier = Objects.requireNonNull(authorizationQualifier);
+        this.authorizationQualifier = authorizationQualifier;
         this.authorizationValue = authorizationValue;
         this.passwordValue = passwordValue;
-        this.securityQualifier = Objects.requireNonNull(securityQualifier);
+        this.securityQualifier = securityQualifier;
     }
 
     /**

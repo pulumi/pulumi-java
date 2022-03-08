@@ -38,7 +38,7 @@ public final class ComplianceStatusResponse {
         @Nullable String lastConfigApplied,
         @Nullable String message,
         @Nullable String messageLevel) {
-        this.complianceState = Objects.requireNonNull(complianceState);
+        this.complianceState = complianceState;
         this.lastConfigApplied = lastConfigApplied;
         this.message = message;
         this.messageLevel = messageLevel;

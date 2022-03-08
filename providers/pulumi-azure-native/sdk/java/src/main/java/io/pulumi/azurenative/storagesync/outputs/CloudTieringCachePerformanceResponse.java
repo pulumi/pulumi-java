@@ -38,10 +38,10 @@ public final class CloudTieringCachePerformanceResponse {
         Integer cacheHitBytesPercent,
         Double cacheMissBytes,
         String lastUpdatedTimestamp) {
-        this.cacheHitBytes = Objects.requireNonNull(cacheHitBytes);
-        this.cacheHitBytesPercent = Objects.requireNonNull(cacheHitBytesPercent);
-        this.cacheMissBytes = Objects.requireNonNull(cacheMissBytes);
-        this.lastUpdatedTimestamp = Objects.requireNonNull(lastUpdatedTimestamp);
+        this.cacheHitBytes = cacheHitBytes;
+        this.cacheHitBytesPercent = cacheHitBytesPercent;
+        this.cacheMissBytes = cacheMissBytes;
+        this.lastUpdatedTimestamp = lastUpdatedTimestamp;
     }
 
     /**

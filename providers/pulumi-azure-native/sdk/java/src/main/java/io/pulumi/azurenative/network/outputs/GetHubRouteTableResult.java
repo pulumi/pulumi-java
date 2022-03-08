@@ -70,15 +70,15 @@ public final class GetHubRouteTableResult {
         String provisioningState,
         @Nullable List<HubRouteResponse> routes,
         String type) {
-        this.associatedConnections = Objects.requireNonNull(associatedConnections);
-        this.etag = Objects.requireNonNull(etag);
+        this.associatedConnections = associatedConnections;
+        this.etag = etag;
         this.id = id;
         this.labels = labels;
         this.name = name;
-        this.propagatingConnections = Objects.requireNonNull(propagatingConnections);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.propagatingConnections = propagatingConnections;
+        this.provisioningState = provisioningState;
         this.routes = routes;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

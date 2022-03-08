@@ -93,7 +93,7 @@ public final class OSDiskResponse {
         @Nullable VirtualHardDiskResponse vhd,
         @Nullable Boolean writeAcceleratorEnabled) {
         this.caching = caching;
-        this.createOption = Objects.requireNonNull(createOption);
+        this.createOption = createOption;
         this.deleteOption = deleteOption;
         this.diffDiskSettings = diffDiskSettings;
         this.diskSizeGB = diskSizeGB;

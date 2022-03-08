@@ -125,22 +125,22 @@ public final class GetServiceResult {
         @Nullable Map<String,String> tags,
         String type) {
         this.hostingMode = hostingMode;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.identity = identity;
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
+        this.location = location;
+        this.name = name;
         this.networkRuleSet = networkRuleSet;
         this.partitionCount = partitionCount;
-        this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.privateEndpointConnections = privateEndpointConnections;
+        this.provisioningState = provisioningState;
         this.publicNetworkAccess = publicNetworkAccess;
         this.replicaCount = replicaCount;
-        this.sharedPrivateLinkResources = Objects.requireNonNull(sharedPrivateLinkResources);
+        this.sharedPrivateLinkResources = sharedPrivateLinkResources;
         this.sku = sku;
-        this.status = Objects.requireNonNull(status);
-        this.statusDetails = Objects.requireNonNull(statusDetails);
+        this.status = status;
+        this.statusDetails = statusDetails;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

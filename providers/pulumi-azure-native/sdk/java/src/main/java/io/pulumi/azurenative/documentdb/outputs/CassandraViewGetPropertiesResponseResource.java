@@ -43,11 +43,11 @@ public final class CassandraViewGetPropertiesResponseResource {
         String rid,
         Double ts,
         String viewDefinition) {
-        this.etag = Objects.requireNonNull(etag);
-        this.id = Objects.requireNonNull(id);
-        this.rid = Objects.requireNonNull(rid);
-        this.ts = Objects.requireNonNull(ts);
-        this.viewDefinition = Objects.requireNonNull(viewDefinition);
+        this.etag = etag;
+        this.id = id;
+        this.rid = rid;
+        this.ts = ts;
+        this.viewDefinition = viewDefinition;
     }
 
     /**

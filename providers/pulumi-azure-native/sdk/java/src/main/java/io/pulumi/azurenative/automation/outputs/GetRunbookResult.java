@@ -151,7 +151,7 @@ public final class GetRunbookResult {
         this.description = description;
         this.draft = draft;
         this.etag = etag;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.jobCount = jobCount;
         this.lastModifiedBy = lastModifiedBy;
         this.lastModifiedTime = lastModifiedTime;
@@ -159,7 +159,7 @@ public final class GetRunbookResult {
         this.logActivityTrace = logActivityTrace;
         this.logProgress = logProgress;
         this.logVerbose = logVerbose;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.outputTypes = outputTypes;
         this.parameters = parameters;
         this.provisioningState = provisioningState;
@@ -167,7 +167,7 @@ public final class GetRunbookResult {
         this.runbookType = runbookType;
         this.state = state;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

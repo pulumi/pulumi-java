@@ -77,16 +77,16 @@ public final class GetIpGroupResult {
         String provisioningState,
         @Nullable Map<String,String> tags,
         String type) {
-        this.etag = Objects.requireNonNull(etag);
-        this.firewallPolicies = Objects.requireNonNull(firewallPolicies);
-        this.firewalls = Objects.requireNonNull(firewalls);
+        this.etag = etag;
+        this.firewallPolicies = firewallPolicies;
+        this.firewalls = firewalls;
         this.id = id;
         this.ipAddresses = ipAddresses;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

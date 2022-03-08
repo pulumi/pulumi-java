@@ -64,13 +64,13 @@ public final class GetScopeConnectionResult {
         @Nullable String tenantId,
         String type) {
         this.description = description;
-        this.etag = Objects.requireNonNull(etag);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.etag = etag;
+        this.id = id;
+        this.name = name;
         this.resourceId = resourceId;
-        this.systemData = Objects.requireNonNull(systemData);
+        this.systemData = systemData;
         this.tenantId = tenantId;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

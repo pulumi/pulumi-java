@@ -34,7 +34,7 @@ public final class ConsistencyPolicyResponse {
         String defaultConsistencyLevel,
         @Nullable Integer maxIntervalInSeconds,
         @Nullable Double maxStalenessPrefix) {
-        this.defaultConsistencyLevel = Objects.requireNonNull(defaultConsistencyLevel);
+        this.defaultConsistencyLevel = defaultConsistencyLevel;
         this.maxIntervalInSeconds = maxIntervalInSeconds;
         this.maxStalenessPrefix = maxStalenessPrefix;
     }

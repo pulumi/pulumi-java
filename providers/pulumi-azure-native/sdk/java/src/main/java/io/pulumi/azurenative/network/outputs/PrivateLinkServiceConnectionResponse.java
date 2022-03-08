@@ -70,15 +70,15 @@ public final class PrivateLinkServiceConnectionResponse {
         String provisioningState,
         @Nullable String requestMessage,
         String type) {
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.groupIds = groupIds;
         this.id = id;
         this.name = name;
         this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
         this.privateLinkServiceId = privateLinkServiceId;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.requestMessage = requestMessage;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

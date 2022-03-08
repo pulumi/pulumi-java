@@ -39,9 +39,9 @@ public final class EmailReceiverResponse {
         String name,
         String status,
         @Nullable Boolean useCommonAlertSchema) {
-        this.emailAddress = Objects.requireNonNull(emailAddress);
-        this.name = Objects.requireNonNull(name);
-        this.status = Objects.requireNonNull(status);
+        this.emailAddress = emailAddress;
+        this.name = name;
+        this.status = status;
         this.useCommonAlertSchema = useCommonAlertSchema;
     }
 

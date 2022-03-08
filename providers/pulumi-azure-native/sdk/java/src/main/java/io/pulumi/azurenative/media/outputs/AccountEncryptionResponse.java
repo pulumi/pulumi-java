@@ -28,7 +28,7 @@ public final class AccountEncryptionResponse {
         @Nullable KeyVaultPropertiesResponse keyVaultProperties,
         String type) {
         this.keyVaultProperties = keyVaultProperties;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

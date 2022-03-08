@@ -62,14 +62,14 @@ public final class RosettaNetPipActivityBehaviorResponse {
         String responseType,
         Integer retryCount,
         Integer timeToPerformInSeconds) {
-        this.actionType = Objects.requireNonNull(actionType);
-        this.isAuthorizationRequired = Objects.requireNonNull(isAuthorizationRequired);
-        this.isSecuredTransportRequired = Objects.requireNonNull(isSecuredTransportRequired);
-        this.nonRepudiationOfOriginAndContent = Objects.requireNonNull(nonRepudiationOfOriginAndContent);
-        this.persistentConfidentialityScope = Objects.requireNonNull(persistentConfidentialityScope);
-        this.responseType = Objects.requireNonNull(responseType);
-        this.retryCount = Objects.requireNonNull(retryCount);
-        this.timeToPerformInSeconds = Objects.requireNonNull(timeToPerformInSeconds);
+        this.actionType = actionType;
+        this.isAuthorizationRequired = isAuthorizationRequired;
+        this.isSecuredTransportRequired = isSecuredTransportRequired;
+        this.nonRepudiationOfOriginAndContent = nonRepudiationOfOriginAndContent;
+        this.persistentConfidentialityScope = persistentConfidentialityScope;
+        this.responseType = responseType;
+        this.retryCount = retryCount;
+        this.timeToPerformInSeconds = timeToPerformInSeconds;
     }
 
     /**

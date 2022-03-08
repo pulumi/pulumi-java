@@ -36,10 +36,10 @@ public final class CircuitResponse {
         String expressRoutePrivatePeeringID,
         String primarySubnet,
         String secondarySubnet) {
-        this.expressRouteID = Objects.requireNonNull(expressRouteID);
-        this.expressRoutePrivatePeeringID = Objects.requireNonNull(expressRoutePrivatePeeringID);
-        this.primarySubnet = Objects.requireNonNull(primarySubnet);
-        this.secondarySubnet = Objects.requireNonNull(secondarySubnet);
+        this.expressRouteID = expressRouteID;
+        this.expressRoutePrivatePeeringID = expressRoutePrivatePeeringID;
+        this.primarySubnet = primarySubnet;
+        this.secondarySubnet = secondarySubnet;
     }
 
     /**

@@ -74,9 +74,9 @@ public final class GalleryApplicationVersionPublishingProfileResponse {
         this.endOfLifeDate = endOfLifeDate;
         this.excludeFromLatest = excludeFromLatest;
         this.manageActions = manageActions;
-        this.publishedDate = Objects.requireNonNull(publishedDate);
+        this.publishedDate = publishedDate;
         this.replicaCount = replicaCount;
-        this.source = Objects.requireNonNull(source);
+        this.source = source;
         this.storageAccountType = storageAccountType;
         this.targetRegions = targetRegions;
     }

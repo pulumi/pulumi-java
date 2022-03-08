@@ -28,7 +28,7 @@ public final class MpiResponse {
     private MpiResponse(
         String distributionType,
         @Nullable Integer processCountPerInstance) {
-        this.distributionType = Objects.requireNonNull(distributionType);
+        this.distributionType = distributionType;
         this.processCountPerInstance = processCountPerInstance;
     }
 

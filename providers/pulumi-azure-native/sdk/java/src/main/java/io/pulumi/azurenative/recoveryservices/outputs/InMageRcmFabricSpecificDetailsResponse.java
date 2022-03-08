@@ -111,21 +111,21 @@ public final class InMageRcmFabricSpecificDetailsResponse {
         String serviceEndpoint,
         String serviceResourceId,
         String vmwareSiteId) {
-        this.agentDetails = Objects.requireNonNull(agentDetails);
-        this.controlPlaneUri = Objects.requireNonNull(controlPlaneUri);
-        this.dataPlaneUri = Objects.requireNonNull(dataPlaneUri);
-        this.dras = Objects.requireNonNull(dras);
-        this.instanceType = Objects.requireNonNull(instanceType);
-        this.physicalSiteId = Objects.requireNonNull(physicalSiteId);
-        this.processServers = Objects.requireNonNull(processServers);
-        this.pushInstallers = Objects.requireNonNull(pushInstallers);
-        this.rcmProxies = Objects.requireNonNull(rcmProxies);
-        this.replicationAgents = Objects.requireNonNull(replicationAgents);
-        this.reprotectAgents = Objects.requireNonNull(reprotectAgents);
-        this.serviceContainerId = Objects.requireNonNull(serviceContainerId);
-        this.serviceEndpoint = Objects.requireNonNull(serviceEndpoint);
-        this.serviceResourceId = Objects.requireNonNull(serviceResourceId);
-        this.vmwareSiteId = Objects.requireNonNull(vmwareSiteId);
+        this.agentDetails = agentDetails;
+        this.controlPlaneUri = controlPlaneUri;
+        this.dataPlaneUri = dataPlaneUri;
+        this.dras = dras;
+        this.instanceType = instanceType;
+        this.physicalSiteId = physicalSiteId;
+        this.processServers = processServers;
+        this.pushInstallers = pushInstallers;
+        this.rcmProxies = rcmProxies;
+        this.replicationAgents = replicationAgents;
+        this.reprotectAgents = reprotectAgents;
+        this.serviceContainerId = serviceContainerId;
+        this.serviceEndpoint = serviceEndpoint;
+        this.serviceResourceId = serviceResourceId;
+        this.vmwareSiteId = vmwareSiteId;
     }
 
     /**

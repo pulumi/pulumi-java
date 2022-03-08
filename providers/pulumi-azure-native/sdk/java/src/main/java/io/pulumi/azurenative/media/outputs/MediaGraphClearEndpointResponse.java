@@ -35,8 +35,8 @@ public final class MediaGraphClearEndpointResponse {
         String odataType,
         String url) {
         this.credentials = credentials;
-        this.odataType = Objects.requireNonNull(odataType);
-        this.url = Objects.requireNonNull(url);
+        this.odataType = odataType;
+        this.url = url;
     }
 
     /**

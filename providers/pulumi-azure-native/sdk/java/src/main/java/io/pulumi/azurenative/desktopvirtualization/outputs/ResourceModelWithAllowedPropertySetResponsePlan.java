@@ -44,10 +44,10 @@ public final class ResourceModelWithAllowedPropertySetResponsePlan {
         @Nullable String promotionCode,
         String publisher,
         @Nullable String version) {
-        this.name = Objects.requireNonNull(name);
-        this.product = Objects.requireNonNull(product);
+        this.name = name;
+        this.product = product;
         this.promotionCode = promotionCode;
-        this.publisher = Objects.requireNonNull(publisher);
+        this.publisher = publisher;
         this.version = version;
     }
 

@@ -36,7 +36,7 @@ public final class LabelCategoryResponse {
         Map<String,LabelClassResponse> classes,
         @Nullable String displayName) {
         this.allowMultiSelect = allowMultiSelect;
-        this.classes = Objects.requireNonNull(classes);
+        this.classes = classes;
         this.displayName = displayName;
     }
 

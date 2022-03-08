@@ -95,7 +95,7 @@ public final class ApplicationRuleResponse {
         this.fqdnTags = fqdnTags;
         this.name = name;
         this.protocols = protocols;
-        this.ruleType = Objects.requireNonNull(ruleType);
+        this.ruleType = ruleType;
         this.sourceAddresses = sourceAddresses;
         this.sourceIpGroups = sourceIpGroups;
         this.targetFqdns = targetFqdns;

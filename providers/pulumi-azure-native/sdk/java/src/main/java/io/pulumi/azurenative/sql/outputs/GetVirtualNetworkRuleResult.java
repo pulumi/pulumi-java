@@ -51,12 +51,12 @@ public final class GetVirtualNetworkRuleResult {
         String state,
         String type,
         String virtualNetworkSubnetId) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.ignoreMissingVnetServiceEndpoint = ignoreMissingVnetServiceEndpoint;
-        this.name = Objects.requireNonNull(name);
-        this.state = Objects.requireNonNull(state);
-        this.type = Objects.requireNonNull(type);
-        this.virtualNetworkSubnetId = Objects.requireNonNull(virtualNetworkSubnetId);
+        this.name = name;
+        this.state = state;
+        this.type = type;
+        this.virtualNetworkSubnetId = virtualNetworkSubnetId;
     }
 
     /**

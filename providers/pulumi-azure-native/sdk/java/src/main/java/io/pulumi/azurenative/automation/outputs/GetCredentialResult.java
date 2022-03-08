@@ -56,13 +56,13 @@ public final class GetCredentialResult {
         String name,
         String type,
         String userName) {
-        this.creationTime = Objects.requireNonNull(creationTime);
+        this.creationTime = creationTime;
         this.description = description;
-        this.id = Objects.requireNonNull(id);
-        this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
-        this.userName = Objects.requireNonNull(userName);
+        this.id = id;
+        this.lastModifiedTime = lastModifiedTime;
+        this.name = name;
+        this.type = type;
+        this.userName = userName;
     }
 
     /**

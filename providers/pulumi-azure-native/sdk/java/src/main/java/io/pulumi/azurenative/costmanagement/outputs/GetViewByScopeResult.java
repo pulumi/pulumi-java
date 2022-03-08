@@ -136,23 +136,23 @@ public final class GetViewByScopeResult {
         String type) {
         this.accumulated = accumulated;
         this.chart = chart;
-        this.createdOn = Objects.requireNonNull(createdOn);
-        this.currency = Objects.requireNonNull(currency);
+        this.createdOn = createdOn;
+        this.currency = currency;
         this.dataSet = dataSet;
-        this.dateRange = Objects.requireNonNull(dateRange);
+        this.dateRange = dateRange;
         this.displayName = displayName;
         this.eTag = eTag;
-        this.id = Objects.requireNonNull(id);
-        this.includeMonetaryCommitment = Objects.requireNonNull(includeMonetaryCommitment);
+        this.id = id;
+        this.includeMonetaryCommitment = includeMonetaryCommitment;
         this.kpis = kpis;
         this.metric = metric;
-        this.modifiedOn = Objects.requireNonNull(modifiedOn);
-        this.name = Objects.requireNonNull(name);
+        this.modifiedOn = modifiedOn;
+        this.name = name;
         this.pivots = pivots;
         this.scope = scope;
         this.timePeriod = timePeriod;
-        this.timeframe = Objects.requireNonNull(timeframe);
-        this.type = Objects.requireNonNull(type);
+        this.timeframe = timeframe;
+        this.type = type;
     }
 
     /**

@@ -50,12 +50,12 @@ public final class DiagnosticsStorageAccountConfigResponse {
         String queueEndpoint,
         String storageAccountName,
         String tableEndpoint) {
-        this.blobEndpoint = Objects.requireNonNull(blobEndpoint);
-        this.protectedAccountKeyName = Objects.requireNonNull(protectedAccountKeyName);
+        this.blobEndpoint = blobEndpoint;
+        this.protectedAccountKeyName = protectedAccountKeyName;
         this.protectedAccountKeyName2 = protectedAccountKeyName2;
-        this.queueEndpoint = Objects.requireNonNull(queueEndpoint);
-        this.storageAccountName = Objects.requireNonNull(storageAccountName);
-        this.tableEndpoint = Objects.requireNonNull(tableEndpoint);
+        this.queueEndpoint = queueEndpoint;
+        this.storageAccountName = storageAccountName;
+        this.tableEndpoint = tableEndpoint;
     }
 
     /**

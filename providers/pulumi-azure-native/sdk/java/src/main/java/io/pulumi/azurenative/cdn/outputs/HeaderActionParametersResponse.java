@@ -34,9 +34,9 @@ public final class HeaderActionParametersResponse {
         String headerName,
         String odataType,
         @Nullable String value) {
-        this.headerAction = Objects.requireNonNull(headerAction);
-        this.headerName = Objects.requireNonNull(headerName);
-        this.odataType = Objects.requireNonNull(odataType);
+        this.headerAction = headerAction;
+        this.headerName = headerName;
+        this.odataType = odataType;
         this.value = value;
     }
 

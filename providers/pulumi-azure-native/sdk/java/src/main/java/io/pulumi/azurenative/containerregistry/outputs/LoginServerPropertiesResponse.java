@@ -25,8 +25,8 @@ public final class LoginServerPropertiesResponse {
     private LoginServerPropertiesResponse(
         String host,
         TlsPropertiesResponse tls) {
-        this.host = Objects.requireNonNull(host);
-        this.tls = Objects.requireNonNull(tls);
+        this.host = host;
+        this.tls = tls;
     }
 
     /**

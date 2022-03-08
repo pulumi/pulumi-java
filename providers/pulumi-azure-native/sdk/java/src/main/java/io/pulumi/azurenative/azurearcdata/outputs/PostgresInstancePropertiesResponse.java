@@ -53,7 +53,7 @@ public final class PostgresInstancePropertiesResponse {
         this.dataControllerId = dataControllerId;
         this.k8sRaw = k8sRaw;
         this.lastUploadedDate = lastUploadedDate;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
     }
 
     /**

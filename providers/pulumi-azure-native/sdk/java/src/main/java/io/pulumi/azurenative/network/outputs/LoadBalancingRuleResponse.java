@@ -118,17 +118,17 @@ public final class LoadBalancingRuleResponse {
         this.disableOutboundSnat = disableOutboundSnat;
         this.enableFloatingIP = enableFloatingIP;
         this.enableTcpReset = enableTcpReset;
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.frontendIPConfiguration = frontendIPConfiguration;
-        this.frontendPort = Objects.requireNonNull(frontendPort);
+        this.frontendPort = frontendPort;
         this.id = id;
         this.idleTimeoutInMinutes = idleTimeoutInMinutes;
         this.loadDistribution = loadDistribution;
         this.name = name;
         this.probe = probe;
-        this.protocol = Objects.requireNonNull(protocol);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.type = Objects.requireNonNull(type);
+        this.protocol = protocol;
+        this.provisioningState = provisioningState;
+        this.type = type;
     }
 
     /**

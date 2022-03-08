@@ -33,9 +33,9 @@ public final class SSISAccessCredentialResponse {
         Object domain,
         Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
         Object userName) {
-        this.domain = Objects.requireNonNull(domain);
-        this.password = Objects.requireNonNull(password);
-        this.userName = Objects.requireNonNull(userName);
+        this.domain = domain;
+        this.password = password;
+        this.userName = userName;
     }
 
     /**

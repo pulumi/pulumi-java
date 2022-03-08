@@ -42,11 +42,11 @@ public final class ItsmReceiverResponse {
         String region,
         String ticketConfiguration,
         String workspaceId) {
-        this.connectionId = Objects.requireNonNull(connectionId);
-        this.name = Objects.requireNonNull(name);
-        this.region = Objects.requireNonNull(region);
-        this.ticketConfiguration = Objects.requireNonNull(ticketConfiguration);
-        this.workspaceId = Objects.requireNonNull(workspaceId);
+        this.connectionId = connectionId;
+        this.name = name;
+        this.region = region;
+        this.ticketConfiguration = ticketConfiguration;
+        this.workspaceId = workspaceId;
     }
 
     /**

@@ -24,8 +24,8 @@ public final class AzureFirewallIpGroupsResponse {
     private AzureFirewallIpGroupsResponse(
         String changeNumber,
         String id) {
-        this.changeNumber = Objects.requireNonNull(changeNumber);
-        this.id = Objects.requireNonNull(id);
+        this.changeNumber = changeNumber;
+        this.id = id;
     }
 
     /**

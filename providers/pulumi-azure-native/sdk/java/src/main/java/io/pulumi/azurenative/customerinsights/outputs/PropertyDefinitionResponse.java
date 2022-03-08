@@ -116,10 +116,10 @@ public final class PropertyDefinitionResponse {
         @Nullable String propertyId,
         @Nullable String schemaItemPropLink) {
         this.arrayValueSeparator = arrayValueSeparator;
-        this.dataSourcePrecedenceRules = Objects.requireNonNull(dataSourcePrecedenceRules);
+        this.dataSourcePrecedenceRules = dataSourcePrecedenceRules;
         this.enumValidValues = enumValidValues;
-        this.fieldName = Objects.requireNonNull(fieldName);
-        this.fieldType = Objects.requireNonNull(fieldType);
+        this.fieldName = fieldName;
+        this.fieldType = fieldType;
         this.isArray = isArray;
         this.isAvailableInGraph = isAvailableInGraph;
         this.isEnum = isEnum;

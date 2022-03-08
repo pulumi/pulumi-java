@@ -20,9 +20,9 @@ public final class PrivateLinkServiceConnectionStateResponse {
         String actionRequired,
         @Nullable String description,
         String status) {
-        this.actionRequired = Objects.requireNonNull(actionRequired);
+        this.actionRequired = actionRequired;
         this.description = description;
-        this.status = Objects.requireNonNull(status);
+        this.status = status;
     }
 
     public String getActionRequired() {

@@ -24,8 +24,8 @@ public final class ServiceAuthConfigurationResponse {
     private ServiceAuthConfigurationResponse(
         String primaryAuthKeyHash,
         String secondaryAuthKeyHash) {
-        this.primaryAuthKeyHash = Objects.requireNonNull(primaryAuthKeyHash);
-        this.secondaryAuthKeyHash = Objects.requireNonNull(secondaryAuthKeyHash);
+        this.primaryAuthKeyHash = primaryAuthKeyHash;
+        this.secondaryAuthKeyHash = secondaryAuthKeyHash;
     }
 
     /**

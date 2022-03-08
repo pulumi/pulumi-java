@@ -113,7 +113,7 @@ public final class AzureSqlMILinkedServiceResponse {
         this.annotations = annotations;
         this.azureCloudType = azureCloudType;
         this.connectVia = connectVia;
-        this.connectionString = Objects.requireNonNull(connectionString);
+        this.connectionString = connectionString;
         this.credential = credential;
         this.description = description;
         this.encryptedCredential = encryptedCredential;
@@ -122,7 +122,7 @@ public final class AzureSqlMILinkedServiceResponse {
         this.servicePrincipalId = servicePrincipalId;
         this.servicePrincipalKey = servicePrincipalKey;
         this.tenant = tenant;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

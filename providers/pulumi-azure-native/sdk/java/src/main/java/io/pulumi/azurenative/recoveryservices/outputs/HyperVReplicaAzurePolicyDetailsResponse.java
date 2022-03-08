@@ -61,7 +61,7 @@ public final class HyperVReplicaAzurePolicyDetailsResponse {
         this.activeStorageAccountId = activeStorageAccountId;
         this.applicationConsistentSnapshotFrequencyInHours = applicationConsistentSnapshotFrequencyInHours;
         this.encryption = encryption;
-        this.instanceType = Objects.requireNonNull(instanceType);
+        this.instanceType = instanceType;
         this.onlineReplicationStartTime = onlineReplicationStartTime;
         this.recoveryPointHistoryDurationInHours = recoveryPointHistoryDurationInHours;
         this.replicationInterval = replicationInterval;

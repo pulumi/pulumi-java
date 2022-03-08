@@ -119,7 +119,7 @@ public final class QuickBooksLinkedServiceResponse {
         this.encryptedCredential = encryptedCredential;
         this.endpoint = endpoint;
         this.parameters = parameters;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.useEncryptedEndpoints = useEncryptedEndpoints;
     }
 

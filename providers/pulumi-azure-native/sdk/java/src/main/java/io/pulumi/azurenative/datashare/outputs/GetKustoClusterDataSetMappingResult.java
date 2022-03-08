@@ -74,16 +74,16 @@ public final class GetKustoClusterDataSetMappingResult {
         String provisioningState,
         SystemDataResponse systemData,
         String type) {
-        this.dataSetId = Objects.requireNonNull(dataSetId);
-        this.dataSetMappingStatus = Objects.requireNonNull(dataSetMappingStatus);
-        this.id = Objects.requireNonNull(id);
-        this.kind = Objects.requireNonNull(kind);
-        this.kustoClusterResourceId = Objects.requireNonNull(kustoClusterResourceId);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.dataSetId = dataSetId;
+        this.dataSetMappingStatus = dataSetMappingStatus;
+        this.id = id;
+        this.kind = kind;
+        this.kustoClusterResourceId = kustoClusterResourceId;
+        this.location = location;
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

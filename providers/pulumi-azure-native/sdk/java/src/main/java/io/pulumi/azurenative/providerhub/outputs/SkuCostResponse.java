@@ -22,7 +22,7 @@ public final class SkuCostResponse {
         String meterId,
         @Nullable Integer quantity) {
         this.extendedUnit = extendedUnit;
-        this.meterId = Objects.requireNonNull(meterId);
+        this.meterId = meterId;
         this.quantity = quantity;
     }
 

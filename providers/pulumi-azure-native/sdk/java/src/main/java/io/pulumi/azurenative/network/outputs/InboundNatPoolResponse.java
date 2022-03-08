@@ -95,19 +95,19 @@ public final class InboundNatPoolResponse {
         String protocol,
         String provisioningState,
         String type) {
-        this.backendPort = Objects.requireNonNull(backendPort);
+        this.backendPort = backendPort;
         this.enableFloatingIP = enableFloatingIP;
         this.enableTcpReset = enableTcpReset;
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.frontendIPConfiguration = frontendIPConfiguration;
-        this.frontendPortRangeEnd = Objects.requireNonNull(frontendPortRangeEnd);
-        this.frontendPortRangeStart = Objects.requireNonNull(frontendPortRangeStart);
+        this.frontendPortRangeEnd = frontendPortRangeEnd;
+        this.frontendPortRangeStart = frontendPortRangeStart;
         this.id = id;
         this.idleTimeoutInMinutes = idleTimeoutInMinutes;
         this.name = name;
-        this.protocol = Objects.requireNonNull(protocol);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.type = Objects.requireNonNull(type);
+        this.protocol = protocol;
+        this.provisioningState = provisioningState;
+        this.type = type;
     }
 
     /**

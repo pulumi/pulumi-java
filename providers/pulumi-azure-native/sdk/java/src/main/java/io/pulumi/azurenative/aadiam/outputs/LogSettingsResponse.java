@@ -35,7 +35,7 @@ public final class LogSettingsResponse {
         Boolean enabled,
         @Nullable RetentionPolicyResponse retentionPolicy) {
         this.category = category;
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
         this.retentionPolicy = retentionPolicy;
     }
 

@@ -86,11 +86,11 @@ public final class DatabricksSparkPythonActivityResponse {
         this.description = description;
         this.libraries = libraries;
         this.linkedServiceName = linkedServiceName;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.parameters = parameters;
         this.policy = policy;
-        this.pythonFile = Objects.requireNonNull(pythonFile);
-        this.type = Objects.requireNonNull(type);
+        this.pythonFile = pythonFile;
+        this.type = type;
         this.userProperties = userProperties;
     }
 

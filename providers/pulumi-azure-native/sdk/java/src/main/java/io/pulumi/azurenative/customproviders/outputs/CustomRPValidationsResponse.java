@@ -26,7 +26,7 @@ public final class CustomRPValidationsResponse {
     private CustomRPValidationsResponse(
         String specification,
         @Nullable String validationType) {
-        this.specification = Objects.requireNonNull(specification);
+        this.specification = specification;
         this.validationType = validationType;
     }
 

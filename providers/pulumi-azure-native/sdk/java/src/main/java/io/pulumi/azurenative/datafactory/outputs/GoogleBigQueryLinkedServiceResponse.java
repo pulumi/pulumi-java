@@ -127,7 +127,7 @@ public final class GoogleBigQueryLinkedServiceResponse {
         @Nullable Object useSystemTrustStore) {
         this.additionalProjects = additionalProjects;
         this.annotations = annotations;
-        this.authenticationType = Objects.requireNonNull(authenticationType);
+        this.authenticationType = authenticationType;
         this.clientId = clientId;
         this.clientSecret = clientSecret;
         this.connectVia = connectVia;
@@ -136,11 +136,11 @@ public final class GoogleBigQueryLinkedServiceResponse {
         this.encryptedCredential = encryptedCredential;
         this.keyFilePath = keyFilePath;
         this.parameters = parameters;
-        this.project = Objects.requireNonNull(project);
+        this.project = project;
         this.refreshToken = refreshToken;
         this.requestGoogleDriveScope = requestGoogleDriveScope;
         this.trustedCertPath = trustedCertPath;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.useSystemTrustStore = useSystemTrustStore;
     }
 

@@ -25,8 +25,8 @@ public final class AzureBackupParamsResponse {
     private AzureBackupParamsResponse(
         String backupType,
         String objectType) {
-        this.backupType = Objects.requireNonNull(backupType);
-        this.objectType = Objects.requireNonNull(objectType);
+        this.backupType = backupType;
+        this.objectType = objectType;
     }
 
     /**

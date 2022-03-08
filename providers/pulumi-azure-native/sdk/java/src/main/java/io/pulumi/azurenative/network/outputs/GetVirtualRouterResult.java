@@ -90,16 +90,16 @@ public final class GetVirtualRouterResult {
         String type,
         @Nullable Double virtualRouterAsn,
         @Nullable List<String> virtualRouterIps) {
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.hostedGateway = hostedGateway;
         this.hostedSubnet = hostedSubnet;
         this.id = id;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
-        this.peerings = Objects.requireNonNull(peerings);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.name = name;
+        this.peerings = peerings;
+        this.provisioningState = provisioningState;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.virtualRouterAsn = virtualRouterAsn;
         this.virtualRouterIps = virtualRouterIps;
     }

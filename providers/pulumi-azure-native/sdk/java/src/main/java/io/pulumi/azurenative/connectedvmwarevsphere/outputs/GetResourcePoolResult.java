@@ -158,27 +158,27 @@ public final class GetResourcePoolResult {
         String type,
         String uuid,
         @Nullable String vCenterId) {
-        this.cpuLimitMHz = Objects.requireNonNull(cpuLimitMHz);
-        this.cpuReservationMHz = Objects.requireNonNull(cpuReservationMHz);
-        this.cpuSharesLevel = Objects.requireNonNull(cpuSharesLevel);
-        this.customResourceName = Objects.requireNonNull(customResourceName);
+        this.cpuLimitMHz = cpuLimitMHz;
+        this.cpuReservationMHz = cpuReservationMHz;
+        this.cpuSharesLevel = cpuSharesLevel;
+        this.customResourceName = customResourceName;
         this.extendedLocation = extendedLocation;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.inventoryItemId = inventoryItemId;
         this.kind = kind;
-        this.location = Objects.requireNonNull(location);
-        this.memLimitMB = Objects.requireNonNull(memLimitMB);
-        this.memReservationMB = Objects.requireNonNull(memReservationMB);
-        this.memSharesLevel = Objects.requireNonNull(memSharesLevel);
-        this.moName = Objects.requireNonNull(moName);
+        this.location = location;
+        this.memLimitMB = memLimitMB;
+        this.memReservationMB = memReservationMB;
+        this.memSharesLevel = memSharesLevel;
+        this.moName = moName;
         this.moRefId = moRefId;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.statuses = Objects.requireNonNull(statuses);
-        this.systemData = Objects.requireNonNull(systemData);
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.statuses = statuses;
+        this.systemData = systemData;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
-        this.uuid = Objects.requireNonNull(uuid);
+        this.type = type;
+        this.uuid = uuid;
         this.vCenterId = vCenterId;
     }
 

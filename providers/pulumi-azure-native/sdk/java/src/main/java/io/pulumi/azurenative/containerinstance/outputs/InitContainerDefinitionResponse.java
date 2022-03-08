@@ -57,8 +57,8 @@ public final class InitContainerDefinitionResponse {
         this.command = command;
         this.environmentVariables = environmentVariables;
         this.image = image;
-        this.instanceView = Objects.requireNonNull(instanceView);
-        this.name = Objects.requireNonNull(name);
+        this.instanceView = instanceView;
+        this.name = name;
         this.volumeMounts = volumeMounts;
     }
 

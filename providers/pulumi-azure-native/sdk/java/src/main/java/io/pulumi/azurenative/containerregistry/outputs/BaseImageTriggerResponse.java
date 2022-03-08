@@ -44,8 +44,8 @@ public final class BaseImageTriggerResponse {
         @Nullable String status,
         @Nullable String updateTriggerEndpoint,
         @Nullable String updateTriggerPayloadType) {
-        this.baseImageTriggerType = Objects.requireNonNull(baseImageTriggerType);
-        this.name = Objects.requireNonNull(name);
+        this.baseImageTriggerType = baseImageTriggerType;
+        this.name = name;
         this.status = status;
         this.updateTriggerEndpoint = updateTriggerEndpoint;
         this.updateTriggerPayloadType = updateTriggerPayloadType;

@@ -48,10 +48,10 @@ public final class ServiceUnitResponse {
         @Nullable List<RolloutStepResponse> steps,
         String targetResourceGroup) {
         this.artifacts = artifacts;
-        this.deploymentMode = Objects.requireNonNull(deploymentMode);
+        this.deploymentMode = deploymentMode;
         this.name = name;
         this.steps = steps;
-        this.targetResourceGroup = Objects.requireNonNull(targetResourceGroup);
+        this.targetResourceGroup = targetResourceGroup;
     }
 
     /**

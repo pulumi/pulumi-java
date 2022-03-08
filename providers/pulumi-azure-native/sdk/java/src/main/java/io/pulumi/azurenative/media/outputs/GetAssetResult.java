@@ -88,17 +88,17 @@ public final class GetAssetResult {
         SystemDataResponse systemData,
         String type) {
         this.alternateId = alternateId;
-        this.assetId = Objects.requireNonNull(assetId);
+        this.assetId = assetId;
         this.container = container;
-        this.created = Objects.requireNonNull(created);
+        this.created = created;
         this.description = description;
-        this.id = Objects.requireNonNull(id);
-        this.lastModified = Objects.requireNonNull(lastModified);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.lastModified = lastModified;
+        this.name = name;
         this.storageAccountName = storageAccountName;
-        this.storageEncryptionFormat = Objects.requireNonNull(storageEncryptionFormat);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.storageEncryptionFormat = storageEncryptionFormat;
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

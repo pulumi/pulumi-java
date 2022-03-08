@@ -34,7 +34,7 @@ public final class VirtualNetworkRuleResponse {
         String virtualNetworkResourceId) {
         this.action = action;
         this.state = state;
-        this.virtualNetworkResourceId = Objects.requireNonNull(virtualNetworkResourceId);
+        this.virtualNetworkResourceId = virtualNetworkResourceId;
     }
 
     /**

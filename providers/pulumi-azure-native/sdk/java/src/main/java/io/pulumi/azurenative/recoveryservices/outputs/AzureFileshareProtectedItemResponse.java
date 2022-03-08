@@ -161,7 +161,7 @@ public final class AzureFileshareProtectedItemResponse {
         this.lastBackupTime = lastBackupTime;
         this.lastRecoveryPoint = lastRecoveryPoint;
         this.policyId = policyId;
-        this.protectedItemType = Objects.requireNonNull(protectedItemType);
+        this.protectedItemType = protectedItemType;
         this.protectionState = protectionState;
         this.protectionStatus = protectionStatus;
         this.sourceResourceId = sourceResourceId;

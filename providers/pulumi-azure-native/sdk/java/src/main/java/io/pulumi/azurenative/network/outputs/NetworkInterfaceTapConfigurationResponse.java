@@ -51,11 +51,11 @@ public final class NetworkInterfaceTapConfigurationResponse {
         String provisioningState,
         String type,
         @Nullable VirtualNetworkTapResponse virtualNetworkTap) {
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.id = id;
         this.name = name;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.type = Objects.requireNonNull(type);
+        this.provisioningState = provisioningState;
+        this.type = type;
         this.virtualNetworkTap = virtualNetworkTap;
     }
 

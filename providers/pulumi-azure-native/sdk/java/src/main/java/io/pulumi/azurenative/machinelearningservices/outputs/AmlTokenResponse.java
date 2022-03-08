@@ -18,7 +18,7 @@ public final class AmlTokenResponse {
 
     @OutputCustomType.Constructor({"identityType"})
     private AmlTokenResponse(String identityType) {
-        this.identityType = Objects.requireNonNull(identityType);
+        this.identityType = identityType;
     }
 
     /**

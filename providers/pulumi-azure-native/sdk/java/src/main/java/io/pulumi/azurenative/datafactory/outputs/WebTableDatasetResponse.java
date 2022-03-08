@@ -84,13 +84,13 @@ public final class WebTableDatasetResponse {
         this.annotations = annotations;
         this.description = description;
         this.folder = folder;
-        this.index = Objects.requireNonNull(index);
-        this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
+        this.index = index;
+        this.linkedServiceName = linkedServiceName;
         this.parameters = parameters;
         this.path = path;
         this.schema = schema;
         this.structure = structure;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

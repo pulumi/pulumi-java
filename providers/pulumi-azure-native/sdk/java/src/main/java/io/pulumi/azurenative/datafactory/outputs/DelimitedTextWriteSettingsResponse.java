@@ -46,11 +46,11 @@ public final class DelimitedTextWriteSettingsResponse {
         @Nullable Object maxRowsPerFile,
         @Nullable Object quoteAllText,
         String type) {
-        this.fileExtension = Objects.requireNonNull(fileExtension);
+        this.fileExtension = fileExtension;
         this.fileNamePrefix = fileNamePrefix;
         this.maxRowsPerFile = maxRowsPerFile;
         this.quoteAllText = quoteAllText;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

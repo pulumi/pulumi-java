@@ -89,19 +89,19 @@ public final class GetSensitivityLabelResult {
         String schemaName,
         String tableName,
         String type) {
-        this.columnName = Objects.requireNonNull(columnName);
-        this.id = Objects.requireNonNull(id);
+        this.columnName = columnName;
+        this.id = id;
         this.informationType = informationType;
         this.informationTypeId = informationTypeId;
-        this.isDisabled = Objects.requireNonNull(isDisabled);
+        this.isDisabled = isDisabled;
         this.labelId = labelId;
         this.labelName = labelName;
-        this.managedBy = Objects.requireNonNull(managedBy);
-        this.name = Objects.requireNonNull(name);
+        this.managedBy = managedBy;
+        this.name = name;
         this.rank = rank;
-        this.schemaName = Objects.requireNonNull(schemaName);
-        this.tableName = Objects.requireNonNull(tableName);
-        this.type = Objects.requireNonNull(type);
+        this.schemaName = schemaName;
+        this.tableName = tableName;
+        this.type = type;
     }
 
     /**

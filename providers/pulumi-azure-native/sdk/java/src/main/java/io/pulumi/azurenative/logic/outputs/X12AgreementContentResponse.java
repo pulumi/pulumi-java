@@ -24,8 +24,8 @@ public final class X12AgreementContentResponse {
     private X12AgreementContentResponse(
         X12OneWayAgreementResponse receiveAgreement,
         X12OneWayAgreementResponse sendAgreement) {
-        this.receiveAgreement = Objects.requireNonNull(receiveAgreement);
-        this.sendAgreement = Objects.requireNonNull(sendAgreement);
+        this.receiveAgreement = receiveAgreement;
+        this.sendAgreement = sendAgreement;
     }
 
     /**

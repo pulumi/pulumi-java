@@ -25,8 +25,8 @@ public final class TrafficSelectorPolicyResponse {
     private TrafficSelectorPolicyResponse(
         List<String> localAddressRanges,
         List<String> remoteAddressRanges) {
-        this.localAddressRanges = Objects.requireNonNull(localAddressRanges);
-        this.remoteAddressRanges = Objects.requireNonNull(remoteAddressRanges);
+        this.localAddressRanges = localAddressRanges;
+        this.remoteAddressRanges = remoteAddressRanges;
     }
 
     /**

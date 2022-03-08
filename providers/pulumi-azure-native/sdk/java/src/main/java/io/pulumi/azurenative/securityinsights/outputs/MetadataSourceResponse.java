@@ -32,7 +32,7 @@ public final class MetadataSourceResponse {
         String kind,
         @Nullable String name,
         @Nullable String sourceId) {
-        this.kind = Objects.requireNonNull(kind);
+        this.kind = kind;
         this.name = name;
         this.sourceId = sourceId;
     }

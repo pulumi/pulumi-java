@@ -86,18 +86,18 @@ public final class GetDigitalTwinResult {
         @Nullable String publicNetworkAccess,
         @Nullable Map<String,String> tags,
         String type) {
-        this.createdTime = Objects.requireNonNull(createdTime);
-        this.hostName = Objects.requireNonNull(hostName);
-        this.id = Objects.requireNonNull(id);
+        this.createdTime = createdTime;
+        this.hostName = hostName;
+        this.id = id;
         this.identity = identity;
-        this.lastUpdatedTime = Objects.requireNonNull(lastUpdatedTime);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
+        this.lastUpdatedTime = lastUpdatedTime;
+        this.location = location;
+        this.name = name;
         this.privateEndpointConnections = privateEndpointConnections;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.publicNetworkAccess = publicNetworkAccess;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

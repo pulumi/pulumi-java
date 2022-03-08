@@ -57,13 +57,13 @@ public final class GetEnvironmentResult {
         SkuResponse sku,
         @Nullable Map<String,String> tags,
         String type) {
-        this.id = Objects.requireNonNull(id);
-        this.kind = Objects.requireNonNull(kind);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.sku = Objects.requireNonNull(sku);
+        this.id = id;
+        this.kind = kind;
+        this.location = location;
+        this.name = name;
+        this.sku = sku;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

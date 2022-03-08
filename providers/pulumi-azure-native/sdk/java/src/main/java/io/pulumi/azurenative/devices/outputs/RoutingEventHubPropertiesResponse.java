@@ -67,7 +67,7 @@ public final class RoutingEventHubPropertiesResponse {
         this.endpointUri = endpointUri;
         this.entityPath = entityPath;
         this.id = id;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.resourceGroup = resourceGroup;
         this.subscriptionId = subscriptionId;
     }

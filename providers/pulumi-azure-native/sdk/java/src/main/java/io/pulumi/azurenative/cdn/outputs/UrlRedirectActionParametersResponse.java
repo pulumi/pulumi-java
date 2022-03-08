@@ -57,8 +57,8 @@ public final class UrlRedirectActionParametersResponse {
         this.customPath = customPath;
         this.customQueryString = customQueryString;
         this.destinationProtocol = destinationProtocol;
-        this.odataType = Objects.requireNonNull(odataType);
-        this.redirectType = Objects.requireNonNull(redirectType);
+        this.odataType = odataType;
+        this.redirectType = redirectType;
     }
 
     /**

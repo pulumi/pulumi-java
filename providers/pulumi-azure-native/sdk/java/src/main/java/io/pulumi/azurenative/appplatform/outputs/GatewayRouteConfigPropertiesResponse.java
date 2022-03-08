@@ -35,7 +35,7 @@ public final class GatewayRouteConfigPropertiesResponse {
         String provisioningState,
         @Nullable List<GatewayApiRouteResponse> routes) {
         this.appResourceId = appResourceId;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.routes = routes;
     }
 

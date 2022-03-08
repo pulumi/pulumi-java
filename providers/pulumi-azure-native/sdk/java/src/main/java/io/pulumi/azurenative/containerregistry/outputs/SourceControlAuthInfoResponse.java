@@ -48,7 +48,7 @@ public final class SourceControlAuthInfoResponse {
         this.expiresIn = expiresIn;
         this.refreshToken = refreshToken;
         this.scope = scope;
-        this.token = Objects.requireNonNull(token);
+        this.token = token;
         this.tokenType = tokenType;
     }
 

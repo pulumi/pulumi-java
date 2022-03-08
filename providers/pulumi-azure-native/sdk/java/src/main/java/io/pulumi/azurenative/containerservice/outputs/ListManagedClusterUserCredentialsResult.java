@@ -18,7 +18,7 @@ public final class ListManagedClusterUserCredentialsResult {
 
     @OutputCustomType.Constructor({"kubeconfigs"})
     private ListManagedClusterUserCredentialsResult(List<CredentialResultResponse> kubeconfigs) {
-        this.kubeconfigs = Objects.requireNonNull(kubeconfigs);
+        this.kubeconfigs = kubeconfigs;
     }
 
     /**

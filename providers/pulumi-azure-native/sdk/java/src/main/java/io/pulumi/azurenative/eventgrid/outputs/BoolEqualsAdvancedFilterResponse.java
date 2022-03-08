@@ -35,7 +35,7 @@ public final class BoolEqualsAdvancedFilterResponse {
         String operatorType,
         @Nullable Boolean value) {
         this.key = key;
-        this.operatorType = Objects.requireNonNull(operatorType);
+        this.operatorType = operatorType;
         this.value = value;
     }
 

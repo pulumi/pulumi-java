@@ -105,19 +105,19 @@ public final class GetShareResult {
         SystemDataResponse systemData,
         String type,
         @Nullable List<UserAccessRightResponse> userAccessRights) {
-        this.accessProtocol = Objects.requireNonNull(accessProtocol);
+        this.accessProtocol = accessProtocol;
         this.azureContainerInfo = azureContainerInfo;
         this.clientAccessRights = clientAccessRights;
         this.dataPolicy = dataPolicy;
         this.description = description;
-        this.id = Objects.requireNonNull(id);
-        this.monitoringStatus = Objects.requireNonNull(monitoringStatus);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.monitoringStatus = monitoringStatus;
+        this.name = name;
         this.refreshDetails = refreshDetails;
-        this.shareMappings = Objects.requireNonNull(shareMappings);
-        this.shareStatus = Objects.requireNonNull(shareStatus);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.shareMappings = shareMappings;
+        this.shareStatus = shareStatus;
+        this.systemData = systemData;
+        this.type = type;
         this.userAccessRights = userAccessRights;
     }
 

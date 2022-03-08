@@ -85,15 +85,15 @@ public final class GetWebAppVnetConnectionResult {
         String type,
         @Nullable String vnetResourceId) {
         this.certBlob = certBlob;
-        this.certThumbprint = Objects.requireNonNull(certThumbprint);
+        this.certThumbprint = certThumbprint;
         this.dnsServers = dnsServers;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.isSwift = isSwift;
         this.kind = kind;
-        this.name = Objects.requireNonNull(name);
-        this.resyncRequired = Objects.requireNonNull(resyncRequired);
-        this.routes = Objects.requireNonNull(routes);
-        this.type = Objects.requireNonNull(type);
+        this.name = name;
+        this.resyncRequired = resyncRequired;
+        this.routes = routes;
+        this.type = type;
         this.vnetResourceId = vnetResourceId;
     }
 

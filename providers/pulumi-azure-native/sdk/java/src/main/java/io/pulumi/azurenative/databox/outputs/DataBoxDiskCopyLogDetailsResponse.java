@@ -37,10 +37,10 @@ public final class DataBoxDiskCopyLogDetailsResponse {
         String diskSerialNumber,
         String errorLogLink,
         String verboseLogLink) {
-        this.copyLogDetailsType = Objects.requireNonNull(copyLogDetailsType);
-        this.diskSerialNumber = Objects.requireNonNull(diskSerialNumber);
-        this.errorLogLink = Objects.requireNonNull(errorLogLink);
-        this.verboseLogLink = Objects.requireNonNull(verboseLogLink);
+        this.copyLogDetailsType = copyLogDetailsType;
+        this.diskSerialNumber = diskSerialNumber;
+        this.errorLogLink = errorLogLink;
+        this.verboseLogLink = verboseLogLink;
     }
 
     /**

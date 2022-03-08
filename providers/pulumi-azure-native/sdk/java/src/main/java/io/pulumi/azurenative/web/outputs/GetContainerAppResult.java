@@ -90,17 +90,17 @@ public final class GetContainerAppResult {
         @Nullable TemplateResponse template,
         String type) {
         this.configuration = configuration;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.kind = kind;
         this.kubeEnvironmentId = kubeEnvironmentId;
-        this.latestRevisionFqdn = Objects.requireNonNull(latestRevisionFqdn);
-        this.latestRevisionName = Objects.requireNonNull(latestRevisionName);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.latestRevisionFqdn = latestRevisionFqdn;
+        this.latestRevisionName = latestRevisionName;
+        this.location = location;
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.tags = tags;
         this.template = template;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

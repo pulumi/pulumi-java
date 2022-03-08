@@ -74,9 +74,9 @@ public final class PngImageResponse {
         this.keyFrameInterval = keyFrameInterval;
         this.label = label;
         this.layers = layers;
-        this.odataType = Objects.requireNonNull(odataType);
+        this.odataType = odataType;
         this.range = range;
-        this.start = Objects.requireNonNull(start);
+        this.start = start;
         this.step = step;
         this.stretchMode = stretchMode;
         this.syncMode = syncMode;

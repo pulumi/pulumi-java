@@ -83,13 +83,13 @@ public final class GetPartnerResult {
         @Nullable Integer version) {
         this.createdTime = createdTime;
         this.etag = etag;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.objectId = objectId;
         this.partnerId = partnerId;
         this.partnerName = partnerName;
         this.tenantId = tenantId;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.updatedTime = updatedTime;
         this.version = version;
     }

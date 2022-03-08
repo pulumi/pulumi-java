@@ -59,7 +59,7 @@ public final class AzureFileShareProtectionPolicyResponse {
         @Nullable Object schedulePolicy,
         @Nullable String timeZone,
         @Nullable String workLoadType) {
-        this.backupManagementType = Objects.requireNonNull(backupManagementType);
+        this.backupManagementType = backupManagementType;
         this.protectedItemsCount = protectedItemsCount;
         this.retentionPolicy = retentionPolicy;
         this.schedulePolicy = schedulePolicy;

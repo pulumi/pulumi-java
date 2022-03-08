@@ -227,40 +227,40 @@ public final class GetAccountResult {
         Map<String,String> tags,
         String type,
         List<VirtualNetworkRuleResponse> virtualNetworkRules) {
-        this.accountId = Objects.requireNonNull(accountId);
-        this.computePolicies = Objects.requireNonNull(computePolicies);
-        this.creationTime = Objects.requireNonNull(creationTime);
-        this.currentTier = Objects.requireNonNull(currentTier);
-        this.dataLakeStoreAccounts = Objects.requireNonNull(dataLakeStoreAccounts);
-        this.debugDataAccessLevel = Objects.requireNonNull(debugDataAccessLevel);
-        this.defaultDataLakeStoreAccount = Objects.requireNonNull(defaultDataLakeStoreAccount);
-        this.endpoint = Objects.requireNonNull(endpoint);
+        this.accountId = accountId;
+        this.computePolicies = computePolicies;
+        this.creationTime = creationTime;
+        this.currentTier = currentTier;
+        this.dataLakeStoreAccounts = dataLakeStoreAccounts;
+        this.debugDataAccessLevel = debugDataAccessLevel;
+        this.defaultDataLakeStoreAccount = defaultDataLakeStoreAccount;
+        this.endpoint = endpoint;
         this.firewallAllowAzureIps = firewallAllowAzureIps;
-        this.firewallRules = Objects.requireNonNull(firewallRules);
+        this.firewallRules = firewallRules;
         this.firewallState = firewallState;
-        this.hiveMetastores = Objects.requireNonNull(hiveMetastores);
-        this.id = Objects.requireNonNull(id);
-        this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
-        this.location = Objects.requireNonNull(location);
-        this.maxActiveJobCountPerUser = Objects.requireNonNull(maxActiveJobCountPerUser);
+        this.hiveMetastores = hiveMetastores;
+        this.id = id;
+        this.lastModifiedTime = lastModifiedTime;
+        this.location = location;
+        this.maxActiveJobCountPerUser = maxActiveJobCountPerUser;
         this.maxDegreeOfParallelism = maxDegreeOfParallelism;
         this.maxDegreeOfParallelismPerJob = maxDegreeOfParallelismPerJob;
         this.maxJobCount = maxJobCount;
-        this.maxJobRunningTimeInMin = Objects.requireNonNull(maxJobRunningTimeInMin);
-        this.maxQueuedJobCountPerUser = Objects.requireNonNull(maxQueuedJobCountPerUser);
-        this.minPriorityPerJob = Objects.requireNonNull(minPriorityPerJob);
-        this.name = Objects.requireNonNull(name);
+        this.maxJobRunningTimeInMin = maxJobRunningTimeInMin;
+        this.maxQueuedJobCountPerUser = maxQueuedJobCountPerUser;
+        this.minPriorityPerJob = minPriorityPerJob;
+        this.name = name;
         this.newTier = newTier;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.publicDataLakeStoreAccounts = publicDataLakeStoreAccounts;
         this.queryStoreRetention = queryStoreRetention;
-        this.state = Objects.requireNonNull(state);
-        this.storageAccounts = Objects.requireNonNull(storageAccounts);
-        this.systemMaxDegreeOfParallelism = Objects.requireNonNull(systemMaxDegreeOfParallelism);
-        this.systemMaxJobCount = Objects.requireNonNull(systemMaxJobCount);
-        this.tags = Objects.requireNonNull(tags);
-        this.type = Objects.requireNonNull(type);
-        this.virtualNetworkRules = Objects.requireNonNull(virtualNetworkRules);
+        this.state = state;
+        this.storageAccounts = storageAccounts;
+        this.systemMaxDegreeOfParallelism = systemMaxDegreeOfParallelism;
+        this.systemMaxJobCount = systemMaxJobCount;
+        this.tags = tags;
+        this.type = type;
+        this.virtualNetworkRules = virtualNetworkRules;
     }
 
     /**

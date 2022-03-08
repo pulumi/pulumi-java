@@ -49,7 +49,7 @@ public final class ImageTemplateFileCustomizerResponse {
         this.name = name;
         this.sha256Checksum = sha256Checksum;
         this.sourceUri = sourceUri;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

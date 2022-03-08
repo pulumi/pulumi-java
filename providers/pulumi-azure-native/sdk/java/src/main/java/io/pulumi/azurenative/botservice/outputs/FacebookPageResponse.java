@@ -27,7 +27,7 @@ public final class FacebookPageResponse {
         @Nullable String accessToken,
         String id) {
         this.accessToken = accessToken;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
     }
 
     /**

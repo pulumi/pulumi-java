@@ -39,9 +39,9 @@ public final class LogicAppReceiverResponse {
         String name,
         String resourceId,
         @Nullable Boolean useCommonAlertSchema) {
-        this.callbackUrl = Objects.requireNonNull(callbackUrl);
-        this.name = Objects.requireNonNull(name);
-        this.resourceId = Objects.requireNonNull(resourceId);
+        this.callbackUrl = callbackUrl;
+        this.name = name;
+        this.resourceId = resourceId;
         this.useCommonAlertSchema = useCommonAlertSchema;
     }
 

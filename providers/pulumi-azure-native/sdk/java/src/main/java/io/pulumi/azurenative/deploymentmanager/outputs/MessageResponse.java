@@ -24,8 +24,8 @@ public final class MessageResponse {
     private MessageResponse(
         String message,
         String timeStamp) {
-        this.message = Objects.requireNonNull(message);
-        this.timeStamp = Objects.requireNonNull(timeStamp);
+        this.message = message;
+        this.timeStamp = timeStamp;
     }
 
     /**

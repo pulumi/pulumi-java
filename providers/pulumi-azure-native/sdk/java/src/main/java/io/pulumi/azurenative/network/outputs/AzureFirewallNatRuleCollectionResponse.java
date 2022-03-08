@@ -61,11 +61,11 @@ public final class AzureFirewallNatRuleCollectionResponse {
         String provisioningState,
         @Nullable List<AzureFirewallNatRuleResponse> rules) {
         this.action = action;
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.id = id;
         this.name = name;
         this.priority = priority;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.rules = rules;
     }
 

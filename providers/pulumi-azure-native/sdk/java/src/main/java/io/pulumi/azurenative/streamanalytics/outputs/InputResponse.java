@@ -41,10 +41,10 @@ public final class InputResponse {
         @Nullable String name,
         @Nullable Either<ReferenceInputPropertiesResponse,StreamInputPropertiesResponse> properties,
         String type) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.name = name;
         this.properties = properties;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

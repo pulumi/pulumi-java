@@ -24,8 +24,8 @@ public final class UserAccessRightResponse {
     private UserAccessRightResponse(
         String accessType,
         String userId) {
-        this.accessType = Objects.requireNonNull(accessType);
-        this.userId = Objects.requireNonNull(userId);
+        this.accessType = accessType;
+        this.userId = userId;
     }
 
     /**

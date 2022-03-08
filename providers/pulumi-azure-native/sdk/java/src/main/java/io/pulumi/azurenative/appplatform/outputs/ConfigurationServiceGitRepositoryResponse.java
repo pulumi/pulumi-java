@@ -84,14 +84,14 @@ public final class ConfigurationServiceGitRepositoryResponse {
         @Nullable String username) {
         this.hostKey = hostKey;
         this.hostKeyAlgorithm = hostKeyAlgorithm;
-        this.label = Objects.requireNonNull(label);
-        this.name = Objects.requireNonNull(name);
+        this.label = label;
+        this.name = name;
         this.password = password;
-        this.patterns = Objects.requireNonNull(patterns);
+        this.patterns = patterns;
         this.privateKey = privateKey;
         this.searchPaths = searchPaths;
         this.strictHostKeyChecking = strictHostKeyChecking;
-        this.uri = Objects.requireNonNull(uri);
+        this.uri = uri;
         this.username = username;
     }
 

@@ -28,7 +28,7 @@ public final class AssignmentInfoResponse {
         @Nullable ConfigurationInfoResponse configuration,
         String name) {
         this.configuration = configuration;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

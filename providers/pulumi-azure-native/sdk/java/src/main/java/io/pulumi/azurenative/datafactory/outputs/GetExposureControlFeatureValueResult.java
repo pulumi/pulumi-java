@@ -24,8 +24,8 @@ public final class GetExposureControlFeatureValueResult {
     private GetExposureControlFeatureValueResult(
         String featureName,
         String value) {
-        this.featureName = Objects.requireNonNull(featureName);
-        this.value = Objects.requireNonNull(value);
+        this.featureName = featureName;
+        this.value = value;
     }
 
     /**

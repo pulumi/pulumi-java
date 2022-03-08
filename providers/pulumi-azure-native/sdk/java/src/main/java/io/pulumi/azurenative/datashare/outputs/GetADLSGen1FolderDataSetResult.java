@@ -74,16 +74,16 @@ public final class GetADLSGen1FolderDataSetResult {
         String subscriptionId,
         SystemDataResponse systemData,
         String type) {
-        this.accountName = Objects.requireNonNull(accountName);
-        this.dataSetId = Objects.requireNonNull(dataSetId);
-        this.folderPath = Objects.requireNonNull(folderPath);
-        this.id = Objects.requireNonNull(id);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.resourceGroup = Objects.requireNonNull(resourceGroup);
-        this.subscriptionId = Objects.requireNonNull(subscriptionId);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.accountName = accountName;
+        this.dataSetId = dataSetId;
+        this.folderPath = folderPath;
+        this.id = id;
+        this.kind = kind;
+        this.name = name;
+        this.resourceGroup = resourceGroup;
+        this.subscriptionId = subscriptionId;
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

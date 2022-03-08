@@ -32,8 +32,8 @@ public final class CustomRPResourceTypeRouteDefinitionResponse {
         String endpoint,
         String name,
         @Nullable String routingType) {
-        this.endpoint = Objects.requireNonNull(endpoint);
-        this.name = Objects.requireNonNull(name);
+        this.endpoint = endpoint;
+        this.name = name;
         this.routingType = routingType;
     }
 

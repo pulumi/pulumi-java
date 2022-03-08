@@ -24,8 +24,8 @@ public final class StorageAccountResponse {
     private StorageAccountResponse(
         String id,
         String key) {
-        this.id = Objects.requireNonNull(id);
-        this.key = Objects.requireNonNull(key);
+        this.id = id;
+        this.key = key;
     }
 
     /**

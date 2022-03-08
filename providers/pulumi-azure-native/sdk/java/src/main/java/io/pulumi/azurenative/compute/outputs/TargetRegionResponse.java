@@ -41,7 +41,7 @@ public final class TargetRegionResponse {
         @Nullable Integer regionalReplicaCount,
         @Nullable String storageAccountType) {
         this.encryption = encryption;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.regionalReplicaCount = regionalReplicaCount;
         this.storageAccountType = storageAccountType;
     }

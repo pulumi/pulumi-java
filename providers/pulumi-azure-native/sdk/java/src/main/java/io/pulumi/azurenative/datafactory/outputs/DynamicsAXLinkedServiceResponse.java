@@ -89,17 +89,17 @@ public final class DynamicsAXLinkedServiceResponse {
         Object tenant,
         String type,
         Object url) {
-        this.aadResourceId = Objects.requireNonNull(aadResourceId);
+        this.aadResourceId = aadResourceId;
         this.annotations = annotations;
         this.connectVia = connectVia;
         this.description = description;
         this.encryptedCredential = encryptedCredential;
         this.parameters = parameters;
-        this.servicePrincipalId = Objects.requireNonNull(servicePrincipalId);
-        this.servicePrincipalKey = Objects.requireNonNull(servicePrincipalKey);
-        this.tenant = Objects.requireNonNull(tenant);
-        this.type = Objects.requireNonNull(type);
-        this.url = Objects.requireNonNull(url);
+        this.servicePrincipalId = servicePrincipalId;
+        this.servicePrincipalKey = servicePrincipalKey;
+        this.tenant = tenant;
+        this.type = type;
+        this.url = url;
     }
 
     /**

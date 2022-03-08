@@ -30,9 +30,9 @@ public final class ElasticCloudUserResponse {
         String elasticCloudSsoDefaultUrl,
         String emailAddress,
         String id) {
-        this.elasticCloudSsoDefaultUrl = Objects.requireNonNull(elasticCloudSsoDefaultUrl);
-        this.emailAddress = Objects.requireNonNull(emailAddress);
-        this.id = Objects.requireNonNull(id);
+        this.elasticCloudSsoDefaultUrl = elasticCloudSsoDefaultUrl;
+        this.emailAddress = emailAddress;
+        this.id = id;
     }
 
     /**

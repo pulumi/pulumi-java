@@ -37,10 +37,10 @@ public final class MoveResourceErrorBodyResponse {
         List<MoveResourceErrorBodyResponse> details,
         String message,
         String target) {
-        this.code = Objects.requireNonNull(code);
-        this.details = Objects.requireNonNull(details);
-        this.message = Objects.requireNonNull(message);
-        this.target = Objects.requireNonNull(target);
+        this.code = code;
+        this.details = details;
+        this.message = message;
+        this.target = target;
     }
 
     /**

@@ -32,8 +32,8 @@ public final class ListManagerPublicEncryptionKeyResult {
         String encryptionAlgorithm,
         String value,
         @Nullable String valueCertificateThumbprint) {
-        this.encryptionAlgorithm = Objects.requireNonNull(encryptionAlgorithm);
-        this.value = Objects.requireNonNull(value);
+        this.encryptionAlgorithm = encryptionAlgorithm;
+        this.value = value;
         this.valueCertificateThumbprint = valueCertificateThumbprint;
     }
 

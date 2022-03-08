@@ -63,13 +63,13 @@ public final class GetApiVersionSetResult {
         @Nullable String versionQueryName,
         String versioningScheme) {
         this.description = description;
-        this.displayName = Objects.requireNonNull(displayName);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.displayName = displayName;
+        this.id = id;
+        this.name = name;
+        this.type = type;
         this.versionHeaderName = versionHeaderName;
         this.versionQueryName = versionQueryName;
-        this.versioningScheme = Objects.requireNonNull(versioningScheme);
+        this.versioningScheme = versioningScheme;
     }
 
     /**

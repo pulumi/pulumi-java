@@ -39,10 +39,10 @@ public final class GetGatewayCertificateAuthorityResult {
         @Nullable Boolean isTrusted,
         String name,
         String type) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.isTrusted = isTrusted;
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.name = name;
+        this.type = type;
     }
 
     /**

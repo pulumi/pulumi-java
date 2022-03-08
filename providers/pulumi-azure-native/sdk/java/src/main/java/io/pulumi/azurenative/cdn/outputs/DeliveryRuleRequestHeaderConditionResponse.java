@@ -26,8 +26,8 @@ public final class DeliveryRuleRequestHeaderConditionResponse {
     private DeliveryRuleRequestHeaderConditionResponse(
         String name,
         RequestHeaderMatchConditionParametersResponse parameters) {
-        this.name = Objects.requireNonNull(name);
-        this.parameters = Objects.requireNonNull(parameters);
+        this.name = name;
+        this.parameters = parameters;
     }
 
     /**

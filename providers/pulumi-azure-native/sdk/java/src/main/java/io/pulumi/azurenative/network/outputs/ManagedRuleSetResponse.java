@@ -34,8 +34,8 @@ public final class ManagedRuleSetResponse {
         String ruleSetType,
         String ruleSetVersion) {
         this.ruleGroupOverrides = ruleGroupOverrides;
-        this.ruleSetType = Objects.requireNonNull(ruleSetType);
-        this.ruleSetVersion = Objects.requireNonNull(ruleSetVersion);
+        this.ruleSetType = ruleSetType;
+        this.ruleSetVersion = ruleSetVersion;
     }
 
     /**

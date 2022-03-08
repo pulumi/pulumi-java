@@ -24,8 +24,8 @@ public final class SelectedCertificateInputResponse {
     private SelectedCertificateInputResponse(
         String certificateName,
         String password) {
-        this.certificateName = Objects.requireNonNull(certificateName);
-        this.password = Objects.requireNonNull(password);
+        this.certificateName = certificateName;
+        this.password = password;
     }
 
     /**

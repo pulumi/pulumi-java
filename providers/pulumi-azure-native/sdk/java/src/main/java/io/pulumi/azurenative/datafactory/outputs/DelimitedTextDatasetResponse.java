@@ -151,15 +151,15 @@ public final class DelimitedTextDatasetResponse {
         this.escapeChar = escapeChar;
         this.firstRowAsHeader = firstRowAsHeader;
         this.folder = folder;
-        this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
-        this.location = Objects.requireNonNull(location);
+        this.linkedServiceName = linkedServiceName;
+        this.location = location;
         this.nullValue = nullValue;
         this.parameters = parameters;
         this.quoteChar = quoteChar;
         this.rowDelimiter = rowDelimiter;
         this.schema = schema;
         this.structure = structure;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

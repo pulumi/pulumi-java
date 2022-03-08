@@ -20,8 +20,8 @@ public final class ResourceProviderCapabilitiesResponse {
         String effect,
         String quotaId,
         @Nullable List<String> requiredFeatures) {
-        this.effect = Objects.requireNonNull(effect);
-        this.quotaId = Objects.requireNonNull(quotaId);
+        this.effect = effect;
+        this.quotaId = quotaId;
         this.requiredFeatures = requiredFeatures;
     }
 

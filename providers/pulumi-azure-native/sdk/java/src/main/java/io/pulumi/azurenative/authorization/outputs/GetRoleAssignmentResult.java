@@ -106,19 +106,19 @@ public final class GetRoleAssignmentResult {
         String updatedOn) {
         this.condition = condition;
         this.conditionVersion = conditionVersion;
-        this.createdBy = Objects.requireNonNull(createdBy);
-        this.createdOn = Objects.requireNonNull(createdOn);
+        this.createdBy = createdBy;
+        this.createdOn = createdOn;
         this.delegatedManagedIdentityResourceId = delegatedManagedIdentityResourceId;
         this.description = description;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.principalId = Objects.requireNonNull(principalId);
+        this.id = id;
+        this.name = name;
+        this.principalId = principalId;
         this.principalType = principalType;
-        this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId);
-        this.scope = Objects.requireNonNull(scope);
-        this.type = Objects.requireNonNull(type);
-        this.updatedBy = Objects.requireNonNull(updatedBy);
-        this.updatedOn = Objects.requireNonNull(updatedOn);
+        this.roleDefinitionId = roleDefinitionId;
+        this.scope = scope;
+        this.type = type;
+        this.updatedBy = updatedBy;
+        this.updatedOn = updatedOn;
     }
 
     /**

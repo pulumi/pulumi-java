@@ -185,33 +185,33 @@ public final class GetVirtualMachineResult {
         @Nullable List<String> vSphereNetworks,
         String vmId,
         String vmwaretools) {
-        this.amountOfRam = Objects.requireNonNull(amountOfRam);
-        this.controllers = Objects.requireNonNull(controllers);
+        this.amountOfRam = amountOfRam;
+        this.controllers = controllers;
         this.customization = customization;
         this.disks = disks;
-        this.dnsname = Objects.requireNonNull(dnsname);
+        this.dnsname = dnsname;
         this.exposeToGuestVM = exposeToGuestVM;
-        this.folder = Objects.requireNonNull(folder);
-        this.guestOS = Objects.requireNonNull(guestOS);
-        this.guestOSType = Objects.requireNonNull(guestOSType);
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
+        this.folder = folder;
+        this.guestOS = guestOS;
+        this.guestOSType = guestOSType;
+        this.id = id;
+        this.location = location;
+        this.name = name;
         this.nics = nics;
-        this.numberOfCores = Objects.requireNonNull(numberOfCores);
+        this.numberOfCores = numberOfCores;
         this.password = password;
-        this.privateCloudId = Objects.requireNonNull(privateCloudId);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.publicIP = Objects.requireNonNull(publicIP);
+        this.privateCloudId = privateCloudId;
+        this.provisioningState = provisioningState;
+        this.publicIP = publicIP;
         this.resourcePool = resourcePool;
-        this.status = Objects.requireNonNull(status);
+        this.status = status;
         this.tags = tags;
         this.templateId = templateId;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.username = username;
         this.vSphereNetworks = vSphereNetworks;
-        this.vmId = Objects.requireNonNull(vmId);
-        this.vmwaretools = Objects.requireNonNull(vmwaretools);
+        this.vmId = vmId;
+        this.vmwaretools = vmwaretools;
     }
 
     /**

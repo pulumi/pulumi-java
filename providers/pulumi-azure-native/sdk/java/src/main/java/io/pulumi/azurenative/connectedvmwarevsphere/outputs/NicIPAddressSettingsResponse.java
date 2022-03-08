@@ -30,9 +30,9 @@ public final class NicIPAddressSettingsResponse {
         String allocationMethod,
         String ipAddress,
         String subnetMask) {
-        this.allocationMethod = Objects.requireNonNull(allocationMethod);
-        this.ipAddress = Objects.requireNonNull(ipAddress);
-        this.subnetMask = Objects.requireNonNull(subnetMask);
+        this.allocationMethod = allocationMethod;
+        this.ipAddress = ipAddress;
+        this.subnetMask = subnetMask;
     }
 
     /**

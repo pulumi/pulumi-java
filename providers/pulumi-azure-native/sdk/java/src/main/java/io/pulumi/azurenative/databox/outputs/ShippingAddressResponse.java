@@ -77,10 +77,10 @@ public final class ShippingAddressResponse {
         this.addressType = addressType;
         this.city = city;
         this.companyName = companyName;
-        this.country = Objects.requireNonNull(country);
+        this.country = country;
         this.postalCode = postalCode;
         this.stateOrProvince = stateOrProvince;
-        this.streetAddress1 = Objects.requireNonNull(streetAddress1);
+        this.streetAddress1 = streetAddress1;
         this.streetAddress2 = streetAddress2;
         this.streetAddress3 = streetAddress3;
         this.zipExtendedCode = zipExtendedCode;

@@ -25,8 +25,8 @@ public final class ScaleRuleResponse {
     private ScaleRuleResponse(
         MetricTriggerResponse metricTrigger,
         ScaleActionResponse scaleAction) {
-        this.metricTrigger = Objects.requireNonNull(metricTrigger);
-        this.scaleAction = Objects.requireNonNull(scaleAction);
+        this.metricTrigger = metricTrigger;
+        this.scaleAction = scaleAction;
     }
 
     /**

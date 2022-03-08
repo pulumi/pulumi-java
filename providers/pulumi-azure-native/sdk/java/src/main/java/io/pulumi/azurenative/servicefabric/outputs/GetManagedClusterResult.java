@@ -162,27 +162,27 @@ public final class GetManagedClusterResult {
         String type) {
         this.addonFeatures = addonFeatures;
         this.adminPassword = adminPassword;
-        this.adminUserName = Objects.requireNonNull(adminUserName);
+        this.adminUserName = adminUserName;
         this.azureActiveDirectory = azureActiveDirectory;
         this.clientConnectionPort = clientConnectionPort;
         this.clients = clients;
-        this.clusterCertificateThumbprint = Objects.requireNonNull(clusterCertificateThumbprint);
+        this.clusterCertificateThumbprint = clusterCertificateThumbprint;
         this.clusterCodeVersion = clusterCodeVersion;
-        this.clusterId = Objects.requireNonNull(clusterId);
-        this.clusterState = Objects.requireNonNull(clusterState);
-        this.dnsName = Objects.requireNonNull(dnsName);
-        this.etag = Objects.requireNonNull(etag);
+        this.clusterId = clusterId;
+        this.clusterState = clusterState;
+        this.dnsName = dnsName;
+        this.etag = etag;
         this.fabricSettings = fabricSettings;
-        this.fqdn = Objects.requireNonNull(fqdn);
+        this.fqdn = fqdn;
         this.httpGatewayConnectionPort = httpGatewayConnectionPort;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.loadBalancingRules = loadBalancingRules;
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.location = location;
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.sku = sku;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

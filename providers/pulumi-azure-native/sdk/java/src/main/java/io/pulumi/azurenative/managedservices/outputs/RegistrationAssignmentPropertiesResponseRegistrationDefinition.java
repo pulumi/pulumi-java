@@ -46,11 +46,11 @@ public final class RegistrationAssignmentPropertiesResponseRegistrationDefinitio
         @Nullable PlanResponse plan,
         @Nullable RegistrationAssignmentPropertiesResponseProperties properties,
         String type) {
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.plan = plan;
         this.properties = properties;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

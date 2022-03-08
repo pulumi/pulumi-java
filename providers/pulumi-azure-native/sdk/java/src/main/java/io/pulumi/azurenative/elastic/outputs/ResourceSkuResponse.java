@@ -17,7 +17,7 @@ public final class ResourceSkuResponse {
 
     @OutputCustomType.Constructor({"name"})
     private ResourceSkuResponse(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

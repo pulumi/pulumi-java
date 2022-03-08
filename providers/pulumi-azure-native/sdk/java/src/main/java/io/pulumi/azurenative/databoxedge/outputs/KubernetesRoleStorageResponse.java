@@ -28,7 +28,7 @@ public final class KubernetesRoleStorageResponse {
         @Nullable List<MountPointMapResponse> endpoints,
         List<KubernetesRoleStorageClassInfoResponse> storageClasses) {
         this.endpoints = endpoints;
-        this.storageClasses = Objects.requireNonNull(storageClasses);
+        this.storageClasses = storageClasses;
     }
 
     /**

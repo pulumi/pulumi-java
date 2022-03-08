@@ -81,17 +81,17 @@ public final class GetAFDOriginGroupResult {
         SystemDataResponse systemData,
         @Nullable Integer trafficRestorationTimeToHealedOrNewEndpointsInMinutes,
         String type) {
-        this.deploymentStatus = Objects.requireNonNull(deploymentStatus);
+        this.deploymentStatus = deploymentStatus;
         this.healthProbeSettings = healthProbeSettings;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.loadBalancingSettings = loadBalancingSettings;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.responseBasedAfdOriginErrorDetectionSettings = responseBasedAfdOriginErrorDetectionSettings;
         this.sessionAffinityState = sessionAffinityState;
-        this.systemData = Objects.requireNonNull(systemData);
+        this.systemData = systemData;
         this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes = trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     public String getDeploymentStatus() {

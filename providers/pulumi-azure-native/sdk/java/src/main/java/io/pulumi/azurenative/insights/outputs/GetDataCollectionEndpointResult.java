@@ -105,18 +105,18 @@ public final class GetDataCollectionEndpointResult {
         String type) {
         this.configurationAccess = configurationAccess;
         this.description = description;
-        this.etag = Objects.requireNonNull(etag);
-        this.id = Objects.requireNonNull(id);
+        this.etag = etag;
+        this.id = id;
         this.immutableId = immutableId;
         this.kind = kind;
-        this.location = Objects.requireNonNull(location);
+        this.location = location;
         this.logsIngestion = logsIngestion;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.networkAcls = networkAcls;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.systemData = Objects.requireNonNull(systemData);
+        this.provisioningState = provisioningState;
+        this.systemData = systemData;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

@@ -31,9 +31,9 @@ public final class EnvironmentVariableSetupResponse {
         String type,
         String variableName,
         String variableValue) {
-        this.type = Objects.requireNonNull(type);
-        this.variableName = Objects.requireNonNull(variableName);
-        this.variableValue = Objects.requireNonNull(variableValue);
+        this.type = type;
+        this.variableName = variableName;
+        this.variableValue = variableValue;
     }
 
     /**

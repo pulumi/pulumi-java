@@ -74,11 +74,11 @@ public final class AzureDataExplorerSourceResponse {
         this.disableMetricsCollection = disableMetricsCollection;
         this.maxConcurrentConnections = maxConcurrentConnections;
         this.noTruncation = noTruncation;
-        this.query = Objects.requireNonNull(query);
+        this.query = query;
         this.queryTimeout = queryTimeout;
         this.sourceRetryCount = sourceRetryCount;
         this.sourceRetryWait = sourceRetryWait;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

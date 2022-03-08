@@ -147,20 +147,20 @@ public final class GetRecordSetResult {
         this.caaRecords = caaRecords;
         this.cnameRecord = cnameRecord;
         this.etag = etag;
-        this.fqdn = Objects.requireNonNull(fqdn);
-        this.id = Objects.requireNonNull(id);
+        this.fqdn = fqdn;
+        this.id = id;
         this.metadata = metadata;
         this.mxRecords = mxRecords;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.nsRecords = nsRecords;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.ptrRecords = ptrRecords;
         this.soaRecord = soaRecord;
         this.srvRecords = srvRecords;
         this.targetResource = targetResource;
         this.ttl = ttl;
         this.txtRecords = txtRecords;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

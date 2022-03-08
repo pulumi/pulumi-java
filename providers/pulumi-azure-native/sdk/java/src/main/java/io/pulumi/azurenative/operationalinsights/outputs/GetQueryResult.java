@@ -97,19 +97,19 @@ public final class GetQueryResult {
         String timeCreated,
         String timeModified,
         String type) {
-        this.author = Objects.requireNonNull(author);
-        this.body = Objects.requireNonNull(body);
+        this.author = author;
+        this.body = body;
         this.description = description;
-        this.displayName = Objects.requireNonNull(displayName);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.properties = Objects.requireNonNull(properties);
+        this.displayName = displayName;
+        this.id = id;
+        this.name = name;
+        this.properties = properties;
         this.related = related;
-        this.systemData = Objects.requireNonNull(systemData);
+        this.systemData = systemData;
         this.tags = tags;
-        this.timeCreated = Objects.requireNonNull(timeCreated);
-        this.timeModified = Objects.requireNonNull(timeModified);
-        this.type = Objects.requireNonNull(type);
+        this.timeCreated = timeCreated;
+        this.timeModified = timeModified;
+        this.type = type;
     }
 
     /**

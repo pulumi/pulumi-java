@@ -39,10 +39,10 @@ public final class BlobInventoryPolicySchemaResponse {
         Boolean enabled,
         List<BlobInventoryPolicyRuleResponse> rules,
         String type) {
-        this.destination = Objects.requireNonNull(destination);
-        this.enabled = Objects.requireNonNull(enabled);
-        this.rules = Objects.requireNonNull(rules);
-        this.type = Objects.requireNonNull(type);
+        this.destination = destination;
+        this.enabled = enabled;
+        this.rules = rules;
+        this.type = type;
     }
 
     /**

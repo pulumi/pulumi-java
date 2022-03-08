@@ -160,7 +160,7 @@ public final class ClusterGetPropertiesResponse {
         @Nullable SecurityProfileResponse securityProfile,
         @Nullable StorageProfileResponse storageProfile,
         @Nullable String tier) {
-        this.clusterDefinition = Objects.requireNonNull(clusterDefinition);
+        this.clusterDefinition = clusterDefinition;
         this.clusterHdpVersion = clusterHdpVersion;
         this.clusterId = clusterId;
         this.clusterState = clusterState;

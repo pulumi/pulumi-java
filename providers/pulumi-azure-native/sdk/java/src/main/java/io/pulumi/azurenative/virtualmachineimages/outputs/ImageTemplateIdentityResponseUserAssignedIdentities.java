@@ -24,8 +24,8 @@ public final class ImageTemplateIdentityResponseUserAssignedIdentities {
     private ImageTemplateIdentityResponseUserAssignedIdentities(
         String clientId,
         String principalId) {
-        this.clientId = Objects.requireNonNull(clientId);
-        this.principalId = Objects.requireNonNull(principalId);
+        this.clientId = clientId;
+        this.principalId = principalId;
     }
 
     /**

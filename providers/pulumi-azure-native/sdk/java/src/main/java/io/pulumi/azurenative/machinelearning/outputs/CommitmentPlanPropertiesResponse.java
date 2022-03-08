@@ -76,16 +76,16 @@ public final class CommitmentPlanPropertiesResponse {
         String planMeter,
         Integer refillFrequencyInDays,
         Boolean suspendPlanOnOverage) {
-        this.chargeForOverage = Objects.requireNonNull(chargeForOverage);
-        this.chargeForPlan = Objects.requireNonNull(chargeForPlan);
-        this.creationDate = Objects.requireNonNull(creationDate);
-        this.includedQuantities = Objects.requireNonNull(includedQuantities);
-        this.maxAssociationLimit = Objects.requireNonNull(maxAssociationLimit);
-        this.maxCapacityLimit = Objects.requireNonNull(maxCapacityLimit);
-        this.minCapacityLimit = Objects.requireNonNull(minCapacityLimit);
-        this.planMeter = Objects.requireNonNull(planMeter);
-        this.refillFrequencyInDays = Objects.requireNonNull(refillFrequencyInDays);
-        this.suspendPlanOnOverage = Objects.requireNonNull(suspendPlanOnOverage);
+        this.chargeForOverage = chargeForOverage;
+        this.chargeForPlan = chargeForPlan;
+        this.creationDate = creationDate;
+        this.includedQuantities = includedQuantities;
+        this.maxAssociationLimit = maxAssociationLimit;
+        this.maxCapacityLimit = maxCapacityLimit;
+        this.minCapacityLimit = minCapacityLimit;
+        this.planMeter = planMeter;
+        this.refillFrequencyInDays = refillFrequencyInDays;
+        this.suspendPlanOnOverage = suspendPlanOnOverage;
     }
 
     /**

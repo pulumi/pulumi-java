@@ -29,7 +29,7 @@ public final class JobInputSequenceResponse {
         @Nullable List<JobInputClipResponse> inputs,
         String odataType) {
         this.inputs = inputs;
-        this.odataType = Objects.requireNonNull(odataType);
+        this.odataType = odataType;
     }
 
     /**

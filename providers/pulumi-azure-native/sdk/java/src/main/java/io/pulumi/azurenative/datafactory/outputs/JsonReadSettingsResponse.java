@@ -32,7 +32,7 @@ public final class JsonReadSettingsResponse {
         @Nullable Object compressionProperties,
         String type) {
         this.compressionProperties = compressionProperties;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

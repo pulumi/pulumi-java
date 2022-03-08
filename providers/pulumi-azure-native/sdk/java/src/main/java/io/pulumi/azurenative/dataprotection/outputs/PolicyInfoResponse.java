@@ -25,9 +25,9 @@ public final class PolicyInfoResponse {
         String policyId,
         @Nullable PolicyParametersResponse policyParameters,
         String policyVersion) {
-        this.policyId = Objects.requireNonNull(policyId);
+        this.policyId = policyId;
         this.policyParameters = policyParameters;
-        this.policyVersion = Objects.requireNonNull(policyVersion);
+        this.policyVersion = policyVersion;
     }
 
     public String getPolicyId() {

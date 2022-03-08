@@ -51,11 +51,11 @@ public final class AccessReviewInstanceResponse {
         String status,
         String type) {
         this.endDateTime = endDateTime;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.startDateTime = startDateTime;
-        this.status = Objects.requireNonNull(status);
-        this.type = Objects.requireNonNull(type);
+        this.status = status;
+        this.type = type;
     }
 
     /**

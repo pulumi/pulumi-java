@@ -126,7 +126,7 @@ public final class SqlDWSinkResponse {
         this.sinkRetryWait = sinkRetryWait;
         this.sqlWriterUseTableLock = sqlWriterUseTableLock;
         this.tableOption = tableOption;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.upsertSettings = upsertSettings;
         this.writeBatchSize = writeBatchSize;
         this.writeBatchTimeout = writeBatchTimeout;

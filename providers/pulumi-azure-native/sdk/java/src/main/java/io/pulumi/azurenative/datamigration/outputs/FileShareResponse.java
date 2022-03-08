@@ -33,7 +33,7 @@ public final class FileShareResponse {
         String path,
         @Nullable String userName) {
         this.password = password;
-        this.path = Objects.requireNonNull(path);
+        this.path = path;
         this.userName = userName;
     }
 

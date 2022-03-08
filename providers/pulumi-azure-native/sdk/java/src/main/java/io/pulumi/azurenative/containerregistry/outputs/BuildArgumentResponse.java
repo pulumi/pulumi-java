@@ -40,9 +40,9 @@ public final class BuildArgumentResponse {
         String type,
         String value) {
         this.isSecret = isSecret;
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
-        this.value = Objects.requireNonNull(value);
+        this.name = name;
+        this.type = type;
+        this.value = value;
     }
 
     /**

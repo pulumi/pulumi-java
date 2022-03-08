@@ -96,19 +96,19 @@ public final class SchemaResponse {
         List<ColumnResponse> standardColumns,
         String tableSubType,
         String tableType) {
-        this.categories = Objects.requireNonNull(categories);
+        this.categories = categories;
         this.columns = columns;
         this.description = description;
         this.displayName = displayName;
-        this.labels = Objects.requireNonNull(labels);
+        this.labels = labels;
         this.name = name;
-        this.restoredLogs = Objects.requireNonNull(restoredLogs);
-        this.searchResults = Objects.requireNonNull(searchResults);
-        this.solutions = Objects.requireNonNull(solutions);
-        this.source = Objects.requireNonNull(source);
-        this.standardColumns = Objects.requireNonNull(standardColumns);
-        this.tableSubType = Objects.requireNonNull(tableSubType);
-        this.tableType = Objects.requireNonNull(tableType);
+        this.restoredLogs = restoredLogs;
+        this.searchResults = searchResults;
+        this.solutions = solutions;
+        this.source = source;
+        this.standardColumns = standardColumns;
+        this.tableSubType = tableSubType;
+        this.tableType = tableType;
     }
 
     /**

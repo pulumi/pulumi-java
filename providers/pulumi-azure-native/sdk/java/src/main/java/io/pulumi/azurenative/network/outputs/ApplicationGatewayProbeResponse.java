@@ -107,7 +107,7 @@ public final class ApplicationGatewayProbeResponse {
         @Nullable Integer timeout,
         String type,
         @Nullable Integer unhealthyThreshold) {
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.host = host;
         this.id = id;
         this.interval = interval;
@@ -118,9 +118,9 @@ public final class ApplicationGatewayProbeResponse {
         this.pickHostNameFromBackendHttpSettings = pickHostNameFromBackendHttpSettings;
         this.port = port;
         this.protocol = protocol;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.timeout = timeout;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.unhealthyThreshold = unhealthyThreshold;
     }
 

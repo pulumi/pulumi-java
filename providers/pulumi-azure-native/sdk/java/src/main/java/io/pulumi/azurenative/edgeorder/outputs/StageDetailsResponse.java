@@ -36,10 +36,10 @@ public final class StageDetailsResponse {
         String stageName,
         String stageStatus,
         String startTime) {
-        this.displayName = Objects.requireNonNull(displayName);
-        this.stageName = Objects.requireNonNull(stageName);
-        this.stageStatus = Objects.requireNonNull(stageStatus);
-        this.startTime = Objects.requireNonNull(startTime);
+        this.displayName = displayName;
+        this.stageName = stageName;
+        this.stageStatus = stageStatus;
+        this.startTime = startTime;
     }
 
     /**

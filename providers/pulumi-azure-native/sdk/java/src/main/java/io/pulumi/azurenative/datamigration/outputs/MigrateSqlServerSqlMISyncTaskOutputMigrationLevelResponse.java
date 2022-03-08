@@ -92,19 +92,19 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse {
         String targetServerBrandVersion,
         String targetServerName,
         String targetServerVersion) {
-        this.databaseCount = Objects.requireNonNull(databaseCount);
-        this.databaseErrorCount = Objects.requireNonNull(databaseErrorCount);
-        this.endedOn = Objects.requireNonNull(endedOn);
-        this.id = Objects.requireNonNull(id);
-        this.resultType = Objects.requireNonNull(resultType);
-        this.sourceServerBrandVersion = Objects.requireNonNull(sourceServerBrandVersion);
-        this.sourceServerName = Objects.requireNonNull(sourceServerName);
-        this.sourceServerVersion = Objects.requireNonNull(sourceServerVersion);
-        this.startedOn = Objects.requireNonNull(startedOn);
-        this.state = Objects.requireNonNull(state);
-        this.targetServerBrandVersion = Objects.requireNonNull(targetServerBrandVersion);
-        this.targetServerName = Objects.requireNonNull(targetServerName);
-        this.targetServerVersion = Objects.requireNonNull(targetServerVersion);
+        this.databaseCount = databaseCount;
+        this.databaseErrorCount = databaseErrorCount;
+        this.endedOn = endedOn;
+        this.id = id;
+        this.resultType = resultType;
+        this.sourceServerBrandVersion = sourceServerBrandVersion;
+        this.sourceServerName = sourceServerName;
+        this.sourceServerVersion = sourceServerVersion;
+        this.startedOn = startedOn;
+        this.state = state;
+        this.targetServerBrandVersion = targetServerBrandVersion;
+        this.targetServerName = targetServerName;
+        this.targetServerVersion = targetServerVersion;
     }
 
     /**

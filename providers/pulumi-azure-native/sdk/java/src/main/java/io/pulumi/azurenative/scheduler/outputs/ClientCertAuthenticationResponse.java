@@ -56,7 +56,7 @@ public final class ClientCertAuthenticationResponse {
         this.certificateThumbprint = certificateThumbprint;
         this.password = password;
         this.pfx = pfx;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

@@ -49,7 +49,7 @@ public final class EventHandlerTemplateResponse {
         @Nullable String userEventPattern) {
         this.auth = auth;
         this.systemEventPattern = systemEventPattern;
-        this.urlTemplate = Objects.requireNonNull(urlTemplate);
+        this.urlTemplate = urlTemplate;
         this.userEventPattern = userEventPattern;
     }
 

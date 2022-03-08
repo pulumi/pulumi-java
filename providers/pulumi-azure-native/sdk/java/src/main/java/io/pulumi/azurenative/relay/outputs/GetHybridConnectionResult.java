@@ -64,13 +64,13 @@ public final class GetHybridConnectionResult {
         String type,
         String updatedAt,
         @Nullable String userMetadata) {
-        this.createdAt = Objects.requireNonNull(createdAt);
-        this.id = Objects.requireNonNull(id);
-        this.listenerCount = Objects.requireNonNull(listenerCount);
-        this.name = Objects.requireNonNull(name);
+        this.createdAt = createdAt;
+        this.id = id;
+        this.listenerCount = listenerCount;
+        this.name = name;
         this.requiresClientAuthorization = requiresClientAuthorization;
-        this.type = Objects.requireNonNull(type);
-        this.updatedAt = Objects.requireNonNull(updatedAt);
+        this.type = type;
+        this.updatedAt = updatedAt;
         this.userMetadata = userMetadata;
     }
 

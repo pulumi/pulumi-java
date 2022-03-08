@@ -73,14 +73,14 @@ public final class GetMachineGroupResult {
         String name,
         String type) {
         this.count = count;
-        this.displayName = Objects.requireNonNull(displayName);
+        this.displayName = displayName;
         this.etag = etag;
         this.groupType = groupType;
-        this.id = Objects.requireNonNull(id);
-        this.kind = Objects.requireNonNull(kind);
+        this.id = id;
+        this.kind = kind;
         this.machines = machines;
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.name = name;
+        this.type = type;
     }
 
     /**

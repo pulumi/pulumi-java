@@ -25,8 +25,8 @@ public final class CostAllocationProportionResponse {
     private CostAllocationProportionResponse(
         String name,
         Double percentage) {
-        this.name = Objects.requireNonNull(name);
-        this.percentage = Objects.requireNonNull(percentage);
+        this.name = name;
+        this.percentage = percentage;
     }
 
     /**

@@ -26,8 +26,8 @@ public final class SelectVideoTrackByIdResponse {
     private SelectVideoTrackByIdResponse(
         String odataType,
         Double trackId) {
-        this.odataType = Objects.requireNonNull(odataType);
-        this.trackId = Objects.requireNonNull(trackId);
+        this.odataType = odataType;
+        this.trackId = trackId;
     }
 
     /**

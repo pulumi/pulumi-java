@@ -16,8 +16,8 @@ public final class SubscriptionStateOverrideActionResponse {
     private SubscriptionStateOverrideActionResponse(
         String action,
         String state) {
-        this.action = Objects.requireNonNull(action);
-        this.state = Objects.requireNonNull(state);
+        this.action = action;
+        this.state = state;
     }
 
     public String getAction() {

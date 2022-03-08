@@ -126,23 +126,23 @@ public final class GetExtensionResult {
         @Nullable Object settings,
         String type,
         @Nullable String typeHandlerVersion) {
-        this.aggregateState = Objects.requireNonNull(aggregateState);
+        this.aggregateState = aggregateState;
         this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
         this.createdAt = createdAt;
         this.createdBy = createdBy;
         this.createdByType = createdByType;
         this.forceUpdateTag = forceUpdateTag;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.lastModifiedAt = lastModifiedAt;
         this.lastModifiedBy = lastModifiedBy;
         this.lastModifiedByType = lastModifiedByType;
-        this.name = Objects.requireNonNull(name);
-        this.perNodeExtensionDetails = Objects.requireNonNull(perNodeExtensionDetails);
+        this.name = name;
+        this.perNodeExtensionDetails = perNodeExtensionDetails;
         this.protectedSettings = protectedSettings;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.publisher = publisher;
         this.settings = settings;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.typeHandlerVersion = typeHandlerVersion;
     }
 

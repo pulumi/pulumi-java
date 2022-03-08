@@ -55,10 +55,10 @@ public final class CustomerCertificateParametersResponse {
         String type,
         @Nullable Boolean useLatestVersion) {
         this.certificateAuthority = certificateAuthority;
-        this.secretSource = Objects.requireNonNull(secretSource);
+        this.secretSource = secretSource;
         this.secretVersion = secretVersion;
         this.subjectAlternativeNames = subjectAlternativeNames;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.useLatestVersion = useLatestVersion;
     }
 

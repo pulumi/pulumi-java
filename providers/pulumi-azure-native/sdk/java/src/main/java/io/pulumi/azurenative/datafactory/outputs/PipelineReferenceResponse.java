@@ -33,8 +33,8 @@ public final class PipelineReferenceResponse {
         String referenceName,
         String type) {
         this.name = name;
-        this.referenceName = Objects.requireNonNull(referenceName);
-        this.type = Objects.requireNonNull(type);
+        this.referenceName = referenceName;
+        this.type = type;
     }
 
     /**

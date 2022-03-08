@@ -28,7 +28,7 @@ public final class CustomerManagedKeyDetailsResponse {
         @Nullable WorkspaceKeyDetailsResponse key,
         String status) {
         this.key = key;
-        this.status = Objects.requireNonNull(status);
+        this.status = status;
     }
 
     /**

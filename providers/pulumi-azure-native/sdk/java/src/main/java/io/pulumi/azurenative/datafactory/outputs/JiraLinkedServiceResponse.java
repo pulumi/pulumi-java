@@ -105,15 +105,15 @@ public final class JiraLinkedServiceResponse {
         this.connectVia = connectVia;
         this.description = description;
         this.encryptedCredential = encryptedCredential;
-        this.host = Objects.requireNonNull(host);
+        this.host = host;
         this.parameters = parameters;
         this.password = password;
         this.port = port;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.useEncryptedEndpoints = useEncryptedEndpoints;
         this.useHostVerification = useHostVerification;
         this.usePeerVerification = usePeerVerification;
-        this.username = Objects.requireNonNull(username);
+        this.username = username;
     }
 
     /**

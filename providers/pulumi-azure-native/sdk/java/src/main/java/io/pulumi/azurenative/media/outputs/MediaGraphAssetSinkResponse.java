@@ -38,10 +38,10 @@ public final class MediaGraphAssetSinkResponse {
         List<String> inputs,
         String name,
         String odataType) {
-        this.assetName = Objects.requireNonNull(assetName);
-        this.inputs = Objects.requireNonNull(inputs);
-        this.name = Objects.requireNonNull(name);
-        this.odataType = Objects.requireNonNull(odataType);
+        this.assetName = assetName;
+        this.inputs = inputs;
+        this.name = name;
+        this.odataType = odataType;
     }
 
     /**

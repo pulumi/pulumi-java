@@ -43,7 +43,7 @@ public final class PolicyDefinitionReferenceResponse {
         @Nullable String policyDefinitionReferenceId) {
         this.groupNames = groupNames;
         this.parameters = parameters;
-        this.policyDefinitionId = Objects.requireNonNull(policyDefinitionId);
+        this.policyDefinitionId = policyDefinitionId;
         this.policyDefinitionReferenceId = policyDefinitionReferenceId;
     }
 

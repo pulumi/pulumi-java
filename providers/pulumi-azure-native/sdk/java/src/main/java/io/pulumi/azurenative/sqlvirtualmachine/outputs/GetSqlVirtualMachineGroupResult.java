@@ -88,17 +88,17 @@ public final class GetSqlVirtualMachineGroupResult {
         @Nullable Map<String,String> tags,
         String type,
         @Nullable WsfcDomainProfileResponse wsfcDomainProfile) {
-        this.clusterConfiguration = Objects.requireNonNull(clusterConfiguration);
-        this.clusterManagerType = Objects.requireNonNull(clusterManagerType);
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.scaleType = Objects.requireNonNull(scaleType);
+        this.clusterConfiguration = clusterConfiguration;
+        this.clusterManagerType = clusterManagerType;
+        this.id = id;
+        this.location = location;
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.scaleType = scaleType;
         this.sqlImageOffer = sqlImageOffer;
         this.sqlImageSku = sqlImageSku;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.wsfcDomainProfile = wsfcDomainProfile;
     }
 

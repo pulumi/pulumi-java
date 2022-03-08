@@ -49,7 +49,7 @@ public final class OAuthAuthenticationResponse {
         this.clientId = clientId;
         this.secret = secret;
         this.tenant = tenant;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

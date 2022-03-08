@@ -43,11 +43,11 @@ public final class ClusterPropertiesResponse {
         String clusterId,
         String createdDate,
         String provisioningState) {
-        this.capacityAllocated = Objects.requireNonNull(capacityAllocated);
-        this.capacityAssigned = Objects.requireNonNull(capacityAssigned);
-        this.clusterId = Objects.requireNonNull(clusterId);
-        this.createdDate = Objects.requireNonNull(createdDate);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.capacityAllocated = capacityAllocated;
+        this.capacityAssigned = capacityAssigned;
+        this.clusterId = clusterId;
+        this.createdDate = createdDate;
+        this.provisioningState = provisioningState;
     }
 
     /**

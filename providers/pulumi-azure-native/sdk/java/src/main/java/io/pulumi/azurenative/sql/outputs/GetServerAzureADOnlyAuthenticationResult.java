@@ -37,10 +37,10 @@ public final class GetServerAzureADOnlyAuthenticationResult {
         String id,
         String name,
         String type) {
-        this.azureADOnlyAuthentication = Objects.requireNonNull(azureADOnlyAuthentication);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.azureADOnlyAuthentication = azureADOnlyAuthentication;
+        this.id = id;
+        this.name = name;
+        this.type = type;
     }
 
     /**

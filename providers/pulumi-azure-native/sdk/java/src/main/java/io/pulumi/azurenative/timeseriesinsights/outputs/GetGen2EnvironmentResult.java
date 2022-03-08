@@ -112,20 +112,20 @@ public final class GetGen2EnvironmentResult {
         List<TimeSeriesIdPropertyResponse> timeSeriesIdProperties,
         String type,
         @Nullable WarmStoreConfigurationPropertiesResponse warmStoreConfiguration) {
-        this.creationTime = Objects.requireNonNull(creationTime);
-        this.dataAccessFqdn = Objects.requireNonNull(dataAccessFqdn);
-        this.dataAccessId = Objects.requireNonNull(dataAccessId);
-        this.id = Objects.requireNonNull(id);
-        this.kind = Objects.requireNonNull(kind);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.sku = Objects.requireNonNull(sku);
-        this.status = Objects.requireNonNull(status);
-        this.storageConfiguration = Objects.requireNonNull(storageConfiguration);
+        this.creationTime = creationTime;
+        this.dataAccessFqdn = dataAccessFqdn;
+        this.dataAccessId = dataAccessId;
+        this.id = id;
+        this.kind = kind;
+        this.location = location;
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.sku = sku;
+        this.status = status;
+        this.storageConfiguration = storageConfiguration;
         this.tags = tags;
-        this.timeSeriesIdProperties = Objects.requireNonNull(timeSeriesIdProperties);
-        this.type = Objects.requireNonNull(type);
+        this.timeSeriesIdProperties = timeSeriesIdProperties;
+        this.type = type;
         this.warmStoreConfiguration = warmStoreConfiguration;
     }
 

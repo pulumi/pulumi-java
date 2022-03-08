@@ -119,17 +119,17 @@ public final class GetVirtualMachineImageTemplateResult {
         @Nullable ImageTemplateVmProfileResponse vmProfile) {
         this.buildTimeoutInMinutes = buildTimeoutInMinutes;
         this.customize = customize;
-        this.distribute = Objects.requireNonNull(distribute);
-        this.id = Objects.requireNonNull(id);
-        this.identity = Objects.requireNonNull(identity);
-        this.lastRunStatus = Objects.requireNonNull(lastRunStatus);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningError = Objects.requireNonNull(provisioningError);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.source = Objects.requireNonNull(source);
+        this.distribute = distribute;
+        this.id = id;
+        this.identity = identity;
+        this.lastRunStatus = lastRunStatus;
+        this.location = location;
+        this.name = name;
+        this.provisioningError = provisioningError;
+        this.provisioningState = provisioningState;
+        this.source = source;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.vmProfile = vmProfile;
     }
 

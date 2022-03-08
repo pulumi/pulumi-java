@@ -79,17 +79,17 @@ public final class GetPredictionModelStatusResult {
         Integer trainingAccuracy,
         Integer trainingSetCount,
         Integer validationSetCount) {
-        this.message = Objects.requireNonNull(message);
-        this.modelVersion = Objects.requireNonNull(modelVersion);
-        this.predictionGuidId = Objects.requireNonNull(predictionGuidId);
-        this.predictionName = Objects.requireNonNull(predictionName);
-        this.signalsUsed = Objects.requireNonNull(signalsUsed);
-        this.status = Objects.requireNonNull(status);
-        this.tenantId = Objects.requireNonNull(tenantId);
-        this.testSetCount = Objects.requireNonNull(testSetCount);
-        this.trainingAccuracy = Objects.requireNonNull(trainingAccuracy);
-        this.trainingSetCount = Objects.requireNonNull(trainingSetCount);
-        this.validationSetCount = Objects.requireNonNull(validationSetCount);
+        this.message = message;
+        this.modelVersion = modelVersion;
+        this.predictionGuidId = predictionGuidId;
+        this.predictionName = predictionName;
+        this.signalsUsed = signalsUsed;
+        this.status = status;
+        this.tenantId = tenantId;
+        this.testSetCount = testSetCount;
+        this.trainingAccuracy = trainingAccuracy;
+        this.trainingSetCount = trainingSetCount;
+        this.validationSetCount = validationSetCount;
     }
 
     /**

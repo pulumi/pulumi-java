@@ -51,11 +51,11 @@ public final class GetAddonResult {
         String provisioningState,
         String type) {
         this.addonType = addonType;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.licenseKey = licenseKey;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.type = Objects.requireNonNull(type);
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.type = type;
     }
 
     /**

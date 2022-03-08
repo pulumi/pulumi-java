@@ -80,14 +80,14 @@ public final class GetAutoScaleVCoreResult {
         String type) {
         this.capacityLimit = capacityLimit;
         this.capacityObjectId = capacityObjectId;
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.sku = Objects.requireNonNull(sku);
+        this.id = id;
+        this.location = location;
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.sku = sku;
         this.systemData = systemData;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

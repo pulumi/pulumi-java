@@ -78,17 +78,17 @@ public final class GetDisasterRecoveryConfigurationResult {
         String role,
         String status,
         String type) {
-        this.autoFailover = Objects.requireNonNull(autoFailover);
-        this.failoverPolicy = Objects.requireNonNull(failoverPolicy);
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.logicalServerName = Objects.requireNonNull(logicalServerName);
-        this.name = Objects.requireNonNull(name);
-        this.partnerLogicalServerName = Objects.requireNonNull(partnerLogicalServerName);
-        this.partnerServerId = Objects.requireNonNull(partnerServerId);
-        this.role = Objects.requireNonNull(role);
-        this.status = Objects.requireNonNull(status);
-        this.type = Objects.requireNonNull(type);
+        this.autoFailover = autoFailover;
+        this.failoverPolicy = failoverPolicy;
+        this.id = id;
+        this.location = location;
+        this.logicalServerName = logicalServerName;
+        this.name = name;
+        this.partnerLogicalServerName = partnerLogicalServerName;
+        this.partnerServerId = partnerServerId;
+        this.role = role;
+        this.status = status;
+        this.type = type;
     }
 
     /**

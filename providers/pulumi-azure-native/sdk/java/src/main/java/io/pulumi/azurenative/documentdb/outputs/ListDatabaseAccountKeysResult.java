@@ -36,10 +36,10 @@ public final class ListDatabaseAccountKeysResult {
         String primaryReadonlyMasterKey,
         String secondaryMasterKey,
         String secondaryReadonlyMasterKey) {
-        this.primaryMasterKey = Objects.requireNonNull(primaryMasterKey);
-        this.primaryReadonlyMasterKey = Objects.requireNonNull(primaryReadonlyMasterKey);
-        this.secondaryMasterKey = Objects.requireNonNull(secondaryMasterKey);
-        this.secondaryReadonlyMasterKey = Objects.requireNonNull(secondaryReadonlyMasterKey);
+        this.primaryMasterKey = primaryMasterKey;
+        this.primaryReadonlyMasterKey = primaryReadonlyMasterKey;
+        this.secondaryMasterKey = secondaryMasterKey;
+        this.secondaryReadonlyMasterKey = secondaryReadonlyMasterKey;
     }
 
     /**

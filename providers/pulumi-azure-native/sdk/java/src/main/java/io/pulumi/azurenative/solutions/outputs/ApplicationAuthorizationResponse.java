@@ -24,8 +24,8 @@ public final class ApplicationAuthorizationResponse {
     private ApplicationAuthorizationResponse(
         String principalId,
         String roleDefinitionId) {
-        this.principalId = Objects.requireNonNull(principalId);
-        this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId);
+        this.principalId = principalId;
+        this.roleDefinitionId = roleDefinitionId;
     }
 
     /**

@@ -69,11 +69,11 @@ public final class VirtualNicResponse {
         this.customization = customization;
         this.ipAddresses = ipAddresses;
         this.macAddress = macAddress;
-        this.network = Objects.requireNonNull(network);
-        this.nicType = Objects.requireNonNull(nicType);
+        this.network = network;
+        this.nicType = nicType;
         this.powerOnBoot = powerOnBoot;
         this.virtualNicId = virtualNicId;
-        this.virtualNicName = Objects.requireNonNull(virtualNicName);
+        this.virtualNicName = virtualNicName;
     }
 
     /**

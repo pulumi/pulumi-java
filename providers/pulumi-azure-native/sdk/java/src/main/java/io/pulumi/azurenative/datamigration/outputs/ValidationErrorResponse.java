@@ -24,8 +24,8 @@ public final class ValidationErrorResponse {
     private ValidationErrorResponse(
         String severity,
         String text) {
-        this.severity = Objects.requireNonNull(severity);
-        this.text = Objects.requireNonNull(text);
+        this.severity = severity;
+        this.text = text;
     }
 
     /**

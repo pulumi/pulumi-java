@@ -121,19 +121,19 @@ public final class GetBookmarkResult {
         @Nullable UserInfoResponse updatedBy) {
         this.created = created;
         this.createdBy = createdBy;
-        this.displayName = Objects.requireNonNull(displayName);
+        this.displayName = displayName;
         this.etag = etag;
         this.eventTime = eventTime;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.incidentInfo = incidentInfo;
         this.labels = labels;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.notes = notes;
-        this.query = Objects.requireNonNull(query);
+        this.query = query;
         this.queryEndTime = queryEndTime;
         this.queryResult = queryResult;
         this.queryStartTime = queryStartTime;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.updated = updated;
         this.updatedBy = updatedBy;
     }

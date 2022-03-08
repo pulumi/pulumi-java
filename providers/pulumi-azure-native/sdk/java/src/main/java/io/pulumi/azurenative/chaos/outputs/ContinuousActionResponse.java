@@ -45,11 +45,11 @@ public final class ContinuousActionResponse {
         List<KeyValuePairResponse> parameters,
         String selectorId,
         String type) {
-        this.duration = Objects.requireNonNull(duration);
-        this.name = Objects.requireNonNull(name);
-        this.parameters = Objects.requireNonNull(parameters);
-        this.selectorId = Objects.requireNonNull(selectorId);
-        this.type = Objects.requireNonNull(type);
+        this.duration = duration;
+        this.name = name;
+        this.parameters = parameters;
+        this.selectorId = selectorId;
+        this.type = type;
     }
 
     /**

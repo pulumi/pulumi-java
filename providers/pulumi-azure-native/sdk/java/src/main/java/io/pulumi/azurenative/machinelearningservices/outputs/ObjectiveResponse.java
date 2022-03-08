@@ -24,8 +24,8 @@ public final class ObjectiveResponse {
     private ObjectiveResponse(
         String goal,
         String primaryMetric) {
-        this.goal = Objects.requireNonNull(goal);
-        this.primaryMetric = Objects.requireNonNull(primaryMetric);
+        this.goal = goal;
+        this.primaryMetric = primaryMetric;
     }
 
     /**

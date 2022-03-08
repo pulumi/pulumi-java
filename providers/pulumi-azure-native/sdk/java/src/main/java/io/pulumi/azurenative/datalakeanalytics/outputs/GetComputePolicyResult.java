@@ -55,13 +55,13 @@ public final class GetComputePolicyResult {
         String objectId,
         String objectType,
         String type) {
-        this.id = Objects.requireNonNull(id);
-        this.maxDegreeOfParallelismPerJob = Objects.requireNonNull(maxDegreeOfParallelismPerJob);
-        this.minPriorityPerJob = Objects.requireNonNull(minPriorityPerJob);
-        this.name = Objects.requireNonNull(name);
-        this.objectId = Objects.requireNonNull(objectId);
-        this.objectType = Objects.requireNonNull(objectType);
-        this.type = Objects.requireNonNull(type);
+        this.id = id;
+        this.maxDegreeOfParallelismPerJob = maxDegreeOfParallelismPerJob;
+        this.minPriorityPerJob = minPriorityPerJob;
+        this.name = name;
+        this.objectId = objectId;
+        this.objectType = objectType;
+        this.type = type;
     }
 
     /**

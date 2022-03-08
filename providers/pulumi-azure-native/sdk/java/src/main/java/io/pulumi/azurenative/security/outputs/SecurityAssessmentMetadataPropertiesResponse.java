@@ -81,16 +81,16 @@ public final class SecurityAssessmentMetadataPropertiesResponse {
         String severity,
         @Nullable List<String> threats,
         @Nullable String userImpact) {
-        this.assessmentType = Objects.requireNonNull(assessmentType);
+        this.assessmentType = assessmentType;
         this.categories = categories;
         this.description = description;
-        this.displayName = Objects.requireNonNull(displayName);
+        this.displayName = displayName;
         this.implementationEffort = implementationEffort;
         this.partnerData = partnerData;
-        this.policyDefinitionId = Objects.requireNonNull(policyDefinitionId);
+        this.policyDefinitionId = policyDefinitionId;
         this.preview = preview;
         this.remediationDescription = remediationDescription;
-        this.severity = Objects.requireNonNull(severity);
+        this.severity = severity;
         this.threats = threats;
         this.userImpact = userImpact;
     }

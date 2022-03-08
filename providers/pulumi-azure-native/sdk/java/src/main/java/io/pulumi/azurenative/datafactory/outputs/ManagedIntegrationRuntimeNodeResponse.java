@@ -34,8 +34,8 @@ public final class ManagedIntegrationRuntimeNodeResponse {
         String nodeId,
         String status) {
         this.errors = errors;
-        this.nodeId = Objects.requireNonNull(nodeId);
-        this.status = Objects.requireNonNull(status);
+        this.nodeId = nodeId;
+        this.status = status;
     }
 
     /**

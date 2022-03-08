@@ -34,7 +34,7 @@ public final class SkuResponse {
         String name) {
         this.displayName = displayName;
         this.family = family;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

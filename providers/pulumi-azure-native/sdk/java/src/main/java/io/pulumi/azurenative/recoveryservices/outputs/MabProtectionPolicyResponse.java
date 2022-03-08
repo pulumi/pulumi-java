@@ -47,7 +47,7 @@ public final class MabProtectionPolicyResponse {
         @Nullable Integer protectedItemsCount,
         @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy,
         @Nullable Object schedulePolicy) {
-        this.backupManagementType = Objects.requireNonNull(backupManagementType);
+        this.backupManagementType = backupManagementType;
         this.protectedItemsCount = protectedItemsCount;
         this.retentionPolicy = retentionPolicy;
         this.schedulePolicy = schedulePolicy;

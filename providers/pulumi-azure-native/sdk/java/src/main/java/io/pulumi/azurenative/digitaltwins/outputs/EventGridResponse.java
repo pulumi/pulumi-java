@@ -69,15 +69,15 @@ public final class EventGridResponse {
         String endpointType,
         String provisioningState,
         String topicEndpoint) {
-        this.accessKey1 = Objects.requireNonNull(accessKey1);
+        this.accessKey1 = accessKey1;
         this.accessKey2 = accessKey2;
         this.authenticationType = authenticationType;
-        this.createdTime = Objects.requireNonNull(createdTime);
+        this.createdTime = createdTime;
         this.deadLetterSecret = deadLetterSecret;
         this.deadLetterUri = deadLetterUri;
-        this.endpointType = Objects.requireNonNull(endpointType);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.topicEndpoint = Objects.requireNonNull(topicEndpoint);
+        this.endpointType = endpointType;
+        this.provisioningState = provisioningState;
+        this.topicEndpoint = topicEndpoint;
     }
 
     /**

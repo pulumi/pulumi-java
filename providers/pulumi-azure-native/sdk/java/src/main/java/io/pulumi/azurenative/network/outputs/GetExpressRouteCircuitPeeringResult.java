@@ -170,27 +170,27 @@ public final class GetExpressRouteCircuitPeeringResult {
         @Nullable Integer vlanId) {
         this.azureASN = azureASN;
         this.connections = connections;
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.expressRouteConnection = expressRouteConnection;
         this.gatewayManagerEtag = gatewayManagerEtag;
         this.id = id;
         this.ipv6PeeringConfig = ipv6PeeringConfig;
-        this.lastModifiedBy = Objects.requireNonNull(lastModifiedBy);
+        this.lastModifiedBy = lastModifiedBy;
         this.microsoftPeeringConfig = microsoftPeeringConfig;
         this.name = name;
         this.peerASN = peerASN;
-        this.peeredConnections = Objects.requireNonNull(peeredConnections);
+        this.peeredConnections = peeredConnections;
         this.peeringType = peeringType;
         this.primaryAzurePort = primaryAzurePort;
         this.primaryPeerAddressPrefix = primaryPeerAddressPrefix;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.routeFilter = routeFilter;
         this.secondaryAzurePort = secondaryAzurePort;
         this.secondaryPeerAddressPrefix = secondaryPeerAddressPrefix;
         this.sharedKey = sharedKey;
         this.state = state;
         this.stats = stats;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.vlanId = vlanId;
     }
 

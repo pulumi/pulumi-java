@@ -60,12 +60,12 @@ public final class EncodedTaskStepResponse {
         @Nullable String encodedValuesContent,
         String type,
         @Nullable List<SetValueResponse> values) {
-        this.baseImageDependencies = Objects.requireNonNull(baseImageDependencies);
+        this.baseImageDependencies = baseImageDependencies;
         this.contextAccessToken = contextAccessToken;
         this.contextPath = contextPath;
-        this.encodedTaskContent = Objects.requireNonNull(encodedTaskContent);
+        this.encodedTaskContent = encodedTaskContent;
         this.encodedValuesContent = encodedValuesContent;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.values = values;
     }
 

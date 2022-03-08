@@ -104,19 +104,19 @@ public final class GetFlowLogResult {
         String targetResourceId,
         String type) {
         this.enabled = enabled;
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.flowAnalyticsConfiguration = flowAnalyticsConfiguration;
         this.format = format;
         this.id = id;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.retentionPolicy = retentionPolicy;
-        this.storageId = Objects.requireNonNull(storageId);
+        this.storageId = storageId;
         this.tags = tags;
-        this.targetResourceGuid = Objects.requireNonNull(targetResourceGuid);
-        this.targetResourceId = Objects.requireNonNull(targetResourceId);
-        this.type = Objects.requireNonNull(type);
+        this.targetResourceGuid = targetResourceGuid;
+        this.targetResourceId = targetResourceId;
+        this.type = type;
     }
 
     /**

@@ -57,12 +57,12 @@ public final class GetWorkspaceSqlAadAdminResult {
         @Nullable String tenantId,
         String type) {
         this.administratorType = administratorType;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.login = login;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.sid = sid;
         this.tenantId = tenantId;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

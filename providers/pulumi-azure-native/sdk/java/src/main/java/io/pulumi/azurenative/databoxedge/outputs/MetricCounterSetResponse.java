@@ -18,7 +18,7 @@ public final class MetricCounterSetResponse {
 
     @OutputCustomType.Constructor({"counters"})
     private MetricCounterSetResponse(List<MetricCounterResponse> counters) {
-        this.counters = Objects.requireNonNull(counters);
+        this.counters = counters;
     }
 
     /**

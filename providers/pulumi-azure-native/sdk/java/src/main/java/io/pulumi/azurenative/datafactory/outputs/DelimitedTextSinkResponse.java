@@ -83,7 +83,7 @@ public final class DelimitedTextSinkResponse {
         this.sinkRetryCount = sinkRetryCount;
         this.sinkRetryWait = sinkRetryWait;
         this.storeSettings = storeSettings;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.writeBatchSize = writeBatchSize;
         this.writeBatchTimeout = writeBatchTimeout;
     }

@@ -26,8 +26,8 @@ public final class ListTopLevelDomainAgreementsResult {
     private ListTopLevelDomainAgreementsResult(
         String nextLink,
         List<TldLegalAgreementResponse> value) {
-        this.nextLink = Objects.requireNonNull(nextLink);
-        this.value = Objects.requireNonNull(value);
+        this.nextLink = nextLink;
+        this.value = value;
     }
 
     /**

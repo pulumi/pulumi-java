@@ -82,16 +82,16 @@ public final class GetEncryptionProtectorResult {
         String type,
         String uri) {
         this.autoRotationEnabled = autoRotationEnabled;
-        this.id = Objects.requireNonNull(id);
-        this.kind = Objects.requireNonNull(kind);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.kind = kind;
+        this.location = location;
+        this.name = name;
         this.serverKeyName = serverKeyName;
-        this.serverKeyType = Objects.requireNonNull(serverKeyType);
-        this.subregion = Objects.requireNonNull(subregion);
-        this.thumbprint = Objects.requireNonNull(thumbprint);
-        this.type = Objects.requireNonNull(type);
-        this.uri = Objects.requireNonNull(uri);
+        this.serverKeyType = serverKeyType;
+        this.subregion = subregion;
+        this.thumbprint = thumbprint;
+        this.type = type;
+        this.uri = uri;
     }
 
     /**

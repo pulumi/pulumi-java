@@ -90,16 +90,16 @@ public final class GetPipelineTopologyResult {
         SystemDataResponse systemData,
         String type) {
         this.description = description;
-        this.id = Objects.requireNonNull(id);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.kind = kind;
+        this.name = name;
         this.parameters = parameters;
         this.processors = processors;
-        this.sinks = Objects.requireNonNull(sinks);
-        this.sku = Objects.requireNonNull(sku);
-        this.sources = Objects.requireNonNull(sources);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.sinks = sinks;
+        this.sku = sku;
+        this.sources = sources;
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

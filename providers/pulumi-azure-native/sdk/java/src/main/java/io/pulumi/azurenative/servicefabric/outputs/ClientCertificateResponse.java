@@ -40,7 +40,7 @@ public final class ClientCertificateResponse {
         @Nullable String issuerThumbprint,
         @Nullable String thumbprint) {
         this.commonName = commonName;
-        this.isAdmin = Objects.requireNonNull(isAdmin);
+        this.isAdmin = isAdmin;
         this.issuerThumbprint = issuerThumbprint;
         this.thumbprint = thumbprint;
     }

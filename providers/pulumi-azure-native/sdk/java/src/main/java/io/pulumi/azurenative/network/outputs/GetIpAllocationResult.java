@@ -96,18 +96,18 @@ public final class GetIpAllocationResult {
         String type,
         SubResourceResponse virtualNetwork) {
         this.allocationTags = allocationTags;
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.id = id;
         this.ipamAllocationId = ipamAllocationId;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.prefix = prefix;
         this.prefixLength = prefixLength;
         this.prefixType = prefixType;
-        this.subnet = Objects.requireNonNull(subnet);
+        this.subnet = subnet;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
-        this.virtualNetwork = Objects.requireNonNull(virtualNetwork);
+        this.type = type;
+        this.virtualNetwork = virtualNetwork;
     }
 
     /**

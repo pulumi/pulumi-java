@@ -36,7 +36,7 @@ public final class RuleEmailActionResponse {
         String odataType,
         @Nullable Boolean sendToServiceOwners) {
         this.customEmails = customEmails;
-        this.odataType = Objects.requireNonNull(odataType);
+        this.odataType = odataType;
         this.sendToServiceOwners = sendToServiceOwners;
     }
 

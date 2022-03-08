@@ -52,12 +52,12 @@ public final class KeyAttributesResponse {
         @Nullable Double notBefore,
         String recoveryLevel,
         Double updated) {
-        this.created = Objects.requireNonNull(created);
+        this.created = created;
         this.enabled = enabled;
         this.expires = expires;
         this.notBefore = notBefore;
-        this.recoveryLevel = Objects.requireNonNull(recoveryLevel);
-        this.updated = Objects.requireNonNull(updated);
+        this.recoveryLevel = recoveryLevel;
+        this.updated = updated;
     }
 
     /**

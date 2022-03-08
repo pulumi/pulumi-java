@@ -90,19 +90,19 @@ public final class InMageRcmNicDetailsResponse {
         String testIPAddress,
         String testIPAddressType,
         String testSubnetName) {
-        this.isPrimaryNic = Objects.requireNonNull(isPrimaryNic);
-        this.isSelectedForFailover = Objects.requireNonNull(isSelectedForFailover);
-        this.nicId = Objects.requireNonNull(nicId);
-        this.sourceIPAddress = Objects.requireNonNull(sourceIPAddress);
-        this.sourceIPAddressType = Objects.requireNonNull(sourceIPAddressType);
-        this.sourceNetworkId = Objects.requireNonNull(sourceNetworkId);
-        this.sourceSubnetName = Objects.requireNonNull(sourceSubnetName);
-        this.targetIPAddress = Objects.requireNonNull(targetIPAddress);
-        this.targetIPAddressType = Objects.requireNonNull(targetIPAddressType);
-        this.targetSubnetName = Objects.requireNonNull(targetSubnetName);
-        this.testIPAddress = Objects.requireNonNull(testIPAddress);
-        this.testIPAddressType = Objects.requireNonNull(testIPAddressType);
-        this.testSubnetName = Objects.requireNonNull(testSubnetName);
+        this.isPrimaryNic = isPrimaryNic;
+        this.isSelectedForFailover = isSelectedForFailover;
+        this.nicId = nicId;
+        this.sourceIPAddress = sourceIPAddress;
+        this.sourceIPAddressType = sourceIPAddressType;
+        this.sourceNetworkId = sourceNetworkId;
+        this.sourceSubnetName = sourceSubnetName;
+        this.targetIPAddress = targetIPAddress;
+        this.targetIPAddressType = targetIPAddressType;
+        this.targetSubnetName = targetSubnetName;
+        this.testIPAddress = testIPAddress;
+        this.testIPAddressType = testIPAddressType;
+        this.testSubnetName = testSubnetName;
     }
 
     /**

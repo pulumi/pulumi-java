@@ -49,11 +49,11 @@ public final class ManagedClusterPodIdentityResponse {
         ManagedClusterPodIdentityResponseProvisioningInfo provisioningInfo,
         String provisioningState) {
         this.bindingSelector = bindingSelector;
-        this.identity = Objects.requireNonNull(identity);
-        this.name = Objects.requireNonNull(name);
-        this.namespace = Objects.requireNonNull(namespace);
-        this.provisioningInfo = Objects.requireNonNull(provisioningInfo);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.identity = identity;
+        this.name = name;
+        this.namespace = namespace;
+        this.provisioningInfo = provisioningInfo;
+        this.provisioningState = provisioningState;
     }
 
     /**

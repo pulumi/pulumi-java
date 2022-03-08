@@ -28,7 +28,7 @@ public final class SharingProfileResponse {
     private SharingProfileResponse(
         List<SharingProfileGroupResponse> groups,
         @Nullable String permissions) {
-        this.groups = Objects.requireNonNull(groups);
+        this.groups = groups;
         this.permissions = permissions;
     }
 

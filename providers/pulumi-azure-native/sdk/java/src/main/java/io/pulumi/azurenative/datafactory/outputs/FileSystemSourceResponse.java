@@ -64,7 +64,7 @@ public final class FileSystemSourceResponse {
         this.recursive = recursive;
         this.sourceRetryCount = sourceRetryCount;
         this.sourceRetryWait = sourceRetryWait;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

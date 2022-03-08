@@ -62,14 +62,14 @@ public final class GetRegisteredPrefixResult {
         String prefixValidationState,
         String provisioningState,
         String type) {
-        this.errorMessage = Objects.requireNonNull(errorMessage);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.peeringServicePrefixKey = Objects.requireNonNull(peeringServicePrefixKey);
+        this.errorMessage = errorMessage;
+        this.id = id;
+        this.name = name;
+        this.peeringServicePrefixKey = peeringServicePrefixKey;
         this.prefix = prefix;
-        this.prefixValidationState = Objects.requireNonNull(prefixValidationState);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.type = Objects.requireNonNull(type);
+        this.prefixValidationState = prefixValidationState;
+        this.provisioningState = provisioningState;
+        this.type = type;
     }
 
     /**

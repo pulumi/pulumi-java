@@ -96,16 +96,16 @@ public final class SiteResponse {
         @Nullable List<String> trustedOrigins) {
         this.eTag = eTag;
         this.isBlockUserUploadEnabled = isBlockUserUploadEnabled;
-        this.isEnabled = Objects.requireNonNull(isEnabled);
+        this.isEnabled = isEnabled;
         this.isSecureSiteEnabled = isSecureSiteEnabled;
         this.isTokenEnabled = isTokenEnabled;
-        this.isV1Enabled = Objects.requireNonNull(isV1Enabled);
-        this.isV3Enabled = Objects.requireNonNull(isV3Enabled);
-        this.isWebchatPreviewEnabled = Objects.requireNonNull(isWebchatPreviewEnabled);
-        this.key = Objects.requireNonNull(key);
-        this.key2 = Objects.requireNonNull(key2);
-        this.siteId = Objects.requireNonNull(siteId);
-        this.siteName = Objects.requireNonNull(siteName);
+        this.isV1Enabled = isV1Enabled;
+        this.isV3Enabled = isV3Enabled;
+        this.isWebchatPreviewEnabled = isWebchatPreviewEnabled;
+        this.key = key;
+        this.key2 = key2;
+        this.siteId = siteId;
+        this.siteName = siteName;
         this.trustedOrigins = trustedOrigins;
     }
 

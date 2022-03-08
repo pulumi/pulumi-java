@@ -43,9 +43,9 @@ public final class MigrateSqlServerSqlDbTaskInputResponse {
         SqlConnectionInfoResponse sourceConnectionInfo,
         SqlConnectionInfoResponse targetConnectionInfo,
         @Nullable MigrationValidationOptionsResponse validationOptions) {
-        this.selectedDatabases = Objects.requireNonNull(selectedDatabases);
-        this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
-        this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
+        this.selectedDatabases = selectedDatabases;
+        this.sourceConnectionInfo = sourceConnectionInfo;
+        this.targetConnectionInfo = targetConnectionInfo;
         this.validationOptions = validationOptions;
     }
 

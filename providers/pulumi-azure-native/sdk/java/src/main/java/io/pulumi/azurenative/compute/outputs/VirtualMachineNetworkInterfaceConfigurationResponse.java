@@ -81,8 +81,8 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse {
         this.enableAcceleratedNetworking = enableAcceleratedNetworking;
         this.enableFpga = enableFpga;
         this.enableIPForwarding = enableIPForwarding;
-        this.ipConfigurations = Objects.requireNonNull(ipConfigurations);
-        this.name = Objects.requireNonNull(name);
+        this.ipConfigurations = ipConfigurations;
+        this.name = name;
         this.networkSecurityGroup = networkSecurityGroup;
         this.primary = primary;
     }

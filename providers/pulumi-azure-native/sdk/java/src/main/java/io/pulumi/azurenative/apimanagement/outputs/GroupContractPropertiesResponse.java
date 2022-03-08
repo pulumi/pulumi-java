@@ -45,9 +45,9 @@ public final class GroupContractPropertiesResponse {
         String displayName,
         @Nullable String externalId,
         @Nullable String type) {
-        this.builtIn = Objects.requireNonNull(builtIn);
+        this.builtIn = builtIn;
         this.description = description;
-        this.displayName = Objects.requireNonNull(displayName);
+        this.displayName = displayName;
         this.externalId = externalId;
         this.type = type;
     }

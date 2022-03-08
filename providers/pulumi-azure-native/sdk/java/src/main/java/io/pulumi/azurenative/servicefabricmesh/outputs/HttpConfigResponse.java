@@ -33,9 +33,9 @@ public final class HttpConfigResponse {
         List<HttpHostConfigResponse> hosts,
         String name,
         Integer port) {
-        this.hosts = Objects.requireNonNull(hosts);
-        this.name = Objects.requireNonNull(name);
-        this.port = Objects.requireNonNull(port);
+        this.hosts = hosts;
+        this.name = name;
+        this.port = port;
     }
 
     /**

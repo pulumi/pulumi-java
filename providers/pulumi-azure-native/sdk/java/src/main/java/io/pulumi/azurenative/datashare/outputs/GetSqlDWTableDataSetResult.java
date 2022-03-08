@@ -74,16 +74,16 @@ public final class GetSqlDWTableDataSetResult {
         SystemDataResponse systemData,
         String tableName,
         String type) {
-        this.dataSetId = Objects.requireNonNull(dataSetId);
-        this.dataWarehouseName = Objects.requireNonNull(dataWarehouseName);
-        this.id = Objects.requireNonNull(id);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.schemaName = Objects.requireNonNull(schemaName);
-        this.sqlServerResourceId = Objects.requireNonNull(sqlServerResourceId);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.tableName = Objects.requireNonNull(tableName);
-        this.type = Objects.requireNonNull(type);
+        this.dataSetId = dataSetId;
+        this.dataWarehouseName = dataWarehouseName;
+        this.id = id;
+        this.kind = kind;
+        this.name = name;
+        this.schemaName = schemaName;
+        this.sqlServerResourceId = sqlServerResourceId;
+        this.systemData = systemData;
+        this.tableName = tableName;
+        this.type = type;
     }
 
     /**

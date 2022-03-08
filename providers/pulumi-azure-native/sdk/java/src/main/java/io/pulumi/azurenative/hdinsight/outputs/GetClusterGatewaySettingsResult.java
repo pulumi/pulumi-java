@@ -30,9 +30,9 @@ public final class GetClusterGatewaySettingsResult {
         String isCredentialEnabled,
         String password,
         String userName) {
-        this.isCredentialEnabled = Objects.requireNonNull(isCredentialEnabled);
-        this.password = Objects.requireNonNull(password);
-        this.userName = Objects.requireNonNull(userName);
+        this.isCredentialEnabled = isCredentialEnabled;
+        this.password = password;
+        this.userName = userName;
     }
 
     /**

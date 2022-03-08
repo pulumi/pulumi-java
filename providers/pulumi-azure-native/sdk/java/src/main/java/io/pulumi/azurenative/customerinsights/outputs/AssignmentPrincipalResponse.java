@@ -32,9 +32,9 @@ public final class AssignmentPrincipalResponse {
         String principalId,
         @Nullable Map<String,String> principalMetadata,
         String principalType) {
-        this.principalId = Objects.requireNonNull(principalId);
+        this.principalId = principalId;
         this.principalMetadata = principalMetadata;
-        this.principalType = Objects.requireNonNull(principalType);
+        this.principalType = principalType;
     }
 
     /**

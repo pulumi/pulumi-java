@@ -56,12 +56,12 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskInputResponse {
         SqlConnectionInfoResponse sourceConnectionInfo,
         String storageResourceId,
         MiSqlConnectionInfoResponse targetConnectionInfo) {
-        this.azureApp = Objects.requireNonNull(azureApp);
+        this.azureApp = azureApp;
         this.backupFileShare = backupFileShare;
-        this.selectedDatabases = Objects.requireNonNull(selectedDatabases);
-        this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
-        this.storageResourceId = Objects.requireNonNull(storageResourceId);
-        this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
+        this.selectedDatabases = selectedDatabases;
+        this.sourceConnectionInfo = sourceConnectionInfo;
+        this.storageResourceId = storageResourceId;
+        this.targetConnectionInfo = targetConnectionInfo;
     }
 
     /**

@@ -60,14 +60,14 @@ public final class AssetStreamingLocatorResponse {
         String startTime,
         String streamingLocatorId,
         String streamingPolicyName) {
-        this.assetName = Objects.requireNonNull(assetName);
-        this.created = Objects.requireNonNull(created);
-        this.defaultContentKeyPolicyName = Objects.requireNonNull(defaultContentKeyPolicyName);
-        this.endTime = Objects.requireNonNull(endTime);
-        this.name = Objects.requireNonNull(name);
-        this.startTime = Objects.requireNonNull(startTime);
-        this.streamingLocatorId = Objects.requireNonNull(streamingLocatorId);
-        this.streamingPolicyName = Objects.requireNonNull(streamingPolicyName);
+        this.assetName = assetName;
+        this.created = created;
+        this.defaultContentKeyPolicyName = defaultContentKeyPolicyName;
+        this.endTime = endTime;
+        this.name = name;
+        this.startTime = startTime;
+        this.streamingLocatorId = streamingLocatorId;
+        this.streamingPolicyName = streamingPolicyName;
     }
 
     /**

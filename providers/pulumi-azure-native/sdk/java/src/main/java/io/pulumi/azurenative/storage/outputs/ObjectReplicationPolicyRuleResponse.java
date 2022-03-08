@@ -39,10 +39,10 @@ public final class ObjectReplicationPolicyRuleResponse {
         @Nullable ObjectReplicationPolicyFilterResponse filters,
         @Nullable String ruleId,
         String sourceContainer) {
-        this.destinationContainer = Objects.requireNonNull(destinationContainer);
+        this.destinationContainer = destinationContainer;
         this.filters = filters;
         this.ruleId = ruleId;
-        this.sourceContainer = Objects.requireNonNull(sourceContainer);
+        this.sourceContainer = sourceContainer;
     }
 
     /**

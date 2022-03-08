@@ -25,8 +25,8 @@ public final class TypedErrorInfoResponse {
     private TypedErrorInfoResponse(
         Object info,
         String type) {
-        this.info = Objects.requireNonNull(info);
-        this.type = Objects.requireNonNull(type);
+        this.info = info;
+        this.type = type;
     }
 
     /**

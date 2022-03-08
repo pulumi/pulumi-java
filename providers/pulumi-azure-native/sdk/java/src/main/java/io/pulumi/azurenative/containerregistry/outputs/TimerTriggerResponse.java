@@ -32,8 +32,8 @@ public final class TimerTriggerResponse {
         String name,
         String schedule,
         @Nullable String status) {
-        this.name = Objects.requireNonNull(name);
-        this.schedule = Objects.requireNonNull(schedule);
+        this.name = name;
+        this.schedule = schedule;
         this.status = status;
     }
 

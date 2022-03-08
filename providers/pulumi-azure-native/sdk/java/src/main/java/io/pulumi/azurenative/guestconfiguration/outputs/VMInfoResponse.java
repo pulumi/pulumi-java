@@ -24,8 +24,8 @@ public final class VMInfoResponse {
     private VMInfoResponse(
         String id,
         String uuid) {
-        this.id = Objects.requireNonNull(id);
-        this.uuid = Objects.requireNonNull(uuid);
+        this.id = id;
+        this.uuid = uuid;
     }
 
     /**

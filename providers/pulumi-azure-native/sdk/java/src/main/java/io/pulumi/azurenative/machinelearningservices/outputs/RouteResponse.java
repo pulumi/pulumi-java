@@ -25,8 +25,8 @@ public final class RouteResponse {
     private RouteResponse(
         String path,
         Integer port) {
-        this.path = Objects.requireNonNull(path);
-        this.port = Objects.requireNonNull(port);
+        this.path = path;
+        this.port = port;
     }
 
     /**

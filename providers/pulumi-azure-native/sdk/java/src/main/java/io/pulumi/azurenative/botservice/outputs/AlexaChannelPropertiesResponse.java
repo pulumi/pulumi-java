@@ -37,10 +37,10 @@ public final class AlexaChannelPropertiesResponse {
         Boolean isEnabled,
         String serviceEndpointUri,
         String urlFragment) {
-        this.alexaSkillId = Objects.requireNonNull(alexaSkillId);
-        this.isEnabled = Objects.requireNonNull(isEnabled);
-        this.serviceEndpointUri = Objects.requireNonNull(serviceEndpointUri);
-        this.urlFragment = Objects.requireNonNull(urlFragment);
+        this.alexaSkillId = alexaSkillId;
+        this.isEnabled = isEnabled;
+        this.serviceEndpointUri = serviceEndpointUri;
+        this.urlFragment = urlFragment;
     }
 
     /**

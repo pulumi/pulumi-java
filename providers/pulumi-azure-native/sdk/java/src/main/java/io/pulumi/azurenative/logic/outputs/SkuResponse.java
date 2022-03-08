@@ -27,7 +27,7 @@ public final class SkuResponse {
     private SkuResponse(
         String name,
         @Nullable ResourceReferenceResponse plan) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.plan = plan;
     }
 

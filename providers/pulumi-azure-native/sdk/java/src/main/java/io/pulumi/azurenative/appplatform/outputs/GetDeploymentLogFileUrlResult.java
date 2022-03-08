@@ -17,7 +17,7 @@ public final class GetDeploymentLogFileUrlResult {
 
     @OutputCustomType.Constructor({"url"})
     private GetDeploymentLogFileUrlResult(String url) {
-        this.url = Objects.requireNonNull(url);
+        this.url = url;
     }
 
     /**

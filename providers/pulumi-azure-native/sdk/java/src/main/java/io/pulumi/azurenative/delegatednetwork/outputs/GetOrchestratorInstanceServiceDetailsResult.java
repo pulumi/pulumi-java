@@ -109,19 +109,19 @@ public final class GetOrchestratorInstanceServiceDetailsResult {
         String type) {
         this.apiServerEndpoint = apiServerEndpoint;
         this.clusterRootCA = clusterRootCA;
-        this.controllerDetails = Objects.requireNonNull(controllerDetails);
-        this.id = Objects.requireNonNull(id);
+        this.controllerDetails = controllerDetails;
+        this.id = id;
         this.identity = identity;
-        this.kind = Objects.requireNonNull(kind);
+        this.kind = kind;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.orchestratorAppId = orchestratorAppId;
         this.orchestratorTenantId = orchestratorTenantId;
         this.privateLinkResourceId = privateLinkResourceId;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.resourceGuid = Objects.requireNonNull(resourceGuid);
+        this.provisioningState = provisioningState;
+        this.resourceGuid = resourceGuid;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

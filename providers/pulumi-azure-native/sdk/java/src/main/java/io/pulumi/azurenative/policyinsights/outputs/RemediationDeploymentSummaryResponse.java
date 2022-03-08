@@ -30,9 +30,9 @@ public final class RemediationDeploymentSummaryResponse {
         Integer failedDeployments,
         Integer successfulDeployments,
         Integer totalDeployments) {
-        this.failedDeployments = Objects.requireNonNull(failedDeployments);
-        this.successfulDeployments = Objects.requireNonNull(successfulDeployments);
-        this.totalDeployments = Objects.requireNonNull(totalDeployments);
+        this.failedDeployments = failedDeployments;
+        this.successfulDeployments = successfulDeployments;
+        this.totalDeployments = totalDeployments;
     }
 
     /**

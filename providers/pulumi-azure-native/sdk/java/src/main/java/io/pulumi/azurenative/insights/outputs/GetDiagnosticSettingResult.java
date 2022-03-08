@@ -85,14 +85,14 @@ public final class GetDiagnosticSettingResult {
         @Nullable String workspaceId) {
         this.eventHubAuthorizationRuleId = eventHubAuthorizationRuleId;
         this.eventHubName = eventHubName;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.logAnalyticsDestinationType = logAnalyticsDestinationType;
         this.logs = logs;
         this.metrics = metrics;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.serviceBusRuleId = serviceBusRuleId;
         this.storageAccountId = storageAccountId;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.workspaceId = workspaceId;
     }
 

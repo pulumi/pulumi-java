@@ -61,8 +61,8 @@ public final class NetworkProfileResponse {
         @Nullable String serviceRuntimeSubnetId) {
         this.appNetworkResourceGroup = appNetworkResourceGroup;
         this.appSubnetId = appSubnetId;
-        this.outboundIPs = Objects.requireNonNull(outboundIPs);
-        this.requiredTraffics = Objects.requireNonNull(requiredTraffics);
+        this.outboundIPs = outboundIPs;
+        this.requiredTraffics = requiredTraffics;
         this.serviceCidr = serviceCidr;
         this.serviceRuntimeNetworkResourceGroup = serviceRuntimeNetworkResourceGroup;
         this.serviceRuntimeSubnetId = serviceRuntimeSubnetId;

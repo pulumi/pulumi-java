@@ -65,14 +65,14 @@ public final class ValidateMigrationInputSqlServerSqlMITaskOutputResponse {
         String id,
         String name,
         List<ReportableExceptionResponse> restoreDatabaseNameErrors) {
-        this.backupFolderErrors = Objects.requireNonNull(backupFolderErrors);
-        this.backupShareCredentialsErrors = Objects.requireNonNull(backupShareCredentialsErrors);
-        this.backupStorageAccountErrors = Objects.requireNonNull(backupStorageAccountErrors);
+        this.backupFolderErrors = backupFolderErrors;
+        this.backupShareCredentialsErrors = backupShareCredentialsErrors;
+        this.backupStorageAccountErrors = backupStorageAccountErrors;
         this.databaseBackupInfo = databaseBackupInfo;
-        this.existingBackupErrors = Objects.requireNonNull(existingBackupErrors);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.restoreDatabaseNameErrors = Objects.requireNonNull(restoreDatabaseNameErrors);
+        this.existingBackupErrors = existingBackupErrors;
+        this.id = id;
+        this.name = name;
+        this.restoreDatabaseNameErrors = restoreDatabaseNameErrors;
     }
 
     /**

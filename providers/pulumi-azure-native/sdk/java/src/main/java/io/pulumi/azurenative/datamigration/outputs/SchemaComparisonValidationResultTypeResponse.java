@@ -30,9 +30,9 @@ public final class SchemaComparisonValidationResultTypeResponse {
         String objectName,
         String objectType,
         String updateAction) {
-        this.objectName = Objects.requireNonNull(objectName);
-        this.objectType = Objects.requireNonNull(objectType);
-        this.updateAction = Objects.requireNonNull(updateAction);
+        this.objectName = objectName;
+        this.objectType = objectType;
+        this.updateAction = updateAction;
     }
 
     /**

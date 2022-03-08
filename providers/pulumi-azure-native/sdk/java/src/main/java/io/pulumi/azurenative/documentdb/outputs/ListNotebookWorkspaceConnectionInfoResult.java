@@ -24,8 +24,8 @@ public final class ListNotebookWorkspaceConnectionInfoResult {
     private ListNotebookWorkspaceConnectionInfoResult(
         String authToken,
         String notebookServerEndpoint) {
-        this.authToken = Objects.requireNonNull(authToken);
-        this.notebookServerEndpoint = Objects.requireNonNull(notebookServerEndpoint);
+        this.authToken = authToken;
+        this.notebookServerEndpoint = notebookServerEndpoint;
     }
 
     /**

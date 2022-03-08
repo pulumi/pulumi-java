@@ -30,9 +30,9 @@ public final class GatewayDestinationResponse {
         String applicationName,
         String endpointName,
         String serviceName) {
-        this.applicationName = Objects.requireNonNull(applicationName);
-        this.endpointName = Objects.requireNonNull(endpointName);
-        this.serviceName = Objects.requireNonNull(serviceName);
+        this.applicationName = applicationName;
+        this.endpointName = endpointName;
+        this.serviceName = serviceName;
     }
 
     /**

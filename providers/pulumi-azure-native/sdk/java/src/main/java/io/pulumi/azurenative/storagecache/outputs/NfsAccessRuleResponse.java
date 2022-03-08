@@ -63,12 +63,12 @@ public final class NfsAccessRuleResponse {
         String scope,
         @Nullable Boolean submountAccess,
         @Nullable Boolean suid) {
-        this.access = Objects.requireNonNull(access);
+        this.access = access;
         this.anonymousGID = anonymousGID;
         this.anonymousUID = anonymousUID;
         this.filter = filter;
         this.rootSquash = rootSquash;
-        this.scope = Objects.requireNonNull(scope);
+        this.scope = scope;
         this.submountAccess = submountAccess;
         this.suid = suid;
     }

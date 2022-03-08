@@ -44,11 +44,11 @@ public final class SiteAgentPropertiesResponse {
         @Nullable String keyVaultUri,
         String lastHeartBeatUtc,
         String version) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.keyVaultId = keyVaultId;
         this.keyVaultUri = keyVaultUri;
-        this.lastHeartBeatUtc = Objects.requireNonNull(lastHeartBeatUtc);
-        this.version = Objects.requireNonNull(version);
+        this.lastHeartBeatUtc = lastHeartBeatUtc;
+        this.version = version;
     }
 
     /**

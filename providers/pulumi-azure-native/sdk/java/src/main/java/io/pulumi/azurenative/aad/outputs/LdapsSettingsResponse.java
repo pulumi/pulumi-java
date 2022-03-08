@@ -56,13 +56,13 @@ public final class LdapsSettingsResponse {
         @Nullable String pfxCertificate,
         @Nullable String pfxCertificatePassword,
         String publicCertificate) {
-        this.certificateNotAfter = Objects.requireNonNull(certificateNotAfter);
-        this.certificateThumbprint = Objects.requireNonNull(certificateThumbprint);
+        this.certificateNotAfter = certificateNotAfter;
+        this.certificateThumbprint = certificateThumbprint;
         this.externalAccess = externalAccess;
         this.ldaps = ldaps;
         this.pfxCertificate = pfxCertificate;
         this.pfxCertificatePassword = pfxCertificatePassword;
-        this.publicCertificate = Objects.requireNonNull(publicCertificate);
+        this.publicCertificate = publicCertificate;
     }
 
     /**

@@ -27,7 +27,7 @@ public final class DiskSkuResponse {
         @Nullable String name,
         String tier) {
         this.name = name;
-        this.tier = Objects.requireNonNull(tier);
+        this.tier = tier;
     }
 
     /**

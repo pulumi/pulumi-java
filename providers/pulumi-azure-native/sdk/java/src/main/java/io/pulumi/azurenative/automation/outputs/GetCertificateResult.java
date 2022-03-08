@@ -69,15 +69,15 @@ public final class GetCertificateResult {
         String name,
         String thumbprint,
         String type) {
-        this.creationTime = Objects.requireNonNull(creationTime);
+        this.creationTime = creationTime;
         this.description = description;
-        this.expiryTime = Objects.requireNonNull(expiryTime);
-        this.id = Objects.requireNonNull(id);
-        this.isExportable = Objects.requireNonNull(isExportable);
-        this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
-        this.name = Objects.requireNonNull(name);
-        this.thumbprint = Objects.requireNonNull(thumbprint);
-        this.type = Objects.requireNonNull(type);
+        this.expiryTime = expiryTime;
+        this.id = id;
+        this.isExportable = isExportable;
+        this.lastModifiedTime = lastModifiedTime;
+        this.name = name;
+        this.thumbprint = thumbprint;
+        this.type = type;
     }
 
     /**

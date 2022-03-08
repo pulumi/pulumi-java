@@ -78,14 +78,14 @@ public final class GetProductResult {
         String type) {
         this.approvalRequired = approvalRequired;
         this.description = description;
-        this.displayName = Objects.requireNonNull(displayName);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.displayName = displayName;
+        this.id = id;
+        this.name = name;
         this.state = state;
         this.subscriptionRequired = subscriptionRequired;
         this.subscriptionsLimit = subscriptionsLimit;
         this.terms = terms;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

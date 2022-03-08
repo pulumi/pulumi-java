@@ -57,11 +57,11 @@ public final class DelegationResponse {
         String provisioningState,
         @Nullable String serviceName,
         @Nullable String type) {
-        this.actions = Objects.requireNonNull(actions);
-        this.etag = Objects.requireNonNull(etag);
+        this.actions = actions;
+        this.etag = etag;
         this.id = id;
         this.name = name;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.serviceName = serviceName;
         this.type = type;
     }

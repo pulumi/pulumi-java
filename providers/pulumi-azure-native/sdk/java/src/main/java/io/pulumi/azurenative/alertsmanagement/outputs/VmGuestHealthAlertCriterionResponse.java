@@ -40,10 +40,10 @@ public final class VmGuestHealthAlertCriterionResponse {
         @Nullable List<String> monitorNames,
         @Nullable List<String> monitorTypes,
         String namespace) {
-        this.healthStates = Objects.requireNonNull(healthStates);
+        this.healthStates = healthStates;
         this.monitorNames = monitorNames;
         this.monitorTypes = monitorTypes;
-        this.namespace = Objects.requireNonNull(namespace);
+        this.namespace = namespace;
     }
 
     /**

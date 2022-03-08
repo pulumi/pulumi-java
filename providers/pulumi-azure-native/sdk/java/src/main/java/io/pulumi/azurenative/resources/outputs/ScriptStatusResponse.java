@@ -51,12 +51,12 @@ public final class ScriptStatusResponse {
         String expirationTime,
         String startTime,
         String storageAccountId) {
-        this.containerInstanceId = Objects.requireNonNull(containerInstanceId);
-        this.endTime = Objects.requireNonNull(endTime);
+        this.containerInstanceId = containerInstanceId;
+        this.endTime = endTime;
         this.error = error;
-        this.expirationTime = Objects.requireNonNull(expirationTime);
-        this.startTime = Objects.requireNonNull(startTime);
-        this.storageAccountId = Objects.requireNonNull(storageAccountId);
+        this.expirationTime = expirationTime;
+        this.startTime = startTime;
+        this.storageAccountId = storageAccountId;
     }
 
     /**

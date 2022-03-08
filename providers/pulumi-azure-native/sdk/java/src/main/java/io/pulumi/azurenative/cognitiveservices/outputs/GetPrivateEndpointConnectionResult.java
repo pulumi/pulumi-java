@@ -51,12 +51,12 @@ public final class GetPrivateEndpointConnectionResult {
         String name,
         PrivateEndpointConnectionPropertiesResponse properties,
         String type) {
-        this.etag = Objects.requireNonNull(etag);
-        this.id = Objects.requireNonNull(id);
+        this.etag = etag;
+        this.id = id;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
-        this.properties = Objects.requireNonNull(properties);
-        this.type = Objects.requireNonNull(type);
+        this.name = name;
+        this.properties = properties;
+        this.type = type;
     }
 
     /**

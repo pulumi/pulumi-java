@@ -26,8 +26,8 @@ public final class LinkedIntegrationRuntimeKeyAuthorizationResponse {
     private LinkedIntegrationRuntimeKeyAuthorizationResponse(
         String authorizationType,
         SecureStringResponse key) {
-        this.authorizationType = Objects.requireNonNull(authorizationType);
-        this.key = Objects.requireNonNull(key);
+        this.authorizationType = authorizationType;
+        this.key = key;
     }
 
     /**

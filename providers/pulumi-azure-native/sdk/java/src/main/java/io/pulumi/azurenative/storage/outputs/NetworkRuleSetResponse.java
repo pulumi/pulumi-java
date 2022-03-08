@@ -49,7 +49,7 @@ public final class NetworkRuleSetResponse {
         @Nullable List<ResourceAccessRuleResponse> resourceAccessRules,
         @Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules) {
         this.bypass = bypass;
-        this.defaultAction = Objects.requireNonNull(defaultAction);
+        this.defaultAction = defaultAction;
         this.ipRules = ipRules;
         this.resourceAccessRules = resourceAccessRules;
         this.virtualNetworkRules = virtualNetworkRules;

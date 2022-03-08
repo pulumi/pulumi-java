@@ -40,9 +40,9 @@ public final class JitNetworkAccessPortRuleResponse {
         String protocol) {
         this.allowedSourceAddressPrefix = allowedSourceAddressPrefix;
         this.allowedSourceAddressPrefixes = allowedSourceAddressPrefixes;
-        this.maxRequestAccessDuration = Objects.requireNonNull(maxRequestAccessDuration);
-        this.number = Objects.requireNonNull(number);
-        this.protocol = Objects.requireNonNull(protocol);
+        this.maxRequestAccessDuration = maxRequestAccessDuration;
+        this.number = number;
+        this.protocol = protocol;
     }
 
     /**

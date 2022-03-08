@@ -24,8 +24,8 @@ public final class AzureAppPushReceiverResponse {
     private AzureAppPushReceiverResponse(
         String emailAddress,
         String name) {
-        this.emailAddress = Objects.requireNonNull(emailAddress);
-        this.name = Objects.requireNonNull(name);
+        this.emailAddress = emailAddress;
+        this.name = name;
     }
 
     /**

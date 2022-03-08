@@ -129,24 +129,24 @@ public final class GetFluxConfigurationResult {
         @Nullable Boolean suspend,
         SystemDataResponse systemData,
         String type) {
-        this.complianceState = Objects.requireNonNull(complianceState);
+        this.complianceState = complianceState;
         this.configurationProtectedSettings = configurationProtectedSettings;
-        this.errorMessage = Objects.requireNonNull(errorMessage);
+        this.errorMessage = errorMessage;
         this.gitRepository = gitRepository;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.kustomizations = kustomizations;
-        this.lastSourceSyncedAt = Objects.requireNonNull(lastSourceSyncedAt);
-        this.lastSourceSyncedCommitId = Objects.requireNonNull(lastSourceSyncedCommitId);
-        this.name = Objects.requireNonNull(name);
+        this.lastSourceSyncedAt = lastSourceSyncedAt;
+        this.lastSourceSyncedCommitId = lastSourceSyncedCommitId;
+        this.name = name;
         this.namespace = namespace;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.repositoryPublicKey = Objects.requireNonNull(repositoryPublicKey);
+        this.provisioningState = provisioningState;
+        this.repositoryPublicKey = repositoryPublicKey;
         this.scope = scope;
         this.sourceKind = sourceKind;
-        this.statuses = Objects.requireNonNull(statuses);
+        this.statuses = statuses;
         this.suspend = suspend;
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

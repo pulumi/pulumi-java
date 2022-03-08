@@ -154,23 +154,23 @@ public final class GetExpressRouteCircuitResult {
         this.authorizations = authorizations;
         this.bandwidthInGbps = bandwidthInGbps;
         this.circuitProvisioningState = circuitProvisioningState;
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.expressRoutePort = expressRoutePort;
         this.gatewayManagerEtag = gatewayManagerEtag;
         this.globalReachEnabled = globalReachEnabled;
         this.id = id;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.peerings = peerings;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.serviceKey = serviceKey;
         this.serviceProviderNotes = serviceProviderNotes;
         this.serviceProviderProperties = serviceProviderProperties;
         this.serviceProviderProvisioningState = serviceProviderProvisioningState;
         this.sku = sku;
-        this.stag = Objects.requireNonNull(stag);
+        this.stag = stag;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

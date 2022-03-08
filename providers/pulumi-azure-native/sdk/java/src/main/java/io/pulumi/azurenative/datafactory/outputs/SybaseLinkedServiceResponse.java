@@ -98,14 +98,14 @@ public final class SybaseLinkedServiceResponse {
         this.annotations = annotations;
         this.authenticationType = authenticationType;
         this.connectVia = connectVia;
-        this.database = Objects.requireNonNull(database);
+        this.database = database;
         this.description = description;
         this.encryptedCredential = encryptedCredential;
         this.parameters = parameters;
         this.password = password;
         this.schema = schema;
-        this.server = Objects.requireNonNull(server);
-        this.type = Objects.requireNonNull(type);
+        this.server = server;
+        this.type = type;
         this.username = username;
     }
 

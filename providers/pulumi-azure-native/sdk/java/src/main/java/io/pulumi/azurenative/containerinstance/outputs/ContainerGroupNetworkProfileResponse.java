@@ -17,7 +17,7 @@ public final class ContainerGroupNetworkProfileResponse {
 
     @OutputCustomType.Constructor({"id"})
     private ContainerGroupNetworkProfileResponse(String id) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
     }
 
     /**

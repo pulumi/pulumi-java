@@ -64,7 +64,7 @@ public final class UpdateConfigurationResponse {
         this.duration = duration;
         this.linux = linux;
         this.nonAzureComputerNames = nonAzureComputerNames;
-        this.operatingSystem = Objects.requireNonNull(operatingSystem);
+        this.operatingSystem = operatingSystem;
         this.targets = targets;
         this.windows = windows;
     }

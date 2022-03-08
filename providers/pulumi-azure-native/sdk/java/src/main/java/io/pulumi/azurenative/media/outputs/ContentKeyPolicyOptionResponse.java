@@ -47,10 +47,10 @@ public final class ContentKeyPolicyOptionResponse {
         @Nullable String name,
         String policyOptionId,
         Object restriction) {
-        this.configuration = Objects.requireNonNull(configuration);
+        this.configuration = configuration;
         this.name = name;
-        this.policyOptionId = Objects.requireNonNull(policyOptionId);
-        this.restriction = Objects.requireNonNull(restriction);
+        this.policyOptionId = policyOptionId;
+        this.restriction = restriction;
     }
 
     /**

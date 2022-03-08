@@ -101,19 +101,19 @@ public final class GetPrivateZoneResult {
         @Nullable Map<String,String> tags,
         String type) {
         this.etag = etag;
-        this.id = Objects.requireNonNull(id);
-        this.internalId = Objects.requireNonNull(internalId);
+        this.id = id;
+        this.internalId = internalId;
         this.location = location;
-        this.maxNumberOfRecordSets = Objects.requireNonNull(maxNumberOfRecordSets);
-        this.maxNumberOfVirtualNetworkLinks = Objects.requireNonNull(maxNumberOfVirtualNetworkLinks);
-        this.maxNumberOfVirtualNetworkLinksWithRegistration = Objects.requireNonNull(maxNumberOfVirtualNetworkLinksWithRegistration);
-        this.name = Objects.requireNonNull(name);
-        this.numberOfRecordSets = Objects.requireNonNull(numberOfRecordSets);
-        this.numberOfVirtualNetworkLinks = Objects.requireNonNull(numberOfVirtualNetworkLinks);
-        this.numberOfVirtualNetworkLinksWithRegistration = Objects.requireNonNull(numberOfVirtualNetworkLinksWithRegistration);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.maxNumberOfRecordSets = maxNumberOfRecordSets;
+        this.maxNumberOfVirtualNetworkLinks = maxNumberOfVirtualNetworkLinks;
+        this.maxNumberOfVirtualNetworkLinksWithRegistration = maxNumberOfVirtualNetworkLinksWithRegistration;
+        this.name = name;
+        this.numberOfRecordSets = numberOfRecordSets;
+        this.numberOfVirtualNetworkLinks = numberOfVirtualNetworkLinks;
+        this.numberOfVirtualNetworkLinksWithRegistration = numberOfVirtualNetworkLinksWithRegistration;
+        this.provisioningState = provisioningState;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

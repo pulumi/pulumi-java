@@ -52,12 +52,12 @@ public final class ListIntegrationAccountAgreementContentCallbackUrlResult {
         String relativePath,
         @Nullable List<String> relativePathParameters,
         String value) {
-        this.basePath = Objects.requireNonNull(basePath);
-        this.method = Objects.requireNonNull(method);
+        this.basePath = basePath;
+        this.method = method;
         this.queries = queries;
-        this.relativePath = Objects.requireNonNull(relativePath);
+        this.relativePath = relativePath;
         this.relativePathParameters = relativePathParameters;
-        this.value = Objects.requireNonNull(value);
+        this.value = value;
     }
 
     /**

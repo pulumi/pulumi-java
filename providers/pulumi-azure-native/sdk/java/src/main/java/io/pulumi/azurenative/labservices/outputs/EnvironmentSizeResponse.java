@@ -48,9 +48,9 @@ public final class EnvironmentSizeResponse {
         Integer minNumberOfCores,
         @Nullable String name,
         @Nullable List<SizeInfoResponse> vmSizes) {
-        this.maxPrice = Objects.requireNonNull(maxPrice);
-        this.minMemory = Objects.requireNonNull(minMemory);
-        this.minNumberOfCores = Objects.requireNonNull(minNumberOfCores);
+        this.maxPrice = maxPrice;
+        this.minMemory = minMemory;
+        this.minNumberOfCores = minNumberOfCores;
         this.name = name;
         this.vmSizes = vmSizes;
     }

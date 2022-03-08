@@ -17,7 +17,7 @@ public final class BlobShareResponse {
 
     @OutputCustomType.Constructor({"sasUri"})
     private BlobShareResponse(String sasUri) {
-        this.sasUri = Objects.requireNonNull(sasUri);
+        this.sasUri = sasUri;
     }
 
     /**

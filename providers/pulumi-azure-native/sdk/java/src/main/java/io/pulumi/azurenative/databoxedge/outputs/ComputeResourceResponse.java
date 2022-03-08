@@ -25,8 +25,8 @@ public final class ComputeResourceResponse {
     private ComputeResourceResponse(
         Double memoryInGB,
         Integer processorCount) {
-        this.memoryInGB = Objects.requireNonNull(memoryInGB);
-        this.processorCount = Objects.requireNonNull(processorCount);
+        this.memoryInGB = memoryInGB;
+        this.processorCount = processorCount;
     }
 
     /**

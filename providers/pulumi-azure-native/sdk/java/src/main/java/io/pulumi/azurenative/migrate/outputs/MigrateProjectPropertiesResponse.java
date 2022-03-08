@@ -49,11 +49,11 @@ public final class MigrateProjectPropertiesResponse {
         String refreshSummaryState,
         @Nullable List<String> registeredTools,
         Map<String,Either<DatabaseProjectSummaryResponse,ServersProjectSummaryResponse>> summary) {
-        this.lastSummaryRefreshedTime = Objects.requireNonNull(lastSummaryRefreshedTime);
+        this.lastSummaryRefreshedTime = lastSummaryRefreshedTime;
         this.provisioningState = provisioningState;
-        this.refreshSummaryState = Objects.requireNonNull(refreshSummaryState);
+        this.refreshSummaryState = refreshSummaryState;
         this.registeredTools = registeredTools;
-        this.summary = Objects.requireNonNull(summary);
+        this.summary = summary;
     }
 
     /**

@@ -47,10 +47,10 @@ public final class EventHubPropertiesResponse {
         List<String> partitionIds,
         String path,
         @Nullable Double retentionTimeInDays) {
-        this.endpoint = Objects.requireNonNull(endpoint);
+        this.endpoint = endpoint;
         this.partitionCount = partitionCount;
-        this.partitionIds = Objects.requireNonNull(partitionIds);
-        this.path = Objects.requireNonNull(path);
+        this.partitionIds = partitionIds;
+        this.path = path;
         this.retentionTimeInDays = retentionTimeInDays;
     }
 

@@ -77,8 +77,8 @@ public final class AzureSearchLinkedServiceResponse {
         this.encryptedCredential = encryptedCredential;
         this.key = key;
         this.parameters = parameters;
-        this.type = Objects.requireNonNull(type);
-        this.url = Objects.requireNonNull(url);
+        this.type = type;
+        this.url = url;
     }
 
     /**

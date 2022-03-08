@@ -26,8 +26,8 @@ public final class ListSourceControlRepositoriesResult {
     private ListSourceControlRepositoriesResult(
         String nextLink,
         List<RepoResponse> value) {
-        this.nextLink = Objects.requireNonNull(nextLink);
-        this.value = Objects.requireNonNull(value);
+        this.nextLink = nextLink;
+        this.value = value;
     }
 
     /**

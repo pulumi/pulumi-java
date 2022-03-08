@@ -81,14 +81,14 @@ public final class ValidationActivityResponse {
         String type,
         @Nullable List<UserPropertyResponse> userProperties) {
         this.childItems = childItems;
-        this.dataset = Objects.requireNonNull(dataset);
+        this.dataset = dataset;
         this.dependsOn = dependsOn;
         this.description = description;
         this.minimumSize = minimumSize;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.sleep = sleep;
         this.timeout = timeout;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.userProperties = userProperties;
     }
 

@@ -43,7 +43,7 @@ public final class FrontDoorManagedRuleOverrideResponse {
         this.action = action;
         this.enabledState = enabledState;
         this.exclusions = exclusions;
-        this.ruleId = Objects.requireNonNull(ruleId);
+        this.ruleId = ruleId;
     }
 
     /**

@@ -31,9 +31,9 @@ public final class ManagedClusterPodIdentityExceptionResponse {
         String name,
         String namespace,
         Map<String,String> podLabels) {
-        this.name = Objects.requireNonNull(name);
-        this.namespace = Objects.requireNonNull(namespace);
-        this.podLabels = Objects.requireNonNull(podLabels);
+        this.name = name;
+        this.namespace = namespace;
+        this.podLabels = podLabels;
     }
 
     /**

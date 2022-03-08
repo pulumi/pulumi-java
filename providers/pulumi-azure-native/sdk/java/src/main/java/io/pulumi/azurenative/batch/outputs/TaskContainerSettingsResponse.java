@@ -36,7 +36,7 @@ public final class TaskContainerSettingsResponse {
         @Nullable ContainerRegistryResponse registry,
         @Nullable String workingDirectory) {
         this.containerRunOptions = containerRunOptions;
-        this.imageName = Objects.requireNonNull(imageName);
+        this.imageName = imageName;
         this.registry = registry;
         this.workingDirectory = workingDirectory;
     }

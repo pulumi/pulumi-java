@@ -79,14 +79,14 @@ public final class GetPolicyDefinitionResult {
         String type) {
         this.description = description;
         this.displayName = displayName;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.metadata = metadata;
         this.mode = mode;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.parameters = parameters;
         this.policyRule = policyRule;
         this.policyType = policyType;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

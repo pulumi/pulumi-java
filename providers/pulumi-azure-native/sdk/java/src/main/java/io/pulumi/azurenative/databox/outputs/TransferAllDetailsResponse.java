@@ -33,7 +33,7 @@ public final class TransferAllDetailsResponse {
         String dataAccountType,
         @Nullable Boolean transferAllBlobs,
         @Nullable Boolean transferAllFiles) {
-        this.dataAccountType = Objects.requireNonNull(dataAccountType);
+        this.dataAccountType = dataAccountType;
         this.transferAllBlobs = transferAllBlobs;
         this.transferAllFiles = transferAllFiles;
     }

@@ -36,10 +36,10 @@ public final class GetServerDnsAliasResult {
         String id,
         String name,
         String type) {
-        this.azureDnsRecord = Objects.requireNonNull(azureDnsRecord);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.azureDnsRecord = azureDnsRecord;
+        this.id = id;
+        this.name = name;
+        this.type = type;
     }
 
     /**

@@ -60,8 +60,8 @@ public final class ColumnResponse {
         this.dataTypeHint = dataTypeHint;
         this.description = description;
         this.displayName = displayName;
-        this.isDefaultDisplay = Objects.requireNonNull(isDefaultDisplay);
-        this.isHidden = Objects.requireNonNull(isHidden);
+        this.isDefaultDisplay = isDefaultDisplay;
+        this.isHidden = isHidden;
         this.name = name;
         this.type = type;
     }

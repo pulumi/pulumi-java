@@ -71,15 +71,15 @@ public final class GetManagedNetworkResult {
         @Nullable ScopeResponse scope,
         @Nullable Map<String,String> tags,
         String type) {
-        this.connectivity = Objects.requireNonNull(connectivity);
-        this.etag = Objects.requireNonNull(etag);
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.connectivity = connectivity;
+        this.etag = etag;
+        this.id = id;
+        this.location = location;
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.scope = scope;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

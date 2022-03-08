@@ -90,7 +90,7 @@ public final class AzureTableStorageLinkedServiceResponse {
         this.parameters = parameters;
         this.sasToken = sasToken;
         this.sasUri = sasUri;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

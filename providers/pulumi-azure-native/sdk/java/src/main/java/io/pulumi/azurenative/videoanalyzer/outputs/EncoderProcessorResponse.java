@@ -42,10 +42,10 @@ public final class EncoderProcessorResponse {
         String name,
         Either<EncoderCustomPresetResponse,EncoderSystemPresetResponse> preset,
         String type) {
-        this.inputs = Objects.requireNonNull(inputs);
-        this.name = Objects.requireNonNull(name);
-        this.preset = Objects.requireNonNull(preset);
-        this.type = Objects.requireNonNull(type);
+        this.inputs = inputs;
+        this.name = name;
+        this.preset = preset;
+        this.type = type;
     }
 
     /**

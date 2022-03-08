@@ -17,7 +17,7 @@ public final class MachineLearningWorkspaceResponse {
 
     @OutputCustomType.Constructor({"id"})
     private MachineLearningWorkspaceResponse(String id) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
     }
 
     /**

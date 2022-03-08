@@ -44,7 +44,7 @@ public final class TransferFilterDetailsResponse {
         @Nullable List<FilterFileDetailsResponse> filterFileDetails) {
         this.azureFileFilterDetails = azureFileFilterDetails;
         this.blobFilterDetails = blobFilterDetails;
-        this.dataAccountType = Objects.requireNonNull(dataAccountType);
+        this.dataAccountType = dataAccountType;
         this.filterFileDetails = filterFileDetails;
     }
 

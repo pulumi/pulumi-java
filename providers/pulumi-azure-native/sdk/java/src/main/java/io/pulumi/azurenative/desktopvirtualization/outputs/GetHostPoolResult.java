@@ -203,26 +203,26 @@ public final class GetHostPoolResult {
         String type,
         @Nullable Boolean validationEnvironment,
         @Nullable String vmTemplate) {
-        this.applicationGroupReferences = Objects.requireNonNull(applicationGroupReferences);
-        this.cloudPcResource = Objects.requireNonNull(cloudPcResource);
+        this.applicationGroupReferences = applicationGroupReferences;
+        this.cloudPcResource = cloudPcResource;
         this.customRdpProperty = customRdpProperty;
         this.description = description;
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.friendlyName = friendlyName;
-        this.hostPoolType = Objects.requireNonNull(hostPoolType);
-        this.id = Objects.requireNonNull(id);
+        this.hostPoolType = hostPoolType;
+        this.id = id;
         this.identity = identity;
         this.kind = kind;
-        this.loadBalancerType = Objects.requireNonNull(loadBalancerType);
+        this.loadBalancerType = loadBalancerType;
         this.location = location;
         this.managedBy = managedBy;
         this.maxSessionLimit = maxSessionLimit;
         this.migrationRequest = migrationRequest;
-        this.name = Objects.requireNonNull(name);
-        this.objectId = Objects.requireNonNull(objectId);
+        this.name = name;
+        this.objectId = objectId;
         this.personalDesktopAssignmentType = personalDesktopAssignmentType;
         this.plan = plan;
-        this.preferredAppGroupType = Objects.requireNonNull(preferredAppGroupType);
+        this.preferredAppGroupType = preferredAppGroupType;
         this.registrationInfo = registrationInfo;
         this.ring = ring;
         this.sku = sku;
@@ -232,7 +232,7 @@ public final class GetHostPoolResult {
         this.ssoadfsAuthority = ssoadfsAuthority;
         this.startVMOnConnect = startVMOnConnect;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.validationEnvironment = validationEnvironment;
         this.vmTemplate = vmTemplate;
     }

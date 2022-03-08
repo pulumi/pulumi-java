@@ -47,11 +47,11 @@ public final class OrderStatusResponse {
         String status,
         TrackingInfoResponse trackingInformation,
         String updateDateTime) {
-        this.additionalOrderDetails = Objects.requireNonNull(additionalOrderDetails);
+        this.additionalOrderDetails = additionalOrderDetails;
         this.comments = comments;
-        this.status = Objects.requireNonNull(status);
-        this.trackingInformation = Objects.requireNonNull(trackingInformation);
-        this.updateDateTime = Objects.requireNonNull(updateDateTime);
+        this.status = status;
+        this.trackingInformation = trackingInformation;
+        this.updateDateTime = updateDateTime;
     }
 
     /**

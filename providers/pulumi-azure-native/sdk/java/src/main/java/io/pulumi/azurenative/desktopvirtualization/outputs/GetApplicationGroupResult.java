@@ -122,25 +122,25 @@ public final class GetApplicationGroupResult {
         @Nullable Map<String,String> tags,
         String type,
         String workspaceArmPath) {
-        this.applicationGroupType = Objects.requireNonNull(applicationGroupType);
-        this.cloudPcResource = Objects.requireNonNull(cloudPcResource);
+        this.applicationGroupType = applicationGroupType;
+        this.cloudPcResource = cloudPcResource;
         this.description = description;
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.friendlyName = friendlyName;
-        this.hostPoolArmPath = Objects.requireNonNull(hostPoolArmPath);
-        this.id = Objects.requireNonNull(id);
+        this.hostPoolArmPath = hostPoolArmPath;
+        this.id = id;
         this.identity = identity;
         this.kind = kind;
         this.location = location;
         this.managedBy = managedBy;
         this.migrationRequest = migrationRequest;
-        this.name = Objects.requireNonNull(name);
-        this.objectId = Objects.requireNonNull(objectId);
+        this.name = name;
+        this.objectId = objectId;
         this.plan = plan;
         this.sku = sku;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
-        this.workspaceArmPath = Objects.requireNonNull(workspaceArmPath);
+        this.type = type;
+        this.workspaceArmPath = workspaceArmPath;
     }
 
     /**

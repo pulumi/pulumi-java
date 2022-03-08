@@ -35,10 +35,10 @@ public final class UrlRewriteActionParametersResponse {
         String odataType,
         @Nullable Boolean preserveUnmatchedPath,
         String sourcePattern) {
-        this.destination = Objects.requireNonNull(destination);
-        this.odataType = Objects.requireNonNull(odataType);
+        this.destination = destination;
+        this.odataType = odataType;
         this.preserveUnmatchedPath = preserveUnmatchedPath;
-        this.sourcePattern = Objects.requireNonNull(sourcePattern);
+        this.sourcePattern = sourcePattern;
     }
 
     /**

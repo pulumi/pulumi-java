@@ -48,7 +48,7 @@ public final class AutoScaleSettingsResponse {
         this.maxInstances = maxInstances;
         this.minInstances = minInstances;
         this.pollingInterval = pollingInterval;
-        this.scaleType = Objects.requireNonNull(scaleType);
+        this.scaleType = scaleType;
         this.targetUtilizationPercentage = targetUtilizationPercentage;
     }
 

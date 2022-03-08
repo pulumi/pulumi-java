@@ -101,7 +101,7 @@ public final class AzureDataLakeAnalyticsLinkedServiceResponse {
         @Nullable Object subscriptionId,
         Object tenant,
         String type) {
-        this.accountName = Objects.requireNonNull(accountName);
+        this.accountName = accountName;
         this.annotations = annotations;
         this.connectVia = connectVia;
         this.dataLakeAnalyticsUri = dataLakeAnalyticsUri;
@@ -112,8 +112,8 @@ public final class AzureDataLakeAnalyticsLinkedServiceResponse {
         this.servicePrincipalId = servicePrincipalId;
         this.servicePrincipalKey = servicePrincipalKey;
         this.subscriptionId = subscriptionId;
-        this.tenant = Objects.requireNonNull(tenant);
-        this.type = Objects.requireNonNull(type);
+        this.tenant = tenant;
+        this.type = type;
     }
 
     /**

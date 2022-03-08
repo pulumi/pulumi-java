@@ -89,9 +89,9 @@ public final class GetWebAppHybridConnectionResult {
         @Nullable String serviceBusSuffix,
         String type) {
         this.hostname = hostname;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.kind = kind;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.port = port;
         this.relayArmUri = relayArmUri;
         this.relayName = relayName;
@@ -99,7 +99,7 @@ public final class GetWebAppHybridConnectionResult {
         this.sendKeyValue = sendKeyValue;
         this.serviceBusNamespace = serviceBusNamespace;
         this.serviceBusSuffix = serviceBusSuffix;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

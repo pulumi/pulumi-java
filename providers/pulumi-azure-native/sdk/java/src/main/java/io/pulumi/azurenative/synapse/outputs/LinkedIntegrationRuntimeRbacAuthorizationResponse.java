@@ -25,8 +25,8 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationResponse {
     private LinkedIntegrationRuntimeRbacAuthorizationResponse(
         String authorizationType,
         String resourceId) {
-        this.authorizationType = Objects.requireNonNull(authorizationType);
-        this.resourceId = Objects.requireNonNull(resourceId);
+        this.authorizationType = authorizationType;
+        this.resourceId = resourceId;
     }
 
     /**

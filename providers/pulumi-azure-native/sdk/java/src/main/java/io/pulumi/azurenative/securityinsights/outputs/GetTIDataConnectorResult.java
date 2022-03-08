@@ -66,12 +66,12 @@ public final class GetTIDataConnectorResult {
         String type) {
         this.dataTypes = dataTypes;
         this.etag = etag;
-        this.id = Objects.requireNonNull(id);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.kind = kind;
+        this.name = name;
         this.tenantId = tenantId;
         this.tipLookbackPeriod = tipLookbackPeriod;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

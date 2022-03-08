@@ -50,8 +50,8 @@ public final class ManagedIntegrationRuntimeResponse {
         this.computeProperties = computeProperties;
         this.description = description;
         this.ssisProperties = ssisProperties;
-        this.state = Objects.requireNonNull(state);
-        this.type = Objects.requireNonNull(type);
+        this.state = state;
+        this.type = type;
     }
 
     /**

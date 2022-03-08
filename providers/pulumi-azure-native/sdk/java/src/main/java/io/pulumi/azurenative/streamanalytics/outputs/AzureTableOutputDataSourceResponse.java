@@ -72,7 +72,7 @@ public final class AzureTableOutputDataSourceResponse {
         this.partitionKey = partitionKey;
         this.rowKey = rowKey;
         this.table = table;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

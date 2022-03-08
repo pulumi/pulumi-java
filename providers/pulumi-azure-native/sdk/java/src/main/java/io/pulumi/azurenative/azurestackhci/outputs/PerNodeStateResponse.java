@@ -30,9 +30,9 @@ public final class PerNodeStateResponse {
         String arcInstance,
         String name,
         String state) {
-        this.arcInstance = Objects.requireNonNull(arcInstance);
-        this.name = Objects.requireNonNull(name);
-        this.state = Objects.requireNonNull(state);
+        this.arcInstance = arcInstance;
+        this.name = name;
+        this.state = state;
     }
 
     /**

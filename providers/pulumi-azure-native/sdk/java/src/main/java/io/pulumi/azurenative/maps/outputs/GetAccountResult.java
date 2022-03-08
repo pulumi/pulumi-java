@@ -57,13 +57,13 @@ public final class GetAccountResult {
         SkuResponse sku,
         Map<String,String> tags,
         String type) {
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.properties = Objects.requireNonNull(properties);
-        this.sku = Objects.requireNonNull(sku);
-        this.tags = Objects.requireNonNull(tags);
-        this.type = Objects.requireNonNull(type);
+        this.id = id;
+        this.location = location;
+        this.name = name;
+        this.properties = properties;
+        this.sku = sku;
+        this.tags = tags;
+        this.type = type;
     }
 
     /**

@@ -96,19 +96,19 @@ public final class InboundNatRuleResponse {
         @Nullable String protocol,
         String provisioningState,
         String type) {
-        this.backendIPConfiguration = Objects.requireNonNull(backendIPConfiguration);
+        this.backendIPConfiguration = backendIPConfiguration;
         this.backendPort = backendPort;
         this.enableFloatingIP = enableFloatingIP;
         this.enableTcpReset = enableTcpReset;
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.frontendIPConfiguration = frontendIPConfiguration;
         this.frontendPort = frontendPort;
         this.id = id;
         this.idleTimeoutInMinutes = idleTimeoutInMinutes;
         this.name = name;
         this.protocol = protocol;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.type = Objects.requireNonNull(type);
+        this.provisioningState = provisioningState;
+        this.type = type;
     }
 
     /**

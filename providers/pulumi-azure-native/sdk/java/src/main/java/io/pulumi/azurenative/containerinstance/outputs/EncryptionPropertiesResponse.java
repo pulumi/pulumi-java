@@ -30,9 +30,9 @@ public final class EncryptionPropertiesResponse {
         String keyName,
         String keyVersion,
         String vaultBaseUrl) {
-        this.keyName = Objects.requireNonNull(keyName);
-        this.keyVersion = Objects.requireNonNull(keyVersion);
-        this.vaultBaseUrl = Objects.requireNonNull(vaultBaseUrl);
+        this.keyName = keyName;
+        this.keyVersion = keyVersion;
+        this.vaultBaseUrl = vaultBaseUrl;
     }
 
     /**

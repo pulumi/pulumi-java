@@ -32,8 +32,8 @@ public final class TimeWindowResponse {
         String end,
         String start,
         @Nullable String timeZone) {
-        this.end = Objects.requireNonNull(end);
-        this.start = Objects.requireNonNull(start);
+        this.end = end;
+        this.start = start;
         this.timeZone = timeZone;
     }
 

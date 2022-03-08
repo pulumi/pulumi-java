@@ -68,15 +68,15 @@ public final class GetEventHubConnectionResult {
         String name,
         @Nullable String tableName,
         String type) {
-        this.consumerGroup = Objects.requireNonNull(consumerGroup);
+        this.consumerGroup = consumerGroup;
         this.dataFormat = dataFormat;
-        this.eventHubResourceId = Objects.requireNonNull(eventHubResourceId);
-        this.id = Objects.requireNonNull(id);
+        this.eventHubResourceId = eventHubResourceId;
+        this.id = id;
         this.location = location;
         this.mappingRuleName = mappingRuleName;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.tableName = tableName;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

@@ -35,7 +35,7 @@ public final class StringContainsAdvancedFilterResponse {
         String operatorType,
         @Nullable List<String> values) {
         this.key = key;
-        this.operatorType = Objects.requireNonNull(operatorType);
+        this.operatorType = operatorType;
         this.values = values;
     }
 

@@ -48,12 +48,12 @@ public final class VirtualMachineDetailsResponse {
         String rdpAuthority,
         String sshAuthority,
         String userName) {
-        this.lastKnownPowerState = Objects.requireNonNull(lastKnownPowerState);
-        this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.rdpAuthority = Objects.requireNonNull(rdpAuthority);
-        this.sshAuthority = Objects.requireNonNull(sshAuthority);
-        this.userName = Objects.requireNonNull(userName);
+        this.lastKnownPowerState = lastKnownPowerState;
+        this.privateIpAddress = privateIpAddress;
+        this.provisioningState = provisioningState;
+        this.rdpAuthority = rdpAuthority;
+        this.sshAuthority = sshAuthority;
+        this.userName = userName;
     }
 
     /**

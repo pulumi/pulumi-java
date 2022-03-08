@@ -24,8 +24,8 @@ public final class ExportTimePeriodResponse {
     private ExportTimePeriodResponse(
         String from,
         String to) {
-        this.from = Objects.requireNonNull(from);
-        this.to = Objects.requireNonNull(to);
+        this.from = from;
+        this.to = to;
     }
 
     /**

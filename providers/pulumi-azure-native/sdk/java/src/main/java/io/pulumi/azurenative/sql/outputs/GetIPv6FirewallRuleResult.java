@@ -45,10 +45,10 @@ public final class GetIPv6FirewallRuleResult {
         @Nullable String startIPv6Address,
         String type) {
         this.endIPv6Address = endIPv6Address;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.name = name;
         this.startIPv6Address = startIPv6Address;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

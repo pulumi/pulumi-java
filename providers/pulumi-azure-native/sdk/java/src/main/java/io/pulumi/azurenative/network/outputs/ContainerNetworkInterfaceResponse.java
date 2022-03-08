@@ -67,13 +67,13 @@ public final class ContainerNetworkInterfaceResponse {
         String provisioningState,
         String type) {
         this.container = container;
-        this.containerNetworkInterfaceConfiguration = Objects.requireNonNull(containerNetworkInterfaceConfiguration);
-        this.etag = Objects.requireNonNull(etag);
+        this.containerNetworkInterfaceConfiguration = containerNetworkInterfaceConfiguration;
+        this.etag = etag;
         this.id = id;
-        this.ipConfigurations = Objects.requireNonNull(ipConfigurations);
+        this.ipConfigurations = ipConfigurations;
         this.name = name;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.type = Objects.requireNonNull(type);
+        this.provisioningState = provisioningState;
+        this.type = type;
     }
 
     /**

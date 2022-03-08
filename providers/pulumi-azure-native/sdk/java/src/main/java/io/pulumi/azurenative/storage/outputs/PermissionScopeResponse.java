@@ -30,9 +30,9 @@ public final class PermissionScopeResponse {
         String permissions,
         String resourceName,
         String service) {
-        this.permissions = Objects.requireNonNull(permissions);
-        this.resourceName = Objects.requireNonNull(resourceName);
-        this.service = Objects.requireNonNull(service);
+        this.permissions = permissions;
+        this.resourceName = resourceName;
+        this.service = service;
     }
 
     /**

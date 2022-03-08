@@ -18,7 +18,7 @@ public final class ListIngestionSettingConnectionStringsResult {
 
     @OutputCustomType.Constructor({"value"})
     private ListIngestionSettingConnectionStringsResult(List<IngestionConnectionStringResponse> value) {
-        this.value = Objects.requireNonNull(value);
+        this.value = value;
     }
 
     /**

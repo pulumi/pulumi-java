@@ -25,8 +25,8 @@ public final class ServerPrivateEndpointConnectionResponse {
     private ServerPrivateEndpointConnectionResponse(
         String id,
         PrivateEndpointConnectionPropertiesResponse properties) {
-        this.id = Objects.requireNonNull(id);
-        this.properties = Objects.requireNonNull(properties);
+        this.id = id;
+        this.properties = properties;
     }
 
     /**

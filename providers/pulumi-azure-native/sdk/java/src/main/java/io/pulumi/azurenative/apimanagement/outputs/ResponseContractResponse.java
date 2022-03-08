@@ -45,7 +45,7 @@ public final class ResponseContractResponse {
         this.description = description;
         this.headers = headers;
         this.representations = representations;
-        this.statusCode = Objects.requireNonNull(statusCode);
+        this.statusCode = statusCode;
     }
 
     /**

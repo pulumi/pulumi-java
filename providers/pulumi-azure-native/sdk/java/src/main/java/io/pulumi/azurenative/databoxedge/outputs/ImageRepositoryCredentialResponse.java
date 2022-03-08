@@ -33,9 +33,9 @@ public final class ImageRepositoryCredentialResponse {
         String imageRepositoryUrl,
         @Nullable AsymmetricEncryptedSecretResponse password,
         String userName) {
-        this.imageRepositoryUrl = Objects.requireNonNull(imageRepositoryUrl);
+        this.imageRepositoryUrl = imageRepositoryUrl;
         this.password = password;
-        this.userName = Objects.requireNonNull(userName);
+        this.userName = userName;
     }
 
     /**

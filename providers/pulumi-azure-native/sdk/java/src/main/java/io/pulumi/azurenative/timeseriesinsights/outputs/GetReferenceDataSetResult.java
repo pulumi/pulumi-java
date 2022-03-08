@@ -71,15 +71,15 @@ public final class GetReferenceDataSetResult {
         String provisioningState,
         @Nullable Map<String,String> tags,
         String type) {
-        this.creationTime = Objects.requireNonNull(creationTime);
+        this.creationTime = creationTime;
         this.dataStringComparisonBehavior = dataStringComparisonBehavior;
-        this.id = Objects.requireNonNull(id);
-        this.keyProperties = Objects.requireNonNull(keyProperties);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.id = id;
+        this.keyProperties = keyProperties;
+        this.location = location;
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

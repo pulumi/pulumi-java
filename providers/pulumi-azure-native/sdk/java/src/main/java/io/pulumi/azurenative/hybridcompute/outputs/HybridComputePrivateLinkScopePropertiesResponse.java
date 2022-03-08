@@ -32,8 +32,8 @@ public final class HybridComputePrivateLinkScopePropertiesResponse {
         String privateLinkScopeId,
         String provisioningState,
         @Nullable String publicNetworkAccess) {
-        this.privateLinkScopeId = Objects.requireNonNull(privateLinkScopeId);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.privateLinkScopeId = privateLinkScopeId;
+        this.provisioningState = provisioningState;
         this.publicNetworkAccess = publicNetworkAccess;
     }
 

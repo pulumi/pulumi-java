@@ -118,13 +118,13 @@ public final class VaultPropertiesResponse {
         this.enabledForDeployment = enabledForDeployment;
         this.enabledForDiskEncryption = enabledForDiskEncryption;
         this.enabledForTemplateDeployment = enabledForTemplateDeployment;
-        this.hsmPoolResourceId = Objects.requireNonNull(hsmPoolResourceId);
+        this.hsmPoolResourceId = hsmPoolResourceId;
         this.networkAcls = networkAcls;
-        this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
+        this.privateEndpointConnections = privateEndpointConnections;
         this.provisioningState = provisioningState;
-        this.sku = Objects.requireNonNull(sku);
+        this.sku = sku;
         this.softDeleteRetentionInDays = softDeleteRetentionInDays;
-        this.tenantId = Objects.requireNonNull(tenantId);
+        this.tenantId = tenantId;
         this.vaultUri = vaultUri;
     }
 

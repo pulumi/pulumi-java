@@ -38,10 +38,10 @@ public final class TargetCostAllocationResourceResponse {
         String policyType,
         String resourceType,
         List<CostAllocationProportionResponse> values) {
-        this.name = Objects.requireNonNull(name);
-        this.policyType = Objects.requireNonNull(policyType);
-        this.resourceType = Objects.requireNonNull(resourceType);
-        this.values = Objects.requireNonNull(values);
+        this.name = name;
+        this.policyType = policyType;
+        this.resourceType = resourceType;
+        this.values = values;
     }
 
     /**

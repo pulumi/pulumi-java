@@ -25,8 +25,8 @@ public final class KeyVaultKeyReferenceResponse {
     private KeyVaultKeyReferenceResponse(
         String keyUrl,
         KeyVaultKeyReferenceResponseSourceVault sourceVault) {
-        this.keyUrl = Objects.requireNonNull(keyUrl);
-        this.sourceVault = Objects.requireNonNull(sourceVault);
+        this.keyUrl = keyUrl;
+        this.sourceVault = sourceVault;
     }
 
     /**

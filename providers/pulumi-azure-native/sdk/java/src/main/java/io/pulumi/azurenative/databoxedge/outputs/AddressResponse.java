@@ -60,7 +60,7 @@ public final class AddressResponse {
         this.addressLine2 = addressLine2;
         this.addressLine3 = addressLine3;
         this.city = city;
-        this.country = Objects.requireNonNull(country);
+        this.country = country;
         this.postalCode = postalCode;
         this.state = state;
     }

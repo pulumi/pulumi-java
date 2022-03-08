@@ -50,7 +50,7 @@ public final class AvroWriteSettingsResponse {
         this.maxRowsPerFile = maxRowsPerFile;
         this.recordName = recordName;
         this.recordNamespace = recordNamespace;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

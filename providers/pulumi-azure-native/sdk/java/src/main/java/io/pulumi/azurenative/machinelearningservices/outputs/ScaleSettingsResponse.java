@@ -33,7 +33,7 @@ public final class ScaleSettingsResponse {
         Integer maxNodeCount,
         @Nullable Integer minNodeCount,
         @Nullable String nodeIdleTimeBeforeScaleDown) {
-        this.maxNodeCount = Objects.requireNonNull(maxNodeCount);
+        this.maxNodeCount = maxNodeCount;
         this.minNodeCount = minNodeCount;
         this.nodeIdleTimeBeforeScaleDown = nodeIdleTimeBeforeScaleDown;
     }

@@ -24,8 +24,8 @@ public final class ContainerGroupIdentityResponseUserAssignedIdentities {
     private ContainerGroupIdentityResponseUserAssignedIdentities(
         String clientId,
         String principalId) {
-        this.clientId = Objects.requireNonNull(clientId);
-        this.principalId = Objects.requireNonNull(principalId);
+        this.clientId = clientId;
+        this.principalId = principalId;
     }
 
     /**

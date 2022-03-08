@@ -142,23 +142,23 @@ public final class ActiveDefaultSecurityUserRuleResponse {
         this.commitTime = commitTime;
         this.configurationDescription = configurationDescription;
         this.configurationDisplayName = configurationDisplayName;
-        this.description = Objects.requireNonNull(description);
-        this.destinationPortRanges = Objects.requireNonNull(destinationPortRanges);
-        this.destinations = Objects.requireNonNull(destinations);
-        this.direction = Objects.requireNonNull(direction);
-        this.displayName = Objects.requireNonNull(displayName);
+        this.description = description;
+        this.destinationPortRanges = destinationPortRanges;
+        this.destinations = destinations;
+        this.direction = direction;
+        this.displayName = displayName;
         this.flag = flag;
         this.id = id;
-        this.kind = Objects.requireNonNull(kind);
-        this.protocol = Objects.requireNonNull(protocol);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.kind = kind;
+        this.protocol = protocol;
+        this.provisioningState = provisioningState;
         this.region = region;
         this.ruleCollectionAppliesToGroups = ruleCollectionAppliesToGroups;
         this.ruleCollectionDescription = ruleCollectionDescription;
         this.ruleCollectionDisplayName = ruleCollectionDisplayName;
         this.ruleGroups = ruleGroups;
-        this.sourcePortRanges = Objects.requireNonNull(sourcePortRanges);
-        this.sources = Objects.requireNonNull(sources);
+        this.sourcePortRanges = sourcePortRanges;
+        this.sources = sources;
     }
 
     /**

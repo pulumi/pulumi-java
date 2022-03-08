@@ -92,7 +92,7 @@ public final class HyperVReplicaBluePolicyDetailsResponse {
         this.applicationConsistentSnapshotFrequencyInHours = applicationConsistentSnapshotFrequencyInHours;
         this.compression = compression;
         this.initialReplicationMethod = initialReplicationMethod;
-        this.instanceType = Objects.requireNonNull(instanceType);
+        this.instanceType = instanceType;
         this.offlineReplicationExportPath = offlineReplicationExportPath;
         this.offlineReplicationImportPath = offlineReplicationImportPath;
         this.onlineReplicationStartTime = onlineReplicationStartTime;

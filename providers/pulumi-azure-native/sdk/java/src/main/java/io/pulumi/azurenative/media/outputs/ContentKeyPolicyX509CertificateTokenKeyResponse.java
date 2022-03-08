@@ -25,8 +25,8 @@ public final class ContentKeyPolicyX509CertificateTokenKeyResponse {
     private ContentKeyPolicyX509CertificateTokenKeyResponse(
         String odataType,
         String rawBody) {
-        this.odataType = Objects.requireNonNull(odataType);
-        this.rawBody = Objects.requireNonNull(rawBody);
+        this.odataType = odataType;
+        this.rawBody = rawBody;
     }
 
     /**

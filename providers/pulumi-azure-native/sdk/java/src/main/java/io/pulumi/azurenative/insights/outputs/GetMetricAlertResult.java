@@ -133,22 +133,22 @@ public final class GetMetricAlertResult {
         String windowSize) {
         this.actions = actions;
         this.autoMitigate = autoMitigate;
-        this.criteria = Objects.requireNonNull(criteria);
+        this.criteria = criteria;
         this.description = description;
-        this.enabled = Objects.requireNonNull(enabled);
-        this.evaluationFrequency = Objects.requireNonNull(evaluationFrequency);
-        this.id = Objects.requireNonNull(id);
-        this.isMigrated = Objects.requireNonNull(isMigrated);
-        this.lastUpdatedTime = Objects.requireNonNull(lastUpdatedTime);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.scopes = Objects.requireNonNull(scopes);
-        this.severity = Objects.requireNonNull(severity);
+        this.enabled = enabled;
+        this.evaluationFrequency = evaluationFrequency;
+        this.id = id;
+        this.isMigrated = isMigrated;
+        this.lastUpdatedTime = lastUpdatedTime;
+        this.location = location;
+        this.name = name;
+        this.scopes = scopes;
+        this.severity = severity;
         this.tags = tags;
         this.targetResourceRegion = targetResourceRegion;
         this.targetResourceType = targetResourceType;
-        this.type = Objects.requireNonNull(type);
-        this.windowSize = Objects.requireNonNull(windowSize);
+        this.type = type;
+        this.windowSize = windowSize;
     }
 
     /**

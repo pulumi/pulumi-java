@@ -31,7 +31,7 @@ public final class ContainerConfigurationResponse {
         String type) {
         this.containerImageNames = containerImageNames;
         this.containerRegistries = containerRegistries;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

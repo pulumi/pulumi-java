@@ -40,7 +40,7 @@ public final class DatadogApiKeyResponse {
         @Nullable String name) {
         this.created = created;
         this.createdBy = createdBy;
-        this.key = Objects.requireNonNull(key);
+        this.key = key;
         this.name = name;
     }
 

@@ -25,8 +25,8 @@ public final class WorkspaceCustomObjectParameterResponse {
     private WorkspaceCustomObjectParameterResponse(
         String type,
         Object value) {
-        this.type = Objects.requireNonNull(type);
-        this.value = Objects.requireNonNull(value);
+        this.type = type;
+        this.value = value;
     }
 
     /**

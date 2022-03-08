@@ -81,13 +81,13 @@ public final class GetPolicyAssignmentArtifactResult {
         this.dependsOn = dependsOn;
         this.description = description;
         this.displayName = displayName;
-        this.id = Objects.requireNonNull(id);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.parameters = Objects.requireNonNull(parameters);
-        this.policyDefinitionId = Objects.requireNonNull(policyDefinitionId);
+        this.id = id;
+        this.kind = kind;
+        this.name = name;
+        this.parameters = parameters;
+        this.policyDefinitionId = policyDefinitionId;
         this.resourceGroup = resourceGroup;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

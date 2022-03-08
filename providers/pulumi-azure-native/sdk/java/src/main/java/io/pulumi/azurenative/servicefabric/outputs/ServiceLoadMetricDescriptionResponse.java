@@ -46,7 +46,7 @@ public final class ServiceLoadMetricDescriptionResponse {
         @Nullable Integer secondaryDefaultLoad,
         @Nullable String weight) {
         this.defaultLoad = defaultLoad;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.primaryDefaultLoad = primaryDefaultLoad;
         this.secondaryDefaultLoad = secondaryDefaultLoad;
         this.weight = weight;

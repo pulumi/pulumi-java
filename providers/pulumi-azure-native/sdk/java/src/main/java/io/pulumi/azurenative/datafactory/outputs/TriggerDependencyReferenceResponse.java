@@ -26,8 +26,8 @@ public final class TriggerDependencyReferenceResponse {
     private TriggerDependencyReferenceResponse(
         TriggerReferenceResponse referenceTrigger,
         String type) {
-        this.referenceTrigger = Objects.requireNonNull(referenceTrigger);
-        this.type = Objects.requireNonNull(type);
+        this.referenceTrigger = referenceTrigger;
+        this.type = type;
     }
 
     /**

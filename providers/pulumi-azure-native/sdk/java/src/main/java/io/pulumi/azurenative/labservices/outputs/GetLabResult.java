@@ -113,22 +113,22 @@ public final class GetLabResult {
         @Nullable String usageQuota,
         @Nullable String userAccessMode,
         Integer userQuota) {
-        this.createdByObjectId = Objects.requireNonNull(createdByObjectId);
-        this.createdByUserPrincipalName = Objects.requireNonNull(createdByUserPrincipalName);
-        this.createdDate = Objects.requireNonNull(createdDate);
-        this.id = Objects.requireNonNull(id);
-        this.invitationCode = Objects.requireNonNull(invitationCode);
-        this.latestOperationResult = Objects.requireNonNull(latestOperationResult);
+        this.createdByObjectId = createdByObjectId;
+        this.createdByUserPrincipalName = createdByUserPrincipalName;
+        this.createdDate = createdDate;
+        this.id = id;
+        this.invitationCode = invitationCode;
+        this.latestOperationResult = latestOperationResult;
         this.location = location;
         this.maxUsersInLab = maxUsersInLab;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.provisioningState = provisioningState;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.uniqueIdentifier = uniqueIdentifier;
         this.usageQuota = usageQuota;
         this.userAccessMode = userAccessMode;
-        this.userQuota = Objects.requireNonNull(userQuota);
+        this.userQuota = userQuota;
     }
 
     /**

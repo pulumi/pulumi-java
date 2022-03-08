@@ -61,12 +61,12 @@ public final class FilterActivityResponse {
         String name,
         String type,
         @Nullable List<UserPropertyResponse> userProperties) {
-        this.condition = Objects.requireNonNull(condition);
+        this.condition = condition;
         this.dependsOn = dependsOn;
         this.description = description;
-        this.items = Objects.requireNonNull(items);
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.items = items;
+        this.name = name;
+        this.type = type;
         this.userProperties = userProperties;
     }
 

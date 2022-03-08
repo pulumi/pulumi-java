@@ -39,10 +39,10 @@ public final class ScriptActionResponse {
         @Nullable String parameters,
         Object roles,
         String uri) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.parameters = parameters;
-        this.roles = Objects.requireNonNull(roles);
-        this.uri = Objects.requireNonNull(uri);
+        this.roles = roles;
+        this.uri = uri;
     }
 
     /**

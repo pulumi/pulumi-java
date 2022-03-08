@@ -29,8 +29,8 @@ public final class NFSMountConfigurationResponse {
         String relativeMountPath,
         String source) {
         this.mountOptions = mountOptions;
-        this.relativeMountPath = Objects.requireNonNull(relativeMountPath);
-        this.source = Objects.requireNonNull(source);
+        this.relativeMountPath = relativeMountPath;
+        this.source = source;
     }
 
     /**

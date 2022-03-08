@@ -27,7 +27,7 @@ public final class KeyForDiskEncryptionSetResponse {
     private KeyForDiskEncryptionSetResponse(
         String keyUrl,
         @Nullable SourceVaultResponse sourceVault) {
-        this.keyUrl = Objects.requireNonNull(keyUrl);
+        this.keyUrl = keyUrl;
         this.sourceVault = sourceVault;
     }
 

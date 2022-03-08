@@ -86,14 +86,14 @@ public final class GetNetworkGroupResult {
         this.conditionalMembership = conditionalMembership;
         this.description = description;
         this.displayName = displayName;
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.groupMembers = groupMembers;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.memberType = memberType;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

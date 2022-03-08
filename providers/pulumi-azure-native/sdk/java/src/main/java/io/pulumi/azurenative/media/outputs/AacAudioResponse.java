@@ -55,7 +55,7 @@ public final class AacAudioResponse {
         this.bitrate = bitrate;
         this.channels = channels;
         this.label = label;
-        this.odataType = Objects.requireNonNull(odataType);
+        this.odataType = odataType;
         this.profile = profile;
         this.samplingRate = samplingRate;
     }

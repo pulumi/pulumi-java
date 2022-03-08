@@ -85,14 +85,14 @@ public final class GetServiceResult {
         this.adminDomainName = adminDomainName;
         this.billingDomainName = billingDomainName;
         this.etag = etag;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.notes = notes;
         this.quantity = quantity;
-        this.startDate = Objects.requireNonNull(startDate);
+        this.startDate = startDate;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

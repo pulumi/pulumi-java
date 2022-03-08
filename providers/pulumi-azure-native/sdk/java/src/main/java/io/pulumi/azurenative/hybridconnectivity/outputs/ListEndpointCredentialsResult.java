@@ -45,11 +45,11 @@ public final class ListEndpointCredentialsResult {
         String hybridConnectionName,
         String namespaceName,
         String namespaceNameSuffix) {
-        this.accessKey = Objects.requireNonNull(accessKey);
+        this.accessKey = accessKey;
         this.expiresOn = expiresOn;
-        this.hybridConnectionName = Objects.requireNonNull(hybridConnectionName);
-        this.namespaceName = Objects.requireNonNull(namespaceName);
-        this.namespaceNameSuffix = Objects.requireNonNull(namespaceNameSuffix);
+        this.hybridConnectionName = hybridConnectionName;
+        this.namespaceName = namespaceName;
+        this.namespaceNameSuffix = namespaceNameSuffix;
     }
 
     /**

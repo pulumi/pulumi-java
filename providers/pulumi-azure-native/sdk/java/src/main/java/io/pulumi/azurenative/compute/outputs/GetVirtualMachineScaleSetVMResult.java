@@ -197,29 +197,29 @@ public final class GetVirtualMachineScaleSetVMResult {
         this.availabilitySet = availabilitySet;
         this.diagnosticsProfile = diagnosticsProfile;
         this.hardwareProfile = hardwareProfile;
-        this.id = Objects.requireNonNull(id);
-        this.instanceId = Objects.requireNonNull(instanceId);
-        this.instanceView = Objects.requireNonNull(instanceView);
-        this.latestModelApplied = Objects.requireNonNull(latestModelApplied);
+        this.id = id;
+        this.instanceId = instanceId;
+        this.instanceView = instanceView;
+        this.latestModelApplied = latestModelApplied;
         this.licenseType = licenseType;
-        this.location = Objects.requireNonNull(location);
-        this.modelDefinitionApplied = Objects.requireNonNull(modelDefinitionApplied);
-        this.name = Objects.requireNonNull(name);
+        this.location = location;
+        this.modelDefinitionApplied = modelDefinitionApplied;
+        this.name = name;
         this.networkProfile = networkProfile;
         this.networkProfileConfiguration = networkProfileConfiguration;
         this.osProfile = osProfile;
         this.plan = plan;
         this.protectionPolicy = protectionPolicy;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.resources = Objects.requireNonNull(resources);
+        this.provisioningState = provisioningState;
+        this.resources = resources;
         this.securityProfile = securityProfile;
-        this.sku = Objects.requireNonNull(sku);
+        this.sku = sku;
         this.storageProfile = storageProfile;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.userData = userData;
-        this.vmId = Objects.requireNonNull(vmId);
-        this.zones = Objects.requireNonNull(zones);
+        this.vmId = vmId;
+        this.zones = zones;
     }
 
     /**

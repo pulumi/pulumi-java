@@ -50,12 +50,12 @@ public final class ReplicationAgentDetailsResponse {
         String lastHeartbeatUtc,
         String name,
         String version) {
-        this.health = Objects.requireNonNull(health);
-        this.healthErrors = Objects.requireNonNull(healthErrors);
-        this.id = Objects.requireNonNull(id);
-        this.lastHeartbeatUtc = Objects.requireNonNull(lastHeartbeatUtc);
-        this.name = Objects.requireNonNull(name);
-        this.version = Objects.requireNonNull(version);
+        this.health = health;
+        this.healthErrors = healthErrors;
+        this.id = id;
+        this.lastHeartbeatUtc = lastHeartbeatUtc;
+        this.name = name;
+        this.version = version;
     }
 
     /**

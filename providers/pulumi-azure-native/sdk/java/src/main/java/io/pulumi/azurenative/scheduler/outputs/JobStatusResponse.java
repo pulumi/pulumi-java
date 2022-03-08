@@ -43,11 +43,11 @@ public final class JobStatusResponse {
         Integer faultedCount,
         String lastExecutionTime,
         String nextExecutionTime) {
-        this.executionCount = Objects.requireNonNull(executionCount);
-        this.failureCount = Objects.requireNonNull(failureCount);
-        this.faultedCount = Objects.requireNonNull(faultedCount);
-        this.lastExecutionTime = Objects.requireNonNull(lastExecutionTime);
-        this.nextExecutionTime = Objects.requireNonNull(nextExecutionTime);
+        this.executionCount = executionCount;
+        this.failureCount = failureCount;
+        this.faultedCount = faultedCount;
+        this.lastExecutionTime = lastExecutionTime;
+        this.nextExecutionTime = nextExecutionTime;
     }
 
     /**

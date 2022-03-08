@@ -44,11 +44,11 @@ public final class ErrorResponseResponse {
         List<ErrorResponseResponse> details,
         String message,
         String target) {
-        this.additionalInfo = Objects.requireNonNull(additionalInfo);
-        this.code = Objects.requireNonNull(code);
-        this.details = Objects.requireNonNull(details);
-        this.message = Objects.requireNonNull(message);
-        this.target = Objects.requireNonNull(target);
+        this.additionalInfo = additionalInfo;
+        this.code = code;
+        this.details = details;
+        this.message = message;
+        this.target = target;
     }
 
     /**

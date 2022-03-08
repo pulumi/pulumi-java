@@ -79,17 +79,17 @@ public final class GetAFDEndpointResult {
         SystemDataResponse systemData,
         @Nullable Map<String,String> tags,
         String type) {
-        this.deploymentStatus = Objects.requireNonNull(deploymentStatus);
+        this.deploymentStatus = deploymentStatus;
         this.enabledState = enabledState;
-        this.hostName = Objects.requireNonNull(hostName);
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
+        this.hostName = hostName;
+        this.id = id;
+        this.location = location;
+        this.name = name;
         this.originResponseTimeoutSeconds = originResponseTimeoutSeconds;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.systemData = Objects.requireNonNull(systemData);
+        this.provisioningState = provisioningState;
+        this.systemData = systemData;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     public String getDeploymentStatus() {

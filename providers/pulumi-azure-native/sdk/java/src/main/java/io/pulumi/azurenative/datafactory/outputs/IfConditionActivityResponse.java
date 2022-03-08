@@ -107,11 +107,11 @@ public final class IfConditionActivityResponse {
         @Nullable List<UserPropertyResponse> userProperties) {
         this.dependsOn = dependsOn;
         this.description = description;
-        this.expression = Objects.requireNonNull(expression);
+        this.expression = expression;
         this.ifFalseActivities = ifFalseActivities;
         this.ifTrueActivities = ifTrueActivities;
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.name = name;
+        this.type = type;
         this.userProperties = userProperties;
     }
 

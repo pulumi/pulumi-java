@@ -24,8 +24,8 @@ public final class DataStoreInfoBaseResponse {
     private DataStoreInfoBaseResponse(
         String dataStoreType,
         String objectType) {
-        this.dataStoreType = Objects.requireNonNull(dataStoreType);
-        this.objectType = Objects.requireNonNull(objectType);
+        this.dataStoreType = dataStoreType;
+        this.objectType = objectType;
     }
 
     /**

@@ -25,8 +25,8 @@ public final class ActivityDependencyResponse {
     private ActivityDependencyResponse(
         String activity,
         List<String> dependencyConditions) {
-        this.activity = Objects.requireNonNull(activity);
-        this.dependencyConditions = Objects.requireNonNull(dependencyConditions);
+        this.activity = activity;
+        this.dependencyConditions = dependencyConditions;
     }
 
     /**

@@ -69,15 +69,15 @@ public final class BackupInstanceResponse {
         UserFacingErrorResponse protectionErrorDetails,
         ProtectionStatusDetailsResponse protectionStatus,
         String provisioningState) {
-        this.currentProtectionState = Objects.requireNonNull(currentProtectionState);
-        this.dataSourceInfo = Objects.requireNonNull(dataSourceInfo);
+        this.currentProtectionState = currentProtectionState;
+        this.dataSourceInfo = dataSourceInfo;
         this.dataSourceSetInfo = dataSourceSetInfo;
         this.friendlyName = friendlyName;
-        this.objectType = Objects.requireNonNull(objectType);
-        this.policyInfo = Objects.requireNonNull(policyInfo);
-        this.protectionErrorDetails = Objects.requireNonNull(protectionErrorDetails);
-        this.protectionStatus = Objects.requireNonNull(protectionStatus);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.objectType = objectType;
+        this.policyInfo = policyInfo;
+        this.protectionErrorDetails = protectionErrorDetails;
+        this.protectionStatus = protectionStatus;
+        this.provisioningState = provisioningState;
     }
 
     /**

@@ -28,9 +28,9 @@ public final class CacheKeyQueryStringActionParametersResponse {
         String odataType,
         @Nullable String queryParameters,
         String queryStringBehavior) {
-        this.odataType = Objects.requireNonNull(odataType);
+        this.odataType = odataType;
         this.queryParameters = queryParameters;
-        this.queryStringBehavior = Objects.requireNonNull(queryStringBehavior);
+        this.queryStringBehavior = queryStringBehavior;
     }
 
     public String getOdataType() {

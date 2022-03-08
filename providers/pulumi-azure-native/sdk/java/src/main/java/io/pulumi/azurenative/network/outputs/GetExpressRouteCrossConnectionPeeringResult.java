@@ -126,20 +126,20 @@ public final class GetExpressRouteCrossConnectionPeeringResult {
         @Nullable String sharedKey,
         @Nullable String state,
         @Nullable Integer vlanId) {
-        this.azureASN = Objects.requireNonNull(azureASN);
-        this.etag = Objects.requireNonNull(etag);
+        this.azureASN = azureASN;
+        this.etag = etag;
         this.gatewayManagerEtag = gatewayManagerEtag;
         this.id = id;
         this.ipv6PeeringConfig = ipv6PeeringConfig;
-        this.lastModifiedBy = Objects.requireNonNull(lastModifiedBy);
+        this.lastModifiedBy = lastModifiedBy;
         this.microsoftPeeringConfig = microsoftPeeringConfig;
         this.name = name;
         this.peerASN = peerASN;
         this.peeringType = peeringType;
-        this.primaryAzurePort = Objects.requireNonNull(primaryAzurePort);
+        this.primaryAzurePort = primaryAzurePort;
         this.primaryPeerAddressPrefix = primaryPeerAddressPrefix;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.secondaryAzurePort = Objects.requireNonNull(secondaryAzurePort);
+        this.provisioningState = provisioningState;
+        this.secondaryAzurePort = secondaryAzurePort;
         this.secondaryPeerAddressPrefix = secondaryPeerAddressPrefix;
         this.sharedKey = sharedKey;
         this.state = state;

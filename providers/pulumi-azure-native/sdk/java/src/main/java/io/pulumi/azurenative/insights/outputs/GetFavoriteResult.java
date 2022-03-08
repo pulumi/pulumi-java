@@ -84,14 +84,14 @@ public final class GetFavoriteResult {
         @Nullable String version) {
         this.category = category;
         this.config = config;
-        this.favoriteId = Objects.requireNonNull(favoriteId);
+        this.favoriteId = favoriteId;
         this.favoriteType = favoriteType;
         this.isGeneratedFromTemplate = isGeneratedFromTemplate;
         this.name = name;
         this.sourceType = sourceType;
         this.tags = tags;
-        this.timeModified = Objects.requireNonNull(timeModified);
-        this.userId = Objects.requireNonNull(userId);
+        this.timeModified = timeModified;
+        this.userId = userId;
         this.version = version;
     }
 

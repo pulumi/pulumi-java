@@ -64,11 +64,11 @@ public final class MongoDbV2LinkedServiceResponse {
         String type) {
         this.annotations = annotations;
         this.connectVia = connectVia;
-        this.connectionString = Objects.requireNonNull(connectionString);
-        this.database = Objects.requireNonNull(database);
+        this.connectionString = connectionString;
+        this.database = database;
         this.description = description;
         this.parameters = parameters;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

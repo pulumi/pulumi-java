@@ -41,7 +41,7 @@ public final class MetricSettingsResponse {
         @Nullable RetentionPolicyResponse retentionPolicy,
         @Nullable String timeGrain) {
         this.category = category;
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
         this.retentionPolicy = retentionPolicy;
         this.timeGrain = timeGrain;
     }

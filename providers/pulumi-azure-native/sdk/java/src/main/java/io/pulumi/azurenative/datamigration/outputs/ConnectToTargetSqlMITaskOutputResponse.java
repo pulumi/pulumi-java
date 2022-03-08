@@ -50,12 +50,12 @@ public final class ConnectToTargetSqlMITaskOutputResponse {
         String targetServerBrandVersion,
         String targetServerVersion,
         List<ReportableExceptionResponse> validationErrors) {
-        this.agentJobs = Objects.requireNonNull(agentJobs);
-        this.id = Objects.requireNonNull(id);
-        this.logins = Objects.requireNonNull(logins);
-        this.targetServerBrandVersion = Objects.requireNonNull(targetServerBrandVersion);
-        this.targetServerVersion = Objects.requireNonNull(targetServerVersion);
-        this.validationErrors = Objects.requireNonNull(validationErrors);
+        this.agentJobs = agentJobs;
+        this.id = id;
+        this.logins = logins;
+        this.targetServerBrandVersion = targetServerBrandVersion;
+        this.targetServerVersion = targetServerVersion;
+        this.validationErrors = validationErrors;
     }
 
     /**

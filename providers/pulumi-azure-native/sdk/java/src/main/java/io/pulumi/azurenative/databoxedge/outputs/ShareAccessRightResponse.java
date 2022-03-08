@@ -24,8 +24,8 @@ public final class ShareAccessRightResponse {
     private ShareAccessRightResponse(
         String accessType,
         String shareId) {
-        this.accessType = Objects.requireNonNull(accessType);
-        this.shareId = Objects.requireNonNull(shareId);
+        this.accessType = accessType;
+        this.shareId = shareId;
     }
 
     /**

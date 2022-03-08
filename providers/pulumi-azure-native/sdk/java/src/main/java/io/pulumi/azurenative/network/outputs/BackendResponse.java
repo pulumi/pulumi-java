@@ -93,7 +93,7 @@ public final class BackendResponse {
         this.httpPort = httpPort;
         this.httpsPort = httpsPort;
         this.priority = priority;
-        this.privateEndpointStatus = Objects.requireNonNull(privateEndpointStatus);
+        this.privateEndpointStatus = privateEndpointStatus;
         this.privateLinkAlias = privateLinkAlias;
         this.privateLinkApprovalMessage = privateLinkApprovalMessage;
         this.privateLinkLocation = privateLinkLocation;

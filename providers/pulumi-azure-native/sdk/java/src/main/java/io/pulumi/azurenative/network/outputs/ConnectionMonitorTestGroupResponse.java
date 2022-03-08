@@ -46,11 +46,11 @@ public final class ConnectionMonitorTestGroupResponse {
         String name,
         List<String> sources,
         List<String> testConfigurations) {
-        this.destinations = Objects.requireNonNull(destinations);
+        this.destinations = destinations;
         this.disable = disable;
-        this.name = Objects.requireNonNull(name);
-        this.sources = Objects.requireNonNull(sources);
-        this.testConfigurations = Objects.requireNonNull(testConfigurations);
+        this.name = name;
+        this.sources = sources;
+        this.testConfigurations = testConfigurations;
     }
 
     /**

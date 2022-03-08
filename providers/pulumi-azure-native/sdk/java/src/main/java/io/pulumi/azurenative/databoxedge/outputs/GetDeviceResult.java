@@ -179,32 +179,32 @@ public final class GetDeviceResult {
         @Nullable Map<String,String> tags,
         String timeZone,
         String type) {
-        this.configuredRoleTypes = Objects.requireNonNull(configuredRoleTypes);
-        this.culture = Objects.requireNonNull(culture);
+        this.configuredRoleTypes = configuredRoleTypes;
+        this.culture = culture;
         this.dataBoxEdgeDeviceStatus = dataBoxEdgeDeviceStatus;
-        this.description = Objects.requireNonNull(description);
-        this.deviceHcsVersion = Objects.requireNonNull(deviceHcsVersion);
-        this.deviceLocalCapacity = Objects.requireNonNull(deviceLocalCapacity);
-        this.deviceModel = Objects.requireNonNull(deviceModel);
-        this.deviceSoftwareVersion = Objects.requireNonNull(deviceSoftwareVersion);
-        this.deviceType = Objects.requireNonNull(deviceType);
-        this.edgeProfile = Objects.requireNonNull(edgeProfile);
+        this.description = description;
+        this.deviceHcsVersion = deviceHcsVersion;
+        this.deviceLocalCapacity = deviceLocalCapacity;
+        this.deviceModel = deviceModel;
+        this.deviceSoftwareVersion = deviceSoftwareVersion;
+        this.deviceType = deviceType;
+        this.edgeProfile = edgeProfile;
         this.etag = etag;
-        this.friendlyName = Objects.requireNonNull(friendlyName);
-        this.id = Objects.requireNonNull(id);
+        this.friendlyName = friendlyName;
+        this.id = id;
         this.identity = identity;
-        this.kind = Objects.requireNonNull(kind);
-        this.location = Objects.requireNonNull(location);
-        this.modelDescription = Objects.requireNonNull(modelDescription);
-        this.name = Objects.requireNonNull(name);
-        this.nodeCount = Objects.requireNonNull(nodeCount);
-        this.resourceMoveDetails = Objects.requireNonNull(resourceMoveDetails);
-        this.serialNumber = Objects.requireNonNull(serialNumber);
+        this.kind = kind;
+        this.location = location;
+        this.modelDescription = modelDescription;
+        this.name = name;
+        this.nodeCount = nodeCount;
+        this.resourceMoveDetails = resourceMoveDetails;
+        this.serialNumber = serialNumber;
         this.sku = sku;
-        this.systemData = Objects.requireNonNull(systemData);
+        this.systemData = systemData;
         this.tags = tags;
-        this.timeZone = Objects.requireNonNull(timeZone);
-        this.type = Objects.requireNonNull(type);
+        this.timeZone = timeZone;
+        this.type = type;
     }
 
     /**

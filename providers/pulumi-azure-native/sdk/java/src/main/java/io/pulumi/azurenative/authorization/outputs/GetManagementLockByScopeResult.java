@@ -52,12 +52,12 @@ public final class GetManagementLockByScopeResult {
         @Nullable String notes,
         @Nullable List<ManagementLockOwnerResponse> owners,
         String type) {
-        this.id = Objects.requireNonNull(id);
-        this.level = Objects.requireNonNull(level);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.level = level;
+        this.name = name;
         this.notes = notes;
         this.owners = owners;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

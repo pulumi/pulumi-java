@@ -65,13 +65,13 @@ public final class GetConnectionResult {
         String name,
         String type) {
         this.connectionType = connectionType;
-        this.creationTime = Objects.requireNonNull(creationTime);
+        this.creationTime = creationTime;
         this.description = description;
-        this.fieldDefinitionValues = Objects.requireNonNull(fieldDefinitionValues);
-        this.id = Objects.requireNonNull(id);
-        this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.fieldDefinitionValues = fieldDefinitionValues;
+        this.id = id;
+        this.lastModifiedTime = lastModifiedTime;
+        this.name = name;
+        this.type = type;
     }
 
     /**

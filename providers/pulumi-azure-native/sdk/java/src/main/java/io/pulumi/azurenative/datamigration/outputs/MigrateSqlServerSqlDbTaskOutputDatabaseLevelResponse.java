@@ -114,22 +114,22 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse {
         String startedOn,
         String state,
         String statusMessage) {
-        this.databaseName = Objects.requireNonNull(databaseName);
-        this.endedOn = Objects.requireNonNull(endedOn);
-        this.errorCount = Objects.requireNonNull(errorCount);
-        this.errorPrefix = Objects.requireNonNull(errorPrefix);
-        this.exceptionsAndWarnings = Objects.requireNonNull(exceptionsAndWarnings);
-        this.id = Objects.requireNonNull(id);
-        this.message = Objects.requireNonNull(message);
-        this.numberOfObjects = Objects.requireNonNull(numberOfObjects);
-        this.numberOfObjectsCompleted = Objects.requireNonNull(numberOfObjectsCompleted);
-        this.objectSummary = Objects.requireNonNull(objectSummary);
-        this.resultPrefix = Objects.requireNonNull(resultPrefix);
-        this.resultType = Objects.requireNonNull(resultType);
-        this.stage = Objects.requireNonNull(stage);
-        this.startedOn = Objects.requireNonNull(startedOn);
-        this.state = Objects.requireNonNull(state);
-        this.statusMessage = Objects.requireNonNull(statusMessage);
+        this.databaseName = databaseName;
+        this.endedOn = endedOn;
+        this.errorCount = errorCount;
+        this.errorPrefix = errorPrefix;
+        this.exceptionsAndWarnings = exceptionsAndWarnings;
+        this.id = id;
+        this.message = message;
+        this.numberOfObjects = numberOfObjects;
+        this.numberOfObjectsCompleted = numberOfObjectsCompleted;
+        this.objectSummary = objectSummary;
+        this.resultPrefix = resultPrefix;
+        this.resultType = resultType;
+        this.stage = stage;
+        this.startedOn = startedOn;
+        this.state = state;
+        this.statusMessage = statusMessage;
     }
 
     /**

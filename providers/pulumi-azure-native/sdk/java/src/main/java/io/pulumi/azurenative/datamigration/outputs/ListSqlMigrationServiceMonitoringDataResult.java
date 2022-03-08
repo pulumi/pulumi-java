@@ -26,8 +26,8 @@ public final class ListSqlMigrationServiceMonitoringDataResult {
     private ListSqlMigrationServiceMonitoringDataResult(
         String name,
         List<NodeMonitoringDataResponse> nodes) {
-        this.name = Objects.requireNonNull(name);
-        this.nodes = Objects.requireNonNull(nodes);
+        this.name = name;
+        this.nodes = nodes;
     }
 
     /**

@@ -41,7 +41,7 @@ public final class MetadataSupportResponse {
         this.email = email;
         this.link = link;
         this.name = name;
-        this.tier = Objects.requireNonNull(tier);
+        this.tier = tier;
     }
 
     /**

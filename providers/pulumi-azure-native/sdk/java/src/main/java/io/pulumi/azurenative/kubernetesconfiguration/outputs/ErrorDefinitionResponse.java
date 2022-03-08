@@ -24,8 +24,8 @@ public final class ErrorDefinitionResponse {
     private ErrorDefinitionResponse(
         String code,
         String message) {
-        this.code = Objects.requireNonNull(code);
-        this.message = Objects.requireNonNull(message);
+        this.code = code;
+        this.message = message;
     }
 
     /**

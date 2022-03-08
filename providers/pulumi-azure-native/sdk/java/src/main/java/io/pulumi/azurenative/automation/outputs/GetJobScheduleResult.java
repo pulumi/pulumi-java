@@ -65,14 +65,14 @@ public final class GetJobScheduleResult {
         @Nullable RunbookAssociationPropertyResponse runbook,
         @Nullable ScheduleAssociationPropertyResponse schedule,
         String type) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.jobScheduleId = jobScheduleId;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.parameters = parameters;
         this.runOn = runOn;
         this.runbook = runbook;
         this.schedule = schedule;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

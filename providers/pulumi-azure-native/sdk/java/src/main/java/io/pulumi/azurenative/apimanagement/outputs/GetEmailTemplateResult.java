@@ -71,15 +71,15 @@ public final class GetEmailTemplateResult {
         String subject,
         @Nullable String title,
         String type) {
-        this.body = Objects.requireNonNull(body);
+        this.body = body;
         this.description = description;
-        this.id = Objects.requireNonNull(id);
-        this.isDefault = Objects.requireNonNull(isDefault);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.isDefault = isDefault;
+        this.name = name;
         this.parameters = parameters;
-        this.subject = Objects.requireNonNull(subject);
+        this.subject = subject;
         this.title = title;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

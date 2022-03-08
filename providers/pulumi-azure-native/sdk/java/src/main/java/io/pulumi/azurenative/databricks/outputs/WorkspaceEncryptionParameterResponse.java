@@ -27,7 +27,7 @@ public final class WorkspaceEncryptionParameterResponse {
     private WorkspaceEncryptionParameterResponse(
         String type,
         @Nullable EncryptionResponse value) {
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.value = value;
     }
 

@@ -42,8 +42,8 @@ public final class MigrateSqlServerSqlMIDatabaseInputResponse {
         String restoreDatabaseName) {
         this.backupFilePaths = backupFilePaths;
         this.backupFileShare = backupFileShare;
-        this.name = Objects.requireNonNull(name);
-        this.restoreDatabaseName = Objects.requireNonNull(restoreDatabaseName);
+        this.name = name;
+        this.restoreDatabaseName = restoreDatabaseName;
     }
 
     /**

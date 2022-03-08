@@ -24,8 +24,8 @@ public final class BlueprintStatusResponse {
     private BlueprintStatusResponse(
         String lastModified,
         String timeCreated) {
-        this.lastModified = Objects.requireNonNull(lastModified);
-        this.timeCreated = Objects.requireNonNull(timeCreated);
+        this.lastModified = lastModified;
+        this.timeCreated = timeCreated;
     }
 
     /**

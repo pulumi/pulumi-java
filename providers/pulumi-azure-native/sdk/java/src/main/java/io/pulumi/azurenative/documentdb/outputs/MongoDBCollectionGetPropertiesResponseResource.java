@@ -62,12 +62,12 @@ public final class MongoDBCollectionGetPropertiesResponseResource {
         @Nullable Map<String,String> shardKey,
         Double ts) {
         this.analyticalStorageTtl = analyticalStorageTtl;
-        this.etag = Objects.requireNonNull(etag);
-        this.id = Objects.requireNonNull(id);
+        this.etag = etag;
+        this.id = id;
         this.indexes = indexes;
-        this.rid = Objects.requireNonNull(rid);
+        this.rid = rid;
         this.shardKey = shardKey;
-        this.ts = Objects.requireNonNull(ts);
+        this.ts = ts;
     }
 
     /**

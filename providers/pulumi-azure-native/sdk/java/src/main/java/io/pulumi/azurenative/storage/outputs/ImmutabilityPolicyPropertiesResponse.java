@@ -49,10 +49,10 @@ public final class ImmutabilityPolicyPropertiesResponse {
         String state,
         List<UpdateHistoryPropertyResponse> updateHistory) {
         this.allowProtectedAppendWrites = allowProtectedAppendWrites;
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.immutabilityPeriodSinceCreationInDays = immutabilityPeriodSinceCreationInDays;
-        this.state = Objects.requireNonNull(state);
-        this.updateHistory = Objects.requireNonNull(updateHistory);
+        this.state = state;
+        this.updateHistory = updateHistory;
     }
 
     /**

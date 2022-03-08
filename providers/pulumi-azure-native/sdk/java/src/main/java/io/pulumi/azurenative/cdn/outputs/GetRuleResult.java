@@ -96,16 +96,16 @@ public final class GetRuleResult {
         String provisioningState,
         SystemDataResponse systemData,
         String type) {
-        this.actions = Objects.requireNonNull(actions);
+        this.actions = actions;
         this.conditions = conditions;
-        this.deploymentStatus = Objects.requireNonNull(deploymentStatus);
-        this.id = Objects.requireNonNull(id);
+        this.deploymentStatus = deploymentStatus;
+        this.id = id;
         this.matchProcessingBehavior = matchProcessingBehavior;
-        this.name = Objects.requireNonNull(name);
-        this.order = Objects.requireNonNull(order);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.name = name;
+        this.order = order;
+        this.provisioningState = provisioningState;
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

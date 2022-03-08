@@ -33,8 +33,8 @@ public final class ScheduleRecurrenceResponse {
         String recurrenceType,
         Integer recurrenceValue,
         @Nullable List<String> weeklyDaysList) {
-        this.recurrenceType = Objects.requireNonNull(recurrenceType);
-        this.recurrenceValue = Objects.requireNonNull(recurrenceValue);
+        this.recurrenceType = recurrenceType;
+        this.recurrenceValue = recurrenceValue;
         this.weeklyDaysList = weeklyDaysList;
     }
 

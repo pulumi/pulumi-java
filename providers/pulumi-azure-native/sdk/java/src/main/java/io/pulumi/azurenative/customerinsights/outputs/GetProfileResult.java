@@ -151,20 +151,20 @@ public final class GetProfileResult {
         this.displayName = displayName;
         this.entityType = entityType;
         this.fields = fields;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.instancesCount = instancesCount;
         this.largeImage = largeImage;
-        this.lastChangedUtc = Objects.requireNonNull(lastChangedUtc);
+        this.lastChangedUtc = lastChangedUtc;
         this.localizedAttributes = localizedAttributes;
         this.mediumImage = mediumImage;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.schemaItemTypeLink = schemaItemTypeLink;
         this.smallImage = smallImage;
         this.strongIds = strongIds;
-        this.tenantId = Objects.requireNonNull(tenantId);
+        this.tenantId = tenantId;
         this.timestampFieldName = timestampFieldName;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.typeName = typeName;
     }
 

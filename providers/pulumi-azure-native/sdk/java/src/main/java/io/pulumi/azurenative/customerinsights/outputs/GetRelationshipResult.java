@@ -113,16 +113,16 @@ public final class GetRelationshipResult {
         this.displayName = displayName;
         this.expiryDateTimeUtc = expiryDateTimeUtc;
         this.fields = fields;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.lookupMappings = lookupMappings;
-        this.name = Objects.requireNonNull(name);
-        this.profileType = Objects.requireNonNull(profileType);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.relatedProfileType = Objects.requireNonNull(relatedProfileType);
-        this.relationshipGuidId = Objects.requireNonNull(relationshipGuidId);
-        this.relationshipName = Objects.requireNonNull(relationshipName);
-        this.tenantId = Objects.requireNonNull(tenantId);
-        this.type = Objects.requireNonNull(type);
+        this.name = name;
+        this.profileType = profileType;
+        this.provisioningState = provisioningState;
+        this.relatedProfileType = relatedProfileType;
+        this.relationshipGuidId = relationshipGuidId;
+        this.relationshipName = relationshipName;
+        this.tenantId = tenantId;
+        this.type = type;
     }
 
     /**

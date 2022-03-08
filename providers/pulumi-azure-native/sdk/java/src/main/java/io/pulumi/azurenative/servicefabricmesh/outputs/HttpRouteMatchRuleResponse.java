@@ -28,7 +28,7 @@ public final class HttpRouteMatchRuleResponse {
         @Nullable List<HttpRouteMatchHeaderResponse> headers,
         HttpRouteMatchPathResponse path) {
         this.headers = headers;
-        this.path = Objects.requireNonNull(path);
+        this.path = path;
     }
 
     /**

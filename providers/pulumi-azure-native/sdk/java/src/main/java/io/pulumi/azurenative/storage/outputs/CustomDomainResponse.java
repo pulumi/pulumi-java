@@ -27,7 +27,7 @@ public final class CustomDomainResponse {
     private CustomDomainResponse(
         String name,
         @Nullable Boolean useSubDomainName) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.useSubDomainName = useSubDomainName;
     }
 

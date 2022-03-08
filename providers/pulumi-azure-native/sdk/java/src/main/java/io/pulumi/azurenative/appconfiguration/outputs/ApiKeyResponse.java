@@ -49,12 +49,12 @@ public final class ApiKeyResponse {
         String name,
         Boolean readOnly,
         String value) {
-        this.connectionString = Objects.requireNonNull(connectionString);
-        this.id = Objects.requireNonNull(id);
-        this.lastModified = Objects.requireNonNull(lastModified);
-        this.name = Objects.requireNonNull(name);
-        this.readOnly = Objects.requireNonNull(readOnly);
-        this.value = Objects.requireNonNull(value);
+        this.connectionString = connectionString;
+        this.id = id;
+        this.lastModified = lastModified;
+        this.name = name;
+        this.readOnly = readOnly;
+        this.value = value;
     }
 
     /**

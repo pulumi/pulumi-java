@@ -169,7 +169,7 @@ public final class WebServicePropertiesForGraphResponse {
         @Nullable String title) {
         this.assets = assets;
         this.commitmentPlan = commitmentPlan;
-        this.createdOn = Objects.requireNonNull(createdOn);
+        this.createdOn = createdOn;
         this.description = description;
         this.diagnostics = diagnostics;
         this.exampleRequest = exampleRequest;
@@ -177,18 +177,18 @@ public final class WebServicePropertiesForGraphResponse {
         this.input = input;
         this.keys = keys;
         this.machineLearningWorkspace = machineLearningWorkspace;
-        this.modifiedOn = Objects.requireNonNull(modifiedOn);
+        this.modifiedOn = modifiedOn;
         this.output = output;
         this.$package = $package;
-        this.packageType = Objects.requireNonNull(packageType);
+        this.packageType = packageType;
         this.parameters = parameters;
         this.payloadsInBlobStorage = payloadsInBlobStorage;
         this.payloadsLocation = payloadsLocation;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.readOnly = readOnly;
         this.realtimeConfiguration = realtimeConfiguration;
         this.storageAccount = storageAccount;
-        this.swaggerLocation = Objects.requireNonNull(swaggerLocation);
+        this.swaggerLocation = swaggerLocation;
         this.title = title;
     }
 

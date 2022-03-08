@@ -95,17 +95,17 @@ public final class LabelingJobPropertiesResponse {
         String status,
         List<StatusMessageResponse> statusMessages,
         @Nullable Map<String,String> tags) {
-        this.createdTimeUtc = Objects.requireNonNull(createdTimeUtc);
-        this.datasetConfiguration = Objects.requireNonNull(datasetConfiguration);
-        this.jobInstructions = Objects.requireNonNull(jobInstructions);
-        this.labelCategories = Objects.requireNonNull(labelCategories);
-        this.labelingJobMediaProperties = Objects.requireNonNull(labelingJobMediaProperties);
+        this.createdTimeUtc = createdTimeUtc;
+        this.datasetConfiguration = datasetConfiguration;
+        this.jobInstructions = jobInstructions;
+        this.labelCategories = labelCategories;
+        this.labelingJobMediaProperties = labelingJobMediaProperties;
         this.mlAssistConfiguration = mlAssistConfiguration;
-        this.progressMetrics = Objects.requireNonNull(progressMetrics);
-        this.projectId = Objects.requireNonNull(projectId);
+        this.progressMetrics = progressMetrics;
+        this.projectId = projectId;
         this.properties = properties;
-        this.status = Objects.requireNonNull(status);
-        this.statusMessages = Objects.requireNonNull(statusMessages);
+        this.status = status;
+        this.statusMessages = statusMessages;
         this.tags = tags;
     }
 

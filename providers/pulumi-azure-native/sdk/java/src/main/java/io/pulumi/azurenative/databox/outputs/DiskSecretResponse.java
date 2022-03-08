@@ -24,8 +24,8 @@ public final class DiskSecretResponse {
     private DiskSecretResponse(
         String bitLockerKey,
         String diskSerialNumber) {
-        this.bitLockerKey = Objects.requireNonNull(bitLockerKey);
-        this.diskSerialNumber = Objects.requireNonNull(diskSerialNumber);
+        this.bitLockerKey = bitLockerKey;
+        this.diskSerialNumber = diskSerialNumber;
     }
 
     /**

@@ -78,13 +78,13 @@ public final class EventHubResponse {
         this.authenticationType = authenticationType;
         this.connectionStringPrimaryKey = connectionStringPrimaryKey;
         this.connectionStringSecondaryKey = connectionStringSecondaryKey;
-        this.createdTime = Objects.requireNonNull(createdTime);
+        this.createdTime = createdTime;
         this.deadLetterSecret = deadLetterSecret;
         this.deadLetterUri = deadLetterUri;
-        this.endpointType = Objects.requireNonNull(endpointType);
+        this.endpointType = endpointType;
         this.endpointUri = endpointUri;
         this.entityPath = entityPath;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
     }
 
     /**

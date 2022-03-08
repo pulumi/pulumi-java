@@ -50,12 +50,12 @@ public final class AwsCredsAuthenticationDetailsPropertiesResponse {
         String awsAccessKeyId,
         String awsSecretAccessKey,
         List<String> grantedPermissions) {
-        this.accountId = Objects.requireNonNull(accountId);
-        this.authenticationProvisioningState = Objects.requireNonNull(authenticationProvisioningState);
-        this.authenticationType = Objects.requireNonNull(authenticationType);
-        this.awsAccessKeyId = Objects.requireNonNull(awsAccessKeyId);
-        this.awsSecretAccessKey = Objects.requireNonNull(awsSecretAccessKey);
-        this.grantedPermissions = Objects.requireNonNull(grantedPermissions);
+        this.accountId = accountId;
+        this.authenticationProvisioningState = authenticationProvisioningState;
+        this.authenticationType = authenticationType;
+        this.awsAccessKeyId = awsAccessKeyId;
+        this.awsSecretAccessKey = awsSecretAccessKey;
+        this.grantedPermissions = grantedPermissions;
     }
 
     /**

@@ -74,16 +74,16 @@ public final class GetBlobContainerDataSetResult {
         String subscriptionId,
         SystemDataResponse systemData,
         String type) {
-        this.containerName = Objects.requireNonNull(containerName);
-        this.dataSetId = Objects.requireNonNull(dataSetId);
-        this.id = Objects.requireNonNull(id);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.resourceGroup = Objects.requireNonNull(resourceGroup);
-        this.storageAccountName = Objects.requireNonNull(storageAccountName);
-        this.subscriptionId = Objects.requireNonNull(subscriptionId);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.containerName = containerName;
+        this.dataSetId = dataSetId;
+        this.id = id;
+        this.kind = kind;
+        this.name = name;
+        this.resourceGroup = resourceGroup;
+        this.storageAccountName = storageAccountName;
+        this.subscriptionId = subscriptionId;
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

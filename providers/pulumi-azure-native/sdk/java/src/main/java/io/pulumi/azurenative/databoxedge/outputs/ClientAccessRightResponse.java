@@ -24,8 +24,8 @@ public final class ClientAccessRightResponse {
     private ClientAccessRightResponse(
         String accessPermission,
         String client) {
-        this.accessPermission = Objects.requireNonNull(accessPermission);
-        this.client = Objects.requireNonNull(client);
+        this.accessPermission = accessPermission;
+        this.client = client;
     }
 
     /**

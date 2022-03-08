@@ -35,7 +35,7 @@ public final class OutputPathAssetReferenceResponse {
         String referenceType) {
         this.jobId = jobId;
         this.path = path;
-        this.referenceType = Objects.requireNonNull(referenceType);
+        this.referenceType = referenceType;
     }
 
     /**

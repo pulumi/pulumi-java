@@ -42,11 +42,11 @@ public final class MachineExtensionInstanceViewResponseStatus {
         String level,
         String message,
         String time) {
-        this.code = Objects.requireNonNull(code);
-        this.displayStatus = Objects.requireNonNull(displayStatus);
-        this.level = Objects.requireNonNull(level);
-        this.message = Objects.requireNonNull(message);
-        this.time = Objects.requireNonNull(time);
+        this.code = code;
+        this.displayStatus = displayStatus;
+        this.level = level;
+        this.message = message;
+        this.time = time;
     }
 
     /**

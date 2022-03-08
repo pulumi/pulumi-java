@@ -109,20 +109,20 @@ public final class GetPrivateStoreCollectionOfferResult {
         String type,
         String uniqueOfferId,
         @Nullable Boolean updateSuppressedDueIdempotence) {
-        this.createdAt = Objects.requireNonNull(createdAt);
+        this.createdAt = createdAt;
         this.eTag = eTag;
         this.iconFileUris = iconFileUris;
-        this.id = Objects.requireNonNull(id);
-        this.modifiedAt = Objects.requireNonNull(modifiedAt);
-        this.name = Objects.requireNonNull(name);
-        this.offerDisplayName = Objects.requireNonNull(offerDisplayName);
+        this.id = id;
+        this.modifiedAt = modifiedAt;
+        this.name = name;
+        this.offerDisplayName = offerDisplayName;
         this.plans = plans;
-        this.privateStoreId = Objects.requireNonNull(privateStoreId);
-        this.publisherDisplayName = Objects.requireNonNull(publisherDisplayName);
+        this.privateStoreId = privateStoreId;
+        this.publisherDisplayName = publisherDisplayName;
         this.specificPlanIdsLimitation = specificPlanIdsLimitation;
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
-        this.uniqueOfferId = Objects.requireNonNull(uniqueOfferId);
+        this.systemData = systemData;
+        this.type = type;
+        this.uniqueOfferId = uniqueOfferId;
         this.updateSuppressedDueIdempotence = updateSuppressedDueIdempotence;
     }
 

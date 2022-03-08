@@ -31,9 +31,9 @@ public final class ContainerServiceCredentialsResponse {
         String acsKubeConfig,
         String imagePullSecretName,
         ServicePrincipalPropertiesResponse servicePrincipalConfiguration) {
-        this.acsKubeConfig = Objects.requireNonNull(acsKubeConfig);
-        this.imagePullSecretName = Objects.requireNonNull(imagePullSecretName);
-        this.servicePrincipalConfiguration = Objects.requireNonNull(servicePrincipalConfiguration);
+        this.acsKubeConfig = acsKubeConfig;
+        this.imagePullSecretName = imagePullSecretName;
+        this.servicePrincipalConfiguration = servicePrincipalConfiguration;
     }
 
     /**

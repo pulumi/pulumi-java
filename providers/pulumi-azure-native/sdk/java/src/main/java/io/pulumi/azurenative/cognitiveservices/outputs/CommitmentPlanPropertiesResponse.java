@@ -55,7 +55,7 @@ public final class CommitmentPlanPropertiesResponse {
         this.autoRenew = autoRenew;
         this.current = current;
         this.hostingModel = hostingModel;
-        this.last = Objects.requireNonNull(last);
+        this.last = last;
         this.next = next;
         this.planType = planType;
     }

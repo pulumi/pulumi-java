@@ -38,9 +38,9 @@ public final class TldLegalAgreementResponse {
         String content,
         String title,
         @Nullable String url) {
-        this.agreementKey = Objects.requireNonNull(agreementKey);
-        this.content = Objects.requireNonNull(content);
-        this.title = Objects.requireNonNull(title);
+        this.agreementKey = agreementKey;
+        this.content = content;
+        this.title = title;
         this.url = url;
     }
 

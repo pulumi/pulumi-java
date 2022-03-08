@@ -56,7 +56,7 @@ public final class IoTHubStreamInputDataSourceResponse {
         this.iotHubNamespace = iotHubNamespace;
         this.sharedAccessPolicyKey = sharedAccessPolicyKey;
         this.sharedAccessPolicyName = sharedAccessPolicyName;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

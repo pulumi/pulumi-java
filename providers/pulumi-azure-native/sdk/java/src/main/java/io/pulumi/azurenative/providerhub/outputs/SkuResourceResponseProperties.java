@@ -21,7 +21,7 @@ public final class SkuResourceResponseProperties {
         @Nullable String provisioningState,
         List<SkuSettingResponse> skuSettings) {
         this.provisioningState = provisioningState;
-        this.skuSettings = Objects.requireNonNull(skuSettings);
+        this.skuSettings = skuSettings;
     }
 
     public Optional<String> getProvisioningState() {

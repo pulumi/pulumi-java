@@ -104,16 +104,16 @@ public final class GetWebhookResult {
         this.creationTime = creationTime;
         this.description = description;
         this.expiryTime = expiryTime;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.isEnabled = isEnabled;
         this.lastInvokedTime = lastInvokedTime;
         this.lastModifiedBy = lastModifiedBy;
         this.lastModifiedTime = lastModifiedTime;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.parameters = parameters;
         this.runOn = runOn;
         this.runbook = runbook;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.uri = uri;
     }
 

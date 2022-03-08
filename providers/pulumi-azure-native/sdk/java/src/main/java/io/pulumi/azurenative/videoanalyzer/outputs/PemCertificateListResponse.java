@@ -26,8 +26,8 @@ public final class PemCertificateListResponse {
     private PemCertificateListResponse(
         List<String> certificates,
         String type) {
-        this.certificates = Objects.requireNonNull(certificates);
-        this.type = Objects.requireNonNull(type);
+        this.certificates = certificates;
+        this.type = type;
     }
 
     /**

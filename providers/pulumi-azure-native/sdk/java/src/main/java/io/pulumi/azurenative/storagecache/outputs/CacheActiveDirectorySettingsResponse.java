@@ -57,12 +57,12 @@ public final class CacheActiveDirectorySettingsResponse {
         String domainNetBiosName,
         String primaryDnsIpAddress,
         @Nullable String secondaryDnsIpAddress) {
-        this.cacheNetBiosName = Objects.requireNonNull(cacheNetBiosName);
+        this.cacheNetBiosName = cacheNetBiosName;
         this.credentials = credentials;
-        this.domainJoined = Objects.requireNonNull(domainJoined);
-        this.domainName = Objects.requireNonNull(domainName);
-        this.domainNetBiosName = Objects.requireNonNull(domainNetBiosName);
-        this.primaryDnsIpAddress = Objects.requireNonNull(primaryDnsIpAddress);
+        this.domainJoined = domainJoined;
+        this.domainName = domainName;
+        this.domainNetBiosName = domainNetBiosName;
+        this.primaryDnsIpAddress = primaryDnsIpAddress;
         this.secondaryDnsIpAddress = secondaryDnsIpAddress;
     }
 

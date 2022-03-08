@@ -24,8 +24,8 @@ public final class BatchAccountIdentityResponseUserAssignedIdentities {
     private BatchAccountIdentityResponseUserAssignedIdentities(
         String clientId,
         String principalId) {
-        this.clientId = Objects.requireNonNull(clientId);
-        this.principalId = Objects.requireNonNull(principalId);
+        this.clientId = clientId;
+        this.principalId = principalId;
     }
 
     /**

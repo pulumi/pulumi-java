@@ -45,11 +45,11 @@ public final class NetworkInterfaceDnsSettingsResponse {
         @Nullable String internalDnsNameLabel,
         String internalDomainNameSuffix,
         String internalFqdn) {
-        this.appliedDnsServers = Objects.requireNonNull(appliedDnsServers);
+        this.appliedDnsServers = appliedDnsServers;
         this.dnsServers = dnsServers;
         this.internalDnsNameLabel = internalDnsNameLabel;
-        this.internalDomainNameSuffix = Objects.requireNonNull(internalDomainNameSuffix);
-        this.internalFqdn = Objects.requireNonNull(internalFqdn);
+        this.internalDomainNameSuffix = internalDomainNameSuffix;
+        this.internalFqdn = internalFqdn;
     }
 
     /**

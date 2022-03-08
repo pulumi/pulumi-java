@@ -64,14 +64,14 @@ public final class ServerEndpointSyncSessionStatusResponse {
         String lastSyncTimestamp,
         Double persistentFilesNotSyncingCount,
         Double transientFilesNotSyncingCount) {
-        this.filesNotSyncingErrors = Objects.requireNonNull(filesNotSyncingErrors);
-        this.lastSyncMode = Objects.requireNonNull(lastSyncMode);
-        this.lastSyncPerItemErrorCount = Objects.requireNonNull(lastSyncPerItemErrorCount);
-        this.lastSyncResult = Objects.requireNonNull(lastSyncResult);
-        this.lastSyncSuccessTimestamp = Objects.requireNonNull(lastSyncSuccessTimestamp);
-        this.lastSyncTimestamp = Objects.requireNonNull(lastSyncTimestamp);
-        this.persistentFilesNotSyncingCount = Objects.requireNonNull(persistentFilesNotSyncingCount);
-        this.transientFilesNotSyncingCount = Objects.requireNonNull(transientFilesNotSyncingCount);
+        this.filesNotSyncingErrors = filesNotSyncingErrors;
+        this.lastSyncMode = lastSyncMode;
+        this.lastSyncPerItemErrorCount = lastSyncPerItemErrorCount;
+        this.lastSyncResult = lastSyncResult;
+        this.lastSyncSuccessTimestamp = lastSyncSuccessTimestamp;
+        this.lastSyncTimestamp = lastSyncTimestamp;
+        this.persistentFilesNotSyncingCount = persistentFilesNotSyncingCount;
+        this.transientFilesNotSyncingCount = transientFilesNotSyncingCount;
     }
 
     /**

@@ -105,20 +105,20 @@ public final class GetDomainResult {
         SystemDataResponse systemData,
         @Nullable Map<String,String> tags,
         String type) {
-        this.endpoint = Objects.requireNonNull(endpoint);
-        this.id = Objects.requireNonNull(id);
+        this.endpoint = endpoint;
+        this.id = id;
         this.inboundIpRules = inboundIpRules;
         this.inputSchema = inputSchema;
         this.inputSchemaMapping = inputSchemaMapping;
-        this.location = Objects.requireNonNull(location);
-        this.metricResourceId = Objects.requireNonNull(metricResourceId);
-        this.name = Objects.requireNonNull(name);
-        this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.location = location;
+        this.metricResourceId = metricResourceId;
+        this.name = name;
+        this.privateEndpointConnections = privateEndpointConnections;
+        this.provisioningState = provisioningState;
         this.publicNetworkAccess = publicNetworkAccess;
-        this.systemData = Objects.requireNonNull(systemData);
+        this.systemData = systemData;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

@@ -81,16 +81,16 @@ public final class AccessReviewHistoryInstanceResponse {
         String status,
         String type) {
         this.displayName = displayName;
-        this.downloadUri = Objects.requireNonNull(downloadUri);
+        this.downloadUri = downloadUri;
         this.expiration = expiration;
         this.fulfilledDateTime = fulfilledDateTime;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.reviewHistoryPeriodEndDateTime = reviewHistoryPeriodEndDateTime;
         this.reviewHistoryPeriodStartDateTime = reviewHistoryPeriodStartDateTime;
         this.runDateTime = runDateTime;
-        this.status = Objects.requireNonNull(status);
-        this.type = Objects.requireNonNull(type);
+        this.status = status;
+        this.type = type;
     }
 
     /**

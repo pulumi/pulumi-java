@@ -71,15 +71,15 @@ public final class GetMediaGraphResult {
         List<MediaGraphRtspSourceResponse> sources,
         String state,
         String type) {
-        this.created = Objects.requireNonNull(created);
+        this.created = created;
         this.description = description;
-        this.id = Objects.requireNonNull(id);
-        this.lastModified = Objects.requireNonNull(lastModified);
-        this.name = Objects.requireNonNull(name);
-        this.sinks = Objects.requireNonNull(sinks);
-        this.sources = Objects.requireNonNull(sources);
-        this.state = Objects.requireNonNull(state);
-        this.type = Objects.requireNonNull(type);
+        this.id = id;
+        this.lastModified = lastModified;
+        this.name = name;
+        this.sinks = sinks;
+        this.sources = sources;
+        this.state = state;
+        this.type = type;
     }
 
     /**

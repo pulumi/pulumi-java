@@ -62,14 +62,14 @@ public final class GetOpenIdConnectProviderResult {
         String metadataEndpoint,
         String name,
         String type) {
-        this.clientId = Objects.requireNonNull(clientId);
+        this.clientId = clientId;
         this.clientSecret = clientSecret;
         this.description = description;
-        this.displayName = Objects.requireNonNull(displayName);
-        this.id = Objects.requireNonNull(id);
-        this.metadataEndpoint = Objects.requireNonNull(metadataEndpoint);
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.displayName = displayName;
+        this.id = id;
+        this.metadataEndpoint = metadataEndpoint;
+        this.name = name;
+        this.type = type;
     }
 
     /**

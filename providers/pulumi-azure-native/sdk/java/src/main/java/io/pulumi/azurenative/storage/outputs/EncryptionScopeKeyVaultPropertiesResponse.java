@@ -32,9 +32,9 @@ public final class EncryptionScopeKeyVaultPropertiesResponse {
         String currentVersionedKeyIdentifier,
         @Nullable String keyUri,
         String lastKeyRotationTimestamp) {
-        this.currentVersionedKeyIdentifier = Objects.requireNonNull(currentVersionedKeyIdentifier);
+        this.currentVersionedKeyIdentifier = currentVersionedKeyIdentifier;
         this.keyUri = keyUri;
-        this.lastKeyRotationTimestamp = Objects.requireNonNull(lastKeyRotationTimestamp);
+        this.lastKeyRotationTimestamp = lastKeyRotationTimestamp;
     }
 
     /**

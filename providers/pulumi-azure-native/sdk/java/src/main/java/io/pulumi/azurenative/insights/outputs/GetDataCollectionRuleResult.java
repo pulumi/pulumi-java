@@ -102,15 +102,15 @@ public final class GetDataCollectionRuleResult {
         this.dataSources = dataSources;
         this.description = description;
         this.destinations = destinations;
-        this.etag = Objects.requireNonNull(etag);
-        this.id = Objects.requireNonNull(id);
-        this.immutableId = Objects.requireNonNull(immutableId);
+        this.etag = etag;
+        this.id = id;
+        this.immutableId = immutableId;
         this.kind = kind;
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.location = location;
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

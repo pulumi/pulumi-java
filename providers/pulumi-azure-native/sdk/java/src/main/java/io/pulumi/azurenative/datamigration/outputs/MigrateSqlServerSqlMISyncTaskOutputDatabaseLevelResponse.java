@@ -95,19 +95,19 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse {
         String resultType,
         String sourceDatabaseName,
         String startedOn) {
-        this.activeBackupSets = Objects.requireNonNull(activeBackupSets);
-        this.containerName = Objects.requireNonNull(containerName);
-        this.endedOn = Objects.requireNonNull(endedOn);
-        this.errorPrefix = Objects.requireNonNull(errorPrefix);
-        this.exceptionsAndWarnings = Objects.requireNonNull(exceptionsAndWarnings);
-        this.fullBackupSetInfo = Objects.requireNonNull(fullBackupSetInfo);
-        this.id = Objects.requireNonNull(id);
-        this.isFullBackupRestored = Objects.requireNonNull(isFullBackupRestored);
-        this.lastRestoredBackupSetInfo = Objects.requireNonNull(lastRestoredBackupSetInfo);
-        this.migrationState = Objects.requireNonNull(migrationState);
-        this.resultType = Objects.requireNonNull(resultType);
-        this.sourceDatabaseName = Objects.requireNonNull(sourceDatabaseName);
-        this.startedOn = Objects.requireNonNull(startedOn);
+        this.activeBackupSets = activeBackupSets;
+        this.containerName = containerName;
+        this.endedOn = endedOn;
+        this.errorPrefix = errorPrefix;
+        this.exceptionsAndWarnings = exceptionsAndWarnings;
+        this.fullBackupSetInfo = fullBackupSetInfo;
+        this.id = id;
+        this.isFullBackupRestored = isFullBackupRestored;
+        this.lastRestoredBackupSetInfo = lastRestoredBackupSetInfo;
+        this.migrationState = migrationState;
+        this.resultType = resultType;
+        this.sourceDatabaseName = sourceDatabaseName;
+        this.startedOn = startedOn;
     }
 
     /**

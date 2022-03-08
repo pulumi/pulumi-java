@@ -26,7 +26,7 @@ public final class SKUResponse {
     private SKUResponse(
         String name,
         @Nullable String tier) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.tier = tier;
     }
 

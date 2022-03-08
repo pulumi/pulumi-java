@@ -109,19 +109,19 @@ public final class GetJobResult {
         SystemDataResponse systemData,
         String type) {
         this.correlationData = correlationData;
-        this.created = Objects.requireNonNull(created);
+        this.created = created;
         this.description = description;
-        this.endTime = Objects.requireNonNull(endTime);
-        this.id = Objects.requireNonNull(id);
-        this.input = Objects.requireNonNull(input);
-        this.lastModified = Objects.requireNonNull(lastModified);
-        this.name = Objects.requireNonNull(name);
-        this.outputs = Objects.requireNonNull(outputs);
+        this.endTime = endTime;
+        this.id = id;
+        this.input = input;
+        this.lastModified = lastModified;
+        this.name = name;
+        this.outputs = outputs;
         this.priority = priority;
-        this.startTime = Objects.requireNonNull(startTime);
-        this.state = Objects.requireNonNull(state);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.startTime = startTime;
+        this.state = state;
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

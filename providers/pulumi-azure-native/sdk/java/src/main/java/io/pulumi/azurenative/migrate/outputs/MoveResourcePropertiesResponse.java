@@ -100,17 +100,17 @@ public final class MoveResourcePropertiesResponse {
         String sourceId,
         Object sourceResourceSettings,
         String targetId) {
-        this.dependsOn = Objects.requireNonNull(dependsOn);
+        this.dependsOn = dependsOn;
         this.dependsOnOverrides = dependsOnOverrides;
-        this.errors = Objects.requireNonNull(errors);
+        this.errors = errors;
         this.existingTargetId = existingTargetId;
-        this.isResolveRequired = Objects.requireNonNull(isResolveRequired);
-        this.moveStatus = Objects.requireNonNull(moveStatus);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.isResolveRequired = isResolveRequired;
+        this.moveStatus = moveStatus;
+        this.provisioningState = provisioningState;
         this.resourceSettings = resourceSettings;
-        this.sourceId = Objects.requireNonNull(sourceId);
-        this.sourceResourceSettings = Objects.requireNonNull(sourceResourceSettings);
-        this.targetId = Objects.requireNonNull(targetId);
+        this.sourceId = sourceId;
+        this.sourceResourceSettings = sourceResourceSettings;
+        this.targetId = targetId;
     }
 
     /**

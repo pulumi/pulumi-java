@@ -77,16 +77,16 @@ public final class ActionGroupResponse {
         @Nullable ScopeResponse scope,
         @Nullable String status,
         String type) {
-        this.actionGroupId = Objects.requireNonNull(actionGroupId);
+        this.actionGroupId = actionGroupId;
         this.conditions = conditions;
-        this.createdAt = Objects.requireNonNull(createdAt);
-        this.createdBy = Objects.requireNonNull(createdBy);
+        this.createdAt = createdAt;
+        this.createdBy = createdBy;
         this.description = description;
-        this.lastModifiedAt = Objects.requireNonNull(lastModifiedAt);
-        this.lastModifiedBy = Objects.requireNonNull(lastModifiedBy);
+        this.lastModifiedAt = lastModifiedAt;
+        this.lastModifiedBy = lastModifiedBy;
         this.scope = scope;
         this.status = status;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

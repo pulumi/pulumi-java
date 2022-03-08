@@ -43,11 +43,11 @@ public final class GetFavoriteProcessResult {
         String name,
         SystemDataResponse systemData,
         String type) {
-        this.actualProcessName = Objects.requireNonNull(actualProcessName);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.actualProcessName = actualProcessName;
+        this.id = id;
+        this.name = name;
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

@@ -73,11 +73,11 @@ public final class VirtualMachineScaleSetDataDiskResponse {
         @Nullable String name,
         @Nullable Boolean writeAcceleratorEnabled) {
         this.caching = caching;
-        this.createOption = Objects.requireNonNull(createOption);
+        this.createOption = createOption;
         this.diskIOPSReadWrite = diskIOPSReadWrite;
         this.diskMBpsReadWrite = diskMBpsReadWrite;
         this.diskSizeGB = diskSizeGB;
-        this.lun = Objects.requireNonNull(lun);
+        this.lun = lun;
         this.managedDisk = managedDisk;
         this.name = name;
         this.writeAcceleratorEnabled = writeAcceleratorEnabled;

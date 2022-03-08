@@ -155,17 +155,17 @@ public final class GetApiResult {
         this.authenticationSettings = authenticationSettings;
         this.description = description;
         this.displayName = displayName;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.isCurrent = isCurrent;
-        this.isOnline = Objects.requireNonNull(isOnline);
-        this.name = Objects.requireNonNull(name);
-        this.path = Objects.requireNonNull(path);
+        this.isOnline = isOnline;
+        this.name = name;
+        this.path = path;
         this.protocols = protocols;
         this.serviceUrl = serviceUrl;
         this.sourceApiId = sourceApiId;
         this.subscriptionKeyParameterNames = subscriptionKeyParameterNames;
         this.subscriptionRequired = subscriptionRequired;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

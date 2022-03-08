@@ -40,9 +40,9 @@ public final class GetTableServicePropertiesResult {
         String name,
         String type) {
         this.cors = cors;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.id = id;
+        this.name = name;
+        this.type = type;
     }
 
     /**

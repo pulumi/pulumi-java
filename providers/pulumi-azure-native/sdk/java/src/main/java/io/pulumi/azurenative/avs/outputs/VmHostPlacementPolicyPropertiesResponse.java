@@ -58,13 +58,13 @@ public final class VmHostPlacementPolicyPropertiesResponse {
         @Nullable String state,
         String type,
         List<String> vmMembers) {
-        this.affinityType = Objects.requireNonNull(affinityType);
+        this.affinityType = affinityType;
         this.displayName = displayName;
-        this.hostMembers = Objects.requireNonNull(hostMembers);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.hostMembers = hostMembers;
+        this.provisioningState = provisioningState;
         this.state = state;
-        this.type = Objects.requireNonNull(type);
-        this.vmMembers = Objects.requireNonNull(vmMembers);
+        this.type = type;
+        this.vmMembers = vmMembers;
     }
 
     /**

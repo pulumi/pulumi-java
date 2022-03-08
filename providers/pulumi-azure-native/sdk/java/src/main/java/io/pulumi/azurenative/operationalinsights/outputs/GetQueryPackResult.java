@@ -68,15 +68,15 @@ public final class GetQueryPackResult {
         String timeCreated,
         String timeModified,
         String type) {
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.queryPackId = Objects.requireNonNull(queryPackId);
+        this.id = id;
+        this.location = location;
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.queryPackId = queryPackId;
         this.tags = tags;
-        this.timeCreated = Objects.requireNonNull(timeCreated);
-        this.timeModified = Objects.requireNonNull(timeModified);
-        this.type = Objects.requireNonNull(type);
+        this.timeCreated = timeCreated;
+        this.timeModified = timeModified;
+        this.type = type;
     }
 
     /**

@@ -32,8 +32,8 @@ public final class EnterprisePolicyIdentityResponse {
         String systemAssignedIdentityPrincipalId,
         String tenantId,
         @Nullable String type) {
-        this.systemAssignedIdentityPrincipalId = Objects.requireNonNull(systemAssignedIdentityPrincipalId);
-        this.tenantId = Objects.requireNonNull(tenantId);
+        this.systemAssignedIdentityPrincipalId = systemAssignedIdentityPrincipalId;
+        this.tenantId = tenantId;
         this.type = type;
     }
 

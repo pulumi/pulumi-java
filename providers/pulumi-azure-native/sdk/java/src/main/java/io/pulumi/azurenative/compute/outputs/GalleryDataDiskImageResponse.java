@@ -41,8 +41,8 @@ public final class GalleryDataDiskImageResponse {
         Integer sizeInGB,
         @Nullable GalleryArtifactVersionSourceResponse source) {
         this.hostCaching = hostCaching;
-        this.lun = Objects.requireNonNull(lun);
-        this.sizeInGB = Objects.requireNonNull(sizeInGB);
+        this.lun = lun;
+        this.sizeInGB = sizeInGB;
         this.source = source;
     }
 

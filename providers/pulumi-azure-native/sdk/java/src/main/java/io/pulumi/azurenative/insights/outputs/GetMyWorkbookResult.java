@@ -112,21 +112,21 @@ public final class GetMyWorkbookResult {
         @Nullable String type,
         String userId,
         @Nullable String version) {
-        this.category = Objects.requireNonNull(category);
-        this.displayName = Objects.requireNonNull(displayName);
+        this.category = category;
+        this.displayName = displayName;
         this.etag = etag;
         this.id = id;
         this.identity = identity;
         this.kind = kind;
         this.location = location;
         this.name = name;
-        this.serializedData = Objects.requireNonNull(serializedData);
+        this.serializedData = serializedData;
         this.sourceId = sourceId;
         this.storageUri = storageUri;
         this.tags = tags;
-        this.timeModified = Objects.requireNonNull(timeModified);
+        this.timeModified = timeModified;
         this.type = type;
-        this.userId = Objects.requireNonNull(userId);
+        this.userId = userId;
         this.version = version;
     }
 

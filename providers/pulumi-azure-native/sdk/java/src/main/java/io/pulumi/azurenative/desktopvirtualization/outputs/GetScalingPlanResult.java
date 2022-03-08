@@ -131,25 +131,25 @@ public final class GetScalingPlanResult {
         @Nullable String timeZone,
         String type) {
         this.description = description;
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.exclusionTag = exclusionTag;
         this.friendlyName = friendlyName;
         this.hostPoolReferences = hostPoolReferences;
         this.hostPoolType = hostPoolType;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.identity = identity;
         this.kind = kind;
         this.location = location;
         this.managedBy = managedBy;
-        this.name = Objects.requireNonNull(name);
-        this.objectId = Objects.requireNonNull(objectId);
+        this.name = name;
+        this.objectId = objectId;
         this.plan = plan;
         this.ring = ring;
         this.schedules = schedules;
         this.sku = sku;
         this.tags = tags;
         this.timeZone = timeZone;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

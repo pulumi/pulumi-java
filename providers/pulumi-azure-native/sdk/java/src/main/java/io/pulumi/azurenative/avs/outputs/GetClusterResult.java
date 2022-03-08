@@ -63,14 +63,14 @@ public final class GetClusterResult {
         String provisioningState,
         SkuResponse sku,
         String type) {
-        this.clusterId = Objects.requireNonNull(clusterId);
-        this.clusterSize = Objects.requireNonNull(clusterSize);
-        this.hosts = Objects.requireNonNull(hosts);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.sku = Objects.requireNonNull(sku);
-        this.type = Objects.requireNonNull(type);
+        this.clusterId = clusterId;
+        this.clusterSize = clusterSize;
+        this.hosts = hosts;
+        this.id = id;
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.sku = sku;
+        this.type = type;
     }
 
     /**

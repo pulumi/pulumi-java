@@ -13,7 +13,7 @@ public final class TaskSchedulingPolicyResponse {
 
     @OutputCustomType.Constructor({"nodeFillType"})
     private TaskSchedulingPolicyResponse(String nodeFillType) {
-        this.nodeFillType = Objects.requireNonNull(nodeFillType);
+        this.nodeFillType = nodeFillType;
     }
 
     public String getNodeFillType() {

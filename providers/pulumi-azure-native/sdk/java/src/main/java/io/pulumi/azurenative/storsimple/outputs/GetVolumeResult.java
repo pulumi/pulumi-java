@@ -94,19 +94,19 @@ public final class GetVolumeResult {
         String volumeContainerId,
         String volumeStatus,
         String volumeType) {
-        this.accessControlRecordIds = Objects.requireNonNull(accessControlRecordIds);
-        this.backupPolicyIds = Objects.requireNonNull(backupPolicyIds);
-        this.backupStatus = Objects.requireNonNull(backupStatus);
-        this.id = Objects.requireNonNull(id);
+        this.accessControlRecordIds = accessControlRecordIds;
+        this.backupPolicyIds = backupPolicyIds;
+        this.backupStatus = backupStatus;
+        this.id = id;
         this.kind = kind;
-        this.monitoringStatus = Objects.requireNonNull(monitoringStatus);
-        this.name = Objects.requireNonNull(name);
-        this.operationStatus = Objects.requireNonNull(operationStatus);
-        this.sizeInBytes = Objects.requireNonNull(sizeInBytes);
-        this.type = Objects.requireNonNull(type);
-        this.volumeContainerId = Objects.requireNonNull(volumeContainerId);
-        this.volumeStatus = Objects.requireNonNull(volumeStatus);
-        this.volumeType = Objects.requireNonNull(volumeType);
+        this.monitoringStatus = monitoringStatus;
+        this.name = name;
+        this.operationStatus = operationStatus;
+        this.sizeInBytes = sizeInBytes;
+        this.type = type;
+        this.volumeContainerId = volumeContainerId;
+        this.volumeStatus = volumeStatus;
+        this.volumeType = volumeType;
     }
 
     /**

@@ -43,10 +43,10 @@ public final class AzureBlobFileSystemConfigurationResponse {
         String relativeMountPath,
         @Nullable String sasKey) {
         this.accountKey = accountKey;
-        this.accountName = Objects.requireNonNull(accountName);
+        this.accountName = accountName;
         this.blobfuseOptions = blobfuseOptions;
-        this.containerName = Objects.requireNonNull(containerName);
-        this.relativeMountPath = Objects.requireNonNull(relativeMountPath);
+        this.containerName = containerName;
+        this.relativeMountPath = relativeMountPath;
         this.sasKey = sasKey;
     }
 

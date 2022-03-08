@@ -76,16 +76,16 @@ public final class GetTransactionNodeResult {
         String publicKey,
         String type,
         String userName) {
-        this.dns = Objects.requireNonNull(dns);
+        this.dns = dns;
         this.firewallRules = firewallRules;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.password = password;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.publicKey = Objects.requireNonNull(publicKey);
-        this.type = Objects.requireNonNull(type);
-        this.userName = Objects.requireNonNull(userName);
+        this.provisioningState = provisioningState;
+        this.publicKey = publicKey;
+        this.type = type;
+        this.userName = userName;
     }
 
     /**

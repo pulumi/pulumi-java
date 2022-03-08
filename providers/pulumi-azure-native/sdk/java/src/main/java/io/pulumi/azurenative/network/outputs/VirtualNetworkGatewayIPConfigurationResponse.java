@@ -63,12 +63,12 @@ public final class VirtualNetworkGatewayIPConfigurationResponse {
         String provisioningState,
         @Nullable SubResourceResponse publicIPAddress,
         @Nullable SubResourceResponse subnet) {
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.id = id;
         this.name = name;
-        this.privateIPAddress = Objects.requireNonNull(privateIPAddress);
+        this.privateIPAddress = privateIPAddress;
         this.privateIPAllocationMethod = privateIPAllocationMethod;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.publicIPAddress = publicIPAddress;
         this.subnet = subnet;
     }

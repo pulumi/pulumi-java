@@ -43,7 +43,7 @@ public final class AzureBlobStorageLocationResponse {
         this.container = container;
         this.fileName = fileName;
         this.folderPath = folderPath;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

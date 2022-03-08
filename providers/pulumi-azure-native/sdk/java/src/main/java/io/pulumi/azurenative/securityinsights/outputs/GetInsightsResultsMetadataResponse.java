@@ -28,7 +28,7 @@ public final class GetInsightsResultsMetadataResponse {
         @Nullable List<GetInsightsErrorResponse> errors,
         Integer totalCount) {
         this.errors = errors;
-        this.totalCount = Objects.requireNonNull(totalCount);
+        this.totalCount = totalCount;
     }
 
     /**

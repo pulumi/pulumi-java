@@ -41,9 +41,9 @@ public final class ListBuildTaskSourceRepositoryPropertiesResult {
         @Nullable SourceControlAuthInfoResponse sourceControlAuthProperties,
         String sourceControlType) {
         this.isCommitTriggerEnabled = isCommitTriggerEnabled;
-        this.repositoryUrl = Objects.requireNonNull(repositoryUrl);
+        this.repositoryUrl = repositoryUrl;
         this.sourceControlAuthProperties = sourceControlAuthProperties;
-        this.sourceControlType = Objects.requireNonNull(sourceControlType);
+        this.sourceControlType = sourceControlType;
     }
 
     /**

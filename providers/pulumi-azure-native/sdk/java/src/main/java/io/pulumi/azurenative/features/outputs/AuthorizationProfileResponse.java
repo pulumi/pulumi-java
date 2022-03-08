@@ -42,11 +42,11 @@ public final class AuthorizationProfileResponse {
         String requestedTime,
         String requester,
         String requesterObjectId) {
-        this.approvedTime = Objects.requireNonNull(approvedTime);
-        this.approver = Objects.requireNonNull(approver);
-        this.requestedTime = Objects.requireNonNull(requestedTime);
-        this.requester = Objects.requireNonNull(requester);
-        this.requesterObjectId = Objects.requireNonNull(requesterObjectId);
+        this.approvedTime = approvedTime;
+        this.approver = approver;
+        this.requestedTime = requestedTime;
+        this.requester = requester;
+        this.requesterObjectId = requesterObjectId;
     }
 
     /**

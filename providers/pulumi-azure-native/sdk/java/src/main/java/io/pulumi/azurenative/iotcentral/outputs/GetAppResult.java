@@ -76,16 +76,16 @@ public final class GetAppResult {
         @Nullable Map<String,String> tags,
         @Nullable String template,
         String type) {
-        this.applicationId = Objects.requireNonNull(applicationId);
+        this.applicationId = applicationId;
         this.displayName = displayName;
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.sku = Objects.requireNonNull(sku);
+        this.id = id;
+        this.location = location;
+        this.name = name;
+        this.sku = sku;
         this.subdomain = subdomain;
         this.tags = tags;
         this.template = template;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

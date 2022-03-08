@@ -92,19 +92,19 @@ public final class GetDistributedAvailabilityGroupResult {
         @Nullable String targetDatabase,
         String targetReplicaId,
         String type) {
-        this.distributedAvailabilityGroupId = Objects.requireNonNull(distributedAvailabilityGroupId);
-        this.id = Objects.requireNonNull(id);
-        this.lastHardenedLsn = Objects.requireNonNull(lastHardenedLsn);
-        this.linkState = Objects.requireNonNull(linkState);
-        this.name = Objects.requireNonNull(name);
+        this.distributedAvailabilityGroupId = distributedAvailabilityGroupId;
+        this.id = id;
+        this.lastHardenedLsn = lastHardenedLsn;
+        this.linkState = linkState;
+        this.name = name;
         this.primaryAvailabilityGroupName = primaryAvailabilityGroupName;
         this.replicationMode = replicationMode;
         this.secondaryAvailabilityGroupName = secondaryAvailabilityGroupName;
         this.sourceEndpoint = sourceEndpoint;
-        this.sourceReplicaId = Objects.requireNonNull(sourceReplicaId);
+        this.sourceReplicaId = sourceReplicaId;
         this.targetDatabase = targetDatabase;
-        this.targetReplicaId = Objects.requireNonNull(targetReplicaId);
-        this.type = Objects.requireNonNull(type);
+        this.targetReplicaId = targetReplicaId;
+        this.type = type;
     }
 
     /**

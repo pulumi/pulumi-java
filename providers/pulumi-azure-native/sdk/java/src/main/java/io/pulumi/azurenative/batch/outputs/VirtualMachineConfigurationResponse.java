@@ -79,9 +79,9 @@ public final class VirtualMachineConfigurationResponse {
         this.dataDisks = dataDisks;
         this.diskEncryptionConfiguration = diskEncryptionConfiguration;
         this.extensions = extensions;
-        this.imageReference = Objects.requireNonNull(imageReference);
+        this.imageReference = imageReference;
         this.licenseType = licenseType;
-        this.nodeAgentSkuId = Objects.requireNonNull(nodeAgentSkuId);
+        this.nodeAgentSkuId = nodeAgentSkuId;
         this.nodePlacementConfiguration = nodePlacementConfiguration;
         this.windowsConfiguration = windowsConfiguration;
     }

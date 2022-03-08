@@ -52,11 +52,11 @@ public final class GetRegisteredAsnResult {
         String provisioningState,
         String type) {
         this.asn = asn;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.peeringServicePrefixKey = Objects.requireNonNull(peeringServicePrefixKey);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.type = Objects.requireNonNull(type);
+        this.id = id;
+        this.name = name;
+        this.peeringServicePrefixKey = peeringServicePrefixKey;
+        this.provisioningState = provisioningState;
+        this.type = type;
     }
 
     /**

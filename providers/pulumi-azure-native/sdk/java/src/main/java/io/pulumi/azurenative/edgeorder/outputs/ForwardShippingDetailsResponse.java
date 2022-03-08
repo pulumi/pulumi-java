@@ -36,10 +36,10 @@ public final class ForwardShippingDetailsResponse {
         String carrierName,
         String trackingId,
         String trackingUrl) {
-        this.carrierDisplayName = Objects.requireNonNull(carrierDisplayName);
-        this.carrierName = Objects.requireNonNull(carrierName);
-        this.trackingId = Objects.requireNonNull(trackingId);
-        this.trackingUrl = Objects.requireNonNull(trackingUrl);
+        this.carrierDisplayName = carrierDisplayName;
+        this.carrierName = carrierName;
+        this.trackingId = trackingId;
+        this.trackingUrl = trackingUrl;
     }
 
     /**

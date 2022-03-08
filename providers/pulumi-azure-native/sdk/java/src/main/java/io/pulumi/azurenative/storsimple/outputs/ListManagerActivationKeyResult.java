@@ -17,7 +17,7 @@ public final class ListManagerActivationKeyResult {
 
     @OutputCustomType.Constructor({"activationKey"})
     private ListManagerActivationKeyResult(String activationKey) {
-        this.activationKey = Objects.requireNonNull(activationKey);
+        this.activationKey = activationKey;
     }
 
     /**

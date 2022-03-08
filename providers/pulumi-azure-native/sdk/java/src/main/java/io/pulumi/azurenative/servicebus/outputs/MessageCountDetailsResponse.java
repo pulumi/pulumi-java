@@ -42,11 +42,11 @@ public final class MessageCountDetailsResponse {
         Double scheduledMessageCount,
         Double transferDeadLetterMessageCount,
         Double transferMessageCount) {
-        this.activeMessageCount = Objects.requireNonNull(activeMessageCount);
-        this.deadLetterMessageCount = Objects.requireNonNull(deadLetterMessageCount);
-        this.scheduledMessageCount = Objects.requireNonNull(scheduledMessageCount);
-        this.transferDeadLetterMessageCount = Objects.requireNonNull(transferDeadLetterMessageCount);
-        this.transferMessageCount = Objects.requireNonNull(transferMessageCount);
+        this.activeMessageCount = activeMessageCount;
+        this.deadLetterMessageCount = deadLetterMessageCount;
+        this.scheduledMessageCount = scheduledMessageCount;
+        this.transferDeadLetterMessageCount = transferDeadLetterMessageCount;
+        this.transferMessageCount = transferMessageCount;
     }
 
     /**

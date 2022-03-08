@@ -92,16 +92,16 @@ public final class MetricTriggerResponse {
         String timeWindow) {
         this.dimensions = dimensions;
         this.dividePerInstance = dividePerInstance;
-        this.metricName = Objects.requireNonNull(metricName);
+        this.metricName = metricName;
         this.metricNamespace = metricNamespace;
         this.metricResourceLocation = metricResourceLocation;
-        this.metricResourceUri = Objects.requireNonNull(metricResourceUri);
-        this.operator = Objects.requireNonNull(operator);
-        this.statistic = Objects.requireNonNull(statistic);
-        this.threshold = Objects.requireNonNull(threshold);
-        this.timeAggregation = Objects.requireNonNull(timeAggregation);
-        this.timeGrain = Objects.requireNonNull(timeGrain);
-        this.timeWindow = Objects.requireNonNull(timeWindow);
+        this.metricResourceUri = metricResourceUri;
+        this.operator = operator;
+        this.statistic = statistic;
+        this.threshold = threshold;
+        this.timeAggregation = timeAggregation;
+        this.timeGrain = timeGrain;
+        this.timeWindow = timeWindow;
     }
 
     /**

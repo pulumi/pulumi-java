@@ -63,14 +63,14 @@ public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse {
         MigrationEligibilityInfoResponse migrationEligibility,
         String name,
         String resultType) {
-        this.id = Objects.requireNonNull(id);
-        this.isEnabled = Objects.requireNonNull(isEnabled);
-        this.jobCategory = Objects.requireNonNull(jobCategory);
-        this.jobOwner = Objects.requireNonNull(jobOwner);
-        this.lastExecutedOn = Objects.requireNonNull(lastExecutedOn);
-        this.migrationEligibility = Objects.requireNonNull(migrationEligibility);
-        this.name = Objects.requireNonNull(name);
-        this.resultType = Objects.requireNonNull(resultType);
+        this.id = id;
+        this.isEnabled = isEnabled;
+        this.jobCategory = jobCategory;
+        this.jobOwner = jobOwner;
+        this.lastExecutedOn = lastExecutedOn;
+        this.migrationEligibility = migrationEligibility;
+        this.name = name;
+        this.resultType = resultType;
     }
 
     /**

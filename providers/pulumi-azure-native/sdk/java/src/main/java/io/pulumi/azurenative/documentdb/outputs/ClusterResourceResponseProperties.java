@@ -104,12 +104,12 @@ public final class ClusterResourceResponseProperties {
         this.delegatedManagementSubnetId = delegatedManagementSubnetId;
         this.externalGossipCertificates = externalGossipCertificates;
         this.externalSeedNodes = externalSeedNodes;
-        this.gossipCertificates = Objects.requireNonNull(gossipCertificates);
+        this.gossipCertificates = gossipCertificates;
         this.hoursBetweenBackups = hoursBetweenBackups;
         this.prometheusEndpoint = prometheusEndpoint;
         this.provisioningState = provisioningState;
         this.repairEnabled = repairEnabled;
-        this.seedNodes = Objects.requireNonNull(seedNodes);
+        this.seedNodes = seedNodes;
     }
 
     /**

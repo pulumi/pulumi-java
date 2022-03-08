@@ -36,10 +36,10 @@ public final class StorageAccountInternetEndpointsResponse {
         String dfs,
         String file,
         String web) {
-        this.blob = Objects.requireNonNull(blob);
-        this.dfs = Objects.requireNonNull(dfs);
-        this.file = Objects.requireNonNull(file);
-        this.web = Objects.requireNonNull(web);
+        this.blob = blob;
+        this.dfs = dfs;
+        this.file = file;
+        this.web = web;
     }
 
     /**

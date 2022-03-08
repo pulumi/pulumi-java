@@ -29,7 +29,7 @@ public final class LogSchedulePolicyResponse {
         @Nullable Integer scheduleFrequencyInMins,
         String schedulePolicyType) {
         this.scheduleFrequencyInMins = scheduleFrequencyInMins;
-        this.schedulePolicyType = Objects.requireNonNull(schedulePolicyType);
+        this.schedulePolicyType = schedulePolicyType;
     }
 
     /**

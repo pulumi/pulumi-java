@@ -141,22 +141,22 @@ public final class GetPartnerRegistrationResult {
         @Nullable String visibilityState) {
         this.authorizedAzureSubscriptionIds = authorizedAzureSubscriptionIds;
         this.customerServiceUri = customerServiceUri;
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
+        this.id = id;
+        this.location = location;
         this.logoUri = logoUri;
         this.longDescription = longDescription;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.partnerCustomerServiceExtension = partnerCustomerServiceExtension;
         this.partnerCustomerServiceNumber = partnerCustomerServiceNumber;
         this.partnerName = partnerName;
         this.partnerResourceTypeDescription = partnerResourceTypeDescription;
         this.partnerResourceTypeDisplayName = partnerResourceTypeDisplayName;
         this.partnerResourceTypeName = partnerResourceTypeName;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.setupUri = setupUri;
-        this.systemData = Objects.requireNonNull(systemData);
+        this.systemData = systemData;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.visibilityState = visibilityState;
     }
 

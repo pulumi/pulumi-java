@@ -79,15 +79,15 @@ public final class GetNetworkProfileResult {
         @Nullable Map<String,String> tags,
         String type) {
         this.containerNetworkInterfaceConfigurations = containerNetworkInterfaceConfigurations;
-        this.containerNetworkInterfaces = Objects.requireNonNull(containerNetworkInterfaces);
-        this.etag = Objects.requireNonNull(etag);
+        this.containerNetworkInterfaces = containerNetworkInterfaces;
+        this.etag = etag;
         this.id = id;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.resourceGuid = Objects.requireNonNull(resourceGuid);
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.resourceGuid = resourceGuid;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

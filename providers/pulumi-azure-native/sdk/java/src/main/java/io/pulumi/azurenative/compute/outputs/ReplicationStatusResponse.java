@@ -26,8 +26,8 @@ public final class ReplicationStatusResponse {
     private ReplicationStatusResponse(
         String aggregatedState,
         List<RegionalReplicationStatusResponse> summary) {
-        this.aggregatedState = Objects.requireNonNull(aggregatedState);
-        this.summary = Objects.requireNonNull(summary);
+        this.aggregatedState = aggregatedState;
+        this.summary = summary;
     }
 
     /**

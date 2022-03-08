@@ -55,13 +55,13 @@ public final class OnPremiseSqlResourceDetailsResponse {
         String sourceComputerId,
         String vmuuid,
         String workspaceId) {
-        this.databaseName = Objects.requireNonNull(databaseName);
-        this.machineName = Objects.requireNonNull(machineName);
-        this.serverName = Objects.requireNonNull(serverName);
-        this.source = Objects.requireNonNull(source);
-        this.sourceComputerId = Objects.requireNonNull(sourceComputerId);
-        this.vmuuid = Objects.requireNonNull(vmuuid);
-        this.workspaceId = Objects.requireNonNull(workspaceId);
+        this.databaseName = databaseName;
+        this.machineName = machineName;
+        this.serverName = serverName;
+        this.source = source;
+        this.sourceComputerId = sourceComputerId;
+        this.vmuuid = vmuuid;
+        this.workspaceId = workspaceId;
     }
 
     /**

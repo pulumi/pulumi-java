@@ -30,9 +30,9 @@ public final class TimeResponse {
         Integer hours,
         Integer minutes,
         Integer seconds) {
-        this.hours = Objects.requireNonNull(hours);
-        this.minutes = Objects.requireNonNull(minutes);
-        this.seconds = Objects.requireNonNull(seconds);
+        this.hours = hours;
+        this.minutes = minutes;
+        this.seconds = seconds;
     }
 
     /**

@@ -62,14 +62,14 @@ public final class GetContainerResult {
         RefreshDetailsResponse refreshDetails,
         SystemDataResponse systemData,
         String type) {
-        this.containerStatus = Objects.requireNonNull(containerStatus);
-        this.createdDateTime = Objects.requireNonNull(createdDateTime);
-        this.dataFormat = Objects.requireNonNull(dataFormat);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.refreshDetails = Objects.requireNonNull(refreshDetails);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.containerStatus = containerStatus;
+        this.createdDateTime = createdDateTime;
+        this.dataFormat = dataFormat;
+        this.id = id;
+        this.name = name;
+        this.refreshDetails = refreshDetails;
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

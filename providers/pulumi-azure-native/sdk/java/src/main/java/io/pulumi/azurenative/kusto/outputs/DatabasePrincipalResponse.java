@@ -59,10 +59,10 @@ public final class DatabasePrincipalResponse {
         this.appId = appId;
         this.email = email;
         this.fqn = fqn;
-        this.name = Objects.requireNonNull(name);
-        this.role = Objects.requireNonNull(role);
-        this.tenantName = Objects.requireNonNull(tenantName);
-        this.type = Objects.requireNonNull(type);
+        this.name = name;
+        this.role = role;
+        this.tenantName = tenantName;
+        this.type = type;
     }
 
     /**

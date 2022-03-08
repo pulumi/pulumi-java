@@ -46,10 +46,10 @@ public final class MigrateSqlServerSqlDbTaskOutputValidationResultResponse {
         String resultType,
         String status,
         @Nullable Map<String,MigrationValidationDatabaseSummaryResultResponse> summaryResults) {
-        this.id = Objects.requireNonNull(id);
-        this.migrationId = Objects.requireNonNull(migrationId);
-        this.resultType = Objects.requireNonNull(resultType);
-        this.status = Objects.requireNonNull(status);
+        this.id = id;
+        this.migrationId = migrationId;
+        this.resultType = resultType;
+        this.status = status;
         this.summaryResults = summaryResults;
     }
 

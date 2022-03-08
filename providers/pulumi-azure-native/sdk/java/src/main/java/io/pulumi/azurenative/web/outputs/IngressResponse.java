@@ -52,7 +52,7 @@ public final class IngressResponse {
         @Nullable String transport) {
         this.allowInsecure = allowInsecure;
         this.external = external;
-        this.fqdn = Objects.requireNonNull(fqdn);
+        this.fqdn = fqdn;
         this.targetPort = targetPort;
         this.traffic = traffic;
         this.transport = transport;

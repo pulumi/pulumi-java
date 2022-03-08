@@ -32,8 +32,8 @@ public final class PeriodicTimerSourceInfoResponse {
         String schedule,
         String startTime,
         @Nullable String topic) {
-        this.schedule = Objects.requireNonNull(schedule);
-        this.startTime = Objects.requireNonNull(startTime);
+        this.schedule = schedule;
+        this.startTime = startTime;
         this.topic = topic;
     }
 

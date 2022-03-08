@@ -37,7 +37,7 @@ public final class AzureSqlProtectionPolicyResponse {
         String backupManagementType,
         @Nullable Integer protectedItemsCount,
         @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy) {
-        this.backupManagementType = Objects.requireNonNull(backupManagementType);
+        this.backupManagementType = backupManagementType;
         this.protectedItemsCount = protectedItemsCount;
         this.retentionPolicy = retentionPolicy;
     }

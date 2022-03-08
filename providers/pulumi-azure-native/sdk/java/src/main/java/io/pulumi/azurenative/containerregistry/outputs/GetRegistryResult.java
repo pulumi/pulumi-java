@@ -106,19 +106,19 @@ public final class GetRegistryResult {
         @Nullable Map<String,String> tags,
         String type) {
         this.adminUserEnabled = adminUserEnabled;
-        this.creationDate = Objects.requireNonNull(creationDate);
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.loginServer = Objects.requireNonNull(loginServer);
-        this.name = Objects.requireNonNull(name);
+        this.creationDate = creationDate;
+        this.id = id;
+        this.location = location;
+        this.loginServer = loginServer;
+        this.name = name;
         this.networkRuleSet = networkRuleSet;
         this.policies = policies;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.sku = Objects.requireNonNull(sku);
-        this.status = Objects.requireNonNull(status);
+        this.provisioningState = provisioningState;
+        this.sku = sku;
+        this.status = status;
         this.storageAccount = storageAccount;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

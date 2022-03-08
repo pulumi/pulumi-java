@@ -25,8 +25,8 @@ public final class RedshiftUnloadSettingsResponse {
     private RedshiftUnloadSettingsResponse(
         Object bucketName,
         LinkedServiceReferenceResponse s3LinkedServiceName) {
-        this.bucketName = Objects.requireNonNull(bucketName);
-        this.s3LinkedServiceName = Objects.requireNonNull(s3LinkedServiceName);
+        this.bucketName = bucketName;
+        this.s3LinkedServiceName = s3LinkedServiceName;
     }
 
     /**

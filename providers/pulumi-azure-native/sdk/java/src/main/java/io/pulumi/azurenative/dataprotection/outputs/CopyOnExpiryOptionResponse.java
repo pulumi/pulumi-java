@@ -18,7 +18,7 @@ public final class CopyOnExpiryOptionResponse {
 
     @OutputCustomType.Constructor({"objectType"})
     private CopyOnExpiryOptionResponse(String objectType) {
-        this.objectType = Objects.requireNonNull(objectType);
+        this.objectType = objectType;
     }
 
     /**

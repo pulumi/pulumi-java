@@ -36,10 +36,10 @@ public final class GetTrustedIdProviderResult {
         String idProvider,
         String name,
         String type) {
-        this.id = Objects.requireNonNull(id);
-        this.idProvider = Objects.requireNonNull(idProvider);
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.id = id;
+        this.idProvider = idProvider;
+        this.name = name;
+        this.type = type;
     }
 
     /**

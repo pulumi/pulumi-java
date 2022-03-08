@@ -43,7 +43,7 @@ public final class ContainerPartitionKeyResponse {
         @Nullable Integer version) {
         this.kind = kind;
         this.paths = paths;
-        this.systemKey = Objects.requireNonNull(systemKey);
+        this.systemKey = systemKey;
         this.version = version;
     }
 

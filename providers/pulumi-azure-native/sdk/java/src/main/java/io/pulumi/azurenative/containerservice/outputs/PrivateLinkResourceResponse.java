@@ -54,7 +54,7 @@ public final class PrivateLinkResourceResponse {
         this.groupId = groupId;
         this.id = id;
         this.name = name;
-        this.privateLinkServiceID = Objects.requireNonNull(privateLinkServiceID);
+        this.privateLinkServiceID = privateLinkServiceID;
         this.requiredMembers = requiredMembers;
         this.type = type;
     }

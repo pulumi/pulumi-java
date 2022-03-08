@@ -77,16 +77,16 @@ public final class GetIntegrationAccountCertificateResult {
         @Nullable String publicCertificate,
         @Nullable Map<String,String> tags,
         String type) {
-        this.changedTime = Objects.requireNonNull(changedTime);
-        this.createdTime = Objects.requireNonNull(createdTime);
-        this.id = Objects.requireNonNull(id);
+        this.changedTime = changedTime;
+        this.createdTime = createdTime;
+        this.id = id;
         this.key = key;
         this.location = location;
         this.metadata = metadata;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.publicCertificate = publicCertificate;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

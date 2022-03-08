@@ -66,7 +66,7 @@ public final class BlobStreamInputDataSourceResponse {
         this.sourcePartitionCount = sourcePartitionCount;
         this.storageAccounts = storageAccounts;
         this.timeFormat = timeFormat;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

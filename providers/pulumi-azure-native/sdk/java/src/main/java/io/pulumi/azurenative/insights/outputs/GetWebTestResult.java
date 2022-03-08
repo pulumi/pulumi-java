@@ -126,19 +126,19 @@ public final class GetWebTestResult {
         this.description = description;
         this.enabled = enabled;
         this.frequency = frequency;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.kind = kind;
-        this.location = Objects.requireNonNull(location);
-        this.locations = Objects.requireNonNull(locations);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.location = location;
+        this.locations = locations;
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.retryEnabled = retryEnabled;
-        this.syntheticMonitorId = Objects.requireNonNull(syntheticMonitorId);
+        this.syntheticMonitorId = syntheticMonitorId;
         this.tags = tags;
         this.timeout = timeout;
-        this.type = Objects.requireNonNull(type);
-        this.webTestKind = Objects.requireNonNull(webTestKind);
-        this.webTestName = Objects.requireNonNull(webTestName);
+        this.type = type;
+        this.webTestKind = webTestKind;
+        this.webTestName = webTestName;
     }
 
     /**

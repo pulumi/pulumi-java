@@ -24,8 +24,8 @@ public final class EdifactAgreementContentResponse {
     private EdifactAgreementContentResponse(
         EdifactOneWayAgreementResponse receiveAgreement,
         EdifactOneWayAgreementResponse sendAgreement) {
-        this.receiveAgreement = Objects.requireNonNull(receiveAgreement);
-        this.sendAgreement = Objects.requireNonNull(sendAgreement);
+        this.receiveAgreement = receiveAgreement;
+        this.sendAgreement = sendAgreement;
     }
 
     /**

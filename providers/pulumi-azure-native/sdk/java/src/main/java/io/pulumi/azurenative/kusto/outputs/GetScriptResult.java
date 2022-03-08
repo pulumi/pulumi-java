@@ -66,12 +66,12 @@ public final class GetScriptResult {
         String type) {
         this.continueOnErrors = continueOnErrors;
         this.forceUpdateTag = forceUpdateTag;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.scriptUrl = Objects.requireNonNull(scriptUrl);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.id = id;
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.scriptUrl = scriptUrl;
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

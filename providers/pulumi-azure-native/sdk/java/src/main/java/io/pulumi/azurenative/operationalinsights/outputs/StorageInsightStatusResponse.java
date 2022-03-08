@@ -27,7 +27,7 @@ public final class StorageInsightStatusResponse {
         @Nullable String description,
         String state) {
         this.description = description;
-        this.state = Objects.requireNonNull(state);
+        this.state = state;
     }
 
     /**

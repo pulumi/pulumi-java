@@ -126,7 +126,7 @@ public final class SqlMISinkResponse {
         this.storedProcedureParameters = storedProcedureParameters;
         this.storedProcedureTableTypeParameterName = storedProcedureTableTypeParameterName;
         this.tableOption = tableOption;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.upsertSettings = upsertSettings;
         this.writeBatchSize = writeBatchSize;
         this.writeBatchTimeout = writeBatchTimeout;

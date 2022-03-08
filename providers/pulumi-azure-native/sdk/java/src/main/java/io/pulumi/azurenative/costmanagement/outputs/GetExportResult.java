@@ -78,16 +78,16 @@ public final class GetExportResult {
         @Nullable ExportExecutionListResultResponse runHistory,
         @Nullable ExportScheduleResponse schedule,
         String type) {
-        this.definition = Objects.requireNonNull(definition);
-        this.deliveryInfo = Objects.requireNonNull(deliveryInfo);
+        this.definition = definition;
+        this.deliveryInfo = deliveryInfo;
         this.eTag = eTag;
         this.format = format;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.nextRunTimeEstimate = Objects.requireNonNull(nextRunTimeEstimate);
+        this.id = id;
+        this.name = name;
+        this.nextRunTimeEstimate = nextRunTimeEstimate;
         this.runHistory = runHistory;
         this.schedule = schedule;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

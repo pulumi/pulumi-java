@@ -59,13 +59,13 @@ public final class GetSolutionResult {
         SolutionPropertiesResponse properties,
         @Nullable Map<String,String> tags,
         String type) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.plan = plan;
-        this.properties = Objects.requireNonNull(properties);
+        this.properties = properties;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

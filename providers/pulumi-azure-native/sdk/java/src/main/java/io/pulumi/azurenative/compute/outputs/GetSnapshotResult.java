@@ -168,30 +168,30 @@ public final class GetSnapshotResult {
         String timeCreated,
         String type,
         String uniqueId) {
-        this.creationData = Objects.requireNonNull(creationData);
+        this.creationData = creationData;
         this.diskAccessId = diskAccessId;
-        this.diskSizeBytes = Objects.requireNonNull(diskSizeBytes);
+        this.diskSizeBytes = diskSizeBytes;
         this.diskSizeGB = diskSizeGB;
-        this.diskState = Objects.requireNonNull(diskState);
+        this.diskState = diskState;
         this.encryption = encryption;
         this.encryptionSettingsCollection = encryptionSettingsCollection;
         this.extendedLocation = extendedLocation;
         this.hyperVGeneration = hyperVGeneration;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.incremental = incremental;
-        this.location = Objects.requireNonNull(location);
-        this.managedBy = Objects.requireNonNull(managedBy);
-        this.name = Objects.requireNonNull(name);
+        this.location = location;
+        this.managedBy = managedBy;
+        this.name = name;
         this.networkAccessPolicy = networkAccessPolicy;
         this.osType = osType;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.purchasePlan = purchasePlan;
         this.sku = sku;
         this.supportsHibernation = supportsHibernation;
         this.tags = tags;
-        this.timeCreated = Objects.requireNonNull(timeCreated);
-        this.type = Objects.requireNonNull(type);
-        this.uniqueId = Objects.requireNonNull(uniqueId);
+        this.timeCreated = timeCreated;
+        this.type = type;
+        this.uniqueId = uniqueId;
     }
 
     /**

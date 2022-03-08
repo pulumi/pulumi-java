@@ -34,7 +34,7 @@ public final class BasicAuthenticationResponse {
         String type,
         @Nullable String username) {
         this.password = password;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.username = username;
     }
 

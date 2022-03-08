@@ -62,10 +62,10 @@ public final class GetManagementGroupResult {
         this.children = children;
         this.details = details;
         this.displayName = displayName;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.tenantId = tenantId;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

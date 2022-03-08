@@ -42,7 +42,7 @@ public final class AliasPathResponse {
         @Nullable String path,
         @Nullable AliasPatternResponse pattern) {
         this.apiVersions = apiVersions;
-        this.metadata = Objects.requireNonNull(metadata);
+        this.metadata = metadata;
         this.path = path;
         this.pattern = pattern;
     }

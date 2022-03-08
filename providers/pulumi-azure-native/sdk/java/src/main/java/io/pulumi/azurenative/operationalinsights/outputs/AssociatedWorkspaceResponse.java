@@ -36,10 +36,10 @@ public final class AssociatedWorkspaceResponse {
         String resourceId,
         String workspaceId,
         String workspaceName) {
-        this.associateDate = Objects.requireNonNull(associateDate);
-        this.resourceId = Objects.requireNonNull(resourceId);
-        this.workspaceId = Objects.requireNonNull(workspaceId);
-        this.workspaceName = Objects.requireNonNull(workspaceName);
+        this.associateDate = associateDate;
+        this.resourceId = resourceId;
+        this.workspaceId = workspaceId;
+        this.workspaceName = workspaceName;
     }
 
     /**

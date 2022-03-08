@@ -69,15 +69,15 @@ public final class GetSyncAgentResult {
         @Nullable String syncDatabaseId,
         String type,
         String version) {
-        this.expiryTime = Objects.requireNonNull(expiryTime);
-        this.id = Objects.requireNonNull(id);
-        this.isUpToDate = Objects.requireNonNull(isUpToDate);
-        this.lastAliveTime = Objects.requireNonNull(lastAliveTime);
-        this.name = Objects.requireNonNull(name);
-        this.state = Objects.requireNonNull(state);
+        this.expiryTime = expiryTime;
+        this.id = id;
+        this.isUpToDate = isUpToDate;
+        this.lastAliveTime = lastAliveTime;
+        this.name = name;
+        this.state = state;
         this.syncDatabaseId = syncDatabaseId;
-        this.type = Objects.requireNonNull(type);
-        this.version = Objects.requireNonNull(version);
+        this.type = type;
+        this.version = version;
     }
 
     /**

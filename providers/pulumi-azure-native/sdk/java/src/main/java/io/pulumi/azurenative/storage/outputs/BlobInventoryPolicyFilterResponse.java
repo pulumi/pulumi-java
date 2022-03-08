@@ -40,7 +40,7 @@ public final class BlobInventoryPolicyFilterResponse {
         @Nullable Boolean includeBlobVersions,
         @Nullable Boolean includeSnapshots,
         @Nullable List<String> prefixMatch) {
-        this.blobTypes = Objects.requireNonNull(blobTypes);
+        this.blobTypes = blobTypes;
         this.includeBlobVersions = includeBlobVersions;
         this.includeSnapshots = includeSnapshots;
         this.prefixMatch = prefixMatch;

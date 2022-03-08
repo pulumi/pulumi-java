@@ -26,8 +26,8 @@ public final class WaitStepPropertiesResponse {
     private WaitStepPropertiesResponse(
         WaitStepAttributesResponse attributes,
         String stepType) {
-        this.attributes = Objects.requireNonNull(attributes);
-        this.stepType = Objects.requireNonNull(stepType);
+        this.attributes = attributes;
+        this.stepType = stepType;
     }
 
     /**

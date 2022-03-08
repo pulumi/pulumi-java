@@ -105,16 +105,16 @@ public final class GetMetadataActivityResponse {
         @Nullable Object storeSettings,
         String type,
         @Nullable List<UserPropertyResponse> userProperties) {
-        this.dataset = Objects.requireNonNull(dataset);
+        this.dataset = dataset;
         this.dependsOn = dependsOn;
         this.description = description;
         this.fieldList = fieldList;
         this.formatSettings = formatSettings;
         this.linkedServiceName = linkedServiceName;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.policy = policy;
         this.storeSettings = storeSettings;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.userProperties = userProperties;
     }
 

@@ -106,19 +106,19 @@ public final class GetDedicatedHostResult {
         String type,
         List<SubResourceReadOnlyResponse> virtualMachines) {
         this.autoReplaceOnFailure = autoReplaceOnFailure;
-        this.hostId = Objects.requireNonNull(hostId);
-        this.id = Objects.requireNonNull(id);
-        this.instanceView = Objects.requireNonNull(instanceView);
+        this.hostId = hostId;
+        this.id = id;
+        this.instanceView = instanceView;
         this.licenseType = licenseType;
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
+        this.location = location;
+        this.name = name;
         this.platformFaultDomain = platformFaultDomain;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.provisioningTime = Objects.requireNonNull(provisioningTime);
-        this.sku = Objects.requireNonNull(sku);
+        this.provisioningState = provisioningState;
+        this.provisioningTime = provisioningTime;
+        this.sku = sku;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
-        this.virtualMachines = Objects.requireNonNull(virtualMachines);
+        this.type = type;
+        this.virtualMachines = virtualMachines;
     }
 
     /**

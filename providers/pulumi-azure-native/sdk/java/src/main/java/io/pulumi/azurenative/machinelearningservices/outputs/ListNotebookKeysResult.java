@@ -16,8 +16,8 @@ public final class ListNotebookKeysResult {
     private ListNotebookKeysResult(
         String primaryAccessKey,
         String secondaryAccessKey) {
-        this.primaryAccessKey = Objects.requireNonNull(primaryAccessKey);
-        this.secondaryAccessKey = Objects.requireNonNull(secondaryAccessKey);
+        this.primaryAccessKey = primaryAccessKey;
+        this.secondaryAccessKey = secondaryAccessKey;
     }
 
     public String getPrimaryAccessKey() {

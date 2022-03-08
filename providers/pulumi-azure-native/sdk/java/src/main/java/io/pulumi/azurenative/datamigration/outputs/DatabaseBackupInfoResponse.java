@@ -63,14 +63,14 @@ public final class DatabaseBackupInfoResponse {
         Boolean isCompressed,
         Boolean isDamaged,
         Integer position) {
-        this.backupFiles = Objects.requireNonNull(backupFiles);
-        this.backupFinishDate = Objects.requireNonNull(backupFinishDate);
-        this.backupType = Objects.requireNonNull(backupType);
-        this.databaseName = Objects.requireNonNull(databaseName);
-        this.familyCount = Objects.requireNonNull(familyCount);
-        this.isCompressed = Objects.requireNonNull(isCompressed);
-        this.isDamaged = Objects.requireNonNull(isDamaged);
-        this.position = Objects.requireNonNull(position);
+        this.backupFiles = backupFiles;
+        this.backupFinishDate = backupFinishDate;
+        this.backupType = backupType;
+        this.databaseName = databaseName;
+        this.familyCount = familyCount;
+        this.isCompressed = isCompressed;
+        this.isDamaged = isDamaged;
+        this.position = position;
     }
 
     /**

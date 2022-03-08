@@ -17,7 +17,7 @@ public final class ApplicationDeploymentPolicyResponse {
 
     @OutputCustomType.Constructor({"deploymentMode"})
     private ApplicationDeploymentPolicyResponse(String deploymentMode) {
-        this.deploymentMode = Objects.requireNonNull(deploymentMode);
+        this.deploymentMode = deploymentMode;
     }
 
     /**

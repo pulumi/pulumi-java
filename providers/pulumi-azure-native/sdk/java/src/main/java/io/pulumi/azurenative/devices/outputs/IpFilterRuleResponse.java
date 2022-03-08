@@ -30,9 +30,9 @@ public final class IpFilterRuleResponse {
         String action,
         String filterName,
         String ipMask) {
-        this.action = Objects.requireNonNull(action);
-        this.filterName = Objects.requireNonNull(filterName);
-        this.ipMask = Objects.requireNonNull(ipMask);
+        this.action = action;
+        this.filterName = filterName;
+        this.ipMask = ipMask;
     }
 
     /**

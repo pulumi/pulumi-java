@@ -54,13 +54,13 @@ public final class GetServerAdministratorResult {
         String sid,
         String tenantId,
         String type) {
-        this.administratorType = Objects.requireNonNull(administratorType);
-        this.id = Objects.requireNonNull(id);
-        this.login = Objects.requireNonNull(login);
-        this.name = Objects.requireNonNull(name);
-        this.sid = Objects.requireNonNull(sid);
-        this.tenantId = Objects.requireNonNull(tenantId);
-        this.type = Objects.requireNonNull(type);
+        this.administratorType = administratorType;
+        this.id = id;
+        this.login = login;
+        this.name = name;
+        this.sid = sid;
+        this.tenantId = tenantId;
+        this.type = type;
     }
 
     /**

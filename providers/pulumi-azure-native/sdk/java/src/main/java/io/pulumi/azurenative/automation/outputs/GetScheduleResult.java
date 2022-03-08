@@ -126,17 +126,17 @@ public final class GetScheduleResult {
         this.expiryTime = expiryTime;
         this.expiryTimeOffsetMinutes = expiryTimeOffsetMinutes;
         this.frequency = frequency;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.interval = interval;
         this.isEnabled = isEnabled;
         this.lastModifiedTime = lastModifiedTime;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.nextRun = nextRun;
         this.nextRunOffsetMinutes = nextRunOffsetMinutes;
         this.startTime = startTime;
-        this.startTimeOffsetMinutes = Objects.requireNonNull(startTimeOffsetMinutes);
+        this.startTimeOffsetMinutes = startTimeOffsetMinutes;
         this.timeZone = timeZone;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

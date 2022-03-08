@@ -13,7 +13,7 @@ public final class SinkConfigurationResponse {
 
     @OutputCustomType.Constructor({"kind"})
     private SinkConfigurationResponse(String kind) {
-        this.kind = Objects.requireNonNull(kind);
+        this.kind = kind;
     }
 
     public String getKind() {

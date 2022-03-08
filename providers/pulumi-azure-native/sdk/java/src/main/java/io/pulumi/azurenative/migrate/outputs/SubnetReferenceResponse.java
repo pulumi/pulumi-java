@@ -27,7 +27,7 @@ public final class SubnetReferenceResponse {
         @Nullable String name,
         String sourceArmResourceId) {
         this.name = name;
-        this.sourceArmResourceId = Objects.requireNonNull(sourceArmResourceId);
+        this.sourceArmResourceId = sourceArmResourceId;
     }
 
     /**

@@ -35,8 +35,8 @@ public final class MonitoringTagRulesPropertiesResponse {
         String provisioningState,
         SystemDataResponse systemData) {
         this.logRules = logRules;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.systemData = Objects.requireNonNull(systemData);
+        this.provisioningState = provisioningState;
+        this.systemData = systemData;
     }
 
     /**

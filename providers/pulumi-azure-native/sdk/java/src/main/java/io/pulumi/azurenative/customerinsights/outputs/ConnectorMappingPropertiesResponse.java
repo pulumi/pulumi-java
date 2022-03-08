@@ -69,14 +69,14 @@ public final class ConnectorMappingPropertiesResponse {
         ConnectorMappingFormatResponse format,
         @Nullable Boolean hasHeader,
         List<ConnectorMappingStructureResponse> structure) {
-        this.availability = Objects.requireNonNull(availability);
-        this.completeOperation = Objects.requireNonNull(completeOperation);
-        this.errorManagement = Objects.requireNonNull(errorManagement);
+        this.availability = availability;
+        this.completeOperation = completeOperation;
+        this.errorManagement = errorManagement;
         this.fileFilter = fileFilter;
         this.folderPath = folderPath;
-        this.format = Objects.requireNonNull(format);
+        this.format = format;
         this.hasHeader = hasHeader;
-        this.structure = Objects.requireNonNull(structure);
+        this.structure = structure;
     }
 
     /**

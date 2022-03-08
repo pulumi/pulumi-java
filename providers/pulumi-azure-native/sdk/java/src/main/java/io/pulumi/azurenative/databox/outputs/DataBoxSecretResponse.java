@@ -45,11 +45,11 @@ public final class DataBoxSecretResponse {
         String deviceSerialNumber,
         String encodedValidationCertPubKey,
         List<ApplianceNetworkConfigurationResponse> networkConfigurations) {
-        this.accountCredentialDetails = Objects.requireNonNull(accountCredentialDetails);
-        this.devicePassword = Objects.requireNonNull(devicePassword);
-        this.deviceSerialNumber = Objects.requireNonNull(deviceSerialNumber);
-        this.encodedValidationCertPubKey = Objects.requireNonNull(encodedValidationCertPubKey);
-        this.networkConfigurations = Objects.requireNonNull(networkConfigurations);
+        this.accountCredentialDetails = accountCredentialDetails;
+        this.devicePassword = devicePassword;
+        this.deviceSerialNumber = deviceSerialNumber;
+        this.encodedValidationCertPubKey = encodedValidationCertPubKey;
+        this.networkConfigurations = networkConfigurations;
     }
 
     /**

@@ -24,8 +24,8 @@ public final class ApplicationUserAssignedIdentityResponse {
     private ApplicationUserAssignedIdentityResponse(
         String name,
         String principalId) {
-        this.name = Objects.requireNonNull(name);
-        this.principalId = Objects.requireNonNull(principalId);
+        this.name = name;
+        this.principalId = principalId;
     }
 
     /**

@@ -72,15 +72,15 @@ public final class GetGalleryImageVersionResult {
         GalleryImageVersionStorageProfileResponse storageProfile,
         @Nullable Map<String,String> tags,
         String type) {
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.id = id;
+        this.location = location;
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.publishingProfile = publishingProfile;
-        this.replicationStatus = Objects.requireNonNull(replicationStatus);
-        this.storageProfile = Objects.requireNonNull(storageProfile);
+        this.replicationStatus = replicationStatus;
+        this.storageProfile = storageProfile;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

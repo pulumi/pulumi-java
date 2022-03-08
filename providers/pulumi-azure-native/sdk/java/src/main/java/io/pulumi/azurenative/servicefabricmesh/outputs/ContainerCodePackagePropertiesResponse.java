@@ -121,13 +121,13 @@ public final class ContainerCodePackagePropertiesResponse {
         this.endpoints = endpoints;
         this.entrypoint = entrypoint;
         this.environmentVariables = environmentVariables;
-        this.image = Objects.requireNonNull(image);
+        this.image = image;
         this.imageRegistryCredential = imageRegistryCredential;
-        this.instanceView = Objects.requireNonNull(instanceView);
+        this.instanceView = instanceView;
         this.labels = labels;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.reliableCollectionsRefs = reliableCollectionsRefs;
-        this.resources = Objects.requireNonNull(resources);
+        this.resources = resources;
         this.settings = settings;
         this.volumeRefs = volumeRefs;
         this.volumes = volumes;

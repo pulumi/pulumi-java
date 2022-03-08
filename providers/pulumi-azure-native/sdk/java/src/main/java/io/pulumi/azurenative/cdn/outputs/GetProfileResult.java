@@ -76,16 +76,16 @@ public final class GetProfileResult {
         SystemDataResponse systemData,
         @Nullable Map<String,String> tags,
         String type) {
-        this.frontdoorId = Objects.requireNonNull(frontdoorId);
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.resourceState = Objects.requireNonNull(resourceState);
-        this.sku = Objects.requireNonNull(sku);
-        this.systemData = Objects.requireNonNull(systemData);
+        this.frontdoorId = frontdoorId;
+        this.id = id;
+        this.location = location;
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.resourceState = resourceState;
+        this.sku = sku;
+        this.systemData = systemData;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

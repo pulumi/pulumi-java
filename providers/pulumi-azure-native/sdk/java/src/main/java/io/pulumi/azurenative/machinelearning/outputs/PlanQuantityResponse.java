@@ -37,10 +37,10 @@ public final class PlanQuantityResponse {
         Double amount,
         String includedQuantityMeter,
         String overageMeter) {
-        this.allowance = Objects.requireNonNull(allowance);
-        this.amount = Objects.requireNonNull(amount);
-        this.includedQuantityMeter = Objects.requireNonNull(includedQuantityMeter);
-        this.overageMeter = Objects.requireNonNull(overageMeter);
+        this.allowance = allowance;
+        this.amount = amount;
+        this.includedQuantityMeter = includedQuantityMeter;
+        this.overageMeter = overageMeter;
     }
 
     /**

@@ -362,7 +362,7 @@ public final class InMageAzureV2ReplicationDetailsResponse {
         this.diskResized = diskResized;
         this.enableRdpOnTargetOption = enableRdpOnTargetOption;
         this.infrastructureVmId = infrastructureVmId;
-        this.instanceType = Objects.requireNonNull(instanceType);
+        this.instanceType = instanceType;
         this.ipAddress = ipAddress;
         this.isAgentUpdateRequired = isAgentUpdateRequired;
         this.isRebootAfterUpdateRequired = isRebootAfterUpdateRequired;
@@ -378,7 +378,7 @@ public final class InMageAzureV2ReplicationDetailsResponse {
         this.osType = osType;
         this.osVersion = osVersion;
         this.processServerId = processServerId;
-        this.processServerName = Objects.requireNonNull(processServerName);
+        this.processServerName = processServerName;
         this.protectedDisks = protectedDisks;
         this.protectedManagedDisks = protectedManagedDisks;
         this.protectionStage = protectionStage;

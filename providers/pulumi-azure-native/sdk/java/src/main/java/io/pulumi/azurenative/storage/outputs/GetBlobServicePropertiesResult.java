@@ -105,13 +105,13 @@ public final class GetBlobServicePropertiesResult {
         this.cors = cors;
         this.defaultServiceVersion = defaultServiceVersion;
         this.deleteRetentionPolicy = deleteRetentionPolicy;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.isVersioningEnabled = isVersioningEnabled;
         this.lastAccessTimeTrackingPolicy = lastAccessTimeTrackingPolicy;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.restorePolicy = restorePolicy;
-        this.sku = Objects.requireNonNull(sku);
-        this.type = Objects.requireNonNull(type);
+        this.sku = sku;
+        this.type = type;
     }
 
     /**

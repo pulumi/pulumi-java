@@ -93,13 +93,13 @@ public final class GetDiagnosticResult {
         this.backend = backend;
         this.frontend = frontend;
         this.httpCorrelationProtocol = httpCorrelationProtocol;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.logClientIp = logClientIp;
-        this.loggerId = Objects.requireNonNull(loggerId);
-        this.name = Objects.requireNonNull(name);
+        this.loggerId = loggerId;
+        this.name = name;
         this.operationNameFormat = operationNameFormat;
         this.sampling = sampling;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.verbosity = verbosity;
     }
 

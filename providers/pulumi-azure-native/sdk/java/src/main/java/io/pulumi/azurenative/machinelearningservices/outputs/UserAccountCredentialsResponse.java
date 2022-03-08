@@ -32,7 +32,7 @@ public final class UserAccountCredentialsResponse {
         String adminUserName,
         @Nullable String adminUserPassword,
         @Nullable String adminUserSshPublicKey) {
-        this.adminUserName = Objects.requireNonNull(adminUserName);
+        this.adminUserName = adminUserName;
         this.adminUserPassword = adminUserPassword;
         this.adminUserSshPublicKey = adminUserSshPublicKey;
     }

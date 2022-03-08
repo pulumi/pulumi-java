@@ -101,16 +101,16 @@ public final class SqlServerInstancePropertiesResponse {
         @Nullable String vCore,
         @Nullable String version) {
         this.collation = collation;
-        this.containerResourceId = Objects.requireNonNull(containerResourceId);
-        this.createTime = Objects.requireNonNull(createTime);
+        this.containerResourceId = containerResourceId;
+        this.createTime = createTime;
         this.currentVersion = currentVersion;
         this.edition = edition;
         this.instanceName = instanceName;
         this.licenseType = licenseType;
         this.patchLevel = patchLevel;
         this.productId = productId;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.status = Objects.requireNonNull(status);
+        this.provisioningState = provisioningState;
+        this.status = status;
         this.tcpDynamicPorts = tcpDynamicPorts;
         this.tcpStaticPorts = tcpStaticPorts;
         this.vCore = vCore;

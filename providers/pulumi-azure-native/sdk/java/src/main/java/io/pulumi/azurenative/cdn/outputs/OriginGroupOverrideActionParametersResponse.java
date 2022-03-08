@@ -21,8 +21,8 @@ public final class OriginGroupOverrideActionParametersResponse {
     private OriginGroupOverrideActionParametersResponse(
         String odataType,
         ResourceReferenceResponse originGroup) {
-        this.odataType = Objects.requireNonNull(odataType);
-        this.originGroup = Objects.requireNonNull(originGroup);
+        this.odataType = odataType;
+        this.originGroup = originGroup;
     }
 
     public String getOdataType() {

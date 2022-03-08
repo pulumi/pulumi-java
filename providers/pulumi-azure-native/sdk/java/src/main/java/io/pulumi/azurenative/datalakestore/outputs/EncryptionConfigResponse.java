@@ -28,7 +28,7 @@ public final class EncryptionConfigResponse {
         @Nullable KeyVaultMetaInfoResponse keyVaultMetaInfo,
         String type) {
         this.keyVaultMetaInfo = keyVaultMetaInfo;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

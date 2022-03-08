@@ -41,7 +41,7 @@ public final class TokenPasswordResponse {
         this.creationTime = creationTime;
         this.expiry = expiry;
         this.name = name;
-        this.value = Objects.requireNonNull(value);
+        this.value = value;
     }
 
     /**

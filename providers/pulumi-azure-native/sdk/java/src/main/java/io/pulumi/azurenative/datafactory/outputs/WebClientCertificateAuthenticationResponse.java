@@ -41,10 +41,10 @@ public final class WebClientCertificateAuthenticationResponse {
         Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
         Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> pfx,
         Object url) {
-        this.authenticationType = Objects.requireNonNull(authenticationType);
-        this.password = Objects.requireNonNull(password);
-        this.pfx = Objects.requireNonNull(pfx);
-        this.url = Objects.requireNonNull(url);
+        this.authenticationType = authenticationType;
+        this.password = password;
+        this.pfx = pfx;
+        this.url = url;
     }
 
     /**

@@ -25,8 +25,8 @@ public final class ContainerServiceLinuxProfileResponse {
     private ContainerServiceLinuxProfileResponse(
         String adminUsername,
         ContainerServiceSshConfigurationResponse ssh) {
-        this.adminUsername = Objects.requireNonNull(adminUsername);
-        this.ssh = Objects.requireNonNull(ssh);
+        this.adminUsername = adminUsername;
+        this.ssh = ssh;
     }
 
     /**

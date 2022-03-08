@@ -34,8 +34,8 @@ public final class JitNetworkAccessPolicyVirtualMachineResponse {
         String id,
         List<JitNetworkAccessPortRuleResponse> ports,
         @Nullable String publicIpAddress) {
-        this.id = Objects.requireNonNull(id);
-        this.ports = Objects.requireNonNull(ports);
+        this.id = id;
+        this.ports = ports;
         this.publicIpAddress = publicIpAddress;
     }
 

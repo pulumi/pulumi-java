@@ -56,13 +56,13 @@ public final class GetIscsiTargetResult {
         String targetIqn,
         List<TargetPortalGroupResponse> tpgs,
         String type) {
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.status = Objects.requireNonNull(status);
-        this.targetIqn = Objects.requireNonNull(targetIqn);
-        this.tpgs = Objects.requireNonNull(tpgs);
-        this.type = Objects.requireNonNull(type);
+        this.id = id;
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.status = status;
+        this.targetIqn = targetIqn;
+        this.tpgs = tpgs;
+        this.type = type;
     }
 
     /**

@@ -24,8 +24,8 @@ public final class SasPolicyResponse {
     private SasPolicyResponse(
         String expirationAction,
         String sasExpirationPeriod) {
-        this.expirationAction = Objects.requireNonNull(expirationAction);
-        this.sasExpirationPeriod = Objects.requireNonNull(sasExpirationPeriod);
+        this.expirationAction = expirationAction;
+        this.sasExpirationPeriod = sasExpirationPeriod;
     }
 
     /**

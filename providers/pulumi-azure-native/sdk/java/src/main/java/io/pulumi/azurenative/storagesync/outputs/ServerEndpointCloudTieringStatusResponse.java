@@ -78,16 +78,16 @@ public final class ServerEndpointCloudTieringStatusResponse {
         String lastUpdatedTimestamp,
         CloudTieringSpaceSavingsResponse spaceSavings,
         CloudTieringVolumeFreeSpacePolicyStatusResponse volumeFreeSpacePolicyStatus) {
-        this.cachePerformance = Objects.requireNonNull(cachePerformance);
-        this.datePolicyStatus = Objects.requireNonNull(datePolicyStatus);
-        this.filesNotTiering = Objects.requireNonNull(filesNotTiering);
-        this.health = Objects.requireNonNull(health);
-        this.healthLastUpdatedTimestamp = Objects.requireNonNull(healthLastUpdatedTimestamp);
-        this.lastCloudTieringResult = Objects.requireNonNull(lastCloudTieringResult);
-        this.lastSuccessTimestamp = Objects.requireNonNull(lastSuccessTimestamp);
-        this.lastUpdatedTimestamp = Objects.requireNonNull(lastUpdatedTimestamp);
-        this.spaceSavings = Objects.requireNonNull(spaceSavings);
-        this.volumeFreeSpacePolicyStatus = Objects.requireNonNull(volumeFreeSpacePolicyStatus);
+        this.cachePerformance = cachePerformance;
+        this.datePolicyStatus = datePolicyStatus;
+        this.filesNotTiering = filesNotTiering;
+        this.health = health;
+        this.healthLastUpdatedTimestamp = healthLastUpdatedTimestamp;
+        this.lastCloudTieringResult = lastCloudTieringResult;
+        this.lastSuccessTimestamp = lastSuccessTimestamp;
+        this.lastUpdatedTimestamp = lastUpdatedTimestamp;
+        this.spaceSavings = spaceSavings;
+        this.volumeFreeSpacePolicyStatus = volumeFreeSpacePolicyStatus;
     }
 
     /**

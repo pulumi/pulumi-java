@@ -95,18 +95,18 @@ public final class GetFormulaResult {
         String type,
         String uniqueIdentifier,
         @Nullable FormulaPropertiesFromVmResponse vm) {
-        this.author = Objects.requireNonNull(author);
-        this.creationDate = Objects.requireNonNull(creationDate);
+        this.author = author;
+        this.creationDate = creationDate;
         this.description = description;
         this.formulaContent = formulaContent;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.osType = osType;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
-        this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
+        this.type = type;
+        this.uniqueIdentifier = uniqueIdentifier;
         this.vm = vm;
     }
 

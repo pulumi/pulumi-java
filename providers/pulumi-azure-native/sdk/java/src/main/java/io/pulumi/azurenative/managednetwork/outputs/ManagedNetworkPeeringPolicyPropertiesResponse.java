@@ -52,12 +52,12 @@ public final class ManagedNetworkPeeringPolicyPropertiesResponse {
         String provisioningState,
         @Nullable List<ResourceIdResponse> spokes,
         String type) {
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.hub = hub;
         this.mesh = mesh;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.spokes = spokes;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

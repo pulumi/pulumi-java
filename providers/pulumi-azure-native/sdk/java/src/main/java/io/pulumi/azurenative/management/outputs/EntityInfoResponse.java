@@ -92,9 +92,9 @@ public final class EntityInfoResponse {
         @Nullable String tenantId,
         String type) {
         this.displayName = displayName;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.inheritedPermissions = inheritedPermissions;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.numberOfChildGroups = numberOfChildGroups;
         this.numberOfChildren = numberOfChildren;
         this.numberOfDescendants = numberOfDescendants;
@@ -103,7 +103,7 @@ public final class EntityInfoResponse {
         this.parentNameChain = parentNameChain;
         this.permissions = permissions;
         this.tenantId = tenantId;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

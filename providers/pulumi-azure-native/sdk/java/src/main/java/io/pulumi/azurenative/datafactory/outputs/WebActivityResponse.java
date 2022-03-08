@@ -123,11 +123,11 @@ public final class WebActivityResponse {
         this.headers = headers;
         this.linkedServiceName = linkedServiceName;
         this.linkedServices = linkedServices;
-        this.method = Objects.requireNonNull(method);
-        this.name = Objects.requireNonNull(name);
+        this.method = method;
+        this.name = name;
         this.policy = policy;
-        this.type = Objects.requireNonNull(type);
-        this.url = Objects.requireNonNull(url);
+        this.type = type;
+        this.url = url;
         this.userProperties = userProperties;
     }
 

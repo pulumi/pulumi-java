@@ -85,15 +85,15 @@ public final class GetPolicyExemptionResult {
         String type) {
         this.description = description;
         this.displayName = displayName;
-        this.exemptionCategory = Objects.requireNonNull(exemptionCategory);
+        this.exemptionCategory = exemptionCategory;
         this.expiresOn = expiresOn;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.metadata = metadata;
-        this.name = Objects.requireNonNull(name);
-        this.policyAssignmentId = Objects.requireNonNull(policyAssignmentId);
+        this.name = name;
+        this.policyAssignmentId = policyAssignmentId;
         this.policyDefinitionReferenceIds = policyDefinitionReferenceIds;
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

@@ -25,8 +25,8 @@ public final class QueryAnalysisValidationResultResponse {
     private QueryAnalysisValidationResultResponse(
         QueryExecutionResultResponse queryResults,
         ValidationErrorResponse validationErrors) {
-        this.queryResults = Objects.requireNonNull(queryResults);
-        this.validationErrors = Objects.requireNonNull(validationErrors);
+        this.queryResults = queryResults;
+        this.validationErrors = validationErrors;
     }
 
     /**

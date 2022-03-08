@@ -80,15 +80,15 @@ public final class GetExpressRouteGatewayResult {
         String type,
         VirtualHubIdResponse virtualHub) {
         this.autoScaleConfiguration = autoScaleConfiguration;
-        this.etag = Objects.requireNonNull(etag);
-        this.expressRouteConnections = Objects.requireNonNull(expressRouteConnections);
+        this.etag = etag;
+        this.expressRouteConnections = expressRouteConnections;
         this.id = id;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
-        this.virtualHub = Objects.requireNonNull(virtualHub);
+        this.type = type;
+        this.virtualHub = virtualHub;
     }
 
     /**

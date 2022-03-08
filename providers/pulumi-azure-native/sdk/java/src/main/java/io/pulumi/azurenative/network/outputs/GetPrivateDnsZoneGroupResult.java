@@ -46,11 +46,11 @@ public final class GetPrivateDnsZoneGroupResult {
         @Nullable String name,
         @Nullable List<PrivateDnsZoneConfigResponse> privateDnsZoneConfigs,
         String provisioningState) {
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.id = id;
         this.name = name;
         this.privateDnsZoneConfigs = privateDnsZoneConfigs;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
     }
 
     /**

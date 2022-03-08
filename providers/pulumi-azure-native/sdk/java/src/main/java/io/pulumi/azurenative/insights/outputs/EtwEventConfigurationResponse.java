@@ -22,8 +22,8 @@ public final class EtwEventConfigurationResponse {
         Integer id,
         String name) {
         this.filter = filter;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
     }
 
     public Optional<String> getFilter() {

@@ -60,13 +60,13 @@ public final class AS2ProtocolSettingsResponse {
         AS2MessageConnectionSettingsResponse messageConnectionSettings,
         AS2SecuritySettingsResponse securitySettings,
         AS2ValidationSettingsResponse validationSettings) {
-        this.acknowledgementConnectionSettings = Objects.requireNonNull(acknowledgementConnectionSettings);
-        this.envelopeSettings = Objects.requireNonNull(envelopeSettings);
-        this.errorSettings = Objects.requireNonNull(errorSettings);
-        this.mdnSettings = Objects.requireNonNull(mdnSettings);
-        this.messageConnectionSettings = Objects.requireNonNull(messageConnectionSettings);
-        this.securitySettings = Objects.requireNonNull(securitySettings);
-        this.validationSettings = Objects.requireNonNull(validationSettings);
+        this.acknowledgementConnectionSettings = acknowledgementConnectionSettings;
+        this.envelopeSettings = envelopeSettings;
+        this.errorSettings = errorSettings;
+        this.mdnSettings = mdnSettings;
+        this.messageConnectionSettings = messageConnectionSettings;
+        this.securitySettings = securitySettings;
+        this.validationSettings = validationSettings;
     }
 
     /**

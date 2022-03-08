@@ -53,7 +53,7 @@ public final class JwtAuthenticationResponse {
         this.claims = claims;
         this.issuers = issuers;
         this.keys = keys;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

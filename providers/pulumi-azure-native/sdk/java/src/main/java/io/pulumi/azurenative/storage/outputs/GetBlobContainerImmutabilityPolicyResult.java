@@ -59,12 +59,12 @@ public final class GetBlobContainerImmutabilityPolicyResult {
         String state,
         String type) {
         this.allowProtectedAppendWrites = allowProtectedAppendWrites;
-        this.etag = Objects.requireNonNull(etag);
-        this.id = Objects.requireNonNull(id);
+        this.etag = etag;
+        this.id = id;
         this.immutabilityPeriodSinceCreationInDays = immutabilityPeriodSinceCreationInDays;
-        this.name = Objects.requireNonNull(name);
-        this.state = Objects.requireNonNull(state);
-        this.type = Objects.requireNonNull(type);
+        this.name = name;
+        this.state = state;
+        this.type = type;
     }
 
     /**

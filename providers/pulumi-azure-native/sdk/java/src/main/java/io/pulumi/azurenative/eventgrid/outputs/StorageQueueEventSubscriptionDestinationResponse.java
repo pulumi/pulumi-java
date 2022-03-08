@@ -33,7 +33,7 @@ public final class StorageQueueEventSubscriptionDestinationResponse {
         String endpointType,
         @Nullable String queueName,
         @Nullable String resourceId) {
-        this.endpointType = Objects.requireNonNull(endpointType);
+        this.endpointType = endpointType;
         this.queueName = queueName;
         this.resourceId = resourceId;
     }

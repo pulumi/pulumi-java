@@ -57,10 +57,10 @@ public final class GetLongTermRetentionPolicyResult {
         @Nullable Integer weekOfYear,
         @Nullable String weeklyRetention,
         @Nullable String yearlyRetention) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.monthlyRetention = monthlyRetention;
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.name = name;
+        this.type = type;
         this.weekOfYear = weekOfYear;
         this.weeklyRetention = weeklyRetention;
         this.yearlyRetention = yearlyRetention;

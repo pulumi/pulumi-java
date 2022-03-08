@@ -59,7 +59,7 @@ public final class XmlReadSettingsResponse {
         this.detectDataType = detectDataType;
         this.namespacePrefixes = namespacePrefixes;
         this.namespaces = namespaces;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.validationMode = validationMode;
     }
 

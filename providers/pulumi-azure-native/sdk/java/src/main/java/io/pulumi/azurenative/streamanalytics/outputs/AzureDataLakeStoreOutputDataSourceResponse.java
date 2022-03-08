@@ -77,7 +77,7 @@ public final class AzureDataLakeStoreOutputDataSourceResponse {
         this.timeFormat = timeFormat;
         this.tokenUserDisplayName = tokenUserDisplayName;
         this.tokenUserPrincipalName = tokenUserPrincipalName;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

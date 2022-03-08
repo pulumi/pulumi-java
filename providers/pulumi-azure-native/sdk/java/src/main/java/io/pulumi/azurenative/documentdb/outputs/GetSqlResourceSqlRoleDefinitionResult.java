@@ -53,11 +53,11 @@ public final class GetSqlResourceSqlRoleDefinitionResult {
         @Nullable String roleName,
         String type) {
         this.assignableScopes = assignableScopes;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.permissions = permissions;
         this.roleName = roleName;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

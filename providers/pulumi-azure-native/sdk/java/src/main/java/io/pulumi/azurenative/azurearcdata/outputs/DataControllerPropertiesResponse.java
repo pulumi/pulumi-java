@@ -69,7 +69,7 @@ public final class DataControllerPropertiesResponse {
         this.lastUploadedDate = lastUploadedDate;
         this.logAnalyticsWorkspaceConfig = logAnalyticsWorkspaceConfig;
         this.onPremiseProperty = onPremiseProperty;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.uploadServicePrincipal = uploadServicePrincipal;
         this.uploadWatermark = uploadWatermark;
     }

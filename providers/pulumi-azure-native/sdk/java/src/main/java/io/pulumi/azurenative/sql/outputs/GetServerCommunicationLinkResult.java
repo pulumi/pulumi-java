@@ -54,13 +54,13 @@ public final class GetServerCommunicationLinkResult {
         String partnerServer,
         String state,
         String type) {
-        this.id = Objects.requireNonNull(id);
-        this.kind = Objects.requireNonNull(kind);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.partnerServer = Objects.requireNonNull(partnerServer);
-        this.state = Objects.requireNonNull(state);
-        this.type = Objects.requireNonNull(type);
+        this.id = id;
+        this.kind = kind;
+        this.location = location;
+        this.name = name;
+        this.partnerServer = partnerServer;
+        this.state = state;
+        this.type = type;
     }
 
     /**

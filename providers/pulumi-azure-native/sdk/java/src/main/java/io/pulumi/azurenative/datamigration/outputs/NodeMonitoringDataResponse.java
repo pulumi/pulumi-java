@@ -70,15 +70,15 @@ public final class NodeMonitoringDataResponse {
         String nodeName,
         Double receivedBytes,
         Double sentBytes) {
-        this.additionalProperties = Objects.requireNonNull(additionalProperties);
-        this.availableMemoryInMB = Objects.requireNonNull(availableMemoryInMB);
-        this.concurrentJobsLimit = Objects.requireNonNull(concurrentJobsLimit);
-        this.concurrentJobsRunning = Objects.requireNonNull(concurrentJobsRunning);
-        this.cpuUtilization = Objects.requireNonNull(cpuUtilization);
-        this.maxConcurrentJobs = Objects.requireNonNull(maxConcurrentJobs);
-        this.nodeName = Objects.requireNonNull(nodeName);
-        this.receivedBytes = Objects.requireNonNull(receivedBytes);
-        this.sentBytes = Objects.requireNonNull(sentBytes);
+        this.additionalProperties = additionalProperties;
+        this.availableMemoryInMB = availableMemoryInMB;
+        this.concurrentJobsLimit = concurrentJobsLimit;
+        this.concurrentJobsRunning = concurrentJobsRunning;
+        this.cpuUtilization = cpuUtilization;
+        this.maxConcurrentJobs = maxConcurrentJobs;
+        this.nodeName = nodeName;
+        this.receivedBytes = receivedBytes;
+        this.sentBytes = sentBytes;
     }
 
     /**

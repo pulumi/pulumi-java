@@ -26,8 +26,8 @@ public final class DeliveryRuleHttpVersionConditionResponse {
     private DeliveryRuleHttpVersionConditionResponse(
         String name,
         HttpVersionMatchConditionParametersResponse parameters) {
-        this.name = Objects.requireNonNull(name);
-        this.parameters = Objects.requireNonNull(parameters);
+        this.name = name;
+        this.parameters = parameters;
     }
 
     /**

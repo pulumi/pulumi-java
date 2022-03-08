@@ -124,18 +124,18 @@ public final class GetWebAppInstanceFunctionSlotResult {
         this.files = files;
         this.functionAppId = functionAppId;
         this.href = href;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.invokeUrlTemplate = invokeUrlTemplate;
         this.isDisabled = isDisabled;
         this.kind = kind;
         this.language = language;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.scriptHref = scriptHref;
         this.scriptRootPathHref = scriptRootPathHref;
         this.secretsFileHref = secretsFileHref;
         this.testData = testData;
         this.testDataHref = testDataHref;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

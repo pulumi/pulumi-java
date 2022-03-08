@@ -54,7 +54,7 @@ public final class RecordSetResponse {
         @Nullable Integer ttl) {
         this.fqdn = fqdn;
         this.ipAddresses = ipAddresses;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.recordSetName = recordSetName;
         this.recordType = recordType;
         this.ttl = ttl;

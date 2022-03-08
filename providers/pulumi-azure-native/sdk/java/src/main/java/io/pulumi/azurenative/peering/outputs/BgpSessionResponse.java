@@ -90,8 +90,8 @@ public final class BgpSessionResponse {
         this.peerSessionIPv6Address = peerSessionIPv6Address;
         this.sessionPrefixV4 = sessionPrefixV4;
         this.sessionPrefixV6 = sessionPrefixV6;
-        this.sessionStateV4 = Objects.requireNonNull(sessionStateV4);
-        this.sessionStateV6 = Objects.requireNonNull(sessionStateV6);
+        this.sessionStateV4 = sessionStateV4;
+        this.sessionStateV6 = sessionStateV6;
     }
 
     /**

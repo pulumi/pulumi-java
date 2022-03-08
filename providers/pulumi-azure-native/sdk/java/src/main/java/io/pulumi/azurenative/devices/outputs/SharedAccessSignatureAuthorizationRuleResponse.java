@@ -38,9 +38,9 @@ public final class SharedAccessSignatureAuthorizationRuleResponse {
         @Nullable String primaryKey,
         String rights,
         @Nullable String secondaryKey) {
-        this.keyName = Objects.requireNonNull(keyName);
+        this.keyName = keyName;
         this.primaryKey = primaryKey;
-        this.rights = Objects.requireNonNull(rights);
+        this.rights = rights;
         this.secondaryKey = secondaryKey;
     }
 

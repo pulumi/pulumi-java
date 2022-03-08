@@ -64,13 +64,13 @@ public final class GetDisasterRecoveryConfigResult {
         String role,
         String type) {
         this.alternateName = alternateName;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.partnerNamespace = partnerNamespace;
-        this.pendingReplicationOperationsCount = Objects.requireNonNull(pendingReplicationOperationsCount);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.role = Objects.requireNonNull(role);
-        this.type = Objects.requireNonNull(type);
+        this.pendingReplicationOperationsCount = pendingReplicationOperationsCount;
+        this.provisioningState = provisioningState;
+        this.role = role;
+        this.type = type;
     }
 
     /**

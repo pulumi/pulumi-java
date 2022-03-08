@@ -54,11 +54,11 @@ public final class RolloutStepResponse {
         List<ResourceOperationResponse> resourceOperations,
         String status,
         @Nullable String stepGroup) {
-        this.messages = Objects.requireNonNull(messages);
-        this.name = Objects.requireNonNull(name);
-        this.operationInfo = Objects.requireNonNull(operationInfo);
-        this.resourceOperations = Objects.requireNonNull(resourceOperations);
-        this.status = Objects.requireNonNull(status);
+        this.messages = messages;
+        this.name = name;
+        this.operationInfo = operationInfo;
+        this.resourceOperations = resourceOperations;
+        this.status = status;
         this.stepGroup = stepGroup;
     }
 

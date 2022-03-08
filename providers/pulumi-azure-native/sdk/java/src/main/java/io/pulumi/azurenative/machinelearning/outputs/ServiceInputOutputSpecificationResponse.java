@@ -41,9 +41,9 @@ public final class ServiceInputOutputSpecificationResponse {
         @Nullable String title,
         String type) {
         this.description = description;
-        this.properties = Objects.requireNonNull(properties);
+        this.properties = properties;
         this.title = title;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

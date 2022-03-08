@@ -17,7 +17,7 @@ public final class VirtualMachineImageResponse {
 
     @OutputCustomType.Constructor({"id"})
     private VirtualMachineImageResponse(String id) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
     }
 
     /**

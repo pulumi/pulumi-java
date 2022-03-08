@@ -71,13 +71,13 @@ public final class AS2MdnSettingsResponse {
         Boolean signOutboundMDNIfOptional) {
         this.dispositionNotificationTo = dispositionNotificationTo;
         this.mdnText = mdnText;
-        this.micHashingAlgorithm = Objects.requireNonNull(micHashingAlgorithm);
-        this.needMDN = Objects.requireNonNull(needMDN);
+        this.micHashingAlgorithm = micHashingAlgorithm;
+        this.needMDN = needMDN;
         this.receiptDeliveryUrl = receiptDeliveryUrl;
-        this.sendInboundMDNToMessageBox = Objects.requireNonNull(sendInboundMDNToMessageBox);
-        this.sendMDNAsynchronously = Objects.requireNonNull(sendMDNAsynchronously);
-        this.signMDN = Objects.requireNonNull(signMDN);
-        this.signOutboundMDNIfOptional = Objects.requireNonNull(signOutboundMDNIfOptional);
+        this.sendInboundMDNToMessageBox = sendInboundMDNToMessageBox;
+        this.sendMDNAsynchronously = sendMDNAsynchronously;
+        this.signMDN = signMDN;
+        this.signOutboundMDNIfOptional = signOutboundMDNIfOptional;
     }
 
     /**

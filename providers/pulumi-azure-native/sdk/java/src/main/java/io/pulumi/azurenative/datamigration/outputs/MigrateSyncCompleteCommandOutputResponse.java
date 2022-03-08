@@ -26,8 +26,8 @@ public final class MigrateSyncCompleteCommandOutputResponse {
     private MigrateSyncCompleteCommandOutputResponse(
         List<ReportableExceptionResponse> errors,
         String id) {
-        this.errors = Objects.requireNonNull(errors);
-        this.id = Objects.requireNonNull(id);
+        this.errors = errors;
+        this.id = id;
     }
 
     /**

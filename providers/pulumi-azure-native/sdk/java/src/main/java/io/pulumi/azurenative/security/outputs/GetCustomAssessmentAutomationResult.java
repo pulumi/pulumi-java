@@ -85,13 +85,13 @@ public final class GetCustomAssessmentAutomationResult {
         this.compressedQuery = compressedQuery;
         this.description = description;
         this.displayName = displayName;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.remediationDescription = remediationDescription;
         this.severity = severity;
         this.supportedCloud = supportedCloud;
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

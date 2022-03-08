@@ -43,11 +43,11 @@ public final class HubRouteResponse {
         String name,
         String nextHop,
         String nextHopType) {
-        this.destinationType = Objects.requireNonNull(destinationType);
-        this.destinations = Objects.requireNonNull(destinations);
-        this.name = Objects.requireNonNull(name);
-        this.nextHop = Objects.requireNonNull(nextHop);
-        this.nextHopType = Objects.requireNonNull(nextHopType);
+        this.destinationType = destinationType;
+        this.destinations = destinations;
+        this.name = name;
+        this.nextHop = nextHop;
+        this.nextHopType = nextHopType;
     }
 
     /**

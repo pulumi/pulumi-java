@@ -95,18 +95,18 @@ public final class GetNotificationChannelResult {
         String type,
         String uniqueIdentifier,
         @Nullable String webHookUrl) {
-        this.createdDate = Objects.requireNonNull(createdDate);
+        this.createdDate = createdDate;
         this.description = description;
         this.emailRecipient = emailRecipient;
         this.events = events;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.notificationLocale = notificationLocale;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
-        this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
+        this.type = type;
+        this.uniqueIdentifier = uniqueIdentifier;
         this.webHookUrl = webHookUrl;
     }
 

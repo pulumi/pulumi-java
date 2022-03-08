@@ -17,7 +17,7 @@ public final class IPRuleResponse {
 
     @OutputCustomType.Constructor({"value"})
     private IPRuleResponse(String value) {
-        this.value = Objects.requireNonNull(value);
+        this.value = value;
     }
 
     /**

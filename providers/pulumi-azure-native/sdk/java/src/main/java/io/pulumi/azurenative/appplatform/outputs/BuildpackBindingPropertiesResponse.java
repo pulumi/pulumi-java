@@ -35,7 +35,7 @@ public final class BuildpackBindingPropertiesResponse {
         String provisioningState) {
         this.bindingType = bindingType;
         this.launchProperties = launchProperties;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
     }
 
     /**

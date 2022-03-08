@@ -102,19 +102,19 @@ public final class GetStreamingLocatorResult {
         SystemDataResponse systemData,
         String type) {
         this.alternativeMediaId = alternativeMediaId;
-        this.assetName = Objects.requireNonNull(assetName);
+        this.assetName = assetName;
         this.contentKeys = contentKeys;
-        this.created = Objects.requireNonNull(created);
+        this.created = created;
         this.defaultContentKeyPolicyName = defaultContentKeyPolicyName;
         this.endTime = endTime;
         this.filters = filters;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.startTime = startTime;
         this.streamingLocatorId = streamingLocatorId;
-        this.streamingPolicyName = Objects.requireNonNull(streamingPolicyName);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.streamingPolicyName = streamingPolicyName;
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

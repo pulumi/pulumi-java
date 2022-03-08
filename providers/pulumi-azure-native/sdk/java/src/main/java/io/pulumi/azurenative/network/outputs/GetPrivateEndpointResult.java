@@ -100,18 +100,18 @@ public final class GetPrivateEndpointResult {
         @Nullable Map<String,String> tags,
         String type) {
         this.customDnsConfigs = customDnsConfigs;
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.extendedLocation = extendedLocation;
         this.id = id;
         this.location = location;
         this.manualPrivateLinkServiceConnections = manualPrivateLinkServiceConnections;
-        this.name = Objects.requireNonNull(name);
-        this.networkInterfaces = Objects.requireNonNull(networkInterfaces);
+        this.name = name;
+        this.networkInterfaces = networkInterfaces;
         this.privateLinkServiceConnections = privateLinkServiceConnections;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.subnet = subnet;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

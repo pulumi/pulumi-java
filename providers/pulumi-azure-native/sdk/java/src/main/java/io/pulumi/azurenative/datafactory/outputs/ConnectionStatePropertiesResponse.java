@@ -30,9 +30,9 @@ public final class ConnectionStatePropertiesResponse {
         String actionsRequired,
         String description,
         String status) {
-        this.actionsRequired = Objects.requireNonNull(actionsRequired);
-        this.description = Objects.requireNonNull(description);
-        this.status = Objects.requireNonNull(status);
+        this.actionsRequired = actionsRequired;
+        this.description = description;
+        this.status = status;
     }
 
     /**

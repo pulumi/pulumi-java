@@ -123,24 +123,24 @@ public final class ProcessServerDetailsResponse {
         Double usedMemoryInBytes,
         Double usedSpaceInBytes,
         String version) {
-        this.availableMemoryInBytes = Objects.requireNonNull(availableMemoryInBytes);
-        this.availableSpaceInBytes = Objects.requireNonNull(availableSpaceInBytes);
-        this.freeSpacePercentage = Objects.requireNonNull(freeSpacePercentage);
-        this.health = Objects.requireNonNull(health);
-        this.healthErrors = Objects.requireNonNull(healthErrors);
-        this.historicHealth = Objects.requireNonNull(historicHealth);
-        this.id = Objects.requireNonNull(id);
-        this.lastHeartbeatUtc = Objects.requireNonNull(lastHeartbeatUtc);
-        this.memoryUsagePercentage = Objects.requireNonNull(memoryUsagePercentage);
-        this.name = Objects.requireNonNull(name);
-        this.processorUsagePercentage = Objects.requireNonNull(processorUsagePercentage);
-        this.throughputInBytes = Objects.requireNonNull(throughputInBytes);
-        this.throughputUploadPendingDataInBytes = Objects.requireNonNull(throughputUploadPendingDataInBytes);
-        this.totalMemoryInBytes = Objects.requireNonNull(totalMemoryInBytes);
-        this.totalSpaceInBytes = Objects.requireNonNull(totalSpaceInBytes);
-        this.usedMemoryInBytes = Objects.requireNonNull(usedMemoryInBytes);
-        this.usedSpaceInBytes = Objects.requireNonNull(usedSpaceInBytes);
-        this.version = Objects.requireNonNull(version);
+        this.availableMemoryInBytes = availableMemoryInBytes;
+        this.availableSpaceInBytes = availableSpaceInBytes;
+        this.freeSpacePercentage = freeSpacePercentage;
+        this.health = health;
+        this.healthErrors = healthErrors;
+        this.historicHealth = historicHealth;
+        this.id = id;
+        this.lastHeartbeatUtc = lastHeartbeatUtc;
+        this.memoryUsagePercentage = memoryUsagePercentage;
+        this.name = name;
+        this.processorUsagePercentage = processorUsagePercentage;
+        this.throughputInBytes = throughputInBytes;
+        this.throughputUploadPendingDataInBytes = throughputUploadPendingDataInBytes;
+        this.totalMemoryInBytes = totalMemoryInBytes;
+        this.totalSpaceInBytes = totalSpaceInBytes;
+        this.usedMemoryInBytes = usedMemoryInBytes;
+        this.usedSpaceInBytes = usedSpaceInBytes;
+        this.version = version;
     }
 
     /**

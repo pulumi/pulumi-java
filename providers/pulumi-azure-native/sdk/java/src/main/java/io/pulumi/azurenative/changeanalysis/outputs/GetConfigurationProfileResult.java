@@ -59,13 +59,13 @@ public final class GetConfigurationProfileResult {
         ConfigurationProfileResourcePropertiesResponse properties,
         @Nullable SystemDataResponse systemData,
         String type) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.identity = identity;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
-        this.properties = Objects.requireNonNull(properties);
+        this.name = name;
+        this.properties = properties;
         this.systemData = systemData;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

@@ -139,24 +139,24 @@ public final class GetAccountResult {
         @Nullable Map<String,String> tags,
         String type) {
         this.cloudConnectors = cloudConnectors;
-        this.createdAt = Objects.requireNonNull(createdAt);
-        this.createdBy = Objects.requireNonNull(createdBy);
-        this.createdByObjectId = Objects.requireNonNull(createdByObjectId);
-        this.endpoints = Objects.requireNonNull(endpoints);
-        this.friendlyName = Objects.requireNonNull(friendlyName);
-        this.id = Objects.requireNonNull(id);
+        this.createdAt = createdAt;
+        this.createdBy = createdBy;
+        this.createdByObjectId = createdByObjectId;
+        this.endpoints = endpoints;
+        this.friendlyName = friendlyName;
+        this.id = id;
         this.identity = identity;
         this.location = location;
         this.managedResourceGroupName = managedResourceGroupName;
-        this.managedResources = Objects.requireNonNull(managedResources);
-        this.name = Objects.requireNonNull(name);
-        this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.managedResources = managedResources;
+        this.name = name;
+        this.privateEndpointConnections = privateEndpointConnections;
+        this.provisioningState = provisioningState;
         this.publicNetworkAccess = publicNetworkAccess;
-        this.sku = Objects.requireNonNull(sku);
-        this.systemData = Objects.requireNonNull(systemData);
+        this.sku = sku;
+        this.systemData = systemData;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

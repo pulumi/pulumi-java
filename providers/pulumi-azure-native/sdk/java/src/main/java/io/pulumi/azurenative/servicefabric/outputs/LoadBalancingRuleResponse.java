@@ -45,11 +45,11 @@ public final class LoadBalancingRuleResponse {
         String probeProtocol,
         @Nullable String probeRequestPath,
         String protocol) {
-        this.backendPort = Objects.requireNonNull(backendPort);
-        this.frontendPort = Objects.requireNonNull(frontendPort);
-        this.probeProtocol = Objects.requireNonNull(probeProtocol);
+        this.backendPort = backendPort;
+        this.frontendPort = frontendPort;
+        this.probeProtocol = probeProtocol;
         this.probeRequestPath = probeRequestPath;
-        this.protocol = Objects.requireNonNull(protocol);
+        this.protocol = protocol;
     }
 
     /**

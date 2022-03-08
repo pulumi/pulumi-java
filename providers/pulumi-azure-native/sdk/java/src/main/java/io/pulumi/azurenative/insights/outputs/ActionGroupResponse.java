@@ -26,7 +26,7 @@ public final class ActionGroupResponse {
     private ActionGroupResponse(
         String actionGroupId,
         @Nullable Map<String,String> webhookProperties) {
-        this.actionGroupId = Objects.requireNonNull(actionGroupId);
+        this.actionGroupId = actionGroupId;
         this.webhookProperties = webhookProperties;
     }
 

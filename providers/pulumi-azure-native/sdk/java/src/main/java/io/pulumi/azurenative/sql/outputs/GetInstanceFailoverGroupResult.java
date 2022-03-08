@@ -73,15 +73,15 @@ public final class GetInstanceFailoverGroupResult {
         String replicationRole,
         String replicationState,
         String type) {
-        this.id = Objects.requireNonNull(id);
-        this.managedInstancePairs = Objects.requireNonNull(managedInstancePairs);
-        this.name = Objects.requireNonNull(name);
-        this.partnerRegions = Objects.requireNonNull(partnerRegions);
+        this.id = id;
+        this.managedInstancePairs = managedInstancePairs;
+        this.name = name;
+        this.partnerRegions = partnerRegions;
         this.readOnlyEndpoint = readOnlyEndpoint;
-        this.readWriteEndpoint = Objects.requireNonNull(readWriteEndpoint);
-        this.replicationRole = Objects.requireNonNull(replicationRole);
-        this.replicationState = Objects.requireNonNull(replicationState);
-        this.type = Objects.requireNonNull(type);
+        this.readWriteEndpoint = readWriteEndpoint;
+        this.replicationRole = replicationRole;
+        this.replicationState = replicationState;
+        this.type = type;
     }
 
     /**

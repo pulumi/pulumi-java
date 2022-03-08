@@ -98,13 +98,13 @@ public final class GetNotificationHubPnsCredentialsResult {
         this.apnsCredential = apnsCredential;
         this.baiduCredential = baiduCredential;
         this.gcmCredential = gcmCredential;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.location = location;
         this.mpnsCredential = mpnsCredential;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.sku = sku;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.wnsCredential = wnsCredential;
     }
 

@@ -55,7 +55,7 @@ public final class SearchResultsResponse {
         this.endSearchTime = endSearchTime;
         this.limit = limit;
         this.query = query;
-        this.sourceTable = Objects.requireNonNull(sourceTable);
+        this.sourceTable = sourceTable;
         this.startSearchTime = startSearchTime;
     }
 

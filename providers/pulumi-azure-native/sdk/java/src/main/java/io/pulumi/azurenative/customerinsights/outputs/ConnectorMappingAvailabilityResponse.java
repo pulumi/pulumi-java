@@ -28,7 +28,7 @@ public final class ConnectorMappingAvailabilityResponse {
         @Nullable String frequency,
         Integer interval) {
         this.frequency = frequency;
-        this.interval = Objects.requireNonNull(interval);
+        this.interval = interval;
     }
 
     /**

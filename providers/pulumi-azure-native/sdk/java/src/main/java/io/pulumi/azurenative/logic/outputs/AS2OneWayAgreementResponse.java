@@ -31,9 +31,9 @@ public final class AS2OneWayAgreementResponse {
         AS2ProtocolSettingsResponse protocolSettings,
         BusinessIdentityResponse receiverBusinessIdentity,
         BusinessIdentityResponse senderBusinessIdentity) {
-        this.protocolSettings = Objects.requireNonNull(protocolSettings);
-        this.receiverBusinessIdentity = Objects.requireNonNull(receiverBusinessIdentity);
-        this.senderBusinessIdentity = Objects.requireNonNull(senderBusinessIdentity);
+        this.protocolSettings = protocolSettings;
+        this.receiverBusinessIdentity = receiverBusinessIdentity;
+        this.senderBusinessIdentity = senderBusinessIdentity;
     }
 
     /**

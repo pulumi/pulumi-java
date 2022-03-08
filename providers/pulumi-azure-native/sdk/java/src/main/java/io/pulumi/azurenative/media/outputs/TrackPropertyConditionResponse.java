@@ -32,8 +32,8 @@ public final class TrackPropertyConditionResponse {
         String operation,
         String property,
         @Nullable String value) {
-        this.operation = Objects.requireNonNull(operation);
-        this.property = Objects.requireNonNull(property);
+        this.operation = operation;
+        this.property = property;
         this.value = value;
     }
 

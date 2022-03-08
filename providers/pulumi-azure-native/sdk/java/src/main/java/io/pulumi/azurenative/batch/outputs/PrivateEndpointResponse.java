@@ -13,7 +13,7 @@ public final class PrivateEndpointResponse {
 
     @OutputCustomType.Constructor({"id"})
     private PrivateEndpointResponse(String id) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
     }
 
     public String getId() {

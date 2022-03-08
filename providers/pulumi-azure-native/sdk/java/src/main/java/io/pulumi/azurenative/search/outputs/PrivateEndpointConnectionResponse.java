@@ -39,10 +39,10 @@ public final class PrivateEndpointConnectionResponse {
         String name,
         @Nullable PrivateEndpointConnectionPropertiesResponse properties,
         String type) {
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.properties = properties;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

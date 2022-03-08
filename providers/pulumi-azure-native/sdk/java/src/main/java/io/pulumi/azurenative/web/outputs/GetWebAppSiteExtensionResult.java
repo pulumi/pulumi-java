@@ -166,20 +166,20 @@ public final class GetWebAppSiteExtensionResult {
         this.extensionUrl = extensionUrl;
         this.feedUrl = feedUrl;
         this.iconUrl = iconUrl;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.installedDateTime = installedDateTime;
         this.installerCommandLineParams = installerCommandLineParams;
         this.kind = kind;
         this.licenseUrl = licenseUrl;
         this.localIsLatestVersion = localIsLatestVersion;
         this.localPath = localPath;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.projectUrl = projectUrl;
         this.provisioningState = provisioningState;
         this.publishedDateTime = publishedDateTime;
         this.summary = summary;
         this.title = title;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.version = version;
     }
 

@@ -90,17 +90,17 @@ public final class GetLocalNetworkGatewayResult {
         @Nullable Map<String,String> tags,
         String type) {
         this.bgpSettings = bgpSettings;
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.fqdn = fqdn;
         this.gatewayIpAddress = gatewayIpAddress;
         this.id = id;
         this.localNetworkAddressSpace = localNetworkAddressSpace;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.resourceGuid = Objects.requireNonNull(resourceGuid);
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.resourceGuid = resourceGuid;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

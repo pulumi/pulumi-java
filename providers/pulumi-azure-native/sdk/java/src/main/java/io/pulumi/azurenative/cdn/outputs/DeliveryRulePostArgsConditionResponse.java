@@ -26,8 +26,8 @@ public final class DeliveryRulePostArgsConditionResponse {
     private DeliveryRulePostArgsConditionResponse(
         String name,
         PostArgsMatchConditionParametersResponse parameters) {
-        this.name = Objects.requireNonNull(name);
-        this.parameters = Objects.requireNonNull(parameters);
+        this.name = name;
+        this.parameters = parameters;
     }
 
     /**

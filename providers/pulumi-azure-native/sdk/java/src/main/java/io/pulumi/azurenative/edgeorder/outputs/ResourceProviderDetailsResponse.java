@@ -17,7 +17,7 @@ public final class ResourceProviderDetailsResponse {
 
     @OutputCustomType.Constructor({"resourceProviderNamespace"})
     private ResourceProviderDetailsResponse(String resourceProviderNamespace) {
-        this.resourceProviderNamespace = Objects.requireNonNull(resourceProviderNamespace);
+        this.resourceProviderNamespace = resourceProviderNamespace;
     }
 
     /**

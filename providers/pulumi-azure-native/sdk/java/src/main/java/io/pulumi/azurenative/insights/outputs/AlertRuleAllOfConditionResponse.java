@@ -18,7 +18,7 @@ public final class AlertRuleAllOfConditionResponse {
 
     @OutputCustomType.Constructor({"allOf"})
     private AlertRuleAllOfConditionResponse(List<AlertRuleAnyOfOrLeafConditionResponse> allOf) {
-        this.allOf = Objects.requireNonNull(allOf);
+        this.allOf = allOf;
     }
 
     /**

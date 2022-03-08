@@ -24,8 +24,8 @@ public final class GraphParameterLinkResponse {
     private GraphParameterLinkResponse(
         String nodeId,
         String parameterKey) {
-        this.nodeId = Objects.requireNonNull(nodeId);
-        this.parameterKey = Objects.requireNonNull(parameterKey);
+        this.nodeId = nodeId;
+        this.parameterKey = parameterKey;
     }
 
     /**

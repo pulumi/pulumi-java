@@ -113,19 +113,19 @@ public final class GetArtifactSourceResult {
         @Nullable String uri) {
         this.armTemplateFolderPath = armTemplateFolderPath;
         this.branchRef = branchRef;
-        this.createdDate = Objects.requireNonNull(createdDate);
+        this.createdDate = createdDate;
         this.displayName = displayName;
         this.folderPath = folderPath;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.securityToken = securityToken;
         this.sourceType = sourceType;
         this.status = status;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
-        this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
+        this.type = type;
+        this.uniqueIdentifier = uniqueIdentifier;
         this.uri = uri;
     }
 

@@ -26,8 +26,8 @@ public final class EnergyServicePropertiesResponse {
         String provisioningState) {
         this.authAppId = authAppId;
         this.dataPartitionNames = dataPartitionNames;
-        this.dnsName = Objects.requireNonNull(dnsName);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.dnsName = dnsName;
+        this.provisioningState = provisioningState;
     }
 
     public Optional<String> getAuthAppId() {

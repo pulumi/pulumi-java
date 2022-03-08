@@ -74,7 +74,7 @@ public final class AzureStorageContainerResponse {
         @Nullable String sourceResourceId,
         @Nullable String storageAccountVersion) {
         this.backupManagementType = backupManagementType;
-        this.containerType = Objects.requireNonNull(containerType);
+        this.containerType = containerType;
         this.friendlyName = friendlyName;
         this.healthStatus = healthStatus;
         this.protectedItemCount = protectedItemCount;

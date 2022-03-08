@@ -30,9 +30,9 @@ public final class ViolationResponse {
         String errorMessage,
         String id,
         String userId) {
-        this.errorMessage = Objects.requireNonNull(errorMessage);
-        this.id = Objects.requireNonNull(id);
-        this.userId = Objects.requireNonNull(userId);
+        this.errorMessage = errorMessage;
+        this.id = id;
+        this.userId = userId;
     }
 
     /**

@@ -29,7 +29,7 @@ public final class PeriodicModeBackupPolicyResponse {
         @Nullable PeriodicModePropertiesResponse periodicModeProperties,
         String type) {
         this.periodicModeProperties = periodicModeProperties;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

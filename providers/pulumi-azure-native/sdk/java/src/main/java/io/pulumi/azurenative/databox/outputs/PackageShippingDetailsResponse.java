@@ -30,9 +30,9 @@ public final class PackageShippingDetailsResponse {
         String carrierName,
         String trackingId,
         String trackingUrl) {
-        this.carrierName = Objects.requireNonNull(carrierName);
-        this.trackingId = Objects.requireNonNull(trackingId);
-        this.trackingUrl = Objects.requireNonNull(trackingUrl);
+        this.carrierName = carrierName;
+        this.trackingId = trackingId;
+        this.trackingUrl = trackingUrl;
     }
 
     /**

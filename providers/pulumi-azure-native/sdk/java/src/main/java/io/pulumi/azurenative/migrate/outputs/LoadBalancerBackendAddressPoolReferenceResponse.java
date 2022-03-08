@@ -27,7 +27,7 @@ public final class LoadBalancerBackendAddressPoolReferenceResponse {
         @Nullable String name,
         String sourceArmResourceId) {
         this.name = name;
-        this.sourceArmResourceId = Objects.requireNonNull(sourceArmResourceId);
+        this.sourceArmResourceId = sourceArmResourceId;
     }
 
     /**

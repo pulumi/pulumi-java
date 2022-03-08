@@ -86,16 +86,16 @@ public final class GetAvailabilitySetResult {
         @Nullable Map<String,String> tags,
         String type,
         @Nullable List<SubResourceResponse> virtualMachines) {
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.location = location;
+        this.name = name;
         this.platformFaultDomainCount = platformFaultDomainCount;
         this.platformUpdateDomainCount = platformUpdateDomainCount;
         this.proximityPlacementGroup = proximityPlacementGroup;
         this.sku = sku;
-        this.statuses = Objects.requireNonNull(statuses);
+        this.statuses = statuses;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.virtualMachines = virtualMachines;
     }
 

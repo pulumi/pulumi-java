@@ -36,7 +36,7 @@ public final class FileServerLocationResponse {
         String type) {
         this.fileName = fileName;
         this.folderPath = folderPath;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**
