@@ -40,8 +40,7 @@ public final class InputOutputData<T> implements Copyable<InputOutputData<T>> {
     private InputOutputData(ImmutableSet<Resource> resources, @Nullable T value, boolean isKnown, boolean isSecret) {
         this.resources = Objects.requireNonNull(resources);
         if (!isKnown && value != null) {
-            throw new IllegalArgumentException("Unknown Output should not carry a non-null value, but got "
-                    + value.toString());
+            throw new IllegalArgumentException(String.format("Expected unknown InputOutputData to not carry a non-null value, but got: '%s'", value));
         }
         this.value = value;
         this.known = isKnown; // can be true even with value == null (when empty)
