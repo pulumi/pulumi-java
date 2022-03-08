@@ -89,7 +89,7 @@ public final class RegistryImageBuild {
         this.buildId = buildId;
         this.cacheFroms = cacheFroms;
         this.cgroupParent = cgroupParent;
-        this.context = Objects.requireNonNull(context);
+        this.context = context;
         this.cpuPeriod = cpuPeriod;
         this.cpuQuota = cpuQuota;
         this.cpuSetCpus = cpuSetCpus;

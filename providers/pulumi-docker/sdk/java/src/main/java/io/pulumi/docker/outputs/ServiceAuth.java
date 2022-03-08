@@ -21,7 +21,7 @@ public final class ServiceAuth {
         String serverAddress,
         @Nullable String username) {
         this.password = password;
-        this.serverAddress = Objects.requireNonNull(serverAddress);
+        this.serverAddress = serverAddress;
         this.username = username;
     }
 

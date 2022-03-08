@@ -26,7 +26,7 @@ public final class ContainerNetworksAdvanced {
         this.aliases = aliases;
         this.ipv4Address = ipv4Address;
         this.ipv6Address = ipv6Address;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     public List<String> getAliases() {

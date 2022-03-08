@@ -31,13 +31,13 @@ public final class GetNetworkResult {
         String name,
         Map<String,Object> options,
         String scope) {
-        this.driver = Objects.requireNonNull(driver);
-        this.id = Objects.requireNonNull(id);
-        this.internal = Objects.requireNonNull(internal);
-        this.ipamConfigs = Objects.requireNonNull(ipamConfigs);
-        this.name = Objects.requireNonNull(name);
-        this.options = Objects.requireNonNull(options);
-        this.scope = Objects.requireNonNull(scope);
+        this.driver = driver;
+        this.id = id;
+        this.internal = internal;
+        this.ipamConfigs = ipamConfigs;
+        this.name = name;
+        this.options = options;
+        this.scope = scope;
     }
 
     public String getDriver() {

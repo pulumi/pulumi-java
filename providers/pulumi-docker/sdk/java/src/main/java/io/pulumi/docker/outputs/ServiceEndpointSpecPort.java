@@ -29,7 +29,7 @@ public final class ServiceEndpointSpecPort {
         this.protocol = protocol;
         this.publishMode = publishMode;
         this.publishedPort = publishedPort;
-        this.targetPort = Objects.requireNonNull(targetPort);
+        this.targetPort = targetPort;
     }
 
     public Optional<String> getName() {

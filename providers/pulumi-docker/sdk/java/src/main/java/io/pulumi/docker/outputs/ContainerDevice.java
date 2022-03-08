@@ -21,7 +21,7 @@ public final class ContainerDevice {
         String hostPath,
         @Nullable String permissions) {
         this.containerPath = containerPath;
-        this.hostPath = Objects.requireNonNull(hostPath);
+        this.hostPath = hostPath;
         this.permissions = permissions;
     }
 

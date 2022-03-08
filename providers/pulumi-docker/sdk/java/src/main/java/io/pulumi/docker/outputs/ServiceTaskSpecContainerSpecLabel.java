@@ -16,8 +16,8 @@ public final class ServiceTaskSpecContainerSpecLabel {
     private ServiceTaskSpecContainerSpecLabel(
         String label,
         String value) {
-        this.label = Objects.requireNonNull(label);
-        this.value = Objects.requireNonNull(value);
+        this.label = label;
+        this.value = value;
     }
 
     public String getLabel() {
