@@ -52,7 +52,7 @@ public class OutputCompletionSource<T> {
     public void setObjectValue(Object value, TypeShape<?> valueShape, boolean isKnown) {
         if (isKnown && value != null && !dataTypeShape.getType().isAssignableFrom(value.getClass())) {
             throw new IllegalArgumentException(String.format(
-                    "Expected 'setObjectValue' with matching types, got 'OutputCompletionSource<%s>' and value class '%s",
+                    "Expected 'setObjectValue' with matching types, got 'OutputCompletionSource<%s>' and value class '%s'",
                     value.getClass().getTypeName(), dataTypeShape.getType().getTypeName())
             );
         }
