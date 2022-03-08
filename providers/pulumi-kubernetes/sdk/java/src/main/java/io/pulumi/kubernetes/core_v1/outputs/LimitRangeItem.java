@@ -60,7 +60,7 @@ public final class LimitRangeItem {
         this.max = max;
         this.maxLimitRequestRatio = maxLimitRequestRatio;
         this.min = min;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

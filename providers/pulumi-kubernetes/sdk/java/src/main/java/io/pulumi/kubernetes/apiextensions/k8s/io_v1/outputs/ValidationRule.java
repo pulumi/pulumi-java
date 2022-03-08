@@ -51,7 +51,7 @@ public final class ValidationRule {
         @Nullable String message,
         String rule) {
         this.message = message;
-        this.rule = Objects.requireNonNull(rule);
+        this.rule = rule;
     }
 
     /**

@@ -18,7 +18,7 @@ public final class LimitRangeSpec {
 
     @OutputCustomType.Constructor({"limits"})
     private LimitRangeSpec(List<LimitRangeItem> limits) {
-        this.limits = Objects.requireNonNull(limits);
+        this.limits = limits;
     }
 
     /**

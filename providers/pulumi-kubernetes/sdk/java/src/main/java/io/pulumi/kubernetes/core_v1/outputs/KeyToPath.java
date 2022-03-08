@@ -33,9 +33,9 @@ public final class KeyToPath {
         String key,
         @Nullable Integer mode,
         String path) {
-        this.key = Objects.requireNonNull(key);
+        this.key = key;
         this.mode = mode;
-        this.path = Objects.requireNonNull(path);
+        this.path = path;
     }
 
     /**

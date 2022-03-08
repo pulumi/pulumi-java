@@ -28,7 +28,7 @@ public final class ContainerImage {
     private ContainerImage(
         List<String> names,
         @Nullable Integer sizeBytes) {
-        this.names = Objects.requireNonNull(names);
+        this.names = names;
         this.sizeBytes = sizeBytes;
     }
 

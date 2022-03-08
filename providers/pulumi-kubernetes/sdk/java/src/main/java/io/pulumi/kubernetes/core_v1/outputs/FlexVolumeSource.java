@@ -47,7 +47,7 @@ public final class FlexVolumeSource {
         @Nullable Map<String,String> options,
         @Nullable Boolean readOnly,
         @Nullable LocalObjectReference secretRef) {
-        this.driver = Objects.requireNonNull(driver);
+        this.driver = driver;
         this.fsType = fsType;
         this.options = options;
         this.readOnly = readOnly;

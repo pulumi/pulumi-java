@@ -31,8 +31,8 @@ public final class NodeAddress {
     private NodeAddress(
         String address,
         String type) {
-        this.address = Objects.requireNonNull(address);
-        this.type = Objects.requireNonNull(type);
+        this.address = address;
+        this.type = type;
     }
 
     /**

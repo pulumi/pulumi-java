@@ -43,8 +43,8 @@ public final class Taint {
         String key,
         @Nullable String timeAdded,
         @Nullable String value) {
-        this.effect = Objects.requireNonNull(effect);
-        this.key = Objects.requireNonNull(key);
+        this.effect = effect;
+        this.key = key;
         this.timeAdded = timeAdded;
         this.value = value;
     }

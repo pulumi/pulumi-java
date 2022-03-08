@@ -77,14 +77,14 @@ public final class StatefulSetStatus {
         Integer replicas,
         @Nullable String updateRevision,
         @Nullable Integer updatedReplicas) {
-        this.availableReplicas = Objects.requireNonNull(availableReplicas);
+        this.availableReplicas = availableReplicas;
         this.collisionCount = collisionCount;
         this.conditions = conditions;
         this.currentReplicas = currentReplicas;
         this.currentRevision = currentRevision;
         this.observedGeneration = observedGeneration;
         this.readyReplicas = readyReplicas;
-        this.replicas = Objects.requireNonNull(replicas);
+        this.replicas = replicas;
         this.updateRevision = updateRevision;
         this.updatedReplicas = updatedReplicas;
     }

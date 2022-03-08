@@ -51,12 +51,12 @@ public final class CustomResourceColumnDefinition {
         String name,
         @Nullable Integer priority,
         String type) {
-        this.JSONPath = Objects.requireNonNull(JSONPath);
+        this.JSONPath = JSONPath;
         this.description = description;
         this.format = format;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.priority = priority;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

@@ -25,8 +25,8 @@ public final class EventSeries {
     private EventSeries(
         Integer count,
         String lastObservedTime) {
-        this.count = Objects.requireNonNull(count);
-        this.lastObservedTime = Objects.requireNonNull(lastObservedTime);
+        this.count = count;
+        this.lastObservedTime = lastObservedTime;
     }
 
     /**

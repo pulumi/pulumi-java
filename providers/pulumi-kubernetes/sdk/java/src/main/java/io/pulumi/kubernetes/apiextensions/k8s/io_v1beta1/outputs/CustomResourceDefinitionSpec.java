@@ -84,10 +84,10 @@ public final class CustomResourceDefinitionSpec {
         @Nullable List<CustomResourceDefinitionVersion> versions) {
         this.additionalPrinterColumns = additionalPrinterColumns;
         this.conversion = conversion;
-        this.group = Objects.requireNonNull(group);
-        this.names = Objects.requireNonNull(names);
+        this.group = group;
+        this.names = names;
         this.preserveUnknownFields = preserveUnknownFields;
-        this.scope = Objects.requireNonNull(scope);
+        this.scope = scope;
         this.subresources = subresources;
         this.validation = validation;
         this.version = version;

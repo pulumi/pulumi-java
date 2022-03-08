@@ -39,9 +39,9 @@ public final class GlusterfsPersistentVolumeSource {
         @Nullable String endpointsNamespace,
         String path,
         @Nullable Boolean readOnly) {
-        this.endpoints = Objects.requireNonNull(endpoints);
+        this.endpoints = endpoints;
         this.endpointsNamespace = endpointsNamespace;
-        this.path = Objects.requireNonNull(path);
+        this.path = path;
         this.readOnly = readOnly;
     }
 

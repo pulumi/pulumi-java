@@ -42,7 +42,7 @@ public final class ResourceRule {
         this.apiGroups = apiGroups;
         this.resourceNames = resourceNames;
         this.resources = resources;
-        this.verbs = Objects.requireNonNull(verbs);
+        this.verbs = verbs;
     }
 
     /**

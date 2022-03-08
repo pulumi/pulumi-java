@@ -40,7 +40,7 @@ public final class EndpointAddress {
         @Nullable String nodeName,
         @Nullable ObjectReference targetRef) {
         this.hostname = hostname;
-        this.ip = Objects.requireNonNull(ip);
+        this.ip = ip;
         this.nodeName = nodeName;
         this.targetRef = targetRef;
     }

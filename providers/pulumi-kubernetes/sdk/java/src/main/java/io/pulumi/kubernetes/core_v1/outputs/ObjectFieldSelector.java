@@ -27,7 +27,7 @@ public final class ObjectFieldSelector {
         @Nullable String apiVersion,
         String fieldPath) {
         this.apiVersion = apiVersion;
-        this.fieldPath = Objects.requireNonNull(fieldPath);
+        this.fieldPath = fieldPath;
     }
 
     /**

@@ -182,7 +182,7 @@ public final class EphemeralContainer {
         this.imagePullPolicy = imagePullPolicy;
         this.lifecycle = lifecycle;
         this.livenessProbe = livenessProbe;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.ports = ports;
         this.readinessProbe = readinessProbe;
         this.resources = resources;

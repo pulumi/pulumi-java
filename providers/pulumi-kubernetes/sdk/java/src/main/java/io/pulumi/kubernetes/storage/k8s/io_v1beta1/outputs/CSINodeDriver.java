@@ -41,8 +41,8 @@ public final class CSINodeDriver {
         String nodeID,
         @Nullable List<String> topologyKeys) {
         this.allocatable = allocatable;
-        this.name = Objects.requireNonNull(name);
-        this.nodeID = Objects.requireNonNull(nodeID);
+        this.name = name;
+        this.nodeID = nodeID;
         this.topologyKeys = topologyKeys;
     }
 

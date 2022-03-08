@@ -54,7 +54,7 @@ public final class RuntimeClass {
         @Nullable Overhead overhead,
         @Nullable Scheduling scheduling) {
         this.apiVersion = apiVersion;
-        this.handler = Objects.requireNonNull(handler);
+        this.handler = handler;
         this.kind = kind;
         this.metadata = metadata;
         this.overhead = overhead;

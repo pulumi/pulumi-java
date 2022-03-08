@@ -50,7 +50,7 @@ public final class CustomResourceDefinition {
         this.apiVersion = apiVersion;
         this.kind = kind;
         this.metadata = metadata;
-        this.spec = Objects.requireNonNull(spec);
+        this.spec = spec;
         this.status = status;
     }
 

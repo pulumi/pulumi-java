@@ -56,7 +56,7 @@ public final class DaemonSetSpec {
         this.minReadySeconds = minReadySeconds;
         this.revisionHistoryLimit = revisionHistoryLimit;
         this.selector = selector;
-        this.template = Objects.requireNonNull(template);
+        this.template = template;
         this.templateGeneration = templateGeneration;
         this.updateStrategy = updateStrategy;
     }

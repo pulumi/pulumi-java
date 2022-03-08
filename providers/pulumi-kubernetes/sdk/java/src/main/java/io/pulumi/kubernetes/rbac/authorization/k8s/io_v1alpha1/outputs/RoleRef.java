@@ -30,9 +30,9 @@ public final class RoleRef {
         String apiGroup,
         String kind,
         String name) {
-        this.apiGroup = Objects.requireNonNull(apiGroup);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
+        this.apiGroup = apiGroup;
+        this.kind = kind;
+        this.name = name;
     }
 
     /**

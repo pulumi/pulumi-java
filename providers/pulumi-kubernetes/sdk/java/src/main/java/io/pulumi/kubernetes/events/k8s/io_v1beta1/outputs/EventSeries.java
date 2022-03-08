@@ -33,8 +33,8 @@ public final class EventSeries {
         Integer count,
         String lastObservedTime,
         @Nullable String state) {
-        this.count = Objects.requireNonNull(count);
-        this.lastObservedTime = Objects.requireNonNull(lastObservedTime);
+        this.count = count;
+        this.lastObservedTime = lastObservedTime;
         this.state = state;
     }
 

@@ -26,7 +26,7 @@ public final class Policy {
     private Policy(
         String level,
         @Nullable List<String> stages) {
-        this.level = Objects.requireNonNull(level);
+        this.level = level;
         this.stages = stages;
     }
 

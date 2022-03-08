@@ -25,8 +25,8 @@ public final class AuditSinkSpec {
     private AuditSinkSpec(
         Policy policy,
         Webhook webhook) {
-        this.policy = Objects.requireNonNull(policy);
-        this.webhook = Objects.requireNonNull(webhook);
+        this.policy = policy;
+        this.webhook = webhook;
     }
 
     /**

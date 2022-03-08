@@ -43,7 +43,7 @@ public final class PodAffinityTerm {
         this.labelSelector = labelSelector;
         this.namespaceSelector = namespaceSelector;
         this.namespaces = namespaces;
-        this.topologyKey = Objects.requireNonNull(topologyKey);
+        this.topologyKey = topologyKey;
     }
 
     /**

@@ -24,8 +24,8 @@ public final class AttachedVolume {
     private AttachedVolume(
         String devicePath,
         String name) {
-        this.devicePath = Objects.requireNonNull(devicePath);
-        this.name = Objects.requireNonNull(name);
+        this.devicePath = devicePath;
+        this.name = name;
     }
 
     /**

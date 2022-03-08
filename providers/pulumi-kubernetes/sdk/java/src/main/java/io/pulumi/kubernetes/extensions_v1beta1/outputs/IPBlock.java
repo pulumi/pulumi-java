@@ -26,7 +26,7 @@ public final class IPBlock {
     private IPBlock(
         String cidr,
         @Nullable List<String> except) {
-        this.cidr = Objects.requireNonNull(cidr);
+        this.cidr = cidr;
         this.except = except;
     }
 

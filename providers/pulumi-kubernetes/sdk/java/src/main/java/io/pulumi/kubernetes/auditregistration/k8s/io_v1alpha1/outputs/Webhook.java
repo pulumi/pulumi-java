@@ -27,7 +27,7 @@ public final class Webhook {
     private Webhook(
         WebhookClientConfig clientConfig,
         @Nullable WebhookThrottleConfig throttle) {
-        this.clientConfig = Objects.requireNonNull(clientConfig);
+        this.clientConfig = clientConfig;
         this.throttle = throttle;
     }
 

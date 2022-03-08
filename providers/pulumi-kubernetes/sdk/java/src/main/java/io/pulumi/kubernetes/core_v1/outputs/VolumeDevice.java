@@ -24,8 +24,8 @@ public final class VolumeDevice {
     private VolumeDevice(
         String devicePath,
         String name) {
-        this.devicePath = Objects.requireNonNull(devicePath);
-        this.name = Objects.requireNonNull(name);
+        this.devicePath = devicePath;
+        this.name = name;
     }
 
     /**

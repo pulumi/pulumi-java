@@ -29,7 +29,7 @@ public final class WebhookConversion {
         @Nullable WebhookClientConfig clientConfig,
         List<String> conversionReviewVersions) {
         this.clientConfig = clientConfig;
-        this.conversionReviewVersions = Objects.requireNonNull(conversionReviewVersions);
+        this.conversionReviewVersions = conversionReviewVersions;
     }
 
     /**

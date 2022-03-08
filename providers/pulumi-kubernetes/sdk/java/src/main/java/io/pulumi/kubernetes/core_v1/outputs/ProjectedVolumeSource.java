@@ -29,7 +29,7 @@ public final class ProjectedVolumeSource {
         @Nullable Integer defaultMode,
         List<VolumeProjection> sources) {
         this.defaultMode = defaultMode;
-        this.sources = Objects.requireNonNull(sources);
+        this.sources = sources;
     }
 
     /**

@@ -43,9 +43,9 @@ public final class SubjectRulesReviewStatus {
         List<NonResourceRule> nonResourceRules,
         List<ResourceRule> resourceRules) {
         this.evaluationError = evaluationError;
-        this.incomplete = Objects.requireNonNull(incomplete);
-        this.nonResourceRules = Objects.requireNonNull(nonResourceRules);
-        this.resourceRules = Objects.requireNonNull(resourceRules);
+        this.incomplete = incomplete;
+        this.nonResourceRules = nonResourceRules;
+        this.resourceRules = resourceRules;
     }
 
     /**

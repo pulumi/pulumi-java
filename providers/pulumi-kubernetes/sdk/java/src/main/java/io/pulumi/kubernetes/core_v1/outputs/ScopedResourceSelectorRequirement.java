@@ -46,8 +46,8 @@ public final class ScopedResourceSelectorRequirement {
         String operator,
         String scopeName,
         @Nullable List<String> values) {
-        this.operator = Objects.requireNonNull(operator);
-        this.scopeName = Objects.requireNonNull(scopeName);
+        this.operator = operator;
+        this.scopeName = scopeName;
         this.values = values;
     }
 

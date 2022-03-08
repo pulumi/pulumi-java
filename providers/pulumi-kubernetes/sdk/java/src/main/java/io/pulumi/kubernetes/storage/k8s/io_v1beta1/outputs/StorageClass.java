@@ -86,7 +86,7 @@ public final class StorageClass {
         this.metadata = metadata;
         this.mountOptions = mountOptions;
         this.parameters = parameters;
-        this.provisioner = Objects.requireNonNull(provisioner);
+        this.provisioner = provisioner;
         this.reclaimPolicy = reclaimPolicy;
         this.volumeBindingMode = volumeBindingMode;
     }

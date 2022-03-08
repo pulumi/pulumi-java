@@ -51,9 +51,9 @@ public final class VolumeMount {
         @Nullable Boolean readOnly,
         @Nullable String subPath,
         @Nullable String subPathExpr) {
-        this.mountPath = Objects.requireNonNull(mountPath);
+        this.mountPath = mountPath;
         this.mountPropagation = mountPropagation;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.readOnly = readOnly;
         this.subPath = subPath;
         this.subPathExpr = subPathExpr;

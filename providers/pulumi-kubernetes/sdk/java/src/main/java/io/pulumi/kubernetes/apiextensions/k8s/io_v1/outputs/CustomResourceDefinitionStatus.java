@@ -34,9 +34,9 @@ public final class CustomResourceDefinitionStatus {
         CustomResourceDefinitionNames acceptedNames,
         @Nullable List<CustomResourceDefinitionCondition> conditions,
         List<String> storedVersions) {
-        this.acceptedNames = Objects.requireNonNull(acceptedNames);
+        this.acceptedNames = acceptedNames;
         this.conditions = conditions;
-        this.storedVersions = Objects.requireNonNull(storedVersions);
+        this.storedVersions = storedVersions;
     }
 
     /**

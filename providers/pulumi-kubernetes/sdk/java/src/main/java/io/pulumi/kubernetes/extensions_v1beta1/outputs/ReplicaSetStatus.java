@@ -57,7 +57,7 @@ public final class ReplicaSetStatus {
         this.fullyLabeledReplicas = fullyLabeledReplicas;
         this.observedGeneration = observedGeneration;
         this.readyReplicas = readyReplicas;
-        this.replicas = Objects.requireNonNull(replicas);
+        this.replicas = replicas;
     }
 
     /**

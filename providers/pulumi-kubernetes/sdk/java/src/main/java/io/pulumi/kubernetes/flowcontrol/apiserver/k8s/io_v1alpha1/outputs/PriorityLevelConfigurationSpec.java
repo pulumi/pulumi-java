@@ -28,7 +28,7 @@ public final class PriorityLevelConfigurationSpec {
         @Nullable LimitedPriorityLevelConfiguration limited,
         String type) {
         this.limited = limited;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

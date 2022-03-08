@@ -43,7 +43,7 @@ public final class HTTPIngressPath {
         IngressBackend backend,
         @Nullable String path,
         @Nullable String pathType) {
-        this.backend = Objects.requireNonNull(backend);
+        this.backend = backend;
         this.path = path;
         this.pathType = pathType;
     }

@@ -41,7 +41,7 @@ public final class MetricTarget {
         @Nullable String value) {
         this.averageUtilization = averageUtilization;
         this.averageValue = averageValue;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.value = value;
     }
 

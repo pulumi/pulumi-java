@@ -39,8 +39,8 @@ public final class ContainerResourceMetricSource {
         String name,
         @Nullable Integer targetAverageUtilization,
         @Nullable String targetAverageValue) {
-        this.container = Objects.requireNonNull(container);
-        this.name = Objects.requireNonNull(name);
+        this.container = container;
+        this.name = name;
         this.targetAverageUtilization = targetAverageUtilization;
         this.targetAverageValue = targetAverageValue;
     }

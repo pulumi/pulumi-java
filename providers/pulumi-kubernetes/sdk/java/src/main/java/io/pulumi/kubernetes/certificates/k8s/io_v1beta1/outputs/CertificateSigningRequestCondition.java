@@ -55,7 +55,7 @@ public final class CertificateSigningRequestCondition {
         this.message = message;
         this.reason = reason;
         this.status = status;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**
