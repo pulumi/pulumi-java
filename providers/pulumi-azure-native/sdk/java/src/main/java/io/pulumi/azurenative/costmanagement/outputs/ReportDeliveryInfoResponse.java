@@ -17,7 +17,7 @@ public final class ReportDeliveryInfoResponse {
 
     @OutputCustomType.Constructor({"destination"})
     private ReportDeliveryInfoResponse(ReportDeliveryDestinationResponse destination) {
-        this.destination = Objects.requireNonNull(destination);
+        this.destination = destination;
     }
 
     /**

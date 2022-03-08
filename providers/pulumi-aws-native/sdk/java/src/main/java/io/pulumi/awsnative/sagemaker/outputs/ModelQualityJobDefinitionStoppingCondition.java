@@ -17,7 +17,7 @@ public final class ModelQualityJobDefinitionStoppingCondition {
 
     @OutputCustomType.Constructor({"maxRuntimeInSeconds"})
     private ModelQualityJobDefinitionStoppingCondition(Integer maxRuntimeInSeconds) {
-        this.maxRuntimeInSeconds = Objects.requireNonNull(maxRuntimeInSeconds);
+        this.maxRuntimeInSeconds = maxRuntimeInSeconds;
     }
 
     /**

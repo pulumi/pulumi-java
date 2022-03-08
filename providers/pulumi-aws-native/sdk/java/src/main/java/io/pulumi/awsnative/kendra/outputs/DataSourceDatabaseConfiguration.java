@@ -32,9 +32,9 @@ public final class DataSourceDatabaseConfiguration {
         @Nullable DataSourceSqlConfiguration sqlConfiguration,
         @Nullable DataSourceVpcConfiguration vpcConfiguration) {
         this.aclConfiguration = aclConfiguration;
-        this.columnConfiguration = Objects.requireNonNull(columnConfiguration);
-        this.connectionConfiguration = Objects.requireNonNull(connectionConfiguration);
-        this.databaseEngineType = Objects.requireNonNull(databaseEngineType);
+        this.columnConfiguration = columnConfiguration;
+        this.connectionConfiguration = connectionConfiguration;
+        this.databaseEngineType = databaseEngineType;
         this.sqlConfiguration = sqlConfiguration;
         this.vpcConfiguration = vpcConfiguration;
     }

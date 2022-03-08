@@ -48,12 +48,12 @@ public final class InternalCheckerResponse {
         String network,
         String peerProjectId,
         String state) {
-        this.displayName = Objects.requireNonNull(displayName);
-        this.gcpZone = Objects.requireNonNull(gcpZone);
-        this.name = Objects.requireNonNull(name);
-        this.network = Objects.requireNonNull(network);
-        this.peerProjectId = Objects.requireNonNull(peerProjectId);
-        this.state = Objects.requireNonNull(state);
+        this.displayName = displayName;
+        this.gcpZone = gcpZone;
+        this.name = name;
+        this.network = network;
+        this.peerProjectId = peerProjectId;
+        this.state = state;
     }
 
     /**

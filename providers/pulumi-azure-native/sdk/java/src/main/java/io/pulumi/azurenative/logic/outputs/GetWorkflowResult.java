@@ -137,24 +137,24 @@ public final class GetWorkflowResult {
         String type,
         String version) {
         this.accessControl = accessControl;
-        this.accessEndpoint = Objects.requireNonNull(accessEndpoint);
-        this.changedTime = Objects.requireNonNull(changedTime);
-        this.createdTime = Objects.requireNonNull(createdTime);
+        this.accessEndpoint = accessEndpoint;
+        this.changedTime = changedTime;
+        this.createdTime = createdTime;
         this.definition = definition;
         this.endpointsConfiguration = endpointsConfiguration;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.identity = identity;
         this.integrationAccount = integrationAccount;
         this.integrationServiceEnvironment = integrationServiceEnvironment;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.parameters = parameters;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.sku = Objects.requireNonNull(sku);
+        this.provisioningState = provisioningState;
+        this.sku = sku;
         this.state = state;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
-        this.version = Objects.requireNonNull(version);
+        this.type = type;
+        this.version = version;
     }
 
     /**

@@ -17,7 +17,7 @@ public final class EncryptionConfigResponse {
 
     @OutputCustomType.Constructor({"kmsKeyName"})
     private EncryptionConfigResponse(String kmsKeyName) {
-        this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
+        this.kmsKeyName = kmsKeyName;
     }
 
     /**

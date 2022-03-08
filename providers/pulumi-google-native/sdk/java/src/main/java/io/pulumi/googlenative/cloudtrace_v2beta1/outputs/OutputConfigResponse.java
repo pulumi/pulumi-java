@@ -17,7 +17,7 @@ public final class OutputConfigResponse {
 
     @OutputCustomType.Constructor({"destination"})
     private OutputConfigResponse(String destination) {
-        this.destination = Objects.requireNonNull(destination);
+        this.destination = destination;
     }
 
     /**

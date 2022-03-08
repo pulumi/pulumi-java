@@ -25,8 +25,8 @@ public final class GoogleCloudRunOpV2ContainerPortResponse {
     private GoogleCloudRunOpV2ContainerPortResponse(
         Integer containerPort,
         String name) {
-        this.containerPort = Objects.requireNonNull(containerPort);
-        this.name = Objects.requireNonNull(name);
+        this.containerPort = containerPort;
+        this.name = name;
     }
 
     /**

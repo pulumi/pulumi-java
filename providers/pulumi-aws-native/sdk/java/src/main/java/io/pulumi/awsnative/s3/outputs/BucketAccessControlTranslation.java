@@ -13,7 +13,7 @@ public final class BucketAccessControlTranslation {
 
     @OutputCustomType.Constructor({"owner"})
     private BucketAccessControlTranslation(String owner) {
-        this.owner = Objects.requireNonNull(owner);
+        this.owner = owner;
     }
 
     public String getOwner() {

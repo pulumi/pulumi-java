@@ -30,10 +30,10 @@ public final class GetClusterCacheNode {
         String availabilityZone,
         String id,
         Integer port) {
-        this.address = Objects.requireNonNull(address);
-        this.availabilityZone = Objects.requireNonNull(availabilityZone);
-        this.id = Objects.requireNonNull(id);
-        this.port = Objects.requireNonNull(port);
+        this.address = address;
+        this.availabilityZone = availabilityZone;
+        this.id = id;
+        this.port = port;
     }
 
     public String getAddress() {

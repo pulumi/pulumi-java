@@ -140,20 +140,20 @@ public final class SparkLinkedServiceResponse {
         this.allowHostNameCNMismatch = allowHostNameCNMismatch;
         this.allowSelfSignedServerCert = allowSelfSignedServerCert;
         this.annotations = annotations;
-        this.authenticationType = Objects.requireNonNull(authenticationType);
+        this.authenticationType = authenticationType;
         this.connectVia = connectVia;
         this.description = description;
         this.enableSsl = enableSsl;
         this.encryptedCredential = encryptedCredential;
-        this.host = Objects.requireNonNull(host);
+        this.host = host;
         this.httpPath = httpPath;
         this.parameters = parameters;
         this.password = password;
-        this.port = Objects.requireNonNull(port);
+        this.port = port;
         this.serverType = serverType;
         this.thriftTransportProtocol = thriftTransportProtocol;
         this.trustedCertPath = trustedCertPath;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.useSystemTrustStore = useSystemTrustStore;
         this.username = username;
     }

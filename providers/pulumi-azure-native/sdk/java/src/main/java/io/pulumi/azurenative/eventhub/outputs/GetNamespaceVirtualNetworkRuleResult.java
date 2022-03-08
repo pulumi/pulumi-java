@@ -38,9 +38,9 @@ public final class GetNamespaceVirtualNetworkRuleResult {
         String name,
         String type,
         @Nullable String virtualNetworkSubnetId) {
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.id = id;
+        this.name = name;
+        this.type = type;
         this.virtualNetworkSubnetId = virtualNetworkSubnetId;
     }
 

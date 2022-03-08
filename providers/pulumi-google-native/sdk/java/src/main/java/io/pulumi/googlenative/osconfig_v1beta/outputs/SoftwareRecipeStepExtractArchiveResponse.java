@@ -30,9 +30,9 @@ public final class SoftwareRecipeStepExtractArchiveResponse {
         String artifactId,
         String destination,
         String type) {
-        this.artifactId = Objects.requireNonNull(artifactId);
-        this.destination = Objects.requireNonNull(destination);
-        this.type = Objects.requireNonNull(type);
+        this.artifactId = artifactId;
+        this.destination = destination;
+        this.type = type;
     }
 
     /**

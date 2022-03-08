@@ -24,8 +24,8 @@ public final class RelatedUrlResponse {
     private RelatedUrlResponse(
         String label,
         String url) {
-        this.label = Objects.requireNonNull(label);
-        this.url = Objects.requireNonNull(url);
+        this.label = label;
+        this.url = url;
     }
 
     /**

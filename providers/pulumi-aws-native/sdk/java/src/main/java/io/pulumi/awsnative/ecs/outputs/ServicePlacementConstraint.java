@@ -20,7 +20,7 @@ public final class ServicePlacementConstraint {
         @Nullable String expression,
         ServicePlacementConstraintType type) {
         this.expression = expression;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     public Optional<String> getExpression() {

@@ -87,14 +87,14 @@ public final class GetDatabaseResult {
         this.clientProtocol = clientProtocol;
         this.clusteringPolicy = clusteringPolicy;
         this.evictionPolicy = evictionPolicy;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.modules = modules;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.persistence = persistence;
         this.port = port;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.resourceState = Objects.requireNonNull(resourceState);
-        this.type = Objects.requireNonNull(type);
+        this.provisioningState = provisioningState;
+        this.resourceState = resourceState;
+        this.type = type;
     }
 
     /**

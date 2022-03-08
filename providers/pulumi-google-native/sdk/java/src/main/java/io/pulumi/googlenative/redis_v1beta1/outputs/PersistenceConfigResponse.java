@@ -36,10 +36,10 @@ public final class PersistenceConfigResponse {
         String rdbNextSnapshotTime,
         String rdbSnapshotPeriod,
         String rdbSnapshotStartTime) {
-        this.persistenceMode = Objects.requireNonNull(persistenceMode);
-        this.rdbNextSnapshotTime = Objects.requireNonNull(rdbNextSnapshotTime);
-        this.rdbSnapshotPeriod = Objects.requireNonNull(rdbSnapshotPeriod);
-        this.rdbSnapshotStartTime = Objects.requireNonNull(rdbSnapshotStartTime);
+        this.persistenceMode = persistenceMode;
+        this.rdbNextSnapshotTime = rdbNextSnapshotTime;
+        this.rdbSnapshotPeriod = rdbSnapshotPeriod;
+        this.rdbSnapshotStartTime = rdbSnapshotStartTime;
     }
 
     /**

@@ -17,7 +17,7 @@ public final class VirtualGatewaySpecListenerTlsCertificateAcm {
 
     @OutputCustomType.Constructor({"certificateArn"})
     private VirtualGatewaySpecListenerTlsCertificateAcm(String certificateArn) {
-        this.certificateArn = Objects.requireNonNull(certificateArn);
+        this.certificateArn = certificateArn;
     }
 
     /**

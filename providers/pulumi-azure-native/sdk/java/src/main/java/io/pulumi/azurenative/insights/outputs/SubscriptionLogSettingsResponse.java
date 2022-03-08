@@ -28,7 +28,7 @@ public final class SubscriptionLogSettingsResponse {
         @Nullable String category,
         Boolean enabled) {
         this.category = category;
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
     }
 
     /**

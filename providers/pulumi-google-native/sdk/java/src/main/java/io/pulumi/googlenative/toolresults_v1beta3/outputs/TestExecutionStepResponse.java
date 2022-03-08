@@ -40,10 +40,10 @@ public final class TestExecutionStepResponse {
         List<TestSuiteOverviewResponse> testSuiteOverviews,
         TestTimingResponse testTiming,
         ToolExecutionResponse toolExecution) {
-        this.testIssues = Objects.requireNonNull(testIssues);
-        this.testSuiteOverviews = Objects.requireNonNull(testSuiteOverviews);
-        this.testTiming = Objects.requireNonNull(testTiming);
-        this.toolExecution = Objects.requireNonNull(toolExecution);
+        this.testIssues = testIssues;
+        this.testSuiteOverviews = testSuiteOverviews;
+        this.testTiming = testTiming;
+        this.toolExecution = toolExecution;
     }
 
     /**

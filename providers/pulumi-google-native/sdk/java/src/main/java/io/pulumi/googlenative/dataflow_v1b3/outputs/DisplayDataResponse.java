@@ -86,18 +86,18 @@ public final class DisplayDataResponse {
         String strValue,
         String timestampValue,
         String url) {
-        this.boolValue = Objects.requireNonNull(boolValue);
-        this.durationValue = Objects.requireNonNull(durationValue);
-        this.floatValue = Objects.requireNonNull(floatValue);
-        this.int64Value = Objects.requireNonNull(int64Value);
-        this.javaClassValue = Objects.requireNonNull(javaClassValue);
-        this.key = Objects.requireNonNull(key);
-        this.label = Objects.requireNonNull(label);
-        this.namespace = Objects.requireNonNull(namespace);
-        this.shortStrValue = Objects.requireNonNull(shortStrValue);
-        this.strValue = Objects.requireNonNull(strValue);
-        this.timestampValue = Objects.requireNonNull(timestampValue);
-        this.url = Objects.requireNonNull(url);
+        this.boolValue = boolValue;
+        this.durationValue = durationValue;
+        this.floatValue = floatValue;
+        this.int64Value = int64Value;
+        this.javaClassValue = javaClassValue;
+        this.key = key;
+        this.label = label;
+        this.namespace = namespace;
+        this.shortStrValue = shortStrValue;
+        this.strValue = strValue;
+        this.timestampValue = timestampValue;
+        this.url = url;
     }
 
     /**

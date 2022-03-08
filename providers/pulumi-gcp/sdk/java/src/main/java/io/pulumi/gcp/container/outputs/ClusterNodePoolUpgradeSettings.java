@@ -16,8 +16,8 @@ public final class ClusterNodePoolUpgradeSettings {
     private ClusterNodePoolUpgradeSettings(
         Integer maxSurge,
         Integer maxUnavailable) {
-        this.maxSurge = Objects.requireNonNull(maxSurge);
-        this.maxUnavailable = Objects.requireNonNull(maxUnavailable);
+        this.maxSurge = maxSurge;
+        this.maxUnavailable = maxUnavailable;
     }
 
     public Integer getMaxSurge() {

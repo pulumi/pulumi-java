@@ -40,10 +40,10 @@ public final class SecretVolumeSourceResponse {
         List<KeyToPathResponse> items,
         Boolean optional,
         String secretName) {
-        this.defaultMode = Objects.requireNonNull(defaultMode);
-        this.items = Objects.requireNonNull(items);
-        this.optional = Objects.requireNonNull(optional);
-        this.secretName = Objects.requireNonNull(secretName);
+        this.defaultMode = defaultMode;
+        this.items = items;
+        this.optional = optional;
+        this.secretName = secretName;
     }
 
     /**

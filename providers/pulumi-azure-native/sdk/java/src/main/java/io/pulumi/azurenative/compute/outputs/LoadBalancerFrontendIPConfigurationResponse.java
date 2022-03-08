@@ -25,8 +25,8 @@ public final class LoadBalancerFrontendIPConfigurationResponse {
     private LoadBalancerFrontendIPConfigurationResponse(
         String name,
         LoadBalancerFrontendIPConfigurationPropertiesResponse properties) {
-        this.name = Objects.requireNonNull(name);
-        this.properties = Objects.requireNonNull(properties);
+        this.name = name;
+        this.properties = properties;
     }
 
     /**

@@ -43,11 +43,11 @@ public final class AS2EnvelopeSettingsResponse {
         String messageContentType,
         Boolean suspendMessageOnFileNameGenerationError,
         Boolean transmitFileNameInMimeHeader) {
-        this.autogenerateFileName = Objects.requireNonNull(autogenerateFileName);
-        this.fileNameTemplate = Objects.requireNonNull(fileNameTemplate);
-        this.messageContentType = Objects.requireNonNull(messageContentType);
-        this.suspendMessageOnFileNameGenerationError = Objects.requireNonNull(suspendMessageOnFileNameGenerationError);
-        this.transmitFileNameInMimeHeader = Objects.requireNonNull(transmitFileNameInMimeHeader);
+        this.autogenerateFileName = autogenerateFileName;
+        this.fileNameTemplate = fileNameTemplate;
+        this.messageContentType = messageContentType;
+        this.suspendMessageOnFileNameGenerationError = suspendMessageOnFileNameGenerationError;
+        this.transmitFileNameInMimeHeader = transmitFileNameInMimeHeader;
     }
 
     /**

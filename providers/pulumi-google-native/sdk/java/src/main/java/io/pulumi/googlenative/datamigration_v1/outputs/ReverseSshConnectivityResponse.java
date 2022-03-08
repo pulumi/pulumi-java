@@ -37,10 +37,10 @@ public final class ReverseSshConnectivityResponse {
         String vmIp,
         Integer vmPort,
         String vpc) {
-        this.vm = Objects.requireNonNull(vm);
-        this.vmIp = Objects.requireNonNull(vmIp);
-        this.vmPort = Objects.requireNonNull(vmPort);
-        this.vpc = Objects.requireNonNull(vpc);
+        this.vm = vm;
+        this.vmIp = vmIp;
+        this.vmPort = vmPort;
+        this.vpc = vpc;
     }
 
     /**

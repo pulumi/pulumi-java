@@ -53,7 +53,7 @@ public final class ServiceTemplateSpecVolumeSecret {
         String secretName) {
         this.defaultMode = defaultMode;
         this.items = items;
-        this.secretName = Objects.requireNonNull(secretName);
+        this.secretName = secretName;
     }
 
     /**

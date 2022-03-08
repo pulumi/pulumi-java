@@ -73,17 +73,17 @@ public final class GetInstanceEbsBlockDevice {
         String volumeId,
         Integer volumeSize,
         String volumeType) {
-        this.deleteOnTermination = Objects.requireNonNull(deleteOnTermination);
-        this.deviceName = Objects.requireNonNull(deviceName);
-        this.encrypted = Objects.requireNonNull(encrypted);
-        this.iops = Objects.requireNonNull(iops);
-        this.kmsKeyId = Objects.requireNonNull(kmsKeyId);
-        this.snapshotId = Objects.requireNonNull(snapshotId);
-        this.tags = Objects.requireNonNull(tags);
-        this.throughput = Objects.requireNonNull(throughput);
-        this.volumeId = Objects.requireNonNull(volumeId);
-        this.volumeSize = Objects.requireNonNull(volumeSize);
-        this.volumeType = Objects.requireNonNull(volumeType);
+        this.deleteOnTermination = deleteOnTermination;
+        this.deviceName = deviceName;
+        this.encrypted = encrypted;
+        this.iops = iops;
+        this.kmsKeyId = kmsKeyId;
+        this.snapshotId = snapshotId;
+        this.tags = tags;
+        this.throughput = throughput;
+        this.volumeId = volumeId;
+        this.volumeSize = volumeSize;
+        this.volumeType = volumeType;
     }
 
     /**

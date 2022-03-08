@@ -17,7 +17,7 @@ public final class VirtualNodeSpecListenerConnectionPoolTcp {
 
     @OutputCustomType.Constructor({"maxConnections"})
     private VirtualNodeSpecListenerConnectionPoolTcp(Integer maxConnections) {
-        this.maxConnections = Objects.requireNonNull(maxConnections);
+        this.maxConnections = maxConnections;
     }
 
     /**

@@ -17,7 +17,7 @@ public final class MonitoringSubscriptionMonitoringSubscription {
 
     @OutputCustomType.Constructor({"realtimeMetricsSubscriptionConfig"})
     private MonitoringSubscriptionMonitoringSubscription(MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfig realtimeMetricsSubscriptionConfig) {
-        this.realtimeMetricsSubscriptionConfig = Objects.requireNonNull(realtimeMetricsSubscriptionConfig);
+        this.realtimeMetricsSubscriptionConfig = realtimeMetricsSubscriptionConfig;
     }
 
     /**

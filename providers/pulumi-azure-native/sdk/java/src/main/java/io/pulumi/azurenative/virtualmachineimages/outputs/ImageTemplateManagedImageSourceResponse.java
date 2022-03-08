@@ -25,8 +25,8 @@ public final class ImageTemplateManagedImageSourceResponse {
     private ImageTemplateManagedImageSourceResponse(
         String imageId,
         String type) {
-        this.imageId = Objects.requireNonNull(imageId);
-        this.type = Objects.requireNonNull(type);
+        this.imageId = imageId;
+        this.type = type;
     }
 
     /**

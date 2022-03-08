@@ -30,9 +30,9 @@ public final class ComponentTransformResponse {
         String name,
         String originalTransform,
         String userName) {
-        this.name = Objects.requireNonNull(name);
-        this.originalTransform = Objects.requireNonNull(originalTransform);
-        this.userName = Objects.requireNonNull(userName);
+        this.name = name;
+        this.originalTransform = originalTransform;
+        this.userName = userName;
     }
 
     /**

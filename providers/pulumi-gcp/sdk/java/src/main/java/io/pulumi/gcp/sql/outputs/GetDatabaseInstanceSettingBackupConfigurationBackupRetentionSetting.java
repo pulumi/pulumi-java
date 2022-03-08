@@ -17,8 +17,8 @@ public final class GetDatabaseInstanceSettingBackupConfigurationBackupRetentionS
     private GetDatabaseInstanceSettingBackupConfigurationBackupRetentionSetting(
         Integer retainedBackups,
         String retentionUnit) {
-        this.retainedBackups = Objects.requireNonNull(retainedBackups);
-        this.retentionUnit = Objects.requireNonNull(retentionUnit);
+        this.retainedBackups = retainedBackups;
+        this.retentionUnit = retentionUnit;
     }
 
     public Integer getRetainedBackups() {

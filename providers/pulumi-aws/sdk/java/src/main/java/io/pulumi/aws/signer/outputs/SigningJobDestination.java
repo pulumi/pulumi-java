@@ -17,7 +17,7 @@ public final class SigningJobDestination {
 
     @OutputCustomType.Constructor({"s3"})
     private SigningJobDestination(SigningJobDestinationS3 s3) {
-        this.s3 = Objects.requireNonNull(s3);
+        this.s3 = s3;
     }
 
     /**

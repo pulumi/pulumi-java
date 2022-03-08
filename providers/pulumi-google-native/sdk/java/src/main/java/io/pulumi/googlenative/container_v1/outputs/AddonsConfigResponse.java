@@ -74,15 +74,15 @@ public final class AddonsConfigResponse {
         HttpLoadBalancingResponse httpLoadBalancing,
         KubernetesDashboardResponse kubernetesDashboard,
         NetworkPolicyConfigResponse networkPolicyConfig) {
-        this.cloudRunConfig = Objects.requireNonNull(cloudRunConfig);
-        this.configConnectorConfig = Objects.requireNonNull(configConnectorConfig);
-        this.dnsCacheConfig = Objects.requireNonNull(dnsCacheConfig);
-        this.gcePersistentDiskCsiDriverConfig = Objects.requireNonNull(gcePersistentDiskCsiDriverConfig);
-        this.gcpFilestoreCsiDriverConfig = Objects.requireNonNull(gcpFilestoreCsiDriverConfig);
-        this.horizontalPodAutoscaling = Objects.requireNonNull(horizontalPodAutoscaling);
-        this.httpLoadBalancing = Objects.requireNonNull(httpLoadBalancing);
-        this.kubernetesDashboard = Objects.requireNonNull(kubernetesDashboard);
-        this.networkPolicyConfig = Objects.requireNonNull(networkPolicyConfig);
+        this.cloudRunConfig = cloudRunConfig;
+        this.configConnectorConfig = configConnectorConfig;
+        this.dnsCacheConfig = dnsCacheConfig;
+        this.gcePersistentDiskCsiDriverConfig = gcePersistentDiskCsiDriverConfig;
+        this.gcpFilestoreCsiDriverConfig = gcpFilestoreCsiDriverConfig;
+        this.horizontalPodAutoscaling = horizontalPodAutoscaling;
+        this.httpLoadBalancing = httpLoadBalancing;
+        this.kubernetesDashboard = kubernetesDashboard;
+        this.networkPolicyConfig = networkPolicyConfig;
     }
 
     /**

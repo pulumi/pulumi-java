@@ -17,8 +17,8 @@ public final class GetRestApiEndpointConfiguration {
     private GetRestApiEndpointConfiguration(
         List<String> types,
         List<String> vpcEndpointIds) {
-        this.types = Objects.requireNonNull(types);
-        this.vpcEndpointIds = Objects.requireNonNull(vpcEndpointIds);
+        this.types = types;
+        this.vpcEndpointIds = vpcEndpointIds;
     }
 
     public List<String> getTypes() {

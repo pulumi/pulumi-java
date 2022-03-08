@@ -101,19 +101,19 @@ public final class GetEventGridDataConnectionResult {
         @Nullable String tableName,
         String type) {
         this.blobStorageEventType = blobStorageEventType;
-        this.consumerGroup = Objects.requireNonNull(consumerGroup);
+        this.consumerGroup = consumerGroup;
         this.dataFormat = dataFormat;
-        this.eventHubResourceId = Objects.requireNonNull(eventHubResourceId);
-        this.id = Objects.requireNonNull(id);
+        this.eventHubResourceId = eventHubResourceId;
+        this.id = id;
         this.ignoreFirstRecord = ignoreFirstRecord;
-        this.kind = Objects.requireNonNull(kind);
+        this.kind = kind;
         this.location = location;
         this.mappingRuleName = mappingRuleName;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.storageAccountResourceId = Objects.requireNonNull(storageAccountResourceId);
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.storageAccountResourceId = storageAccountResourceId;
         this.tableName = tableName;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

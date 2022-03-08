@@ -65,7 +65,7 @@ public final class FindingsFilterFindingCriteriaCriterion {
         @Nullable List<String> neqs) {
         this.eqExactMatches = eqExactMatches;
         this.eqs = eqs;
-        this.field = Objects.requireNonNull(field);
+        this.field = field;
         this.gt = gt;
         this.gte = gte;
         this.lt = lt;

@@ -30,9 +30,9 @@ public final class ResourceLimitResponse {
         String maximum,
         String minimum,
         String resourceType) {
-        this.maximum = Objects.requireNonNull(maximum);
-        this.minimum = Objects.requireNonNull(minimum);
-        this.resourceType = Objects.requireNonNull(resourceType);
+        this.maximum = maximum;
+        this.minimum = minimum;
+        this.resourceType = resourceType;
     }
 
     /**

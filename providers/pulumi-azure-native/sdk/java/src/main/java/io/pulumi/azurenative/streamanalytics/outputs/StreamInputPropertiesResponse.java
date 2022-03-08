@@ -54,10 +54,10 @@ public final class StreamInputPropertiesResponse {
         @Nullable Object serialization,
         String type) {
         this.datasource = datasource;
-        this.diagnostics = Objects.requireNonNull(diagnostics);
-        this.etag = Objects.requireNonNull(etag);
+        this.diagnostics = diagnostics;
+        this.etag = etag;
         this.serialization = serialization;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

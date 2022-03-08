@@ -79,17 +79,17 @@ public final class GetRegionHealthCheckServiceResult {
         List<String> notificationEndpoints,
         String region,
         String selfLink) {
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.description = Objects.requireNonNull(description);
-        this.fingerprint = Objects.requireNonNull(fingerprint);
-        this.healthChecks = Objects.requireNonNull(healthChecks);
-        this.healthStatusAggregationPolicy = Objects.requireNonNull(healthStatusAggregationPolicy);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.networkEndpointGroups = Objects.requireNonNull(networkEndpointGroups);
-        this.notificationEndpoints = Objects.requireNonNull(notificationEndpoints);
-        this.region = Objects.requireNonNull(region);
-        this.selfLink = Objects.requireNonNull(selfLink);
+        this.creationTimestamp = creationTimestamp;
+        this.description = description;
+        this.fingerprint = fingerprint;
+        this.healthChecks = healthChecks;
+        this.healthStatusAggregationPolicy = healthStatusAggregationPolicy;
+        this.kind = kind;
+        this.name = name;
+        this.networkEndpointGroups = networkEndpointGroups;
+        this.notificationEndpoints = notificationEndpoints;
+        this.region = region;
+        this.selfLink = selfLink;
     }
 
     /**

@@ -25,8 +25,8 @@ public final class EventTargetRunCommandTarget {
     private EventTargetRunCommandTarget(
         String key,
         List<String> values) {
-        this.key = Objects.requireNonNull(key);
-        this.values = Objects.requireNonNull(values);
+        this.key = key;
+        this.values = values;
     }
 
     /**

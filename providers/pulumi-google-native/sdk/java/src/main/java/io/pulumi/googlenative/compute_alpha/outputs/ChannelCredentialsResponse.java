@@ -25,8 +25,8 @@ public final class ChannelCredentialsResponse {
     private ChannelCredentialsResponse(
         TlsCertificatePathsResponse certificates,
         String channelCredentialType) {
-        this.certificates = Objects.requireNonNull(certificates);
-        this.channelCredentialType = Objects.requireNonNull(channelCredentialType);
+        this.certificates = certificates;
+        this.channelCredentialType = channelCredentialType;
     }
 
     /**

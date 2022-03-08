@@ -109,16 +109,16 @@ public final class GetVpnGatewayResult {
         @Nullable Integer vpnGatewayScaleUnit) {
         this.bgpSettings = bgpSettings;
         this.connections = connections;
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.id = id;
-        this.ipConfigurations = Objects.requireNonNull(ipConfigurations);
+        this.ipConfigurations = ipConfigurations;
         this.isRoutingPreferenceInternet = isRoutingPreferenceInternet;
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
+        this.location = location;
+        this.name = name;
         this.natRules = natRules;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.virtualHub = virtualHub;
         this.vpnGatewayScaleUnit = vpnGatewayScaleUnit;
     }

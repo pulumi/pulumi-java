@@ -31,9 +31,9 @@ public final class HeaderResponse {
         String glob,
         Map<String,String> headers,
         String regex) {
-        this.glob = Objects.requireNonNull(glob);
-        this.headers = Objects.requireNonNull(headers);
-        this.regex = Objects.requireNonNull(regex);
+        this.glob = glob;
+        this.headers = headers;
+        this.regex = regex;
     }
 
     /**

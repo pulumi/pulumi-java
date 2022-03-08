@@ -28,7 +28,7 @@ public final class ClusterMasterAuth {
         @Nullable String clientKey,
         @Nullable String clusterCaCertificate) {
         this.clientCertificate = clientCertificate;
-        this.clientCertificateConfig = Objects.requireNonNull(clientCertificateConfig);
+        this.clientCertificateConfig = clientCertificateConfig;
         this.clientKey = clientKey;
         this.clusterCaCertificate = clusterCaCertificate;
     }

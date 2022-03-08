@@ -50,7 +50,7 @@ public final class CacheNetworkSettingsResponse {
         this.dnsServers = dnsServers;
         this.mtu = mtu;
         this.ntpServer = ntpServer;
-        this.utilityAddresses = Objects.requireNonNull(utilityAddresses);
+        this.utilityAddresses = utilityAddresses;
     }
 
     /**

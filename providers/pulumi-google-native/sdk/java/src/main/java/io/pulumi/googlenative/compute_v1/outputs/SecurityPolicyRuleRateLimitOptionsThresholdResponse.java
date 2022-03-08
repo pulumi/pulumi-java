@@ -24,8 +24,8 @@ public final class SecurityPolicyRuleRateLimitOptionsThresholdResponse {
     private SecurityPolicyRuleRateLimitOptionsThresholdResponse(
         Integer count,
         Integer intervalSec) {
-        this.count = Objects.requireNonNull(count);
-        this.intervalSec = Objects.requireNonNull(intervalSec);
+        this.count = count;
+        this.intervalSec = intervalSec;
     }
 
     /**

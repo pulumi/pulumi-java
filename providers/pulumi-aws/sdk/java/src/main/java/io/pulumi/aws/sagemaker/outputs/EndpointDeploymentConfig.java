@@ -28,7 +28,7 @@ public final class EndpointDeploymentConfig {
         @Nullable EndpointDeploymentConfigAutoRollbackConfiguration autoRollbackConfiguration,
         EndpointDeploymentConfigBlueGreenUpdatePolicy blueGreenUpdatePolicy) {
         this.autoRollbackConfiguration = autoRollbackConfiguration;
-        this.blueGreenUpdatePolicy = Objects.requireNonNull(blueGreenUpdatePolicy);
+        this.blueGreenUpdatePolicy = blueGreenUpdatePolicy;
     }
 
     /**

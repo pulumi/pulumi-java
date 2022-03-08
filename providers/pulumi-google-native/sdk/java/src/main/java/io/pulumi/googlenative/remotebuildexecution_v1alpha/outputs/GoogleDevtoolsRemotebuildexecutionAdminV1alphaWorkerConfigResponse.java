@@ -81,17 +81,17 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigRes
         Boolean reserved,
         String soleTenantNodeType,
         String vmImage) {
-        this.accelerator = Objects.requireNonNull(accelerator);
-        this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
-        this.diskType = Objects.requireNonNull(diskType);
-        this.labels = Objects.requireNonNull(labels);
-        this.machineType = Objects.requireNonNull(machineType);
-        this.maxConcurrentActions = Objects.requireNonNull(maxConcurrentActions);
-        this.minCpuPlatform = Objects.requireNonNull(minCpuPlatform);
-        this.networkAccess = Objects.requireNonNull(networkAccess);
-        this.reserved = Objects.requireNonNull(reserved);
-        this.soleTenantNodeType = Objects.requireNonNull(soleTenantNodeType);
-        this.vmImage = Objects.requireNonNull(vmImage);
+        this.accelerator = accelerator;
+        this.diskSizeGb = diskSizeGb;
+        this.diskType = diskType;
+        this.labels = labels;
+        this.machineType = machineType;
+        this.maxConcurrentActions = maxConcurrentActions;
+        this.minCpuPlatform = minCpuPlatform;
+        this.networkAccess = networkAccess;
+        this.reserved = reserved;
+        this.soleTenantNodeType = soleTenantNodeType;
+        this.vmImage = vmImage;
     }
 
     /**

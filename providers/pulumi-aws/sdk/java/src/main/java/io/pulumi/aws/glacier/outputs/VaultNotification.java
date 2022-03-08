@@ -25,8 +25,8 @@ public final class VaultNotification {
     private VaultNotification(
         List<String> events,
         String snsTopic) {
-        this.events = Objects.requireNonNull(events);
-        this.snsTopic = Objects.requireNonNull(snsTopic);
+        this.events = events;
+        this.snsTopic = snsTopic;
     }
 
     /**

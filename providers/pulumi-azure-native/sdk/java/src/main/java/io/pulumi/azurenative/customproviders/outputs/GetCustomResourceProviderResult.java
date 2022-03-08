@@ -73,13 +73,13 @@ public final class GetCustomResourceProviderResult {
         String type,
         @Nullable List<CustomRPValidationsResponse> validations) {
         this.actions = actions;
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.id = id;
+        this.location = location;
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.resourceTypes = resourceTypes;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.validations = validations;
     }
 

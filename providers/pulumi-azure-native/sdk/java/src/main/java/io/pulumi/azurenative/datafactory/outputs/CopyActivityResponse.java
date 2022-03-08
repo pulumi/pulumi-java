@@ -314,19 +314,19 @@ public final class CopyActivityResponse {
         this.linkedServiceName = linkedServiceName;
         this.logSettings = logSettings;
         this.logStorageSettings = logStorageSettings;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.outputs = outputs;
         this.parallelCopies = parallelCopies;
         this.policy = policy;
         this.preserve = preserve;
         this.preserveRules = preserveRules;
         this.redirectIncompatibleRowSettings = redirectIncompatibleRowSettings;
-        this.sink = Objects.requireNonNull(sink);
+        this.sink = sink;
         this.skipErrorFile = skipErrorFile;
-        this.source = Objects.requireNonNull(source);
+        this.source = source;
         this.stagingSettings = stagingSettings;
         this.translator = translator;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.userProperties = userProperties;
         this.validateDataConsistency = validateDataConsistency;
     }

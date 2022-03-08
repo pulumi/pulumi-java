@@ -17,7 +17,7 @@ public final class FileReferenceResponse {
 
     @OutputCustomType.Constructor({"fileUri"})
     private FileReferenceResponse(String fileUri) {
-        this.fileUri = Objects.requireNonNull(fileUri);
+        this.fileUri = fileUri;
     }
 
     /**

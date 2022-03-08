@@ -25,8 +25,8 @@ public final class VideoSequenceAbsoluteTimeMarkersResponse {
     private VideoSequenceAbsoluteTimeMarkersResponse(
         String ranges,
         String type) {
-        this.ranges = Objects.requireNonNull(ranges);
-        this.type = Objects.requireNonNull(type);
+        this.ranges = ranges;
+        this.type = type;
     }
 
     /**

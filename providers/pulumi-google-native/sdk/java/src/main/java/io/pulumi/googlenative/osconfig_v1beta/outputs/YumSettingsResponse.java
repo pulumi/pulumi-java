@@ -38,10 +38,10 @@ public final class YumSettingsResponse {
         List<String> exclusivePackages,
         Boolean minimal,
         Boolean security) {
-        this.excludes = Objects.requireNonNull(excludes);
-        this.exclusivePackages = Objects.requireNonNull(exclusivePackages);
-        this.minimal = Objects.requireNonNull(minimal);
-        this.security = Objects.requireNonNull(security);
+        this.excludes = excludes;
+        this.exclusivePackages = exclusivePackages;
+        this.minimal = minimal;
+        this.security = security;
     }
 
     /**

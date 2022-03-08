@@ -97,13 +97,13 @@ public final class OrcDatasetResponse {
         this.annotations = annotations;
         this.description = description;
         this.folder = folder;
-        this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
-        this.location = Objects.requireNonNull(location);
+        this.linkedServiceName = linkedServiceName;
+        this.location = location;
         this.orcCompressionCodec = orcCompressionCodec;
         this.parameters = parameters;
         this.schema = schema;
         this.structure = structure;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

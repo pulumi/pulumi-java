@@ -30,9 +30,9 @@ public final class AssetModelHierarchy {
         String childAssetModelId,
         String logicalId,
         String name) {
-        this.childAssetModelId = Objects.requireNonNull(childAssetModelId);
-        this.logicalId = Objects.requireNonNull(logicalId);
-        this.name = Objects.requireNonNull(name);
+        this.childAssetModelId = childAssetModelId;
+        this.logicalId = logicalId;
+        this.name = name;
     }
 
     /**

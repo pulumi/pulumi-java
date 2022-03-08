@@ -13,7 +13,7 @@ public final class SecurityPolicyDdosProtectionConfigResponse {
 
     @OutputCustomType.Constructor({"ddosProtection"})
     private SecurityPolicyDdosProtectionConfigResponse(String ddosProtection) {
-        this.ddosProtection = Objects.requireNonNull(ddosProtection);
+        this.ddosProtection = ddosProtection;
     }
 
     public String getDdosProtection() {

@@ -36,7 +36,7 @@ public final class ConfigurationAggregatorOrganizationAggregationSource {
         String roleArn) {
         this.allRegions = allRegions;
         this.regions = regions;
-        this.roleArn = Objects.requireNonNull(roleArn);
+        this.roleArn = roleArn;
     }
 
     /**

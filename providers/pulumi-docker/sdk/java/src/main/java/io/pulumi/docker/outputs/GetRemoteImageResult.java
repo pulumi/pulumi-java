@@ -22,9 +22,9 @@ public final class GetRemoteImageResult {
         String id,
         String name,
         String repoDigest) {
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.repoDigest = Objects.requireNonNull(repoDigest);
+        this.id = id;
+        this.name = name;
+        this.repoDigest = repoDigest;
     }
 
     /**

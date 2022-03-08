@@ -16,8 +16,8 @@ public final class RuleGroupPortRange {
     private RuleGroupPortRange(
         Integer fromPort,
         Integer toPort) {
-        this.fromPort = Objects.requireNonNull(fromPort);
-        this.toPort = Objects.requireNonNull(toPort);
+        this.fromPort = fromPort;
+        this.toPort = toPort;
     }
 
     public Integer getFromPort() {

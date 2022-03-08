@@ -25,8 +25,8 @@ public final class ImageTemplateSharedImageVersionSourceResponse {
     private ImageTemplateSharedImageVersionSourceResponse(
         String imageVersionId,
         String type) {
-        this.imageVersionId = Objects.requireNonNull(imageVersionId);
-        this.type = Objects.requireNonNull(type);
+        this.imageVersionId = imageVersionId;
+        this.type = type;
     }
 
     /**

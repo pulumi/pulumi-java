@@ -83,16 +83,16 @@ public final class FrontendEndpointResponse {
         @Nullable Integer sessionAffinityTtlSeconds,
         String type,
         @Nullable FrontendEndpointUpdateParametersResponseWebApplicationFirewallPolicyLink webApplicationFirewallPolicyLink) {
-        this.customHttpsConfiguration = Objects.requireNonNull(customHttpsConfiguration);
-        this.customHttpsProvisioningState = Objects.requireNonNull(customHttpsProvisioningState);
-        this.customHttpsProvisioningSubstate = Objects.requireNonNull(customHttpsProvisioningSubstate);
+        this.customHttpsConfiguration = customHttpsConfiguration;
+        this.customHttpsProvisioningState = customHttpsProvisioningState;
+        this.customHttpsProvisioningSubstate = customHttpsProvisioningSubstate;
         this.hostName = hostName;
         this.id = id;
         this.name = name;
-        this.resourceState = Objects.requireNonNull(resourceState);
+        this.resourceState = resourceState;
         this.sessionAffinityEnabledState = sessionAffinityEnabledState;
         this.sessionAffinityTtlSeconds = sessionAffinityTtlSeconds;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.webApplicationFirewallPolicyLink = webApplicationFirewallPolicyLink;
     }
 

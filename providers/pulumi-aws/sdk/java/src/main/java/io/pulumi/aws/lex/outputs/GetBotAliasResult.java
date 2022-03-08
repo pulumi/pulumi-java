@@ -66,15 +66,15 @@ public final class GetBotAliasResult {
         String id,
         String lastUpdatedDate,
         String name) {
-        this.arn = Objects.requireNonNull(arn);
-        this.botName = Objects.requireNonNull(botName);
-        this.botVersion = Objects.requireNonNull(botVersion);
-        this.checksum = Objects.requireNonNull(checksum);
-        this.createdDate = Objects.requireNonNull(createdDate);
-        this.description = Objects.requireNonNull(description);
-        this.id = Objects.requireNonNull(id);
-        this.lastUpdatedDate = Objects.requireNonNull(lastUpdatedDate);
-        this.name = Objects.requireNonNull(name);
+        this.arn = arn;
+        this.botName = botName;
+        this.botVersion = botVersion;
+        this.checksum = checksum;
+        this.createdDate = createdDate;
+        this.description = description;
+        this.id = id;
+        this.lastUpdatedDate = lastUpdatedDate;
+        this.name = name;
     }
 
     /**

@@ -16,8 +16,8 @@ public final class NotificationRuleTarget {
     private NotificationRuleTarget(
         String targetAddress,
         String targetType) {
-        this.targetAddress = Objects.requireNonNull(targetAddress);
-        this.targetType = Objects.requireNonNull(targetType);
+        this.targetAddress = targetAddress;
+        this.targetType = targetType;
     }
 
     public String getTargetAddress() {

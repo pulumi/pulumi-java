@@ -28,8 +28,8 @@ public final class ServiceTemplateSpecVolume {
     private ServiceTemplateSpecVolume(
         String name,
         ServiceTemplateSpecVolumeSecret secret) {
-        this.name = Objects.requireNonNull(name);
-        this.secret = Objects.requireNonNull(secret);
+        this.name = name;
+        this.secret = secret;
     }
 
     /**

@@ -123,22 +123,22 @@ public final class GetActivityCustomEntityQueryResult {
         @Nullable String title,
         String type) {
         this.content = content;
-        this.createdTimeUtc = Objects.requireNonNull(createdTimeUtc);
+        this.createdTimeUtc = createdTimeUtc;
         this.description = description;
         this.enabled = enabled;
         this.entitiesFilter = entitiesFilter;
         this.etag = etag;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.inputEntityType = inputEntityType;
-        this.kind = Objects.requireNonNull(kind);
-        this.lastModifiedTimeUtc = Objects.requireNonNull(lastModifiedTimeUtc);
-        this.name = Objects.requireNonNull(name);
+        this.kind = kind;
+        this.lastModifiedTimeUtc = lastModifiedTimeUtc;
+        this.name = name;
         this.queryDefinitions = queryDefinitions;
         this.requiredInputFieldsSets = requiredInputFieldsSets;
-        this.systemData = Objects.requireNonNull(systemData);
+        this.systemData = systemData;
         this.templateName = templateName;
         this.title = title;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

@@ -28,7 +28,7 @@ public final class ConnectionMonitorSourceResponse {
         @Nullable Integer port,
         String resourceId) {
         this.port = port;
-        this.resourceId = Objects.requireNonNull(resourceId);
+        this.resourceId = resourceId;
     }
 
     /**

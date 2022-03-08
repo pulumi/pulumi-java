@@ -68,27 +68,27 @@ public final class GetDatabaseInstanceResult {
         List<GetDatabaseInstanceServerCaCert> serverCaCerts,
         String serviceAccountEmailAddress,
         List<GetDatabaseInstanceSetting> settings) {
-        this.clones = Objects.requireNonNull(clones);
-        this.connectionName = Objects.requireNonNull(connectionName);
-        this.databaseVersion = Objects.requireNonNull(databaseVersion);
-        this.deletionProtection = Objects.requireNonNull(deletionProtection);
-        this.encryptionKeyName = Objects.requireNonNull(encryptionKeyName);
-        this.firstIpAddress = Objects.requireNonNull(firstIpAddress);
-        this.id = Objects.requireNonNull(id);
-        this.ipAddresses = Objects.requireNonNull(ipAddresses);
-        this.masterInstanceName = Objects.requireNonNull(masterInstanceName);
-        this.name = Objects.requireNonNull(name);
-        this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
+        this.clones = clones;
+        this.connectionName = connectionName;
+        this.databaseVersion = databaseVersion;
+        this.deletionProtection = deletionProtection;
+        this.encryptionKeyName = encryptionKeyName;
+        this.firstIpAddress = firstIpAddress;
+        this.id = id;
+        this.ipAddresses = ipAddresses;
+        this.masterInstanceName = masterInstanceName;
+        this.name = name;
+        this.privateIpAddress = privateIpAddress;
         this.project = project;
-        this.publicIpAddress = Objects.requireNonNull(publicIpAddress);
-        this.region = Objects.requireNonNull(region);
-        this.replicaConfigurations = Objects.requireNonNull(replicaConfigurations);
-        this.restoreBackupContexts = Objects.requireNonNull(restoreBackupContexts);
-        this.rootPassword = Objects.requireNonNull(rootPassword);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.serverCaCerts = Objects.requireNonNull(serverCaCerts);
-        this.serviceAccountEmailAddress = Objects.requireNonNull(serviceAccountEmailAddress);
-        this.settings = Objects.requireNonNull(settings);
+        this.publicIpAddress = publicIpAddress;
+        this.region = region;
+        this.replicaConfigurations = replicaConfigurations;
+        this.restoreBackupContexts = restoreBackupContexts;
+        this.rootPassword = rootPassword;
+        this.selfLink = selfLink;
+        this.serverCaCerts = serverCaCerts;
+        this.serviceAccountEmailAddress = serviceAccountEmailAddress;
+        this.settings = settings;
     }
 
     public List<GetDatabaseInstanceClone> getClones() {

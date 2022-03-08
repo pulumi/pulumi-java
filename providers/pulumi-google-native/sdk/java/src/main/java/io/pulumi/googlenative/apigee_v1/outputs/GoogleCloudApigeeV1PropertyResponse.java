@@ -24,8 +24,8 @@ public final class GoogleCloudApigeeV1PropertyResponse {
     private GoogleCloudApigeeV1PropertyResponse(
         String name,
         String value) {
-        this.name = Objects.requireNonNull(name);
-        this.value = Objects.requireNonNull(value);
+        this.name = name;
+        this.value = value;
     }
 
     /**

@@ -25,8 +25,8 @@ public final class ApigatewayApiConfigGrpcServiceDefinitionResponse {
     private ApigatewayApiConfigGrpcServiceDefinitionResponse(
         ApigatewayApiConfigFileResponse fileDescriptorSet,
         List<ApigatewayApiConfigFileResponse> source) {
-        this.fileDescriptorSet = Objects.requireNonNull(fileDescriptorSet);
-        this.source = Objects.requireNonNull(source);
+        this.fileDescriptorSet = fileDescriptorSet;
+        this.source = source;
     }
 
     /**

@@ -112,15 +112,15 @@ public final class VirtualNetworkPeeringResponse {
         this.allowGatewayTransit = allowGatewayTransit;
         this.allowVirtualNetworkAccess = allowVirtualNetworkAccess;
         this.doNotVerifyRemoteGateways = doNotVerifyRemoteGateways;
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.id = id;
         this.name = name;
         this.peeringState = peeringState;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.remoteAddressSpace = remoteAddressSpace;
         this.remoteBgpCommunities = remoteBgpCommunities;
         this.remoteVirtualNetwork = remoteVirtualNetwork;
-        this.resourceGuid = Objects.requireNonNull(resourceGuid);
+        this.resourceGuid = resourceGuid;
         this.type = type;
         this.useRemoteGateways = useRemoteGateways;
     }

@@ -42,8 +42,8 @@ public final class PortStatus {
         Integer port,
         String protocol) {
         this.error = error;
-        this.port = Objects.requireNonNull(port);
-        this.protocol = Objects.requireNonNull(protocol);
+        this.port = port;
+        this.protocol = protocol;
     }
 
     /**

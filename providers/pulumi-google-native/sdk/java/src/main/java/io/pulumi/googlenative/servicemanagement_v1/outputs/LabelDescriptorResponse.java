@@ -30,9 +30,9 @@ public final class LabelDescriptorResponse {
         String description,
         String key,
         String valueType) {
-        this.description = Objects.requireNonNull(description);
-        this.key = Objects.requireNonNull(key);
-        this.valueType = Objects.requireNonNull(valueType);
+        this.description = description;
+        this.key = key;
+        this.valueType = valueType;
     }
 
     /**

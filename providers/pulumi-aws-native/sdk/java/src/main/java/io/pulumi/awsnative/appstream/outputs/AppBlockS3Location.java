@@ -16,8 +16,8 @@ public final class AppBlockS3Location {
     private AppBlockS3Location(
         String s3Bucket,
         String s3Key) {
-        this.s3Bucket = Objects.requireNonNull(s3Bucket);
-        this.s3Key = Objects.requireNonNull(s3Key);
+        this.s3Bucket = s3Bucket;
+        this.s3Key = s3Key;
     }
 
     public String getS3Bucket() {

@@ -32,9 +32,9 @@ public final class AsymmetricEncryptedSecretResponse {
         String encryptionAlgorithm,
         @Nullable String encryptionCertThumbprint,
         String value) {
-        this.encryptionAlgorithm = Objects.requireNonNull(encryptionAlgorithm);
+        this.encryptionAlgorithm = encryptionAlgorithm;
         this.encryptionCertThumbprint = encryptionCertThumbprint;
-        this.value = Objects.requireNonNull(value);
+        this.value = value;
     }
 
     /**

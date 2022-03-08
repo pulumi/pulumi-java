@@ -24,8 +24,8 @@ public final class OSPolicyResourceFileRemoteResponse {
     private OSPolicyResourceFileRemoteResponse(
         String sha256Checksum,
         String uri) {
-        this.sha256Checksum = Objects.requireNonNull(sha256Checksum);
-        this.uri = Objects.requireNonNull(uri);
+        this.sha256Checksum = sha256Checksum;
+        this.uri = uri;
     }
 
     /**

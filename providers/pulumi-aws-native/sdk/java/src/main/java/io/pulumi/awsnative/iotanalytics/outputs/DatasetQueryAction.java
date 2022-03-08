@@ -20,7 +20,7 @@ public final class DatasetQueryAction {
         @Nullable List<DatasetFilter> filters,
         String sqlQuery) {
         this.filters = filters;
-        this.sqlQuery = Objects.requireNonNull(sqlQuery);
+        this.sqlQuery = sqlQuery;
     }
 
     public List<DatasetFilter> getFilters() {

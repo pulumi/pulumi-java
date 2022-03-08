@@ -47,8 +47,8 @@ public final class SecretPropertiesResponse {
         @Nullable String value) {
         this.attributes = attributes;
         this.contentType = contentType;
-        this.secretUri = Objects.requireNonNull(secretUri);
-        this.secretUriWithVersion = Objects.requireNonNull(secretUriWithVersion);
+        this.secretUri = secretUri;
+        this.secretUriWithVersion = secretUriWithVersion;
         this.value = value;
     }
 

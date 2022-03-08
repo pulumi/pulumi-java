@@ -18,8 +18,8 @@ public final class GetSecretReplication {
     private GetSecretReplication(
         Boolean automatic,
         List<GetSecretReplicationUserManaged> userManageds) {
-        this.automatic = Objects.requireNonNull(automatic);
-        this.userManageds = Objects.requireNonNull(userManageds);
+        this.automatic = automatic;
+        this.userManageds = userManageds;
     }
 
     public Boolean getAutomatic() {

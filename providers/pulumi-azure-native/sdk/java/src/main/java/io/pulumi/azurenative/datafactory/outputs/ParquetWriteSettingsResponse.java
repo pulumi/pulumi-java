@@ -36,7 +36,7 @@ public final class ParquetWriteSettingsResponse {
         String type) {
         this.fileNamePrefix = fileNamePrefix;
         this.maxRowsPerFile = maxRowsPerFile;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

@@ -24,8 +24,8 @@ public final class MultiRegionAccessPointPolicyDetails {
     private MultiRegionAccessPointPolicyDetails(
         String name,
         String policy) {
-        this.name = Objects.requireNonNull(name);
-        this.policy = Objects.requireNonNull(policy);
+        this.name = name;
+        this.policy = policy;
     }
 
     /**

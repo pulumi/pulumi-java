@@ -67,14 +67,14 @@ public final class WidgetResponse {
         TimeSeriesTableResponse timeSeriesTable,
         String title,
         XyChartResponse xyChart) {
-        this.alertChart = Objects.requireNonNull(alertChart);
-        this.blank = Objects.requireNonNull(blank);
-        this.logsPanel = Objects.requireNonNull(logsPanel);
-        this.scorecard = Objects.requireNonNull(scorecard);
-        this.text = Objects.requireNonNull(text);
-        this.timeSeriesTable = Objects.requireNonNull(timeSeriesTable);
-        this.title = Objects.requireNonNull(title);
-        this.xyChart = Objects.requireNonNull(xyChart);
+        this.alertChart = alertChart;
+        this.blank = blank;
+        this.logsPanel = logsPanel;
+        this.scorecard = scorecard;
+        this.text = text;
+        this.timeSeriesTable = timeSeriesTable;
+        this.title = title;
+        this.xyChart = xyChart;
     }
 
     /**

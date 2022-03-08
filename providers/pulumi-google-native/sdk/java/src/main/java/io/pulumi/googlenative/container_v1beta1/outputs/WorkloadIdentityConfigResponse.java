@@ -30,9 +30,9 @@ public final class WorkloadIdentityConfigResponse {
         String identityNamespace,
         String identityProvider,
         String workloadPool) {
-        this.identityNamespace = Objects.requireNonNull(identityNamespace);
-        this.identityProvider = Objects.requireNonNull(identityProvider);
-        this.workloadPool = Objects.requireNonNull(workloadPool);
+        this.identityNamespace = identityNamespace;
+        this.identityProvider = identityProvider;
+        this.workloadPool = workloadPool;
     }
 
     /**

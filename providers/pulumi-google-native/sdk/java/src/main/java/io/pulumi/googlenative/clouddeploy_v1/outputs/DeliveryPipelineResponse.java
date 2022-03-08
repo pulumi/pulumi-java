@@ -75,16 +75,16 @@ public final class DeliveryPipelineResponse {
         SerialPipelineResponse serialPipeline,
         String uid,
         String updateTime) {
-        this.annotations = Objects.requireNonNull(annotations);
-        this.condition = Objects.requireNonNull(condition);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.description = Objects.requireNonNull(description);
-        this.etag = Objects.requireNonNull(etag);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.serialPipeline = Objects.requireNonNull(serialPipeline);
-        this.uid = Objects.requireNonNull(uid);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.annotations = annotations;
+        this.condition = condition;
+        this.createTime = createTime;
+        this.description = description;
+        this.etag = etag;
+        this.labels = labels;
+        this.name = name;
+        this.serialPipeline = serialPipeline;
+        this.uid = uid;
+        this.updateTime = updateTime;
     }
 
     /**

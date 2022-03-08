@@ -25,8 +25,8 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseRes
     private GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseResponse(
         List<String> setupErrors,
         String setupStatus) {
-        this.setupErrors = Objects.requireNonNull(setupErrors);
-        this.setupStatus = Objects.requireNonNull(setupStatus);
+        this.setupErrors = setupErrors;
+        this.setupStatus = setupStatus;
     }
 
     /**

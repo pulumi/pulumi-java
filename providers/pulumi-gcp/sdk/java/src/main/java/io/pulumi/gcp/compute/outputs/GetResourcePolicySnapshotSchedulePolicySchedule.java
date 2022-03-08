@@ -21,9 +21,9 @@ public final class GetResourcePolicySnapshotSchedulePolicySchedule {
         List<GetResourcePolicySnapshotSchedulePolicyScheduleDailySchedule> dailySchedules,
         List<GetResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule> hourlySchedules,
         List<GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule> weeklySchedules) {
-        this.dailySchedules = Objects.requireNonNull(dailySchedules);
-        this.hourlySchedules = Objects.requireNonNull(hourlySchedules);
-        this.weeklySchedules = Objects.requireNonNull(weeklySchedules);
+        this.dailySchedules = dailySchedules;
+        this.hourlySchedules = hourlySchedules;
+        this.weeklySchedules = weeklySchedules;
     }
 
     public List<GetResourcePolicySnapshotSchedulePolicyScheduleDailySchedule> getDailySchedules() {

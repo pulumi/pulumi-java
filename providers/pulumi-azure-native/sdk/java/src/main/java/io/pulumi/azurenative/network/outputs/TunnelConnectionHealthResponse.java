@@ -43,11 +43,11 @@ public final class TunnelConnectionHealthResponse {
         Double ingressBytesTransferred,
         String lastConnectionEstablishedUtcTime,
         String tunnel) {
-        this.connectionStatus = Objects.requireNonNull(connectionStatus);
-        this.egressBytesTransferred = Objects.requireNonNull(egressBytesTransferred);
-        this.ingressBytesTransferred = Objects.requireNonNull(ingressBytesTransferred);
-        this.lastConnectionEstablishedUtcTime = Objects.requireNonNull(lastConnectionEstablishedUtcTime);
-        this.tunnel = Objects.requireNonNull(tunnel);
+        this.connectionStatus = connectionStatus;
+        this.egressBytesTransferred = egressBytesTransferred;
+        this.ingressBytesTransferred = ingressBytesTransferred;
+        this.lastConnectionEstablishedUtcTime = lastConnectionEstablishedUtcTime;
+        this.tunnel = tunnel;
     }
 
     /**

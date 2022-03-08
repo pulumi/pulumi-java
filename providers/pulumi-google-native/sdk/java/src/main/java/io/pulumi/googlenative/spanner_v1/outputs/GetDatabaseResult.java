@@ -76,16 +76,16 @@ public final class GetDatabaseResult {
         RestoreInfoResponse restoreInfo,
         String state,
         String versionRetentionPeriod) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.databaseDialect = Objects.requireNonNull(databaseDialect);
-        this.defaultLeader = Objects.requireNonNull(defaultLeader);
-        this.earliestVersionTime = Objects.requireNonNull(earliestVersionTime);
-        this.encryptionConfig = Objects.requireNonNull(encryptionConfig);
-        this.encryptionInfo = Objects.requireNonNull(encryptionInfo);
-        this.name = Objects.requireNonNull(name);
-        this.restoreInfo = Objects.requireNonNull(restoreInfo);
-        this.state = Objects.requireNonNull(state);
-        this.versionRetentionPeriod = Objects.requireNonNull(versionRetentionPeriod);
+        this.createTime = createTime;
+        this.databaseDialect = databaseDialect;
+        this.defaultLeader = defaultLeader;
+        this.earliestVersionTime = earliestVersionTime;
+        this.encryptionConfig = encryptionConfig;
+        this.encryptionInfo = encryptionInfo;
+        this.name = name;
+        this.restoreInfo = restoreInfo;
+        this.state = state;
+        this.versionRetentionPeriod = versionRetentionPeriod;
     }
 
     /**

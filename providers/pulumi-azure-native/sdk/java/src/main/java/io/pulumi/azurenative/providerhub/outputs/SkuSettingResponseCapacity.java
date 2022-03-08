@@ -25,7 +25,7 @@ public final class SkuSettingResponseCapacity {
         @Nullable String scaleType) {
         this.$default = $default;
         this.maximum = maximum;
-        this.minimum = Objects.requireNonNull(minimum);
+        this.minimum = minimum;
         this.scaleType = scaleType;
     }
 

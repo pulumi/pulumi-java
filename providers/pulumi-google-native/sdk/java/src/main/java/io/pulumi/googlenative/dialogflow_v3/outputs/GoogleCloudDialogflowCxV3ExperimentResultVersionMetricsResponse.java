@@ -33,9 +33,9 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsRespon
         List<GoogleCloudDialogflowCxV3ExperimentResultMetricResponse> metrics,
         Integer sessionCount,
         String version) {
-        this.metrics = Objects.requireNonNull(metrics);
-        this.sessionCount = Objects.requireNonNull(sessionCount);
-        this.version = Objects.requireNonNull(version);
+        this.metrics = metrics;
+        this.sessionCount = sessionCount;
+        this.version = version;
     }
 
     /**

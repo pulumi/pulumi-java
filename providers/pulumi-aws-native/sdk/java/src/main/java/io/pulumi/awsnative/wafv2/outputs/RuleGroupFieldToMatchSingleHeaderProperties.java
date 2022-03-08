@@ -13,7 +13,7 @@ public final class RuleGroupFieldToMatchSingleHeaderProperties {
 
     @OutputCustomType.Constructor({"name"})
     private RuleGroupFieldToMatchSingleHeaderProperties(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     public String getName() {

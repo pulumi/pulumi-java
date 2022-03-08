@@ -58,10 +58,10 @@ public final class StandardEncoderPresetResponse {
         @Nullable FiltersResponse filters,
         List<Object> formats,
         String odataType) {
-        this.codecs = Objects.requireNonNull(codecs);
+        this.codecs = codecs;
         this.filters = filters;
-        this.formats = Objects.requireNonNull(formats);
-        this.odataType = Objects.requireNonNull(odataType);
+        this.formats = formats;
+        this.odataType = odataType;
     }
 
     /**

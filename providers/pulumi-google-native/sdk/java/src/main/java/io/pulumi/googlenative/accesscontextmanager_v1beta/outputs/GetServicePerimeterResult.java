@@ -43,11 +43,11 @@ public final class GetServicePerimeterResult {
         String perimeterType,
         ServicePerimeterConfigResponse status,
         String title) {
-        this.description = Objects.requireNonNull(description);
-        this.name = Objects.requireNonNull(name);
-        this.perimeterType = Objects.requireNonNull(perimeterType);
-        this.status = Objects.requireNonNull(status);
-        this.title = Objects.requireNonNull(title);
+        this.description = description;
+        this.name = name;
+        this.perimeterType = perimeterType;
+        this.status = status;
+        this.title = title;
     }
 
     /**

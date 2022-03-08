@@ -43,11 +43,11 @@ public final class VMwareV2FabricSpecificDetailsResponse {
         String serviceEndpoint,
         String serviceResourceId,
         String vmwareSiteId) {
-        this.instanceType = Objects.requireNonNull(instanceType);
-        this.migrationSolutionId = Objects.requireNonNull(migrationSolutionId);
-        this.serviceEndpoint = Objects.requireNonNull(serviceEndpoint);
-        this.serviceResourceId = Objects.requireNonNull(serviceResourceId);
-        this.vmwareSiteId = Objects.requireNonNull(vmwareSiteId);
+        this.instanceType = instanceType;
+        this.migrationSolutionId = migrationSolutionId;
+        this.serviceEndpoint = serviceEndpoint;
+        this.serviceResourceId = serviceResourceId;
+        this.vmwareSiteId = vmwareSiteId;
     }
 
     /**

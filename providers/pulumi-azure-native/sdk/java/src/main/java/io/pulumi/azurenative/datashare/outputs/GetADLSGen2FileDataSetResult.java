@@ -80,17 +80,17 @@ public final class GetADLSGen2FileDataSetResult {
         String subscriptionId,
         SystemDataResponse systemData,
         String type) {
-        this.dataSetId = Objects.requireNonNull(dataSetId);
-        this.filePath = Objects.requireNonNull(filePath);
-        this.fileSystem = Objects.requireNonNull(fileSystem);
-        this.id = Objects.requireNonNull(id);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.resourceGroup = Objects.requireNonNull(resourceGroup);
-        this.storageAccountName = Objects.requireNonNull(storageAccountName);
-        this.subscriptionId = Objects.requireNonNull(subscriptionId);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.dataSetId = dataSetId;
+        this.filePath = filePath;
+        this.fileSystem = fileSystem;
+        this.id = id;
+        this.kind = kind;
+        this.name = name;
+        this.resourceGroup = resourceGroup;
+        this.storageAccountName = storageAccountName;
+        this.subscriptionId = subscriptionId;
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

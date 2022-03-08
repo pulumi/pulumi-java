@@ -26,8 +26,8 @@ public final class SettingsSectionDescriptionResponse {
     private SettingsSectionDescriptionResponse(
         String name,
         List<SettingsParameterDescriptionResponse> parameters) {
-        this.name = Objects.requireNonNull(name);
-        this.parameters = Objects.requireNonNull(parameters);
+        this.name = name;
+        this.parameters = parameters;
     }
 
     /**

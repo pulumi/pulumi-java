@@ -91,18 +91,18 @@ public final class GetStreamResult {
         SourceConfigResponse sourceConfig,
         String state,
         String updateTime) {
-        this.backfillAll = Objects.requireNonNull(backfillAll);
-        this.backfillNone = Objects.requireNonNull(backfillNone);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.customerManagedEncryptionKey = Objects.requireNonNull(customerManagedEncryptionKey);
-        this.destinationConfig = Objects.requireNonNull(destinationConfig);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.errors = Objects.requireNonNull(errors);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.sourceConfig = Objects.requireNonNull(sourceConfig);
-        this.state = Objects.requireNonNull(state);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.backfillAll = backfillAll;
+        this.backfillNone = backfillNone;
+        this.createTime = createTime;
+        this.customerManagedEncryptionKey = customerManagedEncryptionKey;
+        this.destinationConfig = destinationConfig;
+        this.displayName = displayName;
+        this.errors = errors;
+        this.labels = labels;
+        this.name = name;
+        this.sourceConfig = sourceConfig;
+        this.state = state;
+        this.updateTime = updateTime;
     }
 
     /**

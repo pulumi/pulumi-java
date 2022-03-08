@@ -28,7 +28,7 @@ public final class WebChatChannelPropertiesResponse {
         @Nullable List<WebChatSiteResponse> sites,
         String webChatEmbedCode) {
         this.sites = sites;
-        this.webChatEmbedCode = Objects.requireNonNull(webChatEmbedCode);
+        this.webChatEmbedCode = webChatEmbedCode;
     }
 
     /**

@@ -31,9 +31,9 @@ public final class BackendServiceFailoverPolicyResponse {
         Boolean disableConnectionDrainOnFailover,
         Boolean dropTrafficIfUnhealthy,
         Double failoverRatio) {
-        this.disableConnectionDrainOnFailover = Objects.requireNonNull(disableConnectionDrainOnFailover);
-        this.dropTrafficIfUnhealthy = Objects.requireNonNull(dropTrafficIfUnhealthy);
-        this.failoverRatio = Objects.requireNonNull(failoverRatio);
+        this.disableConnectionDrainOnFailover = disableConnectionDrainOnFailover;
+        this.dropTrafficIfUnhealthy = dropTrafficIfUnhealthy;
+        this.failoverRatio = failoverRatio;
     }
 
     /**

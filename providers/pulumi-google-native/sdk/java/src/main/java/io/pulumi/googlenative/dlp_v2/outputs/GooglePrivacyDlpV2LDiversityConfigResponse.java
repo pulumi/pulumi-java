@@ -25,8 +25,8 @@ public final class GooglePrivacyDlpV2LDiversityConfigResponse {
     private GooglePrivacyDlpV2LDiversityConfigResponse(
         List<GooglePrivacyDlpV2FieldIdResponse> quasiIds,
         GooglePrivacyDlpV2FieldIdResponse sensitiveAttribute) {
-        this.quasiIds = Objects.requireNonNull(quasiIds);
-        this.sensitiveAttribute = Objects.requireNonNull(sensitiveAttribute);
+        this.quasiIds = quasiIds;
+        this.sensitiveAttribute = sensitiveAttribute;
     }
 
     /**

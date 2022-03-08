@@ -67,14 +67,14 @@ public final class HttpRouteActionResponse {
         DurationResponse timeout,
         UrlRewriteResponse urlRewrite,
         List<WeightedBackendServiceResponse> weightedBackendServices) {
-        this.corsPolicy = Objects.requireNonNull(corsPolicy);
-        this.faultInjectionPolicy = Objects.requireNonNull(faultInjectionPolicy);
-        this.maxStreamDuration = Objects.requireNonNull(maxStreamDuration);
-        this.requestMirrorPolicy = Objects.requireNonNull(requestMirrorPolicy);
-        this.retryPolicy = Objects.requireNonNull(retryPolicy);
-        this.timeout = Objects.requireNonNull(timeout);
-        this.urlRewrite = Objects.requireNonNull(urlRewrite);
-        this.weightedBackendServices = Objects.requireNonNull(weightedBackendServices);
+        this.corsPolicy = corsPolicy;
+        this.faultInjectionPolicy = faultInjectionPolicy;
+        this.maxStreamDuration = maxStreamDuration;
+        this.requestMirrorPolicy = requestMirrorPolicy;
+        this.retryPolicy = retryPolicy;
+        this.timeout = timeout;
+        this.urlRewrite = urlRewrite;
+        this.weightedBackendServices = weightedBackendServices;
     }
 
     /**

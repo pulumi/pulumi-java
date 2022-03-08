@@ -24,8 +24,8 @@ public final class DatasetReferenceResponse {
     private DatasetReferenceResponse(
         String datasetId,
         String project) {
-        this.datasetId = Objects.requireNonNull(datasetId);
-        this.project = Objects.requireNonNull(project);
+        this.datasetId = datasetId;
+        this.project = project;
     }
 
     /**

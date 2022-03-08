@@ -14,7 +14,7 @@ public final class GetTopicMessageStoragePolicy {
 
     @OutputCustomType.Constructor({"allowedPersistenceRegions"})
     private GetTopicMessageStoragePolicy(List<String> allowedPersistenceRegions) {
-        this.allowedPersistenceRegions = Objects.requireNonNull(allowedPersistenceRegions);
+        this.allowedPersistenceRegions = allowedPersistenceRegions;
     }
 
     public List<String> getAllowedPersistenceRegions() {

@@ -40,9 +40,9 @@ public final class DomainCognitoOptions {
         String roleArn,
         String userPoolId) {
         this.enabled = enabled;
-        this.identityPoolId = Objects.requireNonNull(identityPoolId);
-        this.roleArn = Objects.requireNonNull(roleArn);
-        this.userPoolId = Objects.requireNonNull(userPoolId);
+        this.identityPoolId = identityPoolId;
+        this.roleArn = roleArn;
+        this.userPoolId = userPoolId;
     }
 
     /**

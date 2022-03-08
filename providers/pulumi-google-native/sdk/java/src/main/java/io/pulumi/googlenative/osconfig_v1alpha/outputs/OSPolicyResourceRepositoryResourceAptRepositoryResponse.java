@@ -43,11 +43,11 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryResponse {
         String distribution,
         String gpgKey,
         String uri) {
-        this.archiveType = Objects.requireNonNull(archiveType);
-        this.components = Objects.requireNonNull(components);
-        this.distribution = Objects.requireNonNull(distribution);
-        this.gpgKey = Objects.requireNonNull(gpgKey);
-        this.uri = Objects.requireNonNull(uri);
+        this.archiveType = archiveType;
+        this.components = components;
+        this.distribution = distribution;
+        this.gpgKey = gpgKey;
+        this.uri = uri;
     }
 
     /**

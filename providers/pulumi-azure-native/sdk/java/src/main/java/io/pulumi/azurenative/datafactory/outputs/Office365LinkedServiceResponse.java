@@ -87,12 +87,12 @@ public final class Office365LinkedServiceResponse {
         this.connectVia = connectVia;
         this.description = description;
         this.encryptedCredential = encryptedCredential;
-        this.office365TenantId = Objects.requireNonNull(office365TenantId);
+        this.office365TenantId = office365TenantId;
         this.parameters = parameters;
-        this.servicePrincipalId = Objects.requireNonNull(servicePrincipalId);
-        this.servicePrincipalKey = Objects.requireNonNull(servicePrincipalKey);
-        this.servicePrincipalTenantId = Objects.requireNonNull(servicePrincipalTenantId);
-        this.type = Objects.requireNonNull(type);
+        this.servicePrincipalId = servicePrincipalId;
+        this.servicePrincipalKey = servicePrincipalKey;
+        this.servicePrincipalTenantId = servicePrincipalTenantId;
+        this.type = type;
     }
 
     /**

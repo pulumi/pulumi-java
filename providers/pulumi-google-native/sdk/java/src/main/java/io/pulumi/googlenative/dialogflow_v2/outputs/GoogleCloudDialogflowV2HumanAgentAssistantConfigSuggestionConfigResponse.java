@@ -26,8 +26,8 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionCon
     private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigResponse(
         List<GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfigResponse> featureConfigs,
         Boolean groupSuggestionResponses) {
-        this.featureConfigs = Objects.requireNonNull(featureConfigs);
-        this.groupSuggestionResponses = Objects.requireNonNull(groupSuggestionResponses);
+        this.featureConfigs = featureConfigs;
+        this.groupSuggestionResponses = groupSuggestionResponses;
     }
 
     /**

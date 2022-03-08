@@ -39,8 +39,8 @@ public final class ServiceLoadBalancer {
         Integer containerPort,
         @Nullable String elbName,
         @Nullable String targetGroupArn) {
-        this.containerName = Objects.requireNonNull(containerName);
-        this.containerPort = Objects.requireNonNull(containerPort);
+        this.containerName = containerName;
+        this.containerPort = containerPort;
         this.elbName = elbName;
         this.targetGroupArn = targetGroupArn;
     }

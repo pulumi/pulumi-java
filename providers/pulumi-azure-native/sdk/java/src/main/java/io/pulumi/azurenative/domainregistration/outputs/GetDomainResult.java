@@ -150,26 +150,26 @@ public final class GetDomainResult {
         String type) {
         this.authCode = authCode;
         this.autoRenew = autoRenew;
-        this.createdTime = Objects.requireNonNull(createdTime);
+        this.createdTime = createdTime;
         this.dnsType = dnsType;
         this.dnsZoneId = dnsZoneId;
-        this.domainNotRenewableReasons = Objects.requireNonNull(domainNotRenewableReasons);
-        this.expirationTime = Objects.requireNonNull(expirationTime);
-        this.id = Objects.requireNonNull(id);
+        this.domainNotRenewableReasons = domainNotRenewableReasons;
+        this.expirationTime = expirationTime;
+        this.id = id;
         this.kind = kind;
-        this.lastRenewedTime = Objects.requireNonNull(lastRenewedTime);
-        this.location = Objects.requireNonNull(location);
-        this.managedHostNames = Objects.requireNonNull(managedHostNames);
-        this.name = Objects.requireNonNull(name);
-        this.nameServers = Objects.requireNonNull(nameServers);
+        this.lastRenewedTime = lastRenewedTime;
+        this.location = location;
+        this.managedHostNames = managedHostNames;
+        this.name = name;
+        this.nameServers = nameServers;
         this.privacy = privacy;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.readyForDnsRecordManagement = Objects.requireNonNull(readyForDnsRecordManagement);
-        this.registrationStatus = Objects.requireNonNull(registrationStatus);
-        this.systemData = Objects.requireNonNull(systemData);
+        this.provisioningState = provisioningState;
+        this.readyForDnsRecordManagement = readyForDnsRecordManagement;
+        this.registrationStatus = registrationStatus;
+        this.systemData = systemData;
         this.tags = tags;
         this.targetDnsType = targetDnsType;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     public Optional<String> getAuthCode() {

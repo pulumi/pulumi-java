@@ -88,37 +88,37 @@ public final class GetInstanceResult {
         List<GetInstanceServerCaCert> serverCaCerts,
         String tier,
         String transitEncryptionMode) {
-        this.alternativeLocationId = Objects.requireNonNull(alternativeLocationId);
-        this.authEnabled = Objects.requireNonNull(authEnabled);
-        this.authString = Objects.requireNonNull(authString);
-        this.authorizedNetwork = Objects.requireNonNull(authorizedNetwork);
-        this.connectMode = Objects.requireNonNull(connectMode);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.currentLocationId = Objects.requireNonNull(currentLocationId);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.host = Objects.requireNonNull(host);
-        this.id = Objects.requireNonNull(id);
-        this.labels = Objects.requireNonNull(labels);
-        this.locationId = Objects.requireNonNull(locationId);
-        this.maintenancePolicies = Objects.requireNonNull(maintenancePolicies);
-        this.maintenanceSchedules = Objects.requireNonNull(maintenanceSchedules);
-        this.memorySizeGb = Objects.requireNonNull(memorySizeGb);
-        this.name = Objects.requireNonNull(name);
-        this.nodes = Objects.requireNonNull(nodes);
-        this.persistenceIamIdentity = Objects.requireNonNull(persistenceIamIdentity);
-        this.port = Objects.requireNonNull(port);
+        this.alternativeLocationId = alternativeLocationId;
+        this.authEnabled = authEnabled;
+        this.authString = authString;
+        this.authorizedNetwork = authorizedNetwork;
+        this.connectMode = connectMode;
+        this.createTime = createTime;
+        this.currentLocationId = currentLocationId;
+        this.displayName = displayName;
+        this.host = host;
+        this.id = id;
+        this.labels = labels;
+        this.locationId = locationId;
+        this.maintenancePolicies = maintenancePolicies;
+        this.maintenanceSchedules = maintenanceSchedules;
+        this.memorySizeGb = memorySizeGb;
+        this.name = name;
+        this.nodes = nodes;
+        this.persistenceIamIdentity = persistenceIamIdentity;
+        this.port = port;
         this.project = project;
-        this.readEndpoint = Objects.requireNonNull(readEndpoint);
-        this.readEndpointPort = Objects.requireNonNull(readEndpointPort);
-        this.readReplicasMode = Objects.requireNonNull(readReplicasMode);
-        this.redisConfigs = Objects.requireNonNull(redisConfigs);
-        this.redisVersion = Objects.requireNonNull(redisVersion);
+        this.readEndpoint = readEndpoint;
+        this.readEndpointPort = readEndpointPort;
+        this.readReplicasMode = readReplicasMode;
+        this.redisConfigs = redisConfigs;
+        this.redisVersion = redisVersion;
         this.region = region;
-        this.replicaCount = Objects.requireNonNull(replicaCount);
-        this.reservedIpRange = Objects.requireNonNull(reservedIpRange);
-        this.serverCaCerts = Objects.requireNonNull(serverCaCerts);
-        this.tier = Objects.requireNonNull(tier);
-        this.transitEncryptionMode = Objects.requireNonNull(transitEncryptionMode);
+        this.replicaCount = replicaCount;
+        this.reservedIpRange = reservedIpRange;
+        this.serverCaCerts = serverCaCerts;
+        this.tier = tier;
+        this.transitEncryptionMode = transitEncryptionMode;
     }
 
     public String getAlternativeLocationId() {

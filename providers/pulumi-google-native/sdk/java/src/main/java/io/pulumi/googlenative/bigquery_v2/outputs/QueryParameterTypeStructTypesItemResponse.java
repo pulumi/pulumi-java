@@ -31,9 +31,9 @@ public final class QueryParameterTypeStructTypesItemResponse {
         String description,
         String name,
         QueryParameterTypeResponse type) {
-        this.description = Objects.requireNonNull(description);
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.description = description;
+        this.name = name;
+        this.type = type;
     }
 
     /**

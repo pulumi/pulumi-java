@@ -38,10 +38,10 @@ public final class ParserConfigResponse {
         SchemaPackageResponse schema,
         String segmentTerminator,
         String version) {
-        this.allowNullHeader = Objects.requireNonNull(allowNullHeader);
-        this.schema = Objects.requireNonNull(schema);
-        this.segmentTerminator = Objects.requireNonNull(segmentTerminator);
-        this.version = Objects.requireNonNull(version);
+        this.allowNullHeader = allowNullHeader;
+        this.schema = schema;
+        this.segmentTerminator = segmentTerminator;
+        this.version = version;
     }
 
     /**

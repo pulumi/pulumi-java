@@ -28,7 +28,7 @@ public final class ManagedRulesDefinitionResponse {
         @Nullable List<OwaspCrsExclusionEntryResponse> exclusions,
         List<ManagedRuleSetResponse> managedRuleSets) {
         this.exclusions = exclusions;
-        this.managedRuleSets = Objects.requireNonNull(managedRuleSets);
+        this.managedRuleSets = managedRuleSets;
     }
 
     /**

@@ -44,11 +44,11 @@ public final class GetCloudLinkResult {
         String name,
         String status,
         String type) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.linkedCloud = linkedCloud;
-        this.name = Objects.requireNonNull(name);
-        this.status = Objects.requireNonNull(status);
-        this.type = Objects.requireNonNull(type);
+        this.name = name;
+        this.status = status;
+        this.type = type;
     }
 
     /**

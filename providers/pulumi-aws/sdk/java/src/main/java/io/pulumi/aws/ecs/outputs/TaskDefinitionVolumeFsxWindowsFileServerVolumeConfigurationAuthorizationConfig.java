@@ -24,8 +24,8 @@ public final class TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAu
     private TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfig(
         String credentialsParameter,
         String domain) {
-        this.credentialsParameter = Objects.requireNonNull(credentialsParameter);
-        this.domain = Objects.requireNonNull(domain);
+        this.credentialsParameter = credentialsParameter;
+        this.domain = domain;
     }
 
     /**

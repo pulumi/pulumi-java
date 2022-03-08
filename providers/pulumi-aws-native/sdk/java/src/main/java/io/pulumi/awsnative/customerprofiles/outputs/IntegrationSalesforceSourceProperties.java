@@ -23,7 +23,7 @@ public final class IntegrationSalesforceSourceProperties {
         String object) {
         this.enableDynamicFieldUpdate = enableDynamicFieldUpdate;
         this.includeDeletedRecords = includeDeletedRecords;
-        this.object = Objects.requireNonNull(object);
+        this.object = object;
     }
 
     public Optional<Boolean> getEnableDynamicFieldUpdate() {

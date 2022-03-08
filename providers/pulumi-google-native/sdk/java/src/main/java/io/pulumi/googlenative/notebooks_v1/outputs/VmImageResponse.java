@@ -30,9 +30,9 @@ public final class VmImageResponse {
         String imageFamily,
         String imageName,
         String project) {
-        this.imageFamily = Objects.requireNonNull(imageFamily);
-        this.imageName = Objects.requireNonNull(imageName);
-        this.project = Objects.requireNonNull(project);
+        this.imageFamily = imageFamily;
+        this.imageName = imageName;
+        this.project = project;
     }
 
     /**

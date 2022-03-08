@@ -17,7 +17,7 @@ public final class PolicyRestorePolicy {
 
     @OutputCustomType.Constructor({"$default"})
     private PolicyRestorePolicy(Boolean $default) {
-        this.$default = Objects.requireNonNull($default);
+        this.$default = $default;
     }
 
     /**

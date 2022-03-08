@@ -45,10 +45,10 @@ public final class GetFirewallRuleResult {
         @Nullable String startIpAddress,
         String type) {
         this.endIpAddress = endIpAddress;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.name = name;
         this.startIpAddress = startIpAddress;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

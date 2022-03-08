@@ -25,8 +25,8 @@ public final class ClusterClusterConfigMasterConfigAccelerator {
     private ClusterClusterConfigMasterConfigAccelerator(
         Integer acceleratorCount,
         String acceleratorType) {
-        this.acceleratorCount = Objects.requireNonNull(acceleratorCount);
-        this.acceleratorType = Objects.requireNonNull(acceleratorType);
+        this.acceleratorCount = acceleratorCount;
+        this.acceleratorType = acceleratorType;
     }
 
     /**

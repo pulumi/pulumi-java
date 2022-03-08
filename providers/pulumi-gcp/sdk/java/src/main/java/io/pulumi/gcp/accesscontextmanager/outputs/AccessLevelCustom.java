@@ -20,7 +20,7 @@ public final class AccessLevelCustom {
 
     @OutputCustomType.Constructor({"expr"})
     private AccessLevelCustom(AccessLevelCustomExpr expr) {
-        this.expr = Objects.requireNonNull(expr);
+        this.expr = expr;
     }
 
     /**

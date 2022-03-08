@@ -35,8 +35,8 @@ public final class GroupInitialLifecycleHook {
         @Nullable String roleArn) {
         this.defaultResult = defaultResult;
         this.heartbeatTimeout = heartbeatTimeout;
-        this.lifecycleTransition = Objects.requireNonNull(lifecycleTransition);
-        this.name = Objects.requireNonNull(name);
+        this.lifecycleTransition = lifecycleTransition;
+        this.name = name;
         this.notificationMetadata = notificationMetadata;
         this.notificationTargetArn = notificationTargetArn;
         this.roleArn = roleArn;

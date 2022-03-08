@@ -56,7 +56,7 @@ public final class MsTeamsChannelPropertiesResponse {
         this.deploymentEnvironment = deploymentEnvironment;
         this.enableCalling = enableCalling;
         this.incomingCallRoute = incomingCallRoute;
-        this.isEnabled = Objects.requireNonNull(isEnabled);
+        this.isEnabled = isEnabled;
     }
 
     /**

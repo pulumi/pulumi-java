@@ -17,8 +17,8 @@ public final class JobStatisticOverride {
     private JobStatisticOverride(
         JobParameterMap parameters,
         String statistic) {
-        this.parameters = Objects.requireNonNull(parameters);
-        this.statistic = Objects.requireNonNull(statistic);
+        this.parameters = parameters;
+        this.statistic = statistic;
     }
 
     public JobParameterMap getParameters() {

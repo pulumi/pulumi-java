@@ -18,7 +18,7 @@ public final class InputDefinition {
 
     @OutputCustomType.Constructor({"attributes"})
     private InputDefinition(List<InputAttribute> attributes) {
-        this.attributes = Objects.requireNonNull(attributes);
+        this.attributes = attributes;
     }
 
     /**

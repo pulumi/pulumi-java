@@ -59,14 +59,14 @@ public final class GetDistributionConfigurationResult {
         String id,
         String name,
         Map<String,String> tags) {
-        this.arn = Objects.requireNonNull(arn);
-        this.dateCreated = Objects.requireNonNull(dateCreated);
-        this.dateUpdated = Objects.requireNonNull(dateUpdated);
-        this.description = Objects.requireNonNull(description);
-        this.distributions = Objects.requireNonNull(distributions);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.tags = Objects.requireNonNull(tags);
+        this.arn = arn;
+        this.dateCreated = dateCreated;
+        this.dateUpdated = dateUpdated;
+        this.description = description;
+        this.distributions = distributions;
+        this.id = id;
+        this.name = name;
+        this.tags = tags;
     }
 
     public String getArn() {

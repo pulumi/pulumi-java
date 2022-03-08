@@ -18,7 +18,7 @@ public final class RelationshipTypeMappingResponse {
 
     @OutputCustomType.Constructor({"fieldMappings"})
     private RelationshipTypeMappingResponse(List<RelationshipTypeFieldMappingResponse> fieldMappings) {
-        this.fieldMappings = Objects.requireNonNull(fieldMappings);
+        this.fieldMappings = fieldMappings;
     }
 
     /**

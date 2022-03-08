@@ -38,15 +38,15 @@ public final class GetMeshIstioServiceResult {
         String serviceName,
         String serviceNamespace,
         List<GetMeshIstioServiceTelemetry> telemetries) {
-        this.displayName = Objects.requireNonNull(displayName);
-        this.id = Objects.requireNonNull(id);
-        this.meshUid = Objects.requireNonNull(meshUid);
-        this.name = Objects.requireNonNull(name);
+        this.displayName = displayName;
+        this.id = id;
+        this.meshUid = meshUid;
+        this.name = name;
         this.project = project;
-        this.serviceId = Objects.requireNonNull(serviceId);
-        this.serviceName = Objects.requireNonNull(serviceName);
-        this.serviceNamespace = Objects.requireNonNull(serviceNamespace);
-        this.telemetries = Objects.requireNonNull(telemetries);
+        this.serviceId = serviceId;
+        this.serviceName = serviceName;
+        this.serviceNamespace = serviceNamespace;
+        this.telemetries = telemetries;
     }
 
     public String getDisplayName() {

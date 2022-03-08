@@ -41,7 +41,7 @@ public final class ResourceLocationDataContractResponse {
         this.city = city;
         this.countryOrRegion = countryOrRegion;
         this.district = district;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

@@ -51,7 +51,7 @@ public final class RoleBinding {
         this.apiVersion = apiVersion;
         this.kind = kind;
         this.metadata = metadata;
-        this.roleRef = Objects.requireNonNull(roleRef);
+        this.roleRef = roleRef;
         this.subjects = subjects;
     }
 

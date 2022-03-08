@@ -119,15 +119,15 @@ public final class GetFhirServiceResult {
         this.corsConfiguration = corsConfiguration;
         this.etag = etag;
         this.exportConfiguration = exportConfiguration;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.identity = identity;
         this.kind = kind;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.systemData = Objects.requireNonNull(systemData);
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.systemData = systemData;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

@@ -17,8 +17,8 @@ public final class WirelessDeviceAbpV10x {
     private WirelessDeviceAbpV10x(
         String devAddr,
         WirelessDeviceSessionKeysAbpV10x sessionKeys) {
-        this.devAddr = Objects.requireNonNull(devAddr);
-        this.sessionKeys = Objects.requireNonNull(sessionKeys);
+        this.devAddr = devAddr;
+        this.sessionKeys = sessionKeys;
     }
 
     public String getDevAddr() {

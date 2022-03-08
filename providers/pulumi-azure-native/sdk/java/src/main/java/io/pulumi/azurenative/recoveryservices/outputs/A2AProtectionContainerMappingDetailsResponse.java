@@ -47,7 +47,7 @@ public final class A2AProtectionContainerMappingDetailsResponse {
         @Nullable String scheduleName) {
         this.agentAutoUpdateStatus = agentAutoUpdateStatus;
         this.automationAccountArmId = automationAccountArmId;
-        this.instanceType = Objects.requireNonNull(instanceType);
+        this.instanceType = instanceType;
         this.jobScheduleName = jobScheduleName;
         this.scheduleName = scheduleName;
     }

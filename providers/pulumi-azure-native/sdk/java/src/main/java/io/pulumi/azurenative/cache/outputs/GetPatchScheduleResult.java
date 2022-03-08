@@ -38,10 +38,10 @@ public final class GetPatchScheduleResult {
         String name,
         List<ScheduleEntryResponse> scheduleEntries,
         String type) {
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.scheduleEntries = Objects.requireNonNull(scheduleEntries);
-        this.type = Objects.requireNonNull(type);
+        this.id = id;
+        this.name = name;
+        this.scheduleEntries = scheduleEntries;
+        this.type = type;
     }
 
     /**

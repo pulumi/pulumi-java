@@ -13,7 +13,7 @@ public final class EnvironmentConfigDatabaseConfig {
 
     @OutputCustomType.Constructor({"machineType"})
     private EnvironmentConfigDatabaseConfig(String machineType) {
-        this.machineType = Objects.requireNonNull(machineType);
+        this.machineType = machineType;
     }
 
     public String getMachineType() {

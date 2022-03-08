@@ -42,11 +42,11 @@ public final class PeeringServicePrefixEventResponse {
         String eventSummary,
         String eventTimestamp,
         String eventType) {
-        this.eventDescription = Objects.requireNonNull(eventDescription);
-        this.eventLevel = Objects.requireNonNull(eventLevel);
-        this.eventSummary = Objects.requireNonNull(eventSummary);
-        this.eventTimestamp = Objects.requireNonNull(eventTimestamp);
-        this.eventType = Objects.requireNonNull(eventType);
+        this.eventDescription = eventDescription;
+        this.eventLevel = eventLevel;
+        this.eventSummary = eventSummary;
+        this.eventTimestamp = eventTimestamp;
+        this.eventType = eventType;
     }
 
     /**

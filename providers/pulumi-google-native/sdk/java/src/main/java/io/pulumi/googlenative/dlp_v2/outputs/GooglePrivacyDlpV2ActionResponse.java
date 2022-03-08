@@ -53,12 +53,12 @@ public final class GooglePrivacyDlpV2ActionResponse {
         GooglePrivacyDlpV2PublishSummaryToCsccResponse publishSummaryToCscc,
         GooglePrivacyDlpV2PublishToStackdriverResponse publishToStackdriver,
         GooglePrivacyDlpV2SaveFindingsResponse saveFindings) {
-        this.jobNotificationEmails = Objects.requireNonNull(jobNotificationEmails);
-        this.pubSub = Objects.requireNonNull(pubSub);
-        this.publishFindingsToCloudDataCatalog = Objects.requireNonNull(publishFindingsToCloudDataCatalog);
-        this.publishSummaryToCscc = Objects.requireNonNull(publishSummaryToCscc);
-        this.publishToStackdriver = Objects.requireNonNull(publishToStackdriver);
-        this.saveFindings = Objects.requireNonNull(saveFindings);
+        this.jobNotificationEmails = jobNotificationEmails;
+        this.pubSub = pubSub;
+        this.publishFindingsToCloudDataCatalog = publishFindingsToCloudDataCatalog;
+        this.publishSummaryToCscc = publishSummaryToCscc;
+        this.publishToStackdriver = publishToStackdriver;
+        this.saveFindings = saveFindings;
     }
 
     /**

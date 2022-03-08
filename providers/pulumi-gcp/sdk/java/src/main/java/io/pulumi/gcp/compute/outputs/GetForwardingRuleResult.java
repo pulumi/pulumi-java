@@ -69,30 +69,30 @@ public final class GetForwardingRuleResult {
         String serviceName,
         String subnetwork,
         String target) {
-        this.allPorts = Objects.requireNonNull(allPorts);
-        this.allowGlobalAccess = Objects.requireNonNull(allowGlobalAccess);
-        this.backendService = Objects.requireNonNull(backendService);
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.description = Objects.requireNonNull(description);
-        this.id = Objects.requireNonNull(id);
-        this.ipAddress = Objects.requireNonNull(ipAddress);
-        this.ipProtocol = Objects.requireNonNull(ipProtocol);
-        this.isMirroringCollector = Objects.requireNonNull(isMirroringCollector);
-        this.labelFingerprint = Objects.requireNonNull(labelFingerprint);
-        this.labels = Objects.requireNonNull(labels);
-        this.loadBalancingScheme = Objects.requireNonNull(loadBalancingScheme);
-        this.name = Objects.requireNonNull(name);
-        this.network = Objects.requireNonNull(network);
-        this.networkTier = Objects.requireNonNull(networkTier);
-        this.portRange = Objects.requireNonNull(portRange);
-        this.ports = Objects.requireNonNull(ports);
+        this.allPorts = allPorts;
+        this.allowGlobalAccess = allowGlobalAccess;
+        this.backendService = backendService;
+        this.creationTimestamp = creationTimestamp;
+        this.description = description;
+        this.id = id;
+        this.ipAddress = ipAddress;
+        this.ipProtocol = ipProtocol;
+        this.isMirroringCollector = isMirroringCollector;
+        this.labelFingerprint = labelFingerprint;
+        this.labels = labels;
+        this.loadBalancingScheme = loadBalancingScheme;
+        this.name = name;
+        this.network = network;
+        this.networkTier = networkTier;
+        this.portRange = portRange;
+        this.ports = ports;
         this.project = project;
         this.region = region;
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.serviceLabel = Objects.requireNonNull(serviceLabel);
-        this.serviceName = Objects.requireNonNull(serviceName);
-        this.subnetwork = Objects.requireNonNull(subnetwork);
-        this.target = Objects.requireNonNull(target);
+        this.selfLink = selfLink;
+        this.serviceLabel = serviceLabel;
+        this.serviceName = serviceName;
+        this.subnetwork = subnetwork;
+        this.target = target;
     }
 
     public Boolean getAllPorts() {

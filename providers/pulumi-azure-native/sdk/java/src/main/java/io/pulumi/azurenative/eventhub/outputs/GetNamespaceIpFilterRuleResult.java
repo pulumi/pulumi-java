@@ -52,10 +52,10 @@ public final class GetNamespaceIpFilterRuleResult {
         String type) {
         this.action = action;
         this.filterName = filterName;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.ipMask = ipMask;
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.name = name;
+        this.type = type;
     }
 
     /**

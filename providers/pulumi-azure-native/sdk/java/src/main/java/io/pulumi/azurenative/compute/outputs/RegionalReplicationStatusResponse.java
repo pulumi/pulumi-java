@@ -37,10 +37,10 @@ public final class RegionalReplicationStatusResponse {
         Integer progress,
         String region,
         String state) {
-        this.details = Objects.requireNonNull(details);
-        this.progress = Objects.requireNonNull(progress);
-        this.region = Objects.requireNonNull(region);
-        this.state = Objects.requireNonNull(state);
+        this.details = details;
+        this.progress = progress;
+        this.region = region;
+        this.state = state;
     }
 
     /**

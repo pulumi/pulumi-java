@@ -17,7 +17,7 @@ public final class OSPolicyResourcePackageResourceZypperResponse {
 
     @OutputCustomType.Constructor({"name"})
     private OSPolicyResourcePackageResourceZypperResponse(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

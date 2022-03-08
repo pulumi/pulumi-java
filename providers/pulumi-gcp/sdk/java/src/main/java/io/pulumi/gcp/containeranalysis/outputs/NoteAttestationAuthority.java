@@ -25,7 +25,7 @@ public final class NoteAttestationAuthority {
 
     @OutputCustomType.Constructor({"hint"})
     private NoteAttestationAuthority(NoteAttestationAuthorityHint hint) {
-        this.hint = Objects.requireNonNull(hint);
+        this.hint = hint;
     }
 
     /**

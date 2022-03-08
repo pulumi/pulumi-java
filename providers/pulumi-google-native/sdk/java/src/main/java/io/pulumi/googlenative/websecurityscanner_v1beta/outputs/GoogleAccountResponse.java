@@ -24,8 +24,8 @@ public final class GoogleAccountResponse {
     private GoogleAccountResponse(
         String password,
         String username) {
-        this.password = Objects.requireNonNull(password);
-        this.username = Objects.requireNonNull(username);
+        this.password = password;
+        this.username = username;
     }
 
     /**

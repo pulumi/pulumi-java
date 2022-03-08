@@ -44,12 +44,12 @@ public final class KeyVaultSigningKeyParametersResponse {
         String secretVersion,
         String subscriptionId,
         String vaultName) {
-        this.odataType = Objects.requireNonNull(odataType);
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
-        this.secretName = Objects.requireNonNull(secretName);
-        this.secretVersion = Objects.requireNonNull(secretVersion);
-        this.subscriptionId = Objects.requireNonNull(subscriptionId);
-        this.vaultName = Objects.requireNonNull(vaultName);
+        this.odataType = odataType;
+        this.resourceGroupName = resourceGroupName;
+        this.secretName = secretName;
+        this.secretVersion = secretVersion;
+        this.subscriptionId = subscriptionId;
+        this.vaultName = vaultName;
     }
 
     public String getOdataType() {

@@ -73,13 +73,13 @@ public final class DefaultSecurityGroupEgress {
         Integer toPort) {
         this.cidrBlocks = cidrBlocks;
         this.description = description;
-        this.fromPort = Objects.requireNonNull(fromPort);
+        this.fromPort = fromPort;
         this.ipv6CidrBlocks = ipv6CidrBlocks;
         this.prefixListIds = prefixListIds;
-        this.protocol = Objects.requireNonNull(protocol);
+        this.protocol = protocol;
         this.securityGroups = securityGroups;
         this.self = self;
-        this.toPort = Objects.requireNonNull(toPort);
+        this.toPort = toPort;
     }
 
     /**

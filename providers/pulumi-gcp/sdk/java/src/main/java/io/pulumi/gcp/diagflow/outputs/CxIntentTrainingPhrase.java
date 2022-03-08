@@ -43,7 +43,7 @@ public final class CxIntentTrainingPhrase {
         List<CxIntentTrainingPhrasePart> parts,
         @Nullable Integer repeatCount) {
         this.id = id;
-        this.parts = Objects.requireNonNull(parts);
+        this.parts = parts;
         this.repeatCount = repeatCount;
     }
 

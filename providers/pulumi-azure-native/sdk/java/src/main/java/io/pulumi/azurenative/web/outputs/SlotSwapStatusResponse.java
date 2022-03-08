@@ -30,9 +30,9 @@ public final class SlotSwapStatusResponse {
         String destinationSlotName,
         String sourceSlotName,
         String timestampUtc) {
-        this.destinationSlotName = Objects.requireNonNull(destinationSlotName);
-        this.sourceSlotName = Objects.requireNonNull(sourceSlotName);
-        this.timestampUtc = Objects.requireNonNull(timestampUtc);
+        this.destinationSlotName = destinationSlotName;
+        this.sourceSlotName = sourceSlotName;
+        this.timestampUtc = timestampUtc;
     }
 
     /**

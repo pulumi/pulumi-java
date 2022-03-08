@@ -19,7 +19,7 @@ public final class ManagedZonePeeringConfigTargetNetwork {
 
     @OutputCustomType.Constructor({"networkUrl"})
     private ManagedZonePeeringConfigTargetNetwork(String networkUrl) {
-        this.networkUrl = Objects.requireNonNull(networkUrl);
+        this.networkUrl = networkUrl;
     }
 
     /**

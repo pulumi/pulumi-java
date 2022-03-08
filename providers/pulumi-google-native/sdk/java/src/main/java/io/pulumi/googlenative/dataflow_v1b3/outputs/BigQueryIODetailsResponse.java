@@ -36,10 +36,10 @@ public final class BigQueryIODetailsResponse {
         String project,
         String query,
         String table) {
-        this.dataset = Objects.requireNonNull(dataset);
-        this.project = Objects.requireNonNull(project);
-        this.query = Objects.requireNonNull(query);
-        this.table = Objects.requireNonNull(table);
+        this.dataset = dataset;
+        this.project = project;
+        this.query = query;
+        this.table = table;
     }
 
     /**

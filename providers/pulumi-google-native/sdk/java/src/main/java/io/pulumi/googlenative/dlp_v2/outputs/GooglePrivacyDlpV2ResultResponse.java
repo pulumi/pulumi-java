@@ -39,10 +39,10 @@ public final class GooglePrivacyDlpV2ResultResponse {
         List<GooglePrivacyDlpV2InfoTypeStatsResponse> infoTypeStats,
         String processedBytes,
         String totalEstimatedBytes) {
-        this.hybridStats = Objects.requireNonNull(hybridStats);
-        this.infoTypeStats = Objects.requireNonNull(infoTypeStats);
-        this.processedBytes = Objects.requireNonNull(processedBytes);
-        this.totalEstimatedBytes = Objects.requireNonNull(totalEstimatedBytes);
+        this.hybridStats = hybridStats;
+        this.infoTypeStats = infoTypeStats;
+        this.processedBytes = processedBytes;
+        this.totalEstimatedBytes = totalEstimatedBytes;
     }
 
     /**

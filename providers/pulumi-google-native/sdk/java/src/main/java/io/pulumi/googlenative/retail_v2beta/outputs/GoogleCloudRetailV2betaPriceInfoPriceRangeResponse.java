@@ -24,8 +24,8 @@ public final class GoogleCloudRetailV2betaPriceInfoPriceRangeResponse {
     private GoogleCloudRetailV2betaPriceInfoPriceRangeResponse(
         GoogleCloudRetailV2betaIntervalResponse originalPrice,
         GoogleCloudRetailV2betaIntervalResponse price) {
-        this.originalPrice = Objects.requireNonNull(originalPrice);
-        this.price = Objects.requireNonNull(price);
+        this.originalPrice = originalPrice;
+        this.price = price;
     }
 
     /**

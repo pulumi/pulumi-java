@@ -313,7 +313,7 @@ public final class GetWebAppResult {
         String type,
         String usageState,
         @Nullable String virtualNetworkSubnetId) {
-        this.availabilityState = Objects.requireNonNull(availabilityState);
+        this.availabilityState = availabilityState;
         this.clientAffinityEnabled = clientAffinityEnabled;
         this.clientCertEnabled = clientCertEnabled;
         this.clientCertExclusionPaths = clientCertExclusionPaths;
@@ -321,44 +321,44 @@ public final class GetWebAppResult {
         this.containerSize = containerSize;
         this.customDomainVerificationId = customDomainVerificationId;
         this.dailyMemoryTimeQuota = dailyMemoryTimeQuota;
-        this.defaultHostName = Objects.requireNonNull(defaultHostName);
+        this.defaultHostName = defaultHostName;
         this.enabled = enabled;
-        this.enabledHostNames = Objects.requireNonNull(enabledHostNames);
+        this.enabledHostNames = enabledHostNames;
         this.hostNameSslStates = hostNameSslStates;
-        this.hostNames = Objects.requireNonNull(hostNames);
+        this.hostNames = hostNames;
         this.hostNamesDisabled = hostNamesDisabled;
         this.hostingEnvironmentProfile = hostingEnvironmentProfile;
         this.httpsOnly = httpsOnly;
         this.hyperV = hyperV;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.identity = identity;
-        this.inProgressOperationId = Objects.requireNonNull(inProgressOperationId);
-        this.isDefaultContainer = Objects.requireNonNull(isDefaultContainer);
+        this.inProgressOperationId = inProgressOperationId;
+        this.isDefaultContainer = isDefaultContainer;
         this.isXenon = isXenon;
         this.keyVaultReferenceIdentity = keyVaultReferenceIdentity;
         this.kind = kind;
-        this.lastModifiedTimeUtc = Objects.requireNonNull(lastModifiedTimeUtc);
-        this.location = Objects.requireNonNull(location);
-        this.maxNumberOfWorkers = Objects.requireNonNull(maxNumberOfWorkers);
-        this.name = Objects.requireNonNull(name);
-        this.outboundIpAddresses = Objects.requireNonNull(outboundIpAddresses);
-        this.possibleOutboundIpAddresses = Objects.requireNonNull(possibleOutboundIpAddresses);
+        this.lastModifiedTimeUtc = lastModifiedTimeUtc;
+        this.location = location;
+        this.maxNumberOfWorkers = maxNumberOfWorkers;
+        this.name = name;
+        this.outboundIpAddresses = outboundIpAddresses;
+        this.possibleOutboundIpAddresses = possibleOutboundIpAddresses;
         this.redundancyMode = redundancyMode;
-        this.repositorySiteName = Objects.requireNonNull(repositorySiteName);
+        this.repositorySiteName = repositorySiteName;
         this.reserved = reserved;
-        this.resourceGroup = Objects.requireNonNull(resourceGroup);
+        this.resourceGroup = resourceGroup;
         this.scmSiteAlsoStopped = scmSiteAlsoStopped;
         this.serverFarmId = serverFarmId;
         this.siteConfig = siteConfig;
-        this.slotSwapStatus = Objects.requireNonNull(slotSwapStatus);
-        this.state = Objects.requireNonNull(state);
+        this.slotSwapStatus = slotSwapStatus;
+        this.state = state;
         this.storageAccountRequired = storageAccountRequired;
-        this.suspendedTill = Objects.requireNonNull(suspendedTill);
+        this.suspendedTill = suspendedTill;
         this.tags = tags;
-        this.targetSwapSlot = Objects.requireNonNull(targetSwapSlot);
-        this.trafficManagerHostNames = Objects.requireNonNull(trafficManagerHostNames);
-        this.type = Objects.requireNonNull(type);
-        this.usageState = Objects.requireNonNull(usageState);
+        this.targetSwapSlot = targetSwapSlot;
+        this.trafficManagerHostNames = trafficManagerHostNames;
+        this.type = type;
+        this.usageState = usageState;
         this.virtualNetworkSubnetId = virtualNetworkSubnetId;
     }
 

@@ -66,10 +66,10 @@ public final class GetApiTagDescriptionResult {
         this.displayName = displayName;
         this.externalDocsDescription = externalDocsDescription;
         this.externalDocsUrl = externalDocsUrl;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.tagId = tagId;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

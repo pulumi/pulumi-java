@@ -32,9 +32,9 @@ public final class HoursOfOperationConfig {
         String day,
         HoursOfOperationConfigEndTime endTime,
         HoursOfOperationConfigStartTime startTime) {
-        this.day = Objects.requireNonNull(day);
-        this.endTime = Objects.requireNonNull(endTime);
-        this.startTime = Objects.requireNonNull(startTime);
+        this.day = day;
+        this.endTime = endTime;
+        this.startTime = startTime;
     }
 
     /**

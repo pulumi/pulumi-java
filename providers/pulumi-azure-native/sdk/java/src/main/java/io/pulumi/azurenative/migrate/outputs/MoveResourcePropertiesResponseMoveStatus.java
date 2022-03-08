@@ -36,7 +36,7 @@ public final class MoveResourcePropertiesResponseMoveStatus {
         String moveState) {
         this.errors = errors;
         this.jobStatus = jobStatus;
-        this.moveState = Objects.requireNonNull(moveState);
+        this.moveState = moveState;
     }
 
     /**

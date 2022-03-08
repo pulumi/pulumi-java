@@ -17,8 +17,8 @@ public final class DatasetDeltaTime {
     private DatasetDeltaTime(
         Integer offsetSeconds,
         String timeExpression) {
-        this.offsetSeconds = Objects.requireNonNull(offsetSeconds);
-        this.timeExpression = Objects.requireNonNull(timeExpression);
+        this.offsetSeconds = offsetSeconds;
+        this.timeExpression = timeExpression;
     }
 
     public Integer getOffsetSeconds() {

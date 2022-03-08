@@ -70,15 +70,15 @@ public final class GoogleCloudMlV1__HyperparameterSpecResponse {
         Integer maxTrials,
         List<GoogleCloudMlV1__ParameterSpecResponse> params,
         String resumePreviousJobId) {
-        this.algorithm = Objects.requireNonNull(algorithm);
-        this.enableTrialEarlyStopping = Objects.requireNonNull(enableTrialEarlyStopping);
-        this.goal = Objects.requireNonNull(goal);
-        this.hyperparameterMetricTag = Objects.requireNonNull(hyperparameterMetricTag);
-        this.maxFailedTrials = Objects.requireNonNull(maxFailedTrials);
-        this.maxParallelTrials = Objects.requireNonNull(maxParallelTrials);
-        this.maxTrials = Objects.requireNonNull(maxTrials);
-        this.params = Objects.requireNonNull(params);
-        this.resumePreviousJobId = Objects.requireNonNull(resumePreviousJobId);
+        this.algorithm = algorithm;
+        this.enableTrialEarlyStopping = enableTrialEarlyStopping;
+        this.goal = goal;
+        this.hyperparameterMetricTag = hyperparameterMetricTag;
+        this.maxFailedTrials = maxFailedTrials;
+        this.maxParallelTrials = maxParallelTrials;
+        this.maxTrials = maxTrials;
+        this.params = params;
+        this.resumePreviousJobId = resumePreviousJobId;
     }
 
     /**

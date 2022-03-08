@@ -17,7 +17,7 @@ public final class TransferManifestResponse {
 
     @OutputCustomType.Constructor({"location"})
     private TransferManifestResponse(String location) {
-        this.location = Objects.requireNonNull(location);
+        this.location = location;
     }
 
     /**

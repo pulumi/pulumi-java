@@ -19,9 +19,9 @@ public final class RuleGroupVisibilityConfig {
         Boolean cloudWatchMetricsEnabled,
         String metricName,
         Boolean sampledRequestsEnabled) {
-        this.cloudWatchMetricsEnabled = Objects.requireNonNull(cloudWatchMetricsEnabled);
-        this.metricName = Objects.requireNonNull(metricName);
-        this.sampledRequestsEnabled = Objects.requireNonNull(sampledRequestsEnabled);
+        this.cloudWatchMetricsEnabled = cloudWatchMetricsEnabled;
+        this.metricName = metricName;
+        this.sampledRequestsEnabled = sampledRequestsEnabled;
     }
 
     public Boolean getCloudWatchMetricsEnabled() {

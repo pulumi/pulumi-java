@@ -17,7 +17,7 @@ public final class DSSEAttestationNoteResponse {
 
     @OutputCustomType.Constructor({"hint"})
     private DSSEAttestationNoteResponse(DSSEHintResponse hint) {
-        this.hint = Objects.requireNonNull(hint);
+        this.hint = hint;
     }
 
     /**

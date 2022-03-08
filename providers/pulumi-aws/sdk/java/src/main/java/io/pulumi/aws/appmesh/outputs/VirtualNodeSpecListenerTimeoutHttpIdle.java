@@ -25,8 +25,8 @@ public final class VirtualNodeSpecListenerTimeoutHttpIdle {
     private VirtualNodeSpecListenerTimeoutHttpIdle(
         String unit,
         Integer value) {
-        this.unit = Objects.requireNonNull(unit);
-        this.value = Objects.requireNonNull(value);
+        this.unit = unit;
+        this.value = value;
     }
 
     /**

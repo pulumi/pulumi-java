@@ -30,9 +30,9 @@ public final class ModelReferenceResponse {
         String datasetId,
         String modelId,
         String project) {
-        this.datasetId = Objects.requireNonNull(datasetId);
-        this.modelId = Objects.requireNonNull(modelId);
-        this.project = Objects.requireNonNull(project);
+        this.datasetId = datasetId;
+        this.modelId = modelId;
+        this.project = project;
     }
 
     /**

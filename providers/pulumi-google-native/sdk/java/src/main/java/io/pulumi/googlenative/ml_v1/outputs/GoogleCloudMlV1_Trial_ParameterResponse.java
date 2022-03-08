@@ -37,10 +37,10 @@ public final class GoogleCloudMlV1_Trial_ParameterResponse {
         String intValue,
         String parameter,
         String stringValue) {
-        this.floatValue = Objects.requireNonNull(floatValue);
-        this.intValue = Objects.requireNonNull(intValue);
-        this.parameter = Objects.requireNonNull(parameter);
-        this.stringValue = Objects.requireNonNull(stringValue);
+        this.floatValue = floatValue;
+        this.intValue = intValue;
+        this.parameter = parameter;
+        this.stringValue = stringValue;
     }
 
     /**

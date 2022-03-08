@@ -69,12 +69,12 @@ public final class SecurityPolicyRuleRateLimitOptions {
         SecurityPolicyRuleRateLimitOptionsRateLimitThreshold rateLimitThreshold) {
         this.banDurationSec = banDurationSec;
         this.banThreshold = banThreshold;
-        this.conformAction = Objects.requireNonNull(conformAction);
+        this.conformAction = conformAction;
         this.enforceOnKey = enforceOnKey;
         this.enforceOnKeyName = enforceOnKeyName;
-        this.exceedAction = Objects.requireNonNull(exceedAction);
+        this.exceedAction = exceedAction;
         this.exceedRedirectOptions = exceedRedirectOptions;
-        this.rateLimitThreshold = Objects.requireNonNull(rateLimitThreshold);
+        this.rateLimitThreshold = rateLimitThreshold;
     }
 
     /**

@@ -99,14 +99,14 @@ public final class EloquaLinkedServiceResponse {
         this.connectVia = connectVia;
         this.description = description;
         this.encryptedCredential = encryptedCredential;
-        this.endpoint = Objects.requireNonNull(endpoint);
+        this.endpoint = endpoint;
         this.parameters = parameters;
         this.password = password;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.useEncryptedEndpoints = useEncryptedEndpoints;
         this.useHostVerification = useHostVerification;
         this.usePeerVerification = usePeerVerification;
-        this.username = Objects.requireNonNull(username);
+        this.username = username;
     }
 
     /**

@@ -24,8 +24,8 @@ public final class BotIntent {
     private BotIntent(
         String intentName,
         String intentVersion) {
-        this.intentName = Objects.requireNonNull(intentName);
-        this.intentVersion = Objects.requireNonNull(intentVersion);
+        this.intentName = intentName;
+        this.intentVersion = intentVersion;
     }
 
     /**

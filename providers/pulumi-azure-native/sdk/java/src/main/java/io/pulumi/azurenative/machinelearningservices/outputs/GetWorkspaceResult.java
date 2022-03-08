@@ -202,26 +202,26 @@ public final class GetWorkspaceResult {
         this.encryption = encryption;
         this.friendlyName = friendlyName;
         this.hbiWorkspace = hbiWorkspace;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.identity = identity;
         this.imageBuildCompute = imageBuildCompute;
         this.keyVault = keyVault;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
-        this.notebookInfo = Objects.requireNonNull(notebookInfo);
+        this.name = name;
+        this.notebookInfo = notebookInfo;
         this.primaryUserAssignedIdentity = primaryUserAssignedIdentity;
-        this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
-        this.privateLinkCount = Objects.requireNonNull(privateLinkCount);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.privateEndpointConnections = privateEndpointConnections;
+        this.privateLinkCount = privateLinkCount;
+        this.provisioningState = provisioningState;
         this.serviceManagedResourcesSettings = serviceManagedResourcesSettings;
-        this.serviceProvisionedResourceGroup = Objects.requireNonNull(serviceProvisionedResourceGroup);
+        this.serviceProvisionedResourceGroup = serviceProvisionedResourceGroup;
         this.sharedPrivateLinkResources = sharedPrivateLinkResources;
         this.sku = sku;
         this.storageAccount = storageAccount;
-        this.systemData = Objects.requireNonNull(systemData);
+        this.systemData = systemData;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
-        this.workspaceId = Objects.requireNonNull(workspaceId);
+        this.type = type;
+        this.workspaceId = workspaceId;
     }
 
     /**

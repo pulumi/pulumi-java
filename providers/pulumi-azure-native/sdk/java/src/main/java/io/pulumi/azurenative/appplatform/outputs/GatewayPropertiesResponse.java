@@ -85,13 +85,13 @@ public final class GatewayPropertiesResponse {
         this.apiMetadataProperties = apiMetadataProperties;
         this.corsProperties = corsProperties;
         this.httpsOnly = httpsOnly;
-        this.instances = Objects.requireNonNull(instances);
-        this.operatorProperties = Objects.requireNonNull(operatorProperties);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.instances = instances;
+        this.operatorProperties = operatorProperties;
+        this.provisioningState = provisioningState;
         this.$public = $public;
         this.resourceRequests = resourceRequests;
         this.ssoProperties = ssoProperties;
-        this.url = Objects.requireNonNull(url);
+        this.url = url;
     }
 
     /**

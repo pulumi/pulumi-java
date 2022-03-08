@@ -100,22 +100,22 @@ public final class GetNodeGroupResult {
         Integer size,
         String status,
         String zone) {
-        this.autoscalingPolicy = Objects.requireNonNull(autoscalingPolicy);
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.description = Objects.requireNonNull(description);
-        this.fingerprint = Objects.requireNonNull(fingerprint);
-        this.kind = Objects.requireNonNull(kind);
-        this.locationHint = Objects.requireNonNull(locationHint);
-        this.maintenancePolicy = Objects.requireNonNull(maintenancePolicy);
-        this.maintenanceWindow = Objects.requireNonNull(maintenanceWindow);
-        this.name = Objects.requireNonNull(name);
-        this.nodeTemplate = Objects.requireNonNull(nodeTemplate);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
-        this.shareSettings = Objects.requireNonNull(shareSettings);
-        this.size = Objects.requireNonNull(size);
-        this.status = Objects.requireNonNull(status);
-        this.zone = Objects.requireNonNull(zone);
+        this.autoscalingPolicy = autoscalingPolicy;
+        this.creationTimestamp = creationTimestamp;
+        this.description = description;
+        this.fingerprint = fingerprint;
+        this.kind = kind;
+        this.locationHint = locationHint;
+        this.maintenancePolicy = maintenancePolicy;
+        this.maintenanceWindow = maintenanceWindow;
+        this.name = name;
+        this.nodeTemplate = nodeTemplate;
+        this.selfLink = selfLink;
+        this.selfLinkWithId = selfLinkWithId;
+        this.shareSettings = shareSettings;
+        this.size = size;
+        this.status = status;
+        this.zone = zone;
     }
 
     /**

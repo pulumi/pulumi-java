@@ -94,19 +94,19 @@ public final class GetDomainResult {
         String statusMessage,
         List<TrustResponse> trusts,
         String updateTime) {
-        this.admin = Objects.requireNonNull(admin);
-        this.auditLogsEnabled = Objects.requireNonNull(auditLogsEnabled);
-        this.authorizedNetworks = Objects.requireNonNull(authorizedNetworks);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.fqdn = Objects.requireNonNull(fqdn);
-        this.labels = Objects.requireNonNull(labels);
-        this.locations = Objects.requireNonNull(locations);
-        this.name = Objects.requireNonNull(name);
-        this.reservedIpRange = Objects.requireNonNull(reservedIpRange);
-        this.state = Objects.requireNonNull(state);
-        this.statusMessage = Objects.requireNonNull(statusMessage);
-        this.trusts = Objects.requireNonNull(trusts);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.admin = admin;
+        this.auditLogsEnabled = auditLogsEnabled;
+        this.authorizedNetworks = authorizedNetworks;
+        this.createTime = createTime;
+        this.fqdn = fqdn;
+        this.labels = labels;
+        this.locations = locations;
+        this.name = name;
+        this.reservedIpRange = reservedIpRange;
+        this.state = state;
+        this.statusMessage = statusMessage;
+        this.trusts = trusts;
+        this.updateTime = updateTime;
     }
 
     /**

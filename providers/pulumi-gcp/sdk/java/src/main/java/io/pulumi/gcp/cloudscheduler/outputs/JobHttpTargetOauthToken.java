@@ -29,7 +29,7 @@ public final class JobHttpTargetOauthToken {
         @Nullable String scope,
         String serviceAccountEmail) {
         this.scope = scope;
-        this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
+        this.serviceAccountEmail = serviceAccountEmail;
     }
 
     /**

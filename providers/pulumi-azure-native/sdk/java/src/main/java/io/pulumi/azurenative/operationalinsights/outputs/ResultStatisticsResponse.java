@@ -25,8 +25,8 @@ public final class ResultStatisticsResponse {
     private ResultStatisticsResponse(
         Integer ingestedRecords,
         Double progress) {
-        this.ingestedRecords = Objects.requireNonNull(ingestedRecords);
-        this.progress = Objects.requireNonNull(progress);
+        this.ingestedRecords = ingestedRecords;
+        this.progress = progress;
     }
 
     /**

@@ -27,9 +27,9 @@ public final class GetNodeGroupsResult {
         String clusterName,
         String id,
         List<String> names) {
-        this.clusterName = Objects.requireNonNull(clusterName);
-        this.id = Objects.requireNonNull(id);
-        this.names = Objects.requireNonNull(names);
+        this.clusterName = clusterName;
+        this.id = id;
+        this.names = names;
     }
 
     public String getClusterName() {

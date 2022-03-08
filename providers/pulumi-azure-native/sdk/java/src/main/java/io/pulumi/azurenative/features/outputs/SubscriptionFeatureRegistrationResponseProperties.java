@@ -101,20 +101,20 @@ public final class SubscriptionFeatureRegistrationResponseProperties {
         @Nullable String state,
         String subscriptionId,
         String tenantId) {
-        this.approvalType = Objects.requireNonNull(approvalType);
+        this.approvalType = approvalType;
         this.authorizationProfile = authorizationProfile;
         this.description = description;
-        this.displayName = Objects.requireNonNull(displayName);
-        this.documentationLink = Objects.requireNonNull(documentationLink);
-        this.featureName = Objects.requireNonNull(featureName);
+        this.displayName = displayName;
+        this.documentationLink = documentationLink;
+        this.featureName = featureName;
         this.metadata = metadata;
-        this.providerNamespace = Objects.requireNonNull(providerNamespace);
-        this.registrationDate = Objects.requireNonNull(registrationDate);
-        this.releaseDate = Objects.requireNonNull(releaseDate);
+        this.providerNamespace = providerNamespace;
+        this.registrationDate = registrationDate;
+        this.releaseDate = releaseDate;
         this.shouldFeatureDisplayInPortal = shouldFeatureDisplayInPortal;
         this.state = state;
-        this.subscriptionId = Objects.requireNonNull(subscriptionId);
-        this.tenantId = Objects.requireNonNull(tenantId);
+        this.subscriptionId = subscriptionId;
+        this.tenantId = tenantId;
     }
 
     /**

@@ -102,20 +102,20 @@ public final class GetNamespaceResult {
         @Nullable Map<String,String> tags,
         String type,
         String updatedAt) {
-        this.createdAt = Objects.requireNonNull(createdAt);
-        this.id = Objects.requireNonNull(id);
+        this.createdAt = createdAt;
+        this.id = id;
         this.isAutoInflateEnabled = isAutoInflateEnabled;
         this.kafkaEnabled = kafkaEnabled;
         this.location = location;
         this.maximumThroughputUnits = maximumThroughputUnits;
-        this.metricId = Objects.requireNonNull(metricId);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.serviceBusEndpoint = Objects.requireNonNull(serviceBusEndpoint);
+        this.metricId = metricId;
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.serviceBusEndpoint = serviceBusEndpoint;
         this.sku = sku;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
-        this.updatedAt = Objects.requireNonNull(updatedAt);
+        this.type = type;
+        this.updatedAt = updatedAt;
     }
 
     /**

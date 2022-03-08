@@ -82,16 +82,16 @@ public final class GetWCFRelayResult {
         String type,
         String updatedAt,
         @Nullable String userMetadata) {
-        this.createdAt = Objects.requireNonNull(createdAt);
-        this.id = Objects.requireNonNull(id);
-        this.isDynamic = Objects.requireNonNull(isDynamic);
-        this.listenerCount = Objects.requireNonNull(listenerCount);
-        this.name = Objects.requireNonNull(name);
+        this.createdAt = createdAt;
+        this.id = id;
+        this.isDynamic = isDynamic;
+        this.listenerCount = listenerCount;
+        this.name = name;
         this.relayType = relayType;
         this.requiresClientAuthorization = requiresClientAuthorization;
         this.requiresTransportSecurity = requiresTransportSecurity;
-        this.type = Objects.requireNonNull(type);
-        this.updatedAt = Objects.requireNonNull(updatedAt);
+        this.type = type;
+        this.updatedAt = updatedAt;
         this.userMetadata = userMetadata;
     }
 

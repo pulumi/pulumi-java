@@ -25,8 +25,8 @@ public final class GoogleCloudApigeeV1OperationResponse {
     private GoogleCloudApigeeV1OperationResponse(
         List<String> methods,
         String resource) {
-        this.methods = Objects.requireNonNull(methods);
-        this.resource = Objects.requireNonNull(resource);
+        this.methods = methods;
+        this.resource = resource;
     }
 
     /**

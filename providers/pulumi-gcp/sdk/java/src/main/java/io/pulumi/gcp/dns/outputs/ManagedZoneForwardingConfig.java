@@ -21,7 +21,7 @@ public final class ManagedZoneForwardingConfig {
 
     @OutputCustomType.Constructor({"targetNameServers"})
     private ManagedZoneForwardingConfig(List<ManagedZoneForwardingConfigTargetNameServer> targetNameServers) {
-        this.targetNameServers = Objects.requireNonNull(targetNameServers);
+        this.targetNameServers = targetNameServers;
     }
 
     /**

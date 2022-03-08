@@ -24,8 +24,8 @@ public final class CustomHttpPatternResponse {
     private CustomHttpPatternResponse(
         String kind,
         String path) {
-        this.kind = Objects.requireNonNull(kind);
-        this.path = Objects.requireNonNull(path);
+        this.kind = kind;
+        this.path = path;
     }
 
     /**

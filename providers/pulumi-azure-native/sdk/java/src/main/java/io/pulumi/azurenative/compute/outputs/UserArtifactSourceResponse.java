@@ -27,7 +27,7 @@ public final class UserArtifactSourceResponse {
         @Nullable String defaultConfigurationLink,
         String mediaLink) {
         this.defaultConfigurationLink = defaultConfigurationLink;
-        this.mediaLink = Objects.requireNonNull(mediaLink);
+        this.mediaLink = mediaLink;
     }
 
     /**

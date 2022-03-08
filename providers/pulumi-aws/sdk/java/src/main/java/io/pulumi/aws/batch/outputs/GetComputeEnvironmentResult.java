@@ -69,16 +69,16 @@ public final class GetComputeEnvironmentResult {
         String statusReason,
         Map<String,String> tags,
         String type) {
-        this.arn = Objects.requireNonNull(arn);
-        this.computeEnvironmentName = Objects.requireNonNull(computeEnvironmentName);
-        this.ecsClusterArn = Objects.requireNonNull(ecsClusterArn);
-        this.id = Objects.requireNonNull(id);
-        this.serviceRole = Objects.requireNonNull(serviceRole);
-        this.state = Objects.requireNonNull(state);
-        this.status = Objects.requireNonNull(status);
-        this.statusReason = Objects.requireNonNull(statusReason);
-        this.tags = Objects.requireNonNull(tags);
-        this.type = Objects.requireNonNull(type);
+        this.arn = arn;
+        this.computeEnvironmentName = computeEnvironmentName;
+        this.ecsClusterArn = ecsClusterArn;
+        this.id = id;
+        this.serviceRole = serviceRole;
+        this.state = state;
+        this.status = status;
+        this.statusReason = statusReason;
+        this.tags = tags;
+        this.type = type;
     }
 
     /**

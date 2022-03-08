@@ -19,7 +19,7 @@ public final class RepositoryEncryptionConfiguration {
     private RepositoryEncryptionConfiguration(
         RepositoryEncryptionType encryptionType,
         @Nullable String kmsKey) {
-        this.encryptionType = Objects.requireNonNull(encryptionType);
+        this.encryptionType = encryptionType;
         this.kmsKey = kmsKey;
     }
 

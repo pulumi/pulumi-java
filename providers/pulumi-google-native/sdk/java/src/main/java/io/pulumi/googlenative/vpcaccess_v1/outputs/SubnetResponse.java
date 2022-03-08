@@ -24,8 +24,8 @@ public final class SubnetResponse {
     private SubnetResponse(
         String name,
         String project) {
-        this.name = Objects.requireNonNull(name);
-        this.project = Objects.requireNonNull(project);
+        this.name = name;
+        this.project = project;
     }
 
     /**

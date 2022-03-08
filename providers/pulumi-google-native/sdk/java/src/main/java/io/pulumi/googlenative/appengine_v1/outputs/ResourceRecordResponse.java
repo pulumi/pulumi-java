@@ -30,9 +30,9 @@ public final class ResourceRecordResponse {
         String name,
         String rrdata,
         String type) {
-        this.name = Objects.requireNonNull(name);
-        this.rrdata = Objects.requireNonNull(rrdata);
-        this.type = Objects.requireNonNull(type);
+        this.name = name;
+        this.rrdata = rrdata;
+        this.type = type;
     }
 
     /**

@@ -32,9 +32,9 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskOutputResponse {
         String id,
         String name,
         List<ReportableExceptionResponse> validationErrors) {
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.validationErrors = Objects.requireNonNull(validationErrors);
+        this.id = id;
+        this.name = name;
+        this.validationErrors = validationErrors;
     }
 
     /**

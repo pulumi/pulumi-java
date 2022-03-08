@@ -30,9 +30,9 @@ public final class InstanceGroupAutoscalingPolicyConfigResponse {
         Integer maxInstances,
         Integer minInstances,
         Integer weight) {
-        this.maxInstances = Objects.requireNonNull(maxInstances);
-        this.minInstances = Objects.requireNonNull(minInstances);
-        this.weight = Objects.requireNonNull(weight);
+        this.maxInstances = maxInstances;
+        this.minInstances = minInstances;
+        this.weight = weight;
     }
 
     /**

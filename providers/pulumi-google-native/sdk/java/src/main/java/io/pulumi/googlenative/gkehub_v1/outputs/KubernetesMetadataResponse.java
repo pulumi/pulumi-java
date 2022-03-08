@@ -49,12 +49,12 @@ public final class KubernetesMetadataResponse {
         String nodeProviderId,
         String updateTime,
         Integer vcpuCount) {
-        this.kubernetesApiServerVersion = Objects.requireNonNull(kubernetesApiServerVersion);
-        this.memoryMb = Objects.requireNonNull(memoryMb);
-        this.nodeCount = Objects.requireNonNull(nodeCount);
-        this.nodeProviderId = Objects.requireNonNull(nodeProviderId);
-        this.updateTime = Objects.requireNonNull(updateTime);
-        this.vcpuCount = Objects.requireNonNull(vcpuCount);
+        this.kubernetesApiServerVersion = kubernetesApiServerVersion;
+        this.memoryMb = memoryMb;
+        this.nodeCount = nodeCount;
+        this.nodeProviderId = nodeProviderId;
+        this.updateTime = updateTime;
+        this.vcpuCount = vcpuCount;
     }
 
     /**

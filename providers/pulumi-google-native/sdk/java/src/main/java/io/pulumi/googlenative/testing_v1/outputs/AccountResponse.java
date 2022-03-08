@@ -17,7 +17,7 @@ public final class AccountResponse {
 
     @OutputCustomType.Constructor({"googleAuto"})
     private AccountResponse(GoogleAutoResponse googleAuto) {
-        this.googleAuto = Objects.requireNonNull(googleAuto);
+        this.googleAuto = googleAuto;
     }
 
     /**

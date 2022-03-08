@@ -80,17 +80,17 @@ public final class GetRegionTargetHttpProxyResult {
         String selfLink,
         String selfLinkWithId,
         String urlMap) {
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.description = Objects.requireNonNull(description);
-        this.fingerprint = Objects.requireNonNull(fingerprint);
-        this.httpFilters = Objects.requireNonNull(httpFilters);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.proxyBind = Objects.requireNonNull(proxyBind);
-        this.region = Objects.requireNonNull(region);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
-        this.urlMap = Objects.requireNonNull(urlMap);
+        this.creationTimestamp = creationTimestamp;
+        this.description = description;
+        this.fingerprint = fingerprint;
+        this.httpFilters = httpFilters;
+        this.kind = kind;
+        this.name = name;
+        this.proxyBind = proxyBind;
+        this.region = region;
+        this.selfLink = selfLink;
+        this.selfLinkWithId = selfLinkWithId;
+        this.urlMap = urlMap;
     }
 
     /**

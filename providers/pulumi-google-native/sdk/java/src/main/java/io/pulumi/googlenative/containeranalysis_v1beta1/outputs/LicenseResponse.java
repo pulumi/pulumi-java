@@ -24,8 +24,8 @@ public final class LicenseResponse {
     private LicenseResponse(
         String comments,
         String expression) {
-        this.comments = Objects.requireNonNull(comments);
-        this.expression = Objects.requireNonNull(expression);
+        this.comments = comments;
+        this.expression = expression;
     }
 
     /**

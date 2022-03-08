@@ -60,10 +60,10 @@ public final class GetApplicationResult {
         this.allowUpdates = allowUpdates;
         this.defaultVersion = defaultVersion;
         this.displayName = displayName;
-        this.etag = Objects.requireNonNull(etag);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.etag = etag;
+        this.id = id;
+        this.name = name;
+        this.type = type;
     }
 
     /**

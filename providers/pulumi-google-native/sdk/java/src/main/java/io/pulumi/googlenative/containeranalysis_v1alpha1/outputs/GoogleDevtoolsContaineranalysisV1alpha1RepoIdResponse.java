@@ -25,8 +25,8 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse {
     private GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse(
         GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdResponse projectRepoId,
         String uid) {
-        this.projectRepoId = Objects.requireNonNull(projectRepoId);
-        this.uid = Objects.requireNonNull(uid);
+        this.projectRepoId = projectRepoId;
+        this.uid = uid;
     }
 
     /**

@@ -31,9 +31,9 @@ public final class RuntimeConfigResponse {
         String containerImage,
         Map<String,String> properties,
         String version) {
-        this.containerImage = Objects.requireNonNull(containerImage);
-        this.properties = Objects.requireNonNull(properties);
-        this.version = Objects.requireNonNull(version);
+        this.containerImage = containerImage;
+        this.properties = properties;
+        this.version = version;
     }
 
     /**

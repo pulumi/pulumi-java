@@ -13,7 +13,7 @@ public final class RuleGroupFieldToMatchSingleQueryArgumentProperties {
 
     @OutputCustomType.Constructor({"name"})
     private RuleGroupFieldToMatchSingleQueryArgumentProperties(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     public String getName() {

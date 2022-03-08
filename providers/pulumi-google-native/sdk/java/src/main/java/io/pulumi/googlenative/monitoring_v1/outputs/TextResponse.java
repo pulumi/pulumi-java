@@ -24,8 +24,8 @@ public final class TextResponse {
     private TextResponse(
         String content,
         String format) {
-        this.content = Objects.requireNonNull(content);
-        this.format = Objects.requireNonNull(format);
+        this.content = content;
+        this.format = format;
     }
 
     /**

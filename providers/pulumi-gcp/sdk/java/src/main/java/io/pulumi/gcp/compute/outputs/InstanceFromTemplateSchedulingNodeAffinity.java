@@ -19,9 +19,9 @@ public final class InstanceFromTemplateSchedulingNodeAffinity {
         String key,
         String operator,
         List<String> values) {
-        this.key = Objects.requireNonNull(key);
-        this.operator = Objects.requireNonNull(operator);
-        this.values = Objects.requireNonNull(values);
+        this.key = key;
+        this.operator = operator;
+        this.values = values;
     }
 
     public String getKey() {

@@ -34,7 +34,7 @@ public final class DiskResponse {
         Integer lun,
         @Nullable String name) {
         this.diskSizeGB = diskSizeGB;
-        this.lun = Objects.requireNonNull(lun);
+        this.lun = lun;
         this.name = name;
     }
 

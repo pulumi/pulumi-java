@@ -24,8 +24,8 @@ public final class IosXcTestResponse {
     private IosXcTestResponse(
         String bundleId,
         String xcodeVersion) {
-        this.bundleId = Objects.requireNonNull(bundleId);
-        this.xcodeVersion = Objects.requireNonNull(xcodeVersion);
+        this.bundleId = bundleId;
+        this.xcodeVersion = xcodeVersion;
     }
 
     /**

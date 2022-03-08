@@ -57,13 +57,13 @@ public final class AutomationRunbookReceiverResponse {
         @Nullable String serviceUri,
         @Nullable Boolean useCommonAlertSchema,
         String webhookResourceId) {
-        this.automationAccountId = Objects.requireNonNull(automationAccountId);
-        this.isGlobalRunbook = Objects.requireNonNull(isGlobalRunbook);
+        this.automationAccountId = automationAccountId;
+        this.isGlobalRunbook = isGlobalRunbook;
         this.name = name;
-        this.runbookName = Objects.requireNonNull(runbookName);
+        this.runbookName = runbookName;
         this.serviceUri = serviceUri;
         this.useCommonAlertSchema = useCommonAlertSchema;
-        this.webhookResourceId = Objects.requireNonNull(webhookResourceId);
+        this.webhookResourceId = webhookResourceId;
     }
 
     /**

@@ -26,7 +26,7 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetri
     private PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecification(
         String predefinedMetricType,
         @Nullable String resourceLabel) {
-        this.predefinedMetricType = Objects.requireNonNull(predefinedMetricType);
+        this.predefinedMetricType = predefinedMetricType;
         this.resourceLabel = resourceLabel;
     }
 

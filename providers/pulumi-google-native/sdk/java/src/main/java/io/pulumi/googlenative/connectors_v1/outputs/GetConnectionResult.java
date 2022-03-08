@@ -115,22 +115,22 @@ public final class GetConnectionResult {
         ConnectionStatusResponse status,
         Boolean suspended,
         String updateTime) {
-        this.authConfig = Objects.requireNonNull(authConfig);
-        this.configVariables = Objects.requireNonNull(configVariables);
-        this.connectorVersion = Objects.requireNonNull(connectorVersion);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.description = Objects.requireNonNull(description);
-        this.egressBackends = Objects.requireNonNull(egressBackends);
-        this.envoyImageLocation = Objects.requireNonNull(envoyImageLocation);
-        this.imageLocation = Objects.requireNonNull(imageLocation);
-        this.labels = Objects.requireNonNull(labels);
-        this.lockConfig = Objects.requireNonNull(lockConfig);
-        this.name = Objects.requireNonNull(name);
-        this.serviceAccount = Objects.requireNonNull(serviceAccount);
-        this.serviceDirectory = Objects.requireNonNull(serviceDirectory);
-        this.status = Objects.requireNonNull(status);
-        this.suspended = Objects.requireNonNull(suspended);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.authConfig = authConfig;
+        this.configVariables = configVariables;
+        this.connectorVersion = connectorVersion;
+        this.createTime = createTime;
+        this.description = description;
+        this.egressBackends = egressBackends;
+        this.envoyImageLocation = envoyImageLocation;
+        this.imageLocation = imageLocation;
+        this.labels = labels;
+        this.lockConfig = lockConfig;
+        this.name = name;
+        this.serviceAccount = serviceAccount;
+        this.serviceDirectory = serviceDirectory;
+        this.status = status;
+        this.suspended = suspended;
+        this.updateTime = updateTime;
     }
 
     /**

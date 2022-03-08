@@ -86,15 +86,15 @@ public final class GetPrivateStoreCollectionResult {
         String type) {
         this.allSubscriptions = allSubscriptions;
         this.claim = claim;
-        this.collectionId = Objects.requireNonNull(collectionId);
+        this.collectionId = collectionId;
         this.collectionName = collectionName;
         this.enabled = enabled;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.numberOfOffers = Objects.requireNonNull(numberOfOffers);
+        this.id = id;
+        this.name = name;
+        this.numberOfOffers = numberOfOffers;
         this.subscriptionsList = subscriptionsList;
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

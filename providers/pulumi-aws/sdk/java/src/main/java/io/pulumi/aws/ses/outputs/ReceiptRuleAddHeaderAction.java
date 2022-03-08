@@ -31,9 +31,9 @@ public final class ReceiptRuleAddHeaderAction {
         String headerName,
         String headerValue,
         Integer position) {
-        this.headerName = Objects.requireNonNull(headerName);
-        this.headerValue = Objects.requireNonNull(headerValue);
-        this.position = Objects.requireNonNull(position);
+        this.headerName = headerName;
+        this.headerValue = headerValue;
+        this.position = position;
     }
 
     /**

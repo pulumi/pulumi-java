@@ -55,11 +55,11 @@ public final class TlsEndpointResponse {
         String type,
         String url,
         @Nullable TlsValidationOptionsResponse validationOptions) {
-        this.credentials = Objects.requireNonNull(credentials);
+        this.credentials = credentials;
         this.trustedCertificates = trustedCertificates;
         this.tunnel = tunnel;
-        this.type = Objects.requireNonNull(type);
-        this.url = Objects.requireNonNull(url);
+        this.type = type;
+        this.url = url;
         this.validationOptions = validationOptions;
     }
 

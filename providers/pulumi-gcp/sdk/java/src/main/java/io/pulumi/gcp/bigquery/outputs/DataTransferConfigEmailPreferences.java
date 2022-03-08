@@ -17,7 +17,7 @@ public final class DataTransferConfigEmailPreferences {
 
     @OutputCustomType.Constructor({"enableFailureEmail"})
     private DataTransferConfigEmailPreferences(Boolean enableFailureEmail) {
-        this.enableFailureEmail = Objects.requireNonNull(enableFailureEmail);
+        this.enableFailureEmail = enableFailureEmail;
     }
 
     /**

@@ -27,8 +27,8 @@ public final class GetRouteTablesFilter {
     private GetRouteTablesFilter(
         String name,
         List<String> values) {
-        this.name = Objects.requireNonNull(name);
-        this.values = Objects.requireNonNull(values);
+        this.name = name;
+        this.values = values;
     }
 
     /**

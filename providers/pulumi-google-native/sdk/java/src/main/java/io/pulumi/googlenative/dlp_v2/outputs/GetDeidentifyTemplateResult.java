@@ -49,12 +49,12 @@ public final class GetDeidentifyTemplateResult {
         String displayName,
         String name,
         String updateTime) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.deidentifyConfig = Objects.requireNonNull(deidentifyConfig);
-        this.description = Objects.requireNonNull(description);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.name = Objects.requireNonNull(name);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.createTime = createTime;
+        this.deidentifyConfig = deidentifyConfig;
+        this.description = description;
+        this.displayName = displayName;
+        this.name = name;
+        this.updateTime = updateTime;
     }
 
     /**

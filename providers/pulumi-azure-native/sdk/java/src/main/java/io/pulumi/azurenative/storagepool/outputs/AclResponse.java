@@ -37,10 +37,10 @@ public final class AclResponse {
         List<String> mappedLuns,
         String password,
         String username) {
-        this.initiatorIqn = Objects.requireNonNull(initiatorIqn);
-        this.mappedLuns = Objects.requireNonNull(mappedLuns);
-        this.password = Objects.requireNonNull(password);
-        this.username = Objects.requireNonNull(username);
+        this.initiatorIqn = initiatorIqn;
+        this.mappedLuns = mappedLuns;
+        this.password = password;
+        this.username = username;
     }
 
     /**

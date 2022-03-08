@@ -26,8 +26,8 @@ public final class ScriptStatisticsResponse {
     private ScriptStatisticsResponse(
         String evaluationKind,
         List<ScriptStackFrameResponse> stackFrames) {
-        this.evaluationKind = Objects.requireNonNull(evaluationKind);
-        this.stackFrames = Objects.requireNonNull(stackFrames);
+        this.evaluationKind = evaluationKind;
+        this.stackFrames = stackFrames;
     }
 
     /**

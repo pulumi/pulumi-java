@@ -17,7 +17,7 @@ public final class HostedZoneQueryLoggingConfig {
 
     @OutputCustomType.Constructor({"cloudWatchLogsLogGroupArn"})
     private HostedZoneQueryLoggingConfig(String cloudWatchLogsLogGroupArn) {
-        this.cloudWatchLogsLogGroupArn = Objects.requireNonNull(cloudWatchLogsLogGroupArn);
+        this.cloudWatchLogsLogGroupArn = cloudWatchLogsLogGroupArn;
     }
 
     /**

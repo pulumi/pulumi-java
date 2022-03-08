@@ -63,14 +63,14 @@ public final class RouteFilterRuleResponse {
         @Nullable String name,
         String provisioningState,
         String routeFilterRuleType) {
-        this.access = Objects.requireNonNull(access);
-        this.communities = Objects.requireNonNull(communities);
-        this.etag = Objects.requireNonNull(etag);
+        this.access = access;
+        this.communities = communities;
+        this.etag = etag;
         this.id = id;
         this.location = location;
         this.name = name;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.routeFilterRuleType = Objects.requireNonNull(routeFilterRuleType);
+        this.provisioningState = provisioningState;
+        this.routeFilterRuleType = routeFilterRuleType;
     }
 
     /**

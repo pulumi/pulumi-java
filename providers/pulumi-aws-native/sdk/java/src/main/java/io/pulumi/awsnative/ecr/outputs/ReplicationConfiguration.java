@@ -18,7 +18,7 @@ public final class ReplicationConfiguration {
 
     @OutputCustomType.Constructor({"rules"})
     private ReplicationConfiguration(List<ReplicationConfigurationReplicationRule> rules) {
-        this.rules = Objects.requireNonNull(rules);
+        this.rules = rules;
     }
 
     /**

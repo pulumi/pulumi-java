@@ -34,7 +34,7 @@ public final class NodeGroupLaunchTemplate {
         String version) {
         this.id = id;
         this.name = name;
-        this.version = Objects.requireNonNull(version);
+        this.version = version;
     }
 
     /**

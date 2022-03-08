@@ -19,9 +19,9 @@ public final class GetConnectionPhysicalConnectionRequirement {
         String availabilityZone,
         List<String> securityGroupIdLists,
         String subnetId) {
-        this.availabilityZone = Objects.requireNonNull(availabilityZone);
-        this.securityGroupIdLists = Objects.requireNonNull(securityGroupIdLists);
-        this.subnetId = Objects.requireNonNull(subnetId);
+        this.availabilityZone = availabilityZone;
+        this.securityGroupIdLists = securityGroupIdLists;
+        this.subnetId = subnetId;
     }
 
     public String getAvailabilityZone() {

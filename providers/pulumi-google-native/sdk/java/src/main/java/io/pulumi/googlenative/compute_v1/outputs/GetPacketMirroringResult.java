@@ -89,18 +89,18 @@ public final class GetPacketMirroringResult {
         Integer priority,
         String region,
         String selfLink) {
-        this.collectorIlb = Objects.requireNonNull(collectorIlb);
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.description = Objects.requireNonNull(description);
-        this.enable = Objects.requireNonNull(enable);
-        this.filter = Objects.requireNonNull(filter);
-        this.kind = Objects.requireNonNull(kind);
-        this.mirroredResources = Objects.requireNonNull(mirroredResources);
-        this.name = Objects.requireNonNull(name);
-        this.network = Objects.requireNonNull(network);
-        this.priority = Objects.requireNonNull(priority);
-        this.region = Objects.requireNonNull(region);
-        this.selfLink = Objects.requireNonNull(selfLink);
+        this.collectorIlb = collectorIlb;
+        this.creationTimestamp = creationTimestamp;
+        this.description = description;
+        this.enable = enable;
+        this.filter = filter;
+        this.kind = kind;
+        this.mirroredResources = mirroredResources;
+        this.name = name;
+        this.network = network;
+        this.priority = priority;
+        this.region = region;
+        this.selfLink = selfLink;
     }
 
     /**

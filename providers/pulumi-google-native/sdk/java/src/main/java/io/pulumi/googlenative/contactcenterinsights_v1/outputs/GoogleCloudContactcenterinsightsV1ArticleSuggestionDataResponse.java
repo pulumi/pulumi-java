@@ -50,12 +50,12 @@ public final class GoogleCloudContactcenterinsightsV1ArticleSuggestionDataRespon
         String source,
         String title,
         String uri) {
-        this.confidenceScore = Objects.requireNonNull(confidenceScore);
-        this.metadata = Objects.requireNonNull(metadata);
-        this.queryRecord = Objects.requireNonNull(queryRecord);
-        this.source = Objects.requireNonNull(source);
-        this.title = Objects.requireNonNull(title);
-        this.uri = Objects.requireNonNull(uri);
+        this.confidenceScore = confidenceScore;
+        this.metadata = metadata;
+        this.queryRecord = queryRecord;
+        this.source = source;
+        this.title = title;
+        this.uri = uri;
     }
 
     /**

@@ -51,12 +51,12 @@ public final class GetAccessControlRecordResult {
         String name,
         String type,
         Integer volumeCount) {
-        this.id = Objects.requireNonNull(id);
-        this.initiatorName = Objects.requireNonNull(initiatorName);
+        this.id = id;
+        this.initiatorName = initiatorName;
         this.kind = kind;
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
-        this.volumeCount = Objects.requireNonNull(volumeCount);
+        this.name = name;
+        this.type = type;
+        this.volumeCount = volumeCount;
     }
 
     /**

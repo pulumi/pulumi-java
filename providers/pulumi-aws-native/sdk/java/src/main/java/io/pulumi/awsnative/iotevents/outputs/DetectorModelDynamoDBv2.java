@@ -24,7 +24,7 @@ public final class DetectorModelDynamoDBv2 {
         @Nullable DetectorModelPayload payload,
         String tableName) {
         this.payload = payload;
-        this.tableName = Objects.requireNonNull(tableName);
+        this.tableName = tableName;
     }
 
     public Optional<DetectorModelPayload> getPayload() {

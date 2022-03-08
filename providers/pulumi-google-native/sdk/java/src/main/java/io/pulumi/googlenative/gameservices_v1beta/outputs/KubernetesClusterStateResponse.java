@@ -48,12 +48,12 @@ public final class KubernetesClusterStateResponse {
         String kubernetesVersionInstalled,
         String provider,
         String versionInstalledErrorMessage) {
-        this.agonesVersionInstalled = Objects.requireNonNull(agonesVersionInstalled);
-        this.agonesVersionTargeted = Objects.requireNonNull(agonesVersionTargeted);
-        this.installationState = Objects.requireNonNull(installationState);
-        this.kubernetesVersionInstalled = Objects.requireNonNull(kubernetesVersionInstalled);
-        this.provider = Objects.requireNonNull(provider);
-        this.versionInstalledErrorMessage = Objects.requireNonNull(versionInstalledErrorMessage);
+        this.agonesVersionInstalled = agonesVersionInstalled;
+        this.agonesVersionTargeted = agonesVersionTargeted;
+        this.installationState = installationState;
+        this.kubernetesVersionInstalled = kubernetesVersionInstalled;
+        this.provider = provider;
+        this.versionInstalledErrorMessage = versionInstalledErrorMessage;
     }
 
     /**

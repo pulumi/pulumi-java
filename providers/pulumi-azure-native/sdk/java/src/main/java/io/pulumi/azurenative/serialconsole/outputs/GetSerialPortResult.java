@@ -38,10 +38,10 @@ public final class GetSerialPortResult {
         String name,
         @Nullable String state,
         String type) {
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.state = state;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

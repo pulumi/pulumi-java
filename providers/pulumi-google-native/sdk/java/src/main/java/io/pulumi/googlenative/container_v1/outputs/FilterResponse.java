@@ -18,7 +18,7 @@ public final class FilterResponse {
 
     @OutputCustomType.Constructor({"eventType"})
     private FilterResponse(List<String> eventType) {
-        this.eventType = Objects.requireNonNull(eventType);
+        this.eventType = eventType;
     }
 
     /**

@@ -54,13 +54,13 @@ public final class HealthAlertResponse {
         String raised,
         String resolutionUri,
         String severity) {
-        this.id = Objects.requireNonNull(id);
-        this.issue = Objects.requireNonNull(issue);
-        this.lastDetected = Objects.requireNonNull(lastDetected);
-        this.name = Objects.requireNonNull(name);
-        this.raised = Objects.requireNonNull(raised);
-        this.resolutionUri = Objects.requireNonNull(resolutionUri);
-        this.severity = Objects.requireNonNull(severity);
+        this.id = id;
+        this.issue = issue;
+        this.lastDetected = lastDetected;
+        this.name = name;
+        this.raised = raised;
+        this.resolutionUri = resolutionUri;
+        this.severity = severity;
     }
 
     /**

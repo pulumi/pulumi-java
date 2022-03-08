@@ -92,10 +92,10 @@ public final class RoutingRuleResponse {
         this.id = id;
         this.name = name;
         this.patternsToMatch = patternsToMatch;
-        this.resourceState = Objects.requireNonNull(resourceState);
+        this.resourceState = resourceState;
         this.routeConfiguration = routeConfiguration;
         this.rulesEngine = rulesEngine;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.webApplicationFirewallPolicyLink = webApplicationFirewallPolicyLink;
     }
 

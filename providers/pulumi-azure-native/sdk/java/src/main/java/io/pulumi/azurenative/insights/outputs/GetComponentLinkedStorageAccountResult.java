@@ -38,10 +38,10 @@ public final class GetComponentLinkedStorageAccountResult {
         @Nullable String linkedStorageAccount,
         String name,
         String type) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.linkedStorageAccount = linkedStorageAccount;
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.name = name;
+        this.type = type;
     }
 
     /**

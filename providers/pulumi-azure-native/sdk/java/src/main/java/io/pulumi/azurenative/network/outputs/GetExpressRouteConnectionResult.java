@@ -74,11 +74,11 @@ public final class GetExpressRouteConnectionResult {
         @Nullable Integer routingWeight) {
         this.authorizationKey = authorizationKey;
         this.enableInternetSecurity = enableInternetSecurity;
-        this.expressRouteCircuitPeering = Objects.requireNonNull(expressRouteCircuitPeering);
+        this.expressRouteCircuitPeering = expressRouteCircuitPeering;
         this.expressRouteGatewayBypass = expressRouteGatewayBypass;
         this.id = id;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.routingConfiguration = routingConfiguration;
         this.routingWeight = routingWeight;
     }

@@ -159,8 +159,8 @@ public final class CommandJobResponse {
         @Nullable Map<String,String> tags,
         @Nullable String timeout) {
         this.codeId = codeId;
-        this.command = Objects.requireNonNull(command);
-        this.compute = Objects.requireNonNull(compute);
+        this.command = command;
+        this.compute = compute;
         this.description = description;
         this.distribution = distribution;
         this.environmentId = environmentId;
@@ -168,15 +168,15 @@ public final class CommandJobResponse {
         this.experimentName = experimentName;
         this.identity = identity;
         this.inputDataBindings = inputDataBindings;
-        this.interactionEndpoints = Objects.requireNonNull(interactionEndpoints);
-        this.jobType = Objects.requireNonNull(jobType);
-        this.output = Objects.requireNonNull(output);
+        this.interactionEndpoints = interactionEndpoints;
+        this.jobType = jobType;
+        this.output = output;
         this.outputDataBindings = outputDataBindings;
-        this.parameters = Objects.requireNonNull(parameters);
+        this.parameters = parameters;
         this.priority = priority;
         this.properties = properties;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.status = Objects.requireNonNull(status);
+        this.provisioningState = provisioningState;
+        this.status = status;
         this.tags = tags;
         this.timeout = timeout;
     }

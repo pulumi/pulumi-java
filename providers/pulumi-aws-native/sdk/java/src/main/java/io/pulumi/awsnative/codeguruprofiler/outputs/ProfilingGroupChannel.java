@@ -19,7 +19,7 @@ public final class ProfilingGroupChannel {
         @Nullable String channelId,
         String channelUri) {
         this.channelId = channelId;
-        this.channelUri = Objects.requireNonNull(channelUri);
+        this.channelUri = channelUri;
     }
 
     public Optional<String> getChannelId() {

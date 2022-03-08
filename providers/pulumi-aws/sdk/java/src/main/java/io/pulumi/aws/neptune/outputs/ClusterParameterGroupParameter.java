@@ -33,8 +33,8 @@ public final class ClusterParameterGroupParameter {
         String name,
         String value) {
         this.applyMethod = applyMethod;
-        this.name = Objects.requireNonNull(name);
-        this.value = Objects.requireNonNull(value);
+        this.name = name;
+        this.value = value;
     }
 
     /**

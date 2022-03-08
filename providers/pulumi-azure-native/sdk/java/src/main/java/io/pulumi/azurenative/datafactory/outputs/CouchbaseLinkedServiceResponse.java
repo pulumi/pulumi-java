@@ -76,7 +76,7 @@ public final class CouchbaseLinkedServiceResponse {
         this.description = description;
         this.encryptedCredential = encryptedCredential;
         this.parameters = parameters;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

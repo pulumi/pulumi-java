@@ -33,8 +33,8 @@ public final class PrivateLinkServiceConnectionStateResponse {
         String description,
         String status) {
         this.actionsRequired = actionsRequired;
-        this.description = Objects.requireNonNull(description);
-        this.status = Objects.requireNonNull(status);
+        this.description = description;
+        this.status = status;
     }
 
     /**

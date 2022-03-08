@@ -29,7 +29,7 @@ public final class DetectorModelFirehose {
         String deliveryStreamName,
         @Nullable DetectorModelPayload payload,
         @Nullable String separator) {
-        this.deliveryStreamName = Objects.requireNonNull(deliveryStreamName);
+        this.deliveryStreamName = deliveryStreamName;
         this.payload = payload;
         this.separator = separator;
     }

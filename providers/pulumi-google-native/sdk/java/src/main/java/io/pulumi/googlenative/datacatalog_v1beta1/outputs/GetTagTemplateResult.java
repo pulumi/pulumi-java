@@ -31,9 +31,9 @@ public final class GetTagTemplateResult {
         String displayName,
         Map<String,String> fields,
         String name) {
-        this.displayName = Objects.requireNonNull(displayName);
-        this.fields = Objects.requireNonNull(fields);
-        this.name = Objects.requireNonNull(name);
+        this.displayName = displayName;
+        this.fields = fields;
+        this.name = name;
     }
 
     /**

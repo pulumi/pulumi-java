@@ -72,9 +72,9 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRule {
         @Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirect urlRedirect) {
         this.description = description;
         this.headerAction = headerAction;
-        this.matchRules = Objects.requireNonNull(matchRules);
+        this.matchRules = matchRules;
         this.origin = origin;
-        this.priority = Objects.requireNonNull(priority);
+        this.priority = priority;
         this.routeAction = routeAction;
         this.urlRedirect = urlRedirect;
     }

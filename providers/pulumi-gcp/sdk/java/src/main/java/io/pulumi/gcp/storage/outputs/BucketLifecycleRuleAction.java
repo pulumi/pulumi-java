@@ -27,7 +27,7 @@ public final class BucketLifecycleRuleAction {
         @Nullable String storageClass,
         String type) {
         this.storageClass = storageClass;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

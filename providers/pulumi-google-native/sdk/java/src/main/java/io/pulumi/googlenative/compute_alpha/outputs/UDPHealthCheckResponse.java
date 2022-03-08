@@ -37,10 +37,10 @@ public final class UDPHealthCheckResponse {
         String portName,
         String request,
         String response) {
-        this.port = Objects.requireNonNull(port);
-        this.portName = Objects.requireNonNull(portName);
-        this.request = Objects.requireNonNull(request);
-        this.response = Objects.requireNonNull(response);
+        this.port = port;
+        this.portName = portName;
+        this.request = request;
+        this.response = response;
     }
 
     /**

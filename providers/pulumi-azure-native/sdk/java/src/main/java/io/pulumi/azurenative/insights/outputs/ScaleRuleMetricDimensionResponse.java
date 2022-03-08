@@ -31,9 +31,9 @@ public final class ScaleRuleMetricDimensionResponse {
         String dimensionName,
         String operator,
         List<String> values) {
-        this.dimensionName = Objects.requireNonNull(dimensionName);
-        this.operator = Objects.requireNonNull(operator);
-        this.values = Objects.requireNonNull(values);
+        this.dimensionName = dimensionName;
+        this.operator = operator;
+        this.values = values;
     }
 
     /**

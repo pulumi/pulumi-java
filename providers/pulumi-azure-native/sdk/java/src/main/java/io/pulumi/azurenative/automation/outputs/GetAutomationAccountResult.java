@@ -137,24 +137,24 @@ public final class GetAutomationAccountResult {
         @Nullable Map<String,String> tags,
         String type) {
         this.automationHybridServiceUrl = automationHybridServiceUrl;
-        this.creationTime = Objects.requireNonNull(creationTime);
+        this.creationTime = creationTime;
         this.description = description;
         this.disableLocalAuth = disableLocalAuth;
         this.encryption = encryption;
         this.etag = etag;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.identity = identity;
         this.lastModifiedBy = lastModifiedBy;
-        this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
+        this.lastModifiedTime = lastModifiedTime;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.privateEndpointConnections = privateEndpointConnections;
         this.publicNetworkAccess = publicNetworkAccess;
         this.sku = sku;
-        this.state = Objects.requireNonNull(state);
-        this.systemData = Objects.requireNonNull(systemData);
+        this.state = state;
+        this.systemData = systemData;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

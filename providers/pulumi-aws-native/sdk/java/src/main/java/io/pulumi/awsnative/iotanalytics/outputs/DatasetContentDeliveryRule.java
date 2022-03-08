@@ -19,7 +19,7 @@ public final class DatasetContentDeliveryRule {
     private DatasetContentDeliveryRule(
         DatasetContentDeliveryRuleDestination destination,
         @Nullable String entryName) {
-        this.destination = Objects.requireNonNull(destination);
+        this.destination = destination;
         this.entryName = entryName;
     }
 

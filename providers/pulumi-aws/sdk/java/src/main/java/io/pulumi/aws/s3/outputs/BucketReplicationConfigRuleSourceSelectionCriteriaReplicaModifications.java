@@ -17,7 +17,7 @@ public final class BucketReplicationConfigRuleSourceSelectionCriteriaReplicaModi
 
     @OutputCustomType.Constructor({"status"})
     private BucketReplicationConfigRuleSourceSelectionCriteriaReplicaModifications(String status) {
-        this.status = Objects.requireNonNull(status);
+        this.status = status;
     }
 
     /**

@@ -26,8 +26,8 @@ public final class GoogleCloudApigeeV1OperationGroupResponse {
     private GoogleCloudApigeeV1OperationGroupResponse(
         String operationConfigType,
         List<GoogleCloudApigeeV1OperationConfigResponse> operationConfigs) {
-        this.operationConfigType = Objects.requireNonNull(operationConfigType);
-        this.operationConfigs = Objects.requireNonNull(operationConfigs);
+        this.operationConfigType = operationConfigType;
+        this.operationConfigs = operationConfigs;
     }
 
     /**

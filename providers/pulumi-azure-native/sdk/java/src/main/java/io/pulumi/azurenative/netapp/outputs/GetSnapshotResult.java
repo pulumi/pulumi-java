@@ -54,13 +54,13 @@ public final class GetSnapshotResult {
         String provisioningState,
         String snapshotId,
         String type) {
-        this.created = Objects.requireNonNull(created);
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.snapshotId = Objects.requireNonNull(snapshotId);
-        this.type = Objects.requireNonNull(type);
+        this.created = created;
+        this.id = id;
+        this.location = location;
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.snapshotId = snapshotId;
+        this.type = type;
     }
 
     /**

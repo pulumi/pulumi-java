@@ -39,10 +39,10 @@ public final class DeliveryPackageInformationResponse {
         @Nullable Double driveCount,
         @Nullable String shipDate,
         String trackingNumber) {
-        this.carrierName = Objects.requireNonNull(carrierName);
+        this.carrierName = carrierName;
         this.driveCount = driveCount;
         this.shipDate = shipDate;
-        this.trackingNumber = Objects.requireNonNull(trackingNumber);
+        this.trackingNumber = trackingNumber;
     }
 
     /**

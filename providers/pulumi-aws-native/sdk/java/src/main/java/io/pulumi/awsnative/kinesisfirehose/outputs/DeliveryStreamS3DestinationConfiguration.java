@@ -34,14 +34,14 @@ public final class DeliveryStreamS3DestinationConfiguration {
         @Nullable String errorOutputPrefix,
         @Nullable String prefix,
         String roleARN) {
-        this.bucketARN = Objects.requireNonNull(bucketARN);
+        this.bucketARN = bucketARN;
         this.bufferingHints = bufferingHints;
         this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
         this.compressionFormat = compressionFormat;
         this.encryptionConfiguration = encryptionConfiguration;
         this.errorOutputPrefix = errorOutputPrefix;
         this.prefix = prefix;
-        this.roleARN = Objects.requireNonNull(roleARN);
+        this.roleARN = roleARN;
     }
 
     public String getBucketARN() {

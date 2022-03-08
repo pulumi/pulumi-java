@@ -75,16 +75,16 @@ public final class VMwareCbtProtectedDiskDetailsResponse {
         String logStorageAccountSasSecretName,
         String seedManagedDiskId,
         String targetManagedDiskId) {
-        this.capacityInBytes = Objects.requireNonNull(capacityInBytes);
-        this.diskId = Objects.requireNonNull(diskId);
-        this.diskName = Objects.requireNonNull(diskName);
-        this.diskPath = Objects.requireNonNull(diskPath);
+        this.capacityInBytes = capacityInBytes;
+        this.diskId = diskId;
+        this.diskName = diskName;
+        this.diskPath = diskPath;
         this.diskType = diskType;
-        this.isOSDisk = Objects.requireNonNull(isOSDisk);
-        this.logStorageAccountId = Objects.requireNonNull(logStorageAccountId);
-        this.logStorageAccountSasSecretName = Objects.requireNonNull(logStorageAccountSasSecretName);
-        this.seedManagedDiskId = Objects.requireNonNull(seedManagedDiskId);
-        this.targetManagedDiskId = Objects.requireNonNull(targetManagedDiskId);
+        this.isOSDisk = isOSDisk;
+        this.logStorageAccountId = logStorageAccountId;
+        this.logStorageAccountSasSecretName = logStorageAccountSasSecretName;
+        this.seedManagedDiskId = seedManagedDiskId;
+        this.targetManagedDiskId = targetManagedDiskId;
     }
 
     /**

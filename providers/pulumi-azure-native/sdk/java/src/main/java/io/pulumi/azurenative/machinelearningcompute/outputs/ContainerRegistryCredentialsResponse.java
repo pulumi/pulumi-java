@@ -36,10 +36,10 @@ public final class ContainerRegistryCredentialsResponse {
         String password,
         String password2,
         String username) {
-        this.loginServer = Objects.requireNonNull(loginServer);
-        this.password = Objects.requireNonNull(password);
-        this.password2 = Objects.requireNonNull(password2);
-        this.username = Objects.requireNonNull(username);
+        this.loginServer = loginServer;
+        this.password = password;
+        this.password2 = password2;
+        this.username = username;
     }
 
     /**

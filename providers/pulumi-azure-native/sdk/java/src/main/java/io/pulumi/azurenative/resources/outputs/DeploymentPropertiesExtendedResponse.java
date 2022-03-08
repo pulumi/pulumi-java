@@ -124,23 +124,23 @@ public final class DeploymentPropertiesExtendedResponse {
         TemplateLinkResponse templateLink,
         String timestamp,
         List<ResourceReferenceResponse> validatedResources) {
-        this.correlationId = Objects.requireNonNull(correlationId);
-        this.debugSetting = Objects.requireNonNull(debugSetting);
-        this.dependencies = Objects.requireNonNull(dependencies);
-        this.duration = Objects.requireNonNull(duration);
-        this.error = Objects.requireNonNull(error);
-        this.mode = Objects.requireNonNull(mode);
-        this.onErrorDeployment = Objects.requireNonNull(onErrorDeployment);
-        this.outputResources = Objects.requireNonNull(outputResources);
-        this.outputs = Objects.requireNonNull(outputs);
-        this.parameters = Objects.requireNonNull(parameters);
-        this.parametersLink = Objects.requireNonNull(parametersLink);
-        this.providers = Objects.requireNonNull(providers);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.templateHash = Objects.requireNonNull(templateHash);
-        this.templateLink = Objects.requireNonNull(templateLink);
-        this.timestamp = Objects.requireNonNull(timestamp);
-        this.validatedResources = Objects.requireNonNull(validatedResources);
+        this.correlationId = correlationId;
+        this.debugSetting = debugSetting;
+        this.dependencies = dependencies;
+        this.duration = duration;
+        this.error = error;
+        this.mode = mode;
+        this.onErrorDeployment = onErrorDeployment;
+        this.outputResources = outputResources;
+        this.outputs = outputs;
+        this.parameters = parameters;
+        this.parametersLink = parametersLink;
+        this.providers = providers;
+        this.provisioningState = provisioningState;
+        this.templateHash = templateHash;
+        this.templateLink = templateLink;
+        this.timestamp = timestamp;
+        this.validatedResources = validatedResources;
     }
 
     /**

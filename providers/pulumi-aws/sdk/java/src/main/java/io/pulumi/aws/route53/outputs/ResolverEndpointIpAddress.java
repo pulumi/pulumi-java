@@ -30,7 +30,7 @@ public final class ResolverEndpointIpAddress {
         String subnetId) {
         this.ip = ip;
         this.ipId = ipId;
-        this.subnetId = Objects.requireNonNull(subnetId);
+        this.subnetId = subnetId;
     }
 
     /**

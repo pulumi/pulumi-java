@@ -27,7 +27,7 @@ public final class FlexibleAppVersionDeploymentCloudBuildOptions {
     private FlexibleAppVersionDeploymentCloudBuildOptions(
         String appYamlPath,
         @Nullable String cloudBuildTimeout) {
-        this.appYamlPath = Objects.requireNonNull(appYamlPath);
+        this.appYamlPath = appYamlPath;
         this.cloudBuildTimeout = cloudBuildTimeout;
     }
 

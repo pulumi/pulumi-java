@@ -17,7 +17,7 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSub
 
     @OutputCustomType.Constructor({"match"})
     private VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNames(VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatch match) {
-        this.match = Objects.requireNonNull(match);
+        this.match = match;
     }
 
     /**

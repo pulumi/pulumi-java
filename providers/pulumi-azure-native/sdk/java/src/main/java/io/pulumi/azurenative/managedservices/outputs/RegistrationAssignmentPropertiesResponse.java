@@ -31,9 +31,9 @@ public final class RegistrationAssignmentPropertiesResponse {
         String provisioningState,
         RegistrationAssignmentPropertiesResponseRegistrationDefinition registrationDefinition,
         String registrationDefinitionId) {
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.registrationDefinition = Objects.requireNonNull(registrationDefinition);
-        this.registrationDefinitionId = Objects.requireNonNull(registrationDefinitionId);
+        this.provisioningState = provisioningState;
+        this.registrationDefinition = registrationDefinition;
+        this.registrationDefinitionId = registrationDefinitionId;
     }
 
     /**

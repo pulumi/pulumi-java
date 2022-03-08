@@ -18,7 +18,7 @@ public final class EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlock {
     private EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlock(
         String cidrBlock,
         @Nullable String displayName) {
-        this.cidrBlock = Objects.requireNonNull(cidrBlock);
+        this.cidrBlock = cidrBlock;
         this.displayName = displayName;
     }
 

@@ -142,10 +142,10 @@ public final class AlertPolicyConditionConditionThreshold {
         @Nullable Double thresholdValue,
         @Nullable AlertPolicyConditionConditionThresholdTrigger trigger) {
         this.aggregations = aggregations;
-        this.comparison = Objects.requireNonNull(comparison);
+        this.comparison = comparison;
         this.denominatorAggregations = denominatorAggregations;
         this.denominatorFilter = denominatorFilter;
-        this.duration = Objects.requireNonNull(duration);
+        this.duration = duration;
         this.filter = filter;
         this.thresholdValue = thresholdValue;
         this.trigger = trigger;

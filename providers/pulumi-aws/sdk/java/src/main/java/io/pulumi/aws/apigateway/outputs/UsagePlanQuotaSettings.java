@@ -33,9 +33,9 @@ public final class UsagePlanQuotaSettings {
         Integer limit,
         @Nullable Integer offset,
         String period) {
-        this.limit = Objects.requireNonNull(limit);
+        this.limit = limit;
         this.offset = offset;
-        this.period = Objects.requireNonNull(period);
+        this.period = period;
     }
 
     /**

@@ -17,7 +17,7 @@ public final class PoolOptionResponse {
 
     @OutputCustomType.Constructor({"name"})
     private PoolOptionResponse(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

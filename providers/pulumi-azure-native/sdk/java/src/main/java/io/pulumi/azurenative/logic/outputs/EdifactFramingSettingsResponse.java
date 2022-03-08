@@ -82,15 +82,15 @@ public final class EdifactFramingSettingsResponse {
         String segmentTerminatorSuffix,
         @Nullable String serviceCodeListDirectoryVersion) {
         this.characterEncoding = characterEncoding;
-        this.characterSet = Objects.requireNonNull(characterSet);
-        this.componentSeparator = Objects.requireNonNull(componentSeparator);
-        this.dataElementSeparator = Objects.requireNonNull(dataElementSeparator);
-        this.decimalPointIndicator = Objects.requireNonNull(decimalPointIndicator);
-        this.protocolVersion = Objects.requireNonNull(protocolVersion);
-        this.releaseIndicator = Objects.requireNonNull(releaseIndicator);
-        this.repetitionSeparator = Objects.requireNonNull(repetitionSeparator);
-        this.segmentTerminator = Objects.requireNonNull(segmentTerminator);
-        this.segmentTerminatorSuffix = Objects.requireNonNull(segmentTerminatorSuffix);
+        this.characterSet = characterSet;
+        this.componentSeparator = componentSeparator;
+        this.dataElementSeparator = dataElementSeparator;
+        this.decimalPointIndicator = decimalPointIndicator;
+        this.protocolVersion = protocolVersion;
+        this.releaseIndicator = releaseIndicator;
+        this.repetitionSeparator = repetitionSeparator;
+        this.segmentTerminator = segmentTerminator;
+        this.segmentTerminatorSuffix = segmentTerminatorSuffix;
         this.serviceCodeListDirectoryVersion = serviceCodeListDirectoryVersion;
     }
 

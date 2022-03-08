@@ -36,10 +36,10 @@ public final class ErrorProtoResponse {
         String location,
         String message,
         String reason) {
-        this.debugInfo = Objects.requireNonNull(debugInfo);
-        this.location = Objects.requireNonNull(location);
-        this.message = Objects.requireNonNull(message);
-        this.reason = Objects.requireNonNull(reason);
+        this.debugInfo = debugInfo;
+        this.location = location;
+        this.message = message;
+        this.reason = reason;
     }
 
     /**

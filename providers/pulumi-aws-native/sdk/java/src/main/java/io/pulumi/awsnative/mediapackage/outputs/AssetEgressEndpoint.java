@@ -24,8 +24,8 @@ public final class AssetEgressEndpoint {
     private AssetEgressEndpoint(
         String packagingConfigurationId,
         String url) {
-        this.packagingConfigurationId = Objects.requireNonNull(packagingConfigurationId);
-        this.url = Objects.requireNonNull(url);
+        this.packagingConfigurationId = packagingConfigurationId;
+        this.url = url;
     }
 
     /**

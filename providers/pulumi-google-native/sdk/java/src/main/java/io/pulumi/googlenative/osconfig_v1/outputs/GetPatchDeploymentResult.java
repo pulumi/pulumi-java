@@ -89,18 +89,18 @@ public final class GetPatchDeploymentResult {
         PatchRolloutResponse rollout,
         String state,
         String updateTime) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.description = Objects.requireNonNull(description);
-        this.duration = Objects.requireNonNull(duration);
-        this.instanceFilter = Objects.requireNonNull(instanceFilter);
-        this.lastExecuteTime = Objects.requireNonNull(lastExecuteTime);
-        this.name = Objects.requireNonNull(name);
-        this.oneTimeSchedule = Objects.requireNonNull(oneTimeSchedule);
-        this.patchConfig = Objects.requireNonNull(patchConfig);
-        this.recurringSchedule = Objects.requireNonNull(recurringSchedule);
-        this.rollout = Objects.requireNonNull(rollout);
-        this.state = Objects.requireNonNull(state);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.createTime = createTime;
+        this.description = description;
+        this.duration = duration;
+        this.instanceFilter = instanceFilter;
+        this.lastExecuteTime = lastExecuteTime;
+        this.name = name;
+        this.oneTimeSchedule = oneTimeSchedule;
+        this.patchConfig = patchConfig;
+        this.recurringSchedule = recurringSchedule;
+        this.rollout = rollout;
+        this.state = state;
+        this.updateTime = updateTime;
     }
 
     /**

@@ -17,8 +17,8 @@ public final class ScheduledQueryDimensionMapping {
     private ScheduledQueryDimensionMapping(
         ScheduledQueryDimensionValueType dimensionValueType,
         String name) {
-        this.dimensionValueType = Objects.requireNonNull(dimensionValueType);
-        this.name = Objects.requireNonNull(name);
+        this.dimensionValueType = dimensionValueType;
+        this.name = name;
     }
 
     public ScheduledQueryDimensionValueType getDimensionValueType() {

@@ -83,17 +83,17 @@ public final class GetAccountResult {
         String type,
         String userEmail,
         String userName) {
-        this.createdAt = Objects.requireNonNull(createdAt);
-        this.id = Objects.requireNonNull(id);
-        this.identity = Objects.requireNonNull(identity);
+        this.createdAt = createdAt;
+        this.id = id;
+        this.identity = identity;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.systemData = Objects.requireNonNull(systemData);
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.systemData = systemData;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
-        this.userEmail = Objects.requireNonNull(userEmail);
-        this.userName = Objects.requireNonNull(userName);
+        this.type = type;
+        this.userEmail = userEmail;
+        this.userName = userName;
     }
 
     /**

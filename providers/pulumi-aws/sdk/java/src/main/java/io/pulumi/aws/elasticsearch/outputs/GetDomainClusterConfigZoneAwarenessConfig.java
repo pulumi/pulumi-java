@@ -17,7 +17,7 @@ public final class GetDomainClusterConfigZoneAwarenessConfig {
 
     @OutputCustomType.Constructor({"availabilityZoneCount"})
     private GetDomainClusterConfigZoneAwarenessConfig(Integer availabilityZoneCount) {
-        this.availabilityZoneCount = Objects.requireNonNull(availabilityZoneCount);
+        this.availabilityZoneCount = availabilityZoneCount;
     }
 
     /**

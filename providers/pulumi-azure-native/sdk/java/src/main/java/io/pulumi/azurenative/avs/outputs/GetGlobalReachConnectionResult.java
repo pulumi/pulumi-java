@@ -62,14 +62,14 @@ public final class GetGlobalReachConnectionResult {
         @Nullable String peerExpressRouteCircuit,
         String provisioningState,
         String type) {
-        this.addressPrefix = Objects.requireNonNull(addressPrefix);
+        this.addressPrefix = addressPrefix;
         this.authorizationKey = authorizationKey;
-        this.circuitConnectionStatus = Objects.requireNonNull(circuitConnectionStatus);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.circuitConnectionStatus = circuitConnectionStatus;
+        this.id = id;
+        this.name = name;
         this.peerExpressRouteCircuit = peerExpressRouteCircuit;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.type = Objects.requireNonNull(type);
+        this.provisioningState = provisioningState;
+        this.type = type;
     }
 
     /**

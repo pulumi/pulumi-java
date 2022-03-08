@@ -39,10 +39,10 @@ public final class HostVpcConfiguration {
         List<String> subnetIds,
         @Nullable String tlsCertificate,
         String vpcId) {
-        this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
-        this.subnetIds = Objects.requireNonNull(subnetIds);
+        this.securityGroupIds = securityGroupIds;
+        this.subnetIds = subnetIds;
         this.tlsCertificate = tlsCertificate;
-        this.vpcId = Objects.requireNonNull(vpcId);
+        this.vpcId = vpcId;
     }
 
     /**

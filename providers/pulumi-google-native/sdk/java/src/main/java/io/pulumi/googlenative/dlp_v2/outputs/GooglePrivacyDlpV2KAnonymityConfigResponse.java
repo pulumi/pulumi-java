@@ -26,8 +26,8 @@ public final class GooglePrivacyDlpV2KAnonymityConfigResponse {
     private GooglePrivacyDlpV2KAnonymityConfigResponse(
         GooglePrivacyDlpV2EntityIdResponse entityId,
         List<GooglePrivacyDlpV2FieldIdResponse> quasiIds) {
-        this.entityId = Objects.requireNonNull(entityId);
-        this.quasiIds = Objects.requireNonNull(quasiIds);
+        this.entityId = entityId;
+        this.quasiIds = quasiIds;
     }
 
     /**

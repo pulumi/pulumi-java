@@ -49,12 +49,12 @@ public final class GetIntegrationRuntimeConnectionInfoResult {
         String publicKey,
         String serviceToken,
         String version) {
-        this.hostServiceUri = Objects.requireNonNull(hostServiceUri);
-        this.identityCertThumbprint = Objects.requireNonNull(identityCertThumbprint);
-        this.isIdentityCertExprired = Objects.requireNonNull(isIdentityCertExprired);
-        this.publicKey = Objects.requireNonNull(publicKey);
-        this.serviceToken = Objects.requireNonNull(serviceToken);
-        this.version = Objects.requireNonNull(version);
+        this.hostServiceUri = hostServiceUri;
+        this.identityCertThumbprint = identityCertThumbprint;
+        this.isIdentityCertExprired = isIdentityCertExprired;
+        this.publicKey = publicKey;
+        this.serviceToken = serviceToken;
+        this.version = version;
     }
 
     /**

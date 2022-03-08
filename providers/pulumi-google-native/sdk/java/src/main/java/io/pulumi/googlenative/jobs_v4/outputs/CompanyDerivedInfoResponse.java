@@ -17,7 +17,7 @@ public final class CompanyDerivedInfoResponse {
 
     @OutputCustomType.Constructor({"headquartersLocation"})
     private CompanyDerivedInfoResponse(LocationResponse headquartersLocation) {
-        this.headquartersLocation = Objects.requireNonNull(headquartersLocation);
+        this.headquartersLocation = headquartersLocation;
     }
 
     /**

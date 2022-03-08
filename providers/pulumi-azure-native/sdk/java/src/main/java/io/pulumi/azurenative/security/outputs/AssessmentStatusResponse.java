@@ -33,7 +33,7 @@ public final class AssessmentStatusResponse {
         String code,
         @Nullable String description) {
         this.cause = cause;
-        this.code = Objects.requireNonNull(code);
+        this.code = code;
         this.description = description;
     }
 

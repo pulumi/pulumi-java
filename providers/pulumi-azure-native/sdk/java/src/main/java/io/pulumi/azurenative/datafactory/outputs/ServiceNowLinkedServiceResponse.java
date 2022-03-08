@@ -114,16 +114,16 @@ public final class ServiceNowLinkedServiceResponse {
         @Nullable Object usePeerVerification,
         @Nullable Object username) {
         this.annotations = annotations;
-        this.authenticationType = Objects.requireNonNull(authenticationType);
+        this.authenticationType = authenticationType;
         this.clientId = clientId;
         this.clientSecret = clientSecret;
         this.connectVia = connectVia;
         this.description = description;
         this.encryptedCredential = encryptedCredential;
-        this.endpoint = Objects.requireNonNull(endpoint);
+        this.endpoint = endpoint;
         this.parameters = parameters;
         this.password = password;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.useEncryptedEndpoints = useEncryptedEndpoints;
         this.useHostVerification = useHostVerification;
         this.usePeerVerification = usePeerVerification;

@@ -36,11 +36,11 @@ public final class LaunchMetricDefinitionObject {
         String metricName,
         @Nullable String unitLabel,
         String valueKey) {
-        this.entityIdKey = Objects.requireNonNull(entityIdKey);
-        this.eventPattern = Objects.requireNonNull(eventPattern);
-        this.metricName = Objects.requireNonNull(metricName);
+        this.entityIdKey = entityIdKey;
+        this.eventPattern = eventPattern;
+        this.metricName = metricName;
         this.unitLabel = unitLabel;
-        this.valueKey = Objects.requireNonNull(valueKey);
+        this.valueKey = valueKey;
     }
 
     /**

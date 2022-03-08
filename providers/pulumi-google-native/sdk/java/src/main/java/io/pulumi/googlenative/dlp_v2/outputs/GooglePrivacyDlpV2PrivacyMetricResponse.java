@@ -53,12 +53,12 @@ public final class GooglePrivacyDlpV2PrivacyMetricResponse {
         GooglePrivacyDlpV2KMapEstimationConfigResponse kMapEstimationConfig,
         GooglePrivacyDlpV2LDiversityConfigResponse lDiversityConfig,
         GooglePrivacyDlpV2NumericalStatsConfigResponse numericalStatsConfig) {
-        this.categoricalStatsConfig = Objects.requireNonNull(categoricalStatsConfig);
-        this.deltaPresenceEstimationConfig = Objects.requireNonNull(deltaPresenceEstimationConfig);
-        this.kAnonymityConfig = Objects.requireNonNull(kAnonymityConfig);
-        this.kMapEstimationConfig = Objects.requireNonNull(kMapEstimationConfig);
-        this.lDiversityConfig = Objects.requireNonNull(lDiversityConfig);
-        this.numericalStatsConfig = Objects.requireNonNull(numericalStatsConfig);
+        this.categoricalStatsConfig = categoricalStatsConfig;
+        this.deltaPresenceEstimationConfig = deltaPresenceEstimationConfig;
+        this.kAnonymityConfig = kAnonymityConfig;
+        this.kMapEstimationConfig = kMapEstimationConfig;
+        this.lDiversityConfig = lDiversityConfig;
+        this.numericalStatsConfig = numericalStatsConfig;
     }
 
     /**

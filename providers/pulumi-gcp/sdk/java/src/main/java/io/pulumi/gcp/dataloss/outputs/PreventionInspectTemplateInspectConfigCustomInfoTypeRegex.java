@@ -29,7 +29,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeRegex {
         @Nullable List<Integer> groupIndexes,
         String pattern) {
         this.groupIndexes = groupIndexes;
-        this.pattern = Objects.requireNonNull(pattern);
+        this.pattern = pattern;
     }
 
     /**

@@ -25,8 +25,8 @@ public final class GetSitesResult {
     private GetSitesResult(
         String id,
         List<String> ids) {
-        this.id = Objects.requireNonNull(id);
-        this.ids = Objects.requireNonNull(ids);
+        this.id = id;
+        this.ids = ids;
     }
 
     /**

@@ -50,7 +50,7 @@ public final class BucketLifecycleConfigurationRule {
         this.abortIncompleteMultipartUpload = abortIncompleteMultipartUpload;
         this.expiration = expiration;
         this.filter = filter;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.status = status;
     }
 

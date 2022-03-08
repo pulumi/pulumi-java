@@ -82,17 +82,17 @@ public final class GetKubernetesRoleResult {
         String roleStatus,
         SystemDataResponse systemData,
         String type) {
-        this.hostPlatform = Objects.requireNonNull(hostPlatform);
-        this.hostPlatformType = Objects.requireNonNull(hostPlatformType);
-        this.id = Objects.requireNonNull(id);
-        this.kind = Objects.requireNonNull(kind);
-        this.kubernetesClusterInfo = Objects.requireNonNull(kubernetesClusterInfo);
-        this.kubernetesRoleResources = Objects.requireNonNull(kubernetesRoleResources);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.roleStatus = Objects.requireNonNull(roleStatus);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.hostPlatform = hostPlatform;
+        this.hostPlatformType = hostPlatformType;
+        this.id = id;
+        this.kind = kind;
+        this.kubernetesClusterInfo = kubernetesClusterInfo;
+        this.kubernetesRoleResources = kubernetesRoleResources;
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.roleStatus = roleStatus;
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

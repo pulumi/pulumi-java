@@ -40,7 +40,7 @@ public final class ManagedClusterWindowsProfileResponse {
         @Nullable Boolean enableCSIProxy,
         @Nullable String licenseType) {
         this.adminPassword = adminPassword;
-        this.adminUsername = Objects.requireNonNull(adminUsername);
+        this.adminUsername = adminUsername;
         this.enableCSIProxy = enableCSIProxy;
         this.licenseType = licenseType;
     }

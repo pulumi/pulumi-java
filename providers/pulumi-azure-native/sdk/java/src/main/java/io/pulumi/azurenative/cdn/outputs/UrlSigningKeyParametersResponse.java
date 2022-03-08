@@ -40,10 +40,10 @@ public final class UrlSigningKeyParametersResponse {
         ResourceReferenceResponse secretSource,
         @Nullable String secretVersion,
         String type) {
-        this.keyId = Objects.requireNonNull(keyId);
-        this.secretSource = Objects.requireNonNull(secretSource);
+        this.keyId = keyId;
+        this.secretSource = secretSource;
         this.secretVersion = secretVersion;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

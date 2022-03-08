@@ -55,10 +55,10 @@ public final class VaultPropertiesResponse {
         String provisioningState,
         @Nullable UpgradeDetailsResponse upgradeDetails) {
         this.encryption = encryption;
-        this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
-        this.privateEndpointStateForBackup = Objects.requireNonNull(privateEndpointStateForBackup);
-        this.privateEndpointStateForSiteRecovery = Objects.requireNonNull(privateEndpointStateForSiteRecovery);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.privateEndpointConnections = privateEndpointConnections;
+        this.privateEndpointStateForBackup = privateEndpointStateForBackup;
+        this.privateEndpointStateForSiteRecovery = privateEndpointStateForSiteRecovery;
+        this.provisioningState = provisioningState;
         this.upgradeDetails = upgradeDetails;
     }
 

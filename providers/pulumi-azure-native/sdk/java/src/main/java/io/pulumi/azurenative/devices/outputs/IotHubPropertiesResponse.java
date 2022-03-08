@@ -141,17 +141,17 @@ public final class IotHubPropertiesResponse {
         this.enableFileUploadNotifications = enableFileUploadNotifications;
         this.eventHubEndpoints = eventHubEndpoints;
         this.features = features;
-        this.hostName = Objects.requireNonNull(hostName);
+        this.hostName = hostName;
         this.ipFilterRules = ipFilterRules;
-        this.locations = Objects.requireNonNull(locations);
+        this.locations = locations;
         this.messagingEndpoints = messagingEndpoints;
         this.minTlsVersion = minTlsVersion;
         this.networkRuleSets = networkRuleSets;
         this.privateEndpointConnections = privateEndpointConnections;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.publicNetworkAccess = publicNetworkAccess;
         this.routing = routing;
-        this.state = Objects.requireNonNull(state);
+        this.state = state;
         this.storageEndpoints = storageEndpoints;
     }
 

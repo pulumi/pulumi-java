@@ -17,7 +17,7 @@ public final class GrafeasV1beta1ImageDetailsResponse {
 
     @OutputCustomType.Constructor({"derivedImage"})
     private GrafeasV1beta1ImageDetailsResponse(DerivedResponse derivedImage) {
-        this.derivedImage = Objects.requireNonNull(derivedImage);
+        this.derivedImage = derivedImage;
     }
 
     /**

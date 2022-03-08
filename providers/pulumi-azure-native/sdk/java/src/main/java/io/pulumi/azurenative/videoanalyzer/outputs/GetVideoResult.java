@@ -73,14 +73,14 @@ public final class GetVideoResult {
         @Nullable String title,
         String type) {
         this.description = description;
-        this.flags = Objects.requireNonNull(flags);
-        this.id = Objects.requireNonNull(id);
-        this.mediaInfo = Objects.requireNonNull(mediaInfo);
-        this.name = Objects.requireNonNull(name);
-        this.streaming = Objects.requireNonNull(streaming);
-        this.systemData = Objects.requireNonNull(systemData);
+        this.flags = flags;
+        this.id = id;
+        this.mediaInfo = mediaInfo;
+        this.name = name;
+        this.streaming = streaming;
+        this.systemData = systemData;
         this.title = title;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

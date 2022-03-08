@@ -68,15 +68,15 @@ public final class GetSynapseWorkspaceSqlPoolTableDataSetMappingResult {
         String synapseWorkspaceSqlPoolTableResourceId,
         SystemDataResponse systemData,
         String type) {
-        this.dataSetId = Objects.requireNonNull(dataSetId);
-        this.dataSetMappingStatus = Objects.requireNonNull(dataSetMappingStatus);
-        this.id = Objects.requireNonNull(id);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.synapseWorkspaceSqlPoolTableResourceId = Objects.requireNonNull(synapseWorkspaceSqlPoolTableResourceId);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.dataSetId = dataSetId;
+        this.dataSetMappingStatus = dataSetMappingStatus;
+        this.id = id;
+        this.kind = kind;
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.synapseWorkspaceSqlPoolTableResourceId = synapseWorkspaceSqlPoolTableResourceId;
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

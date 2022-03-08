@@ -17,7 +17,7 @@ public final class ResourceIdentityResponse {
 
     @OutputCustomType.Constructor({"userAssignedIdentity"})
     private ResourceIdentityResponse(String userAssignedIdentity) {
-        this.userAssignedIdentity = Objects.requireNonNull(userAssignedIdentity);
+        this.userAssignedIdentity = userAssignedIdentity;
     }
 
     /**

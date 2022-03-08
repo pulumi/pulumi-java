@@ -24,8 +24,8 @@ public final class InsightFiltersResourceAwsEc2InstanceVpcId {
     private InsightFiltersResourceAwsEc2InstanceVpcId(
         String comparison,
         String value) {
-        this.comparison = Objects.requireNonNull(comparison);
-        this.value = Objects.requireNonNull(value);
+        this.comparison = comparison;
+        this.value = value;
     }
 
     /**

@@ -74,16 +74,16 @@ public final class GetScheduledSynchronizationSettingResult {
         SystemDataResponse systemData,
         String type,
         String userName) {
-        this.createdAt = Objects.requireNonNull(createdAt);
-        this.id = Objects.requireNonNull(id);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.recurrenceInterval = Objects.requireNonNull(recurrenceInterval);
-        this.synchronizationTime = Objects.requireNonNull(synchronizationTime);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
-        this.userName = Objects.requireNonNull(userName);
+        this.createdAt = createdAt;
+        this.id = id;
+        this.kind = kind;
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.recurrenceInterval = recurrenceInterval;
+        this.synchronizationTime = synchronizationTime;
+        this.systemData = systemData;
+        this.type = type;
+        this.userName = userName;
     }
 
     /**

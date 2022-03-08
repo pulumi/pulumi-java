@@ -52,10 +52,10 @@ public final class SqlDatabaseGetPropertiesResponseResource {
         Double ts,
         @Nullable String users) {
         this.colls = colls;
-        this.etag = Objects.requireNonNull(etag);
-        this.id = Objects.requireNonNull(id);
-        this.rid = Objects.requireNonNull(rid);
-        this.ts = Objects.requireNonNull(ts);
+        this.etag = etag;
+        this.id = id;
+        this.rid = rid;
+        this.ts = ts;
         this.users = users;
     }
 

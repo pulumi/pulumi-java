@@ -78,15 +78,15 @@ public final class GetVirtualNetworkLinkResult {
         @Nullable SubResourceResponse virtualNetwork,
         String virtualNetworkLinkState) {
         this.etag = etag;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.registrationEnabled = registrationEnabled;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.virtualNetwork = virtualNetwork;
-        this.virtualNetworkLinkState = Objects.requireNonNull(virtualNetworkLinkState);
+        this.virtualNetworkLinkState = virtualNetworkLinkState;
     }
 
     /**

@@ -34,7 +34,7 @@ public final class IotHubSettingsResponse {
         String resourceId) {
         this.eventHubConnectionString = eventHubConnectionString;
         this.ioTHubConnectionString = ioTHubConnectionString;
-        this.resourceId = Objects.requireNonNull(resourceId);
+        this.resourceId = resourceId;
     }
 
     /**

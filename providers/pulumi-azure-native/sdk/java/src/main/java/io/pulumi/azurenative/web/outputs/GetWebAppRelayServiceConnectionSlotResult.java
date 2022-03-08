@@ -57,13 +57,13 @@ public final class GetWebAppRelayServiceConnectionSlotResult {
         this.entityConnectionString = entityConnectionString;
         this.entityName = entityName;
         this.hostname = hostname;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.kind = kind;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.port = port;
         this.resourceConnectionString = resourceConnectionString;
         this.resourceType = resourceType;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     public Optional<String> getBiztalkUri() {

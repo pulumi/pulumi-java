@@ -31,9 +31,9 @@ public final class GetLaunchConfigurationMetadataOption {
         String httpEndpoint,
         Integer httpPutResponseHopLimit,
         String httpTokens) {
-        this.httpEndpoint = Objects.requireNonNull(httpEndpoint);
-        this.httpPutResponseHopLimit = Objects.requireNonNull(httpPutResponseHopLimit);
-        this.httpTokens = Objects.requireNonNull(httpTokens);
+        this.httpEndpoint = httpEndpoint;
+        this.httpPutResponseHopLimit = httpPutResponseHopLimit;
+        this.httpTokens = httpTokens;
     }
 
     /**

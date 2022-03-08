@@ -58,12 +58,12 @@ public final class GetManagementGroupSubscriptionResult {
         @Nullable String tenant,
         String type) {
         this.displayName = displayName;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.parent = parent;
         this.state = state;
         this.tenant = tenant;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

@@ -36,10 +36,10 @@ public final class GetClientConfigResult {
         String objectId,
         String subscriptionId,
         String tenantId) {
-        this.clientId = Objects.requireNonNull(clientId);
-        this.objectId = Objects.requireNonNull(objectId);
-        this.subscriptionId = Objects.requireNonNull(subscriptionId);
-        this.tenantId = Objects.requireNonNull(tenantId);
+        this.clientId = clientId;
+        this.objectId = objectId;
+        this.subscriptionId = subscriptionId;
+        this.tenantId = tenantId;
     }
 
     /**

@@ -24,7 +24,7 @@ public final class OfflineStoreConfigProperties {
         FeatureGroupS3StorageConfig s3StorageConfig) {
         this.dataCatalogConfig = dataCatalogConfig;
         this.disableGlueTableCreation = disableGlueTableCreation;
-        this.s3StorageConfig = Objects.requireNonNull(s3StorageConfig);
+        this.s3StorageConfig = s3StorageConfig;
     }
 
     public Optional<FeatureGroupDataCatalogConfig> getDataCatalogConfig() {

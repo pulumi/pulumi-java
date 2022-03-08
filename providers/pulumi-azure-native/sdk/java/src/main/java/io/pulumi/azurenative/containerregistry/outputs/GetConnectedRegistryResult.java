@@ -111,21 +111,21 @@ public final class GetConnectedRegistryResult {
         SystemDataResponse systemData,
         String type,
         String version) {
-        this.activation = Objects.requireNonNull(activation);
+        this.activation = activation;
         this.clientTokenIds = clientTokenIds;
-        this.connectionState = Objects.requireNonNull(connectionState);
-        this.id = Objects.requireNonNull(id);
-        this.lastActivityTime = Objects.requireNonNull(lastActivityTime);
+        this.connectionState = connectionState;
+        this.id = id;
+        this.lastActivityTime = lastActivityTime;
         this.logging = logging;
         this.loginServer = loginServer;
-        this.mode = Objects.requireNonNull(mode);
-        this.name = Objects.requireNonNull(name);
-        this.parent = Objects.requireNonNull(parent);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.statusDetails = Objects.requireNonNull(statusDetails);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
-        this.version = Objects.requireNonNull(version);
+        this.mode = mode;
+        this.name = name;
+        this.parent = parent;
+        this.provisioningState = provisioningState;
+        this.statusDetails = statusDetails;
+        this.systemData = systemData;
+        this.type = type;
+        this.version = version;
     }
 
     /**

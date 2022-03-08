@@ -38,10 +38,10 @@ public final class HttpHeaderActionResponse {
         List<String> requestHeadersToRemove,
         List<HttpHeaderOptionResponse> responseHeadersToAdd,
         List<String> responseHeadersToRemove) {
-        this.requestHeadersToAdd = Objects.requireNonNull(requestHeadersToAdd);
-        this.requestHeadersToRemove = Objects.requireNonNull(requestHeadersToRemove);
-        this.responseHeadersToAdd = Objects.requireNonNull(responseHeadersToAdd);
-        this.responseHeadersToRemove = Objects.requireNonNull(responseHeadersToRemove);
+        this.requestHeadersToAdd = requestHeadersToAdd;
+        this.requestHeadersToRemove = requestHeadersToRemove;
+        this.responseHeadersToAdd = responseHeadersToAdd;
+        this.responseHeadersToRemove = responseHeadersToRemove;
     }
 
     /**

@@ -30,9 +30,9 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMed
         String fileUri,
         String height,
         String thumbnailUri) {
-        this.fileUri = Objects.requireNonNull(fileUri);
-        this.height = Objects.requireNonNull(height);
-        this.thumbnailUri = Objects.requireNonNull(thumbnailUri);
+        this.fileUri = fileUri;
+        this.height = height;
+        this.thumbnailUri = thumbnailUri;
     }
 
     /**

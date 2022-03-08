@@ -27,7 +27,7 @@ public final class PutAliasResponsePropertiesResponse {
         @Nullable String provisioningState,
         String subscriptionId) {
         this.provisioningState = provisioningState;
-        this.subscriptionId = Objects.requireNonNull(subscriptionId);
+        this.subscriptionId = subscriptionId;
     }
 
     /**

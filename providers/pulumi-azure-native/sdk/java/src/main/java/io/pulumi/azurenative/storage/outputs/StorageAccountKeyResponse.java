@@ -36,10 +36,10 @@ public final class StorageAccountKeyResponse {
         String keyName,
         String permissions,
         String value) {
-        this.creationTime = Objects.requireNonNull(creationTime);
-        this.keyName = Objects.requireNonNull(keyName);
-        this.permissions = Objects.requireNonNull(permissions);
-        this.value = Objects.requireNonNull(value);
+        this.creationTime = creationTime;
+        this.keyName = keyName;
+        this.permissions = permissions;
+        this.value = value;
     }
 
     /**

@@ -39,8 +39,8 @@ public final class IntentConfirmationPrompt {
         Integer maxAttempts,
         List<IntentConfirmationPromptMessage> messages,
         @Nullable String responseCard) {
-        this.maxAttempts = Objects.requireNonNull(maxAttempts);
-        this.messages = Objects.requireNonNull(messages);
+        this.maxAttempts = maxAttempts;
+        this.messages = messages;
         this.responseCard = responseCard;
     }
 

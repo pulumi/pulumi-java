@@ -24,11 +24,11 @@ public final class PipelineDeviceShadowEnrich {
         @Nullable String next,
         String roleArn,
         String thingName) {
-        this.attribute = Objects.requireNonNull(attribute);
-        this.name = Objects.requireNonNull(name);
+        this.attribute = attribute;
+        this.name = name;
         this.next = next;
-        this.roleArn = Objects.requireNonNull(roleArn);
-        this.thingName = Objects.requireNonNull(thingName);
+        this.roleArn = roleArn;
+        this.thingName = thingName;
     }
 
     public String getAttribute() {

@@ -62,14 +62,14 @@ public final class GetWorkerPoolResult {
         String state,
         String updateTime,
         WorkerConfigResponse workerConfig) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.deleteTime = Objects.requireNonNull(deleteTime);
-        this.name = Objects.requireNonNull(name);
-        this.networkConfig = Objects.requireNonNull(networkConfig);
-        this.region = Objects.requireNonNull(region);
-        this.state = Objects.requireNonNull(state);
-        this.updateTime = Objects.requireNonNull(updateTime);
-        this.workerConfig = Objects.requireNonNull(workerConfig);
+        this.createTime = createTime;
+        this.deleteTime = deleteTime;
+        this.name = name;
+        this.networkConfig = networkConfig;
+        this.region = region;
+        this.state = state;
+        this.updateTime = updateTime;
+        this.workerConfig = workerConfig;
     }
 
     /**

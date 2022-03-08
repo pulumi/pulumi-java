@@ -31,10 +31,10 @@ public final class TopicRuleTimestreamAction {
         String tableName,
         @Nullable TopicRuleTimestreamTimestamp timestamp) {
         this.batchMode = batchMode;
-        this.databaseName = Objects.requireNonNull(databaseName);
-        this.dimensions = Objects.requireNonNull(dimensions);
-        this.roleArn = Objects.requireNonNull(roleArn);
-        this.tableName = Objects.requireNonNull(tableName);
+        this.databaseName = databaseName;
+        this.dimensions = dimensions;
+        this.roleArn = roleArn;
+        this.tableName = tableName;
         this.timestamp = timestamp;
     }
 

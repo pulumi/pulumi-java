@@ -35,8 +35,8 @@ public final class UserAuthenticationMode {
         List<String> passwords,
         String type) {
         this.passwordCount = passwordCount;
-        this.passwords = Objects.requireNonNull(passwords);
-        this.type = Objects.requireNonNull(type);
+        this.passwords = passwords;
+        this.type = type;
     }
 
     /**

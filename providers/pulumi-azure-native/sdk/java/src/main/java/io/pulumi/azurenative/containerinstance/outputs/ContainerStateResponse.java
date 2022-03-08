@@ -43,11 +43,11 @@ public final class ContainerStateResponse {
         String finishTime,
         String startTime,
         String state) {
-        this.detailStatus = Objects.requireNonNull(detailStatus);
-        this.exitCode = Objects.requireNonNull(exitCode);
-        this.finishTime = Objects.requireNonNull(finishTime);
-        this.startTime = Objects.requireNonNull(startTime);
-        this.state = Objects.requireNonNull(state);
+        this.detailStatus = detailStatus;
+        this.exitCode = exitCode;
+        this.finishTime = finishTime;
+        this.startTime = startTime;
+        this.state = state;
     }
 
     /**

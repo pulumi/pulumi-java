@@ -103,20 +103,20 @@ public final class GetRegionUrlMapResult {
         String region,
         String selfLink,
         List<UrlMapTestResponse> tests) {
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.defaultRouteAction = Objects.requireNonNull(defaultRouteAction);
-        this.defaultService = Objects.requireNonNull(defaultService);
-        this.defaultUrlRedirect = Objects.requireNonNull(defaultUrlRedirect);
-        this.description = Objects.requireNonNull(description);
-        this.fingerprint = Objects.requireNonNull(fingerprint);
-        this.headerAction = Objects.requireNonNull(headerAction);
-        this.hostRules = Objects.requireNonNull(hostRules);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.pathMatchers = Objects.requireNonNull(pathMatchers);
-        this.region = Objects.requireNonNull(region);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.tests = Objects.requireNonNull(tests);
+        this.creationTimestamp = creationTimestamp;
+        this.defaultRouteAction = defaultRouteAction;
+        this.defaultService = defaultService;
+        this.defaultUrlRedirect = defaultUrlRedirect;
+        this.description = description;
+        this.fingerprint = fingerprint;
+        this.headerAction = headerAction;
+        this.hostRules = hostRules;
+        this.kind = kind;
+        this.name = name;
+        this.pathMatchers = pathMatchers;
+        this.region = region;
+        this.selfLink = selfLink;
+        this.tests = tests;
     }
 
     /**

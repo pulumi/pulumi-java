@@ -34,8 +34,8 @@ public final class GetPipelineDefinitionPipelineObject {
         String id,
         String name) {
         this.fields = fields;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
     }
 
     /**

@@ -27,7 +27,7 @@ public final class StreamingPolicyFairPlayConfigurationResponse {
     private StreamingPolicyFairPlayConfigurationResponse(
         Boolean allowPersistentLicense,
         @Nullable String customLicenseAcquisitionUrlTemplate) {
-        this.allowPersistentLicense = Objects.requireNonNull(allowPersistentLicense);
+        this.allowPersistentLicense = allowPersistentLicense;
         this.customLicenseAcquisitionUrlTemplate = customLicenseAcquisitionUrlTemplate;
     }
 

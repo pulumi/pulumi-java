@@ -20,8 +20,8 @@ public final class StateMachineS3Location {
         String bucket,
         String key,
         @Nullable String version) {
-        this.bucket = Objects.requireNonNull(bucket);
-        this.key = Objects.requireNonNull(key);
+        this.bucket = bucket;
+        this.key = key;
         this.version = version;
     }
 

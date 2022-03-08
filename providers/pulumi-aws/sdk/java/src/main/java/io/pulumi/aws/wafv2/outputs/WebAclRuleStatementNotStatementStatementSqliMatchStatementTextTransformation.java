@@ -25,8 +25,8 @@ public final class WebAclRuleStatementNotStatementStatementSqliMatchStatementTex
     private WebAclRuleStatementNotStatementStatementSqliMatchStatementTextTransformation(
         Integer priority,
         String type) {
-        this.priority = Objects.requireNonNull(priority);
-        this.type = Objects.requireNonNull(type);
+        this.priority = priority;
+        this.type = type;
     }
 
     /**

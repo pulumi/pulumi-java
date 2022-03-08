@@ -48,9 +48,9 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFile {
         String state) {
         this.content = content;
         this.file = file;
-        this.path = Objects.requireNonNull(path);
+        this.path = path;
         this.permissions = permissions;
-        this.state = Objects.requireNonNull(state);
+        this.state = state;
     }
 
     /**

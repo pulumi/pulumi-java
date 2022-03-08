@@ -25,8 +25,8 @@ public final class GooglePrivacyDlpV2LikelihoodAdjustmentResponse {
     private GooglePrivacyDlpV2LikelihoodAdjustmentResponse(
         String fixedLikelihood,
         Integer relativeLikelihood) {
-        this.fixedLikelihood = Objects.requireNonNull(fixedLikelihood);
-        this.relativeLikelihood = Objects.requireNonNull(relativeLikelihood);
+        this.fixedLikelihood = fixedLikelihood;
+        this.relativeLikelihood = relativeLikelihood;
     }
 
     /**

@@ -131,7 +131,7 @@ public final class ApplicationGatewayBackendHttpSettingsResponse {
         this.authenticationCertificates = authenticationCertificates;
         this.connectionDraining = connectionDraining;
         this.cookieBasedAffinity = cookieBasedAffinity;
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.hostName = hostName;
         this.id = id;
         this.name = name;
@@ -141,10 +141,10 @@ public final class ApplicationGatewayBackendHttpSettingsResponse {
         this.probe = probe;
         this.probeEnabled = probeEnabled;
         this.protocol = protocol;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.requestTimeout = requestTimeout;
         this.trustedRootCertificates = trustedRootCertificates;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

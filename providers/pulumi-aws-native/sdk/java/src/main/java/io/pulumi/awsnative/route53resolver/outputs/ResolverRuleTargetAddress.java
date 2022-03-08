@@ -26,7 +26,7 @@ public final class ResolverRuleTargetAddress {
     private ResolverRuleTargetAddress(
         String ip,
         @Nullable String port) {
-        this.ip = Objects.requireNonNull(ip);
+        this.ip = ip;
         this.port = port;
     }
 

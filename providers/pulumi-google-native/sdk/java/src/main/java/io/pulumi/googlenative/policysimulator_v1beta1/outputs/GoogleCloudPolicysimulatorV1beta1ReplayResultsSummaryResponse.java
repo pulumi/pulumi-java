@@ -49,12 +49,12 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse
         GoogleTypeDateResponse newestDate,
         GoogleTypeDateResponse oldestDate,
         Integer unchangedCount) {
-        this.differenceCount = Objects.requireNonNull(differenceCount);
-        this.errorCount = Objects.requireNonNull(errorCount);
-        this.logCount = Objects.requireNonNull(logCount);
-        this.newestDate = Objects.requireNonNull(newestDate);
-        this.oldestDate = Objects.requireNonNull(oldestDate);
-        this.unchangedCount = Objects.requireNonNull(unchangedCount);
+        this.differenceCount = differenceCount;
+        this.errorCount = errorCount;
+        this.logCount = logCount;
+        this.newestDate = newestDate;
+        this.oldestDate = oldestDate;
+        this.unchangedCount = unchangedCount;
     }
 
     /**

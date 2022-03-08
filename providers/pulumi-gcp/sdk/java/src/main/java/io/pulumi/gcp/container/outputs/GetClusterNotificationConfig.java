@@ -14,7 +14,7 @@ public final class GetClusterNotificationConfig {
 
     @OutputCustomType.Constructor({"pubsubs"})
     private GetClusterNotificationConfig(List<GetClusterNotificationConfigPubsub> pubsubs) {
-        this.pubsubs = Objects.requireNonNull(pubsubs);
+        this.pubsubs = pubsubs;
     }
 
     public List<GetClusterNotificationConfigPubsub> getPubsubs() {

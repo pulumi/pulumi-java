@@ -27,7 +27,7 @@ public final class MetricIdentifier {
     private MetricIdentifier(
         String name,
         @Nullable LabelSelector selector) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.selector = selector;
     }
 

@@ -36,7 +36,7 @@ public final class GroupMembershipMemberKey {
     private GroupMembershipMemberKey(
         String id,
         @Nullable String namespace) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.namespace = namespace;
     }
 

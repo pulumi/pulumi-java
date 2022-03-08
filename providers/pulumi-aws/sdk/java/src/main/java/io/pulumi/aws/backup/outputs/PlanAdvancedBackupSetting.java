@@ -25,8 +25,8 @@ public final class PlanAdvancedBackupSetting {
     private PlanAdvancedBackupSetting(
         Map<String,String> backupOptions,
         String resourceType) {
-        this.backupOptions = Objects.requireNonNull(backupOptions);
-        this.resourceType = Objects.requireNonNull(resourceType);
+        this.backupOptions = backupOptions;
+        this.resourceType = resourceType;
     }
 
     /**

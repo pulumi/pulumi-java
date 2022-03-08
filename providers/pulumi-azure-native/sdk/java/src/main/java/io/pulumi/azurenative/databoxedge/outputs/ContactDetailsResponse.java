@@ -37,10 +37,10 @@ public final class ContactDetailsResponse {
         String contactPerson,
         List<String> emailList,
         String phone) {
-        this.companyName = Objects.requireNonNull(companyName);
-        this.contactPerson = Objects.requireNonNull(contactPerson);
-        this.emailList = Objects.requireNonNull(emailList);
-        this.phone = Objects.requireNonNull(phone);
+        this.companyName = companyName;
+        this.contactPerson = contactPerson;
+        this.emailList = emailList;
+        this.phone = phone;
     }
 
     /**

@@ -24,8 +24,8 @@ public final class CaPoolIssuancePolicyAllowedIssuanceModes {
     private CaPoolIssuancePolicyAllowedIssuanceModes(
         Boolean allowConfigBasedIssuance,
         Boolean allowCsrBasedIssuance) {
-        this.allowConfigBasedIssuance = Objects.requireNonNull(allowConfigBasedIssuance);
-        this.allowCsrBasedIssuance = Objects.requireNonNull(allowCsrBasedIssuance);
+        this.allowConfigBasedIssuance = allowConfigBasedIssuance;
+        this.allowCsrBasedIssuance = allowCsrBasedIssuance;
     }
 
     /**

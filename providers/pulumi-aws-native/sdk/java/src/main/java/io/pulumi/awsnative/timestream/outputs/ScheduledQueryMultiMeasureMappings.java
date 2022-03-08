@@ -20,7 +20,7 @@ public final class ScheduledQueryMultiMeasureMappings {
     private ScheduledQueryMultiMeasureMappings(
         List<ScheduledQueryMultiMeasureAttributeMapping> multiMeasureAttributeMappings,
         @Nullable String targetMultiMeasureName) {
-        this.multiMeasureAttributeMappings = Objects.requireNonNull(multiMeasureAttributeMappings);
+        this.multiMeasureAttributeMappings = multiMeasureAttributeMappings;
         this.targetMultiMeasureName = targetMultiMeasureName;
     }
 

@@ -31,9 +31,9 @@ public final class StackTraceElementResponse {
         PositionResponse position,
         String routine,
         String step) {
-        this.position = Objects.requireNonNull(position);
-        this.routine = Objects.requireNonNull(routine);
-        this.step = Objects.requireNonNull(step);
+        this.position = position;
+        this.routine = routine;
+        this.step = step;
     }
 
     /**

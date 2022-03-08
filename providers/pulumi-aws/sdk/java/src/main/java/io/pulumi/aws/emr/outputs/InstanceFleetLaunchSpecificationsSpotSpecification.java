@@ -39,10 +39,10 @@ public final class InstanceFleetLaunchSpecificationsSpotSpecification {
         @Nullable Integer blockDurationMinutes,
         String timeoutAction,
         Integer timeoutDurationMinutes) {
-        this.allocationStrategy = Objects.requireNonNull(allocationStrategy);
+        this.allocationStrategy = allocationStrategy;
         this.blockDurationMinutes = blockDurationMinutes;
-        this.timeoutAction = Objects.requireNonNull(timeoutAction);
-        this.timeoutDurationMinutes = Objects.requireNonNull(timeoutDurationMinutes);
+        this.timeoutAction = timeoutAction;
+        this.timeoutDurationMinutes = timeoutDurationMinutes;
     }
 
     /**

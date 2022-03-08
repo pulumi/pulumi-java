@@ -33,9 +33,9 @@ public final class NamedPartitionSchemeDescriptionResponse {
         Integer count,
         List<String> names,
         String partitionScheme) {
-        this.count = Objects.requireNonNull(count);
-        this.names = Objects.requireNonNull(names);
-        this.partitionScheme = Objects.requireNonNull(partitionScheme);
+        this.count = count;
+        this.names = names;
+        this.partitionScheme = partitionScheme;
     }
 
     /**

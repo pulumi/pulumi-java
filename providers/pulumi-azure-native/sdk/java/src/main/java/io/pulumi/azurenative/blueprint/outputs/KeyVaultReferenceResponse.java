@@ -17,7 +17,7 @@ public final class KeyVaultReferenceResponse {
 
     @OutputCustomType.Constructor({"id"})
     private KeyVaultReferenceResponse(String id) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
     }
 
     /**

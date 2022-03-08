@@ -31,9 +31,9 @@ public final class PushFilterResponse {
         String branch,
         Boolean invertRegex,
         String tag) {
-        this.branch = Objects.requireNonNull(branch);
-        this.invertRegex = Objects.requireNonNull(invertRegex);
-        this.tag = Objects.requireNonNull(tag);
+        this.branch = branch;
+        this.invertRegex = invertRegex;
+        this.tag = tag;
     }
 
     /**

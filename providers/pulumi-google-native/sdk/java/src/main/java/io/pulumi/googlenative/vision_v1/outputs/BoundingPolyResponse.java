@@ -26,8 +26,8 @@ public final class BoundingPolyResponse {
     private BoundingPolyResponse(
         List<NormalizedVertexResponse> normalizedVertices,
         List<VertexResponse> vertices) {
-        this.normalizedVertices = Objects.requireNonNull(normalizedVertices);
-        this.vertices = Objects.requireNonNull(vertices);
+        this.normalizedVertices = normalizedVertices;
+        this.vertices = vertices;
     }
 
     /**

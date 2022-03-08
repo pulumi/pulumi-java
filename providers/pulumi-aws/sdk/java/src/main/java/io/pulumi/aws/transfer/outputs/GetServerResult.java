@@ -87,19 +87,19 @@ public final class GetServerResult {
         String securityPolicyName,
         String serverId,
         String url) {
-        this.arn = Objects.requireNonNull(arn);
-        this.certificate = Objects.requireNonNull(certificate);
-        this.domain = Objects.requireNonNull(domain);
-        this.endpoint = Objects.requireNonNull(endpoint);
-        this.endpointType = Objects.requireNonNull(endpointType);
-        this.id = Objects.requireNonNull(id);
-        this.identityProviderType = Objects.requireNonNull(identityProviderType);
-        this.invocationRole = Objects.requireNonNull(invocationRole);
-        this.loggingRole = Objects.requireNonNull(loggingRole);
-        this.protocols = Objects.requireNonNull(protocols);
-        this.securityPolicyName = Objects.requireNonNull(securityPolicyName);
-        this.serverId = Objects.requireNonNull(serverId);
-        this.url = Objects.requireNonNull(url);
+        this.arn = arn;
+        this.certificate = certificate;
+        this.domain = domain;
+        this.endpoint = endpoint;
+        this.endpointType = endpointType;
+        this.id = id;
+        this.identityProviderType = identityProviderType;
+        this.invocationRole = invocationRole;
+        this.loggingRole = loggingRole;
+        this.protocols = protocols;
+        this.securityPolicyName = securityPolicyName;
+        this.serverId = serverId;
+        this.url = url;
     }
 
     /**

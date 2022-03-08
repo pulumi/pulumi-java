@@ -80,16 +80,16 @@ public final class GetServiceResult {
         String name,
         TelemetryResponse telemetry,
         Map<String,String> userLabels) {
-        this.appEngine = Objects.requireNonNull(appEngine);
-        this.cloudEndpoints = Objects.requireNonNull(cloudEndpoints);
-        this.clusterIstio = Objects.requireNonNull(clusterIstio);
-        this.custom = Objects.requireNonNull(custom);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.istioCanonicalService = Objects.requireNonNull(istioCanonicalService);
-        this.meshIstio = Objects.requireNonNull(meshIstio);
-        this.name = Objects.requireNonNull(name);
-        this.telemetry = Objects.requireNonNull(telemetry);
-        this.userLabels = Objects.requireNonNull(userLabels);
+        this.appEngine = appEngine;
+        this.cloudEndpoints = cloudEndpoints;
+        this.clusterIstio = clusterIstio;
+        this.custom = custom;
+        this.displayName = displayName;
+        this.istioCanonicalService = istioCanonicalService;
+        this.meshIstio = meshIstio;
+        this.name = name;
+        this.telemetry = telemetry;
+        this.userLabels = userLabels;
     }
 
     /**

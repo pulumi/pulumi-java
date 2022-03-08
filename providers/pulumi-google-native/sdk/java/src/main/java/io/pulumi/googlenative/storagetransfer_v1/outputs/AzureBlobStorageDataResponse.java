@@ -37,10 +37,10 @@ public final class AzureBlobStorageDataResponse {
         String container,
         String path,
         String storageAccount) {
-        this.azureCredentials = Objects.requireNonNull(azureCredentials);
-        this.container = Objects.requireNonNull(container);
-        this.path = Objects.requireNonNull(path);
-        this.storageAccount = Objects.requireNonNull(storageAccount);
+        this.azureCredentials = azureCredentials;
+        this.container = container;
+        this.path = path;
+        this.storageAccount = storageAccount;
     }
 
     /**

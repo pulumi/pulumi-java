@@ -32,8 +32,8 @@ public final class ExportDeliveryDestinationResponse {
         String container,
         String resourceId,
         @Nullable String rootFolderPath) {
-        this.container = Objects.requireNonNull(container);
-        this.resourceId = Objects.requireNonNull(resourceId);
+        this.container = container;
+        this.resourceId = resourceId;
         this.rootFolderPath = rootFolderPath;
     }
 

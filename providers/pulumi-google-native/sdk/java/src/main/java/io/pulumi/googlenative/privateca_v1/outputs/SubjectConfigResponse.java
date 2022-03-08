@@ -25,8 +25,8 @@ public final class SubjectConfigResponse {
     private SubjectConfigResponse(
         SubjectResponse subject,
         SubjectAltNamesResponse subjectAltName) {
-        this.subject = Objects.requireNonNull(subject);
-        this.subjectAltName = Objects.requireNonNull(subjectAltName);
+        this.subject = subject;
+        this.subjectAltName = subjectAltName;
     }
 
     /**

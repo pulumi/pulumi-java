@@ -24,8 +24,8 @@ public final class PublicKeyCredentialResponse {
     private PublicKeyCredentialResponse(
         String format,
         String key) {
-        this.format = Objects.requireNonNull(format);
-        this.key = Objects.requireNonNull(key);
+        this.format = format;
+        this.key = key;
     }
 
     /**

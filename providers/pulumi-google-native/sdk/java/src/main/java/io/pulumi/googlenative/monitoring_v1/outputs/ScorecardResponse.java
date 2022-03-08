@@ -40,10 +40,10 @@ public final class ScorecardResponse {
         SparkChartViewResponse sparkChartView,
         List<ThresholdResponse> thresholds,
         TimeSeriesQueryResponse timeSeriesQuery) {
-        this.gaugeView = Objects.requireNonNull(gaugeView);
-        this.sparkChartView = Objects.requireNonNull(sparkChartView);
-        this.thresholds = Objects.requireNonNull(thresholds);
-        this.timeSeriesQuery = Objects.requireNonNull(timeSeriesQuery);
+        this.gaugeView = gaugeView;
+        this.sparkChartView = sparkChartView;
+        this.thresholds = thresholds;
+        this.timeSeriesQuery = timeSeriesQuery;
     }
 
     /**

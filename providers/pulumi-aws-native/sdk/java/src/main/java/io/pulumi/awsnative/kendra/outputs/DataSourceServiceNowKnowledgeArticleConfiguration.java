@@ -32,7 +32,7 @@ public final class DataSourceServiceNowKnowledgeArticleConfiguration {
         @Nullable String filterQuery,
         @Nullable List<String> includeAttachmentFilePatterns) {
         this.crawlAttachments = crawlAttachments;
-        this.documentDataFieldName = Objects.requireNonNull(documentDataFieldName);
+        this.documentDataFieldName = documentDataFieldName;
         this.documentTitleFieldName = documentTitleFieldName;
         this.excludeAttachmentFilePatterns = excludeAttachmentFilePatterns;
         this.fieldMappings = fieldMappings;

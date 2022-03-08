@@ -131,25 +131,25 @@ public final class GetAuthorizationServerResult {
         @Nullable List<TokenBodyParameterContractResponse> tokenBodyParameters,
         @Nullable String tokenEndpoint,
         String type) {
-        this.authorizationEndpoint = Objects.requireNonNull(authorizationEndpoint);
+        this.authorizationEndpoint = authorizationEndpoint;
         this.authorizationMethods = authorizationMethods;
         this.bearerTokenSendingMethods = bearerTokenSendingMethods;
         this.clientAuthenticationMethod = clientAuthenticationMethod;
-        this.clientId = Objects.requireNonNull(clientId);
-        this.clientRegistrationEndpoint = Objects.requireNonNull(clientRegistrationEndpoint);
+        this.clientId = clientId;
+        this.clientRegistrationEndpoint = clientRegistrationEndpoint;
         this.clientSecret = clientSecret;
         this.defaultScope = defaultScope;
         this.description = description;
-        this.displayName = Objects.requireNonNull(displayName);
-        this.grantTypes = Objects.requireNonNull(grantTypes);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.displayName = displayName;
+        this.grantTypes = grantTypes;
+        this.id = id;
+        this.name = name;
         this.resourceOwnerPassword = resourceOwnerPassword;
         this.resourceOwnerUsername = resourceOwnerUsername;
         this.supportState = supportState;
         this.tokenBodyParameters = tokenBodyParameters;
         this.tokenEndpoint = tokenEndpoint;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

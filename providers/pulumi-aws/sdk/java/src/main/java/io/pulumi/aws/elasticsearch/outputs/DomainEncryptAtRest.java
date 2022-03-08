@@ -27,7 +27,7 @@ public final class DomainEncryptAtRest {
     private DomainEncryptAtRest(
         Boolean enabled,
         @Nullable String kmsKeyId) {
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
         this.kmsKeyId = kmsKeyId;
     }
 

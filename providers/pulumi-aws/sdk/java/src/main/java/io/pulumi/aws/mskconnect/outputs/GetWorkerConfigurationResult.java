@@ -45,12 +45,12 @@ public final class GetWorkerConfigurationResult {
         Integer latestRevision,
         String name,
         String propertiesFileContent) {
-        this.arn = Objects.requireNonNull(arn);
-        this.description = Objects.requireNonNull(description);
-        this.id = Objects.requireNonNull(id);
-        this.latestRevision = Objects.requireNonNull(latestRevision);
-        this.name = Objects.requireNonNull(name);
-        this.propertiesFileContent = Objects.requireNonNull(propertiesFileContent);
+        this.arn = arn;
+        this.description = description;
+        this.id = id;
+        this.latestRevision = latestRevision;
+        this.name = name;
+        this.propertiesFileContent = propertiesFileContent;
     }
 
     /**

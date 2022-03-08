@@ -18,8 +18,8 @@ public final class GetOrganizationPolicyListPolicyDeny {
     private GetOrganizationPolicyListPolicyDeny(
         Boolean all,
         List<String> values) {
-        this.all = Objects.requireNonNull(all);
-        this.values = Objects.requireNonNull(values);
+        this.all = all;
+        this.values = values;
     }
 
     public Boolean getAll() {

@@ -17,7 +17,7 @@ public final class GetUserSettingsWithLocationResult {
 
     @OutputCustomType.Constructor({"properties"})
     private GetUserSettingsWithLocationResult(UserPropertiesResponse properties) {
-        this.properties = Objects.requireNonNull(properties);
+        this.properties = properties;
     }
 
     /**

@@ -262,7 +262,7 @@ public final class InMageReplicationDetailsResponse {
         this.discoveryType = discoveryType;
         this.diskResized = diskResized;
         this.infrastructureVmId = infrastructureVmId;
-        this.instanceType = Objects.requireNonNull(instanceType);
+        this.instanceType = instanceType;
         this.ipAddress = ipAddress;
         this.lastHeartbeat = lastHeartbeat;
         this.lastRpoCalculatedTime = lastRpoCalculatedTime;

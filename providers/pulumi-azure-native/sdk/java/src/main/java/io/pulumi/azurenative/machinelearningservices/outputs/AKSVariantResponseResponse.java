@@ -79,14 +79,14 @@ public final class AKSVariantResponseResponse {
         String state,
         @Nullable Double trafficPercentile,
         @Nullable String type) {
-        this.computeType = Objects.requireNonNull(computeType);
+        this.computeType = computeType;
         this.deploymentType = deploymentType;
         this.description = description;
-        this.error = Objects.requireNonNull(error);
+        this.error = error;
         this.isDefault = isDefault;
         this.kvTags = kvTags;
         this.properties = properties;
-        this.state = Objects.requireNonNull(state);
+        this.state = state;
         this.trafficPercentile = trafficPercentile;
         this.type = type;
     }

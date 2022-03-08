@@ -82,13 +82,13 @@ public final class GetTemplateArtifactResult {
         this.dependsOn = dependsOn;
         this.description = description;
         this.displayName = displayName;
-        this.id = Objects.requireNonNull(id);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.parameters = Objects.requireNonNull(parameters);
+        this.id = id;
+        this.kind = kind;
+        this.name = name;
+        this.parameters = parameters;
         this.resourceGroup = resourceGroup;
-        this.template = Objects.requireNonNull(template);
-        this.type = Objects.requireNonNull(type);
+        this.template = template;
+        this.type = type;
     }
 
     /**

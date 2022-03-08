@@ -87,10 +87,10 @@ public final class AzureClusterControlPlane {
         this.proxyConfig = proxyConfig;
         this.replicaPlacements = replicaPlacements;
         this.rootVolume = rootVolume;
-        this.sshConfig = Objects.requireNonNull(sshConfig);
-        this.subnetId = Objects.requireNonNull(subnetId);
+        this.sshConfig = sshConfig;
+        this.subnetId = subnetId;
         this.tags = tags;
-        this.version = Objects.requireNonNull(version);
+        this.version = version;
         this.vmSize = vmSize;
     }
 

@@ -91,22 +91,22 @@ public final class GetVpcResult {
         String ownerId,
         String state,
         Map<String,String> tags) {
-        this.arn = Objects.requireNonNull(arn);
-        this.cidrBlock = Objects.requireNonNull(cidrBlock);
-        this.cidrBlockAssociations = Objects.requireNonNull(cidrBlockAssociations);
-        this.$default = Objects.requireNonNull($default);
-        this.dhcpOptionsId = Objects.requireNonNull(dhcpOptionsId);
-        this.enableDnsHostnames = Objects.requireNonNull(enableDnsHostnames);
-        this.enableDnsSupport = Objects.requireNonNull(enableDnsSupport);
+        this.arn = arn;
+        this.cidrBlock = cidrBlock;
+        this.cidrBlockAssociations = cidrBlockAssociations;
+        this.$default = $default;
+        this.dhcpOptionsId = dhcpOptionsId;
+        this.enableDnsHostnames = enableDnsHostnames;
+        this.enableDnsSupport = enableDnsSupport;
         this.filters = filters;
-        this.id = Objects.requireNonNull(id);
-        this.instanceTenancy = Objects.requireNonNull(instanceTenancy);
-        this.ipv6AssociationId = Objects.requireNonNull(ipv6AssociationId);
-        this.ipv6CidrBlock = Objects.requireNonNull(ipv6CidrBlock);
-        this.mainRouteTableId = Objects.requireNonNull(mainRouteTableId);
-        this.ownerId = Objects.requireNonNull(ownerId);
-        this.state = Objects.requireNonNull(state);
-        this.tags = Objects.requireNonNull(tags);
+        this.id = id;
+        this.instanceTenancy = instanceTenancy;
+        this.ipv6AssociationId = ipv6AssociationId;
+        this.ipv6CidrBlock = ipv6CidrBlock;
+        this.mainRouteTableId = mainRouteTableId;
+        this.ownerId = ownerId;
+        this.state = state;
+        this.tags = tags;
     }
 
     /**

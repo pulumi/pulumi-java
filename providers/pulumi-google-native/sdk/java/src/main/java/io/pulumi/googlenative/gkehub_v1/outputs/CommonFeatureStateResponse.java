@@ -25,8 +25,8 @@ public final class CommonFeatureStateResponse {
     private CommonFeatureStateResponse(
         AppDevExperienceFeatureStateResponse appdevexperience,
         FeatureStateResponse state) {
-        this.appdevexperience = Objects.requireNonNull(appdevexperience);
-        this.state = Objects.requireNonNull(state);
+        this.appdevexperience = appdevexperience;
+        this.state = state;
     }
 
     /**

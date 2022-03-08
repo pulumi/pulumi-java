@@ -19,7 +19,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionar
 
     @OutputCustomType.Constructor({"words"})
     private PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordList(List<String> words) {
-        this.words = Objects.requireNonNull(words);
+        this.words = words;
     }
 
     /**

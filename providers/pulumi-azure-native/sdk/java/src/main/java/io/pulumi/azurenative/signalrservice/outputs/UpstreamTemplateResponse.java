@@ -54,7 +54,7 @@ public final class UpstreamTemplateResponse {
         this.categoryPattern = categoryPattern;
         this.eventPattern = eventPattern;
         this.hubPattern = hubPattern;
-        this.urlTemplate = Objects.requireNonNull(urlTemplate);
+        this.urlTemplate = urlTemplate;
     }
 
     /**

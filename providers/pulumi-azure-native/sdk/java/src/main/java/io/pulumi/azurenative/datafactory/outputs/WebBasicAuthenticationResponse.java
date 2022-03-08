@@ -41,10 +41,10 @@ public final class WebBasicAuthenticationResponse {
         Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
         Object url,
         Object username) {
-        this.authenticationType = Objects.requireNonNull(authenticationType);
-        this.password = Objects.requireNonNull(password);
-        this.url = Objects.requireNonNull(url);
-        this.username = Objects.requireNonNull(username);
+        this.authenticationType = authenticationType;
+        this.password = password;
+        this.url = url;
+        this.username = username;
     }
 
     /**

@@ -18,7 +18,7 @@ public final class GooglePrivacyDlpV2KAnonymityResultResponse {
 
     @OutputCustomType.Constructor({"equivalenceClassHistogramBuckets"})
     private GooglePrivacyDlpV2KAnonymityResultResponse(List<GooglePrivacyDlpV2KAnonymityHistogramBucketResponse> equivalenceClassHistogramBuckets) {
-        this.equivalenceClassHistogramBuckets = Objects.requireNonNull(equivalenceClassHistogramBuckets);
+        this.equivalenceClassHistogramBuckets = equivalenceClassHistogramBuckets;
     }
 
     /**

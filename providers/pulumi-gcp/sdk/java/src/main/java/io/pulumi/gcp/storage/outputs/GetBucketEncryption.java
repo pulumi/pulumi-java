@@ -13,7 +13,7 @@ public final class GetBucketEncryption {
 
     @OutputCustomType.Constructor({"defaultKmsKeyName"})
     private GetBucketEncryption(String defaultKmsKeyName) {
-        this.defaultKmsKeyName = Objects.requireNonNull(defaultKmsKeyName);
+        this.defaultKmsKeyName = defaultKmsKeyName;
     }
 
     public String getDefaultKmsKeyName() {

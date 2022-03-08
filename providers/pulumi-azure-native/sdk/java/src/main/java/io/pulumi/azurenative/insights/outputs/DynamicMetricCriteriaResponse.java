@@ -85,17 +85,17 @@ public final class DynamicMetricCriteriaResponse {
         String operator,
         @Nullable Boolean skipMetricValidation,
         String timeAggregation) {
-        this.alertSensitivity = Objects.requireNonNull(alertSensitivity);
-        this.criterionType = Objects.requireNonNull(criterionType);
+        this.alertSensitivity = alertSensitivity;
+        this.criterionType = criterionType;
         this.dimensions = dimensions;
-        this.failingPeriods = Objects.requireNonNull(failingPeriods);
+        this.failingPeriods = failingPeriods;
         this.ignoreDataBefore = ignoreDataBefore;
-        this.metricName = Objects.requireNonNull(metricName);
+        this.metricName = metricName;
         this.metricNamespace = metricNamespace;
-        this.name = Objects.requireNonNull(name);
-        this.operator = Objects.requireNonNull(operator);
+        this.name = name;
+        this.operator = operator;
         this.skipMetricValidation = skipMetricValidation;
-        this.timeAggregation = Objects.requireNonNull(timeAggregation);
+        this.timeAggregation = timeAggregation;
     }
 
     /**

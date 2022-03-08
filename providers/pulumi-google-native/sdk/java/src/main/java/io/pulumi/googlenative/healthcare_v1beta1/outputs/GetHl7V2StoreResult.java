@@ -54,12 +54,12 @@ public final class GetHl7V2StoreResult {
         List<Hl7V2NotificationConfigResponse> notificationConfigs,
         ParserConfigResponse parserConfig,
         Boolean rejectDuplicateMessage) {
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.notificationConfig = Objects.requireNonNull(notificationConfig);
-        this.notificationConfigs = Objects.requireNonNull(notificationConfigs);
-        this.parserConfig = Objects.requireNonNull(parserConfig);
-        this.rejectDuplicateMessage = Objects.requireNonNull(rejectDuplicateMessage);
+        this.labels = labels;
+        this.name = name;
+        this.notificationConfig = notificationConfig;
+        this.notificationConfigs = notificationConfigs;
+        this.parserConfig = parserConfig;
+        this.rejectDuplicateMessage = rejectDuplicateMessage;
     }
 
     /**

@@ -171,27 +171,27 @@ public final class PublicIPAddressResponse {
         @Nullable List<String> zones) {
         this.ddosSettings = ddosSettings;
         this.dnsSettings = dnsSettings;
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.extendedLocation = extendedLocation;
         this.id = id;
         this.idleTimeoutInMinutes = idleTimeoutInMinutes;
         this.ipAddress = ipAddress;
-        this.ipConfiguration = Objects.requireNonNull(ipConfiguration);
+        this.ipConfiguration = ipConfiguration;
         this.ipTags = ipTags;
         this.linkedPublicIPAddress = linkedPublicIPAddress;
         this.location = location;
         this.migrationPhase = migrationPhase;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.natGateway = natGateway;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.publicIPAddressVersion = publicIPAddressVersion;
         this.publicIPAllocationMethod = publicIPAllocationMethod;
         this.publicIPPrefix = publicIPPrefix;
-        this.resourceGuid = Objects.requireNonNull(resourceGuid);
+        this.resourceGuid = resourceGuid;
         this.servicePublicIPAddress = servicePublicIPAddress;
         this.sku = sku;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.zones = zones;
     }
 

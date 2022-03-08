@@ -96,11 +96,11 @@ public final class AzureFunctionLinkedServiceResponse {
         this.credential = credential;
         this.description = description;
         this.encryptedCredential = encryptedCredential;
-        this.functionAppUrl = Objects.requireNonNull(functionAppUrl);
+        this.functionAppUrl = functionAppUrl;
         this.functionKey = functionKey;
         this.parameters = parameters;
         this.resourceId = resourceId;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

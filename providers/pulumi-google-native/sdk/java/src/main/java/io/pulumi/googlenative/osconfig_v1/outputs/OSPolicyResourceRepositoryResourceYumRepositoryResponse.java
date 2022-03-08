@@ -31,9 +31,9 @@ public final class OSPolicyResourceRepositoryResourceYumRepositoryResponse {
         String baseUrl,
         String displayName,
         List<String> gpgKeys) {
-        this.baseUrl = Objects.requireNonNull(baseUrl);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.gpgKeys = Objects.requireNonNull(gpgKeys);
+        this.baseUrl = baseUrl;
+        this.displayName = displayName;
+        this.gpgKeys = gpgKeys;
     }
 
     /**

@@ -16,8 +16,8 @@ public final class OpenZfsVolumeOriginSnapshot {
     private OpenZfsVolumeOriginSnapshot(
         String copyStrategy,
         String snapshotArn) {
-        this.copyStrategy = Objects.requireNonNull(copyStrategy);
-        this.snapshotArn = Objects.requireNonNull(snapshotArn);
+        this.copyStrategy = copyStrategy;
+        this.snapshotArn = snapshotArn;
     }
 
     public String getCopyStrategy() {

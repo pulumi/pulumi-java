@@ -24,8 +24,8 @@ public final class ConditionResponse {
     private ConditionResponse(
         String message,
         String timestamp) {
-        this.message = Objects.requireNonNull(message);
-        this.timestamp = Objects.requireNonNull(timestamp);
+        this.message = message;
+        this.timestamp = timestamp;
     }
 
     /**

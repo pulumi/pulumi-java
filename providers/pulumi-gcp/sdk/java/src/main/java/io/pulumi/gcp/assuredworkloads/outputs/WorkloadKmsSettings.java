@@ -24,8 +24,8 @@ public final class WorkloadKmsSettings {
     private WorkloadKmsSettings(
         String nextRotationTime,
         String rotationPeriod) {
-        this.nextRotationTime = Objects.requireNonNull(nextRotationTime);
-        this.rotationPeriod = Objects.requireNonNull(rotationPeriod);
+        this.nextRotationTime = nextRotationTime;
+        this.rotationPeriod = rotationPeriod;
     }
 
     /**

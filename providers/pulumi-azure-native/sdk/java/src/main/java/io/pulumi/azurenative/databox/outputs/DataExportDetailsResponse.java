@@ -36,9 +36,9 @@ public final class DataExportDetailsResponse {
         Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> accountDetails,
         @Nullable String logCollectionLevel,
         TransferConfigurationResponse transferConfiguration) {
-        this.accountDetails = Objects.requireNonNull(accountDetails);
+        this.accountDetails = accountDetails;
         this.logCollectionLevel = logCollectionLevel;
-        this.transferConfiguration = Objects.requireNonNull(transferConfiguration);
+        this.transferConfiguration = transferConfiguration;
     }
 
     /**

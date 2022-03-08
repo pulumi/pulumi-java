@@ -85,16 +85,16 @@ public final class OutboundRuleResponse {
         String provisioningState,
         String type) {
         this.allocatedOutboundPorts = allocatedOutboundPorts;
-        this.backendAddressPool = Objects.requireNonNull(backendAddressPool);
+        this.backendAddressPool = backendAddressPool;
         this.enableTcpReset = enableTcpReset;
-        this.etag = Objects.requireNonNull(etag);
-        this.frontendIPConfigurations = Objects.requireNonNull(frontendIPConfigurations);
+        this.etag = etag;
+        this.frontendIPConfigurations = frontendIPConfigurations;
         this.id = id;
         this.idleTimeoutInMinutes = idleTimeoutInMinutes;
         this.name = name;
-        this.protocol = Objects.requireNonNull(protocol);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.type = Objects.requireNonNull(type);
+        this.protocol = protocol;
+        this.provisioningState = provisioningState;
+        this.type = type;
     }
 
     /**

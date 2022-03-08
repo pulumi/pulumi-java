@@ -25,8 +25,8 @@ public final class EnvironmentStatusResponse {
     private EnvironmentStatusResponse(
         IngressEnvironmentStatusResponse ingress,
         WarmStorageEnvironmentStatusResponse warmStorage) {
-        this.ingress = Objects.requireNonNull(ingress);
-        this.warmStorage = Objects.requireNonNull(warmStorage);
+        this.ingress = ingress;
+        this.warmStorage = warmStorage;
     }
 
     /**

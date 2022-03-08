@@ -13,7 +13,7 @@ public final class GetUrlSuffixResult {
 
     @OutputCustomType.Constructor({"urlSuffix"})
     private GetUrlSuffixResult(String urlSuffix) {
-        this.urlSuffix = Objects.requireNonNull(urlSuffix);
+        this.urlSuffix = urlSuffix;
     }
 
     public String getUrlSuffix() {

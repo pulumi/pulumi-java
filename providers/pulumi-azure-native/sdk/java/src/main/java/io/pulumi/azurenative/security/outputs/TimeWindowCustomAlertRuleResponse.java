@@ -57,13 +57,13 @@ public final class TimeWindowCustomAlertRuleResponse {
         Integer minThreshold,
         String ruleType,
         String timeWindowSize) {
-        this.description = Objects.requireNonNull(description);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.isEnabled = Objects.requireNonNull(isEnabled);
-        this.maxThreshold = Objects.requireNonNull(maxThreshold);
-        this.minThreshold = Objects.requireNonNull(minThreshold);
-        this.ruleType = Objects.requireNonNull(ruleType);
-        this.timeWindowSize = Objects.requireNonNull(timeWindowSize);
+        this.description = description;
+        this.displayName = displayName;
+        this.isEnabled = isEnabled;
+        this.maxThreshold = maxThreshold;
+        this.minThreshold = minThreshold;
+        this.ruleType = ruleType;
+        this.timeWindowSize = timeWindowSize;
     }
 
     /**

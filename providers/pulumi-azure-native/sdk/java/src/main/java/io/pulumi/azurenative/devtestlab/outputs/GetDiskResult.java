@@ -112,22 +112,22 @@ public final class GetDiskResult {
         @Nullable Map<String,String> tags,
         String type,
         String uniqueIdentifier) {
-        this.createdDate = Objects.requireNonNull(createdDate);
+        this.createdDate = createdDate;
         this.diskBlobName = diskBlobName;
         this.diskSizeGiB = diskSizeGiB;
         this.diskType = diskType;
         this.diskUri = diskUri;
         this.hostCaching = hostCaching;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.leasedByLabVmId = leasedByLabVmId;
         this.location = location;
         this.managedDiskId = managedDiskId;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.storageAccountId = storageAccountId;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
-        this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
+        this.type = type;
+        this.uniqueIdentifier = uniqueIdentifier;
     }
 
     /**

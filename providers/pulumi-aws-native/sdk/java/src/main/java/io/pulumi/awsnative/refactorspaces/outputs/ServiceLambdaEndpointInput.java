@@ -13,7 +13,7 @@ public final class ServiceLambdaEndpointInput {
 
     @OutputCustomType.Constructor({"arn"})
     private ServiceLambdaEndpointInput(String arn) {
-        this.arn = Objects.requireNonNull(arn);
+        this.arn = arn;
     }
 
     public String getArn() {

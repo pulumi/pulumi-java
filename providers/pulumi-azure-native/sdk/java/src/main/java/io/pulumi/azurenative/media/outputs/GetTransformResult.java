@@ -65,14 +65,14 @@ public final class GetTransformResult {
         List<TransformOutputResponse> outputs,
         SystemDataResponse systemData,
         String type) {
-        this.created = Objects.requireNonNull(created);
+        this.created = created;
         this.description = description;
-        this.id = Objects.requireNonNull(id);
-        this.lastModified = Objects.requireNonNull(lastModified);
-        this.name = Objects.requireNonNull(name);
-        this.outputs = Objects.requireNonNull(outputs);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.id = id;
+        this.lastModified = lastModified;
+        this.name = name;
+        this.outputs = outputs;
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

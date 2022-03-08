@@ -18,7 +18,7 @@ public final class RuleGroupRuleStatementAndStatementStatementNotStatement {
 
     @OutputCustomType.Constructor({"statements"})
     private RuleGroupRuleStatementAndStatementStatementNotStatement(List<RuleGroupRuleStatementAndStatementStatementNotStatementStatement> statements) {
-        this.statements = Objects.requireNonNull(statements);
+        this.statements = statements;
     }
 
     /**

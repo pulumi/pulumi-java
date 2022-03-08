@@ -20,7 +20,7 @@ public final class StorageLensAccountLevel {
         @Nullable StorageLensActivityMetrics activityMetrics,
         StorageLensBucketLevel bucketLevel) {
         this.activityMetrics = activityMetrics;
-        this.bucketLevel = Objects.requireNonNull(bucketLevel);
+        this.bucketLevel = bucketLevel;
     }
 
     public Optional<StorageLensActivityMetrics> getActivityMetrics() {

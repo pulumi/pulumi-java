@@ -103,20 +103,20 @@ public final class GetWorkloadResult {
         List<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse> resourceSettings,
         List<GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse> resources,
         GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseResponse saaEnrollmentResponse) {
-        this.billingAccount = Objects.requireNonNull(billingAccount);
-        this.complianceRegime = Objects.requireNonNull(complianceRegime);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.enableSovereignControls = Objects.requireNonNull(enableSovereignControls);
-        this.etag = Objects.requireNonNull(etag);
-        this.kajEnrollmentState = Objects.requireNonNull(kajEnrollmentState);
-        this.kmsSettings = Objects.requireNonNull(kmsSettings);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.provisionedResourcesParent = Objects.requireNonNull(provisionedResourcesParent);
-        this.resourceSettings = Objects.requireNonNull(resourceSettings);
-        this.resources = Objects.requireNonNull(resources);
-        this.saaEnrollmentResponse = Objects.requireNonNull(saaEnrollmentResponse);
+        this.billingAccount = billingAccount;
+        this.complianceRegime = complianceRegime;
+        this.createTime = createTime;
+        this.displayName = displayName;
+        this.enableSovereignControls = enableSovereignControls;
+        this.etag = etag;
+        this.kajEnrollmentState = kajEnrollmentState;
+        this.kmsSettings = kmsSettings;
+        this.labels = labels;
+        this.name = name;
+        this.provisionedResourcesParent = provisionedResourcesParent;
+        this.resourceSettings = resourceSettings;
+        this.resources = resources;
+        this.saaEnrollmentResponse = saaEnrollmentResponse;
     }
 
     /**

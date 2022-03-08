@@ -27,7 +27,7 @@ public final class ReportConfigSortingResponse {
         @Nullable String direction,
         String name) {
         this.direction = direction;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

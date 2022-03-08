@@ -78,17 +78,17 @@ public final class GetVpcDhcpOptionsResult {
         List<String> ntpServers,
         String ownerId,
         Map<String,String> tags) {
-        this.arn = Objects.requireNonNull(arn);
-        this.dhcpOptionsId = Objects.requireNonNull(dhcpOptionsId);
-        this.domainName = Objects.requireNonNull(domainName);
-        this.domainNameServers = Objects.requireNonNull(domainNameServers);
+        this.arn = arn;
+        this.dhcpOptionsId = dhcpOptionsId;
+        this.domainName = domainName;
+        this.domainNameServers = domainNameServers;
         this.filters = filters;
-        this.id = Objects.requireNonNull(id);
-        this.netbiosNameServers = Objects.requireNonNull(netbiosNameServers);
-        this.netbiosNodeType = Objects.requireNonNull(netbiosNodeType);
-        this.ntpServers = Objects.requireNonNull(ntpServers);
-        this.ownerId = Objects.requireNonNull(ownerId);
-        this.tags = Objects.requireNonNull(tags);
+        this.id = id;
+        this.netbiosNameServers = netbiosNameServers;
+        this.netbiosNodeType = netbiosNodeType;
+        this.ntpServers = ntpServers;
+        this.ownerId = ownerId;
+        this.tags = tags;
     }
 
     /**

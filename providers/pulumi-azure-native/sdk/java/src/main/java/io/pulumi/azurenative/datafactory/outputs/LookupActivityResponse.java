@@ -177,15 +177,15 @@ public final class LookupActivityResponse {
         Object source,
         String type,
         @Nullable List<UserPropertyResponse> userProperties) {
-        this.dataset = Objects.requireNonNull(dataset);
+        this.dataset = dataset;
         this.dependsOn = dependsOn;
         this.description = description;
         this.firstRowOnly = firstRowOnly;
         this.linkedServiceName = linkedServiceName;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.policy = policy;
-        this.source = Objects.requireNonNull(source);
-        this.type = Objects.requireNonNull(type);
+        this.source = source;
+        this.type = type;
         this.userProperties = userProperties;
     }
 

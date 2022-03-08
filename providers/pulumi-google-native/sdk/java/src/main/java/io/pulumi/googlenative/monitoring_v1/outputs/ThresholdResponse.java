@@ -43,11 +43,11 @@ public final class ThresholdResponse {
         String label,
         String targetAxis,
         Double value) {
-        this.color = Objects.requireNonNull(color);
-        this.direction = Objects.requireNonNull(direction);
-        this.label = Objects.requireNonNull(label);
-        this.targetAxis = Objects.requireNonNull(targetAxis);
-        this.value = Objects.requireNonNull(value);
+        this.color = color;
+        this.direction = direction;
+        this.label = label;
+        this.targetAxis = targetAxis;
+        this.value = value;
     }
 
     /**

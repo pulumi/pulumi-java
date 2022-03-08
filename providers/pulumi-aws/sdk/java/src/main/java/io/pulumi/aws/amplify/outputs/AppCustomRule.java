@@ -39,9 +39,9 @@ public final class AppCustomRule {
         @Nullable String status,
         String target) {
         this.condition = condition;
-        this.source = Objects.requireNonNull(source);
+        this.source = source;
         this.status = status;
-        this.target = Objects.requireNonNull(target);
+        this.target = target;
     }
 
     /**

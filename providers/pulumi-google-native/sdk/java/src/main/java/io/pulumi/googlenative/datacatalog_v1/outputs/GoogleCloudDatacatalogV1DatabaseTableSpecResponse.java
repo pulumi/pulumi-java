@@ -17,7 +17,7 @@ public final class GoogleCloudDatacatalogV1DatabaseTableSpecResponse {
 
     @OutputCustomType.Constructor({"type"})
     private GoogleCloudDatacatalogV1DatabaseTableSpecResponse(String type) {
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

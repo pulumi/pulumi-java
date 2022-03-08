@@ -41,11 +41,11 @@ public final class GetInstanceScheduling {
         List<GetInstanceSchedulingNodeAffinity> nodeAffinities,
         String onHostMaintenance,
         Boolean preemptible) {
-        this.automaticRestart = Objects.requireNonNull(automaticRestart);
-        this.minNodeCpus = Objects.requireNonNull(minNodeCpus);
-        this.nodeAffinities = Objects.requireNonNull(nodeAffinities);
-        this.onHostMaintenance = Objects.requireNonNull(onHostMaintenance);
-        this.preemptible = Objects.requireNonNull(preemptible);
+        this.automaticRestart = automaticRestart;
+        this.minNodeCpus = minNodeCpus;
+        this.nodeAffinities = nodeAffinities;
+        this.onHostMaintenance = onHostMaintenance;
+        this.preemptible = preemptible;
     }
 
     /**

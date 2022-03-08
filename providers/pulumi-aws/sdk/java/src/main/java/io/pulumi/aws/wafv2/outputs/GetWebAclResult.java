@@ -34,11 +34,11 @@ public final class GetWebAclResult {
         String id,
         String name,
         String scope) {
-        this.arn = Objects.requireNonNull(arn);
-        this.description = Objects.requireNonNull(description);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.scope = Objects.requireNonNull(scope);
+        this.arn = arn;
+        this.description = description;
+        this.id = id;
+        this.name = name;
+        this.scope = scope;
     }
 
     /**

@@ -76,7 +76,7 @@ public final class GreenplumLinkedServiceResponse {
         this.encryptedCredential = encryptedCredential;
         this.parameters = parameters;
         this.pwd = pwd;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

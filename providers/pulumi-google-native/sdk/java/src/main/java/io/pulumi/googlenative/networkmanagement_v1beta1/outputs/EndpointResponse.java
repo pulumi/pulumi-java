@@ -68,15 +68,15 @@ public final class EndpointResponse {
         String networkType,
         Integer port,
         String project) {
-        this.cloudFunction = Objects.requireNonNull(cloudFunction);
-        this.cloudSqlInstance = Objects.requireNonNull(cloudSqlInstance);
-        this.gkeMasterCluster = Objects.requireNonNull(gkeMasterCluster);
-        this.instance = Objects.requireNonNull(instance);
-        this.ipAddress = Objects.requireNonNull(ipAddress);
-        this.network = Objects.requireNonNull(network);
-        this.networkType = Objects.requireNonNull(networkType);
-        this.port = Objects.requireNonNull(port);
-        this.project = Objects.requireNonNull(project);
+        this.cloudFunction = cloudFunction;
+        this.cloudSqlInstance = cloudSqlInstance;
+        this.gkeMasterCluster = gkeMasterCluster;
+        this.instance = instance;
+        this.ipAddress = ipAddress;
+        this.network = network;
+        this.networkType = networkType;
+        this.port = port;
+        this.project = project;
     }
 
     /**

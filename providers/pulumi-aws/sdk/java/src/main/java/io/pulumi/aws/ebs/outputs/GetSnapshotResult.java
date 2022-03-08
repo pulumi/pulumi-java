@@ -119,26 +119,26 @@ public final class GetSnapshotResult {
         Map<String,String> tags,
         String volumeId,
         Integer volumeSize) {
-        this.arn = Objects.requireNonNull(arn);
-        this.dataEncryptionKeyId = Objects.requireNonNull(dataEncryptionKeyId);
-        this.description = Objects.requireNonNull(description);
-        this.encrypted = Objects.requireNonNull(encrypted);
+        this.arn = arn;
+        this.dataEncryptionKeyId = dataEncryptionKeyId;
+        this.description = description;
+        this.encrypted = encrypted;
         this.filters = filters;
-        this.id = Objects.requireNonNull(id);
-        this.kmsKeyId = Objects.requireNonNull(kmsKeyId);
+        this.id = id;
+        this.kmsKeyId = kmsKeyId;
         this.mostRecent = mostRecent;
-        this.outpostArn = Objects.requireNonNull(outpostArn);
-        this.ownerAlias = Objects.requireNonNull(ownerAlias);
-        this.ownerId = Objects.requireNonNull(ownerId);
+        this.outpostArn = outpostArn;
+        this.ownerAlias = ownerAlias;
+        this.ownerId = ownerId;
         this.owners = owners;
         this.restorableByUserIds = restorableByUserIds;
-        this.snapshotId = Objects.requireNonNull(snapshotId);
+        this.snapshotId = snapshotId;
         this.snapshotIds = snapshotIds;
-        this.state = Objects.requireNonNull(state);
-        this.storageTier = Objects.requireNonNull(storageTier);
-        this.tags = Objects.requireNonNull(tags);
-        this.volumeId = Objects.requireNonNull(volumeId);
-        this.volumeSize = Objects.requireNonNull(volumeSize);
+        this.state = state;
+        this.storageTier = storageTier;
+        this.tags = tags;
+        this.volumeId = volumeId;
+        this.volumeSize = volumeSize;
     }
 
     /**

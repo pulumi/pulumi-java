@@ -30,9 +30,9 @@ public final class ListBatchAccountKeysResult {
         String accountName,
         String primary,
         String secondary) {
-        this.accountName = Objects.requireNonNull(accountName);
-        this.primary = Objects.requireNonNull(primary);
-        this.secondary = Objects.requireNonNull(secondary);
+        this.accountName = accountName;
+        this.primary = primary;
+        this.secondary = secondary;
     }
 
     /**

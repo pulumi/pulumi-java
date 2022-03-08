@@ -16,8 +16,8 @@ public final class RealtimeLogConfigKinesisStreamConfig {
     private RealtimeLogConfigKinesisStreamConfig(
         String roleArn,
         String streamArn) {
-        this.roleArn = Objects.requireNonNull(roleArn);
-        this.streamArn = Objects.requireNonNull(streamArn);
+        this.roleArn = roleArn;
+        this.streamArn = streamArn;
     }
 
     public String getRoleArn() {

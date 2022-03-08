@@ -140,26 +140,26 @@ public final class GetServiceResult {
         String tier,
         String uid,
         String updateTime) {
-        this.artifactGcsUri = Objects.requireNonNull(artifactGcsUri);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.databaseType = Objects.requireNonNull(databaseType);
-        this.encryptionConfig = Objects.requireNonNull(encryptionConfig);
-        this.endpointUri = Objects.requireNonNull(endpointUri);
-        this.hiveMetastoreConfig = Objects.requireNonNull(hiveMetastoreConfig);
-        this.labels = Objects.requireNonNull(labels);
-        this.maintenanceWindow = Objects.requireNonNull(maintenanceWindow);
-        this.metadataIntegration = Objects.requireNonNull(metadataIntegration);
-        this.metadataManagementActivity = Objects.requireNonNull(metadataManagementActivity);
-        this.name = Objects.requireNonNull(name);
-        this.network = Objects.requireNonNull(network);
-        this.networkConfig = Objects.requireNonNull(networkConfig);
-        this.port = Objects.requireNonNull(port);
-        this.releaseChannel = Objects.requireNonNull(releaseChannel);
-        this.state = Objects.requireNonNull(state);
-        this.stateMessage = Objects.requireNonNull(stateMessage);
-        this.tier = Objects.requireNonNull(tier);
-        this.uid = Objects.requireNonNull(uid);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.artifactGcsUri = artifactGcsUri;
+        this.createTime = createTime;
+        this.databaseType = databaseType;
+        this.encryptionConfig = encryptionConfig;
+        this.endpointUri = endpointUri;
+        this.hiveMetastoreConfig = hiveMetastoreConfig;
+        this.labels = labels;
+        this.maintenanceWindow = maintenanceWindow;
+        this.metadataIntegration = metadataIntegration;
+        this.metadataManagementActivity = metadataManagementActivity;
+        this.name = name;
+        this.network = network;
+        this.networkConfig = networkConfig;
+        this.port = port;
+        this.releaseChannel = releaseChannel;
+        this.state = state;
+        this.stateMessage = stateMessage;
+        this.tier = tier;
+        this.uid = uid;
+        this.updateTime = updateTime;
     }
 
     /**

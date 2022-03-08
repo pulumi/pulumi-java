@@ -17,7 +17,7 @@ public final class GoogleCloudDialogflowCxV3EnvironmentVersionConfigResponse {
 
     @OutputCustomType.Constructor({"version"})
     private GoogleCloudDialogflowCxV3EnvironmentVersionConfigResponse(String version) {
-        this.version = Objects.requireNonNull(version);
+        this.version = version;
     }
 
     /**

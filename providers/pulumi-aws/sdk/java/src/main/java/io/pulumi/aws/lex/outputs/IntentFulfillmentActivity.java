@@ -30,7 +30,7 @@ public final class IntentFulfillmentActivity {
         @Nullable IntentFulfillmentActivityCodeHook codeHook,
         String type) {
         this.codeHook = codeHook;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

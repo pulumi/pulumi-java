@@ -26,8 +26,8 @@ public final class DetectorModelDefinition {
     private DetectorModelDefinition(
         String initialStateName,
         List<DetectorModelState> states) {
-        this.initialStateName = Objects.requireNonNull(initialStateName);
-        this.states = Objects.requireNonNull(states);
+        this.initialStateName = initialStateName;
+        this.states = states;
     }
 
     /**

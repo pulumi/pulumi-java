@@ -44,11 +44,11 @@ public final class ScheduleResponse {
         DateResponse scheduleEndDate,
         DateResponse scheduleStartDate,
         TimeOfDayResponse startTimeOfDay) {
-        this.endTimeOfDay = Objects.requireNonNull(endTimeOfDay);
-        this.repeatInterval = Objects.requireNonNull(repeatInterval);
-        this.scheduleEndDate = Objects.requireNonNull(scheduleEndDate);
-        this.scheduleStartDate = Objects.requireNonNull(scheduleStartDate);
-        this.startTimeOfDay = Objects.requireNonNull(startTimeOfDay);
+        this.endTimeOfDay = endTimeOfDay;
+        this.repeatInterval = repeatInterval;
+        this.scheduleEndDate = scheduleEndDate;
+        this.scheduleStartDate = scheduleStartDate;
+        this.startTimeOfDay = startTimeOfDay;
     }
 
     /**

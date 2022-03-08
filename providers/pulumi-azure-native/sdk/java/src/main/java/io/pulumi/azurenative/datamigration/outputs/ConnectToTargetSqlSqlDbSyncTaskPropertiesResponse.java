@@ -58,12 +58,12 @@ public final class ConnectToTargetSqlSqlDbSyncTaskPropertiesResponse {
         List<ConnectToTargetSqlDbTaskOutputResponse> output,
         String state,
         String taskType) {
-        this.commands = Objects.requireNonNull(commands);
-        this.errors = Objects.requireNonNull(errors);
+        this.commands = commands;
+        this.errors = errors;
         this.input = input;
-        this.output = Objects.requireNonNull(output);
-        this.state = Objects.requireNonNull(state);
-        this.taskType = Objects.requireNonNull(taskType);
+        this.output = output;
+        this.state = state;
+        this.taskType = taskType;
     }
 
     /**

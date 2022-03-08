@@ -64,14 +64,14 @@ public final class GetApplicationGatewayPrivateEndpointConnectionResult {
         @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState,
         String provisioningState,
         String type) {
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.id = id;
-        this.linkIdentifier = Objects.requireNonNull(linkIdentifier);
+        this.linkIdentifier = linkIdentifier;
         this.name = name;
-        this.privateEndpoint = Objects.requireNonNull(privateEndpoint);
+        this.privateEndpoint = privateEndpoint;
         this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.type = Objects.requireNonNull(type);
+        this.provisioningState = provisioningState;
+        this.type = type;
     }
 
     /**

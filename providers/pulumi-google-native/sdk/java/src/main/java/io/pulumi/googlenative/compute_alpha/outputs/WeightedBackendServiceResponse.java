@@ -32,9 +32,9 @@ public final class WeightedBackendServiceResponse {
         String backendService,
         HttpHeaderActionResponse headerAction,
         Integer weight) {
-        this.backendService = Objects.requireNonNull(backendService);
-        this.headerAction = Objects.requireNonNull(headerAction);
-        this.weight = Objects.requireNonNull(weight);
+        this.backendService = backendService;
+        this.headerAction = headerAction;
+        this.weight = weight;
     }
 
     /**

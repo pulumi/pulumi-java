@@ -28,12 +28,12 @@ public final class GetServiceTemplateSpec {
         String servingState,
         Integer timeoutSeconds,
         List<GetServiceTemplateSpecVolume> volumes) {
-        this.containerConcurrency = Objects.requireNonNull(containerConcurrency);
-        this.containers = Objects.requireNonNull(containers);
-        this.serviceAccountName = Objects.requireNonNull(serviceAccountName);
-        this.servingState = Objects.requireNonNull(servingState);
-        this.timeoutSeconds = Objects.requireNonNull(timeoutSeconds);
-        this.volumes = Objects.requireNonNull(volumes);
+        this.containerConcurrency = containerConcurrency;
+        this.containers = containers;
+        this.serviceAccountName = serviceAccountName;
+        this.servingState = servingState;
+        this.timeoutSeconds = timeoutSeconds;
+        this.volumes = volumes;
     }
 
     public Integer getContainerConcurrency() {

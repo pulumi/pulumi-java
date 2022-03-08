@@ -18,7 +18,7 @@ public final class WorkflowTemplateJobPigJobQueryList {
 
     @OutputCustomType.Constructor({"queries"})
     private WorkflowTemplateJobPigJobQueryList(List<String> queries) {
-        this.queries = Objects.requireNonNull(queries);
+        this.queries = queries;
     }
 
     /**

@@ -22,7 +22,7 @@ public final class TaskDefinitionProxyConfiguration {
         String containerName,
         @Nullable List<TaskDefinitionKeyValuePair> proxyConfigurationProperties,
         @Nullable String type) {
-        this.containerName = Objects.requireNonNull(containerName);
+        this.containerName = containerName;
         this.proxyConfigurationProperties = proxyConfigurationProperties;
         this.type = type;
     }

@@ -59,13 +59,13 @@ public final class ApiResponse {
         SourceContextResponse sourceContext,
         String syntax,
         String version) {
-        this.methods = Objects.requireNonNull(methods);
-        this.mixins = Objects.requireNonNull(mixins);
-        this.name = Objects.requireNonNull(name);
-        this.options = Objects.requireNonNull(options);
-        this.sourceContext = Objects.requireNonNull(sourceContext);
-        this.syntax = Objects.requireNonNull(syntax);
-        this.version = Objects.requireNonNull(version);
+        this.methods = methods;
+        this.mixins = mixins;
+        this.name = name;
+        this.options = options;
+        this.sourceContext = sourceContext;
+        this.syntax = syntax;
+        this.version = version;
     }
 
     /**

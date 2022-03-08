@@ -24,8 +24,8 @@ public final class HttpHeaderMatchResponse {
     private HttpHeaderMatchResponse(
         String headerName,
         String regexMatch) {
-        this.headerName = Objects.requireNonNull(headerName);
-        this.regexMatch = Objects.requireNonNull(regexMatch);
+        this.headerName = headerName;
+        this.regexMatch = regexMatch;
     }
 
     /**

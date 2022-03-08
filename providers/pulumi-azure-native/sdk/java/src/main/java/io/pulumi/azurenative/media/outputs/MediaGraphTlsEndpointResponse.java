@@ -49,9 +49,9 @@ public final class MediaGraphTlsEndpointResponse {
         String url,
         @Nullable MediaGraphTlsValidationOptionsResponse validationOptions) {
         this.credentials = credentials;
-        this.odataType = Objects.requireNonNull(odataType);
+        this.odataType = odataType;
         this.trustedCertificates = trustedCertificates;
-        this.url = Objects.requireNonNull(url);
+        this.url = url;
         this.validationOptions = validationOptions;
     }
 

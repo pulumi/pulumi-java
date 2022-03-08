@@ -36,10 +36,10 @@ public final class GetSourceResult {
         String description,
         String displayName,
         String name) {
-        this.canonicalName = Objects.requireNonNull(canonicalName);
-        this.description = Objects.requireNonNull(description);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.name = Objects.requireNonNull(name);
+        this.canonicalName = canonicalName;
+        this.description = description;
+        this.displayName = displayName;
+        this.name = name;
     }
 
     /**

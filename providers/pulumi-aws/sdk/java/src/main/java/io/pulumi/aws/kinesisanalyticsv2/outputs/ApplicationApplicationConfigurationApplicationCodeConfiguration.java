@@ -28,7 +28,7 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
         @Nullable ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContent codeContent,
         String codeContentType) {
         this.codeContent = codeContent;
-        this.codeContentType = Objects.requireNonNull(codeContentType);
+        this.codeContentType = codeContentType;
     }
 
     /**

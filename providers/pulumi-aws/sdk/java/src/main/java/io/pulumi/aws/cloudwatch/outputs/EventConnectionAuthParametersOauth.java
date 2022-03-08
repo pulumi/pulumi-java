@@ -40,10 +40,10 @@ public final class EventConnectionAuthParametersOauth {
         @Nullable EventConnectionAuthParametersOauthClientParameters clientParameters,
         String httpMethod,
         EventConnectionAuthParametersOauthOauthHttpParameters oauthHttpParameters) {
-        this.authorizationEndpoint = Objects.requireNonNull(authorizationEndpoint);
+        this.authorizationEndpoint = authorizationEndpoint;
         this.clientParameters = clientParameters;
-        this.httpMethod = Objects.requireNonNull(httpMethod);
-        this.oauthHttpParameters = Objects.requireNonNull(oauthHttpParameters);
+        this.httpMethod = httpMethod;
+        this.oauthHttpParameters = oauthHttpParameters;
     }
 
     /**

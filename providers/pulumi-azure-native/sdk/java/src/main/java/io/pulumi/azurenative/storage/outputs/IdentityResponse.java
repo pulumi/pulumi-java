@@ -39,9 +39,9 @@ public final class IdentityResponse {
         String tenantId,
         String type,
         @Nullable Map<String,UserAssignedIdentityResponse> userAssignedIdentities) {
-        this.principalId = Objects.requireNonNull(principalId);
-        this.tenantId = Objects.requireNonNull(tenantId);
-        this.type = Objects.requireNonNull(type);
+        this.principalId = principalId;
+        this.tenantId = tenantId;
+        this.type = type;
         this.userAssignedIdentities = userAssignedIdentities;
     }
 

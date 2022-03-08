@@ -146,20 +146,20 @@ public final class ActiveSecurityAdminRuleResponse {
         @Nullable List<ConfigurationGroupResponse> ruleGroups,
         @Nullable List<String> sourcePortRanges,
         @Nullable List<AddressPrefixItemResponse> sources) {
-        this.access = Objects.requireNonNull(access);
+        this.access = access;
         this.commitTime = commitTime;
         this.configurationDescription = configurationDescription;
         this.configurationDisplayName = configurationDisplayName;
         this.description = description;
         this.destinationPortRanges = destinationPortRanges;
         this.destinations = destinations;
-        this.direction = Objects.requireNonNull(direction);
+        this.direction = direction;
         this.displayName = displayName;
         this.id = id;
-        this.kind = Objects.requireNonNull(kind);
+        this.kind = kind;
         this.priority = priority;
-        this.protocol = Objects.requireNonNull(protocol);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.protocol = protocol;
+        this.provisioningState = provisioningState;
         this.region = region;
         this.ruleCollectionAppliesToGroups = ruleCollectionAppliesToGroups;
         this.ruleCollectionDescription = ruleCollectionDescription;

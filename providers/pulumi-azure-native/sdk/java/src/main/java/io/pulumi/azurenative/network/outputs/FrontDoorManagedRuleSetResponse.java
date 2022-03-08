@@ -50,8 +50,8 @@ public final class FrontDoorManagedRuleSetResponse {
         this.exclusions = exclusions;
         this.ruleGroupOverrides = ruleGroupOverrides;
         this.ruleSetAction = ruleSetAction;
-        this.ruleSetType = Objects.requireNonNull(ruleSetType);
-        this.ruleSetVersion = Objects.requireNonNull(ruleSetVersion);
+        this.ruleSetType = ruleSetType;
+        this.ruleSetVersion = ruleSetVersion;
     }
 
     /**

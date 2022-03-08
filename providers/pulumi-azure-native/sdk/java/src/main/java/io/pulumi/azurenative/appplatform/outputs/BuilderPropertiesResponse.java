@@ -36,7 +36,7 @@ public final class BuilderPropertiesResponse {
         String provisioningState,
         @Nullable StackPropertiesResponse stack) {
         this.buildpackGroups = buildpackGroups;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.stack = stack;
     }
 

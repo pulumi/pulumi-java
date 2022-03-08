@@ -74,14 +74,14 @@ public final class GetPostgresInstanceResult {
         @Nullable Map<String,String> tags,
         String type) {
         this.extendedLocation = extendedLocation;
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.properties = Objects.requireNonNull(properties);
+        this.id = id;
+        this.location = location;
+        this.name = name;
+        this.properties = properties;
         this.sku = sku;
-        this.systemData = Objects.requireNonNull(systemData);
+        this.systemData = systemData;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

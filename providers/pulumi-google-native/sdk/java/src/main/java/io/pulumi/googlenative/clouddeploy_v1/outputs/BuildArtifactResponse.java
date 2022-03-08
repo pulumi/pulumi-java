@@ -24,8 +24,8 @@ public final class BuildArtifactResponse {
     private BuildArtifactResponse(
         String image,
         String tag) {
-        this.image = Objects.requireNonNull(image);
-        this.tag = Objects.requireNonNull(tag);
+        this.image = image;
+        this.tag = tag;
     }
 
     /**

@@ -25,8 +25,8 @@ public final class GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigRespons
     private GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigResponse(
         GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse genericWebService,
         String service) {
-        this.genericWebService = Objects.requireNonNull(genericWebService);
-        this.service = Objects.requireNonNull(service);
+        this.genericWebService = genericWebService;
+        this.service = service;
     }
 
     /**

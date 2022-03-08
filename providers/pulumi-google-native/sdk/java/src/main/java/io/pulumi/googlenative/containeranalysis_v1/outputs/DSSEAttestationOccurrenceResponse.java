@@ -21,8 +21,8 @@ public final class DSSEAttestationOccurrenceResponse {
     private DSSEAttestationOccurrenceResponse(
         EnvelopeResponse envelope,
         InTotoStatementResponse statement) {
-        this.envelope = Objects.requireNonNull(envelope);
-        this.statement = Objects.requireNonNull(statement);
+        this.envelope = envelope;
+        this.statement = statement;
     }
 
     /**

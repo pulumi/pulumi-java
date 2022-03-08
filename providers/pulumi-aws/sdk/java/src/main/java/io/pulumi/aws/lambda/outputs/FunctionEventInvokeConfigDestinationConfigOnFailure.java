@@ -17,7 +17,7 @@ public final class FunctionEventInvokeConfigDestinationConfigOnFailure {
 
     @OutputCustomType.Constructor({"destination"})
     private FunctionEventInvokeConfigDestinationConfigOnFailure(String destination) {
-        this.destination = Objects.requireNonNull(destination);
+        this.destination = destination;
     }
 
     /**

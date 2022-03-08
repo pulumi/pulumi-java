@@ -34,7 +34,7 @@ public final class JobStepActionResponse {
         String value) {
         this.source = source;
         this.type = type;
-        this.value = Objects.requireNonNull(value);
+        this.value = value;
     }
 
     /**

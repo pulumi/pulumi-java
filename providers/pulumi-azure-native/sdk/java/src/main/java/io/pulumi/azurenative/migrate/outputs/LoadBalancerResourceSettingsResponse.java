@@ -57,9 +57,9 @@ public final class LoadBalancerResourceSettingsResponse {
         @Nullable String zones) {
         this.backendAddressPools = backendAddressPools;
         this.frontendIPConfigurations = frontendIPConfigurations;
-        this.resourceType = Objects.requireNonNull(resourceType);
+        this.resourceType = resourceType;
         this.sku = sku;
-        this.targetResourceName = Objects.requireNonNull(targetResourceName);
+        this.targetResourceName = targetResourceName;
         this.zones = zones;
     }
 

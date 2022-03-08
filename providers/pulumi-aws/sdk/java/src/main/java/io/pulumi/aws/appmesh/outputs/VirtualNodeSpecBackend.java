@@ -17,7 +17,7 @@ public final class VirtualNodeSpecBackend {
 
     @OutputCustomType.Constructor({"virtualService"})
     private VirtualNodeSpecBackend(VirtualNodeSpecBackendVirtualService virtualService) {
-        this.virtualService = Objects.requireNonNull(virtualService);
+        this.virtualService = virtualService;
     }
 
     /**

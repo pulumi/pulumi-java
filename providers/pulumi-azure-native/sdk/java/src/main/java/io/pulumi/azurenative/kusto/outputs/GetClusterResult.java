@@ -168,28 +168,28 @@ public final class GetClusterResult {
         String uri,
         @Nullable VirtualNetworkConfigurationResponse virtualNetworkConfiguration,
         @Nullable List<String> zones) {
-        this.dataIngestionUri = Objects.requireNonNull(dataIngestionUri);
+        this.dataIngestionUri = dataIngestionUri;
         this.enableDiskEncryption = enableDiskEncryption;
         this.enableDoubleEncryption = enableDoubleEncryption;
         this.enablePurge = enablePurge;
         this.enableStreamingIngest = enableStreamingIngest;
         this.engineType = engineType;
-        this.etag = Objects.requireNonNull(etag);
-        this.id = Objects.requireNonNull(id);
+        this.etag = etag;
+        this.id = id;
         this.identity = identity;
         this.keyVaultProperties = keyVaultProperties;
-        this.languageExtensions = Objects.requireNonNull(languageExtensions);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
+        this.languageExtensions = languageExtensions;
+        this.location = location;
+        this.name = name;
         this.optimizedAutoscale = optimizedAutoscale;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.sku = Objects.requireNonNull(sku);
-        this.state = Objects.requireNonNull(state);
-        this.stateReason = Objects.requireNonNull(stateReason);
+        this.provisioningState = provisioningState;
+        this.sku = sku;
+        this.state = state;
+        this.stateReason = stateReason;
         this.tags = tags;
         this.trustedExternalTenants = trustedExternalTenants;
-        this.type = Objects.requireNonNull(type);
-        this.uri = Objects.requireNonNull(uri);
+        this.type = type;
+        this.uri = uri;
         this.virtualNetworkConfiguration = virtualNetworkConfiguration;
         this.zones = zones;
     }

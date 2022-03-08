@@ -253,8 +253,8 @@ public final class ManagedClusterAgentPoolProfileResponse {
         this.maxPods = maxPods;
         this.minCount = minCount;
         this.mode = mode;
-        this.name = Objects.requireNonNull(name);
-        this.nodeImageVersion = Objects.requireNonNull(nodeImageVersion);
+        this.name = name;
+        this.nodeImageVersion = nodeImageVersion;
         this.nodeLabels = nodeLabels;
         this.nodePublicIPPrefixID = nodePublicIPPrefixID;
         this.nodeTaints = nodeTaints;
@@ -264,8 +264,8 @@ public final class ManagedClusterAgentPoolProfileResponse {
         this.osSKU = osSKU;
         this.osType = osType;
         this.podSubnetID = podSubnetID;
-        this.powerState = Objects.requireNonNull(powerState);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.powerState = powerState;
+        this.provisioningState = provisioningState;
         this.proximityPlacementGroupID = proximityPlacementGroupID;
         this.scaleSetEvictionPolicy = scaleSetEvictionPolicy;
         this.scaleSetPriority = scaleSetPriority;

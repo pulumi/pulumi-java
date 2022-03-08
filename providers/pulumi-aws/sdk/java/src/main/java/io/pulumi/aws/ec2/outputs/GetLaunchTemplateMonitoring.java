@@ -17,7 +17,7 @@ public final class GetLaunchTemplateMonitoring {
 
     @OutputCustomType.Constructor({"enabled"})
     private GetLaunchTemplateMonitoring(Boolean enabled) {
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
     }
 
     /**

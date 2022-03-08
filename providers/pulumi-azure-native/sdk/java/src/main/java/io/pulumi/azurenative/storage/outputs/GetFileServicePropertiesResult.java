@@ -61,12 +61,12 @@ public final class GetFileServicePropertiesResult {
         SkuResponse sku,
         String type) {
         this.cors = cors;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.protocolSettings = protocolSettings;
         this.shareDeleteRetentionPolicy = shareDeleteRetentionPolicy;
-        this.sku = Objects.requireNonNull(sku);
-        this.type = Objects.requireNonNull(type);
+        this.sku = sku;
+        this.type = type;
     }
 
     /**

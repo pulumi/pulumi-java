@@ -58,14 +58,14 @@ public final class BackendRuleResponse {
         String pathTranslation,
         String protocol,
         String selector) {
-        this.address = Objects.requireNonNull(address);
-        this.deadline = Objects.requireNonNull(deadline);
-        this.disableAuth = Objects.requireNonNull(disableAuth);
-        this.jwtAudience = Objects.requireNonNull(jwtAudience);
-        this.operationDeadline = Objects.requireNonNull(operationDeadline);
-        this.pathTranslation = Objects.requireNonNull(pathTranslation);
-        this.protocol = Objects.requireNonNull(protocol);
-        this.selector = Objects.requireNonNull(selector);
+        this.address = address;
+        this.deadline = deadline;
+        this.disableAuth = disableAuth;
+        this.jwtAudience = jwtAudience;
+        this.operationDeadline = operationDeadline;
+        this.pathTranslation = pathTranslation;
+        this.protocol = protocol;
+        this.selector = selector;
     }
 
     /**

@@ -35,7 +35,7 @@ public final class PortworxVolumeSource {
         String volumeID) {
         this.fsType = fsType;
         this.readOnly = readOnly;
-        this.volumeID = Objects.requireNonNull(volumeID);
+        this.volumeID = volumeID;
     }
 
     /**

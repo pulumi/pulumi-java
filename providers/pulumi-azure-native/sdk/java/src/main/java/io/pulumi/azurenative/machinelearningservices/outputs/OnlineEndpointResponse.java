@@ -65,12 +65,12 @@ public final class OnlineEndpointResponse {
         String swaggerUri,
         @Nullable String target,
         @Nullable Map<String,Integer> traffic) {
-        this.authMode = Objects.requireNonNull(authMode);
+        this.authMode = authMode;
         this.description = description;
         this.properties = properties;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.scoringUri = Objects.requireNonNull(scoringUri);
-        this.swaggerUri = Objects.requireNonNull(swaggerUri);
+        this.provisioningState = provisioningState;
+        this.scoringUri = scoringUri;
+        this.swaggerUri = swaggerUri;
         this.target = target;
         this.traffic = traffic;
     }

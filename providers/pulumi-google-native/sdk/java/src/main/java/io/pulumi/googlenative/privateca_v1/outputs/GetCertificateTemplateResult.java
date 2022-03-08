@@ -64,14 +64,14 @@ public final class GetCertificateTemplateResult {
         CertificateExtensionConstraintsResponse passthroughExtensions,
         X509ParametersResponse predefinedValues,
         String updateTime) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.description = Objects.requireNonNull(description);
-        this.identityConstraints = Objects.requireNonNull(identityConstraints);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.passthroughExtensions = Objects.requireNonNull(passthroughExtensions);
-        this.predefinedValues = Objects.requireNonNull(predefinedValues);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.createTime = createTime;
+        this.description = description;
+        this.identityConstraints = identityConstraints;
+        this.labels = labels;
+        this.name = name;
+        this.passthroughExtensions = passthroughExtensions;
+        this.predefinedValues = predefinedValues;
+        this.updateTime = updateTime;
     }
 
     /**

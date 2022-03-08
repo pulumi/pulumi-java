@@ -38,10 +38,10 @@ public final class GetJobTargetGroupResult {
         List<JobTargetResponse> members,
         String name,
         String type) {
-        this.id = Objects.requireNonNull(id);
-        this.members = Objects.requireNonNull(members);
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.id = id;
+        this.members = members;
+        this.name = name;
+        this.type = type;
     }
 
     /**

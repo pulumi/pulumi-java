@@ -18,9 +18,9 @@ public final class GetDatabaseInstanceIpAddress {
         String ipAddress,
         String timeToRetire,
         String type) {
-        this.ipAddress = Objects.requireNonNull(ipAddress);
-        this.timeToRetire = Objects.requireNonNull(timeToRetire);
-        this.type = Objects.requireNonNull(type);
+        this.ipAddress = ipAddress;
+        this.timeToRetire = timeToRetire;
+        this.type = type;
     }
 
     public String getIpAddress() {

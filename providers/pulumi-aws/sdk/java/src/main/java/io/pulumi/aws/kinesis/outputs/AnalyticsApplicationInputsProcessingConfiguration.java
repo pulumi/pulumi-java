@@ -17,7 +17,7 @@ public final class AnalyticsApplicationInputsProcessingConfiguration {
 
     @OutputCustomType.Constructor({"lambda"})
     private AnalyticsApplicationInputsProcessingConfiguration(AnalyticsApplicationInputsProcessingConfigurationLambda lambda) {
-        this.lambda = Objects.requireNonNull(lambda);
+        this.lambda = lambda;
     }
 
     /**

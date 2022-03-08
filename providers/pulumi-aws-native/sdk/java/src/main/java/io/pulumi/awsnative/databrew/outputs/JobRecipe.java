@@ -26,7 +26,7 @@ public final class JobRecipe {
     private JobRecipe(
         String name,
         @Nullable String version) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.version = version;
     }
 

@@ -17,7 +17,7 @@ public final class GCPolicyMaxVersion {
 
     @OutputCustomType.Constructor({"number"})
     private GCPolicyMaxVersion(Integer number) {
-        this.number = Objects.requireNonNull(number);
+        this.number = number;
     }
 
     /**

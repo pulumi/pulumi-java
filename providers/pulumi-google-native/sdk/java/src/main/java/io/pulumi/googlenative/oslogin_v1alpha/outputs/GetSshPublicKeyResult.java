@@ -36,10 +36,10 @@ public final class GetSshPublicKeyResult {
         String fingerprint,
         String key,
         String name) {
-        this.expirationTimeUsec = Objects.requireNonNull(expirationTimeUsec);
-        this.fingerprint = Objects.requireNonNull(fingerprint);
-        this.key = Objects.requireNonNull(key);
-        this.name = Objects.requireNonNull(name);
+        this.expirationTimeUsec = expirationTimeUsec;
+        this.fingerprint = fingerprint;
+        this.key = key;
+        this.name = name;
     }
 
     /**

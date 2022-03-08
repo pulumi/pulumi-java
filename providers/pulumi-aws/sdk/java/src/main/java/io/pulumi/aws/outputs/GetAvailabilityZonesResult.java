@@ -51,11 +51,11 @@ public final class GetAvailabilityZonesResult {
         this.excludeNames = excludeNames;
         this.excludeZoneIds = excludeZoneIds;
         this.filters = filters;
-        this.groupNames = Objects.requireNonNull(groupNames);
-        this.id = Objects.requireNonNull(id);
-        this.names = Objects.requireNonNull(names);
+        this.groupNames = groupNames;
+        this.id = id;
+        this.names = names;
         this.state = state;
-        this.zoneIds = Objects.requireNonNull(zoneIds);
+        this.zoneIds = zoneIds;
     }
 
     public Optional<Boolean> getAllAvailabilityZones() {

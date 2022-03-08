@@ -26,8 +26,8 @@ public final class PackageNoteResponse {
     private PackageNoteResponse(
         List<DistributionResponse> distribution,
         String name) {
-        this.distribution = Objects.requireNonNull(distribution);
-        this.name = Objects.requireNonNull(name);
+        this.distribution = distribution;
+        this.name = name;
     }
 
     /**

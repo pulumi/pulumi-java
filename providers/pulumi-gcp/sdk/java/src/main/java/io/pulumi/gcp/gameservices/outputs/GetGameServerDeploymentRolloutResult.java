@@ -35,12 +35,12 @@ public final class GetGameServerDeploymentRolloutResult {
         String id,
         String name,
         String project) {
-        this.defaultGameServerConfig = Objects.requireNonNull(defaultGameServerConfig);
-        this.deploymentId = Objects.requireNonNull(deploymentId);
-        this.gameServerConfigOverrides = Objects.requireNonNull(gameServerConfigOverrides);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.project = Objects.requireNonNull(project);
+        this.defaultGameServerConfig = defaultGameServerConfig;
+        this.deploymentId = deploymentId;
+        this.gameServerConfigOverrides = gameServerConfigOverrides;
+        this.id = id;
+        this.name = name;
+        this.project = project;
     }
 
     public String getDefaultGameServerConfig() {

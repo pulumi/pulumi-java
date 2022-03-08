@@ -14,7 +14,7 @@ public final class InstanceAccessControlAttributeConfigurationProperties {
 
     @OutputCustomType.Constructor({"accessControlAttributes"})
     private InstanceAccessControlAttributeConfigurationProperties(List<InstanceAccessControlAttributeConfigurationAccessControlAttribute> accessControlAttributes) {
-        this.accessControlAttributes = Objects.requireNonNull(accessControlAttributes);
+        this.accessControlAttributes = accessControlAttributes;
     }
 
     public List<InstanceAccessControlAttributeConfigurationAccessControlAttribute> getAccessControlAttributes() {

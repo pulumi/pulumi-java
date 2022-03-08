@@ -143,23 +143,23 @@ public final class ListTaskDetailsResult {
         String type) {
         this.agentConfiguration = agentConfiguration;
         this.agentPoolName = agentPoolName;
-        this.creationDate = Objects.requireNonNull(creationDate);
+        this.creationDate = creationDate;
         this.credentials = credentials;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.identity = identity;
         this.isSystemTask = isSystemTask;
-        this.location = Objects.requireNonNull(location);
+        this.location = location;
         this.logTemplate = logTemplate;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.platform = platform;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.status = status;
         this.step = step;
-        this.systemData = Objects.requireNonNull(systemData);
+        this.systemData = systemData;
         this.tags = tags;
         this.timeout = timeout;
         this.trigger = trigger;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

@@ -18,7 +18,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSucc
 
     @OutputCustomType.Constructor({"metadata"})
     private GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSuccessResponse(Map<String,String> metadata) {
-        this.metadata = Objects.requireNonNull(metadata);
+        this.metadata = metadata;
     }
 
     /**

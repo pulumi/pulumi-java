@@ -17,7 +17,7 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCu
 
     @OutputCustomType.Constructor({"publishMetricAction"})
     private RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinition(RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricAction publishMetricAction) {
-        this.publishMetricAction = Objects.requireNonNull(publishMetricAction);
+        this.publishMetricAction = publishMetricAction;
     }
 
     /**

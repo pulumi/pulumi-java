@@ -46,11 +46,11 @@ public final class IosTestResponse {
         IosTestLoopResponse iosTestLoop,
         IosXcTestResponse iosXcTest,
         DurationResponse testTimeout) {
-        this.iosAppInfo = Objects.requireNonNull(iosAppInfo);
-        this.iosRoboTest = Objects.requireNonNull(iosRoboTest);
-        this.iosTestLoop = Objects.requireNonNull(iosTestLoop);
-        this.iosXcTest = Objects.requireNonNull(iosXcTest);
-        this.testTimeout = Objects.requireNonNull(testTimeout);
+        this.iosAppInfo = iosAppInfo;
+        this.iosRoboTest = iosRoboTest;
+        this.iosTestLoop = iosTestLoop;
+        this.iosXcTest = iosXcTest;
+        this.testTimeout = testTimeout;
     }
 
     /**

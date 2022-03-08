@@ -17,7 +17,7 @@ public final class GetClusterCertificateAuthority {
 
     @OutputCustomType.Constructor({"data"})
     private GetClusterCertificateAuthority(String data) {
-        this.data = Objects.requireNonNull(data);
+        this.data = data;
     }
 
     /**

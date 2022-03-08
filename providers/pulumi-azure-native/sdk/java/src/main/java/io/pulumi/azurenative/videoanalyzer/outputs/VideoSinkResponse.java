@@ -55,11 +55,11 @@ public final class VideoSinkResponse {
         @Nullable VideoCreationPropertiesResponse videoCreationProperties,
         String videoName,
         @Nullable VideoPublishingOptionsResponse videoPublishingOptions) {
-        this.inputs = Objects.requireNonNull(inputs);
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.inputs = inputs;
+        this.name = name;
+        this.type = type;
         this.videoCreationProperties = videoCreationProperties;
-        this.videoName = Objects.requireNonNull(videoName);
+        this.videoName = videoName;
         this.videoPublishingOptions = videoPublishingOptions;
     }
 

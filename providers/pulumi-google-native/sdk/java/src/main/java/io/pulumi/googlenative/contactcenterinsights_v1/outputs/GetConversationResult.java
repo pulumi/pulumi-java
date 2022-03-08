@@ -134,25 +134,25 @@ public final class GetConversationResult {
         String ttl,
         Integer turnCount,
         String updateTime) {
-        this.agentId = Objects.requireNonNull(agentId);
-        this.callMetadata = Objects.requireNonNull(callMetadata);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.dataSource = Objects.requireNonNull(dataSource);
-        this.dialogflowIntents = Objects.requireNonNull(dialogflowIntents);
-        this.duration = Objects.requireNonNull(duration);
-        this.expireTime = Objects.requireNonNull(expireTime);
-        this.labels = Objects.requireNonNull(labels);
-        this.languageCode = Objects.requireNonNull(languageCode);
-        this.latestAnalysis = Objects.requireNonNull(latestAnalysis);
-        this.medium = Objects.requireNonNull(medium);
-        this.name = Objects.requireNonNull(name);
-        this.obfuscatedUserId = Objects.requireNonNull(obfuscatedUserId);
-        this.runtimeAnnotations = Objects.requireNonNull(runtimeAnnotations);
-        this.startTime = Objects.requireNonNull(startTime);
-        this.transcript = Objects.requireNonNull(transcript);
-        this.ttl = Objects.requireNonNull(ttl);
-        this.turnCount = Objects.requireNonNull(turnCount);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.agentId = agentId;
+        this.callMetadata = callMetadata;
+        this.createTime = createTime;
+        this.dataSource = dataSource;
+        this.dialogflowIntents = dialogflowIntents;
+        this.duration = duration;
+        this.expireTime = expireTime;
+        this.labels = labels;
+        this.languageCode = languageCode;
+        this.latestAnalysis = latestAnalysis;
+        this.medium = medium;
+        this.name = name;
+        this.obfuscatedUserId = obfuscatedUserId;
+        this.runtimeAnnotations = runtimeAnnotations;
+        this.startTime = startTime;
+        this.transcript = transcript;
+        this.ttl = ttl;
+        this.turnCount = turnCount;
+        this.updateTime = updateTime;
     }
 
     /**

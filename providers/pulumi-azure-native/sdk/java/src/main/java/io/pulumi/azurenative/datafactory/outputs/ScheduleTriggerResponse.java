@@ -58,9 +58,9 @@ public final class ScheduleTriggerResponse {
         this.annotations = annotations;
         this.description = description;
         this.pipelines = pipelines;
-        this.recurrence = Objects.requireNonNull(recurrence);
-        this.runtimeState = Objects.requireNonNull(runtimeState);
-        this.type = Objects.requireNonNull(type);
+        this.recurrence = recurrence;
+        this.runtimeState = runtimeState;
+        this.type = type;
     }
 
     /**

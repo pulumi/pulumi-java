@@ -79,12 +79,12 @@ public final class SqlServerStoredProcedureActivityResponse {
         @Nullable List<UserPropertyResponse> userProperties) {
         this.dependsOn = dependsOn;
         this.description = description;
-        this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
-        this.name = Objects.requireNonNull(name);
+        this.linkedServiceName = linkedServiceName;
+        this.name = name;
         this.policy = policy;
-        this.storedProcedureName = Objects.requireNonNull(storedProcedureName);
+        this.storedProcedureName = storedProcedureName;
         this.storedProcedureParameters = storedProcedureParameters;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.userProperties = userProperties;
     }
 

@@ -17,7 +17,7 @@ public final class MetricStreamExcludeFilter {
 
     @OutputCustomType.Constructor({"namespace"})
     private MetricStreamExcludeFilter(String namespace) {
-        this.namespace = Objects.requireNonNull(namespace);
+        this.namespace = namespace;
     }
 
     /**

@@ -17,7 +17,7 @@ public final class IpRuleResponse {
 
     @OutputCustomType.Constructor({"value"})
     private IpRuleResponse(String value) {
-        this.value = Objects.requireNonNull(value);
+        this.value = value;
     }
 
     /**

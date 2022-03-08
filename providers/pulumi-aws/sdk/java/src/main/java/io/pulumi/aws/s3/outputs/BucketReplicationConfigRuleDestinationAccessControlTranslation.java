@@ -17,7 +17,7 @@ public final class BucketReplicationConfigRuleDestinationAccessControlTranslatio
 
     @OutputCustomType.Constructor({"owner"})
     private BucketReplicationConfigRuleDestinationAccessControlTranslation(String owner) {
-        this.owner = Objects.requireNonNull(owner);
+        this.owner = owner;
     }
 
     /**

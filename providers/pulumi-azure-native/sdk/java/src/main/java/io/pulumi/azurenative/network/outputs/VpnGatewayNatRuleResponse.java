@@ -83,17 +83,17 @@ public final class VpnGatewayNatRuleResponse {
         @Nullable String name,
         String provisioningState,
         String type) {
-        this.egressVpnSiteLinkConnections = Objects.requireNonNull(egressVpnSiteLinkConnections);
-        this.etag = Objects.requireNonNull(etag);
+        this.egressVpnSiteLinkConnections = egressVpnSiteLinkConnections;
+        this.etag = etag;
         this.externalMappings = externalMappings;
         this.id = id;
-        this.ingressVpnSiteLinkConnections = Objects.requireNonNull(ingressVpnSiteLinkConnections);
+        this.ingressVpnSiteLinkConnections = ingressVpnSiteLinkConnections;
         this.internalMappings = internalMappings;
         this.ipConfigurationId = ipConfigurationId;
         this.mode = mode;
         this.name = name;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.type = Objects.requireNonNull(type);
+        this.provisioningState = provisioningState;
+        this.type = type;
     }
 
     /**

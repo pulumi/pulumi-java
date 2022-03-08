@@ -100,20 +100,20 @@ public final class GetNetworkFirewallPolicyResult {
         String selfLinkWithId,
         String shortName,
         String vpcNetworkScope) {
-        this.associations = Objects.requireNonNull(associations);
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.description = Objects.requireNonNull(description);
-        this.fingerprint = Objects.requireNonNull(fingerprint);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.parent = Objects.requireNonNull(parent);
-        this.region = Objects.requireNonNull(region);
-        this.ruleTupleCount = Objects.requireNonNull(ruleTupleCount);
-        this.rules = Objects.requireNonNull(rules);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
-        this.shortName = Objects.requireNonNull(shortName);
-        this.vpcNetworkScope = Objects.requireNonNull(vpcNetworkScope);
+        this.associations = associations;
+        this.creationTimestamp = creationTimestamp;
+        this.description = description;
+        this.fingerprint = fingerprint;
+        this.kind = kind;
+        this.name = name;
+        this.parent = parent;
+        this.region = region;
+        this.ruleTupleCount = ruleTupleCount;
+        this.rules = rules;
+        this.selfLink = selfLink;
+        this.selfLinkWithId = selfLinkWithId;
+        this.shortName = shortName;
+        this.vpcNetworkScope = vpcNetworkScope;
     }
 
     /**

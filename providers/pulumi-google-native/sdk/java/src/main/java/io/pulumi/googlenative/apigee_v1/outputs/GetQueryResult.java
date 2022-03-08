@@ -92,19 +92,19 @@ public final class GetQueryResult {
         String self,
         String state,
         String updated) {
-        this.created = Objects.requireNonNull(created);
-        this.envgroupHostname = Objects.requireNonNull(envgroupHostname);
-        this.error = Objects.requireNonNull(error);
-        this.executionTime = Objects.requireNonNull(executionTime);
-        this.name = Objects.requireNonNull(name);
-        this.queryParams = Objects.requireNonNull(queryParams);
-        this.reportDefinitionId = Objects.requireNonNull(reportDefinitionId);
-        this.result = Objects.requireNonNull(result);
-        this.resultFileSize = Objects.requireNonNull(resultFileSize);
-        this.resultRows = Objects.requireNonNull(resultRows);
-        this.self = Objects.requireNonNull(self);
-        this.state = Objects.requireNonNull(state);
-        this.updated = Objects.requireNonNull(updated);
+        this.created = created;
+        this.envgroupHostname = envgroupHostname;
+        this.error = error;
+        this.executionTime = executionTime;
+        this.name = name;
+        this.queryParams = queryParams;
+        this.reportDefinitionId = reportDefinitionId;
+        this.result = result;
+        this.resultFileSize = resultFileSize;
+        this.resultRows = resultRows;
+        this.self = self;
+        this.state = state;
+        this.updated = updated;
     }
 
     /**

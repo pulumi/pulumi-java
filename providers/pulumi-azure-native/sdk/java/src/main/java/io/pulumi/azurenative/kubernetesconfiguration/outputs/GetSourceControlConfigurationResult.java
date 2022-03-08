@@ -121,23 +121,23 @@ public final class GetSourceControlConfigurationResult {
         @Nullable String sshKnownHostsContents,
         SystemDataResponse systemData,
         String type) {
-        this.complianceStatus = Objects.requireNonNull(complianceStatus);
+        this.complianceStatus = complianceStatus;
         this.configurationProtectedSettings = configurationProtectedSettings;
         this.enableHelmOperator = enableHelmOperator;
         this.helmOperatorProperties = helmOperatorProperties;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.operatorInstanceName = operatorInstanceName;
         this.operatorNamespace = operatorNamespace;
         this.operatorParams = operatorParams;
         this.operatorScope = operatorScope;
         this.operatorType = operatorType;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.repositoryPublicKey = Objects.requireNonNull(repositoryPublicKey);
+        this.provisioningState = provisioningState;
+        this.repositoryPublicKey = repositoryPublicKey;
         this.repositoryUrl = repositoryUrl;
         this.sshKnownHostsContents = sshKnownHostsContents;
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

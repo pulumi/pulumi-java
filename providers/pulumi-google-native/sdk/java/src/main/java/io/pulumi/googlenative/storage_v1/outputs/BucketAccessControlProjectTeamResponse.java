@@ -24,8 +24,8 @@ public final class BucketAccessControlProjectTeamResponse {
     private BucketAccessControlProjectTeamResponse(
         String projectNumber,
         String team) {
-        this.projectNumber = Objects.requireNonNull(projectNumber);
-        this.team = Objects.requireNonNull(team);
+        this.projectNumber = projectNumber;
+        this.team = team;
     }
 
     /**

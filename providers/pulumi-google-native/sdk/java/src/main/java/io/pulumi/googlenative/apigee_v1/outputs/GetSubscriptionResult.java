@@ -48,12 +48,12 @@ public final class GetSubscriptionResult {
         String lastModifiedAt,
         String name,
         String startTime) {
-        this.apiproduct = Objects.requireNonNull(apiproduct);
-        this.createdAt = Objects.requireNonNull(createdAt);
-        this.endTime = Objects.requireNonNull(endTime);
-        this.lastModifiedAt = Objects.requireNonNull(lastModifiedAt);
-        this.name = Objects.requireNonNull(name);
-        this.startTime = Objects.requireNonNull(startTime);
+        this.apiproduct = apiproduct;
+        this.createdAt = createdAt;
+        this.endTime = endTime;
+        this.lastModifiedAt = lastModifiedAt;
+        this.name = name;
+        this.startTime = startTime;
     }
 
     /**

@@ -27,7 +27,7 @@ public final class AutomationActionWorkspaceResponse {
     private AutomationActionWorkspaceResponse(
         String actionType,
         @Nullable String workspaceResourceId) {
-        this.actionType = Objects.requireNonNull(actionType);
+        this.actionType = actionType;
         this.workspaceResourceId = workspaceResourceId;
     }
 

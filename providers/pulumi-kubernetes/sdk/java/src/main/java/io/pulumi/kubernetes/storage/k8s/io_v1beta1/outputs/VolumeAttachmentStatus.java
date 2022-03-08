@@ -42,7 +42,7 @@ public final class VolumeAttachmentStatus {
         @Nullable Map<String,String> attachmentMetadata,
         @Nullable VolumeError detachError) {
         this.attachError = attachError;
-        this.attached = Objects.requireNonNull(attached);
+        this.attached = attached;
         this.attachmentMetadata = attachmentMetadata;
         this.detachError = detachError;
     }

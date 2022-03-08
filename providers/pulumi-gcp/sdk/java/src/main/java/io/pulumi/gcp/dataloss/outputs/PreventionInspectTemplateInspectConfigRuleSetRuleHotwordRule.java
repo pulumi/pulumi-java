@@ -39,9 +39,9 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRule 
         PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegex hotwordRegex,
         PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustment likelihoodAdjustment,
         PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximity proximity) {
-        this.hotwordRegex = Objects.requireNonNull(hotwordRegex);
-        this.likelihoodAdjustment = Objects.requireNonNull(likelihoodAdjustment);
-        this.proximity = Objects.requireNonNull(proximity);
+        this.hotwordRegex = hotwordRegex;
+        this.likelihoodAdjustment = likelihoodAdjustment;
+        this.proximity = proximity;
     }
 
     /**

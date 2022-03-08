@@ -26,8 +26,8 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelResultResponse {
     private GoogleCloudContactcenterinsightsV1IssueModelResultResponse(
         String issueModel,
         List<GoogleCloudContactcenterinsightsV1IssueAssignmentResponse> issues) {
-        this.issueModel = Objects.requireNonNull(issueModel);
-        this.issues = Objects.requireNonNull(issues);
+        this.issueModel = issueModel;
+        this.issues = issues;
     }
 
     /**

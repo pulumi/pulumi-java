@@ -27,7 +27,7 @@ public final class BlobLocationResponse {
         @Nullable String credentials,
         String uri) {
         this.credentials = credentials;
-        this.uri = Objects.requireNonNull(uri);
+        this.uri = uri;
     }
 
     /**

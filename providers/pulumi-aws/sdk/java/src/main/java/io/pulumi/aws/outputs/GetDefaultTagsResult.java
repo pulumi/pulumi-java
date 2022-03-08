@@ -25,8 +25,8 @@ public final class GetDefaultTagsResult {
     private GetDefaultTagsResult(
         String id,
         Map<String,String> tags) {
-        this.id = Objects.requireNonNull(id);
-        this.tags = Objects.requireNonNull(tags);
+        this.id = id;
+        this.tags = tags;
     }
 
     /**

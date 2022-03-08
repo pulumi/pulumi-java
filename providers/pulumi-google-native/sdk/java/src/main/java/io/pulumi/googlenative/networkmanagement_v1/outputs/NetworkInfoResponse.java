@@ -30,9 +30,9 @@ public final class NetworkInfoResponse {
         String displayName,
         String matchedIpRange,
         String uri) {
-        this.displayName = Objects.requireNonNull(displayName);
-        this.matchedIpRange = Objects.requireNonNull(matchedIpRange);
-        this.uri = Objects.requireNonNull(uri);
+        this.displayName = displayName;
+        this.matchedIpRange = matchedIpRange;
+        this.uri = uri;
     }
 
     /**

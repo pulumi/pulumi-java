@@ -33,7 +33,7 @@ public final class EnvVar {
         String name,
         @Nullable String value,
         @Nullable EnvVarSource valueFrom) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.value = value;
         this.valueFrom = valueFrom;
     }

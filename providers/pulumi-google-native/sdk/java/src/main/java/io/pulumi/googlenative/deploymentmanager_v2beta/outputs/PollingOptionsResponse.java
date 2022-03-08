@@ -44,11 +44,11 @@ public final class PollingOptionsResponse {
         String finishCondition,
         String pollingLink,
         String targetLink) {
-        this.diagnostics = Objects.requireNonNull(diagnostics);
-        this.failCondition = Objects.requireNonNull(failCondition);
-        this.finishCondition = Objects.requireNonNull(finishCondition);
-        this.pollingLink = Objects.requireNonNull(pollingLink);
-        this.targetLink = Objects.requireNonNull(targetLink);
+        this.diagnostics = diagnostics;
+        this.failCondition = failCondition;
+        this.finishCondition = finishCondition;
+        this.pollingLink = pollingLink;
+        this.targetLink = targetLink;
     }
 
     /**

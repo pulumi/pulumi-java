@@ -17,7 +17,7 @@ public final class GrafeasV1beta1DiscoveryDetailsResponse {
 
     @OutputCustomType.Constructor({"discovered"})
     private GrafeasV1beta1DiscoveryDetailsResponse(DiscoveredResponse discovered) {
-        this.discovered = Objects.requireNonNull(discovered);
+        this.discovered = discovered;
     }
 
     /**

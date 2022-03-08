@@ -65,14 +65,14 @@ public final class GetExecutionResult {
         SpecificationResponse specification,
         String state,
         String testExecutionMatrixId) {
-        this.completionTime = Objects.requireNonNull(completionTime);
-        this.creationTime = Objects.requireNonNull(creationTime);
-        this.dimensionDefinitions = Objects.requireNonNull(dimensionDefinitions);
-        this.executionId = Objects.requireNonNull(executionId);
-        this.outcome = Objects.requireNonNull(outcome);
-        this.specification = Objects.requireNonNull(specification);
-        this.state = Objects.requireNonNull(state);
-        this.testExecutionMatrixId = Objects.requireNonNull(testExecutionMatrixId);
+        this.completionTime = completionTime;
+        this.creationTime = creationTime;
+        this.dimensionDefinitions = dimensionDefinitions;
+        this.executionId = executionId;
+        this.outcome = outcome;
+        this.specification = specification;
+        this.state = state;
+        this.testExecutionMatrixId = testExecutionMatrixId;
     }
 
     /**

@@ -98,19 +98,19 @@ public final class GetUptimeCheckConfigResult {
         List<String> selectedRegions,
         TcpCheckResponse tcpCheck,
         String timeout) {
-        this.checkerType = Objects.requireNonNull(checkerType);
-        this.contentMatchers = Objects.requireNonNull(contentMatchers);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.httpCheck = Objects.requireNonNull(httpCheck);
-        this.internalCheckers = Objects.requireNonNull(internalCheckers);
-        this.isInternal = Objects.requireNonNull(isInternal);
-        this.monitoredResource = Objects.requireNonNull(monitoredResource);
-        this.name = Objects.requireNonNull(name);
-        this.period = Objects.requireNonNull(period);
-        this.resourceGroup = Objects.requireNonNull(resourceGroup);
-        this.selectedRegions = Objects.requireNonNull(selectedRegions);
-        this.tcpCheck = Objects.requireNonNull(tcpCheck);
-        this.timeout = Objects.requireNonNull(timeout);
+        this.checkerType = checkerType;
+        this.contentMatchers = contentMatchers;
+        this.displayName = displayName;
+        this.httpCheck = httpCheck;
+        this.internalCheckers = internalCheckers;
+        this.isInternal = isInternal;
+        this.monitoredResource = monitoredResource;
+        this.name = name;
+        this.period = period;
+        this.resourceGroup = resourceGroup;
+        this.selectedRegions = selectedRegions;
+        this.tcpCheck = tcpCheck;
+        this.timeout = timeout;
     }
 
     /**

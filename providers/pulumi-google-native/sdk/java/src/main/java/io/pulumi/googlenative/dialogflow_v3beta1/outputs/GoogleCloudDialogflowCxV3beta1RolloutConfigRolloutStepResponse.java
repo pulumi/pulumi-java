@@ -31,9 +31,9 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepRespons
         String displayName,
         String minDuration,
         Integer trafficPercent) {
-        this.displayName = Objects.requireNonNull(displayName);
-        this.minDuration = Objects.requireNonNull(minDuration);
-        this.trafficPercent = Objects.requireNonNull(trafficPercent);
+        this.displayName = displayName;
+        this.minDuration = minDuration;
+        this.trafficPercent = trafficPercent;
     }
 
     /**

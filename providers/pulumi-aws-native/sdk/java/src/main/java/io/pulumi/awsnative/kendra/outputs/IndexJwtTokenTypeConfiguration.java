@@ -32,7 +32,7 @@ public final class IndexJwtTokenTypeConfiguration {
         this.claimRegex = claimRegex;
         this.groupAttributeField = groupAttributeField;
         this.issuer = issuer;
-        this.keyLocation = Objects.requireNonNull(keyLocation);
+        this.keyLocation = keyLocation;
         this.secretManagerArn = secretManagerArn;
         this.uRL = uRL;
         this.userNameAttributeField = userNameAttributeField;

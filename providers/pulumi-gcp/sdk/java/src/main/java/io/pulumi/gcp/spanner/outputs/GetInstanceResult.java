@@ -43,14 +43,14 @@ public final class GetInstanceResult {
         String state) {
         this.config = config;
         this.displayName = displayName;
-        this.forceDestroy = Objects.requireNonNull(forceDestroy);
-        this.id = Objects.requireNonNull(id);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.numNodes = Objects.requireNonNull(numNodes);
-        this.processingUnits = Objects.requireNonNull(processingUnits);
+        this.forceDestroy = forceDestroy;
+        this.id = id;
+        this.labels = labels;
+        this.name = name;
+        this.numNodes = numNodes;
+        this.processingUnits = processingUnits;
         this.project = project;
-        this.state = Objects.requireNonNull(state);
+        this.state = state;
     }
 
     public Optional<String> getConfig() {

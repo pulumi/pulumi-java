@@ -18,7 +18,7 @@ public final class ResourceDataSyncAwsOrganizationsSource {
     private ResourceDataSyncAwsOrganizationsSource(
         String organizationSourceType,
         @Nullable List<String> organizationalUnits) {
-        this.organizationSourceType = Objects.requireNonNull(organizationSourceType);
+        this.organizationSourceType = organizationSourceType;
         this.organizationalUnits = organizationalUnits;
     }
 

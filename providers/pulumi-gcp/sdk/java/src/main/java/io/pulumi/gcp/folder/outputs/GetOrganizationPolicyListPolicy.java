@@ -24,10 +24,10 @@ public final class GetOrganizationPolicyListPolicy {
         List<GetOrganizationPolicyListPolicyDeny> denies,
         Boolean inheritFromParent,
         String suggestedValue) {
-        this.allows = Objects.requireNonNull(allows);
-        this.denies = Objects.requireNonNull(denies);
-        this.inheritFromParent = Objects.requireNonNull(inheritFromParent);
-        this.suggestedValue = Objects.requireNonNull(suggestedValue);
+        this.allows = allows;
+        this.denies = denies;
+        this.inheritFromParent = inheritFromParent;
+        this.suggestedValue = suggestedValue;
     }
 
     public List<GetOrganizationPolicyListPolicyAllow> getAllows() {

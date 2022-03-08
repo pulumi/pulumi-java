@@ -17,7 +17,7 @@ public final class VirtualRouterSpecListener {
 
     @OutputCustomType.Constructor({"portMapping"})
     private VirtualRouterSpecListener(VirtualRouterSpecListenerPortMapping portMapping) {
-        this.portMapping = Objects.requireNonNull(portMapping);
+        this.portMapping = portMapping;
     }
 
     /**

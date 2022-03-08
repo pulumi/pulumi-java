@@ -67,13 +67,13 @@ public final class ApplicationGatewaySslProfileResponse {
         @Nullable List<SubResourceResponse> trustedClientCertificates,
         String type) {
         this.clientAuthConfiguration = clientAuthConfiguration;
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.id = id;
         this.name = name;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.sslPolicy = sslPolicy;
         this.trustedClientCertificates = trustedClientCertificates;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

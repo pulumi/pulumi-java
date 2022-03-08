@@ -32,12 +32,12 @@ public final class GetRepositoryEndpointResult {
         String id,
         String repository,
         String repositoryEndpoint) {
-        this.domain = Objects.requireNonNull(domain);
-        this.domainOwner = Objects.requireNonNull(domainOwner);
-        this.format = Objects.requireNonNull(format);
-        this.id = Objects.requireNonNull(id);
-        this.repository = Objects.requireNonNull(repository);
-        this.repositoryEndpoint = Objects.requireNonNull(repositoryEndpoint);
+        this.domain = domain;
+        this.domainOwner = domainOwner;
+        this.format = format;
+        this.id = id;
+        this.repository = repository;
+        this.repositoryEndpoint = repositoryEndpoint;
     }
 
     public String getDomain() {

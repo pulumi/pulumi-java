@@ -31,9 +31,9 @@ public final class BucketRetentionPolicyResponse {
         String effectiveTime,
         Boolean isLocked,
         String retentionPeriod) {
-        this.effectiveTime = Objects.requireNonNull(effectiveTime);
-        this.isLocked = Objects.requireNonNull(isLocked);
-        this.retentionPeriod = Objects.requireNonNull(retentionPeriod);
+        this.effectiveTime = effectiveTime;
+        this.isLocked = isLocked;
+        this.retentionPeriod = retentionPeriod;
     }
 
     /**

@@ -93,19 +93,19 @@ public final class GetInstanceGroupResult {
         Integer size,
         String subnetwork,
         String zone) {
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.description = Objects.requireNonNull(description);
-        this.fingerprint = Objects.requireNonNull(fingerprint);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.namedPorts = Objects.requireNonNull(namedPorts);
-        this.network = Objects.requireNonNull(network);
-        this.region = Objects.requireNonNull(region);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
-        this.size = Objects.requireNonNull(size);
-        this.subnetwork = Objects.requireNonNull(subnetwork);
-        this.zone = Objects.requireNonNull(zone);
+        this.creationTimestamp = creationTimestamp;
+        this.description = description;
+        this.fingerprint = fingerprint;
+        this.kind = kind;
+        this.name = name;
+        this.namedPorts = namedPorts;
+        this.network = network;
+        this.region = region;
+        this.selfLink = selfLink;
+        this.selfLinkWithId = selfLinkWithId;
+        this.size = size;
+        this.subnetwork = subnetwork;
+        this.zone = zone;
     }
 
     /**

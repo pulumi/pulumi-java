@@ -63,15 +63,15 @@ public final class GetCustomerGatewayResult {
         String ipAddress,
         Map<String,String> tags,
         String type) {
-        this.arn = Objects.requireNonNull(arn);
-        this.bgpAsn = Objects.requireNonNull(bgpAsn);
-        this.certificateArn = Objects.requireNonNull(certificateArn);
-        this.deviceName = Objects.requireNonNull(deviceName);
+        this.arn = arn;
+        this.bgpAsn = bgpAsn;
+        this.certificateArn = certificateArn;
+        this.deviceName = deviceName;
         this.filters = filters;
-        this.id = Objects.requireNonNull(id);
-        this.ipAddress = Objects.requireNonNull(ipAddress);
-        this.tags = Objects.requireNonNull(tags);
-        this.type = Objects.requireNonNull(type);
+        this.id = id;
+        this.ipAddress = ipAddress;
+        this.tags = tags;
+        this.type = type;
     }
 
     /**

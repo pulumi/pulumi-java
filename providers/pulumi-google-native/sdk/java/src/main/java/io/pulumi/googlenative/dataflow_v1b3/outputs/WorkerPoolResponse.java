@@ -146,27 +146,27 @@ public final class WorkerPoolResponse {
         TaskRunnerSettingsResponse taskrunnerSettings,
         String teardownPolicy,
         String zone) {
-        this.autoscalingSettings = Objects.requireNonNull(autoscalingSettings);
-        this.dataDisks = Objects.requireNonNull(dataDisks);
-        this.defaultPackageSet = Objects.requireNonNull(defaultPackageSet);
-        this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
-        this.diskSourceImage = Objects.requireNonNull(diskSourceImage);
-        this.diskType = Objects.requireNonNull(diskType);
-        this.ipConfiguration = Objects.requireNonNull(ipConfiguration);
-        this.kind = Objects.requireNonNull(kind);
-        this.machineType = Objects.requireNonNull(machineType);
-        this.metadata = Objects.requireNonNull(metadata);
-        this.network = Objects.requireNonNull(network);
-        this.numThreadsPerWorker = Objects.requireNonNull(numThreadsPerWorker);
-        this.numWorkers = Objects.requireNonNull(numWorkers);
-        this.onHostMaintenance = Objects.requireNonNull(onHostMaintenance);
-        this.packages = Objects.requireNonNull(packages);
-        this.poolArgs = Objects.requireNonNull(poolArgs);
-        this.sdkHarnessContainerImages = Objects.requireNonNull(sdkHarnessContainerImages);
-        this.subnetwork = Objects.requireNonNull(subnetwork);
-        this.taskrunnerSettings = Objects.requireNonNull(taskrunnerSettings);
-        this.teardownPolicy = Objects.requireNonNull(teardownPolicy);
-        this.zone = Objects.requireNonNull(zone);
+        this.autoscalingSettings = autoscalingSettings;
+        this.dataDisks = dataDisks;
+        this.defaultPackageSet = defaultPackageSet;
+        this.diskSizeGb = diskSizeGb;
+        this.diskSourceImage = diskSourceImage;
+        this.diskType = diskType;
+        this.ipConfiguration = ipConfiguration;
+        this.kind = kind;
+        this.machineType = machineType;
+        this.metadata = metadata;
+        this.network = network;
+        this.numThreadsPerWorker = numThreadsPerWorker;
+        this.numWorkers = numWorkers;
+        this.onHostMaintenance = onHostMaintenance;
+        this.packages = packages;
+        this.poolArgs = poolArgs;
+        this.sdkHarnessContainerImages = sdkHarnessContainerImages;
+        this.subnetwork = subnetwork;
+        this.taskrunnerSettings = taskrunnerSettings;
+        this.teardownPolicy = teardownPolicy;
+        this.zone = zone;
     }
 
     /**

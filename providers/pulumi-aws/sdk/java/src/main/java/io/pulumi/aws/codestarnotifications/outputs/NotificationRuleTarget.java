@@ -32,7 +32,7 @@ public final class NotificationRuleTarget {
         String address,
         @Nullable String status,
         @Nullable String type) {
-        this.address = Objects.requireNonNull(address);
+        this.address = address;
         this.status = status;
         this.type = type;
     }

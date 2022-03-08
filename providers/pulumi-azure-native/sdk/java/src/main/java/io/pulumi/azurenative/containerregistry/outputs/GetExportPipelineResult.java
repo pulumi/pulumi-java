@@ -72,15 +72,15 @@ public final class GetExportPipelineResult {
         SystemDataResponse systemData,
         ExportPipelineTargetPropertiesResponse target,
         String type) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.identity = identity;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.options = options;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.target = Objects.requireNonNull(target);
-        this.type = Objects.requireNonNull(type);
+        this.provisioningState = provisioningState;
+        this.systemData = systemData;
+        this.target = target;
+        this.type = type;
     }
 
     /**

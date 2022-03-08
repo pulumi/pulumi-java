@@ -89,16 +89,16 @@ public final class GetManagedDatabaseResult {
         String type) {
         this.catalogCollation = catalogCollation;
         this.collation = collation;
-        this.creationDate = Objects.requireNonNull(creationDate);
-        this.defaultSecondaryLocation = Objects.requireNonNull(defaultSecondaryLocation);
-        this.earliestRestorePoint = Objects.requireNonNull(earliestRestorePoint);
-        this.failoverGroupId = Objects.requireNonNull(failoverGroupId);
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.status = Objects.requireNonNull(status);
+        this.creationDate = creationDate;
+        this.defaultSecondaryLocation = defaultSecondaryLocation;
+        this.earliestRestorePoint = earliestRestorePoint;
+        this.failoverGroupId = failoverGroupId;
+        this.id = id;
+        this.location = location;
+        this.name = name;
+        this.status = status;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

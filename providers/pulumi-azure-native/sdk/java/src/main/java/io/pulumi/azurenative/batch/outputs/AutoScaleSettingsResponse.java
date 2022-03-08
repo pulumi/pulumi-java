@@ -23,7 +23,7 @@ public final class AutoScaleSettingsResponse {
         @Nullable String evaluationInterval,
         String formula) {
         this.evaluationInterval = evaluationInterval;
-        this.formula = Objects.requireNonNull(formula);
+        this.formula = formula;
     }
 
     /**

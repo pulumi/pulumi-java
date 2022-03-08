@@ -51,12 +51,12 @@ public final class GetTaxonomyResult {
         String name,
         Integer policyTagCount,
         GoogleCloudDatacatalogV1beta1SystemTimestampsResponse taxonomyTimestamps) {
-        this.activatedPolicyTypes = Objects.requireNonNull(activatedPolicyTypes);
-        this.description = Objects.requireNonNull(description);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.name = Objects.requireNonNull(name);
-        this.policyTagCount = Objects.requireNonNull(policyTagCount);
-        this.taxonomyTimestamps = Objects.requireNonNull(taxonomyTimestamps);
+        this.activatedPolicyTypes = activatedPolicyTypes;
+        this.description = description;
+        this.displayName = displayName;
+        this.name = name;
+        this.policyTagCount = policyTagCount;
+        this.taxonomyTimestamps = taxonomyTimestamps;
     }
 
     /**

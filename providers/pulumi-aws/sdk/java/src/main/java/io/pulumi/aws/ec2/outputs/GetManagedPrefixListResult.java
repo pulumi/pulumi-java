@@ -70,16 +70,16 @@ public final class GetManagedPrefixListResult {
         String ownerId,
         Map<String,String> tags,
         Integer version) {
-        this.addressFamily = Objects.requireNonNull(addressFamily);
-        this.arn = Objects.requireNonNull(arn);
-        this.entries = Objects.requireNonNull(entries);
+        this.addressFamily = addressFamily;
+        this.arn = arn;
+        this.entries = entries;
         this.filters = filters;
-        this.id = Objects.requireNonNull(id);
-        this.maxEntries = Objects.requireNonNull(maxEntries);
-        this.name = Objects.requireNonNull(name);
-        this.ownerId = Objects.requireNonNull(ownerId);
-        this.tags = Objects.requireNonNull(tags);
-        this.version = Objects.requireNonNull(version);
+        this.id = id;
+        this.maxEntries = maxEntries;
+        this.name = name;
+        this.ownerId = ownerId;
+        this.tags = tags;
+        this.version = version;
     }
 
     /**

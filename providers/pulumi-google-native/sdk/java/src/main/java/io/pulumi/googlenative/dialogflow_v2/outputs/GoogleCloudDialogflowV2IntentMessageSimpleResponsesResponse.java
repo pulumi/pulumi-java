@@ -18,7 +18,7 @@ public final class GoogleCloudDialogflowV2IntentMessageSimpleResponsesResponse {
 
     @OutputCustomType.Constructor({"simpleResponses"})
     private GoogleCloudDialogflowV2IntentMessageSimpleResponsesResponse(List<GoogleCloudDialogflowV2IntentMessageSimpleResponseResponse> simpleResponses) {
-        this.simpleResponses = Objects.requireNonNull(simpleResponses);
+        this.simpleResponses = simpleResponses;
     }
 
     /**

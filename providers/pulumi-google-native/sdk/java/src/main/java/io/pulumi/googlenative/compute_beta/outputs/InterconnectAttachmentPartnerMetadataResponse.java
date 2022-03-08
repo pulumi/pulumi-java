@@ -30,9 +30,9 @@ public final class InterconnectAttachmentPartnerMetadataResponse {
         String interconnectName,
         String partnerName,
         String portalUrl) {
-        this.interconnectName = Objects.requireNonNull(interconnectName);
-        this.partnerName = Objects.requireNonNull(partnerName);
-        this.portalUrl = Objects.requireNonNull(portalUrl);
+        this.interconnectName = interconnectName;
+        this.partnerName = partnerName;
+        this.portalUrl = portalUrl;
     }
 
     /**

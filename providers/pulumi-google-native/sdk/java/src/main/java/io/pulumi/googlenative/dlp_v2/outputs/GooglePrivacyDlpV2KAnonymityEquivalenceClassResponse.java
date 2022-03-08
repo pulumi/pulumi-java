@@ -26,8 +26,8 @@ public final class GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse {
     private GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse(
         String equivalenceClassSize,
         List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues) {
-        this.equivalenceClassSize = Objects.requireNonNull(equivalenceClassSize);
-        this.quasiIdsValues = Objects.requireNonNull(quasiIdsValues);
+        this.equivalenceClassSize = equivalenceClassSize;
+        this.quasiIdsValues = quasiIdsValues;
     }
 
     /**

@@ -37,10 +37,10 @@ public final class TransferOptionsResponse {
         Boolean deleteObjectsUniqueInSink,
         MetadataOptionsResponse metadataOptions,
         Boolean overwriteObjectsAlreadyExistingInSink) {
-        this.deleteObjectsFromSourceAfterTransfer = Objects.requireNonNull(deleteObjectsFromSourceAfterTransfer);
-        this.deleteObjectsUniqueInSink = Objects.requireNonNull(deleteObjectsUniqueInSink);
-        this.metadataOptions = Objects.requireNonNull(metadataOptions);
-        this.overwriteObjectsAlreadyExistingInSink = Objects.requireNonNull(overwriteObjectsAlreadyExistingInSink);
+        this.deleteObjectsFromSourceAfterTransfer = deleteObjectsFromSourceAfterTransfer;
+        this.deleteObjectsUniqueInSink = deleteObjectsUniqueInSink;
+        this.metadataOptions = metadataOptions;
+        this.overwriteObjectsAlreadyExistingInSink = overwriteObjectsAlreadyExistingInSink;
     }
 
     /**

@@ -25,8 +25,8 @@ public final class AcceleratorConfigResponse {
     private AcceleratorConfigResponse(
         Integer acceleratorCount,
         String acceleratorTypeUri) {
-        this.acceleratorCount = Objects.requireNonNull(acceleratorCount);
-        this.acceleratorTypeUri = Objects.requireNonNull(acceleratorTypeUri);
+        this.acceleratorCount = acceleratorCount;
+        this.acceleratorTypeUri = acceleratorTypeUri;
     }
 
     /**

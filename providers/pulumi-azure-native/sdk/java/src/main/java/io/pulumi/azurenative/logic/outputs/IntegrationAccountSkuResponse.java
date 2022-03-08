@@ -17,7 +17,7 @@ public final class IntegrationAccountSkuResponse {
 
     @OutputCustomType.Constructor({"name"})
     private IntegrationAccountSkuResponse(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

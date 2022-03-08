@@ -37,10 +37,10 @@ public final class NetworkConfigResponse {
         Boolean enableExternalIps,
         String network,
         String subnetwork) {
-        this.canIpForward = Objects.requireNonNull(canIpForward);
-        this.enableExternalIps = Objects.requireNonNull(enableExternalIps);
-        this.network = Objects.requireNonNull(network);
-        this.subnetwork = Objects.requireNonNull(subnetwork);
+        this.canIpForward = canIpForward;
+        this.enableExternalIps = enableExternalIps;
+        this.network = network;
+        this.subnetwork = subnetwork;
     }
 
     /**

@@ -17,7 +17,7 @@ public final class GoogleCloudRetailV2PromotionResponse {
 
     @OutputCustomType.Constructor({"promotionId"})
     private GoogleCloudRetailV2PromotionResponse(String promotionId) {
-        this.promotionId = Objects.requireNonNull(promotionId);
+        this.promotionId = promotionId;
     }
 
     /**

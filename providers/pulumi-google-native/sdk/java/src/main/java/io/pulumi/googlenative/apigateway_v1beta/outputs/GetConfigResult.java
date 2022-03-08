@@ -90,18 +90,18 @@ public final class GetConfigResult {
         String serviceConfigId,
         String state,
         String updateTime) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.gatewayConfig = Objects.requireNonNull(gatewayConfig);
-        this.gatewayServiceAccount = Objects.requireNonNull(gatewayServiceAccount);
-        this.grpcServices = Objects.requireNonNull(grpcServices);
-        this.labels = Objects.requireNonNull(labels);
-        this.managedServiceConfigs = Objects.requireNonNull(managedServiceConfigs);
-        this.name = Objects.requireNonNull(name);
-        this.openapiDocuments = Objects.requireNonNull(openapiDocuments);
-        this.serviceConfigId = Objects.requireNonNull(serviceConfigId);
-        this.state = Objects.requireNonNull(state);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.createTime = createTime;
+        this.displayName = displayName;
+        this.gatewayConfig = gatewayConfig;
+        this.gatewayServiceAccount = gatewayServiceAccount;
+        this.grpcServices = grpcServices;
+        this.labels = labels;
+        this.managedServiceConfigs = managedServiceConfigs;
+        this.name = name;
+        this.openapiDocuments = openapiDocuments;
+        this.serviceConfigId = serviceConfigId;
+        this.state = state;
+        this.updateTime = updateTime;
     }
 
     /**

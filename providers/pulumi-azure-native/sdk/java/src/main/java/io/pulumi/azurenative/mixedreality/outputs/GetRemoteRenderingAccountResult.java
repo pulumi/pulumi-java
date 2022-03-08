@@ -96,19 +96,19 @@ public final class GetRemoteRenderingAccountResult {
         SystemDataResponse systemData,
         @Nullable Map<String,String> tags,
         String type) {
-        this.accountDomain = Objects.requireNonNull(accountDomain);
-        this.accountId = Objects.requireNonNull(accountId);
-        this.id = Objects.requireNonNull(id);
+        this.accountDomain = accountDomain;
+        this.accountId = accountId;
+        this.id = id;
         this.identity = identity;
         this.kind = kind;
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
+        this.location = location;
+        this.name = name;
         this.plan = plan;
         this.sku = sku;
         this.storageAccountName = storageAccountName;
-        this.systemData = Objects.requireNonNull(systemData);
+        this.systemData = systemData;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

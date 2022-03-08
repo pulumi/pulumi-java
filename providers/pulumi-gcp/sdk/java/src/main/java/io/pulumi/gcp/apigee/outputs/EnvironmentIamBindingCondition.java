@@ -21,8 +21,8 @@ public final class EnvironmentIamBindingCondition {
         String expression,
         String title) {
         this.description = description;
-        this.expression = Objects.requireNonNull(expression);
-        this.title = Objects.requireNonNull(title);
+        this.expression = expression;
+        this.title = title;
     }
 
     public Optional<String> getDescription() {

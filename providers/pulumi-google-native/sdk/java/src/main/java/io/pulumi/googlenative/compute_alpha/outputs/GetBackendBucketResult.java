@@ -87,18 +87,18 @@ public final class GetBackendBucketResult {
         String name,
         String selfLink,
         String selfLinkWithId) {
-        this.bucketName = Objects.requireNonNull(bucketName);
-        this.cdnPolicy = Objects.requireNonNull(cdnPolicy);
-        this.compressionMode = Objects.requireNonNull(compressionMode);
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.customResponseHeaders = Objects.requireNonNull(customResponseHeaders);
-        this.description = Objects.requireNonNull(description);
-        this.edgeSecurityPolicy = Objects.requireNonNull(edgeSecurityPolicy);
-        this.enableCdn = Objects.requireNonNull(enableCdn);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
+        this.bucketName = bucketName;
+        this.cdnPolicy = cdnPolicy;
+        this.compressionMode = compressionMode;
+        this.creationTimestamp = creationTimestamp;
+        this.customResponseHeaders = customResponseHeaders;
+        this.description = description;
+        this.edgeSecurityPolicy = edgeSecurityPolicy;
+        this.enableCdn = enableCdn;
+        this.kind = kind;
+        this.name = name;
+        this.selfLink = selfLink;
+        this.selfLinkWithId = selfLinkWithId;
     }
 
     /**

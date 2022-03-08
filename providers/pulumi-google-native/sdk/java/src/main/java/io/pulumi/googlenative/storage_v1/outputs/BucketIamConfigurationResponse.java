@@ -32,9 +32,9 @@ public final class BucketIamConfigurationResponse {
         BucketIamConfigurationBucketPolicyOnlyResponse bucketPolicyOnly,
         String publicAccessPrevention,
         BucketIamConfigurationUniformBucketLevelAccessResponse uniformBucketLevelAccess) {
-        this.bucketPolicyOnly = Objects.requireNonNull(bucketPolicyOnly);
-        this.publicAccessPrevention = Objects.requireNonNull(publicAccessPrevention);
-        this.uniformBucketLevelAccess = Objects.requireNonNull(uniformBucketLevelAccess);
+        this.bucketPolicyOnly = bucketPolicyOnly;
+        this.publicAccessPrevention = publicAccessPrevention;
+        this.uniformBucketLevelAccess = uniformBucketLevelAccess;
     }
 
     /**

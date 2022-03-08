@@ -28,7 +28,7 @@ public final class FlexibleAppVersionDeploymentZip {
         @Nullable Integer filesCount,
         String sourceUrl) {
         this.filesCount = filesCount;
-        this.sourceUrl = Objects.requireNonNull(sourceUrl);
+        this.sourceUrl = sourceUrl;
     }
 
     /**

@@ -217,40 +217,40 @@ public final class GetAmiResult {
         Map<String,String> tags,
         String usageOperation,
         String virtualizationType) {
-        this.architecture = Objects.requireNonNull(architecture);
-        this.arn = Objects.requireNonNull(arn);
-        this.blockDeviceMappings = Objects.requireNonNull(blockDeviceMappings);
-        this.creationDate = Objects.requireNonNull(creationDate);
-        this.description = Objects.requireNonNull(description);
-        this.enaSupport = Objects.requireNonNull(enaSupport);
+        this.architecture = architecture;
+        this.arn = arn;
+        this.blockDeviceMappings = blockDeviceMappings;
+        this.creationDate = creationDate;
+        this.description = description;
+        this.enaSupport = enaSupport;
         this.executableUsers = executableUsers;
         this.filters = filters;
-        this.hypervisor = Objects.requireNonNull(hypervisor);
-        this.id = Objects.requireNonNull(id);
-        this.imageId = Objects.requireNonNull(imageId);
-        this.imageLocation = Objects.requireNonNull(imageLocation);
-        this.imageOwnerAlias = Objects.requireNonNull(imageOwnerAlias);
-        this.imageType = Objects.requireNonNull(imageType);
-        this.kernelId = Objects.requireNonNull(kernelId);
+        this.hypervisor = hypervisor;
+        this.id = id;
+        this.imageId = imageId;
+        this.imageLocation = imageLocation;
+        this.imageOwnerAlias = imageOwnerAlias;
+        this.imageType = imageType;
+        this.kernelId = kernelId;
         this.mostRecent = mostRecent;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.nameRegex = nameRegex;
-        this.ownerId = Objects.requireNonNull(ownerId);
-        this.owners = Objects.requireNonNull(owners);
-        this.platform = Objects.requireNonNull(platform);
-        this.platformDetails = Objects.requireNonNull(platformDetails);
-        this.productCodes = Objects.requireNonNull(productCodes);
-        this.$public = Objects.requireNonNull($public);
-        this.ramdiskId = Objects.requireNonNull(ramdiskId);
-        this.rootDeviceName = Objects.requireNonNull(rootDeviceName);
-        this.rootDeviceType = Objects.requireNonNull(rootDeviceType);
-        this.rootSnapshotId = Objects.requireNonNull(rootSnapshotId);
-        this.sriovNetSupport = Objects.requireNonNull(sriovNetSupport);
-        this.state = Objects.requireNonNull(state);
-        this.stateReason = Objects.requireNonNull(stateReason);
-        this.tags = Objects.requireNonNull(tags);
-        this.usageOperation = Objects.requireNonNull(usageOperation);
-        this.virtualizationType = Objects.requireNonNull(virtualizationType);
+        this.ownerId = ownerId;
+        this.owners = owners;
+        this.platform = platform;
+        this.platformDetails = platformDetails;
+        this.productCodes = productCodes;
+        this.$public = $public;
+        this.ramdiskId = ramdiskId;
+        this.rootDeviceName = rootDeviceName;
+        this.rootDeviceType = rootDeviceType;
+        this.rootSnapshotId = rootSnapshotId;
+        this.sriovNetSupport = sriovNetSupport;
+        this.state = state;
+        this.stateReason = stateReason;
+        this.tags = tags;
+        this.usageOperation = usageOperation;
+        this.virtualizationType = virtualizationType;
     }
 
     /**

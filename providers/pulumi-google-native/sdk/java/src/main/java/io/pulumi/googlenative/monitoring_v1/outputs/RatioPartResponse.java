@@ -25,8 +25,8 @@ public final class RatioPartResponse {
     private RatioPartResponse(
         AggregationResponse aggregation,
         String filter) {
-        this.aggregation = Objects.requireNonNull(aggregation);
-        this.filter = Objects.requireNonNull(filter);
+        this.aggregation = aggregation;
+        this.filter = filter;
     }
 
     /**

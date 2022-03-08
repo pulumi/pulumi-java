@@ -17,7 +17,7 @@ public final class InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersRespo
 
     @OutputCustomType.Constructor({"onHealthCheck"})
     private InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersResponse(String onHealthCheck) {
-        this.onHealthCheck = Objects.requireNonNull(onHealthCheck);
+        this.onHealthCheck = onHealthCheck;
     }
 
     /**

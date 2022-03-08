@@ -74,7 +74,7 @@ public final class TagField {
         this.displayName = displayName;
         this.doubleValue = doubleValue;
         this.enumValue = enumValue;
-        this.fieldName = Objects.requireNonNull(fieldName);
+        this.fieldName = fieldName;
         this.order = order;
         this.stringValue = stringValue;
         this.timestampValue = timestampValue;

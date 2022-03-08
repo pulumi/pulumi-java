@@ -25,8 +25,8 @@ public final class ServiceTemplateSpecContainerEnvValueFromSecretKeyRef {
     private ServiceTemplateSpecContainerEnvValueFromSecretKeyRef(
         String key,
         String name) {
-        this.key = Objects.requireNonNull(key);
-        this.name = Objects.requireNonNull(name);
+        this.key = key;
+        this.name = name;
     }
 
     /**

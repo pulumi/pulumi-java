@@ -25,8 +25,8 @@ public final class UserPoolAccountRecoverySettingRecoveryMechanism {
     private UserPoolAccountRecoverySettingRecoveryMechanism(
         String name,
         Integer priority) {
-        this.name = Objects.requireNonNull(name);
-        this.priority = Objects.requireNonNull(priority);
+        this.name = name;
+        this.priority = priority;
     }
 
     /**

@@ -25,8 +25,8 @@ public final class DenoiseResponse {
     private DenoiseResponse(
         Double strength,
         String tune) {
-        this.strength = Objects.requireNonNull(strength);
-        this.tune = Objects.requireNonNull(tune);
+        this.strength = strength;
+        this.tune = tune;
     }
 
     /**

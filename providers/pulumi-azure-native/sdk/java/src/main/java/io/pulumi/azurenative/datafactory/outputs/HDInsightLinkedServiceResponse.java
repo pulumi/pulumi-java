@@ -103,7 +103,7 @@ public final class HDInsightLinkedServiceResponse {
         String type,
         @Nullable Object userName) {
         this.annotations = annotations;
-        this.clusterUri = Objects.requireNonNull(clusterUri);
+        this.clusterUri = clusterUri;
         this.connectVia = connectVia;
         this.description = description;
         this.encryptedCredential = encryptedCredential;
@@ -113,7 +113,7 @@ public final class HDInsightLinkedServiceResponse {
         this.linkedServiceName = linkedServiceName;
         this.parameters = parameters;
         this.password = password;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.userName = userName;
     }
 

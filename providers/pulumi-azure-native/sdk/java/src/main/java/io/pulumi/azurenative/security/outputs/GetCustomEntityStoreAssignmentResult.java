@@ -52,11 +52,11 @@ public final class GetCustomEntityStoreAssignmentResult {
         SystemDataResponse systemData,
         String type) {
         this.entityStoreDatabaseLink = entityStoreDatabaseLink;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.principal = principal;
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

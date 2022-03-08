@@ -36,10 +36,10 @@ public final class EndPointResponse {
         String ipAddress,
         String port,
         String protocol) {
-        this.endPointName = Objects.requireNonNull(endPointName);
-        this.ipAddress = Objects.requireNonNull(ipAddress);
-        this.port = Objects.requireNonNull(port);
-        this.protocol = Objects.requireNonNull(protocol);
+        this.endPointName = endPointName;
+        this.ipAddress = ipAddress;
+        this.port = port;
+        this.protocol = protocol;
     }
 
     /**

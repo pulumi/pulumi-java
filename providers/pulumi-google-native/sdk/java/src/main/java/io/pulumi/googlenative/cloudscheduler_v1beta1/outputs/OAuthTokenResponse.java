@@ -24,8 +24,8 @@ public final class OAuthTokenResponse {
     private OAuthTokenResponse(
         String scope,
         String serviceAccountEmail) {
-        this.scope = Objects.requireNonNull(scope);
-        this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
+        this.scope = scope;
+        this.serviceAccountEmail = serviceAccountEmail;
     }
 
     /**

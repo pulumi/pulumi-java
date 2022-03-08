@@ -40,8 +40,8 @@ public final class IdentityResponse {
         String tenantId,
         @Nullable String type,
         @Nullable Map<String,UserAssignedResourceIdentityResponse> userAssignedIdentities) {
-        this.principalId = Objects.requireNonNull(principalId);
-        this.tenantId = Objects.requireNonNull(tenantId);
+        this.principalId = principalId;
+        this.tenantId = tenantId;
         this.type = type;
         this.userAssignedIdentities = userAssignedIdentities;
     }

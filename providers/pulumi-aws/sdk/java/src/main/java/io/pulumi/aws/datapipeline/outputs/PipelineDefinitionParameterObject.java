@@ -24,7 +24,7 @@ public final class PipelineDefinitionParameterObject {
         @Nullable List<PipelineDefinitionParameterObjectAttribute> attributes,
         String id) {
         this.attributes = attributes;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
     }
 
     public List<PipelineDefinitionParameterObjectAttribute> getAttributes() {

@@ -42,11 +42,11 @@ public final class GoogleCloudApigeeV1DatastoreConfigResponse {
         String path,
         String project,
         String tablePrefix) {
-        this.bucketName = Objects.requireNonNull(bucketName);
-        this.datasetName = Objects.requireNonNull(datasetName);
-        this.path = Objects.requireNonNull(path);
-        this.project = Objects.requireNonNull(project);
-        this.tablePrefix = Objects.requireNonNull(tablePrefix);
+        this.bucketName = bucketName;
+        this.datasetName = datasetName;
+        this.path = path;
+        this.project = project;
+        this.tablePrefix = tablePrefix;
     }
 
     /**

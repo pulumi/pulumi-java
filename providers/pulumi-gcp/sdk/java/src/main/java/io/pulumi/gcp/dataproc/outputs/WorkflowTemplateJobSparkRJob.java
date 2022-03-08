@@ -57,7 +57,7 @@ public final class WorkflowTemplateJobSparkRJob {
         this.args = args;
         this.fileUris = fileUris;
         this.loggingConfig = loggingConfig;
-        this.mainRFileUri = Objects.requireNonNull(mainRFileUri);
+        this.mainRFileUri = mainRFileUri;
         this.properties = properties;
     }
 

@@ -83,17 +83,17 @@ public final class ProbeResponse {
         String provisioningState,
         @Nullable String requestPath,
         String type) {
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.id = id;
         this.intervalInSeconds = intervalInSeconds;
-        this.loadBalancingRules = Objects.requireNonNull(loadBalancingRules);
+        this.loadBalancingRules = loadBalancingRules;
         this.name = name;
         this.numberOfProbes = numberOfProbes;
-        this.port = Objects.requireNonNull(port);
-        this.protocol = Objects.requireNonNull(protocol);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.port = port;
+        this.protocol = protocol;
+        this.provisioningState = provisioningState;
         this.requestPath = requestPath;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

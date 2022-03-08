@@ -40,8 +40,8 @@ public final class ClusterCoreInstanceFleetInstanceTypeConfigEbsConfig {
         String type,
         @Nullable Integer volumesPerInstance) {
         this.iops = iops;
-        this.size = Objects.requireNonNull(size);
-        this.type = Objects.requireNonNull(type);
+        this.size = size;
+        this.type = type;
         this.volumesPerInstance = volumesPerInstance;
     }
 

@@ -35,7 +35,7 @@ public final class EncryptionServiceResponse {
         String lastEnabledTime) {
         this.enabled = enabled;
         this.keyType = keyType;
-        this.lastEnabledTime = Objects.requireNonNull(lastEnabledTime);
+        this.lastEnabledTime = lastEnabledTime;
     }
 
     /**

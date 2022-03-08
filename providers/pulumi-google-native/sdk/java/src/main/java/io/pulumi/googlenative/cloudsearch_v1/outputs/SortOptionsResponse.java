@@ -24,8 +24,8 @@ public final class SortOptionsResponse {
     private SortOptionsResponse(
         String operatorName,
         String sortOrder) {
-        this.operatorName = Objects.requireNonNull(operatorName);
-        this.sortOrder = Objects.requireNonNull(sortOrder);
+        this.operatorName = operatorName;
+        this.sortOrder = sortOrder;
     }
 
     /**

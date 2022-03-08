@@ -38,10 +38,10 @@ public final class GetOrganizationRoot {
         String id,
         String name,
         List<GetOrganizationRootPolicyType> policyTypes) {
-        this.arn = Objects.requireNonNull(arn);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.policyTypes = Objects.requireNonNull(policyTypes);
+        this.arn = arn;
+        this.id = id;
+        this.name = name;
+        this.policyTypes = policyTypes;
     }
 
     /**

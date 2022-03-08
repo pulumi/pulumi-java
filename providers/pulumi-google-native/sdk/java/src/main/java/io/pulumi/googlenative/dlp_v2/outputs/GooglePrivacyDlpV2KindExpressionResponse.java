@@ -17,7 +17,7 @@ public final class GooglePrivacyDlpV2KindExpressionResponse {
 
     @OutputCustomType.Constructor({"name"})
     private GooglePrivacyDlpV2KindExpressionResponse(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

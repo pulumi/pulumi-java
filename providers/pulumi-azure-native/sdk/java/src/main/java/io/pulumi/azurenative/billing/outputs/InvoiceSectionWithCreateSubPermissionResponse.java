@@ -75,16 +75,16 @@ public final class InvoiceSectionWithCreateSubPermissionResponse {
         String invoiceSectionDisplayName,
         String invoiceSectionId,
         String invoiceSectionSystemId) {
-        this.billingProfileDisplayName = Objects.requireNonNull(billingProfileDisplayName);
-        this.billingProfileId = Objects.requireNonNull(billingProfileId);
-        this.billingProfileSpendingLimit = Objects.requireNonNull(billingProfileSpendingLimit);
-        this.billingProfileStatus = Objects.requireNonNull(billingProfileStatus);
-        this.billingProfileStatusReasonCode = Objects.requireNonNull(billingProfileStatusReasonCode);
-        this.billingProfileSystemId = Objects.requireNonNull(billingProfileSystemId);
+        this.billingProfileDisplayName = billingProfileDisplayName;
+        this.billingProfileId = billingProfileId;
+        this.billingProfileSpendingLimit = billingProfileSpendingLimit;
+        this.billingProfileStatus = billingProfileStatus;
+        this.billingProfileStatusReasonCode = billingProfileStatusReasonCode;
+        this.billingProfileSystemId = billingProfileSystemId;
         this.enabledAzurePlans = enabledAzurePlans;
-        this.invoiceSectionDisplayName = Objects.requireNonNull(invoiceSectionDisplayName);
-        this.invoiceSectionId = Objects.requireNonNull(invoiceSectionId);
-        this.invoiceSectionSystemId = Objects.requireNonNull(invoiceSectionSystemId);
+        this.invoiceSectionDisplayName = invoiceSectionDisplayName;
+        this.invoiceSectionId = invoiceSectionId;
+        this.invoiceSectionSystemId = invoiceSectionSystemId;
     }
 
     /**

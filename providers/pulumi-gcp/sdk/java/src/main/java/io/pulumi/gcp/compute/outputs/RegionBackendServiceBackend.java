@@ -147,7 +147,7 @@ public final class RegionBackendServiceBackend {
         this.capacityScaler = capacityScaler;
         this.description = description;
         this.failover = failover;
-        this.group = Objects.requireNonNull(group);
+        this.group = group;
         this.maxConnections = maxConnections;
         this.maxConnectionsPerEndpoint = maxConnectionsPerEndpoint;
         this.maxConnectionsPerInstance = maxConnectionsPerInstance;

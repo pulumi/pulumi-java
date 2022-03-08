@@ -17,7 +17,7 @@ public final class StorageAccountPropertiesResponse {
 
     @OutputCustomType.Constructor({"id"})
     private StorageAccountPropertiesResponse(String id) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
     }
 
     /**

@@ -36,7 +36,7 @@ public final class OrcFormatResponse {
         String type) {
         this.deserializer = deserializer;
         this.serializer = serializer;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

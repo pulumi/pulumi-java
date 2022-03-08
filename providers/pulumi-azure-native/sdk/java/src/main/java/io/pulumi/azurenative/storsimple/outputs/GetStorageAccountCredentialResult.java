@@ -65,13 +65,13 @@ public final class GetStorageAccountCredentialResult {
         String type,
         Integer volumesCount) {
         this.accessKey = accessKey;
-        this.endPoint = Objects.requireNonNull(endPoint);
-        this.id = Objects.requireNonNull(id);
+        this.endPoint = endPoint;
+        this.id = id;
         this.kind = kind;
-        this.name = Objects.requireNonNull(name);
-        this.sslStatus = Objects.requireNonNull(sslStatus);
-        this.type = Objects.requireNonNull(type);
-        this.volumesCount = Objects.requireNonNull(volumesCount);
+        this.name = name;
+        this.sslStatus = sslStatus;
+        this.type = type;
+        this.volumesCount = volumesCount;
     }
 
     /**

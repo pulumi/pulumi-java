@@ -26,8 +26,8 @@ public final class GooglePrivacyDlpV2RecordTransformationsResponse {
     private GooglePrivacyDlpV2RecordTransformationsResponse(
         List<GooglePrivacyDlpV2FieldTransformationResponse> fieldTransformations,
         List<GooglePrivacyDlpV2RecordSuppressionResponse> recordSuppressions) {
-        this.fieldTransformations = Objects.requireNonNull(fieldTransformations);
-        this.recordSuppressions = Objects.requireNonNull(recordSuppressions);
+        this.fieldTransformations = fieldTransformations;
+        this.recordSuppressions = recordSuppressions;
     }
 
     /**

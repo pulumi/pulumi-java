@@ -25,8 +25,8 @@ public final class GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingC
     private GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingConnectionPasswordEncryption(
         String awsKmsKeyId,
         Boolean returnConnectionPasswordEncrypted) {
-        this.awsKmsKeyId = Objects.requireNonNull(awsKmsKeyId);
-        this.returnConnectionPasswordEncrypted = Objects.requireNonNull(returnConnectionPasswordEncrypted);
+        this.awsKmsKeyId = awsKmsKeyId;
+        this.returnConnectionPasswordEncrypted = returnConnectionPasswordEncrypted;
     }
 
     /**

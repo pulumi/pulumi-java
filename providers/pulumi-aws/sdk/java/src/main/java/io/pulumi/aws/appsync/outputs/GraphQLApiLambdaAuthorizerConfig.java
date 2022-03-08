@@ -34,7 +34,7 @@ public final class GraphQLApiLambdaAuthorizerConfig {
         String authorizerUri,
         @Nullable String identityValidationExpression) {
         this.authorizerResultTtlInSeconds = authorizerResultTtlInSeconds;
-        this.authorizerUri = Objects.requireNonNull(authorizerUri);
+        this.authorizerUri = authorizerUri;
         this.identityValidationExpression = identityValidationExpression;
     }
 

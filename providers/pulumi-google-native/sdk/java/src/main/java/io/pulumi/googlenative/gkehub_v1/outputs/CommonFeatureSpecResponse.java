@@ -25,8 +25,8 @@ public final class CommonFeatureSpecResponse {
     private CommonFeatureSpecResponse(
         AppDevExperienceFeatureSpecResponse appdevexperience,
         MultiClusterIngressFeatureSpecResponse multiclusteringress) {
-        this.appdevexperience = Objects.requireNonNull(appdevexperience);
-        this.multiclusteringress = Objects.requireNonNull(multiclusteringress);
+        this.appdevexperience = appdevexperience;
+        this.multiclusteringress = multiclusteringress;
     }
 
     /**

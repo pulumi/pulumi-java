@@ -29,7 +29,7 @@ public final class ContainerHealthcheck {
         this.interval = interval;
         this.retries = retries;
         this.startPeriod = startPeriod;
-        this.tests = Objects.requireNonNull(tests);
+        this.tests = tests;
         this.timeout = timeout;
     }
 

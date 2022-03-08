@@ -59,9 +59,9 @@ public final class VirtualNetworkResourceSettingsResponse {
         this.addressSpace = addressSpace;
         this.dnsServers = dnsServers;
         this.enableDdosProtection = enableDdosProtection;
-        this.resourceType = Objects.requireNonNull(resourceType);
+        this.resourceType = resourceType;
         this.subnets = subnets;
-        this.targetResourceName = Objects.requireNonNull(targetResourceName);
+        this.targetResourceName = targetResourceName;
     }
 
     /**

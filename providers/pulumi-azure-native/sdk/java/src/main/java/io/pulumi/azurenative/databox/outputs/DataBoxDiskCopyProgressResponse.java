@@ -38,10 +38,10 @@ public final class DataBoxDiskCopyProgressResponse {
         Integer percentComplete,
         String serialNumber,
         String status) {
-        this.bytesCopied = Objects.requireNonNull(bytesCopied);
-        this.percentComplete = Objects.requireNonNull(percentComplete);
-        this.serialNumber = Objects.requireNonNull(serialNumber);
-        this.status = Objects.requireNonNull(status);
+        this.bytesCopied = bytesCopied;
+        this.percentComplete = percentComplete;
+        this.serialNumber = serialNumber;
+        this.status = status;
     }
 
     /**

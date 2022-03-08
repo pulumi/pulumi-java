@@ -25,8 +25,8 @@ public final class ContentKeyPolicyWidevineConfigurationResponse {
     private ContentKeyPolicyWidevineConfigurationResponse(
         String odataType,
         String widevineTemplate) {
-        this.odataType = Objects.requireNonNull(odataType);
-        this.widevineTemplate = Objects.requireNonNull(widevineTemplate);
+        this.odataType = odataType;
+        this.widevineTemplate = widevineTemplate;
     }
 
     /**

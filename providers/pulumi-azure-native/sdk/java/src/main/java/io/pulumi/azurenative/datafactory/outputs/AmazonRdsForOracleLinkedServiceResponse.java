@@ -73,12 +73,12 @@ public final class AmazonRdsForOracleLinkedServiceResponse {
         String type) {
         this.annotations = annotations;
         this.connectVia = connectVia;
-        this.connectionString = Objects.requireNonNull(connectionString);
+        this.connectionString = connectionString;
         this.description = description;
         this.encryptedCredential = encryptedCredential;
         this.parameters = parameters;
         this.password = password;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

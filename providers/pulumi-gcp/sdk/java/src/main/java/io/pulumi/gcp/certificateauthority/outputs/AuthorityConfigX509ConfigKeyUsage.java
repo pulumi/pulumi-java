@@ -37,8 +37,8 @@ public final class AuthorityConfigX509ConfigKeyUsage {
         AuthorityConfigX509ConfigKeyUsageBaseKeyUsage baseKeyUsage,
         AuthorityConfigX509ConfigKeyUsageExtendedKeyUsage extendedKeyUsage,
         @Nullable List<AuthorityConfigX509ConfigKeyUsageUnknownExtendedKeyUsage> unknownExtendedKeyUsages) {
-        this.baseKeyUsage = Objects.requireNonNull(baseKeyUsage);
-        this.extendedKeyUsage = Objects.requireNonNull(extendedKeyUsage);
+        this.baseKeyUsage = baseKeyUsage;
+        this.extendedKeyUsage = extendedKeyUsage;
         this.unknownExtendedKeyUsages = unknownExtendedKeyUsages;
     }
 

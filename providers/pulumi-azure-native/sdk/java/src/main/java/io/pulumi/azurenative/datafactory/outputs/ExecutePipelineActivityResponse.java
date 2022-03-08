@@ -72,10 +72,10 @@ public final class ExecutePipelineActivityResponse {
         @Nullable Boolean waitOnCompletion) {
         this.dependsOn = dependsOn;
         this.description = description;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.parameters = parameters;
-        this.pipeline = Objects.requireNonNull(pipeline);
-        this.type = Objects.requireNonNull(type);
+        this.pipeline = pipeline;
+        this.type = type;
         this.userProperties = userProperties;
         this.waitOnCompletion = waitOnCompletion;
     }

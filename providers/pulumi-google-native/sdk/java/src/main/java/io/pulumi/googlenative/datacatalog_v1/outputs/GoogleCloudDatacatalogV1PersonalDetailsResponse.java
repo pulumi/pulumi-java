@@ -25,8 +25,8 @@ public final class GoogleCloudDatacatalogV1PersonalDetailsResponse {
     private GoogleCloudDatacatalogV1PersonalDetailsResponse(
         String starTime,
         Boolean starred) {
-        this.starTime = Objects.requireNonNull(starTime);
-        this.starred = Objects.requireNonNull(starred);
+        this.starTime = starTime;
+        this.starred = starred;
     }
 
     /**

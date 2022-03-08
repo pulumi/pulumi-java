@@ -35,7 +35,7 @@ public final class DeploymentPropertiesResponse {
         String provisioningState,
         @Nullable DeploymentScaleSettingsResponse scaleSettings) {
         this.model = model;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.scaleSettings = scaleSettings;
     }
 

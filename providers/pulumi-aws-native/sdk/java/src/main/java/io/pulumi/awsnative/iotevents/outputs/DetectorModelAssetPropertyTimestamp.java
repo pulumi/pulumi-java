@@ -27,7 +27,7 @@ public final class DetectorModelAssetPropertyTimestamp {
         @Nullable String offsetInNanos,
         String timeInSeconds) {
         this.offsetInNanos = offsetInNanos;
-        this.timeInSeconds = Objects.requireNonNull(timeInSeconds);
+        this.timeInSeconds = timeInSeconds;
     }
 
     /**

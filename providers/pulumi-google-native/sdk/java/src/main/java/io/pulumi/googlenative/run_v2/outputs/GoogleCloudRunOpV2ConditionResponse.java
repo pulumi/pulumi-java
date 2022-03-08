@@ -72,16 +72,16 @@ public final class GoogleCloudRunOpV2ConditionResponse {
         String severity,
         String state,
         String type) {
-        this.domainMappingReason = Objects.requireNonNull(domainMappingReason);
-        this.executionReason = Objects.requireNonNull(executionReason);
-        this.internalReason = Objects.requireNonNull(internalReason);
-        this.lastTransitionTime = Objects.requireNonNull(lastTransitionTime);
-        this.message = Objects.requireNonNull(message);
-        this.reason = Objects.requireNonNull(reason);
-        this.revisionReason = Objects.requireNonNull(revisionReason);
-        this.severity = Objects.requireNonNull(severity);
-        this.state = Objects.requireNonNull(state);
-        this.type = Objects.requireNonNull(type);
+        this.domainMappingReason = domainMappingReason;
+        this.executionReason = executionReason;
+        this.internalReason = internalReason;
+        this.lastTransitionTime = lastTransitionTime;
+        this.message = message;
+        this.reason = reason;
+        this.revisionReason = revisionReason;
+        this.severity = severity;
+        this.state = state;
+        this.type = type;
     }
 
     /**

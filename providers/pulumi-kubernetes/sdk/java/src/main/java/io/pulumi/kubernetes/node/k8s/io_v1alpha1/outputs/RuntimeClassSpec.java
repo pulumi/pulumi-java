@@ -35,7 +35,7 @@ public final class RuntimeClassSpec {
         String runtimeHandler,
         @Nullable Scheduling scheduling) {
         this.overhead = overhead;
-        this.runtimeHandler = Objects.requireNonNull(runtimeHandler);
+        this.runtimeHandler = runtimeHandler;
         this.scheduling = scheduling;
     }
 

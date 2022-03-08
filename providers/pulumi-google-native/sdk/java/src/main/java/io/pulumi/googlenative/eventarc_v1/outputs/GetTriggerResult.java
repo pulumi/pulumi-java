@@ -77,16 +77,16 @@ public final class GetTriggerResult {
         TransportResponse transport,
         String uid,
         String updateTime) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.destination = Objects.requireNonNull(destination);
-        this.etag = Objects.requireNonNull(etag);
-        this.eventFilters = Objects.requireNonNull(eventFilters);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.serviceAccount = Objects.requireNonNull(serviceAccount);
-        this.transport = Objects.requireNonNull(transport);
-        this.uid = Objects.requireNonNull(uid);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.createTime = createTime;
+        this.destination = destination;
+        this.etag = etag;
+        this.eventFilters = eventFilters;
+        this.labels = labels;
+        this.name = name;
+        this.serviceAccount = serviceAccount;
+        this.transport = transport;
+        this.uid = uid;
+        this.updateTime = updateTime;
     }
 
     /**

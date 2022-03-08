@@ -87,9 +87,9 @@ public final class AzureMLBatchExecutionActivityResponse {
         this.description = description;
         this.globalParameters = globalParameters;
         this.linkedServiceName = linkedServiceName;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.policy = policy;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.userProperties = userProperties;
         this.webServiceInputs = webServiceInputs;
         this.webServiceOutputs = webServiceOutputs;

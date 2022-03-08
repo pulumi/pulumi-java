@@ -40,8 +40,8 @@ public final class GraphQLApiUserPoolConfig {
         String userPoolId) {
         this.appIdClientRegex = appIdClientRegex;
         this.awsRegion = awsRegion;
-        this.defaultAction = Objects.requireNonNull(defaultAction);
-        this.userPoolId = Objects.requireNonNull(userPoolId);
+        this.defaultAction = defaultAction;
+        this.userPoolId = userPoolId;
     }
 
     /**

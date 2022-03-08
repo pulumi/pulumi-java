@@ -54,12 +54,12 @@ public final class DataTransferServiceResourcePropertiesResponse {
         List<DataTransferRegionalServiceResourceResponse> locations,
         String serviceType,
         String status) {
-        this.creationTime = Objects.requireNonNull(creationTime);
+        this.creationTime = creationTime;
         this.instanceCount = instanceCount;
         this.instanceSize = instanceSize;
-        this.locations = Objects.requireNonNull(locations);
-        this.serviceType = Objects.requireNonNull(serviceType);
-        this.status = Objects.requireNonNull(status);
+        this.locations = locations;
+        this.serviceType = serviceType;
+        this.status = status;
     }
 
     /**

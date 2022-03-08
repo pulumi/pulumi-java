@@ -27,7 +27,7 @@ public final class SchedulingPolicyFairSharePolicyShareDistribution {
     private SchedulingPolicyFairSharePolicyShareDistribution(
         String shareIdentifier,
         @Nullable Double weightFactor) {
-        this.shareIdentifier = Objects.requireNonNull(shareIdentifier);
+        this.shareIdentifier = shareIdentifier;
         this.weightFactor = weightFactor;
     }
 

@@ -60,10 +60,10 @@ public final class InstanceDisk {
         @Nullable String sizeInGb) {
         this.attachedTo = attachedTo;
         this.attachmentState = attachmentState;
-        this.diskName = Objects.requireNonNull(diskName);
+        this.diskName = diskName;
         this.iOPS = iOPS;
         this.isSystemDisk = isSystemDisk;
-        this.path = Objects.requireNonNull(path);
+        this.path = path;
         this.sizeInGb = sizeInGb;
     }
 

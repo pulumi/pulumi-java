@@ -30,7 +30,7 @@ public final class Subject {
         @Nullable ServiceAccountSubject serviceAccount,
         @Nullable UserSubject user) {
         this.group = group;
-        this.kind = Objects.requireNonNull(kind);
+        this.kind = kind;
         this.serviceAccount = serviceAccount;
         this.user = user;
     }

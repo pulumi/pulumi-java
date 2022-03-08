@@ -24,8 +24,8 @@ public final class AppPhysicalResourceId {
         String type) {
         this.awsAccountId = awsAccountId;
         this.awsRegion = awsRegion;
-        this.identifier = Objects.requireNonNull(identifier);
-        this.type = Objects.requireNonNull(type);
+        this.identifier = identifier;
+        this.type = type;
     }
 
     public Optional<String> getAwsAccountId() {

@@ -40,9 +40,9 @@ public final class KikChannelPropertiesResponse {
         @Nullable Boolean isValidated,
         String userName) {
         this.apiKey = apiKey;
-        this.isEnabled = Objects.requireNonNull(isEnabled);
+        this.isEnabled = isEnabled;
         this.isValidated = isValidated;
-        this.userName = Objects.requireNonNull(userName);
+        this.userName = userName;
     }
 
     /**

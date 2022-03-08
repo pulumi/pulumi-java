@@ -53,8 +53,8 @@ public final class ApplicationInsightsComponentDataVolumeCapResponse {
         @Nullable Boolean stopSendNotificationWhenHitThreshold,
         @Nullable Integer warningThreshold) {
         this.cap = cap;
-        this.maxHistoryCap = Objects.requireNonNull(maxHistoryCap);
-        this.resetTime = Objects.requireNonNull(resetTime);
+        this.maxHistoryCap = maxHistoryCap;
+        this.resetTime = resetTime;
         this.stopSendNotificationWhenHitCap = stopSendNotificationWhenHitCap;
         this.stopSendNotificationWhenHitThreshold = stopSendNotificationWhenHitThreshold;
         this.warningThreshold = warningThreshold;

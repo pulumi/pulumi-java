@@ -17,7 +17,7 @@ public final class EventDestinationSnsDestination {
 
     @OutputCustomType.Constructor({"topicArn"})
     private EventDestinationSnsDestination(String topicArn) {
-        this.topicArn = Objects.requireNonNull(topicArn);
+        this.topicArn = topicArn;
     }
 
     /**

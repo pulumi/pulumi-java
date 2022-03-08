@@ -44,11 +44,11 @@ public final class GetAppProfileResult {
         MultiClusterRoutingUseAnyResponse multiClusterRoutingUseAny,
         String name,
         SingleClusterRoutingResponse singleClusterRouting) {
-        this.description = Objects.requireNonNull(description);
-        this.etag = Objects.requireNonNull(etag);
-        this.multiClusterRoutingUseAny = Objects.requireNonNull(multiClusterRoutingUseAny);
-        this.name = Objects.requireNonNull(name);
-        this.singleClusterRouting = Objects.requireNonNull(singleClusterRouting);
+        this.description = description;
+        this.etag = etag;
+        this.multiClusterRoutingUseAny = multiClusterRoutingUseAny;
+        this.name = name;
+        this.singleClusterRouting = singleClusterRouting;
     }
 
     /**

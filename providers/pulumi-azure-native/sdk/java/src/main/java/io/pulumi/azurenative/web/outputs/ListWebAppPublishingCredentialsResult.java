@@ -68,15 +68,15 @@ public final class ListWebAppPublishingCredentialsResult {
         String publishingUserName,
         @Nullable String scmUri,
         String type) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.kind = kind;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.publishingPassword = publishingPassword;
         this.publishingPasswordHash = publishingPasswordHash;
         this.publishingPasswordHashSalt = publishingPasswordHashSalt;
-        this.publishingUserName = Objects.requireNonNull(publishingUserName);
+        this.publishingUserName = publishingUserName;
         this.scmUri = scmUri;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

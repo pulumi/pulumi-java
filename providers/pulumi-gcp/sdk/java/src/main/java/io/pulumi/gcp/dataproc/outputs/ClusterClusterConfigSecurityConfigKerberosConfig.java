@@ -131,9 +131,9 @@ public final class ClusterClusterConfigSecurityConfigKerberosConfig {
         this.keyPasswordUri = keyPasswordUri;
         this.keystorePasswordUri = keystorePasswordUri;
         this.keystoreUri = keystoreUri;
-        this.kmsKeyUri = Objects.requireNonNull(kmsKeyUri);
+        this.kmsKeyUri = kmsKeyUri;
         this.realm = realm;
-        this.rootPrincipalPasswordUri = Objects.requireNonNull(rootPrincipalPasswordUri);
+        this.rootPrincipalPasswordUri = rootPrincipalPasswordUri;
         this.tgtLifetimeHours = tgtLifetimeHours;
         this.truststorePasswordUri = truststorePasswordUri;
         this.truststoreUri = truststoreUri;

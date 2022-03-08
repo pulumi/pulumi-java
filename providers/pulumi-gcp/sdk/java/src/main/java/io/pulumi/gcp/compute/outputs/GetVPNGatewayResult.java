@@ -46,13 +46,13 @@ public final class GetVPNGatewayResult {
         String project,
         String region,
         String selfLink) {
-        this.description = Objects.requireNonNull(description);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.network = Objects.requireNonNull(network);
-        this.project = Objects.requireNonNull(project);
-        this.region = Objects.requireNonNull(region);
-        this.selfLink = Objects.requireNonNull(selfLink);
+        this.description = description;
+        this.id = id;
+        this.name = name;
+        this.network = network;
+        this.project = project;
+        this.region = region;
+        this.selfLink = selfLink;
     }
 
     /**

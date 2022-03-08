@@ -37,10 +37,10 @@ public final class StandardSchedulerSettingsResponse {
         Integer minInstances,
         Double targetCpuUtilization,
         Double targetThroughputUtilization) {
-        this.maxInstances = Objects.requireNonNull(maxInstances);
-        this.minInstances = Objects.requireNonNull(minInstances);
-        this.targetCpuUtilization = Objects.requireNonNull(targetCpuUtilization);
-        this.targetThroughputUtilization = Objects.requireNonNull(targetThroughputUtilization);
+        this.maxInstances = maxInstances;
+        this.minInstances = minInstances;
+        this.targetCpuUtilization = targetCpuUtilization;
+        this.targetThroughputUtilization = targetThroughputUtilization;
     }
 
     /**

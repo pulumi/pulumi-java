@@ -49,11 +49,11 @@ public final class MigrateSyncCompleteCommandPropertiesResponse {
         @Nullable MigrateSyncCompleteCommandInputResponse input,
         MigrateSyncCompleteCommandOutputResponse output,
         String state) {
-        this.commandType = Objects.requireNonNull(commandType);
-        this.errors = Objects.requireNonNull(errors);
+        this.commandType = commandType;
+        this.errors = errors;
         this.input = input;
-        this.output = Objects.requireNonNull(output);
-        this.state = Objects.requireNonNull(state);
+        this.output = output;
+        this.state = state;
     }
 
     /**

@@ -18,7 +18,7 @@ public final class OpenZfsFileSystemRootVolumeConfigurationNfsExports {
 
     @OutputCustomType.Constructor({"clientConfigurations"})
     private OpenZfsFileSystemRootVolumeConfigurationNfsExports(List<OpenZfsFileSystemRootVolumeConfigurationNfsExportsClientConfiguration> clientConfigurations) {
-        this.clientConfigurations = Objects.requireNonNull(clientConfigurations);
+        this.clientConfigurations = clientConfigurations;
     }
 
     /**

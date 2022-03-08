@@ -25,8 +25,8 @@ public final class RolloutPolicyResponse {
     private RolloutPolicyResponse(
         String defaultRolloutTime,
         Map<String,String> locationRolloutPolicies) {
-        this.defaultRolloutTime = Objects.requireNonNull(defaultRolloutTime);
-        this.locationRolloutPolicies = Objects.requireNonNull(locationRolloutPolicies);
+        this.defaultRolloutTime = defaultRolloutTime;
+        this.locationRolloutPolicies = locationRolloutPolicies;
     }
 
     /**

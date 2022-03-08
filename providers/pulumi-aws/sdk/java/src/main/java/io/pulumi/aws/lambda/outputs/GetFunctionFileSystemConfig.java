@@ -20,8 +20,8 @@ public final class GetFunctionFileSystemConfig {
     private GetFunctionFileSystemConfig(
         String arn,
         String localMountPath) {
-        this.arn = Objects.requireNonNull(arn);
-        this.localMountPath = Objects.requireNonNull(localMountPath);
+        this.arn = arn;
+        this.localMountPath = localMountPath;
     }
 
     /**

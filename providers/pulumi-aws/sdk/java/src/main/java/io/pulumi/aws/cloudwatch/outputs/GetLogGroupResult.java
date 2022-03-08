@@ -52,13 +52,13 @@ public final class GetLogGroupResult {
         String name,
         Integer retentionInDays,
         Map<String,String> tags) {
-        this.arn = Objects.requireNonNull(arn);
-        this.creationTime = Objects.requireNonNull(creationTime);
-        this.id = Objects.requireNonNull(id);
-        this.kmsKeyId = Objects.requireNonNull(kmsKeyId);
-        this.name = Objects.requireNonNull(name);
-        this.retentionInDays = Objects.requireNonNull(retentionInDays);
-        this.tags = Objects.requireNonNull(tags);
+        this.arn = arn;
+        this.creationTime = creationTime;
+        this.id = id;
+        this.kmsKeyId = kmsKeyId;
+        this.name = name;
+        this.retentionInDays = retentionInDays;
+        this.tags = tags;
     }
 
     /**

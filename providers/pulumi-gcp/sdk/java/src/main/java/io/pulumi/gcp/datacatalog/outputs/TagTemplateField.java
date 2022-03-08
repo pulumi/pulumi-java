@@ -65,11 +65,11 @@ public final class TagTemplateField {
         TagTemplateFieldType type) {
         this.description = description;
         this.displayName = displayName;
-        this.fieldId = Objects.requireNonNull(fieldId);
+        this.fieldId = fieldId;
         this.isRequired = isRequired;
         this.name = name;
         this.order = order;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

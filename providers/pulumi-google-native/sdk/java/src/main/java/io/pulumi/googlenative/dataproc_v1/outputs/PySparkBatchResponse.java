@@ -49,12 +49,12 @@ public final class PySparkBatchResponse {
         List<String> jarFileUris,
         String mainPythonFileUri,
         List<String> pythonFileUris) {
-        this.archiveUris = Objects.requireNonNull(archiveUris);
-        this.args = Objects.requireNonNull(args);
-        this.fileUris = Objects.requireNonNull(fileUris);
-        this.jarFileUris = Objects.requireNonNull(jarFileUris);
-        this.mainPythonFileUri = Objects.requireNonNull(mainPythonFileUri);
-        this.pythonFileUris = Objects.requireNonNull(pythonFileUris);
+        this.archiveUris = archiveUris;
+        this.args = args;
+        this.fileUris = fileUris;
+        this.jarFileUris = jarFileUris;
+        this.mainPythonFileUri = mainPythonFileUri;
+        this.pythonFileUris = pythonFileUris;
     }
 
     /**

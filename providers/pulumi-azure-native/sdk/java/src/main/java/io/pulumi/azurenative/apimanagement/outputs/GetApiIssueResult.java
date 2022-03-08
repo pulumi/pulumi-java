@@ -70,13 +70,13 @@ public final class GetApiIssueResult {
         String userId) {
         this.apiId = apiId;
         this.createdDate = createdDate;
-        this.description = Objects.requireNonNull(description);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.description = description;
+        this.id = id;
+        this.name = name;
         this.state = state;
-        this.title = Objects.requireNonNull(title);
-        this.type = Objects.requireNonNull(type);
-        this.userId = Objects.requireNonNull(userId);
+        this.title = title;
+        this.type = type;
+        this.userId = userId;
     }
 
     /**

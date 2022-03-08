@@ -24,8 +24,8 @@ public final class HealthBotPropertiesResponse {
     private HealthBotPropertiesResponse(
         String botManagementPortalLink,
         String provisioningState) {
-        this.botManagementPortalLink = Objects.requireNonNull(botManagementPortalLink);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.botManagementPortalLink = botManagementPortalLink;
+        this.provisioningState = provisioningState;
     }
 
     /**

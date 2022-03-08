@@ -39,9 +39,9 @@ public final class RegionUrlMapTest {
         String path,
         String service) {
         this.description = description;
-        this.host = Objects.requireNonNull(host);
-        this.path = Objects.requireNonNull(path);
-        this.service = Objects.requireNonNull(service);
+        this.host = host;
+        this.path = path;
+        this.service = service;
     }
 
     /**

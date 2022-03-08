@@ -66,13 +66,13 @@ public final class GetDataStoreResult {
         String state,
         String type) {
         this.customerSecrets = customerSecrets;
-        this.dataStoreTypeId = Objects.requireNonNull(dataStoreTypeId);
+        this.dataStoreTypeId = dataStoreTypeId;
         this.extendedProperties = extendedProperties;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.repositoryId = repositoryId;
-        this.state = Objects.requireNonNull(state);
-        this.type = Objects.requireNonNull(type);
+        this.state = state;
+        this.type = type;
     }
 
     /**

@@ -17,7 +17,7 @@ public final class GraphResourceGetPropertiesResponseResource {
 
     @OutputCustomType.Constructor({"id"})
     private GraphResourceGetPropertiesResponseResource(String id) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
     }
 
     /**

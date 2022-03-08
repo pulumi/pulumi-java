@@ -64,14 +64,14 @@ public final class GetModelResult {
         Boolean onlinePredictionConsoleLogging,
         Boolean onlinePredictionLogging,
         List<String> regions) {
-        this.defaultVersion = Objects.requireNonNull(defaultVersion);
-        this.description = Objects.requireNonNull(description);
-        this.etag = Objects.requireNonNull(etag);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.onlinePredictionConsoleLogging = Objects.requireNonNull(onlinePredictionConsoleLogging);
-        this.onlinePredictionLogging = Objects.requireNonNull(onlinePredictionLogging);
-        this.regions = Objects.requireNonNull(regions);
+        this.defaultVersion = defaultVersion;
+        this.description = description;
+        this.etag = etag;
+        this.labels = labels;
+        this.name = name;
+        this.onlinePredictionConsoleLogging = onlinePredictionConsoleLogging;
+        this.onlinePredictionLogging = onlinePredictionLogging;
+        this.regions = regions;
     }
 
     /**

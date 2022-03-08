@@ -82,16 +82,16 @@ public final class GetManagedNetworkGroupResult {
         @Nullable List<ResourceIdResponse> subscriptions,
         String type,
         @Nullable List<ResourceIdResponse> virtualNetworks) {
-        this.etag = Objects.requireNonNull(etag);
-        this.id = Objects.requireNonNull(id);
+        this.etag = etag;
+        this.id = id;
         this.kind = kind;
         this.location = location;
         this.managementGroups = managementGroups;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.subnets = subnets;
         this.subscriptions = subscriptions;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.virtualNetworks = virtualNetworks;
     }
 

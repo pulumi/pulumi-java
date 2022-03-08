@@ -32,9 +32,9 @@ public final class PerformanceThresholdResponse {
         BasicSliResponse basicSliPerformance,
         RequestBasedSliResponse performance,
         Double threshold) {
-        this.basicSliPerformance = Objects.requireNonNull(basicSliPerformance);
-        this.performance = Objects.requireNonNull(performance);
-        this.threshold = Objects.requireNonNull(threshold);
+        this.basicSliPerformance = basicSliPerformance;
+        this.performance = performance;
+        this.threshold = threshold;
     }
 
     /**

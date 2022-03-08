@@ -58,13 +58,13 @@ public final class ExecutionStageSummaryResponse {
         String name,
         List<StageSourceResponse> outputSource,
         List<String> prerequisiteStage) {
-        this.componentSource = Objects.requireNonNull(componentSource);
-        this.componentTransform = Objects.requireNonNull(componentTransform);
-        this.inputSource = Objects.requireNonNull(inputSource);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.outputSource = Objects.requireNonNull(outputSource);
-        this.prerequisiteStage = Objects.requireNonNull(prerequisiteStage);
+        this.componentSource = componentSource;
+        this.componentTransform = componentTransform;
+        this.inputSource = inputSource;
+        this.kind = kind;
+        this.name = name;
+        this.outputSource = outputSource;
+        this.prerequisiteStage = prerequisiteStage;
     }
 
     /**

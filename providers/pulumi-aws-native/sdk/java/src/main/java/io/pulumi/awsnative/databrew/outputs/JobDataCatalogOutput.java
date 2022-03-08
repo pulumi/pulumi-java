@@ -30,11 +30,11 @@ public final class JobDataCatalogOutput {
         @Nullable JobS3TableOutputOptions s3Options,
         String tableName) {
         this.catalogId = catalogId;
-        this.databaseName = Objects.requireNonNull(databaseName);
+        this.databaseName = databaseName;
         this.databaseOptions = databaseOptions;
         this.overwrite = overwrite;
         this.s3Options = s3Options;
-        this.tableName = Objects.requireNonNull(tableName);
+        this.tableName = tableName;
     }
 
     public Optional<String> getCatalogId() {

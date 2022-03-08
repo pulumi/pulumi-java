@@ -42,11 +42,11 @@ public final class GetTargetProjectResult {
         String name,
         String project,
         String updateTime) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.description = Objects.requireNonNull(description);
-        this.name = Objects.requireNonNull(name);
-        this.project = Objects.requireNonNull(project);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.createTime = createTime;
+        this.description = description;
+        this.name = name;
+        this.project = project;
+        this.updateTime = updateTime;
     }
 
     /**

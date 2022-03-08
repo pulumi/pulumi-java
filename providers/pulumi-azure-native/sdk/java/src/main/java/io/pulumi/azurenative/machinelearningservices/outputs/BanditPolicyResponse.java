@@ -48,7 +48,7 @@ public final class BanditPolicyResponse {
         @Nullable Double slackFactor) {
         this.delayEvaluation = delayEvaluation;
         this.evaluationInterval = evaluationInterval;
-        this.policyType = Objects.requireNonNull(policyType);
+        this.policyType = policyType;
         this.slackAmount = slackAmount;
         this.slackFactor = slackFactor;
     }

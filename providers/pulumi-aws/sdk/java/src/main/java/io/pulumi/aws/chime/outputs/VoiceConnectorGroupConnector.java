@@ -25,8 +25,8 @@ public final class VoiceConnectorGroupConnector {
     private VoiceConnectorGroupConnector(
         Integer priority,
         String voiceConnectorId) {
-        this.priority = Objects.requireNonNull(priority);
-        this.voiceConnectorId = Objects.requireNonNull(voiceConnectorId);
+        this.priority = priority;
+        this.voiceConnectorId = voiceConnectorId;
     }
 
     /**

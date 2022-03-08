@@ -61,9 +61,9 @@ public final class LabAnnouncementPropertiesResponse {
         this.expirationDate = expirationDate;
         this.expired = expired;
         this.markdown = markdown;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.title = title;
-        this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
+        this.uniqueIdentifier = uniqueIdentifier;
     }
 
     /**

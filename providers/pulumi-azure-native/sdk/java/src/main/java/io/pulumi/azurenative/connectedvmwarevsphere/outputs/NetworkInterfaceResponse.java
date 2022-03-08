@@ -85,14 +85,14 @@ public final class NetworkInterfaceResponse {
         @Nullable String nicType,
         @Nullable String powerOnBoot) {
         this.deviceKey = deviceKey;
-        this.ipAddresses = Objects.requireNonNull(ipAddresses);
+        this.ipAddresses = ipAddresses;
         this.ipSettings = ipSettings;
-        this.label = Objects.requireNonNull(label);
-        this.macAddress = Objects.requireNonNull(macAddress);
+        this.label = label;
+        this.macAddress = macAddress;
         this.name = name;
         this.networkId = networkId;
-        this.networkMoName = Objects.requireNonNull(networkMoName);
-        this.networkMoRefId = Objects.requireNonNull(networkMoRefId);
+        this.networkMoName = networkMoName;
+        this.networkMoRefId = networkMoRefId;
         this.nicType = nicType;
         this.powerOnBoot = powerOnBoot;
     }

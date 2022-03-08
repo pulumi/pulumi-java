@@ -23,10 +23,10 @@ public final class CollectorAgentPropertiesResponse {
         String lastHeartbeatUtc,
         @Nullable CollectorBodyAgentSpnPropertiesResponse spnDetails,
         String version) {
-        this.id = Objects.requireNonNull(id);
-        this.lastHeartbeatUtc = Objects.requireNonNull(lastHeartbeatUtc);
+        this.id = id;
+        this.lastHeartbeatUtc = lastHeartbeatUtc;
         this.spnDetails = spnDetails;
-        this.version = Objects.requireNonNull(version);
+        this.version = version;
     }
 
     public String getId() {

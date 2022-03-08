@@ -36,10 +36,10 @@ public final class RowAccessPolicyReferenceResponse {
         String policyId,
         String project,
         String tableId) {
-        this.datasetId = Objects.requireNonNull(datasetId);
-        this.policyId = Objects.requireNonNull(policyId);
-        this.project = Objects.requireNonNull(project);
-        this.tableId = Objects.requireNonNull(tableId);
+        this.datasetId = datasetId;
+        this.policyId = policyId;
+        this.project = project;
+        this.tableId = tableId;
     }
 
     /**

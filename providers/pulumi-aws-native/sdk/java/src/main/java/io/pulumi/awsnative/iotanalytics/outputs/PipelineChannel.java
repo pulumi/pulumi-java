@@ -20,8 +20,8 @@ public final class PipelineChannel {
         String channelName,
         String name,
         @Nullable String next) {
-        this.channelName = Objects.requireNonNull(channelName);
-        this.name = Objects.requireNonNull(name);
+        this.channelName = channelName;
+        this.name = name;
         this.next = next;
     }
 

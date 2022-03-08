@@ -81,17 +81,17 @@ public final class ServerEndpointSyncStatusResponse {
         ServerEndpointSyncActivityStatusResponse uploadActivity,
         String uploadHealth,
         ServerEndpointSyncSessionStatusResponse uploadStatus) {
-        this.combinedHealth = Objects.requireNonNull(combinedHealth);
-        this.downloadActivity = Objects.requireNonNull(downloadActivity);
-        this.downloadHealth = Objects.requireNonNull(downloadHealth);
-        this.downloadStatus = Objects.requireNonNull(downloadStatus);
-        this.lastUpdatedTimestamp = Objects.requireNonNull(lastUpdatedTimestamp);
-        this.offlineDataTransferStatus = Objects.requireNonNull(offlineDataTransferStatus);
-        this.syncActivity = Objects.requireNonNull(syncActivity);
-        this.totalPersistentFilesNotSyncingCount = Objects.requireNonNull(totalPersistentFilesNotSyncingCount);
-        this.uploadActivity = Objects.requireNonNull(uploadActivity);
-        this.uploadHealth = Objects.requireNonNull(uploadHealth);
-        this.uploadStatus = Objects.requireNonNull(uploadStatus);
+        this.combinedHealth = combinedHealth;
+        this.downloadActivity = downloadActivity;
+        this.downloadHealth = downloadHealth;
+        this.downloadStatus = downloadStatus;
+        this.lastUpdatedTimestamp = lastUpdatedTimestamp;
+        this.offlineDataTransferStatus = offlineDataTransferStatus;
+        this.syncActivity = syncActivity;
+        this.totalPersistentFilesNotSyncingCount = totalPersistentFilesNotSyncingCount;
+        this.uploadActivity = uploadActivity;
+        this.uploadHealth = uploadHealth;
+        this.uploadStatus = uploadStatus;
     }
 
     /**

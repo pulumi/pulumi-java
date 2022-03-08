@@ -33,9 +33,9 @@ public final class GoogleCloudRunOpV2SecretVolumeSourceResponse {
         Integer defaultMode,
         List<GoogleCloudRunOpV2VersionToPathResponse> items,
         String secret) {
-        this.defaultMode = Objects.requireNonNull(defaultMode);
-        this.items = Objects.requireNonNull(items);
-        this.secret = Objects.requireNonNull(secret);
+        this.defaultMode = defaultMode;
+        this.items = items;
+        this.secret = secret;
     }
 
     /**

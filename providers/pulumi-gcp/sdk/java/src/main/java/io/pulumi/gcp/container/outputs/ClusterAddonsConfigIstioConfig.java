@@ -29,7 +29,7 @@ public final class ClusterAddonsConfigIstioConfig {
         @Nullable String auth,
         Boolean disabled) {
         this.auth = auth;
-        this.disabled = Objects.requireNonNull(disabled);
+        this.disabled = disabled;
     }
 
     /**

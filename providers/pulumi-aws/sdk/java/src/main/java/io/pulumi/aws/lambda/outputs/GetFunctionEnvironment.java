@@ -14,7 +14,7 @@ public final class GetFunctionEnvironment {
 
     @OutputCustomType.Constructor({"variables"})
     private GetFunctionEnvironment(Map<String,String> variables) {
-        this.variables = Objects.requireNonNull(variables);
+        this.variables = variables;
     }
 
     public Map<String,String> getVariables() {

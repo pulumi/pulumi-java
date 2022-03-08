@@ -76,16 +76,16 @@ public final class GetTrialResult {
         String startTime,
         String state,
         Boolean trialInfeasible) {
-        this.clientId = Objects.requireNonNull(clientId);
-        this.endTime = Objects.requireNonNull(endTime);
-        this.finalMeasurement = Objects.requireNonNull(finalMeasurement);
-        this.infeasibleReason = Objects.requireNonNull(infeasibleReason);
-        this.measurements = Objects.requireNonNull(measurements);
-        this.name = Objects.requireNonNull(name);
-        this.parameters = Objects.requireNonNull(parameters);
-        this.startTime = Objects.requireNonNull(startTime);
-        this.state = Objects.requireNonNull(state);
-        this.trialInfeasible = Objects.requireNonNull(trialInfeasible);
+        this.clientId = clientId;
+        this.endTime = endTime;
+        this.finalMeasurement = finalMeasurement;
+        this.infeasibleReason = infeasibleReason;
+        this.measurements = measurements;
+        this.name = name;
+        this.parameters = parameters;
+        this.startTime = startTime;
+        this.state = state;
+        this.trialInfeasible = trialInfeasible;
     }
 
     /**

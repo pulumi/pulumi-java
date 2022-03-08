@@ -17,7 +17,7 @@ public final class ScheduledActionTargetActionResumeCluster {
 
     @OutputCustomType.Constructor({"clusterIdentifier"})
     private ScheduledActionTargetActionResumeCluster(String clusterIdentifier) {
-        this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier);
+        this.clusterIdentifier = clusterIdentifier;
     }
 
     /**

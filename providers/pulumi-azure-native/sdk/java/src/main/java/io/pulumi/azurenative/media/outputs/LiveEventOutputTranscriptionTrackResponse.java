@@ -17,7 +17,7 @@ public final class LiveEventOutputTranscriptionTrackResponse {
 
     @OutputCustomType.Constructor({"trackName"})
     private LiveEventOutputTranscriptionTrackResponse(String trackName) {
-        this.trackName = Objects.requireNonNull(trackName);
+        this.trackName = trackName;
     }
 
     /**

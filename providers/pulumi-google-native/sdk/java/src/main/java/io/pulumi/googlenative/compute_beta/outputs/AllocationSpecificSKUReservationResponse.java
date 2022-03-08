@@ -37,10 +37,10 @@ public final class AllocationSpecificSKUReservationResponse {
         String count,
         String inUseCount,
         AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties) {
-        this.assuredCount = Objects.requireNonNull(assuredCount);
-        this.count = Objects.requireNonNull(count);
-        this.inUseCount = Objects.requireNonNull(inUseCount);
-        this.instanceProperties = Objects.requireNonNull(instanceProperties);
+        this.assuredCount = assuredCount;
+        this.count = count;
+        this.inUseCount = inUseCount;
+        this.instanceProperties = instanceProperties;
     }
 
     /**

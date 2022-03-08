@@ -70,14 +70,14 @@ public final class GetIncidentRelationResult {
         SystemDataResponse systemData,
         String type) {
         this.etag = etag;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.relatedResourceId = Objects.requireNonNull(relatedResourceId);
-        this.relatedResourceKind = Objects.requireNonNull(relatedResourceKind);
-        this.relatedResourceName = Objects.requireNonNull(relatedResourceName);
-        this.relatedResourceType = Objects.requireNonNull(relatedResourceType);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.id = id;
+        this.name = name;
+        this.relatedResourceId = relatedResourceId;
+        this.relatedResourceKind = relatedResourceKind;
+        this.relatedResourceName = relatedResourceName;
+        this.relatedResourceType = relatedResourceType;
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

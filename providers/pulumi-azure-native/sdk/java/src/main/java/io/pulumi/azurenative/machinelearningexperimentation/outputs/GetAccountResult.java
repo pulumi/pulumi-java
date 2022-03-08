@@ -106,21 +106,21 @@ public final class GetAccountResult {
         @Nullable Map<String,String> tags,
         String type,
         String vsoAccountId) {
-        this.accountId = Objects.requireNonNull(accountId);
-        this.creationDate = Objects.requireNonNull(creationDate);
+        this.accountId = accountId;
+        this.creationDate = creationDate;
         this.description = description;
-        this.discoveryUri = Objects.requireNonNull(discoveryUri);
+        this.discoveryUri = discoveryUri;
         this.friendlyName = friendlyName;
-        this.id = Objects.requireNonNull(id);
-        this.keyVaultId = Objects.requireNonNull(keyVaultId);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.id = id;
+        this.keyVaultId = keyVaultId;
+        this.location = location;
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.seats = seats;
-        this.storageAccount = Objects.requireNonNull(storageAccount);
+        this.storageAccount = storageAccount;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
-        this.vsoAccountId = Objects.requireNonNull(vsoAccountId);
+        this.type = type;
+        this.vsoAccountId = vsoAccountId;
     }
 
     /**

@@ -32,7 +32,7 @@ public final class CustomDomainPropertiesResponse {
         String appName,
         @Nullable String certName,
         @Nullable String thumbprint) {
-        this.appName = Objects.requireNonNull(appName);
+        this.appName = appName;
         this.certName = certName;
         this.thumbprint = thumbprint;
     }

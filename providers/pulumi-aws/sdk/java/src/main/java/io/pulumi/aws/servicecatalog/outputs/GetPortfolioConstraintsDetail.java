@@ -44,12 +44,12 @@ public final class GetPortfolioConstraintsDetail {
         String portfolioId,
         String productId,
         String type) {
-        this.constraintId = Objects.requireNonNull(constraintId);
-        this.description = Objects.requireNonNull(description);
-        this.owner = Objects.requireNonNull(owner);
-        this.portfolioId = Objects.requireNonNull(portfolioId);
-        this.productId = Objects.requireNonNull(productId);
-        this.type = Objects.requireNonNull(type);
+        this.constraintId = constraintId;
+        this.description = description;
+        this.owner = owner;
+        this.portfolioId = portfolioId;
+        this.productId = productId;
+        this.type = type;
     }
 
     /**

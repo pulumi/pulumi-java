@@ -22,7 +22,7 @@ public final class ApplicationPackageReferenceResponse {
     private ApplicationPackageReferenceResponse(
         String id,
         @Nullable String version) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.version = version;
     }
 

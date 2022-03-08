@@ -84,16 +84,16 @@ public final class GetSecretResult {
         String rotationLambdaArn,
         List<GetSecretRotationRule> rotationRules,
         Map<String,String> tags) {
-        this.arn = Objects.requireNonNull(arn);
-        this.description = Objects.requireNonNull(description);
-        this.id = Objects.requireNonNull(id);
-        this.kmsKeyId = Objects.requireNonNull(kmsKeyId);
-        this.name = Objects.requireNonNull(name);
-        this.policy = Objects.requireNonNull(policy);
-        this.rotationEnabled = Objects.requireNonNull(rotationEnabled);
-        this.rotationLambdaArn = Objects.requireNonNull(rotationLambdaArn);
-        this.rotationRules = Objects.requireNonNull(rotationRules);
-        this.tags = Objects.requireNonNull(tags);
+        this.arn = arn;
+        this.description = description;
+        this.id = id;
+        this.kmsKeyId = kmsKeyId;
+        this.name = name;
+        this.policy = policy;
+        this.rotationEnabled = rotationEnabled;
+        this.rotationLambdaArn = rotationLambdaArn;
+        this.rotationRules = rotationRules;
+        this.tags = tags;
     }
 
     /**

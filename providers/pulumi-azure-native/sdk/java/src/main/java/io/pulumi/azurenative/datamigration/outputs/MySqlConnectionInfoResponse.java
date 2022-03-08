@@ -47,9 +47,9 @@ public final class MySqlConnectionInfoResponse {
         String type,
         @Nullable String userName) {
         this.password = password;
-        this.port = Objects.requireNonNull(port);
-        this.serverName = Objects.requireNonNull(serverName);
-        this.type = Objects.requireNonNull(type);
+        this.port = port;
+        this.serverName = serverName;
+        this.type = type;
         this.userName = userName;
     }
 

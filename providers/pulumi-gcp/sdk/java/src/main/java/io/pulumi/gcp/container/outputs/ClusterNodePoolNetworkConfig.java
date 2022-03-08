@@ -35,7 +35,7 @@ public final class ClusterNodePoolNetworkConfig {
         String podRange) {
         this.createPodRange = createPodRange;
         this.podIpv4CidrBlock = podIpv4CidrBlock;
-        this.podRange = Objects.requireNonNull(podRange);
+        this.podRange = podRange;
     }
 
     /**

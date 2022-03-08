@@ -30,9 +30,9 @@ public final class TableReferenceResponse {
         String datasetId,
         String project,
         String tableId) {
-        this.datasetId = Objects.requireNonNull(datasetId);
-        this.project = Objects.requireNonNull(project);
-        this.tableId = Objects.requireNonNull(tableId);
+        this.datasetId = datasetId;
+        this.project = project;
+        this.tableId = tableId;
     }
 
     /**

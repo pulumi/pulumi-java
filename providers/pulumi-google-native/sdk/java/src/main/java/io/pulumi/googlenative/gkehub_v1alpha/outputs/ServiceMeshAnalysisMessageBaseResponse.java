@@ -31,9 +31,9 @@ public final class ServiceMeshAnalysisMessageBaseResponse {
         String documentationUrl,
         String level,
         ServiceMeshTypeResponse type) {
-        this.documentationUrl = Objects.requireNonNull(documentationUrl);
-        this.level = Objects.requireNonNull(level);
-        this.type = Objects.requireNonNull(type);
+        this.documentationUrl = documentationUrl;
+        this.level = level;
+        this.type = type;
     }
 
     /**

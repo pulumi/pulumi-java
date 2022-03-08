@@ -96,21 +96,21 @@ public final class GetFileSystemResult {
         Integer sizeInBytes,
         Map<String,String> tags,
         String throughputMode) {
-        this.arn = Objects.requireNonNull(arn);
-        this.availabilityZoneId = Objects.requireNonNull(availabilityZoneId);
-        this.availabilityZoneName = Objects.requireNonNull(availabilityZoneName);
-        this.creationToken = Objects.requireNonNull(creationToken);
-        this.dnsName = Objects.requireNonNull(dnsName);
-        this.encrypted = Objects.requireNonNull(encrypted);
-        this.fileSystemId = Objects.requireNonNull(fileSystemId);
-        this.id = Objects.requireNonNull(id);
-        this.kmsKeyId = Objects.requireNonNull(kmsKeyId);
-        this.lifecyclePolicy = Objects.requireNonNull(lifecyclePolicy);
-        this.performanceMode = Objects.requireNonNull(performanceMode);
-        this.provisionedThroughputInMibps = Objects.requireNonNull(provisionedThroughputInMibps);
-        this.sizeInBytes = Objects.requireNonNull(sizeInBytes);
-        this.tags = Objects.requireNonNull(tags);
-        this.throughputMode = Objects.requireNonNull(throughputMode);
+        this.arn = arn;
+        this.availabilityZoneId = availabilityZoneId;
+        this.availabilityZoneName = availabilityZoneName;
+        this.creationToken = creationToken;
+        this.dnsName = dnsName;
+        this.encrypted = encrypted;
+        this.fileSystemId = fileSystemId;
+        this.id = id;
+        this.kmsKeyId = kmsKeyId;
+        this.lifecyclePolicy = lifecyclePolicy;
+        this.performanceMode = performanceMode;
+        this.provisionedThroughputInMibps = provisionedThroughputInMibps;
+        this.sizeInBytes = sizeInBytes;
+        this.tags = tags;
+        this.throughputMode = throughputMode;
     }
 
     /**

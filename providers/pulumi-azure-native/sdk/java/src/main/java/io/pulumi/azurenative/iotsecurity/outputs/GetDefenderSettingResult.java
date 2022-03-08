@@ -63,14 +63,14 @@ public final class GetDefenderSettingResult {
         String onboardingKind,
         List<String> sentinelWorkspaceResourceIds,
         String type) {
-        this.deviceQuota = Objects.requireNonNull(deviceQuota);
-        this.evaluationEndTime = Objects.requireNonNull(evaluationEndTime);
-        this.id = Objects.requireNonNull(id);
-        this.mdeIntegration = Objects.requireNonNull(mdeIntegration);
-        this.name = Objects.requireNonNull(name);
-        this.onboardingKind = Objects.requireNonNull(onboardingKind);
-        this.sentinelWorkspaceResourceIds = Objects.requireNonNull(sentinelWorkspaceResourceIds);
-        this.type = Objects.requireNonNull(type);
+        this.deviceQuota = deviceQuota;
+        this.evaluationEndTime = evaluationEndTime;
+        this.id = id;
+        this.mdeIntegration = mdeIntegration;
+        this.name = name;
+        this.onboardingKind = onboardingKind;
+        this.sentinelWorkspaceResourceIds = sentinelWorkspaceResourceIds;
+        this.type = type;
     }
 
     /**

@@ -17,7 +17,7 @@ public final class TaskSchedule {
 
     @OutputCustomType.Constructor({"scheduleExpression"})
     private TaskSchedule(String scheduleExpression) {
-        this.scheduleExpression = Objects.requireNonNull(scheduleExpression);
+        this.scheduleExpression = scheduleExpression;
     }
 
     /**

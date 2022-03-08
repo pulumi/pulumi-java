@@ -40,9 +40,9 @@ public final class ApplicationWindowsEvent {
         String eventName,
         String logGroupName,
         @Nullable String patternSet) {
-        this.eventLevels = Objects.requireNonNull(eventLevels);
-        this.eventName = Objects.requireNonNull(eventName);
-        this.logGroupName = Objects.requireNonNull(logGroupName);
+        this.eventLevels = eventLevels;
+        this.eventName = eventName;
+        this.logGroupName = logGroupName;
         this.patternSet = patternSet;
     }
 

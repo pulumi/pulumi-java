@@ -90,13 +90,13 @@ public final class RoutingStorageContainerPropertiesResponse {
         this.authenticationType = authenticationType;
         this.batchFrequencyInSeconds = batchFrequencyInSeconds;
         this.connectionString = connectionString;
-        this.containerName = Objects.requireNonNull(containerName);
+        this.containerName = containerName;
         this.encoding = encoding;
         this.endpointUri = endpointUri;
         this.fileNameFormat = fileNameFormat;
         this.id = id;
         this.maxChunkSizeInBytes = maxChunkSizeInBytes;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.resourceGroup = resourceGroup;
         this.subscriptionId = subscriptionId;
     }

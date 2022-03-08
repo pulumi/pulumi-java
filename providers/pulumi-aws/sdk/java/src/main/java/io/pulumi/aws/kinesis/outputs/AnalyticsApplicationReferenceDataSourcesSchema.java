@@ -37,9 +37,9 @@ public final class AnalyticsApplicationReferenceDataSourcesSchema {
         List<AnalyticsApplicationReferenceDataSourcesSchemaRecordColumn> recordColumns,
         @Nullable String recordEncoding,
         AnalyticsApplicationReferenceDataSourcesSchemaRecordFormat recordFormat) {
-        this.recordColumns = Objects.requireNonNull(recordColumns);
+        this.recordColumns = recordColumns;
         this.recordEncoding = recordEncoding;
-        this.recordFormat = Objects.requireNonNull(recordFormat);
+        this.recordFormat = recordFormat;
     }
 
     /**

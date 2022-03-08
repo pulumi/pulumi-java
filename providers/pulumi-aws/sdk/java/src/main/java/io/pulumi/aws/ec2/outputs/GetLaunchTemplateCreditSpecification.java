@@ -13,7 +13,7 @@ public final class GetLaunchTemplateCreditSpecification {
 
     @OutputCustomType.Constructor({"cpuCredits"})
     private GetLaunchTemplateCreditSpecification(String cpuCredits) {
-        this.cpuCredits = Objects.requireNonNull(cpuCredits);
+        this.cpuCredits = cpuCredits;
     }
 
     public String getCpuCredits() {

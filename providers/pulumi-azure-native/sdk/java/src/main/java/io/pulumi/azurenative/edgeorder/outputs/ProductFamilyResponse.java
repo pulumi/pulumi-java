@@ -76,14 +76,14 @@ public final class ProductFamilyResponse {
         List<ImageInformationResponse> imageInformation,
         List<ProductLineResponse> productLines,
         @Nullable List<ResourceProviderDetailsResponse> resourceProviderDetails) {
-        this.availabilityInformation = Objects.requireNonNull(availabilityInformation);
-        this.costInformation = Objects.requireNonNull(costInformation);
-        this.description = Objects.requireNonNull(description);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.filterableProperties = Objects.requireNonNull(filterableProperties);
-        this.hierarchyInformation = Objects.requireNonNull(hierarchyInformation);
-        this.imageInformation = Objects.requireNonNull(imageInformation);
-        this.productLines = Objects.requireNonNull(productLines);
+        this.availabilityInformation = availabilityInformation;
+        this.costInformation = costInformation;
+        this.description = description;
+        this.displayName = displayName;
+        this.filterableProperties = filterableProperties;
+        this.hierarchyInformation = hierarchyInformation;
+        this.imageInformation = imageInformation;
+        this.productLines = productLines;
         this.resourceProviderDetails = resourceProviderDetails;
     }
 

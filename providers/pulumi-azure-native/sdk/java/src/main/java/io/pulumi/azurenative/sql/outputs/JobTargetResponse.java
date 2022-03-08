@@ -62,7 +62,7 @@ public final class JobTargetResponse {
         this.refreshCredential = refreshCredential;
         this.serverName = serverName;
         this.shardMapName = shardMapName;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

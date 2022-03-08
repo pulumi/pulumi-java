@@ -44,11 +44,11 @@ public final class GetAnnotationSpecSetResult {
         String description,
         String displayName,
         String name) {
-        this.annotationSpecs = Objects.requireNonNull(annotationSpecs);
-        this.blockingResources = Objects.requireNonNull(blockingResources);
-        this.description = Objects.requireNonNull(description);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.name = Objects.requireNonNull(name);
+        this.annotationSpecs = annotationSpecs;
+        this.blockingResources = blockingResources;
+        this.description = description;
+        this.displayName = displayName;
+        this.name = name;
     }
 
     /**

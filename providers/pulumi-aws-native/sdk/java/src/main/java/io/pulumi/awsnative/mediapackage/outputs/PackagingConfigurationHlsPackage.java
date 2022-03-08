@@ -35,7 +35,7 @@ public final class PackagingConfigurationHlsPackage {
         @Nullable Integer segmentDurationSeconds,
         @Nullable Boolean useAudioRenditionGroup) {
         this.encryption = encryption;
-        this.hlsManifests = Objects.requireNonNull(hlsManifests);
+        this.hlsManifests = hlsManifests;
         this.segmentDurationSeconds = segmentDurationSeconds;
         this.useAudioRenditionGroup = useAudioRenditionGroup;
     }

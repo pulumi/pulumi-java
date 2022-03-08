@@ -79,15 +79,15 @@ public final class GetPipelineJobResult {
         String topologyName,
         String type) {
         this.description = description;
-        this.error = Objects.requireNonNull(error);
-        this.expiration = Objects.requireNonNull(expiration);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.error = error;
+        this.expiration = expiration;
+        this.id = id;
+        this.name = name;
         this.parameters = parameters;
-        this.state = Objects.requireNonNull(state);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.topologyName = Objects.requireNonNull(topologyName);
-        this.type = Objects.requireNonNull(type);
+        this.state = state;
+        this.systemData = systemData;
+        this.topologyName = topologyName;
+        this.type = type;
     }
 
     /**

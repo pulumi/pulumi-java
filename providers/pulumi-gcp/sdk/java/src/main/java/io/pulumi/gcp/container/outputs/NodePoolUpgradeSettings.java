@@ -28,8 +28,8 @@ public final class NodePoolUpgradeSettings {
     private NodePoolUpgradeSettings(
         Integer maxSurge,
         Integer maxUnavailable) {
-        this.maxSurge = Objects.requireNonNull(maxSurge);
-        this.maxUnavailable = Objects.requireNonNull(maxUnavailable);
+        this.maxSurge = maxSurge;
+        this.maxUnavailable = maxUnavailable;
     }
 
     /**

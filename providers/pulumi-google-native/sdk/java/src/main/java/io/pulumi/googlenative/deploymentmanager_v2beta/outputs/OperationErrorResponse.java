@@ -18,7 +18,7 @@ public final class OperationErrorResponse {
 
     @OutputCustomType.Constructor({"errors"})
     private OperationErrorResponse(List<OperationErrorErrorsItemResponse> errors) {
-        this.errors = Objects.requireNonNull(errors);
+        this.errors = errors;
     }
 
     /**

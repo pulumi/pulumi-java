@@ -19,7 +19,7 @@ public final class TableEncryptionSpecification {
     private TableEncryptionSpecification(
         TableEncryptionType encryptionType,
         @Nullable String kmsKeyIdentifier) {
-        this.encryptionType = Objects.requireNonNull(encryptionType);
+        this.encryptionType = encryptionType;
         this.kmsKeyIdentifier = kmsKeyIdentifier;
     }
 

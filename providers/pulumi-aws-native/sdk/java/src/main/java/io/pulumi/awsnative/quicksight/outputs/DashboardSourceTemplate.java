@@ -26,8 +26,8 @@ public final class DashboardSourceTemplate {
     private DashboardSourceTemplate(
         String arn,
         List<DashboardDataSetReference> dataSetReferences) {
-        this.arn = Objects.requireNonNull(arn);
-        this.dataSetReferences = Objects.requireNonNull(dataSetReferences);
+        this.arn = arn;
+        this.dataSetReferences = dataSetReferences;
     }
 
     /**

@@ -20,7 +20,7 @@ public final class DeliveryStreamProcessor {
         @Nullable List<DeliveryStreamProcessorParameter> parameters,
         DeliveryStreamProcessorType type) {
         this.parameters = parameters;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     public List<DeliveryStreamProcessorParameter> getParameters() {

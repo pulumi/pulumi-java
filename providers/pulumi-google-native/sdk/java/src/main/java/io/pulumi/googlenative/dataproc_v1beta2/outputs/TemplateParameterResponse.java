@@ -38,10 +38,10 @@ public final class TemplateParameterResponse {
         List<String> fields,
         String name,
         ParameterValidationResponse validation) {
-        this.description = Objects.requireNonNull(description);
-        this.fields = Objects.requireNonNull(fields);
-        this.name = Objects.requireNonNull(name);
-        this.validation = Objects.requireNonNull(validation);
+        this.description = description;
+        this.fields = fields;
+        this.name = name;
+        this.validation = validation;
     }
 
     /**

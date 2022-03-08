@@ -71,7 +71,7 @@ public final class GuestPoliciesRecipe {
         this.artifacts = artifacts;
         this.desiredState = desiredState;
         this.installSteps = installSteps;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.updateSteps = updateSteps;
         this.version = version;
     }

@@ -56,9 +56,9 @@ public final class ManagedPrivateEndpointResponse {
         this.connectionState = connectionState;
         this.fqdns = fqdns;
         this.groupId = groupId;
-        this.isReserved = Objects.requireNonNull(isReserved);
+        this.isReserved = isReserved;
         this.privateLinkResourceId = privateLinkResourceId;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
     }
 
     /**

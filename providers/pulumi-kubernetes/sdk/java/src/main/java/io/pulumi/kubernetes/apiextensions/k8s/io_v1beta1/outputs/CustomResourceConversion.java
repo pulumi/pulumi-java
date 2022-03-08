@@ -36,7 +36,7 @@ public final class CustomResourceConversion {
         String strategy,
         @Nullable WebhookClientConfig webhookClientConfig) {
         this.conversionReviewVersions = conversionReviewVersions;
-        this.strategy = Objects.requireNonNull(strategy);
+        this.strategy = strategy;
         this.webhookClientConfig = webhookClientConfig;
     }
 

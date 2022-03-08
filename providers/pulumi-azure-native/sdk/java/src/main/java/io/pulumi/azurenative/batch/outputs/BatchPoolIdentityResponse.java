@@ -27,7 +27,7 @@ public final class BatchPoolIdentityResponse {
     private BatchPoolIdentityResponse(
         String type,
         @Nullable Map<String,BatchPoolIdentityResponseUserAssignedIdentities> userAssignedIdentities) {
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.userAssignedIdentities = userAssignedIdentities;
     }
 

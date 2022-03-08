@@ -30,9 +30,9 @@ public final class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecRespons
         String database,
         String instanceId,
         String type) {
-        this.database = Objects.requireNonNull(database);
-        this.instanceId = Objects.requireNonNull(instanceId);
-        this.type = Objects.requireNonNull(type);
+        this.database = database;
+        this.instanceId = instanceId;
+        this.type = type;
     }
 
     /**

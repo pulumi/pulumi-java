@@ -24,8 +24,8 @@ public final class GoogleCloudRetailV2betaConditionTimeRangeResponse {
     private GoogleCloudRetailV2betaConditionTimeRangeResponse(
         String endTime,
         String startTime) {
-        this.endTime = Objects.requireNonNull(endTime);
-        this.startTime = Objects.requireNonNull(startTime);
+        this.endTime = endTime;
+        this.startTime = startTime;
     }
 
     /**

@@ -106,12 +106,12 @@ public final class HDInsightPigActivityResponse {
         this.description = description;
         this.getDebugInfo = getDebugInfo;
         this.linkedServiceName = linkedServiceName;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.policy = policy;
         this.scriptLinkedService = scriptLinkedService;
         this.scriptPath = scriptPath;
         this.storageLinkedServices = storageLinkedServices;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.userProperties = userProperties;
     }
 

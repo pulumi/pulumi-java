@@ -17,7 +17,7 @@ public final class RuleGroupRuleStatementAndStatementStatementByteMatchStatement
 
     @OutputCustomType.Constructor({"name"})
     private RuleGroupRuleStatementAndStatementStatementByteMatchStatementFieldToMatchSingleHeader(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

@@ -45,10 +45,10 @@ public final class GetWorkflowAccessKeyResult {
         @Nullable String notBefore,
         String type) {
         this.id = id;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.notAfter = notAfter;
         this.notBefore = notBefore;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

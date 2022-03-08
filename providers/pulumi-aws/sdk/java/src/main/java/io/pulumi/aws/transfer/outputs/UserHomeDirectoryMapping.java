@@ -24,8 +24,8 @@ public final class UserHomeDirectoryMapping {
     private UserHomeDirectoryMapping(
         String entry,
         String target) {
-        this.entry = Objects.requireNonNull(entry);
-        this.target = Objects.requireNonNull(target);
+        this.entry = entry;
+        this.target = target;
     }
 
     /**

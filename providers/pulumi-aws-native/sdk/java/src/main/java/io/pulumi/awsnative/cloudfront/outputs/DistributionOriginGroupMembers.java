@@ -18,8 +18,8 @@ public final class DistributionOriginGroupMembers {
     private DistributionOriginGroupMembers(
         List<DistributionOriginGroupMember> items,
         Integer quantity) {
-        this.items = Objects.requireNonNull(items);
-        this.quantity = Objects.requireNonNull(quantity);
+        this.items = items;
+        this.quantity = quantity;
     }
 
     public List<DistributionOriginGroupMember> getItems() {

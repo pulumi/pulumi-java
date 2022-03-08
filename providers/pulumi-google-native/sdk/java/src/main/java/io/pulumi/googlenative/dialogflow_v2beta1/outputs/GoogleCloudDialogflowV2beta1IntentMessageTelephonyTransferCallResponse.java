@@ -17,7 +17,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCal
 
     @OutputCustomType.Constructor({"phoneNumber"})
     private GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallResponse(String phoneNumber) {
-        this.phoneNumber = Objects.requireNonNull(phoneNumber);
+        this.phoneNumber = phoneNumber;
     }
 
     /**

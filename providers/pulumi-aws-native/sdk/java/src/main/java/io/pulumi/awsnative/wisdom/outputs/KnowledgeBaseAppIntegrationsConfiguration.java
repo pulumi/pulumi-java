@@ -17,8 +17,8 @@ public final class KnowledgeBaseAppIntegrationsConfiguration {
     private KnowledgeBaseAppIntegrationsConfiguration(
         String appIntegrationArn,
         List<String> objectFields) {
-        this.appIntegrationArn = Objects.requireNonNull(appIntegrationArn);
-        this.objectFields = Objects.requireNonNull(objectFields);
+        this.appIntegrationArn = appIntegrationArn;
+        this.objectFields = objectFields;
     }
 
     public String getAppIntegrationArn() {

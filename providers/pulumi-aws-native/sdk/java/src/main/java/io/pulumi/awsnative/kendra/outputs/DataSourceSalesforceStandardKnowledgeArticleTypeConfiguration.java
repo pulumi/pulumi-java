@@ -22,7 +22,7 @@ public final class DataSourceSalesforceStandardKnowledgeArticleTypeConfiguration
         String documentDataFieldName,
         @Nullable String documentTitleFieldName,
         @Nullable List<DataSourceToIndexFieldMapping> fieldMappings) {
-        this.documentDataFieldName = Objects.requireNonNull(documentDataFieldName);
+        this.documentDataFieldName = documentDataFieldName;
         this.documentTitleFieldName = documentTitleFieldName;
         this.fieldMappings = fieldMappings;
     }

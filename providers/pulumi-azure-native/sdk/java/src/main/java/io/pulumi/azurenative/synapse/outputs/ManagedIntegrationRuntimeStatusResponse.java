@@ -59,13 +59,13 @@ public final class ManagedIntegrationRuntimeStatusResponse {
         List<ManagedIntegrationRuntimeErrorResponse> otherErrors,
         String state,
         String type) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.dataFactoryName = Objects.requireNonNull(dataFactoryName);
-        this.lastOperation = Objects.requireNonNull(lastOperation);
-        this.nodes = Objects.requireNonNull(nodes);
-        this.otherErrors = Objects.requireNonNull(otherErrors);
-        this.state = Objects.requireNonNull(state);
-        this.type = Objects.requireNonNull(type);
+        this.createTime = createTime;
+        this.dataFactoryName = dataFactoryName;
+        this.lastOperation = lastOperation;
+        this.nodes = nodes;
+        this.otherErrors = otherErrors;
+        this.state = state;
+        this.type = type;
     }
 
     /**

@@ -23,7 +23,7 @@ public final class PodReadinessGate {
 
     @OutputCustomType.Constructor({"conditionType"})
     private PodReadinessGate(String conditionType) {
-        this.conditionType = Objects.requireNonNull(conditionType);
+        this.conditionType = conditionType;
     }
 
     /**

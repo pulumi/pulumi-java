@@ -24,8 +24,8 @@ public final class GetPermissionsDatabase {
     private GetPermissionsDatabase(
         String catalogId,
         String name) {
-        this.catalogId = Objects.requireNonNull(catalogId);
-        this.name = Objects.requireNonNull(name);
+        this.catalogId = catalogId;
+        this.name = name;
     }
 
     /**

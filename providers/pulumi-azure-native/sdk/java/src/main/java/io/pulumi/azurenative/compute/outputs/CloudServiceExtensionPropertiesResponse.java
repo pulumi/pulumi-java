@@ -81,7 +81,7 @@ public final class CloudServiceExtensionPropertiesResponse {
         this.forceUpdateTag = forceUpdateTag;
         this.protectedSettings = protectedSettings;
         this.protectedSettingsFromKeyVault = protectedSettingsFromKeyVault;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.publisher = publisher;
         this.rolesAppliedTo = rolesAppliedTo;
         this.settings = settings;

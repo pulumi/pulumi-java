@@ -127,23 +127,23 @@ public final class GetFileShareResult {
         String type,
         String version) {
         this.accessTier = accessTier;
-        this.accessTierChangeTime = Objects.requireNonNull(accessTierChangeTime);
-        this.accessTierStatus = Objects.requireNonNull(accessTierStatus);
-        this.deleted = Objects.requireNonNull(deleted);
-        this.deletedTime = Objects.requireNonNull(deletedTime);
+        this.accessTierChangeTime = accessTierChangeTime;
+        this.accessTierStatus = accessTierStatus;
+        this.deleted = deleted;
+        this.deletedTime = deletedTime;
         this.enabledProtocols = enabledProtocols;
-        this.etag = Objects.requireNonNull(etag);
-        this.id = Objects.requireNonNull(id);
-        this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
+        this.etag = etag;
+        this.id = id;
+        this.lastModifiedTime = lastModifiedTime;
         this.metadata = metadata;
-        this.name = Objects.requireNonNull(name);
-        this.remainingRetentionDays = Objects.requireNonNull(remainingRetentionDays);
+        this.name = name;
+        this.remainingRetentionDays = remainingRetentionDays;
         this.rootSquash = rootSquash;
         this.shareQuota = shareQuota;
-        this.shareUsageBytes = Objects.requireNonNull(shareUsageBytes);
-        this.snapshotTime = Objects.requireNonNull(snapshotTime);
-        this.type = Objects.requireNonNull(type);
-        this.version = Objects.requireNonNull(version);
+        this.shareUsageBytes = shareUsageBytes;
+        this.snapshotTime = snapshotTime;
+        this.type = type;
+        this.version = version;
     }
 
     /**

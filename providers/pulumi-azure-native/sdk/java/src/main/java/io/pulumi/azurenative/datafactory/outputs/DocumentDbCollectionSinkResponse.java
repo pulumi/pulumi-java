@@ -75,7 +75,7 @@ public final class DocumentDbCollectionSinkResponse {
         this.nestingSeparator = nestingSeparator;
         this.sinkRetryCount = sinkRetryCount;
         this.sinkRetryWait = sinkRetryWait;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.writeBatchSize = writeBatchSize;
         this.writeBatchTimeout = writeBatchTimeout;
         this.writeBehavior = writeBehavior;

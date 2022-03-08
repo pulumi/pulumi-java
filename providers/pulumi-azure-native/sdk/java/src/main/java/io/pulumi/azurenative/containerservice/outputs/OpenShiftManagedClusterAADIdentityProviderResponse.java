@@ -47,7 +47,7 @@ public final class OpenShiftManagedClusterAADIdentityProviderResponse {
         @Nullable String tenantId) {
         this.clientId = clientId;
         this.customerAdminGroupId = customerAdminGroupId;
-        this.kind = Objects.requireNonNull(kind);
+        this.kind = kind;
         this.secret = secret;
         this.tenantId = tenantId;
     }

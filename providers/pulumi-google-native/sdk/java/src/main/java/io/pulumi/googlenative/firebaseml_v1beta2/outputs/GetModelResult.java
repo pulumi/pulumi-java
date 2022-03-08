@@ -76,16 +76,16 @@ public final class GetModelResult {
         List<String> tags,
         TfLiteModelResponse tfliteModel,
         String updateTime) {
-        this.activeOperations = Objects.requireNonNull(activeOperations);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.etag = Objects.requireNonNull(etag);
-        this.modelHash = Objects.requireNonNull(modelHash);
-        this.name = Objects.requireNonNull(name);
-        this.state = Objects.requireNonNull(state);
-        this.tags = Objects.requireNonNull(tags);
-        this.tfliteModel = Objects.requireNonNull(tfliteModel);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.activeOperations = activeOperations;
+        this.createTime = createTime;
+        this.displayName = displayName;
+        this.etag = etag;
+        this.modelHash = modelHash;
+        this.name = name;
+        this.state = state;
+        this.tags = tags;
+        this.tfliteModel = tfliteModel;
+        this.updateTime = updateTime;
     }
 
     /**

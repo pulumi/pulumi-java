@@ -40,8 +40,8 @@ public final class ConnectorProfileZendeskConnectorProfileCredentials {
         String clientSecret,
         @Nullable ConnectorProfileConnectorOAuthRequest connectorOAuthRequest) {
         this.accessToken = accessToken;
-        this.clientId = Objects.requireNonNull(clientId);
-        this.clientSecret = Objects.requireNonNull(clientSecret);
+        this.clientId = clientId;
+        this.clientSecret = clientSecret;
         this.connectorOAuthRequest = connectorOAuthRequest;
     }
 

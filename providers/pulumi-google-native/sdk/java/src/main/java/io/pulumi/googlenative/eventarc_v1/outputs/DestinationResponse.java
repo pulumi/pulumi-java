@@ -32,9 +32,9 @@ public final class DestinationResponse {
         String cloudFunction,
         CloudRunResponse cloudRun,
         GKEResponse gke) {
-        this.cloudFunction = Objects.requireNonNull(cloudFunction);
-        this.cloudRun = Objects.requireNonNull(cloudRun);
-        this.gke = Objects.requireNonNull(gke);
+        this.cloudFunction = cloudFunction;
+        this.cloudRun = cloudRun;
+        this.gke = gke;
     }
 
     /**

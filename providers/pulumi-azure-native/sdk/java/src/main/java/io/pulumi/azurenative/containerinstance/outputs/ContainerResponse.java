@@ -83,13 +83,13 @@ public final class ContainerResponse {
         @Nullable List<VolumeMountResponse> volumeMounts) {
         this.command = command;
         this.environmentVariables = environmentVariables;
-        this.image = Objects.requireNonNull(image);
-        this.instanceView = Objects.requireNonNull(instanceView);
+        this.image = image;
+        this.instanceView = instanceView;
         this.livenessProbe = livenessProbe;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.ports = ports;
         this.readinessProbe = readinessProbe;
-        this.resources = Objects.requireNonNull(resources);
+        this.resources = resources;
         this.volumeMounts = volumeMounts;
     }
 

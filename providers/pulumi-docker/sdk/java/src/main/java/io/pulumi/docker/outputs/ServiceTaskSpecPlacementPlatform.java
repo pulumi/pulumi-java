@@ -16,8 +16,8 @@ public final class ServiceTaskSpecPlacementPlatform {
     private ServiceTaskSpecPlacementPlatform(
         String architecture,
         String os) {
-        this.architecture = Objects.requireNonNull(architecture);
-        this.os = Objects.requireNonNull(os);
+        this.architecture = architecture;
+        this.os = os;
     }
 
     public String getArchitecture() {

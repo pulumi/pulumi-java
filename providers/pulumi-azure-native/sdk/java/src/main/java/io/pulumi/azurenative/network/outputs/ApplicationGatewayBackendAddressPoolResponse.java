@@ -60,12 +60,12 @@ public final class ApplicationGatewayBackendAddressPoolResponse {
         String provisioningState,
         String type) {
         this.backendAddresses = backendAddresses;
-        this.backendIPConfigurations = Objects.requireNonNull(backendIPConfigurations);
-        this.etag = Objects.requireNonNull(etag);
+        this.backendIPConfigurations = backendIPConfigurations;
+        this.etag = etag;
         this.id = id;
         this.name = name;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.type = Objects.requireNonNull(type);
+        this.provisioningState = provisioningState;
+        this.type = type;
     }
 
     /**

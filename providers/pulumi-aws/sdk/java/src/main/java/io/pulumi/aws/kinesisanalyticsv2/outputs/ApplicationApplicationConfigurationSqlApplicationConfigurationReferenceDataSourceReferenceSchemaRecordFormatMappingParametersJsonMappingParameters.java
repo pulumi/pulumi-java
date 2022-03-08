@@ -17,7 +17,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
 
     @OutputCustomType.Constructor({"recordRowPath"})
     private ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParameters(String recordRowPath) {
-        this.recordRowPath = Objects.requireNonNull(recordRowPath);
+        this.recordRowPath = recordRowPath;
     }
 
     /**

@@ -22,8 +22,8 @@ public final class ThrottlingMetricResponse {
         Double limit,
         String type) {
         this.interval = interval;
-        this.limit = Objects.requireNonNull(limit);
-        this.type = Objects.requireNonNull(type);
+        this.limit = limit;
+        this.type = type;
     }
 
     public Optional<String> getInterval() {

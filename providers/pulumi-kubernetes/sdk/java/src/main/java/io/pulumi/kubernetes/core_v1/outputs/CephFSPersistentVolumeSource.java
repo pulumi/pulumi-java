@@ -53,7 +53,7 @@ public final class CephFSPersistentVolumeSource {
         @Nullable String secretFile,
         @Nullable SecretReference secretRef,
         @Nullable String user) {
-        this.monitors = Objects.requireNonNull(monitors);
+        this.monitors = monitors;
         this.path = path;
         this.readOnly = readOnly;
         this.secretFile = secretFile;

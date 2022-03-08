@@ -85,17 +85,17 @@ public final class GetConnectionProfileResult {
         PrivateConnectivityResponse privateConnectivity,
         StaticServiceIpConnectivityResponse staticServiceIpConnectivity,
         String updateTime) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.forwardSshConnectivity = Objects.requireNonNull(forwardSshConnectivity);
-        this.gcsProfile = Objects.requireNonNull(gcsProfile);
-        this.labels = Objects.requireNonNull(labels);
-        this.mysqlProfile = Objects.requireNonNull(mysqlProfile);
-        this.name = Objects.requireNonNull(name);
-        this.oracleProfile = Objects.requireNonNull(oracleProfile);
-        this.privateConnectivity = Objects.requireNonNull(privateConnectivity);
-        this.staticServiceIpConnectivity = Objects.requireNonNull(staticServiceIpConnectivity);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.createTime = createTime;
+        this.displayName = displayName;
+        this.forwardSshConnectivity = forwardSshConnectivity;
+        this.gcsProfile = gcsProfile;
+        this.labels = labels;
+        this.mysqlProfile = mysqlProfile;
+        this.name = name;
+        this.oracleProfile = oracleProfile;
+        this.privateConnectivity = privateConnectivity;
+        this.staticServiceIpConnectivity = staticServiceIpConnectivity;
+        this.updateTime = updateTime;
     }
 
     /**

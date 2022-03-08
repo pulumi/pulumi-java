@@ -36,10 +36,10 @@ public final class TopicRuleErrorActionCloudwatchAlarm {
         String roleArn,
         String stateReason,
         String stateValue) {
-        this.alarmName = Objects.requireNonNull(alarmName);
-        this.roleArn = Objects.requireNonNull(roleArn);
-        this.stateReason = Objects.requireNonNull(stateReason);
-        this.stateValue = Objects.requireNonNull(stateValue);
+        this.alarmName = alarmName;
+        this.roleArn = roleArn;
+        this.stateReason = stateReason;
+        this.stateValue = stateValue;
     }
 
     /**

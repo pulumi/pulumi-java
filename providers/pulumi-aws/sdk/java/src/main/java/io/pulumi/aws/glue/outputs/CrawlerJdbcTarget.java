@@ -32,9 +32,9 @@ public final class CrawlerJdbcTarget {
         String connectionName,
         @Nullable List<String> exclusions,
         String path) {
-        this.connectionName = Objects.requireNonNull(connectionName);
+        this.connectionName = connectionName;
         this.exclusions = exclusions;
-        this.path = Objects.requireNonNull(path);
+        this.path = path;
     }
 
     /**

@@ -30,9 +30,9 @@ public final class GoogleCloudDatapipelinesV1ScheduleSpecResponse {
         String nextJobTime,
         String schedule,
         String timeZone) {
-        this.nextJobTime = Objects.requireNonNull(nextJobTime);
-        this.schedule = Objects.requireNonNull(schedule);
-        this.timeZone = Objects.requireNonNull(timeZone);
+        this.nextJobTime = nextJobTime;
+        this.schedule = schedule;
+        this.timeZone = timeZone;
     }
 
     /**

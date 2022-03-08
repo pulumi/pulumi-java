@@ -31,7 +31,7 @@ public final class DetectorModelSqs {
         String queueUrl,
         @Nullable Boolean useBase64) {
         this.payload = payload;
-        this.queueUrl = Objects.requireNonNull(queueUrl);
+        this.queueUrl = queueUrl;
         this.useBase64 = useBase64;
     }
 

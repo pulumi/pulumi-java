@@ -25,8 +25,8 @@ public final class DeviceCredentialResponse {
     private DeviceCredentialResponse(
         String expirationTime,
         PublicKeyCredentialResponse publicKey) {
-        this.expirationTime = Objects.requireNonNull(expirationTime);
-        this.publicKey = Objects.requireNonNull(publicKey);
+        this.expirationTime = expirationTime;
+        this.publicKey = publicKey;
     }
 
     /**

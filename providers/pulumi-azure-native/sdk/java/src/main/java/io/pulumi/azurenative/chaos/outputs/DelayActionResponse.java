@@ -31,9 +31,9 @@ public final class DelayActionResponse {
         String duration,
         String name,
         String type) {
-        this.duration = Objects.requireNonNull(duration);
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.duration = duration;
+        this.name = name;
+        this.type = type;
     }
 
     /**

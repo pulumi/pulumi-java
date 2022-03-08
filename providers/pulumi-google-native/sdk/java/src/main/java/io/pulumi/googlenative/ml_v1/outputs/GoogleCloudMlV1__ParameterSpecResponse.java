@@ -56,13 +56,13 @@ public final class GoogleCloudMlV1__ParameterSpecResponse {
         String parameterName,
         String scaleType,
         String type) {
-        this.categoricalValues = Objects.requireNonNull(categoricalValues);
-        this.discreteValues = Objects.requireNonNull(discreteValues);
-        this.maxValue = Objects.requireNonNull(maxValue);
-        this.minValue = Objects.requireNonNull(minValue);
-        this.parameterName = Objects.requireNonNull(parameterName);
-        this.scaleType = Objects.requireNonNull(scaleType);
-        this.type = Objects.requireNonNull(type);
+        this.categoricalValues = categoricalValues;
+        this.discreteValues = discreteValues;
+        this.maxValue = maxValue;
+        this.minValue = minValue;
+        this.parameterName = parameterName;
+        this.scaleType = scaleType;
+        this.type = type;
     }
 
     /**

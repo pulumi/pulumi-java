@@ -62,10 +62,10 @@ public final class AcsClusterPropertiesResponse {
         @Nullable List<SystemServiceResponse> systemServices) {
         this.agentCount = agentCount;
         this.agentVmSize = agentVmSize;
-        this.clusterFqdn = Objects.requireNonNull(clusterFqdn);
+        this.clusterFqdn = clusterFqdn;
         this.masterCount = masterCount;
         this.orchestratorProperties = orchestratorProperties;
-        this.orchestratorType = Objects.requireNonNull(orchestratorType);
+        this.orchestratorType = orchestratorType;
         this.systemServices = systemServices;
     }
 

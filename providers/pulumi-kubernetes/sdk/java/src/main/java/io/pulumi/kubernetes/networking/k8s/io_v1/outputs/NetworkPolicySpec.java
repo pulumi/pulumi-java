@@ -43,7 +43,7 @@ public final class NetworkPolicySpec {
         @Nullable List<String> policyTypes) {
         this.egress = egress;
         this.ingress = ingress;
-        this.podSelector = Objects.requireNonNull(podSelector);
+        this.podSelector = podSelector;
         this.policyTypes = policyTypes;
     }
 

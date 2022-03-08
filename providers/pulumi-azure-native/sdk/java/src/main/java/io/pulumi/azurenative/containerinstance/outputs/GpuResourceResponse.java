@@ -25,8 +25,8 @@ public final class GpuResourceResponse {
     private GpuResourceResponse(
         Integer count,
         String sku) {
-        this.count = Objects.requireNonNull(count);
-        this.sku = Objects.requireNonNull(sku);
+        this.count = count;
+        this.sku = sku;
     }
 
     /**

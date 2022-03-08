@@ -199,37 +199,37 @@ public final class GetClusterResult {
         @Nullable Map<String,String> tags,
         String vpcId,
         List<String> vpcSecurityGroupIds) {
-        this.allowVersionUpgrade = Objects.requireNonNull(allowVersionUpgrade);
-        this.automatedSnapshotRetentionPeriod = Objects.requireNonNull(automatedSnapshotRetentionPeriod);
-        this.availabilityZone = Objects.requireNonNull(availabilityZone);
-        this.bucketName = Objects.requireNonNull(bucketName);
-        this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier);
-        this.clusterParameterGroupName = Objects.requireNonNull(clusterParameterGroupName);
-        this.clusterPublicKey = Objects.requireNonNull(clusterPublicKey);
-        this.clusterRevisionNumber = Objects.requireNonNull(clusterRevisionNumber);
-        this.clusterSecurityGroups = Objects.requireNonNull(clusterSecurityGroups);
-        this.clusterSubnetGroupName = Objects.requireNonNull(clusterSubnetGroupName);
-        this.clusterType = Objects.requireNonNull(clusterType);
-        this.clusterVersion = Objects.requireNonNull(clusterVersion);
-        this.databaseName = Objects.requireNonNull(databaseName);
-        this.elasticIp = Objects.requireNonNull(elasticIp);
-        this.enableLogging = Objects.requireNonNull(enableLogging);
-        this.encrypted = Objects.requireNonNull(encrypted);
-        this.endpoint = Objects.requireNonNull(endpoint);
-        this.enhancedVpcRouting = Objects.requireNonNull(enhancedVpcRouting);
-        this.iamRoles = Objects.requireNonNull(iamRoles);
-        this.id = Objects.requireNonNull(id);
-        this.kmsKeyId = Objects.requireNonNull(kmsKeyId);
-        this.masterUsername = Objects.requireNonNull(masterUsername);
-        this.nodeType = Objects.requireNonNull(nodeType);
-        this.numberOfNodes = Objects.requireNonNull(numberOfNodes);
-        this.port = Objects.requireNonNull(port);
-        this.preferredMaintenanceWindow = Objects.requireNonNull(preferredMaintenanceWindow);
-        this.publiclyAccessible = Objects.requireNonNull(publiclyAccessible);
-        this.s3KeyPrefix = Objects.requireNonNull(s3KeyPrefix);
+        this.allowVersionUpgrade = allowVersionUpgrade;
+        this.automatedSnapshotRetentionPeriod = automatedSnapshotRetentionPeriod;
+        this.availabilityZone = availabilityZone;
+        this.bucketName = bucketName;
+        this.clusterIdentifier = clusterIdentifier;
+        this.clusterParameterGroupName = clusterParameterGroupName;
+        this.clusterPublicKey = clusterPublicKey;
+        this.clusterRevisionNumber = clusterRevisionNumber;
+        this.clusterSecurityGroups = clusterSecurityGroups;
+        this.clusterSubnetGroupName = clusterSubnetGroupName;
+        this.clusterType = clusterType;
+        this.clusterVersion = clusterVersion;
+        this.databaseName = databaseName;
+        this.elasticIp = elasticIp;
+        this.enableLogging = enableLogging;
+        this.encrypted = encrypted;
+        this.endpoint = endpoint;
+        this.enhancedVpcRouting = enhancedVpcRouting;
+        this.iamRoles = iamRoles;
+        this.id = id;
+        this.kmsKeyId = kmsKeyId;
+        this.masterUsername = masterUsername;
+        this.nodeType = nodeType;
+        this.numberOfNodes = numberOfNodes;
+        this.port = port;
+        this.preferredMaintenanceWindow = preferredMaintenanceWindow;
+        this.publiclyAccessible = publiclyAccessible;
+        this.s3KeyPrefix = s3KeyPrefix;
         this.tags = tags;
-        this.vpcId = Objects.requireNonNull(vpcId);
-        this.vpcSecurityGroupIds = Objects.requireNonNull(vpcSecurityGroupIds);
+        this.vpcId = vpcId;
+        this.vpcSecurityGroupIds = vpcSecurityGroupIds;
     }
 
     /**

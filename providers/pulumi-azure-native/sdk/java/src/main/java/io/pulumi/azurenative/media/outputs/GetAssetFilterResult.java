@@ -62,12 +62,12 @@ public final class GetAssetFilterResult {
         @Nullable List<FilterTrackSelectionResponse> tracks,
         String type) {
         this.firstQuality = firstQuality;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.presentationTimeRange = presentationTimeRange;
-        this.systemData = Objects.requireNonNull(systemData);
+        this.systemData = systemData;
         this.tracks = tracks;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

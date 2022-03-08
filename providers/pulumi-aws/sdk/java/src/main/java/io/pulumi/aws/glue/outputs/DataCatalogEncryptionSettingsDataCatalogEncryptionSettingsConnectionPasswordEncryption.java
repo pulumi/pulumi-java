@@ -28,7 +28,7 @@ public final class DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsCon
         @Nullable String awsKmsKeyId,
         Boolean returnConnectionPasswordEncrypted) {
         this.awsKmsKeyId = awsKmsKeyId;
-        this.returnConnectionPasswordEncrypted = Objects.requireNonNull(returnConnectionPasswordEncrypted);
+        this.returnConnectionPasswordEncrypted = returnConnectionPasswordEncrypted;
     }
 
     /**

@@ -26,8 +26,8 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentResponse {
     private GoogleCloudDialogflowV2IntentMessageMediaContentResponse(
         List<GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectResponse> mediaObjects,
         String mediaType) {
-        this.mediaObjects = Objects.requireNonNull(mediaObjects);
-        this.mediaType = Objects.requireNonNull(mediaType);
+        this.mediaObjects = mediaObjects;
+        this.mediaType = mediaType;
     }
 
     /**

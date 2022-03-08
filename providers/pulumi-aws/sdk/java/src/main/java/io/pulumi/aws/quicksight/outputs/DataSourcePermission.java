@@ -25,8 +25,8 @@ public final class DataSourcePermission {
     private DataSourcePermission(
         List<String> actions,
         String principal) {
-        this.actions = Objects.requireNonNull(actions);
-        this.principal = Objects.requireNonNull(principal);
+        this.actions = actions;
+        this.principal = principal;
     }
 
     /**

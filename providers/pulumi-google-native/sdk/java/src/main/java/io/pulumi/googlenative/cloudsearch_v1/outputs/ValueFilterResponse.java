@@ -25,8 +25,8 @@ public final class ValueFilterResponse {
     private ValueFilterResponse(
         String operatorName,
         ValueResponse value) {
-        this.operatorName = Objects.requireNonNull(operatorName);
-        this.value = Objects.requireNonNull(value);
+        this.operatorName = operatorName;
+        this.value = value;
     }
 
     /**

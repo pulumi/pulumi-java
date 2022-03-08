@@ -43,11 +43,11 @@ public final class OnPremiseResourceDetailsResponse {
         String sourceComputerId,
         String vmuuid,
         String workspaceId) {
-        this.machineName = Objects.requireNonNull(machineName);
-        this.source = Objects.requireNonNull(source);
-        this.sourceComputerId = Objects.requireNonNull(sourceComputerId);
-        this.vmuuid = Objects.requireNonNull(vmuuid);
-        this.workspaceId = Objects.requireNonNull(workspaceId);
+        this.machineName = machineName;
+        this.source = source;
+        this.sourceComputerId = sourceComputerId;
+        this.vmuuid = vmuuid;
+        this.workspaceId = workspaceId;
     }
 
     /**

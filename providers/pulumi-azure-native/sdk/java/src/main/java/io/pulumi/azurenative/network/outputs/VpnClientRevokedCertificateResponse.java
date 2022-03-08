@@ -44,10 +44,10 @@ public final class VpnClientRevokedCertificateResponse {
         @Nullable String name,
         String provisioningState,
         @Nullable String thumbprint) {
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.id = id;
         this.name = name;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.thumbprint = thumbprint;
     }
 

@@ -17,7 +17,7 @@ public final class ManagerSkuResponse {
 
     @OutputCustomType.Constructor({"name"})
     private ManagerSkuResponse(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

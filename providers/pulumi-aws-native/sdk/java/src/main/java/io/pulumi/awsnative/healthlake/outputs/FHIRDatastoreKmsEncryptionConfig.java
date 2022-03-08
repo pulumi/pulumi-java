@@ -27,7 +27,7 @@ public final class FHIRDatastoreKmsEncryptionConfig {
     private FHIRDatastoreKmsEncryptionConfig(
         FHIRDatastoreKmsEncryptionConfigCmkType cmkType,
         @Nullable String kmsKeyId) {
-        this.cmkType = Objects.requireNonNull(cmkType);
+        this.cmkType = cmkType;
         this.kmsKeyId = kmsKeyId;
     }
 

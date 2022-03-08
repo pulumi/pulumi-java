@@ -33,8 +33,8 @@ public final class ModuleResponse {
         String name,
         String version) {
         this.args = args;
-        this.name = Objects.requireNonNull(name);
-        this.version = Objects.requireNonNull(version);
+        this.name = name;
+        this.version = version;
     }
 
     /**

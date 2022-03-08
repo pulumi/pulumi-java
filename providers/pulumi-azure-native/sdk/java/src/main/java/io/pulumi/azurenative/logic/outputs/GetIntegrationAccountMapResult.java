@@ -96,19 +96,19 @@ public final class GetIntegrationAccountMapResult {
         @Nullable IntegrationAccountMapPropertiesResponseParametersSchema parametersSchema,
         @Nullable Map<String,String> tags,
         String type) {
-        this.changedTime = Objects.requireNonNull(changedTime);
+        this.changedTime = changedTime;
         this.content = content;
-        this.contentLink = Objects.requireNonNull(contentLink);
+        this.contentLink = contentLink;
         this.contentType = contentType;
-        this.createdTime = Objects.requireNonNull(createdTime);
-        this.id = Objects.requireNonNull(id);
+        this.createdTime = createdTime;
+        this.id = id;
         this.location = location;
-        this.mapType = Objects.requireNonNull(mapType);
+        this.mapType = mapType;
         this.metadata = metadata;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.parametersSchema = parametersSchema;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

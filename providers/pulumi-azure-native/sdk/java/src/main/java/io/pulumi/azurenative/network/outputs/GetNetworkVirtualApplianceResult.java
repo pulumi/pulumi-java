@@ -129,23 +129,23 @@ public final class GetNetworkVirtualApplianceResult {
         List<VirtualApplianceNicPropertiesResponse> virtualApplianceNics,
         List<SubResourceResponse> virtualApplianceSites,
         @Nullable SubResourceResponse virtualHub) {
-        this.addressPrefix = Objects.requireNonNull(addressPrefix);
+        this.addressPrefix = addressPrefix;
         this.bootStrapConfigurationBlobs = bootStrapConfigurationBlobs;
         this.cloudInitConfiguration = cloudInitConfiguration;
         this.cloudInitConfigurationBlobs = cloudInitConfigurationBlobs;
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.id = id;
         this.identity = identity;
-        this.inboundSecurityRules = Objects.requireNonNull(inboundSecurityRules);
+        this.inboundSecurityRules = inboundSecurityRules;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.nvaSku = nvaSku;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.virtualApplianceAsn = virtualApplianceAsn;
-        this.virtualApplianceNics = Objects.requireNonNull(virtualApplianceNics);
-        this.virtualApplianceSites = Objects.requireNonNull(virtualApplianceSites);
+        this.virtualApplianceNics = virtualApplianceNics;
+        this.virtualApplianceSites = virtualApplianceSites;
         this.virtualHub = virtualHub;
     }
 

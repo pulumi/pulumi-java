@@ -77,14 +77,14 @@ public final class ScaleIOVolumeSource {
         String system,
         @Nullable String volumeName) {
         this.fsType = fsType;
-        this.gateway = Objects.requireNonNull(gateway);
+        this.gateway = gateway;
         this.protectionDomain = protectionDomain;
         this.readOnly = readOnly;
-        this.secretRef = Objects.requireNonNull(secretRef);
+        this.secretRef = secretRef;
         this.sslEnabled = sslEnabled;
         this.storageMode = storageMode;
         this.storagePool = storagePool;
-        this.system = Objects.requireNonNull(system);
+        this.system = system;
         this.volumeName = volumeName;
     }
 

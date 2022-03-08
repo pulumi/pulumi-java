@@ -24,8 +24,8 @@ public final class ApiPortalInstanceResponse {
     private ApiPortalInstanceResponse(
         String name,
         String status) {
-        this.name = Objects.requireNonNull(name);
-        this.status = Objects.requireNonNull(status);
+        this.name = name;
+        this.status = status;
     }
 
     /**

@@ -26,7 +26,7 @@ public final class ReportRecurrencePeriodResponse {
     private ReportRecurrencePeriodResponse(
         String from,
         @Nullable String to) {
-        this.from = Objects.requireNonNull(from);
+        this.from = from;
         this.to = to;
     }
 

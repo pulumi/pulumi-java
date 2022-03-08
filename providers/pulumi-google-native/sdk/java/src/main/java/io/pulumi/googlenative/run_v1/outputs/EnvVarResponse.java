@@ -31,9 +31,9 @@ public final class EnvVarResponse {
         String name,
         String value,
         EnvVarSourceResponse valueFrom) {
-        this.name = Objects.requireNonNull(name);
-        this.value = Objects.requireNonNull(value);
-        this.valueFrom = Objects.requireNonNull(valueFrom);
+        this.name = name;
+        this.value = value;
+        this.valueFrom = valueFrom;
     }
 
     /**

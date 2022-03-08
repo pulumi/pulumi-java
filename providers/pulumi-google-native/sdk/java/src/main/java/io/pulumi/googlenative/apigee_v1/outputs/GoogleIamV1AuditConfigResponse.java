@@ -26,8 +26,8 @@ public final class GoogleIamV1AuditConfigResponse {
     private GoogleIamV1AuditConfigResponse(
         List<GoogleIamV1AuditLogConfigResponse> auditLogConfigs,
         String service) {
-        this.auditLogConfigs = Objects.requireNonNull(auditLogConfigs);
-        this.service = Objects.requireNonNull(service);
+        this.auditLogConfigs = auditLogConfigs;
+        this.service = service;
     }
 
     /**

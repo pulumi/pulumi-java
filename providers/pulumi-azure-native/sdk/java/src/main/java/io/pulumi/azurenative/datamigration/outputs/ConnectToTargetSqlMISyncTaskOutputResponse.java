@@ -32,9 +32,9 @@ public final class ConnectToTargetSqlMISyncTaskOutputResponse {
         String targetServerBrandVersion,
         String targetServerVersion,
         List<ReportableExceptionResponse> validationErrors) {
-        this.targetServerBrandVersion = Objects.requireNonNull(targetServerBrandVersion);
-        this.targetServerVersion = Objects.requireNonNull(targetServerVersion);
-        this.validationErrors = Objects.requireNonNull(validationErrors);
+        this.targetServerBrandVersion = targetServerBrandVersion;
+        this.targetServerVersion = targetServerVersion;
+        this.validationErrors = validationErrors;
     }
 
     /**

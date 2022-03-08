@@ -49,12 +49,12 @@ public final class MachineReferenceWithHintsResponse {
         String name,
         String osFamilyHint,
         String type) {
-        this.displayNameHint = Objects.requireNonNull(displayNameHint);
-        this.id = Objects.requireNonNull(id);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.osFamilyHint = Objects.requireNonNull(osFamilyHint);
-        this.type = Objects.requireNonNull(type);
+        this.displayNameHint = displayNameHint;
+        this.id = id;
+        this.kind = kind;
+        this.name = name;
+        this.osFamilyHint = osFamilyHint;
+        this.type = type;
     }
 
     /**

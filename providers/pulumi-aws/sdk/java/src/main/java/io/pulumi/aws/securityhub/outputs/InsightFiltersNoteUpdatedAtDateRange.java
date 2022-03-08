@@ -25,8 +25,8 @@ public final class InsightFiltersNoteUpdatedAtDateRange {
     private InsightFiltersNoteUpdatedAtDateRange(
         String unit,
         Integer value) {
-        this.unit = Objects.requireNonNull(unit);
-        this.value = Objects.requireNonNull(value);
+        this.unit = unit;
+        this.value = value;
     }
 
     /**

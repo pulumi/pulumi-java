@@ -69,7 +69,7 @@ public final class ImageDataDiskResponse {
         this.caching = caching;
         this.diskEncryptionSet = diskEncryptionSet;
         this.diskSizeGB = diskSizeGB;
-        this.lun = Objects.requireNonNull(lun);
+        this.lun = lun;
         this.managedDisk = managedDisk;
         this.snapshot = snapshot;
         this.storageAccountType = storageAccountType;

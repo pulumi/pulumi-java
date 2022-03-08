@@ -33,7 +33,7 @@ public final class SpotInstanceRequestEphemeralBlockDevice {
         String deviceName,
         @Nullable Boolean noDevice,
         @Nullable String virtualName) {
-        this.deviceName = Objects.requireNonNull(deviceName);
+        this.deviceName = deviceName;
         this.noDevice = noDevice;
         this.virtualName = virtualName;
     }

@@ -30,9 +30,9 @@ public final class CustomerSecretResponse {
         String algorithm,
         String keyIdentifier,
         String keyValue) {
-        this.algorithm = Objects.requireNonNull(algorithm);
-        this.keyIdentifier = Objects.requireNonNull(keyIdentifier);
-        this.keyValue = Objects.requireNonNull(keyValue);
+        this.algorithm = algorithm;
+        this.keyIdentifier = keyIdentifier;
+        this.keyValue = keyValue;
     }
 
     /**

@@ -28,9 +28,9 @@ public final class AuditLogConfigResponse {
         List<String> exemptedMembers,
         Boolean ignoreChildExemptions,
         String logType) {
-        this.exemptedMembers = Objects.requireNonNull(exemptedMembers);
-        this.ignoreChildExemptions = Objects.requireNonNull(ignoreChildExemptions);
-        this.logType = Objects.requireNonNull(logType);
+        this.exemptedMembers = exemptedMembers;
+        this.ignoreChildExemptions = ignoreChildExemptions;
+        this.logType = logType;
     }
 
     /**

@@ -25,8 +25,8 @@ public final class AssetModelExpressionVariable {
     private AssetModelExpressionVariable(
         String name,
         AssetModelVariableValue value) {
-        this.name = Objects.requireNonNull(name);
-        this.value = Objects.requireNonNull(value);
+        this.name = name;
+        this.value = value;
     }
 
     /**

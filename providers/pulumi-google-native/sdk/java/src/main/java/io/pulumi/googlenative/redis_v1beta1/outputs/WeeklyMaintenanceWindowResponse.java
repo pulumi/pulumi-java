@@ -31,9 +31,9 @@ public final class WeeklyMaintenanceWindowResponse {
         String day,
         String duration,
         TimeOfDayResponse startTime) {
-        this.day = Objects.requireNonNull(day);
-        this.duration = Objects.requireNonNull(duration);
-        this.startTime = Objects.requireNonNull(startTime);
+        this.day = day;
+        this.duration = duration;
+        this.startTime = startTime;
     }
 
     /**

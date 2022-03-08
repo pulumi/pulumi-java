@@ -42,11 +42,11 @@ public final class BatchConfigurationPropertiesResponse {
         @Nullable String createdTime,
         @Nullable Object metadata,
         BatchReleaseCriteriaResponse releaseCriteria) {
-        this.batchGroupName = Objects.requireNonNull(batchGroupName);
+        this.batchGroupName = batchGroupName;
         this.changedTime = changedTime;
         this.createdTime = createdTime;
         this.metadata = metadata;
-        this.releaseCriteria = Objects.requireNonNull(releaseCriteria);
+        this.releaseCriteria = releaseCriteria;
     }
 
     /**

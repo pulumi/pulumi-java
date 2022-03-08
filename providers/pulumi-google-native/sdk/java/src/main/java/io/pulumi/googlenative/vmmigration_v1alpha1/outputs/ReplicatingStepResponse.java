@@ -36,10 +36,10 @@ public final class ReplicatingStepResponse {
         String lastTwoMinutesAverageBytesPerSecond,
         String replicatedBytes,
         String totalBytes) {
-        this.lastThirtyMinutesAverageBytesPerSecond = Objects.requireNonNull(lastThirtyMinutesAverageBytesPerSecond);
-        this.lastTwoMinutesAverageBytesPerSecond = Objects.requireNonNull(lastTwoMinutesAverageBytesPerSecond);
-        this.replicatedBytes = Objects.requireNonNull(replicatedBytes);
-        this.totalBytes = Objects.requireNonNull(totalBytes);
+        this.lastThirtyMinutesAverageBytesPerSecond = lastThirtyMinutesAverageBytesPerSecond;
+        this.lastTwoMinutesAverageBytesPerSecond = lastTwoMinutesAverageBytesPerSecond;
+        this.replicatedBytes = replicatedBytes;
+        this.totalBytes = totalBytes;
     }
 
     /**

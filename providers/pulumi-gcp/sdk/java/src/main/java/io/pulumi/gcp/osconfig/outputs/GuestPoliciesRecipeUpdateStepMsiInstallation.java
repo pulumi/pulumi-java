@@ -34,7 +34,7 @@ public final class GuestPoliciesRecipeUpdateStepMsiInstallation {
         String artifactId,
         @Nullable List<String> flags) {
         this.allowedExitCodes = allowedExitCodes;
-        this.artifactId = Objects.requireNonNull(artifactId);
+        this.artifactId = artifactId;
         this.flags = flags;
     }
 

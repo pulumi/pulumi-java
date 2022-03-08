@@ -83,7 +83,7 @@ public final class NetworkRuleResponse {
         this.destinationPorts = destinationPorts;
         this.ipProtocols = ipProtocols;
         this.name = name;
-        this.ruleType = Objects.requireNonNull(ruleType);
+        this.ruleType = ruleType;
         this.sourceAddresses = sourceAddresses;
         this.sourceIpGroups = sourceIpGroups;
     }

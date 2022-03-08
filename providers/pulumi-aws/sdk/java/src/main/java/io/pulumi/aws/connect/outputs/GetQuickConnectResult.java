@@ -55,14 +55,14 @@ public final class GetQuickConnectResult {
         List<GetQuickConnectQuickConnectConfig> quickConnectConfigs,
         String quickConnectId,
         Map<String,String> tags) {
-        this.arn = Objects.requireNonNull(arn);
-        this.description = Objects.requireNonNull(description);
-        this.id = Objects.requireNonNull(id);
-        this.instanceId = Objects.requireNonNull(instanceId);
-        this.name = Objects.requireNonNull(name);
-        this.quickConnectConfigs = Objects.requireNonNull(quickConnectConfigs);
-        this.quickConnectId = Objects.requireNonNull(quickConnectId);
-        this.tags = Objects.requireNonNull(tags);
+        this.arn = arn;
+        this.description = description;
+        this.id = id;
+        this.instanceId = instanceId;
+        this.name = name;
+        this.quickConnectConfigs = quickConnectConfigs;
+        this.quickConnectId = quickConnectId;
+        this.tags = tags;
     }
 
     /**

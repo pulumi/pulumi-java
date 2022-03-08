@@ -17,7 +17,7 @@ public final class WebAclRuleStatementNotStatementStatementSqliMatchStatementFie
 
     @OutputCustomType.Constructor({"name"})
     private WebAclRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleHeader(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

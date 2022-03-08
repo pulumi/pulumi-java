@@ -17,7 +17,7 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroup
 
     @OutputCustomType.Constructor({"name"})
     private DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroup(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

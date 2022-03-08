@@ -71,7 +71,7 @@ public final class ListenerRuleAction {
         this.order = order;
         this.redirect = redirect;
         this.targetGroupArn = targetGroupArn;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

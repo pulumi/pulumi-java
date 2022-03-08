@@ -50,12 +50,12 @@ public final class VersionResponse {
         String kind,
         String name,
         String revision) {
-        this.epoch = Objects.requireNonNull(epoch);
-        this.fullName = Objects.requireNonNull(fullName);
-        this.inclusive = Objects.requireNonNull(inclusive);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.revision = Objects.requireNonNull(revision);
+        this.epoch = epoch;
+        this.fullName = fullName;
+        this.inclusive = inclusive;
+        this.kind = kind;
+        this.name = name;
+        this.revision = revision;
     }
 
     /**

@@ -27,7 +27,7 @@ public final class PhotonPersistentDiskVolumeSource {
         @Nullable String fsType,
         String pdID) {
         this.fsType = fsType;
-        this.pdID = Objects.requireNonNull(pdID);
+        this.pdID = pdID;
     }
 
     /**

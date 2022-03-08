@@ -17,7 +17,7 @@ public final class FailurePolicyResponse {
 
     @OutputCustomType.Constructor({"retry"})
     private FailurePolicyResponse(RetryResponse retry) {
-        this.retry = Objects.requireNonNull(retry);
+        this.retry = retry;
     }
 
     /**

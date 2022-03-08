@@ -44,11 +44,11 @@ public final class GetPrivateLinkScopedResourceResult {
         String name,
         String provisioningState,
         String type) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.linkedResourceId = linkedResourceId;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.type = Objects.requireNonNull(type);
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.type = type;
     }
 
     /**

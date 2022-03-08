@@ -46,12 +46,12 @@ public final class GetGroupResult {
         String id,
         String path,
         List<GetGroupUser> users) {
-        this.arn = Objects.requireNonNull(arn);
-        this.groupId = Objects.requireNonNull(groupId);
-        this.groupName = Objects.requireNonNull(groupName);
-        this.id = Objects.requireNonNull(id);
-        this.path = Objects.requireNonNull(path);
-        this.users = Objects.requireNonNull(users);
+        this.arn = arn;
+        this.groupId = groupId;
+        this.groupName = groupName;
+        this.id = id;
+        this.path = path;
+        this.users = users;
     }
 
     /**

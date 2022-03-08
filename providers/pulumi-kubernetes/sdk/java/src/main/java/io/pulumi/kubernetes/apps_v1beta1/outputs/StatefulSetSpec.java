@@ -72,8 +72,8 @@ public final class StatefulSetSpec {
         this.replicas = replicas;
         this.revisionHistoryLimit = revisionHistoryLimit;
         this.selector = selector;
-        this.serviceName = Objects.requireNonNull(serviceName);
-        this.template = Objects.requireNonNull(template);
+        this.serviceName = serviceName;
+        this.template = template;
         this.updateStrategy = updateStrategy;
         this.volumeClaimTemplates = volumeClaimTemplates;
     }

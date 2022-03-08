@@ -34,7 +34,7 @@ public final class RuleWebhookActionResponse {
         String odataType,
         @Nullable Map<String,String> properties,
         @Nullable String serviceUri) {
-        this.odataType = Objects.requireNonNull(odataType);
+        this.odataType = odataType;
         this.properties = properties;
         this.serviceUri = serviceUri;
     }

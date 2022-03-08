@@ -124,22 +124,22 @@ public final class GetRouteResult {
         String type) {
         this.compressionSettings = compressionSettings;
         this.customDomains = customDomains;
-        this.deploymentStatus = Objects.requireNonNull(deploymentStatus);
+        this.deploymentStatus = deploymentStatus;
         this.enabledState = enabledState;
         this.forwardingProtocol = forwardingProtocol;
         this.httpsRedirect = httpsRedirect;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.linkToDefaultDomain = linkToDefaultDomain;
-        this.name = Objects.requireNonNull(name);
-        this.originGroup = Objects.requireNonNull(originGroup);
+        this.name = name;
+        this.originGroup = originGroup;
         this.originPath = originPath;
         this.patternsToMatch = patternsToMatch;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.queryStringCachingBehavior = queryStringCachingBehavior;
         this.ruleSets = ruleSets;
         this.supportedProtocols = supportedProtocols;
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

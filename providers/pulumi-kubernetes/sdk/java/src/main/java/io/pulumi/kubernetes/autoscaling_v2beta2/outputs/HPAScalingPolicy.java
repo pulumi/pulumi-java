@@ -31,9 +31,9 @@ public final class HPAScalingPolicy {
         Integer periodSeconds,
         String type,
         Integer value) {
-        this.periodSeconds = Objects.requireNonNull(periodSeconds);
-        this.type = Objects.requireNonNull(type);
-        this.value = Objects.requireNonNull(value);
+        this.periodSeconds = periodSeconds;
+        this.type = type;
+        this.value = value;
     }
 
     /**

@@ -57,13 +57,13 @@ public final class RosettaNetPipRoleSettingsResponse {
         String roleType,
         String service,
         String serviceClassification) {
-        this.action = Objects.requireNonNull(action);
-        this.businessDocument = Objects.requireNonNull(businessDocument);
+        this.action = action;
+        this.businessDocument = businessDocument;
         this.description = description;
-        this.role = Objects.requireNonNull(role);
-        this.roleType = Objects.requireNonNull(roleType);
-        this.service = Objects.requireNonNull(service);
-        this.serviceClassification = Objects.requireNonNull(serviceClassification);
+        this.role = role;
+        this.roleType = roleType;
+        this.service = service;
+        this.serviceClassification = serviceClassification;
     }
 
     /**

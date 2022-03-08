@@ -17,7 +17,7 @@ public final class IdentityServiceConfigResponse {
 
     @OutputCustomType.Constructor({"enabled"})
     private IdentityServiceConfigResponse(Boolean enabled) {
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
     }
 
     /**

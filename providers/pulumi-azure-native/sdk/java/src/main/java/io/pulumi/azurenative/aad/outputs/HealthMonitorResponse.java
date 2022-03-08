@@ -30,9 +30,9 @@ public final class HealthMonitorResponse {
         String details,
         String id,
         String name) {
-        this.details = Objects.requireNonNull(details);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.details = details;
+        this.id = id;
+        this.name = name;
     }
 
     /**

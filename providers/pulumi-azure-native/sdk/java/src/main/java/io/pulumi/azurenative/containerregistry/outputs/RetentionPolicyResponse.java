@@ -34,7 +34,7 @@ public final class RetentionPolicyResponse {
         String lastUpdatedTime,
         @Nullable String status) {
         this.days = days;
-        this.lastUpdatedTime = Objects.requireNonNull(lastUpdatedTime);
+        this.lastUpdatedTime = lastUpdatedTime;
         this.status = status;
     }
 

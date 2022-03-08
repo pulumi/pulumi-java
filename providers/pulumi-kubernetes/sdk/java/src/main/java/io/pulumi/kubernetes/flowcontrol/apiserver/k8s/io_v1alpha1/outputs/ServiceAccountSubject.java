@@ -24,8 +24,8 @@ public final class ServiceAccountSubject {
     private ServiceAccountSubject(
         String name,
         String namespace) {
-        this.name = Objects.requireNonNull(name);
-        this.namespace = Objects.requireNonNull(namespace);
+        this.name = name;
+        this.namespace = namespace;
     }
 
     /**

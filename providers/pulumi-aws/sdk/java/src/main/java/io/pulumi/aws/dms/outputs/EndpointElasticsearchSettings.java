@@ -39,10 +39,10 @@ public final class EndpointElasticsearchSettings {
         @Nullable Integer errorRetryDuration,
         @Nullable Integer fullLoadErrorPercentage,
         String serviceAccessRoleArn) {
-        this.endpointUri = Objects.requireNonNull(endpointUri);
+        this.endpointUri = endpointUri;
         this.errorRetryDuration = errorRetryDuration;
         this.fullLoadErrorPercentage = fullLoadErrorPercentage;
-        this.serviceAccessRoleArn = Objects.requireNonNull(serviceAccessRoleArn);
+        this.serviceAccessRoleArn = serviceAccessRoleArn;
     }
 
     /**

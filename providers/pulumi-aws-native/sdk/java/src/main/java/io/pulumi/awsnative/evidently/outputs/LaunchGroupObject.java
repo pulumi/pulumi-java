@@ -23,9 +23,9 @@ public final class LaunchGroupObject {
         String groupName,
         String variation) {
         this.description = description;
-        this.feature = Objects.requireNonNull(feature);
-        this.groupName = Objects.requireNonNull(groupName);
-        this.variation = Objects.requireNonNull(variation);
+        this.feature = feature;
+        this.groupName = groupName;
+        this.variation = variation;
     }
 
     public Optional<String> getDescription() {

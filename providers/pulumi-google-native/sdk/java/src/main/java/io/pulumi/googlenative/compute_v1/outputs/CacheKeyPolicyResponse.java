@@ -56,13 +56,13 @@ public final class CacheKeyPolicyResponse {
         Boolean includeQueryString,
         List<String> queryStringBlacklist,
         List<String> queryStringWhitelist) {
-        this.includeHost = Objects.requireNonNull(includeHost);
-        this.includeHttpHeaders = Objects.requireNonNull(includeHttpHeaders);
-        this.includeNamedCookies = Objects.requireNonNull(includeNamedCookies);
-        this.includeProtocol = Objects.requireNonNull(includeProtocol);
-        this.includeQueryString = Objects.requireNonNull(includeQueryString);
-        this.queryStringBlacklist = Objects.requireNonNull(queryStringBlacklist);
-        this.queryStringWhitelist = Objects.requireNonNull(queryStringWhitelist);
+        this.includeHost = includeHost;
+        this.includeHttpHeaders = includeHttpHeaders;
+        this.includeNamedCookies = includeNamedCookies;
+        this.includeProtocol = includeProtocol;
+        this.includeQueryString = includeQueryString;
+        this.queryStringBlacklist = queryStringBlacklist;
+        this.queryStringWhitelist = queryStringWhitelist;
     }
 
     /**

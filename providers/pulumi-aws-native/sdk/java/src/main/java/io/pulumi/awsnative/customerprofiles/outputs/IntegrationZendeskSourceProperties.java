@@ -13,7 +13,7 @@ public final class IntegrationZendeskSourceProperties {
 
     @OutputCustomType.Constructor({"object"})
     private IntegrationZendeskSourceProperties(String object) {
-        this.object = Objects.requireNonNull(object);
+        this.object = object;
     }
 
     public String getObject() {

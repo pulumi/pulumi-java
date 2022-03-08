@@ -18,7 +18,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfig {
 
     @OutputCustomType.Constructor({"infoTypeTransformations"})
     private PreventionDeidentifyTemplateDeidentifyConfig(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformations infoTypeTransformations) {
-        this.infoTypeTransformations = Objects.requireNonNull(infoTypeTransformations);
+        this.infoTypeTransformations = infoTypeTransformations;
     }
 
     /**

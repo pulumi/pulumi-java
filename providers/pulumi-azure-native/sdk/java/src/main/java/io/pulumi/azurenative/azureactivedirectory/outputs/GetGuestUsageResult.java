@@ -51,12 +51,12 @@ public final class GetGuestUsageResult {
         @Nullable Map<String,String> tags,
         @Nullable String tenantId,
         String type) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.tags = tags;
         this.tenantId = tenantId;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

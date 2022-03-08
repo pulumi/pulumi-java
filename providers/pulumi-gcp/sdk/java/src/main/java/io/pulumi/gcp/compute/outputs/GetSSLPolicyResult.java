@@ -71,17 +71,17 @@ public final class GetSSLPolicyResult {
         String profile,
         @Nullable String project,
         String selfLink) {
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.customFeatures = Objects.requireNonNull(customFeatures);
-        this.description = Objects.requireNonNull(description);
-        this.enabledFeatures = Objects.requireNonNull(enabledFeatures);
-        this.fingerprint = Objects.requireNonNull(fingerprint);
-        this.id = Objects.requireNonNull(id);
-        this.minTlsVersion = Objects.requireNonNull(minTlsVersion);
-        this.name = Objects.requireNonNull(name);
-        this.profile = Objects.requireNonNull(profile);
+        this.creationTimestamp = creationTimestamp;
+        this.customFeatures = customFeatures;
+        this.description = description;
+        this.enabledFeatures = enabledFeatures;
+        this.fingerprint = fingerprint;
+        this.id = id;
+        this.minTlsVersion = minTlsVersion;
+        this.name = name;
+        this.profile = profile;
         this.project = project;
-        this.selfLink = Objects.requireNonNull(selfLink);
+        this.selfLink = selfLink;
     }
 
     public String getCreationTimestamp() {

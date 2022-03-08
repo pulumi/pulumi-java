@@ -31,9 +31,9 @@ public final class WaitStatisticsResponse {
         Double waitCount,
         Double waitTimeMs,
         String waitType) {
-        this.waitCount = Objects.requireNonNull(waitCount);
-        this.waitTimeMs = Objects.requireNonNull(waitTimeMs);
-        this.waitType = Objects.requireNonNull(waitType);
+        this.waitCount = waitCount;
+        this.waitTimeMs = waitTimeMs;
+        this.waitType = waitType;
     }
 
     /**

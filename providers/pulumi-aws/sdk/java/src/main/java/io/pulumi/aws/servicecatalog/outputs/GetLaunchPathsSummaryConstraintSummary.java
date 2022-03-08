@@ -24,8 +24,8 @@ public final class GetLaunchPathsSummaryConstraintSummary {
     private GetLaunchPathsSummaryConstraintSummary(
         String description,
         String type) {
-        this.description = Objects.requireNonNull(description);
-        this.type = Objects.requireNonNull(type);
+        this.description = description;
+        this.type = type;
     }
 
     /**

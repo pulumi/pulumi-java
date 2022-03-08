@@ -18,7 +18,7 @@ public final class GoogleCloudRetailV2betaRuleTwowaySynonymsActionResponse {
 
     @OutputCustomType.Constructor({"synonyms"})
     private GoogleCloudRetailV2betaRuleTwowaySynonymsActionResponse(List<String> synonyms) {
-        this.synonyms = Objects.requireNonNull(synonyms);
+        this.synonyms = synonyms;
     }
 
     /**

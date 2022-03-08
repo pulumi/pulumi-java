@@ -96,14 +96,14 @@ public final class PaypalLinkedServiceResponse {
         @Nullable Object useHostVerification,
         @Nullable Object usePeerVerification) {
         this.annotations = annotations;
-        this.clientId = Objects.requireNonNull(clientId);
+        this.clientId = clientId;
         this.clientSecret = clientSecret;
         this.connectVia = connectVia;
         this.description = description;
         this.encryptedCredential = encryptedCredential;
-        this.host = Objects.requireNonNull(host);
+        this.host = host;
         this.parameters = parameters;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.useEncryptedEndpoints = useEncryptedEndpoints;
         this.useHostVerification = useHostVerification;
         this.usePeerVerification = usePeerVerification;

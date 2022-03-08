@@ -163,29 +163,29 @@ public final class GetWorkspaceResult {
         @Nullable VirtualNetworkProfileResponse virtualNetworkProfile,
         @Nullable WorkspaceRepositoryConfigurationResponse workspaceRepositoryConfiguration,
         String workspaceUID) {
-        this.adlaResourceId = Objects.requireNonNull(adlaResourceId);
+        this.adlaResourceId = adlaResourceId;
         this.connectivityEndpoints = connectivityEndpoints;
         this.defaultDataLakeStorage = defaultDataLakeStorage;
         this.encryption = encryption;
-        this.extraProperties = Objects.requireNonNull(extraProperties);
-        this.id = Objects.requireNonNull(id);
+        this.extraProperties = extraProperties;
+        this.id = id;
         this.identity = identity;
-        this.location = Objects.requireNonNull(location);
+        this.location = location;
         this.managedResourceGroupName = managedResourceGroupName;
         this.managedVirtualNetwork = managedVirtualNetwork;
         this.managedVirtualNetworkSettings = managedVirtualNetworkSettings;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.privateEndpointConnections = privateEndpointConnections;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.publicNetworkAccess = publicNetworkAccess;
         this.purviewConfiguration = purviewConfiguration;
         this.sqlAdministratorLogin = sqlAdministratorLogin;
         this.sqlAdministratorLoginPassword = sqlAdministratorLoginPassword;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.virtualNetworkProfile = virtualNetworkProfile;
         this.workspaceRepositoryConfiguration = workspaceRepositoryConfiguration;
-        this.workspaceUID = Objects.requireNonNull(workspaceUID);
+        this.workspaceUID = workspaceUID;
     }
 
     /**

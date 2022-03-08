@@ -25,8 +25,8 @@ public final class RangePartitioningResponse {
     private RangePartitioningResponse(
         String field,
         RangePartitioningRangeResponse range) {
-        this.field = Objects.requireNonNull(field);
-        this.range = Objects.requireNonNull(range);
+        this.field = field;
+        this.range = range;
     }
 
     /**

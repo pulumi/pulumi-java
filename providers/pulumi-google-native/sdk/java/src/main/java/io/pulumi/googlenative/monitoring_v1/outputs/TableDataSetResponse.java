@@ -38,10 +38,10 @@ public final class TableDataSetResponse {
         TableDisplayOptionsResponse tableDisplayOptions,
         String tableTemplate,
         TimeSeriesQueryResponse timeSeriesQuery) {
-        this.minAlignmentPeriod = Objects.requireNonNull(minAlignmentPeriod);
-        this.tableDisplayOptions = Objects.requireNonNull(tableDisplayOptions);
-        this.tableTemplate = Objects.requireNonNull(tableTemplate);
-        this.timeSeriesQuery = Objects.requireNonNull(timeSeriesQuery);
+        this.minAlignmentPeriod = minAlignmentPeriod;
+        this.tableDisplayOptions = tableDisplayOptions;
+        this.tableTemplate = tableTemplate;
+        this.timeSeriesQuery = timeSeriesQuery;
     }
 
     /**

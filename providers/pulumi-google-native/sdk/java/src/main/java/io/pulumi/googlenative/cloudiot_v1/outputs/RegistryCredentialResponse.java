@@ -17,7 +17,7 @@ public final class RegistryCredentialResponse {
 
     @OutputCustomType.Constructor({"publicKeyCertificate"})
     private RegistryCredentialResponse(PublicKeyCertificateResponse publicKeyCertificate) {
-        this.publicKeyCertificate = Objects.requireNonNull(publicKeyCertificate);
+        this.publicKeyCertificate = publicKeyCertificate;
     }
 
     /**

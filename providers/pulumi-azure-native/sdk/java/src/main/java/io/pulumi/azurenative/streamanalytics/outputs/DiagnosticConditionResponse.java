@@ -30,9 +30,9 @@ public final class DiagnosticConditionResponse {
         String code,
         String message,
         String since) {
-        this.code = Objects.requireNonNull(code);
-        this.message = Objects.requireNonNull(message);
-        this.since = Objects.requireNonNull(since);
+        this.code = code;
+        this.message = message;
+        this.since = since;
     }
 
     /**

@@ -24,8 +24,8 @@ public final class IngressSourceResponse {
     private IngressSourceResponse(
         String accessLevel,
         String resource) {
-        this.accessLevel = Objects.requireNonNull(accessLevel);
-        this.resource = Objects.requireNonNull(resource);
+        this.accessLevel = accessLevel;
+        this.resource = resource;
     }
 
     /**

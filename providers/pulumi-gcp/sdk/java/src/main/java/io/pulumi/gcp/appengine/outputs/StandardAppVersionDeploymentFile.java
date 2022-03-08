@@ -32,9 +32,9 @@ public final class StandardAppVersionDeploymentFile {
         String name,
         @Nullable String sha1Sum,
         String sourceUrl) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.sha1Sum = sha1Sum;
-        this.sourceUrl = Objects.requireNonNull(sourceUrl);
+        this.sourceUrl = sourceUrl;
     }
 
     /**

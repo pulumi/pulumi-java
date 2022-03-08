@@ -21,8 +21,8 @@ public final class BotAliasLocaleSettingsItem {
     private BotAliasLocaleSettingsItem(
         BotAliasLocaleSettings botAliasLocaleSetting,
         String localeId) {
-        this.botAliasLocaleSetting = Objects.requireNonNull(botAliasLocaleSetting);
-        this.localeId = Objects.requireNonNull(localeId);
+        this.botAliasLocaleSetting = botAliasLocaleSetting;
+        this.localeId = localeId;
     }
 
     public BotAliasLocaleSettings getBotAliasLocaleSetting() {

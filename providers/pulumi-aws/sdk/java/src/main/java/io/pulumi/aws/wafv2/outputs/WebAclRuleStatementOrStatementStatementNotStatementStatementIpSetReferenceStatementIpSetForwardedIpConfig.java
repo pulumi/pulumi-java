@@ -30,9 +30,9 @@ public final class WebAclRuleStatementOrStatementStatementNotStatementStatementI
         String fallbackBehavior,
         String headerName,
         String position) {
-        this.fallbackBehavior = Objects.requireNonNull(fallbackBehavior);
-        this.headerName = Objects.requireNonNull(headerName);
-        this.position = Objects.requireNonNull(position);
+        this.fallbackBehavior = fallbackBehavior;
+        this.headerName = headerName;
+        this.position = position;
     }
 
     /**

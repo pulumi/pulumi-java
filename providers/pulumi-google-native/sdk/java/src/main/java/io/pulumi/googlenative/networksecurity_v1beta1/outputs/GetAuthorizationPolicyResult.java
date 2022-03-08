@@ -57,13 +57,13 @@ public final class GetAuthorizationPolicyResult {
         String name,
         List<RuleResponse> rules,
         String updateTime) {
-        this.action = Objects.requireNonNull(action);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.description = Objects.requireNonNull(description);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.rules = Objects.requireNonNull(rules);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.action = action;
+        this.createTime = createTime;
+        this.description = description;
+        this.labels = labels;
+        this.name = name;
+        this.rules = rules;
+        this.updateTime = updateTime;
     }
 
     /**

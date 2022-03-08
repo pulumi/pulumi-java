@@ -90,18 +90,18 @@ public final class GceClusterConfigResponse {
         String subnetworkUri,
         List<String> tags,
         String zoneUri) {
-        this.internalIpOnly = Objects.requireNonNull(internalIpOnly);
-        this.metadata = Objects.requireNonNull(metadata);
-        this.networkUri = Objects.requireNonNull(networkUri);
-        this.nodeGroupAffinity = Objects.requireNonNull(nodeGroupAffinity);
-        this.privateIpv6GoogleAccess = Objects.requireNonNull(privateIpv6GoogleAccess);
-        this.reservationAffinity = Objects.requireNonNull(reservationAffinity);
-        this.serviceAccount = Objects.requireNonNull(serviceAccount);
-        this.serviceAccountScopes = Objects.requireNonNull(serviceAccountScopes);
-        this.shieldedInstanceConfig = Objects.requireNonNull(shieldedInstanceConfig);
-        this.subnetworkUri = Objects.requireNonNull(subnetworkUri);
-        this.tags = Objects.requireNonNull(tags);
-        this.zoneUri = Objects.requireNonNull(zoneUri);
+        this.internalIpOnly = internalIpOnly;
+        this.metadata = metadata;
+        this.networkUri = networkUri;
+        this.nodeGroupAffinity = nodeGroupAffinity;
+        this.privateIpv6GoogleAccess = privateIpv6GoogleAccess;
+        this.reservationAffinity = reservationAffinity;
+        this.serviceAccount = serviceAccount;
+        this.serviceAccountScopes = serviceAccountScopes;
+        this.shieldedInstanceConfig = shieldedInstanceConfig;
+        this.subnetworkUri = subnetworkUri;
+        this.tags = tags;
+        this.zoneUri = zoneUri;
     }
 
     /**

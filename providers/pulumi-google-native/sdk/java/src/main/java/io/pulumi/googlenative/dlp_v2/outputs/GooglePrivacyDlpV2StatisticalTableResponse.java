@@ -33,9 +33,9 @@ public final class GooglePrivacyDlpV2StatisticalTableResponse {
         List<GooglePrivacyDlpV2QuasiIdentifierFieldResponse> quasiIds,
         GooglePrivacyDlpV2FieldIdResponse relativeFrequency,
         GooglePrivacyDlpV2BigQueryTableResponse table) {
-        this.quasiIds = Objects.requireNonNull(quasiIds);
-        this.relativeFrequency = Objects.requireNonNull(relativeFrequency);
-        this.table = Objects.requireNonNull(table);
+        this.quasiIds = quasiIds;
+        this.relativeFrequency = relativeFrequency;
+        this.table = table;
     }
 
     /**

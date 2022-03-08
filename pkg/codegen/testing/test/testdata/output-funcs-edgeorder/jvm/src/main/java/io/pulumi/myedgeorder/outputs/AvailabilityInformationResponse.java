@@ -30,9 +30,9 @@ public final class AvailabilityInformationResponse {
         String availabilityStage,
         String disabledReason,
         String disabledReasonMessage) {
-        this.availabilityStage = Objects.requireNonNull(availabilityStage);
-        this.disabledReason = Objects.requireNonNull(disabledReason);
-        this.disabledReasonMessage = Objects.requireNonNull(disabledReasonMessage);
+        this.availabilityStage = availabilityStage;
+        this.disabledReason = disabledReason;
+        this.disabledReasonMessage = disabledReasonMessage;
     }
 
     /**

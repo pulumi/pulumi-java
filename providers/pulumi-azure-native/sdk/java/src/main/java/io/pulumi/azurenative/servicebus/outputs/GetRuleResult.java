@@ -62,10 +62,10 @@ public final class GetRuleResult {
         this.action = action;
         this.correlationFilter = correlationFilter;
         this.filterType = filterType;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.sqlFilter = sqlFilter;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

@@ -52,11 +52,11 @@ public final class RegistrationDefinitionPropertiesResponse {
         String managedByTenantName,
         String provisioningState,
         @Nullable String registrationDefinitionName) {
-        this.authorizations = Objects.requireNonNull(authorizations);
+        this.authorizations = authorizations;
         this.description = description;
-        this.managedByTenantId = Objects.requireNonNull(managedByTenantId);
-        this.managedByTenantName = Objects.requireNonNull(managedByTenantName);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.managedByTenantId = managedByTenantId;
+        this.managedByTenantName = managedByTenantName;
+        this.provisioningState = provisioningState;
         this.registrationDefinitionName = registrationDefinitionName;
     }
 

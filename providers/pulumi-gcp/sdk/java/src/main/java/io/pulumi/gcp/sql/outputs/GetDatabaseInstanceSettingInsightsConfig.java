@@ -21,10 +21,10 @@ public final class GetDatabaseInstanceSettingInsightsConfig {
         Integer queryStringLength,
         Boolean recordApplicationTags,
         Boolean recordClientAddress) {
-        this.queryInsightsEnabled = Objects.requireNonNull(queryInsightsEnabled);
-        this.queryStringLength = Objects.requireNonNull(queryStringLength);
-        this.recordApplicationTags = Objects.requireNonNull(recordApplicationTags);
-        this.recordClientAddress = Objects.requireNonNull(recordClientAddress);
+        this.queryInsightsEnabled = queryInsightsEnabled;
+        this.queryStringLength = queryStringLength;
+        this.recordApplicationTags = recordApplicationTags;
+        this.recordClientAddress = recordClientAddress;
     }
 
     public Boolean getQueryInsightsEnabled() {

@@ -54,13 +54,13 @@ public final class GetNetworkInterfaceAssociation {
         String ipOwnerId,
         String publicDnsName,
         String publicIp) {
-        this.allocationId = Objects.requireNonNull(allocationId);
-        this.associationId = Objects.requireNonNull(associationId);
-        this.carrierIp = Objects.requireNonNull(carrierIp);
-        this.customerOwnedIp = Objects.requireNonNull(customerOwnedIp);
-        this.ipOwnerId = Objects.requireNonNull(ipOwnerId);
-        this.publicDnsName = Objects.requireNonNull(publicDnsName);
-        this.publicIp = Objects.requireNonNull(publicIp);
+        this.allocationId = allocationId;
+        this.associationId = associationId;
+        this.carrierIp = carrierIp;
+        this.customerOwnedIp = customerOwnedIp;
+        this.ipOwnerId = ipOwnerId;
+        this.publicDnsName = publicDnsName;
+        this.publicIp = publicIp;
     }
 
     /**

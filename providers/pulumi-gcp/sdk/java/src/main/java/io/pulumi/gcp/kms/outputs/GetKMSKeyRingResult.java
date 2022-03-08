@@ -26,9 +26,9 @@ public final class GetKMSKeyRingResult {
         String location,
         String name,
         @Nullable String project) {
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.location = location;
+        this.name = name;
         this.project = project;
     }
 

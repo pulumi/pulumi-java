@@ -31,7 +31,7 @@ public final class ListenerRuleRedirectConfig {
         this.port = port;
         this.protocol = protocol;
         this.query = query;
-        this.statusCode = Objects.requireNonNull(statusCode);
+        this.statusCode = statusCode;
     }
 
     public Optional<String> getHost() {

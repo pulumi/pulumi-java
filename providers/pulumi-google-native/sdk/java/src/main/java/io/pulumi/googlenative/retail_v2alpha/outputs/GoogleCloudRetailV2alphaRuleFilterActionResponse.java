@@ -17,7 +17,7 @@ public final class GoogleCloudRetailV2alphaRuleFilterActionResponse {
 
     @OutputCustomType.Constructor({"filter"})
     private GoogleCloudRetailV2alphaRuleFilterActionResponse(String filter) {
-        this.filter = Objects.requireNonNull(filter);
+        this.filter = filter;
     }
 
     /**

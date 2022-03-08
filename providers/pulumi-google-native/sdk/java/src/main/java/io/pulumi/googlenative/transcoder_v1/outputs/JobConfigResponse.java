@@ -82,16 +82,16 @@ public final class JobConfigResponse {
         List<OverlayResponse> overlays,
         PubsubDestinationResponse pubsubDestination,
         List<SpriteSheetResponse> spriteSheets) {
-        this.adBreaks = Objects.requireNonNull(adBreaks);
-        this.editList = Objects.requireNonNull(editList);
-        this.elementaryStreams = Objects.requireNonNull(elementaryStreams);
-        this.inputs = Objects.requireNonNull(inputs);
-        this.manifests = Objects.requireNonNull(manifests);
-        this.muxStreams = Objects.requireNonNull(muxStreams);
-        this.output = Objects.requireNonNull(output);
-        this.overlays = Objects.requireNonNull(overlays);
-        this.pubsubDestination = Objects.requireNonNull(pubsubDestination);
-        this.spriteSheets = Objects.requireNonNull(spriteSheets);
+        this.adBreaks = adBreaks;
+        this.editList = editList;
+        this.elementaryStreams = elementaryStreams;
+        this.inputs = inputs;
+        this.manifests = manifests;
+        this.muxStreams = muxStreams;
+        this.output = output;
+        this.overlays = overlays;
+        this.pubsubDestination = pubsubDestination;
+        this.spriteSheets = spriteSheets;
     }
 
     /**

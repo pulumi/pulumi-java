@@ -24,8 +24,8 @@ public final class EnvelopeSignatureResponse {
     private EnvelopeSignatureResponse(
         String keyid,
         String sig) {
-        this.keyid = Objects.requireNonNull(keyid);
-        this.sig = Objects.requireNonNull(sig);
+        this.keyid = keyid;
+        this.sig = sig;
     }
 
     /**

@@ -156,27 +156,27 @@ public final class GetRoleAssignmentResult {
         String type,
         @Nullable ResourceSetDescriptionResponse views,
         @Nullable ResourceSetDescriptionResponse widgetTypes) {
-        this.assignmentName = Objects.requireNonNull(assignmentName);
+        this.assignmentName = assignmentName;
         this.conflationPolicies = conflationPolicies;
         this.connectors = connectors;
         this.description = description;
         this.displayName = displayName;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.interactions = interactions;
         this.kpis = kpis;
         this.links = links;
-        this.name = Objects.requireNonNull(name);
-        this.principals = Objects.requireNonNull(principals);
+        this.name = name;
+        this.principals = principals;
         this.profiles = profiles;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.relationshipLinks = relationshipLinks;
         this.relationships = relationships;
-        this.role = Objects.requireNonNull(role);
+        this.role = role;
         this.roleAssignments = roleAssignments;
         this.sasPolicies = sasPolicies;
         this.segments = segments;
-        this.tenantId = Objects.requireNonNull(tenantId);
-        this.type = Objects.requireNonNull(type);
+        this.tenantId = tenantId;
+        this.type = type;
         this.views = views;
         this.widgetTypes = widgetTypes;
     }

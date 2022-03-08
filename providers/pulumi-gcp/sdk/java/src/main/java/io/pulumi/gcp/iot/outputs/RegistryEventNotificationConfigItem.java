@@ -30,7 +30,7 @@ public final class RegistryEventNotificationConfigItem {
     private RegistryEventNotificationConfigItem(
         String pubsubTopicName,
         @Nullable String subfolderMatches) {
-        this.pubsubTopicName = Objects.requireNonNull(pubsubTopicName);
+        this.pubsubTopicName = pubsubTopicName;
         this.subfolderMatches = subfolderMatches;
     }
 

@@ -28,7 +28,7 @@ public final class RouterPeerAdvertisedIpRange {
         @Nullable String description,
         String range) {
         this.description = description;
-        this.range = Objects.requireNonNull(range);
+        this.range = range;
     }
 
     /**

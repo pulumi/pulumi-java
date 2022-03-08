@@ -33,7 +33,7 @@ public final class PlatformPropertiesResponse {
         String os,
         @Nullable String variant) {
         this.architecture = architecture;
-        this.os = Objects.requireNonNull(os);
+        this.os = os;
         this.variant = variant;
     }
 

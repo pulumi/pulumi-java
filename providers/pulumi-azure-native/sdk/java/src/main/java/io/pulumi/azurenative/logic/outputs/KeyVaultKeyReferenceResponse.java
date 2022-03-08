@@ -33,8 +33,8 @@ public final class KeyVaultKeyReferenceResponse {
         String keyName,
         KeyVaultKeyReferenceResponseKeyVault keyVault,
         @Nullable String keyVersion) {
-        this.keyName = Objects.requireNonNull(keyName);
-        this.keyVault = Objects.requireNonNull(keyVault);
+        this.keyName = keyName;
+        this.keyVault = keyVault;
         this.keyVersion = keyVersion;
     }
 

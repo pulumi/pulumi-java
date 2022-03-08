@@ -31,9 +31,9 @@ public final class GoogleCloudApigeeV1RateRangeResponse {
         String end,
         GoogleTypeMoneyResponse fee,
         String start) {
-        this.end = Objects.requireNonNull(end);
-        this.fee = Objects.requireNonNull(fee);
-        this.start = Objects.requireNonNull(start);
+        this.end = end;
+        this.fee = fee;
+        this.start = start;
     }
 
     /**

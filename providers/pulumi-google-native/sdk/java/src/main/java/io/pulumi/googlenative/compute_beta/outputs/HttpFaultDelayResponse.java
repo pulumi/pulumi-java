@@ -25,8 +25,8 @@ public final class HttpFaultDelayResponse {
     private HttpFaultDelayResponse(
         DurationResponse fixedDelay,
         Double percentage) {
-        this.fixedDelay = Objects.requireNonNull(fixedDelay);
-        this.percentage = Objects.requireNonNull(percentage);
+        this.fixedDelay = fixedDelay;
+        this.percentage = percentage;
     }
 
     /**

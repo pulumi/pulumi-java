@@ -17,8 +17,8 @@ public final class FilterResponse {
     private FilterResponse(
         CompositeFilterResponse compositeFilter,
         ValueFilterResponse valueFilter) {
-        this.compositeFilter = Objects.requireNonNull(compositeFilter);
-        this.valueFilter = Objects.requireNonNull(valueFilter);
+        this.compositeFilter = compositeFilter;
+        this.valueFilter = valueFilter;
     }
 
     public CompositeFilterResponse getCompositeFilter() {

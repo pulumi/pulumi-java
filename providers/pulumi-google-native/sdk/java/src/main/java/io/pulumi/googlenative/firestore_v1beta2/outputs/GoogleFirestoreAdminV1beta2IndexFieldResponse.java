@@ -30,9 +30,9 @@ public final class GoogleFirestoreAdminV1beta2IndexFieldResponse {
         String arrayConfig,
         String fieldPath,
         String order) {
-        this.arrayConfig = Objects.requireNonNull(arrayConfig);
-        this.fieldPath = Objects.requireNonNull(fieldPath);
-        this.order = Objects.requireNonNull(order);
+        this.arrayConfig = arrayConfig;
+        this.fieldPath = fieldPath;
+        this.order = order;
     }
 
     /**

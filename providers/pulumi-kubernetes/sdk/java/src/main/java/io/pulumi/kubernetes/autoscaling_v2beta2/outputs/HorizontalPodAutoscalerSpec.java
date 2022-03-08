@@ -49,10 +49,10 @@ public final class HorizontalPodAutoscalerSpec {
         @Nullable Integer minReplicas,
         CrossVersionObjectReference scaleTargetRef) {
         this.behavior = behavior;
-        this.maxReplicas = Objects.requireNonNull(maxReplicas);
+        this.maxReplicas = maxReplicas;
         this.metrics = metrics;
         this.minReplicas = minReplicas;
-        this.scaleTargetRef = Objects.requireNonNull(scaleTargetRef);
+        this.scaleTargetRef = scaleTargetRef;
     }
 
     /**

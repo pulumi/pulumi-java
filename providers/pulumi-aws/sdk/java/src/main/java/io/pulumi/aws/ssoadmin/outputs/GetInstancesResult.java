@@ -31,9 +31,9 @@ public final class GetInstancesResult {
         List<String> arns,
         String id,
         List<String> identityStoreIds) {
-        this.arns = Objects.requireNonNull(arns);
-        this.id = Objects.requireNonNull(id);
-        this.identityStoreIds = Objects.requireNonNull(identityStoreIds);
+        this.arns = arns;
+        this.id = id;
+        this.identityStoreIds = identityStoreIds;
     }
 
     /**

@@ -17,7 +17,7 @@ public final class Gen2StorageConfigurationOutputResponse {
 
     @OutputCustomType.Constructor({"accountName"})
     private Gen2StorageConfigurationOutputResponse(String accountName) {
-        this.accountName = Objects.requireNonNull(accountName);
+        this.accountName = accountName;
     }
 
     /**

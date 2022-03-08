@@ -25,8 +25,8 @@ public final class GetNodeGroupRemoteAccess {
     private GetNodeGroupRemoteAccess(
         String ec2SshKey,
         List<String> sourceSecurityGroupIds) {
-        this.ec2SshKey = Objects.requireNonNull(ec2SshKey);
-        this.sourceSecurityGroupIds = Objects.requireNonNull(sourceSecurityGroupIds);
+        this.ec2SshKey = ec2SshKey;
+        this.sourceSecurityGroupIds = sourceSecurityGroupIds;
     }
 
     /**

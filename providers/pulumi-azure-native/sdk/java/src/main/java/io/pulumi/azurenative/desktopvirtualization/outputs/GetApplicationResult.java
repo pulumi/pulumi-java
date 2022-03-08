@@ -120,21 +120,21 @@ public final class GetApplicationResult {
         String type) {
         this.applicationType = applicationType;
         this.commandLineArguments = commandLineArguments;
-        this.commandLineSetting = Objects.requireNonNull(commandLineSetting);
+        this.commandLineSetting = commandLineSetting;
         this.description = description;
         this.filePath = filePath;
         this.friendlyName = friendlyName;
-        this.iconContent = Objects.requireNonNull(iconContent);
-        this.iconHash = Objects.requireNonNull(iconHash);
+        this.iconContent = iconContent;
+        this.iconHash = iconHash;
         this.iconIndex = iconIndex;
         this.iconPath = iconPath;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.msixPackageApplicationId = msixPackageApplicationId;
         this.msixPackageFamilyName = msixPackageFamilyName;
-        this.name = Objects.requireNonNull(name);
-        this.objectId = Objects.requireNonNull(objectId);
+        this.name = name;
+        this.objectId = objectId;
         this.showInPortal = showInPortal;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

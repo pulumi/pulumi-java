@@ -76,15 +76,15 @@ public final class GetNotebookProxyResult {
         @Nullable NotebookResourceSystemDataResponse systemData,
         String type) {
         this.hostname = hostname;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.publicDns = publicDns;
         this.publicNetworkAccess = publicNetworkAccess;
         this.region = region;
-        this.resourceId = Objects.requireNonNull(resourceId);
+        this.resourceId = resourceId;
         this.secondaryAppId = secondaryAppId;
         this.systemData = systemData;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

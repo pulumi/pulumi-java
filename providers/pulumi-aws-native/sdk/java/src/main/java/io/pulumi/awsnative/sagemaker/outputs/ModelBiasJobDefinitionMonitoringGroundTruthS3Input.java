@@ -17,7 +17,7 @@ public final class ModelBiasJobDefinitionMonitoringGroundTruthS3Input {
 
     @OutputCustomType.Constructor({"s3Uri"})
     private ModelBiasJobDefinitionMonitoringGroundTruthS3Input(String s3Uri) {
-        this.s3Uri = Objects.requireNonNull(s3Uri);
+        this.s3Uri = s3Uri;
     }
 
     /**

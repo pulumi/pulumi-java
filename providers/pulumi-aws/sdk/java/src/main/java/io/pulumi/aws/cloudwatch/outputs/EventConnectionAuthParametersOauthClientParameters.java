@@ -24,8 +24,8 @@ public final class EventConnectionAuthParametersOauthClientParameters {
     private EventConnectionAuthParametersOauthClientParameters(
         String clientId,
         String clientSecret) {
-        this.clientId = Objects.requireNonNull(clientId);
-        this.clientSecret = Objects.requireNonNull(clientSecret);
+        this.clientId = clientId;
+        this.clientSecret = clientSecret;
     }
 
     /**

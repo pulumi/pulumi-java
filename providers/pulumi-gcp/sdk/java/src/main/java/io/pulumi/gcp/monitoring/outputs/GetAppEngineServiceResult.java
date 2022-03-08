@@ -34,13 +34,13 @@ public final class GetAppEngineServiceResult {
         @Nullable String project,
         String serviceId,
         List<GetAppEngineServiceTelemetry> telemetries) {
-        this.displayName = Objects.requireNonNull(displayName);
-        this.id = Objects.requireNonNull(id);
-        this.moduleId = Objects.requireNonNull(moduleId);
-        this.name = Objects.requireNonNull(name);
+        this.displayName = displayName;
+        this.id = id;
+        this.moduleId = moduleId;
+        this.name = name;
         this.project = project;
-        this.serviceId = Objects.requireNonNull(serviceId);
-        this.telemetries = Objects.requireNonNull(telemetries);
+        this.serviceId = serviceId;
+        this.telemetries = telemetries;
     }
 
     public String getDisplayName() {

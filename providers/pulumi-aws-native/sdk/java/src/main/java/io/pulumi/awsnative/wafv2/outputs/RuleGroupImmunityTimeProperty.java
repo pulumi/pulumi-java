@@ -13,7 +13,7 @@ public final class RuleGroupImmunityTimeProperty {
 
     @OutputCustomType.Constructor({"immunityTime"})
     private RuleGroupImmunityTimeProperty(Integer immunityTime) {
-        this.immunityTime = Objects.requireNonNull(immunityTime);
+        this.immunityTime = immunityTime;
     }
 
     public Integer getImmunityTime() {

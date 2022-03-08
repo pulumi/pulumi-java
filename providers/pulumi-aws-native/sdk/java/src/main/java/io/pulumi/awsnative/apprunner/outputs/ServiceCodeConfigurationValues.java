@@ -45,7 +45,7 @@ public final class ServiceCodeConfigurationValues {
         @Nullable String startCommand) {
         this.buildCommand = buildCommand;
         this.port = port;
-        this.runtime = Objects.requireNonNull(runtime);
+        this.runtime = runtime;
         this.runtimeEnvironmentVariables = runtimeEnvironmentVariables;
         this.startCommand = startCommand;
     }

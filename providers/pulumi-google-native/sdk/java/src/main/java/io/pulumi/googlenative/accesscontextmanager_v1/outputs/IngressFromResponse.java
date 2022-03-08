@@ -32,9 +32,9 @@ public final class IngressFromResponse {
         List<String> identities,
         String identityType,
         List<IngressSourceResponse> sources) {
-        this.identities = Objects.requireNonNull(identities);
-        this.identityType = Objects.requireNonNull(identityType);
-        this.sources = Objects.requireNonNull(sources);
+        this.identities = identities;
+        this.identityType = identityType;
+        this.sources = sources;
     }
 
     /**

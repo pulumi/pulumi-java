@@ -70,13 +70,13 @@ public final class ContentKeyPolicyTokenRestrictionResponse {
         @Nullable List<ContentKeyPolicyTokenClaimResponse> requiredClaims,
         String restrictionTokenType) {
         this.alternateVerificationKeys = alternateVerificationKeys;
-        this.audience = Objects.requireNonNull(audience);
-        this.issuer = Objects.requireNonNull(issuer);
-        this.odataType = Objects.requireNonNull(odataType);
+        this.audience = audience;
+        this.issuer = issuer;
+        this.odataType = odataType;
         this.openIdConnectDiscoveryDocument = openIdConnectDiscoveryDocument;
-        this.primaryVerificationKey = Objects.requireNonNull(primaryVerificationKey);
+        this.primaryVerificationKey = primaryVerificationKey;
         this.requiredClaims = requiredClaims;
-        this.restrictionTokenType = Objects.requireNonNull(restrictionTokenType);
+        this.restrictionTokenType = restrictionTokenType;
     }
 
     /**

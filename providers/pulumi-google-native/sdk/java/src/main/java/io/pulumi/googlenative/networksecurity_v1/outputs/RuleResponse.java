@@ -26,8 +26,8 @@ public final class RuleResponse {
     private RuleResponse(
         List<DestinationResponse> destinations,
         List<SourceResponse> sources) {
-        this.destinations = Objects.requireNonNull(destinations);
-        this.sources = Objects.requireNonNull(sources);
+        this.destinations = destinations;
+        this.sources = sources;
     }
 
     /**

@@ -36,10 +36,10 @@ public final class GoogleType__ExprResponse {
         String expression,
         String location,
         String title) {
-        this.description = Objects.requireNonNull(description);
-        this.expression = Objects.requireNonNull(expression);
-        this.location = Objects.requireNonNull(location);
-        this.title = Objects.requireNonNull(title);
+        this.description = description;
+        this.expression = expression;
+        this.location = location;
+        this.title = title;
     }
 
     /**

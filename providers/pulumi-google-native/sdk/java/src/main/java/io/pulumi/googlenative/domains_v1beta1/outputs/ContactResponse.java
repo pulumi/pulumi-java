@@ -37,10 +37,10 @@ public final class ContactResponse {
         String faxNumber,
         String phoneNumber,
         PostalAddressResponse postalAddress) {
-        this.email = Objects.requireNonNull(email);
-        this.faxNumber = Objects.requireNonNull(faxNumber);
-        this.phoneNumber = Objects.requireNonNull(phoneNumber);
-        this.postalAddress = Objects.requireNonNull(postalAddress);
+        this.email = email;
+        this.faxNumber = faxNumber;
+        this.phoneNumber = phoneNumber;
+        this.postalAddress = postalAddress;
     }
 
     /**

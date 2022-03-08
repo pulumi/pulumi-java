@@ -31,9 +31,9 @@ public final class NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertie
         List<String> fqdns,
         String groupId,
         String requiredMemberName) {
-        this.fqdns = Objects.requireNonNull(fqdns);
-        this.groupId = Objects.requireNonNull(groupId);
-        this.requiredMemberName = Objects.requireNonNull(requiredMemberName);
+        this.fqdns = fqdns;
+        this.groupId = groupId;
+        this.requiredMemberName = requiredMemberName;
     }
 
     /**

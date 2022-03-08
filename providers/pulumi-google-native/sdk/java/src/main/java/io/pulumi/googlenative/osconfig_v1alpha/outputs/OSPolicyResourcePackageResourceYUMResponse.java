@@ -17,7 +17,7 @@ public final class OSPolicyResourcePackageResourceYUMResponse {
 
     @OutputCustomType.Constructor({"name"})
     private OSPolicyResourcePackageResourceYUMResponse(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

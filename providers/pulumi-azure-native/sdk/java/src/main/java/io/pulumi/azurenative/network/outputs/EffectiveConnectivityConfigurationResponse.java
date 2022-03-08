@@ -80,14 +80,14 @@ public final class EffectiveConnectivityConfigurationResponse {
         String provisioningState) {
         this.appliesToGroups = appliesToGroups;
         this.configurationGroups = configurationGroups;
-        this.connectivityTopology = Objects.requireNonNull(connectivityTopology);
+        this.connectivityTopology = connectivityTopology;
         this.deleteExistingPeering = deleteExistingPeering;
         this.description = description;
         this.displayName = displayName;
         this.hubs = hubs;
         this.id = id;
         this.isGlobal = isGlobal;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
     }
 
     /**

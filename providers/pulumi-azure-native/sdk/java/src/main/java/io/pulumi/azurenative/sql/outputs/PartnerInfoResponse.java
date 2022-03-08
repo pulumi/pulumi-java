@@ -30,9 +30,9 @@ public final class PartnerInfoResponse {
         String id,
         String location,
         String replicationRole) {
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.replicationRole = Objects.requireNonNull(replicationRole);
+        this.id = id;
+        this.location = location;
+        this.replicationRole = replicationRole;
     }
 
     /**

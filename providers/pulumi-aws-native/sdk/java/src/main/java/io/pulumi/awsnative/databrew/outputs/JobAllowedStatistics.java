@@ -14,7 +14,7 @@ public final class JobAllowedStatistics {
 
     @OutputCustomType.Constructor({"statistics"})
     private JobAllowedStatistics(List<String> statistics) {
-        this.statistics = Objects.requireNonNull(statistics);
+        this.statistics = statistics;
     }
 
     public List<String> getStatistics() {

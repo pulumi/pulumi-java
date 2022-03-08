@@ -33,8 +33,8 @@ public final class LabelingDatasetConfigurationResponse {
         String assetName,
         String datasetVersion,
         @Nullable Boolean enableIncrementalDatasetRefresh) {
-        this.assetName = Objects.requireNonNull(assetName);
-        this.datasetVersion = Objects.requireNonNull(datasetVersion);
+        this.assetName = assetName;
+        this.datasetVersion = datasetVersion;
         this.enableIncrementalDatasetRefresh = enableIncrementalDatasetRefresh;
     }
 

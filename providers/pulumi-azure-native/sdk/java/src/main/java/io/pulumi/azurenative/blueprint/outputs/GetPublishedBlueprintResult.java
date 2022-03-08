@@ -88,13 +88,13 @@ public final class GetPublishedBlueprintResult {
         this.changeNotes = changeNotes;
         this.description = description;
         this.displayName = displayName;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.parameters = parameters;
         this.resourceGroups = resourceGroups;
-        this.status = Objects.requireNonNull(status);
+        this.status = status;
         this.targetScope = targetScope;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

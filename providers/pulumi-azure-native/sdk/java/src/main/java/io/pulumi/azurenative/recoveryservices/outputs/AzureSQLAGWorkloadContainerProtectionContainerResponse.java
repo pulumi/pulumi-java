@@ -80,7 +80,7 @@ public final class AzureSQLAGWorkloadContainerProtectionContainerResponse {
         @Nullable String sourceResourceId,
         @Nullable String workloadType) {
         this.backupManagementType = backupManagementType;
-        this.containerType = Objects.requireNonNull(containerType);
+        this.containerType = containerType;
         this.extendedInfo = extendedInfo;
         this.friendlyName = friendlyName;
         this.healthStatus = healthStatus;

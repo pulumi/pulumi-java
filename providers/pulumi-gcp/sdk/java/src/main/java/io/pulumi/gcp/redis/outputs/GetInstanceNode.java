@@ -16,8 +16,8 @@ public final class GetInstanceNode {
     private GetInstanceNode(
         String id,
         String zone) {
-        this.id = Objects.requireNonNull(id);
-        this.zone = Objects.requireNonNull(zone);
+        this.id = id;
+        this.zone = zone;
     }
 
     public String getId() {

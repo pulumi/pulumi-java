@@ -49,19 +49,19 @@ public final class GetWorkloadIdentityPoolProviderResult {
         String state,
         String workloadIdentityPoolId,
         String workloadIdentityPoolProviderId) {
-        this.attributeCondition = Objects.requireNonNull(attributeCondition);
-        this.attributeMapping = Objects.requireNonNull(attributeMapping);
-        this.aws = Objects.requireNonNull(aws);
-        this.description = Objects.requireNonNull(description);
-        this.disabled = Objects.requireNonNull(disabled);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.oidcs = Objects.requireNonNull(oidcs);
+        this.attributeCondition = attributeCondition;
+        this.attributeMapping = attributeMapping;
+        this.aws = aws;
+        this.description = description;
+        this.disabled = disabled;
+        this.displayName = displayName;
+        this.id = id;
+        this.name = name;
+        this.oidcs = oidcs;
         this.project = project;
-        this.state = Objects.requireNonNull(state);
-        this.workloadIdentityPoolId = Objects.requireNonNull(workloadIdentityPoolId);
-        this.workloadIdentityPoolProviderId = Objects.requireNonNull(workloadIdentityPoolProviderId);
+        this.state = state;
+        this.workloadIdentityPoolId = workloadIdentityPoolId;
+        this.workloadIdentityPoolProviderId = workloadIdentityPoolProviderId;
     }
 
     public String getAttributeCondition() {

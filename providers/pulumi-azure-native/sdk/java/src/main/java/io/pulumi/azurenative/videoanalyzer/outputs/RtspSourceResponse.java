@@ -42,10 +42,10 @@ public final class RtspSourceResponse {
         String name,
         @Nullable String transport,
         String type) {
-        this.endpoint = Objects.requireNonNull(endpoint);
-        this.name = Objects.requireNonNull(name);
+        this.endpoint = endpoint;
+        this.name = name;
         this.transport = transport;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

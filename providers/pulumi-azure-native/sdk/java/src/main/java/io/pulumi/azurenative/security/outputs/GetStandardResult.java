@@ -101,14 +101,14 @@ public final class GetStandardResult {
         this.description = description;
         this.displayName = displayName;
         this.etag = etag;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.kind = kind;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
-        this.standardType = Objects.requireNonNull(standardType);
-        this.systemData = Objects.requireNonNull(systemData);
+        this.name = name;
+        this.standardType = standardType;
+        this.systemData = systemData;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

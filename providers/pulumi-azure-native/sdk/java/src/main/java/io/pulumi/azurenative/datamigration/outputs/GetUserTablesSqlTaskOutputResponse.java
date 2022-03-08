@@ -34,9 +34,9 @@ public final class GetUserTablesSqlTaskOutputResponse {
         Map<String,List<DatabaseTableResponse>> databasesToTables,
         String id,
         List<ReportableExceptionResponse> validationErrors) {
-        this.databasesToTables = Objects.requireNonNull(databasesToTables);
-        this.id = Objects.requireNonNull(id);
-        this.validationErrors = Objects.requireNonNull(validationErrors);
+        this.databasesToTables = databasesToTables;
+        this.id = id;
+        this.validationErrors = validationErrors;
     }
 
     /**

@@ -13,7 +13,7 @@ public final class FlowServiceNowSourceProperties {
 
     @OutputCustomType.Constructor({"object"})
     private FlowServiceNowSourceProperties(String object) {
-        this.object = Objects.requireNonNull(object);
+        this.object = object;
     }
 
     public String getObject() {

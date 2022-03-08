@@ -32,7 +32,7 @@ public final class BotAbortStatement {
     private BotAbortStatement(
         List<BotAbortStatementMessage> messages,
         @Nullable String responseCard) {
-        this.messages = Objects.requireNonNull(messages);
+        this.messages = messages;
         this.responseCard = responseCard;
     }
 

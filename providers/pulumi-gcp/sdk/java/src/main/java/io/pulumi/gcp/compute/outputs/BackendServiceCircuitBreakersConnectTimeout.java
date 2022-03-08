@@ -30,7 +30,7 @@ public final class BackendServiceCircuitBreakersConnectTimeout {
         @Nullable Integer nanos,
         Integer seconds) {
         this.nanos = nanos;
-        this.seconds = Objects.requireNonNull(seconds);
+        this.seconds = seconds;
     }
 
     /**

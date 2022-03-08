@@ -102,18 +102,18 @@ public final class ConcurLinkedServiceResponse {
         @Nullable Object usePeerVerification,
         Object username) {
         this.annotations = annotations;
-        this.clientId = Objects.requireNonNull(clientId);
+        this.clientId = clientId;
         this.connectVia = connectVia;
         this.connectionProperties = connectionProperties;
         this.description = description;
         this.encryptedCredential = encryptedCredential;
         this.parameters = parameters;
         this.password = password;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.useEncryptedEndpoints = useEncryptedEndpoints;
         this.useHostVerification = useHostVerification;
         this.usePeerVerification = usePeerVerification;
-        this.username = Objects.requireNonNull(username);
+        this.username = username;
     }
 
     /**

@@ -68,15 +68,15 @@ public final class PrivateEnvironmentConfigResponse {
         PrivateClusterConfigResponse privateClusterConfig,
         String webServerIpv4CidrBlock,
         String webServerIpv4ReservedRange) {
-        this.cloudComposerConnectionSubnetwork = Objects.requireNonNull(cloudComposerConnectionSubnetwork);
-        this.cloudComposerNetworkIpv4CidrBlock = Objects.requireNonNull(cloudComposerNetworkIpv4CidrBlock);
-        this.cloudComposerNetworkIpv4ReservedRange = Objects.requireNonNull(cloudComposerNetworkIpv4ReservedRange);
-        this.cloudSqlIpv4CidrBlock = Objects.requireNonNull(cloudSqlIpv4CidrBlock);
-        this.enablePrivateEnvironment = Objects.requireNonNull(enablePrivateEnvironment);
-        this.enablePrivatelyUsedPublicIps = Objects.requireNonNull(enablePrivatelyUsedPublicIps);
-        this.privateClusterConfig = Objects.requireNonNull(privateClusterConfig);
-        this.webServerIpv4CidrBlock = Objects.requireNonNull(webServerIpv4CidrBlock);
-        this.webServerIpv4ReservedRange = Objects.requireNonNull(webServerIpv4ReservedRange);
+        this.cloudComposerConnectionSubnetwork = cloudComposerConnectionSubnetwork;
+        this.cloudComposerNetworkIpv4CidrBlock = cloudComposerNetworkIpv4CidrBlock;
+        this.cloudComposerNetworkIpv4ReservedRange = cloudComposerNetworkIpv4ReservedRange;
+        this.cloudSqlIpv4CidrBlock = cloudSqlIpv4CidrBlock;
+        this.enablePrivateEnvironment = enablePrivateEnvironment;
+        this.enablePrivatelyUsedPublicIps = enablePrivatelyUsedPublicIps;
+        this.privateClusterConfig = privateClusterConfig;
+        this.webServerIpv4CidrBlock = webServerIpv4CidrBlock;
+        this.webServerIpv4ReservedRange = webServerIpv4ReservedRange;
     }
 
     /**

@@ -41,7 +41,7 @@ public final class ApplicationJitAccessPolicyResponse {
         @Nullable String jitApprovalMode,
         @Nullable List<JitApproverDefinitionResponse> jitApprovers,
         @Nullable String maximumJitAccessDuration) {
-        this.jitAccessEnabled = Objects.requireNonNull(jitAccessEnabled);
+        this.jitAccessEnabled = jitAccessEnabled;
         this.jitApprovalMode = jitApprovalMode;
         this.jitApprovers = jitApprovers;
         this.maximumJitAccessDuration = maximumJitAccessDuration;

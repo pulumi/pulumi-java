@@ -32,9 +32,9 @@ public final class WorkloadsConfigResponse {
         SchedulerResourceResponse scheduler,
         WebServerResourceResponse webServer,
         WorkerResourceResponse worker) {
-        this.scheduler = Objects.requireNonNull(scheduler);
-        this.webServer = Objects.requireNonNull(webServer);
-        this.worker = Objects.requireNonNull(worker);
+        this.scheduler = scheduler;
+        this.webServer = webServer;
+        this.worker = worker;
     }
 
     /**

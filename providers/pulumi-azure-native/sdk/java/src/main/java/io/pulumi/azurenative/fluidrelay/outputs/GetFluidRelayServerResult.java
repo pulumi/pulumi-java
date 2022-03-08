@@ -71,15 +71,15 @@ public final class GetFluidRelayServerResult {
         SystemDataResponse systemData,
         @Nullable Map<String,String> tags,
         String type) {
-        this.fluidRelayEndpoints = Objects.requireNonNull(fluidRelayEndpoints);
-        this.frsTenantId = Objects.requireNonNull(frsTenantId);
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
+        this.fluidRelayEndpoints = fluidRelayEndpoints;
+        this.frsTenantId = frsTenantId;
+        this.id = id;
+        this.location = location;
+        this.name = name;
         this.provisioningState = provisioningState;
-        this.systemData = Objects.requireNonNull(systemData);
+        this.systemData = systemData;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

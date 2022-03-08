@@ -40,9 +40,9 @@ public final class InstancePublicPortsPortInfo {
         String protocol,
         Integer toPort) {
         this.cidrs = cidrs;
-        this.fromPort = Objects.requireNonNull(fromPort);
-        this.protocol = Objects.requireNonNull(protocol);
-        this.toPort = Objects.requireNonNull(toPort);
+        this.fromPort = fromPort;
+        this.protocol = protocol;
+        this.toPort = toPort;
     }
 
     /**

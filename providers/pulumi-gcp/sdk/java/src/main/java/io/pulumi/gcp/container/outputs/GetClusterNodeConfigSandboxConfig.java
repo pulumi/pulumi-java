@@ -13,7 +13,7 @@ public final class GetClusterNodeConfigSandboxConfig {
 
     @OutputCustomType.Constructor({"sandboxType"})
     private GetClusterNodeConfigSandboxConfig(String sandboxType) {
-        this.sandboxType = Objects.requireNonNull(sandboxType);
+        this.sandboxType = sandboxType;
     }
 
     public String getSandboxType() {

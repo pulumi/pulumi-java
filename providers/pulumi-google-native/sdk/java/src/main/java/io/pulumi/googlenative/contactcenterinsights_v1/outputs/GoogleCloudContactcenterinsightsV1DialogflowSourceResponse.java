@@ -24,8 +24,8 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowSourceResponse {
     private GoogleCloudContactcenterinsightsV1DialogflowSourceResponse(
         String audioUri,
         String dialogflowConversation) {
-        this.audioUri = Objects.requireNonNull(audioUri);
-        this.dialogflowConversation = Objects.requireNonNull(dialogflowConversation);
+        this.audioUri = audioUri;
+        this.dialogflowConversation = dialogflowConversation;
     }
 
     /**

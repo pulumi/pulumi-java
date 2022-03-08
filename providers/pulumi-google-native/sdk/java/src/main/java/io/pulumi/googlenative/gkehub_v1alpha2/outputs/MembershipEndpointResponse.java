@@ -53,12 +53,12 @@ public final class MembershipEndpointResponse {
         KubernetesResourceResponse kubernetesResource,
         MultiCloudClusterResponse multiCloudCluster,
         OnPremClusterResponse onPremCluster) {
-        this.edgeCluster = Objects.requireNonNull(edgeCluster);
-        this.gkeCluster = Objects.requireNonNull(gkeCluster);
-        this.kubernetesMetadata = Objects.requireNonNull(kubernetesMetadata);
-        this.kubernetesResource = Objects.requireNonNull(kubernetesResource);
-        this.multiCloudCluster = Objects.requireNonNull(multiCloudCluster);
-        this.onPremCluster = Objects.requireNonNull(onPremCluster);
+        this.edgeCluster = edgeCluster;
+        this.gkeCluster = gkeCluster;
+        this.kubernetesMetadata = kubernetesMetadata;
+        this.kubernetesResource = kubernetesResource;
+        this.multiCloudCluster = multiCloudCluster;
+        this.onPremCluster = onPremCluster;
     }
 
     /**

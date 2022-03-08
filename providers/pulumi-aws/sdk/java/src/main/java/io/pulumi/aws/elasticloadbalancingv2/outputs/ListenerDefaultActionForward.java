@@ -29,7 +29,7 @@ public final class ListenerDefaultActionForward {
         @Nullable ListenerDefaultActionForwardStickiness stickiness,
         List<ListenerDefaultActionForwardTargetGroup> targetGroups) {
         this.stickiness = stickiness;
-        this.targetGroups = Objects.requireNonNull(targetGroups);
+        this.targetGroups = targetGroups;
     }
 
     /**

@@ -93,18 +93,18 @@ public final class GetBudgetResult {
         String timeGrain,
         BudgetTimePeriodResponse timePeriod,
         String type) {
-        this.amount = Objects.requireNonNull(amount);
-        this.category = Objects.requireNonNull(category);
-        this.currentSpend = Objects.requireNonNull(currentSpend);
+        this.amount = amount;
+        this.category = category;
+        this.currentSpend = currentSpend;
         this.eTag = eTag;
         this.filter = filter;
-        this.forecastSpend = Objects.requireNonNull(forecastSpend);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.forecastSpend = forecastSpend;
+        this.id = id;
+        this.name = name;
         this.notifications = notifications;
-        this.timeGrain = Objects.requireNonNull(timeGrain);
-        this.timePeriod = Objects.requireNonNull(timePeriod);
-        this.type = Objects.requireNonNull(type);
+        this.timeGrain = timeGrain;
+        this.timePeriod = timePeriod;
+        this.type = type;
     }
 
     /**

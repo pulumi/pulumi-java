@@ -17,7 +17,7 @@ public final class ResourceGroupPropertiesResponse {
 
     @OutputCustomType.Constructor({"provisioningState"})
     private ResourceGroupPropertiesResponse(String provisioningState) {
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
     }
 
     /**

@@ -26,7 +26,7 @@ public final class ImageBuilderAccessEndpoint {
     private ImageBuilderAccessEndpoint(
         String endpointType,
         @Nullable String vpceId) {
-        this.endpointType = Objects.requireNonNull(endpointType);
+        this.endpointType = endpointType;
         this.vpceId = vpceId;
     }
 

@@ -36,10 +36,10 @@ public final class ScheduleResponse {
         String cronSpec,
         String endTime,
         String startTime) {
-        this.cronJobDuration = Objects.requireNonNull(cronJobDuration);
-        this.cronSpec = Objects.requireNonNull(cronSpec);
-        this.endTime = Objects.requireNonNull(endTime);
-        this.startTime = Objects.requireNonNull(startTime);
+        this.cronJobDuration = cronJobDuration;
+        this.cronSpec = cronSpec;
+        this.endTime = endTime;
+        this.startTime = startTime;
     }
 
     /**

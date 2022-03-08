@@ -30,9 +30,9 @@ public final class ServiceAttachmentConnectedEndpointResponse {
         String endpoint,
         String pscConnectionId,
         String status) {
-        this.endpoint = Objects.requireNonNull(endpoint);
-        this.pscConnectionId = Objects.requireNonNull(pscConnectionId);
-        this.status = Objects.requireNonNull(status);
+        this.endpoint = endpoint;
+        this.pscConnectionId = pscConnectionId;
+        this.status = status;
     }
 
     /**

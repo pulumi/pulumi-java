@@ -75,7 +75,7 @@ public final class ServiceTaskSpecContainerSpec {
         this.healthcheck = healthcheck;
         this.hostname = hostname;
         this.hosts = hosts;
-        this.image = Objects.requireNonNull(image);
+        this.image = image;
         this.isolation = isolation;
         this.labels = labels;
         this.mounts = mounts;

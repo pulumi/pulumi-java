@@ -46,9 +46,9 @@ public final class PermissionsTableWithColumns {
         @Nullable Boolean wildcard) {
         this.catalogId = catalogId;
         this.columnNames = columnNames;
-        this.databaseName = Objects.requireNonNull(databaseName);
+        this.databaseName = databaseName;
         this.excludedColumnNames = excludedColumnNames;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.wildcard = wildcard;
     }
 

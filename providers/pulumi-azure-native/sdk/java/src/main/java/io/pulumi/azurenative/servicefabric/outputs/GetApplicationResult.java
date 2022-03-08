@@ -124,20 +124,20 @@ public final class GetApplicationResult {
         @Nullable String typeName,
         @Nullable String typeVersion,
         @Nullable ApplicationUpgradePolicyResponse upgradePolicy) {
-        this.etag = Objects.requireNonNull(etag);
-        this.id = Objects.requireNonNull(id);
+        this.etag = etag;
+        this.id = id;
         this.identity = identity;
         this.location = location;
         this.managedIdentities = managedIdentities;
         this.maximumNodes = maximumNodes;
         this.metrics = metrics;
         this.minimumNodes = minimumNodes;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.parameters = parameters;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.removeApplicationCapacity = removeApplicationCapacity;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.typeName = typeName;
         this.typeVersion = typeVersion;
         this.upgradePolicy = upgradePolicy;

@@ -123,35 +123,35 @@ public final class GetOrderableDbInstanceResult {
         Boolean supportsStorageAutoscaling,
         Boolean supportsStorageEncryption,
         Boolean vpc) {
-        this.availabilityZoneGroup = Objects.requireNonNull(availabilityZoneGroup);
-        this.availabilityZones = Objects.requireNonNull(availabilityZones);
-        this.engine = Objects.requireNonNull(engine);
-        this.engineVersion = Objects.requireNonNull(engineVersion);
-        this.id = Objects.requireNonNull(id);
-        this.instanceClass = Objects.requireNonNull(instanceClass);
-        this.licenseModel = Objects.requireNonNull(licenseModel);
-        this.maxIopsPerDbInstance = Objects.requireNonNull(maxIopsPerDbInstance);
-        this.maxIopsPerGib = Objects.requireNonNull(maxIopsPerGib);
-        this.maxStorageSize = Objects.requireNonNull(maxStorageSize);
-        this.minIopsPerDbInstance = Objects.requireNonNull(minIopsPerDbInstance);
-        this.minIopsPerGib = Objects.requireNonNull(minIopsPerGib);
-        this.minStorageSize = Objects.requireNonNull(minStorageSize);
-        this.multiAzCapable = Objects.requireNonNull(multiAzCapable);
-        this.outpostCapable = Objects.requireNonNull(outpostCapable);
+        this.availabilityZoneGroup = availabilityZoneGroup;
+        this.availabilityZones = availabilityZones;
+        this.engine = engine;
+        this.engineVersion = engineVersion;
+        this.id = id;
+        this.instanceClass = instanceClass;
+        this.licenseModel = licenseModel;
+        this.maxIopsPerDbInstance = maxIopsPerDbInstance;
+        this.maxIopsPerGib = maxIopsPerGib;
+        this.maxStorageSize = maxStorageSize;
+        this.minIopsPerDbInstance = minIopsPerDbInstance;
+        this.minIopsPerGib = minIopsPerGib;
+        this.minStorageSize = minStorageSize;
+        this.multiAzCapable = multiAzCapable;
+        this.outpostCapable = outpostCapable;
         this.preferredEngineVersions = preferredEngineVersions;
         this.preferredInstanceClasses = preferredInstanceClasses;
-        this.readReplicaCapable = Objects.requireNonNull(readReplicaCapable);
-        this.storageType = Objects.requireNonNull(storageType);
-        this.supportedEngineModes = Objects.requireNonNull(supportedEngineModes);
-        this.supportsEnhancedMonitoring = Objects.requireNonNull(supportsEnhancedMonitoring);
-        this.supportsGlobalDatabases = Objects.requireNonNull(supportsGlobalDatabases);
-        this.supportsIamDatabaseAuthentication = Objects.requireNonNull(supportsIamDatabaseAuthentication);
-        this.supportsIops = Objects.requireNonNull(supportsIops);
-        this.supportsKerberosAuthentication = Objects.requireNonNull(supportsKerberosAuthentication);
-        this.supportsPerformanceInsights = Objects.requireNonNull(supportsPerformanceInsights);
-        this.supportsStorageAutoscaling = Objects.requireNonNull(supportsStorageAutoscaling);
-        this.supportsStorageEncryption = Objects.requireNonNull(supportsStorageEncryption);
-        this.vpc = Objects.requireNonNull(vpc);
+        this.readReplicaCapable = readReplicaCapable;
+        this.storageType = storageType;
+        this.supportedEngineModes = supportedEngineModes;
+        this.supportsEnhancedMonitoring = supportsEnhancedMonitoring;
+        this.supportsGlobalDatabases = supportsGlobalDatabases;
+        this.supportsIamDatabaseAuthentication = supportsIamDatabaseAuthentication;
+        this.supportsIops = supportsIops;
+        this.supportsKerberosAuthentication = supportsKerberosAuthentication;
+        this.supportsPerformanceInsights = supportsPerformanceInsights;
+        this.supportsStorageAutoscaling = supportsStorageAutoscaling;
+        this.supportsStorageEncryption = supportsStorageEncryption;
+        this.vpc = vpc;
     }
 
     public String getAvailabilityZoneGroup() {

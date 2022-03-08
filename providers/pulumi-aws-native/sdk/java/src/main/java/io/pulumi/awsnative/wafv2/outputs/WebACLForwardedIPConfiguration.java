@@ -17,8 +17,8 @@ public final class WebACLForwardedIPConfiguration {
     private WebACLForwardedIPConfiguration(
         WebACLForwardedIPConfigurationFallbackBehavior fallbackBehavior,
         String headerName) {
-        this.fallbackBehavior = Objects.requireNonNull(fallbackBehavior);
-        this.headerName = Objects.requireNonNull(headerName);
+        this.fallbackBehavior = fallbackBehavior;
+        this.headerName = headerName;
     }
 
     public WebACLForwardedIPConfigurationFallbackBehavior getFallbackBehavior() {

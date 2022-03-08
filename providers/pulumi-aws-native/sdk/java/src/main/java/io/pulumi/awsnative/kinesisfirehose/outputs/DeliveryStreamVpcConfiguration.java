@@ -19,9 +19,9 @@ public final class DeliveryStreamVpcConfiguration {
         String roleARN,
         List<String> securityGroupIds,
         List<String> subnetIds) {
-        this.roleARN = Objects.requireNonNull(roleARN);
-        this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
-        this.subnetIds = Objects.requireNonNull(subnetIds);
+        this.roleARN = roleARN;
+        this.securityGroupIds = securityGroupIds;
+        this.subnetIds = subnetIds;
     }
 
     public String getRoleARN() {

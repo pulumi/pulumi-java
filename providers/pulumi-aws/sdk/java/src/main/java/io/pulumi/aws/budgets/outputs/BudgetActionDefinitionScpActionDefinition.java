@@ -25,8 +25,8 @@ public final class BudgetActionDefinitionScpActionDefinition {
     private BudgetActionDefinitionScpActionDefinition(
         String policyId,
         List<String> targetIds) {
-        this.policyId = Objects.requireNonNull(policyId);
-        this.targetIds = Objects.requireNonNull(targetIds);
+        this.policyId = policyId;
+        this.targetIds = targetIds;
     }
 
     /**

@@ -17,7 +17,7 @@ public final class TopicRuleErrorActionDynamodbv2PutItem {
 
     @OutputCustomType.Constructor({"tableName"})
     private TopicRuleErrorActionDynamodbv2PutItem(String tableName) {
-        this.tableName = Objects.requireNonNull(tableName);
+        this.tableName = tableName;
     }
 
     /**

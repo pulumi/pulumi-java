@@ -18,7 +18,7 @@ public final class AgentPermissionsProperties {
 
     @OutputCustomType.Constructor({"principals"})
     private AgentPermissionsProperties(List<String> principals) {
-        this.principals = Objects.requireNonNull(principals);
+        this.principals = principals;
     }
 
     /**

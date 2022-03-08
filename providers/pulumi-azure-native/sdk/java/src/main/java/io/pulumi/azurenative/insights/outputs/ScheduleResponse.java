@@ -24,8 +24,8 @@ public final class ScheduleResponse {
     private ScheduleResponse(
         Integer frequencyInMinutes,
         Integer timeWindowInMinutes) {
-        this.frequencyInMinutes = Objects.requireNonNull(frequencyInMinutes);
-        this.timeWindowInMinutes = Objects.requireNonNull(timeWindowInMinutes);
+        this.frequencyInMinutes = frequencyInMinutes;
+        this.timeWindowInMinutes = timeWindowInMinutes;
     }
 
     /**

@@ -31,9 +31,9 @@ public final class StepResponse {
         String kind,
         String name,
         Map<String,String> properties) {
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.properties = Objects.requireNonNull(properties);
+        this.kind = kind;
+        this.name = name;
+        this.properties = properties;
     }
 
     /**

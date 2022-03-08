@@ -13,7 +13,7 @@ public final class NodePoolNodeConfigSandboxConfig {
 
     @OutputCustomType.Constructor({"sandboxType"})
     private NodePoolNodeConfigSandboxConfig(String sandboxType) {
-        this.sandboxType = Objects.requireNonNull(sandboxType);
+        this.sandboxType = sandboxType;
     }
 
     public String getSandboxType() {

@@ -25,8 +25,8 @@ public final class FlowRedshiftDestinationProperties {
         String object) {
         this.bucketPrefix = bucketPrefix;
         this.errorHandlingConfig = errorHandlingConfig;
-        this.intermediateBucketName = Objects.requireNonNull(intermediateBucketName);
-        this.object = Objects.requireNonNull(object);
+        this.intermediateBucketName = intermediateBucketName;
+        this.object = object;
     }
 
     public Optional<String> getBucketPrefix() {

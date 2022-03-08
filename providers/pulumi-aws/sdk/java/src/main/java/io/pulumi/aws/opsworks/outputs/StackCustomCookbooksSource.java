@@ -53,8 +53,8 @@ public final class StackCustomCookbooksSource {
         this.password = password;
         this.revision = revision;
         this.sshKey = sshKey;
-        this.type = Objects.requireNonNull(type);
-        this.url = Objects.requireNonNull(url);
+        this.type = type;
+        this.url = url;
         this.username = username;
     }
 

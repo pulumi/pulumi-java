@@ -32,9 +32,9 @@ public final class GoogleCloudRunOpV2VolumeResponse {
         GoogleCloudRunOpV2CloudSqlInstanceResponse cloudSqlInstance,
         String name,
         GoogleCloudRunOpV2SecretVolumeSourceResponse secret) {
-        this.cloudSqlInstance = Objects.requireNonNull(cloudSqlInstance);
-        this.name = Objects.requireNonNull(name);
-        this.secret = Objects.requireNonNull(secret);
+        this.cloudSqlInstance = cloudSqlInstance;
+        this.name = name;
+        this.secret = secret;
     }
 
     /**

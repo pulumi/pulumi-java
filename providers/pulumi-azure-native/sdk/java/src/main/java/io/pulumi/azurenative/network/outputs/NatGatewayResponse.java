@@ -103,19 +103,19 @@ public final class NatGatewayResponse {
         @Nullable Map<String,String> tags,
         String type,
         @Nullable List<String> zones) {
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.id = id;
         this.idleTimeoutInMinutes = idleTimeoutInMinutes;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.publicIpAddresses = publicIpAddresses;
         this.publicIpPrefixes = publicIpPrefixes;
-        this.resourceGuid = Objects.requireNonNull(resourceGuid);
+        this.resourceGuid = resourceGuid;
         this.sku = sku;
-        this.subnets = Objects.requireNonNull(subnets);
+        this.subnets = subnets;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.zones = zones;
     }
 

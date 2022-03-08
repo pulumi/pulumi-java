@@ -37,9 +37,9 @@ public final class JitNetworkAccessRequestResponse {
         String startTimeUtc,
         List<JitNetworkAccessRequestVirtualMachineResponse> virtualMachines) {
         this.justification = justification;
-        this.requestor = Objects.requireNonNull(requestor);
-        this.startTimeUtc = Objects.requireNonNull(startTimeUtc);
-        this.virtualMachines = Objects.requireNonNull(virtualMachines);
+        this.requestor = requestor;
+        this.startTimeUtc = startTimeUtc;
+        this.virtualMachines = virtualMachines;
     }
 
     /**

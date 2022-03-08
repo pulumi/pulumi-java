@@ -31,9 +31,9 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelLabelStatsRespons
         String analyzedConversationsCount,
         Map<String,String> issueStats,
         String unclassifiedConversationsCount) {
-        this.analyzedConversationsCount = Objects.requireNonNull(analyzedConversationsCount);
-        this.issueStats = Objects.requireNonNull(issueStats);
-        this.unclassifiedConversationsCount = Objects.requireNonNull(unclassifiedConversationsCount);
+        this.analyzedConversationsCount = analyzedConversationsCount;
+        this.issueStats = issueStats;
+        this.unclassifiedConversationsCount = unclassifiedConversationsCount;
     }
 
     /**

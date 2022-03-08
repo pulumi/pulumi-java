@@ -39,9 +39,9 @@ public final class DomainAssociationSubDomain {
         @Nullable String dnsRecord,
         String prefix,
         @Nullable Boolean verified) {
-        this.branchName = Objects.requireNonNull(branchName);
+        this.branchName = branchName;
         this.dnsRecord = dnsRecord;
-        this.prefix = Objects.requireNonNull(prefix);
+        this.prefix = prefix;
         this.verified = verified;
     }
 

@@ -47,12 +47,12 @@ public final class GetChangeResult {
         String kind,
         String startTime,
         String status) {
-        this.additions = Objects.requireNonNull(additions);
-        this.deletions = Objects.requireNonNull(deletions);
-        this.isServing = Objects.requireNonNull(isServing);
-        this.kind = Objects.requireNonNull(kind);
-        this.startTime = Objects.requireNonNull(startTime);
-        this.status = Objects.requireNonNull(status);
+        this.additions = additions;
+        this.deletions = deletions;
+        this.isServing = isServing;
+        this.kind = kind;
+        this.startTime = startTime;
+        this.status = status;
     }
 
     /**

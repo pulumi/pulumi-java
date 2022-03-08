@@ -25,8 +25,8 @@ public final class ProcessingOptionsResponse {
     private ProcessingOptionsResponse(
         Boolean disableStreetAddressResolution,
         String htmlSanitization) {
-        this.disableStreetAddressResolution = Objects.requireNonNull(disableStreetAddressResolution);
-        this.htmlSanitization = Objects.requireNonNull(htmlSanitization);
+        this.disableStreetAddressResolution = disableStreetAddressResolution;
+        this.htmlSanitization = htmlSanitization;
     }
 
     /**

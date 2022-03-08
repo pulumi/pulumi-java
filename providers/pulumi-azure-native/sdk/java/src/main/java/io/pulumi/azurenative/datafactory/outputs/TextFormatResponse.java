@@ -99,7 +99,7 @@ public final class TextFormatResponse {
         this.serializer = serializer;
         this.skipLineCount = skipLineCount;
         this.treatEmptyAsNull = treatEmptyAsNull;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

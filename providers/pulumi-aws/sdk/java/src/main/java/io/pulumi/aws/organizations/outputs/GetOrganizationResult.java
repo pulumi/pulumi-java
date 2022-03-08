@@ -82,17 +82,17 @@ public final class GetOrganizationResult {
         String masterAccountId,
         List<GetOrganizationNonMasterAccount> nonMasterAccounts,
         List<GetOrganizationRoot> roots) {
-        this.accounts = Objects.requireNonNull(accounts);
-        this.arn = Objects.requireNonNull(arn);
-        this.awsServiceAccessPrincipals = Objects.requireNonNull(awsServiceAccessPrincipals);
-        this.enabledPolicyTypes = Objects.requireNonNull(enabledPolicyTypes);
-        this.featureSet = Objects.requireNonNull(featureSet);
-        this.id = Objects.requireNonNull(id);
-        this.masterAccountArn = Objects.requireNonNull(masterAccountArn);
-        this.masterAccountEmail = Objects.requireNonNull(masterAccountEmail);
-        this.masterAccountId = Objects.requireNonNull(masterAccountId);
-        this.nonMasterAccounts = Objects.requireNonNull(nonMasterAccounts);
-        this.roots = Objects.requireNonNull(roots);
+        this.accounts = accounts;
+        this.arn = arn;
+        this.awsServiceAccessPrincipals = awsServiceAccessPrincipals;
+        this.enabledPolicyTypes = enabledPolicyTypes;
+        this.featureSet = featureSet;
+        this.id = id;
+        this.masterAccountArn = masterAccountArn;
+        this.masterAccountEmail = masterAccountEmail;
+        this.masterAccountId = masterAccountId;
+        this.nonMasterAccounts = nonMasterAccounts;
+        this.roots = roots;
     }
 
     /**

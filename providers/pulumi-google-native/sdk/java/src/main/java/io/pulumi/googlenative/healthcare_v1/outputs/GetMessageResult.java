@@ -77,16 +77,16 @@ public final class GetMessageResult {
         SchematizedDataResponse schematizedData,
         String sendFacility,
         String sendTime) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.data = Objects.requireNonNull(data);
-        this.labels = Objects.requireNonNull(labels);
-        this.messageType = Objects.requireNonNull(messageType);
-        this.name = Objects.requireNonNull(name);
-        this.parsedData = Objects.requireNonNull(parsedData);
-        this.patientIds = Objects.requireNonNull(patientIds);
-        this.schematizedData = Objects.requireNonNull(schematizedData);
-        this.sendFacility = Objects.requireNonNull(sendFacility);
-        this.sendTime = Objects.requireNonNull(sendTime);
+        this.createTime = createTime;
+        this.data = data;
+        this.labels = labels;
+        this.messageType = messageType;
+        this.name = name;
+        this.parsedData = parsedData;
+        this.patientIds = patientIds;
+        this.schematizedData = schematizedData;
+        this.sendFacility = sendFacility;
+        this.sendTime = sendTime;
     }
 
     /**

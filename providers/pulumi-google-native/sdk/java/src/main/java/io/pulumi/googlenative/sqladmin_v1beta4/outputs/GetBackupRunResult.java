@@ -105,21 +105,21 @@ public final class GetBackupRunResult {
         String status,
         String type,
         String windowStartTime) {
-        this.backupKind = Objects.requireNonNull(backupKind);
-        this.description = Objects.requireNonNull(description);
-        this.diskEncryptionConfiguration = Objects.requireNonNull(diskEncryptionConfiguration);
-        this.diskEncryptionStatus = Objects.requireNonNull(diskEncryptionStatus);
-        this.endTime = Objects.requireNonNull(endTime);
-        this.enqueuedTime = Objects.requireNonNull(enqueuedTime);
-        this.error = Objects.requireNonNull(error);
-        this.instance = Objects.requireNonNull(instance);
-        this.kind = Objects.requireNonNull(kind);
-        this.location = Objects.requireNonNull(location);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.startTime = Objects.requireNonNull(startTime);
-        this.status = Objects.requireNonNull(status);
-        this.type = Objects.requireNonNull(type);
-        this.windowStartTime = Objects.requireNonNull(windowStartTime);
+        this.backupKind = backupKind;
+        this.description = description;
+        this.diskEncryptionConfiguration = diskEncryptionConfiguration;
+        this.diskEncryptionStatus = diskEncryptionStatus;
+        this.endTime = endTime;
+        this.enqueuedTime = enqueuedTime;
+        this.error = error;
+        this.instance = instance;
+        this.kind = kind;
+        this.location = location;
+        this.selfLink = selfLink;
+        this.startTime = startTime;
+        this.status = status;
+        this.type = type;
+        this.windowStartTime = windowStartTime;
     }
 
     /**

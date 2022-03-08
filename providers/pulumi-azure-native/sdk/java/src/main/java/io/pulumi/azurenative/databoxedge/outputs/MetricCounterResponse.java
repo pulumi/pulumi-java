@@ -43,7 +43,7 @@ public final class MetricCounterResponse {
         this.additionalDimensions = additionalDimensions;
         this.dimensionFilter = dimensionFilter;
         this.instance = instance;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

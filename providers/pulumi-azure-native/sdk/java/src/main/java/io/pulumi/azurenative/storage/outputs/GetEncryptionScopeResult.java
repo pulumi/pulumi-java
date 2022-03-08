@@ -70,15 +70,15 @@ public final class GetEncryptionScopeResult {
         @Nullable String source,
         @Nullable String state,
         String type) {
-        this.creationTime = Objects.requireNonNull(creationTime);
-        this.id = Objects.requireNonNull(id);
+        this.creationTime = creationTime;
+        this.id = id;
         this.keyVaultProperties = keyVaultProperties;
-        this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
-        this.name = Objects.requireNonNull(name);
+        this.lastModifiedTime = lastModifiedTime;
+        this.name = name;
         this.requireInfrastructureEncryption = requireInfrastructureEncryption;
         this.source = source;
         this.state = state;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

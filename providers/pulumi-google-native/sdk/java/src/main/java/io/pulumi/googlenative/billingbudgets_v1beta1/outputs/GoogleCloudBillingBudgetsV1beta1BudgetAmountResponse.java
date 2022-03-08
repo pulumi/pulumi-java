@@ -25,8 +25,8 @@ public final class GoogleCloudBillingBudgetsV1beta1BudgetAmountResponse {
     private GoogleCloudBillingBudgetsV1beta1BudgetAmountResponse(
         GoogleCloudBillingBudgetsV1beta1LastPeriodAmountResponse lastPeriodAmount,
         GoogleTypeMoneyResponse specifiedAmount) {
-        this.lastPeriodAmount = Objects.requireNonNull(lastPeriodAmount);
-        this.specifiedAmount = Objects.requireNonNull(specifiedAmount);
+        this.lastPeriodAmount = lastPeriodAmount;
+        this.specifiedAmount = specifiedAmount;
     }
 
     /**

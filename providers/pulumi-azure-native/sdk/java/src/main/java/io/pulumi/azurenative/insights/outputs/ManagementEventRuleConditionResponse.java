@@ -39,7 +39,7 @@ public final class ManagementEventRuleConditionResponse {
         String odataType) {
         this.aggregation = aggregation;
         this.dataSource = dataSource;
-        this.odataType = Objects.requireNonNull(odataType);
+        this.odataType = odataType;
     }
 
     /**

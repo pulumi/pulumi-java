@@ -32,9 +32,9 @@ public final class OpenShiftRouterProfileResponse {
         String fqdn,
         @Nullable String name,
         String publicSubdomain) {
-        this.fqdn = Objects.requireNonNull(fqdn);
+        this.fqdn = fqdn;
         this.name = name;
-        this.publicSubdomain = Objects.requireNonNull(publicSubdomain);
+        this.publicSubdomain = publicSubdomain;
     }
 
     /**

@@ -32,9 +32,9 @@ public final class GetContextResult {
         Integer lifespanCount,
         String name,
         Map<String,String> parameters) {
-        this.lifespanCount = Objects.requireNonNull(lifespanCount);
-        this.name = Objects.requireNonNull(name);
-        this.parameters = Objects.requireNonNull(parameters);
+        this.lifespanCount = lifespanCount;
+        this.name = name;
+        this.parameters = parameters;
     }
 
     /**

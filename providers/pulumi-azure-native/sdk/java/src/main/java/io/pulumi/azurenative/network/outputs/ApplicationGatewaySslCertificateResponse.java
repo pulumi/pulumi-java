@@ -69,14 +69,14 @@ public final class ApplicationGatewaySslCertificateResponse {
         String publicCertData,
         String type) {
         this.data = data;
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.id = id;
         this.keyVaultSecretId = keyVaultSecretId;
         this.name = name;
         this.password = password;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.publicCertData = Objects.requireNonNull(publicCertData);
-        this.type = Objects.requireNonNull(type);
+        this.provisioningState = provisioningState;
+        this.publicCertData = publicCertData;
+        this.type = type;
     }
 
     /**

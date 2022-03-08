@@ -24,7 +24,7 @@ public final class OriginEndpointDashEncryption {
         @Nullable Integer keyRotationIntervalSeconds,
         OriginEndpointSpekeKeyProvider spekeKeyProvider) {
         this.keyRotationIntervalSeconds = keyRotationIntervalSeconds;
-        this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
+        this.spekeKeyProvider = spekeKeyProvider;
     }
 
     /**

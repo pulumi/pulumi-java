@@ -39,10 +39,10 @@ public final class LocationResponse {
         String locationType,
         PostalAddressResponse postalAddress,
         Double radiusMiles) {
-        this.latLng = Objects.requireNonNull(latLng);
-        this.locationType = Objects.requireNonNull(locationType);
-        this.postalAddress = Objects.requireNonNull(postalAddress);
-        this.radiusMiles = Objects.requireNonNull(radiusMiles);
+        this.latLng = latLng;
+        this.locationType = locationType;
+        this.postalAddress = postalAddress;
+        this.radiusMiles = radiusMiles;
     }
 
     /**

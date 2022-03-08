@@ -24,9 +24,9 @@ public final class TopicRuleIotEventsAction {
         @Nullable String messageId,
         String roleArn) {
         this.batchMode = batchMode;
-        this.inputName = Objects.requireNonNull(inputName);
+        this.inputName = inputName;
         this.messageId = messageId;
-        this.roleArn = Objects.requireNonNull(roleArn);
+        this.roleArn = roleArn;
     }
 
     public Optional<Boolean> getBatchMode() {

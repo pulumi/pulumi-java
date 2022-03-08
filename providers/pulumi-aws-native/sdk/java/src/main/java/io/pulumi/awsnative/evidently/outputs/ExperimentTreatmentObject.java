@@ -23,9 +23,9 @@ public final class ExperimentTreatmentObject {
         String treatmentName,
         String variation) {
         this.description = description;
-        this.feature = Objects.requireNonNull(feature);
-        this.treatmentName = Objects.requireNonNull(treatmentName);
-        this.variation = Objects.requireNonNull(variation);
+        this.feature = feature;
+        this.treatmentName = treatmentName;
+        this.variation = variation;
     }
 
     public Optional<String> getDescription() {

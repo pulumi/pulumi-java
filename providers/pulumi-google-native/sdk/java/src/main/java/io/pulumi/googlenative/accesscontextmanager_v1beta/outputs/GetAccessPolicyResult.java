@@ -30,9 +30,9 @@ public final class GetAccessPolicyResult {
         String name,
         String parent,
         String title) {
-        this.name = Objects.requireNonNull(name);
-        this.parent = Objects.requireNonNull(parent);
-        this.title = Objects.requireNonNull(title);
+        this.name = name;
+        this.parent = parent;
+        this.title = title;
     }
 
     /**

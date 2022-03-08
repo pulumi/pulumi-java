@@ -42,11 +42,11 @@ public final class GetViewResult {
         String name,
         String updateTime,
         String value) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.name = Objects.requireNonNull(name);
-        this.updateTime = Objects.requireNonNull(updateTime);
-        this.value = Objects.requireNonNull(value);
+        this.createTime = createTime;
+        this.displayName = displayName;
+        this.name = name;
+        this.updateTime = updateTime;
+        this.value = value;
     }
 
     /**

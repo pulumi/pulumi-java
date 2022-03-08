@@ -17,7 +17,7 @@ public final class BackupPolicyBackupPolicy {
 
     @OutputCustomType.Constructor({"status"})
     private BackupPolicyBackupPolicy(String status) {
-        this.status = Objects.requireNonNull(status);
+        this.status = status;
     }
 
     /**

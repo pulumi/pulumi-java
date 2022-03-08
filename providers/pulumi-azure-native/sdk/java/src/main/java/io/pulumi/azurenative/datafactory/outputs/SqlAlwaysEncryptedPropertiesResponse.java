@@ -43,7 +43,7 @@ public final class SqlAlwaysEncryptedPropertiesResponse {
         @Nullable CredentialReferenceResponse credential,
         @Nullable Object servicePrincipalId,
         @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey) {
-        this.alwaysEncryptedAkvAuthType = Objects.requireNonNull(alwaysEncryptedAkvAuthType);
+        this.alwaysEncryptedAkvAuthType = alwaysEncryptedAkvAuthType;
         this.credential = credential;
         this.servicePrincipalId = servicePrincipalId;
         this.servicePrincipalKey = servicePrincipalKey;

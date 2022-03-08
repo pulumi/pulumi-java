@@ -121,23 +121,23 @@ public final class ListWebAppBackupStatusSecretsSlotResult {
         String storageAccountUrl,
         String type,
         Double websiteSizeInBytes) {
-        this.backupId = Objects.requireNonNull(backupId);
-        this.blobName = Objects.requireNonNull(blobName);
-        this.correlationId = Objects.requireNonNull(correlationId);
-        this.created = Objects.requireNonNull(created);
-        this.databases = Objects.requireNonNull(databases);
-        this.finishedTimeStamp = Objects.requireNonNull(finishedTimeStamp);
-        this.id = Objects.requireNonNull(id);
+        this.backupId = backupId;
+        this.blobName = blobName;
+        this.correlationId = correlationId;
+        this.created = created;
+        this.databases = databases;
+        this.finishedTimeStamp = finishedTimeStamp;
+        this.id = id;
         this.kind = kind;
-        this.lastRestoreTimeStamp = Objects.requireNonNull(lastRestoreTimeStamp);
-        this.log = Objects.requireNonNull(log);
-        this.name = Objects.requireNonNull(name);
-        this.scheduled = Objects.requireNonNull(scheduled);
-        this.sizeInBytes = Objects.requireNonNull(sizeInBytes);
-        this.status = Objects.requireNonNull(status);
-        this.storageAccountUrl = Objects.requireNonNull(storageAccountUrl);
-        this.type = Objects.requireNonNull(type);
-        this.websiteSizeInBytes = Objects.requireNonNull(websiteSizeInBytes);
+        this.lastRestoreTimeStamp = lastRestoreTimeStamp;
+        this.log = log;
+        this.name = name;
+        this.scheduled = scheduled;
+        this.sizeInBytes = sizeInBytes;
+        this.status = status;
+        this.storageAccountUrl = storageAccountUrl;
+        this.type = type;
+        this.websiteSizeInBytes = websiteSizeInBytes;
     }
 
     /**

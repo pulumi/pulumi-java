@@ -38,10 +38,10 @@ public final class AddRemoveReplicaScalingMechanismResponse {
         Integer maxCount,
         Integer minCount,
         Integer scaleIncrement) {
-        this.kind = Objects.requireNonNull(kind);
-        this.maxCount = Objects.requireNonNull(maxCount);
-        this.minCount = Objects.requireNonNull(minCount);
-        this.scaleIncrement = Objects.requireNonNull(scaleIncrement);
+        this.kind = kind;
+        this.maxCount = maxCount;
+        this.minCount = minCount;
+        this.scaleIncrement = scaleIncrement;
     }
 
     /**

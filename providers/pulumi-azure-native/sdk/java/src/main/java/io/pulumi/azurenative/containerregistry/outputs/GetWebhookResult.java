@@ -70,15 +70,15 @@ public final class GetWebhookResult {
         @Nullable String status,
         @Nullable Map<String,String> tags,
         String type) {
-        this.actions = Objects.requireNonNull(actions);
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.actions = actions;
+        this.id = id;
+        this.location = location;
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.scope = scope;
         this.status = status;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

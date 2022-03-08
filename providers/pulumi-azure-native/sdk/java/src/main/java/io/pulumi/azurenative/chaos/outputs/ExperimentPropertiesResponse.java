@@ -35,9 +35,9 @@ public final class ExperimentPropertiesResponse {
         List<SelectorResponse> selectors,
         @Nullable Boolean startOnCreation,
         List<StepResponse> steps) {
-        this.selectors = Objects.requireNonNull(selectors);
+        this.selectors = selectors;
         this.startOnCreation = startOnCreation;
-        this.steps = Objects.requireNonNull(steps);
+        this.steps = steps;
     }
 
     /**

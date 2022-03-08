@@ -30,9 +30,9 @@ public final class GalleryImageIdentifierResponse {
         String offer,
         String publisher,
         String sku) {
-        this.offer = Objects.requireNonNull(offer);
-        this.publisher = Objects.requireNonNull(publisher);
-        this.sku = Objects.requireNonNull(sku);
+        this.offer = offer;
+        this.publisher = publisher;
+        this.sku = sku;
     }
 
     /**

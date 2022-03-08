@@ -49,12 +49,12 @@ public final class EventResponse {
         String message,
         String name,
         String type) {
-        this.count = Objects.requireNonNull(count);
-        this.firstTimestamp = Objects.requireNonNull(firstTimestamp);
-        this.lastTimestamp = Objects.requireNonNull(lastTimestamp);
-        this.message = Objects.requireNonNull(message);
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.count = count;
+        this.firstTimestamp = firstTimestamp;
+        this.lastTimestamp = lastTimestamp;
+        this.message = message;
+        this.name = name;
+        this.type = type;
     }
 
     /**

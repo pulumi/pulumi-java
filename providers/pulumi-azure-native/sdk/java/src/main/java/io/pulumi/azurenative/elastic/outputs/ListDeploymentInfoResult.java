@@ -36,10 +36,10 @@ public final class ListDeploymentInfoResult {
         String memoryCapacity,
         String status,
         String version) {
-        this.diskCapacity = Objects.requireNonNull(diskCapacity);
-        this.memoryCapacity = Objects.requireNonNull(memoryCapacity);
-        this.status = Objects.requireNonNull(status);
-        this.version = Objects.requireNonNull(version);
+        this.diskCapacity = diskCapacity;
+        this.memoryCapacity = memoryCapacity;
+        this.status = status;
+        this.version = version;
     }
 
     /**

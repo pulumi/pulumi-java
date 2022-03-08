@@ -33,8 +33,8 @@ public final class HttpRouteMatchPathResponse {
         String type,
         String value) {
         this.rewrite = rewrite;
-        this.type = Objects.requireNonNull(type);
-        this.value = Objects.requireNonNull(value);
+        this.type = type;
+        this.value = value;
     }
 
     /**

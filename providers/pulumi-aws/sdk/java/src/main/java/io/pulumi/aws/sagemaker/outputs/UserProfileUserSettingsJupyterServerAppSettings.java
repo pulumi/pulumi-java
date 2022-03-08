@@ -27,7 +27,7 @@ public final class UserProfileUserSettingsJupyterServerAppSettings {
     private UserProfileUserSettingsJupyterServerAppSettings(
         UserProfileUserSettingsJupyterServerAppSettingsDefaultResourceSpec defaultResourceSpec,
         @Nullable List<String> lifecycleConfigArns) {
-        this.defaultResourceSpec = Objects.requireNonNull(defaultResourceSpec);
+        this.defaultResourceSpec = defaultResourceSpec;
         this.lifecycleConfigArns = lifecycleConfigArns;
     }
 

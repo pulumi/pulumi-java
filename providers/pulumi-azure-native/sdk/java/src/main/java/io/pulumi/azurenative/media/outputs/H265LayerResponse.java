@@ -103,14 +103,14 @@ public final class H265LayerResponse {
         @Nullable String width) {
         this.adaptiveBFrame = adaptiveBFrame;
         this.bFrames = bFrames;
-        this.bitrate = Objects.requireNonNull(bitrate);
+        this.bitrate = bitrate;
         this.bufferWindow = bufferWindow;
         this.frameRate = frameRate;
         this.height = height;
         this.label = label;
         this.level = level;
         this.maxBitrate = maxBitrate;
-        this.odataType = Objects.requireNonNull(odataType);
+        this.odataType = odataType;
         this.profile = profile;
         this.referenceFrames = referenceFrames;
         this.slices = slices;

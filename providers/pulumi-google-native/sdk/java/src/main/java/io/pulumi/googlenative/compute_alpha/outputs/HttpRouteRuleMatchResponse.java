@@ -59,13 +59,13 @@ public final class HttpRouteRuleMatchResponse {
         String prefixMatch,
         List<HttpQueryParameterMatchResponse> queryParameterMatches,
         String regexMatch) {
-        this.fullPathMatch = Objects.requireNonNull(fullPathMatch);
-        this.headerMatches = Objects.requireNonNull(headerMatches);
-        this.ignoreCase = Objects.requireNonNull(ignoreCase);
-        this.metadataFilters = Objects.requireNonNull(metadataFilters);
-        this.prefixMatch = Objects.requireNonNull(prefixMatch);
-        this.queryParameterMatches = Objects.requireNonNull(queryParameterMatches);
-        this.regexMatch = Objects.requireNonNull(regexMatch);
+        this.fullPathMatch = fullPathMatch;
+        this.headerMatches = headerMatches;
+        this.ignoreCase = ignoreCase;
+        this.metadataFilters = metadataFilters;
+        this.prefixMatch = prefixMatch;
+        this.queryParameterMatches = queryParameterMatches;
+        this.regexMatch = regexMatch;
     }
 
     /**

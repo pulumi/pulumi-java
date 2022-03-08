@@ -13,7 +13,7 @@ public final class JobS3TableOutputOptions {
 
     @OutputCustomType.Constructor({"location"})
     private JobS3TableOutputOptions(JobS3Location location) {
-        this.location = Objects.requireNonNull(location);
+        this.location = location;
     }
 
     public JobS3Location getLocation() {

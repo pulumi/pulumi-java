@@ -124,23 +124,23 @@ public final class JobStatisticsResponse {
         String startTime,
         String totalSlotMs,
         TransactionInfoResponse transactionInfo) {
-        this.completionRatio = Objects.requireNonNull(completionRatio);
-        this.creationTime = Objects.requireNonNull(creationTime);
-        this.endTime = Objects.requireNonNull(endTime);
-        this.extract = Objects.requireNonNull(extract);
-        this.load = Objects.requireNonNull(load);
-        this.numChildJobs = Objects.requireNonNull(numChildJobs);
-        this.parentJobId = Objects.requireNonNull(parentJobId);
-        this.query = Objects.requireNonNull(query);
-        this.quotaDeferments = Objects.requireNonNull(quotaDeferments);
-        this.reservationId = Objects.requireNonNull(reservationId);
-        this.reservationUsage = Objects.requireNonNull(reservationUsage);
-        this.rowLevelSecurityStatistics = Objects.requireNonNull(rowLevelSecurityStatistics);
-        this.scriptStatistics = Objects.requireNonNull(scriptStatistics);
-        this.sessionInfo = Objects.requireNonNull(sessionInfo);
-        this.startTime = Objects.requireNonNull(startTime);
-        this.totalSlotMs = Objects.requireNonNull(totalSlotMs);
-        this.transactionInfo = Objects.requireNonNull(transactionInfo);
+        this.completionRatio = completionRatio;
+        this.creationTime = creationTime;
+        this.endTime = endTime;
+        this.extract = extract;
+        this.load = load;
+        this.numChildJobs = numChildJobs;
+        this.parentJobId = parentJobId;
+        this.query = query;
+        this.quotaDeferments = quotaDeferments;
+        this.reservationId = reservationId;
+        this.reservationUsage = reservationUsage;
+        this.rowLevelSecurityStatistics = rowLevelSecurityStatistics;
+        this.scriptStatistics = scriptStatistics;
+        this.sessionInfo = sessionInfo;
+        this.startTime = startTime;
+        this.totalSlotMs = totalSlotMs;
+        this.transactionInfo = transactionInfo;
     }
 
     /**

@@ -57,7 +57,7 @@ public final class HttpSourceResponse {
         this.maxConcurrentConnections = maxConcurrentConnections;
         this.sourceRetryCount = sourceRetryCount;
         this.sourceRetryWait = sourceRetryWait;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

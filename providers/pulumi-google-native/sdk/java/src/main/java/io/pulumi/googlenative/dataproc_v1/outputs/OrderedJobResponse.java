@@ -95,18 +95,18 @@ public final class OrderedJobResponse {
         SparkRJobResponse sparkRJob,
         SparkSqlJobResponse sparkSqlJob,
         String stepId) {
-        this.hadoopJob = Objects.requireNonNull(hadoopJob);
-        this.hiveJob = Objects.requireNonNull(hiveJob);
-        this.labels = Objects.requireNonNull(labels);
-        this.pigJob = Objects.requireNonNull(pigJob);
-        this.prerequisiteStepIds = Objects.requireNonNull(prerequisiteStepIds);
-        this.prestoJob = Objects.requireNonNull(prestoJob);
-        this.pysparkJob = Objects.requireNonNull(pysparkJob);
-        this.scheduling = Objects.requireNonNull(scheduling);
-        this.sparkJob = Objects.requireNonNull(sparkJob);
-        this.sparkRJob = Objects.requireNonNull(sparkRJob);
-        this.sparkSqlJob = Objects.requireNonNull(sparkSqlJob);
-        this.stepId = Objects.requireNonNull(stepId);
+        this.hadoopJob = hadoopJob;
+        this.hiveJob = hiveJob;
+        this.labels = labels;
+        this.pigJob = pigJob;
+        this.prerequisiteStepIds = prerequisiteStepIds;
+        this.prestoJob = prestoJob;
+        this.pysparkJob = pysparkJob;
+        this.scheduling = scheduling;
+        this.sparkJob = sparkJob;
+        this.sparkRJob = sparkRJob;
+        this.sparkSqlJob = sparkSqlJob;
+        this.stepId = stepId;
     }
 
     /**

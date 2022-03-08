@@ -19,7 +19,7 @@ public final class JobDatabaseTableOutputOptions {
     private JobDatabaseTableOutputOptions(
         String tableName,
         @Nullable JobS3Location tempDirectory) {
-        this.tableName = Objects.requireNonNull(tableName);
+        this.tableName = tableName;
         this.tempDirectory = tempDirectory;
     }
 

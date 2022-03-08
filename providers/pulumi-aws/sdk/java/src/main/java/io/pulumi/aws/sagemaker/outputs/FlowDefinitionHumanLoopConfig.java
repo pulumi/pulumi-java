@@ -71,15 +71,15 @@ public final class FlowDefinitionHumanLoopConfig {
         @Nullable Integer taskTimeLimitInSeconds,
         String taskTitle,
         String workteamArn) {
-        this.humanTaskUiArn = Objects.requireNonNull(humanTaskUiArn);
+        this.humanTaskUiArn = humanTaskUiArn;
         this.publicWorkforceTaskPrice = publicWorkforceTaskPrice;
         this.taskAvailabilityLifetimeInSeconds = taskAvailabilityLifetimeInSeconds;
-        this.taskCount = Objects.requireNonNull(taskCount);
-        this.taskDescription = Objects.requireNonNull(taskDescription);
+        this.taskCount = taskCount;
+        this.taskDescription = taskDescription;
         this.taskKeywords = taskKeywords;
         this.taskTimeLimitInSeconds = taskTimeLimitInSeconds;
-        this.taskTitle = Objects.requireNonNull(taskTitle);
-        this.workteamArn = Objects.requireNonNull(workteamArn);
+        this.taskTitle = taskTitle;
+        this.workteamArn = workteamArn;
     }
 
     /**

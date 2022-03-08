@@ -59,7 +59,7 @@ public final class RouterBgp {
         this.advertiseMode = advertiseMode;
         this.advertisedGroups = advertisedGroups;
         this.advertisedIpRanges = advertisedIpRanges;
-        this.asn = Objects.requireNonNull(asn);
+        this.asn = asn;
     }
 
     /**

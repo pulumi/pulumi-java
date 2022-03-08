@@ -17,7 +17,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentInputResponse {
 
     @OutputCustomType.Constructor({"intent"})
     private GoogleCloudDialogflowCxV3beta1IntentInputResponse(String intent) {
-        this.intent = Objects.requireNonNull(intent);
+        this.intent = intent;
     }
 
     /**

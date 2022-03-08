@@ -84,15 +84,15 @@ public final class ApplicationGatewayPathRuleResponse {
         String type) {
         this.backendAddressPool = backendAddressPool;
         this.backendHttpSettings = backendHttpSettings;
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.firewallPolicy = firewallPolicy;
         this.id = id;
         this.name = name;
         this.paths = paths;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.redirectConfiguration = redirectConfiguration;
         this.rewriteRuleSet = rewriteRuleSet;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

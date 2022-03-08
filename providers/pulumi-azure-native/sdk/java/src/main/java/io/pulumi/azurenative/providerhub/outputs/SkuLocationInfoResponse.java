@@ -27,7 +27,7 @@ public final class SkuLocationInfoResponse {
         @Nullable List<SkuZoneDetailResponse> zoneDetails,
         @Nullable List<String> zones) {
         this.extendedLocations = extendedLocations;
-        this.location = Objects.requireNonNull(location);
+        this.location = location;
         this.type = type;
         this.zoneDetails = zoneDetails;
         this.zones = zones;

@@ -38,10 +38,10 @@ public final class ServiceResolverResponse {
         String hostname,
         List<CertificateResponse> serverCertificates,
         String serviceDirectoryService) {
-        this.endpointFilter = Objects.requireNonNull(endpointFilter);
-        this.hostname = Objects.requireNonNull(hostname);
-        this.serverCertificates = Objects.requireNonNull(serverCertificates);
-        this.serviceDirectoryService = Objects.requireNonNull(serviceDirectoryService);
+        this.endpointFilter = endpointFilter;
+        this.hostname = hostname;
+        this.serverCertificates = serverCertificates;
+        this.serviceDirectoryService = serviceDirectoryService;
     }
 
     /**

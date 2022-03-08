@@ -39,10 +39,10 @@ public final class SSISChildPackageResponse {
         @Nullable String packageLastModifiedDate,
         @Nullable String packageName,
         Object packagePath) {
-        this.packageContent = Objects.requireNonNull(packageContent);
+        this.packageContent = packageContent;
         this.packageLastModifiedDate = packageLastModifiedDate;
         this.packageName = packageName;
-        this.packagePath = Objects.requireNonNull(packagePath);
+        this.packagePath = packagePath;
     }
 
     /**

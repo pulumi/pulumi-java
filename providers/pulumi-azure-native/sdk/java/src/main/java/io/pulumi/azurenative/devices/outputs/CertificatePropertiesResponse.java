@@ -55,13 +55,13 @@ public final class CertificatePropertiesResponse {
         String subject,
         String thumbprint,
         String updated) {
-        this.certificate = Objects.requireNonNull(certificate);
-        this.created = Objects.requireNonNull(created);
-        this.expiry = Objects.requireNonNull(expiry);
-        this.isVerified = Objects.requireNonNull(isVerified);
-        this.subject = Objects.requireNonNull(subject);
-        this.thumbprint = Objects.requireNonNull(thumbprint);
-        this.updated = Objects.requireNonNull(updated);
+        this.certificate = certificate;
+        this.created = created;
+        this.expiry = expiry;
+        this.isVerified = isVerified;
+        this.subject = subject;
+        this.thumbprint = thumbprint;
+        this.updated = updated;
     }
 
     /**

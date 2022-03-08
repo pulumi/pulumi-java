@@ -33,8 +33,8 @@ public final class ArmRoleReceiverResponse {
         String name,
         String roleId,
         @Nullable Boolean useCommonAlertSchema) {
-        this.name = Objects.requireNonNull(name);
-        this.roleId = Objects.requireNonNull(roleId);
+        this.name = name;
+        this.roleId = roleId;
         this.useCommonAlertSchema = useCommonAlertSchema;
     }
 

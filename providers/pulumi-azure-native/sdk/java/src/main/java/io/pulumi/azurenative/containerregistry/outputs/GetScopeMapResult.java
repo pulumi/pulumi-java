@@ -66,14 +66,14 @@ public final class GetScopeMapResult {
         String provisioningState,
         SystemDataResponse systemData,
         String type) {
-        this.actions = Objects.requireNonNull(actions);
-        this.creationDate = Objects.requireNonNull(creationDate);
+        this.actions = actions;
+        this.creationDate = creationDate;
         this.description = description;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.id = id;
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

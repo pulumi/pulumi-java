@@ -17,7 +17,7 @@ public final class OrganizationPolicyRestorePolicy {
 
     @OutputCustomType.Constructor({"$default"})
     private OrganizationPolicyRestorePolicy(Boolean $default) {
-        this.$default = Objects.requireNonNull($default);
+        this.$default = $default;
     }
 
     /**

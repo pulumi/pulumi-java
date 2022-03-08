@@ -111,16 +111,16 @@ public final class GetOpenShiftClusterResult {
         this.apiserverProfile = apiserverProfile;
         this.clusterProfile = clusterProfile;
         this.consoleProfile = consoleProfile;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.ingressProfiles = ingressProfiles;
-        this.location = Objects.requireNonNull(location);
+        this.location = location;
         this.masterProfile = masterProfile;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.networkProfile = networkProfile;
         this.provisioningState = provisioningState;
         this.servicePrincipalProfile = servicePrincipalProfile;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.workerProfiles = workerProfiles;
     }
 

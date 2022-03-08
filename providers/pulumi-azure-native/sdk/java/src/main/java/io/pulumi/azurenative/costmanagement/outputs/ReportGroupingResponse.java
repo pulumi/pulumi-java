@@ -24,8 +24,8 @@ public final class ReportGroupingResponse {
     private ReportGroupingResponse(
         String name,
         String type) {
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.name = name;
+        this.type = type;
     }
 
     /**

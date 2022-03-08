@@ -110,21 +110,21 @@ public final class GetGen1EnvironmentResult {
         @Nullable String storageLimitExceededBehavior,
         @Nullable Map<String,String> tags,
         String type) {
-        this.creationTime = Objects.requireNonNull(creationTime);
-        this.dataAccessFqdn = Objects.requireNonNull(dataAccessFqdn);
-        this.dataAccessId = Objects.requireNonNull(dataAccessId);
-        this.dataRetentionTime = Objects.requireNonNull(dataRetentionTime);
-        this.id = Objects.requireNonNull(id);
-        this.kind = Objects.requireNonNull(kind);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
+        this.creationTime = creationTime;
+        this.dataAccessFqdn = dataAccessFqdn;
+        this.dataAccessId = dataAccessId;
+        this.dataRetentionTime = dataRetentionTime;
+        this.id = id;
+        this.kind = kind;
+        this.location = location;
+        this.name = name;
         this.partitionKeyProperties = partitionKeyProperties;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.sku = Objects.requireNonNull(sku);
-        this.status = Objects.requireNonNull(status);
+        this.provisioningState = provisioningState;
+        this.sku = sku;
+        this.status = status;
         this.storageLimitExceededBehavior = storageLimitExceededBehavior;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

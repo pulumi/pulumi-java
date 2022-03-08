@@ -46,7 +46,7 @@ public final class EndpointPort {
         @Nullable String protocol) {
         this.appProtocol = appProtocol;
         this.name = name;
-        this.port = Objects.requireNonNull(port);
+        this.port = port;
         this.protocol = protocol;
     }
 

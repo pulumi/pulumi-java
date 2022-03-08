@@ -77,14 +77,14 @@ public final class GetGraphQueryResult {
         String type) {
         this.description = description;
         this.etag = etag;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
-        this.query = Objects.requireNonNull(query);
-        this.resultKind = Objects.requireNonNull(resultKind);
+        this.name = name;
+        this.query = query;
+        this.resultKind = resultKind;
         this.tags = tags;
-        this.timeModified = Objects.requireNonNull(timeModified);
-        this.type = Objects.requireNonNull(type);
+        this.timeModified = timeModified;
+        this.type = type;
     }
 
     /**

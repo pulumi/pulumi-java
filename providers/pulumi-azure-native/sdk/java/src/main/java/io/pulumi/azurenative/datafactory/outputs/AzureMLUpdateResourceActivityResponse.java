@@ -84,12 +84,12 @@ public final class AzureMLUpdateResourceActivityResponse {
         this.dependsOn = dependsOn;
         this.description = description;
         this.linkedServiceName = linkedServiceName;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.policy = policy;
-        this.trainedModelFilePath = Objects.requireNonNull(trainedModelFilePath);
-        this.trainedModelLinkedServiceName = Objects.requireNonNull(trainedModelLinkedServiceName);
-        this.trainedModelName = Objects.requireNonNull(trainedModelName);
-        this.type = Objects.requireNonNull(type);
+        this.trainedModelFilePath = trainedModelFilePath;
+        this.trainedModelLinkedServiceName = trainedModelLinkedServiceName;
+        this.trainedModelName = trainedModelName;
+        this.type = type;
         this.userProperties = userProperties;
     }
 

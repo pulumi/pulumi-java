@@ -31,9 +31,9 @@ public final class VolumeAttachmentSpec {
         String attacher,
         String nodeName,
         VolumeAttachmentSource source) {
-        this.attacher = Objects.requireNonNull(attacher);
-        this.nodeName = Objects.requireNonNull(nodeName);
-        this.source = Objects.requireNonNull(source);
+        this.attacher = attacher;
+        this.nodeName = nodeName;
+        this.source = source;
     }
 
     /**

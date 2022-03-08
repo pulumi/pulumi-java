@@ -70,15 +70,15 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationResponse {
         String provisioningState,
         @Nullable SubResourceResponse subnet,
         String type) {
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.id = id;
         this.name = name;
         this.primary = primary;
         this.privateIPAddress = privateIPAddress;
         this.privateIPAllocationMethod = privateIPAllocationMethod;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.subnet = subnet;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

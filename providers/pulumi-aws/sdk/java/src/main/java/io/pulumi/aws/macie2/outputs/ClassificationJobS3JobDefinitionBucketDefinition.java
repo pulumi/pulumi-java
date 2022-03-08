@@ -25,8 +25,8 @@ public final class ClassificationJobS3JobDefinitionBucketDefinition {
     private ClassificationJobS3JobDefinitionBucketDefinition(
         String accountId,
         List<String> buckets) {
-        this.accountId = Objects.requireNonNull(accountId);
-        this.buckets = Objects.requireNonNull(buckets);
+        this.accountId = accountId;
+        this.buckets = buckets;
     }
 
     /**

@@ -26,8 +26,8 @@ public final class DeliveryRuleCacheExpirationActionResponse {
     private DeliveryRuleCacheExpirationActionResponse(
         String name,
         CacheExpirationActionParametersResponse parameters) {
-        this.name = Objects.requireNonNull(name);
-        this.parameters = Objects.requireNonNull(parameters);
+        this.name = name;
+        this.parameters = parameters;
     }
 
     /**

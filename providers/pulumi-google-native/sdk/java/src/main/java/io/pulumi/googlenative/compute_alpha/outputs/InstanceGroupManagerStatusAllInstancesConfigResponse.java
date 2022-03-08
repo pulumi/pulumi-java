@@ -25,8 +25,8 @@ public final class InstanceGroupManagerStatusAllInstancesConfigResponse {
     private InstanceGroupManagerStatusAllInstancesConfigResponse(
         String currentRevision,
         Boolean effective) {
-        this.currentRevision = Objects.requireNonNull(currentRevision);
-        this.effective = Objects.requireNonNull(effective);
+        this.currentRevision = currentRevision;
+        this.effective = effective;
     }
 
     /**

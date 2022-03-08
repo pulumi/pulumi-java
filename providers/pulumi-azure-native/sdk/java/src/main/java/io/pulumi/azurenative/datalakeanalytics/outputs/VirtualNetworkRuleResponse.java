@@ -42,11 +42,11 @@ public final class VirtualNetworkRuleResponse {
         String subnetId,
         String type,
         String virtualNetworkRuleState) {
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.subnetId = Objects.requireNonNull(subnetId);
-        this.type = Objects.requireNonNull(type);
-        this.virtualNetworkRuleState = Objects.requireNonNull(virtualNetworkRuleState);
+        this.id = id;
+        this.name = name;
+        this.subnetId = subnetId;
+        this.type = type;
+        this.virtualNetworkRuleState = virtualNetworkRuleState;
     }
 
     /**

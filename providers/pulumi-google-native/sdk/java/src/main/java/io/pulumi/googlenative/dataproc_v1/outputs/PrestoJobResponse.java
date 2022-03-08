@@ -59,13 +59,13 @@ public final class PrestoJobResponse {
         Map<String,String> properties,
         String queryFileUri,
         QueryListResponse queryList) {
-        this.clientTags = Objects.requireNonNull(clientTags);
-        this.continueOnFailure = Objects.requireNonNull(continueOnFailure);
-        this.loggingConfig = Objects.requireNonNull(loggingConfig);
-        this.outputFormat = Objects.requireNonNull(outputFormat);
-        this.properties = Objects.requireNonNull(properties);
-        this.queryFileUri = Objects.requireNonNull(queryFileUri);
-        this.queryList = Objects.requireNonNull(queryList);
+        this.clientTags = clientTags;
+        this.continueOnFailure = continueOnFailure;
+        this.loggingConfig = loggingConfig;
+        this.outputFormat = outputFormat;
+        this.properties = properties;
+        this.queryFileUri = queryFileUri;
+        this.queryList = queryList;
     }
 
     /**

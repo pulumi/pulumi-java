@@ -30,9 +30,9 @@ public final class ScriptActionResponse {
         String name,
         String parameters,
         String uri) {
-        this.name = Objects.requireNonNull(name);
-        this.parameters = Objects.requireNonNull(parameters);
-        this.uri = Objects.requireNonNull(uri);
+        this.name = name;
+        this.parameters = parameters;
+        this.uri = uri;
     }
 
     /**

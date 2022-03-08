@@ -18,7 +18,7 @@ public final class RuleGroupRuleOption {
     private RuleGroupRuleOption(
         String keyword,
         @Nullable List<String> settings) {
-        this.keyword = Objects.requireNonNull(keyword);
+        this.keyword = keyword;
         this.settings = settings;
     }
 

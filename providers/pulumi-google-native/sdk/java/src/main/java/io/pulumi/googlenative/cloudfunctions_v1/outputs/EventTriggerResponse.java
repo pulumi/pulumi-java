@@ -37,10 +37,10 @@ public final class EventTriggerResponse {
         FailurePolicyResponse failurePolicy,
         String resource,
         String service) {
-        this.eventType = Objects.requireNonNull(eventType);
-        this.failurePolicy = Objects.requireNonNull(failurePolicy);
-        this.resource = Objects.requireNonNull(resource);
-        this.service = Objects.requireNonNull(service);
+        this.eventType = eventType;
+        this.failurePolicy = failurePolicy;
+        this.resource = resource;
+        this.service = service;
     }
 
     /**

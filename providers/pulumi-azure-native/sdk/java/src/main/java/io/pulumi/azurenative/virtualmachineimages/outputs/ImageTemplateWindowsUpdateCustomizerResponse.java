@@ -50,7 +50,7 @@ public final class ImageTemplateWindowsUpdateCustomizerResponse {
         this.filters = filters;
         this.name = name;
         this.searchCriteria = searchCriteria;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.updateLimit = updateLimit;
     }
 

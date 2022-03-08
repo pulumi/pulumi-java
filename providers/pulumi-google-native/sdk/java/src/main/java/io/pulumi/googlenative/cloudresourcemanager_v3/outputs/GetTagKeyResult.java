@@ -60,14 +60,14 @@ public final class GetTagKeyResult {
         String parent,
         String shortName,
         String updateTime) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.description = Objects.requireNonNull(description);
-        this.etag = Objects.requireNonNull(etag);
-        this.name = Objects.requireNonNull(name);
-        this.namespacedName = Objects.requireNonNull(namespacedName);
-        this.parent = Objects.requireNonNull(parent);
-        this.shortName = Objects.requireNonNull(shortName);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.createTime = createTime;
+        this.description = description;
+        this.etag = etag;
+        this.name = name;
+        this.namespacedName = namespacedName;
+        this.parent = parent;
+        this.shortName = shortName;
+        this.updateTime = updateTime;
     }
 
     /**

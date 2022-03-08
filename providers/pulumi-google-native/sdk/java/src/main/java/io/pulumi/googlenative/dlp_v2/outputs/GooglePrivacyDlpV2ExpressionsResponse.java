@@ -25,8 +25,8 @@ public final class GooglePrivacyDlpV2ExpressionsResponse {
     private GooglePrivacyDlpV2ExpressionsResponse(
         GooglePrivacyDlpV2ConditionsResponse conditions,
         String logicalOperator) {
-        this.conditions = Objects.requireNonNull(conditions);
-        this.logicalOperator = Objects.requireNonNull(logicalOperator);
+        this.conditions = conditions;
+        this.logicalOperator = logicalOperator;
     }
 
     /**

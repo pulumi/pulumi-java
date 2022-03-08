@@ -73,13 +73,13 @@ public final class ClusterUpgradePolicyResponse {
         String upgradeTimeout) {
         this.deltaHealthPolicy = deltaHealthPolicy;
         this.forceRestart = forceRestart;
-        this.healthCheckRetryTimeout = Objects.requireNonNull(healthCheckRetryTimeout);
-        this.healthCheckStableDuration = Objects.requireNonNull(healthCheckStableDuration);
-        this.healthCheckWaitDuration = Objects.requireNonNull(healthCheckWaitDuration);
-        this.healthPolicy = Objects.requireNonNull(healthPolicy);
-        this.upgradeDomainTimeout = Objects.requireNonNull(upgradeDomainTimeout);
-        this.upgradeReplicaSetCheckTimeout = Objects.requireNonNull(upgradeReplicaSetCheckTimeout);
-        this.upgradeTimeout = Objects.requireNonNull(upgradeTimeout);
+        this.healthCheckRetryTimeout = healthCheckRetryTimeout;
+        this.healthCheckStableDuration = healthCheckStableDuration;
+        this.healthCheckWaitDuration = healthCheckWaitDuration;
+        this.healthPolicy = healthPolicy;
+        this.upgradeDomainTimeout = upgradeDomainTimeout;
+        this.upgradeReplicaSetCheckTimeout = upgradeReplicaSetCheckTimeout;
+        this.upgradeTimeout = upgradeTimeout;
     }
 
     /**

@@ -36,10 +36,10 @@ public final class GoogleCloudRetailV2betaIntervalResponse {
         Double exclusiveMinimum,
         Double maximum,
         Double minimum) {
-        this.exclusiveMaximum = Objects.requireNonNull(exclusiveMaximum);
-        this.exclusiveMinimum = Objects.requireNonNull(exclusiveMinimum);
-        this.maximum = Objects.requireNonNull(maximum);
-        this.minimum = Objects.requireNonNull(minimum);
+        this.exclusiveMaximum = exclusiveMaximum;
+        this.exclusiveMinimum = exclusiveMinimum;
+        this.maximum = maximum;
+        this.minimum = minimum;
     }
 
     /**

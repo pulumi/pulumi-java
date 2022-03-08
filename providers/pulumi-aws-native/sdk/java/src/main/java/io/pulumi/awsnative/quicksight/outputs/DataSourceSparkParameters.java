@@ -25,8 +25,8 @@ public final class DataSourceSparkParameters {
     private DataSourceSparkParameters(
         String host,
         Double port) {
-        this.host = Objects.requireNonNull(host);
-        this.port = Objects.requireNonNull(port);
+        this.host = host;
+        this.port = port;
     }
 
     /**

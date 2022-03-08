@@ -37,8 +37,8 @@ public final class CertificateConfigX509ConfigKeyUsage {
         CertificateConfigX509ConfigKeyUsageBaseKeyUsage baseKeyUsage,
         CertificateConfigX509ConfigKeyUsageExtendedKeyUsage extendedKeyUsage,
         @Nullable List<CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsage> unknownExtendedKeyUsages) {
-        this.baseKeyUsage = Objects.requireNonNull(baseKeyUsage);
-        this.extendedKeyUsage = Objects.requireNonNull(extendedKeyUsage);
+        this.baseKeyUsage = baseKeyUsage;
+        this.extendedKeyUsage = extendedKeyUsage;
         this.unknownExtendedKeyUsages = unknownExtendedKeyUsages;
     }
 

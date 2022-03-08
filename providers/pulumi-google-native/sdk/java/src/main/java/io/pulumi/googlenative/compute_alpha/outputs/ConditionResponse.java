@@ -43,11 +43,11 @@ public final class ConditionResponse {
         String svc,
         String sys,
         List<String> values) {
-        this.iam = Objects.requireNonNull(iam);
-        this.op = Objects.requireNonNull(op);
-        this.svc = Objects.requireNonNull(svc);
-        this.sys = Objects.requireNonNull(sys);
-        this.values = Objects.requireNonNull(values);
+        this.iam = iam;
+        this.op = op;
+        this.svc = svc;
+        this.sys = sys;
+        this.values = values;
     }
 
     /**

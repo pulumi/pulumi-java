@@ -39,7 +39,7 @@ public final class ExternalMetricSource {
         @Nullable LabelSelector metricSelector,
         @Nullable String targetAverageValue,
         @Nullable String targetValue) {
-        this.metricName = Objects.requireNonNull(metricName);
+        this.metricName = metricName;
         this.metricSelector = metricSelector;
         this.targetAverageValue = targetAverageValue;
         this.targetValue = targetValue;

@@ -105,19 +105,19 @@ public final class GetElasticPoolResult {
         @Nullable Map<String,String> tags,
         String type,
         @Nullable Boolean zoneRedundant) {
-        this.creationDate = Objects.requireNonNull(creationDate);
-        this.id = Objects.requireNonNull(id);
-        this.kind = Objects.requireNonNull(kind);
+        this.creationDate = creationDate;
+        this.id = id;
+        this.kind = kind;
         this.licenseType = licenseType;
-        this.location = Objects.requireNonNull(location);
+        this.location = location;
         this.maintenanceConfigurationId = maintenanceConfigurationId;
         this.maxSizeBytes = maxSizeBytes;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.perDatabaseSettings = perDatabaseSettings;
         this.sku = sku;
-        this.state = Objects.requireNonNull(state);
+        this.state = state;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.zoneRedundant = zoneRedundant;
     }
 

@@ -193,34 +193,34 @@ public final class GetBuildResult {
         String timeout,
         Map<String,String> timing,
         List<WarningResponse> warnings) {
-        this.approval = Objects.requireNonNull(approval);
-        this.artifacts = Objects.requireNonNull(artifacts);
-        this.availableSecrets = Objects.requireNonNull(availableSecrets);
-        this.buildTriggerId = Objects.requireNonNull(buildTriggerId);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.failureInfo = Objects.requireNonNull(failureInfo);
-        this.finishTime = Objects.requireNonNull(finishTime);
-        this.images = Objects.requireNonNull(images);
-        this.logUrl = Objects.requireNonNull(logUrl);
-        this.logsBucket = Objects.requireNonNull(logsBucket);
-        this.name = Objects.requireNonNull(name);
-        this.options = Objects.requireNonNull(options);
-        this.project = Objects.requireNonNull(project);
-        this.queueTtl = Objects.requireNonNull(queueTtl);
-        this.results = Objects.requireNonNull(results);
-        this.secrets = Objects.requireNonNull(secrets);
-        this.serviceAccount = Objects.requireNonNull(serviceAccount);
-        this.source = Objects.requireNonNull(source);
-        this.sourceProvenance = Objects.requireNonNull(sourceProvenance);
-        this.startTime = Objects.requireNonNull(startTime);
-        this.status = Objects.requireNonNull(status);
-        this.statusDetail = Objects.requireNonNull(statusDetail);
-        this.steps = Objects.requireNonNull(steps);
-        this.substitutions = Objects.requireNonNull(substitutions);
-        this.tags = Objects.requireNonNull(tags);
-        this.timeout = Objects.requireNonNull(timeout);
-        this.timing = Objects.requireNonNull(timing);
-        this.warnings = Objects.requireNonNull(warnings);
+        this.approval = approval;
+        this.artifacts = artifacts;
+        this.availableSecrets = availableSecrets;
+        this.buildTriggerId = buildTriggerId;
+        this.createTime = createTime;
+        this.failureInfo = failureInfo;
+        this.finishTime = finishTime;
+        this.images = images;
+        this.logUrl = logUrl;
+        this.logsBucket = logsBucket;
+        this.name = name;
+        this.options = options;
+        this.project = project;
+        this.queueTtl = queueTtl;
+        this.results = results;
+        this.secrets = secrets;
+        this.serviceAccount = serviceAccount;
+        this.source = source;
+        this.sourceProvenance = sourceProvenance;
+        this.startTime = startTime;
+        this.status = status;
+        this.statusDetail = statusDetail;
+        this.steps = steps;
+        this.substitutions = substitutions;
+        this.tags = tags;
+        this.timeout = timeout;
+        this.timing = timing;
+        this.warnings = warnings;
     }
 
     /**

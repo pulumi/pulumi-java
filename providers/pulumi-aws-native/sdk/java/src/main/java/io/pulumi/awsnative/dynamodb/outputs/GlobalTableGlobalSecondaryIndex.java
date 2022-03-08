@@ -26,9 +26,9 @@ public final class GlobalTableGlobalSecondaryIndex {
         List<GlobalTableKeySchema> keySchema,
         GlobalTableProjection projection,
         @Nullable GlobalTableWriteProvisionedThroughputSettings writeProvisionedThroughputSettings) {
-        this.indexName = Objects.requireNonNull(indexName);
-        this.keySchema = Objects.requireNonNull(keySchema);
-        this.projection = Objects.requireNonNull(projection);
+        this.indexName = indexName;
+        this.keySchema = keySchema;
+        this.projection = projection;
         this.writeProvisionedThroughputSettings = writeProvisionedThroughputSettings;
     }
 

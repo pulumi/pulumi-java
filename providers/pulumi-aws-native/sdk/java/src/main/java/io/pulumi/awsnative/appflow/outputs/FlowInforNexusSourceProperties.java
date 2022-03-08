@@ -13,7 +13,7 @@ public final class FlowInforNexusSourceProperties {
 
     @OutputCustomType.Constructor({"object"})
     private FlowInforNexusSourceProperties(String object) {
-        this.object = Objects.requireNonNull(object);
+        this.object = object;
     }
 
     public String getObject() {

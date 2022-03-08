@@ -26,7 +26,7 @@ public final class FirewallPolicyRuleMatchLayer4Config {
     private FirewallPolicyRuleMatchLayer4Config(
         String ipProtocol,
         @Nullable List<String> ports) {
-        this.ipProtocol = Objects.requireNonNull(ipProtocol);
+        this.ipProtocol = ipProtocol;
         this.ports = ports;
     }
 

@@ -36,8 +36,8 @@ public final class IngressBackend {
         String serviceName,
         Either<Integer,String> servicePort) {
         this.resource = resource;
-        this.serviceName = Objects.requireNonNull(serviceName);
-        this.servicePort = Objects.requireNonNull(servicePort);
+        this.serviceName = serviceName;
+        this.servicePort = servicePort;
     }
 
     /**

@@ -67,12 +67,12 @@ public final class GetLoggerResult {
         String type) {
         this.credentials = credentials;
         this.description = description;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.isBuffered = isBuffered;
-        this.loggerType = Objects.requireNonNull(loggerType);
-        this.name = Objects.requireNonNull(name);
+        this.loggerType = loggerType;
+        this.name = name;
         this.resourceId = resourceId;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

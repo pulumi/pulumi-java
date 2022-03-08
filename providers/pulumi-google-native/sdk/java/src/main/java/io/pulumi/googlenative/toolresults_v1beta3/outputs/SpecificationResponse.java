@@ -25,8 +25,8 @@ public final class SpecificationResponse {
     private SpecificationResponse(
         AndroidTestResponse androidTest,
         IosTestResponse iosTest) {
-        this.androidTest = Objects.requireNonNull(androidTest);
-        this.iosTest = Objects.requireNonNull(iosTest);
+        this.androidTest = androidTest;
+        this.iosTest = iosTest;
     }
 
     /**

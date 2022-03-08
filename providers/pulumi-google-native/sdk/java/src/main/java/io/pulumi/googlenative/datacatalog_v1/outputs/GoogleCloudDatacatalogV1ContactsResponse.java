@@ -18,7 +18,7 @@ public final class GoogleCloudDatacatalogV1ContactsResponse {
 
     @OutputCustomType.Constructor({"people"})
     private GoogleCloudDatacatalogV1ContactsResponse(List<GoogleCloudDatacatalogV1ContactsPersonResponse> people) {
-        this.people = Objects.requireNonNull(people);
+        this.people = people;
     }
 
     /**

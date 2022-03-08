@@ -35,7 +35,7 @@ public final class LaunchConfigurationEbsBlockDevice {
         @Nullable Integer volumeSize,
         @Nullable String volumeType) {
         this.deleteOnTermination = deleteOnTermination;
-        this.deviceName = Objects.requireNonNull(deviceName);
+        this.deviceName = deviceName;
         this.encrypted = encrypted;
         this.iops = iops;
         this.noDevice = noDevice;

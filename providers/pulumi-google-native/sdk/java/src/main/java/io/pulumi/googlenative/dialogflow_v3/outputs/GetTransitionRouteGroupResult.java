@@ -32,9 +32,9 @@ public final class GetTransitionRouteGroupResult {
         String displayName,
         String name,
         List<GoogleCloudDialogflowCxV3TransitionRouteResponse> transitionRoutes) {
-        this.displayName = Objects.requireNonNull(displayName);
-        this.name = Objects.requireNonNull(name);
-        this.transitionRoutes = Objects.requireNonNull(transitionRoutes);
+        this.displayName = displayName;
+        this.name = name;
+        this.transitionRoutes = transitionRoutes;
     }
 
     /**

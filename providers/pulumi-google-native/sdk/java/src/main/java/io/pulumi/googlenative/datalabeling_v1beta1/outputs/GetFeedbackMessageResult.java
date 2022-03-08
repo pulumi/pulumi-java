@@ -42,12 +42,12 @@ public final class GetFeedbackMessageResult {
         String name,
         GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataResponse operatorFeedbackMetadata,
         GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataResponse requesterFeedbackMetadata) {
-        this.body = Objects.requireNonNull(body);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.image = Objects.requireNonNull(image);
-        this.name = Objects.requireNonNull(name);
-        this.operatorFeedbackMetadata = Objects.requireNonNull(operatorFeedbackMetadata);
-        this.requesterFeedbackMetadata = Objects.requireNonNull(requesterFeedbackMetadata);
+        this.body = body;
+        this.createTime = createTime;
+        this.image = image;
+        this.name = name;
+        this.operatorFeedbackMetadata = operatorFeedbackMetadata;
+        this.requesterFeedbackMetadata = requesterFeedbackMetadata;
     }
 
     /**

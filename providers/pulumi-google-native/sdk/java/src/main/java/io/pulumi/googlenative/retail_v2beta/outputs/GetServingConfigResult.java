@@ -116,23 +116,23 @@ public final class GetServingConfigResult {
         List<String> replacementControlIds,
         List<String> solutionTypes,
         List<String> twowaySynonymsControlIds) {
-        this.boostControlIds = Objects.requireNonNull(boostControlIds);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.diversityLevel = Objects.requireNonNull(diversityLevel);
-        this.doNotAssociateControlIds = Objects.requireNonNull(doNotAssociateControlIds);
-        this.dynamicFacetSpec = Objects.requireNonNull(dynamicFacetSpec);
-        this.enableCategoryFilterLevel = Objects.requireNonNull(enableCategoryFilterLevel);
-        this.facetControlIds = Objects.requireNonNull(facetControlIds);
-        this.filterControlIds = Objects.requireNonNull(filterControlIds);
-        this.ignoreControlIds = Objects.requireNonNull(ignoreControlIds);
-        this.modelId = Objects.requireNonNull(modelId);
-        this.name = Objects.requireNonNull(name);
-        this.onewaySynonymsControlIds = Objects.requireNonNull(onewaySynonymsControlIds);
-        this.priceRerankingLevel = Objects.requireNonNull(priceRerankingLevel);
-        this.redirectControlIds = Objects.requireNonNull(redirectControlIds);
-        this.replacementControlIds = Objects.requireNonNull(replacementControlIds);
-        this.solutionTypes = Objects.requireNonNull(solutionTypes);
-        this.twowaySynonymsControlIds = Objects.requireNonNull(twowaySynonymsControlIds);
+        this.boostControlIds = boostControlIds;
+        this.displayName = displayName;
+        this.diversityLevel = diversityLevel;
+        this.doNotAssociateControlIds = doNotAssociateControlIds;
+        this.dynamicFacetSpec = dynamicFacetSpec;
+        this.enableCategoryFilterLevel = enableCategoryFilterLevel;
+        this.facetControlIds = facetControlIds;
+        this.filterControlIds = filterControlIds;
+        this.ignoreControlIds = ignoreControlIds;
+        this.modelId = modelId;
+        this.name = name;
+        this.onewaySynonymsControlIds = onewaySynonymsControlIds;
+        this.priceRerankingLevel = priceRerankingLevel;
+        this.redirectControlIds = redirectControlIds;
+        this.replacementControlIds = replacementControlIds;
+        this.solutionTypes = solutionTypes;
+        this.twowaySynonymsControlIds = twowaySynonymsControlIds;
     }
 
     /**

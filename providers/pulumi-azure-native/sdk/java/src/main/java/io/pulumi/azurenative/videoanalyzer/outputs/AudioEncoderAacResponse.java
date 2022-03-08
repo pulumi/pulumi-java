@@ -28,7 +28,7 @@ public final class AudioEncoderAacResponse {
         @Nullable String bitrateKbps,
         String type) {
         this.bitrateKbps = bitrateKbps;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

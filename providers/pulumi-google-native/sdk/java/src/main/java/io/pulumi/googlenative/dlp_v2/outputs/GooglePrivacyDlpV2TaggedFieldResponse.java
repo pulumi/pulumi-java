@@ -39,10 +39,10 @@ public final class GooglePrivacyDlpV2TaggedFieldResponse {
         GooglePrivacyDlpV2FieldIdResponse field,
         GoogleProtobufEmptyResponse inferred,
         GooglePrivacyDlpV2InfoTypeResponse infoType) {
-        this.customTag = Objects.requireNonNull(customTag);
-        this.field = Objects.requireNonNull(field);
-        this.inferred = Objects.requireNonNull(inferred);
-        this.infoType = Objects.requireNonNull(infoType);
+        this.customTag = customTag;
+        this.field = field;
+        this.inferred = inferred;
+        this.infoType = infoType;
     }
 
     /**

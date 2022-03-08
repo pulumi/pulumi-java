@@ -21,9 +21,9 @@ public final class DataSourceConfluencePageToIndexFieldMapping {
         DataSourceConfluencePageFieldName dataSourceFieldName,
         @Nullable String dateFieldFormat,
         String indexFieldName) {
-        this.dataSourceFieldName = Objects.requireNonNull(dataSourceFieldName);
+        this.dataSourceFieldName = dataSourceFieldName;
         this.dateFieldFormat = dateFieldFormat;
-        this.indexFieldName = Objects.requireNonNull(indexFieldName);
+        this.indexFieldName = indexFieldName;
     }
 
     public DataSourceConfluencePageFieldName getDataSourceFieldName() {

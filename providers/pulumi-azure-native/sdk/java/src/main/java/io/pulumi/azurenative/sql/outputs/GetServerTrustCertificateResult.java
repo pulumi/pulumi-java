@@ -50,12 +50,12 @@ public final class GetServerTrustCertificateResult {
         @Nullable String publicBlob,
         String thumbprint,
         String type) {
-        this.certificateName = Objects.requireNonNull(certificateName);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.certificateName = certificateName;
+        this.id = id;
+        this.name = name;
         this.publicBlob = publicBlob;
-        this.thumbprint = Objects.requireNonNull(thumbprint);
-        this.type = Objects.requireNonNull(type);
+        this.thumbprint = thumbprint;
+        this.type = type;
     }
 
     /**

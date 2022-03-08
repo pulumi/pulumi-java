@@ -24,8 +24,8 @@ public final class DatabaseTypeResponse {
     private DatabaseTypeResponse(
         String engine,
         String provider) {
-        this.engine = Objects.requireNonNull(engine);
-        this.provider = Objects.requireNonNull(provider);
+        this.engine = engine;
+        this.provider = provider;
     }
 
     /**

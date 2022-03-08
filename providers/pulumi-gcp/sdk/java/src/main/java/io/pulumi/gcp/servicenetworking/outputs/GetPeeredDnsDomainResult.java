@@ -30,13 +30,13 @@ public final class GetPeeredDnsDomainResult {
         String parent,
         String project,
         String service) {
-        this.dnsSuffix = Objects.requireNonNull(dnsSuffix);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.network = Objects.requireNonNull(network);
-        this.parent = Objects.requireNonNull(parent);
-        this.project = Objects.requireNonNull(project);
-        this.service = Objects.requireNonNull(service);
+        this.dnsSuffix = dnsSuffix;
+        this.id = id;
+        this.name = name;
+        this.network = network;
+        this.parent = parent;
+        this.project = project;
+        this.service = service;
     }
 
     public String getDnsSuffix() {

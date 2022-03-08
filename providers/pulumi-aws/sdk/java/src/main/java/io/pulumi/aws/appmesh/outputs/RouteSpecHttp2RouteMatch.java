@@ -43,7 +43,7 @@ public final class RouteSpecHttp2RouteMatch {
         @Nullable String scheme) {
         this.headers = headers;
         this.method = method;
-        this.prefix = Objects.requireNonNull(prefix);
+        this.prefix = prefix;
         this.scheme = scheme;
     }
 

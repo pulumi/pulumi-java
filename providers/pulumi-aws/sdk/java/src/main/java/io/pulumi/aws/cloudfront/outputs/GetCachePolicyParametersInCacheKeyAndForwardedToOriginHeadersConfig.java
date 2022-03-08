@@ -26,8 +26,8 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeaders
     private GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfig(
         String headerBehavior,
         List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeader> headers) {
-        this.headerBehavior = Objects.requireNonNull(headerBehavior);
-        this.headers = Objects.requireNonNull(headers);
+        this.headerBehavior = headerBehavior;
+        this.headers = headers;
     }
 
     /**

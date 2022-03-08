@@ -35,7 +35,7 @@ public final class TokenRequestSpec {
         List<String> audiences,
         @Nullable BoundObjectReference boundObjectRef,
         @Nullable Integer expirationSeconds) {
-        this.audiences = Objects.requireNonNull(audiences);
+        this.audiences = audiences;
         this.boundObjectRef = boundObjectRef;
         this.expirationSeconds = expirationSeconds;
     }

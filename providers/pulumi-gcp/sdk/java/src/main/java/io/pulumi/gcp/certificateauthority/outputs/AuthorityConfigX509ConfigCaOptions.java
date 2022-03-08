@@ -43,7 +43,7 @@ public final class AuthorityConfigX509ConfigCaOptions {
         @Nullable Integer maxIssuerPathLength,
         @Nullable Boolean nonCa,
         @Nullable Boolean zeroMaxIssuerPathLength) {
-        this.isCa = Objects.requireNonNull(isCa);
+        this.isCa = isCa;
         this.maxIssuerPathLength = maxIssuerPathLength;
         this.nonCa = nonCa;
         this.zeroMaxIssuerPathLength = zeroMaxIssuerPathLength;

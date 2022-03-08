@@ -26,8 +26,8 @@ public final class MosaicLayoutResponse {
     private MosaicLayoutResponse(
         Integer columns,
         List<TileResponse> tiles) {
-        this.columns = Objects.requireNonNull(columns);
-        this.tiles = Objects.requireNonNull(tiles);
+        this.columns = columns;
+        this.tiles = tiles;
     }
 
     /**

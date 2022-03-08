@@ -18,7 +18,7 @@ public final class DatabaseEncryptionConfig {
 
     @OutputCustomType.Constructor({"kmsKeyName"})
     private DatabaseEncryptionConfig(String kmsKeyName) {
-        this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
+        this.kmsKeyName = kmsKeyName;
     }
 
     /**

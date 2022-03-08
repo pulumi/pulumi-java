@@ -53,12 +53,12 @@ public final class WebApplicationFirewallCustomRuleResponse {
         @Nullable String name,
         Integer priority,
         String ruleType) {
-        this.action = Objects.requireNonNull(action);
-        this.etag = Objects.requireNonNull(etag);
-        this.matchConditions = Objects.requireNonNull(matchConditions);
+        this.action = action;
+        this.etag = etag;
+        this.matchConditions = matchConditions;
         this.name = name;
-        this.priority = Objects.requireNonNull(priority);
-        this.ruleType = Objects.requireNonNull(ruleType);
+        this.priority = priority;
+        this.ruleType = ruleType;
     }
 
     /**

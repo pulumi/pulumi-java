@@ -25,8 +25,8 @@ public final class LockConfigResponse {
     private LockConfigResponse(
         Boolean locked,
         String reason) {
-        this.locked = Objects.requireNonNull(locked);
-        this.reason = Objects.requireNonNull(reason);
+        this.locked = locked;
+        this.reason = reason;
     }
 
     /**

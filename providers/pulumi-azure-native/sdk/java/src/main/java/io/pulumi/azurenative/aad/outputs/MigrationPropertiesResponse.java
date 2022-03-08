@@ -31,9 +31,9 @@ public final class MigrationPropertiesResponse {
         MigrationProgressResponse migrationProgress,
         String oldSubnetId,
         String oldVnetSiteId) {
-        this.migrationProgress = Objects.requireNonNull(migrationProgress);
-        this.oldSubnetId = Objects.requireNonNull(oldSubnetId);
-        this.oldVnetSiteId = Objects.requireNonNull(oldVnetSiteId);
+        this.migrationProgress = migrationProgress;
+        this.oldSubnetId = oldSubnetId;
+        this.oldVnetSiteId = oldVnetSiteId;
     }
 
     /**

@@ -32,9 +32,9 @@ public final class TcpConfigResponse {
         GatewayDestinationResponse destination,
         String name,
         Integer port) {
-        this.destination = Objects.requireNonNull(destination);
-        this.name = Objects.requireNonNull(name);
-        this.port = Objects.requireNonNull(port);
+        this.destination = destination;
+        this.name = name;
+        this.port = port;
     }
 
     /**

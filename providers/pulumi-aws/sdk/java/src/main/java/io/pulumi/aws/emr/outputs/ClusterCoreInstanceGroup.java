@@ -64,7 +64,7 @@ public final class ClusterCoreInstanceGroup {
         this.ebsConfigs = ebsConfigs;
         this.id = id;
         this.instanceCount = instanceCount;
-        this.instanceType = Objects.requireNonNull(instanceType);
+        this.instanceType = instanceType;
         this.name = name;
     }
 

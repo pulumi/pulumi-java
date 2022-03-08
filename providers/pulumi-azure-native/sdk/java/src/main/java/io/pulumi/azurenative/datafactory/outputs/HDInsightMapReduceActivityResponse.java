@@ -113,19 +113,19 @@ public final class HDInsightMapReduceActivityResponse {
         String type,
         @Nullable List<UserPropertyResponse> userProperties) {
         this.arguments = arguments;
-        this.className = Objects.requireNonNull(className);
+        this.className = className;
         this.defines = defines;
         this.dependsOn = dependsOn;
         this.description = description;
         this.getDebugInfo = getDebugInfo;
-        this.jarFilePath = Objects.requireNonNull(jarFilePath);
+        this.jarFilePath = jarFilePath;
         this.jarLibs = jarLibs;
         this.jarLinkedService = jarLinkedService;
         this.linkedServiceName = linkedServiceName;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.policy = policy;
         this.storageLinkedServices = storageLinkedServices;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.userProperties = userProperties;
     }
 

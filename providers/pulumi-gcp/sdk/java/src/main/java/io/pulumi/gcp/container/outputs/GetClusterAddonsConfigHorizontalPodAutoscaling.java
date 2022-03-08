@@ -13,7 +13,7 @@ public final class GetClusterAddonsConfigHorizontalPodAutoscaling {
 
     @OutputCustomType.Constructor({"disabled"})
     private GetClusterAddonsConfigHorizontalPodAutoscaling(Boolean disabled) {
-        this.disabled = Objects.requireNonNull(disabled);
+        this.disabled = disabled;
     }
 
     public Boolean getDisabled() {

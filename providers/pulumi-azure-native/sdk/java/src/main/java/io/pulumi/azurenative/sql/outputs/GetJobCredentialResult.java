@@ -36,10 +36,10 @@ public final class GetJobCredentialResult {
         String name,
         String type,
         String username) {
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
-        this.username = Objects.requireNonNull(username);
+        this.id = id;
+        this.name = name;
+        this.type = type;
+        this.username = username;
     }
 
     /**

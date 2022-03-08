@@ -46,10 +46,10 @@ public final class ApplicationGatewayRewriteRuleSetResponse {
         @Nullable String name,
         String provisioningState,
         @Nullable List<ApplicationGatewayRewriteRuleResponse> rewriteRules) {
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.id = id;
         this.name = name;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.rewriteRules = rewriteRules;
     }
 

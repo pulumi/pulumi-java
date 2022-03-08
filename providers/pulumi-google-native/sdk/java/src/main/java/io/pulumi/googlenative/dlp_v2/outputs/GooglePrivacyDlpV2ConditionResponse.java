@@ -32,9 +32,9 @@ public final class GooglePrivacyDlpV2ConditionResponse {
         GooglePrivacyDlpV2FieldIdResponse field,
         String operator,
         GooglePrivacyDlpV2ValueResponse value) {
-        this.field = Objects.requireNonNull(field);
-        this.operator = Objects.requireNonNull(operator);
-        this.value = Objects.requireNonNull(value);
+        this.field = field;
+        this.operator = operator;
+        this.value = value;
     }
 
     /**

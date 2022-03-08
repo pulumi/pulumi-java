@@ -55,13 +55,13 @@ public final class GetMetadataImportResult {
         String name,
         String state,
         String updateTime) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.databaseDump = Objects.requireNonNull(databaseDump);
-        this.description = Objects.requireNonNull(description);
-        this.endTime = Objects.requireNonNull(endTime);
-        this.name = Objects.requireNonNull(name);
-        this.state = Objects.requireNonNull(state);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.createTime = createTime;
+        this.databaseDump = databaseDump;
+        this.description = description;
+        this.endTime = endTime;
+        this.name = name;
+        this.state = state;
+        this.updateTime = updateTime;
     }
 
     /**

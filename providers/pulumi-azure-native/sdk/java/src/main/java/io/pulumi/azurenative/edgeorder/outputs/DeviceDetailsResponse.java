@@ -30,9 +30,9 @@ public final class DeviceDetailsResponse {
         String managementResourceId,
         String managementResourceTenantId,
         String serialNumber) {
-        this.managementResourceId = Objects.requireNonNull(managementResourceId);
-        this.managementResourceTenantId = Objects.requireNonNull(managementResourceTenantId);
-        this.serialNumber = Objects.requireNonNull(serialNumber);
+        this.managementResourceId = managementResourceId;
+        this.managementResourceTenantId = managementResourceTenantId;
+        this.serialNumber = serialNumber;
     }
 
     /**

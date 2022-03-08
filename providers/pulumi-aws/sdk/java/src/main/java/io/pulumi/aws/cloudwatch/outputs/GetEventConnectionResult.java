@@ -42,11 +42,11 @@ public final class GetEventConnectionResult {
         String id,
         String name,
         String secretArn) {
-        this.arn = Objects.requireNonNull(arn);
-        this.authorizationType = Objects.requireNonNull(authorizationType);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.secretArn = Objects.requireNonNull(secretArn);
+        this.arn = arn;
+        this.authorizationType = authorizationType;
+        this.id = id;
+        this.name = name;
+        this.secretArn = secretArn;
     }
 
     /**

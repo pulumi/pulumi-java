@@ -94,18 +94,18 @@ public final class GetUserResult {
         String totalUsage,
         String type,
         @Nullable String uniqueIdentifier) {
-        this.email = Objects.requireNonNull(email);
-        this.familyName = Objects.requireNonNull(familyName);
-        this.givenName = Objects.requireNonNull(givenName);
-        this.id = Objects.requireNonNull(id);
-        this.latestOperationResult = Objects.requireNonNull(latestOperationResult);
+        this.email = email;
+        this.familyName = familyName;
+        this.givenName = givenName;
+        this.id = id;
+        this.latestOperationResult = latestOperationResult;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.provisioningState = provisioningState;
         this.tags = tags;
-        this.tenantId = Objects.requireNonNull(tenantId);
-        this.totalUsage = Objects.requireNonNull(totalUsage);
-        this.type = Objects.requireNonNull(type);
+        this.tenantId = tenantId;
+        this.totalUsage = totalUsage;
+        this.type = type;
         this.uniqueIdentifier = uniqueIdentifier;
     }
 

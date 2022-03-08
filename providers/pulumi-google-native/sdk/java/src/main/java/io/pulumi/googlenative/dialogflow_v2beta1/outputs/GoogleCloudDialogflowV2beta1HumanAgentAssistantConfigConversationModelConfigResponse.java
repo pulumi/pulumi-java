@@ -17,7 +17,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversa
 
     @OutputCustomType.Constructor({"model"})
     private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfigResponse(String model) {
-        this.model = Objects.requireNonNull(model);
+        this.model = model;
     }
 
     /**

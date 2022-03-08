@@ -51,21 +51,21 @@ public final class GetLaunchTemplateNetworkInterface {
         String privateIpAddress,
         List<String> securityGroups,
         String subnetId) {
-        this.associateCarrierIpAddress = Objects.requireNonNull(associateCarrierIpAddress);
+        this.associateCarrierIpAddress = associateCarrierIpAddress;
         this.associatePublicIpAddress = associatePublicIpAddress;
         this.deleteOnTermination = deleteOnTermination;
-        this.description = Objects.requireNonNull(description);
-        this.deviceIndex = Objects.requireNonNull(deviceIndex);
-        this.interfaceType = Objects.requireNonNull(interfaceType);
-        this.ipv4AddressCount = Objects.requireNonNull(ipv4AddressCount);
-        this.ipv4Addresses = Objects.requireNonNull(ipv4Addresses);
-        this.ipv6AddressCount = Objects.requireNonNull(ipv6AddressCount);
-        this.ipv6Addresses = Objects.requireNonNull(ipv6Addresses);
+        this.description = description;
+        this.deviceIndex = deviceIndex;
+        this.interfaceType = interfaceType;
+        this.ipv4AddressCount = ipv4AddressCount;
+        this.ipv4Addresses = ipv4Addresses;
+        this.ipv6AddressCount = ipv6AddressCount;
+        this.ipv6Addresses = ipv6Addresses;
         this.networkCardIndex = networkCardIndex;
-        this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId);
-        this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
-        this.securityGroups = Objects.requireNonNull(securityGroups);
-        this.subnetId = Objects.requireNonNull(subnetId);
+        this.networkInterfaceId = networkInterfaceId;
+        this.privateIpAddress = privateIpAddress;
+        this.securityGroups = securityGroups;
+        this.subnetId = subnetId;
     }
 
     public String getAssociateCarrierIpAddress() {

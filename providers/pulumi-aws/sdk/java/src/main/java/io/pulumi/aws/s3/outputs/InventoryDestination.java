@@ -17,7 +17,7 @@ public final class InventoryDestination {
 
     @OutputCustomType.Constructor({"bucket"})
     private InventoryDestination(InventoryDestinationBucket bucket) {
-        this.bucket = Objects.requireNonNull(bucket);
+        this.bucket = bucket;
     }
 
     /**

@@ -105,7 +105,7 @@ public final class AzureSqlDWLinkedServiceResponse {
         this.annotations = annotations;
         this.azureCloudType = azureCloudType;
         this.connectVia = connectVia;
-        this.connectionString = Objects.requireNonNull(connectionString);
+        this.connectionString = connectionString;
         this.credential = credential;
         this.description = description;
         this.encryptedCredential = encryptedCredential;
@@ -114,7 +114,7 @@ public final class AzureSqlDWLinkedServiceResponse {
         this.servicePrincipalId = servicePrincipalId;
         this.servicePrincipalKey = servicePrincipalKey;
         this.tenant = tenant;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

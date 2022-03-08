@@ -31,9 +31,9 @@ public final class GetSubscriptionResult {
         DeliveryConfigResponse deliveryConfig,
         String name,
         String topic) {
-        this.deliveryConfig = Objects.requireNonNull(deliveryConfig);
-        this.name = Objects.requireNonNull(name);
-        this.topic = Objects.requireNonNull(topic);
+        this.deliveryConfig = deliveryConfig;
+        this.name = name;
+        this.topic = topic;
     }
 
     /**

@@ -76,16 +76,16 @@ public final class GetBackupScheduleResult {
         String scheduleStatus,
         String startTime,
         String type) {
-        this.backupType = Objects.requireNonNull(backupType);
-        this.id = Objects.requireNonNull(id);
+        this.backupType = backupType;
+        this.id = id;
         this.kind = kind;
-        this.lastSuccessfulRun = Objects.requireNonNull(lastSuccessfulRun);
-        this.name = Objects.requireNonNull(name);
-        this.retentionCount = Objects.requireNonNull(retentionCount);
-        this.scheduleRecurrence = Objects.requireNonNull(scheduleRecurrence);
-        this.scheduleStatus = Objects.requireNonNull(scheduleStatus);
-        this.startTime = Objects.requireNonNull(startTime);
-        this.type = Objects.requireNonNull(type);
+        this.lastSuccessfulRun = lastSuccessfulRun;
+        this.name = name;
+        this.retentionCount = retentionCount;
+        this.scheduleRecurrence = scheduleRecurrence;
+        this.scheduleStatus = scheduleStatus;
+        this.startTime = startTime;
+        this.type = type;
     }
 
     /**

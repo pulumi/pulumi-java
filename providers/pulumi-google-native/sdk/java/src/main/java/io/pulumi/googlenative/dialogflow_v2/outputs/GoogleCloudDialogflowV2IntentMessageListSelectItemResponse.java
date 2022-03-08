@@ -38,10 +38,10 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectItemResponse {
         GoogleCloudDialogflowV2IntentMessageImageResponse image,
         GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse info,
         String title) {
-        this.description = Objects.requireNonNull(description);
-        this.image = Objects.requireNonNull(image);
-        this.info = Objects.requireNonNull(info);
-        this.title = Objects.requireNonNull(title);
+        this.description = description;
+        this.image = image;
+        this.info = info;
+        this.title = title;
     }
 
     /**

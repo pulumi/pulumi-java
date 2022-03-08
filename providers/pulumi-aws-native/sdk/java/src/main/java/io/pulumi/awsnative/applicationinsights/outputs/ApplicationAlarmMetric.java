@@ -17,7 +17,7 @@ public final class ApplicationAlarmMetric {
 
     @OutputCustomType.Constructor({"alarmMetricName"})
     private ApplicationAlarmMetric(String alarmMetricName) {
-        this.alarmMetricName = Objects.requireNonNull(alarmMetricName);
+        this.alarmMetricName = alarmMetricName;
     }
 
     /**

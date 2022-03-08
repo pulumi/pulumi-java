@@ -18,7 +18,7 @@ public final class GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse {
 
     @OutputCustomType.Constructor({"importedLibraries"})
     private GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse(List<String> importedLibraries) {
-        this.importedLibraries = Objects.requireNonNull(importedLibraries);
+        this.importedLibraries = importedLibraries;
     }
 
     /**

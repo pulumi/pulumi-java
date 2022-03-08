@@ -34,8 +34,8 @@ public final class SloRequestBasedSliDistributionCut {
     private SloRequestBasedSliDistributionCut(
         String distributionFilter,
         SloRequestBasedSliDistributionCutRange range) {
-        this.distributionFilter = Objects.requireNonNull(distributionFilter);
-        this.range = Objects.requireNonNull(range);
+        this.distributionFilter = distributionFilter;
+        this.range = range;
     }
 
     /**

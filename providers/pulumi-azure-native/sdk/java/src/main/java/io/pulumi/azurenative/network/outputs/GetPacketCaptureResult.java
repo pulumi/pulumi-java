@@ -80,13 +80,13 @@ public final class GetPacketCaptureResult {
         @Nullable Integer timeLimitInSeconds,
         @Nullable Double totalBytesPerSession) {
         this.bytesToCapturePerPacket = bytesToCapturePerPacket;
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.filters = filters;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.storageLocation = Objects.requireNonNull(storageLocation);
-        this.target = Objects.requireNonNull(target);
+        this.id = id;
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.storageLocation = storageLocation;
+        this.target = target;
         this.timeLimitInSeconds = timeLimitInSeconds;
         this.totalBytesPerSession = totalBytesPerSession;
     }

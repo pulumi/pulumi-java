@@ -81,15 +81,15 @@ public final class GetWorkbookTemplateResult {
         Object templateData,
         String type) {
         this.author = author;
-        this.galleries = Objects.requireNonNull(galleries);
-        this.id = Objects.requireNonNull(id);
+        this.galleries = galleries;
+        this.id = id;
         this.localized = localized;
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
+        this.location = location;
+        this.name = name;
         this.priority = priority;
         this.tags = tags;
-        this.templateData = Objects.requireNonNull(templateData);
-        this.type = Objects.requireNonNull(type);
+        this.templateData = templateData;
+        this.type = type;
     }
 
     /**

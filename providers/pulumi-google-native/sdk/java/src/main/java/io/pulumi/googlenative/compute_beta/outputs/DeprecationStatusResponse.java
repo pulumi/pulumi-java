@@ -49,12 +49,12 @@ public final class DeprecationStatusResponse {
         String replacement,
         String state,
         RolloutPolicyResponse stateOverride) {
-        this.deleted = Objects.requireNonNull(deleted);
-        this.deprecated = Objects.requireNonNull(deprecated);
-        this.obsolete = Objects.requireNonNull(obsolete);
-        this.replacement = Objects.requireNonNull(replacement);
-        this.state = Objects.requireNonNull(state);
-        this.stateOverride = Objects.requireNonNull(stateOverride);
+        this.deleted = deleted;
+        this.deprecated = deprecated;
+        this.obsolete = obsolete;
+        this.replacement = replacement;
+        this.state = state;
+        this.stateOverride = stateOverride;
     }
 
     /**

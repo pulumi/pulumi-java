@@ -166,20 +166,20 @@ public final class GetRegisteredServerResult {
         @Nullable String storageSyncServiceUid,
         String type) {
         this.agentVersion = agentVersion;
-        this.agentVersionExpirationDate = Objects.requireNonNull(agentVersionExpirationDate);
-        this.agentVersionStatus = Objects.requireNonNull(agentVersionStatus);
+        this.agentVersionExpirationDate = agentVersionExpirationDate;
+        this.agentVersionStatus = agentVersionStatus;
         this.clusterId = clusterId;
         this.clusterName = clusterName;
         this.discoveryEndpointUri = discoveryEndpointUri;
         this.friendlyName = friendlyName;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.lastHeartBeat = lastHeartBeat;
         this.lastOperationName = lastOperationName;
         this.lastWorkflowId = lastWorkflowId;
         this.managementEndpointUri = managementEndpointUri;
         this.monitoringConfiguration = monitoringConfiguration;
         this.monitoringEndpointUri = monitoringEndpointUri;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.provisioningState = provisioningState;
         this.resourceLocation = resourceLocation;
         this.serverCertificate = serverCertificate;
@@ -189,7 +189,7 @@ public final class GetRegisteredServerResult {
         this.serverRole = serverRole;
         this.serviceLocation = serviceLocation;
         this.storageSyncServiceUid = storageSyncServiceUid;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

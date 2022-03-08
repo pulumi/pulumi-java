@@ -68,15 +68,15 @@ public final class EnvironmentDetailsResponse {
         String provisioningState,
         String totalUsage,
         VirtualMachineDetailsResponse virtualMachineDetails) {
-        this.description = Objects.requireNonNull(description);
-        this.environmentState = Objects.requireNonNull(environmentState);
-        this.id = Objects.requireNonNull(id);
-        this.latestOperationResult = Objects.requireNonNull(latestOperationResult);
-        this.name = Objects.requireNonNull(name);
-        this.passwordLastReset = Objects.requireNonNull(passwordLastReset);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.totalUsage = Objects.requireNonNull(totalUsage);
-        this.virtualMachineDetails = Objects.requireNonNull(virtualMachineDetails);
+        this.description = description;
+        this.environmentState = environmentState;
+        this.id = id;
+        this.latestOperationResult = latestOperationResult;
+        this.name = name;
+        this.passwordLastReset = passwordLastReset;
+        this.provisioningState = provisioningState;
+        this.totalUsage = totalUsage;
+        this.virtualMachineDetails = virtualMachineDetails;
     }
 
     /**

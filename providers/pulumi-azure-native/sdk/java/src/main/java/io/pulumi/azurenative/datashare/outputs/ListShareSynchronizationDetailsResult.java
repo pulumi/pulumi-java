@@ -29,7 +29,7 @@ public final class ListShareSynchronizationDetailsResult {
         @Nullable String nextLink,
         List<SynchronizationDetailsResponse> value) {
         this.nextLink = nextLink;
-        this.value = Objects.requireNonNull(value);
+        this.value = value;
     }
 
     /**

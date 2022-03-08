@@ -25,8 +25,8 @@ public final class FilesNotTieringErrorResponse {
     private FilesNotTieringErrorResponse(
         Integer errorCode,
         Double fileCount) {
-        this.errorCode = Objects.requireNonNull(errorCode);
-        this.fileCount = Objects.requireNonNull(fileCount);
+        this.errorCode = errorCode;
+        this.fileCount = fileCount;
     }
 
     /**

@@ -64,16 +64,16 @@ public final class GetFunctionResult {
         String runtime,
         String stage,
         String status) {
-        this.arn = Objects.requireNonNull(arn);
-        this.code = Objects.requireNonNull(code);
-        this.comment = Objects.requireNonNull(comment);
-        this.etag = Objects.requireNonNull(etag);
-        this.id = Objects.requireNonNull(id);
-        this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
-        this.name = Objects.requireNonNull(name);
-        this.runtime = Objects.requireNonNull(runtime);
-        this.stage = Objects.requireNonNull(stage);
-        this.status = Objects.requireNonNull(status);
+        this.arn = arn;
+        this.code = code;
+        this.comment = comment;
+        this.etag = etag;
+        this.id = id;
+        this.lastModifiedTime = lastModifiedTime;
+        this.name = name;
+        this.runtime = runtime;
+        this.stage = stage;
+        this.status = status;
     }
 
     /**

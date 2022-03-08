@@ -25,8 +25,8 @@ public final class MLTransformParameters {
     private MLTransformParameters(
         MLTransformParametersFindMatchesParameters findMatchesParameters,
         String transformType) {
-        this.findMatchesParameters = Objects.requireNonNull(findMatchesParameters);
-        this.transformType = Objects.requireNonNull(transformType);
+        this.findMatchesParameters = findMatchesParameters;
+        this.transformType = transformType;
     }
 
     /**

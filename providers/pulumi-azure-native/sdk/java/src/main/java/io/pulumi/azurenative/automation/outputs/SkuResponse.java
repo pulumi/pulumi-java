@@ -35,7 +35,7 @@ public final class SkuResponse {
         String name) {
         this.capacity = capacity;
         this.family = family;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

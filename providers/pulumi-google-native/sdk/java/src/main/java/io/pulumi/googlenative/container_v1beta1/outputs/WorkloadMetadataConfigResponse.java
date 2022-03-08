@@ -24,8 +24,8 @@ public final class WorkloadMetadataConfigResponse {
     private WorkloadMetadataConfigResponse(
         String mode,
         String nodeMetadata) {
-        this.mode = Objects.requireNonNull(mode);
-        this.nodeMetadata = Objects.requireNonNull(nodeMetadata);
+        this.mode = mode;
+        this.nodeMetadata = nodeMetadata;
     }
 
     /**

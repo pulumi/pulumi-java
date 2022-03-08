@@ -62,14 +62,14 @@ public final class GetDatasetResult {
         List<GoogleCloudDatalabelingV1beta1InputConfigResponse> inputConfigs,
         String lastMigrateTime,
         String name) {
-        this.blockingResources = Objects.requireNonNull(blockingResources);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.dataItemCount = Objects.requireNonNull(dataItemCount);
-        this.description = Objects.requireNonNull(description);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.inputConfigs = Objects.requireNonNull(inputConfigs);
-        this.lastMigrateTime = Objects.requireNonNull(lastMigrateTime);
-        this.name = Objects.requireNonNull(name);
+        this.blockingResources = blockingResources;
+        this.createTime = createTime;
+        this.dataItemCount = dataItemCount;
+        this.description = description;
+        this.displayName = displayName;
+        this.inputConfigs = inputConfigs;
+        this.lastMigrateTime = lastMigrateTime;
+        this.name = name;
     }
 
     /**

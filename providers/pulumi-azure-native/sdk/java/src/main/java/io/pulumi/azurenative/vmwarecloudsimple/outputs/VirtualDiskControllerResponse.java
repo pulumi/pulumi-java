@@ -36,10 +36,10 @@ public final class VirtualDiskControllerResponse {
         String name,
         String subType,
         String type) {
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.subType = Objects.requireNonNull(subType);
-        this.type = Objects.requireNonNull(type);
+        this.id = id;
+        this.name = name;
+        this.subType = subType;
+        this.type = type;
     }
 
     /**

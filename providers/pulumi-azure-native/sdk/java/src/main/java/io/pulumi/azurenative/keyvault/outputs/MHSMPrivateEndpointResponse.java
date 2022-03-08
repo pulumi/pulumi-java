@@ -17,7 +17,7 @@ public final class MHSMPrivateEndpointResponse {
 
     @OutputCustomType.Constructor({"id"})
     private MHSMPrivateEndpointResponse(String id) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
     }
 
     /**

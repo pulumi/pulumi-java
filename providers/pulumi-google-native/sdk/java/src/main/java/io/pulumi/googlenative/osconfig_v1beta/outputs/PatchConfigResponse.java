@@ -73,15 +73,15 @@ public final class PatchConfigResponse {
         WindowsUpdateSettingsResponse windowsUpdate,
         YumSettingsResponse yum,
         ZypperSettingsResponse zypper) {
-        this.apt = Objects.requireNonNull(apt);
-        this.goo = Objects.requireNonNull(goo);
-        this.migInstancesAllowed = Objects.requireNonNull(migInstancesAllowed);
-        this.postStep = Objects.requireNonNull(postStep);
-        this.preStep = Objects.requireNonNull(preStep);
-        this.rebootConfig = Objects.requireNonNull(rebootConfig);
-        this.windowsUpdate = Objects.requireNonNull(windowsUpdate);
-        this.yum = Objects.requireNonNull(yum);
-        this.zypper = Objects.requireNonNull(zypper);
+        this.apt = apt;
+        this.goo = goo;
+        this.migInstancesAllowed = migInstancesAllowed;
+        this.postStep = postStep;
+        this.preStep = preStep;
+        this.rebootConfig = rebootConfig;
+        this.windowsUpdate = windowsUpdate;
+        this.yum = yum;
+        this.zypper = zypper;
     }
 
     /**

@@ -90,13 +90,13 @@ public final class AzureFunctionActivityResponse {
         this.body = body;
         this.dependsOn = dependsOn;
         this.description = description;
-        this.functionName = Objects.requireNonNull(functionName);
+        this.functionName = functionName;
         this.headers = headers;
         this.linkedServiceName = linkedServiceName;
-        this.method = Objects.requireNonNull(method);
-        this.name = Objects.requireNonNull(name);
+        this.method = method;
+        this.name = name;
         this.policy = policy;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.userProperties = userProperties;
     }
 

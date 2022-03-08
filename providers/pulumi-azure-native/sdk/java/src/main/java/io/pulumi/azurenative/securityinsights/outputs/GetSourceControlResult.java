@@ -113,22 +113,22 @@ public final class GetSourceControlResult {
         RepositoryResponse repository,
         SystemDataResponse systemData,
         String type) {
-        this.contentTypes = Objects.requireNonNull(contentTypes);
+        this.contentTypes = contentTypes;
         this.createdAt = createdAt;
         this.createdBy = createdBy;
         this.createdByType = createdByType;
         this.description = description;
-        this.displayName = Objects.requireNonNull(displayName);
+        this.displayName = displayName;
         this.etag = etag;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.lastModifiedAt = lastModifiedAt;
         this.lastModifiedBy = lastModifiedBy;
         this.lastModifiedByType = lastModifiedByType;
-        this.name = Objects.requireNonNull(name);
-        this.repoType = Objects.requireNonNull(repoType);
-        this.repository = Objects.requireNonNull(repository);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.name = name;
+        this.repoType = repoType;
+        this.repository = repository;
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

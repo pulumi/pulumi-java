@@ -57,7 +57,7 @@ public final class DataFlowSinkResponse {
         this.description = description;
         this.flowlet = flowlet;
         this.linkedService = linkedService;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.schemaLinkedService = schemaLinkedService;
     }
 

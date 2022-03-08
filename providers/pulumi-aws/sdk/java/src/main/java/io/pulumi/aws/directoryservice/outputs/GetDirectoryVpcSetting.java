@@ -27,9 +27,9 @@ public final class GetDirectoryVpcSetting {
         List<String> availabilityZones,
         List<String> subnetIds,
         String vpcId) {
-        this.availabilityZones = Objects.requireNonNull(availabilityZones);
-        this.subnetIds = Objects.requireNonNull(subnetIds);
-        this.vpcId = Objects.requireNonNull(vpcId);
+        this.availabilityZones = availabilityZones;
+        this.subnetIds = subnetIds;
+        this.vpcId = vpcId;
     }
 
     public List<String> getAvailabilityZones() {

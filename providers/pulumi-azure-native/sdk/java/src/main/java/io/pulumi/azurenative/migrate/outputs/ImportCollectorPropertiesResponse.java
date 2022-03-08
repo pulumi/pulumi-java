@@ -20,9 +20,9 @@ public final class ImportCollectorPropertiesResponse {
         String createdTimestamp,
         @Nullable String discoverySiteId,
         String updatedTimestamp) {
-        this.createdTimestamp = Objects.requireNonNull(createdTimestamp);
+        this.createdTimestamp = createdTimestamp;
         this.discoverySiteId = discoverySiteId;
-        this.updatedTimestamp = Objects.requireNonNull(updatedTimestamp);
+        this.updatedTimestamp = updatedTimestamp;
     }
 
     public String getCreatedTimestamp() {

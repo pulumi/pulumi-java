@@ -36,10 +36,10 @@ public final class VmStateDetailsResponse {
         String powerState,
         String rdpAuthority,
         String sshAuthority) {
-        this.lastKnownPowerState = Objects.requireNonNull(lastKnownPowerState);
-        this.powerState = Objects.requireNonNull(powerState);
-        this.rdpAuthority = Objects.requireNonNull(rdpAuthority);
-        this.sshAuthority = Objects.requireNonNull(sshAuthority);
+        this.lastKnownPowerState = lastKnownPowerState;
+        this.powerState = powerState;
+        this.rdpAuthority = rdpAuthority;
+        this.sshAuthority = sshAuthority;
     }
 
     /**

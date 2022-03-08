@@ -22,9 +22,9 @@ public final class PipelineMath {
         String math,
         String name,
         @Nullable String next) {
-        this.attribute = Objects.requireNonNull(attribute);
-        this.math = Objects.requireNonNull(math);
-        this.name = Objects.requireNonNull(name);
+        this.attribute = attribute;
+        this.math = math;
+        this.name = name;
         this.next = next;
     }
 

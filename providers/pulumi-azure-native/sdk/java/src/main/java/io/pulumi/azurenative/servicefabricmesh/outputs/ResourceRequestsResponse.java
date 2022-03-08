@@ -24,8 +24,8 @@ public final class ResourceRequestsResponse {
     private ResourceRequestsResponse(
         Double cpu,
         Double memoryInGB) {
-        this.cpu = Objects.requireNonNull(cpu);
-        this.memoryInGB = Objects.requireNonNull(memoryInGB);
+        this.cpu = cpu;
+        this.memoryInGB = memoryInGB;
     }
 
     /**

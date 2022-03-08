@@ -43,11 +43,11 @@ public final class LoadBalancerBackendResponse {
         List<String> healthCheckBlockingFirewallRules,
         String healthCheckFirewallState,
         String uri) {
-        this.displayName = Objects.requireNonNull(displayName);
-        this.healthCheckAllowingFirewallRules = Objects.requireNonNull(healthCheckAllowingFirewallRules);
-        this.healthCheckBlockingFirewallRules = Objects.requireNonNull(healthCheckBlockingFirewallRules);
-        this.healthCheckFirewallState = Objects.requireNonNull(healthCheckFirewallState);
-        this.uri = Objects.requireNonNull(uri);
+        this.displayName = displayName;
+        this.healthCheckAllowingFirewallRules = healthCheckAllowingFirewallRules;
+        this.healthCheckBlockingFirewallRules = healthCheckBlockingFirewallRules;
+        this.healthCheckFirewallState = healthCheckFirewallState;
+        this.uri = uri;
     }
 
     /**

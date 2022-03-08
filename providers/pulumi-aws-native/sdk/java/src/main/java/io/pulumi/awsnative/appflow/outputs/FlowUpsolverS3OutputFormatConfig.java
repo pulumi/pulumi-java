@@ -24,7 +24,7 @@ public final class FlowUpsolverS3OutputFormatConfig {
         FlowPrefixConfig prefixConfig) {
         this.aggregationConfig = aggregationConfig;
         this.fileType = fileType;
-        this.prefixConfig = Objects.requireNonNull(prefixConfig);
+        this.prefixConfig = prefixConfig;
     }
 
     public Optional<FlowAggregationConfig> getAggregationConfig() {

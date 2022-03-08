@@ -60,8 +60,8 @@ public final class AnalyticsApplicationOutput {
         this.kinesisFirehose = kinesisFirehose;
         this.kinesisStream = kinesisStream;
         this.lambda = lambda;
-        this.name = Objects.requireNonNull(name);
-        this.schema = Objects.requireNonNull(schema);
+        this.name = name;
+        this.schema = schema;
     }
 
     /**

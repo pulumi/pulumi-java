@@ -13,7 +13,7 @@ public final class ManagedZoneReverseLookupConfigResponse {
 
     @OutputCustomType.Constructor({"kind"})
     private ManagedZoneReverseLookupConfigResponse(String kind) {
-        this.kind = Objects.requireNonNull(kind);
+        this.kind = kind;
     }
 
     public String getKind() {

@@ -38,10 +38,10 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigResponse {
         GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigResponse humanAgentSuggestionConfig,
         GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalysisConfigResponse messageAnalysisConfig,
         GoogleCloudDialogflowV2NotificationConfigResponse notificationConfig) {
-        this.endUserSuggestionConfig = Objects.requireNonNull(endUserSuggestionConfig);
-        this.humanAgentSuggestionConfig = Objects.requireNonNull(humanAgentSuggestionConfig);
-        this.messageAnalysisConfig = Objects.requireNonNull(messageAnalysisConfig);
-        this.notificationConfig = Objects.requireNonNull(notificationConfig);
+        this.endUserSuggestionConfig = endUserSuggestionConfig;
+        this.humanAgentSuggestionConfig = humanAgentSuggestionConfig;
+        this.messageAnalysisConfig = messageAnalysisConfig;
+        this.notificationConfig = notificationConfig;
     }
 
     /**

@@ -35,7 +35,7 @@ public final class JobOutput {
         this.compressionFormat = compressionFormat;
         this.format = format;
         this.formatOptions = formatOptions;
-        this.location = Objects.requireNonNull(location);
+        this.location = location;
         this.overwrite = overwrite;
         this.partitionColumns = partitionColumns;
     }

@@ -189,36 +189,36 @@ public final class GetGlobalForwardingRuleResult {
         List<String> sourceIpRanges,
         String subnetwork,
         String target) {
-        this.allPorts = Objects.requireNonNull(allPorts);
-        this.allowGlobalAccess = Objects.requireNonNull(allowGlobalAccess);
-        this.backendService = Objects.requireNonNull(backendService);
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.description = Objects.requireNonNull(description);
-        this.fingerprint = Objects.requireNonNull(fingerprint);
-        this.ipAddress = Objects.requireNonNull(ipAddress);
-        this.ipProtocol = Objects.requireNonNull(ipProtocol);
-        this.ipVersion = Objects.requireNonNull(ipVersion);
-        this.isMirroringCollector = Objects.requireNonNull(isMirroringCollector);
-        this.kind = Objects.requireNonNull(kind);
-        this.labelFingerprint = Objects.requireNonNull(labelFingerprint);
-        this.labels = Objects.requireNonNull(labels);
-        this.loadBalancingScheme = Objects.requireNonNull(loadBalancingScheme);
-        this.metadataFilters = Objects.requireNonNull(metadataFilters);
-        this.name = Objects.requireNonNull(name);
-        this.network = Objects.requireNonNull(network);
-        this.networkTier = Objects.requireNonNull(networkTier);
-        this.portRange = Objects.requireNonNull(portRange);
-        this.ports = Objects.requireNonNull(ports);
-        this.pscConnectionId = Objects.requireNonNull(pscConnectionId);
-        this.pscConnectionStatus = Objects.requireNonNull(pscConnectionStatus);
-        this.region = Objects.requireNonNull(region);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.serviceDirectoryRegistrations = Objects.requireNonNull(serviceDirectoryRegistrations);
-        this.serviceLabel = Objects.requireNonNull(serviceLabel);
-        this.serviceName = Objects.requireNonNull(serviceName);
-        this.sourceIpRanges = Objects.requireNonNull(sourceIpRanges);
-        this.subnetwork = Objects.requireNonNull(subnetwork);
-        this.target = Objects.requireNonNull(target);
+        this.allPorts = allPorts;
+        this.allowGlobalAccess = allowGlobalAccess;
+        this.backendService = backendService;
+        this.creationTimestamp = creationTimestamp;
+        this.description = description;
+        this.fingerprint = fingerprint;
+        this.ipAddress = ipAddress;
+        this.ipProtocol = ipProtocol;
+        this.ipVersion = ipVersion;
+        this.isMirroringCollector = isMirroringCollector;
+        this.kind = kind;
+        this.labelFingerprint = labelFingerprint;
+        this.labels = labels;
+        this.loadBalancingScheme = loadBalancingScheme;
+        this.metadataFilters = metadataFilters;
+        this.name = name;
+        this.network = network;
+        this.networkTier = networkTier;
+        this.portRange = portRange;
+        this.ports = ports;
+        this.pscConnectionId = pscConnectionId;
+        this.pscConnectionStatus = pscConnectionStatus;
+        this.region = region;
+        this.selfLink = selfLink;
+        this.serviceDirectoryRegistrations = serviceDirectoryRegistrations;
+        this.serviceLabel = serviceLabel;
+        this.serviceName = serviceName;
+        this.sourceIpRanges = sourceIpRanges;
+        this.subnetwork = subnetwork;
+        this.target = target;
     }
 
     /**

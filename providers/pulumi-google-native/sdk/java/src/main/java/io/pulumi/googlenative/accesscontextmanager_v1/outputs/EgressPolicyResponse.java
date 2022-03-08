@@ -25,8 +25,8 @@ public final class EgressPolicyResponse {
     private EgressPolicyResponse(
         EgressFromResponse egressFrom,
         EgressToResponse egressTo) {
-        this.egressFrom = Objects.requireNonNull(egressFrom);
-        this.egressTo = Objects.requireNonNull(egressTo);
+        this.egressFrom = egressFrom;
+        this.egressTo = egressTo;
     }
 
     /**

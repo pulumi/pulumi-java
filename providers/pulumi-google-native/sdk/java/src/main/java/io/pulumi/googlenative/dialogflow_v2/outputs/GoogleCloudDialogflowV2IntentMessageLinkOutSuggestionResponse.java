@@ -24,8 +24,8 @@ public final class GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionResponse
     private GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionResponse(
         String destinationName,
         String uri) {
-        this.destinationName = Objects.requireNonNull(destinationName);
-        this.uri = Objects.requireNonNull(uri);
+        this.destinationName = destinationName;
+        this.uri = uri;
     }
 
     /**

@@ -28,7 +28,7 @@ public final class ReportGroupExportConfig {
         @Nullable ReportGroupExportConfigS3Destination s3Destination,
         String type) {
         this.s3Destination = s3Destination;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

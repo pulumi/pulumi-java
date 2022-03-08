@@ -32,9 +32,9 @@ public final class SoftwareRecipeStepInstallMsiResponse {
         List<Integer> allowedExitCodes,
         String artifactId,
         List<String> flags) {
-        this.allowedExitCodes = Objects.requireNonNull(allowedExitCodes);
-        this.artifactId = Objects.requireNonNull(artifactId);
-        this.flags = Objects.requireNonNull(flags);
+        this.allowedExitCodes = allowedExitCodes;
+        this.artifactId = artifactId;
+        this.flags = flags;
     }
 
     /**

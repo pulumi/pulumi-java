@@ -75,14 +75,14 @@ public final class AzureDataExplorerCommandActivityResponse {
         @Nullable ActivityPolicyResponse policy,
         String type,
         @Nullable List<UserPropertyResponse> userProperties) {
-        this.command = Objects.requireNonNull(command);
+        this.command = command;
         this.commandTimeout = commandTimeout;
         this.dependsOn = dependsOn;
         this.description = description;
         this.linkedServiceName = linkedServiceName;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.policy = policy;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.userProperties = userProperties;
     }
 

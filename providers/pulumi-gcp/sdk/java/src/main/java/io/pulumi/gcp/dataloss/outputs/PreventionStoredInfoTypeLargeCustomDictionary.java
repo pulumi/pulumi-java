@@ -40,7 +40,7 @@ public final class PreventionStoredInfoTypeLargeCustomDictionary {
         PreventionStoredInfoTypeLargeCustomDictionaryOutputPath outputPath) {
         this.bigQueryField = bigQueryField;
         this.cloudStorageFileSet = cloudStorageFileSet;
-        this.outputPath = Objects.requireNonNull(outputPath);
+        this.outputPath = outputPath;
     }
 
     /**

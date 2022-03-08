@@ -31,11 +31,11 @@ public final class DataSourceServiceNowConfiguration {
         @Nullable DataSourceServiceNowServiceCatalogConfiguration serviceCatalogConfiguration,
         DataSourceServiceNowBuildVersionType serviceNowBuildVersion) {
         this.authenticationType = authenticationType;
-        this.hostUrl = Objects.requireNonNull(hostUrl);
+        this.hostUrl = hostUrl;
         this.knowledgeArticleConfiguration = knowledgeArticleConfiguration;
-        this.secretArn = Objects.requireNonNull(secretArn);
+        this.secretArn = secretArn;
         this.serviceCatalogConfiguration = serviceCatalogConfiguration;
-        this.serviceNowBuildVersion = Objects.requireNonNull(serviceNowBuildVersion);
+        this.serviceNowBuildVersion = serviceNowBuildVersion;
     }
 
     public Optional<DataSourceServiceNowAuthenticationType> getAuthenticationType() {

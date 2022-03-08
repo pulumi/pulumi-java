@@ -17,8 +17,8 @@ public final class GetInstanceReservationAffinitySpecificReservation {
     private GetInstanceReservationAffinitySpecificReservation(
         String key,
         List<String> values) {
-        this.key = Objects.requireNonNull(key);
-        this.values = Objects.requireNonNull(values);
+        this.key = key;
+        this.values = values;
     }
 
     public String getKey() {

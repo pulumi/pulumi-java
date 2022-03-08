@@ -129,22 +129,22 @@ public final class GetServerResult {
         String workspaceFeature) {
         this.administratorLogin = administratorLogin;
         this.administrators = administrators;
-        this.fullyQualifiedDomainName = Objects.requireNonNull(fullyQualifiedDomainName);
-        this.id = Objects.requireNonNull(id);
+        this.fullyQualifiedDomainName = fullyQualifiedDomainName;
+        this.id = id;
         this.identity = identity;
         this.keyId = keyId;
-        this.kind = Objects.requireNonNull(kind);
-        this.location = Objects.requireNonNull(location);
+        this.kind = kind;
+        this.location = location;
         this.minimalTlsVersion = minimalTlsVersion;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.primaryUserAssignedIdentityId = primaryUserAssignedIdentityId;
-        this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
+        this.privateEndpointConnections = privateEndpointConnections;
         this.publicNetworkAccess = publicNetworkAccess;
-        this.state = Objects.requireNonNull(state);
+        this.state = state;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.version = version;
-        this.workspaceFeature = Objects.requireNonNull(workspaceFeature);
+        this.workspaceFeature = workspaceFeature;
     }
 
     /**

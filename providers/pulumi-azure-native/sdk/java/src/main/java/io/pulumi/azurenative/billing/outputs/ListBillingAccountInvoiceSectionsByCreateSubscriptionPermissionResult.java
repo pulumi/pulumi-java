@@ -27,7 +27,7 @@ public final class ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissi
     private ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionResult(
         String nextLink,
         @Nullable List<InvoiceSectionWithCreateSubPermissionResponse> value) {
-        this.nextLink = Objects.requireNonNull(nextLink);
+        this.nextLink = nextLink;
         this.value = value;
     }
 

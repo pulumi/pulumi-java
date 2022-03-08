@@ -17,7 +17,7 @@ public final class DatabaseConfigResponse {
 
     @OutputCustomType.Constructor({"machineType"})
     private DatabaseConfigResponse(String machineType) {
-        this.machineType = Objects.requireNonNull(machineType);
+        this.machineType = machineType;
     }
 
     /**

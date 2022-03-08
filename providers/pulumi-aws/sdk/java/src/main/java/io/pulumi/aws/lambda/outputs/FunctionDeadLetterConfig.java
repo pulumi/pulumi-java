@@ -17,7 +17,7 @@ public final class FunctionDeadLetterConfig {
 
     @OutputCustomType.Constructor({"targetArn"})
     private FunctionDeadLetterConfig(String targetArn) {
-        this.targetArn = Objects.requireNonNull(targetArn);
+        this.targetArn = targetArn;
     }
 
     /**

@@ -95,18 +95,18 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationResponse {
         GooglePrivacyDlpV2ReplaceDictionaryConfigResponse replaceDictionaryConfig,
         GooglePrivacyDlpV2ReplaceWithInfoTypeConfigResponse replaceWithInfoTypeConfig,
         GooglePrivacyDlpV2TimePartConfigResponse timePartConfig) {
-        this.bucketingConfig = Objects.requireNonNull(bucketingConfig);
-        this.characterMaskConfig = Objects.requireNonNull(characterMaskConfig);
-        this.cryptoDeterministicConfig = Objects.requireNonNull(cryptoDeterministicConfig);
-        this.cryptoHashConfig = Objects.requireNonNull(cryptoHashConfig);
-        this.cryptoReplaceFfxFpeConfig = Objects.requireNonNull(cryptoReplaceFfxFpeConfig);
-        this.dateShiftConfig = Objects.requireNonNull(dateShiftConfig);
-        this.fixedSizeBucketingConfig = Objects.requireNonNull(fixedSizeBucketingConfig);
-        this.redactConfig = Objects.requireNonNull(redactConfig);
-        this.replaceConfig = Objects.requireNonNull(replaceConfig);
-        this.replaceDictionaryConfig = Objects.requireNonNull(replaceDictionaryConfig);
-        this.replaceWithInfoTypeConfig = Objects.requireNonNull(replaceWithInfoTypeConfig);
-        this.timePartConfig = Objects.requireNonNull(timePartConfig);
+        this.bucketingConfig = bucketingConfig;
+        this.characterMaskConfig = characterMaskConfig;
+        this.cryptoDeterministicConfig = cryptoDeterministicConfig;
+        this.cryptoHashConfig = cryptoHashConfig;
+        this.cryptoReplaceFfxFpeConfig = cryptoReplaceFfxFpeConfig;
+        this.dateShiftConfig = dateShiftConfig;
+        this.fixedSizeBucketingConfig = fixedSizeBucketingConfig;
+        this.redactConfig = redactConfig;
+        this.replaceConfig = replaceConfig;
+        this.replaceDictionaryConfig = replaceDictionaryConfig;
+        this.replaceWithInfoTypeConfig = replaceWithInfoTypeConfig;
+        this.timePartConfig = timePartConfig;
     }
 
     /**

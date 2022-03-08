@@ -50,12 +50,12 @@ public final class GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse {
         String queryRecord,
         String question,
         String source) {
-        this.answer = Objects.requireNonNull(answer);
-        this.confidenceScore = Objects.requireNonNull(confidenceScore);
-        this.metadata = Objects.requireNonNull(metadata);
-        this.queryRecord = Objects.requireNonNull(queryRecord);
-        this.question = Objects.requireNonNull(question);
-        this.source = Objects.requireNonNull(source);
+        this.answer = answer;
+        this.confidenceScore = confidenceScore;
+        this.metadata = metadata;
+        this.queryRecord = queryRecord;
+        this.question = question;
+        this.source = source;
     }
 
     /**

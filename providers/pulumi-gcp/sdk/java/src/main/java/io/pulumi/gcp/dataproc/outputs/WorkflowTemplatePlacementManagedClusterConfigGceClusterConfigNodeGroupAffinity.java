@@ -17,7 +17,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
 
     @OutputCustomType.Constructor({"nodeGroup"})
     private WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinity(String nodeGroup) {
-        this.nodeGroup = Objects.requireNonNull(nodeGroup);
+        this.nodeGroup = nodeGroup;
     }
 
     /**

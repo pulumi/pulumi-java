@@ -28,8 +28,8 @@ public final class GameServerClusterConnectionInfo {
     private GameServerClusterConnectionInfo(
         GameServerClusterConnectionInfoGkeClusterReference gkeClusterReference,
         String namespace) {
-        this.gkeClusterReference = Objects.requireNonNull(gkeClusterReference);
-        this.namespace = Objects.requireNonNull(namespace);
+        this.gkeClusterReference = gkeClusterReference;
+        this.namespace = namespace;
     }
 
     /**

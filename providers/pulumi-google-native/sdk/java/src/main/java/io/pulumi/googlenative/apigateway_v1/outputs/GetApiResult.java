@@ -55,13 +55,13 @@ public final class GetApiResult {
         String name,
         String state,
         String updateTime) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.labels = Objects.requireNonNull(labels);
-        this.managedService = Objects.requireNonNull(managedService);
-        this.name = Objects.requireNonNull(name);
-        this.state = Objects.requireNonNull(state);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.createTime = createTime;
+        this.displayName = displayName;
+        this.labels = labels;
+        this.managedService = managedService;
+        this.name = name;
+        this.state = state;
+        this.updateTime = updateTime;
     }
 
     /**

@@ -18,7 +18,7 @@ public final class SerialPipelineResponse {
 
     @OutputCustomType.Constructor({"stages"})
     private SerialPipelineResponse(List<StageResponse> stages) {
-        this.stages = Objects.requireNonNull(stages);
+        this.stages = stages;
     }
 
     /**

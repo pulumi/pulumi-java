@@ -29,8 +29,8 @@ public final class FunctionVpcConfig {
         List<String> securityGroupIds,
         List<String> subnetIds,
         @Nullable String vpcId) {
-        this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
-        this.subnetIds = Objects.requireNonNull(subnetIds);
+        this.securityGroupIds = securityGroupIds;
+        this.subnetIds = subnetIds;
         this.vpcId = vpcId;
     }
 

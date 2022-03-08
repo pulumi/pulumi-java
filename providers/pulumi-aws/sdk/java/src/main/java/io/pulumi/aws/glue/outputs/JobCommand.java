@@ -34,7 +34,7 @@ public final class JobCommand {
         String scriptLocation) {
         this.name = name;
         this.pythonVersion = pythonVersion;
-        this.scriptLocation = Objects.requireNonNull(scriptLocation);
+        this.scriptLocation = scriptLocation;
     }
 
     /**

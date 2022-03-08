@@ -24,8 +24,8 @@ public final class ApiPortalResourceRequestsResponse {
     private ApiPortalResourceRequestsResponse(
         String cpu,
         String memory) {
-        this.cpu = Objects.requireNonNull(cpu);
-        this.memory = Objects.requireNonNull(memory);
+        this.cpu = cpu;
+        this.memory = memory;
     }
 
     /**

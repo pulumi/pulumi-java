@@ -25,8 +25,8 @@ public final class ConnectToTargetSqlMISyncTaskInputResponse {
     private ConnectToTargetSqlMISyncTaskInputResponse(
         AzureActiveDirectoryAppResponse azureApp,
         MiSqlConnectionInfoResponse targetConnectionInfo) {
-        this.azureApp = Objects.requireNonNull(azureApp);
-        this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
+        this.azureApp = azureApp;
+        this.targetConnectionInfo = targetConnectionInfo;
     }
 
     /**

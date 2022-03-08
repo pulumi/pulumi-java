@@ -103,14 +103,14 @@ public final class HubspotLinkedServiceResponse {
         @Nullable Object usePeerVerification) {
         this.accessToken = accessToken;
         this.annotations = annotations;
-        this.clientId = Objects.requireNonNull(clientId);
+        this.clientId = clientId;
         this.clientSecret = clientSecret;
         this.connectVia = connectVia;
         this.description = description;
         this.encryptedCredential = encryptedCredential;
         this.parameters = parameters;
         this.refreshToken = refreshToken;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.useEncryptedEndpoints = useEncryptedEndpoints;
         this.useHostVerification = useHostVerification;
         this.usePeerVerification = usePeerVerification;

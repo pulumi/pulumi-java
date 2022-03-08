@@ -45,11 +45,11 @@ public final class ResourcesResponse {
         String kmsKeyReference,
         Double memoryGb,
         List<VolumeResponse> volumes) {
-        this.cpu = Objects.requireNonNull(cpu);
-        this.diskGb = Objects.requireNonNull(diskGb);
-        this.kmsKeyReference = Objects.requireNonNull(kmsKeyReference);
-        this.memoryGb = Objects.requireNonNull(memoryGb);
-        this.volumes = Objects.requireNonNull(volumes);
+        this.cpu = cpu;
+        this.diskGb = diskGb;
+        this.kmsKeyReference = kmsKeyReference;
+        this.memoryGb = memoryGb;
+        this.volumes = volumes;
     }
 
     /**

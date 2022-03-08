@@ -49,12 +49,12 @@ public final class GetLienResult {
         String parent,
         String reason,
         List<String> restrictions) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.name = Objects.requireNonNull(name);
-        this.origin = Objects.requireNonNull(origin);
-        this.parent = Objects.requireNonNull(parent);
-        this.reason = Objects.requireNonNull(reason);
-        this.restrictions = Objects.requireNonNull(restrictions);
+        this.createTime = createTime;
+        this.name = name;
+        this.origin = origin;
+        this.parent = parent;
+        this.reason = reason;
+        this.restrictions = restrictions;
     }
 
     /**

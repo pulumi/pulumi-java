@@ -67,7 +67,7 @@ public final class AzureIaaSComputeVMContainerResponse {
         @Nullable String virtualMachineId,
         @Nullable String virtualMachineVersion) {
         this.backupManagementType = backupManagementType;
-        this.containerType = Objects.requireNonNull(containerType);
+        this.containerType = containerType;
         this.friendlyName = friendlyName;
         this.healthStatus = healthStatus;
         this.registrationStatus = registrationStatus;

@@ -57,12 +57,12 @@ public final class GetApiReleaseResult {
         String type,
         String updatedDateTime) {
         this.apiId = apiId;
-        this.createdDateTime = Objects.requireNonNull(createdDateTime);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.createdDateTime = createdDateTime;
+        this.id = id;
+        this.name = name;
         this.notes = notes;
-        this.type = Objects.requireNonNull(type);
-        this.updatedDateTime = Objects.requireNonNull(updatedDateTime);
+        this.type = type;
+        this.updatedDateTime = updatedDateTime;
     }
 
     /**

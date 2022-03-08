@@ -27,7 +27,7 @@ public final class ImagePipelineSchedule {
         @Nullable String pipelineExecutionStartCondition,
         String scheduleExpression) {
         this.pipelineExecutionStartCondition = pipelineExecutionStartCondition;
-        this.scheduleExpression = Objects.requireNonNull(scheduleExpression);
+        this.scheduleExpression = scheduleExpression;
     }
 
     /**

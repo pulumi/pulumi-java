@@ -21,8 +21,8 @@ public final class PipelineSelectAttributes {
         List<String> attributes,
         String name,
         @Nullable String next) {
-        this.attributes = Objects.requireNonNull(attributes);
-        this.name = Objects.requireNonNull(name);
+        this.attributes = attributes;
+        this.name = name;
         this.next = next;
     }
 

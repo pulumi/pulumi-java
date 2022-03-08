@@ -34,7 +34,7 @@ public final class FleetLaunchTemplateConfigLaunchTemplateSpecification {
         String version) {
         this.launchTemplateId = launchTemplateId;
         this.launchTemplateName = launchTemplateName;
-        this.version = Objects.requireNonNull(version);
+        this.version = version;
     }
 
     /**

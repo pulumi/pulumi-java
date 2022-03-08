@@ -24,8 +24,8 @@ public final class V2AndroidApplicationResponse {
     private V2AndroidApplicationResponse(
         String packageName,
         String sha1Fingerprint) {
-        this.packageName = Objects.requireNonNull(packageName);
-        this.sha1Fingerprint = Objects.requireNonNull(sha1Fingerprint);
+        this.packageName = packageName;
+        this.sha1Fingerprint = sha1Fingerprint;
     }
 
     /**

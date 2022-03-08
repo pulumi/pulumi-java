@@ -25,8 +25,8 @@ public final class GetRulesPackagesResult {
     private GetRulesPackagesResult(
         List<String> arns,
         String id) {
-        this.arns = Objects.requireNonNull(arns);
-        this.id = Objects.requireNonNull(id);
+        this.arns = arns;
+        this.id = id;
     }
 
     /**

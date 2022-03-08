@@ -31,9 +31,9 @@ public final class PacketMirroringFilterResponse {
         List<String> cidrRanges,
         String direction,
         List<String> ipProtocols) {
-        this.cidrRanges = Objects.requireNonNull(cidrRanges);
-        this.direction = Objects.requireNonNull(direction);
-        this.ipProtocols = Objects.requireNonNull(ipProtocols);
+        this.cidrRanges = cidrRanges;
+        this.direction = direction;
+        this.ipProtocols = ipProtocols;
     }
 
     /**

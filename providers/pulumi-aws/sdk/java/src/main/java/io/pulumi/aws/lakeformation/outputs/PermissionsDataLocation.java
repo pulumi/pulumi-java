@@ -26,7 +26,7 @@ public final class PermissionsDataLocation {
     private PermissionsDataLocation(
         String arn,
         @Nullable String catalogId) {
-        this.arn = Objects.requireNonNull(arn);
+        this.arn = arn;
         this.catalogId = catalogId;
     }
 

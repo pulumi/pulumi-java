@@ -26,7 +26,7 @@ public final class GameSessionQueuePlayerLatencyPolicy {
     private GameSessionQueuePlayerLatencyPolicy(
         Integer maximumIndividualPlayerLatencyMilliseconds,
         @Nullable Integer policyDurationSeconds) {
-        this.maximumIndividualPlayerLatencyMilliseconds = Objects.requireNonNull(maximumIndividualPlayerLatencyMilliseconds);
+        this.maximumIndividualPlayerLatencyMilliseconds = maximumIndividualPlayerLatencyMilliseconds;
         this.policyDurationSeconds = policyDurationSeconds;
     }
 

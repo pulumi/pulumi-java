@@ -34,9 +34,9 @@ public final class TriggerBuildSourceStorageSource {
         String bucket,
         @Nullable String generation,
         String object) {
-        this.bucket = Objects.requireNonNull(bucket);
+        this.bucket = bucket;
         this.generation = generation;
-        this.object = Objects.requireNonNull(object);
+        this.object = object;
     }
 
     /**

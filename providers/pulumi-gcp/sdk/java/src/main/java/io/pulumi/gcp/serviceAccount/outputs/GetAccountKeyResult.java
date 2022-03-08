@@ -34,11 +34,11 @@ public final class GetAccountKeyResult {
         @Nullable String project,
         String publicKey,
         @Nullable String publicKeyType) {
-        this.id = Objects.requireNonNull(id);
-        this.keyAlgorithm = Objects.requireNonNull(keyAlgorithm);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.keyAlgorithm = keyAlgorithm;
+        this.name = name;
         this.project = project;
-        this.publicKey = Objects.requireNonNull(publicKey);
+        this.publicKey = publicKey;
         this.publicKeyType = publicKeyType;
     }
 

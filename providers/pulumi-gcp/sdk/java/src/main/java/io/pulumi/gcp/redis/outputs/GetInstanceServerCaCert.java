@@ -22,11 +22,11 @@ public final class GetInstanceServerCaCert {
         String expireTime,
         String serialNumber,
         String sha1Fingerprint) {
-        this.cert = Objects.requireNonNull(cert);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.expireTime = Objects.requireNonNull(expireTime);
-        this.serialNumber = Objects.requireNonNull(serialNumber);
-        this.sha1Fingerprint = Objects.requireNonNull(sha1Fingerprint);
+        this.cert = cert;
+        this.createTime = createTime;
+        this.expireTime = expireTime;
+        this.serialNumber = serialNumber;
+        this.sha1Fingerprint = sha1Fingerprint;
     }
 
     public String getCert() {

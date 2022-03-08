@@ -36,10 +36,10 @@ public final class CniConfigResponse {
         String serviceSubnet,
         String type,
         String version) {
-        this.podSubnet = Objects.requireNonNull(podSubnet);
-        this.serviceSubnet = Objects.requireNonNull(serviceSubnet);
-        this.type = Objects.requireNonNull(type);
-        this.version = Objects.requireNonNull(version);
+        this.podSubnet = podSubnet;
+        this.serviceSubnet = serviceSubnet;
+        this.type = type;
+        this.version = version;
     }
 
     /**

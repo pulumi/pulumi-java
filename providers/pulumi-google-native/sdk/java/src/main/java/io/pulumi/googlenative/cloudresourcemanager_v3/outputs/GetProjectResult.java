@@ -73,16 +73,16 @@ public final class GetProjectResult {
         String projectId,
         String state,
         String updateTime) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.deleteTime = Objects.requireNonNull(deleteTime);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.etag = Objects.requireNonNull(etag);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.parent = Objects.requireNonNull(parent);
-        this.projectId = Objects.requireNonNull(projectId);
-        this.state = Objects.requireNonNull(state);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.createTime = createTime;
+        this.deleteTime = deleteTime;
+        this.displayName = displayName;
+        this.etag = etag;
+        this.labels = labels;
+        this.name = name;
+        this.parent = parent;
+        this.projectId = projectId;
+        this.state = state;
+        this.updateTime = updateTime;
     }
 
     /**

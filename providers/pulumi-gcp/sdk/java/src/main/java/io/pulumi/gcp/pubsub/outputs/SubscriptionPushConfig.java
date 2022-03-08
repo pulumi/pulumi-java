@@ -57,7 +57,7 @@ public final class SubscriptionPushConfig {
         String pushEndpoint) {
         this.attributes = attributes;
         this.oidcToken = oidcToken;
-        this.pushEndpoint = Objects.requireNonNull(pushEndpoint);
+        this.pushEndpoint = pushEndpoint;
     }
 
     /**

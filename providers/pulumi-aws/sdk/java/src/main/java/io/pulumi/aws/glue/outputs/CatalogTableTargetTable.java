@@ -30,9 +30,9 @@ public final class CatalogTableTargetTable {
         String catalogId,
         String databaseName,
         String name) {
-        this.catalogId = Objects.requireNonNull(catalogId);
-        this.databaseName = Objects.requireNonNull(databaseName);
-        this.name = Objects.requireNonNull(name);
+        this.catalogId = catalogId;
+        this.databaseName = databaseName;
+        this.name = name;
     }
 
     /**

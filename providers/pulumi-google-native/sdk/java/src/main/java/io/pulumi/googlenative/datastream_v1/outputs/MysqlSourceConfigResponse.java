@@ -24,8 +24,8 @@ public final class MysqlSourceConfigResponse {
     private MysqlSourceConfigResponse(
         MysqlRdbmsResponse excludeObjects,
         MysqlRdbmsResponse includeObjects) {
-        this.excludeObjects = Objects.requireNonNull(excludeObjects);
-        this.includeObjects = Objects.requireNonNull(includeObjects);
+        this.excludeObjects = excludeObjects;
+        this.includeObjects = includeObjects;
     }
 
     /**

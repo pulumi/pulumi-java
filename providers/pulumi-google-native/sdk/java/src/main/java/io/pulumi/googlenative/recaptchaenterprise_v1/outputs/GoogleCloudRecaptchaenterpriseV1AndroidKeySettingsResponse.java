@@ -26,8 +26,8 @@ public final class GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse {
     private GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse(
         Boolean allowAllPackageNames,
         List<String> allowedPackageNames) {
-        this.allowAllPackageNames = Objects.requireNonNull(allowAllPackageNames);
-        this.allowedPackageNames = Objects.requireNonNull(allowedPackageNames);
+        this.allowAllPackageNames = allowAllPackageNames;
+        this.allowedPackageNames = allowedPackageNames;
     }
 
     /**

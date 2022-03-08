@@ -25,8 +25,8 @@ public final class GoogleCloudRetailV2AudienceResponse {
     private GoogleCloudRetailV2AudienceResponse(
         List<String> ageGroups,
         List<String> genders) {
-        this.ageGroups = Objects.requireNonNull(ageGroups);
-        this.genders = Objects.requireNonNull(genders);
+        this.ageGroups = ageGroups;
+        this.genders = genders;
     }
 
     /**

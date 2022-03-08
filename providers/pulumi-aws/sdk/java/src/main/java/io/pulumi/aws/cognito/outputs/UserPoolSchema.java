@@ -59,10 +59,10 @@ public final class UserPoolSchema {
         @Nullable UserPoolSchemaNumberAttributeConstraints numberAttributeConstraints,
         @Nullable Boolean required,
         @Nullable UserPoolSchemaStringAttributeConstraints stringAttributeConstraints) {
-        this.attributeDataType = Objects.requireNonNull(attributeDataType);
+        this.attributeDataType = attributeDataType;
         this.developerOnlyAttribute = developerOnlyAttribute;
         this.mutable = mutable;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.numberAttributeConstraints = numberAttributeConstraints;
         this.required = required;
         this.stringAttributeConstraints = stringAttributeConstraints;

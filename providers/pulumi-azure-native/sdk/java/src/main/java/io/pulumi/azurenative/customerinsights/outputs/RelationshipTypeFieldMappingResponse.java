@@ -24,8 +24,8 @@ public final class RelationshipTypeFieldMappingResponse {
     private RelationshipTypeFieldMappingResponse(
         String profileFieldName,
         String relatedProfileKeyProperty) {
-        this.profileFieldName = Objects.requireNonNull(profileFieldName);
-        this.relatedProfileKeyProperty = Objects.requireNonNull(relatedProfileKeyProperty);
+        this.profileFieldName = profileFieldName;
+        this.relatedProfileKeyProperty = relatedProfileKeyProperty;
     }
 
     /**

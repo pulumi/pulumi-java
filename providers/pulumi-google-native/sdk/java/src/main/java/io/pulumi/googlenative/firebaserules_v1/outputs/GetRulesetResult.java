@@ -38,10 +38,10 @@ public final class GetRulesetResult {
         MetadataResponse metadata,
         String name,
         SourceResponse source) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.metadata = Objects.requireNonNull(metadata);
-        this.name = Objects.requireNonNull(name);
-        this.source = Objects.requireNonNull(source);
+        this.createTime = createTime;
+        this.metadata = metadata;
+        this.name = name;
+        this.source = source;
     }
 
     /**

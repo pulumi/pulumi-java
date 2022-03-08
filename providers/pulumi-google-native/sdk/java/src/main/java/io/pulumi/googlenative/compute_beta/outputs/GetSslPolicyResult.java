@@ -80,17 +80,17 @@ public final class GetSslPolicyResult {
         String profile,
         String selfLink,
         List<SslPolicyWarningsItemResponse> warnings) {
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.customFeatures = Objects.requireNonNull(customFeatures);
-        this.description = Objects.requireNonNull(description);
-        this.enabledFeatures = Objects.requireNonNull(enabledFeatures);
-        this.fingerprint = Objects.requireNonNull(fingerprint);
-        this.kind = Objects.requireNonNull(kind);
-        this.minTlsVersion = Objects.requireNonNull(minTlsVersion);
-        this.name = Objects.requireNonNull(name);
-        this.profile = Objects.requireNonNull(profile);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.warnings = Objects.requireNonNull(warnings);
+        this.creationTimestamp = creationTimestamp;
+        this.customFeatures = customFeatures;
+        this.description = description;
+        this.enabledFeatures = enabledFeatures;
+        this.fingerprint = fingerprint;
+        this.kind = kind;
+        this.minTlsVersion = minTlsVersion;
+        this.name = name;
+        this.profile = profile;
+        this.selfLink = selfLink;
+        this.warnings = warnings;
     }
 
     /**

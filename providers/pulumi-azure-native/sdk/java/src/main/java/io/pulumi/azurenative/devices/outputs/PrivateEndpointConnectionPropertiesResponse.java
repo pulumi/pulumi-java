@@ -28,7 +28,7 @@ public final class PrivateEndpointConnectionPropertiesResponse {
         @Nullable PrivateEndpointResponse privateEndpoint,
         PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState) {
         this.privateEndpoint = privateEndpoint;
-        this.privateLinkServiceConnectionState = Objects.requireNonNull(privateLinkServiceConnectionState);
+        this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
     }
 
     /**

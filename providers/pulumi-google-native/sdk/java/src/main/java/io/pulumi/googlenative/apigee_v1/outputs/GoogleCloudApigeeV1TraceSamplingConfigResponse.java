@@ -25,8 +25,8 @@ public final class GoogleCloudApigeeV1TraceSamplingConfigResponse {
     private GoogleCloudApigeeV1TraceSamplingConfigResponse(
         String sampler,
         Double samplingRate) {
-        this.sampler = Objects.requireNonNull(sampler);
-        this.samplingRate = Objects.requireNonNull(samplingRate);
+        this.sampler = sampler;
+        this.samplingRate = samplingRate;
     }
 
     /**

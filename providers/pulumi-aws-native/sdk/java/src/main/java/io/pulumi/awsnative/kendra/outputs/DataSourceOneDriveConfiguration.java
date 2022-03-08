@@ -36,9 +36,9 @@ public final class DataSourceOneDriveConfiguration {
         this.exclusionPatterns = exclusionPatterns;
         this.fieldMappings = fieldMappings;
         this.inclusionPatterns = inclusionPatterns;
-        this.oneDriveUsers = Objects.requireNonNull(oneDriveUsers);
-        this.secretArn = Objects.requireNonNull(secretArn);
-        this.tenantDomain = Objects.requireNonNull(tenantDomain);
+        this.oneDriveUsers = oneDriveUsers;
+        this.secretArn = secretArn;
+        this.tenantDomain = tenantDomain;
     }
 
     public Optional<Boolean> getDisableLocalGroups() {

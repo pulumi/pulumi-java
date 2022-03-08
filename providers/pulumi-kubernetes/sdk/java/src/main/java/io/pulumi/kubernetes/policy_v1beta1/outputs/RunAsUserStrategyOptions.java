@@ -28,7 +28,7 @@ public final class RunAsUserStrategyOptions {
         @Nullable List<IDRange> ranges,
         String rule) {
         this.ranges = ranges;
-        this.rule = Objects.requireNonNull(rule);
+        this.rule = rule;
     }
 
     /**

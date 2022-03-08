@@ -56,13 +56,13 @@ public final class GetEnvironmentResult {
         String state,
         String updateTime,
         String uuid) {
-        this.config = Objects.requireNonNull(config);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.state = Objects.requireNonNull(state);
-        this.updateTime = Objects.requireNonNull(updateTime);
-        this.uuid = Objects.requireNonNull(uuid);
+        this.config = config;
+        this.createTime = createTime;
+        this.labels = labels;
+        this.name = name;
+        this.state = state;
+        this.updateTime = updateTime;
+        this.uuid = uuid;
     }
 
     /**

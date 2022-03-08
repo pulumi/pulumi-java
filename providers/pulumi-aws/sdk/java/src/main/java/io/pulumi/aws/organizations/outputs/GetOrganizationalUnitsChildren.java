@@ -30,9 +30,9 @@ public final class GetOrganizationalUnitsChildren {
         String arn,
         String id,
         String name) {
-        this.arn = Objects.requireNonNull(arn);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.arn = arn;
+        this.id = id;
+        this.name = name;
     }
 
     /**

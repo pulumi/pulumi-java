@@ -22,10 +22,10 @@ public final class GetInstanceMaintenancePolicy {
         String description,
         String updateTime,
         List<GetInstanceMaintenancePolicyWeeklyMaintenanceWindow> weeklyMaintenanceWindows) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.description = Objects.requireNonNull(description);
-        this.updateTime = Objects.requireNonNull(updateTime);
-        this.weeklyMaintenanceWindows = Objects.requireNonNull(weeklyMaintenanceWindows);
+        this.createTime = createTime;
+        this.description = description;
+        this.updateTime = updateTime;
+        this.weeklyMaintenanceWindows = weeklyMaintenanceWindows;
     }
 
     public String getCreateTime() {

@@ -85,16 +85,16 @@ public final class GetApiOperationResult {
         String type,
         String urlTemplate) {
         this.description = description;
-        this.displayName = Objects.requireNonNull(displayName);
-        this.id = Objects.requireNonNull(id);
-        this.method = Objects.requireNonNull(method);
-        this.name = Objects.requireNonNull(name);
+        this.displayName = displayName;
+        this.id = id;
+        this.method = method;
+        this.name = name;
         this.policies = policies;
         this.request = request;
         this.responses = responses;
         this.templateParameters = templateParameters;
-        this.type = Objects.requireNonNull(type);
-        this.urlTemplate = Objects.requireNonNull(urlTemplate);
+        this.type = type;
+        this.urlTemplate = urlTemplate;
     }
 
     /**

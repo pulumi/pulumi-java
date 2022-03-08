@@ -17,7 +17,7 @@ public final class GetDomainSnapshotOption {
 
     @OutputCustomType.Constructor({"automatedSnapshotStartHour"})
     private GetDomainSnapshotOption(Integer automatedSnapshotStartHour) {
-        this.automatedSnapshotStartHour = Objects.requireNonNull(automatedSnapshotStartHour);
+        this.automatedSnapshotStartHour = automatedSnapshotStartHour;
     }
 
     /**

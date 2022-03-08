@@ -46,11 +46,11 @@ public final class EnumResponse {
         List<OptionResponse> options,
         SourceContextResponse sourceContext,
         String syntax) {
-        this.enumvalue = Objects.requireNonNull(enumvalue);
-        this.name = Objects.requireNonNull(name);
-        this.options = Objects.requireNonNull(options);
-        this.sourceContext = Objects.requireNonNull(sourceContext);
-        this.syntax = Objects.requireNonNull(syntax);
+        this.enumvalue = enumvalue;
+        this.name = name;
+        this.options = options;
+        this.sourceContext = sourceContext;
+        this.syntax = syntax;
     }
 
     /**

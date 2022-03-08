@@ -64,7 +64,7 @@ public final class SpotFleetLaunchSpecification {
         this.blockDeviceMappings = blockDeviceMappings;
         this.ebsOptimized = ebsOptimized;
         this.iamInstanceProfile = iamInstanceProfile;
-        this.imageId = Objects.requireNonNull(imageId);
+        this.imageId = imageId;
         this.instanceRequirements = instanceRequirements;
         this.instanceType = instanceType;
         this.kernelId = kernelId;

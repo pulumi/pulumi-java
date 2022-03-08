@@ -24,8 +24,8 @@ public final class OperationBatchStatusResponseItemResponse {
     private OperationBatchStatusResponseItemResponse(
         String operationUrl,
         String status) {
-        this.operationUrl = Objects.requireNonNull(operationUrl);
-        this.status = Objects.requireNonNull(status);
+        this.operationUrl = operationUrl;
+        this.status = status;
     }
 
     /**

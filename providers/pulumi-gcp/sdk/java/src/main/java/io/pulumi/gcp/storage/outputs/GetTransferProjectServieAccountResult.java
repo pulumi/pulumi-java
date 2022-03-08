@@ -26,9 +26,9 @@ public final class GetTransferProjectServieAccountResult {
         String email,
         String id,
         String project) {
-        this.email = Objects.requireNonNull(email);
-        this.id = Objects.requireNonNull(id);
-        this.project = Objects.requireNonNull(project);
+        this.email = email;
+        this.id = id;
+        this.project = project;
     }
 
     /**

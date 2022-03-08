@@ -76,17 +76,17 @@ public final class GetRoleResult {
         String permissionsBoundary,
         Map<String,String> tags,
         String uniqueId) {
-        this.arn = Objects.requireNonNull(arn);
-        this.assumeRolePolicy = Objects.requireNonNull(assumeRolePolicy);
-        this.createDate = Objects.requireNonNull(createDate);
-        this.description = Objects.requireNonNull(description);
-        this.id = Objects.requireNonNull(id);
-        this.maxSessionDuration = Objects.requireNonNull(maxSessionDuration);
-        this.name = Objects.requireNonNull(name);
-        this.path = Objects.requireNonNull(path);
-        this.permissionsBoundary = Objects.requireNonNull(permissionsBoundary);
-        this.tags = Objects.requireNonNull(tags);
-        this.uniqueId = Objects.requireNonNull(uniqueId);
+        this.arn = arn;
+        this.assumeRolePolicy = assumeRolePolicy;
+        this.createDate = createDate;
+        this.description = description;
+        this.id = id;
+        this.maxSessionDuration = maxSessionDuration;
+        this.name = name;
+        this.path = path;
+        this.permissionsBoundary = permissionsBoundary;
+        this.tags = tags;
+        this.uniqueId = uniqueId;
     }
 
     /**

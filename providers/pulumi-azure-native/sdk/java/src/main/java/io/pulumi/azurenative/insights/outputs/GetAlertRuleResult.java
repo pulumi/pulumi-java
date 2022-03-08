@@ -98,16 +98,16 @@ public final class GetAlertRuleResult {
         String type) {
         this.action = action;
         this.actions = actions;
-        this.condition = Objects.requireNonNull(condition);
+        this.condition = condition;
         this.description = description;
-        this.id = Objects.requireNonNull(id);
-        this.isEnabled = Objects.requireNonNull(isEnabled);
-        this.lastUpdatedTime = Objects.requireNonNull(lastUpdatedTime);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.isEnabled = isEnabled;
+        this.lastUpdatedTime = lastUpdatedTime;
+        this.location = location;
+        this.name = name;
         this.provisioningState = provisioningState;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

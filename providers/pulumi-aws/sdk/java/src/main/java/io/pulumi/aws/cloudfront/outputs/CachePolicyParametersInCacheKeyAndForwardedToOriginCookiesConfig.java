@@ -27,7 +27,7 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesCon
     private CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfig(
         String cookieBehavior,
         @Nullable CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookies cookies) {
-        this.cookieBehavior = Objects.requireNonNull(cookieBehavior);
+        this.cookieBehavior = cookieBehavior;
         this.cookies = cookies;
     }
 

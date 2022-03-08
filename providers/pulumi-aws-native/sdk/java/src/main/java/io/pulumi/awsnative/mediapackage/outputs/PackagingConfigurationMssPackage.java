@@ -28,7 +28,7 @@ public final class PackagingConfigurationMssPackage {
         List<PackagingConfigurationMssManifest> mssManifests,
         @Nullable Integer segmentDurationSeconds) {
         this.encryption = encryption;
-        this.mssManifests = Objects.requireNonNull(mssManifests);
+        this.mssManifests = mssManifests;
         this.segmentDurationSeconds = segmentDurationSeconds;
     }
 

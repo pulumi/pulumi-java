@@ -145,27 +145,27 @@ public final class GetIncidentResult {
         String status,
         String title,
         String type) {
-        this.additionalData = Objects.requireNonNull(additionalData);
+        this.additionalData = additionalData;
         this.classification = classification;
         this.classificationComment = classificationComment;
         this.classificationReason = classificationReason;
-        this.createdTimeUtc = Objects.requireNonNull(createdTimeUtc);
+        this.createdTimeUtc = createdTimeUtc;
         this.description = description;
         this.etag = etag;
         this.firstActivityTimeUtc = firstActivityTimeUtc;
-        this.id = Objects.requireNonNull(id);
-        this.incidentNumber = Objects.requireNonNull(incidentNumber);
-        this.incidentUrl = Objects.requireNonNull(incidentUrl);
+        this.id = id;
+        this.incidentNumber = incidentNumber;
+        this.incidentUrl = incidentUrl;
         this.labels = labels;
         this.lastActivityTimeUtc = lastActivityTimeUtc;
-        this.lastModifiedTimeUtc = Objects.requireNonNull(lastModifiedTimeUtc);
-        this.name = Objects.requireNonNull(name);
+        this.lastModifiedTimeUtc = lastModifiedTimeUtc;
+        this.name = name;
         this.owner = owner;
-        this.relatedAnalyticRuleIds = Objects.requireNonNull(relatedAnalyticRuleIds);
-        this.severity = Objects.requireNonNull(severity);
-        this.status = Objects.requireNonNull(status);
-        this.title = Objects.requireNonNull(title);
-        this.type = Objects.requireNonNull(type);
+        this.relatedAnalyticRuleIds = relatedAnalyticRuleIds;
+        this.severity = severity;
+        this.status = status;
+        this.title = title;
+        this.type = type;
     }
 
     /**

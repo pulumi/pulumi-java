@@ -44,11 +44,11 @@ public final class ConnectToTargetAzureDbForMySqlTaskOutputResponse {
         String serverVersion,
         String targetServerBrandVersion,
         List<ReportableExceptionResponse> validationErrors) {
-        this.databases = Objects.requireNonNull(databases);
-        this.id = Objects.requireNonNull(id);
-        this.serverVersion = Objects.requireNonNull(serverVersion);
-        this.targetServerBrandVersion = Objects.requireNonNull(targetServerBrandVersion);
-        this.validationErrors = Objects.requireNonNull(validationErrors);
+        this.databases = databases;
+        this.id = id;
+        this.serverVersion = serverVersion;
+        this.targetServerBrandVersion = targetServerBrandVersion;
+        this.validationErrors = validationErrors;
     }
 
     /**

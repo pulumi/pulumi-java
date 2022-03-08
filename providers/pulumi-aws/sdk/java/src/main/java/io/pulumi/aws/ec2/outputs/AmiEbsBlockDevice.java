@@ -71,7 +71,7 @@ public final class AmiEbsBlockDevice {
         @Nullable Integer volumeSize,
         @Nullable String volumeType) {
         this.deleteOnTermination = deleteOnTermination;
-        this.deviceName = Objects.requireNonNull(deviceName);
+        this.deviceName = deviceName;
         this.encrypted = encrypted;
         this.iops = iops;
         this.snapshotId = snapshotId;

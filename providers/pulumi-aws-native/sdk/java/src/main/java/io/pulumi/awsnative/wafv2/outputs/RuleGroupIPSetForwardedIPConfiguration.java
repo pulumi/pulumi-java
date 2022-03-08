@@ -20,9 +20,9 @@ public final class RuleGroupIPSetForwardedIPConfiguration {
         RuleGroupIPSetForwardedIPConfigurationFallbackBehavior fallbackBehavior,
         String headerName,
         RuleGroupIPSetForwardedIPConfigurationPosition position) {
-        this.fallbackBehavior = Objects.requireNonNull(fallbackBehavior);
-        this.headerName = Objects.requireNonNull(headerName);
-        this.position = Objects.requireNonNull(position);
+        this.fallbackBehavior = fallbackBehavior;
+        this.headerName = headerName;
+        this.position = position;
     }
 
     public RuleGroupIPSetForwardedIPConfigurationFallbackBehavior getFallbackBehavior() {

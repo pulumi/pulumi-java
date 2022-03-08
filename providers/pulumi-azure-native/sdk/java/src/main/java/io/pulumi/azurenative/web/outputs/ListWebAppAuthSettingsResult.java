@@ -345,7 +345,7 @@ public final class ListWebAppAuthSettingsResult {
         this.googleClientSecret = googleClientSecret;
         this.googleClientSecretSettingName = googleClientSecretSettingName;
         this.googleOAuthScopes = googleOAuthScopes;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.isAuthFromFile = isAuthFromFile;
         this.issuer = issuer;
         this.kind = kind;
@@ -353,14 +353,14 @@ public final class ListWebAppAuthSettingsResult {
         this.microsoftAccountClientSecret = microsoftAccountClientSecret;
         this.microsoftAccountClientSecretSettingName = microsoftAccountClientSecretSettingName;
         this.microsoftAccountOAuthScopes = microsoftAccountOAuthScopes;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.runtimeVersion = runtimeVersion;
         this.tokenRefreshExtensionHours = tokenRefreshExtensionHours;
         this.tokenStoreEnabled = tokenStoreEnabled;
         this.twitterConsumerKey = twitterConsumerKey;
         this.twitterConsumerSecret = twitterConsumerSecret;
         this.twitterConsumerSecretSettingName = twitterConsumerSecretSettingName;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.unauthenticatedClientAction = unauthenticatedClientAction;
         this.validateIssuer = validateIssuer;
     }

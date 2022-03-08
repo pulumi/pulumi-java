@@ -17,8 +17,8 @@ public final class IntegrationTaskPropertiesMap {
     private IntegrationTaskPropertiesMap(
         IntegrationOperatorPropertiesKeys operatorPropertyKey,
         String property) {
-        this.operatorPropertyKey = Objects.requireNonNull(operatorPropertyKey);
-        this.property = Objects.requireNonNull(property);
+        this.operatorPropertyKey = operatorPropertyKey;
+        this.property = property;
     }
 
     public IntegrationOperatorPropertiesKeys getOperatorPropertyKey() {

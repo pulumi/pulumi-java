@@ -39,10 +39,10 @@ public final class FleetTargetCapacitySpecification {
         @Nullable Integer onDemandTargetCapacity,
         @Nullable Integer spotTargetCapacity,
         Integer totalTargetCapacity) {
-        this.defaultTargetCapacityType = Objects.requireNonNull(defaultTargetCapacityType);
+        this.defaultTargetCapacityType = defaultTargetCapacityType;
         this.onDemandTargetCapacity = onDemandTargetCapacity;
         this.spotTargetCapacity = spotTargetCapacity;
-        this.totalTargetCapacity = Objects.requireNonNull(totalTargetCapacity);
+        this.totalTargetCapacity = totalTargetCapacity;
     }
 
     /**

@@ -95,19 +95,19 @@ public final class GetJobResult {
         String state,
         GoogleCloudMlV1__TrainingInputResponse trainingInput,
         GoogleCloudMlV1__TrainingOutputResponse trainingOutput) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.endTime = Objects.requireNonNull(endTime);
-        this.errorMessage = Objects.requireNonNull(errorMessage);
-        this.etag = Objects.requireNonNull(etag);
-        this.jobId = Objects.requireNonNull(jobId);
-        this.jobPosition = Objects.requireNonNull(jobPosition);
-        this.labels = Objects.requireNonNull(labels);
-        this.predictionInput = Objects.requireNonNull(predictionInput);
-        this.predictionOutput = Objects.requireNonNull(predictionOutput);
-        this.startTime = Objects.requireNonNull(startTime);
-        this.state = Objects.requireNonNull(state);
-        this.trainingInput = Objects.requireNonNull(trainingInput);
-        this.trainingOutput = Objects.requireNonNull(trainingOutput);
+        this.createTime = createTime;
+        this.endTime = endTime;
+        this.errorMessage = errorMessage;
+        this.etag = etag;
+        this.jobId = jobId;
+        this.jobPosition = jobPosition;
+        this.labels = labels;
+        this.predictionInput = predictionInput;
+        this.predictionOutput = predictionOutput;
+        this.startTime = startTime;
+        this.state = state;
+        this.trainingInput = trainingInput;
+        this.trainingOutput = trainingOutput;
     }
 
     /**

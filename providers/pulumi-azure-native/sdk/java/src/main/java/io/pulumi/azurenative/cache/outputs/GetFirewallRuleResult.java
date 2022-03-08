@@ -42,11 +42,11 @@ public final class GetFirewallRuleResult {
         String name,
         String startIP,
         String type) {
-        this.endIP = Objects.requireNonNull(endIP);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.startIP = Objects.requireNonNull(startIP);
-        this.type = Objects.requireNonNull(type);
+        this.endIP = endIP;
+        this.id = id;
+        this.name = name;
+        this.startIP = startIP;
+        this.type = type;
     }
 
     /**

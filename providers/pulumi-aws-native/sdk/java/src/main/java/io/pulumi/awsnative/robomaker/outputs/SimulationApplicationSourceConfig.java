@@ -31,9 +31,9 @@ public final class SimulationApplicationSourceConfig {
         SimulationApplicationSourceConfigArchitecture architecture,
         String s3Bucket,
         String s3Key) {
-        this.architecture = Objects.requireNonNull(architecture);
-        this.s3Bucket = Objects.requireNonNull(s3Bucket);
-        this.s3Key = Objects.requireNonNull(s3Key);
+        this.architecture = architecture;
+        this.s3Bucket = s3Bucket;
+        this.s3Key = s3Key;
     }
 
     /**

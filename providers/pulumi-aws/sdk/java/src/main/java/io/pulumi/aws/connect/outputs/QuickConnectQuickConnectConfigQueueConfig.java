@@ -24,8 +24,8 @@ public final class QuickConnectQuickConnectConfigQueueConfig {
     private QuickConnectQuickConnectConfigQueueConfig(
         String contactFlowId,
         String queueId) {
-        this.contactFlowId = Objects.requireNonNull(contactFlowId);
-        this.queueId = Objects.requireNonNull(queueId);
+        this.contactFlowId = contactFlowId;
+        this.queueId = queueId;
     }
 
     /**

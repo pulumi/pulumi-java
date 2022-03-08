@@ -37,10 +37,10 @@ public final class AndroidAttributesResponse {
         Boolean ownerProfileAccount,
         String ownershipPrivilege,
         Boolean supportsWorkProfile) {
-        this.enabledUnknownSources = Objects.requireNonNull(enabledUnknownSources);
-        this.ownerProfileAccount = Objects.requireNonNull(ownerProfileAccount);
-        this.ownershipPrivilege = Objects.requireNonNull(ownershipPrivilege);
-        this.supportsWorkProfile = Objects.requireNonNull(supportsWorkProfile);
+        this.enabledUnknownSources = enabledUnknownSources;
+        this.ownerProfileAccount = ownerProfileAccount;
+        this.ownershipPrivilege = ownershipPrivilege;
+        this.supportsWorkProfile = supportsWorkProfile;
     }
 
     /**

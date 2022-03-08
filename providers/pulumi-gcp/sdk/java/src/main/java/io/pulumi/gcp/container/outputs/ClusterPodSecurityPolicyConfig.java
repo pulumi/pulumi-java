@@ -18,7 +18,7 @@ public final class ClusterPodSecurityPolicyConfig {
 
     @OutputCustomType.Constructor({"enabled"})
     private ClusterPodSecurityPolicyConfig(Boolean enabled) {
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
     }
 
     /**

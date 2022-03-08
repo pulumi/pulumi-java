@@ -64,14 +64,14 @@ public final class GetTestCaseResult {
         List<String> tags,
         List<GoogleCloudDialogflowCxV3ConversationTurnResponse> testCaseConversationTurns,
         GoogleCloudDialogflowCxV3TestConfigResponse testConfig) {
-        this.creationTime = Objects.requireNonNull(creationTime);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.lastTestResult = Objects.requireNonNull(lastTestResult);
-        this.name = Objects.requireNonNull(name);
-        this.notes = Objects.requireNonNull(notes);
-        this.tags = Objects.requireNonNull(tags);
-        this.testCaseConversationTurns = Objects.requireNonNull(testCaseConversationTurns);
-        this.testConfig = Objects.requireNonNull(testConfig);
+        this.creationTime = creationTime;
+        this.displayName = displayName;
+        this.lastTestResult = lastTestResult;
+        this.name = name;
+        this.notes = notes;
+        this.tags = tags;
+        this.testCaseConversationTurns = testCaseConversationTurns;
+        this.testConfig = testConfig;
     }
 
     /**

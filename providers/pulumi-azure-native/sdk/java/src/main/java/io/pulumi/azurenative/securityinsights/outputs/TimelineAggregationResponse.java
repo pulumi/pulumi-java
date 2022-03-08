@@ -25,8 +25,8 @@ public final class TimelineAggregationResponse {
     private TimelineAggregationResponse(
         Integer count,
         String kind) {
-        this.count = Objects.requireNonNull(count);
-        this.kind = Objects.requireNonNull(kind);
+        this.count = count;
+        this.kind = kind;
     }
 
     /**

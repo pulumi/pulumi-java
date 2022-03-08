@@ -29,7 +29,7 @@ public final class AppProfileSingleClusterRouting {
         @Nullable Boolean allowTransactionalWrites,
         String clusterId) {
         this.allowTransactionalWrites = allowTransactionalWrites;
-        this.clusterId = Objects.requireNonNull(clusterId);
+        this.clusterId = clusterId;
     }
 
     /**

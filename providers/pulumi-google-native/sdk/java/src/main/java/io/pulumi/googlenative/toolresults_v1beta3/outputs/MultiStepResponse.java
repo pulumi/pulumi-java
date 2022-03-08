@@ -32,9 +32,9 @@ public final class MultiStepResponse {
         Integer multistepNumber,
         PrimaryStepResponse primaryStep,
         String primaryStepId) {
-        this.multistepNumber = Objects.requireNonNull(multistepNumber);
-        this.primaryStep = Objects.requireNonNull(primaryStep);
-        this.primaryStepId = Objects.requireNonNull(primaryStepId);
+        this.multistepNumber = multistepNumber;
+        this.primaryStep = primaryStep;
+        this.primaryStepId = primaryStepId;
     }
 
     /**

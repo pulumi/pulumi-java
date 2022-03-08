@@ -24,8 +24,8 @@ public final class PackagingGroupAuthorization {
     private PackagingGroupAuthorization(
         String cdnIdentifierSecret,
         String secretsRoleArn) {
-        this.cdnIdentifierSecret = Objects.requireNonNull(cdnIdentifierSecret);
-        this.secretsRoleArn = Objects.requireNonNull(secretsRoleArn);
+        this.cdnIdentifierSecret = cdnIdentifierSecret;
+        this.secretsRoleArn = secretsRoleArn;
     }
 
     /**

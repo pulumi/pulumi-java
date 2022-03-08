@@ -50,12 +50,12 @@ public final class GetBlobInventoryPolicyResult {
         BlobInventoryPolicySchemaResponse policy,
         SystemDataResponse systemData,
         String type) {
-        this.id = Objects.requireNonNull(id);
-        this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
-        this.name = Objects.requireNonNull(name);
-        this.policy = Objects.requireNonNull(policy);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.id = id;
+        this.lastModifiedTime = lastModifiedTime;
+        this.name = name;
+        this.policy = policy;
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

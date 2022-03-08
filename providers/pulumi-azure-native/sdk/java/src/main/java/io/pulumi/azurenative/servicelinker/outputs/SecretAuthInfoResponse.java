@@ -33,7 +33,7 @@ public final class SecretAuthInfoResponse {
         String authType,
         @Nullable String name,
         @Nullable String secret) {
-        this.authType = Objects.requireNonNull(authType);
+        this.authType = authType;
         this.name = name;
         this.secret = secret;
     }

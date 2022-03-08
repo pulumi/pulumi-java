@@ -42,11 +42,11 @@ public final class CustomerEncryptionKeyResponse {
         String rawKey,
         String rsaEncryptedKey,
         String sha256) {
-        this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
-        this.kmsKeyServiceAccount = Objects.requireNonNull(kmsKeyServiceAccount);
-        this.rawKey = Objects.requireNonNull(rawKey);
-        this.rsaEncryptedKey = Objects.requireNonNull(rsaEncryptedKey);
-        this.sha256 = Objects.requireNonNull(sha256);
+        this.kmsKeyName = kmsKeyName;
+        this.kmsKeyServiceAccount = kmsKeyServiceAccount;
+        this.rawKey = rawKey;
+        this.rsaEncryptedKey = rsaEncryptedKey;
+        this.sha256 = sha256;
     }
 
     /**

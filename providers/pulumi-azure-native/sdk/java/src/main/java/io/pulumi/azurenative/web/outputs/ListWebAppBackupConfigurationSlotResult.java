@@ -76,11 +76,11 @@ public final class ListWebAppBackupConfigurationSlotResult {
         this.backupSchedule = backupSchedule;
         this.databases = databases;
         this.enabled = enabled;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.kind = kind;
-        this.name = Objects.requireNonNull(name);
-        this.storageAccountUrl = Objects.requireNonNull(storageAccountUrl);
-        this.type = Objects.requireNonNull(type);
+        this.name = name;
+        this.storageAccountUrl = storageAccountUrl;
+        this.type = type;
     }
 
     /**

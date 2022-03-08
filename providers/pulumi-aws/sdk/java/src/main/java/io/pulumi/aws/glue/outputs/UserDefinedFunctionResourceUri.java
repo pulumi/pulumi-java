@@ -24,8 +24,8 @@ public final class UserDefinedFunctionResourceUri {
     private UserDefinedFunctionResourceUri(
         String resourceType,
         String uri) {
-        this.resourceType = Objects.requireNonNull(resourceType);
-        this.uri = Objects.requireNonNull(uri);
+        this.resourceType = resourceType;
+        this.uri = uri;
     }
 
     /**

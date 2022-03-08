@@ -27,7 +27,7 @@ public final class TokenRequest {
     private TokenRequest(
         String audience,
         @Nullable Integer expirationSeconds) {
-        this.audience = Objects.requireNonNull(audience);
+        this.audience = audience;
         this.expirationSeconds = expirationSeconds;
     }
 

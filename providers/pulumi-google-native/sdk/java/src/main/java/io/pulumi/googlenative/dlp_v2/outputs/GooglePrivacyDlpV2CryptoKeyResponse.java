@@ -32,9 +32,9 @@ public final class GooglePrivacyDlpV2CryptoKeyResponse {
         GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse kmsWrapped,
         GooglePrivacyDlpV2TransientCryptoKeyResponse $transient,
         GooglePrivacyDlpV2UnwrappedCryptoKeyResponse unwrapped) {
-        this.kmsWrapped = Objects.requireNonNull(kmsWrapped);
-        this.$transient = Objects.requireNonNull($transient);
-        this.unwrapped = Objects.requireNonNull(unwrapped);
+        this.kmsWrapped = kmsWrapped;
+        this.$transient = $transient;
+        this.unwrapped = unwrapped;
     }
 
     /**

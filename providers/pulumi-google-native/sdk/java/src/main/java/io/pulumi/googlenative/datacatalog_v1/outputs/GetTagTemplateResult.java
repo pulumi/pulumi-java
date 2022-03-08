@@ -38,10 +38,10 @@ public final class GetTagTemplateResult {
         Map<String,String> fields,
         Boolean isPubliclyReadable,
         String name) {
-        this.displayName = Objects.requireNonNull(displayName);
-        this.fields = Objects.requireNonNull(fields);
-        this.isPubliclyReadable = Objects.requireNonNull(isPubliclyReadable);
-        this.name = Objects.requireNonNull(name);
+        this.displayName = displayName;
+        this.fields = fields;
+        this.isPubliclyReadable = isPubliclyReadable;
+        this.name = name;
     }
 
     /**

@@ -35,7 +35,7 @@ public final class StorageAccountResponse {
         String status) {
         this.id = id;
         this.identity = identity;
-        this.status = Objects.requireNonNull(status);
+        this.status = status;
     }
 
     /**

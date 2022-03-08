@@ -69,7 +69,7 @@ public final class NatRuleConditionResponse {
         this.destinationPorts = destinationPorts;
         this.ipProtocols = ipProtocols;
         this.name = name;
-        this.ruleConditionType = Objects.requireNonNull(ruleConditionType);
+        this.ruleConditionType = ruleConditionType;
         this.sourceAddresses = sourceAddresses;
         this.sourceIpGroups = sourceIpGroups;
     }

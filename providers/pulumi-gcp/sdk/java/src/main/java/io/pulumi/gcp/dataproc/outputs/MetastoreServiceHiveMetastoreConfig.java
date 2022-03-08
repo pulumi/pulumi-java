@@ -38,7 +38,7 @@ public final class MetastoreServiceHiveMetastoreConfig {
         String version) {
         this.configOverrides = configOverrides;
         this.kerberosConfig = kerberosConfig;
-        this.version = Objects.requireNonNull(version);
+        this.version = version;
     }
 
     /**

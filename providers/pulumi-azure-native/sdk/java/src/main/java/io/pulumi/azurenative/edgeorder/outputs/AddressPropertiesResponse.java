@@ -34,8 +34,8 @@ public final class AddressPropertiesResponse {
         String addressValidationStatus,
         ContactDetailsResponse contactDetails,
         @Nullable ShippingAddressResponse shippingAddress) {
-        this.addressValidationStatus = Objects.requireNonNull(addressValidationStatus);
-        this.contactDetails = Objects.requireNonNull(contactDetails);
+        this.addressValidationStatus = addressValidationStatus;
+        this.contactDetails = contactDetails;
         this.shippingAddress = shippingAddress;
     }
 

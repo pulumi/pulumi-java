@@ -34,8 +34,8 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistribut
     private SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCut(
         String distributionFilter,
         SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange range) {
-        this.distributionFilter = Objects.requireNonNull(distributionFilter);
-        this.range = Objects.requireNonNull(range);
+        this.distributionFilter = distributionFilter;
+        this.range = range;
     }
 
     /**

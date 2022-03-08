@@ -21,8 +21,8 @@ public final class PerformanceCounterConfigurationResponse {
         String name,
         String samplingPeriod) {
         this.instance = instance;
-        this.name = Objects.requireNonNull(name);
-        this.samplingPeriod = Objects.requireNonNull(samplingPeriod);
+        this.name = name;
+        this.samplingPeriod = samplingPeriod;
     }
 
     public Optional<String> getInstance() {

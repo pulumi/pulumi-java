@@ -43,11 +43,11 @@ public final class ForwardSshTunnelConnectivityResponse {
         Integer port,
         String privateKey,
         String username) {
-        this.hostname = Objects.requireNonNull(hostname);
-        this.password = Objects.requireNonNull(password);
-        this.port = Objects.requireNonNull(port);
-        this.privateKey = Objects.requireNonNull(privateKey);
-        this.username = Objects.requireNonNull(username);
+        this.hostname = hostname;
+        this.password = password;
+        this.port = port;
+        this.privateKey = privateKey;
+        this.username = username;
     }
 
     /**

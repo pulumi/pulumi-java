@@ -67,15 +67,15 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyRe
         GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerRuntime,
         GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerSiblingContainers,
         String linuxIsolation) {
-        this.containerImageSources = Objects.requireNonNull(containerImageSources);
-        this.dockerAddCapabilities = Objects.requireNonNull(dockerAddCapabilities);
-        this.dockerChrootPath = Objects.requireNonNull(dockerChrootPath);
-        this.dockerNetwork = Objects.requireNonNull(dockerNetwork);
-        this.dockerPrivileged = Objects.requireNonNull(dockerPrivileged);
-        this.dockerRunAsRoot = Objects.requireNonNull(dockerRunAsRoot);
-        this.dockerRuntime = Objects.requireNonNull(dockerRuntime);
-        this.dockerSiblingContainers = Objects.requireNonNull(dockerSiblingContainers);
-        this.linuxIsolation = Objects.requireNonNull(linuxIsolation);
+        this.containerImageSources = containerImageSources;
+        this.dockerAddCapabilities = dockerAddCapabilities;
+        this.dockerChrootPath = dockerChrootPath;
+        this.dockerNetwork = dockerNetwork;
+        this.dockerPrivileged = dockerPrivileged;
+        this.dockerRunAsRoot = dockerRunAsRoot;
+        this.dockerRuntime = dockerRuntime;
+        this.dockerSiblingContainers = dockerSiblingContainers;
+        this.linuxIsolation = linuxIsolation;
     }
 
     /**

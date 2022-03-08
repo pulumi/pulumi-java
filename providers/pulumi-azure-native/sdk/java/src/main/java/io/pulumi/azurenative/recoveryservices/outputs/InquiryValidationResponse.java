@@ -33,7 +33,7 @@ public final class InquiryValidationResponse {
         String additionalDetail,
         @Nullable ErrorDetailResponse errorDetail,
         @Nullable String status) {
-        this.additionalDetail = Objects.requireNonNull(additionalDetail);
+        this.additionalDetail = additionalDetail;
         this.errorDetail = errorDetail;
         this.status = status;
     }

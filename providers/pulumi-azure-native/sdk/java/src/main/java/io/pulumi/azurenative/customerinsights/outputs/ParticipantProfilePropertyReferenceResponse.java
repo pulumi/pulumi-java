@@ -24,8 +24,8 @@ public final class ParticipantProfilePropertyReferenceResponse {
     private ParticipantProfilePropertyReferenceResponse(
         String interactionPropertyName,
         String profilePropertyName) {
-        this.interactionPropertyName = Objects.requireNonNull(interactionPropertyName);
-        this.profilePropertyName = Objects.requireNonNull(profilePropertyName);
+        this.interactionPropertyName = interactionPropertyName;
+        this.profilePropertyName = profilePropertyName;
     }
 
     /**

@@ -18,7 +18,7 @@ public final class OrganizationFeedFeedOutputConfig {
 
     @OutputCustomType.Constructor({"pubsubDestination"})
     private OrganizationFeedFeedOutputConfig(OrganizationFeedFeedOutputConfigPubsubDestination pubsubDestination) {
-        this.pubsubDestination = Objects.requireNonNull(pubsubDestination);
+        this.pubsubDestination = pubsubDestination;
     }
 
     /**

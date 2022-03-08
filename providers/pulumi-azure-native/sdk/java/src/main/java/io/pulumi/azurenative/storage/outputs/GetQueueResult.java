@@ -45,11 +45,11 @@ public final class GetQueueResult {
         @Nullable Map<String,String> metadata,
         String name,
         String type) {
-        this.approximateMessageCount = Objects.requireNonNull(approximateMessageCount);
-        this.id = Objects.requireNonNull(id);
+        this.approximateMessageCount = approximateMessageCount;
+        this.id = id;
         this.metadata = metadata;
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.name = name;
+        this.type = type;
     }
 
     /**

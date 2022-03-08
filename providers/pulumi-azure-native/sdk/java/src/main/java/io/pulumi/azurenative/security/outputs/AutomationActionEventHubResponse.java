@@ -39,10 +39,10 @@ public final class AutomationActionEventHubResponse {
         @Nullable String connectionString,
         @Nullable String eventHubResourceId,
         String sasPolicyName) {
-        this.actionType = Objects.requireNonNull(actionType);
+        this.actionType = actionType;
         this.connectionString = connectionString;
         this.eventHubResourceId = eventHubResourceId;
-        this.sasPolicyName = Objects.requireNonNull(sasPolicyName);
+        this.sasPolicyName = sasPolicyName;
     }
 
     /**

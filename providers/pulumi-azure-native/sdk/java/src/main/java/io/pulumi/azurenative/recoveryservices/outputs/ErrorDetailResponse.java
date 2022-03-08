@@ -31,9 +31,9 @@ public final class ErrorDetailResponse {
         String code,
         String message,
         List<String> recommendations) {
-        this.code = Objects.requireNonNull(code);
-        this.message = Objects.requireNonNull(message);
-        this.recommendations = Objects.requireNonNull(recommendations);
+        this.code = code;
+        this.message = message;
+        this.recommendations = recommendations;
     }
 
     /**

@@ -44,11 +44,11 @@ public final class GetRepoResult {
         Map<String,String> pubsubConfigs,
         String size,
         String url) {
-        this.mirrorConfig = Objects.requireNonNull(mirrorConfig);
-        this.name = Objects.requireNonNull(name);
-        this.pubsubConfigs = Objects.requireNonNull(pubsubConfigs);
-        this.size = Objects.requireNonNull(size);
-        this.url = Objects.requireNonNull(url);
+        this.mirrorConfig = mirrorConfig;
+        this.name = name;
+        this.pubsubConfigs = pubsubConfigs;
+        this.size = size;
+        this.url = url;
     }
 
     /**

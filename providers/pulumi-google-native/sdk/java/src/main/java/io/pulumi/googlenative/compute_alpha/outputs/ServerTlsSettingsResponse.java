@@ -32,9 +32,9 @@ public final class ServerTlsSettingsResponse {
         TlsContextResponse proxyTlsContext,
         List<String> subjectAltNames,
         String tlsMode) {
-        this.proxyTlsContext = Objects.requireNonNull(proxyTlsContext);
-        this.subjectAltNames = Objects.requireNonNull(subjectAltNames);
-        this.tlsMode = Objects.requireNonNull(tlsMode);
+        this.proxyTlsContext = proxyTlsContext;
+        this.subjectAltNames = subjectAltNames;
+        this.tlsMode = tlsMode;
     }
 
     /**

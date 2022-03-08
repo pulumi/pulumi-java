@@ -94,19 +94,19 @@ public final class GetMembershipResult {
         MembershipStateResponse state,
         String uniqueId,
         String updateTime) {
-        this.authority = Objects.requireNonNull(authority);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.deleteTime = Objects.requireNonNull(deleteTime);
-        this.description = Objects.requireNonNull(description);
-        this.endpoint = Objects.requireNonNull(endpoint);
-        this.externalId = Objects.requireNonNull(externalId);
-        this.infrastructureType = Objects.requireNonNull(infrastructureType);
-        this.labels = Objects.requireNonNull(labels);
-        this.lastConnectionTime = Objects.requireNonNull(lastConnectionTime);
-        this.name = Objects.requireNonNull(name);
-        this.state = Objects.requireNonNull(state);
-        this.uniqueId = Objects.requireNonNull(uniqueId);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.authority = authority;
+        this.createTime = createTime;
+        this.deleteTime = deleteTime;
+        this.description = description;
+        this.endpoint = endpoint;
+        this.externalId = externalId;
+        this.infrastructureType = infrastructureType;
+        this.labels = labels;
+        this.lastConnectionTime = lastConnectionTime;
+        this.name = name;
+        this.state = state;
+        this.uniqueId = uniqueId;
+        this.updateTime = updateTime;
     }
 
     /**

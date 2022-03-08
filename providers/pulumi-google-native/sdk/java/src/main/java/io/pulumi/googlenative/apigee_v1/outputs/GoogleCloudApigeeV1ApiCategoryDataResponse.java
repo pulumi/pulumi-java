@@ -30,9 +30,9 @@ public final class GoogleCloudApigeeV1ApiCategoryDataResponse {
         String name,
         String siteId,
         String updateTime) {
-        this.name = Objects.requireNonNull(name);
-        this.siteId = Objects.requireNonNull(siteId);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.name = name;
+        this.siteId = siteId;
+        this.updateTime = updateTime;
     }
 
     /**

@@ -59,7 +59,7 @@ public final class JobAppEngineHttpTarget {
         this.body = body;
         this.headers = headers;
         this.httpMethod = httpMethod;
-        this.relativeUri = Objects.requireNonNull(relativeUri);
+        this.relativeUri = relativeUri;
     }
 
     /**

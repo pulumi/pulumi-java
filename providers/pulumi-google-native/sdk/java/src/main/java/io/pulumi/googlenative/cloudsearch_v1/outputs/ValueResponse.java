@@ -27,12 +27,12 @@ public final class ValueResponse {
         String integerValue,
         String stringValue,
         String timestampValue) {
-        this.booleanValue = Objects.requireNonNull(booleanValue);
-        this.dateValue = Objects.requireNonNull(dateValue);
-        this.doubleValue = Objects.requireNonNull(doubleValue);
-        this.integerValue = Objects.requireNonNull(integerValue);
-        this.stringValue = Objects.requireNonNull(stringValue);
-        this.timestampValue = Objects.requireNonNull(timestampValue);
+        this.booleanValue = booleanValue;
+        this.dateValue = dateValue;
+        this.doubleValue = doubleValue;
+        this.integerValue = integerValue;
+        this.stringValue = stringValue;
+        this.timestampValue = timestampValue;
     }
 
     public Boolean getBooleanValue() {

@@ -35,7 +35,7 @@ public final class DataSourceGoogleDriveConfiguration {
         this.exclusionPatterns = exclusionPatterns;
         this.fieldMappings = fieldMappings;
         this.inclusionPatterns = inclusionPatterns;
-        this.secretArn = Objects.requireNonNull(secretArn);
+        this.secretArn = secretArn;
     }
 
     public List<String> getExcludeMimeTypes() {

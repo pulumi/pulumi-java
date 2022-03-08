@@ -1,6 +1,46 @@
 {
   "version": "0.0.1",
   "name": "aws",
+  "functions": {
+    "aws:ec2/getAmi:getAmi": {
+      "inputs": {
+        "description": "A collection of arguments for invoking getAmi.\n",
+        "properties": {
+          "executableUsers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Limit search to users with *explicit* launch permission on\nthe image. Valid items are the numeric account ID or `self`.\n"
+          },
+          "owners": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of AMI owners to limit search. At least 1 value must be specified. Valid values: an AWS account ID, `self` (the current account), or an AWS owner alias (e.g., `amazon`, `aws-marketplace`, `microsoft`).\n"
+          }
+        },
+        "type": "object",
+        "required": [
+          "owners"
+        ]
+      },
+      "outputs": {
+        "description": "A collection of values returned by getAmi.\n",
+        "properties": {
+          "kernelId": {
+            "type": "string",
+            "description": "The kernel associated with the image, if any. Only applicable\nfor machine images.\n"
+          }
+        },
+        "type": "object",
+        "required": [
+          "kernelId"
+        ]
+      }
+    }
+  },
   "resources": {
     "aws:iam/instanceProfile:InstanceProfile": {
       "properties": {

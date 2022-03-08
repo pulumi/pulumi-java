@@ -24,8 +24,8 @@ public final class AutoscalingLimitsResponse {
     private AutoscalingLimitsResponse(
         Integer maxServeNodes,
         Integer minServeNodes) {
-        this.maxServeNodes = Objects.requireNonNull(maxServeNodes);
-        this.minServeNodes = Objects.requireNonNull(minServeNodes);
+        this.maxServeNodes = maxServeNodes;
+        this.minServeNodes = minServeNodes;
     }
 
     /**

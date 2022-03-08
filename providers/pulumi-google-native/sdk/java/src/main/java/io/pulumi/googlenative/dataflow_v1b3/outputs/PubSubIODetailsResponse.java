@@ -24,8 +24,8 @@ public final class PubSubIODetailsResponse {
     private PubSubIODetailsResponse(
         String subscription,
         String topic) {
-        this.subscription = Objects.requireNonNull(subscription);
-        this.topic = Objects.requireNonNull(topic);
+        this.subscription = subscription;
+        this.topic = topic;
     }
 
     /**

@@ -98,14 +98,14 @@ public final class EncodedTaskRunRequestResponse {
         this.agentConfiguration = agentConfiguration;
         this.agentPoolName = agentPoolName;
         this.credentials = credentials;
-        this.encodedTaskContent = Objects.requireNonNull(encodedTaskContent);
+        this.encodedTaskContent = encodedTaskContent;
         this.encodedValuesContent = encodedValuesContent;
         this.isArchiveEnabled = isArchiveEnabled;
         this.logTemplate = logTemplate;
-        this.platform = Objects.requireNonNull(platform);
+        this.platform = platform;
         this.sourceLocation = sourceLocation;
         this.timeout = timeout;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.values = values;
     }
 

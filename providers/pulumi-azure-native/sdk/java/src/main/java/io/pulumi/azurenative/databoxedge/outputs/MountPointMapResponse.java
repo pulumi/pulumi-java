@@ -42,11 +42,11 @@ public final class MountPointMapResponse {
         String roleId,
         String roleType,
         String shareId) {
-        this.mountPoint = Objects.requireNonNull(mountPoint);
-        this.mountType = Objects.requireNonNull(mountType);
-        this.roleId = Objects.requireNonNull(roleId);
-        this.roleType = Objects.requireNonNull(roleType);
-        this.shareId = Objects.requireNonNull(shareId);
+        this.mountPoint = mountPoint;
+        this.mountType = mountType;
+        this.roleId = roleId;
+        this.roleType = roleType;
+        this.shareId = shareId;
     }
 
     /**

@@ -13,7 +13,7 @@ public final class SpotFleetGroupIdentifier {
 
     @OutputCustomType.Constructor({"groupId"})
     private SpotFleetGroupIdentifier(String groupId) {
-        this.groupId = Objects.requireNonNull(groupId);
+        this.groupId = groupId;
     }
 
     public String getGroupId() {

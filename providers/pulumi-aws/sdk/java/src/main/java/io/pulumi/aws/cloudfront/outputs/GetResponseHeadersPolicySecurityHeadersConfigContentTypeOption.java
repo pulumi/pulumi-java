@@ -17,7 +17,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigContentTypeOptio
 
     @OutputCustomType.Constructor({"override"})
     private GetResponseHeadersPolicySecurityHeadersConfigContentTypeOption(Boolean override) {
-        this.override = Objects.requireNonNull(override);
+        this.override = override;
     }
 
     /**

@@ -217,37 +217,37 @@ public final class GetLaunchTemplateResult {
         Map<String,String> tags,
         String userData,
         List<String> vpcSecurityGroupIds) {
-        this.arn = Objects.requireNonNull(arn);
-        this.blockDeviceMappings = Objects.requireNonNull(blockDeviceMappings);
-        this.creditSpecifications = Objects.requireNonNull(creditSpecifications);
-        this.defaultVersion = Objects.requireNonNull(defaultVersion);
-        this.description = Objects.requireNonNull(description);
-        this.disableApiTermination = Objects.requireNonNull(disableApiTermination);
-        this.ebsOptimized = Objects.requireNonNull(ebsOptimized);
-        this.elasticGpuSpecifications = Objects.requireNonNull(elasticGpuSpecifications);
-        this.enclaveOptions = Objects.requireNonNull(enclaveOptions);
+        this.arn = arn;
+        this.blockDeviceMappings = blockDeviceMappings;
+        this.creditSpecifications = creditSpecifications;
+        this.defaultVersion = defaultVersion;
+        this.description = description;
+        this.disableApiTermination = disableApiTermination;
+        this.ebsOptimized = ebsOptimized;
+        this.elasticGpuSpecifications = elasticGpuSpecifications;
+        this.enclaveOptions = enclaveOptions;
         this.filters = filters;
-        this.hibernationOptions = Objects.requireNonNull(hibernationOptions);
-        this.iamInstanceProfiles = Objects.requireNonNull(iamInstanceProfiles);
-        this.id = Objects.requireNonNull(id);
-        this.imageId = Objects.requireNonNull(imageId);
-        this.instanceInitiatedShutdownBehavior = Objects.requireNonNull(instanceInitiatedShutdownBehavior);
-        this.instanceMarketOptions = Objects.requireNonNull(instanceMarketOptions);
-        this.instanceType = Objects.requireNonNull(instanceType);
-        this.kernelId = Objects.requireNonNull(kernelId);
-        this.keyName = Objects.requireNonNull(keyName);
-        this.latestVersion = Objects.requireNonNull(latestVersion);
-        this.metadataOptions = Objects.requireNonNull(metadataOptions);
-        this.monitorings = Objects.requireNonNull(monitorings);
+        this.hibernationOptions = hibernationOptions;
+        this.iamInstanceProfiles = iamInstanceProfiles;
+        this.id = id;
+        this.imageId = imageId;
+        this.instanceInitiatedShutdownBehavior = instanceInitiatedShutdownBehavior;
+        this.instanceMarketOptions = instanceMarketOptions;
+        this.instanceType = instanceType;
+        this.kernelId = kernelId;
+        this.keyName = keyName;
+        this.latestVersion = latestVersion;
+        this.metadataOptions = metadataOptions;
+        this.monitorings = monitorings;
         this.name = name;
-        this.networkInterfaces = Objects.requireNonNull(networkInterfaces);
-        this.placements = Objects.requireNonNull(placements);
-        this.ramDiskId = Objects.requireNonNull(ramDiskId);
-        this.securityGroupNames = Objects.requireNonNull(securityGroupNames);
-        this.tagSpecifications = Objects.requireNonNull(tagSpecifications);
-        this.tags = Objects.requireNonNull(tags);
-        this.userData = Objects.requireNonNull(userData);
-        this.vpcSecurityGroupIds = Objects.requireNonNull(vpcSecurityGroupIds);
+        this.networkInterfaces = networkInterfaces;
+        this.placements = placements;
+        this.ramDiskId = ramDiskId;
+        this.securityGroupNames = securityGroupNames;
+        this.tagSpecifications = tagSpecifications;
+        this.tags = tags;
+        this.userData = userData;
+        this.vpcSecurityGroupIds = vpcSecurityGroupIds;
     }
 
     /**

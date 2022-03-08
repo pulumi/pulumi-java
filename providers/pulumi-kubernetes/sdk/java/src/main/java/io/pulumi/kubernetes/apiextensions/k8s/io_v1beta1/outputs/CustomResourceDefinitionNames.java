@@ -52,9 +52,9 @@ public final class CustomResourceDefinitionNames {
         @Nullable List<String> shortNames,
         @Nullable String singular) {
         this.categories = categories;
-        this.kind = Objects.requireNonNull(kind);
+        this.kind = kind;
         this.listKind = listKind;
-        this.plural = Objects.requireNonNull(plural);
+        this.plural = plural;
         this.shortNames = shortNames;
         this.singular = singular;
     }

@@ -17,7 +17,7 @@ public final class ControlResponse {
 
     @OutputCustomType.Constructor({"environment"})
     private ControlResponse(String environment) {
-        this.environment = Objects.requireNonNull(environment);
+        this.environment = environment;
     }
 
     /**

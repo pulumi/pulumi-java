@@ -18,7 +18,7 @@ public final class SingletonPartitionSchemeDescriptionResponse {
 
     @OutputCustomType.Constructor({"partitionScheme"})
     private SingletonPartitionSchemeDescriptionResponse(String partitionScheme) {
-        this.partitionScheme = Objects.requireNonNull(partitionScheme);
+        this.partitionScheme = partitionScheme;
     }
 
     /**

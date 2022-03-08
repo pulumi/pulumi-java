@@ -17,7 +17,7 @@ public final class SecurityPolicyCloudArmorConfigResponse {
 
     @OutputCustomType.Constructor({"enableMl"})
     private SecurityPolicyCloudArmorConfigResponse(Boolean enableMl) {
-        this.enableMl = Objects.requireNonNull(enableMl);
+        this.enableMl = enableMl;
     }
 
     /**

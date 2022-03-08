@@ -18,7 +18,7 @@ public final class ListenerRuleConditionPathPattern {
 
     @OutputCustomType.Constructor({"values"})
     private ListenerRuleConditionPathPattern(List<String> values) {
-        this.values = Objects.requireNonNull(values);
+        this.values = values;
     }
 
     /**

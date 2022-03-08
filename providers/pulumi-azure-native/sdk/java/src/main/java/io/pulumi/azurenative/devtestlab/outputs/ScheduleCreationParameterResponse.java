@@ -87,7 +87,7 @@ public final class ScheduleCreationParameterResponse {
         @Nullable WeekDetailsResponse weeklyRecurrence) {
         this.dailyRecurrence = dailyRecurrence;
         this.hourlyRecurrence = hourlyRecurrence;
-        this.location = Objects.requireNonNull(location);
+        this.location = location;
         this.name = name;
         this.notificationSettings = notificationSettings;
         this.status = status;

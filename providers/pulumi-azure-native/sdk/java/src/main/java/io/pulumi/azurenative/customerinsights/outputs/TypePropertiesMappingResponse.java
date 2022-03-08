@@ -33,8 +33,8 @@ public final class TypePropertiesMappingResponse {
         String sourcePropertyName,
         String targetPropertyName) {
         this.linkType = linkType;
-        this.sourcePropertyName = Objects.requireNonNull(sourcePropertyName);
-        this.targetPropertyName = Objects.requireNonNull(targetPropertyName);
+        this.sourcePropertyName = sourcePropertyName;
+        this.targetPropertyName = targetPropertyName;
     }
 
     /**

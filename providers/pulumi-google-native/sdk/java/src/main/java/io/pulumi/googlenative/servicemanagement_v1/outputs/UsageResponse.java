@@ -32,9 +32,9 @@ public final class UsageResponse {
         String producerNotificationChannel,
         List<String> requirements,
         List<UsageRuleResponse> rules) {
-        this.producerNotificationChannel = Objects.requireNonNull(producerNotificationChannel);
-        this.requirements = Objects.requireNonNull(requirements);
-        this.rules = Objects.requireNonNull(rules);
+        this.producerNotificationChannel = producerNotificationChannel;
+        this.requirements = requirements;
+        this.rules = rules;
     }
 
     /**

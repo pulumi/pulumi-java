@@ -25,8 +25,8 @@ public final class OptionResponse {
     private OptionResponse(
         String name,
         Map<String,String> value) {
-        this.name = Objects.requireNonNull(name);
-        this.value = Objects.requireNonNull(value);
+        this.name = name;
+        this.value = value;
     }
 
     /**

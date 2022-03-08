@@ -25,8 +25,8 @@ public final class TargetOSInfoResponse {
     private TargetOSInfoResponse(
         String osUpdateType,
         List<String> targetOSs) {
-        this.osUpdateType = Objects.requireNonNull(osUpdateType);
-        this.targetOSs = Objects.requireNonNull(targetOSs);
+        this.osUpdateType = osUpdateType;
+        this.targetOSs = targetOSs;
     }
 
     /**

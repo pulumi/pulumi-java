@@ -107,22 +107,22 @@ public final class GetReplicationGroupResult {
         String replicationGroupId,
         Integer snapshotRetentionLimit,
         String snapshotWindow) {
-        this.arn = Objects.requireNonNull(arn);
-        this.authTokenEnabled = Objects.requireNonNull(authTokenEnabled);
-        this.automaticFailoverEnabled = Objects.requireNonNull(automaticFailoverEnabled);
-        this.configurationEndpointAddress = Objects.requireNonNull(configurationEndpointAddress);
-        this.id = Objects.requireNonNull(id);
-        this.memberClusters = Objects.requireNonNull(memberClusters);
-        this.multiAzEnabled = Objects.requireNonNull(multiAzEnabled);
-        this.nodeType = Objects.requireNonNull(nodeType);
-        this.numberCacheClusters = Objects.requireNonNull(numberCacheClusters);
-        this.port = Objects.requireNonNull(port);
-        this.primaryEndpointAddress = Objects.requireNonNull(primaryEndpointAddress);
-        this.readerEndpointAddress = Objects.requireNonNull(readerEndpointAddress);
-        this.replicationGroupDescription = Objects.requireNonNull(replicationGroupDescription);
-        this.replicationGroupId = Objects.requireNonNull(replicationGroupId);
-        this.snapshotRetentionLimit = Objects.requireNonNull(snapshotRetentionLimit);
-        this.snapshotWindow = Objects.requireNonNull(snapshotWindow);
+        this.arn = arn;
+        this.authTokenEnabled = authTokenEnabled;
+        this.automaticFailoverEnabled = automaticFailoverEnabled;
+        this.configurationEndpointAddress = configurationEndpointAddress;
+        this.id = id;
+        this.memberClusters = memberClusters;
+        this.multiAzEnabled = multiAzEnabled;
+        this.nodeType = nodeType;
+        this.numberCacheClusters = numberCacheClusters;
+        this.port = port;
+        this.primaryEndpointAddress = primaryEndpointAddress;
+        this.readerEndpointAddress = readerEndpointAddress;
+        this.replicationGroupDescription = replicationGroupDescription;
+        this.replicationGroupId = replicationGroupId;
+        this.snapshotRetentionLimit = snapshotRetentionLimit;
+        this.snapshotWindow = snapshotWindow;
     }
 
     /**

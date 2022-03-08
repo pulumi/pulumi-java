@@ -31,9 +31,9 @@ public final class ReportConfigComparisonExpressionResponse {
         String name,
         String operator,
         List<String> values) {
-        this.name = Objects.requireNonNull(name);
-        this.operator = Objects.requireNonNull(operator);
-        this.values = Objects.requireNonNull(values);
+        this.name = name;
+        this.operator = operator;
+        this.values = values;
     }
 
     /**

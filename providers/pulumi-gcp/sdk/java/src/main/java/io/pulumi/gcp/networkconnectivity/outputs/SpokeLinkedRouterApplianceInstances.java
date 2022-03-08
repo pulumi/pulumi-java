@@ -26,8 +26,8 @@ public final class SpokeLinkedRouterApplianceInstances {
     private SpokeLinkedRouterApplianceInstances(
         List<SpokeLinkedRouterApplianceInstancesInstance> instances,
         Boolean siteToSiteDataTransfer) {
-        this.instances = Objects.requireNonNull(instances);
-        this.siteToSiteDataTransfer = Objects.requireNonNull(siteToSiteDataTransfer);
+        this.instances = instances;
+        this.siteToSiteDataTransfer = siteToSiteDataTransfer;
     }
 
     /**

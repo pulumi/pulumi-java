@@ -112,7 +112,7 @@ public final class AzureDataLakeStoreReadSettingsResponse {
         this.modifiedDatetimeStart = modifiedDatetimeStart;
         this.partitionRootPath = partitionRootPath;
         this.recursive = recursive;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.wildcardFileName = wildcardFileName;
         this.wildcardFolderPath = wildcardFolderPath;
     }

@@ -31,9 +31,9 @@ public final class RateLimitsResponse {
         Integer maxBurstSize,
         Integer maxConcurrentDispatches,
         Double maxDispatchesPerSecond) {
-        this.maxBurstSize = Objects.requireNonNull(maxBurstSize);
-        this.maxConcurrentDispatches = Objects.requireNonNull(maxConcurrentDispatches);
-        this.maxDispatchesPerSecond = Objects.requireNonNull(maxDispatchesPerSecond);
+        this.maxBurstSize = maxBurstSize;
+        this.maxConcurrentDispatches = maxConcurrentDispatches;
+        this.maxDispatchesPerSecond = maxDispatchesPerSecond;
     }
 
     /**

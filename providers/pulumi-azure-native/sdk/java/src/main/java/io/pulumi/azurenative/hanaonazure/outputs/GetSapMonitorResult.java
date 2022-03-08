@@ -95,18 +95,18 @@ public final class GetSapMonitorResult {
         @Nullable Map<String,String> tags,
         String type) {
         this.enableCustomerAnalytics = enableCustomerAnalytics;
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
+        this.id = id;
+        this.location = location;
         this.logAnalyticsWorkspaceArmId = logAnalyticsWorkspaceArmId;
         this.logAnalyticsWorkspaceId = logAnalyticsWorkspaceId;
         this.logAnalyticsWorkspaceSharedKey = logAnalyticsWorkspaceSharedKey;
-        this.managedResourceGroupName = Objects.requireNonNull(managedResourceGroupName);
+        this.managedResourceGroupName = managedResourceGroupName;
         this.monitorSubnet = monitorSubnet;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.sapMonitorCollectorVersion = Objects.requireNonNull(sapMonitorCollectorVersion);
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.sapMonitorCollectorVersion = sapMonitorCollectorVersion;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

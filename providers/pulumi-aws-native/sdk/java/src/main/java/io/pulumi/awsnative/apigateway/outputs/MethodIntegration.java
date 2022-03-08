@@ -118,7 +118,7 @@ public final class MethodIntegration {
         this.requestParameters = requestParameters;
         this.requestTemplates = requestTemplates;
         this.timeoutInMillis = timeoutInMillis;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.uri = uri;
     }
 

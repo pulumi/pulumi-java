@@ -115,22 +115,22 @@ public final class SecurityPolicyRuleResponse {
         Integer ruleTupleCount,
         List<String> targetResources,
         List<String> targetServiceAccounts) {
-        this.action = Objects.requireNonNull(action);
-        this.description = Objects.requireNonNull(description);
-        this.direction = Objects.requireNonNull(direction);
-        this.enableLogging = Objects.requireNonNull(enableLogging);
-        this.headerAction = Objects.requireNonNull(headerAction);
-        this.kind = Objects.requireNonNull(kind);
-        this.match = Objects.requireNonNull(match);
-        this.preview = Objects.requireNonNull(preview);
-        this.priority = Objects.requireNonNull(priority);
-        this.rateLimitOptions = Objects.requireNonNull(rateLimitOptions);
-        this.redirectOptions = Objects.requireNonNull(redirectOptions);
-        this.redirectTarget = Objects.requireNonNull(redirectTarget);
-        this.ruleNumber = Objects.requireNonNull(ruleNumber);
-        this.ruleTupleCount = Objects.requireNonNull(ruleTupleCount);
-        this.targetResources = Objects.requireNonNull(targetResources);
-        this.targetServiceAccounts = Objects.requireNonNull(targetServiceAccounts);
+        this.action = action;
+        this.description = description;
+        this.direction = direction;
+        this.enableLogging = enableLogging;
+        this.headerAction = headerAction;
+        this.kind = kind;
+        this.match = match;
+        this.preview = preview;
+        this.priority = priority;
+        this.rateLimitOptions = rateLimitOptions;
+        this.redirectOptions = redirectOptions;
+        this.redirectTarget = redirectTarget;
+        this.ruleNumber = ruleNumber;
+        this.ruleTupleCount = ruleTupleCount;
+        this.targetResources = targetResources;
+        this.targetServiceAccounts = targetServiceAccounts;
     }
 
     /**

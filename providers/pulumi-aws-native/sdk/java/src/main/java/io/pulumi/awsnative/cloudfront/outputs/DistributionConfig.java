@@ -72,7 +72,7 @@ public final class DistributionConfig {
         this.customOrigin = customOrigin;
         this.defaultCacheBehavior = defaultCacheBehavior;
         this.defaultRootObject = defaultRootObject;
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
         this.httpVersion = httpVersion;
         this.iPV6Enabled = iPV6Enabled;
         this.logging = logging;

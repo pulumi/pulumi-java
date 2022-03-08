@@ -16,8 +16,8 @@ public final class DataSourceS3Path {
     private DataSourceS3Path(
         String bucket,
         String key) {
-        this.bucket = Objects.requireNonNull(bucket);
-        this.key = Objects.requireNonNull(key);
+        this.bucket = bucket;
+        this.key = key;
     }
 
     public String getBucket() {

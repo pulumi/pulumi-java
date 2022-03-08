@@ -52,14 +52,14 @@ public final class GetResourceShareResult {
         String resourceOwner,
         String status,
         Map<String,String> tags) {
-        this.arn = Objects.requireNonNull(arn);
+        this.arn = arn;
         this.filters = filters;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.owningAccountId = Objects.requireNonNull(owningAccountId);
-        this.resourceOwner = Objects.requireNonNull(resourceOwner);
-        this.status = Objects.requireNonNull(status);
-        this.tags = Objects.requireNonNull(tags);
+        this.id = id;
+        this.name = name;
+        this.owningAccountId = owningAccountId;
+        this.resourceOwner = resourceOwner;
+        this.status = status;
+        this.tags = tags;
     }
 
     /**

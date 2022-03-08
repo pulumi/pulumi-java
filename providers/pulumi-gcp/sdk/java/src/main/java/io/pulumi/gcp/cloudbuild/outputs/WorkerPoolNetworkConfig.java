@@ -17,7 +17,7 @@ public final class WorkerPoolNetworkConfig {
 
     @OutputCustomType.Constructor({"peeredNetwork"})
     private WorkerPoolNetworkConfig(String peeredNetwork) {
-        this.peeredNetwork = Objects.requireNonNull(peeredNetwork);
+        this.peeredNetwork = peeredNetwork;
     }
 
     /**

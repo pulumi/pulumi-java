@@ -32,9 +32,9 @@ public final class ShareSettingsResponse {
         Map<String,String> projectMap,
         List<String> projects,
         String shareType) {
-        this.projectMap = Objects.requireNonNull(projectMap);
-        this.projects = Objects.requireNonNull(projects);
-        this.shareType = Objects.requireNonNull(shareType);
+        this.projectMap = projectMap;
+        this.projects = projects;
+        this.shareType = shareType;
     }
 
     /**

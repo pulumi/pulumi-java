@@ -30,9 +30,9 @@ public final class AzureContainerInfoResponse {
         String containerName,
         String dataFormat,
         String storageAccountCredentialId) {
-        this.containerName = Objects.requireNonNull(containerName);
-        this.dataFormat = Objects.requireNonNull(dataFormat);
-        this.storageAccountCredentialId = Objects.requireNonNull(storageAccountCredentialId);
+        this.containerName = containerName;
+        this.dataFormat = dataFormat;
+        this.storageAccountCredentialId = storageAccountCredentialId;
     }
 
     /**

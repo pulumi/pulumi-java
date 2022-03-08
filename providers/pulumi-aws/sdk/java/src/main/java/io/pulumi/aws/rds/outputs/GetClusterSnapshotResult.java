@@ -120,27 +120,27 @@ public final class GetClusterSnapshotResult {
         Boolean storageEncrypted,
         Map<String,String> tags,
         String vpcId) {
-        this.allocatedStorage = Objects.requireNonNull(allocatedStorage);
-        this.availabilityZones = Objects.requireNonNull(availabilityZones);
+        this.allocatedStorage = allocatedStorage;
+        this.availabilityZones = availabilityZones;
         this.dbClusterIdentifier = dbClusterIdentifier;
-        this.dbClusterSnapshotArn = Objects.requireNonNull(dbClusterSnapshotArn);
+        this.dbClusterSnapshotArn = dbClusterSnapshotArn;
         this.dbClusterSnapshotIdentifier = dbClusterSnapshotIdentifier;
-        this.engine = Objects.requireNonNull(engine);
-        this.engineVersion = Objects.requireNonNull(engineVersion);
-        this.id = Objects.requireNonNull(id);
+        this.engine = engine;
+        this.engineVersion = engineVersion;
+        this.id = id;
         this.includePublic = includePublic;
         this.includeShared = includeShared;
-        this.kmsKeyId = Objects.requireNonNull(kmsKeyId);
-        this.licenseModel = Objects.requireNonNull(licenseModel);
+        this.kmsKeyId = kmsKeyId;
+        this.licenseModel = licenseModel;
         this.mostRecent = mostRecent;
-        this.port = Objects.requireNonNull(port);
-        this.snapshotCreateTime = Objects.requireNonNull(snapshotCreateTime);
+        this.port = port;
+        this.snapshotCreateTime = snapshotCreateTime;
         this.snapshotType = snapshotType;
-        this.sourceDbClusterSnapshotArn = Objects.requireNonNull(sourceDbClusterSnapshotArn);
-        this.status = Objects.requireNonNull(status);
-        this.storageEncrypted = Objects.requireNonNull(storageEncrypted);
-        this.tags = Objects.requireNonNull(tags);
-        this.vpcId = Objects.requireNonNull(vpcId);
+        this.sourceDbClusterSnapshotArn = sourceDbClusterSnapshotArn;
+        this.status = status;
+        this.storageEncrypted = storageEncrypted;
+        this.tags = tags;
+        this.vpcId = vpcId;
     }
 
     /**

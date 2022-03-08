@@ -31,9 +31,9 @@ public final class BudgetActionDefinitionSsmActionDefinition {
         String actionSubType,
         List<String> instanceIds,
         String region) {
-        this.actionSubType = Objects.requireNonNull(actionSubType);
-        this.instanceIds = Objects.requireNonNull(instanceIds);
-        this.region = Objects.requireNonNull(region);
+        this.actionSubType = actionSubType;
+        this.instanceIds = instanceIds;
+        this.region = region;
     }
 
     /**

@@ -17,7 +17,7 @@ public final class LogAnalyticsOutputResponse {
 
     @OutputCustomType.Constructor({"output"})
     private LogAnalyticsOutputResponse(String output) {
-        this.output = Objects.requireNonNull(output);
+        this.output = output;
     }
 
     /**

@@ -30,9 +30,9 @@ public final class SdkVersionResponse {
         String sdkSupportStatus,
         String version,
         String versionDisplayName) {
-        this.sdkSupportStatus = Objects.requireNonNull(sdkSupportStatus);
-        this.version = Objects.requireNonNull(version);
-        this.versionDisplayName = Objects.requireNonNull(versionDisplayName);
+        this.sdkSupportStatus = sdkSupportStatus;
+        this.version = version;
+        this.versionDisplayName = versionDisplayName;
     }
 
     /**

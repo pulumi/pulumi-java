@@ -17,7 +17,7 @@ public final class CommitmentPlanResponse {
 
     @OutputCustomType.Constructor({"id"})
     private CommitmentPlanResponse(String id) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
     }
 
     /**

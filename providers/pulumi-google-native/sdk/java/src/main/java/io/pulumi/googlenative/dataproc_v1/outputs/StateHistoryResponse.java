@@ -30,9 +30,9 @@ public final class StateHistoryResponse {
         String state,
         String stateMessage,
         String stateStartTime) {
-        this.state = Objects.requireNonNull(state);
-        this.stateMessage = Objects.requireNonNull(stateMessage);
-        this.stateStartTime = Objects.requireNonNull(stateStartTime);
+        this.state = state;
+        this.stateMessage = stateMessage;
+        this.stateStartTime = stateStartTime;
     }
 
     /**

@@ -43,7 +43,7 @@ public final class CinderVolumeSource {
         this.fsType = fsType;
         this.readOnly = readOnly;
         this.secretRef = secretRef;
-        this.volumeID = Objects.requireNonNull(volumeID);
+        this.volumeID = volumeID;
     }
 
     /**

@@ -72,15 +72,15 @@ public final class GetKeyResult {
         GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse testingOptions,
         GoogleCloudRecaptchaenterpriseV1WafSettingsResponse wafSettings,
         GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse webSettings) {
-        this.androidSettings = Objects.requireNonNull(androidSettings);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.iosSettings = Objects.requireNonNull(iosSettings);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.testingOptions = Objects.requireNonNull(testingOptions);
-        this.wafSettings = Objects.requireNonNull(wafSettings);
-        this.webSettings = Objects.requireNonNull(webSettings);
+        this.androidSettings = androidSettings;
+        this.createTime = createTime;
+        this.displayName = displayName;
+        this.iosSettings = iosSettings;
+        this.labels = labels;
+        this.name = name;
+        this.testingOptions = testingOptions;
+        this.wafSettings = wafSettings;
+        this.webSettings = webSettings;
     }
 
     /**

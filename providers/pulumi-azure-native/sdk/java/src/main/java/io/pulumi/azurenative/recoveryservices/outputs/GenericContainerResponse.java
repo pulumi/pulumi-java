@@ -62,7 +62,7 @@ public final class GenericContainerResponse {
         @Nullable String healthStatus,
         @Nullable String registrationStatus) {
         this.backupManagementType = backupManagementType;
-        this.containerType = Objects.requireNonNull(containerType);
+        this.containerType = containerType;
         this.extendedInformation = extendedInformation;
         this.fabricName = fabricName;
         this.friendlyName = friendlyName;

@@ -18,7 +18,7 @@ public final class SystemAssignedIdentityAuthInfoResponse {
 
     @OutputCustomType.Constructor({"authType"})
     private SystemAssignedIdentityAuthInfoResponse(String authType) {
-        this.authType = Objects.requireNonNull(authType);
+        this.authType = authType;
     }
 
     /**

@@ -13,7 +13,7 @@ public final class GetClusterAddonsConfigKalmConfig {
 
     @OutputCustomType.Constructor({"enabled"})
     private GetClusterAddonsConfigKalmConfig(Boolean enabled) {
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
     }
 
     public Boolean getEnabled() {

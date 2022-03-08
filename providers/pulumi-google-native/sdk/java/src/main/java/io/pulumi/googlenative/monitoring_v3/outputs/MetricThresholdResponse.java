@@ -64,14 +64,14 @@ public final class MetricThresholdResponse {
         String filter,
         Double thresholdValue,
         TriggerResponse trigger) {
-        this.aggregations = Objects.requireNonNull(aggregations);
-        this.comparison = Objects.requireNonNull(comparison);
-        this.denominatorAggregations = Objects.requireNonNull(denominatorAggregations);
-        this.denominatorFilter = Objects.requireNonNull(denominatorFilter);
-        this.duration = Objects.requireNonNull(duration);
-        this.filter = Objects.requireNonNull(filter);
-        this.thresholdValue = Objects.requireNonNull(thresholdValue);
-        this.trigger = Objects.requireNonNull(trigger);
+        this.aggregations = aggregations;
+        this.comparison = comparison;
+        this.denominatorAggregations = denominatorAggregations;
+        this.denominatorFilter = denominatorFilter;
+        this.duration = duration;
+        this.filter = filter;
+        this.thresholdValue = thresholdValue;
+        this.trigger = trigger;
     }
 
     /**

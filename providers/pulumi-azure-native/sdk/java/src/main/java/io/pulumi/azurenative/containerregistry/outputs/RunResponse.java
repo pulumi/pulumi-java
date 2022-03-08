@@ -184,26 +184,26 @@ public final class RunResponse {
         this.createTime = createTime;
         this.customRegistries = customRegistries;
         this.finishTime = finishTime;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.imageUpdateTrigger = imageUpdateTrigger;
         this.isArchiveEnabled = isArchiveEnabled;
         this.lastUpdatedTime = lastUpdatedTime;
-        this.logArtifact = Objects.requireNonNull(logArtifact);
-        this.name = Objects.requireNonNull(name);
+        this.logArtifact = logArtifact;
+        this.name = name;
         this.outputImages = outputImages;
         this.platform = platform;
         this.provisioningState = provisioningState;
-        this.runErrorMessage = Objects.requireNonNull(runErrorMessage);
+        this.runErrorMessage = runErrorMessage;
         this.runId = runId;
         this.runType = runType;
         this.sourceRegistryAuth = sourceRegistryAuth;
         this.sourceTrigger = sourceTrigger;
         this.startTime = startTime;
         this.status = status;
-        this.systemData = Objects.requireNonNull(systemData);
+        this.systemData = systemData;
         this.task = task;
         this.timerTrigger = timerTrigger;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.updateTriggerToken = updateTriggerToken;
     }
 

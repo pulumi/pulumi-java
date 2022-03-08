@@ -13,7 +13,7 @@ public final class GetClusterWorkloadIdentityConfig {
 
     @OutputCustomType.Constructor({"workloadPool"})
     private GetClusterWorkloadIdentityConfig(String workloadPool) {
-        this.workloadPool = Objects.requireNonNull(workloadPool);
+        this.workloadPool = workloadPool;
     }
 
     public String getWorkloadPool() {

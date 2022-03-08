@@ -26,8 +26,8 @@ public final class BiEngineStatisticsResponse {
     private BiEngineStatisticsResponse(
         String biEngineMode,
         List<BiEngineReasonResponse> biEngineReasons) {
-        this.biEngineMode = Objects.requireNonNull(biEngineMode);
-        this.biEngineReasons = Objects.requireNonNull(biEngineReasons);
+        this.biEngineMode = biEngineMode;
+        this.biEngineReasons = biEngineReasons;
     }
 
     /**

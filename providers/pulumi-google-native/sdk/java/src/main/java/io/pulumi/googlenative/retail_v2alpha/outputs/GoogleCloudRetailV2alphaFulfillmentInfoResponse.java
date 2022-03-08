@@ -25,8 +25,8 @@ public final class GoogleCloudRetailV2alphaFulfillmentInfoResponse {
     private GoogleCloudRetailV2alphaFulfillmentInfoResponse(
         List<String> placeIds,
         String type) {
-        this.placeIds = Objects.requireNonNull(placeIds);
-        this.type = Objects.requireNonNull(type);
+        this.placeIds = placeIds;
+        this.type = type;
     }
 
     /**

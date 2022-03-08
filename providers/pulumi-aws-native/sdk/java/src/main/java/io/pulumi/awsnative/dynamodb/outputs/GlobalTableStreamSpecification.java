@@ -13,7 +13,7 @@ public final class GlobalTableStreamSpecification {
 
     @OutputCustomType.Constructor({"streamViewType"})
     private GlobalTableStreamSpecification(String streamViewType) {
-        this.streamViewType = Objects.requireNonNull(streamViewType);
+        this.streamViewType = streamViewType;
     }
 
     public String getStreamViewType() {

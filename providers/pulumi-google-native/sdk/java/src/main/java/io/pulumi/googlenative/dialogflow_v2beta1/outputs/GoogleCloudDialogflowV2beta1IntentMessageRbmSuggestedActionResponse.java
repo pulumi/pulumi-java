@@ -45,11 +45,11 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRe
         String postbackData,
         GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationResponse shareLocation,
         String text) {
-        this.dial = Objects.requireNonNull(dial);
-        this.openUrl = Objects.requireNonNull(openUrl);
-        this.postbackData = Objects.requireNonNull(postbackData);
-        this.shareLocation = Objects.requireNonNull(shareLocation);
-        this.text = Objects.requireNonNull(text);
+        this.dial = dial;
+        this.openUrl = openUrl;
+        this.postbackData = postbackData;
+        this.shareLocation = shareLocation;
+        this.text = text;
     }
 
     /**

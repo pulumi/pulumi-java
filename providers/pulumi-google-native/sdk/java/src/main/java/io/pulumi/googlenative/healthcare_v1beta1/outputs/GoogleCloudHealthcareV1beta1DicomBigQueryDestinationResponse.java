@@ -31,9 +31,9 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse 
         Boolean force,
         String tableUri,
         String writeDisposition) {
-        this.force = Objects.requireNonNull(force);
-        this.tableUri = Objects.requireNonNull(tableUri);
-        this.writeDisposition = Objects.requireNonNull(writeDisposition);
+        this.force = force;
+        this.tableUri = tableUri;
+        this.writeDisposition = writeDisposition;
     }
 
     /**

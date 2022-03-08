@@ -26,7 +26,7 @@ public final class VirtualNodeSpecListenerConnectionPoolHttp {
     private VirtualNodeSpecListenerConnectionPoolHttp(
         Integer maxConnections,
         @Nullable Integer maxPendingRequests) {
-        this.maxConnections = Objects.requireNonNull(maxConnections);
+        this.maxConnections = maxConnections;
         this.maxPendingRequests = maxPendingRequests;
     }
 

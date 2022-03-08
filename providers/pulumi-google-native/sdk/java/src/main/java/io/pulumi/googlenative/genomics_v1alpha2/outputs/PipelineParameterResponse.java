@@ -37,10 +37,10 @@ public final class PipelineParameterResponse {
         String description,
         LocalCopyResponse localCopy,
         String name) {
-        this.defaultValue = Objects.requireNonNull(defaultValue);
-        this.description = Objects.requireNonNull(description);
-        this.localCopy = Objects.requireNonNull(localCopy);
-        this.name = Objects.requireNonNull(name);
+        this.defaultValue = defaultValue;
+        this.description = description;
+        this.localCopy = localCopy;
+        this.name = name;
     }
 
     /**

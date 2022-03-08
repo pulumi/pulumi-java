@@ -60,13 +60,13 @@ public final class GooglePrivacyDlpV2InspectConfigResponse {
         GooglePrivacyDlpV2FindingLimitsResponse limits,
         String minLikelihood,
         List<GooglePrivacyDlpV2InspectionRuleSetResponse> ruleSet) {
-        this.customInfoTypes = Objects.requireNonNull(customInfoTypes);
-        this.excludeInfoTypes = Objects.requireNonNull(excludeInfoTypes);
-        this.includeQuote = Objects.requireNonNull(includeQuote);
-        this.infoTypes = Objects.requireNonNull(infoTypes);
-        this.limits = Objects.requireNonNull(limits);
-        this.minLikelihood = Objects.requireNonNull(minLikelihood);
-        this.ruleSet = Objects.requireNonNull(ruleSet);
+        this.customInfoTypes = customInfoTypes;
+        this.excludeInfoTypes = excludeInfoTypes;
+        this.includeQuote = includeQuote;
+        this.infoTypes = infoTypes;
+        this.limits = limits;
+        this.minLikelihood = minLikelihood;
+        this.ruleSet = ruleSet;
     }
 
     /**

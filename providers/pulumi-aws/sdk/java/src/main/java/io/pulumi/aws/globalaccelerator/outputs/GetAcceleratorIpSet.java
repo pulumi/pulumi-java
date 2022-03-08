@@ -17,8 +17,8 @@ public final class GetAcceleratorIpSet {
     private GetAcceleratorIpSet(
         List<String> ipAddresses,
         String ipFamily) {
-        this.ipAddresses = Objects.requireNonNull(ipAddresses);
-        this.ipFamily = Objects.requireNonNull(ipFamily);
+        this.ipAddresses = ipAddresses;
+        this.ipFamily = ipFamily;
     }
 
     public List<String> getIpAddresses() {

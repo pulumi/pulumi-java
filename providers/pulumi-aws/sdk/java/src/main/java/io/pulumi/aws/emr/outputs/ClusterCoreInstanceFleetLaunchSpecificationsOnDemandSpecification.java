@@ -17,7 +17,7 @@ public final class ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecifica
 
     @OutputCustomType.Constructor({"allocationStrategy"})
     private ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecification(String allocationStrategy) {
-        this.allocationStrategy = Objects.requireNonNull(allocationStrategy);
+        this.allocationStrategy = allocationStrategy;
     }
 
     /**

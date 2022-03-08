@@ -25,8 +25,8 @@ public final class AuditLogConfigResponse {
     private AuditLogConfigResponse(
         List<String> exemptedMembers,
         String logType) {
-        this.exemptedMembers = Objects.requireNonNull(exemptedMembers);
-        this.logType = Objects.requireNonNull(logType);
+        this.exemptedMembers = exemptedMembers;
+        this.logType = logType;
     }
 
     /**

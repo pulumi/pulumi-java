@@ -37,10 +37,10 @@ public final class MaintenanceScheduleResponse {
         String endTime,
         String scheduleDeadlineTime,
         String startTime) {
-        this.canReschedule = Objects.requireNonNull(canReschedule);
-        this.endTime = Objects.requireNonNull(endTime);
-        this.scheduleDeadlineTime = Objects.requireNonNull(scheduleDeadlineTime);
-        this.startTime = Objects.requireNonNull(startTime);
+        this.canReschedule = canReschedule;
+        this.endTime = endTime;
+        this.scheduleDeadlineTime = scheduleDeadlineTime;
+        this.startTime = startTime;
     }
 
     /**

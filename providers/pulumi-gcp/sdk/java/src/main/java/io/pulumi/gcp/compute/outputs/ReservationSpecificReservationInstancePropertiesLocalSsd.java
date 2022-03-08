@@ -29,7 +29,7 @@ public final class ReservationSpecificReservationInstancePropertiesLocalSsd {
     private ReservationSpecificReservationInstancePropertiesLocalSsd(
         Integer diskSizeGb,
         @Nullable String $interface) {
-        this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
+        this.diskSizeGb = diskSizeGb;
         this.$interface = $interface;
     }
 

@@ -68,14 +68,14 @@ public final class GetConfigurationResult {
         @Nullable String source,
         String type,
         @Nullable String value) {
-        this.allowedValues = Objects.requireNonNull(allowedValues);
-        this.dataType = Objects.requireNonNull(dataType);
-        this.defaultValue = Objects.requireNonNull(defaultValue);
-        this.description = Objects.requireNonNull(description);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.allowedValues = allowedValues;
+        this.dataType = dataType;
+        this.defaultValue = defaultValue;
+        this.description = description;
+        this.id = id;
+        this.name = name;
         this.source = source;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.value = value;
     }
 

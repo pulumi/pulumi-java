@@ -36,10 +36,10 @@ public final class IosDeviceResponse {
         String iosVersionId,
         String locale,
         String orientation) {
-        this.iosModelId = Objects.requireNonNull(iosModelId);
-        this.iosVersionId = Objects.requireNonNull(iosVersionId);
-        this.locale = Objects.requireNonNull(locale);
-        this.orientation = Objects.requireNonNull(orientation);
+        this.iosModelId = iosModelId;
+        this.iosVersionId = iosVersionId;
+        this.locale = locale;
+        this.orientation = orientation;
     }
 
     /**

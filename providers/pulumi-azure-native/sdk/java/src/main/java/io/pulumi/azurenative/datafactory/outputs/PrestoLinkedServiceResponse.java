@@ -140,20 +140,20 @@ public final class PrestoLinkedServiceResponse {
         this.allowHostNameCNMismatch = allowHostNameCNMismatch;
         this.allowSelfSignedServerCert = allowSelfSignedServerCert;
         this.annotations = annotations;
-        this.authenticationType = Objects.requireNonNull(authenticationType);
-        this.catalog = Objects.requireNonNull(catalog);
+        this.authenticationType = authenticationType;
+        this.catalog = catalog;
         this.connectVia = connectVia;
         this.description = description;
         this.enableSsl = enableSsl;
         this.encryptedCredential = encryptedCredential;
-        this.host = Objects.requireNonNull(host);
+        this.host = host;
         this.parameters = parameters;
         this.password = password;
         this.port = port;
-        this.serverVersion = Objects.requireNonNull(serverVersion);
+        this.serverVersion = serverVersion;
         this.timeZoneID = timeZoneID;
         this.trustedCertPath = trustedCertPath;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.useSystemTrustStore = useSystemTrustStore;
         this.username = username;
     }

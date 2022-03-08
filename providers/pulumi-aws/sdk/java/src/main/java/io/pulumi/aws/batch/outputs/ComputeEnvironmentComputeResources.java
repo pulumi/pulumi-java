@@ -124,13 +124,13 @@ public final class ComputeEnvironmentComputeResources {
         this.instanceRole = instanceRole;
         this.instanceTypes = instanceTypes;
         this.launchTemplate = launchTemplate;
-        this.maxVcpus = Objects.requireNonNull(maxVcpus);
+        this.maxVcpus = maxVcpus;
         this.minVcpus = minVcpus;
-        this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
+        this.securityGroupIds = securityGroupIds;
         this.spotIamFleetRole = spotIamFleetRole;
-        this.subnets = Objects.requireNonNull(subnets);
+        this.subnets = subnets;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

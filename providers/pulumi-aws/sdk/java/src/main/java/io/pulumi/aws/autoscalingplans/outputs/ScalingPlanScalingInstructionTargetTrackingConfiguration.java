@@ -71,7 +71,7 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfiguration {
         this.predefinedScalingMetricSpecification = predefinedScalingMetricSpecification;
         this.scaleInCooldown = scaleInCooldown;
         this.scaleOutCooldown = scaleOutCooldown;
-        this.targetValue = Objects.requireNonNull(targetValue);
+        this.targetValue = targetValue;
     }
 
     /**

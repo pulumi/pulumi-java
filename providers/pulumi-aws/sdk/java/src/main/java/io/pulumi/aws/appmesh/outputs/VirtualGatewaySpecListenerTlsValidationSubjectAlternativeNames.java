@@ -17,7 +17,7 @@ public final class VirtualGatewaySpecListenerTlsValidationSubjectAlternativeName
 
     @OutputCustomType.Constructor({"match"})
     private VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNames(VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesMatch match) {
-        this.match = Objects.requireNonNull(match);
+        this.match = match;
     }
 
     /**

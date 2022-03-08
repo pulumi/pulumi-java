@@ -26,8 +26,8 @@ public final class RuntimeMetadataResponse {
     private RuntimeMetadataResponse(
         List<ParameterMetadataResponse> parameters,
         SDKInfoResponse sdkInfo) {
-        this.parameters = Objects.requireNonNull(parameters);
-        this.sdkInfo = Objects.requireNonNull(sdkInfo);
+        this.parameters = parameters;
+        this.sdkInfo = sdkInfo;
     }
 
     /**

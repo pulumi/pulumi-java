@@ -68,15 +68,15 @@ public final class PackageIssueResponse {
         String fixedPackage,
         VersionResponse fixedVersion,
         String packageType) {
-        this.affectedCpeUri = Objects.requireNonNull(affectedCpeUri);
-        this.affectedPackage = Objects.requireNonNull(affectedPackage);
-        this.affectedVersion = Objects.requireNonNull(affectedVersion);
-        this.effectiveSeverity = Objects.requireNonNull(effectiveSeverity);
-        this.fixAvailable = Objects.requireNonNull(fixAvailable);
-        this.fixedCpeUri = Objects.requireNonNull(fixedCpeUri);
-        this.fixedPackage = Objects.requireNonNull(fixedPackage);
-        this.fixedVersion = Objects.requireNonNull(fixedVersion);
-        this.packageType = Objects.requireNonNull(packageType);
+        this.affectedCpeUri = affectedCpeUri;
+        this.affectedPackage = affectedPackage;
+        this.affectedVersion = affectedVersion;
+        this.effectiveSeverity = effectiveSeverity;
+        this.fixAvailable = fixAvailable;
+        this.fixedCpeUri = fixedCpeUri;
+        this.fixedPackage = fixedPackage;
+        this.fixedVersion = fixedVersion;
+        this.packageType = packageType;
     }
 
     /**

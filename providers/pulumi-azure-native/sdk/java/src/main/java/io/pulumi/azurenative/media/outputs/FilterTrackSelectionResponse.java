@@ -18,7 +18,7 @@ public final class FilterTrackSelectionResponse {
 
     @OutputCustomType.Constructor({"trackSelections"})
     private FilterTrackSelectionResponse(List<FilterTrackPropertyConditionResponse> trackSelections) {
-        this.trackSelections = Objects.requireNonNull(trackSelections);
+        this.trackSelections = trackSelections;
     }
 
     /**

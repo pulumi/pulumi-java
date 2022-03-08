@@ -80,17 +80,17 @@ public final class BastionActiveSessionResponse {
         String targetResourceId,
         String targetSubscriptionId,
         String userName) {
-        this.protocol = Objects.requireNonNull(protocol);
-        this.resourceType = Objects.requireNonNull(resourceType);
-        this.sessionDurationInMins = Objects.requireNonNull(sessionDurationInMins);
-        this.sessionId = Objects.requireNonNull(sessionId);
-        this.startTime = Objects.requireNonNull(startTime);
-        this.targetHostName = Objects.requireNonNull(targetHostName);
-        this.targetIpAddress = Objects.requireNonNull(targetIpAddress);
-        this.targetResourceGroup = Objects.requireNonNull(targetResourceGroup);
-        this.targetResourceId = Objects.requireNonNull(targetResourceId);
-        this.targetSubscriptionId = Objects.requireNonNull(targetSubscriptionId);
-        this.userName = Objects.requireNonNull(userName);
+        this.protocol = protocol;
+        this.resourceType = resourceType;
+        this.sessionDurationInMins = sessionDurationInMins;
+        this.sessionId = sessionId;
+        this.startTime = startTime;
+        this.targetHostName = targetHostName;
+        this.targetIpAddress = targetIpAddress;
+        this.targetResourceGroup = targetResourceGroup;
+        this.targetResourceId = targetResourceId;
+        this.targetSubscriptionId = targetSubscriptionId;
+        this.userName = userName;
     }
 
     /**

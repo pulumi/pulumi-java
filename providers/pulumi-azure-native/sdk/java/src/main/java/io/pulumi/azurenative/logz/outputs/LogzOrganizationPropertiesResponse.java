@@ -40,7 +40,7 @@ public final class LogzOrganizationPropertiesResponse {
         @Nullable String singleSignOnUrl) {
         this.companyName = companyName;
         this.enterpriseAppId = enterpriseAppId;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.singleSignOnUrl = singleSignOnUrl;
     }
 

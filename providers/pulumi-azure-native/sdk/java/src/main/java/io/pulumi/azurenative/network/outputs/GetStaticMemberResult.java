@@ -51,12 +51,12 @@ public final class GetStaticMemberResult {
         @Nullable String resourceId,
         SystemDataResponse systemData,
         String type) {
-        this.etag = Objects.requireNonNull(etag);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.etag = etag;
+        this.id = id;
+        this.name = name;
         this.resourceId = resourceId;
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

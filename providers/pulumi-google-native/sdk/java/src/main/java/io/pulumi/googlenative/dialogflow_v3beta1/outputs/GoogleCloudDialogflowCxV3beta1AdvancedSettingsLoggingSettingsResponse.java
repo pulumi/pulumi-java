@@ -24,8 +24,8 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettings
     private GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsResponse(
         Boolean enableInteractionLogging,
         Boolean enableStackdriverLogging) {
-        this.enableInteractionLogging = Objects.requireNonNull(enableInteractionLogging);
-        this.enableStackdriverLogging = Objects.requireNonNull(enableStackdriverLogging);
+        this.enableInteractionLogging = enableInteractionLogging;
+        this.enableStackdriverLogging = enableStackdriverLogging;
     }
 
     /**

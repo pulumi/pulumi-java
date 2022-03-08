@@ -24,8 +24,8 @@ public final class DynamicGroupStatusResponse {
     private DynamicGroupStatusResponse(
         String status,
         String statusTime) {
-        this.status = Objects.requireNonNull(status);
-        this.statusTime = Objects.requireNonNull(statusTime);
+        this.status = status;
+        this.statusTime = statusTime;
     }
 
     /**

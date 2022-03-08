@@ -32,9 +32,9 @@ public final class JobTemplateExponentialRolloutRate {
         Integer baseRatePerMinute,
         Double incrementFactor,
         JobTemplateRateIncreaseCriteria rateIncreaseCriteria) {
-        this.baseRatePerMinute = Objects.requireNonNull(baseRatePerMinute);
-        this.incrementFactor = Objects.requireNonNull(incrementFactor);
-        this.rateIncreaseCriteria = Objects.requireNonNull(rateIncreaseCriteria);
+        this.baseRatePerMinute = baseRatePerMinute;
+        this.incrementFactor = incrementFactor;
+        this.rateIncreaseCriteria = rateIncreaseCriteria;
     }
 
     /**

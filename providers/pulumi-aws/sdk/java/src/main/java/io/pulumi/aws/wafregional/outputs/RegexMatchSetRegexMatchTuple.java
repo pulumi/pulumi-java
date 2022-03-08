@@ -34,9 +34,9 @@ public final class RegexMatchSetRegexMatchTuple {
         RegexMatchSetRegexMatchTupleFieldToMatch fieldToMatch,
         String regexPatternSetId,
         String textTransformation) {
-        this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
-        this.regexPatternSetId = Objects.requireNonNull(regexPatternSetId);
-        this.textTransformation = Objects.requireNonNull(textTransformation);
+        this.fieldToMatch = fieldToMatch;
+        this.regexPatternSetId = regexPatternSetId;
+        this.textTransformation = textTransformation;
     }
 
     /**

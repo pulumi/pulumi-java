@@ -24,8 +24,8 @@ public final class BotAliasCloudWatchLogGroupLogDestination {
     private BotAliasCloudWatchLogGroupLogDestination(
         String cloudWatchLogGroupArn,
         String logPrefix) {
-        this.cloudWatchLogGroupArn = Objects.requireNonNull(cloudWatchLogGroupArn);
-        this.logPrefix = Objects.requireNonNull(logPrefix);
+        this.cloudWatchLogGroupArn = cloudWatchLogGroupArn;
+        this.logPrefix = logPrefix;
     }
 
     /**

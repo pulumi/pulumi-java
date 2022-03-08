@@ -65,12 +65,12 @@ public final class JobInputAssetResponse {
         @Nullable String label,
         String odataType,
         @Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> start) {
-        this.assetName = Objects.requireNonNull(assetName);
+        this.assetName = assetName;
         this.end = end;
         this.files = files;
         this.inputDefinitions = inputDefinitions;
         this.label = label;
-        this.odataType = Objects.requireNonNull(odataType);
+        this.odataType = odataType;
         this.start = start;
     }
 

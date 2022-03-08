@@ -51,12 +51,12 @@ public final class ServiceProviderPropertiesResponse {
         String id,
         @Nullable List<ServiceProviderParameterResponse> parameters,
         String serviceProviderName) {
-        this.devPortalUrl = Objects.requireNonNull(devPortalUrl);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.iconUrl = Objects.requireNonNull(iconUrl);
-        this.id = Objects.requireNonNull(id);
+        this.devPortalUrl = devPortalUrl;
+        this.displayName = displayName;
+        this.iconUrl = iconUrl;
+        this.id = id;
         this.parameters = parameters;
-        this.serviceProviderName = Objects.requireNonNull(serviceProviderName);
+        this.serviceProviderName = serviceProviderName;
     }
 
     /**

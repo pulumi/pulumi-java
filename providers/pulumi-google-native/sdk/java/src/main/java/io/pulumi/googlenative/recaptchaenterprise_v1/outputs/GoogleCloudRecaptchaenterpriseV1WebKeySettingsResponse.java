@@ -44,11 +44,11 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse {
         List<String> allowedDomains,
         String challengeSecurityPreference,
         String integrationType) {
-        this.allowAllDomains = Objects.requireNonNull(allowAllDomains);
-        this.allowAmpTraffic = Objects.requireNonNull(allowAmpTraffic);
-        this.allowedDomains = Objects.requireNonNull(allowedDomains);
-        this.challengeSecurityPreference = Objects.requireNonNull(challengeSecurityPreference);
-        this.integrationType = Objects.requireNonNull(integrationType);
+        this.allowAllDomains = allowAllDomains;
+        this.allowAmpTraffic = allowAmpTraffic;
+        this.allowedDomains = allowedDomains;
+        this.challengeSecurityPreference = challengeSecurityPreference;
+        this.integrationType = integrationType;
     }
 
     /**

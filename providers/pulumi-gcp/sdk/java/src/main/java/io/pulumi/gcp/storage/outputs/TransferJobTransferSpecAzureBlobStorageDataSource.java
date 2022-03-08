@@ -39,10 +39,10 @@ public final class TransferJobTransferSpecAzureBlobStorageDataSource {
         String container,
         @Nullable String path,
         String storageAccount) {
-        this.azureCredentials = Objects.requireNonNull(azureCredentials);
-        this.container = Objects.requireNonNull(container);
+        this.azureCredentials = azureCredentials;
+        this.container = container;
         this.path = path;
-        this.storageAccount = Objects.requireNonNull(storageAccount);
+        this.storageAccount = storageAccount;
     }
 
     /**

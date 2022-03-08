@@ -25,8 +25,8 @@ public final class RegularFileResponse {
     private RegularFileResponse(
         FileReferenceResponse content,
         String devicePath) {
-        this.content = Objects.requireNonNull(content);
-        this.devicePath = Objects.requireNonNull(devicePath);
+        this.content = content;
+        this.devicePath = devicePath;
     }
 
     /**

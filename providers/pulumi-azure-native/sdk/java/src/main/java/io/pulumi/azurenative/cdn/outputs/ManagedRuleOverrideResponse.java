@@ -34,7 +34,7 @@ public final class ManagedRuleOverrideResponse {
         String ruleId) {
         this.action = action;
         this.enabledState = enabledState;
-        this.ruleId = Objects.requireNonNull(ruleId);
+        this.ruleId = ruleId;
     }
 
     /**

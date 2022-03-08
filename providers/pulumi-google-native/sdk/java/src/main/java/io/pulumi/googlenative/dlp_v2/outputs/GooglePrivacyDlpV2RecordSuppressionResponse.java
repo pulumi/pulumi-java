@@ -17,7 +17,7 @@ public final class GooglePrivacyDlpV2RecordSuppressionResponse {
 
     @OutputCustomType.Constructor({"condition"})
     private GooglePrivacyDlpV2RecordSuppressionResponse(GooglePrivacyDlpV2RecordConditionResponse condition) {
-        this.condition = Objects.requireNonNull(condition);
+        this.condition = condition;
     }
 
     /**

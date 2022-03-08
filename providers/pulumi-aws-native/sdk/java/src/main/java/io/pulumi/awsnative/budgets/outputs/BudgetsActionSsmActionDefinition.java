@@ -20,9 +20,9 @@ public final class BudgetsActionSsmActionDefinition {
         List<String> instanceIds,
         String region,
         BudgetsActionSsmActionDefinitionSubtype subtype) {
-        this.instanceIds = Objects.requireNonNull(instanceIds);
-        this.region = Objects.requireNonNull(region);
-        this.subtype = Objects.requireNonNull(subtype);
+        this.instanceIds = instanceIds;
+        this.region = region;
+        this.subtype = subtype;
     }
 
     public List<String> getInstanceIds() {

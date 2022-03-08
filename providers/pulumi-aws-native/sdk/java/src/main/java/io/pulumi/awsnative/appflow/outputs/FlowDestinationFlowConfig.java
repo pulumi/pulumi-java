@@ -35,8 +35,8 @@ public final class FlowDestinationFlowConfig {
         FlowConnectorType connectorType,
         FlowDestinationConnectorProperties destinationConnectorProperties) {
         this.connectorProfileName = connectorProfileName;
-        this.connectorType = Objects.requireNonNull(connectorType);
-        this.destinationConnectorProperties = Objects.requireNonNull(destinationConnectorProperties);
+        this.connectorType = connectorType;
+        this.destinationConnectorProperties = destinationConnectorProperties;
     }
 
     /**

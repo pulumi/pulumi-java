@@ -44,7 +44,7 @@ public final class PolicyPredictiveScalingConfigurationMetricSpecification {
         this.predefinedLoadMetricSpecification = predefinedLoadMetricSpecification;
         this.predefinedMetricPairSpecification = predefinedMetricPairSpecification;
         this.predefinedScalingMetricSpecification = predefinedScalingMetricSpecification;
-        this.targetValue = Objects.requireNonNull(targetValue);
+        this.targetValue = targetValue;
     }
 
     /**

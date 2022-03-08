@@ -17,7 +17,7 @@ public final class VirtualGatewaySpecListenerConnectionPoolHttp2 {
 
     @OutputCustomType.Constructor({"maxRequests"})
     private VirtualGatewaySpecListenerConnectionPoolHttp2(Integer maxRequests) {
-        this.maxRequests = Objects.requireNonNull(maxRequests);
+        this.maxRequests = maxRequests;
     }
 
     /**

@@ -24,8 +24,8 @@ public final class RuleGroupRuleStatementAndStatementStatementLabelMatchStatemen
     private RuleGroupRuleStatementAndStatementStatementLabelMatchStatement(
         String key,
         String scope) {
-        this.key = Objects.requireNonNull(key);
-        this.scope = Objects.requireNonNull(scope);
+        this.key = key;
+        this.scope = scope;
     }
 
     /**

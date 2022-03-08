@@ -17,7 +17,7 @@ public final class DataSourceParametersJira {
 
     @OutputCustomType.Constructor({"siteBaseUrl"})
     private DataSourceParametersJira(String siteBaseUrl) {
-        this.siteBaseUrl = Objects.requireNonNull(siteBaseUrl);
+        this.siteBaseUrl = siteBaseUrl;
     }
 
     /**

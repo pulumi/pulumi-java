@@ -93,19 +93,19 @@ public final class GetPublicDelegatedPrefixResult {
         String selfLink,
         String selfLinkWithId,
         String status) {
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.description = Objects.requireNonNull(description);
-        this.fingerprint = Objects.requireNonNull(fingerprint);
-        this.ipCidrRange = Objects.requireNonNull(ipCidrRange);
-        this.isLiveMigration = Objects.requireNonNull(isLiveMigration);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.parentPrefix = Objects.requireNonNull(parentPrefix);
-        this.publicDelegatedSubPrefixs = Objects.requireNonNull(publicDelegatedSubPrefixs);
-        this.region = Objects.requireNonNull(region);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
-        this.status = Objects.requireNonNull(status);
+        this.creationTimestamp = creationTimestamp;
+        this.description = description;
+        this.fingerprint = fingerprint;
+        this.ipCidrRange = ipCidrRange;
+        this.isLiveMigration = isLiveMigration;
+        this.kind = kind;
+        this.name = name;
+        this.parentPrefix = parentPrefix;
+        this.publicDelegatedSubPrefixs = publicDelegatedSubPrefixs;
+        this.region = region;
+        this.selfLink = selfLink;
+        this.selfLinkWithId = selfLinkWithId;
+        this.status = status;
     }
 
     /**

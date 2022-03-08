@@ -18,7 +18,7 @@ public final class TableSchemaResponse {
 
     @OutputCustomType.Constructor({"fields"})
     private TableSchemaResponse(List<TableFieldSchemaResponse> fields) {
-        this.fields = Objects.requireNonNull(fields);
+        this.fields = fields;
     }
 
     /**

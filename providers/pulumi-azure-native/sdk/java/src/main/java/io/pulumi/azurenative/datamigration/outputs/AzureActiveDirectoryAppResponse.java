@@ -30,9 +30,9 @@ public final class AzureActiveDirectoryAppResponse {
         String appKey,
         String applicationId,
         String tenantId) {
-        this.appKey = Objects.requireNonNull(appKey);
-        this.applicationId = Objects.requireNonNull(applicationId);
-        this.tenantId = Objects.requireNonNull(tenantId);
+        this.appKey = appKey;
+        this.applicationId = applicationId;
+        this.tenantId = tenantId;
     }
 
     /**

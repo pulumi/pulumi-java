@@ -473,7 +473,7 @@ public final class SiteConfigResponse {
         this.loadBalancing = loadBalancing;
         this.localMySqlEnabled = localMySqlEnabled;
         this.logsDirectorySizeLimit = logsDirectorySizeLimit;
-        this.machineKey = Objects.requireNonNull(machineKey);
+        this.machineKey = machineKey;
         this.managedPipelineMode = managedPipelineMode;
         this.managedServiceIdentityId = managedServiceIdentityId;
         this.minTlsVersion = minTlsVersion;

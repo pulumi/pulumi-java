@@ -45,11 +45,11 @@ public final class BasicSliResponse {
         List<String> location,
         List<String> method,
         List<String> version) {
-        this.availability = Objects.requireNonNull(availability);
-        this.latency = Objects.requireNonNull(latency);
-        this.location = Objects.requireNonNull(location);
-        this.method = Objects.requireNonNull(method);
-        this.version = Objects.requireNonNull(version);
+        this.availability = availability;
+        this.latency = latency;
+        this.location = location;
+        this.method = method;
+        this.version = version;
     }
 
     /**

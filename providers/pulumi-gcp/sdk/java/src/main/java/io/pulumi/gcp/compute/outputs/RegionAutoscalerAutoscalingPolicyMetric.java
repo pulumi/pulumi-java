@@ -89,7 +89,7 @@ public final class RegionAutoscalerAutoscalingPolicyMetric {
         @Nullable Double target,
         @Nullable String type) {
         this.filter = filter;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.singleInstanceAssignment = singleInstanceAssignment;
         this.target = target;
         this.type = type;

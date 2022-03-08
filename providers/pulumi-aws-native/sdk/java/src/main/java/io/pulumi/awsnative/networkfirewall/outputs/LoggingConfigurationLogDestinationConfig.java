@@ -24,9 +24,9 @@ public final class LoggingConfigurationLogDestinationConfig {
         Object logDestination,
         LoggingConfigurationLogDestinationConfigLogDestinationType logDestinationType,
         LoggingConfigurationLogDestinationConfigLogType logType) {
-        this.logDestination = Objects.requireNonNull(logDestination);
-        this.logDestinationType = Objects.requireNonNull(logDestinationType);
-        this.logType = Objects.requireNonNull(logType);
+        this.logDestination = logDestination;
+        this.logDestinationType = logDestinationType;
+        this.logType = logType;
     }
 
     /**

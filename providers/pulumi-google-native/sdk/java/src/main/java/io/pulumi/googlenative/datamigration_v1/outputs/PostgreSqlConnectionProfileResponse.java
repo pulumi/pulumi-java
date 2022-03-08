@@ -57,13 +57,13 @@ public final class PostgreSqlConnectionProfileResponse {
         Integer port,
         SslConfigResponse ssl,
         String username) {
-        this.cloudSqlId = Objects.requireNonNull(cloudSqlId);
-        this.host = Objects.requireNonNull(host);
-        this.password = Objects.requireNonNull(password);
-        this.passwordSet = Objects.requireNonNull(passwordSet);
-        this.port = Objects.requireNonNull(port);
-        this.ssl = Objects.requireNonNull(ssl);
-        this.username = Objects.requireNonNull(username);
+        this.cloudSqlId = cloudSqlId;
+        this.host = host;
+        this.password = password;
+        this.passwordSet = passwordSet;
+        this.port = port;
+        this.ssl = ssl;
+        this.username = username;
     }
 
     /**

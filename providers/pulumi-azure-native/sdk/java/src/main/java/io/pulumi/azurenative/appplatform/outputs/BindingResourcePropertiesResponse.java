@@ -65,13 +65,13 @@ public final class BindingResourcePropertiesResponse {
         String resourceType,
         String updatedAt) {
         this.bindingParameters = bindingParameters;
-        this.createdAt = Objects.requireNonNull(createdAt);
-        this.generatedProperties = Objects.requireNonNull(generatedProperties);
+        this.createdAt = createdAt;
+        this.generatedProperties = generatedProperties;
         this.key = key;
         this.resourceId = resourceId;
-        this.resourceName = Objects.requireNonNull(resourceName);
-        this.resourceType = Objects.requireNonNull(resourceType);
-        this.updatedAt = Objects.requireNonNull(updatedAt);
+        this.resourceName = resourceName;
+        this.resourceType = resourceType;
+        this.updatedAt = updatedAt;
     }
 
     /**

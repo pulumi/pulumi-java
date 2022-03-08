@@ -25,8 +25,8 @@ public final class SqlOutOfDiskReportResponse {
     private SqlOutOfDiskReportResponse(
         Integer sqlMinRecommendedIncreaseSizeGb,
         String sqlOutOfDiskState) {
-        this.sqlMinRecommendedIncreaseSizeGb = Objects.requireNonNull(sqlMinRecommendedIncreaseSizeGb);
-        this.sqlOutOfDiskState = Objects.requireNonNull(sqlOutOfDiskState);
+        this.sqlMinRecommendedIncreaseSizeGb = sqlMinRecommendedIncreaseSizeGb;
+        this.sqlOutOfDiskState = sqlOutOfDiskState;
     }
 
     /**

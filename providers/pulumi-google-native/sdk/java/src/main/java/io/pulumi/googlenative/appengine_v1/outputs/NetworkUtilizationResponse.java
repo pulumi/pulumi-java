@@ -36,10 +36,10 @@ public final class NetworkUtilizationResponse {
         Integer targetReceivedPacketsPerSecond,
         Integer targetSentBytesPerSecond,
         Integer targetSentPacketsPerSecond) {
-        this.targetReceivedBytesPerSecond = Objects.requireNonNull(targetReceivedBytesPerSecond);
-        this.targetReceivedPacketsPerSecond = Objects.requireNonNull(targetReceivedPacketsPerSecond);
-        this.targetSentBytesPerSecond = Objects.requireNonNull(targetSentBytesPerSecond);
-        this.targetSentPacketsPerSecond = Objects.requireNonNull(targetSentPacketsPerSecond);
+        this.targetReceivedBytesPerSecond = targetReceivedBytesPerSecond;
+        this.targetReceivedPacketsPerSecond = targetReceivedPacketsPerSecond;
+        this.targetSentBytesPerSecond = targetSentBytesPerSecond;
+        this.targetSentPacketsPerSecond = targetSentPacketsPerSecond;
     }
 
     /**

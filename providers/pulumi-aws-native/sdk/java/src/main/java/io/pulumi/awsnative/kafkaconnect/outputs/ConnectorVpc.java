@@ -25,8 +25,8 @@ public final class ConnectorVpc {
     private ConnectorVpc(
         List<String> securityGroups,
         List<String> subnets) {
-        this.securityGroups = Objects.requireNonNull(securityGroups);
-        this.subnets = Objects.requireNonNull(subnets);
+        this.securityGroups = securityGroups;
+        this.subnets = subnets;
     }
 
     /**

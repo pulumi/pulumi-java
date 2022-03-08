@@ -138,26 +138,26 @@ public final class GetLaunchConfigurationResult {
         String userData,
         String vpcClassicLinkId,
         List<String> vpcClassicLinkSecurityGroups) {
-        this.arn = Objects.requireNonNull(arn);
-        this.associatePublicIpAddress = Objects.requireNonNull(associatePublicIpAddress);
-        this.ebsBlockDevices = Objects.requireNonNull(ebsBlockDevices);
-        this.ebsOptimized = Objects.requireNonNull(ebsOptimized);
-        this.enableMonitoring = Objects.requireNonNull(enableMonitoring);
-        this.ephemeralBlockDevices = Objects.requireNonNull(ephemeralBlockDevices);
-        this.iamInstanceProfile = Objects.requireNonNull(iamInstanceProfile);
-        this.id = Objects.requireNonNull(id);
-        this.imageId = Objects.requireNonNull(imageId);
-        this.instanceType = Objects.requireNonNull(instanceType);
-        this.keyName = Objects.requireNonNull(keyName);
-        this.metadataOptions = Objects.requireNonNull(metadataOptions);
-        this.name = Objects.requireNonNull(name);
-        this.placementTenancy = Objects.requireNonNull(placementTenancy);
-        this.rootBlockDevices = Objects.requireNonNull(rootBlockDevices);
-        this.securityGroups = Objects.requireNonNull(securityGroups);
-        this.spotPrice = Objects.requireNonNull(spotPrice);
-        this.userData = Objects.requireNonNull(userData);
-        this.vpcClassicLinkId = Objects.requireNonNull(vpcClassicLinkId);
-        this.vpcClassicLinkSecurityGroups = Objects.requireNonNull(vpcClassicLinkSecurityGroups);
+        this.arn = arn;
+        this.associatePublicIpAddress = associatePublicIpAddress;
+        this.ebsBlockDevices = ebsBlockDevices;
+        this.ebsOptimized = ebsOptimized;
+        this.enableMonitoring = enableMonitoring;
+        this.ephemeralBlockDevices = ephemeralBlockDevices;
+        this.iamInstanceProfile = iamInstanceProfile;
+        this.id = id;
+        this.imageId = imageId;
+        this.instanceType = instanceType;
+        this.keyName = keyName;
+        this.metadataOptions = metadataOptions;
+        this.name = name;
+        this.placementTenancy = placementTenancy;
+        this.rootBlockDevices = rootBlockDevices;
+        this.securityGroups = securityGroups;
+        this.spotPrice = spotPrice;
+        this.userData = userData;
+        this.vpcClassicLinkId = vpcClassicLinkId;
+        this.vpcClassicLinkSecurityGroups = vpcClassicLinkSecurityGroups;
     }
 
     /**

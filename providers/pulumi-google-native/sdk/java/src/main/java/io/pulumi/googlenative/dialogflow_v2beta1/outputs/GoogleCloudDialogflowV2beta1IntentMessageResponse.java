@@ -158,27 +158,27 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse {
         GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechResponse telephonySynthesizeSpeech,
         GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallResponse telephonyTransferCall,
         GoogleCloudDialogflowV2beta1IntentMessageTextResponse text) {
-        this.basicCard = Objects.requireNonNull(basicCard);
-        this.browseCarouselCard = Objects.requireNonNull(browseCarouselCard);
-        this.card = Objects.requireNonNull(card);
-        this.carouselSelect = Objects.requireNonNull(carouselSelect);
-        this.image = Objects.requireNonNull(image);
-        this.linkOutSuggestion = Objects.requireNonNull(linkOutSuggestion);
-        this.listSelect = Objects.requireNonNull(listSelect);
-        this.mediaContent = Objects.requireNonNull(mediaContent);
-        this.payload = Objects.requireNonNull(payload);
-        this.platform = Objects.requireNonNull(platform);
-        this.quickReplies = Objects.requireNonNull(quickReplies);
-        this.rbmCarouselRichCard = Objects.requireNonNull(rbmCarouselRichCard);
-        this.rbmStandaloneRichCard = Objects.requireNonNull(rbmStandaloneRichCard);
-        this.rbmText = Objects.requireNonNull(rbmText);
-        this.simpleResponses = Objects.requireNonNull(simpleResponses);
-        this.suggestions = Objects.requireNonNull(suggestions);
-        this.tableCard = Objects.requireNonNull(tableCard);
-        this.telephonyPlayAudio = Objects.requireNonNull(telephonyPlayAudio);
-        this.telephonySynthesizeSpeech = Objects.requireNonNull(telephonySynthesizeSpeech);
-        this.telephonyTransferCall = Objects.requireNonNull(telephonyTransferCall);
-        this.text = Objects.requireNonNull(text);
+        this.basicCard = basicCard;
+        this.browseCarouselCard = browseCarouselCard;
+        this.card = card;
+        this.carouselSelect = carouselSelect;
+        this.image = image;
+        this.linkOutSuggestion = linkOutSuggestion;
+        this.listSelect = listSelect;
+        this.mediaContent = mediaContent;
+        this.payload = payload;
+        this.platform = platform;
+        this.quickReplies = quickReplies;
+        this.rbmCarouselRichCard = rbmCarouselRichCard;
+        this.rbmStandaloneRichCard = rbmStandaloneRichCard;
+        this.rbmText = rbmText;
+        this.simpleResponses = simpleResponses;
+        this.suggestions = suggestions;
+        this.tableCard = tableCard;
+        this.telephonyPlayAudio = telephonyPlayAudio;
+        this.telephonySynthesizeSpeech = telephonySynthesizeSpeech;
+        this.telephonyTransferCall = telephonyTransferCall;
+        this.text = text;
     }
 
     /**

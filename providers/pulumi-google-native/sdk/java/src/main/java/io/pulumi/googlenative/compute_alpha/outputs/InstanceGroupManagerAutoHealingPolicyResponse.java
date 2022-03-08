@@ -41,11 +41,11 @@ public final class InstanceGroupManagerAutoHealingPolicyResponse {
         Integer initialDelaySec,
         FixedOrPercentResponse maxUnavailable,
         String updateInstances) {
-        this.autoHealingTriggers = Objects.requireNonNull(autoHealingTriggers);
-        this.healthCheck = Objects.requireNonNull(healthCheck);
-        this.initialDelaySec = Objects.requireNonNull(initialDelaySec);
-        this.maxUnavailable = Objects.requireNonNull(maxUnavailable);
-        this.updateInstances = Objects.requireNonNull(updateInstances);
+        this.autoHealingTriggers = autoHealingTriggers;
+        this.healthCheck = healthCheck;
+        this.initialDelaySec = initialDelaySec;
+        this.maxUnavailable = maxUnavailable;
+        this.updateInstances = updateInstances;
     }
 
     /**

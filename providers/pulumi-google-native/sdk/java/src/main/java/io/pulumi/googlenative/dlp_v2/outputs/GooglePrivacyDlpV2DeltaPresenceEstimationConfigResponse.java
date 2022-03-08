@@ -33,9 +33,9 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse {
         List<GooglePrivacyDlpV2StatisticalTableResponse> auxiliaryTables,
         List<GooglePrivacyDlpV2QuasiIdResponse> quasiIds,
         String regionCode) {
-        this.auxiliaryTables = Objects.requireNonNull(auxiliaryTables);
-        this.quasiIds = Objects.requireNonNull(quasiIds);
-        this.regionCode = Objects.requireNonNull(regionCode);
+        this.auxiliaryTables = auxiliaryTables;
+        this.quasiIds = quasiIds;
+        this.regionCode = regionCode;
     }
 
     /**

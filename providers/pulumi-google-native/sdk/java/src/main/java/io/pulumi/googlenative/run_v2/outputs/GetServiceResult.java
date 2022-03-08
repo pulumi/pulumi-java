@@ -188,34 +188,34 @@ public final class GetServiceResult {
         String uid,
         String updateTime,
         String uri) {
-        this.annotations = Objects.requireNonNull(annotations);
-        this.binaryAuthorization = Objects.requireNonNull(binaryAuthorization);
-        this.client = Objects.requireNonNull(client);
-        this.clientVersion = Objects.requireNonNull(clientVersion);
-        this.conditions = Objects.requireNonNull(conditions);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.creator = Objects.requireNonNull(creator);
-        this.deleteTime = Objects.requireNonNull(deleteTime);
-        this.description = Objects.requireNonNull(description);
-        this.etag = Objects.requireNonNull(etag);
-        this.expireTime = Objects.requireNonNull(expireTime);
-        this.generation = Objects.requireNonNull(generation);
-        this.ingress = Objects.requireNonNull(ingress);
-        this.labels = Objects.requireNonNull(labels);
-        this.lastModifier = Objects.requireNonNull(lastModifier);
-        this.latestCreatedRevision = Objects.requireNonNull(latestCreatedRevision);
-        this.latestReadyRevision = Objects.requireNonNull(latestReadyRevision);
-        this.launchStage = Objects.requireNonNull(launchStage);
-        this.name = Objects.requireNonNull(name);
-        this.observedGeneration = Objects.requireNonNull(observedGeneration);
-        this.reconciling = Objects.requireNonNull(reconciling);
-        this.template = Objects.requireNonNull(template);
-        this.terminalCondition = Objects.requireNonNull(terminalCondition);
-        this.traffic = Objects.requireNonNull(traffic);
-        this.trafficStatuses = Objects.requireNonNull(trafficStatuses);
-        this.uid = Objects.requireNonNull(uid);
-        this.updateTime = Objects.requireNonNull(updateTime);
-        this.uri = Objects.requireNonNull(uri);
+        this.annotations = annotations;
+        this.binaryAuthorization = binaryAuthorization;
+        this.client = client;
+        this.clientVersion = clientVersion;
+        this.conditions = conditions;
+        this.createTime = createTime;
+        this.creator = creator;
+        this.deleteTime = deleteTime;
+        this.description = description;
+        this.etag = etag;
+        this.expireTime = expireTime;
+        this.generation = generation;
+        this.ingress = ingress;
+        this.labels = labels;
+        this.lastModifier = lastModifier;
+        this.latestCreatedRevision = latestCreatedRevision;
+        this.latestReadyRevision = latestReadyRevision;
+        this.launchStage = launchStage;
+        this.name = name;
+        this.observedGeneration = observedGeneration;
+        this.reconciling = reconciling;
+        this.template = template;
+        this.terminalCondition = terminalCondition;
+        this.traffic = traffic;
+        this.trafficStatuses = trafficStatuses;
+        this.uid = uid;
+        this.updateTime = updateTime;
+        this.uri = uri;
     }
 
     /**

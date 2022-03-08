@@ -25,8 +25,8 @@ public final class ListenerRuleConditionHttpHeader {
     private ListenerRuleConditionHttpHeader(
         String httpHeaderName,
         List<String> values) {
-        this.httpHeaderName = Objects.requireNonNull(httpHeaderName);
-        this.values = Objects.requireNonNull(values);
+        this.httpHeaderName = httpHeaderName;
+        this.values = values;
     }
 
     /**

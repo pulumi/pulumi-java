@@ -25,8 +25,8 @@ public final class ApkResponse {
     private ApkResponse(
         FileReferenceResponse location,
         String packageName) {
-        this.location = Objects.requireNonNull(location);
-        this.packageName = Objects.requireNonNull(packageName);
+        this.location = location;
+        this.packageName = packageName;
     }
 
     /**

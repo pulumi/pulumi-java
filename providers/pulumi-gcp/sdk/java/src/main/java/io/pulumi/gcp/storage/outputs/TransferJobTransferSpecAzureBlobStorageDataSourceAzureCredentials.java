@@ -17,7 +17,7 @@ public final class TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredent
 
     @OutputCustomType.Constructor({"sasToken"})
     private TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentials(String sasToken) {
-        this.sasToken = Objects.requireNonNull(sasToken);
+        this.sasToken = sasToken;
     }
 
     /**

@@ -53,13 +53,13 @@ public final class ComplianceNoteResponse {
         String scanInstructions,
         String title,
         List<ComplianceVersionResponse> version) {
-        this.cisBenchmark = Objects.requireNonNull(cisBenchmark);
-        this.description = Objects.requireNonNull(description);
-        this.rationale = Objects.requireNonNull(rationale);
-        this.remediation = Objects.requireNonNull(remediation);
-        this.scanInstructions = Objects.requireNonNull(scanInstructions);
-        this.title = Objects.requireNonNull(title);
-        this.version = Objects.requireNonNull(version);
+        this.cisBenchmark = cisBenchmark;
+        this.description = description;
+        this.rationale = rationale;
+        this.remediation = remediation;
+        this.scanInstructions = scanInstructions;
+        this.title = title;
+        this.version = version;
     }
 
     public CisBenchmarkResponse getCisBenchmark() {

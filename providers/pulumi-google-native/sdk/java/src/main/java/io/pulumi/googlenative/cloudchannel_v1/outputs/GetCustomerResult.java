@@ -87,18 +87,18 @@ public final class GetCustomerResult {
         GoogleTypePostalAddressResponse orgPostalAddress,
         GoogleCloudChannelV1ContactInfoResponse primaryContactInfo,
         String updateTime) {
-        this.alternateEmail = Objects.requireNonNull(alternateEmail);
-        this.channelPartnerId = Objects.requireNonNull(channelPartnerId);
-        this.cloudIdentityId = Objects.requireNonNull(cloudIdentityId);
-        this.cloudIdentityInfo = Objects.requireNonNull(cloudIdentityInfo);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.domain = Objects.requireNonNull(domain);
-        this.languageCode = Objects.requireNonNull(languageCode);
-        this.name = Objects.requireNonNull(name);
-        this.orgDisplayName = Objects.requireNonNull(orgDisplayName);
-        this.orgPostalAddress = Objects.requireNonNull(orgPostalAddress);
-        this.primaryContactInfo = Objects.requireNonNull(primaryContactInfo);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.alternateEmail = alternateEmail;
+        this.channelPartnerId = channelPartnerId;
+        this.cloudIdentityId = cloudIdentityId;
+        this.cloudIdentityInfo = cloudIdentityInfo;
+        this.createTime = createTime;
+        this.domain = domain;
+        this.languageCode = languageCode;
+        this.name = name;
+        this.orgDisplayName = orgDisplayName;
+        this.orgPostalAddress = orgPostalAddress;
+        this.primaryContactInfo = primaryContactInfo;
+        this.updateTime = updateTime;
     }
 
     /**

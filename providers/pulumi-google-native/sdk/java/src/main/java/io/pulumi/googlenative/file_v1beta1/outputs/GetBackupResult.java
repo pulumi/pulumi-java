@@ -86,18 +86,18 @@ public final class GetBackupResult {
         String sourceInstanceTier,
         String state,
         String storageBytes) {
-        this.capacityGb = Objects.requireNonNull(capacityGb);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.description = Objects.requireNonNull(description);
-        this.downloadBytes = Objects.requireNonNull(downloadBytes);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.satisfiesPzs = Objects.requireNonNull(satisfiesPzs);
-        this.sourceFileShare = Objects.requireNonNull(sourceFileShare);
-        this.sourceInstance = Objects.requireNonNull(sourceInstance);
-        this.sourceInstanceTier = Objects.requireNonNull(sourceInstanceTier);
-        this.state = Objects.requireNonNull(state);
-        this.storageBytes = Objects.requireNonNull(storageBytes);
+        this.capacityGb = capacityGb;
+        this.createTime = createTime;
+        this.description = description;
+        this.downloadBytes = downloadBytes;
+        this.labels = labels;
+        this.name = name;
+        this.satisfiesPzs = satisfiesPzs;
+        this.sourceFileShare = sourceFileShare;
+        this.sourceInstance = sourceInstance;
+        this.sourceInstanceTier = sourceInstanceTier;
+        this.state = state;
+        this.storageBytes = storageBytes;
     }
 
     /**

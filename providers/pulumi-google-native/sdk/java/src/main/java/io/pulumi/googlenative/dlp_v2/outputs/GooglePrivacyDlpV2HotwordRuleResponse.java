@@ -32,9 +32,9 @@ public final class GooglePrivacyDlpV2HotwordRuleResponse {
         GooglePrivacyDlpV2RegexResponse hotwordRegex,
         GooglePrivacyDlpV2LikelihoodAdjustmentResponse likelihoodAdjustment,
         GooglePrivacyDlpV2ProximityResponse proximity) {
-        this.hotwordRegex = Objects.requireNonNull(hotwordRegex);
-        this.likelihoodAdjustment = Objects.requireNonNull(likelihoodAdjustment);
-        this.proximity = Objects.requireNonNull(proximity);
+        this.hotwordRegex = hotwordRegex;
+        this.likelihoodAdjustment = likelihoodAdjustment;
+        this.proximity = proximity;
     }
 
     /**

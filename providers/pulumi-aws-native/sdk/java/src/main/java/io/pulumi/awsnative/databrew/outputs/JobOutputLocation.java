@@ -20,7 +20,7 @@ public final class JobOutputLocation {
         String bucket,
         @Nullable String bucketOwner,
         @Nullable String key) {
-        this.bucket = Objects.requireNonNull(bucket);
+        this.bucket = bucket;
         this.bucketOwner = bucketOwner;
         this.key = key;
     }

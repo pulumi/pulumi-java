@@ -41,7 +41,7 @@ public final class RecoveryPlanGroupResponse {
         @Nullable List<RecoveryPlanProtectedItemResponse> replicationProtectedItems,
         @Nullable List<RecoveryPlanActionResponse> startGroupActions) {
         this.endGroupActions = endGroupActions;
-        this.groupType = Objects.requireNonNull(groupType);
+        this.groupType = groupType;
         this.replicationProtectedItems = replicationProtectedItems;
         this.startGroupActions = startGroupActions;
     }

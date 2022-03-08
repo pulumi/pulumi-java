@@ -24,8 +24,8 @@ public final class InterconnectMacsecPreSharedKeyResponse {
     private InterconnectMacsecPreSharedKeyResponse(
         String name,
         String startTime) {
-        this.name = Objects.requireNonNull(name);
-        this.startTime = Objects.requireNonNull(startTime);
+        this.name = name;
+        this.startTime = startTime;
     }
 
     /**

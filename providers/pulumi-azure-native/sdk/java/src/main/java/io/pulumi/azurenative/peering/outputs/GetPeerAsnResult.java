@@ -65,13 +65,13 @@ public final class GetPeerAsnResult {
         @Nullable String peerName,
         String type,
         @Nullable String validationState) {
-        this.errorMessage = Objects.requireNonNull(errorMessage);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.errorMessage = errorMessage;
+        this.id = id;
+        this.name = name;
         this.peerAsn = peerAsn;
         this.peerContactDetail = peerContactDetail;
         this.peerName = peerName;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.validationState = validationState;
     }
 

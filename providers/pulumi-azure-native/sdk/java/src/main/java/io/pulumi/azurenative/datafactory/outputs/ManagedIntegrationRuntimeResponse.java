@@ -66,8 +66,8 @@ public final class ManagedIntegrationRuntimeResponse {
         this.description = description;
         this.managedVirtualNetwork = managedVirtualNetwork;
         this.ssisProperties = ssisProperties;
-        this.state = Objects.requireNonNull(state);
-        this.type = Objects.requireNonNull(type);
+        this.state = state;
+        this.type = type;
     }
 
     /**

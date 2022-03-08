@@ -28,7 +28,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfig
         @Nullable List<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorParameter> parameters,
         String type) {
         this.parameters = parameters;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

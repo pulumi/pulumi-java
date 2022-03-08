@@ -25,8 +25,8 @@ public final class GoogleCloudMlV1_Measurement_MetricResponse {
     private GoogleCloudMlV1_Measurement_MetricResponse(
         String metric,
         Double value) {
-        this.metric = Objects.requireNonNull(metric);
-        this.value = Objects.requireNonNull(value);
+        this.metric = metric;
+        this.value = value;
     }
 
     /**

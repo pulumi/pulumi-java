@@ -14,7 +14,7 @@ public final class DataSourceWebCrawlerSiteMapsConfiguration {
 
     @OutputCustomType.Constructor({"siteMaps"})
     private DataSourceWebCrawlerSiteMapsConfiguration(List<String> siteMaps) {
-        this.siteMaps = Objects.requireNonNull(siteMaps);
+        this.siteMaps = siteMaps;
     }
 
     public List<String> getSiteMaps() {

@@ -99,14 +99,14 @@ public final class AzureMLServiceLinkedServiceResponse {
         this.connectVia = connectVia;
         this.description = description;
         this.encryptedCredential = encryptedCredential;
-        this.mlWorkspaceName = Objects.requireNonNull(mlWorkspaceName);
+        this.mlWorkspaceName = mlWorkspaceName;
         this.parameters = parameters;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+        this.resourceGroupName = resourceGroupName;
         this.servicePrincipalId = servicePrincipalId;
         this.servicePrincipalKey = servicePrincipalKey;
-        this.subscriptionId = Objects.requireNonNull(subscriptionId);
+        this.subscriptionId = subscriptionId;
         this.tenant = tenant;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

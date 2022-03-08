@@ -130,8 +130,8 @@ public final class ExcelDatasetResponse {
         this.description = description;
         this.firstRowAsHeader = firstRowAsHeader;
         this.folder = folder;
-        this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
-        this.location = Objects.requireNonNull(location);
+        this.linkedServiceName = linkedServiceName;
+        this.location = location;
         this.nullValue = nullValue;
         this.parameters = parameters;
         this.range = range;
@@ -139,7 +139,7 @@ public final class ExcelDatasetResponse {
         this.sheetIndex = sheetIndex;
         this.sheetName = sheetName;
         this.structure = structure;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

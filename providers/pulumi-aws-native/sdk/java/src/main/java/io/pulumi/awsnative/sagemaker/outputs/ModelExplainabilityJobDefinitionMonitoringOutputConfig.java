@@ -29,7 +29,7 @@ public final class ModelExplainabilityJobDefinitionMonitoringOutputConfig {
         @Nullable String kmsKeyId,
         List<ModelExplainabilityJobDefinitionMonitoringOutput> monitoringOutputs) {
         this.kmsKeyId = kmsKeyId;
-        this.monitoringOutputs = Objects.requireNonNull(monitoringOutputs);
+        this.monitoringOutputs = monitoringOutputs;
     }
 
     /**

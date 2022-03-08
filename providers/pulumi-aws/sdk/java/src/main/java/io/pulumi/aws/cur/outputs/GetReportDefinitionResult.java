@@ -82,18 +82,18 @@ public final class GetReportDefinitionResult {
         String s3Prefix,
         String s3Region,
         String timeUnit) {
-        this.additionalArtifacts = Objects.requireNonNull(additionalArtifacts);
-        this.additionalSchemaElements = Objects.requireNonNull(additionalSchemaElements);
-        this.compression = Objects.requireNonNull(compression);
-        this.format = Objects.requireNonNull(format);
-        this.id = Objects.requireNonNull(id);
-        this.refreshClosedReports = Objects.requireNonNull(refreshClosedReports);
-        this.reportName = Objects.requireNonNull(reportName);
-        this.reportVersioning = Objects.requireNonNull(reportVersioning);
-        this.s3Bucket = Objects.requireNonNull(s3Bucket);
-        this.s3Prefix = Objects.requireNonNull(s3Prefix);
-        this.s3Region = Objects.requireNonNull(s3Region);
-        this.timeUnit = Objects.requireNonNull(timeUnit);
+        this.additionalArtifacts = additionalArtifacts;
+        this.additionalSchemaElements = additionalSchemaElements;
+        this.compression = compression;
+        this.format = format;
+        this.id = id;
+        this.refreshClosedReports = refreshClosedReports;
+        this.reportName = reportName;
+        this.reportVersioning = reportVersioning;
+        this.s3Bucket = s3Bucket;
+        this.s3Prefix = s3Prefix;
+        this.s3Region = s3Region;
+        this.timeUnit = timeUnit;
     }
 
     /**

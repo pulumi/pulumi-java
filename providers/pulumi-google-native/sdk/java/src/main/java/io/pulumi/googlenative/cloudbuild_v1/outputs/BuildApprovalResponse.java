@@ -32,9 +32,9 @@ public final class BuildApprovalResponse {
         ApprovalConfigResponse config,
         ApprovalResultResponse result,
         String state) {
-        this.config = Objects.requireNonNull(config);
-        this.result = Objects.requireNonNull(result);
-        this.state = Objects.requireNonNull(state);
+        this.config = config;
+        this.result = result;
+        this.state = state;
     }
 
     /**

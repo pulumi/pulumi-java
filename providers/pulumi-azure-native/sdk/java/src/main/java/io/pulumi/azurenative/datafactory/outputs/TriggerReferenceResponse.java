@@ -24,8 +24,8 @@ public final class TriggerReferenceResponse {
     private TriggerReferenceResponse(
         String referenceName,
         String type) {
-        this.referenceName = Objects.requireNonNull(referenceName);
-        this.type = Objects.requireNonNull(type);
+        this.referenceName = referenceName;
+        this.type = type;
     }
 
     /**

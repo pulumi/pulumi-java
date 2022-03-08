@@ -17,8 +17,8 @@ public final class GrafeasV1beta1IntotoArtifactResponse {
     private GrafeasV1beta1IntotoArtifactResponse(
         ArtifactHashesResponse hashes,
         String resourceUri) {
-        this.hashes = Objects.requireNonNull(hashes);
-        this.resourceUri = Objects.requireNonNull(resourceUri);
+        this.hashes = hashes;
+        this.resourceUri = resourceUri;
     }
 
     public ArtifactHashesResponse getHashes() {

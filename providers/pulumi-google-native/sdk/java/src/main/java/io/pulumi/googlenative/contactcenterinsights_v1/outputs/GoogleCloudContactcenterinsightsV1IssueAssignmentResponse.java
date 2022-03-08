@@ -31,9 +31,9 @@ public final class GoogleCloudContactcenterinsightsV1IssueAssignmentResponse {
         String displayName,
         String issue,
         Double score) {
-        this.displayName = Objects.requireNonNull(displayName);
-        this.issue = Objects.requireNonNull(issue);
-        this.score = Objects.requireNonNull(score);
+        this.displayName = displayName;
+        this.issue = issue;
+        this.score = score;
     }
 
     /**

@@ -24,8 +24,8 @@ public final class DatabaseAccountConnectionStringResponse {
     private DatabaseAccountConnectionStringResponse(
         String connectionString,
         String description) {
-        this.connectionString = Objects.requireNonNull(connectionString);
-        this.description = Objects.requireNonNull(description);
+        this.connectionString = connectionString;
+        this.description = description;
     }
 
     /**

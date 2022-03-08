@@ -108,21 +108,21 @@ public final class GetExperimentResult {
         String startTime,
         String state,
         List<GoogleCloudDialogflowCxV3beta1VariantsHistoryResponse> variantsHistory) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.definition = Objects.requireNonNull(definition);
-        this.description = Objects.requireNonNull(description);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.endTime = Objects.requireNonNull(endTime);
-        this.experimentLength = Objects.requireNonNull(experimentLength);
-        this.lastUpdateTime = Objects.requireNonNull(lastUpdateTime);
-        this.name = Objects.requireNonNull(name);
-        this.result = Objects.requireNonNull(result);
-        this.rolloutConfig = Objects.requireNonNull(rolloutConfig);
-        this.rolloutFailureReason = Objects.requireNonNull(rolloutFailureReason);
-        this.rolloutState = Objects.requireNonNull(rolloutState);
-        this.startTime = Objects.requireNonNull(startTime);
-        this.state = Objects.requireNonNull(state);
-        this.variantsHistory = Objects.requireNonNull(variantsHistory);
+        this.createTime = createTime;
+        this.definition = definition;
+        this.description = description;
+        this.displayName = displayName;
+        this.endTime = endTime;
+        this.experimentLength = experimentLength;
+        this.lastUpdateTime = lastUpdateTime;
+        this.name = name;
+        this.result = result;
+        this.rolloutConfig = rolloutConfig;
+        this.rolloutFailureReason = rolloutFailureReason;
+        this.rolloutState = rolloutState;
+        this.startTime = startTime;
+        this.state = state;
+        this.variantsHistory = variantsHistory;
     }
 
     /**

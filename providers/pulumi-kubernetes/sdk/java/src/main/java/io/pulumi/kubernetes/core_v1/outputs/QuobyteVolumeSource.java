@@ -53,10 +53,10 @@ public final class QuobyteVolumeSource {
         String volume) {
         this.group = group;
         this.readOnly = readOnly;
-        this.registry = Objects.requireNonNull(registry);
+        this.registry = registry;
         this.tenant = tenant;
         this.user = user;
-        this.volume = Objects.requireNonNull(volume);
+        this.volume = volume;
     }
 
     /**

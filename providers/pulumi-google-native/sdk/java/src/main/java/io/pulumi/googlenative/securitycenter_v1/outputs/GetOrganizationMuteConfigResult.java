@@ -54,13 +54,13 @@ public final class GetOrganizationMuteConfigResult {
         String mostRecentEditor,
         String name,
         String updateTime) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.description = Objects.requireNonNull(description);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.filter = Objects.requireNonNull(filter);
-        this.mostRecentEditor = Objects.requireNonNull(mostRecentEditor);
-        this.name = Objects.requireNonNull(name);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.createTime = createTime;
+        this.description = description;
+        this.displayName = displayName;
+        this.filter = filter;
+        this.mostRecentEditor = mostRecentEditor;
+        this.name = name;
+        this.updateTime = updateTime;
     }
 
     /**

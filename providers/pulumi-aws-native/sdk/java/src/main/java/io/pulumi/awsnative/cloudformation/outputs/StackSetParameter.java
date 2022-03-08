@@ -24,8 +24,8 @@ public final class StackSetParameter {
     private StackSetParameter(
         String parameterKey,
         String parameterValue) {
-        this.parameterKey = Objects.requireNonNull(parameterKey);
-        this.parameterValue = Objects.requireNonNull(parameterValue);
+        this.parameterKey = parameterKey;
+        this.parameterValue = parameterValue;
     }
 
     /**

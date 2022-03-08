@@ -39,10 +39,10 @@ public final class OSPolicyResponse {
         String description,
         String mode,
         List<OSPolicyResourceGroupResponse> resourceGroups) {
-        this.allowNoResourceGroupMatch = Objects.requireNonNull(allowNoResourceGroupMatch);
-        this.description = Objects.requireNonNull(description);
-        this.mode = Objects.requireNonNull(mode);
-        this.resourceGroups = Objects.requireNonNull(resourceGroups);
+        this.allowNoResourceGroupMatch = allowNoResourceGroupMatch;
+        this.description = description;
+        this.mode = mode;
+        this.resourceGroups = resourceGroups;
     }
 
     /**

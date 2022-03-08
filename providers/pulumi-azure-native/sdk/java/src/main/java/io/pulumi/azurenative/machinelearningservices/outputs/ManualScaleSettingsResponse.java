@@ -42,7 +42,7 @@ public final class ManualScaleSettingsResponse {
         this.instanceCount = instanceCount;
         this.maxInstances = maxInstances;
         this.minInstances = minInstances;
-        this.scaleType = Objects.requireNonNull(scaleType);
+        this.scaleType = scaleType;
     }
 
     /**

@@ -35,8 +35,8 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfo {
         DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRoute prodTrafficRoute,
         List<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroup> targetGroups,
         @Nullable DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRoute testTrafficRoute) {
-        this.prodTrafficRoute = Objects.requireNonNull(prodTrafficRoute);
-        this.targetGroups = Objects.requireNonNull(targetGroups);
+        this.prodTrafficRoute = prodTrafficRoute;
+        this.targetGroups = targetGroups;
         this.testTrafficRoute = testTrafficRoute;
     }
 

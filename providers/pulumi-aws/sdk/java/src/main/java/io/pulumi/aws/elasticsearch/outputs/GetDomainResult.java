@@ -156,29 +156,29 @@ public final class GetDomainResult {
         List<GetDomainSnapshotOption> snapshotOptions,
         Map<String,String> tags,
         List<GetDomainVpcOption> vpcOptions) {
-        this.accessPolicies = Objects.requireNonNull(accessPolicies);
-        this.advancedOptions = Objects.requireNonNull(advancedOptions);
-        this.advancedSecurityOptions = Objects.requireNonNull(advancedSecurityOptions);
-        this.arn = Objects.requireNonNull(arn);
-        this.autoTuneOptions = Objects.requireNonNull(autoTuneOptions);
-        this.clusterConfigs = Objects.requireNonNull(clusterConfigs);
-        this.cognitoOptions = Objects.requireNonNull(cognitoOptions);
-        this.created = Objects.requireNonNull(created);
-        this.deleted = Objects.requireNonNull(deleted);
-        this.domainId = Objects.requireNonNull(domainId);
-        this.domainName = Objects.requireNonNull(domainName);
-        this.ebsOptions = Objects.requireNonNull(ebsOptions);
-        this.elasticsearchVersion = Objects.requireNonNull(elasticsearchVersion);
-        this.encryptionAtRests = Objects.requireNonNull(encryptionAtRests);
-        this.endpoint = Objects.requireNonNull(endpoint);
-        this.id = Objects.requireNonNull(id);
-        this.kibanaEndpoint = Objects.requireNonNull(kibanaEndpoint);
-        this.logPublishingOptions = Objects.requireNonNull(logPublishingOptions);
-        this.nodeToNodeEncryptions = Objects.requireNonNull(nodeToNodeEncryptions);
-        this.processing = Objects.requireNonNull(processing);
-        this.snapshotOptions = Objects.requireNonNull(snapshotOptions);
-        this.tags = Objects.requireNonNull(tags);
-        this.vpcOptions = Objects.requireNonNull(vpcOptions);
+        this.accessPolicies = accessPolicies;
+        this.advancedOptions = advancedOptions;
+        this.advancedSecurityOptions = advancedSecurityOptions;
+        this.arn = arn;
+        this.autoTuneOptions = autoTuneOptions;
+        this.clusterConfigs = clusterConfigs;
+        this.cognitoOptions = cognitoOptions;
+        this.created = created;
+        this.deleted = deleted;
+        this.domainId = domainId;
+        this.domainName = domainName;
+        this.ebsOptions = ebsOptions;
+        this.elasticsearchVersion = elasticsearchVersion;
+        this.encryptionAtRests = encryptionAtRests;
+        this.endpoint = endpoint;
+        this.id = id;
+        this.kibanaEndpoint = kibanaEndpoint;
+        this.logPublishingOptions = logPublishingOptions;
+        this.nodeToNodeEncryptions = nodeToNodeEncryptions;
+        this.processing = processing;
+        this.snapshotOptions = snapshotOptions;
+        this.tags = tags;
+        this.vpcOptions = vpcOptions;
     }
 
     /**

@@ -63,24 +63,24 @@ public final class GetHealthCheckResult {
         Integer timeoutSec,
         String type,
         Integer unhealthyThreshold) {
-        this.checkIntervalSec = Objects.requireNonNull(checkIntervalSec);
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.description = Objects.requireNonNull(description);
-        this.grpcHealthChecks = Objects.requireNonNull(grpcHealthChecks);
-        this.healthyThreshold = Objects.requireNonNull(healthyThreshold);
-        this.http2HealthChecks = Objects.requireNonNull(http2HealthChecks);
-        this.httpHealthChecks = Objects.requireNonNull(httpHealthChecks);
-        this.httpsHealthChecks = Objects.requireNonNull(httpsHealthChecks);
-        this.id = Objects.requireNonNull(id);
-        this.logConfigs = Objects.requireNonNull(logConfigs);
-        this.name = Objects.requireNonNull(name);
+        this.checkIntervalSec = checkIntervalSec;
+        this.creationTimestamp = creationTimestamp;
+        this.description = description;
+        this.grpcHealthChecks = grpcHealthChecks;
+        this.healthyThreshold = healthyThreshold;
+        this.http2HealthChecks = http2HealthChecks;
+        this.httpHealthChecks = httpHealthChecks;
+        this.httpsHealthChecks = httpsHealthChecks;
+        this.id = id;
+        this.logConfigs = logConfigs;
+        this.name = name;
         this.project = project;
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.sslHealthChecks = Objects.requireNonNull(sslHealthChecks);
-        this.tcpHealthChecks = Objects.requireNonNull(tcpHealthChecks);
-        this.timeoutSec = Objects.requireNonNull(timeoutSec);
-        this.type = Objects.requireNonNull(type);
-        this.unhealthyThreshold = Objects.requireNonNull(unhealthyThreshold);
+        this.selfLink = selfLink;
+        this.sslHealthChecks = sslHealthChecks;
+        this.tcpHealthChecks = tcpHealthChecks;
+        this.timeoutSec = timeoutSec;
+        this.type = type;
+        this.unhealthyThreshold = unhealthyThreshold;
     }
 
     public Integer getCheckIntervalSec() {

@@ -54,13 +54,13 @@ public final class MigrationValidationDatabaseSummaryResultResponse {
         String startedOn,
         String status,
         String targetDatabaseName) {
-        this.endedOn = Objects.requireNonNull(endedOn);
-        this.id = Objects.requireNonNull(id);
-        this.migrationId = Objects.requireNonNull(migrationId);
-        this.sourceDatabaseName = Objects.requireNonNull(sourceDatabaseName);
-        this.startedOn = Objects.requireNonNull(startedOn);
-        this.status = Objects.requireNonNull(status);
-        this.targetDatabaseName = Objects.requireNonNull(targetDatabaseName);
+        this.endedOn = endedOn;
+        this.id = id;
+        this.migrationId = migrationId;
+        this.sourceDatabaseName = sourceDatabaseName;
+        this.startedOn = startedOn;
+        this.status = status;
+        this.targetDatabaseName = targetDatabaseName;
     }
 
     /**

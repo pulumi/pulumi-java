@@ -35,8 +35,8 @@ public final class SelectAudioTrackByIdResponse {
         String odataType,
         Double trackId) {
         this.channelMapping = channelMapping;
-        this.odataType = Objects.requireNonNull(odataType);
-        this.trackId = Objects.requireNonNull(trackId);
+        this.odataType = odataType;
+        this.trackId = trackId;
     }
 
     /**

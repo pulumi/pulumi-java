@@ -17,7 +17,7 @@ public final class ClientCertificateConfigResponse {
 
     @OutputCustomType.Constructor({"issueClientCertificate"})
     private ClientCertificateConfigResponse(Boolean issueClientCertificate) {
-        this.issueClientCertificate = Objects.requireNonNull(issueClientCertificate);
+        this.issueClientCertificate = issueClientCertificate;
     }
 
     /**

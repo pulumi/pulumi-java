@@ -25,8 +25,8 @@ public final class EnvVarSourceResponse {
     private EnvVarSourceResponse(
         ConfigMapKeySelectorResponse configMapKeyRef,
         SecretKeySelectorResponse secretKeyRef) {
-        this.configMapKeyRef = Objects.requireNonNull(configMapKeyRef);
-        this.secretKeyRef = Objects.requireNonNull(secretKeyRef);
+        this.configMapKeyRef = configMapKeyRef;
+        this.secretKeyRef = secretKeyRef;
     }
 
     /**

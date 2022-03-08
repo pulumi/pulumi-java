@@ -32,9 +32,9 @@ public final class QueryParameterTypeResponse {
         QueryParameterTypeResponse arrayType,
         List<QueryParameterTypeStructTypesItemResponse> structTypes,
         String type) {
-        this.arrayType = Objects.requireNonNull(arrayType);
-        this.structTypes = Objects.requireNonNull(structTypes);
-        this.type = Objects.requireNonNull(type);
+        this.arrayType = arrayType;
+        this.structTypes = structTypes;
+        this.type = type;
     }
 
     /**

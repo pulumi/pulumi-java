@@ -24,9 +24,9 @@ public final class VolumeResponse {
         ConfigMapVolumeSourceResponse configMap,
         String name,
         SecretVolumeSourceResponse secret) {
-        this.configMap = Objects.requireNonNull(configMap);
-        this.name = Objects.requireNonNull(name);
-        this.secret = Objects.requireNonNull(secret);
+        this.configMap = configMap;
+        this.name = name;
+        this.secret = secret;
     }
 
     public ConfigMapVolumeSourceResponse getConfigMap() {

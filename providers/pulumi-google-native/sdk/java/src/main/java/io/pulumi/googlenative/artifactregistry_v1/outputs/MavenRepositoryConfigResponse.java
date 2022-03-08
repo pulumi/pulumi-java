@@ -25,8 +25,8 @@ public final class MavenRepositoryConfigResponse {
     private MavenRepositoryConfigResponse(
         Boolean allowSnapshotOverwrites,
         String versionPolicy) {
-        this.allowSnapshotOverwrites = Objects.requireNonNull(allowSnapshotOverwrites);
-        this.versionPolicy = Objects.requireNonNull(versionPolicy);
+        this.allowSnapshotOverwrites = allowSnapshotOverwrites;
+        this.versionPolicy = versionPolicy;
     }
 
     /**

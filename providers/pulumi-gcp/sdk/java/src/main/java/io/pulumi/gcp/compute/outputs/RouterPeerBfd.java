@@ -57,7 +57,7 @@ public final class RouterPeerBfd {
         this.minReceiveInterval = minReceiveInterval;
         this.minTransmitInterval = minTransmitInterval;
         this.multiplier = multiplier;
-        this.sessionInitializationMode = Objects.requireNonNull(sessionInitializationMode);
+        this.sessionInitializationMode = sessionInitializationMode;
     }
 
     /**

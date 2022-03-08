@@ -25,8 +25,8 @@ public final class PrivateEndpointConnectionVaultPropertiesResponse {
     private PrivateEndpointConnectionVaultPropertiesResponse(
         String id,
         VaultPrivateEndpointConnectionResponse properties) {
-        this.id = Objects.requireNonNull(id);
-        this.properties = Objects.requireNonNull(properties);
+        this.id = id;
+        this.properties = properties;
     }
 
     /**

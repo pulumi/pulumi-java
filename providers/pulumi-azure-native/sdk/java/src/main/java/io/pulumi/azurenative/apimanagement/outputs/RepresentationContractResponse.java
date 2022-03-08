@@ -46,7 +46,7 @@ public final class RepresentationContractResponse {
         @Nullable String sample,
         @Nullable String schemaId,
         @Nullable String typeName) {
-        this.contentType = Objects.requireNonNull(contentType);
+        this.contentType = contentType;
         this.formParameters = formParameters;
         this.sample = sample;
         this.schemaId = schemaId;

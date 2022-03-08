@@ -46,7 +46,7 @@ public final class DomainMappingSslSettings {
         String sslManagementType) {
         this.certificateId = certificateId;
         this.pendingManagedCertificateId = pendingManagedCertificateId;
-        this.sslManagementType = Objects.requireNonNull(sslManagementType);
+        this.sslManagementType = sslManagementType;
     }
 
     /**

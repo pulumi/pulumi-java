@@ -42,11 +42,11 @@ public final class DeprecationStatusResponse {
         String obsolete,
         String replacement,
         String state) {
-        this.deleted = Objects.requireNonNull(deleted);
-        this.deprecated = Objects.requireNonNull(deprecated);
-        this.obsolete = Objects.requireNonNull(obsolete);
-        this.replacement = Objects.requireNonNull(replacement);
-        this.state = Objects.requireNonNull(state);
+        this.deleted = deleted;
+        this.deprecated = deprecated;
+        this.obsolete = obsolete;
+        this.replacement = replacement;
+        this.state = state;
     }
 
     /**

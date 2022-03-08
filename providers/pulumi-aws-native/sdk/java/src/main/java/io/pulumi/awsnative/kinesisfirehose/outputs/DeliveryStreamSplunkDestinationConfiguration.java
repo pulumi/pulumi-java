@@ -40,13 +40,13 @@ public final class DeliveryStreamSplunkDestinationConfiguration {
         DeliveryStreamS3DestinationConfiguration s3Configuration) {
         this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
         this.hECAcknowledgmentTimeoutInSeconds = hECAcknowledgmentTimeoutInSeconds;
-        this.hECEndpoint = Objects.requireNonNull(hECEndpoint);
-        this.hECEndpointType = Objects.requireNonNull(hECEndpointType);
-        this.hECToken = Objects.requireNonNull(hECToken);
+        this.hECEndpoint = hECEndpoint;
+        this.hECEndpointType = hECEndpointType;
+        this.hECToken = hECToken;
         this.processingConfiguration = processingConfiguration;
         this.retryOptions = retryOptions;
         this.s3BackupMode = s3BackupMode;
-        this.s3Configuration = Objects.requireNonNull(s3Configuration);
+        this.s3Configuration = s3Configuration;
     }
 
     public Optional<DeliveryStreamCloudWatchLoggingOptions> getCloudWatchLoggingOptions() {

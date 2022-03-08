@@ -132,24 +132,24 @@ public final class GetIntegrationServiceEnvironmentManagedApiResult {
         List<String> runtimeUrls,
         @Nullable Map<String,String> tags,
         String type) {
-        this.apiDefinitionUrl = Objects.requireNonNull(apiDefinitionUrl);
-        this.apiDefinitions = Objects.requireNonNull(apiDefinitions);
-        this.backendService = Objects.requireNonNull(backendService);
-        this.capabilities = Objects.requireNonNull(capabilities);
-        this.category = Objects.requireNonNull(category);
-        this.connectionParameters = Objects.requireNonNull(connectionParameters);
+        this.apiDefinitionUrl = apiDefinitionUrl;
+        this.apiDefinitions = apiDefinitions;
+        this.backendService = backendService;
+        this.capabilities = capabilities;
+        this.category = category;
+        this.connectionParameters = connectionParameters;
         this.deploymentParameters = deploymentParameters;
-        this.generalInformation = Objects.requireNonNull(generalInformation);
-        this.id = Objects.requireNonNull(id);
+        this.generalInformation = generalInformation;
+        this.id = id;
         this.integrationServiceEnvironment = integrationServiceEnvironment;
         this.location = location;
-        this.metadata = Objects.requireNonNull(metadata);
-        this.name = Objects.requireNonNull(name);
-        this.policies = Objects.requireNonNull(policies);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.runtimeUrls = Objects.requireNonNull(runtimeUrls);
+        this.metadata = metadata;
+        this.name = name;
+        this.policies = policies;
+        this.provisioningState = provisioningState;
+        this.runtimeUrls = runtimeUrls;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

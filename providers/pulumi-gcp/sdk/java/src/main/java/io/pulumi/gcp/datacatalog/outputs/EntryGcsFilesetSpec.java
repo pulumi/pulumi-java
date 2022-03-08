@@ -39,7 +39,7 @@ public final class EntryGcsFilesetSpec {
     private EntryGcsFilesetSpec(
         List<String> filePatterns,
         @Nullable List<EntryGcsFilesetSpecSampleGcsFileSpec> sampleGcsFileSpecs) {
-        this.filePatterns = Objects.requireNonNull(filePatterns);
+        this.filePatterns = filePatterns;
         this.sampleGcsFileSpecs = sampleGcsFileSpecs;
     }
 

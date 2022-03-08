@@ -39,10 +39,10 @@ public final class GoogleCloudDialogflowV2IntentTrainingPhraseResponse {
         List<GoogleCloudDialogflowV2IntentTrainingPhrasePartResponse> parts,
         Integer timesAddedCount,
         String type) {
-        this.name = Objects.requireNonNull(name);
-        this.parts = Objects.requireNonNull(parts);
-        this.timesAddedCount = Objects.requireNonNull(timesAddedCount);
-        this.type = Objects.requireNonNull(type);
+        this.name = name;
+        this.parts = parts;
+        this.timesAddedCount = timesAddedCount;
+        this.type = type;
     }
 
     /**

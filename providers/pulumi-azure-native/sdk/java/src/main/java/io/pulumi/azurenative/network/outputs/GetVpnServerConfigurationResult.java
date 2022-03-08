@@ -139,19 +139,19 @@ public final class GetVpnServerConfigurationResult {
         @Nullable List<VpnServerConfigVpnClientRootCertificateResponse> vpnClientRootCertificates,
         @Nullable List<String> vpnProtocols) {
         this.aadAuthenticationParameters = aadAuthenticationParameters;
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.id = id;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
-        this.p2SVpnGateways = Objects.requireNonNull(p2SVpnGateways);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.name = name;
+        this.p2SVpnGateways = p2SVpnGateways;
+        this.provisioningState = provisioningState;
         this.radiusClientRootCertificates = radiusClientRootCertificates;
         this.radiusServerAddress = radiusServerAddress;
         this.radiusServerRootCertificates = radiusServerRootCertificates;
         this.radiusServerSecret = radiusServerSecret;
         this.radiusServers = radiusServers;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.vpnAuthenticationTypes = vpnAuthenticationTypes;
         this.vpnClientIpsecPolicies = vpnClientIpsecPolicies;
         this.vpnClientRevokedCertificates = vpnClientRevokedCertificates;

@@ -22,10 +22,10 @@ public final class GetTargetGroupStickiness {
         String cookieName,
         Boolean enabled,
         String type) {
-        this.cookieDuration = Objects.requireNonNull(cookieDuration);
-        this.cookieName = Objects.requireNonNull(cookieName);
-        this.enabled = Objects.requireNonNull(enabled);
-        this.type = Objects.requireNonNull(type);
+        this.cookieDuration = cookieDuration;
+        this.cookieName = cookieName;
+        this.enabled = enabled;
+        this.type = type;
     }
 
     public Integer getCookieDuration() {

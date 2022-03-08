@@ -17,8 +17,8 @@ public final class DataSourceVpcConfiguration {
     private DataSourceVpcConfiguration(
         List<String> securityGroupIds,
         List<String> subnetIds) {
-        this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
-        this.subnetIds = Objects.requireNonNull(subnetIds);
+        this.securityGroupIds = securityGroupIds;
+        this.subnetIds = subnetIds;
     }
 
     public List<String> getSecurityGroupIds() {

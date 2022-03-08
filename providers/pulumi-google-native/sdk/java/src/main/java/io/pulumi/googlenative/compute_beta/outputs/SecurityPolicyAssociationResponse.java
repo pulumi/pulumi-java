@@ -36,10 +36,10 @@ public final class SecurityPolicyAssociationResponse {
         String displayName,
         String name,
         String securityPolicyId) {
-        this.attachmentId = Objects.requireNonNull(attachmentId);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.name = Objects.requireNonNull(name);
-        this.securityPolicyId = Objects.requireNonNull(securityPolicyId);
+        this.attachmentId = attachmentId;
+        this.displayName = displayName;
+        this.name = name;
+        this.securityPolicyId = securityPolicyId;
     }
 
     /**

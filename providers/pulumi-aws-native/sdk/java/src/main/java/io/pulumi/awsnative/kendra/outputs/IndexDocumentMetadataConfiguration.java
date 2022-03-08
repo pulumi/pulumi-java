@@ -25,10 +25,10 @@ public final class IndexDocumentMetadataConfiguration {
         @Nullable IndexRelevance relevance,
         @Nullable IndexSearch search,
         IndexDocumentAttributeValueType type) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.relevance = relevance;
         this.search = search;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     public String getName() {

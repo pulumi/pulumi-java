@@ -42,11 +42,11 @@ public final class FirewallPolicyAssociationResponse {
         String firewallPolicyId,
         String name,
         String shortName) {
-        this.attachmentTarget = Objects.requireNonNull(attachmentTarget);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.firewallPolicyId = Objects.requireNonNull(firewallPolicyId);
-        this.name = Objects.requireNonNull(name);
-        this.shortName = Objects.requireNonNull(shortName);
+        this.attachmentTarget = attachmentTarget;
+        this.displayName = displayName;
+        this.firewallPolicyId = firewallPolicyId;
+        this.name = name;
+        this.shortName = shortName;
     }
 
     /**

@@ -31,7 +31,7 @@ public final class InstanceNetworkInterfaceAliasIpRange {
     private InstanceNetworkInterfaceAliasIpRange(
         String ipCidrRange,
         @Nullable String subnetworkRangeName) {
-        this.ipCidrRange = Objects.requireNonNull(ipCidrRange);
+        this.ipCidrRange = ipCidrRange;
         this.subnetworkRangeName = subnetworkRangeName;
     }
 

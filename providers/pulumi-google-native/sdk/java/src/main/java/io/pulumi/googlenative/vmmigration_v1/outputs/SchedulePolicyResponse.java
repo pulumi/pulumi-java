@@ -25,8 +25,8 @@ public final class SchedulePolicyResponse {
     private SchedulePolicyResponse(
         String idleDuration,
         Boolean skipOsAdaptation) {
-        this.idleDuration = Objects.requireNonNull(idleDuration);
-        this.skipOsAdaptation = Objects.requireNonNull(skipOsAdaptation);
+        this.idleDuration = idleDuration;
+        this.skipOsAdaptation = skipOsAdaptation;
     }
 
     /**

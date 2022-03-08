@@ -14,7 +14,7 @@ public final class ByProductsResponse {
 
     @OutputCustomType.Constructor({"customValues"})
     private ByProductsResponse(Map<String,String> customValues) {
-        this.customValues = Objects.requireNonNull(customValues);
+        this.customValues = customValues;
     }
 
     public Map<String,String> getCustomValues() {

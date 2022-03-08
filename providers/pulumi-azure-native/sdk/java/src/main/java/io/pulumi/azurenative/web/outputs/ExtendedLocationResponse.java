@@ -27,7 +27,7 @@ public final class ExtendedLocationResponse {
         @Nullable String name,
         String type) {
         this.name = name;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

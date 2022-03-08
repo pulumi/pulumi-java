@@ -67,7 +67,7 @@ public final class WranglingDataFlowResponse {
         this.folder = folder;
         this.script = script;
         this.sources = sources;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

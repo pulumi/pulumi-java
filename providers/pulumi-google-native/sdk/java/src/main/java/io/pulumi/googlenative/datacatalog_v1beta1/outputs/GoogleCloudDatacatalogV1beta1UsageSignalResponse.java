@@ -25,8 +25,8 @@ public final class GoogleCloudDatacatalogV1beta1UsageSignalResponse {
     private GoogleCloudDatacatalogV1beta1UsageSignalResponse(
         String updateTime,
         Map<String,String> usageWithinTimeRange) {
-        this.updateTime = Objects.requireNonNull(updateTime);
-        this.usageWithinTimeRange = Objects.requireNonNull(usageWithinTimeRange);
+        this.updateTime = updateTime;
+        this.usageWithinTimeRange = usageWithinTimeRange;
     }
 
     /**

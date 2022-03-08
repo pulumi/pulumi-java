@@ -28,7 +28,7 @@ public final class AudioTrackDescriptorResponse {
         @Nullable String channelMapping,
         String odataType) {
         this.channelMapping = channelMapping;
-        this.odataType = Objects.requireNonNull(odataType);
+        this.odataType = odataType;
     }
 
     /**

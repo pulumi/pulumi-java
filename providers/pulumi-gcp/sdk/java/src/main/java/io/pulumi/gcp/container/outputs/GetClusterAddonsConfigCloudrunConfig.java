@@ -17,8 +17,8 @@ public final class GetClusterAddonsConfigCloudrunConfig {
     private GetClusterAddonsConfigCloudrunConfig(
         Boolean disabled,
         String loadBalancerType) {
-        this.disabled = Objects.requireNonNull(disabled);
-        this.loadBalancerType = Objects.requireNonNull(loadBalancerType);
+        this.disabled = disabled;
+        this.loadBalancerType = loadBalancerType;
     }
 
     public Boolean getDisabled() {

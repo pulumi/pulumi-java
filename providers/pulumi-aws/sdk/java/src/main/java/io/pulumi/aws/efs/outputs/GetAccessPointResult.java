@@ -59,14 +59,14 @@ public final class GetAccessPointResult {
         List<GetAccessPointPosixUser> posixUsers,
         List<GetAccessPointRootDirectory> rootDirectories,
         @Nullable Map<String,String> tags) {
-        this.accessPointId = Objects.requireNonNull(accessPointId);
-        this.arn = Objects.requireNonNull(arn);
-        this.fileSystemArn = Objects.requireNonNull(fileSystemArn);
-        this.fileSystemId = Objects.requireNonNull(fileSystemId);
-        this.id = Objects.requireNonNull(id);
-        this.ownerId = Objects.requireNonNull(ownerId);
-        this.posixUsers = Objects.requireNonNull(posixUsers);
-        this.rootDirectories = Objects.requireNonNull(rootDirectories);
+        this.accessPointId = accessPointId;
+        this.arn = arn;
+        this.fileSystemArn = fileSystemArn;
+        this.fileSystemId = fileSystemId;
+        this.id = id;
+        this.ownerId = ownerId;
+        this.posixUsers = posixUsers;
+        this.rootDirectories = rootDirectories;
         this.tags = tags;
     }
 

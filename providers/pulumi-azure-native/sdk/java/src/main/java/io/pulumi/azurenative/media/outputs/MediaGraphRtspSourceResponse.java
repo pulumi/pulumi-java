@@ -40,10 +40,10 @@ public final class MediaGraphRtspSourceResponse {
         String name,
         String odataType,
         String transport) {
-        this.endpoint = Objects.requireNonNull(endpoint);
-        this.name = Objects.requireNonNull(name);
-        this.odataType = Objects.requireNonNull(odataType);
-        this.transport = Objects.requireNonNull(transport);
+        this.endpoint = endpoint;
+        this.name = name;
+        this.odataType = odataType;
+        this.transport = transport;
     }
 
     /**

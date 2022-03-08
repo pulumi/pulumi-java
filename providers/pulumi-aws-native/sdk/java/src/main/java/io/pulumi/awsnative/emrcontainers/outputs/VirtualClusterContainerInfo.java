@@ -13,7 +13,7 @@ public final class VirtualClusterContainerInfo {
 
     @OutputCustomType.Constructor({"eksInfo"})
     private VirtualClusterContainerInfo(VirtualClusterEksInfo eksInfo) {
-        this.eksInfo = Objects.requireNonNull(eksInfo);
+        this.eksInfo = eksInfo;
     }
 
     public VirtualClusterEksInfo getEksInfo() {

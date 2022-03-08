@@ -27,7 +27,7 @@ public final class CodeConfigurationResponse {
         @Nullable String codeId,
         String scoringScript) {
         this.codeId = codeId;
-        this.scoringScript = Objects.requireNonNull(scoringScript);
+        this.scoringScript = scoringScript;
     }
 
     /**

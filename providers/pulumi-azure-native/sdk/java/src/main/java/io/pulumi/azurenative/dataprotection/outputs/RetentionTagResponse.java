@@ -30,9 +30,9 @@ public final class RetentionTagResponse {
         String eTag,
         String id,
         String tagName) {
-        this.eTag = Objects.requireNonNull(eTag);
-        this.id = Objects.requireNonNull(id);
-        this.tagName = Objects.requireNonNull(tagName);
+        this.eTag = eTag;
+        this.id = id;
+        this.tagName = tagName;
     }
 
     /**

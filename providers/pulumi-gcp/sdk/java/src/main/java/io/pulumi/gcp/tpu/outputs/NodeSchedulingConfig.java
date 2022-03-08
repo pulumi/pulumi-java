@@ -17,7 +17,7 @@ public final class NodeSchedulingConfig {
 
     @OutputCustomType.Constructor({"preemptible"})
     private NodeSchedulingConfig(Boolean preemptible) {
-        this.preemptible = Objects.requireNonNull(preemptible);
+        this.preemptible = preemptible;
     }
 
     /**

@@ -14,7 +14,7 @@ public final class ArtifactRuleResponse {
 
     @OutputCustomType.Constructor({"artifactRule"})
     private ArtifactRuleResponse(List<String> artifactRule) {
-        this.artifactRule = Objects.requireNonNull(artifactRule);
+        this.artifactRule = artifactRule;
     }
 
     public List<String> getArtifactRule() {

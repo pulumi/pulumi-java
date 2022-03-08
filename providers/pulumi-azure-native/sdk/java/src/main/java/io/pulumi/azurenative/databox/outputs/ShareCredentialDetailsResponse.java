@@ -43,11 +43,11 @@ public final class ShareCredentialDetailsResponse {
         String shareType,
         List<String> supportedAccessProtocols,
         String userName) {
-        this.password = Objects.requireNonNull(password);
-        this.shareName = Objects.requireNonNull(shareName);
-        this.shareType = Objects.requireNonNull(shareType);
-        this.supportedAccessProtocols = Objects.requireNonNull(supportedAccessProtocols);
-        this.userName = Objects.requireNonNull(userName);
+        this.password = password;
+        this.shareName = shareName;
+        this.shareType = shareType;
+        this.supportedAccessProtocols = supportedAccessProtocols;
+        this.userName = userName;
     }
 
     /**

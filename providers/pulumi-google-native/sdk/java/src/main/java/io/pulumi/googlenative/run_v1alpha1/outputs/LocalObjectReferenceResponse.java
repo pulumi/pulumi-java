@@ -17,7 +17,7 @@ public final class LocalObjectReferenceResponse {
 
     @OutputCustomType.Constructor({"name"})
     private LocalObjectReferenceResponse(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

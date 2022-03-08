@@ -27,7 +27,7 @@ public final class KubernetesIPConfigurationResponse {
         @Nullable String ipAddress,
         String port) {
         this.ipAddress = ipAddress;
-        this.port = Objects.requireNonNull(port);
+        this.port = port;
     }
 
     /**

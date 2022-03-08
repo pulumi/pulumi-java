@@ -49,9 +49,9 @@ public final class AutomationRuleTriggeringLogicResponse {
         String triggersWhen) {
         this.conditions = conditions;
         this.expirationTimeUtc = expirationTimeUtc;
-        this.isEnabled = Objects.requireNonNull(isEnabled);
-        this.triggersOn = Objects.requireNonNull(triggersOn);
-        this.triggersWhen = Objects.requireNonNull(triggersWhen);
+        this.isEnabled = isEnabled;
+        this.triggersOn = triggersOn;
+        this.triggersWhen = triggersWhen;
     }
 
     /**

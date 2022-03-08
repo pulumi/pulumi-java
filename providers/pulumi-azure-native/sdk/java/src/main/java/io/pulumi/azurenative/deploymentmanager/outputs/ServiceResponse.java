@@ -42,8 +42,8 @@ public final class ServiceResponse {
         String targetSubscriptionId) {
         this.name = name;
         this.serviceUnits = serviceUnits;
-        this.targetLocation = Objects.requireNonNull(targetLocation);
-        this.targetSubscriptionId = Objects.requireNonNull(targetSubscriptionId);
+        this.targetLocation = targetLocation;
+        this.targetSubscriptionId = targetSubscriptionId;
     }
 
     /**

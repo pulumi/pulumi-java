@@ -23,7 +23,7 @@ public final class NodePoolNodeConfigKubeletConfig {
         String cpuManagerPolicy) {
         this.cpuCfsQuota = cpuCfsQuota;
         this.cpuCfsQuotaPeriod = cpuCfsQuotaPeriod;
-        this.cpuManagerPolicy = Objects.requireNonNull(cpuManagerPolicy);
+        this.cpuManagerPolicy = cpuManagerPolicy;
     }
 
     public Optional<Boolean> getCpuCfsQuota() {

@@ -24,8 +24,8 @@ public final class OsDiskImageResponse {
     private OsDiskImageResponse(
         String operatingSystem,
         String sourceBlobSasUri) {
-        this.operatingSystem = Objects.requireNonNull(operatingSystem);
-        this.sourceBlobSasUri = Objects.requireNonNull(sourceBlobSasUri);
+        this.operatingSystem = operatingSystem;
+        this.sourceBlobSasUri = sourceBlobSasUri;
     }
 
     /**

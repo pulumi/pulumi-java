@@ -73,7 +73,7 @@ public final class SpotFleetRequestConfigData {
         this.allocationStrategy = allocationStrategy;
         this.context = context;
         this.excessCapacityTerminationPolicy = excessCapacityTerminationPolicy;
-        this.iamFleetRole = Objects.requireNonNull(iamFleetRole);
+        this.iamFleetRole = iamFleetRole;
         this.instanceInterruptionBehavior = instanceInterruptionBehavior;
         this.instancePoolsToUseCount = instancePoolsToUseCount;
         this.launchSpecifications = launchSpecifications;
@@ -86,7 +86,7 @@ public final class SpotFleetRequestConfigData {
         this.spotMaintenanceStrategies = spotMaintenanceStrategies;
         this.spotMaxTotalPrice = spotMaxTotalPrice;
         this.spotPrice = spotPrice;
-        this.targetCapacity = Objects.requireNonNull(targetCapacity);
+        this.targetCapacity = targetCapacity;
         this.targetCapacityUnitType = targetCapacityUnitType;
         this.terminateInstancesWithExpiration = terminateInstancesWithExpiration;
         this.type = type;

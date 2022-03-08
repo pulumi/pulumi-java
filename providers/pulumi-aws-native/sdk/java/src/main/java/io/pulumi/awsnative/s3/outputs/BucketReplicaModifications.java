@@ -17,7 +17,7 @@ public final class BucketReplicaModifications {
 
     @OutputCustomType.Constructor({"status"})
     private BucketReplicaModifications(BucketReplicaModificationsStatus status) {
-        this.status = Objects.requireNonNull(status);
+        this.status = status;
     }
 
     /**

@@ -18,7 +18,7 @@ public final class DiagnosticsResponse {
 
     @OutputCustomType.Constructor({"conditions"})
     private DiagnosticsResponse(List<DiagnosticConditionResponse> conditions) {
-        this.conditions = Objects.requireNonNull(conditions);
+        this.conditions = conditions;
     }
 
     /**

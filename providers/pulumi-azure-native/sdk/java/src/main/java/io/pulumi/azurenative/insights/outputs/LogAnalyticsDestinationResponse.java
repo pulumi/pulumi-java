@@ -34,7 +34,7 @@ public final class LogAnalyticsDestinationResponse {
         String workspaceId,
         @Nullable String workspaceResourceId) {
         this.name = name;
-        this.workspaceId = Objects.requireNonNull(workspaceId);
+        this.workspaceId = workspaceId;
         this.workspaceResourceId = workspaceResourceId;
     }
 

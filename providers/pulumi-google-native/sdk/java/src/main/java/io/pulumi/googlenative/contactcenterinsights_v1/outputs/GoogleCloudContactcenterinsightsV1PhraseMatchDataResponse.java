@@ -24,8 +24,8 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse {
     private GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse(
         String displayName,
         String phraseMatcher) {
-        this.displayName = Objects.requireNonNull(displayName);
-        this.phraseMatcher = Objects.requireNonNull(phraseMatcher);
+        this.displayName = displayName;
+        this.phraseMatcher = phraseMatcher;
     }
 
     /**

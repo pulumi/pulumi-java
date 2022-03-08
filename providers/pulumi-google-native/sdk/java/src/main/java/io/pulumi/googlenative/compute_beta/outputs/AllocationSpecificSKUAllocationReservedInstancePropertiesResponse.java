@@ -58,13 +58,13 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesResp
         Integer maintenanceFreezeDurationHours,
         String maintenanceInterval,
         String minCpuPlatform) {
-        this.guestAccelerators = Objects.requireNonNull(guestAccelerators);
-        this.localSsds = Objects.requireNonNull(localSsds);
-        this.locationHint = Objects.requireNonNull(locationHint);
-        this.machineType = Objects.requireNonNull(machineType);
-        this.maintenanceFreezeDurationHours = Objects.requireNonNull(maintenanceFreezeDurationHours);
-        this.maintenanceInterval = Objects.requireNonNull(maintenanceInterval);
-        this.minCpuPlatform = Objects.requireNonNull(minCpuPlatform);
+        this.guestAccelerators = guestAccelerators;
+        this.localSsds = localSsds;
+        this.locationHint = locationHint;
+        this.machineType = machineType;
+        this.maintenanceFreezeDurationHours = maintenanceFreezeDurationHours;
+        this.maintenanceInterval = maintenanceInterval;
+        this.minCpuPlatform = minCpuPlatform;
     }
 
     /**

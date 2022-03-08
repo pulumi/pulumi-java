@@ -16,8 +16,8 @@ public final class DatasetIotEventsDestinationConfiguration {
     private DatasetIotEventsDestinationConfiguration(
         String inputName,
         String roleArn) {
-        this.inputName = Objects.requireNonNull(inputName);
-        this.roleArn = Objects.requireNonNull(roleArn);
+        this.inputName = inputName;
+        this.roleArn = roleArn;
     }
 
     public String getInputName() {

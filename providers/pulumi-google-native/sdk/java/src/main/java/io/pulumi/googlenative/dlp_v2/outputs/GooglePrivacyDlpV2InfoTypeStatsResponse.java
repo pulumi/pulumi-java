@@ -25,8 +25,8 @@ public final class GooglePrivacyDlpV2InfoTypeStatsResponse {
     private GooglePrivacyDlpV2InfoTypeStatsResponse(
         String count,
         GooglePrivacyDlpV2InfoTypeResponse infoType) {
-        this.count = Objects.requireNonNull(count);
-        this.infoType = Objects.requireNonNull(infoType);
+        this.count = count;
+        this.infoType = infoType;
     }
 
     /**

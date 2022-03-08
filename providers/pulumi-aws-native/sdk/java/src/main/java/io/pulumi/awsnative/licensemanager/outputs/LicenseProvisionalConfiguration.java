@@ -13,7 +13,7 @@ public final class LicenseProvisionalConfiguration {
 
     @OutputCustomType.Constructor({"maxTimeToLiveInMinutes"})
     private LicenseProvisionalConfiguration(Integer maxTimeToLiveInMinutes) {
-        this.maxTimeToLiveInMinutes = Objects.requireNonNull(maxTimeToLiveInMinutes);
+        this.maxTimeToLiveInMinutes = maxTimeToLiveInMinutes;
     }
 
     public Integer getMaxTimeToLiveInMinutes() {

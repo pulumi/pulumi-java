@@ -130,15 +130,15 @@ public final class GetAssignmentResult {
         this.effect = effect;
         this.etag = etag;
         this.expiresOn = expiresOn;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.kind = kind;
         this.location = location;
         this.metadata = metadata;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.scope = scope;
-        this.systemData = Objects.requireNonNull(systemData);
+        this.systemData = systemData;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

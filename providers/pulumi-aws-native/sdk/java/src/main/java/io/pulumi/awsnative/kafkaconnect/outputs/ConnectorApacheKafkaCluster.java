@@ -21,8 +21,8 @@ public final class ConnectorApacheKafkaCluster {
     private ConnectorApacheKafkaCluster(
         String bootstrapServers,
         ConnectorVpc vpc) {
-        this.bootstrapServers = Objects.requireNonNull(bootstrapServers);
-        this.vpc = Objects.requireNonNull(vpc);
+        this.bootstrapServers = bootstrapServers;
+        this.vpc = vpc;
     }
 
     /**

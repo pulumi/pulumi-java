@@ -72,16 +72,16 @@ public final class GetVpcAttachmentResult {
         String transitGatewayId,
         String vpcId,
         String vpcOwnerId) {
-        this.applianceModeSupport = Objects.requireNonNull(applianceModeSupport);
-        this.dnsSupport = Objects.requireNonNull(dnsSupport);
+        this.applianceModeSupport = applianceModeSupport;
+        this.dnsSupport = dnsSupport;
         this.filters = filters;
-        this.id = Objects.requireNonNull(id);
-        this.ipv6Support = Objects.requireNonNull(ipv6Support);
-        this.subnetIds = Objects.requireNonNull(subnetIds);
-        this.tags = Objects.requireNonNull(tags);
-        this.transitGatewayId = Objects.requireNonNull(transitGatewayId);
-        this.vpcId = Objects.requireNonNull(vpcId);
-        this.vpcOwnerId = Objects.requireNonNull(vpcOwnerId);
+        this.id = id;
+        this.ipv6Support = ipv6Support;
+        this.subnetIds = subnetIds;
+        this.tags = tags;
+        this.transitGatewayId = transitGatewayId;
+        this.vpcId = vpcId;
+        this.vpcOwnerId = vpcOwnerId;
     }
 
     /**

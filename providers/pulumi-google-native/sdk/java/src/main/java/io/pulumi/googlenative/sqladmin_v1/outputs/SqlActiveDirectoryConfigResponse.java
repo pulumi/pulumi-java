@@ -24,8 +24,8 @@ public final class SqlActiveDirectoryConfigResponse {
     private SqlActiveDirectoryConfigResponse(
         String domain,
         String kind) {
-        this.domain = Objects.requireNonNull(domain);
-        this.kind = Objects.requireNonNull(kind);
+        this.domain = domain;
+        this.kind = kind;
     }
 
     /**

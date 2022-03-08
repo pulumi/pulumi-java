@@ -24,9 +24,9 @@ public final class ContainerRegistryResponse {
         String password,
         @Nullable String registryServer,
         String userName) {
-        this.password = Objects.requireNonNull(password);
+        this.password = password;
         this.registryServer = registryServer;
-        this.userName = Objects.requireNonNull(userName);
+        this.userName = userName;
     }
 
     public String getPassword() {

@@ -17,7 +17,7 @@ public final class RepositoryUpstream {
 
     @OutputCustomType.Constructor({"repositoryName"})
     private RepositoryUpstream(String repositoryName) {
-        this.repositoryName = Objects.requireNonNull(repositoryName);
+        this.repositoryName = repositoryName;
     }
 
     /**

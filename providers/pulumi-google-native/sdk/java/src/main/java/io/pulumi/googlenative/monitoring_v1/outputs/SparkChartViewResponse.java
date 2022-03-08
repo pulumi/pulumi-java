@@ -24,8 +24,8 @@ public final class SparkChartViewResponse {
     private SparkChartViewResponse(
         String minAlignmentPeriod,
         String sparkChartType) {
-        this.minAlignmentPeriod = Objects.requireNonNull(minAlignmentPeriod);
-        this.sparkChartType = Objects.requireNonNull(sparkChartType);
+        this.minAlignmentPeriod = minAlignmentPeriod;
+        this.sparkChartType = sparkChartType;
     }
 
     /**

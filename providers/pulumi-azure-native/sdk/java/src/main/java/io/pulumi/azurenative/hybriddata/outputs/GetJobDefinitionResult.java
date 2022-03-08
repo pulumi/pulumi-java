@@ -92,15 +92,15 @@ public final class GetJobDefinitionResult {
         @Nullable String userConfirmation) {
         this.customerSecrets = customerSecrets;
         this.dataServiceInput = dataServiceInput;
-        this.dataSinkId = Objects.requireNonNull(dataSinkId);
-        this.dataSourceId = Objects.requireNonNull(dataSourceId);
-        this.id = Objects.requireNonNull(id);
+        this.dataSinkId = dataSinkId;
+        this.dataSourceId = dataSourceId;
+        this.id = id;
         this.lastModifiedTime = lastModifiedTime;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.runLocation = runLocation;
         this.schedules = schedules;
-        this.state = Objects.requireNonNull(state);
-        this.type = Objects.requireNonNull(type);
+        this.state = state;
+        this.type = type;
         this.userConfirmation = userConfirmation;
     }
 

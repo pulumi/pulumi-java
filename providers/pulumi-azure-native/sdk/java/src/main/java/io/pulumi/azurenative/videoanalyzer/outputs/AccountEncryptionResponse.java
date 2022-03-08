@@ -42,8 +42,8 @@ public final class AccountEncryptionResponse {
         String type) {
         this.identity = identity;
         this.keyVaultProperties = keyVaultProperties;
-        this.status = Objects.requireNonNull(status);
-        this.type = Objects.requireNonNull(type);
+        this.status = status;
+        this.type = type;
     }
 
     /**

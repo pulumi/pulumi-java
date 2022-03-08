@@ -24,8 +24,8 @@ public final class AddressDetailsResponse {
     private AddressDetailsResponse(
         AddressPropertiesResponse forwardAddress,
         AddressPropertiesResponse returnAddress) {
-        this.forwardAddress = Objects.requireNonNull(forwardAddress);
-        this.returnAddress = Objects.requireNonNull(returnAddress);
+        this.forwardAddress = forwardAddress;
+        this.returnAddress = returnAddress;
     }
 
     /**

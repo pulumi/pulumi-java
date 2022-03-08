@@ -30,9 +30,9 @@ public final class VirtualApplianceNicPropertiesResponse {
         String name,
         String privateIpAddress,
         String publicIpAddress) {
-        this.name = Objects.requireNonNull(name);
-        this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
-        this.publicIpAddress = Objects.requireNonNull(publicIpAddress);
+        this.name = name;
+        this.privateIpAddress = privateIpAddress;
+        this.publicIpAddress = publicIpAddress;
     }
 
     /**

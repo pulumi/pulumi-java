@@ -17,8 +17,8 @@ public final class BudgetsActionSubscriber {
     private BudgetsActionSubscriber(
         String address,
         BudgetsActionSubscriberType type) {
-        this.address = Objects.requireNonNull(address);
-        this.type = Objects.requireNonNull(type);
+        this.address = address;
+        this.type = type;
     }
 
     public String getAddress() {

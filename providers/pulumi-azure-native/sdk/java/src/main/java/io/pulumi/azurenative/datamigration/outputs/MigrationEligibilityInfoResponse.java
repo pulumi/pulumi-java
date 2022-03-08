@@ -26,8 +26,8 @@ public final class MigrationEligibilityInfoResponse {
     private MigrationEligibilityInfoResponse(
         Boolean isEligibleForMigration,
         List<String> validationMessages) {
-        this.isEligibleForMigration = Objects.requireNonNull(isEligibleForMigration);
-        this.validationMessages = Objects.requireNonNull(validationMessages);
+        this.isEligibleForMigration = isEligibleForMigration;
+        this.validationMessages = validationMessages;
     }
 
     /**

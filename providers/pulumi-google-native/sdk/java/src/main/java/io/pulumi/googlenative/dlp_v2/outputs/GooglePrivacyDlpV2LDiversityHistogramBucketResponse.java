@@ -44,11 +44,11 @@ public final class GooglePrivacyDlpV2LDiversityHistogramBucketResponse {
         List<GooglePrivacyDlpV2LDiversityEquivalenceClassResponse> bucketValues,
         String sensitiveValueFrequencyLowerBound,
         String sensitiveValueFrequencyUpperBound) {
-        this.bucketSize = Objects.requireNonNull(bucketSize);
-        this.bucketValueCount = Objects.requireNonNull(bucketValueCount);
-        this.bucketValues = Objects.requireNonNull(bucketValues);
-        this.sensitiveValueFrequencyLowerBound = Objects.requireNonNull(sensitiveValueFrequencyLowerBound);
-        this.sensitiveValueFrequencyUpperBound = Objects.requireNonNull(sensitiveValueFrequencyUpperBound);
+        this.bucketSize = bucketSize;
+        this.bucketValueCount = bucketValueCount;
+        this.bucketValues = bucketValues;
+        this.sensitiveValueFrequencyLowerBound = sensitiveValueFrequencyLowerBound;
+        this.sensitiveValueFrequencyUpperBound = sensitiveValueFrequencyUpperBound;
     }
 
     /**

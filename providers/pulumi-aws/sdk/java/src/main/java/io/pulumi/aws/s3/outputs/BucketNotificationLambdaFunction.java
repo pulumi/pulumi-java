@@ -45,7 +45,7 @@ public final class BucketNotificationLambdaFunction {
         @Nullable String filterSuffix,
         @Nullable String id,
         @Nullable String lambdaFunctionArn) {
-        this.events = Objects.requireNonNull(events);
+        this.events = events;
         this.filterPrefix = filterPrefix;
         this.filterSuffix = filterSuffix;
         this.id = id;

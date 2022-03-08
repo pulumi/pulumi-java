@@ -73,16 +73,16 @@ public final class QuotaLimitResponse {
         String name,
         String unit,
         Map<String,String> values) {
-        this.defaultLimit = Objects.requireNonNull(defaultLimit);
-        this.description = Objects.requireNonNull(description);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.duration = Objects.requireNonNull(duration);
-        this.freeTier = Objects.requireNonNull(freeTier);
-        this.maxLimit = Objects.requireNonNull(maxLimit);
-        this.metric = Objects.requireNonNull(metric);
-        this.name = Objects.requireNonNull(name);
-        this.unit = Objects.requireNonNull(unit);
-        this.values = Objects.requireNonNull(values);
+        this.defaultLimit = defaultLimit;
+        this.description = description;
+        this.displayName = displayName;
+        this.duration = duration;
+        this.freeTier = freeTier;
+        this.maxLimit = maxLimit;
+        this.metric = metric;
+        this.name = name;
+        this.unit = unit;
+        this.values = values;
     }
 
     /**

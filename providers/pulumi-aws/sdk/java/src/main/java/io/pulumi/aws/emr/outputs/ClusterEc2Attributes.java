@@ -73,7 +73,7 @@ public final class ClusterEc2Attributes {
         this.additionalSlaveSecurityGroups = additionalSlaveSecurityGroups;
         this.emrManagedMasterSecurityGroup = emrManagedMasterSecurityGroup;
         this.emrManagedSlaveSecurityGroup = emrManagedSlaveSecurityGroup;
-        this.instanceProfile = Objects.requireNonNull(instanceProfile);
+        this.instanceProfile = instanceProfile;
         this.keyName = keyName;
         this.serviceAccessSecurityGroup = serviceAccessSecurityGroup;
         this.subnetId = subnetId;

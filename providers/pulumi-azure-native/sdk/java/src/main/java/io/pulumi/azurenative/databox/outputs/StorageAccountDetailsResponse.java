@@ -25,8 +25,8 @@ public final class StorageAccountDetailsResponse {
     private StorageAccountDetailsResponse(
         String dataAccountType,
         String storageAccountId) {
-        this.dataAccountType = Objects.requireNonNull(dataAccountType);
-        this.storageAccountId = Objects.requireNonNull(storageAccountId);
+        this.dataAccountType = dataAccountType;
+        this.storageAccountId = storageAccountId;
     }
 
     /**

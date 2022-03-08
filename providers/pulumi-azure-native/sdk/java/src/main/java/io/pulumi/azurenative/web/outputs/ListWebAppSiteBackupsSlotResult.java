@@ -26,8 +26,8 @@ public final class ListWebAppSiteBackupsSlotResult {
     private ListWebAppSiteBackupsSlotResult(
         String nextLink,
         List<BackupItemResponse> value) {
-        this.nextLink = Objects.requireNonNull(nextLink);
-        this.value = Objects.requireNonNull(value);
+        this.nextLink = nextLink;
+        this.value = value;
     }
 
     /**

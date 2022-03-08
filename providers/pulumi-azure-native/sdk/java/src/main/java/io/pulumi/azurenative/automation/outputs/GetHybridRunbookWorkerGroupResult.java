@@ -65,8 +65,8 @@ public final class GetHybridRunbookWorkerGroupResult {
         this.hybridRunbookWorkers = hybridRunbookWorkers;
         this.id = id;
         this.name = name;
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

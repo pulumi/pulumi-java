@@ -35,8 +35,8 @@ public final class PreventionInspectTemplateInspectConfigLimits {
         Integer maxFindingsPerItem,
         Integer maxFindingsPerRequest) {
         this.maxFindingsPerInfoTypes = maxFindingsPerInfoTypes;
-        this.maxFindingsPerItem = Objects.requireNonNull(maxFindingsPerItem);
-        this.maxFindingsPerRequest = Objects.requireNonNull(maxFindingsPerRequest);
+        this.maxFindingsPerItem = maxFindingsPerItem;
+        this.maxFindingsPerRequest = maxFindingsPerRequest;
     }
 
     /**

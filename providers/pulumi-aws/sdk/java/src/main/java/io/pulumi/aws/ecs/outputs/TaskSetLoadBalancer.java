@@ -39,7 +39,7 @@ public final class TaskSetLoadBalancer {
         @Nullable Integer containerPort,
         @Nullable String loadBalancerName,
         @Nullable String targetGroupArn) {
-        this.containerName = Objects.requireNonNull(containerName);
+        this.containerName = containerName;
         this.containerPort = containerPort;
         this.loadBalancerName = loadBalancerName;
         this.targetGroupArn = targetGroupArn;

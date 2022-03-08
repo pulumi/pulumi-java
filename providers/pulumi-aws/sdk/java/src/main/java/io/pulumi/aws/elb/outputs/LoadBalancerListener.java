@@ -48,10 +48,10 @@ public final class LoadBalancerListener {
         Integer lbPort,
         String lbProtocol,
         @Nullable String sslCertificateId) {
-        this.instancePort = Objects.requireNonNull(instancePort);
-        this.instanceProtocol = Objects.requireNonNull(instanceProtocol);
-        this.lbPort = Objects.requireNonNull(lbPort);
-        this.lbProtocol = Objects.requireNonNull(lbProtocol);
+        this.instancePort = instancePort;
+        this.instanceProtocol = instanceProtocol;
+        this.lbPort = lbPort;
+        this.lbProtocol = lbProtocol;
         this.sslCertificateId = sslCertificateId;
     }
 

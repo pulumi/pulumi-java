@@ -35,7 +35,7 @@ public final class GroupInstanceRefresh {
         String strategy,
         @Nullable List<String> triggers) {
         this.preferences = preferences;
-        this.strategy = Objects.requireNonNull(strategy);
+        this.strategy = strategy;
         this.triggers = triggers;
     }
 

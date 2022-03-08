@@ -39,10 +39,10 @@ public final class GooglePrivacyDlpV2HybridOptionsResponse {
         Map<String,String> labels,
         List<String> requiredFindingLabelKeys,
         GooglePrivacyDlpV2TableOptionsResponse tableOptions) {
-        this.description = Objects.requireNonNull(description);
-        this.labels = Objects.requireNonNull(labels);
-        this.requiredFindingLabelKeys = Objects.requireNonNull(requiredFindingLabelKeys);
-        this.tableOptions = Objects.requireNonNull(tableOptions);
+        this.description = description;
+        this.labels = labels;
+        this.requiredFindingLabelKeys = requiredFindingLabelKeys;
+        this.tableOptions = tableOptions;
     }
 
     /**

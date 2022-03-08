@@ -51,20 +51,20 @@ public final class GetClusterNodePool {
         List<String> nodeLocations,
         List<GetClusterNodePoolUpgradeSetting> upgradeSettings,
         String version) {
-        this.autoscalings = Objects.requireNonNull(autoscalings);
-        this.initialNodeCount = Objects.requireNonNull(initialNodeCount);
-        this.instanceGroupUrls = Objects.requireNonNull(instanceGroupUrls);
-        this.managedInstanceGroupUrls = Objects.requireNonNull(managedInstanceGroupUrls);
-        this.managements = Objects.requireNonNull(managements);
-        this.maxPodsPerNode = Objects.requireNonNull(maxPodsPerNode);
-        this.name = Objects.requireNonNull(name);
-        this.namePrefix = Objects.requireNonNull(namePrefix);
-        this.networkConfigs = Objects.requireNonNull(networkConfigs);
-        this.nodeConfigs = Objects.requireNonNull(nodeConfigs);
-        this.nodeCount = Objects.requireNonNull(nodeCount);
-        this.nodeLocations = Objects.requireNonNull(nodeLocations);
-        this.upgradeSettings = Objects.requireNonNull(upgradeSettings);
-        this.version = Objects.requireNonNull(version);
+        this.autoscalings = autoscalings;
+        this.initialNodeCount = initialNodeCount;
+        this.instanceGroupUrls = instanceGroupUrls;
+        this.managedInstanceGroupUrls = managedInstanceGroupUrls;
+        this.managements = managements;
+        this.maxPodsPerNode = maxPodsPerNode;
+        this.name = name;
+        this.namePrefix = namePrefix;
+        this.networkConfigs = networkConfigs;
+        this.nodeConfigs = nodeConfigs;
+        this.nodeCount = nodeCount;
+        this.nodeLocations = nodeLocations;
+        this.upgradeSettings = upgradeSettings;
+        this.version = version;
     }
 
     public List<GetClusterNodePoolAutoscaling> getAutoscalings() {

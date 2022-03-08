@@ -25,8 +25,8 @@ public final class BucketIamConfigurationBucketPolicyOnlyResponse {
     private BucketIamConfigurationBucketPolicyOnlyResponse(
         Boolean enabled,
         String lockedTime) {
-        this.enabled = Objects.requireNonNull(enabled);
-        this.lockedTime = Objects.requireNonNull(lockedTime);
+        this.enabled = enabled;
+        this.lockedTime = lockedTime;
     }
 
     /**

@@ -19,7 +19,7 @@ public final class TriggerBuildAvailableSecrets {
 
     @OutputCustomType.Constructor({"secretManagers"})
     private TriggerBuildAvailableSecrets(List<TriggerBuildAvailableSecretsSecretManager> secretManagers) {
-        this.secretManagers = Objects.requireNonNull(secretManagers);
+        this.secretManagers = secretManagers;
     }
 
     /**

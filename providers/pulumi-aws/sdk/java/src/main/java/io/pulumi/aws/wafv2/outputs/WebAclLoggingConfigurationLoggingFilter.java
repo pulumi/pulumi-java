@@ -26,8 +26,8 @@ public final class WebAclLoggingConfigurationLoggingFilter {
     private WebAclLoggingConfigurationLoggingFilter(
         String defaultBehavior,
         List<WebAclLoggingConfigurationLoggingFilterFilter> filters) {
-        this.defaultBehavior = Objects.requireNonNull(defaultBehavior);
-        this.filters = Objects.requireNonNull(filters);
+        this.defaultBehavior = defaultBehavior;
+        this.filters = filters;
     }
 
     /**

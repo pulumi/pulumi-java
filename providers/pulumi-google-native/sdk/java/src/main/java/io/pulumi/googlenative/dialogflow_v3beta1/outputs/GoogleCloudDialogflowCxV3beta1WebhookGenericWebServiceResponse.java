@@ -44,11 +44,11 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceRespons
         Map<String,String> requestHeaders,
         String uri,
         String username) {
-        this.allowedCaCerts = Objects.requireNonNull(allowedCaCerts);
-        this.password = Objects.requireNonNull(password);
-        this.requestHeaders = Objects.requireNonNull(requestHeaders);
-        this.uri = Objects.requireNonNull(uri);
-        this.username = Objects.requireNonNull(username);
+        this.allowedCaCerts = allowedCaCerts;
+        this.password = password;
+        this.requestHeaders = requestHeaders;
+        this.uri = uri;
+        this.username = username;
     }
 
     /**

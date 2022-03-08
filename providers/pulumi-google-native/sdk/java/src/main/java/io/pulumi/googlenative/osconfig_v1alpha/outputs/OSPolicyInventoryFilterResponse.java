@@ -24,8 +24,8 @@ public final class OSPolicyInventoryFilterResponse {
     private OSPolicyInventoryFilterResponse(
         String osShortName,
         String osVersion) {
-        this.osShortName = Objects.requireNonNull(osShortName);
-        this.osVersion = Objects.requireNonNull(osVersion);
+        this.osShortName = osShortName;
+        this.osVersion = osVersion;
     }
 
     /**

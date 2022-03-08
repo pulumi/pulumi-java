@@ -32,9 +32,9 @@ public final class VaultPrivateEndpointConnectionResponse {
         PrivateEndpointResponse privateEndpoint,
         VaultPrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState,
         String provisioningState) {
-        this.privateEndpoint = Objects.requireNonNull(privateEndpoint);
-        this.privateLinkServiceConnectionState = Objects.requireNonNull(privateLinkServiceConnectionState);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.privateEndpoint = privateEndpoint;
+        this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
+        this.provisioningState = provisioningState;
     }
 
     /**

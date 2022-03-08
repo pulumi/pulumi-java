@@ -55,7 +55,7 @@ public final class BackendServiceFabricClusterPropertiesResponse {
         @Nullable List<X509CertificateNameResponse> serverX509Names) {
         this.clientCertificateId = clientCertificateId;
         this.clientCertificatethumbprint = clientCertificatethumbprint;
-        this.managementEndpoints = Objects.requireNonNull(managementEndpoints);
+        this.managementEndpoints = managementEndpoints;
         this.maxPartitionResolutionRetries = maxPartitionResolutionRetries;
         this.serverCertificateThumbprints = serverCertificateThumbprints;
         this.serverX509Names = serverX509Names;

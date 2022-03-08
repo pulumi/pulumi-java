@@ -137,20 +137,20 @@ public final class GetCacheResult {
         this.cacheSizeGB = cacheSizeGB;
         this.directoryServicesSettings = directoryServicesSettings;
         this.encryptionSettings = encryptionSettings;
-        this.health = Objects.requireNonNull(health);
-        this.id = Objects.requireNonNull(id);
+        this.health = health;
+        this.id = id;
         this.identity = identity;
         this.location = location;
-        this.mountAddresses = Objects.requireNonNull(mountAddresses);
-        this.name = Objects.requireNonNull(name);
+        this.mountAddresses = mountAddresses;
+        this.name = name;
         this.networkSettings = networkSettings;
         this.provisioningState = provisioningState;
         this.securitySettings = securitySettings;
         this.sku = sku;
         this.subnet = subnet;
-        this.systemData = Objects.requireNonNull(systemData);
+        this.systemData = systemData;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.upgradeStatus = upgradeStatus;
     }
 

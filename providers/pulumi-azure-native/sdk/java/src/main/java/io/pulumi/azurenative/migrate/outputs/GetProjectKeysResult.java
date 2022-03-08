@@ -24,8 +24,8 @@ public final class GetProjectKeysResult {
     private GetProjectKeysResult(
         String workspaceId,
         String workspaceKey) {
-        this.workspaceId = Objects.requireNonNull(workspaceId);
-        this.workspaceKey = Objects.requireNonNull(workspaceKey);
+        this.workspaceId = workspaceId;
+        this.workspaceKey = workspaceKey;
     }
 
     /**

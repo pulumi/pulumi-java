@@ -16,8 +16,8 @@ public final class DatasetGlueConfiguration {
     private DatasetGlueConfiguration(
         String databaseName,
         String tableName) {
-        this.databaseName = Objects.requireNonNull(databaseName);
-        this.tableName = Objects.requireNonNull(tableName);
+        this.databaseName = databaseName;
+        this.tableName = tableName;
     }
 
     public String getDatabaseName() {

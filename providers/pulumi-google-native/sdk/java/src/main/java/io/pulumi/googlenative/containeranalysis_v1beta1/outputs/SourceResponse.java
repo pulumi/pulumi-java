@@ -39,10 +39,10 @@ public final class SourceResponse {
         String artifactStorageSourceUri,
         SourceContextResponse context,
         Map<String,String> fileHashes) {
-        this.additionalContexts = Objects.requireNonNull(additionalContexts);
-        this.artifactStorageSourceUri = Objects.requireNonNull(artifactStorageSourceUri);
-        this.context = Objects.requireNonNull(context);
-        this.fileHashes = Objects.requireNonNull(fileHashes);
+        this.additionalContexts = additionalContexts;
+        this.artifactStorageSourceUri = artifactStorageSourceUri;
+        this.context = context;
+        this.fileHashes = fileHashes;
     }
 
     /**

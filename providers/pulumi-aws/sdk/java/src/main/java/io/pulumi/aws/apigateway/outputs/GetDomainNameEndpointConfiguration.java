@@ -18,7 +18,7 @@ public final class GetDomainNameEndpointConfiguration {
 
     @OutputCustomType.Constructor({"types"})
     private GetDomainNameEndpointConfiguration(List<String> types) {
-        this.types = Objects.requireNonNull(types);
+        this.types = types;
     }
 
     /**

@@ -20,9 +20,9 @@ public final class WebACLIPSetForwardedIPConfiguration {
         WebACLIPSetForwardedIPConfigurationFallbackBehavior fallbackBehavior,
         String headerName,
         WebACLIPSetForwardedIPConfigurationPosition position) {
-        this.fallbackBehavior = Objects.requireNonNull(fallbackBehavior);
-        this.headerName = Objects.requireNonNull(headerName);
-        this.position = Objects.requireNonNull(position);
+        this.fallbackBehavior = fallbackBehavior;
+        this.headerName = headerName;
+        this.position = position;
     }
 
     public WebACLIPSetForwardedIPConfigurationFallbackBehavior getFallbackBehavior() {

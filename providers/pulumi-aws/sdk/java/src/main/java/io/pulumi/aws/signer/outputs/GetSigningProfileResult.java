@@ -78,17 +78,17 @@ public final class GetSigningProfileResult {
         Map<String,String> tags,
         String version,
         String versionArn) {
-        this.arn = Objects.requireNonNull(arn);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.platformDisplayName = Objects.requireNonNull(platformDisplayName);
-        this.platformId = Objects.requireNonNull(platformId);
-        this.revocationRecords = Objects.requireNonNull(revocationRecords);
-        this.signatureValidityPeriods = Objects.requireNonNull(signatureValidityPeriods);
-        this.status = Objects.requireNonNull(status);
-        this.tags = Objects.requireNonNull(tags);
-        this.version = Objects.requireNonNull(version);
-        this.versionArn = Objects.requireNonNull(versionArn);
+        this.arn = arn;
+        this.id = id;
+        this.name = name;
+        this.platformDisplayName = platformDisplayName;
+        this.platformId = platformId;
+        this.revocationRecords = revocationRecords;
+        this.signatureValidityPeriods = signatureValidityPeriods;
+        this.status = status;
+        this.tags = tags;
+        this.version = version;
+        this.versionArn = versionArn;
     }
 
     /**

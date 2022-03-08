@@ -25,8 +25,8 @@ public final class DeviceFileResponse {
     private DeviceFileResponse(
         ObbFileResponse obbFile,
         RegularFileResponse regularFile) {
-        this.obbFile = Objects.requireNonNull(obbFile);
-        this.regularFile = Objects.requireNonNull(regularFile);
+        this.obbFile = obbFile;
+        this.regularFile = regularFile;
     }
 
     /**

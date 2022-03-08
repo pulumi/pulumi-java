@@ -26,8 +26,8 @@ public final class GooglePrivacyDlpV2RegexResponse {
     private GooglePrivacyDlpV2RegexResponse(
         List<Integer> groupIndexes,
         String pattern) {
-        this.groupIndexes = Objects.requireNonNull(groupIndexes);
-        this.pattern = Objects.requireNonNull(pattern);
+        this.groupIndexes = groupIndexes;
+        this.pattern = pattern;
     }
 
     /**

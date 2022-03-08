@@ -19,7 +19,7 @@ public final class CanarySchedule {
         @Nullable String durationInSeconds,
         String expression) {
         this.durationInSeconds = durationInSeconds;
-        this.expression = Objects.requireNonNull(expression);
+        this.expression = expression;
     }
 
     public Optional<String> getDurationInSeconds() {

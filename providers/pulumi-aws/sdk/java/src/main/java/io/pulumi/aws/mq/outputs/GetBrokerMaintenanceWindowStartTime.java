@@ -18,9 +18,9 @@ public final class GetBrokerMaintenanceWindowStartTime {
         String dayOfWeek,
         String timeOfDay,
         String timeZone) {
-        this.dayOfWeek = Objects.requireNonNull(dayOfWeek);
-        this.timeOfDay = Objects.requireNonNull(timeOfDay);
-        this.timeZone = Objects.requireNonNull(timeZone);
+        this.dayOfWeek = dayOfWeek;
+        this.timeOfDay = timeOfDay;
+        this.timeZone = timeZone;
     }
 
     public String getDayOfWeek() {

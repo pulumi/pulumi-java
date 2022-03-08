@@ -25,8 +25,8 @@ public final class ShareSettingsResponse {
     private ShareSettingsResponse(
         Map<String,String> projectMap,
         String shareType) {
-        this.projectMap = Objects.requireNonNull(projectMap);
-        this.shareType = Objects.requireNonNull(shareType);
+        this.projectMap = projectMap;
+        this.shareType = shareType;
     }
 
     /**

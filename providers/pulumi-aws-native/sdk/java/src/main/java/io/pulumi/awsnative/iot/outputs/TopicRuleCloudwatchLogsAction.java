@@ -16,8 +16,8 @@ public final class TopicRuleCloudwatchLogsAction {
     private TopicRuleCloudwatchLogsAction(
         String logGroupName,
         String roleArn) {
-        this.logGroupName = Objects.requireNonNull(logGroupName);
-        this.roleArn = Objects.requireNonNull(roleArn);
+        this.logGroupName = logGroupName;
+        this.roleArn = roleArn;
     }
 
     public String getLogGroupName() {

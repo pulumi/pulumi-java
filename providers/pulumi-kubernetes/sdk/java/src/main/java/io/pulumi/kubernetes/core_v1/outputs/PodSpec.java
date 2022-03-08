@@ -264,7 +264,7 @@ public final class PodSpec {
         this.activeDeadlineSeconds = activeDeadlineSeconds;
         this.affinity = affinity;
         this.automountServiceAccountToken = automountServiceAccountToken;
-        this.containers = Objects.requireNonNull(containers);
+        this.containers = containers;
         this.dnsConfig = dnsConfig;
         this.dnsPolicy = dnsPolicy;
         this.enableServiceLinks = enableServiceLinks;

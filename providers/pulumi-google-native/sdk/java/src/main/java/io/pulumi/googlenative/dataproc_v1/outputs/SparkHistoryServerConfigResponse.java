@@ -17,7 +17,7 @@ public final class SparkHistoryServerConfigResponse {
 
     @OutputCustomType.Constructor({"dataprocCluster"})
     private SparkHistoryServerConfigResponse(String dataprocCluster) {
-        this.dataprocCluster = Objects.requireNonNull(dataprocCluster);
+        this.dataprocCluster = dataprocCluster;
     }
 
     /**

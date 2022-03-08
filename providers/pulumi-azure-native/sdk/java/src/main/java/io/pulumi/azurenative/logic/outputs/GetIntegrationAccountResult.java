@@ -65,14 +65,14 @@ public final class GetIntegrationAccountResult {
         @Nullable String state,
         @Nullable Map<String,String> tags,
         String type) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.integrationServiceEnvironment = integrationServiceEnvironment;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.sku = sku;
         this.state = state;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

@@ -52,11 +52,11 @@ public final class BackupScheduleResponse {
         String lastExecutionTime,
         Integer retentionPeriodInDays,
         @Nullable String startTime) {
-        this.frequencyInterval = Objects.requireNonNull(frequencyInterval);
-        this.frequencyUnit = Objects.requireNonNull(frequencyUnit);
-        this.keepAtLeastOneBackup = Objects.requireNonNull(keepAtLeastOneBackup);
-        this.lastExecutionTime = Objects.requireNonNull(lastExecutionTime);
-        this.retentionPeriodInDays = Objects.requireNonNull(retentionPeriodInDays);
+        this.frequencyInterval = frequencyInterval;
+        this.frequencyUnit = frequencyUnit;
+        this.keepAtLeastOneBackup = keepAtLeastOneBackup;
+        this.lastExecutionTime = lastExecutionTime;
+        this.retentionPeriodInDays = retentionPeriodInDays;
         this.startTime = startTime;
     }
 

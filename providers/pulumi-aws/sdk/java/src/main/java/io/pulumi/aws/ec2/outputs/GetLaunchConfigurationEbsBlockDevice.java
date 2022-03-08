@@ -68,15 +68,15 @@ public final class GetLaunchConfigurationEbsBlockDevice {
         Boolean throughput,
         Integer volumeSize,
         String volumeType) {
-        this.deleteOnTermination = Objects.requireNonNull(deleteOnTermination);
-        this.deviceName = Objects.requireNonNull(deviceName);
-        this.encrypted = Objects.requireNonNull(encrypted);
-        this.iops = Objects.requireNonNull(iops);
-        this.noDevice = Objects.requireNonNull(noDevice);
-        this.snapshotId = Objects.requireNonNull(snapshotId);
-        this.throughput = Objects.requireNonNull(throughput);
-        this.volumeSize = Objects.requireNonNull(volumeSize);
-        this.volumeType = Objects.requireNonNull(volumeType);
+        this.deleteOnTermination = deleteOnTermination;
+        this.deviceName = deviceName;
+        this.encrypted = encrypted;
+        this.iops = iops;
+        this.noDevice = noDevice;
+        this.snapshotId = snapshotId;
+        this.throughput = throughput;
+        this.volumeSize = volumeSize;
+        this.volumeType = volumeType;
     }
 
     /**

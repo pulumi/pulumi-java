@@ -14,7 +14,7 @@ public final class GetSecretReplicationUserManaged {
 
     @OutputCustomType.Constructor({"replicas"})
     private GetSecretReplicationUserManaged(List<GetSecretReplicationUserManagedReplica> replicas) {
-        this.replicas = Objects.requireNonNull(replicas);
+        this.replicas = replicas;
     }
 
     public List<GetSecretReplicationUserManagedReplica> getReplicas() {

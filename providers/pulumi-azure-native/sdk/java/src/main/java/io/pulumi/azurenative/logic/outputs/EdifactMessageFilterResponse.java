@@ -17,7 +17,7 @@ public final class EdifactMessageFilterResponse {
 
     @OutputCustomType.Constructor({"messageFilterType"})
     private EdifactMessageFilterResponse(String messageFilterType) {
-        this.messageFilterType = Objects.requireNonNull(messageFilterType);
+        this.messageFilterType = messageFilterType;
     }
 
     /**

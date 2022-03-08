@@ -63,14 +63,14 @@ public final class GoogleCloudBillingBudgetsV1beta1FilterResponse {
         List<String> projects,
         List<String> services,
         List<String> subaccounts) {
-        this.calendarPeriod = Objects.requireNonNull(calendarPeriod);
-        this.creditTypes = Objects.requireNonNull(creditTypes);
-        this.creditTypesTreatment = Objects.requireNonNull(creditTypesTreatment);
-        this.customPeriod = Objects.requireNonNull(customPeriod);
-        this.labels = Objects.requireNonNull(labels);
-        this.projects = Objects.requireNonNull(projects);
-        this.services = Objects.requireNonNull(services);
-        this.subaccounts = Objects.requireNonNull(subaccounts);
+        this.calendarPeriod = calendarPeriod;
+        this.creditTypes = creditTypes;
+        this.creditTypesTreatment = creditTypesTreatment;
+        this.customPeriod = customPeriod;
+        this.labels = labels;
+        this.projects = projects;
+        this.services = services;
+        this.subaccounts = subaccounts;
     }
 
     /**

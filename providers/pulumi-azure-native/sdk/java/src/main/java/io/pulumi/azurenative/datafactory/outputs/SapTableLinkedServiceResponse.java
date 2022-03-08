@@ -168,7 +168,7 @@ public final class SapTableLinkedServiceResponse {
         this.sncQop = sncQop;
         this.systemId = systemId;
         this.systemNumber = systemNumber;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.userName = userName;
     }
 

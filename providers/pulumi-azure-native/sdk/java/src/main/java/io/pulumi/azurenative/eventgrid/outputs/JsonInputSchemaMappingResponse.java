@@ -63,7 +63,7 @@ public final class JsonInputSchemaMappingResponse {
         this.eventTime = eventTime;
         this.eventType = eventType;
         this.id = id;
-        this.inputSchemaMappingType = Objects.requireNonNull(inputSchemaMappingType);
+        this.inputSchemaMappingType = inputSchemaMappingType;
         this.subject = subject;
         this.topic = topic;
     }

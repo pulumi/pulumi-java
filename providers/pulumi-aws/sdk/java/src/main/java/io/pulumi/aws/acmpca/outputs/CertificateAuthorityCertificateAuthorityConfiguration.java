@@ -31,9 +31,9 @@ public final class CertificateAuthorityCertificateAuthorityConfiguration {
         String keyAlgorithm,
         String signingAlgorithm,
         CertificateAuthorityCertificateAuthorityConfigurationSubject subject) {
-        this.keyAlgorithm = Objects.requireNonNull(keyAlgorithm);
-        this.signingAlgorithm = Objects.requireNonNull(signingAlgorithm);
-        this.subject = Objects.requireNonNull(subject);
+        this.keyAlgorithm = keyAlgorithm;
+        this.signingAlgorithm = signingAlgorithm;
+        this.subject = subject;
     }
 
     /**

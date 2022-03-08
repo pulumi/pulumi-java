@@ -33,9 +33,9 @@ public final class IosTestLoopResponse {
         String appBundleId,
         FileReferenceResponse appIpa,
         List<Integer> scenarios) {
-        this.appBundleId = Objects.requireNonNull(appBundleId);
-        this.appIpa = Objects.requireNonNull(appIpa);
-        this.scenarios = Objects.requireNonNull(scenarios);
+        this.appBundleId = appBundleId;
+        this.appIpa = appIpa;
+        this.scenarios = scenarios;
     }
 
     /**

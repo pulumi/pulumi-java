@@ -43,11 +43,11 @@ public final class GetNotificationConfigResult {
         String pubsubTopic,
         String serviceAccount,
         StreamingConfigResponse streamingConfig) {
-        this.description = Objects.requireNonNull(description);
-        this.name = Objects.requireNonNull(name);
-        this.pubsubTopic = Objects.requireNonNull(pubsubTopic);
-        this.serviceAccount = Objects.requireNonNull(serviceAccount);
-        this.streamingConfig = Objects.requireNonNull(streamingConfig);
+        this.description = description;
+        this.name = name;
+        this.pubsubTopic = pubsubTopic;
+        this.serviceAccount = serviceAccount;
+        this.streamingConfig = streamingConfig;
     }
 
     /**

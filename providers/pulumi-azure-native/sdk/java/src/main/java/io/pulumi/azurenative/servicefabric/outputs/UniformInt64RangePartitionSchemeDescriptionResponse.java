@@ -40,10 +40,10 @@ public final class UniformInt64RangePartitionSchemeDescriptionResponse {
         String highKey,
         String lowKey,
         String partitionScheme) {
-        this.count = Objects.requireNonNull(count);
-        this.highKey = Objects.requireNonNull(highKey);
-        this.lowKey = Objects.requireNonNull(lowKey);
-        this.partitionScheme = Objects.requireNonNull(partitionScheme);
+        this.count = count;
+        this.highKey = highKey;
+        this.lowKey = lowKey;
+        this.partitionScheme = partitionScheme;
     }
 
     /**

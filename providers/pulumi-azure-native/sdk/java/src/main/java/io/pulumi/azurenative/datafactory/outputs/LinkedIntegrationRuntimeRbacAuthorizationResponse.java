@@ -34,9 +34,9 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationResponse {
         String authorizationType,
         @Nullable CredentialReferenceResponse credential,
         String resourceId) {
-        this.authorizationType = Objects.requireNonNull(authorizationType);
+        this.authorizationType = authorizationType;
         this.credential = credential;
-        this.resourceId = Objects.requireNonNull(resourceId);
+        this.resourceId = resourceId;
     }
 
     /**

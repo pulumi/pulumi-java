@@ -18,7 +18,7 @@ public final class GooglePrivacyDlpV2WordListResponse {
 
     @OutputCustomType.Constructor({"words"})
     private GooglePrivacyDlpV2WordListResponse(List<String> words) {
-        this.words = Objects.requireNonNull(words);
+        this.words = words;
     }
 
     /**

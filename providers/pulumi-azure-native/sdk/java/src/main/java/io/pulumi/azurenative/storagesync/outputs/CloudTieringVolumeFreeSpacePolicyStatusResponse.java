@@ -31,9 +31,9 @@ public final class CloudTieringVolumeFreeSpacePolicyStatusResponse {
         Integer currentVolumeFreeSpacePercent,
         Integer effectiveVolumeFreeSpacePolicy,
         String lastUpdatedTimestamp) {
-        this.currentVolumeFreeSpacePercent = Objects.requireNonNull(currentVolumeFreeSpacePercent);
-        this.effectiveVolumeFreeSpacePolicy = Objects.requireNonNull(effectiveVolumeFreeSpacePolicy);
-        this.lastUpdatedTimestamp = Objects.requireNonNull(lastUpdatedTimestamp);
+        this.currentVolumeFreeSpacePercent = currentVolumeFreeSpacePercent;
+        this.effectiveVolumeFreeSpacePolicy = effectiveVolumeFreeSpacePolicy;
+        this.lastUpdatedTimestamp = lastUpdatedTimestamp;
     }
 
     /**

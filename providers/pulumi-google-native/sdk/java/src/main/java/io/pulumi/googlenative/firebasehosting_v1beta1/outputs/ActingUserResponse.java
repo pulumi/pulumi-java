@@ -24,8 +24,8 @@ public final class ActingUserResponse {
     private ActingUserResponse(
         String email,
         String imageUrl) {
-        this.email = Objects.requireNonNull(email);
-        this.imageUrl = Objects.requireNonNull(imageUrl);
+        this.email = email;
+        this.imageUrl = imageUrl;
     }
 
     /**

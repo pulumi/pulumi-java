@@ -130,23 +130,23 @@ public final class GetWorkspaceResult {
         @Nullable Map<String,String> tags,
         String type,
         @Nullable WorkspaceCappingResponse workspaceCapping) {
-        this.createdDate = Objects.requireNonNull(createdDate);
-        this.customerId = Objects.requireNonNull(customerId);
+        this.createdDate = createdDate;
+        this.customerId = customerId;
         this.eTag = eTag;
         this.features = features;
         this.forceCmkForQuery = forceCmkForQuery;
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.modifiedDate = Objects.requireNonNull(modifiedDate);
-        this.name = Objects.requireNonNull(name);
-        this.privateLinkScopedResources = Objects.requireNonNull(privateLinkScopedResources);
+        this.id = id;
+        this.location = location;
+        this.modifiedDate = modifiedDate;
+        this.name = name;
+        this.privateLinkScopedResources = privateLinkScopedResources;
         this.provisioningState = provisioningState;
         this.publicNetworkAccessForIngestion = publicNetworkAccessForIngestion;
         this.publicNetworkAccessForQuery = publicNetworkAccessForQuery;
         this.retentionInDays = retentionInDays;
         this.sku = sku;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.workspaceCapping = workspaceCapping;
     }
 

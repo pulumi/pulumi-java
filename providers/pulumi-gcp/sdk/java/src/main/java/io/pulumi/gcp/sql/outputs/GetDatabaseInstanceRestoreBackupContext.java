@@ -23,9 +23,9 @@ public final class GetDatabaseInstanceRestoreBackupContext {
         Integer backupRunId,
         String instanceId,
         String project) {
-        this.backupRunId = Objects.requireNonNull(backupRunId);
-        this.instanceId = Objects.requireNonNull(instanceId);
-        this.project = Objects.requireNonNull(project);
+        this.backupRunId = backupRunId;
+        this.instanceId = instanceId;
+        this.project = project;
     }
 
     public Integer getBackupRunId() {

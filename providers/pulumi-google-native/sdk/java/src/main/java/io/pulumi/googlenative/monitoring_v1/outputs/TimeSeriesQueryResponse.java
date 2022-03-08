@@ -38,10 +38,10 @@ public final class TimeSeriesQueryResponse {
         TimeSeriesFilterRatioResponse timeSeriesFilterRatio,
         String timeSeriesQueryLanguage,
         String unitOverride) {
-        this.timeSeriesFilter = Objects.requireNonNull(timeSeriesFilter);
-        this.timeSeriesFilterRatio = Objects.requireNonNull(timeSeriesFilterRatio);
-        this.timeSeriesQueryLanguage = Objects.requireNonNull(timeSeriesQueryLanguage);
-        this.unitOverride = Objects.requireNonNull(unitOverride);
+        this.timeSeriesFilter = timeSeriesFilter;
+        this.timeSeriesFilterRatio = timeSeriesFilterRatio;
+        this.timeSeriesQueryLanguage = timeSeriesQueryLanguage;
+        this.unitOverride = unitOverride;
     }
 
     /**

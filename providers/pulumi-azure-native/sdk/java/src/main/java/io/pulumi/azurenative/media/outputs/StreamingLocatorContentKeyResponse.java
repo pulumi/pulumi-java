@@ -52,11 +52,11 @@ public final class StreamingLocatorContentKeyResponse {
         List<TrackSelectionResponse> tracks,
         String type,
         @Nullable String value) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.labelReferenceInStreamingPolicy = labelReferenceInStreamingPolicy;
-        this.policyName = Objects.requireNonNull(policyName);
-        this.tracks = Objects.requireNonNull(tracks);
-        this.type = Objects.requireNonNull(type);
+        this.policyName = policyName;
+        this.tracks = tracks;
+        this.type = type;
         this.value = value;
     }
 

@@ -32,9 +32,9 @@ public final class ErrorResponseResponse {
         String code,
         List<ErrorDetailResponse> details,
         String message) {
-        this.code = Objects.requireNonNull(code);
-        this.details = Objects.requireNonNull(details);
-        this.message = Objects.requireNonNull(message);
+        this.code = code;
+        this.details = details;
+        this.message = message;
     }
 
     /**

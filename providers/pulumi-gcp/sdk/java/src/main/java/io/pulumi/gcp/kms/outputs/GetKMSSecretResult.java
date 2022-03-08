@@ -33,10 +33,10 @@ public final class GetKMSSecretResult {
         String id,
         String plaintext) {
         this.additionalAuthenticatedData = additionalAuthenticatedData;
-        this.ciphertext = Objects.requireNonNull(ciphertext);
-        this.cryptoKey = Objects.requireNonNull(cryptoKey);
-        this.id = Objects.requireNonNull(id);
-        this.plaintext = Objects.requireNonNull(plaintext);
+        this.ciphertext = ciphertext;
+        this.cryptoKey = cryptoKey;
+        this.id = id;
+        this.plaintext = plaintext;
     }
 
     public Optional<String> getAdditionalAuthenticatedData() {

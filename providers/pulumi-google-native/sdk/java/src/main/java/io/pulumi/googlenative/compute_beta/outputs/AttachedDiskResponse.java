@@ -121,23 +121,23 @@ public final class AttachedDiskResponse {
         String source,
         String type,
         List<String> userLicenses) {
-        this.autoDelete = Objects.requireNonNull(autoDelete);
-        this.boot = Objects.requireNonNull(boot);
-        this.deviceName = Objects.requireNonNull(deviceName);
-        this.diskEncryptionKey = Objects.requireNonNull(diskEncryptionKey);
-        this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
-        this.guestOsFeatures = Objects.requireNonNull(guestOsFeatures);
-        this.index = Objects.requireNonNull(index);
-        this.initializeParams = Objects.requireNonNull(initializeParams);
-        this.$interface = Objects.requireNonNull($interface);
-        this.kind = Objects.requireNonNull(kind);
-        this.licenses = Objects.requireNonNull(licenses);
-        this.locked = Objects.requireNonNull(locked);
-        this.mode = Objects.requireNonNull(mode);
-        this.shieldedInstanceInitialState = Objects.requireNonNull(shieldedInstanceInitialState);
-        this.source = Objects.requireNonNull(source);
-        this.type = Objects.requireNonNull(type);
-        this.userLicenses = Objects.requireNonNull(userLicenses);
+        this.autoDelete = autoDelete;
+        this.boot = boot;
+        this.deviceName = deviceName;
+        this.diskEncryptionKey = diskEncryptionKey;
+        this.diskSizeGb = diskSizeGb;
+        this.guestOsFeatures = guestOsFeatures;
+        this.index = index;
+        this.initializeParams = initializeParams;
+        this.$interface = $interface;
+        this.kind = kind;
+        this.licenses = licenses;
+        this.locked = locked;
+        this.mode = mode;
+        this.shieldedInstanceInitialState = shieldedInstanceInitialState;
+        this.source = source;
+        this.type = type;
+        this.userLicenses = userLicenses;
     }
 
     /**

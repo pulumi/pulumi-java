@@ -25,8 +25,8 @@ public final class IdentityResponse {
     private IdentityResponse(
         List<String> identityIds,
         String type) {
-        this.identityIds = Objects.requireNonNull(identityIds);
-        this.type = Objects.requireNonNull(type);
+        this.identityIds = identityIds;
+        this.type = type;
     }
 
     /**

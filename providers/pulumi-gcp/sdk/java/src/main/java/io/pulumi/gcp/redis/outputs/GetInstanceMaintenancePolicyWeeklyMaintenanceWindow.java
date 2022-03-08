@@ -20,9 +20,9 @@ public final class GetInstanceMaintenancePolicyWeeklyMaintenanceWindow {
         String day,
         String duration,
         List<GetInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime> startTimes) {
-        this.day = Objects.requireNonNull(day);
-        this.duration = Objects.requireNonNull(duration);
-        this.startTimes = Objects.requireNonNull(startTimes);
+        this.day = day;
+        this.duration = duration;
+        this.startTimes = startTimes;
     }
 
     public String getDay() {

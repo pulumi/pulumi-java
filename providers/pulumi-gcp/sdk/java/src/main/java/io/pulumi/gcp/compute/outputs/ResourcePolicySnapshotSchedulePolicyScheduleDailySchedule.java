@@ -25,8 +25,8 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleDailySchedule {
     private ResourcePolicySnapshotSchedulePolicyScheduleDailySchedule(
         Integer daysInCycle,
         String startTime) {
-        this.daysInCycle = Objects.requireNonNull(daysInCycle);
-        this.startTime = Objects.requireNonNull(startTime);
+        this.daysInCycle = daysInCycle;
+        this.startTime = startTime;
     }
 
     /**

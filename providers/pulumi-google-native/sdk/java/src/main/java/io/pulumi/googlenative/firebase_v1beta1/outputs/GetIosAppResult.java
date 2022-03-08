@@ -54,13 +54,13 @@ public final class GetIosAppResult {
         String name,
         String project,
         String teamId) {
-        this.appId = Objects.requireNonNull(appId);
-        this.appStoreId = Objects.requireNonNull(appStoreId);
-        this.bundleId = Objects.requireNonNull(bundleId);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.name = Objects.requireNonNull(name);
-        this.project = Objects.requireNonNull(project);
-        this.teamId = Objects.requireNonNull(teamId);
+        this.appId = appId;
+        this.appStoreId = appStoreId;
+        this.bundleId = bundleId;
+        this.displayName = displayName;
+        this.name = name;
+        this.project = project;
+        this.teamId = teamId;
     }
 
     /**

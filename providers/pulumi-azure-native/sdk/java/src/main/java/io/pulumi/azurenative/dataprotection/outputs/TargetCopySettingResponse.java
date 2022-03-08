@@ -28,8 +28,8 @@ public final class TargetCopySettingResponse {
     private TargetCopySettingResponse(
         Object copyAfter,
         DataStoreInfoBaseResponse dataStore) {
-        this.copyAfter = Objects.requireNonNull(copyAfter);
-        this.dataStore = Objects.requireNonNull(dataStore);
+        this.copyAfter = copyAfter;
+        this.dataStore = dataStore;
     }
 
     /**

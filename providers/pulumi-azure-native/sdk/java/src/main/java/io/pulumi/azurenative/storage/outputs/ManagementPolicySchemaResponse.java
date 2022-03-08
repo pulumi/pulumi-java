@@ -18,7 +18,7 @@ public final class ManagementPolicySchemaResponse {
 
     @OutputCustomType.Constructor({"rules"})
     private ManagementPolicySchemaResponse(List<ManagementPolicyRuleResponse> rules) {
-        this.rules = Objects.requireNonNull(rules);
+        this.rules = rules;
     }
 
     /**

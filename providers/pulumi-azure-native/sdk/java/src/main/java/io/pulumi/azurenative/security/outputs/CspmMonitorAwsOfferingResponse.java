@@ -34,9 +34,9 @@ public final class CspmMonitorAwsOfferingResponse {
         String description,
         @Nullable CspmMonitorAwsOfferingResponseNativeCloudConnection nativeCloudConnection,
         String offeringType) {
-        this.description = Objects.requireNonNull(description);
+        this.description = description;
         this.nativeCloudConnection = nativeCloudConnection;
-        this.offeringType = Objects.requireNonNull(offeringType);
+        this.offeringType = offeringType;
     }
 
     /**

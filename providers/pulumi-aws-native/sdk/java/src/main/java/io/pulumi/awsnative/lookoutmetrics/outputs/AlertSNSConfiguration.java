@@ -24,8 +24,8 @@ public final class AlertSNSConfiguration {
     private AlertSNSConfiguration(
         String roleArn,
         String snsTopicArn) {
-        this.roleArn = Objects.requireNonNull(roleArn);
-        this.snsTopicArn = Objects.requireNonNull(snsTopicArn);
+        this.roleArn = roleArn;
+        this.snsTopicArn = snsTopicArn;
     }
 
     /**

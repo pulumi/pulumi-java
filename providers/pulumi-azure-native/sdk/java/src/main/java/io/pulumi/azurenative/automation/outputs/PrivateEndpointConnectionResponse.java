@@ -46,11 +46,11 @@ public final class PrivateEndpointConnectionResponse {
         @Nullable PrivateEndpointPropertyResponse privateEndpoint,
         @Nullable PrivateLinkServiceConnectionStatePropertyResponse privateLinkServiceConnectionState,
         String type) {
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.privateEndpoint = privateEndpoint;
         this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

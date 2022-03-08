@@ -46,9 +46,9 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfigurationCusto
         String statistic,
         @Nullable String unit) {
         this.dimensions = dimensions;
-        this.metricName = Objects.requireNonNull(metricName);
-        this.namespace = Objects.requireNonNull(namespace);
-        this.statistic = Objects.requireNonNull(statistic);
+        this.metricName = metricName;
+        this.namespace = namespace;
+        this.statistic = statistic;
         this.unit = unit;
     }
 

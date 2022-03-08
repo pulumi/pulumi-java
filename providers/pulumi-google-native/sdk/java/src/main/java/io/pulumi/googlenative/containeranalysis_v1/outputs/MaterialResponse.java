@@ -17,8 +17,8 @@ public final class MaterialResponse {
     private MaterialResponse(
         Map<String,String> digest,
         String uri) {
-        this.digest = Objects.requireNonNull(digest);
-        this.uri = Objects.requireNonNull(uri);
+        this.digest = digest;
+        this.uri = uri;
     }
 
     public Map<String,String> getDigest() {

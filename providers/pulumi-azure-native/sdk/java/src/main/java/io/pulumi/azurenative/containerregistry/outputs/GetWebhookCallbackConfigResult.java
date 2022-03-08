@@ -27,7 +27,7 @@ public final class GetWebhookCallbackConfigResult {
         @Nullable Map<String,String> customHeaders,
         String serviceUri) {
         this.customHeaders = customHeaders;
-        this.serviceUri = Objects.requireNonNull(serviceUri);
+        this.serviceUri = serviceUri;
     }
 
     /**

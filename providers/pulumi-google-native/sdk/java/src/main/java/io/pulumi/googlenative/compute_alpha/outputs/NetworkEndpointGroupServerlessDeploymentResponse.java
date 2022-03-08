@@ -36,10 +36,10 @@ public final class NetworkEndpointGroupServerlessDeploymentResponse {
         String resource,
         String urlMask,
         String version) {
-        this.platform = Objects.requireNonNull(platform);
-        this.resource = Objects.requireNonNull(resource);
-        this.urlMask = Objects.requireNonNull(urlMask);
-        this.version = Objects.requireNonNull(version);
+        this.platform = platform;
+        this.resource = resource;
+        this.urlMask = urlMask;
+        this.version = version;
     }
 
     /**

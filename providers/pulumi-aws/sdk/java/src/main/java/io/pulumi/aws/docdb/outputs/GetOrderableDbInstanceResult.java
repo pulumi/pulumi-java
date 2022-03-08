@@ -40,14 +40,14 @@ public final class GetOrderableDbInstanceResult {
         @Nullable String licenseModel,
         @Nullable List<String> preferredInstanceClasses,
         Boolean vpc) {
-        this.availabilityZones = Objects.requireNonNull(availabilityZones);
+        this.availabilityZones = availabilityZones;
         this.engine = engine;
-        this.engineVersion = Objects.requireNonNull(engineVersion);
-        this.id = Objects.requireNonNull(id);
-        this.instanceClass = Objects.requireNonNull(instanceClass);
+        this.engineVersion = engineVersion;
+        this.id = id;
+        this.instanceClass = instanceClass;
         this.licenseModel = licenseModel;
         this.preferredInstanceClasses = preferredInstanceClasses;
-        this.vpc = Objects.requireNonNull(vpc);
+        this.vpc = vpc;
     }
 
     /**

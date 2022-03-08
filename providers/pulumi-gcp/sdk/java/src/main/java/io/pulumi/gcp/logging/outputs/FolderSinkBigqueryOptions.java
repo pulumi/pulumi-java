@@ -20,7 +20,7 @@ public final class FolderSinkBigqueryOptions {
 
     @OutputCustomType.Constructor({"usePartitionedTables"})
     private FolderSinkBigqueryOptions(Boolean usePartitionedTables) {
-        this.usePartitionedTables = Objects.requireNonNull(usePartitionedTables);
+        this.usePartitionedTables = usePartitionedTables;
     }
 
     /**

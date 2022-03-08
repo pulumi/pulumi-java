@@ -51,9 +51,9 @@ public final class HardwareProfileResponse {
         @Nullable Integer memorySizeMB,
         @Nullable Integer numCPUs,
         @Nullable Integer numCoresPerSocket) {
-        this.cpuHotAddEnabled = Objects.requireNonNull(cpuHotAddEnabled);
-        this.cpuHotRemoveEnabled = Objects.requireNonNull(cpuHotRemoveEnabled);
-        this.memoryHotAddEnabled = Objects.requireNonNull(memoryHotAddEnabled);
+        this.cpuHotAddEnabled = cpuHotAddEnabled;
+        this.cpuHotRemoveEnabled = cpuHotRemoveEnabled;
+        this.memoryHotAddEnabled = memoryHotAddEnabled;
         this.memorySizeMB = memorySizeMB;
         this.numCPUs = numCPUs;
         this.numCoresPerSocket = numCoresPerSocket;

@@ -18,7 +18,7 @@ public final class ListContainerAppSecretsResult {
 
     @OutputCustomType.Constructor({"value"})
     private ListContainerAppSecretsResult(List<ContainerAppSecretResponse> value) {
-        this.value = Objects.requireNonNull(value);
+        this.value = value;
     }
 
     /**

@@ -17,7 +17,7 @@ public final class I18nConfigResponse {
 
     @OutputCustomType.Constructor({"root"})
     private I18nConfigResponse(String root) {
-        this.root = Objects.requireNonNull(root);
+        this.root = root;
     }
 
     /**

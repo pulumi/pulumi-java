@@ -33,9 +33,9 @@ public final class ScheduleEntryResponse {
         String dayOfWeek,
         @Nullable String maintenanceWindow,
         Integer startHourUtc) {
-        this.dayOfWeek = Objects.requireNonNull(dayOfWeek);
+        this.dayOfWeek = dayOfWeek;
         this.maintenanceWindow = maintenanceWindow;
-        this.startHourUtc = Objects.requireNonNull(startHourUtc);
+        this.startHourUtc = startHourUtc;
     }
 
     /**

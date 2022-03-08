@@ -43,11 +43,11 @@ public final class TileResponse {
         Integer width,
         Integer xPos,
         Integer yPos) {
-        this.height = Objects.requireNonNull(height);
-        this.widget = Objects.requireNonNull(widget);
-        this.width = Objects.requireNonNull(width);
-        this.xPos = Objects.requireNonNull(xPos);
-        this.yPos = Objects.requireNonNull(yPos);
+        this.height = height;
+        this.widget = widget;
+        this.width = width;
+        this.xPos = xPos;
+        this.yPos = yPos;
     }
 
     /**

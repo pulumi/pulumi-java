@@ -28,7 +28,7 @@ public final class EndpointConfigurationAsyncInferenceConfig {
         @Nullable EndpointConfigurationAsyncInferenceConfigClientConfig clientConfig,
         EndpointConfigurationAsyncInferenceConfigOutputConfig outputConfig) {
         this.clientConfig = clientConfig;
-        this.outputConfig = Objects.requireNonNull(outputConfig);
+        this.outputConfig = outputConfig;
     }
 
     /**

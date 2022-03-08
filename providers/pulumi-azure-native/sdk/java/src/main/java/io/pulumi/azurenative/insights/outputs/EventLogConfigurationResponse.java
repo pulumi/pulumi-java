@@ -19,7 +19,7 @@ public final class EventLogConfigurationResponse {
         @Nullable String filter,
         String logName) {
         this.filter = filter;
-        this.logName = Objects.requireNonNull(logName);
+        this.logName = logName;
     }
 
     public Optional<String> getFilter() {

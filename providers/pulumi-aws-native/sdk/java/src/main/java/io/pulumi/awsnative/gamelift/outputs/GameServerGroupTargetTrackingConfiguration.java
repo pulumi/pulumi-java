@@ -13,7 +13,7 @@ public final class GameServerGroupTargetTrackingConfiguration {
 
     @OutputCustomType.Constructor({"targetValue"})
     private GameServerGroupTargetTrackingConfiguration(Double targetValue) {
-        this.targetValue = Objects.requireNonNull(targetValue);
+        this.targetValue = targetValue;
     }
 
     public Double getTargetValue() {

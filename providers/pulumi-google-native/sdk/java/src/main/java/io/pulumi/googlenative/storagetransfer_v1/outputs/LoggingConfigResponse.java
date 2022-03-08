@@ -32,9 +32,9 @@ public final class LoggingConfigResponse {
         Boolean enableOnpremGcsTransferLogs,
         List<String> logActionStates,
         List<String> logActions) {
-        this.enableOnpremGcsTransferLogs = Objects.requireNonNull(enableOnpremGcsTransferLogs);
-        this.logActionStates = Objects.requireNonNull(logActionStates);
-        this.logActions = Objects.requireNonNull(logActions);
+        this.enableOnpremGcsTransferLogs = enableOnpremGcsTransferLogs;
+        this.logActionStates = logActionStates;
+        this.logActions = logActions;
     }
 
     /**

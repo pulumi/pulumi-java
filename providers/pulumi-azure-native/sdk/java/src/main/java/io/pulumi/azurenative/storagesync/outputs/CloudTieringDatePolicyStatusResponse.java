@@ -24,8 +24,8 @@ public final class CloudTieringDatePolicyStatusResponse {
     private CloudTieringDatePolicyStatusResponse(
         String lastUpdatedTimestamp,
         String tieredFilesMostRecentAccessTimestamp) {
-        this.lastUpdatedTimestamp = Objects.requireNonNull(lastUpdatedTimestamp);
-        this.tieredFilesMostRecentAccessTimestamp = Objects.requireNonNull(tieredFilesMostRecentAccessTimestamp);
+        this.lastUpdatedTimestamp = lastUpdatedTimestamp;
+        this.tieredFilesMostRecentAccessTimestamp = tieredFilesMostRecentAccessTimestamp;
     }
 
     /**

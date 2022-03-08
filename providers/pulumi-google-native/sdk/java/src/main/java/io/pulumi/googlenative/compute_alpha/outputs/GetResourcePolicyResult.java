@@ -87,19 +87,19 @@ public final class GetResourcePolicyResult {
         ResourcePolicySnapshotSchedulePolicyResponse snapshotSchedulePolicy,
         String status,
         ResourcePolicyVmMaintenancePolicyResponse vmMaintenancePolicy) {
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.description = Objects.requireNonNull(description);
-        this.groupPlacementPolicy = Objects.requireNonNull(groupPlacementPolicy);
-        this.instanceSchedulePolicy = Objects.requireNonNull(instanceSchedulePolicy);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.region = Objects.requireNonNull(region);
-        this.resourceStatus = Objects.requireNonNull(resourceStatus);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
-        this.snapshotSchedulePolicy = Objects.requireNonNull(snapshotSchedulePolicy);
-        this.status = Objects.requireNonNull(status);
-        this.vmMaintenancePolicy = Objects.requireNonNull(vmMaintenancePolicy);
+        this.creationTimestamp = creationTimestamp;
+        this.description = description;
+        this.groupPlacementPolicy = groupPlacementPolicy;
+        this.instanceSchedulePolicy = instanceSchedulePolicy;
+        this.kind = kind;
+        this.name = name;
+        this.region = region;
+        this.resourceStatus = resourceStatus;
+        this.selfLink = selfLink;
+        this.selfLinkWithId = selfLinkWithId;
+        this.snapshotSchedulePolicy = snapshotSchedulePolicy;
+        this.status = status;
+        this.vmMaintenancePolicy = vmMaintenancePolicy;
     }
 
     /**

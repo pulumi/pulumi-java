@@ -18,7 +18,7 @@ public final class ApiConfigGatewayConfigBackendConfig {
 
     @OutputCustomType.Constructor({"googleServiceAccount"})
     private ApiConfigGatewayConfigBackendConfig(String googleServiceAccount) {
-        this.googleServiceAccount = Objects.requireNonNull(googleServiceAccount);
+        this.googleServiceAccount = googleServiceAccount;
     }
 
     /**

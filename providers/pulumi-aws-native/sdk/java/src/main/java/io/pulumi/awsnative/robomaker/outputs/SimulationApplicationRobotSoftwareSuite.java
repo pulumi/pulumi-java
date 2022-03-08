@@ -27,7 +27,7 @@ public final class SimulationApplicationRobotSoftwareSuite {
     private SimulationApplicationRobotSoftwareSuite(
         SimulationApplicationRobotSoftwareSuiteName name,
         @Nullable SimulationApplicationRobotSoftwareSuiteVersion version) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.version = version;
     }
 

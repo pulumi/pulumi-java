@@ -13,7 +13,7 @@ public final class GetSsmParameterStringResult {
 
     @OutputCustomType.Constructor({"value"})
     private GetSsmParameterStringResult(String value) {
-        this.value = Objects.requireNonNull(value);
+        this.value = value;
     }
 
     public String getValue() {

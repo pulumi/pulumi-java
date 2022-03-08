@@ -18,7 +18,7 @@ public final class CloudConnectorsResponse {
 
     @OutputCustomType.Constructor({"awsExternalId"})
     private CloudConnectorsResponse(String awsExternalId) {
-        this.awsExternalId = Objects.requireNonNull(awsExternalId);
+        this.awsExternalId = awsExternalId;
     }
 
     /**

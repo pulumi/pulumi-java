@@ -13,7 +13,7 @@ public final class OriginEndpointMssEncryption {
 
     @OutputCustomType.Constructor({"spekeKeyProvider"})
     private OriginEndpointMssEncryption(OriginEndpointSpekeKeyProvider spekeKeyProvider) {
-        this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
+        this.spekeKeyProvider = spekeKeyProvider;
     }
 
     public OriginEndpointSpekeKeyProvider getSpekeKeyProvider() {

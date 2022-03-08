@@ -31,7 +31,7 @@ public final class LiteTopicRetentionConfig {
     private LiteTopicRetentionConfig(
         String perPartitionBytes,
         @Nullable String period) {
-        this.perPartitionBytes = Objects.requireNonNull(perPartitionBytes);
+        this.perPartitionBytes = perPartitionBytes;
         this.period = period;
     }
 

@@ -24,8 +24,8 @@ public final class BackendBucketCdnPolicyNegativeCachingPolicyResponse {
     private BackendBucketCdnPolicyNegativeCachingPolicyResponse(
         Integer code,
         Integer ttl) {
-        this.code = Objects.requireNonNull(code);
-        this.ttl = Objects.requireNonNull(ttl);
+        this.code = code;
+        this.ttl = ttl;
     }
 
     /**

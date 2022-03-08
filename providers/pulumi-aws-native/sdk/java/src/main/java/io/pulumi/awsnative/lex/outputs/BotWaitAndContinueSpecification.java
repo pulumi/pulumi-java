@@ -40,10 +40,10 @@ public final class BotWaitAndContinueSpecification {
         @Nullable Boolean isActive,
         @Nullable BotStillWaitingResponseSpecification stillWaitingResponse,
         BotResponseSpecification waitingResponse) {
-        this.continueResponse = Objects.requireNonNull(continueResponse);
+        this.continueResponse = continueResponse;
         this.isActive = isActive;
         this.stillWaitingResponse = stillWaitingResponse;
-        this.waitingResponse = Objects.requireNonNull(waitingResponse);
+        this.waitingResponse = waitingResponse;
     }
 
     /**

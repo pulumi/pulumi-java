@@ -42,11 +42,11 @@ public final class LinkedIntegrationRuntimeResponse {
         String dataFactoryName,
         String name,
         String subscriptionId) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.dataFactoryLocation = Objects.requireNonNull(dataFactoryLocation);
-        this.dataFactoryName = Objects.requireNonNull(dataFactoryName);
-        this.name = Objects.requireNonNull(name);
-        this.subscriptionId = Objects.requireNonNull(subscriptionId);
+        this.createTime = createTime;
+        this.dataFactoryLocation = dataFactoryLocation;
+        this.dataFactoryName = dataFactoryName;
+        this.name = name;
+        this.subscriptionId = subscriptionId;
     }
 
     /**

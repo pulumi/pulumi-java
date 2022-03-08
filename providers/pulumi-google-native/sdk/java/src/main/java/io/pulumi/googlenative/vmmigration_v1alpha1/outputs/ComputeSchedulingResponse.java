@@ -42,11 +42,11 @@ public final class ComputeSchedulingResponse {
         List<SchedulingNodeAffinityResponse> nodeAffinities,
         String onHostMaintenance,
         String restartType) {
-        this.automaticRestart = Objects.requireNonNull(automaticRestart);
-        this.minNodeCpus = Objects.requireNonNull(minNodeCpus);
-        this.nodeAffinities = Objects.requireNonNull(nodeAffinities);
-        this.onHostMaintenance = Objects.requireNonNull(onHostMaintenance);
-        this.restartType = Objects.requireNonNull(restartType);
+        this.automaticRestart = automaticRestart;
+        this.minNodeCpus = minNodeCpus;
+        this.nodeAffinities = nodeAffinities;
+        this.onHostMaintenance = onHostMaintenance;
+        this.restartType = restartType;
     }
 
     public Boolean getAutomaticRestart() {

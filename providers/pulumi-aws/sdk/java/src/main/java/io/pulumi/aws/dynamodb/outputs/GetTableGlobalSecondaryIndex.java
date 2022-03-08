@@ -32,13 +32,13 @@ public final class GetTableGlobalSecondaryIndex {
         String rangeKey,
         Integer readCapacity,
         Integer writeCapacity) {
-        this.hashKey = Objects.requireNonNull(hashKey);
-        this.name = Objects.requireNonNull(name);
-        this.nonKeyAttributes = Objects.requireNonNull(nonKeyAttributes);
-        this.projectionType = Objects.requireNonNull(projectionType);
-        this.rangeKey = Objects.requireNonNull(rangeKey);
-        this.readCapacity = Objects.requireNonNull(readCapacity);
-        this.writeCapacity = Objects.requireNonNull(writeCapacity);
+        this.hashKey = hashKey;
+        this.name = name;
+        this.nonKeyAttributes = nonKeyAttributes;
+        this.projectionType = projectionType;
+        this.rangeKey = rangeKey;
+        this.readCapacity = readCapacity;
+        this.writeCapacity = writeCapacity;
     }
 
     public String getHashKey() {

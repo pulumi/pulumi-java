@@ -25,8 +25,8 @@ public final class TestDetailsResponse {
     private TestDetailsResponse(
         String errorMessage,
         List<String> progressMessages) {
-        this.errorMessage = Objects.requireNonNull(errorMessage);
-        this.progressMessages = Objects.requireNonNull(progressMessages);
+        this.errorMessage = errorMessage;
+        this.progressMessages = progressMessages;
     }
 
     /**

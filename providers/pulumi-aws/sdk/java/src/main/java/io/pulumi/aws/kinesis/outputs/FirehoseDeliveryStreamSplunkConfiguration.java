@@ -67,9 +67,9 @@ public final class FirehoseDeliveryStreamSplunkConfiguration {
         @Nullable String s3BackupMode) {
         this.cloudwatchLoggingOptions = cloudwatchLoggingOptions;
         this.hecAcknowledgmentTimeout = hecAcknowledgmentTimeout;
-        this.hecEndpoint = Objects.requireNonNull(hecEndpoint);
+        this.hecEndpoint = hecEndpoint;
         this.hecEndpointType = hecEndpointType;
-        this.hecToken = Objects.requireNonNull(hecToken);
+        this.hecToken = hecToken;
         this.processingConfiguration = processingConfiguration;
         this.retryDuration = retryDuration;
         this.s3BackupMode = s3BackupMode;

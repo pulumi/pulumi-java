@@ -17,7 +17,7 @@ public final class WebAclRuleStatementNotStatementStatementSizeConstraintStateme
 
     @OutputCustomType.Constructor({"name"})
     private WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleHeader(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

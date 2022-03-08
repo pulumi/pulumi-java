@@ -67,13 +67,13 @@ public final class BucketReplicationConfigurationRule {
         @Nullable BucketReplicationConfigurationRuleSourceSelectionCriteria sourceSelectionCriteria,
         String status) {
         this.deleteMarkerReplicationStatus = deleteMarkerReplicationStatus;
-        this.destination = Objects.requireNonNull(destination);
+        this.destination = destination;
         this.filter = filter;
         this.id = id;
         this.prefix = prefix;
         this.priority = priority;
         this.sourceSelectionCriteria = sourceSelectionCriteria;
-        this.status = Objects.requireNonNull(status);
+        this.status = status;
     }
 
     /**

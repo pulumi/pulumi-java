@@ -30,9 +30,9 @@ public final class GetIdentityAwareProxyClientResult {
         String displayName,
         String name,
         String secret) {
-        this.displayName = Objects.requireNonNull(displayName);
-        this.name = Objects.requireNonNull(name);
-        this.secret = Objects.requireNonNull(secret);
+        this.displayName = displayName;
+        this.name = name;
+        this.secret = secret;
     }
 
     /**

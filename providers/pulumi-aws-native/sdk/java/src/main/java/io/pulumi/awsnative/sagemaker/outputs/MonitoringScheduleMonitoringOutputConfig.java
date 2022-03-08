@@ -29,7 +29,7 @@ public final class MonitoringScheduleMonitoringOutputConfig {
         @Nullable String kmsKeyId,
         List<MonitoringScheduleMonitoringOutput> monitoringOutputs) {
         this.kmsKeyId = kmsKeyId;
-        this.monitoringOutputs = Objects.requireNonNull(monitoringOutputs);
+        this.monitoringOutputs = monitoringOutputs;
     }
 
     /**

@@ -32,7 +32,7 @@ public final class AutoscalerAutoscalingPolicyCpuUtilization {
         @Nullable String predictiveMethod,
         Double target) {
         this.predictiveMethod = predictiveMethod;
-        this.target = Objects.requireNonNull(target);
+        this.target = target;
     }
 
     /**

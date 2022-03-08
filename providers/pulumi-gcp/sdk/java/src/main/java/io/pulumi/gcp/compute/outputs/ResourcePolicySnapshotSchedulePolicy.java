@@ -37,7 +37,7 @@ public final class ResourcePolicySnapshotSchedulePolicy {
         ResourcePolicySnapshotSchedulePolicySchedule schedule,
         @Nullable ResourcePolicySnapshotSchedulePolicySnapshotProperties snapshotProperties) {
         this.retentionPolicy = retentionPolicy;
-        this.schedule = Objects.requireNonNull(schedule);
+        this.schedule = schedule;
         this.snapshotProperties = snapshotProperties;
     }
 

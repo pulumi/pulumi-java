@@ -49,12 +49,12 @@ public final class GetVersionResult {
         String name,
         GoogleCloudDialogflowCxV3beta1NluSettingsResponse nluSettings,
         String state) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.description = Objects.requireNonNull(description);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.name = Objects.requireNonNull(name);
-        this.nluSettings = Objects.requireNonNull(nluSettings);
-        this.state = Objects.requireNonNull(state);
+        this.createTime = createTime;
+        this.description = description;
+        this.displayName = displayName;
+        this.name = name;
+        this.nluSettings = nluSettings;
+        this.state = state;
     }
 
     /**

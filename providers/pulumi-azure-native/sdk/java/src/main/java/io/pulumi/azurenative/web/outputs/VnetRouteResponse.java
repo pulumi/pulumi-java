@@ -62,12 +62,12 @@ public final class VnetRouteResponse {
         @Nullable String startAddress,
         String type) {
         this.endAddress = endAddress;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.kind = kind;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.routeType = routeType;
         this.startAddress = startAddress;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

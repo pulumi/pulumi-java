@@ -24,8 +24,8 @@ public final class BudgetActionSubscriber {
     private BudgetActionSubscriber(
         String address,
         String subscriptionType) {
-        this.address = Objects.requireNonNull(address);
-        this.subscriptionType = Objects.requireNonNull(subscriptionType);
+        this.address = address;
+        this.subscriptionType = subscriptionType;
     }
 
     /**

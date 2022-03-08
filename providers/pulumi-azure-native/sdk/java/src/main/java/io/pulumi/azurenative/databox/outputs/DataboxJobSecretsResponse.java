@@ -42,9 +42,9 @@ public final class DataboxJobSecretsResponse {
         CloudErrorResponse error,
         String jobSecretsType,
         @Nullable List<DataBoxSecretResponse> podSecrets) {
-        this.dcAccessSecurityCode = Objects.requireNonNull(dcAccessSecurityCode);
-        this.error = Objects.requireNonNull(error);
-        this.jobSecretsType = Objects.requireNonNull(jobSecretsType);
+        this.dcAccessSecurityCode = dcAccessSecurityCode;
+        this.error = error;
+        this.jobSecretsType = jobSecretsType;
         this.podSecrets = podSecrets;
     }
 

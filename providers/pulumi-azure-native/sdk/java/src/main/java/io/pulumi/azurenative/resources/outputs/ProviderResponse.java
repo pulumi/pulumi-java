@@ -46,11 +46,11 @@ public final class ProviderResponse {
         String registrationPolicy,
         String registrationState,
         List<ProviderResourceTypeResponse> resourceTypes) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.namespace = namespace;
-        this.registrationPolicy = Objects.requireNonNull(registrationPolicy);
-        this.registrationState = Objects.requireNonNull(registrationState);
-        this.resourceTypes = Objects.requireNonNull(resourceTypes);
+        this.registrationPolicy = registrationPolicy;
+        this.registrationState = registrationState;
+        this.resourceTypes = resourceTypes;
     }
 
     /**

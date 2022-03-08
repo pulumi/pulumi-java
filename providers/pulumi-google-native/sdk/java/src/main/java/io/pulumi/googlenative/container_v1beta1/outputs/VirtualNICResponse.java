@@ -17,7 +17,7 @@ public final class VirtualNICResponse {
 
     @OutputCustomType.Constructor({"enabled"})
     private VirtualNICResponse(Boolean enabled) {
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
     }
 
     /**

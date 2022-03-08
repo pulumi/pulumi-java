@@ -31,9 +31,9 @@ public final class WorkerConfigResponse {
         String diskSizeGb,
         String machineType,
         Boolean noExternalIp) {
-        this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
-        this.machineType = Objects.requireNonNull(machineType);
-        this.noExternalIp = Objects.requireNonNull(noExternalIp);
+        this.diskSizeGb = diskSizeGb;
+        this.machineType = machineType;
+        this.noExternalIp = noExternalIp;
     }
 
     /**

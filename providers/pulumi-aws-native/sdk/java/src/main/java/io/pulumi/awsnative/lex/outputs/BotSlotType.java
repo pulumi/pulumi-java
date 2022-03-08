@@ -32,7 +32,7 @@ public final class BotSlotType {
         @Nullable BotSlotValueSelectionSetting valueSelectionSetting) {
         this.description = description;
         this.externalSourceSetting = externalSourceSetting;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.parentSlotTypeSignature = parentSlotTypeSignature;
         this.slotTypeValues = slotTypeValues;
         this.valueSelectionSetting = valueSelectionSetting;

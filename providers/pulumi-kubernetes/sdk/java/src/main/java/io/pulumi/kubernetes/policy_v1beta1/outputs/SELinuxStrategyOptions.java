@@ -27,7 +27,7 @@ public final class SELinuxStrategyOptions {
     private SELinuxStrategyOptions(
         String rule,
         @Nullable SELinuxOptions seLinuxOptions) {
-        this.rule = Objects.requireNonNull(rule);
+        this.rule = rule;
         this.seLinuxOptions = seLinuxOptions;
     }
 

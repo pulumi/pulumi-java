@@ -58,17 +58,17 @@ public final class GetNatGatewayResult {
         String subnetId,
         Map<String,String> tags,
         String vpcId) {
-        this.allocationId = Objects.requireNonNull(allocationId);
-        this.connectivityType = Objects.requireNonNull(connectivityType);
+        this.allocationId = allocationId;
+        this.connectivityType = connectivityType;
         this.filters = filters;
-        this.id = Objects.requireNonNull(id);
-        this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId);
-        this.privateIp = Objects.requireNonNull(privateIp);
-        this.publicIp = Objects.requireNonNull(publicIp);
-        this.state = Objects.requireNonNull(state);
-        this.subnetId = Objects.requireNonNull(subnetId);
-        this.tags = Objects.requireNonNull(tags);
-        this.vpcId = Objects.requireNonNull(vpcId);
+        this.id = id;
+        this.networkInterfaceId = networkInterfaceId;
+        this.privateIp = privateIp;
+        this.publicIp = publicIp;
+        this.state = state;
+        this.subnetId = subnetId;
+        this.tags = tags;
+        this.vpcId = vpcId;
     }
 
     /**

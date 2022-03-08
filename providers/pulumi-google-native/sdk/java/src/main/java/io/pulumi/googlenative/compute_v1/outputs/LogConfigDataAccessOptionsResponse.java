@@ -17,7 +17,7 @@ public final class LogConfigDataAccessOptionsResponse {
 
     @OutputCustomType.Constructor({"logMode"})
     private LogConfigDataAccessOptionsResponse(String logMode) {
-        this.logMode = Objects.requireNonNull(logMode);
+        this.logMode = logMode;
     }
 
     /**

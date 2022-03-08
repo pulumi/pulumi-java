@@ -36,7 +36,7 @@ public final class EncoderCustomPresetResponse {
         String type,
         @Nullable VideoEncoderH264Response videoEncoder) {
         this.audioEncoder = audioEncoder;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.videoEncoder = videoEncoder;
     }
 

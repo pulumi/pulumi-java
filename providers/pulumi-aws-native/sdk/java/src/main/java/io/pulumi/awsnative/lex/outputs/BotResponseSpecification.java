@@ -25,7 +25,7 @@ public final class BotResponseSpecification {
         @Nullable Boolean allowInterrupt,
         List<BotMessageGroup> messageGroupsList) {
         this.allowInterrupt = allowInterrupt;
-        this.messageGroupsList = Objects.requireNonNull(messageGroupsList);
+        this.messageGroupsList = messageGroupsList;
     }
 
     /**

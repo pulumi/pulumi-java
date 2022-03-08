@@ -17,7 +17,7 @@ public final class WebAclDefaultAction {
 
     @OutputCustomType.Constructor({"type"})
     private WebAclDefaultAction(String type) {
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

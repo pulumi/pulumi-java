@@ -30,7 +30,7 @@ public final class InstanceAddOn {
         String addOnType,
         @Nullable InstanceAutoSnapshotAddOn autoSnapshotAddOnRequest,
         @Nullable InstanceAddOnStatus status) {
-        this.addOnType = Objects.requireNonNull(addOnType);
+        this.addOnType = addOnType;
         this.autoSnapshotAddOnRequest = autoSnapshotAddOnRequest;
         this.status = status;
     }

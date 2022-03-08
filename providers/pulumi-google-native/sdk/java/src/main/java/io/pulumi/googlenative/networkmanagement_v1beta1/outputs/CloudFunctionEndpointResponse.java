@@ -17,7 +17,7 @@ public final class CloudFunctionEndpointResponse {
 
     @OutputCustomType.Constructor({"uri"})
     private CloudFunctionEndpointResponse(String uri) {
-        this.uri = Objects.requireNonNull(uri);
+        this.uri = uri;
     }
 
     /**

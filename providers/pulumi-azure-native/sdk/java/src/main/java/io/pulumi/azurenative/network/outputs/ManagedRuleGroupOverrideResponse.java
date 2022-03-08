@@ -27,7 +27,7 @@ public final class ManagedRuleGroupOverrideResponse {
     private ManagedRuleGroupOverrideResponse(
         String ruleGroupName,
         @Nullable List<ManagedRuleOverrideResponse> rules) {
-        this.ruleGroupName = Objects.requireNonNull(ruleGroupName);
+        this.ruleGroupName = ruleGroupName;
         this.rules = rules;
     }
 

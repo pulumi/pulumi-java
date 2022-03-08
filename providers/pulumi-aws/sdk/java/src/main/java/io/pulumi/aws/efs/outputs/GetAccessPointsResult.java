@@ -33,10 +33,10 @@ public final class GetAccessPointsResult {
         String fileSystemId,
         String id,
         List<String> ids) {
-        this.arns = Objects.requireNonNull(arns);
-        this.fileSystemId = Objects.requireNonNull(fileSystemId);
-        this.id = Objects.requireNonNull(id);
-        this.ids = Objects.requireNonNull(ids);
+        this.arns = arns;
+        this.fileSystemId = fileSystemId;
+        this.id = id;
+        this.ids = ids;
     }
 
     /**

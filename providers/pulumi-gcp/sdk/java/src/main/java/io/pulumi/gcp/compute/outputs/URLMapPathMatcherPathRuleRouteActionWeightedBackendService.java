@@ -43,9 +43,9 @@ public final class URLMapPathMatcherPathRuleRouteActionWeightedBackendService {
         String backendService,
         @Nullable URLMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderAction headerAction,
         Integer weight) {
-        this.backendService = Objects.requireNonNull(backendService);
+        this.backendService = backendService;
         this.headerAction = headerAction;
-        this.weight = Objects.requireNonNull(weight);
+        this.weight = weight;
     }
 
     /**

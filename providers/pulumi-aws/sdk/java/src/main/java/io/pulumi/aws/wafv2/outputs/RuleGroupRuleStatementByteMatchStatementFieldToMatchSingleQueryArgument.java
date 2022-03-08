@@ -17,7 +17,7 @@ public final class RuleGroupRuleStatementByteMatchStatementFieldToMatchSingleQue
 
     @OutputCustomType.Constructor({"name"})
     private RuleGroupRuleStatementByteMatchStatementFieldToMatchSingleQueryArgument(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

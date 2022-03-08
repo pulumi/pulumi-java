@@ -60,14 +60,14 @@ public final class RouterInterfaceResponse {
         String privateIpAddress,
         String redundantInterface,
         String subnetwork) {
-        this.ipRange = Objects.requireNonNull(ipRange);
-        this.linkedInterconnectAttachment = Objects.requireNonNull(linkedInterconnectAttachment);
-        this.linkedVpnTunnel = Objects.requireNonNull(linkedVpnTunnel);
-        this.managementType = Objects.requireNonNull(managementType);
-        this.name = Objects.requireNonNull(name);
-        this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
-        this.redundantInterface = Objects.requireNonNull(redundantInterface);
-        this.subnetwork = Objects.requireNonNull(subnetwork);
+        this.ipRange = ipRange;
+        this.linkedInterconnectAttachment = linkedInterconnectAttachment;
+        this.linkedVpnTunnel = linkedVpnTunnel;
+        this.managementType = managementType;
+        this.name = name;
+        this.privateIpAddress = privateIpAddress;
+        this.redundantInterface = redundantInterface;
+        this.subnetwork = subnetwork;
     }
 
     /**

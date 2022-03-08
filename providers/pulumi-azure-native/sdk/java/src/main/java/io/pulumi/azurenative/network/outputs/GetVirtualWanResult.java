@@ -99,16 +99,16 @@ public final class GetVirtualWanResult {
         this.allowBranchToBranchTraffic = allowBranchToBranchTraffic;
         this.allowVnetToVnetTraffic = allowVnetToVnetTraffic;
         this.disableVpnEncryption = disableVpnEncryption;
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.id = id;
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.office365LocalBreakoutCategory = Objects.requireNonNull(office365LocalBreakoutCategory);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.location = location;
+        this.name = name;
+        this.office365LocalBreakoutCategory = office365LocalBreakoutCategory;
+        this.provisioningState = provisioningState;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
-        this.virtualHubs = Objects.requireNonNull(virtualHubs);
-        this.vpnSites = Objects.requireNonNull(vpnSites);
+        this.type = type;
+        this.virtualHubs = virtualHubs;
+        this.vpnSites = vpnSites;
     }
 
     /**

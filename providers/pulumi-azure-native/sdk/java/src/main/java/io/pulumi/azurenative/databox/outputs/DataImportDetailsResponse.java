@@ -19,7 +19,7 @@ public final class DataImportDetailsResponse {
 
     @OutputCustomType.Constructor({"accountDetails"})
     private DataImportDetailsResponse(Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> accountDetails) {
-        this.accountDetails = Objects.requireNonNull(accountDetails);
+        this.accountDetails = accountDetails;
     }
 
     /**

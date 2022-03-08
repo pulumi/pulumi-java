@@ -32,13 +32,13 @@ public final class ScheduledQueryTimestreamConfiguration {
         @Nullable ScheduledQueryMultiMeasureMappings multiMeasureMappings,
         String tableName,
         String timeColumn) {
-        this.databaseName = Objects.requireNonNull(databaseName);
-        this.dimensionMappings = Objects.requireNonNull(dimensionMappings);
+        this.databaseName = databaseName;
+        this.dimensionMappings = dimensionMappings;
         this.measureNameColumn = measureNameColumn;
         this.mixedMeasureMappings = mixedMeasureMappings;
         this.multiMeasureMappings = multiMeasureMappings;
-        this.tableName = Objects.requireNonNull(tableName);
-        this.timeColumn = Objects.requireNonNull(timeColumn);
+        this.tableName = tableName;
+        this.timeColumn = timeColumn;
     }
 
     public String getDatabaseName() {

@@ -52,13 +52,13 @@ public final class DeliveryStreamElasticsearchDestinationConfiguration {
         this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
         this.clusterEndpoint = clusterEndpoint;
         this.domainARN = domainARN;
-        this.indexName = Objects.requireNonNull(indexName);
+        this.indexName = indexName;
         this.indexRotationPeriod = indexRotationPeriod;
         this.processingConfiguration = processingConfiguration;
         this.retryOptions = retryOptions;
-        this.roleARN = Objects.requireNonNull(roleARN);
+        this.roleARN = roleARN;
         this.s3BackupMode = s3BackupMode;
-        this.s3Configuration = Objects.requireNonNull(s3Configuration);
+        this.s3Configuration = s3Configuration;
         this.typeName = typeName;
         this.vpcConfiguration = vpcConfiguration;
     }

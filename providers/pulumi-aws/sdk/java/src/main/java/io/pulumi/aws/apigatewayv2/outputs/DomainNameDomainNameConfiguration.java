@@ -45,10 +45,10 @@ public final class DomainNameDomainNameConfiguration {
         @Nullable String hostedZoneId,
         String securityPolicy,
         @Nullable String targetDomainName) {
-        this.certificateArn = Objects.requireNonNull(certificateArn);
-        this.endpointType = Objects.requireNonNull(endpointType);
+        this.certificateArn = certificateArn;
+        this.endpointType = endpointType;
         this.hostedZoneId = hostedZoneId;
-        this.securityPolicy = Objects.requireNonNull(securityPolicy);
+        this.securityPolicy = securityPolicy;
         this.targetDomainName = targetDomainName;
     }
 

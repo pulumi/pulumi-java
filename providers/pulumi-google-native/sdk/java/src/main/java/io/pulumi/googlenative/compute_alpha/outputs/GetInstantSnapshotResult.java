@@ -123,24 +123,24 @@ public final class GetInstantSnapshotResult {
         String sourceDiskId,
         String status,
         String zone) {
-        this.architecture = Objects.requireNonNull(architecture);
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.description = Objects.requireNonNull(description);
-        this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
-        this.guestFlush = Objects.requireNonNull(guestFlush);
-        this.kind = Objects.requireNonNull(kind);
-        this.labelFingerprint = Objects.requireNonNull(labelFingerprint);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.region = Objects.requireNonNull(region);
-        this.resourceStatus = Objects.requireNonNull(resourceStatus);
-        this.satisfiesPzs = Objects.requireNonNull(satisfiesPzs);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
-        this.sourceDisk = Objects.requireNonNull(sourceDisk);
-        this.sourceDiskId = Objects.requireNonNull(sourceDiskId);
-        this.status = Objects.requireNonNull(status);
-        this.zone = Objects.requireNonNull(zone);
+        this.architecture = architecture;
+        this.creationTimestamp = creationTimestamp;
+        this.description = description;
+        this.diskSizeGb = diskSizeGb;
+        this.guestFlush = guestFlush;
+        this.kind = kind;
+        this.labelFingerprint = labelFingerprint;
+        this.labels = labels;
+        this.name = name;
+        this.region = region;
+        this.resourceStatus = resourceStatus;
+        this.satisfiesPzs = satisfiesPzs;
+        this.selfLink = selfLink;
+        this.selfLinkWithId = selfLinkWithId;
+        this.sourceDisk = sourceDisk;
+        this.sourceDiskId = sourceDiskId;
+        this.status = status;
+        this.zone = zone;
     }
 
     /**

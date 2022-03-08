@@ -17,7 +17,7 @@ public final class LaunchTemplateLicenseSpecification {
 
     @OutputCustomType.Constructor({"licenseConfigurationArn"})
     private LaunchTemplateLicenseSpecification(String licenseConfigurationArn) {
-        this.licenseConfigurationArn = Objects.requireNonNull(licenseConfigurationArn);
+        this.licenseConfigurationArn = licenseConfigurationArn;
     }
 
     /**

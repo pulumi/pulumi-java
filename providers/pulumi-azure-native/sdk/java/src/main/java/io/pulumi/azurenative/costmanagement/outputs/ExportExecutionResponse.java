@@ -98,15 +98,15 @@ public final class ExportExecutionResponse {
         this.error = error;
         this.executionType = executionType;
         this.fileName = fileName;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.processingEndTime = processingEndTime;
         this.processingStartTime = processingStartTime;
         this.runSettings = runSettings;
         this.status = status;
         this.submittedBy = submittedBy;
         this.submittedTime = submittedTime;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

@@ -18,7 +18,7 @@ public final class CertificateTemplatePredefinedValuesPolicyId {
 
     @OutputCustomType.Constructor({"objectIdPaths"})
     private CertificateTemplatePredefinedValuesPolicyId(List<Integer> objectIdPaths) {
-        this.objectIdPaths = Objects.requireNonNull(objectIdPaths);
+        this.objectIdPaths = objectIdPaths;
     }
 
     /**

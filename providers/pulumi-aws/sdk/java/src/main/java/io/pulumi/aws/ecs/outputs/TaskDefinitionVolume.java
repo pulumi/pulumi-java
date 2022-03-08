@@ -52,7 +52,7 @@ public final class TaskDefinitionVolume {
         this.efsVolumeConfiguration = efsVolumeConfiguration;
         this.fsxWindowsFileServerVolumeConfiguration = fsxWindowsFileServerVolumeConfiguration;
         this.hostPath = hostPath;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

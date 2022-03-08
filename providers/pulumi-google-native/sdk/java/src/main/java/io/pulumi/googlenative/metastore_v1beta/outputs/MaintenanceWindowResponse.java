@@ -25,8 +25,8 @@ public final class MaintenanceWindowResponse {
     private MaintenanceWindowResponse(
         String dayOfWeek,
         Integer hourOfDay) {
-        this.dayOfWeek = Objects.requireNonNull(dayOfWeek);
-        this.hourOfDay = Objects.requireNonNull(hourOfDay);
+        this.dayOfWeek = dayOfWeek;
+        this.hourOfDay = hourOfDay;
     }
 
     /**

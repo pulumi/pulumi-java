@@ -48,7 +48,7 @@ public final class GenericProtectionPolicyResponse {
         @Nullable Integer protectedItemsCount,
         @Nullable List<SubProtectionPolicyResponse> subProtectionPolicy,
         @Nullable String timeZone) {
-        this.backupManagementType = Objects.requireNonNull(backupManagementType);
+        this.backupManagementType = backupManagementType;
         this.fabricName = fabricName;
         this.protectedItemsCount = protectedItemsCount;
         this.subProtectionPolicy = subProtectionPolicy;

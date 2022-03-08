@@ -37,7 +37,7 @@ public final class PrivateEndpointConnectionPropertiesResponse {
         PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState) {
         this.groupIds = groupIds;
         this.privateEndpoint = privateEndpoint;
-        this.privateLinkServiceConnectionState = Objects.requireNonNull(privateLinkServiceConnectionState);
+        this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
     }
 
     /**

@@ -85,18 +85,18 @@ public final class GoogleCloudMlV1__PredictionInputResponse {
         String signatureName,
         String uri,
         String versionName) {
-        this.batchSize = Objects.requireNonNull(batchSize);
-        this.dataFormat = Objects.requireNonNull(dataFormat);
-        this.inputPaths = Objects.requireNonNull(inputPaths);
-        this.maxWorkerCount = Objects.requireNonNull(maxWorkerCount);
-        this.modelName = Objects.requireNonNull(modelName);
-        this.outputDataFormat = Objects.requireNonNull(outputDataFormat);
-        this.outputPath = Objects.requireNonNull(outputPath);
-        this.region = Objects.requireNonNull(region);
-        this.runtimeVersion = Objects.requireNonNull(runtimeVersion);
-        this.signatureName = Objects.requireNonNull(signatureName);
-        this.uri = Objects.requireNonNull(uri);
-        this.versionName = Objects.requireNonNull(versionName);
+        this.batchSize = batchSize;
+        this.dataFormat = dataFormat;
+        this.inputPaths = inputPaths;
+        this.maxWorkerCount = maxWorkerCount;
+        this.modelName = modelName;
+        this.outputDataFormat = outputDataFormat;
+        this.outputPath = outputPath;
+        this.region = region;
+        this.runtimeVersion = runtimeVersion;
+        this.signatureName = signatureName;
+        this.uri = uri;
+        this.versionName = versionName;
     }
 
     /**

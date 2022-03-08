@@ -17,7 +17,7 @@ public final class GetLiveTokenResult {
 
     @OutputCustomType.Constructor({"liveToken"})
     private GetLiveTokenResult(String liveToken) {
-        this.liveToken = Objects.requireNonNull(liveToken);
+        this.liveToken = liveToken;
     }
 
     /**

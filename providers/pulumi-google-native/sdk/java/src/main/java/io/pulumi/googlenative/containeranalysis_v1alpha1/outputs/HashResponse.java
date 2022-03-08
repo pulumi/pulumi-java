@@ -24,8 +24,8 @@ public final class HashResponse {
     private HashResponse(
         String type,
         String value) {
-        this.type = Objects.requireNonNull(type);
-        this.value = Objects.requireNonNull(value);
+        this.type = type;
+        this.value = value;
     }
 
     /**

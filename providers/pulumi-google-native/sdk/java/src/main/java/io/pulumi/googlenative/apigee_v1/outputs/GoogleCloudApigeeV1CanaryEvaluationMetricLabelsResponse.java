@@ -30,9 +30,9 @@ public final class GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse {
         String env,
         String instanceId,
         String location) {
-        this.env = Objects.requireNonNull(env);
-        this.instanceId = Objects.requireNonNull(instanceId);
-        this.location = Objects.requireNonNull(location);
+        this.env = env;
+        this.instanceId = instanceId;
+        this.location = location;
     }
 
     /**

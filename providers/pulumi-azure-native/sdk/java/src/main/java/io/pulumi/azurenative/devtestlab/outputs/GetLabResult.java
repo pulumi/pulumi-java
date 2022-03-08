@@ -171,30 +171,30 @@ public final class GetLabResult {
         String vaultName,
         String vmCreationResourceGroup) {
         this.announcement = announcement;
-        this.artifactsStorageAccount = Objects.requireNonNull(artifactsStorageAccount);
-        this.createdDate = Objects.requireNonNull(createdDate);
-        this.defaultPremiumStorageAccount = Objects.requireNonNull(defaultPremiumStorageAccount);
-        this.defaultStorageAccount = Objects.requireNonNull(defaultStorageAccount);
+        this.artifactsStorageAccount = artifactsStorageAccount;
+        this.createdDate = createdDate;
+        this.defaultPremiumStorageAccount = defaultPremiumStorageAccount;
+        this.defaultStorageAccount = defaultStorageAccount;
         this.environmentPermission = environmentPermission;
         this.extendedProperties = extendedProperties;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.labStorageType = labStorageType;
-        this.loadBalancerId = Objects.requireNonNull(loadBalancerId);
+        this.loadBalancerId = loadBalancerId;
         this.location = location;
         this.mandatoryArtifactsResourceIdsLinux = mandatoryArtifactsResourceIdsLinux;
         this.mandatoryArtifactsResourceIdsWindows = mandatoryArtifactsResourceIdsWindows;
-        this.name = Objects.requireNonNull(name);
-        this.networkSecurityGroupId = Objects.requireNonNull(networkSecurityGroupId);
-        this.premiumDataDiskStorageAccount = Objects.requireNonNull(premiumDataDiskStorageAccount);
+        this.name = name;
+        this.networkSecurityGroupId = networkSecurityGroupId;
+        this.premiumDataDiskStorageAccount = premiumDataDiskStorageAccount;
         this.premiumDataDisks = premiumDataDisks;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.publicIpId = Objects.requireNonNull(publicIpId);
+        this.provisioningState = provisioningState;
+        this.publicIpId = publicIpId;
         this.support = support;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
-        this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
-        this.vaultName = Objects.requireNonNull(vaultName);
-        this.vmCreationResourceGroup = Objects.requireNonNull(vmCreationResourceGroup);
+        this.type = type;
+        this.uniqueIdentifier = uniqueIdentifier;
+        this.vaultName = vaultName;
+        this.vmCreationResourceGroup = vmCreationResourceGroup;
     }
 
     /**

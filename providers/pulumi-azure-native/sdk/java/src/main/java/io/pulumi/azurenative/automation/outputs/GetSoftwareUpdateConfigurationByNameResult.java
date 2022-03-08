@@ -90,18 +90,18 @@ public final class GetSoftwareUpdateConfigurationByNameResult {
         @Nullable SoftwareUpdateConfigurationTasksResponse tasks,
         String type,
         UpdateConfigurationResponse updateConfiguration) {
-        this.createdBy = Objects.requireNonNull(createdBy);
-        this.creationTime = Objects.requireNonNull(creationTime);
+        this.createdBy = createdBy;
+        this.creationTime = creationTime;
         this.error = error;
-        this.id = Objects.requireNonNull(id);
-        this.lastModifiedBy = Objects.requireNonNull(lastModifiedBy);
-        this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.scheduleInfo = Objects.requireNonNull(scheduleInfo);
+        this.id = id;
+        this.lastModifiedBy = lastModifiedBy;
+        this.lastModifiedTime = lastModifiedTime;
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.scheduleInfo = scheduleInfo;
         this.tasks = tasks;
-        this.type = Objects.requireNonNull(type);
-        this.updateConfiguration = Objects.requireNonNull(updateConfiguration);
+        this.type = type;
+        this.updateConfiguration = updateConfiguration;
     }
 
     /**

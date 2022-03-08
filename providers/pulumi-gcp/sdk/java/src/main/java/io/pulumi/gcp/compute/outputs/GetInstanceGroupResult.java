@@ -65,16 +65,16 @@ public final class GetInstanceGroupResult {
         String selfLink,
         Integer size,
         String zone) {
-        this.description = Objects.requireNonNull(description);
-        this.id = Objects.requireNonNull(id);
-        this.instances = Objects.requireNonNull(instances);
+        this.description = description;
+        this.id = id;
+        this.instances = instances;
         this.name = name;
-        this.namedPorts = Objects.requireNonNull(namedPorts);
-        this.network = Objects.requireNonNull(network);
-        this.project = Objects.requireNonNull(project);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.size = Objects.requireNonNull(size);
-        this.zone = Objects.requireNonNull(zone);
+        this.namedPorts = namedPorts;
+        this.network = network;
+        this.project = project;
+        this.selfLink = selfLink;
+        this.size = size;
+        this.zone = zone;
     }
 
     /**

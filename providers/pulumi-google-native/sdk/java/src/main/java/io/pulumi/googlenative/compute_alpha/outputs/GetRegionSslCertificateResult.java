@@ -99,20 +99,20 @@ public final class GetRegionSslCertificateResult {
         SslCertificateSelfManagedSslCertificateResponse selfManaged,
         List<String> subjectAlternativeNames,
         String type) {
-        this.certificate = Objects.requireNonNull(certificate);
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.description = Objects.requireNonNull(description);
-        this.expireTime = Objects.requireNonNull(expireTime);
-        this.kind = Objects.requireNonNull(kind);
-        this.managed = Objects.requireNonNull(managed);
-        this.name = Objects.requireNonNull(name);
-        this.privateKey = Objects.requireNonNull(privateKey);
-        this.region = Objects.requireNonNull(region);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
-        this.selfManaged = Objects.requireNonNull(selfManaged);
-        this.subjectAlternativeNames = Objects.requireNonNull(subjectAlternativeNames);
-        this.type = Objects.requireNonNull(type);
+        this.certificate = certificate;
+        this.creationTimestamp = creationTimestamp;
+        this.description = description;
+        this.expireTime = expireTime;
+        this.kind = kind;
+        this.managed = managed;
+        this.name = name;
+        this.privateKey = privateKey;
+        this.region = region;
+        this.selfLink = selfLink;
+        this.selfLinkWithId = selfLinkWithId;
+        this.selfManaged = selfManaged;
+        this.subjectAlternativeNames = subjectAlternativeNames;
+        this.type = type;
     }
 
     /**

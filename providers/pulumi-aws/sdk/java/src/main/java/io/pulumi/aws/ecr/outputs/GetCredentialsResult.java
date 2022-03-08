@@ -26,11 +26,11 @@ public final class GetCredentialsResult {
         String id,
         String proxyEndpoint,
         String registryId) {
-        this.authorizationToken = Objects.requireNonNull(authorizationToken);
-        this.expiresAt = Objects.requireNonNull(expiresAt);
-        this.id = Objects.requireNonNull(id);
-        this.proxyEndpoint = Objects.requireNonNull(proxyEndpoint);
-        this.registryId = Objects.requireNonNull(registryId);
+        this.authorizationToken = authorizationToken;
+        this.expiresAt = expiresAt;
+        this.id = id;
+        this.proxyEndpoint = proxyEndpoint;
+        this.registryId = registryId;
     }
 
     public String getAuthorizationToken() {

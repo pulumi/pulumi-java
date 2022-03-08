@@ -26,8 +26,8 @@ public final class JobDerivedInfoResponse {
     private JobDerivedInfoResponse(
         List<String> jobCategories,
         List<LocationResponse> locations) {
-        this.jobCategories = Objects.requireNonNull(jobCategories);
-        this.locations = Objects.requireNonNull(locations);
+        this.jobCategories = jobCategories;
+        this.locations = locations;
     }
 
     /**

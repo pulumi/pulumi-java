@@ -45,12 +45,12 @@ public final class GetCustomPluginResult {
         Integer latestRevision,
         String name,
         String state) {
-        this.arn = Objects.requireNonNull(arn);
-        this.description = Objects.requireNonNull(description);
-        this.id = Objects.requireNonNull(id);
-        this.latestRevision = Objects.requireNonNull(latestRevision);
-        this.name = Objects.requireNonNull(name);
-        this.state = Objects.requireNonNull(state);
+        this.arn = arn;
+        this.description = description;
+        this.id = id;
+        this.latestRevision = latestRevision;
+        this.name = name;
+        this.state = state;
     }
 
     /**

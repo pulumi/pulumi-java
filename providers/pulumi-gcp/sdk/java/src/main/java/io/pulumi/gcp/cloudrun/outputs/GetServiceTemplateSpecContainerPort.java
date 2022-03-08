@@ -23,9 +23,9 @@ public final class GetServiceTemplateSpecContainerPort {
         Integer containerPort,
         String name,
         String protocol) {
-        this.containerPort = Objects.requireNonNull(containerPort);
-        this.name = Objects.requireNonNull(name);
-        this.protocol = Objects.requireNonNull(protocol);
+        this.containerPort = containerPort;
+        this.name = name;
+        this.protocol = protocol;
     }
 
     public Integer getContainerPort() {

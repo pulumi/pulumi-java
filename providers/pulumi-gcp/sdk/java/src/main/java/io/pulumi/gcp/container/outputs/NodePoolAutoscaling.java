@@ -25,8 +25,8 @@ public final class NodePoolAutoscaling {
     private NodePoolAutoscaling(
         Integer maxNodeCount,
         Integer minNodeCount) {
-        this.maxNodeCount = Objects.requireNonNull(maxNodeCount);
-        this.minNodeCount = Objects.requireNonNull(minNodeCount);
+        this.maxNodeCount = maxNodeCount;
+        this.minNodeCount = minNodeCount;
     }
 
     /**

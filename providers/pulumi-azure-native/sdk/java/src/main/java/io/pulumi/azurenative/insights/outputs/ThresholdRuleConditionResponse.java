@@ -56,9 +56,9 @@ public final class ThresholdRuleConditionResponse {
         @Nullable String timeAggregation,
         @Nullable String windowSize) {
         this.dataSource = dataSource;
-        this.odataType = Objects.requireNonNull(odataType);
-        this.operator = Objects.requireNonNull(operator);
-        this.threshold = Objects.requireNonNull(threshold);
+        this.odataType = odataType;
+        this.operator = operator;
+        this.threshold = threshold;
         this.timeAggregation = timeAggregation;
         this.windowSize = windowSize;
     }

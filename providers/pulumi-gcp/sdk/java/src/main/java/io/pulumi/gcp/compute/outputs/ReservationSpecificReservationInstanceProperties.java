@@ -49,7 +49,7 @@ public final class ReservationSpecificReservationInstanceProperties {
         @Nullable String minCpuPlatform) {
         this.guestAccelerators = guestAccelerators;
         this.localSsds = localSsds;
-        this.machineType = Objects.requireNonNull(machineType);
+        this.machineType = machineType;
         this.minCpuPlatform = minCpuPlatform;
     }
 

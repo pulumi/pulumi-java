@@ -52,7 +52,7 @@ public final class ClusterClusterAutoscaling {
         @Nullable List<ClusterClusterAutoscalingResourceLimit> resourceLimits) {
         this.autoProvisioningDefaults = autoProvisioningDefaults;
         this.autoscalingProfile = autoscalingProfile;
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
         this.resourceLimits = resourceLimits;
     }
 

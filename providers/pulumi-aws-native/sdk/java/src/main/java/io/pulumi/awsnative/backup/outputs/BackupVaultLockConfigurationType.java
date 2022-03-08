@@ -22,7 +22,7 @@ public final class BackupVaultLockConfigurationType {
         Double minRetentionDays) {
         this.changeableForDays = changeableForDays;
         this.maxRetentionDays = maxRetentionDays;
-        this.minRetentionDays = Objects.requireNonNull(minRetentionDays);
+        this.minRetentionDays = minRetentionDays;
     }
 
     public Optional<Double> getChangeableForDays() {

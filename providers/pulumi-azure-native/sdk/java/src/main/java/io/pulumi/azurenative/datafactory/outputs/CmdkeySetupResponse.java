@@ -41,10 +41,10 @@ public final class CmdkeySetupResponse {
         Object targetName,
         String type,
         Object userName) {
-        this.password = Objects.requireNonNull(password);
-        this.targetName = Objects.requireNonNull(targetName);
-        this.type = Objects.requireNonNull(type);
-        this.userName = Objects.requireNonNull(userName);
+        this.password = password;
+        this.targetName = targetName;
+        this.type = type;
+        this.userName = userName;
     }
 
     /**

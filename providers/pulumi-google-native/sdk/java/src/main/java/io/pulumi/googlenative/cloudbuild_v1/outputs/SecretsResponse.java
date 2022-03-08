@@ -26,8 +26,8 @@ public final class SecretsResponse {
     private SecretsResponse(
         List<InlineSecretResponse> inline,
         List<SecretManagerSecretResponse> secretManager) {
-        this.inline = Objects.requireNonNull(inline);
-        this.secretManager = Objects.requireNonNull(secretManager);
+        this.inline = inline;
+        this.secretManager = secretManager;
     }
 
     /**

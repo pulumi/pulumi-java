@@ -39,10 +39,10 @@ public final class ContainerResourceMetricStatus {
         @Nullable Integer currentAverageUtilization,
         String currentAverageValue,
         String name) {
-        this.container = Objects.requireNonNull(container);
+        this.container = container;
         this.currentAverageUtilization = currentAverageUtilization;
-        this.currentAverageValue = Objects.requireNonNull(currentAverageValue);
-        this.name = Objects.requireNonNull(name);
+        this.currentAverageValue = currentAverageValue;
+        this.name = name;
     }
 
     /**

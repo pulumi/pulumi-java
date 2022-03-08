@@ -34,10 +34,10 @@ public final class GetIpamPreviewNextCidrResult {
         String id,
         String ipamPoolId,
         @Nullable Integer netmaskLength) {
-        this.cidr = Objects.requireNonNull(cidr);
+        this.cidr = cidr;
         this.disallowedCidrs = disallowedCidrs;
-        this.id = Objects.requireNonNull(id);
-        this.ipamPoolId = Objects.requireNonNull(ipamPoolId);
+        this.id = id;
+        this.ipamPoolId = ipamPoolId;
         this.netmaskLength = netmaskLength;
     }
 

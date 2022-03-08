@@ -49,10 +49,10 @@ public final class GuestPoliciesPackageRepositoryApt {
         @Nullable String gpgKey,
         String uri) {
         this.archiveType = archiveType;
-        this.components = Objects.requireNonNull(components);
-        this.distribution = Objects.requireNonNull(distribution);
+        this.components = components;
+        this.distribution = distribution;
         this.gpgKey = gpgKey;
-        this.uri = Objects.requireNonNull(uri);
+        this.uri = uri;
     }
 
     /**

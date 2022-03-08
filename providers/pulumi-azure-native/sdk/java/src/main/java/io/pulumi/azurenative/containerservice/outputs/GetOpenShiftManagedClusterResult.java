@@ -120,20 +120,20 @@ public final class GetOpenShiftManagedClusterResult {
         String type) {
         this.agentPoolProfiles = agentPoolProfiles;
         this.authProfile = authProfile;
-        this.clusterVersion = Objects.requireNonNull(clusterVersion);
-        this.fqdn = Objects.requireNonNull(fqdn);
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
+        this.clusterVersion = clusterVersion;
+        this.fqdn = fqdn;
+        this.id = id;
+        this.location = location;
         this.masterPoolProfile = masterPoolProfile;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.networkProfile = networkProfile;
-        this.openShiftVersion = Objects.requireNonNull(openShiftVersion);
+        this.openShiftVersion = openShiftVersion;
         this.plan = plan;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.publicHostname = Objects.requireNonNull(publicHostname);
+        this.provisioningState = provisioningState;
+        this.publicHostname = publicHostname;
         this.routerProfiles = routerProfiles;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

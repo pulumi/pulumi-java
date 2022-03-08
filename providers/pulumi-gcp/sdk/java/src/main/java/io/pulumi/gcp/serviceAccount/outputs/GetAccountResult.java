@@ -50,13 +50,13 @@ public final class GetAccountResult {
         String name,
         @Nullable String project,
         String uniqueId) {
-        this.accountId = Objects.requireNonNull(accountId);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.email = Objects.requireNonNull(email);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.accountId = accountId;
+        this.displayName = displayName;
+        this.email = email;
+        this.id = id;
+        this.name = name;
         this.project = project;
-        this.uniqueId = Objects.requireNonNull(uniqueId);
+        this.uniqueId = uniqueId;
     }
 
     public String getAccountId() {

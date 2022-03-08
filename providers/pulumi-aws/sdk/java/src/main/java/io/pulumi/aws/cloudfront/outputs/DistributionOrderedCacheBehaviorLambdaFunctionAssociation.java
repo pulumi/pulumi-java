@@ -34,9 +34,9 @@ public final class DistributionOrderedCacheBehaviorLambdaFunctionAssociation {
         String eventType,
         @Nullable Boolean includeBody,
         String lambdaArn) {
-        this.eventType = Objects.requireNonNull(eventType);
+        this.eventType = eventType;
         this.includeBody = includeBody;
-        this.lambdaArn = Objects.requireNonNull(lambdaArn);
+        this.lambdaArn = lambdaArn;
     }
 
     /**

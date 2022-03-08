@@ -21,7 +21,7 @@ public final class FilterMapFilter {
         FilterMapComparison comparison,
         @Nullable String key,
         @Nullable String value) {
-        this.comparison = Objects.requireNonNull(comparison);
+        this.comparison = comparison;
         this.key = key;
         this.value = value;
     }

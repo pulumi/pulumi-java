@@ -52,8 +52,8 @@ public final class HybridComputeSettingsPropertiesResponse {
         @Nullable String region,
         @Nullable String resourceGroupName,
         @Nullable ServicePrincipalPropertiesResponse servicePrincipal) {
-        this.autoProvision = Objects.requireNonNull(autoProvision);
-        this.hybridComputeProvisioningState = Objects.requireNonNull(hybridComputeProvisioningState);
+        this.autoProvision = autoProvision;
+        this.hybridComputeProvisioningState = hybridComputeProvisioningState;
         this.proxyServer = proxyServer;
         this.region = region;
         this.resourceGroupName = resourceGroupName;

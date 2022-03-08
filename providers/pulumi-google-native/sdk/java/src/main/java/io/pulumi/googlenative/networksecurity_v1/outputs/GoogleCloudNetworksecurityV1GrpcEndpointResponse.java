@@ -17,7 +17,7 @@ public final class GoogleCloudNetworksecurityV1GrpcEndpointResponse {
 
     @OutputCustomType.Constructor({"targetUri"})
     private GoogleCloudNetworksecurityV1GrpcEndpointResponse(String targetUri) {
-        this.targetUri = Objects.requireNonNull(targetUri);
+        this.targetUri = targetUri;
     }
 
     /**

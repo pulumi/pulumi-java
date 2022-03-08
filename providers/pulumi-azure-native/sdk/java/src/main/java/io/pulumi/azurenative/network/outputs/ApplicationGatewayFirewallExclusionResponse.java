@@ -30,9 +30,9 @@ public final class ApplicationGatewayFirewallExclusionResponse {
         String matchVariable,
         String selector,
         String selectorMatchOperator) {
-        this.matchVariable = Objects.requireNonNull(matchVariable);
-        this.selector = Objects.requireNonNull(selector);
-        this.selectorMatchOperator = Objects.requireNonNull(selectorMatchOperator);
+        this.matchVariable = matchVariable;
+        this.selector = selector;
+        this.selectorMatchOperator = selectorMatchOperator;
     }
 
     /**

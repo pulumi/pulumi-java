@@ -35,7 +35,7 @@ public final class SpotFleetRequestLaunchSpecificationEbsBlockDevice {
         @Nullable Integer volumeSize,
         @Nullable String volumeType) {
         this.deleteOnTermination = deleteOnTermination;
-        this.deviceName = Objects.requireNonNull(deviceName);
+        this.deviceName = deviceName;
         this.encrypted = encrypted;
         this.iops = iops;
         this.kmsKeyId = kmsKeyId;

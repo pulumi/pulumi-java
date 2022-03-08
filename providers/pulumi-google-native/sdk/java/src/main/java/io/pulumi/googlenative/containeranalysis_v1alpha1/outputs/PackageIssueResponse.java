@@ -39,11 +39,11 @@ public final class PackageIssueResponse {
         VulnerabilityLocationResponse fixedLocation,
         String packageType,
         String severityName) {
-        this.affectedLocation = Objects.requireNonNull(affectedLocation);
-        this.effectiveSeverity = Objects.requireNonNull(effectiveSeverity);
-        this.fixedLocation = Objects.requireNonNull(fixedLocation);
-        this.packageType = Objects.requireNonNull(packageType);
-        this.severityName = Objects.requireNonNull(severityName);
+        this.affectedLocation = affectedLocation;
+        this.effectiveSeverity = effectiveSeverity;
+        this.fixedLocation = fixedLocation;
+        this.packageType = packageType;
+        this.severityName = severityName;
     }
 
     /**

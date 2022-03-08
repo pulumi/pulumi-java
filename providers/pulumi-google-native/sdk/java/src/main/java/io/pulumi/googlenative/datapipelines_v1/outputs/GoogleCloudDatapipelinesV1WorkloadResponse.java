@@ -25,8 +25,8 @@ public final class GoogleCloudDatapipelinesV1WorkloadResponse {
     private GoogleCloudDatapipelinesV1WorkloadResponse(
         GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse dataflowFlexTemplateRequest,
         GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse dataflowLaunchTemplateRequest) {
-        this.dataflowFlexTemplateRequest = Objects.requireNonNull(dataflowFlexTemplateRequest);
-        this.dataflowLaunchTemplateRequest = Objects.requireNonNull(dataflowLaunchTemplateRequest);
+        this.dataflowFlexTemplateRequest = dataflowFlexTemplateRequest;
+        this.dataflowLaunchTemplateRequest = dataflowLaunchTemplateRequest;
     }
 
     /**

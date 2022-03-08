@@ -25,8 +25,8 @@ public final class ResourceMetricSource {
     private ResourceMetricSource(
         String name,
         MetricTarget target) {
-        this.name = Objects.requireNonNull(name);
-        this.target = Objects.requireNonNull(target);
+        this.name = name;
+        this.target = target;
     }
 
     /**

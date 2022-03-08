@@ -17,7 +17,7 @@ public final class VirtualNodeSpecListenerConnectionPoolHttp2 {
 
     @OutputCustomType.Constructor({"maxRequests"})
     private VirtualNodeSpecListenerConnectionPoolHttp2(Integer maxRequests) {
-        this.maxRequests = Objects.requireNonNull(maxRequests);
+        this.maxRequests = maxRequests;
     }
 
     /**

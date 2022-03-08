@@ -63,16 +63,16 @@ public final class GetFolderResult {
         String name,
         String organization,
         String parent) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.folder = Objects.requireNonNull(folder);
-        this.folderId = Objects.requireNonNull(folderId);
-        this.id = Objects.requireNonNull(id);
-        this.lifecycleState = Objects.requireNonNull(lifecycleState);
+        this.createTime = createTime;
+        this.displayName = displayName;
+        this.folder = folder;
+        this.folderId = folderId;
+        this.id = id;
+        this.lifecycleState = lifecycleState;
         this.lookupOrganization = lookupOrganization;
-        this.name = Objects.requireNonNull(name);
-        this.organization = Objects.requireNonNull(organization);
-        this.parent = Objects.requireNonNull(parent);
+        this.name = name;
+        this.organization = organization;
+        this.parent = parent;
     }
 
     /**

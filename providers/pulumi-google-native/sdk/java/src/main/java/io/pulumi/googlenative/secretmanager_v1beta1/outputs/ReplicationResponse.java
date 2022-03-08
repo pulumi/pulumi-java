@@ -25,8 +25,8 @@ public final class ReplicationResponse {
     private ReplicationResponse(
         AutomaticResponse automatic,
         UserManagedResponse userManaged) {
-        this.automatic = Objects.requireNonNull(automatic);
-        this.userManaged = Objects.requireNonNull(userManaged);
+        this.automatic = automatic;
+        this.userManaged = userManaged;
     }
 
     /**

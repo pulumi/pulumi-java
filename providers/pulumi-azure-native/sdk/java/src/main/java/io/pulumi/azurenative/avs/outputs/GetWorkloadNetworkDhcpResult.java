@@ -64,14 +64,14 @@ public final class GetWorkloadNetworkDhcpResult {
         @Nullable Double revision,
         List<String> segments,
         String type) {
-        this.dhcpType = Objects.requireNonNull(dhcpType);
+        this.dhcpType = dhcpType;
         this.displayName = displayName;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.id = id;
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.revision = revision;
-        this.segments = Objects.requireNonNull(segments);
-        this.type = Objects.requireNonNull(type);
+        this.segments = segments;
+        this.type = type;
     }
 
     /**

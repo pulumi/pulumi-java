@@ -43,7 +43,7 @@ public final class AzureBlobFSLocationResponse {
         this.fileName = fileName;
         this.fileSystem = fileSystem;
         this.folderPath = folderPath;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

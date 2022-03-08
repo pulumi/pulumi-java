@@ -37,10 +37,10 @@ public final class GetSessionResult {
         String createTime,
         Map<String,String> labels,
         String name) {
-        this.approximateLastUseTime = Objects.requireNonNull(approximateLastUseTime);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
+        this.approximateLastUseTime = approximateLastUseTime;
+        this.createTime = createTime;
+        this.labels = labels;
+        this.name = name;
     }
 
     /**

@@ -22,11 +22,11 @@ public final class GetClusterClusterCertificates {
         String clusterCsr,
         String hsmCertificate,
         String manufacturerHardwareCertificate) {
-        this.awsHardwareCertificate = Objects.requireNonNull(awsHardwareCertificate);
-        this.clusterCertificate = Objects.requireNonNull(clusterCertificate);
-        this.clusterCsr = Objects.requireNonNull(clusterCsr);
-        this.hsmCertificate = Objects.requireNonNull(hsmCertificate);
-        this.manufacturerHardwareCertificate = Objects.requireNonNull(manufacturerHardwareCertificate);
+        this.awsHardwareCertificate = awsHardwareCertificate;
+        this.clusterCertificate = clusterCertificate;
+        this.clusterCsr = clusterCsr;
+        this.hsmCertificate = hsmCertificate;
+        this.manufacturerHardwareCertificate = manufacturerHardwareCertificate;
     }
 
     public String getAwsHardwareCertificate() {

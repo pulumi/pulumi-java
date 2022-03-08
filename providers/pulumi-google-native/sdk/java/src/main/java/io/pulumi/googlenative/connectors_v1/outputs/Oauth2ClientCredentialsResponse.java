@@ -25,8 +25,8 @@ public final class Oauth2ClientCredentialsResponse {
     private Oauth2ClientCredentialsResponse(
         String clientId,
         SecretResponse clientSecret) {
-        this.clientId = Objects.requireNonNull(clientId);
-        this.clientSecret = Objects.requireNonNull(clientSecret);
+        this.clientId = clientId;
+        this.clientSecret = clientSecret;
     }
 
     /**

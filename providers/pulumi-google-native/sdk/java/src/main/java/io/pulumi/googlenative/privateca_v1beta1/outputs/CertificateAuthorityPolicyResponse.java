@@ -60,13 +60,13 @@ public final class CertificateAuthorityPolicyResponse {
         AllowedSubjectAltNamesResponse allowedSans,
         String maximumLifetime,
         ReusableConfigWrapperResponse overwriteConfigValues) {
-        this.allowedCommonNames = Objects.requireNonNull(allowedCommonNames);
-        this.allowedConfigList = Objects.requireNonNull(allowedConfigList);
-        this.allowedIssuanceModes = Objects.requireNonNull(allowedIssuanceModes);
-        this.allowedLocationsAndOrganizations = Objects.requireNonNull(allowedLocationsAndOrganizations);
-        this.allowedSans = Objects.requireNonNull(allowedSans);
-        this.maximumLifetime = Objects.requireNonNull(maximumLifetime);
-        this.overwriteConfigValues = Objects.requireNonNull(overwriteConfigValues);
+        this.allowedCommonNames = allowedCommonNames;
+        this.allowedConfigList = allowedConfigList;
+        this.allowedIssuanceModes = allowedIssuanceModes;
+        this.allowedLocationsAndOrganizations = allowedLocationsAndOrganizations;
+        this.allowedSans = allowedSans;
+        this.maximumLifetime = maximumLifetime;
+        this.overwriteConfigValues = overwriteConfigValues;
     }
 
     /**

@@ -31,9 +31,9 @@ public final class GoogleCloudDatalabelingV1beta1AnnotationSpecResponse {
         String description,
         String displayName,
         Integer index) {
-        this.description = Objects.requireNonNull(description);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.index = Objects.requireNonNull(index);
+        this.description = description;
+        this.displayName = displayName;
+        this.index = index;
     }
 
     /**

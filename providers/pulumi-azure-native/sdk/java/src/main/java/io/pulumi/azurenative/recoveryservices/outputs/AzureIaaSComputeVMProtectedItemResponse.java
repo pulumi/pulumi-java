@@ -198,7 +198,7 @@ public final class AzureIaaSComputeVMProtectedItemResponse {
         this.lastRecoveryPoint = lastRecoveryPoint;
         this.policyId = policyId;
         this.protectedItemDataId = protectedItemDataId;
-        this.protectedItemType = Objects.requireNonNull(protectedItemType);
+        this.protectedItemType = protectedItemType;
         this.protectionState = protectionState;
         this.protectionStatus = protectionStatus;
         this.sourceResourceId = sourceResourceId;

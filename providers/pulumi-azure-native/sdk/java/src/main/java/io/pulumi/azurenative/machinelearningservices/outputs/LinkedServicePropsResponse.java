@@ -40,7 +40,7 @@ public final class LinkedServicePropsResponse {
         @Nullable String modifiedTime) {
         this.createdTime = createdTime;
         this.linkType = linkType;
-        this.linkedServiceResourceId = Objects.requireNonNull(linkedServiceResourceId);
+        this.linkedServiceResourceId = linkedServiceResourceId;
         this.modifiedTime = modifiedTime;
     }
 

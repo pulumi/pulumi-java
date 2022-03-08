@@ -41,9 +41,9 @@ public final class TumblingWindowTriggerDependencyReferenceResponse {
         @Nullable String size,
         String type) {
         this.offset = offset;
-        this.referenceTrigger = Objects.requireNonNull(referenceTrigger);
+        this.referenceTrigger = referenceTrigger;
         this.size = size;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

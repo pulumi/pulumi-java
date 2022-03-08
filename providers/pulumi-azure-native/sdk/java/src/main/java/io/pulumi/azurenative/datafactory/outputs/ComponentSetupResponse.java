@@ -36,9 +36,9 @@ public final class ComponentSetupResponse {
         String componentName,
         @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> licenseKey,
         String type) {
-        this.componentName = Objects.requireNonNull(componentName);
+        this.componentName = componentName;
         this.licenseKey = licenseKey;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

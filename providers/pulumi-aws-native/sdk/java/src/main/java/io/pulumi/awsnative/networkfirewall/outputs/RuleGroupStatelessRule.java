@@ -17,8 +17,8 @@ public final class RuleGroupStatelessRule {
     private RuleGroupStatelessRule(
         Integer priority,
         RuleGroupRuleDefinition ruleDefinition) {
-        this.priority = Objects.requireNonNull(priority);
-        this.ruleDefinition = Objects.requireNonNull(ruleDefinition);
+        this.priority = priority;
+        this.ruleDefinition = ruleDefinition;
     }
 
     public Integer getPriority() {

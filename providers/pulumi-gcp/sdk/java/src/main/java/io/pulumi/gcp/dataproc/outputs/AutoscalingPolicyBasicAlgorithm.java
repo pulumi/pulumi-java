@@ -31,7 +31,7 @@ public final class AutoscalingPolicyBasicAlgorithm {
         @Nullable String cooldownPeriod,
         AutoscalingPolicyBasicAlgorithmYarnConfig yarnConfig) {
         this.cooldownPeriod = cooldownPeriod;
-        this.yarnConfig = Objects.requireNonNull(yarnConfig);
+        this.yarnConfig = yarnConfig;
     }
 
     /**

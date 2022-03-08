@@ -29,7 +29,7 @@ public final class CertificateConfigSubjectConfig {
     private CertificateConfigSubjectConfig(
         CertificateConfigSubjectConfigSubject subject,
         @Nullable CertificateConfigSubjectConfigSubjectAltName subjectAltName) {
-        this.subject = Objects.requireNonNull(subject);
+        this.subject = subject;
         this.subjectAltName = subjectAltName;
     }
 

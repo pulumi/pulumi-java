@@ -157,17 +157,17 @@ public final class GetDatabaseBlobAuditingPolicyResult {
         @Nullable String storageEndpoint,
         String type) {
         this.auditActionsAndGroups = auditActionsAndGroups;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.isAzureMonitorTargetEnabled = isAzureMonitorTargetEnabled;
         this.isStorageSecondaryKeyInUse = isStorageSecondaryKeyInUse;
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
+        this.kind = kind;
+        this.name = name;
         this.queueDelayMs = queueDelayMs;
         this.retentionDays = retentionDays;
-        this.state = Objects.requireNonNull(state);
+        this.state = state;
         this.storageAccountSubscriptionId = storageAccountSubscriptionId;
         this.storageEndpoint = storageEndpoint;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

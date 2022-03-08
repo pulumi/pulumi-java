@@ -51,12 +51,12 @@ public final class AllowlistCustomAlertRuleResponse {
         Boolean isEnabled,
         String ruleType,
         String valueType) {
-        this.allowlistValues = Objects.requireNonNull(allowlistValues);
-        this.description = Objects.requireNonNull(description);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.isEnabled = Objects.requireNonNull(isEnabled);
-        this.ruleType = Objects.requireNonNull(ruleType);
-        this.valueType = Objects.requireNonNull(valueType);
+        this.allowlistValues = allowlistValues;
+        this.description = description;
+        this.displayName = displayName;
+        this.isEnabled = isEnabled;
+        this.ruleType = ruleType;
+        this.valueType = valueType;
     }
 
     /**

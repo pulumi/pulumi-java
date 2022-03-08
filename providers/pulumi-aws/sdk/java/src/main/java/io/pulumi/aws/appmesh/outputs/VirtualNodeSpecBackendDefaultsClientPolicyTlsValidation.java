@@ -28,7 +28,7 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidation {
         @Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNames subjectAlternativeNames,
         VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrust trust) {
         this.subjectAlternativeNames = subjectAlternativeNames;
-        this.trust = Objects.requireNonNull(trust);
+        this.trust = trust;
     }
 
     /**

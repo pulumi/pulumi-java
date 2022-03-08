@@ -37,10 +37,10 @@ public final class TaskStatusResponse {
         Integer attemptResponseCount,
         AttemptStatusResponse firstAttemptStatus,
         AttemptStatusResponse lastAttemptStatus) {
-        this.attemptDispatchCount = Objects.requireNonNull(attemptDispatchCount);
-        this.attemptResponseCount = Objects.requireNonNull(attemptResponseCount);
-        this.firstAttemptStatus = Objects.requireNonNull(firstAttemptStatus);
-        this.lastAttemptStatus = Objects.requireNonNull(lastAttemptStatus);
+        this.attemptDispatchCount = attemptDispatchCount;
+        this.attemptResponseCount = attemptResponseCount;
+        this.firstAttemptStatus = firstAttemptStatus;
+        this.lastAttemptStatus = lastAttemptStatus;
     }
 
     /**

@@ -24,8 +24,8 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     private ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSource(
         String bucketArn,
         String fileKey) {
-        this.bucketArn = Objects.requireNonNull(bucketArn);
-        this.fileKey = Objects.requireNonNull(fileKey);
+        this.bucketArn = bucketArn;
+        this.fileKey = fileKey;
     }
 
     /**

@@ -39,13 +39,13 @@ public final class GetOutpostsResult {
         List<String> ids,
         String ownerId,
         String siteId) {
-        this.arns = Objects.requireNonNull(arns);
-        this.availabilityZone = Objects.requireNonNull(availabilityZone);
-        this.availabilityZoneId = Objects.requireNonNull(availabilityZoneId);
-        this.id = Objects.requireNonNull(id);
-        this.ids = Objects.requireNonNull(ids);
-        this.ownerId = Objects.requireNonNull(ownerId);
-        this.siteId = Objects.requireNonNull(siteId);
+        this.arns = arns;
+        this.availabilityZone = availabilityZone;
+        this.availabilityZoneId = availabilityZoneId;
+        this.id = id;
+        this.ids = ids;
+        this.ownerId = ownerId;
+        this.siteId = siteId;
     }
 
     /**

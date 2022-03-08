@@ -56,13 +56,13 @@ public final class RevisionSpecResponse {
         String serviceAccountName,
         Integer timeoutSeconds,
         List<VolumeResponse> volumes) {
-        this.containerConcurrency = Objects.requireNonNull(containerConcurrency);
-        this.containers = Objects.requireNonNull(containers);
-        this.enableServiceLinks = Objects.requireNonNull(enableServiceLinks);
-        this.imagePullSecrets = Objects.requireNonNull(imagePullSecrets);
-        this.serviceAccountName = Objects.requireNonNull(serviceAccountName);
-        this.timeoutSeconds = Objects.requireNonNull(timeoutSeconds);
-        this.volumes = Objects.requireNonNull(volumes);
+        this.containerConcurrency = containerConcurrency;
+        this.containers = containers;
+        this.enableServiceLinks = enableServiceLinks;
+        this.imagePullSecrets = imagePullSecrets;
+        this.serviceAccountName = serviceAccountName;
+        this.timeoutSeconds = timeoutSeconds;
+        this.volumes = volumes;
     }
 
     /**

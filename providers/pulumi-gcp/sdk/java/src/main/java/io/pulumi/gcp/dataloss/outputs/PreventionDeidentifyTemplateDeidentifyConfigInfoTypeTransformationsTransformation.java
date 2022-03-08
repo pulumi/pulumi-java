@@ -31,7 +31,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
         @Nullable List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoType> infoTypes,
         PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformation primitiveTransformation) {
         this.infoTypes = infoTypes;
-        this.primitiveTransformation = Objects.requireNonNull(primitiveTransformation);
+        this.primitiveTransformation = primitiveTransformation;
     }
 
     /**

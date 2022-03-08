@@ -70,7 +70,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPol
         this.allowOrigins = allowOrigins;
         this.disabled = disabled;
         this.exposeHeaders = exposeHeaders;
-        this.maxAge = Objects.requireNonNull(maxAge);
+        this.maxAge = maxAge;
     }
 
     /**

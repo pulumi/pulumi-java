@@ -49,12 +49,12 @@ public final class OwnerReferenceResponse {
         String kind,
         String name,
         String uid) {
-        this.apiVersion = Objects.requireNonNull(apiVersion);
-        this.blockOwnerDeletion = Objects.requireNonNull(blockOwnerDeletion);
-        this.controller = Objects.requireNonNull(controller);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.uid = Objects.requireNonNull(uid);
+        this.apiVersion = apiVersion;
+        this.blockOwnerDeletion = blockOwnerDeletion;
+        this.controller = controller;
+        this.kind = kind;
+        this.name = name;
+        this.uid = uid;
     }
 
     /**

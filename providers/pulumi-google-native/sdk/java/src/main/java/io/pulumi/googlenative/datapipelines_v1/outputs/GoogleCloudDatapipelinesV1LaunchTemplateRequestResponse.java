@@ -44,11 +44,11 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse {
         String location,
         String project,
         Boolean validateOnly) {
-        this.gcsPath = Objects.requireNonNull(gcsPath);
-        this.launchParameters = Objects.requireNonNull(launchParameters);
-        this.location = Objects.requireNonNull(location);
-        this.project = Objects.requireNonNull(project);
-        this.validateOnly = Objects.requireNonNull(validateOnly);
+        this.gcsPath = gcsPath;
+        this.launchParameters = launchParameters;
+        this.location = location;
+        this.project = project;
+        this.validateOnly = validateOnly;
     }
 
     /**

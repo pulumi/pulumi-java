@@ -27,10 +27,10 @@ public final class SuiteDefinitionConfigurationProperties {
         @Nullable Boolean intendedForQualification,
         String rootGroup,
         @Nullable String suiteDefinitionName) {
-        this.devicePermissionRoleArn = Objects.requireNonNull(devicePermissionRoleArn);
+        this.devicePermissionRoleArn = devicePermissionRoleArn;
         this.devices = devices;
         this.intendedForQualification = intendedForQualification;
-        this.rootGroup = Objects.requireNonNull(rootGroup);
+        this.rootGroup = rootGroup;
         this.suiteDefinitionName = suiteDefinitionName;
     }
 

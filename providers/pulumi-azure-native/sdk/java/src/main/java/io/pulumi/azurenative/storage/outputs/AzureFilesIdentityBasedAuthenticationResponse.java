@@ -28,7 +28,7 @@ public final class AzureFilesIdentityBasedAuthenticationResponse {
         @Nullable ActiveDirectoryPropertiesResponse activeDirectoryProperties,
         String directoryServiceOptions) {
         this.activeDirectoryProperties = activeDirectoryProperties;
-        this.directoryServiceOptions = Objects.requireNonNull(directoryServiceOptions);
+        this.directoryServiceOptions = directoryServiceOptions;
     }
 
     /**

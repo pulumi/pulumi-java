@@ -70,10 +70,10 @@ public final class CustomResourceDefinitionVersion {
         this.additionalPrinterColumns = additionalPrinterColumns;
         this.deprecated = deprecated;
         this.deprecationWarning = deprecationWarning;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.schema = schema;
-        this.served = Objects.requireNonNull(served);
-        this.storage = Objects.requireNonNull(storage);
+        this.served = served;
+        this.storage = storage;
         this.subresources = subresources;
     }
 

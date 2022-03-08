@@ -13,7 +13,7 @@ public final class RuleGroupNotStatement {
 
     @OutputCustomType.Constructor({"statement"})
     private RuleGroupNotStatement(RuleGroupStatement statement) {
-        this.statement = Objects.requireNonNull(statement);
+        this.statement = statement;
     }
 
     public RuleGroupStatement getStatement() {

@@ -28,7 +28,7 @@ public final class CustomResourceConversion {
     private CustomResourceConversion(
         String strategy,
         @Nullable WebhookConversion webhook) {
-        this.strategy = Objects.requireNonNull(strategy);
+        this.strategy = strategy;
         this.webhook = webhook;
     }
 

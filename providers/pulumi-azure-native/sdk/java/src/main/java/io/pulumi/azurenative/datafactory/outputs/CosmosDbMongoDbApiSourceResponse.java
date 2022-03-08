@@ -86,7 +86,7 @@ public final class CosmosDbMongoDbApiSourceResponse {
         this.queryTimeout = queryTimeout;
         this.sourceRetryCount = sourceRetryCount;
         this.sourceRetryWait = sourceRetryWait;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

@@ -42,11 +42,11 @@ public final class GetSnapshotResult {
         String name,
         String sizeBytes,
         String storageVolume) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.description = Objects.requireNonNull(description);
-        this.name = Objects.requireNonNull(name);
-        this.sizeBytes = Objects.requireNonNull(sizeBytes);
-        this.storageVolume = Objects.requireNonNull(storageVolume);
+        this.createTime = createTime;
+        this.description = description;
+        this.name = name;
+        this.sizeBytes = sizeBytes;
+        this.storageVolume = storageVolume;
     }
 
     /**

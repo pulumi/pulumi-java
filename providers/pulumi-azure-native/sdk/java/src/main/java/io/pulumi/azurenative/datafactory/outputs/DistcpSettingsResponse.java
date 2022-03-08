@@ -33,8 +33,8 @@ public final class DistcpSettingsResponse {
         Object resourceManagerEndpoint,
         Object tempScriptPath) {
         this.distcpOptions = distcpOptions;
-        this.resourceManagerEndpoint = Objects.requireNonNull(resourceManagerEndpoint);
-        this.tempScriptPath = Objects.requireNonNull(tempScriptPath);
+        this.resourceManagerEndpoint = resourceManagerEndpoint;
+        this.tempScriptPath = tempScriptPath;
     }
 
     /**

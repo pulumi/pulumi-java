@@ -37,7 +37,7 @@ public final class DatabaseBackupSettingResponse {
         @Nullable String name) {
         this.connectionString = connectionString;
         this.connectionStringName = connectionStringName;
-        this.databaseType = Objects.requireNonNull(databaseType);
+        this.databaseType = databaseType;
         this.name = name;
     }
 

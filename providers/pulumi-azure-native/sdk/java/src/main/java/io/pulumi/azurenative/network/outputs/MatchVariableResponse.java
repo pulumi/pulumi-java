@@ -27,7 +27,7 @@ public final class MatchVariableResponse {
         @Nullable String selector,
         String variableName) {
         this.selector = selector;
-        this.variableName = Objects.requireNonNull(variableName);
+        this.variableName = variableName;
     }
 
     /**

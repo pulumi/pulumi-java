@@ -18,7 +18,7 @@ public final class ImmediateCopyOptionResponse {
 
     @OutputCustomType.Constructor({"objectType"})
     private ImmediateCopyOptionResponse(String objectType) {
-        this.objectType = Objects.requireNonNull(objectType);
+        this.objectType = objectType;
     }
 
     /**

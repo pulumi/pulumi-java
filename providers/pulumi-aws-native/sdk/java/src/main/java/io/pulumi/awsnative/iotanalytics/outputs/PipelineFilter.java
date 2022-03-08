@@ -20,8 +20,8 @@ public final class PipelineFilter {
         String filter,
         String name,
         @Nullable String next) {
-        this.filter = Objects.requireNonNull(filter);
-        this.name = Objects.requireNonNull(name);
+        this.filter = filter;
+        this.name = name;
         this.next = next;
     }
 

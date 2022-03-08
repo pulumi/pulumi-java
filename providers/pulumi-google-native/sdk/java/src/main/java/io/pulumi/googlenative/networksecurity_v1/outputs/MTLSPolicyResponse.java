@@ -18,7 +18,7 @@ public final class MTLSPolicyResponse {
 
     @OutputCustomType.Constructor({"clientValidationCa"})
     private MTLSPolicyResponse(List<ValidationCAResponse> clientValidationCa) {
-        this.clientValidationCa = Objects.requireNonNull(clientValidationCa);
+        this.clientValidationCa = clientValidationCa;
     }
 
     /**

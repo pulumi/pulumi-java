@@ -24,8 +24,8 @@ public final class SecretVersionResponse {
     private SecretVersionResponse(
         String path,
         String version) {
-        this.path = Objects.requireNonNull(path);
-        this.version = Objects.requireNonNull(version);
+        this.path = path;
+        this.version = version;
     }
 
     /**

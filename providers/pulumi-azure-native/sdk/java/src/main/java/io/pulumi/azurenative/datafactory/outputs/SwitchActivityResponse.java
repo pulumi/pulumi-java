@@ -110,9 +110,9 @@ public final class SwitchActivityResponse {
         this.defaultActivities = defaultActivities;
         this.dependsOn = dependsOn;
         this.description = description;
-        this.name = Objects.requireNonNull(name);
-        this.on = Objects.requireNonNull(on);
-        this.type = Objects.requireNonNull(type);
+        this.name = name;
+        this.on = on;
+        this.type = type;
         this.userProperties = userProperties;
     }
 

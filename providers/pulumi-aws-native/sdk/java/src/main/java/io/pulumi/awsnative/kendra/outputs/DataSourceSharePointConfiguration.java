@@ -50,10 +50,10 @@ public final class DataSourceSharePointConfiguration {
         this.exclusionPatterns = exclusionPatterns;
         this.fieldMappings = fieldMappings;
         this.inclusionPatterns = inclusionPatterns;
-        this.secretArn = Objects.requireNonNull(secretArn);
-        this.sharePointVersion = Objects.requireNonNull(sharePointVersion);
+        this.secretArn = secretArn;
+        this.sharePointVersion = sharePointVersion;
         this.sslCertificateS3Path = sslCertificateS3Path;
-        this.urls = Objects.requireNonNull(urls);
+        this.urls = urls;
         this.useChangeLog = useChangeLog;
         this.vpcConfiguration = vpcConfiguration;
     }

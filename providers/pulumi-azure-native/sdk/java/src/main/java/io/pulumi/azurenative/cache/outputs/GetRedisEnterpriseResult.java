@@ -96,18 +96,18 @@ public final class GetRedisEnterpriseResult {
         @Nullable Map<String,String> tags,
         String type,
         @Nullable List<String> zones) {
-        this.hostName = Objects.requireNonNull(hostName);
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
+        this.hostName = hostName;
+        this.id = id;
+        this.location = location;
         this.minimumTlsVersion = minimumTlsVersion;
-        this.name = Objects.requireNonNull(name);
-        this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.redisVersion = Objects.requireNonNull(redisVersion);
-        this.resourceState = Objects.requireNonNull(resourceState);
-        this.sku = Objects.requireNonNull(sku);
+        this.name = name;
+        this.privateEndpointConnections = privateEndpointConnections;
+        this.provisioningState = provisioningState;
+        this.redisVersion = redisVersion;
+        this.resourceState = resourceState;
+        this.sku = sku;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.zones = zones;
     }
 

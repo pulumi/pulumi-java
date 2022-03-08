@@ -26,8 +26,8 @@ public final class TextStreamResponse {
     private TextStreamResponse(
         String codec,
         List<TextMappingResponse> mapping) {
-        this.codec = Objects.requireNonNull(codec);
-        this.mapping = Objects.requireNonNull(mapping);
+        this.codec = codec;
+        this.mapping = mapping;
     }
 
     /**

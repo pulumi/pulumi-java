@@ -33,7 +33,7 @@ public final class RadiusServerResponse {
         String radiusServerAddress,
         @Nullable Double radiusServerScore,
         @Nullable String radiusServerSecret) {
-        this.radiusServerAddress = Objects.requireNonNull(radiusServerAddress);
+        this.radiusServerAddress = radiusServerAddress;
         this.radiusServerScore = radiusServerScore;
         this.radiusServerSecret = radiusServerSecret;
     }

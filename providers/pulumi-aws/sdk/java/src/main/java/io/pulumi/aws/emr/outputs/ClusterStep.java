@@ -31,9 +31,9 @@ public final class ClusterStep {
         String actionOnFailure,
         ClusterStepHadoopJarStep hadoopJarStep,
         String name) {
-        this.actionOnFailure = Objects.requireNonNull(actionOnFailure);
-        this.hadoopJarStep = Objects.requireNonNull(hadoopJarStep);
-        this.name = Objects.requireNonNull(name);
+        this.actionOnFailure = actionOnFailure;
+        this.hadoopJarStep = hadoopJarStep;
+        this.name = name;
     }
 
     /**

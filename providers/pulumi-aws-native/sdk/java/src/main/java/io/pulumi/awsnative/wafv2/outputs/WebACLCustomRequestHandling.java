@@ -18,7 +18,7 @@ public final class WebACLCustomRequestHandling {
 
     @OutputCustomType.Constructor({"insertHeaders"})
     private WebACLCustomRequestHandling(List<WebACLCustomHTTPHeader> insertHeaders) {
-        this.insertHeaders = Objects.requireNonNull(insertHeaders);
+        this.insertHeaders = insertHeaders;
     }
 
     /**

@@ -35,7 +35,7 @@ public final class CapacityReservationInstanceViewWithNameResponse {
         String name,
         @Nullable List<InstanceViewStatusResponse> statuses,
         @Nullable CapacityReservationUtilizationResponse utilizationInfo) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.statuses = statuses;
         this.utilizationInfo = utilizationInfo;
     }

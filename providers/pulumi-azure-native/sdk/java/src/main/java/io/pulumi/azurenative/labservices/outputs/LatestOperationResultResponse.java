@@ -48,12 +48,12 @@ public final class LatestOperationResultResponse {
         String operationUrl,
         String requestUri,
         String status) {
-        this.errorCode = Objects.requireNonNull(errorCode);
-        this.errorMessage = Objects.requireNonNull(errorMessage);
-        this.httpMethod = Objects.requireNonNull(httpMethod);
-        this.operationUrl = Objects.requireNonNull(operationUrl);
-        this.requestUri = Objects.requireNonNull(requestUri);
-        this.status = Objects.requireNonNull(status);
+        this.errorCode = errorCode;
+        this.errorMessage = errorMessage;
+        this.httpMethod = httpMethod;
+        this.operationUrl = operationUrl;
+        this.requestUri = requestUri;
+        this.status = status;
     }
 
     /**

@@ -32,9 +32,9 @@ public final class UpcomingMaintenanceResponse {
         Boolean canReschedule,
         UpcomingMaintenanceTimeWindowResponse startTimeWindow,
         String type) {
-        this.canReschedule = Objects.requireNonNull(canReschedule);
-        this.startTimeWindow = Objects.requireNonNull(startTimeWindow);
-        this.type = Objects.requireNonNull(type);
+        this.canReschedule = canReschedule;
+        this.startTimeWindow = startTimeWindow;
+        this.type = type;
     }
 
     /**

@@ -31,9 +31,9 @@ public final class ErrorResponse {
         String context,
         String payload,
         StackTraceResponse stackTrace) {
-        this.context = Objects.requireNonNull(context);
-        this.payload = Objects.requireNonNull(payload);
-        this.stackTrace = Objects.requireNonNull(stackTrace);
+        this.context = context;
+        this.payload = payload;
+        this.stackTrace = stackTrace;
     }
 
     /**

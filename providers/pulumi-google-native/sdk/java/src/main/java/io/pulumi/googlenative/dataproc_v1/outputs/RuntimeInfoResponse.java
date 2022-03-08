@@ -31,9 +31,9 @@ public final class RuntimeInfoResponse {
         String diagnosticOutputUri,
         Map<String,String> endpoints,
         String outputUri) {
-        this.diagnosticOutputUri = Objects.requireNonNull(diagnosticOutputUri);
-        this.endpoints = Objects.requireNonNull(endpoints);
-        this.outputUri = Objects.requireNonNull(outputUri);
+        this.diagnosticOutputUri = diagnosticOutputUri;
+        this.endpoints = endpoints;
+        this.outputUri = outputUri;
     }
 
     /**

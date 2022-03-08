@@ -30,9 +30,9 @@ public final class PgpSignedAttestationResponse {
         String contentType,
         String pgpKeyId,
         String signature) {
-        this.contentType = Objects.requireNonNull(contentType);
-        this.pgpKeyId = Objects.requireNonNull(pgpKeyId);
-        this.signature = Objects.requireNonNull(signature);
+        this.contentType = contentType;
+        this.pgpKeyId = pgpKeyId;
+        this.signature = signature;
     }
 
     /**

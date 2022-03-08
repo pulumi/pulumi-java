@@ -43,8 +43,8 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseEr
         String resultType) {
         this.errorMessage = errorMessage;
         this.events = events;
-        this.id = Objects.requireNonNull(id);
-        this.resultType = Objects.requireNonNull(resultType);
+        this.id = id;
+        this.resultType = resultType;
     }
 
     /**

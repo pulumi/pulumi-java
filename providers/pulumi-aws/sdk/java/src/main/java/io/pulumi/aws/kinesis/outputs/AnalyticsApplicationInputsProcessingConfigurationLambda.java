@@ -24,8 +24,8 @@ public final class AnalyticsApplicationInputsProcessingConfigurationLambda {
     private AnalyticsApplicationInputsProcessingConfigurationLambda(
         String resourceArn,
         String roleArn) {
-        this.resourceArn = Objects.requireNonNull(resourceArn);
-        this.roleArn = Objects.requireNonNull(roleArn);
+        this.resourceArn = resourceArn;
+        this.roleArn = roleArn;
     }
 
     /**

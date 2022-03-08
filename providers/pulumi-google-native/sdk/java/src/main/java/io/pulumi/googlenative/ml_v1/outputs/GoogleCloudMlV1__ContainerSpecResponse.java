@@ -45,11 +45,11 @@ public final class GoogleCloudMlV1__ContainerSpecResponse {
         List<GoogleCloudMlV1__EnvVarResponse> env,
         String image,
         List<GoogleCloudMlV1__ContainerPortResponse> ports) {
-        this.args = Objects.requireNonNull(args);
-        this.command = Objects.requireNonNull(command);
-        this.env = Objects.requireNonNull(env);
-        this.image = Objects.requireNonNull(image);
-        this.ports = Objects.requireNonNull(ports);
+        this.args = args;
+        this.command = command;
+        this.env = env;
+        this.image = image;
+        this.ports = ports;
     }
 
     /**

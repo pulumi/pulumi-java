@@ -34,7 +34,7 @@ public final class TriggerDestinationCloudRunService {
         String service) {
         this.path = path;
         this.region = region;
-        this.service = Objects.requireNonNull(service);
+        this.service = service;
     }
 
     /**

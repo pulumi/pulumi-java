@@ -25,8 +25,8 @@ public final class GoogleCloudDialogflowCxV3AudioInputResponse {
     private GoogleCloudDialogflowCxV3AudioInputResponse(
         String audio,
         GoogleCloudDialogflowCxV3InputAudioConfigResponse config) {
-        this.audio = Objects.requireNonNull(audio);
-        this.config = Objects.requireNonNull(config);
+        this.audio = audio;
+        this.config = config;
     }
 
     /**

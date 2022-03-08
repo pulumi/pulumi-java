@@ -140,26 +140,26 @@ public final class GetPredictionResult {
         PredictionResponseSystemGeneratedEntities systemGeneratedEntities,
         String tenantId,
         String type) {
-        this.autoAnalyze = Objects.requireNonNull(autoAnalyze);
+        this.autoAnalyze = autoAnalyze;
         this.description = description;
         this.displayName = displayName;
         this.grades = grades;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.involvedInteractionTypes = involvedInteractionTypes;
         this.involvedKpiTypes = involvedKpiTypes;
         this.involvedRelationships = involvedRelationships;
-        this.mappings = Objects.requireNonNull(mappings);
-        this.name = Objects.requireNonNull(name);
-        this.negativeOutcomeExpression = Objects.requireNonNull(negativeOutcomeExpression);
-        this.positiveOutcomeExpression = Objects.requireNonNull(positiveOutcomeExpression);
+        this.mappings = mappings;
+        this.name = name;
+        this.negativeOutcomeExpression = negativeOutcomeExpression;
+        this.positiveOutcomeExpression = positiveOutcomeExpression;
         this.predictionName = predictionName;
-        this.primaryProfileType = Objects.requireNonNull(primaryProfileType);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.scopeExpression = Objects.requireNonNull(scopeExpression);
-        this.scoreLabel = Objects.requireNonNull(scoreLabel);
-        this.systemGeneratedEntities = Objects.requireNonNull(systemGeneratedEntities);
-        this.tenantId = Objects.requireNonNull(tenantId);
-        this.type = Objects.requireNonNull(type);
+        this.primaryProfileType = primaryProfileType;
+        this.provisioningState = provisioningState;
+        this.scopeExpression = scopeExpression;
+        this.scoreLabel = scoreLabel;
+        this.systemGeneratedEntities = systemGeneratedEntities;
+        this.tenantId = tenantId;
+        this.type = type;
     }
 
     /**

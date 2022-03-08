@@ -17,7 +17,7 @@ public final class GoogleCloudDialogflowCxV3EventInputResponse {
 
     @OutputCustomType.Constructor({"event"})
     private GoogleCloudDialogflowCxV3EventInputResponse(String event) {
-        this.event = Objects.requireNonNull(event);
+        this.event = event;
     }
 
     /**

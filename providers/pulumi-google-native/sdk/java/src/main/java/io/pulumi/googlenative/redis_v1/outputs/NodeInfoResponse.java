@@ -17,7 +17,7 @@ public final class NodeInfoResponse {
 
     @OutputCustomType.Constructor({"zone"})
     private NodeInfoResponse(String zone) {
-        this.zone = Objects.requireNonNull(zone);
+        this.zone = zone;
     }
 
     /**

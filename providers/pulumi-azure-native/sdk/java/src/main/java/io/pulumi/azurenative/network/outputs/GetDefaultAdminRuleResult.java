@@ -127,24 +127,24 @@ public final class GetDefaultAdminRuleResult {
         List<AddressPrefixItemResponse> sources,
         SystemDataResponse systemData,
         String type) {
-        this.access = Objects.requireNonNull(access);
-        this.description = Objects.requireNonNull(description);
-        this.destinationPortRanges = Objects.requireNonNull(destinationPortRanges);
-        this.destinations = Objects.requireNonNull(destinations);
-        this.direction = Objects.requireNonNull(direction);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.etag = Objects.requireNonNull(etag);
+        this.access = access;
+        this.description = description;
+        this.destinationPortRanges = destinationPortRanges;
+        this.destinations = destinations;
+        this.direction = direction;
+        this.displayName = displayName;
+        this.etag = etag;
         this.flag = flag;
-        this.id = Objects.requireNonNull(id);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.priority = Objects.requireNonNull(priority);
-        this.protocol = Objects.requireNonNull(protocol);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.sourcePortRanges = Objects.requireNonNull(sourcePortRanges);
-        this.sources = Objects.requireNonNull(sources);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.id = id;
+        this.kind = kind;
+        this.name = name;
+        this.priority = priority;
+        this.protocol = protocol;
+        this.provisioningState = provisioningState;
+        this.sourcePortRanges = sourcePortRanges;
+        this.sources = sources;
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

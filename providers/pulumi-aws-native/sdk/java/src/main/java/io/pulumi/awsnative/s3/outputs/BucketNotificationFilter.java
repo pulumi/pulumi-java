@@ -13,7 +13,7 @@ public final class BucketNotificationFilter {
 
     @OutputCustomType.Constructor({"s3Key"})
     private BucketNotificationFilter(BucketS3KeyFilter s3Key) {
-        this.s3Key = Objects.requireNonNull(s3Key);
+        this.s3Key = s3Key;
     }
 
     public BucketS3KeyFilter getS3Key() {

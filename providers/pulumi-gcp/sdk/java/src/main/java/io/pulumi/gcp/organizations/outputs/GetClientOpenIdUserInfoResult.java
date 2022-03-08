@@ -24,8 +24,8 @@ public final class GetClientOpenIdUserInfoResult {
     private GetClientOpenIdUserInfoResult(
         String email,
         String id) {
-        this.email = Objects.requireNonNull(email);
-        this.id = Objects.requireNonNull(id);
+        this.email = email;
+        this.id = id;
     }
 
     /**

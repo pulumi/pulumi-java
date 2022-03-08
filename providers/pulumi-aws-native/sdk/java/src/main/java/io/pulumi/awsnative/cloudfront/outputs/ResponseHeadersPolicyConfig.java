@@ -30,7 +30,7 @@ public final class ResponseHeadersPolicyConfig {
         this.comment = comment;
         this.corsConfig = corsConfig;
         this.customHeadersConfig = customHeadersConfig;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.securityHeadersConfig = securityHeadersConfig;
     }
 

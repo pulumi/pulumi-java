@@ -17,7 +17,7 @@ public final class PosixFilesystemResponse {
 
     @OutputCustomType.Constructor({"rootDirectory"})
     private PosixFilesystemResponse(String rootDirectory) {
-        this.rootDirectory = Objects.requireNonNull(rootDirectory);
+        this.rootDirectory = rootDirectory;
     }
 
     /**

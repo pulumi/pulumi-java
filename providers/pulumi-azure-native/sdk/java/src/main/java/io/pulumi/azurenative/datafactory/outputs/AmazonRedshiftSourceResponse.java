@@ -79,7 +79,7 @@ public final class AmazonRedshiftSourceResponse {
         this.redshiftUnloadSettings = redshiftUnloadSettings;
         this.sourceRetryCount = sourceRetryCount;
         this.sourceRetryWait = sourceRetryWait;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

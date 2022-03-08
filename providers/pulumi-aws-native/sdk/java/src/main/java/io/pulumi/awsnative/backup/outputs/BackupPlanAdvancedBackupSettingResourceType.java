@@ -17,8 +17,8 @@ public final class BackupPlanAdvancedBackupSettingResourceType {
     private BackupPlanAdvancedBackupSettingResourceType(
         Object backupOptions,
         String resourceType) {
-        this.backupOptions = Objects.requireNonNull(backupOptions);
-        this.resourceType = Objects.requireNonNull(resourceType);
+        this.backupOptions = backupOptions;
+        this.resourceType = resourceType;
     }
 
     public Object getBackupOptions() {

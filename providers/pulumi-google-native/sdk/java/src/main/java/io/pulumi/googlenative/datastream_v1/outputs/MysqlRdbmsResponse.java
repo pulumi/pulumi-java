@@ -18,7 +18,7 @@ public final class MysqlRdbmsResponse {
 
     @OutputCustomType.Constructor({"mysqlDatabases"})
     private MysqlRdbmsResponse(List<MysqlDatabaseResponse> mysqlDatabases) {
-        this.mysqlDatabases = Objects.requireNonNull(mysqlDatabases);
+        this.mysqlDatabases = mysqlDatabases;
     }
 
     /**

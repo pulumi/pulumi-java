@@ -31,9 +31,9 @@ public final class NodeNetworkConfigResponse {
         Boolean createPodRange,
         String podIpv4CidrBlock,
         String podRange) {
-        this.createPodRange = Objects.requireNonNull(createPodRange);
-        this.podIpv4CidrBlock = Objects.requireNonNull(podIpv4CidrBlock);
-        this.podRange = Objects.requireNonNull(podRange);
+        this.createPodRange = createPodRange;
+        this.podIpv4CidrBlock = podIpv4CidrBlock;
+        this.podRange = podRange;
     }
 
     /**

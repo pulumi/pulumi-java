@@ -67,15 +67,15 @@ public final class DataItemMigrationSummaryResultResponse {
         String startedOn,
         String state,
         String statusMessage) {
-        this.endedOn = Objects.requireNonNull(endedOn);
-        this.errorPrefix = Objects.requireNonNull(errorPrefix);
-        this.itemsCompletedCount = Objects.requireNonNull(itemsCompletedCount);
-        this.itemsCount = Objects.requireNonNull(itemsCount);
-        this.name = Objects.requireNonNull(name);
-        this.resultPrefix = Objects.requireNonNull(resultPrefix);
-        this.startedOn = Objects.requireNonNull(startedOn);
-        this.state = Objects.requireNonNull(state);
-        this.statusMessage = Objects.requireNonNull(statusMessage);
+        this.endedOn = endedOn;
+        this.errorPrefix = errorPrefix;
+        this.itemsCompletedCount = itemsCompletedCount;
+        this.itemsCount = itemsCount;
+        this.name = name;
+        this.resultPrefix = resultPrefix;
+        this.startedOn = startedOn;
+        this.state = state;
+        this.statusMessage = statusMessage;
     }
 
     /**

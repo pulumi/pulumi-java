@@ -30,9 +30,9 @@ public final class ConsolePropertiesResponse {
         String osType,
         String provisioningState,
         String uri) {
-        this.osType = Objects.requireNonNull(osType);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.uri = Objects.requireNonNull(uri);
+        this.osType = osType;
+        this.provisioningState = provisioningState;
+        this.uri = uri;
     }
 
     /**

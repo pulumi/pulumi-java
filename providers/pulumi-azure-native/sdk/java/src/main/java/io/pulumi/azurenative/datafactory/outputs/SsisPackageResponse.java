@@ -73,7 +73,7 @@ public final class SsisPackageResponse {
         this.parameters = parameters;
         this.projectId = projectId;
         this.projectVersion = projectVersion;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

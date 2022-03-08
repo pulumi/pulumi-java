@@ -70,7 +70,7 @@ public final class H264VideoResponse {
         this.keyFrameInterval = keyFrameInterval;
         this.label = label;
         this.layers = layers;
-        this.odataType = Objects.requireNonNull(odataType);
+        this.odataType = odataType;
         this.sceneChangeDetection = sceneChangeDetection;
         this.stretchMode = stretchMode;
         this.syncMode = syncMode;

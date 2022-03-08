@@ -79,7 +79,7 @@ public final class HttpReadSettingsResponse {
         this.requestBody = requestBody;
         this.requestMethod = requestMethod;
         this.requestTimeout = requestTimeout;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

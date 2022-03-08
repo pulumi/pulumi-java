@@ -24,8 +24,8 @@ public final class WebAclRuleStatementOrStatementStatementAndStatementStatementN
     private WebAclRuleStatementOrStatementStatementAndStatementStatementNotStatementStatementLabelMatchStatement(
         String key,
         String scope) {
-        this.key = Objects.requireNonNull(key);
-        this.scope = Objects.requireNonNull(scope);
+        this.key = key;
+        this.scope = scope;
     }
 
     /**

@@ -26,7 +26,7 @@ public final class AwsClusterControlPlaneAwsServicesAuthentication {
     private AwsClusterControlPlaneAwsServicesAuthentication(
         String roleArn,
         @Nullable String roleSessionName) {
-        this.roleArn = Objects.requireNonNull(roleArn);
+        this.roleArn = roleArn;
         this.roleSessionName = roleSessionName;
     }
 

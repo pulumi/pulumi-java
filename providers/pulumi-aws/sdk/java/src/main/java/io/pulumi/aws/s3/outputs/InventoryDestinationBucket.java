@@ -46,9 +46,9 @@ public final class InventoryDestinationBucket {
         String format,
         @Nullable String prefix) {
         this.accountId = accountId;
-        this.bucketArn = Objects.requireNonNull(bucketArn);
+        this.bucketArn = bucketArn;
         this.encryption = encryption;
-        this.format = Objects.requireNonNull(format);
+        this.format = format;
         this.prefix = prefix;
     }
 

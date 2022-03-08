@@ -30,14 +30,14 @@ public final class GetListenerDefaultActionAuthenticateCognito {
         String userPoolArn,
         String userPoolClientId,
         String userPoolDomain) {
-        this.authenticationRequestExtraParams = Objects.requireNonNull(authenticationRequestExtraParams);
-        this.onUnauthenticatedRequest = Objects.requireNonNull(onUnauthenticatedRequest);
-        this.scope = Objects.requireNonNull(scope);
-        this.sessionCookieName = Objects.requireNonNull(sessionCookieName);
-        this.sessionTimeout = Objects.requireNonNull(sessionTimeout);
-        this.userPoolArn = Objects.requireNonNull(userPoolArn);
-        this.userPoolClientId = Objects.requireNonNull(userPoolClientId);
-        this.userPoolDomain = Objects.requireNonNull(userPoolDomain);
+        this.authenticationRequestExtraParams = authenticationRequestExtraParams;
+        this.onUnauthenticatedRequest = onUnauthenticatedRequest;
+        this.scope = scope;
+        this.sessionCookieName = sessionCookieName;
+        this.sessionTimeout = sessionTimeout;
+        this.userPoolArn = userPoolArn;
+        this.userPoolClientId = userPoolClientId;
+        this.userPoolDomain = userPoolDomain;
     }
 
     public Map<String,String> getAuthenticationRequestExtraParams() {

@@ -102,7 +102,7 @@ public final class FirehoseDeliveryStreamExtendedS3Configuration {
         String roleArn,
         @Nullable FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfiguration s3BackupConfiguration,
         @Nullable String s3BackupMode) {
-        this.bucketArn = Objects.requireNonNull(bucketArn);
+        this.bucketArn = bucketArn;
         this.bufferInterval = bufferInterval;
         this.bufferSize = bufferSize;
         this.cloudwatchLoggingOptions = cloudwatchLoggingOptions;
@@ -113,7 +113,7 @@ public final class FirehoseDeliveryStreamExtendedS3Configuration {
         this.kmsKeyArn = kmsKeyArn;
         this.prefix = prefix;
         this.processingConfiguration = processingConfiguration;
-        this.roleArn = Objects.requireNonNull(roleArn);
+        this.roleArn = roleArn;
         this.s3BackupConfiguration = s3BackupConfiguration;
         this.s3BackupMode = s3BackupMode;
     }

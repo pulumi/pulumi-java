@@ -25,8 +25,8 @@ public final class MultiCloudClusterResponse {
     private MultiCloudClusterResponse(
         Boolean clusterMissing,
         String resourceLink) {
-        this.clusterMissing = Objects.requireNonNull(clusterMissing);
-        this.resourceLink = Objects.requireNonNull(resourceLink);
+        this.clusterMissing = clusterMissing;
+        this.resourceLink = resourceLink;
     }
 
     /**

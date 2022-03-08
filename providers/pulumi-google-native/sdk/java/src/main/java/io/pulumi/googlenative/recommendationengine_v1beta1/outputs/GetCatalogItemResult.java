@@ -58,13 +58,13 @@ public final class GetCatalogItemResult {
         GoogleCloudRecommendationengineV1beta1ProductCatalogItemResponse productMetadata,
         List<String> tags,
         String title) {
-        this.categoryHierarchies = Objects.requireNonNull(categoryHierarchies);
-        this.description = Objects.requireNonNull(description);
-        this.itemAttributes = Objects.requireNonNull(itemAttributes);
-        this.itemGroupId = Objects.requireNonNull(itemGroupId);
-        this.productMetadata = Objects.requireNonNull(productMetadata);
-        this.tags = Objects.requireNonNull(tags);
-        this.title = Objects.requireNonNull(title);
+        this.categoryHierarchies = categoryHierarchies;
+        this.description = description;
+        this.itemAttributes = itemAttributes;
+        this.itemGroupId = itemGroupId;
+        this.productMetadata = productMetadata;
+        this.tags = tags;
+        this.title = title;
     }
 
     /**

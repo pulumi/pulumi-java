@@ -55,13 +55,13 @@ public final class RemediationDeploymentResponse {
         String remediatedResourceId,
         String resourceLocation,
         String status) {
-        this.createdOn = Objects.requireNonNull(createdOn);
-        this.deploymentId = Objects.requireNonNull(deploymentId);
-        this.error = Objects.requireNonNull(error);
-        this.lastUpdatedOn = Objects.requireNonNull(lastUpdatedOn);
-        this.remediatedResourceId = Objects.requireNonNull(remediatedResourceId);
-        this.resourceLocation = Objects.requireNonNull(resourceLocation);
-        this.status = Objects.requireNonNull(status);
+        this.createdOn = createdOn;
+        this.deploymentId = deploymentId;
+        this.error = error;
+        this.lastUpdatedOn = lastUpdatedOn;
+        this.remediatedResourceId = remediatedResourceId;
+        this.resourceLocation = resourceLocation;
+        this.status = status;
     }
 
     /**

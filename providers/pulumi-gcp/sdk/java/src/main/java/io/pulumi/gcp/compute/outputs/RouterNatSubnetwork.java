@@ -38,9 +38,9 @@ public final class RouterNatSubnetwork {
         String name,
         @Nullable List<String> secondaryIpRangeNames,
         List<String> sourceIpRangesToNats) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.secondaryIpRangeNames = secondaryIpRangeNames;
-        this.sourceIpRangesToNats = Objects.requireNonNull(sourceIpRangesToNats);
+        this.sourceIpRangesToNats = sourceIpRangesToNats;
     }
 
     /**

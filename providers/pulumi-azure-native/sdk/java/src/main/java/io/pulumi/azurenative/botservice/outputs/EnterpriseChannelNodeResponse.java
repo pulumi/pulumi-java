@@ -44,10 +44,10 @@ public final class EnterpriseChannelNodeResponse {
         String id,
         String name,
         @Nullable String state) {
-        this.azureLocation = Objects.requireNonNull(azureLocation);
-        this.azureSku = Objects.requireNonNull(azureSku);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.azureLocation = azureLocation;
+        this.azureSku = azureSku;
+        this.id = id;
+        this.name = name;
         this.state = state;
     }
 

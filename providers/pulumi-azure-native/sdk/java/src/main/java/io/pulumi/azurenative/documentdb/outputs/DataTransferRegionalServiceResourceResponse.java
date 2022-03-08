@@ -30,9 +30,9 @@ public final class DataTransferRegionalServiceResourceResponse {
         String location,
         String name,
         String status) {
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.status = Objects.requireNonNull(status);
+        this.location = location;
+        this.name = name;
+        this.status = status;
     }
 
     /**

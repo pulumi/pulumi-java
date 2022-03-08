@@ -87,18 +87,18 @@ public final class GetBackupResult {
         Double size,
         String type,
         String volumeName) {
-        this.backupId = Objects.requireNonNull(backupId);
-        this.backupType = Objects.requireNonNull(backupType);
-        this.creationDate = Objects.requireNonNull(creationDate);
-        this.failureReason = Objects.requireNonNull(failureReason);
-        this.id = Objects.requireNonNull(id);
+        this.backupId = backupId;
+        this.backupType = backupType;
+        this.creationDate = creationDate;
+        this.failureReason = failureReason;
+        this.id = id;
         this.label = label;
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.size = Objects.requireNonNull(size);
-        this.type = Objects.requireNonNull(type);
-        this.volumeName = Objects.requireNonNull(volumeName);
+        this.location = location;
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.size = size;
+        this.type = type;
+        this.volumeName = volumeName;
     }
 
     /**

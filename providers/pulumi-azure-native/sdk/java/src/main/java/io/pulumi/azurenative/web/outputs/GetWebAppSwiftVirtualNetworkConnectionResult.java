@@ -58,13 +58,13 @@ public final class GetWebAppSwiftVirtualNetworkConnectionResult {
         @Nullable Boolean swiftSupported,
         SystemDataResponse systemData,
         String type) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.kind = kind;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.subnetResourceId = subnetResourceId;
         this.swiftSupported = swiftSupported;
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

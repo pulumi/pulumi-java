@@ -27,7 +27,7 @@ public final class Ipv6CircuitConnectionConfigResponse {
         @Nullable String addressPrefix,
         String circuitConnectionStatus) {
         this.addressPrefix = addressPrefix;
-        this.circuitConnectionStatus = Objects.requireNonNull(circuitConnectionStatus);
+        this.circuitConnectionStatus = circuitConnectionStatus;
     }
 
     /**

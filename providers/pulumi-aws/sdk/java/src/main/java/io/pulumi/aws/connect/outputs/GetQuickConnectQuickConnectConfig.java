@@ -40,10 +40,10 @@ public final class GetQuickConnectQuickConnectConfig {
         List<GetQuickConnectQuickConnectConfigQueueConfig> queueConfigs,
         String quickConnectType,
         List<GetQuickConnectQuickConnectConfigUserConfig> userConfigs) {
-        this.phoneConfigs = Objects.requireNonNull(phoneConfigs);
-        this.queueConfigs = Objects.requireNonNull(queueConfigs);
-        this.quickConnectType = Objects.requireNonNull(quickConnectType);
-        this.userConfigs = Objects.requireNonNull(userConfigs);
+        this.phoneConfigs = phoneConfigs;
+        this.queueConfigs = queueConfigs;
+        this.quickConnectType = quickConnectType;
+        this.userConfigs = userConfigs;
     }
 
     /**

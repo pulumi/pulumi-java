@@ -48,7 +48,7 @@ public final class JpgLayerResponse {
         @Nullable String width) {
         this.height = height;
         this.label = label;
-        this.odataType = Objects.requireNonNull(odataType);
+        this.odataType = odataType;
         this.quality = quality;
         this.width = width;
     }

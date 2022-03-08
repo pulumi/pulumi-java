@@ -96,16 +96,16 @@ public final class ApplicationGatewayRequestRoutingRuleResponse {
         @Nullable SubResourceResponse urlPathMap) {
         this.backendAddressPool = backendAddressPool;
         this.backendHttpSettings = backendHttpSettings;
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.httpListener = httpListener;
         this.id = id;
         this.name = name;
         this.priority = priority;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.redirectConfiguration = redirectConfiguration;
         this.rewriteRuleSet = rewriteRuleSet;
         this.ruleType = ruleType;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.urlPathMap = urlPathMap;
     }
 

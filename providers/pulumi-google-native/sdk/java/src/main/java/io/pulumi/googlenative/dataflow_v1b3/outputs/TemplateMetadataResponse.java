@@ -32,9 +32,9 @@ public final class TemplateMetadataResponse {
         String description,
         String name,
         List<ParameterMetadataResponse> parameters) {
-        this.description = Objects.requireNonNull(description);
-        this.name = Objects.requireNonNull(name);
-        this.parameters = Objects.requireNonNull(parameters);
+        this.description = description;
+        this.name = name;
+        this.parameters = parameters;
     }
 
     /**

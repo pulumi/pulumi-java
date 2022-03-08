@@ -69,15 +69,15 @@ public final class GetDedicatedCloudServiceResult {
         String serviceURL,
         @Nullable Map<String,String> tags,
         String type) {
-        this.gatewaySubnet = Objects.requireNonNull(gatewaySubnet);
-        this.id = Objects.requireNonNull(id);
-        this.isAccountOnboarded = Objects.requireNonNull(isAccountOnboarded);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.nodes = Objects.requireNonNull(nodes);
-        this.serviceURL = Objects.requireNonNull(serviceURL);
+        this.gatewaySubnet = gatewaySubnet;
+        this.id = id;
+        this.isAccountOnboarded = isAccountOnboarded;
+        this.location = location;
+        this.name = name;
+        this.nodes = nodes;
+        this.serviceURL = serviceURL;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

@@ -17,7 +17,7 @@ public final class TaskDefinitionEphemeralStorage {
 
     @OutputCustomType.Constructor({"sizeInGib"})
     private TaskDefinitionEphemeralStorage(Integer sizeInGib) {
-        this.sizeInGib = Objects.requireNonNull(sizeInGib);
+        this.sizeInGib = sizeInGib;
     }
 
     /**

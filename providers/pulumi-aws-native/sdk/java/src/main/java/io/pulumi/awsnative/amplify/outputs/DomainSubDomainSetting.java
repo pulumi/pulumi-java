@@ -16,8 +16,8 @@ public final class DomainSubDomainSetting {
     private DomainSubDomainSetting(
         String branchName,
         String prefix) {
-        this.branchName = Objects.requireNonNull(branchName);
-        this.prefix = Objects.requireNonNull(prefix);
+        this.branchName = branchName;
+        this.prefix = prefix;
     }
 
     public String getBranchName() {

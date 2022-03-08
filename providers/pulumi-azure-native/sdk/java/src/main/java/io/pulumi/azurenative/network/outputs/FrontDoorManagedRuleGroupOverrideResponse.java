@@ -35,7 +35,7 @@ public final class FrontDoorManagedRuleGroupOverrideResponse {
         String ruleGroupName,
         @Nullable List<FrontDoorManagedRuleOverrideResponse> rules) {
         this.exclusions = exclusions;
-        this.ruleGroupName = Objects.requireNonNull(ruleGroupName);
+        this.ruleGroupName = ruleGroupName;
         this.rules = rules;
     }
 

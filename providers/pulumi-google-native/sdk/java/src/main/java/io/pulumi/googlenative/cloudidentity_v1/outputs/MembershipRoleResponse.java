@@ -32,9 +32,9 @@ public final class MembershipRoleResponse {
         ExpiryDetailResponse expiryDetail,
         String name,
         RestrictionEvaluationsResponse restrictionEvaluations) {
-        this.expiryDetail = Objects.requireNonNull(expiryDetail);
-        this.name = Objects.requireNonNull(name);
-        this.restrictionEvaluations = Objects.requireNonNull(restrictionEvaluations);
+        this.expiryDetail = expiryDetail;
+        this.name = name;
+        this.restrictionEvaluations = restrictionEvaluations;
     }
 
     /**

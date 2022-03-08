@@ -37,10 +37,10 @@ public final class AndroidMatrixResponse {
         List<String> androidVersionIds,
         List<String> locales,
         List<String> orientations) {
-        this.androidModelIds = Objects.requireNonNull(androidModelIds);
-        this.androidVersionIds = Objects.requireNonNull(androidVersionIds);
-        this.locales = Objects.requireNonNull(locales);
-        this.orientations = Objects.requireNonNull(orientations);
+        this.androidModelIds = androidModelIds;
+        this.androidVersionIds = androidVersionIds;
+        this.locales = locales;
+        this.orientations = orientations;
     }
 
     /**

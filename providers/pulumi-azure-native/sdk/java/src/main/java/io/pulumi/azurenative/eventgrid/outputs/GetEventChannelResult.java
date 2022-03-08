@@ -89,14 +89,14 @@ public final class GetEventChannelResult {
         this.destination = destination;
         this.expirationTimeIfNotActivatedUtc = expirationTimeIfNotActivatedUtc;
         this.filter = filter;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.partnerTopicFriendlyDescription = partnerTopicFriendlyDescription;
-        this.partnerTopicReadinessState = Objects.requireNonNull(partnerTopicReadinessState);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.partnerTopicReadinessState = partnerTopicReadinessState;
+        this.provisioningState = provisioningState;
         this.source = source;
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

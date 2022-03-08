@@ -101,21 +101,21 @@ public final class GetComponentResult {
         Map<String,String> tags,
         String type,
         String version) {
-        this.arn = Objects.requireNonNull(arn);
-        this.changeDescription = Objects.requireNonNull(changeDescription);
-        this.data = Objects.requireNonNull(data);
-        this.dateCreated = Objects.requireNonNull(dateCreated);
-        this.description = Objects.requireNonNull(description);
-        this.encrypted = Objects.requireNonNull(encrypted);
-        this.id = Objects.requireNonNull(id);
-        this.kmsKeyId = Objects.requireNonNull(kmsKeyId);
-        this.name = Objects.requireNonNull(name);
-        this.owner = Objects.requireNonNull(owner);
-        this.platform = Objects.requireNonNull(platform);
-        this.supportedOsVersions = Objects.requireNonNull(supportedOsVersions);
-        this.tags = Objects.requireNonNull(tags);
-        this.type = Objects.requireNonNull(type);
-        this.version = Objects.requireNonNull(version);
+        this.arn = arn;
+        this.changeDescription = changeDescription;
+        this.data = data;
+        this.dateCreated = dateCreated;
+        this.description = description;
+        this.encrypted = encrypted;
+        this.id = id;
+        this.kmsKeyId = kmsKeyId;
+        this.name = name;
+        this.owner = owner;
+        this.platform = platform;
+        this.supportedOsVersions = supportedOsVersions;
+        this.tags = tags;
+        this.type = type;
+        this.version = version;
     }
 
     public String getArn() {

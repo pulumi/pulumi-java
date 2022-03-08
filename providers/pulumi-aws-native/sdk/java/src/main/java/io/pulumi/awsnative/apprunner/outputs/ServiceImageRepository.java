@@ -31,8 +31,8 @@ public final class ServiceImageRepository {
         String imageIdentifier,
         ServiceImageRepositoryImageRepositoryType imageRepositoryType) {
         this.imageConfiguration = imageConfiguration;
-        this.imageIdentifier = Objects.requireNonNull(imageIdentifier);
-        this.imageRepositoryType = Objects.requireNonNull(imageRepositoryType);
+        this.imageIdentifier = imageIdentifier;
+        this.imageRepositoryType = imageRepositoryType;
     }
 
     public Optional<ServiceImageConfiguration> getImageConfiguration() {

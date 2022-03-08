@@ -17,7 +17,7 @@ public final class ClusterOpenMonitoringPrometheusNodeExporter {
 
     @OutputCustomType.Constructor({"enabledInBroker"})
     private ClusterOpenMonitoringPrometheusNodeExporter(Boolean enabledInBroker) {
-        this.enabledInBroker = Objects.requireNonNull(enabledInBroker);
+        this.enabledInBroker = enabledInBroker;
     }
 
     /**

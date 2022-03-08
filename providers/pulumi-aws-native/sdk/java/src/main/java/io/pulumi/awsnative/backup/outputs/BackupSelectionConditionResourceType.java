@@ -18,9 +18,9 @@ public final class BackupSelectionConditionResourceType {
         String conditionKey,
         String conditionType,
         String conditionValue) {
-        this.conditionKey = Objects.requireNonNull(conditionKey);
-        this.conditionType = Objects.requireNonNull(conditionType);
-        this.conditionValue = Objects.requireNonNull(conditionValue);
+        this.conditionKey = conditionKey;
+        this.conditionType = conditionType;
+        this.conditionValue = conditionValue;
     }
 
     public String getConditionKey() {

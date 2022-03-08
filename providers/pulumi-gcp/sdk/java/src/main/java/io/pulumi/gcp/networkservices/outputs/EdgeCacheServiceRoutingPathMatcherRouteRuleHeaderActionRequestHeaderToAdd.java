@@ -34,8 +34,8 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionReques
         String headerName,
         String headerValue,
         @Nullable Boolean replace) {
-        this.headerName = Objects.requireNonNull(headerName);
-        this.headerValue = Objects.requireNonNull(headerValue);
+        this.headerName = headerName;
+        this.headerValue = headerValue;
         this.replace = replace;
     }
 

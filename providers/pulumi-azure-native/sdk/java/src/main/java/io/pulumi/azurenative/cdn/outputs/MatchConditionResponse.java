@@ -52,10 +52,10 @@ public final class MatchConditionResponse {
         String operator,
         @Nullable String selector,
         @Nullable List<String> transforms) {
-        this.matchValue = Objects.requireNonNull(matchValue);
-        this.matchVariable = Objects.requireNonNull(matchVariable);
+        this.matchValue = matchValue;
+        this.matchVariable = matchVariable;
         this.negateCondition = negateCondition;
-        this.operator = Objects.requireNonNull(operator);
+        this.operator = operator;
         this.selector = selector;
         this.transforms = transforms;
     }

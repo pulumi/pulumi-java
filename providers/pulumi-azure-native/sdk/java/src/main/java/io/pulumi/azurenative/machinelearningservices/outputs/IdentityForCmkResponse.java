@@ -17,7 +17,7 @@ public final class IdentityForCmkResponse {
 
     @OutputCustomType.Constructor({"userAssignedIdentity"})
     private IdentityForCmkResponse(String userAssignedIdentity) {
-        this.userAssignedIdentity = Objects.requireNonNull(userAssignedIdentity);
+        this.userAssignedIdentity = userAssignedIdentity;
     }
 
     /**

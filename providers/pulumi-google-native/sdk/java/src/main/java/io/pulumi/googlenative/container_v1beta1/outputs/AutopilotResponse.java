@@ -17,7 +17,7 @@ public final class AutopilotResponse {
 
     @OutputCustomType.Constructor({"enabled"})
     private AutopilotResponse(Boolean enabled) {
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
     }
 
     /**

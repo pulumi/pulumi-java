@@ -24,8 +24,8 @@ public final class QueryInterpretationConfigResponse {
     private QueryInterpretationConfigResponse(
         Boolean forceDisableSupplementalResults,
         Boolean forceVerbatimMode) {
-        this.forceDisableSupplementalResults = Objects.requireNonNull(forceDisableSupplementalResults);
-        this.forceVerbatimMode = Objects.requireNonNull(forceVerbatimMode);
+        this.forceDisableSupplementalResults = forceDisableSupplementalResults;
+        this.forceVerbatimMode = forceVerbatimMode;
     }
 
     /**

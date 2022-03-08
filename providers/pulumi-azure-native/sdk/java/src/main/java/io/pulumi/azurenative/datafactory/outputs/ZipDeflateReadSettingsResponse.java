@@ -29,7 +29,7 @@ public final class ZipDeflateReadSettingsResponse {
         @Nullable Object preserveZipFileNameAsFolder,
         String type) {
         this.preserveZipFileNameAsFolder = preserveZipFileNameAsFolder;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

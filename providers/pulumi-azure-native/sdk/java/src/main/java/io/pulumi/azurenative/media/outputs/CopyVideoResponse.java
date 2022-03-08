@@ -28,7 +28,7 @@ public final class CopyVideoResponse {
         @Nullable String label,
         String odataType) {
         this.label = label;
-        this.odataType = Objects.requireNonNull(odataType);
+        this.odataType = odataType;
     }
 
     /**

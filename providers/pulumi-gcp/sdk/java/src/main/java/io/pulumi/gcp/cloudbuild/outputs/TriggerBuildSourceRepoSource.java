@@ -82,7 +82,7 @@ public final class TriggerBuildSourceRepoSource {
         this.dir = dir;
         this.invertRegex = invertRegex;
         this.projectId = projectId;
-        this.repoName = Objects.requireNonNull(repoName);
+        this.repoName = repoName;
         this.substitutions = substitutions;
         this.tagName = tagName;
     }

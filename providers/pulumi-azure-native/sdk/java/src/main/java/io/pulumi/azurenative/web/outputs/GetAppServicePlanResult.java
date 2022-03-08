@@ -184,31 +184,31 @@ public final class GetAppServicePlanResult {
         String type,
         @Nullable String workerTierName) {
         this.freeOfferExpirationTime = freeOfferExpirationTime;
-        this.geoRegion = Objects.requireNonNull(geoRegion);
+        this.geoRegion = geoRegion;
         this.hostingEnvironmentProfile = hostingEnvironmentProfile;
         this.hyperV = hyperV;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.isSpot = isSpot;
         this.isXenon = isXenon;
         this.kind = kind;
         this.kubeEnvironmentProfile = kubeEnvironmentProfile;
-        this.location = Objects.requireNonNull(location);
+        this.location = location;
         this.maximumElasticWorkerCount = maximumElasticWorkerCount;
-        this.maximumNumberOfWorkers = Objects.requireNonNull(maximumNumberOfWorkers);
-        this.name = Objects.requireNonNull(name);
-        this.numberOfSites = Objects.requireNonNull(numberOfSites);
+        this.maximumNumberOfWorkers = maximumNumberOfWorkers;
+        this.name = name;
+        this.numberOfSites = numberOfSites;
         this.perSiteScaling = perSiteScaling;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.reserved = reserved;
-        this.resourceGroup = Objects.requireNonNull(resourceGroup);
+        this.resourceGroup = resourceGroup;
         this.sku = sku;
         this.spotExpirationTime = spotExpirationTime;
-        this.status = Objects.requireNonNull(status);
-        this.subscription = Objects.requireNonNull(subscription);
+        this.status = status;
+        this.subscription = subscription;
         this.tags = tags;
         this.targetWorkerCount = targetWorkerCount;
         this.targetWorkerSizeId = targetWorkerSizeId;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.workerTierName = workerTierName;
     }
 

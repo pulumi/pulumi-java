@@ -39,10 +39,10 @@ public final class MetricAbsenceResponse {
         String duration,
         String filter,
         TriggerResponse trigger) {
-        this.aggregations = Objects.requireNonNull(aggregations);
-        this.duration = Objects.requireNonNull(duration);
-        this.filter = Objects.requireNonNull(filter);
-        this.trigger = Objects.requireNonNull(trigger);
+        this.aggregations = aggregations;
+        this.duration = duration;
+        this.filter = filter;
+        this.trigger = trigger;
     }
 
     /**

@@ -174,7 +174,7 @@ public final class AzureDatabricksLinkedServiceResponse {
         this.connectVia = connectVia;
         this.credential = credential;
         this.description = description;
-        this.domain = Objects.requireNonNull(domain);
+        this.domain = domain;
         this.encryptedCredential = encryptedCredential;
         this.existingClusterId = existingClusterId;
         this.instancePoolId = instancePoolId;
@@ -190,7 +190,7 @@ public final class AzureDatabricksLinkedServiceResponse {
         this.newClusterVersion = newClusterVersion;
         this.parameters = parameters;
         this.policyId = policyId;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.workspaceResourceId = workspaceResourceId;
     }
 

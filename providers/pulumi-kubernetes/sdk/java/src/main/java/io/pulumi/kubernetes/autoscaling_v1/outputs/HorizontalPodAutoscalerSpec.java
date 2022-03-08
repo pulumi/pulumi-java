@@ -39,9 +39,9 @@ public final class HorizontalPodAutoscalerSpec {
         @Nullable Integer minReplicas,
         CrossVersionObjectReference scaleTargetRef,
         @Nullable Integer targetCPUUtilizationPercentage) {
-        this.maxReplicas = Objects.requireNonNull(maxReplicas);
+        this.maxReplicas = maxReplicas;
         this.minReplicas = minReplicas;
-        this.scaleTargetRef = Objects.requireNonNull(scaleTargetRef);
+        this.scaleTargetRef = scaleTargetRef;
         this.targetCPUUtilizationPercentage = targetCPUUtilizationPercentage;
     }
 

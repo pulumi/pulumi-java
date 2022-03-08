@@ -31,9 +31,9 @@ public final class GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse {
         List<String> doNotAssociateTerms,
         List<String> queryTerms,
         List<String> terms) {
-        this.doNotAssociateTerms = Objects.requireNonNull(doNotAssociateTerms);
-        this.queryTerms = Objects.requireNonNull(queryTerms);
-        this.terms = Objects.requireNonNull(terms);
+        this.doNotAssociateTerms = doNotAssociateTerms;
+        this.queryTerms = queryTerms;
+        this.terms = terms;
     }
 
     /**

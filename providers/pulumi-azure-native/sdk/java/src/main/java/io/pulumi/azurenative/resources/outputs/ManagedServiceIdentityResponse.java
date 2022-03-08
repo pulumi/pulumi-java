@@ -34,7 +34,7 @@ public final class ManagedServiceIdentityResponse {
         String tenantId,
         @Nullable String type,
         @Nullable Map<String,UserAssignedIdentityResponse> userAssignedIdentities) {
-        this.tenantId = Objects.requireNonNull(tenantId);
+        this.tenantId = tenantId;
         this.type = type;
         this.userAssignedIdentities = userAssignedIdentities;
     }

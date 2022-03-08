@@ -28,7 +28,7 @@ public final class DataPoolLocationResponse {
         @Nullable DataPoolEncryptionResponse encryption,
         String name) {
         this.encryption = encryption;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

@@ -54,13 +54,13 @@ public final class ElasticCloudDeploymentResponse {
         String kibanaServiceUrl,
         String kibanaSsoUrl,
         String name) {
-        this.azureSubscriptionId = Objects.requireNonNull(azureSubscriptionId);
-        this.deploymentId = Objects.requireNonNull(deploymentId);
-        this.elasticsearchRegion = Objects.requireNonNull(elasticsearchRegion);
-        this.elasticsearchServiceUrl = Objects.requireNonNull(elasticsearchServiceUrl);
-        this.kibanaServiceUrl = Objects.requireNonNull(kibanaServiceUrl);
-        this.kibanaSsoUrl = Objects.requireNonNull(kibanaSsoUrl);
-        this.name = Objects.requireNonNull(name);
+        this.azureSubscriptionId = azureSubscriptionId;
+        this.deploymentId = deploymentId;
+        this.elasticsearchRegion = elasticsearchRegion;
+        this.elasticsearchServiceUrl = elasticsearchServiceUrl;
+        this.kibanaServiceUrl = kibanaServiceUrl;
+        this.kibanaSsoUrl = kibanaSsoUrl;
+        this.name = name;
     }
 
     /**

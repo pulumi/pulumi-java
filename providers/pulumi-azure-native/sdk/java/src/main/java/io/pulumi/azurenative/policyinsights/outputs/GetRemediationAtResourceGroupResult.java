@@ -82,17 +82,17 @@ public final class GetRemediationAtResourceGroupResult {
         String provisioningState,
         @Nullable String resourceDiscoveryMode,
         String type) {
-        this.createdOn = Objects.requireNonNull(createdOn);
-        this.deploymentStatus = Objects.requireNonNull(deploymentStatus);
+        this.createdOn = createdOn;
+        this.deploymentStatus = deploymentStatus;
         this.filters = filters;
-        this.id = Objects.requireNonNull(id);
-        this.lastUpdatedOn = Objects.requireNonNull(lastUpdatedOn);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.lastUpdatedOn = lastUpdatedOn;
+        this.name = name;
         this.policyAssignmentId = policyAssignmentId;
         this.policyDefinitionReferenceId = policyDefinitionReferenceId;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.resourceDiscoveryMode = resourceDiscoveryMode;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

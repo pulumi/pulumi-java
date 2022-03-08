@@ -34,8 +34,8 @@ public final class KubernetesRoleResourcesResponse {
         KubernetesRoleComputeResponse compute,
         KubernetesRoleNetworkResponse network,
         @Nullable KubernetesRoleStorageResponse storage) {
-        this.compute = Objects.requireNonNull(compute);
-        this.network = Objects.requireNonNull(network);
+        this.compute = compute;
+        this.network = network;
         this.storage = storage;
     }
 

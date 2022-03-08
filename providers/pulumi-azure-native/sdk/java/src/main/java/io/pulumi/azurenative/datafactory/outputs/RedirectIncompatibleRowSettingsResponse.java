@@ -26,7 +26,7 @@ public final class RedirectIncompatibleRowSettingsResponse {
     private RedirectIncompatibleRowSettingsResponse(
         Object linkedServiceName,
         @Nullable Object path) {
-        this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
+        this.linkedServiceName = linkedServiceName;
         this.path = path;
     }
 

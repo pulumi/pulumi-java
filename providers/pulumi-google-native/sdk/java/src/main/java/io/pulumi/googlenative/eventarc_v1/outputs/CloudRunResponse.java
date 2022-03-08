@@ -30,9 +30,9 @@ public final class CloudRunResponse {
         String path,
         String region,
         String service) {
-        this.path = Objects.requireNonNull(path);
-        this.region = Objects.requireNonNull(region);
-        this.service = Objects.requireNonNull(service);
+        this.path = path;
+        this.region = region;
+        this.service = service;
     }
 
     /**

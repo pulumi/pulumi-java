@@ -34,8 +34,8 @@ public final class ReceiptRuleSnsAction {
         Integer position,
         String topicArn) {
         this.encoding = encoding;
-        this.position = Objects.requireNonNull(position);
-        this.topicArn = Objects.requireNonNull(topicArn);
+        this.position = position;
+        this.topicArn = topicArn;
     }
 
     /**

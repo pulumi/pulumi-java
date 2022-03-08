@@ -36,7 +36,7 @@ public final class DetectorModelEvent {
         String eventName) {
         this.actions = actions;
         this.condition = condition;
-        this.eventName = Objects.requireNonNull(eventName);
+        this.eventName = eventName;
     }
 
     /**

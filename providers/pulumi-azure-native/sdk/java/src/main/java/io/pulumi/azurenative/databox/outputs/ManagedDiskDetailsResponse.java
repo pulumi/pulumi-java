@@ -31,9 +31,9 @@ public final class ManagedDiskDetailsResponse {
         String dataAccountType,
         String resourceGroupId,
         String stagingStorageAccountId) {
-        this.dataAccountType = Objects.requireNonNull(dataAccountType);
-        this.resourceGroupId = Objects.requireNonNull(resourceGroupId);
-        this.stagingStorageAccountId = Objects.requireNonNull(stagingStorageAccountId);
+        this.dataAccountType = dataAccountType;
+        this.resourceGroupId = resourceGroupId;
+        this.stagingStorageAccountId = stagingStorageAccountId;
     }
 
     /**

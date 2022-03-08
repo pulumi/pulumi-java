@@ -34,8 +34,8 @@ public final class WorkspaceSkuResponse {
         String lastSkuUpdate,
         String name) {
         this.capacityReservationLevel = capacityReservationLevel;
-        this.lastSkuUpdate = Objects.requireNonNull(lastSkuUpdate);
-        this.name = Objects.requireNonNull(name);
+        this.lastSkuUpdate = lastSkuUpdate;
+        this.name = name;
     }
 
     /**

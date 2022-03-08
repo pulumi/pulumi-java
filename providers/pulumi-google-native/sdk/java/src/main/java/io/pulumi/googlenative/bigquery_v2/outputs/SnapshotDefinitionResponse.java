@@ -25,8 +25,8 @@ public final class SnapshotDefinitionResponse {
     private SnapshotDefinitionResponse(
         TableReferenceResponse baseTableReference,
         String snapshotTime) {
-        this.baseTableReference = Objects.requireNonNull(baseTableReference);
-        this.snapshotTime = Objects.requireNonNull(snapshotTime);
+        this.baseTableReference = baseTableReference;
+        this.snapshotTime = snapshotTime;
     }
 
     /**

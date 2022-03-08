@@ -24,8 +24,8 @@ public final class IDRange {
     private IDRange(
         Integer max,
         Integer min) {
-        this.max = Objects.requireNonNull(max);
-        this.min = Objects.requireNonNull(min);
+        this.max = max;
+        this.min = min;
     }
 
     /**

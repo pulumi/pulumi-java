@@ -24,8 +24,8 @@ public final class IncidentLabelResponse {
     private IncidentLabelResponse(
         String labelName,
         String labelType) {
-        this.labelName = Objects.requireNonNull(labelName);
-        this.labelType = Objects.requireNonNull(labelType);
+        this.labelName = labelName;
+        this.labelType = labelType;
     }
 
     /**

@@ -62,15 +62,15 @@ public final class GetLocalGatewayVirtualInterfaceResult {
         Map<String,String> tags,
         Integer vlan) {
         this.filters = filters;
-        this.id = Objects.requireNonNull(id);
-        this.localAddress = Objects.requireNonNull(localAddress);
-        this.localBgpAsn = Objects.requireNonNull(localBgpAsn);
-        this.localGatewayId = Objects.requireNonNull(localGatewayId);
-        this.localGatewayVirtualInterfaceIds = Objects.requireNonNull(localGatewayVirtualInterfaceIds);
-        this.peerAddress = Objects.requireNonNull(peerAddress);
-        this.peerBgpAsn = Objects.requireNonNull(peerBgpAsn);
-        this.tags = Objects.requireNonNull(tags);
-        this.vlan = Objects.requireNonNull(vlan);
+        this.id = id;
+        this.localAddress = localAddress;
+        this.localBgpAsn = localBgpAsn;
+        this.localGatewayId = localGatewayId;
+        this.localGatewayVirtualInterfaceIds = localGatewayVirtualInterfaceIds;
+        this.peerAddress = peerAddress;
+        this.peerBgpAsn = peerBgpAsn;
+        this.tags = tags;
+        this.vlan = vlan;
     }
 
     public List<GetLocalGatewayVirtualInterfaceFilter> getFilters() {

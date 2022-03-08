@@ -30,7 +30,7 @@ public final class AccessLevelConditionDevicePolicyOsConstraint {
         @Nullable String minimumVersion,
         String osType) {
         this.minimumVersion = minimumVersion;
-        this.osType = Objects.requireNonNull(osType);
+        this.osType = osType;
     }
 
     /**

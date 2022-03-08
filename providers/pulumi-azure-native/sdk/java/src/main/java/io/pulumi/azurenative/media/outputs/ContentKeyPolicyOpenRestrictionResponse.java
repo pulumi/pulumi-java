@@ -18,7 +18,7 @@ public final class ContentKeyPolicyOpenRestrictionResponse {
 
     @OutputCustomType.Constructor({"odataType"})
     private ContentKeyPolicyOpenRestrictionResponse(String odataType) {
-        this.odataType = Objects.requireNonNull(odataType);
+        this.odataType = odataType;
     }
 
     /**

@@ -24,8 +24,8 @@ public final class VersionSourceResponse {
     private VersionSourceResponse(
         String mshField,
         String value) {
-        this.mshField = Objects.requireNonNull(mshField);
-        this.value = Objects.requireNonNull(value);
+        this.mshField = mshField;
+        this.value = value;
     }
 
     /**

@@ -79,16 +79,16 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse {
         GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataResponse smartComposeSuggestion,
         GoogleCloudContactcenterinsightsV1SmartReplyDataResponse smartReply,
         GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse startBoundary) {
-        this.annotationId = Objects.requireNonNull(annotationId);
-        this.answerFeedback = Objects.requireNonNull(answerFeedback);
-        this.articleSuggestion = Objects.requireNonNull(articleSuggestion);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.dialogflowInteraction = Objects.requireNonNull(dialogflowInteraction);
-        this.endBoundary = Objects.requireNonNull(endBoundary);
-        this.faqAnswer = Objects.requireNonNull(faqAnswer);
-        this.smartComposeSuggestion = Objects.requireNonNull(smartComposeSuggestion);
-        this.smartReply = Objects.requireNonNull(smartReply);
-        this.startBoundary = Objects.requireNonNull(startBoundary);
+        this.annotationId = annotationId;
+        this.answerFeedback = answerFeedback;
+        this.articleSuggestion = articleSuggestion;
+        this.createTime = createTime;
+        this.dialogflowInteraction = dialogflowInteraction;
+        this.endBoundary = endBoundary;
+        this.faqAnswer = faqAnswer;
+        this.smartComposeSuggestion = smartComposeSuggestion;
+        this.smartReply = smartReply;
+        this.startBoundary = startBoundary;
     }
 
     /**

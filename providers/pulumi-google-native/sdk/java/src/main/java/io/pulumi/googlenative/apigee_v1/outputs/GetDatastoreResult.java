@@ -55,13 +55,13 @@ public final class GetDatastoreResult {
         String org,
         String self,
         String targetType) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.datastoreConfig = Objects.requireNonNull(datastoreConfig);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.lastUpdateTime = Objects.requireNonNull(lastUpdateTime);
-        this.org = Objects.requireNonNull(org);
-        this.self = Objects.requireNonNull(self);
-        this.targetType = Objects.requireNonNull(targetType);
+        this.createTime = createTime;
+        this.datastoreConfig = datastoreConfig;
+        this.displayName = displayName;
+        this.lastUpdateTime = lastUpdateTime;
+        this.org = org;
+        this.self = self;
+        this.targetType = targetType;
     }
 
     /**

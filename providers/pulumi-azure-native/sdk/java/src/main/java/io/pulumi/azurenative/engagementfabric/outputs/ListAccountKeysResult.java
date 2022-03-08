@@ -18,7 +18,7 @@ public final class ListAccountKeysResult {
 
     @OutputCustomType.Constructor({"value"})
     private ListAccountKeysResult(List<KeyDescriptionResponse> value) {
-        this.value = Objects.requireNonNull(value);
+        this.value = value;
     }
 
     /**

@@ -25,8 +25,8 @@ public final class MetricRuleResponse {
     private MetricRuleResponse(
         Map<String,String> metricCosts,
         String selector) {
-        this.metricCosts = Objects.requireNonNull(metricCosts);
-        this.selector = Objects.requireNonNull(selector);
+        this.metricCosts = metricCosts;
+        this.selector = selector;
     }
 
     /**

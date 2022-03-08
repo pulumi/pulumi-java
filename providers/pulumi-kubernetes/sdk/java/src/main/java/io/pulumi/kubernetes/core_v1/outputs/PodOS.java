@@ -17,7 +17,7 @@ public final class PodOS {
 
     @OutputCustomType.Constructor({"name"})
     private PodOS(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

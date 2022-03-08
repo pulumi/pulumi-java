@@ -72,15 +72,15 @@ public final class GetRestorePointCollectionResult {
         @Nullable RestorePointCollectionSourcePropertiesResponse source,
         @Nullable Map<String,String> tags,
         String type) {
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.restorePointCollectionId = Objects.requireNonNull(restorePointCollectionId);
-        this.restorePoints = Objects.requireNonNull(restorePoints);
+        this.id = id;
+        this.location = location;
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.restorePointCollectionId = restorePointCollectionId;
+        this.restorePoints = restorePoints;
         this.source = source;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

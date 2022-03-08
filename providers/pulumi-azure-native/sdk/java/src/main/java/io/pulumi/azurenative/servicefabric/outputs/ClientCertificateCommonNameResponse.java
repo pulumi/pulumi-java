@@ -31,9 +31,9 @@ public final class ClientCertificateCommonNameResponse {
         String certificateCommonName,
         String certificateIssuerThumbprint,
         Boolean isAdmin) {
-        this.certificateCommonName = Objects.requireNonNull(certificateCommonName);
-        this.certificateIssuerThumbprint = Objects.requireNonNull(certificateIssuerThumbprint);
-        this.isAdmin = Objects.requireNonNull(isAdmin);
+        this.certificateCommonName = certificateCommonName;
+        this.certificateIssuerThumbprint = certificateIssuerThumbprint;
+        this.isAdmin = isAdmin;
     }
 
     /**

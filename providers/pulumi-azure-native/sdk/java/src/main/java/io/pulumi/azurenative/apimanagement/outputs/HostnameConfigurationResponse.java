@@ -74,11 +74,11 @@ public final class HostnameConfigurationResponse {
         this.certificatePassword = certificatePassword;
         this.defaultSslBinding = defaultSslBinding;
         this.encodedCertificate = encodedCertificate;
-        this.hostName = Objects.requireNonNull(hostName);
+        this.hostName = hostName;
         this.identityClientId = identityClientId;
         this.keyVaultId = keyVaultId;
         this.negotiateClientCertificate = negotiateClientCertificate;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

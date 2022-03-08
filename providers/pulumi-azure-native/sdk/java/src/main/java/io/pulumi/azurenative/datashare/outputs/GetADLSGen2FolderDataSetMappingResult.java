@@ -92,19 +92,19 @@ public final class GetADLSGen2FolderDataSetMappingResult {
         String subscriptionId,
         SystemDataResponse systemData,
         String type) {
-        this.dataSetId = Objects.requireNonNull(dataSetId);
-        this.dataSetMappingStatus = Objects.requireNonNull(dataSetMappingStatus);
-        this.fileSystem = Objects.requireNonNull(fileSystem);
-        this.folderPath = Objects.requireNonNull(folderPath);
-        this.id = Objects.requireNonNull(id);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.resourceGroup = Objects.requireNonNull(resourceGroup);
-        this.storageAccountName = Objects.requireNonNull(storageAccountName);
-        this.subscriptionId = Objects.requireNonNull(subscriptionId);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.dataSetId = dataSetId;
+        this.dataSetMappingStatus = dataSetMappingStatus;
+        this.fileSystem = fileSystem;
+        this.folderPath = folderPath;
+        this.id = id;
+        this.kind = kind;
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.resourceGroup = resourceGroup;
+        this.storageAccountName = storageAccountName;
+        this.subscriptionId = subscriptionId;
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

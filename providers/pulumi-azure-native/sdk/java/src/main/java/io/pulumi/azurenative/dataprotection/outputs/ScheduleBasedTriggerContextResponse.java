@@ -34,9 +34,9 @@ public final class ScheduleBasedTriggerContextResponse {
         String objectType,
         BackupScheduleResponse schedule,
         List<TaggingCriteriaResponse> taggingCriteria) {
-        this.objectType = Objects.requireNonNull(objectType);
-        this.schedule = Objects.requireNonNull(schedule);
-        this.taggingCriteria = Objects.requireNonNull(taggingCriteria);
+        this.objectType = objectType;
+        this.schedule = schedule;
+        this.taggingCriteria = taggingCriteria;
     }
 
     /**

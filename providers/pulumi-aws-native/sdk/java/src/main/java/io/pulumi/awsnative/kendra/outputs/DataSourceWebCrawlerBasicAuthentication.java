@@ -19,9 +19,9 @@ public final class DataSourceWebCrawlerBasicAuthentication {
         String credentials,
         String host,
         Integer port) {
-        this.credentials = Objects.requireNonNull(credentials);
-        this.host = Objects.requireNonNull(host);
-        this.port = Objects.requireNonNull(port);
+        this.credentials = credentials;
+        this.host = host;
+        this.port = port;
     }
 
     public String getCredentials() {

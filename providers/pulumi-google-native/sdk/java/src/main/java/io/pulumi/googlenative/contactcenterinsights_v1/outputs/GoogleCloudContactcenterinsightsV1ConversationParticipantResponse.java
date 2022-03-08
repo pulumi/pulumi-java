@@ -36,10 +36,10 @@ public final class GoogleCloudContactcenterinsightsV1ConversationParticipantResp
         String obfuscatedExternalUserId,
         String role,
         String userId) {
-        this.dialogflowParticipantName = Objects.requireNonNull(dialogflowParticipantName);
-        this.obfuscatedExternalUserId = Objects.requireNonNull(obfuscatedExternalUserId);
-        this.role = Objects.requireNonNull(role);
-        this.userId = Objects.requireNonNull(userId);
+        this.dialogflowParticipantName = dialogflowParticipantName;
+        this.obfuscatedExternalUserId = obfuscatedExternalUserId;
+        this.role = role;
+        this.userId = userId;
     }
 
     /**

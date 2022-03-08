@@ -27,7 +27,7 @@ public final class ClusterMasterAuthorizedNetworksConfigCidrBlock {
     private ClusterMasterAuthorizedNetworksConfigCidrBlock(
         String cidrBlock,
         @Nullable String displayName) {
-        this.cidrBlock = Objects.requireNonNull(cidrBlock);
+        this.cidrBlock = cidrBlock;
         this.displayName = displayName;
     }
 

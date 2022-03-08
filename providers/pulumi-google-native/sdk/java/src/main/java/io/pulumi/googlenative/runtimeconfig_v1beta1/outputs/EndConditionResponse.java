@@ -17,7 +17,7 @@ public final class EndConditionResponse {
 
     @OutputCustomType.Constructor({"cardinality"})
     private EndConditionResponse(CardinalityResponse cardinality) {
-        this.cardinality = Objects.requireNonNull(cardinality);
+        this.cardinality = cardinality;
     }
 
     /**

@@ -70,12 +70,12 @@ public final class AssetItemResponse {
         String type) {
         this.id = id;
         this.inputPorts = inputPorts;
-        this.locationInfo = Objects.requireNonNull(locationInfo);
+        this.locationInfo = locationInfo;
         this.metadata = metadata;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.outputPorts = outputPorts;
         this.parameters = parameters;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

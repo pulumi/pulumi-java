@@ -26,8 +26,8 @@ public final class AuditConfigResponse {
     private AuditConfigResponse(
         List<AuditLogConfigResponse> auditLogConfigs,
         String service) {
-        this.auditLogConfigs = Objects.requireNonNull(auditLogConfigs);
-        this.service = Objects.requireNonNull(service);
+        this.auditLogConfigs = auditLogConfigs;
+        this.service = service;
     }
 
     /**

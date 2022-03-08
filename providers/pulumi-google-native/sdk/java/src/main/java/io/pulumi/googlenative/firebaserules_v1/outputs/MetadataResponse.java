@@ -18,7 +18,7 @@ public final class MetadataResponse {
 
     @OutputCustomType.Constructor({"services"})
     private MetadataResponse(List<String> services) {
-        this.services = Objects.requireNonNull(services);
+        this.services = services;
     }
 
     /**

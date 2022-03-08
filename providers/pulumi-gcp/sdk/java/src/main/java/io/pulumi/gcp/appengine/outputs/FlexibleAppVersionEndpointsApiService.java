@@ -48,7 +48,7 @@ public final class FlexibleAppVersionEndpointsApiService {
         @Nullable String rolloutStrategy) {
         this.configId = configId;
         this.disableTraceSampling = disableTraceSampling;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.rolloutStrategy = rolloutStrategy;
     }
 

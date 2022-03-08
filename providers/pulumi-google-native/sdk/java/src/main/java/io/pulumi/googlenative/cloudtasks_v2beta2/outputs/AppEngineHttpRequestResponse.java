@@ -44,11 +44,11 @@ public final class AppEngineHttpRequestResponse {
         String httpMethod,
         String payload,
         String relativeUrl) {
-        this.appEngineRouting = Objects.requireNonNull(appEngineRouting);
-        this.headers = Objects.requireNonNull(headers);
-        this.httpMethod = Objects.requireNonNull(httpMethod);
-        this.payload = Objects.requireNonNull(payload);
-        this.relativeUrl = Objects.requireNonNull(relativeUrl);
+        this.appEngineRouting = appEngineRouting;
+        this.headers = headers;
+        this.httpMethod = httpMethod;
+        this.payload = payload;
+        this.relativeUrl = relativeUrl;
     }
 
     /**

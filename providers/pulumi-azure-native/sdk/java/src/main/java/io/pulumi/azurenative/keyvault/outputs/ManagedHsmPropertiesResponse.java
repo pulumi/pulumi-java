@@ -100,15 +100,15 @@ public final class ManagedHsmPropertiesResponse {
         this.createMode = createMode;
         this.enablePurgeProtection = enablePurgeProtection;
         this.enableSoftDelete = enableSoftDelete;
-        this.hsmUri = Objects.requireNonNull(hsmUri);
+        this.hsmUri = hsmUri;
         this.initialAdminObjectIds = initialAdminObjectIds;
         this.networkAcls = networkAcls;
-        this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.privateEndpointConnections = privateEndpointConnections;
+        this.provisioningState = provisioningState;
         this.publicNetworkAccess = publicNetworkAccess;
-        this.scheduledPurgeDate = Objects.requireNonNull(scheduledPurgeDate);
+        this.scheduledPurgeDate = scheduledPurgeDate;
         this.softDeleteRetentionInDays = softDeleteRetentionInDays;
-        this.statusMessage = Objects.requireNonNull(statusMessage);
+        this.statusMessage = statusMessage;
         this.tenantId = tenantId;
     }
 

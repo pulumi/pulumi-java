@@ -25,8 +25,8 @@ public final class EgressFromResponse {
     private EgressFromResponse(
         List<String> identities,
         String identityType) {
-        this.identities = Objects.requireNonNull(identities);
-        this.identityType = Objects.requireNonNull(identityType);
+        this.identities = identities;
+        this.identityType = identityType;
     }
 
     /**

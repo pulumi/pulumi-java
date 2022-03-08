@@ -28,7 +28,7 @@ public final class ClusterNotificationConfigPubsub {
     private ClusterNotificationConfigPubsub(
         Boolean enabled,
         @Nullable String topic) {
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
         this.topic = topic;
     }
 

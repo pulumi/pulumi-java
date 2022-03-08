@@ -18,7 +18,7 @@ public final class ContextResponse {
 
     @OutputCustomType.Constructor({"rules"})
     private ContextResponse(List<ContextRuleResponse> rules) {
-        this.rules = Objects.requireNonNull(rules);
+        this.rules = rules;
     }
 
     /**

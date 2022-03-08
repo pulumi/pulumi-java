@@ -17,7 +17,7 @@ public final class CxEnvironmentVersionConfig {
 
     @OutputCustomType.Constructor({"version"})
     private CxEnvironmentVersionConfig(String version) {
-        this.version = Objects.requireNonNull(version);
+        this.version = version;
     }
 
     /**

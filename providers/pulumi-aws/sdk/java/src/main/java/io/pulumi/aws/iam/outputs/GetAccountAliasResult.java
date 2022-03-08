@@ -24,8 +24,8 @@ public final class GetAccountAliasResult {
     private GetAccountAliasResult(
         String accountAlias,
         String id) {
-        this.accountAlias = Objects.requireNonNull(accountAlias);
-        this.id = Objects.requireNonNull(id);
+        this.accountAlias = accountAlias;
+        this.id = id;
     }
 
     /**

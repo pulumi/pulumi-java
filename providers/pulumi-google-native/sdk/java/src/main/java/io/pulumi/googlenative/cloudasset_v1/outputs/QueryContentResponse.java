@@ -17,7 +17,7 @@ public final class QueryContentResponse {
 
     @OutputCustomType.Constructor({"iamPolicyAnalysisQuery"})
     private QueryContentResponse(IamPolicyAnalysisQueryResponse iamPolicyAnalysisQuery) {
-        this.iamPolicyAnalysisQuery = Objects.requireNonNull(iamPolicyAnalysisQuery);
+        this.iamPolicyAnalysisQuery = iamPolicyAnalysisQuery;
     }
 
     /**

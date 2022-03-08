@@ -31,9 +31,9 @@ public final class HoursOfOperationConfig {
         HoursOfOperationConfigDay day,
         HoursOfOperationTimeSlice endTime,
         HoursOfOperationTimeSlice startTime) {
-        this.day = Objects.requireNonNull(day);
-        this.endTime = Objects.requireNonNull(endTime);
-        this.startTime = Objects.requireNonNull(startTime);
+        this.day = day;
+        this.endTime = endTime;
+        this.startTime = startTime;
     }
 
     /**

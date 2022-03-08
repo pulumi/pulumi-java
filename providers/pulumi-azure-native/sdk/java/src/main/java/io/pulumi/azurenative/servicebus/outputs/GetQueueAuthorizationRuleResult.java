@@ -37,10 +37,10 @@ public final class GetQueueAuthorizationRuleResult {
         String name,
         List<String> rights,
         String type) {
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.rights = Objects.requireNonNull(rights);
-        this.type = Objects.requireNonNull(type);
+        this.id = id;
+        this.name = name;
+        this.rights = rights;
+        this.type = type;
     }
 
     /**

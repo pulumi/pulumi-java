@@ -17,7 +17,7 @@ public final class WebAclRuleStatementOrStatementStatementSizeConstraintStatemen
 
     @OutputCustomType.Constructor({"name"})
     private WebAclRuleStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgument(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

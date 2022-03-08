@@ -17,7 +17,7 @@ public final class ForZone {
 
     @OutputCustomType.Constructor({"name"})
     private ForZone(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

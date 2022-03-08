@@ -44,10 +44,10 @@ public final class GetWebAppDomainOwnershipIdentifierSlotResult {
         String name,
         String type,
         @Nullable String value) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.kind = kind;
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.name = name;
+        this.type = type;
         this.value = value;
     }
 

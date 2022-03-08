@@ -60,12 +60,12 @@ public final class GetMongoDBResourceMongoRoleDefinitionResult {
         @Nullable List<RoleResponse> roles,
         String type) {
         this.databaseName = databaseName;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.privileges = privileges;
         this.roleName = roleName;
         this.roles = roles;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

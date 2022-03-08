@@ -70,10 +70,10 @@ public final class ModelBiasJobDefinitionEndpointInput {
         @Nullable ModelBiasJobDefinitionEndpointInputS3InputMode s3InputMode,
         @Nullable String startTimeOffset) {
         this.endTimeOffset = endTimeOffset;
-        this.endpointName = Objects.requireNonNull(endpointName);
+        this.endpointName = endpointName;
         this.featuresAttribute = featuresAttribute;
         this.inferenceAttribute = inferenceAttribute;
-        this.localPath = Objects.requireNonNull(localPath);
+        this.localPath = localPath;
         this.probabilityAttribute = probabilityAttribute;
         this.probabilityThresholdAttribute = probabilityThresholdAttribute;
         this.s3DataDistributionType = s3DataDistributionType;

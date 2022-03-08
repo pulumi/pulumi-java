@@ -29,8 +29,8 @@ public final class SqlInjectionMatchSetSqlInjectionMatchTuple {
     private SqlInjectionMatchSetSqlInjectionMatchTuple(
         SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatch fieldToMatch,
         String textTransformation) {
-        this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
-        this.textTransformation = Objects.requireNonNull(textTransformation);
+        this.fieldToMatch = fieldToMatch;
+        this.textTransformation = textTransformation;
     }
 
     /**

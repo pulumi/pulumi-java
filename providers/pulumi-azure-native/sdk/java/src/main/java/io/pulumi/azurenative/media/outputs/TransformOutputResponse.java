@@ -39,7 +39,7 @@ public final class TransformOutputResponse {
         Object preset,
         @Nullable String relativePriority) {
         this.onError = onError;
-        this.preset = Objects.requireNonNull(preset);
+        this.preset = preset;
         this.relativePriority = relativePriority;
     }
 

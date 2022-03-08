@@ -17,7 +17,7 @@ public final class GoogleCloudDialogflowCxV3TextInputResponse {
 
     @OutputCustomType.Constructor({"text"})
     private GoogleCloudDialogflowCxV3TextInputResponse(String text) {
-        this.text = Objects.requireNonNull(text);
+        this.text = text;
     }
 
     /**

@@ -24,8 +24,8 @@ public final class GoogleCloudContactcenterinsightsV1ConversationCallMetadataRes
     private GoogleCloudContactcenterinsightsV1ConversationCallMetadataResponse(
         Integer agentChannel,
         Integer customerChannel) {
-        this.agentChannel = Objects.requireNonNull(agentChannel);
-        this.customerChannel = Objects.requireNonNull(customerChannel);
+        this.agentChannel = agentChannel;
+        this.customerChannel = customerChannel;
     }
 
     /**

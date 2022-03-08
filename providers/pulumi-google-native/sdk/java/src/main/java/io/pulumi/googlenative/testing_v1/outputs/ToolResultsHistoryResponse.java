@@ -24,8 +24,8 @@ public final class ToolResultsHistoryResponse {
     private ToolResultsHistoryResponse(
         String historyId,
         String project) {
-        this.historyId = Objects.requireNonNull(historyId);
-        this.project = Objects.requireNonNull(project);
+        this.historyId = historyId;
+        this.project = project;
     }
 
     /**

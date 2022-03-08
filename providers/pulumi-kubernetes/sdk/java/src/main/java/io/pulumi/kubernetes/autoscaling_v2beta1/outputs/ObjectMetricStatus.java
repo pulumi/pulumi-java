@@ -47,10 +47,10 @@ public final class ObjectMetricStatus {
         @Nullable LabelSelector selector,
         CrossVersionObjectReference target) {
         this.averageValue = averageValue;
-        this.currentValue = Objects.requireNonNull(currentValue);
-        this.metricName = Objects.requireNonNull(metricName);
+        this.currentValue = currentValue;
+        this.metricName = metricName;
         this.selector = selector;
-        this.target = Objects.requireNonNull(target);
+        this.target = target;
     }
 
     /**

@@ -13,7 +13,7 @@ public final class ServerBindingResponse {
 
     @OutputCustomType.Constructor({"type"})
     private ServerBindingResponse(String type) {
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     public String getType() {

@@ -33,9 +33,9 @@ public final class DataDisksGroupsResponse {
         Integer diskSizeGB,
         @Nullable Integer disksPerNode,
         String storageAccountType) {
-        this.diskSizeGB = Objects.requireNonNull(diskSizeGB);
+        this.diskSizeGB = diskSizeGB;
         this.disksPerNode = disksPerNode;
-        this.storageAccountType = Objects.requireNonNull(storageAccountType);
+        this.storageAccountType = storageAccountType;
     }
 
     /**

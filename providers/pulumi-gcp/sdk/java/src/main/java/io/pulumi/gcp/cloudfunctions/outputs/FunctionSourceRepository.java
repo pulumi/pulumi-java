@@ -23,7 +23,7 @@ public final class FunctionSourceRepository {
         @Nullable String deployedUrl,
         String url) {
         this.deployedUrl = deployedUrl;
-        this.url = Objects.requireNonNull(url);
+        this.url = url;
     }
 
     public Optional<String> getDeployedUrl() {

@@ -20,9 +20,9 @@ public final class GetServiceTraffic {
         Boolean latestRevision,
         Integer percent,
         String revisionName) {
-        this.latestRevision = Objects.requireNonNull(latestRevision);
-        this.percent = Objects.requireNonNull(percent);
-        this.revisionName = Objects.requireNonNull(revisionName);
+        this.latestRevision = latestRevision;
+        this.percent = percent;
+        this.revisionName = revisionName;
     }
 
     public Boolean getLatestRevision() {

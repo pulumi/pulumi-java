@@ -139,25 +139,25 @@ public final class GetOccurrenceResult {
         RelationshipOccurrenceResponse spdxRelationship,
         String updateTime,
         GrafeasV1beta1VulnerabilityDetailsResponse vulnerability) {
-        this.attestation = Objects.requireNonNull(attestation);
-        this.build = Objects.requireNonNull(build);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.deployment = Objects.requireNonNull(deployment);
-        this.derivedImage = Objects.requireNonNull(derivedImage);
-        this.discovered = Objects.requireNonNull(discovered);
-        this.installation = Objects.requireNonNull(installation);
-        this.intoto = Objects.requireNonNull(intoto);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.noteName = Objects.requireNonNull(noteName);
-        this.remediation = Objects.requireNonNull(remediation);
-        this.resource = Objects.requireNonNull(resource);
-        this.sbom = Objects.requireNonNull(sbom);
-        this.spdxFile = Objects.requireNonNull(spdxFile);
-        this.spdxPackage = Objects.requireNonNull(spdxPackage);
-        this.spdxRelationship = Objects.requireNonNull(spdxRelationship);
-        this.updateTime = Objects.requireNonNull(updateTime);
-        this.vulnerability = Objects.requireNonNull(vulnerability);
+        this.attestation = attestation;
+        this.build = build;
+        this.createTime = createTime;
+        this.deployment = deployment;
+        this.derivedImage = derivedImage;
+        this.discovered = discovered;
+        this.installation = installation;
+        this.intoto = intoto;
+        this.kind = kind;
+        this.name = name;
+        this.noteName = noteName;
+        this.remediation = remediation;
+        this.resource = resource;
+        this.sbom = sbom;
+        this.spdxFile = spdxFile;
+        this.spdxPackage = spdxPackage;
+        this.spdxRelationship = spdxRelationship;
+        this.updateTime = updateTime;
+        this.vulnerability = vulnerability;
     }
 
     /**

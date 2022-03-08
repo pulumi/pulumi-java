@@ -24,8 +24,8 @@ public final class DropInfoResponse {
     private DropInfoResponse(
         String cause,
         String resourceUri) {
-        this.cause = Objects.requireNonNull(cause);
-        this.resourceUri = Objects.requireNonNull(resourceUri);
+        this.cause = cause;
+        this.resourceUri = resourceUri;
     }
 
     /**

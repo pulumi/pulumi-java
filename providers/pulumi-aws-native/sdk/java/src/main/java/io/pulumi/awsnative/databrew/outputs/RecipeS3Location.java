@@ -18,7 +18,7 @@ public final class RecipeS3Location {
     private RecipeS3Location(
         String bucket,
         @Nullable String key) {
-        this.bucket = Objects.requireNonNull(bucket);
+        this.bucket = bucket;
         this.key = key;
     }
 

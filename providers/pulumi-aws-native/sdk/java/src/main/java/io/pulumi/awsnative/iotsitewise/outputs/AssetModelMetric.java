@@ -33,9 +33,9 @@ public final class AssetModelMetric {
         String expression,
         List<AssetModelExpressionVariable> variables,
         AssetModelMetricWindow window) {
-        this.expression = Objects.requireNonNull(expression);
-        this.variables = Objects.requireNonNull(variables);
-        this.window = Objects.requireNonNull(window);
+        this.expression = expression;
+        this.variables = variables;
+        this.window = window;
     }
 
     /**

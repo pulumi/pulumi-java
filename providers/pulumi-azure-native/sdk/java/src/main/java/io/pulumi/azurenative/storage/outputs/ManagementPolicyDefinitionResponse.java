@@ -27,7 +27,7 @@ public final class ManagementPolicyDefinitionResponse {
     private ManagementPolicyDefinitionResponse(
         ManagementPolicyActionResponse actions,
         @Nullable ManagementPolicyFilterResponse filters) {
-        this.actions = Objects.requireNonNull(actions);
+        this.actions = actions;
         this.filters = filters;
     }
 

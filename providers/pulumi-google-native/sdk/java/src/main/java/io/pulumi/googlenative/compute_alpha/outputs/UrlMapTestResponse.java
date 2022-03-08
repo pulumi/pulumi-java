@@ -63,14 +63,14 @@ public final class UrlMapTestResponse {
         String host,
         String path,
         String service) {
-        this.backendServiceWeight = Objects.requireNonNull(backendServiceWeight);
-        this.description = Objects.requireNonNull(description);
-        this.expectedOutputUrl = Objects.requireNonNull(expectedOutputUrl);
-        this.expectedRedirectResponseCode = Objects.requireNonNull(expectedRedirectResponseCode);
-        this.headers = Objects.requireNonNull(headers);
-        this.host = Objects.requireNonNull(host);
-        this.path = Objects.requireNonNull(path);
-        this.service = Objects.requireNonNull(service);
+        this.backendServiceWeight = backendServiceWeight;
+        this.description = description;
+        this.expectedOutputUrl = expectedOutputUrl;
+        this.expectedRedirectResponseCode = expectedRedirectResponseCode;
+        this.headers = headers;
+        this.host = host;
+        this.path = path;
+        this.service = service;
     }
 
     /**

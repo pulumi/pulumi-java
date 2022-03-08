@@ -22,7 +22,7 @@ public final class DeliveryStreamHttpEndpointConfiguration {
         String url) {
         this.accessKey = accessKey;
         this.name = name;
-        this.url = Objects.requireNonNull(url);
+        this.url = url;
     }
 
     public Optional<String> getAccessKey() {

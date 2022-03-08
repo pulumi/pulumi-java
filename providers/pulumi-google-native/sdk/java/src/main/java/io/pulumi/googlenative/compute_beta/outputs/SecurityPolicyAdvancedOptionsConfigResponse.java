@@ -16,8 +16,8 @@ public final class SecurityPolicyAdvancedOptionsConfigResponse {
     private SecurityPolicyAdvancedOptionsConfigResponse(
         String jsonParsing,
         String logLevel) {
-        this.jsonParsing = Objects.requireNonNull(jsonParsing);
-        this.logLevel = Objects.requireNonNull(logLevel);
+        this.jsonParsing = jsonParsing;
+        this.logLevel = logLevel;
     }
 
     public String getJsonParsing() {

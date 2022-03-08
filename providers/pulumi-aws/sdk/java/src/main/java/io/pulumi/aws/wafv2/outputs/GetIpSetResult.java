@@ -47,13 +47,13 @@ public final class GetIpSetResult {
         String ipAddressVersion,
         String name,
         String scope) {
-        this.addresses = Objects.requireNonNull(addresses);
-        this.arn = Objects.requireNonNull(arn);
-        this.description = Objects.requireNonNull(description);
-        this.id = Objects.requireNonNull(id);
-        this.ipAddressVersion = Objects.requireNonNull(ipAddressVersion);
-        this.name = Objects.requireNonNull(name);
-        this.scope = Objects.requireNonNull(scope);
+        this.addresses = addresses;
+        this.arn = arn;
+        this.description = description;
+        this.id = id;
+        this.ipAddressVersion = ipAddressVersion;
+        this.name = name;
+        this.scope = scope;
     }
 
     /**

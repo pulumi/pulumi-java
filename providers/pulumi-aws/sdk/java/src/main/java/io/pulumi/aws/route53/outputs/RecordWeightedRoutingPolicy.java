@@ -17,7 +17,7 @@ public final class RecordWeightedRoutingPolicy {
 
     @OutputCustomType.Constructor({"weight"})
     private RecordWeightedRoutingPolicy(Integer weight) {
-        this.weight = Objects.requireNonNull(weight);
+        this.weight = weight;
     }
 
     /**

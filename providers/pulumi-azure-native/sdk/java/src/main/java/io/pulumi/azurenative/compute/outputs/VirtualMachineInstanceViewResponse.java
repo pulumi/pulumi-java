@@ -120,7 +120,7 @@ public final class VirtualMachineInstanceViewResponse {
         @Nullable List<InstanceViewStatusResponse> statuses,
         @Nullable VirtualMachineAgentInstanceViewResponse vmAgent,
         VirtualMachineHealthStatusResponse vmHealth) {
-        this.assignedHost = Objects.requireNonNull(assignedHost);
+        this.assignedHost = assignedHost;
         this.bootDiagnostics = bootDiagnostics;
         this.computerName = computerName;
         this.disks = disks;
@@ -135,7 +135,7 @@ public final class VirtualMachineInstanceViewResponse {
         this.rdpThumbPrint = rdpThumbPrint;
         this.statuses = statuses;
         this.vmAgent = vmAgent;
-        this.vmHealth = Objects.requireNonNull(vmHealth);
+        this.vmHealth = vmHealth;
     }
 
     /**

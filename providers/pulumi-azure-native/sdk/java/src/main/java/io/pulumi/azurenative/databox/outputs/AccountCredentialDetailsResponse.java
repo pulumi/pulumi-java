@@ -38,10 +38,10 @@ public final class AccountCredentialDetailsResponse {
         String accountName,
         String dataAccountType,
         List<ShareCredentialDetailsResponse> shareCredentialDetails) {
-        this.accountConnectionString = Objects.requireNonNull(accountConnectionString);
-        this.accountName = Objects.requireNonNull(accountName);
-        this.dataAccountType = Objects.requireNonNull(dataAccountType);
-        this.shareCredentialDetails = Objects.requireNonNull(shareCredentialDetails);
+        this.accountConnectionString = accountConnectionString;
+        this.accountName = accountName;
+        this.dataAccountType = dataAccountType;
+        this.shareCredentialDetails = shareCredentialDetails;
     }
 
     /**

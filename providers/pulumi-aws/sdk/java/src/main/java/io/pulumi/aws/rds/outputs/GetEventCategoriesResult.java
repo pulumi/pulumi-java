@@ -29,8 +29,8 @@ public final class GetEventCategoriesResult {
         List<String> eventCategories,
         String id,
         @Nullable String sourceType) {
-        this.eventCategories = Objects.requireNonNull(eventCategories);
-        this.id = Objects.requireNonNull(id);
+        this.eventCategories = eventCategories;
+        this.id = id;
         this.sourceType = sourceType;
     }
 

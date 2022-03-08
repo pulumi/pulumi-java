@@ -38,10 +38,10 @@ public final class GetMonitoringConfigResult {
         List<MetricConfigurationResponse> metricConfigurations,
         String name,
         String type) {
-        this.id = Objects.requireNonNull(id);
-        this.metricConfigurations = Objects.requireNonNull(metricConfigurations);
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.id = id;
+        this.metricConfigurations = metricConfigurations;
+        this.name = name;
+        this.type = type;
     }
 
     /**

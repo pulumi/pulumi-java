@@ -18,7 +18,7 @@ public final class PatchInstanceFilterGroupLabelResponse {
 
     @OutputCustomType.Constructor({"labels"})
     private PatchInstanceFilterGroupLabelResponse(Map<String,String> labels) {
-        this.labels = Objects.requireNonNull(labels);
+        this.labels = labels;
     }
 
     /**

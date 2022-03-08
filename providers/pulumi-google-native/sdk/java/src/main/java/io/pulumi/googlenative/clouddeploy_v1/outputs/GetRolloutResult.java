@@ -115,23 +115,23 @@ public final class GetRolloutResult {
         String state,
         String targetId,
         String uid) {
-        this.annotations = Objects.requireNonNull(annotations);
-        this.approvalState = Objects.requireNonNull(approvalState);
-        this.approveTime = Objects.requireNonNull(approveTime);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.deployEndTime = Objects.requireNonNull(deployEndTime);
-        this.deployFailureCause = Objects.requireNonNull(deployFailureCause);
-        this.deployStartTime = Objects.requireNonNull(deployStartTime);
-        this.deployingBuild = Objects.requireNonNull(deployingBuild);
-        this.description = Objects.requireNonNull(description);
-        this.enqueueTime = Objects.requireNonNull(enqueueTime);
-        this.etag = Objects.requireNonNull(etag);
-        this.failureReason = Objects.requireNonNull(failureReason);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.state = Objects.requireNonNull(state);
-        this.targetId = Objects.requireNonNull(targetId);
-        this.uid = Objects.requireNonNull(uid);
+        this.annotations = annotations;
+        this.approvalState = approvalState;
+        this.approveTime = approveTime;
+        this.createTime = createTime;
+        this.deployEndTime = deployEndTime;
+        this.deployFailureCause = deployFailureCause;
+        this.deployStartTime = deployStartTime;
+        this.deployingBuild = deployingBuild;
+        this.description = description;
+        this.enqueueTime = enqueueTime;
+        this.etag = etag;
+        this.failureReason = failureReason;
+        this.labels = labels;
+        this.name = name;
+        this.state = state;
+        this.targetId = targetId;
+        this.uid = uid;
     }
 
     /**

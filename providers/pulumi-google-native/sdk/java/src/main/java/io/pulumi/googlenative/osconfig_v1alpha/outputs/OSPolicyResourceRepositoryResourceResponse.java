@@ -39,10 +39,10 @@ public final class OSPolicyResourceRepositoryResourceResponse {
         OSPolicyResourceRepositoryResourceGooRepositoryResponse goo,
         OSPolicyResourceRepositoryResourceYumRepositoryResponse yum,
         OSPolicyResourceRepositoryResourceZypperRepositoryResponse zypper) {
-        this.apt = Objects.requireNonNull(apt);
-        this.goo = Objects.requireNonNull(goo);
-        this.yum = Objects.requireNonNull(yum);
-        this.zypper = Objects.requireNonNull(zypper);
+        this.apt = apt;
+        this.goo = goo;
+        this.yum = yum;
+        this.zypper = zypper;
     }
 
     /**

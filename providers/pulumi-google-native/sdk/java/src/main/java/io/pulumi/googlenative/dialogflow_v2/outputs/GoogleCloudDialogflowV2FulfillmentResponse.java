@@ -46,11 +46,11 @@ public final class GoogleCloudDialogflowV2FulfillmentResponse {
         List<GoogleCloudDialogflowV2FulfillmentFeatureResponse> features,
         GoogleCloudDialogflowV2FulfillmentGenericWebServiceResponse genericWebService,
         String name) {
-        this.displayName = Objects.requireNonNull(displayName);
-        this.enabled = Objects.requireNonNull(enabled);
-        this.features = Objects.requireNonNull(features);
-        this.genericWebService = Objects.requireNonNull(genericWebService);
-        this.name = Objects.requireNonNull(name);
+        this.displayName = displayName;
+        this.enabled = enabled;
+        this.features = features;
+        this.genericWebService = genericWebService;
+        this.name = name;
     }
 
     /**

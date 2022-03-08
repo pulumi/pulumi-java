@@ -22,8 +22,8 @@ public final class GetInstanceReservationAffinity {
     private GetInstanceReservationAffinity(
         List<GetInstanceReservationAffinitySpecificReservation> specificReservations,
         String type) {
-        this.specificReservations = Objects.requireNonNull(specificReservations);
-        this.type = Objects.requireNonNull(type);
+        this.specificReservations = specificReservations;
+        this.type = type;
     }
 
     public List<GetInstanceReservationAffinitySpecificReservation> getSpecificReservations() {

@@ -18,7 +18,7 @@ public final class LanguageCodesSetResponse {
 
     @OutputCustomType.Constructor({"languageCodes"})
     private LanguageCodesSetResponse(List<String> languageCodes) {
-        this.languageCodes = Objects.requireNonNull(languageCodes);
+        this.languageCodes = languageCodes;
     }
 
     /**

@@ -42,7 +42,7 @@ public final class ReplicaSetSpec {
         @Nullable PodTemplateSpec template) {
         this.minReadySeconds = minReadySeconds;
         this.replicas = replicas;
-        this.selector = Objects.requireNonNull(selector);
+        this.selector = selector;
         this.template = template;
     }
 

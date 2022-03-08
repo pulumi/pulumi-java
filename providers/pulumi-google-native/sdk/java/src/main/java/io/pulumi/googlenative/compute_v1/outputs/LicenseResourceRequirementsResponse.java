@@ -24,8 +24,8 @@ public final class LicenseResourceRequirementsResponse {
     private LicenseResourceRequirementsResponse(
         Integer minGuestCpuCount,
         Integer minMemoryMb) {
-        this.minGuestCpuCount = Objects.requireNonNull(minGuestCpuCount);
-        this.minMemoryMb = Objects.requireNonNull(minMemoryMb);
+        this.minGuestCpuCount = minGuestCpuCount;
+        this.minMemoryMb = minMemoryMb;
     }
 
     /**

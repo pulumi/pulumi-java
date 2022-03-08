@@ -26,9 +26,9 @@ public final class GetResourcesResourceTagMappingListComplianceDetail {
         Boolean complianceStatus,
         List<String> keysWithNoncompliantValues,
         List<String> nonCompliantKeys) {
-        this.complianceStatus = Objects.requireNonNull(complianceStatus);
-        this.keysWithNoncompliantValues = Objects.requireNonNull(keysWithNoncompliantValues);
-        this.nonCompliantKeys = Objects.requireNonNull(nonCompliantKeys);
+        this.complianceStatus = complianceStatus;
+        this.keysWithNoncompliantValues = keysWithNoncompliantValues;
+        this.nonCompliantKeys = nonCompliantKeys;
     }
 
     /**

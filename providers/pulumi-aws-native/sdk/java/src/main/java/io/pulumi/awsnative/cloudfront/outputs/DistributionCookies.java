@@ -18,7 +18,7 @@ public final class DistributionCookies {
     private DistributionCookies(
         String forward,
         @Nullable List<String> whitelistedNames) {
-        this.forward = Objects.requireNonNull(forward);
+        this.forward = forward;
         this.whitelistedNames = whitelistedNames;
     }
 

@@ -47,11 +47,11 @@ public final class V2RestrictionsResponse {
         V2BrowserKeyRestrictionsResponse browserKeyRestrictions,
         V2IosKeyRestrictionsResponse iosKeyRestrictions,
         V2ServerKeyRestrictionsResponse serverKeyRestrictions) {
-        this.androidKeyRestrictions = Objects.requireNonNull(androidKeyRestrictions);
-        this.apiTargets = Objects.requireNonNull(apiTargets);
-        this.browserKeyRestrictions = Objects.requireNonNull(browserKeyRestrictions);
-        this.iosKeyRestrictions = Objects.requireNonNull(iosKeyRestrictions);
-        this.serverKeyRestrictions = Objects.requireNonNull(serverKeyRestrictions);
+        this.androidKeyRestrictions = androidKeyRestrictions;
+        this.apiTargets = apiTargets;
+        this.browserKeyRestrictions = browserKeyRestrictions;
+        this.iosKeyRestrictions = iosKeyRestrictions;
+        this.serverKeyRestrictions = serverKeyRestrictions;
     }
 
     /**

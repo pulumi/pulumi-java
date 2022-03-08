@@ -18,8 +18,8 @@ public final class GetGameServerDeploymentRolloutGameServerConfigOverride {
     private GetGameServerDeploymentRolloutGameServerConfigOverride(
         String configVersion,
         List<GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector> realmsSelectors) {
-        this.configVersion = Objects.requireNonNull(configVersion);
-        this.realmsSelectors = Objects.requireNonNull(realmsSelectors);
+        this.configVersion = configVersion;
+        this.realmsSelectors = realmsSelectors;
     }
 
     public String getConfigVersion() {

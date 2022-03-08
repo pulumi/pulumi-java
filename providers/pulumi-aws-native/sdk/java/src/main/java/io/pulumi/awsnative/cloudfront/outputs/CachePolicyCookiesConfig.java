@@ -18,7 +18,7 @@ public final class CachePolicyCookiesConfig {
     private CachePolicyCookiesConfig(
         String cookieBehavior,
         @Nullable List<String> cookies) {
-        this.cookieBehavior = Objects.requireNonNull(cookieBehavior);
+        this.cookieBehavior = cookieBehavior;
         this.cookies = cookies;
     }
 

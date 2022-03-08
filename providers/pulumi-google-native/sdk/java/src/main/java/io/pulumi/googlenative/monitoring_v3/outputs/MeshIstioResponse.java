@@ -30,9 +30,9 @@ public final class MeshIstioResponse {
         String meshUid,
         String serviceName,
         String serviceNamespace) {
-        this.meshUid = Objects.requireNonNull(meshUid);
-        this.serviceName = Objects.requireNonNull(serviceName);
-        this.serviceNamespace = Objects.requireNonNull(serviceNamespace);
+        this.meshUid = meshUid;
+        this.serviceName = serviceName;
+        this.serviceNamespace = serviceNamespace;
     }
 
     /**

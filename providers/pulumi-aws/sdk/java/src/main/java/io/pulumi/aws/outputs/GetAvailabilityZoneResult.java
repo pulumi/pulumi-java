@@ -85,18 +85,18 @@ public final class GetAvailabilityZoneResult {
         String zoneType) {
         this.allAvailabilityZones = allAvailabilityZones;
         this.filters = filters;
-        this.groupName = Objects.requireNonNull(groupName);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.nameSuffix = Objects.requireNonNull(nameSuffix);
-        this.networkBorderGroup = Objects.requireNonNull(networkBorderGroup);
-        this.optInStatus = Objects.requireNonNull(optInStatus);
-        this.parentZoneId = Objects.requireNonNull(parentZoneId);
-        this.parentZoneName = Objects.requireNonNull(parentZoneName);
-        this.region = Objects.requireNonNull(region);
-        this.state = Objects.requireNonNull(state);
-        this.zoneId = Objects.requireNonNull(zoneId);
-        this.zoneType = Objects.requireNonNull(zoneType);
+        this.groupName = groupName;
+        this.id = id;
+        this.name = name;
+        this.nameSuffix = nameSuffix;
+        this.networkBorderGroup = networkBorderGroup;
+        this.optInStatus = optInStatus;
+        this.parentZoneId = parentZoneId;
+        this.parentZoneName = parentZoneName;
+        this.region = region;
+        this.state = state;
+        this.zoneId = zoneId;
+        this.zoneType = zoneType;
     }
 
     public Optional<Boolean> getAllAvailabilityZones() {

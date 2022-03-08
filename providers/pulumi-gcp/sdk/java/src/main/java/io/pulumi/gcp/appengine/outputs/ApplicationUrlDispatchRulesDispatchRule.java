@@ -36,8 +36,8 @@ public final class ApplicationUrlDispatchRulesDispatchRule {
         String path,
         String service) {
         this.domain = domain;
-        this.path = Objects.requireNonNull(path);
-        this.service = Objects.requireNonNull(service);
+        this.path = path;
+        this.service = service;
     }
 
     /**

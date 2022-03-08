@@ -48,8 +48,8 @@ public final class AuthInfoResponse {
         this.expiresIn = expiresIn;
         this.refreshToken = refreshToken;
         this.scope = scope;
-        this.token = Objects.requireNonNull(token);
-        this.tokenType = Objects.requireNonNull(tokenType);
+        this.token = token;
+        this.tokenType = tokenType;
     }
 
     /**

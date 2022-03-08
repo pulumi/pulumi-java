@@ -36,10 +36,10 @@ public final class GetDomainIdentityResult {
         String domain,
         String id,
         String verificationToken) {
-        this.arn = Objects.requireNonNull(arn);
-        this.domain = Objects.requireNonNull(domain);
-        this.id = Objects.requireNonNull(id);
-        this.verificationToken = Objects.requireNonNull(verificationToken);
+        this.arn = arn;
+        this.domain = domain;
+        this.id = id;
+        this.verificationToken = verificationToken;
     }
 
     /**

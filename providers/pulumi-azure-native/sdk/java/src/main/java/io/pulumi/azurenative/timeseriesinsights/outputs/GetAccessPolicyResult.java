@@ -52,11 +52,11 @@ public final class GetAccessPolicyResult {
         @Nullable List<String> roles,
         String type) {
         this.description = description;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.principalObjectId = principalObjectId;
         this.roles = roles;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

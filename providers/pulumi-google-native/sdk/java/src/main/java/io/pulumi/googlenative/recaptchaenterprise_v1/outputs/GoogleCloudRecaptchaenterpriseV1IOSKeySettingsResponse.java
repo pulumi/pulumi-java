@@ -26,8 +26,8 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse {
     private GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse(
         Boolean allowAllBundleIds,
         List<String> allowedBundleIds) {
-        this.allowAllBundleIds = Objects.requireNonNull(allowAllBundleIds);
-        this.allowedBundleIds = Objects.requireNonNull(allowedBundleIds);
+        this.allowAllBundleIds = allowAllBundleIds;
+        this.allowedBundleIds = allowedBundleIds;
     }
 
     /**

@@ -24,8 +24,8 @@ public final class OidcTokenResponse {
     private OidcTokenResponse(
         String audience,
         String serviceAccountEmail) {
-        this.audience = Objects.requireNonNull(audience);
-        this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
+        this.audience = audience;
+        this.serviceAccountEmail = serviceAccountEmail;
     }
 
     /**

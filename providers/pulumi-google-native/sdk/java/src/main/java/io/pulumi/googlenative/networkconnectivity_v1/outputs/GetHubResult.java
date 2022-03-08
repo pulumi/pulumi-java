@@ -63,14 +63,14 @@ public final class GetHubResult {
         String state,
         String uniqueId,
         String updateTime) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.description = Objects.requireNonNull(description);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.routingVpcs = Objects.requireNonNull(routingVpcs);
-        this.state = Objects.requireNonNull(state);
-        this.uniqueId = Objects.requireNonNull(uniqueId);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.createTime = createTime;
+        this.description = description;
+        this.labels = labels;
+        this.name = name;
+        this.routingVpcs = routingVpcs;
+        this.state = state;
+        this.uniqueId = uniqueId;
+        this.updateTime = updateTime;
     }
 
     /**

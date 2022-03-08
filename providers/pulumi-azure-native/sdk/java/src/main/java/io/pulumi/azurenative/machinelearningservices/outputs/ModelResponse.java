@@ -155,9 +155,9 @@ public final class ModelResponse {
         this.frameworkVersion = frameworkVersion;
         this.id = id;
         this.kvTags = kvTags;
-        this.mimeType = Objects.requireNonNull(mimeType);
+        this.mimeType = mimeType;
         this.modifiedTime = modifiedTime;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.parentModelId = parentModelId;
         this.properties = properties;
         this.resourceRequirements = resourceRequirements;
@@ -165,7 +165,7 @@ public final class ModelResponse {
         this.sampleInputData = sampleInputData;
         this.sampleOutputData = sampleOutputData;
         this.unpack = unpack;
-        this.url = Objects.requireNonNull(url);
+        this.url = url;
         this.version = version;
     }
 

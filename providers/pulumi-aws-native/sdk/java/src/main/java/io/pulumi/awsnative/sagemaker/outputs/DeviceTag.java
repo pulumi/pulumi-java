@@ -24,8 +24,8 @@ public final class DeviceTag {
     private DeviceTag(
         String key,
         String value) {
-        this.key = Objects.requireNonNull(key);
-        this.value = Objects.requireNonNull(value);
+        this.key = key;
+        this.value = value;
     }
 
     /**

@@ -142,27 +142,27 @@ public final class GetOrganizationResult {
         String runtimeType,
         String state,
         String type) {
-        this.addonsConfig = Objects.requireNonNull(addonsConfig);
-        this.analyticsRegion = Objects.requireNonNull(analyticsRegion);
-        this.attributes = Objects.requireNonNull(attributes);
-        this.authorizedNetwork = Objects.requireNonNull(authorizedNetwork);
-        this.billingType = Objects.requireNonNull(billingType);
-        this.caCertificate = Objects.requireNonNull(caCertificate);
-        this.createdAt = Objects.requireNonNull(createdAt);
-        this.customerName = Objects.requireNonNull(customerName);
-        this.description = Objects.requireNonNull(description);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.environments = Objects.requireNonNull(environments);
-        this.expiresAt = Objects.requireNonNull(expiresAt);
-        this.lastModifiedAt = Objects.requireNonNull(lastModifiedAt);
-        this.name = Objects.requireNonNull(name);
-        this.portalDisabled = Objects.requireNonNull(portalDisabled);
-        this.project = Objects.requireNonNull(project);
-        this.properties = Objects.requireNonNull(properties);
-        this.runtimeDatabaseEncryptionKeyName = Objects.requireNonNull(runtimeDatabaseEncryptionKeyName);
-        this.runtimeType = Objects.requireNonNull(runtimeType);
-        this.state = Objects.requireNonNull(state);
-        this.type = Objects.requireNonNull(type);
+        this.addonsConfig = addonsConfig;
+        this.analyticsRegion = analyticsRegion;
+        this.attributes = attributes;
+        this.authorizedNetwork = authorizedNetwork;
+        this.billingType = billingType;
+        this.caCertificate = caCertificate;
+        this.createdAt = createdAt;
+        this.customerName = customerName;
+        this.description = description;
+        this.displayName = displayName;
+        this.environments = environments;
+        this.expiresAt = expiresAt;
+        this.lastModifiedAt = lastModifiedAt;
+        this.name = name;
+        this.portalDisabled = portalDisabled;
+        this.project = project;
+        this.properties = properties;
+        this.runtimeDatabaseEncryptionKeyName = runtimeDatabaseEncryptionKeyName;
+        this.runtimeType = runtimeType;
+        this.state = state;
+        this.type = type;
     }
 
     /**

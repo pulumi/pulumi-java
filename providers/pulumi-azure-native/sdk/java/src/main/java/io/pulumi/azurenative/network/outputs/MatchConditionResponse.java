@@ -47,10 +47,10 @@ public final class MatchConditionResponse {
         @Nullable Boolean negationConditon,
         String operator,
         @Nullable List<String> transforms) {
-        this.matchValues = Objects.requireNonNull(matchValues);
-        this.matchVariables = Objects.requireNonNull(matchVariables);
+        this.matchValues = matchValues;
+        this.matchVariables = matchVariables;
         this.negationConditon = negationConditon;
-        this.operator = Objects.requireNonNull(operator);
+        this.operator = operator;
         this.transforms = transforms;
     }
 

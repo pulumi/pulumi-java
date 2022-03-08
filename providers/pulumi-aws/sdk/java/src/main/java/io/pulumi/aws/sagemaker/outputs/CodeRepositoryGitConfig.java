@@ -33,7 +33,7 @@ public final class CodeRepositoryGitConfig {
         String repositoryUrl,
         @Nullable String secretArn) {
         this.branch = branch;
-        this.repositoryUrl = Objects.requireNonNull(repositoryUrl);
+        this.repositoryUrl = repositoryUrl;
         this.secretArn = secretArn;
     }
 

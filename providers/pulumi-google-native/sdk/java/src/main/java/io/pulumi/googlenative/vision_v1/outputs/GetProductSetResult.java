@@ -37,10 +37,10 @@ public final class GetProductSetResult {
         StatusResponse indexError,
         String indexTime,
         String name) {
-        this.displayName = Objects.requireNonNull(displayName);
-        this.indexError = Objects.requireNonNull(indexError);
-        this.indexTime = Objects.requireNonNull(indexTime);
-        this.name = Objects.requireNonNull(name);
+        this.displayName = displayName;
+        this.indexError = indexError;
+        this.indexTime = indexTime;
+        this.name = name;
     }
 
     /**

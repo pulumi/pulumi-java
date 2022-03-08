@@ -13,7 +13,7 @@ public final class MultiRegionAccessPointRegion {
 
     @OutputCustomType.Constructor({"bucket"})
     private MultiRegionAccessPointRegion(String bucket) {
-        this.bucket = Objects.requireNonNull(bucket);
+        this.bucket = bucket;
     }
 
     public String getBucket() {

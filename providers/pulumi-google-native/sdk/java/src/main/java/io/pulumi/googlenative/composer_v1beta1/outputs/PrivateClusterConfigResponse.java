@@ -31,9 +31,9 @@ public final class PrivateClusterConfigResponse {
         Boolean enablePrivateEndpoint,
         String masterIpv4CidrBlock,
         String masterIpv4ReservedRange) {
-        this.enablePrivateEndpoint = Objects.requireNonNull(enablePrivateEndpoint);
-        this.masterIpv4CidrBlock = Objects.requireNonNull(masterIpv4CidrBlock);
-        this.masterIpv4ReservedRange = Objects.requireNonNull(masterIpv4ReservedRange);
+        this.enablePrivateEndpoint = enablePrivateEndpoint;
+        this.masterIpv4CidrBlock = masterIpv4CidrBlock;
+        this.masterIpv4ReservedRange = masterIpv4ReservedRange;
     }
 
     /**

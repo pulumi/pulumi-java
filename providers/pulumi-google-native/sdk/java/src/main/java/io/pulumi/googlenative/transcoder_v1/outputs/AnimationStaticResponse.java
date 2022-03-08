@@ -25,8 +25,8 @@ public final class AnimationStaticResponse {
     private AnimationStaticResponse(
         String startTimeOffset,
         NormalizedCoordinateResponse xy) {
-        this.startTimeOffset = Objects.requireNonNull(startTimeOffset);
-        this.xy = Objects.requireNonNull(xy);
+        this.startTimeOffset = startTimeOffset;
+        this.xy = xy;
     }
 
     /**

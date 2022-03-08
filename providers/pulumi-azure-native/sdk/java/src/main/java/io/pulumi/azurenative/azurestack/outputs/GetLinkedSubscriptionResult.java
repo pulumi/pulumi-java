@@ -106,21 +106,21 @@ public final class GetLinkedSubscriptionResult {
         SystemDataResponse systemData,
         @Nullable Map<String,String> tags,
         String type) {
-        this.deviceConnectionStatus = Objects.requireNonNull(deviceConnectionStatus);
-        this.deviceId = Objects.requireNonNull(deviceId);
-        this.deviceLinkState = Objects.requireNonNull(deviceLinkState);
-        this.deviceObjectId = Objects.requireNonNull(deviceObjectId);
+        this.deviceConnectionStatus = deviceConnectionStatus;
+        this.deviceId = deviceId;
+        this.deviceLinkState = deviceLinkState;
+        this.deviceObjectId = deviceObjectId;
         this.etag = etag;
-        this.id = Objects.requireNonNull(id);
-        this.kind = Objects.requireNonNull(kind);
-        this.lastConnectedTime = Objects.requireNonNull(lastConnectedTime);
+        this.id = id;
+        this.kind = kind;
+        this.lastConnectedTime = lastConnectedTime;
         this.linkedSubscriptionId = linkedSubscriptionId;
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
+        this.location = location;
+        this.name = name;
         this.registrationResourceId = registrationResourceId;
-        this.systemData = Objects.requireNonNull(systemData);
+        this.systemData = systemData;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

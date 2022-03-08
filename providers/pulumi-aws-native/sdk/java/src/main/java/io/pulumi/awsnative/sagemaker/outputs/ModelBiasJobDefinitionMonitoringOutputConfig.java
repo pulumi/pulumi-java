@@ -29,7 +29,7 @@ public final class ModelBiasJobDefinitionMonitoringOutputConfig {
         @Nullable String kmsKeyId,
         List<ModelBiasJobDefinitionMonitoringOutput> monitoringOutputs) {
         this.kmsKeyId = kmsKeyId;
-        this.monitoringOutputs = Objects.requireNonNull(monitoringOutputs);
+        this.monitoringOutputs = monitoringOutputs;
     }
 
     /**

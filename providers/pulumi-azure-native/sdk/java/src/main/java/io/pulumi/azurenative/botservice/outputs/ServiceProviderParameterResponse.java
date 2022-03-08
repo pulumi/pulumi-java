@@ -55,13 +55,13 @@ public final class ServiceProviderParameterResponse {
         ServiceProviderParameterResponseMetadata metadata,
         String name,
         String type) {
-        this.$default = Objects.requireNonNull($default);
-        this.description = Objects.requireNonNull(description);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.helpUrl = Objects.requireNonNull(helpUrl);
-        this.metadata = Objects.requireNonNull(metadata);
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.$default = $default;
+        this.description = description;
+        this.displayName = displayName;
+        this.helpUrl = helpUrl;
+        this.metadata = metadata;
+        this.name = name;
+        this.type = type;
     }
 
     /**

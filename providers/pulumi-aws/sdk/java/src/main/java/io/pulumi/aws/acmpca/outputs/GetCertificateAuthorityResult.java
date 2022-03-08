@@ -89,18 +89,18 @@ public final class GetCertificateAuthorityResult {
         String status,
         Map<String,String> tags,
         String type) {
-        this.arn = Objects.requireNonNull(arn);
-        this.certificate = Objects.requireNonNull(certificate);
-        this.certificateChain = Objects.requireNonNull(certificateChain);
-        this.certificateSigningRequest = Objects.requireNonNull(certificateSigningRequest);
-        this.id = Objects.requireNonNull(id);
-        this.notAfter = Objects.requireNonNull(notAfter);
-        this.notBefore = Objects.requireNonNull(notBefore);
-        this.revocationConfigurations = Objects.requireNonNull(revocationConfigurations);
-        this.serial = Objects.requireNonNull(serial);
-        this.status = Objects.requireNonNull(status);
-        this.tags = Objects.requireNonNull(tags);
-        this.type = Objects.requireNonNull(type);
+        this.arn = arn;
+        this.certificate = certificate;
+        this.certificateChain = certificateChain;
+        this.certificateSigningRequest = certificateSigningRequest;
+        this.id = id;
+        this.notAfter = notAfter;
+        this.notBefore = notBefore;
+        this.revocationConfigurations = revocationConfigurations;
+        this.serial = serial;
+        this.status = status;
+        this.tags = tags;
+        this.type = type;
     }
 
     public String getArn() {

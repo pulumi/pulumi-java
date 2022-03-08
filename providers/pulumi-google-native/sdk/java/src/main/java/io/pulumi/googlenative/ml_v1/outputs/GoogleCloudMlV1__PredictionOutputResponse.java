@@ -37,10 +37,10 @@ public final class GoogleCloudMlV1__PredictionOutputResponse {
         Double nodeHours,
         String outputPath,
         String predictionCount) {
-        this.errorCount = Objects.requireNonNull(errorCount);
-        this.nodeHours = Objects.requireNonNull(nodeHours);
-        this.outputPath = Objects.requireNonNull(outputPath);
-        this.predictionCount = Objects.requireNonNull(predictionCount);
+        this.errorCount = errorCount;
+        this.nodeHours = nodeHours;
+        this.outputPath = outputPath;
+        this.predictionCount = predictionCount;
     }
 
     /**

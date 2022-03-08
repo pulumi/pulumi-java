@@ -44,11 +44,11 @@ public final class MuxStreamResponse {
         String fileName,
         String key,
         SegmentSettingsResponse segmentSettings) {
-        this.container = Objects.requireNonNull(container);
-        this.elementaryStreams = Objects.requireNonNull(elementaryStreams);
-        this.fileName = Objects.requireNonNull(fileName);
-        this.key = Objects.requireNonNull(key);
-        this.segmentSettings = Objects.requireNonNull(segmentSettings);
+        this.container = container;
+        this.elementaryStreams = elementaryStreams;
+        this.fileName = fileName;
+        this.key = key;
+        this.segmentSettings = segmentSettings;
     }
 
     /**

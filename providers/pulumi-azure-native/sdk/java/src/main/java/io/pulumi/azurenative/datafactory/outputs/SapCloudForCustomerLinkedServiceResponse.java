@@ -83,8 +83,8 @@ public final class SapCloudForCustomerLinkedServiceResponse {
         this.encryptedCredential = encryptedCredential;
         this.parameters = parameters;
         this.password = password;
-        this.type = Objects.requireNonNull(type);
-        this.url = Objects.requireNonNull(url);
+        this.type = type;
+        this.url = url;
         this.username = username;
     }
 

@@ -14,7 +14,7 @@ public final class SpotFleetTargetGroupsConfig {
 
     @OutputCustomType.Constructor({"targetGroups"})
     private SpotFleetTargetGroupsConfig(List<SpotFleetTargetGroup> targetGroups) {
-        this.targetGroups = Objects.requireNonNull(targetGroups);
+        this.targetGroups = targetGroups;
     }
 
     public List<SpotFleetTargetGroup> getTargetGroups() {

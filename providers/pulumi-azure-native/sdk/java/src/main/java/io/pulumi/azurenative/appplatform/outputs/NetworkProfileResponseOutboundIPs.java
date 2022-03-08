@@ -18,7 +18,7 @@ public final class NetworkProfileResponseOutboundIPs {
 
     @OutputCustomType.Constructor({"publicIPs"})
     private NetworkProfileResponseOutboundIPs(List<String> publicIPs) {
-        this.publicIPs = Objects.requireNonNull(publicIPs);
+        this.publicIPs = publicIPs;
     }
 
     /**

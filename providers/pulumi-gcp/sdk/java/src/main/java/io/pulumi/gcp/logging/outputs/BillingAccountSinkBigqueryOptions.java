@@ -20,7 +20,7 @@ public final class BillingAccountSinkBigqueryOptions {
 
     @OutputCustomType.Constructor({"usePartitionedTables"})
     private BillingAccountSinkBigqueryOptions(Boolean usePartitionedTables) {
-        this.usePartitionedTables = Objects.requireNonNull(usePartitionedTables);
+        this.usePartitionedTables = usePartitionedTables;
     }
 
     /**

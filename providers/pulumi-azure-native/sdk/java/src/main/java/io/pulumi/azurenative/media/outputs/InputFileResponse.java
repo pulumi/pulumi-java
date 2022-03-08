@@ -43,7 +43,7 @@ public final class InputFileResponse {
         String odataType) {
         this.filename = filename;
         this.includedTracks = includedTracks;
-        this.odataType = Objects.requireNonNull(odataType);
+        this.odataType = odataType;
     }
 
     /**

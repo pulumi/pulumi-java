@@ -62,14 +62,14 @@ public final class StaticSiteUserARMResourceResponse {
         @Nullable String roles,
         String type,
         String userId) {
-        this.displayName = Objects.requireNonNull(displayName);
-        this.id = Objects.requireNonNull(id);
+        this.displayName = displayName;
+        this.id = id;
         this.kind = kind;
-        this.name = Objects.requireNonNull(name);
-        this.provider = Objects.requireNonNull(provider);
+        this.name = name;
+        this.provider = provider;
         this.roles = roles;
-        this.type = Objects.requireNonNull(type);
-        this.userId = Objects.requireNonNull(userId);
+        this.type = type;
+        this.userId = userId;
     }
 
     /**

@@ -51,13 +51,13 @@ public final class GetSubnetGroupResult {
         String status,
         List<String> subnetIds,
         String vpcId) {
-        this.arn = Objects.requireNonNull(arn);
-        this.description = Objects.requireNonNull(description);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.status = Objects.requireNonNull(status);
-        this.subnetIds = Objects.requireNonNull(subnetIds);
-        this.vpcId = Objects.requireNonNull(vpcId);
+        this.arn = arn;
+        this.description = description;
+        this.id = id;
+        this.name = name;
+        this.status = status;
+        this.subnetIds = subnetIds;
+        this.vpcId = vpcId;
     }
 
     /**

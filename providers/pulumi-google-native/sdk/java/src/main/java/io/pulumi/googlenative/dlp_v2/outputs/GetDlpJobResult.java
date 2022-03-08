@@ -76,16 +76,16 @@ public final class GetDlpJobResult {
         String startTime,
         String state,
         String type) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.endTime = Objects.requireNonNull(endTime);
-        this.errors = Objects.requireNonNull(errors);
-        this.inspectDetails = Objects.requireNonNull(inspectDetails);
-        this.jobTriggerName = Objects.requireNonNull(jobTriggerName);
-        this.name = Objects.requireNonNull(name);
-        this.riskDetails = Objects.requireNonNull(riskDetails);
-        this.startTime = Objects.requireNonNull(startTime);
-        this.state = Objects.requireNonNull(state);
-        this.type = Objects.requireNonNull(type);
+        this.createTime = createTime;
+        this.endTime = endTime;
+        this.errors = errors;
+        this.inspectDetails = inspectDetails;
+        this.jobTriggerName = jobTriggerName;
+        this.name = name;
+        this.riskDetails = riskDetails;
+        this.startTime = startTime;
+        this.state = state;
+        this.type = type;
     }
 
     /**

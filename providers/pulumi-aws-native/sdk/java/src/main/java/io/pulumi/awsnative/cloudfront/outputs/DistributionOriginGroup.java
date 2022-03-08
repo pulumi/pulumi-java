@@ -20,9 +20,9 @@ public final class DistributionOriginGroup {
         DistributionOriginGroupFailoverCriteria failoverCriteria,
         String id,
         DistributionOriginGroupMembers members) {
-        this.failoverCriteria = Objects.requireNonNull(failoverCriteria);
-        this.id = Objects.requireNonNull(id);
-        this.members = Objects.requireNonNull(members);
+        this.failoverCriteria = failoverCriteria;
+        this.id = id;
+        this.members = members;
     }
 
     public DistributionOriginGroupFailoverCriteria getFailoverCriteria() {

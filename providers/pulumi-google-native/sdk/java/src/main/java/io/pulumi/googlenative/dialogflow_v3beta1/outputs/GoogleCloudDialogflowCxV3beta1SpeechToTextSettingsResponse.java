@@ -17,7 +17,7 @@ public final class GoogleCloudDialogflowCxV3beta1SpeechToTextSettingsResponse {
 
     @OutputCustomType.Constructor({"enableSpeechAdaptation"})
     private GoogleCloudDialogflowCxV3beta1SpeechToTextSettingsResponse(Boolean enableSpeechAdaptation) {
-        this.enableSpeechAdaptation = Objects.requireNonNull(enableSpeechAdaptation);
+        this.enableSpeechAdaptation = enableSpeechAdaptation;
     }
 
     /**

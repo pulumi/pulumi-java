@@ -54,14 +54,14 @@ public final class GetPermissionsResult {
         GetPermissionsTableWithColumns tableWithColumns) {
         this.catalogId = catalogId;
         this.catalogResource = catalogResource;
-        this.dataLocation = Objects.requireNonNull(dataLocation);
-        this.database = Objects.requireNonNull(database);
-        this.id = Objects.requireNonNull(id);
-        this.permissions = Objects.requireNonNull(permissions);
-        this.permissionsWithGrantOptions = Objects.requireNonNull(permissionsWithGrantOptions);
-        this.principal = Objects.requireNonNull(principal);
-        this.table = Objects.requireNonNull(table);
-        this.tableWithColumns = Objects.requireNonNull(tableWithColumns);
+        this.dataLocation = dataLocation;
+        this.database = database;
+        this.id = id;
+        this.permissions = permissions;
+        this.permissionsWithGrantOptions = permissionsWithGrantOptions;
+        this.principal = principal;
+        this.table = table;
+        this.tableWithColumns = tableWithColumns;
     }
 
     public Optional<String> getCatalogId() {

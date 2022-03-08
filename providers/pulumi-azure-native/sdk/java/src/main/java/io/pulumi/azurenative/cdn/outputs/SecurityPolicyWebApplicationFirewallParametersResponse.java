@@ -37,7 +37,7 @@ public final class SecurityPolicyWebApplicationFirewallParametersResponse {
         String type,
         @Nullable ResourceReferenceResponse wafPolicy) {
         this.associations = associations;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.wafPolicy = wafPolicy;
     }
 

@@ -26,8 +26,8 @@ public final class OracleTableResponse {
     private OracleTableResponse(
         List<OracleColumnResponse> oracleColumns,
         String table) {
-        this.oracleColumns = Objects.requireNonNull(oracleColumns);
-        this.table = Objects.requireNonNull(table);
+        this.oracleColumns = oracleColumns;
+        this.table = table;
     }
 
     /**

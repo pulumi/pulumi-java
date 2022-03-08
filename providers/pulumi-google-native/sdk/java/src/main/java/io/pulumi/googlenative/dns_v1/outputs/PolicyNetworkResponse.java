@@ -20,8 +20,8 @@ public final class PolicyNetworkResponse {
     private PolicyNetworkResponse(
         String kind,
         String networkUrl) {
-        this.kind = Objects.requireNonNull(kind);
-        this.networkUrl = Objects.requireNonNull(networkUrl);
+        this.kind = kind;
+        this.networkUrl = networkUrl;
     }
 
     public String getKind() {

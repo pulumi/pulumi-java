@@ -32,8 +32,8 @@ public final class HeaderActionResponse {
         String headerActionType,
         String headerName,
         @Nullable String value) {
-        this.headerActionType = Objects.requireNonNull(headerActionType);
-        this.headerName = Objects.requireNonNull(headerName);
+        this.headerActionType = headerActionType;
+        this.headerName = headerName;
         this.value = value;
     }
 

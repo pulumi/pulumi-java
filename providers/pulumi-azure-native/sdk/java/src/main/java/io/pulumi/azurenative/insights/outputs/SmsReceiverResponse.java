@@ -36,10 +36,10 @@ public final class SmsReceiverResponse {
         String name,
         String phoneNumber,
         String status) {
-        this.countryCode = Objects.requireNonNull(countryCode);
-        this.name = Objects.requireNonNull(name);
-        this.phoneNumber = Objects.requireNonNull(phoneNumber);
-        this.status = Objects.requireNonNull(status);
+        this.countryCode = countryCode;
+        this.name = name;
+        this.phoneNumber = phoneNumber;
+        this.status = status;
     }
 
     /**

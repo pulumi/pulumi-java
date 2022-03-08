@@ -34,7 +34,7 @@ public final class BucketObjectLockConfigurationRuleDefaultRetention {
         String mode,
         @Nullable Integer years) {
         this.days = days;
-        this.mode = Objects.requireNonNull(mode);
+        this.mode = mode;
         this.years = years;
     }
 

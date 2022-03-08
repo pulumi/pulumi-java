@@ -32,10 +32,10 @@ public final class GetResourceResult {
         String id,
         String lastModified,
         String roleArn) {
-        this.arn = Objects.requireNonNull(arn);
-        this.id = Objects.requireNonNull(id);
-        this.lastModified = Objects.requireNonNull(lastModified);
-        this.roleArn = Objects.requireNonNull(roleArn);
+        this.arn = arn;
+        this.id = id;
+        this.lastModified = lastModified;
+        this.roleArn = roleArn;
     }
 
     public String getArn() {

@@ -31,9 +31,9 @@ public final class IosDeviceFileResponse {
         String bundleId,
         FileReferenceResponse content,
         String devicePath) {
-        this.bundleId = Objects.requireNonNull(bundleId);
-        this.content = Objects.requireNonNull(content);
-        this.devicePath = Objects.requireNonNull(devicePath);
+        this.bundleId = bundleId;
+        this.content = content;
+        this.devicePath = devicePath;
     }
 
     /**

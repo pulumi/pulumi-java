@@ -123,19 +123,19 @@ public final class GetIotSecuritySolutionResult {
         @Nullable UserDefinedResourcesPropertiesResponse userDefinedResources,
         @Nullable String workspace) {
         this.additionalWorkspaces = additionalWorkspaces;
-        this.autoDiscoveredResources = Objects.requireNonNull(autoDiscoveredResources);
+        this.autoDiscoveredResources = autoDiscoveredResources;
         this.disabledDataSources = disabledDataSources;
-        this.displayName = Objects.requireNonNull(displayName);
+        this.displayName = displayName;
         this.export = export;
-        this.id = Objects.requireNonNull(id);
-        this.iotHubs = Objects.requireNonNull(iotHubs);
+        this.id = id;
+        this.iotHubs = iotHubs;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.recommendationsConfiguration = recommendationsConfiguration;
         this.status = status;
-        this.systemData = Objects.requireNonNull(systemData);
+        this.systemData = systemData;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.unmaskedIpLoggingStatus = unmaskedIpLoggingStatus;
         this.userDefinedResources = userDefinedResources;
         this.workspace = workspace;

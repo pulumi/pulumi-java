@@ -22,7 +22,7 @@ public final class BotMessageGroup {
     private BotMessageGroup(
         BotMessage message,
         @Nullable List<BotMessage> variations) {
-        this.message = Objects.requireNonNull(message);
+        this.message = message;
         this.variations = variations;
     }
 

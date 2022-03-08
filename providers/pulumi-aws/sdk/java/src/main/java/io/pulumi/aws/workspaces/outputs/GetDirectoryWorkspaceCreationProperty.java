@@ -43,11 +43,11 @@ public final class GetDirectoryWorkspaceCreationProperty {
         Boolean enableInternetAccess,
         Boolean enableMaintenanceMode,
         Boolean userEnabledAsLocalAdministrator) {
-        this.customSecurityGroupId = Objects.requireNonNull(customSecurityGroupId);
-        this.defaultOu = Objects.requireNonNull(defaultOu);
-        this.enableInternetAccess = Objects.requireNonNull(enableInternetAccess);
-        this.enableMaintenanceMode = Objects.requireNonNull(enableMaintenanceMode);
-        this.userEnabledAsLocalAdministrator = Objects.requireNonNull(userEnabledAsLocalAdministrator);
+        this.customSecurityGroupId = customSecurityGroupId;
+        this.defaultOu = defaultOu;
+        this.enableInternetAccess = enableInternetAccess;
+        this.enableMaintenanceMode = enableMaintenanceMode;
+        this.userEnabledAsLocalAdministrator = userEnabledAsLocalAdministrator;
     }
 
     /**

@@ -79,17 +79,17 @@ public final class SpriteSheetResponse {
         Integer spriteWidthPixels,
         String startTimeOffset,
         Integer totalCount) {
-        this.columnCount = Objects.requireNonNull(columnCount);
-        this.endTimeOffset = Objects.requireNonNull(endTimeOffset);
-        this.filePrefix = Objects.requireNonNull(filePrefix);
-        this.format = Objects.requireNonNull(format);
-        this.interval = Objects.requireNonNull(interval);
-        this.quality = Objects.requireNonNull(quality);
-        this.rowCount = Objects.requireNonNull(rowCount);
-        this.spriteHeightPixels = Objects.requireNonNull(spriteHeightPixels);
-        this.spriteWidthPixels = Objects.requireNonNull(spriteWidthPixels);
-        this.startTimeOffset = Objects.requireNonNull(startTimeOffset);
-        this.totalCount = Objects.requireNonNull(totalCount);
+        this.columnCount = columnCount;
+        this.endTimeOffset = endTimeOffset;
+        this.filePrefix = filePrefix;
+        this.format = format;
+        this.interval = interval;
+        this.quality = quality;
+        this.rowCount = rowCount;
+        this.spriteHeightPixels = spriteHeightPixels;
+        this.spriteWidthPixels = spriteWidthPixels;
+        this.startTimeOffset = startTimeOffset;
+        this.totalCount = totalCount;
     }
 
     /**

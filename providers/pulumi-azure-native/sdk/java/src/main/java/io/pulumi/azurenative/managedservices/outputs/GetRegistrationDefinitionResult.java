@@ -46,11 +46,11 @@ public final class GetRegistrationDefinitionResult {
         @Nullable PlanResponse plan,
         RegistrationDefinitionPropertiesResponse properties,
         String type) {
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.plan = plan;
-        this.properties = Objects.requireNonNull(properties);
-        this.type = Objects.requireNonNull(type);
+        this.properties = properties;
+        this.type = type;
     }
 
     /**

@@ -79,16 +79,16 @@ public final class GetImportPipelineResult {
         SystemDataResponse systemData,
         @Nullable PipelineTriggerPropertiesResponse trigger,
         String type) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.identity = identity;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.options = options;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.source = Objects.requireNonNull(source);
-        this.systemData = Objects.requireNonNull(systemData);
+        this.provisioningState = provisioningState;
+        this.source = source;
+        this.systemData = systemData;
         this.trigger = trigger;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

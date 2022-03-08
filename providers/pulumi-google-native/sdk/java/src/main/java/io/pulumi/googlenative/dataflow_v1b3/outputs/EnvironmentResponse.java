@@ -118,23 +118,23 @@ public final class EnvironmentResponse {
         List<WorkerPoolResponse> workerPools,
         String workerRegion,
         String workerZone) {
-        this.clusterManagerApiService = Objects.requireNonNull(clusterManagerApiService);
-        this.dataset = Objects.requireNonNull(dataset);
-        this.debugOptions = Objects.requireNonNull(debugOptions);
-        this.experiments = Objects.requireNonNull(experiments);
-        this.flexResourceSchedulingGoal = Objects.requireNonNull(flexResourceSchedulingGoal);
-        this.internalExperiments = Objects.requireNonNull(internalExperiments);
-        this.sdkPipelineOptions = Objects.requireNonNull(sdkPipelineOptions);
-        this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
-        this.serviceKmsKeyName = Objects.requireNonNull(serviceKmsKeyName);
-        this.serviceOptions = Objects.requireNonNull(serviceOptions);
-        this.shuffleMode = Objects.requireNonNull(shuffleMode);
-        this.tempStoragePrefix = Objects.requireNonNull(tempStoragePrefix);
-        this.userAgent = Objects.requireNonNull(userAgent);
-        this.version = Objects.requireNonNull(version);
-        this.workerPools = Objects.requireNonNull(workerPools);
-        this.workerRegion = Objects.requireNonNull(workerRegion);
-        this.workerZone = Objects.requireNonNull(workerZone);
+        this.clusterManagerApiService = clusterManagerApiService;
+        this.dataset = dataset;
+        this.debugOptions = debugOptions;
+        this.experiments = experiments;
+        this.flexResourceSchedulingGoal = flexResourceSchedulingGoal;
+        this.internalExperiments = internalExperiments;
+        this.sdkPipelineOptions = sdkPipelineOptions;
+        this.serviceAccountEmail = serviceAccountEmail;
+        this.serviceKmsKeyName = serviceKmsKeyName;
+        this.serviceOptions = serviceOptions;
+        this.shuffleMode = shuffleMode;
+        this.tempStoragePrefix = tempStoragePrefix;
+        this.userAgent = userAgent;
+        this.version = version;
+        this.workerPools = workerPools;
+        this.workerRegion = workerRegion;
+        this.workerZone = workerZone;
     }
 
     /**

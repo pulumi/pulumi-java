@@ -27,7 +27,7 @@ public final class BucketObjectLockConfiguration {
     private BucketObjectLockConfiguration(
         String objectLockEnabled,
         @Nullable BucketObjectLockConfigurationRule rule) {
-        this.objectLockEnabled = Objects.requireNonNull(objectLockEnabled);
+        this.objectLockEnabled = objectLockEnabled;
         this.rule = rule;
     }
 

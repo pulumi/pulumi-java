@@ -28,7 +28,7 @@ public final class ServiceSourceConfigurationCodeRepositoryCodeConfiguration {
         @Nullable ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValues codeConfigurationValues,
         String configurationSource) {
         this.codeConfigurationValues = codeConfigurationValues;
-        this.configurationSource = Objects.requireNonNull(configurationSource);
+        this.configurationSource = configurationSource;
     }
 
     /**

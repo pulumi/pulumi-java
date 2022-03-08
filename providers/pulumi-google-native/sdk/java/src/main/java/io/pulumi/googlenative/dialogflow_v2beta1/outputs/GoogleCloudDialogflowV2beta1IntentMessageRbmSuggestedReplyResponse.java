@@ -24,8 +24,8 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyRes
     private GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyResponse(
         String postbackData,
         String text) {
-        this.postbackData = Objects.requireNonNull(postbackData);
-        this.text = Objects.requireNonNull(text);
+        this.postbackData = postbackData;
+        this.text = text;
     }
 
     /**

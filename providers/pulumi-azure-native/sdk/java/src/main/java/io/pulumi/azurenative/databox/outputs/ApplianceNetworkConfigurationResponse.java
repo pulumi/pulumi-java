@@ -24,8 +24,8 @@ public final class ApplianceNetworkConfigurationResponse {
     private ApplianceNetworkConfigurationResponse(
         String macAddress,
         String name) {
-        this.macAddress = Objects.requireNonNull(macAddress);
-        this.name = Objects.requireNonNull(name);
+        this.macAddress = macAddress;
+        this.name = name;
     }
 
     /**

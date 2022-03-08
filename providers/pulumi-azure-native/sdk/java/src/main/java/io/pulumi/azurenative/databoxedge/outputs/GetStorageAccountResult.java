@@ -76,16 +76,16 @@ public final class GetStorageAccountResult {
         @Nullable String storageAccountStatus,
         SystemDataResponse systemData,
         String type) {
-        this.blobEndpoint = Objects.requireNonNull(blobEndpoint);
-        this.containerCount = Objects.requireNonNull(containerCount);
-        this.dataPolicy = Objects.requireNonNull(dataPolicy);
+        this.blobEndpoint = blobEndpoint;
+        this.containerCount = containerCount;
+        this.dataPolicy = dataPolicy;
         this.description = description;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.storageAccountCredentialId = storageAccountCredentialId;
         this.storageAccountStatus = storageAccountStatus;
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

@@ -39,10 +39,10 @@ public final class GooglePrivacyDlpV2LDiversityEquivalenceClassResponse {
         String numDistinctSensitiveValues,
         List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues,
         List<GooglePrivacyDlpV2ValueFrequencyResponse> topSensitiveValues) {
-        this.equivalenceClassSize = Objects.requireNonNull(equivalenceClassSize);
-        this.numDistinctSensitiveValues = Objects.requireNonNull(numDistinctSensitiveValues);
-        this.quasiIdsValues = Objects.requireNonNull(quasiIdsValues);
-        this.topSensitiveValues = Objects.requireNonNull(topSensitiveValues);
+        this.equivalenceClassSize = equivalenceClassSize;
+        this.numDistinctSensitiveValues = numDistinctSensitiveValues;
+        this.quasiIdsValues = quasiIdsValues;
+        this.topSensitiveValues = topSensitiveValues;
     }
 
     /**

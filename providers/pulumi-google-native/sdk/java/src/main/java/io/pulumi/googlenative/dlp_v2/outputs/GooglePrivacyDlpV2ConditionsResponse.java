@@ -18,7 +18,7 @@ public final class GooglePrivacyDlpV2ConditionsResponse {
 
     @OutputCustomType.Constructor({"conditions"})
     private GooglePrivacyDlpV2ConditionsResponse(List<GooglePrivacyDlpV2ConditionResponse> conditions) {
-        this.conditions = Objects.requireNonNull(conditions);
+        this.conditions = conditions;
     }
 
     /**

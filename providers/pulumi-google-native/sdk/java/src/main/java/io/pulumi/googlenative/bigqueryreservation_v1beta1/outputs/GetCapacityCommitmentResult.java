@@ -61,14 +61,14 @@ public final class GetCapacityCommitmentResult {
         String renewalPlan,
         String slotCount,
         String state) {
-        this.commitmentEndTime = Objects.requireNonNull(commitmentEndTime);
-        this.commitmentStartTime = Objects.requireNonNull(commitmentStartTime);
-        this.failureStatus = Objects.requireNonNull(failureStatus);
-        this.name = Objects.requireNonNull(name);
-        this.plan = Objects.requireNonNull(plan);
-        this.renewalPlan = Objects.requireNonNull(renewalPlan);
-        this.slotCount = Objects.requireNonNull(slotCount);
-        this.state = Objects.requireNonNull(state);
+        this.commitmentEndTime = commitmentEndTime;
+        this.commitmentStartTime = commitmentStartTime;
+        this.failureStatus = failureStatus;
+        this.name = name;
+        this.plan = plan;
+        this.renewalPlan = renewalPlan;
+        this.slotCount = slotCount;
+        this.state = state;
     }
 
     /**

@@ -30,7 +30,7 @@ public final class FlowScheduledTriggerProperties {
         @Nullable String timeZone) {
         this.dataPullMode = dataPullMode;
         this.scheduleEndTime = scheduleEndTime;
-        this.scheduleExpression = Objects.requireNonNull(scheduleExpression);
+        this.scheduleExpression = scheduleExpression;
         this.scheduleOffset = scheduleOffset;
         this.scheduleStartTime = scheduleStartTime;
         this.timeZone = timeZone;

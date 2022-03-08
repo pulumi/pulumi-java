@@ -34,7 +34,7 @@ public final class StorageBlobDeadLetterDestinationResponse {
         String endpointType,
         @Nullable String resourceId) {
         this.blobContainerName = blobContainerName;
-        this.endpointType = Objects.requireNonNull(endpointType);
+        this.endpointType = endpointType;
         this.resourceId = resourceId;
     }
 

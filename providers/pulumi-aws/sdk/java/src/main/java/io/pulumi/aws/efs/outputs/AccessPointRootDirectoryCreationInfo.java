@@ -31,9 +31,9 @@ public final class AccessPointRootDirectoryCreationInfo {
         Integer ownerGid,
         Integer ownerUid,
         String permissions) {
-        this.ownerGid = Objects.requireNonNull(ownerGid);
-        this.ownerUid = Objects.requireNonNull(ownerUid);
-        this.permissions = Objects.requireNonNull(permissions);
+        this.ownerGid = ownerGid;
+        this.ownerUid = ownerUid;
+        this.permissions = permissions;
     }
 
     /**

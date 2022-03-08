@@ -33,7 +33,7 @@ public final class ClusterSnapshotCopy {
         String destinationRegion,
         @Nullable String grantName,
         @Nullable Integer retentionPeriod) {
-        this.destinationRegion = Objects.requireNonNull(destinationRegion);
+        this.destinationRegion = destinationRegion;
         this.grantName = grantName;
         this.retentionPeriod = retentionPeriod;
     }

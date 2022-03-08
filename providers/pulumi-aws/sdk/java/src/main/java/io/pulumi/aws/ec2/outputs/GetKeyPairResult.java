@@ -47,13 +47,13 @@ public final class GetKeyPairResult {
         @Nullable String keyName,
         @Nullable String keyPairId,
         Map<String,String> tags) {
-        this.arn = Objects.requireNonNull(arn);
+        this.arn = arn;
         this.filters = filters;
-        this.fingerprint = Objects.requireNonNull(fingerprint);
-        this.id = Objects.requireNonNull(id);
+        this.fingerprint = fingerprint;
+        this.id = id;
         this.keyName = keyName;
         this.keyPairId = keyPairId;
-        this.tags = Objects.requireNonNull(tags);
+        this.tags = tags;
     }
 
     /**

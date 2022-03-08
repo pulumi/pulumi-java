@@ -88,11 +88,11 @@ public final class SharePointOnlineListLinkedServiceResponse {
         this.description = description;
         this.encryptedCredential = encryptedCredential;
         this.parameters = parameters;
-        this.servicePrincipalId = Objects.requireNonNull(servicePrincipalId);
-        this.servicePrincipalKey = Objects.requireNonNull(servicePrincipalKey);
-        this.siteUrl = Objects.requireNonNull(siteUrl);
-        this.tenantId = Objects.requireNonNull(tenantId);
-        this.type = Objects.requireNonNull(type);
+        this.servicePrincipalId = servicePrincipalId;
+        this.servicePrincipalKey = servicePrincipalKey;
+        this.siteUrl = siteUrl;
+        this.tenantId = tenantId;
+        this.type = type;
     }
 
     /**

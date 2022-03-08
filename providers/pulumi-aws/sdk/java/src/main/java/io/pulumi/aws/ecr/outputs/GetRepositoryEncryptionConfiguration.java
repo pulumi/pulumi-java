@@ -24,8 +24,8 @@ public final class GetRepositoryEncryptionConfiguration {
     private GetRepositoryEncryptionConfiguration(
         String encryptionType,
         String kmsKey) {
-        this.encryptionType = Objects.requireNonNull(encryptionType);
-        this.kmsKey = Objects.requireNonNull(kmsKey);
+        this.encryptionType = encryptionType;
+        this.kmsKey = kmsKey;
     }
 
     /**

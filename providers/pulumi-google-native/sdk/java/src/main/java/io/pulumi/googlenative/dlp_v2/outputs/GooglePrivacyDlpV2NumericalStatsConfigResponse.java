@@ -17,7 +17,7 @@ public final class GooglePrivacyDlpV2NumericalStatsConfigResponse {
 
     @OutputCustomType.Constructor({"field"})
     private GooglePrivacyDlpV2NumericalStatsConfigResponse(GooglePrivacyDlpV2FieldIdResponse field) {
-        this.field = Objects.requireNonNull(field);
+        this.field = field;
     }
 
     /**

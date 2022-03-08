@@ -44,11 +44,11 @@ public final class GetServerTrustGroupResult {
         String name,
         List<String> trustScopes,
         String type) {
-        this.groupMembers = Objects.requireNonNull(groupMembers);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.trustScopes = Objects.requireNonNull(trustScopes);
-        this.type = Objects.requireNonNull(type);
+        this.groupMembers = groupMembers;
+        this.id = id;
+        this.name = name;
+        this.trustScopes = trustScopes;
+        this.type = type;
     }
 
     /**

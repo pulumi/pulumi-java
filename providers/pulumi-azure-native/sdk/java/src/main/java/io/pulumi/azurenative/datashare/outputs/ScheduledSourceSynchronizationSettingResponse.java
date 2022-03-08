@@ -33,7 +33,7 @@ public final class ScheduledSourceSynchronizationSettingResponse {
         String kind,
         @Nullable String recurrenceInterval,
         @Nullable String synchronizationTime) {
-        this.kind = Objects.requireNonNull(kind);
+        this.kind = kind;
         this.recurrenceInterval = recurrenceInterval;
         this.synchronizationTime = synchronizationTime;
     }

@@ -33,7 +33,7 @@ public final class GitRepoVolumeResponse {
         String repository,
         @Nullable String revision) {
         this.directory = directory;
-        this.repository = Objects.requireNonNull(repository);
+        this.repository = repository;
         this.revision = revision;
     }
 

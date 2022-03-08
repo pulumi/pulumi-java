@@ -30,9 +30,9 @@ public final class SpannerIODetailsResponse {
         String databaseId,
         String instanceId,
         String project) {
-        this.databaseId = Objects.requireNonNull(databaseId);
-        this.instanceId = Objects.requireNonNull(instanceId);
-        this.project = Objects.requireNonNull(project);
+        this.databaseId = databaseId;
+        this.instanceId = instanceId;
+        this.project = project;
     }
 
     /**

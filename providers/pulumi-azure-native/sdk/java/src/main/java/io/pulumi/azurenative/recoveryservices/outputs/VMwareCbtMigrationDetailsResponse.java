@@ -120,23 +120,23 @@ public final class VMwareCbtMigrationDetailsResponse {
         @Nullable String targetVmSize,
         @Nullable List<VMwareCbtNicDetailsResponse> vmNics,
         String vmwareMachineId) {
-        this.dataMoverRunAsAccountId = Objects.requireNonNull(dataMoverRunAsAccountId);
-        this.instanceType = Objects.requireNonNull(instanceType);
-        this.lastRecoveryPointReceived = Objects.requireNonNull(lastRecoveryPointReceived);
+        this.dataMoverRunAsAccountId = dataMoverRunAsAccountId;
+        this.instanceType = instanceType;
+        this.lastRecoveryPointReceived = lastRecoveryPointReceived;
         this.licenseType = licenseType;
-        this.migrationRecoveryPointId = Objects.requireNonNull(migrationRecoveryPointId);
-        this.osType = Objects.requireNonNull(osType);
+        this.migrationRecoveryPointId = migrationRecoveryPointId;
+        this.osType = osType;
         this.protectedDisks = protectedDisks;
-        this.snapshotRunAsAccountId = Objects.requireNonNull(snapshotRunAsAccountId);
+        this.snapshotRunAsAccountId = snapshotRunAsAccountId;
         this.targetAvailabilitySetId = targetAvailabilitySetId;
         this.targetBootDiagnosticsStorageAccountId = targetBootDiagnosticsStorageAccountId;
-        this.targetLocation = Objects.requireNonNull(targetLocation);
+        this.targetLocation = targetLocation;
         this.targetNetworkId = targetNetworkId;
         this.targetResourceGroupId = targetResourceGroupId;
         this.targetVmName = targetVmName;
         this.targetVmSize = targetVmSize;
         this.vmNics = vmNics;
-        this.vmwareMachineId = Objects.requireNonNull(vmwareMachineId);
+        this.vmwareMachineId = vmwareMachineId;
     }
 
     /**

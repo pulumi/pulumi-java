@@ -28,8 +28,8 @@ public final class GetInstanceTemplateServiceAccount {
     private GetInstanceTemplateServiceAccount(
         String email,
         List<String> scopes) {
-        this.email = Objects.requireNonNull(email);
-        this.scopes = Objects.requireNonNull(scopes);
+        this.email = email;
+        this.scopes = scopes;
     }
 
     /**

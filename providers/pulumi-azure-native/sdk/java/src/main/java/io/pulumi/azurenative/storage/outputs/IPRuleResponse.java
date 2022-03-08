@@ -27,7 +27,7 @@ public final class IPRuleResponse {
         @Nullable String action,
         String iPAddressOrRange) {
         this.action = action;
-        this.iPAddressOrRange = Objects.requireNonNull(iPAddressOrRange);
+        this.iPAddressOrRange = iPAddressOrRange;
     }
 
     /**

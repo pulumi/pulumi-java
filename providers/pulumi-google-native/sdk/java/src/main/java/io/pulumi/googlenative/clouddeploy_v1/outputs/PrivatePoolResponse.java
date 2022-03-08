@@ -30,9 +30,9 @@ public final class PrivatePoolResponse {
         String artifactStorage,
         String serviceAccount,
         String workerPool) {
-        this.artifactStorage = Objects.requireNonNull(artifactStorage);
-        this.serviceAccount = Objects.requireNonNull(serviceAccount);
-        this.workerPool = Objects.requireNonNull(workerPool);
+        this.artifactStorage = artifactStorage;
+        this.serviceAccount = serviceAccount;
+        this.workerPool = workerPool;
     }
 
     /**

@@ -112,21 +112,21 @@ public final class ExternalDataConfigurationResponse {
         TableSchemaResponse schema,
         String sourceFormat,
         List<String> sourceUris) {
-        this.autodetect = Objects.requireNonNull(autodetect);
-        this.avroOptions = Objects.requireNonNull(avroOptions);
-        this.bigtableOptions = Objects.requireNonNull(bigtableOptions);
-        this.compression = Objects.requireNonNull(compression);
-        this.connectionId = Objects.requireNonNull(connectionId);
-        this.csvOptions = Objects.requireNonNull(csvOptions);
-        this.decimalTargetTypes = Objects.requireNonNull(decimalTargetTypes);
-        this.googleSheetsOptions = Objects.requireNonNull(googleSheetsOptions);
-        this.hivePartitioningOptions = Objects.requireNonNull(hivePartitioningOptions);
-        this.ignoreUnknownValues = Objects.requireNonNull(ignoreUnknownValues);
-        this.maxBadRecords = Objects.requireNonNull(maxBadRecords);
-        this.parquetOptions = Objects.requireNonNull(parquetOptions);
-        this.schema = Objects.requireNonNull(schema);
-        this.sourceFormat = Objects.requireNonNull(sourceFormat);
-        this.sourceUris = Objects.requireNonNull(sourceUris);
+        this.autodetect = autodetect;
+        this.avroOptions = avroOptions;
+        this.bigtableOptions = bigtableOptions;
+        this.compression = compression;
+        this.connectionId = connectionId;
+        this.csvOptions = csvOptions;
+        this.decimalTargetTypes = decimalTargetTypes;
+        this.googleSheetsOptions = googleSheetsOptions;
+        this.hivePartitioningOptions = hivePartitioningOptions;
+        this.ignoreUnknownValues = ignoreUnknownValues;
+        this.maxBadRecords = maxBadRecords;
+        this.parquetOptions = parquetOptions;
+        this.schema = schema;
+        this.sourceFormat = sourceFormat;
+        this.sourceUris = sourceUris;
     }
 
     /**

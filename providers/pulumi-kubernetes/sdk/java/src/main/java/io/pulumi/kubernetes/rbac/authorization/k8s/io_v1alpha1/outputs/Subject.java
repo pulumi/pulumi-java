@@ -39,8 +39,8 @@ public final class Subject {
         String name,
         @Nullable String namespace) {
         this.apiVersion = apiVersion;
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
+        this.kind = kind;
+        this.name = name;
         this.namespace = namespace;
     }
 

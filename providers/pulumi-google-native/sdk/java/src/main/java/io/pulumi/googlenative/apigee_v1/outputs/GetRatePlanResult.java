@@ -125,24 +125,24 @@ public final class GetRatePlanResult {
         GoogleTypeMoneyResponse setupFee,
         String startTime,
         String state) {
-        this.apiproduct = Objects.requireNonNull(apiproduct);
-        this.billingPeriod = Objects.requireNonNull(billingPeriod);
-        this.consumptionPricingRates = Objects.requireNonNull(consumptionPricingRates);
-        this.consumptionPricingType = Objects.requireNonNull(consumptionPricingType);
-        this.createdAt = Objects.requireNonNull(createdAt);
-        this.currencyCode = Objects.requireNonNull(currencyCode);
-        this.description = Objects.requireNonNull(description);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.endTime = Objects.requireNonNull(endTime);
-        this.fixedFeeFrequency = Objects.requireNonNull(fixedFeeFrequency);
-        this.fixedRecurringFee = Objects.requireNonNull(fixedRecurringFee);
-        this.lastModifiedAt = Objects.requireNonNull(lastModifiedAt);
-        this.name = Objects.requireNonNull(name);
-        this.revenueShareRates = Objects.requireNonNull(revenueShareRates);
-        this.revenueShareType = Objects.requireNonNull(revenueShareType);
-        this.setupFee = Objects.requireNonNull(setupFee);
-        this.startTime = Objects.requireNonNull(startTime);
-        this.state = Objects.requireNonNull(state);
+        this.apiproduct = apiproduct;
+        this.billingPeriod = billingPeriod;
+        this.consumptionPricingRates = consumptionPricingRates;
+        this.consumptionPricingType = consumptionPricingType;
+        this.createdAt = createdAt;
+        this.currencyCode = currencyCode;
+        this.description = description;
+        this.displayName = displayName;
+        this.endTime = endTime;
+        this.fixedFeeFrequency = fixedFeeFrequency;
+        this.fixedRecurringFee = fixedRecurringFee;
+        this.lastModifiedAt = lastModifiedAt;
+        this.name = name;
+        this.revenueShareRates = revenueShareRates;
+        this.revenueShareType = revenueShareType;
+        this.setupFee = setupFee;
+        this.startTime = startTime;
+        this.state = state;
     }
 
     /**

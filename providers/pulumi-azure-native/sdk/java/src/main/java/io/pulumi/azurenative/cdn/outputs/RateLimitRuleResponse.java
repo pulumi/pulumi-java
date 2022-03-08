@@ -59,13 +59,13 @@ public final class RateLimitRuleResponse {
         Integer priority,
         Integer rateLimitDurationInMinutes,
         Integer rateLimitThreshold) {
-        this.action = Objects.requireNonNull(action);
+        this.action = action;
         this.enabledState = enabledState;
-        this.matchConditions = Objects.requireNonNull(matchConditions);
-        this.name = Objects.requireNonNull(name);
-        this.priority = Objects.requireNonNull(priority);
-        this.rateLimitDurationInMinutes = Objects.requireNonNull(rateLimitDurationInMinutes);
-        this.rateLimitThreshold = Objects.requireNonNull(rateLimitThreshold);
+        this.matchConditions = matchConditions;
+        this.name = name;
+        this.priority = priority;
+        this.rateLimitDurationInMinutes = rateLimitDurationInMinutes;
+        this.rateLimitThreshold = rateLimitThreshold;
     }
 
     /**

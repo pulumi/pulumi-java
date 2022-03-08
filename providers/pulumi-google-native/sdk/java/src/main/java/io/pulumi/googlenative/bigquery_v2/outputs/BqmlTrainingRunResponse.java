@@ -39,10 +39,10 @@ public final class BqmlTrainingRunResponse {
         String startTime,
         String state,
         BqmlTrainingRunTrainingOptionsResponse trainingOptions) {
-        this.iterationResults = Objects.requireNonNull(iterationResults);
-        this.startTime = Objects.requireNonNull(startTime);
-        this.state = Objects.requireNonNull(state);
-        this.trainingOptions = Objects.requireNonNull(trainingOptions);
+        this.iterationResults = iterationResults;
+        this.startTime = startTime;
+        this.state = state;
+        this.trainingOptions = trainingOptions;
     }
 
     /**

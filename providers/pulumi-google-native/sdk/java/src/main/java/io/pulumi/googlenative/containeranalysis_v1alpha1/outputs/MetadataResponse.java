@@ -44,11 +44,11 @@ public final class MetadataResponse {
         String buildStartedOn,
         CompletenessResponse completeness,
         Boolean reproducible) {
-        this.buildFinishedOn = Objects.requireNonNull(buildFinishedOn);
-        this.buildInvocationId = Objects.requireNonNull(buildInvocationId);
-        this.buildStartedOn = Objects.requireNonNull(buildStartedOn);
-        this.completeness = Objects.requireNonNull(completeness);
-        this.reproducible = Objects.requireNonNull(reproducible);
+        this.buildFinishedOn = buildFinishedOn;
+        this.buildInvocationId = buildInvocationId;
+        this.buildStartedOn = buildStartedOn;
+        this.completeness = completeness;
+        this.reproducible = reproducible;
     }
 
     /**

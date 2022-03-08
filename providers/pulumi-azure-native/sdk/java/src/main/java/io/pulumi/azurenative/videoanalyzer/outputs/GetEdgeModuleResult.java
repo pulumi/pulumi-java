@@ -43,11 +43,11 @@ public final class GetEdgeModuleResult {
         String name,
         SystemDataResponse systemData,
         String type) {
-        this.edgeModuleId = Objects.requireNonNull(edgeModuleId);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.edgeModuleId = edgeModuleId;
+        this.id = id;
+        this.name = name;
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

@@ -49,12 +49,12 @@ public final class ManagedIntegrationRuntimeOperationResultResponse {
         String result,
         String startTime,
         String type) {
-        this.activityId = Objects.requireNonNull(activityId);
-        this.errorCode = Objects.requireNonNull(errorCode);
-        this.parameters = Objects.requireNonNull(parameters);
-        this.result = Objects.requireNonNull(result);
-        this.startTime = Objects.requireNonNull(startTime);
-        this.type = Objects.requireNonNull(type);
+        this.activityId = activityId;
+        this.errorCode = errorCode;
+        this.parameters = parameters;
+        this.result = result;
+        this.startTime = startTime;
+        this.type = type;
     }
 
     /**

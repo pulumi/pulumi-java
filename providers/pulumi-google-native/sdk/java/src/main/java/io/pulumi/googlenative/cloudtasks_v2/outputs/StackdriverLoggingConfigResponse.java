@@ -17,7 +17,7 @@ public final class StackdriverLoggingConfigResponse {
 
     @OutputCustomType.Constructor({"samplingRatio"})
     private StackdriverLoggingConfigResponse(Double samplingRatio) {
-        this.samplingRatio = Objects.requireNonNull(samplingRatio);
+        this.samplingRatio = samplingRatio;
     }
 
     /**

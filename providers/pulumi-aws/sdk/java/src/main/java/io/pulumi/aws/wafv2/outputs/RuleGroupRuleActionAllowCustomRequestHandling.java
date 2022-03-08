@@ -18,7 +18,7 @@ public final class RuleGroupRuleActionAllowCustomRequestHandling {
 
     @OutputCustomType.Constructor({"insertHeaders"})
     private RuleGroupRuleActionAllowCustomRequestHandling(List<RuleGroupRuleActionAllowCustomRequestHandlingInsertHeader> insertHeaders) {
-        this.insertHeaders = Objects.requireNonNull(insertHeaders);
+        this.insertHeaders = insertHeaders;
     }
 
     /**

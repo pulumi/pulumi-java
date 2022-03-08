@@ -28,6 +28,10 @@ public class Log implements CountingLogger {
         this.excessiveDebugOutput = excessiveDebugOutput;
     }
 
+    public static Log ignore() {
+       return new Log(EngineLogger.ignore());
+    }
+
     public void excessive(String message, Object... args) {
         if (excessiveDebugOutput) {
             debug(String.format(message, args));

@@ -27,7 +27,7 @@ public final class LegalHoldPropertiesResponse {
     private LegalHoldPropertiesResponse(
         Boolean hasLegalHold,
         @Nullable List<TagPropertyResponse> tags) {
-        this.hasLegalHold = Objects.requireNonNull(hasLegalHold);
+        this.hasLegalHold = hasLegalHold;
         this.tags = tags;
     }
 

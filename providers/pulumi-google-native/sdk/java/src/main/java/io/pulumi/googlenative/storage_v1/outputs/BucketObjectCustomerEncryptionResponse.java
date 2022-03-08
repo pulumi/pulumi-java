@@ -24,8 +24,8 @@ public final class BucketObjectCustomerEncryptionResponse {
     private BucketObjectCustomerEncryptionResponse(
         String encryptionAlgorithm,
         String keySha256) {
-        this.encryptionAlgorithm = Objects.requireNonNull(encryptionAlgorithm);
-        this.keySha256 = Objects.requireNonNull(keySha256);
+        this.encryptionAlgorithm = encryptionAlgorithm;
+        this.keySha256 = keySha256;
     }
 
     /**

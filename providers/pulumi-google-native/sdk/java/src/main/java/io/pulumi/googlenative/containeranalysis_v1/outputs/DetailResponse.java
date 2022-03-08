@@ -98,20 +98,20 @@ public final class DetailResponse {
         String source,
         String sourceUpdateTime,
         String vendor) {
-        this.affectedCpeUri = Objects.requireNonNull(affectedCpeUri);
-        this.affectedPackage = Objects.requireNonNull(affectedPackage);
-        this.affectedVersionEnd = Objects.requireNonNull(affectedVersionEnd);
-        this.affectedVersionStart = Objects.requireNonNull(affectedVersionStart);
-        this.description = Objects.requireNonNull(description);
-        this.fixedCpeUri = Objects.requireNonNull(fixedCpeUri);
-        this.fixedPackage = Objects.requireNonNull(fixedPackage);
-        this.fixedVersion = Objects.requireNonNull(fixedVersion);
-        this.isObsolete = Objects.requireNonNull(isObsolete);
-        this.packageType = Objects.requireNonNull(packageType);
-        this.severityName = Objects.requireNonNull(severityName);
-        this.source = Objects.requireNonNull(source);
-        this.sourceUpdateTime = Objects.requireNonNull(sourceUpdateTime);
-        this.vendor = Objects.requireNonNull(vendor);
+        this.affectedCpeUri = affectedCpeUri;
+        this.affectedPackage = affectedPackage;
+        this.affectedVersionEnd = affectedVersionEnd;
+        this.affectedVersionStart = affectedVersionStart;
+        this.description = description;
+        this.fixedCpeUri = fixedCpeUri;
+        this.fixedPackage = fixedPackage;
+        this.fixedVersion = fixedVersion;
+        this.isObsolete = isObsolete;
+        this.packageType = packageType;
+        this.severityName = severityName;
+        this.source = source;
+        this.sourceUpdateTime = sourceUpdateTime;
+        this.vendor = vendor;
     }
 
     /**

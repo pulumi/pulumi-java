@@ -38,10 +38,10 @@ public final class ConfigMapKeySelectorResponse {
         LocalObjectReferenceResponse localObjectReference,
         String name,
         Boolean optional) {
-        this.key = Objects.requireNonNull(key);
-        this.localObjectReference = Objects.requireNonNull(localObjectReference);
-        this.name = Objects.requireNonNull(name);
-        this.optional = Objects.requireNonNull(optional);
+        this.key = key;
+        this.localObjectReference = localObjectReference;
+        this.name = name;
+        this.optional = optional;
     }
 
     /**

@@ -35,7 +35,7 @@ public final class EndpointConfigurationAsyncInferenceConfigOutputConfig {
         String s3OutputPath) {
         this.kmsKeyId = kmsKeyId;
         this.notificationConfig = notificationConfig;
-        this.s3OutputPath = Objects.requireNonNull(s3OutputPath);
+        this.s3OutputPath = s3OutputPath;
     }
 
     /**

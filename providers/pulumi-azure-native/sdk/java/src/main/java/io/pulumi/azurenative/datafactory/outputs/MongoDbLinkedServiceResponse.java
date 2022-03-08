@@ -118,15 +118,15 @@ public final class MongoDbLinkedServiceResponse {
         this.authSource = authSource;
         this.authenticationType = authenticationType;
         this.connectVia = connectVia;
-        this.databaseName = Objects.requireNonNull(databaseName);
+        this.databaseName = databaseName;
         this.description = description;
         this.enableSsl = enableSsl;
         this.encryptedCredential = encryptedCredential;
         this.parameters = parameters;
         this.password = password;
         this.port = port;
-        this.server = Objects.requireNonNull(server);
-        this.type = Objects.requireNonNull(type);
+        this.server = server;
+        this.type = type;
         this.username = username;
     }
 

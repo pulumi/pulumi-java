@@ -17,7 +17,7 @@ public final class DataCatalogConfigResponse {
 
     @OutputCustomType.Constructor({"enabled"})
     private DataCatalogConfigResponse(Boolean enabled) {
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
     }
 
     /**

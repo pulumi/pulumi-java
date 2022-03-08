@@ -81,17 +81,17 @@ public final class LastPatchInstallationSummaryResponse {
         Integer pendingPatchCount,
         String startTime,
         String status) {
-        this.error = Objects.requireNonNull(error);
-        this.excludedPatchCount = Objects.requireNonNull(excludedPatchCount);
-        this.failedPatchCount = Objects.requireNonNull(failedPatchCount);
-        this.installationActivityId = Objects.requireNonNull(installationActivityId);
-        this.installedPatchCount = Objects.requireNonNull(installedPatchCount);
-        this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
-        this.maintenanceWindowExceeded = Objects.requireNonNull(maintenanceWindowExceeded);
-        this.notSelectedPatchCount = Objects.requireNonNull(notSelectedPatchCount);
-        this.pendingPatchCount = Objects.requireNonNull(pendingPatchCount);
-        this.startTime = Objects.requireNonNull(startTime);
-        this.status = Objects.requireNonNull(status);
+        this.error = error;
+        this.excludedPatchCount = excludedPatchCount;
+        this.failedPatchCount = failedPatchCount;
+        this.installationActivityId = installationActivityId;
+        this.installedPatchCount = installedPatchCount;
+        this.lastModifiedTime = lastModifiedTime;
+        this.maintenanceWindowExceeded = maintenanceWindowExceeded;
+        this.notSelectedPatchCount = notSelectedPatchCount;
+        this.pendingPatchCount = pendingPatchCount;
+        this.startTime = startTime;
+        this.status = status;
     }
 
     /**

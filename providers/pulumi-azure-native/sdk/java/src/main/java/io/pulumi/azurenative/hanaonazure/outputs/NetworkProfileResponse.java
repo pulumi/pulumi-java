@@ -27,7 +27,7 @@ public final class NetworkProfileResponse {
     private NetworkProfileResponse(
         String circuitId,
         @Nullable List<IpAddressResponse> networkInterfaces) {
-        this.circuitId = Objects.requireNonNull(circuitId);
+        this.circuitId = circuitId;
         this.networkInterfaces = networkInterfaces;
     }
 

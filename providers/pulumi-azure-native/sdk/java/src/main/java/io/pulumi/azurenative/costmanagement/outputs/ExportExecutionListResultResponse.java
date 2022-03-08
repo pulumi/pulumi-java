@@ -18,7 +18,7 @@ public final class ExportExecutionListResultResponse {
 
     @OutputCustomType.Constructor({"value"})
     private ExportExecutionListResultResponse(List<ExportExecutionResponse> value) {
-        this.value = Objects.requireNonNull(value);
+        this.value = value;
     }
 
     /**

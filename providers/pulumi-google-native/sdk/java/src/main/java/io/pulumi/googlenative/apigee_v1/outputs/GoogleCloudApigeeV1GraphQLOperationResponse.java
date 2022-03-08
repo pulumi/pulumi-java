@@ -25,8 +25,8 @@ public final class GoogleCloudApigeeV1GraphQLOperationResponse {
     private GoogleCloudApigeeV1GraphQLOperationResponse(
         String operation,
         List<String> operationTypes) {
-        this.operation = Objects.requireNonNull(operation);
-        this.operationTypes = Objects.requireNonNull(operationTypes);
+        this.operation = operation;
+        this.operationTypes = operationTypes;
     }
 
     /**

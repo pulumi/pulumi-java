@@ -99,15 +99,15 @@ public final class GetAttestationAtSubscriptionResult {
         this.complianceState = complianceState;
         this.evidence = evidence;
         this.expiresOn = expiresOn;
-        this.id = Objects.requireNonNull(id);
-        this.lastComplianceStateChangeAt = Objects.requireNonNull(lastComplianceStateChangeAt);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.lastComplianceStateChangeAt = lastComplianceStateChangeAt;
+        this.name = name;
         this.owner = owner;
-        this.policyAssignmentId = Objects.requireNonNull(policyAssignmentId);
+        this.policyAssignmentId = policyAssignmentId;
         this.policyDefinitionReferenceId = policyDefinitionReferenceId;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.provisioningState = provisioningState;
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

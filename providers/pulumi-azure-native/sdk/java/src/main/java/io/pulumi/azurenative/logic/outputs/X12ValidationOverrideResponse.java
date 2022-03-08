@@ -55,13 +55,13 @@ public final class X12ValidationOverrideResponse {
         Boolean validateCharacterSet,
         Boolean validateEDITypes,
         Boolean validateXSDTypes) {
-        this.allowLeadingAndTrailingSpacesAndZeroes = Objects.requireNonNull(allowLeadingAndTrailingSpacesAndZeroes);
-        this.messageId = Objects.requireNonNull(messageId);
-        this.trailingSeparatorPolicy = Objects.requireNonNull(trailingSeparatorPolicy);
-        this.trimLeadingAndTrailingSpacesAndZeroes = Objects.requireNonNull(trimLeadingAndTrailingSpacesAndZeroes);
-        this.validateCharacterSet = Objects.requireNonNull(validateCharacterSet);
-        this.validateEDITypes = Objects.requireNonNull(validateEDITypes);
-        this.validateXSDTypes = Objects.requireNonNull(validateXSDTypes);
+        this.allowLeadingAndTrailingSpacesAndZeroes = allowLeadingAndTrailingSpacesAndZeroes;
+        this.messageId = messageId;
+        this.trailingSeparatorPolicy = trailingSeparatorPolicy;
+        this.trimLeadingAndTrailingSpacesAndZeroes = trimLeadingAndTrailingSpacesAndZeroes;
+        this.validateCharacterSet = validateCharacterSet;
+        this.validateEDITypes = validateEDITypes;
+        this.validateXSDTypes = validateXSDTypes;
     }
 
     /**

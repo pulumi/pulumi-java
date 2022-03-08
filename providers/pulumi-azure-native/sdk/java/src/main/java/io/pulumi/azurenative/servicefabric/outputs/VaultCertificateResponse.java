@@ -24,8 +24,8 @@ public final class VaultCertificateResponse {
     private VaultCertificateResponse(
         String certificateStore,
         String certificateUrl) {
-        this.certificateStore = Objects.requireNonNull(certificateStore);
-        this.certificateUrl = Objects.requireNonNull(certificateUrl);
+        this.certificateStore = certificateStore;
+        this.certificateUrl = certificateUrl;
     }
 
     /**

@@ -35,7 +35,7 @@ public final class DynamicDeliveryAttributeMappingResponse {
         String type) {
         this.name = name;
         this.sourceField = sourceField;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

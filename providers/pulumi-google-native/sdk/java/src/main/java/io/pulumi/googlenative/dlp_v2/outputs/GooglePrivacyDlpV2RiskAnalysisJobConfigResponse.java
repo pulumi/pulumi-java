@@ -33,9 +33,9 @@ public final class GooglePrivacyDlpV2RiskAnalysisJobConfigResponse {
         List<GooglePrivacyDlpV2ActionResponse> actions,
         GooglePrivacyDlpV2PrivacyMetricResponse privacyMetric,
         GooglePrivacyDlpV2BigQueryTableResponse sourceTable) {
-        this.actions = Objects.requireNonNull(actions);
-        this.privacyMetric = Objects.requireNonNull(privacyMetric);
-        this.sourceTable = Objects.requireNonNull(sourceTable);
+        this.actions = actions;
+        this.privacyMetric = privacyMetric;
+        this.sourceTable = sourceTable;
     }
 
     /**

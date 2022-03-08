@@ -24,8 +24,8 @@ public final class TlsCertificatePropertiesResponse {
     private TlsCertificatePropertiesResponse(
         String location,
         String type) {
-        this.location = Objects.requireNonNull(location);
-        this.type = Objects.requireNonNull(type);
+        this.location = location;
+        this.type = type;
     }
 
     /**

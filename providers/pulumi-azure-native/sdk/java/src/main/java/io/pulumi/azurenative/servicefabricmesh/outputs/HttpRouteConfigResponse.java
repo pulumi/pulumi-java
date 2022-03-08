@@ -32,9 +32,9 @@ public final class HttpRouteConfigResponse {
         GatewayDestinationResponse destination,
         HttpRouteMatchRuleResponse match,
         String name) {
-        this.destination = Objects.requireNonNull(destination);
-        this.match = Objects.requireNonNull(match);
-        this.name = Objects.requireNonNull(name);
+        this.destination = destination;
+        this.match = match;
+        this.name = name;
     }
 
     /**

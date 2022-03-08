@@ -27,7 +27,7 @@ public final class NoteRelatedUrl {
         @Nullable String label,
         String url) {
         this.label = label;
-        this.url = Objects.requireNonNull(url);
+        this.url = url;
     }
 
     /**

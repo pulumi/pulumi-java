@@ -25,8 +25,8 @@ public final class ApiManagementServiceSkuPropertiesResponse {
     private ApiManagementServiceSkuPropertiesResponse(
         Integer capacity,
         String name) {
-        this.capacity = Objects.requireNonNull(capacity);
-        this.name = Objects.requireNonNull(name);
+        this.capacity = capacity;
+        this.name = name;
     }
 
     /**

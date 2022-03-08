@@ -25,8 +25,8 @@ public final class GetJobTemplateResult {
     private GetJobTemplateResult(
         JobConfigResponse config,
         String name) {
-        this.config = Objects.requireNonNull(config);
-        this.name = Objects.requireNonNull(name);
+        this.config = config;
+        this.name = name;
     }
 
     /**

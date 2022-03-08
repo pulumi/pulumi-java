@@ -36,10 +36,10 @@ public final class GetCallerIdentityResult {
         String arn,
         String id,
         String userId) {
-        this.accountId = Objects.requireNonNull(accountId);
-        this.arn = Objects.requireNonNull(arn);
-        this.id = Objects.requireNonNull(id);
-        this.userId = Objects.requireNonNull(userId);
+        this.accountId = accountId;
+        this.arn = arn;
+        this.id = id;
+        this.userId = userId;
     }
 
     /**

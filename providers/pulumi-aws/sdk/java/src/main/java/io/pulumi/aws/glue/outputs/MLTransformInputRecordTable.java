@@ -40,8 +40,8 @@ public final class MLTransformInputRecordTable {
         String tableName) {
         this.catalogId = catalogId;
         this.connectionName = connectionName;
-        this.databaseName = Objects.requireNonNull(databaseName);
-        this.tableName = Objects.requireNonNull(tableName);
+        this.databaseName = databaseName;
+        this.tableName = tableName;
     }
 
     /**

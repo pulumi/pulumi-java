@@ -24,7 +24,7 @@ public final class ContainerPort {
         @Nullable String ip,
         @Nullable String protocol) {
         this.external = external;
-        this.internal = Objects.requireNonNull(internal);
+        this.internal = internal;
         this.ip = ip;
         this.protocol = protocol;
     }

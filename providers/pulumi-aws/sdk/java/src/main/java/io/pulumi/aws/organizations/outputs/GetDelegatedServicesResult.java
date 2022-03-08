@@ -28,9 +28,9 @@ public final class GetDelegatedServicesResult {
         String accountId,
         List<GetDelegatedServicesDelegatedService> delegatedServices,
         String id) {
-        this.accountId = Objects.requireNonNull(accountId);
-        this.delegatedServices = Objects.requireNonNull(delegatedServices);
-        this.id = Objects.requireNonNull(id);
+        this.accountId = accountId;
+        this.delegatedServices = delegatedServices;
+        this.id = id;
     }
 
     public String getAccountId() {

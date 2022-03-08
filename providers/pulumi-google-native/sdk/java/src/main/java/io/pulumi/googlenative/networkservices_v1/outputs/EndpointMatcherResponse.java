@@ -17,7 +17,7 @@ public final class EndpointMatcherResponse {
 
     @OutputCustomType.Constructor({"metadataLabelMatcher"})
     private EndpointMatcherResponse(EndpointMatcherMetadataLabelMatcherResponse metadataLabelMatcher) {
-        this.metadataLabelMatcher = Objects.requireNonNull(metadataLabelMatcher);
+        this.metadataLabelMatcher = metadataLabelMatcher;
     }
 
     /**

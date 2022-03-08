@@ -64,13 +64,13 @@ public final class GetMaintenanceConfigurationResult {
         @Nullable Map<String,String> tags,
         String type) {
         this.extensionProperties = extensionProperties;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.location = location;
         this.maintenanceScope = maintenanceScope;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.namespace = namespace;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

@@ -24,8 +24,8 @@ public final class GoogleCloudRecaptchaenterpriseV1WafSettingsResponse {
     private GoogleCloudRecaptchaenterpriseV1WafSettingsResponse(
         String wafFeature,
         String wafService) {
-        this.wafFeature = Objects.requireNonNull(wafFeature);
-        this.wafService = Objects.requireNonNull(wafService);
+        this.wafFeature = wafFeature;
+        this.wafService = wafService;
     }
 
     /**

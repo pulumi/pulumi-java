@@ -32,9 +32,9 @@ public final class CompensationInfoResponse {
         CompensationRangeResponse annualizedBaseCompensationRange,
         CompensationRangeResponse annualizedTotalCompensationRange,
         List<CompensationEntryResponse> entries) {
-        this.annualizedBaseCompensationRange = Objects.requireNonNull(annualizedBaseCompensationRange);
-        this.annualizedTotalCompensationRange = Objects.requireNonNull(annualizedTotalCompensationRange);
-        this.entries = Objects.requireNonNull(entries);
+        this.annualizedBaseCompensationRange = annualizedBaseCompensationRange;
+        this.annualizedTotalCompensationRange = annualizedTotalCompensationRange;
+        this.entries = entries;
     }
 
     /**

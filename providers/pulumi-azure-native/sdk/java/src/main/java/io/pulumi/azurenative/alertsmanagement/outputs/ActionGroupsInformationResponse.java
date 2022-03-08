@@ -35,7 +35,7 @@ public final class ActionGroupsInformationResponse {
         List<String> groupIds) {
         this.customEmailSubject = customEmailSubject;
         this.customWebhookPayload = customWebhookPayload;
-        this.groupIds = Objects.requireNonNull(groupIds);
+        this.groupIds = groupIds;
     }
 
     /**

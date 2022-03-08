@@ -61,14 +61,14 @@ public final class GetServiceAccountResult {
         String oauth2ClientId,
         String project,
         String uniqueId) {
-        this.description = Objects.requireNonNull(description);
-        this.disabled = Objects.requireNonNull(disabled);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.email = Objects.requireNonNull(email);
-        this.name = Objects.requireNonNull(name);
-        this.oauth2ClientId = Objects.requireNonNull(oauth2ClientId);
-        this.project = Objects.requireNonNull(project);
-        this.uniqueId = Objects.requireNonNull(uniqueId);
+        this.description = description;
+        this.disabled = disabled;
+        this.displayName = displayName;
+        this.email = email;
+        this.name = name;
+        this.oauth2ClientId = oauth2ClientId;
+        this.project = project;
+        this.uniqueId = uniqueId;
     }
 
     /**

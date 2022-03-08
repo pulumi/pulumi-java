@@ -17,7 +17,7 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettings
 
     @OutputCustomType.Constructor({"domainNameLabel"})
     private VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsResponse(String domainNameLabel) {
-        this.domainNameLabel = Objects.requireNonNull(domainNameLabel);
+        this.domainNameLabel = domainNameLabel;
     }
 
     /**

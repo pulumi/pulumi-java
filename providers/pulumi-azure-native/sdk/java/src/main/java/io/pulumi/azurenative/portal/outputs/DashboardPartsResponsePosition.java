@@ -46,11 +46,11 @@ public final class DashboardPartsResponsePosition {
         Integer rowSpan,
         Integer x,
         Integer y) {
-        this.colSpan = Objects.requireNonNull(colSpan);
+        this.colSpan = colSpan;
         this.metadata = metadata;
-        this.rowSpan = Objects.requireNonNull(rowSpan);
-        this.x = Objects.requireNonNull(x);
-        this.y = Objects.requireNonNull(y);
+        this.rowSpan = rowSpan;
+        this.x = x;
+        this.y = y;
     }
 
     /**

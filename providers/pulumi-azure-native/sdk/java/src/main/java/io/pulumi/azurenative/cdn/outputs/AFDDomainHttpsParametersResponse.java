@@ -33,7 +33,7 @@ public final class AFDDomainHttpsParametersResponse {
         String certificateType,
         @Nullable String minimumTlsVersion,
         @Nullable ResourceReferenceResponse secret) {
-        this.certificateType = Objects.requireNonNull(certificateType);
+        this.certificateType = certificateType;
         this.minimumTlsVersion = minimumTlsVersion;
         this.secret = secret;
     }

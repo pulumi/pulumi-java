@@ -31,9 +31,9 @@ public final class GoogleCloudRetailV2betaRuleOnewaySynonymsActionResponse {
         List<String> onewayTerms,
         List<String> queryTerms,
         List<String> synonyms) {
-        this.onewayTerms = Objects.requireNonNull(onewayTerms);
-        this.queryTerms = Objects.requireNonNull(queryTerms);
-        this.synonyms = Objects.requireNonNull(synonyms);
+        this.onewayTerms = onewayTerms;
+        this.queryTerms = queryTerms;
+        this.synonyms = synonyms;
     }
 
     /**

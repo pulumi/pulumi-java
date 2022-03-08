@@ -49,12 +49,12 @@ public final class GetDataLakeSettingsResult {
         List<GetDataLakeSettingsCreateTableDefaultPermission> createTableDefaultPermissions,
         String id,
         List<String> trustedResourceOwners) {
-        this.admins = Objects.requireNonNull(admins);
+        this.admins = admins;
         this.catalogId = catalogId;
-        this.createDatabaseDefaultPermissions = Objects.requireNonNull(createDatabaseDefaultPermissions);
-        this.createTableDefaultPermissions = Objects.requireNonNull(createTableDefaultPermissions);
-        this.id = Objects.requireNonNull(id);
-        this.trustedResourceOwners = Objects.requireNonNull(trustedResourceOwners);
+        this.createDatabaseDefaultPermissions = createDatabaseDefaultPermissions;
+        this.createTableDefaultPermissions = createTableDefaultPermissions;
+        this.id = id;
+        this.trustedResourceOwners = trustedResourceOwners;
     }
 
     /**

@@ -50,14 +50,14 @@ public final class GetExportResult {
         String restApiId,
         String stageName) {
         this.accepts = accepts;
-        this.body = Objects.requireNonNull(body);
-        this.contentDisposition = Objects.requireNonNull(contentDisposition);
-        this.contentType = Objects.requireNonNull(contentType);
-        this.exportType = Objects.requireNonNull(exportType);
-        this.id = Objects.requireNonNull(id);
+        this.body = body;
+        this.contentDisposition = contentDisposition;
+        this.contentType = contentType;
+        this.exportType = exportType;
+        this.id = id;
         this.parameters = parameters;
-        this.restApiId = Objects.requireNonNull(restApiId);
-        this.stageName = Objects.requireNonNull(stageName);
+        this.restApiId = restApiId;
+        this.stageName = stageName;
     }
 
     public Optional<String> getAccepts() {

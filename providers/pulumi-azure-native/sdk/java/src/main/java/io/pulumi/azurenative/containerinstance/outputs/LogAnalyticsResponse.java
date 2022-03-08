@@ -47,8 +47,8 @@ public final class LogAnalyticsResponse {
         @Nullable Map<String,String> workspaceResourceId) {
         this.logType = logType;
         this.metadata = metadata;
-        this.workspaceId = Objects.requireNonNull(workspaceId);
-        this.workspaceKey = Objects.requireNonNull(workspaceKey);
+        this.workspaceId = workspaceId;
+        this.workspaceKey = workspaceKey;
         this.workspaceResourceId = workspaceResourceId;
     }
 

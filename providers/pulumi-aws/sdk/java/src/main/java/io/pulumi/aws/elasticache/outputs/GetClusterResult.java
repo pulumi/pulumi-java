@@ -146,28 +146,28 @@ public final class GetClusterResult {
         String snapshotWindow,
         String subnetGroupName,
         Map<String,String> tags) {
-        this.arn = Objects.requireNonNull(arn);
-        this.availabilityZone = Objects.requireNonNull(availabilityZone);
-        this.cacheNodes = Objects.requireNonNull(cacheNodes);
-        this.clusterAddress = Objects.requireNonNull(clusterAddress);
-        this.clusterId = Objects.requireNonNull(clusterId);
-        this.configurationEndpoint = Objects.requireNonNull(configurationEndpoint);
-        this.engine = Objects.requireNonNull(engine);
-        this.engineVersion = Objects.requireNonNull(engineVersion);
-        this.id = Objects.requireNonNull(id);
-        this.maintenanceWindow = Objects.requireNonNull(maintenanceWindow);
-        this.nodeType = Objects.requireNonNull(nodeType);
-        this.notificationTopicArn = Objects.requireNonNull(notificationTopicArn);
-        this.numCacheNodes = Objects.requireNonNull(numCacheNodes);
-        this.parameterGroupName = Objects.requireNonNull(parameterGroupName);
-        this.port = Objects.requireNonNull(port);
-        this.replicationGroupId = Objects.requireNonNull(replicationGroupId);
-        this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
-        this.securityGroupNames = Objects.requireNonNull(securityGroupNames);
-        this.snapshotRetentionLimit = Objects.requireNonNull(snapshotRetentionLimit);
-        this.snapshotWindow = Objects.requireNonNull(snapshotWindow);
-        this.subnetGroupName = Objects.requireNonNull(subnetGroupName);
-        this.tags = Objects.requireNonNull(tags);
+        this.arn = arn;
+        this.availabilityZone = availabilityZone;
+        this.cacheNodes = cacheNodes;
+        this.clusterAddress = clusterAddress;
+        this.clusterId = clusterId;
+        this.configurationEndpoint = configurationEndpoint;
+        this.engine = engine;
+        this.engineVersion = engineVersion;
+        this.id = id;
+        this.maintenanceWindow = maintenanceWindow;
+        this.nodeType = nodeType;
+        this.notificationTopicArn = notificationTopicArn;
+        this.numCacheNodes = numCacheNodes;
+        this.parameterGroupName = parameterGroupName;
+        this.port = port;
+        this.replicationGroupId = replicationGroupId;
+        this.securityGroupIds = securityGroupIds;
+        this.securityGroupNames = securityGroupNames;
+        this.snapshotRetentionLimit = snapshotRetentionLimit;
+        this.snapshotWindow = snapshotWindow;
+        this.subnetGroupName = subnetGroupName;
+        this.tags = tags;
     }
 
     public String getArn() {

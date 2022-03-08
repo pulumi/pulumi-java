@@ -45,7 +45,7 @@ public final class ResourceSetResourceDnsTargetResource {
         @Nullable String recordSetId,
         @Nullable String recordType,
         @Nullable ResourceSetResourceDnsTargetResourceTargetResource targetResource) {
-        this.domainName = Objects.requireNonNull(domainName);
+        this.domainName = domainName;
         this.hostedZoneArn = hostedZoneArn;
         this.recordSetId = recordSetId;
         this.recordType = recordType;

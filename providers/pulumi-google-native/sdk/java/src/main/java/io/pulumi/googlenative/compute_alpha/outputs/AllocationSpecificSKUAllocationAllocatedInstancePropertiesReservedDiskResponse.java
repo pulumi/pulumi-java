@@ -24,8 +24,8 @@ public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesRes
     private AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse(
         String diskSizeGb,
         String $interface) {
-        this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
-        this.$interface = Objects.requireNonNull($interface);
+        this.diskSizeGb = diskSizeGb;
+        this.$interface = $interface;
     }
 
     /**

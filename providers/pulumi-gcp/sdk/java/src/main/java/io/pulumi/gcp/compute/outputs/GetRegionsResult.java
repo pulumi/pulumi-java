@@ -31,9 +31,9 @@ public final class GetRegionsResult {
         List<String> names,
         String project,
         @Nullable String status) {
-        this.id = Objects.requireNonNull(id);
-        this.names = Objects.requireNonNull(names);
-        this.project = Objects.requireNonNull(project);
+        this.id = id;
+        this.names = names;
+        this.project = project;
         this.status = status;
     }
 

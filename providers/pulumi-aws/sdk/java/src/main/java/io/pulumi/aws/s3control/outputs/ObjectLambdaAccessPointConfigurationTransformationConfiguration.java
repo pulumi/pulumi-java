@@ -26,8 +26,8 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
     private ObjectLambdaAccessPointConfigurationTransformationConfiguration(
         List<String> actions,
         ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformation contentTransformation) {
-        this.actions = Objects.requireNonNull(actions);
-        this.contentTransformation = Objects.requireNonNull(contentTransformation);
+        this.actions = actions;
+        this.contentTransformation = contentTransformation;
     }
 
     /**

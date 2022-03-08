@@ -24,8 +24,8 @@ public final class RouterApplianceInstanceResponse {
     private RouterApplianceInstanceResponse(
         String ipAddress,
         String virtualMachine) {
-        this.ipAddress = Objects.requireNonNull(ipAddress);
-        this.virtualMachine = Objects.requireNonNull(virtualMachine);
+        this.ipAddress = ipAddress;
+        this.virtualMachine = virtualMachine;
     }
 
     /**

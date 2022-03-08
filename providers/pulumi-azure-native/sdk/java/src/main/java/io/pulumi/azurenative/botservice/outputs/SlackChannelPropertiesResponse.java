@@ -77,12 +77,12 @@ public final class SlackChannelPropertiesResponse {
         @Nullable String verificationToken) {
         this.clientId = clientId;
         this.clientSecret = clientSecret;
-        this.isEnabled = Objects.requireNonNull(isEnabled);
-        this.isValidated = Objects.requireNonNull(isValidated);
+        this.isEnabled = isEnabled;
+        this.isValidated = isValidated;
         this.landingPageUrl = landingPageUrl;
-        this.lastSubmissionId = Objects.requireNonNull(lastSubmissionId);
-        this.redirectAction = Objects.requireNonNull(redirectAction);
-        this.registerBeforeOAuthFlow = Objects.requireNonNull(registerBeforeOAuthFlow);
+        this.lastSubmissionId = lastSubmissionId;
+        this.redirectAction = redirectAction;
+        this.registerBeforeOAuthFlow = registerBeforeOAuthFlow;
         this.signingSecret = signingSecret;
         this.verificationToken = verificationToken;
     }

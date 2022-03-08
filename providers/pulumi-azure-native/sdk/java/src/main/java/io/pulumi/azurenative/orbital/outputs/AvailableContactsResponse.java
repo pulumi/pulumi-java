@@ -82,17 +82,17 @@ public final class AvailableContactsResponse {
         Double startElevationDegrees,
         String txEndTime,
         String txStartTime) {
-        this.endAzimuthDegrees = Objects.requireNonNull(endAzimuthDegrees);
-        this.endElevationDegrees = Objects.requireNonNull(endElevationDegrees);
-        this.groundStationName = Objects.requireNonNull(groundStationName);
-        this.maximumElevationDegrees = Objects.requireNonNull(maximumElevationDegrees);
-        this.rxEndTime = Objects.requireNonNull(rxEndTime);
-        this.rxStartTime = Objects.requireNonNull(rxStartTime);
+        this.endAzimuthDegrees = endAzimuthDegrees;
+        this.endElevationDegrees = endElevationDegrees;
+        this.groundStationName = groundStationName;
+        this.maximumElevationDegrees = maximumElevationDegrees;
+        this.rxEndTime = rxEndTime;
+        this.rxStartTime = rxStartTime;
         this.spacecraft = spacecraft;
-        this.startAzimuthDegrees = Objects.requireNonNull(startAzimuthDegrees);
-        this.startElevationDegrees = Objects.requireNonNull(startElevationDegrees);
-        this.txEndTime = Objects.requireNonNull(txEndTime);
-        this.txStartTime = Objects.requireNonNull(txStartTime);
+        this.startAzimuthDegrees = startAzimuthDegrees;
+        this.startElevationDegrees = startElevationDegrees;
+        this.txEndTime = txEndTime;
+        this.txStartTime = txStartTime;
     }
 
     /**

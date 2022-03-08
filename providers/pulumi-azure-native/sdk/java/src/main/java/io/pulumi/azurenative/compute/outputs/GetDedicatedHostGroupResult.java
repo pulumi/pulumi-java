@@ -80,15 +80,15 @@ public final class GetDedicatedHostGroupResult {
         @Nullable Map<String,String> tags,
         String type,
         @Nullable List<String> zones) {
-        this.hosts = Objects.requireNonNull(hosts);
-        this.id = Objects.requireNonNull(id);
-        this.instanceView = Objects.requireNonNull(instanceView);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.platformFaultDomainCount = Objects.requireNonNull(platformFaultDomainCount);
+        this.hosts = hosts;
+        this.id = id;
+        this.instanceView = instanceView;
+        this.location = location;
+        this.name = name;
+        this.platformFaultDomainCount = platformFaultDomainCount;
         this.supportAutomaticPlacement = supportAutomaticPlacement;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.zones = zones;
     }
 

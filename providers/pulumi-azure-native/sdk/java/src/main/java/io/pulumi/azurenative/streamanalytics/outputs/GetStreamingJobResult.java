@@ -167,29 +167,29 @@ public final class GetStreamingJobResult {
         @Nullable TransformationResponse transformation,
         String type) {
         this.compatibilityLevel = compatibilityLevel;
-        this.createdDate = Objects.requireNonNull(createdDate);
+        this.createdDate = createdDate;
         this.dataLocale = dataLocale;
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.eventsLateArrivalMaxDelayInSeconds = eventsLateArrivalMaxDelayInSeconds;
         this.eventsOutOfOrderMaxDelayInSeconds = eventsOutOfOrderMaxDelayInSeconds;
         this.eventsOutOfOrderPolicy = eventsOutOfOrderPolicy;
         this.functions = functions;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.inputs = inputs;
-        this.jobId = Objects.requireNonNull(jobId);
-        this.jobState = Objects.requireNonNull(jobState);
-        this.lastOutputEventTime = Objects.requireNonNull(lastOutputEventTime);
+        this.jobId = jobId;
+        this.jobState = jobState;
+        this.lastOutputEventTime = lastOutputEventTime;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.outputErrorPolicy = outputErrorPolicy;
         this.outputStartMode = outputStartMode;
         this.outputStartTime = outputStartTime;
         this.outputs = outputs;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.sku = sku;
         this.tags = tags;
         this.transformation = transformation;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

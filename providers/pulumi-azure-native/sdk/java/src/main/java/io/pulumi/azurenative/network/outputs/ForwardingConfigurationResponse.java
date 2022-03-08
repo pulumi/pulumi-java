@@ -50,7 +50,7 @@ public final class ForwardingConfigurationResponse {
         this.cacheConfiguration = cacheConfiguration;
         this.customForwardingPath = customForwardingPath;
         this.forwardingProtocol = forwardingProtocol;
-        this.odataType = Objects.requireNonNull(odataType);
+        this.odataType = odataType;
     }
 
     /**

@@ -23,11 +23,11 @@ public final class GetLaunchTemplateInstanceMarketOptionSpotOption {
         String maxPrice,
         String spotInstanceType,
         String validUntil) {
-        this.blockDurationMinutes = Objects.requireNonNull(blockDurationMinutes);
-        this.instanceInterruptionBehavior = Objects.requireNonNull(instanceInterruptionBehavior);
-        this.maxPrice = Objects.requireNonNull(maxPrice);
-        this.spotInstanceType = Objects.requireNonNull(spotInstanceType);
-        this.validUntil = Objects.requireNonNull(validUntil);
+        this.blockDurationMinutes = blockDurationMinutes;
+        this.instanceInterruptionBehavior = instanceInterruptionBehavior;
+        this.maxPrice = maxPrice;
+        this.spotInstanceType = spotInstanceType;
+        this.validUntil = validUntil;
     }
 
     public Integer getBlockDurationMinutes() {

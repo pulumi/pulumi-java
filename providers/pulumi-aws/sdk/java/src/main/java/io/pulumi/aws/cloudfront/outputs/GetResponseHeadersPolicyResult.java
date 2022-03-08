@@ -50,13 +50,13 @@ public final class GetResponseHeadersPolicyResult {
         String id,
         String name,
         List<GetResponseHeadersPolicySecurityHeadersConfig> securityHeadersConfigs) {
-        this.comment = Objects.requireNonNull(comment);
-        this.corsConfigs = Objects.requireNonNull(corsConfigs);
-        this.customHeadersConfigs = Objects.requireNonNull(customHeadersConfigs);
-        this.etag = Objects.requireNonNull(etag);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.securityHeadersConfigs = Objects.requireNonNull(securityHeadersConfigs);
+        this.comment = comment;
+        this.corsConfigs = corsConfigs;
+        this.customHeadersConfigs = customHeadersConfigs;
+        this.etag = etag;
+        this.id = id;
+        this.name = name;
+        this.securityHeadersConfigs = securityHeadersConfigs;
     }
 
     /**

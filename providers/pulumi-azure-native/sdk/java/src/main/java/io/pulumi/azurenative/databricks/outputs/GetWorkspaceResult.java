@@ -125,21 +125,21 @@ public final class GetWorkspaceResult {
         String workspaceUrl) {
         this.authorizations = authorizations;
         this.createdBy = createdBy;
-        this.createdDateTime = Objects.requireNonNull(createdDateTime);
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.managedResourceGroupId = Objects.requireNonNull(managedResourceGroupId);
-        this.name = Objects.requireNonNull(name);
+        this.createdDateTime = createdDateTime;
+        this.id = id;
+        this.location = location;
+        this.managedResourceGroupId = managedResourceGroupId;
+        this.name = name;
         this.parameters = parameters;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.sku = sku;
         this.storageAccountIdentity = storageAccountIdentity;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.uiDefinitionUri = uiDefinitionUri;
         this.updatedBy = updatedBy;
-        this.workspaceId = Objects.requireNonNull(workspaceId);
-        this.workspaceUrl = Objects.requireNonNull(workspaceUrl);
+        this.workspaceId = workspaceId;
+        this.workspaceUrl = workspaceUrl;
     }
 
     /**

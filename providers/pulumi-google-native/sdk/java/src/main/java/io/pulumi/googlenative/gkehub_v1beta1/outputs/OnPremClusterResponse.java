@@ -31,9 +31,9 @@ public final class OnPremClusterResponse {
         Boolean adminCluster,
         Boolean clusterMissing,
         String resourceLink) {
-        this.adminCluster = Objects.requireNonNull(adminCluster);
-        this.clusterMissing = Objects.requireNonNull(clusterMissing);
-        this.resourceLink = Objects.requireNonNull(resourceLink);
+        this.adminCluster = adminCluster;
+        this.clusterMissing = clusterMissing;
+        this.resourceLink = resourceLink;
     }
 
     /**

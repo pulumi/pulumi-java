@@ -17,7 +17,7 @@ public final class SecretResponse {
 
     @OutputCustomType.Constructor({"secretVersion"})
     private SecretResponse(String secretVersion) {
-        this.secretVersion = Objects.requireNonNull(secretVersion);
+        this.secretVersion = secretVersion;
     }
 
     /**

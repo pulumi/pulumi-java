@@ -16,8 +16,8 @@ public final class ReplicationConfigurationReplicationDestination {
     private ReplicationConfigurationReplicationDestination(
         String region,
         String registryId) {
-        this.region = Objects.requireNonNull(region);
-        this.registryId = Objects.requireNonNull(registryId);
+        this.region = region;
+        this.registryId = registryId;
     }
 
     public String getRegion() {

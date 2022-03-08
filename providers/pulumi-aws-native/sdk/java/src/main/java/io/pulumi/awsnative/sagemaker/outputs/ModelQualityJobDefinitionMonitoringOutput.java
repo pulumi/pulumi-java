@@ -13,7 +13,7 @@ public final class ModelQualityJobDefinitionMonitoringOutput {
 
     @OutputCustomType.Constructor({"s3Output"})
     private ModelQualityJobDefinitionMonitoringOutput(ModelQualityJobDefinitionS3Output s3Output) {
-        this.s3Output = Objects.requireNonNull(s3Output);
+        this.s3Output = s3Output;
     }
 
     public ModelQualityJobDefinitionS3Output getS3Output() {

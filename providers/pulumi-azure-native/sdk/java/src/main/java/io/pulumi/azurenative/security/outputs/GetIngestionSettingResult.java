@@ -30,9 +30,9 @@ public final class GetIngestionSettingResult {
         String id,
         String name,
         String type) {
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.id = id;
+        this.name = name;
+        this.type = type;
     }
 
     /**

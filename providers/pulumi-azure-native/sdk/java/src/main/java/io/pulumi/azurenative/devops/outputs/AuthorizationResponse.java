@@ -26,7 +26,7 @@ public final class AuthorizationResponse {
     private AuthorizationResponse(
         String authorizationType,
         @Nullable Map<String,String> parameters) {
-        this.authorizationType = Objects.requireNonNull(authorizationType);
+        this.authorizationType = authorizationType;
         this.parameters = parameters;
     }
 

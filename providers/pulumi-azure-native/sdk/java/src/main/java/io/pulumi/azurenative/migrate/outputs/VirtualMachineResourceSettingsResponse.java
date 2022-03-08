@@ -45,10 +45,10 @@ public final class VirtualMachineResourceSettingsResponse {
         @Nullable String targetAvailabilityZone,
         String targetResourceName,
         @Nullable String targetVmSize) {
-        this.resourceType = Objects.requireNonNull(resourceType);
+        this.resourceType = resourceType;
         this.targetAvailabilitySetId = targetAvailabilitySetId;
         this.targetAvailabilityZone = targetAvailabilityZone;
-        this.targetResourceName = Objects.requireNonNull(targetResourceName);
+        this.targetResourceName = targetResourceName;
         this.targetVmSize = targetVmSize;
     }
 

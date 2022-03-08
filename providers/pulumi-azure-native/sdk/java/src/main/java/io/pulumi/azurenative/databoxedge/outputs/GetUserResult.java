@@ -61,12 +61,12 @@ public final class GetUserResult {
         String type,
         String userType) {
         this.encryptedPassword = encryptedPassword;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.shareAccessRights = Objects.requireNonNull(shareAccessRights);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
-        this.userType = Objects.requireNonNull(userType);
+        this.id = id;
+        this.name = name;
+        this.shareAccessRights = shareAccessRights;
+        this.systemData = systemData;
+        this.type = type;
+        this.userType = userType;
     }
 
     /**

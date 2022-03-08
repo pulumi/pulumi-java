@@ -29,7 +29,7 @@ public final class MitigationActionAddThingsToThingGroupParams {
         @Nullable Boolean overrideDynamicGroups,
         List<String> thingGroupNames) {
         this.overrideDynamicGroups = overrideDynamicGroups;
-        this.thingGroupNames = Objects.requireNonNull(thingGroupNames);
+        this.thingGroupNames = thingGroupNames;
     }
 
     /**

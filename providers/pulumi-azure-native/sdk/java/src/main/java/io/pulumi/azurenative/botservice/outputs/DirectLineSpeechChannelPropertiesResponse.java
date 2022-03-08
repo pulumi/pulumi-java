@@ -51,8 +51,8 @@ public final class DirectLineSpeechChannelPropertiesResponse {
         @Nullable String customVoiceDeploymentId,
         @Nullable Boolean isDefaultBotForCogSvcAccount,
         @Nullable Boolean isEnabled) {
-        this.cognitiveServiceRegion = Objects.requireNonNull(cognitiveServiceRegion);
-        this.cognitiveServiceSubscriptionKey = Objects.requireNonNull(cognitiveServiceSubscriptionKey);
+        this.cognitiveServiceRegion = cognitiveServiceRegion;
+        this.cognitiveServiceSubscriptionKey = cognitiveServiceSubscriptionKey;
         this.customSpeechModelId = customSpeechModelId;
         this.customVoiceDeploymentId = customVoiceDeploymentId;
         this.isDefaultBotForCogSvcAccount = isDefaultBotForCogSvcAccount;

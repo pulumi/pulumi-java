@@ -119,23 +119,23 @@ public final class GetBotResult {
         String status,
         @Nullable String version,
         String voiceId) {
-        this.arn = Objects.requireNonNull(arn);
-        this.checksum = Objects.requireNonNull(checksum);
-        this.childDirected = Objects.requireNonNull(childDirected);
-        this.createdDate = Objects.requireNonNull(createdDate);
-        this.description = Objects.requireNonNull(description);
-        this.detectSentiment = Objects.requireNonNull(detectSentiment);
-        this.enableModelImprovements = Objects.requireNonNull(enableModelImprovements);
-        this.failureReason = Objects.requireNonNull(failureReason);
-        this.id = Objects.requireNonNull(id);
-        this.idleSessionTtlInSeconds = Objects.requireNonNull(idleSessionTtlInSeconds);
-        this.lastUpdatedDate = Objects.requireNonNull(lastUpdatedDate);
-        this.locale = Objects.requireNonNull(locale);
-        this.name = Objects.requireNonNull(name);
-        this.nluIntentConfidenceThreshold = Objects.requireNonNull(nluIntentConfidenceThreshold);
-        this.status = Objects.requireNonNull(status);
+        this.arn = arn;
+        this.checksum = checksum;
+        this.childDirected = childDirected;
+        this.createdDate = createdDate;
+        this.description = description;
+        this.detectSentiment = detectSentiment;
+        this.enableModelImprovements = enableModelImprovements;
+        this.failureReason = failureReason;
+        this.id = id;
+        this.idleSessionTtlInSeconds = idleSessionTtlInSeconds;
+        this.lastUpdatedDate = lastUpdatedDate;
+        this.locale = locale;
+        this.name = name;
+        this.nluIntentConfidenceThreshold = nluIntentConfidenceThreshold;
+        this.status = status;
         this.version = version;
-        this.voiceId = Objects.requireNonNull(voiceId);
+        this.voiceId = voiceId;
     }
 
     /**

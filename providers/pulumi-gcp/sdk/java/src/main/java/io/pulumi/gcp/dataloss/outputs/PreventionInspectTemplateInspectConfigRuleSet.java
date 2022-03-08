@@ -28,8 +28,8 @@ public final class PreventionInspectTemplateInspectConfigRuleSet {
     private PreventionInspectTemplateInspectConfigRuleSet(
         List<PreventionInspectTemplateInspectConfigRuleSetInfoType> infoTypes,
         List<PreventionInspectTemplateInspectConfigRuleSetRule> rules) {
-        this.infoTypes = Objects.requireNonNull(infoTypes);
-        this.rules = Objects.requireNonNull(rules);
+        this.infoTypes = infoTypes;
+        this.rules = rules;
     }
 
     /**

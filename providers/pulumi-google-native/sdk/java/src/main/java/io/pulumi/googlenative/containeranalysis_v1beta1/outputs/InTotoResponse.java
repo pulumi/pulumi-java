@@ -47,12 +47,12 @@ public final class InTotoResponse {
         List<SigningKeyResponse> signingKeys,
         String stepName,
         String threshold) {
-        this.expectedCommand = Objects.requireNonNull(expectedCommand);
-        this.expectedMaterials = Objects.requireNonNull(expectedMaterials);
-        this.expectedProducts = Objects.requireNonNull(expectedProducts);
-        this.signingKeys = Objects.requireNonNull(signingKeys);
-        this.stepName = Objects.requireNonNull(stepName);
-        this.threshold = Objects.requireNonNull(threshold);
+        this.expectedCommand = expectedCommand;
+        this.expectedMaterials = expectedMaterials;
+        this.expectedProducts = expectedProducts;
+        this.signingKeys = signingKeys;
+        this.stepName = stepName;
+        this.threshold = threshold;
     }
 
     /**

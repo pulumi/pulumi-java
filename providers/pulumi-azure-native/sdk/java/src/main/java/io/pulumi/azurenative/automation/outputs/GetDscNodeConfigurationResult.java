@@ -73,13 +73,13 @@ public final class GetDscNodeConfigurationResult {
         String type) {
         this.configuration = configuration;
         this.creationTime = creationTime;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.incrementNodeConfigurationBuild = incrementNodeConfigurationBuild;
         this.lastModifiedTime = lastModifiedTime;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.nodeCount = nodeCount;
         this.source = source;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

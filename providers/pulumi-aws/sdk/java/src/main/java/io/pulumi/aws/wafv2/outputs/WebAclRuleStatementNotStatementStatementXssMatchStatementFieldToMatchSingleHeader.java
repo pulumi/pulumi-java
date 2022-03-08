@@ -17,7 +17,7 @@ public final class WebAclRuleStatementNotStatementStatementXssMatchStatementFiel
 
     @OutputCustomType.Constructor({"name"})
     private WebAclRuleStatementNotStatementStatementXssMatchStatementFieldToMatchSingleHeader(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

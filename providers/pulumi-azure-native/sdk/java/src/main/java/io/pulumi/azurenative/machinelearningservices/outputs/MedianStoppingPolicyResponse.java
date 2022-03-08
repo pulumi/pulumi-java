@@ -35,7 +35,7 @@ public final class MedianStoppingPolicyResponse {
         String policyType) {
         this.delayEvaluation = delayEvaluation;
         this.evaluationInterval = evaluationInterval;
-        this.policyType = Objects.requireNonNull(policyType);
+        this.policyType = policyType;
     }
 
     /**

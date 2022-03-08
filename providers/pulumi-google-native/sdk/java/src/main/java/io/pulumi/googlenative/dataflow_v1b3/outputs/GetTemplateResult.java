@@ -39,10 +39,10 @@ public final class GetTemplateResult {
         RuntimeMetadataResponse runtimeMetadata,
         StatusResponse status,
         String templateType) {
-        this.metadata = Objects.requireNonNull(metadata);
-        this.runtimeMetadata = Objects.requireNonNull(runtimeMetadata);
-        this.status = Objects.requireNonNull(status);
-        this.templateType = Objects.requireNonNull(templateType);
+        this.metadata = metadata;
+        this.runtimeMetadata = runtimeMetadata;
+        this.status = status;
+        this.templateType = templateType;
     }
 
     /**

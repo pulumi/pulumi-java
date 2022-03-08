@@ -25,8 +25,8 @@ public final class AnomalyDetectorMetric {
         AnomalyDetectorMetricAggregationFunction aggregationFunction,
         String metricName,
         @Nullable String namespace) {
-        this.aggregationFunction = Objects.requireNonNull(aggregationFunction);
-        this.metricName = Objects.requireNonNull(metricName);
+        this.aggregationFunction = aggregationFunction;
+        this.metricName = metricName;
         this.namespace = namespace;
     }
 

@@ -27,7 +27,7 @@ public final class BucketRedirectAllRequestsTo {
     private BucketRedirectAllRequestsTo(
         String hostName,
         @Nullable BucketRedirectAllRequestsToProtocol protocol) {
-        this.hostName = Objects.requireNonNull(hostName);
+        this.hostName = hostName;
         this.protocol = protocol;
     }
 

@@ -28,7 +28,7 @@ public final class VirtualGatewaySpecListenerTlsValidation {
         @Nullable VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNames subjectAlternativeNames,
         VirtualGatewaySpecListenerTlsValidationTrust trust) {
         this.subjectAlternativeNames = subjectAlternativeNames;
-        this.trust = Objects.requireNonNull(trust);
+        this.trust = trust;
     }
 
     /**

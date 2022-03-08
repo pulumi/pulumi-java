@@ -26,8 +26,8 @@ public final class VaultSecretGroupResponse {
     private VaultSecretGroupResponse(
         SubResourceResponse sourceVault,
         List<VaultCertificateResponse> vaultCertificates) {
-        this.sourceVault = Objects.requireNonNull(sourceVault);
-        this.vaultCertificates = Objects.requireNonNull(vaultCertificates);
+        this.sourceVault = sourceVault;
+        this.vaultCertificates = vaultCertificates;
     }
 
     /**

@@ -203,35 +203,35 @@ public final class GetBucketResult {
         String updated,
         BucketVersioningResponse versioning,
         BucketWebsiteResponse website) {
-        this.acl = Objects.requireNonNull(acl);
-        this.autoclass = Objects.requireNonNull(autoclass);
-        this.billing = Objects.requireNonNull(billing);
-        this.cors = Objects.requireNonNull(cors);
-        this.customPlacementConfig = Objects.requireNonNull(customPlacementConfig);
-        this.defaultEventBasedHold = Objects.requireNonNull(defaultEventBasedHold);
-        this.defaultObjectAcl = Objects.requireNonNull(defaultObjectAcl);
-        this.encryption = Objects.requireNonNull(encryption);
-        this.etag = Objects.requireNonNull(etag);
-        this.iamConfiguration = Objects.requireNonNull(iamConfiguration);
-        this.kind = Objects.requireNonNull(kind);
-        this.labels = Objects.requireNonNull(labels);
-        this.lifecycle = Objects.requireNonNull(lifecycle);
-        this.location = Objects.requireNonNull(location);
-        this.locationType = Objects.requireNonNull(locationType);
-        this.logging = Objects.requireNonNull(logging);
-        this.metageneration = Objects.requireNonNull(metageneration);
-        this.name = Objects.requireNonNull(name);
-        this.owner = Objects.requireNonNull(owner);
-        this.projectNumber = Objects.requireNonNull(projectNumber);
-        this.retentionPolicy = Objects.requireNonNull(retentionPolicy);
-        this.rpo = Objects.requireNonNull(rpo);
-        this.satisfiesPZS = Objects.requireNonNull(satisfiesPZS);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.storageClass = Objects.requireNonNull(storageClass);
-        this.timeCreated = Objects.requireNonNull(timeCreated);
-        this.updated = Objects.requireNonNull(updated);
-        this.versioning = Objects.requireNonNull(versioning);
-        this.website = Objects.requireNonNull(website);
+        this.acl = acl;
+        this.autoclass = autoclass;
+        this.billing = billing;
+        this.cors = cors;
+        this.customPlacementConfig = customPlacementConfig;
+        this.defaultEventBasedHold = defaultEventBasedHold;
+        this.defaultObjectAcl = defaultObjectAcl;
+        this.encryption = encryption;
+        this.etag = etag;
+        this.iamConfiguration = iamConfiguration;
+        this.kind = kind;
+        this.labels = labels;
+        this.lifecycle = lifecycle;
+        this.location = location;
+        this.locationType = locationType;
+        this.logging = logging;
+        this.metageneration = metageneration;
+        this.name = name;
+        this.owner = owner;
+        this.projectNumber = projectNumber;
+        this.retentionPolicy = retentionPolicy;
+        this.rpo = rpo;
+        this.satisfiesPZS = satisfiesPZS;
+        this.selfLink = selfLink;
+        this.storageClass = storageClass;
+        this.timeCreated = timeCreated;
+        this.updated = updated;
+        this.versioning = versioning;
+        this.website = website;
     }
 
     /**

@@ -36,7 +36,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
         String bucketName,
         @Nullable List<String> excludeRegexes,
         @Nullable List<String> includeRegexes) {
-        this.bucketName = Objects.requireNonNull(bucketName);
+        this.bucketName = bucketName;
         this.excludeRegexes = excludeRegexes;
         this.includeRegexes = includeRegexes;
     }

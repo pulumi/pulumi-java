@@ -31,9 +31,9 @@ public final class GoogleCloudRunOpV2VersionToPathResponse {
         Integer mode,
         String path,
         String version) {
-        this.mode = Objects.requireNonNull(mode);
-        this.path = Objects.requireNonNull(path);
-        this.version = Objects.requireNonNull(version);
+        this.mode = mode;
+        this.path = path;
+        this.version = version;
     }
 
     /**

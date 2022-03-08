@@ -26,8 +26,8 @@ public final class InstanceAcceleratorConfig {
     private InstanceAcceleratorConfig(
         Integer coreCount,
         String type) {
-        this.coreCount = Objects.requireNonNull(coreCount);
-        this.type = Objects.requireNonNull(type);
+        this.coreCount = coreCount;
+        this.type = type;
     }
 
     /**

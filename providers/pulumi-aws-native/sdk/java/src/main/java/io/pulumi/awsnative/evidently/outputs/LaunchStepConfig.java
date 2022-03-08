@@ -18,8 +18,8 @@ public final class LaunchStepConfig {
     private LaunchStepConfig(
         List<LaunchGroupToWeight> groupWeights,
         String startTime) {
-        this.groupWeights = Objects.requireNonNull(groupWeights);
-        this.startTime = Objects.requireNonNull(startTime);
+        this.groupWeights = groupWeights;
+        this.startTime = startTime;
     }
 
     public List<LaunchGroupToWeight> getGroupWeights() {

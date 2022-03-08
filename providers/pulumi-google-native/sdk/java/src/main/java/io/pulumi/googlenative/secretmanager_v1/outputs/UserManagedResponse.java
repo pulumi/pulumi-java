@@ -18,7 +18,7 @@ public final class UserManagedResponse {
 
     @OutputCustomType.Constructor({"replicas"})
     private UserManagedResponse(List<ReplicaResponse> replicas) {
-        this.replicas = Objects.requireNonNull(replicas);
+        this.replicas = replicas;
     }
 
     /**

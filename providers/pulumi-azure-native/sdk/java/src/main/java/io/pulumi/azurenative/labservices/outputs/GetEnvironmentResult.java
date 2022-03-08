@@ -121,22 +121,22 @@ public final class GetEnvironmentResult {
         String totalUsage,
         String type,
         @Nullable String uniqueIdentifier) {
-        this.claimedByUserName = Objects.requireNonNull(claimedByUserName);
-        this.claimedByUserObjectId = Objects.requireNonNull(claimedByUserObjectId);
-        this.claimedByUserPrincipalId = Objects.requireNonNull(claimedByUserPrincipalId);
-        this.id = Objects.requireNonNull(id);
-        this.isClaimed = Objects.requireNonNull(isClaimed);
-        this.lastKnownPowerState = Objects.requireNonNull(lastKnownPowerState);
-        this.latestOperationResult = Objects.requireNonNull(latestOperationResult);
+        this.claimedByUserName = claimedByUserName;
+        this.claimedByUserObjectId = claimedByUserObjectId;
+        this.claimedByUserPrincipalId = claimedByUserPrincipalId;
+        this.id = id;
+        this.isClaimed = isClaimed;
+        this.lastKnownPowerState = lastKnownPowerState;
+        this.latestOperationResult = latestOperationResult;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
-        this.networkInterface = Objects.requireNonNull(networkInterface);
-        this.passwordLastReset = Objects.requireNonNull(passwordLastReset);
+        this.name = name;
+        this.networkInterface = networkInterface;
+        this.passwordLastReset = passwordLastReset;
         this.provisioningState = provisioningState;
         this.resourceSets = resourceSets;
         this.tags = tags;
-        this.totalUsage = Objects.requireNonNull(totalUsage);
-        this.type = Objects.requireNonNull(type);
+        this.totalUsage = totalUsage;
+        this.type = type;
         this.uniqueIdentifier = uniqueIdentifier;
     }
 

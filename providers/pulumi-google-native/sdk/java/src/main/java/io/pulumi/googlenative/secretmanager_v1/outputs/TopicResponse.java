@@ -17,7 +17,7 @@ public final class TopicResponse {
 
     @OutputCustomType.Constructor({"name"})
     private TopicResponse(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

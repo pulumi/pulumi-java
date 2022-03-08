@@ -28,7 +28,7 @@ public final class TableView {
     private TableView(
         String query,
         @Nullable Boolean useLegacySql) {
-        this.query = Objects.requireNonNull(query);
+        this.query = query;
         this.useLegacySql = useLegacySql;
     }
 

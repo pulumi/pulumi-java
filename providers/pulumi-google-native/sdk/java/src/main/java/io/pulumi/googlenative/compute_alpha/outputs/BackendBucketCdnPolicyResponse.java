@@ -90,18 +90,18 @@ public final class BackendBucketCdnPolicyResponse {
         Integer serveWhileStale,
         String signedUrlCacheMaxAgeSec,
         List<String> signedUrlKeyNames) {
-        this.bypassCacheOnRequestHeaders = Objects.requireNonNull(bypassCacheOnRequestHeaders);
-        this.cacheKeyPolicy = Objects.requireNonNull(cacheKeyPolicy);
-        this.cacheMode = Objects.requireNonNull(cacheMode);
-        this.clientTtl = Objects.requireNonNull(clientTtl);
-        this.defaultTtl = Objects.requireNonNull(defaultTtl);
-        this.maxTtl = Objects.requireNonNull(maxTtl);
-        this.negativeCaching = Objects.requireNonNull(negativeCaching);
-        this.negativeCachingPolicy = Objects.requireNonNull(negativeCachingPolicy);
-        this.requestCoalescing = Objects.requireNonNull(requestCoalescing);
-        this.serveWhileStale = Objects.requireNonNull(serveWhileStale);
-        this.signedUrlCacheMaxAgeSec = Objects.requireNonNull(signedUrlCacheMaxAgeSec);
-        this.signedUrlKeyNames = Objects.requireNonNull(signedUrlKeyNames);
+        this.bypassCacheOnRequestHeaders = bypassCacheOnRequestHeaders;
+        this.cacheKeyPolicy = cacheKeyPolicy;
+        this.cacheMode = cacheMode;
+        this.clientTtl = clientTtl;
+        this.defaultTtl = defaultTtl;
+        this.maxTtl = maxTtl;
+        this.negativeCaching = negativeCaching;
+        this.negativeCachingPolicy = negativeCachingPolicy;
+        this.requestCoalescing = requestCoalescing;
+        this.serveWhileStale = serveWhileStale;
+        this.signedUrlCacheMaxAgeSec = signedUrlCacheMaxAgeSec;
+        this.signedUrlKeyNames = signedUrlKeyNames;
     }
 
     /**

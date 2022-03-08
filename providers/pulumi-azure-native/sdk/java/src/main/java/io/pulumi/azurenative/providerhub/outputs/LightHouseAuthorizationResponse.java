@@ -16,8 +16,8 @@ public final class LightHouseAuthorizationResponse {
     private LightHouseAuthorizationResponse(
         String principalId,
         String roleDefinitionId) {
-        this.principalId = Objects.requireNonNull(principalId);
-        this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId);
+        this.principalId = principalId;
+        this.roleDefinitionId = roleDefinitionId;
     }
 
     public String getPrincipalId() {

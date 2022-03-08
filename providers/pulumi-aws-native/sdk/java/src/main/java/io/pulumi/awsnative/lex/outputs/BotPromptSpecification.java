@@ -28,8 +28,8 @@ public final class BotPromptSpecification {
         Integer maxRetries,
         List<BotMessageGroup> messageGroupsList) {
         this.allowInterrupt = allowInterrupt;
-        this.maxRetries = Objects.requireNonNull(maxRetries);
-        this.messageGroupsList = Objects.requireNonNull(messageGroupsList);
+        this.maxRetries = maxRetries;
+        this.messageGroupsList = messageGroupsList;
     }
 
     /**

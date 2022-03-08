@@ -44,11 +44,11 @@ public final class VpnClientRootCertificateResponse {
         @Nullable String name,
         String provisioningState,
         String publicCertData) {
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.id = id;
         this.name = name;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.publicCertData = Objects.requireNonNull(publicCertData);
+        this.provisioningState = provisioningState;
+        this.publicCertData = publicCertData;
     }
 
     /**

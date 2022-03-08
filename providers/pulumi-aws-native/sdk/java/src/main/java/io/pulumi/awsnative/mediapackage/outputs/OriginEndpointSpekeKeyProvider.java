@@ -46,10 +46,10 @@ public final class OriginEndpointSpekeKeyProvider {
         List<String> systemIds,
         String url) {
         this.certificateArn = certificateArn;
-        this.resourceId = Objects.requireNonNull(resourceId);
-        this.roleArn = Objects.requireNonNull(roleArn);
-        this.systemIds = Objects.requireNonNull(systemIds);
-        this.url = Objects.requireNonNull(url);
+        this.resourceId = resourceId;
+        this.roleArn = roleArn;
+        this.systemIds = systemIds;
+        this.url = url;
     }
 
     /**

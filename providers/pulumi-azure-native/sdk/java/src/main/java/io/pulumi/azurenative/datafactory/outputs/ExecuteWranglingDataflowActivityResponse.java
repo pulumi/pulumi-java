@@ -119,18 +119,18 @@ public final class ExecuteWranglingDataflowActivityResponse {
         @Nullable List<UserPropertyResponse> userProperties) {
         this.compute = compute;
         this.continueOnError = continueOnError;
-        this.dataFlow = Objects.requireNonNull(dataFlow);
+        this.dataFlow = dataFlow;
         this.dependsOn = dependsOn;
         this.description = description;
         this.integrationRuntime = integrationRuntime;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.policy = policy;
         this.queries = queries;
         this.runConcurrently = runConcurrently;
         this.sinks = sinks;
         this.staging = staging;
         this.traceLevel = traceLevel;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.userProperties = userProperties;
     }
 

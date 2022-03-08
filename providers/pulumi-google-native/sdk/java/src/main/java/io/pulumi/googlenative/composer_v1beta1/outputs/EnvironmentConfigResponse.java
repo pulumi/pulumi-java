@@ -113,21 +113,21 @@ public final class EnvironmentConfigResponse {
         WebServerConfigResponse webServerConfig,
         WebServerNetworkAccessControlResponse webServerNetworkAccessControl,
         WorkloadsConfigResponse workloadsConfig) {
-        this.airflowUri = Objects.requireNonNull(airflowUri);
-        this.dagGcsPrefix = Objects.requireNonNull(dagGcsPrefix);
-        this.databaseConfig = Objects.requireNonNull(databaseConfig);
-        this.encryptionConfig = Objects.requireNonNull(encryptionConfig);
-        this.environmentSize = Objects.requireNonNull(environmentSize);
-        this.gkeCluster = Objects.requireNonNull(gkeCluster);
-        this.maintenanceWindow = Objects.requireNonNull(maintenanceWindow);
-        this.masterAuthorizedNetworksConfig = Objects.requireNonNull(masterAuthorizedNetworksConfig);
-        this.nodeConfig = Objects.requireNonNull(nodeConfig);
-        this.nodeCount = Objects.requireNonNull(nodeCount);
-        this.privateEnvironmentConfig = Objects.requireNonNull(privateEnvironmentConfig);
-        this.softwareConfig = Objects.requireNonNull(softwareConfig);
-        this.webServerConfig = Objects.requireNonNull(webServerConfig);
-        this.webServerNetworkAccessControl = Objects.requireNonNull(webServerNetworkAccessControl);
-        this.workloadsConfig = Objects.requireNonNull(workloadsConfig);
+        this.airflowUri = airflowUri;
+        this.dagGcsPrefix = dagGcsPrefix;
+        this.databaseConfig = databaseConfig;
+        this.encryptionConfig = encryptionConfig;
+        this.environmentSize = environmentSize;
+        this.gkeCluster = gkeCluster;
+        this.maintenanceWindow = maintenanceWindow;
+        this.masterAuthorizedNetworksConfig = masterAuthorizedNetworksConfig;
+        this.nodeConfig = nodeConfig;
+        this.nodeCount = nodeCount;
+        this.privateEnvironmentConfig = privateEnvironmentConfig;
+        this.softwareConfig = softwareConfig;
+        this.webServerConfig = webServerConfig;
+        this.webServerNetworkAccessControl = webServerNetworkAccessControl;
+        this.workloadsConfig = workloadsConfig;
     }
 
     /**

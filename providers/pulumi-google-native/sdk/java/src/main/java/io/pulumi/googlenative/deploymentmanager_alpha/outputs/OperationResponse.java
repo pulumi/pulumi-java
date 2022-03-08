@@ -148,28 +148,28 @@ public final class OperationResponse {
         String user,
         List<OperationWarningsItemResponse> warnings,
         String zone) {
-        this.clientOperationId = Objects.requireNonNull(clientOperationId);
-        this.description = Objects.requireNonNull(description);
-        this.endTime = Objects.requireNonNull(endTime);
-        this.error = Objects.requireNonNull(error);
-        this.httpErrorMessage = Objects.requireNonNull(httpErrorMessage);
-        this.httpErrorStatusCode = Objects.requireNonNull(httpErrorStatusCode);
-        this.insertTime = Objects.requireNonNull(insertTime);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.operationGroupId = Objects.requireNonNull(operationGroupId);
-        this.operationType = Objects.requireNonNull(operationType);
-        this.progress = Objects.requireNonNull(progress);
-        this.region = Objects.requireNonNull(region);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.startTime = Objects.requireNonNull(startTime);
-        this.status = Objects.requireNonNull(status);
-        this.statusMessage = Objects.requireNonNull(statusMessage);
-        this.targetId = Objects.requireNonNull(targetId);
-        this.targetLink = Objects.requireNonNull(targetLink);
-        this.user = Objects.requireNonNull(user);
-        this.warnings = Objects.requireNonNull(warnings);
-        this.zone = Objects.requireNonNull(zone);
+        this.clientOperationId = clientOperationId;
+        this.description = description;
+        this.endTime = endTime;
+        this.error = error;
+        this.httpErrorMessage = httpErrorMessage;
+        this.httpErrorStatusCode = httpErrorStatusCode;
+        this.insertTime = insertTime;
+        this.kind = kind;
+        this.name = name;
+        this.operationGroupId = operationGroupId;
+        this.operationType = operationType;
+        this.progress = progress;
+        this.region = region;
+        this.selfLink = selfLink;
+        this.startTime = startTime;
+        this.status = status;
+        this.statusMessage = statusMessage;
+        this.targetId = targetId;
+        this.targetLink = targetLink;
+        this.user = user;
+        this.warnings = warnings;
+        this.zone = zone;
     }
 
     /**

@@ -67,15 +67,15 @@ public final class GetKeyResult {
         V2RestrictionsResponse restrictions,
         String uid,
         String updateTime) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.deleteTime = Objects.requireNonNull(deleteTime);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.etag = Objects.requireNonNull(etag);
-        this.keyString = Objects.requireNonNull(keyString);
-        this.name = Objects.requireNonNull(name);
-        this.restrictions = Objects.requireNonNull(restrictions);
-        this.uid = Objects.requireNonNull(uid);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.createTime = createTime;
+        this.deleteTime = deleteTime;
+        this.displayName = displayName;
+        this.etag = etag;
+        this.keyString = keyString;
+        this.name = name;
+        this.restrictions = restrictions;
+        this.uid = uid;
+        this.updateTime = updateTime;
     }
 
     /**

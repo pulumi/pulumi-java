@@ -51,7 +51,7 @@ public final class LongTermRetentionPolicyResponse {
         @Nullable YearlyRetentionScheduleResponse yearlySchedule) {
         this.dailySchedule = dailySchedule;
         this.monthlySchedule = monthlySchedule;
-        this.retentionPolicyType = Objects.requireNonNull(retentionPolicyType);
+        this.retentionPolicyType = retentionPolicyType;
         this.weeklySchedule = weeklySchedule;
         this.yearlySchedule = yearlySchedule;
     }

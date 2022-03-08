@@ -19,7 +19,7 @@ public final class DatasetLateDataRule {
     private DatasetLateDataRule(
         DatasetLateDataRuleConfiguration ruleConfiguration,
         @Nullable String ruleName) {
-        this.ruleConfiguration = Objects.requireNonNull(ruleConfiguration);
+        this.ruleConfiguration = ruleConfiguration;
         this.ruleName = ruleName;
     }
 

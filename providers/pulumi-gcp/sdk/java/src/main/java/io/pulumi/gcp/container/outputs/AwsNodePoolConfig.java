@@ -74,8 +74,8 @@ public final class AwsNodePoolConfig {
         @Nullable AwsNodePoolConfigSshConfig sshConfig,
         @Nullable Map<String,String> tags,
         @Nullable List<AwsNodePoolConfigTaint> taints) {
-        this.configEncryption = Objects.requireNonNull(configEncryption);
-        this.iamInstanceProfile = Objects.requireNonNull(iamInstanceProfile);
+        this.configEncryption = configEncryption;
+        this.iamInstanceProfile = iamInstanceProfile;
         this.instanceType = instanceType;
         this.labels = labels;
         this.rootVolume = rootVolume;

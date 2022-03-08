@@ -33,7 +33,7 @@ public final class BackendProxyContractResponse {
         String url,
         @Nullable String username) {
         this.password = password;
-        this.url = Objects.requireNonNull(url);
+        this.url = url;
         this.username = username;
     }
 

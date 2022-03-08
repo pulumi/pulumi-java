@@ -17,7 +17,7 @@ public final class DiskResponse {
 
     @OutputCustomType.Constructor({"id"})
     private DiskResponse(String id) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
     }
 
     /**

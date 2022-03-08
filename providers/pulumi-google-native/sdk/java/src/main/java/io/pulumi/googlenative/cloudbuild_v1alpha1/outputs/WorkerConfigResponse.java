@@ -37,10 +37,10 @@ public final class WorkerConfigResponse {
         String machineType,
         NetworkResponse network,
         String tag) {
-        this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
-        this.machineType = Objects.requireNonNull(machineType);
-        this.network = Objects.requireNonNull(network);
-        this.tag = Objects.requireNonNull(tag);
+        this.diskSizeGb = diskSizeGb;
+        this.machineType = machineType;
+        this.network = network;
+        this.tag = tag;
     }
 
     /**

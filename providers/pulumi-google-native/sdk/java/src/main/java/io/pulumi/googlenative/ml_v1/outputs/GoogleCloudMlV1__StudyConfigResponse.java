@@ -40,10 +40,10 @@ public final class GoogleCloudMlV1__StudyConfigResponse {
         GoogleCloudMlV1__AutomatedStoppingConfigResponse automatedStoppingConfig,
         List<GoogleCloudMlV1_StudyConfig_MetricSpecResponse> metrics,
         List<GoogleCloudMlV1_StudyConfig_ParameterSpecResponse> parameters) {
-        this.algorithm = Objects.requireNonNull(algorithm);
-        this.automatedStoppingConfig = Objects.requireNonNull(automatedStoppingConfig);
-        this.metrics = Objects.requireNonNull(metrics);
-        this.parameters = Objects.requireNonNull(parameters);
+        this.algorithm = algorithm;
+        this.automatedStoppingConfig = automatedStoppingConfig;
+        this.metrics = metrics;
+        this.parameters = parameters;
     }
 
     /**

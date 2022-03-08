@@ -53,10 +53,10 @@ public final class EndpointConfigurationProductionVariant {
         String modelName,
         @Nullable String variantName) {
         this.acceleratorType = acceleratorType;
-        this.initialInstanceCount = Objects.requireNonNull(initialInstanceCount);
+        this.initialInstanceCount = initialInstanceCount;
         this.initialVariantWeight = initialVariantWeight;
-        this.instanceType = Objects.requireNonNull(instanceType);
-        this.modelName = Objects.requireNonNull(modelName);
+        this.instanceType = instanceType;
+        this.modelName = modelName;
         this.variantName = variantName;
     }
 

@@ -38,10 +38,10 @@ public final class ContainerNetworkInterfaceIpConfigurationResponse {
         @Nullable String name,
         String provisioningState,
         String type) {
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.name = name;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.type = Objects.requireNonNull(type);
+        this.provisioningState = provisioningState;
+        this.type = type;
     }
 
     /**

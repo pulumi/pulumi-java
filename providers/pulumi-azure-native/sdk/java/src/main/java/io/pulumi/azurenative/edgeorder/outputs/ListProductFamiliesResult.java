@@ -29,7 +29,7 @@ public final class ListProductFamiliesResult {
         @Nullable String nextLink,
         List<ProductFamilyResponse> value) {
         this.nextLink = nextLink;
-        this.value = Objects.requireNonNull(value);
+        this.value = value;
     }
 
     /**

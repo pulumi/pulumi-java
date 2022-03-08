@@ -30,7 +30,7 @@ public final class DataSourceS3DataSourceConfiguration {
         @Nullable List<String> inclusionPatterns,
         @Nullable List<String> inclusionPrefixes) {
         this.accessControlListConfiguration = accessControlListConfiguration;
-        this.bucketName = Objects.requireNonNull(bucketName);
+        this.bucketName = bucketName;
         this.documentsMetadataConfiguration = documentsMetadataConfiguration;
         this.exclusionPatterns = exclusionPatterns;
         this.inclusionPatterns = inclusionPatterns;

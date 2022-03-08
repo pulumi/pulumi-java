@@ -37,15 +37,15 @@ public final class GetGroupsGroup {
         String name,
         String parent,
         String updateTime) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.description = Objects.requireNonNull(description);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.groupKeys = Objects.requireNonNull(groupKeys);
-        this.initialGroupConfig = Objects.requireNonNull(initialGroupConfig);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.parent = Objects.requireNonNull(parent);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.createTime = createTime;
+        this.description = description;
+        this.displayName = displayName;
+        this.groupKeys = groupKeys;
+        this.initialGroupConfig = initialGroupConfig;
+        this.labels = labels;
+        this.name = name;
+        this.parent = parent;
+        this.updateTime = updateTime;
     }
 
     public String getCreateTime() {

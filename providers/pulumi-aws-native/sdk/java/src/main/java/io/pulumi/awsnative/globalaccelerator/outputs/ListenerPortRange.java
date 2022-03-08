@@ -16,8 +16,8 @@ public final class ListenerPortRange {
     private ListenerPortRange(
         Integer fromPort,
         Integer toPort) {
-        this.fromPort = Objects.requireNonNull(fromPort);
-        this.toPort = Objects.requireNonNull(toPort);
+        this.fromPort = fromPort;
+        this.toPort = toPort;
     }
 
     public Integer getFromPort() {

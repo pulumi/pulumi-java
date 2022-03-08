@@ -67,13 +67,13 @@ public final class GetFileEventTriggerResult {
         SystemDataResponse systemData,
         String type) {
         this.customContextTag = customContextTag;
-        this.id = Objects.requireNonNull(id);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.sinkInfo = Objects.requireNonNull(sinkInfo);
-        this.sourceInfo = Objects.requireNonNull(sourceInfo);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.id = id;
+        this.kind = kind;
+        this.name = name;
+        this.sinkInfo = sinkInfo;
+        this.sourceInfo = sourceInfo;
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

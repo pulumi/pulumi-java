@@ -16,8 +16,8 @@ public final class UpcomingMaintenanceTimeWindowResponse {
     private UpcomingMaintenanceTimeWindowResponse(
         String earliest,
         String latest) {
-        this.earliest = Objects.requireNonNull(earliest);
-        this.latest = Objects.requireNonNull(latest);
+        this.earliest = earliest;
+        this.latest = latest;
     }
 
     public String getEarliest() {

@@ -17,8 +17,8 @@ public final class ModelVpcConfig {
     private ModelVpcConfig(
         List<String> securityGroupIds,
         List<String> subnets) {
-        this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
-        this.subnets = Objects.requireNonNull(subnets);
+        this.securityGroupIds = securityGroupIds;
+        this.subnets = subnets;
     }
 
     public List<String> getSecurityGroupIds() {

@@ -22,8 +22,8 @@ public final class RRSetRoutingPolicyGeoPolicyResponse {
     private RRSetRoutingPolicyGeoPolicyResponse(
         List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse> items,
         String kind) {
-        this.items = Objects.requireNonNull(items);
-        this.kind = Objects.requireNonNull(kind);
+        this.items = items;
+        this.kind = kind;
     }
 
     /**

@@ -68,15 +68,15 @@ public final class CertificateResponse {
         String sha256Fingerprint,
         String subject,
         List<String> subjectAlternativeDnsNames) {
-        this.issuer = Objects.requireNonNull(issuer);
-        this.notAfterTime = Objects.requireNonNull(notAfterTime);
-        this.notBeforeTime = Objects.requireNonNull(notBeforeTime);
-        this.parsed = Objects.requireNonNull(parsed);
-        this.rawDer = Objects.requireNonNull(rawDer);
-        this.serialNumber = Objects.requireNonNull(serialNumber);
-        this.sha256Fingerprint = Objects.requireNonNull(sha256Fingerprint);
-        this.subject = Objects.requireNonNull(subject);
-        this.subjectAlternativeDnsNames = Objects.requireNonNull(subjectAlternativeDnsNames);
+        this.issuer = issuer;
+        this.notAfterTime = notAfterTime;
+        this.notBeforeTime = notBeforeTime;
+        this.parsed = parsed;
+        this.rawDer = rawDer;
+        this.serialNumber = serialNumber;
+        this.sha256Fingerprint = sha256Fingerprint;
+        this.subject = subject;
+        this.subjectAlternativeDnsNames = subjectAlternativeDnsNames;
     }
 
     /**

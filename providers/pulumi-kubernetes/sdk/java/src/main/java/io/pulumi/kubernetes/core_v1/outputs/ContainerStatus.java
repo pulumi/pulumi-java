@@ -72,12 +72,12 @@ public final class ContainerStatus {
         @Nullable Boolean started,
         @Nullable ContainerState state) {
         this.containerID = containerID;
-        this.image = Objects.requireNonNull(image);
-        this.imageID = Objects.requireNonNull(imageID);
+        this.image = image;
+        this.imageID = imageID;
         this.lastState = lastState;
-        this.name = Objects.requireNonNull(name);
-        this.ready = Objects.requireNonNull(ready);
-        this.restartCount = Objects.requireNonNull(restartCount);
+        this.name = name;
+        this.ready = ready;
+        this.restartCount = restartCount;
         this.started = started;
         this.state = state;
     }

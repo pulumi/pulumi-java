@@ -139,24 +139,24 @@ public final class GetConnectionMonitorResult {
         @Nullable List<ConnectionMonitorTestGroupResponse> testGroups,
         String type) {
         this.autoStart = autoStart;
-        this.connectionMonitorType = Objects.requireNonNull(connectionMonitorType);
+        this.connectionMonitorType = connectionMonitorType;
         this.destination = destination;
         this.endpoints = endpoints;
-        this.etag = Objects.requireNonNull(etag);
-        this.id = Objects.requireNonNull(id);
+        this.etag = etag;
+        this.id = id;
         this.location = location;
         this.monitoringIntervalInSeconds = monitoringIntervalInSeconds;
-        this.monitoringStatus = Objects.requireNonNull(monitoringStatus);
-        this.name = Objects.requireNonNull(name);
+        this.monitoringStatus = monitoringStatus;
+        this.name = name;
         this.notes = notes;
         this.outputs = outputs;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.source = source;
-        this.startTime = Objects.requireNonNull(startTime);
+        this.startTime = startTime;
         this.tags = tags;
         this.testConfigurations = testConfigurations;
         this.testGroups = testGroups;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

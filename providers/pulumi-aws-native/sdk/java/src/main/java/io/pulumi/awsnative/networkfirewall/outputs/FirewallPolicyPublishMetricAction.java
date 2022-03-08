@@ -14,7 +14,7 @@ public final class FirewallPolicyPublishMetricAction {
 
     @OutputCustomType.Constructor({"dimensions"})
     private FirewallPolicyPublishMetricAction(List<FirewallPolicyDimension> dimensions) {
-        this.dimensions = Objects.requireNonNull(dimensions);
+        this.dimensions = dimensions;
     }
 
     public List<FirewallPolicyDimension> getDimensions() {

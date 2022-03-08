@@ -40,10 +40,10 @@ public final class ManagementPolicyRuleResponse {
         @Nullable Boolean enabled,
         String name,
         String type) {
-        this.definition = Objects.requireNonNull(definition);
+        this.definition = definition;
         this.enabled = enabled;
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.name = name;
+        this.type = type;
     }
 
     /**

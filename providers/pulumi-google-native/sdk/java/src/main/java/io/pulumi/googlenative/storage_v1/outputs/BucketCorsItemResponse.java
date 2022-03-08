@@ -38,10 +38,10 @@ public final class BucketCorsItemResponse {
         List<String> method,
         List<String> origin,
         List<String> responseHeader) {
-        this.maxAgeSeconds = Objects.requireNonNull(maxAgeSeconds);
-        this.method = Objects.requireNonNull(method);
-        this.origin = Objects.requireNonNull(origin);
-        this.responseHeader = Objects.requireNonNull(responseHeader);
+        this.maxAgeSeconds = maxAgeSeconds;
+        this.method = method;
+        this.origin = origin;
+        this.responseHeader = responseHeader;
     }
 
     /**

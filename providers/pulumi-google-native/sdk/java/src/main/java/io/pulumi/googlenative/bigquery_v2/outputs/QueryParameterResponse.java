@@ -32,9 +32,9 @@ public final class QueryParameterResponse {
         String name,
         QueryParameterTypeResponse parameterType,
         QueryParameterValueResponse parameterValue) {
-        this.name = Objects.requireNonNull(name);
-        this.parameterType = Objects.requireNonNull(parameterType);
-        this.parameterValue = Objects.requireNonNull(parameterValue);
+        this.name = name;
+        this.parameterType = parameterType;
+        this.parameterValue = parameterValue;
     }
 
     /**

@@ -44,11 +44,11 @@ public final class BackendServiceIAPResponse {
         BackendServiceIAPOAuth2ClientInfoResponse oauth2ClientInfo,
         String oauth2ClientSecret,
         String oauth2ClientSecretSha256) {
-        this.enabled = Objects.requireNonNull(enabled);
-        this.oauth2ClientId = Objects.requireNonNull(oauth2ClientId);
-        this.oauth2ClientInfo = Objects.requireNonNull(oauth2ClientInfo);
-        this.oauth2ClientSecret = Objects.requireNonNull(oauth2ClientSecret);
-        this.oauth2ClientSecretSha256 = Objects.requireNonNull(oauth2ClientSecretSha256);
+        this.enabled = enabled;
+        this.oauth2ClientId = oauth2ClientId;
+        this.oauth2ClientInfo = oauth2ClientInfo;
+        this.oauth2ClientSecret = oauth2ClientSecret;
+        this.oauth2ClientSecretSha256 = oauth2ClientSecretSha256;
     }
 
     /**

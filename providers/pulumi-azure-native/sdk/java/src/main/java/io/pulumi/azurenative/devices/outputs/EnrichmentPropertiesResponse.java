@@ -31,9 +31,9 @@ public final class EnrichmentPropertiesResponse {
         List<String> endpointNames,
         String key,
         String value) {
-        this.endpointNames = Objects.requireNonNull(endpointNames);
-        this.key = Objects.requireNonNull(key);
-        this.value = Objects.requireNonNull(value);
+        this.endpointNames = endpointNames;
+        this.key = key;
+        this.value = value;
     }
 
     /**

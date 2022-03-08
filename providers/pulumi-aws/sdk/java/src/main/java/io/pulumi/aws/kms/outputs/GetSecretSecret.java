@@ -25,8 +25,8 @@ public final class GetSecretSecret {
         String payload) {
         this.context = context;
         this.grantTokens = grantTokens;
-        this.name = Objects.requireNonNull(name);
-        this.payload = Objects.requireNonNull(payload);
+        this.name = name;
+        this.payload = payload;
     }
 
     public Map<String,String> getContext() {

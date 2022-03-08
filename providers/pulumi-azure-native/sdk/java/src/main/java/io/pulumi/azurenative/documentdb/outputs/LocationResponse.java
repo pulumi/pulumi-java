@@ -52,12 +52,12 @@ public final class LocationResponse {
         @Nullable Boolean isZoneRedundant,
         @Nullable String locationName,
         String provisioningState) {
-        this.documentEndpoint = Objects.requireNonNull(documentEndpoint);
+        this.documentEndpoint = documentEndpoint;
         this.failoverPriority = failoverPriority;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.isZoneRedundant = isZoneRedundant;
         this.locationName = locationName;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
     }
 
     /**

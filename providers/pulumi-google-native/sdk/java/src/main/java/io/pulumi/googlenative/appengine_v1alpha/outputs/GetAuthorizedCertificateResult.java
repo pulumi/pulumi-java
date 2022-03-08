@@ -64,14 +64,14 @@ public final class GetAuthorizedCertificateResult {
         ManagedCertificateResponse managedCertificate,
         String name,
         List<String> visibleDomainMappings) {
-        this.certificateRawData = Objects.requireNonNull(certificateRawData);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.domainMappingsCount = Objects.requireNonNull(domainMappingsCount);
-        this.domainNames = Objects.requireNonNull(domainNames);
-        this.expireTime = Objects.requireNonNull(expireTime);
-        this.managedCertificate = Objects.requireNonNull(managedCertificate);
-        this.name = Objects.requireNonNull(name);
-        this.visibleDomainMappings = Objects.requireNonNull(visibleDomainMappings);
+        this.certificateRawData = certificateRawData;
+        this.displayName = displayName;
+        this.domainMappingsCount = domainMappingsCount;
+        this.domainNames = domainNames;
+        this.expireTime = expireTime;
+        this.managedCertificate = managedCertificate;
+        this.name = name;
+        this.visibleDomainMappings = visibleDomainMappings;
     }
 
     /**

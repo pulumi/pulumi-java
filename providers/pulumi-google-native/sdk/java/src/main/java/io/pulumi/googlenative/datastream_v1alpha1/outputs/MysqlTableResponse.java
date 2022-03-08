@@ -26,8 +26,8 @@ public final class MysqlTableResponse {
     private MysqlTableResponse(
         List<MysqlColumnResponse> mysqlColumns,
         String tableName) {
-        this.mysqlColumns = Objects.requireNonNull(mysqlColumns);
-        this.tableName = Objects.requireNonNull(tableName);
+        this.mysqlColumns = mysqlColumns;
+        this.tableName = tableName;
     }
 
     /**

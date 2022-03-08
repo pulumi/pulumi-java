@@ -26,8 +26,8 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardRespons
     private GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardResponse(
         String imageDisplayOptions,
         List<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse> items) {
-        this.imageDisplayOptions = Objects.requireNonNull(imageDisplayOptions);
-        this.items = Objects.requireNonNull(items);
+        this.imageDisplayOptions = imageDisplayOptions;
+        this.items = items;
     }
 
     /**

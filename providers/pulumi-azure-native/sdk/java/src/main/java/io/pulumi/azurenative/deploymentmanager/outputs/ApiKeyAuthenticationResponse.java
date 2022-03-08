@@ -37,10 +37,10 @@ public final class ApiKeyAuthenticationResponse {
         String name,
         String type,
         String value) {
-        this.in = Objects.requireNonNull(in);
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
-        this.value = Objects.requireNonNull(value);
+        this.in = in;
+        this.name = name;
+        this.type = type;
+        this.value = value;
     }
 
     /**

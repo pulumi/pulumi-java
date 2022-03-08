@@ -25,8 +25,8 @@ public final class ResourceManifestResponse {
     private ResourceManifestResponse(
         Boolean clusterScoped,
         String manifest) {
-        this.clusterScoped = Objects.requireNonNull(clusterScoped);
-        this.manifest = Objects.requireNonNull(manifest);
+        this.clusterScoped = clusterScoped;
+        this.manifest = manifest;
     }
 
     /**

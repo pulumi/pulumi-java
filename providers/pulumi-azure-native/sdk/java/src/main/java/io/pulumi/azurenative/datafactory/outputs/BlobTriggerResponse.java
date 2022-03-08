@@ -70,12 +70,12 @@ public final class BlobTriggerResponse {
         String type) {
         this.annotations = annotations;
         this.description = description;
-        this.folderPath = Objects.requireNonNull(folderPath);
-        this.linkedService = Objects.requireNonNull(linkedService);
-        this.maxConcurrency = Objects.requireNonNull(maxConcurrency);
+        this.folderPath = folderPath;
+        this.linkedService = linkedService;
+        this.maxConcurrency = maxConcurrency;
         this.pipelines = pipelines;
-        this.runtimeState = Objects.requireNonNull(runtimeState);
-        this.type = Objects.requireNonNull(type);
+        this.runtimeState = runtimeState;
+        this.type = type;
     }
 
     /**

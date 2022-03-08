@@ -79,16 +79,16 @@ public final class GetActivityLogAlertResult {
         List<String> scopes,
         @Nullable Map<String,String> tags,
         String type) {
-        this.actions = Objects.requireNonNull(actions);
-        this.condition = Objects.requireNonNull(condition);
+        this.actions = actions;
+        this.condition = condition;
         this.description = description;
         this.enabled = enabled;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
-        this.scopes = Objects.requireNonNull(scopes);
+        this.name = name;
+        this.scopes = scopes;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

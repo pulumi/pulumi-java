@@ -68,15 +68,15 @@ public final class OracleColumnResponse {
         Integer precision,
         Boolean primaryKey,
         Integer scale) {
-        this.column = Objects.requireNonNull(column);
-        this.dataType = Objects.requireNonNull(dataType);
-        this.encoding = Objects.requireNonNull(encoding);
-        this.length = Objects.requireNonNull(length);
-        this.nullable = Objects.requireNonNull(nullable);
-        this.ordinalPosition = Objects.requireNonNull(ordinalPosition);
-        this.precision = Objects.requireNonNull(precision);
-        this.primaryKey = Objects.requireNonNull(primaryKey);
-        this.scale = Objects.requireNonNull(scale);
+        this.column = column;
+        this.dataType = dataType;
+        this.encoding = encoding;
+        this.length = length;
+        this.nullable = nullable;
+        this.ordinalPosition = ordinalPosition;
+        this.precision = precision;
+        this.primaryKey = primaryKey;
+        this.scale = scale;
     }
 
     /**

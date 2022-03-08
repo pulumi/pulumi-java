@@ -32,9 +32,9 @@ public final class ResourcePolicySnapshotSchedulePolicyResponse {
         ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse retentionPolicy,
         ResourcePolicySnapshotSchedulePolicyScheduleResponse schedule,
         ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse snapshotProperties) {
-        this.retentionPolicy = Objects.requireNonNull(retentionPolicy);
-        this.schedule = Objects.requireNonNull(schedule);
-        this.snapshotProperties = Objects.requireNonNull(snapshotProperties);
+        this.retentionPolicy = retentionPolicy;
+        this.schedule = schedule;
+        this.snapshotProperties = snapshotProperties;
     }
 
     /**

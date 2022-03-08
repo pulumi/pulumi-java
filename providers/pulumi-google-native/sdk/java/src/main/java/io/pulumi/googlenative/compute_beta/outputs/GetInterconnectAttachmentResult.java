@@ -228,41 +228,41 @@ public final class GetInterconnectAttachmentResult {
         String state,
         String type,
         Integer vlanTag8021q) {
-        this.adminEnabled = Objects.requireNonNull(adminEnabled);
-        this.bandwidth = Objects.requireNonNull(bandwidth);
-        this.candidateIpv6Subnets = Objects.requireNonNull(candidateIpv6Subnets);
-        this.candidateSubnets = Objects.requireNonNull(candidateSubnets);
-        this.cloudRouterIpAddress = Objects.requireNonNull(cloudRouterIpAddress);
-        this.cloudRouterIpv6Address = Objects.requireNonNull(cloudRouterIpv6Address);
-        this.cloudRouterIpv6InterfaceId = Objects.requireNonNull(cloudRouterIpv6InterfaceId);
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.customerRouterIpAddress = Objects.requireNonNull(customerRouterIpAddress);
-        this.customerRouterIpv6Address = Objects.requireNonNull(customerRouterIpv6Address);
-        this.customerRouterIpv6InterfaceId = Objects.requireNonNull(customerRouterIpv6InterfaceId);
-        this.dataplaneVersion = Objects.requireNonNull(dataplaneVersion);
-        this.description = Objects.requireNonNull(description);
-        this.edgeAvailabilityDomain = Objects.requireNonNull(edgeAvailabilityDomain);
-        this.encryption = Objects.requireNonNull(encryption);
-        this.interconnect = Objects.requireNonNull(interconnect);
-        this.ipsecInternalAddresses = Objects.requireNonNull(ipsecInternalAddresses);
-        this.kind = Objects.requireNonNull(kind);
-        this.labelFingerprint = Objects.requireNonNull(labelFingerprint);
-        this.labels = Objects.requireNonNull(labels);
-        this.mtu = Objects.requireNonNull(mtu);
-        this.name = Objects.requireNonNull(name);
-        this.operationalStatus = Objects.requireNonNull(operationalStatus);
-        this.pairingKey = Objects.requireNonNull(pairingKey);
-        this.partnerAsn = Objects.requireNonNull(partnerAsn);
-        this.partnerMetadata = Objects.requireNonNull(partnerMetadata);
-        this.privateInterconnectInfo = Objects.requireNonNull(privateInterconnectInfo);
-        this.region = Objects.requireNonNull(region);
-        this.router = Objects.requireNonNull(router);
-        this.satisfiesPzs = Objects.requireNonNull(satisfiesPzs);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.stackType = Objects.requireNonNull(stackType);
-        this.state = Objects.requireNonNull(state);
-        this.type = Objects.requireNonNull(type);
-        this.vlanTag8021q = Objects.requireNonNull(vlanTag8021q);
+        this.adminEnabled = adminEnabled;
+        this.bandwidth = bandwidth;
+        this.candidateIpv6Subnets = candidateIpv6Subnets;
+        this.candidateSubnets = candidateSubnets;
+        this.cloudRouterIpAddress = cloudRouterIpAddress;
+        this.cloudRouterIpv6Address = cloudRouterIpv6Address;
+        this.cloudRouterIpv6InterfaceId = cloudRouterIpv6InterfaceId;
+        this.creationTimestamp = creationTimestamp;
+        this.customerRouterIpAddress = customerRouterIpAddress;
+        this.customerRouterIpv6Address = customerRouterIpv6Address;
+        this.customerRouterIpv6InterfaceId = customerRouterIpv6InterfaceId;
+        this.dataplaneVersion = dataplaneVersion;
+        this.description = description;
+        this.edgeAvailabilityDomain = edgeAvailabilityDomain;
+        this.encryption = encryption;
+        this.interconnect = interconnect;
+        this.ipsecInternalAddresses = ipsecInternalAddresses;
+        this.kind = kind;
+        this.labelFingerprint = labelFingerprint;
+        this.labels = labels;
+        this.mtu = mtu;
+        this.name = name;
+        this.operationalStatus = operationalStatus;
+        this.pairingKey = pairingKey;
+        this.partnerAsn = partnerAsn;
+        this.partnerMetadata = partnerMetadata;
+        this.privateInterconnectInfo = privateInterconnectInfo;
+        this.region = region;
+        this.router = router;
+        this.satisfiesPzs = satisfiesPzs;
+        this.selfLink = selfLink;
+        this.stackType = stackType;
+        this.state = state;
+        this.type = type;
+        this.vlanTag8021q = vlanTag8021q;
     }
 
     /**

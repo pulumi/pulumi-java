@@ -37,10 +37,10 @@ public final class AwsS3DataResponse {
         String bucketName,
         String path,
         String roleArn) {
-        this.awsAccessKey = Objects.requireNonNull(awsAccessKey);
-        this.bucketName = Objects.requireNonNull(bucketName);
-        this.path = Objects.requireNonNull(path);
-        this.roleArn = Objects.requireNonNull(roleArn);
+        this.awsAccessKey = awsAccessKey;
+        this.bucketName = bucketName;
+        this.path = path;
+        this.roleArn = roleArn;
     }
 
     /**

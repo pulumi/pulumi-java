@@ -24,8 +24,8 @@ public final class InsightFiltersThreatIntelIndicatorCategory {
     private InsightFiltersThreatIntelIndicatorCategory(
         String comparison,
         String value) {
-        this.comparison = Objects.requireNonNull(comparison);
-        this.value = Objects.requireNonNull(value);
+        this.comparison = comparison;
+        this.value = value;
     }
 
     /**

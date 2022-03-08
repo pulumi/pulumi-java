@@ -31,7 +31,7 @@ public final class DeploymentTarget {
     private DeploymentTarget(
         DeploymentTargetConfig config,
         @Nullable List<DeploymentTargetImport> imports) {
-        this.config = Objects.requireNonNull(config);
+        this.config = config;
         this.imports = imports;
     }
 

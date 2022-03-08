@@ -19,7 +19,7 @@ public final class FulfillmentFeature {
 
     @OutputCustomType.Constructor({"type"})
     private FulfillmentFeature(String type) {
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

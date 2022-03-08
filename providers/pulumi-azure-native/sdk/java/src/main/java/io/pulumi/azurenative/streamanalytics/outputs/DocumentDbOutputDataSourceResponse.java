@@ -63,7 +63,7 @@ public final class DocumentDbOutputDataSourceResponse {
         this.database = database;
         this.documentId = documentId;
         this.partitionKey = partitionKey;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

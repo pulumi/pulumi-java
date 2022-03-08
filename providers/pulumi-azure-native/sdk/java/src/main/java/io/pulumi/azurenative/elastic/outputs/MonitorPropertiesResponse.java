@@ -43,8 +43,8 @@ public final class MonitorPropertiesResponse {
         @Nullable String monitoringStatus,
         @Nullable String provisioningState) {
         this.elasticProperties = elasticProperties;
-        this.liftrResourceCategory = Objects.requireNonNull(liftrResourceCategory);
-        this.liftrResourcePreference = Objects.requireNonNull(liftrResourcePreference);
+        this.liftrResourceCategory = liftrResourceCategory;
+        this.liftrResourcePreference = liftrResourcePreference;
         this.monitoringStatus = monitoringStatus;
         this.provisioningState = provisioningState;
     }

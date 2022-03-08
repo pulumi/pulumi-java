@@ -17,7 +17,7 @@ public final class ClusterLoggingInfo {
 
     @OutputCustomType.Constructor({"brokerLogs"})
     private ClusterLoggingInfo(ClusterLoggingInfoBrokerLogs brokerLogs) {
-        this.brokerLogs = Objects.requireNonNull(brokerLogs);
+        this.brokerLogs = brokerLogs;
     }
 
     /**

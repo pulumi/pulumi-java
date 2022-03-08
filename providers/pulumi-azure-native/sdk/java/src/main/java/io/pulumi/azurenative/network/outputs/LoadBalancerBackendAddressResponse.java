@@ -54,7 +54,7 @@ public final class LoadBalancerBackendAddressResponse {
         this.ipAddress = ipAddress;
         this.loadBalancerFrontendIPConfiguration = loadBalancerFrontendIPConfiguration;
         this.name = name;
-        this.networkInterfaceIPConfiguration = Objects.requireNonNull(networkInterfaceIPConfiguration);
+        this.networkInterfaceIPConfiguration = networkInterfaceIPConfiguration;
         this.subnet = subnet;
         this.virtualNetwork = virtualNetwork;
     }

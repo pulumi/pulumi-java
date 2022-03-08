@@ -13,7 +13,7 @@ public final class FlowSAPODataSourceProperties {
 
     @OutputCustomType.Constructor({"objectPath"})
     private FlowSAPODataSourceProperties(String objectPath) {
-        this.objectPath = Objects.requireNonNull(objectPath);
+        this.objectPath = objectPath;
     }
 
     public String getObjectPath() {

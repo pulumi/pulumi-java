@@ -25,8 +25,8 @@ public final class PhraseResponse {
     private PhraseResponse(
         Double boost,
         String value) {
-        this.boost = Objects.requireNonNull(boost);
-        this.value = Objects.requireNonNull(value);
+        this.boost = boost;
+        this.value = value;
     }
 
     /**

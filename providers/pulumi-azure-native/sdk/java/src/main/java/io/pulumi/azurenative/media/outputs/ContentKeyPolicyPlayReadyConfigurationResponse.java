@@ -35,8 +35,8 @@ public final class ContentKeyPolicyPlayReadyConfigurationResponse {
         List<ContentKeyPolicyPlayReadyLicenseResponse> licenses,
         String odataType,
         @Nullable String responseCustomData) {
-        this.licenses = Objects.requireNonNull(licenses);
-        this.odataType = Objects.requireNonNull(odataType);
+        this.licenses = licenses;
+        this.odataType = odataType;
         this.responseCustomData = responseCustomData;
     }
 

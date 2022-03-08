@@ -56,13 +56,13 @@ public final class GetStaticSiteUserProvidedFunctionAppForStaticSiteResult {
         @Nullable String kind,
         String name,
         String type) {
-        this.createdOn = Objects.requireNonNull(createdOn);
+        this.createdOn = createdOn;
         this.functionAppRegion = functionAppRegion;
         this.functionAppResourceId = functionAppResourceId;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.kind = kind;
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.name = name;
+        this.type = type;
     }
 
     /**
