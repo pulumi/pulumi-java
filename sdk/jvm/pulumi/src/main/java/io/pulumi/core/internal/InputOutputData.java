@@ -149,7 +149,7 @@ public final class InputOutputData<T> implements Copyable<InputOutputData<T>> {
 
     public <U> InputOutputData<U> compose(Function<T, InputOutputData<U>> function) {
         if (known) {
-            return combine(function.apply(value), ($, x) -> x);
+            return combine(function.apply(value), (__, x) -> x);
         } else {
             return ofNullable(resources, null, false, secret);
         }
@@ -223,7 +223,7 @@ public final class InputOutputData<T> implements Copyable<InputOutputData<T>> {
 
     public <V> CompletableFuture<InputOutputData<V>> traverseFuture(Function<T, CompletableFuture<V>> fn) {
         if (known) {
-            return fn.apply(value).thenApply(x -> apply($ -> x));
+            return fn.apply(value).thenApply(x -> apply(__ -> x));
         } else {
             return CompletableFuture.completedFuture(ofNullable(resources, null, false, secret));
         }
