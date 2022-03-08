@@ -71,15 +71,15 @@ public final class NetworkAclEgress {
         String protocol,
         Integer ruleNo,
         Integer toPort) {
-        this.action = Objects.requireNonNull(action);
+        this.action = action;
         this.cidrBlock = cidrBlock;
-        this.fromPort = Objects.requireNonNull(fromPort);
+        this.fromPort = fromPort;
         this.icmpCode = icmpCode;
         this.icmpType = icmpType;
         this.ipv6CidrBlock = ipv6CidrBlock;
-        this.protocol = Objects.requireNonNull(protocol);
-        this.ruleNo = Objects.requireNonNull(ruleNo);
-        this.toPort = Objects.requireNonNull(toPort);
+        this.protocol = protocol;
+        this.ruleNo = ruleNo;
+        this.toPort = toPort;
     }
 
     /**

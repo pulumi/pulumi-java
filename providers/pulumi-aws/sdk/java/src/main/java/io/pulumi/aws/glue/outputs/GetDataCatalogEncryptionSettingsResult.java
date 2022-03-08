@@ -28,9 +28,9 @@ public final class GetDataCatalogEncryptionSettingsResult {
         String catalogId,
         List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSetting> dataCatalogEncryptionSettings,
         String id) {
-        this.catalogId = Objects.requireNonNull(catalogId);
-        this.dataCatalogEncryptionSettings = Objects.requireNonNull(dataCatalogEncryptionSettings);
-        this.id = Objects.requireNonNull(id);
+        this.catalogId = catalogId;
+        this.dataCatalogEncryptionSettings = dataCatalogEncryptionSettings;
+        this.id = id;
     }
 
     public String getCatalogId() {

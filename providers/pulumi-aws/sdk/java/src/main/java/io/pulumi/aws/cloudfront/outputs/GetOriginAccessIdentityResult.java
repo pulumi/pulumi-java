@@ -57,13 +57,13 @@ public final class GetOriginAccessIdentityResult {
         String iamArn,
         String id,
         String s3CanonicalUserId) {
-        this.callerReference = Objects.requireNonNull(callerReference);
-        this.cloudfrontAccessIdentityPath = Objects.requireNonNull(cloudfrontAccessIdentityPath);
-        this.comment = Objects.requireNonNull(comment);
-        this.etag = Objects.requireNonNull(etag);
-        this.iamArn = Objects.requireNonNull(iamArn);
-        this.id = Objects.requireNonNull(id);
-        this.s3CanonicalUserId = Objects.requireNonNull(s3CanonicalUserId);
+        this.callerReference = callerReference;
+        this.cloudfrontAccessIdentityPath = cloudfrontAccessIdentityPath;
+        this.comment = comment;
+        this.etag = etag;
+        this.iamArn = iamArn;
+        this.id = id;
+        this.s3CanonicalUserId = s3CanonicalUserId;
     }
 
     /**

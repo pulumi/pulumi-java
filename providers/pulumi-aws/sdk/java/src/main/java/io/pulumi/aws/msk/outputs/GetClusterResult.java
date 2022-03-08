@@ -76,17 +76,17 @@ public final class GetClusterResult {
         Integer numberOfBrokerNodes,
         Map<String,String> tags,
         String zookeeperConnectString) {
-        this.arn = Objects.requireNonNull(arn);
-        this.bootstrapBrokers = Objects.requireNonNull(bootstrapBrokers);
-        this.bootstrapBrokersSaslIam = Objects.requireNonNull(bootstrapBrokersSaslIam);
-        this.bootstrapBrokersSaslScram = Objects.requireNonNull(bootstrapBrokersSaslScram);
-        this.bootstrapBrokersTls = Objects.requireNonNull(bootstrapBrokersTls);
-        this.clusterName = Objects.requireNonNull(clusterName);
-        this.id = Objects.requireNonNull(id);
-        this.kafkaVersion = Objects.requireNonNull(kafkaVersion);
-        this.numberOfBrokerNodes = Objects.requireNonNull(numberOfBrokerNodes);
-        this.tags = Objects.requireNonNull(tags);
-        this.zookeeperConnectString = Objects.requireNonNull(zookeeperConnectString);
+        this.arn = arn;
+        this.bootstrapBrokers = bootstrapBrokers;
+        this.bootstrapBrokersSaslIam = bootstrapBrokersSaslIam;
+        this.bootstrapBrokersSaslScram = bootstrapBrokersSaslScram;
+        this.bootstrapBrokersTls = bootstrapBrokersTls;
+        this.clusterName = clusterName;
+        this.id = id;
+        this.kafkaVersion = kafkaVersion;
+        this.numberOfBrokerNodes = numberOfBrokerNodes;
+        this.tags = tags;
+        this.zookeeperConnectString = zookeeperConnectString;
     }
 
     /**

@@ -24,8 +24,8 @@ public final class ReplicationConfigurationReplicationConfigurationRuleRepositor
     private ReplicationConfigurationReplicationConfigurationRuleRepositoryFilter(
         String filter,
         String filterType) {
-        this.filter = Objects.requireNonNull(filter);
-        this.filterType = Objects.requireNonNull(filterType);
+        this.filter = filter;
+        this.filterType = filterType;
     }
 
     /**

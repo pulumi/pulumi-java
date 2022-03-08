@@ -110,18 +110,18 @@ public final class ScalingPlanScalingInstruction {
         List<ScalingPlanScalingInstructionTargetTrackingConfiguration> targetTrackingConfigurations) {
         this.customizedLoadMetricSpecification = customizedLoadMetricSpecification;
         this.disableDynamicScaling = disableDynamicScaling;
-        this.maxCapacity = Objects.requireNonNull(maxCapacity);
-        this.minCapacity = Objects.requireNonNull(minCapacity);
+        this.maxCapacity = maxCapacity;
+        this.minCapacity = minCapacity;
         this.predefinedLoadMetricSpecification = predefinedLoadMetricSpecification;
         this.predictiveScalingMaxCapacityBehavior = predictiveScalingMaxCapacityBehavior;
         this.predictiveScalingMaxCapacityBuffer = predictiveScalingMaxCapacityBuffer;
         this.predictiveScalingMode = predictiveScalingMode;
-        this.resourceId = Objects.requireNonNull(resourceId);
-        this.scalableDimension = Objects.requireNonNull(scalableDimension);
+        this.resourceId = resourceId;
+        this.scalableDimension = scalableDimension;
         this.scalingPolicyUpdateBehavior = scalingPolicyUpdateBehavior;
         this.scheduledActionBufferTime = scheduledActionBufferTime;
-        this.serviceNamespace = Objects.requireNonNull(serviceNamespace);
-        this.targetTrackingConfigurations = Objects.requireNonNull(targetTrackingConfigurations);
+        this.serviceNamespace = serviceNamespace;
+        this.targetTrackingConfigurations = targetTrackingConfigurations;
     }
 
     /**

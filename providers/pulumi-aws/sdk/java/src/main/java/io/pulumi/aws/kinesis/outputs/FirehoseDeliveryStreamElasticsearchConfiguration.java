@@ -101,11 +101,11 @@ public final class FirehoseDeliveryStreamElasticsearchConfiguration {
         this.cloudwatchLoggingOptions = cloudwatchLoggingOptions;
         this.clusterEndpoint = clusterEndpoint;
         this.domainArn = domainArn;
-        this.indexName = Objects.requireNonNull(indexName);
+        this.indexName = indexName;
         this.indexRotationPeriod = indexRotationPeriod;
         this.processingConfiguration = processingConfiguration;
         this.retryDuration = retryDuration;
-        this.roleArn = Objects.requireNonNull(roleArn);
+        this.roleArn = roleArn;
         this.s3BackupMode = s3BackupMode;
         this.typeName = typeName;
         this.vpcConfig = vpcConfig;

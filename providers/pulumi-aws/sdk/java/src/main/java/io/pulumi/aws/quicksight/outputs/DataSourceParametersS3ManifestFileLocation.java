@@ -24,8 +24,8 @@ public final class DataSourceParametersS3ManifestFileLocation {
     private DataSourceParametersS3ManifestFileLocation(
         String bucket,
         String key) {
-        this.bucket = Objects.requireNonNull(bucket);
-        this.key = Objects.requireNonNull(key);
+        this.bucket = bucket;
+        this.key = key;
     }
 
     /**

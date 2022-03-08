@@ -44,12 +44,12 @@ public final class GetSecurityGroupsResult {
         List<String> ids,
         Map<String,String> tags,
         List<String> vpcIds) {
-        this.arns = Objects.requireNonNull(arns);
+        this.arns = arns;
         this.filters = filters;
-        this.id = Objects.requireNonNull(id);
-        this.ids = Objects.requireNonNull(ids);
-        this.tags = Objects.requireNonNull(tags);
-        this.vpcIds = Objects.requireNonNull(vpcIds);
+        this.id = id;
+        this.ids = ids;
+        this.tags = tags;
+        this.vpcIds = vpcIds;
     }
 
     /**

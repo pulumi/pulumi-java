@@ -25,8 +25,8 @@ public final class GetSchedulingPolicyFairSharePolicyShareDistribution {
     private GetSchedulingPolicyFairSharePolicyShareDistribution(
         String shareIdentifier,
         Double weightFactor) {
-        this.shareIdentifier = Objects.requireNonNull(shareIdentifier);
-        this.weightFactor = Objects.requireNonNull(weightFactor);
+        this.shareIdentifier = shareIdentifier;
+        this.weightFactor = weightFactor;
     }
 
     /**

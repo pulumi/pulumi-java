@@ -17,7 +17,7 @@ public final class VirtualServiceSpecProviderVirtualNode {
 
     @OutputCustomType.Constructor({"virtualNodeName"})
     private VirtualServiceSpecProviderVirtualNode(String virtualNodeName) {
-        this.virtualNodeName = Objects.requireNonNull(virtualNodeName);
+        this.virtualNodeName = virtualNodeName;
     }
 
     /**

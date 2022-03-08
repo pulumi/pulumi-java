@@ -17,7 +17,7 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementNotSta
 
     @OutputCustomType.Constructor({"name"})
     private WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementAndStatementStatementXssMatchStatementFieldToMatchSingleQueryArgument(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

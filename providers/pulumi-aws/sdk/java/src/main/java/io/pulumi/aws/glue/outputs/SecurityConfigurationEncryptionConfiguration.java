@@ -24,9 +24,9 @@ public final class SecurityConfigurationEncryptionConfiguration {
         SecurityConfigurationEncryptionConfigurationCloudwatchEncryption cloudwatchEncryption,
         SecurityConfigurationEncryptionConfigurationJobBookmarksEncryption jobBookmarksEncryption,
         SecurityConfigurationEncryptionConfigurationS3Encryption s3Encryption) {
-        this.cloudwatchEncryption = Objects.requireNonNull(cloudwatchEncryption);
-        this.jobBookmarksEncryption = Objects.requireNonNull(jobBookmarksEncryption);
-        this.s3Encryption = Objects.requireNonNull(s3Encryption);
+        this.cloudwatchEncryption = cloudwatchEncryption;
+        this.jobBookmarksEncryption = jobBookmarksEncryption;
+        this.s3Encryption = s3Encryption;
     }
 
     public SecurityConfigurationEncryptionConfigurationCloudwatchEncryption getCloudwatchEncryption() {

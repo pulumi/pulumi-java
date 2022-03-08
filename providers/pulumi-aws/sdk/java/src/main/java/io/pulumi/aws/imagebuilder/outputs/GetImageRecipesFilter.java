@@ -25,8 +25,8 @@ public final class GetImageRecipesFilter {
     private GetImageRecipesFilter(
         String name,
         List<String> values) {
-        this.name = Objects.requireNonNull(name);
-        this.values = Objects.requireNonNull(values);
+        this.name = name;
+        this.values = values;
     }
 
     /**

@@ -24,8 +24,8 @@ public final class GetProductFilter {
     private GetProductFilter(
         String field,
         String value) {
-        this.field = Objects.requireNonNull(field);
-        this.value = Objects.requireNonNull(value);
+        this.field = field;
+        this.value = value;
     }
 
     /**

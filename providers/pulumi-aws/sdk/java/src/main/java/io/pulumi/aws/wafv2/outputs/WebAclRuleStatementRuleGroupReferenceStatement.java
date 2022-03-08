@@ -27,7 +27,7 @@ public final class WebAclRuleStatementRuleGroupReferenceStatement {
     private WebAclRuleStatementRuleGroupReferenceStatement(
         String arn,
         @Nullable List<WebAclRuleStatementRuleGroupReferenceStatementExcludedRule> excludedRules) {
-        this.arn = Objects.requireNonNull(arn);
+        this.arn = arn;
         this.excludedRules = excludedRules;
     }
 

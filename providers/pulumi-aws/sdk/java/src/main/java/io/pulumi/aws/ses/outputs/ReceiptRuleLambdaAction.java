@@ -39,9 +39,9 @@ public final class ReceiptRuleLambdaAction {
         @Nullable String invocationType,
         Integer position,
         @Nullable String topicArn) {
-        this.functionArn = Objects.requireNonNull(functionArn);
+        this.functionArn = functionArn;
         this.invocationType = invocationType;
-        this.position = Objects.requireNonNull(position);
+        this.position = position;
         this.topicArn = topicArn;
     }
 

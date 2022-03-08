@@ -21,7 +21,7 @@ public final class WebAclLoggingConfigurationRedactedFieldSingleQueryArgument {
 
     @OutputCustomType.Constructor({"name"})
     private WebAclLoggingConfigurationRedactedFieldSingleQueryArgument(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

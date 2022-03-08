@@ -36,8 +36,8 @@ public final class GetVpnAttachmentResult {
         @Nullable String transitGatewayId,
         @Nullable String vpnConnectionId) {
         this.filters = filters;
-        this.id = Objects.requireNonNull(id);
-        this.tags = Objects.requireNonNull(tags);
+        this.id = id;
+        this.tags = tags;
         this.transitGatewayId = transitGatewayId;
         this.vpnConnectionId = vpnConnectionId;
     }

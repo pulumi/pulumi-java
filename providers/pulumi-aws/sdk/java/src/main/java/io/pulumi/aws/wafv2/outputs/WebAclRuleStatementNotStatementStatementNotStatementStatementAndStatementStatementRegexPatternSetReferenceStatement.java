@@ -35,9 +35,9 @@ public final class WebAclRuleStatementNotStatementStatementNotStatementStatement
         String arn,
         @Nullable WebAclRuleStatementNotStatementStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatch fieldToMatch,
         List<WebAclRuleStatementNotStatementStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementTextTransformation> textTransformations) {
-        this.arn = Objects.requireNonNull(arn);
+        this.arn = arn;
         this.fieldToMatch = fieldToMatch;
-        this.textTransformations = Objects.requireNonNull(textTransformations);
+        this.textTransformations = textTransformations;
     }
 
     /**

@@ -17,7 +17,7 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementRegexP
 
     @OutputCustomType.Constructor({"name"})
     private WebAclRuleStatementRateBasedStatementScopeDownStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgument(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

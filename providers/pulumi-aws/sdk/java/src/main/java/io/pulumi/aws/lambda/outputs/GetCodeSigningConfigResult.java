@@ -53,13 +53,13 @@ public final class GetCodeSigningConfigResult {
         String id,
         String lastModified,
         List<GetCodeSigningConfigPolicy> policies) {
-        this.allowedPublishers = Objects.requireNonNull(allowedPublishers);
-        this.arn = Objects.requireNonNull(arn);
-        this.configId = Objects.requireNonNull(configId);
-        this.description = Objects.requireNonNull(description);
-        this.id = Objects.requireNonNull(id);
-        this.lastModified = Objects.requireNonNull(lastModified);
-        this.policies = Objects.requireNonNull(policies);
+        this.allowedPublishers = allowedPublishers;
+        this.arn = arn;
+        this.configId = configId;
+        this.description = description;
+        this.id = id;
+        this.lastModified = lastModified;
+        this.policies = policies;
     }
 
     /**

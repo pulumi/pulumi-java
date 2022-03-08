@@ -17,8 +17,8 @@ public final class GetBrokerConfiguration {
     private GetBrokerConfiguration(
         String id,
         Integer revision) {
-        this.id = Objects.requireNonNull(id);
-        this.revision = Objects.requireNonNull(revision);
+        this.id = id;
+        this.revision = revision;
     }
 
     public String getId() {

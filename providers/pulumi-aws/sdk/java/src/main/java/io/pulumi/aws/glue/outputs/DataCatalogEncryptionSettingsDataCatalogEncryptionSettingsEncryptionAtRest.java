@@ -26,7 +26,7 @@ public final class DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEnc
     private DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRest(
         String catalogEncryptionMode,
         @Nullable String sseAwsKmsKeyId) {
-        this.catalogEncryptionMode = Objects.requireNonNull(catalogEncryptionMode);
+        this.catalogEncryptionMode = catalogEncryptionMode;
         this.sseAwsKmsKeyId = sseAwsKmsKeyId;
     }
 

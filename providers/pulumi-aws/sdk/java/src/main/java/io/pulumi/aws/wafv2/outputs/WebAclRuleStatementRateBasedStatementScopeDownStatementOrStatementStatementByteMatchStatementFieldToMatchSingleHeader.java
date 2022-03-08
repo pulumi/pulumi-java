@@ -17,7 +17,7 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementOrStat
 
     @OutputCustomType.Constructor({"name"})
     private WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementByteMatchStatementFieldToMatchSingleHeader(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

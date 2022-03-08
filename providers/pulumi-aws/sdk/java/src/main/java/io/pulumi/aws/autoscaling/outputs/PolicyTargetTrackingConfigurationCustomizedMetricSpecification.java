@@ -47,9 +47,9 @@ public final class PolicyTargetTrackingConfigurationCustomizedMetricSpecificatio
         String statistic,
         @Nullable String unit) {
         this.metricDimensions = metricDimensions;
-        this.metricName = Objects.requireNonNull(metricName);
-        this.namespace = Objects.requireNonNull(namespace);
-        this.statistic = Objects.requireNonNull(statistic);
+        this.metricName = metricName;
+        this.namespace = namespace;
+        this.statistic = statistic;
         this.unit = unit;
     }
 

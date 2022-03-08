@@ -25,8 +25,8 @@ public final class DataSourceParametersTwitter {
     private DataSourceParametersTwitter(
         Integer maxRows,
         String query) {
-        this.maxRows = Objects.requireNonNull(maxRows);
-        this.query = Objects.requireNonNull(query);
+        this.maxRows = maxRows;
+        this.query = query;
     }
 
     /**

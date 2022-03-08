@@ -36,13 +36,13 @@ public final class GetParametersByPathResult {
         List<String> types,
         List<String> values,
         @Nullable Boolean withDecryption) {
-        this.arns = Objects.requireNonNull(arns);
-        this.id = Objects.requireNonNull(id);
-        this.names = Objects.requireNonNull(names);
-        this.path = Objects.requireNonNull(path);
+        this.arns = arns;
+        this.id = id;
+        this.names = names;
+        this.path = path;
         this.recursive = recursive;
-        this.types = Objects.requireNonNull(types);
-        this.values = Objects.requireNonNull(values);
+        this.types = types;
+        this.values = values;
         this.withDecryption = withDecryption;
     }
 

@@ -24,8 +24,8 @@ public final class GetCloudFormationTypeLoggingConfig {
     private GetCloudFormationTypeLoggingConfig(
         String logGroupName,
         String logRoleArn) {
-        this.logGroupName = Objects.requireNonNull(logGroupName);
-        this.logRoleArn = Objects.requireNonNull(logRoleArn);
+        this.logGroupName = logGroupName;
+        this.logRoleArn = logRoleArn;
     }
 
     /**

@@ -25,10 +25,10 @@ public final class GetTableLocalSecondaryIndex {
         List<String> nonKeyAttributes,
         String projectionType,
         String rangeKey) {
-        this.name = Objects.requireNonNull(name);
-        this.nonKeyAttributes = Objects.requireNonNull(nonKeyAttributes);
-        this.projectionType = Objects.requireNonNull(projectionType);
-        this.rangeKey = Objects.requireNonNull(rangeKey);
+        this.name = name;
+        this.nonKeyAttributes = nonKeyAttributes;
+        this.projectionType = projectionType;
+        this.rangeKey = rangeKey;
     }
 
     /**

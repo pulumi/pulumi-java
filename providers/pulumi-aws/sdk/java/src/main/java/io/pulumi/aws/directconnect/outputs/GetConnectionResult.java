@@ -63,15 +63,15 @@ public final class GetConnectionResult {
         String ownerAccountId,
         String providerName,
         Map<String,String> tags) {
-        this.arn = Objects.requireNonNull(arn);
-        this.awsDevice = Objects.requireNonNull(awsDevice);
-        this.bandwidth = Objects.requireNonNull(bandwidth);
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.ownerAccountId = Objects.requireNonNull(ownerAccountId);
-        this.providerName = Objects.requireNonNull(providerName);
-        this.tags = Objects.requireNonNull(tags);
+        this.arn = arn;
+        this.awsDevice = awsDevice;
+        this.bandwidth = bandwidth;
+        this.id = id;
+        this.location = location;
+        this.name = name;
+        this.ownerAccountId = ownerAccountId;
+        this.providerName = providerName;
+        this.tags = tags;
     }
 
     /**

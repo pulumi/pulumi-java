@@ -85,20 +85,20 @@ public final class GetInstanceResult {
         Boolean outboundCallsEnabled,
         String serviceRole,
         String status) {
-        this.arn = Objects.requireNonNull(arn);
-        this.autoResolveBestVoicesEnabled = Objects.requireNonNull(autoResolveBestVoicesEnabled);
-        this.contactFlowLogsEnabled = Objects.requireNonNull(contactFlowLogsEnabled);
-        this.contactLensEnabled = Objects.requireNonNull(contactLensEnabled);
-        this.createdTime = Objects.requireNonNull(createdTime);
-        this.earlyMediaEnabled = Objects.requireNonNull(earlyMediaEnabled);
-        this.id = Objects.requireNonNull(id);
-        this.identityManagementType = Objects.requireNonNull(identityManagementType);
-        this.inboundCallsEnabled = Objects.requireNonNull(inboundCallsEnabled);
-        this.instanceAlias = Objects.requireNonNull(instanceAlias);
-        this.instanceId = Objects.requireNonNull(instanceId);
-        this.outboundCallsEnabled = Objects.requireNonNull(outboundCallsEnabled);
-        this.serviceRole = Objects.requireNonNull(serviceRole);
-        this.status = Objects.requireNonNull(status);
+        this.arn = arn;
+        this.autoResolveBestVoicesEnabled = autoResolveBestVoicesEnabled;
+        this.contactFlowLogsEnabled = contactFlowLogsEnabled;
+        this.contactLensEnabled = contactLensEnabled;
+        this.createdTime = createdTime;
+        this.earlyMediaEnabled = earlyMediaEnabled;
+        this.id = id;
+        this.identityManagementType = identityManagementType;
+        this.inboundCallsEnabled = inboundCallsEnabled;
+        this.instanceAlias = instanceAlias;
+        this.instanceId = instanceId;
+        this.outboundCallsEnabled = outboundCallsEnabled;
+        this.serviceRole = serviceRole;
+        this.status = status;
     }
 
     /**

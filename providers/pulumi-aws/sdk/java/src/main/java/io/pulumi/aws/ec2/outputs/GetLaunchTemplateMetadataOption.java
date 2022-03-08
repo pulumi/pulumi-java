@@ -43,11 +43,11 @@ public final class GetLaunchTemplateMetadataOption {
         Integer httpPutResponseHopLimit,
         String httpTokens,
         String instanceMetadataTags) {
-        this.httpEndpoint = Objects.requireNonNull(httpEndpoint);
-        this.httpProtocolIpv6 = Objects.requireNonNull(httpProtocolIpv6);
-        this.httpPutResponseHopLimit = Objects.requireNonNull(httpPutResponseHopLimit);
-        this.httpTokens = Objects.requireNonNull(httpTokens);
-        this.instanceMetadataTags = Objects.requireNonNull(instanceMetadataTags);
+        this.httpEndpoint = httpEndpoint;
+        this.httpProtocolIpv6 = httpProtocolIpv6;
+        this.httpPutResponseHopLimit = httpPutResponseHopLimit;
+        this.httpTokens = httpTokens;
+        this.instanceMetadataTags = instanceMetadataTags;
     }
 
     /**

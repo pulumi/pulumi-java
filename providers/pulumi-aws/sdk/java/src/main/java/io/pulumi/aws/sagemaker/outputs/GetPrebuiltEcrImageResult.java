@@ -41,12 +41,12 @@ public final class GetPrebuiltEcrImageResult {
         String registryPath,
         String repositoryName) {
         this.dnsSuffix = dnsSuffix;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.imageTag = imageTag;
         this.region = region;
-        this.registryId = Objects.requireNonNull(registryId);
-        this.registryPath = Objects.requireNonNull(registryPath);
-        this.repositoryName = Objects.requireNonNull(repositoryName);
+        this.registryId = registryId;
+        this.registryPath = registryPath;
+        this.repositoryName = repositoryName;
     }
 
     public Optional<String> getDnsSuffix() {

@@ -35,9 +35,9 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementNotSta
         String arn,
         @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatch fieldToMatch,
         List<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementNotStatementStatementRegexPatternSetReferenceStatementTextTransformation> textTransformations) {
-        this.arn = Objects.requireNonNull(arn);
+        this.arn = arn;
         this.fieldToMatch = fieldToMatch;
-        this.textTransformations = Objects.requireNonNull(textTransformations);
+        this.textTransformations = textTransformations;
     }
 
     /**

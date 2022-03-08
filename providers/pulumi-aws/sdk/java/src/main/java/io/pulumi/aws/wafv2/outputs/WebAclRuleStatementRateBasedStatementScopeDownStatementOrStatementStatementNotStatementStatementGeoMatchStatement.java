@@ -28,7 +28,7 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementOrStat
     private WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementNotStatementStatementGeoMatchStatement(
         List<String> countryCodes,
         @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfig forwardedIpConfig) {
-        this.countryCodes = Objects.requireNonNull(countryCodes);
+        this.countryCodes = countryCodes;
         this.forwardedIpConfig = forwardedIpConfig;
     }
 

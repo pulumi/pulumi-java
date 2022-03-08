@@ -27,7 +27,7 @@ public final class ListenerRuleActionForwardStickiness {
     private ListenerRuleActionForwardStickiness(
         Integer duration,
         @Nullable Boolean enabled) {
-        this.duration = Objects.requireNonNull(duration);
+        this.duration = duration;
         this.enabled = enabled;
     }
 

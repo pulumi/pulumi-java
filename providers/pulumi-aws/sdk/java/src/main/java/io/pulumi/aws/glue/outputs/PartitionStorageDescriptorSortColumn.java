@@ -25,8 +25,8 @@ public final class PartitionStorageDescriptorSortColumn {
     private PartitionStorageDescriptorSortColumn(
         String column,
         Integer sortOrder) {
-        this.column = Objects.requireNonNull(column);
-        this.sortOrder = Objects.requireNonNull(sortOrder);
+        this.column = column;
+        this.sortOrder = sortOrder;
     }
 
     /**

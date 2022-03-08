@@ -25,8 +25,8 @@ public final class CrawlerCatalogTarget {
     private CrawlerCatalogTarget(
         String databaseName,
         List<String> tables) {
-        this.databaseName = Objects.requireNonNull(databaseName);
-        this.tables = Objects.requireNonNull(tables);
+        this.databaseName = databaseName;
+        this.tables = tables;
     }
 
     /**

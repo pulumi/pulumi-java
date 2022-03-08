@@ -27,7 +27,7 @@ public final class BucketServerSideEncryptionConfigurationRule {
     private BucketServerSideEncryptionConfigurationRule(
         BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefault applyServerSideEncryptionByDefault,
         @Nullable Boolean bucketKeyEnabled) {
-        this.applyServerSideEncryptionByDefault = Objects.requireNonNull(applyServerSideEncryptionByDefault);
+        this.applyServerSideEncryptionByDefault = applyServerSideEncryptionByDefault;
         this.bucketKeyEnabled = bucketKeyEnabled;
     }
 

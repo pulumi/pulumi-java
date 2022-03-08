@@ -17,7 +17,7 @@ public final class ProjectSourceGitSubmodulesConfig {
 
     @OutputCustomType.Constructor({"fetchSubmodules"})
     private ProjectSourceGitSubmodulesConfig(Boolean fetchSubmodules) {
-        this.fetchSubmodules = Objects.requireNonNull(fetchSubmodules);
+        this.fetchSubmodules = fetchSubmodules;
     }
 
     /**

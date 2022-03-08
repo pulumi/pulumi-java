@@ -55,7 +55,7 @@ public final class DomainDefaultUserSettings {
         @Nullable List<String> securityGroups,
         @Nullable DomainDefaultUserSettingsSharingSettings sharingSettings,
         @Nullable DomainDefaultUserSettingsTensorBoardAppSettings tensorBoardAppSettings) {
-        this.executionRole = Objects.requireNonNull(executionRole);
+        this.executionRole = executionRole;
         this.jupyterServerAppSettings = jupyterServerAppSettings;
         this.kernelGatewayAppSettings = kernelGatewayAppSettings;
         this.securityGroups = securityGroups;

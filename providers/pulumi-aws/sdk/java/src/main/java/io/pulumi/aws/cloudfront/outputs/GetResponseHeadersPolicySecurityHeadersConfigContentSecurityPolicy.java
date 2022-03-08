@@ -25,8 +25,8 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigContentSecurityP
     private GetResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicy(
         String contentSecurityPolicy,
         Boolean override) {
-        this.contentSecurityPolicy = Objects.requireNonNull(contentSecurityPolicy);
-        this.override = Objects.requireNonNull(override);
+        this.contentSecurityPolicy = contentSecurityPolicy;
+        this.override = override;
     }
 
     /**

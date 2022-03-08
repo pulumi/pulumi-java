@@ -47,8 +47,8 @@ public final class ObjectCopyGrant {
         @Nullable String uri) {
         this.email = email;
         this.id = id;
-        this.permissions = Objects.requireNonNull(permissions);
-        this.type = Objects.requireNonNull(type);
+        this.permissions = permissions;
+        this.type = type;
         this.uri = uri;
     }
 

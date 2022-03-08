@@ -17,7 +17,7 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportDestinati
 
     @OutputCustomType.Constructor({"s3BucketDestination"})
     private AnalyticsConfigurationStorageClassAnalysisDataExportDestination(AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestination s3BucketDestination) {
-        this.s3BucketDestination = Objects.requireNonNull(s3BucketDestination);
+        this.s3BucketDestination = s3BucketDestination;
     }
 
     /**

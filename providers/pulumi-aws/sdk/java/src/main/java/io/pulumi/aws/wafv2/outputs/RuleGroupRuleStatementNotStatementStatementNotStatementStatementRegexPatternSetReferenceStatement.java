@@ -35,9 +35,9 @@ public final class RuleGroupRuleStatementNotStatementStatementNotStatementStatem
         String arn,
         @Nullable RuleGroupRuleStatementNotStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatch fieldToMatch,
         List<RuleGroupRuleStatementNotStatementStatementNotStatementStatementRegexPatternSetReferenceStatementTextTransformation> textTransformations) {
-        this.arn = Objects.requireNonNull(arn);
+        this.arn = arn;
         this.fieldToMatch = fieldToMatch;
-        this.textTransformations = Objects.requireNonNull(textTransformations);
+        this.textTransformations = textTransformations;
     }
 
     /**

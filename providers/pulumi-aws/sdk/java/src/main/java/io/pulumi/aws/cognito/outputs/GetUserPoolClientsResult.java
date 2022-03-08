@@ -33,10 +33,10 @@ public final class GetUserPoolClientsResult {
         List<String> clientNames,
         String id,
         String userPoolId) {
-        this.clientIds = Objects.requireNonNull(clientIds);
-        this.clientNames = Objects.requireNonNull(clientNames);
-        this.id = Objects.requireNonNull(id);
-        this.userPoolId = Objects.requireNonNull(userPoolId);
+        this.clientIds = clientIds;
+        this.clientNames = clientNames;
+        this.id = id;
+        this.userPoolId = userPoolId;
     }
 
     /**

@@ -24,8 +24,8 @@ public final class DataSourceParametersRds {
     private DataSourceParametersRds(
         String database,
         String instanceId) {
-        this.database = Objects.requireNonNull(database);
-        this.instanceId = Objects.requireNonNull(instanceId);
+        this.database = database;
+        this.instanceId = instanceId;
     }
 
     /**

@@ -27,7 +27,7 @@ public final class WebAclLoggingConfiguration {
     private WebAclLoggingConfiguration(
         String logDestination,
         @Nullable WebAclLoggingConfigurationRedactedFields redactedFields) {
-        this.logDestination = Objects.requireNonNull(logDestination);
+        this.logDestination = logDestination;
         this.redactedFields = redactedFields;
     }
 

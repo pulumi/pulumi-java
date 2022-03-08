@@ -28,7 +28,7 @@ public final class TrailAdvancedEventSelector {
     private TrailAdvancedEventSelector(
         List<TrailAdvancedEventSelectorFieldSelector> fieldSelectors,
         @Nullable String name) {
-        this.fieldSelectors = Objects.requireNonNull(fieldSelectors);
+        this.fieldSelectors = fieldSelectors;
         this.name = name;
     }
 

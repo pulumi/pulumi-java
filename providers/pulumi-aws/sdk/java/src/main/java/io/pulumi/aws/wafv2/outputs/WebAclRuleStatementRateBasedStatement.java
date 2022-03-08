@@ -43,7 +43,7 @@ public final class WebAclRuleStatementRateBasedStatement {
         @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatement scopeDownStatement) {
         this.aggregateKeyType = aggregateKeyType;
         this.forwardedIpConfig = forwardedIpConfig;
-        this.limit = Objects.requireNonNull(limit);
+        this.limit = limit;
         this.scopeDownStatement = scopeDownStatement;
     }
 

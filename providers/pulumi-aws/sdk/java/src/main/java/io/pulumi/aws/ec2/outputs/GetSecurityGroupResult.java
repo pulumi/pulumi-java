@@ -38,13 +38,13 @@ public final class GetSecurityGroupResult {
         String name,
         Map<String,String> tags,
         String vpcId) {
-        this.arn = Objects.requireNonNull(arn);
-        this.description = Objects.requireNonNull(description);
+        this.arn = arn;
+        this.description = description;
         this.filters = filters;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.tags = Objects.requireNonNull(tags);
-        this.vpcId = Objects.requireNonNull(vpcId);
+        this.id = id;
+        this.name = name;
+        this.tags = tags;
+        this.vpcId = vpcId;
     }
 
     /**

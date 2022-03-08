@@ -25,8 +25,8 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
     private GetDistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission(
         List<String> userGroups,
         List<String> userIds) {
-        this.userGroups = Objects.requireNonNull(userGroups);
-        this.userIds = Objects.requireNonNull(userIds);
+        this.userGroups = userGroups;
+        this.userIds = userIds;
     }
 
     /**

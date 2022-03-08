@@ -17,7 +17,7 @@ public final class QuickConnectQuickConnectConfigPhoneConfig {
 
     @OutputCustomType.Constructor({"phoneNumber"})
     private QuickConnectQuickConnectConfigPhoneConfig(String phoneNumber) {
-        this.phoneNumber = Objects.requireNonNull(phoneNumber);
+        this.phoneNumber = phoneNumber;
     }
 
     /**

@@ -33,8 +33,8 @@ public final class ReceiptRuleStopAction {
         Integer position,
         String scope,
         @Nullable String topicArn) {
-        this.position = Objects.requireNonNull(position);
-        this.scope = Objects.requireNonNull(scope);
+        this.position = position;
+        this.scope = scope;
         this.topicArn = topicArn;
     }
 

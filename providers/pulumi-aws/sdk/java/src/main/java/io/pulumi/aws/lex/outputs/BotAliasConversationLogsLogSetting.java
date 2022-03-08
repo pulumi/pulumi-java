@@ -44,10 +44,10 @@ public final class BotAliasConversationLogsLogSetting {
         String logType,
         String resourceArn,
         @Nullable String resourcePrefix) {
-        this.destination = Objects.requireNonNull(destination);
+        this.destination = destination;
         this.kmsKeyArn = kmsKeyArn;
-        this.logType = Objects.requireNonNull(logType);
-        this.resourceArn = Objects.requireNonNull(resourceArn);
+        this.logType = logType;
+        this.resourceArn = resourceArn;
         this.resourcePrefix = resourcePrefix;
     }
 

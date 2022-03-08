@@ -82,17 +82,17 @@ public final class GetStreamResult {
         String status,
         List<GetStreamStreamModeDetail> streamModeDetails,
         Map<String,String> tags) {
-        this.arn = Objects.requireNonNull(arn);
-        this.closedShards = Objects.requireNonNull(closedShards);
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.openShards = Objects.requireNonNull(openShards);
-        this.retentionPeriod = Objects.requireNonNull(retentionPeriod);
-        this.shardLevelMetrics = Objects.requireNonNull(shardLevelMetrics);
-        this.status = Objects.requireNonNull(status);
-        this.streamModeDetails = Objects.requireNonNull(streamModeDetails);
-        this.tags = Objects.requireNonNull(tags);
+        this.arn = arn;
+        this.closedShards = closedShards;
+        this.creationTimestamp = creationTimestamp;
+        this.id = id;
+        this.name = name;
+        this.openShards = openShards;
+        this.retentionPeriod = retentionPeriod;
+        this.shardLevelMetrics = shardLevelMetrics;
+        this.status = status;
+        this.streamModeDetails = streamModeDetails;
+        this.tags = tags;
     }
 
     /**

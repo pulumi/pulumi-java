@@ -32,7 +32,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
         String configurationType,
         @Nullable String logLevel,
         @Nullable String metricsLevel) {
-        this.configurationType = Objects.requireNonNull(configurationType);
+        this.configurationType = configurationType;
         this.logLevel = logLevel;
         this.metricsLevel = metricsLevel;
     }

@@ -24,8 +24,8 @@ public final class InsightFiltersResourceAwsEc2InstanceImageId {
     private InsightFiltersResourceAwsEc2InstanceImageId(
         String comparison,
         String value) {
-        this.comparison = Objects.requireNonNull(comparison);
-        this.value = Objects.requireNonNull(value);
+        this.comparison = comparison;
+        this.value = value;
     }
 
     /**

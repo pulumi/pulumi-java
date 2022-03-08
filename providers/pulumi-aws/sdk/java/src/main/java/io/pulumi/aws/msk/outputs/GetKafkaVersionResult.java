@@ -30,10 +30,10 @@ public final class GetKafkaVersionResult {
         @Nullable List<String> preferredVersions,
         String status,
         String version) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.preferredVersions = preferredVersions;
-        this.status = Objects.requireNonNull(status);
-        this.version = Objects.requireNonNull(version);
+        this.status = status;
+        this.version = version;
     }
 
     /**

@@ -21,10 +21,10 @@ public final class GetDelegationSetResult {
         String callerReference,
         String id,
         List<String> nameServers) {
-        this.arn = Objects.requireNonNull(arn);
-        this.callerReference = Objects.requireNonNull(callerReference);
-        this.id = Objects.requireNonNull(id);
-        this.nameServers = Objects.requireNonNull(nameServers);
+        this.arn = arn;
+        this.callerReference = callerReference;
+        this.id = id;
+        this.nameServers = nameServers;
     }
 
     public String getArn() {

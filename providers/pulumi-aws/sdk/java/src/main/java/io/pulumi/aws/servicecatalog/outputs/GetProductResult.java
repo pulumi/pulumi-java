@@ -99,20 +99,20 @@ public final class GetProductResult {
         Map<String,String> tags,
         String type) {
         this.acceptLanguage = acceptLanguage;
-        this.arn = Objects.requireNonNull(arn);
-        this.createdTime = Objects.requireNonNull(createdTime);
-        this.description = Objects.requireNonNull(description);
-        this.distributor = Objects.requireNonNull(distributor);
-        this.hasDefaultPath = Objects.requireNonNull(hasDefaultPath);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.owner = Objects.requireNonNull(owner);
-        this.status = Objects.requireNonNull(status);
-        this.supportDescription = Objects.requireNonNull(supportDescription);
-        this.supportEmail = Objects.requireNonNull(supportEmail);
-        this.supportUrl = Objects.requireNonNull(supportUrl);
-        this.tags = Objects.requireNonNull(tags);
-        this.type = Objects.requireNonNull(type);
+        this.arn = arn;
+        this.createdTime = createdTime;
+        this.description = description;
+        this.distributor = distributor;
+        this.hasDefaultPath = hasDefaultPath;
+        this.id = id;
+        this.name = name;
+        this.owner = owner;
+        this.status = status;
+        this.supportDescription = supportDescription;
+        this.supportEmail = supportEmail;
+        this.supportUrl = supportUrl;
+        this.tags = tags;
+        this.type = type;
     }
 
     public Optional<String> getAcceptLanguage() {

@@ -91,8 +91,8 @@ public final class ProjectSecondarySource {
         this.insecureSsl = insecureSsl;
         this.location = location;
         this.reportBuildStatus = reportBuildStatus;
-        this.sourceIdentifier = Objects.requireNonNull(sourceIdentifier);
-        this.type = Objects.requireNonNull(type);
+        this.sourceIdentifier = sourceIdentifier;
+        this.type = type;
     }
 
     /**

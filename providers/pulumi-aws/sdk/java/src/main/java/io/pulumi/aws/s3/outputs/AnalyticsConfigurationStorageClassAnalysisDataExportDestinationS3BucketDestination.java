@@ -39,7 +39,7 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportDestinati
         @Nullable String format,
         @Nullable String prefix) {
         this.bucketAccountId = bucketAccountId;
-        this.bucketArn = Objects.requireNonNull(bucketArn);
+        this.bucketArn = bucketArn;
         this.format = format;
         this.prefix = prefix;
     }

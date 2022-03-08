@@ -27,7 +27,7 @@ public final class SlotTypeEnumerationValue {
         @Nullable List<String> synonyms,
         String value) {
         this.synonyms = synonyms;
-        this.value = Objects.requireNonNull(value);
+        this.value = value;
     }
 
     /**

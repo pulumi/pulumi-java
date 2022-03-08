@@ -33,9 +33,9 @@ public final class DomainLogPublishingOption {
         String cloudwatchLogGroupArn,
         @Nullable Boolean enabled,
         String logType) {
-        this.cloudwatchLogGroupArn = Objects.requireNonNull(cloudwatchLogGroupArn);
+        this.cloudwatchLogGroupArn = cloudwatchLogGroupArn;
         this.enabled = enabled;
-        this.logType = Objects.requireNonNull(logType);
+        this.logType = logType;
     }
 
     /**

@@ -39,12 +39,12 @@ public final class GetAuthorizationTokenResult {
         @Nullable Integer durationSeconds,
         String expiration,
         String id) {
-        this.authorizationToken = Objects.requireNonNull(authorizationToken);
-        this.domain = Objects.requireNonNull(domain);
-        this.domainOwner = Objects.requireNonNull(domainOwner);
+        this.authorizationToken = authorizationToken;
+        this.domain = domain;
+        this.domainOwner = domainOwner;
         this.durationSeconds = durationSeconds;
-        this.expiration = Objects.requireNonNull(expiration);
-        this.id = Objects.requireNonNull(id);
+        this.expiration = expiration;
+        this.id = id;
     }
 
     /**

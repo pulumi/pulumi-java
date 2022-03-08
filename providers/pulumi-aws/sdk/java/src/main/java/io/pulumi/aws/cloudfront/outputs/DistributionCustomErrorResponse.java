@@ -45,7 +45,7 @@ public final class DistributionCustomErrorResponse {
         @Nullable Integer responseCode,
         @Nullable String responsePagePath) {
         this.errorCachingMinTtl = errorCachingMinTtl;
-        this.errorCode = Objects.requireNonNull(errorCode);
+        this.errorCode = errorCode;
         this.responseCode = responseCode;
         this.responsePagePath = responsePagePath;
     }

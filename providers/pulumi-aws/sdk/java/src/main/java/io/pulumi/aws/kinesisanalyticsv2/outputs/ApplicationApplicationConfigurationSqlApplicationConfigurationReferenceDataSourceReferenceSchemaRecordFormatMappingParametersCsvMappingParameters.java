@@ -24,8 +24,8 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     private ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParameters(
         String recordColumnDelimiter,
         String recordRowDelimiter) {
-        this.recordColumnDelimiter = Objects.requireNonNull(recordColumnDelimiter);
-        this.recordRowDelimiter = Objects.requireNonNull(recordRowDelimiter);
+        this.recordColumnDelimiter = recordColumnDelimiter;
+        this.recordRowDelimiter = recordRowDelimiter;
     }
 
     /**

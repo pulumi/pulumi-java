@@ -24,8 +24,8 @@ public final class PipelineDefinitionParameterValue {
     private PipelineDefinitionParameterValue(
         String id,
         String stringValue) {
-        this.id = Objects.requireNonNull(id);
-        this.stringValue = Objects.requireNonNull(stringValue);
+        this.id = id;
+        this.stringValue = stringValue;
     }
 
     /**

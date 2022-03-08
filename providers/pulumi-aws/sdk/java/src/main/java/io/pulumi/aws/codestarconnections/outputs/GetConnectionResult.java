@@ -51,13 +51,13 @@ public final class GetConnectionResult {
         String name,
         String providerType,
         Map<String,String> tags) {
-        this.arn = Objects.requireNonNull(arn);
-        this.connectionStatus = Objects.requireNonNull(connectionStatus);
-        this.hostArn = Objects.requireNonNull(hostArn);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.providerType = Objects.requireNonNull(providerType);
-        this.tags = Objects.requireNonNull(tags);
+        this.arn = arn;
+        this.connectionStatus = connectionStatus;
+        this.hostArn = hostArn;
+        this.id = id;
+        this.name = name;
+        this.providerType = providerType;
+        this.tags = tags;
     }
 
     public String getArn() {

@@ -32,9 +32,9 @@ public final class WebAclLoggingConfigurationLoggingFilterFilter {
         String behavior,
         List<WebAclLoggingConfigurationLoggingFilterFilterCondition> conditions,
         String requirement) {
-        this.behavior = Objects.requireNonNull(behavior);
-        this.conditions = Objects.requireNonNull(conditions);
-        this.requirement = Objects.requireNonNull(requirement);
+        this.behavior = behavior;
+        this.conditions = conditions;
+        this.requirement = requirement;
     }
 
     /**

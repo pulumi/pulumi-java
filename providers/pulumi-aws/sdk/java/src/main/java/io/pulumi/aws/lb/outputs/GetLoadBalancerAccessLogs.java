@@ -19,9 +19,9 @@ public final class GetLoadBalancerAccessLogs {
         String bucket,
         Boolean enabled,
         String prefix) {
-        this.bucket = Objects.requireNonNull(bucket);
-        this.enabled = Objects.requireNonNull(enabled);
-        this.prefix = Objects.requireNonNull(prefix);
+        this.bucket = bucket;
+        this.enabled = enabled;
+        this.prefix = prefix;
     }
 
     public String getBucket() {

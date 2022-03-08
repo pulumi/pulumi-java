@@ -55,7 +55,7 @@ public final class UserProfileUserSettings {
         @Nullable List<String> securityGroups,
         @Nullable UserProfileUserSettingsSharingSettings sharingSettings,
         @Nullable UserProfileUserSettingsTensorBoardAppSettings tensorBoardAppSettings) {
-        this.executionRole = Objects.requireNonNull(executionRole);
+        this.executionRole = executionRole;
         this.jupyterServerAppSettings = jupyterServerAppSettings;
         this.kernelGatewayAppSettings = kernelGatewayAppSettings;
         this.securityGroups = securityGroups;

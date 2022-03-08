@@ -17,7 +17,7 @@ public final class UserPoolSoftwareTokenMfaConfiguration {
 
     @OutputCustomType.Constructor({"enabled"})
     private UserPoolSoftwareTokenMfaConfiguration(Boolean enabled) {
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
     }
 
     /**

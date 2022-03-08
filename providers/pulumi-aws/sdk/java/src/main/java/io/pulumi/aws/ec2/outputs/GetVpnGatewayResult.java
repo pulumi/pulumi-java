@@ -32,14 +32,14 @@ public final class GetVpnGatewayResult {
         String id,
         String state,
         Map<String,String> tags) {
-        this.amazonSideAsn = Objects.requireNonNull(amazonSideAsn);
-        this.arn = Objects.requireNonNull(arn);
-        this.attachedVpcId = Objects.requireNonNull(attachedVpcId);
-        this.availabilityZone = Objects.requireNonNull(availabilityZone);
+        this.amazonSideAsn = amazonSideAsn;
+        this.arn = arn;
+        this.attachedVpcId = attachedVpcId;
+        this.availabilityZone = availabilityZone;
         this.filters = filters;
-        this.id = Objects.requireNonNull(id);
-        this.state = Objects.requireNonNull(state);
-        this.tags = Objects.requireNonNull(tags);
+        this.id = id;
+        this.state = state;
+        this.tags = tags;
     }
 
     public String getAmazonSideAsn() {

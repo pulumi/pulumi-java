@@ -25,8 +25,8 @@ public final class BucketReplicationConfigRuleDestinationReplicationTime {
     private BucketReplicationConfigRuleDestinationReplicationTime(
         String status,
         BucketReplicationConfigRuleDestinationReplicationTimeTime time) {
-        this.status = Objects.requireNonNull(status);
-        this.time = Objects.requireNonNull(time);
+        this.status = status;
+        this.time = time;
     }
 
     /**

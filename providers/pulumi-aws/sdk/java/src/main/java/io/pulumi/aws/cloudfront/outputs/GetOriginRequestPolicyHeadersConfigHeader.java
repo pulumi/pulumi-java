@@ -14,7 +14,7 @@ public final class GetOriginRequestPolicyHeadersConfigHeader {
 
     @OutputCustomType.Constructor({"items"})
     private GetOriginRequestPolicyHeadersConfigHeader(List<String> items) {
-        this.items = Objects.requireNonNull(items);
+        this.items = items;
     }
 
     public List<String> getItems() {

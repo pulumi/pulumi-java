@@ -35,7 +35,7 @@ public final class UsagePlanApiStageThrottle {
         String path,
         @Nullable Double rateLimit) {
         this.burstLimit = burstLimit;
-        this.path = Objects.requireNonNull(path);
+        this.path = path;
         this.rateLimit = rateLimit;
     }
 

@@ -43,8 +43,8 @@ public final class RouteSpecHttp2RouteRetryPolicy {
         RouteSpecHttp2RouteRetryPolicyPerRetryTimeout perRetryTimeout,
         @Nullable List<String> tcpRetryEvents) {
         this.httpRetryEvents = httpRetryEvents;
-        this.maxRetries = Objects.requireNonNull(maxRetries);
-        this.perRetryTimeout = Objects.requireNonNull(perRetryTimeout);
+        this.maxRetries = maxRetries;
+        this.perRetryTimeout = perRetryTimeout;
         this.tcpRetryEvents = tcpRetryEvents;
     }
 

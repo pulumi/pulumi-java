@@ -85,7 +85,7 @@ public final class ProjectSource {
         this.insecureSsl = insecureSsl;
         this.location = location;
         this.reportBuildStatus = reportBuildStatus;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

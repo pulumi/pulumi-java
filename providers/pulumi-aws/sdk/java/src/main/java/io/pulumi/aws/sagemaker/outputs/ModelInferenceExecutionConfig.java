@@ -17,7 +17,7 @@ public final class ModelInferenceExecutionConfig {
 
     @OutputCustomType.Constructor({"mode"})
     private ModelInferenceExecutionConfig(String mode) {
-        this.mode = Objects.requireNonNull(mode);
+        this.mode = mode;
     }
 
     /**

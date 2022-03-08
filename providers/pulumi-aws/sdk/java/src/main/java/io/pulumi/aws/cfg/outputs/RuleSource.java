@@ -33,9 +33,9 @@ public final class RuleSource {
         String owner,
         @Nullable List<RuleSourceSourceDetail> sourceDetails,
         String sourceIdentifier) {
-        this.owner = Objects.requireNonNull(owner);
+        this.owner = owner;
         this.sourceDetails = sourceDetails;
-        this.sourceIdentifier = Objects.requireNonNull(sourceIdentifier);
+        this.sourceIdentifier = sourceIdentifier;
     }
 
     /**

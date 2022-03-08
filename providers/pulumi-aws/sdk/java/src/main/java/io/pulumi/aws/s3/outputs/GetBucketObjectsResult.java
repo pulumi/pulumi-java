@@ -55,15 +55,15 @@ public final class GetBucketObjectsResult {
         List<String> owners,
         @Nullable String prefix,
         @Nullable String startAfter) {
-        this.bucket = Objects.requireNonNull(bucket);
-        this.commonPrefixes = Objects.requireNonNull(commonPrefixes);
+        this.bucket = bucket;
+        this.commonPrefixes = commonPrefixes;
         this.delimiter = delimiter;
         this.encodingType = encodingType;
         this.fetchOwner = fetchOwner;
-        this.id = Objects.requireNonNull(id);
-        this.keys = Objects.requireNonNull(keys);
+        this.id = id;
+        this.keys = keys;
         this.maxKeys = maxKeys;
-        this.owners = Objects.requireNonNull(owners);
+        this.owners = owners;
         this.prefix = prefix;
         this.startAfter = startAfter;
     }

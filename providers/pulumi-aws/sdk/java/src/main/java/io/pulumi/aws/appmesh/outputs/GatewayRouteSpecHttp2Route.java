@@ -25,8 +25,8 @@ public final class GatewayRouteSpecHttp2Route {
     private GatewayRouteSpecHttp2Route(
         GatewayRouteSpecHttp2RouteAction action,
         GatewayRouteSpecHttp2RouteMatch match) {
-        this.action = Objects.requireNonNull(action);
-        this.match = Objects.requireNonNull(match);
+        this.action = action;
+        this.match = match;
     }
 
     /**

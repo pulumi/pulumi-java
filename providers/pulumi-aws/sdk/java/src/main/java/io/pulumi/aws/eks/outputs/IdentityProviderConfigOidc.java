@@ -63,11 +63,11 @@ public final class IdentityProviderConfigOidc {
         @Nullable Map<String,String> requiredClaims,
         @Nullable String usernameClaim,
         @Nullable String usernamePrefix) {
-        this.clientId = Objects.requireNonNull(clientId);
+        this.clientId = clientId;
         this.groupsClaim = groupsClaim;
         this.groupsPrefix = groupsPrefix;
-        this.identityProviderConfigName = Objects.requireNonNull(identityProviderConfigName);
-        this.issuerUrl = Objects.requireNonNull(issuerUrl);
+        this.identityProviderConfigName = identityProviderConfigName;
+        this.issuerUrl = issuerUrl;
         this.requiredClaims = requiredClaims;
         this.usernameClaim = usernameClaim;
         this.usernamePrefix = usernamePrefix;

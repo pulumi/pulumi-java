@@ -51,14 +51,14 @@ public final class GetCertificateResult {
         @Nullable List<String> statuses,
         Map<String,String> tags,
         @Nullable List<String> types) {
-        this.arn = Objects.requireNonNull(arn);
-        this.domain = Objects.requireNonNull(domain);
-        this.id = Objects.requireNonNull(id);
+        this.arn = arn;
+        this.domain = domain;
+        this.id = id;
         this.keyTypes = keyTypes;
         this.mostRecent = mostRecent;
-        this.status = Objects.requireNonNull(status);
+        this.status = status;
         this.statuses = statuses;
-        this.tags = Objects.requireNonNull(tags);
+        this.tags = tags;
         this.types = types;
     }
 

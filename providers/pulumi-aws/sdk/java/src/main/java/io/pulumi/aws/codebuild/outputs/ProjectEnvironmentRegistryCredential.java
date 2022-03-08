@@ -24,8 +24,8 @@ public final class ProjectEnvironmentRegistryCredential {
     private ProjectEnvironmentRegistryCredential(
         String credential,
         String credentialProvider) {
-        this.credential = Objects.requireNonNull(credential);
-        this.credentialProvider = Objects.requireNonNull(credentialProvider);
+        this.credential = credential;
+        this.credentialProvider = credentialProvider;
     }
 
     /**

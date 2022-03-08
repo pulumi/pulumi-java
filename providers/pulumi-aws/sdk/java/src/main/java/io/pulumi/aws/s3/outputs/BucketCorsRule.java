@@ -47,8 +47,8 @@ public final class BucketCorsRule {
         @Nullable List<String> exposeHeaders,
         @Nullable Integer maxAgeSeconds) {
         this.allowedHeaders = allowedHeaders;
-        this.allowedMethods = Objects.requireNonNull(allowedMethods);
-        this.allowedOrigins = Objects.requireNonNull(allowedOrigins);
+        this.allowedMethods = allowedMethods;
+        this.allowedOrigins = allowedOrigins;
         this.exposeHeaders = exposeHeaders;
         this.maxAgeSeconds = maxAgeSeconds;
     }

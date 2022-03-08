@@ -17,7 +17,7 @@ public final class FirewallPolicyFirewallPolicyStatelessCustomActionActionDefini
 
     @OutputCustomType.Constructor({"value"})
     private FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimension(String value) {
-        this.value = Objects.requireNonNull(value);
+        this.value = value;
     }
 
     /**

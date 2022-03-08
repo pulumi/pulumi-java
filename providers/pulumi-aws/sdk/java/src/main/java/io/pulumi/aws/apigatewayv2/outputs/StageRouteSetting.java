@@ -58,7 +58,7 @@ public final class StageRouteSetting {
         this.dataTraceEnabled = dataTraceEnabled;
         this.detailedMetricsEnabled = detailedMetricsEnabled;
         this.loggingLevel = loggingLevel;
-        this.routeKey = Objects.requireNonNull(routeKey);
+        this.routeKey = routeKey;
         this.throttlingBurstLimit = throttlingBurstLimit;
         this.throttlingRateLimit = throttlingRateLimit;
     }

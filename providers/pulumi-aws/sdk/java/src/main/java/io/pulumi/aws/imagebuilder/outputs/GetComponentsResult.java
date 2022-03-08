@@ -38,10 +38,10 @@ public final class GetComponentsResult {
         String id,
         List<String> names,
         @Nullable String owner) {
-        this.arns = Objects.requireNonNull(arns);
+        this.arns = arns;
         this.filters = filters;
-        this.id = Objects.requireNonNull(id);
-        this.names = Objects.requireNonNull(names);
+        this.id = id;
+        this.names = names;
         this.owner = owner;
     }
 

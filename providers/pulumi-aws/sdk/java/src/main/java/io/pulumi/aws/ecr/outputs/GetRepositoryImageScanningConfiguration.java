@@ -17,7 +17,7 @@ public final class GetRepositoryImageScanningConfiguration {
 
     @OutputCustomType.Constructor({"scanOnPush"})
     private GetRepositoryImageScanningConfiguration(Boolean scanOnPush) {
-        this.scanOnPush = Objects.requireNonNull(scanOnPush);
+        this.scanOnPush = scanOnPush;
     }
 
     /**

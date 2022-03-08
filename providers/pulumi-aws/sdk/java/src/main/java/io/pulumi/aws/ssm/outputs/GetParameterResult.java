@@ -34,12 +34,12 @@ public final class GetParameterResult {
         String value,
         Integer version,
         @Nullable Boolean withDecryption) {
-        this.arn = Objects.requireNonNull(arn);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
-        this.value = Objects.requireNonNull(value);
-        this.version = Objects.requireNonNull(version);
+        this.arn = arn;
+        this.id = id;
+        this.name = name;
+        this.type = type;
+        this.value = value;
+        this.version = version;
         this.withDecryption = withDecryption;
     }
 

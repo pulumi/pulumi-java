@@ -44,11 +44,11 @@ public final class InstanceS3Import {
         String ingestionRole,
         String sourceEngine,
         String sourceEngineVersion) {
-        this.bucketName = Objects.requireNonNull(bucketName);
+        this.bucketName = bucketName;
         this.bucketPrefix = bucketPrefix;
-        this.ingestionRole = Objects.requireNonNull(ingestionRole);
-        this.sourceEngine = Objects.requireNonNull(sourceEngine);
-        this.sourceEngineVersion = Objects.requireNonNull(sourceEngineVersion);
+        this.ingestionRole = ingestionRole;
+        this.sourceEngine = sourceEngine;
+        this.sourceEngineVersion = sourceEngineVersion;
     }
 
     /**

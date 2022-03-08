@@ -24,8 +24,8 @@ public final class GetCanonicalUserIdResult {
     private GetCanonicalUserIdResult(
         String displayName,
         String id) {
-        this.displayName = Objects.requireNonNull(displayName);
-        this.id = Objects.requireNonNull(id);
+        this.displayName = displayName;
+        this.id = id;
     }
 
     /**

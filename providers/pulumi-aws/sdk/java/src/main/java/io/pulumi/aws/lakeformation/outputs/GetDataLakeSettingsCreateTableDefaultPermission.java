@@ -25,8 +25,8 @@ public final class GetDataLakeSettingsCreateTableDefaultPermission {
     private GetDataLakeSettingsCreateTableDefaultPermission(
         List<String> permissions,
         String principal) {
-        this.permissions = Objects.requireNonNull(permissions);
-        this.principal = Objects.requireNonNull(principal);
+        this.permissions = permissions;
+        this.principal = principal;
     }
 
     /**

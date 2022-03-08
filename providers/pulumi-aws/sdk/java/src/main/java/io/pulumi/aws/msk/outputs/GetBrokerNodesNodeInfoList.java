@@ -50,12 +50,12 @@ public final class GetBrokerNodesNodeInfoList {
         String clientVpcIpAddress,
         List<String> endpoints,
         String nodeArn) {
-        this.attachedEniId = Objects.requireNonNull(attachedEniId);
-        this.brokerId = Objects.requireNonNull(brokerId);
-        this.clientSubnet = Objects.requireNonNull(clientSubnet);
-        this.clientVpcIpAddress = Objects.requireNonNull(clientVpcIpAddress);
-        this.endpoints = Objects.requireNonNull(endpoints);
-        this.nodeArn = Objects.requireNonNull(nodeArn);
+        this.attachedEniId = attachedEniId;
+        this.brokerId = brokerId;
+        this.clientSubnet = clientSubnet;
+        this.clientVpcIpAddress = clientVpcIpAddress;
+        this.endpoints = endpoints;
+        this.nodeArn = nodeArn;
     }
 
     /**

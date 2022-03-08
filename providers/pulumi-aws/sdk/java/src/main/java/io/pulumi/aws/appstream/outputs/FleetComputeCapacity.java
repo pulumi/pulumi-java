@@ -39,7 +39,7 @@ public final class FleetComputeCapacity {
         @Nullable Integer inUse,
         @Nullable Integer running) {
         this.available = available;
-        this.desiredInstances = Objects.requireNonNull(desiredInstances);
+        this.desiredInstances = desiredInstances;
         this.inUse = inUse;
         this.running = running;
     }

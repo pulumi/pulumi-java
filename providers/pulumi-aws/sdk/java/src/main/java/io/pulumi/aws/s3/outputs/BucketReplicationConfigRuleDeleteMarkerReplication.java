@@ -17,7 +17,7 @@ public final class BucketReplicationConfigRuleDeleteMarkerReplication {
 
     @OutputCustomType.Constructor({"status"})
     private BucketReplicationConfigRuleDeleteMarkerReplication(String status) {
-        this.status = Objects.requireNonNull(status);
+        this.status = status;
     }
 
     /**

@@ -27,7 +27,7 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExport {
     private AnalyticsConfigurationStorageClassAnalysisDataExport(
         AnalyticsConfigurationStorageClassAnalysisDataExportDestination destination,
         @Nullable String outputSchemaVersion) {
-        this.destination = Objects.requireNonNull(destination);
+        this.destination = destination;
         this.outputSchemaVersion = outputSchemaVersion;
     }
 

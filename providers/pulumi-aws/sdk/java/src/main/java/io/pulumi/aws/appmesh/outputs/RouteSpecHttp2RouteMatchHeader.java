@@ -36,7 +36,7 @@ public final class RouteSpecHttp2RouteMatchHeader {
         String name) {
         this.invert = invert;
         this.match = match;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

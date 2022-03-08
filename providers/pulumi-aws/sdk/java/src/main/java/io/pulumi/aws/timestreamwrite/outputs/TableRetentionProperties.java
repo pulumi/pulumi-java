@@ -24,8 +24,8 @@ public final class TableRetentionProperties {
     private TableRetentionProperties(
         Integer magneticStoreRetentionPeriodInDays,
         Integer memoryStoreRetentionPeriodInHours) {
-        this.magneticStoreRetentionPeriodInDays = Objects.requireNonNull(magneticStoreRetentionPeriodInDays);
-        this.memoryStoreRetentionPeriodInHours = Objects.requireNonNull(memoryStoreRetentionPeriodInHours);
+        this.magneticStoreRetentionPeriodInDays = magneticStoreRetentionPeriodInDays;
+        this.memoryStoreRetentionPeriodInHours = memoryStoreRetentionPeriodInHours;
     }
 
     /**

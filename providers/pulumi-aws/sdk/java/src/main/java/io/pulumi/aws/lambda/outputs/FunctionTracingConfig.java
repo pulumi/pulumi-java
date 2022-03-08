@@ -17,7 +17,7 @@ public final class FunctionTracingConfig {
 
     @OutputCustomType.Constructor({"mode"})
     private FunctionTracingConfig(String mode) {
-        this.mode = Objects.requireNonNull(mode);
+        this.mode = mode;
     }
 
     /**

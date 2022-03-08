@@ -47,7 +47,7 @@ public final class ScheduledActionTargetActionResizeCluster {
         @Nullable String nodeType,
         @Nullable Integer numberOfNodes) {
         this.classic = classic;
-        this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier);
+        this.clusterIdentifier = clusterIdentifier;
         this.clusterType = clusterType;
         this.nodeType = nodeType;
         this.numberOfNodes = numberOfNodes;

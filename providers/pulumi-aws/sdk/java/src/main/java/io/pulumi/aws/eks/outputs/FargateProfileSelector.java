@@ -27,7 +27,7 @@ public final class FargateProfileSelector {
         @Nullable Map<String,String> labels,
         String namespace) {
         this.labels = labels;
-        this.namespace = Objects.requireNonNull(namespace);
+        this.namespace = namespace;
     }
 
     /**

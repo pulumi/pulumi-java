@@ -28,7 +28,7 @@ public final class TableServerSideEncryption {
     private TableServerSideEncryption(
         Boolean enabled,
         @Nullable String kmsKeyArn) {
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
         this.kmsKeyArn = kmsKeyArn;
     }
 

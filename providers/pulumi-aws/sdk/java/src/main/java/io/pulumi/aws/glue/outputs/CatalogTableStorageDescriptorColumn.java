@@ -40,7 +40,7 @@ public final class CatalogTableStorageDescriptorColumn {
         @Nullable Map<String,String> parameters,
         @Nullable String type) {
         this.comment = comment;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.parameters = parameters;
         this.type = type;
     }

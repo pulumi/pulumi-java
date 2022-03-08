@@ -34,11 +34,11 @@ public final class GetResourceResult {
         @Nullable String roleArn,
         String typeName,
         @Nullable String typeVersionId) {
-        this.id = Objects.requireNonNull(id);
-        this.identifier = Objects.requireNonNull(identifier);
-        this.properties = Objects.requireNonNull(properties);
+        this.id = id;
+        this.identifier = identifier;
+        this.properties = properties;
         this.roleArn = roleArn;
-        this.typeName = Objects.requireNonNull(typeName);
+        this.typeName = typeName;
         this.typeVersionId = typeVersionId;
     }
 

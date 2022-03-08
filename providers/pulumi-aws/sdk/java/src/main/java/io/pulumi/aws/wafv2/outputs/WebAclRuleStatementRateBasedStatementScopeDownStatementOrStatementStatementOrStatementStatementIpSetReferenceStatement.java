@@ -27,7 +27,7 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementOrStat
     private WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementOrStatementStatementIpSetReferenceStatement(
         String arn,
         @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig ipSetForwardedIpConfig) {
-        this.arn = Objects.requireNonNull(arn);
+        this.arn = arn;
         this.ipSetForwardedIpConfig = ipSetForwardedIpConfig;
     }
 

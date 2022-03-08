@@ -24,8 +24,8 @@ public final class DomainSamlOptionsSamlOptionsIdp {
     private DomainSamlOptionsSamlOptionsIdp(
         String entityId,
         String metadataContent) {
-        this.entityId = Objects.requireNonNull(entityId);
-        this.metadataContent = Objects.requireNonNull(metadataContent);
+        this.entityId = entityId;
+        this.metadataContent = metadataContent;
     }
 
     /**

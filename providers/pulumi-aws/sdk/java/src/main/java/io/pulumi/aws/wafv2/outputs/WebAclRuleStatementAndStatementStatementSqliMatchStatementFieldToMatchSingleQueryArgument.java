@@ -17,7 +17,7 @@ public final class WebAclRuleStatementAndStatementStatementSqliMatchStatementFie
 
     @OutputCustomType.Constructor({"name"})
     private WebAclRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgument(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

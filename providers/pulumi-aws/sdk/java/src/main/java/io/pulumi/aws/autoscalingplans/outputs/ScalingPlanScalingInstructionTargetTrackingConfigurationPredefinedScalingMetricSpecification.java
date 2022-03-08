@@ -26,7 +26,7 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfigurationPrede
     private ScalingPlanScalingInstructionTargetTrackingConfigurationPredefinedScalingMetricSpecification(
         String predefinedScalingMetricType,
         @Nullable String resourceLabel) {
-        this.predefinedScalingMetricType = Objects.requireNonNull(predefinedScalingMetricType);
+        this.predefinedScalingMetricType = predefinedScalingMetricType;
         this.resourceLabel = resourceLabel;
     }
 

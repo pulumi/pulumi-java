@@ -17,8 +17,8 @@ public final class GetListenerDefaultActionForwardStickiness {
     private GetListenerDefaultActionForwardStickiness(
         Integer duration,
         Boolean enabled) {
-        this.duration = Objects.requireNonNull(duration);
-        this.enabled = Objects.requireNonNull(enabled);
+        this.duration = duration;
+        this.enabled = enabled;
     }
 
     public Integer getDuration() {

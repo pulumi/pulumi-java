@@ -24,8 +24,8 @@ public final class WebhookFilter {
     private WebhookFilter(
         String jsonPath,
         String matchEquals) {
-        this.jsonPath = Objects.requireNonNull(jsonPath);
-        this.matchEquals = Objects.requireNonNull(matchEquals);
+        this.jsonPath = jsonPath;
+        this.matchEquals = matchEquals;
     }
 
     /**

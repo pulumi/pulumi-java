@@ -17,7 +17,7 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCu
 
     @OutputCustomType.Constructor({"value"})
     private RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionDimension(String value) {
-        this.value = Objects.requireNonNull(value);
+        this.value = value;
     }
 
     /**

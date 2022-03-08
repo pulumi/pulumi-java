@@ -33,8 +33,8 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaRecordColumn {
         String name,
         String sqlType) {
         this.mapping = mapping;
-        this.name = Objects.requireNonNull(name);
-        this.sqlType = Objects.requireNonNull(sqlType);
+        this.name = name;
+        this.sqlType = sqlType;
     }
 
     /**

@@ -25,8 +25,8 @@ public final class RouteRequestParameter {
     private RouteRequestParameter(
         String requestParameterKey,
         Boolean required) {
-        this.requestParameterKey = Objects.requireNonNull(requestParameterKey);
-        this.required = Objects.requireNonNull(required);
+        this.requestParameterKey = requestParameterKey;
+        this.required = required;
     }
 
     /**

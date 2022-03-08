@@ -17,7 +17,7 @@ public final class WebAclRuleStatementByteMatchStatementFieldToMatchSingleQueryA
 
     @OutputCustomType.Constructor({"name"})
     private WebAclRuleStatementByteMatchStatementFieldToMatchSingleQueryArgument(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

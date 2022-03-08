@@ -24,8 +24,8 @@ public final class TaskDefinitionInferenceAccelerator {
     private TaskDefinitionInferenceAccelerator(
         String deviceName,
         String deviceType) {
-        this.deviceName = Objects.requireNonNull(deviceName);
-        this.deviceType = Objects.requireNonNull(deviceType);
+        this.deviceName = deviceName;
+        this.deviceType = deviceType;
     }
 
     /**

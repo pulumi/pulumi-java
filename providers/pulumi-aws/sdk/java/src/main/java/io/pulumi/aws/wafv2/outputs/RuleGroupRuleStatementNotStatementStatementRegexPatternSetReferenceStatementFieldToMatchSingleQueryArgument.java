@@ -17,7 +17,7 @@ public final class RuleGroupRuleStatementNotStatementStatementRegexPatternSetRef
 
     @OutputCustomType.Constructor({"name"})
     private RuleGroupRuleStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgument(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

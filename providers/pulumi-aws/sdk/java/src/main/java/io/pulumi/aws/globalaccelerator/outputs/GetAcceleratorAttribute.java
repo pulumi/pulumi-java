@@ -19,9 +19,9 @@ public final class GetAcceleratorAttribute {
         Boolean flowLogsEnabled,
         String flowLogsS3Bucket,
         String flowLogsS3Prefix) {
-        this.flowLogsEnabled = Objects.requireNonNull(flowLogsEnabled);
-        this.flowLogsS3Bucket = Objects.requireNonNull(flowLogsS3Bucket);
-        this.flowLogsS3Prefix = Objects.requireNonNull(flowLogsS3Prefix);
+        this.flowLogsEnabled = flowLogsEnabled;
+        this.flowLogsS3Bucket = flowLogsS3Bucket;
+        this.flowLogsS3Prefix = flowLogsS3Prefix;
     }
 
     public Boolean getFlowLogsEnabled() {

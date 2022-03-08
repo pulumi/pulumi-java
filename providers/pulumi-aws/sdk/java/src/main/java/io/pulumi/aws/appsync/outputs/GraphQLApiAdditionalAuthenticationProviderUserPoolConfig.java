@@ -34,7 +34,7 @@ public final class GraphQLApiAdditionalAuthenticationProviderUserPoolConfig {
         String userPoolId) {
         this.appIdClientRegex = appIdClientRegex;
         this.awsRegion = awsRegion;
-        this.userPoolId = Objects.requireNonNull(userPoolId);
+        this.userPoolId = userPoolId;
     }
 
     /**

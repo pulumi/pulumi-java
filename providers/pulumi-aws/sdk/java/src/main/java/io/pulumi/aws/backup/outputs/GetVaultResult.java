@@ -46,12 +46,12 @@ public final class GetVaultResult {
         String name,
         Integer recoveryPoints,
         Map<String,String> tags) {
-        this.arn = Objects.requireNonNull(arn);
-        this.id = Objects.requireNonNull(id);
-        this.kmsKeyArn = Objects.requireNonNull(kmsKeyArn);
-        this.name = Objects.requireNonNull(name);
-        this.recoveryPoints = Objects.requireNonNull(recoveryPoints);
-        this.tags = Objects.requireNonNull(tags);
+        this.arn = arn;
+        this.id = id;
+        this.kmsKeyArn = kmsKeyArn;
+        this.name = name;
+        this.recoveryPoints = recoveryPoints;
+        this.tags = tags;
     }
 
     /**

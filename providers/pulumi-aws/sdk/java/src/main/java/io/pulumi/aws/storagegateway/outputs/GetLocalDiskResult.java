@@ -30,11 +30,11 @@ public final class GetLocalDiskResult {
         String diskPath,
         String gatewayArn,
         String id) {
-        this.diskId = Objects.requireNonNull(diskId);
-        this.diskNode = Objects.requireNonNull(diskNode);
-        this.diskPath = Objects.requireNonNull(diskPath);
-        this.gatewayArn = Objects.requireNonNull(gatewayArn);
-        this.id = Objects.requireNonNull(id);
+        this.diskId = diskId;
+        this.diskNode = diskNode;
+        this.diskPath = diskPath;
+        this.gatewayArn = gatewayArn;
+        this.id = id;
     }
 
     /**

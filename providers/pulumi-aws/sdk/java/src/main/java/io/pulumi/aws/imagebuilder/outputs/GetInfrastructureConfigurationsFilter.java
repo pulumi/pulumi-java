@@ -25,8 +25,8 @@ public final class GetInfrastructureConfigurationsFilter {
     private GetInfrastructureConfigurationsFilter(
         String name,
         List<String> values) {
-        this.name = Objects.requireNonNull(name);
-        this.values = Objects.requireNonNull(values);
+        this.name = name;
+        this.values = values;
     }
 
     /**

@@ -42,12 +42,12 @@ public final class GetRegexPatternSetResult {
         String name,
         List<GetRegexPatternSetRegularExpression> regularExpressions,
         String scope) {
-        this.arn = Objects.requireNonNull(arn);
-        this.description = Objects.requireNonNull(description);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.regularExpressions = Objects.requireNonNull(regularExpressions);
-        this.scope = Objects.requireNonNull(scope);
+        this.arn = arn;
+        this.description = description;
+        this.id = id;
+        this.name = name;
+        this.regularExpressions = regularExpressions;
+        this.scope = scope;
     }
 
     /**

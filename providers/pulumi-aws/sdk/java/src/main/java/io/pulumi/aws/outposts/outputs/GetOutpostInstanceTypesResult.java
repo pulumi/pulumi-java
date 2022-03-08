@@ -27,9 +27,9 @@ public final class GetOutpostInstanceTypesResult {
         String arn,
         String id,
         List<String> instanceTypes) {
-        this.arn = Objects.requireNonNull(arn);
-        this.id = Objects.requireNonNull(id);
-        this.instanceTypes = Objects.requireNonNull(instanceTypes);
+        this.arn = arn;
+        this.id = id;
+        this.instanceTypes = instanceTypes;
     }
 
     public String getArn() {

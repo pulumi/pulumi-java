@@ -27,7 +27,7 @@ public final class BotAssociationLexBot {
         @Nullable String lexRegion,
         String name) {
         this.lexRegion = lexRegion;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

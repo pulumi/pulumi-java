@@ -33,8 +33,8 @@ public final class CrawlerMongodbTarget {
         String connectionName,
         String path,
         @Nullable Boolean scanAll) {
-        this.connectionName = Objects.requireNonNull(connectionName);
-        this.path = Objects.requireNonNull(path);
+        this.connectionName = connectionName;
+        this.path = path;
         this.scanAll = scanAll;
     }
 

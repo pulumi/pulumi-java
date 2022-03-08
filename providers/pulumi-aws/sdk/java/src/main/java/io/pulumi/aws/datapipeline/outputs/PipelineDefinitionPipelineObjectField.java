@@ -32,7 +32,7 @@ public final class PipelineDefinitionPipelineObjectField {
         String key,
         @Nullable String refValue,
         @Nullable String stringValue) {
-        this.key = Objects.requireNonNull(key);
+        this.key = key;
         this.refValue = refValue;
         this.stringValue = stringValue;
     }

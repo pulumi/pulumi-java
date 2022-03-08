@@ -24,8 +24,8 @@ public final class DirectoryConfigServiceAccountCredentials {
     private DirectoryConfigServiceAccountCredentials(
         String accountName,
         String accountPassword) {
-        this.accountName = Objects.requireNonNull(accountName);
-        this.accountPassword = Objects.requireNonNull(accountPassword);
+        this.accountName = accountName;
+        this.accountPassword = accountPassword;
     }
 
     /**

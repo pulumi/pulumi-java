@@ -34,8 +34,8 @@ public final class ServiceDnsConfig {
         List<ServiceDnsConfigDnsRecord> dnsRecords,
         String namespaceId,
         @Nullable String routingPolicy) {
-        this.dnsRecords = Objects.requireNonNull(dnsRecords);
-        this.namespaceId = Objects.requireNonNull(namespaceId);
+        this.dnsRecords = dnsRecords;
+        this.namespaceId = namespaceId;
         this.routingPolicy = routingPolicy;
     }
 

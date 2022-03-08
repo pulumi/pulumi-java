@@ -16,8 +16,8 @@ public final class GetSigningJobSignedObjectS3 {
     private GetSigningJobSignedObjectS3(
         String bucket,
         String key) {
-        this.bucket = Objects.requireNonNull(bucket);
-        this.key = Objects.requireNonNull(key);
+        this.bucket = bucket;
+        this.key = key;
     }
 
     public String getBucket() {

@@ -56,24 +56,24 @@ public final class GetKeyResult {
         List<GetKeyMultiRegionConfiguration> multiRegionConfigurations,
         String origin,
         String validTo) {
-        this.arn = Objects.requireNonNull(arn);
-        this.awsAccountId = Objects.requireNonNull(awsAccountId);
-        this.creationDate = Objects.requireNonNull(creationDate);
-        this.customerMasterKeySpec = Objects.requireNonNull(customerMasterKeySpec);
-        this.deletionDate = Objects.requireNonNull(deletionDate);
-        this.description = Objects.requireNonNull(description);
-        this.enabled = Objects.requireNonNull(enabled);
-        this.expirationModel = Objects.requireNonNull(expirationModel);
+        this.arn = arn;
+        this.awsAccountId = awsAccountId;
+        this.creationDate = creationDate;
+        this.customerMasterKeySpec = customerMasterKeySpec;
+        this.deletionDate = deletionDate;
+        this.description = description;
+        this.enabled = enabled;
+        this.expirationModel = expirationModel;
         this.grantTokens = grantTokens;
-        this.id = Objects.requireNonNull(id);
-        this.keyId = Objects.requireNonNull(keyId);
-        this.keyManager = Objects.requireNonNull(keyManager);
-        this.keyState = Objects.requireNonNull(keyState);
-        this.keyUsage = Objects.requireNonNull(keyUsage);
-        this.multiRegion = Objects.requireNonNull(multiRegion);
-        this.multiRegionConfigurations = Objects.requireNonNull(multiRegionConfigurations);
-        this.origin = Objects.requireNonNull(origin);
-        this.validTo = Objects.requireNonNull(validTo);
+        this.id = id;
+        this.keyId = keyId;
+        this.keyManager = keyManager;
+        this.keyState = keyState;
+        this.keyUsage = keyUsage;
+        this.multiRegion = multiRegion;
+        this.multiRegionConfigurations = multiRegionConfigurations;
+        this.origin = origin;
+        this.validTo = validTo;
     }
 
     public String getArn() {

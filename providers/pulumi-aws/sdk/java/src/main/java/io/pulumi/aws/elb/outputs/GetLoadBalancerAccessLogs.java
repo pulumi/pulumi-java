@@ -22,10 +22,10 @@ public final class GetLoadBalancerAccessLogs {
         String bucketPrefix,
         Boolean enabled,
         Integer interval) {
-        this.bucket = Objects.requireNonNull(bucket);
-        this.bucketPrefix = Objects.requireNonNull(bucketPrefix);
-        this.enabled = Objects.requireNonNull(enabled);
-        this.interval = Objects.requireNonNull(interval);
+        this.bucket = bucket;
+        this.bucketPrefix = bucketPrefix;
+        this.enabled = enabled;
+        this.interval = interval;
     }
 
     public String getBucket() {

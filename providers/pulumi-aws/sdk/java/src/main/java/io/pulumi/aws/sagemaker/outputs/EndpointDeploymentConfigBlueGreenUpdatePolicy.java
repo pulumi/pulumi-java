@@ -35,7 +35,7 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicy {
         EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfiguration trafficRoutingConfiguration) {
         this.maximumExecutionTimeoutInSeconds = maximumExecutionTimeoutInSeconds;
         this.terminationWaitInSeconds = terminationWaitInSeconds;
-        this.trafficRoutingConfiguration = Objects.requireNonNull(trafficRoutingConfiguration);
+        this.trafficRoutingConfiguration = trafficRoutingConfiguration;
     }
 
     /**

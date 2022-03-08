@@ -41,16 +41,16 @@ public final class GetAcceleratorResult {
         List<GetAcceleratorIpSet> ipSets,
         String name,
         Map<String,String> tags) {
-        this.arn = Objects.requireNonNull(arn);
-        this.attributes = Objects.requireNonNull(attributes);
-        this.dnsName = Objects.requireNonNull(dnsName);
-        this.enabled = Objects.requireNonNull(enabled);
-        this.hostedZoneId = Objects.requireNonNull(hostedZoneId);
-        this.id = Objects.requireNonNull(id);
-        this.ipAddressType = Objects.requireNonNull(ipAddressType);
-        this.ipSets = Objects.requireNonNull(ipSets);
-        this.name = Objects.requireNonNull(name);
-        this.tags = Objects.requireNonNull(tags);
+        this.arn = arn;
+        this.attributes = attributes;
+        this.dnsName = dnsName;
+        this.enabled = enabled;
+        this.hostedZoneId = hostedZoneId;
+        this.id = id;
+        this.ipAddressType = ipAddressType;
+        this.ipSets = ipSets;
+        this.name = name;
+        this.tags = tags;
     }
 
     public String getArn() {

@@ -14,7 +14,7 @@ public final class GetResponseHeadersPolicyCorsConfigAccessControlAllowOrigin {
 
     @OutputCustomType.Constructor({"items"})
     private GetResponseHeadersPolicyCorsConfigAccessControlAllowOrigin(List<String> items) {
-        this.items = Objects.requireNonNull(items);
+        this.items = items;
     }
 
     public List<String> getItems() {

@@ -17,7 +17,7 @@ public final class AnalyticsConfigurationStorageClassAnalysis {
 
     @OutputCustomType.Constructor({"dataExport"})
     private AnalyticsConfigurationStorageClassAnalysis(AnalyticsConfigurationStorageClassAnalysisDataExport dataExport) {
-        this.dataExport = Objects.requireNonNull(dataExport);
+        this.dataExport = dataExport;
     }
 
     /**

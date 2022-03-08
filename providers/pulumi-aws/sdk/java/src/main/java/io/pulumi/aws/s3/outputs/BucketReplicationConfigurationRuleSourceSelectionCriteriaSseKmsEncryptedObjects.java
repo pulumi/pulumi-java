@@ -17,7 +17,7 @@ public final class BucketReplicationConfigurationRuleSourceSelectionCriteriaSseK
 
     @OutputCustomType.Constructor({"enabled"})
     private BucketReplicationConfigurationRuleSourceSelectionCriteriaSseKmsEncryptedObjects(Boolean enabled) {
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
     }
 
     /**

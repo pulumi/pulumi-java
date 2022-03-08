@@ -27,7 +27,7 @@ public final class WebAclRuleStatementAndStatementStatementOrStatementStatementA
     private WebAclRuleStatementAndStatementStatementOrStatementStatementAndStatementStatementIpSetReferenceStatement(
         String arn,
         @Nullable WebAclRuleStatementAndStatementStatementOrStatementStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig ipSetForwardedIpConfig) {
-        this.arn = Objects.requireNonNull(arn);
+        this.arn = arn;
         this.ipSetForwardedIpConfig = ipSetForwardedIpConfig;
     }
 

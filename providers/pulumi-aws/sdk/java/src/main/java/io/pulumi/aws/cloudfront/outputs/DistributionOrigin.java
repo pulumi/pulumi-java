@@ -88,8 +88,8 @@ public final class DistributionOrigin {
         this.connectionTimeout = connectionTimeout;
         this.customHeaders = customHeaders;
         this.customOriginConfig = customOriginConfig;
-        this.domainName = Objects.requireNonNull(domainName);
-        this.originId = Objects.requireNonNull(originId);
+        this.domainName = domainName;
+        this.originId = originId;
         this.originPath = originPath;
         this.originShield = originShield;
         this.s3OriginConfig = s3OriginConfig;

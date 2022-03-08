@@ -17,7 +17,7 @@ public final class RuleGroupRuleStatementAndStatementStatementAndStatementStatem
 
     @OutputCustomType.Constructor({"name"})
     private RuleGroupRuleStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeader(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

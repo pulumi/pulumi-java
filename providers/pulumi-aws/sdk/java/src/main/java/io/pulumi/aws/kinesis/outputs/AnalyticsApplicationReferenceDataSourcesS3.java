@@ -30,9 +30,9 @@ public final class AnalyticsApplicationReferenceDataSourcesS3 {
         String bucketArn,
         String fileKey,
         String roleArn) {
-        this.bucketArn = Objects.requireNonNull(bucketArn);
-        this.fileKey = Objects.requireNonNull(fileKey);
-        this.roleArn = Objects.requireNonNull(roleArn);
+        this.bucketArn = bucketArn;
+        this.fileKey = fileKey;
+        this.roleArn = roleArn;
     }
 
     /**

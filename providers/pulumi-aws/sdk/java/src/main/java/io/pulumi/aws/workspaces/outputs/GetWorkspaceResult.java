@@ -58,19 +58,19 @@ public final class GetWorkspaceResult {
         String volumeEncryptionKey,
         String workspaceId,
         List<GetWorkspaceWorkspaceProperty> workspaceProperties) {
-        this.bundleId = Objects.requireNonNull(bundleId);
-        this.computerName = Objects.requireNonNull(computerName);
-        this.directoryId = Objects.requireNonNull(directoryId);
-        this.id = Objects.requireNonNull(id);
-        this.ipAddress = Objects.requireNonNull(ipAddress);
-        this.rootVolumeEncryptionEnabled = Objects.requireNonNull(rootVolumeEncryptionEnabled);
-        this.state = Objects.requireNonNull(state);
-        this.tags = Objects.requireNonNull(tags);
-        this.userName = Objects.requireNonNull(userName);
-        this.userVolumeEncryptionEnabled = Objects.requireNonNull(userVolumeEncryptionEnabled);
-        this.volumeEncryptionKey = Objects.requireNonNull(volumeEncryptionKey);
-        this.workspaceId = Objects.requireNonNull(workspaceId);
-        this.workspaceProperties = Objects.requireNonNull(workspaceProperties);
+        this.bundleId = bundleId;
+        this.computerName = computerName;
+        this.directoryId = directoryId;
+        this.id = id;
+        this.ipAddress = ipAddress;
+        this.rootVolumeEncryptionEnabled = rootVolumeEncryptionEnabled;
+        this.state = state;
+        this.tags = tags;
+        this.userName = userName;
+        this.userVolumeEncryptionEnabled = userVolumeEncryptionEnabled;
+        this.volumeEncryptionKey = volumeEncryptionKey;
+        this.workspaceId = workspaceId;
+        this.workspaceProperties = workspaceProperties;
     }
 
     public String getBundleId() {

@@ -31,9 +31,9 @@ public final class PatchBaselineSource {
         String configuration,
         String name,
         List<String> products) {
-        this.configuration = Objects.requireNonNull(configuration);
-        this.name = Objects.requireNonNull(name);
-        this.products = Objects.requireNonNull(products);
+        this.configuration = configuration;
+        this.name = name;
+        this.products = products;
     }
 
     /**

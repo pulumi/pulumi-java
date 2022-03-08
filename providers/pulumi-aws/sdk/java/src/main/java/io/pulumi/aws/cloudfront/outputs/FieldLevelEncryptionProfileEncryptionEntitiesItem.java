@@ -31,9 +31,9 @@ public final class FieldLevelEncryptionProfileEncryptionEntitiesItem {
         FieldLevelEncryptionProfileEncryptionEntitiesItemFieldPatterns fieldPatterns,
         String providerId,
         String publicKeyId) {
-        this.fieldPatterns = Objects.requireNonNull(fieldPatterns);
-        this.providerId = Objects.requireNonNull(providerId);
-        this.publicKeyId = Objects.requireNonNull(publicKeyId);
+        this.fieldPatterns = fieldPatterns;
+        this.providerId = providerId;
+        this.publicKeyId = publicKeyId;
     }
 
     /**

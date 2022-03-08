@@ -33,7 +33,7 @@ public final class LoadBalancerAccessLogs {
         String bucket,
         @Nullable Boolean enabled,
         @Nullable String prefix) {
-        this.bucket = Objects.requireNonNull(bucket);
+        this.bucket = bucket;
         this.enabled = enabled;
         this.prefix = prefix;
     }

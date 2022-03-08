@@ -16,8 +16,8 @@ public final class GetAmiProductCode {
     private GetAmiProductCode(
         String productCodeId,
         String productCodeType) {
-        this.productCodeId = Objects.requireNonNull(productCodeId);
-        this.productCodeType = Objects.requireNonNull(productCodeType);
+        this.productCodeId = productCodeId;
+        this.productCodeType = productCodeType;
     }
 
     public String getProductCodeId() {

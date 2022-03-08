@@ -69,9 +69,9 @@ public final class ListenerDefaultActionAuthenticateCognito {
         this.scope = scope;
         this.sessionCookieName = sessionCookieName;
         this.sessionTimeout = sessionTimeout;
-        this.userPoolArn = Objects.requireNonNull(userPoolArn);
-        this.userPoolClientId = Objects.requireNonNull(userPoolClientId);
-        this.userPoolDomain = Objects.requireNonNull(userPoolDomain);
+        this.userPoolArn = userPoolArn;
+        this.userPoolClientId = userPoolClientId;
+        this.userPoolDomain = userPoolDomain;
     }
 
     /**

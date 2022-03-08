@@ -38,10 +38,10 @@ public final class GetDomainEbsOption {
         Integer iops,
         Integer volumeSize,
         String volumeType) {
-        this.ebsEnabled = Objects.requireNonNull(ebsEnabled);
-        this.iops = Objects.requireNonNull(iops);
-        this.volumeSize = Objects.requireNonNull(volumeSize);
-        this.volumeType = Objects.requireNonNull(volumeType);
+        this.ebsEnabled = ebsEnabled;
+        this.iops = iops;
+        this.volumeSize = volumeSize;
+        this.volumeType = volumeType;
     }
 
     /**

@@ -48,10 +48,10 @@ public final class DirectoryConnectSettings {
         String vpcId) {
         this.availabilityZones = availabilityZones;
         this.connectIps = connectIps;
-        this.customerDnsIps = Objects.requireNonNull(customerDnsIps);
-        this.customerUsername = Objects.requireNonNull(customerUsername);
-        this.subnetIds = Objects.requireNonNull(subnetIds);
-        this.vpcId = Objects.requireNonNull(vpcId);
+        this.customerDnsIps = customerDnsIps;
+        this.customerUsername = customerUsername;
+        this.subnetIds = subnetIds;
+        this.vpcId = vpcId;
     }
 
     public List<String> getAvailabilityZones() {

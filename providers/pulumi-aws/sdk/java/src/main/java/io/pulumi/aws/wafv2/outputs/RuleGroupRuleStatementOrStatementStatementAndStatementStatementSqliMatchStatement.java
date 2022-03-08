@@ -29,7 +29,7 @@ public final class RuleGroupRuleStatementOrStatementStatementAndStatementStateme
         @Nullable RuleGroupRuleStatementOrStatementStatementAndStatementStatementSqliMatchStatementFieldToMatch fieldToMatch,
         List<RuleGroupRuleStatementOrStatementStatementAndStatementStatementSqliMatchStatementTextTransformation> textTransformations) {
         this.fieldToMatch = fieldToMatch;
-        this.textTransformations = Objects.requireNonNull(textTransformations);
+        this.textTransformations = textTransformations;
     }
 
     /**

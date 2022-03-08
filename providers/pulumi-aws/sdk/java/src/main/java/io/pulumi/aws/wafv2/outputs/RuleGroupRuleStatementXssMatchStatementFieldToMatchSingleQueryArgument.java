@@ -17,7 +17,7 @@ public final class RuleGroupRuleStatementXssMatchStatementFieldToMatchSingleQuer
 
     @OutputCustomType.Constructor({"name"})
     private RuleGroupRuleStatementXssMatchStatementFieldToMatchSingleQueryArgument(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

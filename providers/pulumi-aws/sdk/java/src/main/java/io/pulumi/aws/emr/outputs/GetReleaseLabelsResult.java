@@ -31,8 +31,8 @@ public final class GetReleaseLabelsResult {
         String id,
         List<String> releaseLabels) {
         this.filters = filters;
-        this.id = Objects.requireNonNull(id);
-        this.releaseLabels = Objects.requireNonNull(releaseLabels);
+        this.id = id;
+        this.releaseLabels = releaseLabels;
     }
 
     public Optional<GetReleaseLabelsFilters> getFilters() {

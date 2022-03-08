@@ -35,8 +35,8 @@ public final class GetRegionsResult {
         List<String> names) {
         this.allRegions = allRegions;
         this.filters = filters;
-        this.id = Objects.requireNonNull(id);
-        this.names = Objects.requireNonNull(names);
+        this.id = id;
+        this.names = names;
     }
 
     public Optional<Boolean> getAllRegions() {

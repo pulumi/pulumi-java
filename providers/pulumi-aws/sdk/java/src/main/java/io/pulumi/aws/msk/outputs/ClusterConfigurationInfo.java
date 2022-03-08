@@ -25,8 +25,8 @@ public final class ClusterConfigurationInfo {
     private ClusterConfigurationInfo(
         String arn,
         Integer revision) {
-        this.arn = Objects.requireNonNull(arn);
-        this.revision = Objects.requireNonNull(revision);
+        this.arn = arn;
+        this.revision = revision;
     }
 
     /**

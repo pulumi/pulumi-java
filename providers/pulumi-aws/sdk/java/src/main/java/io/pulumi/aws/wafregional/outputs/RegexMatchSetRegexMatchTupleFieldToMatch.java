@@ -31,7 +31,7 @@ public final class RegexMatchSetRegexMatchTupleFieldToMatch {
         @Nullable String data,
         String type) {
         this.data = data;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

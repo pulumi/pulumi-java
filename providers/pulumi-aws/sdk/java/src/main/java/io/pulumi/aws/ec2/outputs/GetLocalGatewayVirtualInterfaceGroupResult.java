@@ -31,10 +31,10 @@ public final class GetLocalGatewayVirtualInterfaceGroupResult {
         List<String> localGatewayVirtualInterfaceIds,
         Map<String,String> tags) {
         this.filters = filters;
-        this.id = Objects.requireNonNull(id);
-        this.localGatewayId = Objects.requireNonNull(localGatewayId);
-        this.localGatewayVirtualInterfaceIds = Objects.requireNonNull(localGatewayVirtualInterfaceIds);
-        this.tags = Objects.requireNonNull(tags);
+        this.id = id;
+        this.localGatewayId = localGatewayId;
+        this.localGatewayVirtualInterfaceIds = localGatewayVirtualInterfaceIds;
+        this.tags = tags;
     }
 
     public List<GetLocalGatewayVirtualInterfaceGroupFilter> getFilters() {

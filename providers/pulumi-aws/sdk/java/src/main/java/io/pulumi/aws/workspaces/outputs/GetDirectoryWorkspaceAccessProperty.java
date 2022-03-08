@@ -60,14 +60,14 @@ public final class GetDirectoryWorkspaceAccessProperty {
         String deviceTypeWeb,
         String deviceTypeWindows,
         String deviceTypeZeroclient) {
-        this.deviceTypeAndroid = Objects.requireNonNull(deviceTypeAndroid);
-        this.deviceTypeChromeos = Objects.requireNonNull(deviceTypeChromeos);
-        this.deviceTypeIos = Objects.requireNonNull(deviceTypeIos);
-        this.deviceTypeLinux = Objects.requireNonNull(deviceTypeLinux);
-        this.deviceTypeOsx = Objects.requireNonNull(deviceTypeOsx);
-        this.deviceTypeWeb = Objects.requireNonNull(deviceTypeWeb);
-        this.deviceTypeWindows = Objects.requireNonNull(deviceTypeWindows);
-        this.deviceTypeZeroclient = Objects.requireNonNull(deviceTypeZeroclient);
+        this.deviceTypeAndroid = deviceTypeAndroid;
+        this.deviceTypeChromeos = deviceTypeChromeos;
+        this.deviceTypeIos = deviceTypeIos;
+        this.deviceTypeLinux = deviceTypeLinux;
+        this.deviceTypeOsx = deviceTypeOsx;
+        this.deviceTypeWeb = deviceTypeWeb;
+        this.deviceTypeWindows = deviceTypeWindows;
+        this.deviceTypeZeroclient = deviceTypeZeroclient;
     }
 
     /**

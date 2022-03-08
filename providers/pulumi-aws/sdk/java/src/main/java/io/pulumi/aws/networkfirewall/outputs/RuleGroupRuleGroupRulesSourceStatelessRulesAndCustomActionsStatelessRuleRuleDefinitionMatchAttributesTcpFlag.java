@@ -28,7 +28,7 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
     private RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlag(
         List<String> flags,
         @Nullable List<String> masks) {
-        this.flags = Objects.requireNonNull(flags);
+        this.flags = flags;
         this.masks = masks;
     }
 

@@ -17,7 +17,7 @@ public final class WebAclRuleStatementOrStatementStatementOrStatementStatementOr
 
     @OutputCustomType.Constructor({"name"})
     private WebAclRuleStatementOrStatementStatementOrStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgument(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

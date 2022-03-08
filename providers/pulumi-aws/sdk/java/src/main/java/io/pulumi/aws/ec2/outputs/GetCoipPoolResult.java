@@ -42,13 +42,13 @@ public final class GetCoipPoolResult {
         List<String> poolCidrs,
         String poolId,
         Map<String,String> tags) {
-        this.arn = Objects.requireNonNull(arn);
+        this.arn = arn;
         this.filters = filters;
-        this.id = Objects.requireNonNull(id);
-        this.localGatewayRouteTableId = Objects.requireNonNull(localGatewayRouteTableId);
-        this.poolCidrs = Objects.requireNonNull(poolCidrs);
-        this.poolId = Objects.requireNonNull(poolId);
-        this.tags = Objects.requireNonNull(tags);
+        this.id = id;
+        this.localGatewayRouteTableId = localGatewayRouteTableId;
+        this.poolCidrs = poolCidrs;
+        this.poolId = poolId;
+        this.tags = tags;
     }
 
     /**

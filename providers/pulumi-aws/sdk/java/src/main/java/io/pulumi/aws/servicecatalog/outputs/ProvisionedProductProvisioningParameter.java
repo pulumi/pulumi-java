@@ -33,7 +33,7 @@ public final class ProvisionedProductProvisioningParameter {
         String key,
         @Nullable Boolean usePreviousValue,
         @Nullable String value) {
-        this.key = Objects.requireNonNull(key);
+        this.key = key;
         this.usePreviousValue = usePreviousValue;
         this.value = value;
     }

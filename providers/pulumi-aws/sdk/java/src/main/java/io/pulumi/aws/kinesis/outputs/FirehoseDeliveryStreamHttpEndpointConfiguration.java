@@ -94,7 +94,7 @@ public final class FirehoseDeliveryStreamHttpEndpointConfiguration {
         this.retryDuration = retryDuration;
         this.roleArn = roleArn;
         this.s3BackupMode = s3BackupMode;
-        this.url = Objects.requireNonNull(url);
+        this.url = url;
     }
 
     /**

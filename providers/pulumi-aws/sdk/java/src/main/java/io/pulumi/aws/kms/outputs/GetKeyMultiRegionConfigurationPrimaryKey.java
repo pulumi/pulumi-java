@@ -16,8 +16,8 @@ public final class GetKeyMultiRegionConfigurationPrimaryKey {
     private GetKeyMultiRegionConfigurationPrimaryKey(
         String arn,
         String region) {
-        this.arn = Objects.requireNonNull(arn);
-        this.region = Objects.requireNonNull(region);
+        this.arn = arn;
+        this.region = region;
     }
 
     public String getArn() {

@@ -56,13 +56,13 @@ public final class GetPortfolioResult {
         String providerName,
         Map<String,String> tags) {
         this.acceptLanguage = acceptLanguage;
-        this.arn = Objects.requireNonNull(arn);
-        this.createdTime = Objects.requireNonNull(createdTime);
-        this.description = Objects.requireNonNull(description);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.providerName = Objects.requireNonNull(providerName);
-        this.tags = Objects.requireNonNull(tags);
+        this.arn = arn;
+        this.createdTime = createdTime;
+        this.description = description;
+        this.id = id;
+        this.name = name;
+        this.providerName = providerName;
+        this.tags = tags;
     }
 
     public Optional<String> getAcceptLanguage() {

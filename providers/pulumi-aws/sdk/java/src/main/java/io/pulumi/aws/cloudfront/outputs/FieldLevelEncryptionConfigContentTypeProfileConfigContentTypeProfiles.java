@@ -14,7 +14,7 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfigContentType
 
     @OutputCustomType.Constructor({"items"})
     private FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfiles(List<FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItem> items) {
-        this.items = Objects.requireNonNull(items);
+        this.items = items;
     }
 
     public List<FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItem> getItems() {

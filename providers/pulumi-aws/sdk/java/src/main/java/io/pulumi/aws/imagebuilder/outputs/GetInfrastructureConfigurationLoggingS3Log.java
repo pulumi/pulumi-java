@@ -24,8 +24,8 @@ public final class GetInfrastructureConfigurationLoggingS3Log {
     private GetInfrastructureConfigurationLoggingS3Log(
         String s3BucketName,
         String s3KeyPrefix) {
-        this.s3BucketName = Objects.requireNonNull(s3BucketName);
-        this.s3KeyPrefix = Objects.requireNonNull(s3KeyPrefix);
+        this.s3BucketName = s3BucketName;
+        this.s3KeyPrefix = s3KeyPrefix;
     }
 
     /**

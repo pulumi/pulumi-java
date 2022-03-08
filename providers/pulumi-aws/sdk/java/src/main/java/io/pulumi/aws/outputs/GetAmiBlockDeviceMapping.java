@@ -37,10 +37,10 @@ public final class GetAmiBlockDeviceMapping {
         Map<String,String> ebs,
         String noDevice,
         String virtualName) {
-        this.deviceName = Objects.requireNonNull(deviceName);
-        this.ebs = Objects.requireNonNull(ebs);
-        this.noDevice = Objects.requireNonNull(noDevice);
-        this.virtualName = Objects.requireNonNull(virtualName);
+        this.deviceName = deviceName;
+        this.ebs = ebs;
+        this.noDevice = noDevice;
+        this.virtualName = virtualName;
     }
 
     /**

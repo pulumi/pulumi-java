@@ -124,7 +124,7 @@ public final class EndpointKafkaSettings {
         @Nullable String sslClientKeyArn,
         @Nullable String sslClientKeyPassword,
         @Nullable String topic) {
-        this.broker = Objects.requireNonNull(broker);
+        this.broker = broker;
         this.includeControlDetails = includeControlDetails;
         this.includeNullAndEmpty = includeNullAndEmpty;
         this.includePartitionValue = includePartitionValue;

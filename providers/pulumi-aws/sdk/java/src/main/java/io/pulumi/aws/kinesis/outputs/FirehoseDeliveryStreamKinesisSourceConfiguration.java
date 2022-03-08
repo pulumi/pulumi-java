@@ -24,8 +24,8 @@ public final class FirehoseDeliveryStreamKinesisSourceConfiguration {
     private FirehoseDeliveryStreamKinesisSourceConfiguration(
         String kinesisStreamArn,
         String roleArn) {
-        this.kinesisStreamArn = Objects.requireNonNull(kinesisStreamArn);
-        this.roleArn = Objects.requireNonNull(roleArn);
+        this.kinesisStreamArn = kinesisStreamArn;
+        this.roleArn = roleArn;
     }
 
     /**

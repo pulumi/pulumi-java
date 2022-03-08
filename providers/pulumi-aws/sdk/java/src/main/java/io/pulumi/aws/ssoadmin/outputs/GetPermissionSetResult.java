@@ -51,15 +51,15 @@ public final class GetPermissionSetResult {
         String relayState,
         String sessionDuration,
         Map<String,String> tags) {
-        this.arn = Objects.requireNonNull(arn);
-        this.createdDate = Objects.requireNonNull(createdDate);
-        this.description = Objects.requireNonNull(description);
-        this.id = Objects.requireNonNull(id);
-        this.instanceArn = Objects.requireNonNull(instanceArn);
-        this.name = Objects.requireNonNull(name);
-        this.relayState = Objects.requireNonNull(relayState);
-        this.sessionDuration = Objects.requireNonNull(sessionDuration);
-        this.tags = Objects.requireNonNull(tags);
+        this.arn = arn;
+        this.createdDate = createdDate;
+        this.description = description;
+        this.id = id;
+        this.instanceArn = instanceArn;
+        this.name = name;
+        this.relayState = relayState;
+        this.sessionDuration = sessionDuration;
+        this.tags = tags;
     }
 
     public String getArn() {

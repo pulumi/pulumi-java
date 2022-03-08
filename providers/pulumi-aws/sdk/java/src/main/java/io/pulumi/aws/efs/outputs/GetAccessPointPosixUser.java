@@ -32,9 +32,9 @@ public final class GetAccessPointPosixUser {
         Integer gid,
         List<Integer> secondaryGids,
         Integer uid) {
-        this.gid = Objects.requireNonNull(gid);
-        this.secondaryGids = Objects.requireNonNull(secondaryGids);
-        this.uid = Objects.requireNonNull(uid);
+        this.gid = gid;
+        this.secondaryGids = secondaryGids;
+        this.uid = uid;
     }
 
     /**

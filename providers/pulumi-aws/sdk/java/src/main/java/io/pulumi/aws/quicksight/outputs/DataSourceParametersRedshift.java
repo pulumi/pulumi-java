@@ -40,7 +40,7 @@ public final class DataSourceParametersRedshift {
         @Nullable String host,
         @Nullable Integer port) {
         this.clusterId = clusterId;
-        this.database = Objects.requireNonNull(database);
+        this.database = database;
         this.host = host;
         this.port = port;
     }

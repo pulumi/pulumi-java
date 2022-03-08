@@ -30,8 +30,8 @@ public final class GetInstanceTypesResult {
         String id,
         List<String> instanceTypes) {
         this.filters = filters;
-        this.id = Objects.requireNonNull(id);
-        this.instanceTypes = Objects.requireNonNull(instanceTypes);
+        this.id = id;
+        this.instanceTypes = instanceTypes;
     }
 
     public List<GetInstanceTypesFilter> getFilters() {

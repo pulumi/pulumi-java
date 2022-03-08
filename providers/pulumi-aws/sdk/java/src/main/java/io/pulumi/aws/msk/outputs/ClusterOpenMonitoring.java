@@ -17,7 +17,7 @@ public final class ClusterOpenMonitoring {
 
     @OutputCustomType.Constructor({"prometheus"})
     private ClusterOpenMonitoring(ClusterOpenMonitoringPrometheus prometheus) {
-        this.prometheus = Objects.requireNonNull(prometheus);
+        this.prometheus = prometheus;
     }
 
     /**

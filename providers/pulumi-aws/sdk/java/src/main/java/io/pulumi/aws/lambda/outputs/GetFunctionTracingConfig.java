@@ -13,7 +13,7 @@ public final class GetFunctionTracingConfig {
 
     @OutputCustomType.Constructor({"mode"})
     private GetFunctionTracingConfig(String mode) {
-        this.mode = Objects.requireNonNull(mode);
+        this.mode = mode;
     }
 
     public String getMode() {

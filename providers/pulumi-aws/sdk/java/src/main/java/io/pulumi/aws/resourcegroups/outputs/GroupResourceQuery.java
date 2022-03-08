@@ -26,7 +26,7 @@ public final class GroupResourceQuery {
     private GroupResourceQuery(
         String query,
         @Nullable String type) {
-        this.query = Objects.requireNonNull(query);
+        this.query = query;
         this.type = type;
     }
 

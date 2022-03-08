@@ -17,7 +17,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
 
     @OutputCustomType.Constructor({"name"})
     private WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementAndStatementStatementByteMatchStatementFieldToMatchSingleHeader(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

@@ -13,7 +13,7 @@ public final class DistributionRestrictions {
 
     @OutputCustomType.Constructor({"geoRestriction"})
     private DistributionRestrictions(DistributionRestrictionsGeoRestriction geoRestriction) {
-        this.geoRestriction = Objects.requireNonNull(geoRestriction);
+        this.geoRestriction = geoRestriction;
     }
 
     public DistributionRestrictionsGeoRestriction getGeoRestriction() {

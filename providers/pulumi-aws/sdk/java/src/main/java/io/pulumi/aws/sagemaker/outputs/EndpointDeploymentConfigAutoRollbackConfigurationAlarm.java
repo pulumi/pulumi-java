@@ -17,7 +17,7 @@ public final class EndpointDeploymentConfigAutoRollbackConfigurationAlarm {
 
     @OutputCustomType.Constructor({"alarmName"})
     private EndpointDeploymentConfigAutoRollbackConfigurationAlarm(String alarmName) {
-        this.alarmName = Objects.requireNonNull(alarmName);
+        this.alarmName = alarmName;
     }
 
     /**

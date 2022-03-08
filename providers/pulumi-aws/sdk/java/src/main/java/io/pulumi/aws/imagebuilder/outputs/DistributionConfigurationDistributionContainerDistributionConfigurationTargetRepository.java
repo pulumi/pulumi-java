@@ -24,8 +24,8 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
     private DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepository(
         String repositoryName,
         String service) {
-        this.repositoryName = Objects.requireNonNull(repositoryName);
-        this.service = Objects.requireNonNull(service);
+        this.repositoryName = repositoryName;
+        this.service = service;
     }
 
     /**

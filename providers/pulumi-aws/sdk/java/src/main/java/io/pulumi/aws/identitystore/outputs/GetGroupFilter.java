@@ -24,8 +24,8 @@ public final class GetGroupFilter {
     private GetGroupFilter(
         String attributePath,
         String attributeValue) {
-        this.attributePath = Objects.requireNonNull(attributePath);
-        this.attributeValue = Objects.requireNonNull(attributeValue);
+        this.attributePath = attributePath;
+        this.attributeValue = attributeValue;
     }
 
     /**

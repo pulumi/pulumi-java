@@ -25,8 +25,8 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingCo
     private EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationCanarySize(
         String type,
         Integer value) {
-        this.type = Objects.requireNonNull(type);
-        this.value = Objects.requireNonNull(value);
+        this.type = type;
+        this.value = value;
     }
 
     /**

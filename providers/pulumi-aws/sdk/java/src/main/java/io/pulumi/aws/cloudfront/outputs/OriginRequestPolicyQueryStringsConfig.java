@@ -19,7 +19,7 @@ public final class OriginRequestPolicyQueryStringsConfig {
     private OriginRequestPolicyQueryStringsConfig(
         String queryStringBehavior,
         @Nullable OriginRequestPolicyQueryStringsConfigQueryStrings queryStrings) {
-        this.queryStringBehavior = Objects.requireNonNull(queryStringBehavior);
+        this.queryStringBehavior = queryStringBehavior;
         this.queryStrings = queryStrings;
     }
 

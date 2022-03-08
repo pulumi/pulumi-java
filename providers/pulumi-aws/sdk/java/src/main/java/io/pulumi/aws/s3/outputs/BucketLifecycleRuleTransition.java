@@ -35,7 +35,7 @@ public final class BucketLifecycleRuleTransition {
         String storageClass) {
         this.date = date;
         this.days = days;
-        this.storageClass = Objects.requireNonNull(storageClass);
+        this.storageClass = storageClass;
     }
 
     /**

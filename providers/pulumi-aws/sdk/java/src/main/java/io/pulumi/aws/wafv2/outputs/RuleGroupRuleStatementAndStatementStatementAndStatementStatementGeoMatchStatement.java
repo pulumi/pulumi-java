@@ -28,7 +28,7 @@ public final class RuleGroupRuleStatementAndStatementStatementAndStatementStatem
     private RuleGroupRuleStatementAndStatementStatementAndStatementStatementGeoMatchStatement(
         List<String> countryCodes,
         @Nullable RuleGroupRuleStatementAndStatementStatementAndStatementStatementGeoMatchStatementForwardedIpConfig forwardedIpConfig) {
-        this.countryCodes = Objects.requireNonNull(countryCodes);
+        this.countryCodes = countryCodes;
         this.forwardedIpConfig = forwardedIpConfig;
     }
 

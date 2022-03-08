@@ -34,7 +34,7 @@ public final class DomainAutoTuneOptions {
         String desiredState,
         @Nullable List<DomainAutoTuneOptionsMaintenanceSchedule> maintenanceSchedules,
         @Nullable String rollbackOnDisable) {
-        this.desiredState = Objects.requireNonNull(desiredState);
+        this.desiredState = desiredState;
         this.maintenanceSchedules = maintenanceSchedules;
         this.rollbackOnDisable = rollbackOnDisable;
     }

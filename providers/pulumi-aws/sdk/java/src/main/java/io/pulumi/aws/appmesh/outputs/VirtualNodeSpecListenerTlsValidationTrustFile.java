@@ -17,7 +17,7 @@ public final class VirtualNodeSpecListenerTlsValidationTrustFile {
 
     @OutputCustomType.Constructor({"certificateChain"})
     private VirtualNodeSpecListenerTlsValidationTrustFile(String certificateChain) {
-        this.certificateChain = Objects.requireNonNull(certificateChain);
+        this.certificateChain = certificateChain;
     }
 
     /**

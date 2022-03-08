@@ -30,9 +30,9 @@ public final class GetPipelineDefinitionPipelineObjectField {
         String key,
         String refValue,
         String stringValue) {
-        this.key = Objects.requireNonNull(key);
-        this.refValue = Objects.requireNonNull(refValue);
-        this.stringValue = Objects.requireNonNull(stringValue);
+        this.key = key;
+        this.refValue = refValue;
+        this.stringValue = stringValue;
     }
 
     /**

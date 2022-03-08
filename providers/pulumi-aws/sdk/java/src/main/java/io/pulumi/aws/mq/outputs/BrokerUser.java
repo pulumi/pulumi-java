@@ -42,8 +42,8 @@ public final class BrokerUser {
         String username) {
         this.consoleAccess = consoleAccess;
         this.groups = groups;
-        this.password = Objects.requireNonNull(password);
-        this.username = Objects.requireNonNull(username);
+        this.password = password;
+        this.username = username;
     }
 
     /**

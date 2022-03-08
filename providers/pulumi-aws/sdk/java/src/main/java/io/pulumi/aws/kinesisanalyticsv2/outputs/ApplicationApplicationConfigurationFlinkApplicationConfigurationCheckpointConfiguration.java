@@ -45,7 +45,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
         @Nullable Integer minPauseBetweenCheckpoints) {
         this.checkpointInterval = checkpointInterval;
         this.checkpointingEnabled = checkpointingEnabled;
-        this.configurationType = Objects.requireNonNull(configurationType);
+        this.configurationType = configurationType;
         this.minPauseBetweenCheckpoints = minPauseBetweenCheckpoints;
     }
 

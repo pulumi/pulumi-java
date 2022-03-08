@@ -46,13 +46,13 @@ public final class GetImageResult {
         String operatingSystemType,
         String requiredTenancy,
         String state) {
-        this.description = Objects.requireNonNull(description);
-        this.id = Objects.requireNonNull(id);
-        this.imageId = Objects.requireNonNull(imageId);
-        this.name = Objects.requireNonNull(name);
-        this.operatingSystemType = Objects.requireNonNull(operatingSystemType);
-        this.requiredTenancy = Objects.requireNonNull(requiredTenancy);
-        this.state = Objects.requireNonNull(state);
+        this.description = description;
+        this.id = id;
+        this.imageId = imageId;
+        this.name = name;
+        this.operatingSystemType = operatingSystemType;
+        this.requiredTenancy = requiredTenancy;
+        this.state = state;
     }
 
     /**

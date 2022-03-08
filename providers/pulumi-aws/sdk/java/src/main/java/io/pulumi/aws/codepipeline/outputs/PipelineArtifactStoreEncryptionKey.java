@@ -24,8 +24,8 @@ public final class PipelineArtifactStoreEncryptionKey {
     private PipelineArtifactStoreEncryptionKey(
         String id,
         String type) {
-        this.id = Objects.requireNonNull(id);
-        this.type = Objects.requireNonNull(type);
+        this.id = id;
+        this.type = type;
     }
 
     /**

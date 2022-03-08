@@ -44,12 +44,12 @@ public final class GetSessionContextResult {
         String issuerId,
         String issuerName,
         String sessionName) {
-        this.arn = Objects.requireNonNull(arn);
-        this.id = Objects.requireNonNull(id);
-        this.issuerArn = Objects.requireNonNull(issuerArn);
-        this.issuerId = Objects.requireNonNull(issuerId);
-        this.issuerName = Objects.requireNonNull(issuerName);
-        this.sessionName = Objects.requireNonNull(sessionName);
+        this.arn = arn;
+        this.id = id;
+        this.issuerArn = issuerArn;
+        this.issuerId = issuerId;
+        this.issuerName = issuerName;
+        this.sessionName = sessionName;
     }
 
     public String getArn() {

@@ -29,7 +29,7 @@ public final class WebAclRuleStatementSqliMatchStatement {
         @Nullable WebAclRuleStatementSqliMatchStatementFieldToMatch fieldToMatch,
         List<WebAclRuleStatementSqliMatchStatementTextTransformation> textTransformations) {
         this.fieldToMatch = fieldToMatch;
-        this.textTransformations = Objects.requireNonNull(textTransformations);
+        this.textTransformations = textTransformations;
     }
 
     /**

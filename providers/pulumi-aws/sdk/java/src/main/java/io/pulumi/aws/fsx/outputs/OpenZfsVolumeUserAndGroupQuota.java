@@ -27,9 +27,9 @@ public final class OpenZfsVolumeUserAndGroupQuota {
         Integer id,
         Integer storageCapacityQuotaGib,
         String type) {
-        this.id = Objects.requireNonNull(id);
-        this.storageCapacityQuotaGib = Objects.requireNonNull(storageCapacityQuotaGib);
-        this.type = Objects.requireNonNull(type);
+        this.id = id;
+        this.storageCapacityQuotaGib = storageCapacityQuotaGib;
+        this.type = type;
     }
 
     /**

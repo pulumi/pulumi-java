@@ -34,8 +34,8 @@ public final class IntentConclusionStatementMessage {
         String content,
         String contentType,
         @Nullable Integer groupNumber) {
-        this.content = Objects.requireNonNull(content);
-        this.contentType = Objects.requireNonNull(contentType);
+        this.content = content;
+        this.contentType = contentType;
         this.groupNumber = groupNumber;
     }
 

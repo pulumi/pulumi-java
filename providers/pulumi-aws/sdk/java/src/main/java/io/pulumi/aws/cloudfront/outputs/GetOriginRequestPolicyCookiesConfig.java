@@ -18,8 +18,8 @@ public final class GetOriginRequestPolicyCookiesConfig {
     private GetOriginRequestPolicyCookiesConfig(
         String cookieBehavior,
         List<GetOriginRequestPolicyCookiesConfigCookie> cookies) {
-        this.cookieBehavior = Objects.requireNonNull(cookieBehavior);
-        this.cookies = Objects.requireNonNull(cookies);
+        this.cookieBehavior = cookieBehavior;
+        this.cookies = cookies;
     }
 
     public String getCookieBehavior() {

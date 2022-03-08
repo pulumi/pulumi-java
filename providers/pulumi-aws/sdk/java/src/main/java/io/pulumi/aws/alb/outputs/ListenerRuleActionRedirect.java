@@ -55,7 +55,7 @@ public final class ListenerRuleActionRedirect {
         this.port = port;
         this.protocol = protocol;
         this.query = query;
-        this.statusCode = Objects.requireNonNull(statusCode);
+        this.statusCode = statusCode;
     }
 
     /**

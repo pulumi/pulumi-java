@@ -43,7 +43,7 @@ public final class ApplicationAppversionLifecycle {
         this.deleteSourceFromS3 = deleteSourceFromS3;
         this.maxAgeInDays = maxAgeInDays;
         this.maxCount = maxCount;
-        this.serviceRole = Objects.requireNonNull(serviceRole);
+        this.serviceRole = serviceRole;
     }
 
     /**

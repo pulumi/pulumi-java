@@ -33,9 +33,9 @@ public final class GetEndpointResult {
         String endpointAddress,
         @Nullable String endpointType,
         String id) {
-        this.endpointAddress = Objects.requireNonNull(endpointAddress);
+        this.endpointAddress = endpointAddress;
         this.endpointType = endpointType;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
     }
 
     /**

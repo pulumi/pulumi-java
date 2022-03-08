@@ -27,7 +27,7 @@ public final class WebAclRuleStatementNotStatementStatementNotStatementStatement
     private WebAclRuleStatementNotStatementStatementNotStatementStatementIpSetReferenceStatement(
         String arn,
         @Nullable WebAclRuleStatementNotStatementStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig ipSetForwardedIpConfig) {
-        this.arn = Objects.requireNonNull(arn);
+        this.arn = arn;
         this.ipSetForwardedIpConfig = ipSetForwardedIpConfig;
     }
 

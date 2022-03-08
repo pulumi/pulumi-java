@@ -17,7 +17,7 @@ public final class GatewayRouteSpecHttp2RouteAction {
 
     @OutputCustomType.Constructor({"target"})
     private GatewayRouteSpecHttp2RouteAction(GatewayRouteSpecHttp2RouteActionTarget target) {
-        this.target = Objects.requireNonNull(target);
+        this.target = target;
     }
 
     /**

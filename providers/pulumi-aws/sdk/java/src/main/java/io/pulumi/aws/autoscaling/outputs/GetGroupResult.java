@@ -124,26 +124,26 @@ public final class GetGroupResult {
         List<String> targetGroupArns,
         List<String> terminationPolicies,
         String vpcZoneIdentifier) {
-        this.arn = Objects.requireNonNull(arn);
-        this.availabilityZones = Objects.requireNonNull(availabilityZones);
-        this.defaultCooldown = Objects.requireNonNull(defaultCooldown);
-        this.desiredCapacity = Objects.requireNonNull(desiredCapacity);
-        this.healthCheckGracePeriod = Objects.requireNonNull(healthCheckGracePeriod);
-        this.healthCheckType = Objects.requireNonNull(healthCheckType);
-        this.id = Objects.requireNonNull(id);
-        this.launchConfiguration = Objects.requireNonNull(launchConfiguration);
-        this.launchTemplates = Objects.requireNonNull(launchTemplates);
-        this.loadBalancers = Objects.requireNonNull(loadBalancers);
-        this.maxSize = Objects.requireNonNull(maxSize);
-        this.minSize = Objects.requireNonNull(minSize);
-        this.name = Objects.requireNonNull(name);
-        this.newInstancesProtectedFromScaleIn = Objects.requireNonNull(newInstancesProtectedFromScaleIn);
-        this.placementGroup = Objects.requireNonNull(placementGroup);
-        this.serviceLinkedRoleArn = Objects.requireNonNull(serviceLinkedRoleArn);
-        this.status = Objects.requireNonNull(status);
-        this.targetGroupArns = Objects.requireNonNull(targetGroupArns);
-        this.terminationPolicies = Objects.requireNonNull(terminationPolicies);
-        this.vpcZoneIdentifier = Objects.requireNonNull(vpcZoneIdentifier);
+        this.arn = arn;
+        this.availabilityZones = availabilityZones;
+        this.defaultCooldown = defaultCooldown;
+        this.desiredCapacity = desiredCapacity;
+        this.healthCheckGracePeriod = healthCheckGracePeriod;
+        this.healthCheckType = healthCheckType;
+        this.id = id;
+        this.launchConfiguration = launchConfiguration;
+        this.launchTemplates = launchTemplates;
+        this.loadBalancers = loadBalancers;
+        this.maxSize = maxSize;
+        this.minSize = minSize;
+        this.name = name;
+        this.newInstancesProtectedFromScaleIn = newInstancesProtectedFromScaleIn;
+        this.placementGroup = placementGroup;
+        this.serviceLinkedRoleArn = serviceLinkedRoleArn;
+        this.status = status;
+        this.targetGroupArns = targetGroupArns;
+        this.terminationPolicies = terminationPolicies;
+        this.vpcZoneIdentifier = vpcZoneIdentifier;
     }
 
     /**

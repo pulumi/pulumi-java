@@ -84,7 +84,7 @@ public final class SpotFleetRequestLaunchSpecification {
         @Nullable String userData,
         @Nullable List<String> vpcSecurityGroupIds,
         @Nullable String weightedCapacity) {
-        this.ami = Objects.requireNonNull(ami);
+        this.ami = ami;
         this.associatePublicIpAddress = associatePublicIpAddress;
         this.availabilityZone = availabilityZone;
         this.ebsBlockDevices = ebsBlockDevices;
@@ -92,7 +92,7 @@ public final class SpotFleetRequestLaunchSpecification {
         this.ephemeralBlockDevices = ephemeralBlockDevices;
         this.iamInstanceProfile = iamInstanceProfile;
         this.iamInstanceProfileArn = iamInstanceProfileArn;
-        this.instanceType = Objects.requireNonNull(instanceType);
+        this.instanceType = instanceType;
         this.keyName = keyName;
         this.monitoring = monitoring;
         this.placementGroup = placementGroup;

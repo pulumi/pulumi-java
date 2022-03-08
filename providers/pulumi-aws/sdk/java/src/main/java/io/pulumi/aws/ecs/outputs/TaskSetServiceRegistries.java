@@ -42,7 +42,7 @@ public final class TaskSetServiceRegistries {
         this.containerName = containerName;
         this.containerPort = containerPort;
         this.port = port;
-        this.registryArn = Objects.requireNonNull(registryArn);
+        this.registryArn = registryArn;
     }
 
     /**

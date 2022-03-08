@@ -44,7 +44,7 @@ public final class DistributionConfigurationDistribution {
         this.amiDistributionConfiguration = amiDistributionConfiguration;
         this.containerDistributionConfiguration = containerDistributionConfiguration;
         this.licenseConfigurationArns = licenseConfigurationArns;
-        this.region = Objects.requireNonNull(region);
+        this.region = region;
     }
 
     /**

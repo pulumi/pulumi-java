@@ -22,8 +22,8 @@ public final class GetSecretResult {
     private GetSecretResult(
         String id,
         List<GetSecretSecret> secrets) {
-        this.id = Objects.requireNonNull(id);
-        this.secrets = Objects.requireNonNull(secrets);
+        this.id = id;
+        this.secrets = secrets;
     }
 
     /**

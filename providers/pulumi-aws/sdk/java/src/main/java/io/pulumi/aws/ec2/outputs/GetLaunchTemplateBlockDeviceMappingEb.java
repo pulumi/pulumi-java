@@ -29,14 +29,14 @@ public final class GetLaunchTemplateBlockDeviceMappingEb {
         Integer throughput,
         Integer volumeSize,
         String volumeType) {
-        this.deleteOnTermination = Objects.requireNonNull(deleteOnTermination);
-        this.encrypted = Objects.requireNonNull(encrypted);
-        this.iops = Objects.requireNonNull(iops);
-        this.kmsKeyId = Objects.requireNonNull(kmsKeyId);
-        this.snapshotId = Objects.requireNonNull(snapshotId);
-        this.throughput = Objects.requireNonNull(throughput);
-        this.volumeSize = Objects.requireNonNull(volumeSize);
-        this.volumeType = Objects.requireNonNull(volumeType);
+        this.deleteOnTermination = deleteOnTermination;
+        this.encrypted = encrypted;
+        this.iops = iops;
+        this.kmsKeyId = kmsKeyId;
+        this.snapshotId = snapshotId;
+        this.throughput = throughput;
+        this.volumeSize = volumeSize;
+        this.volumeType = volumeType;
     }
 
     public String getDeleteOnTermination() {

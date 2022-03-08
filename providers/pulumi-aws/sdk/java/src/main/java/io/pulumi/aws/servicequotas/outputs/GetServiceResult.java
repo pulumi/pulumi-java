@@ -26,9 +26,9 @@ public final class GetServiceResult {
         String id,
         String serviceCode,
         String serviceName) {
-        this.id = Objects.requireNonNull(id);
-        this.serviceCode = Objects.requireNonNull(serviceCode);
-        this.serviceName = Objects.requireNonNull(serviceName);
+        this.id = id;
+        this.serviceCode = serviceCode;
+        this.serviceName = serviceName;
     }
 
     /**

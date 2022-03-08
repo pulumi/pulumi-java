@@ -18,7 +18,7 @@ public final class WebAclRuleActionCountCustomRequestHandling {
 
     @OutputCustomType.Constructor({"insertHeaders"})
     private WebAclRuleActionCountCustomRequestHandling(List<WebAclRuleActionCountCustomRequestHandlingInsertHeader> insertHeaders) {
-        this.insertHeaders = Objects.requireNonNull(insertHeaders);
+        this.insertHeaders = insertHeaders;
     }
 
     /**

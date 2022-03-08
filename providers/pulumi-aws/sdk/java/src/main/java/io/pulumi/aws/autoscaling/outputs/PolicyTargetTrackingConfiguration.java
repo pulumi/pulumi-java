@@ -44,7 +44,7 @@ public final class PolicyTargetTrackingConfiguration {
         this.customizedMetricSpecification = customizedMetricSpecification;
         this.disableScaleIn = disableScaleIn;
         this.predefinedMetricSpecification = predefinedMetricSpecification;
-        this.targetValue = Objects.requireNonNull(targetValue);
+        this.targetValue = targetValue;
     }
 
     /**

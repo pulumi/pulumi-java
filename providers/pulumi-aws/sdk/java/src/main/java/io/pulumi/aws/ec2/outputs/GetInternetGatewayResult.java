@@ -43,13 +43,13 @@ public final class GetInternetGatewayResult {
         String internetGatewayId,
         String ownerId,
         Map<String,String> tags) {
-        this.arn = Objects.requireNonNull(arn);
-        this.attachments = Objects.requireNonNull(attachments);
+        this.arn = arn;
+        this.attachments = attachments;
         this.filters = filters;
-        this.id = Objects.requireNonNull(id);
-        this.internetGatewayId = Objects.requireNonNull(internetGatewayId);
-        this.ownerId = Objects.requireNonNull(ownerId);
-        this.tags = Objects.requireNonNull(tags);
+        this.id = id;
+        this.internetGatewayId = internetGatewayId;
+        this.ownerId = ownerId;
+        this.tags = tags;
     }
 
     /**

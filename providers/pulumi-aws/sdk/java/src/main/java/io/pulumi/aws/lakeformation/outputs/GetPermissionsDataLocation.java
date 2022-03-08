@@ -24,8 +24,8 @@ public final class GetPermissionsDataLocation {
     private GetPermissionsDataLocation(
         String arn,
         String catalogId) {
-        this.arn = Objects.requireNonNull(arn);
-        this.catalogId = Objects.requireNonNull(catalogId);
+        this.arn = arn;
+        this.catalogId = catalogId;
     }
 
     /**

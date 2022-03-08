@@ -17,7 +17,7 @@ public final class TablePointInTimeRecovery {
 
     @OutputCustomType.Constructor({"enabled"})
     private TablePointInTimeRecovery(Boolean enabled) {
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
     }
 
     /**

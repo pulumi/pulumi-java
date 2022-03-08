@@ -14,7 +14,7 @@ public final class GetSigningJobSignedObject {
 
     @OutputCustomType.Constructor({"s3s"})
     private GetSigningJobSignedObject(List<GetSigningJobSignedObjectS3> s3s) {
-        this.s3s = Objects.requireNonNull(s3s);
+        this.s3s = s3s;
     }
 
     public List<GetSigningJobSignedObjectS3> getS3s() {

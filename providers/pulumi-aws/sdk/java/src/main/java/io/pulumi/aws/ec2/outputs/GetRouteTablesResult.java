@@ -36,9 +36,9 @@ public final class GetRouteTablesResult {
         Map<String,String> tags,
         @Nullable String vpcId) {
         this.filters = filters;
-        this.id = Objects.requireNonNull(id);
-        this.ids = Objects.requireNonNull(ids);
-        this.tags = Objects.requireNonNull(tags);
+        this.id = id;
+        this.ids = ids;
+        this.tags = tags;
         this.vpcId = vpcId;
     }
 

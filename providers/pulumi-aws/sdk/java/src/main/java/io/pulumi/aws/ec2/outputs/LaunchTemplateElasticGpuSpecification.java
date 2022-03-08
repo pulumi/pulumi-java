@@ -17,7 +17,7 @@ public final class LaunchTemplateElasticGpuSpecification {
 
     @OutputCustomType.Constructor({"type"})
     private LaunchTemplateElasticGpuSpecification(String type) {
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

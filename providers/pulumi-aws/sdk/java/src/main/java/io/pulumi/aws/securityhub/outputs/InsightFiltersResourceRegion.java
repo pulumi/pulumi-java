@@ -24,8 +24,8 @@ public final class InsightFiltersResourceRegion {
     private InsightFiltersResourceRegion(
         String comparison,
         String value) {
-        this.comparison = Objects.requireNonNull(comparison);
-        this.value = Objects.requireNonNull(value);
+        this.comparison = comparison;
+        this.value = value;
     }
 
     /**

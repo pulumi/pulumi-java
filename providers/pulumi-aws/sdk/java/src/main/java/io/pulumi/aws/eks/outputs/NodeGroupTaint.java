@@ -32,8 +32,8 @@ public final class NodeGroupTaint {
         String effect,
         String key,
         @Nullable String value) {
-        this.effect = Objects.requireNonNull(effect);
-        this.key = Objects.requireNonNull(key);
+        this.effect = effect;
+        this.key = key;
         this.value = value;
     }
 

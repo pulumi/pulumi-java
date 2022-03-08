@@ -81,12 +81,12 @@ public final class IntentSlot {
         @Nullable String slotTypeVersion,
         @Nullable IntentSlotValueElicitationPrompt valueElicitationPrompt) {
         this.description = description;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.priority = priority;
         this.responseCard = responseCard;
         this.sampleUtterances = sampleUtterances;
-        this.slotConstraint = Objects.requireNonNull(slotConstraint);
-        this.slotType = Objects.requireNonNull(slotType);
+        this.slotConstraint = slotConstraint;
+        this.slotType = slotType;
         this.slotTypeVersion = slotTypeVersion;
         this.valueElicitationPrompt = valueElicitationPrompt;
     }

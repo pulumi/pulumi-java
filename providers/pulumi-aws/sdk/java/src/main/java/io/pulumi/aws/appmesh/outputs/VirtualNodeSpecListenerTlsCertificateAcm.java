@@ -17,7 +17,7 @@ public final class VirtualNodeSpecListenerTlsCertificateAcm {
 
     @OutputCustomType.Constructor({"certificateArn"})
     private VirtualNodeSpecListenerTlsCertificateAcm(String certificateArn) {
-        this.certificateArn = Objects.requireNonNull(certificateArn);
+        this.certificateArn = certificateArn;
     }
 
     /**

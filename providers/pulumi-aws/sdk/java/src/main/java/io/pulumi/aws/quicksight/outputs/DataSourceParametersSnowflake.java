@@ -30,9 +30,9 @@ public final class DataSourceParametersSnowflake {
         String database,
         String host,
         String warehouse) {
-        this.database = Objects.requireNonNull(database);
-        this.host = Objects.requireNonNull(host);
-        this.warehouse = Objects.requireNonNull(warehouse);
+        this.database = database;
+        this.host = host;
+        this.warehouse = warehouse;
     }
 
     /**

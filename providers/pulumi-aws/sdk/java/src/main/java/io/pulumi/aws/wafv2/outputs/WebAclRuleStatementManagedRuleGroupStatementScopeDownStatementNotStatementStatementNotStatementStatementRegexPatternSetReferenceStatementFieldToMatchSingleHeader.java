@@ -17,7 +17,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
 
     @OutputCustomType.Constructor({"name"})
     private WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementNotStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeader(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

@@ -20,8 +20,8 @@ public final class GetClusterKubernetesNetworkConfig {
     private GetClusterKubernetesNetworkConfig(
         String ipFamily,
         String serviceIpv4Cidr) {
-        this.ipFamily = Objects.requireNonNull(ipFamily);
-        this.serviceIpv4Cidr = Objects.requireNonNull(serviceIpv4Cidr);
+        this.ipFamily = ipFamily;
+        this.serviceIpv4Cidr = serviceIpv4Cidr;
     }
 
     public String getIpFamily() {

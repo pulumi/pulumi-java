@@ -30,8 +30,8 @@ public final class NetworkInterfaceAttachment {
         Integer deviceIndex,
         String instance) {
         this.attachmentId = attachmentId;
-        this.deviceIndex = Objects.requireNonNull(deviceIndex);
-        this.instance = Objects.requireNonNull(instance);
+        this.deviceIndex = deviceIndex;
+        this.instance = instance;
     }
 
     public Optional<String> getAttachmentId() {

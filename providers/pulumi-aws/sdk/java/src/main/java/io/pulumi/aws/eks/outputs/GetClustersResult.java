@@ -25,8 +25,8 @@ public final class GetClustersResult {
     private GetClustersResult(
         String id,
         List<String> names) {
-        this.id = Objects.requireNonNull(id);
-        this.names = Objects.requireNonNull(names);
+        this.id = id;
+        this.names = names;
     }
 
     /**

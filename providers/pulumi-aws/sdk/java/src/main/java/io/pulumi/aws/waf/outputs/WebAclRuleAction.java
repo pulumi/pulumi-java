@@ -17,7 +17,7 @@ public final class WebAclRuleAction {
 
     @OutputCustomType.Constructor({"type"})
     private WebAclRuleAction(String type) {
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

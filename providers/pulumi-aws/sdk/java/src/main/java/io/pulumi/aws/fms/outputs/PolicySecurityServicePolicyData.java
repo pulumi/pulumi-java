@@ -27,7 +27,7 @@ public final class PolicySecurityServicePolicyData {
         @Nullable String managedServiceData,
         String type) {
         this.managedServiceData = managedServiceData;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

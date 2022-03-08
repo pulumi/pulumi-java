@@ -37,9 +37,9 @@ public final class AnalyticsApplicationInputsSchema {
         List<AnalyticsApplicationInputsSchemaRecordColumn> recordColumns,
         @Nullable String recordEncoding,
         AnalyticsApplicationInputsSchemaRecordFormat recordFormat) {
-        this.recordColumns = Objects.requireNonNull(recordColumns);
+        this.recordColumns = recordColumns;
         this.recordEncoding = recordEncoding;
-        this.recordFormat = Objects.requireNonNull(recordFormat);
+        this.recordFormat = recordFormat;
     }
 
     /**

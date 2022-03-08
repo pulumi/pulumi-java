@@ -25,8 +25,8 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
     private RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRule(
         Integer priority,
         RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinition ruleDefinition) {
-        this.priority = Objects.requireNonNull(priority);
-        this.ruleDefinition = Objects.requireNonNull(ruleDefinition);
+        this.priority = priority;
+        this.ruleDefinition = ruleDefinition;
     }
 
     /**

@@ -47,10 +47,10 @@ public final class ClusterBrokerNodeGroupInfo {
         String instanceType,
         List<String> securityGroups) {
         this.azDistribution = azDistribution;
-        this.clientSubnets = Objects.requireNonNull(clientSubnets);
-        this.ebsVolumeSize = Objects.requireNonNull(ebsVolumeSize);
-        this.instanceType = Objects.requireNonNull(instanceType);
-        this.securityGroups = Objects.requireNonNull(securityGroups);
+        this.clientSubnets = clientSubnets;
+        this.ebsVolumeSize = ebsVolumeSize;
+        this.instanceType = instanceType;
+        this.securityGroups = securityGroups;
     }
 
     /**

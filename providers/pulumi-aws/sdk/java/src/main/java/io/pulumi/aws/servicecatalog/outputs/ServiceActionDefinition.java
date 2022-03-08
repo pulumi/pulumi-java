@@ -45,10 +45,10 @@ public final class ServiceActionDefinition {
         @Nullable String type,
         String version) {
         this.assumeRole = assumeRole;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.parameters = parameters;
         this.type = type;
-        this.version = Objects.requireNonNull(version);
+        this.version = version;
     }
 
     /**

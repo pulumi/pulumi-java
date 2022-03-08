@@ -39,11 +39,11 @@ public final class GetPipelineResult {
         String name,
         String pipelineId,
         Map<String,String> tags) {
-        this.description = Objects.requireNonNull(description);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.pipelineId = Objects.requireNonNull(pipelineId);
-        this.tags = Objects.requireNonNull(tags);
+        this.description = description;
+        this.id = id;
+        this.name = name;
+        this.pipelineId = pipelineId;
+        this.tags = tags;
     }
 
     /**

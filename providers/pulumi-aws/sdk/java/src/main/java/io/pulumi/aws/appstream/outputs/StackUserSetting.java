@@ -24,8 +24,8 @@ public final class StackUserSetting {
     private StackUserSetting(
         String action,
         String permission) {
-        this.action = Objects.requireNonNull(action);
-        this.permission = Objects.requireNonNull(permission);
+        this.action = action;
+        this.permission = permission;
     }
 
     /**

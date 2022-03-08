@@ -33,9 +33,9 @@ public final class LifecyclePolicyPolicyDetails {
         List<String> resourceTypes,
         List<LifecyclePolicyPolicyDetailsSchedule> schedules,
         Map<String,String> targetTags) {
-        this.resourceTypes = Objects.requireNonNull(resourceTypes);
-        this.schedules = Objects.requireNonNull(schedules);
-        this.targetTags = Objects.requireNonNull(targetTags);
+        this.resourceTypes = resourceTypes;
+        this.schedules = schedules;
+        this.targetTags = targetTags;
     }
 
     /**

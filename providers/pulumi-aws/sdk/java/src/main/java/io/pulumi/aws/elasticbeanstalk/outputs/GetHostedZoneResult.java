@@ -26,7 +26,7 @@ public final class GetHostedZoneResult {
     private GetHostedZoneResult(
         String id,
         @Nullable String region) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.region = region;
     }
 

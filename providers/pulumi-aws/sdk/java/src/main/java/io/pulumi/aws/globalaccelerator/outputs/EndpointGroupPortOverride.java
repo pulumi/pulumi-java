@@ -24,8 +24,8 @@ public final class EndpointGroupPortOverride {
     private EndpointGroupPortOverride(
         Integer endpointPort,
         Integer listenerPort) {
-        this.endpointPort = Objects.requireNonNull(endpointPort);
-        this.listenerPort = Objects.requireNonNull(listenerPort);
+        this.endpointPort = endpointPort;
+        this.listenerPort = listenerPort;
     }
 
     /**

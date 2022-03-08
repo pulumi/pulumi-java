@@ -44,12 +44,12 @@ public final class GetRepositoryResult {
         String id,
         String repositoryId,
         String repositoryName) {
-        this.arn = Objects.requireNonNull(arn);
-        this.cloneUrlHttp = Objects.requireNonNull(cloneUrlHttp);
-        this.cloneUrlSsh = Objects.requireNonNull(cloneUrlSsh);
-        this.id = Objects.requireNonNull(id);
-        this.repositoryId = Objects.requireNonNull(repositoryId);
-        this.repositoryName = Objects.requireNonNull(repositoryName);
+        this.arn = arn;
+        this.cloneUrlHttp = cloneUrlHttp;
+        this.cloneUrlSsh = cloneUrlSsh;
+        this.id = id;
+        this.repositoryId = repositoryId;
+        this.repositoryName = repositoryName;
     }
 
     /**

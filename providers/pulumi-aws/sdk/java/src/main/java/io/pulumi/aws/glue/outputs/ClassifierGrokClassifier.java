@@ -32,9 +32,9 @@ public final class ClassifierGrokClassifier {
         String classification,
         @Nullable String customPatterns,
         String grokPattern) {
-        this.classification = Objects.requireNonNull(classification);
+        this.classification = classification;
         this.customPatterns = customPatterns;
-        this.grokPattern = Objects.requireNonNull(grokPattern);
+        this.grokPattern = grokPattern;
     }
 
     /**

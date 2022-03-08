@@ -45,11 +45,11 @@ public final class BucketNotificationQueue {
         @Nullable String filterSuffix,
         @Nullable String id,
         String queueArn) {
-        this.events = Objects.requireNonNull(events);
+        this.events = events;
         this.filterPrefix = filterPrefix;
         this.filterSuffix = filterSuffix;
         this.id = id;
-        this.queueArn = Objects.requireNonNull(queueArn);
+        this.queueArn = queueArn;
     }
 
     /**

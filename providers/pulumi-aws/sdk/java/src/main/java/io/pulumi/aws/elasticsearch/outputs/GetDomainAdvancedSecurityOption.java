@@ -24,8 +24,8 @@ public final class GetDomainAdvancedSecurityOption {
     private GetDomainAdvancedSecurityOption(
         Boolean enabled,
         Boolean internalUserDatabaseEnabled) {
-        this.enabled = Objects.requireNonNull(enabled);
-        this.internalUserDatabaseEnabled = Objects.requireNonNull(internalUserDatabaseEnabled);
+        this.enabled = enabled;
+        this.internalUserDatabaseEnabled = internalUserDatabaseEnabled;
     }
 
     /**

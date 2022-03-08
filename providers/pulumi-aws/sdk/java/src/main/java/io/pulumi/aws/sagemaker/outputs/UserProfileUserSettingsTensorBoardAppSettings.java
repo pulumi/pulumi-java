@@ -17,7 +17,7 @@ public final class UserProfileUserSettingsTensorBoardAppSettings {
 
     @OutputCustomType.Constructor({"defaultResourceSpec"})
     private UserProfileUserSettingsTensorBoardAppSettings(UserProfileUserSettingsTensorBoardAppSettingsDefaultResourceSpec defaultResourceSpec) {
-        this.defaultResourceSpec = Objects.requireNonNull(defaultResourceSpec);
+        this.defaultResourceSpec = defaultResourceSpec;
     }
 
     /**

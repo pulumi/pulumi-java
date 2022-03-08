@@ -44,10 +44,10 @@ public final class TableLocalSecondaryIndex {
         @Nullable List<String> nonKeyAttributes,
         String projectionType,
         String rangeKey) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.nonKeyAttributes = nonKeyAttributes;
-        this.projectionType = Objects.requireNonNull(projectionType);
-        this.rangeKey = Objects.requireNonNull(rangeKey);
+        this.projectionType = projectionType;
+        this.rangeKey = rangeKey;
     }
 
     /**

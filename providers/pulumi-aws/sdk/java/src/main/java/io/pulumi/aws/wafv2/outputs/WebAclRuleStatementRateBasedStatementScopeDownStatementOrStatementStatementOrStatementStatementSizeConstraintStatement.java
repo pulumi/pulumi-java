@@ -42,10 +42,10 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementOrStat
         @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatch fieldToMatch,
         Integer size,
         List<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementOrStatementStatementSizeConstraintStatementTextTransformation> textTransformations) {
-        this.comparisonOperator = Objects.requireNonNull(comparisonOperator);
+        this.comparisonOperator = comparisonOperator;
         this.fieldToMatch = fieldToMatch;
-        this.size = Objects.requireNonNull(size);
-        this.textTransformations = Objects.requireNonNull(textTransformations);
+        this.size = size;
+        this.textTransformations = textTransformations;
     }
 
     /**

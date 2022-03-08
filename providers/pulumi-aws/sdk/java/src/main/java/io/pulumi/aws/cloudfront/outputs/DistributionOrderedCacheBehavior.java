@@ -168,9 +168,9 @@ public final class DistributionOrderedCacheBehavior {
         @Nullable List<String> trustedKeyGroups,
         @Nullable List<String> trustedSigners,
         String viewerProtocolPolicy) {
-        this.allowedMethods = Objects.requireNonNull(allowedMethods);
+        this.allowedMethods = allowedMethods;
         this.cachePolicyId = cachePolicyId;
-        this.cachedMethods = Objects.requireNonNull(cachedMethods);
+        this.cachedMethods = cachedMethods;
         this.compress = compress;
         this.defaultTtl = defaultTtl;
         this.fieldLevelEncryptionId = fieldLevelEncryptionId;
@@ -180,14 +180,14 @@ public final class DistributionOrderedCacheBehavior {
         this.maxTtl = maxTtl;
         this.minTtl = minTtl;
         this.originRequestPolicyId = originRequestPolicyId;
-        this.pathPattern = Objects.requireNonNull(pathPattern);
+        this.pathPattern = pathPattern;
         this.realtimeLogConfigArn = realtimeLogConfigArn;
         this.responseHeadersPolicyId = responseHeadersPolicyId;
         this.smoothStreaming = smoothStreaming;
-        this.targetOriginId = Objects.requireNonNull(targetOriginId);
+        this.targetOriginId = targetOriginId;
         this.trustedKeyGroups = trustedKeyGroups;
         this.trustedSigners = trustedSigners;
-        this.viewerProtocolPolicy = Objects.requireNonNull(viewerProtocolPolicy);
+        this.viewerProtocolPolicy = viewerProtocolPolicy;
     }
 
     /**

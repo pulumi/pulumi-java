@@ -55,12 +55,12 @@ public final class RuleGroupRule {
         @Nullable List<RuleGroupRuleRuleLabel> ruleLabels,
         RuleGroupRuleStatement statement,
         RuleGroupRuleVisibilityConfig visibilityConfig) {
-        this.action = Objects.requireNonNull(action);
-        this.name = Objects.requireNonNull(name);
-        this.priority = Objects.requireNonNull(priority);
+        this.action = action;
+        this.name = name;
+        this.priority = priority;
         this.ruleLabels = ruleLabels;
-        this.statement = Objects.requireNonNull(statement);
-        this.visibilityConfig = Objects.requireNonNull(visibilityConfig);
+        this.statement = statement;
+        this.visibilityConfig = visibilityConfig;
     }
 
     /**

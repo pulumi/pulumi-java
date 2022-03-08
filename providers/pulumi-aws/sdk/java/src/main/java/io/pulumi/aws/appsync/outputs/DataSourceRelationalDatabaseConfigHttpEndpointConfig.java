@@ -44,9 +44,9 @@ public final class DataSourceRelationalDatabaseConfigHttpEndpointConfig {
         String dbClusterIdentifier,
         @Nullable String region,
         @Nullable String schema) {
-        this.awsSecretStoreArn = Objects.requireNonNull(awsSecretStoreArn);
+        this.awsSecretStoreArn = awsSecretStoreArn;
         this.databaseName = databaseName;
-        this.dbClusterIdentifier = Objects.requireNonNull(dbClusterIdentifier);
+        this.dbClusterIdentifier = dbClusterIdentifier;
         this.region = region;
         this.schema = schema;
     }

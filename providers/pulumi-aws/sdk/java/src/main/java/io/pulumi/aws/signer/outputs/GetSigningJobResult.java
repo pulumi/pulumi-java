@@ -114,23 +114,23 @@ public final class GetSigningJobResult {
         List<GetSigningJobSource> sources,
         String status,
         String statusReason) {
-        this.completedAt = Objects.requireNonNull(completedAt);
-        this.createdAt = Objects.requireNonNull(createdAt);
-        this.id = Objects.requireNonNull(id);
-        this.jobId = Objects.requireNonNull(jobId);
-        this.jobInvoker = Objects.requireNonNull(jobInvoker);
-        this.jobOwner = Objects.requireNonNull(jobOwner);
-        this.platformDisplayName = Objects.requireNonNull(platformDisplayName);
-        this.platformId = Objects.requireNonNull(platformId);
-        this.profileName = Objects.requireNonNull(profileName);
-        this.profileVersion = Objects.requireNonNull(profileVersion);
-        this.requestedBy = Objects.requireNonNull(requestedBy);
-        this.revocationRecords = Objects.requireNonNull(revocationRecords);
-        this.signatureExpiresAt = Objects.requireNonNull(signatureExpiresAt);
-        this.signedObjects = Objects.requireNonNull(signedObjects);
-        this.sources = Objects.requireNonNull(sources);
-        this.status = Objects.requireNonNull(status);
-        this.statusReason = Objects.requireNonNull(statusReason);
+        this.completedAt = completedAt;
+        this.createdAt = createdAt;
+        this.id = id;
+        this.jobId = jobId;
+        this.jobInvoker = jobInvoker;
+        this.jobOwner = jobOwner;
+        this.platformDisplayName = platformDisplayName;
+        this.platformId = platformId;
+        this.profileName = profileName;
+        this.profileVersion = profileVersion;
+        this.requestedBy = requestedBy;
+        this.revocationRecords = revocationRecords;
+        this.signatureExpiresAt = signatureExpiresAt;
+        this.signedObjects = signedObjects;
+        this.sources = sources;
+        this.status = status;
+        this.statusReason = statusReason;
     }
 
     /**

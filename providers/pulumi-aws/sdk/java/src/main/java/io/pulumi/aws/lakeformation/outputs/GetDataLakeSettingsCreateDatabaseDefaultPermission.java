@@ -25,8 +25,8 @@ public final class GetDataLakeSettingsCreateDatabaseDefaultPermission {
     private GetDataLakeSettingsCreateDatabaseDefaultPermission(
         List<String> permissions,
         String principal) {
-        this.permissions = Objects.requireNonNull(permissions);
-        this.principal = Objects.requireNonNull(principal);
+        this.permissions = permissions;
+        this.principal = principal;
     }
 
     /**

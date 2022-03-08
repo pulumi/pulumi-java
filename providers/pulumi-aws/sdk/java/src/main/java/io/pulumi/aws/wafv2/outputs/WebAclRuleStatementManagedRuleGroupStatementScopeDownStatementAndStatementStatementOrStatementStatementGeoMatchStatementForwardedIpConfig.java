@@ -24,8 +24,8 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
     private WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementOrStatementStatementGeoMatchStatementForwardedIpConfig(
         String fallbackBehavior,
         String headerName) {
-        this.fallbackBehavior = Objects.requireNonNull(fallbackBehavior);
-        this.headerName = Objects.requireNonNull(headerName);
+        this.fallbackBehavior = fallbackBehavior;
+        this.headerName = headerName;
     }
 
     /**

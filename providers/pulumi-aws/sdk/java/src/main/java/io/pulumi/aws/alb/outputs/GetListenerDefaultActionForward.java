@@ -18,8 +18,8 @@ public final class GetListenerDefaultActionForward {
     private GetListenerDefaultActionForward(
         List<GetListenerDefaultActionForwardStickiness> stickinesses,
         List<GetListenerDefaultActionForwardTargetGroup> targetGroups) {
-        this.stickinesses = Objects.requireNonNull(stickinesses);
-        this.targetGroups = Objects.requireNonNull(targetGroups);
+        this.stickinesses = stickinesses;
+        this.targetGroups = targetGroups;
     }
 
     public List<GetListenerDefaultActionForwardStickiness> getStickinesses() {

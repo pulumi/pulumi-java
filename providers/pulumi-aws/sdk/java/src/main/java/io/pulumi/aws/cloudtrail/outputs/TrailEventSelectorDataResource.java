@@ -25,8 +25,8 @@ public final class TrailEventSelectorDataResource {
     private TrailEventSelectorDataResource(
         String type,
         List<String> values) {
-        this.type = Objects.requireNonNull(type);
-        this.values = Objects.requireNonNull(values);
+        this.type = type;
+        this.values = values;
     }
 
     /**

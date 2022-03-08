@@ -36,7 +36,7 @@ public final class RuleGroupRuleActionBlockCustomResponse {
         Integer responseCode,
         @Nullable List<RuleGroupRuleActionBlockCustomResponseResponseHeader> responseHeaders) {
         this.customResponseBodyKey = customResponseBodyKey;
-        this.responseCode = Objects.requireNonNull(responseCode);
+        this.responseCode = responseCode;
         this.responseHeaders = responseHeaders;
     }
 

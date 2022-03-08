@@ -24,8 +24,8 @@ public final class GetVpcEndpointDnsEntry {
     private GetVpcEndpointDnsEntry(
         String dnsName,
         String hostedZoneId) {
-        this.dnsName = Objects.requireNonNull(dnsName);
-        this.hostedZoneId = Objects.requireNonNull(hostedZoneId);
+        this.dnsName = dnsName;
+        this.hostedZoneId = hostedZoneId;
     }
 
     /**

@@ -27,11 +27,11 @@ public final class GetLedgerResult {
         String id,
         String name,
         String permissionsMode) {
-        this.arn = Objects.requireNonNull(arn);
-        this.deletionProtection = Objects.requireNonNull(deletionProtection);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.permissionsMode = Objects.requireNonNull(permissionsMode);
+        this.arn = arn;
+        this.deletionProtection = deletionProtection;
+        this.id = id;
+        this.name = name;
+        this.permissionsMode = permissionsMode;
     }
 
     public String getArn() {

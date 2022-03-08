@@ -24,11 +24,11 @@ public final class GetCertificateAuthorityRevocationConfigurationCrlConfiguratio
         Integer expirationInDays,
         String s3BucketName,
         String s3ObjectAcl) {
-        this.customCname = Objects.requireNonNull(customCname);
-        this.enabled = Objects.requireNonNull(enabled);
-        this.expirationInDays = Objects.requireNonNull(expirationInDays);
-        this.s3BucketName = Objects.requireNonNull(s3BucketName);
-        this.s3ObjectAcl = Objects.requireNonNull(s3ObjectAcl);
+        this.customCname = customCname;
+        this.enabled = enabled;
+        this.expirationInDays = expirationInDays;
+        this.s3BucketName = s3BucketName;
+        this.s3ObjectAcl = s3ObjectAcl;
     }
 
     public String getCustomCname() {

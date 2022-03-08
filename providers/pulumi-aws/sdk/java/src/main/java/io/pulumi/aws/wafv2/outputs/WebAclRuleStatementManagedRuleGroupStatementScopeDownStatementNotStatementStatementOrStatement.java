@@ -18,7 +18,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
 
     @OutputCustomType.Constructor({"statements"})
     private WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementNotStatementStatementOrStatement(List<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementNotStatementStatementOrStatementStatement> statements) {
-        this.statements = Objects.requireNonNull(statements);
+        this.statements = statements;
     }
 
     /**

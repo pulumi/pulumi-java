@@ -28,7 +28,7 @@ public final class VirtualNodeSpecListenerTlsValidation {
         @Nullable VirtualNodeSpecListenerTlsValidationSubjectAlternativeNames subjectAlternativeNames,
         VirtualNodeSpecListenerTlsValidationTrust trust) {
         this.subjectAlternativeNames = subjectAlternativeNames;
-        this.trust = Objects.requireNonNull(trust);
+        this.trust = trust;
     }
 
     /**

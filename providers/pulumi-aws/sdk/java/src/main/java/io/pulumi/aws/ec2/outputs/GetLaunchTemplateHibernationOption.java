@@ -13,7 +13,7 @@ public final class GetLaunchTemplateHibernationOption {
 
     @OutputCustomType.Constructor({"configured"})
     private GetLaunchTemplateHibernationOption(Boolean configured) {
-        this.configured = Objects.requireNonNull(configured);
+        this.configured = configured;
     }
 
     public Boolean getConfigured() {

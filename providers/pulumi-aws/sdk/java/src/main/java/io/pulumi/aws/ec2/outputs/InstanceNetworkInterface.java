@@ -35,8 +35,8 @@ public final class InstanceNetworkInterface {
         Integer deviceIndex,
         String networkInterfaceId) {
         this.deleteOnTermination = deleteOnTermination;
-        this.deviceIndex = Objects.requireNonNull(deviceIndex);
-        this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId);
+        this.deviceIndex = deviceIndex;
+        this.networkInterfaceId = networkInterfaceId;
     }
 
     /**

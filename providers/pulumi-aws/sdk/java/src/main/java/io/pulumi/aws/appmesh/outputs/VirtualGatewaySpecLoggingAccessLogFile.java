@@ -17,7 +17,7 @@ public final class VirtualGatewaySpecLoggingAccessLogFile {
 
     @OutputCustomType.Constructor({"path"})
     private VirtualGatewaySpecLoggingAccessLogFile(String path) {
-        this.path = Objects.requireNonNull(path);
+        this.path = path;
     }
 
     /**

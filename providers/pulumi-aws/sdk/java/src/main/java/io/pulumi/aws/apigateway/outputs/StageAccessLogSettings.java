@@ -25,8 +25,8 @@ public final class StageAccessLogSettings {
     private StageAccessLogSettings(
         String destinationArn,
         String format) {
-        this.destinationArn = Objects.requireNonNull(destinationArn);
-        this.format = Objects.requireNonNull(format);
+        this.destinationArn = destinationArn;
+        this.format = format;
     }
 
     /**

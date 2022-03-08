@@ -42,7 +42,7 @@ public final class ClusterRestoreToPointInTime {
         @Nullable Boolean useLatestRestorableTime) {
         this.restoreToTime = restoreToTime;
         this.restoreType = restoreType;
-        this.sourceClusterIdentifier = Objects.requireNonNull(sourceClusterIdentifier);
+        this.sourceClusterIdentifier = sourceClusterIdentifier;
         this.useLatestRestorableTime = useLatestRestorableTime;
     }
 

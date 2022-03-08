@@ -29,7 +29,7 @@ public final class WebAclRuleStatementOrStatementStatementXssMatchStatement {
         @Nullable WebAclRuleStatementOrStatementStatementXssMatchStatementFieldToMatch fieldToMatch,
         List<WebAclRuleStatementOrStatementStatementXssMatchStatementTextTransformation> textTransformations) {
         this.fieldToMatch = fieldToMatch;
-        this.textTransformations = Objects.requireNonNull(textTransformations);
+        this.textTransformations = textTransformations;
     }
 
     /**

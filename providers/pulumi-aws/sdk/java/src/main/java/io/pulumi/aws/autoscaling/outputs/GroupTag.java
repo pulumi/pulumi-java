@@ -32,9 +32,9 @@ public final class GroupTag {
         String key,
         Boolean propagateAtLaunch,
         String value) {
-        this.key = Objects.requireNonNull(key);
-        this.propagateAtLaunch = Objects.requireNonNull(propagateAtLaunch);
-        this.value = Objects.requireNonNull(value);
+        this.key = key;
+        this.propagateAtLaunch = propagateAtLaunch;
+        this.value = value;
     }
 
     /**

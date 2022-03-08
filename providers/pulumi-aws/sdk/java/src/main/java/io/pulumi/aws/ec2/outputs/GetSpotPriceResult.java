@@ -42,10 +42,10 @@ public final class GetSpotPriceResult {
         String spotPriceTimestamp) {
         this.availabilityZone = availabilityZone;
         this.filters = filters;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.instanceType = instanceType;
-        this.spotPrice = Objects.requireNonNull(spotPrice);
-        this.spotPriceTimestamp = Objects.requireNonNull(spotPriceTimestamp);
+        this.spotPrice = spotPrice;
+        this.spotPriceTimestamp = spotPriceTimestamp;
     }
 
     public Optional<String> getAvailabilityZone() {

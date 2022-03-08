@@ -40,7 +40,7 @@ public final class DataSourceDynamodbConfig {
         @Nullable Boolean versioned) {
         this.deltaSyncConfig = deltaSyncConfig;
         this.region = region;
-        this.tableName = Objects.requireNonNull(tableName);
+        this.tableName = tableName;
         this.useCallerCredentials = useCallerCredentials;
         this.versioned = versioned;
     }

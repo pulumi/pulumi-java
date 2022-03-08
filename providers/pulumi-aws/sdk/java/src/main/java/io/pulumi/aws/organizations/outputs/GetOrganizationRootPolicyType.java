@@ -20,8 +20,8 @@ public final class GetOrganizationRootPolicyType {
     private GetOrganizationRootPolicyType(
         String status,
         String type) {
-        this.status = Objects.requireNonNull(status);
-        this.type = Objects.requireNonNull(type);
+        this.status = status;
+        this.type = type;
     }
 
     /**

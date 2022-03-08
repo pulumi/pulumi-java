@@ -55,12 +55,12 @@ public final class DistributionOriginCustomOriginConfig {
         String originProtocolPolicy,
         @Nullable Integer originReadTimeout,
         List<String> originSslProtocols) {
-        this.httpPort = Objects.requireNonNull(httpPort);
-        this.httpsPort = Objects.requireNonNull(httpsPort);
+        this.httpPort = httpPort;
+        this.httpsPort = httpsPort;
         this.originKeepaliveTimeout = originKeepaliveTimeout;
-        this.originProtocolPolicy = Objects.requireNonNull(originProtocolPolicy);
+        this.originProtocolPolicy = originProtocolPolicy;
         this.originReadTimeout = originReadTimeout;
-        this.originSslProtocols = Objects.requireNonNull(originSslProtocols);
+        this.originSslProtocols = originSslProtocols;
     }
 
     /**

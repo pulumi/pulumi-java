@@ -30,9 +30,9 @@ public final class GetUserPoolClientTokenValidityUnit {
         String accessToken,
         String idToken,
         String refreshToken) {
-        this.accessToken = Objects.requireNonNull(accessToken);
-        this.idToken = Objects.requireNonNull(idToken);
-        this.refreshToken = Objects.requireNonNull(refreshToken);
+        this.accessToken = accessToken;
+        this.idToken = idToken;
+        this.refreshToken = refreshToken;
     }
 
     /**

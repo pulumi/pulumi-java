@@ -23,11 +23,11 @@ public final class GetLoadBalancerHealthCheck {
         String target,
         Integer timeout,
         Integer unhealthyThreshold) {
-        this.healthyThreshold = Objects.requireNonNull(healthyThreshold);
-        this.interval = Objects.requireNonNull(interval);
-        this.target = Objects.requireNonNull(target);
-        this.timeout = Objects.requireNonNull(timeout);
-        this.unhealthyThreshold = Objects.requireNonNull(unhealthyThreshold);
+        this.healthyThreshold = healthyThreshold;
+        this.interval = interval;
+        this.target = target;
+        this.timeout = timeout;
+        this.unhealthyThreshold = unhealthyThreshold;
     }
 
     public Integer getHealthyThreshold() {

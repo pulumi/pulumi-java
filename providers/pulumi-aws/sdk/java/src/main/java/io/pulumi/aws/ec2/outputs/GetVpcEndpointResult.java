@@ -108,25 +108,25 @@ public final class GetVpcEndpointResult {
         Map<String,String> tags,
         String vpcEndpointType,
         String vpcId) {
-        this.arn = Objects.requireNonNull(arn);
-        this.cidrBlocks = Objects.requireNonNull(cidrBlocks);
-        this.dnsEntries = Objects.requireNonNull(dnsEntries);
+        this.arn = arn;
+        this.cidrBlocks = cidrBlocks;
+        this.dnsEntries = dnsEntries;
         this.filters = filters;
-        this.id = Objects.requireNonNull(id);
-        this.networkInterfaceIds = Objects.requireNonNull(networkInterfaceIds);
-        this.ownerId = Objects.requireNonNull(ownerId);
-        this.policy = Objects.requireNonNull(policy);
-        this.prefixListId = Objects.requireNonNull(prefixListId);
-        this.privateDnsEnabled = Objects.requireNonNull(privateDnsEnabled);
-        this.requesterManaged = Objects.requireNonNull(requesterManaged);
-        this.routeTableIds = Objects.requireNonNull(routeTableIds);
-        this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
-        this.serviceName = Objects.requireNonNull(serviceName);
-        this.state = Objects.requireNonNull(state);
-        this.subnetIds = Objects.requireNonNull(subnetIds);
-        this.tags = Objects.requireNonNull(tags);
-        this.vpcEndpointType = Objects.requireNonNull(vpcEndpointType);
-        this.vpcId = Objects.requireNonNull(vpcId);
+        this.id = id;
+        this.networkInterfaceIds = networkInterfaceIds;
+        this.ownerId = ownerId;
+        this.policy = policy;
+        this.prefixListId = prefixListId;
+        this.privateDnsEnabled = privateDnsEnabled;
+        this.requesterManaged = requesterManaged;
+        this.routeTableIds = routeTableIds;
+        this.securityGroupIds = securityGroupIds;
+        this.serviceName = serviceName;
+        this.state = state;
+        this.subnetIds = subnetIds;
+        this.tags = tags;
+        this.vpcEndpointType = vpcEndpointType;
+        this.vpcId = vpcId;
     }
 
     /**

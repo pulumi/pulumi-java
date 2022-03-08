@@ -76,14 +76,14 @@ public final class GetSlotTypeResult {
         String name,
         String valueSelectionStrategy,
         @Nullable String version) {
-        this.checksum = Objects.requireNonNull(checksum);
-        this.createdDate = Objects.requireNonNull(createdDate);
-        this.description = Objects.requireNonNull(description);
-        this.enumerationValues = Objects.requireNonNull(enumerationValues);
-        this.id = Objects.requireNonNull(id);
-        this.lastUpdatedDate = Objects.requireNonNull(lastUpdatedDate);
-        this.name = Objects.requireNonNull(name);
-        this.valueSelectionStrategy = Objects.requireNonNull(valueSelectionStrategy);
+        this.checksum = checksum;
+        this.createdDate = createdDate;
+        this.description = description;
+        this.enumerationValues = enumerationValues;
+        this.id = id;
+        this.lastUpdatedDate = lastUpdatedDate;
+        this.name = name;
+        this.valueSelectionStrategy = valueSelectionStrategy;
         this.version = version;
     }
 

@@ -62,7 +62,7 @@ public final class ApplicationApplicationConfiguration {
         @Nullable ApplicationApplicationConfigurationRunConfiguration runConfiguration,
         @Nullable ApplicationApplicationConfigurationSqlApplicationConfiguration sqlApplicationConfiguration,
         @Nullable ApplicationApplicationConfigurationVpcConfiguration vpcConfiguration) {
-        this.applicationCodeConfiguration = Objects.requireNonNull(applicationCodeConfiguration);
+        this.applicationCodeConfiguration = applicationCodeConfiguration;
         this.applicationSnapshotConfiguration = applicationSnapshotConfiguration;
         this.environmentProperties = environmentProperties;
         this.flinkApplicationConfiguration = flinkApplicationConfiguration;

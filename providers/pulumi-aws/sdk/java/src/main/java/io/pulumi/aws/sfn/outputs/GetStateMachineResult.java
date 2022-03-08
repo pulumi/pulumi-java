@@ -50,13 +50,13 @@ public final class GetStateMachineResult {
         String name,
         String roleArn,
         String status) {
-        this.arn = Objects.requireNonNull(arn);
-        this.creationDate = Objects.requireNonNull(creationDate);
-        this.definition = Objects.requireNonNull(definition);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.roleArn = Objects.requireNonNull(roleArn);
-        this.status = Objects.requireNonNull(status);
+        this.arn = arn;
+        this.creationDate = creationDate;
+        this.definition = definition;
+        this.id = id;
+        this.name = name;
+        this.roleArn = roleArn;
+        this.status = status;
     }
 
     /**

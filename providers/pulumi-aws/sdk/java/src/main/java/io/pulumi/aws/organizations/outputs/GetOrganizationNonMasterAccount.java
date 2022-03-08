@@ -42,11 +42,11 @@ public final class GetOrganizationNonMasterAccount {
         String id,
         String name,
         String status) {
-        this.arn = Objects.requireNonNull(arn);
-        this.email = Objects.requireNonNull(email);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.status = Objects.requireNonNull(status);
+        this.arn = arn;
+        this.email = email;
+        this.id = id;
+        this.name = name;
+        this.status = status;
     }
 
     /**

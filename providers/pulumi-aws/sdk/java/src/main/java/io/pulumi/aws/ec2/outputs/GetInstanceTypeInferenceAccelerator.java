@@ -19,9 +19,9 @@ public final class GetInstanceTypeInferenceAccelerator {
         Integer count,
         String manufacturer,
         String name) {
-        this.count = Objects.requireNonNull(count);
-        this.manufacturer = Objects.requireNonNull(manufacturer);
-        this.name = Objects.requireNonNull(name);
+        this.count = count;
+        this.manufacturer = manufacturer;
+        this.name = name;
     }
 
     public Integer getCount() {

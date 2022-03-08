@@ -29,9 +29,9 @@ public final class GetSecretsResult {
         String id,
         Map<String,String> plaintext,
         List<GetSecretsSecret> secrets) {
-        this.id = Objects.requireNonNull(id);
-        this.plaintext = Objects.requireNonNull(plaintext);
-        this.secrets = Objects.requireNonNull(secrets);
+        this.id = id;
+        this.plaintext = plaintext;
+        this.secrets = secrets;
     }
 
     /**

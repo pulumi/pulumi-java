@@ -35,10 +35,10 @@ public final class GetAutoscalingGroupsResult {
         @Nullable List<GetAutoscalingGroupsFilter> filters,
         String id,
         List<String> names) {
-        this.arns = Objects.requireNonNull(arns);
+        this.arns = arns;
         this.filters = filters;
-        this.id = Objects.requireNonNull(id);
-        this.names = Objects.requireNonNull(names);
+        this.id = id;
+        this.names = names;
     }
 
     /**

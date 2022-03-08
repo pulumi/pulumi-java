@@ -27,8 +27,8 @@ public final class GetNetworkAclsFilter {
     private GetNetworkAclsFilter(
         String name,
         List<String> values) {
-        this.name = Objects.requireNonNull(name);
-        this.values = Objects.requireNonNull(values);
+        this.name = name;
+        this.values = values;
     }
 
     /**

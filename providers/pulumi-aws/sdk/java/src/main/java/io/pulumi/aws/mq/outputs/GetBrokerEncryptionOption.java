@@ -17,8 +17,8 @@ public final class GetBrokerEncryptionOption {
     private GetBrokerEncryptionOption(
         String kmsKeyId,
         Boolean useAwsOwnedKey) {
-        this.kmsKeyId = Objects.requireNonNull(kmsKeyId);
-        this.useAwsOwnedKey = Objects.requireNonNull(useAwsOwnedKey);
+        this.kmsKeyId = kmsKeyId;
+        this.useAwsOwnedKey = useAwsOwnedKey;
     }
 
     public String getKmsKeyId() {

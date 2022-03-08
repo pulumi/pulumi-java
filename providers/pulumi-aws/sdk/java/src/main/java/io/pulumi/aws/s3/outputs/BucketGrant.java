@@ -40,8 +40,8 @@ public final class BucketGrant {
         String type,
         @Nullable String uri) {
         this.id = id;
-        this.permissions = Objects.requireNonNull(permissions);
-        this.type = Objects.requireNonNull(type);
+        this.permissions = permissions;
+        this.type = type;
         this.uri = uri;
     }
 

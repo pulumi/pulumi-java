@@ -61,15 +61,15 @@ public final class GetCertificateResult {
         String thumbprint,
         String validFrom,
         String validTill) {
-        this.arn = Objects.requireNonNull(arn);
-        this.certificateType = Objects.requireNonNull(certificateType);
-        this.customerOverride = Objects.requireNonNull(customerOverride);
-        this.customerOverrideValidTill = Objects.requireNonNull(customerOverrideValidTill);
-        this.id = Objects.requireNonNull(id);
+        this.arn = arn;
+        this.certificateType = certificateType;
+        this.customerOverride = customerOverride;
+        this.customerOverrideValidTill = customerOverrideValidTill;
+        this.id = id;
         this.latestValidTill = latestValidTill;
-        this.thumbprint = Objects.requireNonNull(thumbprint);
-        this.validFrom = Objects.requireNonNull(validFrom);
-        this.validTill = Objects.requireNonNull(validTill);
+        this.thumbprint = thumbprint;
+        this.validFrom = validFrom;
+        this.validTill = validTill;
     }
 
     /**

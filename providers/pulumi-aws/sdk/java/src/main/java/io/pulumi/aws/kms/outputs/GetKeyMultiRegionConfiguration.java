@@ -21,9 +21,9 @@ public final class GetKeyMultiRegionConfiguration {
         String multiRegionKeyType,
         List<GetKeyMultiRegionConfigurationPrimaryKey> primaryKeys,
         List<GetKeyMultiRegionConfigurationReplicaKey> replicaKeys) {
-        this.multiRegionKeyType = Objects.requireNonNull(multiRegionKeyType);
-        this.primaryKeys = Objects.requireNonNull(primaryKeys);
-        this.replicaKeys = Objects.requireNonNull(replicaKeys);
+        this.multiRegionKeyType = multiRegionKeyType;
+        this.primaryKeys = primaryKeys;
+        this.replicaKeys = replicaKeys;
     }
 
     public String getMultiRegionKeyType() {

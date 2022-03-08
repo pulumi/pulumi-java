@@ -32,11 +32,11 @@ public final class GetInvocationResult {
         String input,
         @Nullable String qualifier,
         String result) {
-        this.functionName = Objects.requireNonNull(functionName);
-        this.id = Objects.requireNonNull(id);
-        this.input = Objects.requireNonNull(input);
+        this.functionName = functionName;
+        this.id = id;
+        this.input = input;
         this.qualifier = qualifier;
-        this.result = Objects.requireNonNull(result);
+        this.result = result;
     }
 
     public String getFunctionName() {

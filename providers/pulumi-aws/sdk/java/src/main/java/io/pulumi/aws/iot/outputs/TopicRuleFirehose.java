@@ -32,8 +32,8 @@ public final class TopicRuleFirehose {
         String deliveryStreamName,
         String roleArn,
         @Nullable String separator) {
-        this.deliveryStreamName = Objects.requireNonNull(deliveryStreamName);
-        this.roleArn = Objects.requireNonNull(roleArn);
+        this.deliveryStreamName = deliveryStreamName;
+        this.roleArn = roleArn;
         this.separator = separator;
     }
 

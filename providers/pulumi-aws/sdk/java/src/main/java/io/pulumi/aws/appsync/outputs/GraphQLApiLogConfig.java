@@ -33,9 +33,9 @@ public final class GraphQLApiLogConfig {
         String cloudwatchLogsRoleArn,
         @Nullable Boolean excludeVerboseContent,
         String fieldLogLevel) {
-        this.cloudwatchLogsRoleArn = Objects.requireNonNull(cloudwatchLogsRoleArn);
+        this.cloudwatchLogsRoleArn = cloudwatchLogsRoleArn;
         this.excludeVerboseContent = excludeVerboseContent;
-        this.fieldLogLevel = Objects.requireNonNull(fieldLogLevel);
+        this.fieldLogLevel = fieldLogLevel;
     }
 
     /**

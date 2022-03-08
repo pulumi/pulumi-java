@@ -33,8 +33,8 @@ public final class UsagePlanApiStage {
         String apiId,
         String stage,
         @Nullable List<UsagePlanApiStageThrottle> throttles) {
-        this.apiId = Objects.requireNonNull(apiId);
-        this.stage = Objects.requireNonNull(stage);
+        this.apiId = apiId;
+        this.stage = stage;
         this.throttles = throttles;
     }
 

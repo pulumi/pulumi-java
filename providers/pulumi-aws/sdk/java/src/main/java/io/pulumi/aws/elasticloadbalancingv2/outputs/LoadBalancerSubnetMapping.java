@@ -44,7 +44,7 @@ public final class LoadBalancerSubnetMapping {
         this.ipv6Address = ipv6Address;
         this.outpostId = outpostId;
         this.privateIpv4Address = privateIpv4Address;
-        this.subnetId = Objects.requireNonNull(subnetId);
+        this.subnetId = subnetId;
     }
 
     /**

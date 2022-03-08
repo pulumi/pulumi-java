@@ -18,8 +18,8 @@ public final class GetLaunchTemplateInstanceMarketOption {
     private GetLaunchTemplateInstanceMarketOption(
         String marketType,
         List<GetLaunchTemplateInstanceMarketOptionSpotOption> spotOptions) {
-        this.marketType = Objects.requireNonNull(marketType);
-        this.spotOptions = Objects.requireNonNull(spotOptions);
+        this.marketType = marketType;
+        this.spotOptions = spotOptions;
     }
 
     public String getMarketType() {

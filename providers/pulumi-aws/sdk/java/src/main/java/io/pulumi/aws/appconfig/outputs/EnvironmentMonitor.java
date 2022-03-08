@@ -26,7 +26,7 @@ public final class EnvironmentMonitor {
     private EnvironmentMonitor(
         String alarmArn,
         @Nullable String alarmRoleArn) {
-        this.alarmArn = Objects.requireNonNull(alarmArn);
+        this.alarmArn = alarmArn;
         this.alarmRoleArn = alarmRoleArn;
     }
 

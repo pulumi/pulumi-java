@@ -50,12 +50,12 @@ public final class TopicRuleErrorActionCloudwatchMetric {
         String metricUnit,
         String metricValue,
         String roleArn) {
-        this.metricName = Objects.requireNonNull(metricName);
-        this.metricNamespace = Objects.requireNonNull(metricNamespace);
+        this.metricName = metricName;
+        this.metricNamespace = metricNamespace;
         this.metricTimestamp = metricTimestamp;
-        this.metricUnit = Objects.requireNonNull(metricUnit);
-        this.metricValue = Objects.requireNonNull(metricValue);
-        this.roleArn = Objects.requireNonNull(roleArn);
+        this.metricUnit = metricUnit;
+        this.metricValue = metricValue;
+        this.roleArn = roleArn;
     }
 
     /**

@@ -32,7 +32,7 @@ public final class IntentRejectionStatement {
     private IntentRejectionStatement(
         List<IntentRejectionStatementMessage> messages,
         @Nullable String responseCard) {
-        this.messages = Objects.requireNonNull(messages);
+        this.messages = messages;
         this.responseCard = responseCard;
     }
 

@@ -54,16 +54,16 @@ public final class GetResolverRuleResult {
         String ruleType,
         String shareStatus,
         Map<String,String> tags) {
-        this.arn = Objects.requireNonNull(arn);
-        this.domainName = Objects.requireNonNull(domainName);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.ownerId = Objects.requireNonNull(ownerId);
-        this.resolverEndpointId = Objects.requireNonNull(resolverEndpointId);
-        this.resolverRuleId = Objects.requireNonNull(resolverRuleId);
-        this.ruleType = Objects.requireNonNull(ruleType);
-        this.shareStatus = Objects.requireNonNull(shareStatus);
-        this.tags = Objects.requireNonNull(tags);
+        this.arn = arn;
+        this.domainName = domainName;
+        this.id = id;
+        this.name = name;
+        this.ownerId = ownerId;
+        this.resolverEndpointId = resolverEndpointId;
+        this.resolverRuleId = resolverRuleId;
+        this.ruleType = ruleType;
+        this.shareStatus = shareStatus;
+        this.tags = tags;
     }
 
     /**

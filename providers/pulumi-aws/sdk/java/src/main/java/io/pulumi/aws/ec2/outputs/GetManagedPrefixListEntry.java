@@ -16,8 +16,8 @@ public final class GetManagedPrefixListEntry {
     private GetManagedPrefixListEntry(
         String cidr,
         String description) {
-        this.cidr = Objects.requireNonNull(cidr);
-        this.description = Objects.requireNonNull(description);
+        this.cidr = cidr;
+        this.description = description;
     }
 
     public String getCidr() {

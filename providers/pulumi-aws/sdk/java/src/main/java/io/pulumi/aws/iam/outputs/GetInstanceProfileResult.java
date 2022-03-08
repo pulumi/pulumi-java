@@ -57,14 +57,14 @@ public final class GetInstanceProfileResult {
         String roleArn,
         String roleId,
         String roleName) {
-        this.arn = Objects.requireNonNull(arn);
-        this.createDate = Objects.requireNonNull(createDate);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.path = Objects.requireNonNull(path);
-        this.roleArn = Objects.requireNonNull(roleArn);
-        this.roleId = Objects.requireNonNull(roleId);
-        this.roleName = Objects.requireNonNull(roleName);
+        this.arn = arn;
+        this.createDate = createDate;
+        this.id = id;
+        this.name = name;
+        this.path = path;
+        this.roleArn = roleArn;
+        this.roleId = roleId;
+        this.roleName = roleName;
     }
 
     /**

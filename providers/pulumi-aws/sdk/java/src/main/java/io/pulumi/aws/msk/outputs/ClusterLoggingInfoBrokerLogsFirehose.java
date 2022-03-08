@@ -28,7 +28,7 @@ public final class ClusterLoggingInfoBrokerLogsFirehose {
         @Nullable String deliveryStream,
         Boolean enabled) {
         this.deliveryStream = deliveryStream;
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
     }
 
     /**

@@ -70,28 +70,28 @@ public final class GetBrokerResult {
         List<String> subnetIds,
         Map<String,String> tags,
         List<GetBrokerUser> users) {
-        this.arn = Objects.requireNonNull(arn);
-        this.authenticationStrategy = Objects.requireNonNull(authenticationStrategy);
-        this.autoMinorVersionUpgrade = Objects.requireNonNull(autoMinorVersionUpgrade);
-        this.brokerId = Objects.requireNonNull(brokerId);
-        this.brokerName = Objects.requireNonNull(brokerName);
-        this.configuration = Objects.requireNonNull(configuration);
-        this.deploymentMode = Objects.requireNonNull(deploymentMode);
-        this.encryptionOptions = Objects.requireNonNull(encryptionOptions);
-        this.engineType = Objects.requireNonNull(engineType);
-        this.engineVersion = Objects.requireNonNull(engineVersion);
-        this.hostInstanceType = Objects.requireNonNull(hostInstanceType);
-        this.id = Objects.requireNonNull(id);
-        this.instances = Objects.requireNonNull(instances);
-        this.ldapServerMetadatas = Objects.requireNonNull(ldapServerMetadatas);
-        this.logs = Objects.requireNonNull(logs);
-        this.maintenanceWindowStartTime = Objects.requireNonNull(maintenanceWindowStartTime);
-        this.publiclyAccessible = Objects.requireNonNull(publiclyAccessible);
-        this.securityGroups = Objects.requireNonNull(securityGroups);
-        this.storageType = Objects.requireNonNull(storageType);
-        this.subnetIds = Objects.requireNonNull(subnetIds);
-        this.tags = Objects.requireNonNull(tags);
-        this.users = Objects.requireNonNull(users);
+        this.arn = arn;
+        this.authenticationStrategy = authenticationStrategy;
+        this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
+        this.brokerId = brokerId;
+        this.brokerName = brokerName;
+        this.configuration = configuration;
+        this.deploymentMode = deploymentMode;
+        this.encryptionOptions = encryptionOptions;
+        this.engineType = engineType;
+        this.engineVersion = engineVersion;
+        this.hostInstanceType = hostInstanceType;
+        this.id = id;
+        this.instances = instances;
+        this.ldapServerMetadatas = ldapServerMetadatas;
+        this.logs = logs;
+        this.maintenanceWindowStartTime = maintenanceWindowStartTime;
+        this.publiclyAccessible = publiclyAccessible;
+        this.securityGroups = securityGroups;
+        this.storageType = storageType;
+        this.subnetIds = subnetIds;
+        this.tags = tags;
+        this.users = users;
     }
 
     public String getArn() {

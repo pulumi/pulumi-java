@@ -31,9 +31,9 @@ public final class GetPolicyDocumentStatementCondition {
         String test,
         List<String> values,
         String variable) {
-        this.test = Objects.requireNonNull(test);
-        this.values = Objects.requireNonNull(values);
-        this.variable = Objects.requireNonNull(variable);
+        this.test = test;
+        this.values = values;
+        this.variable = variable;
     }
 
     /**

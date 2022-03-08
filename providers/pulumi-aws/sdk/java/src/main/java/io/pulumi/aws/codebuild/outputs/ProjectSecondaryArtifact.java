@@ -75,7 +75,7 @@ public final class ProjectSecondaryArtifact {
         @Nullable String packaging,
         @Nullable String path,
         String type) {
-        this.artifactIdentifier = Objects.requireNonNull(artifactIdentifier);
+        this.artifactIdentifier = artifactIdentifier;
         this.bucketOwnerAccess = bucketOwnerAccess;
         this.encryptionDisabled = encryptionDisabled;
         this.location = location;
@@ -84,7 +84,7 @@ public final class ProjectSecondaryArtifact {
         this.overrideArtifactName = overrideArtifactName;
         this.packaging = packaging;
         this.path = path;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

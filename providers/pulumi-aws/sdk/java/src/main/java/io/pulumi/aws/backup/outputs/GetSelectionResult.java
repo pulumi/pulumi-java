@@ -41,12 +41,12 @@ public final class GetSelectionResult {
         String planId,
         List<String> resources,
         String selectionId) {
-        this.iamRoleArn = Objects.requireNonNull(iamRoleArn);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.planId = Objects.requireNonNull(planId);
-        this.resources = Objects.requireNonNull(resources);
-        this.selectionId = Objects.requireNonNull(selectionId);
+        this.iamRoleArn = iamRoleArn;
+        this.id = id;
+        this.name = name;
+        this.planId = planId;
+        this.resources = resources;
+        this.selectionId = selectionId;
     }
 
     /**

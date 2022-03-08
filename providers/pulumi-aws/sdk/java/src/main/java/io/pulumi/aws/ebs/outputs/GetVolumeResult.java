@@ -107,22 +107,22 @@ public final class GetVolumeResult {
         Integer throughput,
         String volumeId,
         String volumeType) {
-        this.arn = Objects.requireNonNull(arn);
-        this.availabilityZone = Objects.requireNonNull(availabilityZone);
-        this.encrypted = Objects.requireNonNull(encrypted);
+        this.arn = arn;
+        this.availabilityZone = availabilityZone;
+        this.encrypted = encrypted;
         this.filters = filters;
-        this.id = Objects.requireNonNull(id);
-        this.iops = Objects.requireNonNull(iops);
-        this.kmsKeyId = Objects.requireNonNull(kmsKeyId);
+        this.id = id;
+        this.iops = iops;
+        this.kmsKeyId = kmsKeyId;
         this.mostRecent = mostRecent;
-        this.multiAttachEnabled = Objects.requireNonNull(multiAttachEnabled);
-        this.outpostArn = Objects.requireNonNull(outpostArn);
-        this.size = Objects.requireNonNull(size);
-        this.snapshotId = Objects.requireNonNull(snapshotId);
-        this.tags = Objects.requireNonNull(tags);
-        this.throughput = Objects.requireNonNull(throughput);
-        this.volumeId = Objects.requireNonNull(volumeId);
-        this.volumeType = Objects.requireNonNull(volumeType);
+        this.multiAttachEnabled = multiAttachEnabled;
+        this.outpostArn = outpostArn;
+        this.size = size;
+        this.snapshotId = snapshotId;
+        this.tags = tags;
+        this.throughput = throughput;
+        this.volumeId = volumeId;
+        this.volumeType = volumeType;
     }
 
     /**

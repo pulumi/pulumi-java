@@ -17,7 +17,7 @@ public final class GetClusterIdentityOidc {
 
     @OutputCustomType.Constructor({"issuer"})
     private GetClusterIdentityOidc(String issuer) {
-        this.issuer = Objects.requireNonNull(issuer);
+        this.issuer = issuer;
     }
 
     /**

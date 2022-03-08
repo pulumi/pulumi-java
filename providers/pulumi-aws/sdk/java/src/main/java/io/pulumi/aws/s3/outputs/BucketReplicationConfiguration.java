@@ -26,8 +26,8 @@ public final class BucketReplicationConfiguration {
     private BucketReplicationConfiguration(
         String role,
         List<BucketReplicationConfigurationRule> rules) {
-        this.role = Objects.requireNonNull(role);
-        this.rules = Objects.requireNonNull(rules);
+        this.role = role;
+        this.rules = rules;
     }
 
     /**

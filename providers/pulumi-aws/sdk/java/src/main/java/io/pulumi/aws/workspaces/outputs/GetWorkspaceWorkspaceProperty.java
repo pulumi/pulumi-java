@@ -43,11 +43,11 @@ public final class GetWorkspaceWorkspaceProperty {
         String runningMode,
         Integer runningModeAutoStopTimeoutInMinutes,
         Integer userVolumeSizeGib) {
-        this.computeTypeName = Objects.requireNonNull(computeTypeName);
-        this.rootVolumeSizeGib = Objects.requireNonNull(rootVolumeSizeGib);
-        this.runningMode = Objects.requireNonNull(runningMode);
-        this.runningModeAutoStopTimeoutInMinutes = Objects.requireNonNull(runningModeAutoStopTimeoutInMinutes);
-        this.userVolumeSizeGib = Objects.requireNonNull(userVolumeSizeGib);
+        this.computeTypeName = computeTypeName;
+        this.rootVolumeSizeGib = rootVolumeSizeGib;
+        this.runningMode = runningMode;
+        this.runningModeAutoStopTimeoutInMinutes = runningModeAutoStopTimeoutInMinutes;
+        this.userVolumeSizeGib = userVolumeSizeGib;
     }
 
     /**

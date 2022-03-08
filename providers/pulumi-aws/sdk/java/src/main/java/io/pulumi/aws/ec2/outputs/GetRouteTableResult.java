@@ -72,17 +72,17 @@ public final class GetRouteTableResult {
         String subnetId,
         Map<String,String> tags,
         String vpcId) {
-        this.arn = Objects.requireNonNull(arn);
-        this.associations = Objects.requireNonNull(associations);
+        this.arn = arn;
+        this.associations = associations;
         this.filters = filters;
-        this.gatewayId = Objects.requireNonNull(gatewayId);
-        this.id = Objects.requireNonNull(id);
-        this.ownerId = Objects.requireNonNull(ownerId);
-        this.routeTableId = Objects.requireNonNull(routeTableId);
-        this.routes = Objects.requireNonNull(routes);
-        this.subnetId = Objects.requireNonNull(subnetId);
-        this.tags = Objects.requireNonNull(tags);
-        this.vpcId = Objects.requireNonNull(vpcId);
+        this.gatewayId = gatewayId;
+        this.id = id;
+        this.ownerId = ownerId;
+        this.routeTableId = routeTableId;
+        this.routes = routes;
+        this.subnetId = subnetId;
+        this.tags = tags;
+        this.vpcId = vpcId;
     }
 
     /**

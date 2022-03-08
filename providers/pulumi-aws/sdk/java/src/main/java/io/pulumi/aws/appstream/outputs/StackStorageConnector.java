@@ -33,7 +33,7 @@ public final class StackStorageConnector {
         String connectorType,
         @Nullable List<String> domains,
         @Nullable String resourceIdentifier) {
-        this.connectorType = Objects.requireNonNull(connectorType);
+        this.connectorType = connectorType;
         this.domains = domains;
         this.resourceIdentifier = resourceIdentifier;
     }

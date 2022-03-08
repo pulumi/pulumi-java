@@ -31,9 +31,9 @@ public final class DataSourceParametersPostgresql {
         String database,
         String host,
         Integer port) {
-        this.database = Objects.requireNonNull(database);
-        this.host = Objects.requireNonNull(host);
-        this.port = Objects.requireNonNull(port);
+        this.database = database;
+        this.host = host;
+        this.port = port;
     }
 
     /**

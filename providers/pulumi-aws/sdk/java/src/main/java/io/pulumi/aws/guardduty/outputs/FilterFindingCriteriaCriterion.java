@@ -58,7 +58,7 @@ public final class FilterFindingCriteriaCriterion {
         @Nullable String lessThanOrEqual,
         @Nullable List<String> notEquals) {
         this.equals = equals;
-        this.field = Objects.requireNonNull(field);
+        this.field = field;
         this.greaterThan = greaterThan;
         this.greaterThanOrEqual = greaterThanOrEqual;
         this.lessThan = lessThan;

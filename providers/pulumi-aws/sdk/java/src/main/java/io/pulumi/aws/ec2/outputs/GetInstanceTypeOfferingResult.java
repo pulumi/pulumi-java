@@ -35,8 +35,8 @@ public final class GetInstanceTypeOfferingResult {
         @Nullable String locationType,
         @Nullable List<String> preferredInstanceTypes) {
         this.filters = filters;
-        this.id = Objects.requireNonNull(id);
-        this.instanceType = Objects.requireNonNull(instanceType);
+        this.id = id;
+        this.instanceType = instanceType;
         this.locationType = locationType;
         this.preferredInstanceTypes = preferredInstanceTypes;
     }
