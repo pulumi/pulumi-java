@@ -24,8 +24,8 @@ public final class AutoUpgradeOptionsResponse {
     private AutoUpgradeOptionsResponse(
         String autoUpgradeStartTime,
         String description) {
-        this.autoUpgradeStartTime = Objects.requireNonNull(autoUpgradeStartTime);
-        this.description = Objects.requireNonNull(description);
+        this.autoUpgradeStartTime = autoUpgradeStartTime;
+        this.description = description;
     }
 
     /**

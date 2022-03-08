@@ -17,7 +17,7 @@ public final class SessionInfoResponse {
 
     @OutputCustomType.Constructor({"sessionId"})
     private SessionInfoResponse(String sessionId) {
-        this.sessionId = Objects.requireNonNull(sessionId);
+        this.sessionId = sessionId;
     }
 
     /**

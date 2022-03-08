@@ -17,7 +17,7 @@ public final class CertificateProviderInstanceResponse {
 
     @OutputCustomType.Constructor({"pluginInstance"})
     private CertificateProviderInstanceResponse(String pluginInstance) {
-        this.pluginInstance = Objects.requireNonNull(pluginInstance);
+        this.pluginInstance = pluginInstance;
     }
 
     /**

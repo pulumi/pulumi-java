@@ -36,10 +36,10 @@ public final class JobStatusResponse {
         String state,
         String stateStartTime,
         String substate) {
-        this.details = Objects.requireNonNull(details);
-        this.state = Objects.requireNonNull(state);
-        this.stateStartTime = Objects.requireNonNull(stateStartTime);
-        this.substate = Objects.requireNonNull(substate);
+        this.details = details;
+        this.state = state;
+        this.stateStartTime = stateStartTime;
+        this.substate = substate;
     }
 
     /**

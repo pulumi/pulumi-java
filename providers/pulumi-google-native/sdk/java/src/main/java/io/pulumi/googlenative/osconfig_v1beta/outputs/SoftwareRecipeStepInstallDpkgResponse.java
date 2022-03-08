@@ -17,7 +17,7 @@ public final class SoftwareRecipeStepInstallDpkgResponse {
 
     @OutputCustomType.Constructor({"artifactId"})
     private SoftwareRecipeStepInstallDpkgResponse(String artifactId) {
-        this.artifactId = Objects.requireNonNull(artifactId);
+        this.artifactId = artifactId;
     }
 
     /**

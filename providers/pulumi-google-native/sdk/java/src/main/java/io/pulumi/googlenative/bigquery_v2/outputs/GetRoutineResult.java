@@ -102,20 +102,20 @@ public final class GetRoutineResult {
         RoutineReferenceResponse routineReference,
         String routineType,
         Boolean strictMode) {
-        this.arguments = Objects.requireNonNull(arguments);
-        this.creationTime = Objects.requireNonNull(creationTime);
-        this.definitionBody = Objects.requireNonNull(definitionBody);
-        this.description = Objects.requireNonNull(description);
-        this.determinismLevel = Objects.requireNonNull(determinismLevel);
-        this.etag = Objects.requireNonNull(etag);
-        this.importedLibraries = Objects.requireNonNull(importedLibraries);
-        this.language = Objects.requireNonNull(language);
-        this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
-        this.returnTableType = Objects.requireNonNull(returnTableType);
-        this.returnType = Objects.requireNonNull(returnType);
-        this.routineReference = Objects.requireNonNull(routineReference);
-        this.routineType = Objects.requireNonNull(routineType);
-        this.strictMode = Objects.requireNonNull(strictMode);
+        this.arguments = arguments;
+        this.creationTime = creationTime;
+        this.definitionBody = definitionBody;
+        this.description = description;
+        this.determinismLevel = determinismLevel;
+        this.etag = etag;
+        this.importedLibraries = importedLibraries;
+        this.language = language;
+        this.lastModifiedTime = lastModifiedTime;
+        this.returnTableType = returnTableType;
+        this.returnType = returnType;
+        this.routineReference = routineReference;
+        this.routineType = routineType;
+        this.strictMode = strictMode;
     }
 
     /**

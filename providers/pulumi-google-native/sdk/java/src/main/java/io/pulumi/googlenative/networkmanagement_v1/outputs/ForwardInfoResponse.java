@@ -24,8 +24,8 @@ public final class ForwardInfoResponse {
     private ForwardInfoResponse(
         String resourceUri,
         String target) {
-        this.resourceUri = Objects.requireNonNull(resourceUri);
-        this.target = Objects.requireNonNull(target);
+        this.resourceUri = resourceUri;
+        this.target = target;
     }
 
     /**

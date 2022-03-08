@@ -30,9 +30,9 @@ public final class OperationErrorResponse {
         String code,
         String kind,
         String message) {
-        this.code = Objects.requireNonNull(code);
-        this.kind = Objects.requireNonNull(kind);
-        this.message = Objects.requireNonNull(message);
+        this.code = code;
+        this.kind = kind;
+        this.message = message;
     }
 
     /**

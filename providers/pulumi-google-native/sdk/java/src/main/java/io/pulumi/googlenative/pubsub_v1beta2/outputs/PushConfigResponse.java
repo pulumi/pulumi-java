@@ -32,9 +32,9 @@ public final class PushConfigResponse {
         Map<String,String> attributes,
         OidcTokenResponse oidcToken,
         String pushEndpoint) {
-        this.attributes = Objects.requireNonNull(attributes);
-        this.oidcToken = Objects.requireNonNull(oidcToken);
-        this.pushEndpoint = Objects.requireNonNull(pushEndpoint);
+        this.attributes = attributes;
+        this.oidcToken = oidcToken;
+        this.pushEndpoint = pushEndpoint;
     }
 
     /**

@@ -54,12 +54,12 @@ public final class IssuancePolicyResponse {
         CertificateIdentityConstraintsResponse identityConstraints,
         String maximumLifetime,
         CertificateExtensionConstraintsResponse passthroughExtensions) {
-        this.allowedIssuanceModes = Objects.requireNonNull(allowedIssuanceModes);
-        this.allowedKeyTypes = Objects.requireNonNull(allowedKeyTypes);
-        this.baselineValues = Objects.requireNonNull(baselineValues);
-        this.identityConstraints = Objects.requireNonNull(identityConstraints);
-        this.maximumLifetime = Objects.requireNonNull(maximumLifetime);
-        this.passthroughExtensions = Objects.requireNonNull(passthroughExtensions);
+        this.allowedIssuanceModes = allowedIssuanceModes;
+        this.allowedKeyTypes = allowedKeyTypes;
+        this.baselineValues = baselineValues;
+        this.identityConstraints = identityConstraints;
+        this.maximumLifetime = maximumLifetime;
+        this.passthroughExtensions = passthroughExtensions;
     }
 
     /**

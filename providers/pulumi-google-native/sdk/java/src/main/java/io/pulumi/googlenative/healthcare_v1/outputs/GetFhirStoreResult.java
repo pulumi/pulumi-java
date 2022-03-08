@@ -78,16 +78,16 @@ public final class GetFhirStoreResult {
         List<StreamConfigResponse> streamConfigs,
         ValidationConfigResponse validationConfig,
         String version) {
-        this.defaultSearchHandlingStrict = Objects.requireNonNull(defaultSearchHandlingStrict);
-        this.disableReferentialIntegrity = Objects.requireNonNull(disableReferentialIntegrity);
-        this.disableResourceVersioning = Objects.requireNonNull(disableResourceVersioning);
-        this.enableUpdateCreate = Objects.requireNonNull(enableUpdateCreate);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.notificationConfig = Objects.requireNonNull(notificationConfig);
-        this.streamConfigs = Objects.requireNonNull(streamConfigs);
-        this.validationConfig = Objects.requireNonNull(validationConfig);
-        this.version = Objects.requireNonNull(version);
+        this.defaultSearchHandlingStrict = defaultSearchHandlingStrict;
+        this.disableReferentialIntegrity = disableReferentialIntegrity;
+        this.disableResourceVersioning = disableResourceVersioning;
+        this.enableUpdateCreate = enableUpdateCreate;
+        this.labels = labels;
+        this.name = name;
+        this.notificationConfig = notificationConfig;
+        this.streamConfigs = streamConfigs;
+        this.validationConfig = validationConfig;
+        this.version = version;
     }
 
     /**

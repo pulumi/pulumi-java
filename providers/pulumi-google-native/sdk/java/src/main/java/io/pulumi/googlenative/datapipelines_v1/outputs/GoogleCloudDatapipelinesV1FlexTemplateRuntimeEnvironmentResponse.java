@@ -112,22 +112,22 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentRespo
         String workerRegion,
         String workerZone,
         String zone) {
-        this.additionalExperiments = Objects.requireNonNull(additionalExperiments);
-        this.additionalUserLabels = Objects.requireNonNull(additionalUserLabels);
-        this.enableStreamingEngine = Objects.requireNonNull(enableStreamingEngine);
-        this.flexrsGoal = Objects.requireNonNull(flexrsGoal);
-        this.ipConfiguration = Objects.requireNonNull(ipConfiguration);
-        this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
-        this.machineType = Objects.requireNonNull(machineType);
-        this.maxWorkers = Objects.requireNonNull(maxWorkers);
-        this.network = Objects.requireNonNull(network);
-        this.numWorkers = Objects.requireNonNull(numWorkers);
-        this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
-        this.subnetwork = Objects.requireNonNull(subnetwork);
-        this.tempLocation = Objects.requireNonNull(tempLocation);
-        this.workerRegion = Objects.requireNonNull(workerRegion);
-        this.workerZone = Objects.requireNonNull(workerZone);
-        this.zone = Objects.requireNonNull(zone);
+        this.additionalExperiments = additionalExperiments;
+        this.additionalUserLabels = additionalUserLabels;
+        this.enableStreamingEngine = enableStreamingEngine;
+        this.flexrsGoal = flexrsGoal;
+        this.ipConfiguration = ipConfiguration;
+        this.kmsKeyName = kmsKeyName;
+        this.machineType = machineType;
+        this.maxWorkers = maxWorkers;
+        this.network = network;
+        this.numWorkers = numWorkers;
+        this.serviceAccountEmail = serviceAccountEmail;
+        this.subnetwork = subnetwork;
+        this.tempLocation = tempLocation;
+        this.workerRegion = workerRegion;
+        this.workerZone = workerZone;
+        this.zone = zone;
     }
 
     /**

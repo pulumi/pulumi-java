@@ -30,9 +30,9 @@ public final class NetworkEndpointGroupCloudRunResponse {
         String service,
         String tag,
         String urlMask) {
-        this.service = Objects.requireNonNull(service);
-        this.tag = Objects.requireNonNull(tag);
-        this.urlMask = Objects.requireNonNull(urlMask);
+        this.service = service;
+        this.tag = tag;
+        this.urlMask = urlMask;
     }
 
     /**

@@ -18,7 +18,7 @@ public final class OSPolicyAssignmentLabelSetResponse {
 
     @OutputCustomType.Constructor({"labels"})
     private OSPolicyAssignmentLabelSetResponse(Map<String,String> labels) {
-        this.labels = Objects.requireNonNull(labels);
+        this.labels = labels;
     }
 
     /**

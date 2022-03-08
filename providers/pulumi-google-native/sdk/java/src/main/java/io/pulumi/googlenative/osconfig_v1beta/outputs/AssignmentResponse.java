@@ -45,11 +45,11 @@ public final class AssignmentResponse {
         List<String> instances,
         List<AssignmentOsTypeResponse> osTypes,
         List<String> zones) {
-        this.groupLabels = Objects.requireNonNull(groupLabels);
-        this.instanceNamePrefixes = Objects.requireNonNull(instanceNamePrefixes);
-        this.instances = Objects.requireNonNull(instances);
-        this.osTypes = Objects.requireNonNull(osTypes);
-        this.zones = Objects.requireNonNull(zones);
+        this.groupLabels = groupLabels;
+        this.instanceNamePrefixes = instanceNamePrefixes;
+        this.instances = instances;
+        this.osTypes = osTypes;
+        this.zones = zones;
     }
 
     /**

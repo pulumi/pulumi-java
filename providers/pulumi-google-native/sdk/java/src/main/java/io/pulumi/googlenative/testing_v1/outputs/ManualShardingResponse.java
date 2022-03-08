@@ -18,7 +18,7 @@ public final class ManualShardingResponse {
 
     @OutputCustomType.Constructor({"testTargetsForShard"})
     private ManualShardingResponse(List<TestTargetsForShardResponse> testTargetsForShard) {
-        this.testTargetsForShard = Objects.requireNonNull(testTargetsForShard);
+        this.testTargetsForShard = testTargetsForShard;
     }
 
     /**

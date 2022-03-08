@@ -16,8 +16,8 @@ public final class BasicAuthResponse {
     private BasicAuthResponse(
         String password,
         String user) {
-        this.password = Objects.requireNonNull(password);
-        this.user = Objects.requireNonNull(user);
+        this.password = password;
+        this.user = user;
     }
 
     public String getPassword() {

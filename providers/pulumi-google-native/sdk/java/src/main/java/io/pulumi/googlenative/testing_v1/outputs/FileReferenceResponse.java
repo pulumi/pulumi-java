@@ -17,7 +17,7 @@ public final class FileReferenceResponse {
 
     @OutputCustomType.Constructor({"gcsPath"})
     private FileReferenceResponse(String gcsPath) {
-        this.gcsPath = Objects.requireNonNull(gcsPath);
+        this.gcsPath = gcsPath;
     }
 
     /**

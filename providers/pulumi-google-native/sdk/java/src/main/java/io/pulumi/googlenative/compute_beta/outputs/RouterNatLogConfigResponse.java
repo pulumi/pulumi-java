@@ -25,8 +25,8 @@ public final class RouterNatLogConfigResponse {
     private RouterNatLogConfigResponse(
         Boolean enable,
         String filter) {
-        this.enable = Objects.requireNonNull(enable);
-        this.filter = Objects.requireNonNull(filter);
+        this.enable = enable;
+        this.filter = filter;
     }
 
     /**

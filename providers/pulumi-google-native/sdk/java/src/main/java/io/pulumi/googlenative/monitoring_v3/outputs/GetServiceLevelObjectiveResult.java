@@ -57,13 +57,13 @@ public final class GetServiceLevelObjectiveResult {
         String rollingPeriod,
         ServiceLevelIndicatorResponse serviceLevelIndicator,
         Map<String,String> userLabels) {
-        this.calendarPeriod = Objects.requireNonNull(calendarPeriod);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.goal = Objects.requireNonNull(goal);
-        this.name = Objects.requireNonNull(name);
-        this.rollingPeriod = Objects.requireNonNull(rollingPeriod);
-        this.serviceLevelIndicator = Objects.requireNonNull(serviceLevelIndicator);
-        this.userLabels = Objects.requireNonNull(userLabels);
+        this.calendarPeriod = calendarPeriod;
+        this.displayName = displayName;
+        this.goal = goal;
+        this.name = name;
+        this.rollingPeriod = rollingPeriod;
+        this.serviceLevelIndicator = serviceLevelIndicator;
+        this.userLabels = userLabels;
     }
 
     /**

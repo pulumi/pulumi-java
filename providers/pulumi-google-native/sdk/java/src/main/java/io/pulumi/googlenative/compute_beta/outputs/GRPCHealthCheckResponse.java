@@ -37,10 +37,10 @@ public final class GRPCHealthCheckResponse {
         Integer port,
         String portName,
         String portSpecification) {
-        this.grpcServiceName = Objects.requireNonNull(grpcServiceName);
-        this.port = Objects.requireNonNull(port);
-        this.portName = Objects.requireNonNull(portName);
-        this.portSpecification = Objects.requireNonNull(portSpecification);
+        this.grpcServiceName = grpcServiceName;
+        this.port = port;
+        this.portName = portName;
+        this.portSpecification = portSpecification;
     }
 
     /**

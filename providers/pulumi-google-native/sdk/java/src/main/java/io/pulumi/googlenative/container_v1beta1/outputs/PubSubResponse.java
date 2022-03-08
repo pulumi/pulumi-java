@@ -32,9 +32,9 @@ public final class PubSubResponse {
         Boolean enabled,
         FilterResponse filter,
         String topic) {
-        this.enabled = Objects.requireNonNull(enabled);
-        this.filter = Objects.requireNonNull(filter);
-        this.topic = Objects.requireNonNull(topic);
+        this.enabled = enabled;
+        this.filter = filter;
+        this.topic = topic;
     }
 
     /**

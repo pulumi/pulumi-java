@@ -47,11 +47,11 @@ public final class X509ParametersResponse {
         CaOptionsResponse caOptions,
         KeyUsageResponse keyUsage,
         List<ObjectIdResponse> policyIds) {
-        this.additionalExtensions = Objects.requireNonNull(additionalExtensions);
-        this.aiaOcspServers = Objects.requireNonNull(aiaOcspServers);
-        this.caOptions = Objects.requireNonNull(caOptions);
-        this.keyUsage = Objects.requireNonNull(keyUsage);
-        this.policyIds = Objects.requireNonNull(policyIds);
+        this.additionalExtensions = additionalExtensions;
+        this.aiaOcspServers = aiaOcspServers;
+        this.caOptions = caOptions;
+        this.keyUsage = keyUsage;
+        this.policyIds = policyIds;
     }
 
     /**

@@ -83,17 +83,17 @@ public final class ScanRunResponse {
         String urlsCrawledCount,
         String urlsTestedCount,
         List<ScanRunWarningTraceResponse> warningTraces) {
-        this.endTime = Objects.requireNonNull(endTime);
-        this.errorTrace = Objects.requireNonNull(errorTrace);
-        this.executionState = Objects.requireNonNull(executionState);
-        this.hasVulnerabilities = Objects.requireNonNull(hasVulnerabilities);
-        this.name = Objects.requireNonNull(name);
-        this.progressPercent = Objects.requireNonNull(progressPercent);
-        this.resultState = Objects.requireNonNull(resultState);
-        this.startTime = Objects.requireNonNull(startTime);
-        this.urlsCrawledCount = Objects.requireNonNull(urlsCrawledCount);
-        this.urlsTestedCount = Objects.requireNonNull(urlsTestedCount);
-        this.warningTraces = Objects.requireNonNull(warningTraces);
+        this.endTime = endTime;
+        this.errorTrace = errorTrace;
+        this.executionState = executionState;
+        this.hasVulnerabilities = hasVulnerabilities;
+        this.name = name;
+        this.progressPercent = progressPercent;
+        this.resultState = resultState;
+        this.startTime = startTime;
+        this.urlsCrawledCount = urlsCrawledCount;
+        this.urlsTestedCount = urlsTestedCount;
+        this.warningTraces = warningTraces;
     }
 
     /**

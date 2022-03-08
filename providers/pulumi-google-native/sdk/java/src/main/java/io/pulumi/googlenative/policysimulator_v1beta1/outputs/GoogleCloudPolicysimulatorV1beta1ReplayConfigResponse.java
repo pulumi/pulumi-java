@@ -25,8 +25,8 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayConfigResponse {
     private GoogleCloudPolicysimulatorV1beta1ReplayConfigResponse(
         String logSource,
         Map<String,String> policyOverlay) {
-        this.logSource = Objects.requireNonNull(logSource);
-        this.policyOverlay = Objects.requireNonNull(policyOverlay);
+        this.logSource = logSource;
+        this.policyOverlay = policyOverlay;
     }
 
     /**

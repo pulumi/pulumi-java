@@ -31,9 +31,9 @@ public final class DomainMappingSpecResponse {
         String certificateMode,
         Boolean forceOverride,
         String routeName) {
-        this.certificateMode = Objects.requireNonNull(certificateMode);
-        this.forceOverride = Objects.requireNonNull(forceOverride);
-        this.routeName = Objects.requireNonNull(routeName);
+        this.certificateMode = certificateMode;
+        this.forceOverride = forceOverride;
+        this.routeName = routeName;
     }
 
     /**

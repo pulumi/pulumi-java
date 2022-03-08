@@ -17,7 +17,7 @@ public final class MeshCertificatesResponse {
 
     @OutputCustomType.Constructor({"enableCertificates"})
     private MeshCertificatesResponse(Boolean enableCertificates) {
-        this.enableCertificates = Objects.requireNonNull(enableCertificates);
+        this.enableCertificates = enableCertificates;
     }
 
     /**

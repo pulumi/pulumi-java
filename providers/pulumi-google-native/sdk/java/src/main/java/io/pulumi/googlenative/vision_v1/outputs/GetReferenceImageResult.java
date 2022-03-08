@@ -32,9 +32,9 @@ public final class GetReferenceImageResult {
         List<BoundingPolyResponse> boundingPolys,
         String name,
         String uri) {
-        this.boundingPolys = Objects.requireNonNull(boundingPolys);
-        this.name = Objects.requireNonNull(name);
-        this.uri = Objects.requireNonNull(uri);
+        this.boundingPolys = boundingPolys;
+        this.name = name;
+        this.uri = uri;
     }
 
     /**

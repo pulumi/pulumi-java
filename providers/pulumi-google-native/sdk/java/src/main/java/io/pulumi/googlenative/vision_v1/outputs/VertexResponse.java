@@ -24,8 +24,8 @@ public final class VertexResponse {
     private VertexResponse(
         Integer x,
         Integer y) {
-        this.x = Objects.requireNonNull(x);
-        this.y = Objects.requireNonNull(y);
+        this.x = x;
+        this.y = y;
     }
 
     /**

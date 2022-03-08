@@ -25,8 +25,8 @@ public final class ModelStateResponse {
     private ModelStateResponse(
         Boolean published,
         StatusResponse validationError) {
-        this.published = Objects.requireNonNull(published);
-        this.validationError = Objects.requireNonNull(validationError);
+        this.published = published;
+        this.validationError = validationError;
     }
 
     /**

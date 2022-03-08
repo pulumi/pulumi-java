@@ -38,10 +38,10 @@ public final class HTTPGetActionResponse {
         List<HTTPHeaderResponse> httpHeaders,
         String path,
         String scheme) {
-        this.host = Objects.requireNonNull(host);
-        this.httpHeaders = Objects.requireNonNull(httpHeaders);
-        this.path = Objects.requireNonNull(path);
-        this.scheme = Objects.requireNonNull(scheme);
+        this.host = host;
+        this.httpHeaders = httpHeaders;
+        this.path = path;
+        this.scheme = scheme;
     }
 
     /**

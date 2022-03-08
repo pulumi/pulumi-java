@@ -50,12 +50,12 @@ public final class GetRolloutResult {
         String serviceName,
         String status,
         TrafficPercentStrategyResponse trafficPercentStrategy) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.deleteServiceStrategy = Objects.requireNonNull(deleteServiceStrategy);
-        this.rolloutId = Objects.requireNonNull(rolloutId);
-        this.serviceName = Objects.requireNonNull(serviceName);
-        this.status = Objects.requireNonNull(status);
-        this.trafficPercentStrategy = Objects.requireNonNull(trafficPercentStrategy);
+        this.createTime = createTime;
+        this.deleteServiceStrategy = deleteServiceStrategy;
+        this.rolloutId = rolloutId;
+        this.serviceName = serviceName;
+        this.status = status;
+        this.trafficPercentStrategy = trafficPercentStrategy;
     }
 
     /**

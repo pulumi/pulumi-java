@@ -17,7 +17,7 @@ public final class ResourceResponse {
 
     @OutputCustomType.Constructor({"uri"})
     private ResourceResponse(String uri) {
-        this.uri = Objects.requireNonNull(uri);
+        this.uri = uri;
     }
 
     /**

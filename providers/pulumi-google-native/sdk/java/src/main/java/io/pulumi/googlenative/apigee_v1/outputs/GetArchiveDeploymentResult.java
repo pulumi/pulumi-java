@@ -49,12 +49,12 @@ public final class GetArchiveDeploymentResult {
         String name,
         String operation,
         String updatedAt) {
-        this.createdAt = Objects.requireNonNull(createdAt);
-        this.gcsUri = Objects.requireNonNull(gcsUri);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.operation = Objects.requireNonNull(operation);
-        this.updatedAt = Objects.requireNonNull(updatedAt);
+        this.createdAt = createdAt;
+        this.gcsUri = gcsUri;
+        this.labels = labels;
+        this.name = name;
+        this.operation = operation;
+        this.updatedAt = updatedAt;
     }
 
     /**

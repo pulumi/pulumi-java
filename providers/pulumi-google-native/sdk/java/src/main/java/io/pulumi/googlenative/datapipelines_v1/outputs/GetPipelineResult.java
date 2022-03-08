@@ -82,17 +82,17 @@ public final class GetPipelineResult {
         String state,
         String type,
         GoogleCloudDatapipelinesV1WorkloadResponse workload) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.jobCount = Objects.requireNonNull(jobCount);
-        this.lastUpdateTime = Objects.requireNonNull(lastUpdateTime);
-        this.name = Objects.requireNonNull(name);
-        this.pipelineSources = Objects.requireNonNull(pipelineSources);
-        this.scheduleInfo = Objects.requireNonNull(scheduleInfo);
-        this.schedulerServiceAccountEmail = Objects.requireNonNull(schedulerServiceAccountEmail);
-        this.state = Objects.requireNonNull(state);
-        this.type = Objects.requireNonNull(type);
-        this.workload = Objects.requireNonNull(workload);
+        this.createTime = createTime;
+        this.displayName = displayName;
+        this.jobCount = jobCount;
+        this.lastUpdateTime = lastUpdateTime;
+        this.name = name;
+        this.pipelineSources = pipelineSources;
+        this.scheduleInfo = scheduleInfo;
+        this.schedulerServiceAccountEmail = schedulerServiceAccountEmail;
+        this.state = state;
+        this.type = type;
+        this.workload = workload;
     }
 
     /**

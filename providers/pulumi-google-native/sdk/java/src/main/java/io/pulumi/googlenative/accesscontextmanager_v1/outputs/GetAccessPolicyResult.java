@@ -43,11 +43,11 @@ public final class GetAccessPolicyResult {
         String parent,
         List<String> scopes,
         String title) {
-        this.etag = Objects.requireNonNull(etag);
-        this.name = Objects.requireNonNull(name);
-        this.parent = Objects.requireNonNull(parent);
-        this.scopes = Objects.requireNonNull(scopes);
-        this.title = Objects.requireNonNull(title);
+        this.etag = etag;
+        this.name = name;
+        this.parent = parent;
+        this.scopes = scopes;
+        this.title = title;
     }
 
     /**

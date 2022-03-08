@@ -30,9 +30,9 @@ public final class JobReferenceResponse {
         String jobId,
         String location,
         String project) {
-        this.jobId = Objects.requireNonNull(jobId);
-        this.location = Objects.requireNonNull(location);
-        this.project = Objects.requireNonNull(project);
+        this.jobId = jobId;
+        this.location = location;
+        this.project = project;
     }
 
     /**

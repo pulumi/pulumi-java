@@ -17,7 +17,7 @@ public final class ReplicaResponse {
 
     @OutputCustomType.Constructor({"location"})
     private ReplicaResponse(String location) {
-        this.location = Objects.requireNonNull(location);
+        this.location = location;
     }
 
     /**

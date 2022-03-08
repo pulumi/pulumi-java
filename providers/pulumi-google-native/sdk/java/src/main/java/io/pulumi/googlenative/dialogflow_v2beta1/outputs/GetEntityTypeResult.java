@@ -51,12 +51,12 @@ public final class GetEntityTypeResult {
         List<GoogleCloudDialogflowV2beta1EntityTypeEntityResponse> entities,
         String kind,
         String name) {
-        this.autoExpansionMode = Objects.requireNonNull(autoExpansionMode);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.enableFuzzyExtraction = Objects.requireNonNull(enableFuzzyExtraction);
-        this.entities = Objects.requireNonNull(entities);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
+        this.autoExpansionMode = autoExpansionMode;
+        this.displayName = displayName;
+        this.enableFuzzyExtraction = enableFuzzyExtraction;
+        this.entities = entities;
+        this.kind = kind;
+        this.name = name;
     }
 
     /**

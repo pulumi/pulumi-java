@@ -30,9 +30,9 @@ public final class SlsaCompletenessResponse {
         Boolean arguments,
         Boolean environment,
         Boolean materials) {
-        this.arguments = Objects.requireNonNull(arguments);
-        this.environment = Objects.requireNonNull(environment);
-        this.materials = Objects.requireNonNull(materials);
+        this.arguments = arguments;
+        this.environment = environment;
+        this.materials = materials;
     }
 
     /**

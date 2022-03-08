@@ -37,10 +37,10 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
         String endOffset,
         String startOffset,
         String word) {
-        this.confidence = Objects.requireNonNull(confidence);
-        this.endOffset = Objects.requireNonNull(endOffset);
-        this.startOffset = Objects.requireNonNull(startOffset);
-        this.word = Objects.requireNonNull(word);
+        this.confidence = confidence;
+        this.endOffset = endOffset;
+        this.startOffset = startOffset;
+        this.word = word;
     }
 
     /**

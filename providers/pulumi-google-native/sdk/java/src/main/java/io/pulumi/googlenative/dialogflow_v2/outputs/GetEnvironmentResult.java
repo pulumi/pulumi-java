@@ -56,13 +56,13 @@ public final class GetEnvironmentResult {
         String state,
         GoogleCloudDialogflowV2TextToSpeechSettingsResponse textToSpeechSettings,
         String updateTime) {
-        this.agentVersion = Objects.requireNonNull(agentVersion);
-        this.description = Objects.requireNonNull(description);
-        this.fulfillment = Objects.requireNonNull(fulfillment);
-        this.name = Objects.requireNonNull(name);
-        this.state = Objects.requireNonNull(state);
-        this.textToSpeechSettings = Objects.requireNonNull(textToSpeechSettings);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.agentVersion = agentVersion;
+        this.description = description;
+        this.fulfillment = fulfillment;
+        this.name = name;
+        this.state = state;
+        this.textToSpeechSettings = textToSpeechSettings;
+        this.updateTime = updateTime;
     }
 
     /**

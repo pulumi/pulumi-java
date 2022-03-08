@@ -24,8 +24,8 @@ public final class WebhookConfigResponse {
     private WebhookConfigResponse(
         String secret,
         String state) {
-        this.secret = Objects.requireNonNull(secret);
-        this.state = Objects.requireNonNull(state);
+        this.secret = secret;
+        this.state = state;
     }
 
     /**

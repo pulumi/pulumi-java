@@ -81,17 +81,17 @@ public final class GetMetricDescriptorResult {
         String type,
         String unit,
         String valueType) {
-        this.description = Objects.requireNonNull(description);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.labels = Objects.requireNonNull(labels);
-        this.launchStage = Objects.requireNonNull(launchStage);
-        this.metadata = Objects.requireNonNull(metadata);
-        this.metricKind = Objects.requireNonNull(metricKind);
-        this.monitoredResourceTypes = Objects.requireNonNull(monitoredResourceTypes);
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
-        this.unit = Objects.requireNonNull(unit);
-        this.valueType = Objects.requireNonNull(valueType);
+        this.description = description;
+        this.displayName = displayName;
+        this.labels = labels;
+        this.launchStage = launchStage;
+        this.metadata = metadata;
+        this.metricKind = metricKind;
+        this.monitoredResourceTypes = monitoredResourceTypes;
+        this.name = name;
+        this.type = type;
+        this.unit = unit;
+        this.valueType = valueType;
     }
 
     /**

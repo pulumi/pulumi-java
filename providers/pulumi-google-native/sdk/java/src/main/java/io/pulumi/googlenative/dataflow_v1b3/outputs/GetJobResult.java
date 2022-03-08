@@ -158,29 +158,29 @@ public final class GetJobResult {
         List<String> tempFiles,
         Map<String,String> transformNameMapping,
         String type) {
-        this.clientRequestId = Objects.requireNonNull(clientRequestId);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.createdFromSnapshotId = Objects.requireNonNull(createdFromSnapshotId);
-        this.currentState = Objects.requireNonNull(currentState);
-        this.currentStateTime = Objects.requireNonNull(currentStateTime);
-        this.environment = Objects.requireNonNull(environment);
-        this.jobMetadata = Objects.requireNonNull(jobMetadata);
-        this.labels = Objects.requireNonNull(labels);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.pipelineDescription = Objects.requireNonNull(pipelineDescription);
-        this.project = Objects.requireNonNull(project);
-        this.replaceJobId = Objects.requireNonNull(replaceJobId);
-        this.replacedByJobId = Objects.requireNonNull(replacedByJobId);
-        this.requestedState = Objects.requireNonNull(requestedState);
-        this.satisfiesPzs = Objects.requireNonNull(satisfiesPzs);
-        this.stageStates = Objects.requireNonNull(stageStates);
-        this.startTime = Objects.requireNonNull(startTime);
-        this.steps = Objects.requireNonNull(steps);
-        this.stepsLocation = Objects.requireNonNull(stepsLocation);
-        this.tempFiles = Objects.requireNonNull(tempFiles);
-        this.transformNameMapping = Objects.requireNonNull(transformNameMapping);
-        this.type = Objects.requireNonNull(type);
+        this.clientRequestId = clientRequestId;
+        this.createTime = createTime;
+        this.createdFromSnapshotId = createdFromSnapshotId;
+        this.currentState = currentState;
+        this.currentStateTime = currentStateTime;
+        this.environment = environment;
+        this.jobMetadata = jobMetadata;
+        this.labels = labels;
+        this.location = location;
+        this.name = name;
+        this.pipelineDescription = pipelineDescription;
+        this.project = project;
+        this.replaceJobId = replaceJobId;
+        this.replacedByJobId = replacedByJobId;
+        this.requestedState = requestedState;
+        this.satisfiesPzs = satisfiesPzs;
+        this.stageStates = stageStates;
+        this.startTime = startTime;
+        this.steps = steps;
+        this.stepsLocation = stepsLocation;
+        this.tempFiles = tempFiles;
+        this.transformNameMapping = transformNameMapping;
+        this.type = type;
     }
 
     /**

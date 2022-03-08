@@ -24,8 +24,8 @@ public final class MetricDescriptorMetadataResponse {
     private MetricDescriptorMetadataResponse(
         String ingestDelay,
         String samplePeriod) {
-        this.ingestDelay = Objects.requireNonNull(ingestDelay);
-        this.samplePeriod = Objects.requireNonNull(samplePeriod);
+        this.ingestDelay = ingestDelay;
+        this.samplePeriod = samplePeriod;
     }
 
     /**

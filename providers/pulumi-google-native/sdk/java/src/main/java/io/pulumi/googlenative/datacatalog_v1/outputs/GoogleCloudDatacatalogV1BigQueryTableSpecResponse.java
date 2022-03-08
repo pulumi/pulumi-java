@@ -32,9 +32,9 @@ public final class GoogleCloudDatacatalogV1BigQueryTableSpecResponse {
         String tableSourceType,
         GoogleCloudDatacatalogV1TableSpecResponse tableSpec,
         GoogleCloudDatacatalogV1ViewSpecResponse viewSpec) {
-        this.tableSourceType = Objects.requireNonNull(tableSourceType);
-        this.tableSpec = Objects.requireNonNull(tableSpec);
-        this.viewSpec = Objects.requireNonNull(viewSpec);
+        this.tableSourceType = tableSourceType;
+        this.tableSpec = tableSpec;
+        this.viewSpec = viewSpec;
     }
 
     /**

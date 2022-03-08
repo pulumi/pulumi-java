@@ -26,8 +26,8 @@ public final class DataSourceRestrictionResponse {
     private DataSourceRestrictionResponse(
         List<FilterOptionsResponse> filterOptions,
         SourceResponse source) {
-        this.filterOptions = Objects.requireNonNull(filterOptions);
-        this.source = Objects.requireNonNull(source);
+        this.filterOptions = filterOptions;
+        this.source = source;
     }
 
     /**

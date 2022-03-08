@@ -38,10 +38,10 @@ public final class FileShareConfigResponse {
         String name,
         List<NfsExportOptionsResponse> nfsExportOptions,
         String sourceBackup) {
-        this.capacityGb = Objects.requireNonNull(capacityGb);
-        this.name = Objects.requireNonNull(name);
-        this.nfsExportOptions = Objects.requireNonNull(nfsExportOptions);
-        this.sourceBackup = Objects.requireNonNull(sourceBackup);
+        this.capacityGb = capacityGb;
+        this.name = name;
+        this.nfsExportOptions = nfsExportOptions;
+        this.sourceBackup = sourceBackup;
     }
 
     /**

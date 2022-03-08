@@ -50,12 +50,12 @@ public final class SoftwareConfigResponse {
         Map<String,String> pypiPackages,
         String pythonVersion,
         Integer schedulerCount) {
-        this.airflowConfigOverrides = Objects.requireNonNull(airflowConfigOverrides);
-        this.envVariables = Objects.requireNonNull(envVariables);
-        this.imageVersion = Objects.requireNonNull(imageVersion);
-        this.pypiPackages = Objects.requireNonNull(pypiPackages);
-        this.pythonVersion = Objects.requireNonNull(pythonVersion);
-        this.schedulerCount = Objects.requireNonNull(schedulerCount);
+        this.airflowConfigOverrides = airflowConfigOverrides;
+        this.envVariables = envVariables;
+        this.imageVersion = imageVersion;
+        this.pypiPackages = pypiPackages;
+        this.pythonVersion = pythonVersion;
+        this.schedulerCount = schedulerCount;
     }
 
     /**

@@ -17,8 +17,8 @@ public final class ResourceStatusResponse {
     private ResourceStatusResponse(
         ResourceStatusSchedulingResponse scheduling,
         ResourceStatusUpcomingMaintenanceResponse upcomingMaintenance) {
-        this.scheduling = Objects.requireNonNull(scheduling);
-        this.upcomingMaintenance = Objects.requireNonNull(upcomingMaintenance);
+        this.scheduling = scheduling;
+        this.upcomingMaintenance = upcomingMaintenance;
     }
 
     public ResourceStatusSchedulingResponse getScheduling() {

@@ -17,7 +17,7 @@ public final class NodeConfigDefaultsResponse {
 
     @OutputCustomType.Constructor({"gcfsConfig"})
     private NodeConfigDefaultsResponse(GcfsConfigResponse gcfsConfig) {
-        this.gcfsConfig = Objects.requireNonNull(gcfsConfig);
+        this.gcfsConfig = gcfsConfig;
     }
 
     /**

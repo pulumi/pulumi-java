@@ -25,8 +25,8 @@ public final class ReplicaResponse {
     private ReplicaResponse(
         CustomerManagedEncryptionResponse customerManagedEncryption,
         String location) {
-        this.customerManagedEncryption = Objects.requireNonNull(customerManagedEncryption);
-        this.location = Objects.requireNonNull(location);
+        this.customerManagedEncryption = customerManagedEncryption;
+        this.location = location;
     }
 
     /**

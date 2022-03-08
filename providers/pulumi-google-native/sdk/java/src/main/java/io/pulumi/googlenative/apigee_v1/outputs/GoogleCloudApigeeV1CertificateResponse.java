@@ -18,7 +18,7 @@ public final class GoogleCloudApigeeV1CertificateResponse {
 
     @OutputCustomType.Constructor({"certInfo"})
     private GoogleCloudApigeeV1CertificateResponse(List<GoogleCloudApigeeV1CertInfoResponse> certInfo) {
-        this.certInfo = Objects.requireNonNull(certInfo);
+        this.certInfo = certInfo;
     }
 
     /**

@@ -24,8 +24,8 @@ public final class FixedOrPercentResponse {
     private FixedOrPercentResponse(
         Integer fixed,
         Integer percent) {
-        this.fixed = Objects.requireNonNull(fixed);
-        this.percent = Objects.requireNonNull(percent);
+        this.fixed = fixed;
+        this.percent = percent;
     }
 
     /**

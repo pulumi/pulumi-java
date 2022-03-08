@@ -47,11 +47,11 @@ public final class DeploymentResponse {
         ContainerInfoResponse container,
         Map<String,String> files,
         ZipInfoResponse zip) {
-        this.build = Objects.requireNonNull(build);
-        this.cloudBuildOptions = Objects.requireNonNull(cloudBuildOptions);
-        this.container = Objects.requireNonNull(container);
-        this.files = Objects.requireNonNull(files);
-        this.zip = Objects.requireNonNull(zip);
+        this.build = build;
+        this.cloudBuildOptions = cloudBuildOptions;
+        this.container = container;
+        this.files = files;
+        this.zip = zip;
     }
 
     /**

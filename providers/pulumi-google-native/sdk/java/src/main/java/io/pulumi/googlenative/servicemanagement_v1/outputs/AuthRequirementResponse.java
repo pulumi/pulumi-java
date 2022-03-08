@@ -24,8 +24,8 @@ public final class AuthRequirementResponse {
     private AuthRequirementResponse(
         String audiences,
         String providerId) {
-        this.audiences = Objects.requireNonNull(audiences);
-        this.providerId = Objects.requireNonNull(providerId);
+        this.audiences = audiences;
+        this.providerId = providerId;
     }
 
     /**

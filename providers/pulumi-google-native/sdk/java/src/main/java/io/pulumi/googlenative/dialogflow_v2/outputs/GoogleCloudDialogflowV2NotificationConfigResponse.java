@@ -24,8 +24,8 @@ public final class GoogleCloudDialogflowV2NotificationConfigResponse {
     private GoogleCloudDialogflowV2NotificationConfigResponse(
         String messageFormat,
         String topic) {
-        this.messageFormat = Objects.requireNonNull(messageFormat);
-        this.topic = Objects.requireNonNull(topic);
+        this.messageFormat = messageFormat;
+        this.topic = topic;
     }
 
     /**

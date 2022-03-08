@@ -51,12 +51,12 @@ public final class SoftwareRecipeResponse {
         String name,
         List<SoftwareRecipeStepResponse> updateSteps,
         String version) {
-        this.artifacts = Objects.requireNonNull(artifacts);
-        this.desiredState = Objects.requireNonNull(desiredState);
-        this.installSteps = Objects.requireNonNull(installSteps);
-        this.name = Objects.requireNonNull(name);
-        this.updateSteps = Objects.requireNonNull(updateSteps);
-        this.version = Objects.requireNonNull(version);
+        this.artifacts = artifacts;
+        this.desiredState = desiredState;
+        this.installSteps = installSteps;
+        this.name = name;
+        this.updateSteps = updateSteps;
+        this.version = version;
     }
 
     /**

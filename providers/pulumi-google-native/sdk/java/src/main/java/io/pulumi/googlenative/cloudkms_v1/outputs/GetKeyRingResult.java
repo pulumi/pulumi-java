@@ -24,8 +24,8 @@ public final class GetKeyRingResult {
     private GetKeyRingResult(
         String createTime,
         String name) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.name = Objects.requireNonNull(name);
+        this.createTime = createTime;
+        this.name = name;
     }
 
     /**

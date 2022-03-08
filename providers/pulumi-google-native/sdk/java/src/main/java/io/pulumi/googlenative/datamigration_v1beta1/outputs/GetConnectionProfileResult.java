@@ -76,16 +76,16 @@ public final class GetConnectionProfileResult {
         String provider,
         String state,
         String updateTime) {
-        this.cloudsql = Objects.requireNonNull(cloudsql);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.error = Objects.requireNonNull(error);
-        this.labels = Objects.requireNonNull(labels);
-        this.mysql = Objects.requireNonNull(mysql);
-        this.name = Objects.requireNonNull(name);
-        this.provider = Objects.requireNonNull(provider);
-        this.state = Objects.requireNonNull(state);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.cloudsql = cloudsql;
+        this.createTime = createTime;
+        this.displayName = displayName;
+        this.error = error;
+        this.labels = labels;
+        this.mysql = mysql;
+        this.name = name;
+        this.provider = provider;
+        this.state = state;
+        this.updateTime = updateTime;
     }
 
     /**

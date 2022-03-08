@@ -43,11 +43,11 @@ public final class DataSetResponse {
         String plotType,
         String targetAxis,
         TimeSeriesQueryResponse timeSeriesQuery) {
-        this.legendTemplate = Objects.requireNonNull(legendTemplate);
-        this.minAlignmentPeriod = Objects.requireNonNull(minAlignmentPeriod);
-        this.plotType = Objects.requireNonNull(plotType);
-        this.targetAxis = Objects.requireNonNull(targetAxis);
-        this.timeSeriesQuery = Objects.requireNonNull(timeSeriesQuery);
+        this.legendTemplate = legendTemplate;
+        this.minAlignmentPeriod = minAlignmentPeriod;
+        this.plotType = plotType;
+        this.targetAxis = targetAxis;
+        this.timeSeriesQuery = timeSeriesQuery;
     }
 
     /**

@@ -39,10 +39,10 @@ public final class KubernetesResourceResponse {
         String membershipCrManifest,
         List<ResourceManifestResponse> membershipResources,
         ResourceOptionsResponse resourceOptions) {
-        this.connectResources = Objects.requireNonNull(connectResources);
-        this.membershipCrManifest = Objects.requireNonNull(membershipCrManifest);
-        this.membershipResources = Objects.requireNonNull(membershipResources);
-        this.resourceOptions = Objects.requireNonNull(resourceOptions);
+        this.connectResources = connectResources;
+        this.membershipCrManifest = membershipCrManifest;
+        this.membershipResources = membershipResources;
+        this.resourceOptions = resourceOptions;
     }
 
     /**

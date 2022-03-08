@@ -25,8 +25,8 @@ public final class LogsPanelResponse {
     private LogsPanelResponse(
         String filter,
         List<String> resourceNames) {
-        this.filter = Objects.requireNonNull(filter);
-        this.resourceNames = Objects.requireNonNull(resourceNames);
+        this.filter = filter;
+        this.resourceNames = resourceNames;
     }
 
     /**

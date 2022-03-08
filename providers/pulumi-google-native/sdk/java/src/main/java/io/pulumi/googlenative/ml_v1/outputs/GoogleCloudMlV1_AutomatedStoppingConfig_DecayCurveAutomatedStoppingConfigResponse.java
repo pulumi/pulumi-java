@@ -17,7 +17,7 @@ public final class GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedSt
 
     @OutputCustomType.Constructor({"useElapsedTime"})
     private GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigResponse(Boolean useElapsedTime) {
-        this.useElapsedTime = Objects.requireNonNull(useElapsedTime);
+        this.useElapsedTime = useElapsedTime;
     }
 
     /**

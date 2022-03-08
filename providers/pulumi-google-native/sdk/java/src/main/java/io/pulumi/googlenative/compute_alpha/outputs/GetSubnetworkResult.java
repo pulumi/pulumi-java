@@ -198,36 +198,36 @@ public final class GetSubnetworkResult {
         String stackType,
         String state,
         List<Integer> vlans) {
-        this.aggregationInterval = Objects.requireNonNull(aggregationInterval);
-        this.allowSubnetCidrRoutesOverlap = Objects.requireNonNull(allowSubnetCidrRoutesOverlap);
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.description = Objects.requireNonNull(description);
-        this.enableFlowLogs = Objects.requireNonNull(enableFlowLogs);
-        this.enableL2 = Objects.requireNonNull(enableL2);
-        this.externalIpv6Prefix = Objects.requireNonNull(externalIpv6Prefix);
-        this.fingerprint = Objects.requireNonNull(fingerprint);
-        this.flowSampling = Objects.requireNonNull(flowSampling);
-        this.gatewayAddress = Objects.requireNonNull(gatewayAddress);
-        this.ipCidrRange = Objects.requireNonNull(ipCidrRange);
-        this.ipv6AccessType = Objects.requireNonNull(ipv6AccessType);
-        this.ipv6CidrRange = Objects.requireNonNull(ipv6CidrRange);
-        this.kind = Objects.requireNonNull(kind);
-        this.logConfig = Objects.requireNonNull(logConfig);
-        this.metadata = Objects.requireNonNull(metadata);
-        this.name = Objects.requireNonNull(name);
-        this.network = Objects.requireNonNull(network);
-        this.privateIpGoogleAccess = Objects.requireNonNull(privateIpGoogleAccess);
-        this.privateIpv6GoogleAccess = Objects.requireNonNull(privateIpv6GoogleAccess);
-        this.purpose = Objects.requireNonNull(purpose);
-        this.region = Objects.requireNonNull(region);
-        this.reservedInternalRange = Objects.requireNonNull(reservedInternalRange);
-        this.role = Objects.requireNonNull(role);
-        this.secondaryIpRanges = Objects.requireNonNull(secondaryIpRanges);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
-        this.stackType = Objects.requireNonNull(stackType);
-        this.state = Objects.requireNonNull(state);
-        this.vlans = Objects.requireNonNull(vlans);
+        this.aggregationInterval = aggregationInterval;
+        this.allowSubnetCidrRoutesOverlap = allowSubnetCidrRoutesOverlap;
+        this.creationTimestamp = creationTimestamp;
+        this.description = description;
+        this.enableFlowLogs = enableFlowLogs;
+        this.enableL2 = enableL2;
+        this.externalIpv6Prefix = externalIpv6Prefix;
+        this.fingerprint = fingerprint;
+        this.flowSampling = flowSampling;
+        this.gatewayAddress = gatewayAddress;
+        this.ipCidrRange = ipCidrRange;
+        this.ipv6AccessType = ipv6AccessType;
+        this.ipv6CidrRange = ipv6CidrRange;
+        this.kind = kind;
+        this.logConfig = logConfig;
+        this.metadata = metadata;
+        this.name = name;
+        this.network = network;
+        this.privateIpGoogleAccess = privateIpGoogleAccess;
+        this.privateIpv6GoogleAccess = privateIpv6GoogleAccess;
+        this.purpose = purpose;
+        this.region = region;
+        this.reservedInternalRange = reservedInternalRange;
+        this.role = role;
+        this.secondaryIpRanges = secondaryIpRanges;
+        this.selfLink = selfLink;
+        this.selfLinkWithId = selfLinkWithId;
+        this.stackType = stackType;
+        this.state = state;
+        this.vlans = vlans;
     }
 
     /**

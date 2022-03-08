@@ -178,32 +178,32 @@ public final class GoogleCloudMlV1__VersionResponse {
         String runtimeVersion,
         String serviceAccount,
         String state) {
-        this.acceleratorConfig = Objects.requireNonNull(acceleratorConfig);
-        this.autoScaling = Objects.requireNonNull(autoScaling);
-        this.container = Objects.requireNonNull(container);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.deploymentUri = Objects.requireNonNull(deploymentUri);
-        this.description = Objects.requireNonNull(description);
-        this.errorMessage = Objects.requireNonNull(errorMessage);
-        this.etag = Objects.requireNonNull(etag);
-        this.explanationConfig = Objects.requireNonNull(explanationConfig);
-        this.framework = Objects.requireNonNull(framework);
-        this.isDefault = Objects.requireNonNull(isDefault);
-        this.labels = Objects.requireNonNull(labels);
-        this.lastMigrationModelId = Objects.requireNonNull(lastMigrationModelId);
-        this.lastMigrationTime = Objects.requireNonNull(lastMigrationTime);
-        this.lastUseTime = Objects.requireNonNull(lastUseTime);
-        this.machineType = Objects.requireNonNull(machineType);
-        this.manualScaling = Objects.requireNonNull(manualScaling);
-        this.name = Objects.requireNonNull(name);
-        this.packageUris = Objects.requireNonNull(packageUris);
-        this.predictionClass = Objects.requireNonNull(predictionClass);
-        this.pythonVersion = Objects.requireNonNull(pythonVersion);
-        this.requestLoggingConfig = Objects.requireNonNull(requestLoggingConfig);
-        this.routes = Objects.requireNonNull(routes);
-        this.runtimeVersion = Objects.requireNonNull(runtimeVersion);
-        this.serviceAccount = Objects.requireNonNull(serviceAccount);
-        this.state = Objects.requireNonNull(state);
+        this.acceleratorConfig = acceleratorConfig;
+        this.autoScaling = autoScaling;
+        this.container = container;
+        this.createTime = createTime;
+        this.deploymentUri = deploymentUri;
+        this.description = description;
+        this.errorMessage = errorMessage;
+        this.etag = etag;
+        this.explanationConfig = explanationConfig;
+        this.framework = framework;
+        this.isDefault = isDefault;
+        this.labels = labels;
+        this.lastMigrationModelId = lastMigrationModelId;
+        this.lastMigrationTime = lastMigrationTime;
+        this.lastUseTime = lastUseTime;
+        this.machineType = machineType;
+        this.manualScaling = manualScaling;
+        this.name = name;
+        this.packageUris = packageUris;
+        this.predictionClass = predictionClass;
+        this.pythonVersion = pythonVersion;
+        this.requestLoggingConfig = requestLoggingConfig;
+        this.routes = routes;
+        this.runtimeVersion = runtimeVersion;
+        this.serviceAccount = serviceAccount;
+        this.state = state;
     }
 
     /**

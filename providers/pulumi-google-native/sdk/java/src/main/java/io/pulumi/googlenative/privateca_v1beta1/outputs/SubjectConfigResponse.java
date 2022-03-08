@@ -32,9 +32,9 @@ public final class SubjectConfigResponse {
         String commonName,
         SubjectResponse subject,
         SubjectAltNamesResponse subjectAltName) {
-        this.commonName = Objects.requireNonNull(commonName);
-        this.subject = Objects.requireNonNull(subject);
-        this.subjectAltName = Objects.requireNonNull(subjectAltName);
+        this.commonName = commonName;
+        this.subject = subject;
+        this.subjectAltName = subjectAltName;
     }
 
     /**

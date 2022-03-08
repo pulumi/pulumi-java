@@ -63,14 +63,14 @@ public final class TestSuiteOverviewResponse {
         Integer skippedCount,
         Integer totalCount,
         FileReferenceResponse xmlSource) {
-        this.elapsedTime = Objects.requireNonNull(elapsedTime);
-        this.errorCount = Objects.requireNonNull(errorCount);
-        this.failureCount = Objects.requireNonNull(failureCount);
-        this.flakyCount = Objects.requireNonNull(flakyCount);
-        this.name = Objects.requireNonNull(name);
-        this.skippedCount = Objects.requireNonNull(skippedCount);
-        this.totalCount = Objects.requireNonNull(totalCount);
-        this.xmlSource = Objects.requireNonNull(xmlSource);
+        this.elapsedTime = elapsedTime;
+        this.errorCount = errorCount;
+        this.failureCount = failureCount;
+        this.flakyCount = flakyCount;
+        this.name = name;
+        this.skippedCount = skippedCount;
+        this.totalCount = totalCount;
+        this.xmlSource = xmlSource;
     }
 
     /**

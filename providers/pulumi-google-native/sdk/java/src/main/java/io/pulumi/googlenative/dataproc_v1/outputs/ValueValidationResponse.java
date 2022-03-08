@@ -18,7 +18,7 @@ public final class ValueValidationResponse {
 
     @OutputCustomType.Constructor({"values"})
     private ValueValidationResponse(List<String> values) {
-        this.values = Objects.requireNonNull(values);
+        this.values = values;
     }
 
     /**

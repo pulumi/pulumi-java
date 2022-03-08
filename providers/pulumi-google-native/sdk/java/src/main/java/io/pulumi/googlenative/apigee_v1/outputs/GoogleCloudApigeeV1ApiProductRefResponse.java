@@ -24,8 +24,8 @@ public final class GoogleCloudApigeeV1ApiProductRefResponse {
     private GoogleCloudApigeeV1ApiProductRefResponse(
         String apiproduct,
         String status) {
-        this.apiproduct = Objects.requireNonNull(apiproduct);
-        this.status = Objects.requireNonNull(status);
+        this.apiproduct = apiproduct;
+        this.status = status;
     }
 
     /**

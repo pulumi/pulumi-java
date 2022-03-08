@@ -25,8 +25,8 @@ public final class GoogleCloudDialogflowCxV3beta1EntityTypeEntityResponse {
     private GoogleCloudDialogflowCxV3beta1EntityTypeEntityResponse(
         List<String> synonyms,
         String value) {
-        this.synonyms = Objects.requireNonNull(synonyms);
-        this.value = Objects.requireNonNull(value);
+        this.synonyms = synonyms;
+        this.value = value;
     }
 
     /**

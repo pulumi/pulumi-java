@@ -32,9 +32,9 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectResponse {
         List<GoogleCloudDialogflowV2IntentMessageListSelectItemResponse> items,
         String subtitle,
         String title) {
-        this.items = Objects.requireNonNull(items);
-        this.subtitle = Objects.requireNonNull(subtitle);
-        this.title = Objects.requireNonNull(title);
+        this.items = items;
+        this.subtitle = subtitle;
+        this.title = title;
     }
 
     /**

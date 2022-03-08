@@ -36,10 +36,10 @@ public final class GitFileSourceResponse {
         String repoType,
         String revision,
         String uri) {
-        this.path = Objects.requireNonNull(path);
-        this.repoType = Objects.requireNonNull(repoType);
-        this.revision = Objects.requireNonNull(revision);
-        this.uri = Objects.requireNonNull(uri);
+        this.path = path;
+        this.repoType = repoType;
+        this.revision = revision;
+        this.uri = uri;
     }
 
     /**

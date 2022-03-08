@@ -99,20 +99,20 @@ public final class GetSslPolicyResult {
         String selfLinkWithId,
         ServerTlsSettingsResponse tlsSettings,
         List<SslPolicyWarningsItemResponse> warnings) {
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.customFeatures = Objects.requireNonNull(customFeatures);
-        this.description = Objects.requireNonNull(description);
-        this.enabledFeatures = Objects.requireNonNull(enabledFeatures);
-        this.fingerprint = Objects.requireNonNull(fingerprint);
-        this.kind = Objects.requireNonNull(kind);
-        this.minTlsVersion = Objects.requireNonNull(minTlsVersion);
-        this.name = Objects.requireNonNull(name);
-        this.profile = Objects.requireNonNull(profile);
-        this.region = Objects.requireNonNull(region);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
-        this.tlsSettings = Objects.requireNonNull(tlsSettings);
-        this.warnings = Objects.requireNonNull(warnings);
+        this.creationTimestamp = creationTimestamp;
+        this.customFeatures = customFeatures;
+        this.description = description;
+        this.enabledFeatures = enabledFeatures;
+        this.fingerprint = fingerprint;
+        this.kind = kind;
+        this.minTlsVersion = minTlsVersion;
+        this.name = name;
+        this.profile = profile;
+        this.region = region;
+        this.selfLink = selfLink;
+        this.selfLinkWithId = selfLinkWithId;
+        this.tlsSettings = tlsSettings;
+        this.warnings = warnings;
     }
 
     /**

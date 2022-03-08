@@ -24,8 +24,8 @@ public final class NormalizedVertexResponse {
     private NormalizedVertexResponse(
         Double x,
         Double y) {
-        this.x = Objects.requireNonNull(x);
-        this.y = Objects.requireNonNull(y);
+        this.x = x;
+        this.y = y;
     }
 
     /**

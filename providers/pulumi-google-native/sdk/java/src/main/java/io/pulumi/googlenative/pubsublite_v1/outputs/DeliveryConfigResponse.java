@@ -17,7 +17,7 @@ public final class DeliveryConfigResponse {
 
     @OutputCustomType.Constructor({"deliveryRequirement"})
     private DeliveryConfigResponse(String deliveryRequirement) {
-        this.deliveryRequirement = Objects.requireNonNull(deliveryRequirement);
+        this.deliveryRequirement = deliveryRequirement;
     }
 
     /**

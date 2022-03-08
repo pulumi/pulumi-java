@@ -25,8 +25,8 @@ public final class LoggingResponse {
     private LoggingResponse(
         List<LoggingDestinationResponse> consumerDestinations,
         List<LoggingDestinationResponse> producerDestinations) {
-        this.consumerDestinations = Objects.requireNonNull(consumerDestinations);
-        this.producerDestinations = Objects.requireNonNull(producerDestinations);
+        this.consumerDestinations = consumerDestinations;
+        this.producerDestinations = producerDestinations;
     }
 
     /**

@@ -18,7 +18,7 @@ public final class ClusteringResponse {
 
     @OutputCustomType.Constructor({"fields"})
     private ClusteringResponse(List<String> fields) {
-        this.fields = Objects.requireNonNull(fields);
+        this.fields = fields;
     }
 
     /**

@@ -18,7 +18,7 @@ public final class LatencyDistributionResponse {
 
     @OutputCustomType.Constructor({"latencyPercentiles"})
     private LatencyDistributionResponse(List<LatencyPercentileResponse> latencyPercentiles) {
-        this.latencyPercentiles = Objects.requireNonNull(latencyPercentiles);
+        this.latencyPercentiles = latencyPercentiles;
     }
 
     /**

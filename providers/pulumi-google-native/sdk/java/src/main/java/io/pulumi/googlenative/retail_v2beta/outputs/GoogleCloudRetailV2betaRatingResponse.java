@@ -32,9 +32,9 @@ public final class GoogleCloudRetailV2betaRatingResponse {
         Double averageRating,
         Integer ratingCount,
         List<Integer> ratingHistogram) {
-        this.averageRating = Objects.requireNonNull(averageRating);
-        this.ratingCount = Objects.requireNonNull(ratingCount);
-        this.ratingHistogram = Objects.requireNonNull(ratingHistogram);
+        this.averageRating = averageRating;
+        this.ratingCount = ratingCount;
+        this.ratingHistogram = ratingHistogram;
     }
 
     /**

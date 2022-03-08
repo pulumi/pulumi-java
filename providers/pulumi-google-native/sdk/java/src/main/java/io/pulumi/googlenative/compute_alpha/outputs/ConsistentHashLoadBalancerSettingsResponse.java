@@ -31,9 +31,9 @@ public final class ConsistentHashLoadBalancerSettingsResponse {
         ConsistentHashLoadBalancerSettingsHttpCookieResponse httpCookie,
         String httpHeaderName,
         String minimumRingSize) {
-        this.httpCookie = Objects.requireNonNull(httpCookie);
-        this.httpHeaderName = Objects.requireNonNull(httpHeaderName);
-        this.minimumRingSize = Objects.requireNonNull(minimumRingSize);
+        this.httpCookie = httpCookie;
+        this.httpHeaderName = httpHeaderName;
+        this.minimumRingSize = minimumRingSize;
     }
 
     /**

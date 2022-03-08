@@ -32,9 +32,9 @@ public final class VmUtilizationInfoResponse {
         VmUtilizationMetricsResponse utilization,
         String vmId,
         VmwareVmDetailsResponse vmwareVmDetails) {
-        this.utilization = Objects.requireNonNull(utilization);
-        this.vmId = Objects.requireNonNull(vmId);
-        this.vmwareVmDetails = Objects.requireNonNull(vmwareVmDetails);
+        this.utilization = utilization;
+        this.vmId = vmId;
+        this.vmwareVmDetails = vmwareVmDetails;
     }
 
     /**

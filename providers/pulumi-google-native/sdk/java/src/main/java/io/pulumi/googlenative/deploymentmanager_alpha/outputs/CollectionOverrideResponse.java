@@ -32,9 +32,9 @@ public final class CollectionOverrideResponse {
         String collection,
         MethodMapResponse methodMap,
         OptionsResponse options) {
-        this.collection = Objects.requireNonNull(collection);
-        this.methodMap = Objects.requireNonNull(methodMap);
-        this.options = Objects.requireNonNull(options);
+        this.collection = collection;
+        this.methodMap = methodMap;
+        this.options = options;
     }
 
     /**

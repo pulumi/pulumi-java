@@ -36,10 +36,10 @@ public final class SigningKeyResponse {
         String keyScheme,
         String keyType,
         String publicKeyValue) {
-        this.keyId = Objects.requireNonNull(keyId);
-        this.keyScheme = Objects.requireNonNull(keyScheme);
-        this.keyType = Objects.requireNonNull(keyType);
-        this.publicKeyValue = Objects.requireNonNull(publicKeyValue);
+        this.keyId = keyId;
+        this.keyScheme = keyScheme;
+        this.keyType = keyType;
+        this.publicKeyValue = publicKeyValue;
     }
 
     /**

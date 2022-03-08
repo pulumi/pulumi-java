@@ -68,15 +68,15 @@ public final class GetInstanceTemplateResult {
         String selfLinkWithId,
         String sourceInstance,
         SourceInstanceParamsResponse sourceInstanceParams) {
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.description = Objects.requireNonNull(description);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.properties = Objects.requireNonNull(properties);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
-        this.sourceInstance = Objects.requireNonNull(sourceInstance);
-        this.sourceInstanceParams = Objects.requireNonNull(sourceInstanceParams);
+        this.creationTimestamp = creationTimestamp;
+        this.description = description;
+        this.kind = kind;
+        this.name = name;
+        this.properties = properties;
+        this.selfLink = selfLink;
+        this.selfLinkWithId = selfLinkWithId;
+        this.sourceInstance = sourceInstance;
+        this.sourceInstanceParams = sourceInstanceParams;
     }
 
     /**

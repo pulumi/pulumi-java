@@ -32,9 +32,9 @@ public final class CredentialResponse {
         BasicAuthResponse basicAuth,
         ServiceAccountResponse serviceAccount,
         Boolean useProjectDefault) {
-        this.basicAuth = Objects.requireNonNull(basicAuth);
-        this.serviceAccount = Objects.requireNonNull(serviceAccount);
-        this.useProjectDefault = Objects.requireNonNull(useProjectDefault);
+        this.basicAuth = basicAuth;
+        this.serviceAccount = serviceAccount;
+        this.useProjectDefault = useProjectDefault;
     }
 
     /**

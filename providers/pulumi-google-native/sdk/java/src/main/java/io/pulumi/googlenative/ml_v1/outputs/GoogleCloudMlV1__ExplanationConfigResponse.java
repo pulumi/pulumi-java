@@ -32,9 +32,9 @@ public final class GoogleCloudMlV1__ExplanationConfigResponse {
         GoogleCloudMlV1__IntegratedGradientsAttributionResponse integratedGradientsAttribution,
         GoogleCloudMlV1__SampledShapleyAttributionResponse sampledShapleyAttribution,
         GoogleCloudMlV1__XraiAttributionResponse xraiAttribution) {
-        this.integratedGradientsAttribution = Objects.requireNonNull(integratedGradientsAttribution);
-        this.sampledShapleyAttribution = Objects.requireNonNull(sampledShapleyAttribution);
-        this.xraiAttribution = Objects.requireNonNull(xraiAttribution);
+        this.integratedGradientsAttribution = integratedGradientsAttribution;
+        this.sampledShapleyAttribution = sampledShapleyAttribution;
+        this.xraiAttribution = xraiAttribution;
     }
 
     /**

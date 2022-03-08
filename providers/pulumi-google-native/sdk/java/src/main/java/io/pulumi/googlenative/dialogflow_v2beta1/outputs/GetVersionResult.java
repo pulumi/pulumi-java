@@ -43,11 +43,11 @@ public final class GetVersionResult {
         String name,
         String status,
         Integer versionNumber) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.description = Objects.requireNonNull(description);
-        this.name = Objects.requireNonNull(name);
-        this.status = Objects.requireNonNull(status);
-        this.versionNumber = Objects.requireNonNull(versionNumber);
+        this.createTime = createTime;
+        this.description = description;
+        this.name = name;
+        this.status = status;
+        this.versionNumber = versionNumber;
     }
 
     /**

@@ -25,8 +25,8 @@ public final class GooglePrivacyDlpV2TriggerResponse {
     private GooglePrivacyDlpV2TriggerResponse(
         GooglePrivacyDlpV2ManualResponse manual,
         GooglePrivacyDlpV2ScheduleResponse schedule) {
-        this.manual = Objects.requireNonNull(manual);
-        this.schedule = Objects.requireNonNull(schedule);
+        this.manual = manual;
+        this.schedule = schedule;
     }
 
     /**

@@ -74,16 +74,16 @@ public final class Vp9CodecSettingsResponse {
         String profile,
         String rateControlMode,
         Integer widthPixels) {
-        this.bitrateBps = Objects.requireNonNull(bitrateBps);
-        this.crfLevel = Objects.requireNonNull(crfLevel);
-        this.frameRate = Objects.requireNonNull(frameRate);
-        this.gopDuration = Objects.requireNonNull(gopDuration);
-        this.gopFrameCount = Objects.requireNonNull(gopFrameCount);
-        this.heightPixels = Objects.requireNonNull(heightPixels);
-        this.pixelFormat = Objects.requireNonNull(pixelFormat);
-        this.profile = Objects.requireNonNull(profile);
-        this.rateControlMode = Objects.requireNonNull(rateControlMode);
-        this.widthPixels = Objects.requireNonNull(widthPixels);
+        this.bitrateBps = bitrateBps;
+        this.crfLevel = crfLevel;
+        this.frameRate = frameRate;
+        this.gopDuration = gopDuration;
+        this.gopFrameCount = gopFrameCount;
+        this.heightPixels = heightPixels;
+        this.pixelFormat = pixelFormat;
+        this.profile = profile;
+        this.rateControlMode = rateControlMode;
+        this.widthPixels = widthPixels;
     }
 
     /**

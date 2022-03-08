@@ -24,8 +24,8 @@ public final class GoogleCloudContactcenterinsightsV1GcsSourceResponse {
     private GoogleCloudContactcenterinsightsV1GcsSourceResponse(
         String audioUri,
         String transcriptUri) {
-        this.audioUri = Objects.requireNonNull(audioUri);
-        this.transcriptUri = Objects.requireNonNull(transcriptUri);
+        this.audioUri = audioUri;
+        this.transcriptUri = transcriptUri;
     }
 
     /**

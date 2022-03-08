@@ -93,19 +93,19 @@ public final class GetAppResult {
         String name,
         List<String> scopes,
         String status) {
-        this.apiProducts = Objects.requireNonNull(apiProducts);
-        this.appFamily = Objects.requireNonNull(appFamily);
-        this.appId = Objects.requireNonNull(appId);
-        this.attributes = Objects.requireNonNull(attributes);
-        this.callbackUrl = Objects.requireNonNull(callbackUrl);
-        this.createdAt = Objects.requireNonNull(createdAt);
-        this.credentials = Objects.requireNonNull(credentials);
-        this.developerId = Objects.requireNonNull(developerId);
-        this.keyExpiresIn = Objects.requireNonNull(keyExpiresIn);
-        this.lastModifiedAt = Objects.requireNonNull(lastModifiedAt);
-        this.name = Objects.requireNonNull(name);
-        this.scopes = Objects.requireNonNull(scopes);
-        this.status = Objects.requireNonNull(status);
+        this.apiProducts = apiProducts;
+        this.appFamily = appFamily;
+        this.appId = appId;
+        this.attributes = attributes;
+        this.callbackUrl = callbackUrl;
+        this.createdAt = createdAt;
+        this.credentials = credentials;
+        this.developerId = developerId;
+        this.keyExpiresIn = keyExpiresIn;
+        this.lastModifiedAt = lastModifiedAt;
+        this.name = name;
+        this.scopes = scopes;
+        this.status = status;
     }
 
     /**

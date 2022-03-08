@@ -25,8 +25,8 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowInteractionDataRe
     private GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse(
         Double confidence,
         String dialogflowIntentId) {
-        this.confidence = Objects.requireNonNull(confidence);
-        this.dialogflowIntentId = Objects.requireNonNull(dialogflowIntentId);
+        this.confidence = confidence;
+        this.dialogflowIntentId = dialogflowIntentId;
     }
 
     /**

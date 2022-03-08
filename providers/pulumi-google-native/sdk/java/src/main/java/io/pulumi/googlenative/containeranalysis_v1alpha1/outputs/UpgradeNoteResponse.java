@@ -33,9 +33,9 @@ public final class UpgradeNoteResponse {
         List<UpgradeDistributionResponse> distributions,
         String $package,
         VersionResponse version) {
-        this.distributions = Objects.requireNonNull(distributions);
-        this.$package = Objects.requireNonNull($package);
-        this.version = Objects.requireNonNull(version);
+        this.distributions = distributions;
+        this.$package = $package;
+        this.version = version;
     }
 
     /**

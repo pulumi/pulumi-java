@@ -94,19 +94,19 @@ public final class ExecutionTemplateResponse {
         String paramsYamlFile,
         String serviceAccount,
         VertexAIParametersResponse vertexAiParameters) {
-        this.acceleratorConfig = Objects.requireNonNull(acceleratorConfig);
-        this.containerImageUri = Objects.requireNonNull(containerImageUri);
-        this.dataprocParameters = Objects.requireNonNull(dataprocParameters);
-        this.inputNotebookFile = Objects.requireNonNull(inputNotebookFile);
-        this.jobType = Objects.requireNonNull(jobType);
-        this.kernelSpec = Objects.requireNonNull(kernelSpec);
-        this.labels = Objects.requireNonNull(labels);
-        this.masterType = Objects.requireNonNull(masterType);
-        this.outputNotebookFolder = Objects.requireNonNull(outputNotebookFolder);
-        this.parameters = Objects.requireNonNull(parameters);
-        this.paramsYamlFile = Objects.requireNonNull(paramsYamlFile);
-        this.serviceAccount = Objects.requireNonNull(serviceAccount);
-        this.vertexAiParameters = Objects.requireNonNull(vertexAiParameters);
+        this.acceleratorConfig = acceleratorConfig;
+        this.containerImageUri = containerImageUri;
+        this.dataprocParameters = dataprocParameters;
+        this.inputNotebookFile = inputNotebookFile;
+        this.jobType = jobType;
+        this.kernelSpec = kernelSpec;
+        this.labels = labels;
+        this.masterType = masterType;
+        this.outputNotebookFolder = outputNotebookFolder;
+        this.parameters = parameters;
+        this.paramsYamlFile = paramsYamlFile;
+        this.serviceAccount = serviceAccount;
+        this.vertexAiParameters = vertexAiParameters;
     }
 
     /**

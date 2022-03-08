@@ -25,8 +25,8 @@ public final class PartitionConfigResponse {
     private PartitionConfigResponse(
         CapacityResponse capacity,
         String count) {
-        this.capacity = Objects.requireNonNull(capacity);
-        this.count = Objects.requireNonNull(count);
+        this.capacity = capacity;
+        this.count = count;
     }
 
     /**

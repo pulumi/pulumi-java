@@ -24,8 +24,8 @@ public final class GetReservationResult {
     private GetReservationResult(
         String name,
         String throughputCapacity) {
-        this.name = Objects.requireNonNull(name);
-        this.throughputCapacity = Objects.requireNonNull(throughputCapacity);
+        this.name = name;
+        this.throughputCapacity = throughputCapacity;
     }
 
     /**

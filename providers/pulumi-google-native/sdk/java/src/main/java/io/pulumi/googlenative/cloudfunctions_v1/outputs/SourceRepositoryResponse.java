@@ -24,8 +24,8 @@ public final class SourceRepositoryResponse {
     private SourceRepositoryResponse(
         String deployedUrl,
         String url) {
-        this.deployedUrl = Objects.requireNonNull(deployedUrl);
-        this.url = Objects.requireNonNull(url);
+        this.deployedUrl = deployedUrl;
+        this.url = url;
     }
 
     /**

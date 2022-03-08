@@ -45,11 +45,11 @@ public final class BigtableColumnFamilyResponse {
         String familyId,
         Boolean onlyReadLatest,
         String type) {
-        this.columns = Objects.requireNonNull(columns);
-        this.encoding = Objects.requireNonNull(encoding);
-        this.familyId = Objects.requireNonNull(familyId);
-        this.onlyReadLatest = Objects.requireNonNull(onlyReadLatest);
-        this.type = Objects.requireNonNull(type);
+        this.columns = columns;
+        this.encoding = encoding;
+        this.familyId = familyId;
+        this.onlyReadLatest = onlyReadLatest;
+        this.type = type;
     }
 
     /**

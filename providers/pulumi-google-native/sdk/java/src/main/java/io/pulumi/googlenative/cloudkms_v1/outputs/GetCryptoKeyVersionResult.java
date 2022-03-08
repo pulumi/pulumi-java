@@ -99,20 +99,20 @@ public final class GetCryptoKeyVersionResult {
         String protectionLevel,
         Boolean reimportEligible,
         String state) {
-        this.algorithm = Objects.requireNonNull(algorithm);
-        this.attestation = Objects.requireNonNull(attestation);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.destroyEventTime = Objects.requireNonNull(destroyEventTime);
-        this.destroyTime = Objects.requireNonNull(destroyTime);
-        this.externalProtectionLevelOptions = Objects.requireNonNull(externalProtectionLevelOptions);
-        this.generateTime = Objects.requireNonNull(generateTime);
-        this.importFailureReason = Objects.requireNonNull(importFailureReason);
-        this.importJob = Objects.requireNonNull(importJob);
-        this.importTime = Objects.requireNonNull(importTime);
-        this.name = Objects.requireNonNull(name);
-        this.protectionLevel = Objects.requireNonNull(protectionLevel);
-        this.reimportEligible = Objects.requireNonNull(reimportEligible);
-        this.state = Objects.requireNonNull(state);
+        this.algorithm = algorithm;
+        this.attestation = attestation;
+        this.createTime = createTime;
+        this.destroyEventTime = destroyEventTime;
+        this.destroyTime = destroyTime;
+        this.externalProtectionLevelOptions = externalProtectionLevelOptions;
+        this.generateTime = generateTime;
+        this.importFailureReason = importFailureReason;
+        this.importJob = importJob;
+        this.importTime = importTime;
+        this.name = name;
+        this.protectionLevel = protectionLevel;
+        this.reimportEligible = reimportEligible;
+        this.state = state;
     }
 
     /**

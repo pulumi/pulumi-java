@@ -25,8 +25,8 @@ public final class LogConfigCloudAuditOptionsResponse {
     private LogConfigCloudAuditOptionsResponse(
         AuthorizationLoggingOptionsResponse authorizationLoggingOptions,
         String logName) {
-        this.authorizationLoggingOptions = Objects.requireNonNull(authorizationLoggingOptions);
-        this.logName = Objects.requireNonNull(logName);
+        this.authorizationLoggingOptions = authorizationLoggingOptions;
+        this.logName = logName;
     }
 
     /**

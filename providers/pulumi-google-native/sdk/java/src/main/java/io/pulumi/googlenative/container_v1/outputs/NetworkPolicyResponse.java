@@ -25,8 +25,8 @@ public final class NetworkPolicyResponse {
     private NetworkPolicyResponse(
         Boolean enabled,
         String provider) {
-        this.enabled = Objects.requireNonNull(enabled);
-        this.provider = Objects.requireNonNull(provider);
+        this.enabled = enabled;
+        this.provider = provider;
     }
 
     /**

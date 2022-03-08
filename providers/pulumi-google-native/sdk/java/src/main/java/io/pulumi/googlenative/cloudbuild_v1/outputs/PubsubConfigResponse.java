@@ -36,10 +36,10 @@ public final class PubsubConfigResponse {
         String state,
         String subscription,
         String topic) {
-        this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
-        this.state = Objects.requireNonNull(state);
-        this.subscription = Objects.requireNonNull(subscription);
-        this.topic = Objects.requireNonNull(topic);
+        this.serviceAccountEmail = serviceAccountEmail;
+        this.state = state;
+        this.subscription = subscription;
+        this.topic = topic;
     }
 
     /**

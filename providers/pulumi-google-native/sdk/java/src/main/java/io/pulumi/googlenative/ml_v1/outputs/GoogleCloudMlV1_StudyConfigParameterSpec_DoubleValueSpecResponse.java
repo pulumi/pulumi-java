@@ -24,8 +24,8 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecRespo
     private GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecResponse(
         Double maxValue,
         Double minValue) {
-        this.maxValue = Objects.requireNonNull(maxValue);
-        this.minValue = Objects.requireNonNull(minValue);
+        this.maxValue = maxValue;
+        this.minValue = minValue;
     }
 
     /**

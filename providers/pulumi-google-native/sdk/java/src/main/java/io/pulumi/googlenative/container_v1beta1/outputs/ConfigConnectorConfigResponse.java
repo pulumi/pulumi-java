@@ -17,7 +17,7 @@ public final class ConfigConnectorConfigResponse {
 
     @OutputCustomType.Constructor({"enabled"})
     private ConfigConnectorConfigResponse(Boolean enabled) {
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
     }
 
     /**

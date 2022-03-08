@@ -37,10 +37,10 @@ public final class VolumeMountResponse {
         String name,
         Boolean readOnly,
         String subPath) {
-        this.mountPath = Objects.requireNonNull(mountPath);
-        this.name = Objects.requireNonNull(name);
-        this.readOnly = Objects.requireNonNull(readOnly);
-        this.subPath = Objects.requireNonNull(subPath);
+        this.mountPath = mountPath;
+        this.name = name;
+        this.readOnly = readOnly;
+        this.subPath = subPath;
     }
 
     /**

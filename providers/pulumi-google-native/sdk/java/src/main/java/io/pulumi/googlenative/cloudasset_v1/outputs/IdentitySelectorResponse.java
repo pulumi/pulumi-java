@@ -17,7 +17,7 @@ public final class IdentitySelectorResponse {
 
     @OutputCustomType.Constructor({"identity"})
     private IdentitySelectorResponse(String identity) {
-        this.identity = Objects.requireNonNull(identity);
+        this.identity = identity;
     }
 
     /**

@@ -39,10 +39,10 @@ public final class ViewDefinitionResponse {
         Boolean useExplicitColumnNames,
         Boolean useLegacySql,
         List<UserDefinedFunctionResourceResponse> userDefinedFunctionResources) {
-        this.query = Objects.requireNonNull(query);
-        this.useExplicitColumnNames = Objects.requireNonNull(useExplicitColumnNames);
-        this.useLegacySql = Objects.requireNonNull(useLegacySql);
-        this.userDefinedFunctionResources = Objects.requireNonNull(userDefinedFunctionResources);
+        this.query = query;
+        this.useExplicitColumnNames = useExplicitColumnNames;
+        this.useLegacySql = useLegacySql;
+        this.userDefinedFunctionResources = userDefinedFunctionResources;
     }
 
     /**

@@ -54,13 +54,13 @@ public final class ForwardingRuleInfoResponse {
         String target,
         String uri,
         String vip) {
-        this.displayName = Objects.requireNonNull(displayName);
-        this.matchedPortRange = Objects.requireNonNull(matchedPortRange);
-        this.matchedProtocol = Objects.requireNonNull(matchedProtocol);
-        this.networkUri = Objects.requireNonNull(networkUri);
-        this.target = Objects.requireNonNull(target);
-        this.uri = Objects.requireNonNull(uri);
-        this.vip = Objects.requireNonNull(vip);
+        this.displayName = displayName;
+        this.matchedPortRange = matchedPortRange;
+        this.matchedProtocol = matchedProtocol;
+        this.networkUri = networkUri;
+        this.target = target;
+        this.uri = uri;
+        this.vip = vip;
     }
 
     /**

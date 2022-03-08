@@ -32,9 +32,9 @@ public final class NetworkEndpointResponse {
         AccessConfigResponse accessConfig,
         String ipAddress,
         Integer port) {
-        this.accessConfig = Objects.requireNonNull(accessConfig);
-        this.ipAddress = Objects.requireNonNull(ipAddress);
-        this.port = Objects.requireNonNull(port);
+        this.accessConfig = accessConfig;
+        this.ipAddress = ipAddress;
+        this.port = port;
     }
 
     /**

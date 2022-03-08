@@ -17,7 +17,7 @@ public final class OneTimeScheduleResponse {
 
     @OutputCustomType.Constructor({"executeTime"})
     private OneTimeScheduleResponse(String executeTime) {
-        this.executeTime = Objects.requireNonNull(executeTime);
+        this.executeTime = executeTime;
     }
 
     /**

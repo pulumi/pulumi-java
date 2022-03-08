@@ -63,14 +63,14 @@ public final class PySparkJobResponse {
         String mainPythonFileUri,
         Map<String,String> properties,
         List<String> pythonFileUris) {
-        this.archiveUris = Objects.requireNonNull(archiveUris);
-        this.args = Objects.requireNonNull(args);
-        this.fileUris = Objects.requireNonNull(fileUris);
-        this.jarFileUris = Objects.requireNonNull(jarFileUris);
-        this.loggingConfig = Objects.requireNonNull(loggingConfig);
-        this.mainPythonFileUri = Objects.requireNonNull(mainPythonFileUri);
-        this.properties = Objects.requireNonNull(properties);
-        this.pythonFileUris = Objects.requireNonNull(pythonFileUris);
+        this.archiveUris = archiveUris;
+        this.args = args;
+        this.fileUris = fileUris;
+        this.jarFileUris = jarFileUris;
+        this.loggingConfig = loggingConfig;
+        this.mainPythonFileUri = mainPythonFileUri;
+        this.properties = properties;
+        this.pythonFileUris = pythonFileUris;
     }
 
     /**

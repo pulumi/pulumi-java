@@ -25,8 +25,8 @@ public final class AttributeResponse {
     private AttributeResponse(
         String attributeDefinitionId,
         List<String> values) {
-        this.attributeDefinitionId = Objects.requireNonNull(attributeDefinitionId);
-        this.values = Objects.requireNonNull(values);
+        this.attributeDefinitionId = attributeDefinitionId;
+        this.values = values;
     }
 
     /**

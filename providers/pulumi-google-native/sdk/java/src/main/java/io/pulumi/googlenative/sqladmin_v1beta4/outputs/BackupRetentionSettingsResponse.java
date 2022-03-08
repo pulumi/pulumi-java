@@ -25,8 +25,8 @@ public final class BackupRetentionSettingsResponse {
     private BackupRetentionSettingsResponse(
         Integer retainedBackups,
         String retentionUnit) {
-        this.retainedBackups = Objects.requireNonNull(retainedBackups);
-        this.retentionUnit = Objects.requireNonNull(retentionUnit);
+        this.retainedBackups = retainedBackups;
+        this.retentionUnit = retentionUnit;
     }
 
     /**

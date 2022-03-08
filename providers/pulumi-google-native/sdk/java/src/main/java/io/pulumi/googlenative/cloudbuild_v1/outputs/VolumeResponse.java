@@ -24,8 +24,8 @@ public final class VolumeResponse {
     private VolumeResponse(
         String name,
         String path) {
-        this.name = Objects.requireNonNull(name);
-        this.path = Objects.requireNonNull(path);
+        this.name = name;
+        this.path = path;
     }
 
     /**

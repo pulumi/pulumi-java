@@ -108,22 +108,22 @@ public final class GetApiProductResult {
         String quotaInterval,
         String quotaTimeUnit,
         List<String> scopes) {
-        this.apiResources = Objects.requireNonNull(apiResources);
-        this.approvalType = Objects.requireNonNull(approvalType);
-        this.attributes = Objects.requireNonNull(attributes);
-        this.createdAt = Objects.requireNonNull(createdAt);
-        this.description = Objects.requireNonNull(description);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.environments = Objects.requireNonNull(environments);
-        this.graphqlOperationGroup = Objects.requireNonNull(graphqlOperationGroup);
-        this.lastModifiedAt = Objects.requireNonNull(lastModifiedAt);
-        this.name = Objects.requireNonNull(name);
-        this.operationGroup = Objects.requireNonNull(operationGroup);
-        this.proxies = Objects.requireNonNull(proxies);
-        this.quota = Objects.requireNonNull(quota);
-        this.quotaInterval = Objects.requireNonNull(quotaInterval);
-        this.quotaTimeUnit = Objects.requireNonNull(quotaTimeUnit);
-        this.scopes = Objects.requireNonNull(scopes);
+        this.apiResources = apiResources;
+        this.approvalType = approvalType;
+        this.attributes = attributes;
+        this.createdAt = createdAt;
+        this.description = description;
+        this.displayName = displayName;
+        this.environments = environments;
+        this.graphqlOperationGroup = graphqlOperationGroup;
+        this.lastModifiedAt = lastModifiedAt;
+        this.name = name;
+        this.operationGroup = operationGroup;
+        this.proxies = proxies;
+        this.quota = quota;
+        this.quotaInterval = quotaInterval;
+        this.quotaTimeUnit = quotaTimeUnit;
+        this.scopes = scopes;
     }
 
     public List<String> getApiResources() {

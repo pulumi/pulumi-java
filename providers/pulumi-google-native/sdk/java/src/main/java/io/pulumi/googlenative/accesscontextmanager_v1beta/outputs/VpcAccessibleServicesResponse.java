@@ -26,8 +26,8 @@ public final class VpcAccessibleServicesResponse {
     private VpcAccessibleServicesResponse(
         List<String> allowedServices,
         Boolean enableRestriction) {
-        this.allowedServices = Objects.requireNonNull(allowedServices);
-        this.enableRestriction = Objects.requireNonNull(enableRestriction);
+        this.allowedServices = allowedServices;
+        this.enableRestriction = enableRestriction;
     }
 
     /**

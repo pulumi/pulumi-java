@@ -69,15 +69,15 @@ public final class GetExternalVpnGatewayResult {
         String name,
         String redundancyType,
         String selfLink) {
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.description = Objects.requireNonNull(description);
-        this.interfaces = Objects.requireNonNull(interfaces);
-        this.kind = Objects.requireNonNull(kind);
-        this.labelFingerprint = Objects.requireNonNull(labelFingerprint);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.redundancyType = Objects.requireNonNull(redundancyType);
-        this.selfLink = Objects.requireNonNull(selfLink);
+        this.creationTimestamp = creationTimestamp;
+        this.description = description;
+        this.interfaces = interfaces;
+        this.kind = kind;
+        this.labelFingerprint = labelFingerprint;
+        this.labels = labels;
+        this.name = name;
+        this.redundancyType = redundancyType;
+        this.selfLink = selfLink;
     }
 
     /**

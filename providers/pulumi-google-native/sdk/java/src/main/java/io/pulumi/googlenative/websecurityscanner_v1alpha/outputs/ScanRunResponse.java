@@ -68,15 +68,15 @@ public final class ScanRunResponse {
         String startTime,
         String urlsCrawledCount,
         String urlsTestedCount) {
-        this.endTime = Objects.requireNonNull(endTime);
-        this.executionState = Objects.requireNonNull(executionState);
-        this.hasVulnerabilities = Objects.requireNonNull(hasVulnerabilities);
-        this.name = Objects.requireNonNull(name);
-        this.progressPercent = Objects.requireNonNull(progressPercent);
-        this.resultState = Objects.requireNonNull(resultState);
-        this.startTime = Objects.requireNonNull(startTime);
-        this.urlsCrawledCount = Objects.requireNonNull(urlsCrawledCount);
-        this.urlsTestedCount = Objects.requireNonNull(urlsTestedCount);
+        this.endTime = endTime;
+        this.executionState = executionState;
+        this.hasVulnerabilities = hasVulnerabilities;
+        this.name = name;
+        this.progressPercent = progressPercent;
+        this.resultState = resultState;
+        this.startTime = startTime;
+        this.urlsCrawledCount = urlsCrawledCount;
+        this.urlsTestedCount = urlsTestedCount;
     }
 
     /**

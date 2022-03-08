@@ -30,9 +30,9 @@ public final class LicenseResourceCommitmentResponse {
         String amount,
         String coresPerLicense,
         String license) {
-        this.amount = Objects.requireNonNull(amount);
-        this.coresPerLicense = Objects.requireNonNull(coresPerLicense);
-        this.license = Objects.requireNonNull(license);
+        this.amount = amount;
+        this.coresPerLicense = coresPerLicense;
+        this.license = license;
     }
 
     /**

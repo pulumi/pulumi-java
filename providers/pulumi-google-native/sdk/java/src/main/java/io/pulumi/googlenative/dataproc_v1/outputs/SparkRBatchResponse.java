@@ -37,10 +37,10 @@ public final class SparkRBatchResponse {
         List<String> args,
         List<String> fileUris,
         String mainRFileUri) {
-        this.archiveUris = Objects.requireNonNull(archiveUris);
-        this.args = Objects.requireNonNull(args);
-        this.fileUris = Objects.requireNonNull(fileUris);
-        this.mainRFileUri = Objects.requireNonNull(mainRFileUri);
+        this.archiveUris = archiveUris;
+        this.args = args;
+        this.fileUris = fileUris;
+        this.mainRFileUri = mainRFileUri;
     }
 
     /**

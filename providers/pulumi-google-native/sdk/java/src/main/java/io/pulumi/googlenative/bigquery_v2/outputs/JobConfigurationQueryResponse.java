@@ -163,29 +163,29 @@ public final class JobConfigurationQueryResponse {
         Boolean useQueryCache,
         List<UserDefinedFunctionResourceResponse> userDefinedFunctionResources,
         String writeDisposition) {
-        this.allowLargeResults = Objects.requireNonNull(allowLargeResults);
-        this.clustering = Objects.requireNonNull(clustering);
-        this.connectionProperties = Objects.requireNonNull(connectionProperties);
-        this.createDisposition = Objects.requireNonNull(createDisposition);
-        this.createSession = Objects.requireNonNull(createSession);
-        this.defaultDataset = Objects.requireNonNull(defaultDataset);
-        this.destinationEncryptionConfiguration = Objects.requireNonNull(destinationEncryptionConfiguration);
-        this.destinationTable = Objects.requireNonNull(destinationTable);
-        this.flattenResults = Objects.requireNonNull(flattenResults);
-        this.maximumBillingTier = Objects.requireNonNull(maximumBillingTier);
-        this.maximumBytesBilled = Objects.requireNonNull(maximumBytesBilled);
-        this.parameterMode = Objects.requireNonNull(parameterMode);
-        this.priority = Objects.requireNonNull(priority);
-        this.query = Objects.requireNonNull(query);
-        this.queryParameters = Objects.requireNonNull(queryParameters);
-        this.rangePartitioning = Objects.requireNonNull(rangePartitioning);
-        this.schemaUpdateOptions = Objects.requireNonNull(schemaUpdateOptions);
-        this.tableDefinitions = Objects.requireNonNull(tableDefinitions);
-        this.timePartitioning = Objects.requireNonNull(timePartitioning);
-        this.useLegacySql = Objects.requireNonNull(useLegacySql);
-        this.useQueryCache = Objects.requireNonNull(useQueryCache);
-        this.userDefinedFunctionResources = Objects.requireNonNull(userDefinedFunctionResources);
-        this.writeDisposition = Objects.requireNonNull(writeDisposition);
+        this.allowLargeResults = allowLargeResults;
+        this.clustering = clustering;
+        this.connectionProperties = connectionProperties;
+        this.createDisposition = createDisposition;
+        this.createSession = createSession;
+        this.defaultDataset = defaultDataset;
+        this.destinationEncryptionConfiguration = destinationEncryptionConfiguration;
+        this.destinationTable = destinationTable;
+        this.flattenResults = flattenResults;
+        this.maximumBillingTier = maximumBillingTier;
+        this.maximumBytesBilled = maximumBytesBilled;
+        this.parameterMode = parameterMode;
+        this.priority = priority;
+        this.query = query;
+        this.queryParameters = queryParameters;
+        this.rangePartitioning = rangePartitioning;
+        this.schemaUpdateOptions = schemaUpdateOptions;
+        this.tableDefinitions = tableDefinitions;
+        this.timePartitioning = timePartitioning;
+        this.useLegacySql = useLegacySql;
+        this.useQueryCache = useQueryCache;
+        this.userDefinedFunctionResources = userDefinedFunctionResources;
+        this.writeDisposition = writeDisposition;
     }
 
     /**

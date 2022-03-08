@@ -24,8 +24,8 @@ public final class GoogleCloudMlV1__RouteMapResponse {
     private GoogleCloudMlV1__RouteMapResponse(
         String health,
         String predict) {
-        this.health = Objects.requireNonNull(health);
-        this.predict = Objects.requireNonNull(predict);
+        this.health = health;
+        this.predict = predict;
     }
 
     /**

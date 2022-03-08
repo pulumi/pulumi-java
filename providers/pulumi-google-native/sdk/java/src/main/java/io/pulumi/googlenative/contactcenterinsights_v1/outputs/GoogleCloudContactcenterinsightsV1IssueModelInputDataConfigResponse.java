@@ -30,9 +30,9 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigRe
         String filter,
         String medium,
         String trainingConversationsCount) {
-        this.filter = Objects.requireNonNull(filter);
-        this.medium = Objects.requireNonNull(medium);
-        this.trainingConversationsCount = Objects.requireNonNull(trainingConversationsCount);
+        this.filter = filter;
+        this.medium = medium;
+        this.trainingConversationsCount = trainingConversationsCount;
     }
 
     /**

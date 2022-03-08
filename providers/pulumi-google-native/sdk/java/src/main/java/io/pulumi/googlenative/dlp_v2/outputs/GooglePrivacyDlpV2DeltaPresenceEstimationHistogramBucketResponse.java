@@ -45,11 +45,11 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketRespo
         List<GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse> bucketValues,
         Double maxProbability,
         Double minProbability) {
-        this.bucketSize = Objects.requireNonNull(bucketSize);
-        this.bucketValueCount = Objects.requireNonNull(bucketValueCount);
-        this.bucketValues = Objects.requireNonNull(bucketValues);
-        this.maxProbability = Objects.requireNonNull(maxProbability);
-        this.minProbability = Objects.requireNonNull(minProbability);
+        this.bucketSize = bucketSize;
+        this.bucketValueCount = bucketValueCount;
+        this.bucketValues = bucketValues;
+        this.maxProbability = maxProbability;
+        this.minProbability = minProbability;
     }
 
     /**

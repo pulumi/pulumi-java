@@ -43,11 +43,11 @@ public final class GetWorkloadIdentityPoolResult {
         String displayName,
         String name,
         String state) {
-        this.description = Objects.requireNonNull(description);
-        this.disabled = Objects.requireNonNull(disabled);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.name = Objects.requireNonNull(name);
-        this.state = Objects.requireNonNull(state);
+        this.description = description;
+        this.disabled = disabled;
+        this.displayName = displayName;
+        this.name = name;
+        this.state = state;
     }
 
     /**

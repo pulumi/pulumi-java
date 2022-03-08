@@ -59,13 +59,13 @@ public final class XyChartResponse {
         AxisResponse xAxis,
         AxisResponse y2Axis,
         AxisResponse yAxis) {
-        this.chartOptions = Objects.requireNonNull(chartOptions);
-        this.dataSets = Objects.requireNonNull(dataSets);
-        this.thresholds = Objects.requireNonNull(thresholds);
-        this.timeshiftDuration = Objects.requireNonNull(timeshiftDuration);
-        this.xAxis = Objects.requireNonNull(xAxis);
-        this.y2Axis = Objects.requireNonNull(y2Axis);
-        this.yAxis = Objects.requireNonNull(yAxis);
+        this.chartOptions = chartOptions;
+        this.dataSets = dataSets;
+        this.thresholds = thresholds;
+        this.timeshiftDuration = timeshiftDuration;
+        this.xAxis = xAxis;
+        this.y2Axis = y2Axis;
+        this.yAxis = yAxis;
     }
 
     /**

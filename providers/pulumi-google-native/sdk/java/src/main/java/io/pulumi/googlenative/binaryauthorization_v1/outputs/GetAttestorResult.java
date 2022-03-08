@@ -37,10 +37,10 @@ public final class GetAttestorResult {
         String name,
         String updateTime,
         UserOwnedGrafeasNoteResponse userOwnedGrafeasNote) {
-        this.description = Objects.requireNonNull(description);
-        this.name = Objects.requireNonNull(name);
-        this.updateTime = Objects.requireNonNull(updateTime);
-        this.userOwnedGrafeasNote = Objects.requireNonNull(userOwnedGrafeasNote);
+        this.description = description;
+        this.name = name;
+        this.updateTime = updateTime;
+        this.userOwnedGrafeasNote = userOwnedGrafeasNote;
     }
 
     /**

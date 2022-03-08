@@ -17,7 +17,7 @@ public final class GoogleCloudDialogflowV2beta1SpeechToTextConfigResponse {
 
     @OutputCustomType.Constructor({"speechModelVariant"})
     private GoogleCloudDialogflowV2beta1SpeechToTextConfigResponse(String speechModelVariant) {
-        this.speechModelVariant = Objects.requireNonNull(speechModelVariant);
+        this.speechModelVariant = speechModelVariant;
     }
 
     /**

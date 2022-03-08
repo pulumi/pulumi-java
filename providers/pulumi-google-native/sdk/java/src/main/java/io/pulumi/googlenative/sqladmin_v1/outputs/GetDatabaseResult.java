@@ -57,14 +57,14 @@ public final class GetDatabaseResult {
         String project,
         String selfLink,
         SqlServerDatabaseDetailsResponse sqlserverDatabaseDetails) {
-        this.charset = Objects.requireNonNull(charset);
-        this.collation = Objects.requireNonNull(collation);
-        this.instance = Objects.requireNonNull(instance);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.project = Objects.requireNonNull(project);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.sqlserverDatabaseDetails = Objects.requireNonNull(sqlserverDatabaseDetails);
+        this.charset = charset;
+        this.collation = collation;
+        this.instance = instance;
+        this.kind = kind;
+        this.name = name;
+        this.project = project;
+        this.selfLink = selfLink;
+        this.sqlserverDatabaseDetails = sqlserverDatabaseDetails;
     }
 
     /**

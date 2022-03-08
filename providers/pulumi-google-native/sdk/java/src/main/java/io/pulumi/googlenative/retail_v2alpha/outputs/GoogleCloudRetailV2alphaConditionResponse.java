@@ -26,8 +26,8 @@ public final class GoogleCloudRetailV2alphaConditionResponse {
     private GoogleCloudRetailV2alphaConditionResponse(
         List<GoogleCloudRetailV2alphaConditionTimeRangeResponse> activeTimeRange,
         List<GoogleCloudRetailV2alphaConditionQueryTermResponse> queryTerms) {
-        this.activeTimeRange = Objects.requireNonNull(activeTimeRange);
-        this.queryTerms = Objects.requireNonNull(queryTerms);
+        this.activeTimeRange = activeTimeRange;
+        this.queryTerms = queryTerms;
     }
 
     /**

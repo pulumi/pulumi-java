@@ -17,7 +17,7 @@ public final class GooglePrivacyDlpV2CloudStoragePathResponse {
 
     @OutputCustomType.Constructor({"path"})
     private GooglePrivacyDlpV2CloudStoragePathResponse(String path) {
-        this.path = Objects.requireNonNull(path);
+        this.path = path;
     }
 
     /**

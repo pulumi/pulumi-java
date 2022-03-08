@@ -60,13 +60,13 @@ public final class GetRegistryResult {
         MqttConfigResponse mqttConfig,
         String name,
         StateNotificationConfigResponse stateNotificationConfig) {
-        this.credentials = Objects.requireNonNull(credentials);
-        this.eventNotificationConfigs = Objects.requireNonNull(eventNotificationConfigs);
-        this.httpConfig = Objects.requireNonNull(httpConfig);
-        this.logLevel = Objects.requireNonNull(logLevel);
-        this.mqttConfig = Objects.requireNonNull(mqttConfig);
-        this.name = Objects.requireNonNull(name);
-        this.stateNotificationConfig = Objects.requireNonNull(stateNotificationConfig);
+        this.credentials = credentials;
+        this.eventNotificationConfigs = eventNotificationConfigs;
+        this.httpConfig = httpConfig;
+        this.logLevel = logLevel;
+        this.mqttConfig = mqttConfig;
+        this.name = name;
+        this.stateNotificationConfig = stateNotificationConfig;
     }
 
     /**

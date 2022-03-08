@@ -42,11 +42,11 @@ public final class GetFolderResult {
         String lifecycleState,
         String name,
         String parent) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.lifecycleState = Objects.requireNonNull(lifecycleState);
-        this.name = Objects.requireNonNull(name);
-        this.parent = Objects.requireNonNull(parent);
+        this.createTime = createTime;
+        this.displayName = displayName;
+        this.lifecycleState = lifecycleState;
+        this.name = name;
+        this.parent = parent;
     }
 
     /**

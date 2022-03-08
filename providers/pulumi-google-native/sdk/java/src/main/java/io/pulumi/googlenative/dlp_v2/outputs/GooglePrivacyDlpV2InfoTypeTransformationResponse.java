@@ -26,8 +26,8 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationResponse {
     private GooglePrivacyDlpV2InfoTypeTransformationResponse(
         List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes,
         GooglePrivacyDlpV2PrimitiveTransformationResponse primitiveTransformation) {
-        this.infoTypes = Objects.requireNonNull(infoTypes);
-        this.primitiveTransformation = Objects.requireNonNull(primitiveTransformation);
+        this.infoTypes = infoTypes;
+        this.primitiveTransformation = primitiveTransformation;
     }
 
     /**

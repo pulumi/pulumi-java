@@ -39,10 +39,10 @@ public final class ScalingConfigResponse {
         String name,
         List<ScheduleResponse> schedules,
         List<LabelSelectorResponse> selectors) {
-        this.fleetAutoscalerSpec = Objects.requireNonNull(fleetAutoscalerSpec);
-        this.name = Objects.requireNonNull(name);
-        this.schedules = Objects.requireNonNull(schedules);
-        this.selectors = Objects.requireNonNull(selectors);
+        this.fleetAutoscalerSpec = fleetAutoscalerSpec;
+        this.name = name;
+        this.schedules = schedules;
+        this.selectors = selectors;
     }
 
     /**

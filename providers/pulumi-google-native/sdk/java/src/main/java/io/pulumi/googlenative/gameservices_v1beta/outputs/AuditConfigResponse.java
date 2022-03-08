@@ -28,9 +28,9 @@ public final class AuditConfigResponse {
         List<AuditLogConfigResponse> auditLogConfigs,
         List<String> exemptedMembers,
         String service) {
-        this.auditLogConfigs = Objects.requireNonNull(auditLogConfigs);
-        this.exemptedMembers = Objects.requireNonNull(exemptedMembers);
-        this.service = Objects.requireNonNull(service);
+        this.auditLogConfigs = auditLogConfigs;
+        this.exemptedMembers = exemptedMembers;
+        this.service = service;
     }
 
     /**

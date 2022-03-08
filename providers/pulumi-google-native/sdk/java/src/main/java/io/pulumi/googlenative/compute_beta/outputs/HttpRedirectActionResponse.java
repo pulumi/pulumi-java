@@ -49,12 +49,12 @@ public final class HttpRedirectActionResponse {
         String prefixRedirect,
         String redirectResponseCode,
         Boolean stripQuery) {
-        this.hostRedirect = Objects.requireNonNull(hostRedirect);
-        this.httpsRedirect = Objects.requireNonNull(httpsRedirect);
-        this.pathRedirect = Objects.requireNonNull(pathRedirect);
-        this.prefixRedirect = Objects.requireNonNull(prefixRedirect);
-        this.redirectResponseCode = Objects.requireNonNull(redirectResponseCode);
-        this.stripQuery = Objects.requireNonNull(stripQuery);
+        this.hostRedirect = hostRedirect;
+        this.httpsRedirect = httpsRedirect;
+        this.pathRedirect = pathRedirect;
+        this.prefixRedirect = prefixRedirect;
+        this.redirectResponseCode = redirectResponseCode;
+        this.stripQuery = stripQuery;
     }
 
     /**

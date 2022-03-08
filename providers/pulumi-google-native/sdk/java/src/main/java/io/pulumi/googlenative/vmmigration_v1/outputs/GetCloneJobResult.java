@@ -50,12 +50,12 @@ public final class GetCloneJobResult {
         String name,
         String state,
         String stateTime) {
-        this.computeEngineTargetDetails = Objects.requireNonNull(computeEngineTargetDetails);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.error = Objects.requireNonNull(error);
-        this.name = Objects.requireNonNull(name);
-        this.state = Objects.requireNonNull(state);
-        this.stateTime = Objects.requireNonNull(stateTime);
+        this.computeEngineTargetDetails = computeEngineTargetDetails;
+        this.createTime = createTime;
+        this.error = error;
+        this.name = name;
+        this.state = state;
+        this.stateTime = stateTime;
     }
 
     /**

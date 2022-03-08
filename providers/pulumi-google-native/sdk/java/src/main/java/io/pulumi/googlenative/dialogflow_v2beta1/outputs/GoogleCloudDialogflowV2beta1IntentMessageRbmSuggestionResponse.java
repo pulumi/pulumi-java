@@ -25,8 +25,8 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionRespons
     private GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse(
         GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionResponse action,
         GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyResponse reply) {
-        this.action = Objects.requireNonNull(action);
-        this.reply = Objects.requireNonNull(reply);
+        this.action = action;
+        this.reply = reply;
     }
 
     /**

@@ -63,14 +63,14 @@ public final class UrlMapResponse {
         String securityLevel,
         StaticFilesHandlerResponse staticFiles,
         String urlRegex) {
-        this.apiEndpoint = Objects.requireNonNull(apiEndpoint);
-        this.authFailAction = Objects.requireNonNull(authFailAction);
-        this.login = Objects.requireNonNull(login);
-        this.redirectHttpResponseCode = Objects.requireNonNull(redirectHttpResponseCode);
-        this.script = Objects.requireNonNull(script);
-        this.securityLevel = Objects.requireNonNull(securityLevel);
-        this.staticFiles = Objects.requireNonNull(staticFiles);
-        this.urlRegex = Objects.requireNonNull(urlRegex);
+        this.apiEndpoint = apiEndpoint;
+        this.authFailAction = authFailAction;
+        this.login = login;
+        this.redirectHttpResponseCode = redirectHttpResponseCode;
+        this.script = script;
+        this.securityLevel = securityLevel;
+        this.staticFiles = staticFiles;
+        this.urlRegex = urlRegex;
     }
 
     /**

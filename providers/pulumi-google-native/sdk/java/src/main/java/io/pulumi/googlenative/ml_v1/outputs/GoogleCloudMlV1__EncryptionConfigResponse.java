@@ -17,7 +17,7 @@ public final class GoogleCloudMlV1__EncryptionConfigResponse {
 
     @OutputCustomType.Constructor({"kmsKeyName"})
     private GoogleCloudMlV1__EncryptionConfigResponse(String kmsKeyName) {
-        this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
+        this.kmsKeyName = kmsKeyName;
     }
 
     /**

@@ -17,7 +17,7 @@ public final class AutomaticResponse {
 
     @OutputCustomType.Constructor({"customerManagedEncryption"})
     private AutomaticResponse(CustomerManagedEncryptionResponse customerManagedEncryption) {
-        this.customerManagedEncryption = Objects.requireNonNull(customerManagedEncryption);
+        this.customerManagedEncryption = customerManagedEncryption;
     }
 
     /**

@@ -73,16 +73,16 @@ public final class GetTargetVpnGatewayResult {
         String selfLink,
         String status,
         List<String> tunnels) {
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.description = Objects.requireNonNull(description);
-        this.forwardingRules = Objects.requireNonNull(forwardingRules);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.network = Objects.requireNonNull(network);
-        this.region = Objects.requireNonNull(region);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.status = Objects.requireNonNull(status);
-        this.tunnels = Objects.requireNonNull(tunnels);
+        this.creationTimestamp = creationTimestamp;
+        this.description = description;
+        this.forwardingRules = forwardingRules;
+        this.kind = kind;
+        this.name = name;
+        this.network = network;
+        this.region = region;
+        this.selfLink = selfLink;
+        this.status = status;
+        this.tunnels = tunnels;
     }
 
     /**

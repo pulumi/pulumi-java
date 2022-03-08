@@ -30,9 +30,9 @@ public final class BigTableIODetailsResponse {
         String instanceId,
         String project,
         String tableId) {
-        this.instanceId = Objects.requireNonNull(instanceId);
-        this.project = Objects.requireNonNull(project);
-        this.tableId = Objects.requireNonNull(tableId);
+        this.instanceId = instanceId;
+        this.project = project;
+        this.tableId = tableId;
     }
 
     /**

@@ -30,9 +30,9 @@ public final class ConnectionStatusResponse {
         String description,
         String state,
         String status) {
-        this.description = Objects.requireNonNull(description);
-        this.state = Objects.requireNonNull(state);
-        this.status = Objects.requireNonNull(status);
+        this.description = description;
+        this.state = state;
+        this.status = status;
     }
 
     /**

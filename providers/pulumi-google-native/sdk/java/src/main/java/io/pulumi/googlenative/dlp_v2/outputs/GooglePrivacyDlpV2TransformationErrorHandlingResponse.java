@@ -25,8 +25,8 @@ public final class GooglePrivacyDlpV2TransformationErrorHandlingResponse {
     private GooglePrivacyDlpV2TransformationErrorHandlingResponse(
         GooglePrivacyDlpV2LeaveUntransformedResponse leaveUntransformed,
         GooglePrivacyDlpV2ThrowErrorResponse throwError) {
-        this.leaveUntransformed = Objects.requireNonNull(leaveUntransformed);
-        this.throwError = Objects.requireNonNull(throwError);
+        this.leaveUntransformed = leaveUntransformed;
+        this.throwError = throwError;
     }
 
     /**

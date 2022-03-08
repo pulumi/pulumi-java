@@ -32,9 +32,9 @@ public final class SoftwareRecipeStepRunScriptResponse {
         List<Integer> allowedExitCodes,
         String interpreter,
         String script) {
-        this.allowedExitCodes = Objects.requireNonNull(allowedExitCodes);
-        this.interpreter = Objects.requireNonNull(interpreter);
-        this.script = Objects.requireNonNull(script);
+        this.allowedExitCodes = allowedExitCodes;
+        this.interpreter = interpreter;
+        this.script = script;
     }
 
     /**

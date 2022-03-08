@@ -17,7 +17,7 @@ public final class EntrypointResponse {
 
     @OutputCustomType.Constructor({"shell"})
     private EntrypointResponse(String shell) {
-        this.shell = Objects.requireNonNull(shell);
+        this.shell = shell;
     }
 
     /**

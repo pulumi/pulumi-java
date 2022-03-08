@@ -56,13 +56,13 @@ public final class GetEnvironmentResult {
         String name,
         String postStartupScript,
         VmImageResponse vmImage) {
-        this.containerImage = Objects.requireNonNull(containerImage);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.description = Objects.requireNonNull(description);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.name = Objects.requireNonNull(name);
-        this.postStartupScript = Objects.requireNonNull(postStartupScript);
-        this.vmImage = Objects.requireNonNull(vmImage);
+        this.containerImage = containerImage;
+        this.createTime = createTime;
+        this.description = description;
+        this.displayName = displayName;
+        this.name = name;
+        this.postStartupScript = postStartupScript;
+        this.vmImage = vmImage;
     }
 
     /**

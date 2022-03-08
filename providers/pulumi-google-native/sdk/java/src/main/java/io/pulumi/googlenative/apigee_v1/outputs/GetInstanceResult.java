@@ -90,19 +90,19 @@ public final class GetInstanceResult {
         String port,
         String runtimeVersion,
         String state) {
-        this.createdAt = Objects.requireNonNull(createdAt);
-        this.description = Objects.requireNonNull(description);
-        this.diskEncryptionKeyName = Objects.requireNonNull(diskEncryptionKeyName);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.host = Objects.requireNonNull(host);
-        this.ipRange = Objects.requireNonNull(ipRange);
-        this.lastModifiedAt = Objects.requireNonNull(lastModifiedAt);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.peeringCidrRange = Objects.requireNonNull(peeringCidrRange);
-        this.port = Objects.requireNonNull(port);
-        this.runtimeVersion = Objects.requireNonNull(runtimeVersion);
-        this.state = Objects.requireNonNull(state);
+        this.createdAt = createdAt;
+        this.description = description;
+        this.diskEncryptionKeyName = diskEncryptionKeyName;
+        this.displayName = displayName;
+        this.host = host;
+        this.ipRange = ipRange;
+        this.lastModifiedAt = lastModifiedAt;
+        this.location = location;
+        this.name = name;
+        this.peeringCidrRange = peeringCidrRange;
+        this.port = port;
+        this.runtimeVersion = runtimeVersion;
+        this.state = state;
     }
 
     /**

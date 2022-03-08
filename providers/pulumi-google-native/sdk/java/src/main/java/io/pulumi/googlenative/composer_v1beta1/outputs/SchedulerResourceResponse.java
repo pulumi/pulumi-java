@@ -37,10 +37,10 @@ public final class SchedulerResourceResponse {
         Double cpu,
         Double memoryGb,
         Double storageGb) {
-        this.count = Objects.requireNonNull(count);
-        this.cpu = Objects.requireNonNull(cpu);
-        this.memoryGb = Objects.requireNonNull(memoryGb);
-        this.storageGb = Objects.requireNonNull(storageGb);
+        this.count = count;
+        this.cpu = cpu;
+        this.memoryGb = memoryGb;
+        this.storageGb = storageGb;
     }
 
     /**

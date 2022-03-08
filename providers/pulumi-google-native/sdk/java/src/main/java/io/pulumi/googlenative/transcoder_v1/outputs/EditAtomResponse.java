@@ -37,10 +37,10 @@ public final class EditAtomResponse {
         List<String> inputs,
         String key,
         String startTimeOffset) {
-        this.endTimeOffset = Objects.requireNonNull(endTimeOffset);
-        this.inputs = Objects.requireNonNull(inputs);
-        this.key = Objects.requireNonNull(key);
-        this.startTimeOffset = Objects.requireNonNull(startTimeOffset);
+        this.endTimeOffset = endTimeOffset;
+        this.inputs = inputs;
+        this.key = key;
+        this.startTimeOffset = startTimeOffset;
     }
 
     /**

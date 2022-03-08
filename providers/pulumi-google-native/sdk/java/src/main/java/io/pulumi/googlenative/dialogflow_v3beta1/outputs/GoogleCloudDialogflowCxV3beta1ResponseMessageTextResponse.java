@@ -26,8 +26,8 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageTextResponse {
     private GoogleCloudDialogflowCxV3beta1ResponseMessageTextResponse(
         Boolean allowPlaybackInterruption,
         List<String> text) {
-        this.allowPlaybackInterruption = Objects.requireNonNull(allowPlaybackInterruption);
-        this.text = Objects.requireNonNull(text);
+        this.allowPlaybackInterruption = allowPlaybackInterruption;
+        this.text = text;
     }
 
     /**

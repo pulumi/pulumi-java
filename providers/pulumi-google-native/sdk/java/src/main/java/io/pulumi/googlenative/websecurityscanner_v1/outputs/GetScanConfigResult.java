@@ -95,19 +95,19 @@ public final class GetScanConfigResult {
         List<String> startingUrls,
         Boolean staticIpScan,
         String userAgent) {
-        this.authentication = Objects.requireNonNull(authentication);
-        this.blacklistPatterns = Objects.requireNonNull(blacklistPatterns);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.exportToSecurityCommandCenter = Objects.requireNonNull(exportToSecurityCommandCenter);
-        this.ignoreHttpStatusErrors = Objects.requireNonNull(ignoreHttpStatusErrors);
-        this.managedScan = Objects.requireNonNull(managedScan);
-        this.maxQps = Objects.requireNonNull(maxQps);
-        this.name = Objects.requireNonNull(name);
-        this.riskLevel = Objects.requireNonNull(riskLevel);
-        this.schedule = Objects.requireNonNull(schedule);
-        this.startingUrls = Objects.requireNonNull(startingUrls);
-        this.staticIpScan = Objects.requireNonNull(staticIpScan);
-        this.userAgent = Objects.requireNonNull(userAgent);
+        this.authentication = authentication;
+        this.blacklistPatterns = blacklistPatterns;
+        this.displayName = displayName;
+        this.exportToSecurityCommandCenter = exportToSecurityCommandCenter;
+        this.ignoreHttpStatusErrors = ignoreHttpStatusErrors;
+        this.managedScan = managedScan;
+        this.maxQps = maxQps;
+        this.name = name;
+        this.riskLevel = riskLevel;
+        this.schedule = schedule;
+        this.startingUrls = startingUrls;
+        this.staticIpScan = staticIpScan;
+        this.userAgent = userAgent;
     }
 
     /**

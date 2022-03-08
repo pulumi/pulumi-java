@@ -26,9 +26,9 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceResponse {
         String deletionTime,
         String kind,
         String namespaceUrl) {
-        this.deletionTime = Objects.requireNonNull(deletionTime);
-        this.kind = Objects.requireNonNull(kind);
-        this.namespaceUrl = Objects.requireNonNull(namespaceUrl);
+        this.deletionTime = deletionTime;
+        this.kind = kind;
+        this.namespaceUrl = namespaceUrl;
     }
 
     /**

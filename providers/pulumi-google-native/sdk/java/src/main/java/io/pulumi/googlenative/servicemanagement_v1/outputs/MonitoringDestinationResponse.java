@@ -25,8 +25,8 @@ public final class MonitoringDestinationResponse {
     private MonitoringDestinationResponse(
         List<String> metrics,
         String monitoredResource) {
-        this.metrics = Objects.requireNonNull(metrics);
-        this.monitoredResource = Objects.requireNonNull(monitoredResource);
+        this.metrics = metrics;
+        this.monitoredResource = monitoredResource;
     }
 
     /**

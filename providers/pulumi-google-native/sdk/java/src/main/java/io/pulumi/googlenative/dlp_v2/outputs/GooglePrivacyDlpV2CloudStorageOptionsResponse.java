@@ -47,12 +47,12 @@ public final class GooglePrivacyDlpV2CloudStorageOptionsResponse {
         List<String> fileTypes,
         Integer filesLimitPercent,
         String sampleMethod) {
-        this.bytesLimitPerFile = Objects.requireNonNull(bytesLimitPerFile);
-        this.bytesLimitPerFilePercent = Objects.requireNonNull(bytesLimitPerFilePercent);
-        this.fileSet = Objects.requireNonNull(fileSet);
-        this.fileTypes = Objects.requireNonNull(fileTypes);
-        this.filesLimitPercent = Objects.requireNonNull(filesLimitPercent);
-        this.sampleMethod = Objects.requireNonNull(sampleMethod);
+        this.bytesLimitPerFile = bytesLimitPerFile;
+        this.bytesLimitPerFilePercent = bytesLimitPerFilePercent;
+        this.fileSet = fileSet;
+        this.fileTypes = fileTypes;
+        this.filesLimitPercent = filesLimitPercent;
+        this.sampleMethod = sampleMethod;
     }
 
     /**

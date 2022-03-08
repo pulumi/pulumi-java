@@ -38,10 +38,10 @@ public final class RouterNatRuleResponse {
         String description,
         String match,
         Integer ruleNumber) {
-        this.action = Objects.requireNonNull(action);
-        this.description = Objects.requireNonNull(description);
-        this.match = Objects.requireNonNull(match);
-        this.ruleNumber = Objects.requireNonNull(ruleNumber);
+        this.action = action;
+        this.description = description;
+        this.match = match;
+        this.ruleNumber = ruleNumber;
     }
 
     /**

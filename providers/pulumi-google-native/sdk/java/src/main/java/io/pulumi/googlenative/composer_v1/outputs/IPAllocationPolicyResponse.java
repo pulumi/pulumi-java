@@ -43,11 +43,11 @@ public final class IPAllocationPolicyResponse {
         String servicesIpv4CidrBlock,
         String servicesSecondaryRangeName,
         Boolean useIpAliases) {
-        this.clusterIpv4CidrBlock = Objects.requireNonNull(clusterIpv4CidrBlock);
-        this.clusterSecondaryRangeName = Objects.requireNonNull(clusterSecondaryRangeName);
-        this.servicesIpv4CidrBlock = Objects.requireNonNull(servicesIpv4CidrBlock);
-        this.servicesSecondaryRangeName = Objects.requireNonNull(servicesSecondaryRangeName);
-        this.useIpAliases = Objects.requireNonNull(useIpAliases);
+        this.clusterIpv4CidrBlock = clusterIpv4CidrBlock;
+        this.clusterSecondaryRangeName = clusterSecondaryRangeName;
+        this.servicesIpv4CidrBlock = servicesIpv4CidrBlock;
+        this.servicesSecondaryRangeName = servicesSecondaryRangeName;
+        this.useIpAliases = useIpAliases;
     }
 
     /**

@@ -36,10 +36,10 @@ public final class VmwareSourceDetailsResponse {
         String thumbprint,
         String username,
         String vcenterIp) {
-        this.password = Objects.requireNonNull(password);
-        this.thumbprint = Objects.requireNonNull(thumbprint);
-        this.username = Objects.requireNonNull(username);
-        this.vcenterIp = Objects.requireNonNull(vcenterIp);
+        this.password = password;
+        this.thumbprint = thumbprint;
+        this.username = username;
+        this.vcenterIp = vcenterIp;
     }
 
     /**

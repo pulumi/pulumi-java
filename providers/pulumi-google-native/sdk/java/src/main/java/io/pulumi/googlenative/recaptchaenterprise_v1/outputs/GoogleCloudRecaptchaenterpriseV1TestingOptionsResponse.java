@@ -25,8 +25,8 @@ public final class GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse {
     private GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse(
         String testingChallenge,
         Double testingScore) {
-        this.testingChallenge = Objects.requireNonNull(testingChallenge);
-        this.testingScore = Objects.requireNonNull(testingScore);
+        this.testingChallenge = testingChallenge;
+        this.testingScore = testingScore;
     }
 
     /**

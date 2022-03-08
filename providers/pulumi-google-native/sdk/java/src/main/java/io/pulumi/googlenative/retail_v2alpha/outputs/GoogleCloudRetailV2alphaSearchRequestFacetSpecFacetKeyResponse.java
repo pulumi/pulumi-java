@@ -56,13 +56,13 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyRespons
         List<String> prefixes,
         String query,
         List<String> restrictedValues) {
-        this.contains = Objects.requireNonNull(contains);
-        this.intervals = Objects.requireNonNull(intervals);
-        this.key = Objects.requireNonNull(key);
-        this.orderBy = Objects.requireNonNull(orderBy);
-        this.prefixes = Objects.requireNonNull(prefixes);
-        this.query = Objects.requireNonNull(query);
-        this.restrictedValues = Objects.requireNonNull(restrictedValues);
+        this.contains = contains;
+        this.intervals = intervals;
+        this.key = key;
+        this.orderBy = orderBy;
+        this.prefixes = prefixes;
+        this.query = query;
+        this.restrictedValues = restrictedValues;
     }
 
     /**

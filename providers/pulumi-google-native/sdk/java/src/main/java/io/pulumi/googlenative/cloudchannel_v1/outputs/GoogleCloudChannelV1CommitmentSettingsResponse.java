@@ -31,9 +31,9 @@ public final class GoogleCloudChannelV1CommitmentSettingsResponse {
         String endTime,
         GoogleCloudChannelV1RenewalSettingsResponse renewalSettings,
         String startTime) {
-        this.endTime = Objects.requireNonNull(endTime);
-        this.renewalSettings = Objects.requireNonNull(renewalSettings);
-        this.startTime = Objects.requireNonNull(startTime);
+        this.endTime = endTime;
+        this.renewalSettings = renewalSettings;
+        this.startTime = startTime;
     }
 
     /**

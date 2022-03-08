@@ -18,7 +18,7 @@ public final class OracleRdbmsResponse {
 
     @OutputCustomType.Constructor({"oracleSchemas"})
     private OracleRdbmsResponse(List<OracleSchemaResponse> oracleSchemas) {
-        this.oracleSchemas = Objects.requireNonNull(oracleSchemas);
+        this.oracleSchemas = oracleSchemas;
     }
 
     /**

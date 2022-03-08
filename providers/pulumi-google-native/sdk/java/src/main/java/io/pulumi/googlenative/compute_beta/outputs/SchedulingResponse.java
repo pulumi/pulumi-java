@@ -82,17 +82,17 @@ public final class SchedulingResponse {
         String onHostMaintenance,
         Boolean preemptible,
         String provisioningModel) {
-        this.automaticRestart = Objects.requireNonNull(automaticRestart);
-        this.hostErrorTimeoutSeconds = Objects.requireNonNull(hostErrorTimeoutSeconds);
-        this.instanceTerminationAction = Objects.requireNonNull(instanceTerminationAction);
-        this.locationHint = Objects.requireNonNull(locationHint);
-        this.maintenanceFreezeDurationHours = Objects.requireNonNull(maintenanceFreezeDurationHours);
-        this.maintenanceInterval = Objects.requireNonNull(maintenanceInterval);
-        this.minNodeCpus = Objects.requireNonNull(minNodeCpus);
-        this.nodeAffinities = Objects.requireNonNull(nodeAffinities);
-        this.onHostMaintenance = Objects.requireNonNull(onHostMaintenance);
-        this.preemptible = Objects.requireNonNull(preemptible);
-        this.provisioningModel = Objects.requireNonNull(provisioningModel);
+        this.automaticRestart = automaticRestart;
+        this.hostErrorTimeoutSeconds = hostErrorTimeoutSeconds;
+        this.instanceTerminationAction = instanceTerminationAction;
+        this.locationHint = locationHint;
+        this.maintenanceFreezeDurationHours = maintenanceFreezeDurationHours;
+        this.maintenanceInterval = maintenanceInterval;
+        this.minNodeCpus = minNodeCpus;
+        this.nodeAffinities = nodeAffinities;
+        this.onHostMaintenance = onHostMaintenance;
+        this.preemptible = preemptible;
+        this.provisioningModel = provisioningModel;
     }
 
     /**

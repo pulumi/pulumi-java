@@ -44,11 +44,11 @@ public final class GetProductResult {
         String name,
         String productCategory,
         List<KeyValueResponse> productLabels) {
-        this.description = Objects.requireNonNull(description);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.name = Objects.requireNonNull(name);
-        this.productCategory = Objects.requireNonNull(productCategory);
-        this.productLabels = Objects.requireNonNull(productLabels);
+        this.description = description;
+        this.displayName = displayName;
+        this.name = name;
+        this.productCategory = productCategory;
+        this.productLabels = productLabels;
     }
 
     /**

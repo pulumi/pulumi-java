@@ -26,8 +26,8 @@ public final class ClientInfoResponse {
     private ClientInfoResponse(
         List<ClientInfoDetailResponse> clientInfoDetails,
         String name) {
-        this.clientInfoDetails = Objects.requireNonNull(clientInfoDetails);
-        this.name = Objects.requireNonNull(name);
+        this.clientInfoDetails = clientInfoDetails;
+        this.name = name;
     }
 
     /**

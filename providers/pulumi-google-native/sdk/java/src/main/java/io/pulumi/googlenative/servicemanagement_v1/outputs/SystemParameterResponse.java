@@ -30,9 +30,9 @@ public final class SystemParameterResponse {
         String httpHeader,
         String name,
         String urlQueryParameter) {
-        this.httpHeader = Objects.requireNonNull(httpHeader);
-        this.name = Objects.requireNonNull(name);
-        this.urlQueryParameter = Objects.requireNonNull(urlQueryParameter);
+        this.httpHeader = httpHeader;
+        this.name = name;
+        this.urlQueryParameter = urlQueryParameter;
     }
 
     /**

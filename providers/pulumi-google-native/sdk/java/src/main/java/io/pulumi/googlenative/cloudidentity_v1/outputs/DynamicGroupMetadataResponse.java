@@ -26,8 +26,8 @@ public final class DynamicGroupMetadataResponse {
     private DynamicGroupMetadataResponse(
         List<DynamicGroupQueryResponse> queries,
         DynamicGroupStatusResponse status) {
-        this.queries = Objects.requireNonNull(queries);
-        this.status = Objects.requireNonNull(status);
+        this.queries = queries;
+        this.status = status;
     }
 
     /**

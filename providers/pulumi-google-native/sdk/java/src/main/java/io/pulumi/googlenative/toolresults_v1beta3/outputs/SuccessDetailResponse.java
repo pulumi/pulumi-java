@@ -17,7 +17,7 @@ public final class SuccessDetailResponse {
 
     @OutputCustomType.Constructor({"otherNativeCrash"})
     private SuccessDetailResponse(Boolean otherNativeCrash) {
-        this.otherNativeCrash = Objects.requireNonNull(otherNativeCrash);
+        this.otherNativeCrash = otherNativeCrash;
     }
 
     /**

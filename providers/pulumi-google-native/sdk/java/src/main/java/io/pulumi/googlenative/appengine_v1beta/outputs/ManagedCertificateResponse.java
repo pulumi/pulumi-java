@@ -24,8 +24,8 @@ public final class ManagedCertificateResponse {
     private ManagedCertificateResponse(
         String lastRenewalTime,
         String status) {
-        this.lastRenewalTime = Objects.requireNonNull(lastRenewalTime);
-        this.status = Objects.requireNonNull(status);
+        this.lastRenewalTime = lastRenewalTime;
+        this.status = status;
     }
 
     /**

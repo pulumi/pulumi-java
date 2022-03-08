@@ -44,11 +44,11 @@ public final class GetInstanceResult {
         Boolean loggingEnabled,
         String name,
         String state) {
-        this.featurePolicy = Objects.requireNonNull(featurePolicy);
-        this.location = Objects.requireNonNull(location);
-        this.loggingEnabled = Objects.requireNonNull(loggingEnabled);
-        this.name = Objects.requireNonNull(name);
-        this.state = Objects.requireNonNull(state);
+        this.featurePolicy = featurePolicy;
+        this.location = location;
+        this.loggingEnabled = loggingEnabled;
+        this.name = name;
+        this.state = state;
     }
 
     /**

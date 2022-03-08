@@ -21,8 +21,8 @@ public final class AttestationResponse {
     private AttestationResponse(
         GenericSignedAttestationResponse genericSignedAttestation,
         PgpSignedAttestationResponse pgpSignedAttestation) {
-        this.genericSignedAttestation = Objects.requireNonNull(genericSignedAttestation);
-        this.pgpSignedAttestation = Objects.requireNonNull(pgpSignedAttestation);
+        this.genericSignedAttestation = genericSignedAttestation;
+        this.pgpSignedAttestation = pgpSignedAttestation;
     }
 
     public GenericSignedAttestationResponse getGenericSignedAttestation() {

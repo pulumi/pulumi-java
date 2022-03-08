@@ -25,8 +25,8 @@ public final class CpuUtilizationResponse {
     private CpuUtilizationResponse(
         String aggregationWindowLength,
         Double targetUtilization) {
-        this.aggregationWindowLength = Objects.requireNonNull(aggregationWindowLength);
-        this.targetUtilization = Objects.requireNonNull(targetUtilization);
+        this.aggregationWindowLength = aggregationWindowLength;
+        this.targetUtilization = targetUtilization;
     }
 
     /**

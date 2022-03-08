@@ -53,12 +53,12 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
         GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigResponse queryConfig,
         GoogleCloudDialogflowV2beta1SuggestionFeatureResponse suggestionFeature,
         GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionTriggerSettingsResponse suggestionTriggerSettings) {
-        this.conversationModelConfig = Objects.requireNonNull(conversationModelConfig);
-        this.conversationProcessConfig = Objects.requireNonNull(conversationProcessConfig);
-        this.enableEventBasedSuggestion = Objects.requireNonNull(enableEventBasedSuggestion);
-        this.queryConfig = Objects.requireNonNull(queryConfig);
-        this.suggestionFeature = Objects.requireNonNull(suggestionFeature);
-        this.suggestionTriggerSettings = Objects.requireNonNull(suggestionTriggerSettings);
+        this.conversationModelConfig = conversationModelConfig;
+        this.conversationProcessConfig = conversationProcessConfig;
+        this.enableEventBasedSuggestion = enableEventBasedSuggestion;
+        this.queryConfig = queryConfig;
+        this.suggestionFeature = suggestionFeature;
+        this.suggestionTriggerSettings = suggestionTriggerSettings;
     }
 
     /**

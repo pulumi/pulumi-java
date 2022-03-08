@@ -66,14 +66,14 @@ public final class GetIntentResult {
         List<GoogleCloudDialogflowCxV3IntentParameterResponse> parameters,
         Integer priority,
         List<GoogleCloudDialogflowCxV3IntentTrainingPhraseResponse> trainingPhrases) {
-        this.description = Objects.requireNonNull(description);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.isFallback = Objects.requireNonNull(isFallback);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.parameters = Objects.requireNonNull(parameters);
-        this.priority = Objects.requireNonNull(priority);
-        this.trainingPhrases = Objects.requireNonNull(trainingPhrases);
+        this.description = description;
+        this.displayName = displayName;
+        this.isFallback = isFallback;
+        this.labels = labels;
+        this.name = name;
+        this.parameters = parameters;
+        this.priority = priority;
+        this.trainingPhrases = trainingPhrases;
     }
 
     /**

@@ -40,10 +40,10 @@ public final class SourceProvenanceResponse {
         RepoSourceResponse resolvedRepoSource,
         StorageSourceResponse resolvedStorageSource,
         StorageSourceManifestResponse resolvedStorageSourceManifest) {
-        this.fileHashes = Objects.requireNonNull(fileHashes);
-        this.resolvedRepoSource = Objects.requireNonNull(resolvedRepoSource);
-        this.resolvedStorageSource = Objects.requireNonNull(resolvedStorageSource);
-        this.resolvedStorageSourceManifest = Objects.requireNonNull(resolvedStorageSourceManifest);
+        this.fileHashes = fileHashes;
+        this.resolvedRepoSource = resolvedRepoSource;
+        this.resolvedStorageSource = resolvedStorageSource;
+        this.resolvedStorageSourceManifest = resolvedStorageSourceManifest;
     }
 
     /**

@@ -51,12 +51,12 @@ public final class GoogleCloudDatacatalogV1RoutineSpecResponse {
         String returnType,
         List<GoogleCloudDatacatalogV1RoutineSpecArgumentResponse> routineArguments,
         String routineType) {
-        this.bigqueryRoutineSpec = Objects.requireNonNull(bigqueryRoutineSpec);
-        this.definitionBody = Objects.requireNonNull(definitionBody);
-        this.language = Objects.requireNonNull(language);
-        this.returnType = Objects.requireNonNull(returnType);
-        this.routineArguments = Objects.requireNonNull(routineArguments);
-        this.routineType = Objects.requireNonNull(routineType);
+        this.bigqueryRoutineSpec = bigqueryRoutineSpec;
+        this.definitionBody = definitionBody;
+        this.language = language;
+        this.returnType = returnType;
+        this.routineArguments = routineArguments;
+        this.routineType = routineType;
     }
 
     /**

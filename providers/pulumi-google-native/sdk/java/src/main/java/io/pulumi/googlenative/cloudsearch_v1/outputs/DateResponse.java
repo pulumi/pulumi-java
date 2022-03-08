@@ -30,9 +30,9 @@ public final class DateResponse {
         Integer day,
         Integer month,
         Integer year) {
-        this.day = Objects.requireNonNull(day);
-        this.month = Objects.requireNonNull(month);
-        this.year = Objects.requireNonNull(year);
+        this.day = day;
+        this.month = month;
+        this.year = year;
     }
 
     /**

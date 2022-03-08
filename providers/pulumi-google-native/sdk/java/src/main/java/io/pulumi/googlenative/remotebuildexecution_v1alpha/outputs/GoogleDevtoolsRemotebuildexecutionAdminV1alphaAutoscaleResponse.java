@@ -24,8 +24,8 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleRespon
     private GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleResponse(
         String maxSize,
         String minSize) {
-        this.maxSize = Objects.requireNonNull(maxSize);
-        this.minSize = Objects.requireNonNull(minSize);
+        this.maxSize = maxSize;
+        this.minSize = minSize;
     }
 
     /**

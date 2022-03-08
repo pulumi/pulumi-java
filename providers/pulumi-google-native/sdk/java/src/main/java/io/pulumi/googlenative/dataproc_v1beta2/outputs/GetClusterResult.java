@@ -65,14 +65,14 @@ public final class GetClusterResult {
         String project,
         ClusterStatusResponse status,
         List<ClusterStatusResponse> statusHistory) {
-        this.clusterName = Objects.requireNonNull(clusterName);
-        this.clusterUuid = Objects.requireNonNull(clusterUuid);
-        this.config = Objects.requireNonNull(config);
-        this.labels = Objects.requireNonNull(labels);
-        this.metrics = Objects.requireNonNull(metrics);
-        this.project = Objects.requireNonNull(project);
-        this.status = Objects.requireNonNull(status);
-        this.statusHistory = Objects.requireNonNull(statusHistory);
+        this.clusterName = clusterName;
+        this.clusterUuid = clusterUuid;
+        this.config = config;
+        this.labels = labels;
+        this.metrics = metrics;
+        this.project = project;
+        this.status = status;
+        this.statusHistory = statusHistory;
     }
 
     /**

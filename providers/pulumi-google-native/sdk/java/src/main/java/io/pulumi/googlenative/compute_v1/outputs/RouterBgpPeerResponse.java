@@ -113,22 +113,22 @@ public final class RouterBgpPeerResponse {
         String peerIpAddress,
         String peerIpv6NexthopAddress,
         String routerApplianceInstance) {
-        this.advertiseMode = Objects.requireNonNull(advertiseMode);
-        this.advertisedGroups = Objects.requireNonNull(advertisedGroups);
-        this.advertisedIpRanges = Objects.requireNonNull(advertisedIpRanges);
-        this.advertisedRoutePriority = Objects.requireNonNull(advertisedRoutePriority);
-        this.bfd = Objects.requireNonNull(bfd);
-        this.enable = Objects.requireNonNull(enable);
-        this.enableIpv6 = Objects.requireNonNull(enableIpv6);
-        this.interfaceName = Objects.requireNonNull(interfaceName);
-        this.ipAddress = Objects.requireNonNull(ipAddress);
-        this.ipv6NexthopAddress = Objects.requireNonNull(ipv6NexthopAddress);
-        this.managementType = Objects.requireNonNull(managementType);
-        this.name = Objects.requireNonNull(name);
-        this.peerAsn = Objects.requireNonNull(peerAsn);
-        this.peerIpAddress = Objects.requireNonNull(peerIpAddress);
-        this.peerIpv6NexthopAddress = Objects.requireNonNull(peerIpv6NexthopAddress);
-        this.routerApplianceInstance = Objects.requireNonNull(routerApplianceInstance);
+        this.advertiseMode = advertiseMode;
+        this.advertisedGroups = advertisedGroups;
+        this.advertisedIpRanges = advertisedIpRanges;
+        this.advertisedRoutePriority = advertisedRoutePriority;
+        this.bfd = bfd;
+        this.enable = enable;
+        this.enableIpv6 = enableIpv6;
+        this.interfaceName = interfaceName;
+        this.ipAddress = ipAddress;
+        this.ipv6NexthopAddress = ipv6NexthopAddress;
+        this.managementType = managementType;
+        this.name = name;
+        this.peerAsn = peerAsn;
+        this.peerIpAddress = peerIpAddress;
+        this.peerIpv6NexthopAddress = peerIpv6NexthopAddress;
+        this.routerApplianceInstance = routerApplianceInstance;
     }
 
     /**

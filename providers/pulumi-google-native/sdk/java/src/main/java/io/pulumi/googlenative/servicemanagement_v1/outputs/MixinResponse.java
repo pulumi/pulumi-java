@@ -24,8 +24,8 @@ public final class MixinResponse {
     private MixinResponse(
         String name,
         String root) {
-        this.name = Objects.requireNonNull(name);
-        this.root = Objects.requireNonNull(root);
+        this.name = name;
+        this.root = root;
     }
 
     /**

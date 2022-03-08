@@ -17,7 +17,7 @@ public final class GoogleCloudDialogflowV2beta1AutomatedAgentConfigResponse {
 
     @OutputCustomType.Constructor({"agent"})
     private GoogleCloudDialogflowV2beta1AutomatedAgentConfigResponse(String agent) {
-        this.agent = Objects.requireNonNull(agent);
+        this.agent = agent;
     }
 
     /**

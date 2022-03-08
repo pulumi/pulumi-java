@@ -63,14 +63,14 @@ public final class GoogleCloudApigeeV1CredentialResponse {
         String issuedAt,
         List<String> scopes,
         String status) {
-        this.apiProducts = Objects.requireNonNull(apiProducts);
-        this.attributes = Objects.requireNonNull(attributes);
-        this.consumerKey = Objects.requireNonNull(consumerKey);
-        this.consumerSecret = Objects.requireNonNull(consumerSecret);
-        this.expiresAt = Objects.requireNonNull(expiresAt);
-        this.issuedAt = Objects.requireNonNull(issuedAt);
-        this.scopes = Objects.requireNonNull(scopes);
-        this.status = Objects.requireNonNull(status);
+        this.apiProducts = apiProducts;
+        this.attributes = attributes;
+        this.consumerKey = consumerKey;
+        this.consumerSecret = consumerSecret;
+        this.expiresAt = expiresAt;
+        this.issuedAt = issuedAt;
+        this.scopes = scopes;
+        this.status = status;
     }
 
     /**

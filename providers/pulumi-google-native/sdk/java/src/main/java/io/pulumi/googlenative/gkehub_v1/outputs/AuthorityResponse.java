@@ -36,10 +36,10 @@ public final class AuthorityResponse {
         String issuer,
         String oidcJwks,
         String workloadIdentityPool) {
-        this.identityProvider = Objects.requireNonNull(identityProvider);
-        this.issuer = Objects.requireNonNull(issuer);
-        this.oidcJwks = Objects.requireNonNull(oidcJwks);
-        this.workloadIdentityPool = Objects.requireNonNull(workloadIdentityPool);
+        this.identityProvider = identityProvider;
+        this.issuer = issuer;
+        this.oidcJwks = oidcJwks;
+        this.workloadIdentityPool = workloadIdentityPool;
     }
 
     /**

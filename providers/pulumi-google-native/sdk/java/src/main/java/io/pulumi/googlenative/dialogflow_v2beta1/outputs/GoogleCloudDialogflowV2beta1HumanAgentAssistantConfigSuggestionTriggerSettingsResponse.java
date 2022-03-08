@@ -24,8 +24,8 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
     private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionTriggerSettingsResponse(
         Boolean noSmallTalk,
         Boolean onlyEndUser) {
-        this.noSmallTalk = Objects.requireNonNull(noSmallTalk);
-        this.onlyEndUser = Objects.requireNonNull(onlyEndUser);
+        this.noSmallTalk = noSmallTalk;
+        this.onlyEndUser = onlyEndUser;
     }
 
     /**

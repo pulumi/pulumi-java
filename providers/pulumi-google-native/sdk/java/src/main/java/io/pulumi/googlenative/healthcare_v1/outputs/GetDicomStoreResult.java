@@ -32,9 +32,9 @@ public final class GetDicomStoreResult {
         Map<String,String> labels,
         String name,
         NotificationConfigResponse notificationConfig) {
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.notificationConfig = Objects.requireNonNull(notificationConfig);
+        this.labels = labels;
+        this.name = name;
+        this.notificationConfig = notificationConfig;
     }
 
     /**

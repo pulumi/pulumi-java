@@ -17,7 +17,7 @@ public final class JwtResponse {
 
     @OutputCustomType.Constructor({"compactJwt"})
     private JwtResponse(String compactJwt) {
-        this.compactJwt = Objects.requireNonNull(compactJwt);
+        this.compactJwt = compactJwt;
     }
 
     /**

@@ -56,13 +56,13 @@ public final class FileOccurrenceResponse {
         List<String> filesLicenseInfo,
         LicenseResponse licenseConcluded,
         String notice) {
-        this.attributions = Objects.requireNonNull(attributions);
-        this.comment = Objects.requireNonNull(comment);
-        this.contributors = Objects.requireNonNull(contributors);
-        this.copyright = Objects.requireNonNull(copyright);
-        this.filesLicenseInfo = Objects.requireNonNull(filesLicenseInfo);
-        this.licenseConcluded = Objects.requireNonNull(licenseConcluded);
-        this.notice = Objects.requireNonNull(notice);
+        this.attributions = attributions;
+        this.comment = comment;
+        this.contributors = contributors;
+        this.copyright = copyright;
+        this.filesLicenseInfo = filesLicenseInfo;
+        this.licenseConcluded = licenseConcluded;
+        this.notice = notice;
     }
 
     /**

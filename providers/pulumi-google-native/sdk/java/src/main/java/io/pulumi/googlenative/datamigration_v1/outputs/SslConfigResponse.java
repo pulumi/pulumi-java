@@ -36,10 +36,10 @@ public final class SslConfigResponse {
         String clientCertificate,
         String clientKey,
         String type) {
-        this.caCertificate = Objects.requireNonNull(caCertificate);
-        this.clientCertificate = Objects.requireNonNull(clientCertificate);
-        this.clientKey = Objects.requireNonNull(clientKey);
-        this.type = Objects.requireNonNull(type);
+        this.caCertificate = caCertificate;
+        this.clientCertificate = clientCertificate;
+        this.clientKey = clientKey;
+        this.type = type;
     }
 
     /**

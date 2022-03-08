@@ -25,8 +25,8 @@ public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
     private SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse(
         Boolean enable,
         String ruleVisibility) {
-        this.enable = Objects.requireNonNull(enable);
-        this.ruleVisibility = Objects.requireNonNull(ruleVisibility);
+        this.enable = enable;
+        this.ruleVisibility = ruleVisibility;
     }
 
     /**

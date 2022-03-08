@@ -17,7 +17,7 @@ public final class FeedOutputConfigResponse {
 
     @OutputCustomType.Constructor({"pubsubDestination"})
     private FeedOutputConfigResponse(PubsubDestinationResponse pubsubDestination) {
-        this.pubsubDestination = Objects.requireNonNull(pubsubDestination);
+        this.pubsubDestination = pubsubDestination;
     }
 
     /**

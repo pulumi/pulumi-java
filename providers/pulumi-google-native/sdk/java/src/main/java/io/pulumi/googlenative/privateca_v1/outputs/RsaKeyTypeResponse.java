@@ -24,8 +24,8 @@ public final class RsaKeyTypeResponse {
     private RsaKeyTypeResponse(
         String maxModulusSize,
         String minModulusSize) {
-        this.maxModulusSize = Objects.requireNonNull(maxModulusSize);
-        this.minModulusSize = Objects.requireNonNull(minModulusSize);
+        this.maxModulusSize = maxModulusSize;
+        this.minModulusSize = minModulusSize;
     }
 
     /**

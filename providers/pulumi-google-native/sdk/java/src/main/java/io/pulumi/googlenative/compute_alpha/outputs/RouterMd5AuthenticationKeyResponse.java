@@ -24,8 +24,8 @@ public final class RouterMd5AuthenticationKeyResponse {
     private RouterMd5AuthenticationKeyResponse(
         String key,
         String name) {
-        this.key = Objects.requireNonNull(key);
-        this.name = Objects.requireNonNull(name);
+        this.key = key;
+        this.name = name;
     }
 
     /**

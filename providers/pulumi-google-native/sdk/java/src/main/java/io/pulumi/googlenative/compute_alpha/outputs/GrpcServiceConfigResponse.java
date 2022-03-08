@@ -32,9 +32,9 @@ public final class GrpcServiceConfigResponse {
         CallCredentialsResponse callCredentials,
         ChannelCredentialsResponse channelCredentials,
         String targetUri) {
-        this.callCredentials = Objects.requireNonNull(callCredentials);
-        this.channelCredentials = Objects.requireNonNull(channelCredentials);
-        this.targetUri = Objects.requireNonNull(targetUri);
+        this.callCredentials = callCredentials;
+        this.channelCredentials = channelCredentials;
+        this.targetUri = targetUri;
     }
 
     /**

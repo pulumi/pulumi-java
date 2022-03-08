@@ -37,10 +37,10 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartResponse 
         String entityType,
         String text,
         Boolean userDefined) {
-        this.alias = Objects.requireNonNull(alias);
-        this.entityType = Objects.requireNonNull(entityType);
-        this.text = Objects.requireNonNull(text);
-        this.userDefined = Objects.requireNonNull(userDefined);
+        this.alias = alias;
+        this.entityType = entityType;
+        this.text = text;
+        this.userDefined = userDefined;
     }
 
     /**

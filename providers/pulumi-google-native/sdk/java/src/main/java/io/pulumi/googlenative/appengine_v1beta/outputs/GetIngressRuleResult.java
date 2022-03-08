@@ -37,10 +37,10 @@ public final class GetIngressRuleResult {
         String description,
         Integer priority,
         String sourceRange) {
-        this.action = Objects.requireNonNull(action);
-        this.description = Objects.requireNonNull(description);
-        this.priority = Objects.requireNonNull(priority);
-        this.sourceRange = Objects.requireNonNull(sourceRange);
+        this.action = action;
+        this.description = description;
+        this.priority = priority;
+        this.sourceRange = sourceRange;
     }
 
     /**

@@ -32,9 +32,9 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContext
         GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse aliasContext,
         GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse repoId,
         String revisionId) {
-        this.aliasContext = Objects.requireNonNull(aliasContext);
-        this.repoId = Objects.requireNonNull(repoId);
-        this.revisionId = Objects.requireNonNull(revisionId);
+        this.aliasContext = aliasContext;
+        this.repoId = repoId;
+        this.revisionId = revisionId;
     }
 
     /**

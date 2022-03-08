@@ -66,14 +66,14 @@ public final class CertificateDescriptionResponse {
         PublicKeyResponse publicKey,
         SubjectDescriptionResponse subjectDescription,
         KeyIdResponse subjectKeyId) {
-        this.aiaIssuingCertificateUrls = Objects.requireNonNull(aiaIssuingCertificateUrls);
-        this.authorityKeyId = Objects.requireNonNull(authorityKeyId);
-        this.certFingerprint = Objects.requireNonNull(certFingerprint);
-        this.configValues = Objects.requireNonNull(configValues);
-        this.crlDistributionPoints = Objects.requireNonNull(crlDistributionPoints);
-        this.publicKey = Objects.requireNonNull(publicKey);
-        this.subjectDescription = Objects.requireNonNull(subjectDescription);
-        this.subjectKeyId = Objects.requireNonNull(subjectKeyId);
+        this.aiaIssuingCertificateUrls = aiaIssuingCertificateUrls;
+        this.authorityKeyId = authorityKeyId;
+        this.certFingerprint = certFingerprint;
+        this.configValues = configValues;
+        this.crlDistributionPoints = crlDistributionPoints;
+        this.publicKey = publicKey;
+        this.subjectDescription = subjectDescription;
+        this.subjectKeyId = subjectKeyId;
     }
 
     /**

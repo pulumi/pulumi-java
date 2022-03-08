@@ -38,10 +38,10 @@ public final class GooglePrivacyDlpV2TimespanConfigResponse {
         String endTime,
         String startTime,
         GooglePrivacyDlpV2FieldIdResponse timestampField) {
-        this.enableAutoPopulationOfTimespanConfig = Objects.requireNonNull(enableAutoPopulationOfTimespanConfig);
-        this.endTime = Objects.requireNonNull(endTime);
-        this.startTime = Objects.requireNonNull(startTime);
-        this.timestampField = Objects.requireNonNull(timestampField);
+        this.enableAutoPopulationOfTimespanConfig = enableAutoPopulationOfTimespanConfig;
+        this.endTime = endTime;
+        this.startTime = startTime;
+        this.timestampField = timestampField;
     }
 
     /**

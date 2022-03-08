@@ -70,15 +70,15 @@ public final class AndroidInstrumentationTestResponse {
         String testPackageId,
         String testRunnerClass,
         List<String> testTargets) {
-        this.appApk = Objects.requireNonNull(appApk);
-        this.appBundle = Objects.requireNonNull(appBundle);
-        this.appPackageId = Objects.requireNonNull(appPackageId);
-        this.orchestratorOption = Objects.requireNonNull(orchestratorOption);
-        this.shardingOption = Objects.requireNonNull(shardingOption);
-        this.testApk = Objects.requireNonNull(testApk);
-        this.testPackageId = Objects.requireNonNull(testPackageId);
-        this.testRunnerClass = Objects.requireNonNull(testRunnerClass);
-        this.testTargets = Objects.requireNonNull(testTargets);
+        this.appApk = appApk;
+        this.appBundle = appBundle;
+        this.appPackageId = appPackageId;
+        this.orchestratorOption = orchestratorOption;
+        this.shardingOption = shardingOption;
+        this.testApk = testApk;
+        this.testPackageId = testPackageId;
+        this.testRunnerClass = testRunnerClass;
+        this.testTargets = testTargets;
     }
 
     /**

@@ -25,8 +25,8 @@ public final class GooglePrivacyDlpV2DatastoreOptionsResponse {
     private GooglePrivacyDlpV2DatastoreOptionsResponse(
         GooglePrivacyDlpV2KindExpressionResponse kind,
         GooglePrivacyDlpV2PartitionIdResponse partitionId) {
-        this.kind = Objects.requireNonNull(kind);
-        this.partitionId = Objects.requireNonNull(partitionId);
+        this.kind = kind;
+        this.partitionId = partitionId;
     }
 
     /**

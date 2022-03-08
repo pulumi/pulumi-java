@@ -81,17 +81,17 @@ public final class GetVpnGatewayResult {
         String selfLink,
         String stackType,
         List<VpnGatewayVpnGatewayInterfaceResponse> vpnInterfaces) {
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.description = Objects.requireNonNull(description);
-        this.kind = Objects.requireNonNull(kind);
-        this.labelFingerprint = Objects.requireNonNull(labelFingerprint);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.network = Objects.requireNonNull(network);
-        this.region = Objects.requireNonNull(region);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.stackType = Objects.requireNonNull(stackType);
-        this.vpnInterfaces = Objects.requireNonNull(vpnInterfaces);
+        this.creationTimestamp = creationTimestamp;
+        this.description = description;
+        this.kind = kind;
+        this.labelFingerprint = labelFingerprint;
+        this.labels = labels;
+        this.name = name;
+        this.network = network;
+        this.region = region;
+        this.selfLink = selfLink;
+        this.stackType = stackType;
+        this.vpnInterfaces = vpnInterfaces;
     }
 
     /**

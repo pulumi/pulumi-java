@@ -49,12 +49,12 @@ public final class SparkBatchResponse {
         List<String> jarFileUris,
         String mainClass,
         String mainJarFileUri) {
-        this.archiveUris = Objects.requireNonNull(archiveUris);
-        this.args = Objects.requireNonNull(args);
-        this.fileUris = Objects.requireNonNull(fileUris);
-        this.jarFileUris = Objects.requireNonNull(jarFileUris);
-        this.mainClass = Objects.requireNonNull(mainClass);
-        this.mainJarFileUri = Objects.requireNonNull(mainJarFileUri);
+        this.archiveUris = archiveUris;
+        this.args = args;
+        this.fileUris = fileUris;
+        this.jarFileUris = jarFileUris;
+        this.mainClass = mainClass;
+        this.mainJarFileUri = mainJarFileUri;
     }
 
     /**

@@ -80,17 +80,17 @@ public final class NetworkPeeringResponse {
         Integer peerMtu,
         String state,
         String stateDetails) {
-        this.autoCreateRoutes = Objects.requireNonNull(autoCreateRoutes);
-        this.exchangeSubnetRoutes = Objects.requireNonNull(exchangeSubnetRoutes);
-        this.exportCustomRoutes = Objects.requireNonNull(exportCustomRoutes);
-        this.exportSubnetRoutesWithPublicIp = Objects.requireNonNull(exportSubnetRoutesWithPublicIp);
-        this.importCustomRoutes = Objects.requireNonNull(importCustomRoutes);
-        this.importSubnetRoutesWithPublicIp = Objects.requireNonNull(importSubnetRoutesWithPublicIp);
-        this.name = Objects.requireNonNull(name);
-        this.network = Objects.requireNonNull(network);
-        this.peerMtu = Objects.requireNonNull(peerMtu);
-        this.state = Objects.requireNonNull(state);
-        this.stateDetails = Objects.requireNonNull(stateDetails);
+        this.autoCreateRoutes = autoCreateRoutes;
+        this.exchangeSubnetRoutes = exchangeSubnetRoutes;
+        this.exportCustomRoutes = exportCustomRoutes;
+        this.exportSubnetRoutesWithPublicIp = exportSubnetRoutesWithPublicIp;
+        this.importCustomRoutes = importCustomRoutes;
+        this.importSubnetRoutesWithPublicIp = importSubnetRoutesWithPublicIp;
+        this.name = name;
+        this.network = network;
+        this.peerMtu = peerMtu;
+        this.state = state;
+        this.stateDetails = stateDetails;
     }
 
     /**

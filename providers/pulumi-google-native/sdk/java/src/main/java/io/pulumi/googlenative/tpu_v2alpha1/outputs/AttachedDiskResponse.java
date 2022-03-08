@@ -24,8 +24,8 @@ public final class AttachedDiskResponse {
     private AttachedDiskResponse(
         String mode,
         String sourceDisk) {
-        this.mode = Objects.requireNonNull(mode);
-        this.sourceDisk = Objects.requireNonNull(sourceDisk);
+        this.mode = mode;
+        this.sourceDisk = sourceDisk;
     }
 
     /**

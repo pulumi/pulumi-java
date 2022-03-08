@@ -18,7 +18,7 @@ public final class LoggingComponentConfigResponse {
 
     @OutputCustomType.Constructor({"enableComponents"})
     private LoggingComponentConfigResponse(List<String> enableComponents) {
-        this.enableComponents = Objects.requireNonNull(enableComponents);
+        this.enableComponents = enableComponents;
     }
 
     /**

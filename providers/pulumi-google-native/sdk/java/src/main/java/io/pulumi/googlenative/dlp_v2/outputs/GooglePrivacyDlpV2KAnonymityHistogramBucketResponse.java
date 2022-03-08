@@ -44,11 +44,11 @@ public final class GooglePrivacyDlpV2KAnonymityHistogramBucketResponse {
         List<GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse> bucketValues,
         String equivalenceClassSizeLowerBound,
         String equivalenceClassSizeUpperBound) {
-        this.bucketSize = Objects.requireNonNull(bucketSize);
-        this.bucketValueCount = Objects.requireNonNull(bucketValueCount);
-        this.bucketValues = Objects.requireNonNull(bucketValues);
-        this.equivalenceClassSizeLowerBound = Objects.requireNonNull(equivalenceClassSizeLowerBound);
-        this.equivalenceClassSizeUpperBound = Objects.requireNonNull(equivalenceClassSizeUpperBound);
+        this.bucketSize = bucketSize;
+        this.bucketValueCount = bucketValueCount;
+        this.bucketValues = bucketValues;
+        this.equivalenceClassSizeLowerBound = equivalenceClassSizeLowerBound;
+        this.equivalenceClassSizeUpperBound = equivalenceClassSizeUpperBound;
     }
 
     /**

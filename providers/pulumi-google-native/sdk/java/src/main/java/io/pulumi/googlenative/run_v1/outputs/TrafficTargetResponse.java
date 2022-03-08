@@ -50,12 +50,12 @@ public final class TrafficTargetResponse {
         String revisionName,
         String tag,
         String url) {
-        this.configurationName = Objects.requireNonNull(configurationName);
-        this.latestRevision = Objects.requireNonNull(latestRevision);
-        this.percent = Objects.requireNonNull(percent);
-        this.revisionName = Objects.requireNonNull(revisionName);
-        this.tag = Objects.requireNonNull(tag);
-        this.url = Objects.requireNonNull(url);
+        this.configurationName = configurationName;
+        this.latestRevision = latestRevision;
+        this.percent = percent;
+        this.revisionName = revisionName;
+        this.tag = tag;
+        this.url = url;
     }
 
     /**

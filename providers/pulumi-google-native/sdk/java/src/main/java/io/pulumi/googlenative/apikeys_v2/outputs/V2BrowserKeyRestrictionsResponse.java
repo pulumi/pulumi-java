@@ -18,7 +18,7 @@ public final class V2BrowserKeyRestrictionsResponse {
 
     @OutputCustomType.Constructor({"allowedReferrers"})
     private V2BrowserKeyRestrictionsResponse(List<String> allowedReferrers) {
-        this.allowedReferrers = Objects.requireNonNull(allowedReferrers);
+        this.allowedReferrers = allowedReferrers;
     }
 
     /**

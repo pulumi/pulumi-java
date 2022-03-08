@@ -32,9 +32,9 @@ public final class SourceConfigResponse {
         SourceCrowdingConfigResponse crowdingConfig,
         SourceScoringConfigResponse scoringConfig,
         SourceResponse source) {
-        this.crowdingConfig = Objects.requireNonNull(crowdingConfig);
-        this.scoringConfig = Objects.requireNonNull(scoringConfig);
-        this.source = Objects.requireNonNull(source);
+        this.crowdingConfig = crowdingConfig;
+        this.scoringConfig = scoringConfig;
+        this.source = source;
     }
 
     /**

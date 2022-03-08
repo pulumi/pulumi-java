@@ -17,7 +17,7 @@ public final class OSPolicyResourcePackageResourceGooGetResponse {
 
     @OutputCustomType.Constructor({"name"})
     private OSPolicyResourcePackageResourceGooGetResponse(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

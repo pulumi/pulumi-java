@@ -25,8 +25,8 @@ public final class MetadataIntegrationResponse {
     private MetadataIntegrationResponse(
         DataCatalogConfigResponse dataCatalogConfig,
         DataplexConfigResponse dataplexConfig) {
-        this.dataCatalogConfig = Objects.requireNonNull(dataCatalogConfig);
-        this.dataplexConfig = Objects.requireNonNull(dataplexConfig);
+        this.dataCatalogConfig = dataCatalogConfig;
+        this.dataplexConfig = dataplexConfig;
     }
 
     /**

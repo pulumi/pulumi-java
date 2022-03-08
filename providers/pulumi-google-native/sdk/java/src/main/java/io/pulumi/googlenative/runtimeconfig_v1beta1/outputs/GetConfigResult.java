@@ -24,8 +24,8 @@ public final class GetConfigResult {
     private GetConfigResult(
         String description,
         String name) {
-        this.description = Objects.requireNonNull(description);
-        this.name = Objects.requireNonNull(name);
+        this.description = description;
+        this.name = name;
     }
 
     /**

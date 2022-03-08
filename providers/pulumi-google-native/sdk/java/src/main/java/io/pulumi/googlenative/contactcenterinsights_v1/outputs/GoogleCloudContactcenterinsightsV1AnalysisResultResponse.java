@@ -25,8 +25,8 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultResponse {
     private GoogleCloudContactcenterinsightsV1AnalysisResultResponse(
         GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse callAnalysisMetadata,
         String endTime) {
-        this.callAnalysisMetadata = Objects.requireNonNull(callAnalysisMetadata);
-        this.endTime = Objects.requireNonNull(endTime);
+        this.callAnalysisMetadata = callAnalysisMetadata;
+        this.endTime = endTime;
     }
 
     /**

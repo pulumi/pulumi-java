@@ -25,8 +25,8 @@ public final class CallCredentialsResponse {
     private CallCredentialsResponse(
         String callCredentialType,
         MetadataCredentialsFromPluginResponse fromPlugin) {
-        this.callCredentialType = Objects.requireNonNull(callCredentialType);
-        this.fromPlugin = Objects.requireNonNull(fromPlugin);
+        this.callCredentialType = callCredentialType;
+        this.fromPlugin = fromPlugin;
     }
 
     /**

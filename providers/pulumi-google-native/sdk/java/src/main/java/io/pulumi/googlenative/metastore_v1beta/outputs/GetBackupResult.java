@@ -56,13 +56,13 @@ public final class GetBackupResult {
         List<String> restoringServices,
         ServiceResponse serviceRevision,
         String state) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.description = Objects.requireNonNull(description);
-        this.endTime = Objects.requireNonNull(endTime);
-        this.name = Objects.requireNonNull(name);
-        this.restoringServices = Objects.requireNonNull(restoringServices);
-        this.serviceRevision = Objects.requireNonNull(serviceRevision);
-        this.state = Objects.requireNonNull(state);
+        this.createTime = createTime;
+        this.description = description;
+        this.endTime = endTime;
+        this.name = name;
+        this.restoringServices = restoringServices;
+        this.serviceRevision = serviceRevision;
+        this.state = state;
     }
 
     /**

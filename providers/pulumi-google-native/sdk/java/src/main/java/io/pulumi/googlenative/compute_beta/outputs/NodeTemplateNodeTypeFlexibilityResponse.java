@@ -18,9 +18,9 @@ public final class NodeTemplateNodeTypeFlexibilityResponse {
         String cpus,
         String localSsd,
         String memory) {
-        this.cpus = Objects.requireNonNull(cpus);
-        this.localSsd = Objects.requireNonNull(localSsd);
-        this.memory = Objects.requireNonNull(memory);
+        this.cpus = cpus;
+        this.localSsd = localSsd;
+        this.memory = memory;
     }
 
     public String getCpus() {

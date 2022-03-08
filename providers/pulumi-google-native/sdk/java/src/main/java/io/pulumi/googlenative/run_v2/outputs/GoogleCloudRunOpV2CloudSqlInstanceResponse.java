@@ -18,7 +18,7 @@ public final class GoogleCloudRunOpV2CloudSqlInstanceResponse {
 
     @OutputCustomType.Constructor({"connections"})
     private GoogleCloudRunOpV2CloudSqlInstanceResponse(List<String> connections) {
-        this.connections = Objects.requireNonNull(connections);
+        this.connections = connections;
     }
 
     /**

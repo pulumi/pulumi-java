@@ -39,10 +39,10 @@ public final class InstanceGroupManagerStatusResponse {
         Boolean isStable,
         InstanceGroupManagerStatusStatefulResponse stateful,
         InstanceGroupManagerStatusVersionTargetResponse versionTarget) {
-        this.autoscaler = Objects.requireNonNull(autoscaler);
-        this.isStable = Objects.requireNonNull(isStable);
-        this.stateful = Objects.requireNonNull(stateful);
-        this.versionTarget = Objects.requireNonNull(versionTarget);
+        this.autoscaler = autoscaler;
+        this.isStable = isStable;
+        this.stateful = stateful;
+        this.versionTarget = versionTarget;
     }
 
     /**

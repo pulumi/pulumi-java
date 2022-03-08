@@ -64,14 +64,14 @@ public final class GetConsentArtifactResult {
         String userId,
         SignatureResponse userSignature,
         SignatureResponse witnessSignature) {
-        this.consentContentScreenshots = Objects.requireNonNull(consentContentScreenshots);
-        this.consentContentVersion = Objects.requireNonNull(consentContentVersion);
-        this.guardianSignature = Objects.requireNonNull(guardianSignature);
-        this.metadata = Objects.requireNonNull(metadata);
-        this.name = Objects.requireNonNull(name);
-        this.userId = Objects.requireNonNull(userId);
-        this.userSignature = Objects.requireNonNull(userSignature);
-        this.witnessSignature = Objects.requireNonNull(witnessSignature);
+        this.consentContentScreenshots = consentContentScreenshots;
+        this.consentContentVersion = consentContentVersion;
+        this.guardianSignature = guardianSignature;
+        this.metadata = metadata;
+        this.name = name;
+        this.userId = userId;
+        this.userSignature = userSignature;
+        this.witnessSignature = witnessSignature;
     }
 
     /**

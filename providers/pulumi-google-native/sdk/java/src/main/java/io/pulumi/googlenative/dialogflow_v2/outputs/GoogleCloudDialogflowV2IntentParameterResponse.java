@@ -62,14 +62,14 @@ public final class GoogleCloudDialogflowV2IntentParameterResponse {
         String name,
         List<String> prompts,
         String value) {
-        this.defaultValue = Objects.requireNonNull(defaultValue);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.entityTypeDisplayName = Objects.requireNonNull(entityTypeDisplayName);
-        this.isList = Objects.requireNonNull(isList);
-        this.mandatory = Objects.requireNonNull(mandatory);
-        this.name = Objects.requireNonNull(name);
-        this.prompts = Objects.requireNonNull(prompts);
-        this.value = Objects.requireNonNull(value);
+        this.defaultValue = defaultValue;
+        this.displayName = displayName;
+        this.entityTypeDisplayName = entityTypeDisplayName;
+        this.isList = isList;
+        this.mandatory = mandatory;
+        this.name = name;
+        this.prompts = prompts;
+        this.value = value;
     }
 
     /**

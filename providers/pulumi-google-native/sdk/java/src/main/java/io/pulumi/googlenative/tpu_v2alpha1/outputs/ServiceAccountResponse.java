@@ -25,8 +25,8 @@ public final class ServiceAccountResponse {
     private ServiceAccountResponse(
         String email,
         List<String> scope) {
-        this.email = Objects.requireNonNull(email);
-        this.scope = Objects.requireNonNull(scope);
+        this.email = email;
+        this.scope = scope;
     }
 
     /**

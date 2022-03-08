@@ -24,8 +24,8 @@ public final class AppliedLicenseResponse {
     private AppliedLicenseResponse(
         String osLicense,
         String type) {
-        this.osLicense = Objects.requireNonNull(osLicense);
-        this.type = Objects.requireNonNull(type);
+        this.osLicense = osLicense;
+        this.type = type;
     }
 
     /**

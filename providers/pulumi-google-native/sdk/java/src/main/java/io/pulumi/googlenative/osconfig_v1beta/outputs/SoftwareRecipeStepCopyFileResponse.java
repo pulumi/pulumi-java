@@ -37,10 +37,10 @@ public final class SoftwareRecipeStepCopyFileResponse {
         String destination,
         Boolean overwrite,
         String permissions) {
-        this.artifactId = Objects.requireNonNull(artifactId);
-        this.destination = Objects.requireNonNull(destination);
-        this.overwrite = Objects.requireNonNull(overwrite);
-        this.permissions = Objects.requireNonNull(permissions);
+        this.artifactId = artifactId;
+        this.destination = destination;
+        this.overwrite = overwrite;
+        this.permissions = permissions;
     }
 
     /**

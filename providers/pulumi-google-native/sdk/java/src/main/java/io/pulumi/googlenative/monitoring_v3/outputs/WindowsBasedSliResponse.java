@@ -44,11 +44,11 @@ public final class WindowsBasedSliResponse {
         MetricRangeResponse metricMeanInRange,
         MetricRangeResponse metricSumInRange,
         String windowPeriod) {
-        this.goodBadMetricFilter = Objects.requireNonNull(goodBadMetricFilter);
-        this.goodTotalRatioThreshold = Objects.requireNonNull(goodTotalRatioThreshold);
-        this.metricMeanInRange = Objects.requireNonNull(metricMeanInRange);
-        this.metricSumInRange = Objects.requireNonNull(metricSumInRange);
-        this.windowPeriod = Objects.requireNonNull(windowPeriod);
+        this.goodBadMetricFilter = goodBadMetricFilter;
+        this.goodTotalRatioThreshold = goodTotalRatioThreshold;
+        this.metricMeanInRange = metricMeanInRange;
+        this.metricSumInRange = metricSumInRange;
+        this.windowPeriod = windowPeriod;
     }
 
     /**

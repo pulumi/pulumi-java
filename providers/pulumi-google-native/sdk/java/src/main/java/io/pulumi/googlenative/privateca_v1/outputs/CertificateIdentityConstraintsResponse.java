@@ -31,9 +31,9 @@ public final class CertificateIdentityConstraintsResponse {
         Boolean allowSubjectAltNamesPassthrough,
         Boolean allowSubjectPassthrough,
         ExprResponse celExpression) {
-        this.allowSubjectAltNamesPassthrough = Objects.requireNonNull(allowSubjectAltNamesPassthrough);
-        this.allowSubjectPassthrough = Objects.requireNonNull(allowSubjectPassthrough);
-        this.celExpression = Objects.requireNonNull(celExpression);
+        this.allowSubjectAltNamesPassthrough = allowSubjectAltNamesPassthrough;
+        this.allowSubjectPassthrough = allowSubjectPassthrough;
+        this.celExpression = celExpression;
     }
 
     /**

@@ -62,14 +62,14 @@ public final class GetSavedQueryResult {
         String lastUpdateTime,
         String lastUpdater,
         String name) {
-        this.content = Objects.requireNonNull(content);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.creator = Objects.requireNonNull(creator);
-        this.description = Objects.requireNonNull(description);
-        this.labels = Objects.requireNonNull(labels);
-        this.lastUpdateTime = Objects.requireNonNull(lastUpdateTime);
-        this.lastUpdater = Objects.requireNonNull(lastUpdater);
-        this.name = Objects.requireNonNull(name);
+        this.content = content;
+        this.createTime = createTime;
+        this.creator = creator;
+        this.description = description;
+        this.labels = labels;
+        this.lastUpdateTime = lastUpdateTime;
+        this.lastUpdater = lastUpdater;
+        this.name = name;
     }
 
     /**

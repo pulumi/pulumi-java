@@ -76,16 +76,16 @@ public final class FieldResponse {
         List<OptionResponse> options,
         Boolean packed,
         String typeUrl) {
-        this.cardinality = Objects.requireNonNull(cardinality);
-        this.defaultValue = Objects.requireNonNull(defaultValue);
-        this.jsonName = Objects.requireNonNull(jsonName);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.number = Objects.requireNonNull(number);
-        this.oneofIndex = Objects.requireNonNull(oneofIndex);
-        this.options = Objects.requireNonNull(options);
-        this.packed = Objects.requireNonNull(packed);
-        this.typeUrl = Objects.requireNonNull(typeUrl);
+        this.cardinality = cardinality;
+        this.defaultValue = defaultValue;
+        this.jsonName = jsonName;
+        this.kind = kind;
+        this.name = name;
+        this.number = number;
+        this.oneofIndex = oneofIndex;
+        this.options = options;
+        this.packed = packed;
+        this.typeUrl = typeUrl;
     }
 
     /**

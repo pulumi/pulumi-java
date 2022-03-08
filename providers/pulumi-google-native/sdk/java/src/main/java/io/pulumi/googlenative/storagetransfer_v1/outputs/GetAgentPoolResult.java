@@ -37,10 +37,10 @@ public final class GetAgentPoolResult {
         String displayName,
         String name,
         String state) {
-        this.bandwidthLimit = Objects.requireNonNull(bandwidthLimit);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.name = Objects.requireNonNull(name);
-        this.state = Objects.requireNonNull(state);
+        this.bandwidthLimit = bandwidthLimit;
+        this.displayName = displayName;
+        this.name = name;
+        this.state = state;
     }
 
     /**

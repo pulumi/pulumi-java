@@ -108,21 +108,21 @@ public final class GetScanConfigResult {
         Boolean staticIpScan,
         List<String> targetPlatforms,
         String userAgent) {
-        this.authentication = Objects.requireNonNull(authentication);
-        this.blacklistPatterns = Objects.requireNonNull(blacklistPatterns);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.exportToSecurityCommandCenter = Objects.requireNonNull(exportToSecurityCommandCenter);
-        this.ignoreHttpStatusErrors = Objects.requireNonNull(ignoreHttpStatusErrors);
-        this.latestRun = Objects.requireNonNull(latestRun);
-        this.managedScan = Objects.requireNonNull(managedScan);
-        this.maxQps = Objects.requireNonNull(maxQps);
-        this.name = Objects.requireNonNull(name);
-        this.riskLevel = Objects.requireNonNull(riskLevel);
-        this.schedule = Objects.requireNonNull(schedule);
-        this.startingUrls = Objects.requireNonNull(startingUrls);
-        this.staticIpScan = Objects.requireNonNull(staticIpScan);
-        this.targetPlatforms = Objects.requireNonNull(targetPlatforms);
-        this.userAgent = Objects.requireNonNull(userAgent);
+        this.authentication = authentication;
+        this.blacklistPatterns = blacklistPatterns;
+        this.displayName = displayName;
+        this.exportToSecurityCommandCenter = exportToSecurityCommandCenter;
+        this.ignoreHttpStatusErrors = ignoreHttpStatusErrors;
+        this.latestRun = latestRun;
+        this.managedScan = managedScan;
+        this.maxQps = maxQps;
+        this.name = name;
+        this.riskLevel = riskLevel;
+        this.schedule = schedule;
+        this.startingUrls = startingUrls;
+        this.staticIpScan = staticIpScan;
+        this.targetPlatforms = targetPlatforms;
+        this.userAgent = userAgent;
     }
 
     /**

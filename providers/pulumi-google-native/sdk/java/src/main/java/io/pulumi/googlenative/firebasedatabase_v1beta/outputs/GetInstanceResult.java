@@ -42,11 +42,11 @@ public final class GetInstanceResult {
         String project,
         String state,
         String type) {
-        this.databaseUrl = Objects.requireNonNull(databaseUrl);
-        this.name = Objects.requireNonNull(name);
-        this.project = Objects.requireNonNull(project);
-        this.state = Objects.requireNonNull(state);
-        this.type = Objects.requireNonNull(type);
+        this.databaseUrl = databaseUrl;
+        this.name = name;
+        this.project = project;
+        this.state = state;
+        this.type = type;
     }
 
     /**

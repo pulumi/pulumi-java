@@ -18,7 +18,7 @@ public final class TableFieldSchemaPolicyTagsResponse {
 
     @OutputCustomType.Constructor({"names"})
     private TableFieldSchemaPolicyTagsResponse(List<String> names) {
-        this.names = Objects.requireNonNull(names);
+        this.names = names;
     }
 
     /**

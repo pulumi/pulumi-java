@@ -24,8 +24,8 @@ public final class SoftwareRecipeArtifactRemoteResponse {
     private SoftwareRecipeArtifactRemoteResponse(
         String checksum,
         String uri) {
-        this.checksum = Objects.requireNonNull(checksum);
-        this.uri = Objects.requireNonNull(uri);
+        this.checksum = checksum;
+        this.uri = uri;
     }
 
     /**

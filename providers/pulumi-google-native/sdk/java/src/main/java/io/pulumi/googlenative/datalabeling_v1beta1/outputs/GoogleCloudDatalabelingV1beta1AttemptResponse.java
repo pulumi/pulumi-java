@@ -22,8 +22,8 @@ public final class GoogleCloudDatalabelingV1beta1AttemptResponse {
     private GoogleCloudDatalabelingV1beta1AttemptResponse(
         String attemptTime,
         List<GoogleRpcStatusResponse> partialFailures) {
-        this.attemptTime = Objects.requireNonNull(attemptTime);
-        this.partialFailures = Objects.requireNonNull(partialFailures);
+        this.attemptTime = attemptTime;
+        this.partialFailures = partialFailures;
     }
 
     public String getAttemptTime() {

@@ -30,9 +30,9 @@ public final class InconclusiveDetailResponse {
         Boolean abortedByUser,
         Boolean hasErrorLogs,
         Boolean infrastructureFailure) {
-        this.abortedByUser = Objects.requireNonNull(abortedByUser);
-        this.hasErrorLogs = Objects.requireNonNull(hasErrorLogs);
-        this.infrastructureFailure = Objects.requireNonNull(infrastructureFailure);
+        this.abortedByUser = abortedByUser;
+        this.hasErrorLogs = hasErrorLogs;
+        this.infrastructureFailure = infrastructureFailure;
     }
 
     /**

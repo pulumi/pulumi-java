@@ -37,10 +37,10 @@ public final class GetEntryGroupResult {
         String description,
         String displayName,
         String name) {
-        this.dataCatalogTimestamps = Objects.requireNonNull(dataCatalogTimestamps);
-        this.description = Objects.requireNonNull(description);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.name = Objects.requireNonNull(name);
+        this.dataCatalogTimestamps = dataCatalogTimestamps;
+        this.description = description;
+        this.displayName = displayName;
+        this.name = name;
     }
 
     /**

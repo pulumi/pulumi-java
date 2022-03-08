@@ -24,8 +24,8 @@ public final class RetryPolicyResponse {
     private RetryPolicyResponse(
         String maximumBackoff,
         String minimumBackoff) {
-        this.maximumBackoff = Objects.requireNonNull(maximumBackoff);
-        this.minimumBackoff = Objects.requireNonNull(minimumBackoff);
+        this.maximumBackoff = maximumBackoff;
+        this.minimumBackoff = minimumBackoff;
     }
 
     /**

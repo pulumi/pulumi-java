@@ -24,8 +24,8 @@ public final class CertDnsChallengeResponse {
     private CertDnsChallengeResponse(
         String domainName,
         String token) {
-        this.domainName = Objects.requireNonNull(domainName);
-        this.token = Objects.requireNonNull(token);
+        this.domainName = domainName;
+        this.token = token;
     }
 
     /**

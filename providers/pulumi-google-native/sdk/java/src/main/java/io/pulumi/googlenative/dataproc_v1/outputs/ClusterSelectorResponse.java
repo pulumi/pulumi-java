@@ -25,8 +25,8 @@ public final class ClusterSelectorResponse {
     private ClusterSelectorResponse(
         Map<String,String> clusterLabels,
         String zone) {
-        this.clusterLabels = Objects.requireNonNull(clusterLabels);
-        this.zone = Objects.requireNonNull(zone);
+        this.clusterLabels = clusterLabels;
+        this.zone = zone;
     }
 
     /**

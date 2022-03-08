@@ -14,7 +14,7 @@ public final class EnvironmentResponse {
 
     @OutputCustomType.Constructor({"customValues"})
     private EnvironmentResponse(Map<String,String> customValues) {
-        this.customValues = Objects.requireNonNull(customValues);
+        this.customValues = customValues;
     }
 
     public Map<String,String> getCustomValues() {

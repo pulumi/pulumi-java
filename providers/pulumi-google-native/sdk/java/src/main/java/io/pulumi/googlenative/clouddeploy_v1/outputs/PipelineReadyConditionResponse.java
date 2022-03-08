@@ -25,8 +25,8 @@ public final class PipelineReadyConditionResponse {
     private PipelineReadyConditionResponse(
         Boolean status,
         String updateTime) {
-        this.status = Objects.requireNonNull(status);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.status = status;
+        this.updateTime = updateTime;
     }
 
     /**

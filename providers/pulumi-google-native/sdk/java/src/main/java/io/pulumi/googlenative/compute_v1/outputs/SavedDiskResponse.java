@@ -36,10 +36,10 @@ public final class SavedDiskResponse {
         String sourceDisk,
         String storageBytes,
         String storageBytesStatus) {
-        this.kind = Objects.requireNonNull(kind);
-        this.sourceDisk = Objects.requireNonNull(sourceDisk);
-        this.storageBytes = Objects.requireNonNull(storageBytes);
-        this.storageBytesStatus = Objects.requireNonNull(storageBytesStatus);
+        this.kind = kind;
+        this.sourceDisk = sourceDisk;
+        this.storageBytes = storageBytes;
+        this.storageBytesStatus = storageBytesStatus;
     }
 
     /**

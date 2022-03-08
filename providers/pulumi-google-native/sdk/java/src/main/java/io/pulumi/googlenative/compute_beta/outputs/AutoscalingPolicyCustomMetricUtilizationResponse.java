@@ -43,11 +43,11 @@ public final class AutoscalingPolicyCustomMetricUtilizationResponse {
         Double singleInstanceAssignment,
         Double utilizationTarget,
         String utilizationTargetType) {
-        this.filter = Objects.requireNonNull(filter);
-        this.metric = Objects.requireNonNull(metric);
-        this.singleInstanceAssignment = Objects.requireNonNull(singleInstanceAssignment);
-        this.utilizationTarget = Objects.requireNonNull(utilizationTarget);
-        this.utilizationTargetType = Objects.requireNonNull(utilizationTargetType);
+        this.filter = filter;
+        this.metric = metric;
+        this.singleInstanceAssignment = singleInstanceAssignment;
+        this.utilizationTarget = utilizationTarget;
+        this.utilizationTargetType = utilizationTargetType;
     }
 
     /**

@@ -46,11 +46,11 @@ public final class AndroidTestLoopResponse {
         String appPackageId,
         List<String> scenarioLabels,
         List<Integer> scenarios) {
-        this.appApk = Objects.requireNonNull(appApk);
-        this.appBundle = Objects.requireNonNull(appBundle);
-        this.appPackageId = Objects.requireNonNull(appPackageId);
-        this.scenarioLabels = Objects.requireNonNull(scenarioLabels);
-        this.scenarios = Objects.requireNonNull(scenarios);
+        this.appApk = appApk;
+        this.appBundle = appBundle;
+        this.appPackageId = appPackageId;
+        this.scenarioLabels = scenarioLabels;
+        this.scenarios = scenarios;
     }
 
     /**

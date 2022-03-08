@@ -39,10 +39,10 @@ public final class GetSnapshotSchedulePolicyResult {
         Map<String,String> labels,
         String name,
         List<ScheduleResponse> schedules) {
-        this.description = Objects.requireNonNull(description);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.schedules = Objects.requireNonNull(schedules);
+        this.description = description;
+        this.labels = labels;
+        this.name = name;
+        this.schedules = schedules;
     }
 
     /**

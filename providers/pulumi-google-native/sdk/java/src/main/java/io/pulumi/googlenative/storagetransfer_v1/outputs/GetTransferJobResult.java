@@ -88,18 +88,18 @@ public final class GetTransferJobResult {
         ScheduleResponse schedule,
         String status,
         TransferSpecResponse transferSpec) {
-        this.creationTime = Objects.requireNonNull(creationTime);
-        this.deletionTime = Objects.requireNonNull(deletionTime);
-        this.description = Objects.requireNonNull(description);
-        this.lastModificationTime = Objects.requireNonNull(lastModificationTime);
-        this.latestOperationName = Objects.requireNonNull(latestOperationName);
-        this.loggingConfig = Objects.requireNonNull(loggingConfig);
-        this.name = Objects.requireNonNull(name);
-        this.notificationConfig = Objects.requireNonNull(notificationConfig);
-        this.project = Objects.requireNonNull(project);
-        this.schedule = Objects.requireNonNull(schedule);
-        this.status = Objects.requireNonNull(status);
-        this.transferSpec = Objects.requireNonNull(transferSpec);
+        this.creationTime = creationTime;
+        this.deletionTime = deletionTime;
+        this.description = description;
+        this.lastModificationTime = lastModificationTime;
+        this.latestOperationName = latestOperationName;
+        this.loggingConfig = loggingConfig;
+        this.name = name;
+        this.notificationConfig = notificationConfig;
+        this.project = project;
+        this.schedule = schedule;
+        this.status = status;
+        this.transferSpec = transferSpec;
     }
 
     /**

@@ -44,11 +44,11 @@ public final class MysqlProfileResponse {
         Integer port,
         MysqlSslConfigResponse sslConfig,
         String username) {
-        this.hostname = Objects.requireNonNull(hostname);
-        this.password = Objects.requireNonNull(password);
-        this.port = Objects.requireNonNull(port);
-        this.sslConfig = Objects.requireNonNull(sslConfig);
-        this.username = Objects.requireNonNull(username);
+        this.hostname = hostname;
+        this.password = password;
+        this.port = port;
+        this.sslConfig = sslConfig;
+        this.username = username;
     }
 
     /**

@@ -128,27 +128,27 @@ public final class GetRegionSecurityPolicyResult {
         String selfLink,
         String selfLinkWithId,
         String type) {
-        this.adaptiveProtectionConfig = Objects.requireNonNull(adaptiveProtectionConfig);
-        this.advancedOptionsConfig = Objects.requireNonNull(advancedOptionsConfig);
-        this.associations = Objects.requireNonNull(associations);
-        this.cloudArmorConfig = Objects.requireNonNull(cloudArmorConfig);
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.ddosProtectionConfig = Objects.requireNonNull(ddosProtectionConfig);
-        this.description = Objects.requireNonNull(description);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.fingerprint = Objects.requireNonNull(fingerprint);
-        this.kind = Objects.requireNonNull(kind);
-        this.labelFingerprint = Objects.requireNonNull(labelFingerprint);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.parent = Objects.requireNonNull(parent);
-        this.recaptchaOptionsConfig = Objects.requireNonNull(recaptchaOptionsConfig);
-        this.region = Objects.requireNonNull(region);
-        this.ruleTupleCount = Objects.requireNonNull(ruleTupleCount);
-        this.rules = Objects.requireNonNull(rules);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
-        this.type = Objects.requireNonNull(type);
+        this.adaptiveProtectionConfig = adaptiveProtectionConfig;
+        this.advancedOptionsConfig = advancedOptionsConfig;
+        this.associations = associations;
+        this.cloudArmorConfig = cloudArmorConfig;
+        this.creationTimestamp = creationTimestamp;
+        this.ddosProtectionConfig = ddosProtectionConfig;
+        this.description = description;
+        this.displayName = displayName;
+        this.fingerprint = fingerprint;
+        this.kind = kind;
+        this.labelFingerprint = labelFingerprint;
+        this.labels = labels;
+        this.name = name;
+        this.parent = parent;
+        this.recaptchaOptionsConfig = recaptchaOptionsConfig;
+        this.region = region;
+        this.ruleTupleCount = ruleTupleCount;
+        this.rules = rules;
+        this.selfLink = selfLink;
+        this.selfLinkWithId = selfLinkWithId;
+        this.type = type;
     }
 
     public SecurityPolicyAdaptiveProtectionConfigResponse getAdaptiveProtectionConfig() {

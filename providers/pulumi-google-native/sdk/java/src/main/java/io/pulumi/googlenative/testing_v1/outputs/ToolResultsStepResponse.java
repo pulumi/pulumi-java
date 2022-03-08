@@ -36,10 +36,10 @@ public final class ToolResultsStepResponse {
         String historyId,
         String project,
         String stepId) {
-        this.executionId = Objects.requireNonNull(executionId);
-        this.historyId = Objects.requireNonNull(historyId);
-        this.project = Objects.requireNonNull(project);
-        this.stepId = Objects.requireNonNull(stepId);
+        this.executionId = executionId;
+        this.historyId = historyId;
+        this.project = project;
+        this.stepId = stepId;
     }
 
     /**

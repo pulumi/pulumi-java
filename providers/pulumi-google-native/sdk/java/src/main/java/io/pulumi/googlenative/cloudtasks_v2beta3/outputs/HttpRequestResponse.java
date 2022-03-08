@@ -51,12 +51,12 @@ public final class HttpRequestResponse {
         OAuthTokenResponse oauthToken,
         OidcTokenResponse oidcToken,
         String url) {
-        this.body = Objects.requireNonNull(body);
-        this.headers = Objects.requireNonNull(headers);
-        this.httpMethod = Objects.requireNonNull(httpMethod);
-        this.oauthToken = Objects.requireNonNull(oauthToken);
-        this.oidcToken = Objects.requireNonNull(oidcToken);
-        this.url = Objects.requireNonNull(url);
+        this.body = body;
+        this.headers = headers;
+        this.httpMethod = httpMethod;
+        this.oauthToken = oauthToken;
+        this.oidcToken = oidcToken;
+        this.url = url;
     }
 
     /**

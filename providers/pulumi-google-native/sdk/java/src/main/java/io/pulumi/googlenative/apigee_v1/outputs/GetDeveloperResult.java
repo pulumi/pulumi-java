@@ -98,20 +98,20 @@ public final class GetDeveloperResult {
         String organizationName,
         String status,
         String userName) {
-        this.accessType = Objects.requireNonNull(accessType);
-        this.appFamily = Objects.requireNonNull(appFamily);
-        this.apps = Objects.requireNonNull(apps);
-        this.attributes = Objects.requireNonNull(attributes);
-        this.companies = Objects.requireNonNull(companies);
-        this.createdAt = Objects.requireNonNull(createdAt);
-        this.developerId = Objects.requireNonNull(developerId);
-        this.email = Objects.requireNonNull(email);
-        this.firstName = Objects.requireNonNull(firstName);
-        this.lastModifiedAt = Objects.requireNonNull(lastModifiedAt);
-        this.lastName = Objects.requireNonNull(lastName);
-        this.organizationName = Objects.requireNonNull(organizationName);
-        this.status = Objects.requireNonNull(status);
-        this.userName = Objects.requireNonNull(userName);
+        this.accessType = accessType;
+        this.appFamily = appFamily;
+        this.apps = apps;
+        this.attributes = attributes;
+        this.companies = companies;
+        this.createdAt = createdAt;
+        this.developerId = developerId;
+        this.email = email;
+        this.firstName = firstName;
+        this.lastModifiedAt = lastModifiedAt;
+        this.lastName = lastName;
+        this.organizationName = organizationName;
+        this.status = status;
+        this.userName = userName;
     }
 
     /**

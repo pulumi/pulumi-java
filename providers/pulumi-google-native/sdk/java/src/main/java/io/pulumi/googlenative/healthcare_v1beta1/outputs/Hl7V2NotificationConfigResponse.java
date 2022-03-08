@@ -24,8 +24,8 @@ public final class Hl7V2NotificationConfigResponse {
     private Hl7V2NotificationConfigResponse(
         String filter,
         String pubsubTopic) {
-        this.filter = Objects.requireNonNull(filter);
-        this.pubsubTopic = Objects.requireNonNull(pubsubTopic);
+        this.filter = filter;
+        this.pubsubTopic = pubsubTopic;
     }
 
     /**

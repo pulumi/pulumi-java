@@ -36,10 +36,10 @@ public final class GoogleCloudDatacatalogV1BigQueryDateShardedSpecResponse {
         String latestShardResource,
         String shardCount,
         String tablePrefix) {
-        this.dataset = Objects.requireNonNull(dataset);
-        this.latestShardResource = Objects.requireNonNull(latestShardResource);
-        this.shardCount = Objects.requireNonNull(shardCount);
-        this.tablePrefix = Objects.requireNonNull(tablePrefix);
+        this.dataset = dataset;
+        this.latestShardResource = latestShardResource;
+        this.shardCount = shardCount;
+        this.tablePrefix = tablePrefix;
     }
 
     /**

@@ -25,8 +25,8 @@ public final class GoogleCloudRunOpV2BinaryAuthorizationResponse {
     private GoogleCloudRunOpV2BinaryAuthorizationResponse(
         String breakglassJustification,
         Boolean useDefault) {
-        this.breakglassJustification = Objects.requireNonNull(breakglassJustification);
-        this.useDefault = Objects.requireNonNull(useDefault);
+        this.breakglassJustification = breakglassJustification;
+        this.useDefault = useDefault;
     }
 
     /**

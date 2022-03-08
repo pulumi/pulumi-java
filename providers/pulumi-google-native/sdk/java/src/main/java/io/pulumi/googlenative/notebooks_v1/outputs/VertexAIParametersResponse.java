@@ -25,8 +25,8 @@ public final class VertexAIParametersResponse {
     private VertexAIParametersResponse(
         Map<String,String> env,
         String network) {
-        this.env = Objects.requireNonNull(env);
-        this.network = Objects.requireNonNull(network);
+        this.env = env;
+        this.network = network;
     }
 
     /**

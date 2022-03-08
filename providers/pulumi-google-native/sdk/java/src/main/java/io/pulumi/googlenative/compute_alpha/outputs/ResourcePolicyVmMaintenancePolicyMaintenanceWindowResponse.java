@@ -13,7 +13,7 @@ public final class ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse {
 
     @OutputCustomType.Constructor({"dailyMaintenanceWindow"})
     private ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse(ResourcePolicyDailyCycleResponse dailyMaintenanceWindow) {
-        this.dailyMaintenanceWindow = Objects.requireNonNull(dailyMaintenanceWindow);
+        this.dailyMaintenanceWindow = dailyMaintenanceWindow;
     }
 
     public ResourcePolicyDailyCycleResponse getDailyMaintenanceWindow() {

@@ -51,12 +51,12 @@ public final class ReplicationCycleResponse {
         String startTime,
         List<CycleStepResponse> steps,
         String totalPauseDuration) {
-        this.endTime = Objects.requireNonNull(endTime);
-        this.progress = Objects.requireNonNull(progress);
-        this.progressPercent = Objects.requireNonNull(progressPercent);
-        this.startTime = Objects.requireNonNull(startTime);
-        this.steps = Objects.requireNonNull(steps);
-        this.totalPauseDuration = Objects.requireNonNull(totalPauseDuration);
+        this.endTime = endTime;
+        this.progress = progress;
+        this.progressPercent = progressPercent;
+        this.startTime = startTime;
+        this.steps = steps;
+        this.totalPauseDuration = totalPauseDuration;
     }
 
     /**

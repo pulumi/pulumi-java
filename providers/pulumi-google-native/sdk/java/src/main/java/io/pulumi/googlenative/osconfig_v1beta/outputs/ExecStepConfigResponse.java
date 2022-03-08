@@ -39,10 +39,10 @@ public final class ExecStepConfigResponse {
         GcsObjectResponse gcsObject,
         String interpreter,
         String localPath) {
-        this.allowedSuccessCodes = Objects.requireNonNull(allowedSuccessCodes);
-        this.gcsObject = Objects.requireNonNull(gcsObject);
-        this.interpreter = Objects.requireNonNull(interpreter);
-        this.localPath = Objects.requireNonNull(localPath);
+        this.allowedSuccessCodes = allowedSuccessCodes;
+        this.gcsObject = gcsObject;
+        this.interpreter = interpreter;
+        this.localPath = localPath;
     }
 
     /**

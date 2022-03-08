@@ -43,11 +43,11 @@ public final class InsightsConfigResponse {
         Integer queryStringLength,
         Boolean recordApplicationTags,
         Boolean recordClientAddress) {
-        this.queryInsightsEnabled = Objects.requireNonNull(queryInsightsEnabled);
-        this.queryPlansPerMinute = Objects.requireNonNull(queryPlansPerMinute);
-        this.queryStringLength = Objects.requireNonNull(queryStringLength);
-        this.recordApplicationTags = Objects.requireNonNull(recordApplicationTags);
-        this.recordClientAddress = Objects.requireNonNull(recordClientAddress);
+        this.queryInsightsEnabled = queryInsightsEnabled;
+        this.queryPlansPerMinute = queryPlansPerMinute;
+        this.queryStringLength = queryStringLength;
+        this.recordApplicationTags = recordApplicationTags;
+        this.recordClientAddress = recordClientAddress;
     }
 
     /**

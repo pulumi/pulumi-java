@@ -24,8 +24,8 @@ public final class MutationRecordResponse {
     private MutationRecordResponse(
         String mutateTime,
         String mutatedBy) {
-        this.mutateTime = Objects.requireNonNull(mutateTime);
-        this.mutatedBy = Objects.requireNonNull(mutatedBy);
+        this.mutateTime = mutateTime;
+        this.mutatedBy = mutatedBy;
     }
 
     /**

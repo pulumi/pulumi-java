@@ -51,12 +51,12 @@ public final class ResultsResponse {
         List<String> buildStepOutputs,
         List<BuiltImageResponse> images,
         String numArtifacts) {
-        this.artifactManifest = Objects.requireNonNull(artifactManifest);
-        this.artifactTiming = Objects.requireNonNull(artifactTiming);
-        this.buildStepImages = Objects.requireNonNull(buildStepImages);
-        this.buildStepOutputs = Objects.requireNonNull(buildStepOutputs);
-        this.images = Objects.requireNonNull(images);
-        this.numArtifacts = Objects.requireNonNull(numArtifacts);
+        this.artifactManifest = artifactManifest;
+        this.artifactTiming = artifactTiming;
+        this.buildStepImages = buildStepImages;
+        this.buildStepOutputs = buildStepOutputs;
+        this.images = images;
+        this.numArtifacts = numArtifacts;
     }
 
     /**

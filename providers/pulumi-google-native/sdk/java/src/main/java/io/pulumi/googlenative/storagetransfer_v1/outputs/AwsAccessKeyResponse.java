@@ -24,8 +24,8 @@ public final class AwsAccessKeyResponse {
     private AwsAccessKeyResponse(
         String accessKeyId,
         String secretAccessKey) {
-        this.accessKeyId = Objects.requireNonNull(accessKeyId);
-        this.secretAccessKey = Objects.requireNonNull(secretAccessKey);
+        this.accessKeyId = accessKeyId;
+        this.secretAccessKey = secretAccessKey;
     }
 
     /**

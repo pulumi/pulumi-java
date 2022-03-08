@@ -43,11 +43,11 @@ public final class QueueStatsResponse {
         String executedLastMinuteCount,
         String oldestEstimatedArrivalTime,
         String tasksCount) {
-        this.concurrentDispatchesCount = Objects.requireNonNull(concurrentDispatchesCount);
-        this.effectiveExecutionRate = Objects.requireNonNull(effectiveExecutionRate);
-        this.executedLastMinuteCount = Objects.requireNonNull(executedLastMinuteCount);
-        this.oldestEstimatedArrivalTime = Objects.requireNonNull(oldestEstimatedArrivalTime);
-        this.tasksCount = Objects.requireNonNull(tasksCount);
+        this.concurrentDispatchesCount = concurrentDispatchesCount;
+        this.effectiveExecutionRate = effectiveExecutionRate;
+        this.executedLastMinuteCount = executedLastMinuteCount;
+        this.oldestEstimatedArrivalTime = oldestEstimatedArrivalTime;
+        this.tasksCount = tasksCount;
     }
 
     /**

@@ -49,12 +49,12 @@ public final class MasterAuthResponse {
         String clusterCaCertificate,
         String password,
         String username) {
-        this.clientCertificate = Objects.requireNonNull(clientCertificate);
-        this.clientCertificateConfig = Objects.requireNonNull(clientCertificateConfig);
-        this.clientKey = Objects.requireNonNull(clientKey);
-        this.clusterCaCertificate = Objects.requireNonNull(clusterCaCertificate);
-        this.password = Objects.requireNonNull(password);
-        this.username = Objects.requireNonNull(username);
+        this.clientCertificate = clientCertificate;
+        this.clientCertificateConfig = clientCertificateConfig;
+        this.clientKey = clientKey;
+        this.clusterCaCertificate = clusterCaCertificate;
+        this.password = password;
+        this.username = username;
     }
 
     /**

@@ -30,9 +30,9 @@ public final class ColorResponse {
         Double brightness,
         Double contrast,
         Double saturation) {
-        this.brightness = Objects.requireNonNull(brightness);
-        this.contrast = Objects.requireNonNull(contrast);
-        this.saturation = Objects.requireNonNull(saturation);
+        this.brightness = brightness;
+        this.contrast = contrast;
+        this.saturation = saturation;
     }
 
     /**

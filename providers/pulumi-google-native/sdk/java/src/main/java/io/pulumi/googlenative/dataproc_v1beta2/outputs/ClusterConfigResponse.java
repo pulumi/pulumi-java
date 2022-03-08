@@ -114,21 +114,21 @@ public final class ClusterConfigResponse {
         SoftwareConfigResponse softwareConfig,
         String tempBucket,
         InstanceGroupConfigResponse workerConfig) {
-        this.autoscalingConfig = Objects.requireNonNull(autoscalingConfig);
-        this.configBucket = Objects.requireNonNull(configBucket);
-        this.encryptionConfig = Objects.requireNonNull(encryptionConfig);
-        this.endpointConfig = Objects.requireNonNull(endpointConfig);
-        this.gceClusterConfig = Objects.requireNonNull(gceClusterConfig);
-        this.gkeClusterConfig = Objects.requireNonNull(gkeClusterConfig);
-        this.initializationActions = Objects.requireNonNull(initializationActions);
-        this.lifecycleConfig = Objects.requireNonNull(lifecycleConfig);
-        this.masterConfig = Objects.requireNonNull(masterConfig);
-        this.metastoreConfig = Objects.requireNonNull(metastoreConfig);
-        this.secondaryWorkerConfig = Objects.requireNonNull(secondaryWorkerConfig);
-        this.securityConfig = Objects.requireNonNull(securityConfig);
-        this.softwareConfig = Objects.requireNonNull(softwareConfig);
-        this.tempBucket = Objects.requireNonNull(tempBucket);
-        this.workerConfig = Objects.requireNonNull(workerConfig);
+        this.autoscalingConfig = autoscalingConfig;
+        this.configBucket = configBucket;
+        this.encryptionConfig = encryptionConfig;
+        this.endpointConfig = endpointConfig;
+        this.gceClusterConfig = gceClusterConfig;
+        this.gkeClusterConfig = gkeClusterConfig;
+        this.initializationActions = initializationActions;
+        this.lifecycleConfig = lifecycleConfig;
+        this.masterConfig = masterConfig;
+        this.metastoreConfig = metastoreConfig;
+        this.secondaryWorkerConfig = secondaryWorkerConfig;
+        this.securityConfig = securityConfig;
+        this.softwareConfig = softwareConfig;
+        this.tempBucket = tempBucket;
+        this.workerConfig = workerConfig;
     }
 
     /**

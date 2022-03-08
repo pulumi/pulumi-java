@@ -25,8 +25,8 @@ public final class TagsResponse {
     private TagsResponse(
         String fingerprint,
         List<String> items) {
-        this.fingerprint = Objects.requireNonNull(fingerprint);
-        this.items = Objects.requireNonNull(items);
+        this.fingerprint = fingerprint;
+        this.items = items;
     }
 
     /**

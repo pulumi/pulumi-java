@@ -31,9 +31,9 @@ public final class WindowsUpdateSettingsResponse {
         List<String> classifications,
         List<String> excludes,
         List<String> exclusivePatches) {
-        this.classifications = Objects.requireNonNull(classifications);
-        this.excludes = Objects.requireNonNull(excludes);
-        this.exclusivePatches = Objects.requireNonNull(exclusivePatches);
+        this.classifications = classifications;
+        this.excludes = excludes;
+        this.exclusivePatches = exclusivePatches;
     }
 
     /**

@@ -39,10 +39,10 @@ public final class GetTopicResult {
         PartitionConfigResponse partitionConfig,
         ReservationConfigResponse reservationConfig,
         RetentionConfigResponse retentionConfig) {
-        this.name = Objects.requireNonNull(name);
-        this.partitionConfig = Objects.requireNonNull(partitionConfig);
-        this.reservationConfig = Objects.requireNonNull(reservationConfig);
-        this.retentionConfig = Objects.requireNonNull(retentionConfig);
+        this.name = name;
+        this.partitionConfig = partitionConfig;
+        this.reservationConfig = reservationConfig;
+        this.retentionConfig = retentionConfig;
     }
 
     /**

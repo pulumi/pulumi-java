@@ -50,12 +50,12 @@ public final class MonitoredResourceDescriptorResponse {
         String launchStage,
         String name,
         String type) {
-        this.description = Objects.requireNonNull(description);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.labels = Objects.requireNonNull(labels);
-        this.launchStage = Objects.requireNonNull(launchStage);
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.description = description;
+        this.displayName = displayName;
+        this.labels = labels;
+        this.launchStage = launchStage;
+        this.name = name;
+        this.type = type;
     }
 
     /**

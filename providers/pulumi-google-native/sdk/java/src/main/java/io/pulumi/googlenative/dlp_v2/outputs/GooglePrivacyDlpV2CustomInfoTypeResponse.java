@@ -67,14 +67,14 @@ public final class GooglePrivacyDlpV2CustomInfoTypeResponse {
         GooglePrivacyDlpV2RegexResponse regex,
         GooglePrivacyDlpV2StoredTypeResponse storedType,
         GooglePrivacyDlpV2SurrogateTypeResponse surrogateType) {
-        this.detectionRules = Objects.requireNonNull(detectionRules);
-        this.dictionary = Objects.requireNonNull(dictionary);
-        this.exclusionType = Objects.requireNonNull(exclusionType);
-        this.infoType = Objects.requireNonNull(infoType);
-        this.likelihood = Objects.requireNonNull(likelihood);
-        this.regex = Objects.requireNonNull(regex);
-        this.storedType = Objects.requireNonNull(storedType);
-        this.surrogateType = Objects.requireNonNull(surrogateType);
+        this.detectionRules = detectionRules;
+        this.dictionary = dictionary;
+        this.exclusionType = exclusionType;
+        this.infoType = infoType;
+        this.likelihood = likelihood;
+        this.regex = regex;
+        this.storedType = storedType;
+        this.surrogateType = surrogateType;
     }
 
     /**

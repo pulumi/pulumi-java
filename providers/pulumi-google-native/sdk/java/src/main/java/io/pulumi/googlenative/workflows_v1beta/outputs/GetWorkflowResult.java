@@ -73,16 +73,16 @@ public final class GetWorkflowResult {
         String sourceContents,
         String state,
         String updateTime) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.description = Objects.requireNonNull(description);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.revisionCreateTime = Objects.requireNonNull(revisionCreateTime);
-        this.revisionId = Objects.requireNonNull(revisionId);
-        this.serviceAccount = Objects.requireNonNull(serviceAccount);
-        this.sourceContents = Objects.requireNonNull(sourceContents);
-        this.state = Objects.requireNonNull(state);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.createTime = createTime;
+        this.description = description;
+        this.labels = labels;
+        this.name = name;
+        this.revisionCreateTime = revisionCreateTime;
+        this.revisionId = revisionId;
+        this.serviceAccount = serviceAccount;
+        this.sourceContents = sourceContents;
+        this.state = state;
+        this.updateTime = updateTime;
     }
 
     /**

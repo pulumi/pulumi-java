@@ -17,7 +17,7 @@ public final class DestinationResponse {
 
     @OutputCustomType.Constructor({"cloudRunService"})
     private DestinationResponse(CloudRunServiceResponse cloudRunService) {
-        this.cloudRunService = Objects.requireNonNull(cloudRunService);
+        this.cloudRunService = cloudRunService;
     }
 
     /**

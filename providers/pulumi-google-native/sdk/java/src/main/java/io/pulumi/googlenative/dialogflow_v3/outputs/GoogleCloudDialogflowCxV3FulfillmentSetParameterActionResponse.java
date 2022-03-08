@@ -25,8 +25,8 @@ public final class GoogleCloudDialogflowCxV3FulfillmentSetParameterActionRespons
     private GoogleCloudDialogflowCxV3FulfillmentSetParameterActionResponse(
         String parameter,
         Object value) {
-        this.parameter = Objects.requireNonNull(parameter);
-        this.value = Objects.requireNonNull(value);
+        this.parameter = parameter;
+        this.value = value;
     }
 
     /**

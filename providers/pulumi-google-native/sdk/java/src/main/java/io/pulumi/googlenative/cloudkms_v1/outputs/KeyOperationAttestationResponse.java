@@ -31,9 +31,9 @@ public final class KeyOperationAttestationResponse {
         CertificateChainsResponse certChains,
         String content,
         String format) {
-        this.certChains = Objects.requireNonNull(certChains);
-        this.content = Objects.requireNonNull(content);
-        this.format = Objects.requireNonNull(format);
+        this.certChains = certChains;
+        this.content = content;
+        this.format = format;
     }
 
     /**

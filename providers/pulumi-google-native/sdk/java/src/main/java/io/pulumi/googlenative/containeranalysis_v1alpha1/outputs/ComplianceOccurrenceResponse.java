@@ -26,8 +26,8 @@ public final class ComplianceOccurrenceResponse {
     private ComplianceOccurrenceResponse(
         String nonComplianceReason,
         List<NonCompliantFileResponse> nonCompliantFiles) {
-        this.nonComplianceReason = Objects.requireNonNull(nonComplianceReason);
-        this.nonCompliantFiles = Objects.requireNonNull(nonCompliantFiles);
+        this.nonComplianceReason = nonComplianceReason;
+        this.nonCompliantFiles = nonCompliantFiles;
     }
 
     /**

@@ -106,22 +106,22 @@ public final class GetNodeTemplateResult {
         ServerBindingResponse serverBinding,
         String status,
         String statusMessage) {
-        this.accelerators = Objects.requireNonNull(accelerators);
-        this.cpuOvercommitType = Objects.requireNonNull(cpuOvercommitType);
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.description = Objects.requireNonNull(description);
-        this.disks = Objects.requireNonNull(disks);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.nodeAffinityLabels = Objects.requireNonNull(nodeAffinityLabels);
-        this.nodeType = Objects.requireNonNull(nodeType);
-        this.nodeTypeFlexibility = Objects.requireNonNull(nodeTypeFlexibility);
-        this.region = Objects.requireNonNull(region);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
-        this.serverBinding = Objects.requireNonNull(serverBinding);
-        this.status = Objects.requireNonNull(status);
-        this.statusMessage = Objects.requireNonNull(statusMessage);
+        this.accelerators = accelerators;
+        this.cpuOvercommitType = cpuOvercommitType;
+        this.creationTimestamp = creationTimestamp;
+        this.description = description;
+        this.disks = disks;
+        this.kind = kind;
+        this.name = name;
+        this.nodeAffinityLabels = nodeAffinityLabels;
+        this.nodeType = nodeType;
+        this.nodeTypeFlexibility = nodeTypeFlexibility;
+        this.region = region;
+        this.selfLink = selfLink;
+        this.selfLinkWithId = selfLinkWithId;
+        this.serverBinding = serverBinding;
+        this.status = status;
+        this.statusMessage = statusMessage;
     }
 
     public List<AcceleratorConfigResponse> getAccelerators() {

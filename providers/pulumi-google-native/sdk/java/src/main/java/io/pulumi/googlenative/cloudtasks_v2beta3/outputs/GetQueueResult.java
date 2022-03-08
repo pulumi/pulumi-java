@@ -83,17 +83,17 @@ public final class GetQueueResult {
         String taskTtl,
         String tombstoneTtl,
         String type) {
-        this.appEngineHttpQueue = Objects.requireNonNull(appEngineHttpQueue);
-        this.name = Objects.requireNonNull(name);
-        this.purgeTime = Objects.requireNonNull(purgeTime);
-        this.rateLimits = Objects.requireNonNull(rateLimits);
-        this.retryConfig = Objects.requireNonNull(retryConfig);
-        this.stackdriverLoggingConfig = Objects.requireNonNull(stackdriverLoggingConfig);
-        this.state = Objects.requireNonNull(state);
-        this.stats = Objects.requireNonNull(stats);
-        this.taskTtl = Objects.requireNonNull(taskTtl);
-        this.tombstoneTtl = Objects.requireNonNull(tombstoneTtl);
-        this.type = Objects.requireNonNull(type);
+        this.appEngineHttpQueue = appEngineHttpQueue;
+        this.name = name;
+        this.purgeTime = purgeTime;
+        this.rateLimits = rateLimits;
+        this.retryConfig = retryConfig;
+        this.stackdriverLoggingConfig = stackdriverLoggingConfig;
+        this.state = state;
+        this.stats = stats;
+        this.taskTtl = taskTtl;
+        this.tombstoneTtl = tombstoneTtl;
+        this.type = type;
     }
 
     /**

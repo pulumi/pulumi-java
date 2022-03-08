@@ -26,8 +26,8 @@ public final class BoundingPolyResponse {
     private BoundingPolyResponse(
         String label,
         List<VertexResponse> vertices) {
-        this.label = Objects.requireNonNull(label);
-        this.vertices = Objects.requireNonNull(vertices);
+        this.label = label;
+        this.vertices = vertices;
     }
 
     /**

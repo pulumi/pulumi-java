@@ -24,8 +24,8 @@ public final class DatastoreIODetailsResponse {
     private DatastoreIODetailsResponse(
         String namespace,
         String project) {
-        this.namespace = Objects.requireNonNull(namespace);
-        this.project = Objects.requireNonNull(project);
+        this.namespace = namespace;
+        this.project = project;
     }
 
     /**

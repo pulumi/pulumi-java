@@ -36,10 +36,10 @@ public final class DeviceConfigResponse {
         String cloudUpdateTime,
         String deviceAckTime,
         String version) {
-        this.binaryData = Objects.requireNonNull(binaryData);
-        this.cloudUpdateTime = Objects.requireNonNull(cloudUpdateTime);
-        this.deviceAckTime = Objects.requireNonNull(deviceAckTime);
-        this.version = Objects.requireNonNull(version);
+        this.binaryData = binaryData;
+        this.cloudUpdateTime = cloudUpdateTime;
+        this.deviceAckTime = deviceAckTime;
+        this.version = version;
     }
 
     /**

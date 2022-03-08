@@ -17,7 +17,7 @@ public final class MetastoreConfigResponse {
 
     @OutputCustomType.Constructor({"dataprocMetastoreService"})
     private MetastoreConfigResponse(String dataprocMetastoreService) {
-        this.dataprocMetastoreService = Objects.requireNonNull(dataprocMetastoreService);
+        this.dataprocMetastoreService = dataprocMetastoreService;
     }
 
     /**

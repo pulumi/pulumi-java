@@ -51,12 +51,12 @@ public final class CompensationEntryResponse {
         CompensationRangeResponse range,
         String type,
         String unit) {
-        this.amount = Objects.requireNonNull(amount);
-        this.description = Objects.requireNonNull(description);
-        this.expectedUnitsPerYear = Objects.requireNonNull(expectedUnitsPerYear);
-        this.range = Objects.requireNonNull(range);
-        this.type = Objects.requireNonNull(type);
-        this.unit = Objects.requireNonNull(unit);
+        this.amount = amount;
+        this.description = description;
+        this.expectedUnitsPerYear = expectedUnitsPerYear;
+        this.range = range;
+        this.type = type;
+        this.unit = unit;
     }
 
     /**

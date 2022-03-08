@@ -66,15 +66,15 @@ public final class GetExportResult {
         String self,
         String state,
         String updated) {
-        this.created = Objects.requireNonNull(created);
-        this.datastoreName = Objects.requireNonNull(datastoreName);
-        this.description = Objects.requireNonNull(description);
-        this.error = Objects.requireNonNull(error);
-        this.executionTime = Objects.requireNonNull(executionTime);
-        this.name = Objects.requireNonNull(name);
-        this.self = Objects.requireNonNull(self);
-        this.state = Objects.requireNonNull(state);
-        this.updated = Objects.requireNonNull(updated);
+        this.created = created;
+        this.datastoreName = datastoreName;
+        this.description = description;
+        this.error = error;
+        this.executionTime = executionTime;
+        this.name = name;
+        this.self = self;
+        this.state = state;
+        this.updated = updated;
     }
 
     /**

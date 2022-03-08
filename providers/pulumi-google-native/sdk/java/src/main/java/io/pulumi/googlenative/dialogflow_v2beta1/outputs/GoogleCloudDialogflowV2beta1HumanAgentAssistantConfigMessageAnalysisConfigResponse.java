@@ -24,8 +24,8 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageA
     private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfigResponse(
         Boolean enableEntityExtraction,
         Boolean enableSentimentAnalysis) {
-        this.enableEntityExtraction = Objects.requireNonNull(enableEntityExtraction);
-        this.enableSentimentAnalysis = Objects.requireNonNull(enableSentimentAnalysis);
+        this.enableEntityExtraction = enableEntityExtraction;
+        this.enableSentimentAnalysis = enableSentimentAnalysis;
     }
 
     /**

@@ -24,8 +24,8 @@ public final class BucketLifecycleRuleItemActionResponse {
     private BucketLifecycleRuleItemActionResponse(
         String storageClass,
         String type) {
-        this.storageClass = Objects.requireNonNull(storageClass);
-        this.type = Objects.requireNonNull(type);
+        this.storageClass = storageClass;
+        this.type = type;
     }
 
     /**

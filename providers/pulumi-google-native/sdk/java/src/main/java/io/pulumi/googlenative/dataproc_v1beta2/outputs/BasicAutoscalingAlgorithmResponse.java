@@ -25,8 +25,8 @@ public final class BasicAutoscalingAlgorithmResponse {
     private BasicAutoscalingAlgorithmResponse(
         String cooldownPeriod,
         BasicYarnAutoscalingConfigResponse yarnConfig) {
-        this.cooldownPeriod = Objects.requireNonNull(cooldownPeriod);
-        this.yarnConfig = Objects.requireNonNull(yarnConfig);
+        this.cooldownPeriod = cooldownPeriod;
+        this.yarnConfig = yarnConfig;
     }
 
     /**

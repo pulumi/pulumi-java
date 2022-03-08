@@ -32,9 +32,9 @@ public final class CounterOptionsResponse {
         List<CustomFieldResponse> customFields,
         String field,
         String metric) {
-        this.customFields = Objects.requireNonNull(customFields);
-        this.field = Objects.requireNonNull(field);
-        this.metric = Objects.requireNonNull(metric);
+        this.customFields = customFields;
+        this.field = field;
+        this.metric = metric;
     }
 
     /**

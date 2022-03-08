@@ -37,10 +37,10 @@ public final class GetNamespaceResult {
         Map<String,String> labels,
         String name,
         String updateTime) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.createTime = createTime;
+        this.labels = labels;
+        this.name = name;
+        this.updateTime = updateTime;
     }
 
     /**

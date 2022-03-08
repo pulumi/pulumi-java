@@ -31,9 +31,9 @@ public final class ConsistentHashLoadBalancerSettingsHttpCookieResponse {
         String name,
         String path,
         DurationResponse ttl) {
-        this.name = Objects.requireNonNull(name);
-        this.path = Objects.requireNonNull(path);
-        this.ttl = Objects.requireNonNull(ttl);
+        this.name = name;
+        this.path = path;
+        this.ttl = ttl;
     }
 
     /**

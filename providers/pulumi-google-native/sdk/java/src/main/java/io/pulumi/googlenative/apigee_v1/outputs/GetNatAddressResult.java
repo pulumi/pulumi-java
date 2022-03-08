@@ -30,9 +30,9 @@ public final class GetNatAddressResult {
         String ipAddress,
         String name,
         String state) {
-        this.ipAddress = Objects.requireNonNull(ipAddress);
-        this.name = Objects.requireNonNull(name);
-        this.state = Objects.requireNonNull(state);
+        this.ipAddress = ipAddress;
+        this.name = name;
+        this.state = state;
     }
 
     /**

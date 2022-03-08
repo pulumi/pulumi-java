@@ -26,8 +26,8 @@ public final class MetadataLabelMatcherResponse {
     private MetadataLabelMatcherResponse(
         String metadataLabelMatchCriteria,
         List<MetadataLabelsResponse> metadataLabels) {
-        this.metadataLabelMatchCriteria = Objects.requireNonNull(metadataLabelMatchCriteria);
-        this.metadataLabels = Objects.requireNonNull(metadataLabels);
+        this.metadataLabelMatchCriteria = metadataLabelMatchCriteria;
+        this.metadataLabels = metadataLabels;
     }
 
     /**

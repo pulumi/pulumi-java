@@ -26,8 +26,8 @@ public final class SystemParameterRuleResponse {
     private SystemParameterRuleResponse(
         List<SystemParameterResponse> parameters,
         String selector) {
-        this.parameters = Objects.requireNonNull(parameters);
-        this.selector = Objects.requireNonNull(selector);
+        this.parameters = parameters;
+        this.selector = selector;
     }
 
     /**

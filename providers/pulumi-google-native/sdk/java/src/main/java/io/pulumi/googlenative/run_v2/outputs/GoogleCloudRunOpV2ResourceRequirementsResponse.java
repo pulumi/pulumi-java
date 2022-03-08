@@ -26,8 +26,8 @@ public final class GoogleCloudRunOpV2ResourceRequirementsResponse {
     private GoogleCloudRunOpV2ResourceRequirementsResponse(
         Boolean cpuIdle,
         Map<String,String> limits) {
-        this.cpuIdle = Objects.requireNonNull(cpuIdle);
-        this.limits = Objects.requireNonNull(limits);
+        this.cpuIdle = cpuIdle;
+        this.limits = limits;
     }
 
     /**

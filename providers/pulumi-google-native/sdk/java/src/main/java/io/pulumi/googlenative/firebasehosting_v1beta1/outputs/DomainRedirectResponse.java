@@ -24,8 +24,8 @@ public final class DomainRedirectResponse {
     private DomainRedirectResponse(
         String domainName,
         String type) {
-        this.domainName = Objects.requireNonNull(domainName);
-        this.type = Objects.requireNonNull(type);
+        this.domainName = domainName;
+        this.type = type;
     }
 
     /**

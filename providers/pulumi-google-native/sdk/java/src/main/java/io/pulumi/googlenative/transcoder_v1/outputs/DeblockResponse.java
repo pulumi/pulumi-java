@@ -25,8 +25,8 @@ public final class DeblockResponse {
     private DeblockResponse(
         Boolean enabled,
         Double strength) {
-        this.enabled = Objects.requireNonNull(enabled);
-        this.strength = Objects.requireNonNull(strength);
+        this.enabled = enabled;
+        this.strength = strength;
     }
 
     /**

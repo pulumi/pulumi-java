@@ -38,10 +38,10 @@ public final class VersionResponse {
         Boolean defaultVersion,
         String type,
         String versionNumber) {
-        this.availableFeatures = Objects.requireNonNull(availableFeatures);
-        this.defaultVersion = Objects.requireNonNull(defaultVersion);
-        this.type = Objects.requireNonNull(type);
-        this.versionNumber = Objects.requireNonNull(versionNumber);
+        this.availableFeatures = availableFeatures;
+        this.defaultVersion = defaultVersion;
+        this.type = type;
+        this.versionNumber = versionNumber;
     }
 
     /**

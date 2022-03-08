@@ -24,8 +24,8 @@ public final class SslCertificateSelfManagedSslCertificateResponse {
     private SslCertificateSelfManagedSslCertificateResponse(
         String certificate,
         String privateKey) {
-        this.certificate = Objects.requireNonNull(certificate);
-        this.privateKey = Objects.requireNonNull(privateKey);
+        this.certificate = certificate;
+        this.privateKey = privateKey;
     }
 
     /**

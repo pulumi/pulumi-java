@@ -36,10 +36,10 @@ public final class NetworkInterfaceResponse {
         String internalIp,
         String network,
         String subnetwork) {
-        this.externalIp = Objects.requireNonNull(externalIp);
-        this.internalIp = Objects.requireNonNull(internalIp);
-        this.network = Objects.requireNonNull(network);
-        this.subnetwork = Objects.requireNonNull(subnetwork);
+        this.externalIp = externalIp;
+        this.internalIp = internalIp;
+        this.network = network;
+        this.subnetwork = subnetwork;
     }
 
     /**

@@ -58,13 +58,13 @@ public final class GetConfigResult {
         String name,
         List<ScalingConfigResponse> scalingConfigs,
         String updateTime) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.description = Objects.requireNonNull(description);
-        this.fleetConfigs = Objects.requireNonNull(fleetConfigs);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.scalingConfigs = Objects.requireNonNull(scalingConfigs);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.createTime = createTime;
+        this.description = description;
+        this.fleetConfigs = fleetConfigs;
+        this.labels = labels;
+        this.name = name;
+        this.scalingConfigs = scalingConfigs;
+        this.updateTime = updateTime;
     }
 
     /**

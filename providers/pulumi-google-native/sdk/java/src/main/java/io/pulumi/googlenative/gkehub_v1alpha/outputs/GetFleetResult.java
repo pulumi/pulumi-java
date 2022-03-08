@@ -54,13 +54,13 @@ public final class GetFleetResult {
         String name,
         String uid,
         String updateTime) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.deleteTime = Objects.requireNonNull(deleteTime);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.fleetName = Objects.requireNonNull(fleetName);
-        this.name = Objects.requireNonNull(name);
-        this.uid = Objects.requireNonNull(uid);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.createTime = createTime;
+        this.deleteTime = deleteTime;
+        this.displayName = displayName;
+        this.fleetName = fleetName;
+        this.name = name;
+        this.uid = uid;
+        this.updateTime = updateTime;
     }
 
     /**

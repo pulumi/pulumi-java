@@ -83,17 +83,17 @@ public final class GetNetworkResult {
         NetworkRoutingConfigResponse routingConfig,
         String selfLink,
         List<String> subnetworks) {
-        this.autoCreateSubnetworks = Objects.requireNonNull(autoCreateSubnetworks);
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.description = Objects.requireNonNull(description);
-        this.gatewayIPv4 = Objects.requireNonNull(gatewayIPv4);
-        this.kind = Objects.requireNonNull(kind);
-        this.mtu = Objects.requireNonNull(mtu);
-        this.name = Objects.requireNonNull(name);
-        this.peerings = Objects.requireNonNull(peerings);
-        this.routingConfig = Objects.requireNonNull(routingConfig);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.subnetworks = Objects.requireNonNull(subnetworks);
+        this.autoCreateSubnetworks = autoCreateSubnetworks;
+        this.creationTimestamp = creationTimestamp;
+        this.description = description;
+        this.gatewayIPv4 = gatewayIPv4;
+        this.kind = kind;
+        this.mtu = mtu;
+        this.name = name;
+        this.peerings = peerings;
+        this.routingConfig = routingConfig;
+        this.selfLink = selfLink;
+        this.subnetworks = subnetworks;
     }
 
     /**

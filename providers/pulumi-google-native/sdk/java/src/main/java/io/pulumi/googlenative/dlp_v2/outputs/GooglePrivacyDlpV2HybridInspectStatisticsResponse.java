@@ -30,9 +30,9 @@ public final class GooglePrivacyDlpV2HybridInspectStatisticsResponse {
         String abortedCount,
         String pendingCount,
         String processedCount) {
-        this.abortedCount = Objects.requireNonNull(abortedCount);
-        this.pendingCount = Objects.requireNonNull(pendingCount);
-        this.processedCount = Objects.requireNonNull(processedCount);
+        this.abortedCount = abortedCount;
+        this.pendingCount = pendingCount;
+        this.processedCount = processedCount;
     }
 
     /**

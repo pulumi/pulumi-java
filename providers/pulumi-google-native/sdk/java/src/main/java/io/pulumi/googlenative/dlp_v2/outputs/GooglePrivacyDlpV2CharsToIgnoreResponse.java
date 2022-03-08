@@ -24,8 +24,8 @@ public final class GooglePrivacyDlpV2CharsToIgnoreResponse {
     private GooglePrivacyDlpV2CharsToIgnoreResponse(
         String charactersToSkip,
         String commonCharactersToIgnore) {
-        this.charactersToSkip = Objects.requireNonNull(charactersToSkip);
-        this.commonCharactersToIgnore = Objects.requireNonNull(commonCharactersToIgnore);
+        this.charactersToSkip = charactersToSkip;
+        this.commonCharactersToIgnore = commonCharactersToIgnore;
     }
 
     /**

@@ -39,10 +39,10 @@ public final class PathRuleResponse {
         HttpRouteActionResponse routeAction,
         String service,
         HttpRedirectActionResponse urlRedirect) {
-        this.paths = Objects.requireNonNull(paths);
-        this.routeAction = Objects.requireNonNull(routeAction);
-        this.service = Objects.requireNonNull(service);
-        this.urlRedirect = Objects.requireNonNull(urlRedirect);
+        this.paths = paths;
+        this.routeAction = routeAction;
+        this.service = service;
+        this.urlRedirect = urlRedirect;
     }
 
     /**

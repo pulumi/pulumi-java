@@ -42,11 +42,11 @@ public final class JobStatistics3Response {
         String inputFiles,
         String outputBytes,
         String outputRows) {
-        this.badRecords = Objects.requireNonNull(badRecords);
-        this.inputFileBytes = Objects.requireNonNull(inputFileBytes);
-        this.inputFiles = Objects.requireNonNull(inputFiles);
-        this.outputBytes = Objects.requireNonNull(outputBytes);
-        this.outputRows = Objects.requireNonNull(outputRows);
+        this.badRecords = badRecords;
+        this.inputFileBytes = inputFileBytes;
+        this.inputFiles = inputFiles;
+        this.outputBytes = outputBytes;
+        this.outputRows = outputRows;
     }
 
     /**

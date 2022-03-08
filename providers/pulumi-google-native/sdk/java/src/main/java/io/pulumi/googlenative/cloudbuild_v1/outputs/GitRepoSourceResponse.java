@@ -30,9 +30,9 @@ public final class GitRepoSourceResponse {
         String ref,
         String repoType,
         String uri) {
-        this.ref = Objects.requireNonNull(ref);
-        this.repoType = Objects.requireNonNull(repoType);
-        this.uri = Objects.requireNonNull(uri);
+        this.ref = ref;
+        this.repoType = repoType;
+        this.uri = uri;
     }
 
     /**

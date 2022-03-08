@@ -56,13 +56,13 @@ public final class GetEndpointResult {
         String network,
         Integer port,
         String updateTime) {
-        this.address = Objects.requireNonNull(address);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.metadata = Objects.requireNonNull(metadata);
-        this.name = Objects.requireNonNull(name);
-        this.network = Objects.requireNonNull(network);
-        this.port = Objects.requireNonNull(port);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.address = address;
+        this.createTime = createTime;
+        this.metadata = metadata;
+        this.name = name;
+        this.network = network;
+        this.port = port;
+        this.updateTime = updateTime;
     }
 
     /**

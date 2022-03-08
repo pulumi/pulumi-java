@@ -30,9 +30,9 @@ public final class InstanceReferenceResponse {
         String name,
         String project,
         String region) {
-        this.name = Objects.requireNonNull(name);
-        this.project = Objects.requireNonNull(project);
-        this.region = Objects.requireNonNull(region);
+        this.name = name;
+        this.project = project;
+        this.region = region;
     }
 
     /**

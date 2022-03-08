@@ -61,14 +61,14 @@ public final class GetTargetTcpProxyResult {
         String proxyHeader,
         String selfLink,
         String service) {
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.description = Objects.requireNonNull(description);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.proxyBind = Objects.requireNonNull(proxyBind);
-        this.proxyHeader = Objects.requireNonNull(proxyHeader);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.service = Objects.requireNonNull(service);
+        this.creationTimestamp = creationTimestamp;
+        this.description = description;
+        this.kind = kind;
+        this.name = name;
+        this.proxyBind = proxyBind;
+        this.proxyHeader = proxyHeader;
+        this.selfLink = selfLink;
+        this.service = service;
     }
 
     /**

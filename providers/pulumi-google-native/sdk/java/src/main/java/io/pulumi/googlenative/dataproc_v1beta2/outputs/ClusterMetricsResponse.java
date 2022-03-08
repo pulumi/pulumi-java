@@ -25,8 +25,8 @@ public final class ClusterMetricsResponse {
     private ClusterMetricsResponse(
         Map<String,String> hdfsMetrics,
         Map<String,String> yarnMetrics) {
-        this.hdfsMetrics = Objects.requireNonNull(hdfsMetrics);
-        this.yarnMetrics = Objects.requireNonNull(yarnMetrics);
+        this.hdfsMetrics = hdfsMetrics;
+        this.yarnMetrics = yarnMetrics;
     }
 
     /**

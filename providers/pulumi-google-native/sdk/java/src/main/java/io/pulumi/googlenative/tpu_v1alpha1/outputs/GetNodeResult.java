@@ -120,23 +120,23 @@ public final class GetNodeResult {
         List<SymptomResponse> symptoms,
         String tensorflowVersion,
         Boolean useServiceNetworking) {
-        this.acceleratorType = Objects.requireNonNull(acceleratorType);
-        this.apiVersion = Objects.requireNonNull(apiVersion);
-        this.cidrBlock = Objects.requireNonNull(cidrBlock);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.description = Objects.requireNonNull(description);
-        this.health = Objects.requireNonNull(health);
-        this.healthDescription = Objects.requireNonNull(healthDescription);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.network = Objects.requireNonNull(network);
-        this.networkEndpoints = Objects.requireNonNull(networkEndpoints);
-        this.schedulingConfig = Objects.requireNonNull(schedulingConfig);
-        this.serviceAccount = Objects.requireNonNull(serviceAccount);
-        this.state = Objects.requireNonNull(state);
-        this.symptoms = Objects.requireNonNull(symptoms);
-        this.tensorflowVersion = Objects.requireNonNull(tensorflowVersion);
-        this.useServiceNetworking = Objects.requireNonNull(useServiceNetworking);
+        this.acceleratorType = acceleratorType;
+        this.apiVersion = apiVersion;
+        this.cidrBlock = cidrBlock;
+        this.createTime = createTime;
+        this.description = description;
+        this.health = health;
+        this.healthDescription = healthDescription;
+        this.labels = labels;
+        this.name = name;
+        this.network = network;
+        this.networkEndpoints = networkEndpoints;
+        this.schedulingConfig = schedulingConfig;
+        this.serviceAccount = serviceAccount;
+        this.state = state;
+        this.symptoms = symptoms;
+        this.tensorflowVersion = tensorflowVersion;
+        this.useServiceNetworking = useServiceNetworking;
     }
 
     /**

@@ -43,11 +43,11 @@ public final class GoogleCloudDatacatalogV1ColumnSchemaResponse {
         String mode,
         List<GoogleCloudDatacatalogV1ColumnSchemaResponse> subcolumns,
         String type) {
-        this.column = Objects.requireNonNull(column);
-        this.description = Objects.requireNonNull(description);
-        this.mode = Objects.requireNonNull(mode);
-        this.subcolumns = Objects.requireNonNull(subcolumns);
-        this.type = Objects.requireNonNull(type);
+        this.column = column;
+        this.description = description;
+        this.mode = mode;
+        this.subcolumns = subcolumns;
+        this.type = type;
     }
 
     /**

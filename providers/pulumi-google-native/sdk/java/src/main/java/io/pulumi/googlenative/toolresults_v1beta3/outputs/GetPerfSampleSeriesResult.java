@@ -49,12 +49,12 @@ public final class GetPerfSampleSeriesResult {
         String project,
         String sampleSeriesId,
         String stepId) {
-        this.basicPerfSampleSeries = Objects.requireNonNull(basicPerfSampleSeries);
-        this.executionId = Objects.requireNonNull(executionId);
-        this.historyId = Objects.requireNonNull(historyId);
-        this.project = Objects.requireNonNull(project);
-        this.sampleSeriesId = Objects.requireNonNull(sampleSeriesId);
-        this.stepId = Objects.requireNonNull(stepId);
+        this.basicPerfSampleSeries = basicPerfSampleSeries;
+        this.executionId = executionId;
+        this.historyId = historyId;
+        this.project = project;
+        this.sampleSeriesId = sampleSeriesId;
+        this.stepId = stepId;
     }
 
     /**

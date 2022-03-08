@@ -67,15 +67,15 @@ public final class OnPremisesConfigurationResponse {
         String password,
         InstanceReferenceResponse sourceInstance,
         String username) {
-        this.caCertificate = Objects.requireNonNull(caCertificate);
-        this.clientCertificate = Objects.requireNonNull(clientCertificate);
-        this.clientKey = Objects.requireNonNull(clientKey);
-        this.dumpFilePath = Objects.requireNonNull(dumpFilePath);
-        this.hostPort = Objects.requireNonNull(hostPort);
-        this.kind = Objects.requireNonNull(kind);
-        this.password = Objects.requireNonNull(password);
-        this.sourceInstance = Objects.requireNonNull(sourceInstance);
-        this.username = Objects.requireNonNull(username);
+        this.caCertificate = caCertificate;
+        this.clientCertificate = clientCertificate;
+        this.clientKey = clientKey;
+        this.dumpFilePath = dumpFilePath;
+        this.hostPort = hostPort;
+        this.kind = kind;
+        this.password = password;
+        this.sourceInstance = sourceInstance;
+        this.username = username;
     }
 
     /**

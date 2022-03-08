@@ -34,10 +34,10 @@ public final class ManagedZoneDnsSecConfigResponse {
         String kind,
         String nonExistence,
         String state) {
-        this.defaultKeySpecs = Objects.requireNonNull(defaultKeySpecs);
-        this.kind = Objects.requireNonNull(kind);
-        this.nonExistence = Objects.requireNonNull(nonExistence);
-        this.state = Objects.requireNonNull(state);
+        this.defaultKeySpecs = defaultKeySpecs;
+        this.kind = kind;
+        this.nonExistence = nonExistence;
+        this.state = state;
     }
 
     /**

@@ -33,9 +33,9 @@ public final class AttestationOccurrenceResponse {
         List<JwtResponse> jwts,
         String serializedPayload,
         List<SignatureResponse> signatures) {
-        this.jwts = Objects.requireNonNull(jwts);
-        this.serializedPayload = Objects.requireNonNull(serializedPayload);
-        this.signatures = Objects.requireNonNull(signatures);
+        this.jwts = jwts;
+        this.serializedPayload = serializedPayload;
+        this.signatures = signatures;
     }
 
     /**

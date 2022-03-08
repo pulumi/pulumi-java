@@ -17,7 +17,7 @@ public final class AlertChartResponse {
 
     @OutputCustomType.Constructor({"name"})
     private AlertChartResponse(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

@@ -36,10 +36,10 @@ public final class BuildSignatureResponse {
         String keyType,
         String publicKey,
         String signature) {
-        this.keyId = Objects.requireNonNull(keyId);
-        this.keyType = Objects.requireNonNull(keyType);
-        this.publicKey = Objects.requireNonNull(publicKey);
-        this.signature = Objects.requireNonNull(signature);
+        this.keyId = keyId;
+        this.keyType = keyType;
+        this.publicKey = publicKey;
+        this.signature = signature;
     }
 
     /**

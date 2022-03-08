@@ -24,8 +24,8 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsResponse {
     private GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsResponse(
         String nextRotationTime,
         String rotationPeriod) {
-        this.nextRotationTime = Objects.requireNonNull(nextRotationTime);
-        this.rotationPeriod = Objects.requireNonNull(rotationPeriod);
+        this.nextRotationTime = nextRotationTime;
+        this.rotationPeriod = rotationPeriod;
     }
 
     /**

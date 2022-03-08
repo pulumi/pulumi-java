@@ -57,13 +57,13 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse
         Map<String,String> parameters,
         Map<String,String> transformNameMappings,
         Boolean update) {
-        this.containerSpecGcsPath = Objects.requireNonNull(containerSpecGcsPath);
-        this.environment = Objects.requireNonNull(environment);
-        this.jobName = Objects.requireNonNull(jobName);
-        this.launchOptions = Objects.requireNonNull(launchOptions);
-        this.parameters = Objects.requireNonNull(parameters);
-        this.transformNameMappings = Objects.requireNonNull(transformNameMappings);
-        this.update = Objects.requireNonNull(update);
+        this.containerSpecGcsPath = containerSpecGcsPath;
+        this.environment = environment;
+        this.jobName = jobName;
+        this.launchOptions = launchOptions;
+        this.parameters = parameters;
+        this.transformNameMappings = transformNameMappings;
+        this.update = update;
     }
 
     /**

@@ -57,13 +57,13 @@ public final class NodeResponse {
         String state,
         Boolean updateAvailable,
         String zone) {
-        this.host = Objects.requireNonNull(host);
-        this.nodeId = Objects.requireNonNull(nodeId);
-        this.parameters = Objects.requireNonNull(parameters);
-        this.port = Objects.requireNonNull(port);
-        this.state = Objects.requireNonNull(state);
-        this.updateAvailable = Objects.requireNonNull(updateAvailable);
-        this.zone = Objects.requireNonNull(zone);
+        this.host = host;
+        this.nodeId = nodeId;
+        this.parameters = parameters;
+        this.port = port;
+        this.state = state;
+        this.updateAvailable = updateAvailable;
+        this.zone = zone;
     }
 
     /**

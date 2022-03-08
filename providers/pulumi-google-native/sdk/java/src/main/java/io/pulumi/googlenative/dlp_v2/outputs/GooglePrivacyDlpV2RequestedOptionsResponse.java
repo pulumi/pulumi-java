@@ -25,8 +25,8 @@ public final class GooglePrivacyDlpV2RequestedOptionsResponse {
     private GooglePrivacyDlpV2RequestedOptionsResponse(
         GooglePrivacyDlpV2InspectJobConfigResponse jobConfig,
         GooglePrivacyDlpV2InspectTemplateResponse snapshotInspectTemplate) {
-        this.jobConfig = Objects.requireNonNull(jobConfig);
-        this.snapshotInspectTemplate = Objects.requireNonNull(snapshotInspectTemplate);
+        this.jobConfig = jobConfig;
+        this.snapshotInspectTemplate = snapshotInspectTemplate;
     }
 
     /**

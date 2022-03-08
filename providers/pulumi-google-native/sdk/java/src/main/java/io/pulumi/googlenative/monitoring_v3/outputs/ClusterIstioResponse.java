@@ -36,10 +36,10 @@ public final class ClusterIstioResponse {
         String location,
         String serviceName,
         String serviceNamespace) {
-        this.clusterName = Objects.requireNonNull(clusterName);
-        this.location = Objects.requireNonNull(location);
-        this.serviceName = Objects.requireNonNull(serviceName);
-        this.serviceNamespace = Objects.requireNonNull(serviceNamespace);
+        this.clusterName = clusterName;
+        this.location = location;
+        this.serviceName = serviceName;
+        this.serviceNamespace = serviceNamespace;
     }
 
     /**

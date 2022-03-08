@@ -26,8 +26,8 @@ public final class LinkedInterconnectAttachmentsResponse {
     private LinkedInterconnectAttachmentsResponse(
         Boolean siteToSiteDataTransfer,
         List<String> uris) {
-        this.siteToSiteDataTransfer = Objects.requireNonNull(siteToSiteDataTransfer);
-        this.uris = Objects.requireNonNull(uris);
+        this.siteToSiteDataTransfer = siteToSiteDataTransfer;
+        this.uris = uris;
     }
 
     /**

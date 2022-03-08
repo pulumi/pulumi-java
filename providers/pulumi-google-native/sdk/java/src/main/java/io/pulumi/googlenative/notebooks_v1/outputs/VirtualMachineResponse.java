@@ -31,9 +31,9 @@ public final class VirtualMachineResponse {
         String instanceId,
         String instanceName,
         VirtualMachineConfigResponse virtualMachineConfig) {
-        this.instanceId = Objects.requireNonNull(instanceId);
-        this.instanceName = Objects.requireNonNull(instanceName);
-        this.virtualMachineConfig = Objects.requireNonNull(virtualMachineConfig);
+        this.instanceId = instanceId;
+        this.instanceName = instanceName;
+        this.virtualMachineConfig = virtualMachineConfig;
     }
 
     /**

@@ -87,18 +87,18 @@ public final class ReservationResponse {
         Boolean specificReservationRequired,
         String status,
         String zone) {
-        this.commitment = Objects.requireNonNull(commitment);
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.description = Objects.requireNonNull(description);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.satisfiesPzs = Objects.requireNonNull(satisfiesPzs);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.shareSettings = Objects.requireNonNull(shareSettings);
-        this.specificReservation = Objects.requireNonNull(specificReservation);
-        this.specificReservationRequired = Objects.requireNonNull(specificReservationRequired);
-        this.status = Objects.requireNonNull(status);
-        this.zone = Objects.requireNonNull(zone);
+        this.commitment = commitment;
+        this.creationTimestamp = creationTimestamp;
+        this.description = description;
+        this.kind = kind;
+        this.name = name;
+        this.satisfiesPzs = satisfiesPzs;
+        this.selfLink = selfLink;
+        this.shareSettings = shareSettings;
+        this.specificReservation = specificReservation;
+        this.specificReservationRequired = specificReservationRequired;
+        this.status = status;
+        this.zone = zone;
     }
 
     /**

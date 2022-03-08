@@ -25,8 +25,8 @@ public final class UserPasswordResponse {
     private UserPasswordResponse(
         SecretResponse password,
         String username) {
-        this.password = Objects.requireNonNull(password);
-        this.username = Objects.requireNonNull(username);
+        this.password = password;
+        this.username = username;
     }
 
     /**

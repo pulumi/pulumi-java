@@ -113,22 +113,22 @@ public final class NetworkInterfaceResponse {
         String stackType,
         List<NetworkInterfaceSubInterfaceResponse> subinterfaces,
         String subnetwork) {
-        this.accessConfigs = Objects.requireNonNull(accessConfigs);
-        this.aliasIpRanges = Objects.requireNonNull(aliasIpRanges);
-        this.fingerprint = Objects.requireNonNull(fingerprint);
-        this.internalIpv6PrefixLength = Objects.requireNonNull(internalIpv6PrefixLength);
-        this.ipv6AccessConfigs = Objects.requireNonNull(ipv6AccessConfigs);
-        this.ipv6AccessType = Objects.requireNonNull(ipv6AccessType);
-        this.ipv6Address = Objects.requireNonNull(ipv6Address);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.network = Objects.requireNonNull(network);
-        this.networkIP = Objects.requireNonNull(networkIP);
-        this.nicType = Objects.requireNonNull(nicType);
-        this.queueCount = Objects.requireNonNull(queueCount);
-        this.stackType = Objects.requireNonNull(stackType);
-        this.subinterfaces = Objects.requireNonNull(subinterfaces);
-        this.subnetwork = Objects.requireNonNull(subnetwork);
+        this.accessConfigs = accessConfigs;
+        this.aliasIpRanges = aliasIpRanges;
+        this.fingerprint = fingerprint;
+        this.internalIpv6PrefixLength = internalIpv6PrefixLength;
+        this.ipv6AccessConfigs = ipv6AccessConfigs;
+        this.ipv6AccessType = ipv6AccessType;
+        this.ipv6Address = ipv6Address;
+        this.kind = kind;
+        this.name = name;
+        this.network = network;
+        this.networkIP = networkIP;
+        this.nicType = nicType;
+        this.queueCount = queueCount;
+        this.stackType = stackType;
+        this.subinterfaces = subinterfaces;
+        this.subnetwork = subnetwork;
     }
 
     /**

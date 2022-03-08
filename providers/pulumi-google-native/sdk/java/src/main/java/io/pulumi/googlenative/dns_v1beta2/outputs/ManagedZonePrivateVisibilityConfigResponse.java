@@ -29,9 +29,9 @@ public final class ManagedZonePrivateVisibilityConfigResponse {
         List<ManagedZonePrivateVisibilityConfigGKEClusterResponse> gkeClusters,
         String kind,
         List<ManagedZonePrivateVisibilityConfigNetworkResponse> networks) {
-        this.gkeClusters = Objects.requireNonNull(gkeClusters);
-        this.kind = Objects.requireNonNull(kind);
-        this.networks = Objects.requireNonNull(networks);
+        this.gkeClusters = gkeClusters;
+        this.kind = kind;
+        this.networks = networks;
     }
 
     /**

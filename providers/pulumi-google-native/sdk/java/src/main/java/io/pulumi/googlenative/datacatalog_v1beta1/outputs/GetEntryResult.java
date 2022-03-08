@@ -102,20 +102,20 @@ public final class GetEntryResult {
         GoogleCloudDatacatalogV1beta1UsageSignalResponse usageSignal,
         String userSpecifiedSystem,
         String userSpecifiedType) {
-        this.bigqueryDateShardedSpec = Objects.requireNonNull(bigqueryDateShardedSpec);
-        this.bigqueryTableSpec = Objects.requireNonNull(bigqueryTableSpec);
-        this.description = Objects.requireNonNull(description);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.gcsFilesetSpec = Objects.requireNonNull(gcsFilesetSpec);
-        this.integratedSystem = Objects.requireNonNull(integratedSystem);
-        this.linkedResource = Objects.requireNonNull(linkedResource);
-        this.name = Objects.requireNonNull(name);
-        this.schema = Objects.requireNonNull(schema);
-        this.sourceSystemTimestamps = Objects.requireNonNull(sourceSystemTimestamps);
-        this.type = Objects.requireNonNull(type);
-        this.usageSignal = Objects.requireNonNull(usageSignal);
-        this.userSpecifiedSystem = Objects.requireNonNull(userSpecifiedSystem);
-        this.userSpecifiedType = Objects.requireNonNull(userSpecifiedType);
+        this.bigqueryDateShardedSpec = bigqueryDateShardedSpec;
+        this.bigqueryTableSpec = bigqueryTableSpec;
+        this.description = description;
+        this.displayName = displayName;
+        this.gcsFilesetSpec = gcsFilesetSpec;
+        this.integratedSystem = integratedSystem;
+        this.linkedResource = linkedResource;
+        this.name = name;
+        this.schema = schema;
+        this.sourceSystemTimestamps = sourceSystemTimestamps;
+        this.type = type;
+        this.usageSignal = usageSignal;
+        this.userSpecifiedSystem = userSpecifiedSystem;
+        this.userSpecifiedType = userSpecifiedType;
     }
 
     /**

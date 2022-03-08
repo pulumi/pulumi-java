@@ -18,7 +18,7 @@ public final class NetworkConfigResponse {
 
     @OutputCustomType.Constructor({"consumers"})
     private NetworkConfigResponse(List<ConsumerResponse> consumers) {
-        this.consumers = Objects.requireNonNull(consumers);
+        this.consumers = consumers;
     }
 
     /**

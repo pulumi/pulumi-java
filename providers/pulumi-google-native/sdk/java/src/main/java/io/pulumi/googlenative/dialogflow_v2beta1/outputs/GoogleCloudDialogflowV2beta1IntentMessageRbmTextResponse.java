@@ -26,8 +26,8 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse {
     private GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse(
         List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> rbmSuggestion,
         String text) {
-        this.rbmSuggestion = Objects.requireNonNull(rbmSuggestion);
-        this.text = Objects.requireNonNull(text);
+        this.rbmSuggestion = rbmSuggestion;
+        this.text = text;
     }
 
     /**

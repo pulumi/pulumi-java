@@ -39,10 +39,10 @@ public final class ServiceMeshAnalysisMessageResponse {
         String description,
         ServiceMeshAnalysisMessageBaseResponse messageBase,
         List<String> resourcePaths) {
-        this.args = Objects.requireNonNull(args);
-        this.description = Objects.requireNonNull(description);
-        this.messageBase = Objects.requireNonNull(messageBase);
-        this.resourcePaths = Objects.requireNonNull(resourcePaths);
+        this.args = args;
+        this.description = description;
+        this.messageBase = messageBase;
+        this.resourcePaths = resourcePaths;
     }
 
     /**

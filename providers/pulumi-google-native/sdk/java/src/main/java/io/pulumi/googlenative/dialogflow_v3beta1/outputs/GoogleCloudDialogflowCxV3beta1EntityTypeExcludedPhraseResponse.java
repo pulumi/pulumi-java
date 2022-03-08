@@ -17,7 +17,7 @@ public final class GoogleCloudDialogflowCxV3beta1EntityTypeExcludedPhraseRespons
 
     @OutputCustomType.Constructor({"value"})
     private GoogleCloudDialogflowCxV3beta1EntityTypeExcludedPhraseResponse(String value) {
-        this.value = Objects.requireNonNull(value);
+        this.value = value;
     }
 
     /**

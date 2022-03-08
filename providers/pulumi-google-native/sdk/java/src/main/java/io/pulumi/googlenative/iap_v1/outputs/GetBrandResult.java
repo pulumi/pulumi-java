@@ -37,10 +37,10 @@ public final class GetBrandResult {
         String name,
         Boolean orgInternalOnly,
         String supportEmail) {
-        this.applicationTitle = Objects.requireNonNull(applicationTitle);
-        this.name = Objects.requireNonNull(name);
-        this.orgInternalOnly = Objects.requireNonNull(orgInternalOnly);
-        this.supportEmail = Objects.requireNonNull(supportEmail);
+        this.applicationTitle = applicationTitle;
+        this.name = name;
+        this.orgInternalOnly = orgInternalOnly;
+        this.supportEmail = supportEmail;
     }
 
     /**

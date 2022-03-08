@@ -30,9 +30,9 @@ public final class MaintenanceWindowResponse {
         String endTime,
         String recurrence,
         String startTime) {
-        this.endTime = Objects.requireNonNull(endTime);
-        this.recurrence = Objects.requireNonNull(recurrence);
-        this.startTime = Objects.requireNonNull(startTime);
+        this.endTime = endTime;
+        this.recurrence = recurrence;
+        this.startTime = startTime;
     }
 
     /**

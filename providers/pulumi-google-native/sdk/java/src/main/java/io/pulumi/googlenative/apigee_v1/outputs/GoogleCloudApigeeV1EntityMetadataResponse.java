@@ -30,9 +30,9 @@ public final class GoogleCloudApigeeV1EntityMetadataResponse {
         String createdAt,
         String lastModifiedAt,
         String subType) {
-        this.createdAt = Objects.requireNonNull(createdAt);
-        this.lastModifiedAt = Objects.requireNonNull(lastModifiedAt);
-        this.subType = Objects.requireNonNull(subType);
+        this.createdAt = createdAt;
+        this.lastModifiedAt = lastModifiedAt;
+        this.subType = subType;
     }
 
     /**

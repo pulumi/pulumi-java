@@ -25,8 +25,8 @@ public final class LogMatchResponse {
     private LogMatchResponse(
         String filter,
         Map<String,String> labelExtractors) {
-        this.filter = Objects.requireNonNull(filter);
-        this.labelExtractors = Objects.requireNonNull(labelExtractors);
+        this.filter = filter;
+        this.labelExtractors = labelExtractors;
     }
 
     /**

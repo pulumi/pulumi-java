@@ -32,15 +32,15 @@ public final class BqmlTrainingRunTrainingOptionsResponse {
         String maxIteration,
         Double minRelProgress,
         Boolean warmStart) {
-        this.earlyStop = Objects.requireNonNull(earlyStop);
-        this.l1Reg = Objects.requireNonNull(l1Reg);
-        this.l2Reg = Objects.requireNonNull(l2Reg);
-        this.learnRate = Objects.requireNonNull(learnRate);
-        this.learnRateStrategy = Objects.requireNonNull(learnRateStrategy);
-        this.lineSearchInitLearnRate = Objects.requireNonNull(lineSearchInitLearnRate);
-        this.maxIteration = Objects.requireNonNull(maxIteration);
-        this.minRelProgress = Objects.requireNonNull(minRelProgress);
-        this.warmStart = Objects.requireNonNull(warmStart);
+        this.earlyStop = earlyStop;
+        this.l1Reg = l1Reg;
+        this.l2Reg = l2Reg;
+        this.learnRate = learnRate;
+        this.learnRateStrategy = learnRateStrategy;
+        this.lineSearchInitLearnRate = lineSearchInitLearnRate;
+        this.maxIteration = maxIteration;
+        this.minRelProgress = minRelProgress;
+        this.warmStart = warmStart;
     }
 
     public Boolean getEarlyStop() {

@@ -17,7 +17,7 @@ public final class PubsubDestinationResponse {
 
     @OutputCustomType.Constructor({"topic"})
     private PubsubDestinationResponse(String topic) {
-        this.topic = Objects.requireNonNull(topic);
+        this.topic = topic;
     }
 
     /**

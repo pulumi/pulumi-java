@@ -17,7 +17,7 @@ public final class GooglePrivacyDlpV2ScheduleResponse {
 
     @OutputCustomType.Constructor({"recurrencePeriodDuration"})
     private GooglePrivacyDlpV2ScheduleResponse(String recurrencePeriodDuration) {
-        this.recurrencePeriodDuration = Objects.requireNonNull(recurrencePeriodDuration);
+        this.recurrencePeriodDuration = recurrencePeriodDuration;
     }
 
     /**

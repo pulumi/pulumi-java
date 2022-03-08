@@ -50,12 +50,12 @@ public final class SubjectDescriptionResponse {
         String notBeforeTime,
         SubjectResponse subject,
         SubjectAltNamesResponse subjectAltName) {
-        this.hexSerialNumber = Objects.requireNonNull(hexSerialNumber);
-        this.lifetime = Objects.requireNonNull(lifetime);
-        this.notAfterTime = Objects.requireNonNull(notAfterTime);
-        this.notBeforeTime = Objects.requireNonNull(notBeforeTime);
-        this.subject = Objects.requireNonNull(subject);
-        this.subjectAltName = Objects.requireNonNull(subjectAltName);
+        this.hexSerialNumber = hexSerialNumber;
+        this.lifetime = lifetime;
+        this.notAfterTime = notAfterTime;
+        this.notBeforeTime = notBeforeTime;
+        this.subject = subject;
+        this.subjectAltName = subjectAltName;
     }
 
     /**

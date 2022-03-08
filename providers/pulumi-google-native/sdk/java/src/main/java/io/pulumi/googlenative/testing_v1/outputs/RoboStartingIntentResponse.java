@@ -32,9 +32,9 @@ public final class RoboStartingIntentResponse {
         LauncherActivityIntentResponse launcherActivity,
         StartActivityIntentResponse startActivity,
         String timeout) {
-        this.launcherActivity = Objects.requireNonNull(launcherActivity);
-        this.startActivity = Objects.requireNonNull(startActivity);
-        this.timeout = Objects.requireNonNull(timeout);
+        this.launcherActivity = launcherActivity;
+        this.startActivity = startActivity;
+        this.timeout = timeout;
     }
 
     /**

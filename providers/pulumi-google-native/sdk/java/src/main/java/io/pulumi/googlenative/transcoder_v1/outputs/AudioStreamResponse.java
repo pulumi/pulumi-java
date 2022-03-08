@@ -51,12 +51,12 @@ public final class AudioStreamResponse {
         String codec,
         List<AudioMappingResponse> mapping,
         Integer sampleRateHertz) {
-        this.bitrateBps = Objects.requireNonNull(bitrateBps);
-        this.channelCount = Objects.requireNonNull(channelCount);
-        this.channelLayout = Objects.requireNonNull(channelLayout);
-        this.codec = Objects.requireNonNull(codec);
-        this.mapping = Objects.requireNonNull(mapping);
-        this.sampleRateHertz = Objects.requireNonNull(sampleRateHertz);
+        this.bitrateBps = bitrateBps;
+        this.channelCount = channelCount;
+        this.channelLayout = channelLayout;
+        this.codec = codec;
+        this.mapping = mapping;
+        this.sampleRateHertz = sampleRateHertz;
     }
 
     /**

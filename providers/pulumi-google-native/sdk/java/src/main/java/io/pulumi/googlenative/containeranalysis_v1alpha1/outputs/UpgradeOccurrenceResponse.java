@@ -32,9 +32,9 @@ public final class UpgradeOccurrenceResponse {
         UpgradeDistributionResponse distribution,
         String $package,
         VersionResponse parsedVersion) {
-        this.distribution = Objects.requireNonNull(distribution);
-        this.$package = Objects.requireNonNull($package);
-        this.parsedVersion = Objects.requireNonNull(parsedVersion);
+        this.distribution = distribution;
+        this.$package = $package;
+        this.parsedVersion = parsedVersion;
     }
 
     /**

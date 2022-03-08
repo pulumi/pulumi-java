@@ -26,8 +26,8 @@ public final class GooglePrivacyDlpV2InspectionRuleSetResponse {
     private GooglePrivacyDlpV2InspectionRuleSetResponse(
         List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes,
         List<GooglePrivacyDlpV2InspectionRuleResponse> rules) {
-        this.infoTypes = Objects.requireNonNull(infoTypes);
-        this.rules = Objects.requireNonNull(rules);
+        this.infoTypes = infoTypes;
+        this.rules = rules;
     }
 
     /**

@@ -25,8 +25,8 @@ public final class EnvironmentConfigResponse {
     private EnvironmentConfigResponse(
         ExecutionConfigResponse executionConfig,
         PeripheralsConfigResponse peripheralsConfig) {
-        this.executionConfig = Objects.requireNonNull(executionConfig);
-        this.peripheralsConfig = Objects.requireNonNull(peripheralsConfig);
+        this.executionConfig = executionConfig;
+        this.peripheralsConfig = peripheralsConfig;
     }
 
     /**

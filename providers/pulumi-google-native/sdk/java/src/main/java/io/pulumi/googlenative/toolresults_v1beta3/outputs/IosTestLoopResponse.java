@@ -17,7 +17,7 @@ public final class IosTestLoopResponse {
 
     @OutputCustomType.Constructor({"bundleId"})
     private IosTestLoopResponse(String bundleId) {
-        this.bundleId = Objects.requireNonNull(bundleId);
+        this.bundleId = bundleId;
     }
 
     /**

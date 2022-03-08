@@ -30,9 +30,9 @@ public final class SslSettingsResponse {
         String certificateId,
         String pendingManagedCertificateId,
         String sslManagementType) {
-        this.certificateId = Objects.requireNonNull(certificateId);
-        this.pendingManagedCertificateId = Objects.requireNonNull(pendingManagedCertificateId);
-        this.sslManagementType = Objects.requireNonNull(sslManagementType);
+        this.certificateId = certificateId;
+        this.pendingManagedCertificateId = pendingManagedCertificateId;
+        this.sslManagementType = sslManagementType;
     }
 
     /**

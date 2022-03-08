@@ -17,7 +17,7 @@ public final class GooglePrivacyDlpV2UnwrappedCryptoKeyResponse {
 
     @OutputCustomType.Constructor({"key"})
     private GooglePrivacyDlpV2UnwrappedCryptoKeyResponse(String key) {
-        this.key = Objects.requireNonNull(key);
+        this.key = key;
     }
 
     /**

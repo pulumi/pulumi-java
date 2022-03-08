@@ -30,9 +30,9 @@ public final class DmlStatisticsResponse {
         String deletedRowCount,
         String insertedRowCount,
         String updatedRowCount) {
-        this.deletedRowCount = Objects.requireNonNull(deletedRowCount);
-        this.insertedRowCount = Objects.requireNonNull(insertedRowCount);
-        this.updatedRowCount = Objects.requireNonNull(updatedRowCount);
+        this.deletedRowCount = deletedRowCount;
+        this.insertedRowCount = insertedRowCount;
+        this.updatedRowCount = updatedRowCount;
     }
 
     /**

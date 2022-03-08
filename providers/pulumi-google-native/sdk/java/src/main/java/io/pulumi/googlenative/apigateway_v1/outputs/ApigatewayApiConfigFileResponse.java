@@ -24,8 +24,8 @@ public final class ApigatewayApiConfigFileResponse {
     private ApigatewayApiConfigFileResponse(
         String contents,
         String path) {
-        this.contents = Objects.requireNonNull(contents);
-        this.path = Objects.requireNonNull(path);
+        this.contents = contents;
+        this.path = path;
     }
 
     /**

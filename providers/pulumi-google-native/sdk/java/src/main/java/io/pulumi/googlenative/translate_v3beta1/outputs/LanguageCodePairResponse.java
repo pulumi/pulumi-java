@@ -24,8 +24,8 @@ public final class LanguageCodePairResponse {
     private LanguageCodePairResponse(
         String sourceLanguageCode,
         String targetLanguageCode) {
-        this.sourceLanguageCode = Objects.requireNonNull(sourceLanguageCode);
-        this.targetLanguageCode = Objects.requireNonNull(targetLanguageCode);
+        this.sourceLanguageCode = sourceLanguageCode;
+        this.targetLanguageCode = targetLanguageCode;
     }
 
     /**

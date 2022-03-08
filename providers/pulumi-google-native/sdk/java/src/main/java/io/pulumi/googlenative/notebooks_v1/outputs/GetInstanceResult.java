@@ -226,40 +226,40 @@ public final class GetInstanceResult {
         String updateTime,
         List<UpgradeHistoryEntryResponse> upgradeHistory,
         VmImageResponse vmImage) {
-        this.acceleratorConfig = Objects.requireNonNull(acceleratorConfig);
-        this.bootDiskSizeGb = Objects.requireNonNull(bootDiskSizeGb);
-        this.bootDiskType = Objects.requireNonNull(bootDiskType);
-        this.containerImage = Objects.requireNonNull(containerImage);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.customGpuDriverPath = Objects.requireNonNull(customGpuDriverPath);
-        this.dataDiskSizeGb = Objects.requireNonNull(dataDiskSizeGb);
-        this.dataDiskType = Objects.requireNonNull(dataDiskType);
-        this.diskEncryption = Objects.requireNonNull(diskEncryption);
-        this.disks = Objects.requireNonNull(disks);
-        this.installGpuDriver = Objects.requireNonNull(installGpuDriver);
-        this.instanceOwners = Objects.requireNonNull(instanceOwners);
-        this.kmsKey = Objects.requireNonNull(kmsKey);
-        this.labels = Objects.requireNonNull(labels);
-        this.machineType = Objects.requireNonNull(machineType);
-        this.metadata = Objects.requireNonNull(metadata);
-        this.name = Objects.requireNonNull(name);
-        this.network = Objects.requireNonNull(network);
-        this.nicType = Objects.requireNonNull(nicType);
-        this.noProxyAccess = Objects.requireNonNull(noProxyAccess);
-        this.noPublicIp = Objects.requireNonNull(noPublicIp);
-        this.noRemoveDataDisk = Objects.requireNonNull(noRemoveDataDisk);
-        this.postStartupScript = Objects.requireNonNull(postStartupScript);
-        this.proxyUri = Objects.requireNonNull(proxyUri);
-        this.reservationAffinity = Objects.requireNonNull(reservationAffinity);
-        this.serviceAccount = Objects.requireNonNull(serviceAccount);
-        this.serviceAccountScopes = Objects.requireNonNull(serviceAccountScopes);
-        this.shieldedInstanceConfig = Objects.requireNonNull(shieldedInstanceConfig);
-        this.state = Objects.requireNonNull(state);
-        this.subnet = Objects.requireNonNull(subnet);
-        this.tags = Objects.requireNonNull(tags);
-        this.updateTime = Objects.requireNonNull(updateTime);
-        this.upgradeHistory = Objects.requireNonNull(upgradeHistory);
-        this.vmImage = Objects.requireNonNull(vmImage);
+        this.acceleratorConfig = acceleratorConfig;
+        this.bootDiskSizeGb = bootDiskSizeGb;
+        this.bootDiskType = bootDiskType;
+        this.containerImage = containerImage;
+        this.createTime = createTime;
+        this.customGpuDriverPath = customGpuDriverPath;
+        this.dataDiskSizeGb = dataDiskSizeGb;
+        this.dataDiskType = dataDiskType;
+        this.diskEncryption = diskEncryption;
+        this.disks = disks;
+        this.installGpuDriver = installGpuDriver;
+        this.instanceOwners = instanceOwners;
+        this.kmsKey = kmsKey;
+        this.labels = labels;
+        this.machineType = machineType;
+        this.metadata = metadata;
+        this.name = name;
+        this.network = network;
+        this.nicType = nicType;
+        this.noProxyAccess = noProxyAccess;
+        this.noPublicIp = noPublicIp;
+        this.noRemoveDataDisk = noRemoveDataDisk;
+        this.postStartupScript = postStartupScript;
+        this.proxyUri = proxyUri;
+        this.reservationAffinity = reservationAffinity;
+        this.serviceAccount = serviceAccount;
+        this.serviceAccountScopes = serviceAccountScopes;
+        this.shieldedInstanceConfig = shieldedInstanceConfig;
+        this.state = state;
+        this.subnet = subnet;
+        this.tags = tags;
+        this.updateTime = updateTime;
+        this.upgradeHistory = upgradeHistory;
+        this.vmImage = vmImage;
     }
 
     /**

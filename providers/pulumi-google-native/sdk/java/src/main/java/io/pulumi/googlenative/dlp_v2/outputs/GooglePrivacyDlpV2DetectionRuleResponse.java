@@ -17,7 +17,7 @@ public final class GooglePrivacyDlpV2DetectionRuleResponse {
 
     @OutputCustomType.Constructor({"hotwordRule"})
     private GooglePrivacyDlpV2DetectionRuleResponse(GooglePrivacyDlpV2HotwordRuleResponse hotwordRule) {
-        this.hotwordRule = Objects.requireNonNull(hotwordRule);
+        this.hotwordRule = hotwordRule;
     }
 
     /**

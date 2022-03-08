@@ -25,8 +25,8 @@ public final class PipelineConditionResponse {
     private PipelineConditionResponse(
         PipelineReadyConditionResponse pipelineReadyCondition,
         TargetsPresentConditionResponse targetsPresentCondition) {
-        this.pipelineReadyCondition = Objects.requireNonNull(pipelineReadyCondition);
-        this.targetsPresentCondition = Objects.requireNonNull(targetsPresentCondition);
+        this.pipelineReadyCondition = pipelineReadyCondition;
+        this.targetsPresentCondition = targetsPresentCondition;
     }
 
     /**

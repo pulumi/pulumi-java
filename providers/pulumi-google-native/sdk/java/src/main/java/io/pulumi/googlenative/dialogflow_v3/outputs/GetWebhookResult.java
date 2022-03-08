@@ -51,12 +51,12 @@ public final class GetWebhookResult {
         String name,
         GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigResponse serviceDirectory,
         String timeout) {
-        this.disabled = Objects.requireNonNull(disabled);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.genericWebService = Objects.requireNonNull(genericWebService);
-        this.name = Objects.requireNonNull(name);
-        this.serviceDirectory = Objects.requireNonNull(serviceDirectory);
-        this.timeout = Objects.requireNonNull(timeout);
+        this.disabled = disabled;
+        this.displayName = displayName;
+        this.genericWebService = genericWebService;
+        this.name = name;
+        this.serviceDirectory = serviceDirectory;
+        this.timeout = timeout;
     }
 
     /**

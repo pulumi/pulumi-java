@@ -26,8 +26,8 @@ public final class ModelDefinitionResponse {
     private ModelDefinitionResponse(
         ModelDefinitionModelOptionsResponse modelOptions,
         List<BqmlTrainingRunResponse> trainingRuns) {
-        this.modelOptions = Objects.requireNonNull(modelOptions);
-        this.trainingRuns = Objects.requireNonNull(trainingRuns);
+        this.modelOptions = modelOptions;
+        this.trainingRuns = trainingRuns;
     }
 
     /**

@@ -13,7 +13,7 @@ public final class StatefulPolicyResponse {
 
     @OutputCustomType.Constructor({"preservedState"})
     private StatefulPolicyResponse(StatefulPolicyPreservedStateResponse preservedState) {
-        this.preservedState = Objects.requireNonNull(preservedState);
+        this.preservedState = preservedState;
     }
 
     public StatefulPolicyPreservedStateResponse getPreservedState() {

@@ -57,13 +57,13 @@ public final class ParameterMetadataResponse {
         String name,
         String paramType,
         List<String> regexes) {
-        this.customMetadata = Objects.requireNonNull(customMetadata);
-        this.helpText = Objects.requireNonNull(helpText);
-        this.isOptional = Objects.requireNonNull(isOptional);
-        this.label = Objects.requireNonNull(label);
-        this.name = Objects.requireNonNull(name);
-        this.paramType = Objects.requireNonNull(paramType);
-        this.regexes = Objects.requireNonNull(regexes);
+        this.customMetadata = customMetadata;
+        this.helpText = helpText;
+        this.isOptional = isOptional;
+        this.label = label;
+        this.name = name;
+        this.paramType = paramType;
+        this.regexes = regexes;
     }
 
     /**

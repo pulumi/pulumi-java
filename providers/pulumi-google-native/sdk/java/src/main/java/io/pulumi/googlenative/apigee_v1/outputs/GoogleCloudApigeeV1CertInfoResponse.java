@@ -80,17 +80,17 @@ public final class GoogleCloudApigeeV1CertInfoResponse {
         List<String> subjectAlternativeNames,
         String validFrom,
         Integer version) {
-        this.basicConstraints = Objects.requireNonNull(basicConstraints);
-        this.expiryDate = Objects.requireNonNull(expiryDate);
-        this.isValid = Objects.requireNonNull(isValid);
-        this.issuer = Objects.requireNonNull(issuer);
-        this.publicKey = Objects.requireNonNull(publicKey);
-        this.serialNumber = Objects.requireNonNull(serialNumber);
-        this.sigAlgName = Objects.requireNonNull(sigAlgName);
-        this.subject = Objects.requireNonNull(subject);
-        this.subjectAlternativeNames = Objects.requireNonNull(subjectAlternativeNames);
-        this.validFrom = Objects.requireNonNull(validFrom);
-        this.version = Objects.requireNonNull(version);
+        this.basicConstraints = basicConstraints;
+        this.expiryDate = expiryDate;
+        this.isValid = isValid;
+        this.issuer = issuer;
+        this.publicKey = publicKey;
+        this.serialNumber = serialNumber;
+        this.sigAlgName = sigAlgName;
+        this.subject = subject;
+        this.subjectAlternativeNames = subjectAlternativeNames;
+        this.validFrom = validFrom;
+        this.version = version;
     }
 
     /**

@@ -31,9 +31,9 @@ public final class GoogleCloudContactcenterinsightsV1EntityMentionDataResponse {
         String entityUniqueId,
         GoogleCloudContactcenterinsightsV1SentimentDataResponse sentiment,
         String type) {
-        this.entityUniqueId = Objects.requireNonNull(entityUniqueId);
-        this.sentiment = Objects.requireNonNull(sentiment);
-        this.type = Objects.requireNonNull(type);
+        this.entityUniqueId = entityUniqueId;
+        this.sentiment = sentiment;
+        this.type = type;
     }
 
     /**

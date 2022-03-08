@@ -64,14 +64,14 @@ public final class GetPipelineResult {
         String pipelineId,
         String project,
         PipelineResourcesResponse resources) {
-        this.description = Objects.requireNonNull(description);
-        this.docker = Objects.requireNonNull(docker);
-        this.inputParameters = Objects.requireNonNull(inputParameters);
-        this.name = Objects.requireNonNull(name);
-        this.outputParameters = Objects.requireNonNull(outputParameters);
-        this.pipelineId = Objects.requireNonNull(pipelineId);
-        this.project = Objects.requireNonNull(project);
-        this.resources = Objects.requireNonNull(resources);
+        this.description = description;
+        this.docker = docker;
+        this.inputParameters = inputParameters;
+        this.name = name;
+        this.outputParameters = outputParameters;
+        this.pipelineId = pipelineId;
+        this.project = project;
+        this.resources = resources;
     }
 
     /**

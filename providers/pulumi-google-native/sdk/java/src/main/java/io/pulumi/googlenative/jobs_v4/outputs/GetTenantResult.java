@@ -24,8 +24,8 @@ public final class GetTenantResult {
     private GetTenantResult(
         String externalId,
         String name) {
-        this.externalId = Objects.requireNonNull(externalId);
-        this.name = Objects.requireNonNull(name);
+        this.externalId = externalId;
+        this.name = name;
     }
 
     /**

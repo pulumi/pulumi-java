@@ -25,8 +25,8 @@ public final class SingleClusterRoutingResponse {
     private SingleClusterRoutingResponse(
         Boolean allowTransactionalWrites,
         String clusterId) {
-        this.allowTransactionalWrites = Objects.requireNonNull(allowTransactionalWrites);
-        this.clusterId = Objects.requireNonNull(clusterId);
+        this.allowTransactionalWrites = allowTransactionalWrites;
+        this.clusterId = clusterId;
     }
 
     /**

@@ -17,7 +17,7 @@ public final class GoogleCloudRetailV2betaRuleFilterActionResponse {
 
     @OutputCustomType.Constructor({"filter"})
     private GoogleCloudRetailV2betaRuleFilterActionResponse(String filter) {
-        this.filter = Objects.requireNonNull(filter);
+        this.filter = filter;
     }
 
     /**

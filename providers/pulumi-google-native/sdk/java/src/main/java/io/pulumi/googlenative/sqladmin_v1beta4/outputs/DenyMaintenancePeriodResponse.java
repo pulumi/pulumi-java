@@ -30,9 +30,9 @@ public final class DenyMaintenancePeriodResponse {
         String endDate,
         String startDate,
         String time) {
-        this.endDate = Objects.requireNonNull(endDate);
-        this.startDate = Objects.requireNonNull(startDate);
-        this.time = Objects.requireNonNull(time);
+        this.endDate = endDate;
+        this.startDate = startDate;
+        this.time = time;
     }
 
     /**

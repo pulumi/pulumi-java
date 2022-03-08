@@ -36,10 +36,10 @@ public final class ClusterStatusResponse {
         String state,
         String stateStartTime,
         String substate) {
-        this.detail = Objects.requireNonNull(detail);
-        this.state = Objects.requireNonNull(state);
-        this.stateStartTime = Objects.requireNonNull(stateStartTime);
-        this.substate = Objects.requireNonNull(substate);
+        this.detail = detail;
+        this.state = state;
+        this.stateStartTime = stateStartTime;
+        this.substate = substate;
     }
 
     /**

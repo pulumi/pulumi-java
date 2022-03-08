@@ -25,8 +25,8 @@ public final class ZipInfoResponse {
     private ZipInfoResponse(
         Integer filesCount,
         String sourceUrl) {
-        this.filesCount = Objects.requireNonNull(filesCount);
-        this.sourceUrl = Objects.requireNonNull(sourceUrl);
+        this.filesCount = filesCount;
+        this.sourceUrl = sourceUrl;
     }
 
     /**

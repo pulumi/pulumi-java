@@ -32,9 +32,9 @@ public final class SecurityPolicyRuleMatcherResponse {
         SecurityPolicyRuleMatcherConfigResponse config,
         ExprResponse expr,
         String versionedExpr) {
-        this.config = Objects.requireNonNull(config);
-        this.expr = Objects.requireNonNull(expr);
-        this.versionedExpr = Objects.requireNonNull(versionedExpr);
+        this.config = config;
+        this.expr = expr;
+        this.versionedExpr = versionedExpr;
     }
 
     /**

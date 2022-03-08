@@ -74,15 +74,15 @@ public final class GoogleCloudRetailV2alphaRuleResponse {
         GoogleCloudRetailV2alphaRuleRedirectActionResponse redirectAction,
         GoogleCloudRetailV2alphaRuleReplacementActionResponse replacementAction,
         GoogleCloudRetailV2alphaRuleTwowaySynonymsActionResponse twowaySynonymsAction) {
-        this.boostAction = Objects.requireNonNull(boostAction);
-        this.condition = Objects.requireNonNull(condition);
-        this.doNotAssociateAction = Objects.requireNonNull(doNotAssociateAction);
-        this.filterAction = Objects.requireNonNull(filterAction);
-        this.ignoreAction = Objects.requireNonNull(ignoreAction);
-        this.onewaySynonymsAction = Objects.requireNonNull(onewaySynonymsAction);
-        this.redirectAction = Objects.requireNonNull(redirectAction);
-        this.replacementAction = Objects.requireNonNull(replacementAction);
-        this.twowaySynonymsAction = Objects.requireNonNull(twowaySynonymsAction);
+        this.boostAction = boostAction;
+        this.condition = condition;
+        this.doNotAssociateAction = doNotAssociateAction;
+        this.filterAction = filterAction;
+        this.ignoreAction = ignoreAction;
+        this.onewaySynonymsAction = onewaySynonymsAction;
+        this.redirectAction = redirectAction;
+        this.replacementAction = replacementAction;
+        this.twowaySynonymsAction = twowaySynonymsAction;
     }
 
     /**

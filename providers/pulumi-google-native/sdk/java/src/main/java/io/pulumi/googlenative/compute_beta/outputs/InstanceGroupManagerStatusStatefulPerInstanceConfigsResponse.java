@@ -17,7 +17,7 @@ public final class InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse 
 
     @OutputCustomType.Constructor({"allEffective"})
     private InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse(Boolean allEffective) {
-        this.allEffective = Objects.requireNonNull(allEffective);
+        this.allEffective = allEffective;
     }
 
     /**

@@ -26,8 +26,8 @@ public final class CertificateExtensionConstraintsResponse {
     private CertificateExtensionConstraintsResponse(
         List<ObjectIdResponse> additionalExtensions,
         List<String> knownExtensions) {
-        this.additionalExtensions = Objects.requireNonNull(additionalExtensions);
-        this.knownExtensions = Objects.requireNonNull(knownExtensions);
+        this.additionalExtensions = additionalExtensions;
+        this.knownExtensions = knownExtensions;
     }
 
     /**

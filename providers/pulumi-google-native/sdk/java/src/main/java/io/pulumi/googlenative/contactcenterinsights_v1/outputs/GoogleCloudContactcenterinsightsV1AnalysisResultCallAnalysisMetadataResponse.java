@@ -53,12 +53,12 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisM
         GoogleCloudContactcenterinsightsV1IssueModelResultResponse issueModelResult,
         Map<String,String> phraseMatchers,
         List<GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse> sentiments) {
-        this.annotations = Objects.requireNonNull(annotations);
-        this.entities = Objects.requireNonNull(entities);
-        this.intents = Objects.requireNonNull(intents);
-        this.issueModelResult = Objects.requireNonNull(issueModelResult);
-        this.phraseMatchers = Objects.requireNonNull(phraseMatchers);
-        this.sentiments = Objects.requireNonNull(sentiments);
+        this.annotations = annotations;
+        this.entities = entities;
+        this.intents = intents;
+        this.issueModelResult = issueModelResult;
+        this.phraseMatchers = phraseMatchers;
+        this.sentiments = sentiments;
     }
 
     /**

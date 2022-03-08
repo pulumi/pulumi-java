@@ -51,12 +51,12 @@ public final class GoogleCloudMlV1__ReplicaConfigResponse {
         GoogleCloudMlV1__DiskConfigResponse diskConfig,
         String imageUri,
         String tpuTfVersion) {
-        this.acceleratorConfig = Objects.requireNonNull(acceleratorConfig);
-        this.containerArgs = Objects.requireNonNull(containerArgs);
-        this.containerCommand = Objects.requireNonNull(containerCommand);
-        this.diskConfig = Objects.requireNonNull(diskConfig);
-        this.imageUri = Objects.requireNonNull(imageUri);
-        this.tpuTfVersion = Objects.requireNonNull(tpuTfVersion);
+        this.acceleratorConfig = acceleratorConfig;
+        this.containerArgs = containerArgs;
+        this.containerCommand = containerCommand;
+        this.diskConfig = diskConfig;
+        this.imageUri = imageUri;
+        this.tpuTfVersion = tpuTfVersion;
     }
 
     /**

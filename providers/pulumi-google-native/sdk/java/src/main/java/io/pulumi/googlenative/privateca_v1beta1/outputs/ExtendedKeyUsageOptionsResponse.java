@@ -48,12 +48,12 @@ public final class ExtendedKeyUsageOptionsResponse {
         Boolean ocspSigning,
         Boolean serverAuth,
         Boolean timeStamping) {
-        this.clientAuth = Objects.requireNonNull(clientAuth);
-        this.codeSigning = Objects.requireNonNull(codeSigning);
-        this.emailProtection = Objects.requireNonNull(emailProtection);
-        this.ocspSigning = Objects.requireNonNull(ocspSigning);
-        this.serverAuth = Objects.requireNonNull(serverAuth);
-        this.timeStamping = Objects.requireNonNull(timeStamping);
+        this.clientAuth = clientAuth;
+        this.codeSigning = codeSigning;
+        this.emailProtection = emailProtection;
+        this.ocspSigning = ocspSigning;
+        this.serverAuth = serverAuth;
+        this.timeStamping = timeStamping;
     }
 
     /**

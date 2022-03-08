@@ -26,8 +26,8 @@ public final class PackageOccurrenceResponse {
     private PackageOccurrenceResponse(
         List<LocationResponse> location,
         String name) {
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
+        this.location = location;
+        this.name = name;
     }
 
     /**

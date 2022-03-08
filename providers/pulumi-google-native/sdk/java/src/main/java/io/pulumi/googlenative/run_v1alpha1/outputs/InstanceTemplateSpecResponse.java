@@ -17,7 +17,7 @@ public final class InstanceTemplateSpecResponse {
 
     @OutputCustomType.Constructor({"spec"})
     private InstanceTemplateSpecResponse(InstanceSpecResponse spec) {
-        this.spec = Objects.requireNonNull(spec);
+        this.spec = spec;
     }
 
     /**

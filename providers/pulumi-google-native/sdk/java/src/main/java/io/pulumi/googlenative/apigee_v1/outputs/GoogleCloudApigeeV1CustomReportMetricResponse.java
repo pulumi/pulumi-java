@@ -24,8 +24,8 @@ public final class GoogleCloudApigeeV1CustomReportMetricResponse {
     private GoogleCloudApigeeV1CustomReportMetricResponse(
         String function,
         String name) {
-        this.function = Objects.requireNonNull(function);
-        this.name = Objects.requireNonNull(name);
+        this.function = function;
+        this.name = name;
     }
 
     /**

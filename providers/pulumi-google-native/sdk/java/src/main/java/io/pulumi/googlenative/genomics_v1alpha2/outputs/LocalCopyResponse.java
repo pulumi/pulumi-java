@@ -24,8 +24,8 @@ public final class LocalCopyResponse {
     private LocalCopyResponse(
         String disk,
         String path) {
-        this.disk = Objects.requireNonNull(disk);
-        this.path = Objects.requireNonNull(path);
+        this.disk = disk;
+        this.path = path;
     }
 
     /**

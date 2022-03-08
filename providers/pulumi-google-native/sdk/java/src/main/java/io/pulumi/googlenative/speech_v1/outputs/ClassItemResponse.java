@@ -17,7 +17,7 @@ public final class ClassItemResponse {
 
     @OutputCustomType.Constructor({"value"})
     private ClassItemResponse(String value) {
-        this.value = Objects.requireNonNull(value);
+        this.value = value;
     }
 
     /**

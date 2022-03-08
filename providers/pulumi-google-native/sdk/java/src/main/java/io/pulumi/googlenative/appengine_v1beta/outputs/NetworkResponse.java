@@ -50,12 +50,12 @@ public final class NetworkResponse {
         String name,
         Boolean sessionAffinity,
         String subnetworkName) {
-        this.forwardedPorts = Objects.requireNonNull(forwardedPorts);
-        this.instanceIpMode = Objects.requireNonNull(instanceIpMode);
-        this.instanceTag = Objects.requireNonNull(instanceTag);
-        this.name = Objects.requireNonNull(name);
-        this.sessionAffinity = Objects.requireNonNull(sessionAffinity);
-        this.subnetworkName = Objects.requireNonNull(subnetworkName);
+        this.forwardedPorts = forwardedPorts;
+        this.instanceIpMode = instanceIpMode;
+        this.instanceTag = instanceTag;
+        this.name = name;
+        this.sessionAffinity = sessionAffinity;
+        this.subnetworkName = subnetworkName;
     }
 
     /**

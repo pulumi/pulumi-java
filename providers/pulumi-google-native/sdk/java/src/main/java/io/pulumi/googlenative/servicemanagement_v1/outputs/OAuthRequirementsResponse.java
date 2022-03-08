@@ -17,7 +17,7 @@ public final class OAuthRequirementsResponse {
 
     @OutputCustomType.Constructor({"canonicalScopes"})
     private OAuthRequirementsResponse(String canonicalScopes) {
-        this.canonicalScopes = Objects.requireNonNull(canonicalScopes);
+        this.canonicalScopes = canonicalScopes;
     }
 
     /**

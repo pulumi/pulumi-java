@@ -38,10 +38,10 @@ public final class SecretVolumeResponse {
         String project,
         String secret,
         List<SecretVersionResponse> versions) {
-        this.mountPath = Objects.requireNonNull(mountPath);
-        this.project = Objects.requireNonNull(project);
-        this.secret = Objects.requireNonNull(secret);
-        this.versions = Objects.requireNonNull(versions);
+        this.mountPath = mountPath;
+        this.project = project;
+        this.secret = secret;
+        this.versions = versions;
     }
 
     /**

@@ -104,21 +104,21 @@ public final class KerberosConfigResponse {
         Integer tgtLifetimeHours,
         String truststorePasswordUri,
         String truststoreUri) {
-        this.crossRealmTrustAdminServer = Objects.requireNonNull(crossRealmTrustAdminServer);
-        this.crossRealmTrustKdc = Objects.requireNonNull(crossRealmTrustKdc);
-        this.crossRealmTrustRealm = Objects.requireNonNull(crossRealmTrustRealm);
-        this.crossRealmTrustSharedPasswordUri = Objects.requireNonNull(crossRealmTrustSharedPasswordUri);
-        this.enableKerberos = Objects.requireNonNull(enableKerberos);
-        this.kdcDbKeyUri = Objects.requireNonNull(kdcDbKeyUri);
-        this.keyPasswordUri = Objects.requireNonNull(keyPasswordUri);
-        this.keystorePasswordUri = Objects.requireNonNull(keystorePasswordUri);
-        this.keystoreUri = Objects.requireNonNull(keystoreUri);
-        this.kmsKeyUri = Objects.requireNonNull(kmsKeyUri);
-        this.realm = Objects.requireNonNull(realm);
-        this.rootPrincipalPasswordUri = Objects.requireNonNull(rootPrincipalPasswordUri);
-        this.tgtLifetimeHours = Objects.requireNonNull(tgtLifetimeHours);
-        this.truststorePasswordUri = Objects.requireNonNull(truststorePasswordUri);
-        this.truststoreUri = Objects.requireNonNull(truststoreUri);
+        this.crossRealmTrustAdminServer = crossRealmTrustAdminServer;
+        this.crossRealmTrustKdc = crossRealmTrustKdc;
+        this.crossRealmTrustRealm = crossRealmTrustRealm;
+        this.crossRealmTrustSharedPasswordUri = crossRealmTrustSharedPasswordUri;
+        this.enableKerberos = enableKerberos;
+        this.kdcDbKeyUri = kdcDbKeyUri;
+        this.keyPasswordUri = keyPasswordUri;
+        this.keystorePasswordUri = keystorePasswordUri;
+        this.keystoreUri = keystoreUri;
+        this.kmsKeyUri = kmsKeyUri;
+        this.realm = realm;
+        this.rootPrincipalPasswordUri = rootPrincipalPasswordUri;
+        this.tgtLifetimeHours = tgtLifetimeHours;
+        this.truststorePasswordUri = truststorePasswordUri;
+        this.truststoreUri = truststoreUri;
     }
 
     /**

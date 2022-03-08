@@ -31,9 +31,9 @@ public final class BuiltImageResponse {
         String digest,
         String name,
         TimeSpanResponse pushTiming) {
-        this.digest = Objects.requireNonNull(digest);
-        this.name = Objects.requireNonNull(name);
-        this.pushTiming = Objects.requireNonNull(pushTiming);
+        this.digest = digest;
+        this.name = name;
+        this.pushTiming = pushTiming;
     }
 
     /**

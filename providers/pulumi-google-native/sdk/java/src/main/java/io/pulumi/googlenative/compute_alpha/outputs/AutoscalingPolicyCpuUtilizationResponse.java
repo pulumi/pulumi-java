@@ -25,8 +25,8 @@ public final class AutoscalingPolicyCpuUtilizationResponse {
     private AutoscalingPolicyCpuUtilizationResponse(
         String predictiveMethod,
         Double utilizationTarget) {
-        this.predictiveMethod = Objects.requireNonNull(predictiveMethod);
-        this.utilizationTarget = Objects.requireNonNull(utilizationTarget);
+        this.predictiveMethod = predictiveMethod;
+        this.utilizationTarget = utilizationTarget;
     }
 
     /**

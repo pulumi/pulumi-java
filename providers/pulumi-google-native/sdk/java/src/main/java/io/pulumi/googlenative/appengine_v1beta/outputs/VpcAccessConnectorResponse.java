@@ -24,8 +24,8 @@ public final class VpcAccessConnectorResponse {
     private VpcAccessConnectorResponse(
         String egressSetting,
         String name) {
-        this.egressSetting = Objects.requireNonNull(egressSetting);
-        this.name = Objects.requireNonNull(name);
+        this.egressSetting = egressSetting;
+        this.name = name;
     }
 
     /**

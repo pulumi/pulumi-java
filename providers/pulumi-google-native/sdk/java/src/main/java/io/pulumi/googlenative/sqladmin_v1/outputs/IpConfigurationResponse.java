@@ -45,11 +45,11 @@ public final class IpConfigurationResponse {
         Boolean ipv4Enabled,
         String privateNetwork,
         Boolean requireSsl) {
-        this.allocatedIpRange = Objects.requireNonNull(allocatedIpRange);
-        this.authorizedNetworks = Objects.requireNonNull(authorizedNetworks);
-        this.ipv4Enabled = Objects.requireNonNull(ipv4Enabled);
-        this.privateNetwork = Objects.requireNonNull(privateNetwork);
-        this.requireSsl = Objects.requireNonNull(requireSsl);
+        this.allocatedIpRange = allocatedIpRange;
+        this.authorizedNetworks = authorizedNetworks;
+        this.ipv4Enabled = ipv4Enabled;
+        this.privateNetwork = privateNetwork;
+        this.requireSsl = requireSsl;
     }
 
     /**

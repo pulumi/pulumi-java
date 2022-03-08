@@ -17,7 +17,7 @@ public final class GoogleCloudDialogflowV2beta1SuggestionFeatureResponse {
 
     @OutputCustomType.Constructor({"type"})
     private GoogleCloudDialogflowV2beta1SuggestionFeatureResponse(String type) {
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

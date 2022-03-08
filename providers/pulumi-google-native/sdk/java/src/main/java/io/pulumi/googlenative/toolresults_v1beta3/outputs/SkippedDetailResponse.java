@@ -30,9 +30,9 @@ public final class SkippedDetailResponse {
         Boolean incompatibleAppVersion,
         Boolean incompatibleArchitecture,
         Boolean incompatibleDevice) {
-        this.incompatibleAppVersion = Objects.requireNonNull(incompatibleAppVersion);
-        this.incompatibleArchitecture = Objects.requireNonNull(incompatibleArchitecture);
-        this.incompatibleDevice = Objects.requireNonNull(incompatibleDevice);
+        this.incompatibleAppVersion = incompatibleAppVersion;
+        this.incompatibleArchitecture = incompatibleArchitecture;
+        this.incompatibleDevice = incompatibleDevice;
     }
 
     /**

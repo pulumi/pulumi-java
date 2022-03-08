@@ -30,9 +30,9 @@ public final class ResourceCommitmentResponse {
         String acceleratorType,
         String amount,
         String type) {
-        this.acceleratorType = Objects.requireNonNull(acceleratorType);
-        this.amount = Objects.requireNonNull(amount);
-        this.type = Objects.requireNonNull(type);
+        this.acceleratorType = acceleratorType;
+        this.amount = amount;
+        this.type = type;
     }
 
     /**

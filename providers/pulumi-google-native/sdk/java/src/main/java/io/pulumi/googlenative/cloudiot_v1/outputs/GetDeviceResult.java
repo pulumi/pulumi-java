@@ -116,22 +116,22 @@ public final class GetDeviceResult {
         String name,
         String numId,
         DeviceStateResponse state) {
-        this.blocked = Objects.requireNonNull(blocked);
-        this.config = Objects.requireNonNull(config);
-        this.credentials = Objects.requireNonNull(credentials);
-        this.gatewayConfig = Objects.requireNonNull(gatewayConfig);
-        this.lastConfigAckTime = Objects.requireNonNull(lastConfigAckTime);
-        this.lastConfigSendTime = Objects.requireNonNull(lastConfigSendTime);
-        this.lastErrorStatus = Objects.requireNonNull(lastErrorStatus);
-        this.lastErrorTime = Objects.requireNonNull(lastErrorTime);
-        this.lastEventTime = Objects.requireNonNull(lastEventTime);
-        this.lastHeartbeatTime = Objects.requireNonNull(lastHeartbeatTime);
-        this.lastStateTime = Objects.requireNonNull(lastStateTime);
-        this.logLevel = Objects.requireNonNull(logLevel);
-        this.metadata = Objects.requireNonNull(metadata);
-        this.name = Objects.requireNonNull(name);
-        this.numId = Objects.requireNonNull(numId);
-        this.state = Objects.requireNonNull(state);
+        this.blocked = blocked;
+        this.config = config;
+        this.credentials = credentials;
+        this.gatewayConfig = gatewayConfig;
+        this.lastConfigAckTime = lastConfigAckTime;
+        this.lastConfigSendTime = lastConfigSendTime;
+        this.lastErrorStatus = lastErrorStatus;
+        this.lastErrorTime = lastErrorTime;
+        this.lastEventTime = lastEventTime;
+        this.lastHeartbeatTime = lastHeartbeatTime;
+        this.lastStateTime = lastStateTime;
+        this.logLevel = logLevel;
+        this.metadata = metadata;
+        this.name = name;
+        this.numId = numId;
+        this.state = state;
     }
 
     /**

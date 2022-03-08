@@ -37,10 +37,10 @@ public final class InitialStateConfigResponse {
         List<FileContentBufferResponse> dbxs,
         List<FileContentBufferResponse> keks,
         FileContentBufferResponse pk) {
-        this.dbs = Objects.requireNonNull(dbs);
-        this.dbxs = Objects.requireNonNull(dbxs);
-        this.keks = Objects.requireNonNull(keks);
-        this.pk = Objects.requireNonNull(pk);
+        this.dbs = dbs;
+        this.dbxs = dbxs;
+        this.keks = keks;
+        this.pk = pk;
     }
 
     /**

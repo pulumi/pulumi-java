@@ -25,8 +25,8 @@ public final class AuthenticationResponse {
     private AuthenticationResponse(
         CustomAccountResponse customAccount,
         GoogleAccountResponse googleAccount) {
-        this.customAccount = Objects.requireNonNull(customAccount);
-        this.googleAccount = Objects.requireNonNull(googleAccount);
+        this.customAccount = customAccount;
+        this.googleAccount = googleAccount;
     }
 
     /**

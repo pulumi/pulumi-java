@@ -131,25 +131,25 @@ public final class AttachedDiskInitializeParamsResponse {
         String sourceInstantSnapshot,
         String sourceSnapshot,
         CustomerEncryptionKeyResponse sourceSnapshotEncryptionKey) {
-        this.architecture = Objects.requireNonNull(architecture);
-        this.description = Objects.requireNonNull(description);
-        this.diskName = Objects.requireNonNull(diskName);
-        this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
-        this.diskType = Objects.requireNonNull(diskType);
-        this.guestOsFeatures = Objects.requireNonNull(guestOsFeatures);
-        this.labels = Objects.requireNonNull(labels);
-        this.licenseCodes = Objects.requireNonNull(licenseCodes);
-        this.licenses = Objects.requireNonNull(licenses);
-        this.multiWriter = Objects.requireNonNull(multiWriter);
-        this.onUpdateAction = Objects.requireNonNull(onUpdateAction);
-        this.provisionedIops = Objects.requireNonNull(provisionedIops);
-        this.replicaZones = Objects.requireNonNull(replicaZones);
-        this.resourcePolicies = Objects.requireNonNull(resourcePolicies);
-        this.sourceImage = Objects.requireNonNull(sourceImage);
-        this.sourceImageEncryptionKey = Objects.requireNonNull(sourceImageEncryptionKey);
-        this.sourceInstantSnapshot = Objects.requireNonNull(sourceInstantSnapshot);
-        this.sourceSnapshot = Objects.requireNonNull(sourceSnapshot);
-        this.sourceSnapshotEncryptionKey = Objects.requireNonNull(sourceSnapshotEncryptionKey);
+        this.architecture = architecture;
+        this.description = description;
+        this.diskName = diskName;
+        this.diskSizeGb = diskSizeGb;
+        this.diskType = diskType;
+        this.guestOsFeatures = guestOsFeatures;
+        this.labels = labels;
+        this.licenseCodes = licenseCodes;
+        this.licenses = licenses;
+        this.multiWriter = multiWriter;
+        this.onUpdateAction = onUpdateAction;
+        this.provisionedIops = provisionedIops;
+        this.replicaZones = replicaZones;
+        this.resourcePolicies = resourcePolicies;
+        this.sourceImage = sourceImage;
+        this.sourceImageEncryptionKey = sourceImageEncryptionKey;
+        this.sourceInstantSnapshot = sourceInstantSnapshot;
+        this.sourceSnapshot = sourceSnapshot;
+        this.sourceSnapshotEncryptionKey = sourceSnapshotEncryptionKey;
     }
 
     /**

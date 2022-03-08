@@ -46,11 +46,11 @@ public final class LinkResponse {
         EnvironmentResponse environment,
         List<GrafeasV1beta1IntotoArtifactResponse> materials,
         List<GrafeasV1beta1IntotoArtifactResponse> products) {
-        this.byproducts = Objects.requireNonNull(byproducts);
-        this.command = Objects.requireNonNull(command);
-        this.environment = Objects.requireNonNull(environment);
-        this.materials = Objects.requireNonNull(materials);
-        this.products = Objects.requireNonNull(products);
+        this.byproducts = byproducts;
+        this.command = command;
+        this.environment = environment;
+        this.materials = materials;
+        this.products = products;
     }
 
     /**

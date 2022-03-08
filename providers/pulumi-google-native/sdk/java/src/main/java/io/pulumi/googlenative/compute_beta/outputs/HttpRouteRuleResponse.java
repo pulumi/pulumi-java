@@ -73,15 +73,15 @@ public final class HttpRouteRuleResponse {
         HttpRouteActionResponse routeAction,
         String service,
         HttpRedirectActionResponse urlRedirect) {
-        this.description = Objects.requireNonNull(description);
-        this.headerAction = Objects.requireNonNull(headerAction);
-        this.httpFilterConfigs = Objects.requireNonNull(httpFilterConfigs);
-        this.httpFilterMetadata = Objects.requireNonNull(httpFilterMetadata);
-        this.matchRules = Objects.requireNonNull(matchRules);
-        this.priority = Objects.requireNonNull(priority);
-        this.routeAction = Objects.requireNonNull(routeAction);
-        this.service = Objects.requireNonNull(service);
-        this.urlRedirect = Objects.requireNonNull(urlRedirect);
+        this.description = description;
+        this.headerAction = headerAction;
+        this.httpFilterConfigs = httpFilterConfigs;
+        this.httpFilterMetadata = httpFilterMetadata;
+        this.matchRules = matchRules;
+        this.priority = priority;
+        this.routeAction = routeAction;
+        this.service = service;
+        this.urlRedirect = urlRedirect;
     }
 
     /**

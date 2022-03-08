@@ -31,9 +31,9 @@ public final class BitbucketServerRepositoryIdResponse {
         String projectKey,
         String repoSlug,
         Integer webhookId) {
-        this.projectKey = Objects.requireNonNull(projectKey);
-        this.repoSlug = Objects.requireNonNull(repoSlug);
-        this.webhookId = Objects.requireNonNull(webhookId);
+        this.projectKey = projectKey;
+        this.repoSlug = repoSlug;
+        this.webhookId = webhookId;
     }
 
     /**

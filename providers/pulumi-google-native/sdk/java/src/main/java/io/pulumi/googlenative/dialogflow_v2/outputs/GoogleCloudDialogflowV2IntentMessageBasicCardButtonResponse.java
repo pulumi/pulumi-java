@@ -25,8 +25,8 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse {
     private GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse(
         GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionResponse openUriAction,
         String title) {
-        this.openUriAction = Objects.requireNonNull(openUriAction);
-        this.title = Objects.requireNonNull(title);
+        this.openUriAction = openUriAction;
+        this.title = title;
     }
 
     /**

@@ -21,8 +21,8 @@ public final class SubjectResponse {
     private SubjectResponse(
         Map<String,String> digest,
         String name) {
-        this.digest = Objects.requireNonNull(digest);
-        this.name = Objects.requireNonNull(name);
+        this.digest = digest;
+        this.name = name;
     }
 
     /**

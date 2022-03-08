@@ -193,35 +193,35 @@ public final class GetJobResult {
         String requisitionId,
         String responsibilities,
         String title) {
-        this.addresses = Objects.requireNonNull(addresses);
-        this.applicationInfo = Objects.requireNonNull(applicationInfo);
-        this.companyDisplayName = Objects.requireNonNull(companyDisplayName);
-        this.companyName = Objects.requireNonNull(companyName);
-        this.compensationInfo = Objects.requireNonNull(compensationInfo);
-        this.customAttributes = Objects.requireNonNull(customAttributes);
-        this.degreeTypes = Objects.requireNonNull(degreeTypes);
-        this.department = Objects.requireNonNull(department);
-        this.derivedInfo = Objects.requireNonNull(derivedInfo);
-        this.description = Objects.requireNonNull(description);
-        this.employmentTypes = Objects.requireNonNull(employmentTypes);
-        this.incentives = Objects.requireNonNull(incentives);
-        this.jobBenefits = Objects.requireNonNull(jobBenefits);
-        this.jobEndTime = Objects.requireNonNull(jobEndTime);
-        this.jobLevel = Objects.requireNonNull(jobLevel);
-        this.jobStartTime = Objects.requireNonNull(jobStartTime);
-        this.languageCode = Objects.requireNonNull(languageCode);
-        this.name = Objects.requireNonNull(name);
-        this.postingCreateTime = Objects.requireNonNull(postingCreateTime);
-        this.postingExpireTime = Objects.requireNonNull(postingExpireTime);
-        this.postingPublishTime = Objects.requireNonNull(postingPublishTime);
-        this.postingRegion = Objects.requireNonNull(postingRegion);
-        this.postingUpdateTime = Objects.requireNonNull(postingUpdateTime);
-        this.processingOptions = Objects.requireNonNull(processingOptions);
-        this.promotionValue = Objects.requireNonNull(promotionValue);
-        this.qualifications = Objects.requireNonNull(qualifications);
-        this.requisitionId = Objects.requireNonNull(requisitionId);
-        this.responsibilities = Objects.requireNonNull(responsibilities);
-        this.title = Objects.requireNonNull(title);
+        this.addresses = addresses;
+        this.applicationInfo = applicationInfo;
+        this.companyDisplayName = companyDisplayName;
+        this.companyName = companyName;
+        this.compensationInfo = compensationInfo;
+        this.customAttributes = customAttributes;
+        this.degreeTypes = degreeTypes;
+        this.department = department;
+        this.derivedInfo = derivedInfo;
+        this.description = description;
+        this.employmentTypes = employmentTypes;
+        this.incentives = incentives;
+        this.jobBenefits = jobBenefits;
+        this.jobEndTime = jobEndTime;
+        this.jobLevel = jobLevel;
+        this.jobStartTime = jobStartTime;
+        this.languageCode = languageCode;
+        this.name = name;
+        this.postingCreateTime = postingCreateTime;
+        this.postingExpireTime = postingExpireTime;
+        this.postingPublishTime = postingPublishTime;
+        this.postingRegion = postingRegion;
+        this.postingUpdateTime = postingUpdateTime;
+        this.processingOptions = processingOptions;
+        this.promotionValue = promotionValue;
+        this.qualifications = qualifications;
+        this.requisitionId = requisitionId;
+        this.responsibilities = responsibilities;
+        this.title = title;
     }
 
     /**

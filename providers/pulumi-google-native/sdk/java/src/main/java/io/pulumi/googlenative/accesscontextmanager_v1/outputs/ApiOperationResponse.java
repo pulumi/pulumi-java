@@ -26,8 +26,8 @@ public final class ApiOperationResponse {
     private ApiOperationResponse(
         List<MethodSelectorResponse> methodSelectors,
         String serviceName) {
-        this.methodSelectors = Objects.requireNonNull(methodSelectors);
-        this.serviceName = Objects.requireNonNull(serviceName);
+        this.methodSelectors = methodSelectors;
+        this.serviceName = serviceName;
     }
 
     /**

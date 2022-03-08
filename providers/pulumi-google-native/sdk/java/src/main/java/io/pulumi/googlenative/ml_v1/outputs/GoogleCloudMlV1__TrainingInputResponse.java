@@ -174,32 +174,32 @@ public final class GoogleCloudMlV1__TrainingInputResponse {
         GoogleCloudMlV1__ReplicaConfigResponse workerConfig,
         String workerCount,
         String workerType) {
-        this.args = Objects.requireNonNull(args);
-        this.enableWebAccess = Objects.requireNonNull(enableWebAccess);
-        this.encryptionConfig = Objects.requireNonNull(encryptionConfig);
-        this.evaluatorConfig = Objects.requireNonNull(evaluatorConfig);
-        this.evaluatorCount = Objects.requireNonNull(evaluatorCount);
-        this.evaluatorType = Objects.requireNonNull(evaluatorType);
-        this.hyperparameters = Objects.requireNonNull(hyperparameters);
-        this.jobDir = Objects.requireNonNull(jobDir);
-        this.masterConfig = Objects.requireNonNull(masterConfig);
-        this.masterType = Objects.requireNonNull(masterType);
-        this.network = Objects.requireNonNull(network);
-        this.packageUris = Objects.requireNonNull(packageUris);
-        this.parameterServerConfig = Objects.requireNonNull(parameterServerConfig);
-        this.parameterServerCount = Objects.requireNonNull(parameterServerCount);
-        this.parameterServerType = Objects.requireNonNull(parameterServerType);
-        this.pythonModule = Objects.requireNonNull(pythonModule);
-        this.pythonVersion = Objects.requireNonNull(pythonVersion);
-        this.region = Objects.requireNonNull(region);
-        this.runtimeVersion = Objects.requireNonNull(runtimeVersion);
-        this.scaleTier = Objects.requireNonNull(scaleTier);
-        this.scheduling = Objects.requireNonNull(scheduling);
-        this.serviceAccount = Objects.requireNonNull(serviceAccount);
-        this.useChiefInTfConfig = Objects.requireNonNull(useChiefInTfConfig);
-        this.workerConfig = Objects.requireNonNull(workerConfig);
-        this.workerCount = Objects.requireNonNull(workerCount);
-        this.workerType = Objects.requireNonNull(workerType);
+        this.args = args;
+        this.enableWebAccess = enableWebAccess;
+        this.encryptionConfig = encryptionConfig;
+        this.evaluatorConfig = evaluatorConfig;
+        this.evaluatorCount = evaluatorCount;
+        this.evaluatorType = evaluatorType;
+        this.hyperparameters = hyperparameters;
+        this.jobDir = jobDir;
+        this.masterConfig = masterConfig;
+        this.masterType = masterType;
+        this.network = network;
+        this.packageUris = packageUris;
+        this.parameterServerConfig = parameterServerConfig;
+        this.parameterServerCount = parameterServerCount;
+        this.parameterServerType = parameterServerType;
+        this.pythonModule = pythonModule;
+        this.pythonVersion = pythonVersion;
+        this.region = region;
+        this.runtimeVersion = runtimeVersion;
+        this.scaleTier = scaleTier;
+        this.scheduling = scheduling;
+        this.serviceAccount = serviceAccount;
+        this.useChiefInTfConfig = useChiefInTfConfig;
+        this.workerConfig = workerConfig;
+        this.workerCount = workerCount;
+        this.workerType = workerType;
     }
 
     /**

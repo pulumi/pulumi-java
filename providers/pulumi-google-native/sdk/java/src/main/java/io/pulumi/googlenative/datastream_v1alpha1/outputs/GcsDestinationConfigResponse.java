@@ -45,11 +45,11 @@ public final class GcsDestinationConfigResponse {
         Integer fileRotationMb,
         JsonFileFormatResponse jsonFileFormat,
         String path) {
-        this.avroFileFormat = Objects.requireNonNull(avroFileFormat);
-        this.fileRotationInterval = Objects.requireNonNull(fileRotationInterval);
-        this.fileRotationMb = Objects.requireNonNull(fileRotationMb);
-        this.jsonFileFormat = Objects.requireNonNull(jsonFileFormat);
-        this.path = Objects.requireNonNull(path);
+        this.avroFileFormat = avroFileFormat;
+        this.fileRotationInterval = fileRotationInterval;
+        this.fileRotationMb = fileRotationMb;
+        this.jsonFileFormat = jsonFileFormat;
+        this.path = path;
     }
 
     /**

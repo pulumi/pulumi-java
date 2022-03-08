@@ -24,8 +24,8 @@ public final class EventNotificationConfigResponse {
     private EventNotificationConfigResponse(
         String pubsubTopicName,
         String subfolderMatches) {
-        this.pubsubTopicName = Objects.requireNonNull(pubsubTopicName);
-        this.subfolderMatches = Objects.requireNonNull(subfolderMatches);
+        this.pubsubTopicName = pubsubTopicName;
+        this.subfolderMatches = subfolderMatches;
     }
 
     /**

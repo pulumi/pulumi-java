@@ -25,8 +25,8 @@ public final class GoogleCloudContactcenterinsightsV1ConversationDataSourceRespo
     private GoogleCloudContactcenterinsightsV1ConversationDataSourceResponse(
         GoogleCloudContactcenterinsightsV1DialogflowSourceResponse dialogflowSource,
         GoogleCloudContactcenterinsightsV1GcsSourceResponse gcsSource) {
-        this.dialogflowSource = Objects.requireNonNull(dialogflowSource);
-        this.gcsSource = Objects.requireNonNull(gcsSource);
+        this.dialogflowSource = dialogflowSource;
+        this.gcsSource = gcsSource;
     }
 
     /**

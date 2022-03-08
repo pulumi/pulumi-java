@@ -37,10 +37,10 @@ public final class GerritSourceContextResponse {
         String gerritProject,
         String hostUri,
         String revisionId) {
-        this.aliasContext = Objects.requireNonNull(aliasContext);
-        this.gerritProject = Objects.requireNonNull(gerritProject);
-        this.hostUri = Objects.requireNonNull(hostUri);
-        this.revisionId = Objects.requireNonNull(revisionId);
+        this.aliasContext = aliasContext;
+        this.gerritProject = gerritProject;
+        this.hostUri = hostUri;
+        this.revisionId = revisionId;
     }
 
     /**

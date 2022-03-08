@@ -18,7 +18,7 @@ public final class MemcacheParametersResponse {
 
     @OutputCustomType.Constructor({"params"})
     private MemcacheParametersResponse(Map<String,String> params) {
-        this.params = Objects.requireNonNull(params);
+        this.params = params;
     }
 
     /**

@@ -17,7 +17,7 @@ public final class SoftwareRecipeStepInstallRpmResponse {
 
     @OutputCustomType.Constructor({"artifactId"})
     private SoftwareRecipeStepInstallRpmResponse(String artifactId) {
-        this.artifactId = Objects.requireNonNull(artifactId);
+        this.artifactId = artifactId;
     }
 
     /**

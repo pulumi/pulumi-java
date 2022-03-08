@@ -31,9 +31,9 @@ public final class AdvancedMachineFeaturesResponse {
         Boolean enableNestedVirtualization,
         Boolean enableUefiNetworking,
         Integer threadsPerCore) {
-        this.enableNestedVirtualization = Objects.requireNonNull(enableNestedVirtualization);
-        this.enableUefiNetworking = Objects.requireNonNull(enableUefiNetworking);
-        this.threadsPerCore = Objects.requireNonNull(threadsPerCore);
+        this.enableNestedVirtualization = enableNestedVirtualization;
+        this.enableUefiNetworking = enableUefiNetworking;
+        this.threadsPerCore = threadsPerCore;
     }
 
     /**

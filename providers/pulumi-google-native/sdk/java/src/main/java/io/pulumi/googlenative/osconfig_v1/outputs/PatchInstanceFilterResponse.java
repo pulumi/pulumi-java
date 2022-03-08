@@ -45,11 +45,11 @@ public final class PatchInstanceFilterResponse {
         List<String> instanceNamePrefixes,
         List<String> instances,
         List<String> zones) {
-        this.all = Objects.requireNonNull(all);
-        this.groupLabels = Objects.requireNonNull(groupLabels);
-        this.instanceNamePrefixes = Objects.requireNonNull(instanceNamePrefixes);
-        this.instances = Objects.requireNonNull(instances);
-        this.zones = Objects.requireNonNull(zones);
+        this.all = all;
+        this.groupLabels = groupLabels;
+        this.instanceNamePrefixes = instanceNamePrefixes;
+        this.instances = instances;
+        this.zones = zones;
     }
 
     /**

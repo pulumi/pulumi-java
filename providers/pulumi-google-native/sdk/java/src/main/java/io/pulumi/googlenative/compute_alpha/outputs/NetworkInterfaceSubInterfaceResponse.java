@@ -33,10 +33,10 @@ public final class NetworkInterfaceSubInterfaceResponse {
         String ipAllocationMode,
         String subnetwork,
         Integer vlan) {
-        this.ipAddress = Objects.requireNonNull(ipAddress);
-        this.ipAllocationMode = Objects.requireNonNull(ipAllocationMode);
-        this.subnetwork = Objects.requireNonNull(subnetwork);
-        this.vlan = Objects.requireNonNull(vlan);
+        this.ipAddress = ipAddress;
+        this.ipAllocationMode = ipAllocationMode;
+        this.subnetwork = subnetwork;
+        this.vlan = vlan;
     }
 
     /**

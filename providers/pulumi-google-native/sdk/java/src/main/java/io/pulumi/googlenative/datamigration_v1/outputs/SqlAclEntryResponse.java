@@ -36,10 +36,10 @@ public final class SqlAclEntryResponse {
         String label,
         String ttl,
         String value) {
-        this.expireTime = Objects.requireNonNull(expireTime);
-        this.label = Objects.requireNonNull(label);
-        this.ttl = Objects.requireNonNull(ttl);
-        this.value = Objects.requireNonNull(value);
+        this.expireTime = expireTime;
+        this.label = label;
+        this.ttl = ttl;
+        this.value = value;
     }
 
     /**

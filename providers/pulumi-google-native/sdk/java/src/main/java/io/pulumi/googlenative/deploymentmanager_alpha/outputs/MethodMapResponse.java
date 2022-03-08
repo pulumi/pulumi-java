@@ -42,11 +42,11 @@ public final class MethodMapResponse {
         String get,
         String setIamPolicy,
         String update) {
-        this.create = Objects.requireNonNull(create);
-        this.delete = Objects.requireNonNull(delete);
-        this.get = Objects.requireNonNull(get);
-        this.setIamPolicy = Objects.requireNonNull(setIamPolicy);
-        this.update = Objects.requireNonNull(update);
+        this.create = create;
+        this.delete = delete;
+        this.get = get;
+        this.setIamPolicy = setIamPolicy;
+        this.update = update;
     }
 
     /**

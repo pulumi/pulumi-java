@@ -40,10 +40,10 @@ public final class GetCertificateAuthorityCertificateRevocationListIamPolicyResu
         List<BindingResponse> bindings,
         String etag,
         Integer version) {
-        this.auditConfigs = Objects.requireNonNull(auditConfigs);
-        this.bindings = Objects.requireNonNull(bindings);
-        this.etag = Objects.requireNonNull(etag);
-        this.version = Objects.requireNonNull(version);
+        this.auditConfigs = auditConfigs;
+        this.bindings = bindings;
+        this.etag = etag;
+        this.version = version;
     }
 
     /**

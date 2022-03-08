@@ -32,9 +32,9 @@ public final class ServiceLevelIndicatorResponse {
         BasicSliResponse basicSli,
         RequestBasedSliResponse requestBased,
         WindowsBasedSliResponse windowsBased) {
-        this.basicSli = Objects.requireNonNull(basicSli);
-        this.requestBased = Objects.requireNonNull(requestBased);
-        this.windowsBased = Objects.requireNonNull(windowsBased);
+        this.basicSli = basicSli;
+        this.requestBased = requestBased;
+        this.windowsBased = windowsBased;
     }
 
     /**

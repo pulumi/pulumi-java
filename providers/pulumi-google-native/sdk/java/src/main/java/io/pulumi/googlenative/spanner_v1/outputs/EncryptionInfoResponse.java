@@ -31,9 +31,9 @@ public final class EncryptionInfoResponse {
         StatusResponse encryptionStatus,
         String encryptionType,
         String kmsKeyVersion) {
-        this.encryptionStatus = Objects.requireNonNull(encryptionStatus);
-        this.encryptionType = Objects.requireNonNull(encryptionType);
-        this.kmsKeyVersion = Objects.requireNonNull(kmsKeyVersion);
+        this.encryptionStatus = encryptionStatus;
+        this.encryptionType = encryptionType;
+        this.kmsKeyVersion = kmsKeyVersion;
     }
 
     /**

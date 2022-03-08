@@ -17,7 +17,7 @@ public final class ResourcePolicyInstanceSchedulePolicyScheduleResponse {
 
     @OutputCustomType.Constructor({"schedule"})
     private ResourcePolicyInstanceSchedulePolicyScheduleResponse(String schedule) {
-        this.schedule = Objects.requireNonNull(schedule);
+        this.schedule = schedule;
     }
 
     /**

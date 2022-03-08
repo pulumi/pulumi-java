@@ -31,9 +31,9 @@ public final class NotificationConfigResponse {
         List<String> eventTypes,
         String payloadFormat,
         String pubsubTopic) {
-        this.eventTypes = Objects.requireNonNull(eventTypes);
-        this.payloadFormat = Objects.requireNonNull(payloadFormat);
-        this.pubsubTopic = Objects.requireNonNull(pubsubTopic);
+        this.eventTypes = eventTypes;
+        this.payloadFormat = payloadFormat;
+        this.pubsubTopic = pubsubTopic;
     }
 
     /**

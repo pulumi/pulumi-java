@@ -37,10 +37,10 @@ public final class ArgumentResponse {
         StandardSqlDataTypeResponse dataType,
         String mode,
         String name) {
-        this.argumentKind = Objects.requireNonNull(argumentKind);
-        this.dataType = Objects.requireNonNull(dataType);
-        this.mode = Objects.requireNonNull(mode);
-        this.name = Objects.requireNonNull(name);
+        this.argumentKind = argumentKind;
+        this.dataType = dataType;
+        this.mode = mode;
+        this.name = name;
     }
 
     /**

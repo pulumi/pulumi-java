@@ -55,13 +55,13 @@ public final class GetBackupResult {
         String statusMessage,
         String type,
         String updateTime) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.state = Objects.requireNonNull(state);
-        this.statusMessage = Objects.requireNonNull(statusMessage);
-        this.type = Objects.requireNonNull(type);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.createTime = createTime;
+        this.labels = labels;
+        this.name = name;
+        this.state = state;
+        this.statusMessage = statusMessage;
+        this.type = type;
+        this.updateTime = updateTime;
     }
 
     /**

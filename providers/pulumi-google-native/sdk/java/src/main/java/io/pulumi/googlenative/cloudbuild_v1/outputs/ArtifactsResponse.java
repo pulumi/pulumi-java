@@ -26,8 +26,8 @@ public final class ArtifactsResponse {
     private ArtifactsResponse(
         List<String> images,
         ArtifactObjectsResponse objects) {
-        this.images = Objects.requireNonNull(images);
-        this.objects = Objects.requireNonNull(objects);
+        this.images = images;
+        this.objects = objects;
     }
 
     /**

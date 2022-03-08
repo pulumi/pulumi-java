@@ -61,14 +61,14 @@ public final class GetGatewayResult {
         String name,
         String state,
         String updateTime) {
-        this.apiConfig = Objects.requireNonNull(apiConfig);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.defaultHostname = Objects.requireNonNull(defaultHostname);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.state = Objects.requireNonNull(state);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.apiConfig = apiConfig;
+        this.createTime = createTime;
+        this.defaultHostname = defaultHostname;
+        this.displayName = displayName;
+        this.labels = labels;
+        this.name = name;
+        this.state = state;
+        this.updateTime = updateTime;
     }
 
     /**

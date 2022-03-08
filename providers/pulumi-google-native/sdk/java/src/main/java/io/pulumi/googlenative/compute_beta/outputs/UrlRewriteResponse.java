@@ -24,8 +24,8 @@ public final class UrlRewriteResponse {
     private UrlRewriteResponse(
         String hostRewrite,
         String pathPrefixRewrite) {
-        this.hostRewrite = Objects.requireNonNull(hostRewrite);
-        this.pathPrefixRewrite = Objects.requireNonNull(pathPrefixRewrite);
+        this.hostRewrite = hostRewrite;
+        this.pathPrefixRewrite = pathPrefixRewrite;
     }
 
     /**

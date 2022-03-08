@@ -25,8 +25,8 @@ public final class AllowedKeyTypeResponse {
     private AllowedKeyTypeResponse(
         EcKeyTypeResponse ellipticCurve,
         RsaKeyTypeResponse rsa) {
-        this.ellipticCurve = Objects.requireNonNull(ellipticCurve);
-        this.rsa = Objects.requireNonNull(rsa);
+        this.ellipticCurve = ellipticCurve;
+        this.rsa = rsa;
     }
 
     /**

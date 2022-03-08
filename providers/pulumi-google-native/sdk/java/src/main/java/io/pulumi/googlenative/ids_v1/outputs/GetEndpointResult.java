@@ -80,17 +80,17 @@ public final class GetEndpointResult {
         String state,
         Boolean trafficLogs,
         String updateTime) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.description = Objects.requireNonNull(description);
-        this.endpointForwardingRule = Objects.requireNonNull(endpointForwardingRule);
-        this.endpointIp = Objects.requireNonNull(endpointIp);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.network = Objects.requireNonNull(network);
-        this.severity = Objects.requireNonNull(severity);
-        this.state = Objects.requireNonNull(state);
-        this.trafficLogs = Objects.requireNonNull(trafficLogs);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.createTime = createTime;
+        this.description = description;
+        this.endpointForwardingRule = endpointForwardingRule;
+        this.endpointIp = endpointIp;
+        this.labels = labels;
+        this.name = name;
+        this.network = network;
+        this.severity = severity;
+        this.state = state;
+        this.trafficLogs = trafficLogs;
+        this.updateTime = updateTime;
     }
 
     /**

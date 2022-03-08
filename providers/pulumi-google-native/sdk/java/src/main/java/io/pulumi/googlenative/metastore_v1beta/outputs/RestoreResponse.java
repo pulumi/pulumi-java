@@ -48,12 +48,12 @@ public final class RestoreResponse {
         String startTime,
         String state,
         String type) {
-        this.backup = Objects.requireNonNull(backup);
-        this.details = Objects.requireNonNull(details);
-        this.endTime = Objects.requireNonNull(endTime);
-        this.startTime = Objects.requireNonNull(startTime);
-        this.state = Objects.requireNonNull(state);
-        this.type = Objects.requireNonNull(type);
+        this.backup = backup;
+        this.details = details;
+        this.endTime = endTime;
+        this.startTime = startTime;
+        this.state = state;
+        this.type = type;
     }
 
     /**

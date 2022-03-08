@@ -54,13 +54,13 @@ public final class FailureDetailResponse {
         Boolean otherNativeCrash,
         Boolean timedOut,
         Boolean unableToCrawl) {
-        this.crashed = Objects.requireNonNull(crashed);
-        this.deviceOutOfMemory = Objects.requireNonNull(deviceOutOfMemory);
-        this.failedRoboscript = Objects.requireNonNull(failedRoboscript);
-        this.notInstalled = Objects.requireNonNull(notInstalled);
-        this.otherNativeCrash = Objects.requireNonNull(otherNativeCrash);
-        this.timedOut = Objects.requireNonNull(timedOut);
-        this.unableToCrawl = Objects.requireNonNull(unableToCrawl);
+        this.crashed = crashed;
+        this.deviceOutOfMemory = deviceOutOfMemory;
+        this.failedRoboscript = failedRoboscript;
+        this.notInstalled = notInstalled;
+        this.otherNativeCrash = otherNativeCrash;
+        this.timedOut = timedOut;
+        this.unableToCrawl = unableToCrawl;
     }
 
     /**

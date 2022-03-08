@@ -148,28 +148,28 @@ public final class GetSubnetworkResult {
         String selfLink,
         String stackType,
         String state) {
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.description = Objects.requireNonNull(description);
-        this.enableFlowLogs = Objects.requireNonNull(enableFlowLogs);
-        this.externalIpv6Prefix = Objects.requireNonNull(externalIpv6Prefix);
-        this.fingerprint = Objects.requireNonNull(fingerprint);
-        this.gatewayAddress = Objects.requireNonNull(gatewayAddress);
-        this.ipCidrRange = Objects.requireNonNull(ipCidrRange);
-        this.ipv6AccessType = Objects.requireNonNull(ipv6AccessType);
-        this.ipv6CidrRange = Objects.requireNonNull(ipv6CidrRange);
-        this.kind = Objects.requireNonNull(kind);
-        this.logConfig = Objects.requireNonNull(logConfig);
-        this.name = Objects.requireNonNull(name);
-        this.network = Objects.requireNonNull(network);
-        this.privateIpGoogleAccess = Objects.requireNonNull(privateIpGoogleAccess);
-        this.privateIpv6GoogleAccess = Objects.requireNonNull(privateIpv6GoogleAccess);
-        this.purpose = Objects.requireNonNull(purpose);
-        this.region = Objects.requireNonNull(region);
-        this.role = Objects.requireNonNull(role);
-        this.secondaryIpRanges = Objects.requireNonNull(secondaryIpRanges);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.stackType = Objects.requireNonNull(stackType);
-        this.state = Objects.requireNonNull(state);
+        this.creationTimestamp = creationTimestamp;
+        this.description = description;
+        this.enableFlowLogs = enableFlowLogs;
+        this.externalIpv6Prefix = externalIpv6Prefix;
+        this.fingerprint = fingerprint;
+        this.gatewayAddress = gatewayAddress;
+        this.ipCidrRange = ipCidrRange;
+        this.ipv6AccessType = ipv6AccessType;
+        this.ipv6CidrRange = ipv6CidrRange;
+        this.kind = kind;
+        this.logConfig = logConfig;
+        this.name = name;
+        this.network = network;
+        this.privateIpGoogleAccess = privateIpGoogleAccess;
+        this.privateIpv6GoogleAccess = privateIpv6GoogleAccess;
+        this.purpose = purpose;
+        this.region = region;
+        this.role = role;
+        this.secondaryIpRanges = secondaryIpRanges;
+        this.selfLink = selfLink;
+        this.stackType = stackType;
+        this.state = state;
     }
 
     /**

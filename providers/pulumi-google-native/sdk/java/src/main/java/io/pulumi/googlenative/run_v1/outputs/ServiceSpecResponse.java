@@ -26,8 +26,8 @@ public final class ServiceSpecResponse {
     private ServiceSpecResponse(
         RevisionTemplateResponse template,
         List<TrafficTargetResponse> traffic) {
-        this.template = Objects.requireNonNull(template);
-        this.traffic = Objects.requireNonNull(traffic);
+        this.template = template;
+        this.traffic = traffic;
     }
 
     /**

@@ -39,10 +39,10 @@ public final class OSPolicyResourceResponse {
         OSPolicyResourceFileResourceResponse file,
         OSPolicyResourcePackageResourceResponse pkg,
         OSPolicyResourceRepositoryResourceResponse repository) {
-        this.exec = Objects.requireNonNull(exec);
-        this.file = Objects.requireNonNull(file);
-        this.pkg = Objects.requireNonNull(pkg);
-        this.repository = Objects.requireNonNull(repository);
+        this.exec = exec;
+        this.file = file;
+        this.pkg = pkg;
+        this.repository = repository;
     }
 
     /**

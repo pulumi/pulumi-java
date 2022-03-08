@@ -33,10 +33,10 @@ public final class SqlScheduledMaintenanceResponse {
         Boolean canReschedule,
         String scheduleDeadlineTime,
         String startTime) {
-        this.canDefer = Objects.requireNonNull(canDefer);
-        this.canReschedule = Objects.requireNonNull(canReschedule);
-        this.scheduleDeadlineTime = Objects.requireNonNull(scheduleDeadlineTime);
-        this.startTime = Objects.requireNonNull(startTime);
+        this.canDefer = canDefer;
+        this.canReschedule = canReschedule;
+        this.scheduleDeadlineTime = scheduleDeadlineTime;
+        this.startTime = startTime;
     }
 
     public Boolean getCanDefer() {

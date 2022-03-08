@@ -31,9 +31,9 @@ public final class HivePartitioningOptionsResponse {
         String mode,
         Boolean requirePartitionFilter,
         String sourceUriPrefix) {
-        this.mode = Objects.requireNonNull(mode);
-        this.requirePartitionFilter = Objects.requireNonNull(requirePartitionFilter);
-        this.sourceUriPrefix = Objects.requireNonNull(sourceUriPrefix);
+        this.mode = mode;
+        this.requirePartitionFilter = requirePartitionFilter;
+        this.sourceUriPrefix = sourceUriPrefix;
     }
 
     /**

@@ -116,21 +116,21 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse {
         GoogleCloudDialogflowV2IntentMessageSuggestionsResponse suggestions,
         GoogleCloudDialogflowV2IntentMessageTableCardResponse tableCard,
         GoogleCloudDialogflowV2IntentMessageTextResponse text) {
-        this.basicCard = Objects.requireNonNull(basicCard);
-        this.browseCarouselCard = Objects.requireNonNull(browseCarouselCard);
-        this.card = Objects.requireNonNull(card);
-        this.carouselSelect = Objects.requireNonNull(carouselSelect);
-        this.image = Objects.requireNonNull(image);
-        this.linkOutSuggestion = Objects.requireNonNull(linkOutSuggestion);
-        this.listSelect = Objects.requireNonNull(listSelect);
-        this.mediaContent = Objects.requireNonNull(mediaContent);
-        this.payload = Objects.requireNonNull(payload);
-        this.platform = Objects.requireNonNull(platform);
-        this.quickReplies = Objects.requireNonNull(quickReplies);
-        this.simpleResponses = Objects.requireNonNull(simpleResponses);
-        this.suggestions = Objects.requireNonNull(suggestions);
-        this.tableCard = Objects.requireNonNull(tableCard);
-        this.text = Objects.requireNonNull(text);
+        this.basicCard = basicCard;
+        this.browseCarouselCard = browseCarouselCard;
+        this.card = card;
+        this.carouselSelect = carouselSelect;
+        this.image = image;
+        this.linkOutSuggestion = linkOutSuggestion;
+        this.listSelect = listSelect;
+        this.mediaContent = mediaContent;
+        this.payload = payload;
+        this.platform = platform;
+        this.quickReplies = quickReplies;
+        this.simpleResponses = simpleResponses;
+        this.suggestions = suggestions;
+        this.tableCard = tableCard;
+        this.text = text;
     }
 
     /**

@@ -136,26 +136,26 @@ public final class GetRouteResult {
         String selfLink,
         List<String> tags,
         List<RouteWarningsItemResponse> warnings) {
-        this.asPaths = Objects.requireNonNull(asPaths);
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.description = Objects.requireNonNull(description);
-        this.destRange = Objects.requireNonNull(destRange);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.network = Objects.requireNonNull(network);
-        this.nextHopGateway = Objects.requireNonNull(nextHopGateway);
-        this.nextHopIlb = Objects.requireNonNull(nextHopIlb);
-        this.nextHopInstance = Objects.requireNonNull(nextHopInstance);
-        this.nextHopInterconnectAttachment = Objects.requireNonNull(nextHopInterconnectAttachment);
-        this.nextHopIp = Objects.requireNonNull(nextHopIp);
-        this.nextHopNetwork = Objects.requireNonNull(nextHopNetwork);
-        this.nextHopPeering = Objects.requireNonNull(nextHopPeering);
-        this.nextHopVpnTunnel = Objects.requireNonNull(nextHopVpnTunnel);
-        this.priority = Objects.requireNonNull(priority);
-        this.routeType = Objects.requireNonNull(routeType);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.tags = Objects.requireNonNull(tags);
-        this.warnings = Objects.requireNonNull(warnings);
+        this.asPaths = asPaths;
+        this.creationTimestamp = creationTimestamp;
+        this.description = description;
+        this.destRange = destRange;
+        this.kind = kind;
+        this.name = name;
+        this.network = network;
+        this.nextHopGateway = nextHopGateway;
+        this.nextHopIlb = nextHopIlb;
+        this.nextHopInstance = nextHopInstance;
+        this.nextHopInterconnectAttachment = nextHopInterconnectAttachment;
+        this.nextHopIp = nextHopIp;
+        this.nextHopNetwork = nextHopNetwork;
+        this.nextHopPeering = nextHopPeering;
+        this.nextHopVpnTunnel = nextHopVpnTunnel;
+        this.priority = priority;
+        this.routeType = routeType;
+        this.selfLink = selfLink;
+        this.tags = tags;
+        this.warnings = warnings;
     }
 
     /**

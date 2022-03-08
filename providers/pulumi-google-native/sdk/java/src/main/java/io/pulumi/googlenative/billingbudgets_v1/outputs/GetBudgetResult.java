@@ -59,13 +59,13 @@ public final class GetBudgetResult {
         String name,
         GoogleCloudBillingBudgetsV1NotificationsRuleResponse notificationsRule,
         List<GoogleCloudBillingBudgetsV1ThresholdRuleResponse> thresholdRules) {
-        this.amount = Objects.requireNonNull(amount);
-        this.budgetFilter = Objects.requireNonNull(budgetFilter);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.etag = Objects.requireNonNull(etag);
-        this.name = Objects.requireNonNull(name);
-        this.notificationsRule = Objects.requireNonNull(notificationsRule);
-        this.thresholdRules = Objects.requireNonNull(thresholdRules);
+        this.amount = amount;
+        this.budgetFilter = budgetFilter;
+        this.displayName = displayName;
+        this.etag = etag;
+        this.name = name;
+        this.notificationsRule = notificationsRule;
+        this.thresholdRules = thresholdRules;
     }
 
     /**

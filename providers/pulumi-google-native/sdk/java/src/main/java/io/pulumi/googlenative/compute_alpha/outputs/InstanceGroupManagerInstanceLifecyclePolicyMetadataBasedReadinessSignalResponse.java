@@ -17,7 +17,7 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadi
 
     @OutputCustomType.Constructor({"timeoutSec"})
     private InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalResponse(Integer timeoutSec) {
-        this.timeoutSec = Objects.requireNonNull(timeoutSec);
+        this.timeoutSec = timeoutSec;
     }
 
     /**

@@ -25,8 +25,8 @@ public final class SqlServerDatabaseDetailsResponse {
     private SqlServerDatabaseDetailsResponse(
         Integer compatibilityLevel,
         String recoveryModel) {
-        this.compatibilityLevel = Objects.requireNonNull(compatibilityLevel);
-        this.recoveryModel = Objects.requireNonNull(recoveryModel);
+        this.compatibilityLevel = compatibilityLevel;
+        this.recoveryModel = recoveryModel;
     }
 
     /**

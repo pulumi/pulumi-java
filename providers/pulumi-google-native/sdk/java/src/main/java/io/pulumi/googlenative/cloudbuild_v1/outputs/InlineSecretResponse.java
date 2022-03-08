@@ -25,8 +25,8 @@ public final class InlineSecretResponse {
     private InlineSecretResponse(
         Map<String,String> envMap,
         String kmsKeyName) {
-        this.envMap = Objects.requireNonNull(envMap);
-        this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
+        this.envMap = envMap;
+        this.kmsKeyName = kmsKeyName;
     }
 
     /**

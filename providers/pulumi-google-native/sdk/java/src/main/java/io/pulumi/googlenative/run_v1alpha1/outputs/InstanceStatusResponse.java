@@ -62,14 +62,14 @@ public final class InstanceStatusResponse {
         Integer restarted,
         String startTime,
         Integer succeeded) {
-        this.completionTime = Objects.requireNonNull(completionTime);
-        this.failed = Objects.requireNonNull(failed);
-        this.index = Objects.requireNonNull(index);
-        this.lastAttemptResult = Objects.requireNonNull(lastAttemptResult);
-        this.lastExitCode = Objects.requireNonNull(lastExitCode);
-        this.restarted = Objects.requireNonNull(restarted);
-        this.startTime = Objects.requireNonNull(startTime);
-        this.succeeded = Objects.requireNonNull(succeeded);
+        this.completionTime = completionTime;
+        this.failed = failed;
+        this.index = index;
+        this.lastAttemptResult = lastAttemptResult;
+        this.lastExitCode = lastExitCode;
+        this.restarted = restarted;
+        this.startTime = startTime;
+        this.succeeded = succeeded;
     }
 
     /**

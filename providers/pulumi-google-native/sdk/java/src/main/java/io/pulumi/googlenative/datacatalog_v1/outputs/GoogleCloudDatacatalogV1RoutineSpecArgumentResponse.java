@@ -30,9 +30,9 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgumentResponse {
         String mode,
         String name,
         String type) {
-        this.mode = Objects.requireNonNull(mode);
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.mode = mode;
+        this.name = name;
+        this.type = type;
     }
 
     /**

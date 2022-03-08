@@ -13,7 +13,7 @@ public final class ArtifactHashesResponse {
 
     @OutputCustomType.Constructor({"sha256"})
     private ArtifactHashesResponse(String sha256) {
-        this.sha256 = Objects.requireNonNull(sha256);
+        this.sha256 = sha256;
     }
 
     public String getSha256() {

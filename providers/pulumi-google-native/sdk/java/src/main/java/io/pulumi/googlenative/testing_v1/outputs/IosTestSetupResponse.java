@@ -39,10 +39,10 @@ public final class IosTestSetupResponse {
         String networkProfile,
         List<IosDeviceFileResponse> pullDirectories,
         List<IosDeviceFileResponse> pushFiles) {
-        this.additionalIpas = Objects.requireNonNull(additionalIpas);
-        this.networkProfile = Objects.requireNonNull(networkProfile);
-        this.pullDirectories = Objects.requireNonNull(pullDirectories);
-        this.pushFiles = Objects.requireNonNull(pushFiles);
+        this.additionalIpas = additionalIpas;
+        this.networkProfile = networkProfile;
+        this.pullDirectories = pullDirectories;
+        this.pushFiles = pushFiles;
     }
 
     /**

@@ -36,10 +36,10 @@ public final class StageSourceResponse {
         String originalTransformOrCollection,
         String sizeBytes,
         String userName) {
-        this.name = Objects.requireNonNull(name);
-        this.originalTransformOrCollection = Objects.requireNonNull(originalTransformOrCollection);
-        this.sizeBytes = Objects.requireNonNull(sizeBytes);
-        this.userName = Objects.requireNonNull(userName);
+        this.name = name;
+        this.originalTransformOrCollection = originalTransformOrCollection;
+        this.sizeBytes = sizeBytes;
+        this.userName = userName;
     }
 
     /**

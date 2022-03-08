@@ -32,9 +32,9 @@ public final class SoftwareRecipeArtifactResponse {
         Boolean allowInsecure,
         SoftwareRecipeArtifactGcsResponse gcs,
         SoftwareRecipeArtifactRemoteResponse remote) {
-        this.allowInsecure = Objects.requireNonNull(allowInsecure);
-        this.gcs = Objects.requireNonNull(gcs);
-        this.remote = Objects.requireNonNull(remote);
+        this.allowInsecure = allowInsecure;
+        this.gcs = gcs;
+        this.remote = remote;
     }
 
     /**

@@ -25,8 +25,8 @@ public final class GoogleCloudNetworksecurityV1beta1CertificateProviderResponse 
     private GoogleCloudNetworksecurityV1beta1CertificateProviderResponse(
         CertificateProviderInstanceResponse certificateProviderInstance,
         GoogleCloudNetworksecurityV1beta1GrpcEndpointResponse grpcEndpoint) {
-        this.certificateProviderInstance = Objects.requireNonNull(certificateProviderInstance);
-        this.grpcEndpoint = Objects.requireNonNull(grpcEndpoint);
+        this.certificateProviderInstance = certificateProviderInstance;
+        this.grpcEndpoint = grpcEndpoint;
     }
 
     /**

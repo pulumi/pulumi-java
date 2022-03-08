@@ -43,11 +43,11 @@ public final class AndroidRoboTestResponse {
         String bootstrapRunnerClass,
         Integer maxDepth,
         Integer maxSteps) {
-        this.appInitialActivity = Objects.requireNonNull(appInitialActivity);
-        this.bootstrapPackageId = Objects.requireNonNull(bootstrapPackageId);
-        this.bootstrapRunnerClass = Objects.requireNonNull(bootstrapRunnerClass);
-        this.maxDepth = Objects.requireNonNull(maxDepth);
-        this.maxSteps = Objects.requireNonNull(maxSteps);
+        this.appInitialActivity = appInitialActivity;
+        this.bootstrapPackageId = bootstrapPackageId;
+        this.bootstrapRunnerClass = bootstrapRunnerClass;
+        this.maxDepth = maxDepth;
+        this.maxSteps = maxSteps;
     }
 
     /**

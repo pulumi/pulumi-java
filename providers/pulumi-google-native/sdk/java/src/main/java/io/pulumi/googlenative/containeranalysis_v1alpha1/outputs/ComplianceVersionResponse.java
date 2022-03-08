@@ -24,8 +24,8 @@ public final class ComplianceVersionResponse {
     private ComplianceVersionResponse(
         String cpeUri,
         String version) {
-        this.cpeUri = Objects.requireNonNull(cpeUri);
-        this.version = Objects.requireNonNull(version);
+        this.cpeUri = cpeUri;
+        this.version = version;
     }
 
     /**

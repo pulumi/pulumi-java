@@ -17,7 +17,7 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigRespon
 
     @OutputCustomType.Constructor({"exactMatchConfig"})
     private GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse(GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse exactMatchConfig) {
-        this.exactMatchConfig = Objects.requireNonNull(exactMatchConfig);
+        this.exactMatchConfig = exactMatchConfig;
     }
 
     /**

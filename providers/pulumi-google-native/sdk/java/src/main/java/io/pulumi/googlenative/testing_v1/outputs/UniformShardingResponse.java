@@ -17,7 +17,7 @@ public final class UniformShardingResponse {
 
     @OutputCustomType.Constructor({"numShards"})
     private UniformShardingResponse(Integer numShards) {
-        this.numShards = Objects.requireNonNull(numShards);
+        this.numShards = numShards;
     }
 
     /**

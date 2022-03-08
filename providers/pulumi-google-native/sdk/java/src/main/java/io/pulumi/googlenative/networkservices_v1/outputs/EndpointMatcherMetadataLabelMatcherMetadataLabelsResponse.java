@@ -24,8 +24,8 @@ public final class EndpointMatcherMetadataLabelMatcherMetadataLabelsResponse {
     private EndpointMatcherMetadataLabelMatcherMetadataLabelsResponse(
         String labelName,
         String labelValue) {
-        this.labelName = Objects.requireNonNull(labelName);
-        this.labelValue = Objects.requireNonNull(labelValue);
+        this.labelName = labelName;
+        this.labelValue = labelValue;
     }
 
     /**

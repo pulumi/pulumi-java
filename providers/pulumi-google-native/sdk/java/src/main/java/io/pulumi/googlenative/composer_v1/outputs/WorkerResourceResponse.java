@@ -43,11 +43,11 @@ public final class WorkerResourceResponse {
         Double memoryGb,
         Integer minCount,
         Double storageGb) {
-        this.cpu = Objects.requireNonNull(cpu);
-        this.maxCount = Objects.requireNonNull(maxCount);
-        this.memoryGb = Objects.requireNonNull(memoryGb);
-        this.minCount = Objects.requireNonNull(minCount);
-        this.storageGb = Objects.requireNonNull(storageGb);
+        this.cpu = cpu;
+        this.maxCount = maxCount;
+        this.memoryGb = memoryGb;
+        this.minCount = minCount;
+        this.storageGb = storageGb;
     }
 
     /**

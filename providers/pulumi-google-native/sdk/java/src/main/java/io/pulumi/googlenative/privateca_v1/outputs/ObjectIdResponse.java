@@ -18,7 +18,7 @@ public final class ObjectIdResponse {
 
     @OutputCustomType.Constructor({"objectIdPath"})
     private ObjectIdResponse(List<Integer> objectIdPath) {
-        this.objectIdPath = Objects.requireNonNull(objectIdPath);
+        this.objectIdPath = objectIdPath;
     }
 
     /**

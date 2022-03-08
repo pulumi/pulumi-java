@@ -55,13 +55,13 @@ public final class GetRegionNotificationEndpointResult {
         String name,
         String region,
         String selfLink) {
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.description = Objects.requireNonNull(description);
-        this.grpcSettings = Objects.requireNonNull(grpcSettings);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.region = Objects.requireNonNull(region);
-        this.selfLink = Objects.requireNonNull(selfLink);
+        this.creationTimestamp = creationTimestamp;
+        this.description = description;
+        this.grpcSettings = grpcSettings;
+        this.kind = kind;
+        this.name = name;
+        this.region = region;
+        this.selfLink = selfLink;
     }
 
     /**

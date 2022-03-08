@@ -25,8 +25,8 @@ public final class BackendBucketCdnPolicyCacheKeyPolicyResponse {
     private BackendBucketCdnPolicyCacheKeyPolicyResponse(
         List<String> includeHttpHeaders,
         List<String> queryStringWhitelist) {
-        this.includeHttpHeaders = Objects.requireNonNull(includeHttpHeaders);
-        this.queryStringWhitelist = Objects.requireNonNull(queryStringWhitelist);
+        this.includeHttpHeaders = includeHttpHeaders;
+        this.queryStringWhitelist = queryStringWhitelist;
     }
 
     /**

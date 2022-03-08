@@ -25,8 +25,8 @@ public final class AlertStrategyResponse {
     private AlertStrategyResponse(
         String autoClose,
         NotificationRateLimitResponse notificationRateLimit) {
-        this.autoClose = Objects.requireNonNull(autoClose);
-        this.notificationRateLimit = Objects.requireNonNull(notificationRateLimit);
+        this.autoClose = autoClose;
+        this.notificationRateLimit = notificationRateLimit;
     }
 
     /**

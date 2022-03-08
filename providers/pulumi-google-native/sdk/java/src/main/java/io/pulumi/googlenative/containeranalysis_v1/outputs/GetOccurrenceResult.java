@@ -131,24 +131,24 @@ public final class GetOccurrenceResult {
         String updateTime,
         UpgradeOccurrenceResponse upgrade,
         VulnerabilityOccurrenceResponse vulnerability) {
-        this.attestation = Objects.requireNonNull(attestation);
-        this.build = Objects.requireNonNull(build);
-        this.compliance = Objects.requireNonNull(compliance);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.deployment = Objects.requireNonNull(deployment);
-        this.discovery = Objects.requireNonNull(discovery);
-        this.dsseAttestation = Objects.requireNonNull(dsseAttestation);
-        this.envelope = Objects.requireNonNull(envelope);
-        this.image = Objects.requireNonNull(image);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.noteName = Objects.requireNonNull(noteName);
-        this.$package = Objects.requireNonNull($package);
-        this.remediation = Objects.requireNonNull(remediation);
-        this.resourceUri = Objects.requireNonNull(resourceUri);
-        this.updateTime = Objects.requireNonNull(updateTime);
-        this.upgrade = Objects.requireNonNull(upgrade);
-        this.vulnerability = Objects.requireNonNull(vulnerability);
+        this.attestation = attestation;
+        this.build = build;
+        this.compliance = compliance;
+        this.createTime = createTime;
+        this.deployment = deployment;
+        this.discovery = discovery;
+        this.dsseAttestation = dsseAttestation;
+        this.envelope = envelope;
+        this.image = image;
+        this.kind = kind;
+        this.name = name;
+        this.noteName = noteName;
+        this.$package = $package;
+        this.remediation = remediation;
+        this.resourceUri = resourceUri;
+        this.updateTime = updateTime;
+        this.upgrade = upgrade;
+        this.vulnerability = vulnerability;
     }
 
     /**

@@ -25,8 +25,8 @@ public final class ParameterValidationResponse {
     private ParameterValidationResponse(
         RegexValidationResponse regex,
         ValueValidationResponse values) {
-        this.regex = Objects.requireNonNull(regex);
-        this.values = Objects.requireNonNull(values);
+        this.regex = regex;
+        this.values = values;
     }
 
     /**

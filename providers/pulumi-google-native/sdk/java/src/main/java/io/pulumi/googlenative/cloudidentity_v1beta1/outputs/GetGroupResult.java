@@ -83,17 +83,17 @@ public final class GetGroupResult {
         String parent,
         List<PosixGroupResponse> posixGroups,
         String updateTime) {
-        this.additionalGroupKeys = Objects.requireNonNull(additionalGroupKeys);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.description = Objects.requireNonNull(description);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.dynamicGroupMetadata = Objects.requireNonNull(dynamicGroupMetadata);
-        this.groupKey = Objects.requireNonNull(groupKey);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.parent = Objects.requireNonNull(parent);
-        this.posixGroups = Objects.requireNonNull(posixGroups);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.additionalGroupKeys = additionalGroupKeys;
+        this.createTime = createTime;
+        this.description = description;
+        this.displayName = displayName;
+        this.dynamicGroupMetadata = dynamicGroupMetadata;
+        this.groupKey = groupKey;
+        this.labels = labels;
+        this.name = name;
+        this.parent = parent;
+        this.posixGroups = posixGroups;
+        this.updateTime = updateTime;
     }
 
     /**

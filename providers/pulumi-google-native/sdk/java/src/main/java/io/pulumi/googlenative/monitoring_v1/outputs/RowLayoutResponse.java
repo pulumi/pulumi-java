@@ -18,7 +18,7 @@ public final class RowLayoutResponse {
 
     @OutputCustomType.Constructor({"rows"})
     private RowLayoutResponse(List<RowResponse> rows) {
-        this.rows = Objects.requireNonNull(rows);
+        this.rows = rows;
     }
 
     /**

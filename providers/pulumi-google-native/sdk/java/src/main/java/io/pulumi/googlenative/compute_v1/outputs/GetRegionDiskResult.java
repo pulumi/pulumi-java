@@ -227,41 +227,41 @@ public final class GetRegionDiskResult {
         String type,
         List<String> users,
         String zone) {
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.description = Objects.requireNonNull(description);
-        this.diskEncryptionKey = Objects.requireNonNull(diskEncryptionKey);
-        this.guestOsFeatures = Objects.requireNonNull(guestOsFeatures);
-        this.kind = Objects.requireNonNull(kind);
-        this.labelFingerprint = Objects.requireNonNull(labelFingerprint);
-        this.labels = Objects.requireNonNull(labels);
-        this.lastAttachTimestamp = Objects.requireNonNull(lastAttachTimestamp);
-        this.lastDetachTimestamp = Objects.requireNonNull(lastDetachTimestamp);
-        this.licenseCodes = Objects.requireNonNull(licenseCodes);
-        this.licenses = Objects.requireNonNull(licenses);
-        this.locationHint = Objects.requireNonNull(locationHint);
-        this.name = Objects.requireNonNull(name);
-        this.options = Objects.requireNonNull(options);
-        this.physicalBlockSizeBytes = Objects.requireNonNull(physicalBlockSizeBytes);
-        this.provisionedIops = Objects.requireNonNull(provisionedIops);
-        this.region = Objects.requireNonNull(region);
-        this.replicaZones = Objects.requireNonNull(replicaZones);
-        this.resourcePolicies = Objects.requireNonNull(resourcePolicies);
-        this.satisfiesPzs = Objects.requireNonNull(satisfiesPzs);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.sizeGb = Objects.requireNonNull(sizeGb);
-        this.sourceDisk = Objects.requireNonNull(sourceDisk);
-        this.sourceDiskId = Objects.requireNonNull(sourceDiskId);
-        this.sourceImage = Objects.requireNonNull(sourceImage);
-        this.sourceImageEncryptionKey = Objects.requireNonNull(sourceImageEncryptionKey);
-        this.sourceImageId = Objects.requireNonNull(sourceImageId);
-        this.sourceSnapshot = Objects.requireNonNull(sourceSnapshot);
-        this.sourceSnapshotEncryptionKey = Objects.requireNonNull(sourceSnapshotEncryptionKey);
-        this.sourceSnapshotId = Objects.requireNonNull(sourceSnapshotId);
-        this.sourceStorageObject = Objects.requireNonNull(sourceStorageObject);
-        this.status = Objects.requireNonNull(status);
-        this.type = Objects.requireNonNull(type);
-        this.users = Objects.requireNonNull(users);
-        this.zone = Objects.requireNonNull(zone);
+        this.creationTimestamp = creationTimestamp;
+        this.description = description;
+        this.diskEncryptionKey = diskEncryptionKey;
+        this.guestOsFeatures = guestOsFeatures;
+        this.kind = kind;
+        this.labelFingerprint = labelFingerprint;
+        this.labels = labels;
+        this.lastAttachTimestamp = lastAttachTimestamp;
+        this.lastDetachTimestamp = lastDetachTimestamp;
+        this.licenseCodes = licenseCodes;
+        this.licenses = licenses;
+        this.locationHint = locationHint;
+        this.name = name;
+        this.options = options;
+        this.physicalBlockSizeBytes = physicalBlockSizeBytes;
+        this.provisionedIops = provisionedIops;
+        this.region = region;
+        this.replicaZones = replicaZones;
+        this.resourcePolicies = resourcePolicies;
+        this.satisfiesPzs = satisfiesPzs;
+        this.selfLink = selfLink;
+        this.sizeGb = sizeGb;
+        this.sourceDisk = sourceDisk;
+        this.sourceDiskId = sourceDiskId;
+        this.sourceImage = sourceImage;
+        this.sourceImageEncryptionKey = sourceImageEncryptionKey;
+        this.sourceImageId = sourceImageId;
+        this.sourceSnapshot = sourceSnapshot;
+        this.sourceSnapshotEncryptionKey = sourceSnapshotEncryptionKey;
+        this.sourceSnapshotId = sourceSnapshotId;
+        this.sourceStorageObject = sourceStorageObject;
+        this.status = status;
+        this.type = type;
+        this.users = users;
+        this.zone = zone;
     }
 
     /**

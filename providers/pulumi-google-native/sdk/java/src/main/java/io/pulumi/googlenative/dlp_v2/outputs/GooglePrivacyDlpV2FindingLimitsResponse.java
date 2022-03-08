@@ -32,9 +32,9 @@ public final class GooglePrivacyDlpV2FindingLimitsResponse {
         List<GooglePrivacyDlpV2InfoTypeLimitResponse> maxFindingsPerInfoType,
         Integer maxFindingsPerItem,
         Integer maxFindingsPerRequest) {
-        this.maxFindingsPerInfoType = Objects.requireNonNull(maxFindingsPerInfoType);
-        this.maxFindingsPerItem = Objects.requireNonNull(maxFindingsPerItem);
-        this.maxFindingsPerRequest = Objects.requireNonNull(maxFindingsPerRequest);
+        this.maxFindingsPerInfoType = maxFindingsPerInfoType;
+        this.maxFindingsPerItem = maxFindingsPerItem;
+        this.maxFindingsPerRequest = maxFindingsPerRequest;
     }
 
     /**

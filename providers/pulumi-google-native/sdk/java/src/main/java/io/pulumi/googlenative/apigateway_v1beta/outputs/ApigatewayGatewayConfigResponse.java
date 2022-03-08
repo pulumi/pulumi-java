@@ -17,7 +17,7 @@ public final class ApigatewayGatewayConfigResponse {
 
     @OutputCustomType.Constructor({"backendConfig"})
     private ApigatewayGatewayConfigResponse(ApigatewayBackendConfigResponse backendConfig) {
-        this.backendConfig = Objects.requireNonNull(backendConfig);
+        this.backendConfig = backendConfig;
     }
 
     /**

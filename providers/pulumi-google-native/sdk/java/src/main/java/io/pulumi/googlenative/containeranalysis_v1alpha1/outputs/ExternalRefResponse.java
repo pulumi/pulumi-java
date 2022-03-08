@@ -36,10 +36,10 @@ public final class ExternalRefResponse {
         String comment,
         String locator,
         String type) {
-        this.category = Objects.requireNonNull(category);
-        this.comment = Objects.requireNonNull(comment);
-        this.locator = Objects.requireNonNull(locator);
-        this.type = Objects.requireNonNull(type);
+        this.category = category;
+        this.comment = comment;
+        this.locator = locator;
+        this.type = type;
     }
 
     /**

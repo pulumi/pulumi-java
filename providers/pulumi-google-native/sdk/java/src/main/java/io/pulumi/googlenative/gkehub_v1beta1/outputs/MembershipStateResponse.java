@@ -30,9 +30,9 @@ public final class MembershipStateResponse {
         String code,
         String description,
         String updateTime) {
-        this.code = Objects.requireNonNull(code);
-        this.description = Objects.requireNonNull(description);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.code = code;
+        this.description = description;
+        this.updateTime = updateTime;
     }
 
     /**

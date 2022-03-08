@@ -42,11 +42,11 @@ public final class GooglePrivacyDlpV2StorageConfigResponse {
         GooglePrivacyDlpV2DatastoreOptionsResponse datastoreOptions,
         GooglePrivacyDlpV2HybridOptionsResponse hybridOptions,
         GooglePrivacyDlpV2TimespanConfigResponse timespanConfig) {
-        this.bigQueryOptions = Objects.requireNonNull(bigQueryOptions);
-        this.cloudStorageOptions = Objects.requireNonNull(cloudStorageOptions);
-        this.datastoreOptions = Objects.requireNonNull(datastoreOptions);
-        this.hybridOptions = Objects.requireNonNull(hybridOptions);
-        this.timespanConfig = Objects.requireNonNull(timespanConfig);
+        this.bigQueryOptions = bigQueryOptions;
+        this.cloudStorageOptions = cloudStorageOptions;
+        this.datastoreOptions = datastoreOptions;
+        this.hybridOptions = hybridOptions;
+        this.timespanConfig = timespanConfig;
     }
 
     /**

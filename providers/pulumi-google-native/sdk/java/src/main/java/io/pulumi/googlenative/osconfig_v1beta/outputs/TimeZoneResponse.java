@@ -17,7 +17,7 @@ public final class TimeZoneResponse {
 
     @OutputCustomType.Constructor({"version"})
     private TimeZoneResponse(String version) {
-        this.version = Objects.requireNonNull(version);
+        this.version = version;
     }
 
     /**

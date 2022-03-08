@@ -50,12 +50,12 @@ public final class GetWorkerPoolResult {
         String state,
         GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigResponse workerConfig,
         String workerCount) {
-        this.autoscale = Objects.requireNonNull(autoscale);
-        this.channel = Objects.requireNonNull(channel);
-        this.name = Objects.requireNonNull(name);
-        this.state = Objects.requireNonNull(state);
-        this.workerConfig = Objects.requireNonNull(workerConfig);
-        this.workerCount = Objects.requireNonNull(workerCount);
+        this.autoscale = autoscale;
+        this.channel = channel;
+        this.name = name;
+        this.state = state;
+        this.workerConfig = workerConfig;
+        this.workerCount = workerCount;
     }
 
     /**

@@ -17,7 +17,7 @@ public final class GcpFilestoreCsiDriverConfigResponse {
 
     @OutputCustomType.Constructor({"enabled"})
     private GcpFilestoreCsiDriverConfigResponse(Boolean enabled) {
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
     }
 
     /**

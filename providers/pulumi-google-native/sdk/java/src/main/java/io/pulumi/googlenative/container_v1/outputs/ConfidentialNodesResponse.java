@@ -17,7 +17,7 @@ public final class ConfidentialNodesResponse {
 
     @OutputCustomType.Constructor({"enabled"})
     private ConfidentialNodesResponse(Boolean enabled) {
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
     }
 
     /**

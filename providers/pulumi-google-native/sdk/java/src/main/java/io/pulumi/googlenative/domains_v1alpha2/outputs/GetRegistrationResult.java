@@ -89,18 +89,18 @@ public final class GetRegistrationResult {
         ContactSettingsResponse pendingContactSettings,
         String state,
         List<String> supportedPrivacy) {
-        this.contactSettings = Objects.requireNonNull(contactSettings);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.dnsSettings = Objects.requireNonNull(dnsSettings);
-        this.domainName = Objects.requireNonNull(domainName);
-        this.expireTime = Objects.requireNonNull(expireTime);
-        this.issues = Objects.requireNonNull(issues);
-        this.labels = Objects.requireNonNull(labels);
-        this.managementSettings = Objects.requireNonNull(managementSettings);
-        this.name = Objects.requireNonNull(name);
-        this.pendingContactSettings = Objects.requireNonNull(pendingContactSettings);
-        this.state = Objects.requireNonNull(state);
-        this.supportedPrivacy = Objects.requireNonNull(supportedPrivacy);
+        this.contactSettings = contactSettings;
+        this.createTime = createTime;
+        this.dnsSettings = dnsSettings;
+        this.domainName = domainName;
+        this.expireTime = expireTime;
+        this.issues = issues;
+        this.labels = labels;
+        this.managementSettings = managementSettings;
+        this.name = name;
+        this.pendingContactSettings = pendingContactSettings;
+        this.state = state;
+        this.supportedPrivacy = supportedPrivacy;
     }
 
     /**

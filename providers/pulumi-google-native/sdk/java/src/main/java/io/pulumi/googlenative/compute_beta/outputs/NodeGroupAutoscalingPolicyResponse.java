@@ -31,9 +31,9 @@ public final class NodeGroupAutoscalingPolicyResponse {
         Integer maxNodes,
         Integer minNodes,
         String mode) {
-        this.maxNodes = Objects.requireNonNull(maxNodes);
-        this.minNodes = Objects.requireNonNull(minNodes);
-        this.mode = Objects.requireNonNull(mode);
+        this.maxNodes = maxNodes;
+        this.minNodes = minNodes;
+        this.mode = mode;
     }
 
     /**

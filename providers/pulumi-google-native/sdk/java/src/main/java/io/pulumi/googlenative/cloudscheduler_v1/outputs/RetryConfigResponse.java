@@ -43,11 +43,11 @@ public final class RetryConfigResponse {
         String maxRetryDuration,
         String minBackoffDuration,
         Integer retryCount) {
-        this.maxBackoffDuration = Objects.requireNonNull(maxBackoffDuration);
-        this.maxDoublings = Objects.requireNonNull(maxDoublings);
-        this.maxRetryDuration = Objects.requireNonNull(maxRetryDuration);
-        this.minBackoffDuration = Objects.requireNonNull(minBackoffDuration);
-        this.retryCount = Objects.requireNonNull(retryCount);
+        this.maxBackoffDuration = maxBackoffDuration;
+        this.maxDoublings = maxDoublings;
+        this.maxRetryDuration = maxRetryDuration;
+        this.minBackoffDuration = minBackoffDuration;
+        this.retryCount = retryCount;
     }
 
     /**

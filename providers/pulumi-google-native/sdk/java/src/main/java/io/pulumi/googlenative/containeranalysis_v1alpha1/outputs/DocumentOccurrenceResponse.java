@@ -61,14 +61,14 @@ public final class DocumentOccurrenceResponse {
         String licenseListVersion,
         String namespace,
         String title) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.creatorComment = Objects.requireNonNull(creatorComment);
-        this.creators = Objects.requireNonNull(creators);
-        this.documentComment = Objects.requireNonNull(documentComment);
-        this.externalDocumentRefs = Objects.requireNonNull(externalDocumentRefs);
-        this.licenseListVersion = Objects.requireNonNull(licenseListVersion);
-        this.namespace = Objects.requireNonNull(namespace);
-        this.title = Objects.requireNonNull(title);
+        this.createTime = createTime;
+        this.creatorComment = creatorComment;
+        this.creators = creators;
+        this.documentComment = documentComment;
+        this.externalDocumentRefs = externalDocumentRefs;
+        this.licenseListVersion = licenseListVersion;
+        this.namespace = namespace;
+        this.title = title;
     }
 
     /**

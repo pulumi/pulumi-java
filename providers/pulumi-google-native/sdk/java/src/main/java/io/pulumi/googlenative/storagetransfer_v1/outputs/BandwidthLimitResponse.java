@@ -17,7 +17,7 @@ public final class BandwidthLimitResponse {
 
     @OutputCustomType.Constructor({"limitMbps"})
     private BandwidthLimitResponse(String limitMbps) {
-        this.limitMbps = Objects.requireNonNull(limitMbps);
+        this.limitMbps = limitMbps;
     }
 
     /**

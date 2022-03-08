@@ -24,8 +24,8 @@ public final class GoogleSheetsOptionsResponse {
     private GoogleSheetsOptionsResponse(
         String range,
         String skipLeadingRows) {
-        this.range = Objects.requireNonNull(range);
-        this.skipLeadingRows = Objects.requireNonNull(skipLeadingRows);
+        this.range = range;
+        this.skipLeadingRows = skipLeadingRows;
     }
 
     /**

@@ -119,23 +119,23 @@ public final class GetGlobalNetworkEndpointGroupResult {
         Integer size,
         String subnetwork,
         String zone) {
-        this.annotations = Objects.requireNonNull(annotations);
-        this.appEngine = Objects.requireNonNull(appEngine);
-        this.cloudFunction = Objects.requireNonNull(cloudFunction);
-        this.cloudRun = Objects.requireNonNull(cloudRun);
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.defaultPort = Objects.requireNonNull(defaultPort);
-        this.description = Objects.requireNonNull(description);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.network = Objects.requireNonNull(network);
-        this.networkEndpointType = Objects.requireNonNull(networkEndpointType);
-        this.pscTargetService = Objects.requireNonNull(pscTargetService);
-        this.region = Objects.requireNonNull(region);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.size = Objects.requireNonNull(size);
-        this.subnetwork = Objects.requireNonNull(subnetwork);
-        this.zone = Objects.requireNonNull(zone);
+        this.annotations = annotations;
+        this.appEngine = appEngine;
+        this.cloudFunction = cloudFunction;
+        this.cloudRun = cloudRun;
+        this.creationTimestamp = creationTimestamp;
+        this.defaultPort = defaultPort;
+        this.description = description;
+        this.kind = kind;
+        this.name = name;
+        this.network = network;
+        this.networkEndpointType = networkEndpointType;
+        this.pscTargetService = pscTargetService;
+        this.region = region;
+        this.selfLink = selfLink;
+        this.size = size;
+        this.subnetwork = subnetwork;
+        this.zone = zone;
     }
 
     /**

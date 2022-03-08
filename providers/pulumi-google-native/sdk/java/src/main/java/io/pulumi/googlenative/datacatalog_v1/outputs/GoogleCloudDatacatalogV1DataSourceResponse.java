@@ -24,8 +24,8 @@ public final class GoogleCloudDatacatalogV1DataSourceResponse {
     private GoogleCloudDatacatalogV1DataSourceResponse(
         String resource,
         String service) {
-        this.resource = Objects.requireNonNull(resource);
-        this.service = Objects.requireNonNull(service);
+        this.resource = resource;
+        this.service = service;
     }
 
     /**

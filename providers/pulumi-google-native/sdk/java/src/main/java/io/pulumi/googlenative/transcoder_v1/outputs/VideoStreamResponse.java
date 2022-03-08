@@ -32,9 +32,9 @@ public final class VideoStreamResponse {
         H264CodecSettingsResponse h264,
         H265CodecSettingsResponse h265,
         Vp9CodecSettingsResponse vp9) {
-        this.h264 = Objects.requireNonNull(h264);
-        this.h265 = Objects.requireNonNull(h265);
-        this.vp9 = Objects.requireNonNull(vp9);
+        this.h264 = h264;
+        this.h265 = h265;
+        this.vp9 = vp9;
     }
 
     /**

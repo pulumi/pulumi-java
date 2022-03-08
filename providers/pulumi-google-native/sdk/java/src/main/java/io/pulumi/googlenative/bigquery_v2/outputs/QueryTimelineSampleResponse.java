@@ -42,11 +42,11 @@ public final class QueryTimelineSampleResponse {
         String elapsedMs,
         String pendingUnits,
         String totalSlotMs) {
-        this.activeUnits = Objects.requireNonNull(activeUnits);
-        this.completedUnits = Objects.requireNonNull(completedUnits);
-        this.elapsedMs = Objects.requireNonNull(elapsedMs);
-        this.pendingUnits = Objects.requireNonNull(pendingUnits);
-        this.totalSlotMs = Objects.requireNonNull(totalSlotMs);
+        this.activeUnits = activeUnits;
+        this.completedUnits = completedUnits;
+        this.elapsedMs = elapsedMs;
+        this.pendingUnits = pendingUnits;
+        this.totalSlotMs = totalSlotMs;
     }
 
     /**

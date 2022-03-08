@@ -48,12 +48,12 @@ public final class OptionsResponse {
         Boolean expandRoles,
         Boolean outputGroupEdges,
         Boolean outputResourceEdges) {
-        this.analyzeServiceAccountImpersonation = Objects.requireNonNull(analyzeServiceAccountImpersonation);
-        this.expandGroups = Objects.requireNonNull(expandGroups);
-        this.expandResources = Objects.requireNonNull(expandResources);
-        this.expandRoles = Objects.requireNonNull(expandRoles);
-        this.outputGroupEdges = Objects.requireNonNull(outputGroupEdges);
-        this.outputResourceEdges = Objects.requireNonNull(outputResourceEdges);
+        this.analyzeServiceAccountImpersonation = analyzeServiceAccountImpersonation;
+        this.expandGroups = expandGroups;
+        this.expandResources = expandResources;
+        this.expandRoles = expandRoles;
+        this.outputGroupEdges = outputGroupEdges;
+        this.outputResourceEdges = outputResourceEdges;
     }
 
     /**

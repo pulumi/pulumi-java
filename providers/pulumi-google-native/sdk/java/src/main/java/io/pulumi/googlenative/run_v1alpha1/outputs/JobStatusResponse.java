@@ -70,15 +70,15 @@ public final class JobStatusResponse {
         Integer observedGeneration,
         String startTime,
         Integer succeeded) {
-        this.active = Objects.requireNonNull(active);
-        this.completionTime = Objects.requireNonNull(completionTime);
-        this.conditions = Objects.requireNonNull(conditions);
-        this.failed = Objects.requireNonNull(failed);
-        this.imageDigest = Objects.requireNonNull(imageDigest);
-        this.instances = Objects.requireNonNull(instances);
-        this.observedGeneration = Objects.requireNonNull(observedGeneration);
-        this.startTime = Objects.requireNonNull(startTime);
-        this.succeeded = Objects.requireNonNull(succeeded);
+        this.active = active;
+        this.completionTime = completionTime;
+        this.conditions = conditions;
+        this.failed = failed;
+        this.imageDigest = imageDigest;
+        this.instances = instances;
+        this.observedGeneration = observedGeneration;
+        this.startTime = startTime;
+        this.succeeded = succeeded;
     }
 
     /**

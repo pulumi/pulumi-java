@@ -70,15 +70,15 @@ public final class NetworkConfigResponse {
         String privateIpv6GoogleAccess,
         ServiceExternalIPsConfigResponse serviceExternalIpsConfig,
         String subnetwork) {
-        this.datapathProvider = Objects.requireNonNull(datapathProvider);
-        this.defaultSnatStatus = Objects.requireNonNull(defaultSnatStatus);
-        this.dnsConfig = Objects.requireNonNull(dnsConfig);
-        this.enableIntraNodeVisibility = Objects.requireNonNull(enableIntraNodeVisibility);
-        this.enableL4ilbSubsetting = Objects.requireNonNull(enableL4ilbSubsetting);
-        this.network = Objects.requireNonNull(network);
-        this.privateIpv6GoogleAccess = Objects.requireNonNull(privateIpv6GoogleAccess);
-        this.serviceExternalIpsConfig = Objects.requireNonNull(serviceExternalIpsConfig);
-        this.subnetwork = Objects.requireNonNull(subnetwork);
+        this.datapathProvider = datapathProvider;
+        this.defaultSnatStatus = defaultSnatStatus;
+        this.dnsConfig = dnsConfig;
+        this.enableIntraNodeVisibility = enableIntraNodeVisibility;
+        this.enableL4ilbSubsetting = enableL4ilbSubsetting;
+        this.network = network;
+        this.privateIpv6GoogleAccess = privateIpv6GoogleAccess;
+        this.serviceExternalIpsConfig = serviceExternalIpsConfig;
+        this.subnetwork = subnetwork;
     }
 
     /**

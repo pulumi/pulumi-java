@@ -17,7 +17,7 @@ public final class CloudEndpointsResponse {
 
     @OutputCustomType.Constructor({"service"})
     private CloudEndpointsResponse(String service) {
-        this.service = Objects.requireNonNull(service);
+        this.service = service;
     }
 
     /**

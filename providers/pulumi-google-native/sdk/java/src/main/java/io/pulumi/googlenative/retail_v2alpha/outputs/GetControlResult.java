@@ -51,12 +51,12 @@ public final class GetControlResult {
         String name,
         GoogleCloudRetailV2alphaRuleResponse rule,
         List<String> solutionTypes) {
-        this.associatedServingConfigIds = Objects.requireNonNull(associatedServingConfigIds);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.facetSpec = Objects.requireNonNull(facetSpec);
-        this.name = Objects.requireNonNull(name);
-        this.rule = Objects.requireNonNull(rule);
-        this.solutionTypes = Objects.requireNonNull(solutionTypes);
+        this.associatedServingConfigIds = associatedServingConfigIds;
+        this.displayName = displayName;
+        this.facetSpec = facetSpec;
+        this.name = name;
+        this.rule = rule;
+        this.solutionTypes = solutionTypes;
     }
 
     /**

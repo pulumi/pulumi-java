@@ -32,9 +32,9 @@ public final class ImageResponse {
         Double alpha,
         NormalizedCoordinateResponse resolution,
         String uri) {
-        this.alpha = Objects.requireNonNull(alpha);
-        this.resolution = Objects.requireNonNull(resolution);
-        this.uri = Objects.requireNonNull(uri);
+        this.alpha = alpha;
+        this.resolution = resolution;
+        this.uri = uri;
     }
 
     /**

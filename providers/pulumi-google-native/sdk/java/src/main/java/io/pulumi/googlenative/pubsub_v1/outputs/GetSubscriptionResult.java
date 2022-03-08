@@ -109,21 +109,21 @@ public final class GetSubscriptionResult {
         String state,
         String topic,
         String topicMessageRetentionDuration) {
-        this.ackDeadlineSeconds = Objects.requireNonNull(ackDeadlineSeconds);
-        this.deadLetterPolicy = Objects.requireNonNull(deadLetterPolicy);
-        this.detached = Objects.requireNonNull(detached);
-        this.enableMessageOrdering = Objects.requireNonNull(enableMessageOrdering);
-        this.expirationPolicy = Objects.requireNonNull(expirationPolicy);
-        this.filter = Objects.requireNonNull(filter);
-        this.labels = Objects.requireNonNull(labels);
-        this.messageRetentionDuration = Objects.requireNonNull(messageRetentionDuration);
-        this.name = Objects.requireNonNull(name);
-        this.pushConfig = Objects.requireNonNull(pushConfig);
-        this.retainAckedMessages = Objects.requireNonNull(retainAckedMessages);
-        this.retryPolicy = Objects.requireNonNull(retryPolicy);
-        this.state = Objects.requireNonNull(state);
-        this.topic = Objects.requireNonNull(topic);
-        this.topicMessageRetentionDuration = Objects.requireNonNull(topicMessageRetentionDuration);
+        this.ackDeadlineSeconds = ackDeadlineSeconds;
+        this.deadLetterPolicy = deadLetterPolicy;
+        this.detached = detached;
+        this.enableMessageOrdering = enableMessageOrdering;
+        this.expirationPolicy = expirationPolicy;
+        this.filter = filter;
+        this.labels = labels;
+        this.messageRetentionDuration = messageRetentionDuration;
+        this.name = name;
+        this.pushConfig = pushConfig;
+        this.retainAckedMessages = retainAckedMessages;
+        this.retryPolicy = retryPolicy;
+        this.state = state;
+        this.topic = topic;
+        this.topicMessageRetentionDuration = topicMessageRetentionDuration;
     }
 
     /**

@@ -17,7 +17,7 @@ public final class ResourceStatusUpcomingMaintenanceResponse {
 
     @OutputCustomType.Constructor({"canReschedule"})
     private ResourceStatusUpcomingMaintenanceResponse(Boolean canReschedule) {
-        this.canReschedule = Objects.requireNonNull(canReschedule);
+        this.canReschedule = canReschedule;
     }
 
     /**

@@ -24,8 +24,8 @@ public final class SchematizedDataResponse {
     private SchematizedDataResponse(
         String data,
         String error) {
-        this.data = Objects.requireNonNull(data);
-        this.error = Objects.requireNonNull(error);
+        this.data = data;
+        this.error = error;
     }
 
     /**

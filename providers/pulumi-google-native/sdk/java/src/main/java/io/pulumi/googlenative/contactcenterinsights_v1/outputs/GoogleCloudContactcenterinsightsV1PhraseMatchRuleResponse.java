@@ -32,9 +32,9 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse {
         GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse config,
         Boolean negated,
         String query) {
-        this.config = Objects.requireNonNull(config);
-        this.negated = Objects.requireNonNull(negated);
-        this.query = Objects.requireNonNull(query);
+        this.config = config;
+        this.negated = negated;
+        this.query = query;
     }
 
     /**

@@ -24,8 +24,8 @@ public final class GoogleCloudDialogflowV2IntentFollowupIntentInfoResponse {
     private GoogleCloudDialogflowV2IntentFollowupIntentInfoResponse(
         String followupIntentName,
         String parentFollowupIntentName) {
-        this.followupIntentName = Objects.requireNonNull(followupIntentName);
-        this.parentFollowupIntentName = Objects.requireNonNull(parentFollowupIntentName);
+        this.followupIntentName = followupIntentName;
+        this.parentFollowupIntentName = parentFollowupIntentName;
     }
 
     /**

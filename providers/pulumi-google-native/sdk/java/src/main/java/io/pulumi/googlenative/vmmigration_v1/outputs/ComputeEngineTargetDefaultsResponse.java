@@ -120,23 +120,23 @@ public final class ComputeEngineTargetDefaultsResponse {
         String targetProject,
         String vmName,
         String zone) {
-        this.additionalLicenses = Objects.requireNonNull(additionalLicenses);
-        this.appliedLicense = Objects.requireNonNull(appliedLicense);
-        this.bootOption = Objects.requireNonNull(bootOption);
-        this.computeScheduling = Objects.requireNonNull(computeScheduling);
-        this.diskType = Objects.requireNonNull(diskType);
-        this.labels = Objects.requireNonNull(labels);
-        this.licenseType = Objects.requireNonNull(licenseType);
-        this.machineType = Objects.requireNonNull(machineType);
-        this.machineTypeSeries = Objects.requireNonNull(machineTypeSeries);
-        this.metadata = Objects.requireNonNull(metadata);
-        this.networkInterfaces = Objects.requireNonNull(networkInterfaces);
-        this.networkTags = Objects.requireNonNull(networkTags);
-        this.secureBoot = Objects.requireNonNull(secureBoot);
-        this.serviceAccount = Objects.requireNonNull(serviceAccount);
-        this.targetProject = Objects.requireNonNull(targetProject);
-        this.vmName = Objects.requireNonNull(vmName);
-        this.zone = Objects.requireNonNull(zone);
+        this.additionalLicenses = additionalLicenses;
+        this.appliedLicense = appliedLicense;
+        this.bootOption = bootOption;
+        this.computeScheduling = computeScheduling;
+        this.diskType = diskType;
+        this.labels = labels;
+        this.licenseType = licenseType;
+        this.machineType = machineType;
+        this.machineTypeSeries = machineTypeSeries;
+        this.metadata = metadata;
+        this.networkInterfaces = networkInterfaces;
+        this.networkTags = networkTags;
+        this.secureBoot = secureBoot;
+        this.serviceAccount = serviceAccount;
+        this.targetProject = targetProject;
+        this.vmName = vmName;
+        this.zone = zone;
     }
 
     /**

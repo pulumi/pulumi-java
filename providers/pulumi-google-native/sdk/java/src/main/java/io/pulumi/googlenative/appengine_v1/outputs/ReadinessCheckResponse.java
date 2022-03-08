@@ -55,13 +55,13 @@ public final class ReadinessCheckResponse {
         String path,
         Integer successThreshold,
         String timeout) {
-        this.appStartTimeout = Objects.requireNonNull(appStartTimeout);
-        this.checkInterval = Objects.requireNonNull(checkInterval);
-        this.failureThreshold = Objects.requireNonNull(failureThreshold);
-        this.host = Objects.requireNonNull(host);
-        this.path = Objects.requireNonNull(path);
-        this.successThreshold = Objects.requireNonNull(successThreshold);
-        this.timeout = Objects.requireNonNull(timeout);
+        this.appStartTimeout = appStartTimeout;
+        this.checkInterval = checkInterval;
+        this.failureThreshold = failureThreshold;
+        this.host = host;
+        this.path = path;
+        this.successThreshold = successThreshold;
+        this.timeout = timeout;
     }
 
     /**

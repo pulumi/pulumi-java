@@ -53,12 +53,12 @@ public final class IamPolicyAnalysisQueryResponse {
         OptionsResponse options,
         ResourceSelectorResponse resourceSelector,
         String scope) {
-        this.accessSelector = Objects.requireNonNull(accessSelector);
-        this.conditionContext = Objects.requireNonNull(conditionContext);
-        this.identitySelector = Objects.requireNonNull(identitySelector);
-        this.options = Objects.requireNonNull(options);
-        this.resourceSelector = Objects.requireNonNull(resourceSelector);
-        this.scope = Objects.requireNonNull(scope);
+        this.accessSelector = accessSelector;
+        this.conditionContext = conditionContext;
+        this.identitySelector = identitySelector;
+        this.options = options;
+        this.resourceSelector = resourceSelector;
+        this.scope = scope;
     }
 
     /**

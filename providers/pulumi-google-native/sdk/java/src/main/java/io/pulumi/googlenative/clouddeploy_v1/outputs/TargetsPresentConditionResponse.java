@@ -32,9 +32,9 @@ public final class TargetsPresentConditionResponse {
         List<String> missingTargets,
         Boolean status,
         String updateTime) {
-        this.missingTargets = Objects.requireNonNull(missingTargets);
-        this.status = Objects.requireNonNull(status);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.missingTargets = missingTargets;
+        this.status = status;
+        this.updateTime = updateTime;
     }
 
     /**

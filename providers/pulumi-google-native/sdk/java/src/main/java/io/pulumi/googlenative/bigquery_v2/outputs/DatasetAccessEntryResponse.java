@@ -22,8 +22,8 @@ public final class DatasetAccessEntryResponse {
     private DatasetAccessEntryResponse(
         DatasetReferenceResponse dataset,
         List<String> targetTypes) {
-        this.dataset = Objects.requireNonNull(dataset);
-        this.targetTypes = Objects.requireNonNull(targetTypes);
+        this.dataset = dataset;
+        this.targetTypes = targetTypes;
     }
 
     /**

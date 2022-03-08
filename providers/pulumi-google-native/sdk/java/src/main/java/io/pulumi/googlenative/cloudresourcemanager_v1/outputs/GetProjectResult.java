@@ -56,13 +56,13 @@ public final class GetProjectResult {
         ResourceIdResponse parent,
         String projectId,
         String projectNumber) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.labels = Objects.requireNonNull(labels);
-        this.lifecycleState = Objects.requireNonNull(lifecycleState);
-        this.name = Objects.requireNonNull(name);
-        this.parent = Objects.requireNonNull(parent);
-        this.projectId = Objects.requireNonNull(projectId);
-        this.projectNumber = Objects.requireNonNull(projectNumber);
+        this.createTime = createTime;
+        this.labels = labels;
+        this.lifecycleState = lifecycleState;
+        this.name = name;
+        this.parent = parent;
+        this.projectId = projectId;
+        this.projectNumber = projectNumber;
     }
 
     /**

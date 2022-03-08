@@ -17,7 +17,7 @@ public final class ServiceAccountResponse {
 
     @OutputCustomType.Constructor({"email"})
     private ServiceAccountResponse(String email) {
-        this.email = Objects.requireNonNull(email);
+        this.email = email;
     }
 
     /**

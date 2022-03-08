@@ -17,7 +17,7 @@ public final class AttestationNoteResponse {
 
     @OutputCustomType.Constructor({"hint"})
     private AttestationNoteResponse(HintResponse hint) {
-        this.hint = Objects.requireNonNull(hint);
+        this.hint = hint;
     }
 
     /**

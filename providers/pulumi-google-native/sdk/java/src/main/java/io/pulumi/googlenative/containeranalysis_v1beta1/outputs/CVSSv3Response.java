@@ -43,17 +43,17 @@ public final class CVSSv3Response {
         String privilegesRequired,
         String scope,
         String userInteraction) {
-        this.attackComplexity = Objects.requireNonNull(attackComplexity);
-        this.attackVector = Objects.requireNonNull(attackVector);
-        this.availabilityImpact = Objects.requireNonNull(availabilityImpact);
-        this.baseScore = Objects.requireNonNull(baseScore);
-        this.confidentialityImpact = Objects.requireNonNull(confidentialityImpact);
-        this.exploitabilityScore = Objects.requireNonNull(exploitabilityScore);
-        this.impactScore = Objects.requireNonNull(impactScore);
-        this.integrityImpact = Objects.requireNonNull(integrityImpact);
-        this.privilegesRequired = Objects.requireNonNull(privilegesRequired);
-        this.scope = Objects.requireNonNull(scope);
-        this.userInteraction = Objects.requireNonNull(userInteraction);
+        this.attackComplexity = attackComplexity;
+        this.attackVector = attackVector;
+        this.availabilityImpact = availabilityImpact;
+        this.baseScore = baseScore;
+        this.confidentialityImpact = confidentialityImpact;
+        this.exploitabilityScore = exploitabilityScore;
+        this.impactScore = impactScore;
+        this.integrityImpact = integrityImpact;
+        this.privilegesRequired = privilegesRequired;
+        this.scope = scope;
+        this.userInteraction = userInteraction;
     }
 
     public String getAttackComplexity() {

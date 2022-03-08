@@ -121,23 +121,23 @@ public final class GetMachineImageResult {
         String status,
         List<String> storageLocations,
         String totalStorageBytes) {
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.description = Objects.requireNonNull(description);
-        this.guestFlush = Objects.requireNonNull(guestFlush);
-        this.instanceProperties = Objects.requireNonNull(instanceProperties);
-        this.kind = Objects.requireNonNull(kind);
-        this.machineImageEncryptionKey = Objects.requireNonNull(machineImageEncryptionKey);
-        this.name = Objects.requireNonNull(name);
-        this.satisfiesPzs = Objects.requireNonNull(satisfiesPzs);
-        this.savedDisks = Objects.requireNonNull(savedDisks);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
-        this.sourceDiskEncryptionKeys = Objects.requireNonNull(sourceDiskEncryptionKeys);
-        this.sourceInstance = Objects.requireNonNull(sourceInstance);
-        this.sourceInstanceProperties = Objects.requireNonNull(sourceInstanceProperties);
-        this.status = Objects.requireNonNull(status);
-        this.storageLocations = Objects.requireNonNull(storageLocations);
-        this.totalStorageBytes = Objects.requireNonNull(totalStorageBytes);
+        this.creationTimestamp = creationTimestamp;
+        this.description = description;
+        this.guestFlush = guestFlush;
+        this.instanceProperties = instanceProperties;
+        this.kind = kind;
+        this.machineImageEncryptionKey = machineImageEncryptionKey;
+        this.name = name;
+        this.satisfiesPzs = satisfiesPzs;
+        this.savedDisks = savedDisks;
+        this.selfLink = selfLink;
+        this.selfLinkWithId = selfLinkWithId;
+        this.sourceDiskEncryptionKeys = sourceDiskEncryptionKeys;
+        this.sourceInstance = sourceInstance;
+        this.sourceInstanceProperties = sourceInstanceProperties;
+        this.status = status;
+        this.storageLocations = storageLocations;
+        this.totalStorageBytes = totalStorageBytes;
     }
 
     /**

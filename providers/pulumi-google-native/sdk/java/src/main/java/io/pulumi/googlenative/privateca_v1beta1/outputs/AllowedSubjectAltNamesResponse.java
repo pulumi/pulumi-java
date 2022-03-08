@@ -50,12 +50,12 @@ public final class AllowedSubjectAltNamesResponse {
         List<String> allowedEmailAddresses,
         List<String> allowedIps,
         List<String> allowedUris) {
-        this.allowCustomSans = Objects.requireNonNull(allowCustomSans);
-        this.allowGlobbingDnsWildcards = Objects.requireNonNull(allowGlobbingDnsWildcards);
-        this.allowedDnsNames = Objects.requireNonNull(allowedDnsNames);
-        this.allowedEmailAddresses = Objects.requireNonNull(allowedEmailAddresses);
-        this.allowedIps = Objects.requireNonNull(allowedIps);
-        this.allowedUris = Objects.requireNonNull(allowedUris);
+        this.allowCustomSans = allowCustomSans;
+        this.allowGlobbingDnsWildcards = allowGlobbingDnsWildcards;
+        this.allowedDnsNames = allowedDnsNames;
+        this.allowedEmailAddresses = allowedEmailAddresses;
+        this.allowedIps = allowedIps;
+        this.allowedUris = allowedUris;
     }
 
     /**

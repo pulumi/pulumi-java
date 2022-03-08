@@ -45,11 +45,11 @@ public final class GoogleCloudChannelV1ValueResponse {
         String int64Value,
         Map<String,String> protoValue,
         String stringValue) {
-        this.boolValue = Objects.requireNonNull(boolValue);
-        this.doubleValue = Objects.requireNonNull(doubleValue);
-        this.int64Value = Objects.requireNonNull(int64Value);
-        this.protoValue = Objects.requireNonNull(protoValue);
-        this.stringValue = Objects.requireNonNull(stringValue);
+        this.boolValue = boolValue;
+        this.doubleValue = doubleValue;
+        this.int64Value = int64Value;
+        this.protoValue = protoValue;
+        this.stringValue = stringValue;
     }
 
     /**

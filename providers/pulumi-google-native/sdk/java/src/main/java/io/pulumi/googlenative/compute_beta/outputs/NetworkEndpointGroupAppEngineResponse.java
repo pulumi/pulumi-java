@@ -30,9 +30,9 @@ public final class NetworkEndpointGroupAppEngineResponse {
         String service,
         String urlMask,
         String version) {
-        this.service = Objects.requireNonNull(service);
-        this.urlMask = Objects.requireNonNull(urlMask);
-        this.version = Objects.requireNonNull(version);
+        this.service = service;
+        this.urlMask = urlMask;
+        this.version = version;
     }
 
     /**

@@ -26,8 +26,8 @@ public final class CustomErrorResponse {
     private CustomErrorResponse(
         List<CustomErrorRuleResponse> rules,
         List<String> types) {
-        this.rules = Objects.requireNonNull(rules);
-        this.types = Objects.requireNonNull(types);
+        this.rules = rules;
+        this.types = types;
     }
 
     /**

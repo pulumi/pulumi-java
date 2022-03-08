@@ -32,9 +32,9 @@ public final class GoogleIamV1__BindingResponse {
         GoogleType__ExprResponse condition,
         List<String> members,
         String role) {
-        this.condition = Objects.requireNonNull(condition);
-        this.members = Objects.requireNonNull(members);
-        this.role = Objects.requireNonNull(role);
+        this.condition = condition;
+        this.members = members;
+        this.role = role;
     }
 
     /**

@@ -38,10 +38,10 @@ public final class GooglePrivacyDlpV2DateShiftConfigResponse {
         GooglePrivacyDlpV2CryptoKeyResponse cryptoKey,
         Integer lowerBoundDays,
         Integer upperBoundDays) {
-        this.context = Objects.requireNonNull(context);
-        this.cryptoKey = Objects.requireNonNull(cryptoKey);
-        this.lowerBoundDays = Objects.requireNonNull(lowerBoundDays);
-        this.upperBoundDays = Objects.requireNonNull(upperBoundDays);
+        this.context = context;
+        this.cryptoKey = cryptoKey;
+        this.lowerBoundDays = lowerBoundDays;
+        this.upperBoundDays = upperBoundDays;
     }
 
     /**

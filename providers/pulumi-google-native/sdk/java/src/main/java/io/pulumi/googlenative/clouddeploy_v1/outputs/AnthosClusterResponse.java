@@ -17,7 +17,7 @@ public final class AnthosClusterResponse {
 
     @OutputCustomType.Constructor({"membership"})
     private AnthosClusterResponse(String membership) {
-        this.membership = Objects.requireNonNull(membership);
+        this.membership = membership;
     }
 
     /**

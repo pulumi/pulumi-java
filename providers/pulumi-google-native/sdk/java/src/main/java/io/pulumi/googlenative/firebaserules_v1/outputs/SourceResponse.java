@@ -18,7 +18,7 @@ public final class SourceResponse {
 
     @OutputCustomType.Constructor({"files"})
     private SourceResponse(List<FileResponse> files) {
-        this.files = Objects.requireNonNull(files);
+        this.files = files;
     }
 
     /**

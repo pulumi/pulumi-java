@@ -50,12 +50,12 @@ public final class GitHubEventsConfigResponse {
         String owner,
         PullRequestFilterResponse pullRequest,
         PushFilterResponse push) {
-        this.enterpriseConfigResourceName = Objects.requireNonNull(enterpriseConfigResourceName);
-        this.installationId = Objects.requireNonNull(installationId);
-        this.name = Objects.requireNonNull(name);
-        this.owner = Objects.requireNonNull(owner);
-        this.pullRequest = Objects.requireNonNull(pullRequest);
-        this.push = Objects.requireNonNull(push);
+        this.enterpriseConfigResourceName = enterpriseConfigResourceName;
+        this.installationId = installationId;
+        this.name = name;
+        this.owner = owner;
+        this.pullRequest = pullRequest;
+        this.push = push;
     }
 
     /**

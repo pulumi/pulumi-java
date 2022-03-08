@@ -24,8 +24,8 @@ public final class FleetConfigResponse {
     private FleetConfigResponse(
         String fleetSpec,
         String name) {
-        this.fleetSpec = Objects.requireNonNull(fleetSpec);
-        this.name = Objects.requireNonNull(name);
+        this.fleetSpec = fleetSpec;
+        this.name = name;
     }
 
     /**

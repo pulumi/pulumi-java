@@ -25,8 +25,8 @@ public final class GooglePrivacyDlpV2ValueFrequencyResponse {
     private GooglePrivacyDlpV2ValueFrequencyResponse(
         String count,
         GooglePrivacyDlpV2ValueResponse value) {
-        this.count = Objects.requireNonNull(count);
-        this.value = Objects.requireNonNull(value);
+        this.count = count;
+        this.value = value;
     }
 
     /**

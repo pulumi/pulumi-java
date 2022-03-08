@@ -37,10 +37,10 @@ public final class RedirectResponse {
         String location,
         String regex,
         Integer statusCode) {
-        this.glob = Objects.requireNonNull(glob);
-        this.location = Objects.requireNonNull(location);
-        this.regex = Objects.requireNonNull(regex);
-        this.statusCode = Objects.requireNonNull(statusCode);
+        this.glob = glob;
+        this.location = location;
+        this.regex = regex;
+        this.statusCode = statusCode;
     }
 
     /**

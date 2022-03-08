@@ -51,12 +51,12 @@ public final class DocumentationResponse {
         List<DocumentationRuleResponse> rules,
         String serviceRootUrl,
         String summary) {
-        this.documentationRootUrl = Objects.requireNonNull(documentationRootUrl);
-        this.overview = Objects.requireNonNull(overview);
-        this.pages = Objects.requireNonNull(pages);
-        this.rules = Objects.requireNonNull(rules);
-        this.serviceRootUrl = Objects.requireNonNull(serviceRootUrl);
-        this.summary = Objects.requireNonNull(summary);
+        this.documentationRootUrl = documentationRootUrl;
+        this.overview = overview;
+        this.pages = pages;
+        this.rules = rules;
+        this.serviceRootUrl = serviceRootUrl;
+        this.summary = summary;
     }
 
     /**

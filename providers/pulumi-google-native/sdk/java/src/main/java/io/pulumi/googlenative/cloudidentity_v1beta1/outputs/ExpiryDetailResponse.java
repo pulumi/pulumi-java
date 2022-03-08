@@ -17,7 +17,7 @@ public final class ExpiryDetailResponse {
 
     @OutputCustomType.Constructor({"expireTime"})
     private ExpiryDetailResponse(String expireTime) {
-        this.expireTime = Objects.requireNonNull(expireTime);
+        this.expireTime = expireTime;
     }
 
     /**

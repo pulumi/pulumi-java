@@ -26,8 +26,8 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardRespo
     private GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardResponse(
         List<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse> cardContents,
         String cardWidth) {
-        this.cardContents = Objects.requireNonNull(cardContents);
-        this.cardWidth = Objects.requireNonNull(cardWidth);
+        this.cardContents = cardContents;
+        this.cardWidth = cardWidth;
     }
 
     /**

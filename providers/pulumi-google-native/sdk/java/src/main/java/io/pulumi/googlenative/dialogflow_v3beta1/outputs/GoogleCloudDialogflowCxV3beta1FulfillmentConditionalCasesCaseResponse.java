@@ -26,8 +26,8 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCase
     private GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseResponse(
         List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseCaseContentResponse> caseContent,
         String condition) {
-        this.caseContent = Objects.requireNonNull(caseContent);
-        this.condition = Objects.requireNonNull(condition);
+        this.caseContent = caseContent;
+        this.condition = condition;
     }
 
     /**

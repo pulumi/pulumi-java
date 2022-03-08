@@ -24,8 +24,8 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBr
     private GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse(
         String url,
         String urlTypeHint) {
-        this.url = Objects.requireNonNull(url);
-        this.urlTypeHint = Objects.requireNonNull(urlTypeHint);
+        this.url = url;
+        this.urlTypeHint = urlTypeHint;
     }
 
     /**

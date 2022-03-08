@@ -132,25 +132,25 @@ public final class GetFirewallResult {
         List<String> sourceTags,
         List<String> targetServiceAccounts,
         List<String> targetTags) {
-        this.allowed = Objects.requireNonNull(allowed);
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.denied = Objects.requireNonNull(denied);
-        this.description = Objects.requireNonNull(description);
-        this.destinationRanges = Objects.requireNonNull(destinationRanges);
-        this.direction = Objects.requireNonNull(direction);
-        this.disabled = Objects.requireNonNull(disabled);
-        this.kind = Objects.requireNonNull(kind);
-        this.logConfig = Objects.requireNonNull(logConfig);
-        this.name = Objects.requireNonNull(name);
-        this.network = Objects.requireNonNull(network);
-        this.priority = Objects.requireNonNull(priority);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
-        this.sourceRanges = Objects.requireNonNull(sourceRanges);
-        this.sourceServiceAccounts = Objects.requireNonNull(sourceServiceAccounts);
-        this.sourceTags = Objects.requireNonNull(sourceTags);
-        this.targetServiceAccounts = Objects.requireNonNull(targetServiceAccounts);
-        this.targetTags = Objects.requireNonNull(targetTags);
+        this.allowed = allowed;
+        this.creationTimestamp = creationTimestamp;
+        this.denied = denied;
+        this.description = description;
+        this.destinationRanges = destinationRanges;
+        this.direction = direction;
+        this.disabled = disabled;
+        this.kind = kind;
+        this.logConfig = logConfig;
+        this.name = name;
+        this.network = network;
+        this.priority = priority;
+        this.selfLink = selfLink;
+        this.selfLinkWithId = selfLinkWithId;
+        this.sourceRanges = sourceRanges;
+        this.sourceServiceAccounts = sourceServiceAccounts;
+        this.sourceTags = sourceTags;
+        this.targetServiceAccounts = targetServiceAccounts;
+        this.targetTags = targetTags;
     }
 
     /**

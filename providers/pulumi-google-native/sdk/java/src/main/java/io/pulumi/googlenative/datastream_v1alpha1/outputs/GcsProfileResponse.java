@@ -24,8 +24,8 @@ public final class GcsProfileResponse {
     private GcsProfileResponse(
         String bucketName,
         String rootPath) {
-        this.bucketName = Objects.requireNonNull(bucketName);
-        this.rootPath = Objects.requireNonNull(rootPath);
+        this.bucketName = bucketName;
+        this.rootPath = rootPath;
     }
 
     /**

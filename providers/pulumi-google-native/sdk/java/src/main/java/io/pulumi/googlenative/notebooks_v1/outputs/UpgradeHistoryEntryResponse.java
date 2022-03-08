@@ -72,16 +72,16 @@ public final class UpgradeHistoryEntryResponse {
         String targetVersion,
         String version,
         String vmImage) {
-        this.action = Objects.requireNonNull(action);
-        this.containerImage = Objects.requireNonNull(containerImage);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.framework = Objects.requireNonNull(framework);
-        this.snapshot = Objects.requireNonNull(snapshot);
-        this.state = Objects.requireNonNull(state);
-        this.targetImage = Objects.requireNonNull(targetImage);
-        this.targetVersion = Objects.requireNonNull(targetVersion);
-        this.version = Objects.requireNonNull(version);
-        this.vmImage = Objects.requireNonNull(vmImage);
+        this.action = action;
+        this.containerImage = containerImage;
+        this.createTime = createTime;
+        this.framework = framework;
+        this.snapshot = snapshot;
+        this.state = state;
+        this.targetImage = targetImage;
+        this.targetVersion = targetVersion;
+        this.version = version;
+        this.vmImage = vmImage;
     }
 
     /**

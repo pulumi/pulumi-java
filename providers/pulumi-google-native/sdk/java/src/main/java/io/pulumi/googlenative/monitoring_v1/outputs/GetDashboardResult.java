@@ -65,14 +65,14 @@ public final class GetDashboardResult {
         MosaicLayoutResponse mosaicLayout,
         String name,
         RowLayoutResponse rowLayout) {
-        this.columnLayout = Objects.requireNonNull(columnLayout);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.etag = Objects.requireNonNull(etag);
-        this.gridLayout = Objects.requireNonNull(gridLayout);
-        this.labels = Objects.requireNonNull(labels);
-        this.mosaicLayout = Objects.requireNonNull(mosaicLayout);
-        this.name = Objects.requireNonNull(name);
-        this.rowLayout = Objects.requireNonNull(rowLayout);
+        this.columnLayout = columnLayout;
+        this.displayName = displayName;
+        this.etag = etag;
+        this.gridLayout = gridLayout;
+        this.labels = labels;
+        this.mosaicLayout = mosaicLayout;
+        this.name = name;
+        this.rowLayout = rowLayout;
     }
 
     /**

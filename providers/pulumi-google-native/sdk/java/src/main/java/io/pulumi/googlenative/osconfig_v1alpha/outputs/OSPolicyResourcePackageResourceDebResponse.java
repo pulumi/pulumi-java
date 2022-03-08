@@ -25,8 +25,8 @@ public final class OSPolicyResourcePackageResourceDebResponse {
     private OSPolicyResourcePackageResourceDebResponse(
         Boolean pullDeps,
         OSPolicyResourceFileResponse source) {
-        this.pullDeps = Objects.requireNonNull(pullDeps);
-        this.source = Objects.requireNonNull(source);
+        this.pullDeps = pullDeps;
+        this.source = source;
     }
 
     /**

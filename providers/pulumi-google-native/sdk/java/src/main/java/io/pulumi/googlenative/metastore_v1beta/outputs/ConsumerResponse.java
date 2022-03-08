@@ -24,8 +24,8 @@ public final class ConsumerResponse {
     private ConsumerResponse(
         String endpointUri,
         String subnetwork) {
-        this.endpointUri = Objects.requireNonNull(endpointUri);
-        this.subnetwork = Objects.requireNonNull(subnetwork);
+        this.endpointUri = endpointUri;
+        this.subnetwork = subnetwork;
     }
 
     /**

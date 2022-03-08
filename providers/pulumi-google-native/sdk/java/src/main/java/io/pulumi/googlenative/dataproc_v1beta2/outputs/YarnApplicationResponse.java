@@ -37,10 +37,10 @@ public final class YarnApplicationResponse {
         Double progress,
         String state,
         String trackingUrl) {
-        this.name = Objects.requireNonNull(name);
-        this.progress = Objects.requireNonNull(progress);
-        this.state = Objects.requireNonNull(state);
-        this.trackingUrl = Objects.requireNonNull(trackingUrl);
+        this.name = name;
+        this.progress = progress;
+        this.state = state;
+        this.trackingUrl = trackingUrl;
     }
 
     /**

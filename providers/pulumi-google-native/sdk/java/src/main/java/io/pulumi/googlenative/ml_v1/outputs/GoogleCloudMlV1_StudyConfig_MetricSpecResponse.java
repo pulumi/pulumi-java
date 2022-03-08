@@ -24,8 +24,8 @@ public final class GoogleCloudMlV1_StudyConfig_MetricSpecResponse {
     private GoogleCloudMlV1_StudyConfig_MetricSpecResponse(
         String goal,
         String metric) {
-        this.goal = Objects.requireNonNull(goal);
-        this.metric = Objects.requireNonNull(metric);
+        this.goal = goal;
+        this.metric = metric;
     }
 
     /**

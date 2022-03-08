@@ -37,10 +37,10 @@ public final class GetParticipantResult {
         String name,
         String obfuscatedExternalUserId,
         String role) {
-        this.documentsMetadataFilters = Objects.requireNonNull(documentsMetadataFilters);
-        this.name = Objects.requireNonNull(name);
-        this.obfuscatedExternalUserId = Objects.requireNonNull(obfuscatedExternalUserId);
-        this.role = Objects.requireNonNull(role);
+        this.documentsMetadataFilters = documentsMetadataFilters;
+        this.name = name;
+        this.obfuscatedExternalUserId = obfuscatedExternalUserId;
+        this.role = role;
     }
 
     /**

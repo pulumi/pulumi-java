@@ -17,7 +17,7 @@ public final class NetworkPolicyConfigResponse {
 
     @OutputCustomType.Constructor({"disabled"})
     private NetworkPolicyConfigResponse(Boolean disabled) {
-        this.disabled = Objects.requireNonNull(disabled);
+        this.disabled = disabled;
     }
 
     /**

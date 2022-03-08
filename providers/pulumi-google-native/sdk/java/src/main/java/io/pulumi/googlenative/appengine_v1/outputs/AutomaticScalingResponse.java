@@ -96,19 +96,19 @@ public final class AutomaticScalingResponse {
         NetworkUtilizationResponse networkUtilization,
         RequestUtilizationResponse requestUtilization,
         StandardSchedulerSettingsResponse standardSchedulerSettings) {
-        this.coolDownPeriod = Objects.requireNonNull(coolDownPeriod);
-        this.cpuUtilization = Objects.requireNonNull(cpuUtilization);
-        this.diskUtilization = Objects.requireNonNull(diskUtilization);
-        this.maxConcurrentRequests = Objects.requireNonNull(maxConcurrentRequests);
-        this.maxIdleInstances = Objects.requireNonNull(maxIdleInstances);
-        this.maxPendingLatency = Objects.requireNonNull(maxPendingLatency);
-        this.maxTotalInstances = Objects.requireNonNull(maxTotalInstances);
-        this.minIdleInstances = Objects.requireNonNull(minIdleInstances);
-        this.minPendingLatency = Objects.requireNonNull(minPendingLatency);
-        this.minTotalInstances = Objects.requireNonNull(minTotalInstances);
-        this.networkUtilization = Objects.requireNonNull(networkUtilization);
-        this.requestUtilization = Objects.requireNonNull(requestUtilization);
-        this.standardSchedulerSettings = Objects.requireNonNull(standardSchedulerSettings);
+        this.coolDownPeriod = coolDownPeriod;
+        this.cpuUtilization = cpuUtilization;
+        this.diskUtilization = diskUtilization;
+        this.maxConcurrentRequests = maxConcurrentRequests;
+        this.maxIdleInstances = maxIdleInstances;
+        this.maxPendingLatency = maxPendingLatency;
+        this.maxTotalInstances = maxTotalInstances;
+        this.minIdleInstances = minIdleInstances;
+        this.minPendingLatency = minPendingLatency;
+        this.minTotalInstances = minTotalInstances;
+        this.networkUtilization = networkUtilization;
+        this.requestUtilization = requestUtilization;
+        this.standardSchedulerSettings = standardSchedulerSettings;
     }
 
     /**

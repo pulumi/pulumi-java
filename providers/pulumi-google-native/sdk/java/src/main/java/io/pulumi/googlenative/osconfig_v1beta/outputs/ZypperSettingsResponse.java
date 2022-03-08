@@ -50,12 +50,12 @@ public final class ZypperSettingsResponse {
         List<String> severities,
         Boolean withOptional,
         Boolean withUpdate) {
-        this.categories = Objects.requireNonNull(categories);
-        this.excludes = Objects.requireNonNull(excludes);
-        this.exclusivePatches = Objects.requireNonNull(exclusivePatches);
-        this.severities = Objects.requireNonNull(severities);
-        this.withOptional = Objects.requireNonNull(withOptional);
-        this.withUpdate = Objects.requireNonNull(withUpdate);
+        this.categories = categories;
+        this.excludes = excludes;
+        this.exclusivePatches = exclusivePatches;
+        this.severities = severities;
+        this.withOptional = withOptional;
+        this.withUpdate = withUpdate;
     }
 
     /**

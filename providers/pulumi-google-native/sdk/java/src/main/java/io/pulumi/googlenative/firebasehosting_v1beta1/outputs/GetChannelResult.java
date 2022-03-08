@@ -69,15 +69,15 @@ public final class GetChannelResult {
         String ttl,
         String updateTime,
         String url) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.expireTime = Objects.requireNonNull(expireTime);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.release = Objects.requireNonNull(release);
-        this.retainedReleaseCount = Objects.requireNonNull(retainedReleaseCount);
-        this.ttl = Objects.requireNonNull(ttl);
-        this.updateTime = Objects.requireNonNull(updateTime);
-        this.url = Objects.requireNonNull(url);
+        this.createTime = createTime;
+        this.expireTime = expireTime;
+        this.labels = labels;
+        this.name = name;
+        this.release = release;
+        this.retainedReleaseCount = retainedReleaseCount;
+        this.ttl = ttl;
+        this.updateTime = updateTime;
+        this.url = url;
     }
 
     /**

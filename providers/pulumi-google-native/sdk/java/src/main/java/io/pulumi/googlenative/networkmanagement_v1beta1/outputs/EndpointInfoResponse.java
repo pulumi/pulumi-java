@@ -61,14 +61,14 @@ public final class EndpointInfoResponse {
         String sourceIp,
         String sourceNetworkUri,
         Integer sourcePort) {
-        this.destinationIp = Objects.requireNonNull(destinationIp);
-        this.destinationNetworkUri = Objects.requireNonNull(destinationNetworkUri);
-        this.destinationPort = Objects.requireNonNull(destinationPort);
-        this.protocol = Objects.requireNonNull(protocol);
-        this.sourceAgentUri = Objects.requireNonNull(sourceAgentUri);
-        this.sourceIp = Objects.requireNonNull(sourceIp);
-        this.sourceNetworkUri = Objects.requireNonNull(sourceNetworkUri);
-        this.sourcePort = Objects.requireNonNull(sourcePort);
+        this.destinationIp = destinationIp;
+        this.destinationNetworkUri = destinationNetworkUri;
+        this.destinationPort = destinationPort;
+        this.protocol = protocol;
+        this.sourceAgentUri = sourceAgentUri;
+        this.sourceIp = sourceIp;
+        this.sourceNetworkUri = sourceNetworkUri;
+        this.sourcePort = sourcePort;
     }
 
     /**

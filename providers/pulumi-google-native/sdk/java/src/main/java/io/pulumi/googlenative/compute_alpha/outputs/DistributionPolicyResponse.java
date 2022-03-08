@@ -26,8 +26,8 @@ public final class DistributionPolicyResponse {
     private DistributionPolicyResponse(
         String targetShape,
         List<DistributionPolicyZoneConfigurationResponse> zones) {
-        this.targetShape = Objects.requireNonNull(targetShape);
-        this.zones = Objects.requireNonNull(zones);
+        this.targetShape = targetShape;
+        this.zones = zones;
     }
 
     /**

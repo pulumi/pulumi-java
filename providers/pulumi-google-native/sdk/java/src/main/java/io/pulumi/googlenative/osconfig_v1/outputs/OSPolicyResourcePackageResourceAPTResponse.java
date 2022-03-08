@@ -17,7 +17,7 @@ public final class OSPolicyResourcePackageResourceAPTResponse {
 
     @OutputCustomType.Constructor({"name"})
     private OSPolicyResourcePackageResourceAPTResponse(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

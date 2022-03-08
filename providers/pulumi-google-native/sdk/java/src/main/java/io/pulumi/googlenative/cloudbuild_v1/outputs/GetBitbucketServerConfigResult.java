@@ -75,16 +75,16 @@ public final class GetBitbucketServerConfigResult {
         String sslCa,
         String username,
         String webhookKey) {
-        this.apiKey = Objects.requireNonNull(apiKey);
-        this.connectedRepositories = Objects.requireNonNull(connectedRepositories);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.hostUri = Objects.requireNonNull(hostUri);
-        this.name = Objects.requireNonNull(name);
-        this.peeredNetwork = Objects.requireNonNull(peeredNetwork);
-        this.secrets = Objects.requireNonNull(secrets);
-        this.sslCa = Objects.requireNonNull(sslCa);
-        this.username = Objects.requireNonNull(username);
-        this.webhookKey = Objects.requireNonNull(webhookKey);
+        this.apiKey = apiKey;
+        this.connectedRepositories = connectedRepositories;
+        this.createTime = createTime;
+        this.hostUri = hostUri;
+        this.name = name;
+        this.peeredNetwork = peeredNetwork;
+        this.secrets = secrets;
+        this.sslCa = sslCa;
+        this.username = username;
+        this.webhookKey = webhookKey;
     }
 
     /**

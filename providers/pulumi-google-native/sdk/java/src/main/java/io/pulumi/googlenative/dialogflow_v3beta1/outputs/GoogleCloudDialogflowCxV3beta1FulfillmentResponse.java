@@ -53,12 +53,12 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentResponse {
         List<GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionResponse> setParameterActions,
         String tag,
         String webhook) {
-        this.conditionalCases = Objects.requireNonNull(conditionalCases);
-        this.messages = Objects.requireNonNull(messages);
-        this.returnPartialResponses = Objects.requireNonNull(returnPartialResponses);
-        this.setParameterActions = Objects.requireNonNull(setParameterActions);
-        this.tag = Objects.requireNonNull(tag);
-        this.webhook = Objects.requireNonNull(webhook);
+        this.conditionalCases = conditionalCases;
+        this.messages = messages;
+        this.returnPartialResponses = returnPartialResponses;
+        this.setParameterActions = setParameterActions;
+        this.tag = tag;
+        this.webhook = webhook;
     }
 
     /**

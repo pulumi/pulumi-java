@@ -30,9 +30,9 @@ public final class NonCompliantFileResponse {
         String displayCommand,
         String path,
         String reason) {
-        this.displayCommand = Objects.requireNonNull(displayCommand);
-        this.path = Objects.requireNonNull(path);
-        this.reason = Objects.requireNonNull(reason);
+        this.displayCommand = displayCommand;
+        this.path = path;
+        this.reason = reason;
     }
 
     /**

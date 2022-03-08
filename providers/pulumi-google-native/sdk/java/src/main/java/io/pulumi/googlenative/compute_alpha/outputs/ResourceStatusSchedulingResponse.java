@@ -17,7 +17,7 @@ public final class ResourceStatusSchedulingResponse {
 
     @OutputCustomType.Constructor({"availabilityDomain"})
     private ResourceStatusSchedulingResponse(Integer availabilityDomain) {
-        this.availabilityDomain = Objects.requireNonNull(availabilityDomain);
+        this.availabilityDomain = availabilityDomain;
     }
 
     /**

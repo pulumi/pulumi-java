@@ -21,8 +21,8 @@ public final class ManagedZoneCloudLoggingConfigResponse {
     private ManagedZoneCloudLoggingConfigResponse(
         Boolean enableLogging,
         String kind) {
-        this.enableLogging = Objects.requireNonNull(enableLogging);
-        this.kind = Objects.requireNonNull(kind);
+        this.enableLogging = enableLogging;
+        this.kind = kind;
     }
 
     /**

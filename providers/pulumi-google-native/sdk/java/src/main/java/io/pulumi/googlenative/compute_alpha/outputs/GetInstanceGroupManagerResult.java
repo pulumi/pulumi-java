@@ -199,35 +199,35 @@ public final class GetInstanceGroupManagerResult {
         InstanceGroupManagerUpdatePolicyResponse updatePolicy,
         List<InstanceGroupManagerVersionResponse> versions,
         String zone) {
-        this.allInstancesConfig = Objects.requireNonNull(allInstancesConfig);
-        this.autoHealingPolicies = Objects.requireNonNull(autoHealingPolicies);
-        this.baseInstanceName = Objects.requireNonNull(baseInstanceName);
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.currentActions = Objects.requireNonNull(currentActions);
-        this.description = Objects.requireNonNull(description);
-        this.distributionPolicy = Objects.requireNonNull(distributionPolicy);
-        this.failoverAction = Objects.requireNonNull(failoverAction);
-        this.fingerprint = Objects.requireNonNull(fingerprint);
-        this.instanceGroup = Objects.requireNonNull(instanceGroup);
-        this.instanceLifecyclePolicy = Objects.requireNonNull(instanceLifecyclePolicy);
-        this.instanceTemplate = Objects.requireNonNull(instanceTemplate);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.namedPorts = Objects.requireNonNull(namedPorts);
-        this.region = Objects.requireNonNull(region);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
-        this.serviceAccount = Objects.requireNonNull(serviceAccount);
-        this.standbyPolicy = Objects.requireNonNull(standbyPolicy);
-        this.statefulPolicy = Objects.requireNonNull(statefulPolicy);
-        this.status = Objects.requireNonNull(status);
-        this.targetPools = Objects.requireNonNull(targetPools);
-        this.targetSize = Objects.requireNonNull(targetSize);
-        this.targetStoppedSize = Objects.requireNonNull(targetStoppedSize);
-        this.targetSuspendedSize = Objects.requireNonNull(targetSuspendedSize);
-        this.updatePolicy = Objects.requireNonNull(updatePolicy);
-        this.versions = Objects.requireNonNull(versions);
-        this.zone = Objects.requireNonNull(zone);
+        this.allInstancesConfig = allInstancesConfig;
+        this.autoHealingPolicies = autoHealingPolicies;
+        this.baseInstanceName = baseInstanceName;
+        this.creationTimestamp = creationTimestamp;
+        this.currentActions = currentActions;
+        this.description = description;
+        this.distributionPolicy = distributionPolicy;
+        this.failoverAction = failoverAction;
+        this.fingerprint = fingerprint;
+        this.instanceGroup = instanceGroup;
+        this.instanceLifecyclePolicy = instanceLifecyclePolicy;
+        this.instanceTemplate = instanceTemplate;
+        this.kind = kind;
+        this.name = name;
+        this.namedPorts = namedPorts;
+        this.region = region;
+        this.selfLink = selfLink;
+        this.selfLinkWithId = selfLinkWithId;
+        this.serviceAccount = serviceAccount;
+        this.standbyPolicy = standbyPolicy;
+        this.statefulPolicy = statefulPolicy;
+        this.status = status;
+        this.targetPools = targetPools;
+        this.targetSize = targetSize;
+        this.targetStoppedSize = targetStoppedSize;
+        this.targetSuspendedSize = targetSuspendedSize;
+        this.updatePolicy = updatePolicy;
+        this.versions = versions;
+        this.zone = zone;
     }
 
     /**

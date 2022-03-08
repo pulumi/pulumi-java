@@ -31,9 +31,9 @@ public final class AttestorPublicKeyResponse {
         String asciiArmoredPgpPublicKey,
         String comment,
         PkixPublicKeyResponse pkixPublicKey) {
-        this.asciiArmoredPgpPublicKey = Objects.requireNonNull(asciiArmoredPgpPublicKey);
-        this.comment = Objects.requireNonNull(comment);
-        this.pkixPublicKey = Objects.requireNonNull(pkixPublicKey);
+        this.asciiArmoredPgpPublicKey = asciiArmoredPgpPublicKey;
+        this.comment = comment;
+        this.pkixPublicKey = pkixPublicKey;
     }
 
     /**

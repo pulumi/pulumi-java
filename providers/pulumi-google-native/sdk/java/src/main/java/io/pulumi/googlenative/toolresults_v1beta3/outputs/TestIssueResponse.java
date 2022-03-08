@@ -43,11 +43,11 @@ public final class TestIssueResponse {
         String severity,
         String type,
         AnyResponse warning) {
-        this.category = Objects.requireNonNull(category);
-        this.errorMessage = Objects.requireNonNull(errorMessage);
-        this.severity = Objects.requireNonNull(severity);
-        this.type = Objects.requireNonNull(type);
-        this.warning = Objects.requireNonNull(warning);
+        this.category = category;
+        this.errorMessage = errorMessage;
+        this.severity = severity;
+        this.type = type;
+        this.warning = warning;
     }
 
     /**

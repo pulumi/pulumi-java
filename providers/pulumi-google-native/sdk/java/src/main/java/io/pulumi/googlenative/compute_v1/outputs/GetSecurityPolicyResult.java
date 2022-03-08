@@ -71,17 +71,17 @@ public final class GetSecurityPolicyResult {
         List<SecurityPolicyRuleResponse> rules,
         String selfLink,
         String type) {
-        this.adaptiveProtectionConfig = Objects.requireNonNull(adaptiveProtectionConfig);
-        this.advancedOptionsConfig = Objects.requireNonNull(advancedOptionsConfig);
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.description = Objects.requireNonNull(description);
-        this.fingerprint = Objects.requireNonNull(fingerprint);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.recaptchaOptionsConfig = Objects.requireNonNull(recaptchaOptionsConfig);
-        this.rules = Objects.requireNonNull(rules);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.type = Objects.requireNonNull(type);
+        this.adaptiveProtectionConfig = adaptiveProtectionConfig;
+        this.advancedOptionsConfig = advancedOptionsConfig;
+        this.creationTimestamp = creationTimestamp;
+        this.description = description;
+        this.fingerprint = fingerprint;
+        this.kind = kind;
+        this.name = name;
+        this.recaptchaOptionsConfig = recaptchaOptionsConfig;
+        this.rules = rules;
+        this.selfLink = selfLink;
+        this.type = type;
     }
 
     public SecurityPolicyAdaptiveProtectionConfigResponse getAdaptiveProtectionConfig() {

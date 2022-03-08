@@ -24,8 +24,8 @@ public final class GcsDataResponse {
     private GcsDataResponse(
         String bucketName,
         String path) {
-        this.bucketName = Objects.requireNonNull(bucketName);
-        this.path = Objects.requireNonNull(path);
+        this.bucketName = bucketName;
+        this.path = path;
     }
 
     /**

@@ -21,8 +21,8 @@ public final class ManagedZonePeeringConfigResponse {
     private ManagedZonePeeringConfigResponse(
         String kind,
         ManagedZonePeeringConfigTargetNetworkResponse targetNetwork) {
-        this.kind = Objects.requireNonNull(kind);
-        this.targetNetwork = Objects.requireNonNull(targetNetwork);
+        this.kind = kind;
+        this.targetNetwork = targetNetwork;
     }
 
     public String getKind() {

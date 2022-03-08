@@ -39,10 +39,10 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesRespons
         Boolean guestFlush,
         Map<String,String> labels,
         List<String> storageLocations) {
-        this.chainName = Objects.requireNonNull(chainName);
-        this.guestFlush = Objects.requireNonNull(guestFlush);
-        this.labels = Objects.requireNonNull(labels);
-        this.storageLocations = Objects.requireNonNull(storageLocations);
+        this.chainName = chainName;
+        this.guestFlush = guestFlush;
+        this.labels = labels;
+        this.storageLocations = storageLocations;
     }
 
     /**

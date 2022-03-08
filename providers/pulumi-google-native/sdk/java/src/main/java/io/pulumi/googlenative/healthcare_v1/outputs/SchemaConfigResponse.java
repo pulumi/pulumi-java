@@ -24,8 +24,8 @@ public final class SchemaConfigResponse {
     private SchemaConfigResponse(
         String recursiveStructureDepth,
         String schemaType) {
-        this.recursiveStructureDepth = Objects.requireNonNull(recursiveStructureDepth);
-        this.schemaType = Objects.requireNonNull(schemaType);
+        this.recursiveStructureDepth = recursiveStructureDepth;
+        this.schemaType = schemaType;
     }
 
     /**

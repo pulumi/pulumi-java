@@ -50,12 +50,12 @@ public final class GetSourceResult {
         String name,
         String updateTime,
         VmwareSourceDetailsResponse vmware) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.description = Objects.requireNonNull(description);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.updateTime = Objects.requireNonNull(updateTime);
-        this.vmware = Objects.requireNonNull(vmware);
+        this.createTime = createTime;
+        this.description = description;
+        this.labels = labels;
+        this.name = name;
+        this.updateTime = updateTime;
+        this.vmware = vmware;
     }
 
     /**

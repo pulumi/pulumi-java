@@ -50,12 +50,12 @@ public final class DiskResponse {
         Integer sizeGb,
         String source,
         String type) {
-        this.mountPoint = Objects.requireNonNull(mountPoint);
-        this.name = Objects.requireNonNull(name);
-        this.readOnly = Objects.requireNonNull(readOnly);
-        this.sizeGb = Objects.requireNonNull(sizeGb);
-        this.source = Objects.requireNonNull(source);
-        this.type = Objects.requireNonNull(type);
+        this.mountPoint = mountPoint;
+        this.name = name;
+        this.readOnly = readOnly;
+        this.sizeGb = sizeGb;
+        this.source = source;
+        this.type = type;
     }
 
     /**

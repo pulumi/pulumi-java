@@ -31,9 +31,9 @@ public final class LocalDiskResponse {
         Integer diskCount,
         Integer diskSizeGb,
         String diskType) {
-        this.diskCount = Objects.requireNonNull(diskCount);
-        this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
-        this.diskType = Objects.requireNonNull(diskType);
+        this.diskCount = diskCount;
+        this.diskSizeGb = diskSizeGb;
+        this.diskType = diskType;
     }
 
     /**

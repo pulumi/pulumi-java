@@ -44,11 +44,11 @@ public final class TransformSummaryResponse {
         String kind,
         String name,
         List<String> outputCollectionName) {
-        this.displayData = Objects.requireNonNull(displayData);
-        this.inputCollectionName = Objects.requireNonNull(inputCollectionName);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.outputCollectionName = Objects.requireNonNull(outputCollectionName);
+        this.displayData = displayData;
+        this.inputCollectionName = inputCollectionName;
+        this.kind = kind;
+        this.name = name;
+        this.outputCollectionName = outputCollectionName;
     }
 
     /**

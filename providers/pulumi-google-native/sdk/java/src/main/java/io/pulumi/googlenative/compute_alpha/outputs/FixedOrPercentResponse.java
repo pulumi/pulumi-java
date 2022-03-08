@@ -30,9 +30,9 @@ public final class FixedOrPercentResponse {
         Integer calculated,
         Integer fixed,
         Integer percent) {
-        this.calculated = Objects.requireNonNull(calculated);
-        this.fixed = Objects.requireNonNull(fixed);
-        this.percent = Objects.requireNonNull(percent);
+        this.calculated = calculated;
+        this.fixed = fixed;
+        this.percent = percent;
     }
 
     /**

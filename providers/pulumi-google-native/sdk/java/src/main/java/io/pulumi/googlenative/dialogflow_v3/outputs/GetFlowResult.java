@@ -58,13 +58,13 @@ public final class GetFlowResult {
         GoogleCloudDialogflowCxV3NluSettingsResponse nluSettings,
         List<String> transitionRouteGroups,
         List<GoogleCloudDialogflowCxV3TransitionRouteResponse> transitionRoutes) {
-        this.description = Objects.requireNonNull(description);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.eventHandlers = Objects.requireNonNull(eventHandlers);
-        this.name = Objects.requireNonNull(name);
-        this.nluSettings = Objects.requireNonNull(nluSettings);
-        this.transitionRouteGroups = Objects.requireNonNull(transitionRouteGroups);
-        this.transitionRoutes = Objects.requireNonNull(transitionRoutes);
+        this.description = description;
+        this.displayName = displayName;
+        this.eventHandlers = eventHandlers;
+        this.name = name;
+        this.nluSettings = nluSettings;
+        this.transitionRouteGroups = transitionRouteGroups;
+        this.transitionRoutes = transitionRoutes;
     }
 
     /**

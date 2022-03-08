@@ -75,16 +75,16 @@ public final class GetConsentResult {
         String state,
         String ttl,
         String userId) {
-        this.consentArtifact = Objects.requireNonNull(consentArtifact);
-        this.expireTime = Objects.requireNonNull(expireTime);
-        this.metadata = Objects.requireNonNull(metadata);
-        this.name = Objects.requireNonNull(name);
-        this.policies = Objects.requireNonNull(policies);
-        this.revisionCreateTime = Objects.requireNonNull(revisionCreateTime);
-        this.revisionId = Objects.requireNonNull(revisionId);
-        this.state = Objects.requireNonNull(state);
-        this.ttl = Objects.requireNonNull(ttl);
-        this.userId = Objects.requireNonNull(userId);
+        this.consentArtifact = consentArtifact;
+        this.expireTime = expireTime;
+        this.metadata = metadata;
+        this.name = name;
+        this.policies = policies;
+        this.revisionCreateTime = revisionCreateTime;
+        this.revisionId = revisionId;
+        this.state = state;
+        this.ttl = ttl;
+        this.userId = userId;
     }
 
     /**

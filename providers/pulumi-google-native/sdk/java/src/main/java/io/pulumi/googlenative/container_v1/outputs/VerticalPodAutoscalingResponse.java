@@ -17,7 +17,7 @@ public final class VerticalPodAutoscalingResponse {
 
     @OutputCustomType.Constructor({"enabled"})
     private VerticalPodAutoscalingResponse(Boolean enabled) {
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
     }
 
     /**

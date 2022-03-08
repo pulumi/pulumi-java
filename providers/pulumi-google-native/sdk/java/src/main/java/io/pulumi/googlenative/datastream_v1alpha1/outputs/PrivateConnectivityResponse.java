@@ -13,7 +13,7 @@ public final class PrivateConnectivityResponse {
 
     @OutputCustomType.Constructor({"privateConnectionName"})
     private PrivateConnectivityResponse(String privateConnectionName) {
-        this.privateConnectionName = Objects.requireNonNull(privateConnectionName);
+        this.privateConnectionName = privateConnectionName;
     }
 
     public String getPrivateConnectionName() {

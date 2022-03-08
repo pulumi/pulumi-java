@@ -25,8 +25,8 @@ public final class GoogleCloudBillingBudgetsV1ThresholdRuleResponse {
     private GoogleCloudBillingBudgetsV1ThresholdRuleResponse(
         String spendBasis,
         Double thresholdPercent) {
-        this.spendBasis = Objects.requireNonNull(spendBasis);
-        this.thresholdPercent = Objects.requireNonNull(thresholdPercent);
+        this.spendBasis = spendBasis;
+        this.thresholdPercent = thresholdPercent;
     }
 
     /**

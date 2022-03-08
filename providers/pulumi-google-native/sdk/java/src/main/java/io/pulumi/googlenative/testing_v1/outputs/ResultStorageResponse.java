@@ -39,10 +39,10 @@ public final class ResultStorageResponse {
         String resultsUrl,
         ToolResultsExecutionResponse toolResultsExecution,
         ToolResultsHistoryResponse toolResultsHistory) {
-        this.googleCloudStorage = Objects.requireNonNull(googleCloudStorage);
-        this.resultsUrl = Objects.requireNonNull(resultsUrl);
-        this.toolResultsExecution = Objects.requireNonNull(toolResultsExecution);
-        this.toolResultsHistory = Objects.requireNonNull(toolResultsHistory);
+        this.googleCloudStorage = googleCloudStorage;
+        this.resultsUrl = resultsUrl;
+        this.toolResultsExecution = toolResultsExecution;
+        this.toolResultsHistory = toolResultsHistory;
     }
 
     /**

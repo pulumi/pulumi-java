@@ -24,8 +24,8 @@ public final class DiagnosticResponse {
     private DiagnosticResponse(
         String field,
         String level) {
-        this.field = Objects.requireNonNull(field);
-        this.level = Objects.requireNonNull(level);
+        this.field = field;
+        this.level = level;
     }
 
     /**

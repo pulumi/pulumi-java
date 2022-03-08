@@ -17,7 +17,7 @@ public final class GoogleCloudDatacatalogV1EntryOverviewResponse {
 
     @OutputCustomType.Constructor({"overview"})
     private GoogleCloudDatacatalogV1EntryOverviewResponse(String overview) {
-        this.overview = Objects.requireNonNull(overview);
+        this.overview = overview;
     }
 
     /**

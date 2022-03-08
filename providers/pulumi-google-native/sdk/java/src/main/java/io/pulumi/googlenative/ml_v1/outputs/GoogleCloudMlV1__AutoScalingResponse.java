@@ -32,9 +32,9 @@ public final class GoogleCloudMlV1__AutoScalingResponse {
         Integer maxNodes,
         List<GoogleCloudMlV1__MetricSpecResponse> metrics,
         Integer minNodes) {
-        this.maxNodes = Objects.requireNonNull(maxNodes);
-        this.metrics = Objects.requireNonNull(metrics);
-        this.minNodes = Objects.requireNonNull(minNodes);
+        this.maxNodes = maxNodes;
+        this.metrics = metrics;
+        this.minNodes = minNodes;
     }
 
     /**

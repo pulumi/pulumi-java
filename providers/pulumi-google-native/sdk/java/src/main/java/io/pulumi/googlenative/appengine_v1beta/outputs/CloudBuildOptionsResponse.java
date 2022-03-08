@@ -24,8 +24,8 @@ public final class CloudBuildOptionsResponse {
     private CloudBuildOptionsResponse(
         String appYamlPath,
         String cloudBuildTimeout) {
-        this.appYamlPath = Objects.requireNonNull(appYamlPath);
-        this.cloudBuildTimeout = Objects.requireNonNull(cloudBuildTimeout);
+        this.appYamlPath = appYamlPath;
+        this.cloudBuildTimeout = cloudBuildTimeout;
     }
 
     /**

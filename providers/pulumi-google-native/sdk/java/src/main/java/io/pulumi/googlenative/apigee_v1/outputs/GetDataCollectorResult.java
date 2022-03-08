@@ -42,11 +42,11 @@ public final class GetDataCollectorResult {
         String lastModifiedAt,
         String name,
         String type) {
-        this.createdAt = Objects.requireNonNull(createdAt);
-        this.description = Objects.requireNonNull(description);
-        this.lastModifiedAt = Objects.requireNonNull(lastModifiedAt);
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.createdAt = createdAt;
+        this.description = description;
+        this.lastModifiedAt = lastModifiedAt;
+        this.name = name;
+        this.type = type;
     }
 
     /**

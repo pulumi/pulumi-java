@@ -102,20 +102,20 @@ public final class GetConversationProfileResult {
         GoogleCloudDialogflowV2beta1SpeechToTextConfigResponse sttConfig,
         String timeZone,
         String updateTime) {
-        this.automatedAgentConfig = Objects.requireNonNull(automatedAgentConfig);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.humanAgentAssistantConfig = Objects.requireNonNull(humanAgentAssistantConfig);
-        this.humanAgentHandoffConfig = Objects.requireNonNull(humanAgentHandoffConfig);
-        this.languageCode = Objects.requireNonNull(languageCode);
-        this.loggingConfig = Objects.requireNonNull(loggingConfig);
-        this.name = Objects.requireNonNull(name);
-        this.newMessageEventNotificationConfig = Objects.requireNonNull(newMessageEventNotificationConfig);
-        this.notificationConfig = Objects.requireNonNull(notificationConfig);
-        this.securitySettings = Objects.requireNonNull(securitySettings);
-        this.sttConfig = Objects.requireNonNull(sttConfig);
-        this.timeZone = Objects.requireNonNull(timeZone);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.automatedAgentConfig = automatedAgentConfig;
+        this.createTime = createTime;
+        this.displayName = displayName;
+        this.humanAgentAssistantConfig = humanAgentAssistantConfig;
+        this.humanAgentHandoffConfig = humanAgentHandoffConfig;
+        this.languageCode = languageCode;
+        this.loggingConfig = loggingConfig;
+        this.name = name;
+        this.newMessageEventNotificationConfig = newMessageEventNotificationConfig;
+        this.notificationConfig = notificationConfig;
+        this.securitySettings = securitySettings;
+        this.sttConfig = sttConfig;
+        this.timeZone = timeZone;
+        this.updateTime = updateTime;
     }
 
     /**

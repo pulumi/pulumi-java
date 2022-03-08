@@ -51,12 +51,12 @@ public final class ExecutionConfigResponse {
         String serviceAccount,
         List<String> usages,
         String workerPool) {
-        this.artifactStorage = Objects.requireNonNull(artifactStorage);
-        this.defaultPool = Objects.requireNonNull(defaultPool);
-        this.privatePool = Objects.requireNonNull(privatePool);
-        this.serviceAccount = Objects.requireNonNull(serviceAccount);
-        this.usages = Objects.requireNonNull(usages);
-        this.workerPool = Objects.requireNonNull(workerPool);
+        this.artifactStorage = artifactStorage;
+        this.defaultPool = defaultPool;
+        this.privatePool = privatePool;
+        this.serviceAccount = serviceAccount;
+        this.usages = usages;
+        this.workerPool = workerPool;
     }
 
     /**

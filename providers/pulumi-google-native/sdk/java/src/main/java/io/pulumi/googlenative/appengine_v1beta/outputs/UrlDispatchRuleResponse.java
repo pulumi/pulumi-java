@@ -30,9 +30,9 @@ public final class UrlDispatchRuleResponse {
         String domain,
         String path,
         String service) {
-        this.domain = Objects.requireNonNull(domain);
-        this.path = Objects.requireNonNull(path);
-        this.service = Objects.requireNonNull(service);
+        this.domain = domain;
+        this.path = path;
+        this.service = service;
     }
 
     /**

@@ -26,8 +26,8 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesRespons
     private GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse(
         Double estimatedProbability,
         List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues) {
-        this.estimatedProbability = Objects.requireNonNull(estimatedProbability);
-        this.quasiIdsValues = Objects.requireNonNull(quasiIdsValues);
+        this.estimatedProbability = estimatedProbability;
+        this.quasiIdsValues = quasiIdsValues;
     }
 
     /**
