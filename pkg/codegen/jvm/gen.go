@@ -1221,12 +1221,13 @@ func (pt *plainType) genNormalOutputType(ctx *classFileContext) error {
 	for _, prop := range props {
 		paramName := names.Ident(prop.Name)
 		fieldName := names.Ident(pt.mod.propertyName(prop))
-		if prop.IsRequired() {
-			fprintf(w, "        this.%s = %s.requireNonNull(%s);\n",
-				fieldName, ctx.ref(names.Objects), paramName)
-		} else {
-			fprintf(w, "        this.%s = %s;\n", fieldName, paramName)
-		}
+
+		// Never `Objects.requireNotNull` here because we need
+		// to tolerate providers failing to return required props.
+		//
+		// See https://github.com/pulumi/pulumi-java/issues/164
+		fprintf(w, "        this.%s = %s;\n", fieldName, paramName)
+
 	}
 	fprintf(w, "    }\n")
 	fprintf(w, "\n")
