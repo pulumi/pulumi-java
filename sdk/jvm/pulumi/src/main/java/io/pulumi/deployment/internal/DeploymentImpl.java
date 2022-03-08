@@ -1087,8 +1087,9 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                     completionSources.get(Constants.UrnPropertyName).setStringValue(urn, true);
 
                                     if (resource instanceof CustomResource) {
+                                        var isKnown = isNonEmptyOrNull(id);
                                         completionSources.get(Constants.IdPropertyName)
-                                                .setStringValue(id, isNonEmptyOrNull(id));
+                                                .setStringValue(isKnown ? id : null, isKnown);
                                     }
 
                                     // Go through all our output fields and lookup a corresponding value in the response

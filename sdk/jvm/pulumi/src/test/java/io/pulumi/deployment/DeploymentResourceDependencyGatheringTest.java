@@ -51,7 +51,7 @@ public class DeploymentResourceDependencyGatheringTest {
     public static class DeploysResourcesWithUnknownDependsOnStack extends Stack {
         public DeploysResourcesWithUnknownDependsOnStack() {
             var r = new MyCustomResource("r1", null, CustomResourceOptions.builder()
-                    .setDependsOn(InputOutputTests.unknown(List.<Resource>of()).toInput())
+                    .setDependsOn(InputOutputTests.<List<Resource>>unknown().toInput())
                     .build()
             );
         }

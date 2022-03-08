@@ -68,7 +68,9 @@ public class Converter {
         // Note: nulls can enter the system as the representation of an 'unknown' value,
         //       but the Deserializer will wrap it in an InputOutputData, and we get them as a null here
         @Nullable
-        var converted = convertObjectUntyped(context, data.getValueNullable(), targetType);
+        var converted = data.isKnown()
+                ? convertObjectUntyped(context, data.getValueNullable(), targetType)
+                : null;
 
         // conversion methods check nested types of the value against the given type shape,
         // so the cast below should be safe in normal circumstances

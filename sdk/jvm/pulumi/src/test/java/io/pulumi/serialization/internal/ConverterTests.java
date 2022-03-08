@@ -242,13 +242,13 @@ class ConverterTests {
         }
 
         @Test
-        void testUnknownProducesFalseUnknown() {
+        void testUnknownValueDeserializesCorrectly() {
             var converter = new Converter(log);
             var unknownValue = Value.newBuilder().setStringValue(Constants.UnknownValue).build();
             var data = converter.convertValue(
                     "BooleanConverterTests", unknownValue, Boolean.class
             );
-            assertThat(data.getValueNullable()).isNotNull().isFalse();
+            assertThat(data.getValueNullable()).isNull();
             assertThat(data.isKnown()).isFalse();
         }
 
@@ -546,14 +546,11 @@ class ConverterTests {
         @Test
         void testListWithUnknownElement() {
             var converter = new Converter(log);
-            var listWithUnknownElement = List.of(InputOutputTests.unknown(true));
+            var listWithUnknownElement = List.of(InputOutputTests.unknown());
             serializeToValueAsync(listWithUnknownElement)
                     .thenApply(value -> converter.convertValue("ListConverterTests", value, TypeShape.list(Boolean.class)))
                     .thenAccept(data -> {
-                        assertThat(data.getValueNullable())
-                                .isNotNull()
-                                .hasSize(1)
-                                .containsOnly(false); // yes, false, because we lose the value through a null of the unknown
+                        assertThat(data.getValueNullable()).isNull();
                         assertThat(data.isKnown()).isFalse();
                         assertThat(data.isSecret()).isFalse();
                     }).join();
