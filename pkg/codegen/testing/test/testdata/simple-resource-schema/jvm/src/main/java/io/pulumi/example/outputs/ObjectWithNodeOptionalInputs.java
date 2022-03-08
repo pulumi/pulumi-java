@@ -20,7 +20,7 @@ public final class ObjectWithNodeOptionalInputs {
         @Nullable Integer bar,
         String foo) {
         this.bar = bar;
-        this.foo = Objects.requireNonNull(foo);
+        this.foo = foo;
     }
 
     public Optional<Integer> getBar() {

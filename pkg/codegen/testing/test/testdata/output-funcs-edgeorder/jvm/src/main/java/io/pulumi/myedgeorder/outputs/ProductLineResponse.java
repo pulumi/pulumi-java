@@ -68,14 +68,14 @@ public final class ProductLineResponse {
         HierarchyInformationResponse hierarchyInformation,
         List<ImageInformationResponse> imageInformation,
         List<ProductResponse> products) {
-        this.availabilityInformation = Objects.requireNonNull(availabilityInformation);
-        this.costInformation = Objects.requireNonNull(costInformation);
-        this.description = Objects.requireNonNull(description);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.filterableProperties = Objects.requireNonNull(filterableProperties);
-        this.hierarchyInformation = Objects.requireNonNull(hierarchyInformation);
-        this.imageInformation = Objects.requireNonNull(imageInformation);
-        this.products = Objects.requireNonNull(products);
+        this.availabilityInformation = availabilityInformation;
+        this.costInformation = costInformation;
+        this.description = description;
+        this.displayName = displayName;
+        this.filterableProperties = filterableProperties;
+        this.hierarchyInformation = hierarchyInformation;
+        this.imageInformation = imageInformation;
+        this.products = products;
     }
 
     /**

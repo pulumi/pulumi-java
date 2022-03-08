@@ -50,12 +50,12 @@ public final class PurchaseMeterDetailsResponse {
         String productId,
         String skuId,
         String termId) {
-        this.billingType = Objects.requireNonNull(billingType);
-        this.chargingType = Objects.requireNonNull(chargingType);
-        this.multiplier = Objects.requireNonNull(multiplier);
-        this.productId = Objects.requireNonNull(productId);
-        this.skuId = Objects.requireNonNull(skuId);
-        this.termId = Objects.requireNonNull(termId);
+        this.billingType = billingType;
+        this.chargingType = chargingType;
+        this.multiplier = multiplier;
+        this.productId = productId;
+        this.skuId = skuId;
+        this.termId = termId;
     }
 
     /**

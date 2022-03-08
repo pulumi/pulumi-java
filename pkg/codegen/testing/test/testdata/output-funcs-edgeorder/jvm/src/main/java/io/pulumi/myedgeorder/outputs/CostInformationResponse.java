@@ -26,8 +26,8 @@ public final class CostInformationResponse {
     private CostInformationResponse(
         String billingInfoUrl,
         List<BillingMeterDetailsResponse> billingMeterDetails) {
-        this.billingInfoUrl = Objects.requireNonNull(billingInfoUrl);
-        this.billingMeterDetails = Objects.requireNonNull(billingMeterDetails);
+        this.billingInfoUrl = billingInfoUrl;
+        this.billingMeterDetails = billingMeterDetails;
     }
 
     /**

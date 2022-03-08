@@ -27,7 +27,7 @@ public final class Container {
         this.brightness = brightness;
         this.color = color;
         this.material = material;
-        this.size = Objects.requireNonNull(size);
+        this.size = size;
     }
 
     public Optional<ContainerBrightness> getBrightness() {
