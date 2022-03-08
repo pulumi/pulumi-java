@@ -44,11 +44,11 @@ public final class PlanResponse {
         @Nullable String promotionCode,
         String publisher,
         String version) {
-        this.name = Objects.requireNonNull(name);
-        this.product = Objects.requireNonNull(product);
+        this.name = name;
+        this.product = product;
         this.promotionCode = promotionCode;
-        this.publisher = Objects.requireNonNull(publisher);
-        this.version = Objects.requireNonNull(version);
+        this.publisher = publisher;
+        this.version = version;
     }
 
     /**

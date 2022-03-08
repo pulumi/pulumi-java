@@ -17,7 +17,7 @@ public final class ServicePlacementPolicyDescriptionResponse {
 
     @OutputCustomType.Constructor({"type"})
     private ServicePlacementPolicyDescriptionResponse(String type) {
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

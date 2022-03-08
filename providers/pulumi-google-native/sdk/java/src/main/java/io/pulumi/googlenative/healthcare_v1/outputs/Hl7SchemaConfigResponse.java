@@ -27,8 +27,8 @@ public final class Hl7SchemaConfigResponse {
     private Hl7SchemaConfigResponse(
         Map<String,String> messageSchemaConfigs,
         List<VersionSourceResponse> version) {
-        this.messageSchemaConfigs = Objects.requireNonNull(messageSchemaConfigs);
-        this.version = Objects.requireNonNull(version);
+        this.messageSchemaConfigs = messageSchemaConfigs;
+        this.version = version;
     }
 
     /**

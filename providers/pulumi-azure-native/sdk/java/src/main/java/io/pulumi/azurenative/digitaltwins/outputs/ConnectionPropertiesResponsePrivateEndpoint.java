@@ -17,7 +17,7 @@ public final class ConnectionPropertiesResponsePrivateEndpoint {
 
     @OutputCustomType.Constructor({"id"})
     private ConnectionPropertiesResponsePrivateEndpoint(String id) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
     }
 
     /**

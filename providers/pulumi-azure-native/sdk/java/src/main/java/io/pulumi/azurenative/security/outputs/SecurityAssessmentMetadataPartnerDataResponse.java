@@ -32,9 +32,9 @@ public final class SecurityAssessmentMetadataPartnerDataResponse {
         String partnerName,
         @Nullable String productName,
         String secret) {
-        this.partnerName = Objects.requireNonNull(partnerName);
+        this.partnerName = partnerName;
         this.productName = productName;
-        this.secret = Objects.requireNonNull(secret);
+        this.secret = secret;
     }
 
     /**

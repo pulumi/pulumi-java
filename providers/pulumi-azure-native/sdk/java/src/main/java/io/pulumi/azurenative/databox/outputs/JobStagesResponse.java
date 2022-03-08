@@ -43,11 +43,11 @@ public final class JobStagesResponse {
         String stageName,
         String stageStatus,
         String stageTime) {
-        this.displayName = Objects.requireNonNull(displayName);
-        this.jobStageDetails = Objects.requireNonNull(jobStageDetails);
-        this.stageName = Objects.requireNonNull(stageName);
-        this.stageStatus = Objects.requireNonNull(stageStatus);
-        this.stageTime = Objects.requireNonNull(stageTime);
+        this.displayName = displayName;
+        this.jobStageDetails = jobStageDetails;
+        this.stageName = stageName;
+        this.stageStatus = stageStatus;
+        this.stageTime = stageTime;
     }
 
     /**

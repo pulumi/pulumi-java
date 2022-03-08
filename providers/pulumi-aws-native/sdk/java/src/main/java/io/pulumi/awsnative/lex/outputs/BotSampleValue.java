@@ -17,7 +17,7 @@ public final class BotSampleValue {
 
     @OutputCustomType.Constructor({"value"})
     private BotSampleValue(String value) {
-        this.value = Objects.requireNonNull(value);
+        this.value = value;
     }
 
     /**

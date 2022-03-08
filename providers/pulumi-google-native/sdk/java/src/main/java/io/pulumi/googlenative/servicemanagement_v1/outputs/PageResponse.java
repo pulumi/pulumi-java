@@ -31,9 +31,9 @@ public final class PageResponse {
         String content,
         String name,
         List<PageResponse> subpages) {
-        this.content = Objects.requireNonNull(content);
-        this.name = Objects.requireNonNull(name);
-        this.subpages = Objects.requireNonNull(subpages);
+        this.content = content;
+        this.name = name;
+        this.subpages = subpages;
     }
 
     /**

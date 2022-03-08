@@ -25,8 +25,8 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCase
     private GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseCaseContentResponse(
         GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesResponse additionalCases,
         GoogleCloudDialogflowCxV3beta1ResponseMessageResponse message) {
-        this.additionalCases = Objects.requireNonNull(additionalCases);
-        this.message = Objects.requireNonNull(message);
+        this.additionalCases = additionalCases;
+        this.message = message;
     }
 
     /**

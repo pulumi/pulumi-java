@@ -61,15 +61,15 @@ public final class GetMeshResult {
         String resourceOwner,
         List<GetMeshSpec> specs,
         Map<String,String> tags) {
-        this.arn = Objects.requireNonNull(arn);
-        this.createdDate = Objects.requireNonNull(createdDate);
-        this.id = Objects.requireNonNull(id);
-        this.lastUpdatedDate = Objects.requireNonNull(lastUpdatedDate);
-        this.meshOwner = Objects.requireNonNull(meshOwner);
-        this.name = Objects.requireNonNull(name);
-        this.resourceOwner = Objects.requireNonNull(resourceOwner);
-        this.specs = Objects.requireNonNull(specs);
-        this.tags = Objects.requireNonNull(tags);
+        this.arn = arn;
+        this.createdDate = createdDate;
+        this.id = id;
+        this.lastUpdatedDate = lastUpdatedDate;
+        this.meshOwner = meshOwner;
+        this.name = name;
+        this.resourceOwner = resourceOwner;
+        this.specs = specs;
+        this.tags = tags;
     }
 
     /**

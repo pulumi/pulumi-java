@@ -128,10 +128,10 @@ public final class MutatingWebhook {
         @Nullable String sideEffects,
         @Nullable Integer timeoutSeconds) {
         this.admissionReviewVersions = admissionReviewVersions;
-        this.clientConfig = Objects.requireNonNull(clientConfig);
+        this.clientConfig = clientConfig;
         this.failurePolicy = failurePolicy;
         this.matchPolicy = matchPolicy;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.namespaceSelector = namespaceSelector;
         this.objectSelector = objectSelector;
         this.reinvocationPolicy = reinvocationPolicy;

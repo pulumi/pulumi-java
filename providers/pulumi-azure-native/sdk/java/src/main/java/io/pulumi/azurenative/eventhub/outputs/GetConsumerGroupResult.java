@@ -50,11 +50,11 @@ public final class GetConsumerGroupResult {
         String type,
         String updatedAt,
         @Nullable String userMetadata) {
-        this.createdAt = Objects.requireNonNull(createdAt);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
-        this.updatedAt = Objects.requireNonNull(updatedAt);
+        this.createdAt = createdAt;
+        this.id = id;
+        this.name = name;
+        this.type = type;
+        this.updatedAt = updatedAt;
         this.userMetadata = userMetadata;
     }
 

@@ -64,14 +64,14 @@ public final class ConnectToSourceSqlServerTaskOutputTaskLevelResponse {
         String sourceServerBrandVersion,
         String sourceServerVersion,
         List<ReportableExceptionResponse> validationErrors) {
-        this.agentJobs = Objects.requireNonNull(agentJobs);
-        this.databases = Objects.requireNonNull(databases);
-        this.id = Objects.requireNonNull(id);
-        this.logins = Objects.requireNonNull(logins);
-        this.resultType = Objects.requireNonNull(resultType);
-        this.sourceServerBrandVersion = Objects.requireNonNull(sourceServerBrandVersion);
-        this.sourceServerVersion = Objects.requireNonNull(sourceServerVersion);
-        this.validationErrors = Objects.requireNonNull(validationErrors);
+        this.agentJobs = agentJobs;
+        this.databases = databases;
+        this.id = id;
+        this.logins = logins;
+        this.resultType = resultType;
+        this.sourceServerBrandVersion = sourceServerBrandVersion;
+        this.sourceServerVersion = sourceServerVersion;
+        this.validationErrors = validationErrors;
     }
 
     /**

@@ -71,7 +71,7 @@ public final class AzureBlobFSSourceResponse {
         this.sourceRetryCount = sourceRetryCount;
         this.sourceRetryWait = sourceRetryWait;
         this.treatEmptyAsNull = treatEmptyAsNull;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

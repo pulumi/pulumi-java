@@ -31,9 +31,9 @@ public final class EndpointResponse {
         Boolean allowCors,
         String name,
         String target) {
-        this.allowCors = Objects.requireNonNull(allowCors);
-        this.name = Objects.requireNonNull(name);
-        this.target = Objects.requireNonNull(target);
+        this.allowCors = allowCors;
+        this.name = name;
+        this.target = target;
     }
 
     /**

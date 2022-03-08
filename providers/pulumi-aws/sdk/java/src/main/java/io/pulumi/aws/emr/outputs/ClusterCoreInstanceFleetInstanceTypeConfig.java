@@ -59,7 +59,7 @@ public final class ClusterCoreInstanceFleetInstanceTypeConfig {
         this.bidPriceAsPercentageOfOnDemandPrice = bidPriceAsPercentageOfOnDemandPrice;
         this.configurations = configurations;
         this.ebsConfigs = ebsConfigs;
-        this.instanceType = Objects.requireNonNull(instanceType);
+        this.instanceType = instanceType;
         this.weightedCapacity = weightedCapacity;
     }
 

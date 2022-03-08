@@ -24,8 +24,8 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskInputResponse {
     private ConnectToTargetAzureDbForPostgreSqlSyncTaskInputResponse(
         PostgreSqlConnectionInfoResponse sourceConnectionInfo,
         PostgreSqlConnectionInfoResponse targetConnectionInfo) {
-        this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
-        this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
+        this.sourceConnectionInfo = sourceConnectionInfo;
+        this.targetConnectionInfo = targetConnectionInfo;
     }
 
     /**

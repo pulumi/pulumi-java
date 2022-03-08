@@ -27,8 +27,8 @@ public final class InstanceNetworkConfig {
     private InstanceNetworkConfig(
         String ipAllocation,
         String network) {
-        this.ipAllocation = Objects.requireNonNull(ipAllocation);
-        this.network = Objects.requireNonNull(network);
+        this.ipAllocation = ipAllocation;
+        this.network = network;
     }
 
     /**

@@ -18,7 +18,7 @@ public final class AssignmentGroupLabelResponse {
 
     @OutputCustomType.Constructor({"labels"})
     private AssignmentGroupLabelResponse(Map<String,String> labels) {
-        this.labels = Objects.requireNonNull(labels);
+        this.labels = labels;
     }
 
     /**

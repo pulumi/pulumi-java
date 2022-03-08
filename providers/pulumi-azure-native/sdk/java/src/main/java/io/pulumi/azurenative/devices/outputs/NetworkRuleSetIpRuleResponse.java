@@ -33,8 +33,8 @@ public final class NetworkRuleSetIpRuleResponse {
         String filterName,
         String ipMask) {
         this.action = action;
-        this.filterName = Objects.requireNonNull(filterName);
-        this.ipMask = Objects.requireNonNull(ipMask);
+        this.filterName = filterName;
+        this.ipMask = ipMask;
     }
 
     /**

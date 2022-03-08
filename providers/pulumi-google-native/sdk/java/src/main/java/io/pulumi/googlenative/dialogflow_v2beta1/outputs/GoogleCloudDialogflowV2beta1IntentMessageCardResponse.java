@@ -38,10 +38,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardResponse {
         String imageUri,
         String subtitle,
         String title) {
-        this.buttons = Objects.requireNonNull(buttons);
-        this.imageUri = Objects.requireNonNull(imageUri);
-        this.subtitle = Objects.requireNonNull(subtitle);
-        this.title = Objects.requireNonNull(title);
+        this.buttons = buttons;
+        this.imageUri = imageUri;
+        this.subtitle = subtitle;
+        this.title = title;
     }
 
     /**

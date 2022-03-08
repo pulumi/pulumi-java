@@ -25,8 +25,8 @@ public final class SourceResponse {
     private SourceResponse(
         List<String> ipBlocks,
         List<String> principals) {
-        this.ipBlocks = Objects.requireNonNull(ipBlocks);
-        this.principals = Objects.requireNonNull(principals);
+        this.ipBlocks = ipBlocks;
+        this.principals = principals;
     }
 
     /**

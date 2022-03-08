@@ -25,8 +25,8 @@ public final class MetricRangeResponse {
     private MetricRangeResponse(
         GoogleMonitoringV3RangeResponse range,
         String timeSeries) {
-        this.range = Objects.requireNonNull(range);
-        this.timeSeries = Objects.requireNonNull(timeSeries);
+        this.range = range;
+        this.timeSeries = timeSeries;
     }
 
     /**

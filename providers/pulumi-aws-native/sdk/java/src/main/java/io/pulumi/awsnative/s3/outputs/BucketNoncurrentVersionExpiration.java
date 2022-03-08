@@ -27,7 +27,7 @@ public final class BucketNoncurrentVersionExpiration {
         @Nullable Integer newerNoncurrentVersions,
         Integer noncurrentDays) {
         this.newerNoncurrentVersions = newerNoncurrentVersions;
-        this.noncurrentDays = Objects.requireNonNull(noncurrentDays);
+        this.noncurrentDays = noncurrentDays;
     }
 
     /**

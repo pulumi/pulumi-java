@@ -36,7 +36,7 @@ public final class PrivateDnsZoneConfigResponse {
         List<RecordSetResponse> recordSets) {
         this.name = name;
         this.privateDnsZoneId = privateDnsZoneId;
-        this.recordSets = Objects.requireNonNull(recordSets);
+        this.recordSets = recordSets;
     }
 
     /**

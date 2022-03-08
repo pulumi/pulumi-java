@@ -32,9 +32,9 @@ public final class MigrateSqlServerSqlMISyncTaskOutputErrorResponse {
         ReportableExceptionResponse error,
         String id,
         String resultType) {
-        this.error = Objects.requireNonNull(error);
-        this.id = Objects.requireNonNull(id);
-        this.resultType = Objects.requireNonNull(resultType);
+        this.error = error;
+        this.id = id;
+        this.resultType = resultType;
     }
 
     /**

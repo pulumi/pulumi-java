@@ -119,18 +119,18 @@ public final class AmlComputeResponseProperties {
         @Nullable VirtualMachineImageResponse virtualMachineImage,
         @Nullable String vmPriority,
         @Nullable String vmSize) {
-        this.allocationState = Objects.requireNonNull(allocationState);
-        this.allocationStateTransitionTime = Objects.requireNonNull(allocationStateTransitionTime);
-        this.currentNodeCount = Objects.requireNonNull(currentNodeCount);
+        this.allocationState = allocationState;
+        this.allocationStateTransitionTime = allocationStateTransitionTime;
+        this.currentNodeCount = currentNodeCount;
         this.enableNodePublicIp = enableNodePublicIp;
-        this.errors = Objects.requireNonNull(errors);
+        this.errors = errors;
         this.isolatedNetwork = isolatedNetwork;
-        this.nodeStateCounts = Objects.requireNonNull(nodeStateCounts);
+        this.nodeStateCounts = nodeStateCounts;
         this.osType = osType;
         this.remoteLoginPortPublicAccess = remoteLoginPortPublicAccess;
         this.scaleSettings = scaleSettings;
         this.subnet = subnet;
-        this.targetNodeCount = Objects.requireNonNull(targetNodeCount);
+        this.targetNodeCount = targetNodeCount;
         this.userAccountCredentials = userAccountCredentials;
         this.virtualMachineImage = virtualMachineImage;
         this.vmPriority = vmPriority;

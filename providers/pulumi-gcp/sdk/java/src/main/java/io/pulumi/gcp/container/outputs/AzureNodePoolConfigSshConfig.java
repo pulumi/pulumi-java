@@ -17,7 +17,7 @@ public final class AzureNodePoolConfigSshConfig {
 
     @OutputCustomType.Constructor({"authorizedKey"})
     private AzureNodePoolConfigSshConfig(String authorizedKey) {
-        this.authorizedKey = Objects.requireNonNull(authorizedKey);
+        this.authorizedKey = authorizedKey;
     }
 
     /**

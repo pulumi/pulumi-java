@@ -54,11 +54,11 @@ public final class ExecutionStatisticsResponse {
         Boolean hasErrors,
         List<String> sqlErrors,
         @Nullable Map<String,WaitStatisticsResponse> waitStats) {
-        this.cpuTimeMs = Objects.requireNonNull(cpuTimeMs);
-        this.elapsedTimeMs = Objects.requireNonNull(elapsedTimeMs);
-        this.executionCount = Objects.requireNonNull(executionCount);
-        this.hasErrors = Objects.requireNonNull(hasErrors);
-        this.sqlErrors = Objects.requireNonNull(sqlErrors);
+        this.cpuTimeMs = cpuTimeMs;
+        this.elapsedTimeMs = elapsedTimeMs;
+        this.executionCount = executionCount;
+        this.hasErrors = hasErrors;
+        this.sqlErrors = sqlErrors;
         this.waitStats = waitStats;
     }
 

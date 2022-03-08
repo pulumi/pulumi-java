@@ -21,8 +21,8 @@ public final class TopicRuleSqsAction {
         String queueUrl,
         String roleArn,
         @Nullable Boolean useBase64) {
-        this.queueUrl = Objects.requireNonNull(queueUrl);
-        this.roleArn = Objects.requireNonNull(roleArn);
+        this.queueUrl = queueUrl;
+        this.roleArn = roleArn;
         this.useBase64 = useBase64;
     }
 

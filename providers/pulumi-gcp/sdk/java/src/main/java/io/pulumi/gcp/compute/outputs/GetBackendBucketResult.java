@@ -41,16 +41,16 @@ public final class GetBackendBucketResult {
         String name,
         @Nullable String project,
         String selfLink) {
-        this.bucketName = Objects.requireNonNull(bucketName);
-        this.cdnPolicies = Objects.requireNonNull(cdnPolicies);
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.customResponseHeaders = Objects.requireNonNull(customResponseHeaders);
-        this.description = Objects.requireNonNull(description);
-        this.enableCdn = Objects.requireNonNull(enableCdn);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.bucketName = bucketName;
+        this.cdnPolicies = cdnPolicies;
+        this.creationTimestamp = creationTimestamp;
+        this.customResponseHeaders = customResponseHeaders;
+        this.description = description;
+        this.enableCdn = enableCdn;
+        this.id = id;
+        this.name = name;
         this.project = project;
-        this.selfLink = Objects.requireNonNull(selfLink);
+        this.selfLink = selfLink;
     }
 
     public String getBucketName() {

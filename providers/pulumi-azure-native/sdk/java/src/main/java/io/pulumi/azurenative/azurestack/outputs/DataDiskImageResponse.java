@@ -25,8 +25,8 @@ public final class DataDiskImageResponse {
     private DataDiskImageResponse(
         Integer lun,
         String sourceBlobSasUri) {
-        this.lun = Objects.requireNonNull(lun);
-        this.sourceBlobSasUri = Objects.requireNonNull(sourceBlobSasUri);
+        this.lun = lun;
+        this.sourceBlobSasUri = sourceBlobSasUri;
     }
 
     /**

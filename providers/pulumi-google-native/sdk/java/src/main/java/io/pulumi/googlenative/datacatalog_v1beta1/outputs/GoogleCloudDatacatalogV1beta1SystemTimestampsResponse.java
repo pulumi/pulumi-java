@@ -30,9 +30,9 @@ public final class GoogleCloudDatacatalogV1beta1SystemTimestampsResponse {
         String createTime,
         String expireTime,
         String updateTime) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.expireTime = Objects.requireNonNull(expireTime);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.createTime = createTime;
+        this.expireTime = expireTime;
+        this.updateTime = updateTime;
     }
 
     /**

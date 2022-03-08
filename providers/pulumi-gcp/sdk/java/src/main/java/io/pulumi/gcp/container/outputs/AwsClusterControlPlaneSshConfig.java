@@ -17,7 +17,7 @@ public final class AwsClusterControlPlaneSshConfig {
 
     @OutputCustomType.Constructor({"ec2KeyPair"})
     private AwsClusterControlPlaneSshConfig(String ec2KeyPair) {
-        this.ec2KeyPair = Objects.requireNonNull(ec2KeyPair);
+        this.ec2KeyPair = ec2KeyPair;
     }
 
     /**

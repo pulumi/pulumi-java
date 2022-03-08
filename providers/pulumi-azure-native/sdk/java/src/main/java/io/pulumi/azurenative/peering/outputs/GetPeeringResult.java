@@ -86,15 +86,15 @@ public final class GetPeeringResult {
         String type) {
         this.direct = direct;
         this.exchange = exchange;
-        this.id = Objects.requireNonNull(id);
-        this.kind = Objects.requireNonNull(kind);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.kind = kind;
+        this.location = location;
+        this.name = name;
         this.peeringLocation = peeringLocation;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.sku = Objects.requireNonNull(sku);
+        this.provisioningState = provisioningState;
+        this.sku = sku;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

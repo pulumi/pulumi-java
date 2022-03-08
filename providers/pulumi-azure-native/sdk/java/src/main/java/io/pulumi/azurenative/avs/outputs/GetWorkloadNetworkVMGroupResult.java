@@ -65,13 +65,13 @@ public final class GetWorkloadNetworkVMGroupResult {
         String status,
         String type) {
         this.displayName = displayName;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.members = members;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.revision = revision;
-        this.status = Objects.requireNonNull(status);
-        this.type = Objects.requireNonNull(type);
+        this.status = status;
+        this.type = type;
     }
 
     /**

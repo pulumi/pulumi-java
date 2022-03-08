@@ -78,13 +78,13 @@ public final class GetWorkloadNetworkPortMirroringResult {
         this.destination = destination;
         this.direction = direction;
         this.displayName = displayName;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.id = id;
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.revision = revision;
         this.source = source;
-        this.status = Objects.requireNonNull(status);
-        this.type = Objects.requireNonNull(type);
+        this.status = status;
+        this.type = type;
     }
 
     /**

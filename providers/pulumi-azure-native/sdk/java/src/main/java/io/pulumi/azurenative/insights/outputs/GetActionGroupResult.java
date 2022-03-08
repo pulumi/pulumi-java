@@ -145,18 +145,18 @@ public final class GetActionGroupResult {
         this.azureAppPushReceivers = azureAppPushReceivers;
         this.azureFunctionReceivers = azureFunctionReceivers;
         this.emailReceivers = emailReceivers;
-        this.enabled = Objects.requireNonNull(enabled);
-        this.groupShortName = Objects.requireNonNull(groupShortName);
-        this.id = Objects.requireNonNull(id);
-        this.identity = Objects.requireNonNull(identity);
+        this.enabled = enabled;
+        this.groupShortName = groupShortName;
+        this.id = id;
+        this.identity = identity;
         this.itsmReceivers = itsmReceivers;
-        this.kind = Objects.requireNonNull(kind);
-        this.location = Objects.requireNonNull(location);
+        this.kind = kind;
+        this.location = location;
         this.logicAppReceivers = logicAppReceivers;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.smsReceivers = smsReceivers;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.voiceReceivers = voiceReceivers;
         this.webhookReceivers = webhookReceivers;
     }

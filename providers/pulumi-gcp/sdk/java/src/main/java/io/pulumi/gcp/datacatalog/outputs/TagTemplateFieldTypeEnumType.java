@@ -23,7 +23,7 @@ public final class TagTemplateFieldTypeEnumType {
 
     @OutputCustomType.Constructor({"allowedValues"})
     private TagTemplateFieldTypeEnumType(List<TagTemplateFieldTypeEnumTypeAllowedValue> allowedValues) {
-        this.allowedValues = Objects.requireNonNull(allowedValues);
+        this.allowedValues = allowedValues;
     }
 
     /**

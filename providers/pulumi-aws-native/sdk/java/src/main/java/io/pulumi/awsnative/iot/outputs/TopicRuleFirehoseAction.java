@@ -24,8 +24,8 @@ public final class TopicRuleFirehoseAction {
         String roleArn,
         @Nullable String separator) {
         this.batchMode = batchMode;
-        this.deliveryStreamName = Objects.requireNonNull(deliveryStreamName);
-        this.roleArn = Objects.requireNonNull(roleArn);
+        this.deliveryStreamName = deliveryStreamName;
+        this.roleArn = roleArn;
         this.separator = separator;
     }
 

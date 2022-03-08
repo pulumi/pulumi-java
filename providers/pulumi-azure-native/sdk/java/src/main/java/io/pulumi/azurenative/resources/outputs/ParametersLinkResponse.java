@@ -27,7 +27,7 @@ public final class ParametersLinkResponse {
         @Nullable String contentVersion,
         String uri) {
         this.contentVersion = contentVersion;
-        this.uri = Objects.requireNonNull(uri);
+        this.uri = uri;
     }
 
     /**

@@ -62,9 +62,9 @@ public final class ApplicationGetHttpsEndpointResponse {
         this.accessModes = accessModes;
         this.destinationPort = destinationPort;
         this.disableGatewayAuth = disableGatewayAuth;
-        this.location = Objects.requireNonNull(location);
+        this.location = location;
         this.privateIPAddress = privateIPAddress;
-        this.publicPort = Objects.requireNonNull(publicPort);
+        this.publicPort = publicPort;
         this.subDomainSuffix = subDomainSuffix;
     }
 

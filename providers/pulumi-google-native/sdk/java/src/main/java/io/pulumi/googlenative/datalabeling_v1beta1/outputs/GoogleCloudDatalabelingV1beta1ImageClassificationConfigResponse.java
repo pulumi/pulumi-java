@@ -31,9 +31,9 @@ public final class GoogleCloudDatalabelingV1beta1ImageClassificationConfigRespon
         Boolean allowMultiLabel,
         String annotationSpecSet,
         String answerAggregationType) {
-        this.allowMultiLabel = Objects.requireNonNull(allowMultiLabel);
-        this.annotationSpecSet = Objects.requireNonNull(annotationSpecSet);
-        this.answerAggregationType = Objects.requireNonNull(answerAggregationType);
+        this.allowMultiLabel = allowMultiLabel;
+        this.annotationSpecSet = annotationSpecSet;
+        this.answerAggregationType = answerAggregationType;
     }
 
     /**

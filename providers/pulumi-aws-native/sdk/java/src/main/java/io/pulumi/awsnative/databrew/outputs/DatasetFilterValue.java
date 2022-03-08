@@ -20,8 +20,8 @@ public final class DatasetFilterValue {
     private DatasetFilterValue(
         String value,
         String valueReference) {
-        this.value = Objects.requireNonNull(value);
-        this.valueReference = Objects.requireNonNull(valueReference);
+        this.value = value;
+        this.valueReference = valueReference;
     }
 
     public String getValue() {

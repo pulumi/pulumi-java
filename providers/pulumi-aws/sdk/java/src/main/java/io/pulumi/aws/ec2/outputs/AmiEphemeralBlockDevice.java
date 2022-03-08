@@ -25,8 +25,8 @@ public final class AmiEphemeralBlockDevice {
     private AmiEphemeralBlockDevice(
         String deviceName,
         String virtualName) {
-        this.deviceName = Objects.requireNonNull(deviceName);
-        this.virtualName = Objects.requireNonNull(virtualName);
+        this.deviceName = deviceName;
+        this.virtualName = virtualName;
     }
 
     /**

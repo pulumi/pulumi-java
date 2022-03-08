@@ -31,9 +31,9 @@ public final class LocationResponse {
         String cpeUri,
         String path,
         VersionResponse version) {
-        this.cpeUri = Objects.requireNonNull(cpeUri);
-        this.path = Objects.requireNonNull(path);
-        this.version = Objects.requireNonNull(version);
+        this.cpeUri = cpeUri;
+        this.path = path;
+        this.version = version;
     }
 
     /**

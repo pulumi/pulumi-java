@@ -26,8 +26,8 @@ public final class ListClusterStreamingJobsResult {
     private ListClusterStreamingJobsResult(
         String nextLink,
         List<ClusterJobResponse> value) {
-        this.nextLink = Objects.requireNonNull(nextLink);
-        this.value = Objects.requireNonNull(value);
+        this.nextLink = nextLink;
+        this.value = value;
     }
 
     /**

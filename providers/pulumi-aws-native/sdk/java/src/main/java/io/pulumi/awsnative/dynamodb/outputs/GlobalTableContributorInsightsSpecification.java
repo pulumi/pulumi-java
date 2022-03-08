@@ -13,7 +13,7 @@ public final class GlobalTableContributorInsightsSpecification {
 
     @OutputCustomType.Constructor({"enabled"})
     private GlobalTableContributorInsightsSpecification(Boolean enabled) {
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
     }
 
     public Boolean getEnabled() {

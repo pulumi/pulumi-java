@@ -34,8 +34,8 @@ public final class VirtualNodeSpecServiceDiscoveryAwsCloudMap {
         String namespaceName,
         String serviceName) {
         this.attributes = attributes;
-        this.namespaceName = Objects.requireNonNull(namespaceName);
-        this.serviceName = Objects.requireNonNull(serviceName);
+        this.namespaceName = namespaceName;
+        this.serviceName = serviceName;
     }
 
     /**

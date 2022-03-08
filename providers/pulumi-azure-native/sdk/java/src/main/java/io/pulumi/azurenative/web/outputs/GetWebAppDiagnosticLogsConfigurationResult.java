@@ -69,10 +69,10 @@ public final class GetWebAppDiagnosticLogsConfigurationResult {
         this.detailedErrorMessages = detailedErrorMessages;
         this.failedRequestsTracing = failedRequestsTracing;
         this.httpLogs = httpLogs;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.kind = kind;
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.name = name;
+        this.type = type;
     }
 
     /**

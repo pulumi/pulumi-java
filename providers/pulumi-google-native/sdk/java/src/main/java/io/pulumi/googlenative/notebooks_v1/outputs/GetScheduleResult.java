@@ -71,16 +71,16 @@ public final class GetScheduleResult {
         String state,
         String timeZone,
         String updateTime) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.cronSchedule = Objects.requireNonNull(cronSchedule);
-        this.description = Objects.requireNonNull(description);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.executionTemplate = Objects.requireNonNull(executionTemplate);
-        this.name = Objects.requireNonNull(name);
-        this.recentExecutions = Objects.requireNonNull(recentExecutions);
-        this.state = Objects.requireNonNull(state);
-        this.timeZone = Objects.requireNonNull(timeZone);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.createTime = createTime;
+        this.cronSchedule = cronSchedule;
+        this.description = description;
+        this.displayName = displayName;
+        this.executionTemplate = executionTemplate;
+        this.name = name;
+        this.recentExecutions = recentExecutions;
+        this.state = state;
+        this.timeZone = timeZone;
+        this.updateTime = updateTime;
     }
 
     /**

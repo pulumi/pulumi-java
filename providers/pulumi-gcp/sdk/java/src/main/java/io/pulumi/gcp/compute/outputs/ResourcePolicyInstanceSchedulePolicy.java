@@ -51,7 +51,7 @@ public final class ResourcePolicyInstanceSchedulePolicy {
         @Nullable ResourcePolicyInstanceSchedulePolicyVmStopSchedule vmStopSchedule) {
         this.expirationTime = expirationTime;
         this.startTime = startTime;
-        this.timeZone = Objects.requireNonNull(timeZone);
+        this.timeZone = timeZone;
         this.vmStartSchedule = vmStartSchedule;
         this.vmStopSchedule = vmStopSchedule;
     }

@@ -32,8 +32,8 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfigContentType
         String contentType,
         String format,
         @Nullable String profileId) {
-        this.contentType = Objects.requireNonNull(contentType);
-        this.format = Objects.requireNonNull(format);
+        this.contentType = contentType;
+        this.format = format;
         this.profileId = profileId;
     }
 

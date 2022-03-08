@@ -13,7 +13,7 @@ public final class CertificateQualifier {
 
     @OutputCustomType.Constructor({"cpsUri"})
     private CertificateQualifier(String cpsUri) {
-        this.cpsUri = Objects.requireNonNull(cpsUri);
+        this.cpsUri = cpsUri;
     }
 
     public String getCpsUri() {

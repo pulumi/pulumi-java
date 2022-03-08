@@ -16,8 +16,8 @@ public final class FaqS3Path {
     private FaqS3Path(
         String bucket,
         String key) {
-        this.bucket = Objects.requireNonNull(bucket);
-        this.key = Objects.requireNonNull(key);
+        this.bucket = bucket;
+        this.key = key;
     }
 
     public String getBucket() {

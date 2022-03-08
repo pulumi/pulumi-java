@@ -64,14 +64,14 @@ public final class GooglePrivacyDlpV2ValueResponse {
         String stringValue,
         GoogleTypeTimeOfDayResponse timeValue,
         String timestampValue) {
-        this.booleanValue = Objects.requireNonNull(booleanValue);
-        this.dateValue = Objects.requireNonNull(dateValue);
-        this.dayOfWeekValue = Objects.requireNonNull(dayOfWeekValue);
-        this.floatValue = Objects.requireNonNull(floatValue);
-        this.integerValue = Objects.requireNonNull(integerValue);
-        this.stringValue = Objects.requireNonNull(stringValue);
-        this.timeValue = Objects.requireNonNull(timeValue);
-        this.timestampValue = Objects.requireNonNull(timestampValue);
+        this.booleanValue = booleanValue;
+        this.dateValue = dateValue;
+        this.dayOfWeekValue = dayOfWeekValue;
+        this.floatValue = floatValue;
+        this.integerValue = integerValue;
+        this.stringValue = stringValue;
+        this.timeValue = timeValue;
+        this.timestampValue = timestampValue;
     }
 
     /**

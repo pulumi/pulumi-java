@@ -33,9 +33,9 @@ public final class CloudTieringFilesNotTieringResponse {
         List<FilesNotTieringErrorResponse> errors,
         String lastUpdatedTimestamp,
         Double totalFileCount) {
-        this.errors = Objects.requireNonNull(errors);
-        this.lastUpdatedTimestamp = Objects.requireNonNull(lastUpdatedTimestamp);
-        this.totalFileCount = Objects.requireNonNull(totalFileCount);
+        this.errors = errors;
+        this.lastUpdatedTimestamp = lastUpdatedTimestamp;
+        this.totalFileCount = totalFileCount;
     }
 
     /**

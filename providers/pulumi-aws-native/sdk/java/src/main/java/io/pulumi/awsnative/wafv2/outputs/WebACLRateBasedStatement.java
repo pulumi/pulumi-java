@@ -25,9 +25,9 @@ public final class WebACLRateBasedStatement {
         @Nullable WebACLForwardedIPConfiguration forwardedIPConfig,
         Integer limit,
         @Nullable WebACLStatement scopeDownStatement) {
-        this.aggregateKeyType = Objects.requireNonNull(aggregateKeyType);
+        this.aggregateKeyType = aggregateKeyType;
         this.forwardedIPConfig = forwardedIPConfig;
-        this.limit = Objects.requireNonNull(limit);
+        this.limit = limit;
         this.scopeDownStatement = scopeDownStatement;
     }
 

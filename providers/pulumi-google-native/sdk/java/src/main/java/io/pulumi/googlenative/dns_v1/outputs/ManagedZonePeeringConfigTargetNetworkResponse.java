@@ -26,9 +26,9 @@ public final class ManagedZonePeeringConfigTargetNetworkResponse {
         String deactivateTime,
         String kind,
         String networkUrl) {
-        this.deactivateTime = Objects.requireNonNull(deactivateTime);
-        this.kind = Objects.requireNonNull(kind);
-        this.networkUrl = Objects.requireNonNull(networkUrl);
+        this.deactivateTime = deactivateTime;
+        this.kind = kind;
+        this.networkUrl = networkUrl;
     }
 
     /**

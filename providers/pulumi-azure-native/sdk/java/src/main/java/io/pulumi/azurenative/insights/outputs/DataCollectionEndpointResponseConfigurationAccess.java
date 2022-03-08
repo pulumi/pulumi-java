@@ -17,7 +17,7 @@ public final class DataCollectionEndpointResponseConfigurationAccess {
 
     @OutputCustomType.Constructor({"endpoint"})
     private DataCollectionEndpointResponseConfigurationAccess(String endpoint) {
-        this.endpoint = Objects.requireNonNull(endpoint);
+        this.endpoint = endpoint;
     }
 
     /**

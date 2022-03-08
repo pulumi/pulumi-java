@@ -60,8 +60,8 @@ public final class WebHookEventSubscriptionDestinationResponse {
         @Nullable Integer preferredBatchSizeInKilobytes) {
         this.azureActiveDirectoryApplicationIdOrUri = azureActiveDirectoryApplicationIdOrUri;
         this.azureActiveDirectoryTenantId = azureActiveDirectoryTenantId;
-        this.endpointBaseUrl = Objects.requireNonNull(endpointBaseUrl);
-        this.endpointType = Objects.requireNonNull(endpointType);
+        this.endpointBaseUrl = endpointBaseUrl;
+        this.endpointType = endpointType;
         this.endpointUrl = endpointUrl;
         this.maxEventsPerBatch = maxEventsPerBatch;
         this.preferredBatchSizeInKilobytes = preferredBatchSizeInKilobytes;

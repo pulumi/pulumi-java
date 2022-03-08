@@ -138,12 +138,12 @@ public final class GetSqlVirtualMachineResult {
         @Nullable WsfcDomainCredentialsResponse wsfcDomainCredentials) {
         this.autoBackupSettings = autoBackupSettings;
         this.autoPatchingSettings = autoPatchingSettings;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.identity = identity;
         this.keyVaultCredentialSettings = keyVaultCredentialSettings;
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.location = location;
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.serverConfigurationsManagementSettings = serverConfigurationsManagementSettings;
         this.sqlImageOffer = sqlImageOffer;
         this.sqlImageSku = sqlImageSku;
@@ -152,7 +152,7 @@ public final class GetSqlVirtualMachineResult {
         this.sqlVirtualMachineGroupResourceId = sqlVirtualMachineGroupResourceId;
         this.storageConfigurationSettings = storageConfigurationSettings;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.virtualMachineResourceId = virtualMachineResourceId;
         this.wsfcDomainCredentials = wsfcDomainCredentials;
     }

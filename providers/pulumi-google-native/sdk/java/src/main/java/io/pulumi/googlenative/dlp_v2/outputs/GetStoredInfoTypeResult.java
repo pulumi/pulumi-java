@@ -32,9 +32,9 @@ public final class GetStoredInfoTypeResult {
         GooglePrivacyDlpV2StoredInfoTypeVersionResponse currentVersion,
         String name,
         List<GooglePrivacyDlpV2StoredInfoTypeVersionResponse> pendingVersions) {
-        this.currentVersion = Objects.requireNonNull(currentVersion);
-        this.name = Objects.requireNonNull(name);
-        this.pendingVersions = Objects.requireNonNull(pendingVersions);
+        this.currentVersion = currentVersion;
+        this.name = name;
+        this.pendingVersions = pendingVersions;
     }
 
     /**

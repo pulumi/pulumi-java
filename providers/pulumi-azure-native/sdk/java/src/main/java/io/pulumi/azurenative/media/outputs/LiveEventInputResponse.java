@@ -51,7 +51,7 @@ public final class LiveEventInputResponse {
         this.accessToken = accessToken;
         this.endpoints = endpoints;
         this.keyFrameIntervalDuration = keyFrameIntervalDuration;
-        this.streamingProtocol = Objects.requireNonNull(streamingProtocol);
+        this.streamingProtocol = streamingProtocol;
     }
 
     /**

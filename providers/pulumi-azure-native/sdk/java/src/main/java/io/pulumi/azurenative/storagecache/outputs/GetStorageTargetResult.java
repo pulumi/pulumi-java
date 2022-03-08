@@ -95,15 +95,15 @@ public final class GetStorageTargetResult {
         @Nullable UnknownTargetResponse unknown) {
         this.blobNfs = blobNfs;
         this.clfs = clfs;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.junctions = junctions;
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
+        this.location = location;
+        this.name = name;
         this.nfs3 = nfs3;
         this.provisioningState = provisioningState;
-        this.systemData = Objects.requireNonNull(systemData);
-        this.targetType = Objects.requireNonNull(targetType);
-        this.type = Objects.requireNonNull(type);
+        this.systemData = systemData;
+        this.targetType = targetType;
+        this.type = type;
         this.unknown = unknown;
     }
 

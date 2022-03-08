@@ -31,9 +31,9 @@ public final class GetVpcCidrBlockAssociation {
         String associationId,
         String cidrBlock,
         String state) {
-        this.associationId = Objects.requireNonNull(associationId);
-        this.cidrBlock = Objects.requireNonNull(cidrBlock);
-        this.state = Objects.requireNonNull(state);
+        this.associationId = associationId;
+        this.cidrBlock = cidrBlock;
+        this.state = state;
     }
 
     /**

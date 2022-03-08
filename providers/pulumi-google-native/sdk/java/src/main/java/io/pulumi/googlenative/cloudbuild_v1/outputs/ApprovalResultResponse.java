@@ -42,11 +42,11 @@ public final class ApprovalResultResponse {
         String comment,
         String decision,
         String url) {
-        this.approvalTime = Objects.requireNonNull(approvalTime);
-        this.approverAccount = Objects.requireNonNull(approverAccount);
-        this.comment = Objects.requireNonNull(comment);
-        this.decision = Objects.requireNonNull(decision);
-        this.url = Objects.requireNonNull(url);
+        this.approvalTime = approvalTime;
+        this.approverAccount = approverAccount;
+        this.comment = comment;
+        this.decision = decision;
+        this.url = url;
     }
 
     /**

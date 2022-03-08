@@ -110,13 +110,13 @@ public final class K8sOnlineDeploymentResponse {
         this.codeConfiguration = codeConfiguration;
         this.containerResourceRequirements = containerResourceRequirements;
         this.description = description;
-        this.endpointComputeType = Objects.requireNonNull(endpointComputeType);
+        this.endpointComputeType = endpointComputeType;
         this.environmentId = environmentId;
         this.environmentVariables = environmentVariables;
         this.livenessProbe = livenessProbe;
         this.model = model;
         this.properties = properties;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.requestSettings = requestSettings;
         this.scaleSettings = scaleSettings;
     }

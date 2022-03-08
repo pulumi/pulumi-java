@@ -45,7 +45,7 @@ public final class SAPSystemIDResponse {
         @Nullable String uid,
         @Nullable String username) {
         this.gid = gid;
-        this.memoryAllocation = Objects.requireNonNull(memoryAllocation);
+        this.memoryAllocation = memoryAllocation;
         this.sid = sid;
         this.uid = uid;
         this.username = username;

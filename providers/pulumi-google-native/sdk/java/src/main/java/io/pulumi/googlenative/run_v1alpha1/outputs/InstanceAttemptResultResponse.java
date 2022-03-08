@@ -25,8 +25,8 @@ public final class InstanceAttemptResultResponse {
     private InstanceAttemptResultResponse(
         Integer exitCode,
         GoogleRpcStatusResponse status) {
-        this.exitCode = Objects.requireNonNull(exitCode);
-        this.status = Objects.requireNonNull(status);
+        this.exitCode = exitCode;
+        this.status = status;
     }
 
     /**

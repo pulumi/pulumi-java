@@ -73,15 +73,15 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
         GoogleCloudContactcenterinsightsV1SentimentDataResponse sentiment,
         String text,
         List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse> words) {
-        this.channelTag = Objects.requireNonNull(channelTag);
-        this.confidence = Objects.requireNonNull(confidence);
-        this.dialogflowSegmentMetadata = Objects.requireNonNull(dialogflowSegmentMetadata);
-        this.languageCode = Objects.requireNonNull(languageCode);
-        this.messageTime = Objects.requireNonNull(messageTime);
-        this.segmentParticipant = Objects.requireNonNull(segmentParticipant);
-        this.sentiment = Objects.requireNonNull(sentiment);
-        this.text = Objects.requireNonNull(text);
-        this.words = Objects.requireNonNull(words);
+        this.channelTag = channelTag;
+        this.confidence = confidence;
+        this.dialogflowSegmentMetadata = dialogflowSegmentMetadata;
+        this.languageCode = languageCode;
+        this.messageTime = messageTime;
+        this.segmentParticipant = segmentParticipant;
+        this.sentiment = sentiment;
+        this.text = text;
+        this.words = words;
     }
 
     /**

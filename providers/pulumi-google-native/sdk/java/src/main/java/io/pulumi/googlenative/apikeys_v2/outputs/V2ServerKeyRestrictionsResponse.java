@@ -18,7 +18,7 @@ public final class V2ServerKeyRestrictionsResponse {
 
     @OutputCustomType.Constructor({"allowedIps"})
     private V2ServerKeyRestrictionsResponse(List<String> allowedIps) {
-        this.allowedIps = Objects.requireNonNull(allowedIps);
+        this.allowedIps = allowedIps;
     }
 
     /**

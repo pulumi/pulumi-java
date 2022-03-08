@@ -24,8 +24,8 @@ public final class ResourceGroupResponse {
     private ResourceGroupResponse(
         String groupId,
         String resourceType) {
-        this.groupId = Objects.requireNonNull(groupId);
-        this.resourceType = Objects.requireNonNull(resourceType);
+        this.groupId = groupId;
+        this.resourceType = resourceType;
     }
 
     /**

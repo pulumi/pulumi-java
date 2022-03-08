@@ -75,15 +75,15 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageResponse {
         GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioResponse playAudio,
         GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallResponse telephonyTransferCall,
         GoogleCloudDialogflowCxV3beta1ResponseMessageTextResponse text) {
-        this.conversationSuccess = Objects.requireNonNull(conversationSuccess);
-        this.endInteraction = Objects.requireNonNull(endInteraction);
-        this.liveAgentHandoff = Objects.requireNonNull(liveAgentHandoff);
-        this.mixedAudio = Objects.requireNonNull(mixedAudio);
-        this.outputAudioText = Objects.requireNonNull(outputAudioText);
-        this.payload = Objects.requireNonNull(payload);
-        this.playAudio = Objects.requireNonNull(playAudio);
-        this.telephonyTransferCall = Objects.requireNonNull(telephonyTransferCall);
-        this.text = Objects.requireNonNull(text);
+        this.conversationSuccess = conversationSuccess;
+        this.endInteraction = endInteraction;
+        this.liveAgentHandoff = liveAgentHandoff;
+        this.mixedAudio = mixedAudio;
+        this.outputAudioText = outputAudioText;
+        this.payload = payload;
+        this.playAudio = playAudio;
+        this.telephonyTransferCall = telephonyTransferCall;
+        this.text = text;
     }
 
     /**

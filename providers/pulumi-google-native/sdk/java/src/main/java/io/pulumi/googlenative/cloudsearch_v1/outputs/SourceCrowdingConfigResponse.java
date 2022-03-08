@@ -24,8 +24,8 @@ public final class SourceCrowdingConfigResponse {
     private SourceCrowdingConfigResponse(
         Integer numResults,
         Integer numSuggestions) {
-        this.numResults = Objects.requireNonNull(numResults);
-        this.numSuggestions = Objects.requireNonNull(numSuggestions);
+        this.numResults = numResults;
+        this.numSuggestions = numSuggestions;
     }
 
     /**

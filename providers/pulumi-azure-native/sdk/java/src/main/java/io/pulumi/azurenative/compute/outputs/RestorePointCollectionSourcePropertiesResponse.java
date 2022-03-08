@@ -27,7 +27,7 @@ public final class RestorePointCollectionSourcePropertiesResponse {
         @Nullable String id,
         String location) {
         this.id = id;
-        this.location = Objects.requireNonNull(location);
+        this.location = location;
     }
 
     /**

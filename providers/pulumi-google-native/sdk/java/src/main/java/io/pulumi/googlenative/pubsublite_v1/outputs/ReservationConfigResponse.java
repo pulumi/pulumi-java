@@ -17,7 +17,7 @@ public final class ReservationConfigResponse {
 
     @OutputCustomType.Constructor({"throughputReservation"})
     private ReservationConfigResponse(String throughputReservation) {
-        this.throughputReservation = Objects.requireNonNull(throughputReservation);
+        this.throughputReservation = throughputReservation;
     }
 
     /**

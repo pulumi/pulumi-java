@@ -54,13 +54,13 @@ public final class GetLinkedServerResult {
         String provisioningState,
         String serverRole,
         String type) {
-        this.id = Objects.requireNonNull(id);
-        this.linkedRedisCacheId = Objects.requireNonNull(linkedRedisCacheId);
-        this.linkedRedisCacheLocation = Objects.requireNonNull(linkedRedisCacheLocation);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.serverRole = Objects.requireNonNull(serverRole);
-        this.type = Objects.requireNonNull(type);
+        this.id = id;
+        this.linkedRedisCacheId = linkedRedisCacheId;
+        this.linkedRedisCacheLocation = linkedRedisCacheLocation;
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.serverRole = serverRole;
+        this.type = type;
     }
 
     /**

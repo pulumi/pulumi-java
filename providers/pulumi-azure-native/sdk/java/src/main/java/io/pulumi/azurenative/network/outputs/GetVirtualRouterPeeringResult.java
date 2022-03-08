@@ -57,13 +57,13 @@ public final class GetVirtualRouterPeeringResult {
         @Nullable String peerIp,
         String provisioningState,
         String type) {
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.id = id;
         this.name = name;
         this.peerAsn = peerAsn;
         this.peerIp = peerIp;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.type = Objects.requireNonNull(type);
+        this.provisioningState = provisioningState;
+        this.type = type;
     }
 
     /**

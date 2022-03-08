@@ -13,7 +13,7 @@ public final class GetWorkloadIdentityPoolProviderAw {
 
     @OutputCustomType.Constructor({"accountId"})
     private GetWorkloadIdentityPoolProviderAw(String accountId) {
-        this.accountId = Objects.requireNonNull(accountId);
+        this.accountId = accountId;
     }
 
     public String getAccountId() {

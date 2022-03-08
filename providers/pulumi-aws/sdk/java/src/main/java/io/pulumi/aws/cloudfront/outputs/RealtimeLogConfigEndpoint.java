@@ -25,8 +25,8 @@ public final class RealtimeLogConfigEndpoint {
     private RealtimeLogConfigEndpoint(
         RealtimeLogConfigEndpointKinesisStreamConfig kinesisStreamConfig,
         String streamType) {
-        this.kinesisStreamConfig = Objects.requireNonNull(kinesisStreamConfig);
-        this.streamType = Objects.requireNonNull(streamType);
+        this.kinesisStreamConfig = kinesisStreamConfig;
+        this.streamType = streamType;
     }
 
     /**

@@ -34,8 +34,8 @@ public final class ResourceMetricStatus {
         String currentAverageValue,
         String name) {
         this.currentAverageUtilization = currentAverageUtilization;
-        this.currentAverageValue = Objects.requireNonNull(currentAverageValue);
-        this.name = Objects.requireNonNull(name);
+        this.currentAverageValue = currentAverageValue;
+        this.name = name;
     }
 
     /**

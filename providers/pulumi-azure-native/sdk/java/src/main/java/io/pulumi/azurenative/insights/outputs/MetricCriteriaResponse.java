@@ -73,15 +73,15 @@ public final class MetricCriteriaResponse {
         @Nullable Boolean skipMetricValidation,
         Double threshold,
         String timeAggregation) {
-        this.criterionType = Objects.requireNonNull(criterionType);
+        this.criterionType = criterionType;
         this.dimensions = dimensions;
-        this.metricName = Objects.requireNonNull(metricName);
+        this.metricName = metricName;
         this.metricNamespace = metricNamespace;
-        this.name = Objects.requireNonNull(name);
-        this.operator = Objects.requireNonNull(operator);
+        this.name = name;
+        this.operator = operator;
         this.skipMetricValidation = skipMetricValidation;
-        this.threshold = Objects.requireNonNull(threshold);
-        this.timeAggregation = Objects.requireNonNull(timeAggregation);
+        this.threshold = threshold;
+        this.timeAggregation = timeAggregation;
     }
 
     /**

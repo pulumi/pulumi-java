@@ -24,8 +24,8 @@ public final class ApiProfileResponse {
     private ApiProfileResponse(
         String apiVersion,
         String profileVersion) {
-        this.apiVersion = Objects.requireNonNull(apiVersion);
-        this.profileVersion = Objects.requireNonNull(profileVersion);
+        this.apiVersion = apiVersion;
+        this.profileVersion = profileVersion;
     }
 
     /**

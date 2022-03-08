@@ -64,14 +64,14 @@ public final class RuntimeSoftwareConfigResponse {
         List<ContainerImageResponse> kernels,
         String notebookUpgradeSchedule,
         String postStartupScript) {
-        this.customGpuDriverPath = Objects.requireNonNull(customGpuDriverPath);
-        this.enableHealthMonitoring = Objects.requireNonNull(enableHealthMonitoring);
-        this.idleShutdown = Objects.requireNonNull(idleShutdown);
-        this.idleShutdownTimeout = Objects.requireNonNull(idleShutdownTimeout);
-        this.installGpuDriver = Objects.requireNonNull(installGpuDriver);
-        this.kernels = Objects.requireNonNull(kernels);
-        this.notebookUpgradeSchedule = Objects.requireNonNull(notebookUpgradeSchedule);
-        this.postStartupScript = Objects.requireNonNull(postStartupScript);
+        this.customGpuDriverPath = customGpuDriverPath;
+        this.enableHealthMonitoring = enableHealthMonitoring;
+        this.idleShutdown = idleShutdown;
+        this.idleShutdownTimeout = idleShutdownTimeout;
+        this.installGpuDriver = installGpuDriver;
+        this.kernels = kernels;
+        this.notebookUpgradeSchedule = notebookUpgradeSchedule;
+        this.postStartupScript = postStartupScript;
     }
 
     /**

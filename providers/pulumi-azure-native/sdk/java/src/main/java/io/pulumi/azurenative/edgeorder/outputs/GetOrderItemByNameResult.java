@@ -77,16 +77,16 @@ public final class GetOrderItemByNameResult {
         SystemDataResponse systemData,
         @Nullable Map<String,String> tags,
         String type) {
-        this.addressDetails = Objects.requireNonNull(addressDetails);
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.orderId = Objects.requireNonNull(orderId);
-        this.orderItemDetails = Objects.requireNonNull(orderItemDetails);
-        this.startTime = Objects.requireNonNull(startTime);
-        this.systemData = Objects.requireNonNull(systemData);
+        this.addressDetails = addressDetails;
+        this.id = id;
+        this.location = location;
+        this.name = name;
+        this.orderId = orderId;
+        this.orderItemDetails = orderItemDetails;
+        this.startTime = startTime;
+        this.systemData = systemData;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

@@ -35,7 +35,7 @@ public final class MethodResponse {
         String statusCode) {
         this.responseModels = responseModels;
         this.responseParameters = responseParameters;
-        this.statusCode = Objects.requireNonNull(statusCode);
+        this.statusCode = statusCode;
     }
 
     /**

@@ -25,8 +25,8 @@ public final class UserDefinedResourcesPropertiesResponse {
     private UserDefinedResourcesPropertiesResponse(
         String query,
         List<String> querySubscriptions) {
-        this.query = Objects.requireNonNull(query);
-        this.querySubscriptions = Objects.requireNonNull(querySubscriptions);
+        this.query = query;
+        this.querySubscriptions = querySubscriptions;
     }
 
     /**

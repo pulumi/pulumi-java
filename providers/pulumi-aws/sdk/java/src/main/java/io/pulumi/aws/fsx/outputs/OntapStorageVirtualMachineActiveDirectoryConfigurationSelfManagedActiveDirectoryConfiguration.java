@@ -59,13 +59,13 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfigurationSelfMan
         @Nullable String organizationalUnitDistinguishedName,
         String password,
         String username) {
-        this.dnsIps = Objects.requireNonNull(dnsIps);
-        this.domainName = Objects.requireNonNull(domainName);
+        this.dnsIps = dnsIps;
+        this.domainName = domainName;
         this.fileSystemAdministratorsGroup = fileSystemAdministratorsGroup;
         this.organizationalUnitDistinguidshedName = organizationalUnitDistinguidshedName;
         this.organizationalUnitDistinguishedName = organizationalUnitDistinguishedName;
-        this.password = Objects.requireNonNull(password);
-        this.username = Objects.requireNonNull(username);
+        this.password = password;
+        this.username = username;
     }
 
     /**

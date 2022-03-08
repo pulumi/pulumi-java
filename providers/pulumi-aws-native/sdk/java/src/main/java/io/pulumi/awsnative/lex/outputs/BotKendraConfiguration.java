@@ -25,7 +25,7 @@ public final class BotKendraConfiguration {
         String kendraIndex,
         @Nullable String queryFilterString,
         @Nullable Boolean queryFilterStringEnabled) {
-        this.kendraIndex = Objects.requireNonNull(kendraIndex);
+        this.kendraIndex = kendraIndex;
         this.queryFilterString = queryFilterString;
         this.queryFilterStringEnabled = queryFilterStringEnabled;
     }

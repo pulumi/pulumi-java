@@ -25,9 +25,9 @@ public final class AppBlockScriptDetails {
         AppBlockS3Location scriptS3Location,
         Integer timeoutInSeconds) {
         this.executableParameters = executableParameters;
-        this.executablePath = Objects.requireNonNull(executablePath);
-        this.scriptS3Location = Objects.requireNonNull(scriptS3Location);
-        this.timeoutInSeconds = Objects.requireNonNull(timeoutInSeconds);
+        this.executablePath = executablePath;
+        this.scriptS3Location = scriptS3Location;
+        this.timeoutInSeconds = timeoutInSeconds;
     }
 
     public Optional<String> getExecutableParameters() {

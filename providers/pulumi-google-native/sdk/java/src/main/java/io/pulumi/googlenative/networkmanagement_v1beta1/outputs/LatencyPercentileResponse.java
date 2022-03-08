@@ -25,8 +25,8 @@ public final class LatencyPercentileResponse {
     private LatencyPercentileResponse(
         String latencyMicros,
         Integer percent) {
-        this.latencyMicros = Objects.requireNonNull(latencyMicros);
-        this.percent = Objects.requireNonNull(percent);
+        this.latencyMicros = latencyMicros;
+        this.percent = percent;
     }
 
     /**

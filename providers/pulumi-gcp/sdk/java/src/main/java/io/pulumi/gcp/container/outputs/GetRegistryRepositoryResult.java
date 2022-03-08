@@ -26,10 +26,10 @@ public final class GetRegistryRepositoryResult {
         String project,
         @Nullable String region,
         String repositoryUrl) {
-        this.id = Objects.requireNonNull(id);
-        this.project = Objects.requireNonNull(project);
+        this.id = id;
+        this.project = project;
         this.region = region;
-        this.repositoryUrl = Objects.requireNonNull(repositoryUrl);
+        this.repositoryUrl = repositoryUrl;
     }
 
     /**

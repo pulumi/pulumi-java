@@ -162,29 +162,29 @@ public final class GetTriggerResult {
         List<String> tags,
         RepoSourceResponse triggerTemplate,
         WebhookConfigResponse webhookConfig) {
-        this.approvalConfig = Objects.requireNonNull(approvalConfig);
-        this.autodetect = Objects.requireNonNull(autodetect);
-        this.bitbucketServerTriggerConfig = Objects.requireNonNull(bitbucketServerTriggerConfig);
-        this.build = Objects.requireNonNull(build);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.description = Objects.requireNonNull(description);
-        this.disabled = Objects.requireNonNull(disabled);
-        this.eventType = Objects.requireNonNull(eventType);
-        this.filename = Objects.requireNonNull(filename);
-        this.filter = Objects.requireNonNull(filter);
-        this.gitFileSource = Objects.requireNonNull(gitFileSource);
-        this.github = Objects.requireNonNull(github);
-        this.ignoredFiles = Objects.requireNonNull(ignoredFiles);
-        this.includedFiles = Objects.requireNonNull(includedFiles);
-        this.name = Objects.requireNonNull(name);
-        this.pubsubConfig = Objects.requireNonNull(pubsubConfig);
-        this.resourceName = Objects.requireNonNull(resourceName);
-        this.serviceAccount = Objects.requireNonNull(serviceAccount);
-        this.sourceToBuild = Objects.requireNonNull(sourceToBuild);
-        this.substitutions = Objects.requireNonNull(substitutions);
-        this.tags = Objects.requireNonNull(tags);
-        this.triggerTemplate = Objects.requireNonNull(triggerTemplate);
-        this.webhookConfig = Objects.requireNonNull(webhookConfig);
+        this.approvalConfig = approvalConfig;
+        this.autodetect = autodetect;
+        this.bitbucketServerTriggerConfig = bitbucketServerTriggerConfig;
+        this.build = build;
+        this.createTime = createTime;
+        this.description = description;
+        this.disabled = disabled;
+        this.eventType = eventType;
+        this.filename = filename;
+        this.filter = filter;
+        this.gitFileSource = gitFileSource;
+        this.github = github;
+        this.ignoredFiles = ignoredFiles;
+        this.includedFiles = includedFiles;
+        this.name = name;
+        this.pubsubConfig = pubsubConfig;
+        this.resourceName = resourceName;
+        this.serviceAccount = serviceAccount;
+        this.sourceToBuild = sourceToBuild;
+        this.substitutions = substitutions;
+        this.tags = tags;
+        this.triggerTemplate = triggerTemplate;
+        this.webhookConfig = webhookConfig;
     }
 
     /**

@@ -62,14 +62,14 @@ public final class InstanceGroupManagerUpdatePolicyResponse {
         String mostDisruptiveAllowedAction,
         String replacementMethod,
         String type) {
-        this.instanceRedistributionType = Objects.requireNonNull(instanceRedistributionType);
-        this.maxSurge = Objects.requireNonNull(maxSurge);
-        this.maxUnavailable = Objects.requireNonNull(maxUnavailable);
-        this.minReadySec = Objects.requireNonNull(minReadySec);
-        this.minimalAction = Objects.requireNonNull(minimalAction);
-        this.mostDisruptiveAllowedAction = Objects.requireNonNull(mostDisruptiveAllowedAction);
-        this.replacementMethod = Objects.requireNonNull(replacementMethod);
-        this.type = Objects.requireNonNull(type);
+        this.instanceRedistributionType = instanceRedistributionType;
+        this.maxSurge = maxSurge;
+        this.maxUnavailable = maxUnavailable;
+        this.minReadySec = minReadySec;
+        this.minimalAction = minimalAction;
+        this.mostDisruptiveAllowedAction = mostDisruptiveAllowedAction;
+        this.replacementMethod = replacementMethod;
+        this.type = type;
     }
 
     /**

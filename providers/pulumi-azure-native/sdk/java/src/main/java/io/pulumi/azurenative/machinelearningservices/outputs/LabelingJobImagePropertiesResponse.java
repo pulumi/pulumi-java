@@ -27,7 +27,7 @@ public final class LabelingJobImagePropertiesResponse {
         @Nullable String annotationType,
         String mediaType) {
         this.annotationType = annotationType;
-        this.mediaType = Objects.requireNonNull(mediaType);
+        this.mediaType = mediaType;
     }
 
     /**

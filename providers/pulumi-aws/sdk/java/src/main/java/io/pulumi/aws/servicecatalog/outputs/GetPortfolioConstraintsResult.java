@@ -43,9 +43,9 @@ public final class GetPortfolioConstraintsResult {
         String portfolioId,
         @Nullable String productId) {
         this.acceptLanguage = acceptLanguage;
-        this.details = Objects.requireNonNull(details);
-        this.id = Objects.requireNonNull(id);
-        this.portfolioId = Objects.requireNonNull(portfolioId);
+        this.details = details;
+        this.id = id;
+        this.portfolioId = portfolioId;
         this.productId = productId;
     }
 

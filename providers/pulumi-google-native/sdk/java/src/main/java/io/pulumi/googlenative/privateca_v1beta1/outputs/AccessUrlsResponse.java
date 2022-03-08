@@ -24,8 +24,8 @@ public final class AccessUrlsResponse {
     private AccessUrlsResponse(
         String caCertificateAccessUrl,
         String crlAccessUrl) {
-        this.caCertificateAccessUrl = Objects.requireNonNull(caCertificateAccessUrl);
-        this.crlAccessUrl = Objects.requireNonNull(crlAccessUrl);
+        this.caCertificateAccessUrl = caCertificateAccessUrl;
+        this.crlAccessUrl = crlAccessUrl;
     }
 
     /**

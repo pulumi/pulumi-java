@@ -66,15 +66,15 @@ public final class HiveMetastoreResponse {
         String serverUri,
         String type,
         String userName) {
-        this.databaseName = Objects.requireNonNull(databaseName);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.nestedResourceProvisioningState = Objects.requireNonNull(nestedResourceProvisioningState);
-        this.password = Objects.requireNonNull(password);
-        this.runtimeVersion = Objects.requireNonNull(runtimeVersion);
-        this.serverUri = Objects.requireNonNull(serverUri);
-        this.type = Objects.requireNonNull(type);
-        this.userName = Objects.requireNonNull(userName);
+        this.databaseName = databaseName;
+        this.id = id;
+        this.name = name;
+        this.nestedResourceProvisioningState = nestedResourceProvisioningState;
+        this.password = password;
+        this.runtimeVersion = runtimeVersion;
+        this.serverUri = serverUri;
+        this.type = type;
+        this.userName = userName;
     }
 
     /**

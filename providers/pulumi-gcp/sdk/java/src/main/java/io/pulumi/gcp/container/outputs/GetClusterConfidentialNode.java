@@ -13,7 +13,7 @@ public final class GetClusterConfidentialNode {
 
     @OutputCustomType.Constructor({"enabled"})
     private GetClusterConfidentialNode(Boolean enabled) {
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
     }
 
     public Boolean getEnabled() {

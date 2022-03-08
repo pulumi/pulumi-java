@@ -32,7 +32,7 @@ public final class TopicSchemaSettings {
         @Nullable String encoding,
         String schema) {
         this.encoding = encoding;
-        this.schema = Objects.requireNonNull(schema);
+        this.schema = schema;
     }
 
     /**

@@ -51,12 +51,12 @@ public final class SparkRJobResponse {
         LoggingConfigResponse loggingConfig,
         String mainRFileUri,
         Map<String,String> properties) {
-        this.archiveUris = Objects.requireNonNull(archiveUris);
-        this.args = Objects.requireNonNull(args);
-        this.fileUris = Objects.requireNonNull(fileUris);
-        this.loggingConfig = Objects.requireNonNull(loggingConfig);
-        this.mainRFileUri = Objects.requireNonNull(mainRFileUri);
-        this.properties = Objects.requireNonNull(properties);
+        this.archiveUris = archiveUris;
+        this.args = args;
+        this.fileUris = fileUris;
+        this.loggingConfig = loggingConfig;
+        this.mainRFileUri = mainRFileUri;
+        this.properties = properties;
     }
 
     /**

@@ -34,7 +34,7 @@ public final class LibraryRequirementsResponse {
         String time) {
         this.content = content;
         this.filename = filename;
-        this.time = Objects.requireNonNull(time);
+        this.time = time;
     }
 
     /**

@@ -17,7 +17,7 @@ public final class TemplateSourceTemplate {
 
     @OutputCustomType.Constructor({"arn"})
     private TemplateSourceTemplate(String arn) {
-        this.arn = Objects.requireNonNull(arn);
+        this.arn = arn;
     }
 
     /**

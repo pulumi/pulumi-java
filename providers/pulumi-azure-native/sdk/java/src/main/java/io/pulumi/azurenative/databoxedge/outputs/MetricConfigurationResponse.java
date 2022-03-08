@@ -40,10 +40,10 @@ public final class MetricConfigurationResponse {
         @Nullable String mdmAccount,
         @Nullable String metricNameSpace,
         String resourceId) {
-        this.counterSets = Objects.requireNonNull(counterSets);
+        this.counterSets = counterSets;
         this.mdmAccount = mdmAccount;
         this.metricNameSpace = metricNameSpace;
-        this.resourceId = Objects.requireNonNull(resourceId);
+        this.resourceId = resourceId;
     }
 
     /**

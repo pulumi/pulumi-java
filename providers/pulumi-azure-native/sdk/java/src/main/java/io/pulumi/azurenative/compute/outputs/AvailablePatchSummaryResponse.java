@@ -63,14 +63,14 @@ public final class AvailablePatchSummaryResponse {
         Boolean rebootPending,
         String startTime,
         String status) {
-        this.assessmentActivityId = Objects.requireNonNull(assessmentActivityId);
-        this.criticalAndSecurityPatchCount = Objects.requireNonNull(criticalAndSecurityPatchCount);
-        this.error = Objects.requireNonNull(error);
-        this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
-        this.otherPatchCount = Objects.requireNonNull(otherPatchCount);
-        this.rebootPending = Objects.requireNonNull(rebootPending);
-        this.startTime = Objects.requireNonNull(startTime);
-        this.status = Objects.requireNonNull(status);
+        this.assessmentActivityId = assessmentActivityId;
+        this.criticalAndSecurityPatchCount = criticalAndSecurityPatchCount;
+        this.error = error;
+        this.lastModifiedTime = lastModifiedTime;
+        this.otherPatchCount = otherPatchCount;
+        this.rebootPending = rebootPending;
+        this.startTime = startTime;
+        this.status = status;
     }
 
     /**

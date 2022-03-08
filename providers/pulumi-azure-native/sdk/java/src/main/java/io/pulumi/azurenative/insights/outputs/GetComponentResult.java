@@ -164,30 +164,30 @@ public final class GetComponentResult {
         @Nullable Map<String,String> tags,
         String tenantId,
         String type) {
-        this.appId = Objects.requireNonNull(appId);
-        this.applicationId = Objects.requireNonNull(applicationId);
-        this.applicationType = Objects.requireNonNull(applicationType);
-        this.connectionString = Objects.requireNonNull(connectionString);
-        this.creationDate = Objects.requireNonNull(creationDate);
+        this.appId = appId;
+        this.applicationId = applicationId;
+        this.applicationType = applicationType;
+        this.connectionString = connectionString;
+        this.creationDate = creationDate;
         this.disableIpMasking = disableIpMasking;
         this.flowType = flowType;
         this.hockeyAppId = hockeyAppId;
-        this.hockeyAppToken = Objects.requireNonNull(hockeyAppToken);
-        this.id = Objects.requireNonNull(id);
+        this.hockeyAppToken = hockeyAppToken;
+        this.id = id;
         this.immediatePurgeDataOn30Days = immediatePurgeDataOn30Days;
         this.ingestionMode = ingestionMode;
-        this.instrumentationKey = Objects.requireNonNull(instrumentationKey);
-        this.kind = Objects.requireNonNull(kind);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.privateLinkScopedResources = Objects.requireNonNull(privateLinkScopedResources);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.instrumentationKey = instrumentationKey;
+        this.kind = kind;
+        this.location = location;
+        this.name = name;
+        this.privateLinkScopedResources = privateLinkScopedResources;
+        this.provisioningState = provisioningState;
         this.requestSource = requestSource;
         this.retentionInDays = retentionInDays;
         this.samplingPercentage = samplingPercentage;
         this.tags = tags;
-        this.tenantId = Objects.requireNonNull(tenantId);
-        this.type = Objects.requireNonNull(type);
+        this.tenantId = tenantId;
+        this.type = type;
     }
 
     /**

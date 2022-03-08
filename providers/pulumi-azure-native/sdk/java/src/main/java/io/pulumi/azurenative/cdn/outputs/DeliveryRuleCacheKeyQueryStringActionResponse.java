@@ -26,8 +26,8 @@ public final class DeliveryRuleCacheKeyQueryStringActionResponse {
     private DeliveryRuleCacheKeyQueryStringActionResponse(
         String name,
         CacheKeyQueryStringActionParametersResponse parameters) {
-        this.name = Objects.requireNonNull(name);
-        this.parameters = Objects.requireNonNull(parameters);
+        this.name = name;
+        this.parameters = parameters;
     }
 
     /**

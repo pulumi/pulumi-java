@@ -27,8 +27,8 @@ public final class TriggerBuildAvailableSecretsSecretManager {
     private TriggerBuildAvailableSecretsSecretManager(
         String env,
         String versionName) {
-        this.env = Objects.requireNonNull(env);
-        this.versionName = Objects.requireNonNull(versionName);
+        this.env = env;
+        this.versionName = versionName;
     }
 
     /**

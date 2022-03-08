@@ -17,7 +17,7 @@ public final class X12MessageIdentifierResponse {
 
     @OutputCustomType.Constructor({"messageId"})
     private X12MessageIdentifierResponse(String messageId) {
-        this.messageId = Objects.requireNonNull(messageId);
+        this.messageId = messageId;
     }
 
     /**

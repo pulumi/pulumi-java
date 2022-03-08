@@ -89,18 +89,18 @@ public final class BuildProvenanceResponse {
         SourceResponse sourceProvenance,
         String startTime,
         String triggerId) {
-        this.buildOptions = Objects.requireNonNull(buildOptions);
-        this.builderVersion = Objects.requireNonNull(builderVersion);
-        this.builtArtifacts = Objects.requireNonNull(builtArtifacts);
-        this.commands = Objects.requireNonNull(commands);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.creator = Objects.requireNonNull(creator);
-        this.endTime = Objects.requireNonNull(endTime);
-        this.logsUri = Objects.requireNonNull(logsUri);
-        this.project = Objects.requireNonNull(project);
-        this.sourceProvenance = Objects.requireNonNull(sourceProvenance);
-        this.startTime = Objects.requireNonNull(startTime);
-        this.triggerId = Objects.requireNonNull(triggerId);
+        this.buildOptions = buildOptions;
+        this.builderVersion = builderVersion;
+        this.builtArtifacts = builtArtifacts;
+        this.commands = commands;
+        this.createTime = createTime;
+        this.creator = creator;
+        this.endTime = endTime;
+        this.logsUri = logsUri;
+        this.project = project;
+        this.sourceProvenance = sourceProvenance;
+        this.startTime = startTime;
+        this.triggerId = triggerId;
     }
 
     /**

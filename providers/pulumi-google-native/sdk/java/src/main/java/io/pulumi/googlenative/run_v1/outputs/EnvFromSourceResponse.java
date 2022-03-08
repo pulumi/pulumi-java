@@ -32,9 +32,9 @@ public final class EnvFromSourceResponse {
         ConfigMapEnvSourceResponse configMapRef,
         String prefix,
         SecretEnvSourceResponse secretRef) {
-        this.configMapRef = Objects.requireNonNull(configMapRef);
-        this.prefix = Objects.requireNonNull(prefix);
-        this.secretRef = Objects.requireNonNull(secretRef);
+        this.configMapRef = configMapRef;
+        this.prefix = prefix;
+        this.secretRef = secretRef;
     }
 
     /**

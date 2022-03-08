@@ -18,7 +18,7 @@ public final class VmmToVmmNetworkMappingSettingsResponse {
 
     @OutputCustomType.Constructor({"instanceType"})
     private VmmToVmmNetworkMappingSettingsResponse(String instanceType) {
-        this.instanceType = Objects.requireNonNull(instanceType);
+        this.instanceType = instanceType;
     }
 
     /**

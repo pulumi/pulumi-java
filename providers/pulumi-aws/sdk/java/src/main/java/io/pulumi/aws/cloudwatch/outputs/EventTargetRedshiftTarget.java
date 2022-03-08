@@ -51,7 +51,7 @@ public final class EventTargetRedshiftTarget {
         @Nullable String sql,
         @Nullable String statementName,
         @Nullable Boolean withEvent) {
-        this.database = Objects.requireNonNull(database);
+        this.database = database;
         this.dbUser = dbUser;
         this.secretsManagerArn = secretsManagerArn;
         this.sql = sql;

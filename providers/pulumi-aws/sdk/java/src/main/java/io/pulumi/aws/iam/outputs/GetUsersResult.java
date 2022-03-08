@@ -37,10 +37,10 @@ public final class GetUsersResult {
         @Nullable String nameRegex,
         List<String> names,
         @Nullable String pathPrefix) {
-        this.arns = Objects.requireNonNull(arns);
-        this.id = Objects.requireNonNull(id);
+        this.arns = arns;
+        this.id = id;
         this.nameRegex = nameRegex;
-        this.names = Objects.requireNonNull(names);
+        this.names = names;
         this.pathPrefix = pathPrefix;
     }
 

@@ -89,13 +89,13 @@ public final class GetSnapshotPolicyResult {
         this.dailySchedule = dailySchedule;
         this.enabled = enabled;
         this.hourlySchedule = hourlySchedule;
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
+        this.id = id;
+        this.location = location;
         this.monthlySchedule = monthlySchedule;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.weeklySchedule = weeklySchedule;
     }
 

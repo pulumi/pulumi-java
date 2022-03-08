@@ -26,8 +26,8 @@ public final class BlobRestoreParametersResponse {
     private BlobRestoreParametersResponse(
         List<BlobRestoreRangeResponse> blobRanges,
         String timeToRestore) {
-        this.blobRanges = Objects.requireNonNull(blobRanges);
-        this.timeToRestore = Objects.requireNonNull(timeToRestore);
+        this.blobRanges = blobRanges;
+        this.timeToRestore = timeToRestore;
     }
 
     /**

@@ -38,10 +38,10 @@ public final class GetUserTablesSqlSyncTaskInputResponse {
         List<String> selectedTargetDatabases,
         SqlConnectionInfoResponse sourceConnectionInfo,
         SqlConnectionInfoResponse targetConnectionInfo) {
-        this.selectedSourceDatabases = Objects.requireNonNull(selectedSourceDatabases);
-        this.selectedTargetDatabases = Objects.requireNonNull(selectedTargetDatabases);
-        this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
-        this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
+        this.selectedSourceDatabases = selectedSourceDatabases;
+        this.selectedTargetDatabases = selectedTargetDatabases;
+        this.sourceConnectionInfo = sourceConnectionInfo;
+        this.targetConnectionInfo = targetConnectionInfo;
     }
 
     /**

@@ -31,8 +31,8 @@ public final class NonResourcePolicyRule {
     private NonResourcePolicyRule(
         List<String> nonResourceURLs,
         List<String> verbs) {
-        this.nonResourceURLs = Objects.requireNonNull(nonResourceURLs);
-        this.verbs = Objects.requireNonNull(verbs);
+        this.nonResourceURLs = nonResourceURLs;
+        this.verbs = verbs;
     }
 
     /**

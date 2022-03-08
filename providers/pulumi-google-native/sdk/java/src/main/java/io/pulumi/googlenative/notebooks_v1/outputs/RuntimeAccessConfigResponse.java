@@ -30,9 +30,9 @@ public final class RuntimeAccessConfigResponse {
         String accessType,
         String proxyUri,
         String runtimeOwner) {
-        this.accessType = Objects.requireNonNull(accessType);
-        this.proxyUri = Objects.requireNonNull(proxyUri);
-        this.runtimeOwner = Objects.requireNonNull(runtimeOwner);
+        this.accessType = accessType;
+        this.proxyUri = proxyUri;
+        this.runtimeOwner = runtimeOwner;
     }
 
     /**

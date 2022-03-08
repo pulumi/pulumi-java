@@ -31,9 +31,9 @@ public final class QueueReservationPlanSettings {
         String commitment,
         String renewalType,
         Integer reservedSlots) {
-        this.commitment = Objects.requireNonNull(commitment);
-        this.renewalType = Objects.requireNonNull(renewalType);
-        this.reservedSlots = Objects.requireNonNull(reservedSlots);
+        this.commitment = commitment;
+        this.renewalType = renewalType;
+        this.reservedSlots = reservedSlots;
     }
 
     /**

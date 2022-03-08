@@ -51,12 +51,12 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
         List<GetDistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission> launchPermissions,
         String name,
         List<String> targetAccountIds) {
-        this.amiTags = Objects.requireNonNull(amiTags);
-        this.description = Objects.requireNonNull(description);
-        this.kmsKeyId = Objects.requireNonNull(kmsKeyId);
-        this.launchPermissions = Objects.requireNonNull(launchPermissions);
-        this.name = Objects.requireNonNull(name);
-        this.targetAccountIds = Objects.requireNonNull(targetAccountIds);
+        this.amiTags = amiTags;
+        this.description = description;
+        this.kmsKeyId = kmsKeyId;
+        this.launchPermissions = launchPermissions;
+        this.name = name;
+        this.targetAccountIds = targetAccountIds;
     }
 
     /**

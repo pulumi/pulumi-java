@@ -32,9 +32,9 @@ public final class CrawlerDeltaTarget {
         String connectionName,
         List<String> deltaTables,
         Boolean writeManifest) {
-        this.connectionName = Objects.requireNonNull(connectionName);
-        this.deltaTables = Objects.requireNonNull(deltaTables);
-        this.writeManifest = Objects.requireNonNull(writeManifest);
+        this.connectionName = connectionName;
+        this.deltaTables = deltaTables;
+        this.writeManifest = writeManifest;
     }
 
     /**

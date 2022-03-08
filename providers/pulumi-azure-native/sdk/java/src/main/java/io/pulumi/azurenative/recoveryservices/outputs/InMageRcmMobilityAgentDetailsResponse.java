@@ -67,15 +67,15 @@ public final class InMageRcmMobilityAgentDetailsResponse {
         String latestVersion,
         List<String> reasonsBlockingUpgrade,
         String version) {
-        this.agentVersionExpiryDate = Objects.requireNonNull(agentVersionExpiryDate);
-        this.driverVersion = Objects.requireNonNull(driverVersion);
-        this.driverVersionExpiryDate = Objects.requireNonNull(driverVersionExpiryDate);
-        this.isUpgradeable = Objects.requireNonNull(isUpgradeable);
-        this.lastHeartbeatUtc = Objects.requireNonNull(lastHeartbeatUtc);
-        this.latestUpgradableVersionWithoutReboot = Objects.requireNonNull(latestUpgradableVersionWithoutReboot);
-        this.latestVersion = Objects.requireNonNull(latestVersion);
-        this.reasonsBlockingUpgrade = Objects.requireNonNull(reasonsBlockingUpgrade);
-        this.version = Objects.requireNonNull(version);
+        this.agentVersionExpiryDate = agentVersionExpiryDate;
+        this.driverVersion = driverVersion;
+        this.driverVersionExpiryDate = driverVersionExpiryDate;
+        this.isUpgradeable = isUpgradeable;
+        this.lastHeartbeatUtc = lastHeartbeatUtc;
+        this.latestUpgradableVersionWithoutReboot = latestUpgradableVersionWithoutReboot;
+        this.latestVersion = latestVersion;
+        this.reasonsBlockingUpgrade = reasonsBlockingUpgrade;
+        this.version = version;
     }
 
     /**

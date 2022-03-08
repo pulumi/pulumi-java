@@ -17,7 +17,7 @@ public final class GoogleCloudDialogflowV2ConversationPhoneNumberResponse {
 
     @OutputCustomType.Constructor({"phoneNumber"})
     private GoogleCloudDialogflowV2ConversationPhoneNumberResponse(String phoneNumber) {
-        this.phoneNumber = Objects.requireNonNull(phoneNumber);
+        this.phoneNumber = phoneNumber;
     }
 
     /**

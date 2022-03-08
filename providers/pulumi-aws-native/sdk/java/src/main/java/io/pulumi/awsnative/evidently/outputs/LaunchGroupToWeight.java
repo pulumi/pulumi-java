@@ -17,8 +17,8 @@ public final class LaunchGroupToWeight {
     private LaunchGroupToWeight(
         String groupName,
         Integer splitWeight) {
-        this.groupName = Objects.requireNonNull(groupName);
-        this.splitWeight = Objects.requireNonNull(splitWeight);
+        this.groupName = groupName;
+        this.splitWeight = splitWeight;
     }
 
     public String getGroupName() {

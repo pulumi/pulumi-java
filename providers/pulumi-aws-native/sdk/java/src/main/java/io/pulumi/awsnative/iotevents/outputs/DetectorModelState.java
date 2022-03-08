@@ -32,7 +32,7 @@ public final class DetectorModelState {
         this.onEnter = onEnter;
         this.onExit = onExit;
         this.onInput = onInput;
-        this.stateName = Objects.requireNonNull(stateName);
+        this.stateName = stateName;
     }
 
     public Optional<DetectorModelOnEnter> getOnEnter() {

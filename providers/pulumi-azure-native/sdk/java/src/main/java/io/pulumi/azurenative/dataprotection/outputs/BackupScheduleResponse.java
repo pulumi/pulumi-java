@@ -18,7 +18,7 @@ public final class BackupScheduleResponse {
 
     @OutputCustomType.Constructor({"repeatingTimeIntervals"})
     private BackupScheduleResponse(List<String> repeatingTimeIntervals) {
-        this.repeatingTimeIntervals = Objects.requireNonNull(repeatingTimeIntervals);
+        this.repeatingTimeIntervals = repeatingTimeIntervals;
     }
 
     /**

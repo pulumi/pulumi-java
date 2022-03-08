@@ -13,7 +13,7 @@ public final class AddressableResponse {
 
     @OutputCustomType.Constructor({"url"})
     private AddressableResponse(String url) {
-        this.url = Objects.requireNonNull(url);
+        this.url = url;
     }
 
     public String getUrl() {

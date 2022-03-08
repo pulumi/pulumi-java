@@ -13,7 +13,7 @@ public final class TimeoutConfigProperties {
 
     @OutputCustomType.Constructor({"inProgressTimeoutInMinutes"})
     private TimeoutConfigProperties(Integer inProgressTimeoutInMinutes) {
-        this.inProgressTimeoutInMinutes = Objects.requireNonNull(inProgressTimeoutInMinutes);
+        this.inProgressTimeoutInMinutes = inProgressTimeoutInMinutes;
     }
 
     public Integer getInProgressTimeoutInMinutes() {

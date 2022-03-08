@@ -58,13 +58,13 @@ public final class BucketInventoryConfiguration {
         @Nullable List<BucketInventoryConfigurationOptionalFieldsItem> optionalFields,
         @Nullable String prefix,
         BucketInventoryConfigurationScheduleFrequency scheduleFrequency) {
-        this.destination = Objects.requireNonNull(destination);
-        this.enabled = Objects.requireNonNull(enabled);
-        this.id = Objects.requireNonNull(id);
-        this.includedObjectVersions = Objects.requireNonNull(includedObjectVersions);
+        this.destination = destination;
+        this.enabled = enabled;
+        this.id = id;
+        this.includedObjectVersions = includedObjectVersions;
         this.optionalFields = optionalFields;
         this.prefix = prefix;
-        this.scheduleFrequency = Objects.requireNonNull(scheduleFrequency);
+        this.scheduleFrequency = scheduleFrequency;
     }
 
     public BucketDestination getDestination() {

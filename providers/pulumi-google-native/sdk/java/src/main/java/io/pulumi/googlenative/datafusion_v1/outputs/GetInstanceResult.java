@@ -181,33 +181,33 @@ public final class GetInstanceResult {
         String updateTime,
         String version,
         String zone) {
-        this.accelerators = Objects.requireNonNull(accelerators);
-        this.apiEndpoint = Objects.requireNonNull(apiEndpoint);
-        this.availableVersion = Objects.requireNonNull(availableVersion);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.cryptoKeyConfig = Objects.requireNonNull(cryptoKeyConfig);
-        this.dataprocServiceAccount = Objects.requireNonNull(dataprocServiceAccount);
-        this.description = Objects.requireNonNull(description);
-        this.disabledReason = Objects.requireNonNull(disabledReason);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.enableRbac = Objects.requireNonNull(enableRbac);
-        this.enableStackdriverLogging = Objects.requireNonNull(enableStackdriverLogging);
-        this.enableStackdriverMonitoring = Objects.requireNonNull(enableStackdriverMonitoring);
-        this.gcsBucket = Objects.requireNonNull(gcsBucket);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.networkConfig = Objects.requireNonNull(networkConfig);
-        this.options = Objects.requireNonNull(options);
-        this.p4ServiceAccount = Objects.requireNonNull(p4ServiceAccount);
-        this.privateInstance = Objects.requireNonNull(privateInstance);
-        this.serviceEndpoint = Objects.requireNonNull(serviceEndpoint);
-        this.state = Objects.requireNonNull(state);
-        this.stateMessage = Objects.requireNonNull(stateMessage);
-        this.tenantProjectId = Objects.requireNonNull(tenantProjectId);
-        this.type = Objects.requireNonNull(type);
-        this.updateTime = Objects.requireNonNull(updateTime);
-        this.version = Objects.requireNonNull(version);
-        this.zone = Objects.requireNonNull(zone);
+        this.accelerators = accelerators;
+        this.apiEndpoint = apiEndpoint;
+        this.availableVersion = availableVersion;
+        this.createTime = createTime;
+        this.cryptoKeyConfig = cryptoKeyConfig;
+        this.dataprocServiceAccount = dataprocServiceAccount;
+        this.description = description;
+        this.disabledReason = disabledReason;
+        this.displayName = displayName;
+        this.enableRbac = enableRbac;
+        this.enableStackdriverLogging = enableStackdriverLogging;
+        this.enableStackdriverMonitoring = enableStackdriverMonitoring;
+        this.gcsBucket = gcsBucket;
+        this.labels = labels;
+        this.name = name;
+        this.networkConfig = networkConfig;
+        this.options = options;
+        this.p4ServiceAccount = p4ServiceAccount;
+        this.privateInstance = privateInstance;
+        this.serviceEndpoint = serviceEndpoint;
+        this.state = state;
+        this.stateMessage = stateMessage;
+        this.tenantProjectId = tenantProjectId;
+        this.type = type;
+        this.updateTime = updateTime;
+        this.version = version;
+        this.zone = zone;
     }
 
     /**

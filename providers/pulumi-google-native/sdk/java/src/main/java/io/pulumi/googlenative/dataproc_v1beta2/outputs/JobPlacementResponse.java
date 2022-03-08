@@ -31,9 +31,9 @@ public final class JobPlacementResponse {
         Map<String,String> clusterLabels,
         String clusterName,
         String clusterUuid) {
-        this.clusterLabels = Objects.requireNonNull(clusterLabels);
-        this.clusterName = Objects.requireNonNull(clusterName);
-        this.clusterUuid = Objects.requireNonNull(clusterUuid);
+        this.clusterLabels = clusterLabels;
+        this.clusterName = clusterName;
+        this.clusterUuid = clusterUuid;
     }
 
     /**

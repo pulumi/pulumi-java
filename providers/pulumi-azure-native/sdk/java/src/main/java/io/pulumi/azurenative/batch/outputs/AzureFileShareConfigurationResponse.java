@@ -36,11 +36,11 @@ public final class AzureFileShareConfigurationResponse {
         String azureFileUrl,
         @Nullable String mountOptions,
         String relativeMountPath) {
-        this.accountKey = Objects.requireNonNull(accountKey);
-        this.accountName = Objects.requireNonNull(accountName);
-        this.azureFileUrl = Objects.requireNonNull(azureFileUrl);
+        this.accountKey = accountKey;
+        this.accountName = accountName;
+        this.azureFileUrl = azureFileUrl;
         this.mountOptions = mountOptions;
-        this.relativeMountPath = Objects.requireNonNull(relativeMountPath);
+        this.relativeMountPath = relativeMountPath;
     }
 
     public String getAccountKey() {

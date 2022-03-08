@@ -21,9 +21,9 @@ public final class DataSourceConfluenceAttachmentToIndexFieldMapping {
         DataSourceConfluenceAttachmentFieldName dataSourceFieldName,
         @Nullable String dateFieldFormat,
         String indexFieldName) {
-        this.dataSourceFieldName = Objects.requireNonNull(dataSourceFieldName);
+        this.dataSourceFieldName = dataSourceFieldName;
         this.dateFieldFormat = dateFieldFormat;
-        this.indexFieldName = Objects.requireNonNull(indexFieldName);
+        this.indexFieldName = indexFieldName;
     }
 
     public DataSourceConfluenceAttachmentFieldName getDataSourceFieldName() {

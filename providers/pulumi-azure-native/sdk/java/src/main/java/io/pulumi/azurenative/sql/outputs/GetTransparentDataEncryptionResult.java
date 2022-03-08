@@ -44,11 +44,11 @@ public final class GetTransparentDataEncryptionResult {
         String name,
         @Nullable String status,
         String type) {
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.location = location;
+        this.name = name;
         this.status = status;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

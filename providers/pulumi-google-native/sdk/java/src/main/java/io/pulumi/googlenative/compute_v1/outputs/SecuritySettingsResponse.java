@@ -25,8 +25,8 @@ public final class SecuritySettingsResponse {
     private SecuritySettingsResponse(
         String clientTlsPolicy,
         List<String> subjectAltNames) {
-        this.clientTlsPolicy = Objects.requireNonNull(clientTlsPolicy);
-        this.subjectAltNames = Objects.requireNonNull(subjectAltNames);
+        this.clientTlsPolicy = clientTlsPolicy;
+        this.subjectAltNames = subjectAltNames;
     }
 
     /**

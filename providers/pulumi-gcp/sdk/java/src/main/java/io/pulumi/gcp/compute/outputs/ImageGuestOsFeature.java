@@ -18,7 +18,7 @@ public final class ImageGuestOsFeature {
 
     @OutputCustomType.Constructor({"type"})
     private ImageGuestOsFeature(String type) {
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

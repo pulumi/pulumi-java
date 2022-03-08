@@ -64,14 +64,14 @@ public final class GetJobAgentResult {
         String state,
         @Nullable Map<String,String> tags,
         String type) {
-        this.databaseId = Objects.requireNonNull(databaseId);
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
+        this.databaseId = databaseId;
+        this.id = id;
+        this.location = location;
+        this.name = name;
         this.sku = sku;
-        this.state = Objects.requireNonNull(state);
+        this.state = state;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

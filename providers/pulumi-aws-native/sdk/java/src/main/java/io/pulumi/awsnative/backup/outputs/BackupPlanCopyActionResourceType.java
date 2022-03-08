@@ -19,7 +19,7 @@ public final class BackupPlanCopyActionResourceType {
     private BackupPlanCopyActionResourceType(
         String destinationBackupVaultArn,
         @Nullable BackupPlanLifecycleResourceType lifecycle) {
-        this.destinationBackupVaultArn = Objects.requireNonNull(destinationBackupVaultArn);
+        this.destinationBackupVaultArn = destinationBackupVaultArn;
         this.lifecycle = lifecycle;
     }
 

@@ -26,8 +26,8 @@ public final class AdhocBasedTriggerContextResponse {
     private AdhocBasedTriggerContextResponse(
         String objectType,
         AdhocBasedTaggingCriteriaResponse taggingCriteria) {
-        this.objectType = Objects.requireNonNull(objectType);
-        this.taggingCriteria = Objects.requireNonNull(taggingCriteria);
+        this.objectType = objectType;
+        this.taggingCriteria = taggingCriteria;
     }
 
     /**

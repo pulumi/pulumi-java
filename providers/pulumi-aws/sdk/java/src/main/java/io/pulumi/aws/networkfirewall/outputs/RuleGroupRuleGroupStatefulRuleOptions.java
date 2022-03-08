@@ -17,7 +17,7 @@ public final class RuleGroupRuleGroupStatefulRuleOptions {
 
     @OutputCustomType.Constructor({"ruleOrder"})
     private RuleGroupRuleGroupStatefulRuleOptions(String ruleOrder) {
-        this.ruleOrder = Objects.requireNonNull(ruleOrder);
+        this.ruleOrder = ruleOrder;
     }
 
     /**

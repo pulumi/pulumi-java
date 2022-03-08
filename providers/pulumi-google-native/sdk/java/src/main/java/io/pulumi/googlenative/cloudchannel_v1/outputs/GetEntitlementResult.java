@@ -90,18 +90,18 @@ public final class GetEntitlementResult {
         List<String> suspensionReasons,
         GoogleCloudChannelV1TrialSettingsResponse trialSettings,
         String updateTime) {
-        this.associationInfo = Objects.requireNonNull(associationInfo);
-        this.commitmentSettings = Objects.requireNonNull(commitmentSettings);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.name = Objects.requireNonNull(name);
-        this.offer = Objects.requireNonNull(offer);
-        this.parameters = Objects.requireNonNull(parameters);
-        this.provisionedService = Objects.requireNonNull(provisionedService);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.purchaseOrderId = Objects.requireNonNull(purchaseOrderId);
-        this.suspensionReasons = Objects.requireNonNull(suspensionReasons);
-        this.trialSettings = Objects.requireNonNull(trialSettings);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.associationInfo = associationInfo;
+        this.commitmentSettings = commitmentSettings;
+        this.createTime = createTime;
+        this.name = name;
+        this.offer = offer;
+        this.parameters = parameters;
+        this.provisionedService = provisionedService;
+        this.provisioningState = provisioningState;
+        this.purchaseOrderId = purchaseOrderId;
+        this.suspensionReasons = suspensionReasons;
+        this.trialSettings = trialSettings;
+        this.updateTime = updateTime;
     }
 
     /**

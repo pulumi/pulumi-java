@@ -48,8 +48,8 @@ public final class ExchangeConnectionResponse {
         @Nullable Integer peeringDBFacilityId) {
         this.bgpSession = bgpSession;
         this.connectionIdentifier = connectionIdentifier;
-        this.connectionState = Objects.requireNonNull(connectionState);
-        this.errorMessage = Objects.requireNonNull(errorMessage);
+        this.connectionState = connectionState;
+        this.errorMessage = errorMessage;
         this.peeringDBFacilityId = peeringDBFacilityId;
     }
 

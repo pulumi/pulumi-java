@@ -24,8 +24,8 @@ public final class InsightFiltersDescription {
     private InsightFiltersDescription(
         String comparison,
         String value) {
-        this.comparison = Objects.requireNonNull(comparison);
-        this.value = Objects.requireNonNull(value);
+        this.comparison = comparison;
+        this.value = value;
     }
 
     /**

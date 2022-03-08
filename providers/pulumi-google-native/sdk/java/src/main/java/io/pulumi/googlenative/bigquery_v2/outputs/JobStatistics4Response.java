@@ -25,8 +25,8 @@ public final class JobStatistics4Response {
     private JobStatistics4Response(
         List<String> destinationUriFileCounts,
         String inputBytes) {
-        this.destinationUriFileCounts = Objects.requireNonNull(destinationUriFileCounts);
-        this.inputBytes = Objects.requireNonNull(inputBytes);
+        this.destinationUriFileCounts = destinationUriFileCounts;
+        this.inputBytes = inputBytes;
     }
 
     /**

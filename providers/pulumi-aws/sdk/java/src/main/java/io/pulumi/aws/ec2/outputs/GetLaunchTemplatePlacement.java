@@ -29,14 +29,14 @@ public final class GetLaunchTemplatePlacement {
         Integer partitionNumber,
         String spreadDomain,
         String tenancy) {
-        this.affinity = Objects.requireNonNull(affinity);
-        this.availabilityZone = Objects.requireNonNull(availabilityZone);
-        this.groupName = Objects.requireNonNull(groupName);
-        this.hostId = Objects.requireNonNull(hostId);
-        this.hostResourceGroupArn = Objects.requireNonNull(hostResourceGroupArn);
-        this.partitionNumber = Objects.requireNonNull(partitionNumber);
-        this.spreadDomain = Objects.requireNonNull(spreadDomain);
-        this.tenancy = Objects.requireNonNull(tenancy);
+        this.affinity = affinity;
+        this.availabilityZone = availabilityZone;
+        this.groupName = groupName;
+        this.hostId = hostId;
+        this.hostResourceGroupArn = hostResourceGroupArn;
+        this.partitionNumber = partitionNumber;
+        this.spreadDomain = spreadDomain;
+        this.tenancy = tenancy;
     }
 
     public String getAffinity() {

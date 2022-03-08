@@ -84,17 +84,17 @@ public final class GetTypeProviderResult {
         OperationResponse operation,
         OptionsResponse options,
         String selfLink) {
-        this.collectionOverrides = Objects.requireNonNull(collectionOverrides);
-        this.credential = Objects.requireNonNull(credential);
-        this.customCertificateAuthorityRoots = Objects.requireNonNull(customCertificateAuthorityRoots);
-        this.description = Objects.requireNonNull(description);
-        this.descriptorUrl = Objects.requireNonNull(descriptorUrl);
-        this.insertTime = Objects.requireNonNull(insertTime);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.operation = Objects.requireNonNull(operation);
-        this.options = Objects.requireNonNull(options);
-        this.selfLink = Objects.requireNonNull(selfLink);
+        this.collectionOverrides = collectionOverrides;
+        this.credential = credential;
+        this.customCertificateAuthorityRoots = customCertificateAuthorityRoots;
+        this.description = description;
+        this.descriptorUrl = descriptorUrl;
+        this.insertTime = insertTime;
+        this.labels = labels;
+        this.name = name;
+        this.operation = operation;
+        this.options = options;
+        this.selfLink = selfLink;
     }
 
     /**

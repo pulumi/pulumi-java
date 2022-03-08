@@ -56,13 +56,13 @@ public final class GetServiceResult {
         String targetLocation,
         String targetSubscriptionId,
         String type) {
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.location = location;
+        this.name = name;
         this.tags = tags;
-        this.targetLocation = Objects.requireNonNull(targetLocation);
-        this.targetSubscriptionId = Objects.requireNonNull(targetSubscriptionId);
-        this.type = Objects.requireNonNull(type);
+        this.targetLocation = targetLocation;
+        this.targetSubscriptionId = targetSubscriptionId;
+        this.type = type;
     }
 
     /**

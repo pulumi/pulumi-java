@@ -36,10 +36,10 @@ public final class SecretEnvVarResponse {
         String project,
         String secret,
         String version) {
-        this.key = Objects.requireNonNull(key);
-        this.project = Objects.requireNonNull(project);
-        this.secret = Objects.requireNonNull(secret);
-        this.version = Objects.requireNonNull(version);
+        this.key = key;
+        this.project = project;
+        this.secret = secret;
+        this.version = version;
     }
 
     /**

@@ -149,28 +149,28 @@ public final class GetClusterResult {
         @Nullable Map<String,String> tags,
         Double trialDaysRemaining,
         String type) {
-        this.aadClientId = Objects.requireNonNull(aadClientId);
-        this.aadTenantId = Objects.requireNonNull(aadTenantId);
-        this.billingModel = Objects.requireNonNull(billingModel);
-        this.cloudId = Objects.requireNonNull(cloudId);
+        this.aadClientId = aadClientId;
+        this.aadTenantId = aadTenantId;
+        this.billingModel = billingModel;
+        this.cloudId = cloudId;
         this.createdAt = createdAt;
         this.createdBy = createdBy;
         this.createdByType = createdByType;
-        this.id = Objects.requireNonNull(id);
-        this.lastBillingTimestamp = Objects.requireNonNull(lastBillingTimestamp);
+        this.id = id;
+        this.lastBillingTimestamp = lastBillingTimestamp;
         this.lastModifiedAt = lastModifiedAt;
         this.lastModifiedBy = lastModifiedBy;
         this.lastModifiedByType = lastModifiedByType;
-        this.lastSyncTimestamp = Objects.requireNonNull(lastSyncTimestamp);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.registrationTimestamp = Objects.requireNonNull(registrationTimestamp);
+        this.lastSyncTimestamp = lastSyncTimestamp;
+        this.location = location;
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.registrationTimestamp = registrationTimestamp;
         this.reportedProperties = reportedProperties;
-        this.status = Objects.requireNonNull(status);
+        this.status = status;
         this.tags = tags;
-        this.trialDaysRemaining = Objects.requireNonNull(trialDaysRemaining);
-        this.type = Objects.requireNonNull(type);
+        this.trialDaysRemaining = trialDaysRemaining;
+        this.type = type;
     }
 
     /**

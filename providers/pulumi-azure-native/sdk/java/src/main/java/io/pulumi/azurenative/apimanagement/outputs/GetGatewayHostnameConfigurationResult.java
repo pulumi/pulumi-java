@@ -72,12 +72,12 @@ public final class GetGatewayHostnameConfigurationResult {
         this.certificateId = certificateId;
         this.hostname = hostname;
         this.http2Enabled = http2Enabled;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.negotiateClientCertificate = negotiateClientCertificate;
         this.tls10Enabled = tls10Enabled;
         this.tls11Enabled = tls11Enabled;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

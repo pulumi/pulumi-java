@@ -24,8 +24,8 @@ public final class GetQuickConnectQuickConnectConfigUserConfig {
     private GetQuickConnectQuickConnectConfigUserConfig(
         String contactFlowId,
         String userId) {
-        this.contactFlowId = Objects.requireNonNull(contactFlowId);
-        this.userId = Objects.requireNonNull(userId);
+        this.contactFlowId = contactFlowId;
+        this.userId = userId;
     }
 
     /**

@@ -191,32 +191,32 @@ public final class GetConfigResult {
         String title,
         List<TypeResponse> types,
         UsageResponse usage) {
-        this.apis = Objects.requireNonNull(apis);
-        this.authentication = Objects.requireNonNull(authentication);
-        this.backend = Objects.requireNonNull(backend);
-        this.billing = Objects.requireNonNull(billing);
-        this.configVersion = Objects.requireNonNull(configVersion);
-        this.context = Objects.requireNonNull(context);
-        this.control = Objects.requireNonNull(control);
-        this.customError = Objects.requireNonNull(customError);
-        this.documentation = Objects.requireNonNull(documentation);
-        this.endpoints = Objects.requireNonNull(endpoints);
-        this.enums = Objects.requireNonNull(enums);
-        this.http = Objects.requireNonNull(http);
-        this.logging = Objects.requireNonNull(logging);
-        this.logs = Objects.requireNonNull(logs);
-        this.metrics = Objects.requireNonNull(metrics);
-        this.monitoredResources = Objects.requireNonNull(monitoredResources);
-        this.monitoring = Objects.requireNonNull(monitoring);
-        this.name = Objects.requireNonNull(name);
-        this.producerProjectId = Objects.requireNonNull(producerProjectId);
-        this.quota = Objects.requireNonNull(quota);
-        this.sourceInfo = Objects.requireNonNull(sourceInfo);
-        this.systemParameters = Objects.requireNonNull(systemParameters);
-        this.systemTypes = Objects.requireNonNull(systemTypes);
-        this.title = Objects.requireNonNull(title);
-        this.types = Objects.requireNonNull(types);
-        this.usage = Objects.requireNonNull(usage);
+        this.apis = apis;
+        this.authentication = authentication;
+        this.backend = backend;
+        this.billing = billing;
+        this.configVersion = configVersion;
+        this.context = context;
+        this.control = control;
+        this.customError = customError;
+        this.documentation = documentation;
+        this.endpoints = endpoints;
+        this.enums = enums;
+        this.http = http;
+        this.logging = logging;
+        this.logs = logs;
+        this.metrics = metrics;
+        this.monitoredResources = monitoredResources;
+        this.monitoring = monitoring;
+        this.name = name;
+        this.producerProjectId = producerProjectId;
+        this.quota = quota;
+        this.sourceInfo = sourceInfo;
+        this.systemParameters = systemParameters;
+        this.systemTypes = systemTypes;
+        this.title = title;
+        this.types = types;
+        this.usage = usage;
     }
 
     /**

@@ -42,11 +42,11 @@ public final class ConnectionDetailsResponse {
         String linkIdentifier,
         String memberName,
         String privateIpAddress) {
-        this.groupId = Objects.requireNonNull(groupId);
-        this.id = Objects.requireNonNull(id);
-        this.linkIdentifier = Objects.requireNonNull(linkIdentifier);
-        this.memberName = Objects.requireNonNull(memberName);
-        this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
+        this.groupId = groupId;
+        this.id = id;
+        this.linkIdentifier = linkIdentifier;
+        this.memberName = memberName;
+        this.privateIpAddress = privateIpAddress;
     }
 
     /**

@@ -17,7 +17,7 @@ public final class ResourceSelectorResponse {
 
     @OutputCustomType.Constructor({"fullResourceName"})
     private ResourceSelectorResponse(String fullResourceName) {
-        this.fullResourceName = Objects.requireNonNull(fullResourceName);
+        this.fullResourceName = fullResourceName;
     }
 
     /**

@@ -70,7 +70,7 @@ public final class HealthCheckConfigProperties {
         this.resourcePath = resourcePath;
         this.routingControlArn = routingControlArn;
         this.searchString = searchString;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     public Optional<HealthCheckAlarmIdentifier> getAlarmIdentifier() {

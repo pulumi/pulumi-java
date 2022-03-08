@@ -17,7 +17,7 @@ public final class InsightFiltersKeyword {
 
     @OutputCustomType.Constructor({"value"})
     private InsightFiltersKeyword(String value) {
-        this.value = Objects.requireNonNull(value);
+        this.value = value;
     }
 
     /**

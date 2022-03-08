@@ -51,12 +51,12 @@ public final class ConditionResponse {
         Boolean negate,
         List<String> regions,
         List<String> requiredAccessLevels) {
-        this.devicePolicy = Objects.requireNonNull(devicePolicy);
-        this.ipSubnetworks = Objects.requireNonNull(ipSubnetworks);
-        this.members = Objects.requireNonNull(members);
-        this.negate = Objects.requireNonNull(negate);
-        this.regions = Objects.requireNonNull(regions);
-        this.requiredAccessLevels = Objects.requireNonNull(requiredAccessLevels);
+        this.devicePolicy = devicePolicy;
+        this.ipSubnetworks = ipSubnetworks;
+        this.members = members;
+        this.negate = negate;
+        this.regions = regions;
+        this.requiredAccessLevels = requiredAccessLevels;
     }
 
     /**

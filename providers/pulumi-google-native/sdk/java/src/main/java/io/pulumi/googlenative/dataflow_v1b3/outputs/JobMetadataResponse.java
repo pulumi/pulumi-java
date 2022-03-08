@@ -61,13 +61,13 @@ public final class JobMetadataResponse {
         List<PubSubIODetailsResponse> pubsubDetails,
         SdkVersionResponse sdkVersion,
         List<SpannerIODetailsResponse> spannerDetails) {
-        this.bigTableDetails = Objects.requireNonNull(bigTableDetails);
-        this.bigqueryDetails = Objects.requireNonNull(bigqueryDetails);
-        this.datastoreDetails = Objects.requireNonNull(datastoreDetails);
-        this.fileDetails = Objects.requireNonNull(fileDetails);
-        this.pubsubDetails = Objects.requireNonNull(pubsubDetails);
-        this.sdkVersion = Objects.requireNonNull(sdkVersion);
-        this.spannerDetails = Objects.requireNonNull(spannerDetails);
+        this.bigTableDetails = bigTableDetails;
+        this.bigqueryDetails = bigqueryDetails;
+        this.datastoreDetails = datastoreDetails;
+        this.fileDetails = fileDetails;
+        this.pubsubDetails = pubsubDetails;
+        this.sdkVersion = sdkVersion;
+        this.spannerDetails = spannerDetails;
     }
 
     /**

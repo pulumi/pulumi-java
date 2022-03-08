@@ -31,9 +31,9 @@ public final class FingerprintResponse {
         String v1Name,
         List<String> v2Blob,
         String v2Name) {
-        this.v1Name = Objects.requireNonNull(v1Name);
-        this.v2Blob = Objects.requireNonNull(v2Blob);
-        this.v2Name = Objects.requireNonNull(v2Name);
+        this.v1Name = v1Name;
+        this.v2Blob = v2Blob;
+        this.v2Name = v2Name;
     }
 
     /**

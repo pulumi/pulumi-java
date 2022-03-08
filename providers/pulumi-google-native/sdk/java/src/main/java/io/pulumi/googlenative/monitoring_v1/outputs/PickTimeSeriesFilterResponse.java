@@ -31,9 +31,9 @@ public final class PickTimeSeriesFilterResponse {
         String direction,
         Integer numTimeSeries,
         String rankingMethod) {
-        this.direction = Objects.requireNonNull(direction);
-        this.numTimeSeries = Objects.requireNonNull(numTimeSeries);
-        this.rankingMethod = Objects.requireNonNull(rankingMethod);
+        this.direction = direction;
+        this.numTimeSeries = numTimeSeries;
+        this.rankingMethod = rankingMethod;
     }
 
     /**

@@ -13,7 +13,7 @@ public final class FlowSingularSourceProperties {
 
     @OutputCustomType.Constructor({"object"})
     private FlowSingularSourceProperties(String object) {
-        this.object = Objects.requireNonNull(object);
+        this.object = object;
     }
 
     public String getObject() {

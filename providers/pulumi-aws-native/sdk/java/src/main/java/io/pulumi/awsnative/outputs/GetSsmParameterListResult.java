@@ -14,7 +14,7 @@ public final class GetSsmParameterListResult {
 
     @OutputCustomType.Constructor({"value"})
     private GetSsmParameterListResult(List<String> value) {
-        this.value = Objects.requireNonNull(value);
+        this.value = value;
     }
 
     public List<String> getValue() {

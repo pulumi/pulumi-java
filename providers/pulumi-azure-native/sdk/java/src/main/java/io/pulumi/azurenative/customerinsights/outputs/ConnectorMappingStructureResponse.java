@@ -39,10 +39,10 @@ public final class ConnectorMappingStructureResponse {
         @Nullable String customFormatSpecifier,
         @Nullable Boolean isEncrypted,
         String propertyName) {
-        this.columnName = Objects.requireNonNull(columnName);
+        this.columnName = columnName;
         this.customFormatSpecifier = customFormatSpecifier;
         this.isEncrypted = isEncrypted;
-        this.propertyName = Objects.requireNonNull(propertyName);
+        this.propertyName = propertyName;
     }
 
     /**

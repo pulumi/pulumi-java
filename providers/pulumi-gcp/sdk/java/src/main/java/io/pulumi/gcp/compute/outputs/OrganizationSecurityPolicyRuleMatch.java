@@ -37,7 +37,7 @@ public final class OrganizationSecurityPolicyRuleMatch {
         OrganizationSecurityPolicyRuleMatchConfig config,
         @Nullable String description,
         @Nullable String versionedExpr) {
-        this.config = Objects.requireNonNull(config);
+        this.config = config;
         this.description = description;
         this.versionedExpr = versionedExpr;
     }

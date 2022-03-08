@@ -17,7 +17,7 @@ public final class BucketReplicationConfigRuleDestinationMetricsEventThreshold {
 
     @OutputCustomType.Constructor({"minutes"})
     private BucketReplicationConfigRuleDestinationMetricsEventThreshold(Integer minutes) {
-        this.minutes = Objects.requireNonNull(minutes);
+        this.minutes = minutes;
     }
 
     /**

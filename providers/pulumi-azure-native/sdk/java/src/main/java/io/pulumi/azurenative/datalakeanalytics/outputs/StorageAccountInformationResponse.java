@@ -36,10 +36,10 @@ public final class StorageAccountInformationResponse {
         String name,
         String suffix,
         String type) {
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.suffix = Objects.requireNonNull(suffix);
-        this.type = Objects.requireNonNull(type);
+        this.id = id;
+        this.name = name;
+        this.suffix = suffix;
+        this.type = type;
     }
 
     /**

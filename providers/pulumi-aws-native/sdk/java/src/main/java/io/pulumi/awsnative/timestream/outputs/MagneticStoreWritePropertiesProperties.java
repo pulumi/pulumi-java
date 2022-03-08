@@ -27,7 +27,7 @@ public final class MagneticStoreWritePropertiesProperties {
     private MagneticStoreWritePropertiesProperties(
         Boolean enableMagneticStoreWrites,
         @Nullable MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationProperties magneticStoreRejectedDataLocation) {
-        this.enableMagneticStoreWrites = Objects.requireNonNull(enableMagneticStoreWrites);
+        this.enableMagneticStoreWrites = enableMagneticStoreWrites;
         this.magneticStoreRejectedDataLocation = magneticStoreRejectedDataLocation;
     }
 

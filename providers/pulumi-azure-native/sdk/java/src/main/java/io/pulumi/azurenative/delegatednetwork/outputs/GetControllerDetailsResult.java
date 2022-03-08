@@ -75,16 +75,16 @@ public final class GetControllerDetailsResult {
         String resourceGuid,
         @Nullable Map<String,String> tags,
         String type) {
-        this.dncAppId = Objects.requireNonNull(dncAppId);
-        this.dncEndpoint = Objects.requireNonNull(dncEndpoint);
-        this.dncTenantId = Objects.requireNonNull(dncTenantId);
-        this.id = Objects.requireNonNull(id);
+        this.dncAppId = dncAppId;
+        this.dncEndpoint = dncEndpoint;
+        this.dncTenantId = dncTenantId;
+        this.id = id;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.resourceGuid = Objects.requireNonNull(resourceGuid);
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.resourceGuid = resourceGuid;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

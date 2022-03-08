@@ -67,13 +67,13 @@ public final class ListWebAppSitePushSettingsSlotResult {
         @Nullable String tagsRequiringAuth,
         String type) {
         this.dynamicTagsJson = dynamicTagsJson;
-        this.id = Objects.requireNonNull(id);
-        this.isPushEnabled = Objects.requireNonNull(isPushEnabled);
+        this.id = id;
+        this.isPushEnabled = isPushEnabled;
         this.kind = kind;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.tagWhitelistJson = tagWhitelistJson;
         this.tagsRequiringAuth = tagsRequiringAuth;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

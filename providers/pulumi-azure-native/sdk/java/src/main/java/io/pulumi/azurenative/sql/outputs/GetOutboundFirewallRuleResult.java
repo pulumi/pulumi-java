@@ -36,10 +36,10 @@ public final class GetOutboundFirewallRuleResult {
         String name,
         String provisioningState,
         String type) {
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.type = Objects.requireNonNull(type);
+        this.id = id;
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.type = type;
     }
 
     /**

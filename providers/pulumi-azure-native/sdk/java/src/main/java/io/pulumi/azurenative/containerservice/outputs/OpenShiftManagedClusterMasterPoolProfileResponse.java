@@ -45,11 +45,11 @@ public final class OpenShiftManagedClusterMasterPoolProfileResponse {
         @Nullable String osType,
         @Nullable String subnetCidr,
         String vmSize) {
-        this.count = Objects.requireNonNull(count);
+        this.count = count;
         this.name = name;
         this.osType = osType;
         this.subnetCidr = subnetCidr;
-        this.vmSize = Objects.requireNonNull(vmSize);
+        this.vmSize = vmSize;
     }
 
     /**

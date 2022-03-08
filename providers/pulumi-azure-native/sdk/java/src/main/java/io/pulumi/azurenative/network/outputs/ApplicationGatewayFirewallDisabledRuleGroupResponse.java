@@ -27,7 +27,7 @@ public final class ApplicationGatewayFirewallDisabledRuleGroupResponse {
     private ApplicationGatewayFirewallDisabledRuleGroupResponse(
         String ruleGroupName,
         @Nullable List<Integer> rules) {
-        this.ruleGroupName = Objects.requireNonNull(ruleGroupName);
+        this.ruleGroupName = ruleGroupName;
         this.rules = rules;
     }
 

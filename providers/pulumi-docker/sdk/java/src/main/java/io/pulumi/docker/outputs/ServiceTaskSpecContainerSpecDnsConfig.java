@@ -20,7 +20,7 @@ public final class ServiceTaskSpecContainerSpecDnsConfig {
         List<String> nameservers,
         @Nullable List<String> options,
         @Nullable List<String> searches) {
-        this.nameservers = Objects.requireNonNull(nameservers);
+        this.nameservers = nameservers;
         this.options = options;
         this.searches = searches;
     }

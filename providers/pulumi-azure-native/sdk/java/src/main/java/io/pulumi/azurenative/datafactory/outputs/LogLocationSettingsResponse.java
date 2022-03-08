@@ -27,7 +27,7 @@ public final class LogLocationSettingsResponse {
     private LogLocationSettingsResponse(
         LinkedServiceReferenceResponse linkedServiceName,
         @Nullable Object path) {
-        this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
+        this.linkedServiceName = linkedServiceName;
         this.path = path;
     }
 

@@ -92,16 +92,16 @@ public final class GetNetworkManagerResult {
         String type) {
         this.description = description;
         this.displayName = displayName;
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.id = id;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.networkManagerScopeAccesses = networkManagerScopeAccesses;
         this.networkManagerScopes = networkManagerScopes;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.systemData = Objects.requireNonNull(systemData);
+        this.provisioningState = provisioningState;
+        this.systemData = systemData;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

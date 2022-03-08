@@ -30,9 +30,9 @@ public final class KubernetesRoleStorageClassInfoResponse {
         String name,
         String posixCompliant,
         String type) {
-        this.name = Objects.requireNonNull(name);
-        this.posixCompliant = Objects.requireNonNull(posixCompliant);
-        this.type = Objects.requireNonNull(type);
+        this.name = name;
+        this.posixCompliant = posixCompliant;
+        this.type = type;
     }
 
     /**

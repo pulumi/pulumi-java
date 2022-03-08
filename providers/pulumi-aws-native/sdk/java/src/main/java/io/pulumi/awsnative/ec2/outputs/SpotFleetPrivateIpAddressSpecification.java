@@ -20,7 +20,7 @@ public final class SpotFleetPrivateIpAddressSpecification {
         @Nullable Boolean primary,
         String privateIpAddress) {
         this.primary = primary;
-        this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
+        this.privateIpAddress = privateIpAddress;
     }
 
     public Optional<Boolean> getPrimary() {

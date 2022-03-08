@@ -170,29 +170,29 @@ public final class NetworkInterfaceResponse {
         String type,
         SubResourceResponse virtualMachine) {
         this.dnsSettings = dnsSettings;
-        this.dscpConfiguration = Objects.requireNonNull(dscpConfiguration);
+        this.dscpConfiguration = dscpConfiguration;
         this.enableAcceleratedNetworking = enableAcceleratedNetworking;
         this.enableIPForwarding = enableIPForwarding;
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.extendedLocation = extendedLocation;
-        this.hostedWorkloads = Objects.requireNonNull(hostedWorkloads);
+        this.hostedWorkloads = hostedWorkloads;
         this.id = id;
         this.ipConfigurations = ipConfigurations;
         this.location = location;
-        this.macAddress = Objects.requireNonNull(macAddress);
+        this.macAddress = macAddress;
         this.migrationPhase = migrationPhase;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.networkSecurityGroup = networkSecurityGroup;
         this.nicType = nicType;
-        this.primary = Objects.requireNonNull(primary);
-        this.privateEndpoint = Objects.requireNonNull(privateEndpoint);
+        this.primary = primary;
+        this.privateEndpoint = privateEndpoint;
         this.privateLinkService = privateLinkService;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.resourceGuid = Objects.requireNonNull(resourceGuid);
+        this.provisioningState = provisioningState;
+        this.resourceGuid = resourceGuid;
         this.tags = tags;
-        this.tapConfigurations = Objects.requireNonNull(tapConfigurations);
-        this.type = Objects.requireNonNull(type);
-        this.virtualMachine = Objects.requireNonNull(virtualMachine);
+        this.tapConfigurations = tapConfigurations;
+        this.type = type;
+        this.virtualMachine = virtualMachine;
     }
 
     /**

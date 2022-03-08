@@ -25,8 +25,8 @@ public final class WebAclRuleStatementOrStatementStatementNotStatementStatementO
     private WebAclRuleStatementOrStatementStatementNotStatementStatementOrStatementStatementSizeConstraintStatementTextTransformation(
         Integer priority,
         String type) {
-        this.priority = Objects.requireNonNull(priority);
-        this.type = Objects.requireNonNull(type);
+        this.priority = priority;
+        this.type = type;
     }
 
     /**

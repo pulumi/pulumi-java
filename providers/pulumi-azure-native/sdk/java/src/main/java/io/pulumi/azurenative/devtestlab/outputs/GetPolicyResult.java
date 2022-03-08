@@ -99,20 +99,20 @@ public final class GetPolicyResult {
         @Nullable String threshold,
         String type,
         String uniqueIdentifier) {
-        this.createdDate = Objects.requireNonNull(createdDate);
+        this.createdDate = createdDate;
         this.description = description;
         this.evaluatorType = evaluatorType;
         this.factData = factData;
         this.factName = factName;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.status = status;
         this.tags = tags;
         this.threshold = threshold;
-        this.type = Objects.requireNonNull(type);
-        this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
+        this.type = type;
+        this.uniqueIdentifier = uniqueIdentifier;
     }
 
     /**

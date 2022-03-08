@@ -30,7 +30,7 @@ public final class TableEncryptionConfiguration {
     private TableEncryptionConfiguration(
         String kmsKeyName,
         @Nullable String kmsKeyVersion) {
-        this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
+        this.kmsKeyName = kmsKeyName;
         this.kmsKeyVersion = kmsKeyVersion;
     }
 

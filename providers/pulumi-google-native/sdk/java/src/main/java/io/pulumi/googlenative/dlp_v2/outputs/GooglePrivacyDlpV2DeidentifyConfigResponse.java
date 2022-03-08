@@ -32,9 +32,9 @@ public final class GooglePrivacyDlpV2DeidentifyConfigResponse {
         GooglePrivacyDlpV2InfoTypeTransformationsResponse infoTypeTransformations,
         GooglePrivacyDlpV2RecordTransformationsResponse recordTransformations,
         GooglePrivacyDlpV2TransformationErrorHandlingResponse transformationErrorHandling) {
-        this.infoTypeTransformations = Objects.requireNonNull(infoTypeTransformations);
-        this.recordTransformations = Objects.requireNonNull(recordTransformations);
-        this.transformationErrorHandling = Objects.requireNonNull(transformationErrorHandling);
+        this.infoTypeTransformations = infoTypeTransformations;
+        this.recordTransformations = recordTransformations;
+        this.transformationErrorHandling = transformationErrorHandling;
     }
 
     /**

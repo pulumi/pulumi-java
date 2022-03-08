@@ -18,7 +18,7 @@ public final class BackendResponse {
 
     @OutputCustomType.Constructor({"rules"})
     private BackendResponse(List<BackendRuleResponse> rules) {
-        this.rules = Objects.requireNonNull(rules);
+        this.rules = rules;
     }
 
     /**

@@ -25,8 +25,8 @@ public final class FilterablePropertyResponse {
     private FilterablePropertyResponse(
         List<String> supportedValues,
         String type) {
-        this.supportedValues = Objects.requireNonNull(supportedValues);
-        this.type = Objects.requireNonNull(type);
+        this.supportedValues = supportedValues;
+        this.type = type;
     }
 
     /**

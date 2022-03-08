@@ -13,7 +13,7 @@ public final class BotAliasCodeHookSpecification {
 
     @OutputCustomType.Constructor({"lambdaCodeHook"})
     private BotAliasCodeHookSpecification(BotAliasLambdaCodeHook lambdaCodeHook) {
-        this.lambdaCodeHook = Objects.requireNonNull(lambdaCodeHook);
+        this.lambdaCodeHook = lambdaCodeHook;
     }
 
     public BotAliasLambdaCodeHook getLambdaCodeHook() {

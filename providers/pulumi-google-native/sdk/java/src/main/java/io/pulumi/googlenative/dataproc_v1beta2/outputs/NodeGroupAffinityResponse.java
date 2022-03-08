@@ -17,7 +17,7 @@ public final class NodeGroupAffinityResponse {
 
     @OutputCustomType.Constructor({"nodeGroupUri"})
     private NodeGroupAffinityResponse(String nodeGroupUri) {
-        this.nodeGroupUri = Objects.requireNonNull(nodeGroupUri);
+        this.nodeGroupUri = nodeGroupUri;
     }
 
     /**

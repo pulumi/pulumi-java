@@ -71,7 +71,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkg {
         @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypper zypper) {
         this.apt = apt;
         this.deb = deb;
-        this.desiredState = Objects.requireNonNull(desiredState);
+        this.desiredState = desiredState;
         this.googet = googet;
         this.msi = msi;
         this.rpm = rpm;

@@ -33,7 +33,7 @@ public final class ReportScheduleResponse {
         String recurrence,
         @Nullable ReportRecurrencePeriodResponse recurrencePeriod,
         @Nullable String status) {
-        this.recurrence = Objects.requireNonNull(recurrence);
+        this.recurrence = recurrence;
         this.recurrencePeriod = recurrencePeriod;
         this.status = status;
     }

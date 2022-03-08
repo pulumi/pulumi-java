@@ -118,22 +118,22 @@ public final class OrderItemDetailsResponse {
         String returnReason,
         String returnStatus,
         ReverseShippingDetailsResponse reverseShippingDetails) {
-        this.cancellationReason = Objects.requireNonNull(cancellationReason);
-        this.cancellationStatus = Objects.requireNonNull(cancellationStatus);
-        this.currentStage = Objects.requireNonNull(currentStage);
-        this.deletionStatus = Objects.requireNonNull(deletionStatus);
-        this.error = Objects.requireNonNull(error);
-        this.forwardShippingDetails = Objects.requireNonNull(forwardShippingDetails);
-        this.managementRpDetails = Objects.requireNonNull(managementRpDetails);
-        this.managementRpDetailsList = Objects.requireNonNull(managementRpDetailsList);
+        this.cancellationReason = cancellationReason;
+        this.cancellationStatus = cancellationStatus;
+        this.currentStage = currentStage;
+        this.deletionStatus = deletionStatus;
+        this.error = error;
+        this.forwardShippingDetails = forwardShippingDetails;
+        this.managementRpDetails = managementRpDetails;
+        this.managementRpDetailsList = managementRpDetailsList;
         this.notificationEmailList = notificationEmailList;
-        this.orderItemStageHistory = Objects.requireNonNull(orderItemStageHistory);
-        this.orderItemType = Objects.requireNonNull(orderItemType);
+        this.orderItemStageHistory = orderItemStageHistory;
+        this.orderItemType = orderItemType;
         this.preferences = preferences;
-        this.productDetails = Objects.requireNonNull(productDetails);
-        this.returnReason = Objects.requireNonNull(returnReason);
-        this.returnStatus = Objects.requireNonNull(returnStatus);
-        this.reverseShippingDetails = Objects.requireNonNull(reverseShippingDetails);
+        this.productDetails = productDetails;
+        this.returnReason = returnReason;
+        this.returnStatus = returnStatus;
+        this.reverseShippingDetails = reverseShippingDetails;
     }
 
     /**

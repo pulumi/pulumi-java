@@ -96,7 +96,7 @@ public final class EventTargetEcsTarget {
         this.propagateTags = propagateTags;
         this.tags = tags;
         this.taskCount = taskCount;
-        this.taskDefinitionArn = Objects.requireNonNull(taskDefinitionArn);
+        this.taskDefinitionArn = taskDefinitionArn;
     }
 
     /**

@@ -60,11 +60,11 @@ public final class FileTaskStepResponse {
         String type,
         @Nullable List<SetValueResponse> values,
         @Nullable String valuesFilePath) {
-        this.baseImageDependencies = Objects.requireNonNull(baseImageDependencies);
+        this.baseImageDependencies = baseImageDependencies;
         this.contextAccessToken = contextAccessToken;
         this.contextPath = contextPath;
-        this.taskFilePath = Objects.requireNonNull(taskFilePath);
-        this.type = Objects.requireNonNull(type);
+        this.taskFilePath = taskFilePath;
+        this.type = type;
         this.values = values;
         this.valuesFilePath = valuesFilePath;
     }

@@ -37,10 +37,10 @@ public final class GetEnvironmentResult {
         String name,
         @Nullable String project,
         @Nullable String region) {
-        this.configs = Objects.requireNonNull(configs);
-        this.id = Objects.requireNonNull(id);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
+        this.configs = configs;
+        this.id = id;
+        this.labels = labels;
+        this.name = name;
         this.project = project;
         this.region = region;
     }

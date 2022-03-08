@@ -32,8 +32,8 @@ public final class OnPremisePropertyResponse {
         String id,
         String publicSigningKey,
         @Nullable String signingCertificateThumbprint) {
-        this.id = Objects.requireNonNull(id);
-        this.publicSigningKey = Objects.requireNonNull(publicSigningKey);
+        this.id = id;
+        this.publicSigningKey = publicSigningKey;
         this.signingCertificateThumbprint = signingCertificateThumbprint;
     }
 

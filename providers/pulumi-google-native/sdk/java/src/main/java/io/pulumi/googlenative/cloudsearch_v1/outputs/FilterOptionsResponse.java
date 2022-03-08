@@ -25,8 +25,8 @@ public final class FilterOptionsResponse {
     private FilterOptionsResponse(
         FilterResponse filter,
         String objectType) {
-        this.filter = Objects.requireNonNull(filter);
-        this.objectType = Objects.requireNonNull(objectType);
+        this.filter = filter;
+        this.objectType = objectType;
     }
 
     /**

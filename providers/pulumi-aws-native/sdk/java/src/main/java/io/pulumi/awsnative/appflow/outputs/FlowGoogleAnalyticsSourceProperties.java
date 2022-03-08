@@ -13,7 +13,7 @@ public final class FlowGoogleAnalyticsSourceProperties {
 
     @OutputCustomType.Constructor({"object"})
     private FlowGoogleAnalyticsSourceProperties(String object) {
-        this.object = Objects.requireNonNull(object);
+        this.object = object;
     }
 
     public String getObject() {

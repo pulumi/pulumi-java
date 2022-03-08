@@ -38,7 +38,7 @@ public final class MarkdownPartMetadataResponse {
         String type) {
         this.inputs = inputs;
         this.settings = settings;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

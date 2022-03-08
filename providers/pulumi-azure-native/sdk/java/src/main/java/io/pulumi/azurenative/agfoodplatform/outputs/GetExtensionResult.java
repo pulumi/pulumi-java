@@ -73,16 +73,16 @@ public final class GetExtensionResult {
         String name,
         SystemDataResponse systemData,
         String type) {
-        this.eTag = Objects.requireNonNull(eTag);
-        this.extensionApiDocsLink = Objects.requireNonNull(extensionApiDocsLink);
-        this.extensionAuthLink = Objects.requireNonNull(extensionAuthLink);
-        this.extensionCategory = Objects.requireNonNull(extensionCategory);
-        this.extensionId = Objects.requireNonNull(extensionId);
-        this.id = Objects.requireNonNull(id);
-        this.installedExtensionVersion = Objects.requireNonNull(installedExtensionVersion);
-        this.name = Objects.requireNonNull(name);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.eTag = eTag;
+        this.extensionApiDocsLink = extensionApiDocsLink;
+        this.extensionAuthLink = extensionAuthLink;
+        this.extensionCategory = extensionCategory;
+        this.extensionId = extensionId;
+        this.id = id;
+        this.installedExtensionVersion = installedExtensionVersion;
+        this.name = name;
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

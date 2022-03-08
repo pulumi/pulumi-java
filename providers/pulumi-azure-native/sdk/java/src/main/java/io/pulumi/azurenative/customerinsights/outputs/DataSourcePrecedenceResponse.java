@@ -51,12 +51,12 @@ public final class DataSourcePrecedenceResponse {
         String name,
         @Nullable Integer precedence,
         String status) {
-        this.dataSourceReferenceId = Objects.requireNonNull(dataSourceReferenceId);
-        this.dataSourceType = Objects.requireNonNull(dataSourceType);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.dataSourceReferenceId = dataSourceReferenceId;
+        this.dataSourceType = dataSourceType;
+        this.id = id;
+        this.name = name;
         this.precedence = precedence;
-        this.status = Objects.requireNonNull(status);
+        this.status = status;
     }
 
     /**

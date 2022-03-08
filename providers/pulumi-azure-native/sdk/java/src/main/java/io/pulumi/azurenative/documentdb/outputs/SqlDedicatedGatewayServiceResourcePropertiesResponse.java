@@ -60,13 +60,13 @@ public final class SqlDedicatedGatewayServiceResourcePropertiesResponse {
         String serviceType,
         @Nullable String sqlDedicatedGatewayEndpoint,
         String status) {
-        this.creationTime = Objects.requireNonNull(creationTime);
+        this.creationTime = creationTime;
         this.instanceCount = instanceCount;
         this.instanceSize = instanceSize;
-        this.locations = Objects.requireNonNull(locations);
-        this.serviceType = Objects.requireNonNull(serviceType);
+        this.locations = locations;
+        this.serviceType = serviceType;
         this.sqlDedicatedGatewayEndpoint = sqlDedicatedGatewayEndpoint;
-        this.status = Objects.requireNonNull(status);
+        this.status = status;
     }
 
     /**

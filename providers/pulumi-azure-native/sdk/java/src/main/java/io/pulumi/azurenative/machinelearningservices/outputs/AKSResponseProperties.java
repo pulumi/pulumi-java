@@ -67,7 +67,7 @@ public final class AKSResponseProperties {
         this.clusterFqdn = clusterFqdn;
         this.clusterPurpose = clusterPurpose;
         this.sslConfiguration = sslConfiguration;
-        this.systemServices = Objects.requireNonNull(systemServices);
+        this.systemServices = systemServices;
     }
 
     /**

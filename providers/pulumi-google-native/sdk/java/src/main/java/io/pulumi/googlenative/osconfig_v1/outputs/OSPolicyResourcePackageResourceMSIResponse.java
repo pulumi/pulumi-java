@@ -26,8 +26,8 @@ public final class OSPolicyResourcePackageResourceMSIResponse {
     private OSPolicyResourcePackageResourceMSIResponse(
         List<String> properties,
         OSPolicyResourceFileResponse source) {
-        this.properties = Objects.requireNonNull(properties);
-        this.source = Objects.requireNonNull(source);
+        this.properties = properties;
+        this.source = source;
     }
 
     /**

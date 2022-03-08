@@ -75,16 +75,16 @@ public final class GetInventoryItemResult {
         String provisioningState,
         SystemDataResponse systemData,
         String type) {
-        this.id = Objects.requireNonNull(id);
-        this.inventoryType = Objects.requireNonNull(inventoryType);
+        this.id = id;
+        this.inventoryType = inventoryType;
         this.kind = kind;
         this.managedResourceId = managedResourceId;
         this.moName = moName;
         this.moRefId = moRefId;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

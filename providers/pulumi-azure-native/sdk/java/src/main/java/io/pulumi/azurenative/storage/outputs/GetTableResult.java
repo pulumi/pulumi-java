@@ -36,10 +36,10 @@ public final class GetTableResult {
         String name,
         String tableName,
         String type) {
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.tableName = Objects.requireNonNull(tableName);
-        this.type = Objects.requireNonNull(type);
+        this.id = id;
+        this.name = name;
+        this.tableName = tableName;
+        this.type = type;
     }
 
     /**

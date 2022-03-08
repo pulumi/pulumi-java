@@ -56,10 +56,10 @@ public final class EndpointConfigurationDataCaptureConfig {
         Integer initialSamplingPercentage,
         @Nullable String kmsKeyId) {
         this.captureContentTypeHeader = captureContentTypeHeader;
-        this.captureOptions = Objects.requireNonNull(captureOptions);
-        this.destinationS3Uri = Objects.requireNonNull(destinationS3Uri);
+        this.captureOptions = captureOptions;
+        this.destinationS3Uri = destinationS3Uri;
         this.enableCapture = enableCapture;
-        this.initialSamplingPercentage = Objects.requireNonNull(initialSamplingPercentage);
+        this.initialSamplingPercentage = initialSamplingPercentage;
         this.kmsKeyId = kmsKeyId;
     }
 

@@ -105,20 +105,20 @@ public final class GetFactoryResult {
         @Nullable Map<String,String> tags,
         String type,
         String version) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.eTag = Objects.requireNonNull(eTag);
+        this.createTime = createTime;
+        this.eTag = eTag;
         this.encryption = encryption;
         this.globalParameters = globalParameters;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.identity = identity;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.publicNetworkAccess = publicNetworkAccess;
         this.repoConfiguration = repoConfiguration;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
-        this.version = Objects.requireNonNull(version);
+        this.type = type;
+        this.version = version;
     }
 
     /**

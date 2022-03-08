@@ -33,8 +33,8 @@ public final class EntityTypeEntity {
     private EntityTypeEntity(
         List<String> synonyms,
         String value) {
-        this.synonyms = Objects.requireNonNull(synonyms);
-        this.value = Objects.requireNonNull(value);
+        this.synonyms = synonyms;
+        this.value = value;
     }
 
     /**

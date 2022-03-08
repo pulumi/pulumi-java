@@ -34,7 +34,7 @@ public final class ConfigurationAggregatorAccountAggregationSource {
         List<String> accountIds,
         @Nullable Boolean allRegions,
         @Nullable List<String> regions) {
-        this.accountIds = Objects.requireNonNull(accountIds);
+        this.accountIds = accountIds;
         this.allRegions = allRegions;
         this.regions = regions;
     }

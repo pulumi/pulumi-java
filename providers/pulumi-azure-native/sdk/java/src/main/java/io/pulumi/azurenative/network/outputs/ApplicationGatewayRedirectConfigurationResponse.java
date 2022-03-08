@@ -89,7 +89,7 @@ public final class ApplicationGatewayRedirectConfigurationResponse {
         @Nullable String targetUrl,
         String type,
         @Nullable List<SubResourceResponse> urlPathMaps) {
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.id = id;
         this.includePath = includePath;
         this.includeQueryString = includeQueryString;
@@ -99,7 +99,7 @@ public final class ApplicationGatewayRedirectConfigurationResponse {
         this.requestRoutingRules = requestRoutingRules;
         this.targetListener = targetListener;
         this.targetUrl = targetUrl;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.urlPathMaps = urlPathMaps;
     }
 

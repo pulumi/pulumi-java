@@ -52,13 +52,13 @@ public final class GetArnResult {
         String region,
         String resource,
         String service) {
-        this.account = Objects.requireNonNull(account);
-        this.arn = Objects.requireNonNull(arn);
-        this.id = Objects.requireNonNull(id);
-        this.partition = Objects.requireNonNull(partition);
-        this.region = Objects.requireNonNull(region);
-        this.resource = Objects.requireNonNull(resource);
-        this.service = Objects.requireNonNull(service);
+        this.account = account;
+        this.arn = arn;
+        this.id = id;
+        this.partition = partition;
+        this.region = region;
+        this.resource = resource;
+        this.service = service;
     }
 
     /**

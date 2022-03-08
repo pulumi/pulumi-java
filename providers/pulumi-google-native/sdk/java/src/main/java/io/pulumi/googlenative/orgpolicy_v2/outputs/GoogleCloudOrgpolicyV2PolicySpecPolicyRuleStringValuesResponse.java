@@ -25,8 +25,8 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesRespons
     private GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesResponse(
         List<String> allowedValues,
         List<String> deniedValues) {
-        this.allowedValues = Objects.requireNonNull(allowedValues);
-        this.deniedValues = Objects.requireNonNull(deniedValues);
+        this.allowedValues = allowedValues;
+        this.deniedValues = deniedValues;
     }
 
     /**

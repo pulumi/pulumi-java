@@ -24,8 +24,8 @@ public final class DynamicThresholdFailingPeriodsResponse {
     private DynamicThresholdFailingPeriodsResponse(
         Double minFailingPeriodsToAlert,
         Double numberOfEvaluationPeriods) {
-        this.minFailingPeriodsToAlert = Objects.requireNonNull(minFailingPeriodsToAlert);
-        this.numberOfEvaluationPeriods = Objects.requireNonNull(numberOfEvaluationPeriods);
+        this.minFailingPeriodsToAlert = minFailingPeriodsToAlert;
+        this.numberOfEvaluationPeriods = numberOfEvaluationPeriods;
     }
 
     /**

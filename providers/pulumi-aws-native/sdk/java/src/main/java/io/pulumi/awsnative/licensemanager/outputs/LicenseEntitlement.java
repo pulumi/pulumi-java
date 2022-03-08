@@ -30,9 +30,9 @@ public final class LicenseEntitlement {
         @Nullable String value) {
         this.allowCheckIn = allowCheckIn;
         this.maxCount = maxCount;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.overage = overage;
-        this.unit = Objects.requireNonNull(unit);
+        this.unit = unit;
         this.value = value;
     }
 

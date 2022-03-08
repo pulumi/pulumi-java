@@ -17,7 +17,7 @@ public final class AppEngineResponse {
 
     @OutputCustomType.Constructor({"moduleId"})
     private AppEngineResponse(String moduleId) {
-        this.moduleId = Objects.requireNonNull(moduleId);
+        this.moduleId = moduleId;
     }
 
     /**

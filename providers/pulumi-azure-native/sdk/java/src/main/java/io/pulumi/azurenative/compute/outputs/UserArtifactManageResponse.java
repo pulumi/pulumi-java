@@ -32,8 +32,8 @@ public final class UserArtifactManageResponse {
         String install,
         String remove,
         @Nullable String update) {
-        this.install = Objects.requireNonNull(install);
-        this.remove = Objects.requireNonNull(remove);
+        this.install = install;
+        this.remove = remove;
         this.update = update;
     }
 

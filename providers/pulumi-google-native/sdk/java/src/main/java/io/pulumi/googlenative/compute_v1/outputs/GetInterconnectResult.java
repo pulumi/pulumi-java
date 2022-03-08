@@ -149,28 +149,28 @@ public final class GetInterconnectResult {
         Boolean satisfiesPzs,
         String selfLink,
         String state) {
-        this.adminEnabled = Objects.requireNonNull(adminEnabled);
-        this.circuitInfos = Objects.requireNonNull(circuitInfos);
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.customerName = Objects.requireNonNull(customerName);
-        this.description = Objects.requireNonNull(description);
-        this.expectedOutages = Objects.requireNonNull(expectedOutages);
-        this.googleIpAddress = Objects.requireNonNull(googleIpAddress);
-        this.googleReferenceId = Objects.requireNonNull(googleReferenceId);
-        this.interconnectAttachments = Objects.requireNonNull(interconnectAttachments);
-        this.interconnectType = Objects.requireNonNull(interconnectType);
-        this.kind = Objects.requireNonNull(kind);
-        this.linkType = Objects.requireNonNull(linkType);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.nocContactEmail = Objects.requireNonNull(nocContactEmail);
-        this.operationalStatus = Objects.requireNonNull(operationalStatus);
-        this.peerIpAddress = Objects.requireNonNull(peerIpAddress);
-        this.provisionedLinkCount = Objects.requireNonNull(provisionedLinkCount);
-        this.requestedLinkCount = Objects.requireNonNull(requestedLinkCount);
-        this.satisfiesPzs = Objects.requireNonNull(satisfiesPzs);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.state = Objects.requireNonNull(state);
+        this.adminEnabled = adminEnabled;
+        this.circuitInfos = circuitInfos;
+        this.creationTimestamp = creationTimestamp;
+        this.customerName = customerName;
+        this.description = description;
+        this.expectedOutages = expectedOutages;
+        this.googleIpAddress = googleIpAddress;
+        this.googleReferenceId = googleReferenceId;
+        this.interconnectAttachments = interconnectAttachments;
+        this.interconnectType = interconnectType;
+        this.kind = kind;
+        this.linkType = linkType;
+        this.location = location;
+        this.name = name;
+        this.nocContactEmail = nocContactEmail;
+        this.operationalStatus = operationalStatus;
+        this.peerIpAddress = peerIpAddress;
+        this.provisionedLinkCount = provisionedLinkCount;
+        this.requestedLinkCount = requestedLinkCount;
+        this.satisfiesPzs = satisfiesPzs;
+        this.selfLink = selfLink;
+        this.state = state;
     }
 
     /**

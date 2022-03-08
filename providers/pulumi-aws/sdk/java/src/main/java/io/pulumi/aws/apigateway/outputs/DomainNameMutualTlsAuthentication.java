@@ -27,7 +27,7 @@ public final class DomainNameMutualTlsAuthentication {
     private DomainNameMutualTlsAuthentication(
         String truststoreUri,
         @Nullable String truststoreVersion) {
-        this.truststoreUri = Objects.requireNonNull(truststoreUri);
+        this.truststoreUri = truststoreUri;
         this.truststoreVersion = truststoreVersion;
     }
 

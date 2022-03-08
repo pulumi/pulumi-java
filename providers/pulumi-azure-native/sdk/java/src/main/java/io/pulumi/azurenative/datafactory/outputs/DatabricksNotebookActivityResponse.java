@@ -87,10 +87,10 @@ public final class DatabricksNotebookActivityResponse {
         this.description = description;
         this.libraries = libraries;
         this.linkedServiceName = linkedServiceName;
-        this.name = Objects.requireNonNull(name);
-        this.notebookPath = Objects.requireNonNull(notebookPath);
+        this.name = name;
+        this.notebookPath = notebookPath;
         this.policy = policy;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.userProperties = userProperties;
     }
 

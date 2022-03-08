@@ -25,8 +25,8 @@ public final class GooglePrivacyDlpV2InspectDataSourceDetailsResponse {
     private GooglePrivacyDlpV2InspectDataSourceDetailsResponse(
         GooglePrivacyDlpV2RequestedOptionsResponse requestedOptions,
         GooglePrivacyDlpV2ResultResponse result) {
-        this.requestedOptions = Objects.requireNonNull(requestedOptions);
-        this.result = Objects.requireNonNull(result);
+        this.requestedOptions = requestedOptions;
+        this.result = result;
     }
 
     /**

@@ -76,7 +76,7 @@ public final class ApplicationRuleConditionResponse {
         this.fqdnTags = fqdnTags;
         this.name = name;
         this.protocols = protocols;
-        this.ruleConditionType = Objects.requireNonNull(ruleConditionType);
+        this.ruleConditionType = ruleConditionType;
         this.sourceAddresses = sourceAddresses;
         this.sourceIpGroups = sourceIpGroups;
         this.targetFqdns = targetFqdns;

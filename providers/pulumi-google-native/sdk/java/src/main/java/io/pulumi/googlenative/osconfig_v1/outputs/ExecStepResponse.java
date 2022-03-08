@@ -24,8 +24,8 @@ public final class ExecStepResponse {
     private ExecStepResponse(
         ExecStepConfigResponse linuxExecStepConfig,
         ExecStepConfigResponse windowsExecStepConfig) {
-        this.linuxExecStepConfig = Objects.requireNonNull(linuxExecStepConfig);
-        this.windowsExecStepConfig = Objects.requireNonNull(windowsExecStepConfig);
+        this.linuxExecStepConfig = linuxExecStepConfig;
+        this.windowsExecStepConfig = windowsExecStepConfig;
     }
 
     /**

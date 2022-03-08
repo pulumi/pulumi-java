@@ -24,11 +24,11 @@ public final class ListWorkspaceKeysResult {
         ListNotebookKeysResultResponse notebookAccessKeys,
         String userStorageKey,
         String userStorageResourceId) {
-        this.appInsightsInstrumentationKey = Objects.requireNonNull(appInsightsInstrumentationKey);
-        this.containerRegistryCredentials = Objects.requireNonNull(containerRegistryCredentials);
-        this.notebookAccessKeys = Objects.requireNonNull(notebookAccessKeys);
-        this.userStorageKey = Objects.requireNonNull(userStorageKey);
-        this.userStorageResourceId = Objects.requireNonNull(userStorageResourceId);
+        this.appInsightsInstrumentationKey = appInsightsInstrumentationKey;
+        this.containerRegistryCredentials = containerRegistryCredentials;
+        this.notebookAccessKeys = notebookAccessKeys;
+        this.userStorageKey = userStorageKey;
+        this.userStorageResourceId = userStorageResourceId;
     }
 
     public String getAppInsightsInstrumentationKey() {

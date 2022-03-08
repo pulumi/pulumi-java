@@ -17,7 +17,7 @@ public final class ApprovalConfigResponse {
 
     @OutputCustomType.Constructor({"approvalRequired"})
     private ApprovalConfigResponse(Boolean approvalRequired) {
-        this.approvalRequired = Objects.requireNonNull(approvalRequired);
+        this.approvalRequired = approvalRequired;
     }
 
     /**

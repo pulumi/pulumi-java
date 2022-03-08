@@ -19,7 +19,7 @@ public final class RouteSpecHttp2RouteAction {
 
     @OutputCustomType.Constructor({"weightedTargets"})
     private RouteSpecHttp2RouteAction(List<RouteSpecHttp2RouteActionWeightedTarget> weightedTargets) {
-        this.weightedTargets = Objects.requireNonNull(weightedTargets);
+        this.weightedTargets = weightedTargets;
     }
 
     /**

@@ -39,10 +39,10 @@ public final class ElementaryStreamResponse {
         String key,
         TextStreamResponse textStream,
         VideoStreamResponse videoStream) {
-        this.audioStream = Objects.requireNonNull(audioStream);
-        this.key = Objects.requireNonNull(key);
-        this.textStream = Objects.requireNonNull(textStream);
-        this.videoStream = Objects.requireNonNull(videoStream);
+        this.audioStream = audioStream;
+        this.key = key;
+        this.textStream = textStream;
+        this.videoStream = videoStream;
     }
 
     /**

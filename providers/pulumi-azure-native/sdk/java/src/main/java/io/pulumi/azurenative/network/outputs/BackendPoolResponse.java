@@ -64,8 +64,8 @@ public final class BackendPoolResponse {
         this.id = id;
         this.loadBalancingSettings = loadBalancingSettings;
         this.name = name;
-        this.resourceState = Objects.requireNonNull(resourceState);
-        this.type = Objects.requireNonNull(type);
+        this.resourceState = resourceState;
+        this.type = type;
     }
 
     /**

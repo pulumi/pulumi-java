@@ -39,7 +39,7 @@ public final class Template {
         @Nullable String templateName,
         @Nullable String textPart) {
         this.htmlPart = htmlPart;
-        this.subjectPart = Objects.requireNonNull(subjectPart);
+        this.subjectPart = subjectPart;
         this.templateName = templateName;
         this.textPart = textPart;
     }

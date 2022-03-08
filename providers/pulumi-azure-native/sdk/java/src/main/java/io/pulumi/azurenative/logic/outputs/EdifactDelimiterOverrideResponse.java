@@ -87,17 +87,17 @@ public final class EdifactDelimiterOverrideResponse {
         Integer segmentTerminator,
         String segmentTerminatorSuffix,
         @Nullable String targetNamespace) {
-        this.componentSeparator = Objects.requireNonNull(componentSeparator);
-        this.dataElementSeparator = Objects.requireNonNull(dataElementSeparator);
-        this.decimalPointIndicator = Objects.requireNonNull(decimalPointIndicator);
+        this.componentSeparator = componentSeparator;
+        this.dataElementSeparator = dataElementSeparator;
+        this.decimalPointIndicator = decimalPointIndicator;
         this.messageAssociationAssignedCode = messageAssociationAssignedCode;
         this.messageId = messageId;
         this.messageRelease = messageRelease;
         this.messageVersion = messageVersion;
-        this.releaseIndicator = Objects.requireNonNull(releaseIndicator);
-        this.repetitionSeparator = Objects.requireNonNull(repetitionSeparator);
-        this.segmentTerminator = Objects.requireNonNull(segmentTerminator);
-        this.segmentTerminatorSuffix = Objects.requireNonNull(segmentTerminatorSuffix);
+        this.releaseIndicator = releaseIndicator;
+        this.repetitionSeparator = repetitionSeparator;
+        this.segmentTerminator = segmentTerminator;
+        this.segmentTerminatorSuffix = segmentTerminatorSuffix;
         this.targetNamespace = targetNamespace;
     }
 

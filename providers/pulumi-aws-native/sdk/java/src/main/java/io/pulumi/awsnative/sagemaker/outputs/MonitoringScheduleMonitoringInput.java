@@ -13,7 +13,7 @@ public final class MonitoringScheduleMonitoringInput {
 
     @OutputCustomType.Constructor({"endpointInput"})
     private MonitoringScheduleMonitoringInput(MonitoringScheduleEndpointInput endpointInput) {
-        this.endpointInput = Objects.requireNonNull(endpointInput);
+        this.endpointInput = endpointInput;
     }
 
     public MonitoringScheduleEndpointInput getEndpointInput() {

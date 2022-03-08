@@ -42,8 +42,8 @@ public final class GetPolicyDocumentResult {
         @Nullable List<String> sourcePolicyDocuments,
         @Nullable List<GetPolicyDocumentStatement> statements,
         @Nullable String version) {
-        this.id = Objects.requireNonNull(id);
-        this.json = Objects.requireNonNull(json);
+        this.id = id;
+        this.json = json;
         this.overrideJson = overrideJson;
         this.overridePolicyDocuments = overridePolicyDocuments;
         this.policyId = policyId;

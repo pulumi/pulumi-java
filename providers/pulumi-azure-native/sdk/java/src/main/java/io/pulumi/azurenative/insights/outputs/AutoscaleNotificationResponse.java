@@ -36,7 +36,7 @@ public final class AutoscaleNotificationResponse {
         String operation,
         @Nullable List<WebhookNotificationResponse> webhooks) {
         this.email = email;
-        this.operation = Objects.requireNonNull(operation);
+        this.operation = operation;
         this.webhooks = webhooks;
     }
 

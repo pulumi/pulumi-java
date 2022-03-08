@@ -28,7 +28,7 @@ public final class DataDiskImageEncryptionResponse {
         @Nullable String diskEncryptionSetId,
         Integer lun) {
         this.diskEncryptionSetId = diskEncryptionSetId;
-        this.lun = Objects.requireNonNull(lun);
+        this.lun = lun;
     }
 
     /**

@@ -72,14 +72,14 @@ public final class AppResourcePropertiesResponse {
         @Nullable TemporaryDiskResponse temporaryDisk,
         String url) {
         this.activeDeploymentName = activeDeploymentName;
-        this.createdTime = Objects.requireNonNull(createdTime);
+        this.createdTime = createdTime;
         this.fqdn = fqdn;
         this.httpsOnly = httpsOnly;
         this.persistentDisk = persistentDisk;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.$public = $public;
         this.temporaryDisk = temporaryDisk;
-        this.url = Objects.requireNonNull(url);
+        this.url = url;
     }
 
     /**

@@ -24,8 +24,8 @@ public final class SnapshotImportDiskContainerUserBucket {
     private SnapshotImportDiskContainerUserBucket(
         String s3Bucket,
         String s3Key) {
-        this.s3Bucket = Objects.requireNonNull(s3Bucket);
-        this.s3Key = Objects.requireNonNull(s3Key);
+        this.s3Bucket = s3Bucket;
+        this.s3Key = s3Key;
     }
 
     /**

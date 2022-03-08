@@ -30,9 +30,9 @@ public final class RoutineReferenceResponse {
         String datasetId,
         String project,
         String routineId) {
-        this.datasetId = Objects.requireNonNull(datasetId);
-        this.project = Objects.requireNonNull(project);
-        this.routineId = Objects.requireNonNull(routineId);
+        this.datasetId = datasetId;
+        this.project = project;
+        this.routineId = routineId;
     }
 
     /**

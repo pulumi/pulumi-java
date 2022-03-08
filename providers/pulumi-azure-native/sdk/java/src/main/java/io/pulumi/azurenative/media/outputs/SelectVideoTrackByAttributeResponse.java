@@ -39,10 +39,10 @@ public final class SelectVideoTrackByAttributeResponse {
         String filter,
         @Nullable String filterValue,
         String odataType) {
-        this.attribute = Objects.requireNonNull(attribute);
-        this.filter = Objects.requireNonNull(filter);
+        this.attribute = attribute;
+        this.filter = filter;
         this.filterValue = filterValue;
-        this.odataType = Objects.requireNonNull(odataType);
+        this.odataType = odataType;
     }
 
     /**

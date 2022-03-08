@@ -32,8 +32,8 @@ public final class BotS3Location {
         String s3Bucket,
         String s3ObjectKey,
         @Nullable String s3ObjectVersion) {
-        this.s3Bucket = Objects.requireNonNull(s3Bucket);
-        this.s3ObjectKey = Objects.requireNonNull(s3ObjectKey);
+        this.s3Bucket = s3Bucket;
+        this.s3ObjectKey = s3ObjectKey;
         this.s3ObjectVersion = s3ObjectVersion;
     }
 

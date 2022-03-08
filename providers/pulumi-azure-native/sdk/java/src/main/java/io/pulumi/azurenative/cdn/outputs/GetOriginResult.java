@@ -126,22 +126,22 @@ public final class GetOriginResult {
         String type,
         @Nullable Integer weight) {
         this.enabled = enabled;
-        this.hostName = Objects.requireNonNull(hostName);
+        this.hostName = hostName;
         this.httpPort = httpPort;
         this.httpsPort = httpsPort;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.originHostHeader = originHostHeader;
         this.priority = priority;
-        this.privateEndpointStatus = Objects.requireNonNull(privateEndpointStatus);
+        this.privateEndpointStatus = privateEndpointStatus;
         this.privateLinkAlias = privateLinkAlias;
         this.privateLinkApprovalMessage = privateLinkApprovalMessage;
         this.privateLinkLocation = privateLinkLocation;
         this.privateLinkResourceId = privateLinkResourceId;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.resourceState = Objects.requireNonNull(resourceState);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.provisioningState = provisioningState;
+        this.resourceState = resourceState;
+        this.systemData = systemData;
+        this.type = type;
         this.weight = weight;
     }
 

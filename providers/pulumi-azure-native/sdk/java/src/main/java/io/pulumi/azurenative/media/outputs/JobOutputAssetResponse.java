@@ -65,14 +65,14 @@ public final class JobOutputAssetResponse {
         Integer progress,
         String startTime,
         String state) {
-        this.assetName = Objects.requireNonNull(assetName);
-        this.endTime = Objects.requireNonNull(endTime);
-        this.error = Objects.requireNonNull(error);
+        this.assetName = assetName;
+        this.endTime = endTime;
+        this.error = error;
         this.label = label;
-        this.odataType = Objects.requireNonNull(odataType);
-        this.progress = Objects.requireNonNull(progress);
-        this.startTime = Objects.requireNonNull(startTime);
-        this.state = Objects.requireNonNull(state);
+        this.odataType = odataType;
+        this.progress = progress;
+        this.startTime = startTime;
+        this.state = state;
     }
 
     /**

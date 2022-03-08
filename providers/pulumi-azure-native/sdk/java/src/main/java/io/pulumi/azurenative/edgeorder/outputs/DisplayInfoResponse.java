@@ -24,8 +24,8 @@ public final class DisplayInfoResponse {
     private DisplayInfoResponse(
         String configurationDisplayName,
         String productFamilyDisplayName) {
-        this.configurationDisplayName = Objects.requireNonNull(configurationDisplayName);
-        this.productFamilyDisplayName = Objects.requireNonNull(productFamilyDisplayName);
+        this.configurationDisplayName = configurationDisplayName;
+        this.productFamilyDisplayName = productFamilyDisplayName;
     }
 
     /**

@@ -44,11 +44,11 @@ public final class AgentDetailsResponse {
         List<AgentDiskDetailsResponse> disks,
         String fqdn,
         String machineId) {
-        this.agentId = Objects.requireNonNull(agentId);
-        this.biosId = Objects.requireNonNull(biosId);
-        this.disks = Objects.requireNonNull(disks);
-        this.fqdn = Objects.requireNonNull(fqdn);
-        this.machineId = Objects.requireNonNull(machineId);
+        this.agentId = agentId;
+        this.biosId = biosId;
+        this.disks = disks;
+        this.fqdn = fqdn;
+        this.machineId = machineId;
     }
 
     /**

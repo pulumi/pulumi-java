@@ -17,7 +17,7 @@ public final class ConditionContextResponse {
 
     @OutputCustomType.Constructor({"accessTime"})
     private ConditionContextResponse(String accessTime) {
-        this.accessTime = Objects.requireNonNull(accessTime);
+        this.accessTime = accessTime;
     }
 
     /**

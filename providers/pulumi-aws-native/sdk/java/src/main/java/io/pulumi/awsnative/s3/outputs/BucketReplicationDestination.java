@@ -39,7 +39,7 @@ public final class BucketReplicationDestination {
         @Nullable BucketReplicationDestinationStorageClass storageClass) {
         this.accessControlTranslation = accessControlTranslation;
         this.account = account;
-        this.bucket = Objects.requireNonNull(bucket);
+        this.bucket = bucket;
         this.encryptionConfiguration = encryptionConfiguration;
         this.metrics = metrics;
         this.replicationTime = replicationTime;

@@ -31,9 +31,9 @@ public final class MoneyResponse {
         String currencyCode,
         Integer nanos,
         String units) {
-        this.currencyCode = Objects.requireNonNull(currencyCode);
-        this.nanos = Objects.requireNonNull(nanos);
-        this.units = Objects.requireNonNull(units);
+        this.currencyCode = currencyCode;
+        this.nanos = nanos;
+        this.units = units;
     }
 
     /**

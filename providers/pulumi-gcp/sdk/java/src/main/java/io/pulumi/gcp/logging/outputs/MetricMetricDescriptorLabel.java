@@ -36,7 +36,7 @@ public final class MetricMetricDescriptorLabel {
         String key,
         @Nullable String valueType) {
         this.description = description;
-        this.key = Objects.requireNonNull(key);
+        this.key = key;
         this.valueType = valueType;
     }
 

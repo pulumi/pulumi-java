@@ -27,7 +27,7 @@ public final class BotAliasConversationLogs {
     private BotAliasConversationLogs(
         String iamRoleArn,
         @Nullable List<BotAliasConversationLogsLogSetting> logSettings) {
-        this.iamRoleArn = Objects.requireNonNull(iamRoleArn);
+        this.iamRoleArn = iamRoleArn;
         this.logSettings = logSettings;
     }
 

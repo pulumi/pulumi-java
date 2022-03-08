@@ -24,8 +24,8 @@ public final class BucketWebsiteResponse {
     private BucketWebsiteResponse(
         String mainPageSuffix,
         String notFoundPage) {
-        this.mainPageSuffix = Objects.requireNonNull(mainPageSuffix);
-        this.notFoundPage = Objects.requireNonNull(notFoundPage);
+        this.mainPageSuffix = mainPageSuffix;
+        this.notFoundPage = notFoundPage;
     }
 
     /**

@@ -72,17 +72,17 @@ public final class GetSubnetworkResult {
         String region,
         List<GetSubnetworkSecondaryIpRange> secondaryIpRanges,
         String selfLink) {
-        this.description = Objects.requireNonNull(description);
-        this.gatewayAddress = Objects.requireNonNull(gatewayAddress);
-        this.id = Objects.requireNonNull(id);
-        this.ipCidrRange = Objects.requireNonNull(ipCidrRange);
+        this.description = description;
+        this.gatewayAddress = gatewayAddress;
+        this.id = id;
+        this.ipCidrRange = ipCidrRange;
         this.name = name;
-        this.network = Objects.requireNonNull(network);
-        this.privateIpGoogleAccess = Objects.requireNonNull(privateIpGoogleAccess);
-        this.project = Objects.requireNonNull(project);
-        this.region = Objects.requireNonNull(region);
-        this.secondaryIpRanges = Objects.requireNonNull(secondaryIpRanges);
-        this.selfLink = Objects.requireNonNull(selfLink);
+        this.network = network;
+        this.privateIpGoogleAccess = privateIpGoogleAccess;
+        this.project = project;
+        this.region = region;
+        this.secondaryIpRanges = secondaryIpRanges;
+        this.selfLink = selfLink;
     }
 
     /**

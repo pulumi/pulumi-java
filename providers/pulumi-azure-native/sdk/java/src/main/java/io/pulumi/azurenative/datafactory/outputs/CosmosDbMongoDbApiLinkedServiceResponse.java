@@ -70,12 +70,12 @@ public final class CosmosDbMongoDbApiLinkedServiceResponse {
         String type) {
         this.annotations = annotations;
         this.connectVia = connectVia;
-        this.connectionString = Objects.requireNonNull(connectionString);
-        this.database = Objects.requireNonNull(database);
+        this.connectionString = connectionString;
+        this.database = database;
         this.description = description;
         this.isServerVersionAbove32 = isServerVersionAbove32;
         this.parameters = parameters;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

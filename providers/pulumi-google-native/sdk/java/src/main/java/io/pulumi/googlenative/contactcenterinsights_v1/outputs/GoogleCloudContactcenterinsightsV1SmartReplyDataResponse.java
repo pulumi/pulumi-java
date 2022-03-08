@@ -38,10 +38,10 @@ public final class GoogleCloudContactcenterinsightsV1SmartReplyDataResponse {
         Map<String,String> metadata,
         String queryRecord,
         String reply) {
-        this.confidenceScore = Objects.requireNonNull(confidenceScore);
-        this.metadata = Objects.requireNonNull(metadata);
-        this.queryRecord = Objects.requireNonNull(queryRecord);
-        this.reply = Objects.requireNonNull(reply);
+        this.confidenceScore = confidenceScore;
+        this.metadata = metadata;
+        this.queryRecord = queryRecord;
+        this.reply = reply;
     }
 
     /**

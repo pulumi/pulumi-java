@@ -71,14 +71,14 @@ public final class VpnSiteLinkResponse {
         String provisioningState,
         String type) {
         this.bgpProperties = bgpProperties;
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.fqdn = fqdn;
         this.id = id;
         this.ipAddress = ipAddress;
         this.linkProperties = linkProperties;
         this.name = name;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.type = Objects.requireNonNull(type);
+        this.provisioningState = provisioningState;
+        this.type = type;
     }
 
     /**

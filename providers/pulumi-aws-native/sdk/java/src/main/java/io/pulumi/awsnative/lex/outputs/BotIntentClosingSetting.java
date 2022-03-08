@@ -19,7 +19,7 @@ public final class BotIntentClosingSetting {
     private BotIntentClosingSetting(
         BotResponseSpecification closingResponse,
         @Nullable Boolean isActive) {
-        this.closingResponse = Objects.requireNonNull(closingResponse);
+        this.closingResponse = closingResponse;
         this.isActive = isActive;
     }
 

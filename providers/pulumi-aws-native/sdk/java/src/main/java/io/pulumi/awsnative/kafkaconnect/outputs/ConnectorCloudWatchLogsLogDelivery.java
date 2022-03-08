@@ -27,7 +27,7 @@ public final class ConnectorCloudWatchLogsLogDelivery {
     private ConnectorCloudWatchLogsLogDelivery(
         Boolean enabled,
         @Nullable String logGroup) {
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
         this.logGroup = logGroup;
     }
 

@@ -57,13 +57,13 @@ public final class VirtualGatewaySpecListenerHealthCheck {
         String protocol,
         Integer timeoutMillis,
         Integer unhealthyThreshold) {
-        this.healthyThreshold = Objects.requireNonNull(healthyThreshold);
-        this.intervalMillis = Objects.requireNonNull(intervalMillis);
+        this.healthyThreshold = healthyThreshold;
+        this.intervalMillis = intervalMillis;
         this.path = path;
         this.port = port;
-        this.protocol = Objects.requireNonNull(protocol);
-        this.timeoutMillis = Objects.requireNonNull(timeoutMillis);
-        this.unhealthyThreshold = Objects.requireNonNull(unhealthyThreshold);
+        this.protocol = protocol;
+        this.timeoutMillis = timeoutMillis;
+        this.unhealthyThreshold = unhealthyThreshold;
     }
 
     /**

@@ -37,7 +37,7 @@ public final class TableMaterializedView {
         String query,
         @Nullable Integer refreshIntervalMs) {
         this.enableRefresh = enableRefresh;
-        this.query = Objects.requireNonNull(query);
+        this.query = query;
         this.refreshIntervalMs = refreshIntervalMs;
     }
 

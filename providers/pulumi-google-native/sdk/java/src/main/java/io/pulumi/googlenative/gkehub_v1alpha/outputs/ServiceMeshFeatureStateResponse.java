@@ -18,7 +18,7 @@ public final class ServiceMeshFeatureStateResponse {
 
     @OutputCustomType.Constructor({"analysisMessages"})
     private ServiceMeshFeatureStateResponse(List<ServiceMeshAnalysisMessageResponse> analysisMessages) {
-        this.analysisMessages = Objects.requireNonNull(analysisMessages);
+        this.analysisMessages = analysisMessages;
     }
 
     /**

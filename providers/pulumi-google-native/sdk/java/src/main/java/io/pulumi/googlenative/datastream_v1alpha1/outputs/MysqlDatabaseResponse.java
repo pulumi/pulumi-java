@@ -26,8 +26,8 @@ public final class MysqlDatabaseResponse {
     private MysqlDatabaseResponse(
         String databaseName,
         List<MysqlTableResponse> mysqlTables) {
-        this.databaseName = Objects.requireNonNull(databaseName);
-        this.mysqlTables = Objects.requireNonNull(mysqlTables);
+        this.databaseName = databaseName;
+        this.mysqlTables = mysqlTables;
     }
 
     /**

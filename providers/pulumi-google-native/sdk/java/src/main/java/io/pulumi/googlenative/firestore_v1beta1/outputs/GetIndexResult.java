@@ -38,10 +38,10 @@ public final class GetIndexResult {
         List<GoogleFirestoreAdminV1beta1IndexFieldResponse> fields,
         String name,
         String state) {
-        this.collectionId = Objects.requireNonNull(collectionId);
-        this.fields = Objects.requireNonNull(fields);
-        this.name = Objects.requireNonNull(name);
-        this.state = Objects.requireNonNull(state);
+        this.collectionId = collectionId;
+        this.fields = fields;
+        this.name = name;
+        this.state = state;
     }
 
     /**

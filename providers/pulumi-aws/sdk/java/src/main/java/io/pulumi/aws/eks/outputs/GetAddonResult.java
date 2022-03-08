@@ -56,15 +56,15 @@ public final class GetAddonResult {
         String modifiedAt,
         String serviceAccountRoleArn,
         Map<String,String> tags) {
-        this.addonName = Objects.requireNonNull(addonName);
-        this.addonVersion = Objects.requireNonNull(addonVersion);
-        this.arn = Objects.requireNonNull(arn);
-        this.clusterName = Objects.requireNonNull(clusterName);
-        this.createdAt = Objects.requireNonNull(createdAt);
-        this.id = Objects.requireNonNull(id);
-        this.modifiedAt = Objects.requireNonNull(modifiedAt);
-        this.serviceAccountRoleArn = Objects.requireNonNull(serviceAccountRoleArn);
-        this.tags = Objects.requireNonNull(tags);
+        this.addonName = addonName;
+        this.addonVersion = addonVersion;
+        this.arn = arn;
+        this.clusterName = clusterName;
+        this.createdAt = createdAt;
+        this.id = id;
+        this.modifiedAt = modifiedAt;
+        this.serviceAccountRoleArn = serviceAccountRoleArn;
+        this.tags = tags;
     }
 
     public String getAddonName() {

@@ -38,10 +38,10 @@ public final class RecurrentScheduleResponse {
         List<Integer> hours,
         List<Integer> minutes,
         String timeZone) {
-        this.days = Objects.requireNonNull(days);
-        this.hours = Objects.requireNonNull(hours);
-        this.minutes = Objects.requireNonNull(minutes);
-        this.timeZone = Objects.requireNonNull(timeZone);
+        this.days = days;
+        this.hours = hours;
+        this.minutes = minutes;
+        this.timeZone = timeZone;
     }
 
     /**

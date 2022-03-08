@@ -27,7 +27,7 @@ public final class DatabaseInstanceClone {
         @Nullable String pointInTime,
         String sourceInstanceName) {
         this.pointInTime = pointInTime;
-        this.sourceInstanceName = Objects.requireNonNull(sourceInstanceName);
+        this.sourceInstanceName = sourceInstanceName;
     }
 
     /**

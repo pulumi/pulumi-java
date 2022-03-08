@@ -25,8 +25,8 @@ public final class ReplicationCycleResponse {
     private ReplicationCycleResponse(
         Integer progressPercent,
         String startTime) {
-        this.progressPercent = Objects.requireNonNull(progressPercent);
-        this.startTime = Objects.requireNonNull(startTime);
+        this.progressPercent = progressPercent;
+        this.startTime = startTime;
     }
 
     /**

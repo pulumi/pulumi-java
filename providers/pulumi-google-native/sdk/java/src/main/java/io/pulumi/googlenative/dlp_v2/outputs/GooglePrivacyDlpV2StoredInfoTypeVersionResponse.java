@@ -46,11 +46,11 @@ public final class GooglePrivacyDlpV2StoredInfoTypeVersionResponse {
         List<GooglePrivacyDlpV2ErrorResponse> errors,
         String state,
         GooglePrivacyDlpV2StoredInfoTypeStatsResponse stats) {
-        this.config = Objects.requireNonNull(config);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.errors = Objects.requireNonNull(errors);
-        this.state = Objects.requireNonNull(state);
-        this.stats = Objects.requireNonNull(stats);
+        this.config = config;
+        this.createTime = createTime;
+        this.errors = errors;
+        this.state = state;
+        this.stats = stats;
     }
 
     /**

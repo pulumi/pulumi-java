@@ -36,10 +36,10 @@ public final class AS2AcknowledgementConnectionSettingsResponse {
         Boolean keepHttpConnectionAlive,
         Boolean supportHttpStatusCodeContinue,
         Boolean unfoldHttpHeaders) {
-        this.ignoreCertificateNameMismatch = Objects.requireNonNull(ignoreCertificateNameMismatch);
-        this.keepHttpConnectionAlive = Objects.requireNonNull(keepHttpConnectionAlive);
-        this.supportHttpStatusCodeContinue = Objects.requireNonNull(supportHttpStatusCodeContinue);
-        this.unfoldHttpHeaders = Objects.requireNonNull(unfoldHttpHeaders);
+        this.ignoreCertificateNameMismatch = ignoreCertificateNameMismatch;
+        this.keepHttpConnectionAlive = keepHttpConnectionAlive;
+        this.supportHttpStatusCodeContinue = supportHttpStatusCodeContinue;
+        this.unfoldHttpHeaders = unfoldHttpHeaders;
     }
 
     /**

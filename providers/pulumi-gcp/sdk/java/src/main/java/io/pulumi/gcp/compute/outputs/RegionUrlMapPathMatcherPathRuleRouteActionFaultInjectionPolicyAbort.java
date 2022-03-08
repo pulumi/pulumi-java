@@ -28,8 +28,8 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolic
     private RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort(
         Integer httpStatus,
         Double percentage) {
-        this.httpStatus = Objects.requireNonNull(httpStatus);
-        this.percentage = Objects.requireNonNull(percentage);
+        this.httpStatus = httpStatus;
+        this.percentage = percentage;
     }
 
     /**

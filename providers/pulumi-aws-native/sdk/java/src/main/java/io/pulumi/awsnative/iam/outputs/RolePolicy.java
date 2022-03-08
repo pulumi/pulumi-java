@@ -24,8 +24,8 @@ public final class RolePolicy {
     private RolePolicy(
         String policyDocument,
         String policyName) {
-        this.policyDocument = Objects.requireNonNull(policyDocument);
-        this.policyName = Objects.requireNonNull(policyName);
+        this.policyDocument = policyDocument;
+        this.policyName = policyName;
     }
 
     /**

@@ -45,11 +45,11 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardResponse {
         GoogleCloudDialogflowV2IntentMessageImageResponse image,
         String subtitle,
         String title) {
-        this.buttons = Objects.requireNonNull(buttons);
-        this.formattedText = Objects.requireNonNull(formattedText);
-        this.image = Objects.requireNonNull(image);
-        this.subtitle = Objects.requireNonNull(subtitle);
-        this.title = Objects.requireNonNull(title);
+        this.buttons = buttons;
+        this.formattedText = formattedText;
+        this.image = image;
+        this.subtitle = subtitle;
+        this.title = title;
     }
 
     /**

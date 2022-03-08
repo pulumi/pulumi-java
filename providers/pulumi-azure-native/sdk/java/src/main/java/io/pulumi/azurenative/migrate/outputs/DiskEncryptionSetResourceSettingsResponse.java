@@ -25,8 +25,8 @@ public final class DiskEncryptionSetResourceSettingsResponse {
     private DiskEncryptionSetResourceSettingsResponse(
         String resourceType,
         String targetResourceName) {
-        this.resourceType = Objects.requireNonNull(resourceType);
-        this.targetResourceName = Objects.requireNonNull(targetResourceName);
+        this.resourceType = resourceType;
+        this.targetResourceName = targetResourceName;
     }
 
     /**

@@ -17,7 +17,7 @@ public final class FeatureResourceStateResponse {
 
     @OutputCustomType.Constructor({"state"})
     private FeatureResourceStateResponse(String state) {
-        this.state = Objects.requireNonNull(state);
+        this.state = state;
     }
 
     /**

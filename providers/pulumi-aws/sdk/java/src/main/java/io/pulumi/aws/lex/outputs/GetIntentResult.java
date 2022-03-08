@@ -72,14 +72,14 @@ public final class GetIntentResult {
         String name,
         String parentIntentSignature,
         @Nullable String version) {
-        this.arn = Objects.requireNonNull(arn);
-        this.checksum = Objects.requireNonNull(checksum);
-        this.createdDate = Objects.requireNonNull(createdDate);
-        this.description = Objects.requireNonNull(description);
-        this.id = Objects.requireNonNull(id);
-        this.lastUpdatedDate = Objects.requireNonNull(lastUpdatedDate);
-        this.name = Objects.requireNonNull(name);
-        this.parentIntentSignature = Objects.requireNonNull(parentIntentSignature);
+        this.arn = arn;
+        this.checksum = checksum;
+        this.createdDate = createdDate;
+        this.description = description;
+        this.id = id;
+        this.lastUpdatedDate = lastUpdatedDate;
+        this.name = name;
+        this.parentIntentSignature = parentIntentSignature;
         this.version = version;
     }
 

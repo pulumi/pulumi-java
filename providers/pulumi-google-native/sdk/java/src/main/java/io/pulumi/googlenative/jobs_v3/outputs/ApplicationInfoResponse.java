@@ -31,9 +31,9 @@ public final class ApplicationInfoResponse {
         List<String> emails,
         String instruction,
         List<String> uris) {
-        this.emails = Objects.requireNonNull(emails);
-        this.instruction = Objects.requireNonNull(instruction);
-        this.uris = Objects.requireNonNull(uris);
+        this.emails = emails;
+        this.instruction = instruction;
+        this.uris = uris;
     }
 
     /**

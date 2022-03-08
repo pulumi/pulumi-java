@@ -23,7 +23,7 @@ public final class TaskDefinitionLogConfiguration {
         String logDriver,
         @Nullable Object options,
         @Nullable List<TaskDefinitionSecret> secretOptions) {
-        this.logDriver = Objects.requireNonNull(logDriver);
+        this.logDriver = logDriver;
         this.options = options;
         this.secretOptions = secretOptions;
     }

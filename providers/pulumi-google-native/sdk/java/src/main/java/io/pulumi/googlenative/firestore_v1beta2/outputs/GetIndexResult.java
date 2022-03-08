@@ -38,10 +38,10 @@ public final class GetIndexResult {
         String name,
         String queryScope,
         String state) {
-        this.fields = Objects.requireNonNull(fields);
-        this.name = Objects.requireNonNull(name);
-        this.queryScope = Objects.requireNonNull(queryScope);
-        this.state = Objects.requireNonNull(state);
+        this.fields = fields;
+        this.name = name;
+        this.queryScope = queryScope;
+        this.state = state;
     }
 
     /**

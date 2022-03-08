@@ -30,9 +30,9 @@ public final class JobExtractSourceModel {
         String datasetId,
         String modelId,
         String projectId) {
-        this.datasetId = Objects.requireNonNull(datasetId);
-        this.modelId = Objects.requireNonNull(modelId);
-        this.projectId = Objects.requireNonNull(projectId);
+        this.datasetId = datasetId;
+        this.modelId = modelId;
+        this.projectId = projectId;
     }
 
     /**

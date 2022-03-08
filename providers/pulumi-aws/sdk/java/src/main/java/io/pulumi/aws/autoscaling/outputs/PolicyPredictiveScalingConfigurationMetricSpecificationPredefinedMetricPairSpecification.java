@@ -24,8 +24,8 @@ public final class PolicyPredictiveScalingConfigurationMetricSpecificationPredef
     private PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedMetricPairSpecification(
         String predefinedMetricType,
         String resourceLabel) {
-        this.predefinedMetricType = Objects.requireNonNull(predefinedMetricType);
-        this.resourceLabel = Objects.requireNonNull(resourceLabel);
+        this.predefinedMetricType = predefinedMetricType;
+        this.resourceLabel = resourceLabel;
     }
 
     /**

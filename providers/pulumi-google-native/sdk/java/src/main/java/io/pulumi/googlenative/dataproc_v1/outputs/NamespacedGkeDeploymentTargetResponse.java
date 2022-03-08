@@ -24,8 +24,8 @@ public final class NamespacedGkeDeploymentTargetResponse {
     private NamespacedGkeDeploymentTargetResponse(
         String clusterNamespace,
         String targetGkeCluster) {
-        this.clusterNamespace = Objects.requireNonNull(clusterNamespace);
-        this.targetGkeCluster = Objects.requireNonNull(targetGkeCluster);
+        this.clusterNamespace = clusterNamespace;
+        this.targetGkeCluster = targetGkeCluster;
     }
 
     /**

@@ -55,13 +55,13 @@ public final class GetRealmResult {
         String name,
         String timeZone,
         String updateTime) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.description = Objects.requireNonNull(description);
-        this.etag = Objects.requireNonNull(etag);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.timeZone = Objects.requireNonNull(timeZone);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.createTime = createTime;
+        this.description = description;
+        this.etag = etag;
+        this.labels = labels;
+        this.name = name;
+        this.timeZone = timeZone;
+        this.updateTime = updateTime;
     }
 
     /**

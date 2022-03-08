@@ -35,8 +35,8 @@ public final class EncryptionPropertyResponse {
         KeyVaultPropertiesResponse keyVaultProperties,
         String status) {
         this.identity = identity;
-        this.keyVaultProperties = Objects.requireNonNull(keyVaultProperties);
-        this.status = Objects.requireNonNull(status);
+        this.keyVaultProperties = keyVaultProperties;
+        this.status = status;
     }
 
     /**

@@ -13,7 +13,7 @@ public final class MonitoringScheduleMonitoringResources {
 
     @OutputCustomType.Constructor({"clusterConfig"})
     private MonitoringScheduleMonitoringResources(MonitoringScheduleClusterConfig clusterConfig) {
-        this.clusterConfig = Objects.requireNonNull(clusterConfig);
+        this.clusterConfig = clusterConfig;
     }
 
     public MonitoringScheduleClusterConfig getClusterConfig() {

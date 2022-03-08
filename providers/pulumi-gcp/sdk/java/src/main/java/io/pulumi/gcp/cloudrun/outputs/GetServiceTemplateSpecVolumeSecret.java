@@ -21,9 +21,9 @@ public final class GetServiceTemplateSpecVolumeSecret {
         Integer defaultMode,
         List<GetServiceTemplateSpecVolumeSecretItem> items,
         String secretName) {
-        this.defaultMode = Objects.requireNonNull(defaultMode);
-        this.items = Objects.requireNonNull(items);
-        this.secretName = Objects.requireNonNull(secretName);
+        this.defaultMode = defaultMode;
+        this.items = items;
+        this.secretName = secretName;
     }
 
     public Integer getDefaultMode() {

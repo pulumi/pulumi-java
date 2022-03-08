@@ -48,7 +48,7 @@ public final class EndpointAuthenticationOption {
         this.rootCertificateChainArn = rootCertificateChainArn;
         this.samlProviderArn = samlProviderArn;
         this.selfServiceSamlProviderArn = selfServiceSamlProviderArn;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

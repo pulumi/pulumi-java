@@ -32,9 +32,9 @@ public final class CertificateConfigResponse {
         PublicKeyResponse publicKey,
         SubjectConfigResponse subjectConfig,
         X509ParametersResponse x509Config) {
-        this.publicKey = Objects.requireNonNull(publicKey);
-        this.subjectConfig = Objects.requireNonNull(subjectConfig);
-        this.x509Config = Objects.requireNonNull(x509Config);
+        this.publicKey = publicKey;
+        this.subjectConfig = subjectConfig;
+        this.x509Config = x509Config;
     }
 
     /**

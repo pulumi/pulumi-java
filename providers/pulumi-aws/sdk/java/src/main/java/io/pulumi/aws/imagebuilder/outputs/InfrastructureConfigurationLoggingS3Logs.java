@@ -26,7 +26,7 @@ public final class InfrastructureConfigurationLoggingS3Logs {
     private InfrastructureConfigurationLoggingS3Logs(
         String s3BucketName,
         @Nullable String s3KeyPrefix) {
-        this.s3BucketName = Objects.requireNonNull(s3BucketName);
+        this.s3BucketName = s3BucketName;
         this.s3KeyPrefix = s3KeyPrefix;
     }
 

@@ -49,7 +49,7 @@ public final class AzureSqlContainerResponse {
         @Nullable String healthStatus,
         @Nullable String registrationStatus) {
         this.backupManagementType = backupManagementType;
-        this.containerType = Objects.requireNonNull(containerType);
+        this.containerType = containerType;
         this.friendlyName = friendlyName;
         this.healthStatus = healthStatus;
         this.registrationStatus = registrationStatus;

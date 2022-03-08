@@ -65,16 +65,16 @@ public final class GetNetworkEndpointGroupResult {
         Integer size,
         String subnetwork,
         @Nullable String zone) {
-        this.defaultPort = Objects.requireNonNull(defaultPort);
-        this.description = Objects.requireNonNull(description);
-        this.id = Objects.requireNonNull(id);
+        this.defaultPort = defaultPort;
+        this.description = description;
+        this.id = id;
         this.name = name;
-        this.network = Objects.requireNonNull(network);
-        this.networkEndpointType = Objects.requireNonNull(networkEndpointType);
+        this.network = network;
+        this.networkEndpointType = networkEndpointType;
         this.project = project;
         this.selfLink = selfLink;
-        this.size = Objects.requireNonNull(size);
-        this.subnetwork = Objects.requireNonNull(subnetwork);
+        this.size = size;
+        this.subnetwork = subnetwork;
         this.zone = zone;
     }
 

@@ -33,8 +33,8 @@ public final class BotAliasS3BucketLogDestination {
         String logPrefix,
         String s3BucketArn) {
         this.kmsKeyArn = kmsKeyArn;
-        this.logPrefix = Objects.requireNonNull(logPrefix);
-        this.s3BucketArn = Objects.requireNonNull(s3BucketArn);
+        this.logPrefix = logPrefix;
+        this.s3BucketArn = s3BucketArn;
     }
 
     /**

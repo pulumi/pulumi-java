@@ -58,10 +58,10 @@ public final class ServiceEndpointPolicyDefinitionResponse {
         @Nullable String service,
         @Nullable List<String> serviceResources) {
         this.description = description;
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.id = id;
         this.name = name;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.service = service;
         this.serviceResources = serviceResources;
     }

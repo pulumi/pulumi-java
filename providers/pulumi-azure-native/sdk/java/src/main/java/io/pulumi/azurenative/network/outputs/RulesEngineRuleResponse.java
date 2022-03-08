@@ -48,11 +48,11 @@ public final class RulesEngineRuleResponse {
         @Nullable String matchProcessingBehavior,
         String name,
         Integer priority) {
-        this.action = Objects.requireNonNull(action);
+        this.action = action;
         this.matchConditions = matchConditions;
         this.matchProcessingBehavior = matchProcessingBehavior;
-        this.name = Objects.requireNonNull(name);
-        this.priority = Objects.requireNonNull(priority);
+        this.name = name;
+        this.priority = priority;
     }
 
     /**

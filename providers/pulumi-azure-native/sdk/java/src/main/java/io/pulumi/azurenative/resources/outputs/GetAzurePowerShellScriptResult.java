@@ -163,28 +163,28 @@ public final class GetAzurePowerShellScriptResult {
         @Nullable String timeout,
         String type) {
         this.arguments = arguments;
-        this.azPowerShellVersion = Objects.requireNonNull(azPowerShellVersion);
+        this.azPowerShellVersion = azPowerShellVersion;
         this.cleanupPreference = cleanupPreference;
         this.containerSettings = containerSettings;
         this.environmentVariables = environmentVariables;
         this.forceUpdateTag = forceUpdateTag;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.identity = identity;
-        this.kind = Objects.requireNonNull(kind);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.outputs = Objects.requireNonNull(outputs);
+        this.kind = kind;
+        this.location = location;
+        this.name = name;
+        this.outputs = outputs;
         this.primaryScriptUri = primaryScriptUri;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.retentionInterval = Objects.requireNonNull(retentionInterval);
+        this.provisioningState = provisioningState;
+        this.retentionInterval = retentionInterval;
         this.scriptContent = scriptContent;
-        this.status = Objects.requireNonNull(status);
+        this.status = status;
         this.storageAccountSettings = storageAccountSettings;
         this.supportingScriptUris = supportingScriptUris;
-        this.systemData = Objects.requireNonNull(systemData);
+        this.systemData = systemData;
         this.tags = tags;
         this.timeout = timeout;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

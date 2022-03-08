@@ -24,8 +24,8 @@ public final class JobSchedulingResponse {
     private JobSchedulingResponse(
         Integer maxFailuresPerHour,
         Integer maxFailuresTotal) {
-        this.maxFailuresPerHour = Objects.requireNonNull(maxFailuresPerHour);
-        this.maxFailuresTotal = Objects.requireNonNull(maxFailuresTotal);
+        this.maxFailuresPerHour = maxFailuresPerHour;
+        this.maxFailuresTotal = maxFailuresTotal;
     }
 
     /**

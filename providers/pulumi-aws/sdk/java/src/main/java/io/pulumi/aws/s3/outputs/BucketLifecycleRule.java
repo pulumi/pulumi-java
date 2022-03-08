@@ -77,7 +77,7 @@ public final class BucketLifecycleRule {
         @Nullable Map<String,String> tags,
         @Nullable List<BucketLifecycleRuleTransition> transitions) {
         this.abortIncompleteMultipartUploadDays = abortIncompleteMultipartUploadDays;
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
         this.expiration = expiration;
         this.id = id;
         this.noncurrentVersionExpiration = noncurrentVersionExpiration;

@@ -36,7 +36,7 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsOutputConfig 
         @Nullable String outputSchema,
         PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTable table) {
         this.outputSchema = outputSchema;
-        this.table = Objects.requireNonNull(table);
+        this.table = table;
     }
 
     /**

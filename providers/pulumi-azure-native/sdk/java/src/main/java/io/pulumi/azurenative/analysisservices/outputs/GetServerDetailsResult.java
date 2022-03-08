@@ -119,19 +119,19 @@ public final class GetServerDetailsResult {
         this.asAdministrators = asAdministrators;
         this.backupBlobContainerUri = backupBlobContainerUri;
         this.gatewayDetails = gatewayDetails;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.ipV4FirewallSettings = ipV4FirewallSettings;
-        this.location = Objects.requireNonNull(location);
+        this.location = location;
         this.managedMode = managedMode;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.querypoolConnectionMode = querypoolConnectionMode;
-        this.serverFullName = Objects.requireNonNull(serverFullName);
+        this.serverFullName = serverFullName;
         this.serverMonitorMode = serverMonitorMode;
-        this.sku = Objects.requireNonNull(sku);
-        this.state = Objects.requireNonNull(state);
+        this.sku = sku;
+        this.state = state;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

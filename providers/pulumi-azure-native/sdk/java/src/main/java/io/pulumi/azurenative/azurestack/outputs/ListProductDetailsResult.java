@@ -82,17 +82,17 @@ public final class ListProductDetailsResult {
         String version,
         String vmOsType,
         Boolean vmScaleSetEnabled) {
-        this.computeRole = Objects.requireNonNull(computeRole);
-        this.dataDiskImages = Objects.requireNonNull(dataDiskImages);
-        this.galleryPackageBlobSasUri = Objects.requireNonNull(galleryPackageBlobSasUri);
-        this.isSystemExtension = Objects.requireNonNull(isSystemExtension);
-        this.osDiskImage = Objects.requireNonNull(osDiskImage);
-        this.productKind = Objects.requireNonNull(productKind);
-        this.supportMultipleExtensions = Objects.requireNonNull(supportMultipleExtensions);
-        this.uri = Objects.requireNonNull(uri);
-        this.version = Objects.requireNonNull(version);
-        this.vmOsType = Objects.requireNonNull(vmOsType);
-        this.vmScaleSetEnabled = Objects.requireNonNull(vmScaleSetEnabled);
+        this.computeRole = computeRole;
+        this.dataDiskImages = dataDiskImages;
+        this.galleryPackageBlobSasUri = galleryPackageBlobSasUri;
+        this.isSystemExtension = isSystemExtension;
+        this.osDiskImage = osDiskImage;
+        this.productKind = productKind;
+        this.supportMultipleExtensions = supportMultipleExtensions;
+        this.uri = uri;
+        this.version = version;
+        this.vmOsType = vmOsType;
+        this.vmScaleSetEnabled = vmScaleSetEnabled;
     }
 
     /**

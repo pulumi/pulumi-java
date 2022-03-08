@@ -51,10 +51,10 @@ public final class GetActionResult {
         String type,
         @Nullable String workflowId) {
         this.etag = etag;
-        this.id = Objects.requireNonNull(id);
-        this.logicAppResourceId = Objects.requireNonNull(logicAppResourceId);
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.id = id;
+        this.logicAppResourceId = logicAppResourceId;
+        this.name = name;
+        this.type = type;
         this.workflowId = workflowId;
     }
 

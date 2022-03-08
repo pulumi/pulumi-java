@@ -21,7 +21,7 @@ public final class ScheduledQueryS3Configuration {
         String bucketName,
         @Nullable ScheduledQueryEncryptionOption encryptionOption,
         @Nullable String objectKeyPrefix) {
-        this.bucketName = Objects.requireNonNull(bucketName);
+        this.bucketName = bucketName;
         this.encryptionOption = encryptionOption;
         this.objectKeyPrefix = objectKeyPrefix;
     }

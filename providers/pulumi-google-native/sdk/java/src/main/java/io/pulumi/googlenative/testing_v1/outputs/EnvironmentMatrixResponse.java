@@ -32,9 +32,9 @@ public final class EnvironmentMatrixResponse {
         AndroidDeviceListResponse androidDeviceList,
         AndroidMatrixResponse androidMatrix,
         IosDeviceListResponse iosDeviceList) {
-        this.androidDeviceList = Objects.requireNonNull(androidDeviceList);
-        this.androidMatrix = Objects.requireNonNull(androidMatrix);
-        this.iosDeviceList = Objects.requireNonNull(iosDeviceList);
+        this.androidDeviceList = androidDeviceList;
+        this.androidMatrix = androidMatrix;
+        this.iosDeviceList = iosDeviceList;
     }
 
     /**

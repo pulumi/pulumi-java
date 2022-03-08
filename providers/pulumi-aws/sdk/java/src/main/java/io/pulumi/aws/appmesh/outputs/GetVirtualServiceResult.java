@@ -64,15 +64,15 @@ public final class GetVirtualServiceResult {
         String resourceOwner,
         List<GetVirtualServiceSpec> specs,
         @Nullable Map<String,String> tags) {
-        this.arn = Objects.requireNonNull(arn);
-        this.createdDate = Objects.requireNonNull(createdDate);
-        this.id = Objects.requireNonNull(id);
-        this.lastUpdatedDate = Objects.requireNonNull(lastUpdatedDate);
-        this.meshName = Objects.requireNonNull(meshName);
-        this.meshOwner = Objects.requireNonNull(meshOwner);
-        this.name = Objects.requireNonNull(name);
-        this.resourceOwner = Objects.requireNonNull(resourceOwner);
-        this.specs = Objects.requireNonNull(specs);
+        this.arn = arn;
+        this.createdDate = createdDate;
+        this.id = id;
+        this.lastUpdatedDate = lastUpdatedDate;
+        this.meshName = meshName;
+        this.meshOwner = meshOwner;
+        this.name = name;
+        this.resourceOwner = resourceOwner;
+        this.specs = specs;
         this.tags = tags;
     }
 

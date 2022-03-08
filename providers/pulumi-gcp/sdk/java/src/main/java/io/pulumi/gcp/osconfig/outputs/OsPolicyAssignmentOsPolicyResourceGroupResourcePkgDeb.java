@@ -28,7 +28,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDeb {
         @Nullable Boolean pullDeps,
         OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSource source) {
         this.pullDeps = pullDeps;
-        this.source = Objects.requireNonNull(source);
+        this.source = source;
     }
 
     /**

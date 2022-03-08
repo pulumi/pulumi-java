@@ -32,8 +32,8 @@ public final class BotFulfillmentStartResponseSpecification {
         Integer delayInSeconds,
         List<BotMessageGroup> messageGroups) {
         this.allowInterrupt = allowInterrupt;
-        this.delayInSeconds = Objects.requireNonNull(delayInSeconds);
-        this.messageGroups = Objects.requireNonNull(messageGroups);
+        this.delayInSeconds = delayInSeconds;
+        this.messageGroups = messageGroups;
     }
 
     /**

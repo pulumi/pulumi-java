@@ -25,8 +25,8 @@ public final class GoogleCloudApigeeV1ConnectorsPlatformConfigResponse {
     private GoogleCloudApigeeV1ConnectorsPlatformConfigResponse(
         Boolean enabled,
         String expiresAt) {
-        this.enabled = Objects.requireNonNull(enabled);
-        this.expiresAt = Objects.requireNonNull(expiresAt);
+        this.enabled = enabled;
+        this.expiresAt = expiresAt;
     }
 
     /**

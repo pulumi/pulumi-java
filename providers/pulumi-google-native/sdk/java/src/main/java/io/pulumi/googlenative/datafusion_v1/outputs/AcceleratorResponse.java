@@ -24,8 +24,8 @@ public final class AcceleratorResponse {
     private AcceleratorResponse(
         String acceleratorType,
         String state) {
-        this.acceleratorType = Objects.requireNonNull(acceleratorType);
-        this.state = Objects.requireNonNull(state);
+        this.acceleratorType = acceleratorType;
+        this.state = state;
     }
 
     /**

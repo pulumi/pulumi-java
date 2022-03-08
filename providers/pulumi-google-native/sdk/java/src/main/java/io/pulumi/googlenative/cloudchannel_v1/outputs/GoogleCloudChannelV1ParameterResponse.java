@@ -32,9 +32,9 @@ public final class GoogleCloudChannelV1ParameterResponse {
         Boolean editable,
         String name,
         GoogleCloudChannelV1ValueResponse value) {
-        this.editable = Objects.requireNonNull(editable);
-        this.name = Objects.requireNonNull(name);
-        this.value = Objects.requireNonNull(value);
+        this.editable = editable;
+        this.name = name;
+        this.value = value;
     }
 
     /**

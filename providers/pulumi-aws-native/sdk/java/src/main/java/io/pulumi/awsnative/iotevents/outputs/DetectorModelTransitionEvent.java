@@ -40,9 +40,9 @@ public final class DetectorModelTransitionEvent {
         String eventName,
         String nextState) {
         this.actions = actions;
-        this.condition = Objects.requireNonNull(condition);
-        this.eventName = Objects.requireNonNull(eventName);
-        this.nextState = Objects.requireNonNull(nextState);
+        this.condition = condition;
+        this.eventName = eventName;
+        this.nextState = nextState;
     }
 
     /**

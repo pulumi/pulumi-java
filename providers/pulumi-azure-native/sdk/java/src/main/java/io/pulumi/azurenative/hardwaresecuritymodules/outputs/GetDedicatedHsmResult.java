@@ -84,16 +84,16 @@ public final class GetDedicatedHsmResult {
         @Nullable Map<String,String> tags,
         String type,
         @Nullable List<String> zones) {
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.location = location;
+        this.name = name;
         this.networkProfile = networkProfile;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.sku = Objects.requireNonNull(sku);
+        this.provisioningState = provisioningState;
+        this.sku = sku;
         this.stampId = stampId;
-        this.statusMessage = Objects.requireNonNull(statusMessage);
+        this.statusMessage = statusMessage;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.zones = zones;
     }
 

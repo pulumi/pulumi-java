@@ -55,7 +55,7 @@ public final class HTTPGetAction {
         this.host = host;
         this.httpHeaders = httpHeaders;
         this.path = path;
-        this.port = Objects.requireNonNull(port);
+        this.port = port;
         this.scheme = scheme;
     }
 

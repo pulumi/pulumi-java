@@ -25,8 +25,8 @@ public final class V2ApiTargetResponse {
     private V2ApiTargetResponse(
         List<String> methods,
         String service) {
-        this.methods = Objects.requireNonNull(methods);
-        this.service = Objects.requireNonNull(service);
+        this.methods = methods;
+        this.service = service;
     }
 
     /**

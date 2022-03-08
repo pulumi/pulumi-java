@@ -17,7 +17,7 @@ public final class TransportResponse {
 
     @OutputCustomType.Constructor({"pubsub"})
     private TransportResponse(PubsubResponse pubsub) {
-        this.pubsub = Objects.requireNonNull(pubsub);
+        this.pubsub = pubsub;
     }
 
     /**

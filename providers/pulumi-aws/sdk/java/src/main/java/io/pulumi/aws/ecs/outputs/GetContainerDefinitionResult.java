@@ -73,17 +73,17 @@ public final class GetContainerDefinitionResult {
         Integer memory,
         Integer memoryReservation,
         String taskDefinition) {
-        this.containerName = Objects.requireNonNull(containerName);
-        this.cpu = Objects.requireNonNull(cpu);
-        this.disableNetworking = Objects.requireNonNull(disableNetworking);
-        this.dockerLabels = Objects.requireNonNull(dockerLabels);
-        this.environment = Objects.requireNonNull(environment);
-        this.id = Objects.requireNonNull(id);
-        this.image = Objects.requireNonNull(image);
-        this.imageDigest = Objects.requireNonNull(imageDigest);
-        this.memory = Objects.requireNonNull(memory);
-        this.memoryReservation = Objects.requireNonNull(memoryReservation);
-        this.taskDefinition = Objects.requireNonNull(taskDefinition);
+        this.containerName = containerName;
+        this.cpu = cpu;
+        this.disableNetworking = disableNetworking;
+        this.dockerLabels = dockerLabels;
+        this.environment = environment;
+        this.id = id;
+        this.image = image;
+        this.imageDigest = imageDigest;
+        this.memory = memory;
+        this.memoryReservation = memoryReservation;
+        this.taskDefinition = taskDefinition;
     }
 
     public String getContainerName() {

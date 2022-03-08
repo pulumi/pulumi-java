@@ -38,10 +38,10 @@ public final class GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleResponse {
         List<String> monitoringNotificationChannels,
         String pubsubTopic,
         String schemaVersion) {
-        this.disableDefaultIamRecipients = Objects.requireNonNull(disableDefaultIamRecipients);
-        this.monitoringNotificationChannels = Objects.requireNonNull(monitoringNotificationChannels);
-        this.pubsubTopic = Objects.requireNonNull(pubsubTopic);
-        this.schemaVersion = Objects.requireNonNull(schemaVersion);
+        this.disableDefaultIamRecipients = disableDefaultIamRecipients;
+        this.monitoringNotificationChannels = monitoringNotificationChannels;
+        this.pubsubTopic = pubsubTopic;
+        this.schemaVersion = schemaVersion;
     }
 
     /**

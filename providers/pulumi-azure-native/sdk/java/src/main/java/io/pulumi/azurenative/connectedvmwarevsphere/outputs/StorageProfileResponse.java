@@ -28,7 +28,7 @@ public final class StorageProfileResponse {
         @Nullable List<VirtualDiskResponse> disks,
         List<VirtualSCSIControllerResponse> scsiControllers) {
         this.disks = disks;
-        this.scsiControllers = Objects.requireNonNull(scsiControllers);
+        this.scsiControllers = scsiControllers;
     }
 
     /**

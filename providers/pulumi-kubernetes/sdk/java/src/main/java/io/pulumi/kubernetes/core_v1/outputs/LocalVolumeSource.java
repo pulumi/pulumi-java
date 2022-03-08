@@ -27,7 +27,7 @@ public final class LocalVolumeSource {
         @Nullable String fsType,
         String path) {
         this.fsType = fsType;
-        this.path = Objects.requireNonNull(path);
+        this.path = path;
     }
 
     /**

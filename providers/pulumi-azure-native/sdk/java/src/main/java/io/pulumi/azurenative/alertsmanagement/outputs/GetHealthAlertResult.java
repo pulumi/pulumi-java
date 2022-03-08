@@ -85,16 +85,16 @@ public final class GetHealthAlertResult {
         @Nullable Map<String,String> tags,
         String type) {
         this.actions = actions;
-        this.criteria = Objects.requireNonNull(criteria);
-        this.description = Objects.requireNonNull(description);
-        this.enabled = Objects.requireNonNull(enabled);
-        this.id = Objects.requireNonNull(id);
-        this.lastUpdatedTime = Objects.requireNonNull(lastUpdatedTime);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
+        this.criteria = criteria;
+        this.description = description;
+        this.enabled = enabled;
+        this.id = id;
+        this.lastUpdatedTime = lastUpdatedTime;
+        this.location = location;
+        this.name = name;
         this.scopes = scopes;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

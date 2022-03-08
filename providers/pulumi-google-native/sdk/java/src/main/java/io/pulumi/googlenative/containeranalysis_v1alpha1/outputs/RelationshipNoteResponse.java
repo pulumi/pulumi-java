@@ -17,7 +17,7 @@ public final class RelationshipNoteResponse {
 
     @OutputCustomType.Constructor({"type"})
     private RelationshipNoteResponse(String type) {
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

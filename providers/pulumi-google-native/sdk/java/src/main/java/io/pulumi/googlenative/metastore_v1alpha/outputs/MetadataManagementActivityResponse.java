@@ -26,8 +26,8 @@ public final class MetadataManagementActivityResponse {
     private MetadataManagementActivityResponse(
         List<MetadataExportResponse> metadataExports,
         List<RestoreResponse> restores) {
-        this.metadataExports = Objects.requireNonNull(metadataExports);
-        this.restores = Objects.requireNonNull(restores);
+        this.metadataExports = metadataExports;
+        this.restores = restores;
     }
 
     /**

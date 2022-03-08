@@ -36,10 +36,10 @@ public final class GKEMasterInfoResponse {
         String clusterUri,
         String externalIp,
         String internalIp) {
-        this.clusterNetworkUri = Objects.requireNonNull(clusterNetworkUri);
-        this.clusterUri = Objects.requireNonNull(clusterUri);
-        this.externalIp = Objects.requireNonNull(externalIp);
-        this.internalIp = Objects.requireNonNull(internalIp);
+        this.clusterNetworkUri = clusterNetworkUri;
+        this.clusterUri = clusterUri;
+        this.externalIp = externalIp;
+        this.internalIp = internalIp;
     }
 
     /**

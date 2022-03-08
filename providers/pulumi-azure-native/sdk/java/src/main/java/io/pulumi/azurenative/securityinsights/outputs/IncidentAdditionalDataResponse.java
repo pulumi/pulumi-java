@@ -44,11 +44,11 @@ public final class IncidentAdditionalDataResponse {
         Integer bookmarksCount,
         Integer commentsCount,
         List<String> tactics) {
-        this.alertProductNames = Objects.requireNonNull(alertProductNames);
-        this.alertsCount = Objects.requireNonNull(alertsCount);
-        this.bookmarksCount = Objects.requireNonNull(bookmarksCount);
-        this.commentsCount = Objects.requireNonNull(commentsCount);
-        this.tactics = Objects.requireNonNull(tactics);
+        this.alertProductNames = alertProductNames;
+        this.alertsCount = alertsCount;
+        this.bookmarksCount = bookmarksCount;
+        this.commentsCount = commentsCount;
+        this.tactics = tactics;
     }
 
     /**

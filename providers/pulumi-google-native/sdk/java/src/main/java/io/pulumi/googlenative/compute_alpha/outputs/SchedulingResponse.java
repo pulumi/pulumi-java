@@ -119,23 +119,23 @@ public final class SchedulingResponse {
         Boolean preemptible,
         String provisioningModel,
         String terminationTime) {
-        this.automaticRestart = Objects.requireNonNull(automaticRestart);
-        this.availabilityDomain = Objects.requireNonNull(availabilityDomain);
-        this.currentCpus = Objects.requireNonNull(currentCpus);
-        this.currentMemoryMb = Objects.requireNonNull(currentMemoryMb);
-        this.hostErrorTimeoutSeconds = Objects.requireNonNull(hostErrorTimeoutSeconds);
-        this.instanceTerminationAction = Objects.requireNonNull(instanceTerminationAction);
-        this.latencyTolerant = Objects.requireNonNull(latencyTolerant);
-        this.locationHint = Objects.requireNonNull(locationHint);
-        this.maintenanceFreezeDurationHours = Objects.requireNonNull(maintenanceFreezeDurationHours);
-        this.maintenanceInterval = Objects.requireNonNull(maintenanceInterval);
-        this.maxRunDuration = Objects.requireNonNull(maxRunDuration);
-        this.minNodeCpus = Objects.requireNonNull(minNodeCpus);
-        this.nodeAffinities = Objects.requireNonNull(nodeAffinities);
-        this.onHostMaintenance = Objects.requireNonNull(onHostMaintenance);
-        this.preemptible = Objects.requireNonNull(preemptible);
-        this.provisioningModel = Objects.requireNonNull(provisioningModel);
-        this.terminationTime = Objects.requireNonNull(terminationTime);
+        this.automaticRestart = automaticRestart;
+        this.availabilityDomain = availabilityDomain;
+        this.currentCpus = currentCpus;
+        this.currentMemoryMb = currentMemoryMb;
+        this.hostErrorTimeoutSeconds = hostErrorTimeoutSeconds;
+        this.instanceTerminationAction = instanceTerminationAction;
+        this.latencyTolerant = latencyTolerant;
+        this.locationHint = locationHint;
+        this.maintenanceFreezeDurationHours = maintenanceFreezeDurationHours;
+        this.maintenanceInterval = maintenanceInterval;
+        this.maxRunDuration = maxRunDuration;
+        this.minNodeCpus = minNodeCpus;
+        this.nodeAffinities = nodeAffinities;
+        this.onHostMaintenance = onHostMaintenance;
+        this.preemptible = preemptible;
+        this.provisioningModel = provisioningModel;
+        this.terminationTime = terminationTime;
     }
 
     /**

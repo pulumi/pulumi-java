@@ -30,9 +30,9 @@ public final class ErrorHandlerResponse {
         String errorCode,
         String mimeType,
         String staticFile) {
-        this.errorCode = Objects.requireNonNull(errorCode);
-        this.mimeType = Objects.requireNonNull(mimeType);
-        this.staticFile = Objects.requireNonNull(staticFile);
+        this.errorCode = errorCode;
+        this.mimeType = mimeType;
+        this.staticFile = staticFile;
     }
 
     /**

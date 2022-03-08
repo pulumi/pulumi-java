@@ -24,8 +24,8 @@ public final class FeatureSettingsResponse {
     private FeatureSettingsResponse(
         Boolean splitHealthChecks,
         Boolean useContainerOptimizedOs) {
-        this.splitHealthChecks = Objects.requireNonNull(splitHealthChecks);
-        this.useContainerOptimizedOs = Objects.requireNonNull(useContainerOptimizedOs);
+        this.splitHealthChecks = splitHealthChecks;
+        this.useContainerOptimizedOs = useContainerOptimizedOs;
     }
 
     /**

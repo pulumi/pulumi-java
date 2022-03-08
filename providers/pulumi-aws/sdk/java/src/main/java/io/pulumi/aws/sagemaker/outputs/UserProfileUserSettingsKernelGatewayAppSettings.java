@@ -35,7 +35,7 @@ public final class UserProfileUserSettingsKernelGatewayAppSettings {
         UserProfileUserSettingsKernelGatewayAppSettingsDefaultResourceSpec defaultResourceSpec,
         @Nullable List<String> lifecycleConfigArns) {
         this.customImages = customImages;
-        this.defaultResourceSpec = Objects.requireNonNull(defaultResourceSpec);
+        this.defaultResourceSpec = defaultResourceSpec;
         this.lifecycleConfigArns = lifecycleConfigArns;
     }
 

@@ -32,7 +32,7 @@ public final class RuleGroupCustomResponse {
         Integer responseCode,
         @Nullable List<RuleGroupCustomHTTPHeader> responseHeaders) {
         this.customResponseBodyKey = customResponseBodyKey;
-        this.responseCode = Objects.requireNonNull(responseCode);
+        this.responseCode = responseCode;
         this.responseHeaders = responseHeaders;
     }
 

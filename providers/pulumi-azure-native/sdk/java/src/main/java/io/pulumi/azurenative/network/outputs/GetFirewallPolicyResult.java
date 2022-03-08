@@ -146,25 +146,25 @@ public final class GetFirewallPolicyResult {
         @Nullable FirewallPolicyTransportSecurityResponse transportSecurity,
         String type) {
         this.basePolicy = basePolicy;
-        this.childPolicies = Objects.requireNonNull(childPolicies);
+        this.childPolicies = childPolicies;
         this.dnsSettings = dnsSettings;
-        this.etag = Objects.requireNonNull(etag);
-        this.firewalls = Objects.requireNonNull(firewalls);
+        this.etag = etag;
+        this.firewalls = firewalls;
         this.id = id;
         this.identity = identity;
         this.insights = insights;
         this.intrusionDetection = intrusionDetection;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.ruleCollectionGroups = Objects.requireNonNull(ruleCollectionGroups);
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.ruleCollectionGroups = ruleCollectionGroups;
         this.sku = sku;
         this.snat = snat;
         this.tags = tags;
         this.threatIntelMode = threatIntelMode;
         this.threatIntelWhitelist = threatIntelWhitelist;
         this.transportSecurity = transportSecurity;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

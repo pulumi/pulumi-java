@@ -68,12 +68,12 @@ public final class GetAvailabilityGroupListenerResult {
         String type) {
         this.availabilityGroupName = availabilityGroupName;
         this.createDefaultAvailabilityGroupIfNotExist = createDefaultAvailabilityGroupIfNotExist;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.loadBalancerConfigurations = loadBalancerConfigurations;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.port = port;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.type = Objects.requireNonNull(type);
+        this.provisioningState = provisioningState;
+        this.type = type;
     }
 
     /**

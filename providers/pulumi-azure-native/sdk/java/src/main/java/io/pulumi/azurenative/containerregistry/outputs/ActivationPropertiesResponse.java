@@ -17,7 +17,7 @@ public final class ActivationPropertiesResponse {
 
     @OutputCustomType.Constructor({"status"})
     private ActivationPropertiesResponse(String status) {
-        this.status = Objects.requireNonNull(status);
+        this.status = status;
     }
 
     /**

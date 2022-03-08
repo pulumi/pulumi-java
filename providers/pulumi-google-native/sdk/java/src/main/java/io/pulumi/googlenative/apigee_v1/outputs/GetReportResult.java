@@ -147,28 +147,28 @@ public final class GetReportResult {
         String timeUnit,
         String toTime,
         String topk) {
-        this.chartType = Objects.requireNonNull(chartType);
-        this.comments = Objects.requireNonNull(comments);
-        this.createdAt = Objects.requireNonNull(createdAt);
-        this.dimensions = Objects.requireNonNull(dimensions);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.environment = Objects.requireNonNull(environment);
-        this.filter = Objects.requireNonNull(filter);
-        this.fromTime = Objects.requireNonNull(fromTime);
-        this.lastModifiedAt = Objects.requireNonNull(lastModifiedAt);
-        this.lastViewedAt = Objects.requireNonNull(lastViewedAt);
-        this.limit = Objects.requireNonNull(limit);
-        this.metrics = Objects.requireNonNull(metrics);
-        this.name = Objects.requireNonNull(name);
-        this.offset = Objects.requireNonNull(offset);
-        this.organization = Objects.requireNonNull(organization);
-        this.properties = Objects.requireNonNull(properties);
-        this.sortByCols = Objects.requireNonNull(sortByCols);
-        this.sortOrder = Objects.requireNonNull(sortOrder);
-        this.tags = Objects.requireNonNull(tags);
-        this.timeUnit = Objects.requireNonNull(timeUnit);
-        this.toTime = Objects.requireNonNull(toTime);
-        this.topk = Objects.requireNonNull(topk);
+        this.chartType = chartType;
+        this.comments = comments;
+        this.createdAt = createdAt;
+        this.dimensions = dimensions;
+        this.displayName = displayName;
+        this.environment = environment;
+        this.filter = filter;
+        this.fromTime = fromTime;
+        this.lastModifiedAt = lastModifiedAt;
+        this.lastViewedAt = lastViewedAt;
+        this.limit = limit;
+        this.metrics = metrics;
+        this.name = name;
+        this.offset = offset;
+        this.organization = organization;
+        this.properties = properties;
+        this.sortByCols = sortByCols;
+        this.sortOrder = sortOrder;
+        this.tags = tags;
+        this.timeUnit = timeUnit;
+        this.toTime = toTime;
+        this.topk = topk;
     }
 
     /**

@@ -25,8 +25,8 @@ public final class ServerEndpointRecallErrorResponse {
     private ServerEndpointRecallErrorResponse(
         Double count,
         Integer errorCode) {
-        this.count = Objects.requireNonNull(count);
-        this.errorCode = Objects.requireNonNull(errorCode);
+        this.count = count;
+        this.errorCode = errorCode;
     }
 
     /**

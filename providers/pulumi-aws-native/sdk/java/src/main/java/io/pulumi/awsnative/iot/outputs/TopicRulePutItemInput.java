@@ -13,7 +13,7 @@ public final class TopicRulePutItemInput {
 
     @OutputCustomType.Constructor({"tableName"})
     private TopicRulePutItemInput(String tableName) {
-        this.tableName = Objects.requireNonNull(tableName);
+        this.tableName = tableName;
     }
 
     public String getTableName() {

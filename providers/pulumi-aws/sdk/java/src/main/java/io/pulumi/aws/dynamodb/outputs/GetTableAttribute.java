@@ -20,8 +20,8 @@ public final class GetTableAttribute {
     private GetTableAttribute(
         String name,
         String type) {
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.name = name;
+        this.type = type;
     }
 
     /**

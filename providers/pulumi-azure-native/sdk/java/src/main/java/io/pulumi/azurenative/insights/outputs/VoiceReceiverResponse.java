@@ -30,9 +30,9 @@ public final class VoiceReceiverResponse {
         String countryCode,
         String name,
         String phoneNumber) {
-        this.countryCode = Objects.requireNonNull(countryCode);
-        this.name = Objects.requireNonNull(name);
-        this.phoneNumber = Objects.requireNonNull(phoneNumber);
+        this.countryCode = countryCode;
+        this.name = name;
+        this.phoneNumber = phoneNumber;
     }
 
     /**

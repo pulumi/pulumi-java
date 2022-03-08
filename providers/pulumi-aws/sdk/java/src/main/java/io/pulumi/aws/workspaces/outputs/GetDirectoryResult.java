@@ -110,22 +110,22 @@ public final class GetDirectoryResult {
         List<GetDirectoryWorkspaceAccessProperty> workspaceAccessProperties,
         List<GetDirectoryWorkspaceCreationProperty> workspaceCreationProperties,
         String workspaceSecurityGroupId) {
-        this.alias = Objects.requireNonNull(alias);
-        this.customerUserName = Objects.requireNonNull(customerUserName);
-        this.directoryId = Objects.requireNonNull(directoryId);
-        this.directoryName = Objects.requireNonNull(directoryName);
-        this.directoryType = Objects.requireNonNull(directoryType);
-        this.dnsIpAddresses = Objects.requireNonNull(dnsIpAddresses);
-        this.iamRoleId = Objects.requireNonNull(iamRoleId);
-        this.id = Objects.requireNonNull(id);
-        this.ipGroupIds = Objects.requireNonNull(ipGroupIds);
-        this.registrationCode = Objects.requireNonNull(registrationCode);
-        this.selfServicePermissions = Objects.requireNonNull(selfServicePermissions);
-        this.subnetIds = Objects.requireNonNull(subnetIds);
+        this.alias = alias;
+        this.customerUserName = customerUserName;
+        this.directoryId = directoryId;
+        this.directoryName = directoryName;
+        this.directoryType = directoryType;
+        this.dnsIpAddresses = dnsIpAddresses;
+        this.iamRoleId = iamRoleId;
+        this.id = id;
+        this.ipGroupIds = ipGroupIds;
+        this.registrationCode = registrationCode;
+        this.selfServicePermissions = selfServicePermissions;
+        this.subnetIds = subnetIds;
         this.tags = tags;
-        this.workspaceAccessProperties = Objects.requireNonNull(workspaceAccessProperties);
-        this.workspaceCreationProperties = Objects.requireNonNull(workspaceCreationProperties);
-        this.workspaceSecurityGroupId = Objects.requireNonNull(workspaceSecurityGroupId);
+        this.workspaceAccessProperties = workspaceAccessProperties;
+        this.workspaceCreationProperties = workspaceCreationProperties;
+        this.workspaceSecurityGroupId = workspaceSecurityGroupId;
     }
 
     /**

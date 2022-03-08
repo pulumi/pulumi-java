@@ -189,35 +189,35 @@ public final class ExplainQueryStageResponse {
         String writeMsMax,
         Double writeRatioAvg,
         Double writeRatioMax) {
-        this.completedParallelInputs = Objects.requireNonNull(completedParallelInputs);
-        this.computeMsAvg = Objects.requireNonNull(computeMsAvg);
-        this.computeMsMax = Objects.requireNonNull(computeMsMax);
-        this.computeRatioAvg = Objects.requireNonNull(computeRatioAvg);
-        this.computeRatioMax = Objects.requireNonNull(computeRatioMax);
-        this.endMs = Objects.requireNonNull(endMs);
-        this.inputStages = Objects.requireNonNull(inputStages);
-        this.name = Objects.requireNonNull(name);
-        this.parallelInputs = Objects.requireNonNull(parallelInputs);
-        this.readMsAvg = Objects.requireNonNull(readMsAvg);
-        this.readMsMax = Objects.requireNonNull(readMsMax);
-        this.readRatioAvg = Objects.requireNonNull(readRatioAvg);
-        this.readRatioMax = Objects.requireNonNull(readRatioMax);
-        this.recordsRead = Objects.requireNonNull(recordsRead);
-        this.recordsWritten = Objects.requireNonNull(recordsWritten);
-        this.shuffleOutputBytes = Objects.requireNonNull(shuffleOutputBytes);
-        this.shuffleOutputBytesSpilled = Objects.requireNonNull(shuffleOutputBytesSpilled);
-        this.slotMs = Objects.requireNonNull(slotMs);
-        this.startMs = Objects.requireNonNull(startMs);
-        this.status = Objects.requireNonNull(status);
-        this.steps = Objects.requireNonNull(steps);
-        this.waitMsAvg = Objects.requireNonNull(waitMsAvg);
-        this.waitMsMax = Objects.requireNonNull(waitMsMax);
-        this.waitRatioAvg = Objects.requireNonNull(waitRatioAvg);
-        this.waitRatioMax = Objects.requireNonNull(waitRatioMax);
-        this.writeMsAvg = Objects.requireNonNull(writeMsAvg);
-        this.writeMsMax = Objects.requireNonNull(writeMsMax);
-        this.writeRatioAvg = Objects.requireNonNull(writeRatioAvg);
-        this.writeRatioMax = Objects.requireNonNull(writeRatioMax);
+        this.completedParallelInputs = completedParallelInputs;
+        this.computeMsAvg = computeMsAvg;
+        this.computeMsMax = computeMsMax;
+        this.computeRatioAvg = computeRatioAvg;
+        this.computeRatioMax = computeRatioMax;
+        this.endMs = endMs;
+        this.inputStages = inputStages;
+        this.name = name;
+        this.parallelInputs = parallelInputs;
+        this.readMsAvg = readMsAvg;
+        this.readMsMax = readMsMax;
+        this.readRatioAvg = readRatioAvg;
+        this.readRatioMax = readRatioMax;
+        this.recordsRead = recordsRead;
+        this.recordsWritten = recordsWritten;
+        this.shuffleOutputBytes = shuffleOutputBytes;
+        this.shuffleOutputBytesSpilled = shuffleOutputBytesSpilled;
+        this.slotMs = slotMs;
+        this.startMs = startMs;
+        this.status = status;
+        this.steps = steps;
+        this.waitMsAvg = waitMsAvg;
+        this.waitMsMax = waitMsMax;
+        this.waitRatioAvg = waitRatioAvg;
+        this.waitRatioMax = waitRatioMax;
+        this.writeMsAvg = writeMsAvg;
+        this.writeMsMax = writeMsMax;
+        this.writeRatioAvg = writeRatioAvg;
+        this.writeRatioMax = writeRatioMax;
     }
 
     /**

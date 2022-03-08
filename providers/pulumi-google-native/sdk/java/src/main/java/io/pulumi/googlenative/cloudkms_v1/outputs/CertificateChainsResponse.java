@@ -31,9 +31,9 @@ public final class CertificateChainsResponse {
         List<String> caviumCerts,
         List<String> googleCardCerts,
         List<String> googlePartitionCerts) {
-        this.caviumCerts = Objects.requireNonNull(caviumCerts);
-        this.googleCardCerts = Objects.requireNonNull(googleCardCerts);
-        this.googlePartitionCerts = Objects.requireNonNull(googlePartitionCerts);
+        this.caviumCerts = caviumCerts;
+        this.googleCardCerts = googleCardCerts;
+        this.googlePartitionCerts = googlePartitionCerts;
     }
 
     /**

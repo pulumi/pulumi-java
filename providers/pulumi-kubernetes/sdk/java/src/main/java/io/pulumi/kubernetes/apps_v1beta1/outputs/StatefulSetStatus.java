@@ -77,7 +77,7 @@ public final class StatefulSetStatus {
         this.currentRevision = currentRevision;
         this.observedGeneration = observedGeneration;
         this.readyReplicas = readyReplicas;
-        this.replicas = Objects.requireNonNull(replicas);
+        this.replicas = replicas;
         this.updateRevision = updateRevision;
         this.updatedReplicas = updatedReplicas;
     }

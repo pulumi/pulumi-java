@@ -41,7 +41,7 @@ public final class PngLayerResponse {
         @Nullable String width) {
         this.height = height;
         this.label = label;
-        this.odataType = Objects.requireNonNull(odataType);
+        this.odataType = odataType;
         this.width = width;
     }
 

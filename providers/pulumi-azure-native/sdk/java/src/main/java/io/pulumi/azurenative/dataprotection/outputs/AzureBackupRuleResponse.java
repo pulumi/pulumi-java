@@ -46,10 +46,10 @@ public final class AzureBackupRuleResponse {
         String objectType,
         Either<AdhocBasedTriggerContextResponse,ScheduleBasedTriggerContextResponse> trigger) {
         this.backupParameters = backupParameters;
-        this.dataStore = Objects.requireNonNull(dataStore);
-        this.name = Objects.requireNonNull(name);
-        this.objectType = Objects.requireNonNull(objectType);
-        this.trigger = Objects.requireNonNull(trigger);
+        this.dataStore = dataStore;
+        this.name = name;
+        this.objectType = objectType;
+        this.trigger = trigger;
     }
 
     /**

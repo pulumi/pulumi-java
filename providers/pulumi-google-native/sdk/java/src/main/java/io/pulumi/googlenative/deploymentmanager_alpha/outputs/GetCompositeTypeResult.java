@@ -60,14 +60,14 @@ public final class GetCompositeTypeResult {
         String selfLink,
         String status,
         TemplateContentsResponse templateContents) {
-        this.description = Objects.requireNonNull(description);
-        this.insertTime = Objects.requireNonNull(insertTime);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.operation = Objects.requireNonNull(operation);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.status = Objects.requireNonNull(status);
-        this.templateContents = Objects.requireNonNull(templateContents);
+        this.description = description;
+        this.insertTime = insertTime;
+        this.labels = labels;
+        this.name = name;
+        this.operation = operation;
+        this.selfLink = selfLink;
+        this.status = status;
+        this.templateContents = templateContents;
     }
 
     /**

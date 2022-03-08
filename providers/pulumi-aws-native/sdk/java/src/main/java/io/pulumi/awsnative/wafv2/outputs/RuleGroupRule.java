@@ -41,11 +41,11 @@ public final class RuleGroupRule {
         RuleGroupVisibilityConfig visibilityConfig) {
         this.action = action;
         this.captchaConfig = captchaConfig;
-        this.name = Objects.requireNonNull(name);
-        this.priority = Objects.requireNonNull(priority);
+        this.name = name;
+        this.priority = priority;
         this.ruleLabels = ruleLabels;
-        this.statement = Objects.requireNonNull(statement);
-        this.visibilityConfig = Objects.requireNonNull(visibilityConfig);
+        this.statement = statement;
+        this.visibilityConfig = visibilityConfig;
     }
 
     public Optional<RuleGroupRuleAction> getAction() {

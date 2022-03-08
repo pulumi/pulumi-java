@@ -109,21 +109,21 @@ public final class GetHanaInstanceResult {
         @Nullable StorageProfileResponse storageProfile,
         @Nullable Map<String,String> tags,
         String type) {
-        this.hanaInstanceId = Objects.requireNonNull(hanaInstanceId);
+        this.hanaInstanceId = hanaInstanceId;
         this.hardwareProfile = hardwareProfile;
-        this.hwRevision = Objects.requireNonNull(hwRevision);
-        this.id = Objects.requireNonNull(id);
+        this.hwRevision = hwRevision;
+        this.id = id;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.networkProfile = networkProfile;
         this.osProfile = osProfile;
         this.partnerNodeId = partnerNodeId;
-        this.powerState = Objects.requireNonNull(powerState);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.proximityPlacementGroup = Objects.requireNonNull(proximityPlacementGroup);
+        this.powerState = powerState;
+        this.provisioningState = provisioningState;
+        this.proximityPlacementGroup = proximityPlacementGroup;
         this.storageProfile = storageProfile;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

@@ -33,7 +33,7 @@ public final class TaskDefinitionProxyConfiguration {
         String containerName,
         @Nullable Map<String,String> properties,
         @Nullable String type) {
-        this.containerName = Objects.requireNonNull(containerName);
+        this.containerName = containerName;
         this.properties = properties;
         this.type = type;
     }

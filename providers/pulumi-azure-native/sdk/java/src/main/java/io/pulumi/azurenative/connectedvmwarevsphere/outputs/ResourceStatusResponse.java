@@ -48,12 +48,12 @@ public final class ResourceStatusResponse {
         String severity,
         String status,
         String type) {
-        this.lastUpdatedAt = Objects.requireNonNull(lastUpdatedAt);
-        this.message = Objects.requireNonNull(message);
-        this.reason = Objects.requireNonNull(reason);
-        this.severity = Objects.requireNonNull(severity);
-        this.status = Objects.requireNonNull(status);
-        this.type = Objects.requireNonNull(type);
+        this.lastUpdatedAt = lastUpdatedAt;
+        this.message = message;
+        this.reason = reason;
+        this.severity = severity;
+        this.status = status;
+        this.type = type;
     }
 
     /**

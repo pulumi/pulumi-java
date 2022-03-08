@@ -43,11 +43,11 @@ public final class BasicYarnAutoscalingConfigResponse {
         Double scaleDownMinWorkerFraction,
         Double scaleUpFactor,
         Double scaleUpMinWorkerFraction) {
-        this.gracefulDecommissionTimeout = Objects.requireNonNull(gracefulDecommissionTimeout);
-        this.scaleDownFactor = Objects.requireNonNull(scaleDownFactor);
-        this.scaleDownMinWorkerFraction = Objects.requireNonNull(scaleDownMinWorkerFraction);
-        this.scaleUpFactor = Objects.requireNonNull(scaleUpFactor);
-        this.scaleUpMinWorkerFraction = Objects.requireNonNull(scaleUpMinWorkerFraction);
+        this.gracefulDecommissionTimeout = gracefulDecommissionTimeout;
+        this.scaleDownFactor = scaleDownFactor;
+        this.scaleDownMinWorkerFraction = scaleDownMinWorkerFraction;
+        this.scaleUpFactor = scaleUpFactor;
+        this.scaleUpMinWorkerFraction = scaleUpMinWorkerFraction;
     }
 
     /**

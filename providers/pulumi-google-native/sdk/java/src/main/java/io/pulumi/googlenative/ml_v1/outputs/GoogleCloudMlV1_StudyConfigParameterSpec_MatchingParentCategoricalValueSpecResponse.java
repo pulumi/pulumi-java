@@ -18,7 +18,7 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentCatego
 
     @OutputCustomType.Constructor({"values"})
     private GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentCategoricalValueSpecResponse(List<String> values) {
-        this.values = Objects.requireNonNull(values);
+        this.values = values;
     }
 
     /**

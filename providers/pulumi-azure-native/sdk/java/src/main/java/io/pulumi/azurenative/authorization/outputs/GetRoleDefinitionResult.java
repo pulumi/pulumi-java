@@ -66,12 +66,12 @@ public final class GetRoleDefinitionResult {
         String type) {
         this.assignableScopes = assignableScopes;
         this.description = description;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.permissions = permissions;
         this.roleName = roleName;
         this.roleType = roleType;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

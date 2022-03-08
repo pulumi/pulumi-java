@@ -27,7 +27,7 @@ public final class SecurityProfileMetricDimension {
     private SecurityProfileMetricDimension(
         String dimensionName,
         @Nullable SecurityProfileMetricDimensionOperator operator) {
-        this.dimensionName = Objects.requireNonNull(dimensionName);
+        this.dimensionName = dimensionName;
         this.operator = operator;
     }
 

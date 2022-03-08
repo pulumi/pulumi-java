@@ -14,7 +14,7 @@ public final class MangedSslCertificateManaged {
 
     @OutputCustomType.Constructor({"domains"})
     private MangedSslCertificateManaged(List<String> domains) {
-        this.domains = Objects.requireNonNull(domains);
+        this.domains = domains;
     }
 
     public List<String> getDomains() {

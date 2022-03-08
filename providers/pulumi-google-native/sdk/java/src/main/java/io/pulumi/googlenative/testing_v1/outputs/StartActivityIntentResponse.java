@@ -31,9 +31,9 @@ public final class StartActivityIntentResponse {
         String action,
         List<String> categories,
         String uri) {
-        this.action = Objects.requireNonNull(action);
-        this.categories = Objects.requireNonNull(categories);
-        this.uri = Objects.requireNonNull(uri);
+        this.action = action;
+        this.categories = categories;
+        this.uri = uri;
     }
 
     /**

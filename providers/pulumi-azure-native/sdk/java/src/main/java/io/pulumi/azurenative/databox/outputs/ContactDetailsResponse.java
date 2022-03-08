@@ -52,11 +52,11 @@ public final class ContactDetailsResponse {
         @Nullable List<NotificationPreferenceResponse> notificationPreference,
         String phone,
         @Nullable String phoneExtension) {
-        this.contactName = Objects.requireNonNull(contactName);
-        this.emailList = Objects.requireNonNull(emailList);
+        this.contactName = contactName;
+        this.emailList = emailList;
         this.mobile = mobile;
         this.notificationPreference = notificationPreference;
-        this.phone = Objects.requireNonNull(phone);
+        this.phone = phone;
         this.phoneExtension = phoneExtension;
     }
 

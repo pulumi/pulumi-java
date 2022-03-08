@@ -35,7 +35,7 @@ public final class PackagingConfigurationCmafPackage {
         @Nullable Boolean includeEncoderConfigurationInSegments,
         @Nullable Integer segmentDurationSeconds) {
         this.encryption = encryption;
-        this.hlsManifests = Objects.requireNonNull(hlsManifests);
+        this.hlsManifests = hlsManifests;
         this.includeEncoderConfigurationInSegments = includeEncoderConfigurationInSegments;
         this.segmentDurationSeconds = segmentDurationSeconds;
     }

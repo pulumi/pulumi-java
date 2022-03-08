@@ -84,18 +84,18 @@ public final class GetStackResult {
         Map<String,String> tags,
         String templateBody,
         Integer timeoutInMinutes) {
-        this.capabilities = Objects.requireNonNull(capabilities);
-        this.description = Objects.requireNonNull(description);
-        this.disableRollback = Objects.requireNonNull(disableRollback);
-        this.iamRoleArn = Objects.requireNonNull(iamRoleArn);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.notificationArns = Objects.requireNonNull(notificationArns);
-        this.outputs = Objects.requireNonNull(outputs);
-        this.parameters = Objects.requireNonNull(parameters);
-        this.tags = Objects.requireNonNull(tags);
-        this.templateBody = Objects.requireNonNull(templateBody);
-        this.timeoutInMinutes = Objects.requireNonNull(timeoutInMinutes);
+        this.capabilities = capabilities;
+        this.description = description;
+        this.disableRollback = disableRollback;
+        this.iamRoleArn = iamRoleArn;
+        this.id = id;
+        this.name = name;
+        this.notificationArns = notificationArns;
+        this.outputs = outputs;
+        this.parameters = parameters;
+        this.tags = tags;
+        this.templateBody = templateBody;
+        this.timeoutInMinutes = timeoutInMinutes;
     }
 
     /**

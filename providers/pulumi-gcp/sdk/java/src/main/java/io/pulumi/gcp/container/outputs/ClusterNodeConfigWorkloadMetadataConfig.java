@@ -21,7 +21,7 @@ public final class ClusterNodeConfigWorkloadMetadataConfig {
 
     @OutputCustomType.Constructor({"mode"})
     private ClusterNodeConfigWorkloadMetadataConfig(String mode) {
-        this.mode = Objects.requireNonNull(mode);
+        this.mode = mode;
     }
 
     /**

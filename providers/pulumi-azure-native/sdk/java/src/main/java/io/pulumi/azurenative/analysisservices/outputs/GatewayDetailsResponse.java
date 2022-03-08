@@ -32,8 +32,8 @@ public final class GatewayDetailsResponse {
         String dmtsClusterUri,
         String gatewayObjectId,
         @Nullable String gatewayResourceId) {
-        this.dmtsClusterUri = Objects.requireNonNull(dmtsClusterUri);
-        this.gatewayObjectId = Objects.requireNonNull(gatewayObjectId);
+        this.dmtsClusterUri = dmtsClusterUri;
+        this.gatewayObjectId = gatewayObjectId;
         this.gatewayResourceId = gatewayResourceId;
     }
 

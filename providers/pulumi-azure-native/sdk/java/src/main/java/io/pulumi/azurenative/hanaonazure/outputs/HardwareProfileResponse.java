@@ -24,8 +24,8 @@ public final class HardwareProfileResponse {
     private HardwareProfileResponse(
         String hanaInstanceSize,
         String hardwareType) {
-        this.hanaInstanceSize = Objects.requireNonNull(hanaInstanceSize);
-        this.hardwareType = Objects.requireNonNull(hardwareType);
+        this.hanaInstanceSize = hanaInstanceSize;
+        this.hardwareType = hardwareType;
     }
 
     /**

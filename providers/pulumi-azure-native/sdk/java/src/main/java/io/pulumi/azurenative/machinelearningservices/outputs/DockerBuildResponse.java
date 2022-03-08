@@ -44,8 +44,8 @@ public final class DockerBuildResponse {
         String dockerfile,
         @Nullable DockerImagePlatformResponse platform) {
         this.context = context;
-        this.dockerSpecificationType = Objects.requireNonNull(dockerSpecificationType);
-        this.dockerfile = Objects.requireNonNull(dockerfile);
+        this.dockerSpecificationType = dockerSpecificationType;
+        this.dockerfile = dockerfile;
         this.platform = platform;
     }
 

@@ -48,7 +48,7 @@ public final class PolicyRule {
         this.nonResourceURLs = nonResourceURLs;
         this.resourceNames = resourceNames;
         this.resources = resources;
-        this.verbs = Objects.requireNonNull(verbs);
+        this.verbs = verbs;
     }
 
     /**

@@ -41,7 +41,7 @@ public final class TruncationSelectionPolicyResponse {
         @Nullable Integer truncationPercentage) {
         this.delayEvaluation = delayEvaluation;
         this.evaluationInterval = evaluationInterval;
-        this.policyType = Objects.requireNonNull(policyType);
+        this.policyType = policyType;
         this.truncationPercentage = truncationPercentage;
     }
 

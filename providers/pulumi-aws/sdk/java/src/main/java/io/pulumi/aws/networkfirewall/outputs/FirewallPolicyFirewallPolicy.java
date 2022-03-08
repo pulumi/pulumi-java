@@ -67,8 +67,8 @@ public final class FirewallPolicyFirewallPolicy {
         this.statefulEngineOptions = statefulEngineOptions;
         this.statefulRuleGroupReferences = statefulRuleGroupReferences;
         this.statelessCustomActions = statelessCustomActions;
-        this.statelessDefaultActions = Objects.requireNonNull(statelessDefaultActions);
-        this.statelessFragmentDefaultActions = Objects.requireNonNull(statelessFragmentDefaultActions);
+        this.statelessDefaultActions = statelessDefaultActions;
+        this.statelessFragmentDefaultActions = statelessFragmentDefaultActions;
         this.statelessRuleGroupReferences = statelessRuleGroupReferences;
     }
 

@@ -49,11 +49,11 @@ public final class AutoscaleProfileResponse {
         String name,
         @Nullable RecurrenceResponse recurrence,
         List<ScaleRuleResponse> rules) {
-        this.capacity = Objects.requireNonNull(capacity);
+        this.capacity = capacity;
         this.fixedDate = fixedDate;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.recurrence = recurrence;
-        this.rules = Objects.requireNonNull(rules);
+        this.rules = rules;
     }
 
     /**

@@ -24,8 +24,8 @@ public final class StatusConditionResponse {
     private StatusConditionResponse(
         String canonicalCode,
         String message) {
-        this.canonicalCode = Objects.requireNonNull(canonicalCode);
-        this.message = Objects.requireNonNull(message);
+        this.canonicalCode = canonicalCode;
+        this.message = message;
     }
 
     /**

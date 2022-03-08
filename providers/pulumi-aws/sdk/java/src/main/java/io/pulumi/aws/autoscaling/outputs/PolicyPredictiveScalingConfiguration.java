@@ -47,7 +47,7 @@ public final class PolicyPredictiveScalingConfiguration {
         @Nullable String schedulingBufferTime) {
         this.maxCapacityBreachBehavior = maxCapacityBreachBehavior;
         this.maxCapacityBuffer = maxCapacityBuffer;
-        this.metricSpecification = Objects.requireNonNull(metricSpecification);
+        this.metricSpecification = metricSpecification;
         this.mode = mode;
         this.schedulingBufferTime = schedulingBufferTime;
     }

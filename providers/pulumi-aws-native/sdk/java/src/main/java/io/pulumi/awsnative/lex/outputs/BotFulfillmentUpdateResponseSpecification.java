@@ -32,8 +32,8 @@ public final class BotFulfillmentUpdateResponseSpecification {
         Integer frequencyInSeconds,
         List<BotMessageGroup> messageGroups) {
         this.allowInterrupt = allowInterrupt;
-        this.frequencyInSeconds = Objects.requireNonNull(frequencyInSeconds);
-        this.messageGroups = Objects.requireNonNull(messageGroups);
+        this.frequencyInSeconds = frequencyInSeconds;
+        this.messageGroups = messageGroups;
     }
 
     /**

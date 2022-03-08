@@ -44,17 +44,17 @@ public final class GetNotificationChannelResult {
         @Nullable String type,
         @Nullable Map<String,String> userLabels,
         String verificationStatus) {
-        this.description = Objects.requireNonNull(description);
+        this.description = description;
         this.displayName = displayName;
-        this.enabled = Objects.requireNonNull(enabled);
-        this.id = Objects.requireNonNull(id);
+        this.enabled = enabled;
+        this.id = id;
         this.labels = labels;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.project = project;
-        this.sensitiveLabels = Objects.requireNonNull(sensitiveLabels);
+        this.sensitiveLabels = sensitiveLabels;
         this.type = type;
         this.userLabels = userLabels;
-        this.verificationStatus = Objects.requireNonNull(verificationStatus);
+        this.verificationStatus = verificationStatus;
     }
 
     public String getDescription() {

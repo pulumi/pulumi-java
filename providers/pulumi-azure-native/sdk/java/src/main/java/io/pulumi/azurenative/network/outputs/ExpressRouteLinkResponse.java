@@ -82,16 +82,16 @@ public final class ExpressRouteLinkResponse {
         String rackId,
         String routerName) {
         this.adminState = adminState;
-        this.connectorType = Objects.requireNonNull(connectorType);
-        this.etag = Objects.requireNonNull(etag);
+        this.connectorType = connectorType;
+        this.etag = etag;
         this.id = id;
-        this.interfaceName = Objects.requireNonNull(interfaceName);
+        this.interfaceName = interfaceName;
         this.macSecConfig = macSecConfig;
         this.name = name;
-        this.patchPanelId = Objects.requireNonNull(patchPanelId);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.rackId = Objects.requireNonNull(rackId);
-        this.routerName = Objects.requireNonNull(routerName);
+        this.patchPanelId = patchPanelId;
+        this.provisioningState = provisioningState;
+        this.rackId = rackId;
+        this.routerName = routerName;
     }
 
     /**

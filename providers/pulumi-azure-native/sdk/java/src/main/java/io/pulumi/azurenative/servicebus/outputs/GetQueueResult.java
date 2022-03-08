@@ -162,10 +162,10 @@ public final class GetQueueResult {
         @Nullable String status,
         String type,
         String updatedAt) {
-        this.accessedAt = Objects.requireNonNull(accessedAt);
+        this.accessedAt = accessedAt;
         this.autoDeleteOnIdle = autoDeleteOnIdle;
-        this.countDetails = Objects.requireNonNull(countDetails);
-        this.createdAt = Objects.requireNonNull(createdAt);
+        this.countDetails = countDetails;
+        this.createdAt = createdAt;
         this.deadLetteringOnMessageExpiration = deadLetteringOnMessageExpiration;
         this.defaultMessageTimeToLive = defaultMessageTimeToLive;
         this.duplicateDetectionHistoryTimeWindow = duplicateDetectionHistoryTimeWindow;
@@ -174,18 +174,18 @@ public final class GetQueueResult {
         this.enablePartitioning = enablePartitioning;
         this.forwardDeadLetteredMessagesTo = forwardDeadLetteredMessagesTo;
         this.forwardTo = forwardTo;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.lockDuration = lockDuration;
         this.maxDeliveryCount = maxDeliveryCount;
         this.maxSizeInMegabytes = maxSizeInMegabytes;
-        this.messageCount = Objects.requireNonNull(messageCount);
-        this.name = Objects.requireNonNull(name);
+        this.messageCount = messageCount;
+        this.name = name;
         this.requiresDuplicateDetection = requiresDuplicateDetection;
         this.requiresSession = requiresSession;
-        this.sizeInBytes = Objects.requireNonNull(sizeInBytes);
+        this.sizeInBytes = sizeInBytes;
         this.status = status;
-        this.type = Objects.requireNonNull(type);
-        this.updatedAt = Objects.requireNonNull(updatedAt);
+        this.type = type;
+        this.updatedAt = updatedAt;
     }
 
     /**

@@ -17,7 +17,7 @@ public final class GatewayRouteSpecGrpcRouteMatch {
 
     @OutputCustomType.Constructor({"serviceName"})
     private GatewayRouteSpecGrpcRouteMatch(String serviceName) {
-        this.serviceName = Objects.requireNonNull(serviceName);
+        this.serviceName = serviceName;
     }
 
     /**

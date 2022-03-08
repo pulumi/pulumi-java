@@ -151,27 +151,27 @@ public final class GetJobResult {
         @Nullable Map<String,String> tags,
         String transferType,
         String type) {
-        this.cancellationReason = Objects.requireNonNull(cancellationReason);
+        this.cancellationReason = cancellationReason;
         this.deliveryInfo = deliveryInfo;
         this.deliveryType = deliveryType;
         this.details = details;
-        this.error = Objects.requireNonNull(error);
-        this.id = Objects.requireNonNull(id);
+        this.error = error;
+        this.id = id;
         this.identity = identity;
-        this.isCancellable = Objects.requireNonNull(isCancellable);
-        this.isCancellableWithoutFee = Objects.requireNonNull(isCancellableWithoutFee);
-        this.isDeletable = Objects.requireNonNull(isDeletable);
-        this.isPrepareToShipEnabled = Objects.requireNonNull(isPrepareToShipEnabled);
-        this.isShippingAddressEditable = Objects.requireNonNull(isShippingAddressEditable);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.sku = Objects.requireNonNull(sku);
-        this.startTime = Objects.requireNonNull(startTime);
-        this.status = Objects.requireNonNull(status);
-        this.systemData = Objects.requireNonNull(systemData);
+        this.isCancellable = isCancellable;
+        this.isCancellableWithoutFee = isCancellableWithoutFee;
+        this.isDeletable = isDeletable;
+        this.isPrepareToShipEnabled = isPrepareToShipEnabled;
+        this.isShippingAddressEditable = isShippingAddressEditable;
+        this.location = location;
+        this.name = name;
+        this.sku = sku;
+        this.startTime = startTime;
+        this.status = status;
+        this.systemData = systemData;
         this.tags = tags;
-        this.transferType = Objects.requireNonNull(transferType);
-        this.type = Objects.requireNonNull(type);
+        this.transferType = transferType;
+        this.type = type;
     }
 
     /**

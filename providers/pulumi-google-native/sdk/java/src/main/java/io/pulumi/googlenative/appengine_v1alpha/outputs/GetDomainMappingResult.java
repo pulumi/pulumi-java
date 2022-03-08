@@ -33,9 +33,9 @@ public final class GetDomainMappingResult {
         String name,
         List<ResourceRecordResponse> resourceRecords,
         SslSettingsResponse sslSettings) {
-        this.name = Objects.requireNonNull(name);
-        this.resourceRecords = Objects.requireNonNull(resourceRecords);
-        this.sslSettings = Objects.requireNonNull(sslSettings);
+        this.name = name;
+        this.resourceRecords = resourceRecords;
+        this.sslSettings = sslSettings;
     }
 
     /**

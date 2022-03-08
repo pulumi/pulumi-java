@@ -117,17 +117,17 @@ public final class DockerBuildRequestResponse {
         this.agentPoolName = agentPoolName;
         this.arguments = arguments;
         this.credentials = credentials;
-        this.dockerFilePath = Objects.requireNonNull(dockerFilePath);
+        this.dockerFilePath = dockerFilePath;
         this.imageNames = imageNames;
         this.isArchiveEnabled = isArchiveEnabled;
         this.isPushEnabled = isPushEnabled;
         this.logTemplate = logTemplate;
         this.noCache = noCache;
-        this.platform = Objects.requireNonNull(platform);
+        this.platform = platform;
         this.sourceLocation = sourceLocation;
         this.target = target;
         this.timeout = timeout;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

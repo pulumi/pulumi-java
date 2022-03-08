@@ -88,19 +88,19 @@ public final class GetMountTargetResult {
         List<String> securityGroups,
         String subnetId) {
         this.accessPointId = accessPointId;
-        this.availabilityZoneId = Objects.requireNonNull(availabilityZoneId);
-        this.availabilityZoneName = Objects.requireNonNull(availabilityZoneName);
-        this.dnsName = Objects.requireNonNull(dnsName);
-        this.fileSystemArn = Objects.requireNonNull(fileSystemArn);
-        this.fileSystemId = Objects.requireNonNull(fileSystemId);
-        this.id = Objects.requireNonNull(id);
-        this.ipAddress = Objects.requireNonNull(ipAddress);
-        this.mountTargetDnsName = Objects.requireNonNull(mountTargetDnsName);
-        this.mountTargetId = Objects.requireNonNull(mountTargetId);
-        this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId);
-        this.ownerId = Objects.requireNonNull(ownerId);
-        this.securityGroups = Objects.requireNonNull(securityGroups);
-        this.subnetId = Objects.requireNonNull(subnetId);
+        this.availabilityZoneId = availabilityZoneId;
+        this.availabilityZoneName = availabilityZoneName;
+        this.dnsName = dnsName;
+        this.fileSystemArn = fileSystemArn;
+        this.fileSystemId = fileSystemId;
+        this.id = id;
+        this.ipAddress = ipAddress;
+        this.mountTargetDnsName = mountTargetDnsName;
+        this.mountTargetId = mountTargetId;
+        this.networkInterfaceId = networkInterfaceId;
+        this.ownerId = ownerId;
+        this.securityGroups = securityGroups;
+        this.subnetId = subnetId;
     }
 
     public Optional<String> getAccessPointId() {

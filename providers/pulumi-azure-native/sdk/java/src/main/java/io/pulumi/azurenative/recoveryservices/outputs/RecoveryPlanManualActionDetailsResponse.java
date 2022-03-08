@@ -28,7 +28,7 @@ public final class RecoveryPlanManualActionDetailsResponse {
         @Nullable String description,
         String instanceType) {
         this.description = description;
-        this.instanceType = Objects.requireNonNull(instanceType);
+        this.instanceType = instanceType;
     }
 
     /**

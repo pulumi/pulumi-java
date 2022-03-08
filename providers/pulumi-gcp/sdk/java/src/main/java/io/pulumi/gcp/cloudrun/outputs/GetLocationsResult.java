@@ -27,9 +27,9 @@ public final class GetLocationsResult {
         String id,
         List<String> locations,
         String project) {
-        this.id = Objects.requireNonNull(id);
-        this.locations = Objects.requireNonNull(locations);
-        this.project = Objects.requireNonNull(project);
+        this.id = id;
+        this.locations = locations;
+        this.project = project;
     }
 
     /**

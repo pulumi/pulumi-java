@@ -30,9 +30,9 @@ public final class FilterTrackPropertyConditionResponse {
         String operation,
         String property,
         String value) {
-        this.operation = Objects.requireNonNull(operation);
-        this.property = Objects.requireNonNull(property);
-        this.value = Objects.requireNonNull(value);
+        this.operation = operation;
+        this.property = property;
+        this.value = value;
     }
 
     /**

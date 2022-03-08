@@ -56,13 +56,13 @@ public final class HealthCheckResponse {
         Integer restartThreshold,
         String timeout,
         Integer unhealthyThreshold) {
-        this.checkInterval = Objects.requireNonNull(checkInterval);
-        this.disableHealthCheck = Objects.requireNonNull(disableHealthCheck);
-        this.healthyThreshold = Objects.requireNonNull(healthyThreshold);
-        this.host = Objects.requireNonNull(host);
-        this.restartThreshold = Objects.requireNonNull(restartThreshold);
-        this.timeout = Objects.requireNonNull(timeout);
-        this.unhealthyThreshold = Objects.requireNonNull(unhealthyThreshold);
+        this.checkInterval = checkInterval;
+        this.disableHealthCheck = disableHealthCheck;
+        this.healthyThreshold = healthyThreshold;
+        this.host = host;
+        this.restartThreshold = restartThreshold;
+        this.timeout = timeout;
+        this.unhealthyThreshold = unhealthyThreshold;
     }
 
     /**

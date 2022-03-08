@@ -200,35 +200,35 @@ public final class GetTableResult {
         TimePartitioningResponse timePartitioning,
         String type,
         ViewDefinitionResponse view) {
-        this.clustering = Objects.requireNonNull(clustering);
-        this.creationTime = Objects.requireNonNull(creationTime);
-        this.defaultCollation = Objects.requireNonNull(defaultCollation);
-        this.description = Objects.requireNonNull(description);
-        this.encryptionConfiguration = Objects.requireNonNull(encryptionConfiguration);
-        this.etag = Objects.requireNonNull(etag);
-        this.expirationTime = Objects.requireNonNull(expirationTime);
-        this.externalDataConfiguration = Objects.requireNonNull(externalDataConfiguration);
-        this.friendlyName = Objects.requireNonNull(friendlyName);
-        this.kind = Objects.requireNonNull(kind);
-        this.labels = Objects.requireNonNull(labels);
-        this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
-        this.location = Objects.requireNonNull(location);
-        this.materializedView = Objects.requireNonNull(materializedView);
-        this.model = Objects.requireNonNull(model);
-        this.numBytes = Objects.requireNonNull(numBytes);
-        this.numLongTermBytes = Objects.requireNonNull(numLongTermBytes);
-        this.numPhysicalBytes = Objects.requireNonNull(numPhysicalBytes);
-        this.numRows = Objects.requireNonNull(numRows);
-        this.rangePartitioning = Objects.requireNonNull(rangePartitioning);
-        this.requirePartitionFilter = Objects.requireNonNull(requirePartitionFilter);
-        this.schema = Objects.requireNonNull(schema);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.snapshotDefinition = Objects.requireNonNull(snapshotDefinition);
-        this.streamingBuffer = Objects.requireNonNull(streamingBuffer);
-        this.tableReference = Objects.requireNonNull(tableReference);
-        this.timePartitioning = Objects.requireNonNull(timePartitioning);
-        this.type = Objects.requireNonNull(type);
-        this.view = Objects.requireNonNull(view);
+        this.clustering = clustering;
+        this.creationTime = creationTime;
+        this.defaultCollation = defaultCollation;
+        this.description = description;
+        this.encryptionConfiguration = encryptionConfiguration;
+        this.etag = etag;
+        this.expirationTime = expirationTime;
+        this.externalDataConfiguration = externalDataConfiguration;
+        this.friendlyName = friendlyName;
+        this.kind = kind;
+        this.labels = labels;
+        this.lastModifiedTime = lastModifiedTime;
+        this.location = location;
+        this.materializedView = materializedView;
+        this.model = model;
+        this.numBytes = numBytes;
+        this.numLongTermBytes = numLongTermBytes;
+        this.numPhysicalBytes = numPhysicalBytes;
+        this.numRows = numRows;
+        this.rangePartitioning = rangePartitioning;
+        this.requirePartitionFilter = requirePartitionFilter;
+        this.schema = schema;
+        this.selfLink = selfLink;
+        this.snapshotDefinition = snapshotDefinition;
+        this.streamingBuffer = streamingBuffer;
+        this.tableReference = tableReference;
+        this.timePartitioning = timePartitioning;
+        this.type = type;
+        this.view = view;
     }
 
     /**

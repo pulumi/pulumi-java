@@ -80,15 +80,15 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationResponse
         String ruleSetType,
         String ruleSetVersion) {
         this.disabledRuleGroups = disabledRuleGroups;
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
         this.exclusions = exclusions;
         this.fileUploadLimitInMb = fileUploadLimitInMb;
-        this.firewallMode = Objects.requireNonNull(firewallMode);
+        this.firewallMode = firewallMode;
         this.maxRequestBodySize = maxRequestBodySize;
         this.maxRequestBodySizeInKb = maxRequestBodySizeInKb;
         this.requestBodyCheck = requestBodyCheck;
-        this.ruleSetType = Objects.requireNonNull(ruleSetType);
-        this.ruleSetVersion = Objects.requireNonNull(ruleSetVersion);
+        this.ruleSetType = ruleSetType;
+        this.ruleSetVersion = ruleSetVersion;
     }
 
     /**

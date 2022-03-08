@@ -65,13 +65,13 @@ public final class NotificationResponse {
         String operator,
         Double threshold,
         @Nullable String thresholdType) {
-        this.contactEmails = Objects.requireNonNull(contactEmails);
+        this.contactEmails = contactEmails;
         this.contactGroups = contactGroups;
         this.contactRoles = contactRoles;
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
         this.locale = locale;
-        this.operator = Objects.requireNonNull(operator);
-        this.threshold = Objects.requireNonNull(threshold);
+        this.operator = operator;
+        this.threshold = threshold;
         this.thresholdType = thresholdType;
     }
 

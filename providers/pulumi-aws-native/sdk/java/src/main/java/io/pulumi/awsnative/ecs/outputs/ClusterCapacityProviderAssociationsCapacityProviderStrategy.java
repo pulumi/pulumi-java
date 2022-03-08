@@ -22,7 +22,7 @@ public final class ClusterCapacityProviderAssociationsCapacityProviderStrategy {
         String capacityProvider,
         @Nullable Integer weight) {
         this.base = base;
-        this.capacityProvider = Objects.requireNonNull(capacityProvider);
+        this.capacityProvider = capacityProvider;
         this.weight = weight;
     }
 

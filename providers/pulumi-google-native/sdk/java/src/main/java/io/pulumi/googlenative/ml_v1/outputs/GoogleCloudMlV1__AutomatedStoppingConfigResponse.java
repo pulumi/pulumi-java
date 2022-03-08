@@ -17,8 +17,8 @@ public final class GoogleCloudMlV1__AutomatedStoppingConfigResponse {
     private GoogleCloudMlV1__AutomatedStoppingConfigResponse(
         GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigResponse decayCurveStoppingConfig,
         GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigResponse medianAutomatedStoppingConfig) {
-        this.decayCurveStoppingConfig = Objects.requireNonNull(decayCurveStoppingConfig);
-        this.medianAutomatedStoppingConfig = Objects.requireNonNull(medianAutomatedStoppingConfig);
+        this.decayCurveStoppingConfig = decayCurveStoppingConfig;
+        this.medianAutomatedStoppingConfig = medianAutomatedStoppingConfig;
     }
 
     public GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigResponse getDecayCurveStoppingConfig() {

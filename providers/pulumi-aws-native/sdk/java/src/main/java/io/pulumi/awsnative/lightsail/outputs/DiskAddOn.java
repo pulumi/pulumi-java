@@ -30,7 +30,7 @@ public final class DiskAddOn {
         String addOnType,
         @Nullable DiskAutoSnapshotAddOn autoSnapshotAddOnRequest,
         @Nullable DiskAddOnStatus status) {
-        this.addOnType = Objects.requireNonNull(addOnType);
+        this.addOnType = addOnType;
         this.autoSnapshotAddOnRequest = autoSnapshotAddOnRequest;
         this.status = status;
     }

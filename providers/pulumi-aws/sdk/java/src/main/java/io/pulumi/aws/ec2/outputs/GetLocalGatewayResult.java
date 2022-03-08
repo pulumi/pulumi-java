@@ -41,11 +41,11 @@ public final class GetLocalGatewayResult {
         String state,
         Map<String,String> tags) {
         this.filters = filters;
-        this.id = Objects.requireNonNull(id);
-        this.outpostArn = Objects.requireNonNull(outpostArn);
-        this.ownerId = Objects.requireNonNull(ownerId);
-        this.state = Objects.requireNonNull(state);
-        this.tags = Objects.requireNonNull(tags);
+        this.id = id;
+        this.outpostArn = outpostArn;
+        this.ownerId = ownerId;
+        this.state = state;
+        this.tags = tags;
     }
 
     public List<GetLocalGatewayFilter> getFilters() {

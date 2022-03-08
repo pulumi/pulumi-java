@@ -19,9 +19,9 @@ public final class GetServiceTemplateSpecVolumeSecretItem {
         String key,
         Integer mode,
         String path) {
-        this.key = Objects.requireNonNull(key);
-        this.mode = Objects.requireNonNull(mode);
-        this.path = Objects.requireNonNull(path);
+        this.key = key;
+        this.mode = mode;
+        this.path = path;
     }
 
     public String getKey() {

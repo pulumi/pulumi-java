@@ -31,7 +31,7 @@ public final class DistributionDefaultCacheBehaviorForwardedValuesCookies {
     private DistributionDefaultCacheBehaviorForwardedValuesCookies(
         String forward,
         @Nullable List<String> whitelistedNames) {
-        this.forward = Objects.requireNonNull(forward);
+        this.forward = forward;
         this.whitelistedNames = whitelistedNames;
     }
 

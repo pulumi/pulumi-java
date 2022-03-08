@@ -26,7 +26,7 @@ public final class PipelineTemplateResponse {
     private PipelineTemplateResponse(
         String id,
         @Nullable Map<String,String> parameters) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.parameters = parameters;
     }
 

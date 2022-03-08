@@ -32,8 +32,8 @@ public final class TimelineErrorResponse {
         String errorMessage,
         String kind,
         @Nullable String queryId) {
-        this.errorMessage = Objects.requireNonNull(errorMessage);
-        this.kind = Objects.requireNonNull(kind);
+        this.errorMessage = errorMessage;
+        this.kind = kind;
         this.queryId = queryId;
     }
 

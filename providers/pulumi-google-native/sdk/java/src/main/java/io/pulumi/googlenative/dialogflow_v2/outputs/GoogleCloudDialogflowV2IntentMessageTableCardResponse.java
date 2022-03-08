@@ -53,12 +53,12 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardResponse {
         List<GoogleCloudDialogflowV2IntentMessageTableCardRowResponse> rows,
         String subtitle,
         String title) {
-        this.buttons = Objects.requireNonNull(buttons);
-        this.columnProperties = Objects.requireNonNull(columnProperties);
-        this.image = Objects.requireNonNull(image);
-        this.rows = Objects.requireNonNull(rows);
-        this.subtitle = Objects.requireNonNull(subtitle);
-        this.title = Objects.requireNonNull(title);
+        this.buttons = buttons;
+        this.columnProperties = columnProperties;
+        this.image = image;
+        this.rows = rows;
+        this.subtitle = subtitle;
+        this.title = title;
     }
 
     /**

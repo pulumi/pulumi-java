@@ -18,7 +18,7 @@ public final class StackTraceResponse {
 
     @OutputCustomType.Constructor({"elements"})
     private StackTraceResponse(List<StackTraceElementResponse> elements) {
-        this.elements = Objects.requireNonNull(elements);
+        this.elements = elements;
     }
 
     /**

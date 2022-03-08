@@ -52,12 +52,12 @@ public final class SparkSqlJobResponse {
         String queryFileUri,
         QueryListResponse queryList,
         Map<String,String> scriptVariables) {
-        this.jarFileUris = Objects.requireNonNull(jarFileUris);
-        this.loggingConfig = Objects.requireNonNull(loggingConfig);
-        this.properties = Objects.requireNonNull(properties);
-        this.queryFileUri = Objects.requireNonNull(queryFileUri);
-        this.queryList = Objects.requireNonNull(queryList);
-        this.scriptVariables = Objects.requireNonNull(scriptVariables);
+        this.jarFileUris = jarFileUris;
+        this.loggingConfig = loggingConfig;
+        this.properties = properties;
+        this.queryFileUri = queryFileUri;
+        this.queryList = queryList;
+        this.scriptVariables = scriptVariables;
     }
 
     /**

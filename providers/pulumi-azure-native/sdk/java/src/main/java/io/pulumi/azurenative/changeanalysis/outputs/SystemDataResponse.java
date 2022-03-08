@@ -48,12 +48,12 @@ public final class SystemDataResponse {
         String lastModifiedAt,
         String lastModifiedBy,
         String lastModifiedByType) {
-        this.createdAt = Objects.requireNonNull(createdAt);
-        this.createdBy = Objects.requireNonNull(createdBy);
-        this.createdByType = Objects.requireNonNull(createdByType);
-        this.lastModifiedAt = Objects.requireNonNull(lastModifiedAt);
-        this.lastModifiedBy = Objects.requireNonNull(lastModifiedBy);
-        this.lastModifiedByType = Objects.requireNonNull(lastModifiedByType);
+        this.createdAt = createdAt;
+        this.createdBy = createdBy;
+        this.createdByType = createdByType;
+        this.lastModifiedAt = lastModifiedAt;
+        this.lastModifiedBy = lastModifiedBy;
+        this.lastModifiedByType = lastModifiedByType;
     }
 
     /**

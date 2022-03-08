@@ -51,12 +51,12 @@ public final class GetUserDataMappingResult {
         String name,
         List<AttributeResponse> resourceAttributes,
         String userId) {
-        this.archiveTime = Objects.requireNonNull(archiveTime);
-        this.archived = Objects.requireNonNull(archived);
-        this.dataId = Objects.requireNonNull(dataId);
-        this.name = Objects.requireNonNull(name);
-        this.resourceAttributes = Objects.requireNonNull(resourceAttributes);
-        this.userId = Objects.requireNonNull(userId);
+        this.archiveTime = archiveTime;
+        this.archived = archived;
+        this.dataId = dataId;
+        this.name = name;
+        this.resourceAttributes = resourceAttributes;
+        this.userId = userId;
     }
 
     /**

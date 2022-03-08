@@ -167,7 +167,7 @@ public final class JobQuery {
         this.maximumBytesBilled = maximumBytesBilled;
         this.parameterMode = parameterMode;
         this.priority = priority;
-        this.query = Objects.requireNonNull(query);
+        this.query = query;
         this.schemaUpdateOptions = schemaUpdateOptions;
         this.scriptOptions = scriptOptions;
         this.useLegacySql = useLegacySql;

@@ -17,7 +17,7 @@ public final class GetTopicResult {
 
     @OutputCustomType.Constructor({"name"})
     private GetTopicResult(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

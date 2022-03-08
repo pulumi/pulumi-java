@@ -24,8 +24,8 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatc
     private RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatch(
         Integer rangeEnd,
         Integer rangeStart) {
-        this.rangeEnd = Objects.requireNonNull(rangeEnd);
-        this.rangeStart = Objects.requireNonNull(rangeStart);
+        this.rangeEnd = rangeEnd;
+        this.rangeStart = rangeStart;
     }
 
     /**

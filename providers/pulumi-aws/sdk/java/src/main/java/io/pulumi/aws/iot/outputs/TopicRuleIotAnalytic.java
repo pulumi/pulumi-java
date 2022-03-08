@@ -24,8 +24,8 @@ public final class TopicRuleIotAnalytic {
     private TopicRuleIotAnalytic(
         String channelName,
         String roleArn) {
-        this.channelName = Objects.requireNonNull(channelName);
-        this.roleArn = Objects.requireNonNull(roleArn);
+        this.channelName = channelName;
+        this.roleArn = roleArn;
     }
 
     /**

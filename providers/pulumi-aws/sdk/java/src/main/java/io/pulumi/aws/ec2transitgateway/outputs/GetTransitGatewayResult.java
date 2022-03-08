@@ -97,20 +97,20 @@ public final class GetTransitGatewayResult {
         String propagationDefaultRouteTableId,
         Map<String,String> tags,
         String vpnEcmpSupport) {
-        this.amazonSideAsn = Objects.requireNonNull(amazonSideAsn);
-        this.arn = Objects.requireNonNull(arn);
-        this.associationDefaultRouteTableId = Objects.requireNonNull(associationDefaultRouteTableId);
-        this.autoAcceptSharedAttachments = Objects.requireNonNull(autoAcceptSharedAttachments);
-        this.defaultRouteTableAssociation = Objects.requireNonNull(defaultRouteTableAssociation);
-        this.defaultRouteTablePropagation = Objects.requireNonNull(defaultRouteTablePropagation);
-        this.description = Objects.requireNonNull(description);
-        this.dnsSupport = Objects.requireNonNull(dnsSupport);
+        this.amazonSideAsn = amazonSideAsn;
+        this.arn = arn;
+        this.associationDefaultRouteTableId = associationDefaultRouteTableId;
+        this.autoAcceptSharedAttachments = autoAcceptSharedAttachments;
+        this.defaultRouteTableAssociation = defaultRouteTableAssociation;
+        this.defaultRouteTablePropagation = defaultRouteTablePropagation;
+        this.description = description;
+        this.dnsSupport = dnsSupport;
         this.filters = filters;
-        this.id = Objects.requireNonNull(id);
-        this.ownerId = Objects.requireNonNull(ownerId);
-        this.propagationDefaultRouteTableId = Objects.requireNonNull(propagationDefaultRouteTableId);
-        this.tags = Objects.requireNonNull(tags);
-        this.vpnEcmpSupport = Objects.requireNonNull(vpnEcmpSupport);
+        this.id = id;
+        this.ownerId = ownerId;
+        this.propagationDefaultRouteTableId = propagationDefaultRouteTableId;
+        this.tags = tags;
+        this.vpnEcmpSupport = vpnEcmpSupport;
     }
 
     /**

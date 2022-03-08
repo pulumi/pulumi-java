@@ -24,8 +24,8 @@ public final class ServicePrincipalPropertiesResponse {
     private ServicePrincipalPropertiesResponse(
         String clientId,
         String secret) {
-        this.clientId = Objects.requireNonNull(clientId);
-        this.secret = Objects.requireNonNull(secret);
+        this.clientId = clientId;
+        this.secret = secret;
     }
 
     /**

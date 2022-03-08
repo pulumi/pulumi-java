@@ -28,10 +28,10 @@ public final class GetActivityResult {
         String creationDate,
         String id,
         String name) {
-        this.arn = Objects.requireNonNull(arn);
-        this.creationDate = Objects.requireNonNull(creationDate);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.arn = arn;
+        this.creationDate = creationDate;
+        this.id = id;
+        this.name = name;
     }
 
     public String getArn() {

@@ -129,16 +129,16 @@ public final class GetMetadataResult {
         this.dependencies = dependencies;
         this.etag = etag;
         this.firstPublishDate = firstPublishDate;
-        this.id = Objects.requireNonNull(id);
-        this.kind = Objects.requireNonNull(kind);
+        this.id = id;
+        this.kind = kind;
         this.lastPublishDate = lastPublishDate;
-        this.name = Objects.requireNonNull(name);
-        this.parentId = Objects.requireNonNull(parentId);
+        this.name = name;
+        this.parentId = parentId;
         this.providers = providers;
         this.source = source;
         this.support = support;
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.systemData = systemData;
+        this.type = type;
         this.version = version;
     }
 

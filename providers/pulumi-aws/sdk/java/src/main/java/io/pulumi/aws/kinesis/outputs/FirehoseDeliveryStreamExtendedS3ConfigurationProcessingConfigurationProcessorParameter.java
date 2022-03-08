@@ -24,8 +24,8 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfig
     private FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorParameter(
         String parameterName,
         String parameterValue) {
-        this.parameterName = Objects.requireNonNull(parameterName);
-        this.parameterValue = Objects.requireNonNull(parameterValue);
+        this.parameterName = parameterName;
+        this.parameterValue = parameterValue;
     }
 
     /**

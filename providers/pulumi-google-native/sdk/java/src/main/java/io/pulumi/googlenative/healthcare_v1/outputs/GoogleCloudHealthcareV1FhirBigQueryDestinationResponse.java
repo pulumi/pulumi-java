@@ -38,10 +38,10 @@ public final class GoogleCloudHealthcareV1FhirBigQueryDestinationResponse {
         Boolean force,
         SchemaConfigResponse schemaConfig,
         String writeDisposition) {
-        this.datasetUri = Objects.requireNonNull(datasetUri);
-        this.force = Objects.requireNonNull(force);
-        this.schemaConfig = Objects.requireNonNull(schemaConfig);
-        this.writeDisposition = Objects.requireNonNull(writeDisposition);
+        this.datasetUri = datasetUri;
+        this.force = force;
+        this.schemaConfig = schemaConfig;
+        this.writeDisposition = writeDisposition;
     }
 
     /**

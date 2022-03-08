@@ -49,12 +49,12 @@ public final class GetAttributeDefinitionResult {
         String dataMappingDefaultValue,
         String description,
         String name) {
-        this.allowedValues = Objects.requireNonNull(allowedValues);
-        this.category = Objects.requireNonNull(category);
-        this.consentDefaultValues = Objects.requireNonNull(consentDefaultValues);
-        this.dataMappingDefaultValue = Objects.requireNonNull(dataMappingDefaultValue);
-        this.description = Objects.requireNonNull(description);
-        this.name = Objects.requireNonNull(name);
+        this.allowedValues = allowedValues;
+        this.category = category;
+        this.consentDefaultValues = consentDefaultValues;
+        this.dataMappingDefaultValue = dataMappingDefaultValue;
+        this.description = description;
+        this.name = name;
     }
 
     /**

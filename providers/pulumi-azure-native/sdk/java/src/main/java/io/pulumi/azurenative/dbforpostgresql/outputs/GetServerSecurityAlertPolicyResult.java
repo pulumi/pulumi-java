@@ -80,13 +80,13 @@ public final class GetServerSecurityAlertPolicyResult {
         this.disabledAlerts = disabledAlerts;
         this.emailAccountAdmins = emailAccountAdmins;
         this.emailAddresses = emailAddresses;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.retentionDays = retentionDays;
-        this.state = Objects.requireNonNull(state);
+        this.state = state;
         this.storageAccountAccessKey = storageAccountAccessKey;
         this.storageEndpoint = storageEndpoint;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

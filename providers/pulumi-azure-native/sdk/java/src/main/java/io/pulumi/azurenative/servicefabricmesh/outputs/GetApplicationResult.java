@@ -111,18 +111,18 @@ public final class GetApplicationResult {
         this.debugParams = debugParams;
         this.description = description;
         this.diagnostics = diagnostics;
-        this.healthState = Objects.requireNonNull(healthState);
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.serviceNames = Objects.requireNonNull(serviceNames);
+        this.healthState = healthState;
+        this.id = id;
+        this.location = location;
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.serviceNames = serviceNames;
         this.services = services;
-        this.status = Objects.requireNonNull(status);
-        this.statusDetails = Objects.requireNonNull(statusDetails);
+        this.status = status;
+        this.statusDetails = statusDetails;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
-        this.unhealthyEvaluation = Objects.requireNonNull(unhealthyEvaluation);
+        this.type = type;
+        this.unhealthyEvaluation = unhealthyEvaluation;
     }
 
     /**

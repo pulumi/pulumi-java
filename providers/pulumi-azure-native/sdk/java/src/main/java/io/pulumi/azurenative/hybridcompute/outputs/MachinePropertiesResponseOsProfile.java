@@ -17,7 +17,7 @@ public final class MachinePropertiesResponseOsProfile {
 
     @OutputCustomType.Constructor({"computerName"})
     private MachinePropertiesResponseOsProfile(String computerName) {
-        this.computerName = Objects.requireNonNull(computerName);
+        this.computerName = computerName;
     }
 
     /**

@@ -68,7 +68,7 @@ public final class Endpoint {
         @Nullable String nodeName,
         @Nullable ObjectReference targetRef,
         @Nullable Map<String,String> topology) {
-        this.addresses = Objects.requireNonNull(addresses);
+        this.addresses = addresses;
         this.conditions = conditions;
         this.hints = hints;
         this.hostname = hostname;

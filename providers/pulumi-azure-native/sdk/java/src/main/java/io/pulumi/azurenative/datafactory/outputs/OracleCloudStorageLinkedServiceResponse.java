@@ -85,7 +85,7 @@ public final class OracleCloudStorageLinkedServiceResponse {
         this.parameters = parameters;
         this.secretAccessKey = secretAccessKey;
         this.serviceUrl = serviceUrl;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

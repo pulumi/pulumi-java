@@ -50,7 +50,7 @@ public final class ImageReferenceResponse {
         @Nullable String publisher,
         @Nullable String sku,
         @Nullable String version) {
-        this.exactVersion = Objects.requireNonNull(exactVersion);
+        this.exactVersion = exactVersion;
         this.id = id;
         this.offer = offer;
         this.publisher = publisher;

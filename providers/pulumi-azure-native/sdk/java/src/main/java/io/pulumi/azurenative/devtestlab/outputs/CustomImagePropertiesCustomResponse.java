@@ -34,7 +34,7 @@ public final class CustomImagePropertiesCustomResponse {
         String osType,
         @Nullable Boolean sysPrep) {
         this.imageName = imageName;
-        this.osType = Objects.requireNonNull(osType);
+        this.osType = osType;
         this.sysPrep = sysPrep;
     }
 

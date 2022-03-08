@@ -28,12 +28,12 @@ public final class GetListenerDefaultActionRedirect {
         String protocol,
         String query,
         String statusCode) {
-        this.host = Objects.requireNonNull(host);
-        this.path = Objects.requireNonNull(path);
-        this.port = Objects.requireNonNull(port);
-        this.protocol = Objects.requireNonNull(protocol);
-        this.query = Objects.requireNonNull(query);
-        this.statusCode = Objects.requireNonNull(statusCode);
+        this.host = host;
+        this.path = path;
+        this.port = port;
+        this.protocol = protocol;
+        this.query = query;
+        this.statusCode = statusCode;
     }
 
     public String getHost() {

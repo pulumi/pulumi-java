@@ -24,8 +24,8 @@ public final class ComputeInstanceConnectivityEndpointsResponse {
     private ComputeInstanceConnectivityEndpointsResponse(
         String privateIpAddress,
         String publicIpAddress) {
-        this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
-        this.publicIpAddress = Objects.requireNonNull(publicIpAddress);
+        this.privateIpAddress = privateIpAddress;
+        this.publicIpAddress = publicIpAddress;
     }
 
     /**

@@ -117,7 +117,7 @@ public final class SquareLinkedServiceResponse {
         this.host = host;
         this.parameters = parameters;
         this.redirectUri = redirectUri;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.useEncryptedEndpoints = useEncryptedEndpoints;
         this.useHostVerification = useHostVerification;
         this.usePeerVerification = usePeerVerification;

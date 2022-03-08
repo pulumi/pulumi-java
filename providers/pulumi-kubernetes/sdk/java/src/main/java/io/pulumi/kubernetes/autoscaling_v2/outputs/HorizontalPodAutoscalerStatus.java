@@ -57,7 +57,7 @@ public final class HorizontalPodAutoscalerStatus {
         this.conditions = conditions;
         this.currentMetrics = currentMetrics;
         this.currentReplicas = currentReplicas;
-        this.desiredReplicas = Objects.requireNonNull(desiredReplicas);
+        this.desiredReplicas = desiredReplicas;
         this.lastScaleTime = lastScaleTime;
         this.observedGeneration = observedGeneration;
     }

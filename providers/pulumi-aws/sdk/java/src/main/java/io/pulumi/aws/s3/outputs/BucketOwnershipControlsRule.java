@@ -17,7 +17,7 @@ public final class BucketOwnershipControlsRule {
 
     @OutputCustomType.Constructor({"objectOwnership"})
     private BucketOwnershipControlsRule(String objectOwnership) {
-        this.objectOwnership = Objects.requireNonNull(objectOwnership);
+        this.objectOwnership = objectOwnership;
     }
 
     /**

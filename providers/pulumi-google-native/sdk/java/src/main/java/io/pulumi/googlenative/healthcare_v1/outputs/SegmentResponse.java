@@ -31,9 +31,9 @@ public final class SegmentResponse {
         Map<String,String> fields,
         String segmentId,
         String setId) {
-        this.fields = Objects.requireNonNull(fields);
-        this.segmentId = Objects.requireNonNull(segmentId);
-        this.setId = Objects.requireNonNull(setId);
+        this.fields = fields;
+        this.segmentId = segmentId;
+        this.setId = setId;
     }
 
     /**

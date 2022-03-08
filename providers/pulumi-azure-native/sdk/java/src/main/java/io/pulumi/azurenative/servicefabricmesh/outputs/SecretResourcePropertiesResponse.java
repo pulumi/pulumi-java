@@ -53,10 +53,10 @@ public final class SecretResourcePropertiesResponse {
         String statusDetails) {
         this.contentType = contentType;
         this.description = description;
-        this.kind = Objects.requireNonNull(kind);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.status = Objects.requireNonNull(status);
-        this.statusDetails = Objects.requireNonNull(statusDetails);
+        this.kind = kind;
+        this.provisioningState = provisioningState;
+        this.status = status;
+        this.statusDetails = statusDetails;
     }
 
     /**

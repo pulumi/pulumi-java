@@ -24,8 +24,8 @@ public final class WorkerConfigResponse {
     private WorkerConfigResponse(
         String diskSizeGb,
         String machineType) {
-        this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
-        this.machineType = Objects.requireNonNull(machineType);
+        this.diskSizeGb = diskSizeGb;
+        this.machineType = machineType;
     }
 
     /**

@@ -74,17 +74,17 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecResponse {
         GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecResponse parentIntValues,
         String scaleType,
         String type) {
-        this.categoricalValueSpec = Objects.requireNonNull(categoricalValueSpec);
-        this.childParameterSpecs = Objects.requireNonNull(childParameterSpecs);
-        this.discreteValueSpec = Objects.requireNonNull(discreteValueSpec);
-        this.doubleValueSpec = Objects.requireNonNull(doubleValueSpec);
-        this.integerValueSpec = Objects.requireNonNull(integerValueSpec);
-        this.parameter = Objects.requireNonNull(parameter);
-        this.parentCategoricalValues = Objects.requireNonNull(parentCategoricalValues);
-        this.parentDiscreteValues = Objects.requireNonNull(parentDiscreteValues);
-        this.parentIntValues = Objects.requireNonNull(parentIntValues);
-        this.scaleType = Objects.requireNonNull(scaleType);
-        this.type = Objects.requireNonNull(type);
+        this.categoricalValueSpec = categoricalValueSpec;
+        this.childParameterSpecs = childParameterSpecs;
+        this.discreteValueSpec = discreteValueSpec;
+        this.doubleValueSpec = doubleValueSpec;
+        this.integerValueSpec = integerValueSpec;
+        this.parameter = parameter;
+        this.parentCategoricalValues = parentCategoricalValues;
+        this.parentDiscreteValues = parentDiscreteValues;
+        this.parentIntValues = parentIntValues;
+        this.scaleType = scaleType;
+        this.type = type;
     }
 
     /**

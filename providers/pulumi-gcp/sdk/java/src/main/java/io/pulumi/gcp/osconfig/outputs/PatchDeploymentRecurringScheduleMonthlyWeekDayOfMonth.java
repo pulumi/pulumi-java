@@ -26,8 +26,8 @@ public final class PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth {
     private PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth(
         String dayOfWeek,
         Integer weekOrdinal) {
-        this.dayOfWeek = Objects.requireNonNull(dayOfWeek);
-        this.weekOrdinal = Objects.requireNonNull(weekOrdinal);
+        this.dayOfWeek = dayOfWeek;
+        this.weekOrdinal = weekOrdinal;
     }
 
     /**

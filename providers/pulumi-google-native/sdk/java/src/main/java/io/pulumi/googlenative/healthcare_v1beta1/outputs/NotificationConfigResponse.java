@@ -25,8 +25,8 @@ public final class NotificationConfigResponse {
     private NotificationConfigResponse(
         String pubsubTopic,
         Boolean sendForBulkImport) {
-        this.pubsubTopic = Objects.requireNonNull(pubsubTopic);
-        this.sendForBulkImport = Objects.requireNonNull(sendForBulkImport);
+        this.pubsubTopic = pubsubTopic;
+        this.sendForBulkImport = sendForBulkImport;
     }
 
     /**

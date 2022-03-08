@@ -35,7 +35,7 @@ public final class PolicyStepScalingPolicyConfigurationStepAdjustment {
         Integer scalingAdjustment) {
         this.metricIntervalLowerBound = metricIntervalLowerBound;
         this.metricIntervalUpperBound = metricIntervalUpperBound;
-        this.scalingAdjustment = Objects.requireNonNull(scalingAdjustment);
+        this.scalingAdjustment = scalingAdjustment;
     }
 
     /**

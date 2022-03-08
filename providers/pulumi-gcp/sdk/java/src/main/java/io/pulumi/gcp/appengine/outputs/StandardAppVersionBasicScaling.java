@@ -29,7 +29,7 @@ public final class StandardAppVersionBasicScaling {
         @Nullable String idleTimeout,
         Integer maxInstances) {
         this.idleTimeout = idleTimeout;
-        this.maxInstances = Objects.requireNonNull(maxInstances);
+        this.maxInstances = maxInstances;
     }
 
     /**

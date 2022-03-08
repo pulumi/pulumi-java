@@ -25,8 +25,8 @@ public final class GooglePrivacyDlpV2OutputStorageConfigResponse {
     private GooglePrivacyDlpV2OutputStorageConfigResponse(
         String outputSchema,
         GooglePrivacyDlpV2BigQueryTableResponse table) {
-        this.outputSchema = Objects.requireNonNull(outputSchema);
-        this.table = Objects.requireNonNull(table);
+        this.outputSchema = outputSchema;
+        this.table = table;
     }
 
     /**

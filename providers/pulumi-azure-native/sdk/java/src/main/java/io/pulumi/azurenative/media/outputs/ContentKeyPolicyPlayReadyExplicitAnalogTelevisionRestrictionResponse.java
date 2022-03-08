@@ -25,8 +25,8 @@ public final class ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionR
     private ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionResponse(
         Boolean bestEffort,
         Integer configurationData) {
-        this.bestEffort = Objects.requireNonNull(bestEffort);
-        this.configurationData = Objects.requireNonNull(configurationData);
+        this.bestEffort = bestEffort;
+        this.configurationData = configurationData;
     }
 
     /**

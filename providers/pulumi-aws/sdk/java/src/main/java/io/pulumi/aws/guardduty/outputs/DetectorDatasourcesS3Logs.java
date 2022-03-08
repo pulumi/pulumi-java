@@ -17,7 +17,7 @@ public final class DetectorDatasourcesS3Logs {
 
     @OutputCustomType.Constructor({"enable"})
     private DetectorDatasourcesS3Logs(Boolean enable) {
-        this.enable = Objects.requireNonNull(enable);
+        this.enable = enable;
     }
 
     /**

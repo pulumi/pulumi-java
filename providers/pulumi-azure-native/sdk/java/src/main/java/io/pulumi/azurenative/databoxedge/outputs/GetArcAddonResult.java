@@ -92,19 +92,19 @@ public final class GetArcAddonResult {
         SystemDataResponse systemData,
         String type,
         String version) {
-        this.hostPlatform = Objects.requireNonNull(hostPlatform);
-        this.hostPlatformType = Objects.requireNonNull(hostPlatformType);
-        this.id = Objects.requireNonNull(id);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
-        this.resourceLocation = Objects.requireNonNull(resourceLocation);
-        this.resourceName = Objects.requireNonNull(resourceName);
-        this.subscriptionId = Objects.requireNonNull(subscriptionId);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
-        this.version = Objects.requireNonNull(version);
+        this.hostPlatform = hostPlatform;
+        this.hostPlatformType = hostPlatformType;
+        this.id = id;
+        this.kind = kind;
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.resourceGroupName = resourceGroupName;
+        this.resourceLocation = resourceLocation;
+        this.resourceName = resourceName;
+        this.subscriptionId = subscriptionId;
+        this.systemData = systemData;
+        this.type = type;
+        this.version = version;
     }
 
     /**

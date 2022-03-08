@@ -26,7 +26,7 @@ public final class LoadBalancerTag {
     private LoadBalancerTag(
         String key,
         @Nullable String value) {
-        this.key = Objects.requireNonNull(key);
+        this.key = key;
         this.value = value;
     }
 

@@ -74,16 +74,16 @@ public final class X12EnvelopeOverrideResponse {
         String senderApplicationId,
         String targetNamespace,
         String timeFormat) {
-        this.dateFormat = Objects.requireNonNull(dateFormat);
+        this.dateFormat = dateFormat;
         this.functionalIdentifierCode = functionalIdentifierCode;
-        this.headerVersion = Objects.requireNonNull(headerVersion);
-        this.messageId = Objects.requireNonNull(messageId);
-        this.protocolVersion = Objects.requireNonNull(protocolVersion);
-        this.receiverApplicationId = Objects.requireNonNull(receiverApplicationId);
-        this.responsibleAgencyCode = Objects.requireNonNull(responsibleAgencyCode);
-        this.senderApplicationId = Objects.requireNonNull(senderApplicationId);
-        this.targetNamespace = Objects.requireNonNull(targetNamespace);
-        this.timeFormat = Objects.requireNonNull(timeFormat);
+        this.headerVersion = headerVersion;
+        this.messageId = messageId;
+        this.protocolVersion = protocolVersion;
+        this.receiverApplicationId = receiverApplicationId;
+        this.responsibleAgencyCode = responsibleAgencyCode;
+        this.senderApplicationId = senderApplicationId;
+        this.targetNamespace = targetNamespace;
+        this.timeFormat = timeFormat;
     }
 
     /**

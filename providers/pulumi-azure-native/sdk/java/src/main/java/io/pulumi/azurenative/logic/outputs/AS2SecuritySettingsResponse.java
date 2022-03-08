@@ -75,14 +75,14 @@ public final class AS2SecuritySettingsResponse {
         Boolean overrideGroupSigningCertificate,
         @Nullable String sha2AlgorithmFormat,
         @Nullable String signingCertificateName) {
-        this.enableNRRForInboundDecodedMessages = Objects.requireNonNull(enableNRRForInboundDecodedMessages);
-        this.enableNRRForInboundEncodedMessages = Objects.requireNonNull(enableNRRForInboundEncodedMessages);
-        this.enableNRRForInboundMDN = Objects.requireNonNull(enableNRRForInboundMDN);
-        this.enableNRRForOutboundDecodedMessages = Objects.requireNonNull(enableNRRForOutboundDecodedMessages);
-        this.enableNRRForOutboundEncodedMessages = Objects.requireNonNull(enableNRRForOutboundEncodedMessages);
-        this.enableNRRForOutboundMDN = Objects.requireNonNull(enableNRRForOutboundMDN);
+        this.enableNRRForInboundDecodedMessages = enableNRRForInboundDecodedMessages;
+        this.enableNRRForInboundEncodedMessages = enableNRRForInboundEncodedMessages;
+        this.enableNRRForInboundMDN = enableNRRForInboundMDN;
+        this.enableNRRForOutboundDecodedMessages = enableNRRForOutboundDecodedMessages;
+        this.enableNRRForOutboundEncodedMessages = enableNRRForOutboundEncodedMessages;
+        this.enableNRRForOutboundMDN = enableNRRForOutboundMDN;
         this.encryptionCertificateName = encryptionCertificateName;
-        this.overrideGroupSigningCertificate = Objects.requireNonNull(overrideGroupSigningCertificate);
+        this.overrideGroupSigningCertificate = overrideGroupSigningCertificate;
         this.sha2AlgorithmFormat = sha2AlgorithmFormat;
         this.signingCertificateName = signingCertificateName;
     }

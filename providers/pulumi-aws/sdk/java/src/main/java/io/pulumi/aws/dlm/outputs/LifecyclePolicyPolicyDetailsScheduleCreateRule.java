@@ -33,7 +33,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleCreateRule {
         Integer interval,
         @Nullable String intervalUnit,
         @Nullable String times) {
-        this.interval = Objects.requireNonNull(interval);
+        this.interval = interval;
         this.intervalUnit = intervalUnit;
         this.times = times;
     }

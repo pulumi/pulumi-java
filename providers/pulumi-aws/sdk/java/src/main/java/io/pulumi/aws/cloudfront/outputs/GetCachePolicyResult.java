@@ -57,14 +57,14 @@ public final class GetCachePolicyResult {
         Integer minTtl,
         @Nullable String name,
         List<GetCachePolicyParametersInCacheKeyAndForwardedToOrigin> parametersInCacheKeyAndForwardedToOrigins) {
-        this.comment = Objects.requireNonNull(comment);
-        this.defaultTtl = Objects.requireNonNull(defaultTtl);
-        this.etag = Objects.requireNonNull(etag);
+        this.comment = comment;
+        this.defaultTtl = defaultTtl;
+        this.etag = etag;
         this.id = id;
-        this.maxTtl = Objects.requireNonNull(maxTtl);
-        this.minTtl = Objects.requireNonNull(minTtl);
+        this.maxTtl = maxTtl;
+        this.minTtl = minTtl;
         this.name = name;
-        this.parametersInCacheKeyAndForwardedToOrigins = Objects.requireNonNull(parametersInCacheKeyAndForwardedToOrigins);
+        this.parametersInCacheKeyAndForwardedToOrigins = parametersInCacheKeyAndForwardedToOrigins;
     }
 
     /**

@@ -30,9 +30,9 @@ public final class GetSchemaResult {
         String definition,
         String name,
         String type) {
-        this.definition = Objects.requireNonNull(definition);
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.definition = definition;
+        this.name = name;
+        this.type = type;
     }
 
     /**

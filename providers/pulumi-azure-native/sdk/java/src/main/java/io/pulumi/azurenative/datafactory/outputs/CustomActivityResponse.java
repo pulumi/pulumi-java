@@ -108,18 +108,18 @@ public final class CustomActivityResponse {
         String type,
         @Nullable List<UserPropertyResponse> userProperties) {
         this.autoUserSpecification = autoUserSpecification;
-        this.command = Objects.requireNonNull(command);
+        this.command = command;
         this.dependsOn = dependsOn;
         this.description = description;
         this.extendedProperties = extendedProperties;
         this.folderPath = folderPath;
         this.linkedServiceName = linkedServiceName;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.policy = policy;
         this.referenceObjects = referenceObjects;
         this.resourceLinkedService = resourceLinkedService;
         this.retentionTimeInDays = retentionTimeInDays;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.userProperties = userProperties;
     }
 

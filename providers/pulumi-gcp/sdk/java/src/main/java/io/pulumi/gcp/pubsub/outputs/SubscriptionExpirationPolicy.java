@@ -21,7 +21,7 @@ public final class SubscriptionExpirationPolicy {
 
     @OutputCustomType.Constructor({"ttl"})
     private SubscriptionExpirationPolicy(String ttl) {
-        this.ttl = Objects.requireNonNull(ttl);
+        this.ttl = ttl;
     }
 
     /**

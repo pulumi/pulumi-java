@@ -41,7 +41,7 @@ public final class ProjectServiceCatalogProvisioningDetails {
         @Nullable String provisioningArtifactId,
         @Nullable List<ProjectServiceCatalogProvisioningDetailsProvisioningParameter> provisioningParameters) {
         this.pathId = pathId;
-        this.productId = Objects.requireNonNull(productId);
+        this.productId = productId;
         this.provisioningArtifactId = provisioningArtifactId;
         this.provisioningParameters = provisioningParameters;
     }

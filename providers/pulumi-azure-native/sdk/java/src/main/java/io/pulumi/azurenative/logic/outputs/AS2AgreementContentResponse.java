@@ -24,8 +24,8 @@ public final class AS2AgreementContentResponse {
     private AS2AgreementContentResponse(
         AS2OneWayAgreementResponse receiveAgreement,
         AS2OneWayAgreementResponse sendAgreement) {
-        this.receiveAgreement = Objects.requireNonNull(receiveAgreement);
-        this.sendAgreement = Objects.requireNonNull(sendAgreement);
+        this.receiveAgreement = receiveAgreement;
+        this.sendAgreement = sendAgreement;
     }
 
     /**

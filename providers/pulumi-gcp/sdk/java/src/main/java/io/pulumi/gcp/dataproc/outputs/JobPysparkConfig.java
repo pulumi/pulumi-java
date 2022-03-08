@@ -66,7 +66,7 @@ public final class JobPysparkConfig {
         this.fileUris = fileUris;
         this.jarFileUris = jarFileUris;
         this.loggingConfig = loggingConfig;
-        this.mainPythonFileUri = Objects.requireNonNull(mainPythonFileUri);
+        this.mainPythonFileUri = mainPythonFileUri;
         this.properties = properties;
         this.pythonFileUris = pythonFileUris;
     }

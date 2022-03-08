@@ -30,9 +30,9 @@ public final class ListAccountKeysResult {
         String id,
         String primaryKey,
         String secondaryKey) {
-        this.id = Objects.requireNonNull(id);
-        this.primaryKey = Objects.requireNonNull(primaryKey);
-        this.secondaryKey = Objects.requireNonNull(secondaryKey);
+        this.id = id;
+        this.primaryKey = primaryKey;
+        this.secondaryKey = secondaryKey;
     }
 
     /**

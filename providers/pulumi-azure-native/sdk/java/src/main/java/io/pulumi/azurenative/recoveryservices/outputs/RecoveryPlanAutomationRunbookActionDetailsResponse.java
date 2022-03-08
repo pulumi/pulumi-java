@@ -39,8 +39,8 @@ public final class RecoveryPlanAutomationRunbookActionDetailsResponse {
         String instanceType,
         @Nullable String runbookId,
         @Nullable String timeout) {
-        this.fabricLocation = Objects.requireNonNull(fabricLocation);
-        this.instanceType = Objects.requireNonNull(instanceType);
+        this.fabricLocation = fabricLocation;
+        this.instanceType = instanceType;
         this.runbookId = runbookId;
         this.timeout = timeout;
     }

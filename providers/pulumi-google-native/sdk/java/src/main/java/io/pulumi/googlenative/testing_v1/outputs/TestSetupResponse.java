@@ -60,13 +60,13 @@ public final class TestSetupResponse {
         List<EnvironmentVariableResponse> environmentVariables,
         List<DeviceFileResponse> filesToPush,
         String networkProfile) {
-        this.account = Objects.requireNonNull(account);
-        this.additionalApks = Objects.requireNonNull(additionalApks);
-        this.directoriesToPull = Objects.requireNonNull(directoriesToPull);
-        this.dontAutograntPermissions = Objects.requireNonNull(dontAutograntPermissions);
-        this.environmentVariables = Objects.requireNonNull(environmentVariables);
-        this.filesToPush = Objects.requireNonNull(filesToPush);
-        this.networkProfile = Objects.requireNonNull(networkProfile);
+        this.account = account;
+        this.additionalApks = additionalApks;
+        this.directoriesToPull = directoriesToPull;
+        this.dontAutograntPermissions = dontAutograntPermissions;
+        this.environmentVariables = environmentVariables;
+        this.filesToPush = filesToPush;
+        this.networkProfile = networkProfile;
     }
 
     /**

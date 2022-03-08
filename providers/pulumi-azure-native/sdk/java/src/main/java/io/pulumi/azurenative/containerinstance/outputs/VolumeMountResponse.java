@@ -33,8 +33,8 @@ public final class VolumeMountResponse {
         String mountPath,
         String name,
         @Nullable Boolean readOnly) {
-        this.mountPath = Objects.requireNonNull(mountPath);
-        this.name = Objects.requireNonNull(name);
+        this.mountPath = mountPath;
+        this.name = name;
         this.readOnly = readOnly;
     }
 

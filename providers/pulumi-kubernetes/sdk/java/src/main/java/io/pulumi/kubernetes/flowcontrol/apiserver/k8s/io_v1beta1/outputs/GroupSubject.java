@@ -17,7 +17,7 @@ public final class GroupSubject {
 
     @OutputCustomType.Constructor({"name"})
     private GroupSubject(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

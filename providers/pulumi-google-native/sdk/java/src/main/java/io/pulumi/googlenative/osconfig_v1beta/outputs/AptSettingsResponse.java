@@ -31,9 +31,9 @@ public final class AptSettingsResponse {
         List<String> excludes,
         List<String> exclusivePackages,
         String type) {
-        this.excludes = Objects.requireNonNull(excludes);
-        this.exclusivePackages = Objects.requireNonNull(exclusivePackages);
-        this.type = Objects.requireNonNull(type);
+        this.excludes = excludes;
+        this.exclusivePackages = exclusivePackages;
+        this.type = type;
     }
 
     /**

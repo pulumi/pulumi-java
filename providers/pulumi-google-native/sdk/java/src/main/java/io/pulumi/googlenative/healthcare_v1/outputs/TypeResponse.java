@@ -32,9 +32,9 @@ public final class TypeResponse {
         List<FieldResponse> fields,
         String name,
         String primitive) {
-        this.fields = Objects.requireNonNull(fields);
-        this.name = Objects.requireNonNull(name);
-        this.primitive = Objects.requireNonNull(primitive);
+        this.fields = fields;
+        this.name = name;
+        this.primitive = primitive;
     }
 
     /**

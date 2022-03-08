@@ -17,7 +17,7 @@ public final class OrganizationPolicyBooleanPolicy {
 
     @OutputCustomType.Constructor({"enforced"})
     private OrganizationPolicyBooleanPolicy(Boolean enforced) {
-        this.enforced = Objects.requireNonNull(enforced);
+        this.enforced = enforced;
     }
 
     /**

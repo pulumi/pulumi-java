@@ -17,7 +17,7 @@ public final class GatewayRouteSpecGrpcRouteAction {
 
     @OutputCustomType.Constructor({"target"})
     private GatewayRouteSpecGrpcRouteAction(GatewayRouteSpecGrpcRouteActionTarget target) {
-        this.target = Objects.requireNonNull(target);
+        this.target = target;
     }
 
     /**

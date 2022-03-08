@@ -18,7 +18,7 @@ public final class AndroidDeviceListResponse {
 
     @OutputCustomType.Constructor({"androidDevices"})
     private AndroidDeviceListResponse(List<AndroidDeviceResponse> androidDevices) {
-        this.androidDevices = Objects.requireNonNull(androidDevices);
+        this.androidDevices = androidDevices;
     }
 
     /**

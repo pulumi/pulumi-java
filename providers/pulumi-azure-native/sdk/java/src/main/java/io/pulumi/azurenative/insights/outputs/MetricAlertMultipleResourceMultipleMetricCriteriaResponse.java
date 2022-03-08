@@ -31,7 +31,7 @@ public final class MetricAlertMultipleResourceMultipleMetricCriteriaResponse {
         @Nullable List<Either<DynamicMetricCriteriaResponse,MetricCriteriaResponse>> allOf,
         String odataType) {
         this.allOf = allOf;
-        this.odataType = Objects.requireNonNull(odataType);
+        this.odataType = odataType;
     }
 
     /**

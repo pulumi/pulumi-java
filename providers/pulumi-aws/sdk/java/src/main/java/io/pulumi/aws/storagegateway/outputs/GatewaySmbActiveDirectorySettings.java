@@ -58,11 +58,11 @@ public final class GatewaySmbActiveDirectorySettings {
         String username) {
         this.activeDirectoryStatus = activeDirectoryStatus;
         this.domainControllers = domainControllers;
-        this.domainName = Objects.requireNonNull(domainName);
+        this.domainName = domainName;
         this.organizationalUnit = organizationalUnit;
-        this.password = Objects.requireNonNull(password);
+        this.password = password;
         this.timeoutInSeconds = timeoutInSeconds;
-        this.username = Objects.requireNonNull(username);
+        this.username = username;
     }
 
     public Optional<String> getActiveDirectoryStatus() {

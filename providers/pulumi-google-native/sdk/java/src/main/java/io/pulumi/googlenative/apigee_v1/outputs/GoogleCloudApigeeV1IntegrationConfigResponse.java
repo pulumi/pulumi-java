@@ -17,7 +17,7 @@ public final class GoogleCloudApigeeV1IntegrationConfigResponse {
 
     @OutputCustomType.Constructor({"enabled"})
     private GoogleCloudApigeeV1IntegrationConfigResponse(Boolean enabled) {
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
     }
 
     /**

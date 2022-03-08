@@ -24,8 +24,8 @@ public final class ParticipantPropertyReferenceResponse {
     private ParticipantPropertyReferenceResponse(
         String sourcePropertyName,
         String targetPropertyName) {
-        this.sourcePropertyName = Objects.requireNonNull(sourcePropertyName);
-        this.targetPropertyName = Objects.requireNonNull(targetPropertyName);
+        this.sourcePropertyName = sourcePropertyName;
+        this.targetPropertyName = targetPropertyName;
     }
 
     /**

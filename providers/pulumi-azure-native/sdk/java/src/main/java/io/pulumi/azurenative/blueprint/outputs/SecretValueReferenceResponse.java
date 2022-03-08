@@ -33,8 +33,8 @@ public final class SecretValueReferenceResponse {
         KeyVaultReferenceResponse keyVault,
         String secretName,
         @Nullable String secretVersion) {
-        this.keyVault = Objects.requireNonNull(keyVault);
-        this.secretName = Objects.requireNonNull(secretName);
+        this.keyVault = keyVault;
+        this.secretName = secretName;
         this.secretVersion = secretVersion;
     }
 

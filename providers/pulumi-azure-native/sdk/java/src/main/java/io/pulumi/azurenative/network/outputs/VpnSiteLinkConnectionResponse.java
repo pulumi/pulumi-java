@@ -147,21 +147,21 @@ public final class VpnSiteLinkConnectionResponse {
         @Nullable String vpnLinkConnectionMode,
         @Nullable SubResourceResponse vpnSiteLink) {
         this.connectionBandwidth = connectionBandwidth;
-        this.connectionStatus = Objects.requireNonNull(connectionStatus);
-        this.egressBytesTransferred = Objects.requireNonNull(egressBytesTransferred);
+        this.connectionStatus = connectionStatus;
+        this.egressBytesTransferred = egressBytesTransferred;
         this.egressNatRules = egressNatRules;
         this.enableBgp = enableBgp;
         this.enableRateLimiting = enableRateLimiting;
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.id = id;
-        this.ingressBytesTransferred = Objects.requireNonNull(ingressBytesTransferred);
+        this.ingressBytesTransferred = ingressBytesTransferred;
         this.ingressNatRules = ingressNatRules;
         this.ipsecPolicies = ipsecPolicies;
         this.name = name;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.routingWeight = routingWeight;
         this.sharedKey = sharedKey;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.useLocalAzureIpAddress = useLocalAzureIpAddress;
         this.usePolicyBasedTrafficSelectors = usePolicyBasedTrafficSelectors;
         this.vpnConnectionProtocolType = vpnConnectionProtocolType;

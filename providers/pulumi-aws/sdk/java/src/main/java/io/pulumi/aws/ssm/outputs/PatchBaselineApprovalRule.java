@@ -52,7 +52,7 @@ public final class PatchBaselineApprovalRule {
         this.approveUntilDate = approveUntilDate;
         this.complianceLevel = complianceLevel;
         this.enableNonSecurity = enableNonSecurity;
-        this.patchFilters = Objects.requireNonNull(patchFilters);
+        this.patchFilters = patchFilters;
     }
 
     /**

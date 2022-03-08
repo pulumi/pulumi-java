@@ -38,10 +38,10 @@ public final class GetConsentStoreResult {
         Boolean enableConsentCreateOnUpdate,
         Map<String,String> labels,
         String name) {
-        this.defaultConsentTtl = Objects.requireNonNull(defaultConsentTtl);
-        this.enableConsentCreateOnUpdate = Objects.requireNonNull(enableConsentCreateOnUpdate);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
+        this.defaultConsentTtl = defaultConsentTtl;
+        this.enableConsentCreateOnUpdate = enableConsentCreateOnUpdate;
+        this.labels = labels;
+        this.name = name;
     }
 
     /**

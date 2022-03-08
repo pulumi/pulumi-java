@@ -25,8 +25,8 @@ public final class UtcClipTimeResponse {
     private UtcClipTimeResponse(
         String odataType,
         String time) {
-        this.odataType = Objects.requireNonNull(odataType);
-        this.time = Objects.requireNonNull(time);
+        this.odataType = odataType;
+        this.time = time;
     }
 
     /**

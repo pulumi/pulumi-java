@@ -34,8 +34,8 @@ public final class AzureFileVolumeSource {
         String secretName,
         String shareName) {
         this.readOnly = readOnly;
-        this.secretName = Objects.requireNonNull(secretName);
-        this.shareName = Objects.requireNonNull(shareName);
+        this.secretName = secretName;
+        this.shareName = shareName;
     }
 
     /**

@@ -63,14 +63,14 @@ public final class CutoverJobResponse {
         String state,
         String stateMessage,
         String stateTime) {
-        this.computeEngineTargetDetails = Objects.requireNonNull(computeEngineTargetDetails);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.error = Objects.requireNonNull(error);
-        this.name = Objects.requireNonNull(name);
-        this.progressPercent = Objects.requireNonNull(progressPercent);
-        this.state = Objects.requireNonNull(state);
-        this.stateMessage = Objects.requireNonNull(stateMessage);
-        this.stateTime = Objects.requireNonNull(stateTime);
+        this.computeEngineTargetDetails = computeEngineTargetDetails;
+        this.createTime = createTime;
+        this.error = error;
+        this.name = name;
+        this.progressPercent = progressPercent;
+        this.state = state;
+        this.stateMessage = stateMessage;
+        this.stateTime = stateTime;
     }
 
     /**

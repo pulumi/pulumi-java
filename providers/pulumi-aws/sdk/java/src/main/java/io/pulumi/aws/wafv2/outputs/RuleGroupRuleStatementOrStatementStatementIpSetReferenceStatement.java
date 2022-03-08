@@ -27,7 +27,7 @@ public final class RuleGroupRuleStatementOrStatementStatementIpSetReferenceState
     private RuleGroupRuleStatementOrStatementStatementIpSetReferenceStatement(
         String arn,
         @Nullable RuleGroupRuleStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig ipSetForwardedIpConfig) {
-        this.arn = Objects.requireNonNull(arn);
+        this.arn = arn;
         this.ipSetForwardedIpConfig = ipSetForwardedIpConfig;
     }
 

@@ -41,10 +41,10 @@ public final class GetScriptDagNode {
         String id,
         @Nullable Integer lineNumber,
         String nodeType) {
-        this.args = Objects.requireNonNull(args);
-        this.id = Objects.requireNonNull(id);
+        this.args = args;
+        this.id = id;
         this.lineNumber = lineNumber;
-        this.nodeType = Objects.requireNonNull(nodeType);
+        this.nodeType = nodeType;
     }
 
     /**

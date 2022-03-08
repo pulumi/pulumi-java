@@ -33,8 +33,8 @@ public final class ReceiptRuleWorkmailAction {
         String organizationArn,
         Integer position,
         @Nullable String topicArn) {
-        this.organizationArn = Objects.requireNonNull(organizationArn);
-        this.position = Objects.requireNonNull(position);
+        this.organizationArn = organizationArn;
+        this.position = position;
         this.topicArn = topicArn;
     }
 

@@ -25,8 +25,8 @@ public final class DataStoreIndexProperty {
     private DataStoreIndexProperty(
         String direction,
         String name) {
-        this.direction = Objects.requireNonNull(direction);
-        this.name = Objects.requireNonNull(name);
+        this.direction = direction;
+        this.name = name;
     }
 
     /**

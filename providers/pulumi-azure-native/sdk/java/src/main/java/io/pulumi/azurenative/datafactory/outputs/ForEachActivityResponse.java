@@ -113,14 +113,14 @@ public final class ForEachActivityResponse {
         String name,
         String type,
         @Nullable List<UserPropertyResponse> userProperties) {
-        this.activities = Objects.requireNonNull(activities);
+        this.activities = activities;
         this.batchCount = batchCount;
         this.dependsOn = dependsOn;
         this.description = description;
         this.isSequential = isSequential;
-        this.items = Objects.requireNonNull(items);
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.items = items;
+        this.name = name;
+        this.type = type;
         this.userProperties = userProperties;
     }
 

@@ -48,7 +48,7 @@ public final class GuestPoliciesRecipeArtifact {
         @Nullable GuestPoliciesRecipeArtifactRemote remote) {
         this.allowInsecure = allowInsecure;
         this.gcs = gcs;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.remote = remote;
     }
 

@@ -25,8 +25,8 @@ public final class InstanceGroupManagerAutoHealingPolicyResponse {
     private InstanceGroupManagerAutoHealingPolicyResponse(
         String healthCheck,
         Integer initialDelaySec) {
-        this.healthCheck = Objects.requireNonNull(healthCheck);
-        this.initialDelaySec = Objects.requireNonNull(initialDelaySec);
+        this.healthCheck = healthCheck;
+        this.initialDelaySec = initialDelaySec;
     }
 
     /**

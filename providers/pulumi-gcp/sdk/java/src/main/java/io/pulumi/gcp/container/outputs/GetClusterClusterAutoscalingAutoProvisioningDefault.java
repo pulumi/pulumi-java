@@ -21,10 +21,10 @@ public final class GetClusterClusterAutoscalingAutoProvisioningDefault {
         String minCpuPlatform,
         List<String> oauthScopes,
         String serviceAccount) {
-        this.imageType = Objects.requireNonNull(imageType);
-        this.minCpuPlatform = Objects.requireNonNull(minCpuPlatform);
-        this.oauthScopes = Objects.requireNonNull(oauthScopes);
-        this.serviceAccount = Objects.requireNonNull(serviceAccount);
+        this.imageType = imageType;
+        this.minCpuPlatform = minCpuPlatform;
+        this.oauthScopes = oauthScopes;
+        this.serviceAccount = serviceAccount;
     }
 
     public String getImageType() {

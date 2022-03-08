@@ -28,7 +28,7 @@ public final class UptimeCheckConfigContentMatcher {
     private UptimeCheckConfigContentMatcher(
         String content,
         @Nullable String matcher) {
-        this.content = Objects.requireNonNull(content);
+        this.content = content;
         this.matcher = matcher;
     }
 

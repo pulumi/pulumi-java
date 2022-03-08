@@ -13,7 +13,7 @@ public final class ScheduledActionPauseClusterMessage {
 
     @OutputCustomType.Constructor({"clusterIdentifier"})
     private ScheduledActionPauseClusterMessage(String clusterIdentifier) {
-        this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier);
+        this.clusterIdentifier = clusterIdentifier;
     }
 
     public String getClusterIdentifier() {

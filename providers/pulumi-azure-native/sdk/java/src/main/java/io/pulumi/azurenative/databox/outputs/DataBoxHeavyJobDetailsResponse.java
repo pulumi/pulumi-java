@@ -126,21 +126,21 @@ public final class DataBoxHeavyJobDetailsResponse {
         PackageShippingDetailsResponse returnPackage,
         String reverseShipmentLabelSasKey,
         @Nullable ShippingAddressResponse shippingAddress) {
-        this.chainOfCustodySasKey = Objects.requireNonNull(chainOfCustodySasKey);
-        this.contactDetails = Objects.requireNonNull(contactDetails);
-        this.copyLogDetails = Objects.requireNonNull(copyLogDetails);
-        this.copyProgress = Objects.requireNonNull(copyProgress);
+        this.chainOfCustodySasKey = chainOfCustodySasKey;
+        this.contactDetails = contactDetails;
+        this.copyLogDetails = copyLogDetails;
+        this.copyProgress = copyProgress;
         this.dataExportDetails = dataExportDetails;
         this.dataImportDetails = dataImportDetails;
-        this.deliveryPackage = Objects.requireNonNull(deliveryPackage);
+        this.deliveryPackage = deliveryPackage;
         this.devicePassword = devicePassword;
         this.expectedDataSizeInTeraBytes = expectedDataSizeInTeraBytes;
-        this.jobDetailsType = Objects.requireNonNull(jobDetailsType);
-        this.jobStages = Objects.requireNonNull(jobStages);
+        this.jobDetailsType = jobDetailsType;
+        this.jobStages = jobStages;
         this.keyEncryptionKey = keyEncryptionKey;
         this.preferences = preferences;
-        this.returnPackage = Objects.requireNonNull(returnPackage);
-        this.reverseShipmentLabelSasKey = Objects.requireNonNull(reverseShipmentLabelSasKey);
+        this.returnPackage = returnPackage;
+        this.reverseShipmentLabelSasKey = reverseShipmentLabelSasKey;
         this.shippingAddress = shippingAddress;
     }
 

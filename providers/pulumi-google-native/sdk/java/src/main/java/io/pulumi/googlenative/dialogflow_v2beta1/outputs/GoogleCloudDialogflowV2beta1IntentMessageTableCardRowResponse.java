@@ -26,8 +26,8 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardRowResponse
     private GoogleCloudDialogflowV2beta1IntentMessageTableCardRowResponse(
         List<GoogleCloudDialogflowV2beta1IntentMessageTableCardCellResponse> cells,
         Boolean dividerAfter) {
-        this.cells = Objects.requireNonNull(cells);
-        this.dividerAfter = Objects.requireNonNull(dividerAfter);
+        this.cells = cells;
+        this.dividerAfter = dividerAfter;
     }
 
     /**

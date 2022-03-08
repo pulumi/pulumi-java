@@ -40,9 +40,9 @@ public final class EncryptionConfigurationResponse {
         @Nullable String keyVersion,
         String vaultBaseUrl) {
         this.identity = identity;
-        this.keyName = Objects.requireNonNull(keyName);
+        this.keyName = keyName;
         this.keyVersion = keyVersion;
-        this.vaultBaseUrl = Objects.requireNonNull(vaultBaseUrl);
+        this.vaultBaseUrl = vaultBaseUrl;
     }
 
     /**

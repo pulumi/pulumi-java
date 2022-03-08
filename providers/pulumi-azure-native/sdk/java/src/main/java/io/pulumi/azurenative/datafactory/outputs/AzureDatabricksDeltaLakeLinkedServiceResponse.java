@@ -96,10 +96,10 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse {
         this.connectVia = connectVia;
         this.credential = credential;
         this.description = description;
-        this.domain = Objects.requireNonNull(domain);
+        this.domain = domain;
         this.encryptedCredential = encryptedCredential;
         this.parameters = parameters;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.workspaceResourceId = workspaceResourceId;
     }
 

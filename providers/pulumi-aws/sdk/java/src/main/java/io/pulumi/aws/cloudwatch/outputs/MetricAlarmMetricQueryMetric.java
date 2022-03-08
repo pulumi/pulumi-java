@@ -56,10 +56,10 @@ public final class MetricAlarmMetricQueryMetric {
         String stat,
         @Nullable String unit) {
         this.dimensions = dimensions;
-        this.metricName = Objects.requireNonNull(metricName);
+        this.metricName = metricName;
         this.namespace = namespace;
-        this.period = Objects.requireNonNull(period);
-        this.stat = Objects.requireNonNull(stat);
+        this.period = period;
+        this.stat = stat;
         this.unit = unit;
     }
 

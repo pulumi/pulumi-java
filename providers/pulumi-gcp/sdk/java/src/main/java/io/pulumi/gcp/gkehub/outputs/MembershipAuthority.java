@@ -13,7 +13,7 @@ public final class MembershipAuthority {
 
     @OutputCustomType.Constructor({"issuer"})
     private MembershipAuthority(String issuer) {
-        this.issuer = Objects.requireNonNull(issuer);
+        this.issuer = issuer;
     }
 
     public String getIssuer() {

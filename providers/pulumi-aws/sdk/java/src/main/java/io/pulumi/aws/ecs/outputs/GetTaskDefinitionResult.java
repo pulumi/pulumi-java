@@ -57,14 +57,14 @@ public final class GetTaskDefinitionResult {
         String status,
         String taskDefinition,
         String taskRoleArn) {
-        this.arn = Objects.requireNonNull(arn);
-        this.family = Objects.requireNonNull(family);
-        this.id = Objects.requireNonNull(id);
-        this.networkMode = Objects.requireNonNull(networkMode);
-        this.revision = Objects.requireNonNull(revision);
-        this.status = Objects.requireNonNull(status);
-        this.taskDefinition = Objects.requireNonNull(taskDefinition);
-        this.taskRoleArn = Objects.requireNonNull(taskRoleArn);
+        this.arn = arn;
+        this.family = family;
+        this.id = id;
+        this.networkMode = networkMode;
+        this.revision = revision;
+        this.status = status;
+        this.taskDefinition = taskDefinition;
+        this.taskRoleArn = taskRoleArn;
     }
 
     /**

@@ -24,8 +24,8 @@ public final class AzureSkuResponse {
     private AzureSkuResponse(
         String name,
         String tier) {
-        this.name = Objects.requireNonNull(name);
-        this.tier = Objects.requireNonNull(tier);
+        this.name = name;
+        this.tier = tier;
     }
 
     /**

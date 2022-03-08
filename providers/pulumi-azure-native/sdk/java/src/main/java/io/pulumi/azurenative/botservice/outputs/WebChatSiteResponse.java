@@ -49,12 +49,12 @@ public final class WebChatSiteResponse {
         String key2,
         String siteId,
         String siteName) {
-        this.isEnabled = Objects.requireNonNull(isEnabled);
-        this.isWebchatPreviewEnabled = Objects.requireNonNull(isWebchatPreviewEnabled);
-        this.key = Objects.requireNonNull(key);
-        this.key2 = Objects.requireNonNull(key2);
-        this.siteId = Objects.requireNonNull(siteId);
-        this.siteName = Objects.requireNonNull(siteName);
+        this.isEnabled = isEnabled;
+        this.isWebchatPreviewEnabled = isWebchatPreviewEnabled;
+        this.key = key;
+        this.key2 = key2;
+        this.siteId = siteId;
+        this.siteName = siteName;
     }
 
     /**

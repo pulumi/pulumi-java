@@ -47,12 +47,12 @@ public final class GetInstancesResult {
         List<String> privateIps,
         List<String> publicIps) {
         this.filters = filters;
-        this.id = Objects.requireNonNull(id);
-        this.ids = Objects.requireNonNull(ids);
+        this.id = id;
+        this.ids = ids;
         this.instanceStateNames = instanceStateNames;
-        this.instanceTags = Objects.requireNonNull(instanceTags);
-        this.privateIps = Objects.requireNonNull(privateIps);
-        this.publicIps = Objects.requireNonNull(publicIps);
+        this.instanceTags = instanceTags;
+        this.privateIps = privateIps;
+        this.publicIps = publicIps;
     }
 
     public List<GetInstancesFilter> getFilters() {

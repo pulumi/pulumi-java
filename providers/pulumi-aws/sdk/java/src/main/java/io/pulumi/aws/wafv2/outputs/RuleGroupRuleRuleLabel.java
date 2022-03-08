@@ -17,7 +17,7 @@ public final class RuleGroupRuleRuleLabel {
 
     @OutputCustomType.Constructor({"name"})
     private RuleGroupRuleRuleLabel(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

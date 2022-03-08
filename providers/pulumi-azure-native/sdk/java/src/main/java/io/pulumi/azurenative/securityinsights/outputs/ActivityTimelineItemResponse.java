@@ -61,14 +61,14 @@ public final class ActivityTimelineItemResponse {
         String lastActivityTimeUTC,
         String queryId,
         String title) {
-        this.bucketEndTimeUTC = Objects.requireNonNull(bucketEndTimeUTC);
-        this.bucketStartTimeUTC = Objects.requireNonNull(bucketStartTimeUTC);
-        this.content = Objects.requireNonNull(content);
-        this.firstActivityTimeUTC = Objects.requireNonNull(firstActivityTimeUTC);
-        this.kind = Objects.requireNonNull(kind);
-        this.lastActivityTimeUTC = Objects.requireNonNull(lastActivityTimeUTC);
-        this.queryId = Objects.requireNonNull(queryId);
-        this.title = Objects.requireNonNull(title);
+        this.bucketEndTimeUTC = bucketEndTimeUTC;
+        this.bucketStartTimeUTC = bucketStartTimeUTC;
+        this.content = content;
+        this.firstActivityTimeUTC = firstActivityTimeUTC;
+        this.kind = kind;
+        this.lastActivityTimeUTC = lastActivityTimeUTC;
+        this.queryId = queryId;
+        this.title = title;
     }
 
     /**

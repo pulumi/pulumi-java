@@ -38,10 +38,10 @@ public final class MaintenancePolicyResponse {
         String description,
         String updateTime,
         List<WeeklyMaintenanceWindowResponse> weeklyMaintenanceWindow) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.description = Objects.requireNonNull(description);
-        this.updateTime = Objects.requireNonNull(updateTime);
-        this.weeklyMaintenanceWindow = Objects.requireNonNull(weeklyMaintenanceWindow);
+        this.createTime = createTime;
+        this.description = description;
+        this.updateTime = updateTime;
+        this.weeklyMaintenanceWindow = weeklyMaintenanceWindow;
     }
 
     /**

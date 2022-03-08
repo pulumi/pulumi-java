@@ -36,10 +36,10 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceInter
         Double lowerBound,
         Double ratio,
         Double upperBound) {
-        this.confidenceLevel = Objects.requireNonNull(confidenceLevel);
-        this.lowerBound = Objects.requireNonNull(lowerBound);
-        this.ratio = Objects.requireNonNull(ratio);
-        this.upperBound = Objects.requireNonNull(upperBound);
+        this.confidenceLevel = confidenceLevel;
+        this.lowerBound = lowerBound;
+        this.ratio = ratio;
+        this.upperBound = upperBound;
     }
 
     /**

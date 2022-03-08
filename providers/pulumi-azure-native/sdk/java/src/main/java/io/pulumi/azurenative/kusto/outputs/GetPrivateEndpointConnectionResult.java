@@ -63,14 +63,14 @@ public final class GetPrivateEndpointConnectionResult {
         String provisioningState,
         SystemDataResponse systemData,
         String type) {
-        this.groupId = Objects.requireNonNull(groupId);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.privateEndpoint = Objects.requireNonNull(privateEndpoint);
-        this.privateLinkServiceConnectionState = Objects.requireNonNull(privateLinkServiceConnectionState);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.groupId = groupId;
+        this.id = id;
+        this.name = name;
+        this.privateEndpoint = privateEndpoint;
+        this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
+        this.provisioningState = provisioningState;
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

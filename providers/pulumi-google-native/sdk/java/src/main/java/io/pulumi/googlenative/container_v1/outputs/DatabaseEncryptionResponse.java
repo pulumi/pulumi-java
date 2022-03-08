@@ -24,8 +24,8 @@ public final class DatabaseEncryptionResponse {
     private DatabaseEncryptionResponse(
         String keyName,
         String state) {
-        this.keyName = Objects.requireNonNull(keyName);
-        this.state = Objects.requireNonNull(state);
+        this.keyName = keyName;
+        this.state = state;
     }
 
     /**

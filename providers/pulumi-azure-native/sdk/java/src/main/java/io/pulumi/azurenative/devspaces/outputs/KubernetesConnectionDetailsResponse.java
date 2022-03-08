@@ -27,7 +27,7 @@ public final class KubernetesConnectionDetailsResponse {
     private KubernetesConnectionDetailsResponse(
         String instanceType,
         @Nullable String kubeConfig) {
-        this.instanceType = Objects.requireNonNull(instanceType);
+        this.instanceType = instanceType;
         this.kubeConfig = kubeConfig;
     }
 

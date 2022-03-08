@@ -232,7 +232,7 @@ public final class VMwareDetailsResponse {
         this.databaseServerLoad = databaseServerLoad;
         this.databaseServerLoadStatus = databaseServerLoadStatus;
         this.hostName = hostName;
-        this.instanceType = Objects.requireNonNull(instanceType);
+        this.instanceType = instanceType;
         this.ipAddress = ipAddress;
         this.lastHeartbeat = lastHeartbeat;
         this.masterTargetServers = masterTargetServers;

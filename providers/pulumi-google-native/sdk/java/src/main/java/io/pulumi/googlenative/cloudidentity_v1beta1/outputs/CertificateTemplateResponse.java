@@ -24,8 +24,8 @@ public final class CertificateTemplateResponse {
     private CertificateTemplateResponse(
         Integer majorVersion,
         Integer minorVersion) {
-        this.majorVersion = Objects.requireNonNull(majorVersion);
-        this.minorVersion = Objects.requireNonNull(minorVersion);
+        this.majorVersion = majorVersion;
+        this.minorVersion = minorVersion;
     }
 
     /**

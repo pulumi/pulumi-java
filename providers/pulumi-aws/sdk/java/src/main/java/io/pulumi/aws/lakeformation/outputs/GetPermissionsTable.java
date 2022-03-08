@@ -39,9 +39,9 @@ public final class GetPermissionsTable {
         String databaseName,
         String name,
         @Nullable Boolean wildcard) {
-        this.catalogId = Objects.requireNonNull(catalogId);
-        this.databaseName = Objects.requireNonNull(databaseName);
-        this.name = Objects.requireNonNull(name);
+        this.catalogId = catalogId;
+        this.databaseName = databaseName;
+        this.name = name;
         this.wildcard = wildcard;
     }
 

@@ -45,8 +45,8 @@ public final class DataDiskResponse {
         Integer lun,
         @Nullable String storageAccountType) {
         this.caching = caching;
-        this.diskSizeGB = Objects.requireNonNull(diskSizeGB);
-        this.lun = Objects.requireNonNull(lun);
+        this.diskSizeGB = diskSizeGB;
+        this.lun = lun;
         this.storageAccountType = storageAccountType;
     }
 

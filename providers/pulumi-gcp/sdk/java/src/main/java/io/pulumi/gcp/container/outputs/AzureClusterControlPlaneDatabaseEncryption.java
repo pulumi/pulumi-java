@@ -17,7 +17,7 @@ public final class AzureClusterControlPlaneDatabaseEncryption {
 
     @OutputCustomType.Constructor({"keyId"})
     private AzureClusterControlPlaneDatabaseEncryption(String keyId) {
-        this.keyId = Objects.requireNonNull(keyId);
+        this.keyId = keyId;
     }
 
     /**

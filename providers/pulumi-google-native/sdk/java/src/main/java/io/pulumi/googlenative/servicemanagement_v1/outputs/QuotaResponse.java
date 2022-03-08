@@ -26,8 +26,8 @@ public final class QuotaResponse {
     private QuotaResponse(
         List<QuotaLimitResponse> limits,
         List<MetricRuleResponse> metricRules) {
-        this.limits = Objects.requireNonNull(limits);
-        this.metricRules = Objects.requireNonNull(metricRules);
+        this.limits = limits;
+        this.metricRules = metricRules;
     }
 
     /**

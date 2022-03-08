@@ -34,8 +34,8 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
         String kind,
         String sizeDisk) {
         this.description = description;
-        this.kind = Objects.requireNonNull(kind);
-        this.sizeDisk = Objects.requireNonNull(sizeDisk);
+        this.kind = kind;
+        this.sizeDisk = sizeDisk;
     }
 
     /**

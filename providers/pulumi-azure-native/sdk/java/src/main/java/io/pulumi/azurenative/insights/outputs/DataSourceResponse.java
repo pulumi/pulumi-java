@@ -25,9 +25,9 @@ public final class DataSourceResponse {
         DataSourceConfigurationResponse configuration,
         String kind,
         List<SinkConfigurationResponse> sinks) {
-        this.configuration = Objects.requireNonNull(configuration);
-        this.kind = Objects.requireNonNull(kind);
-        this.sinks = Objects.requireNonNull(sinks);
+        this.configuration = configuration;
+        this.kind = kind;
+        this.sinks = sinks;
     }
 
     public DataSourceConfigurationResponse getConfiguration() {

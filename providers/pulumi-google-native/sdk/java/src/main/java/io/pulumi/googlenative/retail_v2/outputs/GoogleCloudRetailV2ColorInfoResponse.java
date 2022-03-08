@@ -25,8 +25,8 @@ public final class GoogleCloudRetailV2ColorInfoResponse {
     private GoogleCloudRetailV2ColorInfoResponse(
         List<String> colorFamilies,
         List<String> colors) {
-        this.colorFamilies = Objects.requireNonNull(colorFamilies);
-        this.colors = Objects.requireNonNull(colors);
+        this.colorFamilies = colorFamilies;
+        this.colors = colors;
     }
 
     /**

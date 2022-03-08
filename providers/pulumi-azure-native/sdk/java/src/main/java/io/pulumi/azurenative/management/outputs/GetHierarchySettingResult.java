@@ -52,11 +52,11 @@ public final class GetHierarchySettingResult {
         @Nullable String tenantId,
         String type) {
         this.defaultManagementGroup = defaultManagementGroup;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.requireAuthorizationForGroupCreation = requireAuthorizationForGroupCreation;
         this.tenantId = tenantId;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

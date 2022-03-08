@@ -115,23 +115,23 @@ public final class GetImagePipelineResult {
         List<GetImagePipelineSchedule> schedules,
         String status,
         Map<String,String> tags) {
-        this.arn = Objects.requireNonNull(arn);
-        this.dateCreated = Objects.requireNonNull(dateCreated);
-        this.dateLastRun = Objects.requireNonNull(dateLastRun);
-        this.dateNextRun = Objects.requireNonNull(dateNextRun);
-        this.dateUpdated = Objects.requireNonNull(dateUpdated);
-        this.description = Objects.requireNonNull(description);
-        this.distributionConfigurationArn = Objects.requireNonNull(distributionConfigurationArn);
-        this.enhancedImageMetadataEnabled = Objects.requireNonNull(enhancedImageMetadataEnabled);
-        this.id = Objects.requireNonNull(id);
-        this.imageRecipeArn = Objects.requireNonNull(imageRecipeArn);
-        this.imageTestsConfigurations = Objects.requireNonNull(imageTestsConfigurations);
-        this.infrastructureConfigurationArn = Objects.requireNonNull(infrastructureConfigurationArn);
-        this.name = Objects.requireNonNull(name);
-        this.platform = Objects.requireNonNull(platform);
-        this.schedules = Objects.requireNonNull(schedules);
-        this.status = Objects.requireNonNull(status);
-        this.tags = Objects.requireNonNull(tags);
+        this.arn = arn;
+        this.dateCreated = dateCreated;
+        this.dateLastRun = dateLastRun;
+        this.dateNextRun = dateNextRun;
+        this.dateUpdated = dateUpdated;
+        this.description = description;
+        this.distributionConfigurationArn = distributionConfigurationArn;
+        this.enhancedImageMetadataEnabled = enhancedImageMetadataEnabled;
+        this.id = id;
+        this.imageRecipeArn = imageRecipeArn;
+        this.imageTestsConfigurations = imageTestsConfigurations;
+        this.infrastructureConfigurationArn = infrastructureConfigurationArn;
+        this.name = name;
+        this.platform = platform;
+        this.schedules = schedules;
+        this.status = status;
+        this.tags = tags;
     }
 
     public String getArn() {

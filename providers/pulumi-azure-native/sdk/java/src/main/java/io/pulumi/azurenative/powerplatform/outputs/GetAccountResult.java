@@ -59,12 +59,12 @@ public final class GetAccountResult {
         @Nullable Map<String,String> tags,
         String type) {
         this.description = description;
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.systemData = Objects.requireNonNull(systemData);
+        this.id = id;
+        this.location = location;
+        this.name = name;
+        this.systemData = systemData;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

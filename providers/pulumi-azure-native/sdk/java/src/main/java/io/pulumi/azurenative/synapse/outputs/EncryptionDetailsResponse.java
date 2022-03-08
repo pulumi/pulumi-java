@@ -28,7 +28,7 @@ public final class EncryptionDetailsResponse {
         @Nullable CustomerManagedKeyDetailsResponse cmk,
         Boolean doubleEncryptionEnabled) {
         this.cmk = cmk;
-        this.doubleEncryptionEnabled = Objects.requireNonNull(doubleEncryptionEnabled);
+        this.doubleEncryptionEnabled = doubleEncryptionEnabled;
     }
 
     /**

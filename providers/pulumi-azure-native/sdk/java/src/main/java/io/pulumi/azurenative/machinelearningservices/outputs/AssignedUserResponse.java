@@ -24,8 +24,8 @@ public final class AssignedUserResponse {
     private AssignedUserResponse(
         String objectId,
         String tenantId) {
-        this.objectId = Objects.requireNonNull(objectId);
-        this.tenantId = Objects.requireNonNull(tenantId);
+        this.objectId = objectId;
+        this.tenantId = tenantId;
     }
 
     /**

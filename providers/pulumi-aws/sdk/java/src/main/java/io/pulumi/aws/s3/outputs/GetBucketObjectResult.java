@@ -161,32 +161,32 @@ public final class GetBucketObjectResult {
         Map<String,String> tags,
         String versionId,
         String websiteRedirectLocation) {
-        this.body = Objects.requireNonNull(body);
-        this.bucket = Objects.requireNonNull(bucket);
-        this.bucketKeyEnabled = Objects.requireNonNull(bucketKeyEnabled);
-        this.cacheControl = Objects.requireNonNull(cacheControl);
-        this.contentDisposition = Objects.requireNonNull(contentDisposition);
-        this.contentEncoding = Objects.requireNonNull(contentEncoding);
-        this.contentLanguage = Objects.requireNonNull(contentLanguage);
-        this.contentLength = Objects.requireNonNull(contentLength);
-        this.contentType = Objects.requireNonNull(contentType);
-        this.etag = Objects.requireNonNull(etag);
-        this.expiration = Objects.requireNonNull(expiration);
-        this.expires = Objects.requireNonNull(expires);
-        this.id = Objects.requireNonNull(id);
-        this.key = Objects.requireNonNull(key);
-        this.lastModified = Objects.requireNonNull(lastModified);
-        this.metadata = Objects.requireNonNull(metadata);
-        this.objectLockLegalHoldStatus = Objects.requireNonNull(objectLockLegalHoldStatus);
-        this.objectLockMode = Objects.requireNonNull(objectLockMode);
-        this.objectLockRetainUntilDate = Objects.requireNonNull(objectLockRetainUntilDate);
+        this.body = body;
+        this.bucket = bucket;
+        this.bucketKeyEnabled = bucketKeyEnabled;
+        this.cacheControl = cacheControl;
+        this.contentDisposition = contentDisposition;
+        this.contentEncoding = contentEncoding;
+        this.contentLanguage = contentLanguage;
+        this.contentLength = contentLength;
+        this.contentType = contentType;
+        this.etag = etag;
+        this.expiration = expiration;
+        this.expires = expires;
+        this.id = id;
+        this.key = key;
+        this.lastModified = lastModified;
+        this.metadata = metadata;
+        this.objectLockLegalHoldStatus = objectLockLegalHoldStatus;
+        this.objectLockMode = objectLockMode;
+        this.objectLockRetainUntilDate = objectLockRetainUntilDate;
         this.range = range;
-        this.serverSideEncryption = Objects.requireNonNull(serverSideEncryption);
-        this.sseKmsKeyId = Objects.requireNonNull(sseKmsKeyId);
-        this.storageClass = Objects.requireNonNull(storageClass);
-        this.tags = Objects.requireNonNull(tags);
-        this.versionId = Objects.requireNonNull(versionId);
-        this.websiteRedirectLocation = Objects.requireNonNull(websiteRedirectLocation);
+        this.serverSideEncryption = serverSideEncryption;
+        this.sseKmsKeyId = sseKmsKeyId;
+        this.storageClass = storageClass;
+        this.tags = tags;
+        this.versionId = versionId;
+        this.websiteRedirectLocation = websiteRedirectLocation;
     }
 
     /**

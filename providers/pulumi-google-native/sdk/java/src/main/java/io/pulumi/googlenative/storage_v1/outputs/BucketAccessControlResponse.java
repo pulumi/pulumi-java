@@ -84,16 +84,16 @@ public final class BucketAccessControlResponse {
         BucketAccessControlProjectTeamResponse projectTeam,
         String role,
         String selfLink) {
-        this.bucket = Objects.requireNonNull(bucket);
-        this.domain = Objects.requireNonNull(domain);
-        this.email = Objects.requireNonNull(email);
-        this.entity = Objects.requireNonNull(entity);
-        this.entityId = Objects.requireNonNull(entityId);
-        this.etag = Objects.requireNonNull(etag);
-        this.kind = Objects.requireNonNull(kind);
-        this.projectTeam = Objects.requireNonNull(projectTeam);
-        this.role = Objects.requireNonNull(role);
-        this.selfLink = Objects.requireNonNull(selfLink);
+        this.bucket = bucket;
+        this.domain = domain;
+        this.email = email;
+        this.entity = entity;
+        this.entityId = entityId;
+        this.etag = etag;
+        this.kind = kind;
+        this.projectTeam = projectTeam;
+        this.role = role;
+        this.selfLink = selfLink;
     }
 
     /**

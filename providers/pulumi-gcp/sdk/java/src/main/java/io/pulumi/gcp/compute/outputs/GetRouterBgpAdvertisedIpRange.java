@@ -16,8 +16,8 @@ public final class GetRouterBgpAdvertisedIpRange {
     private GetRouterBgpAdvertisedIpRange(
         String description,
         String range) {
-        this.description = Objects.requireNonNull(description);
-        this.range = Objects.requireNonNull(range);
+        this.description = description;
+        this.range = range;
     }
 
     public String getDescription() {

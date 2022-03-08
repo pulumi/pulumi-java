@@ -41,11 +41,11 @@ public final class GetSecretRotationResult {
         String rotationLambdaArn,
         List<GetSecretRotationRotationRule> rotationRules,
         String secretId) {
-        this.id = Objects.requireNonNull(id);
-        this.rotationEnabled = Objects.requireNonNull(rotationEnabled);
-        this.rotationLambdaArn = Objects.requireNonNull(rotationLambdaArn);
-        this.rotationRules = Objects.requireNonNull(rotationRules);
-        this.secretId = Objects.requireNonNull(secretId);
+        this.id = id;
+        this.rotationEnabled = rotationEnabled;
+        this.rotationLambdaArn = rotationLambdaArn;
+        this.rotationRules = rotationRules;
+        this.secretId = secretId;
     }
 
     /**

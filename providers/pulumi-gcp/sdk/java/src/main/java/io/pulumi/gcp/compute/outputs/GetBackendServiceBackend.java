@@ -40,17 +40,17 @@ public final class GetBackendServiceBackend {
         Double maxRatePerEndpoint,
         Double maxRatePerInstance,
         Double maxUtilization) {
-        this.balancingMode = Objects.requireNonNull(balancingMode);
-        this.capacityScaler = Objects.requireNonNull(capacityScaler);
-        this.description = Objects.requireNonNull(description);
-        this.group = Objects.requireNonNull(group);
-        this.maxConnections = Objects.requireNonNull(maxConnections);
-        this.maxConnectionsPerEndpoint = Objects.requireNonNull(maxConnectionsPerEndpoint);
-        this.maxConnectionsPerInstance = Objects.requireNonNull(maxConnectionsPerInstance);
-        this.maxRate = Objects.requireNonNull(maxRate);
-        this.maxRatePerEndpoint = Objects.requireNonNull(maxRatePerEndpoint);
-        this.maxRatePerInstance = Objects.requireNonNull(maxRatePerInstance);
-        this.maxUtilization = Objects.requireNonNull(maxUtilization);
+        this.balancingMode = balancingMode;
+        this.capacityScaler = capacityScaler;
+        this.description = description;
+        this.group = group;
+        this.maxConnections = maxConnections;
+        this.maxConnectionsPerEndpoint = maxConnectionsPerEndpoint;
+        this.maxConnectionsPerInstance = maxConnectionsPerInstance;
+        this.maxRate = maxRate;
+        this.maxRatePerEndpoint = maxRatePerEndpoint;
+        this.maxRatePerInstance = maxRatePerInstance;
+        this.maxUtilization = maxUtilization;
     }
 
     public String getBalancingMode() {

@@ -129,23 +129,23 @@ public final class DatasetResponseLatest {
         Boolean useDescriptionTagsFromDefinition,
         String versionId) {
         this.createdBy = createdBy;
-        this.createdTime = Objects.requireNonNull(createdTime);
+        this.createdTime = createdTime;
         this.dataPath = dataPath;
-        this.dataflow = Objects.requireNonNull(dataflow);
+        this.dataflow = dataflow;
         this.datasetDefinitionState = datasetDefinitionState;
-        this.datasetId = Objects.requireNonNull(datasetId);
-        this.description = Objects.requireNonNull(description);
-        this.etag = Objects.requireNonNull(etag);
-        this.fileType = Objects.requireNonNull(fileType);
-        this.modifiedTime = Objects.requireNonNull(modifiedTime);
-        this.notes = Objects.requireNonNull(notes);
-        this.partitionFormatInPath = Objects.requireNonNull(partitionFormatInPath);
+        this.datasetId = datasetId;
+        this.description = description;
+        this.etag = etag;
+        this.fileType = fileType;
+        this.modifiedTime = modifiedTime;
+        this.notes = notes;
+        this.partitionFormatInPath = partitionFormatInPath;
         this.properties = properties;
-        this.savedDatasetId = Objects.requireNonNull(savedDatasetId);
-        this.tags = Objects.requireNonNull(tags);
-        this.telemetryInfo = Objects.requireNonNull(telemetryInfo);
-        this.useDescriptionTagsFromDefinition = Objects.requireNonNull(useDescriptionTagsFromDefinition);
-        this.versionId = Objects.requireNonNull(versionId);
+        this.savedDatasetId = savedDatasetId;
+        this.tags = tags;
+        this.telemetryInfo = telemetryInfo;
+        this.useDescriptionTagsFromDefinition = useDescriptionTagsFromDefinition;
+        this.versionId = versionId;
     }
 
     /**

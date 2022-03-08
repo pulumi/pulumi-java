@@ -30,9 +30,9 @@ public final class WorkbookUserAssignedIdentitiesResponse {
         String clientId,
         String principalId,
         String tenantId) {
-        this.clientId = Objects.requireNonNull(clientId);
-        this.principalId = Objects.requireNonNull(principalId);
-        this.tenantId = Objects.requireNonNull(tenantId);
+        this.clientId = clientId;
+        this.principalId = principalId;
+        this.tenantId = tenantId;
     }
 
     /**

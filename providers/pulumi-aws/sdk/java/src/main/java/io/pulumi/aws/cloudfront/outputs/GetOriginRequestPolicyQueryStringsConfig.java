@@ -18,8 +18,8 @@ public final class GetOriginRequestPolicyQueryStringsConfig {
     private GetOriginRequestPolicyQueryStringsConfig(
         String queryStringBehavior,
         List<GetOriginRequestPolicyQueryStringsConfigQueryString> queryStrings) {
-        this.queryStringBehavior = Objects.requireNonNull(queryStringBehavior);
-        this.queryStrings = Objects.requireNonNull(queryStrings);
+        this.queryStringBehavior = queryStringBehavior;
+        this.queryStrings = queryStrings;
     }
 
     public String getQueryStringBehavior() {

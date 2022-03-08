@@ -205,37 +205,37 @@ public final class GetBucketObjectResult {
         String timeDeleted,
         String timeStorageClassUpdated,
         String updated) {
-        this.acl = Objects.requireNonNull(acl);
-        this.bucket = Objects.requireNonNull(bucket);
-        this.cacheControl = Objects.requireNonNull(cacheControl);
-        this.componentCount = Objects.requireNonNull(componentCount);
-        this.contentDisposition = Objects.requireNonNull(contentDisposition);
-        this.contentEncoding = Objects.requireNonNull(contentEncoding);
-        this.contentLanguage = Objects.requireNonNull(contentLanguage);
-        this.contentType = Objects.requireNonNull(contentType);
-        this.crc32c = Objects.requireNonNull(crc32c);
-        this.customTime = Objects.requireNonNull(customTime);
-        this.customerEncryption = Objects.requireNonNull(customerEncryption);
-        this.etag = Objects.requireNonNull(etag);
-        this.eventBasedHold = Objects.requireNonNull(eventBasedHold);
-        this.generation = Objects.requireNonNull(generation);
-        this.kind = Objects.requireNonNull(kind);
-        this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
-        this.md5Hash = Objects.requireNonNull(md5Hash);
-        this.mediaLink = Objects.requireNonNull(mediaLink);
-        this.metadata = Objects.requireNonNull(metadata);
-        this.metageneration = Objects.requireNonNull(metageneration);
-        this.name = Objects.requireNonNull(name);
-        this.owner = Objects.requireNonNull(owner);
-        this.retentionExpirationTime = Objects.requireNonNull(retentionExpirationTime);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.size = Objects.requireNonNull(size);
-        this.storageClass = Objects.requireNonNull(storageClass);
-        this.temporaryHold = Objects.requireNonNull(temporaryHold);
-        this.timeCreated = Objects.requireNonNull(timeCreated);
-        this.timeDeleted = Objects.requireNonNull(timeDeleted);
-        this.timeStorageClassUpdated = Objects.requireNonNull(timeStorageClassUpdated);
-        this.updated = Objects.requireNonNull(updated);
+        this.acl = acl;
+        this.bucket = bucket;
+        this.cacheControl = cacheControl;
+        this.componentCount = componentCount;
+        this.contentDisposition = contentDisposition;
+        this.contentEncoding = contentEncoding;
+        this.contentLanguage = contentLanguage;
+        this.contentType = contentType;
+        this.crc32c = crc32c;
+        this.customTime = customTime;
+        this.customerEncryption = customerEncryption;
+        this.etag = etag;
+        this.eventBasedHold = eventBasedHold;
+        this.generation = generation;
+        this.kind = kind;
+        this.kmsKeyName = kmsKeyName;
+        this.md5Hash = md5Hash;
+        this.mediaLink = mediaLink;
+        this.metadata = metadata;
+        this.metageneration = metageneration;
+        this.name = name;
+        this.owner = owner;
+        this.retentionExpirationTime = retentionExpirationTime;
+        this.selfLink = selfLink;
+        this.size = size;
+        this.storageClass = storageClass;
+        this.temporaryHold = temporaryHold;
+        this.timeCreated = timeCreated;
+        this.timeDeleted = timeDeleted;
+        this.timeStorageClassUpdated = timeStorageClassUpdated;
+        this.updated = updated;
     }
 
     /**

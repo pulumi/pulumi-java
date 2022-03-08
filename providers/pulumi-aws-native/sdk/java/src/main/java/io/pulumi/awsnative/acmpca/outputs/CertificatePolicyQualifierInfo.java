@@ -17,8 +17,8 @@ public final class CertificatePolicyQualifierInfo {
     private CertificatePolicyQualifierInfo(
         String policyQualifierId,
         CertificateQualifier qualifier) {
-        this.policyQualifierId = Objects.requireNonNull(policyQualifierId);
-        this.qualifier = Objects.requireNonNull(qualifier);
+        this.policyQualifierId = policyQualifierId;
+        this.qualifier = qualifier;
     }
 
     public String getPolicyQualifierId() {

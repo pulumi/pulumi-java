@@ -49,13 +49,13 @@ public final class GetNetworkResult {
         @Nullable String project,
         String selfLink,
         List<String> subnetworksSelfLinks) {
-        this.description = Objects.requireNonNull(description);
-        this.gatewayIpv4 = Objects.requireNonNull(gatewayIpv4);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.description = description;
+        this.gatewayIpv4 = gatewayIpv4;
+        this.id = id;
+        this.name = name;
         this.project = project;
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.subnetworksSelfLinks = Objects.requireNonNull(subnetworksSelfLinks);
+        this.selfLink = selfLink;
+        this.subnetworksSelfLinks = subnetworksSelfLinks;
     }
 
     /**

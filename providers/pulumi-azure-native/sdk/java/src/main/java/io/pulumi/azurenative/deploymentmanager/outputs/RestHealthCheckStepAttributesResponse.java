@@ -47,10 +47,10 @@ public final class RestHealthCheckStepAttributesResponse {
         @Nullable String maxElasticDuration,
         String type,
         @Nullable String waitDuration) {
-        this.healthChecks = Objects.requireNonNull(healthChecks);
-        this.healthyStateDuration = Objects.requireNonNull(healthyStateDuration);
+        this.healthChecks = healthChecks;
+        this.healthyStateDuration = healthyStateDuration;
         this.maxElasticDuration = maxElasticDuration;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.waitDuration = waitDuration;
     }
 

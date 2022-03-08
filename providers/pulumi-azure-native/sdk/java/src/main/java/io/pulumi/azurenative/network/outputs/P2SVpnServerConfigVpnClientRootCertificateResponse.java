@@ -47,8 +47,8 @@ public final class P2SVpnServerConfigVpnClientRootCertificateResponse {
         this.etag = etag;
         this.id = id;
         this.name = name;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.publicCertData = Objects.requireNonNull(publicCertData);
+        this.provisioningState = provisioningState;
+        this.publicCertData = publicCertData;
     }
 
     /**

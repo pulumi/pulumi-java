@@ -50,12 +50,12 @@ public final class CloudTieringSpaceSavingsResponse {
         Integer spaceSavingsPercent,
         Double totalSizeCloudBytes,
         Double volumeSizeBytes) {
-        this.cachedSizeBytes = Objects.requireNonNull(cachedSizeBytes);
-        this.lastUpdatedTimestamp = Objects.requireNonNull(lastUpdatedTimestamp);
-        this.spaceSavingsBytes = Objects.requireNonNull(spaceSavingsBytes);
-        this.spaceSavingsPercent = Objects.requireNonNull(spaceSavingsPercent);
-        this.totalSizeCloudBytes = Objects.requireNonNull(totalSizeCloudBytes);
-        this.volumeSizeBytes = Objects.requireNonNull(volumeSizeBytes);
+        this.cachedSizeBytes = cachedSizeBytes;
+        this.lastUpdatedTimestamp = lastUpdatedTimestamp;
+        this.spaceSavingsBytes = spaceSavingsBytes;
+        this.spaceSavingsPercent = spaceSavingsPercent;
+        this.totalSizeCloudBytes = totalSizeCloudBytes;
+        this.volumeSizeBytes = volumeSizeBytes;
     }
 
     /**

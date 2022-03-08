@@ -43,8 +43,8 @@ public final class DefenderForServersAwsOfferingResponse {
         String offeringType) {
         this.arcAutoProvisioning = arcAutoProvisioning;
         this.defenderForServers = defenderForServers;
-        this.description = Objects.requireNonNull(description);
-        this.offeringType = Objects.requireNonNull(offeringType);
+        this.description = description;
+        this.offeringType = offeringType;
     }
 
     /**

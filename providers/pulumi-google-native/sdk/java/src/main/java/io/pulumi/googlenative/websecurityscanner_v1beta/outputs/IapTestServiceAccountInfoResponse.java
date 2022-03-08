@@ -17,7 +17,7 @@ public final class IapTestServiceAccountInfoResponse {
 
     @OutputCustomType.Constructor({"targetAudienceClientId"})
     private IapTestServiceAccountInfoResponse(String targetAudienceClientId) {
-        this.targetAudienceClientId = Objects.requireNonNull(targetAudienceClientId);
+        this.targetAudienceClientId = targetAudienceClientId;
     }
 
     /**

@@ -14,7 +14,7 @@ public final class CidrResult {
 
     @OutputCustomType.Constructor({"subnets"})
     private CidrResult(List<String> subnets) {
-        this.subnets = Objects.requireNonNull(subnets);
+        this.subnets = subnets;
     }
 
     public List<String> getSubnets() {

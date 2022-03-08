@@ -30,9 +30,9 @@ public final class KeyVaultMetaInfoResponse {
         String encryptionKeyName,
         String encryptionKeyVersion,
         String keyVaultResourceId) {
-        this.encryptionKeyName = Objects.requireNonNull(encryptionKeyName);
-        this.encryptionKeyVersion = Objects.requireNonNull(encryptionKeyVersion);
-        this.keyVaultResourceId = Objects.requireNonNull(keyVaultResourceId);
+        this.encryptionKeyName = encryptionKeyName;
+        this.encryptionKeyVersion = encryptionKeyVersion;
+        this.keyVaultResourceId = keyVaultResourceId;
     }
 
     /**

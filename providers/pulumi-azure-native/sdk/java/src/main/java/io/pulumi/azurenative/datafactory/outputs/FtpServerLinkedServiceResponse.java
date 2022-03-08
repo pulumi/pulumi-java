@@ -108,11 +108,11 @@ public final class FtpServerLinkedServiceResponse {
         this.enableServerCertificateValidation = enableServerCertificateValidation;
         this.enableSsl = enableSsl;
         this.encryptedCredential = encryptedCredential;
-        this.host = Objects.requireNonNull(host);
+        this.host = host;
         this.parameters = parameters;
         this.password = password;
         this.port = port;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.userName = userName;
     }
 

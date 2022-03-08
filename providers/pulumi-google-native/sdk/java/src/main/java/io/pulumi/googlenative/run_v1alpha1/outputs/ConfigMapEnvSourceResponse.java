@@ -32,9 +32,9 @@ public final class ConfigMapEnvSourceResponse {
         LocalObjectReferenceResponse localObjectReference,
         String name,
         Boolean optional) {
-        this.localObjectReference = Objects.requireNonNull(localObjectReference);
-        this.name = Objects.requireNonNull(name);
-        this.optional = Objects.requireNonNull(optional);
+        this.localObjectReference = localObjectReference;
+        this.name = name;
+        this.optional = optional;
     }
 
     /**

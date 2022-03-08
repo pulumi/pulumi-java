@@ -139,12 +139,12 @@ public final class ActiveSecurityUserRuleResponse {
         this.description = description;
         this.destinationPortRanges = destinationPortRanges;
         this.destinations = destinations;
-        this.direction = Objects.requireNonNull(direction);
+        this.direction = direction;
         this.displayName = displayName;
         this.id = id;
-        this.kind = Objects.requireNonNull(kind);
-        this.protocol = Objects.requireNonNull(protocol);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.kind = kind;
+        this.protocol = protocol;
+        this.provisioningState = provisioningState;
         this.region = region;
         this.ruleCollectionAppliesToGroups = ruleCollectionAppliesToGroups;
         this.ruleCollectionDescription = ruleCollectionDescription;

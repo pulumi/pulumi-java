@@ -45,7 +45,7 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTls {
         this.certificate = certificate;
         this.enforce = enforce;
         this.ports = ports;
-        this.validation = Objects.requireNonNull(validation);
+        this.validation = validation;
     }
 
     /**

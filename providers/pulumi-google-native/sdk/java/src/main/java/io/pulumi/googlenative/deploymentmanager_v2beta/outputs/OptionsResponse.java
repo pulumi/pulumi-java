@@ -40,10 +40,10 @@ public final class OptionsResponse {
         List<InputMappingResponse> inputMappings,
         ValidationOptionsResponse validationOptions,
         String virtualProperties) {
-        this.asyncOptions = Objects.requireNonNull(asyncOptions);
-        this.inputMappings = Objects.requireNonNull(inputMappings);
-        this.validationOptions = Objects.requireNonNull(validationOptions);
-        this.virtualProperties = Objects.requireNonNull(virtualProperties);
+        this.asyncOptions = asyncOptions;
+        this.inputMappings = inputMappings;
+        this.validationOptions = validationOptions;
+        this.virtualProperties = virtualProperties;
     }
 
     /**

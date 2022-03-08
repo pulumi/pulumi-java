@@ -38,17 +38,17 @@ public final class GetEnvironmentConfigNodeConfig {
         String subnetwork,
         List<String> tags,
         String zone) {
-        this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
-        this.enableIpMasqAgent = Objects.requireNonNull(enableIpMasqAgent);
-        this.ipAllocationPolicies = Objects.requireNonNull(ipAllocationPolicies);
-        this.machineType = Objects.requireNonNull(machineType);
-        this.maxPodsPerNode = Objects.requireNonNull(maxPodsPerNode);
-        this.network = Objects.requireNonNull(network);
-        this.oauthScopes = Objects.requireNonNull(oauthScopes);
-        this.serviceAccount = Objects.requireNonNull(serviceAccount);
-        this.subnetwork = Objects.requireNonNull(subnetwork);
-        this.tags = Objects.requireNonNull(tags);
-        this.zone = Objects.requireNonNull(zone);
+        this.diskSizeGb = diskSizeGb;
+        this.enableIpMasqAgent = enableIpMasqAgent;
+        this.ipAllocationPolicies = ipAllocationPolicies;
+        this.machineType = machineType;
+        this.maxPodsPerNode = maxPodsPerNode;
+        this.network = network;
+        this.oauthScopes = oauthScopes;
+        this.serviceAccount = serviceAccount;
+        this.subnetwork = subnetwork;
+        this.tags = tags;
+        this.zone = zone;
     }
 
     public Integer getDiskSizeGb() {

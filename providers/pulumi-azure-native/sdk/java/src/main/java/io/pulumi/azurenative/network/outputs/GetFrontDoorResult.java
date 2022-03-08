@@ -133,22 +133,22 @@ public final class GetFrontDoorResult {
         String type) {
         this.backendPools = backendPools;
         this.backendPoolsSettings = backendPoolsSettings;
-        this.cname = Objects.requireNonNull(cname);
+        this.cname = cname;
         this.enabledState = enabledState;
         this.friendlyName = friendlyName;
-        this.frontdoorId = Objects.requireNonNull(frontdoorId);
+        this.frontdoorId = frontdoorId;
         this.frontendEndpoints = frontendEndpoints;
         this.healthProbeSettings = healthProbeSettings;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.loadBalancingSettings = loadBalancingSettings;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.resourceState = Objects.requireNonNull(resourceState);
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.resourceState = resourceState;
         this.routingRules = routingRules;
-        this.rulesEngines = Objects.requireNonNull(rulesEngines);
+        this.rulesEngines = rulesEngines;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

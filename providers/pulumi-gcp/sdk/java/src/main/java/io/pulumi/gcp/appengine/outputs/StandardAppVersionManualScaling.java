@@ -19,7 +19,7 @@ public final class StandardAppVersionManualScaling {
 
     @OutputCustomType.Constructor({"instances"})
     private StandardAppVersionManualScaling(Integer instances) {
-        this.instances = Objects.requireNonNull(instances);
+        this.instances = instances;
     }
 
     /**

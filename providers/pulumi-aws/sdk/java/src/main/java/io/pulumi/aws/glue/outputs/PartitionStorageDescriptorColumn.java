@@ -33,7 +33,7 @@ public final class PartitionStorageDescriptorColumn {
         String name,
         @Nullable String type) {
         this.comment = comment;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.type = type;
     }
 

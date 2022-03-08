@@ -31,9 +31,9 @@ public final class UserAssignedIdentityAuthInfoResponse {
         String authType,
         String clientId,
         String subscriptionId) {
-        this.authType = Objects.requireNonNull(authType);
-        this.clientId = Objects.requireNonNull(clientId);
-        this.subscriptionId = Objects.requireNonNull(subscriptionId);
+        this.authType = authType;
+        this.clientId = clientId;
+        this.subscriptionId = subscriptionId;
     }
 
     /**

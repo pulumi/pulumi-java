@@ -17,7 +17,7 @@ public final class GcePersistentDiskCsiDriverConfigResponse {
 
     @OutputCustomType.Constructor({"enabled"})
     private GcePersistentDiskCsiDriverConfigResponse(Boolean enabled) {
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
     }
 
     /**

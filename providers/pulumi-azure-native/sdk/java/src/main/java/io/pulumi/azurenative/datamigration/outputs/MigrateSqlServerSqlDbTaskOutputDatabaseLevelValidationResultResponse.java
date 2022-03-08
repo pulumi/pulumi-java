@@ -82,17 +82,17 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
         String startedOn,
         String status,
         String targetDatabaseName) {
-        this.dataIntegrityValidationResult = Objects.requireNonNull(dataIntegrityValidationResult);
-        this.endedOn = Objects.requireNonNull(endedOn);
-        this.id = Objects.requireNonNull(id);
-        this.migrationId = Objects.requireNonNull(migrationId);
-        this.queryAnalysisValidationResult = Objects.requireNonNull(queryAnalysisValidationResult);
-        this.resultType = Objects.requireNonNull(resultType);
-        this.schemaValidationResult = Objects.requireNonNull(schemaValidationResult);
-        this.sourceDatabaseName = Objects.requireNonNull(sourceDatabaseName);
-        this.startedOn = Objects.requireNonNull(startedOn);
-        this.status = Objects.requireNonNull(status);
-        this.targetDatabaseName = Objects.requireNonNull(targetDatabaseName);
+        this.dataIntegrityValidationResult = dataIntegrityValidationResult;
+        this.endedOn = endedOn;
+        this.id = id;
+        this.migrationId = migrationId;
+        this.queryAnalysisValidationResult = queryAnalysisValidationResult;
+        this.resultType = resultType;
+        this.schemaValidationResult = schemaValidationResult;
+        this.sourceDatabaseName = sourceDatabaseName;
+        this.startedOn = startedOn;
+        this.status = status;
+        this.targetDatabaseName = targetDatabaseName;
     }
 
     /**

@@ -42,9 +42,9 @@ public final class FlowSourceFlowConfig {
         @Nullable FlowIncrementalPullConfig incrementalPullConfig,
         FlowSourceConnectorProperties sourceConnectorProperties) {
         this.connectorProfileName = connectorProfileName;
-        this.connectorType = Objects.requireNonNull(connectorType);
+        this.connectorType = connectorType;
         this.incrementalPullConfig = incrementalPullConfig;
-        this.sourceConnectorProperties = Objects.requireNonNull(sourceConnectorProperties);
+        this.sourceConnectorProperties = sourceConnectorProperties;
     }
 
     /**

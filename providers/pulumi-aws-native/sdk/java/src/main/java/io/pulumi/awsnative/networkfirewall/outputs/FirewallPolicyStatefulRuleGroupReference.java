@@ -20,7 +20,7 @@ public final class FirewallPolicyStatefulRuleGroupReference {
         @Nullable Integer priority,
         String resourceArn) {
         this.priority = priority;
-        this.resourceArn = Objects.requireNonNull(resourceArn);
+        this.resourceArn = resourceArn;
     }
 
     public Optional<Integer> getPriority() {

@@ -156,18 +156,18 @@ public final class GetVpnConnectionResult {
         @Nullable String vpnConnectionProtocolType,
         @Nullable List<VpnSiteLinkConnectionResponse> vpnLinkConnections) {
         this.connectionBandwidth = connectionBandwidth;
-        this.connectionStatus = Objects.requireNonNull(connectionStatus);
+        this.connectionStatus = connectionStatus;
         this.dpdTimeoutSeconds = dpdTimeoutSeconds;
-        this.egressBytesTransferred = Objects.requireNonNull(egressBytesTransferred);
+        this.egressBytesTransferred = egressBytesTransferred;
         this.enableBgp = enableBgp;
         this.enableInternetSecurity = enableInternetSecurity;
         this.enableRateLimiting = enableRateLimiting;
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.id = id;
-        this.ingressBytesTransferred = Objects.requireNonNull(ingressBytesTransferred);
+        this.ingressBytesTransferred = ingressBytesTransferred;
         this.ipsecPolicies = ipsecPolicies;
         this.name = name;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.remoteVpnSite = remoteVpnSite;
         this.routingConfiguration = routingConfiguration;
         this.routingWeight = routingWeight;

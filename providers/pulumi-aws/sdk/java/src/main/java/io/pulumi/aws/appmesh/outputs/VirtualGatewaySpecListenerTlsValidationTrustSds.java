@@ -17,7 +17,7 @@ public final class VirtualGatewaySpecListenerTlsValidationTrustSds {
 
     @OutputCustomType.Constructor({"secretName"})
     private VirtualGatewaySpecListenerTlsValidationTrustSds(String secretName) {
-        this.secretName = Objects.requireNonNull(secretName);
+        this.secretName = secretName;
     }
 
     /**

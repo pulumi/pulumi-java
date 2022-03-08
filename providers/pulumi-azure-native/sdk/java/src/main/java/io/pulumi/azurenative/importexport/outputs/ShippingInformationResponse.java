@@ -68,7 +68,7 @@ public final class ShippingInformationResponse {
         @Nullable String stateOrProvince,
         @Nullable String streetAddress1,
         @Nullable String streetAddress2) {
-        this.additionalInformation = Objects.requireNonNull(additionalInformation);
+        this.additionalInformation = additionalInformation;
         this.city = city;
         this.countryOrRegion = countryOrRegion;
         this.phone = phone;

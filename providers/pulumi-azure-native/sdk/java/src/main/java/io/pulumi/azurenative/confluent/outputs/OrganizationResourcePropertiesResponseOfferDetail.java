@@ -54,7 +54,7 @@ public final class OrganizationResourcePropertiesResponseOfferDetail {
         this.planId = planId;
         this.planName = planName;
         this.publisherId = publisherId;
-        this.status = Objects.requireNonNull(status);
+        this.status = status;
         this.termUnit = termUnit;
     }
 

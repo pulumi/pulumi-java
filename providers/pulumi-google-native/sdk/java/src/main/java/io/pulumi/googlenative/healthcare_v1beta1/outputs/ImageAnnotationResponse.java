@@ -26,8 +26,8 @@ public final class ImageAnnotationResponse {
     private ImageAnnotationResponse(
         List<BoundingPolyResponse> boundingPolys,
         Integer frameIndex) {
-        this.boundingPolys = Objects.requireNonNull(boundingPolys);
-        this.frameIndex = Objects.requireNonNull(frameIndex);
+        this.boundingPolys = boundingPolys;
+        this.frameIndex = frameIndex;
     }
 
     /**

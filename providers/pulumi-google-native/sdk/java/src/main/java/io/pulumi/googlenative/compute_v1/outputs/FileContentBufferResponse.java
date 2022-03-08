@@ -24,8 +24,8 @@ public final class FileContentBufferResponse {
     private FileContentBufferResponse(
         String content,
         String fileType) {
-        this.content = Objects.requireNonNull(content);
-        this.fileType = Objects.requireNonNull(fileType);
+        this.content = content;
+        this.fileType = fileType;
     }
 
     /**

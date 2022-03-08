@@ -50,12 +50,12 @@ public final class RewriteResponse {
         String path,
         String regex,
         CloudRunRewriteResponse run) {
-        this.dynamicLinks = Objects.requireNonNull(dynamicLinks);
-        this.function = Objects.requireNonNull(function);
-        this.glob = Objects.requireNonNull(glob);
-        this.path = Objects.requireNonNull(path);
-        this.regex = Objects.requireNonNull(regex);
-        this.run = Objects.requireNonNull(run);
+        this.dynamicLinks = dynamicLinks;
+        this.function = function;
+        this.glob = glob;
+        this.path = path;
+        this.regex = regex;
+        this.run = run;
     }
 
     /**

@@ -43,10 +43,10 @@ public final class BackupPlanBackupRuleResourceType {
         this.enableContinuousBackup = enableContinuousBackup;
         this.lifecycle = lifecycle;
         this.recoveryPointTags = recoveryPointTags;
-        this.ruleName = Objects.requireNonNull(ruleName);
+        this.ruleName = ruleName;
         this.scheduleExpression = scheduleExpression;
         this.startWindowMinutes = startWindowMinutes;
-        this.targetBackupVault = Objects.requireNonNull(targetBackupVault);
+        this.targetBackupVault = targetBackupVault;
     }
 
     public Optional<Double> getCompletionWindowMinutes() {

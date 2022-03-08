@@ -153,29 +153,29 @@ public final class GetVpnTunnelResult {
         String targetVpnGateway,
         String vpnGateway,
         Integer vpnGatewayInterface) {
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.description = Objects.requireNonNull(description);
-        this.detailedStatus = Objects.requireNonNull(detailedStatus);
-        this.ikeVersion = Objects.requireNonNull(ikeVersion);
-        this.kind = Objects.requireNonNull(kind);
-        this.labelFingerprint = Objects.requireNonNull(labelFingerprint);
-        this.labels = Objects.requireNonNull(labels);
-        this.localTrafficSelector = Objects.requireNonNull(localTrafficSelector);
-        this.name = Objects.requireNonNull(name);
-        this.peerExternalGateway = Objects.requireNonNull(peerExternalGateway);
-        this.peerExternalGatewayInterface = Objects.requireNonNull(peerExternalGatewayInterface);
-        this.peerGcpGateway = Objects.requireNonNull(peerGcpGateway);
-        this.peerIp = Objects.requireNonNull(peerIp);
-        this.region = Objects.requireNonNull(region);
-        this.remoteTrafficSelector = Objects.requireNonNull(remoteTrafficSelector);
-        this.router = Objects.requireNonNull(router);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.sharedSecret = Objects.requireNonNull(sharedSecret);
-        this.sharedSecretHash = Objects.requireNonNull(sharedSecretHash);
-        this.status = Objects.requireNonNull(status);
-        this.targetVpnGateway = Objects.requireNonNull(targetVpnGateway);
-        this.vpnGateway = Objects.requireNonNull(vpnGateway);
-        this.vpnGatewayInterface = Objects.requireNonNull(vpnGatewayInterface);
+        this.creationTimestamp = creationTimestamp;
+        this.description = description;
+        this.detailedStatus = detailedStatus;
+        this.ikeVersion = ikeVersion;
+        this.kind = kind;
+        this.labelFingerprint = labelFingerprint;
+        this.labels = labels;
+        this.localTrafficSelector = localTrafficSelector;
+        this.name = name;
+        this.peerExternalGateway = peerExternalGateway;
+        this.peerExternalGatewayInterface = peerExternalGatewayInterface;
+        this.peerGcpGateway = peerGcpGateway;
+        this.peerIp = peerIp;
+        this.region = region;
+        this.remoteTrafficSelector = remoteTrafficSelector;
+        this.router = router;
+        this.selfLink = selfLink;
+        this.sharedSecret = sharedSecret;
+        this.sharedSecretHash = sharedSecretHash;
+        this.status = status;
+        this.targetVpnGateway = targetVpnGateway;
+        this.vpnGateway = vpnGateway;
+        this.vpnGatewayInterface = vpnGatewayInterface;
     }
 
     /**

@@ -18,8 +18,8 @@ public final class EtwProviderConfigurationResponse {
     private EtwProviderConfigurationResponse(
         List<EtwEventConfigurationResponse> events,
         String id) {
-        this.events = Objects.requireNonNull(events);
-        this.id = Objects.requireNonNull(id);
+        this.events = events;
+        this.id = id;
     }
 
     public List<EtwEventConfigurationResponse> getEvents() {

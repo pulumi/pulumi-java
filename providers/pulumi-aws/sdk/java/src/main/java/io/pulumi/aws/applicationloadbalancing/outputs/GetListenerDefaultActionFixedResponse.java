@@ -18,9 +18,9 @@ public final class GetListenerDefaultActionFixedResponse {
         String contentType,
         String messageBody,
         String statusCode) {
-        this.contentType = Objects.requireNonNull(contentType);
-        this.messageBody = Objects.requireNonNull(messageBody);
-        this.statusCode = Objects.requireNonNull(statusCode);
+        this.contentType = contentType;
+        this.messageBody = messageBody;
+        this.statusCode = statusCode;
     }
 
     public String getContentType() {

@@ -37,10 +37,10 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResponse {
         String createTime,
         String name,
         String requestTime) {
-        this.analysisResult = Objects.requireNonNull(analysisResult);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.name = Objects.requireNonNull(name);
-        this.requestTime = Objects.requireNonNull(requestTime);
+        this.analysisResult = analysisResult;
+        this.createTime = createTime;
+        this.name = name;
+        this.requestTime = requestTime;
     }
 
     /**

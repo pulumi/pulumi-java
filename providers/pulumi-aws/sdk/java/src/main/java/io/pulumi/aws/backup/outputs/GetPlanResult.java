@@ -45,12 +45,12 @@ public final class GetPlanResult {
         String planId,
         Map<String,String> tags,
         String version) {
-        this.arn = Objects.requireNonNull(arn);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.planId = Objects.requireNonNull(planId);
-        this.tags = Objects.requireNonNull(tags);
-        this.version = Objects.requireNonNull(version);
+        this.arn = arn;
+        this.id = id;
+        this.name = name;
+        this.planId = planId;
+        this.tags = tags;
+        this.version = version;
     }
 
     /**

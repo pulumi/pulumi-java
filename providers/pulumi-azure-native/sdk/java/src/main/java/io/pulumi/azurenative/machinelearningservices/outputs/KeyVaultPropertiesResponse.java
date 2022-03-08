@@ -33,8 +33,8 @@ public final class KeyVaultPropertiesResponse {
         String keyIdentifier,
         String keyVaultArmId) {
         this.identityClientId = identityClientId;
-        this.keyIdentifier = Objects.requireNonNull(keyIdentifier);
-        this.keyVaultArmId = Objects.requireNonNull(keyVaultArmId);
+        this.keyIdentifier = keyIdentifier;
+        this.keyVaultArmId = keyVaultArmId;
     }
 
     /**

@@ -30,9 +30,9 @@ public final class GoogleCloudApigeeV1QuotaResponse {
         String interval,
         String limit,
         String timeUnit) {
-        this.interval = Objects.requireNonNull(interval);
-        this.limit = Objects.requireNonNull(limit);
-        this.timeUnit = Objects.requireNonNull(timeUnit);
+        this.interval = interval;
+        this.limit = limit;
+        this.timeUnit = timeUnit;
     }
 
     /**

@@ -25,8 +25,8 @@ public final class GetImagePipelineImageTestsConfiguration {
     private GetImagePipelineImageTestsConfiguration(
         Boolean imageTestsEnabled,
         Integer timeoutMinutes) {
-        this.imageTestsEnabled = Objects.requireNonNull(imageTestsEnabled);
-        this.timeoutMinutes = Objects.requireNonNull(timeoutMinutes);
+        this.imageTestsEnabled = imageTestsEnabled;
+        this.timeoutMinutes = timeoutMinutes;
     }
 
     /**

@@ -18,7 +18,7 @@ public final class TrafficPercentStrategyResponse {
 
     @OutputCustomType.Constructor({"percentages"})
     private TrafficPercentStrategyResponse(Map<String,String> percentages) {
-        this.percentages = Objects.requireNonNull(percentages);
+        this.percentages = percentages;
     }
 
     /**

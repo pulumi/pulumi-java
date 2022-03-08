@@ -13,7 +13,7 @@ public final class GlobalTableReplicaSSESpecification {
 
     @OutputCustomType.Constructor({"kMSMasterKeyId"})
     private GlobalTableReplicaSSESpecification(String kMSMasterKeyId) {
-        this.kMSMasterKeyId = Objects.requireNonNull(kMSMasterKeyId);
+        this.kMSMasterKeyId = kMSMasterKeyId;
     }
 
     public String getKMSMasterKeyId() {

@@ -67,15 +67,15 @@ public final class GetCanaryEvaluationResult {
         String state,
         String treatment,
         String verdict) {
-        this.control = Objects.requireNonNull(control);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.endTime = Objects.requireNonNull(endTime);
-        this.metricLabels = Objects.requireNonNull(metricLabels);
-        this.name = Objects.requireNonNull(name);
-        this.startTime = Objects.requireNonNull(startTime);
-        this.state = Objects.requireNonNull(state);
-        this.treatment = Objects.requireNonNull(treatment);
-        this.verdict = Objects.requireNonNull(verdict);
+        this.control = control;
+        this.createTime = createTime;
+        this.endTime = endTime;
+        this.metricLabels = metricLabels;
+        this.name = name;
+        this.startTime = startTime;
+        this.state = state;
+        this.treatment = treatment;
+        this.verdict = verdict;
     }
 
     /**

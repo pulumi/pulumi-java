@@ -31,9 +31,9 @@ public final class ScheduleResponse {
         String crontabSpec,
         String prefix,
         Integer retentionCount) {
-        this.crontabSpec = Objects.requireNonNull(crontabSpec);
-        this.prefix = Objects.requireNonNull(prefix);
-        this.retentionCount = Objects.requireNonNull(retentionCount);
+        this.crontabSpec = crontabSpec;
+        this.prefix = prefix;
+        this.retentionCount = retentionCount;
     }
 
     /**

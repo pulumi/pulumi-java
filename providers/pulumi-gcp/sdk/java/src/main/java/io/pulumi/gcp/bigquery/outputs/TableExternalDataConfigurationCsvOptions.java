@@ -68,7 +68,7 @@ public final class TableExternalDataConfigurationCsvOptions {
         this.allowQuotedNewlines = allowQuotedNewlines;
         this.encoding = encoding;
         this.fieldDelimiter = fieldDelimiter;
-        this.quote = Objects.requireNonNull(quote);
+        this.quote = quote;
         this.skipLeadingRows = skipLeadingRows;
     }
 

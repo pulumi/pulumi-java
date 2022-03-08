@@ -25,8 +25,8 @@ public final class BudgetActionActionThreshold {
     private BudgetActionActionThreshold(
         String actionThresholdType,
         Double actionThresholdValue) {
-        this.actionThresholdType = Objects.requireNonNull(actionThresholdType);
-        this.actionThresholdValue = Objects.requireNonNull(actionThresholdValue);
+        this.actionThresholdType = actionThresholdType;
+        this.actionThresholdValue = actionThresholdValue;
     }
 
     /**

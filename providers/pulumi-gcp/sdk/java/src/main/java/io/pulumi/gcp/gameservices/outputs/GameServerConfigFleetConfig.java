@@ -32,7 +32,7 @@ public final class GameServerConfigFleetConfig {
     private GameServerConfigFleetConfig(
         String fleetSpec,
         @Nullable String name) {
-        this.fleetSpec = Objects.requireNonNull(fleetSpec);
+        this.fleetSpec = fleetSpec;
         this.name = name;
     }
 

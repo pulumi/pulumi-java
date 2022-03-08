@@ -17,7 +17,7 @@ public final class GooglePrivacyDlpV2FieldIdResponse {
 
     @OutputCustomType.Constructor({"name"})
     private GooglePrivacyDlpV2FieldIdResponse(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

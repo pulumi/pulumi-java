@@ -41,13 +41,13 @@ public final class DeliveryStreamHttpEndpointDestinationConfiguration {
         DeliveryStreamS3DestinationConfiguration s3Configuration) {
         this.bufferingHints = bufferingHints;
         this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
-        this.endpointConfiguration = Objects.requireNonNull(endpointConfiguration);
+        this.endpointConfiguration = endpointConfiguration;
         this.processingConfiguration = processingConfiguration;
         this.requestConfiguration = requestConfiguration;
         this.retryOptions = retryOptions;
         this.roleARN = roleARN;
         this.s3BackupMode = s3BackupMode;
-        this.s3Configuration = Objects.requireNonNull(s3Configuration);
+        this.s3Configuration = s3Configuration;
     }
 
     public Optional<DeliveryStreamBufferingHints> getBufferingHints() {

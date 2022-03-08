@@ -76,14 +76,14 @@ public final class CosmosDbMongoDbApiCollectionDatasetResponse {
         @Nullable Object structure,
         String type) {
         this.annotations = annotations;
-        this.collection = Objects.requireNonNull(collection);
+        this.collection = collection;
         this.description = description;
         this.folder = folder;
-        this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
+        this.linkedServiceName = linkedServiceName;
         this.parameters = parameters;
         this.schema = schema;
         this.structure = structure;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

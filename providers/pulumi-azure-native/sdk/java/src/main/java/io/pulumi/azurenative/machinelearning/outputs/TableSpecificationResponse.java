@@ -50,7 +50,7 @@ public final class TableSpecificationResponse {
         this.format = format;
         this.properties = properties;
         this.title = title;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

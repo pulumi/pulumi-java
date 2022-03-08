@@ -49,11 +49,11 @@ public final class StorageLensS3BucketDestination {
         StorageLensS3BucketDestinationFormat format,
         StorageLensS3BucketDestinationOutputSchemaVersion outputSchemaVersion,
         @Nullable String prefix) {
-        this.accountId = Objects.requireNonNull(accountId);
-        this.arn = Objects.requireNonNull(arn);
+        this.accountId = accountId;
+        this.arn = arn;
         this.encryption = encryption;
-        this.format = Objects.requireNonNull(format);
-        this.outputSchemaVersion = Objects.requireNonNull(outputSchemaVersion);
+        this.format = format;
+        this.outputSchemaVersion = outputSchemaVersion;
         this.prefix = prefix;
     }
 

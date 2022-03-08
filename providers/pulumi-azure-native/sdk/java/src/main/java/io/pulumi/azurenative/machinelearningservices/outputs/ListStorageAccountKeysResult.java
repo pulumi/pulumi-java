@@ -13,7 +13,7 @@ public final class ListStorageAccountKeysResult {
 
     @OutputCustomType.Constructor({"userStorageKey"})
     private ListStorageAccountKeysResult(String userStorageKey) {
-        this.userStorageKey = Objects.requireNonNull(userStorageKey);
+        this.userStorageKey = userStorageKey;
     }
 
     public String getUserStorageKey() {

@@ -24,8 +24,8 @@ public final class ManagedGroupConfigResponse {
     private ManagedGroupConfigResponse(
         String instanceGroupManagerName,
         String instanceTemplateName) {
-        this.instanceGroupManagerName = Objects.requireNonNull(instanceGroupManagerName);
-        this.instanceTemplateName = Objects.requireNonNull(instanceTemplateName);
+        this.instanceGroupManagerName = instanceGroupManagerName;
+        this.instanceTemplateName = instanceTemplateName;
     }
 
     /**

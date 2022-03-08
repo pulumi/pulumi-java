@@ -18,7 +18,7 @@ public final class GooglePrivacyDlpV2BucketingConfigResponse {
 
     @OutputCustomType.Constructor({"buckets"})
     private GooglePrivacyDlpV2BucketingConfigResponse(List<GooglePrivacyDlpV2BucketResponse> buckets) {
-        this.buckets = Objects.requireNonNull(buckets);
+        this.buckets = buckets;
     }
 
     /**

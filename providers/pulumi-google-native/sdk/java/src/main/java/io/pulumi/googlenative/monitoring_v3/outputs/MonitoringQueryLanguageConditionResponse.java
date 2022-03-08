@@ -31,9 +31,9 @@ public final class MonitoringQueryLanguageConditionResponse {
         String duration,
         String query,
         TriggerResponse trigger) {
-        this.duration = Objects.requireNonNull(duration);
-        this.query = Objects.requireNonNull(query);
-        this.trigger = Objects.requireNonNull(trigger);
+        this.duration = duration;
+        this.query = query;
+        this.trigger = trigger;
     }
 
     /**

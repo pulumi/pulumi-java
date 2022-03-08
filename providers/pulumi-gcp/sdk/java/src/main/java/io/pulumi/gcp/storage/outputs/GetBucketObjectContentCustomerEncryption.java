@@ -16,8 +16,8 @@ public final class GetBucketObjectContentCustomerEncryption {
     private GetBucketObjectContentCustomerEncryption(
         String encryptionAlgorithm,
         String encryptionKey) {
-        this.encryptionAlgorithm = Objects.requireNonNull(encryptionAlgorithm);
-        this.encryptionKey = Objects.requireNonNull(encryptionKey);
+        this.encryptionAlgorithm = encryptionAlgorithm;
+        this.encryptionKey = encryptionKey;
     }
 
     public String getEncryptionAlgorithm() {

@@ -47,9 +47,9 @@ public final class PolicyClusterAdmissionRule {
         String enforcementMode,
         String evaluationMode,
         @Nullable List<String> requireAttestationsBies) {
-        this.cluster = Objects.requireNonNull(cluster);
-        this.enforcementMode = Objects.requireNonNull(enforcementMode);
-        this.evaluationMode = Objects.requireNonNull(evaluationMode);
+        this.cluster = cluster;
+        this.enforcementMode = enforcementMode;
+        this.evaluationMode = evaluationMode;
         this.requireAttestationsBies = requireAttestationsBies;
     }
 

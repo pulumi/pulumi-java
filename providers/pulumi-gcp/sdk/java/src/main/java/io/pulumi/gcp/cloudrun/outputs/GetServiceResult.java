@@ -42,15 +42,15 @@ public final class GetServiceResult {
         List<GetServiceStatus> statuses,
         List<GetServiceTemplate> templates,
         List<GetServiceTraffic> traffics) {
-        this.autogenerateRevisionName = Objects.requireNonNull(autogenerateRevisionName);
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.metadatas = Objects.requireNonNull(metadatas);
-        this.name = Objects.requireNonNull(name);
+        this.autogenerateRevisionName = autogenerateRevisionName;
+        this.id = id;
+        this.location = location;
+        this.metadatas = metadatas;
+        this.name = name;
         this.project = project;
-        this.statuses = Objects.requireNonNull(statuses);
-        this.templates = Objects.requireNonNull(templates);
-        this.traffics = Objects.requireNonNull(traffics);
+        this.statuses = statuses;
+        this.templates = templates;
+        this.traffics = traffics;
     }
 
     public Boolean getAutogenerateRevisionName() {

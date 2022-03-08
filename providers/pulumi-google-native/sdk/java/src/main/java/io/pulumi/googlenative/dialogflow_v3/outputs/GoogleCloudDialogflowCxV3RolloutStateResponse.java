@@ -31,9 +31,9 @@ public final class GoogleCloudDialogflowCxV3RolloutStateResponse {
         String startTime,
         String step,
         Integer stepIndex) {
-        this.startTime = Objects.requireNonNull(startTime);
-        this.step = Objects.requireNonNull(step);
-        this.stepIndex = Objects.requireNonNull(stepIndex);
+        this.startTime = startTime;
+        this.step = step;
+        this.stepIndex = stepIndex;
     }
 
     /**

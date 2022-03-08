@@ -112,21 +112,21 @@ public final class GetStepResult {
         String stepId,
         TestExecutionStepResponse testExecutionStep,
         ToolExecutionStepResponse toolExecutionStep) {
-        this.completionTime = Objects.requireNonNull(completionTime);
-        this.creationTime = Objects.requireNonNull(creationTime);
-        this.description = Objects.requireNonNull(description);
-        this.deviceUsageDuration = Objects.requireNonNull(deviceUsageDuration);
-        this.dimensionValue = Objects.requireNonNull(dimensionValue);
-        this.hasImages = Objects.requireNonNull(hasImages);
-        this.labels = Objects.requireNonNull(labels);
-        this.multiStep = Objects.requireNonNull(multiStep);
-        this.name = Objects.requireNonNull(name);
-        this.outcome = Objects.requireNonNull(outcome);
-        this.runDuration = Objects.requireNonNull(runDuration);
-        this.state = Objects.requireNonNull(state);
-        this.stepId = Objects.requireNonNull(stepId);
-        this.testExecutionStep = Objects.requireNonNull(testExecutionStep);
-        this.toolExecutionStep = Objects.requireNonNull(toolExecutionStep);
+        this.completionTime = completionTime;
+        this.creationTime = creationTime;
+        this.description = description;
+        this.deviceUsageDuration = deviceUsageDuration;
+        this.dimensionValue = dimensionValue;
+        this.hasImages = hasImages;
+        this.labels = labels;
+        this.multiStep = multiStep;
+        this.name = name;
+        this.outcome = outcome;
+        this.runDuration = runDuration;
+        this.state = state;
+        this.stepId = stepId;
+        this.testExecutionStep = testExecutionStep;
+        this.toolExecutionStep = toolExecutionStep;
     }
 
     /**

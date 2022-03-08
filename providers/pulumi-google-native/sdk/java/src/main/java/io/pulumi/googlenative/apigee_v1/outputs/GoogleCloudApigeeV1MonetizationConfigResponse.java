@@ -17,7 +17,7 @@ public final class GoogleCloudApigeeV1MonetizationConfigResponse {
 
     @OutputCustomType.Constructor({"enabled"})
     private GoogleCloudApigeeV1MonetizationConfigResponse(Boolean enabled) {
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
     }
 
     /**

@@ -31,9 +31,9 @@ public final class TimeWindowResponse {
         String endTime,
         MaintenanceExclusionOptionsResponse maintenanceExclusionOptions,
         String startTime) {
-        this.endTime = Objects.requireNonNull(endTime);
-        this.maintenanceExclusionOptions = Objects.requireNonNull(maintenanceExclusionOptions);
-        this.startTime = Objects.requireNonNull(startTime);
+        this.endTime = endTime;
+        this.maintenanceExclusionOptions = maintenanceExclusionOptions;
+        this.startTime = startTime;
     }
 
     /**

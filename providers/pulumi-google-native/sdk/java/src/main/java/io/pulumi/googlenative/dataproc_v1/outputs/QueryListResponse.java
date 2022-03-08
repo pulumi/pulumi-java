@@ -18,7 +18,7 @@ public final class QueryListResponse {
 
     @OutputCustomType.Constructor({"queries"})
     private QueryListResponse(List<String> queries) {
-        this.queries = Objects.requireNonNull(queries);
+        this.queries = queries;
     }
 
     /**

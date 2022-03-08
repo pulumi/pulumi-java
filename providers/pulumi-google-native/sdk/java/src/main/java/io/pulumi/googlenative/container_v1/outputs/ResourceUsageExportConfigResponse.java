@@ -32,9 +32,9 @@ public final class ResourceUsageExportConfigResponse {
         BigQueryDestinationResponse bigqueryDestination,
         ConsumptionMeteringConfigResponse consumptionMeteringConfig,
         Boolean enableNetworkEgressMetering) {
-        this.bigqueryDestination = Objects.requireNonNull(bigqueryDestination);
-        this.consumptionMeteringConfig = Objects.requireNonNull(consumptionMeteringConfig);
-        this.enableNetworkEgressMetering = Objects.requireNonNull(enableNetworkEgressMetering);
+        this.bigqueryDestination = bigqueryDestination;
+        this.consumptionMeteringConfig = consumptionMeteringConfig;
+        this.enableNetworkEgressMetering = enableNetworkEgressMetering;
     }
 
     /**

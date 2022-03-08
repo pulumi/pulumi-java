@@ -13,7 +13,7 @@ public final class PackagingConfigurationCmafEncryption {
 
     @OutputCustomType.Constructor({"spekeKeyProvider"})
     private PackagingConfigurationCmafEncryption(PackagingConfigurationSpekeKeyProvider spekeKeyProvider) {
-        this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
+        this.spekeKeyProvider = spekeKeyProvider;
     }
 
     public PackagingConfigurationSpekeKeyProvider getSpekeKeyProvider() {

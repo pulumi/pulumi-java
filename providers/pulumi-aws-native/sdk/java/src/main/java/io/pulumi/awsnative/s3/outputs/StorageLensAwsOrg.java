@@ -13,7 +13,7 @@ public final class StorageLensAwsOrg {
 
     @OutputCustomType.Constructor({"arn"})
     private StorageLensAwsOrg(String arn) {
-        this.arn = Objects.requireNonNull(arn);
+        this.arn = arn;
     }
 
     public String getArn() {

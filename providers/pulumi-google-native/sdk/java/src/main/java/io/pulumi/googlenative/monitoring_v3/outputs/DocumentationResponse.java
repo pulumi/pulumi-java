@@ -24,8 +24,8 @@ public final class DocumentationResponse {
     private DocumentationResponse(
         String content,
         String mimeType) {
-        this.content = Objects.requireNonNull(content);
-        this.mimeType = Objects.requireNonNull(mimeType);
+        this.content = content;
+        this.mimeType = mimeType;
     }
 
     /**

@@ -66,9 +66,9 @@ public final class RBDPersistentVolumeSource {
         @Nullable SecretReference secretRef,
         @Nullable String user) {
         this.fsType = fsType;
-        this.image = Objects.requireNonNull(image);
+        this.image = image;
         this.keyring = keyring;
-        this.monitors = Objects.requireNonNull(monitors);
+        this.monitors = monitors;
         this.pool = pool;
         this.readOnly = readOnly;
         this.secretRef = secretRef;

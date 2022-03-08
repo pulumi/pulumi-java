@@ -27,7 +27,7 @@ public final class ClusterLoggingInfoBrokerLogsCloudwatchLogs {
     private ClusterLoggingInfoBrokerLogsCloudwatchLogs(
         Boolean enabled,
         @Nullable String logGroup) {
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
         this.logGroup = logGroup;
     }
 

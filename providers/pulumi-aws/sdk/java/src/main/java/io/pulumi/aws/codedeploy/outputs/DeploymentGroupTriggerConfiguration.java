@@ -31,9 +31,9 @@ public final class DeploymentGroupTriggerConfiguration {
         List<String> triggerEvents,
         String triggerName,
         String triggerTargetArn) {
-        this.triggerEvents = Objects.requireNonNull(triggerEvents);
-        this.triggerName = Objects.requireNonNull(triggerName);
-        this.triggerTargetArn = Objects.requireNonNull(triggerTargetArn);
+        this.triggerEvents = triggerEvents;
+        this.triggerName = triggerName;
+        this.triggerTargetArn = triggerTargetArn;
     }
 
     /**

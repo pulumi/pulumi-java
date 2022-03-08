@@ -61,14 +61,14 @@ public final class GetConstraintResult {
         String status,
         String type) {
         this.acceptLanguage = acceptLanguage;
-        this.description = Objects.requireNonNull(description);
-        this.id = Objects.requireNonNull(id);
-        this.owner = Objects.requireNonNull(owner);
-        this.parameters = Objects.requireNonNull(parameters);
-        this.portfolioId = Objects.requireNonNull(portfolioId);
-        this.productId = Objects.requireNonNull(productId);
-        this.status = Objects.requireNonNull(status);
-        this.type = Objects.requireNonNull(type);
+        this.description = description;
+        this.id = id;
+        this.owner = owner;
+        this.parameters = parameters;
+        this.portfolioId = portfolioId;
+        this.productId = productId;
+        this.status = status;
+        this.type = type;
     }
 
     public Optional<String> getAcceptLanguage() {

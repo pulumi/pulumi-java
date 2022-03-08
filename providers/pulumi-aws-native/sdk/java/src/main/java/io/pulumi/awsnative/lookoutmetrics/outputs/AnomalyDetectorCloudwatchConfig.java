@@ -13,7 +13,7 @@ public final class AnomalyDetectorCloudwatchConfig {
 
     @OutputCustomType.Constructor({"roleArn"})
     private AnomalyDetectorCloudwatchConfig(String roleArn) {
-        this.roleArn = Objects.requireNonNull(roleArn);
+        this.roleArn = roleArn;
     }
 
     public String getRoleArn() {

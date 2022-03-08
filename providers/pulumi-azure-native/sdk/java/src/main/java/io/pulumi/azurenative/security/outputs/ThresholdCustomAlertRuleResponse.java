@@ -51,12 +51,12 @@ public final class ThresholdCustomAlertRuleResponse {
         Integer maxThreshold,
         Integer minThreshold,
         String ruleType) {
-        this.description = Objects.requireNonNull(description);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.isEnabled = Objects.requireNonNull(isEnabled);
-        this.maxThreshold = Objects.requireNonNull(maxThreshold);
-        this.minThreshold = Objects.requireNonNull(minThreshold);
-        this.ruleType = Objects.requireNonNull(ruleType);
+        this.description = description;
+        this.displayName = displayName;
+        this.isEnabled = isEnabled;
+        this.maxThreshold = maxThreshold;
+        this.minThreshold = minThreshold;
+        this.ruleType = ruleType;
     }
 
     /**

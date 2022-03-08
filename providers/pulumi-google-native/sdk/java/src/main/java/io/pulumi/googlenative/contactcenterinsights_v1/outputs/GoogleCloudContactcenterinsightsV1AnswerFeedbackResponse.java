@@ -31,9 +31,9 @@ public final class GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse {
         Boolean clicked,
         String correctnessLevel,
         Boolean displayed) {
-        this.clicked = Objects.requireNonNull(clicked);
-        this.correctnessLevel = Objects.requireNonNull(correctnessLevel);
-        this.displayed = Objects.requireNonNull(displayed);
+        this.clicked = clicked;
+        this.correctnessLevel = correctnessLevel;
+        this.displayed = displayed;
     }
 
     /**

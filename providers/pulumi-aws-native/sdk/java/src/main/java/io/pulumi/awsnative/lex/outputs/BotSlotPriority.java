@@ -21,8 +21,8 @@ public final class BotSlotPriority {
     private BotSlotPriority(
         Integer priority,
         String slotName) {
-        this.priority = Objects.requireNonNull(priority);
-        this.slotName = Objects.requireNonNull(slotName);
+        this.priority = priority;
+        this.slotName = slotName;
     }
 
     public Integer getPriority() {

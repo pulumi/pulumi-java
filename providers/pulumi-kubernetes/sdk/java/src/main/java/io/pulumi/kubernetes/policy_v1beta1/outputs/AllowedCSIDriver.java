@@ -17,7 +17,7 @@ public final class AllowedCSIDriver {
 
     @OutputCustomType.Constructor({"name"})
     private AllowedCSIDriver(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

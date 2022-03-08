@@ -54,13 +54,13 @@ public final class GetClusterResult {
         String securityGroupId,
         List<String> subnetIds,
         String vpcId) {
-        this.clusterCertificates = Objects.requireNonNull(clusterCertificates);
-        this.clusterId = Objects.requireNonNull(clusterId);
-        this.clusterState = Objects.requireNonNull(clusterState);
-        this.id = Objects.requireNonNull(id);
-        this.securityGroupId = Objects.requireNonNull(securityGroupId);
-        this.subnetIds = Objects.requireNonNull(subnetIds);
-        this.vpcId = Objects.requireNonNull(vpcId);
+        this.clusterCertificates = clusterCertificates;
+        this.clusterId = clusterId;
+        this.clusterState = clusterState;
+        this.id = id;
+        this.securityGroupId = securityGroupId;
+        this.subnetIds = subnetIds;
+        this.vpcId = vpcId;
     }
 
     /**

@@ -40,11 +40,11 @@ public final class GetUserPoolClientAnalyticsConfiguration {
         String externalId,
         String roleArn,
         Boolean userDataShared) {
-        this.applicationArn = Objects.requireNonNull(applicationArn);
-        this.applicationId = Objects.requireNonNull(applicationId);
-        this.externalId = Objects.requireNonNull(externalId);
-        this.roleArn = Objects.requireNonNull(roleArn);
-        this.userDataShared = Objects.requireNonNull(userDataShared);
+        this.applicationArn = applicationArn;
+        this.applicationId = applicationId;
+        this.externalId = externalId;
+        this.roleArn = roleArn;
+        this.userDataShared = userDataShared;
     }
 
     /**

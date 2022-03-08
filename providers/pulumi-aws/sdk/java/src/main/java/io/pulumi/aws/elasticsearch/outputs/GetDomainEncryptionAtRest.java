@@ -25,8 +25,8 @@ public final class GetDomainEncryptionAtRest {
     private GetDomainEncryptionAtRest(
         Boolean enabled,
         String kmsKeyId) {
-        this.enabled = Objects.requireNonNull(enabled);
-        this.kmsKeyId = Objects.requireNonNull(kmsKeyId);
+        this.enabled = enabled;
+        this.kmsKeyId = kmsKeyId;
     }
 
     /**

@@ -26,7 +26,7 @@ public final class AutoScaleRunResponse {
         String evaluationTime,
         @Nullable String results) {
         this.error = error;
-        this.evaluationTime = Objects.requireNonNull(evaluationTime);
+        this.evaluationTime = evaluationTime;
         this.results = results;
     }
 

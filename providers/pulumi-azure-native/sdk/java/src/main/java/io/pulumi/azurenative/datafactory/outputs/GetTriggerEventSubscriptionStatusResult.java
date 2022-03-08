@@ -24,8 +24,8 @@ public final class GetTriggerEventSubscriptionStatusResult {
     private GetTriggerEventSubscriptionStatusResult(
         String status,
         String triggerName) {
-        this.status = Objects.requireNonNull(status);
-        this.triggerName = Objects.requireNonNull(triggerName);
+        this.status = status;
+        this.triggerName = triggerName;
     }
 
     /**

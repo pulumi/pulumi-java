@@ -119,20 +119,20 @@ public final class GetVirtualMachineScaleSetVMRunCommandResult {
         String type) {
         this.asyncExecution = asyncExecution;
         this.errorBlobUri = errorBlobUri;
-        this.id = Objects.requireNonNull(id);
-        this.instanceView = Objects.requireNonNull(instanceView);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.instanceView = instanceView;
+        this.location = location;
+        this.name = name;
         this.outputBlobUri = outputBlobUri;
         this.parameters = parameters;
         this.protectedParameters = protectedParameters;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.runAsPassword = runAsPassword;
         this.runAsUser = runAsUser;
         this.source = source;
         this.tags = tags;
         this.timeoutInSeconds = timeoutInSeconds;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

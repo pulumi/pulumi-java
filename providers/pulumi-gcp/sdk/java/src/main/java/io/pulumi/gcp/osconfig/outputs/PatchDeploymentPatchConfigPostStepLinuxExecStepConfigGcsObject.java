@@ -30,9 +30,9 @@ public final class PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjec
         String bucket,
         String generationNumber,
         String object) {
-        this.bucket = Objects.requireNonNull(bucket);
-        this.generationNumber = Objects.requireNonNull(generationNumber);
-        this.object = Objects.requireNonNull(object);
+        this.bucket = bucket;
+        this.generationNumber = generationNumber;
+        this.object = object;
     }
 
     /**

@@ -91,14 +91,14 @@ public final class AmazonRedshiftLinkedServiceResponse {
         @Nullable Object username) {
         this.annotations = annotations;
         this.connectVia = connectVia;
-        this.database = Objects.requireNonNull(database);
+        this.database = database;
         this.description = description;
         this.encryptedCredential = encryptedCredential;
         this.parameters = parameters;
         this.password = password;
         this.port = port;
-        this.server = Objects.requireNonNull(server);
-        this.type = Objects.requireNonNull(type);
+        this.server = server;
+        this.type = type;
         this.username = username;
     }
 

@@ -60,7 +60,7 @@ public final class ServicePort {
         this.appProtocol = appProtocol;
         this.name = name;
         this.nodePort = nodePort;
-        this.port = Objects.requireNonNull(port);
+        this.port = port;
         this.protocol = protocol;
         this.targetPort = targetPort;
     }

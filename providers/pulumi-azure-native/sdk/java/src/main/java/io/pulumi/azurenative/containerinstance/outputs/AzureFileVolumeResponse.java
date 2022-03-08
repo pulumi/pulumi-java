@@ -40,9 +40,9 @@ public final class AzureFileVolumeResponse {
         @Nullable String storageAccountKey,
         String storageAccountName) {
         this.readOnly = readOnly;
-        this.shareName = Objects.requireNonNull(shareName);
+        this.shareName = shareName;
         this.storageAccountKey = storageAccountKey;
-        this.storageAccountName = Objects.requireNonNull(storageAccountName);
+        this.storageAccountName = storageAccountName;
     }
 
     /**

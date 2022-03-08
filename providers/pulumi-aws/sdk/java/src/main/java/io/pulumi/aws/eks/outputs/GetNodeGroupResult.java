@@ -112,23 +112,23 @@ public final class GetNodeGroupResult {
         List<String> subnetIds,
         Map<String,String> tags,
         String version) {
-        this.amiType = Objects.requireNonNull(amiType);
-        this.arn = Objects.requireNonNull(arn);
-        this.clusterName = Objects.requireNonNull(clusterName);
-        this.diskSize = Objects.requireNonNull(diskSize);
-        this.id = Objects.requireNonNull(id);
-        this.instanceTypes = Objects.requireNonNull(instanceTypes);
-        this.labels = Objects.requireNonNull(labels);
-        this.nodeGroupName = Objects.requireNonNull(nodeGroupName);
-        this.nodeRoleArn = Objects.requireNonNull(nodeRoleArn);
-        this.releaseVersion = Objects.requireNonNull(releaseVersion);
-        this.remoteAccesses = Objects.requireNonNull(remoteAccesses);
-        this.resources = Objects.requireNonNull(resources);
-        this.scalingConfigs = Objects.requireNonNull(scalingConfigs);
-        this.status = Objects.requireNonNull(status);
-        this.subnetIds = Objects.requireNonNull(subnetIds);
-        this.tags = Objects.requireNonNull(tags);
-        this.version = Objects.requireNonNull(version);
+        this.amiType = amiType;
+        this.arn = arn;
+        this.clusterName = clusterName;
+        this.diskSize = diskSize;
+        this.id = id;
+        this.instanceTypes = instanceTypes;
+        this.labels = labels;
+        this.nodeGroupName = nodeGroupName;
+        this.nodeRoleArn = nodeRoleArn;
+        this.releaseVersion = releaseVersion;
+        this.remoteAccesses = remoteAccesses;
+        this.resources = resources;
+        this.scalingConfigs = scalingConfigs;
+        this.status = status;
+        this.subnetIds = subnetIds;
+        this.tags = tags;
+        this.version = version;
     }
 
     /**

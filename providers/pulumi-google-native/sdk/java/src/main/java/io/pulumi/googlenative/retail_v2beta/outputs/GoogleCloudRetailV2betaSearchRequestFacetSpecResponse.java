@@ -40,10 +40,10 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecResponse {
         List<String> excludedFilterKeys,
         GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyResponse facetKey,
         Integer limit) {
-        this.enableDynamicPosition = Objects.requireNonNull(enableDynamicPosition);
-        this.excludedFilterKeys = Objects.requireNonNull(excludedFilterKeys);
-        this.facetKey = Objects.requireNonNull(facetKey);
-        this.limit = Objects.requireNonNull(limit);
+        this.enableDynamicPosition = enableDynamicPosition;
+        this.excludedFilterKeys = excludedFilterKeys;
+        this.facetKey = facetKey;
+        this.limit = limit;
     }
 
     /**

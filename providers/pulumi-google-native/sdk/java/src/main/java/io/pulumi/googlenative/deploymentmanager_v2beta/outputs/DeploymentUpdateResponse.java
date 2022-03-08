@@ -32,9 +32,9 @@ public final class DeploymentUpdateResponse {
         String description,
         List<DeploymentUpdateLabelEntryResponse> labels,
         String manifest) {
-        this.description = Objects.requireNonNull(description);
-        this.labels = Objects.requireNonNull(labels);
-        this.manifest = Objects.requireNonNull(manifest);
+        this.description = description;
+        this.labels = labels;
+        this.manifest = manifest;
     }
 
     /**

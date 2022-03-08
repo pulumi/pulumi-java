@@ -37,10 +37,10 @@ public final class GetAmiIdsResult {
         @Nullable Boolean sortAscending) {
         this.executableUsers = executableUsers;
         this.filters = filters;
-        this.id = Objects.requireNonNull(id);
-        this.ids = Objects.requireNonNull(ids);
+        this.id = id;
+        this.ids = ids;
         this.nameRegex = nameRegex;
-        this.owners = Objects.requireNonNull(owners);
+        this.owners = owners;
         this.sortAscending = sortAscending;
     }
 

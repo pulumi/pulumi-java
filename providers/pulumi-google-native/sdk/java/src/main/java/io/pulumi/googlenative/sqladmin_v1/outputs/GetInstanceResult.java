@@ -216,38 +216,38 @@ public final class GetInstanceResult {
         SettingsResponse settings,
         String state,
         List<String> suspensionReason) {
-        this.backendType = Objects.requireNonNull(backendType);
-        this.connectionName = Objects.requireNonNull(connectionName);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.currentDiskSize = Objects.requireNonNull(currentDiskSize);
-        this.databaseInstalledVersion = Objects.requireNonNull(databaseInstalledVersion);
-        this.databaseVersion = Objects.requireNonNull(databaseVersion);
-        this.diskEncryptionConfiguration = Objects.requireNonNull(diskEncryptionConfiguration);
-        this.diskEncryptionStatus = Objects.requireNonNull(diskEncryptionStatus);
-        this.failoverReplica = Objects.requireNonNull(failoverReplica);
-        this.gceZone = Objects.requireNonNull(gceZone);
-        this.instanceType = Objects.requireNonNull(instanceType);
-        this.ipAddresses = Objects.requireNonNull(ipAddresses);
-        this.kind = Objects.requireNonNull(kind);
-        this.masterInstanceName = Objects.requireNonNull(masterInstanceName);
-        this.maxDiskSize = Objects.requireNonNull(maxDiskSize);
-        this.name = Objects.requireNonNull(name);
-        this.onPremisesConfiguration = Objects.requireNonNull(onPremisesConfiguration);
-        this.outOfDiskReport = Objects.requireNonNull(outOfDiskReport);
-        this.project = Objects.requireNonNull(project);
-        this.region = Objects.requireNonNull(region);
-        this.replicaConfiguration = Objects.requireNonNull(replicaConfiguration);
-        this.replicaNames = Objects.requireNonNull(replicaNames);
-        this.rootPassword = Objects.requireNonNull(rootPassword);
-        this.satisfiesPzs = Objects.requireNonNull(satisfiesPzs);
-        this.scheduledMaintenance = Objects.requireNonNull(scheduledMaintenance);
-        this.secondaryGceZone = Objects.requireNonNull(secondaryGceZone);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.serverCaCert = Objects.requireNonNull(serverCaCert);
-        this.serviceAccountEmailAddress = Objects.requireNonNull(serviceAccountEmailAddress);
-        this.settings = Objects.requireNonNull(settings);
-        this.state = Objects.requireNonNull(state);
-        this.suspensionReason = Objects.requireNonNull(suspensionReason);
+        this.backendType = backendType;
+        this.connectionName = connectionName;
+        this.createTime = createTime;
+        this.currentDiskSize = currentDiskSize;
+        this.databaseInstalledVersion = databaseInstalledVersion;
+        this.databaseVersion = databaseVersion;
+        this.diskEncryptionConfiguration = diskEncryptionConfiguration;
+        this.diskEncryptionStatus = diskEncryptionStatus;
+        this.failoverReplica = failoverReplica;
+        this.gceZone = gceZone;
+        this.instanceType = instanceType;
+        this.ipAddresses = ipAddresses;
+        this.kind = kind;
+        this.masterInstanceName = masterInstanceName;
+        this.maxDiskSize = maxDiskSize;
+        this.name = name;
+        this.onPremisesConfiguration = onPremisesConfiguration;
+        this.outOfDiskReport = outOfDiskReport;
+        this.project = project;
+        this.region = region;
+        this.replicaConfiguration = replicaConfiguration;
+        this.replicaNames = replicaNames;
+        this.rootPassword = rootPassword;
+        this.satisfiesPzs = satisfiesPzs;
+        this.scheduledMaintenance = scheduledMaintenance;
+        this.secondaryGceZone = secondaryGceZone;
+        this.selfLink = selfLink;
+        this.serverCaCert = serverCaCert;
+        this.serviceAccountEmailAddress = serviceAccountEmailAddress;
+        this.settings = settings;
+        this.state = state;
+        this.suspensionReason = suspensionReason;
     }
 
     /**

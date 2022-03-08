@@ -13,7 +13,7 @@ public final class DatasetDeltaTimeSessionWindowConfiguration {
 
     @OutputCustomType.Constructor({"timeoutInMinutes"})
     private DatasetDeltaTimeSessionWindowConfiguration(Integer timeoutInMinutes) {
-        this.timeoutInMinutes = Objects.requireNonNull(timeoutInMinutes);
+        this.timeoutInMinutes = timeoutInMinutes;
     }
 
     public Integer getTimeoutInMinutes() {

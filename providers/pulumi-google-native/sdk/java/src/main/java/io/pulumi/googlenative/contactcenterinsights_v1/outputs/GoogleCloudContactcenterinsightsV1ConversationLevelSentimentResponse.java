@@ -25,8 +25,8 @@ public final class GoogleCloudContactcenterinsightsV1ConversationLevelSentimentR
     private GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse(
         Integer channelTag,
         GoogleCloudContactcenterinsightsV1SentimentDataResponse sentimentData) {
-        this.channelTag = Objects.requireNonNull(channelTag);
-        this.sentimentData = Objects.requireNonNull(sentimentData);
+        this.channelTag = channelTag;
+        this.sentimentData = sentimentData;
     }
 
     /**

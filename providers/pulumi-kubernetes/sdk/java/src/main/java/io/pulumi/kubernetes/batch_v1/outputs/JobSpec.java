@@ -94,7 +94,7 @@ public final class JobSpec {
         this.parallelism = parallelism;
         this.selector = selector;
         this.suspend = suspend;
-        this.template = Objects.requireNonNull(template);
+        this.template = template;
         this.ttlSecondsAfterFinished = ttlSecondsAfterFinished;
     }
 

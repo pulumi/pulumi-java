@@ -17,7 +17,7 @@ public final class IosAppInfoResponse {
 
     @OutputCustomType.Constructor({"name"})
     private IosAppInfoResponse(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

@@ -25,8 +25,8 @@ public final class InstanceFailoverReplicaResponse {
     private InstanceFailoverReplicaResponse(
         Boolean available,
         String name) {
-        this.available = Objects.requireNonNull(available);
-        this.name = Objects.requireNonNull(name);
+        this.available = available;
+        this.name = name;
     }
 
     /**

@@ -41,7 +41,7 @@ public final class OccurenceAttestationSignature {
     private OccurenceAttestationSignature(
         String publicKeyId,
         @Nullable String signature) {
-        this.publicKeyId = Objects.requireNonNull(publicKeyId);
+        this.publicKeyId = publicKeyId;
         this.signature = signature;
     }
 

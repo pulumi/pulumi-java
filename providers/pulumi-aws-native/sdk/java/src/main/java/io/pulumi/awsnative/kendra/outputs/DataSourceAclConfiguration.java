@@ -13,7 +13,7 @@ public final class DataSourceAclConfiguration {
 
     @OutputCustomType.Constructor({"allowedGroupsColumnName"})
     private DataSourceAclConfiguration(String allowedGroupsColumnName) {
-        this.allowedGroupsColumnName = Objects.requireNonNull(allowedGroupsColumnName);
+        this.allowedGroupsColumnName = allowedGroupsColumnName;
     }
 
     public String getAllowedGroupsColumnName() {

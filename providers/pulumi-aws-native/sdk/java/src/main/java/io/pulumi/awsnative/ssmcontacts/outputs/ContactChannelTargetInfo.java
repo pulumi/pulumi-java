@@ -25,8 +25,8 @@ public final class ContactChannelTargetInfo {
     private ContactChannelTargetInfo(
         String channelId,
         Integer retryIntervalInMinutes) {
-        this.channelId = Objects.requireNonNull(channelId);
-        this.retryIntervalInMinutes = Objects.requireNonNull(retryIntervalInMinutes);
+        this.channelId = channelId;
+        this.retryIntervalInMinutes = retryIntervalInMinutes;
     }
 
     /**

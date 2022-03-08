@@ -52,11 +52,11 @@ public final class MonitorPropertiesResponse {
         String provisioningState,
         @Nullable UserInfoResponse userInfo) {
         this.datadogOrganizationProperties = datadogOrganizationProperties;
-        this.liftrResourceCategory = Objects.requireNonNull(liftrResourceCategory);
-        this.liftrResourcePreference = Objects.requireNonNull(liftrResourcePreference);
-        this.marketplaceSubscriptionStatus = Objects.requireNonNull(marketplaceSubscriptionStatus);
+        this.liftrResourceCategory = liftrResourceCategory;
+        this.liftrResourcePreference = liftrResourcePreference;
+        this.marketplaceSubscriptionStatus = marketplaceSubscriptionStatus;
         this.monitoringStatus = monitoringStatus;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.userInfo = userInfo;
     }
 

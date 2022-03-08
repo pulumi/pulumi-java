@@ -60,14 +60,14 @@ public final class MetadataOptionsResponse {
         String symlink,
         String temporaryHold,
         String uid) {
-        this.acl = Objects.requireNonNull(acl);
-        this.gid = Objects.requireNonNull(gid);
-        this.kmsKey = Objects.requireNonNull(kmsKey);
-        this.mode = Objects.requireNonNull(mode);
-        this.storageClass = Objects.requireNonNull(storageClass);
-        this.symlink = Objects.requireNonNull(symlink);
-        this.temporaryHold = Objects.requireNonNull(temporaryHold);
-        this.uid = Objects.requireNonNull(uid);
+        this.acl = acl;
+        this.gid = gid;
+        this.kmsKey = kmsKey;
+        this.mode = mode;
+        this.storageClass = storageClass;
+        this.symlink = symlink;
+        this.temporaryHold = temporaryHold;
+        this.uid = uid;
     }
 
     /**

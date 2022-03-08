@@ -17,8 +17,8 @@ public final class RuleGroupLabelMatchStatement {
     private RuleGroupLabelMatchStatement(
         String key,
         RuleGroupLabelMatchScope scope) {
-        this.key = Objects.requireNonNull(key);
-        this.scope = Objects.requireNonNull(scope);
+        this.key = key;
+        this.scope = scope;
     }
 
     public String getKey() {

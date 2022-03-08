@@ -26,8 +26,8 @@ public final class HttpResponse {
     private HttpResponse(
         Boolean fullyDecodeReservedExpansion,
         List<HttpRuleResponse> rules) {
-        this.fullyDecodeReservedExpansion = Objects.requireNonNull(fullyDecodeReservedExpansion);
-        this.rules = Objects.requireNonNull(rules);
+        this.fullyDecodeReservedExpansion = fullyDecodeReservedExpansion;
+        this.rules = rules;
     }
 
     /**

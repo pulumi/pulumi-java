@@ -35,7 +35,7 @@ public final class FromAllInputFileResponse {
         @Nullable List<Object> includedTracks,
         String odataType) {
         this.includedTracks = includedTracks;
-        this.odataType = Objects.requireNonNull(odataType);
+        this.odataType = odataType;
     }
 
     /**

@@ -49,12 +49,12 @@ public final class GetBillingAccountExclusionResult {
         String filter,
         String name,
         String updateTime) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.description = Objects.requireNonNull(description);
-        this.disabled = Objects.requireNonNull(disabled);
-        this.filter = Objects.requireNonNull(filter);
-        this.name = Objects.requireNonNull(name);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.createTime = createTime;
+        this.description = description;
+        this.disabled = disabled;
+        this.filter = filter;
+        this.name = name;
+        this.updateTime = updateTime;
     }
 
     /**

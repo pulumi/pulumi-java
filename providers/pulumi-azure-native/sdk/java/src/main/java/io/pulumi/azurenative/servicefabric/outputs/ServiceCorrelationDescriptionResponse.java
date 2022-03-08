@@ -24,8 +24,8 @@ public final class ServiceCorrelationDescriptionResponse {
     private ServiceCorrelationDescriptionResponse(
         String scheme,
         String serviceName) {
-        this.scheme = Objects.requireNonNull(scheme);
-        this.serviceName = Objects.requireNonNull(serviceName);
+        this.scheme = scheme;
+        this.serviceName = serviceName;
     }
 
     /**

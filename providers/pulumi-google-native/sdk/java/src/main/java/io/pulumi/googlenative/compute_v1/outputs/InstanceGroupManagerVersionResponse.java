@@ -31,9 +31,9 @@ public final class InstanceGroupManagerVersionResponse {
         String instanceTemplate,
         String name,
         FixedOrPercentResponse targetSize) {
-        this.instanceTemplate = Objects.requireNonNull(instanceTemplate);
-        this.name = Objects.requireNonNull(name);
-        this.targetSize = Objects.requireNonNull(targetSize);
+        this.instanceTemplate = instanceTemplate;
+        this.name = name;
+        this.targetSize = targetSize;
     }
 
     /**

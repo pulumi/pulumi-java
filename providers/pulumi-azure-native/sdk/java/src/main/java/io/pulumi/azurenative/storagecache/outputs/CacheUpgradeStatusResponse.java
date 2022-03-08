@@ -42,11 +42,11 @@ public final class CacheUpgradeStatusResponse {
         String firmwareUpdateStatus,
         String lastFirmwareUpdate,
         String pendingFirmwareVersion) {
-        this.currentFirmwareVersion = Objects.requireNonNull(currentFirmwareVersion);
-        this.firmwareUpdateDeadline = Objects.requireNonNull(firmwareUpdateDeadline);
-        this.firmwareUpdateStatus = Objects.requireNonNull(firmwareUpdateStatus);
-        this.lastFirmwareUpdate = Objects.requireNonNull(lastFirmwareUpdate);
-        this.pendingFirmwareVersion = Objects.requireNonNull(pendingFirmwareVersion);
+        this.currentFirmwareVersion = currentFirmwareVersion;
+        this.firmwareUpdateDeadline = firmwareUpdateDeadline;
+        this.firmwareUpdateStatus = firmwareUpdateStatus;
+        this.lastFirmwareUpdate = lastFirmwareUpdate;
+        this.pendingFirmwareVersion = pendingFirmwareVersion;
     }
 
     /**

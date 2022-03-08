@@ -28,7 +28,7 @@ public final class CustomCopyOptionResponse {
         @Nullable String duration,
         String objectType) {
         this.duration = duration;
-        this.objectType = Objects.requireNonNull(objectType);
+        this.objectType = objectType;
     }
 
     /**

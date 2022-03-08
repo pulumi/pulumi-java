@@ -26,8 +26,8 @@ public final class StreamConfigResponse {
     private StreamConfigResponse(
         GoogleCloudHealthcareV1FhirBigQueryDestinationResponse bigqueryDestination,
         List<String> resourceTypes) {
-        this.bigqueryDestination = Objects.requireNonNull(bigqueryDestination);
-        this.resourceTypes = Objects.requireNonNull(resourceTypes);
+        this.bigqueryDestination = bigqueryDestination;
+        this.resourceTypes = resourceTypes;
     }
 
     /**

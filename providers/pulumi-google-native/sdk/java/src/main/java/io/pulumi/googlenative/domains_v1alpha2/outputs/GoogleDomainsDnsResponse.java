@@ -32,9 +32,9 @@ public final class GoogleDomainsDnsResponse {
         List<DsRecordResponse> dsRecords,
         String dsState,
         List<String> nameServers) {
-        this.dsRecords = Objects.requireNonNull(dsRecords);
-        this.dsState = Objects.requireNonNull(dsState);
-        this.nameServers = Objects.requireNonNull(nameServers);
+        this.dsRecords = dsRecords;
+        this.dsState = dsState;
+        this.nameServers = nameServers;
     }
 
     /**

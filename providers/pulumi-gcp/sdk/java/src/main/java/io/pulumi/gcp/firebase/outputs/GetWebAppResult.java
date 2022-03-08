@@ -26,11 +26,11 @@ public final class GetWebAppResult {
         String id,
         String name,
         String project) {
-        this.appId = Objects.requireNonNull(appId);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.project = Objects.requireNonNull(project);
+        this.appId = appId;
+        this.displayName = displayName;
+        this.id = id;
+        this.name = name;
+        this.project = project;
     }
 
     public String getAppId() {

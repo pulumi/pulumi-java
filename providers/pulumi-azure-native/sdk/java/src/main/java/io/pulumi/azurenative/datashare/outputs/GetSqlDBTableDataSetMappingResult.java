@@ -86,18 +86,18 @@ public final class GetSqlDBTableDataSetMappingResult {
         SystemDataResponse systemData,
         String tableName,
         String type) {
-        this.dataSetId = Objects.requireNonNull(dataSetId);
-        this.dataSetMappingStatus = Objects.requireNonNull(dataSetMappingStatus);
-        this.databaseName = Objects.requireNonNull(databaseName);
-        this.id = Objects.requireNonNull(id);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.schemaName = Objects.requireNonNull(schemaName);
-        this.sqlServerResourceId = Objects.requireNonNull(sqlServerResourceId);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.tableName = Objects.requireNonNull(tableName);
-        this.type = Objects.requireNonNull(type);
+        this.dataSetId = dataSetId;
+        this.dataSetMappingStatus = dataSetMappingStatus;
+        this.databaseName = databaseName;
+        this.id = id;
+        this.kind = kind;
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.schemaName = schemaName;
+        this.sqlServerResourceId = sqlServerResourceId;
+        this.systemData = systemData;
+        this.tableName = tableName;
+        this.type = type;
     }
 
     /**

@@ -25,8 +25,8 @@ public final class SegmentSettingsResponse {
     private SegmentSettingsResponse(
         Boolean individualSegments,
         String segmentDuration) {
-        this.individualSegments = Objects.requireNonNull(individualSegments);
-        this.segmentDuration = Objects.requireNonNull(segmentDuration);
+        this.individualSegments = individualSegments;
+        this.segmentDuration = segmentDuration;
     }
 
     /**

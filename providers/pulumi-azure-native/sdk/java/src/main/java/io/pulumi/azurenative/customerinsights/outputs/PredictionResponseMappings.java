@@ -30,9 +30,9 @@ public final class PredictionResponseMappings {
         String grade,
         String reason,
         String score) {
-        this.grade = Objects.requireNonNull(grade);
-        this.reason = Objects.requireNonNull(reason);
-        this.score = Objects.requireNonNull(score);
+        this.grade = grade;
+        this.reason = reason;
+        this.score = score;
     }
 
     /**

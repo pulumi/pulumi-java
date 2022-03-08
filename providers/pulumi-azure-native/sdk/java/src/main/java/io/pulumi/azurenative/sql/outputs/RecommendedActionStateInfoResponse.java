@@ -30,9 +30,9 @@ public final class RecommendedActionStateInfoResponse {
         String actionInitiatedBy,
         String currentValue,
         String lastModified) {
-        this.actionInitiatedBy = Objects.requireNonNull(actionInitiatedBy);
-        this.currentValue = Objects.requireNonNull(currentValue);
-        this.lastModified = Objects.requireNonNull(lastModified);
+        this.actionInitiatedBy = actionInitiatedBy;
+        this.currentValue = currentValue;
+        this.lastModified = lastModified;
     }
 
     /**

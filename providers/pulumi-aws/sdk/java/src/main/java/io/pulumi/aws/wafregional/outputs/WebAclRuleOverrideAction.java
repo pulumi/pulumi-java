@@ -17,7 +17,7 @@ public final class WebAclRuleOverrideAction {
 
     @OutputCustomType.Constructor({"type"})
     private WebAclRuleOverrideAction(String type) {
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

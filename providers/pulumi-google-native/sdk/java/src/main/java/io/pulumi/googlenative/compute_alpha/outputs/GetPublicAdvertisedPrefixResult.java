@@ -86,18 +86,18 @@ public final class GetPublicAdvertisedPrefixResult {
         String selfLinkWithId,
         String sharedSecret,
         String status) {
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.description = Objects.requireNonNull(description);
-        this.dnsVerificationIp = Objects.requireNonNull(dnsVerificationIp);
-        this.fingerprint = Objects.requireNonNull(fingerprint);
-        this.ipCidrRange = Objects.requireNonNull(ipCidrRange);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.publicDelegatedPrefixs = Objects.requireNonNull(publicDelegatedPrefixs);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
-        this.sharedSecret = Objects.requireNonNull(sharedSecret);
-        this.status = Objects.requireNonNull(status);
+        this.creationTimestamp = creationTimestamp;
+        this.description = description;
+        this.dnsVerificationIp = dnsVerificationIp;
+        this.fingerprint = fingerprint;
+        this.ipCidrRange = ipCidrRange;
+        this.kind = kind;
+        this.name = name;
+        this.publicDelegatedPrefixs = publicDelegatedPrefixs;
+        this.selfLink = selfLink;
+        this.selfLinkWithId = selfLinkWithId;
+        this.sharedSecret = sharedSecret;
+        this.status = status;
     }
 
     /**

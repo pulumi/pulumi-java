@@ -31,7 +31,7 @@ public final class DistributionCustomOriginConfig {
         this.hTTPPort = hTTPPort;
         this.hTTPSPort = hTTPSPort;
         this.originKeepaliveTimeout = originKeepaliveTimeout;
-        this.originProtocolPolicy = Objects.requireNonNull(originProtocolPolicy);
+        this.originProtocolPolicy = originProtocolPolicy;
         this.originReadTimeout = originReadTimeout;
         this.originSSLProtocols = originSSLProtocols;
     }

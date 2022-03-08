@@ -25,8 +25,8 @@ public final class GooglePrivacyDlpV2InspectionRuleResponse {
     private GooglePrivacyDlpV2InspectionRuleResponse(
         GooglePrivacyDlpV2ExclusionRuleResponse exclusionRule,
         GooglePrivacyDlpV2HotwordRuleResponse hotwordRule) {
-        this.exclusionRule = Objects.requireNonNull(exclusionRule);
-        this.hotwordRule = Objects.requireNonNull(hotwordRule);
+        this.exclusionRule = exclusionRule;
+        this.hotwordRule = hotwordRule;
     }
 
     /**

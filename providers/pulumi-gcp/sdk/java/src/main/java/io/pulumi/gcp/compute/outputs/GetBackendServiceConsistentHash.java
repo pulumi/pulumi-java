@@ -21,9 +21,9 @@ public final class GetBackendServiceConsistentHash {
         List<GetBackendServiceConsistentHashHttpCooky> httpCookies,
         String httpHeaderName,
         Integer minimumRingSize) {
-        this.httpCookies = Objects.requireNonNull(httpCookies);
-        this.httpHeaderName = Objects.requireNonNull(httpHeaderName);
-        this.minimumRingSize = Objects.requireNonNull(minimumRingSize);
+        this.httpCookies = httpCookies;
+        this.httpHeaderName = httpHeaderName;
+        this.minimumRingSize = minimumRingSize;
     }
 
     public List<GetBackendServiceConsistentHashHttpCooky> getHttpCookies() {

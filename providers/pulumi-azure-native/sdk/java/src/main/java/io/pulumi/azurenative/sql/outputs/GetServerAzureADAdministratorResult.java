@@ -63,14 +63,14 @@ public final class GetServerAzureADAdministratorResult {
         String sid,
         @Nullable String tenantId,
         String type) {
-        this.administratorType = Objects.requireNonNull(administratorType);
-        this.azureADOnlyAuthentication = Objects.requireNonNull(azureADOnlyAuthentication);
-        this.id = Objects.requireNonNull(id);
-        this.login = Objects.requireNonNull(login);
-        this.name = Objects.requireNonNull(name);
-        this.sid = Objects.requireNonNull(sid);
+        this.administratorType = administratorType;
+        this.azureADOnlyAuthentication = azureADOnlyAuthentication;
+        this.id = id;
+        this.login = login;
+        this.name = name;
+        this.sid = sid;
         this.tenantId = tenantId;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

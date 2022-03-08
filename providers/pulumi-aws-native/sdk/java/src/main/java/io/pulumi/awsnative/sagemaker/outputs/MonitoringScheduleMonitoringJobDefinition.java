@@ -51,12 +51,12 @@ public final class MonitoringScheduleMonitoringJobDefinition {
         @Nullable MonitoringScheduleStoppingCondition stoppingCondition) {
         this.baselineConfig = baselineConfig;
         this.environment = environment;
-        this.monitoringAppSpecification = Objects.requireNonNull(monitoringAppSpecification);
-        this.monitoringInputs = Objects.requireNonNull(monitoringInputs);
-        this.monitoringOutputConfig = Objects.requireNonNull(monitoringOutputConfig);
-        this.monitoringResources = Objects.requireNonNull(monitoringResources);
+        this.monitoringAppSpecification = monitoringAppSpecification;
+        this.monitoringInputs = monitoringInputs;
+        this.monitoringOutputConfig = monitoringOutputConfig;
+        this.monitoringResources = monitoringResources;
         this.networkConfig = networkConfig;
-        this.roleArn = Objects.requireNonNull(roleArn);
+        this.roleArn = roleArn;
         this.stoppingCondition = stoppingCondition;
     }
 

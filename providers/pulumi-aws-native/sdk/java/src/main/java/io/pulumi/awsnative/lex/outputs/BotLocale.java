@@ -41,8 +41,8 @@ public final class BotLocale {
         @Nullable BotVoiceSettings voiceSettings) {
         this.description = description;
         this.intents = intents;
-        this.localeId = Objects.requireNonNull(localeId);
-        this.nluConfidenceThreshold = Objects.requireNonNull(nluConfidenceThreshold);
+        this.localeId = localeId;
+        this.nluConfidenceThreshold = nluConfidenceThreshold;
         this.slotTypes = slotTypes;
         this.voiceSettings = voiceSettings;
     }

@@ -17,8 +17,8 @@ public final class ResponseHeadersPolicyReferrerPolicy {
     private ResponseHeadersPolicyReferrerPolicy(
         Boolean override,
         String referrerPolicy) {
-        this.override = Objects.requireNonNull(override);
-        this.referrerPolicy = Objects.requireNonNull(referrerPolicy);
+        this.override = override;
+        this.referrerPolicy = referrerPolicy;
     }
 
     public Boolean getOverride() {

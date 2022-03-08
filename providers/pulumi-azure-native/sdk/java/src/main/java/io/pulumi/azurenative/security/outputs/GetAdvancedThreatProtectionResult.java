@@ -39,10 +39,10 @@ public final class GetAdvancedThreatProtectionResult {
         @Nullable Boolean isEnabled,
         String name,
         String type) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.isEnabled = isEnabled;
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.name = name;
+        this.type = type;
     }
 
     /**

@@ -94,18 +94,18 @@ public final class GetProjectResult {
         @Nullable Object targetConnectionInfo,
         String targetPlatform,
         String type) {
-        this.creationTime = Objects.requireNonNull(creationTime);
+        this.creationTime = creationTime;
         this.databasesInfo = databasesInfo;
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.id = id;
+        this.location = location;
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.sourceConnectionInfo = sourceConnectionInfo;
-        this.sourcePlatform = Objects.requireNonNull(sourcePlatform);
+        this.sourcePlatform = sourcePlatform;
         this.tags = tags;
         this.targetConnectionInfo = targetConnectionInfo;
-        this.targetPlatform = Objects.requireNonNull(targetPlatform);
-        this.type = Objects.requireNonNull(type);
+        this.targetPlatform = targetPlatform;
+        this.type = type;
     }
 
     /**

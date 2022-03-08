@@ -22,9 +22,9 @@ public final class GetLambdaFunctionAssociationResult {
         String functionArn,
         String id,
         String instanceId) {
-        this.functionArn = Objects.requireNonNull(functionArn);
-        this.id = Objects.requireNonNull(id);
-        this.instanceId = Objects.requireNonNull(instanceId);
+        this.functionArn = functionArn;
+        this.id = id;
+        this.instanceId = instanceId;
     }
 
     public String getFunctionArn() {

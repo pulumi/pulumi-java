@@ -66,15 +66,15 @@ public final class KeyUsageOptionsResponse {
         Boolean encipherOnly,
         Boolean keyAgreement,
         Boolean keyEncipherment) {
-        this.certSign = Objects.requireNonNull(certSign);
-        this.contentCommitment = Objects.requireNonNull(contentCommitment);
-        this.crlSign = Objects.requireNonNull(crlSign);
-        this.dataEncipherment = Objects.requireNonNull(dataEncipherment);
-        this.decipherOnly = Objects.requireNonNull(decipherOnly);
-        this.digitalSignature = Objects.requireNonNull(digitalSignature);
-        this.encipherOnly = Objects.requireNonNull(encipherOnly);
-        this.keyAgreement = Objects.requireNonNull(keyAgreement);
-        this.keyEncipherment = Objects.requireNonNull(keyEncipherment);
+        this.certSign = certSign;
+        this.contentCommitment = contentCommitment;
+        this.crlSign = crlSign;
+        this.dataEncipherment = dataEncipherment;
+        this.decipherOnly = decipherOnly;
+        this.digitalSignature = digitalSignature;
+        this.encipherOnly = encipherOnly;
+        this.keyAgreement = keyAgreement;
+        this.keyEncipherment = keyEncipherment;
     }
 
     /**

@@ -119,14 +119,14 @@ public final class HttpDatasetResponse {
         this.description = description;
         this.folder = folder;
         this.format = format;
-        this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
+        this.linkedServiceName = linkedServiceName;
         this.parameters = parameters;
         this.relativeUrl = relativeUrl;
         this.requestBody = requestBody;
         this.requestMethod = requestMethod;
         this.schema = schema;
         this.structure = structure;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

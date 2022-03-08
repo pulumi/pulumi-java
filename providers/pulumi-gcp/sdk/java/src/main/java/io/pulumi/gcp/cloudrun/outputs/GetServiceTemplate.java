@@ -18,8 +18,8 @@ public final class GetServiceTemplate {
     private GetServiceTemplate(
         List<GetServiceTemplateMetadata> metadatas,
         List<GetServiceTemplateSpec> specs) {
-        this.metadatas = Objects.requireNonNull(metadatas);
-        this.specs = Objects.requireNonNull(specs);
+        this.metadatas = metadatas;
+        this.specs = specs;
     }
 
     public List<GetServiceTemplateMetadata> getMetadatas() {

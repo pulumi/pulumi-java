@@ -16,8 +16,8 @@ public final class WirelessDeviceSessionKeysAbpV10x {
     private WirelessDeviceSessionKeysAbpV10x(
         String appSKey,
         String nwkSKey) {
-        this.appSKey = Objects.requireNonNull(appSKey);
-        this.nwkSKey = Objects.requireNonNull(nwkSKey);
+        this.appSKey = appSKey;
+        this.nwkSKey = nwkSKey;
     }
 
     public String getAppSKey() {

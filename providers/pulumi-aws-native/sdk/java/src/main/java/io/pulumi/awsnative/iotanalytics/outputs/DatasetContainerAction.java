@@ -24,9 +24,9 @@ public final class DatasetContainerAction {
         String image,
         DatasetResourceConfiguration resourceConfiguration,
         @Nullable List<DatasetVariable> variables) {
-        this.executionRoleArn = Objects.requireNonNull(executionRoleArn);
-        this.image = Objects.requireNonNull(image);
-        this.resourceConfiguration = Objects.requireNonNull(resourceConfiguration);
+        this.executionRoleArn = executionRoleArn;
+        this.image = image;
+        this.resourceConfiguration = resourceConfiguration;
         this.variables = variables;
     }
 

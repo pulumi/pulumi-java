@@ -26,8 +26,8 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
     private RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinition(
         List<String> actions,
         RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributes matchAttributes) {
-        this.actions = Objects.requireNonNull(actions);
-        this.matchAttributes = Objects.requireNonNull(matchAttributes);
+        this.actions = actions;
+        this.matchAttributes = matchAttributes;
     }
 
     /**

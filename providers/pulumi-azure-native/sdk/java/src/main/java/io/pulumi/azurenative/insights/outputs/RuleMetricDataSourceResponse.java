@@ -54,7 +54,7 @@ public final class RuleMetricDataSourceResponse {
         this.legacyResourceId = legacyResourceId;
         this.metricName = metricName;
         this.metricNamespace = metricNamespace;
-        this.odataType = Objects.requireNonNull(odataType);
+        this.odataType = odataType;
         this.resourceLocation = resourceLocation;
         this.resourceUri = resourceUri;
     }

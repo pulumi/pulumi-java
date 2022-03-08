@@ -18,7 +18,7 @@ public final class GroupMembershipRole {
 
     @OutputCustomType.Constructor({"name"})
     private GroupMembershipRole(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

@@ -45,10 +45,10 @@ public final class GetAlertRuleResult {
         String name,
         String type) {
         this.etag = etag;
-        this.id = Objects.requireNonNull(id);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.id = id;
+        this.kind = kind;
+        this.name = name;
+        this.type = type;
     }
 
     /**

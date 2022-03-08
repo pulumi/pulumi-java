@@ -129,24 +129,24 @@ public final class GetExpressRoutePortResult {
         String resourceGuid,
         @Nullable Map<String,String> tags,
         String type) {
-        this.allocationDate = Objects.requireNonNull(allocationDate);
+        this.allocationDate = allocationDate;
         this.bandwidthInGbps = bandwidthInGbps;
-        this.circuits = Objects.requireNonNull(circuits);
+        this.circuits = circuits;
         this.encapsulation = encapsulation;
-        this.etag = Objects.requireNonNull(etag);
-        this.etherType = Objects.requireNonNull(etherType);
+        this.etag = etag;
+        this.etherType = etherType;
         this.id = id;
         this.identity = identity;
         this.links = links;
         this.location = location;
-        this.mtu = Objects.requireNonNull(mtu);
-        this.name = Objects.requireNonNull(name);
+        this.mtu = mtu;
+        this.name = name;
         this.peeringLocation = peeringLocation;
-        this.provisionedBandwidthInGbps = Objects.requireNonNull(provisionedBandwidthInGbps);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.resourceGuid = Objects.requireNonNull(resourceGuid);
+        this.provisionedBandwidthInGbps = provisionedBandwidthInGbps;
+        this.provisioningState = provisioningState;
+        this.resourceGuid = resourceGuid;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

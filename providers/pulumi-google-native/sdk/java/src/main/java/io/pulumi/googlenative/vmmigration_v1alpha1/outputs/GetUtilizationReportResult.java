@@ -82,17 +82,17 @@ public final class GetUtilizationReportResult {
         Integer vmCount,
         List<VmUtilizationInfoResponse> vms,
         Integer vmsCount) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.error = Objects.requireNonNull(error);
-        this.frameEndTime = Objects.requireNonNull(frameEndTime);
-        this.name = Objects.requireNonNull(name);
-        this.state = Objects.requireNonNull(state);
-        this.stateTime = Objects.requireNonNull(stateTime);
-        this.timeFrame = Objects.requireNonNull(timeFrame);
-        this.vmCount = Objects.requireNonNull(vmCount);
-        this.vms = Objects.requireNonNull(vms);
-        this.vmsCount = Objects.requireNonNull(vmsCount);
+        this.createTime = createTime;
+        this.displayName = displayName;
+        this.error = error;
+        this.frameEndTime = frameEndTime;
+        this.name = name;
+        this.state = state;
+        this.stateTime = stateTime;
+        this.timeFrame = timeFrame;
+        this.vmCount = vmCount;
+        this.vms = vms;
+        this.vmsCount = vmsCount;
     }
 
     /**

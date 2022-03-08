@@ -51,12 +51,12 @@ public final class SubnetworkLogConfigResponse {
         Double flowSampling,
         String metadata,
         List<String> metadataFields) {
-        this.aggregationInterval = Objects.requireNonNull(aggregationInterval);
-        this.enable = Objects.requireNonNull(enable);
-        this.filterExpr = Objects.requireNonNull(filterExpr);
-        this.flowSampling = Objects.requireNonNull(flowSampling);
-        this.metadata = Objects.requireNonNull(metadata);
-        this.metadataFields = Objects.requireNonNull(metadataFields);
+        this.aggregationInterval = aggregationInterval;
+        this.enable = enable;
+        this.filterExpr = filterExpr;
+        this.flowSampling = flowSampling;
+        this.metadata = metadata;
+        this.metadataFields = metadataFields;
     }
 
     /**

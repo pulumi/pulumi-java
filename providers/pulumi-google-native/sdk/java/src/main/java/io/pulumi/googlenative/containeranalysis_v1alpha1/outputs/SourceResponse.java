@@ -53,12 +53,12 @@ public final class SourceResponse {
         Map<String,String> fileHashes,
         RepoSourceResponse repoSource,
         StorageSourceResponse storageSource) {
-        this.additionalContexts = Objects.requireNonNull(additionalContexts);
-        this.artifactStorageSource = Objects.requireNonNull(artifactStorageSource);
-        this.context = Objects.requireNonNull(context);
-        this.fileHashes = Objects.requireNonNull(fileHashes);
-        this.repoSource = Objects.requireNonNull(repoSource);
-        this.storageSource = Objects.requireNonNull(storageSource);
+        this.additionalContexts = additionalContexts;
+        this.artifactStorageSource = artifactStorageSource;
+        this.context = context;
+        this.fileHashes = fileHashes;
+        this.repoSource = repoSource;
+        this.storageSource = storageSource;
     }
 
     /**

@@ -152,27 +152,27 @@ public final class GetNoteResult {
         RelationshipNoteResponse spdxRelationship,
         String updateTime,
         VulnerabilityResponse vulnerability) {
-        this.attestationAuthority = Objects.requireNonNull(attestationAuthority);
-        this.baseImage = Objects.requireNonNull(baseImage);
-        this.build = Objects.requireNonNull(build);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.deployable = Objects.requireNonNull(deployable);
-        this.discovery = Objects.requireNonNull(discovery);
-        this.expirationTime = Objects.requireNonNull(expirationTime);
-        this.intoto = Objects.requireNonNull(intoto);
-        this.kind = Objects.requireNonNull(kind);
-        this.longDescription = Objects.requireNonNull(longDescription);
-        this.name = Objects.requireNonNull(name);
-        this.$package = Objects.requireNonNull($package);
-        this.relatedNoteNames = Objects.requireNonNull(relatedNoteNames);
-        this.relatedUrl = Objects.requireNonNull(relatedUrl);
-        this.sbom = Objects.requireNonNull(sbom);
-        this.shortDescription = Objects.requireNonNull(shortDescription);
-        this.spdxFile = Objects.requireNonNull(spdxFile);
-        this.spdxPackage = Objects.requireNonNull(spdxPackage);
-        this.spdxRelationship = Objects.requireNonNull(spdxRelationship);
-        this.updateTime = Objects.requireNonNull(updateTime);
-        this.vulnerability = Objects.requireNonNull(vulnerability);
+        this.attestationAuthority = attestationAuthority;
+        this.baseImage = baseImage;
+        this.build = build;
+        this.createTime = createTime;
+        this.deployable = deployable;
+        this.discovery = discovery;
+        this.expirationTime = expirationTime;
+        this.intoto = intoto;
+        this.kind = kind;
+        this.longDescription = longDescription;
+        this.name = name;
+        this.$package = $package;
+        this.relatedNoteNames = relatedNoteNames;
+        this.relatedUrl = relatedUrl;
+        this.sbom = sbom;
+        this.shortDescription = shortDescription;
+        this.spdxFile = spdxFile;
+        this.spdxPackage = spdxPackage;
+        this.spdxRelationship = spdxRelationship;
+        this.updateTime = updateTime;
+        this.vulnerability = vulnerability;
     }
 
     /**

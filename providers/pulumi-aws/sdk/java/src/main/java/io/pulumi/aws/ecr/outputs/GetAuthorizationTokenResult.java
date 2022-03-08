@@ -52,13 +52,13 @@ public final class GetAuthorizationTokenResult {
         String proxyEndpoint,
         @Nullable String registryId,
         String userName) {
-        this.authorizationToken = Objects.requireNonNull(authorizationToken);
-        this.expiresAt = Objects.requireNonNull(expiresAt);
-        this.id = Objects.requireNonNull(id);
-        this.password = Objects.requireNonNull(password);
-        this.proxyEndpoint = Objects.requireNonNull(proxyEndpoint);
+        this.authorizationToken = authorizationToken;
+        this.expiresAt = expiresAt;
+        this.id = id;
+        this.password = password;
+        this.proxyEndpoint = proxyEndpoint;
         this.registryId = registryId;
-        this.userName = Objects.requireNonNull(userName);
+        this.userName = userName;
     }
 
     /**

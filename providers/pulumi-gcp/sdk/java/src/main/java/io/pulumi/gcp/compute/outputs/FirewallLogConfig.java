@@ -18,7 +18,7 @@ public final class FirewallLogConfig {
 
     @OutputCustomType.Constructor({"metadata"})
     private FirewallLogConfig(String metadata) {
-        this.metadata = Objects.requireNonNull(metadata);
+        this.metadata = metadata;
     }
 
     /**

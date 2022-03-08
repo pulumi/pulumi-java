@@ -50,12 +50,12 @@ public final class OracleProfileResponse {
         String password,
         Integer port,
         String username) {
-        this.connectionAttributes = Objects.requireNonNull(connectionAttributes);
-        this.databaseService = Objects.requireNonNull(databaseService);
-        this.hostname = Objects.requireNonNull(hostname);
-        this.password = Objects.requireNonNull(password);
-        this.port = Objects.requireNonNull(port);
-        this.username = Objects.requireNonNull(username);
+        this.connectionAttributes = connectionAttributes;
+        this.databaseService = databaseService;
+        this.hostname = hostname;
+        this.password = password;
+        this.port = port;
+        this.username = username;
     }
 
     /**

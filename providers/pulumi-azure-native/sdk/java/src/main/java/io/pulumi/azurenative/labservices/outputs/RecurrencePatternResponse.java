@@ -40,8 +40,8 @@ public final class RecurrencePatternResponse {
         String frequency,
         @Nullable Integer interval,
         @Nullable List<String> weekDays) {
-        this.expirationDate = Objects.requireNonNull(expirationDate);
-        this.frequency = Objects.requireNonNull(frequency);
+        this.expirationDate = expirationDate;
+        this.frequency = frequency;
         this.interval = interval;
         this.weekDays = weekDays;
     }

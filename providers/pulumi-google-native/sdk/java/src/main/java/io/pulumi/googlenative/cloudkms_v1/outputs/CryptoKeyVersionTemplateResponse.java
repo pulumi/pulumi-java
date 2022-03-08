@@ -24,8 +24,8 @@ public final class CryptoKeyVersionTemplateResponse {
     private CryptoKeyVersionTemplateResponse(
         String algorithm,
         String protectionLevel) {
-        this.algorithm = Objects.requireNonNull(algorithm);
-        this.protectionLevel = Objects.requireNonNull(protectionLevel);
+        this.algorithm = algorithm;
+        this.protectionLevel = protectionLevel;
     }
 
     /**

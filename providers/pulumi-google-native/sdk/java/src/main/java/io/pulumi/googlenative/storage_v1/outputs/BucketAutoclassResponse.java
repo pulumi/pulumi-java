@@ -25,8 +25,8 @@ public final class BucketAutoclassResponse {
     private BucketAutoclassResponse(
         Boolean enabled,
         String toggleTime) {
-        this.enabled = Objects.requireNonNull(enabled);
-        this.toggleTime = Objects.requireNonNull(toggleTime);
+        this.enabled = enabled;
+        this.toggleTime = toggleTime;
     }
 
     /**

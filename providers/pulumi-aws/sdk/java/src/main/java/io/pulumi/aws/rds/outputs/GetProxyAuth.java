@@ -20,10 +20,10 @@ public final class GetProxyAuth {
         String description,
         String iamAuth,
         String secretArn) {
-        this.authScheme = Objects.requireNonNull(authScheme);
-        this.description = Objects.requireNonNull(description);
-        this.iamAuth = Objects.requireNonNull(iamAuth);
-        this.secretArn = Objects.requireNonNull(secretArn);
+        this.authScheme = authScheme;
+        this.description = description;
+        this.iamAuth = iamAuth;
+        this.secretArn = secretArn;
     }
 
     public String getAuthScheme() {

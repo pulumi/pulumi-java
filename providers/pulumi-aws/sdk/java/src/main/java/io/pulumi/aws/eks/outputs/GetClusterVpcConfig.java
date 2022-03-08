@@ -56,13 +56,13 @@ public final class GetClusterVpcConfig {
         List<String> securityGroupIds,
         List<String> subnetIds,
         String vpcId) {
-        this.clusterSecurityGroupId = Objects.requireNonNull(clusterSecurityGroupId);
-        this.endpointPrivateAccess = Objects.requireNonNull(endpointPrivateAccess);
-        this.endpointPublicAccess = Objects.requireNonNull(endpointPublicAccess);
-        this.publicAccessCidrs = Objects.requireNonNull(publicAccessCidrs);
-        this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
-        this.subnetIds = Objects.requireNonNull(subnetIds);
-        this.vpcId = Objects.requireNonNull(vpcId);
+        this.clusterSecurityGroupId = clusterSecurityGroupId;
+        this.endpointPrivateAccess = endpointPrivateAccess;
+        this.endpointPublicAccess = endpointPublicAccess;
+        this.publicAccessCidrs = publicAccessCidrs;
+        this.securityGroupIds = securityGroupIds;
+        this.subnetIds = subnetIds;
+        this.vpcId = vpcId;
     }
 
     /**

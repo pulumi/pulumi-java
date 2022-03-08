@@ -27,7 +27,7 @@ public final class BucketServerSideEncryptionConfigurationRuleApplyServerSideEnc
         @Nullable String kmsMasterKeyId,
         String sseAlgorithm) {
         this.kmsMasterKeyId = kmsMasterKeyId;
-        this.sseAlgorithm = Objects.requireNonNull(sseAlgorithm);
+        this.sseAlgorithm = sseAlgorithm;
     }
 
     /**

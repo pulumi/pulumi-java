@@ -35,8 +35,8 @@ public final class DockerImageResponse {
         String dockerImageUri,
         String dockerSpecificationType,
         @Nullable DockerImagePlatformResponse platform) {
-        this.dockerImageUri = Objects.requireNonNull(dockerImageUri);
-        this.dockerSpecificationType = Objects.requireNonNull(dockerSpecificationType);
+        this.dockerImageUri = dockerImageUri;
+        this.dockerSpecificationType = dockerSpecificationType;
         this.platform = platform;
     }
 

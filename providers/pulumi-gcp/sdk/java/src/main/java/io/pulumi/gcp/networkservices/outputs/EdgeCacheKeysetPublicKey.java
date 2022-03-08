@@ -28,8 +28,8 @@ public final class EdgeCacheKeysetPublicKey {
     private EdgeCacheKeysetPublicKey(
         String id,
         String value) {
-        this.id = Objects.requireNonNull(id);
-        this.value = Objects.requireNonNull(value);
+        this.id = id;
+        this.value = value;
     }
 
     /**

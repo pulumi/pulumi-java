@@ -27,7 +27,7 @@ public final class ListLocalUserKeysResult {
     private ListLocalUserKeysResult(
         String sharedKey,
         @Nullable List<SshPublicKeyResponse> sshAuthorizedKeys) {
-        this.sharedKey = Objects.requireNonNull(sharedKey);
+        this.sharedKey = sharedKey;
         this.sshAuthorizedKeys = sshAuthorizedKeys;
     }
 

@@ -57,13 +57,13 @@ public final class GetTaskResult {
         String scheduleTime,
         TaskStatusResponse status,
         String view) {
-        this.appEngineHttpRequest = Objects.requireNonNull(appEngineHttpRequest);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.name = Objects.requireNonNull(name);
-        this.pullMessage = Objects.requireNonNull(pullMessage);
-        this.scheduleTime = Objects.requireNonNull(scheduleTime);
-        this.status = Objects.requireNonNull(status);
-        this.view = Objects.requireNonNull(view);
+        this.appEngineHttpRequest = appEngineHttpRequest;
+        this.createTime = createTime;
+        this.name = name;
+        this.pullMessage = pullMessage;
+        this.scheduleTime = scheduleTime;
+        this.status = status;
+        this.view = view;
     }
 
     /**

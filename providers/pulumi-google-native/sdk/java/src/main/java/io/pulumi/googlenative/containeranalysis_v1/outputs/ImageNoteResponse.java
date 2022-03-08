@@ -25,8 +25,8 @@ public final class ImageNoteResponse {
     private ImageNoteResponse(
         FingerprintResponse fingerprint,
         String resourceUrl) {
-        this.fingerprint = Objects.requireNonNull(fingerprint);
-        this.resourceUrl = Objects.requireNonNull(resourceUrl);
+        this.fingerprint = fingerprint;
+        this.resourceUrl = resourceUrl;
     }
 
     /**

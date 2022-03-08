@@ -83,12 +83,12 @@ public final class SqlContainerGetPropertiesResponseResource {
         this.analyticalStorageTtl = analyticalStorageTtl;
         this.conflictResolutionPolicy = conflictResolutionPolicy;
         this.defaultTtl = defaultTtl;
-        this.etag = Objects.requireNonNull(etag);
-        this.id = Objects.requireNonNull(id);
+        this.etag = etag;
+        this.id = id;
         this.indexingPolicy = indexingPolicy;
         this.partitionKey = partitionKey;
-        this.rid = Objects.requireNonNull(rid);
-        this.ts = Objects.requireNonNull(ts);
+        this.rid = rid;
+        this.ts = ts;
         this.uniqueKeyPolicy = uniqueKeyPolicy;
     }
 

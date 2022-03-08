@@ -86,10 +86,10 @@ public final class CustomLayerCloudwatchConfigurationLogStream {
         this.bufferDuration = bufferDuration;
         this.datetimeFormat = datetimeFormat;
         this.encoding = encoding;
-        this.file = Objects.requireNonNull(file);
+        this.file = file;
         this.fileFingerprintLines = fileFingerprintLines;
         this.initialPosition = initialPosition;
-        this.logGroupName = Objects.requireNonNull(logGroupName);
+        this.logGroupName = logGroupName;
         this.multilineStartPattern = multilineStartPattern;
         this.timeZone = timeZone;
     }

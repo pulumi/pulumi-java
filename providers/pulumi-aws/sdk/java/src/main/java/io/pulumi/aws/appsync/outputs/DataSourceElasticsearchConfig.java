@@ -26,7 +26,7 @@ public final class DataSourceElasticsearchConfig {
     private DataSourceElasticsearchConfig(
         String endpoint,
         @Nullable String region) {
-        this.endpoint = Objects.requireNonNull(endpoint);
+        this.endpoint = endpoint;
         this.region = region;
     }
 

@@ -17,7 +17,7 @@ public final class BucketEncryptionConfiguration {
 
     @OutputCustomType.Constructor({"replicaKmsKeyID"})
     private BucketEncryptionConfiguration(String replicaKmsKeyID) {
-        this.replicaKmsKeyID = Objects.requireNonNull(replicaKmsKeyID);
+        this.replicaKmsKeyID = replicaKmsKeyID;
     }
 
     /**

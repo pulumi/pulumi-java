@@ -60,7 +60,7 @@ public final class RedirectConfigurationResponse {
         this.customHost = customHost;
         this.customPath = customPath;
         this.customQueryString = customQueryString;
-        this.odataType = Objects.requireNonNull(odataType);
+        this.odataType = odataType;
         this.redirectProtocol = redirectProtocol;
         this.redirectType = redirectType;
     }

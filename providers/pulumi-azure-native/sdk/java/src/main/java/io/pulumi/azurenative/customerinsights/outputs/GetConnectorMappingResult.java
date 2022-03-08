@@ -123,24 +123,24 @@ public final class GetConnectorMappingResult {
         String state,
         String tenantId,
         String type) {
-        this.connectorMappingName = Objects.requireNonNull(connectorMappingName);
-        this.connectorName = Objects.requireNonNull(connectorName);
+        this.connectorMappingName = connectorMappingName;
+        this.connectorName = connectorName;
         this.connectorType = connectorType;
-        this.created = Objects.requireNonNull(created);
-        this.dataFormatId = Objects.requireNonNull(dataFormatId);
+        this.created = created;
+        this.dataFormatId = dataFormatId;
         this.description = description;
         this.displayName = displayName;
-        this.entityType = Objects.requireNonNull(entityType);
-        this.entityTypeName = Objects.requireNonNull(entityTypeName);
-        this.id = Objects.requireNonNull(id);
-        this.lastModified = Objects.requireNonNull(lastModified);
-        this.mappingProperties = Objects.requireNonNull(mappingProperties);
-        this.name = Objects.requireNonNull(name);
-        this.nextRunTime = Objects.requireNonNull(nextRunTime);
-        this.runId = Objects.requireNonNull(runId);
-        this.state = Objects.requireNonNull(state);
-        this.tenantId = Objects.requireNonNull(tenantId);
-        this.type = Objects.requireNonNull(type);
+        this.entityType = entityType;
+        this.entityTypeName = entityTypeName;
+        this.id = id;
+        this.lastModified = lastModified;
+        this.mappingProperties = mappingProperties;
+        this.name = name;
+        this.nextRunTime = nextRunTime;
+        this.runId = runId;
+        this.state = state;
+        this.tenantId = tenantId;
+        this.type = type;
     }
 
     /**

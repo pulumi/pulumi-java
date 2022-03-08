@@ -28,7 +28,7 @@ public final class ResourceRequirementsResponse {
         @Nullable ResourceLimitsResponse limits,
         ResourceRequestsResponse requests) {
         this.limits = limits;
-        this.requests = Objects.requireNonNull(requests);
+        this.requests = requests;
     }
 
     /**

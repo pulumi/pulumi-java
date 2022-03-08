@@ -21,10 +21,10 @@ public final class GetNetworkInterfaceAttachment {
         Integer deviceIndex,
         String instanceId,
         String instanceOwnerId) {
-        this.attachmentId = Objects.requireNonNull(attachmentId);
-        this.deviceIndex = Objects.requireNonNull(deviceIndex);
-        this.instanceId = Objects.requireNonNull(instanceId);
-        this.instanceOwnerId = Objects.requireNonNull(instanceOwnerId);
+        this.attachmentId = attachmentId;
+        this.deviceIndex = deviceIndex;
+        this.instanceId = instanceId;
+        this.instanceOwnerId = instanceOwnerId;
     }
 
     public String getAttachmentId() {

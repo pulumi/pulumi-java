@@ -45,11 +45,11 @@ public final class ResourceGuardResponse {
         String provisioningState,
         List<ResourceGuardOperationResponse> resourceGuardOperations,
         List<String> vaultCriticalOperationExclusionList) {
-        this.allowAutoApprovals = Objects.requireNonNull(allowAutoApprovals);
-        this.description = Objects.requireNonNull(description);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.resourceGuardOperations = Objects.requireNonNull(resourceGuardOperations);
-        this.vaultCriticalOperationExclusionList = Objects.requireNonNull(vaultCriticalOperationExclusionList);
+        this.allowAutoApprovals = allowAutoApprovals;
+        this.description = description;
+        this.provisioningState = provisioningState;
+        this.resourceGuardOperations = resourceGuardOperations;
+        this.vaultCriticalOperationExclusionList = vaultCriticalOperationExclusionList;
     }
 
     /**

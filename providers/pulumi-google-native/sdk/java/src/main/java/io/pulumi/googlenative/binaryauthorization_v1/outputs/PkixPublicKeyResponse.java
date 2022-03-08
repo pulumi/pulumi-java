@@ -24,8 +24,8 @@ public final class PkixPublicKeyResponse {
     private PkixPublicKeyResponse(
         String publicKeyPem,
         String signatureAlgorithm) {
-        this.publicKeyPem = Objects.requireNonNull(publicKeyPem);
-        this.signatureAlgorithm = Objects.requireNonNull(signatureAlgorithm);
+        this.publicKeyPem = publicKeyPem;
+        this.signatureAlgorithm = signatureAlgorithm;
     }
 
     /**

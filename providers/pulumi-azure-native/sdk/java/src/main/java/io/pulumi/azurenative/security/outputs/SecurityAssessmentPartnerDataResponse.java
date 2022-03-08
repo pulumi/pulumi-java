@@ -24,8 +24,8 @@ public final class SecurityAssessmentPartnerDataResponse {
     private SecurityAssessmentPartnerDataResponse(
         String partnerName,
         String secret) {
-        this.partnerName = Objects.requireNonNull(partnerName);
-        this.secret = Objects.requireNonNull(secret);
+        this.partnerName = partnerName;
+        this.secret = secret;
     }
 
     /**

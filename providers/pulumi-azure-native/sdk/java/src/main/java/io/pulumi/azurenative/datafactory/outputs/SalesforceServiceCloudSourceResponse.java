@@ -71,7 +71,7 @@ public final class SalesforceServiceCloudSourceResponse {
         this.readBehavior = readBehavior;
         this.sourceRetryCount = sourceRetryCount;
         this.sourceRetryWait = sourceRetryWait;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

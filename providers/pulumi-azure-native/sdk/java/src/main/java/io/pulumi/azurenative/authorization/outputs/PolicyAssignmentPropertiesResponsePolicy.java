@@ -34,7 +34,7 @@ public final class PolicyAssignmentPropertiesResponsePolicy {
         PrincipalResponse lastModifiedBy,
         @Nullable String lastModifiedDateTime) {
         this.id = id;
-        this.lastModifiedBy = Objects.requireNonNull(lastModifiedBy);
+        this.lastModifiedBy = lastModifiedBy;
         this.lastModifiedDateTime = lastModifiedDateTime;
     }
 

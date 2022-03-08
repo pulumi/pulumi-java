@@ -19,7 +19,7 @@ public final class RegionAutoscalerAutoscalingPolicyLoadBalancingUtilization {
 
     @OutputCustomType.Constructor({"target"})
     private RegionAutoscalerAutoscalingPolicyLoadBalancingUtilization(Double target) {
-        this.target = Objects.requireNonNull(target);
+        this.target = target;
     }
 
     /**

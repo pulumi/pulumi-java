@@ -20,7 +20,7 @@ public final class DeliveryStreamEncryptionConfigurationInput {
         @Nullable String keyARN,
         DeliveryStreamEncryptionConfigurationInputKeyType keyType) {
         this.keyARN = keyARN;
-        this.keyType = Objects.requireNonNull(keyType);
+        this.keyType = keyType;
     }
 
     public Optional<String> getKeyARN() {

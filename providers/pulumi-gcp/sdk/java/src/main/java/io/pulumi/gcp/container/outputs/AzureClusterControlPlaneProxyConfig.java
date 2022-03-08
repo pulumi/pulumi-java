@@ -24,8 +24,8 @@ public final class AzureClusterControlPlaneProxyConfig {
     private AzureClusterControlPlaneProxyConfig(
         String resourceGroupId,
         String secretId) {
-        this.resourceGroupId = Objects.requireNonNull(resourceGroupId);
-        this.secretId = Objects.requireNonNull(secretId);
+        this.resourceGroupId = resourceGroupId;
+        this.secretId = secretId;
     }
 
     /**

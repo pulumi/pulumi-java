@@ -36,7 +36,7 @@ public final class TaskSetAwsVpcConfiguration {
         List<String> subnets) {
         this.assignPublicIp = assignPublicIp;
         this.securityGroups = securityGroups;
-        this.subnets = Objects.requireNonNull(subnets);
+        this.subnets = subnets;
     }
 
     /**

@@ -17,7 +17,7 @@ public final class StateNotificationConfigResponse {
 
     @OutputCustomType.Constructor({"pubsubTopicName"})
     private StateNotificationConfigResponse(String pubsubTopicName) {
-        this.pubsubTopicName = Objects.requireNonNull(pubsubTopicName);
+        this.pubsubTopicName = pubsubTopicName;
     }
 
     /**

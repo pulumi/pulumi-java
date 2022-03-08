@@ -14,7 +14,7 @@ public final class ManagedZonePrivateVisibilityConfig {
 
     @OutputCustomType.Constructor({"networks"})
     private ManagedZonePrivateVisibilityConfig(List<ManagedZonePrivateVisibilityConfigNetwork> networks) {
-        this.networks = Objects.requireNonNull(networks);
+        this.networks = networks;
     }
 
     public List<ManagedZonePrivateVisibilityConfigNetwork> getNetworks() {

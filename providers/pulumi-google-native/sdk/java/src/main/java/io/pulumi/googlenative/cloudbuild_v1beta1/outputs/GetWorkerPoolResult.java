@@ -81,17 +81,17 @@ public final class GetWorkerPoolResult {
         String uid,
         String updateTime,
         WorkerConfigResponse workerConfig) {
-        this.annotations = Objects.requireNonNull(annotations);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.deleteTime = Objects.requireNonNull(deleteTime);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.etag = Objects.requireNonNull(etag);
-        this.name = Objects.requireNonNull(name);
-        this.networkConfig = Objects.requireNonNull(networkConfig);
-        this.state = Objects.requireNonNull(state);
-        this.uid = Objects.requireNonNull(uid);
-        this.updateTime = Objects.requireNonNull(updateTime);
-        this.workerConfig = Objects.requireNonNull(workerConfig);
+        this.annotations = annotations;
+        this.createTime = createTime;
+        this.deleteTime = deleteTime;
+        this.displayName = displayName;
+        this.etag = etag;
+        this.name = name;
+        this.networkConfig = networkConfig;
+        this.state = state;
+        this.uid = uid;
+        this.updateTime = updateTime;
+        this.workerConfig = workerConfig;
     }
 
     /**

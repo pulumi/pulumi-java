@@ -115,21 +115,21 @@ public final class ScheduleResponse {
         String type,
         String uniqueIdentifier,
         @Nullable WeekDetailsResponse weeklyRecurrence) {
-        this.createdDate = Objects.requireNonNull(createdDate);
+        this.createdDate = createdDate;
         this.dailyRecurrence = dailyRecurrence;
         this.hourlyRecurrence = hourlyRecurrence;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.notificationSettings = notificationSettings;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.status = status;
         this.tags = tags;
         this.targetResourceId = targetResourceId;
         this.taskType = taskType;
         this.timeZoneId = timeZoneId;
-        this.type = Objects.requireNonNull(type);
-        this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
+        this.type = type;
+        this.uniqueIdentifier = uniqueIdentifier;
         this.weeklyRecurrence = weeklyRecurrence;
     }
 

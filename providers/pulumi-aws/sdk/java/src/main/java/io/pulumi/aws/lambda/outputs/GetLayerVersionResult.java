@@ -100,22 +100,22 @@ public final class GetLayerVersionResult {
         String sourceCodeHash,
         Integer sourceCodeSize,
         Integer version) {
-        this.arn = Objects.requireNonNull(arn);
+        this.arn = arn;
         this.compatibleArchitecture = compatibleArchitecture;
-        this.compatibleArchitectures = Objects.requireNonNull(compatibleArchitectures);
+        this.compatibleArchitectures = compatibleArchitectures;
         this.compatibleRuntime = compatibleRuntime;
-        this.compatibleRuntimes = Objects.requireNonNull(compatibleRuntimes);
-        this.createdDate = Objects.requireNonNull(createdDate);
-        this.description = Objects.requireNonNull(description);
-        this.id = Objects.requireNonNull(id);
-        this.layerArn = Objects.requireNonNull(layerArn);
-        this.layerName = Objects.requireNonNull(layerName);
-        this.licenseInfo = Objects.requireNonNull(licenseInfo);
-        this.signingJobArn = Objects.requireNonNull(signingJobArn);
-        this.signingProfileVersionArn = Objects.requireNonNull(signingProfileVersionArn);
-        this.sourceCodeHash = Objects.requireNonNull(sourceCodeHash);
-        this.sourceCodeSize = Objects.requireNonNull(sourceCodeSize);
-        this.version = Objects.requireNonNull(version);
+        this.compatibleRuntimes = compatibleRuntimes;
+        this.createdDate = createdDate;
+        this.description = description;
+        this.id = id;
+        this.layerArn = layerArn;
+        this.layerName = layerName;
+        this.licenseInfo = licenseInfo;
+        this.signingJobArn = signingJobArn;
+        this.signingProfileVersionArn = signingProfileVersionArn;
+        this.sourceCodeHash = sourceCodeHash;
+        this.sourceCodeSize = sourceCodeSize;
+        this.version = version;
     }
 
     /**

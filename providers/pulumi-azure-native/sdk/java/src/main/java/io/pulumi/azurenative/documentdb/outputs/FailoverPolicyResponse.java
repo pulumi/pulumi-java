@@ -34,7 +34,7 @@ public final class FailoverPolicyResponse {
         String id,
         @Nullable String locationName) {
         this.failoverPriority = failoverPriority;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.locationName = locationName;
     }
 

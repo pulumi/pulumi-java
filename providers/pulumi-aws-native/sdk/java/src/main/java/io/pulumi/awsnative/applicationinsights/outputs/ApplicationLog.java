@@ -48,7 +48,7 @@ public final class ApplicationLog {
         this.encoding = encoding;
         this.logGroupName = logGroupName;
         this.logPath = logPath;
-        this.logType = Objects.requireNonNull(logType);
+        this.logType = logType;
         this.patternSet = patternSet;
     }
 

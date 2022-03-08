@@ -37,10 +37,10 @@ public final class GetDomainCognitoOption {
         String identityPoolId,
         String roleArn,
         String userPoolId) {
-        this.enabled = Objects.requireNonNull(enabled);
-        this.identityPoolId = Objects.requireNonNull(identityPoolId);
-        this.roleArn = Objects.requireNonNull(roleArn);
-        this.userPoolId = Objects.requireNonNull(userPoolId);
+        this.enabled = enabled;
+        this.identityPoolId = identityPoolId;
+        this.roleArn = roleArn;
+        this.userPoolId = userPoolId;
     }
 
     /**

@@ -59,13 +59,13 @@ public final class ContentKeyPolicyFairPlayConfigurationResponse {
         @Nullable ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse offlineRentalConfiguration,
         String rentalAndLeaseKeyType,
         Double rentalDuration) {
-        this.ask = Objects.requireNonNull(ask);
-        this.fairPlayPfx = Objects.requireNonNull(fairPlayPfx);
-        this.fairPlayPfxPassword = Objects.requireNonNull(fairPlayPfxPassword);
-        this.odataType = Objects.requireNonNull(odataType);
+        this.ask = ask;
+        this.fairPlayPfx = fairPlayPfx;
+        this.fairPlayPfxPassword = fairPlayPfxPassword;
+        this.odataType = odataType;
         this.offlineRentalConfiguration = offlineRentalConfiguration;
-        this.rentalAndLeaseKeyType = Objects.requireNonNull(rentalAndLeaseKeyType);
-        this.rentalDuration = Objects.requireNonNull(rentalDuration);
+        this.rentalAndLeaseKeyType = rentalAndLeaseKeyType;
+        this.rentalDuration = rentalDuration;
     }
 
     /**

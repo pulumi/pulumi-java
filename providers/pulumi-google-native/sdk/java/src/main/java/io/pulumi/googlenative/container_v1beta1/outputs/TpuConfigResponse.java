@@ -31,9 +31,9 @@ public final class TpuConfigResponse {
         Boolean enabled,
         String ipv4CidrBlock,
         Boolean useServiceNetworking) {
-        this.enabled = Objects.requireNonNull(enabled);
-        this.ipv4CidrBlock = Objects.requireNonNull(ipv4CidrBlock);
-        this.useServiceNetworking = Objects.requireNonNull(useServiceNetworking);
+        this.enabled = enabled;
+        this.ipv4CidrBlock = ipv4CidrBlock;
+        this.useServiceNetworking = useServiceNetworking;
     }
 
     /**

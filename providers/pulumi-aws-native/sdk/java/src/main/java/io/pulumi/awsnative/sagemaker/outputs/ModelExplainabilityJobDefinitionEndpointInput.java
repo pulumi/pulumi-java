@@ -54,10 +54,10 @@ public final class ModelExplainabilityJobDefinitionEndpointInput {
         @Nullable String probabilityAttribute,
         @Nullable ModelExplainabilityJobDefinitionEndpointInputS3DataDistributionType s3DataDistributionType,
         @Nullable ModelExplainabilityJobDefinitionEndpointInputS3InputMode s3InputMode) {
-        this.endpointName = Objects.requireNonNull(endpointName);
+        this.endpointName = endpointName;
         this.featuresAttribute = featuresAttribute;
         this.inferenceAttribute = inferenceAttribute;
-        this.localPath = Objects.requireNonNull(localPath);
+        this.localPath = localPath;
         this.probabilityAttribute = probabilityAttribute;
         this.s3DataDistributionType = s3DataDistributionType;
         this.s3InputMode = s3InputMode;

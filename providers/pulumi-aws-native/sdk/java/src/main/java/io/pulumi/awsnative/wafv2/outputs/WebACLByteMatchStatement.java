@@ -28,11 +28,11 @@ public final class WebACLByteMatchStatement {
         @Nullable String searchString,
         @Nullable String searchStringBase64,
         List<WebACLTextTransformation> textTransformations) {
-        this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
-        this.positionalConstraint = Objects.requireNonNull(positionalConstraint);
+        this.fieldToMatch = fieldToMatch;
+        this.positionalConstraint = positionalConstraint;
         this.searchString = searchString;
         this.searchStringBase64 = searchStringBase64;
-        this.textTransformations = Objects.requireNonNull(textTransformations);
+        this.textTransformations = textTransformations;
     }
 
     public WebACLFieldToMatch getFieldToMatch() {

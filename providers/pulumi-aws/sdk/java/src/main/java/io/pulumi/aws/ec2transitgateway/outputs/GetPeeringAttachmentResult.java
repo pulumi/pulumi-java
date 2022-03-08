@@ -47,12 +47,12 @@ public final class GetPeeringAttachmentResult {
         Map<String,String> tags,
         String transitGatewayId) {
         this.filters = filters;
-        this.id = Objects.requireNonNull(id);
-        this.peerAccountId = Objects.requireNonNull(peerAccountId);
-        this.peerRegion = Objects.requireNonNull(peerRegion);
-        this.peerTransitGatewayId = Objects.requireNonNull(peerTransitGatewayId);
-        this.tags = Objects.requireNonNull(tags);
-        this.transitGatewayId = Objects.requireNonNull(transitGatewayId);
+        this.id = id;
+        this.peerAccountId = peerAccountId;
+        this.peerRegion = peerRegion;
+        this.peerTransitGatewayId = peerTransitGatewayId;
+        this.tags = tags;
+        this.transitGatewayId = transitGatewayId;
     }
 
     public List<GetPeeringAttachmentFilter> getFilters() {

@@ -57,13 +57,13 @@ public final class GetCertificateResult {
         String subject,
         String thumbprint,
         String type) {
-        this.expirationDate = Objects.requireNonNull(expirationDate);
-        this.id = Objects.requireNonNull(id);
+        this.expirationDate = expirationDate;
+        this.id = id;
         this.keyVault = keyVault;
-        this.name = Objects.requireNonNull(name);
-        this.subject = Objects.requireNonNull(subject);
-        this.thumbprint = Objects.requireNonNull(thumbprint);
-        this.type = Objects.requireNonNull(type);
+        this.name = name;
+        this.subject = subject;
+        this.thumbprint = thumbprint;
+        this.type = type;
     }
 
     /**

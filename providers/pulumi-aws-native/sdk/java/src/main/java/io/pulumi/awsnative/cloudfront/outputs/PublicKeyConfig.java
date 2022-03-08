@@ -22,10 +22,10 @@ public final class PublicKeyConfig {
         @Nullable String comment,
         String encodedKey,
         String name) {
-        this.callerReference = Objects.requireNonNull(callerReference);
+        this.callerReference = callerReference;
         this.comment = comment;
-        this.encodedKey = Objects.requireNonNull(encodedKey);
-        this.name = Objects.requireNonNull(name);
+        this.encodedKey = encodedKey;
+        this.name = name;
     }
 
     public String getCallerReference() {

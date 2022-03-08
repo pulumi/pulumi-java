@@ -50,7 +50,7 @@ public final class ContainerPort {
         @Nullable Integer hostPort,
         @Nullable String name,
         @Nullable String protocol) {
-        this.containerPort = Objects.requireNonNull(containerPort);
+        this.containerPort = containerPort;
         this.hostIP = hostIP;
         this.hostPort = hostPort;
         this.name = name;

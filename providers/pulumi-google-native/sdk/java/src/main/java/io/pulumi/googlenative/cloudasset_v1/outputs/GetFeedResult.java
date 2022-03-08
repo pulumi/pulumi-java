@@ -57,13 +57,13 @@ public final class GetFeedResult {
         FeedOutputConfigResponse feedOutputConfig,
         String name,
         List<String> relationshipTypes) {
-        this.assetNames = Objects.requireNonNull(assetNames);
-        this.assetTypes = Objects.requireNonNull(assetTypes);
-        this.condition = Objects.requireNonNull(condition);
-        this.contentType = Objects.requireNonNull(contentType);
-        this.feedOutputConfig = Objects.requireNonNull(feedOutputConfig);
-        this.name = Objects.requireNonNull(name);
-        this.relationshipTypes = Objects.requireNonNull(relationshipTypes);
+        this.assetNames = assetNames;
+        this.assetTypes = assetTypes;
+        this.condition = condition;
+        this.contentType = contentType;
+        this.feedOutputConfig = feedOutputConfig;
+        this.name = name;
+        this.relationshipTypes = relationshipTypes;
     }
 
     /**

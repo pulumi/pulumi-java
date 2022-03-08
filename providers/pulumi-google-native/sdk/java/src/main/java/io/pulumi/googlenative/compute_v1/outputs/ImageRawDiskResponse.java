@@ -24,8 +24,8 @@ public final class ImageRawDiskResponse {
     private ImageRawDiskResponse(
         String containerType,
         String source) {
-        this.containerType = Objects.requireNonNull(containerType);
-        this.source = Objects.requireNonNull(source);
+        this.containerType = containerType;
+        this.source = source;
     }
 
     /**

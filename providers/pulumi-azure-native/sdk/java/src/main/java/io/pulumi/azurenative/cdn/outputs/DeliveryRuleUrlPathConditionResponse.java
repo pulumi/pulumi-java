@@ -26,8 +26,8 @@ public final class DeliveryRuleUrlPathConditionResponse {
     private DeliveryRuleUrlPathConditionResponse(
         String name,
         UrlPathMatchConditionParametersResponse parameters) {
-        this.name = Objects.requireNonNull(name);
-        this.parameters = Objects.requireNonNull(parameters);
+        this.name = name;
+        this.parameters = parameters;
     }
 
     /**

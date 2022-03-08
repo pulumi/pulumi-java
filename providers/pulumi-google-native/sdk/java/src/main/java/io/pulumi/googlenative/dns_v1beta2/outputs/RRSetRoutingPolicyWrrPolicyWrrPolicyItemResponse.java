@@ -30,10 +30,10 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse {
         List<String> rrdatas,
         List<String> signatureRrdatas,
         Double weight) {
-        this.kind = Objects.requireNonNull(kind);
-        this.rrdatas = Objects.requireNonNull(rrdatas);
-        this.signatureRrdatas = Objects.requireNonNull(signatureRrdatas);
-        this.weight = Objects.requireNonNull(weight);
+        this.kind = kind;
+        this.rrdatas = rrdatas;
+        this.signatureRrdatas = signatureRrdatas;
+        this.weight = weight;
     }
 
     public String getKind() {

@@ -56,23 +56,23 @@ public final class GetDatabaseInstanceSetting {
         String tier,
         Map<String,String> userLabels,
         Integer version) {
-        this.activationPolicy = Objects.requireNonNull(activationPolicy);
-        this.availabilityType = Objects.requireNonNull(availabilityType);
-        this.backupConfigurations = Objects.requireNonNull(backupConfigurations);
-        this.collation = Objects.requireNonNull(collation);
-        this.databaseFlags = Objects.requireNonNull(databaseFlags);
-        this.diskAutoresize = Objects.requireNonNull(diskAutoresize);
-        this.diskAutoresizeLimit = Objects.requireNonNull(diskAutoresizeLimit);
-        this.diskSize = Objects.requireNonNull(diskSize);
-        this.diskType = Objects.requireNonNull(diskType);
-        this.insightsConfigs = Objects.requireNonNull(insightsConfigs);
-        this.ipConfigurations = Objects.requireNonNull(ipConfigurations);
-        this.locationPreferences = Objects.requireNonNull(locationPreferences);
-        this.maintenanceWindows = Objects.requireNonNull(maintenanceWindows);
-        this.pricingPlan = Objects.requireNonNull(pricingPlan);
-        this.tier = Objects.requireNonNull(tier);
-        this.userLabels = Objects.requireNonNull(userLabels);
-        this.version = Objects.requireNonNull(version);
+        this.activationPolicy = activationPolicy;
+        this.availabilityType = availabilityType;
+        this.backupConfigurations = backupConfigurations;
+        this.collation = collation;
+        this.databaseFlags = databaseFlags;
+        this.diskAutoresize = diskAutoresize;
+        this.diskAutoresizeLimit = diskAutoresizeLimit;
+        this.diskSize = diskSize;
+        this.diskType = diskType;
+        this.insightsConfigs = insightsConfigs;
+        this.ipConfigurations = ipConfigurations;
+        this.locationPreferences = locationPreferences;
+        this.maintenanceWindows = maintenanceWindows;
+        this.pricingPlan = pricingPlan;
+        this.tier = tier;
+        this.userLabels = userLabels;
+        this.version = version;
     }
 
     public String getActivationPolicy() {

@@ -27,13 +27,13 @@ public final class GetHealthCheckHttp2HealthCheck {
         String proxyHeader,
         String requestPath,
         String response) {
-        this.host = Objects.requireNonNull(host);
-        this.port = Objects.requireNonNull(port);
-        this.portName = Objects.requireNonNull(portName);
-        this.portSpecification = Objects.requireNonNull(portSpecification);
-        this.proxyHeader = Objects.requireNonNull(proxyHeader);
-        this.requestPath = Objects.requireNonNull(requestPath);
-        this.response = Objects.requireNonNull(response);
+        this.host = host;
+        this.port = port;
+        this.portName = portName;
+        this.portSpecification = portSpecification;
+        this.proxyHeader = proxyHeader;
+        this.requestPath = requestPath;
+        this.response = response;
     }
 
     public String getHost() {

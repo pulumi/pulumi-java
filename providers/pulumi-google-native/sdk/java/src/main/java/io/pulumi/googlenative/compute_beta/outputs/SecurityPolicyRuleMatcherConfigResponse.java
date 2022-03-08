@@ -32,9 +32,9 @@ public final class SecurityPolicyRuleMatcherConfigResponse {
         List<String> destIpRanges,
         List<SecurityPolicyRuleMatcherConfigLayer4ConfigResponse> layer4Configs,
         List<String> srcIpRanges) {
-        this.destIpRanges = Objects.requireNonNull(destIpRanges);
-        this.layer4Configs = Objects.requireNonNull(layer4Configs);
-        this.srcIpRanges = Objects.requireNonNull(srcIpRanges);
+        this.destIpRanges = destIpRanges;
+        this.layer4Configs = layer4Configs;
+        this.srcIpRanges = srcIpRanges;
     }
 
     /**

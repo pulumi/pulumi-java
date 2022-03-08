@@ -40,7 +40,7 @@ public final class SourceResponse {
         @Nullable String query,
         @Nullable String queryType) {
         this.authorizedResources = authorizedResources;
-        this.dataSourceId = Objects.requireNonNull(dataSourceId);
+        this.dataSourceId = dataSourceId;
         this.query = query;
         this.queryType = queryType;
     }

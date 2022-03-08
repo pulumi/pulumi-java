@@ -80,12 +80,12 @@ public final class GetDataExportResult {
         this.dataExportId = dataExportId;
         this.enable = enable;
         this.eventHubName = eventHubName;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.lastModifiedDate = lastModifiedDate;
-        this.name = Objects.requireNonNull(name);
-        this.resourceId = Objects.requireNonNull(resourceId);
-        this.tableNames = Objects.requireNonNull(tableNames);
-        this.type = Objects.requireNonNull(type);
+        this.name = name;
+        this.resourceId = resourceId;
+        this.tableNames = tableNames;
+        this.type = type;
     }
 
     /**

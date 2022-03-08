@@ -24,9 +24,9 @@ public final class ComponentChild {
         String name,
         ComponentProperties properties) {
         this.children = children;
-        this.componentType = Objects.requireNonNull(componentType);
-        this.name = Objects.requireNonNull(name);
-        this.properties = Objects.requireNonNull(properties);
+        this.componentType = componentType;
+        this.name = name;
+        this.properties = properties;
     }
 
     public List<ComponentChild> getChildren() {

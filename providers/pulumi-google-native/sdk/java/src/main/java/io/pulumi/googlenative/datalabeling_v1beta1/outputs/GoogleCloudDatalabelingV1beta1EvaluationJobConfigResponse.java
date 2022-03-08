@@ -82,16 +82,16 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse {
         GoogleCloudDatalabelingV1beta1ImageClassificationConfigResponse imageClassificationConfig,
         GoogleCloudDatalabelingV1beta1InputConfigResponse inputConfig,
         GoogleCloudDatalabelingV1beta1TextClassificationConfigResponse textClassificationConfig) {
-        this.bigqueryImportKeys = Objects.requireNonNull(bigqueryImportKeys);
-        this.boundingPolyConfig = Objects.requireNonNull(boundingPolyConfig);
-        this.evaluationConfig = Objects.requireNonNull(evaluationConfig);
-        this.evaluationJobAlertConfig = Objects.requireNonNull(evaluationJobAlertConfig);
-        this.exampleCount = Objects.requireNonNull(exampleCount);
-        this.exampleSamplePercentage = Objects.requireNonNull(exampleSamplePercentage);
-        this.humanAnnotationConfig = Objects.requireNonNull(humanAnnotationConfig);
-        this.imageClassificationConfig = Objects.requireNonNull(imageClassificationConfig);
-        this.inputConfig = Objects.requireNonNull(inputConfig);
-        this.textClassificationConfig = Objects.requireNonNull(textClassificationConfig);
+        this.bigqueryImportKeys = bigqueryImportKeys;
+        this.boundingPolyConfig = boundingPolyConfig;
+        this.evaluationConfig = evaluationConfig;
+        this.evaluationJobAlertConfig = evaluationJobAlertConfig;
+        this.exampleCount = exampleCount;
+        this.exampleSamplePercentage = exampleSamplePercentage;
+        this.humanAnnotationConfig = humanAnnotationConfig;
+        this.imageClassificationConfig = imageClassificationConfig;
+        this.inputConfig = inputConfig;
+        this.textClassificationConfig = textClassificationConfig;
     }
 
     /**

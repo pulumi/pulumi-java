@@ -111,9 +111,9 @@ public final class AutoscalerAutoscalingPolicy {
         this.cooldownPeriod = cooldownPeriod;
         this.cpuUtilization = cpuUtilization;
         this.loadBalancingUtilization = loadBalancingUtilization;
-        this.maxReplicas = Objects.requireNonNull(maxReplicas);
+        this.maxReplicas = maxReplicas;
         this.metrics = metrics;
-        this.minReplicas = Objects.requireNonNull(minReplicas);
+        this.minReplicas = minReplicas;
         this.mode = mode;
         this.scaleDownControl = scaleDownControl;
         this.scaleInControl = scaleInControl;

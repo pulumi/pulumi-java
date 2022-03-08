@@ -79,14 +79,14 @@ public final class GetDicomServiceResult {
         String type) {
         this.authenticationConfiguration = authenticationConfiguration;
         this.etag = etag;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.serviceUrl = Objects.requireNonNull(serviceUrl);
-        this.systemData = Objects.requireNonNull(systemData);
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.serviceUrl = serviceUrl;
+        this.systemData = systemData;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

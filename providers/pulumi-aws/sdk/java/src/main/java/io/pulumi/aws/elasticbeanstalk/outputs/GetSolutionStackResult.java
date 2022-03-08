@@ -31,10 +31,10 @@ public final class GetSolutionStackResult {
         @Nullable Boolean mostRecent,
         String name,
         String nameRegex) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.mostRecent = mostRecent;
-        this.name = Objects.requireNonNull(name);
-        this.nameRegex = Objects.requireNonNull(nameRegex);
+        this.name = name;
+        this.nameRegex = nameRegex;
     }
 
     /**

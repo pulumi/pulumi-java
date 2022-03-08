@@ -24,8 +24,8 @@ public final class GoogleCloudDatalabelingV1beta1GcsSourceResponse {
     private GoogleCloudDatalabelingV1beta1GcsSourceResponse(
         String inputUri,
         String mimeType) {
-        this.inputUri = Objects.requireNonNull(inputUri);
-        this.mimeType = Objects.requireNonNull(mimeType);
+        this.inputUri = inputUri;
+        this.mimeType = mimeType;
     }
 
     /**

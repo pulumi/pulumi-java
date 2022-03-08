@@ -35,7 +35,7 @@ public final class RuleGroupRuleGroup {
         RuleGroupRuleGroupRulesSource rulesSource,
         @Nullable RuleGroupRuleGroupStatefulRuleOptions statefulRuleOptions) {
         this.ruleVariables = ruleVariables;
-        this.rulesSource = Objects.requireNonNull(rulesSource);
+        this.rulesSource = rulesSource;
         this.statefulRuleOptions = statefulRuleOptions;
     }
 

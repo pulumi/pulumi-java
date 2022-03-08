@@ -50,12 +50,12 @@ public final class SyncPropertiesResponse {
         @Nullable String schedule,
         @Nullable String syncWindow,
         String tokenId) {
-        this.gatewayEndpoint = Objects.requireNonNull(gatewayEndpoint);
-        this.lastSyncTime = Objects.requireNonNull(lastSyncTime);
-        this.messageTtl = Objects.requireNonNull(messageTtl);
+        this.gatewayEndpoint = gatewayEndpoint;
+        this.lastSyncTime = lastSyncTime;
+        this.messageTtl = messageTtl;
         this.schedule = schedule;
         this.syncWindow = syncWindow;
-        this.tokenId = Objects.requireNonNull(tokenId);
+        this.tokenId = tokenId;
     }
 
     /**

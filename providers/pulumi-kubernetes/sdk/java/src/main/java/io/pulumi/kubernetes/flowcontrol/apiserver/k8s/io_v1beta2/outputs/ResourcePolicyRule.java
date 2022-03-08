@@ -46,11 +46,11 @@ public final class ResourcePolicyRule {
         @Nullable List<String> namespaces,
         List<String> resources,
         List<String> verbs) {
-        this.apiGroups = Objects.requireNonNull(apiGroups);
+        this.apiGroups = apiGroups;
         this.clusterScope = clusterScope;
         this.namespaces = namespaces;
-        this.resources = Objects.requireNonNull(resources);
-        this.verbs = Objects.requireNonNull(verbs);
+        this.resources = resources;
+        this.verbs = verbs;
     }
 
     /**

@@ -25,8 +25,8 @@ public final class RouteSpecHttp2RouteTimeoutPerRequest {
     private RouteSpecHttp2RouteTimeoutPerRequest(
         String unit,
         Integer value) {
-        this.unit = Objects.requireNonNull(unit);
-        this.value = Objects.requireNonNull(value);
+        this.unit = unit;
+        this.value = value;
     }
 
     /**

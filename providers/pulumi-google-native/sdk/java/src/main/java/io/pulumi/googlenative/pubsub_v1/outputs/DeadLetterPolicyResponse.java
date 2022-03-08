@@ -25,8 +25,8 @@ public final class DeadLetterPolicyResponse {
     private DeadLetterPolicyResponse(
         String deadLetterTopic,
         Integer maxDeliveryAttempts) {
-        this.deadLetterTopic = Objects.requireNonNull(deadLetterTopic);
-        this.maxDeliveryAttempts = Objects.requireNonNull(maxDeliveryAttempts);
+        this.deadLetterTopic = deadLetterTopic;
+        this.maxDeliveryAttempts = maxDeliveryAttempts;
     }
 
     /**

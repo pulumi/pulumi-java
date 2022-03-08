@@ -13,7 +13,7 @@ public final class ResponseHeadersPolicyContentTypeOptions {
 
     @OutputCustomType.Constructor({"override"})
     private ResponseHeadersPolicyContentTypeOptions(Boolean override) {
-        this.override = Objects.requireNonNull(override);
+        this.override = override;
     }
 
     public Boolean getOverride() {

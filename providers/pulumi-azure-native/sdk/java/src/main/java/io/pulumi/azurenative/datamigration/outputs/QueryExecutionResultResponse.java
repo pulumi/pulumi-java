@@ -38,10 +38,10 @@ public final class QueryExecutionResultResponse {
         ExecutionStatisticsResponse sourceResult,
         Double statementsInBatch,
         ExecutionStatisticsResponse targetResult) {
-        this.queryText = Objects.requireNonNull(queryText);
-        this.sourceResult = Objects.requireNonNull(sourceResult);
-        this.statementsInBatch = Objects.requireNonNull(statementsInBatch);
-        this.targetResult = Objects.requireNonNull(targetResult);
+        this.queryText = queryText;
+        this.sourceResult = sourceResult;
+        this.statementsInBatch = statementsInBatch;
+        this.targetResult = targetResult;
     }
 
     /**

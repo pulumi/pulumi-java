@@ -20,8 +20,8 @@ public final class GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef {
     private GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef(
         String key,
         String name) {
-        this.key = Objects.requireNonNull(key);
-        this.name = Objects.requireNonNull(name);
+        this.key = key;
+        this.name = name;
     }
 
     public String getKey() {

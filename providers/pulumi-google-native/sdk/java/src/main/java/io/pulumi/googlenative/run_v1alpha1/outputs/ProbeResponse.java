@@ -63,14 +63,14 @@ public final class ProbeResponse {
         Integer successThreshold,
         TCPSocketActionResponse tcpSocket,
         Integer timeoutSeconds) {
-        this.exec = Objects.requireNonNull(exec);
-        this.failureThreshold = Objects.requireNonNull(failureThreshold);
-        this.httpGet = Objects.requireNonNull(httpGet);
-        this.initialDelaySeconds = Objects.requireNonNull(initialDelaySeconds);
-        this.periodSeconds = Objects.requireNonNull(periodSeconds);
-        this.successThreshold = Objects.requireNonNull(successThreshold);
-        this.tcpSocket = Objects.requireNonNull(tcpSocket);
-        this.timeoutSeconds = Objects.requireNonNull(timeoutSeconds);
+        this.exec = exec;
+        this.failureThreshold = failureThreshold;
+        this.httpGet = httpGet;
+        this.initialDelaySeconds = initialDelaySeconds;
+        this.periodSeconds = periodSeconds;
+        this.successThreshold = successThreshold;
+        this.tcpSocket = tcpSocket;
+        this.timeoutSeconds = timeoutSeconds;
     }
 
     /**

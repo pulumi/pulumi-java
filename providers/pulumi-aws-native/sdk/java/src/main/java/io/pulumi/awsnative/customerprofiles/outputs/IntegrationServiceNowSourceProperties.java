@@ -13,7 +13,7 @@ public final class IntegrationServiceNowSourceProperties {
 
     @OutputCustomType.Constructor({"object"})
     private IntegrationServiceNowSourceProperties(String object) {
-        this.object = Objects.requireNonNull(object);
+        this.object = object;
     }
 
     public String getObject() {

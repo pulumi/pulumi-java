@@ -35,7 +35,7 @@ public final class TransferConfigurationResponse {
         String transferConfigurationType,
         @Nullable TransferConfigurationResponseTransferFilterDetails transferFilterDetails) {
         this.transferAllDetails = transferAllDetails;
-        this.transferConfigurationType = Objects.requireNonNull(transferConfigurationType);
+        this.transferConfigurationType = transferConfigurationType;
         this.transferFilterDetails = transferFilterDetails;
     }
 

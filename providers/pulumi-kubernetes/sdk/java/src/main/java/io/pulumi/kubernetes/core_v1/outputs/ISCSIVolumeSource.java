@@ -88,13 +88,13 @@ public final class ISCSIVolumeSource {
         this.chapAuthSession = chapAuthSession;
         this.fsType = fsType;
         this.initiatorName = initiatorName;
-        this.iqn = Objects.requireNonNull(iqn);
+        this.iqn = iqn;
         this.iscsiInterface = iscsiInterface;
-        this.lun = Objects.requireNonNull(lun);
+        this.lun = lun;
         this.portals = portals;
         this.readOnly = readOnly;
         this.secretRef = secretRef;
-        this.targetPortal = Objects.requireNonNull(targetPortal);
+        this.targetPortal = targetPortal;
     }
 
     /**

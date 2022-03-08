@@ -75,7 +75,7 @@ public final class ListenerDefaultAction {
         this.order = order;
         this.redirect = redirect;
         this.targetGroupArn = targetGroupArn;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

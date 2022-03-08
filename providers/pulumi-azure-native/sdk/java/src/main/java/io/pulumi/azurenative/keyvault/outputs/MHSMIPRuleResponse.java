@@ -17,7 +17,7 @@ public final class MHSMIPRuleResponse {
 
     @OutputCustomType.Constructor({"value"})
     private MHSMIPRuleResponse(String value) {
-        this.value = Objects.requireNonNull(value);
+        this.value = value;
     }
 
     /**

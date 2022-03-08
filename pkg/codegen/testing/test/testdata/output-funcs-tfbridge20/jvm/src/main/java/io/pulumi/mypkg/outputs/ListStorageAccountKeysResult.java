@@ -18,7 +18,7 @@ public final class ListStorageAccountKeysResult {
 
     @OutputCustomType.Constructor({"keys"})
     private ListStorageAccountKeysResult(List<StorageAccountKeyResponse> keys) {
-        this.keys = Objects.requireNonNull(keys);
+        this.keys = keys;
     }
 
     /**

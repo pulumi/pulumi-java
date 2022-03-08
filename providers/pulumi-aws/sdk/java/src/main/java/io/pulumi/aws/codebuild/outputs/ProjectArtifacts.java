@@ -84,7 +84,7 @@ public final class ProjectArtifacts {
         this.overrideArtifactName = overrideArtifactName;
         this.packaging = packaging;
         this.path = path;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

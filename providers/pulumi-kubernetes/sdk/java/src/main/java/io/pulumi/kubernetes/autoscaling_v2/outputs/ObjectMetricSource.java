@@ -32,9 +32,9 @@ public final class ObjectMetricSource {
         CrossVersionObjectReference describedObject,
         MetricIdentifier metric,
         MetricTarget target) {
-        this.describedObject = Objects.requireNonNull(describedObject);
-        this.metric = Objects.requireNonNull(metric);
-        this.target = Objects.requireNonNull(target);
+        this.describedObject = describedObject;
+        this.metric = metric;
+        this.target = target;
     }
 
     /**

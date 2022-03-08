@@ -45,11 +45,11 @@ public final class VoiceConnectorOrganizationRoute {
         Integer priority,
         String protocol,
         Integer weight) {
-        this.host = Objects.requireNonNull(host);
+        this.host = host;
         this.port = port;
-        this.priority = Objects.requireNonNull(priority);
-        this.protocol = Objects.requireNonNull(protocol);
-        this.weight = Objects.requireNonNull(weight);
+        this.priority = priority;
+        this.protocol = protocol;
+        this.weight = weight;
     }
 
     /**

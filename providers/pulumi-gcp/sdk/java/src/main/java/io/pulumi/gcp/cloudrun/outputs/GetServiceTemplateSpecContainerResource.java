@@ -17,8 +17,8 @@ public final class GetServiceTemplateSpecContainerResource {
     private GetServiceTemplateSpecContainerResource(
         Map<String,String> limits,
         Map<String,String> requests) {
-        this.limits = Objects.requireNonNull(limits);
-        this.requests = Objects.requireNonNull(requests);
+        this.limits = limits;
+        this.requests = requests;
     }
 
     public Map<String,String> getLimits() {

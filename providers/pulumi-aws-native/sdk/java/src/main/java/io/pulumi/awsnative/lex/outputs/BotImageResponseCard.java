@@ -43,7 +43,7 @@ public final class BotImageResponseCard {
         this.buttons = buttons;
         this.imageUrl = imageUrl;
         this.subtitle = subtitle;
-        this.title = Objects.requireNonNull(title);
+        this.title = title;
     }
 
     /**

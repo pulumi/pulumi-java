@@ -39,10 +39,10 @@ public final class BandwidthScheduleResponse {
         Integer rateInMbps,
         TimeResponse start,
         TimeResponse stop) {
-        this.days = Objects.requireNonNull(days);
-        this.rateInMbps = Objects.requireNonNull(rateInMbps);
-        this.start = Objects.requireNonNull(start);
-        this.stop = Objects.requireNonNull(stop);
+        this.days = days;
+        this.rateInMbps = rateInMbps;
+        this.start = start;
+        this.stop = stop;
     }
 
     /**

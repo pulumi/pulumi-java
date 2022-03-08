@@ -44,11 +44,11 @@ public final class GetTableResult {
         String granularity,
         String name,
         RestoreInfoResponse restoreInfo) {
-        this.clusterStates = Objects.requireNonNull(clusterStates);
-        this.columnFamilies = Objects.requireNonNull(columnFamilies);
-        this.granularity = Objects.requireNonNull(granularity);
-        this.name = Objects.requireNonNull(name);
-        this.restoreInfo = Objects.requireNonNull(restoreInfo);
+        this.clusterStates = clusterStates;
+        this.columnFamilies = columnFamilies;
+        this.granularity = granularity;
+        this.name = name;
+        this.restoreInfo = restoreInfo;
     }
 
     /**

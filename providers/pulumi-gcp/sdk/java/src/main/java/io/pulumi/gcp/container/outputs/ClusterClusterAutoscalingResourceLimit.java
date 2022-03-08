@@ -37,7 +37,7 @@ public final class ClusterClusterAutoscalingResourceLimit {
         String resourceType) {
         this.maximum = maximum;
         this.minimum = minimum;
-        this.resourceType = Objects.requireNonNull(resourceType);
+        this.resourceType = resourceType;
     }
 
     /**

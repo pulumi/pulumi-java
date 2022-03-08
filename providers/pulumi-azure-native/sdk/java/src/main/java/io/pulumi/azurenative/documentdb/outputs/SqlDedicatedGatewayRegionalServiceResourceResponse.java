@@ -36,10 +36,10 @@ public final class SqlDedicatedGatewayRegionalServiceResourceResponse {
         String name,
         String sqlDedicatedGatewayEndpoint,
         String status) {
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.sqlDedicatedGatewayEndpoint = Objects.requireNonNull(sqlDedicatedGatewayEndpoint);
-        this.status = Objects.requireNonNull(status);
+        this.location = location;
+        this.name = name;
+        this.sqlDedicatedGatewayEndpoint = sqlDedicatedGatewayEndpoint;
+        this.status = status;
     }
 
     /**

@@ -29,7 +29,7 @@ public final class JobHttpTargetOidcToken {
         @Nullable String audience,
         String serviceAccountEmail) {
         this.audience = audience;
-        this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
+        this.serviceAccountEmail = serviceAccountEmail;
     }
 
     /**

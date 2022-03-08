@@ -26,7 +26,7 @@ public final class RestApiEndpointConfiguration {
     private RestApiEndpointConfiguration(
         String types,
         @Nullable List<String> vpcEndpointIds) {
-        this.types = Objects.requireNonNull(types);
+        this.types = types;
         this.vpcEndpointIds = vpcEndpointIds;
     }
 

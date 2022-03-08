@@ -26,8 +26,8 @@ public final class BackupVaultResponse {
     private BackupVaultResponse(
         String provisioningState,
         List<StorageSettingResponse> storageSettings) {
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.storageSettings = Objects.requireNonNull(storageSettings);
+        this.provisioningState = provisioningState;
+        this.storageSettings = storageSettings;
     }
 
     /**

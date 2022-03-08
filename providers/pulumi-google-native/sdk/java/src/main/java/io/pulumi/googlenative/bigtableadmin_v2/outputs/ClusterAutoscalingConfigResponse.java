@@ -25,8 +25,8 @@ public final class ClusterAutoscalingConfigResponse {
     private ClusterAutoscalingConfigResponse(
         AutoscalingLimitsResponse autoscalingLimits,
         AutoscalingTargetsResponse autoscalingTargets) {
-        this.autoscalingLimits = Objects.requireNonNull(autoscalingLimits);
-        this.autoscalingTargets = Objects.requireNonNull(autoscalingTargets);
+        this.autoscalingLimits = autoscalingLimits;
+        this.autoscalingTargets = autoscalingTargets;
     }
 
     /**

@@ -216,7 +216,7 @@ public final class WorkloadCrrAccessTokenResponse {
         this.datasourceId = datasourceId;
         this.datasourceName = datasourceName;
         this.datasourceType = datasourceType;
-        this.objectType = Objects.requireNonNull(objectType);
+        this.objectType = objectType;
         this.policyId = policyId;
         this.policyName = policyName;
         this.protectableObjectContainerHostOsName = protectableObjectContainerHostOsName;

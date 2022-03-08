@@ -27,7 +27,7 @@ public final class CryptoKeyVersionTemplate {
     private CryptoKeyVersionTemplate(
         String algorithm,
         @Nullable String protectionLevel) {
-        this.algorithm = Objects.requireNonNull(algorithm);
+        this.algorithm = algorithm;
         this.protectionLevel = protectionLevel;
     }
 

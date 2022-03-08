@@ -51,14 +51,14 @@ public final class GetSecretVersionResult {
         String versionId,
         @Nullable String versionStage,
         List<String> versionStages) {
-        this.arn = Objects.requireNonNull(arn);
-        this.id = Objects.requireNonNull(id);
-        this.secretBinary = Objects.requireNonNull(secretBinary);
-        this.secretId = Objects.requireNonNull(secretId);
-        this.secretString = Objects.requireNonNull(secretString);
-        this.versionId = Objects.requireNonNull(versionId);
+        this.arn = arn;
+        this.id = id;
+        this.secretBinary = secretBinary;
+        this.secretId = secretId;
+        this.secretString = secretString;
+        this.versionId = versionId;
         this.versionStage = versionStage;
-        this.versionStages = Objects.requireNonNull(versionStages);
+        this.versionStages = versionStages;
     }
 
     /**

@@ -42,7 +42,7 @@ public final class GCEPersistentDiskVolumeSource {
         @Nullable Boolean readOnly) {
         this.fsType = fsType;
         this.partition = partition;
-        this.pdName = Objects.requireNonNull(pdName);
+        this.pdName = pdName;
         this.readOnly = readOnly;
     }
 

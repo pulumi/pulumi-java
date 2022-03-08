@@ -17,7 +17,7 @@ public final class ServiceAccessPolicyEntryResponse {
 
     @OutputCustomType.Constructor({"objectId"})
     private ServiceAccessPolicyEntryResponse(String objectId) {
-        this.objectId = Objects.requireNonNull(objectId);
+        this.objectId = objectId;
     }
 
     /**

@@ -24,8 +24,8 @@ public final class AttributesResponse {
     private AttributesResponse(
         Boolean authentication,
         Boolean prodModeWriteProtect) {
-        this.authentication = Objects.requireNonNull(authentication);
-        this.prodModeWriteProtect = Objects.requireNonNull(prodModeWriteProtect);
+        this.authentication = authentication;
+        this.prodModeWriteProtect = prodModeWriteProtect;
     }
 
     /**

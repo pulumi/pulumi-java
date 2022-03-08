@@ -17,7 +17,7 @@ public final class ServiceExternalIPsConfigResponse {
 
     @OutputCustomType.Constructor({"enabled"})
     private ServiceExternalIPsConfigResponse(Boolean enabled) {
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
     }
 
     /**

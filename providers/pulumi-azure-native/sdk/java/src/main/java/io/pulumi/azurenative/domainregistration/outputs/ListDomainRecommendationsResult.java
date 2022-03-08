@@ -26,8 +26,8 @@ public final class ListDomainRecommendationsResult {
     private ListDomainRecommendationsResult(
         String nextLink,
         List<NameIdentifierResponse> value) {
-        this.nextLink = Objects.requireNonNull(nextLink);
-        this.value = Objects.requireNonNull(value);
+        this.nextLink = nextLink;
+        this.value = value;
     }
 
     /**

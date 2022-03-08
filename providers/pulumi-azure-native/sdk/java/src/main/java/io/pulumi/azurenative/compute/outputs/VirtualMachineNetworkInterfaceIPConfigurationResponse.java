@@ -69,7 +69,7 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse {
         this.applicationGatewayBackendAddressPools = applicationGatewayBackendAddressPools;
         this.applicationSecurityGroups = applicationSecurityGroups;
         this.loadBalancerBackendAddressPools = loadBalancerBackendAddressPools;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.primary = primary;
         this.privateIPAddressVersion = privateIPAddressVersion;
         this.publicIPAddressConfiguration = publicIPAddressConfiguration;

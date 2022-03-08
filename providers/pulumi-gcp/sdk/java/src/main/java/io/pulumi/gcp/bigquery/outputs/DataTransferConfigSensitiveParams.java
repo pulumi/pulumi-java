@@ -18,7 +18,7 @@ public final class DataTransferConfigSensitiveParams {
 
     @OutputCustomType.Constructor({"secretAccessKey"})
     private DataTransferConfigSensitiveParams(String secretAccessKey) {
-        this.secretAccessKey = Objects.requireNonNull(secretAccessKey);
+        this.secretAccessKey = secretAccessKey;
     }
 
     /**

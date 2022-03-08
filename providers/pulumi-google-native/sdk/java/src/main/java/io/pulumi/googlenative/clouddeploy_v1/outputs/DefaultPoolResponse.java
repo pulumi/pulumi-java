@@ -24,8 +24,8 @@ public final class DefaultPoolResponse {
     private DefaultPoolResponse(
         String artifactStorage,
         String serviceAccount) {
-        this.artifactStorage = Objects.requireNonNull(artifactStorage);
-        this.serviceAccount = Objects.requireNonNull(serviceAccount);
+        this.artifactStorage = artifactStorage;
+        this.serviceAccount = serviceAccount;
     }
 
     /**

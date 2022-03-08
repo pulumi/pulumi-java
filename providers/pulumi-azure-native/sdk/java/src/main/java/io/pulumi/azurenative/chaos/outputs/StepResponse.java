@@ -26,8 +26,8 @@ public final class StepResponse {
     private StepResponse(
         List<BranchResponse> branches,
         String name) {
-        this.branches = Objects.requireNonNull(branches);
-        this.name = Objects.requireNonNull(name);
+        this.branches = branches;
+        this.name = name;
     }
 
     /**

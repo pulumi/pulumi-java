@@ -80,16 +80,16 @@ public final class GetManagerExtendedInfoResult {
         @Nullable String portalCertificateThumbprint,
         String type,
         @Nullable String version) {
-        this.algorithm = Objects.requireNonNull(algorithm);
+        this.algorithm = algorithm;
         this.encryptionKey = encryptionKey;
         this.encryptionKeyThumbprint = encryptionKeyThumbprint;
         this.etag = etag;
-        this.id = Objects.requireNonNull(id);
-        this.integrityKey = Objects.requireNonNull(integrityKey);
+        this.id = id;
+        this.integrityKey = integrityKey;
         this.kind = kind;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.portalCertificateThumbprint = portalCertificateThumbprint;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.version = version;
     }
 

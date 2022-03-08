@@ -25,8 +25,8 @@ public final class ValidationCAResponse {
     private ValidationCAResponse(
         CertificateProviderInstanceResponse certificateProviderInstance,
         GoogleCloudNetworksecurityV1beta1GrpcEndpointResponse grpcEndpoint) {
-        this.certificateProviderInstance = Objects.requireNonNull(certificateProviderInstance);
-        this.grpcEndpoint = Objects.requireNonNull(grpcEndpoint);
+        this.certificateProviderInstance = certificateProviderInstance;
+        this.grpcEndpoint = grpcEndpoint;
     }
 
     /**

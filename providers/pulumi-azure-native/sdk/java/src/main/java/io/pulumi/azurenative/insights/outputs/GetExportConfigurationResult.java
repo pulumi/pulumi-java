@@ -128,25 +128,25 @@ public final class GetExportConfigurationResult {
         String resourceGroup,
         String storageName,
         String subscriptionId) {
-        this.applicationName = Objects.requireNonNull(applicationName);
-        this.containerName = Objects.requireNonNull(containerName);
-        this.destinationAccountId = Objects.requireNonNull(destinationAccountId);
-        this.destinationStorageLocationId = Objects.requireNonNull(destinationStorageLocationId);
-        this.destinationStorageSubscriptionId = Objects.requireNonNull(destinationStorageSubscriptionId);
-        this.destinationType = Objects.requireNonNull(destinationType);
-        this.exportId = Objects.requireNonNull(exportId);
-        this.exportStatus = Objects.requireNonNull(exportStatus);
-        this.instrumentationKey = Objects.requireNonNull(instrumentationKey);
-        this.isUserEnabled = Objects.requireNonNull(isUserEnabled);
-        this.lastGapTime = Objects.requireNonNull(lastGapTime);
-        this.lastSuccessTime = Objects.requireNonNull(lastSuccessTime);
-        this.lastUserUpdate = Objects.requireNonNull(lastUserUpdate);
+        this.applicationName = applicationName;
+        this.containerName = containerName;
+        this.destinationAccountId = destinationAccountId;
+        this.destinationStorageLocationId = destinationStorageLocationId;
+        this.destinationStorageSubscriptionId = destinationStorageSubscriptionId;
+        this.destinationType = destinationType;
+        this.exportId = exportId;
+        this.exportStatus = exportStatus;
+        this.instrumentationKey = instrumentationKey;
+        this.isUserEnabled = isUserEnabled;
+        this.lastGapTime = lastGapTime;
+        this.lastSuccessTime = lastSuccessTime;
+        this.lastUserUpdate = lastUserUpdate;
         this.notificationQueueEnabled = notificationQueueEnabled;
-        this.permanentErrorReason = Objects.requireNonNull(permanentErrorReason);
+        this.permanentErrorReason = permanentErrorReason;
         this.recordTypes = recordTypes;
-        this.resourceGroup = Objects.requireNonNull(resourceGroup);
-        this.storageName = Objects.requireNonNull(storageName);
-        this.subscriptionId = Objects.requireNonNull(subscriptionId);
+        this.resourceGroup = resourceGroup;
+        this.storageName = storageName;
+        this.subscriptionId = subscriptionId;
     }
 
     /**

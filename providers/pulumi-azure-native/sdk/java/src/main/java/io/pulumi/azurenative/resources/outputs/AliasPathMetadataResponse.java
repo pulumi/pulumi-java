@@ -24,8 +24,8 @@ public final class AliasPathMetadataResponse {
     private AliasPathMetadataResponse(
         String attributes,
         String type) {
-        this.attributes = Objects.requireNonNull(attributes);
-        this.type = Objects.requireNonNull(type);
+        this.attributes = attributes;
+        this.type = type;
     }
 
     /**

@@ -84,18 +84,18 @@ public final class GetFutureReservationResult {
         FutureReservationStatusResponse status,
         FutureReservationTimeWindowResponse timeWindow,
         String zone) {
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.description = Objects.requireNonNull(description);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.namePrefix = Objects.requireNonNull(namePrefix);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
-        this.shareSettings = Objects.requireNonNull(shareSettings);
-        this.specificSkuProperties = Objects.requireNonNull(specificSkuProperties);
-        this.status = Objects.requireNonNull(status);
-        this.timeWindow = Objects.requireNonNull(timeWindow);
-        this.zone = Objects.requireNonNull(zone);
+        this.creationTimestamp = creationTimestamp;
+        this.description = description;
+        this.kind = kind;
+        this.name = name;
+        this.namePrefix = namePrefix;
+        this.selfLink = selfLink;
+        this.selfLinkWithId = selfLinkWithId;
+        this.shareSettings = shareSettings;
+        this.specificSkuProperties = specificSkuProperties;
+        this.status = status;
+        this.timeWindow = timeWindow;
+        this.zone = zone;
     }
 
     /**

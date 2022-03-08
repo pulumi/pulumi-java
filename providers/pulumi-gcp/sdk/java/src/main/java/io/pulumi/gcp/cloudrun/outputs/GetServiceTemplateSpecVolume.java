@@ -22,8 +22,8 @@ public final class GetServiceTemplateSpecVolume {
     private GetServiceTemplateSpecVolume(
         String name,
         List<GetServiceTemplateSpecVolumeSecret> secrets) {
-        this.name = Objects.requireNonNull(name);
-        this.secrets = Objects.requireNonNull(secrets);
+        this.name = name;
+        this.secrets = secrets;
     }
 
     /**

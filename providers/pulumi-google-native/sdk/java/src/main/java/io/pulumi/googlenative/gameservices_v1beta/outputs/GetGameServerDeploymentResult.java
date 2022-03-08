@@ -49,12 +49,12 @@ public final class GetGameServerDeploymentResult {
         Map<String,String> labels,
         String name,
         String updateTime) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.description = Objects.requireNonNull(description);
-        this.etag = Objects.requireNonNull(etag);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.createTime = createTime;
+        this.description = description;
+        this.etag = etag;
+        this.labels = labels;
+        this.name = name;
+        this.updateTime = updateTime;
     }
 
     /**

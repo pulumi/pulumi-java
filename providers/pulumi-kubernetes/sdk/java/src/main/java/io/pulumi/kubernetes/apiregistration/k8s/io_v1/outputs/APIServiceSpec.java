@@ -61,11 +61,11 @@ public final class APIServiceSpec {
         Integer versionPriority) {
         this.caBundle = caBundle;
         this.group = group;
-        this.groupPriorityMinimum = Objects.requireNonNull(groupPriorityMinimum);
+        this.groupPriorityMinimum = groupPriorityMinimum;
         this.insecureSkipTLSVerify = insecureSkipTLSVerify;
         this.service = service;
         this.version = version;
-        this.versionPriority = Objects.requireNonNull(versionPriority);
+        this.versionPriority = versionPriority;
     }
 
     /**

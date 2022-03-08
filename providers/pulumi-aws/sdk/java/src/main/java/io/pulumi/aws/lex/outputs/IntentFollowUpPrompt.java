@@ -27,8 +27,8 @@ public final class IntentFollowUpPrompt {
     private IntentFollowUpPrompt(
         IntentFollowUpPromptPrompt prompt,
         IntentFollowUpPromptRejectionStatement rejectionStatement) {
-        this.prompt = Objects.requireNonNull(prompt);
-        this.rejectionStatement = Objects.requireNonNull(rejectionStatement);
+        this.prompt = prompt;
+        this.rejectionStatement = rejectionStatement;
     }
 
     /**

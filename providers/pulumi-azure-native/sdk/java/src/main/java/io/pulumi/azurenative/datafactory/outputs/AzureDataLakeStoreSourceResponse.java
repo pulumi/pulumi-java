@@ -57,7 +57,7 @@ public final class AzureDataLakeStoreSourceResponse {
         this.recursive = recursive;
         this.sourceRetryCount = sourceRetryCount;
         this.sourceRetryWait = sourceRetryWait;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

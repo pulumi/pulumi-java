@@ -102,17 +102,17 @@ public final class AzureMLLinkedServiceResponse {
         String type,
         @Nullable Object updateResourceEndpoint) {
         this.annotations = annotations;
-        this.apiKey = Objects.requireNonNull(apiKey);
+        this.apiKey = apiKey;
         this.authentication = authentication;
         this.connectVia = connectVia;
         this.description = description;
         this.encryptedCredential = encryptedCredential;
-        this.mlEndpoint = Objects.requireNonNull(mlEndpoint);
+        this.mlEndpoint = mlEndpoint;
         this.parameters = parameters;
         this.servicePrincipalId = servicePrincipalId;
         this.servicePrincipalKey = servicePrincipalKey;
         this.tenant = tenant;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.updateResourceEndpoint = updateResourceEndpoint;
     }
 

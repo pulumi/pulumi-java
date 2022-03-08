@@ -24,8 +24,8 @@ public final class GetDefaultKmsKeyResult {
     private GetDefaultKmsKeyResult(
         String id,
         String keyArn) {
-        this.id = Objects.requireNonNull(id);
-        this.keyArn = Objects.requireNonNull(keyArn);
+        this.id = id;
+        this.keyArn = keyArn;
     }
 
     /**

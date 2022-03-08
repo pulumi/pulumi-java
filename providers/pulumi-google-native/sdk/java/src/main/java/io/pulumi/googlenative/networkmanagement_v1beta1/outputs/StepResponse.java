@@ -142,25 +142,25 @@ public final class StepResponse {
         String state,
         VpnGatewayInfoResponse vpnGateway,
         VpnTunnelInfoResponse vpnTunnel) {
-        this.abort = Objects.requireNonNull(abort);
-        this.causesDrop = Objects.requireNonNull(causesDrop);
-        this.cloudSqlInstance = Objects.requireNonNull(cloudSqlInstance);
-        this.deliver = Objects.requireNonNull(deliver);
-        this.description = Objects.requireNonNull(description);
-        this.drop = Objects.requireNonNull(drop);
-        this.endpoint = Objects.requireNonNull(endpoint);
-        this.firewall = Objects.requireNonNull(firewall);
-        this.forward = Objects.requireNonNull(forward);
-        this.forwardingRule = Objects.requireNonNull(forwardingRule);
-        this.gkeMaster = Objects.requireNonNull(gkeMaster);
-        this.instance = Objects.requireNonNull(instance);
-        this.loadBalancer = Objects.requireNonNull(loadBalancer);
-        this.network = Objects.requireNonNull(network);
-        this.project = Objects.requireNonNull(project);
-        this.route = Objects.requireNonNull(route);
-        this.state = Objects.requireNonNull(state);
-        this.vpnGateway = Objects.requireNonNull(vpnGateway);
-        this.vpnTunnel = Objects.requireNonNull(vpnTunnel);
+        this.abort = abort;
+        this.causesDrop = causesDrop;
+        this.cloudSqlInstance = cloudSqlInstance;
+        this.deliver = deliver;
+        this.description = description;
+        this.drop = drop;
+        this.endpoint = endpoint;
+        this.firewall = firewall;
+        this.forward = forward;
+        this.forwardingRule = forwardingRule;
+        this.gkeMaster = gkeMaster;
+        this.instance = instance;
+        this.loadBalancer = loadBalancer;
+        this.network = network;
+        this.project = project;
+        this.route = route;
+        this.state = state;
+        this.vpnGateway = vpnGateway;
+        this.vpnTunnel = vpnTunnel;
     }
 
     /**

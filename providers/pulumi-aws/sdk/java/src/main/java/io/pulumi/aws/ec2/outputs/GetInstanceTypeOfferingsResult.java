@@ -45,11 +45,11 @@ public final class GetInstanceTypeOfferingsResult {
         List<String> locationTypes,
         List<String> locations) {
         this.filters = filters;
-        this.id = Objects.requireNonNull(id);
-        this.instanceTypes = Objects.requireNonNull(instanceTypes);
+        this.id = id;
+        this.instanceTypes = instanceTypes;
         this.locationType = locationType;
-        this.locationTypes = Objects.requireNonNull(locationTypes);
-        this.locations = Objects.requireNonNull(locations);
+        this.locationTypes = locationTypes;
+        this.locations = locations;
     }
 
     public List<GetInstanceTypeOfferingsFilter> getFilters() {

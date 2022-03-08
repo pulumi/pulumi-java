@@ -26,8 +26,8 @@ public final class LinkedRouterApplianceInstancesResponse {
     private LinkedRouterApplianceInstancesResponse(
         List<RouterApplianceInstanceResponse> instances,
         Boolean siteToSiteDataTransfer) {
-        this.instances = Objects.requireNonNull(instances);
-        this.siteToSiteDataTransfer = Objects.requireNonNull(siteToSiteDataTransfer);
+        this.instances = instances;
+        this.siteToSiteDataTransfer = siteToSiteDataTransfer;
     }
 
     /**

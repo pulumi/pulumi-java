@@ -203,37 +203,37 @@ public final class GetSnapshotResult {
         String storageBytesStatus,
         List<String> storageLocations,
         List<String> userLicenses) {
-        this.architecture = Objects.requireNonNull(architecture);
-        this.autoCreated = Objects.requireNonNull(autoCreated);
-        this.chainName = Objects.requireNonNull(chainName);
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.description = Objects.requireNonNull(description);
-        this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
-        this.downloadBytes = Objects.requireNonNull(downloadBytes);
-        this.guestFlush = Objects.requireNonNull(guestFlush);
-        this.guestOsFeatures = Objects.requireNonNull(guestOsFeatures);
-        this.kind = Objects.requireNonNull(kind);
-        this.labelFingerprint = Objects.requireNonNull(labelFingerprint);
-        this.labels = Objects.requireNonNull(labels);
-        this.licenseCodes = Objects.requireNonNull(licenseCodes);
-        this.licenses = Objects.requireNonNull(licenses);
-        this.locationHint = Objects.requireNonNull(locationHint);
-        this.name = Objects.requireNonNull(name);
-        this.satisfiesPzs = Objects.requireNonNull(satisfiesPzs);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
-        this.snapshotEncryptionKey = Objects.requireNonNull(snapshotEncryptionKey);
-        this.snapshotType = Objects.requireNonNull(snapshotType);
-        this.sourceDisk = Objects.requireNonNull(sourceDisk);
-        this.sourceDiskEncryptionKey = Objects.requireNonNull(sourceDiskEncryptionKey);
-        this.sourceDiskId = Objects.requireNonNull(sourceDiskId);
-        this.sourceInstantSnapshot = Objects.requireNonNull(sourceInstantSnapshot);
-        this.sourceInstantSnapshotId = Objects.requireNonNull(sourceInstantSnapshotId);
-        this.status = Objects.requireNonNull(status);
-        this.storageBytes = Objects.requireNonNull(storageBytes);
-        this.storageBytesStatus = Objects.requireNonNull(storageBytesStatus);
-        this.storageLocations = Objects.requireNonNull(storageLocations);
-        this.userLicenses = Objects.requireNonNull(userLicenses);
+        this.architecture = architecture;
+        this.autoCreated = autoCreated;
+        this.chainName = chainName;
+        this.creationTimestamp = creationTimestamp;
+        this.description = description;
+        this.diskSizeGb = diskSizeGb;
+        this.downloadBytes = downloadBytes;
+        this.guestFlush = guestFlush;
+        this.guestOsFeatures = guestOsFeatures;
+        this.kind = kind;
+        this.labelFingerprint = labelFingerprint;
+        this.labels = labels;
+        this.licenseCodes = licenseCodes;
+        this.licenses = licenses;
+        this.locationHint = locationHint;
+        this.name = name;
+        this.satisfiesPzs = satisfiesPzs;
+        this.selfLink = selfLink;
+        this.selfLinkWithId = selfLinkWithId;
+        this.snapshotEncryptionKey = snapshotEncryptionKey;
+        this.snapshotType = snapshotType;
+        this.sourceDisk = sourceDisk;
+        this.sourceDiskEncryptionKey = sourceDiskEncryptionKey;
+        this.sourceDiskId = sourceDiskId;
+        this.sourceInstantSnapshot = sourceInstantSnapshot;
+        this.sourceInstantSnapshotId = sourceInstantSnapshotId;
+        this.status = status;
+        this.storageBytes = storageBytes;
+        this.storageBytesStatus = storageBytesStatus;
+        this.storageLocations = storageLocations;
+        this.userLicenses = userLicenses;
     }
 
     /**

@@ -44,7 +44,7 @@ public final class FlowSchemaSpec {
         @Nullable List<PolicyRulesWithSubjects> rules) {
         this.distinguisherMethod = distinguisherMethod;
         this.matchingPrecedence = matchingPrecedence;
-        this.priorityLevelConfiguration = Objects.requireNonNull(priorityLevelConfiguration);
+        this.priorityLevelConfiguration = priorityLevelConfiguration;
         this.rules = rules;
     }
 

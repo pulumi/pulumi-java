@@ -17,8 +17,8 @@ public final class BotAliasAudioLogSetting {
     private BotAliasAudioLogSetting(
         BotAliasAudioLogDestination destination,
         Boolean enabled) {
-        this.destination = Objects.requireNonNull(destination);
-        this.enabled = Objects.requireNonNull(enabled);
+        this.destination = destination;
+        this.enabled = enabled;
     }
 
     public BotAliasAudioLogDestination getDestination() {

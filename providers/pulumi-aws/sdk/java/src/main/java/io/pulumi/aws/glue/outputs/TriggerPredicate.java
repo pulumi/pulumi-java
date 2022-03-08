@@ -28,7 +28,7 @@ public final class TriggerPredicate {
     private TriggerPredicate(
         List<TriggerPredicateCondition> conditions,
         @Nullable String logical) {
-        this.conditions = Objects.requireNonNull(conditions);
+        this.conditions = conditions;
         this.logical = logical;
     }
 

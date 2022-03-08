@@ -103,7 +103,7 @@ public final class AzureBackupServerContainerResponse {
         this.backupManagementType = backupManagementType;
         this.canReRegister = canReRegister;
         this.containerId = containerId;
-        this.containerType = Objects.requireNonNull(containerType);
+        this.containerType = containerType;
         this.dpmAgentVersion = dpmAgentVersion;
         this.dpmServers = dpmServers;
         this.extendedInfo = extendedInfo;

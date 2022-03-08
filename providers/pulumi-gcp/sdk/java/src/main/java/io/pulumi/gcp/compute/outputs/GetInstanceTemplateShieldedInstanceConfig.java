@@ -18,9 +18,9 @@ public final class GetInstanceTemplateShieldedInstanceConfig {
         Boolean enableIntegrityMonitoring,
         Boolean enableSecureBoot,
         Boolean enableVtpm) {
-        this.enableIntegrityMonitoring = Objects.requireNonNull(enableIntegrityMonitoring);
-        this.enableSecureBoot = Objects.requireNonNull(enableSecureBoot);
-        this.enableVtpm = Objects.requireNonNull(enableVtpm);
+        this.enableIntegrityMonitoring = enableIntegrityMonitoring;
+        this.enableSecureBoot = enableSecureBoot;
+        this.enableVtpm = enableVtpm;
     }
 
     public Boolean getEnableIntegrityMonitoring() {

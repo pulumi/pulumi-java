@@ -24,8 +24,8 @@ public final class LatLngResponse {
     private LatLngResponse(
         Double latitude,
         Double longitude) {
-        this.latitude = Objects.requireNonNull(latitude);
-        this.longitude = Objects.requireNonNull(longitude);
+        this.latitude = latitude;
+        this.longitude = longitude;
     }
 
     /**

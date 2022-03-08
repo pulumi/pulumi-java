@@ -19,7 +19,7 @@ public final class WorkGroupEncryptionConfiguration {
     private WorkGroupEncryptionConfiguration(
         WorkGroupEncryptionOption encryptionOption,
         @Nullable String kmsKey) {
-        this.encryptionOption = Objects.requireNonNull(encryptionOption);
+        this.encryptionOption = encryptionOption;
         this.kmsKey = kmsKey;
     }
 

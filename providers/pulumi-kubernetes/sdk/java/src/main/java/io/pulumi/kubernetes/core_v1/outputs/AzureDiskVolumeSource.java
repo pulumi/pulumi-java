@@ -52,8 +52,8 @@ public final class AzureDiskVolumeSource {
         @Nullable String kind,
         @Nullable Boolean readOnly) {
         this.cachingMode = cachingMode;
-        this.diskName = Objects.requireNonNull(diskName);
-        this.diskURI = Objects.requireNonNull(diskURI);
+        this.diskName = diskName;
+        this.diskURI = diskURI;
         this.fsType = fsType;
         this.kind = kind;
         this.readOnly = readOnly;

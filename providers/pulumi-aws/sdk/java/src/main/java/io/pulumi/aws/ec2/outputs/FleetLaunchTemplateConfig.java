@@ -27,7 +27,7 @@ public final class FleetLaunchTemplateConfig {
     private FleetLaunchTemplateConfig(
         FleetLaunchTemplateConfigLaunchTemplateSpecification launchTemplateSpecification,
         @Nullable List<FleetLaunchTemplateConfigOverride> overrides) {
-        this.launchTemplateSpecification = Objects.requireNonNull(launchTemplateSpecification);
+        this.launchTemplateSpecification = launchTemplateSpecification;
         this.overrides = overrides;
     }
 

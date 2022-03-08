@@ -24,8 +24,8 @@ public final class AliasContextResponse {
     private AliasContextResponse(
         String kind,
         String name) {
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
+        this.kind = kind;
+        this.name = name;
     }
 
     /**

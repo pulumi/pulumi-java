@@ -117,23 +117,23 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseLe
         String migrationState,
         String resultType,
         String startedOn) {
-        this.appliedChanges = Objects.requireNonNull(appliedChanges);
-        this.cdcDeleteCounter = Objects.requireNonNull(cdcDeleteCounter);
-        this.cdcInsertCounter = Objects.requireNonNull(cdcInsertCounter);
-        this.cdcUpdateCounter = Objects.requireNonNull(cdcUpdateCounter);
-        this.databaseName = Objects.requireNonNull(databaseName);
-        this.endedOn = Objects.requireNonNull(endedOn);
-        this.fullLoadCompletedTables = Objects.requireNonNull(fullLoadCompletedTables);
-        this.fullLoadErroredTables = Objects.requireNonNull(fullLoadErroredTables);
-        this.fullLoadLoadingTables = Objects.requireNonNull(fullLoadLoadingTables);
-        this.fullLoadQueuedTables = Objects.requireNonNull(fullLoadQueuedTables);
-        this.id = Objects.requireNonNull(id);
-        this.incomingChanges = Objects.requireNonNull(incomingChanges);
-        this.initializationCompleted = Objects.requireNonNull(initializationCompleted);
-        this.latency = Objects.requireNonNull(latency);
-        this.migrationState = Objects.requireNonNull(migrationState);
-        this.resultType = Objects.requireNonNull(resultType);
-        this.startedOn = Objects.requireNonNull(startedOn);
+        this.appliedChanges = appliedChanges;
+        this.cdcDeleteCounter = cdcDeleteCounter;
+        this.cdcInsertCounter = cdcInsertCounter;
+        this.cdcUpdateCounter = cdcUpdateCounter;
+        this.databaseName = databaseName;
+        this.endedOn = endedOn;
+        this.fullLoadCompletedTables = fullLoadCompletedTables;
+        this.fullLoadErroredTables = fullLoadErroredTables;
+        this.fullLoadLoadingTables = fullLoadLoadingTables;
+        this.fullLoadQueuedTables = fullLoadQueuedTables;
+        this.id = id;
+        this.incomingChanges = incomingChanges;
+        this.initializationCompleted = initializationCompleted;
+        this.latency = latency;
+        this.migrationState = migrationState;
+        this.resultType = resultType;
+        this.startedOn = startedOn;
     }
 
     /**

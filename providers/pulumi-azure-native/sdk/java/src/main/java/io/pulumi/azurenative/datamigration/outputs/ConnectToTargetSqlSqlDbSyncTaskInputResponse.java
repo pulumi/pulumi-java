@@ -24,8 +24,8 @@ public final class ConnectToTargetSqlSqlDbSyncTaskInputResponse {
     private ConnectToTargetSqlSqlDbSyncTaskInputResponse(
         SqlConnectionInfoResponse sourceConnectionInfo,
         SqlConnectionInfoResponse targetConnectionInfo) {
-        this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
-        this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
+        this.sourceConnectionInfo = sourceConnectionInfo;
+        this.targetConnectionInfo = targetConnectionInfo;
     }
 
     /**

@@ -46,8 +46,8 @@ public final class HorizontalPodAutoscalerStatus {
         @Nullable String lastScaleTime,
         @Nullable Integer observedGeneration) {
         this.currentCPUUtilizationPercentage = currentCPUUtilizationPercentage;
-        this.currentReplicas = Objects.requireNonNull(currentReplicas);
-        this.desiredReplicas = Objects.requireNonNull(desiredReplicas);
+        this.currentReplicas = currentReplicas;
+        this.desiredReplicas = desiredReplicas;
         this.lastScaleTime = lastScaleTime;
         this.observedGeneration = observedGeneration;
     }

@@ -36,10 +36,10 @@ public final class GetGroupUser {
         String path,
         String userId,
         String userName) {
-        this.arn = Objects.requireNonNull(arn);
-        this.path = Objects.requireNonNull(path);
-        this.userId = Objects.requireNonNull(userId);
-        this.userName = Objects.requireNonNull(userName);
+        this.arn = arn;
+        this.path = path;
+        this.userId = userId;
+        this.userName = userName;
     }
 
     /**

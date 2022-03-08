@@ -46,11 +46,11 @@ public final class InTotoStatementResponse {
         SlsaProvenanceResponse slsaProvenance,
         List<SubjectResponse> subject,
         String type) {
-        this.predicateType = Objects.requireNonNull(predicateType);
-        this.provenance = Objects.requireNonNull(provenance);
-        this.slsaProvenance = Objects.requireNonNull(slsaProvenance);
-        this.subject = Objects.requireNonNull(subject);
-        this.type = Objects.requireNonNull(type);
+        this.predicateType = predicateType;
+        this.provenance = provenance;
+        this.slsaProvenance = slsaProvenance;
+        this.subject = subject;
+        this.type = type;
     }
 
     /**

@@ -66,26 +66,26 @@ public final class GetBucketResult {
         String url,
         List<GetBucketVersioning> versionings,
         List<GetBucketWebsite> websites) {
-        this.cors = Objects.requireNonNull(cors);
-        this.defaultEventBasedHold = Objects.requireNonNull(defaultEventBasedHold);
-        this.encryptions = Objects.requireNonNull(encryptions);
-        this.forceDestroy = Objects.requireNonNull(forceDestroy);
-        this.id = Objects.requireNonNull(id);
-        this.labels = Objects.requireNonNull(labels);
-        this.lifecycleRules = Objects.requireNonNull(lifecycleRules);
-        this.location = Objects.requireNonNull(location);
-        this.loggings = Objects.requireNonNull(loggings);
-        this.name = Objects.requireNonNull(name);
-        this.project = Objects.requireNonNull(project);
-        this.publicAccessPrevention = Objects.requireNonNull(publicAccessPrevention);
-        this.requesterPays = Objects.requireNonNull(requesterPays);
-        this.retentionPolicies = Objects.requireNonNull(retentionPolicies);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.storageClass = Objects.requireNonNull(storageClass);
-        this.uniformBucketLevelAccess = Objects.requireNonNull(uniformBucketLevelAccess);
-        this.url = Objects.requireNonNull(url);
-        this.versionings = Objects.requireNonNull(versionings);
-        this.websites = Objects.requireNonNull(websites);
+        this.cors = cors;
+        this.defaultEventBasedHold = defaultEventBasedHold;
+        this.encryptions = encryptions;
+        this.forceDestroy = forceDestroy;
+        this.id = id;
+        this.labels = labels;
+        this.lifecycleRules = lifecycleRules;
+        this.location = location;
+        this.loggings = loggings;
+        this.name = name;
+        this.project = project;
+        this.publicAccessPrevention = publicAccessPrevention;
+        this.requesterPays = requesterPays;
+        this.retentionPolicies = retentionPolicies;
+        this.selfLink = selfLink;
+        this.storageClass = storageClass;
+        this.uniformBucketLevelAccess = uniformBucketLevelAccess;
+        this.url = url;
+        this.versionings = versionings;
+        this.websites = websites;
     }
 
     public List<GetBucketCor> getCors() {

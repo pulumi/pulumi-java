@@ -24,8 +24,8 @@ public final class GaugeViewResponse {
     private GaugeViewResponse(
         Double lowerBound,
         Double upperBound) {
-        this.lowerBound = Objects.requireNonNull(lowerBound);
-        this.upperBound = Objects.requireNonNull(upperBound);
+        this.lowerBound = lowerBound;
+        this.upperBound = upperBound;
     }
 
     /**

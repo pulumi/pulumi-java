@@ -17,7 +17,7 @@ public final class ClusterClusterConfigSecurityConfig {
 
     @OutputCustomType.Constructor({"kerberosConfig"})
     private ClusterClusterConfigSecurityConfig(ClusterClusterConfigSecurityConfigKerberosConfig kerberosConfig) {
-        this.kerberosConfig = Objects.requireNonNull(kerberosConfig);
+        this.kerberosConfig = kerberosConfig;
     }
 
     /**

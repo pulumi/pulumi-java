@@ -98,19 +98,19 @@ public final class GoogleCloudRunOpV2RevisionTemplateResponse {
         String timeout,
         List<GoogleCloudRunOpV2VolumeResponse> volumes,
         GoogleCloudRunOpV2VpcAccessResponse vpcAccess) {
-        this.annotations = Objects.requireNonNull(annotations);
-        this.confidential = Objects.requireNonNull(confidential);
-        this.containerConcurrency = Objects.requireNonNull(containerConcurrency);
-        this.containers = Objects.requireNonNull(containers);
-        this.encryptionKey = Objects.requireNonNull(encryptionKey);
-        this.executionEnvironment = Objects.requireNonNull(executionEnvironment);
-        this.labels = Objects.requireNonNull(labels);
-        this.revision = Objects.requireNonNull(revision);
-        this.scaling = Objects.requireNonNull(scaling);
-        this.serviceAccount = Objects.requireNonNull(serviceAccount);
-        this.timeout = Objects.requireNonNull(timeout);
-        this.volumes = Objects.requireNonNull(volumes);
-        this.vpcAccess = Objects.requireNonNull(vpcAccess);
+        this.annotations = annotations;
+        this.confidential = confidential;
+        this.containerConcurrency = containerConcurrency;
+        this.containers = containers;
+        this.encryptionKey = encryptionKey;
+        this.executionEnvironment = executionEnvironment;
+        this.labels = labels;
+        this.revision = revision;
+        this.scaling = scaling;
+        this.serviceAccount = serviceAccount;
+        this.timeout = timeout;
+        this.volumes = volumes;
+        this.vpcAccess = vpcAccess;
     }
 
     /**

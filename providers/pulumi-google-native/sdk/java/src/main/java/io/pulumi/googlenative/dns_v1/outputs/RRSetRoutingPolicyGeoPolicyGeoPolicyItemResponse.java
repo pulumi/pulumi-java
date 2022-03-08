@@ -29,10 +29,10 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse {
         String location,
         List<String> rrdatas,
         List<String> signatureRrdatas) {
-        this.kind = Objects.requireNonNull(kind);
-        this.location = Objects.requireNonNull(location);
-        this.rrdatas = Objects.requireNonNull(rrdatas);
-        this.signatureRrdatas = Objects.requireNonNull(signatureRrdatas);
+        this.kind = kind;
+        this.location = location;
+        this.rrdatas = rrdatas;
+        this.signatureRrdatas = signatureRrdatas;
     }
 
     public String getKind() {

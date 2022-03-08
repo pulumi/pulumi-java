@@ -31,7 +31,7 @@ public final class InstanceFromMachineImageAttachedDisk {
         this.diskEncryptionKeySha256 = diskEncryptionKeySha256;
         this.kmsKeySelfLink = kmsKeySelfLink;
         this.mode = mode;
-        this.source = Objects.requireNonNull(source);
+        this.source = source;
     }
 
     public Optional<String> getDeviceName() {

@@ -24,8 +24,8 @@ public final class ParquetOptionsResponse {
     private ParquetOptionsResponse(
         Boolean enableListInference,
         Boolean enumAsString) {
-        this.enableListInference = Objects.requireNonNull(enableListInference);
-        this.enumAsString = Objects.requireNonNull(enumAsString);
+        this.enableListInference = enableListInference;
+        this.enumAsString = enumAsString;
     }
 
     /**

@@ -49,12 +49,12 @@ public final class GetAdminRuleResult {
         String name,
         SystemDataResponse systemData,
         String type) {
-        this.etag = Objects.requireNonNull(etag);
-        this.id = Objects.requireNonNull(id);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.etag = etag;
+        this.id = id;
+        this.kind = kind;
+        this.name = name;
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

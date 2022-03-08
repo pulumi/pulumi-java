@@ -167,31 +167,31 @@ public final class GetMachineResult {
         String type,
         @Nullable String vmId,
         String vmUuid) {
-        this.adFqdn = Objects.requireNonNull(adFqdn);
-        this.agentVersion = Objects.requireNonNull(agentVersion);
+        this.adFqdn = adFqdn;
+        this.agentVersion = agentVersion;
         this.clientPublicKey = clientPublicKey;
-        this.displayName = Objects.requireNonNull(displayName);
-        this.dnsFqdn = Objects.requireNonNull(dnsFqdn);
-        this.domainName = Objects.requireNonNull(domainName);
-        this.errorDetails = Objects.requireNonNull(errorDetails);
-        this.extensions = Objects.requireNonNull(extensions);
-        this.id = Objects.requireNonNull(id);
+        this.displayName = displayName;
+        this.dnsFqdn = dnsFqdn;
+        this.domainName = domainName;
+        this.errorDetails = errorDetails;
+        this.extensions = extensions;
+        this.id = id;
         this.identity = identity;
-        this.lastStatusChange = Objects.requireNonNull(lastStatusChange);
-        this.location = Objects.requireNonNull(location);
+        this.lastStatusChange = lastStatusChange;
+        this.location = location;
         this.locationData = locationData;
-        this.machineFqdn = Objects.requireNonNull(machineFqdn);
-        this.name = Objects.requireNonNull(name);
-        this.osName = Objects.requireNonNull(osName);
+        this.machineFqdn = machineFqdn;
+        this.name = name;
+        this.osName = osName;
         this.osProfile = osProfile;
-        this.osSku = Objects.requireNonNull(osSku);
-        this.osVersion = Objects.requireNonNull(osVersion);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.status = Objects.requireNonNull(status);
+        this.osSku = osSku;
+        this.osVersion = osVersion;
+        this.provisioningState = provisioningState;
+        this.status = status;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.vmId = vmId;
-        this.vmUuid = Objects.requireNonNull(vmUuid);
+        this.vmUuid = vmUuid;
     }
 
     /**

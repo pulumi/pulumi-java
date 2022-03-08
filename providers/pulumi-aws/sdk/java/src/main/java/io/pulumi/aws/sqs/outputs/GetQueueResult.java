@@ -39,11 +39,11 @@ public final class GetQueueResult {
         String name,
         Map<String,String> tags,
         String url) {
-        this.arn = Objects.requireNonNull(arn);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.tags = Objects.requireNonNull(tags);
-        this.url = Objects.requireNonNull(url);
+        this.arn = arn;
+        this.id = id;
+        this.name = name;
+        this.tags = tags;
+        this.url = url;
     }
 
     /**

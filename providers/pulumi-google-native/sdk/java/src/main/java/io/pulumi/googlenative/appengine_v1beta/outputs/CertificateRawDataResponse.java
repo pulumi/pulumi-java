@@ -24,8 +24,8 @@ public final class CertificateRawDataResponse {
     private CertificateRawDataResponse(
         String privateKey,
         String publicCertificate) {
-        this.privateKey = Objects.requireNonNull(privateKey);
-        this.publicCertificate = Objects.requireNonNull(publicCertificate);
+        this.privateKey = privateKey;
+        this.publicCertificate = publicCertificate;
     }
 
     /**

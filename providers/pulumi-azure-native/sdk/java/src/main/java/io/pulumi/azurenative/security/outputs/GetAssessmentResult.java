@@ -84,15 +84,15 @@ public final class GetAssessmentResult {
         AssessmentStatusResponse status,
         String type) {
         this.additionalData = additionalData;
-        this.displayName = Objects.requireNonNull(displayName);
-        this.id = Objects.requireNonNull(id);
-        this.links = Objects.requireNonNull(links);
+        this.displayName = displayName;
+        this.id = id;
+        this.links = links;
         this.metadata = metadata;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.partnersData = partnersData;
-        this.resourceDetails = Objects.requireNonNull(resourceDetails);
-        this.status = Objects.requireNonNull(status);
-        this.type = Objects.requireNonNull(type);
+        this.resourceDetails = resourceDetails;
+        this.status = status;
+        this.type = type;
     }
 
     /**

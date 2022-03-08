@@ -24,8 +24,8 @@ public final class JobStatistics2ReservationUsageItemResponse {
     private JobStatistics2ReservationUsageItemResponse(
         String name,
         String slotMs) {
-        this.name = Objects.requireNonNull(name);
-        this.slotMs = Objects.requireNonNull(slotMs);
+        this.name = name;
+        this.slotMs = slotMs;
     }
 
     /**

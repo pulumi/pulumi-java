@@ -119,21 +119,21 @@ public final class GetOperationalizationClusterResult {
         @Nullable Map<String,String> tags,
         String type) {
         this.appInsights = appInsights;
-        this.clusterType = Objects.requireNonNull(clusterType);
+        this.clusterType = clusterType;
         this.containerRegistry = containerRegistry;
         this.containerService = containerService;
-        this.createdOn = Objects.requireNonNull(createdOn);
+        this.createdOn = createdOn;
         this.description = description;
         this.globalServiceConfiguration = globalServiceConfiguration;
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.modifiedOn = Objects.requireNonNull(modifiedOn);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningErrors = Objects.requireNonNull(provisioningErrors);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.id = id;
+        this.location = location;
+        this.modifiedOn = modifiedOn;
+        this.name = name;
+        this.provisioningErrors = provisioningErrors;
+        this.provisioningState = provisioningState;
         this.storageAccount = storageAccount;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

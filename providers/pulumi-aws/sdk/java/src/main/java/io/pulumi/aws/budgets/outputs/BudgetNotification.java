@@ -51,12 +51,12 @@ public final class BudgetNotification {
         @Nullable List<String> subscriberSnsTopicArns,
         Double threshold,
         String thresholdType) {
-        this.comparisonOperator = Objects.requireNonNull(comparisonOperator);
-        this.notificationType = Objects.requireNonNull(notificationType);
+        this.comparisonOperator = comparisonOperator;
+        this.notificationType = notificationType;
         this.subscriberEmailAddresses = subscriberEmailAddresses;
         this.subscriberSnsTopicArns = subscriberSnsTopicArns;
-        this.threshold = Objects.requireNonNull(threshold);
-        this.thresholdType = Objects.requireNonNull(thresholdType);
+        this.threshold = threshold;
+        this.thresholdType = thresholdType;
     }
 
     /**

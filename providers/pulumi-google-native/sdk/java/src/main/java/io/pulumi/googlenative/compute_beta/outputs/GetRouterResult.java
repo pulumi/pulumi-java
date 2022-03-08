@@ -90,18 +90,18 @@ public final class GetRouterResult {
         String network,
         String region,
         String selfLink) {
-        this.bgp = Objects.requireNonNull(bgp);
-        this.bgpPeers = Objects.requireNonNull(bgpPeers);
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.description = Objects.requireNonNull(description);
-        this.encryptedInterconnectRouter = Objects.requireNonNull(encryptedInterconnectRouter);
-        this.interfaces = Objects.requireNonNull(interfaces);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.nats = Objects.requireNonNull(nats);
-        this.network = Objects.requireNonNull(network);
-        this.region = Objects.requireNonNull(region);
-        this.selfLink = Objects.requireNonNull(selfLink);
+        this.bgp = bgp;
+        this.bgpPeers = bgpPeers;
+        this.creationTimestamp = creationTimestamp;
+        this.description = description;
+        this.encryptedInterconnectRouter = encryptedInterconnectRouter;
+        this.interfaces = interfaces;
+        this.kind = kind;
+        this.name = name;
+        this.nats = nats;
+        this.network = network;
+        this.region = region;
+        this.selfLink = selfLink;
     }
 
     /**

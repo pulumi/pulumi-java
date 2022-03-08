@@ -29,7 +29,7 @@ public final class SimpleRetentionPolicyResponse {
         @Nullable RetentionDurationResponse retentionDuration,
         String retentionPolicyType) {
         this.retentionDuration = retentionDuration;
-        this.retentionPolicyType = Objects.requireNonNull(retentionPolicyType);
+        this.retentionPolicyType = retentionPolicyType;
     }
 
     /**

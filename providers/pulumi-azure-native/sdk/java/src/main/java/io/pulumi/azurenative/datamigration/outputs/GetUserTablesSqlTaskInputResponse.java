@@ -26,8 +26,8 @@ public final class GetUserTablesSqlTaskInputResponse {
     private GetUserTablesSqlTaskInputResponse(
         SqlConnectionInfoResponse connectionInfo,
         List<String> selectedDatabases) {
-        this.connectionInfo = Objects.requireNonNull(connectionInfo);
-        this.selectedDatabases = Objects.requireNonNull(selectedDatabases);
+        this.connectionInfo = connectionInfo;
+        this.selectedDatabases = selectedDatabases;
     }
 
     /**

@@ -78,7 +78,7 @@ public final class GetprivateLinkForAzureAdResult {
         @Nullable List<String> tenants,
         String type) {
         this.allTenants = allTenants;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.name = name;
         this.ownerTenantId = ownerTenantId;
         this.resourceGroup = resourceGroup;
@@ -86,7 +86,7 @@ public final class GetprivateLinkForAzureAdResult {
         this.subscriptionId = subscriptionId;
         this.tags = tags;
         this.tenants = tenants;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

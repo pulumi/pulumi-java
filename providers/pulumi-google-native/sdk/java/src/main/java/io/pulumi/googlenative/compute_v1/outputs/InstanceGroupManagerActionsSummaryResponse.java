@@ -90,19 +90,19 @@ public final class InstanceGroupManagerActionsSummaryResponse {
         Integer stopping,
         Integer suspending,
         Integer verifying) {
-        this.abandoning = Objects.requireNonNull(abandoning);
-        this.creating = Objects.requireNonNull(creating);
-        this.creatingWithoutRetries = Objects.requireNonNull(creatingWithoutRetries);
-        this.deleting = Objects.requireNonNull(deleting);
-        this.none = Objects.requireNonNull(none);
-        this.recreating = Objects.requireNonNull(recreating);
-        this.refreshing = Objects.requireNonNull(refreshing);
-        this.restarting = Objects.requireNonNull(restarting);
-        this.resuming = Objects.requireNonNull(resuming);
-        this.starting = Objects.requireNonNull(starting);
-        this.stopping = Objects.requireNonNull(stopping);
-        this.suspending = Objects.requireNonNull(suspending);
-        this.verifying = Objects.requireNonNull(verifying);
+        this.abandoning = abandoning;
+        this.creating = creating;
+        this.creatingWithoutRetries = creatingWithoutRetries;
+        this.deleting = deleting;
+        this.none = none;
+        this.recreating = recreating;
+        this.refreshing = refreshing;
+        this.restarting = restarting;
+        this.resuming = resuming;
+        this.starting = starting;
+        this.stopping = stopping;
+        this.suspending = suspending;
+        this.verifying = verifying;
     }
 
     /**

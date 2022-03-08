@@ -31,9 +31,9 @@ public final class FileNoteResponse {
         List<String> checksum,
         String fileType,
         String title) {
-        this.checksum = Objects.requireNonNull(checksum);
-        this.fileType = Objects.requireNonNull(fileType);
-        this.title = Objects.requireNonNull(title);
+        this.checksum = checksum;
+        this.fileType = fileType;
+        this.title = title;
     }
 
     /**

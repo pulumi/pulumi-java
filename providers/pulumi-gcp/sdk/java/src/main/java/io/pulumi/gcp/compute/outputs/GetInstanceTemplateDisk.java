@@ -118,20 +118,20 @@ public final class GetInstanceTemplateDisk {
         String source,
         String sourceImage,
         String type) {
-        this.autoDelete = Objects.requireNonNull(autoDelete);
-        this.boot = Objects.requireNonNull(boot);
-        this.deviceName = Objects.requireNonNull(deviceName);
-        this.diskEncryptionKeys = Objects.requireNonNull(diskEncryptionKeys);
-        this.diskName = Objects.requireNonNull(diskName);
-        this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
-        this.diskType = Objects.requireNonNull(diskType);
-        this.$interface = Objects.requireNonNull($interface);
-        this.labels = Objects.requireNonNull(labels);
-        this.mode = Objects.requireNonNull(mode);
-        this.resourcePolicies = Objects.requireNonNull(resourcePolicies);
-        this.source = Objects.requireNonNull(source);
-        this.sourceImage = Objects.requireNonNull(sourceImage);
-        this.type = Objects.requireNonNull(type);
+        this.autoDelete = autoDelete;
+        this.boot = boot;
+        this.deviceName = deviceName;
+        this.diskEncryptionKeys = diskEncryptionKeys;
+        this.diskName = diskName;
+        this.diskSizeGb = diskSizeGb;
+        this.diskType = diskType;
+        this.$interface = $interface;
+        this.labels = labels;
+        this.mode = mode;
+        this.resourcePolicies = resourcePolicies;
+        this.source = source;
+        this.sourceImage = sourceImage;
+        this.type = type;
     }
 
     /**

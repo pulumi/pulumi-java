@@ -117,20 +117,20 @@ public final class GetLinkResult {
         String type) {
         this.description = description;
         this.displayName = displayName;
-        this.id = Objects.requireNonNull(id);
-        this.linkName = Objects.requireNonNull(linkName);
+        this.id = id;
+        this.linkName = linkName;
         this.mappings = mappings;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.operationType = operationType;
-        this.participantPropertyReferences = Objects.requireNonNull(participantPropertyReferences);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.participantPropertyReferences = participantPropertyReferences;
+        this.provisioningState = provisioningState;
         this.referenceOnly = referenceOnly;
-        this.sourceEntityType = Objects.requireNonNull(sourceEntityType);
-        this.sourceEntityTypeName = Objects.requireNonNull(sourceEntityTypeName);
-        this.targetEntityType = Objects.requireNonNull(targetEntityType);
-        this.targetEntityTypeName = Objects.requireNonNull(targetEntityTypeName);
-        this.tenantId = Objects.requireNonNull(tenantId);
-        this.type = Objects.requireNonNull(type);
+        this.sourceEntityType = sourceEntityType;
+        this.sourceEntityTypeName = sourceEntityTypeName;
+        this.targetEntityType = targetEntityType;
+        this.targetEntityTypeName = targetEntityTypeName;
+        this.tenantId = tenantId;
+        this.type = type;
     }
 
     /**

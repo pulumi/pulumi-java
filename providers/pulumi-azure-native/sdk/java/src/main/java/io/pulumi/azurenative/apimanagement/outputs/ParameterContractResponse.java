@@ -54,9 +54,9 @@ public final class ParameterContractResponse {
         @Nullable List<String> values) {
         this.defaultValue = defaultValue;
         this.description = description;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.required = required;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.values = values;
     }
 

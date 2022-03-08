@@ -16,8 +16,8 @@ public final class FunctionConfig {
     private FunctionConfig(
         String comment,
         String runtime) {
-        this.comment = Objects.requireNonNull(comment);
-        this.runtime = Objects.requireNonNull(runtime);
+        this.comment = comment;
+        this.runtime = runtime;
     }
 
     public String getComment() {

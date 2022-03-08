@@ -122,30 +122,30 @@ public final class GetSubnetResult {
         String state,
         Map<String,String> tags,
         String vpcId) {
-        this.arn = Objects.requireNonNull(arn);
-        this.assignIpv6AddressOnCreation = Objects.requireNonNull(assignIpv6AddressOnCreation);
-        this.availabilityZone = Objects.requireNonNull(availabilityZone);
-        this.availabilityZoneId = Objects.requireNonNull(availabilityZoneId);
-        this.availableIpAddressCount = Objects.requireNonNull(availableIpAddressCount);
-        this.cidrBlock = Objects.requireNonNull(cidrBlock);
-        this.customerOwnedIpv4Pool = Objects.requireNonNull(customerOwnedIpv4Pool);
-        this.defaultForAz = Objects.requireNonNull(defaultForAz);
-        this.enableDns64 = Objects.requireNonNull(enableDns64);
-        this.enableResourceNameDnsARecordOnLaunch = Objects.requireNonNull(enableResourceNameDnsARecordOnLaunch);
-        this.enableResourceNameDnsAaaaRecordOnLaunch = Objects.requireNonNull(enableResourceNameDnsAaaaRecordOnLaunch);
+        this.arn = arn;
+        this.assignIpv6AddressOnCreation = assignIpv6AddressOnCreation;
+        this.availabilityZone = availabilityZone;
+        this.availabilityZoneId = availabilityZoneId;
+        this.availableIpAddressCount = availableIpAddressCount;
+        this.cidrBlock = cidrBlock;
+        this.customerOwnedIpv4Pool = customerOwnedIpv4Pool;
+        this.defaultForAz = defaultForAz;
+        this.enableDns64 = enableDns64;
+        this.enableResourceNameDnsARecordOnLaunch = enableResourceNameDnsARecordOnLaunch;
+        this.enableResourceNameDnsAaaaRecordOnLaunch = enableResourceNameDnsAaaaRecordOnLaunch;
         this.filters = filters;
-        this.id = Objects.requireNonNull(id);
-        this.ipv6CidrBlock = Objects.requireNonNull(ipv6CidrBlock);
-        this.ipv6CidrBlockAssociationId = Objects.requireNonNull(ipv6CidrBlockAssociationId);
-        this.ipv6Native = Objects.requireNonNull(ipv6Native);
-        this.mapCustomerOwnedIpOnLaunch = Objects.requireNonNull(mapCustomerOwnedIpOnLaunch);
-        this.mapPublicIpOnLaunch = Objects.requireNonNull(mapPublicIpOnLaunch);
-        this.outpostArn = Objects.requireNonNull(outpostArn);
-        this.ownerId = Objects.requireNonNull(ownerId);
-        this.privateDnsHostnameTypeOnLaunch = Objects.requireNonNull(privateDnsHostnameTypeOnLaunch);
-        this.state = Objects.requireNonNull(state);
-        this.tags = Objects.requireNonNull(tags);
-        this.vpcId = Objects.requireNonNull(vpcId);
+        this.id = id;
+        this.ipv6CidrBlock = ipv6CidrBlock;
+        this.ipv6CidrBlockAssociationId = ipv6CidrBlockAssociationId;
+        this.ipv6Native = ipv6Native;
+        this.mapCustomerOwnedIpOnLaunch = mapCustomerOwnedIpOnLaunch;
+        this.mapPublicIpOnLaunch = mapPublicIpOnLaunch;
+        this.outpostArn = outpostArn;
+        this.ownerId = ownerId;
+        this.privateDnsHostnameTypeOnLaunch = privateDnsHostnameTypeOnLaunch;
+        this.state = state;
+        this.tags = tags;
+        this.vpcId = vpcId;
     }
 
     /**

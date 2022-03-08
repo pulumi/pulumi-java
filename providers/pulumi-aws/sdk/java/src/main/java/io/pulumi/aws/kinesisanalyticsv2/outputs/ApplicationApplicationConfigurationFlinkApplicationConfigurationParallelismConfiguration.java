@@ -41,7 +41,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
         @Nullable Integer parallelism,
         @Nullable Integer parallelismPerKpu) {
         this.autoScalingEnabled = autoScalingEnabled;
-        this.configurationType = Objects.requireNonNull(configurationType);
+        this.configurationType = configurationType;
         this.parallelism = parallelism;
         this.parallelismPerKpu = parallelismPerKpu;
     }

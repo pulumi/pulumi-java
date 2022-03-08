@@ -24,8 +24,8 @@ public final class DetectorModelPayload {
     private DetectorModelPayload(
         String contentExpression,
         String type) {
-        this.contentExpression = Objects.requireNonNull(contentExpression);
-        this.type = Objects.requireNonNull(type);
+        this.contentExpression = contentExpression;
+        this.type = type;
     }
 
     /**

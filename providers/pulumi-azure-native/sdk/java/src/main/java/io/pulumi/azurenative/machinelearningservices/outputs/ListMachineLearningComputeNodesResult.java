@@ -33,9 +33,9 @@ public final class ListMachineLearningComputeNodesResult {
         String computeType,
         String nextLink,
         List<AmlComputeNodeInformationResponse> nodes) {
-        this.computeType = Objects.requireNonNull(computeType);
-        this.nextLink = Objects.requireNonNull(nextLink);
-        this.nodes = Objects.requireNonNull(nodes);
+        this.computeType = computeType;
+        this.nextLink = nextLink;
+        this.nodes = nodes;
     }
 
     /**

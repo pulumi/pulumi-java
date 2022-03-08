@@ -39,10 +39,10 @@ public final class SqlIpConfigResponse {
         Boolean enableIpv4,
         String privateNetwork,
         Boolean requireSsl) {
-        this.authorizedNetworks = Objects.requireNonNull(authorizedNetworks);
-        this.enableIpv4 = Objects.requireNonNull(enableIpv4);
-        this.privateNetwork = Objects.requireNonNull(privateNetwork);
-        this.requireSsl = Objects.requireNonNull(requireSsl);
+        this.authorizedNetworks = authorizedNetworks;
+        this.enableIpv4 = enableIpv4;
+        this.privateNetwork = privateNetwork;
+        this.requireSsl = requireSsl;
     }
 
     /**

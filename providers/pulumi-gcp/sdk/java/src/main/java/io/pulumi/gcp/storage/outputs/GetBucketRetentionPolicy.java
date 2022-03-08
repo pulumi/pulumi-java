@@ -17,8 +17,8 @@ public final class GetBucketRetentionPolicy {
     private GetBucketRetentionPolicy(
         Boolean isLocked,
         Integer retentionPeriod) {
-        this.isLocked = Objects.requireNonNull(isLocked);
-        this.retentionPeriod = Objects.requireNonNull(retentionPeriod);
+        this.isLocked = isLocked;
+        this.retentionPeriod = retentionPeriod;
     }
 
     public Boolean getIsLocked() {

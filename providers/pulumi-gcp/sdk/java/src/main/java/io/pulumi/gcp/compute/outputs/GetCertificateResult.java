@@ -39,16 +39,16 @@ public final class GetCertificateResult {
         String privateKey,
         @Nullable String project,
         String selfLink) {
-        this.certificate = Objects.requireNonNull(certificate);
-        this.certificateId = Objects.requireNonNull(certificateId);
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.description = Objects.requireNonNull(description);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.namePrefix = Objects.requireNonNull(namePrefix);
-        this.privateKey = Objects.requireNonNull(privateKey);
+        this.certificate = certificate;
+        this.certificateId = certificateId;
+        this.creationTimestamp = creationTimestamp;
+        this.description = description;
+        this.id = id;
+        this.name = name;
+        this.namePrefix = namePrefix;
+        this.privateKey = privateKey;
         this.project = project;
-        this.selfLink = Objects.requireNonNull(selfLink);
+        this.selfLink = selfLink;
     }
 
     public String getCertificate() {

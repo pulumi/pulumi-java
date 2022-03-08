@@ -59,13 +59,13 @@ public final class GetPageResult {
         String name,
         List<String> transitionRouteGroups,
         List<GoogleCloudDialogflowCxV3beta1TransitionRouteResponse> transitionRoutes) {
-        this.displayName = Objects.requireNonNull(displayName);
-        this.entryFulfillment = Objects.requireNonNull(entryFulfillment);
-        this.eventHandlers = Objects.requireNonNull(eventHandlers);
-        this.form = Objects.requireNonNull(form);
-        this.name = Objects.requireNonNull(name);
-        this.transitionRouteGroups = Objects.requireNonNull(transitionRouteGroups);
-        this.transitionRoutes = Objects.requireNonNull(transitionRoutes);
+        this.displayName = displayName;
+        this.entryFulfillment = entryFulfillment;
+        this.eventHandlers = eventHandlers;
+        this.form = form;
+        this.name = name;
+        this.transitionRouteGroups = transitionRouteGroups;
+        this.transitionRoutes = transitionRoutes;
     }
 
     /**

@@ -43,8 +43,8 @@ public final class ObjectLambdaAccessPointConfiguration {
         List<ObjectLambdaAccessPointConfigurationTransformationConfiguration> transformationConfigurations) {
         this.allowedFeatures = allowedFeatures;
         this.cloudWatchMetricsEnabled = cloudWatchMetricsEnabled;
-        this.supportingAccessPoint = Objects.requireNonNull(supportingAccessPoint);
-        this.transformationConfigurations = Objects.requireNonNull(transformationConfigurations);
+        this.supportingAccessPoint = supportingAccessPoint;
+        this.transformationConfigurations = transformationConfigurations;
     }
 
     /**

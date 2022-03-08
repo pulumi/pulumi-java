@@ -29,7 +29,7 @@ public final class InstanceEbsBlockDevice {
         @Nullable Integer volumeSize,
         @Nullable String volumeType) {
         this.deleteOnTermination = deleteOnTermination;
-        this.deviceName = Objects.requireNonNull(deviceName);
+        this.deviceName = deviceName;
         this.iops = iops;
         this.snapshotId = snapshotId;
         this.volumeSize = volumeSize;

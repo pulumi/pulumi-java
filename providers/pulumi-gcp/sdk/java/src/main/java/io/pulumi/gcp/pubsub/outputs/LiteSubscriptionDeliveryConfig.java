@@ -18,7 +18,7 @@ public final class LiteSubscriptionDeliveryConfig {
 
     @OutputCustomType.Constructor({"deliveryRequirement"})
     private LiteSubscriptionDeliveryConfig(String deliveryRequirement) {
-        this.deliveryRequirement = Objects.requireNonNull(deliveryRequirement);
+        this.deliveryRequirement = deliveryRequirement;
     }
 
     /**

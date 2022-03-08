@@ -18,7 +18,7 @@ public final class GoogleCloudRetailV2betaRuleIgnoreActionResponse {
 
     @OutputCustomType.Constructor({"ignoreTerms"})
     private GoogleCloudRetailV2betaRuleIgnoreActionResponse(List<String> ignoreTerms) {
-        this.ignoreTerms = Objects.requireNonNull(ignoreTerms);
+        this.ignoreTerms = ignoreTerms;
     }
 
     /**

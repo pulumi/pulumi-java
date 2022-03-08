@@ -79,15 +79,15 @@ public final class SuppressionResponse {
         SuppressionConfigResponse suppressionConfig,
         String type) {
         this.conditions = conditions;
-        this.createdAt = Objects.requireNonNull(createdAt);
-        this.createdBy = Objects.requireNonNull(createdBy);
+        this.createdAt = createdAt;
+        this.createdBy = createdBy;
         this.description = description;
-        this.lastModifiedAt = Objects.requireNonNull(lastModifiedAt);
-        this.lastModifiedBy = Objects.requireNonNull(lastModifiedBy);
+        this.lastModifiedAt = lastModifiedAt;
+        this.lastModifiedBy = lastModifiedBy;
         this.scope = scope;
         this.status = status;
-        this.suppressionConfig = Objects.requireNonNull(suppressionConfig);
-        this.type = Objects.requireNonNull(type);
+        this.suppressionConfig = suppressionConfig;
+        this.type = type;
     }
 
     /**

@@ -35,7 +35,7 @@ public final class StorageProfileResponse {
         String nfsIpAddress,
         @Nullable List<DiskResponse> osDisks) {
         this.hanaSids = hanaSids;
-        this.nfsIpAddress = Objects.requireNonNull(nfsIpAddress);
+        this.nfsIpAddress = nfsIpAddress;
         this.osDisks = osDisks;
     }
 

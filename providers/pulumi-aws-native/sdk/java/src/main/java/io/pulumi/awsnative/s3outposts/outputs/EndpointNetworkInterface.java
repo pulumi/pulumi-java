@@ -13,7 +13,7 @@ public final class EndpointNetworkInterface {
 
     @OutputCustomType.Constructor({"networkInterfaceId"})
     private EndpointNetworkInterface(String networkInterfaceId) {
-        this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId);
+        this.networkInterfaceId = networkInterfaceId;
     }
 
     public String getNetworkInterfaceId() {

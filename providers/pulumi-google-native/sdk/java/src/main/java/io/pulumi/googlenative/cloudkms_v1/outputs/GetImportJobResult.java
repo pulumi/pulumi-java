@@ -74,16 +74,16 @@ public final class GetImportJobResult {
         String protectionLevel,
         WrappingPublicKeyResponse publicKey,
         String state) {
-        this.attestation = Objects.requireNonNull(attestation);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.expireEventTime = Objects.requireNonNull(expireEventTime);
-        this.expireTime = Objects.requireNonNull(expireTime);
-        this.generateTime = Objects.requireNonNull(generateTime);
-        this.importMethod = Objects.requireNonNull(importMethod);
-        this.name = Objects.requireNonNull(name);
-        this.protectionLevel = Objects.requireNonNull(protectionLevel);
-        this.publicKey = Objects.requireNonNull(publicKey);
-        this.state = Objects.requireNonNull(state);
+        this.attestation = attestation;
+        this.createTime = createTime;
+        this.expireEventTime = expireEventTime;
+        this.expireTime = expireTime;
+        this.generateTime = generateTime;
+        this.importMethod = importMethod;
+        this.name = name;
+        this.protectionLevel = protectionLevel;
+        this.publicKey = publicKey;
+        this.state = state;
     }
 
     /**

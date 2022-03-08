@@ -62,14 +62,14 @@ public final class RepoSourceResponse {
         String repoName,
         Map<String,String> substitutions,
         String tagName) {
-        this.branchName = Objects.requireNonNull(branchName);
-        this.commitSha = Objects.requireNonNull(commitSha);
-        this.dir = Objects.requireNonNull(dir);
-        this.invertRegex = Objects.requireNonNull(invertRegex);
-        this.project = Objects.requireNonNull(project);
-        this.repoName = Objects.requireNonNull(repoName);
-        this.substitutions = Objects.requireNonNull(substitutions);
-        this.tagName = Objects.requireNonNull(tagName);
+        this.branchName = branchName;
+        this.commitSha = commitSha;
+        this.dir = dir;
+        this.invertRegex = invertRegex;
+        this.project = project;
+        this.repoName = repoName;
+        this.substitutions = substitutions;
+        this.tagName = tagName;
     }
 
     /**

@@ -94,19 +94,19 @@ public final class GetLiveOutputResult {
         String provisioningState,
         String resourceState,
         String type) {
-        this.archiveWindowLength = Objects.requireNonNull(archiveWindowLength);
-        this.assetName = Objects.requireNonNull(assetName);
-        this.created = Objects.requireNonNull(created);
+        this.archiveWindowLength = archiveWindowLength;
+        this.assetName = assetName;
+        this.created = created;
         this.description = description;
         this.hls = hls;
-        this.id = Objects.requireNonNull(id);
-        this.lastModified = Objects.requireNonNull(lastModified);
+        this.id = id;
+        this.lastModified = lastModified;
         this.manifestName = manifestName;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.outputSnapTime = outputSnapTime;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.resourceState = Objects.requireNonNull(resourceState);
-        this.type = Objects.requireNonNull(type);
+        this.provisioningState = provisioningState;
+        this.resourceState = resourceState;
+        this.type = type;
     }
 
     /**

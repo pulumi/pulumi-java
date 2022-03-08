@@ -38,15 +38,15 @@ public final class GetIstioCanonicalServiceResult {
         @Nullable String project,
         String serviceId,
         List<GetIstioCanonicalServiceTelemetry> telemetries) {
-        this.canonicalService = Objects.requireNonNull(canonicalService);
-        this.canonicalServiceNamespace = Objects.requireNonNull(canonicalServiceNamespace);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.id = Objects.requireNonNull(id);
-        this.meshUid = Objects.requireNonNull(meshUid);
-        this.name = Objects.requireNonNull(name);
+        this.canonicalService = canonicalService;
+        this.canonicalServiceNamespace = canonicalServiceNamespace;
+        this.displayName = displayName;
+        this.id = id;
+        this.meshUid = meshUid;
+        this.name = name;
         this.project = project;
-        this.serviceId = Objects.requireNonNull(serviceId);
-        this.telemetries = Objects.requireNonNull(telemetries);
+        this.serviceId = serviceId;
+        this.telemetries = telemetries;
     }
 
     public String getCanonicalService() {

@@ -18,7 +18,7 @@ public final class VmmToAzureNetworkMappingSettingsResponse {
 
     @OutputCustomType.Constructor({"instanceType"})
     private VmmToAzureNetworkMappingSettingsResponse(String instanceType) {
-        this.instanceType = Objects.requireNonNull(instanceType);
+        this.instanceType = instanceType;
     }
 
     /**

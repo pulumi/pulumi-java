@@ -76,16 +76,16 @@ public final class GetAttachedDatabaseConfigurationResult {
         String provisioningState,
         @Nullable TableLevelSharingPropertiesResponse tableLevelSharingProperties,
         String type) {
-        this.attachedDatabaseNames = Objects.requireNonNull(attachedDatabaseNames);
-        this.clusterResourceId = Objects.requireNonNull(clusterResourceId);
-        this.databaseName = Objects.requireNonNull(databaseName);
-        this.defaultPrincipalsModificationKind = Objects.requireNonNull(defaultPrincipalsModificationKind);
-        this.id = Objects.requireNonNull(id);
+        this.attachedDatabaseNames = attachedDatabaseNames;
+        this.clusterResourceId = clusterResourceId;
+        this.databaseName = databaseName;
+        this.defaultPrincipalsModificationKind = defaultPrincipalsModificationKind;
+        this.id = id;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.tableLevelSharingProperties = tableLevelSharingProperties;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

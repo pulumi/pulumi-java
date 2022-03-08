@@ -32,9 +32,9 @@ public final class GenericSignedAttestationResponse {
         String contentType,
         String serializedPayload,
         List<SignatureResponse> signatures) {
-        this.contentType = Objects.requireNonNull(contentType);
-        this.serializedPayload = Objects.requireNonNull(serializedPayload);
-        this.signatures = Objects.requireNonNull(signatures);
+        this.contentType = contentType;
+        this.serializedPayload = serializedPayload;
+        this.signatures = signatures;
     }
 
     /**

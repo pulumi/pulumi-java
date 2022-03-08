@@ -25,8 +25,8 @@ public final class SslSettingsResponse {
     private SslSettingsResponse(
         String certificateId,
         Boolean isManagedCertificate) {
-        this.certificateId = Objects.requireNonNull(certificateId);
-        this.isManagedCertificate = Objects.requireNonNull(isManagedCertificate);
+        this.certificateId = certificateId;
+        this.isManagedCertificate = isManagedCertificate;
     }
 
     /**

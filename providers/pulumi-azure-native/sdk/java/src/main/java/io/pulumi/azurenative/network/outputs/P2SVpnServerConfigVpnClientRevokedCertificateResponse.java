@@ -47,7 +47,7 @@ public final class P2SVpnServerConfigVpnClientRevokedCertificateResponse {
         this.etag = etag;
         this.id = id;
         this.name = name;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.thumbprint = thumbprint;
     }
 

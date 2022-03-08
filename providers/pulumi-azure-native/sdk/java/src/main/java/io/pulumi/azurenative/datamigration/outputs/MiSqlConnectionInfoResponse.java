@@ -39,9 +39,9 @@ public final class MiSqlConnectionInfoResponse {
         @Nullable String password,
         String type,
         @Nullable String userName) {
-        this.managedInstanceResourceId = Objects.requireNonNull(managedInstanceResourceId);
+        this.managedInstanceResourceId = managedInstanceResourceId;
         this.password = password;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.userName = userName;
     }
 

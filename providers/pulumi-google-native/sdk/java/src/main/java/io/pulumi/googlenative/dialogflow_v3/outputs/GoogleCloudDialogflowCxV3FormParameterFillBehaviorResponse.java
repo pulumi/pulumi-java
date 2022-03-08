@@ -26,8 +26,8 @@ public final class GoogleCloudDialogflowCxV3FormParameterFillBehaviorResponse {
     private GoogleCloudDialogflowCxV3FormParameterFillBehaviorResponse(
         GoogleCloudDialogflowCxV3FulfillmentResponse initialPromptFulfillment,
         List<GoogleCloudDialogflowCxV3EventHandlerResponse> repromptEventHandlers) {
-        this.initialPromptFulfillment = Objects.requireNonNull(initialPromptFulfillment);
-        this.repromptEventHandlers = Objects.requireNonNull(repromptEventHandlers);
+        this.initialPromptFulfillment = initialPromptFulfillment;
+        this.repromptEventHandlers = repromptEventHandlers;
     }
 
     /**

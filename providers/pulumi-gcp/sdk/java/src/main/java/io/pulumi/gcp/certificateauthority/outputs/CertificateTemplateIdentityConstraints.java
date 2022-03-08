@@ -33,8 +33,8 @@ public final class CertificateTemplateIdentityConstraints {
         Boolean allowSubjectAltNamesPassthrough,
         Boolean allowSubjectPassthrough,
         @Nullable CertificateTemplateIdentityConstraintsCelExpression celExpression) {
-        this.allowSubjectAltNamesPassthrough = Objects.requireNonNull(allowSubjectAltNamesPassthrough);
-        this.allowSubjectPassthrough = Objects.requireNonNull(allowSubjectPassthrough);
+        this.allowSubjectAltNamesPassthrough = allowSubjectAltNamesPassthrough;
+        this.allowSubjectPassthrough = allowSubjectPassthrough;
         this.celExpression = celExpression;
     }
 

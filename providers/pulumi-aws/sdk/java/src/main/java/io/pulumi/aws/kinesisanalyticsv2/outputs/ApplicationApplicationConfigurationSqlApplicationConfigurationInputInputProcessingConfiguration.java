@@ -17,7 +17,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
 
     @OutputCustomType.Constructor({"inputLambdaProcessor"})
     private ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfiguration(ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationInputLambdaProcessor inputLambdaProcessor) {
-        this.inputLambdaProcessor = Objects.requireNonNull(inputLambdaProcessor);
+        this.inputLambdaProcessor = inputLambdaProcessor;
     }
 
     /**

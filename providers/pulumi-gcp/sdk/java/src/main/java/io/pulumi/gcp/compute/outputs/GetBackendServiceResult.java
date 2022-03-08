@@ -129,34 +129,34 @@ public final class GetBackendServiceResult {
         String selfLink,
         String sessionAffinity,
         Integer timeoutSec) {
-        this.affinityCookieTtlSec = Objects.requireNonNull(affinityCookieTtlSec);
-        this.backends = Objects.requireNonNull(backends);
-        this.cdnPolicies = Objects.requireNonNull(cdnPolicies);
-        this.circuitBreakers = Objects.requireNonNull(circuitBreakers);
-        this.connectionDrainingTimeoutSec = Objects.requireNonNull(connectionDrainingTimeoutSec);
-        this.consistentHash = Objects.requireNonNull(consistentHash);
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.customRequestHeaders = Objects.requireNonNull(customRequestHeaders);
-        this.customResponseHeaders = Objects.requireNonNull(customResponseHeaders);
-        this.description = Objects.requireNonNull(description);
-        this.enableCdn = Objects.requireNonNull(enableCdn);
-        this.fingerprint = Objects.requireNonNull(fingerprint);
-        this.healthChecks = Objects.requireNonNull(healthChecks);
-        this.iaps = Objects.requireNonNull(iaps);
-        this.id = Objects.requireNonNull(id);
-        this.loadBalancingScheme = Objects.requireNonNull(loadBalancingScheme);
-        this.localityLbPolicy = Objects.requireNonNull(localityLbPolicy);
-        this.logConfigs = Objects.requireNonNull(logConfigs);
-        this.name = Objects.requireNonNull(name);
-        this.outlierDetections = Objects.requireNonNull(outlierDetections);
-        this.portName = Objects.requireNonNull(portName);
+        this.affinityCookieTtlSec = affinityCookieTtlSec;
+        this.backends = backends;
+        this.cdnPolicies = cdnPolicies;
+        this.circuitBreakers = circuitBreakers;
+        this.connectionDrainingTimeoutSec = connectionDrainingTimeoutSec;
+        this.consistentHash = consistentHash;
+        this.creationTimestamp = creationTimestamp;
+        this.customRequestHeaders = customRequestHeaders;
+        this.customResponseHeaders = customResponseHeaders;
+        this.description = description;
+        this.enableCdn = enableCdn;
+        this.fingerprint = fingerprint;
+        this.healthChecks = healthChecks;
+        this.iaps = iaps;
+        this.id = id;
+        this.loadBalancingScheme = loadBalancingScheme;
+        this.localityLbPolicy = localityLbPolicy;
+        this.logConfigs = logConfigs;
+        this.name = name;
+        this.outlierDetections = outlierDetections;
+        this.portName = portName;
         this.project = project;
-        this.protocol = Objects.requireNonNull(protocol);
-        this.securityPolicy = Objects.requireNonNull(securityPolicy);
-        this.securitySettings = Objects.requireNonNull(securitySettings);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.sessionAffinity = Objects.requireNonNull(sessionAffinity);
-        this.timeoutSec = Objects.requireNonNull(timeoutSec);
+        this.protocol = protocol;
+        this.securityPolicy = securityPolicy;
+        this.securitySettings = securitySettings;
+        this.selfLink = selfLink;
+        this.sessionAffinity = sessionAffinity;
+        this.timeoutSec = timeoutSec;
     }
 
     public Integer getAffinityCookieTtlSec() {

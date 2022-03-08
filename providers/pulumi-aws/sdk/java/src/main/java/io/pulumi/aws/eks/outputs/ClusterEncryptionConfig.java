@@ -26,8 +26,8 @@ public final class ClusterEncryptionConfig {
     private ClusterEncryptionConfig(
         ClusterEncryptionConfigProvider provider,
         List<String> resources) {
-        this.provider = Objects.requireNonNull(provider);
-        this.resources = Objects.requireNonNull(resources);
+        this.provider = provider;
+        this.resources = resources;
     }
 
     /**

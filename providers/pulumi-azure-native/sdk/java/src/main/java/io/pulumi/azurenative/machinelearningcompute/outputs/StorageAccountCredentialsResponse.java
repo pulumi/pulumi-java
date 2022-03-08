@@ -30,9 +30,9 @@ public final class StorageAccountCredentialsResponse {
         String primaryKey,
         String resourceId,
         String secondaryKey) {
-        this.primaryKey = Objects.requireNonNull(primaryKey);
-        this.resourceId = Objects.requireNonNull(resourceId);
-        this.secondaryKey = Objects.requireNonNull(secondaryKey);
+        this.primaryKey = primaryKey;
+        this.resourceId = resourceId;
+        this.secondaryKey = secondaryKey;
     }
 
     /**

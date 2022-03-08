@@ -32,9 +32,9 @@ public final class AuthenticationResponse {
         CustomAccountResponse customAccount,
         GoogleAccountResponse googleAccount,
         IapCredentialResponse iapCredential) {
-        this.customAccount = Objects.requireNonNull(customAccount);
-        this.googleAccount = Objects.requireNonNull(googleAccount);
-        this.iapCredential = Objects.requireNonNull(iapCredential);
+        this.customAccount = customAccount;
+        this.googleAccount = googleAccount;
+        this.iapCredential = iapCredential;
     }
 
     /**

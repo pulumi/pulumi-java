@@ -69,15 +69,15 @@ public final class NodeConfigResponse {
         String serviceAccount,
         String subnetwork,
         List<String> tags) {
-        this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
-        this.ipAllocationPolicy = Objects.requireNonNull(ipAllocationPolicy);
-        this.location = Objects.requireNonNull(location);
-        this.machineType = Objects.requireNonNull(machineType);
-        this.network = Objects.requireNonNull(network);
-        this.oauthScopes = Objects.requireNonNull(oauthScopes);
-        this.serviceAccount = Objects.requireNonNull(serviceAccount);
-        this.subnetwork = Objects.requireNonNull(subnetwork);
-        this.tags = Objects.requireNonNull(tags);
+        this.diskSizeGb = diskSizeGb;
+        this.ipAllocationPolicy = ipAllocationPolicy;
+        this.location = location;
+        this.machineType = machineType;
+        this.network = network;
+        this.oauthScopes = oauthScopes;
+        this.serviceAccount = serviceAccount;
+        this.subnetwork = subnetwork;
+        this.tags = tags;
     }
 
     /**

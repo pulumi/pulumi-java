@@ -40,7 +40,7 @@ public final class ManagedIdentityResponse {
         @Nullable String objectId,
         @Nullable String resourceId) {
         this.clientId = clientId;
-        this.identityType = Objects.requireNonNull(identityType);
+        this.identityType = identityType;
         this.objectId = objectId;
         this.resourceId = resourceId;
     }

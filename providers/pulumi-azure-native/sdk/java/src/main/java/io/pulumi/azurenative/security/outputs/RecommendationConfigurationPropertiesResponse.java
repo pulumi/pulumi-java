@@ -26,9 +26,9 @@ public final class RecommendationConfigurationPropertiesResponse {
         String name,
         String recommendationType,
         String status) {
-        this.name = Objects.requireNonNull(name);
-        this.recommendationType = Objects.requireNonNull(recommendationType);
-        this.status = Objects.requireNonNull(status);
+        this.name = name;
+        this.recommendationType = recommendationType;
+        this.status = status;
     }
 
     public String getName() {

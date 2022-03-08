@@ -32,9 +32,9 @@ public final class GetFhirResult {
         String contentType,
         String data,
         List<Map<String,String>> extensions) {
-        this.contentType = Objects.requireNonNull(contentType);
-        this.data = Objects.requireNonNull(data);
-        this.extensions = Objects.requireNonNull(extensions);
+        this.contentType = contentType;
+        this.data = data;
+        this.extensions = extensions;
     }
 
     /**

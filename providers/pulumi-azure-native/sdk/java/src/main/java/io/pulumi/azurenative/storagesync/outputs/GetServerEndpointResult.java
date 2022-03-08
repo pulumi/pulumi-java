@@ -145,25 +145,25 @@ public final class GetServerEndpointResult {
         String type,
         @Nullable Integer volumeFreeSpacePercent) {
         this.cloudTiering = cloudTiering;
-        this.cloudTieringStatus = Objects.requireNonNull(cloudTieringStatus);
+        this.cloudTieringStatus = cloudTieringStatus;
         this.friendlyName = friendlyName;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.initialDownloadPolicy = initialDownloadPolicy;
-        this.lastOperationName = Objects.requireNonNull(lastOperationName);
-        this.lastWorkflowId = Objects.requireNonNull(lastWorkflowId);
+        this.lastOperationName = lastOperationName;
+        this.lastWorkflowId = lastWorkflowId;
         this.localCacheMode = localCacheMode;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.offlineDataTransfer = offlineDataTransfer;
         this.offlineDataTransferShareName = offlineDataTransferShareName;
-        this.offlineDataTransferStorageAccountResourceId = Objects.requireNonNull(offlineDataTransferStorageAccountResourceId);
-        this.offlineDataTransferStorageAccountTenantId = Objects.requireNonNull(offlineDataTransferStorageAccountTenantId);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.recallStatus = Objects.requireNonNull(recallStatus);
+        this.offlineDataTransferStorageAccountResourceId = offlineDataTransferStorageAccountResourceId;
+        this.offlineDataTransferStorageAccountTenantId = offlineDataTransferStorageAccountTenantId;
+        this.provisioningState = provisioningState;
+        this.recallStatus = recallStatus;
         this.serverLocalPath = serverLocalPath;
         this.serverResourceId = serverResourceId;
-        this.syncStatus = Objects.requireNonNull(syncStatus);
+        this.syncStatus = syncStatus;
         this.tierFilesOlderThanDays = tierFilesOlderThanDays;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.volumeFreeSpacePercent = volumeFreeSpacePercent;
     }
 

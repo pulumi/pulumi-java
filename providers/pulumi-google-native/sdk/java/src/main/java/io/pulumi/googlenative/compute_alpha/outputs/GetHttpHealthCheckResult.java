@@ -91,19 +91,19 @@ public final class GetHttpHealthCheckResult {
         String selfLinkWithId,
         Integer timeoutSec,
         Integer unhealthyThreshold) {
-        this.checkIntervalSec = Objects.requireNonNull(checkIntervalSec);
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.description = Objects.requireNonNull(description);
-        this.healthyThreshold = Objects.requireNonNull(healthyThreshold);
-        this.host = Objects.requireNonNull(host);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.port = Objects.requireNonNull(port);
-        this.requestPath = Objects.requireNonNull(requestPath);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
-        this.timeoutSec = Objects.requireNonNull(timeoutSec);
-        this.unhealthyThreshold = Objects.requireNonNull(unhealthyThreshold);
+        this.checkIntervalSec = checkIntervalSec;
+        this.creationTimestamp = creationTimestamp;
+        this.description = description;
+        this.healthyThreshold = healthyThreshold;
+        this.host = host;
+        this.kind = kind;
+        this.name = name;
+        this.port = port;
+        this.requestPath = requestPath;
+        this.selfLink = selfLink;
+        this.selfLinkWithId = selfLinkWithId;
+        this.timeoutSec = timeoutSec;
+        this.unhealthyThreshold = unhealthyThreshold;
     }
 
     /**

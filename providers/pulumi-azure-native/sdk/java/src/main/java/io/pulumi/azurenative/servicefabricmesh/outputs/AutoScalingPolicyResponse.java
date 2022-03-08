@@ -32,9 +32,9 @@ public final class AutoScalingPolicyResponse {
         AddRemoveReplicaScalingMechanismResponse mechanism,
         String name,
         AverageLoadScalingTriggerResponse trigger) {
-        this.mechanism = Objects.requireNonNull(mechanism);
-        this.name = Objects.requireNonNull(name);
-        this.trigger = Objects.requireNonNull(trigger);
+        this.mechanism = mechanism;
+        this.name = name;
+        this.trigger = trigger;
     }
 
     /**

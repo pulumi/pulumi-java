@@ -30,9 +30,9 @@ public final class InsightFiltersProductField {
         String comparison,
         String key,
         String value) {
-        this.comparison = Objects.requireNonNull(comparison);
-        this.key = Objects.requireNonNull(key);
-        this.value = Objects.requireNonNull(value);
+        this.comparison = comparison;
+        this.key = key;
+        this.value = value;
     }
 
     /**

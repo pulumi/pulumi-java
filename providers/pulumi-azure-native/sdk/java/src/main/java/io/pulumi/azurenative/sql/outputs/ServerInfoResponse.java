@@ -17,7 +17,7 @@ public final class ServerInfoResponse {
 
     @OutputCustomType.Constructor({"serverId"})
     private ServerInfoResponse(String serverId) {
-        this.serverId = Objects.requireNonNull(serverId);
+        this.serverId = serverId;
     }
 
     /**

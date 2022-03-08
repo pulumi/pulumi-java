@@ -25,8 +25,8 @@ public final class RevisionTemplateResponse {
     private RevisionTemplateResponse(
         ObjectMetaResponse metadata,
         RevisionSpecResponse spec) {
-        this.metadata = Objects.requireNonNull(metadata);
-        this.spec = Objects.requireNonNull(spec);
+        this.metadata = metadata;
+        this.spec = spec;
     }
 
     /**

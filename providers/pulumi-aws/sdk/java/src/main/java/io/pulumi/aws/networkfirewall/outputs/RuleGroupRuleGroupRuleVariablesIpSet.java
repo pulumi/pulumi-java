@@ -25,8 +25,8 @@ public final class RuleGroupRuleGroupRuleVariablesIpSet {
     private RuleGroupRuleGroupRuleVariablesIpSet(
         RuleGroupRuleGroupRuleVariablesIpSetIpSet ipSet,
         String key) {
-        this.ipSet = Objects.requireNonNull(ipSet);
-        this.key = Objects.requireNonNull(key);
+        this.ipSet = ipSet;
+        this.key = key;
     }
 
     /**

@@ -24,8 +24,8 @@ public final class NodeInitializationActionResponse {
     private NodeInitializationActionResponse(
         String executableFile,
         String executionTimeout) {
-        this.executableFile = Objects.requireNonNull(executableFile);
-        this.executionTimeout = Objects.requireNonNull(executionTimeout);
+        this.executableFile = executableFile;
+        this.executionTimeout = executionTimeout;
     }
 
     /**

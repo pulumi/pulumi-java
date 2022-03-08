@@ -43,8 +43,8 @@ public final class ManagedRuleSetResponse {
         String ruleSetVersion) {
         this.anomalyScore = anomalyScore;
         this.ruleGroupOverrides = ruleGroupOverrides;
-        this.ruleSetType = Objects.requireNonNull(ruleSetType);
-        this.ruleSetVersion = Objects.requireNonNull(ruleSetVersion);
+        this.ruleSetType = ruleSetType;
+        this.ruleSetVersion = ruleSetVersion;
     }
 
     /**

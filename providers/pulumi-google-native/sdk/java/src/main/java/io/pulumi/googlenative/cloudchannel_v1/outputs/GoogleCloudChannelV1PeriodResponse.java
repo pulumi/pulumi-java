@@ -25,8 +25,8 @@ public final class GoogleCloudChannelV1PeriodResponse {
     private GoogleCloudChannelV1PeriodResponse(
         Integer duration,
         String periodType) {
-        this.duration = Objects.requireNonNull(duration);
-        this.periodType = Objects.requireNonNull(periodType);
+        this.duration = duration;
+        this.periodType = periodType;
     }
 
     /**

@@ -25,8 +25,8 @@ public final class SubordinateConfigResponse {
     private SubordinateConfigResponse(
         String certificateAuthority,
         SubordinateConfigChainResponse pemIssuerChain) {
-        this.certificateAuthority = Objects.requireNonNull(certificateAuthority);
-        this.pemIssuerChain = Objects.requireNonNull(pemIssuerChain);
+        this.certificateAuthority = certificateAuthority;
+        this.pemIssuerChain = pemIssuerChain;
     }
 
     /**

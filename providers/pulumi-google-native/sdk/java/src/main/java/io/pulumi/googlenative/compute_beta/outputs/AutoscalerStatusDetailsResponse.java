@@ -24,8 +24,8 @@ public final class AutoscalerStatusDetailsResponse {
     private AutoscalerStatusDetailsResponse(
         String message,
         String type) {
-        this.message = Objects.requireNonNull(message);
-        this.type = Objects.requireNonNull(type);
+        this.message = message;
+        this.type = type;
     }
 
     /**

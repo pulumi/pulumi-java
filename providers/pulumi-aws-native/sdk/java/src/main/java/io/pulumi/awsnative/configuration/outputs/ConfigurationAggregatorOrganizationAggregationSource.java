@@ -24,7 +24,7 @@ public final class ConfigurationAggregatorOrganizationAggregationSource {
         String roleArn) {
         this.allAwsRegions = allAwsRegions;
         this.awsRegions = awsRegions;
-        this.roleArn = Objects.requireNonNull(roleArn);
+        this.roleArn = roleArn;
     }
 
     public Optional<Boolean> getAllAwsRegions() {

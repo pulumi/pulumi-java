@@ -24,8 +24,8 @@ public final class AppResourceMapping {
         AppPhysicalResourceId physicalResourceId,
         @Nullable String resourceName) {
         this.logicalStackName = logicalStackName;
-        this.mappingType = Objects.requireNonNull(mappingType);
-        this.physicalResourceId = Objects.requireNonNull(physicalResourceId);
+        this.mappingType = mappingType;
+        this.physicalResourceId = physicalResourceId;
         this.resourceName = resourceName;
     }
 

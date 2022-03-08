@@ -186,32 +186,32 @@ public final class GetVirtualMachineTemplateResult {
         String type,
         String uuid,
         @Nullable String vCenterId) {
-        this.customResourceName = Objects.requireNonNull(customResourceName);
-        this.disks = Objects.requireNonNull(disks);
+        this.customResourceName = customResourceName;
+        this.disks = disks;
         this.extendedLocation = extendedLocation;
-        this.firmwareType = Objects.requireNonNull(firmwareType);
-        this.folderPath = Objects.requireNonNull(folderPath);
-        this.id = Objects.requireNonNull(id);
+        this.firmwareType = firmwareType;
+        this.folderPath = folderPath;
+        this.id = id;
         this.inventoryItemId = inventoryItemId;
         this.kind = kind;
-        this.location = Objects.requireNonNull(location);
-        this.memorySizeMB = Objects.requireNonNull(memorySizeMB);
-        this.moName = Objects.requireNonNull(moName);
+        this.location = location;
+        this.memorySizeMB = memorySizeMB;
+        this.moName = moName;
         this.moRefId = moRefId;
-        this.name = Objects.requireNonNull(name);
-        this.networkInterfaces = Objects.requireNonNull(networkInterfaces);
-        this.numCPUs = Objects.requireNonNull(numCPUs);
-        this.numCoresPerSocket = Objects.requireNonNull(numCoresPerSocket);
-        this.osName = Objects.requireNonNull(osName);
-        this.osType = Objects.requireNonNull(osType);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.statuses = Objects.requireNonNull(statuses);
-        this.systemData = Objects.requireNonNull(systemData);
+        this.name = name;
+        this.networkInterfaces = networkInterfaces;
+        this.numCPUs = numCPUs;
+        this.numCoresPerSocket = numCoresPerSocket;
+        this.osName = osName;
+        this.osType = osType;
+        this.provisioningState = provisioningState;
+        this.statuses = statuses;
+        this.systemData = systemData;
         this.tags = tags;
-        this.toolsVersion = Objects.requireNonNull(toolsVersion);
-        this.toolsVersionStatus = Objects.requireNonNull(toolsVersionStatus);
-        this.type = Objects.requireNonNull(type);
-        this.uuid = Objects.requireNonNull(uuid);
+        this.toolsVersion = toolsVersion;
+        this.toolsVersionStatus = toolsVersionStatus;
+        this.type = type;
+        this.uuid = uuid;
         this.vCenterId = vCenterId;
     }
 

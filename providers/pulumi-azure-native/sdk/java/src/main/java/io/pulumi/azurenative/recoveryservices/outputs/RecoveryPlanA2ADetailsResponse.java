@@ -33,7 +33,7 @@ public final class RecoveryPlanA2ADetailsResponse {
         String instanceType,
         @Nullable String primaryZone,
         @Nullable String recoveryZone) {
-        this.instanceType = Objects.requireNonNull(instanceType);
+        this.instanceType = instanceType;
         this.primaryZone = primaryZone;
         this.recoveryZone = recoveryZone;
     }

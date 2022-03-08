@@ -24,8 +24,8 @@ public final class ShieldedInstanceConfigResponse {
     private ShieldedInstanceConfigResponse(
         Boolean enableIntegrityMonitoring,
         Boolean enableSecureBoot) {
-        this.enableIntegrityMonitoring = Objects.requireNonNull(enableIntegrityMonitoring);
-        this.enableSecureBoot = Objects.requireNonNull(enableSecureBoot);
+        this.enableIntegrityMonitoring = enableIntegrityMonitoring;
+        this.enableSecureBoot = enableSecureBoot;
     }
 
     /**

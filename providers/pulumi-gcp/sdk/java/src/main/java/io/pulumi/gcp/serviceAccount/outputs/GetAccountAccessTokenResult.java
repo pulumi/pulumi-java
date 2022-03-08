@@ -35,12 +35,12 @@ public final class GetAccountAccessTokenResult {
         @Nullable String lifetime,
         List<String> scopes,
         String targetServiceAccount) {
-        this.accessToken = Objects.requireNonNull(accessToken);
+        this.accessToken = accessToken;
         this.delegates = delegates;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.lifetime = lifetime;
-        this.scopes = Objects.requireNonNull(scopes);
-        this.targetServiceAccount = Objects.requireNonNull(targetServiceAccount);
+        this.scopes = scopes;
+        this.targetServiceAccount = targetServiceAccount;
     }
 
     /**

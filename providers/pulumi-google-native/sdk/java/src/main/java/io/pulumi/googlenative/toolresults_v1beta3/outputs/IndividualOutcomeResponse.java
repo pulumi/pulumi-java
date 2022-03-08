@@ -30,10 +30,10 @@ public final class IndividualOutcomeResponse {
         String outcomeSummary,
         DurationResponse runDuration,
         String stepId) {
-        this.multistepNumber = Objects.requireNonNull(multistepNumber);
-        this.outcomeSummary = Objects.requireNonNull(outcomeSummary);
-        this.runDuration = Objects.requireNonNull(runDuration);
-        this.stepId = Objects.requireNonNull(stepId);
+        this.multistepNumber = multistepNumber;
+        this.outcomeSummary = outcomeSummary;
+        this.runDuration = runDuration;
+        this.stepId = stepId;
     }
 
     /**

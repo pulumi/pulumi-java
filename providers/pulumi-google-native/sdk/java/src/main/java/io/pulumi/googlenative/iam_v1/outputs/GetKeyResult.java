@@ -73,16 +73,16 @@ public final class GetKeyResult {
         String publicKeyData,
         String validAfterTime,
         String validBeforeTime) {
-        this.disabled = Objects.requireNonNull(disabled);
-        this.keyAlgorithm = Objects.requireNonNull(keyAlgorithm);
-        this.keyOrigin = Objects.requireNonNull(keyOrigin);
-        this.keyType = Objects.requireNonNull(keyType);
-        this.name = Objects.requireNonNull(name);
-        this.privateKeyData = Objects.requireNonNull(privateKeyData);
-        this.privateKeyType = Objects.requireNonNull(privateKeyType);
-        this.publicKeyData = Objects.requireNonNull(publicKeyData);
-        this.validAfterTime = Objects.requireNonNull(validAfterTime);
-        this.validBeforeTime = Objects.requireNonNull(validBeforeTime);
+        this.disabled = disabled;
+        this.keyAlgorithm = keyAlgorithm;
+        this.keyOrigin = keyOrigin;
+        this.keyType = keyType;
+        this.name = name;
+        this.privateKeyData = privateKeyData;
+        this.privateKeyType = privateKeyType;
+        this.publicKeyData = publicKeyData;
+        this.validAfterTime = validAfterTime;
+        this.validBeforeTime = validBeforeTime;
     }
 
     /**

@@ -25,8 +25,8 @@ public final class RepoIdResponse {
     private RepoIdResponse(
         ProjectRepoIdResponse projectRepoId,
         String uid) {
-        this.projectRepoId = Objects.requireNonNull(projectRepoId);
-        this.uid = Objects.requireNonNull(uid);
+        this.projectRepoId = projectRepoId;
+        this.uid = uid;
     }
 
     /**

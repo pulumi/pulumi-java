@@ -17,7 +17,7 @@ public final class NsgReferenceResponse {
 
     @OutputCustomType.Constructor({"sourceArmResourceId"})
     private NsgReferenceResponse(String sourceArmResourceId) {
-        this.sourceArmResourceId = Objects.requireNonNull(sourceArmResourceId);
+        this.sourceArmResourceId = sourceArmResourceId;
     }
 
     /**

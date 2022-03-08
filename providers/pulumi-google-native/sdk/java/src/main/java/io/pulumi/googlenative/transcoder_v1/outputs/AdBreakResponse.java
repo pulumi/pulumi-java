@@ -17,7 +17,7 @@ public final class AdBreakResponse {
 
     @OutputCustomType.Constructor({"startTimeOffset"})
     private AdBreakResponse(String startTimeOffset) {
-        this.startTimeOffset = Objects.requireNonNull(startTimeOffset);
+        this.startTimeOffset = startTimeOffset;
     }
 
     /**

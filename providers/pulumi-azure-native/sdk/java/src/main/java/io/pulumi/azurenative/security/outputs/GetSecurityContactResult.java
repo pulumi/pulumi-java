@@ -60,11 +60,11 @@ public final class GetSecurityContactResult {
         String type) {
         this.alertNotifications = alertNotifications;
         this.emails = emails;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.notificationsByRole = notificationsByRole;
         this.phone = phone;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

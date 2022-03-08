@@ -27,7 +27,7 @@ public final class GetIAMPolicyAuditConfigAuditLogConfig {
         @Nullable List<String> exemptedMembers,
         String logType) {
         this.exemptedMembers = exemptedMembers;
-        this.logType = Objects.requireNonNull(logType);
+        this.logType = logType;
     }
 
     /**

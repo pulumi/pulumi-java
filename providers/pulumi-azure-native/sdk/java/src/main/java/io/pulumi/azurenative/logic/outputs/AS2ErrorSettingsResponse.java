@@ -24,8 +24,8 @@ public final class AS2ErrorSettingsResponse {
     private AS2ErrorSettingsResponse(
         Boolean resendIfMDNNotReceived,
         Boolean suspendDuplicateMessage) {
-        this.resendIfMDNNotReceived = Objects.requireNonNull(resendIfMDNNotReceived);
-        this.suspendDuplicateMessage = Objects.requireNonNull(suspendDuplicateMessage);
+        this.resendIfMDNNotReceived = resendIfMDNNotReceived;
+        this.suspendDuplicateMessage = suspendDuplicateMessage;
     }
 
     /**

@@ -17,8 +17,8 @@ public final class DistributionStatusCodes {
     private DistributionStatusCodes(
         List<Integer> items,
         Integer quantity) {
-        this.items = Objects.requireNonNull(items);
-        this.quantity = Objects.requireNonNull(quantity);
+        this.items = items;
+        this.quantity = quantity;
     }
 
     public List<Integer> getItems() {

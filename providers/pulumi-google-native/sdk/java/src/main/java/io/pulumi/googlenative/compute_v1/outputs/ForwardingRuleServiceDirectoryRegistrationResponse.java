@@ -30,9 +30,9 @@ public final class ForwardingRuleServiceDirectoryRegistrationResponse {
         String namespace,
         String service,
         String serviceDirectoryRegion) {
-        this.namespace = Objects.requireNonNull(namespace);
-        this.service = Objects.requireNonNull(service);
-        this.serviceDirectoryRegion = Objects.requireNonNull(serviceDirectoryRegion);
+        this.namespace = namespace;
+        this.service = service;
+        this.serviceDirectoryRegion = serviceDirectoryRegion;
     }
 
     /**

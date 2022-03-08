@@ -69,15 +69,15 @@ public final class BackupConfigurationResponse {
         Boolean replicationLogArchivingEnabled,
         String startTime,
         Integer transactionLogRetentionDays) {
-        this.backupRetentionSettings = Objects.requireNonNull(backupRetentionSettings);
-        this.binaryLogEnabled = Objects.requireNonNull(binaryLogEnabled);
-        this.enabled = Objects.requireNonNull(enabled);
-        this.kind = Objects.requireNonNull(kind);
-        this.location = Objects.requireNonNull(location);
-        this.pointInTimeRecoveryEnabled = Objects.requireNonNull(pointInTimeRecoveryEnabled);
-        this.replicationLogArchivingEnabled = Objects.requireNonNull(replicationLogArchivingEnabled);
-        this.startTime = Objects.requireNonNull(startTime);
-        this.transactionLogRetentionDays = Objects.requireNonNull(transactionLogRetentionDays);
+        this.backupRetentionSettings = backupRetentionSettings;
+        this.binaryLogEnabled = binaryLogEnabled;
+        this.enabled = enabled;
+        this.kind = kind;
+        this.location = location;
+        this.pointInTimeRecoveryEnabled = pointInTimeRecoveryEnabled;
+        this.replicationLogArchivingEnabled = replicationLogArchivingEnabled;
+        this.startTime = startTime;
+        this.transactionLogRetentionDays = transactionLogRetentionDays;
     }
 
     /**

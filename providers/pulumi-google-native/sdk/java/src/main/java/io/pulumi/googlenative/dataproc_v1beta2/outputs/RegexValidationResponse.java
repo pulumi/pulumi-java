@@ -18,7 +18,7 @@ public final class RegexValidationResponse {
 
     @OutputCustomType.Constructor({"regexes"})
     private RegexValidationResponse(List<String> regexes) {
-        this.regexes = Objects.requireNonNull(regexes);
+        this.regexes = regexes;
     }
 
     /**

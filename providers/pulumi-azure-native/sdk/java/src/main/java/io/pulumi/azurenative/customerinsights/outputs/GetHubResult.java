@@ -77,16 +77,16 @@ public final class GetHubResult {
         @Nullable Integer tenantFeatures,
         String type,
         String webEndpoint) {
-        this.apiEndpoint = Objects.requireNonNull(apiEndpoint);
+        this.apiEndpoint = apiEndpoint;
         this.hubBillingInfo = hubBillingInfo;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.tags = tags;
         this.tenantFeatures = tenantFeatures;
-        this.type = Objects.requireNonNull(type);
-        this.webEndpoint = Objects.requireNonNull(webEndpoint);
+        this.type = type;
+        this.webEndpoint = webEndpoint;
     }
 
     /**

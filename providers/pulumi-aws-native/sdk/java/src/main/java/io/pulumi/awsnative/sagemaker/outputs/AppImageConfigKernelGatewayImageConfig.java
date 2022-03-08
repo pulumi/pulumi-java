@@ -29,7 +29,7 @@ public final class AppImageConfigKernelGatewayImageConfig {
         @Nullable AppImageConfigFileSystemConfig fileSystemConfig,
         List<AppImageConfigKernelSpec> kernelSpecs) {
         this.fileSystemConfig = fileSystemConfig;
-        this.kernelSpecs = Objects.requireNonNull(kernelSpecs);
+        this.kernelSpecs = kernelSpecs;
     }
 
     /**

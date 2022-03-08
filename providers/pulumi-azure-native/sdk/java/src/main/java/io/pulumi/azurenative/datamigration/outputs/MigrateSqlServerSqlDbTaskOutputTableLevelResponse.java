@@ -80,17 +80,17 @@ public final class MigrateSqlServerSqlDbTaskOutputTableLevelResponse {
         String startedOn,
         String state,
         String statusMessage) {
-        this.endedOn = Objects.requireNonNull(endedOn);
-        this.errorPrefix = Objects.requireNonNull(errorPrefix);
-        this.id = Objects.requireNonNull(id);
-        this.itemsCompletedCount = Objects.requireNonNull(itemsCompletedCount);
-        this.itemsCount = Objects.requireNonNull(itemsCount);
-        this.objectName = Objects.requireNonNull(objectName);
-        this.resultPrefix = Objects.requireNonNull(resultPrefix);
-        this.resultType = Objects.requireNonNull(resultType);
-        this.startedOn = Objects.requireNonNull(startedOn);
-        this.state = Objects.requireNonNull(state);
-        this.statusMessage = Objects.requireNonNull(statusMessage);
+        this.endedOn = endedOn;
+        this.errorPrefix = errorPrefix;
+        this.id = id;
+        this.itemsCompletedCount = itemsCompletedCount;
+        this.itemsCount = itemsCount;
+        this.objectName = objectName;
+        this.resultPrefix = resultPrefix;
+        this.resultType = resultType;
+        this.startedOn = startedOn;
+        this.state = state;
+        this.statusMessage = statusMessage;
     }
 
     /**

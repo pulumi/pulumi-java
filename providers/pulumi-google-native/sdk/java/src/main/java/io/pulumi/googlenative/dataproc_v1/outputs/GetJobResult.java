@@ -142,25 +142,25 @@ public final class GetJobResult {
         JobStatusResponse status,
         List<JobStatusResponse> statusHistory,
         List<YarnApplicationResponse> yarnApplications) {
-        this.done = Objects.requireNonNull(done);
-        this.driverControlFilesUri = Objects.requireNonNull(driverControlFilesUri);
-        this.driverOutputResourceUri = Objects.requireNonNull(driverOutputResourceUri);
-        this.hadoopJob = Objects.requireNonNull(hadoopJob);
-        this.hiveJob = Objects.requireNonNull(hiveJob);
-        this.jobUuid = Objects.requireNonNull(jobUuid);
-        this.labels = Objects.requireNonNull(labels);
-        this.pigJob = Objects.requireNonNull(pigJob);
-        this.placement = Objects.requireNonNull(placement);
-        this.prestoJob = Objects.requireNonNull(prestoJob);
-        this.pysparkJob = Objects.requireNonNull(pysparkJob);
-        this.reference = Objects.requireNonNull(reference);
-        this.scheduling = Objects.requireNonNull(scheduling);
-        this.sparkJob = Objects.requireNonNull(sparkJob);
-        this.sparkRJob = Objects.requireNonNull(sparkRJob);
-        this.sparkSqlJob = Objects.requireNonNull(sparkSqlJob);
-        this.status = Objects.requireNonNull(status);
-        this.statusHistory = Objects.requireNonNull(statusHistory);
-        this.yarnApplications = Objects.requireNonNull(yarnApplications);
+        this.done = done;
+        this.driverControlFilesUri = driverControlFilesUri;
+        this.driverOutputResourceUri = driverOutputResourceUri;
+        this.hadoopJob = hadoopJob;
+        this.hiveJob = hiveJob;
+        this.jobUuid = jobUuid;
+        this.labels = labels;
+        this.pigJob = pigJob;
+        this.placement = placement;
+        this.prestoJob = prestoJob;
+        this.pysparkJob = pysparkJob;
+        this.reference = reference;
+        this.scheduling = scheduling;
+        this.sparkJob = sparkJob;
+        this.sparkRJob = sparkRJob;
+        this.sparkSqlJob = sparkSqlJob;
+        this.status = status;
+        this.statusHistory = statusHistory;
+        this.yarnApplications = yarnApplications;
     }
 
     /**

@@ -14,7 +14,7 @@ public final class AbortConfigProperties {
 
     @OutputCustomType.Constructor({"criteriaList"})
     private AbortConfigProperties(List<JobTemplateAbortCriteria> criteriaList) {
-        this.criteriaList = Objects.requireNonNull(criteriaList);
+        this.criteriaList = criteriaList;
     }
 
     public List<JobTemplateAbortCriteria> getCriteriaList() {

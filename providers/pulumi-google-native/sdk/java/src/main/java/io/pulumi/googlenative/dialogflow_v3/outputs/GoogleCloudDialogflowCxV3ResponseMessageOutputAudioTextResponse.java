@@ -31,9 +31,9 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextRespon
         Boolean allowPlaybackInterruption,
         String ssml,
         String text) {
-        this.allowPlaybackInterruption = Objects.requireNonNull(allowPlaybackInterruption);
-        this.ssml = Objects.requireNonNull(ssml);
-        this.text = Objects.requireNonNull(text);
+        this.allowPlaybackInterruption = allowPlaybackInterruption;
+        this.ssml = ssml;
+        this.text = text;
     }
 
     /**

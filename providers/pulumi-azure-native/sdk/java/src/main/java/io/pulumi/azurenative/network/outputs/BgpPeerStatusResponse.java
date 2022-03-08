@@ -61,14 +61,14 @@ public final class BgpPeerStatusResponse {
         String neighbor,
         Double routesReceived,
         String state) {
-        this.asn = Objects.requireNonNull(asn);
-        this.connectedDuration = Objects.requireNonNull(connectedDuration);
-        this.localAddress = Objects.requireNonNull(localAddress);
-        this.messagesReceived = Objects.requireNonNull(messagesReceived);
-        this.messagesSent = Objects.requireNonNull(messagesSent);
-        this.neighbor = Objects.requireNonNull(neighbor);
-        this.routesReceived = Objects.requireNonNull(routesReceived);
-        this.state = Objects.requireNonNull(state);
+        this.asn = asn;
+        this.connectedDuration = connectedDuration;
+        this.localAddress = localAddress;
+        this.messagesReceived = messagesReceived;
+        this.messagesSent = messagesSent;
+        this.neighbor = neighbor;
+        this.routesReceived = routesReceived;
+        this.state = state;
     }
 
     /**

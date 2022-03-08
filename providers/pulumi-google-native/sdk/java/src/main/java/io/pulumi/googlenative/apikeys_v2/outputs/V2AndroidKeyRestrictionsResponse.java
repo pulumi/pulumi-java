@@ -18,7 +18,7 @@ public final class V2AndroidKeyRestrictionsResponse {
 
     @OutputCustomType.Constructor({"allowedApplications"})
     private V2AndroidKeyRestrictionsResponse(List<V2AndroidApplicationResponse> allowedApplications) {
-        this.allowedApplications = Objects.requireNonNull(allowedApplications);
+        this.allowedApplications = allowedApplications;
     }
 
     /**

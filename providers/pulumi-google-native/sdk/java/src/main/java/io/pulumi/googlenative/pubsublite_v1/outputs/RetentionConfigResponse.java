@@ -24,8 +24,8 @@ public final class RetentionConfigResponse {
     private RetentionConfigResponse(
         String perPartitionBytes,
         String period) {
-        this.perPartitionBytes = Objects.requireNonNull(perPartitionBytes);
-        this.period = Objects.requireNonNull(period);
+        this.perPartitionBytes = perPartitionBytes;
+        this.period = period;
     }
 
     /**

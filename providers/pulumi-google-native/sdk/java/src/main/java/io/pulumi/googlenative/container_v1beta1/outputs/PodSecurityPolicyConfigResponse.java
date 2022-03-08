@@ -17,7 +17,7 @@ public final class PodSecurityPolicyConfigResponse {
 
     @OutputCustomType.Constructor({"enabled"})
     private PodSecurityPolicyConfigResponse(Boolean enabled) {
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
     }
 
     /**

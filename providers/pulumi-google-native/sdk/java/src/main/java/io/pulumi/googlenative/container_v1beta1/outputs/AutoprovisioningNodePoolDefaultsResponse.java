@@ -77,16 +77,16 @@ public final class AutoprovisioningNodePoolDefaultsResponse {
         String serviceAccount,
         ShieldedInstanceConfigResponse shieldedInstanceConfig,
         UpgradeSettingsResponse upgradeSettings) {
-        this.bootDiskKmsKey = Objects.requireNonNull(bootDiskKmsKey);
-        this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
-        this.diskType = Objects.requireNonNull(diskType);
-        this.imageType = Objects.requireNonNull(imageType);
-        this.management = Objects.requireNonNull(management);
-        this.minCpuPlatform = Objects.requireNonNull(minCpuPlatform);
-        this.oauthScopes = Objects.requireNonNull(oauthScopes);
-        this.serviceAccount = Objects.requireNonNull(serviceAccount);
-        this.shieldedInstanceConfig = Objects.requireNonNull(shieldedInstanceConfig);
-        this.upgradeSettings = Objects.requireNonNull(upgradeSettings);
+        this.bootDiskKmsKey = bootDiskKmsKey;
+        this.diskSizeGb = diskSizeGb;
+        this.diskType = diskType;
+        this.imageType = imageType;
+        this.management = management;
+        this.minCpuPlatform = minCpuPlatform;
+        this.oauthScopes = oauthScopes;
+        this.serviceAccount = serviceAccount;
+        this.shieldedInstanceConfig = shieldedInstanceConfig;
+        this.upgradeSettings = upgradeSettings;
     }
 
     /**

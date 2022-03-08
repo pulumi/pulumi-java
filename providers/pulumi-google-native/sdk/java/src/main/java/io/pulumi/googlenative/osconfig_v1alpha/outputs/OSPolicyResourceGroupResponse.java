@@ -26,8 +26,8 @@ public final class OSPolicyResourceGroupResponse {
     private OSPolicyResourceGroupResponse(
         List<OSPolicyInventoryFilterResponse> inventoryFilters,
         List<OSPolicyResourceResponse> resources) {
-        this.inventoryFilters = Objects.requireNonNull(inventoryFilters);
-        this.resources = Objects.requireNonNull(resources);
+        this.inventoryFilters = inventoryFilters;
+        this.resources = resources;
     }
 
     /**

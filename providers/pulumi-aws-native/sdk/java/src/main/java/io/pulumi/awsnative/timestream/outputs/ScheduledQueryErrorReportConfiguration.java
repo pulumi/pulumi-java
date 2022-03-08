@@ -13,7 +13,7 @@ public final class ScheduledQueryErrorReportConfiguration {
 
     @OutputCustomType.Constructor({"s3Configuration"})
     private ScheduledQueryErrorReportConfiguration(ScheduledQueryS3Configuration s3Configuration) {
-        this.s3Configuration = Objects.requireNonNull(s3Configuration);
+        this.s3Configuration = s3Configuration;
     }
 
     public ScheduledQueryS3Configuration getS3Configuration() {

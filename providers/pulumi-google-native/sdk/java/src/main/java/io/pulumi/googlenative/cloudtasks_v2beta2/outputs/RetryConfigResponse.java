@@ -50,12 +50,12 @@ public final class RetryConfigResponse {
         String maxRetryDuration,
         String minBackoff,
         Boolean unlimitedAttempts) {
-        this.maxAttempts = Objects.requireNonNull(maxAttempts);
-        this.maxBackoff = Objects.requireNonNull(maxBackoff);
-        this.maxDoublings = Objects.requireNonNull(maxDoublings);
-        this.maxRetryDuration = Objects.requireNonNull(maxRetryDuration);
-        this.minBackoff = Objects.requireNonNull(minBackoff);
-        this.unlimitedAttempts = Objects.requireNonNull(unlimitedAttempts);
+        this.maxAttempts = maxAttempts;
+        this.maxBackoff = maxBackoff;
+        this.maxDoublings = maxDoublings;
+        this.maxRetryDuration = maxRetryDuration;
+        this.minBackoff = minBackoff;
+        this.unlimitedAttempts = unlimitedAttempts;
     }
 
     /**

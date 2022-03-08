@@ -40,8 +40,8 @@ public final class ParameterDeclarationResponse {
         String type) {
         this.$default = $default;
         this.description = description;
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.name = name;
+        this.type = type;
     }
 
     /**

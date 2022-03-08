@@ -42,9 +42,9 @@ public final class WebAclRuleStatementManagedRuleGroupStatement {
         @Nullable WebAclRuleStatementManagedRuleGroupStatementScopeDownStatement scopeDownStatement,
         String vendorName) {
         this.excludedRules = excludedRules;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.scopeDownStatement = scopeDownStatement;
-        this.vendorName = Objects.requireNonNull(vendorName);
+        this.vendorName = vendorName;
     }
 
     /**

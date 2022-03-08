@@ -21,7 +21,7 @@ public final class PolicyAlternativeNameServerConfig {
 
     @OutputCustomType.Constructor({"targetNameServers"})
     private PolicyAlternativeNameServerConfig(List<PolicyAlternativeNameServerConfigTargetNameServer> targetNameServers) {
-        this.targetNameServers = Objects.requireNonNull(targetNameServers);
+        this.targetNameServers = targetNameServers;
     }
 
     /**

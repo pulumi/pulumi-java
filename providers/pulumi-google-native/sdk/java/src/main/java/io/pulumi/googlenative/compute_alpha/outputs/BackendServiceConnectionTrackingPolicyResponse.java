@@ -38,10 +38,10 @@ public final class BackendServiceConnectionTrackingPolicyResponse {
         Boolean enableStrongAffinity,
         Integer idleTimeoutSec,
         String trackingMode) {
-        this.connectionPersistenceOnUnhealthyBackends = Objects.requireNonNull(connectionPersistenceOnUnhealthyBackends);
-        this.enableStrongAffinity = Objects.requireNonNull(enableStrongAffinity);
-        this.idleTimeoutSec = Objects.requireNonNull(idleTimeoutSec);
-        this.trackingMode = Objects.requireNonNull(trackingMode);
+        this.connectionPersistenceOnUnhealthyBackends = connectionPersistenceOnUnhealthyBackends;
+        this.enableStrongAffinity = enableStrongAffinity;
+        this.idleTimeoutSec = idleTimeoutSec;
+        this.trackingMode = trackingMode;
     }
 
     /**

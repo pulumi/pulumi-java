@@ -215,38 +215,38 @@ public final class GetProductResult {
         String type,
         String uri,
         List<GoogleCloudRetailV2betaProductResponse> variants) {
-        this.attributes = Objects.requireNonNull(attributes);
-        this.audience = Objects.requireNonNull(audience);
-        this.availability = Objects.requireNonNull(availability);
-        this.availableQuantity = Objects.requireNonNull(availableQuantity);
-        this.availableTime = Objects.requireNonNull(availableTime);
-        this.brands = Objects.requireNonNull(brands);
-        this.categories = Objects.requireNonNull(categories);
-        this.collectionMemberIds = Objects.requireNonNull(collectionMemberIds);
-        this.colorInfo = Objects.requireNonNull(colorInfo);
-        this.conditions = Objects.requireNonNull(conditions);
-        this.description = Objects.requireNonNull(description);
-        this.expireTime = Objects.requireNonNull(expireTime);
-        this.fulfillmentInfo = Objects.requireNonNull(fulfillmentInfo);
-        this.gtin = Objects.requireNonNull(gtin);
-        this.images = Objects.requireNonNull(images);
-        this.languageCode = Objects.requireNonNull(languageCode);
-        this.materials = Objects.requireNonNull(materials);
-        this.name = Objects.requireNonNull(name);
-        this.patterns = Objects.requireNonNull(patterns);
-        this.priceInfo = Objects.requireNonNull(priceInfo);
-        this.primaryProductId = Objects.requireNonNull(primaryProductId);
-        this.promotions = Objects.requireNonNull(promotions);
-        this.publishTime = Objects.requireNonNull(publishTime);
-        this.rating = Objects.requireNonNull(rating);
-        this.retrievableFields = Objects.requireNonNull(retrievableFields);
-        this.sizes = Objects.requireNonNull(sizes);
-        this.tags = Objects.requireNonNull(tags);
-        this.title = Objects.requireNonNull(title);
-        this.ttl = Objects.requireNonNull(ttl);
-        this.type = Objects.requireNonNull(type);
-        this.uri = Objects.requireNonNull(uri);
-        this.variants = Objects.requireNonNull(variants);
+        this.attributes = attributes;
+        this.audience = audience;
+        this.availability = availability;
+        this.availableQuantity = availableQuantity;
+        this.availableTime = availableTime;
+        this.brands = brands;
+        this.categories = categories;
+        this.collectionMemberIds = collectionMemberIds;
+        this.colorInfo = colorInfo;
+        this.conditions = conditions;
+        this.description = description;
+        this.expireTime = expireTime;
+        this.fulfillmentInfo = fulfillmentInfo;
+        this.gtin = gtin;
+        this.images = images;
+        this.languageCode = languageCode;
+        this.materials = materials;
+        this.name = name;
+        this.patterns = patterns;
+        this.priceInfo = priceInfo;
+        this.primaryProductId = primaryProductId;
+        this.promotions = promotions;
+        this.publishTime = publishTime;
+        this.rating = rating;
+        this.retrievableFields = retrievableFields;
+        this.sizes = sizes;
+        this.tags = tags;
+        this.title = title;
+        this.ttl = ttl;
+        this.type = type;
+        this.uri = uri;
+        this.variants = variants;
     }
 
     /**

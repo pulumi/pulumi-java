@@ -13,7 +13,7 @@ public final class GetInstanceCreditSpecification {
 
     @OutputCustomType.Constructor({"cpuCredits"})
     private GetInstanceCreditSpecification(String cpuCredits) {
-        this.cpuCredits = Objects.requireNonNull(cpuCredits);
+        this.cpuCredits = cpuCredits;
     }
 
     public String getCpuCredits() {

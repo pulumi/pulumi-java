@@ -64,14 +64,14 @@ public final class SchedulingResponse {
         String onHostMaintenance,
         Boolean preemptible,
         String provisioningModel) {
-        this.automaticRestart = Objects.requireNonNull(automaticRestart);
-        this.instanceTerminationAction = Objects.requireNonNull(instanceTerminationAction);
-        this.locationHint = Objects.requireNonNull(locationHint);
-        this.minNodeCpus = Objects.requireNonNull(minNodeCpus);
-        this.nodeAffinities = Objects.requireNonNull(nodeAffinities);
-        this.onHostMaintenance = Objects.requireNonNull(onHostMaintenance);
-        this.preemptible = Objects.requireNonNull(preemptible);
-        this.provisioningModel = Objects.requireNonNull(provisioningModel);
+        this.automaticRestart = automaticRestart;
+        this.instanceTerminationAction = instanceTerminationAction;
+        this.locationHint = locationHint;
+        this.minNodeCpus = minNodeCpus;
+        this.nodeAffinities = nodeAffinities;
+        this.onHostMaintenance = onHostMaintenance;
+        this.preemptible = preemptible;
+        this.provisioningModel = provisioningModel;
     }
 
     /**

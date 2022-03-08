@@ -26,8 +26,8 @@ public final class InterconnectMacsecResponse {
     private InterconnectMacsecResponse(
         Boolean failOpen,
         List<InterconnectMacsecPreSharedKeyResponse> preSharedKeys) {
-        this.failOpen = Objects.requireNonNull(failOpen);
-        this.preSharedKeys = Objects.requireNonNull(preSharedKeys);
+        this.failOpen = failOpen;
+        this.preSharedKeys = preSharedKeys;
     }
 
     /**

@@ -33,9 +33,9 @@ public final class ServiceRegistryPropertiesResponse {
         List<ServiceRegistryInstanceResponse> instances,
         String provisioningState,
         ServiceRegistryResourceRequestsResponse resourceRequests) {
-        this.instances = Objects.requireNonNull(instances);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.resourceRequests = Objects.requireNonNull(resourceRequests);
+        this.instances = instances;
+        this.provisioningState = provisioningState;
+        this.resourceRequests = resourceRequests;
     }
 
     /**

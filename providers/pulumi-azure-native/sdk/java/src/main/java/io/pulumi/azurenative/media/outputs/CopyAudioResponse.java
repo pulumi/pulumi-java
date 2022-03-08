@@ -28,7 +28,7 @@ public final class CopyAudioResponse {
         @Nullable String label,
         String odataType) {
         this.label = label;
-        this.odataType = Objects.requireNonNull(odataType);
+        this.odataType = odataType;
     }
 
     /**

@@ -20,7 +20,7 @@ public final class ProjectSinkBigqueryOptions {
 
     @OutputCustomType.Constructor({"usePartitionedTables"})
     private ProjectSinkBigqueryOptions(Boolean usePartitionedTables) {
-        this.usePartitionedTables = Objects.requireNonNull(usePartitionedTables);
+        this.usePartitionedTables = usePartitionedTables;
     }
 
     /**

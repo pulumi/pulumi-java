@@ -30,9 +30,9 @@ public final class JobDatabaseOutput {
         JobDatabaseTableOutputOptions databaseOptions,
         @Nullable JobDatabaseOutputDatabaseOutputMode databaseOutputMode,
         String glueConnectionName) {
-        this.databaseOptions = Objects.requireNonNull(databaseOptions);
+        this.databaseOptions = databaseOptions;
         this.databaseOutputMode = databaseOutputMode;
-        this.glueConnectionName = Objects.requireNonNull(glueConnectionName);
+        this.glueConnectionName = glueConnectionName;
     }
 
     public JobDatabaseTableOutputOptions getDatabaseOptions() {

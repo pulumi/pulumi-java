@@ -28,7 +28,7 @@ public final class FlowTriggerConfig {
         @Nullable FlowScheduledTriggerProperties triggerProperties,
         FlowTriggerType triggerType) {
         this.triggerProperties = triggerProperties;
-        this.triggerType = Objects.requireNonNull(triggerType);
+        this.triggerType = triggerType;
     }
 
     /**

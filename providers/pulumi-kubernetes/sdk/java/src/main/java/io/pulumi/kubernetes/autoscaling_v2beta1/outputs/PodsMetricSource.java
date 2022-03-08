@@ -33,9 +33,9 @@ public final class PodsMetricSource {
         String metricName,
         @Nullable LabelSelector selector,
         String targetAverageValue) {
-        this.metricName = Objects.requireNonNull(metricName);
+        this.metricName = metricName;
         this.selector = selector;
-        this.targetAverageValue = Objects.requireNonNull(targetAverageValue);
+        this.targetAverageValue = targetAverageValue;
     }
 
     /**

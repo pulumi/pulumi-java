@@ -22,8 +22,8 @@ public final class DatasetFilterExpression {
     private DatasetFilterExpression(
         String expression,
         List<DatasetFilterValue> valuesMap) {
-        this.expression = Objects.requireNonNull(expression);
-        this.valuesMap = Objects.requireNonNull(valuesMap);
+        this.expression = expression;
+        this.valuesMap = valuesMap;
     }
 
     /**

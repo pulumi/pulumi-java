@@ -44,11 +44,11 @@ public final class IosXcTestResponse {
         FileReferenceResponse testsZip,
         String xcodeVersion,
         FileReferenceResponse xctestrun) {
-        this.appBundleId = Objects.requireNonNull(appBundleId);
-        this.testSpecialEntitlements = Objects.requireNonNull(testSpecialEntitlements);
-        this.testsZip = Objects.requireNonNull(testsZip);
-        this.xcodeVersion = Objects.requireNonNull(xcodeVersion);
-        this.xctestrun = Objects.requireNonNull(xctestrun);
+        this.appBundleId = appBundleId;
+        this.testSpecialEntitlements = testSpecialEntitlements;
+        this.testsZip = testsZip;
+        this.xcodeVersion = xcodeVersion;
+        this.xctestrun = xctestrun;
     }
 
     /**

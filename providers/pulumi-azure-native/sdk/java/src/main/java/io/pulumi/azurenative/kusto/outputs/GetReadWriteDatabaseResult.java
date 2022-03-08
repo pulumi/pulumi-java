@@ -78,15 +78,15 @@ public final class GetReadWriteDatabaseResult {
         DatabaseStatisticsResponse statistics,
         String type) {
         this.hotCachePeriod = hotCachePeriod;
-        this.id = Objects.requireNonNull(id);
-        this.isFollowed = Objects.requireNonNull(isFollowed);
-        this.kind = Objects.requireNonNull(kind);
+        this.id = id;
+        this.isFollowed = isFollowed;
+        this.kind = kind;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.softDeletePeriod = softDeletePeriod;
-        this.statistics = Objects.requireNonNull(statistics);
-        this.type = Objects.requireNonNull(type);
+        this.statistics = statistics;
+        this.type = type;
     }
 
     /**

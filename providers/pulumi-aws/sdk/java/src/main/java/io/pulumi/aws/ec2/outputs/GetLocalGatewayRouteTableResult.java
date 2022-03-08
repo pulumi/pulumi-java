@@ -35,12 +35,12 @@ public final class GetLocalGatewayRouteTableResult {
         String state,
         Map<String,String> tags) {
         this.filters = filters;
-        this.id = Objects.requireNonNull(id);
-        this.localGatewayId = Objects.requireNonNull(localGatewayId);
-        this.localGatewayRouteTableId = Objects.requireNonNull(localGatewayRouteTableId);
-        this.outpostArn = Objects.requireNonNull(outpostArn);
-        this.state = Objects.requireNonNull(state);
-        this.tags = Objects.requireNonNull(tags);
+        this.id = id;
+        this.localGatewayId = localGatewayId;
+        this.localGatewayRouteTableId = localGatewayRouteTableId;
+        this.outpostArn = outpostArn;
+        this.state = state;
+        this.tags = tags;
     }
 
     public List<GetLocalGatewayRouteTableFilter> getFilters() {

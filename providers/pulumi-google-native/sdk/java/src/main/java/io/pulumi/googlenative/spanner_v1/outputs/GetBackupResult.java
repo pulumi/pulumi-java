@@ -74,16 +74,16 @@ public final class GetBackupResult {
         String sizeBytes,
         String state,
         String versionTime) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.database = Objects.requireNonNull(database);
-        this.databaseDialect = Objects.requireNonNull(databaseDialect);
-        this.encryptionInfo = Objects.requireNonNull(encryptionInfo);
-        this.expireTime = Objects.requireNonNull(expireTime);
-        this.name = Objects.requireNonNull(name);
-        this.referencingDatabases = Objects.requireNonNull(referencingDatabases);
-        this.sizeBytes = Objects.requireNonNull(sizeBytes);
-        this.state = Objects.requireNonNull(state);
-        this.versionTime = Objects.requireNonNull(versionTime);
+        this.createTime = createTime;
+        this.database = database;
+        this.databaseDialect = databaseDialect;
+        this.encryptionInfo = encryptionInfo;
+        this.expireTime = expireTime;
+        this.name = name;
+        this.referencingDatabases = referencingDatabases;
+        this.sizeBytes = sizeBytes;
+        this.state = state;
+        this.versionTime = versionTime;
     }
 
     /**

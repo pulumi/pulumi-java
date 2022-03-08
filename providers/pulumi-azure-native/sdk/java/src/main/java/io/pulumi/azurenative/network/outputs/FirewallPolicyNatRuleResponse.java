@@ -67,7 +67,7 @@ public final class FirewallPolicyNatRuleResponse {
         this.name = name;
         this.priority = priority;
         this.ruleCondition = ruleCondition;
-        this.ruleType = Objects.requireNonNull(ruleType);
+        this.ruleType = ruleType;
         this.translatedAddress = translatedAddress;
         this.translatedPort = translatedPort;
     }

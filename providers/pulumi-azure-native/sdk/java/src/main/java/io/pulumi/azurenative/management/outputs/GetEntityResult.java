@@ -34,8 +34,8 @@ public final class GetEntityResult {
         Integer count,
         String nextLink,
         @Nullable List<EntityInfoResponse> value) {
-        this.count = Objects.requireNonNull(count);
-        this.nextLink = Objects.requireNonNull(nextLink);
+        this.count = count;
+        this.nextLink = nextLink;
         this.value = value;
     }
 

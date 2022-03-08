@@ -125,18 +125,18 @@ public final class ListChannelWithKeysResult {
         this.changedTime = changedTime;
         this.entityTag = entityTag;
         this.etag = etag;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.kind = kind;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
-        this.properties = Objects.requireNonNull(properties);
+        this.name = name;
+        this.properties = properties;
         this.provisioningState = provisioningState;
         this.resource = resource;
         this.setting = setting;
         this.sku = sku;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
-        this.zones = Objects.requireNonNull(zones);
+        this.type = type;
+        this.zones = zones;
     }
 
     /**

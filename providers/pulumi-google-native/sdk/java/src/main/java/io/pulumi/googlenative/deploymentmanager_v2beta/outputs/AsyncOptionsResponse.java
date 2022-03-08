@@ -25,8 +25,8 @@ public final class AsyncOptionsResponse {
     private AsyncOptionsResponse(
         String methodMatch,
         PollingOptionsResponse pollingOptions) {
-        this.methodMatch = Objects.requireNonNull(methodMatch);
-        this.pollingOptions = Objects.requireNonNull(pollingOptions);
+        this.methodMatch = methodMatch;
+        this.pollingOptions = pollingOptions;
     }
 
     /**

@@ -25,8 +25,8 @@ public final class ApplicationGatewayConnectionDrainingResponse {
     private ApplicationGatewayConnectionDrainingResponse(
         Integer drainTimeoutInSec,
         Boolean enabled) {
-        this.drainTimeoutInSec = Objects.requireNonNull(drainTimeoutInSec);
-        this.enabled = Objects.requireNonNull(enabled);
+        this.drainTimeoutInSec = drainTimeoutInSec;
+        this.enabled = enabled;
     }
 
     /**

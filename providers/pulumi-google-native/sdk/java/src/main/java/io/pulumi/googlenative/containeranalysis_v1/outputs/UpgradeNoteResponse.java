@@ -40,10 +40,10 @@ public final class UpgradeNoteResponse {
         String $package,
         VersionResponse version,
         WindowsUpdateResponse windowsUpdate) {
-        this.distributions = Objects.requireNonNull(distributions);
-        this.$package = Objects.requireNonNull($package);
-        this.version = Objects.requireNonNull(version);
-        this.windowsUpdate = Objects.requireNonNull(windowsUpdate);
+        this.distributions = distributions;
+        this.$package = $package;
+        this.version = version;
+        this.windowsUpdate = windowsUpdate;
     }
 
     /**

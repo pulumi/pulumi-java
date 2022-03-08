@@ -70,15 +70,15 @@ public final class FactoryGitHubConfigurationResponse {
         String repositoryName,
         String rootFolder,
         String type) {
-        this.accountName = Objects.requireNonNull(accountName);
+        this.accountName = accountName;
         this.clientId = clientId;
         this.clientSecret = clientSecret;
-        this.collaborationBranch = Objects.requireNonNull(collaborationBranch);
+        this.collaborationBranch = collaborationBranch;
         this.hostName = hostName;
         this.lastCommitId = lastCommitId;
-        this.repositoryName = Objects.requireNonNull(repositoryName);
-        this.rootFolder = Objects.requireNonNull(rootFolder);
-        this.type = Objects.requireNonNull(type);
+        this.repositoryName = repositoryName;
+        this.rootFolder = rootFolder;
+        this.type = type;
     }
 
     /**

@@ -72,14 +72,14 @@ public final class GetGalleryResult {
         @Nullable Map<String,String> tags,
         String type) {
         this.description = description;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.identifier = identifier;
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.location = location;
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.sharingProfile = sharingProfile;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

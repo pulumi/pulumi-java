@@ -33,9 +33,9 @@ public final class SelfDependencyTumblingWindowTriggerReferenceResponse {
         String offset,
         @Nullable String size,
         String type) {
-        this.offset = Objects.requireNonNull(offset);
+        this.offset = offset;
         this.size = size;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

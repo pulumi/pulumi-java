@@ -64,13 +64,13 @@ public final class GetHybridIdentityMetadatumResult {
         SystemDataResponse systemData,
         String type,
         @Nullable String vmId) {
-        this.id = Objects.requireNonNull(id);
-        this.identity = Objects.requireNonNull(identity);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.id = id;
+        this.identity = identity;
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.publicKey = publicKey;
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.systemData = systemData;
+        this.type = type;
         this.vmId = vmId;
     }
 

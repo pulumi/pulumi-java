@@ -39,10 +39,10 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnUserInputResponse {
         Map<String,String> injectedParameters,
         GoogleCloudDialogflowCxV3QueryInputResponse input,
         Boolean isWebhookEnabled) {
-        this.enableSentimentAnalysis = Objects.requireNonNull(enableSentimentAnalysis);
-        this.injectedParameters = Objects.requireNonNull(injectedParameters);
-        this.input = Objects.requireNonNull(input);
-        this.isWebhookEnabled = Objects.requireNonNull(isWebhookEnabled);
+        this.enableSentimentAnalysis = enableSentimentAnalysis;
+        this.injectedParameters = injectedParameters;
+        this.input = input;
+        this.isWebhookEnabled = isWebhookEnabled;
     }
 
     /**

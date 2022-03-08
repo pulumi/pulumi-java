@@ -56,8 +56,8 @@ public final class InstanceNetwork {
         @Nullable String reservedIpRange) {
         this.connectMode = connectMode;
         this.ipAddresses = ipAddresses;
-        this.modes = Objects.requireNonNull(modes);
-        this.network = Objects.requireNonNull(network);
+        this.modes = modes;
+        this.network = network;
         this.reservedIpRange = reservedIpRange;
     }
 

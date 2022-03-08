@@ -23,10 +23,10 @@ public final class TopicRuleS3Action {
         @Nullable TopicRuleCannedAccessControlList cannedAcl,
         String key,
         String roleArn) {
-        this.bucketName = Objects.requireNonNull(bucketName);
+        this.bucketName = bucketName;
         this.cannedAcl = cannedAcl;
-        this.key = Objects.requireNonNull(key);
-        this.roleArn = Objects.requireNonNull(roleArn);
+        this.key = key;
+        this.roleArn = roleArn;
     }
 
     public String getBucketName() {

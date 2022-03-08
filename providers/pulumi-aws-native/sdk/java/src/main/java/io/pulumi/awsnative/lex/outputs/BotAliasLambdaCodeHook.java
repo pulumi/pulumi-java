@@ -24,8 +24,8 @@ public final class BotAliasLambdaCodeHook {
     private BotAliasLambdaCodeHook(
         String codeHookInterfaceVersion,
         String lambdaArn) {
-        this.codeHookInterfaceVersion = Objects.requireNonNull(codeHookInterfaceVersion);
-        this.lambdaArn = Objects.requireNonNull(lambdaArn);
+        this.codeHookInterfaceVersion = codeHookInterfaceVersion;
+        this.lambdaArn = lambdaArn;
     }
 
     /**

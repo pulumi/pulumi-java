@@ -24,8 +24,8 @@ public final class GlusterFsSectionResponse {
     private GlusterFsSectionResponse(
         String serverAddress,
         String volumeName) {
-        this.serverAddress = Objects.requireNonNull(serverAddress);
-        this.volumeName = Objects.requireNonNull(volumeName);
+        this.serverAddress = serverAddress;
+        this.volumeName = volumeName;
     }
 
     /**

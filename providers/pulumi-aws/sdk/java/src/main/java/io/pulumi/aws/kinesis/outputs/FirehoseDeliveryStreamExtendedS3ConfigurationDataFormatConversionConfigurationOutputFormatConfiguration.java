@@ -17,7 +17,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
 
     @OutputCustomType.Constructor({"serializer"})
     private FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfiguration(FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializer serializer) {
-        this.serializer = Objects.requireNonNull(serializer);
+        this.serializer = serializer;
     }
 
     /**

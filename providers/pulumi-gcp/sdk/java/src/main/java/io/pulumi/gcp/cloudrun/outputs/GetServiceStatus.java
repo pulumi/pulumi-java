@@ -25,11 +25,11 @@ public final class GetServiceStatus {
         String latestReadyRevisionName,
         Integer observedGeneration,
         String url) {
-        this.conditions = Objects.requireNonNull(conditions);
-        this.latestCreatedRevisionName = Objects.requireNonNull(latestCreatedRevisionName);
-        this.latestReadyRevisionName = Objects.requireNonNull(latestReadyRevisionName);
-        this.observedGeneration = Objects.requireNonNull(observedGeneration);
-        this.url = Objects.requireNonNull(url);
+        this.conditions = conditions;
+        this.latestCreatedRevisionName = latestCreatedRevisionName;
+        this.latestReadyRevisionName = latestReadyRevisionName;
+        this.observedGeneration = observedGeneration;
+        this.url = url;
     }
 
     public List<GetServiceStatusCondition> getConditions() {

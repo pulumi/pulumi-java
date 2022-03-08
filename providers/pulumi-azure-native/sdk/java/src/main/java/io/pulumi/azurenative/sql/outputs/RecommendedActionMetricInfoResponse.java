@@ -43,11 +43,11 @@ public final class RecommendedActionMetricInfoResponse {
         String timeGrain,
         String unit,
         Double value) {
-        this.metricName = Objects.requireNonNull(metricName);
-        this.startTime = Objects.requireNonNull(startTime);
-        this.timeGrain = Objects.requireNonNull(timeGrain);
-        this.unit = Objects.requireNonNull(unit);
-        this.value = Objects.requireNonNull(value);
+        this.metricName = metricName;
+        this.startTime = startTime;
+        this.timeGrain = timeGrain;
+        this.unit = unit;
+        this.value = value;
     }
 
     /**

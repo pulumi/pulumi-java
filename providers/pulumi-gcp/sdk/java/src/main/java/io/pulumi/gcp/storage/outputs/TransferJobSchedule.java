@@ -35,7 +35,7 @@ public final class TransferJobSchedule {
         TransferJobScheduleScheduleStartDate scheduleStartDate,
         @Nullable TransferJobScheduleStartTimeOfDay startTimeOfDay) {
         this.scheduleEndDate = scheduleEndDate;
-        this.scheduleStartDate = Objects.requireNonNull(scheduleStartDate);
+        this.scheduleStartDate = scheduleStartDate;
         this.startTimeOfDay = startTimeOfDay;
     }
 

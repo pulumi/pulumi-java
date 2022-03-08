@@ -28,7 +28,7 @@ public final class TopicRuleHttpAction {
         this.auth = auth;
         this.confirmationUrl = confirmationUrl;
         this.headers = headers;
-        this.url = Objects.requireNonNull(url);
+        this.url = url;
     }
 
     public Optional<TopicRuleHttpAuthorization> getAuth() {

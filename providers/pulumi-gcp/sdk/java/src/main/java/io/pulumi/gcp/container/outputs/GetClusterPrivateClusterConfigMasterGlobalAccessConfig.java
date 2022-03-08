@@ -13,7 +13,7 @@ public final class GetClusterPrivateClusterConfigMasterGlobalAccessConfig {
 
     @OutputCustomType.Constructor({"enabled"})
     private GetClusterPrivateClusterConfigMasterGlobalAccessConfig(Boolean enabled) {
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
     }
 
     public Boolean getEnabled() {

@@ -17,7 +17,7 @@ public final class MembershipStateResponse {
 
     @OutputCustomType.Constructor({"code"})
     private MembershipStateResponse(String code) {
-        this.code = Objects.requireNonNull(code);
+        this.code = code;
     }
 
     /**

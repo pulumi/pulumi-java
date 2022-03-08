@@ -42,11 +42,11 @@ public final class GetVariableResult {
         String text,
         String updateTime,
         String value) {
-        this.name = Objects.requireNonNull(name);
-        this.state = Objects.requireNonNull(state);
-        this.text = Objects.requireNonNull(text);
-        this.updateTime = Objects.requireNonNull(updateTime);
-        this.value = Objects.requireNonNull(value);
+        this.name = name;
+        this.state = state;
+        this.text = text;
+        this.updateTime = updateTime;
+        this.value = value;
     }
 
     /**

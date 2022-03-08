@@ -66,14 +66,14 @@ public final class JobConfigurationResponse {
         Map<String,String> labels,
         JobConfigurationLoadResponse load,
         JobConfigurationQueryResponse query) {
-        this.copy = Objects.requireNonNull(copy);
-        this.dryRun = Objects.requireNonNull(dryRun);
-        this.extract = Objects.requireNonNull(extract);
-        this.jobTimeoutMs = Objects.requireNonNull(jobTimeoutMs);
-        this.jobType = Objects.requireNonNull(jobType);
-        this.labels = Objects.requireNonNull(labels);
-        this.load = Objects.requireNonNull(load);
-        this.query = Objects.requireNonNull(query);
+        this.copy = copy;
+        this.dryRun = dryRun;
+        this.extract = extract;
+        this.jobTimeoutMs = jobTimeoutMs;
+        this.jobType = jobType;
+        this.labels = labels;
+        this.load = load;
+        this.query = query;
     }
 
     /**

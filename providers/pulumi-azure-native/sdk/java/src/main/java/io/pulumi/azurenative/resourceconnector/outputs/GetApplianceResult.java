@@ -97,18 +97,18 @@ public final class GetApplianceResult {
         String type,
         String version) {
         this.distro = distro;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.identity = identity;
         this.infrastructureConfig = infrastructureConfig;
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.location = location;
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.publicKey = publicKey;
-        this.status = Objects.requireNonNull(status);
-        this.systemData = Objects.requireNonNull(systemData);
+        this.status = status;
+        this.systemData = systemData;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
-        this.version = Objects.requireNonNull(version);
+        this.type = type;
+        this.version = version;
     }
 
     /**

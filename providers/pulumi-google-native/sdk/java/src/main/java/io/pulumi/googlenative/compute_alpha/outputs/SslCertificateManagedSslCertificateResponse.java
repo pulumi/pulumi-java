@@ -32,9 +32,9 @@ public final class SslCertificateManagedSslCertificateResponse {
         Map<String,String> domainStatus,
         List<String> domains,
         String status) {
-        this.domainStatus = Objects.requireNonNull(domainStatus);
-        this.domains = Objects.requireNonNull(domains);
-        this.status = Objects.requireNonNull(status);
+        this.domainStatus = domainStatus;
+        this.domains = domains;
+        this.status = status;
     }
 
     /**

@@ -24,7 +24,7 @@ public final class BotAliasLocaleSettings {
         @Nullable BotAliasCodeHookSpecification codeHookSpecification,
         Boolean enabled) {
         this.codeHookSpecification = codeHookSpecification;
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
     }
 
     public Optional<BotAliasCodeHookSpecification> getCodeHookSpecification() {

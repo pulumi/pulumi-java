@@ -33,8 +33,8 @@ public final class GlusterfsVolumeSource {
         String endpoints,
         String path,
         @Nullable Boolean readOnly) {
-        this.endpoints = Objects.requireNonNull(endpoints);
-        this.path = Objects.requireNonNull(path);
+        this.endpoints = endpoints;
+        this.path = path;
         this.readOnly = readOnly;
     }
 

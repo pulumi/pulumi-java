@@ -24,8 +24,8 @@ public final class LiteTopicPartitionConfigCapacity {
     private LiteTopicPartitionConfigCapacity(
         Integer publishMibPerSec,
         Integer subscribeMibPerSec) {
-        this.publishMibPerSec = Objects.requireNonNull(publishMibPerSec);
-        this.subscribeMibPerSec = Objects.requireNonNull(subscribeMibPerSec);
+        this.publishMibPerSec = publishMibPerSec;
+        this.subscribeMibPerSec = subscribeMibPerSec;
     }
 
     /**

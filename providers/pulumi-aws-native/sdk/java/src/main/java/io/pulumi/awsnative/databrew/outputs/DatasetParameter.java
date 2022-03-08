@@ -39,8 +39,8 @@ public final class DatasetParameter {
         this.createColumn = createColumn;
         this.datetimeOptions = datetimeOptions;
         this.filter = filter;
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.name = name;
+        this.type = type;
     }
 
     /**

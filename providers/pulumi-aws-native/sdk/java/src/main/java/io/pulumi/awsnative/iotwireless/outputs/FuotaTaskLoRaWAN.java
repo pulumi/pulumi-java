@@ -26,7 +26,7 @@ public final class FuotaTaskLoRaWAN {
     private FuotaTaskLoRaWAN(
         String rfRegion,
         @Nullable String startTime) {
-        this.rfRegion = Objects.requireNonNull(rfRegion);
+        this.rfRegion = rfRegion;
         this.startTime = startTime;
     }
 

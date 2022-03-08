@@ -17,7 +17,7 @@ public final class LoggingConfigurationConditionActionConditionProperties {
 
     @OutputCustomType.Constructor({"action"})
     private LoggingConfigurationConditionActionConditionProperties(LoggingConfigurationConditionActionConditionPropertiesAction action) {
-        this.action = Objects.requireNonNull(action);
+        this.action = action;
     }
 
     /**

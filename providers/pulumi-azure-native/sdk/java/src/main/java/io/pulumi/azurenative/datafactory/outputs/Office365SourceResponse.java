@@ -91,7 +91,7 @@ public final class Office365SourceResponse {
         this.sourceRetryCount = sourceRetryCount;
         this.sourceRetryWait = sourceRetryWait;
         this.startTime = startTime;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.userScopeFilterUri = userScopeFilterUri;
     }
 

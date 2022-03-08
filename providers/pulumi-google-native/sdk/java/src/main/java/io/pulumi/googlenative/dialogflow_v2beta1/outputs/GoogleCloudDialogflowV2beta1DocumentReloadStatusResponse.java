@@ -25,8 +25,8 @@ public final class GoogleCloudDialogflowV2beta1DocumentReloadStatusResponse {
     private GoogleCloudDialogflowV2beta1DocumentReloadStatusResponse(
         GoogleRpcStatusResponse status,
         String time) {
-        this.status = Objects.requireNonNull(status);
-        this.time = Objects.requireNonNull(time);
+        this.status = status;
+        this.time = time;
     }
 
     /**

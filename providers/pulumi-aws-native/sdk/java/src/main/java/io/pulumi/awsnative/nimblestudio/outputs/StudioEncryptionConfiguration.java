@@ -24,7 +24,7 @@ public final class StudioEncryptionConfiguration {
         @Nullable String keyArn,
         StudioEncryptionConfigurationKeyType keyType) {
         this.keyArn = keyArn;
-        this.keyType = Objects.requireNonNull(keyType);
+        this.keyType = keyType;
     }
 
     /**

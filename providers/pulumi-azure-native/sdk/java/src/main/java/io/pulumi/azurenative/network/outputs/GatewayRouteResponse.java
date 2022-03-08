@@ -55,13 +55,13 @@ public final class GatewayRouteResponse {
         String origin,
         String sourcePeer,
         Integer weight) {
-        this.asPath = Objects.requireNonNull(asPath);
-        this.localAddress = Objects.requireNonNull(localAddress);
-        this.network = Objects.requireNonNull(network);
-        this.nextHop = Objects.requireNonNull(nextHop);
-        this.origin = Objects.requireNonNull(origin);
-        this.sourcePeer = Objects.requireNonNull(sourcePeer);
-        this.weight = Objects.requireNonNull(weight);
+        this.asPath = asPath;
+        this.localAddress = localAddress;
+        this.network = network;
+        this.nextHop = nextHop;
+        this.origin = origin;
+        this.sourcePeer = sourcePeer;
+        this.weight = weight;
     }
 
     /**

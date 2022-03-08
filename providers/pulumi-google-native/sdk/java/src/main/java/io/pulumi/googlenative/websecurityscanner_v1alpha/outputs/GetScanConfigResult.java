@@ -77,16 +77,16 @@ public final class GetScanConfigResult {
         List<String> startingUrls,
         List<String> targetPlatforms,
         String userAgent) {
-        this.authentication = Objects.requireNonNull(authentication);
-        this.blacklistPatterns = Objects.requireNonNull(blacklistPatterns);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.latestRun = Objects.requireNonNull(latestRun);
-        this.maxQps = Objects.requireNonNull(maxQps);
-        this.name = Objects.requireNonNull(name);
-        this.schedule = Objects.requireNonNull(schedule);
-        this.startingUrls = Objects.requireNonNull(startingUrls);
-        this.targetPlatforms = Objects.requireNonNull(targetPlatforms);
-        this.userAgent = Objects.requireNonNull(userAgent);
+        this.authentication = authentication;
+        this.blacklistPatterns = blacklistPatterns;
+        this.displayName = displayName;
+        this.latestRun = latestRun;
+        this.maxQps = maxQps;
+        this.name = name;
+        this.schedule = schedule;
+        this.startingUrls = startingUrls;
+        this.targetPlatforms = targetPlatforms;
+        this.userAgent = userAgent;
     }
 
     /**

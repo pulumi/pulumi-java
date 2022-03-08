@@ -18,7 +18,7 @@ public final class ManagedZoneServiceDirectoryConfig {
 
     @OutputCustomType.Constructor({"namespace"})
     private ManagedZoneServiceDirectoryConfig(ManagedZoneServiceDirectoryConfigNamespace namespace) {
-        this.namespace = Objects.requireNonNull(namespace);
+        this.namespace = namespace;
     }
 
     /**

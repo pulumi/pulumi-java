@@ -17,7 +17,7 @@ public final class RegexPatternSetRegularExpression {
 
     @OutputCustomType.Constructor({"regexString"})
     private RegexPatternSetRegularExpression(String regexString) {
-        this.regexString = Objects.requireNonNull(regexString);
+        this.regexString = regexString;
     }
 
     /**

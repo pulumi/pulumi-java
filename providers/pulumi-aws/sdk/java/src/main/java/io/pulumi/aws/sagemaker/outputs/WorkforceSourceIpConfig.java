@@ -18,7 +18,7 @@ public final class WorkforceSourceIpConfig {
 
     @OutputCustomType.Constructor({"cidrs"})
     private WorkforceSourceIpConfig(List<String> cidrs) {
-        this.cidrs = Objects.requireNonNull(cidrs);
+        this.cidrs = cidrs;
     }
 
     /**

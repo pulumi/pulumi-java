@@ -127,7 +127,7 @@ public final class Event {
         this.deprecatedFirstTimestamp = deprecatedFirstTimestamp;
         this.deprecatedLastTimestamp = deprecatedLastTimestamp;
         this.deprecatedSource = deprecatedSource;
-        this.eventTime = Objects.requireNonNull(eventTime);
+        this.eventTime = eventTime;
         this.kind = kind;
         this.metadata = metadata;
         this.note = note;

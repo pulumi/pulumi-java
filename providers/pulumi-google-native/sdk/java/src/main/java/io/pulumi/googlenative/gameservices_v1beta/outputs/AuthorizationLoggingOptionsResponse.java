@@ -17,7 +17,7 @@ public final class AuthorizationLoggingOptionsResponse {
 
     @OutputCustomType.Constructor({"permissionType"})
     private AuthorizationLoggingOptionsResponse(String permissionType) {
-        this.permissionType = Objects.requireNonNull(permissionType);
+        this.permissionType = permissionType;
     }
 
     /**

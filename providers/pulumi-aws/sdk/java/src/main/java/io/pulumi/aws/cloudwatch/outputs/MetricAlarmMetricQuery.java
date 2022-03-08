@@ -54,7 +54,7 @@ public final class MetricAlarmMetricQuery {
         @Nullable Boolean returnData) {
         this.accountId = accountId;
         this.expression = expression;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.label = label;
         this.metric = metric;
         this.returnData = returnData;

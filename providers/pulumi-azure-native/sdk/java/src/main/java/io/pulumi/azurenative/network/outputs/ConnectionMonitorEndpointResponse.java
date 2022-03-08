@@ -61,7 +61,7 @@ public final class ConnectionMonitorEndpointResponse {
         this.address = address;
         this.coverageLevel = coverageLevel;
         this.filter = filter;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.resourceId = resourceId;
         this.scope = scope;
         this.type = type;

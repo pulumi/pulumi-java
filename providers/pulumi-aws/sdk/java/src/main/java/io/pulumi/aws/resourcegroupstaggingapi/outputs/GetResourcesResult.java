@@ -41,10 +41,10 @@ public final class GetResourcesResult {
         @Nullable List<String> resourceTypeFilters,
         @Nullable List<GetResourcesTagFilter> tagFilters) {
         this.excludeCompliantResources = excludeCompliantResources;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.includeComplianceDetails = includeComplianceDetails;
         this.resourceArnLists = resourceArnLists;
-        this.resourceTagMappingLists = Objects.requireNonNull(resourceTagMappingLists);
+        this.resourceTagMappingLists = resourceTagMappingLists;
         this.resourceTypeFilters = resourceTypeFilters;
         this.tagFilters = tagFilters;
     }

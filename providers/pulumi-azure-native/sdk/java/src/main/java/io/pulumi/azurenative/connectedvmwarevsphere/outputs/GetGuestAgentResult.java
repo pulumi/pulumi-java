@@ -92,17 +92,17 @@ public final class GetGuestAgentResult {
         String type,
         String uuid) {
         this.credentials = credentials;
-        this.customResourceName = Objects.requireNonNull(customResourceName);
+        this.customResourceName = customResourceName;
         this.httpProxyConfig = httpProxyConfig;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.provisioningAction = provisioningAction;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.status = Objects.requireNonNull(status);
-        this.statuses = Objects.requireNonNull(statuses);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
-        this.uuid = Objects.requireNonNull(uuid);
+        this.provisioningState = provisioningState;
+        this.status = status;
+        this.statuses = statuses;
+        this.systemData = systemData;
+        this.type = type;
+        this.uuid = uuid;
     }
 
     /**

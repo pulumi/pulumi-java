@@ -17,7 +17,7 @@ public final class BotSSMLMessage {
 
     @OutputCustomType.Constructor({"value"})
     private BotSSMLMessage(String value) {
-        this.value = Objects.requireNonNull(value);
+        this.value = value;
     }
 
     /**

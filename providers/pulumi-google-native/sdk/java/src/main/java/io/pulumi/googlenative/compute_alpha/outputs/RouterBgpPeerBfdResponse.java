@@ -55,13 +55,13 @@ public final class RouterBgpPeerBfdResponse {
         String packetMode,
         String sessionInitializationMode,
         Integer slowTimerInterval) {
-        this.minReceiveInterval = Objects.requireNonNull(minReceiveInterval);
-        this.minTransmitInterval = Objects.requireNonNull(minTransmitInterval);
-        this.mode = Objects.requireNonNull(mode);
-        this.multiplier = Objects.requireNonNull(multiplier);
-        this.packetMode = Objects.requireNonNull(packetMode);
-        this.sessionInitializationMode = Objects.requireNonNull(sessionInitializationMode);
-        this.slowTimerInterval = Objects.requireNonNull(slowTimerInterval);
+        this.minReceiveInterval = minReceiveInterval;
+        this.minTransmitInterval = minTransmitInterval;
+        this.mode = mode;
+        this.multiplier = multiplier;
+        this.packetMode = packetMode;
+        this.sessionInitializationMode = sessionInitializationMode;
+        this.slowTimerInterval = slowTimerInterval;
     }
 
     /**

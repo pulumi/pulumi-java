@@ -36,7 +36,7 @@ public final class VirtualMachinePatchStatusResponse {
         List<InstanceViewStatusResponse> configurationStatuses,
         @Nullable LastPatchInstallationSummaryResponse lastPatchInstallationSummary) {
         this.availablePatchSummary = availablePatchSummary;
-        this.configurationStatuses = Objects.requireNonNull(configurationStatuses);
+        this.configurationStatuses = configurationStatuses;
         this.lastPatchInstallationSummary = lastPatchInstallationSummary;
     }
 

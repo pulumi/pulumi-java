@@ -29,7 +29,7 @@ public final class TCPSocketAction {
         @Nullable String host,
         Either<Integer,String> port) {
         this.host = host;
-        this.port = Objects.requireNonNull(port);
+        this.port = port;
     }
 
     /**

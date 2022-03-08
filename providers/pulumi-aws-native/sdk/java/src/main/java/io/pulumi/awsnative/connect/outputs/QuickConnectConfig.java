@@ -27,7 +27,7 @@ public final class QuickConnectConfig {
         @Nullable QuickConnectUserQuickConnectConfig userConfig) {
         this.phoneConfig = phoneConfig;
         this.queueConfig = queueConfig;
-        this.quickConnectType = Objects.requireNonNull(quickConnectType);
+        this.quickConnectType = quickConnectType;
         this.userConfig = userConfig;
     }
 

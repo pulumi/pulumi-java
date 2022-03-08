@@ -17,7 +17,7 @@ public final class AiFeatureStoreOnlineServingConfig {
 
     @OutputCustomType.Constructor({"fixedNodeCount"})
     private AiFeatureStoreOnlineServingConfig(Integer fixedNodeCount) {
-        this.fixedNodeCount = Objects.requireNonNull(fixedNodeCount);
+        this.fixedNodeCount = fixedNodeCount;
     }
 
     /**

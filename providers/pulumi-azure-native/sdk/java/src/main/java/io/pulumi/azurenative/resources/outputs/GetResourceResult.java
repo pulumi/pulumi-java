@@ -85,17 +85,17 @@ public final class GetResourceResult {
         @Nullable SkuResponse sku,
         @Nullable Map<String,String> tags,
         String type) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.identity = identity;
         this.kind = kind;
         this.location = location;
         this.managedBy = managedBy;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.plan = plan;
-        this.properties = Objects.requireNonNull(properties);
+        this.properties = properties;
         this.sku = sku;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

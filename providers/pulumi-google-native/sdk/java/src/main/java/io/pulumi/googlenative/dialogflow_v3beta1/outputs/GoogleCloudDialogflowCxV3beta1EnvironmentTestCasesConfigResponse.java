@@ -32,9 +32,9 @@ public final class GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigRespo
         Boolean enableContinuousRun,
         Boolean enablePredeploymentRun,
         List<String> testCases) {
-        this.enableContinuousRun = Objects.requireNonNull(enableContinuousRun);
-        this.enablePredeploymentRun = Objects.requireNonNull(enablePredeploymentRun);
-        this.testCases = Objects.requireNonNull(testCases);
+        this.enableContinuousRun = enableContinuousRun;
+        this.enablePredeploymentRun = enablePredeploymentRun;
+        this.testCases = testCases;
     }
 
     /**

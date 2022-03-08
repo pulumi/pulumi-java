@@ -14,7 +14,7 @@ public final class GetResponseHeadersPolicyCorsConfigAccessControlExposeHeader {
 
     @OutputCustomType.Constructor({"items"})
     private GetResponseHeadersPolicyCorsConfigAccessControlExposeHeader(List<String> items) {
-        this.items = Objects.requireNonNull(items);
+        this.items = items;
     }
 
     public List<String> getItems() {

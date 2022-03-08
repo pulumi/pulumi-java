@@ -64,12 +64,12 @@ public final class HDInsightResponse {
         String provisioningState,
         @Nullable String resourceId) {
         this.computeLocation = computeLocation;
-        this.computeType = Objects.requireNonNull(computeType);
+        this.computeType = computeType;
         this.description = description;
-        this.isAttachedCompute = Objects.requireNonNull(isAttachedCompute);
+        this.isAttachedCompute = isAttachedCompute;
         this.properties = properties;
-        this.provisioningErrors = Objects.requireNonNull(provisioningErrors);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningErrors = provisioningErrors;
+        this.provisioningState = provisioningState;
         this.resourceId = resourceId;
     }
 

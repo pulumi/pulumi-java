@@ -89,18 +89,18 @@ public final class GetTaskResult {
         Integer responseCount,
         String scheduleTime,
         String view) {
-        this.appEngineHttpRequest = Objects.requireNonNull(appEngineHttpRequest);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.dispatchCount = Objects.requireNonNull(dispatchCount);
-        this.dispatchDeadline = Objects.requireNonNull(dispatchDeadline);
-        this.firstAttempt = Objects.requireNonNull(firstAttempt);
-        this.httpRequest = Objects.requireNonNull(httpRequest);
-        this.lastAttempt = Objects.requireNonNull(lastAttempt);
-        this.name = Objects.requireNonNull(name);
-        this.pullMessage = Objects.requireNonNull(pullMessage);
-        this.responseCount = Objects.requireNonNull(responseCount);
-        this.scheduleTime = Objects.requireNonNull(scheduleTime);
-        this.view = Objects.requireNonNull(view);
+        this.appEngineHttpRequest = appEngineHttpRequest;
+        this.createTime = createTime;
+        this.dispatchCount = dispatchCount;
+        this.dispatchDeadline = dispatchDeadline;
+        this.firstAttempt = firstAttempt;
+        this.httpRequest = httpRequest;
+        this.lastAttempt = lastAttempt;
+        this.name = name;
+        this.pullMessage = pullMessage;
+        this.responseCount = responseCount;
+        this.scheduleTime = scheduleTime;
+        this.view = view;
     }
 
     /**

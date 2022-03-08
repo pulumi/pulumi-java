@@ -25,8 +25,8 @@ public final class LocationHdfsNameNode {
     private LocationHdfsNameNode(
         String hostname,
         Integer port) {
-        this.hostname = Objects.requireNonNull(hostname);
-        this.port = Objects.requireNonNull(port);
+        this.hostname = hostname;
+        this.port = port;
     }
 
     /**

@@ -90,9 +90,9 @@ public final class StatefulSetSpec {
         this.podManagementPolicy = podManagementPolicy;
         this.replicas = replicas;
         this.revisionHistoryLimit = revisionHistoryLimit;
-        this.selector = Objects.requireNonNull(selector);
-        this.serviceName = Objects.requireNonNull(serviceName);
-        this.template = Objects.requireNonNull(template);
+        this.selector = selector;
+        this.serviceName = serviceName;
+        this.template = template;
         this.updateStrategy = updateStrategy;
         this.volumeClaimTemplates = volumeClaimTemplates;
     }

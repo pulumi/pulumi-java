@@ -53,12 +53,12 @@ public final class GetBandwidthSettingResult {
         List<BandwidthScheduleResponse> schedules,
         String type,
         Integer volumeCount) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.kind = kind;
-        this.name = Objects.requireNonNull(name);
-        this.schedules = Objects.requireNonNull(schedules);
-        this.type = Objects.requireNonNull(type);
-        this.volumeCount = Objects.requireNonNull(volumeCount);
+        this.name = name;
+        this.schedules = schedules;
+        this.type = type;
+        this.volumeCount = volumeCount;
     }
 
     /**

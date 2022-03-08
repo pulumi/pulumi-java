@@ -17,7 +17,7 @@ public final class BotCustomPayload {
 
     @OutputCustomType.Constructor({"value"})
     private BotCustomPayload(String value) {
-        this.value = Objects.requireNonNull(value);
+        this.value = value;
     }
 
     /**

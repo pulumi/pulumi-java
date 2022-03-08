@@ -27,7 +27,7 @@ public final class ServiceBusTopicEventSubscriptionDestinationResponse {
     private ServiceBusTopicEventSubscriptionDestinationResponse(
         String endpointType,
         @Nullable String resourceId) {
-        this.endpointType = Objects.requireNonNull(endpointType);
+        this.endpointType = endpointType;
         this.resourceId = resourceId;
     }
 

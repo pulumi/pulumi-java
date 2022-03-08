@@ -24,8 +24,8 @@ public final class HttpsTriggerResponse {
     private HttpsTriggerResponse(
         String securityLevel,
         String url) {
-        this.securityLevel = Objects.requireNonNull(securityLevel);
-        this.url = Objects.requireNonNull(url);
+        this.securityLevel = securityLevel;
+        this.url = url;
     }
 
     /**

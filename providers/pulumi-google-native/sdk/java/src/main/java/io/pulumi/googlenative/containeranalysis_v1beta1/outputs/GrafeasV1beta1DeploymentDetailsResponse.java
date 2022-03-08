@@ -17,7 +17,7 @@ public final class GrafeasV1beta1DeploymentDetailsResponse {
 
     @OutputCustomType.Constructor({"deployment"})
     private GrafeasV1beta1DeploymentDetailsResponse(DeploymentResponse deployment) {
-        this.deployment = Objects.requireNonNull(deployment);
+        this.deployment = deployment;
     }
 
     /**

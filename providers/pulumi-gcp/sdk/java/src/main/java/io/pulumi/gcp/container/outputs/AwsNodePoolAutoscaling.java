@@ -24,8 +24,8 @@ public final class AwsNodePoolAutoscaling {
     private AwsNodePoolAutoscaling(
         Integer maxNodeCount,
         Integer minNodeCount) {
-        this.maxNodeCount = Objects.requireNonNull(maxNodeCount);
-        this.minNodeCount = Objects.requireNonNull(minNodeCount);
+        this.maxNodeCount = maxNodeCount;
+        this.minNodeCount = minNodeCount;
     }
 
     /**

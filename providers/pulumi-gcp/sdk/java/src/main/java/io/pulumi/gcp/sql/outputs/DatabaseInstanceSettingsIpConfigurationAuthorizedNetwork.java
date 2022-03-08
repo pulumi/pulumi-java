@@ -37,7 +37,7 @@ public final class DatabaseInstanceSettingsIpConfigurationAuthorizedNetwork {
         String value) {
         this.expirationTime = expirationTime;
         this.name = name;
-        this.value = Objects.requireNonNull(value);
+        this.value = value;
     }
 
     /**

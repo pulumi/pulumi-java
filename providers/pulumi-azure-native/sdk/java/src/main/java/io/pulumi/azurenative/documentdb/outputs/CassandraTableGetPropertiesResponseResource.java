@@ -61,11 +61,11 @@ public final class CassandraTableGetPropertiesResponseResource {
         Double ts) {
         this.analyticalStorageTtl = analyticalStorageTtl;
         this.defaultTtl = defaultTtl;
-        this.etag = Objects.requireNonNull(etag);
-        this.id = Objects.requireNonNull(id);
-        this.rid = Objects.requireNonNull(rid);
+        this.etag = etag;
+        this.id = id;
+        this.rid = rid;
         this.schema = schema;
-        this.ts = Objects.requireNonNull(ts);
+        this.ts = ts;
     }
 
     /**

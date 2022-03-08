@@ -70,10 +70,10 @@ public final class VMwareCbtNicDetailsResponse {
         @Nullable String targetSubnetName) {
         this.isPrimaryNic = isPrimaryNic;
         this.isSelectedForMigration = isSelectedForMigration;
-        this.nicId = Objects.requireNonNull(nicId);
-        this.sourceIPAddress = Objects.requireNonNull(sourceIPAddress);
-        this.sourceIPAddressType = Objects.requireNonNull(sourceIPAddressType);
-        this.sourceNetworkId = Objects.requireNonNull(sourceNetworkId);
+        this.nicId = nicId;
+        this.sourceIPAddress = sourceIPAddress;
+        this.sourceIPAddressType = sourceIPAddressType;
+        this.sourceNetworkId = sourceNetworkId;
         this.targetIPAddress = targetIPAddress;
         this.targetIPAddressType = targetIPAddressType;
         this.targetSubnetName = targetSubnetName;

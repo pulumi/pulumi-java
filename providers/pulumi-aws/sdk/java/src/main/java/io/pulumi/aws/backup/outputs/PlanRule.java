@@ -79,10 +79,10 @@ public final class PlanRule {
         this.enableContinuousBackup = enableContinuousBackup;
         this.lifecycle = lifecycle;
         this.recoveryPointTags = recoveryPointTags;
-        this.ruleName = Objects.requireNonNull(ruleName);
+        this.ruleName = ruleName;
         this.schedule = schedule;
         this.startWindow = startWindow;
-        this.targetVaultName = Objects.requireNonNull(targetVaultName);
+        this.targetVaultName = targetVaultName;
     }
 
     /**

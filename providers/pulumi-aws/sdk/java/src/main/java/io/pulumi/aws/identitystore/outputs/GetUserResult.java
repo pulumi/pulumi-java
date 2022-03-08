@@ -32,11 +32,11 @@ public final class GetUserResult {
         String identityStoreId,
         String userId,
         String userName) {
-        this.filters = Objects.requireNonNull(filters);
-        this.id = Objects.requireNonNull(id);
-        this.identityStoreId = Objects.requireNonNull(identityStoreId);
-        this.userId = Objects.requireNonNull(userId);
-        this.userName = Objects.requireNonNull(userName);
+        this.filters = filters;
+        this.id = id;
+        this.identityStoreId = identityStoreId;
+        this.userId = userId;
+        this.userName = userName;
     }
 
     public List<GetUserFilter> getFilters() {

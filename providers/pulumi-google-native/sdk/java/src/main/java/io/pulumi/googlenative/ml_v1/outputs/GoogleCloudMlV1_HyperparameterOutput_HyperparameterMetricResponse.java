@@ -25,8 +25,8 @@ public final class GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResp
     private GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse(
         Double objectiveValue,
         String trainingStep) {
-        this.objectiveValue = Objects.requireNonNull(objectiveValue);
-        this.trainingStep = Objects.requireNonNull(trainingStep);
+        this.objectiveValue = objectiveValue;
+        this.trainingStep = trainingStep;
     }
 
     /**

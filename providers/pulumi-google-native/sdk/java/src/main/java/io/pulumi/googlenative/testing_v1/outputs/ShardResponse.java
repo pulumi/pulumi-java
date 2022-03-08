@@ -31,9 +31,9 @@ public final class ShardResponse {
         Integer numShards,
         Integer shardIndex,
         TestTargetsForShardResponse testTargetsForShard) {
-        this.numShards = Objects.requireNonNull(numShards);
-        this.shardIndex = Objects.requireNonNull(shardIndex);
-        this.testTargetsForShard = Objects.requireNonNull(testTargetsForShard);
+        this.numShards = numShards;
+        this.shardIndex = shardIndex;
+        this.testTargetsForShard = testTargetsForShard;
     }
 
     /**

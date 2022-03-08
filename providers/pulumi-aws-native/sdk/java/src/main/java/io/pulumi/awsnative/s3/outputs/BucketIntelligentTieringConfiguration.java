@@ -48,11 +48,11 @@ public final class BucketIntelligentTieringConfiguration {
         BucketIntelligentTieringConfigurationStatus status,
         @Nullable List<BucketTagFilter> tagFilters,
         List<BucketTiering> tierings) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.prefix = prefix;
-        this.status = Objects.requireNonNull(status);
+        this.status = status;
         this.tagFilters = tagFilters;
-        this.tierings = Objects.requireNonNull(tierings);
+        this.tierings = tierings;
     }
 
     /**

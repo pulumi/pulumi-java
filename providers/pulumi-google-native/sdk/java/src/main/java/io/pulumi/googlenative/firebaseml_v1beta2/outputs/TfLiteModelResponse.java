@@ -30,9 +30,9 @@ public final class TfLiteModelResponse {
         String automlModel,
         String gcsTfliteUri,
         String sizeBytes) {
-        this.automlModel = Objects.requireNonNull(automlModel);
-        this.gcsTfliteUri = Objects.requireNonNull(gcsTfliteUri);
-        this.sizeBytes = Objects.requireNonNull(sizeBytes);
+        this.automlModel = automlModel;
+        this.gcsTfliteUri = gcsTfliteUri;
+        this.sizeBytes = sizeBytes;
     }
 
     /**

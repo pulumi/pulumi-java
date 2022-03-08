@@ -37,10 +37,10 @@ public final class DsRecordResponse {
         String digest,
         String digestType,
         Integer keyTag) {
-        this.algorithm = Objects.requireNonNull(algorithm);
-        this.digest = Objects.requireNonNull(digest);
-        this.digestType = Objects.requireNonNull(digestType);
-        this.keyTag = Objects.requireNonNull(keyTag);
+        this.algorithm = algorithm;
+        this.digest = digest;
+        this.digestType = digestType;
+        this.keyTag = keyTag;
     }
 
     /**

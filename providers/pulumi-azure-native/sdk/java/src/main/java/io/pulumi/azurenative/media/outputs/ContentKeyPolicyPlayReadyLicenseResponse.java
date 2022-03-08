@@ -79,13 +79,13 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse {
         @Nullable ContentKeyPolicyPlayReadyPlayRightResponse playRight,
         @Nullable String relativeBeginDate,
         @Nullable String relativeExpirationDate) {
-        this.allowTestDevices = Objects.requireNonNull(allowTestDevices);
+        this.allowTestDevices = allowTestDevices;
         this.beginDate = beginDate;
-        this.contentKeyLocation = Objects.requireNonNull(contentKeyLocation);
-        this.contentType = Objects.requireNonNull(contentType);
+        this.contentKeyLocation = contentKeyLocation;
+        this.contentType = contentType;
         this.expirationDate = expirationDate;
         this.gracePeriod = gracePeriod;
-        this.licenseType = Objects.requireNonNull(licenseType);
+        this.licenseType = licenseType;
         this.playRight = playRight;
         this.relativeBeginDate = relativeBeginDate;
         this.relativeExpirationDate = relativeExpirationDate;

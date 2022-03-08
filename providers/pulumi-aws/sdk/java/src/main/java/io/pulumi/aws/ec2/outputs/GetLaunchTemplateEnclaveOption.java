@@ -17,7 +17,7 @@ public final class GetLaunchTemplateEnclaveOption {
 
     @OutputCustomType.Constructor({"enabled"})
     private GetLaunchTemplateEnclaveOption(Boolean enabled) {
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
     }
 
     /**

@@ -51,12 +51,12 @@ public final class Condition {
         String reason,
         String status,
         String type) {
-        this.lastTransitionTime = Objects.requireNonNull(lastTransitionTime);
-        this.message = Objects.requireNonNull(message);
+        this.lastTransitionTime = lastTransitionTime;
+        this.message = message;
         this.observedGeneration = observedGeneration;
-        this.reason = Objects.requireNonNull(reason);
-        this.status = Objects.requireNonNull(status);
-        this.type = Objects.requireNonNull(type);
+        this.reason = reason;
+        this.status = status;
+        this.type = type;
     }
 
     /**

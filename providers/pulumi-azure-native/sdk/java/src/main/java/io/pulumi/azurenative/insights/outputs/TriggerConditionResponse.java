@@ -35,8 +35,8 @@ public final class TriggerConditionResponse {
         Double threshold,
         String thresholdOperator) {
         this.metricTrigger = metricTrigger;
-        this.threshold = Objects.requireNonNull(threshold);
-        this.thresholdOperator = Objects.requireNonNull(thresholdOperator);
+        this.threshold = threshold;
+        this.thresholdOperator = thresholdOperator;
     }
 
     /**

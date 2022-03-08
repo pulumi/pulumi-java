@@ -24,8 +24,8 @@ public final class FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfil
     private FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItem(
         String profileId,
         String queryArg) {
-        this.profileId = Objects.requireNonNull(profileId);
-        this.queryArg = Objects.requireNonNull(queryArg);
+        this.profileId = profileId;
+        this.queryArg = queryArg;
     }
 
     /**

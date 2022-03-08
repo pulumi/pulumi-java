@@ -105,20 +105,20 @@ public final class GetWebApplicationFirewallPolicyResult {
         String resourceState,
         @Nullable Map<String,String> tags,
         String type) {
-        this.applicationGateways = Objects.requireNonNull(applicationGateways);
+        this.applicationGateways = applicationGateways;
         this.customRules = customRules;
-        this.etag = Objects.requireNonNull(etag);
-        this.httpListeners = Objects.requireNonNull(httpListeners);
+        this.etag = etag;
+        this.httpListeners = httpListeners;
         this.id = id;
         this.location = location;
-        this.managedRules = Objects.requireNonNull(managedRules);
-        this.name = Objects.requireNonNull(name);
-        this.pathBasedRules = Objects.requireNonNull(pathBasedRules);
+        this.managedRules = managedRules;
+        this.name = name;
+        this.pathBasedRules = pathBasedRules;
         this.policySettings = policySettings;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.resourceState = Objects.requireNonNull(resourceState);
+        this.provisioningState = provisioningState;
+        this.resourceState = resourceState;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

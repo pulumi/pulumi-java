@@ -92,12 +92,12 @@ public final class SapOpenHubTableDatasetResponse {
         this.description = description;
         this.excludeLastRequest = excludeLastRequest;
         this.folder = folder;
-        this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
-        this.openHubDestinationName = Objects.requireNonNull(openHubDestinationName);
+        this.linkedServiceName = linkedServiceName;
+        this.openHubDestinationName = openHubDestinationName;
         this.parameters = parameters;
         this.schema = schema;
         this.structure = structure;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

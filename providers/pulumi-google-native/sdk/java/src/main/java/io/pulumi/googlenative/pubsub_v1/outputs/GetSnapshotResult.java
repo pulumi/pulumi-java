@@ -37,10 +37,10 @@ public final class GetSnapshotResult {
         Map<String,String> labels,
         String name,
         String topic) {
-        this.expireTime = Objects.requireNonNull(expireTime);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.topic = Objects.requireNonNull(topic);
+        this.expireTime = expireTime;
+        this.labels = labels;
+        this.name = name;
+        this.topic = topic;
     }
 
     /**

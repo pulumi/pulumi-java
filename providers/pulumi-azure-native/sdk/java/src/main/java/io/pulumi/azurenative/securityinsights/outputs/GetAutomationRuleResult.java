@@ -93,18 +93,18 @@ public final class GetAutomationRuleResult {
         Integer order,
         AutomationRuleTriggeringLogicResponse triggeringLogic,
         String type) {
-        this.actions = Objects.requireNonNull(actions);
-        this.createdBy = Objects.requireNonNull(createdBy);
-        this.createdTimeUtc = Objects.requireNonNull(createdTimeUtc);
-        this.displayName = Objects.requireNonNull(displayName);
+        this.actions = actions;
+        this.createdBy = createdBy;
+        this.createdTimeUtc = createdTimeUtc;
+        this.displayName = displayName;
         this.etag = etag;
-        this.id = Objects.requireNonNull(id);
-        this.lastModifiedBy = Objects.requireNonNull(lastModifiedBy);
-        this.lastModifiedTimeUtc = Objects.requireNonNull(lastModifiedTimeUtc);
-        this.name = Objects.requireNonNull(name);
-        this.order = Objects.requireNonNull(order);
-        this.triggeringLogic = Objects.requireNonNull(triggeringLogic);
-        this.type = Objects.requireNonNull(type);
+        this.id = id;
+        this.lastModifiedBy = lastModifiedBy;
+        this.lastModifiedTimeUtc = lastModifiedTimeUtc;
+        this.name = name;
+        this.order = order;
+        this.triggeringLogic = triggeringLogic;
+        this.type = type;
     }
 
     /**

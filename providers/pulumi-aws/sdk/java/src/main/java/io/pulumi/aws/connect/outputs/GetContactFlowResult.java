@@ -57,14 +57,14 @@ public final class GetContactFlowResult {
         String name,
         Map<String,String> tags,
         @Nullable String type) {
-        this.arn = Objects.requireNonNull(arn);
-        this.contactFlowId = Objects.requireNonNull(contactFlowId);
-        this.content = Objects.requireNonNull(content);
-        this.description = Objects.requireNonNull(description);
-        this.id = Objects.requireNonNull(id);
-        this.instanceId = Objects.requireNonNull(instanceId);
-        this.name = Objects.requireNonNull(name);
-        this.tags = Objects.requireNonNull(tags);
+        this.arn = arn;
+        this.contactFlowId = contactFlowId;
+        this.content = content;
+        this.description = description;
+        this.id = id;
+        this.instanceId = instanceId;
+        this.name = name;
+        this.tags = tags;
         this.type = type;
     }
 

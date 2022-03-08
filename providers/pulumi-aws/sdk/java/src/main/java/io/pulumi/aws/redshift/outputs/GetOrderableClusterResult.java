@@ -34,11 +34,11 @@ public final class GetOrderableClusterResult {
         String id,
         String nodeType,
         @Nullable List<String> preferredNodeTypes) {
-        this.availabilityZones = Objects.requireNonNull(availabilityZones);
-        this.clusterType = Objects.requireNonNull(clusterType);
-        this.clusterVersion = Objects.requireNonNull(clusterVersion);
-        this.id = Objects.requireNonNull(id);
-        this.nodeType = Objects.requireNonNull(nodeType);
+        this.availabilityZones = availabilityZones;
+        this.clusterType = clusterType;
+        this.clusterVersion = clusterVersion;
+        this.id = id;
+        this.nodeType = nodeType;
         this.preferredNodeTypes = preferredNodeTypes;
     }
 

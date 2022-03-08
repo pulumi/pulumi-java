@@ -25,8 +25,8 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprec
     private LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRule(
         Integer interval,
         String intervalUnit) {
-        this.interval = Objects.requireNonNull(interval);
-        this.intervalUnit = Objects.requireNonNull(intervalUnit);
+        this.interval = interval;
+        this.intervalUnit = intervalUnit;
     }
 
     /**

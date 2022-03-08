@@ -17,7 +17,7 @@ public final class SubnetResponse {
 
     @OutputCustomType.Constructor({"id"})
     private SubnetResponse(String id) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
     }
 
     /**

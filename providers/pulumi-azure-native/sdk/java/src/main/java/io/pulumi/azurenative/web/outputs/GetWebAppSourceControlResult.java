@@ -85,14 +85,14 @@ public final class GetWebAppSourceControlResult {
         this.branch = branch;
         this.deploymentRollbackEnabled = deploymentRollbackEnabled;
         this.gitHubActionConfiguration = gitHubActionConfiguration;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.isGitHubAction = isGitHubAction;
         this.isManualIntegration = isManualIntegration;
         this.isMercurial = isMercurial;
         this.kind = kind;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.repoUrl = repoUrl;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

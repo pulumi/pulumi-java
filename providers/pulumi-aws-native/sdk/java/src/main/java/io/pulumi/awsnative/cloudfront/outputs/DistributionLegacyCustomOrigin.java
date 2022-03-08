@@ -26,11 +26,11 @@ public final class DistributionLegacyCustomOrigin {
         @Nullable Integer hTTPSPort,
         String originProtocolPolicy,
         List<String> originSSLProtocols) {
-        this.dNSName = Objects.requireNonNull(dNSName);
+        this.dNSName = dNSName;
         this.hTTPPort = hTTPPort;
         this.hTTPSPort = hTTPSPort;
-        this.originProtocolPolicy = Objects.requireNonNull(originProtocolPolicy);
-        this.originSSLProtocols = Objects.requireNonNull(originSSLProtocols);
+        this.originProtocolPolicy = originProtocolPolicy;
+        this.originSSLProtocols = originSSLProtocols;
     }
 
     public String getDNSName() {

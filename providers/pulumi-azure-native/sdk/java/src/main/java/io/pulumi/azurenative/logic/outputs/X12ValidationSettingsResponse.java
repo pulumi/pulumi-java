@@ -74,16 +74,16 @@ public final class X12ValidationSettingsResponse {
         Boolean validateCharacterSet,
         Boolean validateEDITypes,
         Boolean validateXSDTypes) {
-        this.allowLeadingAndTrailingSpacesAndZeroes = Objects.requireNonNull(allowLeadingAndTrailingSpacesAndZeroes);
-        this.checkDuplicateGroupControlNumber = Objects.requireNonNull(checkDuplicateGroupControlNumber);
-        this.checkDuplicateInterchangeControlNumber = Objects.requireNonNull(checkDuplicateInterchangeControlNumber);
-        this.checkDuplicateTransactionSetControlNumber = Objects.requireNonNull(checkDuplicateTransactionSetControlNumber);
-        this.interchangeControlNumberValidityDays = Objects.requireNonNull(interchangeControlNumberValidityDays);
-        this.trailingSeparatorPolicy = Objects.requireNonNull(trailingSeparatorPolicy);
-        this.trimLeadingAndTrailingSpacesAndZeroes = Objects.requireNonNull(trimLeadingAndTrailingSpacesAndZeroes);
-        this.validateCharacterSet = Objects.requireNonNull(validateCharacterSet);
-        this.validateEDITypes = Objects.requireNonNull(validateEDITypes);
-        this.validateXSDTypes = Objects.requireNonNull(validateXSDTypes);
+        this.allowLeadingAndTrailingSpacesAndZeroes = allowLeadingAndTrailingSpacesAndZeroes;
+        this.checkDuplicateGroupControlNumber = checkDuplicateGroupControlNumber;
+        this.checkDuplicateInterchangeControlNumber = checkDuplicateInterchangeControlNumber;
+        this.checkDuplicateTransactionSetControlNumber = checkDuplicateTransactionSetControlNumber;
+        this.interchangeControlNumberValidityDays = interchangeControlNumberValidityDays;
+        this.trailingSeparatorPolicy = trailingSeparatorPolicy;
+        this.trimLeadingAndTrailingSpacesAndZeroes = trimLeadingAndTrailingSpacesAndZeroes;
+        this.validateCharacterSet = validateCharacterSet;
+        this.validateEDITypes = validateEDITypes;
+        this.validateXSDTypes = validateXSDTypes;
     }
 
     /**

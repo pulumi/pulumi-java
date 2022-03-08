@@ -24,8 +24,8 @@ public final class CertHttpChallengeResponse {
     private CertHttpChallengeResponse(
         String path,
         String token) {
-        this.path = Objects.requireNonNull(path);
-        this.token = Objects.requireNonNull(token);
+        this.path = path;
+        this.token = token;
     }
 
     /**

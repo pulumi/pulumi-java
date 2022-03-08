@@ -37,10 +37,10 @@ public final class AggregationResponse {
         String crossSeriesReducer,
         List<String> groupByFields,
         String perSeriesAligner) {
-        this.alignmentPeriod = Objects.requireNonNull(alignmentPeriod);
-        this.crossSeriesReducer = Objects.requireNonNull(crossSeriesReducer);
-        this.groupByFields = Objects.requireNonNull(groupByFields);
-        this.perSeriesAligner = Objects.requireNonNull(perSeriesAligner);
+        this.alignmentPeriod = alignmentPeriod;
+        this.crossSeriesReducer = crossSeriesReducer;
+        this.groupByFields = groupByFields;
+        this.perSeriesAligner = perSeriesAligner;
     }
 
     /**

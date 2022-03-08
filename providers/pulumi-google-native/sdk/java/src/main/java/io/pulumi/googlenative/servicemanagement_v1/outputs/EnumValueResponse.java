@@ -33,9 +33,9 @@ public final class EnumValueResponse {
         String name,
         Integer number,
         List<OptionResponse> options) {
-        this.name = Objects.requireNonNull(name);
-        this.number = Objects.requireNonNull(number);
-        this.options = Objects.requireNonNull(options);
+        this.name = name;
+        this.number = number;
+        this.options = options;
     }
 
     /**

@@ -13,7 +13,7 @@ public final class GetRegionResult {
 
     @OutputCustomType.Constructor({"region"})
     private GetRegionResult(String region) {
-        this.region = Objects.requireNonNull(region);
+        this.region = region;
     }
 
     public String getRegion() {

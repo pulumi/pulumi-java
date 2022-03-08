@@ -177,34 +177,34 @@ public final class GetPoolResult {
         String type,
         @Nullable List<UserAccountResponse> userAccounts,
         @Nullable String vmSize) {
-        this.allocationState = Objects.requireNonNull(allocationState);
-        this.allocationStateTransitionTime = Objects.requireNonNull(allocationStateTransitionTime);
+        this.allocationState = allocationState;
+        this.allocationStateTransitionTime = allocationStateTransitionTime;
         this.applicationLicenses = applicationLicenses;
         this.applicationPackages = applicationPackages;
-        this.autoScaleRun = Objects.requireNonNull(autoScaleRun);
+        this.autoScaleRun = autoScaleRun;
         this.certificates = certificates;
-        this.creationTime = Objects.requireNonNull(creationTime);
-        this.currentDedicatedNodes = Objects.requireNonNull(currentDedicatedNodes);
-        this.currentLowPriorityNodes = Objects.requireNonNull(currentLowPriorityNodes);
+        this.creationTime = creationTime;
+        this.currentDedicatedNodes = currentDedicatedNodes;
+        this.currentLowPriorityNodes = currentLowPriorityNodes;
         this.deploymentConfiguration = deploymentConfiguration;
         this.displayName = displayName;
-        this.etag = Objects.requireNonNull(etag);
-        this.id = Objects.requireNonNull(id);
+        this.etag = etag;
+        this.id = id;
         this.identity = identity;
         this.interNodeCommunication = interNodeCommunication;
-        this.lastModified = Objects.requireNonNull(lastModified);
+        this.lastModified = lastModified;
         this.metadata = metadata;
         this.mountConfiguration = mountConfiguration;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.networkConfiguration = networkConfiguration;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.provisioningStateTransitionTime = Objects.requireNonNull(provisioningStateTransitionTime);
-        this.resizeOperationStatus = Objects.requireNonNull(resizeOperationStatus);
+        this.provisioningState = provisioningState;
+        this.provisioningStateTransitionTime = provisioningStateTransitionTime;
+        this.resizeOperationStatus = resizeOperationStatus;
         this.scaleSettings = scaleSettings;
         this.startTask = startTask;
         this.taskSchedulingPolicy = taskSchedulingPolicy;
         this.taskSlotsPerNode = taskSlotsPerNode;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.userAccounts = userAccounts;
         this.vmSize = vmSize;
     }

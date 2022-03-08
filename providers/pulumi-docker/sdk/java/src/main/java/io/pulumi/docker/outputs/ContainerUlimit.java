@@ -19,9 +19,9 @@ public final class ContainerUlimit {
         Integer hard,
         String name,
         Integer soft) {
-        this.hard = Objects.requireNonNull(hard);
-        this.name = Objects.requireNonNull(name);
-        this.soft = Objects.requireNonNull(soft);
+        this.hard = hard;
+        this.name = name;
+        this.soft = soft;
     }
 
     public Integer getHard() {

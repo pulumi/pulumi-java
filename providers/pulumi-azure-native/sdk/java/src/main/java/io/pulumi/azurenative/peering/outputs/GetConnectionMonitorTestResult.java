@@ -79,14 +79,14 @@ public final class GetConnectionMonitorTestResult {
         String type) {
         this.destination = destination;
         this.destinationPort = destinationPort;
-        this.id = Objects.requireNonNull(id);
-        this.isTestSuccessful = Objects.requireNonNull(isTestSuccessful);
-        this.name = Objects.requireNonNull(name);
-        this.path = Objects.requireNonNull(path);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.id = id;
+        this.isTestSuccessful = isTestSuccessful;
+        this.name = name;
+        this.path = path;
+        this.provisioningState = provisioningState;
         this.sourceAgent = sourceAgent;
         this.testFrequencyInSec = testFrequencyInSec;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

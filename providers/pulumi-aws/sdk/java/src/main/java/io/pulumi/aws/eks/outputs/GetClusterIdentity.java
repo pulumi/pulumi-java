@@ -18,7 +18,7 @@ public final class GetClusterIdentity {
 
     @OutputCustomType.Constructor({"oidcs"})
     private GetClusterIdentity(List<GetClusterIdentityOidc> oidcs) {
-        this.oidcs = Objects.requireNonNull(oidcs);
+        this.oidcs = oidcs;
     }
 
     /**

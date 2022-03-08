@@ -61,14 +61,14 @@ public final class InterconnectOutageNotificationResponse {
         String source,
         String startTime,
         String state) {
-        this.affectedCircuits = Objects.requireNonNull(affectedCircuits);
-        this.description = Objects.requireNonNull(description);
-        this.endTime = Objects.requireNonNull(endTime);
-        this.issueType = Objects.requireNonNull(issueType);
-        this.name = Objects.requireNonNull(name);
-        this.source = Objects.requireNonNull(source);
-        this.startTime = Objects.requireNonNull(startTime);
-        this.state = Objects.requireNonNull(state);
+        this.affectedCircuits = affectedCircuits;
+        this.description = description;
+        this.endTime = endTime;
+        this.issueType = issueType;
+        this.name = name;
+        this.source = source;
+        this.startTime = startTime;
+        this.state = state;
     }
 
     /**

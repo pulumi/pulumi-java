@@ -43,11 +43,11 @@ public final class ExecutionConfigResponse {
         String networkUri,
         String serviceAccount,
         String subnetworkUri) {
-        this.kmsKey = Objects.requireNonNull(kmsKey);
-        this.networkTags = Objects.requireNonNull(networkTags);
-        this.networkUri = Objects.requireNonNull(networkUri);
-        this.serviceAccount = Objects.requireNonNull(serviceAccount);
-        this.subnetworkUri = Objects.requireNonNull(subnetworkUri);
+        this.kmsKey = kmsKey;
+        this.networkTags = networkTags;
+        this.networkUri = networkUri;
+        this.serviceAccount = serviceAccount;
+        this.subnetworkUri = subnetworkUri;
     }
 
     /**

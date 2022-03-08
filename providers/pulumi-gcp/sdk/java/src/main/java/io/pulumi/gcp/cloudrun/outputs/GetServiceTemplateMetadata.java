@@ -34,14 +34,14 @@ public final class GetServiceTemplateMetadata {
         String resourceVersion,
         String selfLink,
         String uid) {
-        this.annotations = Objects.requireNonNull(annotations);
-        this.generation = Objects.requireNonNull(generation);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.namespace = Objects.requireNonNull(namespace);
-        this.resourceVersion = Objects.requireNonNull(resourceVersion);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.uid = Objects.requireNonNull(uid);
+        this.annotations = annotations;
+        this.generation = generation;
+        this.labels = labels;
+        this.name = name;
+        this.namespace = namespace;
+        this.resourceVersion = resourceVersion;
+        this.selfLink = selfLink;
+        this.uid = uid;
     }
 
     public Map<String,String> getAnnotations() {

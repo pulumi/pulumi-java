@@ -17,7 +17,7 @@ public final class GooglePrivacyDlpV2SaveFindingsResponse {
 
     @OutputCustomType.Constructor({"outputConfig"})
     private GooglePrivacyDlpV2SaveFindingsResponse(GooglePrivacyDlpV2OutputStorageConfigResponse outputConfig) {
-        this.outputConfig = Objects.requireNonNull(outputConfig);
+        this.outputConfig = outputConfig;
     }
 
     /**

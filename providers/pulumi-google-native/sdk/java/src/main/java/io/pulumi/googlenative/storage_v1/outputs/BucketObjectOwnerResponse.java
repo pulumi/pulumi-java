@@ -24,8 +24,8 @@ public final class BucketObjectOwnerResponse {
     private BucketObjectOwnerResponse(
         String entity,
         String entityId) {
-        this.entity = Objects.requireNonNull(entity);
-        this.entityId = Objects.requireNonNull(entityId);
+        this.entity = entity;
+        this.entityId = entityId;
     }
 
     /**

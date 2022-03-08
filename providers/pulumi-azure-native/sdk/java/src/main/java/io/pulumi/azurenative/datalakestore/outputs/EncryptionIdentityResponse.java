@@ -30,9 +30,9 @@ public final class EncryptionIdentityResponse {
         String principalId,
         String tenantId,
         String type) {
-        this.principalId = Objects.requireNonNull(principalId);
-        this.tenantId = Objects.requireNonNull(tenantId);
-        this.type = Objects.requireNonNull(type);
+        this.principalId = principalId;
+        this.tenantId = tenantId;
+        this.type = type;
     }
 
     /**

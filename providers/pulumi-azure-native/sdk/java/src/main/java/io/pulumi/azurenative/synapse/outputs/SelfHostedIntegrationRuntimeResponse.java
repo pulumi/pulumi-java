@@ -38,7 +38,7 @@ public final class SelfHostedIntegrationRuntimeResponse {
         String type) {
         this.description = description;
         this.linkedInfo = linkedInfo;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

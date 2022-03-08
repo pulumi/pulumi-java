@@ -14,7 +14,7 @@ public final class GetCertificateAuthorityRevocationConfiguration {
 
     @OutputCustomType.Constructor({"crlConfigurations"})
     private GetCertificateAuthorityRevocationConfiguration(List<GetCertificateAuthorityRevocationConfigurationCrlConfiguration> crlConfigurations) {
-        this.crlConfigurations = Objects.requireNonNull(crlConfigurations);
+        this.crlConfigurations = crlConfigurations;
     }
 
     public List<GetCertificateAuthorityRevocationConfigurationCrlConfiguration> getCrlConfigurations() {

@@ -59,13 +59,13 @@ public final class GroupPropertiesResponse {
         @Nullable String groupType,
         Integer machineCount,
         String updatedTimestamp) {
-        this.areAssessmentsRunning = Objects.requireNonNull(areAssessmentsRunning);
-        this.assessments = Objects.requireNonNull(assessments);
-        this.createdTimestamp = Objects.requireNonNull(createdTimestamp);
-        this.groupStatus = Objects.requireNonNull(groupStatus);
+        this.areAssessmentsRunning = areAssessmentsRunning;
+        this.assessments = assessments;
+        this.createdTimestamp = createdTimestamp;
+        this.groupStatus = groupStatus;
         this.groupType = groupType;
-        this.machineCount = Objects.requireNonNull(machineCount);
-        this.updatedTimestamp = Objects.requireNonNull(updatedTimestamp);
+        this.machineCount = machineCount;
+        this.updatedTimestamp = updatedTimestamp;
     }
 
     /**

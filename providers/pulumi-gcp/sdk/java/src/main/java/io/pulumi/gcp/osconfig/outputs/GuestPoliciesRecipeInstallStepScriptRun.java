@@ -38,7 +38,7 @@ public final class GuestPoliciesRecipeInstallStepScriptRun {
         String script) {
         this.allowedExitCodes = allowedExitCodes;
         this.interpreter = interpreter;
-        this.script = Objects.requireNonNull(script);
+        this.script = script;
     }
 
     /**

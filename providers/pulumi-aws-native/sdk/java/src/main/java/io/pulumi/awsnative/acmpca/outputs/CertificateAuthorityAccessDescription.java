@@ -17,8 +17,8 @@ public final class CertificateAuthorityAccessDescription {
     private CertificateAuthorityAccessDescription(
         CertificateAuthorityGeneralName accessLocation,
         CertificateAuthorityAccessMethod accessMethod) {
-        this.accessLocation = Objects.requireNonNull(accessLocation);
-        this.accessMethod = Objects.requireNonNull(accessMethod);
+        this.accessLocation = accessLocation;
+        this.accessMethod = accessMethod;
     }
 
     public CertificateAuthorityGeneralName getAccessLocation() {

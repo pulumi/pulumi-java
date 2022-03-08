@@ -42,11 +42,11 @@ public final class CapabilityPropertiesResponse {
         String publisher,
         String targetType,
         String urn) {
-        this.description = Objects.requireNonNull(description);
-        this.parametersSchema = Objects.requireNonNull(parametersSchema);
-        this.publisher = Objects.requireNonNull(publisher);
-        this.targetType = Objects.requireNonNull(targetType);
-        this.urn = Objects.requireNonNull(urn);
+        this.description = description;
+        this.parametersSchema = parametersSchema;
+        this.publisher = publisher;
+        this.targetType = targetType;
+        this.urn = urn;
     }
 
     /**

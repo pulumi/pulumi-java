@@ -67,15 +67,15 @@ public final class GetGithubEnterpriseConfigResult {
         GitHubEnterpriseSecretsResponse secrets,
         String sslCa,
         String webhookKey) {
-        this.appId = Objects.requireNonNull(appId);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.hostUrl = Objects.requireNonNull(hostUrl);
-        this.name = Objects.requireNonNull(name);
-        this.peeredNetwork = Objects.requireNonNull(peeredNetwork);
-        this.secrets = Objects.requireNonNull(secrets);
-        this.sslCa = Objects.requireNonNull(sslCa);
-        this.webhookKey = Objects.requireNonNull(webhookKey);
+        this.appId = appId;
+        this.createTime = createTime;
+        this.displayName = displayName;
+        this.hostUrl = hostUrl;
+        this.name = name;
+        this.peeredNetwork = peeredNetwork;
+        this.secrets = secrets;
+        this.sslCa = sslCa;
+        this.webhookKey = webhookKey;
     }
 
     /**

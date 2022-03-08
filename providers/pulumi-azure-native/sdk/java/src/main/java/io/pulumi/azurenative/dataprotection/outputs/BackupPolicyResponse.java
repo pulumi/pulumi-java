@@ -34,9 +34,9 @@ public final class BackupPolicyResponse {
         List<String> datasourceTypes,
         String objectType,
         List<Either<AzureBackupRuleResponse,AzureRetentionRuleResponse>> policyRules) {
-        this.datasourceTypes = Objects.requireNonNull(datasourceTypes);
-        this.objectType = Objects.requireNonNull(objectType);
-        this.policyRules = Objects.requireNonNull(policyRules);
+        this.datasourceTypes = datasourceTypes;
+        this.objectType = objectType;
+        this.policyRules = policyRules;
     }
 
     /**

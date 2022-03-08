@@ -108,11 +108,11 @@ public final class ServicePerimetersServicePerimeter {
         @Nullable Boolean useExplicitDryRunSpec) {
         this.createTime = createTime;
         this.description = description;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.perimeterType = perimeterType;
         this.spec = spec;
         this.status = status;
-        this.title = Objects.requireNonNull(title);
+        this.title = title;
         this.updateTime = updateTime;
         this.useExplicitDryRunSpec = useExplicitDryRunSpec;
     }

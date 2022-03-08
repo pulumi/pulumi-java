@@ -18,8 +18,8 @@ public final class RRSetRoutingPolicyWrrPolicyResponse {
     private RRSetRoutingPolicyWrrPolicyResponse(
         List<RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse> items,
         String kind) {
-        this.items = Objects.requireNonNull(items);
-        this.kind = Objects.requireNonNull(kind);
+        this.items = items;
+        this.kind = kind;
     }
 
     public List<RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse> getItems() {

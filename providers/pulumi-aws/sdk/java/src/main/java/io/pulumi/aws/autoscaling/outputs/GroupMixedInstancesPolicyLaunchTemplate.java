@@ -27,7 +27,7 @@ public final class GroupMixedInstancesPolicyLaunchTemplate {
     private GroupMixedInstancesPolicyLaunchTemplate(
         GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecification launchTemplateSpecification,
         @Nullable List<GroupMixedInstancesPolicyLaunchTemplateOverride> overrides) {
-        this.launchTemplateSpecification = Objects.requireNonNull(launchTemplateSpecification);
+        this.launchTemplateSpecification = launchTemplateSpecification;
         this.overrides = overrides;
     }
 

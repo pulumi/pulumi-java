@@ -44,11 +44,11 @@ public final class BqmlIterationResultResponse {
         Integer index,
         Double learnRate,
         Double trainingLoss) {
-        this.durationMs = Objects.requireNonNull(durationMs);
-        this.evalLoss = Objects.requireNonNull(evalLoss);
-        this.index = Objects.requireNonNull(index);
-        this.learnRate = Objects.requireNonNull(learnRate);
-        this.trainingLoss = Objects.requireNonNull(trainingLoss);
+        this.durationMs = durationMs;
+        this.evalLoss = evalLoss;
+        this.index = index;
+        this.learnRate = learnRate;
+        this.trainingLoss = trainingLoss;
     }
 
     /**

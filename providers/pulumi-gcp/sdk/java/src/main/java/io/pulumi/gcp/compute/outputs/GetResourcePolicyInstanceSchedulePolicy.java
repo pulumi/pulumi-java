@@ -25,11 +25,11 @@ public final class GetResourcePolicyInstanceSchedulePolicy {
         String timeZone,
         List<GetResourcePolicyInstanceSchedulePolicyVmStartSchedule> vmStartSchedules,
         List<GetResourcePolicyInstanceSchedulePolicyVmStopSchedule> vmStopSchedules) {
-        this.expirationTime = Objects.requireNonNull(expirationTime);
-        this.startTime = Objects.requireNonNull(startTime);
-        this.timeZone = Objects.requireNonNull(timeZone);
-        this.vmStartSchedules = Objects.requireNonNull(vmStartSchedules);
-        this.vmStopSchedules = Objects.requireNonNull(vmStopSchedules);
+        this.expirationTime = expirationTime;
+        this.startTime = startTime;
+        this.timeZone = timeZone;
+        this.vmStartSchedules = vmStartSchedules;
+        this.vmStopSchedules = vmStopSchedules;
     }
 
     public String getExpirationTime() {

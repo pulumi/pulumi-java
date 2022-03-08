@@ -33,9 +33,9 @@ public final class DnsSettingsResponse {
         CustomDnsResponse customDns,
         List<GlueRecordResponse> glueRecords,
         GoogleDomainsDnsResponse googleDomainsDns) {
-        this.customDns = Objects.requireNonNull(customDns);
-        this.glueRecords = Objects.requireNonNull(glueRecords);
-        this.googleDomainsDns = Objects.requireNonNull(googleDomainsDns);
+        this.customDns = customDns;
+        this.glueRecords = glueRecords;
+        this.googleDomainsDns = googleDomainsDns;
     }
 
     /**

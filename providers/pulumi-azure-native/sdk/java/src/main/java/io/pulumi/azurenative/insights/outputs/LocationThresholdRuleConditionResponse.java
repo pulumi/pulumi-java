@@ -44,8 +44,8 @@ public final class LocationThresholdRuleConditionResponse {
         String odataType,
         @Nullable String windowSize) {
         this.dataSource = dataSource;
-        this.failedLocationCount = Objects.requireNonNull(failedLocationCount);
-        this.odataType = Objects.requireNonNull(odataType);
+        this.failedLocationCount = failedLocationCount;
+        this.odataType = odataType;
         this.windowSize = windowSize;
     }
 

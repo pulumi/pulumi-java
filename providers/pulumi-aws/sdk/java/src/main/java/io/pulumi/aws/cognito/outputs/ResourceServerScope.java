@@ -24,8 +24,8 @@ public final class ResourceServerScope {
     private ResourceServerScope(
         String scopeDescription,
         String scopeName) {
-        this.scopeDescription = Objects.requireNonNull(scopeDescription);
-        this.scopeName = Objects.requireNonNull(scopeName);
+        this.scopeDescription = scopeDescription;
+        this.scopeName = scopeName;
     }
 
     /**

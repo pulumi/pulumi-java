@@ -31,9 +31,9 @@ public final class PubsubTargetResponse {
         Map<String,String> attributes,
         String data,
         String topicName) {
-        this.attributes = Objects.requireNonNull(attributes);
-        this.data = Objects.requireNonNull(data);
-        this.topicName = Objects.requireNonNull(topicName);
+        this.attributes = attributes;
+        this.data = data;
+        this.topicName = topicName;
     }
 
     /**

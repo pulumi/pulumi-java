@@ -24,8 +24,8 @@ public final class FailureInfoResponse {
     private FailureInfoResponse(
         String detail,
         String type) {
-        this.detail = Objects.requireNonNull(detail);
-        this.type = Objects.requireNonNull(type);
+        this.detail = detail;
+        this.type = type;
     }
 
     /**

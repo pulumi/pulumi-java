@@ -21,9 +21,9 @@ public final class RuleGroupStatefulRule {
         RuleGroupStatefulRuleAction action,
         RuleGroupHeader header,
         List<RuleGroupRuleOption> ruleOptions) {
-        this.action = Objects.requireNonNull(action);
-        this.header = Objects.requireNonNull(header);
-        this.ruleOptions = Objects.requireNonNull(ruleOptions);
+        this.action = action;
+        this.header = header;
+        this.ruleOptions = ruleOptions;
     }
 
     public RuleGroupStatefulRuleAction getAction() {

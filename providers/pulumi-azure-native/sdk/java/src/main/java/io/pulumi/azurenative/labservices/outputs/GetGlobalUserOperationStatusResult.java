@@ -17,7 +17,7 @@ public final class GetGlobalUserOperationStatusResult {
 
     @OutputCustomType.Constructor({"status"})
     private GetGlobalUserOperationStatusResult(String status) {
-        this.status = Objects.requireNonNull(status);
+        this.status = status;
     }
 
     /**

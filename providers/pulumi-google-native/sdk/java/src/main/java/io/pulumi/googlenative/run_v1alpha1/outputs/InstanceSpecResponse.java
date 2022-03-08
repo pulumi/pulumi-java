@@ -51,12 +51,12 @@ public final class InstanceSpecResponse {
         String serviceAccountName,
         String terminationGracePeriodSeconds,
         List<VolumeResponse> volumes) {
-        this.activeDeadlineSeconds = Objects.requireNonNull(activeDeadlineSeconds);
-        this.containers = Objects.requireNonNull(containers);
-        this.restartPolicy = Objects.requireNonNull(restartPolicy);
-        this.serviceAccountName = Objects.requireNonNull(serviceAccountName);
-        this.terminationGracePeriodSeconds = Objects.requireNonNull(terminationGracePeriodSeconds);
-        this.volumes = Objects.requireNonNull(volumes);
+        this.activeDeadlineSeconds = activeDeadlineSeconds;
+        this.containers = containers;
+        this.restartPolicy = restartPolicy;
+        this.serviceAccountName = serviceAccountName;
+        this.terminationGracePeriodSeconds = terminationGracePeriodSeconds;
+        this.volumes = volumes;
     }
 
     /**

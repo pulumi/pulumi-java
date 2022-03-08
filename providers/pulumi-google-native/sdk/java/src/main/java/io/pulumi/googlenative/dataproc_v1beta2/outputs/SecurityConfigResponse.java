@@ -17,7 +17,7 @@ public final class SecurityConfigResponse {
 
     @OutputCustomType.Constructor({"kerberosConfig"})
     private SecurityConfigResponse(KerberosConfigResponse kerberosConfig) {
-        this.kerberosConfig = Objects.requireNonNull(kerberosConfig);
+        this.kerberosConfig = kerberosConfig;
     }
 
     /**

@@ -17,8 +17,8 @@ public final class GetJobQueueComputeEnvironmentOrder {
     private GetJobQueueComputeEnvironmentOrder(
         String computeEnvironment,
         Integer order) {
-        this.computeEnvironment = Objects.requireNonNull(computeEnvironment);
-        this.order = Objects.requireNonNull(order);
+        this.computeEnvironment = computeEnvironment;
+        this.order = order;
     }
 
     public String getComputeEnvironment() {

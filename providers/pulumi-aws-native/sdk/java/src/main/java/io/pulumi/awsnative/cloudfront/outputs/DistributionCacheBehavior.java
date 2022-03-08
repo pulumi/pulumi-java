@@ -72,14 +72,14 @@ public final class DistributionCacheBehavior {
         this.maxTTL = maxTTL;
         this.minTTL = minTTL;
         this.originRequestPolicyId = originRequestPolicyId;
-        this.pathPattern = Objects.requireNonNull(pathPattern);
+        this.pathPattern = pathPattern;
         this.realtimeLogConfigArn = realtimeLogConfigArn;
         this.responseHeadersPolicyId = responseHeadersPolicyId;
         this.smoothStreaming = smoothStreaming;
-        this.targetOriginId = Objects.requireNonNull(targetOriginId);
+        this.targetOriginId = targetOriginId;
         this.trustedKeyGroups = trustedKeyGroups;
         this.trustedSigners = trustedSigners;
-        this.viewerProtocolPolicy = Objects.requireNonNull(viewerProtocolPolicy);
+        this.viewerProtocolPolicy = viewerProtocolPolicy;
     }
 
     public List<String> getAllowedMethods() {

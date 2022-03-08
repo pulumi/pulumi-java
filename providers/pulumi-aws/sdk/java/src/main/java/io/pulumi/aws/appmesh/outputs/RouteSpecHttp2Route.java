@@ -41,8 +41,8 @@ public final class RouteSpecHttp2Route {
         RouteSpecHttp2RouteMatch match,
         @Nullable RouteSpecHttp2RouteRetryPolicy retryPolicy,
         @Nullable RouteSpecHttp2RouteTimeout timeout) {
-        this.action = Objects.requireNonNull(action);
-        this.match = Objects.requireNonNull(match);
+        this.action = action;
+        this.match = match;
         this.retryPolicy = retryPolicy;
         this.timeout = timeout;
     }

@@ -45,11 +45,11 @@ public final class RolloutOperationInfoResponse {
         Integer retryAttempt,
         Boolean skipSucceededOnRetry,
         String startTime) {
-        this.endTime = Objects.requireNonNull(endTime);
-        this.error = Objects.requireNonNull(error);
-        this.retryAttempt = Objects.requireNonNull(retryAttempt);
-        this.skipSucceededOnRetry = Objects.requireNonNull(skipSucceededOnRetry);
-        this.startTime = Objects.requireNonNull(startTime);
+        this.endTime = endTime;
+        this.error = error;
+        this.retryAttempt = retryAttempt;
+        this.skipSucceededOnRetry = skipSucceededOnRetry;
+        this.startTime = startTime;
     }
 
     /**

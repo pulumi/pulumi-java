@@ -134,25 +134,25 @@ public final class GetNodeResult {
         String state,
         List<SymptomResponse> symptoms,
         List<String> tags) {
-        this.acceleratorType = Objects.requireNonNull(acceleratorType);
-        this.apiVersion = Objects.requireNonNull(apiVersion);
-        this.cidrBlock = Objects.requireNonNull(cidrBlock);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.dataDisks = Objects.requireNonNull(dataDisks);
-        this.description = Objects.requireNonNull(description);
-        this.health = Objects.requireNonNull(health);
-        this.healthDescription = Objects.requireNonNull(healthDescription);
-        this.labels = Objects.requireNonNull(labels);
-        this.metadata = Objects.requireNonNull(metadata);
-        this.name = Objects.requireNonNull(name);
-        this.networkConfig = Objects.requireNonNull(networkConfig);
-        this.networkEndpoints = Objects.requireNonNull(networkEndpoints);
-        this.runtimeVersion = Objects.requireNonNull(runtimeVersion);
-        this.schedulingConfig = Objects.requireNonNull(schedulingConfig);
-        this.serviceAccount = Objects.requireNonNull(serviceAccount);
-        this.state = Objects.requireNonNull(state);
-        this.symptoms = Objects.requireNonNull(symptoms);
-        this.tags = Objects.requireNonNull(tags);
+        this.acceleratorType = acceleratorType;
+        this.apiVersion = apiVersion;
+        this.cidrBlock = cidrBlock;
+        this.createTime = createTime;
+        this.dataDisks = dataDisks;
+        this.description = description;
+        this.health = health;
+        this.healthDescription = healthDescription;
+        this.labels = labels;
+        this.metadata = metadata;
+        this.name = name;
+        this.networkConfig = networkConfig;
+        this.networkEndpoints = networkEndpoints;
+        this.runtimeVersion = runtimeVersion;
+        this.schedulingConfig = schedulingConfig;
+        this.serviceAccount = serviceAccount;
+        this.state = state;
+        this.symptoms = symptoms;
+        this.tags = tags;
     }
 
     /**

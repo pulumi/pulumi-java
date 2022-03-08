@@ -64,14 +64,14 @@ public final class GetServerTlsPolicyResult {
         String name,
         GoogleCloudNetworksecurityV1beta1CertificateProviderResponse serverCertificate,
         String updateTime) {
-        this.allowOpen = Objects.requireNonNull(allowOpen);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.description = Objects.requireNonNull(description);
-        this.labels = Objects.requireNonNull(labels);
-        this.mtlsPolicy = Objects.requireNonNull(mtlsPolicy);
-        this.name = Objects.requireNonNull(name);
-        this.serverCertificate = Objects.requireNonNull(serverCertificate);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.allowOpen = allowOpen;
+        this.createTime = createTime;
+        this.description = description;
+        this.labels = labels;
+        this.mtlsPolicy = mtlsPolicy;
+        this.name = name;
+        this.serverCertificate = serverCertificate;
+        this.updateTime = updateTime;
     }
 
     /**

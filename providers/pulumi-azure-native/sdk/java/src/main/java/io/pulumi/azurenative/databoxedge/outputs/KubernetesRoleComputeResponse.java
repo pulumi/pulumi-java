@@ -32,9 +32,9 @@ public final class KubernetesRoleComputeResponse {
         Double memoryInBytes,
         Integer processorCount,
         String vmProfile) {
-        this.memoryInBytes = Objects.requireNonNull(memoryInBytes);
-        this.processorCount = Objects.requireNonNull(processorCount);
-        this.vmProfile = Objects.requireNonNull(vmProfile);
+        this.memoryInBytes = memoryInBytes;
+        this.processorCount = processorCount;
+        this.vmProfile = vmProfile;
     }
 
     /**

@@ -33,9 +33,9 @@ public final class PipelineDescriptionResponse {
         List<DisplayDataResponse> displayData,
         List<ExecutionStageSummaryResponse> executionPipelineStage,
         List<TransformSummaryResponse> originalPipelineTransform) {
-        this.displayData = Objects.requireNonNull(displayData);
-        this.executionPipelineStage = Objects.requireNonNull(executionPipelineStage);
-        this.originalPipelineTransform = Objects.requireNonNull(originalPipelineTransform);
+        this.displayData = displayData;
+        this.executionPipelineStage = executionPipelineStage;
+        this.originalPipelineTransform = originalPipelineTransform;
     }
 
     /**

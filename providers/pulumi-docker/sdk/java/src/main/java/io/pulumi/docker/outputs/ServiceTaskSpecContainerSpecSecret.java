@@ -29,9 +29,9 @@ public final class ServiceTaskSpecContainerSpecSecret {
         @Nullable String secretName) {
         this.fileGid = fileGid;
         this.fileMode = fileMode;
-        this.fileName = Objects.requireNonNull(fileName);
+        this.fileName = fileName;
         this.fileUid = fileUid;
-        this.secretId = Objects.requireNonNull(secretId);
+        this.secretId = secretId;
         this.secretName = secretName;
     }
 

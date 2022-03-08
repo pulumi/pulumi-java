@@ -24,8 +24,8 @@ public final class GetBotAssociationLexBot {
     private GetBotAssociationLexBot(
         String lexRegion,
         String name) {
-        this.lexRegion = Objects.requireNonNull(lexRegion);
-        this.name = Objects.requireNonNull(name);
+        this.lexRegion = lexRegion;
+        this.name = name;
     }
 
     /**

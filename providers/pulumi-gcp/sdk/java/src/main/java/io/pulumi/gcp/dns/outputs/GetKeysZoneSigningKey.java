@@ -70,15 +70,15 @@ public final class GetKeysZoneSigningKey {
         Integer keyLength,
         Integer keyTag,
         String publicKey) {
-        this.algorithm = Objects.requireNonNull(algorithm);
-        this.creationTime = Objects.requireNonNull(creationTime);
-        this.description = Objects.requireNonNull(description);
-        this.digests = Objects.requireNonNull(digests);
-        this.id = Objects.requireNonNull(id);
-        this.isActive = Objects.requireNonNull(isActive);
-        this.keyLength = Objects.requireNonNull(keyLength);
-        this.keyTag = Objects.requireNonNull(keyTag);
-        this.publicKey = Objects.requireNonNull(publicKey);
+        this.algorithm = algorithm;
+        this.creationTime = creationTime;
+        this.description = description;
+        this.digests = digests;
+        this.id = id;
+        this.isActive = isActive;
+        this.keyLength = keyLength;
+        this.keyTag = keyTag;
+        this.publicKey = publicKey;
     }
 
     /**

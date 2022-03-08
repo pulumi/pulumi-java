@@ -41,7 +41,7 @@ public final class FulfillmentGenericWebService {
         @Nullable String username) {
         this.password = password;
         this.requestHeaders = requestHeaders;
-        this.uri = Objects.requireNonNull(uri);
+        this.uri = uri;
         this.username = username;
     }
 

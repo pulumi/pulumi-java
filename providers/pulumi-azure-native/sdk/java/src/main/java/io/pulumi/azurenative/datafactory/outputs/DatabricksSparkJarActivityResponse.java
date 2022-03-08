@@ -86,11 +86,11 @@ public final class DatabricksSparkJarActivityResponse {
         this.description = description;
         this.libraries = libraries;
         this.linkedServiceName = linkedServiceName;
-        this.mainClassName = Objects.requireNonNull(mainClassName);
-        this.name = Objects.requireNonNull(name);
+        this.mainClassName = mainClassName;
+        this.name = name;
         this.parameters = parameters;
         this.policy = policy;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.userProperties = userProperties;
     }
 

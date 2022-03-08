@@ -60,12 +60,12 @@ public final class PrivateEndpointConnectionResponse {
         @Nullable String provisioningState,
         String type) {
         this.groupIds = groupIds;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.privateEndpoint = privateEndpoint;
         this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
         this.provisioningState = provisioningState;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

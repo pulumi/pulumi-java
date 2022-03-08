@@ -108,20 +108,20 @@ public final class ProjectPropertiesResponse {
         String serviceEndpoint,
         String updatedTimestamp) {
         this.assessmentSolutionId = assessmentSolutionId;
-        this.createdTimestamp = Objects.requireNonNull(createdTimestamp);
+        this.createdTimestamp = createdTimestamp;
         this.customerStorageAccountArmId = customerStorageAccountArmId;
         this.customerWorkspaceId = customerWorkspaceId;
         this.customerWorkspaceLocation = customerWorkspaceLocation;
-        this.lastAssessmentTimestamp = Objects.requireNonNull(lastAssessmentTimestamp);
-        this.numberOfAssessments = Objects.requireNonNull(numberOfAssessments);
-        this.numberOfGroups = Objects.requireNonNull(numberOfGroups);
-        this.numberOfMachines = Objects.requireNonNull(numberOfMachines);
-        this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
+        this.lastAssessmentTimestamp = lastAssessmentTimestamp;
+        this.numberOfAssessments = numberOfAssessments;
+        this.numberOfGroups = numberOfGroups;
+        this.numberOfMachines = numberOfMachines;
+        this.privateEndpointConnections = privateEndpointConnections;
         this.projectStatus = projectStatus;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.publicNetworkAccess = publicNetworkAccess;
-        this.serviceEndpoint = Objects.requireNonNull(serviceEndpoint);
-        this.updatedTimestamp = Objects.requireNonNull(updatedTimestamp);
+        this.serviceEndpoint = serviceEndpoint;
+        this.updatedTimestamp = updatedTimestamp;
     }
 
     /**

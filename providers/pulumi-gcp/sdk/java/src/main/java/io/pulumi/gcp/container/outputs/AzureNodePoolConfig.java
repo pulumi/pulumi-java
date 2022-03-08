@@ -42,7 +42,7 @@ public final class AzureNodePoolConfig {
         @Nullable Map<String,String> tags,
         @Nullable String vmSize) {
         this.rootVolume = rootVolume;
-        this.sshConfig = Objects.requireNonNull(sshConfig);
+        this.sshConfig = sshConfig;
         this.tags = tags;
         this.vmSize = vmSize;
     }

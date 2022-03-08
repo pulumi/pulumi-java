@@ -98,16 +98,16 @@ public final class GetMachineExtensionResult {
         @Nullable String typeHandlerVersion) {
         this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
         this.forceUpdateTag = forceUpdateTag;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.instanceView = instanceView;
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
+        this.location = location;
+        this.name = name;
         this.protectedSettings = protectedSettings;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.publisher = publisher;
         this.settings = settings;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.typeHandlerVersion = typeHandlerVersion;
     }
 

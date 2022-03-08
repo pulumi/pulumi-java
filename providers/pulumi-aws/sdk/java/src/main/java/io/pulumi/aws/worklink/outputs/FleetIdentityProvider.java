@@ -24,8 +24,8 @@ public final class FleetIdentityProvider {
     private FleetIdentityProvider(
         String samlMetadata,
         String type) {
-        this.samlMetadata = Objects.requireNonNull(samlMetadata);
-        this.type = Objects.requireNonNull(type);
+        this.samlMetadata = samlMetadata;
+        this.type = type;
     }
 
     /**

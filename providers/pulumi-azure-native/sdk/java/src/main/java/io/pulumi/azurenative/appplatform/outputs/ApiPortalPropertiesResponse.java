@@ -75,13 +75,13 @@ public final class ApiPortalPropertiesResponse {
         String url) {
         this.gatewayIds = gatewayIds;
         this.httpsOnly = httpsOnly;
-        this.instances = Objects.requireNonNull(instances);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.instances = instances;
+        this.provisioningState = provisioningState;
         this.$public = $public;
-        this.resourceRequests = Objects.requireNonNull(resourceRequests);
+        this.resourceRequests = resourceRequests;
         this.sourceUrls = sourceUrls;
         this.ssoProperties = ssoProperties;
-        this.url = Objects.requireNonNull(url);
+        this.url = url;
     }
 
     /**

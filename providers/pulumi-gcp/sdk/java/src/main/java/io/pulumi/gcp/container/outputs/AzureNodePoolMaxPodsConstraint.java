@@ -17,7 +17,7 @@ public final class AzureNodePoolMaxPodsConstraint {
 
     @OutputCustomType.Constructor({"maxPodsPerNode"})
     private AzureNodePoolMaxPodsConstraint(Integer maxPodsPerNode) {
-        this.maxPodsPerNode = Objects.requireNonNull(maxPodsPerNode);
+        this.maxPodsPerNode = maxPodsPerNode;
     }
 
     /**

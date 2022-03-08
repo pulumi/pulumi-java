@@ -26,8 +26,8 @@ public final class GetDataCatalogEncryptionSettingsDataCatalogEncryptionSetting 
     private GetDataCatalogEncryptionSettingsDataCatalogEncryptionSetting(
         List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingConnectionPasswordEncryption> connectionPasswordEncryptions,
         List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingEncryptionAtRest> encryptionAtRests) {
-        this.connectionPasswordEncryptions = Objects.requireNonNull(connectionPasswordEncryptions);
-        this.encryptionAtRests = Objects.requireNonNull(encryptionAtRests);
+        this.connectionPasswordEncryptions = connectionPasswordEncryptions;
+        this.encryptionAtRests = encryptionAtRests;
     }
 
     /**

@@ -122,18 +122,18 @@ public final class HBaseLinkedServiceResponse {
         this.allowHostNameCNMismatch = allowHostNameCNMismatch;
         this.allowSelfSignedServerCert = allowSelfSignedServerCert;
         this.annotations = annotations;
-        this.authenticationType = Objects.requireNonNull(authenticationType);
+        this.authenticationType = authenticationType;
         this.connectVia = connectVia;
         this.description = description;
         this.enableSsl = enableSsl;
         this.encryptedCredential = encryptedCredential;
-        this.host = Objects.requireNonNull(host);
+        this.host = host;
         this.httpPath = httpPath;
         this.parameters = parameters;
         this.password = password;
         this.port = port;
         this.trustedCertPath = trustedCertPath;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.username = username;
     }
 

@@ -58,13 +58,13 @@ public final class GetTopicResult {
         String name,
         Boolean satisfiesPzs,
         SchemaSettingsResponse schemaSettings) {
-        this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
-        this.labels = Objects.requireNonNull(labels);
-        this.messageRetentionDuration = Objects.requireNonNull(messageRetentionDuration);
-        this.messageStoragePolicy = Objects.requireNonNull(messageStoragePolicy);
-        this.name = Objects.requireNonNull(name);
-        this.satisfiesPzs = Objects.requireNonNull(satisfiesPzs);
-        this.schemaSettings = Objects.requireNonNull(schemaSettings);
+        this.kmsKeyName = kmsKeyName;
+        this.labels = labels;
+        this.messageRetentionDuration = messageRetentionDuration;
+        this.messageStoragePolicy = messageStoragePolicy;
+        this.name = name;
+        this.satisfiesPzs = satisfiesPzs;
+        this.schemaSettings = schemaSettings;
     }
 
     /**

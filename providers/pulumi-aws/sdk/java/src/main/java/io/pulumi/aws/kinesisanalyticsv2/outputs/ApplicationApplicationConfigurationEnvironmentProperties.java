@@ -18,7 +18,7 @@ public final class ApplicationApplicationConfigurationEnvironmentProperties {
 
     @OutputCustomType.Constructor({"propertyGroups"})
     private ApplicationApplicationConfigurationEnvironmentProperties(List<ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroup> propertyGroups) {
-        this.propertyGroups = Objects.requireNonNull(propertyGroups);
+        this.propertyGroups = propertyGroups;
     }
 
     /**

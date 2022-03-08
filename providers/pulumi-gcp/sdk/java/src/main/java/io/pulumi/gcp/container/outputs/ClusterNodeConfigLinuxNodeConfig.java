@@ -20,7 +20,7 @@ public final class ClusterNodeConfigLinuxNodeConfig {
 
     @OutputCustomType.Constructor({"sysctls"})
     private ClusterNodeConfigLinuxNodeConfig(Map<String,String> sysctls) {
-        this.sysctls = Objects.requireNonNull(sysctls);
+        this.sysctls = sysctls;
     }
 
     /**

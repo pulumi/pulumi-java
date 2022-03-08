@@ -65,14 +65,14 @@ public final class GoogleCloudRunOpV2ContainerResponse {
         List<GoogleCloudRunOpV2ContainerPortResponse> ports,
         GoogleCloudRunOpV2ResourceRequirementsResponse resources,
         List<GoogleCloudRunOpV2VolumeMountResponse> volumeMounts) {
-        this.args = Objects.requireNonNull(args);
-        this.command = Objects.requireNonNull(command);
-        this.env = Objects.requireNonNull(env);
-        this.image = Objects.requireNonNull(image);
-        this.name = Objects.requireNonNull(name);
-        this.ports = Objects.requireNonNull(ports);
-        this.resources = Objects.requireNonNull(resources);
-        this.volumeMounts = Objects.requireNonNull(volumeMounts);
+        this.args = args;
+        this.command = command;
+        this.env = env;
+        this.image = image;
+        this.name = name;
+        this.ports = ports;
+        this.resources = resources;
+        this.volumeMounts = volumeMounts;
     }
 
     /**

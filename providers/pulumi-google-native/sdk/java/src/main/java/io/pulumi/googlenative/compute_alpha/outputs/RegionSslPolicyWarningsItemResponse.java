@@ -32,9 +32,9 @@ public final class RegionSslPolicyWarningsItemResponse {
         String code,
         List<RegionSslPolicyWarningsItemDataItemResponse> data,
         String message) {
-        this.code = Objects.requireNonNull(code);
-        this.data = Objects.requireNonNull(data);
-        this.message = Objects.requireNonNull(message);
+        this.code = code;
+        this.data = data;
+        this.message = message;
     }
 
     /**

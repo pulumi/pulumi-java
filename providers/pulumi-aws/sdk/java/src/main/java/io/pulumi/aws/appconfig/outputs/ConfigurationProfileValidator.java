@@ -27,7 +27,7 @@ public final class ConfigurationProfileValidator {
         @Nullable String content,
         String type) {
         this.content = content;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

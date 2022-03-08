@@ -55,7 +55,7 @@ public final class ModelPrimaryContainer {
         @Nullable String modelDataUrl) {
         this.containerHostname = containerHostname;
         this.environment = environment;
-        this.image = Objects.requireNonNull(image);
+        this.image = image;
         this.imageConfig = imageConfig;
         this.mode = mode;
         this.modelDataUrl = modelDataUrl;

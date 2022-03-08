@@ -33,9 +33,9 @@ public final class GetResourcesResourceTagMappingList {
         List<GetResourcesResourceTagMappingListComplianceDetail> complianceDetails,
         String resourceArn,
         Map<String,String> tags) {
-        this.complianceDetails = Objects.requireNonNull(complianceDetails);
-        this.resourceArn = Objects.requireNonNull(resourceArn);
-        this.tags = Objects.requireNonNull(tags);
+        this.complianceDetails = complianceDetails;
+        this.resourceArn = resourceArn;
+        this.tags = tags;
     }
 
     /**

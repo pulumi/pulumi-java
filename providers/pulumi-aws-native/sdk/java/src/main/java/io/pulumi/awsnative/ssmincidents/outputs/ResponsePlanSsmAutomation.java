@@ -47,10 +47,10 @@ public final class ResponsePlanSsmAutomation {
         @Nullable List<ResponsePlanSsmParameter> parameters,
         String roleArn,
         @Nullable ResponsePlanSsmAutomationTargetAccount targetAccount) {
-        this.documentName = Objects.requireNonNull(documentName);
+        this.documentName = documentName;
         this.documentVersion = documentVersion;
         this.parameters = parameters;
-        this.roleArn = Objects.requireNonNull(roleArn);
+        this.roleArn = roleArn;
         this.targetAccount = targetAccount;
     }
 

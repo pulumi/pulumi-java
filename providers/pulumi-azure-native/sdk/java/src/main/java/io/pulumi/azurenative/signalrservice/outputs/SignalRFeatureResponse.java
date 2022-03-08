@@ -34,9 +34,9 @@ public final class SignalRFeatureResponse {
         String flag,
         @Nullable Map<String,String> properties,
         String value) {
-        this.flag = Objects.requireNonNull(flag);
+        this.flag = flag;
         this.properties = properties;
-        this.value = Objects.requireNonNull(value);
+        this.value = value;
     }
 
     /**

@@ -26,10 +26,10 @@ public final class GetInstanceTemplateNetworkInterfaceIpv6AccessConfig {
         String externalIpv6PrefixLength,
         String networkTier,
         String publicPtrDomainName) {
-        this.externalIpv6 = Objects.requireNonNull(externalIpv6);
-        this.externalIpv6PrefixLength = Objects.requireNonNull(externalIpv6PrefixLength);
-        this.networkTier = Objects.requireNonNull(networkTier);
-        this.publicPtrDomainName = Objects.requireNonNull(publicPtrDomainName);
+        this.externalIpv6 = externalIpv6;
+        this.externalIpv6PrefixLength = externalIpv6PrefixLength;
+        this.networkTier = networkTier;
+        this.publicPtrDomainName = publicPtrDomainName;
     }
 
     public String getExternalIpv6() {

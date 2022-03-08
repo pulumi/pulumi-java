@@ -25,8 +25,8 @@ public final class GooglePrivacyDlpV2InfoTypeLimitResponse {
     private GooglePrivacyDlpV2InfoTypeLimitResponse(
         GooglePrivacyDlpV2InfoTypeResponse infoType,
         Integer maxFindings) {
-        this.infoType = Objects.requireNonNull(infoType);
-        this.maxFindings = Objects.requireNonNull(maxFindings);
+        this.infoType = infoType;
+        this.maxFindings = maxFindings;
     }
 
     /**

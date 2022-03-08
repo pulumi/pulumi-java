@@ -17,7 +17,7 @@ public final class GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsRes
 
     @OutputCustomType.Constructor({"iouThreshold"})
     private GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsResponse(Double iouThreshold) {
-        this.iouThreshold = Objects.requireNonNull(iouThreshold);
+        this.iouThreshold = iouThreshold;
     }
 
     /**

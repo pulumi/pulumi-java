@@ -28,7 +28,7 @@ public final class TableReplica {
         @Nullable String kmsKeyArn,
         String regionName) {
         this.kmsKeyArn = kmsKeyArn;
-        this.regionName = Objects.requireNonNull(regionName);
+        this.regionName = regionName;
     }
 
     /**

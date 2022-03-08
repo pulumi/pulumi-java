@@ -47,11 +47,11 @@ public final class AuthConfigResponse {
         Oauth2ClientCredentialsResponse oauth2ClientCredentials,
         Oauth2JwtBearerResponse oauth2JwtBearer,
         UserPasswordResponse userPassword) {
-        this.additionalVariables = Objects.requireNonNull(additionalVariables);
-        this.authType = Objects.requireNonNull(authType);
-        this.oauth2ClientCredentials = Objects.requireNonNull(oauth2ClientCredentials);
-        this.oauth2JwtBearer = Objects.requireNonNull(oauth2JwtBearer);
-        this.userPassword = Objects.requireNonNull(userPassword);
+        this.additionalVariables = additionalVariables;
+        this.authType = authType;
+        this.oauth2ClientCredentials = oauth2ClientCredentials;
+        this.oauth2JwtBearer = oauth2JwtBearer;
+        this.userPassword = userPassword;
     }
 
     /**

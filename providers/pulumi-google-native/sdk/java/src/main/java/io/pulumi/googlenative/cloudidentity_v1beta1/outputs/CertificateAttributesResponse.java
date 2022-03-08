@@ -67,15 +67,15 @@ public final class CertificateAttributesResponse {
         String validationState,
         String validityExpirationTime,
         String validityStartTime) {
-        this.certificateTemplate = Objects.requireNonNull(certificateTemplate);
-        this.fingerprint = Objects.requireNonNull(fingerprint);
-        this.issuer = Objects.requireNonNull(issuer);
-        this.serialNumber = Objects.requireNonNull(serialNumber);
-        this.subject = Objects.requireNonNull(subject);
-        this.thumbprint = Objects.requireNonNull(thumbprint);
-        this.validationState = Objects.requireNonNull(validationState);
-        this.validityExpirationTime = Objects.requireNonNull(validityExpirationTime);
-        this.validityStartTime = Objects.requireNonNull(validityStartTime);
+        this.certificateTemplate = certificateTemplate;
+        this.fingerprint = fingerprint;
+        this.issuer = issuer;
+        this.serialNumber = serialNumber;
+        this.subject = subject;
+        this.thumbprint = thumbprint;
+        this.validationState = validationState;
+        this.validityExpirationTime = validityExpirationTime;
+        this.validityStartTime = validityStartTime;
     }
 
     /**

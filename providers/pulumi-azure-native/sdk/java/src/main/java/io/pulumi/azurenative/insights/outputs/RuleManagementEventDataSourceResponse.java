@@ -106,7 +106,7 @@ public final class RuleManagementEventDataSourceResponse {
         this.legacyResourceId = legacyResourceId;
         this.level = level;
         this.metricNamespace = metricNamespace;
-        this.odataType = Objects.requireNonNull(odataType);
+        this.odataType = odataType;
         this.operationName = operationName;
         this.resourceGroupName = resourceGroupName;
         this.resourceLocation = resourceLocation;

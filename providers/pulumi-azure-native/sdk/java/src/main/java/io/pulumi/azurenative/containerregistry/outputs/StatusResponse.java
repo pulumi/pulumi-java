@@ -30,9 +30,9 @@ public final class StatusResponse {
         String displayStatus,
         String message,
         String timestamp) {
-        this.displayStatus = Objects.requireNonNull(displayStatus);
-        this.message = Objects.requireNonNull(message);
-        this.timestamp = Objects.requireNonNull(timestamp);
+        this.displayStatus = displayStatus;
+        this.message = message;
+        this.timestamp = timestamp;
     }
 
     /**

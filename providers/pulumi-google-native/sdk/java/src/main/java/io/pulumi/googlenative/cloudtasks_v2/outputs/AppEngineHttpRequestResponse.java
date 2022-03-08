@@ -44,11 +44,11 @@ public final class AppEngineHttpRequestResponse {
         Map<String,String> headers,
         String httpMethod,
         String relativeUri) {
-        this.appEngineRouting = Objects.requireNonNull(appEngineRouting);
-        this.body = Objects.requireNonNull(body);
-        this.headers = Objects.requireNonNull(headers);
-        this.httpMethod = Objects.requireNonNull(httpMethod);
-        this.relativeUri = Objects.requireNonNull(relativeUri);
+        this.appEngineRouting = appEngineRouting;
+        this.body = body;
+        this.headers = headers;
+        this.httpMethod = httpMethod;
+        this.relativeUri = relativeUri;
     }
 
     /**

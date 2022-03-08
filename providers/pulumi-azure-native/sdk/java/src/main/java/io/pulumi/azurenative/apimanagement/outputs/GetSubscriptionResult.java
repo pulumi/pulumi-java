@@ -112,21 +112,21 @@ public final class GetSubscriptionResult {
         @Nullable String stateComment,
         String type) {
         this.allowTracing = allowTracing;
-        this.createdDate = Objects.requireNonNull(createdDate);
+        this.createdDate = createdDate;
         this.displayName = displayName;
         this.endDate = endDate;
         this.expirationDate = expirationDate;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.notificationDate = notificationDate;
         this.ownerId = ownerId;
         this.primaryKey = primaryKey;
-        this.scope = Objects.requireNonNull(scope);
+        this.scope = scope;
         this.secondaryKey = secondaryKey;
         this.startDate = startDate;
-        this.state = Objects.requireNonNull(state);
+        this.state = state;
         this.stateComment = stateComment;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

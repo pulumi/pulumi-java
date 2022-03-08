@@ -43,11 +43,11 @@ public final class GetSiteResult {
         Map<String,String> labels,
         String name,
         String type) {
-        this.appId = Objects.requireNonNull(appId);
-        this.defaultUrl = Objects.requireNonNull(defaultUrl);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.appId = appId;
+        this.defaultUrl = defaultUrl;
+        this.labels = labels;
+        this.name = name;
+        this.type = type;
     }
 
     /**

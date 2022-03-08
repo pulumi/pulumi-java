@@ -25,8 +25,8 @@ public final class FirewallDeniedItemResponse {
     private FirewallDeniedItemResponse(
         String ipProtocol,
         List<String> ports) {
-        this.ipProtocol = Objects.requireNonNull(ipProtocol);
-        this.ports = Objects.requireNonNull(ports);
+        this.ipProtocol = ipProtocol;
+        this.ports = ports;
     }
 
     /**

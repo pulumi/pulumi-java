@@ -24,8 +24,8 @@ public final class MysqlSourceConfigResponse {
     private MysqlSourceConfigResponse(
         MysqlRdbmsResponse allowlist,
         MysqlRdbmsResponse rejectlist) {
-        this.allowlist = Objects.requireNonNull(allowlist);
-        this.rejectlist = Objects.requireNonNull(rejectlist);
+        this.allowlist = allowlist;
+        this.rejectlist = rejectlist;
     }
 
     /**

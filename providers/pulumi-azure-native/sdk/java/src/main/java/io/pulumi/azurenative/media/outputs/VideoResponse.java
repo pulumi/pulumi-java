@@ -47,7 +47,7 @@ public final class VideoResponse {
         @Nullable String syncMode) {
         this.keyFrameInterval = keyFrameInterval;
         this.label = label;
-        this.odataType = Objects.requireNonNull(odataType);
+        this.odataType = odataType;
         this.stretchMode = stretchMode;
         this.syncMode = syncMode;
     }

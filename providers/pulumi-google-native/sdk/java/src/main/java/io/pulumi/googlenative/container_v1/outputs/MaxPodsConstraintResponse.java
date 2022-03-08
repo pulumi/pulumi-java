@@ -17,7 +17,7 @@ public final class MaxPodsConstraintResponse {
 
     @OutputCustomType.Constructor({"maxPodsPerNode"})
     private MaxPodsConstraintResponse(String maxPodsPerNode) {
-        this.maxPodsPerNode = Objects.requireNonNull(maxPodsPerNode);
+        this.maxPodsPerNode = maxPodsPerNode;
     }
 
     /**

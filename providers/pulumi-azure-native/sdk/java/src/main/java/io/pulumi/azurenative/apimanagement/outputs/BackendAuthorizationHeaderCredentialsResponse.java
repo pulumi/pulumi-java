@@ -24,8 +24,8 @@ public final class BackendAuthorizationHeaderCredentialsResponse {
     private BackendAuthorizationHeaderCredentialsResponse(
         String parameter,
         String scheme) {
-        this.parameter = Objects.requireNonNull(parameter);
-        this.scheme = Objects.requireNonNull(scheme);
+        this.parameter = parameter;
+        this.scheme = scheme;
     }
 
     /**

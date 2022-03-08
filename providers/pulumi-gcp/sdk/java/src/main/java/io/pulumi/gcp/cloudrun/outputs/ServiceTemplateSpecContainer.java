@@ -124,7 +124,7 @@ public final class ServiceTemplateSpecContainer {
         this.commands = commands;
         this.envFroms = envFroms;
         this.envs = envs;
-        this.image = Objects.requireNonNull(image);
+        this.image = image;
         this.ports = ports;
         this.resources = resources;
         this.volumeMounts = volumeMounts;

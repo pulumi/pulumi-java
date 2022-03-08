@@ -14,7 +14,7 @@ public final class RuleGroupPublishMetricAction {
 
     @OutputCustomType.Constructor({"dimensions"})
     private RuleGroupPublishMetricAction(List<RuleGroupDimension> dimensions) {
-        this.dimensions = Objects.requireNonNull(dimensions);
+        this.dimensions = dimensions;
     }
 
     public List<RuleGroupDimension> getDimensions() {

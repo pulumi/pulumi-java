@@ -30,9 +30,9 @@ public final class BackendServiceIAPOAuth2ClientInfoResponse {
         String applicationName,
         String clientName,
         String developerEmailAddress) {
-        this.applicationName = Objects.requireNonNull(applicationName);
-        this.clientName = Objects.requireNonNull(clientName);
-        this.developerEmailAddress = Objects.requireNonNull(developerEmailAddress);
+        this.applicationName = applicationName;
+        this.clientName = clientName;
+        this.developerEmailAddress = developerEmailAddress;
     }
 
     /**

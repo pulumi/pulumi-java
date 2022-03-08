@@ -14,7 +14,7 @@ public final class GetAzsResult {
 
     @OutputCustomType.Constructor({"azs"})
     private GetAzsResult(List<String> azs) {
-        this.azs = Objects.requireNonNull(azs);
+        this.azs = azs;
     }
 
     public List<String> getAzs() {

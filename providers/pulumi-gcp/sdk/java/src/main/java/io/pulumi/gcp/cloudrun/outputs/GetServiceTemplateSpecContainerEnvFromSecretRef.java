@@ -18,8 +18,8 @@ public final class GetServiceTemplateSpecContainerEnvFromSecretRef {
     private GetServiceTemplateSpecContainerEnvFromSecretRef(
         List<GetServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReference> localObjectReferences,
         Boolean optional) {
-        this.localObjectReferences = Objects.requireNonNull(localObjectReferences);
-        this.optional = Objects.requireNonNull(optional);
+        this.localObjectReferences = localObjectReferences;
+        this.optional = optional;
     }
 
     public List<GetServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReference> getLocalObjectReferences() {

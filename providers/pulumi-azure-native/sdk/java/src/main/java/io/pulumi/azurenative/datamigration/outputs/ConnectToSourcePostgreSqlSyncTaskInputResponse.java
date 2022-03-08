@@ -17,7 +17,7 @@ public final class ConnectToSourcePostgreSqlSyncTaskInputResponse {
 
     @OutputCustomType.Constructor({"sourceConnectionInfo"})
     private ConnectToSourcePostgreSqlSyncTaskInputResponse(PostgreSqlConnectionInfoResponse sourceConnectionInfo) {
-        this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
+        this.sourceConnectionInfo = sourceConnectionInfo;
     }
 
     /**

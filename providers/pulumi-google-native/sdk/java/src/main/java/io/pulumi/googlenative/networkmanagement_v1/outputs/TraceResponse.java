@@ -26,8 +26,8 @@ public final class TraceResponse {
     private TraceResponse(
         EndpointInfoResponse endpointInfo,
         List<StepResponse> steps) {
-        this.endpointInfo = Objects.requireNonNull(endpointInfo);
-        this.steps = Objects.requireNonNull(steps);
+        this.endpointInfo = endpointInfo;
+        this.steps = steps;
     }
 
     /**

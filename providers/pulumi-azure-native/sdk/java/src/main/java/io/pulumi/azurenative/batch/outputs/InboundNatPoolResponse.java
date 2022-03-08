@@ -48,12 +48,12 @@ public final class InboundNatPoolResponse {
         String name,
         @Nullable List<NetworkSecurityGroupRuleResponse> networkSecurityGroupRules,
         String protocol) {
-        this.backendPort = Objects.requireNonNull(backendPort);
-        this.frontendPortRangeEnd = Objects.requireNonNull(frontendPortRangeEnd);
-        this.frontendPortRangeStart = Objects.requireNonNull(frontendPortRangeStart);
-        this.name = Objects.requireNonNull(name);
+        this.backendPort = backendPort;
+        this.frontendPortRangeEnd = frontendPortRangeEnd;
+        this.frontendPortRangeStart = frontendPortRangeStart;
+        this.name = name;
         this.networkSecurityGroupRules = networkSecurityGroupRules;
-        this.protocol = Objects.requireNonNull(protocol);
+        this.protocol = protocol;
     }
 
     /**

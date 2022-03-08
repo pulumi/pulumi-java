@@ -93,19 +93,19 @@ public final class GetProjectResult {
         @Nullable Map<String,String> tags,
         String type,
         String workspaceId) {
-        this.accountId = Objects.requireNonNull(accountId);
-        this.creationDate = Objects.requireNonNull(creationDate);
+        this.accountId = accountId;
+        this.creationDate = creationDate;
         this.description = description;
-        this.friendlyName = Objects.requireNonNull(friendlyName);
+        this.friendlyName = friendlyName;
         this.gitrepo = gitrepo;
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.projectId = Objects.requireNonNull(projectId);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.id = id;
+        this.location = location;
+        this.name = name;
+        this.projectId = projectId;
+        this.provisioningState = provisioningState;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
-        this.workspaceId = Objects.requireNonNull(workspaceId);
+        this.type = type;
+        this.workspaceId = workspaceId;
     }
 
     /**

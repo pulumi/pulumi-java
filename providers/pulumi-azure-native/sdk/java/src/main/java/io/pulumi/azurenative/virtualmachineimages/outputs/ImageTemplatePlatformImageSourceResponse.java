@@ -56,7 +56,7 @@ public final class ImageTemplatePlatformImageSourceResponse {
         this.planInfo = planInfo;
         this.publisher = publisher;
         this.sku = sku;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.version = version;
     }
 

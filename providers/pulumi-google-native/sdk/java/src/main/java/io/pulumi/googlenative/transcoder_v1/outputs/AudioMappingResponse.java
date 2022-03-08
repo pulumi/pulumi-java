@@ -50,12 +50,12 @@ public final class AudioMappingResponse {
         String inputKey,
         Integer inputTrack,
         Integer outputChannel) {
-        this.atomKey = Objects.requireNonNull(atomKey);
-        this.gainDb = Objects.requireNonNull(gainDb);
-        this.inputChannel = Objects.requireNonNull(inputChannel);
-        this.inputKey = Objects.requireNonNull(inputKey);
-        this.inputTrack = Objects.requireNonNull(inputTrack);
-        this.outputChannel = Objects.requireNonNull(outputChannel);
+        this.atomKey = atomKey;
+        this.gainDb = gainDb;
+        this.inputChannel = inputChannel;
+        this.inputKey = inputKey;
+        this.inputTrack = inputTrack;
+        this.outputChannel = outputChannel;
     }
 
     /**

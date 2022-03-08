@@ -73,30 +73,30 @@ public final class GetClusterNodeConfig {
         List<String> tags,
         List<GetClusterNodeConfigTaint> taints,
         List<GetClusterNodeConfigWorkloadMetadataConfig> workloadMetadataConfigs) {
-        this.bootDiskKmsKey = Objects.requireNonNull(bootDiskKmsKey);
-        this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
-        this.diskType = Objects.requireNonNull(diskType);
-        this.ephemeralStorageConfigs = Objects.requireNonNull(ephemeralStorageConfigs);
-        this.gcfsConfigs = Objects.requireNonNull(gcfsConfigs);
-        this.guestAccelerators = Objects.requireNonNull(guestAccelerators);
-        this.imageType = Objects.requireNonNull(imageType);
-        this.kubeletConfigs = Objects.requireNonNull(kubeletConfigs);
-        this.labels = Objects.requireNonNull(labels);
-        this.linuxNodeConfigs = Objects.requireNonNull(linuxNodeConfigs);
-        this.localSsdCount = Objects.requireNonNull(localSsdCount);
-        this.machineType = Objects.requireNonNull(machineType);
-        this.metadata = Objects.requireNonNull(metadata);
-        this.minCpuPlatform = Objects.requireNonNull(minCpuPlatform);
-        this.nodeGroup = Objects.requireNonNull(nodeGroup);
-        this.oauthScopes = Objects.requireNonNull(oauthScopes);
-        this.preemptible = Objects.requireNonNull(preemptible);
-        this.sandboxConfigs = Objects.requireNonNull(sandboxConfigs);
-        this.serviceAccount = Objects.requireNonNull(serviceAccount);
-        this.shieldedInstanceConfigs = Objects.requireNonNull(shieldedInstanceConfigs);
-        this.spot = Objects.requireNonNull(spot);
-        this.tags = Objects.requireNonNull(tags);
-        this.taints = Objects.requireNonNull(taints);
-        this.workloadMetadataConfigs = Objects.requireNonNull(workloadMetadataConfigs);
+        this.bootDiskKmsKey = bootDiskKmsKey;
+        this.diskSizeGb = diskSizeGb;
+        this.diskType = diskType;
+        this.ephemeralStorageConfigs = ephemeralStorageConfigs;
+        this.gcfsConfigs = gcfsConfigs;
+        this.guestAccelerators = guestAccelerators;
+        this.imageType = imageType;
+        this.kubeletConfigs = kubeletConfigs;
+        this.labels = labels;
+        this.linuxNodeConfigs = linuxNodeConfigs;
+        this.localSsdCount = localSsdCount;
+        this.machineType = machineType;
+        this.metadata = metadata;
+        this.minCpuPlatform = minCpuPlatform;
+        this.nodeGroup = nodeGroup;
+        this.oauthScopes = oauthScopes;
+        this.preemptible = preemptible;
+        this.sandboxConfigs = sandboxConfigs;
+        this.serviceAccount = serviceAccount;
+        this.shieldedInstanceConfigs = shieldedInstanceConfigs;
+        this.spot = spot;
+        this.tags = tags;
+        this.taints = taints;
+        this.workloadMetadataConfigs = workloadMetadataConfigs;
     }
 
     public String getBootDiskKmsKey() {

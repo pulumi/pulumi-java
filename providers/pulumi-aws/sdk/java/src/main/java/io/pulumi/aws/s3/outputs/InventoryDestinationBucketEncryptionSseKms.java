@@ -17,7 +17,7 @@ public final class InventoryDestinationBucketEncryptionSseKms {
 
     @OutputCustomType.Constructor({"keyId"})
     private InventoryDestinationBucketEncryptionSseKms(String keyId) {
-        this.keyId = Objects.requireNonNull(keyId);
+        this.keyId = keyId;
     }
 
     /**

@@ -37,10 +37,10 @@ public final class FacetOptionsResponse {
         String objectType,
         String operatorName,
         String sourceName) {
-        this.numFacetBuckets = Objects.requireNonNull(numFacetBuckets);
-        this.objectType = Objects.requireNonNull(objectType);
-        this.operatorName = Objects.requireNonNull(operatorName);
-        this.sourceName = Objects.requireNonNull(sourceName);
+        this.numFacetBuckets = numFacetBuckets;
+        this.objectType = objectType;
+        this.operatorName = operatorName;
+        this.sourceName = sourceName;
     }
 
     /**

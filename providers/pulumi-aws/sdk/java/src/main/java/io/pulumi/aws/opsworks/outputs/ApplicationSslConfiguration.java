@@ -32,9 +32,9 @@ public final class ApplicationSslConfiguration {
         String certificate,
         @Nullable String chain,
         String privateKey) {
-        this.certificate = Objects.requireNonNull(certificate);
+        this.certificate = certificate;
         this.chain = chain;
-        this.privateKey = Objects.requireNonNull(privateKey);
+        this.privateKey = privateKey;
     }
 
     /**

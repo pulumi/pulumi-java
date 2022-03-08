@@ -23,8 +23,8 @@ public final class TopicRuleAssetPropertyValue {
         TopicRuleAssetPropertyTimestamp timestamp,
         TopicRuleAssetPropertyVariant value) {
         this.quality = quality;
-        this.timestamp = Objects.requireNonNull(timestamp);
-        this.value = Objects.requireNonNull(value);
+        this.timestamp = timestamp;
+        this.value = value;
     }
 
     public Optional<String> getQuality() {

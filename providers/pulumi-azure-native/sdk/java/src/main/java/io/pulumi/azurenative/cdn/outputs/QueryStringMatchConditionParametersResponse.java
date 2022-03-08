@@ -44,8 +44,8 @@ public final class QueryStringMatchConditionParametersResponse {
         @Nullable List<String> transforms) {
         this.matchValues = matchValues;
         this.negateCondition = negateCondition;
-        this.odataType = Objects.requireNonNull(odataType);
-        this.operator = Objects.requireNonNull(operator);
+        this.odataType = odataType;
+        this.operator = operator;
         this.transforms = transforms;
     }
 

@@ -33,9 +33,9 @@ public final class GooglePrivacyDlpV2KMapEstimationConfigResponse {
         List<GooglePrivacyDlpV2AuxiliaryTableResponse> auxiliaryTables,
         List<GooglePrivacyDlpV2TaggedFieldResponse> quasiIds,
         String regionCode) {
-        this.auxiliaryTables = Objects.requireNonNull(auxiliaryTables);
-        this.quasiIds = Objects.requireNonNull(quasiIds);
-        this.regionCode = Objects.requireNonNull(regionCode);
+        this.auxiliaryTables = auxiliaryTables;
+        this.quasiIds = quasiIds;
+        this.regionCode = regionCode;
     }
 
     /**

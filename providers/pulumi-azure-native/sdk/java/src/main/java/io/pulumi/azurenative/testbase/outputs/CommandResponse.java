@@ -76,13 +76,13 @@ public final class CommandResponse {
         @Nullable Boolean restartAfter,
         @Nullable Boolean runAsInteractive,
         @Nullable Boolean runElevated) {
-        this.action = Objects.requireNonNull(action);
+        this.action = action;
         this.alwaysRun = alwaysRun;
         this.applyUpdateBefore = applyUpdateBefore;
-        this.content = Objects.requireNonNull(content);
-        this.contentType = Objects.requireNonNull(contentType);
+        this.content = content;
+        this.contentType = contentType;
         this.maxRunTime = maxRunTime;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.restartAfter = restartAfter;
         this.runAsInteractive = runAsInteractive;
         this.runElevated = runElevated;

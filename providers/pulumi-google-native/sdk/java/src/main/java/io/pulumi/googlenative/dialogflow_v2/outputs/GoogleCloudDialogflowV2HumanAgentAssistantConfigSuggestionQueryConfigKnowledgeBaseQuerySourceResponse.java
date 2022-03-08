@@ -18,7 +18,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
 
     @OutputCustomType.Constructor({"knowledgeBases"})
     private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySourceResponse(List<String> knowledgeBases) {
-        this.knowledgeBases = Objects.requireNonNull(knowledgeBases);
+        this.knowledgeBases = knowledgeBases;
     }
 
     /**

@@ -26,8 +26,8 @@ public final class ConnectivityCollectionResponse {
     private ConnectivityCollectionResponse(
         List<ManagedNetworkGroupResponse> groups,
         List<ManagedNetworkPeeringPolicyResponse> peerings) {
-        this.groups = Objects.requireNonNull(groups);
-        this.peerings = Objects.requireNonNull(peerings);
+        this.groups = groups;
+        this.peerings = peerings;
     }
 
     /**

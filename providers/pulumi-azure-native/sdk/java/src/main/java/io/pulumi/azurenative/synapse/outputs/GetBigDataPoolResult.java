@@ -168,12 +168,12 @@ public final class GetBigDataPoolResult {
         this.customLibraries = customLibraries;
         this.defaultSparkLogFolder = defaultSparkLogFolder;
         this.dynamicExecutorAllocation = dynamicExecutorAllocation;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.isComputeIsolationEnabled = isComputeIsolationEnabled;
-        this.lastSucceededTimestamp = Objects.requireNonNull(lastSucceededTimestamp);
+        this.lastSucceededTimestamp = lastSucceededTimestamp;
         this.libraryRequirements = libraryRequirements;
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
+        this.location = location;
+        this.name = name;
         this.nodeCount = nodeCount;
         this.nodeSize = nodeSize;
         this.nodeSizeFamily = nodeSizeFamily;
@@ -183,7 +183,7 @@ public final class GetBigDataPoolResult {
         this.sparkEventsFolder = sparkEventsFolder;
         this.sparkVersion = sparkVersion;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

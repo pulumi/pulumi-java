@@ -17,7 +17,7 @@ public final class WorkloadMetadataConfigResponse {
 
     @OutputCustomType.Constructor({"mode"})
     private WorkloadMetadataConfigResponse(String mode) {
-        this.mode = Objects.requireNonNull(mode);
+        this.mode = mode;
     }
 
     /**

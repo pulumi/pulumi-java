@@ -27,7 +27,7 @@ public final class ListIotDpsResourceKeysResult {
     private ListIotDpsResourceKeysResult(
         String nextLink,
         @Nullable List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse> value) {
-        this.nextLink = Objects.requireNonNull(nextLink);
+        this.nextLink = nextLink;
         this.value = value;
     }
 

@@ -18,7 +18,7 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpec
 
     @OutputCustomType.Constructor({"values"})
     private GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpecResponse(List<String> values) {
-        this.values = Objects.requireNonNull(values);
+        this.values = values;
     }
 
     /**

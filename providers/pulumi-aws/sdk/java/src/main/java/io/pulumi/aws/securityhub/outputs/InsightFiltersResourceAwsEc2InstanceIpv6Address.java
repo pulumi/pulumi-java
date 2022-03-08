@@ -17,7 +17,7 @@ public final class InsightFiltersResourceAwsEc2InstanceIpv6Address {
 
     @OutputCustomType.Constructor({"cidr"})
     private InsightFiltersResourceAwsEc2InstanceIpv6Address(String cidr) {
-        this.cidr = Objects.requireNonNull(cidr);
+        this.cidr = cidr;
     }
 
     /**

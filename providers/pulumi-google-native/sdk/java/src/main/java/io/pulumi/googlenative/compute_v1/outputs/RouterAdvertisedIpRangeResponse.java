@@ -24,8 +24,8 @@ public final class RouterAdvertisedIpRangeResponse {
     private RouterAdvertisedIpRangeResponse(
         String description,
         String range) {
-        this.description = Objects.requireNonNull(description);
-        this.range = Objects.requireNonNull(range);
+        this.description = description;
+        this.range = range;
     }
 
     /**

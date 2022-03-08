@@ -86,13 +86,13 @@ public final class GetWorkloadNetworkDnsServiceResult {
         this.displayName = displayName;
         this.dnsServiceIp = dnsServiceIp;
         this.fqdnZones = fqdnZones;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.logLevel = logLevel;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.revision = revision;
-        this.status = Objects.requireNonNull(status);
-        this.type = Objects.requireNonNull(type);
+        this.status = status;
+        this.type = type;
     }
 
     /**

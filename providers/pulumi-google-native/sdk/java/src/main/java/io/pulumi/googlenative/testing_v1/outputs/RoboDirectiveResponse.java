@@ -30,9 +30,9 @@ public final class RoboDirectiveResponse {
         String actionType,
         String inputText,
         String resourceName) {
-        this.actionType = Objects.requireNonNull(actionType);
-        this.inputText = Objects.requireNonNull(inputText);
-        this.resourceName = Objects.requireNonNull(resourceName);
+        this.actionType = actionType;
+        this.inputText = inputText;
+        this.resourceName = resourceName;
     }
 
     /**

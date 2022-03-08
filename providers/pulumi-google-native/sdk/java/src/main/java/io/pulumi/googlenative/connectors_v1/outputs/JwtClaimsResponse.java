@@ -30,9 +30,9 @@ public final class JwtClaimsResponse {
         String audience,
         String issuer,
         String subject) {
-        this.audience = Objects.requireNonNull(audience);
-        this.issuer = Objects.requireNonNull(issuer);
-        this.subject = Objects.requireNonNull(subject);
+        this.audience = audience;
+        this.issuer = issuer;
+        this.subject = subject;
     }
 
     /**

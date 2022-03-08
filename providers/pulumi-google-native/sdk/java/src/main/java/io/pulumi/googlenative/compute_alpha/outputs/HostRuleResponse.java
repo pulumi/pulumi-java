@@ -31,9 +31,9 @@ public final class HostRuleResponse {
         String description,
         List<String> hosts,
         String pathMatcher) {
-        this.description = Objects.requireNonNull(description);
-        this.hosts = Objects.requireNonNull(hosts);
-        this.pathMatcher = Objects.requireNonNull(pathMatcher);
+        this.description = description;
+        this.hosts = hosts;
+        this.pathMatcher = pathMatcher;
     }
 
     /**

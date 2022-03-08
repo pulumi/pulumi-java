@@ -36,10 +36,10 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputResponse {
         String modelPath,
         String pythonVersion,
         String runtimeVersion) {
-        this.framework = Objects.requireNonNull(framework);
-        this.modelPath = Objects.requireNonNull(modelPath);
-        this.pythonVersion = Objects.requireNonNull(pythonVersion);
-        this.runtimeVersion = Objects.requireNonNull(runtimeVersion);
+        this.framework = framework;
+        this.modelPath = modelPath;
+        this.pythonVersion = pythonVersion;
+        this.runtimeVersion = runtimeVersion;
     }
 
     /**

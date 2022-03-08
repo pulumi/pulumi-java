@@ -25,8 +25,8 @@ public final class Oauth2JwtBearerResponse {
     private Oauth2JwtBearerResponse(
         SecretResponse clientKey,
         JwtClaimsResponse jwtClaims) {
-        this.clientKey = Objects.requireNonNull(clientKey);
-        this.jwtClaims = Objects.requireNonNull(jwtClaims);
+        this.clientKey = clientKey;
+        this.jwtClaims = jwtClaims;
     }
 
     /**

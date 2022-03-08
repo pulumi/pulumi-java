@@ -13,7 +13,7 @@ public final class GetHealthCheckLogConfig {
 
     @OutputCustomType.Constructor({"enable"})
     private GetHealthCheckLogConfig(Boolean enable) {
-        this.enable = Objects.requireNonNull(enable);
+        this.enable = enable;
     }
 
     public Boolean getEnable() {

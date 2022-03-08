@@ -48,14 +48,14 @@ public final class GetImageResult {
         List<String> imageTags,
         String registryId,
         String repositoryName) {
-        this.id = Objects.requireNonNull(id);
-        this.imageDigest = Objects.requireNonNull(imageDigest);
-        this.imagePushedAt = Objects.requireNonNull(imagePushedAt);
-        this.imageSizeInBytes = Objects.requireNonNull(imageSizeInBytes);
+        this.id = id;
+        this.imageDigest = imageDigest;
+        this.imagePushedAt = imagePushedAt;
+        this.imageSizeInBytes = imageSizeInBytes;
         this.imageTag = imageTag;
-        this.imageTags = Objects.requireNonNull(imageTags);
-        this.registryId = Objects.requireNonNull(registryId);
-        this.repositoryName = Objects.requireNonNull(repositoryName);
+        this.imageTags = imageTags;
+        this.registryId = registryId;
+        this.repositoryName = repositoryName;
     }
 
     /**

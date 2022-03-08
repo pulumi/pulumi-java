@@ -47,7 +47,7 @@ public final class SkuResponse {
         @Nullable String tier) {
         this.capacity = capacity;
         this.family = family;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.size = size;
         this.tier = tier;
     }

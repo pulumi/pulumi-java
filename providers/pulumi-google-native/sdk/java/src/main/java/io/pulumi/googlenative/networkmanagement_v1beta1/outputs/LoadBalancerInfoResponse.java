@@ -44,11 +44,11 @@ public final class LoadBalancerInfoResponse {
         List<LoadBalancerBackendResponse> backends,
         String healthCheckUri,
         String loadBalancerType) {
-        this.backendType = Objects.requireNonNull(backendType);
-        this.backendUri = Objects.requireNonNull(backendUri);
-        this.backends = Objects.requireNonNull(backends);
-        this.healthCheckUri = Objects.requireNonNull(healthCheckUri);
-        this.loadBalancerType = Objects.requireNonNull(loadBalancerType);
+        this.backendType = backendType;
+        this.backendUri = backendUri;
+        this.backends = backends;
+        this.healthCheckUri = healthCheckUri;
+        this.loadBalancerType = loadBalancerType;
     }
 
     /**

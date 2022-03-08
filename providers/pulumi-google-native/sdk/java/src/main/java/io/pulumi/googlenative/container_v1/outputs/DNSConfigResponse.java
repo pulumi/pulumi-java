@@ -30,9 +30,9 @@ public final class DNSConfigResponse {
         String clusterDns,
         String clusterDnsDomain,
         String clusterDnsScope) {
-        this.clusterDns = Objects.requireNonNull(clusterDns);
-        this.clusterDnsDomain = Objects.requireNonNull(clusterDnsDomain);
-        this.clusterDnsScope = Objects.requireNonNull(clusterDnsScope);
+        this.clusterDns = clusterDns;
+        this.clusterDnsDomain = clusterDnsDomain;
+        this.clusterDnsScope = clusterDnsScope;
     }
 
     /**

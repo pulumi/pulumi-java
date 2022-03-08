@@ -65,14 +65,14 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
         List<GoogleCloudRecommendationengineV1beta1ImageResponse> images,
         GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse priceRange,
         String stockState) {
-        this.availableQuantity = Objects.requireNonNull(availableQuantity);
-        this.canonicalProductUri = Objects.requireNonNull(canonicalProductUri);
-        this.costs = Objects.requireNonNull(costs);
-        this.currencyCode = Objects.requireNonNull(currencyCode);
-        this.exactPrice = Objects.requireNonNull(exactPrice);
-        this.images = Objects.requireNonNull(images);
-        this.priceRange = Objects.requireNonNull(priceRange);
-        this.stockState = Objects.requireNonNull(stockState);
+        this.availableQuantity = availableQuantity;
+        this.canonicalProductUri = canonicalProductUri;
+        this.costs = costs;
+        this.currencyCode = currencyCode;
+        this.exactPrice = exactPrice;
+        this.images = images;
+        this.priceRange = priceRange;
+        this.stockState = stockState;
     }
 
     /**

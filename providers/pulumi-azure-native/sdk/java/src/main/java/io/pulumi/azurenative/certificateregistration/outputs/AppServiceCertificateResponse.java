@@ -34,7 +34,7 @@ public final class AppServiceCertificateResponse {
         String provisioningState) {
         this.keyVaultId = keyVaultId;
         this.keyVaultSecretName = keyVaultSecretName;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
     }
 
     /**

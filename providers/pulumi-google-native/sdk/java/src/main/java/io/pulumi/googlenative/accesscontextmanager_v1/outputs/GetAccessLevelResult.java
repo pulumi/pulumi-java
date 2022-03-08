@@ -44,11 +44,11 @@ public final class GetAccessLevelResult {
         String description,
         String name,
         String title) {
-        this.basic = Objects.requireNonNull(basic);
-        this.custom = Objects.requireNonNull(custom);
-        this.description = Objects.requireNonNull(description);
-        this.name = Objects.requireNonNull(name);
-        this.title = Objects.requireNonNull(title);
+        this.basic = basic;
+        this.custom = custom;
+        this.description = description;
+        this.name = name;
+        this.title = title;
     }
 
     /**

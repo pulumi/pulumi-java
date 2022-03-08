@@ -18,9 +18,9 @@ public final class TopicRuleSigV4Authorization {
         String roleArn,
         String serviceName,
         String signingRegion) {
-        this.roleArn = Objects.requireNonNull(roleArn);
-        this.serviceName = Objects.requireNonNull(serviceName);
-        this.signingRegion = Objects.requireNonNull(signingRegion);
+        this.roleArn = roleArn;
+        this.serviceName = serviceName;
+        this.signingRegion = signingRegion;
     }
 
     public String getRoleArn() {

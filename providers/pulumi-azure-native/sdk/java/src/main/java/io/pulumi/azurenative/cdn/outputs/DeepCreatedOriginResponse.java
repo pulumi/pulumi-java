@@ -89,10 +89,10 @@ public final class DeepCreatedOriginResponse {
         @Nullable String privateLinkResourceId,
         @Nullable Integer weight) {
         this.enabled = enabled;
-        this.hostName = Objects.requireNonNull(hostName);
+        this.hostName = hostName;
         this.httpPort = httpPort;
         this.httpsPort = httpsPort;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.originHostHeader = originHostHeader;
         this.priority = priority;
         this.privateLinkAlias = privateLinkAlias;

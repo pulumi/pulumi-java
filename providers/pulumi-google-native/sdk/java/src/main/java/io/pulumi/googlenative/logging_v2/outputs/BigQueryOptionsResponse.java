@@ -24,8 +24,8 @@ public final class BigQueryOptionsResponse {
     private BigQueryOptionsResponse(
         Boolean usePartitionedTables,
         Boolean usesTimestampColumnPartitioning) {
-        this.usePartitionedTables = Objects.requireNonNull(usePartitionedTables);
-        this.usesTimestampColumnPartitioning = Objects.requireNonNull(usesTimestampColumnPartitioning);
+        this.usePartitionedTables = usePartitionedTables;
+        this.usesTimestampColumnPartitioning = usesTimestampColumnPartitioning;
     }
 
     /**

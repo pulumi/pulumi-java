@@ -76,14 +76,14 @@ public final class ServiceBusResponse {
         String provisioningState,
         @Nullable String secondaryConnectionString) {
         this.authenticationType = authenticationType;
-        this.createdTime = Objects.requireNonNull(createdTime);
+        this.createdTime = createdTime;
         this.deadLetterSecret = deadLetterSecret;
         this.deadLetterUri = deadLetterUri;
-        this.endpointType = Objects.requireNonNull(endpointType);
+        this.endpointType = endpointType;
         this.endpointUri = endpointUri;
         this.entityPath = entityPath;
         this.primaryConnectionString = primaryConnectionString;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.secondaryConnectionString = secondaryConnectionString;
     }
 

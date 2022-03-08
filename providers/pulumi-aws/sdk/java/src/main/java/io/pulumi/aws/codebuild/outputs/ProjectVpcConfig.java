@@ -31,9 +31,9 @@ public final class ProjectVpcConfig {
         List<String> securityGroupIds,
         List<String> subnets,
         String vpcId) {
-        this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
-        this.subnets = Objects.requireNonNull(subnets);
-        this.vpcId = Objects.requireNonNull(vpcId);
+        this.securityGroupIds = securityGroupIds;
+        this.subnets = subnets;
+        this.vpcId = vpcId;
     }
 
     /**

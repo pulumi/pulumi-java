@@ -129,25 +129,25 @@ public final class TaskRunnerSettingsResponse {
         String tempStoragePrefix,
         String vmId,
         String workflowFileName) {
-        this.alsologtostderr = Objects.requireNonNull(alsologtostderr);
-        this.baseTaskDir = Objects.requireNonNull(baseTaskDir);
-        this.baseUrl = Objects.requireNonNull(baseUrl);
-        this.commandlinesFileName = Objects.requireNonNull(commandlinesFileName);
-        this.continueOnException = Objects.requireNonNull(continueOnException);
-        this.dataflowApiVersion = Objects.requireNonNull(dataflowApiVersion);
-        this.harnessCommand = Objects.requireNonNull(harnessCommand);
-        this.languageHint = Objects.requireNonNull(languageHint);
-        this.logDir = Objects.requireNonNull(logDir);
-        this.logToSerialconsole = Objects.requireNonNull(logToSerialconsole);
-        this.logUploadLocation = Objects.requireNonNull(logUploadLocation);
-        this.oauthScopes = Objects.requireNonNull(oauthScopes);
-        this.parallelWorkerSettings = Objects.requireNonNull(parallelWorkerSettings);
-        this.streamingWorkerMainClass = Objects.requireNonNull(streamingWorkerMainClass);
-        this.taskGroup = Objects.requireNonNull(taskGroup);
-        this.taskUser = Objects.requireNonNull(taskUser);
-        this.tempStoragePrefix = Objects.requireNonNull(tempStoragePrefix);
-        this.vmId = Objects.requireNonNull(vmId);
-        this.workflowFileName = Objects.requireNonNull(workflowFileName);
+        this.alsologtostderr = alsologtostderr;
+        this.baseTaskDir = baseTaskDir;
+        this.baseUrl = baseUrl;
+        this.commandlinesFileName = commandlinesFileName;
+        this.continueOnException = continueOnException;
+        this.dataflowApiVersion = dataflowApiVersion;
+        this.harnessCommand = harnessCommand;
+        this.languageHint = languageHint;
+        this.logDir = logDir;
+        this.logToSerialconsole = logToSerialconsole;
+        this.logUploadLocation = logUploadLocation;
+        this.oauthScopes = oauthScopes;
+        this.parallelWorkerSettings = parallelWorkerSettings;
+        this.streamingWorkerMainClass = streamingWorkerMainClass;
+        this.taskGroup = taskGroup;
+        this.taskUser = taskUser;
+        this.tempStoragePrefix = tempStoragePrefix;
+        this.vmId = vmId;
+        this.workflowFileName = workflowFileName;
     }
 
     /**

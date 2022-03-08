@@ -98,15 +98,15 @@ public final class GetAutomationResult {
         this.actions = actions;
         this.description = description;
         this.etag = etag;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.isEnabled = isEnabled;
         this.kind = kind;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.scopes = scopes;
         this.sources = sources;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

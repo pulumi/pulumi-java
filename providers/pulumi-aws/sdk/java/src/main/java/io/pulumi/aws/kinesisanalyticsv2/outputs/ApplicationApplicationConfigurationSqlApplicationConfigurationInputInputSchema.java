@@ -35,9 +35,9 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
         List<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordColumn> recordColumns,
         @Nullable String recordEncoding,
         ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormat recordFormat) {
-        this.recordColumns = Objects.requireNonNull(recordColumns);
+        this.recordColumns = recordColumns;
         this.recordEncoding = recordEncoding;
-        this.recordFormat = Objects.requireNonNull(recordFormat);
+        this.recordFormat = recordFormat;
     }
 
     /**

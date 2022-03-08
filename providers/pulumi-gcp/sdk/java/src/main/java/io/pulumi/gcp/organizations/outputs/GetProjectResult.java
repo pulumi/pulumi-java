@@ -44,16 +44,16 @@ public final class GetProjectResult {
         String orgId,
         @Nullable String projectId,
         Boolean skipDelete) {
-        this.autoCreateNetwork = Objects.requireNonNull(autoCreateNetwork);
-        this.billingAccount = Objects.requireNonNull(billingAccount);
-        this.folderId = Objects.requireNonNull(folderId);
-        this.id = Objects.requireNonNull(id);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.number = Objects.requireNonNull(number);
-        this.orgId = Objects.requireNonNull(orgId);
+        this.autoCreateNetwork = autoCreateNetwork;
+        this.billingAccount = billingAccount;
+        this.folderId = folderId;
+        this.id = id;
+        this.labels = labels;
+        this.name = name;
+        this.number = number;
+        this.orgId = orgId;
         this.projectId = projectId;
-        this.skipDelete = Objects.requireNonNull(skipDelete);
+        this.skipDelete = skipDelete;
     }
 
     public Boolean getAutoCreateNetwork() {

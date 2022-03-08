@@ -32,9 +32,9 @@ public final class AnimationResponse {
         AnimationEndResponse animationEnd,
         AnimationFadeResponse animationFade,
         AnimationStaticResponse animationStatic) {
-        this.animationEnd = Objects.requireNonNull(animationEnd);
-        this.animationFade = Objects.requireNonNull(animationFade);
-        this.animationStatic = Objects.requireNonNull(animationStatic);
+        this.animationEnd = animationEnd;
+        this.animationFade = animationFade;
+        this.animationStatic = animationStatic;
     }
 
     /**

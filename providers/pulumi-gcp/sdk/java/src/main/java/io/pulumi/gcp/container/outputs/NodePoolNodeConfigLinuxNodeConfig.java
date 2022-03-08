@@ -14,7 +14,7 @@ public final class NodePoolNodeConfigLinuxNodeConfig {
 
     @OutputCustomType.Constructor({"sysctls"})
     private NodePoolNodeConfigLinuxNodeConfig(Map<String,String> sysctls) {
-        this.sysctls = Objects.requireNonNull(sysctls);
+        this.sysctls = sysctls;
     }
 
     public Map<String,String> getSysctls() {

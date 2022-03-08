@@ -133,7 +133,7 @@ public final class SapOpenHubLinkedServiceResponse {
         this.server = server;
         this.systemId = systemId;
         this.systemNumber = systemNumber;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.userName = userName;
     }
 

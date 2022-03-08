@@ -32,9 +32,9 @@ public final class CommonFeatureSpecResponse {
         AppDevExperienceFeatureSpecResponse appdevexperience,
         CloudAuditLoggingFeatureSpecResponse cloudauditlogging,
         MultiClusterIngressFeatureSpecResponse multiclusteringress) {
-        this.appdevexperience = Objects.requireNonNull(appdevexperience);
-        this.cloudauditlogging = Objects.requireNonNull(cloudauditlogging);
-        this.multiclusteringress = Objects.requireNonNull(multiclusteringress);
+        this.appdevexperience = appdevexperience;
+        this.cloudauditlogging = cloudauditlogging;
+        this.multiclusteringress = multiclusteringress;
     }
 
     /**

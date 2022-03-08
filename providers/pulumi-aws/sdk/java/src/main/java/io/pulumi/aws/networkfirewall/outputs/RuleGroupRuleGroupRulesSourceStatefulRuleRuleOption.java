@@ -27,7 +27,7 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleRuleOption {
     private RuleGroupRuleGroupRulesSourceStatefulRuleRuleOption(
         String keyword,
         @Nullable List<String> settings) {
-        this.keyword = Objects.requireNonNull(keyword);
+        this.keyword = keyword;
         this.settings = settings;
     }
 

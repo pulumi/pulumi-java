@@ -66,15 +66,15 @@ public final class SslCertResponse {
         String kind,
         String selfLink,
         String sha1Fingerprint) {
-        this.cert = Objects.requireNonNull(cert);
-        this.certSerialNumber = Objects.requireNonNull(certSerialNumber);
-        this.commonName = Objects.requireNonNull(commonName);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.expirationTime = Objects.requireNonNull(expirationTime);
-        this.instance = Objects.requireNonNull(instance);
-        this.kind = Objects.requireNonNull(kind);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.sha1Fingerprint = Objects.requireNonNull(sha1Fingerprint);
+        this.cert = cert;
+        this.certSerialNumber = certSerialNumber;
+        this.commonName = commonName;
+        this.createTime = createTime;
+        this.expirationTime = expirationTime;
+        this.instance = instance;
+        this.kind = kind;
+        this.selfLink = selfLink;
+        this.sha1Fingerprint = sha1Fingerprint;
     }
 
     /**

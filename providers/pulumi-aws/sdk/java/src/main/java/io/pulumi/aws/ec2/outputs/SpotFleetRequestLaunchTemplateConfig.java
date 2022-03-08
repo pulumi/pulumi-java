@@ -27,7 +27,7 @@ public final class SpotFleetRequestLaunchTemplateConfig {
     private SpotFleetRequestLaunchTemplateConfig(
         SpotFleetRequestLaunchTemplateConfigLaunchTemplateSpecification launchTemplateSpecification,
         @Nullable List<SpotFleetRequestLaunchTemplateConfigOverride> overrides) {
-        this.launchTemplateSpecification = Objects.requireNonNull(launchTemplateSpecification);
+        this.launchTemplateSpecification = launchTemplateSpecification;
         this.overrides = overrides;
     }
 

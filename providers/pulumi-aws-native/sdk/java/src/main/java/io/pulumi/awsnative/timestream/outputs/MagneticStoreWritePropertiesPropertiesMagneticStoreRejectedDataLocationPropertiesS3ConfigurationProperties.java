@@ -38,8 +38,8 @@ public final class MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDa
         String encryptionOption,
         @Nullable String kmsKeyId,
         @Nullable String objectKeyPrefix) {
-        this.bucketName = Objects.requireNonNull(bucketName);
-        this.encryptionOption = Objects.requireNonNull(encryptionOption);
+        this.bucketName = bucketName;
+        this.encryptionOption = encryptionOption;
         this.kmsKeyId = kmsKeyId;
         this.objectKeyPrefix = objectKeyPrefix;
     }

@@ -32,9 +32,9 @@ public final class SparkSqlBatchResponse {
         List<String> jarFileUris,
         String queryFileUri,
         Map<String,String> queryVariables) {
-        this.jarFileUris = Objects.requireNonNull(jarFileUris);
-        this.queryFileUri = Objects.requireNonNull(queryFileUri);
-        this.queryVariables = Objects.requireNonNull(queryVariables);
+        this.jarFileUris = jarFileUris;
+        this.queryFileUri = queryFileUri;
+        this.queryVariables = queryVariables;
     }
 
     /**

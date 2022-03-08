@@ -37,10 +37,10 @@ public final class ManagedIntegrationRuntimeErrorResponse {
         String message,
         List<String> parameters,
         String time) {
-        this.code = Objects.requireNonNull(code);
-        this.message = Objects.requireNonNull(message);
-        this.parameters = Objects.requireNonNull(parameters);
-        this.time = Objects.requireNonNull(time);
+        this.code = code;
+        this.message = message;
+        this.parameters = parameters;
+        this.time = time;
     }
 
     /**

@@ -104,14 +104,14 @@ public final class DataDiskResponse {
         @Nullable VirtualHardDiskResponse vhd,
         @Nullable Boolean writeAcceleratorEnabled) {
         this.caching = caching;
-        this.createOption = Objects.requireNonNull(createOption);
+        this.createOption = createOption;
         this.deleteOption = deleteOption;
         this.detachOption = detachOption;
-        this.diskIOPSReadWrite = Objects.requireNonNull(diskIOPSReadWrite);
-        this.diskMBpsReadWrite = Objects.requireNonNull(diskMBpsReadWrite);
+        this.diskIOPSReadWrite = diskIOPSReadWrite;
+        this.diskMBpsReadWrite = diskMBpsReadWrite;
         this.diskSizeGB = diskSizeGB;
         this.image = image;
-        this.lun = Objects.requireNonNull(lun);
+        this.lun = lun;
         this.managedDisk = managedDisk;
         this.name = name;
         this.toBeDetached = toBeDetached;

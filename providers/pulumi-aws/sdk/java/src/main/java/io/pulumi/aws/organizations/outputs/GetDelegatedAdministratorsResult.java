@@ -30,8 +30,8 @@ public final class GetDelegatedAdministratorsResult {
         List<GetDelegatedAdministratorsDelegatedAdministrator> delegatedAdministrators,
         String id,
         @Nullable String servicePrincipal) {
-        this.delegatedAdministrators = Objects.requireNonNull(delegatedAdministrators);
-        this.id = Objects.requireNonNull(id);
+        this.delegatedAdministrators = delegatedAdministrators;
+        this.id = id;
         this.servicePrincipal = servicePrincipal;
     }
 

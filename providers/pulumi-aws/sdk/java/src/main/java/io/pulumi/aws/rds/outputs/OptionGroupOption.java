@@ -54,7 +54,7 @@ public final class OptionGroupOption {
         @Nullable String version,
         @Nullable List<String> vpcSecurityGroupMemberships) {
         this.dbSecurityGroupMemberships = dbSecurityGroupMemberships;
-        this.optionName = Objects.requireNonNull(optionName);
+        this.optionName = optionName;
         this.optionSettings = optionSettings;
         this.port = port;
         this.version = version;

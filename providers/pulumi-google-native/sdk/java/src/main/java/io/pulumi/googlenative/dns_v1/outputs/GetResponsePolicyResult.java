@@ -34,10 +34,10 @@ public final class GetResponsePolicyResult {
         String kind,
         List<ResponsePolicyNetworkResponse> networks,
         String responsePolicyName) {
-        this.description = Objects.requireNonNull(description);
-        this.kind = Objects.requireNonNull(kind);
-        this.networks = Objects.requireNonNull(networks);
-        this.responsePolicyName = Objects.requireNonNull(responsePolicyName);
+        this.description = description;
+        this.kind = kind;
+        this.networks = networks;
+        this.responsePolicyName = responsePolicyName;
     }
 
     /**

@@ -13,7 +13,7 @@ public final class MitigationActionUpdateCACertificateParams {
 
     @OutputCustomType.Constructor({"action"})
     private MitigationActionUpdateCACertificateParams(MitigationActionUpdateCACertificateParamsAction action) {
-        this.action = Objects.requireNonNull(action);
+        this.action = action;
     }
 
     public MitigationActionUpdateCACertificateParamsAction getAction() {

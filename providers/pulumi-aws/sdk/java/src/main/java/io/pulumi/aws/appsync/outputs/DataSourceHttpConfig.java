@@ -28,7 +28,7 @@ public final class DataSourceHttpConfig {
         @Nullable DataSourceHttpConfigAuthorizationConfig authorizationConfig,
         String endpoint) {
         this.authorizationConfig = authorizationConfig;
-        this.endpoint = Objects.requireNonNull(endpoint);
+        this.endpoint = endpoint;
     }
 
     /**

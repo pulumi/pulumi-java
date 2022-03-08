@@ -21,9 +21,9 @@ public final class RuleGroupRegexMatchStatement {
         RuleGroupFieldToMatch fieldToMatch,
         String regexString,
         List<RuleGroupTextTransformation> textTransformations) {
-        this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
-        this.regexString = Objects.requireNonNull(regexString);
-        this.textTransformations = Objects.requireNonNull(textTransformations);
+        this.fieldToMatch = fieldToMatch;
+        this.regexString = regexString;
+        this.textTransformations = textTransformations;
     }
 
     public RuleGroupFieldToMatch getFieldToMatch() {

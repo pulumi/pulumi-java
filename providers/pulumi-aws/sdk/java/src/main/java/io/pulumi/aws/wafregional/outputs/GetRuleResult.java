@@ -20,8 +20,8 @@ public final class GetRuleResult {
     private GetRuleResult(
         String id,
         String name) {
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
     }
 
     /**

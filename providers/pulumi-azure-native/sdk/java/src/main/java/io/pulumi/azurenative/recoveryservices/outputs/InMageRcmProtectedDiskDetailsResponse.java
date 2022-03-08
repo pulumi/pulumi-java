@@ -67,15 +67,15 @@ public final class InMageRcmProtectedDiskDetailsResponse {
         String logStorageAccountId,
         String seedManagedDiskId,
         String targetManagedDiskId) {
-        this.capacityInBytes = Objects.requireNonNull(capacityInBytes);
-        this.diskEncryptionSetId = Objects.requireNonNull(diskEncryptionSetId);
-        this.diskId = Objects.requireNonNull(diskId);
-        this.diskName = Objects.requireNonNull(diskName);
-        this.diskType = Objects.requireNonNull(diskType);
-        this.isOSDisk = Objects.requireNonNull(isOSDisk);
-        this.logStorageAccountId = Objects.requireNonNull(logStorageAccountId);
-        this.seedManagedDiskId = Objects.requireNonNull(seedManagedDiskId);
-        this.targetManagedDiskId = Objects.requireNonNull(targetManagedDiskId);
+        this.capacityInBytes = capacityInBytes;
+        this.diskEncryptionSetId = diskEncryptionSetId;
+        this.diskId = diskId;
+        this.diskName = diskName;
+        this.diskType = diskType;
+        this.isOSDisk = isOSDisk;
+        this.logStorageAccountId = logStorageAccountId;
+        this.seedManagedDiskId = seedManagedDiskId;
+        this.targetManagedDiskId = targetManagedDiskId;
     }
 
     /**

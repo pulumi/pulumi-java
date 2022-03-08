@@ -18,7 +18,7 @@ public final class SearchConfigResponse {
 
     @OutputCustomType.Constructor({"searchParameters"})
     private SearchConfigResponse(List<SearchParameterResponse> searchParameters) {
-        this.searchParameters = Objects.requireNonNull(searchParameters);
+        this.searchParameters = searchParameters;
     }
 
     /**

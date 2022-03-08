@@ -25,8 +25,8 @@ public final class InstancePropertiesPatchResponse {
     private InstancePropertiesPatchResponse(
         Map<String,String> labels,
         Map<String,String> metadata) {
-        this.labels = Objects.requireNonNull(labels);
-        this.metadata = Objects.requireNonNull(metadata);
+        this.labels = labels;
+        this.metadata = metadata;
     }
 
     /**

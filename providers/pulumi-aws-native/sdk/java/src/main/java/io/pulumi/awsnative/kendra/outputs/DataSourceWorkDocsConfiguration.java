@@ -33,7 +33,7 @@ public final class DataSourceWorkDocsConfiguration {
         this.exclusionPatterns = exclusionPatterns;
         this.fieldMappings = fieldMappings;
         this.inclusionPatterns = inclusionPatterns;
-        this.organizationId = Objects.requireNonNull(organizationId);
+        this.organizationId = organizationId;
         this.useChangeLog = useChangeLog;
     }
 

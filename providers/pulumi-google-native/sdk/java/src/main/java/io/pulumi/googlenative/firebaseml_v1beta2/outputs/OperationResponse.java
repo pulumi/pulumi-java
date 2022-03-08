@@ -45,11 +45,11 @@ public final class OperationResponse {
         Map<String,String> metadata,
         String name,
         Map<String,String> response) {
-        this.done = Objects.requireNonNull(done);
-        this.error = Objects.requireNonNull(error);
-        this.metadata = Objects.requireNonNull(metadata);
-        this.name = Objects.requireNonNull(name);
-        this.response = Objects.requireNonNull(response);
+        this.done = done;
+        this.error = error;
+        this.metadata = metadata;
+        this.name = name;
+        this.response = response;
     }
 
     /**

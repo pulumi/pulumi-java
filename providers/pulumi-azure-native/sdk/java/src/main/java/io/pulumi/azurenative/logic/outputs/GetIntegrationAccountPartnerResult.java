@@ -77,16 +77,16 @@ public final class GetIntegrationAccountPartnerResult {
         String partnerType,
         @Nullable Map<String,String> tags,
         String type) {
-        this.changedTime = Objects.requireNonNull(changedTime);
-        this.content = Objects.requireNonNull(content);
-        this.createdTime = Objects.requireNonNull(createdTime);
-        this.id = Objects.requireNonNull(id);
+        this.changedTime = changedTime;
+        this.content = content;
+        this.createdTime = createdTime;
+        this.id = id;
         this.location = location;
         this.metadata = metadata;
-        this.name = Objects.requireNonNull(name);
-        this.partnerType = Objects.requireNonNull(partnerType);
+        this.name = name;
+        this.partnerType = partnerType;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

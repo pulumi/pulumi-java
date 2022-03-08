@@ -36,10 +36,10 @@ public final class SymptomResponse {
         String details,
         String symptomType,
         String workerId) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.details = Objects.requireNonNull(details);
-        this.symptomType = Objects.requireNonNull(symptomType);
-        this.workerId = Objects.requireNonNull(workerId);
+        this.createTime = createTime;
+        this.details = details;
+        this.symptomType = symptomType;
+        this.workerId = workerId;
     }
 
     /**

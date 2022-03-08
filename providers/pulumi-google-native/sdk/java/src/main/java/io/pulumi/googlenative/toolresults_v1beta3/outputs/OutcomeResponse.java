@@ -46,11 +46,11 @@ public final class OutcomeResponse {
         SkippedDetailResponse skippedDetail,
         SuccessDetailResponse successDetail,
         String summary) {
-        this.failureDetail = Objects.requireNonNull(failureDetail);
-        this.inconclusiveDetail = Objects.requireNonNull(inconclusiveDetail);
-        this.skippedDetail = Objects.requireNonNull(skippedDetail);
-        this.successDetail = Objects.requireNonNull(successDetail);
-        this.summary = Objects.requireNonNull(summary);
+        this.failureDetail = failureDetail;
+        this.inconclusiveDetail = inconclusiveDetail;
+        this.skippedDetail = skippedDetail;
+        this.successDetail = successDetail;
+        this.summary = summary;
     }
 
     /**

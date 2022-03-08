@@ -81,17 +81,17 @@ public final class GetIoTAddonResult {
         SystemDataResponse systemData,
         String type,
         String version) {
-        this.hostPlatform = Objects.requireNonNull(hostPlatform);
-        this.hostPlatformType = Objects.requireNonNull(hostPlatformType);
-        this.id = Objects.requireNonNull(id);
-        this.ioTDeviceDetails = Objects.requireNonNull(ioTDeviceDetails);
-        this.ioTEdgeDeviceDetails = Objects.requireNonNull(ioTEdgeDeviceDetails);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
-        this.version = Objects.requireNonNull(version);
+        this.hostPlatform = hostPlatform;
+        this.hostPlatformType = hostPlatformType;
+        this.id = id;
+        this.ioTDeviceDetails = ioTDeviceDetails;
+        this.ioTEdgeDeviceDetails = ioTEdgeDeviceDetails;
+        this.kind = kind;
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.systemData = systemData;
+        this.type = type;
+        this.version = version;
     }
 
     /**

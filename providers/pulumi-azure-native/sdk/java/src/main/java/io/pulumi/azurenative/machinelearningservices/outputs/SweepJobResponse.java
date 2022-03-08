@@ -152,23 +152,23 @@ public final class SweepJobResponse {
         @Nullable Map<String,String> tags,
         @Nullable String timeout,
         @Nullable TrialComponentResponse trial) {
-        this.algorithm = Objects.requireNonNull(algorithm);
-        this.compute = Objects.requireNonNull(compute);
+        this.algorithm = algorithm;
+        this.compute = compute;
         this.description = description;
         this.earlyTermination = earlyTermination;
         this.experimentName = experimentName;
         this.identity = identity;
-        this.interactionEndpoints = Objects.requireNonNull(interactionEndpoints);
-        this.jobType = Objects.requireNonNull(jobType);
+        this.interactionEndpoints = interactionEndpoints;
+        this.jobType = jobType;
         this.maxConcurrentTrials = maxConcurrentTrials;
         this.maxTotalTrials = maxTotalTrials;
-        this.objective = Objects.requireNonNull(objective);
-        this.output = Objects.requireNonNull(output);
+        this.objective = objective;
+        this.output = output;
         this.priority = priority;
         this.properties = properties;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.searchSpace = Objects.requireNonNull(searchSpace);
-        this.status = Objects.requireNonNull(status);
+        this.provisioningState = provisioningState;
+        this.searchSpace = searchSpace;
+        this.status = status;
         this.tags = tags;
         this.timeout = timeout;
         this.trial = trial;

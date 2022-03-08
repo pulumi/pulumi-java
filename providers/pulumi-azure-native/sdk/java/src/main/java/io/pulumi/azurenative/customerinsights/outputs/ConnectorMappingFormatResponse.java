@@ -53,7 +53,7 @@ public final class ConnectorMappingFormatResponse {
         this.acceptLanguage = acceptLanguage;
         this.arraySeparator = arraySeparator;
         this.columnDelimiter = columnDelimiter;
-        this.formatType = Objects.requireNonNull(formatType);
+        this.formatType = formatType;
         this.quoteCharacter = quoteCharacter;
         this.quoteEscapeCharacter = quoteEscapeCharacter;
     }

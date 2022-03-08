@@ -34,7 +34,7 @@ public final class CrawlerDynamodbTarget {
         String path,
         @Nullable Boolean scanAll,
         @Nullable Double scanRate) {
-        this.path = Objects.requireNonNull(path);
+        this.path = path;
         this.scanAll = scanAll;
         this.scanRate = scanRate;
     }

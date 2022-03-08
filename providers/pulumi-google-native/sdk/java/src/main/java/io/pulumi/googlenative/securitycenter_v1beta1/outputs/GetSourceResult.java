@@ -30,9 +30,9 @@ public final class GetSourceResult {
         String description,
         String displayName,
         String name) {
-        this.description = Objects.requireNonNull(description);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.name = Objects.requireNonNull(name);
+        this.description = description;
+        this.displayName = displayName;
+        this.name = name;
     }
 
     /**

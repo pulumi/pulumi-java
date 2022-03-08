@@ -26,9 +26,9 @@ public final class DataSourceColumnConfiguration {
         String documentIdColumnName,
         @Nullable String documentTitleColumnName,
         @Nullable List<DataSourceToIndexFieldMapping> fieldMappings) {
-        this.changeDetectingColumns = Objects.requireNonNull(changeDetectingColumns);
-        this.documentDataColumnName = Objects.requireNonNull(documentDataColumnName);
-        this.documentIdColumnName = Objects.requireNonNull(documentIdColumnName);
+        this.changeDetectingColumns = changeDetectingColumns;
+        this.documentDataColumnName = documentDataColumnName;
+        this.documentIdColumnName = documentIdColumnName;
         this.documentTitleColumnName = documentTitleColumnName;
         this.fieldMappings = fieldMappings;
     }

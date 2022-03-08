@@ -17,7 +17,7 @@ public final class PacketMirroringNetwork {
 
     @OutputCustomType.Constructor({"url"})
     private PacketMirroringNetwork(String url) {
-        this.url = Objects.requireNonNull(url);
+        this.url = url;
     }
 
     /**

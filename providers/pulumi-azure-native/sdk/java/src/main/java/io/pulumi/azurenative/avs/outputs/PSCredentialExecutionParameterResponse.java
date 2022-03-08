@@ -39,9 +39,9 @@ public final class PSCredentialExecutionParameterResponse {
         @Nullable String password,
         String type,
         @Nullable String username) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.password = password;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.username = username;
     }
 

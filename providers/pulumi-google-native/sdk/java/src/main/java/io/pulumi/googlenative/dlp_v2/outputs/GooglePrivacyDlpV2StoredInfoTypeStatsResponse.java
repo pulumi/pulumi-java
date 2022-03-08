@@ -17,7 +17,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeStatsResponse {
 
     @OutputCustomType.Constructor({"largeCustomDictionary"})
     private GooglePrivacyDlpV2StoredInfoTypeStatsResponse(GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse largeCustomDictionary) {
-        this.largeCustomDictionary = Objects.requireNonNull(largeCustomDictionary);
+        this.largeCustomDictionary = largeCustomDictionary;
     }
 
     /**

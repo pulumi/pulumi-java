@@ -25,8 +25,8 @@ public final class ExplainQueryStepResponse {
     private ExplainQueryStepResponse(
         String kind,
         List<String> substeps) {
-        this.kind = Objects.requireNonNull(kind);
-        this.substeps = Objects.requireNonNull(substeps);
+        this.kind = kind;
+        this.substeps = substeps;
     }
 
     /**

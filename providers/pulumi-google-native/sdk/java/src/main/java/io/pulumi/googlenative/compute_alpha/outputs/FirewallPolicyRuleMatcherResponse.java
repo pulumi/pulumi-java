@@ -75,16 +75,16 @@ public final class FirewallPolicyRuleMatcherResponse {
         List<String> srcIpRanges,
         List<String> srcRegionCodes,
         List<FirewallPolicyRuleSecureTagResponse> srcSecureTags) {
-        this.destAddressGroups = Objects.requireNonNull(destAddressGroups);
-        this.destFqdns = Objects.requireNonNull(destFqdns);
-        this.destIpRanges = Objects.requireNonNull(destIpRanges);
-        this.destRegionCodes = Objects.requireNonNull(destRegionCodes);
-        this.layer4Configs = Objects.requireNonNull(layer4Configs);
-        this.srcAddressGroups = Objects.requireNonNull(srcAddressGroups);
-        this.srcFqdns = Objects.requireNonNull(srcFqdns);
-        this.srcIpRanges = Objects.requireNonNull(srcIpRanges);
-        this.srcRegionCodes = Objects.requireNonNull(srcRegionCodes);
-        this.srcSecureTags = Objects.requireNonNull(srcSecureTags);
+        this.destAddressGroups = destAddressGroups;
+        this.destFqdns = destFqdns;
+        this.destIpRanges = destIpRanges;
+        this.destRegionCodes = destRegionCodes;
+        this.layer4Configs = layer4Configs;
+        this.srcAddressGroups = srcAddressGroups;
+        this.srcFqdns = srcFqdns;
+        this.srcIpRanges = srcIpRanges;
+        this.srcRegionCodes = srcRegionCodes;
+        this.srcSecureTags = srcSecureTags;
     }
 
     /**

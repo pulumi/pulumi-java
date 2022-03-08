@@ -19,7 +19,7 @@ public final class IamAuditConfigAuditLogConfig {
         @Nullable List<String> exemptedMembers,
         String logType) {
         this.exemptedMembers = exemptedMembers;
-        this.logType = Objects.requireNonNull(logType);
+        this.logType = logType;
     }
 
     public List<String> getExemptedMembers() {

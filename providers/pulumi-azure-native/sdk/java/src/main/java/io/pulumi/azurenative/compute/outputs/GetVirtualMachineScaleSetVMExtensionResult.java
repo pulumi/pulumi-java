@@ -92,14 +92,14 @@ public final class GetVirtualMachineScaleSetVMExtensionResult {
         this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
         this.enableAutomaticUpgrade = enableAutomaticUpgrade;
         this.forceUpdateTag = forceUpdateTag;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.instanceView = instanceView;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.protectedSettings = protectedSettings;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.publisher = publisher;
         this.settings = settings;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.typeHandlerVersion = typeHandlerVersion;
     }
 

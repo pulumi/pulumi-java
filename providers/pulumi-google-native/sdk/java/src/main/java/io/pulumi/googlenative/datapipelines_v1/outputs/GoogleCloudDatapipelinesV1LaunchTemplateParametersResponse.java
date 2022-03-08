@@ -45,11 +45,11 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse {
         Map<String,String> parameters,
         Map<String,String> transformNameMapping,
         Boolean update) {
-        this.environment = Objects.requireNonNull(environment);
-        this.jobName = Objects.requireNonNull(jobName);
-        this.parameters = Objects.requireNonNull(parameters);
-        this.transformNameMapping = Objects.requireNonNull(transformNameMapping);
-        this.update = Objects.requireNonNull(update);
+        this.environment = environment;
+        this.jobName = jobName;
+        this.parameters = parameters;
+        this.transformNameMapping = transformNameMapping;
+        this.update = update;
     }
 
     /**

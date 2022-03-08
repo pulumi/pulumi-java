@@ -25,8 +25,8 @@ public final class ServiceDnsConfigDnsRecord {
     private ServiceDnsConfigDnsRecord(
         Integer ttl,
         String type) {
-        this.ttl = Objects.requireNonNull(ttl);
-        this.type = Objects.requireNonNull(type);
+        this.ttl = ttl;
+        this.type = type;
     }
 
     /**

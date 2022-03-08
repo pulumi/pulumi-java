@@ -24,8 +24,8 @@ public final class NetworkConfigResponse {
     private NetworkConfigResponse(
         String ipAllocation,
         String network) {
-        this.ipAllocation = Objects.requireNonNull(ipAllocation);
-        this.network = Objects.requireNonNull(network);
+        this.ipAllocation = ipAllocation;
+        this.network = network;
     }
 
     /**

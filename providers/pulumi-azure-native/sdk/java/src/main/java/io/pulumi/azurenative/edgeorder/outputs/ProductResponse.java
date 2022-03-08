@@ -68,14 +68,14 @@ public final class ProductResponse {
         List<FilterablePropertyResponse> filterableProperties,
         HierarchyInformationResponse hierarchyInformation,
         List<ImageInformationResponse> imageInformation) {
-        this.availabilityInformation = Objects.requireNonNull(availabilityInformation);
-        this.configurations = Objects.requireNonNull(configurations);
-        this.costInformation = Objects.requireNonNull(costInformation);
-        this.description = Objects.requireNonNull(description);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.filterableProperties = Objects.requireNonNull(filterableProperties);
-        this.hierarchyInformation = Objects.requireNonNull(hierarchyInformation);
-        this.imageInformation = Objects.requireNonNull(imageInformation);
+        this.availabilityInformation = availabilityInformation;
+        this.configurations = configurations;
+        this.costInformation = costInformation;
+        this.description = description;
+        this.displayName = displayName;
+        this.filterableProperties = filterableProperties;
+        this.hierarchyInformation = hierarchyInformation;
+        this.imageInformation = imageInformation;
     }
 
     /**

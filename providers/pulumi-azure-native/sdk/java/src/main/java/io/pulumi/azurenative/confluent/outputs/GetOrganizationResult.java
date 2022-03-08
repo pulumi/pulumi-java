@@ -83,16 +83,16 @@ public final class GetOrganizationResult {
         @Nullable Map<String,String> tags,
         String type,
         @Nullable OrganizationResourcePropertiesResponseUserDetail userDetail) {
-        this.createdTime = Objects.requireNonNull(createdTime);
-        this.id = Objects.requireNonNull(id);
+        this.createdTime = createdTime;
+        this.id = id;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.offerDetail = offerDetail;
-        this.organizationId = Objects.requireNonNull(organizationId);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.ssoUrl = Objects.requireNonNull(ssoUrl);
+        this.organizationId = organizationId;
+        this.provisioningState = provisioningState;
+        this.ssoUrl = ssoUrl;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.userDetail = userDetail;
     }
 

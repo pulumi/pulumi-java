@@ -13,7 +13,7 @@ public final class FlowSlackSourceProperties {
 
     @OutputCustomType.Constructor({"object"})
     private FlowSlackSourceProperties(String object) {
-        this.object = Objects.requireNonNull(object);
+        this.object = object;
     }
 
     public String getObject() {

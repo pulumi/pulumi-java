@@ -80,16 +80,16 @@ public final class TestSpecificationResponse {
         IosXcTestResponse iosXcTest,
         TestSetupResponse testSetup,
         String testTimeout) {
-        this.androidInstrumentationTest = Objects.requireNonNull(androidInstrumentationTest);
-        this.androidRoboTest = Objects.requireNonNull(androidRoboTest);
-        this.androidTestLoop = Objects.requireNonNull(androidTestLoop);
-        this.disablePerformanceMetrics = Objects.requireNonNull(disablePerformanceMetrics);
-        this.disableVideoRecording = Objects.requireNonNull(disableVideoRecording);
-        this.iosTestLoop = Objects.requireNonNull(iosTestLoop);
-        this.iosTestSetup = Objects.requireNonNull(iosTestSetup);
-        this.iosXcTest = Objects.requireNonNull(iosXcTest);
-        this.testSetup = Objects.requireNonNull(testSetup);
-        this.testTimeout = Objects.requireNonNull(testTimeout);
+        this.androidInstrumentationTest = androidInstrumentationTest;
+        this.androidRoboTest = androidRoboTest;
+        this.androidTestLoop = androidTestLoop;
+        this.disablePerformanceMetrics = disablePerformanceMetrics;
+        this.disableVideoRecording = disableVideoRecording;
+        this.iosTestLoop = iosTestLoop;
+        this.iosTestSetup = iosTestSetup;
+        this.iosXcTest = iosXcTest;
+        this.testSetup = testSetup;
+        this.testTimeout = testTimeout;
     }
 
     /**

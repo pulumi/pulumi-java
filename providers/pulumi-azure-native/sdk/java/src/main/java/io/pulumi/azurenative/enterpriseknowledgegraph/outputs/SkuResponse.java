@@ -17,7 +17,7 @@ public final class SkuResponse {
 
     @OutputCustomType.Constructor({"name"})
     private SkuResponse(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

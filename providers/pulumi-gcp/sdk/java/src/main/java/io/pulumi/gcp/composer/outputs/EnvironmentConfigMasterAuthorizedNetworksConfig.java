@@ -20,7 +20,7 @@ public final class EnvironmentConfigMasterAuthorizedNetworksConfig {
         @Nullable List<EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlock> cidrBlocks,
         Boolean enabled) {
         this.cidrBlocks = cidrBlocks;
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
     }
 
     public List<EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlock> getCidrBlocks() {

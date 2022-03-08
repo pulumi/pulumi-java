@@ -13,7 +13,7 @@ public final class ModelExplainabilityJobDefinitionMonitoringResources {
 
     @OutputCustomType.Constructor({"clusterConfig"})
     private ModelExplainabilityJobDefinitionMonitoringResources(ModelExplainabilityJobDefinitionClusterConfig clusterConfig) {
-        this.clusterConfig = Objects.requireNonNull(clusterConfig);
+        this.clusterConfig = clusterConfig;
     }
 
     public ModelExplainabilityJobDefinitionClusterConfig getClusterConfig() {

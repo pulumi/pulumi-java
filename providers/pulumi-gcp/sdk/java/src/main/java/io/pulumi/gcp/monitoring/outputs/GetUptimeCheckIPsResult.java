@@ -26,8 +26,8 @@ public final class GetUptimeCheckIPsResult {
     private GetUptimeCheckIPsResult(
         String id,
         List<GetUptimeCheckIPsUptimeCheckIp> uptimeCheckIps) {
-        this.id = Objects.requireNonNull(id);
-        this.uptimeCheckIps = Objects.requireNonNull(uptimeCheckIps);
+        this.id = id;
+        this.uptimeCheckIps = uptimeCheckIps;
     }
 
     /**

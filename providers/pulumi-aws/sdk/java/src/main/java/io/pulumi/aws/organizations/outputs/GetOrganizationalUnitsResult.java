@@ -28,9 +28,9 @@ public final class GetOrganizationalUnitsResult {
         List<GetOrganizationalUnitsChildren> childrens,
         String id,
         String parentId) {
-        this.childrens = Objects.requireNonNull(childrens);
-        this.id = Objects.requireNonNull(id);
-        this.parentId = Objects.requireNonNull(parentId);
+        this.childrens = childrens;
+        this.id = id;
+        this.parentId = parentId;
     }
 
     /**

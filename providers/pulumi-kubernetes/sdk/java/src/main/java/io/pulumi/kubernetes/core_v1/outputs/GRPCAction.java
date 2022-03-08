@@ -29,7 +29,7 @@ public final class GRPCAction {
     private GRPCAction(
         Integer port,
         @Nullable String service) {
-        this.port = Objects.requireNonNull(port);
+        this.port = port;
         this.service = service;
     }
 

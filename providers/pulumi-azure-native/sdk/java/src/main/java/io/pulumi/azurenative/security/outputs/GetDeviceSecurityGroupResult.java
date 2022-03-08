@@ -62,11 +62,11 @@ public final class GetDeviceSecurityGroupResult {
         String type) {
         this.allowlistRules = allowlistRules;
         this.denylistRules = denylistRules;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.thresholdRules = thresholdRules;
         this.timeWindowRules = timeWindowRules;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

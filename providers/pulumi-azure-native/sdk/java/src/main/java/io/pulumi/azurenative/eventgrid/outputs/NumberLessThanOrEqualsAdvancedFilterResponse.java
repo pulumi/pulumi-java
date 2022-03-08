@@ -35,7 +35,7 @@ public final class NumberLessThanOrEqualsAdvancedFilterResponse {
         String operatorType,
         @Nullable Double value) {
         this.key = key;
-        this.operatorType = Objects.requireNonNull(operatorType);
+        this.operatorType = operatorType;
         this.value = value;
     }
 

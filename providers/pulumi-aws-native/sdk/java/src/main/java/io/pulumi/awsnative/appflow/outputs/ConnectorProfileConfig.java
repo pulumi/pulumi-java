@@ -19,7 +19,7 @@ public final class ConnectorProfileConfig {
     private ConnectorProfileConfig(
         ConnectorProfileCredentials connectorProfileCredentials,
         @Nullable ConnectorProfileProperties connectorProfileProperties) {
-        this.connectorProfileCredentials = Objects.requireNonNull(connectorProfileCredentials);
+        this.connectorProfileCredentials = connectorProfileCredentials;
         this.connectorProfileProperties = connectorProfileProperties;
     }
 

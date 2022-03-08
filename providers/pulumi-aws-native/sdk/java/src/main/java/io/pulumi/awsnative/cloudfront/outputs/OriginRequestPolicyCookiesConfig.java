@@ -18,7 +18,7 @@ public final class OriginRequestPolicyCookiesConfig {
     private OriginRequestPolicyCookiesConfig(
         String cookieBehavior,
         @Nullable List<String> cookies) {
-        this.cookieBehavior = Objects.requireNonNull(cookieBehavior);
+        this.cookieBehavior = cookieBehavior;
         this.cookies = cookies;
     }
 

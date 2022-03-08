@@ -17,7 +17,7 @@ public final class GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse {
 
     @OutputCustomType.Constructor({"approxNumPhrases"})
     private GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse(String approxNumPhrases) {
-        this.approxNumPhrases = Objects.requireNonNull(approxNumPhrases);
+        this.approxNumPhrases = approxNumPhrases;
     }
 
     /**

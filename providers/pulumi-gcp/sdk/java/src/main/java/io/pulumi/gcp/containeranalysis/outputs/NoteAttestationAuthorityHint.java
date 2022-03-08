@@ -18,7 +18,7 @@ public final class NoteAttestationAuthorityHint {
 
     @OutputCustomType.Constructor({"humanReadableName"})
     private NoteAttestationAuthorityHint(String humanReadableName) {
-        this.humanReadableName = Objects.requireNonNull(humanReadableName);
+        this.humanReadableName = humanReadableName;
     }
 
     /**

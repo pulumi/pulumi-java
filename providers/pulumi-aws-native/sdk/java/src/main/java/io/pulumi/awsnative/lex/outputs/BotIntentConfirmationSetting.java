@@ -22,9 +22,9 @@ public final class BotIntentConfirmationSetting {
         BotResponseSpecification declinationResponse,
         @Nullable Boolean isActive,
         BotPromptSpecification promptSpecification) {
-        this.declinationResponse = Objects.requireNonNull(declinationResponse);
+        this.declinationResponse = declinationResponse;
         this.isActive = isActive;
-        this.promptSpecification = Objects.requireNonNull(promptSpecification);
+        this.promptSpecification = promptSpecification;
     }
 
     public BotResponseSpecification getDeclinationResponse() {

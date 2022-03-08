@@ -25,8 +25,8 @@ public final class GoogleCloudDialogflowCxV3beta1VariantsHistoryResponse {
     private GoogleCloudDialogflowCxV3beta1VariantsHistoryResponse(
         String updateTime,
         GoogleCloudDialogflowCxV3beta1VersionVariantsResponse versionVariants) {
-        this.updateTime = Objects.requireNonNull(updateTime);
-        this.versionVariants = Objects.requireNonNull(versionVariants);
+        this.updateTime = updateTime;
+        this.versionVariants = versionVariants;
     }
 
     /**

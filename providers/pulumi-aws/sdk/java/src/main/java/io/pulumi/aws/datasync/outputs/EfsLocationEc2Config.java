@@ -25,8 +25,8 @@ public final class EfsLocationEc2Config {
     private EfsLocationEc2Config(
         List<String> securityGroupArns,
         String subnetArn) {
-        this.securityGroupArns = Objects.requireNonNull(securityGroupArns);
-        this.subnetArn = Objects.requireNonNull(subnetArn);
+        this.securityGroupArns = securityGroupArns;
+        this.subnetArn = subnetArn;
     }
 
     /**

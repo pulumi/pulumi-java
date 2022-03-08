@@ -24,8 +24,8 @@ public final class DiskEncryptionConfigurationResponse {
     private DiskEncryptionConfigurationResponse(
         String kind,
         String kmsKeyName) {
-        this.kind = Objects.requireNonNull(kind);
-        this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
+        this.kind = kind;
+        this.kmsKeyName = kmsKeyName;
     }
 
     /**

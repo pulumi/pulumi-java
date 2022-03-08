@@ -71,15 +71,15 @@ public final class GetTriggerResult {
         String serviceAccount,
         TransportResponse transport,
         String updateTime) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.destination = Objects.requireNonNull(destination);
-        this.etag = Objects.requireNonNull(etag);
-        this.labels = Objects.requireNonNull(labels);
-        this.matchingCriteria = Objects.requireNonNull(matchingCriteria);
-        this.name = Objects.requireNonNull(name);
-        this.serviceAccount = Objects.requireNonNull(serviceAccount);
-        this.transport = Objects.requireNonNull(transport);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.createTime = createTime;
+        this.destination = destination;
+        this.etag = etag;
+        this.labels = labels;
+        this.matchingCriteria = matchingCriteria;
+        this.name = name;
+        this.serviceAccount = serviceAccount;
+        this.transport = transport;
+        this.updateTime = updateTime;
     }
 
     /**

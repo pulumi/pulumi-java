@@ -50,12 +50,12 @@ public final class GetSuppressionResult {
         @Nullable String suppressionId,
         @Nullable String ttl,
         String type) {
-        this.expirationTimeStamp = Objects.requireNonNull(expirationTimeStamp);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.expirationTimeStamp = expirationTimeStamp;
+        this.id = id;
+        this.name = name;
         this.suppressionId = suppressionId;
         this.ttl = ttl;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

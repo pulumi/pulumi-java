@@ -156,28 +156,28 @@ public final class GetDomainServiceResult {
         String tenantId,
         String type,
         Integer version) {
-        this.deploymentId = Objects.requireNonNull(deploymentId);
+        this.deploymentId = deploymentId;
         this.domainConfigurationType = domainConfigurationType;
         this.domainName = domainName;
         this.domainSecuritySettings = domainSecuritySettings;
         this.etag = etag;
         this.filteredSync = filteredSync;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.ldapsSettings = ldapsSettings;
         this.location = location;
-        this.migrationProperties = Objects.requireNonNull(migrationProperties);
-        this.name = Objects.requireNonNull(name);
+        this.migrationProperties = migrationProperties;
+        this.name = name;
         this.notificationSettings = notificationSettings;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.replicaSets = replicaSets;
         this.resourceForestSettings = resourceForestSettings;
         this.sku = sku;
-        this.syncOwner = Objects.requireNonNull(syncOwner);
-        this.systemData = Objects.requireNonNull(systemData);
+        this.syncOwner = syncOwner;
+        this.systemData = systemData;
         this.tags = tags;
-        this.tenantId = Objects.requireNonNull(tenantId);
-        this.type = Objects.requireNonNull(type);
-        this.version = Objects.requireNonNull(version);
+        this.tenantId = tenantId;
+        this.type = type;
+        this.version = version;
     }
 
     /**

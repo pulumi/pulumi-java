@@ -83,16 +83,16 @@ public final class GetEnvironmentResult {
         String type,
         String uniqueIdentifier) {
         this.armTemplateDisplayName = armTemplateDisplayName;
-        this.createdByUser = Objects.requireNonNull(createdByUser);
+        this.createdByUser = createdByUser;
         this.deploymentProperties = deploymentProperties;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.resourceGroupId = Objects.requireNonNull(resourceGroupId);
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.resourceGroupId = resourceGroupId;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
-        this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
+        this.type = type;
+        this.uniqueIdentifier = uniqueIdentifier;
     }
 
     /**

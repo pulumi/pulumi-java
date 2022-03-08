@@ -14,7 +14,7 @@ public final class GetClusterMasterAuthorizedNetworksConfig {
 
     @OutputCustomType.Constructor({"cidrBlocks"})
     private GetClusterMasterAuthorizedNetworksConfig(List<GetClusterMasterAuthorizedNetworksConfigCidrBlock> cidrBlocks) {
-        this.cidrBlocks = Objects.requireNonNull(cidrBlocks);
+        this.cidrBlocks = cidrBlocks;
     }
 
     public List<GetClusterMasterAuthorizedNetworksConfigCidrBlock> getCidrBlocks() {

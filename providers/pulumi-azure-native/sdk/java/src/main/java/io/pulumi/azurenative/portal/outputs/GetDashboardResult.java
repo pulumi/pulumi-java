@@ -59,13 +59,13 @@ public final class GetDashboardResult {
         String name,
         @Nullable Map<String,String> tags,
         String type) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.lenses = lenses;
-        this.location = Objects.requireNonNull(location);
+        this.location = location;
         this.metadata = metadata;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

@@ -20,9 +20,9 @@ public final class ChannelCustomerManagedS3 {
         String bucket,
         @Nullable String keyPrefix,
         String roleArn) {
-        this.bucket = Objects.requireNonNull(bucket);
+        this.bucket = bucket;
         this.keyPrefix = keyPrefix;
-        this.roleArn = Objects.requireNonNull(roleArn);
+        this.roleArn = roleArn;
     }
 
     public String getBucket() {

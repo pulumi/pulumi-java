@@ -31,9 +31,9 @@ public final class DiskResponse {
         String diskType,
         String mountPoint,
         Integer sizeGb) {
-        this.diskType = Objects.requireNonNull(diskType);
-        this.mountPoint = Objects.requireNonNull(mountPoint);
-        this.sizeGb = Objects.requireNonNull(sizeGb);
+        this.diskType = diskType;
+        this.mountPoint = mountPoint;
+        this.sizeGb = sizeGb;
     }
 
     /**

@@ -50,11 +50,11 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
         @Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutput lambdaOutput,
         String name,
         @Nullable String outputId) {
-        this.destinationSchema = Objects.requireNonNull(destinationSchema);
+        this.destinationSchema = destinationSchema;
         this.kinesisFirehoseOutput = kinesisFirehoseOutput;
         this.kinesisStreamsOutput = kinesisStreamsOutput;
         this.lambdaOutput = lambdaOutput;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.outputId = outputId;
     }
 

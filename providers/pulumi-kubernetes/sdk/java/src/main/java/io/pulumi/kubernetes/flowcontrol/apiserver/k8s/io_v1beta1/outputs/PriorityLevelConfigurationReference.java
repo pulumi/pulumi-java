@@ -17,7 +17,7 @@ public final class PriorityLevelConfigurationReference {
 
     @OutputCustomType.Constructor({"name"})
     private PriorityLevelConfigurationReference(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

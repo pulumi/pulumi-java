@@ -69,15 +69,15 @@ public final class GetGroupResult {
         String name,
         String parent,
         String updateTime) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.description = Objects.requireNonNull(description);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.dynamicGroupMetadata = Objects.requireNonNull(dynamicGroupMetadata);
-        this.groupKey = Objects.requireNonNull(groupKey);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.parent = Objects.requireNonNull(parent);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.createTime = createTime;
+        this.description = description;
+        this.displayName = displayName;
+        this.dynamicGroupMetadata = dynamicGroupMetadata;
+        this.groupKey = groupKey;
+        this.labels = labels;
+        this.name = name;
+        this.parent = parent;
+        this.updateTime = updateTime;
     }
 
     /**

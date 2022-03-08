@@ -44,11 +44,11 @@ public final class NotificationEndpointGrpcSettingsResponse {
         String payloadName,
         DurationResponse resendInterval,
         Integer retryDurationSec) {
-        this.authority = Objects.requireNonNull(authority);
-        this.endpoint = Objects.requireNonNull(endpoint);
-        this.payloadName = Objects.requireNonNull(payloadName);
-        this.resendInterval = Objects.requireNonNull(resendInterval);
-        this.retryDurationSec = Objects.requireNonNull(retryDurationSec);
+        this.authority = authority;
+        this.endpoint = endpoint;
+        this.payloadName = payloadName;
+        this.resendInterval = resendInterval;
+        this.retryDurationSec = retryDurationSec;
     }
 
     /**

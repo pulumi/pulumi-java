@@ -17,8 +17,8 @@ public final class BackupVaultNotificationObjectType {
     private BackupVaultNotificationObjectType(
         List<String> backupVaultEvents,
         String sNSTopicArn) {
-        this.backupVaultEvents = Objects.requireNonNull(backupVaultEvents);
-        this.sNSTopicArn = Objects.requireNonNull(sNSTopicArn);
+        this.backupVaultEvents = backupVaultEvents;
+        this.sNSTopicArn = sNSTopicArn;
     }
 
     public List<String> getBackupVaultEvents() {

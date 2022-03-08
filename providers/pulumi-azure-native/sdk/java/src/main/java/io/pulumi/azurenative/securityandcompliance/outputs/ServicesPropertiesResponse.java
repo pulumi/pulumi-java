@@ -75,7 +75,7 @@ public final class ServicesPropertiesResponse {
         this.cosmosDbConfiguration = cosmosDbConfiguration;
         this.exportConfiguration = exportConfiguration;
         this.privateEndpointConnections = privateEndpointConnections;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.publicNetworkAccess = publicNetworkAccess;
     }
 

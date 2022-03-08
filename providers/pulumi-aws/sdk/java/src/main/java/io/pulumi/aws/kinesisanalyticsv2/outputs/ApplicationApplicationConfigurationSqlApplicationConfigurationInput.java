@@ -72,11 +72,11 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
         this.inputId = inputId;
         this.inputParallelism = inputParallelism;
         this.inputProcessingConfiguration = inputProcessingConfiguration;
-        this.inputSchema = Objects.requireNonNull(inputSchema);
+        this.inputSchema = inputSchema;
         this.inputStartingPositionConfigurations = inputStartingPositionConfigurations;
         this.kinesisFirehoseInput = kinesisFirehoseInput;
         this.kinesisStreamsInput = kinesisStreamsInput;
-        this.namePrefix = Objects.requireNonNull(namePrefix);
+        this.namePrefix = namePrefix;
     }
 
     public List<String> getInAppStreamNames() {

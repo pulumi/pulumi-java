@@ -40,9 +40,9 @@ public final class AccessPolicyEntryResponse {
         PermissionsResponse permissions,
         String tenantId) {
         this.applicationId = applicationId;
-        this.objectId = Objects.requireNonNull(objectId);
-        this.permissions = Objects.requireNonNull(permissions);
-        this.tenantId = Objects.requireNonNull(tenantId);
+        this.objectId = objectId;
+        this.permissions = permissions;
+        this.tenantId = tenantId;
     }
 
     /**

@@ -35,15 +35,15 @@ public final class GetBackendServiceCdnPolicy {
         List<GetBackendServiceCdnPolicyNegativeCachingPolicy> negativeCachingPolicies,
         Integer serveWhileStale,
         Integer signedUrlCacheMaxAgeSec) {
-        this.cacheKeyPolicies = Objects.requireNonNull(cacheKeyPolicies);
-        this.cacheMode = Objects.requireNonNull(cacheMode);
-        this.clientTtl = Objects.requireNonNull(clientTtl);
-        this.defaultTtl = Objects.requireNonNull(defaultTtl);
-        this.maxTtl = Objects.requireNonNull(maxTtl);
-        this.negativeCaching = Objects.requireNonNull(negativeCaching);
-        this.negativeCachingPolicies = Objects.requireNonNull(negativeCachingPolicies);
-        this.serveWhileStale = Objects.requireNonNull(serveWhileStale);
-        this.signedUrlCacheMaxAgeSec = Objects.requireNonNull(signedUrlCacheMaxAgeSec);
+        this.cacheKeyPolicies = cacheKeyPolicies;
+        this.cacheMode = cacheMode;
+        this.clientTtl = clientTtl;
+        this.defaultTtl = defaultTtl;
+        this.maxTtl = maxTtl;
+        this.negativeCaching = negativeCaching;
+        this.negativeCachingPolicies = negativeCachingPolicies;
+        this.serveWhileStale = serveWhileStale;
+        this.signedUrlCacheMaxAgeSec = signedUrlCacheMaxAgeSec;
     }
 
     public List<GetBackendServiceCdnPolicyCacheKeyPolicy> getCacheKeyPolicies() {

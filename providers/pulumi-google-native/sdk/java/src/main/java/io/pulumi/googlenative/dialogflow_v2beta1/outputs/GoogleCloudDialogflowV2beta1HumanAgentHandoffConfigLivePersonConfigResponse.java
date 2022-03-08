@@ -17,7 +17,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePerson
 
     @OutputCustomType.Constructor({"accountNumber"})
     private GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePersonConfigResponse(String accountNumber) {
-        this.accountNumber = Objects.requireNonNull(accountNumber);
+        this.accountNumber = accountNumber;
     }
 
     /**

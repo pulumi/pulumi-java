@@ -98,7 +98,7 @@ public final class CacheUsernameDownloadSettingsResponse {
         this.ldapServer = ldapServer;
         this.requireValidCertificate = requireValidCertificate;
         this.userFileURI = userFileURI;
-        this.usernameDownloaded = Objects.requireNonNull(usernameDownloaded);
+        this.usernameDownloaded = usernameDownloaded;
         this.usernameSource = usernameSource;
     }
 

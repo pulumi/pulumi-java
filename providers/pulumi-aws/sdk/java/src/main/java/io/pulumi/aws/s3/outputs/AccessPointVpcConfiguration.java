@@ -17,7 +17,7 @@ public final class AccessPointVpcConfiguration {
 
     @OutputCustomType.Constructor({"vpcId"})
     private AccessPointVpcConfiguration(String vpcId) {
-        this.vpcId = Objects.requireNonNull(vpcId);
+        this.vpcId = vpcId;
     }
 
     /**

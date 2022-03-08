@@ -36,17 +36,17 @@ public final class GetListenerDefaultActionAuthenticateOidc {
         Integer sessionTimeout,
         String tokenEndpoint,
         String userInfoEndpoint) {
-        this.authenticationRequestExtraParams = Objects.requireNonNull(authenticationRequestExtraParams);
-        this.authorizationEndpoint = Objects.requireNonNull(authorizationEndpoint);
-        this.clientId = Objects.requireNonNull(clientId);
-        this.clientSecret = Objects.requireNonNull(clientSecret);
-        this.issuer = Objects.requireNonNull(issuer);
-        this.onUnauthenticatedRequest = Objects.requireNonNull(onUnauthenticatedRequest);
-        this.scope = Objects.requireNonNull(scope);
-        this.sessionCookieName = Objects.requireNonNull(sessionCookieName);
-        this.sessionTimeout = Objects.requireNonNull(sessionTimeout);
-        this.tokenEndpoint = Objects.requireNonNull(tokenEndpoint);
-        this.userInfoEndpoint = Objects.requireNonNull(userInfoEndpoint);
+        this.authenticationRequestExtraParams = authenticationRequestExtraParams;
+        this.authorizationEndpoint = authorizationEndpoint;
+        this.clientId = clientId;
+        this.clientSecret = clientSecret;
+        this.issuer = issuer;
+        this.onUnauthenticatedRequest = onUnauthenticatedRequest;
+        this.scope = scope;
+        this.sessionCookieName = sessionCookieName;
+        this.sessionTimeout = sessionTimeout;
+        this.tokenEndpoint = tokenEndpoint;
+        this.userInfoEndpoint = userInfoEndpoint;
     }
 
     public Map<String,String> getAuthenticationRequestExtraParams() {

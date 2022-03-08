@@ -27,7 +27,7 @@ public final class ReplicationConfigurationReplicationRule {
     private ReplicationConfigurationReplicationRule(
         List<ReplicationConfigurationReplicationDestination> destinations,
         @Nullable List<ReplicationConfigurationRepositoryFilter> repositoryFilters) {
-        this.destinations = Objects.requireNonNull(destinations);
+        this.destinations = destinations;
         this.repositoryFilters = repositoryFilters;
     }
 

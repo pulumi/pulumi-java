@@ -31,9 +31,9 @@ public final class PullRequestFilterResponse {
         String branch,
         String commentControl,
         Boolean invertRegex) {
-        this.branch = Objects.requireNonNull(branch);
-        this.commentControl = Objects.requireNonNull(commentControl);
-        this.invertRegex = Objects.requireNonNull(invertRegex);
+        this.branch = branch;
+        this.commentControl = commentControl;
+        this.invertRegex = invertRegex;
     }
 
     /**

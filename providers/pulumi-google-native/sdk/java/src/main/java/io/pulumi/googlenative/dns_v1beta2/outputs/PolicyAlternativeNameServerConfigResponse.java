@@ -22,8 +22,8 @@ public final class PolicyAlternativeNameServerConfigResponse {
     private PolicyAlternativeNameServerConfigResponse(
         String kind,
         List<PolicyAlternativeNameServerConfigTargetNameServerResponse> targetNameServers) {
-        this.kind = Objects.requireNonNull(kind);
-        this.targetNameServers = Objects.requireNonNull(targetNameServers);
+        this.kind = kind;
+        this.targetNameServers = targetNameServers;
     }
 
     public String getKind() {

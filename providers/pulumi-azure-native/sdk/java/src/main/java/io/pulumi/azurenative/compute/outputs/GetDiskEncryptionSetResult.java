@@ -93,16 +93,16 @@ public final class GetDiskEncryptionSetResult {
         String type) {
         this.activeKey = activeKey;
         this.encryptionType = encryptionType;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.identity = identity;
-        this.lastKeyRotationTimestamp = Objects.requireNonNull(lastKeyRotationTimestamp);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.previousKeys = Objects.requireNonNull(previousKeys);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.lastKeyRotationTimestamp = lastKeyRotationTimestamp;
+        this.location = location;
+        this.name = name;
+        this.previousKeys = previousKeys;
+        this.provisioningState = provisioningState;
         this.rotationToLatestKeyVersionEnabled = rotationToLatestKeyVersionEnabled;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

@@ -33,12 +33,12 @@ public final class GetRepositoryResult {
         List<GetRepositoryPubsubConfig> pubsubConfigs,
         Integer size,
         String url) {
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.project = project;
-        this.pubsubConfigs = Objects.requireNonNull(pubsubConfigs);
-        this.size = Objects.requireNonNull(size);
-        this.url = Objects.requireNonNull(url);
+        this.pubsubConfigs = pubsubConfigs;
+        this.size = size;
+        this.url = url;
     }
 
     /**

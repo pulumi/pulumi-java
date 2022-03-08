@@ -31,9 +31,9 @@ public final class AudioResponse {
         Boolean highBoost,
         Boolean lowBoost,
         Double lufs) {
-        this.highBoost = Objects.requireNonNull(highBoost);
-        this.lowBoost = Objects.requireNonNull(lowBoost);
-        this.lufs = Objects.requireNonNull(lufs);
+        this.highBoost = highBoost;
+        this.lowBoost = lowBoost;
+        this.lufs = lufs;
     }
 
     /**

@@ -37,8 +37,8 @@ public final class GetDirectConnectGatewayAttachmentResult {
         @Nullable String transitGatewayId) {
         this.dxGatewayId = dxGatewayId;
         this.filters = filters;
-        this.id = Objects.requireNonNull(id);
-        this.tags = Objects.requireNonNull(tags);
+        this.id = id;
+        this.tags = tags;
         this.transitGatewayId = transitGatewayId;
     }
 

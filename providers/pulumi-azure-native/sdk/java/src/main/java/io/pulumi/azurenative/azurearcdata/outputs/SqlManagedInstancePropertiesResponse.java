@@ -66,7 +66,7 @@ public final class SqlManagedInstancePropertiesResponse {
         this.endTime = endTime;
         this.k8sRaw = k8sRaw;
         this.lastUploadedDate = lastUploadedDate;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.startTime = startTime;
     }
 

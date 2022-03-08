@@ -32,9 +32,9 @@ public final class UserPosixProfile {
         Integer gid,
         @Nullable List<Integer> secondaryGids,
         Integer uid) {
-        this.gid = Objects.requireNonNull(gid);
+        this.gid = gid;
         this.secondaryGids = secondaryGids;
-        this.uid = Objects.requireNonNull(uid);
+        this.uid = uid;
     }
 
     /**

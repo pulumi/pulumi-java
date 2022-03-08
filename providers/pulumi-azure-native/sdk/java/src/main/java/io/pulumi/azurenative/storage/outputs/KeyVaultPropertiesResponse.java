@@ -44,11 +44,11 @@ public final class KeyVaultPropertiesResponse {
         @Nullable String keyVaultUri,
         @Nullable String keyVersion,
         String lastKeyRotationTimestamp) {
-        this.currentVersionedKeyIdentifier = Objects.requireNonNull(currentVersionedKeyIdentifier);
+        this.currentVersionedKeyIdentifier = currentVersionedKeyIdentifier;
         this.keyName = keyName;
         this.keyVaultUri = keyVaultUri;
         this.keyVersion = keyVersion;
-        this.lastKeyRotationTimestamp = Objects.requireNonNull(lastKeyRotationTimestamp);
+        this.lastKeyRotationTimestamp = lastKeyRotationTimestamp;
     }
 
     /**

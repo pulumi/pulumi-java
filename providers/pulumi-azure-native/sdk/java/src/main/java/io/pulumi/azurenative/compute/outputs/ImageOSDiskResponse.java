@@ -76,8 +76,8 @@ public final class ImageOSDiskResponse {
         this.diskEncryptionSet = diskEncryptionSet;
         this.diskSizeGB = diskSizeGB;
         this.managedDisk = managedDisk;
-        this.osState = Objects.requireNonNull(osState);
-        this.osType = Objects.requireNonNull(osType);
+        this.osState = osState;
+        this.osType = osType;
         this.snapshot = snapshot;
         this.storageAccountType = storageAccountType;
     }

@@ -24,8 +24,8 @@ public final class ImportFileResponse {
     private ImportFileResponse(
         String content,
         String name) {
-        this.content = Objects.requireNonNull(content);
-        this.name = Objects.requireNonNull(name);
+        this.content = content;
+        this.name = name;
     }
 
     /**

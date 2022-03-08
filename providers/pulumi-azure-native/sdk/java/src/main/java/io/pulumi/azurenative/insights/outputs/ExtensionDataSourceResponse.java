@@ -48,7 +48,7 @@ public final class ExtensionDataSourceResponse {
         @Nullable List<String> inputDataSources,
         @Nullable String name,
         @Nullable List<String> streams) {
-        this.extensionName = Objects.requireNonNull(extensionName);
+        this.extensionName = extensionName;
         this.extensionSettings = extensionSettings;
         this.inputDataSources = inputDataSources;
         this.name = name;

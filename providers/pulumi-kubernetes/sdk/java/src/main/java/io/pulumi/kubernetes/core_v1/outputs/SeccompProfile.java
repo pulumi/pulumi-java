@@ -34,7 +34,7 @@ public final class SeccompProfile {
         @Nullable String localhostProfile,
         String type) {
         this.localhostProfile = localhostProfile;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

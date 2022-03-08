@@ -24,8 +24,8 @@ public final class StatusResponse {
     private StatusResponse(
         String code,
         String description) {
-        this.code = Objects.requireNonNull(code);
-        this.description = Objects.requireNonNull(description);
+        this.code = code;
+        this.description = description;
     }
 
     /**

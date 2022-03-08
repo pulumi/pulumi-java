@@ -24,8 +24,8 @@ public final class RequestUtilizationResponse {
     private RequestUtilizationResponse(
         Integer targetConcurrentRequests,
         Integer targetRequestCountPerSecond) {
-        this.targetConcurrentRequests = Objects.requireNonNull(targetConcurrentRequests);
-        this.targetRequestCountPerSecond = Objects.requireNonNull(targetRequestCountPerSecond);
+        this.targetConcurrentRequests = targetConcurrentRequests;
+        this.targetRequestCountPerSecond = targetRequestCountPerSecond;
     }
 
     /**

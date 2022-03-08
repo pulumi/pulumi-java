@@ -33,7 +33,7 @@ public final class VirtualNetworkRuleResponse {
         String id,
         @Nullable Boolean ignoreMissingVnetServiceEndpoint,
         @Nullable String state) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.ignoreMissingVnetServiceEndpoint = ignoreMissingVnetServiceEndpoint;
         this.state = state;
     }

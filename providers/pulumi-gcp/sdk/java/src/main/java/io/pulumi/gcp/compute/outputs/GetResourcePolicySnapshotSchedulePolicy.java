@@ -21,9 +21,9 @@ public final class GetResourcePolicySnapshotSchedulePolicy {
         List<GetResourcePolicySnapshotSchedulePolicyRetentionPolicy> retentionPolicies,
         List<GetResourcePolicySnapshotSchedulePolicySchedule> schedules,
         List<GetResourcePolicySnapshotSchedulePolicySnapshotProperty> snapshotProperties) {
-        this.retentionPolicies = Objects.requireNonNull(retentionPolicies);
-        this.schedules = Objects.requireNonNull(schedules);
-        this.snapshotProperties = Objects.requireNonNull(snapshotProperties);
+        this.retentionPolicies = retentionPolicies;
+        this.schedules = schedules;
+        this.snapshotProperties = snapshotProperties;
     }
 
     public List<GetResourcePolicySnapshotSchedulePolicyRetentionPolicy> getRetentionPolicies() {

@@ -26,8 +26,8 @@ public final class PipelineStage {
     private PipelineStage(
         List<PipelineStageAction> actions,
         String name) {
-        this.actions = Objects.requireNonNull(actions);
-        this.name = Objects.requireNonNull(name);
+        this.actions = actions;
+        this.name = name;
     }
 
     /**

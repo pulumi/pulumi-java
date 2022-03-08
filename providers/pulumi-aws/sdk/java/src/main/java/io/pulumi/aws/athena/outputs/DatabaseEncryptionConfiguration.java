@@ -26,7 +26,7 @@ public final class DatabaseEncryptionConfiguration {
     private DatabaseEncryptionConfiguration(
         String encryptionOption,
         @Nullable String kmsKey) {
-        this.encryptionOption = Objects.requireNonNull(encryptionOption);
+        this.encryptionOption = encryptionOption;
         this.kmsKey = kmsKey;
     }
 

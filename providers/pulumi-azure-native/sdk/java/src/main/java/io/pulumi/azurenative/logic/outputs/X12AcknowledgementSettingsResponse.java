@@ -106,21 +106,21 @@ public final class X12AcknowledgementSettingsResponse {
         Boolean needTechnicalAcknowledgement,
         Boolean rolloverAcknowledgementControlNumber,
         Boolean sendSynchronousAcknowledgement) {
-        this.acknowledgementControlNumberLowerBound = Objects.requireNonNull(acknowledgementControlNumberLowerBound);
+        this.acknowledgementControlNumberLowerBound = acknowledgementControlNumberLowerBound;
         this.acknowledgementControlNumberPrefix = acknowledgementControlNumberPrefix;
         this.acknowledgementControlNumberSuffix = acknowledgementControlNumberSuffix;
-        this.acknowledgementControlNumberUpperBound = Objects.requireNonNull(acknowledgementControlNumberUpperBound);
-        this.batchFunctionalAcknowledgements = Objects.requireNonNull(batchFunctionalAcknowledgements);
-        this.batchImplementationAcknowledgements = Objects.requireNonNull(batchImplementationAcknowledgements);
-        this.batchTechnicalAcknowledgements = Objects.requireNonNull(batchTechnicalAcknowledgements);
+        this.acknowledgementControlNumberUpperBound = acknowledgementControlNumberUpperBound;
+        this.batchFunctionalAcknowledgements = batchFunctionalAcknowledgements;
+        this.batchImplementationAcknowledgements = batchImplementationAcknowledgements;
+        this.batchTechnicalAcknowledgements = batchTechnicalAcknowledgements;
         this.functionalAcknowledgementVersion = functionalAcknowledgementVersion;
         this.implementationAcknowledgementVersion = implementationAcknowledgementVersion;
-        this.needFunctionalAcknowledgement = Objects.requireNonNull(needFunctionalAcknowledgement);
-        this.needImplementationAcknowledgement = Objects.requireNonNull(needImplementationAcknowledgement);
-        this.needLoopForValidMessages = Objects.requireNonNull(needLoopForValidMessages);
-        this.needTechnicalAcknowledgement = Objects.requireNonNull(needTechnicalAcknowledgement);
-        this.rolloverAcknowledgementControlNumber = Objects.requireNonNull(rolloverAcknowledgementControlNumber);
-        this.sendSynchronousAcknowledgement = Objects.requireNonNull(sendSynchronousAcknowledgement);
+        this.needFunctionalAcknowledgement = needFunctionalAcknowledgement;
+        this.needImplementationAcknowledgement = needImplementationAcknowledgement;
+        this.needLoopForValidMessages = needLoopForValidMessages;
+        this.needTechnicalAcknowledgement = needTechnicalAcknowledgement;
+        this.rolloverAcknowledgementControlNumber = rolloverAcknowledgementControlNumber;
+        this.sendSynchronousAcknowledgement = sendSynchronousAcknowledgement;
     }
 
     /**

@@ -25,8 +25,8 @@ public final class DistributionOriginOriginShield {
     private DistributionOriginOriginShield(
         Boolean enabled,
         String originShieldRegion) {
-        this.enabled = Objects.requireNonNull(enabled);
-        this.originShieldRegion = Objects.requireNonNull(originShieldRegion);
+        this.enabled = enabled;
+        this.originShieldRegion = originShieldRegion;
     }
 
     /**

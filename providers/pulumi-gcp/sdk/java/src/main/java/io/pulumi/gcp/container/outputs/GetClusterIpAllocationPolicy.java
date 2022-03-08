@@ -20,10 +20,10 @@ public final class GetClusterIpAllocationPolicy {
         String clusterSecondaryRangeName,
         String servicesIpv4CidrBlock,
         String servicesSecondaryRangeName) {
-        this.clusterIpv4CidrBlock = Objects.requireNonNull(clusterIpv4CidrBlock);
-        this.clusterSecondaryRangeName = Objects.requireNonNull(clusterSecondaryRangeName);
-        this.servicesIpv4CidrBlock = Objects.requireNonNull(servicesIpv4CidrBlock);
-        this.servicesSecondaryRangeName = Objects.requireNonNull(servicesSecondaryRangeName);
+        this.clusterIpv4CidrBlock = clusterIpv4CidrBlock;
+        this.clusterSecondaryRangeName = clusterSecondaryRangeName;
+        this.servicesIpv4CidrBlock = servicesIpv4CidrBlock;
+        this.servicesSecondaryRangeName = servicesSecondaryRangeName;
     }
 
     public String getClusterIpv4CidrBlock() {

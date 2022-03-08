@@ -47,13 +47,13 @@ public final class GetBackupRunResult {
         @Nullable Boolean mostRecent,
         String startTime,
         String status) {
-        this.backupId = Objects.requireNonNull(backupId);
-        this.id = Objects.requireNonNull(id);
-        this.instance = Objects.requireNonNull(instance);
-        this.location = Objects.requireNonNull(location);
+        this.backupId = backupId;
+        this.id = id;
+        this.instance = instance;
+        this.location = location;
         this.mostRecent = mostRecent;
-        this.startTime = Objects.requireNonNull(startTime);
-        this.status = Objects.requireNonNull(status);
+        this.startTime = startTime;
+        this.status = status;
     }
 
     public Integer getBackupId() {

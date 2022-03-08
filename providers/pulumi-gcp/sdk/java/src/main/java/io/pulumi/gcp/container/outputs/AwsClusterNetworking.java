@@ -31,9 +31,9 @@ public final class AwsClusterNetworking {
         List<String> podAddressCidrBlocks,
         List<String> serviceAddressCidrBlocks,
         String vpcId) {
-        this.podAddressCidrBlocks = Objects.requireNonNull(podAddressCidrBlocks);
-        this.serviceAddressCidrBlocks = Objects.requireNonNull(serviceAddressCidrBlocks);
-        this.vpcId = Objects.requireNonNull(vpcId);
+        this.podAddressCidrBlocks = podAddressCidrBlocks;
+        this.serviceAddressCidrBlocks = serviceAddressCidrBlocks;
+        this.vpcId = vpcId;
     }
 
     /**

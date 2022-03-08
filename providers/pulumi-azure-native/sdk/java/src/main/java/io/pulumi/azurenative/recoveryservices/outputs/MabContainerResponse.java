@@ -100,7 +100,7 @@ public final class MabContainerResponse {
         this.canReRegister = canReRegister;
         this.containerHealthState = containerHealthState;
         this.containerId = containerId;
-        this.containerType = Objects.requireNonNull(containerType);
+        this.containerType = containerType;
         this.extendedInfo = extendedInfo;
         this.friendlyName = friendlyName;
         this.healthStatus = healthStatus;

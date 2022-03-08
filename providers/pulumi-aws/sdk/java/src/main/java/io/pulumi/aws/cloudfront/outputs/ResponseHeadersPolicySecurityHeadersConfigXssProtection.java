@@ -40,8 +40,8 @@ public final class ResponseHeadersPolicySecurityHeadersConfigXssProtection {
         Boolean protection,
         @Nullable String reportUri) {
         this.modeBlock = modeBlock;
-        this.override = Objects.requireNonNull(override);
-        this.protection = Objects.requireNonNull(protection);
+        this.override = override;
+        this.protection = protection;
         this.reportUri = reportUri;
     }
 

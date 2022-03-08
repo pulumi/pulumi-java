@@ -36,10 +36,10 @@ public final class DatabaseDumpResponse {
         String gcsUri,
         String sourceDatabase,
         String type) {
-        this.databaseType = Objects.requireNonNull(databaseType);
-        this.gcsUri = Objects.requireNonNull(gcsUri);
-        this.sourceDatabase = Objects.requireNonNull(sourceDatabase);
-        this.type = Objects.requireNonNull(type);
+        this.databaseType = databaseType;
+        this.gcsUri = gcsUri;
+        this.sourceDatabase = sourceDatabase;
+        this.type = type;
     }
 
     /**

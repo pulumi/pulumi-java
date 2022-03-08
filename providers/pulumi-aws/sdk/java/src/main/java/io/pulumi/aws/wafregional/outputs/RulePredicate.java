@@ -19,9 +19,9 @@ public final class RulePredicate {
         String dataId,
         Boolean negated,
         String type) {
-        this.dataId = Objects.requireNonNull(dataId);
-        this.negated = Objects.requireNonNull(negated);
-        this.type = Objects.requireNonNull(type);
+        this.dataId = dataId;
+        this.negated = negated;
+        this.type = type;
     }
 
     public String getDataId() {

@@ -63,8 +63,8 @@ public final class WebLinkedServiceResponse {
         this.connectVia = connectVia;
         this.description = description;
         this.parameters = parameters;
-        this.type = Objects.requireNonNull(type);
-        this.typeProperties = Objects.requireNonNull(typeProperties);
+        this.type = type;
+        this.typeProperties = typeProperties;
     }
 
     /**

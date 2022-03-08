@@ -21,8 +21,8 @@ public final class GetListenerDefaultActionForwardTargetGroup {
     private GetListenerDefaultActionForwardTargetGroup(
         String arn,
         Integer weight) {
-        this.arn = Objects.requireNonNull(arn);
-        this.weight = Objects.requireNonNull(weight);
+        this.arn = arn;
+        this.weight = weight;
     }
 
     /**

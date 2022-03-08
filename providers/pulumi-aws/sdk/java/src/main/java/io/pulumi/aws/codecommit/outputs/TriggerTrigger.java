@@ -47,9 +47,9 @@ public final class TriggerTrigger {
         String name) {
         this.branches = branches;
         this.customData = customData;
-        this.destinationArn = Objects.requireNonNull(destinationArn);
-        this.events = Objects.requireNonNull(events);
-        this.name = Objects.requireNonNull(name);
+        this.destinationArn = destinationArn;
+        this.events = events;
+        this.name = name;
     }
 
     /**

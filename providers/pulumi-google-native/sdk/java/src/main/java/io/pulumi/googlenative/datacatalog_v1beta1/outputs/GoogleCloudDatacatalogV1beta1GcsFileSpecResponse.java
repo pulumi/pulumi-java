@@ -31,9 +31,9 @@ public final class GoogleCloudDatacatalogV1beta1GcsFileSpecResponse {
         String filePath,
         GoogleCloudDatacatalogV1beta1SystemTimestampsResponse gcsTimestamps,
         String sizeBytes) {
-        this.filePath = Objects.requireNonNull(filePath);
-        this.gcsTimestamps = Objects.requireNonNull(gcsTimestamps);
-        this.sizeBytes = Objects.requireNonNull(sizeBytes);
+        this.filePath = filePath;
+        this.gcsTimestamps = gcsTimestamps;
+        this.sizeBytes = sizeBytes;
     }
 
     /**

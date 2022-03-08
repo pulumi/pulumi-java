@@ -17,7 +17,7 @@ public final class AppBundleResponse {
 
     @OutputCustomType.Constructor({"bundleLocation"})
     private AppBundleResponse(FileReferenceResponse bundleLocation) {
-        this.bundleLocation = Objects.requireNonNull(bundleLocation);
+        this.bundleLocation = bundleLocation;
     }
 
     /**

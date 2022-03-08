@@ -28,7 +28,7 @@ public final class ReliableCollectionsRefResponse {
         @Nullable Boolean doNotPersistState,
         String name) {
         this.doNotPersistState = doNotPersistState;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

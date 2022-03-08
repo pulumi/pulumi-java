@@ -26,7 +26,7 @@ public final class SigningJobDestinationS3 {
     private SigningJobDestinationS3(
         String bucket,
         @Nullable String prefix) {
-        this.bucket = Objects.requireNonNull(bucket);
+        this.bucket = bucket;
         this.prefix = prefix;
     }
 

@@ -31,9 +31,9 @@ public final class SourceCostAllocationResourceResponse {
         String name,
         String resourceType,
         List<String> values) {
-        this.name = Objects.requireNonNull(name);
-        this.resourceType = Objects.requireNonNull(resourceType);
-        this.values = Objects.requireNonNull(values);
+        this.name = name;
+        this.resourceType = resourceType;
+        this.values = values;
     }
 
     /**

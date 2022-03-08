@@ -54,7 +54,7 @@ public final class ExpressRouteCircuitPeeringConfigResponse {
         @Nullable String routingRegistryName) {
         this.advertisedCommunities = advertisedCommunities;
         this.advertisedPublicPrefixes = advertisedPublicPrefixes;
-        this.advertisedPublicPrefixesState = Objects.requireNonNull(advertisedPublicPrefixesState);
+        this.advertisedPublicPrefixesState = advertisedPublicPrefixesState;
         this.customerASN = customerASN;
         this.legacyMode = legacyMode;
         this.routingRegistryName = routingRegistryName;

@@ -47,11 +47,11 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOrigin {
         @Nullable Boolean enableAcceptEncodingGzip,
         CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfig headersConfig,
         CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfig queryStringsConfig) {
-        this.cookiesConfig = Objects.requireNonNull(cookiesConfig);
+        this.cookiesConfig = cookiesConfig;
         this.enableAcceptEncodingBrotli = enableAcceptEncodingBrotli;
         this.enableAcceptEncodingGzip = enableAcceptEncodingGzip;
-        this.headersConfig = Objects.requireNonNull(headersConfig);
-        this.queryStringsConfig = Objects.requireNonNull(queryStringsConfig);
+        this.headersConfig = headersConfig;
+        this.queryStringsConfig = queryStringsConfig;
     }
 
     /**

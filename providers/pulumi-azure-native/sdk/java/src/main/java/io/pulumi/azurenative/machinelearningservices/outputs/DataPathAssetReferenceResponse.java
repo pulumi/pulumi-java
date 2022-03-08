@@ -35,7 +35,7 @@ public final class DataPathAssetReferenceResponse {
         String referenceType) {
         this.datastoreId = datastoreId;
         this.path = path;
-        this.referenceType = Objects.requireNonNull(referenceType);
+        this.referenceType = referenceType;
     }
 
     /**

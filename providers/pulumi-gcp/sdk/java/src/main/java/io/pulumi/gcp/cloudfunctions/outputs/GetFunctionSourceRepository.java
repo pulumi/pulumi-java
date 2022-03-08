@@ -20,8 +20,8 @@ public final class GetFunctionSourceRepository {
     private GetFunctionSourceRepository(
         String deployedUrl,
         String url) {
-        this.deployedUrl = Objects.requireNonNull(deployedUrl);
-        this.url = Objects.requireNonNull(url);
+        this.deployedUrl = deployedUrl;
+        this.url = url;
     }
 
     public String getDeployedUrl() {

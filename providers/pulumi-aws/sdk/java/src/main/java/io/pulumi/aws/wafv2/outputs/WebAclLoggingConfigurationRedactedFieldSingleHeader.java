@@ -17,7 +17,7 @@ public final class WebAclLoggingConfigurationRedactedFieldSingleHeader {
 
     @OutputCustomType.Constructor({"name"})
     private WebAclLoggingConfigurationRedactedFieldSingleHeader(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

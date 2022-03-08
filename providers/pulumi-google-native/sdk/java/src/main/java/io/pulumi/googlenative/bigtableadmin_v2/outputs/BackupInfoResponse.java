@@ -36,10 +36,10 @@ public final class BackupInfoResponse {
         String endTime,
         String sourceTable,
         String startTime) {
-        this.backup = Objects.requireNonNull(backup);
-        this.endTime = Objects.requireNonNull(endTime);
-        this.sourceTable = Objects.requireNonNull(sourceTable);
-        this.startTime = Objects.requireNonNull(startTime);
+        this.backup = backup;
+        this.endTime = endTime;
+        this.sourceTable = sourceTable;
+        this.startTime = startTime;
     }
 
     /**

@@ -55,13 +55,13 @@ public final class ServerEndpointSyncActivityStatusResponse {
         String timestamp,
         Double totalBytes,
         Double totalItemCount) {
-        this.appliedBytes = Objects.requireNonNull(appliedBytes);
-        this.appliedItemCount = Objects.requireNonNull(appliedItemCount);
-        this.perItemErrorCount = Objects.requireNonNull(perItemErrorCount);
-        this.syncMode = Objects.requireNonNull(syncMode);
-        this.timestamp = Objects.requireNonNull(timestamp);
-        this.totalBytes = Objects.requireNonNull(totalBytes);
-        this.totalItemCount = Objects.requireNonNull(totalItemCount);
+        this.appliedBytes = appliedBytes;
+        this.appliedItemCount = appliedItemCount;
+        this.perItemErrorCount = perItemErrorCount;
+        this.syncMode = syncMode;
+        this.timestamp = timestamp;
+        this.totalBytes = totalBytes;
+        this.totalItemCount = totalItemCount;
     }
 
     /**

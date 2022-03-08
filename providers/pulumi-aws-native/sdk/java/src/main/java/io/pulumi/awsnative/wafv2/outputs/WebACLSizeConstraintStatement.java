@@ -24,10 +24,10 @@ public final class WebACLSizeConstraintStatement {
         WebACLFieldToMatch fieldToMatch,
         Double size,
         List<WebACLTextTransformation> textTransformations) {
-        this.comparisonOperator = Objects.requireNonNull(comparisonOperator);
-        this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
-        this.size = Objects.requireNonNull(size);
-        this.textTransformations = Objects.requireNonNull(textTransformations);
+        this.comparisonOperator = comparisonOperator;
+        this.fieldToMatch = fieldToMatch;
+        this.size = size;
+        this.textTransformations = textTransformations;
     }
 
     public WebACLSizeConstraintStatementComparisonOperator getComparisonOperator() {

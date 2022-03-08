@@ -54,10 +54,10 @@ public final class GetNamespaceNetworkRuleSetResult {
         String type,
         @Nullable List<NWRuleSetVirtualNetworkRulesResponse> virtualNetworkRules) {
         this.defaultAction = defaultAction;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.ipRules = ipRules;
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.name = name;
+        this.type = type;
         this.virtualNetworkRules = virtualNetworkRules;
     }
 

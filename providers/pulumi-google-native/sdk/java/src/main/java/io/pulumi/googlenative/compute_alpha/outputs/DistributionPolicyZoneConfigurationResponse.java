@@ -17,7 +17,7 @@ public final class DistributionPolicyZoneConfigurationResponse {
 
     @OutputCustomType.Constructor({"zone"})
     private DistributionPolicyZoneConfigurationResponse(String zone) {
-        this.zone = Objects.requireNonNull(zone);
+        this.zone = zone;
     }
 
     /**

@@ -34,8 +34,8 @@ public final class WorkspaceCappingResponse {
         String dataIngestionStatus,
         String quotaNextResetTime) {
         this.dailyQuotaGb = dailyQuotaGb;
-        this.dataIngestionStatus = Objects.requireNonNull(dataIngestionStatus);
-        this.quotaNextResetTime = Objects.requireNonNull(quotaNextResetTime);
+        this.dataIngestionStatus = dataIngestionStatus;
+        this.quotaNextResetTime = quotaNextResetTime;
     }
 
     /**

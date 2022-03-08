@@ -17,7 +17,7 @@ public final class LoggingConfigurationConditionLabelNameConditionProperties {
 
     @OutputCustomType.Constructor({"labelName"})
     private LoggingConfigurationConditionLabelNameConditionProperties(String labelName) {
-        this.labelName = Objects.requireNonNull(labelName);
+        this.labelName = labelName;
     }
 
     /**

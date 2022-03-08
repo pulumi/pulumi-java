@@ -36,10 +36,10 @@ public final class ConnectorProfileInforNexusConnectorProfileCredentials {
         String datakey,
         String secretAccessKey,
         String userId) {
-        this.accessKeyId = Objects.requireNonNull(accessKeyId);
-        this.datakey = Objects.requireNonNull(datakey);
-        this.secretAccessKey = Objects.requireNonNull(secretAccessKey);
-        this.userId = Objects.requireNonNull(userId);
+        this.accessKeyId = accessKeyId;
+        this.datakey = datakey;
+        this.secretAccessKey = secretAccessKey;
+        this.userId = userId;
     }
 
     /**

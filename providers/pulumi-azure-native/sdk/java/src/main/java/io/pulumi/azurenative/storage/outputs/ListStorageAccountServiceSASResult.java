@@ -17,7 +17,7 @@ public final class ListStorageAccountServiceSASResult {
 
     @OutputCustomType.Constructor({"serviceSasToken"})
     private ListStorageAccountServiceSASResult(String serviceSasToken) {
-        this.serviceSasToken = Objects.requireNonNull(serviceSasToken);
+        this.serviceSasToken = serviceSasToken;
     }
 
     /**

@@ -54,7 +54,7 @@ public final class AzureStorageInfoValueResponse {
         this.accountName = accountName;
         this.mountPath = mountPath;
         this.shareName = shareName;
-        this.state = Objects.requireNonNull(state);
+        this.state = state;
         this.type = type;
     }
 

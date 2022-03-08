@@ -105,19 +105,19 @@ public final class GetAFDOriginResult {
         String type,
         @Nullable Integer weight) {
         this.azureOrigin = azureOrigin;
-        this.deploymentStatus = Objects.requireNonNull(deploymentStatus);
+        this.deploymentStatus = deploymentStatus;
         this.enabledState = enabledState;
-        this.hostName = Objects.requireNonNull(hostName);
+        this.hostName = hostName;
         this.httpPort = httpPort;
         this.httpsPort = httpsPort;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.originHostHeader = originHostHeader;
         this.priority = priority;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.sharedPrivateLinkResource = sharedPrivateLinkResource;
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.systemData = systemData;
+        this.type = type;
         this.weight = weight;
     }
 

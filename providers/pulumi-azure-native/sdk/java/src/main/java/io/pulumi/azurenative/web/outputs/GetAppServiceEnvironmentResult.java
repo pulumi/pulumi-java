@@ -148,26 +148,26 @@ public final class GetAppServiceEnvironmentResult {
         @Nullable List<String> userWhitelistedIpRanges,
         VirtualNetworkProfileResponse virtualNetwork) {
         this.clusterSettings = clusterSettings;
-        this.dedicatedHostCount = Objects.requireNonNull(dedicatedHostCount);
+        this.dedicatedHostCount = dedicatedHostCount;
         this.dnsSuffix = dnsSuffix;
         this.frontEndScaleFactor = frontEndScaleFactor;
-        this.hasLinuxWorkers = Objects.requireNonNull(hasLinuxWorkers);
-        this.id = Objects.requireNonNull(id);
+        this.hasLinuxWorkers = hasLinuxWorkers;
+        this.id = id;
         this.internalLoadBalancingMode = internalLoadBalancingMode;
         this.ipsslAddressCount = ipsslAddressCount;
         this.kind = kind;
-        this.location = Objects.requireNonNull(location);
-        this.maximumNumberOfMachines = Objects.requireNonNull(maximumNumberOfMachines);
-        this.multiRoleCount = Objects.requireNonNull(multiRoleCount);
+        this.location = location;
+        this.maximumNumberOfMachines = maximumNumberOfMachines;
+        this.multiRoleCount = multiRoleCount;
         this.multiSize = multiSize;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.status = Objects.requireNonNull(status);
-        this.suspended = Objects.requireNonNull(suspended);
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.status = status;
+        this.suspended = suspended;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.userWhitelistedIpRanges = userWhitelistedIpRanges;
-        this.virtualNetwork = Objects.requireNonNull(virtualNetwork);
+        this.virtualNetwork = virtualNetwork;
     }
 
     /**

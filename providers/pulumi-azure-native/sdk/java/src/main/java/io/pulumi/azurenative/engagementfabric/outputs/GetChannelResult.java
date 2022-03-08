@@ -52,11 +52,11 @@ public final class GetChannelResult {
         String name,
         String type) {
         this.channelFunctions = channelFunctions;
-        this.channelType = Objects.requireNonNull(channelType);
+        this.channelType = channelType;
         this.credentials = credentials;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.id = id;
+        this.name = name;
+        this.type = type;
     }
 
     /**

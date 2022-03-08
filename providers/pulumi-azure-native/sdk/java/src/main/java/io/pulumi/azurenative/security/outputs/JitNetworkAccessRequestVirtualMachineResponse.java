@@ -26,8 +26,8 @@ public final class JitNetworkAccessRequestVirtualMachineResponse {
     private JitNetworkAccessRequestVirtualMachineResponse(
         String id,
         List<JitNetworkAccessRequestPortResponse> ports) {
-        this.id = Objects.requireNonNull(id);
-        this.ports = Objects.requireNonNull(ports);
+        this.id = id;
+        this.ports = ports;
     }
 
     /**

@@ -35,7 +35,7 @@ public final class JobCopyDestinationTable {
         String tableId) {
         this.datasetId = datasetId;
         this.projectId = projectId;
-        this.tableId = Objects.requireNonNull(tableId);
+        this.tableId = tableId;
     }
 
     /**

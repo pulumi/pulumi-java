@@ -28,7 +28,7 @@ public final class EnterpriseSkuResponse {
         @Nullable Integer capacity,
         String name) {
         this.capacity = capacity;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

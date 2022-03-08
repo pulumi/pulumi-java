@@ -37,10 +37,10 @@ public final class MoveCollectionPropertiesResponse {
         String provisioningState,
         String sourceRegion,
         String targetRegion) {
-        this.errors = Objects.requireNonNull(errors);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.sourceRegion = Objects.requireNonNull(sourceRegion);
-        this.targetRegion = Objects.requireNonNull(targetRegion);
+        this.errors = errors;
+        this.provisioningState = provisioningState;
+        this.sourceRegion = sourceRegion;
+        this.targetRegion = targetRegion;
     }
 
     /**

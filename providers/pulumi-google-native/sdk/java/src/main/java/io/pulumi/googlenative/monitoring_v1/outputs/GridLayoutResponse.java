@@ -26,8 +26,8 @@ public final class GridLayoutResponse {
     private GridLayoutResponse(
         String columns,
         List<WidgetResponse> widgets) {
-        this.columns = Objects.requireNonNull(columns);
-        this.widgets = Objects.requireNonNull(widgets);
+        this.columns = columns;
+        this.widgets = widgets;
     }
 
     /**

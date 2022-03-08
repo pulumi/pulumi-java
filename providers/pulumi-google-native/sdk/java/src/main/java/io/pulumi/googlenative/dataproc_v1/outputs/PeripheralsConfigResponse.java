@@ -25,8 +25,8 @@ public final class PeripheralsConfigResponse {
     private PeripheralsConfigResponse(
         String metastoreService,
         SparkHistoryServerConfigResponse sparkHistoryServerConfig) {
-        this.metastoreService = Objects.requireNonNull(metastoreService);
-        this.sparkHistoryServerConfig = Objects.requireNonNull(sparkHistoryServerConfig);
+        this.metastoreService = metastoreService;
+        this.sparkHistoryServerConfig = sparkHistoryServerConfig;
     }
 
     /**

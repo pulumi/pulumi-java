@@ -35,7 +35,7 @@ public final class EndpointConnectionLogOptions {
         Boolean enabled) {
         this.cloudwatchLogGroup = cloudwatchLogGroup;
         this.cloudwatchLogStream = cloudwatchLogStream;
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
     }
 
     /**

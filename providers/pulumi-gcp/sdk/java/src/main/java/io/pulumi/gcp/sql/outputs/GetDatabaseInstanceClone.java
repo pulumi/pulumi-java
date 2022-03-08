@@ -16,8 +16,8 @@ public final class GetDatabaseInstanceClone {
     private GetDatabaseInstanceClone(
         String pointInTime,
         String sourceInstanceName) {
-        this.pointInTime = Objects.requireNonNull(pointInTime);
-        this.sourceInstanceName = Objects.requireNonNull(sourceInstanceName);
+        this.pointInTime = pointInTime;
+        this.sourceInstanceName = sourceInstanceName;
     }
 
     public String getPointInTime() {

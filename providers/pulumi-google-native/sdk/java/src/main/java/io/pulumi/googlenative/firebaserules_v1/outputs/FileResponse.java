@@ -30,9 +30,9 @@ public final class FileResponse {
         String content,
         String fingerprint,
         String name) {
-        this.content = Objects.requireNonNull(content);
-        this.fingerprint = Objects.requireNonNull(fingerprint);
-        this.name = Objects.requireNonNull(name);
+        this.content = content;
+        this.fingerprint = fingerprint;
+        this.name = name;
     }
 
     /**

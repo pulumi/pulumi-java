@@ -33,9 +33,9 @@ public final class GetScriptDagNodeArg {
         String name,
         @Nullable Boolean param,
         String value) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.param = param;
-        this.value = Objects.requireNonNull(value);
+        this.value = value;
     }
 
     /**

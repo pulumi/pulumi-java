@@ -26,8 +26,8 @@ public final class TargetConfigurationResponse {
     private TargetConfigurationResponse(
         ConfigFileResponse config,
         List<ImportFileResponse> imports) {
-        this.config = Objects.requireNonNull(config);
-        this.imports = Objects.requireNonNull(imports);
+        this.config = config;
+        this.imports = imports;
     }
 
     /**

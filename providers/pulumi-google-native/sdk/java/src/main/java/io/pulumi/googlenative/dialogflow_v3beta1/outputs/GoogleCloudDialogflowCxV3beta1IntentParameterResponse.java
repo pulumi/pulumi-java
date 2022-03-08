@@ -31,9 +31,9 @@ public final class GoogleCloudDialogflowCxV3beta1IntentParameterResponse {
         String entityType,
         Boolean isList,
         Boolean redact) {
-        this.entityType = Objects.requireNonNull(entityType);
-        this.isList = Objects.requireNonNull(isList);
-        this.redact = Objects.requireNonNull(redact);
+        this.entityType = entityType;
+        this.isList = isList;
+        this.redact = redact;
     }
 
     /**

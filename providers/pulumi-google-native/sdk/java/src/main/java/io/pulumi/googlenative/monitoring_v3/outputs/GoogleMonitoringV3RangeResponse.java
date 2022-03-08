@@ -24,8 +24,8 @@ public final class GoogleMonitoringV3RangeResponse {
     private GoogleMonitoringV3RangeResponse(
         Double max,
         Double min) {
-        this.max = Objects.requireNonNull(max);
-        this.min = Objects.requireNonNull(min);
+        this.max = max;
+        this.min = min;
     }
 
     /**

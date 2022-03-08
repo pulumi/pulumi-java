@@ -97,17 +97,17 @@ public final class GetZoneResult {
         String type,
         @Nullable String zoneType) {
         this.etag = etag;
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.maxNumberOfRecordSets = Objects.requireNonNull(maxNumberOfRecordSets);
-        this.maxNumberOfRecordsPerRecordSet = Objects.requireNonNull(maxNumberOfRecordsPerRecordSet);
-        this.name = Objects.requireNonNull(name);
-        this.nameServers = Objects.requireNonNull(nameServers);
-        this.numberOfRecordSets = Objects.requireNonNull(numberOfRecordSets);
+        this.id = id;
+        this.location = location;
+        this.maxNumberOfRecordSets = maxNumberOfRecordSets;
+        this.maxNumberOfRecordsPerRecordSet = maxNumberOfRecordsPerRecordSet;
+        this.name = name;
+        this.nameServers = nameServers;
+        this.numberOfRecordSets = numberOfRecordSets;
         this.registrationVirtualNetworks = registrationVirtualNetworks;
         this.resolutionVirtualNetworks = resolutionVirtualNetworks;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.zoneType = zoneType;
     }
 

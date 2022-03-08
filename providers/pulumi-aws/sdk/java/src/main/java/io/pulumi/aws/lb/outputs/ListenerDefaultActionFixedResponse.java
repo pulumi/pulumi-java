@@ -32,7 +32,7 @@ public final class ListenerDefaultActionFixedResponse {
         String contentType,
         @Nullable String messageBody,
         @Nullable String statusCode) {
-        this.contentType = Objects.requireNonNull(contentType);
+        this.contentType = contentType;
         this.messageBody = messageBody;
         this.statusCode = statusCode;
     }

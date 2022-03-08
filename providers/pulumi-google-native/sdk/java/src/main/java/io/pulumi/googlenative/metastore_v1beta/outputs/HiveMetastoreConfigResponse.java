@@ -44,11 +44,11 @@ public final class HiveMetastoreConfigResponse {
         String endpointProtocol,
         KerberosConfigResponse kerberosConfig,
         String version) {
-        this.auxiliaryVersions = Objects.requireNonNull(auxiliaryVersions);
-        this.configOverrides = Objects.requireNonNull(configOverrides);
-        this.endpointProtocol = Objects.requireNonNull(endpointProtocol);
-        this.kerberosConfig = Objects.requireNonNull(kerberosConfig);
-        this.version = Objects.requireNonNull(version);
+        this.auxiliaryVersions = auxiliaryVersions;
+        this.configOverrides = configOverrides;
+        this.endpointProtocol = endpointProtocol;
+        this.kerberosConfig = kerberosConfig;
+        this.version = version;
     }
 
     /**

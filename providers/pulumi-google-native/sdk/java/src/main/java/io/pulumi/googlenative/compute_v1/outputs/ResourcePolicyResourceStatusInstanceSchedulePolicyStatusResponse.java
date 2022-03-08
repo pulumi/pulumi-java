@@ -24,8 +24,8 @@ public final class ResourcePolicyResourceStatusInstanceSchedulePolicyStatusRespo
     private ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse(
         String lastRunStartTime,
         String nextRunStartTime) {
-        this.lastRunStartTime = Objects.requireNonNull(lastRunStartTime);
-        this.nextRunStartTime = Objects.requireNonNull(nextRunStartTime);
+        this.lastRunStartTime = lastRunStartTime;
+        this.nextRunStartTime = nextRunStartTime;
     }
 
     /**

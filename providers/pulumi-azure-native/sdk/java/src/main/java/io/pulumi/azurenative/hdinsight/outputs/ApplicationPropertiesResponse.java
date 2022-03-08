@@ -86,15 +86,15 @@ public final class ApplicationPropertiesResponse {
         String provisioningState,
         @Nullable List<ApplicationGetEndpointResponse> sshEndpoints,
         @Nullable List<RuntimeScriptActionResponse> uninstallScriptActions) {
-        this.applicationState = Objects.requireNonNull(applicationState);
+        this.applicationState = applicationState;
         this.applicationType = applicationType;
         this.computeProfile = computeProfile;
-        this.createdDate = Objects.requireNonNull(createdDate);
+        this.createdDate = createdDate;
         this.errors = errors;
         this.httpsEndpoints = httpsEndpoints;
         this.installScriptActions = installScriptActions;
-        this.marketplaceIdentifier = Objects.requireNonNull(marketplaceIdentifier);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.marketplaceIdentifier = marketplaceIdentifier;
+        this.provisioningState = provisioningState;
         this.sshEndpoints = sshEndpoints;
         this.uninstallScriptActions = uninstallScriptActions;
     }

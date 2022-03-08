@@ -32,9 +32,9 @@ public final class SourceConfigResponse {
         MysqlSourceConfigResponse mysqlSourceConfig,
         OracleSourceConfigResponse oracleSourceConfig,
         String sourceConnectionProfile) {
-        this.mysqlSourceConfig = Objects.requireNonNull(mysqlSourceConfig);
-        this.oracleSourceConfig = Objects.requireNonNull(oracleSourceConfig);
-        this.sourceConnectionProfile = Objects.requireNonNull(sourceConnectionProfile);
+        this.mysqlSourceConfig = mysqlSourceConfig;
+        this.oracleSourceConfig = oracleSourceConfig;
+        this.sourceConnectionProfile = sourceConnectionProfile;
     }
 
     /**

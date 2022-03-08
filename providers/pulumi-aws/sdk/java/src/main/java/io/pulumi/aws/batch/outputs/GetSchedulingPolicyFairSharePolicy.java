@@ -28,9 +28,9 @@ public final class GetSchedulingPolicyFairSharePolicy {
         Integer computeReservation,
         Integer shareDecaySeconds,
         List<GetSchedulingPolicyFairSharePolicyShareDistribution> shareDistributions) {
-        this.computeReservation = Objects.requireNonNull(computeReservation);
-        this.shareDecaySeconds = Objects.requireNonNull(shareDecaySeconds);
-        this.shareDistributions = Objects.requireNonNull(shareDistributions);
+        this.computeReservation = computeReservation;
+        this.shareDecaySeconds = shareDecaySeconds;
+        this.shareDistributions = shareDistributions;
     }
 
     /**

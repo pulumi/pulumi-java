@@ -40,10 +40,10 @@ public final class AuthenticationRuleResponse {
         OAuthRequirementsResponse oauth,
         List<AuthRequirementResponse> requirements,
         String selector) {
-        this.allowWithoutCredential = Objects.requireNonNull(allowWithoutCredential);
-        this.oauth = Objects.requireNonNull(oauth);
-        this.requirements = Objects.requireNonNull(requirements);
-        this.selector = Objects.requireNonNull(selector);
+        this.allowWithoutCredential = allowWithoutCredential;
+        this.oauth = oauth;
+        this.requirements = requirements;
+        this.selector = selector;
     }
 
     /**

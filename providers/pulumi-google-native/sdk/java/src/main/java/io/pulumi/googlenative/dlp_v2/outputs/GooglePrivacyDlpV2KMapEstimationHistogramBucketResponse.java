@@ -44,11 +44,11 @@ public final class GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse {
         List<GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse> bucketValues,
         String maxAnonymity,
         String minAnonymity) {
-        this.bucketSize = Objects.requireNonNull(bucketSize);
-        this.bucketValueCount = Objects.requireNonNull(bucketValueCount);
-        this.bucketValues = Objects.requireNonNull(bucketValues);
-        this.maxAnonymity = Objects.requireNonNull(maxAnonymity);
-        this.minAnonymity = Objects.requireNonNull(minAnonymity);
+        this.bucketSize = bucketSize;
+        this.bucketValueCount = bucketValueCount;
+        this.bucketValues = bucketValues;
+        this.maxAnonymity = maxAnonymity;
+        this.minAnonymity = minAnonymity;
     }
 
     /**

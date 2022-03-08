@@ -17,7 +17,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
 
     @OutputCustomType.Constructor({"resourceArn"})
     private ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutput(String resourceArn) {
-        this.resourceArn = Objects.requireNonNull(resourceArn);
+        this.resourceArn = resourceArn;
     }
 
     /**

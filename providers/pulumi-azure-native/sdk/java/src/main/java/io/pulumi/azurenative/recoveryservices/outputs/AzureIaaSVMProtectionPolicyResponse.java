@@ -62,7 +62,7 @@ public final class AzureIaaSVMProtectionPolicyResponse {
         @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy,
         @Nullable Object schedulePolicy,
         @Nullable String timeZone) {
-        this.backupManagementType = Objects.requireNonNull(backupManagementType);
+        this.backupManagementType = backupManagementType;
         this.instantRPDetails = instantRPDetails;
         this.instantRpRetentionRangeInDays = instantRpRetentionRangeInDays;
         this.protectedItemsCount = protectedItemsCount;

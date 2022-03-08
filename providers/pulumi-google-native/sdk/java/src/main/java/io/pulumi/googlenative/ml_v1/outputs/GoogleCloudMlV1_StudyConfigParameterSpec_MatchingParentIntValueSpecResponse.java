@@ -18,7 +18,7 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntVal
 
     @OutputCustomType.Constructor({"values"})
     private GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecResponse(List<String> values) {
-        this.values = Objects.requireNonNull(values);
+        this.values = values;
     }
 
     /**

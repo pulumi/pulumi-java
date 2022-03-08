@@ -55,13 +55,13 @@ public final class CsvOptionsResponse {
         String nullMarker,
         String quote,
         String skipLeadingRows) {
-        this.allowJaggedRows = Objects.requireNonNull(allowJaggedRows);
-        this.allowQuotedNewlines = Objects.requireNonNull(allowQuotedNewlines);
-        this.encoding = Objects.requireNonNull(encoding);
-        this.fieldDelimiter = Objects.requireNonNull(fieldDelimiter);
-        this.nullMarker = Objects.requireNonNull(nullMarker);
-        this.quote = Objects.requireNonNull(quote);
-        this.skipLeadingRows = Objects.requireNonNull(skipLeadingRows);
+        this.allowJaggedRows = allowJaggedRows;
+        this.allowQuotedNewlines = allowQuotedNewlines;
+        this.encoding = encoding;
+        this.fieldDelimiter = fieldDelimiter;
+        this.nullMarker = nullMarker;
+        this.quote = quote;
+        this.skipLeadingRows = skipLeadingRows;
     }
 
     /**

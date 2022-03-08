@@ -33,8 +33,8 @@ public final class KubeEnvironmentProfileResponse {
         String name,
         String type) {
         this.id = id;
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.name = name;
+        this.type = type;
     }
 
     /**

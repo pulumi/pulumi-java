@@ -25,8 +25,8 @@ public final class FirewallLogConfigResponse {
     private FirewallLogConfigResponse(
         Boolean enable,
         String metadata) {
-        this.enable = Objects.requireNonNull(enable);
-        this.metadata = Objects.requireNonNull(metadata);
+        this.enable = enable;
+        this.metadata = metadata;
     }
 
     /**

@@ -13,7 +13,7 @@ public final class EnvironmentConfigWebServerConfig {
 
     @OutputCustomType.Constructor({"machineType"})
     private EnvironmentConfigWebServerConfig(String machineType) {
-        this.machineType = Objects.requireNonNull(machineType);
+        this.machineType = machineType;
     }
 
     public String getMachineType() {

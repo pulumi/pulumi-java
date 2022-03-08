@@ -54,13 +54,13 @@ public final class GooglePrivacyDlpV2BigQueryOptionsResponse {
         Integer rowsLimitPercent,
         String sampleMethod,
         GooglePrivacyDlpV2BigQueryTableResponse tableReference) {
-        this.excludedFields = Objects.requireNonNull(excludedFields);
-        this.identifyingFields = Objects.requireNonNull(identifyingFields);
-        this.includedFields = Objects.requireNonNull(includedFields);
-        this.rowsLimit = Objects.requireNonNull(rowsLimit);
-        this.rowsLimitPercent = Objects.requireNonNull(rowsLimitPercent);
-        this.sampleMethod = Objects.requireNonNull(sampleMethod);
-        this.tableReference = Objects.requireNonNull(tableReference);
+        this.excludedFields = excludedFields;
+        this.identifyingFields = identifyingFields;
+        this.includedFields = includedFields;
+        this.rowsLimit = rowsLimit;
+        this.rowsLimitPercent = rowsLimitPercent;
+        this.sampleMethod = sampleMethod;
+        this.tableReference = tableReference;
     }
 
     /**

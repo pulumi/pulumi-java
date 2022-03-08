@@ -37,10 +37,10 @@ public final class GetParticipantResult {
         String name,
         String role,
         String sipRecordingMediaLabel) {
-        this.documentsMetadataFilters = Objects.requireNonNull(documentsMetadataFilters);
-        this.name = Objects.requireNonNull(name);
-        this.role = Objects.requireNonNull(role);
-        this.sipRecordingMediaLabel = Objects.requireNonNull(sipRecordingMediaLabel);
+        this.documentsMetadataFilters = documentsMetadataFilters;
+        this.name = name;
+        this.role = role;
+        this.sipRecordingMediaLabel = sipRecordingMediaLabel;
     }
 
     /**

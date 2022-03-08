@@ -24,8 +24,8 @@ public final class GoogleCloudApigeeV1AsyncQueryResultResponse {
     private GoogleCloudApigeeV1AsyncQueryResultResponse(
         String expires,
         String self) {
-        this.expires = Objects.requireNonNull(expires);
-        this.self = Objects.requireNonNull(self);
+        this.expires = expires;
+        this.self = self;
     }
 
     /**

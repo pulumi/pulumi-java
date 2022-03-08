@@ -17,8 +17,8 @@ public final class FeatureGroupFeatureDefinition {
     private FeatureGroupFeatureDefinition(
         String featureName,
         FeatureGroupFeatureDefinitionFeatureType featureType) {
-        this.featureName = Objects.requireNonNull(featureName);
-        this.featureType = Objects.requireNonNull(featureType);
+        this.featureName = featureName;
+        this.featureType = featureType;
     }
 
     public String getFeatureName() {

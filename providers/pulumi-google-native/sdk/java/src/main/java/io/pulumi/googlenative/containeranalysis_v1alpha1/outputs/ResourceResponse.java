@@ -31,9 +31,9 @@ public final class ResourceResponse {
         HashResponse contentHash,
         String name,
         String uri) {
-        this.contentHash = Objects.requireNonNull(contentHash);
-        this.name = Objects.requireNonNull(name);
-        this.uri = Objects.requireNonNull(uri);
+        this.contentHash = contentHash;
+        this.name = name;
+        this.uri = uri;
     }
 
     /**

@@ -30,9 +30,9 @@ public final class PosixGroupResponse {
         String gid,
         String name,
         String systemId) {
-        this.gid = Objects.requireNonNull(gid);
-        this.name = Objects.requireNonNull(name);
-        this.systemId = Objects.requireNonNull(systemId);
+        this.gid = gid;
+        this.name = name;
+        this.systemId = systemId;
     }
 
     /**

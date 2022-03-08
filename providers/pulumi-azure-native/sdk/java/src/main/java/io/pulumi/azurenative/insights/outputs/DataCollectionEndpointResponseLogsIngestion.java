@@ -17,7 +17,7 @@ public final class DataCollectionEndpointResponseLogsIngestion {
 
     @OutputCustomType.Constructor({"endpoint"})
     private DataCollectionEndpointResponseLogsIngestion(String endpoint) {
-        this.endpoint = Objects.requireNonNull(endpoint);
+        this.endpoint = endpoint;
     }
 
     /**

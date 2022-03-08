@@ -16,8 +16,8 @@ public final class GetBucketWebsite {
     private GetBucketWebsite(
         String mainPageSuffix,
         String notFoundPage) {
-        this.mainPageSuffix = Objects.requireNonNull(mainPageSuffix);
-        this.notFoundPage = Objects.requireNonNull(notFoundPage);
+        this.mainPageSuffix = mainPageSuffix;
+        this.notFoundPage = notFoundPage;
     }
 
     public String getMainPageSuffix() {

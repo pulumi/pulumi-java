@@ -26,7 +26,7 @@ public final class VirtualGatewaySpecListenerConnectionPoolHttp {
     private VirtualGatewaySpecListenerConnectionPoolHttp(
         Integer maxConnections,
         @Nullable Integer maxPendingRequests) {
-        this.maxConnections = Objects.requireNonNull(maxConnections);
+        this.maxConnections = maxConnections;
         this.maxPendingRequests = maxPendingRequests;
     }
 

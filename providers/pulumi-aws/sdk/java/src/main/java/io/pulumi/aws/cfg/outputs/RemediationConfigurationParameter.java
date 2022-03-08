@@ -32,7 +32,7 @@ public final class RemediationConfigurationParameter {
         String name,
         @Nullable String resourceValue,
         @Nullable String staticValue) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.resourceValue = resourceValue;
         this.staticValue = staticValue;
     }

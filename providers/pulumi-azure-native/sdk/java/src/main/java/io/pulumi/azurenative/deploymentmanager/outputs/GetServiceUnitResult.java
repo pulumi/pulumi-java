@@ -65,13 +65,13 @@ public final class GetServiceUnitResult {
         String targetResourceGroup,
         String type) {
         this.artifacts = artifacts;
-        this.deploymentMode = Objects.requireNonNull(deploymentMode);
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
+        this.deploymentMode = deploymentMode;
+        this.id = id;
+        this.location = location;
+        this.name = name;
         this.tags = tags;
-        this.targetResourceGroup = Objects.requireNonNull(targetResourceGroup);
-        this.type = Objects.requireNonNull(type);
+        this.targetResourceGroup = targetResourceGroup;
+        this.type = type;
     }
 
     /**

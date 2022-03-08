@@ -67,15 +67,15 @@ public final class GetEnvironmentResult {
         String name,
         GoogleCloudApigeeV1PropertiesResponse properties,
         String state) {
-        this.apiProxyType = Objects.requireNonNull(apiProxyType);
-        this.createdAt = Objects.requireNonNull(createdAt);
-        this.deploymentType = Objects.requireNonNull(deploymentType);
-        this.description = Objects.requireNonNull(description);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.lastModifiedAt = Objects.requireNonNull(lastModifiedAt);
-        this.name = Objects.requireNonNull(name);
-        this.properties = Objects.requireNonNull(properties);
-        this.state = Objects.requireNonNull(state);
+        this.apiProxyType = apiProxyType;
+        this.createdAt = createdAt;
+        this.deploymentType = deploymentType;
+        this.description = description;
+        this.displayName = displayName;
+        this.lastModifiedAt = lastModifiedAt;
+        this.name = name;
+        this.properties = properties;
+        this.state = state;
     }
 
     /**

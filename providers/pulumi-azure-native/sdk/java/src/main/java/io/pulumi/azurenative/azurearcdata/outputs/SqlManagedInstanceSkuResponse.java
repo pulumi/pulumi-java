@@ -55,7 +55,7 @@ public final class SqlManagedInstanceSkuResponse {
         this.capacity = capacity;
         this.dev = dev;
         this.family = family;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.size = size;
         this.tier = tier;
     }

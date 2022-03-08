@@ -27,7 +27,7 @@ public final class PrivateEndpointPropertiesResponse {
     private PrivateEndpointPropertiesResponse(
         String createdDate,
         @Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections) {
-        this.createdDate = Objects.requireNonNull(createdDate);
+        this.createdDate = createdDate;
         this.manualPrivateLinkServiceConnections = manualPrivateLinkServiceConnections;
     }
 

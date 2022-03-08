@@ -35,7 +35,7 @@ public final class FirewallDeny {
         @Nullable List<String> ports,
         String protocol) {
         this.ports = ports;
-        this.protocol = Objects.requireNonNull(protocol);
+        this.protocol = protocol;
     }
 
     /**

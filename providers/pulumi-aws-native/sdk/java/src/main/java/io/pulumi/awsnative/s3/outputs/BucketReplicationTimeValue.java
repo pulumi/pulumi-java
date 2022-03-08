@@ -13,7 +13,7 @@ public final class BucketReplicationTimeValue {
 
     @OutputCustomType.Constructor({"minutes"})
     private BucketReplicationTimeValue(Integer minutes) {
-        this.minutes = Objects.requireNonNull(minutes);
+        this.minutes = minutes;
     }
 
     public Integer getMinutes() {

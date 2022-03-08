@@ -62,11 +62,11 @@ public final class SecurityPolicyRule {
         @Nullable Boolean preview,
         Integer priority,
         @Nullable SecurityPolicyRuleRateLimitOptions rateLimitOptions) {
-        this.action = Objects.requireNonNull(action);
+        this.action = action;
         this.description = description;
-        this.match = Objects.requireNonNull(match);
+        this.match = match;
         this.preview = preview;
-        this.priority = Objects.requireNonNull(priority);
+        this.priority = priority;
         this.rateLimitOptions = rateLimitOptions;
     }
 

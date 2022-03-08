@@ -17,7 +17,7 @@ public final class WorkloadCertificatesResponse {
 
     @OutputCustomType.Constructor({"enableCertificates"})
     private WorkloadCertificatesResponse(Boolean enableCertificates) {
-        this.enableCertificates = Objects.requireNonNull(enableCertificates);
+        this.enableCertificates = enableCertificates;
     }
 
     /**

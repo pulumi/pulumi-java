@@ -72,7 +72,7 @@ public final class ImageTemplatePowerShellCustomizerResponse {
         this.runElevated = runElevated;
         this.scriptUri = scriptUri;
         this.sha256Checksum = sha256Checksum;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.validExitCodes = validExitCodes;
     }
 

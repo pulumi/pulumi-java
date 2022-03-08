@@ -17,7 +17,7 @@ public final class ConsumptionMeteringConfigResponse {
 
     @OutputCustomType.Constructor({"enabled"})
     private ConsumptionMeteringConfigResponse(Boolean enabled) {
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
     }
 
     /**

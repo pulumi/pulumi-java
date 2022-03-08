@@ -124,7 +124,7 @@ public final class TriggerBuildStep {
         this.entrypoint = entrypoint;
         this.envs = envs;
         this.id = id;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.secretEnvs = secretEnvs;
         this.timeout = timeout;
         this.timing = timing;

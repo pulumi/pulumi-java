@@ -27,7 +27,7 @@ public final class CxIntentTrainingPhrasePart {
         @Nullable String parameterId,
         String text) {
         this.parameterId = parameterId;
-        this.text = Objects.requireNonNull(text);
+        this.text = text;
     }
 
     /**

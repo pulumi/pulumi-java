@@ -34,8 +34,8 @@ public final class VirtualGatewaySpecListenerTls {
         VirtualGatewaySpecListenerTlsCertificate certificate,
         String mode,
         @Nullable VirtualGatewaySpecListenerTlsValidation validation) {
-        this.certificate = Objects.requireNonNull(certificate);
-        this.mode = Objects.requireNonNull(mode);
+        this.certificate = certificate;
+        this.mode = mode;
         this.validation = validation;
     }
 

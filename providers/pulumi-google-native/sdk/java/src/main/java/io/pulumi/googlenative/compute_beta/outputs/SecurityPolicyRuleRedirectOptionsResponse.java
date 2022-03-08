@@ -24,8 +24,8 @@ public final class SecurityPolicyRuleRedirectOptionsResponse {
     private SecurityPolicyRuleRedirectOptionsResponse(
         String target,
         String type) {
-        this.target = Objects.requireNonNull(target);
-        this.type = Objects.requireNonNull(type);
+        this.target = target;
+        this.type = type;
     }
 
     /**

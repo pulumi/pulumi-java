@@ -30,9 +30,9 @@ public final class PerNodeExtensionStateResponse {
         String extension,
         String name,
         String state) {
-        this.extension = Objects.requireNonNull(extension);
-        this.name = Objects.requireNonNull(name);
-        this.state = Objects.requireNonNull(state);
+        this.extension = extension;
+        this.name = name;
+        this.state = state;
     }
 
     /**

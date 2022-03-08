@@ -278,11 +278,11 @@ public final class A2AReplicationDetailsResponse {
         @Nullable AzureToAzureVmSyncedConfigDetailsResponse vmSyncedConfigDetails) {
         this.agentVersion = agentVersion;
         this.fabricObjectId = fabricObjectId;
-        this.initialPrimaryFabricLocation = Objects.requireNonNull(initialPrimaryFabricLocation);
-        this.initialPrimaryZone = Objects.requireNonNull(initialPrimaryZone);
-        this.initialRecoveryFabricLocation = Objects.requireNonNull(initialRecoveryFabricLocation);
-        this.initialRecoveryZone = Objects.requireNonNull(initialRecoveryZone);
-        this.instanceType = Objects.requireNonNull(instanceType);
+        this.initialPrimaryFabricLocation = initialPrimaryFabricLocation;
+        this.initialPrimaryZone = initialPrimaryZone;
+        this.initialRecoveryFabricLocation = initialRecoveryFabricLocation;
+        this.initialRecoveryZone = initialRecoveryZone;
+        this.instanceType = instanceType;
         this.isReplicationAgentUpdateRequired = isReplicationAgentUpdateRequired;
         this.lastHeartbeat = lastHeartbeat;
         this.lastRpoCalculatedTime = lastRpoCalculatedTime;
@@ -313,7 +313,7 @@ public final class A2AReplicationDetailsResponse {
         this.testFailoverRecoveryFabricObjectId = testFailoverRecoveryFabricObjectId;
         this.tfoAzureVMName = tfoAzureVMName;
         this.unprotectedDisks = unprotectedDisks;
-        this.vmEncryptionType = Objects.requireNonNull(vmEncryptionType);
+        this.vmEncryptionType = vmEncryptionType;
         this.vmNics = vmNics;
         this.vmProtectionState = vmProtectionState;
         this.vmProtectionStateDescription = vmProtectionStateDescription;

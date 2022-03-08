@@ -17,7 +17,7 @@ public final class PatchDeploymentPatchConfigGoo {
 
     @OutputCustomType.Constructor({"enabled"})
     private PatchDeploymentPatchConfigGoo(Boolean enabled) {
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
     }
 
     /**

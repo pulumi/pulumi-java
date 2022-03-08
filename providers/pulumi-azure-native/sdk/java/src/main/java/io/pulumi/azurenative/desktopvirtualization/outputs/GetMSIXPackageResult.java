@@ -103,18 +103,18 @@ public final class GetMSIXPackageResult {
         String type,
         @Nullable String version) {
         this.displayName = displayName;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.imagePath = imagePath;
         this.isActive = isActive;
         this.isRegularRegistration = isRegularRegistration;
         this.lastUpdated = lastUpdated;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.packageApplications = packageApplications;
         this.packageDependencies = packageDependencies;
         this.packageFamilyName = packageFamilyName;
         this.packageName = packageName;
         this.packageRelativePath = packageRelativePath;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.version = version;
     }
 

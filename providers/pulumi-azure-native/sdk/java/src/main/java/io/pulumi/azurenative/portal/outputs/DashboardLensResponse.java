@@ -37,8 +37,8 @@ public final class DashboardLensResponse {
         Integer order,
         List<DashboardPartsResponse> parts) {
         this.metadata = metadata;
-        this.order = Objects.requireNonNull(order);
-        this.parts = Objects.requireNonNull(parts);
+        this.order = order;
+        this.parts = parts;
     }
 
     /**

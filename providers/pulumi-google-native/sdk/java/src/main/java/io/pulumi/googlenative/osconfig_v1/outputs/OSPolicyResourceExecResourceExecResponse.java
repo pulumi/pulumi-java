@@ -44,11 +44,11 @@ public final class OSPolicyResourceExecResourceExecResponse {
         String interpreter,
         String outputFilePath,
         String script) {
-        this.args = Objects.requireNonNull(args);
-        this.file = Objects.requireNonNull(file);
-        this.interpreter = Objects.requireNonNull(interpreter);
-        this.outputFilePath = Objects.requireNonNull(outputFilePath);
-        this.script = Objects.requireNonNull(script);
+        this.args = args;
+        this.file = file;
+        this.interpreter = interpreter;
+        this.outputFilePath = outputFilePath;
+        this.script = script;
     }
 
     /**

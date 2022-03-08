@@ -71,12 +71,12 @@ public final class GetOutputResult {
         @Nullable Object serialization,
         String type) {
         this.datasource = datasource;
-        this.diagnostics = Objects.requireNonNull(diagnostics);
-        this.etag = Objects.requireNonNull(etag);
-        this.id = Objects.requireNonNull(id);
+        this.diagnostics = diagnostics;
+        this.etag = etag;
+        this.id = id;
         this.name = name;
         this.serialization = serialization;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

@@ -25,8 +25,8 @@ public final class GoogleCloudChannelV1TrialSettingsResponse {
     private GoogleCloudChannelV1TrialSettingsResponse(
         String endTime,
         Boolean trial) {
-        this.endTime = Objects.requireNonNull(endTime);
-        this.trial = Objects.requireNonNull(trial);
+        this.endTime = endTime;
+        this.trial = trial;
     }
 
     /**

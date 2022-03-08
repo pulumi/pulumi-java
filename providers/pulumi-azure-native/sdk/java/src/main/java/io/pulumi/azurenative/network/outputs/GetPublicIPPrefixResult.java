@@ -138,23 +138,23 @@ public final class GetPublicIPPrefixResult {
         String type,
         @Nullable List<String> zones) {
         this.customIPPrefix = customIPPrefix;
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.extendedLocation = extendedLocation;
         this.id = id;
-        this.ipPrefix = Objects.requireNonNull(ipPrefix);
+        this.ipPrefix = ipPrefix;
         this.ipTags = ipTags;
-        this.loadBalancerFrontendIpConfiguration = Objects.requireNonNull(loadBalancerFrontendIpConfiguration);
+        this.loadBalancerFrontendIpConfiguration = loadBalancerFrontendIpConfiguration;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.natGateway = natGateway;
         this.prefixLength = prefixLength;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.publicIPAddressVersion = publicIPAddressVersion;
-        this.publicIPAddresses = Objects.requireNonNull(publicIPAddresses);
-        this.resourceGuid = Objects.requireNonNull(resourceGuid);
+        this.publicIPAddresses = publicIPAddresses;
+        this.resourceGuid = resourceGuid;
         this.sku = sku;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.zones = zones;
     }
 

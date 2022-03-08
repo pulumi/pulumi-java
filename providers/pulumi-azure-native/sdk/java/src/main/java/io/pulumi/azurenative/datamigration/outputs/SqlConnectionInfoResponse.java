@@ -72,12 +72,12 @@ public final class SqlConnectionInfoResponse {
         @Nullable String userName) {
         this.additionalSettings = additionalSettings;
         this.authentication = authentication;
-        this.dataSource = Objects.requireNonNull(dataSource);
+        this.dataSource = dataSource;
         this.encryptConnection = encryptConnection;
         this.password = password;
         this.platform = platform;
         this.trustServerCertificate = trustServerCertificate;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.userName = userName;
     }
 

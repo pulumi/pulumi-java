@@ -20,7 +20,7 @@ public final class GameServerGroupAutoScalingPolicy {
         @Nullable Double estimatedInstanceWarmup,
         GameServerGroupTargetTrackingConfiguration targetTrackingConfiguration) {
         this.estimatedInstanceWarmup = estimatedInstanceWarmup;
-        this.targetTrackingConfiguration = Objects.requireNonNull(targetTrackingConfiguration);
+        this.targetTrackingConfiguration = targetTrackingConfiguration;
     }
 
     public Optional<Double> getEstimatedInstanceWarmup() {

@@ -41,7 +41,7 @@ public final class ClusterNodePoolNodeConfigKubeletConfig {
         String cpuManagerPolicy) {
         this.cpuCfsQuota = cpuCfsQuota;
         this.cpuCfsQuotaPeriod = cpuCfsQuotaPeriod;
-        this.cpuManagerPolicy = Objects.requireNonNull(cpuManagerPolicy);
+        this.cpuManagerPolicy = cpuManagerPolicy;
     }
 
     /**

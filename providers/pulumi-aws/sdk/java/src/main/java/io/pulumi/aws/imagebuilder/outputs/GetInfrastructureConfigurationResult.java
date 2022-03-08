@@ -104,22 +104,22 @@ public final class GetInfrastructureConfigurationResult {
         String subnetId,
         Map<String,String> tags,
         Boolean terminateInstanceOnFailure) {
-        this.arn = Objects.requireNonNull(arn);
-        this.dateCreated = Objects.requireNonNull(dateCreated);
-        this.dateUpdated = Objects.requireNonNull(dateUpdated);
-        this.description = Objects.requireNonNull(description);
-        this.id = Objects.requireNonNull(id);
-        this.instanceProfileName = Objects.requireNonNull(instanceProfileName);
-        this.instanceTypes = Objects.requireNonNull(instanceTypes);
-        this.keyPair = Objects.requireNonNull(keyPair);
-        this.loggings = Objects.requireNonNull(loggings);
-        this.name = Objects.requireNonNull(name);
-        this.resourceTags = Objects.requireNonNull(resourceTags);
-        this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
-        this.snsTopicArn = Objects.requireNonNull(snsTopicArn);
-        this.subnetId = Objects.requireNonNull(subnetId);
-        this.tags = Objects.requireNonNull(tags);
-        this.terminateInstanceOnFailure = Objects.requireNonNull(terminateInstanceOnFailure);
+        this.arn = arn;
+        this.dateCreated = dateCreated;
+        this.dateUpdated = dateUpdated;
+        this.description = description;
+        this.id = id;
+        this.instanceProfileName = instanceProfileName;
+        this.instanceTypes = instanceTypes;
+        this.keyPair = keyPair;
+        this.loggings = loggings;
+        this.name = name;
+        this.resourceTags = resourceTags;
+        this.securityGroupIds = securityGroupIds;
+        this.snsTopicArn = snsTopicArn;
+        this.subnetId = subnetId;
+        this.tags = tags;
+        this.terminateInstanceOnFailure = terminateInstanceOnFailure;
     }
 
     public String getArn() {

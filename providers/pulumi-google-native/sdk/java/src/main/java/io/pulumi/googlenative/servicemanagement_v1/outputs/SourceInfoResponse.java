@@ -19,7 +19,7 @@ public final class SourceInfoResponse {
 
     @OutputCustomType.Constructor({"sourceFiles"})
     private SourceInfoResponse(List<Map<String,String>> sourceFiles) {
-        this.sourceFiles = Objects.requireNonNull(sourceFiles);
+        this.sourceFiles = sourceFiles;
     }
 
     /**

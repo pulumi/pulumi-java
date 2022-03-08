@@ -25,8 +25,8 @@ public final class PatchRolloutResponse {
     private PatchRolloutResponse(
         FixedOrPercentResponse disruptionBudget,
         String mode) {
-        this.disruptionBudget = Objects.requireNonNull(disruptionBudget);
-        this.mode = Objects.requireNonNull(mode);
+        this.disruptionBudget = disruptionBudget;
+        this.mode = mode;
     }
 
     /**

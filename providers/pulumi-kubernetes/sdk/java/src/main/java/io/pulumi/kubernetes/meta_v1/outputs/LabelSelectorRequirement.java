@@ -32,8 +32,8 @@ public final class LabelSelectorRequirement {
         String key,
         String operator,
         @Nullable List<String> values) {
-        this.key = Objects.requireNonNull(key);
-        this.operator = Objects.requireNonNull(operator);
+        this.key = key;
+        this.operator = operator;
         this.values = values;
     }
 

@@ -37,10 +37,10 @@ public final class AnimationFadeResponse {
         String fadeType,
         String startTimeOffset,
         NormalizedCoordinateResponse xy) {
-        this.endTimeOffset = Objects.requireNonNull(endTimeOffset);
-        this.fadeType = Objects.requireNonNull(fadeType);
-        this.startTimeOffset = Objects.requireNonNull(startTimeOffset);
-        this.xy = Objects.requireNonNull(xy);
+        this.endTimeOffset = endTimeOffset;
+        this.fadeType = fadeType;
+        this.startTimeOffset = startTimeOffset;
+        this.xy = xy;
     }
 
     /**

@@ -36,10 +36,10 @@ public final class GetPartitionResult {
         String id,
         String partition,
         String reverseDnsPrefix) {
-        this.dnsSuffix = Objects.requireNonNull(dnsSuffix);
-        this.id = Objects.requireNonNull(id);
-        this.partition = Objects.requireNonNull(partition);
-        this.reverseDnsPrefix = Objects.requireNonNull(reverseDnsPrefix);
+        this.dnsSuffix = dnsSuffix;
+        this.id = id;
+        this.partition = partition;
+        this.reverseDnsPrefix = reverseDnsPrefix;
     }
 
     /**

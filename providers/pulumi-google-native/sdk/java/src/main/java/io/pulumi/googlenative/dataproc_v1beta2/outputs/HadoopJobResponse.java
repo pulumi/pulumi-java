@@ -63,14 +63,14 @@ public final class HadoopJobResponse {
         String mainClass,
         String mainJarFileUri,
         Map<String,String> properties) {
-        this.archiveUris = Objects.requireNonNull(archiveUris);
-        this.args = Objects.requireNonNull(args);
-        this.fileUris = Objects.requireNonNull(fileUris);
-        this.jarFileUris = Objects.requireNonNull(jarFileUris);
-        this.loggingConfig = Objects.requireNonNull(loggingConfig);
-        this.mainClass = Objects.requireNonNull(mainClass);
-        this.mainJarFileUri = Objects.requireNonNull(mainJarFileUri);
-        this.properties = Objects.requireNonNull(properties);
+        this.archiveUris = archiveUris;
+        this.args = args;
+        this.fileUris = fileUris;
+        this.jarFileUris = jarFileUris;
+        this.loggingConfig = loggingConfig;
+        this.mainClass = mainClass;
+        this.mainJarFileUri = mainJarFileUri;
+        this.properties = properties;
     }
 
     /**

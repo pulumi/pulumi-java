@@ -40,9 +40,9 @@ public final class SourceTriggerResponse {
         SourcePropertiesResponse sourceRepository,
         List<String> sourceTriggerEvents,
         @Nullable String status) {
-        this.name = Objects.requireNonNull(name);
-        this.sourceRepository = Objects.requireNonNull(sourceRepository);
-        this.sourceTriggerEvents = Objects.requireNonNull(sourceTriggerEvents);
+        this.name = name;
+        this.sourceRepository = sourceRepository;
+        this.sourceTriggerEvents = sourceTriggerEvents;
         this.status = status;
     }
 

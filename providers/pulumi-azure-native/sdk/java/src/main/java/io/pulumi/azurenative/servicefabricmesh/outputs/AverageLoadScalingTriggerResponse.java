@@ -46,11 +46,11 @@ public final class AverageLoadScalingTriggerResponse {
         AutoScalingResourceMetricResponse metric,
         Integer scaleIntervalInSeconds,
         Double upperLoadThreshold) {
-        this.kind = Objects.requireNonNull(kind);
-        this.lowerLoadThreshold = Objects.requireNonNull(lowerLoadThreshold);
-        this.metric = Objects.requireNonNull(metric);
-        this.scaleIntervalInSeconds = Objects.requireNonNull(scaleIntervalInSeconds);
-        this.upperLoadThreshold = Objects.requireNonNull(upperLoadThreshold);
+        this.kind = kind;
+        this.lowerLoadThreshold = lowerLoadThreshold;
+        this.metric = metric;
+        this.scaleIntervalInSeconds = scaleIntervalInSeconds;
+        this.upperLoadThreshold = upperLoadThreshold;
     }
 
     /**

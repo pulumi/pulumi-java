@@ -60,15 +60,15 @@ public final class GetPublicKeyResult {
         String keyUsage,
         String publicKey,
         List<String> signingAlgorithms) {
-        this.arn = Objects.requireNonNull(arn);
-        this.customerMasterKeySpec = Objects.requireNonNull(customerMasterKeySpec);
-        this.encryptionAlgorithms = Objects.requireNonNull(encryptionAlgorithms);
+        this.arn = arn;
+        this.customerMasterKeySpec = customerMasterKeySpec;
+        this.encryptionAlgorithms = encryptionAlgorithms;
         this.grantTokens = grantTokens;
-        this.id = Objects.requireNonNull(id);
-        this.keyId = Objects.requireNonNull(keyId);
-        this.keyUsage = Objects.requireNonNull(keyUsage);
-        this.publicKey = Objects.requireNonNull(publicKey);
-        this.signingAlgorithms = Objects.requireNonNull(signingAlgorithms);
+        this.id = id;
+        this.keyId = keyId;
+        this.keyUsage = keyUsage;
+        this.publicKey = publicKey;
+        this.signingAlgorithms = signingAlgorithms;
     }
 
     /**

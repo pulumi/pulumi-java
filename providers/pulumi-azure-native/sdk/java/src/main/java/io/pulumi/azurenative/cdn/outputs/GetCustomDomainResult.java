@@ -85,15 +85,15 @@ public final class GetCustomDomainResult {
         String type,
         @Nullable String validationData) {
         this.customHttpsParameters = customHttpsParameters;
-        this.customHttpsProvisioningState = Objects.requireNonNull(customHttpsProvisioningState);
-        this.customHttpsProvisioningSubstate = Objects.requireNonNull(customHttpsProvisioningSubstate);
-        this.hostName = Objects.requireNonNull(hostName);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.resourceState = Objects.requireNonNull(resourceState);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.customHttpsProvisioningState = customHttpsProvisioningState;
+        this.customHttpsProvisioningSubstate = customHttpsProvisioningSubstate;
+        this.hostName = hostName;
+        this.id = id;
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.resourceState = resourceState;
+        this.systemData = systemData;
+        this.type = type;
         this.validationData = validationData;
     }
 

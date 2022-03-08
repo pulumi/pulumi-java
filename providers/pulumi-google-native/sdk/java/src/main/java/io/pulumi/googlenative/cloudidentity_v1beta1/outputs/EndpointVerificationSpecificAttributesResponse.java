@@ -18,7 +18,7 @@ public final class EndpointVerificationSpecificAttributesResponse {
 
     @OutputCustomType.Constructor({"certificateAttributes"})
     private EndpointVerificationSpecificAttributesResponse(List<CertificateAttributesResponse> certificateAttributes) {
-        this.certificateAttributes = Objects.requireNonNull(certificateAttributes);
+        this.certificateAttributes = certificateAttributes;
     }
 
     /**

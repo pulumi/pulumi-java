@@ -37,10 +37,10 @@ public final class HttpQueryParameterMatchResponse {
         String name,
         Boolean presentMatch,
         String regexMatch) {
-        this.exactMatch = Objects.requireNonNull(exactMatch);
-        this.name = Objects.requireNonNull(name);
-        this.presentMatch = Objects.requireNonNull(presentMatch);
-        this.regexMatch = Objects.requireNonNull(regexMatch);
+        this.exactMatch = exactMatch;
+        this.name = name;
+        this.presentMatch = presentMatch;
+        this.regexMatch = regexMatch;
     }
 
     /**

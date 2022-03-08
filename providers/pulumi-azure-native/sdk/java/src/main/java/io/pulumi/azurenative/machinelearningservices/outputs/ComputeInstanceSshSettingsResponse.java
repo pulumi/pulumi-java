@@ -40,8 +40,8 @@ public final class ComputeInstanceSshSettingsResponse {
         Integer sshPort,
         @Nullable String sshPublicAccess) {
         this.adminPublicKey = adminPublicKey;
-        this.adminUserName = Objects.requireNonNull(adminUserName);
-        this.sshPort = Objects.requireNonNull(sshPort);
+        this.adminUserName = adminUserName;
+        this.sshPort = sshPort;
         this.sshPublicAccess = sshPublicAccess;
     }
 

@@ -54,13 +54,13 @@ public final class GetPolicyResult {
         String kind,
         String name,
         List<PolicyNetworkResponse> networks) {
-        this.alternativeNameServerConfig = Objects.requireNonNull(alternativeNameServerConfig);
-        this.description = Objects.requireNonNull(description);
-        this.enableInboundForwarding = Objects.requireNonNull(enableInboundForwarding);
-        this.enableLogging = Objects.requireNonNull(enableLogging);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.networks = Objects.requireNonNull(networks);
+        this.alternativeNameServerConfig = alternativeNameServerConfig;
+        this.description = description;
+        this.enableInboundForwarding = enableInboundForwarding;
+        this.enableLogging = enableLogging;
+        this.kind = kind;
+        this.name = name;
+        this.networks = networks;
     }
 
     /**

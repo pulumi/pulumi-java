@@ -18,7 +18,7 @@ public final class DataplexConfigResponse {
 
     @OutputCustomType.Constructor({"lakeResources"})
     private DataplexConfigResponse(Map<String,String> lakeResources) {
-        this.lakeResources = Objects.requireNonNull(lakeResources);
+        this.lakeResources = lakeResources;
     }
 
     /**

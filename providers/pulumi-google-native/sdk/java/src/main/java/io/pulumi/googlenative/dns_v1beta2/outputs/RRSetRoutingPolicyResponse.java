@@ -24,11 +24,11 @@ public final class RRSetRoutingPolicyResponse {
         String kind,
         RRSetRoutingPolicyWrrPolicyResponse wrr,
         RRSetRoutingPolicyWrrPolicyResponse wrrPolicy) {
-        this.geo = Objects.requireNonNull(geo);
-        this.geoPolicy = Objects.requireNonNull(geoPolicy);
-        this.kind = Objects.requireNonNull(kind);
-        this.wrr = Objects.requireNonNull(wrr);
-        this.wrrPolicy = Objects.requireNonNull(wrrPolicy);
+        this.geo = geo;
+        this.geoPolicy = geoPolicy;
+        this.kind = kind;
+        this.wrr = wrr;
+        this.wrrPolicy = wrrPolicy;
     }
 
     public RRSetRoutingPolicyGeoPolicyResponse getGeo() {

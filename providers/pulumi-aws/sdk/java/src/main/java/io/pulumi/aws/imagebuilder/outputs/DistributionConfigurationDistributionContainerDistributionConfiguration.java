@@ -36,7 +36,7 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
         DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepository targetRepository) {
         this.containerTags = containerTags;
         this.description = description;
-        this.targetRepository = Objects.requireNonNull(targetRepository);
+        this.targetRepository = targetRepository;
     }
 
     /**

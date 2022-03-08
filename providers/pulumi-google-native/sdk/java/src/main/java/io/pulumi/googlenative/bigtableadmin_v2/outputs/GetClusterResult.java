@@ -57,13 +57,13 @@ public final class GetClusterResult {
         String name,
         Integer serveNodes,
         String state) {
-        this.clusterConfig = Objects.requireNonNull(clusterConfig);
-        this.defaultStorageType = Objects.requireNonNull(defaultStorageType);
-        this.encryptionConfig = Objects.requireNonNull(encryptionConfig);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.serveNodes = Objects.requireNonNull(serveNodes);
-        this.state = Objects.requireNonNull(state);
+        this.clusterConfig = clusterConfig;
+        this.defaultStorageType = defaultStorageType;
+        this.encryptionConfig = encryptionConfig;
+        this.location = location;
+        this.name = name;
+        this.serveNodes = serveNodes;
+        this.state = state;
     }
 
     /**

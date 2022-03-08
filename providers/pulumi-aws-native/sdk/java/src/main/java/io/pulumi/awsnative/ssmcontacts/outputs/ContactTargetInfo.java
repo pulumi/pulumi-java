@@ -25,8 +25,8 @@ public final class ContactTargetInfo {
     private ContactTargetInfo(
         String contactId,
         Boolean isEssential) {
-        this.contactId = Objects.requireNonNull(contactId);
-        this.isEssential = Objects.requireNonNull(isEssential);
+        this.contactId = contactId;
+        this.isEssential = isEssential;
     }
 
     /**

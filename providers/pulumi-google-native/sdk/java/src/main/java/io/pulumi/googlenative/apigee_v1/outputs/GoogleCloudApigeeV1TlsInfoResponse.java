@@ -69,15 +69,15 @@ public final class GoogleCloudApigeeV1TlsInfoResponse {
         String keyStore,
         List<String> protocols,
         String trustStore) {
-        this.ciphers = Objects.requireNonNull(ciphers);
-        this.clientAuthEnabled = Objects.requireNonNull(clientAuthEnabled);
-        this.commonName = Objects.requireNonNull(commonName);
-        this.enabled = Objects.requireNonNull(enabled);
-        this.ignoreValidationErrors = Objects.requireNonNull(ignoreValidationErrors);
-        this.keyAlias = Objects.requireNonNull(keyAlias);
-        this.keyStore = Objects.requireNonNull(keyStore);
-        this.protocols = Objects.requireNonNull(protocols);
-        this.trustStore = Objects.requireNonNull(trustStore);
+        this.ciphers = ciphers;
+        this.clientAuthEnabled = clientAuthEnabled;
+        this.commonName = commonName;
+        this.enabled = enabled;
+        this.ignoreValidationErrors = ignoreValidationErrors;
+        this.keyAlias = keyAlias;
+        this.keyStore = keyStore;
+        this.protocols = protocols;
+        this.trustStore = trustStore;
     }
 
     /**

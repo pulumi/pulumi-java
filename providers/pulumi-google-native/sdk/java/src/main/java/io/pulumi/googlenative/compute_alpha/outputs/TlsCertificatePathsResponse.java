@@ -24,8 +24,8 @@ public final class TlsCertificatePathsResponse {
     private TlsCertificatePathsResponse(
         String certificatePath,
         String privateKeyPath) {
-        this.certificatePath = Objects.requireNonNull(certificatePath);
-        this.privateKeyPath = Objects.requireNonNull(privateKeyPath);
+        this.certificatePath = certificatePath;
+        this.privateKeyPath = privateKeyPath;
     }
 
     /**

@@ -113,7 +113,7 @@ public final class SUCSchedulePropertiesResponse {
         this.nextRun = nextRun;
         this.nextRunOffsetMinutes = nextRunOffsetMinutes;
         this.startTime = startTime;
-        this.startTimeOffsetMinutes = Objects.requireNonNull(startTimeOffsetMinutes);
+        this.startTimeOffsetMinutes = startTimeOffsetMinutes;
         this.timeZone = timeZone;
     }
 

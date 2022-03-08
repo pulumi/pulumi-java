@@ -24,8 +24,8 @@ public final class ValidationOptionsResponse {
     private ValidationOptionsResponse(
         String schemaValidation,
         String undeclaredProperties) {
-        this.schemaValidation = Objects.requireNonNull(schemaValidation);
-        this.undeclaredProperties = Objects.requireNonNull(undeclaredProperties);
+        this.schemaValidation = schemaValidation;
+        this.undeclaredProperties = undeclaredProperties;
     }
 
     /**

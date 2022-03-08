@@ -90,15 +90,15 @@ public final class NodeTypeDescriptionResponse {
         Integer vmInstanceCount) {
         this.applicationPorts = applicationPorts;
         this.capacities = capacities;
-        this.clientConnectionEndpointPort = Objects.requireNonNull(clientConnectionEndpointPort);
+        this.clientConnectionEndpointPort = clientConnectionEndpointPort;
         this.durabilityLevel = durabilityLevel;
         this.ephemeralPorts = ephemeralPorts;
-        this.httpGatewayEndpointPort = Objects.requireNonNull(httpGatewayEndpointPort);
-        this.isPrimary = Objects.requireNonNull(isPrimary);
-        this.name = Objects.requireNonNull(name);
+        this.httpGatewayEndpointPort = httpGatewayEndpointPort;
+        this.isPrimary = isPrimary;
+        this.name = name;
         this.placementProperties = placementProperties;
         this.reverseProxyEndpointPort = reverseProxyEndpointPort;
-        this.vmInstanceCount = Objects.requireNonNull(vmInstanceCount);
+        this.vmInstanceCount = vmInstanceCount;
     }
 
     /**

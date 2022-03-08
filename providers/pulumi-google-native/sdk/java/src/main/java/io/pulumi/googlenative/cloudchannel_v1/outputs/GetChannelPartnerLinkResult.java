@@ -61,14 +61,14 @@ public final class GetChannelPartnerLinkResult {
         String publicId,
         String resellerCloudIdentityId,
         String updateTime) {
-        this.channelPartnerCloudIdentityInfo = Objects.requireNonNull(channelPartnerCloudIdentityInfo);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.inviteLinkUri = Objects.requireNonNull(inviteLinkUri);
-        this.linkState = Objects.requireNonNull(linkState);
-        this.name = Objects.requireNonNull(name);
-        this.publicId = Objects.requireNonNull(publicId);
-        this.resellerCloudIdentityId = Objects.requireNonNull(resellerCloudIdentityId);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.channelPartnerCloudIdentityInfo = channelPartnerCloudIdentityInfo;
+        this.createTime = createTime;
+        this.inviteLinkUri = inviteLinkUri;
+        this.linkState = linkState;
+        this.name = name;
+        this.publicId = publicId;
+        this.resellerCloudIdentityId = resellerCloudIdentityId;
+        this.updateTime = updateTime;
     }
 
     /**

@@ -25,8 +25,8 @@ public final class GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse {
     private GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse(
         String key,
         List<String> synonyms) {
-        this.key = Objects.requireNonNull(key);
-        this.synonyms = Objects.requireNonNull(synonyms);
+        this.key = key;
+        this.synonyms = synonyms;
     }
 
     /**

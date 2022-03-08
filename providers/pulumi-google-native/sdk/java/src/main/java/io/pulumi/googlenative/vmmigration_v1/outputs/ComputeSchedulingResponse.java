@@ -39,10 +39,10 @@ public final class ComputeSchedulingResponse {
         List<SchedulingNodeAffinityResponse> nodeAffinities,
         String onHostMaintenance,
         String restartType) {
-        this.minNodeCpus = Objects.requireNonNull(minNodeCpus);
-        this.nodeAffinities = Objects.requireNonNull(nodeAffinities);
-        this.onHostMaintenance = Objects.requireNonNull(onHostMaintenance);
-        this.restartType = Objects.requireNonNull(restartType);
+        this.minNodeCpus = minNodeCpus;
+        this.nodeAffinities = nodeAffinities;
+        this.onHostMaintenance = onHostMaintenance;
+        this.restartType = restartType;
     }
 
     /**

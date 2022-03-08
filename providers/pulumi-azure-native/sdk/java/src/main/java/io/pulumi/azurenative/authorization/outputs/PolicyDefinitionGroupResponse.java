@@ -48,7 +48,7 @@ public final class PolicyDefinitionGroupResponse {
         this.category = category;
         this.description = description;
         this.displayName = displayName;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

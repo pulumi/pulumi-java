@@ -17,7 +17,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
 
     @OutputCustomType.Constructor({"path"})
     private PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryCloudStoragePath(String path) {
-        this.path = Objects.requireNonNull(path);
+        this.path = path;
     }
 
     /**

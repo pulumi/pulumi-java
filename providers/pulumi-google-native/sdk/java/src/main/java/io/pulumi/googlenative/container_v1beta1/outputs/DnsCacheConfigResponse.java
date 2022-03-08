@@ -17,7 +17,7 @@ public final class DnsCacheConfigResponse {
 
     @OutputCustomType.Constructor({"enabled"})
     private DnsCacheConfigResponse(Boolean enabled) {
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
     }
 
     /**

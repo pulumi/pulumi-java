@@ -33,8 +33,8 @@ public final class CrossVersionObjectReference {
         String kind,
         String name) {
         this.apiVersion = apiVersion;
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
+        this.kind = kind;
+        this.name = name;
     }
 
     /**

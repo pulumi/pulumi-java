@@ -32,9 +32,9 @@ public final class DiagnosticStoragePropertiesResponse {
         String authenticationType,
         @Nullable String connectionString,
         String resourceId) {
-        this.authenticationType = Objects.requireNonNull(authenticationType);
+        this.authenticationType = authenticationType;
         this.connectionString = connectionString;
-        this.resourceId = Objects.requireNonNull(resourceId);
+        this.resourceId = resourceId;
     }
 
     /**

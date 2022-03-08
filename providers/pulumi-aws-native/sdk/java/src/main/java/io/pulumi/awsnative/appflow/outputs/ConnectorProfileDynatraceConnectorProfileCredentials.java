@@ -17,7 +17,7 @@ public final class ConnectorProfileDynatraceConnectorProfileCredentials {
 
     @OutputCustomType.Constructor({"apiToken"})
     private ConnectorProfileDynatraceConnectorProfileCredentials(String apiToken) {
-        this.apiToken = Objects.requireNonNull(apiToken);
+        this.apiToken = apiToken;
     }
 
     /**

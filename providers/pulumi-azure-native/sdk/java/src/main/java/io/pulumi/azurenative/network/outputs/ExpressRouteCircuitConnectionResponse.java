@@ -84,15 +84,15 @@ public final class ExpressRouteCircuitConnectionResponse {
         String type) {
         this.addressPrefix = addressPrefix;
         this.authorizationKey = authorizationKey;
-        this.circuitConnectionStatus = Objects.requireNonNull(circuitConnectionStatus);
-        this.etag = Objects.requireNonNull(etag);
+        this.circuitConnectionStatus = circuitConnectionStatus;
+        this.etag = etag;
         this.expressRouteCircuitPeering = expressRouteCircuitPeering;
         this.id = id;
         this.ipv6CircuitConnectionConfig = ipv6CircuitConnectionConfig;
         this.name = name;
         this.peerExpressRouteCircuitPeering = peerExpressRouteCircuitPeering;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.type = Objects.requireNonNull(type);
+        this.provisioningState = provisioningState;
+        this.type = type;
     }
 
     /**

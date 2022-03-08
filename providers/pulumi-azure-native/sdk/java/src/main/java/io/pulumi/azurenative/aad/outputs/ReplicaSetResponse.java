@@ -77,16 +77,16 @@ public final class ReplicaSetResponse {
         String serviceStatus,
         @Nullable String subnetId,
         String vnetSiteId) {
-        this.domainControllerIpAddress = Objects.requireNonNull(domainControllerIpAddress);
-        this.externalAccessIpAddress = Objects.requireNonNull(externalAccessIpAddress);
-        this.healthAlerts = Objects.requireNonNull(healthAlerts);
-        this.healthLastEvaluated = Objects.requireNonNull(healthLastEvaluated);
-        this.healthMonitors = Objects.requireNonNull(healthMonitors);
+        this.domainControllerIpAddress = domainControllerIpAddress;
+        this.externalAccessIpAddress = externalAccessIpAddress;
+        this.healthAlerts = healthAlerts;
+        this.healthLastEvaluated = healthLastEvaluated;
+        this.healthMonitors = healthMonitors;
         this.location = location;
-        this.replicaSetId = Objects.requireNonNull(replicaSetId);
-        this.serviceStatus = Objects.requireNonNull(serviceStatus);
+        this.replicaSetId = replicaSetId;
+        this.serviceStatus = serviceStatus;
         this.subnetId = subnetId;
-        this.vnetSiteId = Objects.requireNonNull(vnetSiteId);
+        this.vnetSiteId = vnetSiteId;
     }
 
     /**

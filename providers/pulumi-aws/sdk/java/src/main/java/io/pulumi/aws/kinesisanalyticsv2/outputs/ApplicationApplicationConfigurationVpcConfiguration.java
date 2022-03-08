@@ -31,8 +31,8 @@ public final class ApplicationApplicationConfigurationVpcConfiguration {
         List<String> subnetIds,
         @Nullable String vpcConfigurationId,
         @Nullable String vpcId) {
-        this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
-        this.subnetIds = Objects.requireNonNull(subnetIds);
+        this.securityGroupIds = securityGroupIds;
+        this.subnetIds = subnetIds;
         this.vpcConfigurationId = vpcConfigurationId;
         this.vpcId = vpcId;
     }

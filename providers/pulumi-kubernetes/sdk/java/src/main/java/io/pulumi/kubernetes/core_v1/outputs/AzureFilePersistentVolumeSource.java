@@ -40,9 +40,9 @@ public final class AzureFilePersistentVolumeSource {
         @Nullable String secretNamespace,
         String shareName) {
         this.readOnly = readOnly;
-        this.secretName = Objects.requireNonNull(secretName);
+        this.secretName = secretName;
         this.secretNamespace = secretNamespace;
-        this.shareName = Objects.requireNonNull(shareName);
+        this.shareName = shareName;
     }
 
     /**

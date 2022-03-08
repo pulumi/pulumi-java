@@ -37,10 +37,10 @@ public final class MaintenanceWindowResponse {
         Integer hour,
         String kind,
         String updateTrack) {
-        this.day = Objects.requireNonNull(day);
-        this.hour = Objects.requireNonNull(hour);
-        this.kind = Objects.requireNonNull(kind);
-        this.updateTrack = Objects.requireNonNull(updateTrack);
+        this.day = day;
+        this.hour = hour;
+        this.kind = kind;
+        this.updateTrack = updateTrack;
     }
 
     /**

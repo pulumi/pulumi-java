@@ -53,13 +53,13 @@ public final class GetResourceRecordSetResult {
         List<String> signatureRrdatas,
         Integer ttl,
         String type) {
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.routingPolicy = Objects.requireNonNull(routingPolicy);
-        this.rrdatas = Objects.requireNonNull(rrdatas);
-        this.signatureRrdatas = Objects.requireNonNull(signatureRrdatas);
-        this.ttl = Objects.requireNonNull(ttl);
-        this.type = Objects.requireNonNull(type);
+        this.kind = kind;
+        this.name = name;
+        this.routingPolicy = routingPolicy;
+        this.rrdatas = rrdatas;
+        this.signatureRrdatas = signatureRrdatas;
+        this.ttl = ttl;
+        this.type = type;
     }
 
     public String getKind() {

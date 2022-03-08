@@ -25,8 +25,8 @@ public final class VirtualNodeSpecListenerPortMapping {
     private VirtualNodeSpecListenerPortMapping(
         Integer port,
         String protocol) {
-        this.port = Objects.requireNonNull(port);
-        this.protocol = Objects.requireNonNull(protocol);
+        this.port = port;
+        this.protocol = protocol;
     }
 
     /**

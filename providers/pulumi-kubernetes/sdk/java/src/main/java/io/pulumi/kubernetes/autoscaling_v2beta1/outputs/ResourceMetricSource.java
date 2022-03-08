@@ -33,7 +33,7 @@ public final class ResourceMetricSource {
         String name,
         @Nullable Integer targetAverageUtilization,
         @Nullable String targetAverageValue) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.targetAverageUtilization = targetAverageUtilization;
         this.targetAverageValue = targetAverageValue;
     }

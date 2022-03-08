@@ -45,11 +45,11 @@ public final class GoogleCloudOrgpolicyV2PolicySpecResponse {
         Boolean reset,
         List<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse> rules,
         String updateTime) {
-        this.etag = Objects.requireNonNull(etag);
-        this.inheritFromParent = Objects.requireNonNull(inheritFromParent);
-        this.reset = Objects.requireNonNull(reset);
-        this.rules = Objects.requireNonNull(rules);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.etag = etag;
+        this.inheritFromParent = inheritFromParent;
+        this.reset = reset;
+        this.rules = rules;
+        this.updateTime = updateTime;
     }
 
     /**

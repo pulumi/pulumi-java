@@ -33,9 +33,9 @@ public final class GetServiceResult {
         Map<String,String> annotations,
         List<EndpointResponse> endpoints,
         String name) {
-        this.annotations = Objects.requireNonNull(annotations);
-        this.endpoints = Objects.requireNonNull(endpoints);
-        this.name = Objects.requireNonNull(name);
+        this.annotations = annotations;
+        this.endpoints = endpoints;
+        this.name = name;
     }
 
     /**

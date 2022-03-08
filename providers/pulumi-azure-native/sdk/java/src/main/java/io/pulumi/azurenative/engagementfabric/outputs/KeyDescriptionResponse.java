@@ -30,9 +30,9 @@ public final class KeyDescriptionResponse {
         String name,
         String rank,
         String value) {
-        this.name = Objects.requireNonNull(name);
-        this.rank = Objects.requireNonNull(rank);
-        this.value = Objects.requireNonNull(value);
+        this.name = name;
+        this.rank = rank;
+        this.value = value;
     }
 
     /**

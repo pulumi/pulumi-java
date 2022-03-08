@@ -36,7 +36,7 @@ public final class AzureDatabricksDeltaLakeImportCommandResponse {
         String type) {
         this.dateFormat = dateFormat;
         this.timestampFormat = timestampFormat;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

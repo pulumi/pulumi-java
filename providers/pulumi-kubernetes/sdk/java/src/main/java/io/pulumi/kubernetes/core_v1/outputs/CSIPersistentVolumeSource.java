@@ -73,13 +73,13 @@ public final class CSIPersistentVolumeSource {
         String volumeHandle) {
         this.controllerExpandSecretRef = controllerExpandSecretRef;
         this.controllerPublishSecretRef = controllerPublishSecretRef;
-        this.driver = Objects.requireNonNull(driver);
+        this.driver = driver;
         this.fsType = fsType;
         this.nodePublishSecretRef = nodePublishSecretRef;
         this.nodeStageSecretRef = nodeStageSecretRef;
         this.readOnly = readOnly;
         this.volumeAttributes = volumeAttributes;
-        this.volumeHandle = Objects.requireNonNull(volumeHandle);
+        this.volumeHandle = volumeHandle;
     }
 
     /**

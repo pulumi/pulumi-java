@@ -24,8 +24,8 @@ public final class GoogleFirestoreAdminV1beta1IndexFieldResponse {
     private GoogleFirestoreAdminV1beta1IndexFieldResponse(
         String fieldPath,
         String mode) {
-        this.fieldPath = Objects.requireNonNull(fieldPath);
-        this.mode = Objects.requireNonNull(mode);
+        this.fieldPath = fieldPath;
+        this.mode = mode;
     }
 
     /**

@@ -37,10 +37,10 @@ public final class GetBillingAccountResult {
         String masterBillingAccount,
         String name,
         Boolean open) {
-        this.displayName = Objects.requireNonNull(displayName);
-        this.masterBillingAccount = Objects.requireNonNull(masterBillingAccount);
-        this.name = Objects.requireNonNull(name);
-        this.open = Objects.requireNonNull(open);
+        this.displayName = displayName;
+        this.masterBillingAccount = masterBillingAccount;
+        this.name = name;
+        this.open = open;
     }
 
     /**

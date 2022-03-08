@@ -26,8 +26,8 @@ public final class UrlRedirectActionResponse {
     private UrlRedirectActionResponse(
         String name,
         UrlRedirectActionParametersResponse parameters) {
-        this.name = Objects.requireNonNull(name);
-        this.parameters = Objects.requireNonNull(parameters);
+        this.name = name;
+        this.parameters = parameters;
     }
 
     /**

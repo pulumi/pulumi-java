@@ -30,9 +30,9 @@ public final class GoogleCloudChannelV1EduDataResponse {
         String instituteSize,
         String instituteType,
         String website) {
-        this.instituteSize = Objects.requireNonNull(instituteSize);
-        this.instituteType = Objects.requireNonNull(instituteType);
-        this.website = Objects.requireNonNull(website);
+        this.instituteSize = instituteSize;
+        this.instituteType = instituteType;
+        this.website = website;
     }
 
     /**

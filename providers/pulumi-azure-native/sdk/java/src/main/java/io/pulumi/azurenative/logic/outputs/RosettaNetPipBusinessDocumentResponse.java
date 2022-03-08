@@ -33,8 +33,8 @@ public final class RosettaNetPipBusinessDocumentResponse {
         String name,
         String version) {
         this.description = description;
-        this.name = Objects.requireNonNull(name);
-        this.version = Objects.requireNonNull(version);
+        this.name = name;
+        this.version = version;
     }
 
     /**

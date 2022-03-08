@@ -57,8 +57,8 @@ public final class TaskRunRequestResponse {
         this.isArchiveEnabled = isArchiveEnabled;
         this.logTemplate = logTemplate;
         this.overrideTaskStepProperties = overrideTaskStepProperties;
-        this.taskId = Objects.requireNonNull(taskId);
-        this.type = Objects.requireNonNull(type);
+        this.taskId = taskId;
+        this.type = type;
     }
 
     /**

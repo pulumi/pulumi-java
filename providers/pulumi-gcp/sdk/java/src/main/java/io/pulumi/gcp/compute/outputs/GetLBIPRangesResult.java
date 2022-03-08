@@ -31,9 +31,9 @@ public final class GetLBIPRangesResult {
         List<String> httpSslTcpInternals,
         String id,
         List<String> networks) {
-        this.httpSslTcpInternals = Objects.requireNonNull(httpSslTcpInternals);
-        this.id = Objects.requireNonNull(id);
-        this.networks = Objects.requireNonNull(networks);
+        this.httpSslTcpInternals = httpSslTcpInternals;
+        this.id = id;
+        this.networks = networks;
     }
 
     /**

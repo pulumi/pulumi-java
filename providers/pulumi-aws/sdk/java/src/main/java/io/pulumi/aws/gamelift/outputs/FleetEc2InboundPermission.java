@@ -37,10 +37,10 @@ public final class FleetEc2InboundPermission {
         String ipRange,
         String protocol,
         Integer toPort) {
-        this.fromPort = Objects.requireNonNull(fromPort);
-        this.ipRange = Objects.requireNonNull(ipRange);
-        this.protocol = Objects.requireNonNull(protocol);
-        this.toPort = Objects.requireNonNull(toPort);
+        this.fromPort = fromPort;
+        this.ipRange = ipRange;
+        this.protocol = protocol;
+        this.toPort = toPort;
     }
 
     /**

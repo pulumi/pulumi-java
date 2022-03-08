@@ -25,8 +25,8 @@ public final class EnvironmentResponse {
     private EnvironmentResponse(
         AndroidDeviceResponse androidDevice,
         IosDeviceResponse iosDevice) {
-        this.androidDevice = Objects.requireNonNull(androidDevice);
-        this.iosDevice = Objects.requireNonNull(iosDevice);
+        this.androidDevice = androidDevice;
+        this.iosDevice = iosDevice;
     }
 
     /**

@@ -36,7 +36,7 @@ public final class WebAclDefaultActionBlockCustomResponse {
         Integer responseCode,
         @Nullable List<WebAclDefaultActionBlockCustomResponseResponseHeader> responseHeaders) {
         this.customResponseBodyKey = customResponseBodyKey;
-        this.responseCode = Objects.requireNonNull(responseCode);
+        this.responseCode = responseCode;
         this.responseHeaders = responseHeaders;
     }
 

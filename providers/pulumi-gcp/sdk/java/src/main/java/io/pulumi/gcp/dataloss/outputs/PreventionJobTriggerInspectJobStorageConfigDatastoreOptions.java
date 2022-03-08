@@ -28,8 +28,8 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptions {
     private PreventionJobTriggerInspectJobStorageConfigDatastoreOptions(
         PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKind kind,
         PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionId partitionId) {
-        this.kind = Objects.requireNonNull(kind);
-        this.partitionId = Objects.requireNonNull(partitionId);
+        this.kind = kind;
+        this.partitionId = partitionId;
     }
 
     /**

@@ -25,8 +25,8 @@ public final class GrafeasV1beta1BuildDetailsResponse {
     private GrafeasV1beta1BuildDetailsResponse(
         BuildProvenanceResponse provenance,
         String provenanceBytes) {
-        this.provenance = Objects.requireNonNull(provenance);
-        this.provenanceBytes = Objects.requireNonNull(provenanceBytes);
+        this.provenance = provenance;
+        this.provenanceBytes = provenanceBytes;
     }
 
     /**

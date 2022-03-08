@@ -16,8 +16,8 @@ public final class QuickConnectQueueQuickConnectConfig {
     private QuickConnectQueueQuickConnectConfig(
         String contactFlowArn,
         String queueArn) {
-        this.contactFlowArn = Objects.requireNonNull(contactFlowArn);
-        this.queueArn = Objects.requireNonNull(queueArn);
+        this.contactFlowArn = contactFlowArn;
+        this.queueArn = queueArn;
     }
 
     public String getContactFlowArn() {

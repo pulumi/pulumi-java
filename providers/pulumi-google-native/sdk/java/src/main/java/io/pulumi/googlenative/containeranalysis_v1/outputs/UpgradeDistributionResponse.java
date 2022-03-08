@@ -37,10 +37,10 @@ public final class UpgradeDistributionResponse {
         String cpeUri,
         List<String> cve,
         String severity) {
-        this.classification = Objects.requireNonNull(classification);
-        this.cpeUri = Objects.requireNonNull(cpeUri);
-        this.cve = Objects.requireNonNull(cve);
-        this.severity = Objects.requireNonNull(severity);
+        this.classification = classification;
+        this.cpeUri = cpeUri;
+        this.cve = cve;
+        this.severity = severity;
     }
 
     /**

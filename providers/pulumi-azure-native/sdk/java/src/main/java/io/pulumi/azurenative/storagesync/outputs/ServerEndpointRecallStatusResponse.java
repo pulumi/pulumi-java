@@ -33,9 +33,9 @@ public final class ServerEndpointRecallStatusResponse {
         String lastUpdatedTimestamp,
         List<ServerEndpointRecallErrorResponse> recallErrors,
         Double totalRecallErrorsCount) {
-        this.lastUpdatedTimestamp = Objects.requireNonNull(lastUpdatedTimestamp);
-        this.recallErrors = Objects.requireNonNull(recallErrors);
-        this.totalRecallErrorsCount = Objects.requireNonNull(totalRecallErrorsCount);
+        this.lastUpdatedTimestamp = lastUpdatedTimestamp;
+        this.recallErrors = recallErrors;
+        this.totalRecallErrorsCount = totalRecallErrorsCount;
     }
 
     /**

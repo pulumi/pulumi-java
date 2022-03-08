@@ -26,7 +26,7 @@ public final class DatasetStateResponseDeprecatedBy {
     private DatasetStateResponseDeprecatedBy(
         String datasetId,
         @Nullable String definitionVersion) {
-        this.datasetId = Objects.requireNonNull(datasetId);
+        this.datasetId = datasetId;
         this.definitionVersion = definitionVersion;
     }
 

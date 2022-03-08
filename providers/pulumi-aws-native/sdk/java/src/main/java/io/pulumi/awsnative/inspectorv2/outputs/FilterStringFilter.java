@@ -17,8 +17,8 @@ public final class FilterStringFilter {
     private FilterStringFilter(
         FilterStringComparison comparison,
         String value) {
-        this.comparison = Objects.requireNonNull(comparison);
-        this.value = Objects.requireNonNull(value);
+        this.comparison = comparison;
+        this.value = value;
     }
 
     public FilterStringComparison getComparison() {

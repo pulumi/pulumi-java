@@ -36,10 +36,10 @@ public final class ListPrivateCloudAdminCredentialsResult {
         String nsxtUsername,
         String vcenterPassword,
         String vcenterUsername) {
-        this.nsxtPassword = Objects.requireNonNull(nsxtPassword);
-        this.nsxtUsername = Objects.requireNonNull(nsxtUsername);
-        this.vcenterPassword = Objects.requireNonNull(vcenterPassword);
-        this.vcenterUsername = Objects.requireNonNull(vcenterUsername);
+        this.nsxtPassword = nsxtPassword;
+        this.nsxtUsername = nsxtUsername;
+        this.vcenterPassword = vcenterPassword;
+        this.vcenterUsername = vcenterUsername;
     }
 
     /**

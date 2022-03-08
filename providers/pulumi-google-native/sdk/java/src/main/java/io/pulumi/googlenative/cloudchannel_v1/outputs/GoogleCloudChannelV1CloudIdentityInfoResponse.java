@@ -62,14 +62,14 @@ public final class GoogleCloudChannelV1CloudIdentityInfoResponse {
         String languageCode,
         String phoneNumber,
         String primaryDomain) {
-        this.adminConsoleUri = Objects.requireNonNull(adminConsoleUri);
-        this.alternateEmail = Objects.requireNonNull(alternateEmail);
-        this.customerType = Objects.requireNonNull(customerType);
-        this.eduData = Objects.requireNonNull(eduData);
-        this.isDomainVerified = Objects.requireNonNull(isDomainVerified);
-        this.languageCode = Objects.requireNonNull(languageCode);
-        this.phoneNumber = Objects.requireNonNull(phoneNumber);
-        this.primaryDomain = Objects.requireNonNull(primaryDomain);
+        this.adminConsoleUri = adminConsoleUri;
+        this.alternateEmail = alternateEmail;
+        this.customerType = customerType;
+        this.eduData = eduData;
+        this.isDomainVerified = isDomainVerified;
+        this.languageCode = languageCode;
+        this.phoneNumber = phoneNumber;
+        this.primaryDomain = primaryDomain;
     }
 
     /**

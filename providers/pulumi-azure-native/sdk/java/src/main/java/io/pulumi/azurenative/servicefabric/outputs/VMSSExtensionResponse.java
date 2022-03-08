@@ -79,14 +79,14 @@ public final class VMSSExtensionResponse {
         String typeHandlerVersion) {
         this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
         this.forceUpdateTag = forceUpdateTag;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.protectedSettings = protectedSettings;
         this.provisionAfterExtensions = provisionAfterExtensions;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.publisher = Objects.requireNonNull(publisher);
+        this.provisioningState = provisioningState;
+        this.publisher = publisher;
         this.settings = settings;
-        this.type = Objects.requireNonNull(type);
-        this.typeHandlerVersion = Objects.requireNonNull(typeHandlerVersion);
+        this.type = type;
+        this.typeHandlerVersion = typeHandlerVersion;
     }
 
     /**

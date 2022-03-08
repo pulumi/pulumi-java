@@ -118,22 +118,22 @@ public final class NodePoolResponse {
         String status,
         UpgradeSettingsResponse upgradeSettings,
         String version) {
-        this.autoscaling = Objects.requireNonNull(autoscaling);
-        this.conditions = Objects.requireNonNull(conditions);
-        this.config = Objects.requireNonNull(config);
-        this.initialNodeCount = Objects.requireNonNull(initialNodeCount);
-        this.instanceGroupUrls = Objects.requireNonNull(instanceGroupUrls);
-        this.locations = Objects.requireNonNull(locations);
-        this.management = Objects.requireNonNull(management);
-        this.maxPodsConstraint = Objects.requireNonNull(maxPodsConstraint);
-        this.name = Objects.requireNonNull(name);
-        this.networkConfig = Objects.requireNonNull(networkConfig);
-        this.placementPolicy = Objects.requireNonNull(placementPolicy);
-        this.podIpv4CidrSize = Objects.requireNonNull(podIpv4CidrSize);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.status = Objects.requireNonNull(status);
-        this.upgradeSettings = Objects.requireNonNull(upgradeSettings);
-        this.version = Objects.requireNonNull(version);
+        this.autoscaling = autoscaling;
+        this.conditions = conditions;
+        this.config = config;
+        this.initialNodeCount = initialNodeCount;
+        this.instanceGroupUrls = instanceGroupUrls;
+        this.locations = locations;
+        this.management = management;
+        this.maxPodsConstraint = maxPodsConstraint;
+        this.name = name;
+        this.networkConfig = networkConfig;
+        this.placementPolicy = placementPolicy;
+        this.podIpv4CidrSize = podIpv4CidrSize;
+        this.selfLink = selfLink;
+        this.status = status;
+        this.upgradeSettings = upgradeSettings;
+        this.version = version;
     }
 
     /**

@@ -40,9 +40,9 @@ public final class PipelineArtifactStore {
         @Nullable String region,
         String type) {
         this.encryptionKey = encryptionKey;
-        this.location = Objects.requireNonNull(location);
+        this.location = location;
         this.region = region;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

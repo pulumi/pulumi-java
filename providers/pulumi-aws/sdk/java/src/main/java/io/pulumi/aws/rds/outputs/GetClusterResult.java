@@ -78,35 +78,35 @@ public final class GetClusterResult {
         Boolean storageEncrypted,
         Map<String,String> tags,
         List<String> vpcSecurityGroupIds) {
-        this.arn = Objects.requireNonNull(arn);
-        this.availabilityZones = Objects.requireNonNull(availabilityZones);
-        this.backtrackWindow = Objects.requireNonNull(backtrackWindow);
-        this.backupRetentionPeriod = Objects.requireNonNull(backupRetentionPeriod);
-        this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier);
-        this.clusterMembers = Objects.requireNonNull(clusterMembers);
-        this.clusterResourceId = Objects.requireNonNull(clusterResourceId);
-        this.databaseName = Objects.requireNonNull(databaseName);
-        this.dbClusterParameterGroupName = Objects.requireNonNull(dbClusterParameterGroupName);
-        this.dbSubnetGroupName = Objects.requireNonNull(dbSubnetGroupName);
-        this.enabledCloudwatchLogsExports = Objects.requireNonNull(enabledCloudwatchLogsExports);
-        this.endpoint = Objects.requireNonNull(endpoint);
-        this.engine = Objects.requireNonNull(engine);
-        this.engineVersion = Objects.requireNonNull(engineVersion);
-        this.finalSnapshotIdentifier = Objects.requireNonNull(finalSnapshotIdentifier);
-        this.hostedZoneId = Objects.requireNonNull(hostedZoneId);
-        this.iamDatabaseAuthenticationEnabled = Objects.requireNonNull(iamDatabaseAuthenticationEnabled);
-        this.iamRoles = Objects.requireNonNull(iamRoles);
-        this.id = Objects.requireNonNull(id);
-        this.kmsKeyId = Objects.requireNonNull(kmsKeyId);
-        this.masterUsername = Objects.requireNonNull(masterUsername);
-        this.port = Objects.requireNonNull(port);
-        this.preferredBackupWindow = Objects.requireNonNull(preferredBackupWindow);
-        this.preferredMaintenanceWindow = Objects.requireNonNull(preferredMaintenanceWindow);
-        this.readerEndpoint = Objects.requireNonNull(readerEndpoint);
-        this.replicationSourceIdentifier = Objects.requireNonNull(replicationSourceIdentifier);
-        this.storageEncrypted = Objects.requireNonNull(storageEncrypted);
-        this.tags = Objects.requireNonNull(tags);
-        this.vpcSecurityGroupIds = Objects.requireNonNull(vpcSecurityGroupIds);
+        this.arn = arn;
+        this.availabilityZones = availabilityZones;
+        this.backtrackWindow = backtrackWindow;
+        this.backupRetentionPeriod = backupRetentionPeriod;
+        this.clusterIdentifier = clusterIdentifier;
+        this.clusterMembers = clusterMembers;
+        this.clusterResourceId = clusterResourceId;
+        this.databaseName = databaseName;
+        this.dbClusterParameterGroupName = dbClusterParameterGroupName;
+        this.dbSubnetGroupName = dbSubnetGroupName;
+        this.enabledCloudwatchLogsExports = enabledCloudwatchLogsExports;
+        this.endpoint = endpoint;
+        this.engine = engine;
+        this.engineVersion = engineVersion;
+        this.finalSnapshotIdentifier = finalSnapshotIdentifier;
+        this.hostedZoneId = hostedZoneId;
+        this.iamDatabaseAuthenticationEnabled = iamDatabaseAuthenticationEnabled;
+        this.iamRoles = iamRoles;
+        this.id = id;
+        this.kmsKeyId = kmsKeyId;
+        this.masterUsername = masterUsername;
+        this.port = port;
+        this.preferredBackupWindow = preferredBackupWindow;
+        this.preferredMaintenanceWindow = preferredMaintenanceWindow;
+        this.readerEndpoint = readerEndpoint;
+        this.replicationSourceIdentifier = replicationSourceIdentifier;
+        this.storageEncrypted = storageEncrypted;
+        this.tags = tags;
+        this.vpcSecurityGroupIds = vpcSecurityGroupIds;
     }
 
     public String getArn() {

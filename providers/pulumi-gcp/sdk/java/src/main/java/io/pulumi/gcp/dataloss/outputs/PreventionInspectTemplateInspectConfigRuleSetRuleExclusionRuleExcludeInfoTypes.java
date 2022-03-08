@@ -19,7 +19,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
 
     @OutputCustomType.Constructor({"infoTypes"})
     private PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypes(List<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesInfoType> infoTypes) {
-        this.infoTypes = Objects.requireNonNull(infoTypes);
+        this.infoTypes = infoTypes;
     }
 
     /**

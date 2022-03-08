@@ -20,8 +20,8 @@ public final class DynamicGroupQueryResponse {
     private DynamicGroupQueryResponse(
         String query,
         String resourceType) {
-        this.query = Objects.requireNonNull(query);
-        this.resourceType = Objects.requireNonNull(resourceType);
+        this.query = query;
+        this.resourceType = resourceType;
     }
 
     /**

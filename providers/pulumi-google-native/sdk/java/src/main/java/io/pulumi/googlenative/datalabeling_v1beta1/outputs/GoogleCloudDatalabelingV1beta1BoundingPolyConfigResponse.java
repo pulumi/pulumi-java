@@ -24,8 +24,8 @@ public final class GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse {
     private GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse(
         String annotationSpecSet,
         String instructionMessage) {
-        this.annotationSpecSet = Objects.requireNonNull(annotationSpecSet);
-        this.instructionMessage = Objects.requireNonNull(instructionMessage);
+        this.annotationSpecSet = annotationSpecSet;
+        this.instructionMessage = instructionMessage;
     }
 
     /**

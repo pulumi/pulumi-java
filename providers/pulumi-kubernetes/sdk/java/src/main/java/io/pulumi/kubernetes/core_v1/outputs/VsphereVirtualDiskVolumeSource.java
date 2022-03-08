@@ -41,7 +41,7 @@ public final class VsphereVirtualDiskVolumeSource {
         this.fsType = fsType;
         this.storagePolicyID = storagePolicyID;
         this.storagePolicyName = storagePolicyName;
-        this.volumePath = Objects.requireNonNull(volumePath);
+        this.volumePath = volumePath;
     }
 
     /**

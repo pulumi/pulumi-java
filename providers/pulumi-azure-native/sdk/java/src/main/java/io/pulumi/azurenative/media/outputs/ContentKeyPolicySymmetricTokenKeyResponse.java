@@ -25,8 +25,8 @@ public final class ContentKeyPolicySymmetricTokenKeyResponse {
     private ContentKeyPolicySymmetricTokenKeyResponse(
         String keyValue,
         String odataType) {
-        this.keyValue = Objects.requireNonNull(keyValue);
-        this.odataType = Objects.requireNonNull(odataType);
+        this.keyValue = keyValue;
+        this.odataType = odataType;
     }
 
     /**

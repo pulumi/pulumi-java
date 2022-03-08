@@ -17,7 +17,7 @@ public final class ConnectorProfileSingularConnectorProfileCredentials {
 
     @OutputCustomType.Constructor({"apiKey"})
     private ConnectorProfileSingularConnectorProfileCredentials(String apiKey) {
-        this.apiKey = Objects.requireNonNull(apiKey);
+        this.apiKey = apiKey;
     }
 
     /**

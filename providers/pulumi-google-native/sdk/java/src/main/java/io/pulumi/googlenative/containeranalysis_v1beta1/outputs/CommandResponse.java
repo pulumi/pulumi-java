@@ -43,11 +43,11 @@ public final class CommandResponse {
         List<String> env,
         String name,
         List<String> waitFor) {
-        this.args = Objects.requireNonNull(args);
-        this.dir = Objects.requireNonNull(dir);
-        this.env = Objects.requireNonNull(env);
-        this.name = Objects.requireNonNull(name);
-        this.waitFor = Objects.requireNonNull(waitFor);
+        this.args = args;
+        this.dir = dir;
+        this.env = env;
+        this.name = name;
+        this.waitFor = waitFor;
     }
 
     /**

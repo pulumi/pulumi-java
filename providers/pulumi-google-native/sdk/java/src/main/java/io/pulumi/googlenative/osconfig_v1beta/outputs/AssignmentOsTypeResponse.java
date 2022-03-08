@@ -30,9 +30,9 @@ public final class AssignmentOsTypeResponse {
         String osArchitecture,
         String osShortName,
         String osVersion) {
-        this.osArchitecture = Objects.requireNonNull(osArchitecture);
-        this.osShortName = Objects.requireNonNull(osShortName);
-        this.osVersion = Objects.requireNonNull(osVersion);
+        this.osArchitecture = osArchitecture;
+        this.osShortName = osShortName;
+        this.osVersion = osVersion;
     }
 
     /**

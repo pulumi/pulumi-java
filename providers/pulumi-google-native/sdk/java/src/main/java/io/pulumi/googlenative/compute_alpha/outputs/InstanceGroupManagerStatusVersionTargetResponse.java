@@ -17,7 +17,7 @@ public final class InstanceGroupManagerStatusVersionTargetResponse {
 
     @OutputCustomType.Constructor({"isReached"})
     private InstanceGroupManagerStatusVersionTargetResponse(Boolean isReached) {
-        this.isReached = Objects.requireNonNull(isReached);
+        this.isReached = isReached;
     }
 
     /**

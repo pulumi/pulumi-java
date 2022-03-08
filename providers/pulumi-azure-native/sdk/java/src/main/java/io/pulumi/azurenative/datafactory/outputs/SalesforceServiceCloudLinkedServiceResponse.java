@@ -105,7 +105,7 @@ public final class SalesforceServiceCloudLinkedServiceResponse {
         this.parameters = parameters;
         this.password = password;
         this.securityToken = securityToken;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.username = username;
     }
 

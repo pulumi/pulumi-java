@@ -33,8 +33,8 @@ public final class ApplicationPackageContactResponse {
         String email,
         String phone) {
         this.contactName = contactName;
-        this.email = Objects.requireNonNull(email);
-        this.phone = Objects.requireNonNull(phone);
+        this.email = email;
+        this.phone = phone;
     }
 
     /**

@@ -48,9 +48,9 @@ public final class RegionPerInstanceConfigPreservedStateDisk {
         @Nullable String mode,
         String source) {
         this.deleteRule = deleteRule;
-        this.deviceName = Objects.requireNonNull(deviceName);
+        this.deviceName = deviceName;
         this.mode = mode;
-        this.source = Objects.requireNonNull(source);
+        this.source = source;
     }
 
     /**

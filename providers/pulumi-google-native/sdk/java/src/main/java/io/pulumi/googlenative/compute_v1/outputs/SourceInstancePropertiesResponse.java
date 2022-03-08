@@ -100,19 +100,19 @@ public final class SourceInstancePropertiesResponse {
         SchedulingResponse scheduling,
         List<ServiceAccountResponse> serviceAccounts,
         TagsResponse tags) {
-        this.canIpForward = Objects.requireNonNull(canIpForward);
-        this.deletionProtection = Objects.requireNonNull(deletionProtection);
-        this.description = Objects.requireNonNull(description);
-        this.disks = Objects.requireNonNull(disks);
-        this.guestAccelerators = Objects.requireNonNull(guestAccelerators);
-        this.labels = Objects.requireNonNull(labels);
-        this.machineType = Objects.requireNonNull(machineType);
-        this.metadata = Objects.requireNonNull(metadata);
-        this.minCpuPlatform = Objects.requireNonNull(minCpuPlatform);
-        this.networkInterfaces = Objects.requireNonNull(networkInterfaces);
-        this.scheduling = Objects.requireNonNull(scheduling);
-        this.serviceAccounts = Objects.requireNonNull(serviceAccounts);
-        this.tags = Objects.requireNonNull(tags);
+        this.canIpForward = canIpForward;
+        this.deletionProtection = deletionProtection;
+        this.description = description;
+        this.disks = disks;
+        this.guestAccelerators = guestAccelerators;
+        this.labels = labels;
+        this.machineType = machineType;
+        this.metadata = metadata;
+        this.minCpuPlatform = minCpuPlatform;
+        this.networkInterfaces = networkInterfaces;
+        this.scheduling = scheduling;
+        this.serviceAccounts = serviceAccounts;
+        this.tags = tags;
     }
 
     /**

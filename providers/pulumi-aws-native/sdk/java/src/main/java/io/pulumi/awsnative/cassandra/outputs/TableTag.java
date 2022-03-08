@@ -16,8 +16,8 @@ public final class TableTag {
     private TableTag(
         String key,
         String value) {
-        this.key = Objects.requireNonNull(key);
-        this.value = Objects.requireNonNull(value);
+        this.key = key;
+        this.value = value;
     }
 
     public String getKey() {

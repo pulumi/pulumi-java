@@ -87,15 +87,15 @@ public final class GetIotConnectorResult {
         String type) {
         this.deviceMapping = deviceMapping;
         this.etag = etag;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.identity = identity;
         this.ingestionEndpointConfiguration = ingestionEndpointConfiguration;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.systemData = Objects.requireNonNull(systemData);
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.systemData = systemData;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

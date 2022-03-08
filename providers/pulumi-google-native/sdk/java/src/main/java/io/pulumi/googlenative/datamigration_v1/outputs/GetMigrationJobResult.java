@@ -132,25 +132,25 @@ public final class GetMigrationJobResult {
         String type,
         String updateTime,
         VpcPeeringConnectivityResponse vpcPeeringConnectivity) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.destination = Objects.requireNonNull(destination);
-        this.destinationDatabase = Objects.requireNonNull(destinationDatabase);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.dumpPath = Objects.requireNonNull(dumpPath);
-        this.duration = Objects.requireNonNull(duration);
-        this.endTime = Objects.requireNonNull(endTime);
-        this.error = Objects.requireNonNull(error);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.phase = Objects.requireNonNull(phase);
-        this.reverseSshConnectivity = Objects.requireNonNull(reverseSshConnectivity);
-        this.source = Objects.requireNonNull(source);
-        this.sourceDatabase = Objects.requireNonNull(sourceDatabase);
-        this.state = Objects.requireNonNull(state);
-        this.staticIpConnectivity = Objects.requireNonNull(staticIpConnectivity);
-        this.type = Objects.requireNonNull(type);
-        this.updateTime = Objects.requireNonNull(updateTime);
-        this.vpcPeeringConnectivity = Objects.requireNonNull(vpcPeeringConnectivity);
+        this.createTime = createTime;
+        this.destination = destination;
+        this.destinationDatabase = destinationDatabase;
+        this.displayName = displayName;
+        this.dumpPath = dumpPath;
+        this.duration = duration;
+        this.endTime = endTime;
+        this.error = error;
+        this.labels = labels;
+        this.name = name;
+        this.phase = phase;
+        this.reverseSshConnectivity = reverseSshConnectivity;
+        this.source = source;
+        this.sourceDatabase = sourceDatabase;
+        this.state = state;
+        this.staticIpConnectivity = staticIpConnectivity;
+        this.type = type;
+        this.updateTime = updateTime;
+        this.vpcPeeringConnectivity = vpcPeeringConnectivity;
     }
 
     /**

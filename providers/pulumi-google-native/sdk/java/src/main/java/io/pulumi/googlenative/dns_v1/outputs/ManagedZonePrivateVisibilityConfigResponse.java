@@ -22,8 +22,8 @@ public final class ManagedZonePrivateVisibilityConfigResponse {
     private ManagedZonePrivateVisibilityConfigResponse(
         String kind,
         List<ManagedZonePrivateVisibilityConfigNetworkResponse> networks) {
-        this.kind = Objects.requireNonNull(kind);
-        this.networks = Objects.requireNonNull(networks);
+        this.kind = kind;
+        this.networks = networks;
     }
 
     public String getKind() {

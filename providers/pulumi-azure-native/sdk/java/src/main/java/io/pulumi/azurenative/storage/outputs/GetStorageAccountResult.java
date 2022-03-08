@@ -260,44 +260,44 @@ public final class GetStorageAccountResult {
         String statusOfSecondary,
         @Nullable Map<String,String> tags,
         String type) {
-        this.accessTier = Objects.requireNonNull(accessTier);
+        this.accessTier = accessTier;
         this.allowBlobPublicAccess = allowBlobPublicAccess;
         this.allowSharedKeyAccess = allowSharedKeyAccess;
         this.azureFilesIdentityBasedAuthentication = azureFilesIdentityBasedAuthentication;
-        this.blobRestoreStatus = Objects.requireNonNull(blobRestoreStatus);
-        this.creationTime = Objects.requireNonNull(creationTime);
-        this.customDomain = Objects.requireNonNull(customDomain);
+        this.blobRestoreStatus = blobRestoreStatus;
+        this.creationTime = creationTime;
+        this.customDomain = customDomain;
         this.enableHttpsTrafficOnly = enableHttpsTrafficOnly;
         this.enableNfsV3 = enableNfsV3;
-        this.encryption = Objects.requireNonNull(encryption);
+        this.encryption = encryption;
         this.extendedLocation = extendedLocation;
-        this.failoverInProgress = Objects.requireNonNull(failoverInProgress);
-        this.geoReplicationStats = Objects.requireNonNull(geoReplicationStats);
-        this.id = Objects.requireNonNull(id);
+        this.failoverInProgress = failoverInProgress;
+        this.geoReplicationStats = geoReplicationStats;
+        this.id = id;
         this.identity = identity;
         this.isHnsEnabled = isHnsEnabled;
-        this.keyCreationTime = Objects.requireNonNull(keyCreationTime);
-        this.keyPolicy = Objects.requireNonNull(keyPolicy);
-        this.kind = Objects.requireNonNull(kind);
+        this.keyCreationTime = keyCreationTime;
+        this.keyPolicy = keyPolicy;
+        this.kind = kind;
         this.largeFileSharesState = largeFileSharesState;
-        this.lastGeoFailoverTime = Objects.requireNonNull(lastGeoFailoverTime);
-        this.location = Objects.requireNonNull(location);
+        this.lastGeoFailoverTime = lastGeoFailoverTime;
+        this.location = location;
         this.minimumTlsVersion = minimumTlsVersion;
-        this.name = Objects.requireNonNull(name);
-        this.networkRuleSet = Objects.requireNonNull(networkRuleSet);
-        this.primaryEndpoints = Objects.requireNonNull(primaryEndpoints);
-        this.primaryLocation = Objects.requireNonNull(primaryLocation);
-        this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.name = name;
+        this.networkRuleSet = networkRuleSet;
+        this.primaryEndpoints = primaryEndpoints;
+        this.primaryLocation = primaryLocation;
+        this.privateEndpointConnections = privateEndpointConnections;
+        this.provisioningState = provisioningState;
         this.routingPreference = routingPreference;
-        this.sasPolicy = Objects.requireNonNull(sasPolicy);
-        this.secondaryEndpoints = Objects.requireNonNull(secondaryEndpoints);
-        this.secondaryLocation = Objects.requireNonNull(secondaryLocation);
-        this.sku = Objects.requireNonNull(sku);
-        this.statusOfPrimary = Objects.requireNonNull(statusOfPrimary);
-        this.statusOfSecondary = Objects.requireNonNull(statusOfSecondary);
+        this.sasPolicy = sasPolicy;
+        this.secondaryEndpoints = secondaryEndpoints;
+        this.secondaryLocation = secondaryLocation;
+        this.sku = sku;
+        this.statusOfPrimary = statusOfPrimary;
+        this.statusOfSecondary = statusOfSecondary;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

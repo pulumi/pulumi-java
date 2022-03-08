@@ -58,21 +58,21 @@ public final class RouterStatusBestRoute {
         String project,
         String selfLink,
         List<String> tags) {
-        this.description = Objects.requireNonNull(description);
-        this.destRange = Objects.requireNonNull(destRange);
-        this.name = Objects.requireNonNull(name);
-        this.network = Objects.requireNonNull(network);
-        this.nextHopGateway = Objects.requireNonNull(nextHopGateway);
-        this.nextHopIlb = Objects.requireNonNull(nextHopIlb);
-        this.nextHopInstance = Objects.requireNonNull(nextHopInstance);
-        this.nextHopInstanceZone = Objects.requireNonNull(nextHopInstanceZone);
-        this.nextHopIp = Objects.requireNonNull(nextHopIp);
-        this.nextHopNetwork = Objects.requireNonNull(nextHopNetwork);
-        this.nextHopVpnTunnel = Objects.requireNonNull(nextHopVpnTunnel);
-        this.priority = Objects.requireNonNull(priority);
-        this.project = Objects.requireNonNull(project);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.tags = Objects.requireNonNull(tags);
+        this.description = description;
+        this.destRange = destRange;
+        this.name = name;
+        this.network = network;
+        this.nextHopGateway = nextHopGateway;
+        this.nextHopIlb = nextHopIlb;
+        this.nextHopInstance = nextHopInstance;
+        this.nextHopInstanceZone = nextHopInstanceZone;
+        this.nextHopIp = nextHopIp;
+        this.nextHopNetwork = nextHopNetwork;
+        this.nextHopVpnTunnel = nextHopVpnTunnel;
+        this.priority = priority;
+        this.project = project;
+        this.selfLink = selfLink;
+        this.tags = tags;
     }
 
     public String getDescription() {

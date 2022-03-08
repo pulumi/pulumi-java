@@ -27,7 +27,7 @@ public final class CanaryBaseScreenshot {
         @Nullable List<String> ignoreCoordinates,
         String screenshotName) {
         this.ignoreCoordinates = ignoreCoordinates;
-        this.screenshotName = Objects.requireNonNull(screenshotName);
+        this.screenshotName = screenshotName;
     }
 
     /**

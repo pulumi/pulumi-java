@@ -19,7 +19,7 @@ public final class GatewayCapabilitySummary {
         @Nullable String capabilityConfiguration,
         String capabilityNamespace) {
         this.capabilityConfiguration = capabilityConfiguration;
-        this.capabilityNamespace = Objects.requireNonNull(capabilityNamespace);
+        this.capabilityNamespace = capabilityNamespace;
     }
 
     public Optional<String> getCapabilityConfiguration() {

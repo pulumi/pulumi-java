@@ -53,10 +53,10 @@ public final class GetVirtualHubRouteTableV2Result {
         String provisioningState,
         @Nullable List<VirtualHubRouteV2Response> routes) {
         this.attachedConnections = attachedConnections;
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.id = id;
         this.name = name;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.routes = routes;
     }
 

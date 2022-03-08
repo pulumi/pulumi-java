@@ -30,9 +30,9 @@ public final class TableRangePartitioningRange {
         Integer end,
         Integer interval,
         Integer start) {
-        this.end = Objects.requireNonNull(end);
-        this.interval = Objects.requireNonNull(interval);
-        this.start = Objects.requireNonNull(start);
+        this.end = end;
+        this.interval = interval;
+        this.start = start;
     }
 
     /**

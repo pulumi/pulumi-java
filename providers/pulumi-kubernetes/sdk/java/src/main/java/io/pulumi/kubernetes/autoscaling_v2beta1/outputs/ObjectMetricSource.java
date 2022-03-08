@@ -47,10 +47,10 @@ public final class ObjectMetricSource {
         CrossVersionObjectReference target,
         String targetValue) {
         this.averageValue = averageValue;
-        this.metricName = Objects.requireNonNull(metricName);
+        this.metricName = metricName;
         this.selector = selector;
-        this.target = Objects.requireNonNull(target);
-        this.targetValue = Objects.requireNonNull(targetValue);
+        this.target = target;
+        this.targetValue = targetValue;
     }
 
     /**

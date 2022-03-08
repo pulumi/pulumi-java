@@ -57,10 +57,10 @@ public final class LifecyclePolicyPolicyDetailsSchedule {
         LifecyclePolicyPolicyDetailsScheduleRetainRule retainRule,
         @Nullable Map<String,String> tagsToAdd) {
         this.copyTags = copyTags;
-        this.createRule = Objects.requireNonNull(createRule);
+        this.createRule = createRule;
         this.crossRegionCopyRules = crossRegionCopyRules;
-        this.name = Objects.requireNonNull(name);
-        this.retainRule = Objects.requireNonNull(retainRule);
+        this.name = name;
+        this.retainRule = retainRule;
         this.tagsToAdd = tagsToAdd;
     }
 

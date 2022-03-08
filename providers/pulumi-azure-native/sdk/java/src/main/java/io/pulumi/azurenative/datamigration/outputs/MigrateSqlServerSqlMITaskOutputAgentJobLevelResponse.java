@@ -70,15 +70,15 @@ public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse {
         String resultType,
         String startedOn,
         String state) {
-        this.endedOn = Objects.requireNonNull(endedOn);
-        this.exceptionsAndWarnings = Objects.requireNonNull(exceptionsAndWarnings);
-        this.id = Objects.requireNonNull(id);
-        this.isEnabled = Objects.requireNonNull(isEnabled);
-        this.message = Objects.requireNonNull(message);
-        this.name = Objects.requireNonNull(name);
-        this.resultType = Objects.requireNonNull(resultType);
-        this.startedOn = Objects.requireNonNull(startedOn);
-        this.state = Objects.requireNonNull(state);
+        this.endedOn = endedOn;
+        this.exceptionsAndWarnings = exceptionsAndWarnings;
+        this.id = id;
+        this.isEnabled = isEnabled;
+        this.message = message;
+        this.name = name;
+        this.resultType = resultType;
+        this.startedOn = startedOn;
+        this.state = state;
     }
 
     /**

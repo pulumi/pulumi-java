@@ -34,7 +34,7 @@ public final class FhirStoreStreamConfig {
     private FhirStoreStreamConfig(
         FhirStoreStreamConfigBigqueryDestination bigqueryDestination,
         @Nullable List<String> resourceTypes) {
-        this.bigqueryDestination = Objects.requireNonNull(bigqueryDestination);
+        this.bigqueryDestination = bigqueryDestination;
         this.resourceTypes = resourceTypes;
     }
 

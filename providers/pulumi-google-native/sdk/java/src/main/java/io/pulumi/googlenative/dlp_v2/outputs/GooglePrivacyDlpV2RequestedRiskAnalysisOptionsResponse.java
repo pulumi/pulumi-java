@@ -17,7 +17,7 @@ public final class GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse {
 
     @OutputCustomType.Constructor({"jobConfig"})
     private GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse(GooglePrivacyDlpV2RiskAnalysisJobConfigResponse jobConfig) {
-        this.jobConfig = Objects.requireNonNull(jobConfig);
+        this.jobConfig = jobConfig;
     }
 
     /**

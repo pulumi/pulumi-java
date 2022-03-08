@@ -83,15 +83,15 @@ public final class GetTaskRunResult {
         SystemDataResponse systemData,
         String type) {
         this.forceUpdateTag = forceUpdateTag;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.identity = identity;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.runRequest = runRequest;
-        this.runResult = Objects.requireNonNull(runResult);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.runResult = runResult;
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

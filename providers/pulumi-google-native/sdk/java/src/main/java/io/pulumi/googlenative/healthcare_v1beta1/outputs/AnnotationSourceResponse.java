@@ -17,7 +17,7 @@ public final class AnnotationSourceResponse {
 
     @OutputCustomType.Constructor({"cloudHealthcareSource"})
     private AnnotationSourceResponse(CloudHealthcareSourceResponse cloudHealthcareSource) {
-        this.cloudHealthcareSource = Objects.requireNonNull(cloudHealthcareSource);
+        this.cloudHealthcareSource = cloudHealthcareSource;
     }
 
     /**

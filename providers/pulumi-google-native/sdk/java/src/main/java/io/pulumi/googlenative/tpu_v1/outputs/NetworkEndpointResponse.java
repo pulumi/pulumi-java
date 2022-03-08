@@ -25,8 +25,8 @@ public final class NetworkEndpointResponse {
     private NetworkEndpointResponse(
         String ipAddress,
         Integer port) {
-        this.ipAddress = Objects.requireNonNull(ipAddress);
-        this.port = Objects.requireNonNull(port);
+        this.ipAddress = ipAddress;
+        this.port = port;
     }
 
     /**

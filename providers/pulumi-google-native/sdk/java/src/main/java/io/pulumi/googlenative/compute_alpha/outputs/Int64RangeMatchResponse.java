@@ -24,8 +24,8 @@ public final class Int64RangeMatchResponse {
     private Int64RangeMatchResponse(
         String rangeEnd,
         String rangeStart) {
-        this.rangeEnd = Objects.requireNonNull(rangeEnd);
-        this.rangeStart = Objects.requireNonNull(rangeStart);
+        this.rangeEnd = rangeEnd;
+        this.rangeStart = rangeStart;
     }
 
     /**

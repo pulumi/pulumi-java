@@ -36,10 +36,10 @@ public final class GetHistoryResult {
         String historyId,
         String name,
         String testPlatform) {
-        this.displayName = Objects.requireNonNull(displayName);
-        this.historyId = Objects.requireNonNull(historyId);
-        this.name = Objects.requireNonNull(name);
-        this.testPlatform = Objects.requireNonNull(testPlatform);
+        this.displayName = displayName;
+        this.historyId = historyId;
+        this.name = name;
+        this.testPlatform = testPlatform;
     }
 
     /**

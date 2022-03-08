@@ -126,22 +126,22 @@ public final class GetPrivateLinkServiceResult {
         @Nullable Map<String,String> tags,
         String type,
         @Nullable PrivateLinkServicePropertiesResponseVisibility visibility) {
-        this.alias = Objects.requireNonNull(alias);
+        this.alias = alias;
         this.autoApproval = autoApproval;
         this.enableProxyProtocol = enableProxyProtocol;
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.extendedLocation = extendedLocation;
         this.fqdns = fqdns;
         this.id = id;
         this.ipConfigurations = ipConfigurations;
         this.loadBalancerFrontendIpConfigurations = loadBalancerFrontendIpConfigurations;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
-        this.networkInterfaces = Objects.requireNonNull(networkInterfaces);
-        this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.name = name;
+        this.networkInterfaces = networkInterfaces;
+        this.privateEndpointConnections = privateEndpointConnections;
+        this.provisioningState = provisioningState;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.visibility = visibility;
     }
 

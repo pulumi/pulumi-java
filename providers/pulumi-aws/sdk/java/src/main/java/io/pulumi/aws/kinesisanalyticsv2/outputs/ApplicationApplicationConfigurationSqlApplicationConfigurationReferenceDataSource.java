@@ -37,9 +37,9 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
         ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSource s3ReferenceDataSource,
         String tableName) {
         this.referenceId = referenceId;
-        this.referenceSchema = Objects.requireNonNull(referenceSchema);
-        this.s3ReferenceDataSource = Objects.requireNonNull(s3ReferenceDataSource);
-        this.tableName = Objects.requireNonNull(tableName);
+        this.referenceSchema = referenceSchema;
+        this.s3ReferenceDataSource = s3ReferenceDataSource;
+        this.tableName = tableName;
     }
 
     public Optional<String> getReferenceId() {

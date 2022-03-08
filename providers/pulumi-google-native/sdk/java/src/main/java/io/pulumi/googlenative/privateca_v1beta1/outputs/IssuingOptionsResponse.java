@@ -24,8 +24,8 @@ public final class IssuingOptionsResponse {
     private IssuingOptionsResponse(
         Boolean includeCaCertUrl,
         Boolean includeCrlAccessUrl) {
-        this.includeCaCertUrl = Objects.requireNonNull(includeCaCertUrl);
-        this.includeCrlAccessUrl = Objects.requireNonNull(includeCrlAccessUrl);
+        this.includeCaCertUrl = includeCaCertUrl;
+        this.includeCrlAccessUrl = includeCrlAccessUrl;
     }
 
     /**

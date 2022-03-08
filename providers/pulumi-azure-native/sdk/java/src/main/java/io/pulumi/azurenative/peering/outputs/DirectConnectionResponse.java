@@ -80,11 +80,11 @@ public final class DirectConnectionResponse {
         this.bandwidthInMbps = bandwidthInMbps;
         this.bgpSession = bgpSession;
         this.connectionIdentifier = connectionIdentifier;
-        this.connectionState = Objects.requireNonNull(connectionState);
-        this.errorMessage = Objects.requireNonNull(errorMessage);
-        this.microsoftTrackingId = Objects.requireNonNull(microsoftTrackingId);
+        this.connectionState = connectionState;
+        this.errorMessage = errorMessage;
+        this.microsoftTrackingId = microsoftTrackingId;
         this.peeringDBFacilityId = peeringDBFacilityId;
-        this.provisionedBandwidthInMbps = Objects.requireNonNull(provisionedBandwidthInMbps);
+        this.provisionedBandwidthInMbps = provisionedBandwidthInMbps;
         this.sessionAddressProvider = sessionAddressProvider;
         this.useForPeeringService = useForPeeringService;
     }

@@ -44,11 +44,11 @@ public final class ConnectToSourcePostgreSqlSyncTaskOutputResponse {
         String sourceServerBrandVersion,
         String sourceServerVersion,
         List<ReportableExceptionResponse> validationErrors) {
-        this.databases = Objects.requireNonNull(databases);
-        this.id = Objects.requireNonNull(id);
-        this.sourceServerBrandVersion = Objects.requireNonNull(sourceServerBrandVersion);
-        this.sourceServerVersion = Objects.requireNonNull(sourceServerVersion);
-        this.validationErrors = Objects.requireNonNull(validationErrors);
+        this.databases = databases;
+        this.id = id;
+        this.sourceServerBrandVersion = sourceServerBrandVersion;
+        this.sourceServerVersion = sourceServerVersion;
+        this.validationErrors = validationErrors;
     }
 
     /**

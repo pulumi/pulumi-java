@@ -28,7 +28,7 @@ public final class BootstrapConfigurationResponse {
         @Nullable CodeRepositoryResponse sourceRepository,
         PipelineTemplateResponse template) {
         this.sourceRepository = sourceRepository;
-        this.template = Objects.requireNonNull(template);
+        this.template = template;
     }
 
     /**

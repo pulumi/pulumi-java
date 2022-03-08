@@ -107,17 +107,17 @@ public final class GetAssignmentResult {
         this.blueprintId = blueprintId;
         this.description = description;
         this.displayName = displayName;
-        this.id = Objects.requireNonNull(id);
-        this.identity = Objects.requireNonNull(identity);
-        this.location = Objects.requireNonNull(location);
+        this.id = id;
+        this.identity = identity;
+        this.location = location;
         this.locks = locks;
-        this.name = Objects.requireNonNull(name);
-        this.parameters = Objects.requireNonNull(parameters);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.resourceGroups = Objects.requireNonNull(resourceGroups);
+        this.name = name;
+        this.parameters = parameters;
+        this.provisioningState = provisioningState;
+        this.resourceGroups = resourceGroups;
         this.scope = scope;
-        this.status = Objects.requireNonNull(status);
-        this.type = Objects.requireNonNull(type);
+        this.status = status;
+        this.type = type;
     }
 
     /**

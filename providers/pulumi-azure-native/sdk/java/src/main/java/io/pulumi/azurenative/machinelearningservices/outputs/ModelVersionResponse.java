@@ -63,7 +63,7 @@ public final class ModelVersionResponse {
         this.description = description;
         this.flavors = flavors;
         this.isAnonymous = isAnonymous;
-        this.path = Objects.requireNonNull(path);
+        this.path = path;
         this.properties = properties;
         this.tags = tags;
     }

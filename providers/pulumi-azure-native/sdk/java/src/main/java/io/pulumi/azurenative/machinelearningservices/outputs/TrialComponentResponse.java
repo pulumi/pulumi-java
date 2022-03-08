@@ -71,7 +71,7 @@ public final class TrialComponentResponse {
         @Nullable Map<String,OutputDataBindingResponse> outputDataBindings,
         @Nullable String timeout) {
         this.codeId = codeId;
-        this.command = Objects.requireNonNull(command);
+        this.command = command;
         this.distribution = distribution;
         this.environmentId = environmentId;
         this.environmentVariables = environmentVariables;

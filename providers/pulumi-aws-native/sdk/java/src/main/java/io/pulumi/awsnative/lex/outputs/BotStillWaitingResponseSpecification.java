@@ -30,9 +30,9 @@ public final class BotStillWaitingResponseSpecification {
         List<BotMessageGroup> messageGroupsList,
         Integer timeoutInSeconds) {
         this.allowInterrupt = allowInterrupt;
-        this.frequencyInSeconds = Objects.requireNonNull(frequencyInSeconds);
-        this.messageGroupsList = Objects.requireNonNull(messageGroupsList);
-        this.timeoutInSeconds = Objects.requireNonNull(timeoutInSeconds);
+        this.frequencyInSeconds = frequencyInSeconds;
+        this.messageGroupsList = messageGroupsList;
+        this.timeoutInSeconds = timeoutInSeconds;
     }
 
     /**

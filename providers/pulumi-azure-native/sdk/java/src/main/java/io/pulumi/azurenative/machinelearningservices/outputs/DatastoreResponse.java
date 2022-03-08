@@ -105,17 +105,17 @@ public final class DatastoreResponse {
         this.azurePostgreSqlSection = azurePostgreSqlSection;
         this.azureSqlDatabaseSection = azureSqlDatabaseSection;
         this.azureStorageSection = azureStorageSection;
-        this.createdBy = Objects.requireNonNull(createdBy);
-        this.createdTime = Objects.requireNonNull(createdTime);
+        this.createdBy = createdBy;
+        this.createdTime = createdTime;
         this.dataStoreType = dataStoreType;
         this.description = description;
         this.glusterFsSection = glusterFsSection;
         this.hasBeenValidated = hasBeenValidated;
         this.linkedInfo = linkedInfo;
-        this.modifiedBy = Objects.requireNonNull(modifiedBy);
-        this.modifiedTime = Objects.requireNonNull(modifiedTime);
+        this.modifiedBy = modifiedBy;
+        this.modifiedTime = modifiedTime;
         this.name = name;
-        this.tags = Objects.requireNonNull(tags);
+        this.tags = tags;
     }
 
     public Optional<AzureDataLakeSectionResponse> getAzureDataLakeSection() {

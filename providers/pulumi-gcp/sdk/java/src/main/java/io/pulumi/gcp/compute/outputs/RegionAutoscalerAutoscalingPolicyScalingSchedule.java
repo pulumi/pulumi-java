@@ -60,10 +60,10 @@ public final class RegionAutoscalerAutoscalingPolicyScalingSchedule {
         @Nullable String timeZone) {
         this.description = description;
         this.disabled = disabled;
-        this.durationSec = Objects.requireNonNull(durationSec);
-        this.minRequiredReplicas = Objects.requireNonNull(minRequiredReplicas);
-        this.name = Objects.requireNonNull(name);
-        this.schedule = Objects.requireNonNull(schedule);
+        this.durationSec = durationSec;
+        this.minRequiredReplicas = minRequiredReplicas;
+        this.name = name;
+        this.schedule = schedule;
         this.timeZone = timeZone;
     }
 

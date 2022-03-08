@@ -31,9 +31,9 @@ public final class ServerEndpointFilesNotSyncingErrorResponse {
         Integer errorCode,
         Double persistentCount,
         Double transientCount) {
-        this.errorCode = Objects.requireNonNull(errorCode);
-        this.persistentCount = Objects.requireNonNull(persistentCount);
-        this.transientCount = Objects.requireNonNull(transientCount);
+        this.errorCode = errorCode;
+        this.persistentCount = persistentCount;
+        this.transientCount = transientCount;
     }
 
     /**

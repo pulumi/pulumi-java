@@ -87,18 +87,18 @@ public final class VersionResponse {
         String name,
         String status,
         String versionBytes) {
-        this.config = Objects.requireNonNull(config);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.createUser = Objects.requireNonNull(createUser);
-        this.deleteTime = Objects.requireNonNull(deleteTime);
-        this.deleteUser = Objects.requireNonNull(deleteUser);
-        this.fileCount = Objects.requireNonNull(fileCount);
-        this.finalizeTime = Objects.requireNonNull(finalizeTime);
-        this.finalizeUser = Objects.requireNonNull(finalizeUser);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.status = Objects.requireNonNull(status);
-        this.versionBytes = Objects.requireNonNull(versionBytes);
+        this.config = config;
+        this.createTime = createTime;
+        this.createUser = createUser;
+        this.deleteTime = deleteTime;
+        this.deleteUser = deleteUser;
+        this.fileCount = fileCount;
+        this.finalizeTime = finalizeTime;
+        this.finalizeUser = finalizeUser;
+        this.labels = labels;
+        this.name = name;
+        this.status = status;
+        this.versionBytes = versionBytes;
     }
 
     /**

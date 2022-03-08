@@ -43,7 +43,7 @@ public final class AudioAnalyzerPresetResponse {
         this.audioLanguage = audioLanguage;
         this.experimentalOptions = experimentalOptions;
         this.mode = mode;
-        this.odataType = Objects.requireNonNull(odataType);
+        this.odataType = odataType;
     }
 
     /**

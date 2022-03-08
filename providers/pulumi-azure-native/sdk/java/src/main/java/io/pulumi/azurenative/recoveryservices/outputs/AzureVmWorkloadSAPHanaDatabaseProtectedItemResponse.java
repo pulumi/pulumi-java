@@ -203,7 +203,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemResponse {
         this.policyId = policyId;
         this.protectedItemDataSourceId = protectedItemDataSourceId;
         this.protectedItemHealthStatus = protectedItemHealthStatus;
-        this.protectedItemType = Objects.requireNonNull(protectedItemType);
+        this.protectedItemType = protectedItemType;
         this.protectionState = protectionState;
         this.protectionStatus = protectionStatus;
         this.serverName = serverName;

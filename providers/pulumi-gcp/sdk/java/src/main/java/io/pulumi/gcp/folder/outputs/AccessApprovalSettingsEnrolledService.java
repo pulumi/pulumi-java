@@ -50,7 +50,7 @@ public final class AccessApprovalSettingsEnrolledService {
     private AccessApprovalSettingsEnrolledService(
         String cloudProduct,
         @Nullable String enrollmentLevel) {
-        this.cloudProduct = Objects.requireNonNull(cloudProduct);
+        this.cloudProduct = cloudProduct;
         this.enrollmentLevel = enrollmentLevel;
     }
 

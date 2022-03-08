@@ -138,25 +138,25 @@ public final class GetNoteResult {
         String updateTime,
         UpgradeNoteResponse upgrade,
         VulnerabilityNoteResponse vulnerability) {
-        this.attestation = Objects.requireNonNull(attestation);
-        this.build = Objects.requireNonNull(build);
-        this.compliance = Objects.requireNonNull(compliance);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.deployment = Objects.requireNonNull(deployment);
-        this.discovery = Objects.requireNonNull(discovery);
-        this.dsseAttestation = Objects.requireNonNull(dsseAttestation);
-        this.expirationTime = Objects.requireNonNull(expirationTime);
-        this.image = Objects.requireNonNull(image);
-        this.kind = Objects.requireNonNull(kind);
-        this.longDescription = Objects.requireNonNull(longDescription);
-        this.name = Objects.requireNonNull(name);
-        this.$package = Objects.requireNonNull($package);
-        this.relatedNoteNames = Objects.requireNonNull(relatedNoteNames);
-        this.relatedUrl = Objects.requireNonNull(relatedUrl);
-        this.shortDescription = Objects.requireNonNull(shortDescription);
-        this.updateTime = Objects.requireNonNull(updateTime);
-        this.upgrade = Objects.requireNonNull(upgrade);
-        this.vulnerability = Objects.requireNonNull(vulnerability);
+        this.attestation = attestation;
+        this.build = build;
+        this.compliance = compliance;
+        this.createTime = createTime;
+        this.deployment = deployment;
+        this.discovery = discovery;
+        this.dsseAttestation = dsseAttestation;
+        this.expirationTime = expirationTime;
+        this.image = image;
+        this.kind = kind;
+        this.longDescription = longDescription;
+        this.name = name;
+        this.$package = $package;
+        this.relatedNoteNames = relatedNoteNames;
+        this.relatedUrl = relatedUrl;
+        this.shortDescription = shortDescription;
+        this.updateTime = updateTime;
+        this.upgrade = upgrade;
+        this.vulnerability = vulnerability;
     }
 
     /**

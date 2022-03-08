@@ -64,10 +64,10 @@ public final class GetWorkspaceConnectionResult {
         @Nullable String valueFormat) {
         this.authType = authType;
         this.category = category;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.target = target;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.value = value;
         this.valueFormat = valueFormat;
     }

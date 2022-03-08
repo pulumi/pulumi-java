@@ -67,15 +67,15 @@ public final class GetTargetGrpcProxyResult {
         String selfLinkWithId,
         String urlMap,
         Boolean validateForProxyless) {
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.description = Objects.requireNonNull(description);
-        this.fingerprint = Objects.requireNonNull(fingerprint);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
-        this.urlMap = Objects.requireNonNull(urlMap);
-        this.validateForProxyless = Objects.requireNonNull(validateForProxyless);
+        this.creationTimestamp = creationTimestamp;
+        this.description = description;
+        this.fingerprint = fingerprint;
+        this.kind = kind;
+        this.name = name;
+        this.selfLink = selfLink;
+        this.selfLinkWithId = selfLinkWithId;
+        this.urlMap = urlMap;
+        this.validateForProxyless = validateForProxyless;
     }
 
     /**

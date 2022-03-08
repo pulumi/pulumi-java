@@ -125,23 +125,23 @@ public final class GetCloudConnectorResult {
         @Nullable String subscriptionId,
         String type) {
         this.billingModel = billingModel;
-        this.collectionInfo = Objects.requireNonNull(collectionInfo);
-        this.createdOn = Objects.requireNonNull(createdOn);
+        this.collectionInfo = collectionInfo;
+        this.createdOn = createdOn;
         this.credentialsKey = credentialsKey;
-        this.daysTrialRemaining = Objects.requireNonNull(daysTrialRemaining);
+        this.daysTrialRemaining = daysTrialRemaining;
         this.defaultManagementGroupId = defaultManagementGroupId;
         this.displayName = displayName;
-        this.externalBillingAccountId = Objects.requireNonNull(externalBillingAccountId);
-        this.id = Objects.requireNonNull(id);
+        this.externalBillingAccountId = externalBillingAccountId;
+        this.id = id;
         this.kind = kind;
-        this.modifiedOn = Objects.requireNonNull(modifiedOn);
-        this.name = Objects.requireNonNull(name);
-        this.providerBillingAccountDisplayName = Objects.requireNonNull(providerBillingAccountDisplayName);
-        this.providerBillingAccountId = Objects.requireNonNull(providerBillingAccountId);
+        this.modifiedOn = modifiedOn;
+        this.name = name;
+        this.providerBillingAccountDisplayName = providerBillingAccountDisplayName;
+        this.providerBillingAccountId = providerBillingAccountId;
         this.reportId = reportId;
-        this.status = Objects.requireNonNull(status);
+        this.status = status;
         this.subscriptionId = subscriptionId;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

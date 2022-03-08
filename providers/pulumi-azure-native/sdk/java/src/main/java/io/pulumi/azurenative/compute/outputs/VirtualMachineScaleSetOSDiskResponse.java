@@ -81,7 +81,7 @@ public final class VirtualMachineScaleSetOSDiskResponse {
         @Nullable List<String> vhdContainers,
         @Nullable Boolean writeAcceleratorEnabled) {
         this.caching = caching;
-        this.createOption = Objects.requireNonNull(createOption);
+        this.createOption = createOption;
         this.diffDiskSettings = diffDiskSettings;
         this.diskSizeGB = diskSizeGB;
         this.image = image;

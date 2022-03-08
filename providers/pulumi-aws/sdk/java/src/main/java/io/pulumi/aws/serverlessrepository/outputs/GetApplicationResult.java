@@ -51,13 +51,13 @@ public final class GetApplicationResult {
         String semanticVersion,
         String sourceCodeUrl,
         String templateUrl) {
-        this.applicationId = Objects.requireNonNull(applicationId);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.requiredCapabilities = Objects.requireNonNull(requiredCapabilities);
-        this.semanticVersion = Objects.requireNonNull(semanticVersion);
-        this.sourceCodeUrl = Objects.requireNonNull(sourceCodeUrl);
-        this.templateUrl = Objects.requireNonNull(templateUrl);
+        this.applicationId = applicationId;
+        this.id = id;
+        this.name = name;
+        this.requiredCapabilities = requiredCapabilities;
+        this.semanticVersion = semanticVersion;
+        this.sourceCodeUrl = sourceCodeUrl;
+        this.templateUrl = templateUrl;
     }
 
     /**

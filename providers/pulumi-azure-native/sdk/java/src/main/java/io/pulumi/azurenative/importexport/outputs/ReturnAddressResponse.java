@@ -68,14 +68,14 @@ public final class ReturnAddressResponse {
         @Nullable String stateOrProvince,
         String streetAddress1,
         @Nullable String streetAddress2) {
-        this.city = Objects.requireNonNull(city);
-        this.countryOrRegion = Objects.requireNonNull(countryOrRegion);
-        this.email = Objects.requireNonNull(email);
-        this.phone = Objects.requireNonNull(phone);
-        this.postalCode = Objects.requireNonNull(postalCode);
-        this.recipientName = Objects.requireNonNull(recipientName);
+        this.city = city;
+        this.countryOrRegion = countryOrRegion;
+        this.email = email;
+        this.phone = phone;
+        this.postalCode = postalCode;
+        this.recipientName = recipientName;
         this.stateOrProvince = stateOrProvince;
-        this.streetAddress1 = Objects.requireNonNull(streetAddress1);
+        this.streetAddress1 = streetAddress1;
         this.streetAddress2 = streetAddress2;
     }
 

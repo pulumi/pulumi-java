@@ -46,9 +46,9 @@ public final class ReportGroupExportConfigS3Destination {
         String encryptionKey,
         @Nullable String packaging,
         @Nullable String path) {
-        this.bucket = Objects.requireNonNull(bucket);
+        this.bucket = bucket;
         this.encryptionDisabled = encryptionDisabled;
-        this.encryptionKey = Objects.requireNonNull(encryptionKey);
+        this.encryptionKey = encryptionKey;
         this.packaging = packaging;
         this.path = path;
     }

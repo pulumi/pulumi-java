@@ -48,8 +48,8 @@ public final class AzureFileshareProtectedItemExtendedInfoResponse {
         this.oldestRecoveryPoint = oldestRecoveryPoint;
         this.policyState = policyState;
         this.recoveryPointCount = recoveryPointCount;
-        this.resourceState = Objects.requireNonNull(resourceState);
-        this.resourceStateSyncTime = Objects.requireNonNull(resourceStateSyncTime);
+        this.resourceState = resourceState;
+        this.resourceStateSyncTime = resourceStateSyncTime;
     }
 
     /**

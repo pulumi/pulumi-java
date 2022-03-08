@@ -27,7 +27,7 @@ public final class MigrateSyncCompleteCommandInputResponse {
         @Nullable String commitTimeStamp,
         String databaseName) {
         this.commitTimeStamp = commitTimeStamp;
-        this.databaseName = Objects.requireNonNull(databaseName);
+        this.databaseName = databaseName;
     }
 
     /**

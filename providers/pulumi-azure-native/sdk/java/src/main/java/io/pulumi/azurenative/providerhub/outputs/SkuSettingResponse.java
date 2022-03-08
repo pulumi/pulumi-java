@@ -50,7 +50,7 @@ public final class SkuSettingResponse {
         this.kind = kind;
         this.locationInfo = locationInfo;
         this.locations = locations;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.requiredFeatures = requiredFeatures;
         this.requiredQuotaIds = requiredQuotaIds;
         this.size = size;

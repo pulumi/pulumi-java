@@ -37,10 +37,10 @@ public final class AttemptResponse {
         StatusResponse responseStatus,
         String responseTime,
         String scheduleTime) {
-        this.dispatchTime = Objects.requireNonNull(dispatchTime);
-        this.responseStatus = Objects.requireNonNull(responseStatus);
-        this.responseTime = Objects.requireNonNull(responseTime);
-        this.scheduleTime = Objects.requireNonNull(scheduleTime);
+        this.dispatchTime = dispatchTime;
+        this.responseStatus = responseStatus;
+        this.responseTime = responseTime;
+        this.scheduleTime = scheduleTime;
     }
 
     /**

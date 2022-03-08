@@ -49,12 +49,12 @@ public final class GetDebugSessionResult {
         String timeout,
         Integer tracesize,
         Integer validity) {
-        this.count = Objects.requireNonNull(count);
-        this.filter = Objects.requireNonNull(filter);
-        this.name = Objects.requireNonNull(name);
-        this.timeout = Objects.requireNonNull(timeout);
-        this.tracesize = Objects.requireNonNull(tracesize);
-        this.validity = Objects.requireNonNull(validity);
+        this.count = count;
+        this.filter = filter;
+        this.name = name;
+        this.timeout = timeout;
+        this.tracesize = tracesize;
+        this.validity = validity;
     }
 
     /**

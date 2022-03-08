@@ -107,21 +107,21 @@ public final class GetIntegrationAccountSchemaResult {
         @Nullable Map<String,String> tags,
         @Nullable String targetNamespace,
         String type) {
-        this.changedTime = Objects.requireNonNull(changedTime);
+        this.changedTime = changedTime;
         this.content = content;
-        this.contentLink = Objects.requireNonNull(contentLink);
+        this.contentLink = contentLink;
         this.contentType = contentType;
-        this.createdTime = Objects.requireNonNull(createdTime);
+        this.createdTime = createdTime;
         this.documentName = documentName;
         this.fileName = fileName;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.location = location;
         this.metadata = metadata;
-        this.name = Objects.requireNonNull(name);
-        this.schemaType = Objects.requireNonNull(schemaType);
+        this.name = name;
+        this.schemaType = schemaType;
         this.tags = tags;
         this.targetNamespace = targetNamespace;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

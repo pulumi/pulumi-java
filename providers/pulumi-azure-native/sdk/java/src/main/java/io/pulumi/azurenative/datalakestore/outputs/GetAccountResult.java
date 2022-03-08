@@ -163,30 +163,30 @@ public final class GetAccountResult {
         List<TrustedIdProviderResponse> trustedIdProviders,
         String type,
         List<VirtualNetworkRuleResponse> virtualNetworkRules) {
-        this.accountId = Objects.requireNonNull(accountId);
-        this.creationTime = Objects.requireNonNull(creationTime);
-        this.currentTier = Objects.requireNonNull(currentTier);
-        this.defaultGroup = Objects.requireNonNull(defaultGroup);
-        this.encryptionConfig = Objects.requireNonNull(encryptionConfig);
-        this.encryptionProvisioningState = Objects.requireNonNull(encryptionProvisioningState);
-        this.encryptionState = Objects.requireNonNull(encryptionState);
-        this.endpoint = Objects.requireNonNull(endpoint);
-        this.firewallAllowAzureIps = Objects.requireNonNull(firewallAllowAzureIps);
-        this.firewallRules = Objects.requireNonNull(firewallRules);
-        this.firewallState = Objects.requireNonNull(firewallState);
-        this.id = Objects.requireNonNull(id);
-        this.identity = Objects.requireNonNull(identity);
-        this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.newTier = Objects.requireNonNull(newTier);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.state = Objects.requireNonNull(state);
-        this.tags = Objects.requireNonNull(tags);
-        this.trustedIdProviderState = Objects.requireNonNull(trustedIdProviderState);
-        this.trustedIdProviders = Objects.requireNonNull(trustedIdProviders);
-        this.type = Objects.requireNonNull(type);
-        this.virtualNetworkRules = Objects.requireNonNull(virtualNetworkRules);
+        this.accountId = accountId;
+        this.creationTime = creationTime;
+        this.currentTier = currentTier;
+        this.defaultGroup = defaultGroup;
+        this.encryptionConfig = encryptionConfig;
+        this.encryptionProvisioningState = encryptionProvisioningState;
+        this.encryptionState = encryptionState;
+        this.endpoint = endpoint;
+        this.firewallAllowAzureIps = firewallAllowAzureIps;
+        this.firewallRules = firewallRules;
+        this.firewallState = firewallState;
+        this.id = id;
+        this.identity = identity;
+        this.lastModifiedTime = lastModifiedTime;
+        this.location = location;
+        this.name = name;
+        this.newTier = newTier;
+        this.provisioningState = provisioningState;
+        this.state = state;
+        this.tags = tags;
+        this.trustedIdProviderState = trustedIdProviderState;
+        this.trustedIdProviders = trustedIdProviders;
+        this.type = type;
+        this.virtualNetworkRules = virtualNetworkRules;
     }
 
     /**

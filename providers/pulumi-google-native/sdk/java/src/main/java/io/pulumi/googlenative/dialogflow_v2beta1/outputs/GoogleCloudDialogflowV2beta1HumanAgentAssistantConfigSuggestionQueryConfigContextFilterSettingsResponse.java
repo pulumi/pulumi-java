@@ -30,9 +30,9 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
         Boolean dropHandoffMessages,
         Boolean dropIvrMessages,
         Boolean dropVirtualAgentMessages) {
-        this.dropHandoffMessages = Objects.requireNonNull(dropHandoffMessages);
-        this.dropIvrMessages = Objects.requireNonNull(dropIvrMessages);
-        this.dropVirtualAgentMessages = Objects.requireNonNull(dropVirtualAgentMessages);
+        this.dropHandoffMessages = dropHandoffMessages;
+        this.dropIvrMessages = dropIvrMessages;
+        this.dropVirtualAgentMessages = dropVirtualAgentMessages;
     }
 
     /**

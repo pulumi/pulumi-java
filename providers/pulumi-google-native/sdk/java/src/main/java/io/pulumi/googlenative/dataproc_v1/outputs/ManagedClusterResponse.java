@@ -32,9 +32,9 @@ public final class ManagedClusterResponse {
         String clusterName,
         ClusterConfigResponse config,
         Map<String,String> labels) {
-        this.clusterName = Objects.requireNonNull(clusterName);
-        this.config = Objects.requireNonNull(config);
-        this.labels = Objects.requireNonNull(labels);
+        this.clusterName = clusterName;
+        this.config = config;
+        this.labels = labels;
     }
 
     /**

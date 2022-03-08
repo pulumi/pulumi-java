@@ -27,7 +27,7 @@ public final class IpGroupRule {
         @Nullable String description,
         String source) {
         this.description = description;
-        this.source = Objects.requireNonNull(source);
+        this.source = source;
     }
 
     /**

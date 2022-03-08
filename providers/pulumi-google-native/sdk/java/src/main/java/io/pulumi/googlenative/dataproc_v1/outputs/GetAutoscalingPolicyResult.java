@@ -41,11 +41,11 @@ public final class GetAutoscalingPolicyResult {
         String name,
         InstanceGroupAutoscalingPolicyConfigResponse secondaryWorkerConfig,
         InstanceGroupAutoscalingPolicyConfigResponse workerConfig) {
-        this.basicAlgorithm = Objects.requireNonNull(basicAlgorithm);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.secondaryWorkerConfig = Objects.requireNonNull(secondaryWorkerConfig);
-        this.workerConfig = Objects.requireNonNull(workerConfig);
+        this.basicAlgorithm = basicAlgorithm;
+        this.labels = labels;
+        this.name = name;
+        this.secondaryWorkerConfig = secondaryWorkerConfig;
+        this.workerConfig = workerConfig;
     }
 
     public BasicAutoscalingAlgorithmResponse getBasicAlgorithm() {

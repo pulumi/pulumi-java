@@ -25,8 +25,8 @@ public final class GetInstanceGuestAccelerator {
     private GetInstanceGuestAccelerator(
         Integer count,
         String type) {
-        this.count = Objects.requireNonNull(count);
-        this.type = Objects.requireNonNull(type);
+        this.count = count;
+        this.type = type;
     }
 
     /**

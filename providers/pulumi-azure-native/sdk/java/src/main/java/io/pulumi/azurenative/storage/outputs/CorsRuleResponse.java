@@ -44,11 +44,11 @@ public final class CorsRuleResponse {
         List<String> allowedOrigins,
         List<String> exposedHeaders,
         Integer maxAgeInSeconds) {
-        this.allowedHeaders = Objects.requireNonNull(allowedHeaders);
-        this.allowedMethods = Objects.requireNonNull(allowedMethods);
-        this.allowedOrigins = Objects.requireNonNull(allowedOrigins);
-        this.exposedHeaders = Objects.requireNonNull(exposedHeaders);
-        this.maxAgeInSeconds = Objects.requireNonNull(maxAgeInSeconds);
+        this.allowedHeaders = allowedHeaders;
+        this.allowedMethods = allowedMethods;
+        this.allowedOrigins = allowedOrigins;
+        this.exposedHeaders = exposedHeaders;
+        this.maxAgeInSeconds = maxAgeInSeconds;
     }
 
     /**

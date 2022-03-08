@@ -34,10 +34,10 @@ public final class BindingResponse {
         ExprResponse condition,
         List<String> members,
         String role) {
-        this.bindingId = Objects.requireNonNull(bindingId);
-        this.condition = Objects.requireNonNull(condition);
-        this.members = Objects.requireNonNull(members);
-        this.role = Objects.requireNonNull(role);
+        this.bindingId = bindingId;
+        this.condition = condition;
+        this.members = members;
+        this.role = role;
     }
 
     public String getBindingId() {

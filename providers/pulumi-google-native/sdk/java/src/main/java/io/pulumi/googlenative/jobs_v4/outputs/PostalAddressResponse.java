@@ -80,17 +80,17 @@ public final class PostalAddressResponse {
         Integer revision,
         String sortingCode,
         String sublocality) {
-        this.addressLines = Objects.requireNonNull(addressLines);
-        this.administrativeArea = Objects.requireNonNull(administrativeArea);
-        this.languageCode = Objects.requireNonNull(languageCode);
-        this.locality = Objects.requireNonNull(locality);
-        this.organization = Objects.requireNonNull(organization);
-        this.postalCode = Objects.requireNonNull(postalCode);
-        this.recipients = Objects.requireNonNull(recipients);
-        this.regionCode = Objects.requireNonNull(regionCode);
-        this.revision = Objects.requireNonNull(revision);
-        this.sortingCode = Objects.requireNonNull(sortingCode);
-        this.sublocality = Objects.requireNonNull(sublocality);
+        this.addressLines = addressLines;
+        this.administrativeArea = administrativeArea;
+        this.languageCode = languageCode;
+        this.locality = locality;
+        this.organization = organization;
+        this.postalCode = postalCode;
+        this.recipients = recipients;
+        this.regionCode = regionCode;
+        this.revision = revision;
+        this.sortingCode = sortingCode;
+        this.sublocality = sublocality;
     }
 
     /**

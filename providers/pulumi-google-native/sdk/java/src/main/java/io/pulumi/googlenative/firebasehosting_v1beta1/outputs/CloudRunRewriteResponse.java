@@ -24,8 +24,8 @@ public final class CloudRunRewriteResponse {
     private CloudRunRewriteResponse(
         String region,
         String serviceId) {
-        this.region = Objects.requireNonNull(region);
-        this.serviceId = Objects.requireNonNull(serviceId);
+        this.region = region;
+        this.serviceId = serviceId;
     }
 
     /**

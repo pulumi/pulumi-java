@@ -17,7 +17,7 @@ public final class DisplayDeviceResponse {
 
     @OutputCustomType.Constructor({"enableDisplay"})
     private DisplayDeviceResponse(Boolean enableDisplay) {
-        this.enableDisplay = Objects.requireNonNull(enableDisplay);
+        this.enableDisplay = enableDisplay;
     }
 
     /**

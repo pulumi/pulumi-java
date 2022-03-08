@@ -81,16 +81,16 @@ public final class GetVideoAnalyzerResult {
         SystemDataResponse systemData,
         @Nullable Map<String,String> tags,
         String type) {
-        this.encryption = Objects.requireNonNull(encryption);
-        this.endpoints = Objects.requireNonNull(endpoints);
-        this.id = Objects.requireNonNull(id);
+        this.encryption = encryption;
+        this.endpoints = endpoints;
+        this.id = id;
         this.identity = identity;
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.storageAccounts = Objects.requireNonNull(storageAccounts);
-        this.systemData = Objects.requireNonNull(systemData);
+        this.location = location;
+        this.name = name;
+        this.storageAccounts = storageAccounts;
+        this.systemData = systemData;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

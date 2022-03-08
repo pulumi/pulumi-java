@@ -41,7 +41,7 @@ public final class GraphQLApiAdditionalAuthenticationProvider {
         @Nullable GraphQLApiAdditionalAuthenticationProviderLambdaAuthorizerConfig lambdaAuthorizerConfig,
         @Nullable GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfig openidConnectConfig,
         @Nullable GraphQLApiAdditionalAuthenticationProviderUserPoolConfig userPoolConfig) {
-        this.authenticationType = Objects.requireNonNull(authenticationType);
+        this.authenticationType = authenticationType;
         this.lambdaAuthorizerConfig = lambdaAuthorizerConfig;
         this.openidConnectConfig = openidConnectConfig;
         this.userPoolConfig = userPoolConfig;

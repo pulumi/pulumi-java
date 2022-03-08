@@ -17,8 +17,8 @@ public final class LicenseBorrowConfiguration {
     private LicenseBorrowConfiguration(
         Boolean allowEarlyCheckIn,
         Integer maxTimeToLiveInMinutes) {
-        this.allowEarlyCheckIn = Objects.requireNonNull(allowEarlyCheckIn);
-        this.maxTimeToLiveInMinutes = Objects.requireNonNull(maxTimeToLiveInMinutes);
+        this.allowEarlyCheckIn = allowEarlyCheckIn;
+        this.maxTimeToLiveInMinutes = maxTimeToLiveInMinutes;
     }
 
     public Boolean getAllowEarlyCheckIn() {

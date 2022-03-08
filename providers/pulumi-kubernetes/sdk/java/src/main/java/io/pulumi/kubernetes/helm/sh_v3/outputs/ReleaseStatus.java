@@ -62,7 +62,7 @@ public final class ReleaseStatus {
         this.name = name;
         this.namespace = namespace;
         this.revision = revision;
-        this.status = Objects.requireNonNull(status);
+        this.status = status;
         this.version = version;
     }
 

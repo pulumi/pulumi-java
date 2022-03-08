@@ -24,8 +24,8 @@ public final class ReplicationConfigurationReplicationConfigurationRuleDestinati
     private ReplicationConfigurationReplicationConfigurationRuleDestination(
         String region,
         String registryId) {
-        this.region = Objects.requireNonNull(region);
-        this.registryId = Objects.requireNonNull(registryId);
+        this.region = region;
+        this.registryId = registryId;
     }
 
     /**

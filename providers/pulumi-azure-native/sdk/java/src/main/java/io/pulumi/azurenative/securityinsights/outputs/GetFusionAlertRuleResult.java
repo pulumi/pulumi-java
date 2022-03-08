@@ -89,18 +89,18 @@ public final class GetFusionAlertRuleResult {
         String severity,
         List<String> tactics,
         String type) {
-        this.alertRuleTemplateName = Objects.requireNonNull(alertRuleTemplateName);
-        this.description = Objects.requireNonNull(description);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.enabled = Objects.requireNonNull(enabled);
+        this.alertRuleTemplateName = alertRuleTemplateName;
+        this.description = description;
+        this.displayName = displayName;
+        this.enabled = enabled;
         this.etag = etag;
-        this.id = Objects.requireNonNull(id);
-        this.kind = Objects.requireNonNull(kind);
-        this.lastModifiedUtc = Objects.requireNonNull(lastModifiedUtc);
-        this.name = Objects.requireNonNull(name);
-        this.severity = Objects.requireNonNull(severity);
-        this.tactics = Objects.requireNonNull(tactics);
-        this.type = Objects.requireNonNull(type);
+        this.id = id;
+        this.kind = kind;
+        this.lastModifiedUtc = lastModifiedUtc;
+        this.name = name;
+        this.severity = severity;
+        this.tactics = tactics;
+        this.type = type;
     }
 
     /**

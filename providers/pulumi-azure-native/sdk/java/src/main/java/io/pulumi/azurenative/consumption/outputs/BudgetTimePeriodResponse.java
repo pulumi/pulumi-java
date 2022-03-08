@@ -27,7 +27,7 @@ public final class BudgetTimePeriodResponse {
         @Nullable String endDate,
         String startDate) {
         this.endDate = endDate;
-        this.startDate = Objects.requireNonNull(startDate);
+        this.startDate = startDate;
     }
 
     /**

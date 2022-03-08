@@ -40,10 +40,10 @@ public final class GooglePrivacyDlpV2InspectJobConfigResponse {
         GooglePrivacyDlpV2InspectConfigResponse inspectConfig,
         String inspectTemplateName,
         GooglePrivacyDlpV2StorageConfigResponse storageConfig) {
-        this.actions = Objects.requireNonNull(actions);
-        this.inspectConfig = Objects.requireNonNull(inspectConfig);
-        this.inspectTemplateName = Objects.requireNonNull(inspectTemplateName);
-        this.storageConfig = Objects.requireNonNull(storageConfig);
+        this.actions = actions;
+        this.inspectConfig = inspectConfig;
+        this.inspectTemplateName = inspectTemplateName;
+        this.storageConfig = storageConfig;
     }
 
     /**

@@ -90,17 +90,17 @@ public final class GuestConfigurationAssignmentPropertiesResponse {
         String resourceType,
         String targetResourceId,
         @Nullable List<VMSSVMInfoResponse> vmssVMList) {
-        this.assignmentHash = Objects.requireNonNull(assignmentHash);
-        this.complianceStatus = Objects.requireNonNull(complianceStatus);
+        this.assignmentHash = assignmentHash;
+        this.complianceStatus = complianceStatus;
         this.context = context;
         this.guestConfiguration = guestConfiguration;
-        this.lastComplianceStatusChecked = Objects.requireNonNull(lastComplianceStatusChecked);
+        this.lastComplianceStatusChecked = lastComplianceStatusChecked;
         this.latestAssignmentReport = latestAssignmentReport;
-        this.latestReportId = Objects.requireNonNull(latestReportId);
-        this.parameterHash = Objects.requireNonNull(parameterHash);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.resourceType = Objects.requireNonNull(resourceType);
-        this.targetResourceId = Objects.requireNonNull(targetResourceId);
+        this.latestReportId = latestReportId;
+        this.parameterHash = parameterHash;
+        this.provisioningState = provisioningState;
+        this.resourceType = resourceType;
+        this.targetResourceId = targetResourceId;
         this.vmssVMList = vmssVMList;
     }
 

@@ -63,14 +63,14 @@ public final class FactoryVSTSConfigurationResponse {
         String rootFolder,
         @Nullable String tenantId,
         String type) {
-        this.accountName = Objects.requireNonNull(accountName);
-        this.collaborationBranch = Objects.requireNonNull(collaborationBranch);
+        this.accountName = accountName;
+        this.collaborationBranch = collaborationBranch;
         this.lastCommitId = lastCommitId;
-        this.projectName = Objects.requireNonNull(projectName);
-        this.repositoryName = Objects.requireNonNull(repositoryName);
-        this.rootFolder = Objects.requireNonNull(rootFolder);
+        this.projectName = projectName;
+        this.repositoryName = repositoryName;
+        this.rootFolder = rootFolder;
         this.tenantId = tenantId;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

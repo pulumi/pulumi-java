@@ -102,20 +102,20 @@ public final class GetSpacecraftResult {
         @Nullable String tleLine1,
         @Nullable String tleLine2,
         String type) {
-        this.authorizationStatus = Objects.requireNonNull(authorizationStatus);
-        this.authorizationStatusExtended = Objects.requireNonNull(authorizationStatusExtended);
-        this.etag = Objects.requireNonNull(etag);
-        this.id = Objects.requireNonNull(id);
+        this.authorizationStatus = authorizationStatus;
+        this.authorizationStatusExtended = authorizationStatusExtended;
+        this.etag = etag;
+        this.id = id;
         this.links = links;
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.noradId = Objects.requireNonNull(noradId);
-        this.systemData = Objects.requireNonNull(systemData);
+        this.location = location;
+        this.name = name;
+        this.noradId = noradId;
+        this.systemData = systemData;
         this.tags = tags;
         this.titleLine = titleLine;
         this.tleLine1 = tleLine1;
         this.tleLine2 = tleLine2;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

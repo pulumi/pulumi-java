@@ -56,13 +56,13 @@ public final class ResourceNavigationLinkResponse {
         @Nullable String name,
         String provisioningState,
         String type) {
-        this.etag = Objects.requireNonNull(etag);
-        this.id = Objects.requireNonNull(id);
+        this.etag = etag;
+        this.id = id;
         this.link = link;
         this.linkedResourceType = linkedResourceType;
         this.name = name;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.type = Objects.requireNonNull(type);
+        this.provisioningState = provisioningState;
+        this.type = type;
     }
 
     /**

@@ -13,7 +13,7 @@ public final class GetClusterClusterTelemetry {
 
     @OutputCustomType.Constructor({"type"})
     private GetClusterClusterTelemetry(String type) {
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     public String getType() {

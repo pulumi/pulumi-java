@@ -93,19 +93,19 @@ public final class GetCompanyResult {
         String size,
         Boolean suspended,
         String websiteUri) {
-        this.careerSiteUri = Objects.requireNonNull(careerSiteUri);
-        this.derivedInfo = Objects.requireNonNull(derivedInfo);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.eeoText = Objects.requireNonNull(eeoText);
-        this.externalId = Objects.requireNonNull(externalId);
-        this.headquartersAddress = Objects.requireNonNull(headquartersAddress);
-        this.hiringAgency = Objects.requireNonNull(hiringAgency);
-        this.imageUri = Objects.requireNonNull(imageUri);
-        this.keywordSearchableJobCustomAttributes = Objects.requireNonNull(keywordSearchableJobCustomAttributes);
-        this.name = Objects.requireNonNull(name);
-        this.size = Objects.requireNonNull(size);
-        this.suspended = Objects.requireNonNull(suspended);
-        this.websiteUri = Objects.requireNonNull(websiteUri);
+        this.careerSiteUri = careerSiteUri;
+        this.derivedInfo = derivedInfo;
+        this.displayName = displayName;
+        this.eeoText = eeoText;
+        this.externalId = externalId;
+        this.headquartersAddress = headquartersAddress;
+        this.hiringAgency = hiringAgency;
+        this.imageUri = imageUri;
+        this.keywordSearchableJobCustomAttributes = keywordSearchableJobCustomAttributes;
+        this.name = name;
+        this.size = size;
+        this.suspended = suspended;
+        this.websiteUri = websiteUri;
     }
 
     /**

@@ -17,7 +17,7 @@ public final class GetFunctionEventTriggerFailurePolicy {
 
     @OutputCustomType.Constructor({"retry"})
     private GetFunctionEventTriggerFailurePolicy(Boolean retry) {
-        this.retry = Objects.requireNonNull(retry);
+        this.retry = retry;
     }
 
     /**

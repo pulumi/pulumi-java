@@ -73,13 +73,13 @@ public final class LedgerPropertiesResponse {
         String provisioningState) {
         this.aadBasedSecurityPrincipals = aadBasedSecurityPrincipals;
         this.certBasedSecurityPrincipals = certBasedSecurityPrincipals;
-        this.identityServiceUri = Objects.requireNonNull(identityServiceUri);
-        this.ledgerInternalNamespace = Objects.requireNonNull(ledgerInternalNamespace);
-        this.ledgerName = Objects.requireNonNull(ledgerName);
+        this.identityServiceUri = identityServiceUri;
+        this.ledgerInternalNamespace = ledgerInternalNamespace;
+        this.ledgerName = ledgerName;
         this.ledgerStorageAccount = ledgerStorageAccount;
         this.ledgerType = ledgerType;
-        this.ledgerUri = Objects.requireNonNull(ledgerUri);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.ledgerUri = ledgerUri;
+        this.provisioningState = provisioningState;
     }
 
     /**

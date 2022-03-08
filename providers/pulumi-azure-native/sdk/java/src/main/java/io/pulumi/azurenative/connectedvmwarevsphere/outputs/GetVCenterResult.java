@@ -129,24 +129,24 @@ public final class GetVCenterResult {
         String type,
         String uuid,
         String version) {
-        this.connectionStatus = Objects.requireNonNull(connectionStatus);
+        this.connectionStatus = connectionStatus;
         this.credentials = credentials;
-        this.customResourceName = Objects.requireNonNull(customResourceName);
+        this.customResourceName = customResourceName;
         this.extendedLocation = extendedLocation;
-        this.fqdn = Objects.requireNonNull(fqdn);
-        this.id = Objects.requireNonNull(id);
-        this.instanceUuid = Objects.requireNonNull(instanceUuid);
+        this.fqdn = fqdn;
+        this.id = id;
+        this.instanceUuid = instanceUuid;
         this.kind = kind;
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
+        this.location = location;
+        this.name = name;
         this.port = port;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.statuses = Objects.requireNonNull(statuses);
-        this.systemData = Objects.requireNonNull(systemData);
+        this.provisioningState = provisioningState;
+        this.statuses = statuses;
+        this.systemData = systemData;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
-        this.uuid = Objects.requireNonNull(uuid);
-        this.version = Objects.requireNonNull(version);
+        this.type = type;
+        this.uuid = uuid;
+        this.version = version;
     }
 
     /**

@@ -79,17 +79,17 @@ public final class GetAdaptiveApplicationControlResult {
         String sourceSystem,
         String type,
         @Nullable List<VmRecommendationResponse> vmRecommendations) {
-        this.configurationStatus = Objects.requireNonNull(configurationStatus);
+        this.configurationStatus = configurationStatus;
         this.enforcementMode = enforcementMode;
-        this.id = Objects.requireNonNull(id);
-        this.issues = Objects.requireNonNull(issues);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.issues = issues;
+        this.location = location;
+        this.name = name;
         this.pathRecommendations = pathRecommendations;
         this.protectionMode = protectionMode;
-        this.recommendationStatus = Objects.requireNonNull(recommendationStatus);
-        this.sourceSystem = Objects.requireNonNull(sourceSystem);
-        this.type = Objects.requireNonNull(type);
+        this.recommendationStatus = recommendationStatus;
+        this.sourceSystem = sourceSystem;
+        this.type = type;
         this.vmRecommendations = vmRecommendations;
     }
 

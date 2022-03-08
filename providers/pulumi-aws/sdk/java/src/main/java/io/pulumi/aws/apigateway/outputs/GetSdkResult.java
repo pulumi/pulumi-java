@@ -46,14 +46,14 @@ public final class GetSdkResult {
         String restApiId,
         String sdkType,
         String stageName) {
-        this.body = Objects.requireNonNull(body);
-        this.contentDisposition = Objects.requireNonNull(contentDisposition);
-        this.contentType = Objects.requireNonNull(contentType);
-        this.id = Objects.requireNonNull(id);
+        this.body = body;
+        this.contentDisposition = contentDisposition;
+        this.contentType = contentType;
+        this.id = id;
         this.parameters = parameters;
-        this.restApiId = Objects.requireNonNull(restApiId);
-        this.sdkType = Objects.requireNonNull(sdkType);
-        this.stageName = Objects.requireNonNull(stageName);
+        this.restApiId = restApiId;
+        this.sdkType = sdkType;
+        this.stageName = stageName;
     }
 
     /**

@@ -142,7 +142,7 @@ public final class ExecuteSSISPackageActivityResponse {
         @Nullable Object runtime,
         String type,
         @Nullable List<UserPropertyResponse> userProperties) {
-        this.connectVia = Objects.requireNonNull(connectVia);
+        this.connectVia = connectVia;
         this.dependsOn = dependsOn;
         this.description = description;
         this.environmentPath = environmentPath;
@@ -150,16 +150,16 @@ public final class ExecuteSSISPackageActivityResponse {
         this.linkedServiceName = linkedServiceName;
         this.logLocation = logLocation;
         this.loggingLevel = loggingLevel;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.packageConnectionManagers = packageConnectionManagers;
-        this.packageLocation = Objects.requireNonNull(packageLocation);
+        this.packageLocation = packageLocation;
         this.packageParameters = packageParameters;
         this.policy = policy;
         this.projectConnectionManagers = projectConnectionManagers;
         this.projectParameters = projectParameters;
         this.propertyOverrides = propertyOverrides;
         this.runtime = runtime;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.userProperties = userProperties;
     }
 

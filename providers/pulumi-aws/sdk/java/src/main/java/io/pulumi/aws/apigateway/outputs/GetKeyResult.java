@@ -62,14 +62,14 @@ public final class GetKeyResult {
         String name,
         Map<String,String> tags,
         String value) {
-        this.createdDate = Objects.requireNonNull(createdDate);
-        this.description = Objects.requireNonNull(description);
-        this.enabled = Objects.requireNonNull(enabled);
-        this.id = Objects.requireNonNull(id);
-        this.lastUpdatedDate = Objects.requireNonNull(lastUpdatedDate);
-        this.name = Objects.requireNonNull(name);
-        this.tags = Objects.requireNonNull(tags);
-        this.value = Objects.requireNonNull(value);
+        this.createdDate = createdDate;
+        this.description = description;
+        this.enabled = enabled;
+        this.id = id;
+        this.lastUpdatedDate = lastUpdatedDate;
+        this.name = name;
+        this.tags = tags;
+        this.value = value;
     }
 
     /**

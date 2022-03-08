@@ -39,8 +39,8 @@ public final class ServiceReference {
         String namespace,
         @Nullable String path,
         @Nullable Integer port) {
-        this.name = Objects.requireNonNull(name);
-        this.namespace = Objects.requireNonNull(namespace);
+        this.name = name;
+        this.namespace = namespace;
         this.path = path;
         this.port = port;
     }

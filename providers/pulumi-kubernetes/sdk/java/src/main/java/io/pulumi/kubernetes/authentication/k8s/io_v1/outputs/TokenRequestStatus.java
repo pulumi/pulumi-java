@@ -24,8 +24,8 @@ public final class TokenRequestStatus {
     private TokenRequestStatus(
         String expirationTimestamp,
         String token) {
-        this.expirationTimestamp = Objects.requireNonNull(expirationTimestamp);
-        this.token = Objects.requireNonNull(token);
+        this.expirationTimestamp = expirationTimestamp;
+        this.token = token;
     }
 
     /**

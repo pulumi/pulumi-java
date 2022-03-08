@@ -32,9 +32,9 @@ public final class StartMigrationScenarioServerRoleResultResponse {
         List<ReportableExceptionResponse> exceptionsAndWarnings,
         String name,
         String state) {
-        this.exceptionsAndWarnings = Objects.requireNonNull(exceptionsAndWarnings);
-        this.name = Objects.requireNonNull(name);
-        this.state = Objects.requireNonNull(state);
+        this.exceptionsAndWarnings = exceptionsAndWarnings;
+        this.name = name;
+        this.state = state;
     }
 
     /**

@@ -38,10 +38,10 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse {
         String location,
         String project,
         Boolean validateOnly) {
-        this.launchParameter = Objects.requireNonNull(launchParameter);
-        this.location = Objects.requireNonNull(location);
-        this.project = Objects.requireNonNull(project);
-        this.validateOnly = Objects.requireNonNull(validateOnly);
+        this.launchParameter = launchParameter;
+        this.location = location;
+        this.project = project;
+        this.validateOnly = validateOnly;
     }
 
     /**

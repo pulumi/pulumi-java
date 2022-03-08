@@ -25,8 +25,8 @@ public final class RecurringTimeWindowResponse {
     private RecurringTimeWindowResponse(
         String recurrence,
         TimeWindowResponse window) {
-        this.recurrence = Objects.requireNonNull(recurrence);
-        this.window = Objects.requireNonNull(window);
+        this.recurrence = recurrence;
+        this.window = window;
     }
 
     /**

@@ -69,15 +69,15 @@ public final class GetSecuritySettingResult {
         String redactionScope,
         String redactionStrategy,
         Integer retentionWindowDays) {
-        this.deidentifyTemplate = Objects.requireNonNull(deidentifyTemplate);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.insightsExportSettings = Objects.requireNonNull(insightsExportSettings);
-        this.inspectTemplate = Objects.requireNonNull(inspectTemplate);
-        this.name = Objects.requireNonNull(name);
-        this.purgeDataTypes = Objects.requireNonNull(purgeDataTypes);
-        this.redactionScope = Objects.requireNonNull(redactionScope);
-        this.redactionStrategy = Objects.requireNonNull(redactionStrategy);
-        this.retentionWindowDays = Objects.requireNonNull(retentionWindowDays);
+        this.deidentifyTemplate = deidentifyTemplate;
+        this.displayName = displayName;
+        this.insightsExportSettings = insightsExportSettings;
+        this.inspectTemplate = inspectTemplate;
+        this.name = name;
+        this.purgeDataTypes = purgeDataTypes;
+        this.redactionScope = redactionScope;
+        this.redactionStrategy = redactionStrategy;
+        this.retentionWindowDays = retentionWindowDays;
     }
 
     /**

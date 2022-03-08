@@ -34,10 +34,10 @@ public final class ContactListTopic {
         @Nullable String description,
         String displayName,
         String topicName) {
-        this.defaultSubscriptionStatus = Objects.requireNonNull(defaultSubscriptionStatus);
+        this.defaultSubscriptionStatus = defaultSubscriptionStatus;
         this.description = description;
-        this.displayName = Objects.requireNonNull(displayName);
-        this.topicName = Objects.requireNonNull(topicName);
+        this.displayName = displayName;
+        this.topicName = topicName;
     }
 
     public String getDefaultSubscriptionStatus() {

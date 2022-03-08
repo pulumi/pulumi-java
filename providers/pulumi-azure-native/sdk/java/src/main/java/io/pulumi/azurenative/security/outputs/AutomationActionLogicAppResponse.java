@@ -33,7 +33,7 @@ public final class AutomationActionLogicAppResponse {
         String actionType,
         @Nullable String logicAppResourceId,
         @Nullable String uri) {
-        this.actionType = Objects.requireNonNull(actionType);
+        this.actionType = actionType;
         this.logicAppResourceId = logicAppResourceId;
         this.uri = uri;
     }

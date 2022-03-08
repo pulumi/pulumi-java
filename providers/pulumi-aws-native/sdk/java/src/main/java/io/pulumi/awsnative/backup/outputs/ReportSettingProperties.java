@@ -27,7 +27,7 @@ public final class ReportSettingProperties {
         @Nullable List<String> frameworkArns,
         String reportTemplate) {
         this.frameworkArns = frameworkArns;
-        this.reportTemplate = Objects.requireNonNull(reportTemplate);
+        this.reportTemplate = reportTemplate;
     }
 
     /**

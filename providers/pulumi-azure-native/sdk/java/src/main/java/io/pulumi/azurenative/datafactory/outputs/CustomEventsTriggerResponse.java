@@ -74,13 +74,13 @@ public final class CustomEventsTriggerResponse {
         String type) {
         this.annotations = annotations;
         this.description = description;
-        this.events = Objects.requireNonNull(events);
+        this.events = events;
         this.pipelines = pipelines;
-        this.runtimeState = Objects.requireNonNull(runtimeState);
-        this.scope = Objects.requireNonNull(scope);
+        this.runtimeState = runtimeState;
+        this.scope = scope;
         this.subjectBeginsWith = subjectBeginsWith;
         this.subjectEndsWith = subjectEndsWith;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

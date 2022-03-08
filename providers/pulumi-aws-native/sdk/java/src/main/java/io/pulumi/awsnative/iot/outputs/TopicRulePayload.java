@@ -29,12 +29,12 @@ public final class TopicRulePayload {
         @Nullable TopicRuleAction errorAction,
         @Nullable Boolean ruleDisabled,
         String sql) {
-        this.actions = Objects.requireNonNull(actions);
+        this.actions = actions;
         this.awsIotSqlVersion = awsIotSqlVersion;
         this.description = description;
         this.errorAction = errorAction;
         this.ruleDisabled = ruleDisabled;
-        this.sql = Objects.requireNonNull(sql);
+        this.sql = sql;
     }
 
     public List<TopicRuleAction> getActions() {

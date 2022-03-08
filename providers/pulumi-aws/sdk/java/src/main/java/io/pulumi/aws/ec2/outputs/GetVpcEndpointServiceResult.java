@@ -92,21 +92,21 @@ public final class GetVpcEndpointServiceResult {
         String serviceType,
         Map<String,String> tags,
         Boolean vpcEndpointPolicySupported) {
-        this.acceptanceRequired = Objects.requireNonNull(acceptanceRequired);
-        this.arn = Objects.requireNonNull(arn);
-        this.availabilityZones = Objects.requireNonNull(availabilityZones);
-        this.baseEndpointDnsNames = Objects.requireNonNull(baseEndpointDnsNames);
+        this.acceptanceRequired = acceptanceRequired;
+        this.arn = arn;
+        this.availabilityZones = availabilityZones;
+        this.baseEndpointDnsNames = baseEndpointDnsNames;
         this.filters = filters;
-        this.id = Objects.requireNonNull(id);
-        this.managesVpcEndpoints = Objects.requireNonNull(managesVpcEndpoints);
-        this.owner = Objects.requireNonNull(owner);
-        this.privateDnsName = Objects.requireNonNull(privateDnsName);
+        this.id = id;
+        this.managesVpcEndpoints = managesVpcEndpoints;
+        this.owner = owner;
+        this.privateDnsName = privateDnsName;
         this.service = service;
-        this.serviceId = Objects.requireNonNull(serviceId);
-        this.serviceName = Objects.requireNonNull(serviceName);
-        this.serviceType = Objects.requireNonNull(serviceType);
-        this.tags = Objects.requireNonNull(tags);
-        this.vpcEndpointPolicySupported = Objects.requireNonNull(vpcEndpointPolicySupported);
+        this.serviceId = serviceId;
+        this.serviceName = serviceName;
+        this.serviceType = serviceType;
+        this.tags = tags;
+        this.vpcEndpointPolicySupported = vpcEndpointPolicySupported;
     }
 
     /**

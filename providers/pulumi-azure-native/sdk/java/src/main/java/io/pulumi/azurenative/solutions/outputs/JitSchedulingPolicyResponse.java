@@ -26,9 +26,9 @@ public final class JitSchedulingPolicyResponse {
         String duration,
         String startTime,
         String type) {
-        this.duration = Objects.requireNonNull(duration);
-        this.startTime = Objects.requireNonNull(startTime);
-        this.type = Objects.requireNonNull(type);
+        this.duration = duration;
+        this.startTime = startTime;
+        this.type = type;
     }
 
     public String getDuration() {

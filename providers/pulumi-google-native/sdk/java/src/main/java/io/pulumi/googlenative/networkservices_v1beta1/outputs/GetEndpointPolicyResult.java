@@ -81,17 +81,17 @@ public final class GetEndpointPolicyResult {
         TrafficPortSelectorResponse trafficPortSelector,
         String type,
         String updateTime) {
-        this.authorizationPolicy = Objects.requireNonNull(authorizationPolicy);
-        this.clientTlsPolicy = Objects.requireNonNull(clientTlsPolicy);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.description = Objects.requireNonNull(description);
-        this.endpointMatcher = Objects.requireNonNull(endpointMatcher);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.serverTlsPolicy = Objects.requireNonNull(serverTlsPolicy);
-        this.trafficPortSelector = Objects.requireNonNull(trafficPortSelector);
-        this.type = Objects.requireNonNull(type);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.authorizationPolicy = authorizationPolicy;
+        this.clientTlsPolicy = clientTlsPolicy;
+        this.createTime = createTime;
+        this.description = description;
+        this.endpointMatcher = endpointMatcher;
+        this.labels = labels;
+        this.name = name;
+        this.serverTlsPolicy = serverTlsPolicy;
+        this.trafficPortSelector = trafficPortSelector;
+        this.type = type;
+        this.updateTime = updateTime;
     }
 
     /**

@@ -19,7 +19,7 @@ public final class PolicyNetwork {
 
     @OutputCustomType.Constructor({"networkUrl"})
     private PolicyNetwork(String networkUrl) {
-        this.networkUrl = Objects.requireNonNull(networkUrl);
+        this.networkUrl = networkUrl;
     }
 
     /**

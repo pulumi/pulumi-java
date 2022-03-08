@@ -39,10 +39,10 @@ public final class GooglePrivacyDlpV2ExclusionRuleResponse {
         GooglePrivacyDlpV2ExcludeInfoTypesResponse excludeInfoTypes,
         String matchingType,
         GooglePrivacyDlpV2RegexResponse regex) {
-        this.dictionary = Objects.requireNonNull(dictionary);
-        this.excludeInfoTypes = Objects.requireNonNull(excludeInfoTypes);
-        this.matchingType = Objects.requireNonNull(matchingType);
-        this.regex = Objects.requireNonNull(regex);
+        this.dictionary = dictionary;
+        this.excludeInfoTypes = excludeInfoTypes;
+        this.matchingType = matchingType;
+        this.regex = regex;
     }
 
     /**

@@ -17,7 +17,7 @@ public final class ResourcePolicyInstanceSchedulePolicyVmStartSchedule {
 
     @OutputCustomType.Constructor({"schedule"})
     private ResourcePolicyInstanceSchedulePolicyVmStartSchedule(String schedule) {
-        this.schedule = Objects.requireNonNull(schedule);
+        this.schedule = schedule;
     }
 
     /**

@@ -17,8 +17,8 @@ public final class BotVersionLocaleSpecification {
     private BotVersionLocaleSpecification(
         BotVersionLocaleDetails botVersionLocaleDetails,
         String localeId) {
-        this.botVersionLocaleDetails = Objects.requireNonNull(botVersionLocaleDetails);
-        this.localeId = Objects.requireNonNull(localeId);
+        this.botVersionLocaleDetails = botVersionLocaleDetails;
+        this.localeId = localeId;
     }
 
     public BotVersionLocaleDetails getBotVersionLocaleDetails() {

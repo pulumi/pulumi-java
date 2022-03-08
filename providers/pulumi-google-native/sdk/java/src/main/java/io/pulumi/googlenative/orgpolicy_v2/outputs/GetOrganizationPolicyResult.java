@@ -25,8 +25,8 @@ public final class GetOrganizationPolicyResult {
     private GetOrganizationPolicyResult(
         String name,
         GoogleCloudOrgpolicyV2PolicySpecResponse spec) {
-        this.name = Objects.requireNonNull(name);
-        this.spec = Objects.requireNonNull(spec);
+        this.name = name;
+        this.spec = spec;
     }
 
     /**

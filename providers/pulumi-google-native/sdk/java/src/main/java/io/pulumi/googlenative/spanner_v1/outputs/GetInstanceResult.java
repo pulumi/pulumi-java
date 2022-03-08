@@ -56,13 +56,13 @@ public final class GetInstanceResult {
         Integer nodeCount,
         Integer processingUnits,
         String state) {
-        this.config = Objects.requireNonNull(config);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.nodeCount = Objects.requireNonNull(nodeCount);
-        this.processingUnits = Objects.requireNonNull(processingUnits);
-        this.state = Objects.requireNonNull(state);
+        this.config = config;
+        this.displayName = displayName;
+        this.labels = labels;
+        this.name = name;
+        this.nodeCount = nodeCount;
+        this.processingUnits = processingUnits;
+        this.state = state;
     }
 
     /**

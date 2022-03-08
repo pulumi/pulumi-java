@@ -18,7 +18,7 @@ public final class ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderRespon
 
     @OutputCustomType.Constructor({"odataType"})
     private ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderResponse(String odataType) {
-        this.odataType = Objects.requireNonNull(odataType);
+        this.odataType = odataType;
     }
 
     /**

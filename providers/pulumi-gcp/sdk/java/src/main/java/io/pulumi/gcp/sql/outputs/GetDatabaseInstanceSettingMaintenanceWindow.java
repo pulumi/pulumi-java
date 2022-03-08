@@ -19,9 +19,9 @@ public final class GetDatabaseInstanceSettingMaintenanceWindow {
         Integer day,
         Integer hour,
         String updateTrack) {
-        this.day = Objects.requireNonNull(day);
-        this.hour = Objects.requireNonNull(hour);
-        this.updateTrack = Objects.requireNonNull(updateTrack);
+        this.day = day;
+        this.hour = hour;
+        this.updateTrack = updateTrack;
     }
 
     public Integer getDay() {

@@ -107,17 +107,17 @@ public final class GetPolicyAssignmentResult {
         this.description = description;
         this.displayName = displayName;
         this.enforcementMode = enforcementMode;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.identity = identity;
         this.location = location;
         this.metadata = metadata;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.nonComplianceMessages = nonComplianceMessages;
         this.notScopes = notScopes;
         this.parameters = parameters;
         this.policyDefinitionId = policyDefinitionId;
-        this.scope = Objects.requireNonNull(scope);
-        this.type = Objects.requireNonNull(type);
+        this.scope = scope;
+        this.type = type;
     }
 
     /**

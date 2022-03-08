@@ -69,15 +69,15 @@ public final class SharedPrivateLinkResourceResponse {
         String status,
         SystemDataResponse systemData,
         String type) {
-        this.groupId = Objects.requireNonNull(groupId);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.privateLinkResourceId = Objects.requireNonNull(privateLinkResourceId);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.groupId = groupId;
+        this.id = id;
+        this.name = name;
+        this.privateLinkResourceId = privateLinkResourceId;
+        this.provisioningState = provisioningState;
         this.requestMessage = requestMessage;
-        this.status = Objects.requireNonNull(status);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.status = status;
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

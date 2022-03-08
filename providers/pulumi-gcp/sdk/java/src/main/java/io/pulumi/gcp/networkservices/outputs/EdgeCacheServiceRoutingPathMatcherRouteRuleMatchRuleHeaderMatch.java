@@ -54,7 +54,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
         @Nullable Boolean presentMatch,
         @Nullable String suffixMatch) {
         this.exactMatch = exactMatch;
-        this.headerName = Objects.requireNonNull(headerName);
+        this.headerName = headerName;
         this.invertMatch = invertMatch;
         this.prefixMatch = prefixMatch;
         this.presentMatch = presentMatch;

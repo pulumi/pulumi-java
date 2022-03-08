@@ -77,16 +77,16 @@ public final class GetJobQueueResult {
         String status,
         String statusReason,
         Map<String,String> tags) {
-        this.arn = Objects.requireNonNull(arn);
-        this.computeEnvironmentOrders = Objects.requireNonNull(computeEnvironmentOrders);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.priority = Objects.requireNonNull(priority);
-        this.schedulingPolicyArn = Objects.requireNonNull(schedulingPolicyArn);
-        this.state = Objects.requireNonNull(state);
-        this.status = Objects.requireNonNull(status);
-        this.statusReason = Objects.requireNonNull(statusReason);
-        this.tags = Objects.requireNonNull(tags);
+        this.arn = arn;
+        this.computeEnvironmentOrders = computeEnvironmentOrders;
+        this.id = id;
+        this.name = name;
+        this.priority = priority;
+        this.schedulingPolicyArn = schedulingPolicyArn;
+        this.state = state;
+        this.status = status;
+        this.statusReason = statusReason;
+        this.tags = tags;
     }
 
     /**

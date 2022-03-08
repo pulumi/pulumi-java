@@ -120,22 +120,22 @@ public final class GetGalleryImageResult {
         @Nullable Map<String,String> tags,
         String type,
         @Nullable String uniqueIdentifier) {
-        this.author = Objects.requireNonNull(author);
-        this.createdDate = Objects.requireNonNull(createdDate);
-        this.description = Objects.requireNonNull(description);
-        this.icon = Objects.requireNonNull(icon);
-        this.id = Objects.requireNonNull(id);
-        this.imageReference = Objects.requireNonNull(imageReference);
+        this.author = author;
+        this.createdDate = createdDate;
+        this.description = description;
+        this.icon = icon;
+        this.id = id;
+        this.imageReference = imageReference;
         this.isEnabled = isEnabled;
         this.isOverride = isOverride;
         this.isPlanAuthorized = isPlanAuthorized;
-        this.latestOperationResult = Objects.requireNonNull(latestOperationResult);
+        this.latestOperationResult = latestOperationResult;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
-        this.planId = Objects.requireNonNull(planId);
+        this.name = name;
+        this.planId = planId;
         this.provisioningState = provisioningState;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.uniqueIdentifier = uniqueIdentifier;
     }
 

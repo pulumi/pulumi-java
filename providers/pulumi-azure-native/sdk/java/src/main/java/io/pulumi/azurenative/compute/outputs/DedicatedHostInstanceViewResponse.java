@@ -35,7 +35,7 @@ public final class DedicatedHostInstanceViewResponse {
         String assetId,
         @Nullable DedicatedHostAvailableCapacityResponse availableCapacity,
         @Nullable List<InstanceViewStatusResponse> statuses) {
-        this.assetId = Objects.requireNonNull(assetId);
+        this.assetId = assetId;
         this.availableCapacity = availableCapacity;
         this.statuses = statuses;
     }

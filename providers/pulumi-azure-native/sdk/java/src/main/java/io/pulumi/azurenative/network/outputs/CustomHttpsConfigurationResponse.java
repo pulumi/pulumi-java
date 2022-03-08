@@ -57,10 +57,10 @@ public final class CustomHttpsConfigurationResponse {
         @Nullable String secretName,
         @Nullable String secretVersion,
         @Nullable KeyVaultCertificateSourceParametersResponseVault vault) {
-        this.certificateSource = Objects.requireNonNull(certificateSource);
+        this.certificateSource = certificateSource;
         this.certificateType = certificateType;
-        this.minimumTlsVersion = Objects.requireNonNull(minimumTlsVersion);
-        this.protocolType = Objects.requireNonNull(protocolType);
+        this.minimumTlsVersion = minimumTlsVersion;
+        this.protocolType = protocolType;
         this.secretName = secretName;
         this.secretVersion = secretVersion;
         this.vault = vault;

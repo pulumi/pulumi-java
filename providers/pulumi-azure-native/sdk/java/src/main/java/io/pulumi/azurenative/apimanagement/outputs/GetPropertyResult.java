@@ -58,13 +58,13 @@ public final class GetPropertyResult {
         @Nullable List<String> tags,
         String type,
         String value) {
-        this.displayName = Objects.requireNonNull(displayName);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.displayName = displayName;
+        this.id = id;
+        this.name = name;
         this.secret = secret;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
-        this.value = Objects.requireNonNull(value);
+        this.type = type;
+        this.value = value;
     }
 
     /**

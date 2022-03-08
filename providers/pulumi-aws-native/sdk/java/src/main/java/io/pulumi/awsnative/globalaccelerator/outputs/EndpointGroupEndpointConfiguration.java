@@ -35,7 +35,7 @@ public final class EndpointGroupEndpointConfiguration {
         String endpointId,
         @Nullable Integer weight) {
         this.clientIPPreservationEnabled = clientIPPreservationEnabled;
-        this.endpointId = Objects.requireNonNull(endpointId);
+        this.endpointId = endpointId;
         this.weight = weight;
     }
 

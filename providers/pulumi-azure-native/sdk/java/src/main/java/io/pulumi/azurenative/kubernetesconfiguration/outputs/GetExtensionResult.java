@@ -133,20 +133,20 @@ public final class GetExtensionResult {
         this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
         this.configurationProtectedSettings = configurationProtectedSettings;
         this.configurationSettings = configurationSettings;
-        this.creationTime = Objects.requireNonNull(creationTime);
-        this.errorInfo = Objects.requireNonNull(errorInfo);
+        this.creationTime = creationTime;
+        this.errorInfo = errorInfo;
         this.extensionType = extensionType;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.identity = identity;
-        this.installState = Objects.requireNonNull(installState);
-        this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
-        this.lastStatusTime = Objects.requireNonNull(lastStatusTime);
-        this.name = Objects.requireNonNull(name);
+        this.installState = installState;
+        this.lastModifiedTime = lastModifiedTime;
+        this.lastStatusTime = lastStatusTime;
+        this.name = name;
         this.releaseTrain = releaseTrain;
         this.scope = scope;
         this.statuses = statuses;
         this.systemData = systemData;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.version = version;
     }
 

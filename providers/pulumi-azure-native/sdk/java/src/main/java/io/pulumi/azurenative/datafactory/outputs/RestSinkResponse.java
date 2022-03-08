@@ -97,7 +97,7 @@ public final class RestSinkResponse {
         this.requestMethod = requestMethod;
         this.sinkRetryCount = sinkRetryCount;
         this.sinkRetryWait = sinkRetryWait;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.writeBatchSize = writeBatchSize;
         this.writeBatchTimeout = writeBatchTimeout;
     }

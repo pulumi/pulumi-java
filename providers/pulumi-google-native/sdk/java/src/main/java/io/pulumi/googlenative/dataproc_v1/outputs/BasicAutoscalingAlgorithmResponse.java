@@ -32,9 +32,9 @@ public final class BasicAutoscalingAlgorithmResponse {
         String cooldownPeriod,
         SparkStandaloneAutoscalingConfigResponse sparkStandaloneConfig,
         BasicYarnAutoscalingConfigResponse yarnConfig) {
-        this.cooldownPeriod = Objects.requireNonNull(cooldownPeriod);
-        this.sparkStandaloneConfig = Objects.requireNonNull(sparkStandaloneConfig);
-        this.yarnConfig = Objects.requireNonNull(yarnConfig);
+        this.cooldownPeriod = cooldownPeriod;
+        this.sparkStandaloneConfig = sparkStandaloneConfig;
+        this.yarnConfig = yarnConfig;
     }
 
     /**

@@ -31,9 +31,9 @@ public final class ContainerResourceMetricStatus {
         String container,
         MetricValueStatus current,
         String name) {
-        this.container = Objects.requireNonNull(container);
-        this.current = Objects.requireNonNull(current);
-        this.name = Objects.requireNonNull(name);
+        this.container = container;
+        this.current = current;
+        this.name = name;
     }
 
     /**

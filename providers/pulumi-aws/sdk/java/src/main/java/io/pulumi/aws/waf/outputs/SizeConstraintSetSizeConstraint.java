@@ -46,10 +46,10 @@ public final class SizeConstraintSetSizeConstraint {
         SizeConstraintSetSizeConstraintFieldToMatch fieldToMatch,
         Integer size,
         String textTransformation) {
-        this.comparisonOperator = Objects.requireNonNull(comparisonOperator);
-        this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
-        this.size = Objects.requireNonNull(size);
-        this.textTransformation = Objects.requireNonNull(textTransformation);
+        this.comparisonOperator = comparisonOperator;
+        this.fieldToMatch = fieldToMatch;
+        this.size = size;
+        this.textTransformation = textTransformation;
     }
 
     /**

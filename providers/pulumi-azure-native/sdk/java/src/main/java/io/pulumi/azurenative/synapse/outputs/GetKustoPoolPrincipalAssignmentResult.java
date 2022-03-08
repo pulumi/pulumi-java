@@ -81,17 +81,17 @@ public final class GetKustoPoolPrincipalAssignmentResult {
         @Nullable String tenantId,
         String tenantName,
         String type) {
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.principalId = Objects.requireNonNull(principalId);
-        this.principalName = Objects.requireNonNull(principalName);
-        this.principalType = Objects.requireNonNull(principalType);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.role = Objects.requireNonNull(role);
-        this.systemData = Objects.requireNonNull(systemData);
+        this.id = id;
+        this.name = name;
+        this.principalId = principalId;
+        this.principalName = principalName;
+        this.principalType = principalType;
+        this.provisioningState = provisioningState;
+        this.role = role;
+        this.systemData = systemData;
         this.tenantId = tenantId;
-        this.tenantName = Objects.requireNonNull(tenantName);
-        this.type = Objects.requireNonNull(type);
+        this.tenantName = tenantName;
+        this.type = type;
     }
 
     /**

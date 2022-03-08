@@ -33,9 +33,9 @@ public final class GuestPoliciesRecipeUpdateStepArchiveExtraction {
         String artifactId,
         @Nullable String destination,
         String type) {
-        this.artifactId = Objects.requireNonNull(artifactId);
+        this.artifactId = artifactId;
         this.destination = destination;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

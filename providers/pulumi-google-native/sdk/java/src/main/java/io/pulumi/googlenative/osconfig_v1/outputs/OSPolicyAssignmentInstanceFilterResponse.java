@@ -39,10 +39,10 @@ public final class OSPolicyAssignmentInstanceFilterResponse {
         List<OSPolicyAssignmentLabelSetResponse> exclusionLabels,
         List<OSPolicyAssignmentLabelSetResponse> inclusionLabels,
         List<OSPolicyAssignmentInstanceFilterInventoryResponse> inventories) {
-        this.all = Objects.requireNonNull(all);
-        this.exclusionLabels = Objects.requireNonNull(exclusionLabels);
-        this.inclusionLabels = Objects.requireNonNull(inclusionLabels);
-        this.inventories = Objects.requireNonNull(inventories);
+        this.all = all;
+        this.exclusionLabels = exclusionLabels;
+        this.inclusionLabels = inclusionLabels;
+        this.inventories = inventories;
     }
 
     /**

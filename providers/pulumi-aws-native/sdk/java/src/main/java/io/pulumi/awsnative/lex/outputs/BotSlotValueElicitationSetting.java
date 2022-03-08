@@ -52,7 +52,7 @@ public final class BotSlotValueElicitationSetting {
         this.defaultValueSpecification = defaultValueSpecification;
         this.promptSpecification = promptSpecification;
         this.sampleUtterances = sampleUtterances;
-        this.slotConstraint = Objects.requireNonNull(slotConstraint);
+        this.slotConstraint = slotConstraint;
         this.waitAndContinueSpecification = waitAndContinueSpecification;
     }
 

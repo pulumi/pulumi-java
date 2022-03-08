@@ -18,7 +18,7 @@ public final class MultiClusterRoutingUseAnyResponse {
 
     @OutputCustomType.Constructor({"clusterIds"})
     private MultiClusterRoutingUseAnyResponse(List<String> clusterIds) {
-        this.clusterIds = Objects.requireNonNull(clusterIds);
+        this.clusterIds = clusterIds;
     }
 
     /**

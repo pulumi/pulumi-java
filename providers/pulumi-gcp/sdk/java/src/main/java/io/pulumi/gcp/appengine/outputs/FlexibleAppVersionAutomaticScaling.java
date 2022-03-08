@@ -99,7 +99,7 @@ public final class FlexibleAppVersionAutomaticScaling {
         @Nullable FlexibleAppVersionAutomaticScalingNetworkUtilization networkUtilization,
         @Nullable FlexibleAppVersionAutomaticScalingRequestUtilization requestUtilization) {
         this.coolDownPeriod = coolDownPeriod;
-        this.cpuUtilization = Objects.requireNonNull(cpuUtilization);
+        this.cpuUtilization = cpuUtilization;
         this.diskUtilization = diskUtilization;
         this.maxConcurrentRequests = maxConcurrentRequests;
         this.maxIdleInstances = maxIdleInstances;

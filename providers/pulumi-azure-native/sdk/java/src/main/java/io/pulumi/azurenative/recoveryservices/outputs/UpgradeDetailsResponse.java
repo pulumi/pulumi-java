@@ -66,15 +66,15 @@ public final class UpgradeDetailsResponse {
         String status,
         String triggerType,
         String upgradedResourceId) {
-        this.endTimeUtc = Objects.requireNonNull(endTimeUtc);
-        this.lastUpdatedTimeUtc = Objects.requireNonNull(lastUpdatedTimeUtc);
-        this.message = Objects.requireNonNull(message);
-        this.operationId = Objects.requireNonNull(operationId);
-        this.previousResourceId = Objects.requireNonNull(previousResourceId);
-        this.startTimeUtc = Objects.requireNonNull(startTimeUtc);
-        this.status = Objects.requireNonNull(status);
-        this.triggerType = Objects.requireNonNull(triggerType);
-        this.upgradedResourceId = Objects.requireNonNull(upgradedResourceId);
+        this.endTimeUtc = endTimeUtc;
+        this.lastUpdatedTimeUtc = lastUpdatedTimeUtc;
+        this.message = message;
+        this.operationId = operationId;
+        this.previousResourceId = previousResourceId;
+        this.startTimeUtc = startTimeUtc;
+        this.status = status;
+        this.triggerType = triggerType;
+        this.upgradedResourceId = upgradedResourceId;
     }
 
     /**

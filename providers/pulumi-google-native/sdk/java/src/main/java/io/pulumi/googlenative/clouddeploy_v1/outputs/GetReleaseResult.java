@@ -125,24 +125,24 @@ public final class GetReleaseResult {
         Map<String,String> targetRenders,
         List<TargetResponse> targetSnapshots,
         String uid) {
-        this.annotations = Objects.requireNonNull(annotations);
-        this.buildArtifacts = Objects.requireNonNull(buildArtifacts);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.deliveryPipelineSnapshot = Objects.requireNonNull(deliveryPipelineSnapshot);
-        this.description = Objects.requireNonNull(description);
-        this.etag = Objects.requireNonNull(etag);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.renderEndTime = Objects.requireNonNull(renderEndTime);
-        this.renderStartTime = Objects.requireNonNull(renderStartTime);
-        this.renderState = Objects.requireNonNull(renderState);
-        this.skaffoldConfigPath = Objects.requireNonNull(skaffoldConfigPath);
-        this.skaffoldConfigUri = Objects.requireNonNull(skaffoldConfigUri);
-        this.skaffoldVersion = Objects.requireNonNull(skaffoldVersion);
-        this.targetArtifacts = Objects.requireNonNull(targetArtifacts);
-        this.targetRenders = Objects.requireNonNull(targetRenders);
-        this.targetSnapshots = Objects.requireNonNull(targetSnapshots);
-        this.uid = Objects.requireNonNull(uid);
+        this.annotations = annotations;
+        this.buildArtifacts = buildArtifacts;
+        this.createTime = createTime;
+        this.deliveryPipelineSnapshot = deliveryPipelineSnapshot;
+        this.description = description;
+        this.etag = etag;
+        this.labels = labels;
+        this.name = name;
+        this.renderEndTime = renderEndTime;
+        this.renderStartTime = renderStartTime;
+        this.renderState = renderState;
+        this.skaffoldConfigPath = skaffoldConfigPath;
+        this.skaffoldConfigUri = skaffoldConfigUri;
+        this.skaffoldVersion = skaffoldVersion;
+        this.targetArtifacts = targetArtifacts;
+        this.targetRenders = targetRenders;
+        this.targetSnapshots = targetSnapshots;
+        this.uid = uid;
     }
 
     /**

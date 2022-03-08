@@ -26,8 +26,8 @@ public final class InstanceGroupManagerNamedPort {
     private InstanceGroupManagerNamedPort(
         String name,
         Integer port) {
-        this.name = Objects.requireNonNull(name);
-        this.port = Objects.requireNonNull(port);
+        this.name = name;
+        this.port = port;
     }
 
     /**

@@ -27,7 +27,7 @@ public final class PlanRuleCopyAction {
     private PlanRuleCopyAction(
         String destinationVaultArn,
         @Nullable PlanRuleCopyActionLifecycle lifecycle) {
-        this.destinationVaultArn = Objects.requireNonNull(destinationVaultArn);
+        this.destinationVaultArn = destinationVaultArn;
         this.lifecycle = lifecycle;
     }
 

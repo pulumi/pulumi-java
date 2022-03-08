@@ -17,7 +17,7 @@ public final class BackendServiceCdnPolicyBypassCacheOnRequestHeaderResponse {
 
     @OutputCustomType.Constructor({"headerName"})
     private BackendServiceCdnPolicyBypassCacheOnRequestHeaderResponse(String headerName) {
-        this.headerName = Objects.requireNonNull(headerName);
+        this.headerName = headerName;
     }
 
     /**

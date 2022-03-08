@@ -32,9 +32,9 @@ public final class GetDistributionConfigurationDistribution {
         List<GetDistributionConfigurationDistributionAmiDistributionConfiguration> amiDistributionConfigurations,
         List<String> licenseConfigurationArns,
         String region) {
-        this.amiDistributionConfigurations = Objects.requireNonNull(amiDistributionConfigurations);
-        this.licenseConfigurationArns = Objects.requireNonNull(licenseConfigurationArns);
-        this.region = Objects.requireNonNull(region);
+        this.amiDistributionConfigurations = amiDistributionConfigurations;
+        this.licenseConfigurationArns = licenseConfigurationArns;
+        this.region = region;
     }
 
     /**

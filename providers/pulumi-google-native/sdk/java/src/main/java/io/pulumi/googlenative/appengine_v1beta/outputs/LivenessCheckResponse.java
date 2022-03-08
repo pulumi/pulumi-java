@@ -55,13 +55,13 @@ public final class LivenessCheckResponse {
         String path,
         Integer successThreshold,
         String timeout) {
-        this.checkInterval = Objects.requireNonNull(checkInterval);
-        this.failureThreshold = Objects.requireNonNull(failureThreshold);
-        this.host = Objects.requireNonNull(host);
-        this.initialDelay = Objects.requireNonNull(initialDelay);
-        this.path = Objects.requireNonNull(path);
-        this.successThreshold = Objects.requireNonNull(successThreshold);
-        this.timeout = Objects.requireNonNull(timeout);
+        this.checkInterval = checkInterval;
+        this.failureThreshold = failureThreshold;
+        this.host = host;
+        this.initialDelay = initialDelay;
+        this.path = path;
+        this.successThreshold = successThreshold;
+        this.timeout = timeout;
     }
 
     /**

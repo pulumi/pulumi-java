@@ -17,7 +17,7 @@ public final class ClusterAuthenticatorGroupsConfig {
 
     @OutputCustomType.Constructor({"securityGroup"})
     private ClusterAuthenticatorGroupsConfig(String securityGroup) {
-        this.securityGroup = Objects.requireNonNull(securityGroup);
+        this.securityGroup = securityGroup;
     }
 
     /**

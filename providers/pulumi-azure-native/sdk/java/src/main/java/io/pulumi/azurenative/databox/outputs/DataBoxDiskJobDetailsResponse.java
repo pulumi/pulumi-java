@@ -139,23 +139,23 @@ public final class DataBoxDiskJobDetailsResponse {
         PackageShippingDetailsResponse returnPackage,
         String reverseShipmentLabelSasKey,
         @Nullable ShippingAddressResponse shippingAddress) {
-        this.chainOfCustodySasKey = Objects.requireNonNull(chainOfCustodySasKey);
-        this.contactDetails = Objects.requireNonNull(contactDetails);
-        this.copyLogDetails = Objects.requireNonNull(copyLogDetails);
-        this.copyProgress = Objects.requireNonNull(copyProgress);
+        this.chainOfCustodySasKey = chainOfCustodySasKey;
+        this.contactDetails = contactDetails;
+        this.copyLogDetails = copyLogDetails;
+        this.copyProgress = copyProgress;
         this.dataExportDetails = dataExportDetails;
         this.dataImportDetails = dataImportDetails;
-        this.deliveryPackage = Objects.requireNonNull(deliveryPackage);
-        this.disksAndSizeDetails = Objects.requireNonNull(disksAndSizeDetails);
+        this.deliveryPackage = deliveryPackage;
+        this.disksAndSizeDetails = disksAndSizeDetails;
         this.expectedDataSizeInTeraBytes = expectedDataSizeInTeraBytes;
-        this.jobDetailsType = Objects.requireNonNull(jobDetailsType);
-        this.jobStages = Objects.requireNonNull(jobStages);
+        this.jobDetailsType = jobDetailsType;
+        this.jobStages = jobStages;
         this.keyEncryptionKey = keyEncryptionKey;
         this.passkey = passkey;
         this.preferences = preferences;
         this.preferredDisks = preferredDisks;
-        this.returnPackage = Objects.requireNonNull(returnPackage);
-        this.reverseShipmentLabelSasKey = Objects.requireNonNull(reverseShipmentLabelSasKey);
+        this.returnPackage = returnPackage;
+        this.reverseShipmentLabelSasKey = reverseShipmentLabelSasKey;
         this.shippingAddress = shippingAddress;
     }
 

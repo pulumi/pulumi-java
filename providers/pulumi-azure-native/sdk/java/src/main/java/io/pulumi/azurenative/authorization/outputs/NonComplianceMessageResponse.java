@@ -26,7 +26,7 @@ public final class NonComplianceMessageResponse {
     private NonComplianceMessageResponse(
         String message,
         @Nullable String policyDefinitionReferenceId) {
-        this.message = Objects.requireNonNull(message);
+        this.message = message;
         this.policyDefinitionReferenceId = policyDefinitionReferenceId;
     }
 

@@ -44,11 +44,11 @@ public final class GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse {
         List<GooglePrivacyDlpV2ValueFrequencyResponse> bucketValues,
         String valueFrequencyLowerBound,
         String valueFrequencyUpperBound) {
-        this.bucketSize = Objects.requireNonNull(bucketSize);
-        this.bucketValueCount = Objects.requireNonNull(bucketValueCount);
-        this.bucketValues = Objects.requireNonNull(bucketValues);
-        this.valueFrequencyLowerBound = Objects.requireNonNull(valueFrequencyLowerBound);
-        this.valueFrequencyUpperBound = Objects.requireNonNull(valueFrequencyUpperBound);
+        this.bucketSize = bucketSize;
+        this.bucketValueCount = bucketValueCount;
+        this.bucketValues = bucketValues;
+        this.valueFrequencyLowerBound = valueFrequencyLowerBound;
+        this.valueFrequencyUpperBound = valueFrequencyUpperBound;
     }
 
     /**

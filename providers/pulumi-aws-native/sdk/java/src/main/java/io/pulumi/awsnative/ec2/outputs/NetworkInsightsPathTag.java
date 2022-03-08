@@ -18,7 +18,7 @@ public final class NetworkInsightsPathTag {
     private NetworkInsightsPathTag(
         String key,
         @Nullable String value) {
-        this.key = Objects.requireNonNull(key);
+        this.key = key;
         this.value = value;
     }
 

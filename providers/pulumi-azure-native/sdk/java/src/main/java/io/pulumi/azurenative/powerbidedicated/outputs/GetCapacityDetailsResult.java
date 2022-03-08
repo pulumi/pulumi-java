@@ -97,18 +97,18 @@ public final class GetCapacityDetailsResult {
         String tenantId,
         String type) {
         this.administration = administration;
-        this.friendlyName = Objects.requireNonNull(friendlyName);
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
+        this.friendlyName = friendlyName;
+        this.id = id;
+        this.location = location;
         this.mode = mode;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.sku = Objects.requireNonNull(sku);
-        this.state = Objects.requireNonNull(state);
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.sku = sku;
+        this.state = state;
         this.systemData = systemData;
         this.tags = tags;
-        this.tenantId = Objects.requireNonNull(tenantId);
-        this.type = Objects.requireNonNull(type);
+        this.tenantId = tenantId;
+        this.type = type;
     }
 
     /**

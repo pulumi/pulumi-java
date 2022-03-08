@@ -61,13 +61,13 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputRe
         GoogleRpcStatusResponse status,
         List<GoogleCloudDialogflowCxV3ResponseMessageTextResponse> textResponses,
         GoogleCloudDialogflowCxV3IntentResponse triggeredIntent) {
-        this.currentPage = Objects.requireNonNull(currentPage);
-        this.diagnosticInfo = Objects.requireNonNull(diagnosticInfo);
-        this.differences = Objects.requireNonNull(differences);
-        this.sessionParameters = Objects.requireNonNull(sessionParameters);
-        this.status = Objects.requireNonNull(status);
-        this.textResponses = Objects.requireNonNull(textResponses);
-        this.triggeredIntent = Objects.requireNonNull(triggeredIntent);
+        this.currentPage = currentPage;
+        this.diagnosticInfo = diagnosticInfo;
+        this.differences = differences;
+        this.sessionParameters = sessionParameters;
+        this.status = status;
+        this.textResponses = textResponses;
+        this.triggeredIntent = triggeredIntent;
     }
 
     /**

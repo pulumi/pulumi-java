@@ -24,8 +24,8 @@ public final class GoogleCloudRunOpV2VolumeMountResponse {
     private GoogleCloudRunOpV2VolumeMountResponse(
         String mountPath,
         String name) {
-        this.mountPath = Objects.requireNonNull(mountPath);
-        this.name = Objects.requireNonNull(name);
+        this.mountPath = mountPath;
+        this.name = name;
     }
 
     /**

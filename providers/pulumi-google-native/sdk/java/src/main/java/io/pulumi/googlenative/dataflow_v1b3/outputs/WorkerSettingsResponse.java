@@ -49,12 +49,12 @@ public final class WorkerSettingsResponse {
         String shuffleServicePath,
         String tempStoragePrefix,
         String workerId) {
-        this.baseUrl = Objects.requireNonNull(baseUrl);
-        this.reportingEnabled = Objects.requireNonNull(reportingEnabled);
-        this.servicePath = Objects.requireNonNull(servicePath);
-        this.shuffleServicePath = Objects.requireNonNull(shuffleServicePath);
-        this.tempStoragePrefix = Objects.requireNonNull(tempStoragePrefix);
-        this.workerId = Objects.requireNonNull(workerId);
+        this.baseUrl = baseUrl;
+        this.reportingEnabled = reportingEnabled;
+        this.servicePath = servicePath;
+        this.shuffleServicePath = shuffleServicePath;
+        this.tempStoragePrefix = tempStoragePrefix;
+        this.workerId = workerId;
     }
 
     /**

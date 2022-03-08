@@ -18,7 +18,7 @@ public final class IdentityConfigResponse {
 
     @OutputCustomType.Constructor({"userServiceAccountMapping"})
     private IdentityConfigResponse(Map<String,String> userServiceAccountMapping) {
-        this.userServiceAccountMapping = Objects.requireNonNull(userServiceAccountMapping);
+        this.userServiceAccountMapping = userServiceAccountMapping;
     }
 
     /**

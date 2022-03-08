@@ -31,9 +31,9 @@ public final class ScheduleOptionsResponse {
         Boolean disableAutoScheduling,
         String endTime,
         String startTime) {
-        this.disableAutoScheduling = Objects.requireNonNull(disableAutoScheduling);
-        this.endTime = Objects.requireNonNull(endTime);
-        this.startTime = Objects.requireNonNull(startTime);
+        this.disableAutoScheduling = disableAutoScheduling;
+        this.endTime = endTime;
+        this.startTime = startTime;
     }
 
     /**

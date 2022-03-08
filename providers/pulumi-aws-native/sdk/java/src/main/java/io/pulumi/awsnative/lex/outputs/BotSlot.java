@@ -31,10 +31,10 @@ public final class BotSlot {
         BotSlotValueElicitationSetting valueElicitationSetting) {
         this.description = description;
         this.multipleValuesSetting = multipleValuesSetting;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.obfuscationSetting = obfuscationSetting;
-        this.slotTypeName = Objects.requireNonNull(slotTypeName);
-        this.valueElicitationSetting = Objects.requireNonNull(valueElicitationSetting);
+        this.slotTypeName = slotTypeName;
+        this.valueElicitationSetting = valueElicitationSetting;
     }
 
     public Optional<String> getDescription() {

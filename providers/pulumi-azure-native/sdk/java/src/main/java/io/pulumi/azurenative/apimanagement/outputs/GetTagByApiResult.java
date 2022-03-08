@@ -36,10 +36,10 @@ public final class GetTagByApiResult {
         String id,
         String name,
         String type) {
-        this.displayName = Objects.requireNonNull(displayName);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.displayName = displayName;
+        this.id = id;
+        this.name = name;
+        this.type = type;
     }
 
     /**

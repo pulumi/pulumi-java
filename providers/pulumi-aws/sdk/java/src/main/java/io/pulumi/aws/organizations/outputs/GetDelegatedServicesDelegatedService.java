@@ -24,8 +24,8 @@ public final class GetDelegatedServicesDelegatedService {
     private GetDelegatedServicesDelegatedService(
         String delegationEnabledDate,
         String servicePrincipal) {
-        this.delegationEnabledDate = Objects.requireNonNull(delegationEnabledDate);
-        this.servicePrincipal = Objects.requireNonNull(servicePrincipal);
+        this.delegationEnabledDate = delegationEnabledDate;
+        this.servicePrincipal = servicePrincipal;
     }
 
     /**

@@ -40,7 +40,7 @@ public final class LogStorageSettingsResponse {
         @Nullable Object logLevel,
         @Nullable Object path) {
         this.enableReliableLogging = enableReliableLogging;
-        this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
+        this.linkedServiceName = linkedServiceName;
         this.logLevel = logLevel;
         this.path = path;
     }

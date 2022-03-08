@@ -20,9 +20,9 @@ public final class GetBrokerUser {
         Boolean consoleAccess,
         List<String> groups,
         String username) {
-        this.consoleAccess = Objects.requireNonNull(consoleAccess);
-        this.groups = Objects.requireNonNull(groups);
-        this.username = Objects.requireNonNull(username);
+        this.consoleAccess = consoleAccess;
+        this.groups = groups;
+        this.username = username;
     }
 
     public Boolean getConsoleAccess() {

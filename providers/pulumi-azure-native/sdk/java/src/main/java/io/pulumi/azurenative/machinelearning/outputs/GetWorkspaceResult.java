@@ -93,19 +93,19 @@ public final class GetWorkspaceResult {
         String workspaceId,
         String workspaceState,
         String workspaceType) {
-        this.creationTime = Objects.requireNonNull(creationTime);
-        this.id = Objects.requireNonNull(id);
+        this.creationTime = creationTime;
+        this.id = id;
         this.keyVaultIdentifierId = keyVaultIdentifierId;
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.ownerEmail = Objects.requireNonNull(ownerEmail);
-        this.studioEndpoint = Objects.requireNonNull(studioEndpoint);
+        this.location = location;
+        this.name = name;
+        this.ownerEmail = ownerEmail;
+        this.studioEndpoint = studioEndpoint;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
-        this.userStorageAccountId = Objects.requireNonNull(userStorageAccountId);
-        this.workspaceId = Objects.requireNonNull(workspaceId);
-        this.workspaceState = Objects.requireNonNull(workspaceState);
-        this.workspaceType = Objects.requireNonNull(workspaceType);
+        this.type = type;
+        this.userStorageAccountId = userStorageAccountId;
+        this.workspaceId = workspaceId;
+        this.workspaceState = workspaceState;
+        this.workspaceType = workspaceType;
     }
 
     /**

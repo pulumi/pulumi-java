@@ -119,23 +119,23 @@ public final class GetServiceAttachmentResult {
         String region,
         String selfLink,
         String targetService) {
-        this.connectedEndpoints = Objects.requireNonNull(connectedEndpoints);
-        this.connectionPreference = Objects.requireNonNull(connectionPreference);
-        this.consumerAcceptLists = Objects.requireNonNull(consumerAcceptLists);
-        this.consumerRejectLists = Objects.requireNonNull(consumerRejectLists);
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.description = Objects.requireNonNull(description);
-        this.domainNames = Objects.requireNonNull(domainNames);
-        this.enableProxyProtocol = Objects.requireNonNull(enableProxyProtocol);
-        this.fingerprint = Objects.requireNonNull(fingerprint);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.natSubnets = Objects.requireNonNull(natSubnets);
-        this.producerForwardingRule = Objects.requireNonNull(producerForwardingRule);
-        this.pscServiceAttachmentId = Objects.requireNonNull(pscServiceAttachmentId);
-        this.region = Objects.requireNonNull(region);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.targetService = Objects.requireNonNull(targetService);
+        this.connectedEndpoints = connectedEndpoints;
+        this.connectionPreference = connectionPreference;
+        this.consumerAcceptLists = consumerAcceptLists;
+        this.consumerRejectLists = consumerRejectLists;
+        this.creationTimestamp = creationTimestamp;
+        this.description = description;
+        this.domainNames = domainNames;
+        this.enableProxyProtocol = enableProxyProtocol;
+        this.fingerprint = fingerprint;
+        this.kind = kind;
+        this.name = name;
+        this.natSubnets = natSubnets;
+        this.producerForwardingRule = producerForwardingRule;
+        this.pscServiceAttachmentId = pscServiceAttachmentId;
+        this.region = region;
+        this.selfLink = selfLink;
+        this.targetService = targetService;
     }
 
     /**

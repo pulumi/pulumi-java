@@ -24,8 +24,8 @@ public final class GetPackageDownloadURLResult {
     private GetPackageDownloadURLResult(
         String downloadUrl,
         String expirationTime) {
-        this.downloadUrl = Objects.requireNonNull(downloadUrl);
-        this.expirationTime = Objects.requireNonNull(expirationTime);
+        this.downloadUrl = downloadUrl;
+        this.expirationTime = expirationTime;
     }
 
     /**

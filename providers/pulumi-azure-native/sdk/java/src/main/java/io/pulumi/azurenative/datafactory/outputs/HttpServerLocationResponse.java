@@ -43,7 +43,7 @@ public final class HttpServerLocationResponse {
         this.fileName = fileName;
         this.folderPath = folderPath;
         this.relativeUrl = relativeUrl;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

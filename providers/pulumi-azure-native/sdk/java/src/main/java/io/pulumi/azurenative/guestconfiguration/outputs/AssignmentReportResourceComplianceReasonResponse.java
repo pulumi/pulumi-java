@@ -24,8 +24,8 @@ public final class AssignmentReportResourceComplianceReasonResponse {
     private AssignmentReportResourceComplianceReasonResponse(
         String code,
         String phrase) {
-        this.code = Objects.requireNonNull(code);
-        this.phrase = Objects.requireNonNull(phrase);
+        this.code = code;
+        this.phrase = phrase;
     }
 
     /**

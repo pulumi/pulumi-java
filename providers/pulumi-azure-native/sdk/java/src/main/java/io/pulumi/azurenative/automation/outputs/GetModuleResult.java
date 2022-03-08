@@ -128,16 +128,16 @@ public final class GetModuleResult {
         this.description = description;
         this.error = error;
         this.etag = etag;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.isComposite = isComposite;
         this.isGlobal = isGlobal;
         this.lastModifiedTime = lastModifiedTime;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.provisioningState = provisioningState;
         this.sizeInBytes = sizeInBytes;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.version = version;
     }
 

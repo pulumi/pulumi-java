@@ -42,8 +42,8 @@ public final class ProjectSinkExclusion {
         String name) {
         this.description = description;
         this.disabled = disabled;
-        this.filter = Objects.requireNonNull(filter);
-        this.name = Objects.requireNonNull(name);
+        this.filter = filter;
+        this.name = name;
     }
 
     /**

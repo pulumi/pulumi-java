@@ -55,13 +55,13 @@ public final class EdifactValidationOverrideResponse {
         Boolean trimLeadingAndTrailingSpacesAndZeroes,
         Boolean validateEDITypes,
         Boolean validateXSDTypes) {
-        this.allowLeadingAndTrailingSpacesAndZeroes = Objects.requireNonNull(allowLeadingAndTrailingSpacesAndZeroes);
-        this.enforceCharacterSet = Objects.requireNonNull(enforceCharacterSet);
-        this.messageId = Objects.requireNonNull(messageId);
-        this.trailingSeparatorPolicy = Objects.requireNonNull(trailingSeparatorPolicy);
-        this.trimLeadingAndTrailingSpacesAndZeroes = Objects.requireNonNull(trimLeadingAndTrailingSpacesAndZeroes);
-        this.validateEDITypes = Objects.requireNonNull(validateEDITypes);
-        this.validateXSDTypes = Objects.requireNonNull(validateXSDTypes);
+        this.allowLeadingAndTrailingSpacesAndZeroes = allowLeadingAndTrailingSpacesAndZeroes;
+        this.enforceCharacterSet = enforceCharacterSet;
+        this.messageId = messageId;
+        this.trailingSeparatorPolicy = trailingSeparatorPolicy;
+        this.trimLeadingAndTrailingSpacesAndZeroes = trimLeadingAndTrailingSpacesAndZeroes;
+        this.validateEDITypes = validateEDITypes;
+        this.validateXSDTypes = validateXSDTypes;
     }
 
     /**

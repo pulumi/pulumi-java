@@ -72,12 +72,12 @@ public final class GetRegistrationResult {
         this.billingModel = billingModel;
         this.cloudId = cloudId;
         this.etag = etag;
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.location = location;
+        this.name = name;
         this.objectId = objectId;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

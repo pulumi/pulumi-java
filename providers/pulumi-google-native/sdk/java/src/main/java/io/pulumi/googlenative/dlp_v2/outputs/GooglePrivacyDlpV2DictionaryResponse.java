@@ -25,8 +25,8 @@ public final class GooglePrivacyDlpV2DictionaryResponse {
     private GooglePrivacyDlpV2DictionaryResponse(
         GooglePrivacyDlpV2CloudStoragePathResponse cloudStoragePath,
         GooglePrivacyDlpV2WordListResponse wordList) {
-        this.cloudStoragePath = Objects.requireNonNull(cloudStoragePath);
-        this.wordList = Objects.requireNonNull(wordList);
+        this.cloudStoragePath = cloudStoragePath;
+        this.wordList = wordList;
     }
 
     /**

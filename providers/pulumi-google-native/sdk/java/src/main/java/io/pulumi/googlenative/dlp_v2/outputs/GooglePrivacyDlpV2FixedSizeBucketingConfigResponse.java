@@ -31,9 +31,9 @@ public final class GooglePrivacyDlpV2FixedSizeBucketingConfigResponse {
         Double bucketSize,
         GooglePrivacyDlpV2ValueResponse lowerBound,
         GooglePrivacyDlpV2ValueResponse upperBound) {
-        this.bucketSize = Objects.requireNonNull(bucketSize);
-        this.lowerBound = Objects.requireNonNull(lowerBound);
-        this.upperBound = Objects.requireNonNull(upperBound);
+        this.bucketSize = bucketSize;
+        this.lowerBound = lowerBound;
+        this.upperBound = upperBound;
     }
 
     /**

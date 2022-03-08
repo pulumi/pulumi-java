@@ -24,8 +24,8 @@ public final class JobOutputResponse {
     private JobOutputResponse(
         String datastoreId,
         String path) {
-        this.datastoreId = Objects.requireNonNull(datastoreId);
-        this.path = Objects.requireNonNull(path);
+        this.datastoreId = datastoreId;
+        this.path = path;
     }
 
     /**

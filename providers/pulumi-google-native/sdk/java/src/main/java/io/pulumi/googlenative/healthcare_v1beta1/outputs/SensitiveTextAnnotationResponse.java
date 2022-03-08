@@ -18,7 +18,7 @@ public final class SensitiveTextAnnotationResponse {
 
     @OutputCustomType.Constructor({"details"})
     private SensitiveTextAnnotationResponse(Map<String,String> details) {
-        this.details = Objects.requireNonNull(details);
+        this.details = details;
     }
 
     /**

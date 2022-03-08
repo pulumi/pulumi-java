@@ -33,9 +33,9 @@ public final class BucketAnalyticsConfiguration {
         @Nullable String prefix,
         BucketStorageClassAnalysis storageClassAnalysis,
         @Nullable List<BucketTagFilter> tagFilters) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.prefix = prefix;
-        this.storageClassAnalysis = Objects.requireNonNull(storageClassAnalysis);
+        this.storageClassAnalysis = storageClassAnalysis;
         this.tagFilters = tagFilters;
     }
 

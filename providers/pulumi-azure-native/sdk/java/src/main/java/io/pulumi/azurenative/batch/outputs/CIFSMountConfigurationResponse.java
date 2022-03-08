@@ -33,10 +33,10 @@ public final class CIFSMountConfigurationResponse {
         String source,
         String username) {
         this.mountOptions = mountOptions;
-        this.password = Objects.requireNonNull(password);
-        this.relativeMountPath = Objects.requireNonNull(relativeMountPath);
-        this.source = Objects.requireNonNull(source);
-        this.username = Objects.requireNonNull(username);
+        this.password = password;
+        this.relativeMountPath = relativeMountPath;
+        this.source = source;
+        this.username = username;
     }
 
     /**

@@ -40,9 +40,9 @@ public final class IPConfigurationBgpPeeringAddressResponse {
         @Nullable String ipconfigurationId,
         List<String> tunnelIpAddresses) {
         this.customBgpIpAddresses = customBgpIpAddresses;
-        this.defaultBgpIpAddresses = Objects.requireNonNull(defaultBgpIpAddresses);
+        this.defaultBgpIpAddresses = defaultBgpIpAddresses;
         this.ipconfigurationId = ipconfigurationId;
-        this.tunnelIpAddresses = Objects.requireNonNull(tunnelIpAddresses);
+        this.tunnelIpAddresses = tunnelIpAddresses;
     }
 
     /**

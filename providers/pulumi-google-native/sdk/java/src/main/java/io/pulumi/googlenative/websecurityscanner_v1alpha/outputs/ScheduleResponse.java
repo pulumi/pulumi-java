@@ -25,8 +25,8 @@ public final class ScheduleResponse {
     private ScheduleResponse(
         Integer intervalDurationDays,
         String scheduleTime) {
-        this.intervalDurationDays = Objects.requireNonNull(intervalDurationDays);
-        this.scheduleTime = Objects.requireNonNull(scheduleTime);
+        this.intervalDurationDays = intervalDurationDays;
+        this.scheduleTime = scheduleTime;
     }
 
     /**

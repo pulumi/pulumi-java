@@ -48,12 +48,12 @@ public final class VpnGatewayInfoResponse {
         String region,
         String uri,
         String vpnTunnelUri) {
-        this.displayName = Objects.requireNonNull(displayName);
-        this.ipAddress = Objects.requireNonNull(ipAddress);
-        this.networkUri = Objects.requireNonNull(networkUri);
-        this.region = Objects.requireNonNull(region);
-        this.uri = Objects.requireNonNull(uri);
-        this.vpnTunnelUri = Objects.requireNonNull(vpnTunnelUri);
+        this.displayName = displayName;
+        this.ipAddress = ipAddress;
+        this.networkUri = networkUri;
+        this.region = region;
+        this.uri = uri;
+        this.vpnTunnelUri = vpnTunnelUri;
     }
 
     /**

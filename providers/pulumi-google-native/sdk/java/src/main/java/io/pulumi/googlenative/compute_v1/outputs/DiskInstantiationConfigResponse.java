@@ -37,10 +37,10 @@ public final class DiskInstantiationConfigResponse {
         String customImage,
         String deviceName,
         String instantiateFrom) {
-        this.autoDelete = Objects.requireNonNull(autoDelete);
-        this.customImage = Objects.requireNonNull(customImage);
-        this.deviceName = Objects.requireNonNull(deviceName);
-        this.instantiateFrom = Objects.requireNonNull(instantiateFrom);
+        this.autoDelete = autoDelete;
+        this.customImage = customImage;
+        this.deviceName = deviceName;
+        this.instantiateFrom = instantiateFrom;
     }
 
     /**

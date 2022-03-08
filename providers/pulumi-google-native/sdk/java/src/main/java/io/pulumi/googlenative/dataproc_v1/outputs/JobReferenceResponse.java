@@ -24,8 +24,8 @@ public final class JobReferenceResponse {
     private JobReferenceResponse(
         String jobId,
         String project) {
-        this.jobId = Objects.requireNonNull(jobId);
-        this.project = Objects.requireNonNull(project);
+        this.jobId = jobId;
+        this.project = project;
     }
 
     /**

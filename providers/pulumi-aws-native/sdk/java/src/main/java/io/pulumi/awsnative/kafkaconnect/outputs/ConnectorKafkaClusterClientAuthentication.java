@@ -13,7 +13,7 @@ public final class ConnectorKafkaClusterClientAuthentication {
 
     @OutputCustomType.Constructor({"authenticationType"})
     private ConnectorKafkaClusterClientAuthentication(ConnectorKafkaClusterClientAuthenticationType authenticationType) {
-        this.authenticationType = Objects.requireNonNull(authenticationType);
+        this.authenticationType = authenticationType;
     }
 
     public ConnectorKafkaClusterClientAuthenticationType getAuthenticationType() {

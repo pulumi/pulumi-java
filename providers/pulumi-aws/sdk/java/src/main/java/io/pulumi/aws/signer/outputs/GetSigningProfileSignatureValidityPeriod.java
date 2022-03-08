@@ -17,8 +17,8 @@ public final class GetSigningProfileSignatureValidityPeriod {
     private GetSigningProfileSignatureValidityPeriod(
         String type,
         Integer value) {
-        this.type = Objects.requireNonNull(type);
-        this.value = Objects.requireNonNull(value);
+        this.type = type;
+        this.value = value;
     }
 
     public String getType() {

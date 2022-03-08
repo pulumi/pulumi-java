@@ -26,8 +26,8 @@ public final class IngressToResponse {
     private IngressToResponse(
         List<ApiOperationResponse> operations,
         List<String> resources) {
-        this.operations = Objects.requireNonNull(operations);
-        this.resources = Objects.requireNonNull(resources);
+        this.operations = operations;
+        this.resources = resources;
     }
 
     /**

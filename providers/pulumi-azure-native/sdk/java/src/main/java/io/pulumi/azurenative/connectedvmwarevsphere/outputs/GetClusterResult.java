@@ -127,23 +127,23 @@ public final class GetClusterResult {
         String type,
         String uuid,
         @Nullable String vCenterId) {
-        this.customResourceName = Objects.requireNonNull(customResourceName);
-        this.datastoreIds = Objects.requireNonNull(datastoreIds);
+        this.customResourceName = customResourceName;
+        this.datastoreIds = datastoreIds;
         this.extendedLocation = extendedLocation;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.inventoryItemId = inventoryItemId;
         this.kind = kind;
-        this.location = Objects.requireNonNull(location);
-        this.moName = Objects.requireNonNull(moName);
+        this.location = location;
+        this.moName = moName;
         this.moRefId = moRefId;
-        this.name = Objects.requireNonNull(name);
-        this.networkIds = Objects.requireNonNull(networkIds);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.statuses = Objects.requireNonNull(statuses);
-        this.systemData = Objects.requireNonNull(systemData);
+        this.name = name;
+        this.networkIds = networkIds;
+        this.provisioningState = provisioningState;
+        this.statuses = statuses;
+        this.systemData = systemData;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
-        this.uuid = Objects.requireNonNull(uuid);
+        this.type = type;
+        this.uuid = uuid;
         this.vCenterId = vCenterId;
     }
 

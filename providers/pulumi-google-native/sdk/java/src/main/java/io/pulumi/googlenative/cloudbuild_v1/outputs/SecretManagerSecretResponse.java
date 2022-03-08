@@ -24,8 +24,8 @@ public final class SecretManagerSecretResponse {
     private SecretManagerSecretResponse(
         String env,
         String versionName) {
-        this.env = Objects.requireNonNull(env);
-        this.versionName = Objects.requireNonNull(versionName);
+        this.env = env;
+        this.versionName = versionName;
     }
 
     /**

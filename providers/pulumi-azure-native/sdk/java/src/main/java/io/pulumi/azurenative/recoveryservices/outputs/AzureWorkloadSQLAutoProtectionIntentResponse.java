@@ -60,7 +60,7 @@ public final class AzureWorkloadSQLAutoProtectionIntentResponse {
         this.backupManagementType = backupManagementType;
         this.itemId = itemId;
         this.policyId = policyId;
-        this.protectionIntentItemType = Objects.requireNonNull(protectionIntentItemType);
+        this.protectionIntentItemType = protectionIntentItemType;
         this.protectionState = protectionState;
         this.sourceResourceId = sourceResourceId;
         this.workloadItemType = workloadItemType;

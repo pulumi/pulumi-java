@@ -79,15 +79,15 @@ public final class GetprivateLinkServicesForO365ManagementActivityAPIResult {
         @Nullable Map<String,String> tags,
         String type) {
         this.etag = etag;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.identity = identity;
-        this.kind = Objects.requireNonNull(kind);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.properties = Objects.requireNonNull(properties);
-        this.systemData = Objects.requireNonNull(systemData);
+        this.kind = kind;
+        this.location = location;
+        this.name = name;
+        this.properties = properties;
+        this.systemData = systemData;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

@@ -17,7 +17,7 @@ public final class NetworkRoutingConfigResponse {
 
     @OutputCustomType.Constructor({"routingMode"})
     private NetworkRoutingConfigResponse(String routingMode) {
-        this.routingMode = Objects.requireNonNull(routingMode);
+        this.routingMode = routingMode;
     }
 
     /**

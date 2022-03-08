@@ -26,8 +26,8 @@ public final class GoogleCloudDatacatalogV1beta1GcsFilesetSpecResponse {
     private GoogleCloudDatacatalogV1beta1GcsFilesetSpecResponse(
         List<String> filePatterns,
         List<GoogleCloudDatacatalogV1beta1GcsFileSpecResponse> sampleGcsFileSpecs) {
-        this.filePatterns = Objects.requireNonNull(filePatterns);
-        this.sampleGcsFileSpecs = Objects.requireNonNull(sampleGcsFileSpecs);
+        this.filePatterns = filePatterns;
+        this.sampleGcsFileSpecs = sampleGcsFileSpecs;
     }
 
     /**

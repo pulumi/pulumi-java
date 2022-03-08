@@ -24,8 +24,8 @@ public final class GetDatasetResult {
     private GetDatasetResult(
         String name,
         String timeZone) {
-        this.name = Objects.requireNonNull(name);
-        this.timeZone = Objects.requireNonNull(timeZone);
+        this.name = name;
+        this.timeZone = timeZone;
     }
 
     /**

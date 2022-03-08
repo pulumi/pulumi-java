@@ -70,14 +70,14 @@ public final class X12DelimiterOverridesResponse {
         Integer segmentTerminator,
         String segmentTerminatorSuffix,
         @Nullable String targetNamespace) {
-        this.componentSeparator = Objects.requireNonNull(componentSeparator);
-        this.dataElementSeparator = Objects.requireNonNull(dataElementSeparator);
+        this.componentSeparator = componentSeparator;
+        this.dataElementSeparator = dataElementSeparator;
         this.messageId = messageId;
         this.protocolVersion = protocolVersion;
-        this.replaceCharacter = Objects.requireNonNull(replaceCharacter);
-        this.replaceSeparatorsInPayload = Objects.requireNonNull(replaceSeparatorsInPayload);
-        this.segmentTerminator = Objects.requireNonNull(segmentTerminator);
-        this.segmentTerminatorSuffix = Objects.requireNonNull(segmentTerminatorSuffix);
+        this.replaceCharacter = replaceCharacter;
+        this.replaceSeparatorsInPayload = replaceSeparatorsInPayload;
+        this.segmentTerminator = segmentTerminator;
+        this.segmentTerminatorSuffix = segmentTerminatorSuffix;
         this.targetNamespace = targetNamespace;
     }
 

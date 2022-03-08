@@ -18,7 +18,7 @@ public final class ListenerRuleConditionHostHeader {
 
     @OutputCustomType.Constructor({"values"})
     private ListenerRuleConditionHostHeader(List<String> values) {
-        this.values = Objects.requireNonNull(values);
+        this.values = values;
     }
 
     /**

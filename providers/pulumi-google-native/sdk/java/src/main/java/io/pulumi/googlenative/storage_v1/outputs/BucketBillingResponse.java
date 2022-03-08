@@ -17,7 +17,7 @@ public final class BucketBillingResponse {
 
     @OutputCustomType.Constructor({"requesterPays"})
     private BucketBillingResponse(Boolean requesterPays) {
-        this.requesterPays = Objects.requireNonNull(requesterPays);
+        this.requesterPays = requesterPays;
     }
 
     /**

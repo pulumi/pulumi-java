@@ -74,17 +74,17 @@ public final class GetSchemaRegistryResult {
         SystemDataResponse systemData,
         String type,
         String updatedAtUtc) {
-        this.createdAtUtc = Objects.requireNonNull(createdAtUtc);
-        this.eTag = Objects.requireNonNull(eTag);
+        this.createdAtUtc = createdAtUtc;
+        this.eTag = eTag;
         this.groupProperties = groupProperties;
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.location = location;
+        this.name = name;
         this.schemaCompatibility = schemaCompatibility;
         this.schemaType = schemaType;
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
-        this.updatedAtUtc = Objects.requireNonNull(updatedAtUtc);
+        this.systemData = systemData;
+        this.type = type;
+        this.updatedAtUtc = updatedAtUtc;
     }
 
     /**

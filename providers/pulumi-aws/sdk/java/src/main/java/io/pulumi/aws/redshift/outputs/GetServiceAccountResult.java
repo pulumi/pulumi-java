@@ -28,8 +28,8 @@ public final class GetServiceAccountResult {
         String arn,
         String id,
         @Nullable String region) {
-        this.arn = Objects.requireNonNull(arn);
-        this.id = Objects.requireNonNull(id);
+        this.arn = arn;
+        this.id = id;
         this.region = region;
     }
 

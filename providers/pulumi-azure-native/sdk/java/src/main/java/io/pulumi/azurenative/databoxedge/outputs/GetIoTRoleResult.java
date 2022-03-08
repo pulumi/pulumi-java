@@ -100,18 +100,18 @@ public final class GetIoTRoleResult {
         SystemDataResponse systemData,
         String type) {
         this.computeResource = computeResource;
-        this.hostPlatform = Objects.requireNonNull(hostPlatform);
-        this.hostPlatformType = Objects.requireNonNull(hostPlatformType);
-        this.id = Objects.requireNonNull(id);
-        this.ioTDeviceDetails = Objects.requireNonNull(ioTDeviceDetails);
+        this.hostPlatform = hostPlatform;
+        this.hostPlatformType = hostPlatformType;
+        this.id = id;
+        this.ioTDeviceDetails = ioTDeviceDetails;
         this.ioTEdgeAgentInfo = ioTEdgeAgentInfo;
-        this.ioTEdgeDeviceDetails = Objects.requireNonNull(ioTEdgeDeviceDetails);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.roleStatus = Objects.requireNonNull(roleStatus);
+        this.ioTEdgeDeviceDetails = ioTEdgeDeviceDetails;
+        this.kind = kind;
+        this.name = name;
+        this.roleStatus = roleStatus;
         this.shareMappings = shareMappings;
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

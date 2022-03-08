@@ -50,7 +50,7 @@ public final class ImageTemplateShellCustomizerResponse {
         this.name = name;
         this.scriptUri = scriptUri;
         this.sha256Checksum = sha256Checksum;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

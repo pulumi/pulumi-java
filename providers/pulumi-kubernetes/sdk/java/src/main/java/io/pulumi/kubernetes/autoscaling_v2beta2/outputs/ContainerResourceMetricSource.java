@@ -31,9 +31,9 @@ public final class ContainerResourceMetricSource {
         String container,
         String name,
         MetricTarget target) {
-        this.container = Objects.requireNonNull(container);
-        this.name = Objects.requireNonNull(name);
-        this.target = Objects.requireNonNull(target);
+        this.container = container;
+        this.name = name;
+        this.target = target;
     }
 
     /**

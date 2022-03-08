@@ -13,7 +13,7 @@ public final class FleetCertificateConfiguration {
 
     @OutputCustomType.Constructor({"certificateType"})
     private FleetCertificateConfiguration(FleetCertificateConfigurationCertificateType certificateType) {
-        this.certificateType = Objects.requireNonNull(certificateType);
+        this.certificateType = certificateType;
     }
 
     public FleetCertificateConfigurationCertificateType getCertificateType() {

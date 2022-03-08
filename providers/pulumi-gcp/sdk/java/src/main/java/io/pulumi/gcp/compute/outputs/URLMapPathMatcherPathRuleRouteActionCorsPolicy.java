@@ -75,7 +75,7 @@ public final class URLMapPathMatcherPathRuleRouteActionCorsPolicy {
         this.allowMethods = allowMethods;
         this.allowOriginRegexes = allowOriginRegexes;
         this.allowOrigins = allowOrigins;
-        this.disabled = Objects.requireNonNull(disabled);
+        this.disabled = disabled;
         this.exposeHeaders = exposeHeaders;
         this.maxAge = maxAge;
     }

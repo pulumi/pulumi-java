@@ -39,11 +39,11 @@ public final class GetResponsePolicyRuleResult {
         String kind,
         ResponsePolicyRuleLocalDataResponse localData,
         String ruleName) {
-        this.behavior = Objects.requireNonNull(behavior);
-        this.dnsName = Objects.requireNonNull(dnsName);
-        this.kind = Objects.requireNonNull(kind);
-        this.localData = Objects.requireNonNull(localData);
-        this.ruleName = Objects.requireNonNull(ruleName);
+        this.behavior = behavior;
+        this.dnsName = dnsName;
+        this.kind = kind;
+        this.localData = localData;
+        this.ruleName = ruleName;
     }
 
     /**

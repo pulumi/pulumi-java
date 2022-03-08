@@ -31,9 +31,9 @@ public final class GoogleCloudDialogflowCxV3NluSettingsResponse {
         Double classificationThreshold,
         String modelTrainingMode,
         String modelType) {
-        this.classificationThreshold = Objects.requireNonNull(classificationThreshold);
-        this.modelTrainingMode = Objects.requireNonNull(modelTrainingMode);
-        this.modelType = Objects.requireNonNull(modelType);
+        this.classificationThreshold = classificationThreshold;
+        this.modelTrainingMode = modelTrainingMode;
+        this.modelType = modelType;
     }
 
     /**

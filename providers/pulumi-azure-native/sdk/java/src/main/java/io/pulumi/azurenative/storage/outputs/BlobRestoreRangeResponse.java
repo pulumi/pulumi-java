@@ -24,8 +24,8 @@ public final class BlobRestoreRangeResponse {
     private BlobRestoreRangeResponse(
         String endRange,
         String startRange) {
-        this.endRange = Objects.requireNonNull(endRange);
-        this.startRange = Objects.requireNonNull(startRange);
+        this.endRange = endRange;
+        this.startRange = startRange;
     }
 
     /**

@@ -38,10 +38,10 @@ public final class TimeSeriesFilterRatioResponse {
         RatioPartResponse numerator,
         PickTimeSeriesFilterResponse pickTimeSeriesFilter,
         AggregationResponse secondaryAggregation) {
-        this.denominator = Objects.requireNonNull(denominator);
-        this.numerator = Objects.requireNonNull(numerator);
-        this.pickTimeSeriesFilter = Objects.requireNonNull(pickTimeSeriesFilter);
-        this.secondaryAggregation = Objects.requireNonNull(secondaryAggregation);
+        this.denominator = denominator;
+        this.numerator = numerator;
+        this.pickTimeSeriesFilter = pickTimeSeriesFilter;
+        this.secondaryAggregation = secondaryAggregation;
     }
 
     /**

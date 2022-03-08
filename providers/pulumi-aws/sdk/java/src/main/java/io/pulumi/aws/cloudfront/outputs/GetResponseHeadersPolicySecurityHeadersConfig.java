@@ -54,12 +54,12 @@ public final class GetResponseHeadersPolicySecurityHeadersConfig {
         List<GetResponseHeadersPolicySecurityHeadersConfigReferrerPolicy> referrerPolicies,
         List<GetResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurity> strictTransportSecurities,
         List<GetResponseHeadersPolicySecurityHeadersConfigXssProtection> xssProtections) {
-        this.contentSecurityPolicies = Objects.requireNonNull(contentSecurityPolicies);
-        this.contentTypeOptions = Objects.requireNonNull(contentTypeOptions);
-        this.frameOptions = Objects.requireNonNull(frameOptions);
-        this.referrerPolicies = Objects.requireNonNull(referrerPolicies);
-        this.strictTransportSecurities = Objects.requireNonNull(strictTransportSecurities);
-        this.xssProtections = Objects.requireNonNull(xssProtections);
+        this.contentSecurityPolicies = contentSecurityPolicies;
+        this.contentTypeOptions = contentTypeOptions;
+        this.frameOptions = frameOptions;
+        this.referrerPolicies = referrerPolicies;
+        this.strictTransportSecurities = strictTransportSecurities;
+        this.xssProtections = xssProtections;
     }
 
     /**

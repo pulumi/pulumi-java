@@ -74,16 +74,16 @@ public final class HttpRuleResponse {
         String put,
         String responseBody,
         String selector) {
-        this.additionalBindings = Objects.requireNonNull(additionalBindings);
-        this.body = Objects.requireNonNull(body);
-        this.custom = Objects.requireNonNull(custom);
-        this.delete = Objects.requireNonNull(delete);
-        this.get = Objects.requireNonNull(get);
-        this.patch = Objects.requireNonNull(patch);
-        this.post = Objects.requireNonNull(post);
-        this.put = Objects.requireNonNull(put);
-        this.responseBody = Objects.requireNonNull(responseBody);
-        this.selector = Objects.requireNonNull(selector);
+        this.additionalBindings = additionalBindings;
+        this.body = body;
+        this.custom = custom;
+        this.delete = delete;
+        this.get = get;
+        this.patch = patch;
+        this.post = post;
+        this.put = put;
+        this.responseBody = responseBody;
+        this.selector = selector;
     }
 
     /**

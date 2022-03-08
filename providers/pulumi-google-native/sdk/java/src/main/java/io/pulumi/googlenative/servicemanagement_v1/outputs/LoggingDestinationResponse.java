@@ -25,8 +25,8 @@ public final class LoggingDestinationResponse {
     private LoggingDestinationResponse(
         List<String> logs,
         String monitoredResource) {
-        this.logs = Objects.requireNonNull(logs);
-        this.monitoredResource = Objects.requireNonNull(monitoredResource);
+        this.logs = logs;
+        this.monitoredResource = monitoredResource;
     }
 
     /**

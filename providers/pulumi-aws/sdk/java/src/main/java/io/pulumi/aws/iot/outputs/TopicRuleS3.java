@@ -30,9 +30,9 @@ public final class TopicRuleS3 {
         String bucketName,
         String key,
         String roleArn) {
-        this.bucketName = Objects.requireNonNull(bucketName);
-        this.key = Objects.requireNonNull(key);
-        this.roleArn = Objects.requireNonNull(roleArn);
+        this.bucketName = bucketName;
+        this.key = key;
+        this.roleArn = roleArn;
     }
 
     /**

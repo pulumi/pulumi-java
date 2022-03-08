@@ -26,8 +26,8 @@ public final class GoogleCloudApigeeV1GraphQLOperationGroupResponse {
     private GoogleCloudApigeeV1GraphQLOperationGroupResponse(
         String operationConfigType,
         List<GoogleCloudApigeeV1GraphQLOperationConfigResponse> operationConfigs) {
-        this.operationConfigType = Objects.requireNonNull(operationConfigType);
-        this.operationConfigs = Objects.requireNonNull(operationConfigs);
+        this.operationConfigType = operationConfigType;
+        this.operationConfigs = operationConfigs;
     }
 
     /**

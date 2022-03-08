@@ -43,11 +43,11 @@ public final class LocalDiskInitializeParamsResponse {
         String diskSizeGb,
         String diskType,
         Map<String,String> labels) {
-        this.description = Objects.requireNonNull(description);
-        this.diskName = Objects.requireNonNull(diskName);
-        this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
-        this.diskType = Objects.requireNonNull(diskType);
-        this.labels = Objects.requireNonNull(labels);
+        this.description = description;
+        this.diskName = diskName;
+        this.diskSizeGb = diskSizeGb;
+        this.diskType = diskType;
+        this.labels = labels;
     }
 
     /**

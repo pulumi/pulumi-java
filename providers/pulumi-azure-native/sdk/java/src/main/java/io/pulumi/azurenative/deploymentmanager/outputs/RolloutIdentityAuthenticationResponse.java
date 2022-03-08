@@ -18,7 +18,7 @@ public final class RolloutIdentityAuthenticationResponse {
 
     @OutputCustomType.Constructor({"type"})
     private RolloutIdentityAuthenticationResponse(String type) {
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

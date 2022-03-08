@@ -67,15 +67,15 @@ public final class CertificateDetailsResponse {
         String subject,
         String thumbprint,
         Integer version) {
-        this.issuer = Objects.requireNonNull(issuer);
-        this.notAfter = Objects.requireNonNull(notAfter);
-        this.notBefore = Objects.requireNonNull(notBefore);
-        this.rawData = Objects.requireNonNull(rawData);
-        this.serialNumber = Objects.requireNonNull(serialNumber);
-        this.signatureAlgorithm = Objects.requireNonNull(signatureAlgorithm);
-        this.subject = Objects.requireNonNull(subject);
-        this.thumbprint = Objects.requireNonNull(thumbprint);
-        this.version = Objects.requireNonNull(version);
+        this.issuer = issuer;
+        this.notAfter = notAfter;
+        this.notBefore = notBefore;
+        this.rawData = rawData;
+        this.serialNumber = serialNumber;
+        this.signatureAlgorithm = signatureAlgorithm;
+        this.subject = subject;
+        this.thumbprint = thumbprint;
+        this.version = version;
     }
 
     /**

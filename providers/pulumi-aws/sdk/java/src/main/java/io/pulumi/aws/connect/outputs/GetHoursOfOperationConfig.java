@@ -33,9 +33,9 @@ public final class GetHoursOfOperationConfig {
         String day,
         List<GetHoursOfOperationConfigEndTime> endTimes,
         List<GetHoursOfOperationConfigStartTime> startTimes) {
-        this.day = Objects.requireNonNull(day);
-        this.endTimes = Objects.requireNonNull(endTimes);
-        this.startTimes = Objects.requireNonNull(startTimes);
+        this.day = day;
+        this.endTimes = endTimes;
+        this.startTimes = startTimes;
     }
 
     /**

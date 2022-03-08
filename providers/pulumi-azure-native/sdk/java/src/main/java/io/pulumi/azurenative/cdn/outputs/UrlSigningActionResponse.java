@@ -26,8 +26,8 @@ public final class UrlSigningActionResponse {
     private UrlSigningActionResponse(
         String name,
         UrlSigningActionParametersResponse parameters) {
-        this.name = Objects.requireNonNull(name);
-        this.parameters = Objects.requireNonNull(parameters);
+        this.name = name;
+        this.parameters = parameters;
     }
 
     /**

@@ -20,8 +20,8 @@ public final class CdnCertificateSourceParametersResponse {
     private CdnCertificateSourceParametersResponse(
         String certificateType,
         String odataType) {
-        this.certificateType = Objects.requireNonNull(certificateType);
-        this.odataType = Objects.requireNonNull(odataType);
+        this.certificateType = certificateType;
+        this.odataType = odataType;
     }
 
     /**

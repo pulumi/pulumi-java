@@ -24,8 +24,8 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeS
     private GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechResponse(
         String ssml,
         String text) {
-        this.ssml = Objects.requireNonNull(ssml);
-        this.text = Objects.requireNonNull(text);
+        this.ssml = ssml;
+        this.text = text;
     }
 
     /**

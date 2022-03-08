@@ -60,9 +60,9 @@ public final class PublicIPAddressResourceSettingsResponse {
         this.domainNameLabel = domainNameLabel;
         this.fqdn = fqdn;
         this.publicIpAllocationMethod = publicIpAllocationMethod;
-        this.resourceType = Objects.requireNonNull(resourceType);
+        this.resourceType = resourceType;
         this.sku = sku;
-        this.targetResourceName = Objects.requireNonNull(targetResourceName);
+        this.targetResourceName = targetResourceName;
         this.zones = zones;
     }
 

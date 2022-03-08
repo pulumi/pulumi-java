@@ -44,11 +44,11 @@ public final class GuestAgentProfileResponse {
         String lastStatusChange,
         String status,
         String vmUuid) {
-        this.agentVersion = Objects.requireNonNull(agentVersion);
-        this.errorDetails = Objects.requireNonNull(errorDetails);
-        this.lastStatusChange = Objects.requireNonNull(lastStatusChange);
-        this.status = Objects.requireNonNull(status);
-        this.vmUuid = Objects.requireNonNull(vmUuid);
+        this.agentVersion = agentVersion;
+        this.errorDetails = errorDetails;
+        this.lastStatusChange = lastStatusChange;
+        this.status = status;
+        this.vmUuid = vmUuid;
     }
 
     /**

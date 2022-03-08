@@ -26,7 +26,7 @@ public final class PatchDeploymentRecurringScheduleTimeZone {
     private PatchDeploymentRecurringScheduleTimeZone(
         String id,
         @Nullable String version) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.version = version;
     }
 

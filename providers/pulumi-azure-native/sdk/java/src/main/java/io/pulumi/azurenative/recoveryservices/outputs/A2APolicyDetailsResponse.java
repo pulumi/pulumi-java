@@ -54,7 +54,7 @@ public final class A2APolicyDetailsResponse {
         @Nullable Integer recoveryPointThresholdInMinutes) {
         this.appConsistentFrequencyInMinutes = appConsistentFrequencyInMinutes;
         this.crashConsistentFrequencyInMinutes = crashConsistentFrequencyInMinutes;
-        this.instanceType = Objects.requireNonNull(instanceType);
+        this.instanceType = instanceType;
         this.multiVmSyncStatus = multiVmSyncStatus;
         this.recoveryPointHistory = recoveryPointHistory;
         this.recoveryPointThresholdInMinutes = recoveryPointThresholdInMinutes;

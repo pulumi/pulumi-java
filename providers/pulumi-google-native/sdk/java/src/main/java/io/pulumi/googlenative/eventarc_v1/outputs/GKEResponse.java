@@ -42,11 +42,11 @@ public final class GKEResponse {
         String namespace,
         String path,
         String service) {
-        this.cluster = Objects.requireNonNull(cluster);
-        this.location = Objects.requireNonNull(location);
-        this.namespace = Objects.requireNonNull(namespace);
-        this.path = Objects.requireNonNull(path);
-        this.service = Objects.requireNonNull(service);
+        this.cluster = cluster;
+        this.location = location;
+        this.namespace = namespace;
+        this.path = path;
+        this.service = service;
     }
 
     /**

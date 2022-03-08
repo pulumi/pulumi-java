@@ -38,7 +38,7 @@ public final class ClusterResourceUsageExportConfig {
         ClusterResourceUsageExportConfigBigqueryDestination bigqueryDestination,
         @Nullable Boolean enableNetworkEgressMetering,
         @Nullable Boolean enableResourceConsumptionMetering) {
-        this.bigqueryDestination = Objects.requireNonNull(bigqueryDestination);
+        this.bigqueryDestination = bigqueryDestination;
         this.enableNetworkEgressMetering = enableNetworkEgressMetering;
         this.enableResourceConsumptionMetering = enableResourceConsumptionMetering;
     }

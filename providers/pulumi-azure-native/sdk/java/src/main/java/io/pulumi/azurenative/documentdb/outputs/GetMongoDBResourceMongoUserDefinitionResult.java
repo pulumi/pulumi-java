@@ -72,12 +72,12 @@ public final class GetMongoDBResourceMongoUserDefinitionResult {
         @Nullable String userName) {
         this.customData = customData;
         this.databaseName = databaseName;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.mechanisms = mechanisms;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.password = password;
         this.roles = roles;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.userName = userName;
     }
 

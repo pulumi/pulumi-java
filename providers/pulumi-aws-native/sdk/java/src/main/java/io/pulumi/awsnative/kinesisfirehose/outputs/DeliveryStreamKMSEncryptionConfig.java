@@ -13,7 +13,7 @@ public final class DeliveryStreamKMSEncryptionConfig {
 
     @OutputCustomType.Constructor({"aWSKMSKeyARN"})
     private DeliveryStreamKMSEncryptionConfig(String aWSKMSKeyARN) {
-        this.aWSKMSKeyARN = Objects.requireNonNull(aWSKMSKeyARN);
+        this.aWSKMSKeyARN = aWSKMSKeyARN;
     }
 
     public String getAWSKMSKeyARN() {

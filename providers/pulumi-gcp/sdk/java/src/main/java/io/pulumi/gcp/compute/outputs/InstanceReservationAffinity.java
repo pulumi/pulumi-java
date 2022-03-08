@@ -29,7 +29,7 @@ public final class InstanceReservationAffinity {
         @Nullable InstanceReservationAffinitySpecificReservation specificReservation,
         String type) {
         this.specificReservation = specificReservation;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

@@ -132,7 +132,7 @@ public final class AzureSqlProtectedItemResponse {
         this.lastRecoveryPoint = lastRecoveryPoint;
         this.policyId = policyId;
         this.protectedItemDataId = protectedItemDataId;
-        this.protectedItemType = Objects.requireNonNull(protectedItemType);
+        this.protectedItemType = protectedItemType;
         this.protectionState = protectionState;
         this.sourceResourceId = sourceResourceId;
         this.workloadType = workloadType;

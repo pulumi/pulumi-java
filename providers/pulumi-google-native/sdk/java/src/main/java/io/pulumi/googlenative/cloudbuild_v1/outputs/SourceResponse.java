@@ -32,9 +32,9 @@ public final class SourceResponse {
         RepoSourceResponse repoSource,
         StorageSourceResponse storageSource,
         StorageSourceManifestResponse storageSourceManifest) {
-        this.repoSource = Objects.requireNonNull(repoSource);
-        this.storageSource = Objects.requireNonNull(storageSource);
-        this.storageSourceManifest = Objects.requireNonNull(storageSourceManifest);
+        this.repoSource = repoSource;
+        this.storageSource = storageSource;
+        this.storageSourceManifest = storageSourceManifest;
     }
 
     /**

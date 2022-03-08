@@ -48,12 +48,12 @@ public final class NodeStateCountsResponse {
         Integer preparingNodeCount,
         Integer runningNodeCount,
         Integer unusableNodeCount) {
-        this.idleNodeCount = Objects.requireNonNull(idleNodeCount);
-        this.leavingNodeCount = Objects.requireNonNull(leavingNodeCount);
-        this.preemptedNodeCount = Objects.requireNonNull(preemptedNodeCount);
-        this.preparingNodeCount = Objects.requireNonNull(preparingNodeCount);
-        this.runningNodeCount = Objects.requireNonNull(runningNodeCount);
-        this.unusableNodeCount = Objects.requireNonNull(unusableNodeCount);
+        this.idleNodeCount = idleNodeCount;
+        this.leavingNodeCount = leavingNodeCount;
+        this.preemptedNodeCount = preemptedNodeCount;
+        this.preparingNodeCount = preparingNodeCount;
+        this.runningNodeCount = runningNodeCount;
+        this.unusableNodeCount = unusableNodeCount;
     }
 
     /**

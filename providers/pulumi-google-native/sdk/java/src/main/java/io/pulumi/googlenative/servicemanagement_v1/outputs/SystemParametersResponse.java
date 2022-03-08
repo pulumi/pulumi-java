@@ -18,7 +18,7 @@ public final class SystemParametersResponse {
 
     @OutputCustomType.Constructor({"rules"})
     private SystemParametersResponse(List<SystemParameterRuleResponse> rules) {
-        this.rules = Objects.requireNonNull(rules);
+        this.rules = rules;
     }
 
     /**

@@ -17,7 +17,7 @@ public final class KeyIdResponse {
 
     @OutputCustomType.Constructor({"keyId"})
     private KeyIdResponse(String keyId) {
-        this.keyId = Objects.requireNonNull(keyId);
+        this.keyId = keyId;
     }
 
     /**

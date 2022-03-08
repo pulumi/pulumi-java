@@ -18,7 +18,7 @@ public final class PatchDeploymentOneTimeSchedule {
 
     @OutputCustomType.Constructor({"executeTime"})
     private PatchDeploymentOneTimeSchedule(String executeTime) {
-        this.executeTime = Objects.requireNonNull(executeTime);
+        this.executeTime = executeTime;
     }
 
     /**

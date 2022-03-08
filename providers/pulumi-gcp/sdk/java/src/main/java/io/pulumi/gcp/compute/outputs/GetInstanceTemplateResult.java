@@ -216,36 +216,36 @@ public final class GetInstanceTemplateResult {
         List<GetInstanceTemplateShieldedInstanceConfig> shieldedInstanceConfigs,
         List<String> tags,
         String tagsFingerprint) {
-        this.advancedMachineFeatures = Objects.requireNonNull(advancedMachineFeatures);
-        this.canIpForward = Objects.requireNonNull(canIpForward);
-        this.confidentialInstanceConfigs = Objects.requireNonNull(confidentialInstanceConfigs);
-        this.description = Objects.requireNonNull(description);
-        this.disks = Objects.requireNonNull(disks);
-        this.enableDisplay = Objects.requireNonNull(enableDisplay);
+        this.advancedMachineFeatures = advancedMachineFeatures;
+        this.canIpForward = canIpForward;
+        this.confidentialInstanceConfigs = confidentialInstanceConfigs;
+        this.description = description;
+        this.disks = disks;
+        this.enableDisplay = enableDisplay;
         this.filter = filter;
-        this.guestAccelerators = Objects.requireNonNull(guestAccelerators);
-        this.id = Objects.requireNonNull(id);
-        this.instanceDescription = Objects.requireNonNull(instanceDescription);
-        this.labels = Objects.requireNonNull(labels);
-        this.machineType = Objects.requireNonNull(machineType);
-        this.metadata = Objects.requireNonNull(metadata);
-        this.metadataFingerprint = Objects.requireNonNull(metadataFingerprint);
-        this.metadataStartupScript = Objects.requireNonNull(metadataStartupScript);
-        this.minCpuPlatform = Objects.requireNonNull(minCpuPlatform);
+        this.guestAccelerators = guestAccelerators;
+        this.id = id;
+        this.instanceDescription = instanceDescription;
+        this.labels = labels;
+        this.machineType = machineType;
+        this.metadata = metadata;
+        this.metadataFingerprint = metadataFingerprint;
+        this.metadataStartupScript = metadataStartupScript;
+        this.minCpuPlatform = minCpuPlatform;
         this.mostRecent = mostRecent;
         this.name = name;
-        this.namePrefix = Objects.requireNonNull(namePrefix);
-        this.networkInterfaces = Objects.requireNonNull(networkInterfaces);
-        this.networkPerformanceConfigs = Objects.requireNonNull(networkPerformanceConfigs);
-        this.project = Objects.requireNonNull(project);
-        this.region = Objects.requireNonNull(region);
-        this.reservationAffinities = Objects.requireNonNull(reservationAffinities);
-        this.schedulings = Objects.requireNonNull(schedulings);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.serviceAccounts = Objects.requireNonNull(serviceAccounts);
-        this.shieldedInstanceConfigs = Objects.requireNonNull(shieldedInstanceConfigs);
-        this.tags = Objects.requireNonNull(tags);
-        this.tagsFingerprint = Objects.requireNonNull(tagsFingerprint);
+        this.namePrefix = namePrefix;
+        this.networkInterfaces = networkInterfaces;
+        this.networkPerformanceConfigs = networkPerformanceConfigs;
+        this.project = project;
+        this.region = region;
+        this.reservationAffinities = reservationAffinities;
+        this.schedulings = schedulings;
+        this.selfLink = selfLink;
+        this.serviceAccounts = serviceAccounts;
+        this.shieldedInstanceConfigs = shieldedInstanceConfigs;
+        this.tags = tags;
+        this.tagsFingerprint = tagsFingerprint;
     }
 
     public List<GetInstanceTemplateAdvancedMachineFeature> getAdvancedMachineFeatures() {

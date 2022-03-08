@@ -31,9 +31,9 @@ public final class WeekDayOfMonthResponse {
         String dayOfWeek,
         Integer dayOffset,
         Integer weekOrdinal) {
-        this.dayOfWeek = Objects.requireNonNull(dayOfWeek);
-        this.dayOffset = Objects.requireNonNull(dayOffset);
-        this.weekOrdinal = Objects.requireNonNull(weekOrdinal);
+        this.dayOfWeek = dayOfWeek;
+        this.dayOffset = dayOffset;
+        this.weekOrdinal = weekOrdinal;
     }
 
     /**

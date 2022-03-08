@@ -42,16 +42,16 @@ public final class GetClusterAddonsConfig {
         List<GetClusterAddonsConfigIstioConfig> istioConfigs,
         List<GetClusterAddonsConfigKalmConfig> kalmConfigs,
         List<GetClusterAddonsConfigNetworkPolicyConfig> networkPolicyConfigs) {
-        this.cloudrunConfigs = Objects.requireNonNull(cloudrunConfigs);
-        this.configConnectorConfigs = Objects.requireNonNull(configConnectorConfigs);
-        this.dnsCacheConfigs = Objects.requireNonNull(dnsCacheConfigs);
-        this.gcePersistentDiskCsiDriverConfigs = Objects.requireNonNull(gcePersistentDiskCsiDriverConfigs);
-        this.gcpFilestoreCsiDriverConfigs = Objects.requireNonNull(gcpFilestoreCsiDriverConfigs);
-        this.horizontalPodAutoscalings = Objects.requireNonNull(horizontalPodAutoscalings);
-        this.httpLoadBalancings = Objects.requireNonNull(httpLoadBalancings);
-        this.istioConfigs = Objects.requireNonNull(istioConfigs);
-        this.kalmConfigs = Objects.requireNonNull(kalmConfigs);
-        this.networkPolicyConfigs = Objects.requireNonNull(networkPolicyConfigs);
+        this.cloudrunConfigs = cloudrunConfigs;
+        this.configConnectorConfigs = configConnectorConfigs;
+        this.dnsCacheConfigs = dnsCacheConfigs;
+        this.gcePersistentDiskCsiDriverConfigs = gcePersistentDiskCsiDriverConfigs;
+        this.gcpFilestoreCsiDriverConfigs = gcpFilestoreCsiDriverConfigs;
+        this.horizontalPodAutoscalings = horizontalPodAutoscalings;
+        this.httpLoadBalancings = httpLoadBalancings;
+        this.istioConfigs = istioConfigs;
+        this.kalmConfigs = kalmConfigs;
+        this.networkPolicyConfigs = networkPolicyConfigs;
     }
 
     public List<GetClusterAddonsConfigCloudrunConfig> getCloudrunConfigs() {

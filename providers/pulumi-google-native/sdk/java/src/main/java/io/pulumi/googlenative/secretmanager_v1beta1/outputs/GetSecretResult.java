@@ -38,10 +38,10 @@ public final class GetSecretResult {
         Map<String,String> labels,
         String name,
         ReplicationResponse replication) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.replication = Objects.requireNonNull(replication);
+        this.createTime = createTime;
+        this.labels = labels;
+        this.name = name;
+        this.replication = replication;
     }
 
     /**

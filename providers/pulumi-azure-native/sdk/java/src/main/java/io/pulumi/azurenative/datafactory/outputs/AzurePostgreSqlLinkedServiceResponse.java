@@ -76,7 +76,7 @@ public final class AzurePostgreSqlLinkedServiceResponse {
         this.encryptedCredential = encryptedCredential;
         this.parameters = parameters;
         this.password = password;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

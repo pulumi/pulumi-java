@@ -40,10 +40,10 @@ public final class ConfigMapVolumeSourceResponse {
         List<KeyToPathResponse> items,
         String name,
         Boolean optional) {
-        this.defaultMode = Objects.requireNonNull(defaultMode);
-        this.items = Objects.requireNonNull(items);
-        this.name = Objects.requireNonNull(name);
-        this.optional = Objects.requireNonNull(optional);
+        this.defaultMode = defaultMode;
+        this.items = items;
+        this.name = name;
+        this.optional = optional;
     }
 
     /**

@@ -26,8 +26,8 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookies
     private GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfig(
         String cookieBehavior,
         List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookie> cookies) {
-        this.cookieBehavior = Objects.requireNonNull(cookieBehavior);
-        this.cookies = Objects.requireNonNull(cookies);
+        this.cookieBehavior = cookieBehavior;
+        this.cookies = cookies;
     }
 
     /**

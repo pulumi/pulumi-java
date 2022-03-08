@@ -24,8 +24,8 @@ public final class GetServiceResult {
     private GetServiceResult(
         String producerProjectId,
         String serviceName) {
-        this.producerProjectId = Objects.requireNonNull(producerProjectId);
-        this.serviceName = Objects.requireNonNull(serviceName);
+        this.producerProjectId = producerProjectId;
+        this.serviceName = serviceName;
     }
 
     /**

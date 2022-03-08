@@ -17,7 +17,7 @@ public final class MonitoringConfigResponse {
 
     @OutputCustomType.Constructor({"componentConfig"})
     private MonitoringConfigResponse(MonitoringComponentConfigResponse componentConfig) {
-        this.componentConfig = Objects.requireNonNull(componentConfig);
+        this.componentConfig = componentConfig;
     }
 
     /**

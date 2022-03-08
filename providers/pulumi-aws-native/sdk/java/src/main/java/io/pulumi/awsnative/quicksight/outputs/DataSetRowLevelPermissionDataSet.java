@@ -32,10 +32,10 @@ public final class DataSetRowLevelPermissionDataSet {
         @Nullable DataSetRowLevelPermissionFormatVersion formatVersion,
         @Nullable String namespace,
         DataSetRowLevelPermissionPolicy permissionPolicy) {
-        this.arn = Objects.requireNonNull(arn);
+        this.arn = arn;
         this.formatVersion = formatVersion;
         this.namespace = namespace;
-        this.permissionPolicy = Objects.requireNonNull(permissionPolicy);
+        this.permissionPolicy = permissionPolicy;
     }
 
     /**

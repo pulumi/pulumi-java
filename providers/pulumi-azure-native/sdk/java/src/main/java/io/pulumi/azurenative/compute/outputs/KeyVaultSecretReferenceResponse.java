@@ -25,8 +25,8 @@ public final class KeyVaultSecretReferenceResponse {
     private KeyVaultSecretReferenceResponse(
         String secretUrl,
         SubResourceResponse sourceVault) {
-        this.secretUrl = Objects.requireNonNull(secretUrl);
-        this.sourceVault = Objects.requireNonNull(sourceVault);
+        this.secretUrl = secretUrl;
+        this.sourceVault = sourceVault;
     }
 
     /**

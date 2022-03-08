@@ -81,17 +81,17 @@ public final class GetPhraseMatcherResult {
         String type,
         String updateTime,
         String versionTag) {
-        this.activationUpdateTime = Objects.requireNonNull(activationUpdateTime);
-        this.active = Objects.requireNonNull(active);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.name = Objects.requireNonNull(name);
-        this.phraseMatchRuleGroups = Objects.requireNonNull(phraseMatchRuleGroups);
-        this.revisionCreateTime = Objects.requireNonNull(revisionCreateTime);
-        this.revisionId = Objects.requireNonNull(revisionId);
-        this.roleMatch = Objects.requireNonNull(roleMatch);
-        this.type = Objects.requireNonNull(type);
-        this.updateTime = Objects.requireNonNull(updateTime);
-        this.versionTag = Objects.requireNonNull(versionTag);
+        this.activationUpdateTime = activationUpdateTime;
+        this.active = active;
+        this.displayName = displayName;
+        this.name = name;
+        this.phraseMatchRuleGroups = phraseMatchRuleGroups;
+        this.revisionCreateTime = revisionCreateTime;
+        this.revisionId = revisionId;
+        this.roleMatch = roleMatch;
+        this.type = type;
+        this.updateTime = updateTime;
+        this.versionTag = versionTag;
     }
 
     /**

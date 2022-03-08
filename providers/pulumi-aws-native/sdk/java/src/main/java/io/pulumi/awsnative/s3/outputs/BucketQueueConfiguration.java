@@ -33,9 +33,9 @@ public final class BucketQueueConfiguration {
         String event,
         @Nullable BucketNotificationFilter filter,
         String queue) {
-        this.event = Objects.requireNonNull(event);
+        this.event = event;
         this.filter = filter;
-        this.queue = Objects.requireNonNull(queue);
+        this.queue = queue;
     }
 
     /**

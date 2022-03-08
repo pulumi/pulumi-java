@@ -39,10 +39,10 @@ public final class GetBackupShortTermRetentionPolicyResult {
         String name,
         @Nullable Integer retentionDays,
         String type) {
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.retentionDays = retentionDays;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

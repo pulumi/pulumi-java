@@ -17,7 +17,7 @@ public final class BuildNoteResponse {
 
     @OutputCustomType.Constructor({"builderVersion"})
     private BuildNoteResponse(String builderVersion) {
-        this.builderVersion = Objects.requireNonNull(builderVersion);
+        this.builderVersion = builderVersion;
     }
 
     /**

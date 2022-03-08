@@ -76,16 +76,16 @@ public final class HttpCheckResponse {
         String requestMethod,
         Boolean useSsl,
         Boolean validateSsl) {
-        this.authInfo = Objects.requireNonNull(authInfo);
-        this.body = Objects.requireNonNull(body);
-        this.contentType = Objects.requireNonNull(contentType);
-        this.headers = Objects.requireNonNull(headers);
-        this.maskHeaders = Objects.requireNonNull(maskHeaders);
-        this.path = Objects.requireNonNull(path);
-        this.port = Objects.requireNonNull(port);
-        this.requestMethod = Objects.requireNonNull(requestMethod);
-        this.useSsl = Objects.requireNonNull(useSsl);
-        this.validateSsl = Objects.requireNonNull(validateSsl);
+        this.authInfo = authInfo;
+        this.body = body;
+        this.contentType = contentType;
+        this.headers = headers;
+        this.maskHeaders = maskHeaders;
+        this.path = path;
+        this.port = port;
+        this.requestMethod = requestMethod;
+        this.useSsl = useSsl;
+        this.validateSsl = validateSsl;
     }
 
     /**

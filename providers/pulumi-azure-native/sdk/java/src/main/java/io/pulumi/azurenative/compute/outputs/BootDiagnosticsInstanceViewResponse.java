@@ -31,9 +31,9 @@ public final class BootDiagnosticsInstanceViewResponse {
         String consoleScreenshotBlobUri,
         String serialConsoleLogBlobUri,
         InstanceViewStatusResponse status) {
-        this.consoleScreenshotBlobUri = Objects.requireNonNull(consoleScreenshotBlobUri);
-        this.serialConsoleLogBlobUri = Objects.requireNonNull(serialConsoleLogBlobUri);
-        this.status = Objects.requireNonNull(status);
+        this.consoleScreenshotBlobUri = consoleScreenshotBlobUri;
+        this.serialConsoleLogBlobUri = serialConsoleLogBlobUri;
+        this.status = status;
     }
 
     /**

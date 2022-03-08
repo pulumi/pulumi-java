@@ -18,7 +18,7 @@ public final class GameServerGroupInstanceDefinition {
     private GameServerGroupInstanceDefinition(
         String instanceType,
         @Nullable String weightedCapacity) {
-        this.instanceType = Objects.requireNonNull(instanceType);
+        this.instanceType = instanceType;
         this.weightedCapacity = weightedCapacity;
     }
 

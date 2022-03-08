@@ -32,8 +32,8 @@ public final class GetScriptDagEdge {
         String source,
         String target,
         @Nullable String targetParameter) {
-        this.source = Objects.requireNonNull(source);
-        this.target = Objects.requireNonNull(target);
+        this.source = source;
+        this.target = target;
         this.targetParameter = targetParameter;
     }
 

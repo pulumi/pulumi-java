@@ -51,11 +51,11 @@ public final class GetApiIssueCommentResult {
         String type,
         String userId) {
         this.createdDate = createdDate;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.text = Objects.requireNonNull(text);
-        this.type = Objects.requireNonNull(type);
-        this.userId = Objects.requireNonNull(userId);
+        this.id = id;
+        this.name = name;
+        this.text = text;
+        this.type = type;
+        this.userId = userId;
     }
 
     /**

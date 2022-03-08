@@ -35,10 +35,10 @@ public final class GetResolverRulesResult {
         List<String> resolverRuleIds,
         @Nullable String ruleType,
         @Nullable String shareStatus) {
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.ownerId = ownerId;
         this.resolverEndpointId = resolverEndpointId;
-        this.resolverRuleIds = Objects.requireNonNull(resolverRuleIds);
+        this.resolverRuleIds = resolverRuleIds;
         this.ruleType = ruleType;
         this.shareStatus = shareStatus;
     }

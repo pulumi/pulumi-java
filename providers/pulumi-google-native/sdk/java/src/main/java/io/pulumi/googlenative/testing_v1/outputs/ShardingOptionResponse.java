@@ -25,8 +25,8 @@ public final class ShardingOptionResponse {
     private ShardingOptionResponse(
         ManualShardingResponse manualSharding,
         UniformShardingResponse uniformSharding) {
-        this.manualSharding = Objects.requireNonNull(manualSharding);
-        this.uniformSharding = Objects.requireNonNull(uniformSharding);
+        this.manualSharding = manualSharding;
+        this.uniformSharding = uniformSharding;
     }
 
     /**

@@ -50,7 +50,7 @@ public final class AzureDataLakeStoreWriteSettingsResponse {
         this.disableMetricsCollection = disableMetricsCollection;
         this.expiryDateTime = expiryDateTime;
         this.maxConcurrentConnections = maxConcurrentConnections;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

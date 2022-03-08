@@ -78,11 +78,11 @@ public final class DaemonSetStatus {
         @Nullable Integer updatedNumberScheduled) {
         this.collisionCount = collisionCount;
         this.conditions = conditions;
-        this.currentNumberScheduled = Objects.requireNonNull(currentNumberScheduled);
-        this.desiredNumberScheduled = Objects.requireNonNull(desiredNumberScheduled);
+        this.currentNumberScheduled = currentNumberScheduled;
+        this.desiredNumberScheduled = desiredNumberScheduled;
         this.numberAvailable = numberAvailable;
-        this.numberMisscheduled = Objects.requireNonNull(numberMisscheduled);
-        this.numberReady = Objects.requireNonNull(numberReady);
+        this.numberMisscheduled = numberMisscheduled;
+        this.numberReady = numberReady;
         this.numberUnavailable = numberUnavailable;
         this.observedGeneration = observedGeneration;
         this.updatedNumberScheduled = updatedNumberScheduled;

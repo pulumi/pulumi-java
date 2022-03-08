@@ -24,8 +24,8 @@ public final class LayerResponse {
     private LayerResponse(
         String arguments,
         String directive) {
-        this.arguments = Objects.requireNonNull(arguments);
-        this.directive = Objects.requireNonNull(directive);
+        this.arguments = arguments;
+        this.directive = directive;
     }
 
     /**

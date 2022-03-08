@@ -43,11 +43,11 @@ public final class OSPolicyResourceFileResourceResponse {
         String path,
         String permissions,
         String state) {
-        this.content = Objects.requireNonNull(content);
-        this.file = Objects.requireNonNull(file);
-        this.path = Objects.requireNonNull(path);
-        this.permissions = Objects.requireNonNull(permissions);
-        this.state = Objects.requireNonNull(state);
+        this.content = content;
+        this.file = file;
+        this.path = path;
+        this.permissions = permissions;
+        this.state = state;
     }
 
     /**

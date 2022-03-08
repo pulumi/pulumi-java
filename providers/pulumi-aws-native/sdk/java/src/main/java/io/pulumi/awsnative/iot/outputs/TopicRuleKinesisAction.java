@@ -21,8 +21,8 @@ public final class TopicRuleKinesisAction {
         String roleArn,
         String streamName) {
         this.partitionKey = partitionKey;
-        this.roleArn = Objects.requireNonNull(roleArn);
-        this.streamName = Objects.requireNonNull(streamName);
+        this.roleArn = roleArn;
+        this.streamName = streamName;
     }
 
     public Optional<String> getPartitionKey() {

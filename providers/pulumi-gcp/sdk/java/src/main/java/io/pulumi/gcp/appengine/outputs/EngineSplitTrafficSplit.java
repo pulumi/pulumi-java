@@ -28,7 +28,7 @@ public final class EngineSplitTrafficSplit {
     private EngineSplitTrafficSplit(
         Map<String,String> allocations,
         @Nullable String shardBy) {
-        this.allocations = Objects.requireNonNull(allocations);
+        this.allocations = allocations;
         this.shardBy = shardBy;
     }
 

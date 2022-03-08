@@ -30,9 +30,9 @@ public final class PlatformImagePurchasePlanResponse {
         String planName,
         String planProduct,
         String planPublisher) {
-        this.planName = Objects.requireNonNull(planName);
-        this.planProduct = Objects.requireNonNull(planProduct);
-        this.planPublisher = Objects.requireNonNull(planPublisher);
+        this.planName = planName;
+        this.planProduct = planProduct;
+        this.planPublisher = planPublisher;
     }
 
     /**

@@ -88,18 +88,18 @@ public final class GetReadOnlyFollowingDatabaseResult {
         String softDeletePeriod,
         DatabaseStatisticsResponse statistics,
         String type) {
-        this.attachedDatabaseConfigurationName = Objects.requireNonNull(attachedDatabaseConfigurationName);
+        this.attachedDatabaseConfigurationName = attachedDatabaseConfigurationName;
         this.hotCachePeriod = hotCachePeriod;
-        this.id = Objects.requireNonNull(id);
-        this.kind = Objects.requireNonNull(kind);
-        this.leaderClusterResourceId = Objects.requireNonNull(leaderClusterResourceId);
+        this.id = id;
+        this.kind = kind;
+        this.leaderClusterResourceId = leaderClusterResourceId;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
-        this.principalsModificationKind = Objects.requireNonNull(principalsModificationKind);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.softDeletePeriod = Objects.requireNonNull(softDeletePeriod);
-        this.statistics = Objects.requireNonNull(statistics);
-        this.type = Objects.requireNonNull(type);
+        this.name = name;
+        this.principalsModificationKind = principalsModificationKind;
+        this.provisioningState = provisioningState;
+        this.softDeletePeriod = softDeletePeriod;
+        this.statistics = statistics;
+        this.type = type;
     }
 
     /**

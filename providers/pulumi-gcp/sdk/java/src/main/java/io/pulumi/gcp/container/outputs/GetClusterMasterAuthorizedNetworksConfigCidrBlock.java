@@ -16,8 +16,8 @@ public final class GetClusterMasterAuthorizedNetworksConfigCidrBlock {
     private GetClusterMasterAuthorizedNetworksConfigCidrBlock(
         String cidrBlock,
         String displayName) {
-        this.cidrBlock = Objects.requireNonNull(cidrBlock);
-        this.displayName = Objects.requireNonNull(displayName);
+        this.cidrBlock = cidrBlock;
+        this.displayName = displayName;
     }
 
     public String getCidrBlock() {

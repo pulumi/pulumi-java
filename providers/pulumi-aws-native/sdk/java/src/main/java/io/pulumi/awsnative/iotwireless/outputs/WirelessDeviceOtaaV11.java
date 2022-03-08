@@ -18,9 +18,9 @@ public final class WirelessDeviceOtaaV11 {
         String appKey,
         String joinEui,
         String nwkKey) {
-        this.appKey = Objects.requireNonNull(appKey);
-        this.joinEui = Objects.requireNonNull(joinEui);
-        this.nwkKey = Objects.requireNonNull(nwkKey);
+        this.appKey = appKey;
+        this.joinEui = joinEui;
+        this.nwkKey = nwkKey;
     }
 
     public String getAppKey() {

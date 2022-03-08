@@ -34,8 +34,8 @@ public final class TaskSetCapacityProviderStrategy {
         String capacityProvider,
         Integer weight) {
         this.base = base;
-        this.capacityProvider = Objects.requireNonNull(capacityProvider);
-        this.weight = Objects.requireNonNull(weight);
+        this.capacityProvider = capacityProvider;
+        this.weight = weight;
     }
 
     /**

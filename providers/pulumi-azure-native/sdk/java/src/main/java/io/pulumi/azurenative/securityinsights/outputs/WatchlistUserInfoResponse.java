@@ -32,8 +32,8 @@ public final class WatchlistUserInfoResponse {
         String email,
         String name,
         @Nullable String objectId) {
-        this.email = Objects.requireNonNull(email);
-        this.name = Objects.requireNonNull(name);
+        this.email = email;
+        this.name = name;
         this.objectId = objectId;
     }
 

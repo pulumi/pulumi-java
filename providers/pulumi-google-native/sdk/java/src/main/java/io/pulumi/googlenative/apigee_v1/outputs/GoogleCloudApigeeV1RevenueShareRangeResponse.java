@@ -31,9 +31,9 @@ public final class GoogleCloudApigeeV1RevenueShareRangeResponse {
         String end,
         Double sharePercentage,
         String start) {
-        this.end = Objects.requireNonNull(end);
-        this.sharePercentage = Objects.requireNonNull(sharePercentage);
-        this.start = Objects.requireNonNull(start);
+        this.end = end;
+        this.sharePercentage = sharePercentage;
+        this.start = start;
     }
 
     /**

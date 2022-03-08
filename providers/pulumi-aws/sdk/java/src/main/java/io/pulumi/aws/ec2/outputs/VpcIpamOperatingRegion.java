@@ -17,7 +17,7 @@ public final class VpcIpamOperatingRegion {
 
     @OutputCustomType.Constructor({"regionName"})
     private VpcIpamOperatingRegion(String regionName) {
-        this.regionName = Objects.requireNonNull(regionName);
+        this.regionName = regionName;
     }
 
     /**

@@ -71,15 +71,15 @@ public final class GetGuestPolicyResult {
         List<PackageResponse> packages,
         List<SoftwareRecipeResponse> recipes,
         String updateTime) {
-        this.assignment = Objects.requireNonNull(assignment);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.description = Objects.requireNonNull(description);
-        this.etag = Objects.requireNonNull(etag);
-        this.name = Objects.requireNonNull(name);
-        this.packageRepositories = Objects.requireNonNull(packageRepositories);
-        this.packages = Objects.requireNonNull(packages);
-        this.recipes = Objects.requireNonNull(recipes);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.assignment = assignment;
+        this.createTime = createTime;
+        this.description = description;
+        this.etag = etag;
+        this.name = name;
+        this.packageRepositories = packageRepositories;
+        this.packages = packages;
+        this.recipes = recipes;
+        this.updateTime = updateTime;
     }
 
     /**

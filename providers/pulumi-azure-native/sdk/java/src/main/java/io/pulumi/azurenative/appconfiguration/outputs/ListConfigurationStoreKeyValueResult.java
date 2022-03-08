@@ -66,14 +66,14 @@ public final class ListConfigurationStoreKeyValueResult {
         Boolean locked,
         Map<String,String> tags,
         String value) {
-        this.contentType = Objects.requireNonNull(contentType);
-        this.eTag = Objects.requireNonNull(eTag);
-        this.key = Objects.requireNonNull(key);
-        this.label = Objects.requireNonNull(label);
-        this.lastModified = Objects.requireNonNull(lastModified);
-        this.locked = Objects.requireNonNull(locked);
-        this.tags = Objects.requireNonNull(tags);
-        this.value = Objects.requireNonNull(value);
+        this.contentType = contentType;
+        this.eTag = eTag;
+        this.key = key;
+        this.label = label;
+        this.lastModified = lastModified;
+        this.locked = locked;
+        this.tags = tags;
+        this.value = value;
     }
 
     /**

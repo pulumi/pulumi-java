@@ -121,9 +121,9 @@ public final class AzureMLExecutePipelineActivityResponse {
         this.mlPipelineEndpointId = mlPipelineEndpointId;
         this.mlPipelineId = mlPipelineId;
         this.mlPipelineParameters = mlPipelineParameters;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.policy = policy;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.userProperties = userProperties;
         this.version = version;
     }

@@ -71,9 +71,9 @@ public final class DeploymentSpec {
         this.progressDeadlineSeconds = progressDeadlineSeconds;
         this.replicas = replicas;
         this.revisionHistoryLimit = revisionHistoryLimit;
-        this.selector = Objects.requireNonNull(selector);
+        this.selector = selector;
         this.strategy = strategy;
-        this.template = Objects.requireNonNull(template);
+        this.template = template;
     }
 
     /**

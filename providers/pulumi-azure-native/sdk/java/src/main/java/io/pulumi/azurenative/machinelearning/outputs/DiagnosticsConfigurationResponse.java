@@ -27,7 +27,7 @@ public final class DiagnosticsConfigurationResponse {
         @Nullable String expiry,
         String level) {
         this.expiry = expiry;
-        this.level = Objects.requireNonNull(level);
+        this.level = level;
     }
 
     /**

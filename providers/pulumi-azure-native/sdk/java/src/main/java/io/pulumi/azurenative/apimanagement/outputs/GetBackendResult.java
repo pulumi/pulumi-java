@@ -92,16 +92,16 @@ public final class GetBackendResult {
         String url) {
         this.credentials = credentials;
         this.description = description;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.properties = Objects.requireNonNull(properties);
-        this.protocol = Objects.requireNonNull(protocol);
+        this.id = id;
+        this.name = name;
+        this.properties = properties;
+        this.protocol = protocol;
         this.proxy = proxy;
         this.resourceId = resourceId;
         this.title = title;
         this.tls = tls;
-        this.type = Objects.requireNonNull(type);
-        this.url = Objects.requireNonNull(url);
+        this.type = type;
+        this.url = url;
     }
 
     /**

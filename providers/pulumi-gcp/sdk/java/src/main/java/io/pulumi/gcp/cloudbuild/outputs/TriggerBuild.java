@@ -119,7 +119,7 @@ public final class TriggerBuild {
         this.queueTtl = queueTtl;
         this.secrets = secrets;
         this.source = source;
-        this.steps = Objects.requireNonNull(steps);
+        this.steps = steps;
         this.substitutions = substitutions;
         this.tags = tags;
         this.timeout = timeout;

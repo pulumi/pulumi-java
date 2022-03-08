@@ -97,18 +97,18 @@ public final class GetPartnerNamespaceResult {
         @Nullable Map<String,String> tags,
         String type) {
         this.disableLocalAuth = disableLocalAuth;
-        this.endpoint = Objects.requireNonNull(endpoint);
-        this.id = Objects.requireNonNull(id);
+        this.endpoint = endpoint;
+        this.id = id;
         this.inboundIpRules = inboundIpRules;
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
+        this.location = location;
+        this.name = name;
         this.partnerRegistrationFullyQualifiedId = partnerRegistrationFullyQualifiedId;
-        this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.privateEndpointConnections = privateEndpointConnections;
+        this.provisioningState = provisioningState;
         this.publicNetworkAccess = publicNetworkAccess;
-        this.systemData = Objects.requireNonNull(systemData);
+        this.systemData = systemData;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

@@ -80,15 +80,15 @@ public final class DockerBuildStepResponse {
         @Nullable String target,
         String type) {
         this.arguments = arguments;
-        this.baseImageDependencies = Objects.requireNonNull(baseImageDependencies);
+        this.baseImageDependencies = baseImageDependencies;
         this.contextAccessToken = contextAccessToken;
         this.contextPath = contextPath;
-        this.dockerFilePath = Objects.requireNonNull(dockerFilePath);
+        this.dockerFilePath = dockerFilePath;
         this.imageNames = imageNames;
         this.isPushEnabled = isPushEnabled;
         this.noCache = noCache;
         this.target = target;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

@@ -26,8 +26,8 @@ public final class AutomationRulePropertyValuesConditionResponse {
     private AutomationRulePropertyValuesConditionResponse(
         AutomationRulePropertyValuesConditionResponseConditionProperties conditionProperties,
         String conditionType) {
-        this.conditionProperties = Objects.requireNonNull(conditionProperties);
-        this.conditionType = Objects.requireNonNull(conditionType);
+        this.conditionProperties = conditionProperties;
+        this.conditionType = conditionType;
     }
 
     /**

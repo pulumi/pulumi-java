@@ -19,7 +19,7 @@ public final class SecurityPolicyRuleRateLimitOptionsExceedRedirectOptions {
         @Nullable String target,
         String type) {
         this.target = target;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     public Optional<String> getTarget() {

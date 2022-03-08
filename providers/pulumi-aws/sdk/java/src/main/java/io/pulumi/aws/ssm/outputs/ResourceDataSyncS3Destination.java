@@ -44,10 +44,10 @@ public final class ResourceDataSyncS3Destination {
         @Nullable String prefix,
         String region,
         @Nullable String syncFormat) {
-        this.bucketName = Objects.requireNonNull(bucketName);
+        this.bucketName = bucketName;
         this.kmsKeyArn = kmsKeyArn;
         this.prefix = prefix;
-        this.region = Objects.requireNonNull(region);
+        this.region = region;
         this.syncFormat = syncFormat;
     }
 

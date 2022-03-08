@@ -81,7 +81,7 @@ public final class DeploymentSpec {
         this.rollbackTo = rollbackTo;
         this.selector = selector;
         this.strategy = strategy;
-        this.template = Objects.requireNonNull(template);
+        this.template = template;
     }
 
     /**

@@ -76,7 +76,7 @@ public final class FlowEncryption {
         this.keyType = keyType;
         this.region = region;
         this.resourceId = resourceId;
-        this.roleArn = Objects.requireNonNull(roleArn);
+        this.roleArn = roleArn;
         this.secretArn = secretArn;
         this.url = url;
     }

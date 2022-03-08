@@ -34,8 +34,8 @@ public final class GetSnapshotIdsResult {
         @Nullable List<String> owners,
         @Nullable List<String> restorableByUserIds) {
         this.filters = filters;
-        this.id = Objects.requireNonNull(id);
-        this.ids = Objects.requireNonNull(ids);
+        this.id = id;
+        this.ids = ids;
         this.owners = owners;
         this.restorableByUserIds = restorableByUserIds;
     }

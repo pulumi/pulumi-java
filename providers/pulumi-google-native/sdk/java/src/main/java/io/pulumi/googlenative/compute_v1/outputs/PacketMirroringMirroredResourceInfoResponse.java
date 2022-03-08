@@ -33,9 +33,9 @@ public final class PacketMirroringMirroredResourceInfoResponse {
         List<PacketMirroringMirroredResourceInfoInstanceInfoResponse> instances,
         List<PacketMirroringMirroredResourceInfoSubnetInfoResponse> subnetworks,
         List<String> tags) {
-        this.instances = Objects.requireNonNull(instances);
-        this.subnetworks = Objects.requireNonNull(subnetworks);
-        this.tags = Objects.requireNonNull(tags);
+        this.instances = instances;
+        this.subnetworks = subnetworks;
+        this.tags = tags;
     }
 
     /**

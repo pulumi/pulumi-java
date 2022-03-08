@@ -36,10 +36,10 @@ public final class InTotoProvenanceResponse {
         List<String> materials,
         MetadataResponse metadata,
         RecipeResponse recipe) {
-        this.builderConfig = Objects.requireNonNull(builderConfig);
-        this.materials = Objects.requireNonNull(materials);
-        this.metadata = Objects.requireNonNull(metadata);
-        this.recipe = Objects.requireNonNull(recipe);
+        this.builderConfig = builderConfig;
+        this.materials = materials;
+        this.metadata = metadata;
+        this.recipe = recipe;
     }
 
     /**

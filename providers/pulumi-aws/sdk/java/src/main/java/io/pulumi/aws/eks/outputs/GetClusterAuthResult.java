@@ -26,9 +26,9 @@ public final class GetClusterAuthResult {
         String id,
         String name,
         String token) {
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.token = Objects.requireNonNull(token);
+        this.id = id;
+        this.name = name;
+        this.token = token;
     }
 
     /**

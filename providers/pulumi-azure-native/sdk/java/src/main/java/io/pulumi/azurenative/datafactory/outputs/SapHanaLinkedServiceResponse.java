@@ -98,7 +98,7 @@ public final class SapHanaLinkedServiceResponse {
         this.parameters = parameters;
         this.password = password;
         this.server = server;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.userName = userName;
     }
 

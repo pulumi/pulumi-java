@@ -32,9 +32,9 @@ public final class RosettaNetPipActivitySettingsResponse {
         RosettaNetPipAcknowledgmentOfReceiptSettingsResponse acknowledgmentOfReceiptSettings,
         RosettaNetPipActivityBehaviorResponse activityBehavior,
         String activityType) {
-        this.acknowledgmentOfReceiptSettings = Objects.requireNonNull(acknowledgmentOfReceiptSettings);
-        this.activityBehavior = Objects.requireNonNull(activityBehavior);
-        this.activityType = Objects.requireNonNull(activityType);
+        this.acknowledgmentOfReceiptSettings = acknowledgmentOfReceiptSettings;
+        this.activityBehavior = activityBehavior;
+        this.activityType = activityType;
     }
 
     /**

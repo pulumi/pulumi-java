@@ -71,12 +71,12 @@ public final class CreationDataResponse {
         @Nullable String sourceUri,
         @Nullable String storageAccountId,
         @Nullable Double uploadSizeBytes) {
-        this.createOption = Objects.requireNonNull(createOption);
+        this.createOption = createOption;
         this.galleryImageReference = galleryImageReference;
         this.imageReference = imageReference;
         this.logicalSectorSize = logicalSectorSize;
         this.sourceResourceId = sourceResourceId;
-        this.sourceUniqueId = Objects.requireNonNull(sourceUniqueId);
+        this.sourceUniqueId = sourceUniqueId;
         this.sourceUri = sourceUri;
         this.storageAccountId = storageAccountId;
         this.uploadSizeBytes = uploadSizeBytes;

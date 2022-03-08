@@ -54,9 +54,9 @@ public final class ResourceSkuResponse {
         String size,
         @Nullable String tier) {
         this.capacity = capacity;
-        this.family = Objects.requireNonNull(family);
-        this.name = Objects.requireNonNull(name);
-        this.size = Objects.requireNonNull(size);
+        this.family = family;
+        this.name = name;
+        this.size = size;
         this.tier = tier;
     }
 

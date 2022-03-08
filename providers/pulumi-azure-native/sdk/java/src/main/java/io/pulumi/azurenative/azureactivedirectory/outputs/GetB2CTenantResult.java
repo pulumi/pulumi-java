@@ -66,13 +66,13 @@ public final class GetB2CTenantResult {
         @Nullable String tenantId,
         String type) {
         this.billingConfig = billingConfig;
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.sku = Objects.requireNonNull(sku);
+        this.id = id;
+        this.location = location;
+        this.name = name;
+        this.sku = sku;
         this.tags = tags;
         this.tenantId = tenantId;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

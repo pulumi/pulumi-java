@@ -63,8 +63,8 @@ public final class AppendVariableActivityResponse {
         @Nullable String variableName) {
         this.dependsOn = dependsOn;
         this.description = description;
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
+        this.name = name;
+        this.type = type;
         this.userProperties = userProperties;
         this.value = value;
         this.variableName = variableName;

@@ -30,9 +30,9 @@ public final class GooglePrivacyDlpV2BucketResponse {
         GooglePrivacyDlpV2ValueResponse max,
         GooglePrivacyDlpV2ValueResponse min,
         GooglePrivacyDlpV2ValueResponse replacementValue) {
-        this.max = Objects.requireNonNull(max);
-        this.min = Objects.requireNonNull(min);
-        this.replacementValue = Objects.requireNonNull(replacementValue);
+        this.max = max;
+        this.min = min;
+        this.replacementValue = replacementValue;
     }
 
     /**

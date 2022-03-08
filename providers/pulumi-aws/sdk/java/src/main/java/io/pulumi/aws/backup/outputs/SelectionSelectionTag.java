@@ -30,9 +30,9 @@ public final class SelectionSelectionTag {
         String key,
         String type,
         String value) {
-        this.key = Objects.requireNonNull(key);
-        this.type = Objects.requireNonNull(type);
-        this.value = Objects.requireNonNull(value);
+        this.key = key;
+        this.type = type;
+        this.value = value;
     }
 
     /**

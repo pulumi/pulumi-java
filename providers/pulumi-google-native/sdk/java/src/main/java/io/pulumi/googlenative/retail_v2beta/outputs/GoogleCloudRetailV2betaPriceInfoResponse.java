@@ -56,13 +56,13 @@ public final class GoogleCloudRetailV2betaPriceInfoResponse {
         String priceEffectiveTime,
         String priceExpireTime,
         GoogleCloudRetailV2betaPriceInfoPriceRangeResponse priceRange) {
-        this.cost = Objects.requireNonNull(cost);
-        this.currencyCode = Objects.requireNonNull(currencyCode);
-        this.originalPrice = Objects.requireNonNull(originalPrice);
-        this.price = Objects.requireNonNull(price);
-        this.priceEffectiveTime = Objects.requireNonNull(priceEffectiveTime);
-        this.priceExpireTime = Objects.requireNonNull(priceExpireTime);
-        this.priceRange = Objects.requireNonNull(priceRange);
+        this.cost = cost;
+        this.currencyCode = currencyCode;
+        this.originalPrice = originalPrice;
+        this.price = price;
+        this.priceEffectiveTime = priceEffectiveTime;
+        this.priceExpireTime = priceExpireTime;
+        this.priceRange = priceRange;
     }
 
     /**

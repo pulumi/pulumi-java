@@ -109,20 +109,20 @@ public final class GetOuContainerResult {
         String tenantId,
         String type) {
         this.accounts = accounts;
-        this.containerId = Objects.requireNonNull(containerId);
-        this.deploymentId = Objects.requireNonNull(deploymentId);
-        this.distinguishedName = Objects.requireNonNull(distinguishedName);
-        this.domainName = Objects.requireNonNull(domainName);
+        this.containerId = containerId;
+        this.deploymentId = deploymentId;
+        this.distinguishedName = distinguishedName;
+        this.domainName = domainName;
         this.etag = etag;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.serviceStatus = Objects.requireNonNull(serviceStatus);
-        this.systemData = Objects.requireNonNull(systemData);
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.serviceStatus = serviceStatus;
+        this.systemData = systemData;
         this.tags = tags;
-        this.tenantId = Objects.requireNonNull(tenantId);
-        this.type = Objects.requireNonNull(type);
+        this.tenantId = tenantId;
+        this.type = type;
     }
 
     /**

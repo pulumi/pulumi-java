@@ -40,8 +40,8 @@ public final class ExternalMetricStatus {
         String metricName,
         @Nullable LabelSelector metricSelector) {
         this.currentAverageValue = currentAverageValue;
-        this.currentValue = Objects.requireNonNull(currentValue);
-        this.metricName = Objects.requireNonNull(metricName);
+        this.currentValue = currentValue;
+        this.metricName = metricName;
         this.metricSelector = metricSelector;
     }
 

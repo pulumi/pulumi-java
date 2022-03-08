@@ -33,7 +33,7 @@ public final class OnErrorDeploymentExtendedResponse {
         String provisioningState,
         @Nullable String type) {
         this.deploymentName = deploymentName;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.type = type;
     }
 

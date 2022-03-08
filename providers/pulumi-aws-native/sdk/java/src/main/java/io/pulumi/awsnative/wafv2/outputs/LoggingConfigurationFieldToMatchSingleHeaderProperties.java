@@ -17,7 +17,7 @@ public final class LoggingConfigurationFieldToMatchSingleHeaderProperties {
 
     @OutputCustomType.Constructor({"name"})
     private LoggingConfigurationFieldToMatchSingleHeaderProperties(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

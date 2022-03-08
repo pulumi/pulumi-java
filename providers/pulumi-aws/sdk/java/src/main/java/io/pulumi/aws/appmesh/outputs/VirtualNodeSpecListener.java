@@ -58,7 +58,7 @@ public final class VirtualNodeSpecListener {
         this.connectionPool = connectionPool;
         this.healthCheck = healthCheck;
         this.outlierDetection = outlierDetection;
-        this.portMapping = Objects.requireNonNull(portMapping);
+        this.portMapping = portMapping;
         this.timeout = timeout;
         this.tls = tls;
     }

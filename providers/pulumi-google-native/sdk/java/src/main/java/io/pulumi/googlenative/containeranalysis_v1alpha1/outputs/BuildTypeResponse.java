@@ -25,8 +25,8 @@ public final class BuildTypeResponse {
     private BuildTypeResponse(
         String builderVersion,
         BuildSignatureResponse signature) {
-        this.builderVersion = Objects.requireNonNull(builderVersion);
-        this.signature = Objects.requireNonNull(signature);
+        this.builderVersion = builderVersion;
+        this.signature = signature;
     }
 
     /**

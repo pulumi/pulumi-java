@@ -24,8 +24,8 @@ public final class OSPolicyResourceExecResourceResponse {
     private OSPolicyResourceExecResourceResponse(
         OSPolicyResourceExecResourceExecResponse enforce,
         OSPolicyResourceExecResourceExecResponse validate) {
-        this.enforce = Objects.requireNonNull(enforce);
-        this.validate = Objects.requireNonNull(validate);
+        this.enforce = enforce;
+        this.validate = validate;
     }
 
     /**

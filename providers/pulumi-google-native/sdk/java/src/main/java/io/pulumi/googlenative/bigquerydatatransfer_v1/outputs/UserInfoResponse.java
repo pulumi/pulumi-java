@@ -17,7 +17,7 @@ public final class UserInfoResponse {
 
     @OutputCustomType.Constructor({"email"})
     private UserInfoResponse(String email) {
-        this.email = Objects.requireNonNull(email);
+        this.email = email;
     }
 
     /**

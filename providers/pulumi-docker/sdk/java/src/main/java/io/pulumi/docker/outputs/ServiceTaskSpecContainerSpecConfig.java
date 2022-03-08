@@ -27,11 +27,11 @@ public final class ServiceTaskSpecContainerSpecConfig {
         @Nullable Integer fileMode,
         String fileName,
         @Nullable String fileUid) {
-        this.configId = Objects.requireNonNull(configId);
+        this.configId = configId;
         this.configName = configName;
         this.fileGid = fileGid;
         this.fileMode = fileMode;
-        this.fileName = Objects.requireNonNull(fileName);
+        this.fileName = fileName;
         this.fileUid = fileUid;
     }
 

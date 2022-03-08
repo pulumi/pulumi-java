@@ -73,16 +73,16 @@ public final class IPAllocationPolicyResponse {
         String tpuIpv4CidrBlock,
         Boolean useIpAliases,
         Boolean useRoutes) {
-        this.clusterIpv4CidrBlock = Objects.requireNonNull(clusterIpv4CidrBlock);
-        this.clusterSecondaryRangeName = Objects.requireNonNull(clusterSecondaryRangeName);
-        this.createSubnetwork = Objects.requireNonNull(createSubnetwork);
-        this.nodeIpv4CidrBlock = Objects.requireNonNull(nodeIpv4CidrBlock);
-        this.servicesIpv4CidrBlock = Objects.requireNonNull(servicesIpv4CidrBlock);
-        this.servicesSecondaryRangeName = Objects.requireNonNull(servicesSecondaryRangeName);
-        this.subnetworkName = Objects.requireNonNull(subnetworkName);
-        this.tpuIpv4CidrBlock = Objects.requireNonNull(tpuIpv4CidrBlock);
-        this.useIpAliases = Objects.requireNonNull(useIpAliases);
-        this.useRoutes = Objects.requireNonNull(useRoutes);
+        this.clusterIpv4CidrBlock = clusterIpv4CidrBlock;
+        this.clusterSecondaryRangeName = clusterSecondaryRangeName;
+        this.createSubnetwork = createSubnetwork;
+        this.nodeIpv4CidrBlock = nodeIpv4CidrBlock;
+        this.servicesIpv4CidrBlock = servicesIpv4CidrBlock;
+        this.servicesSecondaryRangeName = servicesSecondaryRangeName;
+        this.subnetworkName = subnetworkName;
+        this.tpuIpv4CidrBlock = tpuIpv4CidrBlock;
+        this.useIpAliases = useIpAliases;
+        this.useRoutes = useRoutes;
     }
 
     /**

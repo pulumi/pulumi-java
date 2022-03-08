@@ -24,8 +24,8 @@ public final class GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse 
     private GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse(
         Integer transcriptIndex,
         Integer wordIndex) {
-        this.transcriptIndex = Objects.requireNonNull(transcriptIndex);
-        this.wordIndex = Objects.requireNonNull(wordIndex);
+        this.transcriptIndex = transcriptIndex;
+        this.wordIndex = wordIndex;
     }
 
     /**

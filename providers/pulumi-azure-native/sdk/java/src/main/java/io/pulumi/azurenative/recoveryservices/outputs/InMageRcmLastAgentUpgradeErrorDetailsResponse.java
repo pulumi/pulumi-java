@@ -49,12 +49,12 @@ public final class InMageRcmLastAgentUpgradeErrorDetailsResponse {
         Map<String,String> errorTags,
         String possibleCauses,
         String recommendedAction) {
-        this.errorCode = Objects.requireNonNull(errorCode);
-        this.errorMessage = Objects.requireNonNull(errorMessage);
-        this.errorMessageParameters = Objects.requireNonNull(errorMessageParameters);
-        this.errorTags = Objects.requireNonNull(errorTags);
-        this.possibleCauses = Objects.requireNonNull(possibleCauses);
-        this.recommendedAction = Objects.requireNonNull(recommendedAction);
+        this.errorCode = errorCode;
+        this.errorMessage = errorMessage;
+        this.errorMessageParameters = errorMessageParameters;
+        this.errorTags = errorTags;
+        this.possibleCauses = possibleCauses;
+        this.recommendedAction = recommendedAction;
     }
 
     /**

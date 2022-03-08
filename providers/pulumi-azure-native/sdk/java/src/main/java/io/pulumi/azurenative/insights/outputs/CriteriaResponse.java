@@ -28,7 +28,7 @@ public final class CriteriaResponse {
         @Nullable List<DimensionResponse> dimensions,
         String metricName) {
         this.dimensions = dimensions;
-        this.metricName = Objects.requireNonNull(metricName);
+        this.metricName = metricName;
     }
 
     /**

@@ -101,20 +101,20 @@ public final class GetCertificateResult {
         RevocationDetailsResponse revocationDetails,
         String subjectMode,
         String updateTime) {
-        this.certificateDescription = Objects.requireNonNull(certificateDescription);
-        this.certificateTemplate = Objects.requireNonNull(certificateTemplate);
-        this.config = Objects.requireNonNull(config);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.issuerCertificateAuthority = Objects.requireNonNull(issuerCertificateAuthority);
-        this.labels = Objects.requireNonNull(labels);
-        this.lifetime = Objects.requireNonNull(lifetime);
-        this.name = Objects.requireNonNull(name);
-        this.pemCertificate = Objects.requireNonNull(pemCertificate);
-        this.pemCertificateChain = Objects.requireNonNull(pemCertificateChain);
-        this.pemCsr = Objects.requireNonNull(pemCsr);
-        this.revocationDetails = Objects.requireNonNull(revocationDetails);
-        this.subjectMode = Objects.requireNonNull(subjectMode);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.certificateDescription = certificateDescription;
+        this.certificateTemplate = certificateTemplate;
+        this.config = config;
+        this.createTime = createTime;
+        this.issuerCertificateAuthority = issuerCertificateAuthority;
+        this.labels = labels;
+        this.lifetime = lifetime;
+        this.name = name;
+        this.pemCertificate = pemCertificate;
+        this.pemCertificateChain = pemCertificateChain;
+        this.pemCsr = pemCsr;
+        this.revocationDetails = revocationDetails;
+        this.subjectMode = subjectMode;
+        this.updateTime = updateTime;
     }
 
     /**

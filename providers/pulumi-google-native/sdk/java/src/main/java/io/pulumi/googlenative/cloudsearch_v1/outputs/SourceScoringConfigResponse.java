@@ -17,7 +17,7 @@ public final class SourceScoringConfigResponse {
 
     @OutputCustomType.Constructor({"sourceImportance"})
     private SourceScoringConfigResponse(String sourceImportance) {
-        this.sourceImportance = Objects.requireNonNull(sourceImportance);
+        this.sourceImportance = sourceImportance;
     }
 
     /**

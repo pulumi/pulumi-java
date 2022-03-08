@@ -17,7 +17,7 @@ public final class PushConfigResponse {
 
     @OutputCustomType.Constructor({"pushEndpoint"})
     private PushConfigResponse(String pushEndpoint) {
-        this.pushEndpoint = Objects.requireNonNull(pushEndpoint);
+        this.pushEndpoint = pushEndpoint;
     }
 
     /**

@@ -55,7 +55,7 @@ public final class FirewallPolicyFilterRuleCollectionResponse {
         this.action = action;
         this.name = name;
         this.priority = priority;
-        this.ruleCollectionType = Objects.requireNonNull(ruleCollectionType);
+        this.ruleCollectionType = ruleCollectionType;
         this.rules = rules;
     }
 

@@ -24,8 +24,8 @@ public final class StorageAccountPropertiesResponse {
     private StorageAccountPropertiesResponse(
         String accessKey,
         String storageAccountId) {
-        this.accessKey = Objects.requireNonNull(accessKey);
-        this.storageAccountId = Objects.requireNonNull(storageAccountId);
+        this.accessKey = accessKey;
+        this.storageAccountId = storageAccountId;
     }
 
     /**

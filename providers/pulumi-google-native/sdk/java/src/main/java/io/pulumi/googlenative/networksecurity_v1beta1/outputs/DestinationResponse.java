@@ -39,10 +39,10 @@ public final class DestinationResponse {
         HttpHeaderMatchResponse httpHeaderMatch,
         List<String> methods,
         List<Integer> ports) {
-        this.hosts = Objects.requireNonNull(hosts);
-        this.httpHeaderMatch = Objects.requireNonNull(httpHeaderMatch);
-        this.methods = Objects.requireNonNull(methods);
-        this.ports = Objects.requireNonNull(ports);
+        this.hosts = hosts;
+        this.httpHeaderMatch = httpHeaderMatch;
+        this.methods = methods;
+        this.ports = ports;
     }
 
     /**

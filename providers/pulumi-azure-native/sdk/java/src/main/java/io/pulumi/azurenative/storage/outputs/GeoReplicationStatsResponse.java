@@ -31,9 +31,9 @@ public final class GeoReplicationStatsResponse {
         Boolean canFailover,
         String lastSyncTime,
         String status) {
-        this.canFailover = Objects.requireNonNull(canFailover);
-        this.lastSyncTime = Objects.requireNonNull(lastSyncTime);
-        this.status = Objects.requireNonNull(status);
+        this.canFailover = canFailover;
+        this.lastSyncTime = lastSyncTime;
+        this.status = status;
     }
 
     /**

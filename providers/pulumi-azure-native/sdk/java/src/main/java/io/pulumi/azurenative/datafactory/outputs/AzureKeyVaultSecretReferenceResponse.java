@@ -41,10 +41,10 @@ public final class AzureKeyVaultSecretReferenceResponse {
         @Nullable Object secretVersion,
         LinkedServiceReferenceResponse store,
         String type) {
-        this.secretName = Objects.requireNonNull(secretName);
+        this.secretName = secretName;
         this.secretVersion = secretVersion;
-        this.store = Objects.requireNonNull(store);
-        this.type = Objects.requireNonNull(type);
+        this.store = store;
+        this.type = type;
     }
 
     /**

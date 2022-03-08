@@ -13,7 +13,7 @@ public final class RecordingConfigurationDestinationConfiguration {
 
     @OutputCustomType.Constructor({"s3"})
     private RecordingConfigurationDestinationConfiguration(RecordingConfigurationS3DestinationConfiguration s3) {
-        this.s3 = Objects.requireNonNull(s3);
+        this.s3 = s3;
     }
 
     public RecordingConfigurationS3DestinationConfiguration getS3() {

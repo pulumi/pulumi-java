@@ -72,15 +72,15 @@ public final class GetLivePipelineResult {
         SystemDataResponse systemData,
         String topologyName,
         String type) {
-        this.bitrateKbps = Objects.requireNonNull(bitrateKbps);
+        this.bitrateKbps = bitrateKbps;
         this.description = description;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.name = name;
         this.parameters = parameters;
-        this.state = Objects.requireNonNull(state);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.topologyName = Objects.requireNonNull(topologyName);
-        this.type = Objects.requireNonNull(type);
+        this.state = state;
+        this.systemData = systemData;
+        this.topologyName = topologyName;
+        this.type = type;
     }
 
     /**

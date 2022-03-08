@@ -38,10 +38,10 @@ public final class GetEkmConnectionResult {
         String etag,
         String name,
         List<ServiceResolverResponse> serviceResolvers) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.etag = Objects.requireNonNull(etag);
-        this.name = Objects.requireNonNull(name);
-        this.serviceResolvers = Objects.requireNonNull(serviceResolvers);
+        this.createTime = createTime;
+        this.etag = etag;
+        this.name = name;
+        this.serviceResolvers = serviceResolvers;
     }
 
     /**

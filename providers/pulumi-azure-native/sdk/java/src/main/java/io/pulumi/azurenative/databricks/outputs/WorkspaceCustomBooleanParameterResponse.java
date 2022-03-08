@@ -25,8 +25,8 @@ public final class WorkspaceCustomBooleanParameterResponse {
     private WorkspaceCustomBooleanParameterResponse(
         String type,
         Boolean value) {
-        this.type = Objects.requireNonNull(type);
-        this.value = Objects.requireNonNull(value);
+        this.type = type;
+        this.value = value;
     }
 
     /**

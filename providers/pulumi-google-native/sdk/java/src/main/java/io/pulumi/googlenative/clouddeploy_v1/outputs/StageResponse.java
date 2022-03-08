@@ -25,8 +25,8 @@ public final class StageResponse {
     private StageResponse(
         List<String> profiles,
         String targetId) {
-        this.profiles = Objects.requireNonNull(profiles);
-        this.targetId = Objects.requireNonNull(targetId);
+        this.profiles = profiles;
+        this.targetId = targetId;
     }
 
     /**

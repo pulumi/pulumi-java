@@ -137,21 +137,21 @@ public final class GetNodeTypeResult {
         @Nullable String vmSize) {
         this.applicationPorts = applicationPorts;
         this.capacities = capacities;
-        this.dataDiskSizeGB = Objects.requireNonNull(dataDiskSizeGB);
+        this.dataDiskSizeGB = dataDiskSizeGB;
         this.ephemeralPorts = ephemeralPorts;
-        this.id = Objects.requireNonNull(id);
-        this.isPrimary = Objects.requireNonNull(isPrimary);
-        this.name = Objects.requireNonNull(name);
+        this.id = id;
+        this.isPrimary = isPrimary;
+        this.name = name;
         this.placementProperties = placementProperties;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.vmExtensions = vmExtensions;
         this.vmImageOffer = vmImageOffer;
         this.vmImagePublisher = vmImagePublisher;
         this.vmImageSku = vmImageSku;
         this.vmImageVersion = vmImageVersion;
-        this.vmInstanceCount = Objects.requireNonNull(vmInstanceCount);
+        this.vmInstanceCount = vmInstanceCount;
         this.vmSecrets = vmSecrets;
         this.vmSize = vmSize;
     }

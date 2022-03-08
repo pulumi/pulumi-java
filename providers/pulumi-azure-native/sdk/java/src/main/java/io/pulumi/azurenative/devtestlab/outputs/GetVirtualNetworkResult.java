@@ -98,18 +98,18 @@ public final class GetVirtualNetworkResult {
         String type,
         String uniqueIdentifier) {
         this.allowedSubnets = allowedSubnets;
-        this.createdDate = Objects.requireNonNull(createdDate);
+        this.createdDate = createdDate;
         this.description = description;
         this.externalProviderResourceId = externalProviderResourceId;
-        this.externalSubnets = Objects.requireNonNull(externalSubnets);
-        this.id = Objects.requireNonNull(id);
+        this.externalSubnets = externalSubnets;
+        this.id = id;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.subnetOverrides = subnetOverrides;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
-        this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
+        this.type = type;
+        this.uniqueIdentifier = uniqueIdentifier;
     }
 
     /**

@@ -53,12 +53,12 @@ public final class TargetPortalGroupResponse {
         List<IscsiLunResponse> luns,
         Integer port,
         Integer tag) {
-        this.acls = Objects.requireNonNull(acls);
-        this.attributes = Objects.requireNonNull(attributes);
-        this.endpoints = Objects.requireNonNull(endpoints);
-        this.luns = Objects.requireNonNull(luns);
-        this.port = Objects.requireNonNull(port);
-        this.tag = Objects.requireNonNull(tag);
+        this.acls = acls;
+        this.attributes = attributes;
+        this.endpoints = endpoints;
+        this.luns = luns;
+        this.port = port;
+        this.tag = tag;
     }
 
     /**

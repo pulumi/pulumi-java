@@ -127,21 +127,21 @@ public final class GetServiceResult {
         String type) {
         this.correlationScheme = correlationScheme;
         this.defaultMoveCost = defaultMoveCost;
-        this.etag = Objects.requireNonNull(etag);
-        this.id = Objects.requireNonNull(id);
+        this.etag = etag;
+        this.id = id;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.partitionDescription = partitionDescription;
         this.placementConstraints = placementConstraints;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.serviceDnsName = serviceDnsName;
-        this.serviceKind = Objects.requireNonNull(serviceKind);
+        this.serviceKind = serviceKind;
         this.serviceLoadMetrics = serviceLoadMetrics;
         this.servicePackageActivationMode = servicePackageActivationMode;
         this.servicePlacementPolicies = servicePlacementPolicies;
         this.serviceTypeName = serviceTypeName;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

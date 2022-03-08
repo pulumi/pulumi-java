@@ -18,7 +18,7 @@ public final class BillingResponse {
 
     @OutputCustomType.Constructor({"consumerDestinations"})
     private BillingResponse(List<BillingDestinationResponse> consumerDestinations) {
-        this.consumerDestinations = Objects.requireNonNull(consumerDestinations);
+        this.consumerDestinations = consumerDestinations;
     }
 
     /**

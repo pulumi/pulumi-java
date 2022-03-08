@@ -17,7 +17,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgApt {
 
     @OutputCustomType.Constructor({"name"})
     private OsPolicyAssignmentOsPolicyResourceGroupResourcePkgApt(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

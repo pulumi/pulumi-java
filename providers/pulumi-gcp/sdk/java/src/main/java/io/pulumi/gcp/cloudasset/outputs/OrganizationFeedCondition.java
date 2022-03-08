@@ -42,7 +42,7 @@ public final class OrganizationFeedCondition {
         @Nullable String location,
         @Nullable String title) {
         this.description = description;
-        this.expression = Objects.requireNonNull(expression);
+        this.expression = expression;
         this.location = location;
         this.title = title;
     }

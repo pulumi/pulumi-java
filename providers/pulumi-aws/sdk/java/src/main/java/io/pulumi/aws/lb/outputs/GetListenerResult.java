@@ -40,16 +40,16 @@ public final class GetListenerResult {
         String protocol,
         String sslPolicy,
         Map<String,String> tags) {
-        this.alpnPolicy = Objects.requireNonNull(alpnPolicy);
-        this.arn = Objects.requireNonNull(arn);
-        this.certificateArn = Objects.requireNonNull(certificateArn);
-        this.defaultActions = Objects.requireNonNull(defaultActions);
-        this.id = Objects.requireNonNull(id);
-        this.loadBalancerArn = Objects.requireNonNull(loadBalancerArn);
-        this.port = Objects.requireNonNull(port);
-        this.protocol = Objects.requireNonNull(protocol);
-        this.sslPolicy = Objects.requireNonNull(sslPolicy);
-        this.tags = Objects.requireNonNull(tags);
+        this.alpnPolicy = alpnPolicy;
+        this.arn = arn;
+        this.certificateArn = certificateArn;
+        this.defaultActions = defaultActions;
+        this.id = id;
+        this.loadBalancerArn = loadBalancerArn;
+        this.port = port;
+        this.protocol = protocol;
+        this.sslPolicy = sslPolicy;
+        this.tags = tags;
     }
 
     public String getAlpnPolicy() {

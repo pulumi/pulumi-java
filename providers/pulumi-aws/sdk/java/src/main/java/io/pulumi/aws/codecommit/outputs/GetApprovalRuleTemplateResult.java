@@ -62,15 +62,15 @@ public final class GetApprovalRuleTemplateResult {
         String lastModifiedUser,
         String name,
         String ruleContentSha256) {
-        this.approvalRuleTemplateId = Objects.requireNonNull(approvalRuleTemplateId);
-        this.content = Objects.requireNonNull(content);
-        this.creationDate = Objects.requireNonNull(creationDate);
-        this.description = Objects.requireNonNull(description);
-        this.id = Objects.requireNonNull(id);
-        this.lastModifiedDate = Objects.requireNonNull(lastModifiedDate);
-        this.lastModifiedUser = Objects.requireNonNull(lastModifiedUser);
-        this.name = Objects.requireNonNull(name);
-        this.ruleContentSha256 = Objects.requireNonNull(ruleContentSha256);
+        this.approvalRuleTemplateId = approvalRuleTemplateId;
+        this.content = content;
+        this.creationDate = creationDate;
+        this.description = description;
+        this.id = id;
+        this.lastModifiedDate = lastModifiedDate;
+        this.lastModifiedUser = lastModifiedUser;
+        this.name = name;
+        this.ruleContentSha256 = ruleContentSha256;
     }
 
     /**

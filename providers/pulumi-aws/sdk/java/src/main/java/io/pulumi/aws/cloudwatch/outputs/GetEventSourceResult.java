@@ -46,12 +46,12 @@ public final class GetEventSourceResult {
         String name,
         @Nullable String namePrefix,
         String state) {
-        this.arn = Objects.requireNonNull(arn);
-        this.createdBy = Objects.requireNonNull(createdBy);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
+        this.arn = arn;
+        this.createdBy = createdBy;
+        this.id = id;
+        this.name = name;
         this.namePrefix = namePrefix;
-        this.state = Objects.requireNonNull(state);
+        this.state = state;
     }
 
     /**

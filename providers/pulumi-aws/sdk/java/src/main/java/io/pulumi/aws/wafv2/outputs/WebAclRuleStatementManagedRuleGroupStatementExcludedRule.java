@@ -17,7 +17,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatementExcludedRule {
 
     @OutputCustomType.Constructor({"name"})
     private WebAclRuleStatementManagedRuleGroupStatementExcludedRule(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

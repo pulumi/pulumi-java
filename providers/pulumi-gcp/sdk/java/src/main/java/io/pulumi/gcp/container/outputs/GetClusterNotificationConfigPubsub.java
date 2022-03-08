@@ -17,8 +17,8 @@ public final class GetClusterNotificationConfigPubsub {
     private GetClusterNotificationConfigPubsub(
         Boolean enabled,
         String topic) {
-        this.enabled = Objects.requireNonNull(enabled);
-        this.topic = Objects.requireNonNull(topic);
+        this.enabled = enabled;
+        this.topic = topic;
     }
 
     public Boolean getEnabled() {

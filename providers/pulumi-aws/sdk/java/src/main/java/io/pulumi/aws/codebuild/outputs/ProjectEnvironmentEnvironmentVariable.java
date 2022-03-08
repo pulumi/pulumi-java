@@ -32,9 +32,9 @@ public final class ProjectEnvironmentEnvironmentVariable {
         String name,
         @Nullable String type,
         String value) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.type = type;
-        this.value = Objects.requireNonNull(value);
+        this.value = value;
     }
 
     /**

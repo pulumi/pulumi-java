@@ -28,7 +28,7 @@ public final class ConnectorFirehoseLogDelivery {
         @Nullable String deliveryStream,
         Boolean enabled) {
         this.deliveryStream = deliveryStream;
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
     }
 
     /**

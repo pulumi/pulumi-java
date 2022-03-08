@@ -30,10 +30,10 @@ public final class GetProductResult {
         String id,
         String result,
         String serviceCode) {
-        this.filters = Objects.requireNonNull(filters);
-        this.id = Objects.requireNonNull(id);
-        this.result = Objects.requireNonNull(result);
-        this.serviceCode = Objects.requireNonNull(serviceCode);
+        this.filters = filters;
+        this.id = id;
+        this.result = result;
+        this.serviceCode = serviceCode;
     }
 
     public List<GetProductFilter> getFilters() {

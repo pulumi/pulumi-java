@@ -94,19 +94,19 @@ public final class GetCaseResult {
         Boolean testCase,
         String timeZone,
         String updateTime) {
-        this.classification = Objects.requireNonNull(classification);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.creator = Objects.requireNonNull(creator);
-        this.description = Objects.requireNonNull(description);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.escalated = Objects.requireNonNull(escalated);
-        this.name = Objects.requireNonNull(name);
-        this.priority = Objects.requireNonNull(priority);
-        this.state = Objects.requireNonNull(state);
-        this.subscriberEmailAddresses = Objects.requireNonNull(subscriberEmailAddresses);
-        this.testCase = Objects.requireNonNull(testCase);
-        this.timeZone = Objects.requireNonNull(timeZone);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.classification = classification;
+        this.createTime = createTime;
+        this.creator = creator;
+        this.description = description;
+        this.displayName = displayName;
+        this.escalated = escalated;
+        this.name = name;
+        this.priority = priority;
+        this.state = state;
+        this.subscriberEmailAddresses = subscriberEmailAddresses;
+        this.testCase = testCase;
+        this.timeZone = timeZone;
+        this.updateTime = updateTime;
     }
 
     /**

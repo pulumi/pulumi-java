@@ -92,13 +92,13 @@ public final class GetSourceControlResult {
         this.creationTime = creationTime;
         this.description = description;
         this.folderPath = folderPath;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.lastModifiedTime = lastModifiedTime;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.publishRunbook = publishRunbook;
         this.repoUrl = repoUrl;
         this.sourceType = sourceType;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

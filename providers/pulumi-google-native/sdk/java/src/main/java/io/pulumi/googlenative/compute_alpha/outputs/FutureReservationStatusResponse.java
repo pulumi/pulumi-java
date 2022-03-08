@@ -37,10 +37,10 @@ public final class FutureReservationStatusResponse {
         String fulfilledCount,
         String lockTime,
         String procurementStatus) {
-        this.autoCreatedReservations = Objects.requireNonNull(autoCreatedReservations);
-        this.fulfilledCount = Objects.requireNonNull(fulfilledCount);
-        this.lockTime = Objects.requireNonNull(lockTime);
-        this.procurementStatus = Objects.requireNonNull(procurementStatus);
+        this.autoCreatedReservations = autoCreatedReservations;
+        this.fulfilledCount = fulfilledCount;
+        this.lockTime = lockTime;
+        this.procurementStatus = procurementStatus;
     }
 
     /**

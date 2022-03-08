@@ -35,7 +35,7 @@ public final class FieldDefinitionResponse {
         String type) {
         this.isEncrypted = isEncrypted;
         this.isOptional = isOptional;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

@@ -63,7 +63,7 @@ public final class ClusterVpcConfig {
         this.endpointPublicAccess = endpointPublicAccess;
         this.publicAccessCidrs = publicAccessCidrs;
         this.securityGroupIds = securityGroupIds;
-        this.subnetIds = Objects.requireNonNull(subnetIds);
+        this.subnetIds = subnetIds;
         this.vpcId = vpcId;
     }
 

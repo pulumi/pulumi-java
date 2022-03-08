@@ -33,9 +33,9 @@ public final class ScriptSecureStringExecutionParameterResponse {
         String name,
         @Nullable String secureValue,
         String type) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.secureValue = secureValue;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

@@ -42,7 +42,7 @@ public final class VmwareCbtPolicyDetailsResponse {
         @Nullable Integer recoveryPointHistoryInMinutes) {
         this.appConsistentFrequencyInMinutes = appConsistentFrequencyInMinutes;
         this.crashConsistentFrequencyInMinutes = crashConsistentFrequencyInMinutes;
-        this.instanceType = Objects.requireNonNull(instanceType);
+        this.instanceType = instanceType;
         this.recoveryPointHistoryInMinutes = recoveryPointHistoryInMinutes;
     }
 

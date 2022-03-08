@@ -80,17 +80,17 @@ public final class GetServerAdvisorResult {
         String recommendationsStatus,
         List<RecommendedActionResponse> recommendedActions,
         String type) {
-        this.advisorStatus = Objects.requireNonNull(advisorStatus);
-        this.autoExecuteStatus = Objects.requireNonNull(autoExecuteStatus);
-        this.autoExecuteStatusInheritedFrom = Objects.requireNonNull(autoExecuteStatusInheritedFrom);
-        this.id = Objects.requireNonNull(id);
-        this.kind = Objects.requireNonNull(kind);
-        this.lastChecked = Objects.requireNonNull(lastChecked);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.recommendationsStatus = Objects.requireNonNull(recommendationsStatus);
-        this.recommendedActions = Objects.requireNonNull(recommendedActions);
-        this.type = Objects.requireNonNull(type);
+        this.advisorStatus = advisorStatus;
+        this.autoExecuteStatus = autoExecuteStatus;
+        this.autoExecuteStatusInheritedFrom = autoExecuteStatusInheritedFrom;
+        this.id = id;
+        this.kind = kind;
+        this.lastChecked = lastChecked;
+        this.location = location;
+        this.name = name;
+        this.recommendationsStatus = recommendationsStatus;
+        this.recommendedActions = recommendedActions;
+        this.type = type;
     }
 
     /**

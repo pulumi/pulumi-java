@@ -66,15 +66,15 @@ public final class GetApplicationPackageResult {
         String storageUrl,
         String storageUrlExpiry,
         String type) {
-        this.etag = Objects.requireNonNull(etag);
-        this.format = Objects.requireNonNull(format);
-        this.id = Objects.requireNonNull(id);
-        this.lastActivationTime = Objects.requireNonNull(lastActivationTime);
-        this.name = Objects.requireNonNull(name);
-        this.state = Objects.requireNonNull(state);
-        this.storageUrl = Objects.requireNonNull(storageUrl);
-        this.storageUrlExpiry = Objects.requireNonNull(storageUrlExpiry);
-        this.type = Objects.requireNonNull(type);
+        this.etag = etag;
+        this.format = format;
+        this.id = id;
+        this.lastActivationTime = lastActivationTime;
+        this.name = name;
+        this.state = state;
+        this.storageUrl = storageUrl;
+        this.storageUrlExpiry = storageUrlExpiry;
+        this.type = type;
     }
 
     /**

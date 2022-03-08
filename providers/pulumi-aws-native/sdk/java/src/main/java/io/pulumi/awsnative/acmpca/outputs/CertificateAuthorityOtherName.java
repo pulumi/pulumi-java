@@ -16,8 +16,8 @@ public final class CertificateAuthorityOtherName {
     private CertificateAuthorityOtherName(
         String typeId,
         String value) {
-        this.typeId = Objects.requireNonNull(typeId);
-        this.value = Objects.requireNonNull(value);
+        this.typeId = typeId;
+        this.value = value;
     }
 
     public String getTypeId() {

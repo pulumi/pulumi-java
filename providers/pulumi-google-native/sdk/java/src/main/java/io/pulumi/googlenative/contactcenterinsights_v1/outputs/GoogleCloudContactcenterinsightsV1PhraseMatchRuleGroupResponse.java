@@ -26,8 +26,8 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupRespons
     private GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupResponse(
         List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse> phraseMatchRules,
         String type) {
-        this.phraseMatchRules = Objects.requireNonNull(phraseMatchRules);
-        this.type = Objects.requireNonNull(type);
+        this.phraseMatchRules = phraseMatchRules;
+        this.type = type;
     }
 
     /**

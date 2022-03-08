@@ -16,8 +16,8 @@ public final class GetBrokerLogs {
     private GetBrokerLogs(
         Boolean audit,
         Boolean general) {
-        this.audit = Objects.requireNonNull(audit);
-        this.general = Objects.requireNonNull(general);
+        this.audit = audit;
+        this.general = general;
     }
 
     public Boolean getAudit() {

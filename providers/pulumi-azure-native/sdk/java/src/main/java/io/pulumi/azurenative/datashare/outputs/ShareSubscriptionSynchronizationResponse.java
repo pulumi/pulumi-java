@@ -55,13 +55,13 @@ public final class ShareSubscriptionSynchronizationResponse {
         String status,
         String synchronizationId,
         String synchronizationMode) {
-        this.durationMs = Objects.requireNonNull(durationMs);
-        this.endTime = Objects.requireNonNull(endTime);
-        this.message = Objects.requireNonNull(message);
-        this.startTime = Objects.requireNonNull(startTime);
-        this.status = Objects.requireNonNull(status);
-        this.synchronizationId = Objects.requireNonNull(synchronizationId);
-        this.synchronizationMode = Objects.requireNonNull(synchronizationMode);
+        this.durationMs = durationMs;
+        this.endTime = endTime;
+        this.message = message;
+        this.startTime = startTime;
+        this.status = status;
+        this.synchronizationId = synchronizationId;
+        this.synchronizationMode = synchronizationMode;
     }
 
     /**

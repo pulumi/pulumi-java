@@ -19,7 +19,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
 
     @OutputCustomType.Constructor({"transformations"})
     private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformations(List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformation> transformations) {
-        this.transformations = Objects.requireNonNull(transformations);
+        this.transformations = transformations;
     }
 
     /**

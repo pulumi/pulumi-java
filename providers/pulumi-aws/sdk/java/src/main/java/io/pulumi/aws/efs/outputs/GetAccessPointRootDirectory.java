@@ -26,8 +26,8 @@ public final class GetAccessPointRootDirectory {
     private GetAccessPointRootDirectory(
         List<GetAccessPointRootDirectoryCreationInfo> creationInfos,
         String path) {
-        this.creationInfos = Objects.requireNonNull(creationInfos);
-        this.path = Objects.requireNonNull(path);
+        this.creationInfos = creationInfos;
+        this.path = path;
     }
 
     /**

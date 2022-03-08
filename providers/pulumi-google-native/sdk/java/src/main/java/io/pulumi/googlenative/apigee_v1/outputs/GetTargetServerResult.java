@@ -57,13 +57,13 @@ public final class GetTargetServerResult {
         Integer port,
         String protocol,
         GoogleCloudApigeeV1TlsInfoResponse sSLInfo) {
-        this.description = Objects.requireNonNull(description);
-        this.host = Objects.requireNonNull(host);
-        this.isEnabled = Objects.requireNonNull(isEnabled);
-        this.name = Objects.requireNonNull(name);
-        this.port = Objects.requireNonNull(port);
-        this.protocol = Objects.requireNonNull(protocol);
-        this.sSLInfo = Objects.requireNonNull(sSLInfo);
+        this.description = description;
+        this.host = host;
+        this.isEnabled = isEnabled;
+        this.name = name;
+        this.port = port;
+        this.protocol = protocol;
+        this.sSLInfo = sSLInfo;
     }
 
     /**

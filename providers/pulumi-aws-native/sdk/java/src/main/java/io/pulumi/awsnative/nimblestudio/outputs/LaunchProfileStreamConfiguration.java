@@ -61,12 +61,12 @@ public final class LaunchProfileStreamConfiguration {
         @Nullable Double maxStoppedSessionLengthInMinutes,
         @Nullable LaunchProfileStreamConfigurationSessionStorage sessionStorage,
         List<String> streamingImageIds) {
-        this.clipboardMode = Objects.requireNonNull(clipboardMode);
-        this.ec2InstanceTypes = Objects.requireNonNull(ec2InstanceTypes);
+        this.clipboardMode = clipboardMode;
+        this.ec2InstanceTypes = ec2InstanceTypes;
         this.maxSessionLengthInMinutes = maxSessionLengthInMinutes;
         this.maxStoppedSessionLengthInMinutes = maxStoppedSessionLengthInMinutes;
         this.sessionStorage = sessionStorage;
-        this.streamingImageIds = Objects.requireNonNull(streamingImageIds);
+        this.streamingImageIds = streamingImageIds;
     }
 
     public LaunchProfileStreamingClipboardMode getClipboardMode() {

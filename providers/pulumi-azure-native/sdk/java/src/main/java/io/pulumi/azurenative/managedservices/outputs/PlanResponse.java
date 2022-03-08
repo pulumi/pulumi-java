@@ -36,10 +36,10 @@ public final class PlanResponse {
         String product,
         String publisher,
         String version) {
-        this.name = Objects.requireNonNull(name);
-        this.product = Objects.requireNonNull(product);
-        this.publisher = Objects.requireNonNull(publisher);
-        this.version = Objects.requireNonNull(version);
+        this.name = name;
+        this.product = product;
+        this.publisher = publisher;
+        this.version = version;
     }
 
     /**

@@ -30,7 +30,7 @@ public final class ContainerUpload {
         this.content = content;
         this.contentBase64 = contentBase64;
         this.executable = executable;
-        this.file = Objects.requireNonNull(file);
+        this.file = file;
         this.source = source;
         this.sourceHash = sourceHash;
     }

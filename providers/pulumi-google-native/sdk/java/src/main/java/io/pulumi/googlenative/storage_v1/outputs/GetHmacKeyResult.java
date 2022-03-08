@@ -66,15 +66,15 @@ public final class GetHmacKeyResult {
         String state,
         String timeCreated,
         String updated) {
-        this.accessId = Objects.requireNonNull(accessId);
-        this.etag = Objects.requireNonNull(etag);
-        this.kind = Objects.requireNonNull(kind);
-        this.project = Objects.requireNonNull(project);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
-        this.state = Objects.requireNonNull(state);
-        this.timeCreated = Objects.requireNonNull(timeCreated);
-        this.updated = Objects.requireNonNull(updated);
+        this.accessId = accessId;
+        this.etag = etag;
+        this.kind = kind;
+        this.project = project;
+        this.selfLink = selfLink;
+        this.serviceAccountEmail = serviceAccountEmail;
+        this.state = state;
+        this.timeCreated = timeCreated;
+        this.updated = updated;
     }
 
     /**

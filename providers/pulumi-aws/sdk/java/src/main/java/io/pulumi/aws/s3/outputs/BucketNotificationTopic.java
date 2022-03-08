@@ -45,11 +45,11 @@ public final class BucketNotificationTopic {
         @Nullable String filterSuffix,
         @Nullable String id,
         String topicArn) {
-        this.events = Objects.requireNonNull(events);
+        this.events = events;
         this.filterPrefix = filterPrefix;
         this.filterSuffix = filterSuffix;
         this.id = id;
-        this.topicArn = Objects.requireNonNull(topicArn);
+        this.topicArn = topicArn;
     }
 
     /**

@@ -36,8 +36,8 @@ public final class DataQualityJobDefinitionEndpointInput {
         String localPath,
         @Nullable DataQualityJobDefinitionEndpointInputS3DataDistributionType s3DataDistributionType,
         @Nullable DataQualityJobDefinitionEndpointInputS3InputMode s3InputMode) {
-        this.endpointName = Objects.requireNonNull(endpointName);
-        this.localPath = Objects.requireNonNull(localPath);
+        this.endpointName = endpointName;
+        this.localPath = localPath;
         this.s3DataDistributionType = s3DataDistributionType;
         this.s3InputMode = s3InputMode;
     }

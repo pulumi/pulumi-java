@@ -36,10 +36,10 @@ public final class GatewayConfigResponse {
         String gatewayType,
         String lastAccessedGatewayId,
         String lastAccessedGatewayTime) {
-        this.gatewayAuthMethod = Objects.requireNonNull(gatewayAuthMethod);
-        this.gatewayType = Objects.requireNonNull(gatewayType);
-        this.lastAccessedGatewayId = Objects.requireNonNull(lastAccessedGatewayId);
-        this.lastAccessedGatewayTime = Objects.requireNonNull(lastAccessedGatewayTime);
+        this.gatewayAuthMethod = gatewayAuthMethod;
+        this.gatewayType = gatewayType;
+        this.lastAccessedGatewayId = lastAccessedGatewayId;
+        this.lastAccessedGatewayTime = lastAccessedGatewayTime;
     }
 
     /**

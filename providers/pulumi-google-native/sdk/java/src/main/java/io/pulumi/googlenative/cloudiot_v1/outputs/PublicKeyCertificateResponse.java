@@ -31,9 +31,9 @@ public final class PublicKeyCertificateResponse {
         String certificate,
         String format,
         X509CertificateDetailsResponse x509Details) {
-        this.certificate = Objects.requireNonNull(certificate);
-        this.format = Objects.requireNonNull(format);
-        this.x509Details = Objects.requireNonNull(x509Details);
+        this.certificate = certificate;
+        this.format = format;
+        this.x509Details = x509Details;
     }
 
     /**

@@ -79,17 +79,17 @@ public final class OutlierDetectionResponse {
         Integer successRateMinimumHosts,
         Integer successRateRequestVolume,
         Integer successRateStdevFactor) {
-        this.baseEjectionTime = Objects.requireNonNull(baseEjectionTime);
-        this.consecutiveErrors = Objects.requireNonNull(consecutiveErrors);
-        this.consecutiveGatewayFailure = Objects.requireNonNull(consecutiveGatewayFailure);
-        this.enforcingConsecutiveErrors = Objects.requireNonNull(enforcingConsecutiveErrors);
-        this.enforcingConsecutiveGatewayFailure = Objects.requireNonNull(enforcingConsecutiveGatewayFailure);
-        this.enforcingSuccessRate = Objects.requireNonNull(enforcingSuccessRate);
-        this.interval = Objects.requireNonNull(interval);
-        this.maxEjectionPercent = Objects.requireNonNull(maxEjectionPercent);
-        this.successRateMinimumHosts = Objects.requireNonNull(successRateMinimumHosts);
-        this.successRateRequestVolume = Objects.requireNonNull(successRateRequestVolume);
-        this.successRateStdevFactor = Objects.requireNonNull(successRateStdevFactor);
+        this.baseEjectionTime = baseEjectionTime;
+        this.consecutiveErrors = consecutiveErrors;
+        this.consecutiveGatewayFailure = consecutiveGatewayFailure;
+        this.enforcingConsecutiveErrors = enforcingConsecutiveErrors;
+        this.enforcingConsecutiveGatewayFailure = enforcingConsecutiveGatewayFailure;
+        this.enforcingSuccessRate = enforcingSuccessRate;
+        this.interval = interval;
+        this.maxEjectionPercent = maxEjectionPercent;
+        this.successRateMinimumHosts = successRateMinimumHosts;
+        this.successRateRequestVolume = successRateRequestVolume;
+        this.successRateStdevFactor = successRateStdevFactor;
     }
 
     /**

@@ -44,14 +44,14 @@ public final class GetGroupMembershipsMembership {
         List<GetGroupMembershipsMembershipRole> roles,
         String type,
         String updateTime) {
-        this.createTime = Objects.requireNonNull(createTime);
-        this.group = Objects.requireNonNull(group);
-        this.memberKeys = Objects.requireNonNull(memberKeys);
-        this.name = Objects.requireNonNull(name);
-        this.preferredMemberKeys = Objects.requireNonNull(preferredMemberKeys);
-        this.roles = Objects.requireNonNull(roles);
-        this.type = Objects.requireNonNull(type);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.createTime = createTime;
+        this.group = group;
+        this.memberKeys = memberKeys;
+        this.name = name;
+        this.preferredMemberKeys = preferredMemberKeys;
+        this.roles = roles;
+        this.type = type;
+        this.updateTime = updateTime;
     }
 
     public String getCreateTime() {

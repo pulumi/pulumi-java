@@ -17,7 +17,7 @@ public final class GetInstanceEnclaveOption {
 
     @OutputCustomType.Constructor({"enabled"})
     private GetInstanceEnclaveOption(Boolean enabled) {
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
     }
 
     /**

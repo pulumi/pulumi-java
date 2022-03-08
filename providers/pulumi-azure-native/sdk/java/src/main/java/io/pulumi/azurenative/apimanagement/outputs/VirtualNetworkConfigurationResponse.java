@@ -33,8 +33,8 @@ public final class VirtualNetworkConfigurationResponse {
         String subnetname,
         String vnetid) {
         this.subnetResourceId = subnetResourceId;
-        this.subnetname = Objects.requireNonNull(subnetname);
-        this.vnetid = Objects.requireNonNull(vnetid);
+        this.subnetname = subnetname;
+        this.vnetid = vnetid;
     }
 
     /**

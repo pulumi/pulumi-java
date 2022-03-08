@@ -57,7 +57,7 @@ public final class AttestorAttestationAuthorityNote {
         String noteReference,
         @Nullable List<AttestorAttestationAuthorityNotePublicKey> publicKeys) {
         this.delegationServiceAccountEmail = delegationServiceAccountEmail;
-        this.noteReference = Objects.requireNonNull(noteReference);
+        this.noteReference = noteReference;
         this.publicKeys = publicKeys;
     }
 

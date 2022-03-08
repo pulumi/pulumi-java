@@ -39,11 +39,11 @@ public final class GetLocationResult {
         String id,
         String locationCode,
         String locationName) {
-        this.availablePortSpeeds = Objects.requireNonNull(availablePortSpeeds);
-        this.availableProviders = Objects.requireNonNull(availableProviders);
-        this.id = Objects.requireNonNull(id);
-        this.locationCode = Objects.requireNonNull(locationCode);
-        this.locationName = Objects.requireNonNull(locationName);
+        this.availablePortSpeeds = availablePortSpeeds;
+        this.availableProviders = availableProviders;
+        this.id = id;
+        this.locationCode = locationCode;
+        this.locationName = locationName;
     }
 
     /**

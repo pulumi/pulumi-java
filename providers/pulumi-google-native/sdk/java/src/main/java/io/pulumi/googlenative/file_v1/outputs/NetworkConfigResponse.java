@@ -43,11 +43,11 @@ public final class NetworkConfigResponse {
         List<String> modes,
         String network,
         String reservedIpRange) {
-        this.connectMode = Objects.requireNonNull(connectMode);
-        this.ipAddresses = Objects.requireNonNull(ipAddresses);
-        this.modes = Objects.requireNonNull(modes);
-        this.network = Objects.requireNonNull(network);
-        this.reservedIpRange = Objects.requireNonNull(reservedIpRange);
+        this.connectMode = connectMode;
+        this.ipAddresses = ipAddresses;
+        this.modes = modes;
+        this.network = network;
+        this.reservedIpRange = reservedIpRange;
     }
 
     /**

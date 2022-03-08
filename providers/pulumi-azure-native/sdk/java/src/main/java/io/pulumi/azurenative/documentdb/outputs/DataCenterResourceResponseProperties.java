@@ -58,7 +58,7 @@ public final class DataCenterResourceResponseProperties {
         this.delegatedSubnetId = delegatedSubnetId;
         this.nodeCount = nodeCount;
         this.provisioningState = provisioningState;
-        this.seedNodes = Objects.requireNonNull(seedNodes);
+        this.seedNodes = seedNodes;
     }
 
     /**

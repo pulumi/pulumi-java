@@ -17,7 +17,7 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
 
     @OutputCustomType.Constructor({"addressDefinition"})
     private RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSource(String addressDefinition) {
-        this.addressDefinition = Objects.requireNonNull(addressDefinition);
+        this.addressDefinition = addressDefinition;
     }
 
     /**

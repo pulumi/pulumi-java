@@ -30,8 +30,8 @@ public final class SubnetworkSecondaryIpRange {
     private SubnetworkSecondaryIpRange(
         String ipCidrRange,
         String rangeName) {
-        this.ipCidrRange = Objects.requireNonNull(ipCidrRange);
-        this.rangeName = Objects.requireNonNull(rangeName);
+        this.ipCidrRange = ipCidrRange;
+        this.rangeName = rangeName;
     }
 
     /**

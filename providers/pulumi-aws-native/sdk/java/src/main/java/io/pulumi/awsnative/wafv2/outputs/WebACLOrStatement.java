@@ -14,7 +14,7 @@ public final class WebACLOrStatement {
 
     @OutputCustomType.Constructor({"statements"})
     private WebACLOrStatement(List<WebACLStatement> statements) {
-        this.statements = Objects.requireNonNull(statements);
+        this.statements = statements;
     }
 
     public List<WebACLStatement> getStatements() {

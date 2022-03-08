@@ -17,7 +17,7 @@ public final class GoogleCloudDatalabelingV1beta1SentimentConfigResponse {
 
     @OutputCustomType.Constructor({"enableLabelSentimentSelection"})
     private GoogleCloudDatalabelingV1beta1SentimentConfigResponse(Boolean enableLabelSentimentSelection) {
-        this.enableLabelSentimentSelection = Objects.requireNonNull(enableLabelSentimentSelection);
+        this.enableLabelSentimentSelection = enableLabelSentimentSelection;
     }
 
     /**

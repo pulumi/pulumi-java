@@ -17,7 +17,7 @@ public final class NodeInputResponse {
 
     @OutputCustomType.Constructor({"nodeName"})
     private NodeInputResponse(String nodeName) {
-        this.nodeName = Objects.requireNonNull(nodeName);
+        this.nodeName = nodeName;
     }
 
     /**

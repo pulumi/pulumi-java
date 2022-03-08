@@ -25,8 +25,8 @@ public final class IdentityResponse {
     private IdentityResponse(
         Integer revision,
         String updateId) {
-        this.revision = Objects.requireNonNull(revision);
-        this.updateId = Objects.requireNonNull(updateId);
+        this.revision = revision;
+        this.updateId = updateId;
     }
 
     /**

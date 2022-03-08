@@ -78,16 +78,16 @@ public final class GetDomainClusterConfig {
         String warmType,
         List<GetDomainClusterConfigZoneAwarenessConfig> zoneAwarenessConfigs,
         Boolean zoneAwarenessEnabled) {
-        this.dedicatedMasterCount = Objects.requireNonNull(dedicatedMasterCount);
-        this.dedicatedMasterEnabled = Objects.requireNonNull(dedicatedMasterEnabled);
-        this.dedicatedMasterType = Objects.requireNonNull(dedicatedMasterType);
-        this.instanceCount = Objects.requireNonNull(instanceCount);
-        this.instanceType = Objects.requireNonNull(instanceType);
-        this.warmCount = Objects.requireNonNull(warmCount);
+        this.dedicatedMasterCount = dedicatedMasterCount;
+        this.dedicatedMasterEnabled = dedicatedMasterEnabled;
+        this.dedicatedMasterType = dedicatedMasterType;
+        this.instanceCount = instanceCount;
+        this.instanceType = instanceType;
+        this.warmCount = warmCount;
         this.warmEnabled = warmEnabled;
-        this.warmType = Objects.requireNonNull(warmType);
-        this.zoneAwarenessConfigs = Objects.requireNonNull(zoneAwarenessConfigs);
-        this.zoneAwarenessEnabled = Objects.requireNonNull(zoneAwarenessEnabled);
+        this.warmType = warmType;
+        this.zoneAwarenessConfigs = zoneAwarenessConfigs;
+        this.zoneAwarenessEnabled = zoneAwarenessEnabled;
     }
 
     /**

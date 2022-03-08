@@ -24,8 +24,8 @@ public final class MetricDimensionResponse {
     private MetricDimensionResponse(
         String sourceName,
         String sourceType) {
-        this.sourceName = Objects.requireNonNull(sourceName);
-        this.sourceType = Objects.requireNonNull(sourceType);
+        this.sourceName = sourceName;
+        this.sourceType = sourceType;
     }
 
     /**

@@ -25,8 +25,8 @@ public final class ResourceMetricStatus {
     private ResourceMetricStatus(
         MetricValueStatus current,
         String name) {
-        this.current = Objects.requireNonNull(current);
-        this.name = Objects.requireNonNull(name);
+        this.current = current;
+        this.name = name;
     }
 
     /**

@@ -24,8 +24,8 @@ public final class ConnectorProfileDatadogConnectorProfileCredentials {
     private ConnectorProfileDatadogConnectorProfileCredentials(
         String apiKey,
         String applicationKey) {
-        this.apiKey = Objects.requireNonNull(apiKey);
-        this.applicationKey = Objects.requireNonNull(applicationKey);
+        this.apiKey = apiKey;
+        this.applicationKey = applicationKey;
     }
 
     /**

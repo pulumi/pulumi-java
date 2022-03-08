@@ -44,11 +44,11 @@ public final class JobErrorResponse {
         List<JobErrorDetailResponse> details,
         String message,
         String retry) {
-        this.category = Objects.requireNonNull(category);
-        this.code = Objects.requireNonNull(code);
-        this.details = Objects.requireNonNull(details);
-        this.message = Objects.requireNonNull(message);
-        this.retry = Objects.requireNonNull(retry);
+        this.category = category;
+        this.code = code;
+        this.details = details;
+        this.message = message;
+        this.retry = retry;
     }
 
     /**

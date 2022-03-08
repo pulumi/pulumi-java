@@ -61,15 +61,15 @@ public final class GetEngineVersionResult {
         String version,
         String versionDescription) {
         this.engine = engine;
-        this.engineDescription = Objects.requireNonNull(engineDescription);
-        this.exportableLogTypes = Objects.requireNonNull(exportableLogTypes);
-        this.id = Objects.requireNonNull(id);
-        this.parameterGroupFamily = Objects.requireNonNull(parameterGroupFamily);
+        this.engineDescription = engineDescription;
+        this.exportableLogTypes = exportableLogTypes;
+        this.id = id;
+        this.parameterGroupFamily = parameterGroupFamily;
         this.preferredVersions = preferredVersions;
-        this.supportsLogExportsToCloudwatch = Objects.requireNonNull(supportsLogExportsToCloudwatch);
-        this.validUpgradeTargets = Objects.requireNonNull(validUpgradeTargets);
-        this.version = Objects.requireNonNull(version);
-        this.versionDescription = Objects.requireNonNull(versionDescription);
+        this.supportsLogExportsToCloudwatch = supportsLogExportsToCloudwatch;
+        this.validUpgradeTargets = validUpgradeTargets;
+        this.version = version;
+        this.versionDescription = versionDescription;
     }
 
     public Optional<String> getEngine() {

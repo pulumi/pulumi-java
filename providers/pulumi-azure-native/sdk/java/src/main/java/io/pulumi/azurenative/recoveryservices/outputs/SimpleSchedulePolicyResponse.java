@@ -47,7 +47,7 @@ public final class SimpleSchedulePolicyResponse {
         @Nullable String scheduleRunFrequency,
         @Nullable List<String> scheduleRunTimes,
         @Nullable Integer scheduleWeeklyFrequency) {
-        this.schedulePolicyType = Objects.requireNonNull(schedulePolicyType);
+        this.schedulePolicyType = schedulePolicyType;
         this.scheduleRunDays = scheduleRunDays;
         this.scheduleRunFrequency = scheduleRunFrequency;
         this.scheduleRunTimes = scheduleRunTimes;

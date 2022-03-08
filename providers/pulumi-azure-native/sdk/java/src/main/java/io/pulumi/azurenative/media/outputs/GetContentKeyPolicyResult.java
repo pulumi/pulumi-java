@@ -71,15 +71,15 @@ public final class GetContentKeyPolicyResult {
         String policyId,
         SystemDataResponse systemData,
         String type) {
-        this.created = Objects.requireNonNull(created);
+        this.created = created;
         this.description = description;
-        this.id = Objects.requireNonNull(id);
-        this.lastModified = Objects.requireNonNull(lastModified);
-        this.name = Objects.requireNonNull(name);
-        this.options = Objects.requireNonNull(options);
-        this.policyId = Objects.requireNonNull(policyId);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.id = id;
+        this.lastModified = lastModified;
+        this.name = name;
+        this.options = options;
+        this.policyId = policyId;
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

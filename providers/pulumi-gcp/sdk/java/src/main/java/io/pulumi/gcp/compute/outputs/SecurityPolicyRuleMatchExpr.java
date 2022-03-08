@@ -18,7 +18,7 @@ public final class SecurityPolicyRuleMatchExpr {
 
     @OutputCustomType.Constructor({"expression"})
     private SecurityPolicyRuleMatchExpr(String expression) {
-        this.expression = Objects.requireNonNull(expression);
+        this.expression = expression;
     }
 
     /**

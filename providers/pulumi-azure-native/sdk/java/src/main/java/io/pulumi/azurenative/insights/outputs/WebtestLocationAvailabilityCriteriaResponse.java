@@ -38,10 +38,10 @@ public final class WebtestLocationAvailabilityCriteriaResponse {
         Double failedLocationCount,
         String odataType,
         String webTestId) {
-        this.componentId = Objects.requireNonNull(componentId);
-        this.failedLocationCount = Objects.requireNonNull(failedLocationCount);
-        this.odataType = Objects.requireNonNull(odataType);
-        this.webTestId = Objects.requireNonNull(webTestId);
+        this.componentId = componentId;
+        this.failedLocationCount = failedLocationCount;
+        this.odataType = odataType;
+        this.webTestId = webTestId;
     }
 
     /**

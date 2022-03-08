@@ -45,11 +45,11 @@ public final class RouterBgpResponse {
         List<RouterAdvertisedIpRangeResponse> advertisedIpRanges,
         Integer asn,
         Integer keepaliveInterval) {
-        this.advertiseMode = Objects.requireNonNull(advertiseMode);
-        this.advertisedGroups = Objects.requireNonNull(advertisedGroups);
-        this.advertisedIpRanges = Objects.requireNonNull(advertisedIpRanges);
-        this.asn = Objects.requireNonNull(asn);
-        this.keepaliveInterval = Objects.requireNonNull(keepaliveInterval);
+        this.advertiseMode = advertiseMode;
+        this.advertisedGroups = advertisedGroups;
+        this.advertisedIpRanges = advertisedIpRanges;
+        this.asn = asn;
+        this.keepaliveInterval = keepaliveInterval;
     }
 
     /**

@@ -24,8 +24,8 @@ public final class EventConnectionAuthParametersBasic {
     private EventConnectionAuthParametersBasic(
         String password,
         String username) {
-        this.password = Objects.requireNonNull(password);
-        this.username = Objects.requireNonNull(username);
+        this.password = password;
+        this.username = username;
     }
 
     /**

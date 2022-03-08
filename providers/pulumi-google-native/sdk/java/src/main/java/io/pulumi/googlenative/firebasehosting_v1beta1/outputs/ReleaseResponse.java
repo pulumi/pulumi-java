@@ -50,12 +50,12 @@ public final class ReleaseResponse {
         ActingUserResponse releaseUser,
         String type,
         VersionResponse version) {
-        this.message = Objects.requireNonNull(message);
-        this.name = Objects.requireNonNull(name);
-        this.releaseTime = Objects.requireNonNull(releaseTime);
-        this.releaseUser = Objects.requireNonNull(releaseUser);
-        this.type = Objects.requireNonNull(type);
-        this.version = Objects.requireNonNull(version);
+        this.message = message;
+        this.name = name;
+        this.releaseTime = releaseTime;
+        this.releaseUser = releaseUser;
+        this.type = type;
+        this.version = version;
     }
 
     /**

@@ -18,7 +18,7 @@ public final class LabelSelectorResponse {
 
     @OutputCustomType.Constructor({"labels"})
     private LabelSelectorResponse(Map<String,String> labels) {
-        this.labels = Objects.requireNonNull(labels);
+        this.labels = labels;
     }
 
     /**

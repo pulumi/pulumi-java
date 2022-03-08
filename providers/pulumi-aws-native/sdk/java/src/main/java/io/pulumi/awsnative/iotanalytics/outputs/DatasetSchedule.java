@@ -13,7 +13,7 @@ public final class DatasetSchedule {
 
     @OutputCustomType.Constructor({"scheduleExpression"})
     private DatasetSchedule(String scheduleExpression) {
-        this.scheduleExpression = Objects.requireNonNull(scheduleExpression);
+        this.scheduleExpression = scheduleExpression;
     }
 
     public String getScheduleExpression() {

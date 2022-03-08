@@ -19,9 +19,9 @@ public final class BotOutputContext {
         String name,
         Integer timeToLiveInSeconds,
         Integer turnsToLive) {
-        this.name = Objects.requireNonNull(name);
-        this.timeToLiveInSeconds = Objects.requireNonNull(timeToLiveInSeconds);
-        this.turnsToLive = Objects.requireNonNull(turnsToLive);
+        this.name = name;
+        this.timeToLiveInSeconds = timeToLiveInSeconds;
+        this.turnsToLive = turnsToLive;
     }
 
     public String getName() {

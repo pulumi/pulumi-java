@@ -32,15 +32,15 @@ public final class GetTargetGroupHealthCheck {
         String protocol,
         Integer timeout,
         Integer unhealthyThreshold) {
-        this.enabled = Objects.requireNonNull(enabled);
-        this.healthyThreshold = Objects.requireNonNull(healthyThreshold);
-        this.interval = Objects.requireNonNull(interval);
-        this.matcher = Objects.requireNonNull(matcher);
-        this.path = Objects.requireNonNull(path);
-        this.port = Objects.requireNonNull(port);
-        this.protocol = Objects.requireNonNull(protocol);
-        this.timeout = Objects.requireNonNull(timeout);
-        this.unhealthyThreshold = Objects.requireNonNull(unhealthyThreshold);
+        this.enabled = enabled;
+        this.healthyThreshold = healthyThreshold;
+        this.interval = interval;
+        this.matcher = matcher;
+        this.path = path;
+        this.port = port;
+        this.protocol = protocol;
+        this.timeout = timeout;
+        this.unhealthyThreshold = unhealthyThreshold;
     }
 
     public Boolean getEnabled() {

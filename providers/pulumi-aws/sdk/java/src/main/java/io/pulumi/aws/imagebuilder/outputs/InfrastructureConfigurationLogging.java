@@ -17,7 +17,7 @@ public final class InfrastructureConfigurationLogging {
 
     @OutputCustomType.Constructor({"s3Logs"})
     private InfrastructureConfigurationLogging(InfrastructureConfigurationLoggingS3Logs s3Logs) {
-        this.s3Logs = Objects.requireNonNull(s3Logs);
+        this.s3Logs = s3Logs;
     }
 
     /**

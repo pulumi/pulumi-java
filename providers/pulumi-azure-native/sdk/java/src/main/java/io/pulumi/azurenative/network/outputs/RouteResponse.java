@@ -70,13 +70,13 @@ public final class RouteResponse {
         String provisioningState,
         @Nullable String type) {
         this.addressPrefix = addressPrefix;
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.hasBgpOverride = hasBgpOverride;
         this.id = id;
         this.name = name;
         this.nextHopIpAddress = nextHopIpAddress;
-        this.nextHopType = Objects.requireNonNull(nextHopType);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.nextHopType = nextHopType;
+        this.provisioningState = provisioningState;
         this.type = type;
     }
 

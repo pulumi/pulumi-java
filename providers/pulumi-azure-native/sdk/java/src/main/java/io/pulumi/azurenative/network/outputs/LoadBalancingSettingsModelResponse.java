@@ -60,10 +60,10 @@ public final class LoadBalancingSettingsModelResponse {
         this.additionalLatencyMilliseconds = additionalLatencyMilliseconds;
         this.id = id;
         this.name = name;
-        this.resourceState = Objects.requireNonNull(resourceState);
+        this.resourceState = resourceState;
         this.sampleSize = sampleSize;
         this.successfulSamplesRequired = successfulSamplesRequired;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

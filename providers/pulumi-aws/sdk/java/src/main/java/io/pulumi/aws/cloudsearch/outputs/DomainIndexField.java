@@ -73,11 +73,11 @@ public final class DomainIndexField {
         this.defaultValue = defaultValue;
         this.facet = facet;
         this.highlight = highlight;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.$return = $return;
         this.search = search;
         this.sort = sort;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

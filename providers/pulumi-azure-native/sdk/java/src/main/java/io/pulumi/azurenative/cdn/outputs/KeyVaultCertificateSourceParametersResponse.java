@@ -58,14 +58,14 @@ public final class KeyVaultCertificateSourceParametersResponse {
         String subscriptionId,
         String updateRule,
         String vaultName) {
-        this.deleteRule = Objects.requireNonNull(deleteRule);
-        this.odataType = Objects.requireNonNull(odataType);
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
-        this.secretName = Objects.requireNonNull(secretName);
+        this.deleteRule = deleteRule;
+        this.odataType = odataType;
+        this.resourceGroupName = resourceGroupName;
+        this.secretName = secretName;
         this.secretVersion = secretVersion;
-        this.subscriptionId = Objects.requireNonNull(subscriptionId);
-        this.updateRule = Objects.requireNonNull(updateRule);
-        this.vaultName = Objects.requireNonNull(vaultName);
+        this.subscriptionId = subscriptionId;
+        this.updateRule = updateRule;
+        this.vaultName = vaultName;
     }
 
     /**

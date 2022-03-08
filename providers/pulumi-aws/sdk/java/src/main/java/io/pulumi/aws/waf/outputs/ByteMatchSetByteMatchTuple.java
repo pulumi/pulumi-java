@@ -49,10 +49,10 @@ public final class ByteMatchSetByteMatchTuple {
         String positionalConstraint,
         @Nullable String targetString,
         String textTransformation) {
-        this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
-        this.positionalConstraint = Objects.requireNonNull(positionalConstraint);
+        this.fieldToMatch = fieldToMatch;
+        this.positionalConstraint = positionalConstraint;
         this.targetString = targetString;
-        this.textTransformation = Objects.requireNonNull(textTransformation);
+        this.textTransformation = textTransformation;
     }
 
     /**

@@ -28,7 +28,7 @@ public final class VariableSpecificationResponse {
         @Nullable Object defaultValue,
         String type) {
         this.defaultValue = defaultValue;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

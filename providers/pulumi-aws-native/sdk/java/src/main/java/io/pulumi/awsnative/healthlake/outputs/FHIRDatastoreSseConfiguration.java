@@ -13,7 +13,7 @@ public final class FHIRDatastoreSseConfiguration {
 
     @OutputCustomType.Constructor({"kmsEncryptionConfig"})
     private FHIRDatastoreSseConfiguration(FHIRDatastoreKmsEncryptionConfig kmsEncryptionConfig) {
-        this.kmsEncryptionConfig = Objects.requireNonNull(kmsEncryptionConfig);
+        this.kmsEncryptionConfig = kmsEncryptionConfig;
     }
 
     public FHIRDatastoreKmsEncryptionConfig getKmsEncryptionConfig() {

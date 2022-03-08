@@ -30,9 +30,9 @@ public final class TestCaseReferenceResponse {
         String className,
         String name,
         String testSuiteName) {
-        this.className = Objects.requireNonNull(className);
-        this.name = Objects.requireNonNull(name);
-        this.testSuiteName = Objects.requireNonNull(testSuiteName);
+        this.className = className;
+        this.name = name;
+        this.testSuiteName = testSuiteName;
     }
 
     /**

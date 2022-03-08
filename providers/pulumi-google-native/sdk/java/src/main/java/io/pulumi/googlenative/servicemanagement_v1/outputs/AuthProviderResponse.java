@@ -44,11 +44,11 @@ public final class AuthProviderResponse {
         String issuer,
         String jwksUri,
         List<JwtLocationResponse> jwtLocations) {
-        this.audiences = Objects.requireNonNull(audiences);
-        this.authorizationUrl = Objects.requireNonNull(authorizationUrl);
-        this.issuer = Objects.requireNonNull(issuer);
-        this.jwksUri = Objects.requireNonNull(jwksUri);
-        this.jwtLocations = Objects.requireNonNull(jwtLocations);
+        this.audiences = audiences;
+        this.authorizationUrl = authorizationUrl;
+        this.issuer = issuer;
+        this.jwksUri = jwksUri;
+        this.jwtLocations = jwtLocations;
     }
 
     /**

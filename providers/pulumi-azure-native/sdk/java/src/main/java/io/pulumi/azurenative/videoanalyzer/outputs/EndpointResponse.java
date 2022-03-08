@@ -27,7 +27,7 @@ public final class EndpointResponse {
         @Nullable String endpointUrl,
         String type) {
         this.endpointUrl = endpointUrl;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

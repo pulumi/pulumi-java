@@ -17,7 +17,7 @@ public final class WebAclRuleStatementRuleGroupReferenceStatementExcludedRule {
 
     @OutputCustomType.Constructor({"name"})
     private WebAclRuleStatementRuleGroupReferenceStatementExcludedRule(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

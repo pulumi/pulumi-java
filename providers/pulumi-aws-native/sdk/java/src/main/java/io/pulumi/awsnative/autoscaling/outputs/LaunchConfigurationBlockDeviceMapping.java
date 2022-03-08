@@ -40,7 +40,7 @@ public final class LaunchConfigurationBlockDeviceMapping {
         @Nullable LaunchConfigurationBlockDevice ebs,
         @Nullable Boolean noDevice,
         @Nullable String virtualName) {
-        this.deviceName = Objects.requireNonNull(deviceName);
+        this.deviceName = deviceName;
         this.ebs = ebs;
         this.noDevice = noDevice;
         this.virtualName = virtualName;

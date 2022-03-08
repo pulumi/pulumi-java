@@ -13,7 +13,7 @@ public final class WebACLFieldToMatchSingleHeaderProperties {
 
     @OutputCustomType.Constructor({"name"})
     private WebACLFieldToMatchSingleHeaderProperties(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     public String getName() {

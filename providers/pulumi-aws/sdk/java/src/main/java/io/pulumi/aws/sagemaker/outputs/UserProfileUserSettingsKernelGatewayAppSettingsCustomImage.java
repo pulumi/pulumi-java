@@ -33,8 +33,8 @@ public final class UserProfileUserSettingsKernelGatewayAppSettingsCustomImage {
         String appImageConfigName,
         String imageName,
         @Nullable Integer imageVersionNumber) {
-        this.appImageConfigName = Objects.requireNonNull(appImageConfigName);
-        this.imageName = Objects.requireNonNull(imageName);
+        this.appImageConfigName = appImageConfigName;
+        this.imageName = imageName;
         this.imageVersionNumber = imageVersionNumber;
     }
 

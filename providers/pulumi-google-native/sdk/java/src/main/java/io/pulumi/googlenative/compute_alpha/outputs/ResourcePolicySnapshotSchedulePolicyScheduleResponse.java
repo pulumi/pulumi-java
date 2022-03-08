@@ -20,9 +20,9 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleResponse {
         ResourcePolicyDailyCycleResponse dailySchedule,
         ResourcePolicyHourlyCycleResponse hourlySchedule,
         ResourcePolicyWeeklyCycleResponse weeklySchedule) {
-        this.dailySchedule = Objects.requireNonNull(dailySchedule);
-        this.hourlySchedule = Objects.requireNonNull(hourlySchedule);
-        this.weeklySchedule = Objects.requireNonNull(weeklySchedule);
+        this.dailySchedule = dailySchedule;
+        this.hourlySchedule = hourlySchedule;
+        this.weeklySchedule = weeklySchedule;
     }
 
     public ResourcePolicyDailyCycleResponse getDailySchedule() {

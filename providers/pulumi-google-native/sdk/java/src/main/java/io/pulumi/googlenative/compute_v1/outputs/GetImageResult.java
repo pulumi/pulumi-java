@@ -200,36 +200,36 @@ public final class GetImageResult {
         String sourceType,
         String status,
         List<String> storageLocations) {
-        this.archiveSizeBytes = Objects.requireNonNull(archiveSizeBytes);
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
-        this.deprecated = Objects.requireNonNull(deprecated);
-        this.description = Objects.requireNonNull(description);
-        this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
-        this.family = Objects.requireNonNull(family);
-        this.guestOsFeatures = Objects.requireNonNull(guestOsFeatures);
-        this.imageEncryptionKey = Objects.requireNonNull(imageEncryptionKey);
-        this.kind = Objects.requireNonNull(kind);
-        this.labelFingerprint = Objects.requireNonNull(labelFingerprint);
-        this.labels = Objects.requireNonNull(labels);
-        this.licenseCodes = Objects.requireNonNull(licenseCodes);
-        this.licenses = Objects.requireNonNull(licenses);
-        this.name = Objects.requireNonNull(name);
-        this.rawDisk = Objects.requireNonNull(rawDisk);
-        this.satisfiesPzs = Objects.requireNonNull(satisfiesPzs);
-        this.selfLink = Objects.requireNonNull(selfLink);
-        this.shieldedInstanceInitialState = Objects.requireNonNull(shieldedInstanceInitialState);
-        this.sourceDisk = Objects.requireNonNull(sourceDisk);
-        this.sourceDiskEncryptionKey = Objects.requireNonNull(sourceDiskEncryptionKey);
-        this.sourceDiskId = Objects.requireNonNull(sourceDiskId);
-        this.sourceImage = Objects.requireNonNull(sourceImage);
-        this.sourceImageEncryptionKey = Objects.requireNonNull(sourceImageEncryptionKey);
-        this.sourceImageId = Objects.requireNonNull(sourceImageId);
-        this.sourceSnapshot = Objects.requireNonNull(sourceSnapshot);
-        this.sourceSnapshotEncryptionKey = Objects.requireNonNull(sourceSnapshotEncryptionKey);
-        this.sourceSnapshotId = Objects.requireNonNull(sourceSnapshotId);
-        this.sourceType = Objects.requireNonNull(sourceType);
-        this.status = Objects.requireNonNull(status);
-        this.storageLocations = Objects.requireNonNull(storageLocations);
+        this.archiveSizeBytes = archiveSizeBytes;
+        this.creationTimestamp = creationTimestamp;
+        this.deprecated = deprecated;
+        this.description = description;
+        this.diskSizeGb = diskSizeGb;
+        this.family = family;
+        this.guestOsFeatures = guestOsFeatures;
+        this.imageEncryptionKey = imageEncryptionKey;
+        this.kind = kind;
+        this.labelFingerprint = labelFingerprint;
+        this.labels = labels;
+        this.licenseCodes = licenseCodes;
+        this.licenses = licenses;
+        this.name = name;
+        this.rawDisk = rawDisk;
+        this.satisfiesPzs = satisfiesPzs;
+        this.selfLink = selfLink;
+        this.shieldedInstanceInitialState = shieldedInstanceInitialState;
+        this.sourceDisk = sourceDisk;
+        this.sourceDiskEncryptionKey = sourceDiskEncryptionKey;
+        this.sourceDiskId = sourceDiskId;
+        this.sourceImage = sourceImage;
+        this.sourceImageEncryptionKey = sourceImageEncryptionKey;
+        this.sourceImageId = sourceImageId;
+        this.sourceSnapshot = sourceSnapshot;
+        this.sourceSnapshotEncryptionKey = sourceSnapshotEncryptionKey;
+        this.sourceSnapshotId = sourceSnapshotId;
+        this.sourceType = sourceType;
+        this.status = status;
+        this.storageLocations = storageLocations;
     }
 
     /**

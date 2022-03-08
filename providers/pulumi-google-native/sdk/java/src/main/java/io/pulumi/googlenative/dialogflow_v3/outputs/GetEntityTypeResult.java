@@ -64,14 +64,14 @@ public final class GetEntityTypeResult {
         String kind,
         String name,
         Boolean redact) {
-        this.autoExpansionMode = Objects.requireNonNull(autoExpansionMode);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.enableFuzzyExtraction = Objects.requireNonNull(enableFuzzyExtraction);
-        this.entities = Objects.requireNonNull(entities);
-        this.excludedPhrases = Objects.requireNonNull(excludedPhrases);
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
-        this.redact = Objects.requireNonNull(redact);
+        this.autoExpansionMode = autoExpansionMode;
+        this.displayName = displayName;
+        this.enableFuzzyExtraction = enableFuzzyExtraction;
+        this.entities = entities;
+        this.excludedPhrases = excludedPhrases;
+        this.kind = kind;
+        this.name = name;
+        this.redact = redact;
     }
 
     /**

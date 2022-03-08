@@ -26,8 +26,8 @@ public final class ListSiteIdentifiersAssignedToHostNameResult {
     private ListSiteIdentifiersAssignedToHostNameResult(
         String nextLink,
         List<IdentifierResponse> value) {
-        this.nextLink = Objects.requireNonNull(nextLink);
-        this.value = Objects.requireNonNull(value);
+        this.nextLink = nextLink;
+        this.value = value;
     }
 
     /**

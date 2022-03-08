@@ -18,7 +18,7 @@ public final class ClusterAddonsConfigKalmConfig {
 
     @OutputCustomType.Constructor({"enabled"})
     private ClusterAddonsConfigKalmConfig(Boolean enabled) {
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
     }
 
     /**

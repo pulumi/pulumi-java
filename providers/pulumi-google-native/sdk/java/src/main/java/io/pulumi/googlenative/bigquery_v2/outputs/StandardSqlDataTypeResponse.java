@@ -31,9 +31,9 @@ public final class StandardSqlDataTypeResponse {
         StandardSqlDataTypeResponse arrayElementType,
         StandardSqlStructTypeResponse structType,
         String typeKind) {
-        this.arrayElementType = Objects.requireNonNull(arrayElementType);
-        this.structType = Objects.requireNonNull(structType);
-        this.typeKind = Objects.requireNonNull(typeKind);
+        this.arrayElementType = arrayElementType;
+        this.structType = structType;
+        this.typeKind = typeKind;
     }
 
     /**

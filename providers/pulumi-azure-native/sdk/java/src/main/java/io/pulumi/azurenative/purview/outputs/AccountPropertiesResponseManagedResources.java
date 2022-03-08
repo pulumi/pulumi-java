@@ -30,9 +30,9 @@ public final class AccountPropertiesResponseManagedResources {
         String eventHubNamespace,
         String resourceGroup,
         String storageAccount) {
-        this.eventHubNamespace = Objects.requireNonNull(eventHubNamespace);
-        this.resourceGroup = Objects.requireNonNull(resourceGroup);
-        this.storageAccount = Objects.requireNonNull(storageAccount);
+        this.eventHubNamespace = eventHubNamespace;
+        this.resourceGroup = resourceGroup;
+        this.storageAccount = storageAccount;
     }
 
     /**

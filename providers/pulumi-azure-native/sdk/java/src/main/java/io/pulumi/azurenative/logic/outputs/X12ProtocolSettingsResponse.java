@@ -97,17 +97,17 @@ public final class X12ProtocolSettingsResponse {
         @Nullable List<X12ValidationOverrideResponse> validationOverrides,
         X12ValidationSettingsResponse validationSettings,
         @Nullable List<X12DelimiterOverridesResponse> x12DelimiterOverrides) {
-        this.acknowledgementSettings = Objects.requireNonNull(acknowledgementSettings);
+        this.acknowledgementSettings = acknowledgementSettings;
         this.envelopeOverrides = envelopeOverrides;
-        this.envelopeSettings = Objects.requireNonNull(envelopeSettings);
-        this.framingSettings = Objects.requireNonNull(framingSettings);
-        this.messageFilter = Objects.requireNonNull(messageFilter);
+        this.envelopeSettings = envelopeSettings;
+        this.framingSettings = framingSettings;
+        this.messageFilter = messageFilter;
         this.messageFilterList = messageFilterList;
-        this.processingSettings = Objects.requireNonNull(processingSettings);
-        this.schemaReferences = Objects.requireNonNull(schemaReferences);
-        this.securitySettings = Objects.requireNonNull(securitySettings);
+        this.processingSettings = processingSettings;
+        this.schemaReferences = schemaReferences;
+        this.securitySettings = securitySettings;
         this.validationOverrides = validationOverrides;
-        this.validationSettings = Objects.requireNonNull(validationSettings);
+        this.validationSettings = validationSettings;
         this.x12DelimiterOverrides = x12DelimiterOverrides;
     }
 

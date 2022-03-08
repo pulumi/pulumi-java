@@ -35,7 +35,7 @@ public final class GalleryOSDiskImageResponse {
         Integer sizeInGB,
         @Nullable GalleryArtifactVersionSourceResponse source) {
         this.hostCaching = hostCaching;
-        this.sizeInGB = Objects.requireNonNull(sizeInGB);
+        this.sizeInGB = sizeInGB;
         this.source = source;
     }
 

@@ -39,10 +39,10 @@ public final class MachineExtensionInstanceViewResponse {
         @Nullable MachineExtensionInstanceViewResponseStatus status,
         String type,
         String typeHandlerVersion) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.status = status;
-        this.type = Objects.requireNonNull(type);
-        this.typeHandlerVersion = Objects.requireNonNull(typeHandlerVersion);
+        this.type = type;
+        this.typeHandlerVersion = typeHandlerVersion;
     }
 
     /**

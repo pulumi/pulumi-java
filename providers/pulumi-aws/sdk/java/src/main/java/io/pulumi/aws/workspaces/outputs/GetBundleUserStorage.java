@@ -17,7 +17,7 @@ public final class GetBundleUserStorage {
 
     @OutputCustomType.Constructor({"capacity"})
     private GetBundleUserStorage(String capacity) {
-        this.capacity = Objects.requireNonNull(capacity);
+        this.capacity = capacity;
     }
 
     /**

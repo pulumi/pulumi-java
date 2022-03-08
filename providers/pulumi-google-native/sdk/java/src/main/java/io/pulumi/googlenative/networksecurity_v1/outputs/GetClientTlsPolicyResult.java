@@ -64,14 +64,14 @@ public final class GetClientTlsPolicyResult {
         List<ValidationCAResponse> serverValidationCa,
         String sni,
         String updateTime) {
-        this.clientCertificate = Objects.requireNonNull(clientCertificate);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.description = Objects.requireNonNull(description);
-        this.labels = Objects.requireNonNull(labels);
-        this.name = Objects.requireNonNull(name);
-        this.serverValidationCa = Objects.requireNonNull(serverValidationCa);
-        this.sni = Objects.requireNonNull(sni);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.clientCertificate = clientCertificate;
+        this.createTime = createTime;
+        this.description = description;
+        this.labels = labels;
+        this.name = name;
+        this.serverValidationCa = serverValidationCa;
+        this.sni = sni;
+        this.updateTime = updateTime;
     }
 
     /**

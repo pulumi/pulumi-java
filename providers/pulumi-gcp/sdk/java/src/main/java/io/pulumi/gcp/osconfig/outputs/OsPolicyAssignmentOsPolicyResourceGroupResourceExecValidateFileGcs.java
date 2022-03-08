@@ -33,9 +33,9 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFi
         String bucket,
         @Nullable Integer generation,
         String object) {
-        this.bucket = Objects.requireNonNull(bucket);
+        this.bucket = bucket;
         this.generation = generation;
-        this.object = Objects.requireNonNull(object);
+        this.object = object;
     }
 
     /**

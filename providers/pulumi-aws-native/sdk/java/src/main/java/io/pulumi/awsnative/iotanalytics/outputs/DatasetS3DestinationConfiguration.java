@@ -23,10 +23,10 @@ public final class DatasetS3DestinationConfiguration {
         @Nullable DatasetGlueConfiguration glueConfiguration,
         String key,
         String roleArn) {
-        this.bucket = Objects.requireNonNull(bucket);
+        this.bucket = bucket;
         this.glueConfiguration = glueConfiguration;
-        this.key = Objects.requireNonNull(key);
-        this.roleArn = Objects.requireNonNull(roleArn);
+        this.key = key;
+        this.roleArn = roleArn;
     }
 
     public String getBucket() {

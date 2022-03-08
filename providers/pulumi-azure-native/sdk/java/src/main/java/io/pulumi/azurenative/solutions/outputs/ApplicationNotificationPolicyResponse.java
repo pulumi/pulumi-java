@@ -18,7 +18,7 @@ public final class ApplicationNotificationPolicyResponse {
 
     @OutputCustomType.Constructor({"notificationEndpoints"})
     private ApplicationNotificationPolicyResponse(List<ApplicationNotificationEndpointResponse> notificationEndpoints) {
-        this.notificationEndpoints = Objects.requireNonNull(notificationEndpoints);
+        this.notificationEndpoints = notificationEndpoints;
     }
 
     /**

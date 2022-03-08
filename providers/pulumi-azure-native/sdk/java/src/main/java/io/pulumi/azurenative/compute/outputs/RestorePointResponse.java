@@ -65,14 +65,14 @@ public final class RestorePointResponse {
         RestorePointSourceMetadataResponse sourceMetadata,
         @Nullable String timeCreated,
         String type) {
-        this.consistencyMode = Objects.requireNonNull(consistencyMode);
+        this.consistencyMode = consistencyMode;
         this.excludeDisks = excludeDisks;
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.sourceMetadata = Objects.requireNonNull(sourceMetadata);
+        this.id = id;
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.sourceMetadata = sourceMetadata;
         this.timeCreated = timeCreated;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

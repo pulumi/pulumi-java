@@ -34,7 +34,7 @@ public final class DatasetStateResponse {
         String etag,
         @Nullable String state) {
         this.deprecatedBy = deprecatedBy;
-        this.etag = Objects.requireNonNull(etag);
+        this.etag = etag;
         this.state = state;
     }
 

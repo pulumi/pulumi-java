@@ -66,28 +66,28 @@ public final class GetLoadBalancerResult {
         Map<String,String> tags,
         String vpcId,
         String zoneId) {
-        this.accessLogs = Objects.requireNonNull(accessLogs);
-        this.arn = Objects.requireNonNull(arn);
-        this.arnSuffix = Objects.requireNonNull(arnSuffix);
-        this.customerOwnedIpv4Pool = Objects.requireNonNull(customerOwnedIpv4Pool);
-        this.desyncMitigationMode = Objects.requireNonNull(desyncMitigationMode);
-        this.dnsName = Objects.requireNonNull(dnsName);
-        this.dropInvalidHeaderFields = Objects.requireNonNull(dropInvalidHeaderFields);
-        this.enableDeletionProtection = Objects.requireNonNull(enableDeletionProtection);
-        this.enableHttp2 = Objects.requireNonNull(enableHttp2);
-        this.enableWafFailOpen = Objects.requireNonNull(enableWafFailOpen);
-        this.id = Objects.requireNonNull(id);
-        this.idleTimeout = Objects.requireNonNull(idleTimeout);
-        this.internal = Objects.requireNonNull(internal);
-        this.ipAddressType = Objects.requireNonNull(ipAddressType);
-        this.loadBalancerType = Objects.requireNonNull(loadBalancerType);
-        this.name = Objects.requireNonNull(name);
-        this.securityGroups = Objects.requireNonNull(securityGroups);
-        this.subnetMappings = Objects.requireNonNull(subnetMappings);
-        this.subnets = Objects.requireNonNull(subnets);
-        this.tags = Objects.requireNonNull(tags);
-        this.vpcId = Objects.requireNonNull(vpcId);
-        this.zoneId = Objects.requireNonNull(zoneId);
+        this.accessLogs = accessLogs;
+        this.arn = arn;
+        this.arnSuffix = arnSuffix;
+        this.customerOwnedIpv4Pool = customerOwnedIpv4Pool;
+        this.desyncMitigationMode = desyncMitigationMode;
+        this.dnsName = dnsName;
+        this.dropInvalidHeaderFields = dropInvalidHeaderFields;
+        this.enableDeletionProtection = enableDeletionProtection;
+        this.enableHttp2 = enableHttp2;
+        this.enableWafFailOpen = enableWafFailOpen;
+        this.id = id;
+        this.idleTimeout = idleTimeout;
+        this.internal = internal;
+        this.ipAddressType = ipAddressType;
+        this.loadBalancerType = loadBalancerType;
+        this.name = name;
+        this.securityGroups = securityGroups;
+        this.subnetMappings = subnetMappings;
+        this.subnets = subnets;
+        this.tags = tags;
+        this.vpcId = vpcId;
+        this.zoneId = zoneId;
     }
 
     public GetLoadBalancerAccessLogs getAccessLogs() {

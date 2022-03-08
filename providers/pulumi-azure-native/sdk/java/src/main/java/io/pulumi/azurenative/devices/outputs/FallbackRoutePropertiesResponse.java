@@ -47,10 +47,10 @@ public final class FallbackRoutePropertiesResponse {
         @Nullable String name,
         String source) {
         this.condition = condition;
-        this.endpointNames = Objects.requireNonNull(endpointNames);
-        this.isEnabled = Objects.requireNonNull(isEnabled);
+        this.endpointNames = endpointNames;
+        this.isEnabled = isEnabled;
         this.name = name;
-        this.source = Objects.requireNonNull(source);
+        this.source = source;
     }
 
     /**

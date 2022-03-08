@@ -36,17 +36,17 @@ public final class GetBrokerLdapServerMetadata {
         String userRoleName,
         String userSearchMatching,
         Boolean userSearchSubtree) {
-        this.hosts = Objects.requireNonNull(hosts);
-        this.roleBase = Objects.requireNonNull(roleBase);
-        this.roleName = Objects.requireNonNull(roleName);
-        this.roleSearchMatching = Objects.requireNonNull(roleSearchMatching);
-        this.roleSearchSubtree = Objects.requireNonNull(roleSearchSubtree);
-        this.serviceAccountPassword = Objects.requireNonNull(serviceAccountPassword);
-        this.serviceAccountUsername = Objects.requireNonNull(serviceAccountUsername);
-        this.userBase = Objects.requireNonNull(userBase);
-        this.userRoleName = Objects.requireNonNull(userRoleName);
-        this.userSearchMatching = Objects.requireNonNull(userSearchMatching);
-        this.userSearchSubtree = Objects.requireNonNull(userSearchSubtree);
+        this.hosts = hosts;
+        this.roleBase = roleBase;
+        this.roleName = roleName;
+        this.roleSearchMatching = roleSearchMatching;
+        this.roleSearchSubtree = roleSearchSubtree;
+        this.serviceAccountPassword = serviceAccountPassword;
+        this.serviceAccountUsername = serviceAccountUsername;
+        this.userBase = userBase;
+        this.userRoleName = userRoleName;
+        this.userSearchMatching = userSearchMatching;
+        this.userSearchSubtree = userSearchSubtree;
     }
 
     public List<String> getHosts() {

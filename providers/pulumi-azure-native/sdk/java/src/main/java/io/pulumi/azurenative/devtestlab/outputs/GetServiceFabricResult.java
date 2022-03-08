@@ -76,16 +76,16 @@ public final class GetServiceFabricResult {
         @Nullable Map<String,String> tags,
         String type,
         String uniqueIdentifier) {
-        this.applicableSchedule = Objects.requireNonNull(applicableSchedule);
+        this.applicableSchedule = applicableSchedule;
         this.environmentId = environmentId;
         this.externalServiceFabricId = externalServiceFabricId;
-        this.id = Objects.requireNonNull(id);
+        this.id = id;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
-        this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
+        this.type = type;
+        this.uniqueIdentifier = uniqueIdentifier;
     }
 
     /**

@@ -44,11 +44,11 @@ public final class InMageRcmPolicyDetailsResponse {
         String enableMultiVmSync,
         String instanceType,
         Integer recoveryPointHistoryInMinutes) {
-        this.appConsistentFrequencyInMinutes = Objects.requireNonNull(appConsistentFrequencyInMinutes);
-        this.crashConsistentFrequencyInMinutes = Objects.requireNonNull(crashConsistentFrequencyInMinutes);
-        this.enableMultiVmSync = Objects.requireNonNull(enableMultiVmSync);
-        this.instanceType = Objects.requireNonNull(instanceType);
-        this.recoveryPointHistoryInMinutes = Objects.requireNonNull(recoveryPointHistoryInMinutes);
+        this.appConsistentFrequencyInMinutes = appConsistentFrequencyInMinutes;
+        this.crashConsistentFrequencyInMinutes = crashConsistentFrequencyInMinutes;
+        this.enableMultiVmSync = enableMultiVmSync;
+        this.instanceType = instanceType;
+        this.recoveryPointHistoryInMinutes = recoveryPointHistoryInMinutes;
     }
 
     /**

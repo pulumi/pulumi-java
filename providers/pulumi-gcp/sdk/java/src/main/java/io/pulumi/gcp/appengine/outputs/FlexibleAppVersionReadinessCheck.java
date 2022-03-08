@@ -63,7 +63,7 @@ public final class FlexibleAppVersionReadinessCheck {
         this.checkInterval = checkInterval;
         this.failureThreshold = failureThreshold;
         this.host = host;
-        this.path = Objects.requireNonNull(path);
+        this.path = path;
         this.successThreshold = successThreshold;
         this.timeout = timeout;
     }

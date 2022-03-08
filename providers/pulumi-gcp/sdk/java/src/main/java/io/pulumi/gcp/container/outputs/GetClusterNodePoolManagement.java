@@ -16,8 +16,8 @@ public final class GetClusterNodePoolManagement {
     private GetClusterNodePoolManagement(
         Boolean autoRepair,
         Boolean autoUpgrade) {
-        this.autoRepair = Objects.requireNonNull(autoRepair);
-        this.autoUpgrade = Objects.requireNonNull(autoUpgrade);
+        this.autoRepair = autoRepair;
+        this.autoUpgrade = autoUpgrade;
     }
 
     public Boolean getAutoRepair() {

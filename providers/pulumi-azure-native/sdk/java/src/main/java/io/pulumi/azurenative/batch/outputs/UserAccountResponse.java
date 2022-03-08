@@ -40,8 +40,8 @@ public final class UserAccountResponse {
         @Nullable WindowsUserConfigurationResponse windowsUserConfiguration) {
         this.elevationLevel = elevationLevel;
         this.linuxUserConfiguration = linuxUserConfiguration;
-        this.name = Objects.requireNonNull(name);
-        this.password = Objects.requireNonNull(password);
+        this.name = name;
+        this.password = password;
         this.windowsUserConfiguration = windowsUserConfiguration;
     }
 

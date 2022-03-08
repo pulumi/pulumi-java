@@ -83,12 +83,12 @@ public final class BlobEventsTriggerResponse {
         this.blobPathBeginsWith = blobPathBeginsWith;
         this.blobPathEndsWith = blobPathEndsWith;
         this.description = description;
-        this.events = Objects.requireNonNull(events);
+        this.events = events;
         this.ignoreEmptyBlobs = ignoreEmptyBlobs;
         this.pipelines = pipelines;
-        this.runtimeState = Objects.requireNonNull(runtimeState);
-        this.scope = Objects.requireNonNull(scope);
-        this.type = Objects.requireNonNull(type);
+        this.runtimeState = runtimeState;
+        this.scope = scope;
+        this.type = type;
     }
 
     /**

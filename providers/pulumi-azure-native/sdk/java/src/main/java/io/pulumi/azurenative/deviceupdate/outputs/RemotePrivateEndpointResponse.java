@@ -59,7 +59,7 @@ public final class RemotePrivateEndpointResponse {
         this.manualPrivateLinkServiceConnections = manualPrivateLinkServiceConnections;
         this.privateLinkServiceConnections = privateLinkServiceConnections;
         this.privateLinkServiceProxies = privateLinkServiceProxies;
-        this.vnetTrafficTag = Objects.requireNonNull(vnetTrafficTag);
+        this.vnetTrafficTag = vnetTrafficTag;
     }
 
     /**

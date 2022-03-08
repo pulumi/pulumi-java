@@ -30,9 +30,9 @@ public final class ApplicationDefinitionArtifactResponse {
         String name,
         String type,
         String uri) {
-        this.name = Objects.requireNonNull(name);
-        this.type = Objects.requireNonNull(type);
-        this.uri = Objects.requireNonNull(uri);
+        this.name = name;
+        this.type = type;
+        this.uri = uri;
     }
 
     /**

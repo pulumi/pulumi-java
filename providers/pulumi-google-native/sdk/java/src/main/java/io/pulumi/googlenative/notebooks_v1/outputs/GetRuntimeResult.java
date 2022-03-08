@@ -70,15 +70,15 @@ public final class GetRuntimeResult {
         String state,
         String updateTime,
         VirtualMachineResponse virtualMachine) {
-        this.accessConfig = Objects.requireNonNull(accessConfig);
-        this.createTime = Objects.requireNonNull(createTime);
-        this.healthState = Objects.requireNonNull(healthState);
-        this.metrics = Objects.requireNonNull(metrics);
-        this.name = Objects.requireNonNull(name);
-        this.softwareConfig = Objects.requireNonNull(softwareConfig);
-        this.state = Objects.requireNonNull(state);
-        this.updateTime = Objects.requireNonNull(updateTime);
-        this.virtualMachine = Objects.requireNonNull(virtualMachine);
+        this.accessConfig = accessConfig;
+        this.createTime = createTime;
+        this.healthState = healthState;
+        this.metrics = metrics;
+        this.name = name;
+        this.softwareConfig = softwareConfig;
+        this.state = state;
+        this.updateTime = updateTime;
+        this.virtualMachine = virtualMachine;
     }
 
     /**

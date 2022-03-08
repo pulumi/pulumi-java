@@ -27,7 +27,7 @@ public final class B2CTenantResourcePropertiesResponseBillingConfig {
         @Nullable String billingType,
         String effectiveStartDateUtc) {
         this.billingType = billingType;
-        this.effectiveStartDateUtc = Objects.requireNonNull(effectiveStartDateUtc);
+        this.effectiveStartDateUtc = effectiveStartDateUtc;
     }
 
     /**

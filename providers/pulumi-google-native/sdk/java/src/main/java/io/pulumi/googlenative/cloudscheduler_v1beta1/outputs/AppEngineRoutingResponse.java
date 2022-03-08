@@ -36,10 +36,10 @@ public final class AppEngineRoutingResponse {
         String instance,
         String service,
         String version) {
-        this.host = Objects.requireNonNull(host);
-        this.instance = Objects.requireNonNull(instance);
-        this.service = Objects.requireNonNull(service);
-        this.version = Objects.requireNonNull(version);
+        this.host = host;
+        this.instance = instance;
+        this.service = service;
+        this.version = version;
     }
 
     /**

@@ -27,7 +27,7 @@ public final class StorageAccountResponse {
         @Nullable String id,
         String type) {
         this.id = id;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

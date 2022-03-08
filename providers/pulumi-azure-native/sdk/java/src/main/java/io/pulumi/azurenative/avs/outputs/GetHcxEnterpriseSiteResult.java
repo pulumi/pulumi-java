@@ -42,11 +42,11 @@ public final class GetHcxEnterpriseSiteResult {
         String name,
         String status,
         String type) {
-        this.activationKey = Objects.requireNonNull(activationKey);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.status = Objects.requireNonNull(status);
-        this.type = Objects.requireNonNull(type);
+        this.activationKey = activationKey;
+        this.id = id;
+        this.name = name;
+        this.status = status;
+        this.type = type;
     }
 
     /**

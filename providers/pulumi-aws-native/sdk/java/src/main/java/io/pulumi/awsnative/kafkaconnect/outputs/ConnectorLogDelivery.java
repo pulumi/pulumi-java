@@ -13,7 +13,7 @@ public final class ConnectorLogDelivery {
 
     @OutputCustomType.Constructor({"workerLogDelivery"})
     private ConnectorLogDelivery(ConnectorWorkerLogDelivery workerLogDelivery) {
-        this.workerLogDelivery = Objects.requireNonNull(workerLogDelivery);
+        this.workerLogDelivery = workerLogDelivery;
     }
 
     public ConnectorWorkerLogDelivery getWorkerLogDelivery() {

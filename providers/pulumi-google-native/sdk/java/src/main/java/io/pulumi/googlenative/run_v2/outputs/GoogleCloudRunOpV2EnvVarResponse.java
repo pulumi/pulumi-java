@@ -31,9 +31,9 @@ public final class GoogleCloudRunOpV2EnvVarResponse {
         String name,
         String value,
         GoogleCloudRunOpV2EnvVarSourceResponse valueSource) {
-        this.name = Objects.requireNonNull(name);
-        this.value = Objects.requireNonNull(value);
-        this.valueSource = Objects.requireNonNull(valueSource);
+        this.name = name;
+        this.value = value;
+        this.valueSource = valueSource;
     }
 
     /**

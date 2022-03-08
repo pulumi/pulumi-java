@@ -49,12 +49,12 @@ public final class VirtualNetworkResponse {
         String name,
         String privateCloudId,
         String type) {
-        this.assignable = Objects.requireNonNull(assignable);
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.privateCloudId = Objects.requireNonNull(privateCloudId);
-        this.type = Objects.requireNonNull(type);
+        this.assignable = assignable;
+        this.id = id;
+        this.location = location;
+        this.name = name;
+        this.privateCloudId = privateCloudId;
+        this.type = type;
     }
 
     /**

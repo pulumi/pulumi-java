@@ -17,7 +17,7 @@ public final class PolicyStatusProperties {
 
     @OutputCustomType.Constructor({"isPublic"})
     private PolicyStatusProperties(MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic isPublic) {
-        this.isPublic = Objects.requireNonNull(isPublic);
+        this.isPublic = isPublic;
     }
 
     /**

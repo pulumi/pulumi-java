@@ -28,7 +28,7 @@ public final class DatabaseInstanceSettingsBackupConfigurationBackupRetentionSet
     private DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettings(
         Integer retainedBackups,
         @Nullable String retentionUnit) {
-        this.retainedBackups = Objects.requireNonNull(retainedBackups);
+        this.retainedBackups = retainedBackups;
         this.retentionUnit = retentionUnit;
     }
 

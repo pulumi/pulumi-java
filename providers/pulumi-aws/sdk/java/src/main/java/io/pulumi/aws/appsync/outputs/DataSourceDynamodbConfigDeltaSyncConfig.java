@@ -22,7 +22,7 @@ public final class DataSourceDynamodbConfigDeltaSyncConfig {
         String deltaSyncTableName,
         @Nullable Integer deltaSyncTableTtl) {
         this.baseTableTtl = baseTableTtl;
-        this.deltaSyncTableName = Objects.requireNonNull(deltaSyncTableName);
+        this.deltaSyncTableName = deltaSyncTableName;
         this.deltaSyncTableTtl = deltaSyncTableTtl;
     }
 

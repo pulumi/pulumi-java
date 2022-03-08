@@ -26,7 +26,7 @@ public final class ScalingPlanApplicationSourceTagFilter {
     private ScalingPlanApplicationSourceTagFilter(
         String key,
         @Nullable List<String> values) {
-        this.key = Objects.requireNonNull(key);
+        this.key = key;
         this.values = values;
     }
 

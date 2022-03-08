@@ -25,8 +25,8 @@ public final class PrivatePoolV1ConfigResponse {
     private PrivatePoolV1ConfigResponse(
         NetworkConfigResponse networkConfig,
         WorkerConfigResponse workerConfig) {
-        this.networkConfig = Objects.requireNonNull(networkConfig);
-        this.workerConfig = Objects.requireNonNull(workerConfig);
+        this.networkConfig = networkConfig;
+        this.workerConfig = workerConfig;
     }
 
     /**

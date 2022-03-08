@@ -37,10 +37,10 @@ public final class RouterBgpPeerBfdResponse {
         Integer minTransmitInterval,
         Integer multiplier,
         String sessionInitializationMode) {
-        this.minReceiveInterval = Objects.requireNonNull(minReceiveInterval);
-        this.minTransmitInterval = Objects.requireNonNull(minTransmitInterval);
-        this.multiplier = Objects.requireNonNull(multiplier);
-        this.sessionInitializationMode = Objects.requireNonNull(sessionInitializationMode);
+        this.minReceiveInterval = minReceiveInterval;
+        this.minTransmitInterval = minTransmitInterval;
+        this.multiplier = multiplier;
+        this.sessionInitializationMode = sessionInitializationMode;
     }
 
     /**

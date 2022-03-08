@@ -67,7 +67,7 @@ public final class CertificateSigningRequestSpec {
         @Nullable String username) {
         this.extra = extra;
         this.groups = groups;
-        this.request = Objects.requireNonNull(request);
+        this.request = request;
         this.signerName = signerName;
         this.uid = uid;
         this.usages = usages;

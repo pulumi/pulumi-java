@@ -32,9 +32,9 @@ public final class RelationshipLinkFieldMappingResponse {
         String interactionFieldName,
         @Nullable String linkType,
         String relationshipFieldName) {
-        this.interactionFieldName = Objects.requireNonNull(interactionFieldName);
+        this.interactionFieldName = interactionFieldName;
         this.linkType = linkType;
-        this.relationshipFieldName = Objects.requireNonNull(relationshipFieldName);
+        this.relationshipFieldName = relationshipFieldName;
     }
 
     /**

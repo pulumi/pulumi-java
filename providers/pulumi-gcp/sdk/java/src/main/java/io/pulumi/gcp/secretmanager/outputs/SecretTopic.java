@@ -18,7 +18,7 @@ public final class SecretTopic {
 
     @OutputCustomType.Constructor({"name"})
     private SecretTopic(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     /**

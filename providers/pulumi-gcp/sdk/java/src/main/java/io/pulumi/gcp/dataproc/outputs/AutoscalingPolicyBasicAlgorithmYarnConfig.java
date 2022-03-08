@@ -66,10 +66,10 @@ public final class AutoscalingPolicyBasicAlgorithmYarnConfig {
         @Nullable Double scaleDownMinWorkerFraction,
         Double scaleUpFactor,
         @Nullable Double scaleUpMinWorkerFraction) {
-        this.gracefulDecommissionTimeout = Objects.requireNonNull(gracefulDecommissionTimeout);
-        this.scaleDownFactor = Objects.requireNonNull(scaleDownFactor);
+        this.gracefulDecommissionTimeout = gracefulDecommissionTimeout;
+        this.scaleDownFactor = scaleDownFactor;
         this.scaleDownMinWorkerFraction = scaleDownMinWorkerFraction;
-        this.scaleUpFactor = Objects.requireNonNull(scaleUpFactor);
+        this.scaleUpFactor = scaleUpFactor;
         this.scaleUpMinWorkerFraction = scaleUpMinWorkerFraction;
     }
 

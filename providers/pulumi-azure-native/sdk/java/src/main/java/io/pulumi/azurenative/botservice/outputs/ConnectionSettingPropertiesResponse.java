@@ -85,7 +85,7 @@ public final class ConnectionSettingPropertiesResponse {
         this.scopes = scopes;
         this.serviceProviderDisplayName = serviceProviderDisplayName;
         this.serviceProviderId = serviceProviderId;
-        this.settingId = Objects.requireNonNull(settingId);
+        this.settingId = settingId;
     }
 
     /**

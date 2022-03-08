@@ -58,7 +58,7 @@ public final class DatasourceSetResponse {
         @Nullable String resourceUri) {
         this.datasourceType = datasourceType;
         this.objectType = objectType;
-        this.resourceID = Objects.requireNonNull(resourceID);
+        this.resourceID = resourceID;
         this.resourceLocation = resourceLocation;
         this.resourceName = resourceName;
         this.resourceType = resourceType;

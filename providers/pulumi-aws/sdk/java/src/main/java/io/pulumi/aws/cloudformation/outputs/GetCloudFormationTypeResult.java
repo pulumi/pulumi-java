@@ -99,23 +99,23 @@ public final class GetCloudFormationTypeResult {
         String typeName,
         @Nullable String versionId,
         String visibility) {
-        this.arn = Objects.requireNonNull(arn);
-        this.defaultVersionId = Objects.requireNonNull(defaultVersionId);
-        this.deprecatedStatus = Objects.requireNonNull(deprecatedStatus);
-        this.description = Objects.requireNonNull(description);
-        this.documentationUrl = Objects.requireNonNull(documentationUrl);
-        this.executionRoleArn = Objects.requireNonNull(executionRoleArn);
-        this.id = Objects.requireNonNull(id);
-        this.isDefaultVersion = Objects.requireNonNull(isDefaultVersion);
-        this.loggingConfigs = Objects.requireNonNull(loggingConfigs);
-        this.provisioningType = Objects.requireNonNull(provisioningType);
-        this.schema = Objects.requireNonNull(schema);
-        this.sourceUrl = Objects.requireNonNull(sourceUrl);
-        this.type = Objects.requireNonNull(type);
-        this.typeArn = Objects.requireNonNull(typeArn);
-        this.typeName = Objects.requireNonNull(typeName);
+        this.arn = arn;
+        this.defaultVersionId = defaultVersionId;
+        this.deprecatedStatus = deprecatedStatus;
+        this.description = description;
+        this.documentationUrl = documentationUrl;
+        this.executionRoleArn = executionRoleArn;
+        this.id = id;
+        this.isDefaultVersion = isDefaultVersion;
+        this.loggingConfigs = loggingConfigs;
+        this.provisioningType = provisioningType;
+        this.schema = schema;
+        this.sourceUrl = sourceUrl;
+        this.type = type;
+        this.typeArn = typeArn;
+        this.typeName = typeName;
         this.versionId = versionId;
-        this.visibility = Objects.requireNonNull(visibility);
+        this.visibility = visibility;
     }
 
     public String getArn() {

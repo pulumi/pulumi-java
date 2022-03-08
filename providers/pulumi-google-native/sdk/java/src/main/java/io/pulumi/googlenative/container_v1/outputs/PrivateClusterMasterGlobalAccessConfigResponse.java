@@ -17,7 +17,7 @@ public final class PrivateClusterMasterGlobalAccessConfigResponse {
 
     @OutputCustomType.Constructor({"enabled"})
     private PrivateClusterMasterGlobalAccessConfigResponse(Boolean enabled) {
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
     }
 
     /**

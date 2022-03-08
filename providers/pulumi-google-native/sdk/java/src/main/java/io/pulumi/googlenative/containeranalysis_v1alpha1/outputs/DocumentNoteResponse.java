@@ -24,8 +24,8 @@ public final class DocumentNoteResponse {
     private DocumentNoteResponse(
         String dataLicence,
         String spdxVersion) {
-        this.dataLicence = Objects.requireNonNull(dataLicence);
-        this.spdxVersion = Objects.requireNonNull(spdxVersion);
+        this.dataLicence = dataLicence;
+        this.spdxVersion = spdxVersion;
     }
 
     /**

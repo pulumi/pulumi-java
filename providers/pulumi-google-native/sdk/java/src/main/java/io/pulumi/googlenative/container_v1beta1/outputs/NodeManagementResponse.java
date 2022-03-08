@@ -31,9 +31,9 @@ public final class NodeManagementResponse {
         Boolean autoRepair,
         Boolean autoUpgrade,
         AutoUpgradeOptionsResponse upgradeOptions) {
-        this.autoRepair = Objects.requireNonNull(autoRepair);
-        this.autoUpgrade = Objects.requireNonNull(autoUpgrade);
-        this.upgradeOptions = Objects.requireNonNull(upgradeOptions);
+        this.autoRepair = autoRepair;
+        this.autoUpgrade = autoUpgrade;
+        this.upgradeOptions = upgradeOptions;
     }
 
     /**

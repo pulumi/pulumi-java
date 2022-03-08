@@ -57,13 +57,13 @@ public final class RuleResponse {
         List<LogConfigResponse> logConfig,
         List<String> notIn,
         List<String> permissions) {
-        this.action = Objects.requireNonNull(action);
-        this.conditions = Objects.requireNonNull(conditions);
-        this.description = Objects.requireNonNull(description);
-        this.in = Objects.requireNonNull(in);
-        this.logConfig = Objects.requireNonNull(logConfig);
-        this.notIn = Objects.requireNonNull(notIn);
-        this.permissions = Objects.requireNonNull(permissions);
+        this.action = action;
+        this.conditions = conditions;
+        this.description = description;
+        this.in = in;
+        this.logConfig = logConfig;
+        this.notIn = notIn;
+        this.permissions = permissions;
     }
 
     /**

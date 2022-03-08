@@ -65,14 +65,14 @@ public final class CustomRuleResponse {
         @Nullable Integer rateLimitDurationInMinutes,
         @Nullable Integer rateLimitThreshold,
         String ruleType) {
-        this.action = Objects.requireNonNull(action);
+        this.action = action;
         this.enabledState = enabledState;
-        this.matchConditions = Objects.requireNonNull(matchConditions);
+        this.matchConditions = matchConditions;
         this.name = name;
-        this.priority = Objects.requireNonNull(priority);
+        this.priority = priority;
         this.rateLimitDurationInMinutes = rateLimitDurationInMinutes;
         this.rateLimitThreshold = rateLimitThreshold;
-        this.ruleType = Objects.requireNonNull(ruleType);
+        this.ruleType = ruleType;
     }
 
     /**

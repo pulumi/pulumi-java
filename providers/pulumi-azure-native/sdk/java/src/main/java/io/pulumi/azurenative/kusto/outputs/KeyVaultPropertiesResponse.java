@@ -38,8 +38,8 @@ public final class KeyVaultPropertiesResponse {
         String keyVaultUri,
         @Nullable String keyVersion,
         @Nullable String userIdentity) {
-        this.keyName = Objects.requireNonNull(keyName);
-        this.keyVaultUri = Objects.requireNonNull(keyVaultUri);
+        this.keyName = keyName;
+        this.keyVaultUri = keyVaultUri;
         this.keyVersion = keyVersion;
         this.userIdentity = userIdentity;
     }

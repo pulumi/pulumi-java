@@ -70,15 +70,15 @@ public final class RecurringScheduleResponse {
         TimeOfDayResponse timeOfDay,
         TimeZoneResponse timeZone,
         WeeklyScheduleResponse weekly) {
-        this.endTime = Objects.requireNonNull(endTime);
-        this.frequency = Objects.requireNonNull(frequency);
-        this.lastExecuteTime = Objects.requireNonNull(lastExecuteTime);
-        this.monthly = Objects.requireNonNull(monthly);
-        this.nextExecuteTime = Objects.requireNonNull(nextExecuteTime);
-        this.startTime = Objects.requireNonNull(startTime);
-        this.timeOfDay = Objects.requireNonNull(timeOfDay);
-        this.timeZone = Objects.requireNonNull(timeZone);
-        this.weekly = Objects.requireNonNull(weekly);
+        this.endTime = endTime;
+        this.frequency = frequency;
+        this.lastExecuteTime = lastExecuteTime;
+        this.monthly = monthly;
+        this.nextExecuteTime = nextExecuteTime;
+        this.startTime = startTime;
+        this.timeOfDay = timeOfDay;
+        this.timeZone = timeZone;
+        this.weekly = weekly;
     }
 
     /**

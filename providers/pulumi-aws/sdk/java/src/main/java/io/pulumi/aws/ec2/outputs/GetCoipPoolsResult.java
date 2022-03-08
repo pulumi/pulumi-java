@@ -33,9 +33,9 @@ public final class GetCoipPoolsResult {
         List<String> poolIds,
         Map<String,String> tags) {
         this.filters = filters;
-        this.id = Objects.requireNonNull(id);
-        this.poolIds = Objects.requireNonNull(poolIds);
-        this.tags = Objects.requireNonNull(tags);
+        this.id = id;
+        this.poolIds = poolIds;
+        this.tags = tags;
     }
 
     public List<GetCoipPoolsFilter> getFilters() {

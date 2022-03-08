@@ -145,30 +145,30 @@ public final class GetFunctionResult {
         Boolean triggerHttp,
         String vpcConnector,
         String vpcConnectorEgressSettings) {
-        this.availableMemoryMb = Objects.requireNonNull(availableMemoryMb);
-        this.buildEnvironmentVariables = Objects.requireNonNull(buildEnvironmentVariables);
-        this.description = Objects.requireNonNull(description);
-        this.entryPoint = Objects.requireNonNull(entryPoint);
-        this.environmentVariables = Objects.requireNonNull(environmentVariables);
-        this.eventTriggers = Objects.requireNonNull(eventTriggers);
-        this.httpsTriggerUrl = Objects.requireNonNull(httpsTriggerUrl);
-        this.id = Objects.requireNonNull(id);
-        this.ingressSettings = Objects.requireNonNull(ingressSettings);
-        this.labels = Objects.requireNonNull(labels);
-        this.maxInstances = Objects.requireNonNull(maxInstances);
-        this.minInstances = Objects.requireNonNull(minInstances);
-        this.name = Objects.requireNonNull(name);
+        this.availableMemoryMb = availableMemoryMb;
+        this.buildEnvironmentVariables = buildEnvironmentVariables;
+        this.description = description;
+        this.entryPoint = entryPoint;
+        this.environmentVariables = environmentVariables;
+        this.eventTriggers = eventTriggers;
+        this.httpsTriggerUrl = httpsTriggerUrl;
+        this.id = id;
+        this.ingressSettings = ingressSettings;
+        this.labels = labels;
+        this.maxInstances = maxInstances;
+        this.minInstances = minInstances;
+        this.name = name;
         this.project = project;
         this.region = region;
-        this.runtime = Objects.requireNonNull(runtime);
-        this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
-        this.sourceArchiveBucket = Objects.requireNonNull(sourceArchiveBucket);
-        this.sourceArchiveObject = Objects.requireNonNull(sourceArchiveObject);
-        this.sourceRepositories = Objects.requireNonNull(sourceRepositories);
-        this.timeout = Objects.requireNonNull(timeout);
-        this.triggerHttp = Objects.requireNonNull(triggerHttp);
-        this.vpcConnector = Objects.requireNonNull(vpcConnector);
-        this.vpcConnectorEgressSettings = Objects.requireNonNull(vpcConnectorEgressSettings);
+        this.runtime = runtime;
+        this.serviceAccountEmail = serviceAccountEmail;
+        this.sourceArchiveBucket = sourceArchiveBucket;
+        this.sourceArchiveObject = sourceArchiveObject;
+        this.sourceRepositories = sourceRepositories;
+        this.timeout = timeout;
+        this.triggerHttp = triggerHttp;
+        this.vpcConnector = vpcConnector;
+        this.vpcConnectorEgressSettings = vpcConnectorEgressSettings;
     }
 
     /**

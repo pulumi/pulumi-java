@@ -42,8 +42,8 @@ public final class ReportDefinitionResponse {
         String type) {
         this.dataset = dataset;
         this.timePeriod = timePeriod;
-        this.timeframe = Objects.requireNonNull(timeframe);
-        this.type = Objects.requireNonNull(type);
+        this.timeframe = timeframe;
+        this.type = type;
     }
 
     /**

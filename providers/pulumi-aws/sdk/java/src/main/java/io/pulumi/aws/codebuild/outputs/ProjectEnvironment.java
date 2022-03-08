@@ -67,13 +67,13 @@ public final class ProjectEnvironment {
         @Nullable ProjectEnvironmentRegistryCredential registryCredential,
         String type) {
         this.certificate = certificate;
-        this.computeType = Objects.requireNonNull(computeType);
+        this.computeType = computeType;
         this.environmentVariables = environmentVariables;
-        this.image = Objects.requireNonNull(image);
+        this.image = image;
         this.imagePullCredentialsType = imagePullCredentialsType;
         this.privilegedMode = privilegedMode;
         this.registryCredential = registryCredential;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

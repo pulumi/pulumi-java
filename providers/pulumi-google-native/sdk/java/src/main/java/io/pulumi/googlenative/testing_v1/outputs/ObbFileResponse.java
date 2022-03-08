@@ -25,8 +25,8 @@ public final class ObbFileResponse {
     private ObbFileResponse(
         FileReferenceResponse obb,
         String obbFileName) {
-        this.obb = Objects.requireNonNull(obb);
-        this.obbFileName = Objects.requireNonNull(obbFileName);
+        this.obb = obb;
+        this.obbFileName = obbFileName;
     }
 
     /**

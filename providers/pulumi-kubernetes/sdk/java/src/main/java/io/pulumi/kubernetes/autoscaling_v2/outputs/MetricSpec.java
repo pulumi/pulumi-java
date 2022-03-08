@@ -60,7 +60,7 @@ public final class MetricSpec {
         this.object = object;
         this.pods = pods;
         this.resource = resource;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

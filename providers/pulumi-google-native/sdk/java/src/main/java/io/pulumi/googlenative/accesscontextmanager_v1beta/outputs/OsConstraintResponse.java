@@ -31,9 +31,9 @@ public final class OsConstraintResponse {
         String minimumVersion,
         String osType,
         Boolean requireVerifiedChromeOs) {
-        this.minimumVersion = Objects.requireNonNull(minimumVersion);
-        this.osType = Objects.requireNonNull(osType);
-        this.requireVerifiedChromeOs = Objects.requireNonNull(requireVerifiedChromeOs);
+        this.minimumVersion = minimumVersion;
+        this.osType = osType;
+        this.requireVerifiedChromeOs = requireVerifiedChromeOs;
     }
 
     /**

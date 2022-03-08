@@ -121,19 +121,19 @@ public final class GetClusterResult {
         this.associatedWorkspaces = associatedWorkspaces;
         this.billingType = billingType;
         this.capacityReservationProperties = capacityReservationProperties;
-        this.clusterId = Objects.requireNonNull(clusterId);
-        this.createdDate = Objects.requireNonNull(createdDate);
-        this.id = Objects.requireNonNull(id);
+        this.clusterId = clusterId;
+        this.createdDate = createdDate;
+        this.id = id;
         this.identity = identity;
         this.isAvailabilityZonesEnabled = isAvailabilityZonesEnabled;
         this.keyVaultProperties = keyVaultProperties;
-        this.lastModifiedDate = Objects.requireNonNull(lastModifiedDate);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.lastModifiedDate = lastModifiedDate;
+        this.location = location;
+        this.name = name;
+        this.provisioningState = provisioningState;
         this.sku = sku;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

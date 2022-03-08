@@ -24,8 +24,8 @@ public final class GoogleDatastoreAdminV1IndexedPropertyResponse {
     private GoogleDatastoreAdminV1IndexedPropertyResponse(
         String direction,
         String name) {
-        this.direction = Objects.requireNonNull(direction);
-        this.name = Objects.requireNonNull(name);
+        this.direction = direction;
+        this.name = name;
     }
 
     /**

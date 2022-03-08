@@ -18,7 +18,7 @@ public final class GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHier
 
     @OutputCustomType.Constructor({"categories"})
     private GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyResponse(List<String> categories) {
-        this.categories = Objects.requireNonNull(categories);
+        this.categories = categories;
     }
 
     /**

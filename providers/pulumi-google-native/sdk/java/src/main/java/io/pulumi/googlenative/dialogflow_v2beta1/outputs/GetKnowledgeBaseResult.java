@@ -30,9 +30,9 @@ public final class GetKnowledgeBaseResult {
         String displayName,
         String languageCode,
         String name) {
-        this.displayName = Objects.requireNonNull(displayName);
-        this.languageCode = Objects.requireNonNull(languageCode);
-        this.name = Objects.requireNonNull(name);
+        this.displayName = displayName;
+        this.languageCode = languageCode;
+        this.name = name;
     }
 
     /**

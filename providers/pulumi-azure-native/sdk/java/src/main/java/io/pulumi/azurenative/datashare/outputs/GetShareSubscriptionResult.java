@@ -129,25 +129,25 @@ public final class GetShareSubscriptionResult {
         String type,
         String userEmail,
         String userName) {
-        this.createdAt = Objects.requireNonNull(createdAt);
+        this.createdAt = createdAt;
         this.expirationDate = expirationDate;
-        this.id = Objects.requireNonNull(id);
-        this.invitationId = Objects.requireNonNull(invitationId);
-        this.name = Objects.requireNonNull(name);
-        this.providerEmail = Objects.requireNonNull(providerEmail);
-        this.providerName = Objects.requireNonNull(providerName);
-        this.providerTenantName = Objects.requireNonNull(providerTenantName);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.shareDescription = Objects.requireNonNull(shareDescription);
-        this.shareKind = Objects.requireNonNull(shareKind);
-        this.shareName = Objects.requireNonNull(shareName);
-        this.shareSubscriptionStatus = Objects.requireNonNull(shareSubscriptionStatus);
-        this.shareTerms = Objects.requireNonNull(shareTerms);
-        this.sourceShareLocation = Objects.requireNonNull(sourceShareLocation);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
-        this.userEmail = Objects.requireNonNull(userEmail);
-        this.userName = Objects.requireNonNull(userName);
+        this.id = id;
+        this.invitationId = invitationId;
+        this.name = name;
+        this.providerEmail = providerEmail;
+        this.providerName = providerName;
+        this.providerTenantName = providerTenantName;
+        this.provisioningState = provisioningState;
+        this.shareDescription = shareDescription;
+        this.shareKind = shareKind;
+        this.shareName = shareName;
+        this.shareSubscriptionStatus = shareSubscriptionStatus;
+        this.shareTerms = shareTerms;
+        this.sourceShareLocation = sourceShareLocation;
+        this.systemData = systemData;
+        this.type = type;
+        this.userEmail = userEmail;
+        this.userName = userName;
     }
 
     /**

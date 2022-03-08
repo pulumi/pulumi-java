@@ -61,7 +61,7 @@ public final class AzureResourceProtectionIntentResponse {
         this.friendlyName = friendlyName;
         this.itemId = itemId;
         this.policyId = policyId;
-        this.protectionIntentItemType = Objects.requireNonNull(protectionIntentItemType);
+        this.protectionIntentItemType = protectionIntentItemType;
         this.protectionState = protectionState;
         this.sourceResourceId = sourceResourceId;
     }

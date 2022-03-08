@@ -24,8 +24,8 @@ public final class ContentHashResponse {
     private ContentHashResponse(
         String algorithm,
         String value) {
-        this.algorithm = Objects.requireNonNull(algorithm);
-        this.value = Objects.requireNonNull(value);
+        this.algorithm = algorithm;
+        this.value = value;
     }
 
     /**

@@ -50,7 +50,7 @@ public final class VideoAnalyzerPresetResponse {
         this.experimentalOptions = experimentalOptions;
         this.insightsToExtract = insightsToExtract;
         this.mode = mode;
-        this.odataType = Objects.requireNonNull(odataType);
+        this.odataType = odataType;
     }
 
     /**

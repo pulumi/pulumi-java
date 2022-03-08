@@ -34,7 +34,7 @@ public final class StagingSettingsResponse {
         LinkedServiceReferenceResponse linkedServiceName,
         @Nullable Object path) {
         this.enableCompression = enableCompression;
-        this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
+        this.linkedServiceName = linkedServiceName;
         this.path = path;
     }
 

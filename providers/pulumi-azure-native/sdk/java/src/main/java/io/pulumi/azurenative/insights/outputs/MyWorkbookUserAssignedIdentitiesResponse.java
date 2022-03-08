@@ -24,8 +24,8 @@ public final class MyWorkbookUserAssignedIdentitiesResponse {
     private MyWorkbookUserAssignedIdentitiesResponse(
         String principalId,
         String tenantId) {
-        this.principalId = Objects.requireNonNull(principalId);
-        this.tenantId = Objects.requireNonNull(tenantId);
+        this.principalId = principalId;
+        this.tenantId = tenantId;
     }
 
     /**

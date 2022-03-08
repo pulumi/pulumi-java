@@ -48,12 +48,12 @@ public final class ResourcePoolResponse {
         String name,
         String privateCloudId,
         String type) {
-        this.fullName = Objects.requireNonNull(fullName);
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
-        this.privateCloudId = Objects.requireNonNull(privateCloudId);
-        this.type = Objects.requireNonNull(type);
+        this.fullName = fullName;
+        this.id = id;
+        this.location = location;
+        this.name = name;
+        this.privateCloudId = privateCloudId;
+        this.type = type;
     }
 
     /**

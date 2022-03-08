@@ -17,7 +17,7 @@ public final class RuntimeGuestOsFeatureResponse {
 
     @OutputCustomType.Constructor({"type"})
     private RuntimeGuestOsFeatureResponse(String type) {
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

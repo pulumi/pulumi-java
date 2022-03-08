@@ -41,9 +41,9 @@ public final class AnalyticsApplicationReferenceDataSources {
         AnalyticsApplicationReferenceDataSourcesSchema schema,
         String tableName) {
         this.id = id;
-        this.s3 = Objects.requireNonNull(s3);
-        this.schema = Objects.requireNonNull(schema);
-        this.tableName = Objects.requireNonNull(tableName);
+        this.s3 = s3;
+        this.schema = schema;
+        this.tableName = tableName;
     }
 
     /**

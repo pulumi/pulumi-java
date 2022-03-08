@@ -49,12 +49,12 @@ public final class GetFolderContactResult {
         List<String> notificationCategorySubscriptions,
         String validateTime,
         String validationState) {
-        this.email = Objects.requireNonNull(email);
-        this.languageTag = Objects.requireNonNull(languageTag);
-        this.name = Objects.requireNonNull(name);
-        this.notificationCategorySubscriptions = Objects.requireNonNull(notificationCategorySubscriptions);
-        this.validateTime = Objects.requireNonNull(validateTime);
-        this.validationState = Objects.requireNonNull(validationState);
+        this.email = email;
+        this.languageTag = languageTag;
+        this.name = name;
+        this.notificationCategorySubscriptions = notificationCategorySubscriptions;
+        this.validateTime = validateTime;
+        this.validationState = validationState;
     }
 
     /**

@@ -104,21 +104,21 @@ public final class SynchronizationDetailsResponse {
         String startTime,
         String status,
         Double vCore) {
-        this.dataSetId = Objects.requireNonNull(dataSetId);
-        this.dataSetType = Objects.requireNonNull(dataSetType);
-        this.durationMs = Objects.requireNonNull(durationMs);
-        this.endTime = Objects.requireNonNull(endTime);
-        this.filesRead = Objects.requireNonNull(filesRead);
-        this.filesWritten = Objects.requireNonNull(filesWritten);
-        this.message = Objects.requireNonNull(message);
-        this.name = Objects.requireNonNull(name);
-        this.rowsCopied = Objects.requireNonNull(rowsCopied);
-        this.rowsRead = Objects.requireNonNull(rowsRead);
-        this.sizeRead = Objects.requireNonNull(sizeRead);
-        this.sizeWritten = Objects.requireNonNull(sizeWritten);
-        this.startTime = Objects.requireNonNull(startTime);
-        this.status = Objects.requireNonNull(status);
-        this.vCore = Objects.requireNonNull(vCore);
+        this.dataSetId = dataSetId;
+        this.dataSetType = dataSetType;
+        this.durationMs = durationMs;
+        this.endTime = endTime;
+        this.filesRead = filesRead;
+        this.filesWritten = filesWritten;
+        this.message = message;
+        this.name = name;
+        this.rowsCopied = rowsCopied;
+        this.rowsRead = rowsRead;
+        this.sizeRead = sizeRead;
+        this.sizeWritten = sizeWritten;
+        this.startTime = startTime;
+        this.status = status;
+        this.vCore = vCore;
     }
 
     /**

@@ -25,8 +25,8 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigRespons
     private GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigResponse(
         String email,
         Double minAcceptableMeanAveragePrecision) {
-        this.email = Objects.requireNonNull(email);
-        this.minAcceptableMeanAveragePrecision = Objects.requireNonNull(minAcceptableMeanAveragePrecision);
+        this.email = email;
+        this.minAcceptableMeanAveragePrecision = minAcceptableMeanAveragePrecision;
     }
 
     /**

@@ -25,8 +25,8 @@ public final class BuiltInStandardEncoderPresetResponse {
     private BuiltInStandardEncoderPresetResponse(
         String odataType,
         String presetName) {
-        this.odataType = Objects.requireNonNull(odataType);
-        this.presetName = Objects.requireNonNull(presetName);
+        this.odataType = odataType;
+        this.presetName = presetName;
     }
 
     /**

@@ -17,7 +17,7 @@ public final class ShieldedNodesResponse {
 
     @OutputCustomType.Constructor({"enabled"})
     private ShieldedNodesResponse(Boolean enabled) {
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
     }
 
     /**

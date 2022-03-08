@@ -92,18 +92,18 @@ public final class GetMultipleActivationKeyResult {
         @Nullable Map<String,String> tags,
         String type) {
         this.agreementNumber = agreementNumber;
-        this.expirationDate = Objects.requireNonNull(expirationDate);
-        this.id = Objects.requireNonNull(id);
+        this.expirationDate = expirationDate;
+        this.id = id;
         this.installedServerNumber = installedServerNumber;
         this.isEligible = isEligible;
-        this.location = Objects.requireNonNull(location);
-        this.multipleActivationKey = Objects.requireNonNull(multipleActivationKey);
-        this.name = Objects.requireNonNull(name);
+        this.location = location;
+        this.multipleActivationKey = multipleActivationKey;
+        this.name = name;
         this.osType = osType;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.supportType = supportType;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

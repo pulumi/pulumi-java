@@ -13,7 +13,7 @@ public final class GetClusterNodePoolNodeConfigGcfsConfig {
 
     @OutputCustomType.Constructor({"enabled"})
     private GetClusterNodePoolNodeConfigGcfsConfig(Boolean enabled) {
-        this.enabled = Objects.requireNonNull(enabled);
+        this.enabled = enabled;
     }
 
     public Boolean getEnabled() {

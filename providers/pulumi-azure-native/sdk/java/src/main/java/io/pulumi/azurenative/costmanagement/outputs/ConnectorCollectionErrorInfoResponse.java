@@ -36,10 +36,10 @@ public final class ConnectorCollectionErrorInfoResponse {
         String errorInnerMessage,
         String errorMessage,
         String errorStartTime) {
-        this.errorCode = Objects.requireNonNull(errorCode);
-        this.errorInnerMessage = Objects.requireNonNull(errorInnerMessage);
-        this.errorMessage = Objects.requireNonNull(errorMessage);
-        this.errorStartTime = Objects.requireNonNull(errorStartTime);
+        this.errorCode = errorCode;
+        this.errorInnerMessage = errorInnerMessage;
+        this.errorMessage = errorMessage;
+        this.errorStartTime = errorStartTime;
     }
 
     /**

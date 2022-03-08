@@ -25,8 +25,8 @@ public final class BigQueryModelTrainingResponse {
     private BigQueryModelTrainingResponse(
         Integer currentIteration,
         String expectedTotalIterations) {
-        this.currentIteration = Objects.requireNonNull(currentIteration);
-        this.expectedTotalIterations = Objects.requireNonNull(expectedTotalIterations);
+        this.currentIteration = currentIteration;
+        this.expectedTotalIterations = expectedTotalIterations;
     }
 
     /**

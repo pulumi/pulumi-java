@@ -25,8 +25,8 @@ public final class AutoScalingResourceMetricResponse {
     private AutoScalingResourceMetricResponse(
         String kind,
         String name) {
-        this.kind = Objects.requireNonNull(kind);
-        this.name = Objects.requireNonNull(name);
+        this.kind = kind;
+        this.name = name;
     }
 
     /**

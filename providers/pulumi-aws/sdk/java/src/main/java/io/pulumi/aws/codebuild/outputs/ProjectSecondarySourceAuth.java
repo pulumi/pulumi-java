@@ -35,7 +35,7 @@ public final class ProjectSecondarySourceAuth {
         @Nullable String resource,
         String type) {
         this.resource = resource;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

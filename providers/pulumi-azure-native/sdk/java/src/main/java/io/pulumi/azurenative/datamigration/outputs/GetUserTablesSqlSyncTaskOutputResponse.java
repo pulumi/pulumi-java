@@ -40,10 +40,10 @@ public final class GetUserTablesSqlSyncTaskOutputResponse {
         Map<String,List<DatabaseTableResponse>> databasesToTargetTables,
         Map<String,List<String>> tableValidationErrors,
         List<ReportableExceptionResponse> validationErrors) {
-        this.databasesToSourceTables = Objects.requireNonNull(databasesToSourceTables);
-        this.databasesToTargetTables = Objects.requireNonNull(databasesToTargetTables);
-        this.tableValidationErrors = Objects.requireNonNull(tableValidationErrors);
-        this.validationErrors = Objects.requireNonNull(validationErrors);
+        this.databasesToSourceTables = databasesToSourceTables;
+        this.databasesToTargetTables = databasesToTargetTables;
+        this.tableValidationErrors = tableValidationErrors;
+        this.validationErrors = validationErrors;
     }
 
     /**

@@ -91,18 +91,18 @@ public final class GetWorkspaceResult {
         @Nullable Map<String,String> tags,
         String type,
         String usable) {
-        this.endpointUri = Objects.requireNonNull(endpointUri);
-        this.id = Objects.requireNonNull(id);
+        this.endpointUri = endpointUri;
+        this.id = id;
         this.identity = identity;
-        this.location = Objects.requireNonNull(location);
-        this.name = Objects.requireNonNull(name);
+        this.location = location;
+        this.name = name;
         this.providers = providers;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
+        this.provisioningState = provisioningState;
         this.storageAccount = storageAccount;
-        this.systemData = Objects.requireNonNull(systemData);
+        this.systemData = systemData;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
-        this.usable = Objects.requireNonNull(usable);
+        this.type = type;
+        this.usable = usable;
     }
 
     /**

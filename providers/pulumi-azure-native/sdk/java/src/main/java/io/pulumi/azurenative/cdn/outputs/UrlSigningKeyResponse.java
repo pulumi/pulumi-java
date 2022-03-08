@@ -25,8 +25,8 @@ public final class UrlSigningKeyResponse {
     private UrlSigningKeyResponse(
         String keyId,
         KeyVaultSigningKeyParametersResponse keySourceParameters) {
-        this.keyId = Objects.requireNonNull(keyId);
-        this.keySourceParameters = Objects.requireNonNull(keySourceParameters);
+        this.keyId = keyId;
+        this.keySourceParameters = keySourceParameters;
     }
 
     /**

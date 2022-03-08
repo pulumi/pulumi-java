@@ -47,8 +47,8 @@ public final class ClusterKerberosAttributes {
         this.adDomainJoinPassword = adDomainJoinPassword;
         this.adDomainJoinUser = adDomainJoinUser;
         this.crossRealmTrustPrincipalPassword = crossRealmTrustPrincipalPassword;
-        this.kdcAdminPassword = Objects.requireNonNull(kdcAdminPassword);
-        this.realm = Objects.requireNonNull(realm);
+        this.kdcAdminPassword = kdcAdminPassword;
+        this.realm = realm;
     }
 
     /**

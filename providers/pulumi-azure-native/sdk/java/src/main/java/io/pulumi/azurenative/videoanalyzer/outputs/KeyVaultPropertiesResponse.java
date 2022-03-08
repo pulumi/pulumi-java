@@ -24,8 +24,8 @@ public final class KeyVaultPropertiesResponse {
     private KeyVaultPropertiesResponse(
         String currentKeyIdentifier,
         String keyIdentifier) {
-        this.currentKeyIdentifier = Objects.requireNonNull(currentKeyIdentifier);
-        this.keyIdentifier = Objects.requireNonNull(keyIdentifier);
+        this.currentKeyIdentifier = currentKeyIdentifier;
+        this.keyIdentifier = keyIdentifier;
     }
 
     /**

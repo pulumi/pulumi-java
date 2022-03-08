@@ -50,12 +50,12 @@ public final class GetDomainResult {
         String site,
         String status,
         String updateTime) {
-        this.domainName = Objects.requireNonNull(domainName);
-        this.domainRedirect = Objects.requireNonNull(domainRedirect);
-        this.provisioning = Objects.requireNonNull(provisioning);
-        this.site = Objects.requireNonNull(site);
-        this.status = Objects.requireNonNull(status);
-        this.updateTime = Objects.requireNonNull(updateTime);
+        this.domainName = domainName;
+        this.domainRedirect = domainRedirect;
+        this.provisioning = provisioning;
+        this.site = site;
+        this.status = status;
+        this.updateTime = updateTime;
     }
 
     /**

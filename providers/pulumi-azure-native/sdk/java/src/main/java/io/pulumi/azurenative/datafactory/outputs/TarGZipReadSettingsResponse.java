@@ -29,7 +29,7 @@ public final class TarGZipReadSettingsResponse {
         @Nullable Object preserveCompressionFileNameAsFolder,
         String type) {
         this.preserveCompressionFileNameAsFolder = preserveCompressionFileNameAsFolder;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

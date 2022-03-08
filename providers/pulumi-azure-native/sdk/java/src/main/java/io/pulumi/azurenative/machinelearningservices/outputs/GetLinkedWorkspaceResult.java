@@ -37,10 +37,10 @@ public final class GetLinkedWorkspaceResult {
         String name,
         LinkedWorkspacePropsResponse properties,
         String type) {
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.properties = Objects.requireNonNull(properties);
-        this.type = Objects.requireNonNull(type);
+        this.id = id;
+        this.name = name;
+        this.properties = properties;
+        this.type = type;
     }
 
     /**

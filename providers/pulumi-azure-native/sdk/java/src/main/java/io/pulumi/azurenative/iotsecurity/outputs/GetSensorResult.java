@@ -100,19 +100,19 @@ public final class GetSensorResult {
         String tiVersion,
         String type,
         @Nullable String zone) {
-        this.connectivityTime = Objects.requireNonNull(connectivityTime);
-        this.dynamicLearning = Objects.requireNonNull(dynamicLearning);
-        this.id = Objects.requireNonNull(id);
-        this.learningMode = Objects.requireNonNull(learningMode);
-        this.name = Objects.requireNonNull(name);
-        this.sensorStatus = Objects.requireNonNull(sensorStatus);
+        this.connectivityTime = connectivityTime;
+        this.dynamicLearning = dynamicLearning;
+        this.id = id;
+        this.learningMode = learningMode;
+        this.name = name;
+        this.sensorStatus = sensorStatus;
         this.sensorType = sensorType;
-        this.sensorVersion = Objects.requireNonNull(sensorVersion);
-        this.systemData = Objects.requireNonNull(systemData);
+        this.sensorVersion = sensorVersion;
+        this.systemData = systemData;
         this.tiAutomaticUpdates = tiAutomaticUpdates;
-        this.tiStatus = Objects.requireNonNull(tiStatus);
-        this.tiVersion = Objects.requireNonNull(tiVersion);
-        this.type = Objects.requireNonNull(type);
+        this.tiStatus = tiStatus;
+        this.tiVersion = tiVersion;
+        this.type = type;
         this.zone = zone;
     }
 

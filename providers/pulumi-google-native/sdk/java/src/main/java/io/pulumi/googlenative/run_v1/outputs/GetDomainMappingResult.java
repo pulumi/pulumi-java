@@ -45,11 +45,11 @@ public final class GetDomainMappingResult {
         ObjectMetaResponse metadata,
         DomainMappingSpecResponse spec,
         DomainMappingStatusResponse status) {
-        this.apiVersion = Objects.requireNonNull(apiVersion);
-        this.kind = Objects.requireNonNull(kind);
-        this.metadata = Objects.requireNonNull(metadata);
-        this.spec = Objects.requireNonNull(spec);
-        this.status = Objects.requireNonNull(status);
+        this.apiVersion = apiVersion;
+        this.kind = kind;
+        this.metadata = metadata;
+        this.spec = spec;
+        this.status = status;
     }
 
     /**

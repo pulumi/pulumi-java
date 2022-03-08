@@ -21,8 +21,8 @@ public final class SubsettingResponse {
     private SubsettingResponse(
         String policy,
         Integer subsetSize) {
-        this.policy = Objects.requireNonNull(policy);
-        this.subsetSize = Objects.requireNonNull(subsetSize);
+        this.policy = policy;
+        this.subsetSize = subsetSize;
     }
 
     public String getPolicy() {

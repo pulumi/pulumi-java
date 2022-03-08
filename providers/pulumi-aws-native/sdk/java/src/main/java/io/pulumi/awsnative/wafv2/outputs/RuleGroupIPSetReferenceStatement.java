@@ -19,7 +19,7 @@ public final class RuleGroupIPSetReferenceStatement {
     private RuleGroupIPSetReferenceStatement(
         String arn,
         @Nullable RuleGroupIPSetForwardedIPConfiguration iPSetForwardedIPConfig) {
-        this.arn = Objects.requireNonNull(arn);
+        this.arn = arn;
         this.iPSetForwardedIPConfig = iPSetForwardedIPConfig;
     }
 

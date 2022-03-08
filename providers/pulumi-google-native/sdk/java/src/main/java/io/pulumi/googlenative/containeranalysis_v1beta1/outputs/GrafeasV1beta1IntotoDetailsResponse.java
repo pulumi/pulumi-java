@@ -18,8 +18,8 @@ public final class GrafeasV1beta1IntotoDetailsResponse {
     private GrafeasV1beta1IntotoDetailsResponse(
         List<GrafeasV1beta1IntotoSignatureResponse> signatures,
         LinkResponse signed) {
-        this.signatures = Objects.requireNonNull(signatures);
-        this.signed = Objects.requireNonNull(signed);
+        this.signatures = signatures;
+        this.signed = signed;
     }
 
     public List<GrafeasV1beta1IntotoSignatureResponse> getSignatures() {

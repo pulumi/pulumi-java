@@ -117,20 +117,20 @@ public final class GetNetworkFunctionResult {
         String vendorProvisioningState) {
         this.device = device;
         this.etag = etag;
-        this.id = Objects.requireNonNull(id);
-        this.location = Objects.requireNonNull(location);
-        this.managedApplication = Objects.requireNonNull(managedApplication);
+        this.id = id;
+        this.location = location;
+        this.managedApplication = managedApplication;
         this.managedApplicationParameters = managedApplicationParameters;
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
         this.networkFunctionUserConfigurations = networkFunctionUserConfigurations;
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.serviceKey = Objects.requireNonNull(serviceKey);
+        this.provisioningState = provisioningState;
+        this.serviceKey = serviceKey;
         this.skuName = skuName;
-        this.skuType = Objects.requireNonNull(skuType);
+        this.skuType = skuType;
         this.tags = tags;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
         this.vendorName = vendorName;
-        this.vendorProvisioningState = Objects.requireNonNull(vendorProvisioningState);
+        this.vendorProvisioningState = vendorProvisioningState;
     }
 
     /**

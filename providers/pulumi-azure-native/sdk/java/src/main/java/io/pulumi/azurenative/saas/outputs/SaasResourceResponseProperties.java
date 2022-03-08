@@ -121,7 +121,7 @@ public final class SaasResourceResponseProperties {
         @Nullable SaasPropertiesResponseTerm term,
         @Nullable String termId) {
         this.autoRenew = autoRenew;
-        this.created = Objects.requireNonNull(created);
+        this.created = created;
         this.isFreeTrial = isFreeTrial;
         this.lastModified = lastModified;
         this.offerId = offerId;

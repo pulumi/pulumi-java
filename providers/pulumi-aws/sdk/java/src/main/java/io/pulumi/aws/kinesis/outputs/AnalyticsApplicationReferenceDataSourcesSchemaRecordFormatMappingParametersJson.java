@@ -17,7 +17,7 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMap
 
     @OutputCustomType.Constructor({"recordRowPath"})
     private AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersJson(String recordRowPath) {
-        this.recordRowPath = Objects.requireNonNull(recordRowPath);
+        this.recordRowPath = recordRowPath;
     }
 
     /**

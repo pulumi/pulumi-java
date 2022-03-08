@@ -43,7 +43,7 @@ public final class TargetGroupStickiness {
         this.cookieDuration = cookieDuration;
         this.cookieName = cookieName;
         this.enabled = enabled;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

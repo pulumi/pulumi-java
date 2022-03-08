@@ -62,15 +62,15 @@ public final class GetRepositoryResult {
         String registryId,
         String repositoryUrl,
         Map<String,String> tags) {
-        this.arn = Objects.requireNonNull(arn);
-        this.encryptionConfigurations = Objects.requireNonNull(encryptionConfigurations);
-        this.id = Objects.requireNonNull(id);
-        this.imageScanningConfigurations = Objects.requireNonNull(imageScanningConfigurations);
-        this.imageTagMutability = Objects.requireNonNull(imageTagMutability);
-        this.name = Objects.requireNonNull(name);
-        this.registryId = Objects.requireNonNull(registryId);
-        this.repositoryUrl = Objects.requireNonNull(repositoryUrl);
-        this.tags = Objects.requireNonNull(tags);
+        this.arn = arn;
+        this.encryptionConfigurations = encryptionConfigurations;
+        this.id = id;
+        this.imageScanningConfigurations = imageScanningConfigurations;
+        this.imageTagMutability = imageTagMutability;
+        this.name = name;
+        this.registryId = registryId;
+        this.repositoryUrl = repositoryUrl;
+        this.tags = tags;
     }
 
     /**

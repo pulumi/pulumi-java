@@ -63,14 +63,14 @@ public final class GetBandwidthScheduleResult {
         String stop,
         SystemDataResponse systemData,
         String type) {
-        this.days = Objects.requireNonNull(days);
-        this.id = Objects.requireNonNull(id);
-        this.name = Objects.requireNonNull(name);
-        this.rateInMbps = Objects.requireNonNull(rateInMbps);
-        this.start = Objects.requireNonNull(start);
-        this.stop = Objects.requireNonNull(stop);
-        this.systemData = Objects.requireNonNull(systemData);
-        this.type = Objects.requireNonNull(type);
+        this.days = days;
+        this.id = id;
+        this.name = name;
+        this.rateInMbps = rateInMbps;
+        this.start = start;
+        this.stop = stop;
+        this.systemData = systemData;
+        this.type = type;
     }
 
     /**

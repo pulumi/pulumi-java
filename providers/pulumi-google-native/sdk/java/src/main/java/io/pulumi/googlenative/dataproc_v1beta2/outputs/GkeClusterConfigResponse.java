@@ -17,7 +17,7 @@ public final class GkeClusterConfigResponse {
 
     @OutputCustomType.Constructor({"namespacedGkeDeploymentTarget"})
     private GkeClusterConfigResponse(NamespacedGkeDeploymentTargetResponse namespacedGkeDeploymentTarget) {
-        this.namespacedGkeDeploymentTarget = Objects.requireNonNull(namespacedGkeDeploymentTarget);
+        this.namespacedGkeDeploymentTarget = namespacedGkeDeploymentTarget;
     }
 
     /**

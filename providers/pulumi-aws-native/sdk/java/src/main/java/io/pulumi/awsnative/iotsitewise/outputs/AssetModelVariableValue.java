@@ -19,7 +19,7 @@ public final class AssetModelVariableValue {
         @Nullable String hierarchyLogicalId,
         String propertyLogicalId) {
         this.hierarchyLogicalId = hierarchyLogicalId;
-        this.propertyLogicalId = Objects.requireNonNull(propertyLogicalId);
+        this.propertyLogicalId = propertyLogicalId;
     }
 
     public Optional<String> getHierarchyLogicalId() {

@@ -28,7 +28,7 @@ public final class IsNotNullAdvancedFilterResponse {
         @Nullable String key,
         String operatorType) {
         this.key = key;
-        this.operatorType = Objects.requireNonNull(operatorType);
+        this.operatorType = operatorType;
     }
 
     /**

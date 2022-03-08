@@ -35,7 +35,7 @@ public final class IotDpsSkuInfoResponse {
         String tier) {
         this.capacity = capacity;
         this.name = name;
-        this.tier = Objects.requireNonNull(tier);
+        this.tier = tier;
     }
 
     /**

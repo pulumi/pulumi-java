@@ -42,11 +42,11 @@ public final class GetAndroidAppResult {
         String name,
         String packageName,
         String project) {
-        this.appId = Objects.requireNonNull(appId);
-        this.displayName = Objects.requireNonNull(displayName);
-        this.name = Objects.requireNonNull(name);
-        this.packageName = Objects.requireNonNull(packageName);
-        this.project = Objects.requireNonNull(project);
+        this.appId = appId;
+        this.displayName = displayName;
+        this.name = name;
+        this.packageName = packageName;
+        this.project = project;
     }
 
     /**

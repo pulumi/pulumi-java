@@ -33,9 +33,9 @@ public final class GetPhraseSetResult {
         Double boost,
         String name,
         List<PhraseResponse> phrases) {
-        this.boost = Objects.requireNonNull(boost);
-        this.name = Objects.requireNonNull(name);
-        this.phrases = Objects.requireNonNull(phrases);
+        this.boost = boost;
+        this.name = name;
+        this.phrases = phrases;
     }
 
     /**

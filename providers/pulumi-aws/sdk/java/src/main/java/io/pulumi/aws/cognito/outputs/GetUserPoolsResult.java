@@ -33,10 +33,10 @@ public final class GetUserPoolsResult {
         String id,
         List<String> ids,
         String name) {
-        this.arns = Objects.requireNonNull(arns);
-        this.id = Objects.requireNonNull(id);
-        this.ids = Objects.requireNonNull(ids);
-        this.name = Objects.requireNonNull(name);
+        this.arns = arns;
+        this.id = id;
+        this.ids = ids;
+        this.name = name;
     }
 
     /**

@@ -56,7 +56,7 @@ public final class CrawlerS3Target {
         this.dlqEventQueueArn = dlqEventQueueArn;
         this.eventQueueArn = eventQueueArn;
         this.exclusions = exclusions;
-        this.path = Objects.requireNonNull(path);
+        this.path = path;
         this.sampleSize = sampleSize;
     }
 

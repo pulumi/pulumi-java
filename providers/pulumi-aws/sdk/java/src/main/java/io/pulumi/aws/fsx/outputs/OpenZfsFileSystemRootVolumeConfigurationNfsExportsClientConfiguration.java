@@ -25,8 +25,8 @@ public final class OpenZfsFileSystemRootVolumeConfigurationNfsExportsClientConfi
     private OpenZfsFileSystemRootVolumeConfigurationNfsExportsClientConfiguration(
         String clients,
         List<String> options) {
-        this.clients = Objects.requireNonNull(clients);
-        this.options = Objects.requireNonNull(options);
+        this.clients = clients;
+        this.options = options;
     }
 
     /**

@@ -24,8 +24,8 @@ public final class BusinessIdentityResponse {
     private BusinessIdentityResponse(
         String qualifier,
         String value) {
-        this.qualifier = Objects.requireNonNull(qualifier);
-        this.value = Objects.requireNonNull(value);
+        this.qualifier = qualifier;
+        this.value = value;
     }
 
     /**

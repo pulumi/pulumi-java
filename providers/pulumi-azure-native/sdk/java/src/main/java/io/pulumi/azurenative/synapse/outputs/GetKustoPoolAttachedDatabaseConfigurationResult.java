@@ -83,17 +83,17 @@ public final class GetKustoPoolAttachedDatabaseConfigurationResult {
         SystemDataResponse systemData,
         @Nullable TableLevelSharingPropertiesResponse tableLevelSharingProperties,
         String type) {
-        this.attachedDatabaseNames = Objects.requireNonNull(attachedDatabaseNames);
-        this.databaseName = Objects.requireNonNull(databaseName);
-        this.defaultPrincipalsModificationKind = Objects.requireNonNull(defaultPrincipalsModificationKind);
-        this.id = Objects.requireNonNull(id);
-        this.kustoPoolResourceId = Objects.requireNonNull(kustoPoolResourceId);
+        this.attachedDatabaseNames = attachedDatabaseNames;
+        this.databaseName = databaseName;
+        this.defaultPrincipalsModificationKind = defaultPrincipalsModificationKind;
+        this.id = id;
+        this.kustoPoolResourceId = kustoPoolResourceId;
         this.location = location;
-        this.name = Objects.requireNonNull(name);
-        this.provisioningState = Objects.requireNonNull(provisioningState);
-        this.systemData = Objects.requireNonNull(systemData);
+        this.name = name;
+        this.provisioningState = provisioningState;
+        this.systemData = systemData;
         this.tableLevelSharingProperties = tableLevelSharingProperties;
-        this.type = Objects.requireNonNull(type);
+        this.type = type;
     }
 
     /**

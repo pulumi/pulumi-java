@@ -126,26 +126,26 @@ public final class GetNetworkInterfaceResult {
         String subnetId,
         Map<String,String> tags,
         String vpcId) {
-        this.arn = Objects.requireNonNull(arn);
-        this.associations = Objects.requireNonNull(associations);
-        this.attachments = Objects.requireNonNull(attachments);
-        this.availabilityZone = Objects.requireNonNull(availabilityZone);
-        this.description = Objects.requireNonNull(description);
+        this.arn = arn;
+        this.associations = associations;
+        this.attachments = attachments;
+        this.availabilityZone = availabilityZone;
+        this.description = description;
         this.filters = filters;
-        this.id = Objects.requireNonNull(id);
-        this.interfaceType = Objects.requireNonNull(interfaceType);
-        this.ipv6Addresses = Objects.requireNonNull(ipv6Addresses);
-        this.macAddress = Objects.requireNonNull(macAddress);
-        this.outpostArn = Objects.requireNonNull(outpostArn);
-        this.ownerId = Objects.requireNonNull(ownerId);
-        this.privateDnsName = Objects.requireNonNull(privateDnsName);
-        this.privateIp = Objects.requireNonNull(privateIp);
-        this.privateIps = Objects.requireNonNull(privateIps);
-        this.requesterId = Objects.requireNonNull(requesterId);
-        this.securityGroups = Objects.requireNonNull(securityGroups);
-        this.subnetId = Objects.requireNonNull(subnetId);
-        this.tags = Objects.requireNonNull(tags);
-        this.vpcId = Objects.requireNonNull(vpcId);
+        this.id = id;
+        this.interfaceType = interfaceType;
+        this.ipv6Addresses = ipv6Addresses;
+        this.macAddress = macAddress;
+        this.outpostArn = outpostArn;
+        this.ownerId = ownerId;
+        this.privateDnsName = privateDnsName;
+        this.privateIp = privateIp;
+        this.privateIps = privateIps;
+        this.requesterId = requesterId;
+        this.securityGroups = securityGroups;
+        this.subnetId = subnetId;
+        this.tags = tags;
+        this.vpcId = vpcId;
     }
 
     /**

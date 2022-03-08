@@ -23,9 +23,9 @@ public final class PipelineLambda {
         String lambdaName,
         String name,
         @Nullable String next) {
-        this.batchSize = Objects.requireNonNull(batchSize);
-        this.lambdaName = Objects.requireNonNull(lambdaName);
-        this.name = Objects.requireNonNull(name);
+        this.batchSize = batchSize;
+        this.lambdaName = lambdaName;
+        this.name = name;
         this.next = next;
     }
 

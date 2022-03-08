@@ -37,8 +37,8 @@ public final class URLMapHostRule {
         List<String> hosts,
         String pathMatcher) {
         this.description = description;
-        this.hosts = Objects.requireNonNull(hosts);
-        this.pathMatcher = Objects.requireNonNull(pathMatcher);
+        this.hosts = hosts;
+        this.pathMatcher = pathMatcher;
     }
 
     /**

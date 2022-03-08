@@ -63,14 +63,14 @@ public final class SecurityPolicyRuleRateLimitOptionsResponse {
         String exceedAction,
         SecurityPolicyRuleRedirectOptionsResponse exceedRedirectOptions,
         SecurityPolicyRuleRateLimitOptionsThresholdResponse rateLimitThreshold) {
-        this.banDurationSec = Objects.requireNonNull(banDurationSec);
-        this.banThreshold = Objects.requireNonNull(banThreshold);
-        this.conformAction = Objects.requireNonNull(conformAction);
-        this.enforceOnKey = Objects.requireNonNull(enforceOnKey);
-        this.enforceOnKeyName = Objects.requireNonNull(enforceOnKeyName);
-        this.exceedAction = Objects.requireNonNull(exceedAction);
-        this.exceedRedirectOptions = Objects.requireNonNull(exceedRedirectOptions);
-        this.rateLimitThreshold = Objects.requireNonNull(rateLimitThreshold);
+        this.banDurationSec = banDurationSec;
+        this.banThreshold = banThreshold;
+        this.conformAction = conformAction;
+        this.enforceOnKey = enforceOnKey;
+        this.enforceOnKeyName = enforceOnKeyName;
+        this.exceedAction = exceedAction;
+        this.exceedRedirectOptions = exceedRedirectOptions;
+        this.rateLimitThreshold = rateLimitThreshold;
     }
 
     /**

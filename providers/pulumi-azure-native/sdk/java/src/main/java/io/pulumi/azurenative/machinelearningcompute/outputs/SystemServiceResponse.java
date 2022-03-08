@@ -30,9 +30,9 @@ public final class SystemServiceResponse {
         String publicIpAddress,
         String systemServiceType,
         String version) {
-        this.publicIpAddress = Objects.requireNonNull(publicIpAddress);
-        this.systemServiceType = Objects.requireNonNull(systemServiceType);
-        this.version = Objects.requireNonNull(version);
+        this.publicIpAddress = publicIpAddress;
+        this.systemServiceType = systemServiceType;
+        this.version = version;
     }
 
     /**

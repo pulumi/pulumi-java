@@ -13,7 +13,7 @@ public final class WebACLExcludedRule {
 
     @OutputCustomType.Constructor({"name"})
     private WebACLExcludedRule(String name) {
-        this.name = Objects.requireNonNull(name);
+        this.name = name;
     }
 
     public String getName() {
