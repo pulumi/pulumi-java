@@ -20,22 +20,32 @@ public @interface OutputCustomType {
      * Annotation used by a Pulumi Cloud Provider Package to marks the constructor for a complex
      * property type so that it can be instantiated by the Pulumi runtime.
      * <p/>
-     * <b>WARNING</b>: nested classes will have a reference to the parent class as the
-     * as the first parameter of the constructor (arg0) and this type also needs to be deserializable
+     * <b>WARNING:</b> nested classes will have a reference to the parent class as the
+     * as the first parameter of the constructor ({@code arg0}) and this type also needs to be deserializable
      * or the class needs to be made static. This is unlikely scenario, but theoretically possible.
      * The invisible fist argument needs also to be named in the annotation value.
      * <p/>
-     * The constructor should contain parameters that map to
+     * The constructor should take parameters annotated with {@link Parameter} that map to
      * the resultant @see {@link com.google.protobuf.Struct} returned by the engine.
      */
     @Retention(RetentionPolicy.RUNTIME)
     @Target(ElementType.CONSTRUCTOR)
     @interface Constructor {
+        /* Empty */
+    }
+
+    /**
+     * Annotation used by a Pulumi Cloud Provider Package to marks a constructor parameter for a complex
+     * property type so that it can be instantiated by the Pulumi runtime.
+     */
+    @Retention(RetentionPolicy.RUNTIME)
+    @Target(ElementType.PARAMETER)
+    @interface Parameter {
         /**
-         * We need to know the names of the constructor parameters,
-         * and unfortunately Java compiler does not give this information through reflection by default
-         * @return names of the constructor parameters in order from left to right
+         * We need to know the name of a constructor parameter,
+         * and unfortunately Java compiler does not give this information through reflection (by default)
+         * @return name of a constructor parameter
          */
-        String[] value();
+        String value();
     }
 }

@@ -4,6 +4,8 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import io.pulumi.Log;
 import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType.Constructor;
+import io.pulumi.core.annotations.OutputCustomType.Parameter;
 import io.pulumi.deployment.internal.DeploymentTests;
 import io.pulumi.deployment.internal.InMemoryLogger;
 import io.pulumi.serialization.internal.ConverterTests.ContainerSize;
@@ -20,6 +22,7 @@ import static io.pulumi.serialization.internal.ConverterTests.ContainerColor.Blu
 import static io.pulumi.serialization.internal.ConverterTests.serializeToValueAsync;
 import static io.pulumi.test.internal.assertj.PulumiConditions.containsString;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 class ComplexTypeConverterTest {
 
@@ -33,15 +36,21 @@ class ComplexTypeConverterTest {
         public final double d;
         public final ImmutableList<Boolean> list;
         public final ImmutableMap<String, Integer> map;
-        public final Object obj;
+        public final Object $private;
         public final ContainerSize size;
         public final ContainerColor color;
 
-        @OutputCustomType.Constructor({"s", "b", "i", "d", "list", "map", "obj", "size", "color"})
+        @Constructor
         public ComplexType1(
-                String s, boolean b, int i, double d,
-                ImmutableList<Boolean> list, ImmutableMap<String, Integer> map, Object obj,
-                ContainerSize size, ContainerColor color
+                @Parameter("s") String s,
+                @Parameter("b") boolean b,
+                @Parameter("i") int i,
+                @Parameter("d") double d,
+                @Parameter("list") ImmutableList<Boolean> list,
+                @Parameter("map") ImmutableMap<String, Integer> map,
+                @Parameter("private") Object $private,
+                @Parameter("size") ContainerSize size,
+                @Parameter("color") ContainerColor color
         ) {
             this.s = s;
             this.b = b;
@@ -49,7 +58,7 @@ class ComplexTypeConverterTest {
             this.d = d;
             this.list = list;
             this.map = map;
-            this.obj = obj;
+            this.$private = $private;
             this.size = size;
             this.color = color;
         }
@@ -65,7 +74,7 @@ class ComplexTypeConverterTest {
                 .put("d", 1.5)
                 .put("list", ImmutableList.of(true, false))
                 .put("map", ImmutableMap.of("k", 10))
-                .put("obj", "test")
+                .put("private", "test")
                 .put("size", 6)
                 .put("color", "blue")
                 .build()
@@ -81,7 +90,7 @@ class ComplexTypeConverterTest {
         assertThat(data.getValueNullable().d).isEqualTo(1.5);
         assertThat(data.getValueNullable().list).hasSameElementsAs(ImmutableList.of(true, false));
         assertThat(data.getValueNullable().map).containsAllEntriesOf(ImmutableMap.of("k", 10));
-        assertThat(data.getValueNullable().obj).isEqualTo("test");
+        assertThat(data.getValueNullable().$private).isEqualTo("test");
         assertThat(data.getValueNullable().size).isEqualTo(ContainerSize.SixInch);
         assertThat(data.getValueNullable().color).isEqualTo(Blue);
 
@@ -94,11 +103,12 @@ class ComplexTypeConverterTest {
         public final ImmutableList<ComplexType1> c2List;
         public final ImmutableMap<String, ComplexType1> c2Map;
 
-        @OutputCustomType.Constructor({"c", "c2List", "c2Map"})
+        @Constructor
         public ComplexType2(
-                ComplexType1 c,
-                ImmutableList<ComplexType1> c2List,
-                ImmutableMap<String, ComplexType1> c2Map) {
+                @Parameter("c") ComplexType1 c,
+                @Parameter("c2List") ImmutableList<ComplexType1> c2List,
+                @Parameter("c2Map") ImmutableMap<String, ComplexType1> c2Map
+        ) {
             this.c = c;
             this.c2List = c2List;
             this.c2Map = c2Map;
@@ -116,7 +126,7 @@ class ComplexTypeConverterTest {
                         .put("d", 1.1)
                         .put("list", List.of(false, false))
                         .put("map", Map.of("k", 1))
-                        .put("obj", 50.0)
+                        .put("private", 50.0)
                         .put("size", 8)
                         .put("color", "red")
                         .build()
@@ -129,7 +139,7 @@ class ComplexTypeConverterTest {
                                 .put("d", 2.2)
                                 .put("list", List.of(false, true))
                                 .put("map", Map.of("k", 2))
-                                .put("obj", true)
+                                .put("private", true)
                                 .put("size", 4)
                                 .put("color", "yellow")
                                 .build()
@@ -142,7 +152,7 @@ class ComplexTypeConverterTest {
                                 .put("d", 3.3)
                                 .put("list", List.of(true, false))
                                 .put("map", Map.of("k", 3))
-                                .put("obj", Map.of("o", 5.5))
+                                .put("private", Map.of("o", 5.5))
                                 .put("size", 6)
                                 .put("color", "blue")
                                 .build()
@@ -162,7 +172,7 @@ class ComplexTypeConverterTest {
         assertThat(value.d).isEqualTo(1.1);
         assertThat(value.list).hasSameElementsAs(List.of(false, false));
         assertThat(value.map).containsAllEntriesOf(Map.of("k", 1));
-        assertThat(value.obj).isEqualTo(50.0);
+        assertThat(value.$private).isEqualTo(50.0);
         assertThat(value.size).isEqualTo(ContainerSize.EightInch);
         assertThat(value.color).isEqualTo(ContainerColor.Red);
 
@@ -175,7 +185,7 @@ class ComplexTypeConverterTest {
         assertThat(value.d).isEqualTo(2.2);
         assertThat(value.list).hasSameElementsAs(List.of(false, true));
         assertThat(value.map).containsAllEntriesOf(Map.of("k", 2));
-        assertThat(value.obj).isEqualTo(true);
+        assertThat(value.$private).isEqualTo(true);
         assertThat(value.size).isEqualTo(ContainerSize.FourInch);
         assertThat(value.color).isEqualTo(ContainerColor.Yellow);
 
@@ -189,9 +199,9 @@ class ComplexTypeConverterTest {
         assertThat(value.d).isEqualTo(3.3);
         assertThat(value.list).hasSameElementsAs(List.of(true, false));
         assertThat(value.map).containsAllEntriesOf(Map.of("k", 3));
-        assertThat(value.obj).isInstanceOf(Map.class);
+        assertThat(value.$private).isInstanceOf(Map.class);
         //noinspection unchecked
-        assertThat((Map<String, Object>) value.obj).containsAllEntriesOf(Map.of("o", Optional.of(5.5))); // C# didn't have Optional, it has Nullable type.
+        assertThat((Map<String, Object>) value.$private).containsAllEntriesOf(Map.of("o", Optional.of(5.5))); // C# didn't have Optional, it has Nullable type.
         assertThat(value.size).isEqualTo(ContainerSize.SixInch);
         assertThat(value.color).isEqualTo(ContainerColor.Blue);
     }
@@ -200,8 +210,8 @@ class ComplexTypeConverterTest {
     public static class UnexpectedNullableComplexType {
         public final String s;
 
-        @OutputCustomType.Constructor({"s"})
-        public UnexpectedNullableComplexType(String s) {
+        @Constructor
+        public UnexpectedNullableComplexType(@Parameter("s") String s) {
             this.s = s;
         }
     }
@@ -229,5 +239,34 @@ class ComplexTypeConverterTest {
         assertThat(messages).haveAtLeastOne(containsString(
                 "parameter named 's' (nr 0 starting from 0) lacks @javax.annotation.Nullable annotation, so the value is required, but there is no value to deserialize."
         ));
+    }
+
+    @OutputCustomType
+    public static class EscapedComplexType {
+        public final String $private;
+
+        @Constructor
+        public EscapedComplexType(@Parameter("$private") String $private) {
+            this.$private = $private;
+        }
+    }
+
+    @Test
+    void testEscapedComplexType() {
+        var logger = InMemoryLogger.getLogger(Level.FINEST, "ComplexTypeConverterTest#testEscapedComplexType");
+        var inMemoryLog = DeploymentTests.mockLog(logger);
+        var converter = new Converter(inMemoryLog);
+
+        var map = new HashMap<String, Object>();
+        map.put("private", "test");
+        var serialized = serializeToValueAsync(map).join();
+
+        assertThatThrownBy(() -> converter.convertValue(
+                "ComplexTypeConverterTest", serialized, EscapedComplexType.class
+        )).isInstanceOf(UnsupportedOperationException.class)
+                .hasCauseInstanceOf(IllegalArgumentException.class)
+                .hasMessageContaining(
+                        "expects parameter names of: '$private', but does not expect: 'private'. Unable to deserialize."
+                );
     }
 }
