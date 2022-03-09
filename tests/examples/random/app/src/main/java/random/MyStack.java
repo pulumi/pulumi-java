@@ -40,9 +40,9 @@ public final class MyStack extends Stack {
 
     public MyStack() {
         var randomPassword = new RandomPassword("my-password",
-                $ -> $.setLength(16)
-                        .setSpecial(true)
-                        .setOverrideSpecial("_@"));
+                $ -> $.length(16)
+                        .special(true)
+                        .overrideSpecial("_@"));
 
         this.randomPassword = randomPassword.getResult();
 
@@ -51,17 +51,17 @@ public final class MyStack extends Stack {
         this.randomPetKeepers = randomPet.getKeepers();
 
         var randomInteger = new RandomInteger("my-int",
-                $ -> $.setMax(100)
-                        .setMin(0)
+                $ -> $.max(100)
+                        .min(0)
         );
 
         this.randomInteger = randomInteger.getResult();
 
-        var randomString = new RandomString("my-string", $ -> $.setLength(10));
+        var randomString = new RandomString("my-string", $ -> $.length(10));
 
         this.randomString = randomString.getResult();
 
-        var randomId = new RandomId("my-id", $ -> $.setByteLength(10));
+        var randomId = new RandomId("my-id", $ -> $.byteLength(10));
 
         this.randomIdHex = randomId.getHex();
 
@@ -70,7 +70,7 @@ public final class MyStack extends Stack {
         this.randomUuid = randomUuid.getResult();
 
         var randomShuffle = new RandomShuffle("my-shuffle",
-                $ -> $.setInputs(List.of("A", "B", "C"))
+                $ -> $.inputs(List.of("A", "B", "C"))
         );
 
         this.shuffled = randomShuffle.getResults();
