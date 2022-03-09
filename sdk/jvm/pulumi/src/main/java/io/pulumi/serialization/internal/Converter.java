@@ -378,8 +378,8 @@ public class Converter {
     // TODO[pulumi/pulumi-java#218] once the issue with mangled names
     // is fixed systematically, remove this function.
     private String fixupMangledName(String name) {
-        if (name != null && name.equals("$public")) {
-            return "public";
+        if (name != null && name.startsWith("$")) {
+            return name.substring(1);
         }
         return name;
     }
