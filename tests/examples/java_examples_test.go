@@ -81,6 +81,25 @@ func TestCloudExamples(t *testing.T) {
 			})
 		integration.ProgramTest(t, &test)
 	})
+
+	t.Run("aws-java-webserver", func(t *testing.T) {
+		t.Skip("Need AWS creds in CI")
+		test := getJvmBase(t, "aws-java-webserver").
+			With(integration.ProgramTestOptions{
+				Config: map[string]string{
+					"aws:region": "us-east-1",
+				},
+				Quick: true,
+				ExtraRuntimeValidation: func(t *testing.T, stackInfo integration.RuntimeValidationStackInfo) {
+					o := stackInfo.Outputs
+					publicIp := o["publicIp"].(string)
+					publicHostName := o["publicHostName"].(string)
+					assert.True(t, strings.Contains(publicIp, "."))
+					assert.True(t, strings.Contains(publicHostName, "."))
+				},
+			})
+		integration.ProgramTest(t, &test)
+	})
 }
 
 func getJvmBase(t *testing.T, dir string) integration.ProgramTestOptions {
