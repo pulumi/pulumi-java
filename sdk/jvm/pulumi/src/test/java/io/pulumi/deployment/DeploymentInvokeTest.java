@@ -7,6 +7,8 @@ import io.pulumi.core.Tuples;
 import io.pulumi.core.TypeShape;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType.Constructor;
+import io.pulumi.core.annotations.OutputCustomType.Parameter;
 import io.pulumi.core.internal.Internal;
 import io.pulumi.deployment.internal.DeploymentTests;
 import io.pulumi.deployment.internal.TestOptions;
@@ -96,8 +98,8 @@ public class DeploymentInvokeTest {
     static class CustomResult {
         public final ImmutableList<ImmutableMap<String, Object>> result;
 
-        @OutputCustomType.Constructor("result")
-        private CustomResult(ImmutableList<ImmutableMap<String, Object>> result) {
+        @Constructor
+        private CustomResult(@Parameter("result") ImmutableList<ImmutableMap<String, Object>> result) {
             this.result = result;
         }
     }

@@ -17,6 +17,8 @@ import io.pulumi.core.TypeShape;
 import io.pulumi.core.annotations.EnumType;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType.Constructor;
+import io.pulumi.core.annotations.OutputCustomType.Parameter;
 import io.pulumi.core.internal.Constants;
 import io.pulumi.deployment.MocksTest;
 import io.pulumi.deployment.internal.DeploymentTests;
@@ -701,8 +703,11 @@ class ConverterTests {
         public final String ref;
         public final ImmutableList<RecursiveType> additionalItems;
 
-        @OutputCustomType.Constructor({"ref", "additionalItems"})
-        public RecursiveType(String ref, ImmutableList<RecursiveType> additionalItems) {
+        @Constructor
+        public RecursiveType(
+                @Parameter("ref") String ref,
+                @Parameter("additionalItems") ImmutableList<RecursiveType> additionalItems
+        ) {
             this.ref = ref;
             this.additionalItems = additionalItems;
         }

@@ -9,6 +9,8 @@ import io.pulumi.core.Output;
 import io.pulumi.core.Tuples;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType.Constructor;
+import io.pulumi.core.annotations.OutputCustomType.Parameter;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.core.internal.Internal;
@@ -233,8 +235,8 @@ public class MocksTest {
         public final String arn;
         public final String id;
 
-        @OutputCustomType.Constructor({"arn", "id"})
-        private GetRoleResult(String arn, String id) {
+        @Constructor
+        private GetRoleResult(@Parameter("arn") String arn, @Parameter("id") String id) {
             this.arn = arn;
             this.id = id;
         }
