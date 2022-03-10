@@ -20,10 +20,10 @@ public final class GetTriggerEventSubscriptionStatusResult {
      */
     private final String triggerName;
 
-    @OutputCustomType.Constructor({"status","triggerName"})
+    @OutputCustomType.Constructor
     private GetTriggerEventSubscriptionStatusResult(
-        String status,
-        String triggerName) {
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("triggerName") String triggerName) {
         this.status = status;
         this.triggerName = triggerName;
     }

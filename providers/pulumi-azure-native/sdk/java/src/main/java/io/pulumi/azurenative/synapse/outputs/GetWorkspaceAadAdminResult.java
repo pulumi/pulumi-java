@@ -47,15 +47,15 @@ public final class GetWorkspaceAadAdminResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"administratorType","id","login","name","sid","tenantId","type"})
+    @OutputCustomType.Constructor
     private GetWorkspaceAadAdminResult(
-        @Nullable String administratorType,
-        String id,
-        @Nullable String login,
-        String name,
-        @Nullable String sid,
-        @Nullable String tenantId,
-        String type) {
+        @OutputCustomType.Parameter("administratorType") @Nullable String administratorType,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("login") @Nullable String login,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("sid") @Nullable String sid,
+        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId,
+        @OutputCustomType.Parameter("type") String type) {
         this.administratorType = administratorType;
         this.id = id;
         this.login = login;

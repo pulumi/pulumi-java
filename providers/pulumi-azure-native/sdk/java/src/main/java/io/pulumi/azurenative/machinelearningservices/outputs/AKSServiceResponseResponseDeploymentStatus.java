@@ -33,12 +33,12 @@ public final class AKSServiceResponseResponseDeploymentStatus {
      */
     private final @Nullable Integer updatedReplicas;
 
-    @OutputCustomType.Constructor({"availableReplicas","desiredReplicas","error","updatedReplicas"})
+    @OutputCustomType.Constructor
     private AKSServiceResponseResponseDeploymentStatus(
-        @Nullable Integer availableReplicas,
-        @Nullable Integer desiredReplicas,
-        @Nullable AKSReplicaStatusResponseError error,
-        @Nullable Integer updatedReplicas) {
+        @OutputCustomType.Parameter("availableReplicas") @Nullable Integer availableReplicas,
+        @OutputCustomType.Parameter("desiredReplicas") @Nullable Integer desiredReplicas,
+        @OutputCustomType.Parameter("error") @Nullable AKSReplicaStatusResponseError error,
+        @OutputCustomType.Parameter("updatedReplicas") @Nullable Integer updatedReplicas) {
         this.availableReplicas = availableReplicas;
         this.desiredReplicas = desiredReplicas;
         this.error = error;

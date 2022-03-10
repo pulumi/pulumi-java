@@ -95,16 +95,16 @@ public final class UntilActivityResponse {
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
-    @OutputCustomType.Constructor({"activities","dependsOn","description","expression","name","timeout","type","userProperties"})
+    @OutputCustomType.Constructor
     private UntilActivityResponse(
-        List<Object> activities,
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        ExpressionResponse expression,
-        String name,
-        @Nullable Object timeout,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties) {
+        @OutputCustomType.Parameter("activities") List<Object> activities,
+        @OutputCustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("expression") ExpressionResponse expression,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("timeout") @Nullable Object timeout,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties) {
         this.activities = activities;
         this.dependsOn = dependsOn;
         this.description = description;

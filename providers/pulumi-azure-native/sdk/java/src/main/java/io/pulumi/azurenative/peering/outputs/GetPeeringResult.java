@@ -71,19 +71,19 @@ public final class GetPeeringResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"direct","exchange","id","kind","location","name","peeringLocation","provisioningState","sku","tags","type"})
+    @OutputCustomType.Constructor
     private GetPeeringResult(
-        @Nullable PeeringPropertiesDirectResponse direct,
-        @Nullable PeeringPropertiesExchangeResponse exchange,
-        String id,
-        String kind,
-        String location,
-        String name,
-        @Nullable String peeringLocation,
-        String provisioningState,
-        PeeringSkuResponse sku,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("direct") @Nullable PeeringPropertiesDirectResponse direct,
+        @OutputCustomType.Parameter("exchange") @Nullable PeeringPropertiesExchangeResponse exchange,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("peeringLocation") @Nullable String peeringLocation,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("sku") PeeringSkuResponse sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.direct = direct;
         this.exchange = exchange;
         this.id = id;

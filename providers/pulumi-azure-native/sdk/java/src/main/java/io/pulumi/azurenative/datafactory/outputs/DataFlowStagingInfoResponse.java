@@ -23,10 +23,10 @@ public final class DataFlowStagingInfoResponse {
      */
     private final @Nullable LinkedServiceReferenceResponse linkedService;
 
-    @OutputCustomType.Constructor({"folderPath","linkedService"})
+    @OutputCustomType.Constructor
     private DataFlowStagingInfoResponse(
-        @Nullable Object folderPath,
-        @Nullable LinkedServiceReferenceResponse linkedService) {
+        @OutputCustomType.Parameter("folderPath") @Nullable Object folderPath,
+        @OutputCustomType.Parameter("linkedService") @Nullable LinkedServiceReferenceResponse linkedService) {
         this.folderPath = folderPath;
         this.linkedService = linkedService;
     }

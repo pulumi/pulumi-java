@@ -43,14 +43,14 @@ public final class FrontDoorPolicySettingsResponse {
      */
     private final @Nullable String requestBodyCheck;
 
-    @OutputCustomType.Constructor({"customBlockResponseBody","customBlockResponseStatusCode","enabledState","mode","redirectUrl","requestBodyCheck"})
+    @OutputCustomType.Constructor
     private FrontDoorPolicySettingsResponse(
-        @Nullable String customBlockResponseBody,
-        @Nullable Integer customBlockResponseStatusCode,
-        @Nullable String enabledState,
-        @Nullable String mode,
-        @Nullable String redirectUrl,
-        @Nullable String requestBodyCheck) {
+        @OutputCustomType.Parameter("customBlockResponseBody") @Nullable String customBlockResponseBody,
+        @OutputCustomType.Parameter("customBlockResponseStatusCode") @Nullable Integer customBlockResponseStatusCode,
+        @OutputCustomType.Parameter("enabledState") @Nullable String enabledState,
+        @OutputCustomType.Parameter("mode") @Nullable String mode,
+        @OutputCustomType.Parameter("redirectUrl") @Nullable String redirectUrl,
+        @OutputCustomType.Parameter("requestBodyCheck") @Nullable String requestBodyCheck) {
         this.customBlockResponseBody = customBlockResponseBody;
         this.customBlockResponseStatusCode = customBlockResponseStatusCode;
         this.enabledState = enabledState;

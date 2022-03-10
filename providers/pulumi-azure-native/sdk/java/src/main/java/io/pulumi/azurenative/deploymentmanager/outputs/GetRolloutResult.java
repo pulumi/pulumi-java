@@ -89,22 +89,22 @@ public final class GetRolloutResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"artifactSourceId","buildVersion","id","identity","location","name","operationInfo","services","status","stepGroups","tags","targetServiceTopologyId","totalRetryAttempts","type"})
+    @OutputCustomType.Constructor
     private GetRolloutResult(
-        @Nullable String artifactSourceId,
-        String buildVersion,
-        String id,
-        @Nullable IdentityResponse identity,
-        String location,
-        String name,
-        RolloutOperationInfoResponse operationInfo,
-        List<ServiceResponse> services,
-        String status,
-        List<StepGroupResponse> stepGroups,
-        @Nullable Map<String,String> tags,
-        String targetServiceTopologyId,
-        Integer totalRetryAttempts,
-        String type) {
+        @OutputCustomType.Parameter("artifactSourceId") @Nullable String artifactSourceId,
+        @OutputCustomType.Parameter("buildVersion") String buildVersion,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable IdentityResponse identity,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("operationInfo") RolloutOperationInfoResponse operationInfo,
+        @OutputCustomType.Parameter("services") List<ServiceResponse> services,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("stepGroups") List<StepGroupResponse> stepGroups,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("targetServiceTopologyId") String targetServiceTopologyId,
+        @OutputCustomType.Parameter("totalRetryAttempts") Integer totalRetryAttempts,
+        @OutputCustomType.Parameter("type") String type) {
         this.artifactSourceId = artifactSourceId;
         this.buildVersion = buildVersion;
         this.id = id;

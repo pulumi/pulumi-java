@@ -98,24 +98,24 @@ public final class GetDscpConfigurationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"associatedNetworkInterfaces","destinationIpRanges","destinationPortRanges","etag","id","location","markings","name","protocol","provisioningState","qosCollectionId","resourceGuid","sourceIpRanges","sourcePortRanges","tags","type"})
+    @OutputCustomType.Constructor
     private GetDscpConfigurationResult(
-        List<NetworkInterfaceResponse> associatedNetworkInterfaces,
-        @Nullable List<QosIpRangeResponse> destinationIpRanges,
-        @Nullable List<QosPortRangeResponse> destinationPortRanges,
-        String etag,
-        @Nullable String id,
-        @Nullable String location,
-        @Nullable List<Integer> markings,
-        String name,
-        @Nullable String protocol,
-        String provisioningState,
-        String qosCollectionId,
-        String resourceGuid,
-        @Nullable List<QosIpRangeResponse> sourceIpRanges,
-        @Nullable List<QosPortRangeResponse> sourcePortRanges,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("associatedNetworkInterfaces") List<NetworkInterfaceResponse> associatedNetworkInterfaces,
+        @OutputCustomType.Parameter("destinationIpRanges") @Nullable List<QosIpRangeResponse> destinationIpRanges,
+        @OutputCustomType.Parameter("destinationPortRanges") @Nullable List<QosPortRangeResponse> destinationPortRanges,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("markings") @Nullable List<Integer> markings,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("qosCollectionId") String qosCollectionId,
+        @OutputCustomType.Parameter("resourceGuid") String resourceGuid,
+        @OutputCustomType.Parameter("sourceIpRanges") @Nullable List<QosIpRangeResponse> sourceIpRanges,
+        @OutputCustomType.Parameter("sourcePortRanges") @Nullable List<QosPortRangeResponse> sourcePortRanges,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.associatedNetworkInterfaces = associatedNetworkInterfaces;
         this.destinationIpRanges = destinationIpRanges;
         this.destinationPortRanges = destinationPortRanges;

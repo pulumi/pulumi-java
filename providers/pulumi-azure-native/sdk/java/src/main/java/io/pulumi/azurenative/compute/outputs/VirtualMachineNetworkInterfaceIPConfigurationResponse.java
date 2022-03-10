@@ -56,16 +56,16 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse {
      */
     private final @Nullable SubResourceResponse subnet;
 
-    @OutputCustomType.Constructor({"applicationGatewayBackendAddressPools","applicationSecurityGroups","loadBalancerBackendAddressPools","name","primary","privateIPAddressVersion","publicIPAddressConfiguration","subnet"})
+    @OutputCustomType.Constructor
     private VirtualMachineNetworkInterfaceIPConfigurationResponse(
-        @Nullable List<SubResourceResponse> applicationGatewayBackendAddressPools,
-        @Nullable List<SubResourceResponse> applicationSecurityGroups,
-        @Nullable List<SubResourceResponse> loadBalancerBackendAddressPools,
-        String name,
-        @Nullable Boolean primary,
-        @Nullable String privateIPAddressVersion,
-        @Nullable VirtualMachinePublicIPAddressConfigurationResponse publicIPAddressConfiguration,
-        @Nullable SubResourceResponse subnet) {
+        @OutputCustomType.Parameter("applicationGatewayBackendAddressPools") @Nullable List<SubResourceResponse> applicationGatewayBackendAddressPools,
+        @OutputCustomType.Parameter("applicationSecurityGroups") @Nullable List<SubResourceResponse> applicationSecurityGroups,
+        @OutputCustomType.Parameter("loadBalancerBackendAddressPools") @Nullable List<SubResourceResponse> loadBalancerBackendAddressPools,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("primary") @Nullable Boolean primary,
+        @OutputCustomType.Parameter("privateIPAddressVersion") @Nullable String privateIPAddressVersion,
+        @OutputCustomType.Parameter("publicIPAddressConfiguration") @Nullable VirtualMachinePublicIPAddressConfigurationResponse publicIPAddressConfiguration,
+        @OutputCustomType.Parameter("subnet") @Nullable SubResourceResponse subnet) {
         this.applicationGatewayBackendAddressPools = applicationGatewayBackendAddressPools;
         this.applicationSecurityGroups = applicationSecurityGroups;
         this.loadBalancerBackendAddressPools = loadBalancerBackendAddressPools;

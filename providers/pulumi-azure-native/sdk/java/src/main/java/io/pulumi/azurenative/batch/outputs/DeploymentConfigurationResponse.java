@@ -23,10 +23,10 @@ public final class DeploymentConfigurationResponse {
      */
     private final @Nullable VirtualMachineConfigurationResponse virtualMachineConfiguration;
 
-    @OutputCustomType.Constructor({"cloudServiceConfiguration","virtualMachineConfiguration"})
+    @OutputCustomType.Constructor
     private DeploymentConfigurationResponse(
-        @Nullable CloudServiceConfigurationResponse cloudServiceConfiguration,
-        @Nullable VirtualMachineConfigurationResponse virtualMachineConfiguration) {
+        @OutputCustomType.Parameter("cloudServiceConfiguration") @Nullable CloudServiceConfigurationResponse cloudServiceConfiguration,
+        @OutputCustomType.Parameter("virtualMachineConfiguration") @Nullable VirtualMachineConfigurationResponse virtualMachineConfiguration) {
         this.cloudServiceConfiguration = cloudServiceConfiguration;
         this.virtualMachineConfiguration = virtualMachineConfiguration;
     }

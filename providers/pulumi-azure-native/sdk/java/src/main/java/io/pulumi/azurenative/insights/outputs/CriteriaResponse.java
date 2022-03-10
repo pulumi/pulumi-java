@@ -23,10 +23,10 @@ public final class CriteriaResponse {
      */
     private final String metricName;
 
-    @OutputCustomType.Constructor({"dimensions","metricName"})
+    @OutputCustomType.Constructor
     private CriteriaResponse(
-        @Nullable List<DimensionResponse> dimensions,
-        String metricName) {
+        @OutputCustomType.Parameter("dimensions") @Nullable List<DimensionResponse> dimensions,
+        @OutputCustomType.Parameter("metricName") String metricName) {
         this.dimensions = dimensions;
         this.metricName = metricName;
     }

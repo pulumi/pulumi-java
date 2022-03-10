@@ -34,12 +34,12 @@ public final class ReportDefinitionResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"dataset","timePeriod","timeframe","type"})
+    @OutputCustomType.Constructor
     private ReportDefinitionResponse(
-        @Nullable ReportDatasetResponse dataset,
-        @Nullable ReportTimePeriodResponse timePeriod,
-        String timeframe,
-        String type) {
+        @OutputCustomType.Parameter("dataset") @Nullable ReportDatasetResponse dataset,
+        @OutputCustomType.Parameter("timePeriod") @Nullable ReportTimePeriodResponse timePeriod,
+        @OutputCustomType.Parameter("timeframe") String timeframe,
+        @OutputCustomType.Parameter("type") String type) {
         this.dataset = dataset;
         this.timePeriod = timePeriod;
         this.timeframe = timeframe;

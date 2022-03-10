@@ -22,10 +22,10 @@ public final class LinkedIntegrationRuntimeKeyAuthorizationResponse {
      */
     private final SecureStringResponse key;
 
-    @OutputCustomType.Constructor({"authorizationType","key"})
+    @OutputCustomType.Constructor
     private LinkedIntegrationRuntimeKeyAuthorizationResponse(
-        String authorizationType,
-        SecureStringResponse key) {
+        @OutputCustomType.Parameter("authorizationType") String authorizationType,
+        @OutputCustomType.Parameter("key") SecureStringResponse key) {
         this.authorizationType = authorizationType;
         this.key = key;
     }

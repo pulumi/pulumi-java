@@ -33,12 +33,12 @@ public final class ManagedClusterWindowsProfileResponse {
      */
     private final @Nullable String licenseType;
 
-    @OutputCustomType.Constructor({"adminPassword","adminUsername","enableCSIProxy","licenseType"})
+    @OutputCustomType.Constructor
     private ManagedClusterWindowsProfileResponse(
-        @Nullable String adminPassword,
-        String adminUsername,
-        @Nullable Boolean enableCSIProxy,
-        @Nullable String licenseType) {
+        @OutputCustomType.Parameter("adminPassword") @Nullable String adminPassword,
+        @OutputCustomType.Parameter("adminUsername") String adminUsername,
+        @OutputCustomType.Parameter("enableCSIProxy") @Nullable Boolean enableCSIProxy,
+        @OutputCustomType.Parameter("licenseType") @Nullable String licenseType) {
         this.adminPassword = adminPassword;
         this.adminUsername = adminUsername;
         this.enableCSIProxy = enableCSIProxy;

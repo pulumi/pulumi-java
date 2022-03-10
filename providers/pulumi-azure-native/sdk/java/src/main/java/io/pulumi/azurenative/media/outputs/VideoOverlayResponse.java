@@ -65,18 +65,18 @@ public final class VideoOverlayResponse {
      */
     private final @Nullable String start;
 
-    @OutputCustomType.Constructor({"audioGainLevel","cropRectangle","end","fadeInDuration","fadeOutDuration","inputLabel","odataType","opacity","position","start"})
+    @OutputCustomType.Constructor
     private VideoOverlayResponse(
-        @Nullable Double audioGainLevel,
-        @Nullable RectangleResponse cropRectangle,
-        @Nullable String end,
-        @Nullable String fadeInDuration,
-        @Nullable String fadeOutDuration,
-        String inputLabel,
-        String odataType,
-        @Nullable Double opacity,
-        @Nullable RectangleResponse position,
-        @Nullable String start) {
+        @OutputCustomType.Parameter("audioGainLevel") @Nullable Double audioGainLevel,
+        @OutputCustomType.Parameter("cropRectangle") @Nullable RectangleResponse cropRectangle,
+        @OutputCustomType.Parameter("end") @Nullable String end,
+        @OutputCustomType.Parameter("fadeInDuration") @Nullable String fadeInDuration,
+        @OutputCustomType.Parameter("fadeOutDuration") @Nullable String fadeOutDuration,
+        @OutputCustomType.Parameter("inputLabel") String inputLabel,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("opacity") @Nullable Double opacity,
+        @OutputCustomType.Parameter("position") @Nullable RectangleResponse position,
+        @OutputCustomType.Parameter("start") @Nullable String start) {
         this.audioGainLevel = audioGainLevel;
         this.cropRectangle = cropRectangle;
         this.end = end;

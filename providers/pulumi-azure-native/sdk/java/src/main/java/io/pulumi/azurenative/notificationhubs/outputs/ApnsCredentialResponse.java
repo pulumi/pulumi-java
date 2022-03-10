@@ -52,16 +52,16 @@ public final class ApnsCredentialResponse {
      */
     private final @Nullable String token;
 
-    @OutputCustomType.Constructor({"apnsCertificate","appId","appName","certificateKey","endpoint","keyId","thumbprint","token"})
+    @OutputCustomType.Constructor
     private ApnsCredentialResponse(
-        @Nullable String apnsCertificate,
-        @Nullable String appId,
-        @Nullable String appName,
-        @Nullable String certificateKey,
-        @Nullable String endpoint,
-        @Nullable String keyId,
-        @Nullable String thumbprint,
-        @Nullable String token) {
+        @OutputCustomType.Parameter("apnsCertificate") @Nullable String apnsCertificate,
+        @OutputCustomType.Parameter("appId") @Nullable String appId,
+        @OutputCustomType.Parameter("appName") @Nullable String appName,
+        @OutputCustomType.Parameter("certificateKey") @Nullable String certificateKey,
+        @OutputCustomType.Parameter("endpoint") @Nullable String endpoint,
+        @OutputCustomType.Parameter("keyId") @Nullable String keyId,
+        @OutputCustomType.Parameter("thumbprint") @Nullable String thumbprint,
+        @OutputCustomType.Parameter("token") @Nullable String token) {
         this.apnsCertificate = apnsCertificate;
         this.appId = appId;
         this.appName = appName;

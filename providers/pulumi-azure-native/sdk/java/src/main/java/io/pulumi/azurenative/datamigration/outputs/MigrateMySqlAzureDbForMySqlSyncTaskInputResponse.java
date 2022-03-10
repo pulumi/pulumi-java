@@ -27,11 +27,11 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskInputResponse {
      */
     private final MySqlConnectionInfoResponse targetConnectionInfo;
 
-    @OutputCustomType.Constructor({"selectedDatabases","sourceConnectionInfo","targetConnectionInfo"})
+    @OutputCustomType.Constructor
     private MigrateMySqlAzureDbForMySqlSyncTaskInputResponse(
-        List<MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse> selectedDatabases,
-        MySqlConnectionInfoResponse sourceConnectionInfo,
-        MySqlConnectionInfoResponse targetConnectionInfo) {
+        @OutputCustomType.Parameter("selectedDatabases") List<MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse> selectedDatabases,
+        @OutputCustomType.Parameter("sourceConnectionInfo") MySqlConnectionInfoResponse sourceConnectionInfo,
+        @OutputCustomType.Parameter("targetConnectionInfo") MySqlConnectionInfoResponse targetConnectionInfo) {
         this.selectedDatabases = selectedDatabases;
         this.sourceConnectionInfo = sourceConnectionInfo;
         this.targetConnectionInfo = targetConnectionInfo;

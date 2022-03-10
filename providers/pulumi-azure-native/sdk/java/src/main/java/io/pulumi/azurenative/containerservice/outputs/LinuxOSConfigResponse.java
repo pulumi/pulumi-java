@@ -34,12 +34,12 @@ public final class LinuxOSConfigResponse {
      */
     private final @Nullable String transparentHugePageEnabled;
 
-    @OutputCustomType.Constructor({"swapFileSizeMB","sysctls","transparentHugePageDefrag","transparentHugePageEnabled"})
+    @OutputCustomType.Constructor
     private LinuxOSConfigResponse(
-        @Nullable Integer swapFileSizeMB,
-        @Nullable SysctlConfigResponse sysctls,
-        @Nullable String transparentHugePageDefrag,
-        @Nullable String transparentHugePageEnabled) {
+        @OutputCustomType.Parameter("swapFileSizeMB") @Nullable Integer swapFileSizeMB,
+        @OutputCustomType.Parameter("sysctls") @Nullable SysctlConfigResponse sysctls,
+        @OutputCustomType.Parameter("transparentHugePageDefrag") @Nullable String transparentHugePageDefrag,
+        @OutputCustomType.Parameter("transparentHugePageEnabled") @Nullable String transparentHugePageEnabled) {
         this.swapFileSizeMB = swapFileSizeMB;
         this.sysctls = sysctls;
         this.transparentHugePageDefrag = transparentHugePageDefrag;

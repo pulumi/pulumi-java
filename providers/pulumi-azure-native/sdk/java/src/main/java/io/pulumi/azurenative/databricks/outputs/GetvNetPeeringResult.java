@@ -81,21 +81,21 @@ public final class GetvNetPeeringResult {
      */
     private final @Nullable Boolean useRemoteGateways;
 
-    @OutputCustomType.Constructor({"allowForwardedTraffic","allowGatewayTransit","allowVirtualNetworkAccess","databricksAddressSpace","databricksVirtualNetwork","id","name","peeringState","provisioningState","remoteAddressSpace","remoteVirtualNetwork","type","useRemoteGateways"})
+    @OutputCustomType.Constructor
     private GetvNetPeeringResult(
-        @Nullable Boolean allowForwardedTraffic,
-        @Nullable Boolean allowGatewayTransit,
-        @Nullable Boolean allowVirtualNetworkAccess,
-        @Nullable AddressSpaceResponse databricksAddressSpace,
-        @Nullable VirtualNetworkPeeringPropertiesFormatResponseDatabricksVirtualNetwork databricksVirtualNetwork,
-        String id,
-        String name,
-        String peeringState,
-        String provisioningState,
-        @Nullable AddressSpaceResponse remoteAddressSpace,
-        VirtualNetworkPeeringPropertiesFormatResponseRemoteVirtualNetwork remoteVirtualNetwork,
-        String type,
-        @Nullable Boolean useRemoteGateways) {
+        @OutputCustomType.Parameter("allowForwardedTraffic") @Nullable Boolean allowForwardedTraffic,
+        @OutputCustomType.Parameter("allowGatewayTransit") @Nullable Boolean allowGatewayTransit,
+        @OutputCustomType.Parameter("allowVirtualNetworkAccess") @Nullable Boolean allowVirtualNetworkAccess,
+        @OutputCustomType.Parameter("databricksAddressSpace") @Nullable AddressSpaceResponse databricksAddressSpace,
+        @OutputCustomType.Parameter("databricksVirtualNetwork") @Nullable VirtualNetworkPeeringPropertiesFormatResponseDatabricksVirtualNetwork databricksVirtualNetwork,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("peeringState") String peeringState,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("remoteAddressSpace") @Nullable AddressSpaceResponse remoteAddressSpace,
+        @OutputCustomType.Parameter("remoteVirtualNetwork") VirtualNetworkPeeringPropertiesFormatResponseRemoteVirtualNetwork remoteVirtualNetwork,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("useRemoteGateways") @Nullable Boolean useRemoteGateways) {
         this.allowForwardedTraffic = allowForwardedTraffic;
         this.allowGatewayTransit = allowGatewayTransit;
         this.allowVirtualNetworkAccess = allowVirtualNetworkAccess;

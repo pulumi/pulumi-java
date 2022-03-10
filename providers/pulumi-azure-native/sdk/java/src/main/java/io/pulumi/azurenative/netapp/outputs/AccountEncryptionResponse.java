@@ -17,8 +17,8 @@ public final class AccountEncryptionResponse {
      */
     private final @Nullable String keySource;
 
-    @OutputCustomType.Constructor({"keySource"})
-    private AccountEncryptionResponse(@Nullable String keySource) {
+    @OutputCustomType.Constructor
+    private AccountEncryptionResponse(@OutputCustomType.Parameter("keySource") @Nullable String keySource) {
         this.keySource = keySource;
     }
 

@@ -28,11 +28,11 @@ public final class IntegrationRuntimeDataFlowPropertiesResponse {
      */
     private final @Nullable Integer timeToLive;
 
-    @OutputCustomType.Constructor({"computeType","coreCount","timeToLive"})
+    @OutputCustomType.Constructor
     private IntegrationRuntimeDataFlowPropertiesResponse(
-        @Nullable String computeType,
-        @Nullable Integer coreCount,
-        @Nullable Integer timeToLive) {
+        @OutputCustomType.Parameter("computeType") @Nullable String computeType,
+        @OutputCustomType.Parameter("coreCount") @Nullable Integer coreCount,
+        @OutputCustomType.Parameter("timeToLive") @Nullable Integer timeToLive) {
         this.computeType = computeType;
         this.coreCount = coreCount;
         this.timeToLive = timeToLive;

@@ -121,29 +121,29 @@ public final class GetServerEndpointResult {
      */
     private final @Nullable Integer volumeFreeSpacePercent;
 
-    @OutputCustomType.Constructor({"cloudTiering","cloudTieringStatus","friendlyName","id","initialDownloadPolicy","lastOperationName","lastWorkflowId","localCacheMode","name","offlineDataTransfer","offlineDataTransferShareName","offlineDataTransferStorageAccountResourceId","offlineDataTransferStorageAccountTenantId","provisioningState","recallStatus","serverLocalPath","serverResourceId","syncStatus","tierFilesOlderThanDays","type","volumeFreeSpacePercent"})
+    @OutputCustomType.Constructor
     private GetServerEndpointResult(
-        @Nullable String cloudTiering,
-        ServerEndpointCloudTieringStatusResponse cloudTieringStatus,
-        @Nullable String friendlyName,
-        String id,
-        @Nullable String initialDownloadPolicy,
-        String lastOperationName,
-        String lastWorkflowId,
-        @Nullable String localCacheMode,
-        String name,
-        @Nullable String offlineDataTransfer,
-        @Nullable String offlineDataTransferShareName,
-        String offlineDataTransferStorageAccountResourceId,
-        String offlineDataTransferStorageAccountTenantId,
-        String provisioningState,
-        ServerEndpointRecallStatusResponse recallStatus,
-        @Nullable String serverLocalPath,
-        @Nullable String serverResourceId,
-        ServerEndpointSyncStatusResponse syncStatus,
-        @Nullable Integer tierFilesOlderThanDays,
-        String type,
-        @Nullable Integer volumeFreeSpacePercent) {
+        @OutputCustomType.Parameter("cloudTiering") @Nullable String cloudTiering,
+        @OutputCustomType.Parameter("cloudTieringStatus") ServerEndpointCloudTieringStatusResponse cloudTieringStatus,
+        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("initialDownloadPolicy") @Nullable String initialDownloadPolicy,
+        @OutputCustomType.Parameter("lastOperationName") String lastOperationName,
+        @OutputCustomType.Parameter("lastWorkflowId") String lastWorkflowId,
+        @OutputCustomType.Parameter("localCacheMode") @Nullable String localCacheMode,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("offlineDataTransfer") @Nullable String offlineDataTransfer,
+        @OutputCustomType.Parameter("offlineDataTransferShareName") @Nullable String offlineDataTransferShareName,
+        @OutputCustomType.Parameter("offlineDataTransferStorageAccountResourceId") String offlineDataTransferStorageAccountResourceId,
+        @OutputCustomType.Parameter("offlineDataTransferStorageAccountTenantId") String offlineDataTransferStorageAccountTenantId,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("recallStatus") ServerEndpointRecallStatusResponse recallStatus,
+        @OutputCustomType.Parameter("serverLocalPath") @Nullable String serverLocalPath,
+        @OutputCustomType.Parameter("serverResourceId") @Nullable String serverResourceId,
+        @OutputCustomType.Parameter("syncStatus") ServerEndpointSyncStatusResponse syncStatus,
+        @OutputCustomType.Parameter("tierFilesOlderThanDays") @Nullable Integer tierFilesOlderThanDays,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("volumeFreeSpacePercent") @Nullable Integer volumeFreeSpacePercent) {
         this.cloudTiering = cloudTiering;
         this.cloudTieringStatus = cloudTieringStatus;
         this.friendlyName = friendlyName;

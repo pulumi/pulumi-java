@@ -28,11 +28,11 @@ public final class WorkspaceCappingResponse {
      */
     private final String quotaNextResetTime;
 
-    @OutputCustomType.Constructor({"dailyQuotaGb","dataIngestionStatus","quotaNextResetTime"})
+    @OutputCustomType.Constructor
     private WorkspaceCappingResponse(
-        @Nullable Double dailyQuotaGb,
-        String dataIngestionStatus,
-        String quotaNextResetTime) {
+        @OutputCustomType.Parameter("dailyQuotaGb") @Nullable Double dailyQuotaGb,
+        @OutputCustomType.Parameter("dataIngestionStatus") String dataIngestionStatus,
+        @OutputCustomType.Parameter("quotaNextResetTime") String quotaNextResetTime) {
         this.dailyQuotaGb = dailyQuotaGb;
         this.dataIngestionStatus = dataIngestionStatus;
         this.quotaNextResetTime = quotaNextResetTime;

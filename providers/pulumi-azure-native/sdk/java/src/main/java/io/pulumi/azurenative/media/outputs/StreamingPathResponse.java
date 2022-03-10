@@ -27,11 +27,11 @@ public final class StreamingPathResponse {
      */
     private final String streamingProtocol;
 
-    @OutputCustomType.Constructor({"encryptionScheme","paths","streamingProtocol"})
+    @OutputCustomType.Constructor
     private StreamingPathResponse(
-        String encryptionScheme,
-        @Nullable List<String> paths,
-        String streamingProtocol) {
+        @OutputCustomType.Parameter("encryptionScheme") String encryptionScheme,
+        @OutputCustomType.Parameter("paths") @Nullable List<String> paths,
+        @OutputCustomType.Parameter("streamingProtocol") String streamingProtocol) {
         this.encryptionScheme = encryptionScheme;
         this.paths = paths;
         this.streamingProtocol = streamingProtocol;

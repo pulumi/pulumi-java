@@ -22,10 +22,10 @@ public final class NfsAccessPolicyResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"accessRules","name"})
+    @OutputCustomType.Constructor
     private NfsAccessPolicyResponse(
-        List<NfsAccessRuleResponse> accessRules,
-        String name) {
+        @OutputCustomType.Parameter("accessRules") List<NfsAccessRuleResponse> accessRules,
+        @OutputCustomType.Parameter("name") String name) {
         this.accessRules = accessRules;
         this.name = name;
     }

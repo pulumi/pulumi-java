@@ -38,13 +38,13 @@ public final class AzureFileshareProtectedItemExtendedInfoResponse {
      */
     private final String resourceStateSyncTime;
 
-    @OutputCustomType.Constructor({"oldestRecoveryPoint","policyState","recoveryPointCount","resourceState","resourceStateSyncTime"})
+    @OutputCustomType.Constructor
     private AzureFileshareProtectedItemExtendedInfoResponse(
-        @Nullable String oldestRecoveryPoint,
-        @Nullable String policyState,
-        @Nullable Integer recoveryPointCount,
-        String resourceState,
-        String resourceStateSyncTime) {
+        @OutputCustomType.Parameter("oldestRecoveryPoint") @Nullable String oldestRecoveryPoint,
+        @OutputCustomType.Parameter("policyState") @Nullable String policyState,
+        @OutputCustomType.Parameter("recoveryPointCount") @Nullable Integer recoveryPointCount,
+        @OutputCustomType.Parameter("resourceState") String resourceState,
+        @OutputCustomType.Parameter("resourceStateSyncTime") String resourceStateSyncTime) {
         this.oldestRecoveryPoint = oldestRecoveryPoint;
         this.policyState = policyState;
         this.recoveryPointCount = recoveryPointCount;

@@ -17,8 +17,8 @@ public final class EndpointPropertiesUpdateParametersResponseWebApplicationFirew
      */
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor({"id"})
-    private EndpointPropertiesUpdateParametersResponseWebApplicationFirewallPolicyLink(@Nullable String id) {
+    @OutputCustomType.Constructor
+    private EndpointPropertiesUpdateParametersResponseWebApplicationFirewallPolicyLink(@OutputCustomType.Parameter("id") @Nullable String id) {
         this.id = id;
     }
 

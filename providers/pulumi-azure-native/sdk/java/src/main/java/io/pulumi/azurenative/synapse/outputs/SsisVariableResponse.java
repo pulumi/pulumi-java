@@ -49,15 +49,15 @@ public final class SsisVariableResponse {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"dataType","description","id","name","sensitive","sensitiveValue","value"})
+    @OutputCustomType.Constructor
     private SsisVariableResponse(
-        @Nullable String dataType,
-        @Nullable String description,
-        @Nullable Double id,
-        @Nullable String name,
-        @Nullable Boolean sensitive,
-        @Nullable String sensitiveValue,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("dataType") @Nullable String dataType,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") @Nullable Double id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("sensitive") @Nullable Boolean sensitive,
+        @OutputCustomType.Parameter("sensitiveValue") @Nullable String sensitiveValue,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.dataType = dataType;
         this.description = description;
         this.id = id;

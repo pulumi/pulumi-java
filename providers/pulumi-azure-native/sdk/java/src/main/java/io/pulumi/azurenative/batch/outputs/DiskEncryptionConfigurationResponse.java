@@ -17,8 +17,8 @@ public final class DiskEncryptionConfigurationResponse {
      */
     private final @Nullable List<String> targets;
 
-    @OutputCustomType.Constructor({"targets"})
-    private DiskEncryptionConfigurationResponse(@Nullable List<String> targets) {
+    @OutputCustomType.Constructor
+    private DiskEncryptionConfigurationResponse(@OutputCustomType.Parameter("targets") @Nullable List<String> targets) {
         this.targets = targets;
     }
 

@@ -50,15 +50,15 @@ public final class NetworkProfileResponse {
      */
     private final @Nullable String serviceRuntimeSubnetId;
 
-    @OutputCustomType.Constructor({"appNetworkResourceGroup","appSubnetId","outboundIPs","requiredTraffics","serviceCidr","serviceRuntimeNetworkResourceGroup","serviceRuntimeSubnetId"})
+    @OutputCustomType.Constructor
     private NetworkProfileResponse(
-        @Nullable String appNetworkResourceGroup,
-        @Nullable String appSubnetId,
-        NetworkProfileResponseOutboundIPs outboundIPs,
-        List<RequiredTrafficResponse> requiredTraffics,
-        @Nullable String serviceCidr,
-        @Nullable String serviceRuntimeNetworkResourceGroup,
-        @Nullable String serviceRuntimeSubnetId) {
+        @OutputCustomType.Parameter("appNetworkResourceGroup") @Nullable String appNetworkResourceGroup,
+        @OutputCustomType.Parameter("appSubnetId") @Nullable String appSubnetId,
+        @OutputCustomType.Parameter("outboundIPs") NetworkProfileResponseOutboundIPs outboundIPs,
+        @OutputCustomType.Parameter("requiredTraffics") List<RequiredTrafficResponse> requiredTraffics,
+        @OutputCustomType.Parameter("serviceCidr") @Nullable String serviceCidr,
+        @OutputCustomType.Parameter("serviceRuntimeNetworkResourceGroup") @Nullable String serviceRuntimeNetworkResourceGroup,
+        @OutputCustomType.Parameter("serviceRuntimeSubnetId") @Nullable String serviceRuntimeSubnetId) {
         this.appNetworkResourceGroup = appNetworkResourceGroup;
         this.appSubnetId = appSubnetId;
         this.outboundIPs = outboundIPs;

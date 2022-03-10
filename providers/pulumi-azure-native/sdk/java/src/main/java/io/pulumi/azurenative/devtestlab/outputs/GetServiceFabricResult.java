@@ -64,18 +64,18 @@ public final class GetServiceFabricResult {
      */
     private final String uniqueIdentifier;
 
-    @OutputCustomType.Constructor({"applicableSchedule","environmentId","externalServiceFabricId","id","location","name","provisioningState","tags","type","uniqueIdentifier"})
+    @OutputCustomType.Constructor
     private GetServiceFabricResult(
-        ApplicableScheduleResponse applicableSchedule,
-        @Nullable String environmentId,
-        @Nullable String externalServiceFabricId,
-        String id,
-        @Nullable String location,
-        String name,
-        String provisioningState,
-        @Nullable Map<String,String> tags,
-        String type,
-        String uniqueIdentifier) {
+        @OutputCustomType.Parameter("applicableSchedule") ApplicableScheduleResponse applicableSchedule,
+        @OutputCustomType.Parameter("environmentId") @Nullable String environmentId,
+        @OutputCustomType.Parameter("externalServiceFabricId") @Nullable String externalServiceFabricId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("uniqueIdentifier") String uniqueIdentifier) {
         this.applicableSchedule = applicableSchedule;
         this.environmentId = environmentId;
         this.externalServiceFabricId = externalServiceFabricId;

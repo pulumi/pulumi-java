@@ -74,20 +74,20 @@ public final class GetPoolResult {
      */
     private final Double utilizedThroughputMibps;
 
-    @OutputCustomType.Constructor({"id","location","name","poolId","provisioningState","qosType","serviceLevel","size","tags","totalThroughputMibps","type","utilizedThroughputMibps"})
+    @OutputCustomType.Constructor
     private GetPoolResult(
-        String id,
-        String location,
-        String name,
-        String poolId,
-        String provisioningState,
-        @Nullable String qosType,
-        String serviceLevel,
-        Double size,
-        @Nullable Map<String,String> tags,
-        Double totalThroughputMibps,
-        String type,
-        Double utilizedThroughputMibps) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("poolId") String poolId,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("qosType") @Nullable String qosType,
+        @OutputCustomType.Parameter("serviceLevel") String serviceLevel,
+        @OutputCustomType.Parameter("size") Double size,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("totalThroughputMibps") Double totalThroughputMibps,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("utilizedThroughputMibps") Double utilizedThroughputMibps) {
         this.id = id;
         this.location = location;
         this.name = name;

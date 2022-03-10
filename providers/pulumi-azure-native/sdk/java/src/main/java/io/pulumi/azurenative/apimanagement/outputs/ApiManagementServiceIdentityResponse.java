@@ -36,12 +36,12 @@ public final class ApiManagementServiceIdentityResponse {
      */
     private final @Nullable Map<String,UserIdentityPropertiesResponse> userAssignedIdentities;
 
-    @OutputCustomType.Constructor({"principalId","tenantId","type","userAssignedIdentities"})
+    @OutputCustomType.Constructor
     private ApiManagementServiceIdentityResponse(
-        String principalId,
-        String tenantId,
-        String type,
-        @Nullable Map<String,UserIdentityPropertiesResponse> userAssignedIdentities) {
+        @OutputCustomType.Parameter("principalId") String principalId,
+        @OutputCustomType.Parameter("tenantId") String tenantId,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userAssignedIdentities") @Nullable Map<String,UserIdentityPropertiesResponse> userAssignedIdentities) {
         this.principalId = principalId;
         this.tenantId = tenantId;
         this.type = type;

@@ -20,10 +20,10 @@ public final class ServiceCorrelationDescriptionResponse {
      */
     private final String serviceName;
 
-    @OutputCustomType.Constructor({"scheme","serviceName"})
+    @OutputCustomType.Constructor
     private ServiceCorrelationDescriptionResponse(
-        String scheme,
-        String serviceName) {
+        @OutputCustomType.Parameter("scheme") String scheme,
+        @OutputCustomType.Parameter("serviceName") String serviceName) {
         this.scheme = scheme;
         this.serviceName = serviceName;
     }

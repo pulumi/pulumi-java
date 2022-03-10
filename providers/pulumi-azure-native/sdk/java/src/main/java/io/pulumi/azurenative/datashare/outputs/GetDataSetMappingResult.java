@@ -36,13 +36,13 @@ public final class GetDataSetMappingResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","kind","name","systemData","type"})
+    @OutputCustomType.Constructor
     private GetDataSetMappingResult(
-        String id,
-        String kind,
-        String name,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.kind = kind;
         this.name = name;

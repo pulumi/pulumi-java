@@ -60,17 +60,17 @@ public final class GetEmailTemplateResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"body","description","id","isDefault","name","parameters","subject","title","type"})
+    @OutputCustomType.Constructor
     private GetEmailTemplateResult(
-        String body,
-        @Nullable String description,
-        String id,
-        Boolean isDefault,
-        String name,
-        @Nullable List<EmailTemplateParametersContractPropertiesResponse> parameters,
-        String subject,
-        @Nullable String title,
-        String type) {
+        @OutputCustomType.Parameter("body") String body,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isDefault") Boolean isDefault,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") @Nullable List<EmailTemplateParametersContractPropertiesResponse> parameters,
+        @OutputCustomType.Parameter("subject") String subject,
+        @OutputCustomType.Parameter("title") @Nullable String title,
+        @OutputCustomType.Parameter("type") String type) {
         this.body = body;
         this.description = description;
         this.id = id;

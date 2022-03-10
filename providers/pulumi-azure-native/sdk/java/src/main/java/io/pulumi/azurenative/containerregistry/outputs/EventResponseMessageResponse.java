@@ -38,13 +38,13 @@ public final class EventResponseMessageResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"content","headers","reasonPhrase","statusCode","version"})
+    @OutputCustomType.Constructor
     private EventResponseMessageResponse(
-        @Nullable String content,
-        @Nullable Map<String,String> headers,
-        @Nullable String reasonPhrase,
-        @Nullable String statusCode,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("content") @Nullable String content,
+        @OutputCustomType.Parameter("headers") @Nullable Map<String,String> headers,
+        @OutputCustomType.Parameter("reasonPhrase") @Nullable String reasonPhrase,
+        @OutputCustomType.Parameter("statusCode") @Nullable String statusCode,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.content = content;
         this.headers = headers;
         this.reasonPhrase = reasonPhrase;

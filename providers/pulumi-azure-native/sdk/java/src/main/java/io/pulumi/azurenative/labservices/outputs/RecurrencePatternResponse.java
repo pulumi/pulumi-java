@@ -34,12 +34,12 @@ public final class RecurrencePatternResponse {
      */
     private final @Nullable List<String> weekDays;
 
-    @OutputCustomType.Constructor({"expirationDate","frequency","interval","weekDays"})
+    @OutputCustomType.Constructor
     private RecurrencePatternResponse(
-        String expirationDate,
-        String frequency,
-        @Nullable Integer interval,
-        @Nullable List<String> weekDays) {
+        @OutputCustomType.Parameter("expirationDate") String expirationDate,
+        @OutputCustomType.Parameter("frequency") String frequency,
+        @OutputCustomType.Parameter("interval") @Nullable Integer interval,
+        @OutputCustomType.Parameter("weekDays") @Nullable List<String> weekDays) {
         this.expirationDate = expirationDate;
         this.frequency = frequency;
         this.interval = interval;

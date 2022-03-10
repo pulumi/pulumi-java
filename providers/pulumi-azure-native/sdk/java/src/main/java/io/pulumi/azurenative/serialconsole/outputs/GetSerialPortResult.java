@@ -32,12 +32,12 @@ public final class GetSerialPortResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","state","type"})
+    @OutputCustomType.Constructor
     private GetSerialPortResult(
-        String id,
-        String name,
-        @Nullable String state,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") @Nullable String state,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.state = state;

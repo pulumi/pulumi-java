@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class TaskSchedulingPolicyResponse {
     private final String nodeFillType;
 
-    @OutputCustomType.Constructor({"nodeFillType"})
-    private TaskSchedulingPolicyResponse(String nodeFillType) {
+    @OutputCustomType.Constructor
+    private TaskSchedulingPolicyResponse(@OutputCustomType.Parameter("nodeFillType") String nodeFillType) {
         this.nodeFillType = nodeFillType;
     }
 

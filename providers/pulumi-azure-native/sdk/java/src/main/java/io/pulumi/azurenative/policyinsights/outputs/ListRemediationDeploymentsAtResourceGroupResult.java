@@ -22,10 +22,10 @@ public final class ListRemediationDeploymentsAtResourceGroupResult {
      */
     private final List<RemediationDeploymentResponse> value;
 
-    @OutputCustomType.Constructor({"nextLink","value"})
+    @OutputCustomType.Constructor
     private ListRemediationDeploymentsAtResourceGroupResult(
-        String nextLink,
-        List<RemediationDeploymentResponse> value) {
+        @OutputCustomType.Parameter("nextLink") String nextLink,
+        @OutputCustomType.Parameter("value") List<RemediationDeploymentResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }

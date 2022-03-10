@@ -34,12 +34,12 @@ public final class DataFlowReferenceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"datasetParameters","parameters","referenceName","type"})
+    @OutputCustomType.Constructor
     private DataFlowReferenceResponse(
-        @Nullable Object datasetParameters,
-        @Nullable Map<String,Object> parameters,
-        String referenceName,
-        String type) {
+        @OutputCustomType.Parameter("datasetParameters") @Nullable Object datasetParameters,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,Object> parameters,
+        @OutputCustomType.Parameter("referenceName") String referenceName,
+        @OutputCustomType.Parameter("type") String type) {
         this.datasetParameters = datasetParameters;
         this.parameters = parameters;
         this.referenceName = referenceName;

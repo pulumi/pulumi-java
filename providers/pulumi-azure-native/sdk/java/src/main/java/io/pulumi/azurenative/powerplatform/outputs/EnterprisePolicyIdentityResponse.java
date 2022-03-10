@@ -27,11 +27,11 @@ public final class EnterprisePolicyIdentityResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"systemAssignedIdentityPrincipalId","tenantId","type"})
+    @OutputCustomType.Constructor
     private EnterprisePolicyIdentityResponse(
-        String systemAssignedIdentityPrincipalId,
-        String tenantId,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("systemAssignedIdentityPrincipalId") String systemAssignedIdentityPrincipalId,
+        @OutputCustomType.Parameter("tenantId") String tenantId,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.systemAssignedIdentityPrincipalId = systemAssignedIdentityPrincipalId;
         this.tenantId = tenantId;
         this.type = type;

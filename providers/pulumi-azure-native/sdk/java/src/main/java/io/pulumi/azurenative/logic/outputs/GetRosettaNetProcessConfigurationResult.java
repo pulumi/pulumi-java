@@ -90,23 +90,23 @@ public final class GetRosettaNetProcessConfigurationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"activitySettings","changedTime","createdTime","description","id","initiatorRoleSettings","location","metadata","name","processCode","processName","processVersion","responderRoleSettings","tags","type"})
+    @OutputCustomType.Constructor
     private GetRosettaNetProcessConfigurationResult(
-        RosettaNetPipActivitySettingsResponse activitySettings,
-        String changedTime,
-        String createdTime,
-        @Nullable String description,
-        String id,
-        RosettaNetPipRoleSettingsResponse initiatorRoleSettings,
-        @Nullable String location,
-        @Nullable Map<String,String> metadata,
-        String name,
-        String processCode,
-        String processName,
-        String processVersion,
-        RosettaNetPipRoleSettingsResponse responderRoleSettings,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("activitySettings") RosettaNetPipActivitySettingsResponse activitySettings,
+        @OutputCustomType.Parameter("changedTime") String changedTime,
+        @OutputCustomType.Parameter("createdTime") String createdTime,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("initiatorRoleSettings") RosettaNetPipRoleSettingsResponse initiatorRoleSettings,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("metadata") @Nullable Map<String,String> metadata,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("processCode") String processCode,
+        @OutputCustomType.Parameter("processName") String processName,
+        @OutputCustomType.Parameter("processVersion") String processVersion,
+        @OutputCustomType.Parameter("responderRoleSettings") RosettaNetPipRoleSettingsResponse responderRoleSettings,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.activitySettings = activitySettings;
         this.changedTime = changedTime;
         this.createdTime = createdTime;

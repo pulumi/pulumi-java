@@ -41,14 +41,14 @@ public final class AmlComputeNodeInformationResponse {
      */
     private final String runId;
 
-    @OutputCustomType.Constructor({"nodeId","nodeState","port","privateIpAddress","publicIpAddress","runId"})
+    @OutputCustomType.Constructor
     private AmlComputeNodeInformationResponse(
-        String nodeId,
-        String nodeState,
-        Double port,
-        String privateIpAddress,
-        String publicIpAddress,
-        String runId) {
+        @OutputCustomType.Parameter("nodeId") String nodeId,
+        @OutputCustomType.Parameter("nodeState") String nodeState,
+        @OutputCustomType.Parameter("port") Double port,
+        @OutputCustomType.Parameter("privateIpAddress") String privateIpAddress,
+        @OutputCustomType.Parameter("publicIpAddress") String publicIpAddress,
+        @OutputCustomType.Parameter("runId") String runId) {
         this.nodeId = nodeId;
         this.nodeState = nodeState;
         this.port = port;

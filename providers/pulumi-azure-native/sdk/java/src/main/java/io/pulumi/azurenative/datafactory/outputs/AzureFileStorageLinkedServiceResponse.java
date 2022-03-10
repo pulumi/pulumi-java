@@ -96,23 +96,23 @@ public final class AzureFileStorageLinkedServiceResponse {
      */
     private final @Nullable Object userId;
 
-    @OutputCustomType.Constructor({"accountKey","annotations","connectVia","connectionString","description","encryptedCredential","fileShare","host","parameters","password","sasToken","sasUri","snapshot","type","userId"})
+    @OutputCustomType.Constructor
     private AzureFileStorageLinkedServiceResponse(
-        @Nullable AzureKeyVaultSecretReferenceResponse accountKey,
-        @Nullable List<Object> annotations,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable Object connectionString,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        @Nullable Object fileShare,
-        @Nullable Object host,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        @Nullable AzureKeyVaultSecretReferenceResponse sasToken,
-        @Nullable Object sasUri,
-        @Nullable Object snapshot,
-        String type,
-        @Nullable Object userId) {
+        @OutputCustomType.Parameter("accountKey") @Nullable AzureKeyVaultSecretReferenceResponse accountKey,
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @OutputCustomType.Parameter("connectionString") @Nullable Object connectionString,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @OutputCustomType.Parameter("fileShare") @Nullable Object fileShare,
+        @OutputCustomType.Parameter("host") @Nullable Object host,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("password") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
+        @OutputCustomType.Parameter("sasToken") @Nullable AzureKeyVaultSecretReferenceResponse sasToken,
+        @OutputCustomType.Parameter("sasUri") @Nullable Object sasUri,
+        @OutputCustomType.Parameter("snapshot") @Nullable Object snapshot,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userId") @Nullable Object userId) {
         this.accountKey = accountKey;
         this.annotations = annotations;
         this.connectVia = connectVia;

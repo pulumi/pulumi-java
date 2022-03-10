@@ -34,12 +34,12 @@ public final class IntegrationRuntimeDataFlowPropertiesResponse {
      */
     private final @Nullable Integer timeToLive;
 
-    @OutputCustomType.Constructor({"cleanup","computeType","coreCount","timeToLive"})
+    @OutputCustomType.Constructor
     private IntegrationRuntimeDataFlowPropertiesResponse(
-        @Nullable Boolean cleanup,
-        @Nullable String computeType,
-        @Nullable Integer coreCount,
-        @Nullable Integer timeToLive) {
+        @OutputCustomType.Parameter("cleanup") @Nullable Boolean cleanup,
+        @OutputCustomType.Parameter("computeType") @Nullable String computeType,
+        @OutputCustomType.Parameter("coreCount") @Nullable Integer coreCount,
+        @OutputCustomType.Parameter("timeToLive") @Nullable Integer timeToLive) {
         this.cleanup = cleanup;
         this.computeType = computeType;
         this.coreCount = coreCount;

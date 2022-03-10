@@ -27,11 +27,11 @@ public final class PlatformPropertiesResponse {
      */
     private final @Nullable String variant;
 
-    @OutputCustomType.Constructor({"architecture","os","variant"})
+    @OutputCustomType.Constructor
     private PlatformPropertiesResponse(
-        @Nullable String architecture,
-        String os,
-        @Nullable String variant) {
+        @OutputCustomType.Parameter("architecture") @Nullable String architecture,
+        @OutputCustomType.Parameter("os") String os,
+        @OutputCustomType.Parameter("variant") @Nullable String variant) {
         this.architecture = architecture;
         this.os = os;
         this.variant = variant;

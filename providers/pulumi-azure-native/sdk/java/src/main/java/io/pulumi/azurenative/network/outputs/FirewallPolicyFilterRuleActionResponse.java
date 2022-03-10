@@ -17,8 +17,8 @@ public final class FirewallPolicyFilterRuleActionResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"type"})
-    private FirewallPolicyFilterRuleActionResponse(@Nullable String type) {
+    @OutputCustomType.Constructor
+    private FirewallPolicyFilterRuleActionResponse(@OutputCustomType.Parameter("type") @Nullable String type) {
         this.type = type;
     }
 

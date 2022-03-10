@@ -69,19 +69,19 @@ public final class ApplicationGatewayPathRuleResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"backendAddressPool","backendHttpSettings","etag","firewallPolicy","id","name","paths","provisioningState","redirectConfiguration","rewriteRuleSet","type"})
+    @OutputCustomType.Constructor
     private ApplicationGatewayPathRuleResponse(
-        @Nullable SubResourceResponse backendAddressPool,
-        @Nullable SubResourceResponse backendHttpSettings,
-        String etag,
-        @Nullable SubResourceResponse firewallPolicy,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable List<String> paths,
-        String provisioningState,
-        @Nullable SubResourceResponse redirectConfiguration,
-        @Nullable SubResourceResponse rewriteRuleSet,
-        String type) {
+        @OutputCustomType.Parameter("backendAddressPool") @Nullable SubResourceResponse backendAddressPool,
+        @OutputCustomType.Parameter("backendHttpSettings") @Nullable SubResourceResponse backendHttpSettings,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("firewallPolicy") @Nullable SubResourceResponse firewallPolicy,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("paths") @Nullable List<String> paths,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("redirectConfiguration") @Nullable SubResourceResponse redirectConfiguration,
+        @OutputCustomType.Parameter("rewriteRuleSet") @Nullable SubResourceResponse rewriteRuleSet,
+        @OutputCustomType.Parameter("type") String type) {
         this.backendAddressPool = backendAddressPool;
         this.backendHttpSettings = backendHttpSettings;
         this.etag = etag;

@@ -32,12 +32,12 @@ public final class ScopeResponse {
      */
     private final @Nullable List<ResourceIdResponse> virtualNetworks;
 
-    @OutputCustomType.Constructor({"managementGroups","subnets","subscriptions","virtualNetworks"})
+    @OutputCustomType.Constructor
     private ScopeResponse(
-        @Nullable List<ResourceIdResponse> managementGroups,
-        @Nullable List<ResourceIdResponse> subnets,
-        @Nullable List<ResourceIdResponse> subscriptions,
-        @Nullable List<ResourceIdResponse> virtualNetworks) {
+        @OutputCustomType.Parameter("managementGroups") @Nullable List<ResourceIdResponse> managementGroups,
+        @OutputCustomType.Parameter("subnets") @Nullable List<ResourceIdResponse> subnets,
+        @OutputCustomType.Parameter("subscriptions") @Nullable List<ResourceIdResponse> subscriptions,
+        @OutputCustomType.Parameter("virtualNetworks") @Nullable List<ResourceIdResponse> virtualNetworks) {
         this.managementGroups = managementGroups;
         this.subnets = subnets;
         this.subscriptions = subscriptions;

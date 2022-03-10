@@ -64,18 +64,18 @@ public final class GetAttachedDatabaseConfigurationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"attachedDatabaseNames","clusterResourceId","databaseName","defaultPrincipalsModificationKind","id","location","name","provisioningState","tableLevelSharingProperties","type"})
+    @OutputCustomType.Constructor
     private GetAttachedDatabaseConfigurationResult(
-        List<String> attachedDatabaseNames,
-        String clusterResourceId,
-        String databaseName,
-        String defaultPrincipalsModificationKind,
-        String id,
-        @Nullable String location,
-        String name,
-        String provisioningState,
-        @Nullable TableLevelSharingPropertiesResponse tableLevelSharingProperties,
-        String type) {
+        @OutputCustomType.Parameter("attachedDatabaseNames") List<String> attachedDatabaseNames,
+        @OutputCustomType.Parameter("clusterResourceId") String clusterResourceId,
+        @OutputCustomType.Parameter("databaseName") String databaseName,
+        @OutputCustomType.Parameter("defaultPrincipalsModificationKind") String defaultPrincipalsModificationKind,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("tableLevelSharingProperties") @Nullable TableLevelSharingPropertiesResponse tableLevelSharingProperties,
+        @OutputCustomType.Parameter("type") String type) {
         this.attachedDatabaseNames = attachedDatabaseNames;
         this.clusterResourceId = clusterResourceId;
         this.databaseName = databaseName;

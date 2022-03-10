@@ -66,17 +66,17 @@ public final class SqlServerStoredProcedureActivityResponse {
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
-    @OutputCustomType.Constructor({"dependsOn","description","linkedServiceName","name","policy","storedProcedureName","storedProcedureParameters","type","userProperties"})
+    @OutputCustomType.Constructor
     private SqlServerStoredProcedureActivityResponse(
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        LinkedServiceReferenceResponse linkedServiceName,
-        String name,
-        @Nullable ActivityPolicyResponse policy,
-        Object storedProcedureName,
-        @Nullable Map<String,StoredProcedureParameterResponse> storedProcedureParameters,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties) {
+        @OutputCustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("linkedServiceName") LinkedServiceReferenceResponse linkedServiceName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("policy") @Nullable ActivityPolicyResponse policy,
+        @OutputCustomType.Parameter("storedProcedureName") Object storedProcedureName,
+        @OutputCustomType.Parameter("storedProcedureParameters") @Nullable Map<String,StoredProcedureParameterResponse> storedProcedureParameters,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties) {
         this.dependsOn = dependsOn;
         this.description = description;
         this.linkedServiceName = linkedServiceName;

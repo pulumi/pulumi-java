@@ -32,12 +32,12 @@ public final class PurchasePlanResponse {
      */
     private final String publisher;
 
-    @OutputCustomType.Constructor({"name","product","promotionCode","publisher"})
+    @OutputCustomType.Constructor
     private PurchasePlanResponse(
-        String name,
-        String product,
-        @Nullable String promotionCode,
-        String publisher) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("product") String product,
+        @OutputCustomType.Parameter("promotionCode") @Nullable String promotionCode,
+        @OutputCustomType.Parameter("publisher") String publisher) {
         this.name = name;
         this.product = product;
         this.promotionCode = promotionCode;

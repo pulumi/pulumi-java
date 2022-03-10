@@ -45,15 +45,15 @@ public final class GetEnergyServiceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","location","name","properties","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetEnergyServiceResult(
-        String id,
-        String location,
-        String name,
-        EnergyServicePropertiesResponse properties,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") EnergyServicePropertiesResponse properties,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.location = location;
         this.name = name;

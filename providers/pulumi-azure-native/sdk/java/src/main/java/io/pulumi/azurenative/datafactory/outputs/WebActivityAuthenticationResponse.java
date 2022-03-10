@@ -52,15 +52,15 @@ public final class WebActivityAuthenticationResponse {
      */
     private final @Nullable Object username;
 
-    @OutputCustomType.Constructor({"credential","password","pfx","resource","type","userTenant","username"})
+    @OutputCustomType.Constructor
     private WebActivityAuthenticationResponse(
-        @Nullable CredentialReferenceResponse credential,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> pfx,
-        @Nullable Object resource,
-        @Nullable String type,
-        @Nullable Object userTenant,
-        @Nullable Object username) {
+        @OutputCustomType.Parameter("credential") @Nullable CredentialReferenceResponse credential,
+        @OutputCustomType.Parameter("password") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
+        @OutputCustomType.Parameter("pfx") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> pfx,
+        @OutputCustomType.Parameter("resource") @Nullable Object resource,
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("userTenant") @Nullable Object userTenant,
+        @OutputCustomType.Parameter("username") @Nullable Object username) {
         this.credential = credential;
         this.password = password;
         this.pfx = pfx;

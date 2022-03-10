@@ -95,22 +95,22 @@ public final class ManagedOnlineDeploymentResponse {
      */
     private final @Nullable Either<AutoScaleSettingsResponse,ManualScaleSettingsResponse> scaleSettings;
 
-    @OutputCustomType.Constructor({"appInsightsEnabled","codeConfiguration","description","endpointComputeType","environmentId","environmentVariables","instanceType","livenessProbe","model","properties","provisioningState","readinessProbe","requestSettings","scaleSettings"})
+    @OutputCustomType.Constructor
     private ManagedOnlineDeploymentResponse(
-        @Nullable Boolean appInsightsEnabled,
-        @Nullable CodeConfigurationResponse codeConfiguration,
-        @Nullable String description,
-        String endpointComputeType,
-        @Nullable String environmentId,
-        @Nullable Map<String,String> environmentVariables,
-        @Nullable String instanceType,
-        @Nullable ProbeSettingsResponse livenessProbe,
-        @Nullable Object model,
-        @Nullable Map<String,String> properties,
-        String provisioningState,
-        @Nullable ProbeSettingsResponse readinessProbe,
-        @Nullable OnlineRequestSettingsResponse requestSettings,
-        @Nullable Either<AutoScaleSettingsResponse,ManualScaleSettingsResponse> scaleSettings) {
+        @OutputCustomType.Parameter("appInsightsEnabled") @Nullable Boolean appInsightsEnabled,
+        @OutputCustomType.Parameter("codeConfiguration") @Nullable CodeConfigurationResponse codeConfiguration,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("endpointComputeType") String endpointComputeType,
+        @OutputCustomType.Parameter("environmentId") @Nullable String environmentId,
+        @OutputCustomType.Parameter("environmentVariables") @Nullable Map<String,String> environmentVariables,
+        @OutputCustomType.Parameter("instanceType") @Nullable String instanceType,
+        @OutputCustomType.Parameter("livenessProbe") @Nullable ProbeSettingsResponse livenessProbe,
+        @OutputCustomType.Parameter("model") @Nullable Object model,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("readinessProbe") @Nullable ProbeSettingsResponse readinessProbe,
+        @OutputCustomType.Parameter("requestSettings") @Nullable OnlineRequestSettingsResponse requestSettings,
+        @OutputCustomType.Parameter("scaleSettings") @Nullable Either<AutoScaleSettingsResponse,ManualScaleSettingsResponse> scaleSettings) {
         this.appInsightsEnabled = appInsightsEnabled;
         this.codeConfiguration = codeConfiguration;
         this.description = description;

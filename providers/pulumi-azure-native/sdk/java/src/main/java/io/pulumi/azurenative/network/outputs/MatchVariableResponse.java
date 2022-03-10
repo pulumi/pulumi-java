@@ -22,10 +22,10 @@ public final class MatchVariableResponse {
      */
     private final String variableName;
 
-    @OutputCustomType.Constructor({"selector","variableName"})
+    @OutputCustomType.Constructor
     private MatchVariableResponse(
-        @Nullable String selector,
-        String variableName) {
+        @OutputCustomType.Parameter("selector") @Nullable String selector,
+        @OutputCustomType.Parameter("variableName") String variableName) {
         this.selector = selector;
         this.variableName = variableName;
     }

@@ -128,29 +128,29 @@ public final class GetJobResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"cancellationReason","deliveryInfo","deliveryType","details","error","id","identity","isCancellable","isCancellableWithoutFee","isDeletable","isPrepareToShipEnabled","isShippingAddressEditable","location","name","sku","startTime","status","systemData","tags","transferType","type"})
+    @OutputCustomType.Constructor
     private GetJobResult(
-        String cancellationReason,
-        @Nullable JobDeliveryInfoResponse deliveryInfo,
-        @Nullable String deliveryType,
-        @Nullable Object details,
-        CloudErrorResponse error,
-        String id,
-        @Nullable ResourceIdentityResponse identity,
-        Boolean isCancellable,
-        Boolean isCancellableWithoutFee,
-        Boolean isDeletable,
-        Boolean isPrepareToShipEnabled,
-        Boolean isShippingAddressEditable,
-        String location,
-        String name,
-        SkuResponse sku,
-        String startTime,
-        String status,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String transferType,
-        String type) {
+        @OutputCustomType.Parameter("cancellationReason") String cancellationReason,
+        @OutputCustomType.Parameter("deliveryInfo") @Nullable JobDeliveryInfoResponse deliveryInfo,
+        @OutputCustomType.Parameter("deliveryType") @Nullable String deliveryType,
+        @OutputCustomType.Parameter("details") @Nullable Object details,
+        @OutputCustomType.Parameter("error") CloudErrorResponse error,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable ResourceIdentityResponse identity,
+        @OutputCustomType.Parameter("isCancellable") Boolean isCancellable,
+        @OutputCustomType.Parameter("isCancellableWithoutFee") Boolean isCancellableWithoutFee,
+        @OutputCustomType.Parameter("isDeletable") Boolean isDeletable,
+        @OutputCustomType.Parameter("isPrepareToShipEnabled") Boolean isPrepareToShipEnabled,
+        @OutputCustomType.Parameter("isShippingAddressEditable") Boolean isShippingAddressEditable,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("sku") SkuResponse sku,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("transferType") String transferType,
+        @OutputCustomType.Parameter("type") String type) {
         this.cancellationReason = cancellationReason;
         this.deliveryInfo = deliveryInfo;
         this.deliveryType = deliveryType;

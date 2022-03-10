@@ -23,10 +23,10 @@ public final class DataPoolLocationResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"encryption","name"})
+    @OutputCustomType.Constructor
     private DataPoolLocationResponse(
-        @Nullable DataPoolEncryptionResponse encryption,
-        String name) {
+        @OutputCustomType.Parameter("encryption") @Nullable DataPoolEncryptionResponse encryption,
+        @OutputCustomType.Parameter("name") String name) {
         this.encryption = encryption;
         this.name = name;
     }

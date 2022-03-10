@@ -17,8 +17,8 @@ public final class PipelinePolicyResponse {
      */
     private final @Nullable PipelineElapsedTimeMetricPolicyResponse elapsedTimeMetric;
 
-    @OutputCustomType.Constructor({"elapsedTimeMetric"})
-    private PipelinePolicyResponse(@Nullable PipelineElapsedTimeMetricPolicyResponse elapsedTimeMetric) {
+    @OutputCustomType.Constructor
+    private PipelinePolicyResponse(@OutputCustomType.Parameter("elapsedTimeMetric") @Nullable PipelineElapsedTimeMetricPolicyResponse elapsedTimeMetric) {
         this.elapsedTimeMetric = elapsedTimeMetric;
     }
 

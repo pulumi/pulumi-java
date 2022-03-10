@@ -23,10 +23,10 @@ public final class ScheduleResponse {
      */
     private final @Nullable List<String> policyList;
 
-    @OutputCustomType.Constructor({"name","policyList"})
+    @OutputCustomType.Constructor
     private ScheduleResponse(
-        @Nullable String name,
-        @Nullable List<String> policyList) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("policyList") @Nullable List<String> policyList) {
         this.name = name;
         this.policyList = policyList;
     }

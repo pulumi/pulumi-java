@@ -40,13 +40,13 @@ public final class RestHealthCheckStepAttributesResponse {
      */
     private final @Nullable String waitDuration;
 
-    @OutputCustomType.Constructor({"healthChecks","healthyStateDuration","maxElasticDuration","type","waitDuration"})
+    @OutputCustomType.Constructor
     private RestHealthCheckStepAttributesResponse(
-        List<RestHealthCheckResponse> healthChecks,
-        String healthyStateDuration,
-        @Nullable String maxElasticDuration,
-        String type,
-        @Nullable String waitDuration) {
+        @OutputCustomType.Parameter("healthChecks") List<RestHealthCheckResponse> healthChecks,
+        @OutputCustomType.Parameter("healthyStateDuration") String healthyStateDuration,
+        @OutputCustomType.Parameter("maxElasticDuration") @Nullable String maxElasticDuration,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("waitDuration") @Nullable String waitDuration) {
         this.healthChecks = healthChecks;
         this.healthyStateDuration = healthyStateDuration;
         this.maxElasticDuration = maxElasticDuration;

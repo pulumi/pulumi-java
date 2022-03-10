@@ -16,8 +16,8 @@ public final class GetProfileSupportedOptimizationTypesResult {
      */
     private final List<String> supportedOptimizationTypes;
 
-    @OutputCustomType.Constructor({"supportedOptimizationTypes"})
-    private GetProfileSupportedOptimizationTypesResult(List<String> supportedOptimizationTypes) {
+    @OutputCustomType.Constructor
+    private GetProfileSupportedOptimizationTypesResult(@OutputCustomType.Parameter("supportedOptimizationTypes") List<String> supportedOptimizationTypes) {
         this.supportedOptimizationTypes = supportedOptimizationTypes;
     }
 

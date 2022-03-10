@@ -17,8 +17,8 @@ public final class CloudErrorResponse {
      */
     private final @Nullable CloudErrorBodyResponse error;
 
-    @OutputCustomType.Constructor({"error"})
-    private CloudErrorResponse(@Nullable CloudErrorBodyResponse error) {
+    @OutputCustomType.Constructor
+    private CloudErrorResponse(@OutputCustomType.Parameter("error") @Nullable CloudErrorBodyResponse error) {
         this.error = error;
     }
 

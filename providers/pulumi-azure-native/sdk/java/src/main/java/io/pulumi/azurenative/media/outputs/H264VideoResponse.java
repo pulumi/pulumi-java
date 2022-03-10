@@ -56,16 +56,16 @@ public final class H264VideoResponse {
      */
     private final @Nullable String syncMode;
 
-    @OutputCustomType.Constructor({"complexity","keyFrameInterval","label","layers","odataType","sceneChangeDetection","stretchMode","syncMode"})
+    @OutputCustomType.Constructor
     private H264VideoResponse(
-        @Nullable String complexity,
-        @Nullable String keyFrameInterval,
-        @Nullable String label,
-        @Nullable List<H264LayerResponse> layers,
-        String odataType,
-        @Nullable Boolean sceneChangeDetection,
-        @Nullable String stretchMode,
-        @Nullable String syncMode) {
+        @OutputCustomType.Parameter("complexity") @Nullable String complexity,
+        @OutputCustomType.Parameter("keyFrameInterval") @Nullable String keyFrameInterval,
+        @OutputCustomType.Parameter("label") @Nullable String label,
+        @OutputCustomType.Parameter("layers") @Nullable List<H264LayerResponse> layers,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("sceneChangeDetection") @Nullable Boolean sceneChangeDetection,
+        @OutputCustomType.Parameter("stretchMode") @Nullable String stretchMode,
+        @OutputCustomType.Parameter("syncMode") @Nullable String syncMode) {
         this.complexity = complexity;
         this.keyFrameInterval = keyFrameInterval;
         this.label = label;

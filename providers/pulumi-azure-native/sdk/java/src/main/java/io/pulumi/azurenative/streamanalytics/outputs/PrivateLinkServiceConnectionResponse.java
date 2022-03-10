@@ -34,12 +34,12 @@ public final class PrivateLinkServiceConnectionResponse {
      */
     private final @Nullable String requestMessage;
 
-    @OutputCustomType.Constructor({"groupIds","privateLinkServiceConnectionState","privateLinkServiceId","requestMessage"})
+    @OutputCustomType.Constructor
     private PrivateLinkServiceConnectionResponse(
-        @Nullable List<String> groupIds,
-        @Nullable PrivateLinkConnectionStateResponse privateLinkServiceConnectionState,
-        @Nullable String privateLinkServiceId,
-        @Nullable String requestMessage) {
+        @OutputCustomType.Parameter("groupIds") @Nullable List<String> groupIds,
+        @OutputCustomType.Parameter("privateLinkServiceConnectionState") @Nullable PrivateLinkConnectionStateResponse privateLinkServiceConnectionState,
+        @OutputCustomType.Parameter("privateLinkServiceId") @Nullable String privateLinkServiceId,
+        @OutputCustomType.Parameter("requestMessage") @Nullable String requestMessage) {
         this.groupIds = groupIds;
         this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
         this.privateLinkServiceId = privateLinkServiceId;

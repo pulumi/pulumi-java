@@ -17,8 +17,8 @@ public final class RGitHubPackageResponseResponse {
      */
     private final @Nullable String repository;
 
-    @OutputCustomType.Constructor({"repository"})
-    private RGitHubPackageResponseResponse(@Nullable String repository) {
+    @OutputCustomType.Constructor
+    private RGitHubPackageResponseResponse(@OutputCustomType.Parameter("repository") @Nullable String repository) {
         this.repository = repository;
     }
 

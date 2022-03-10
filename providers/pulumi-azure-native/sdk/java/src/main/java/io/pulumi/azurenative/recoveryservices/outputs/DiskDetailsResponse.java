@@ -33,12 +33,12 @@ public final class DiskDetailsResponse {
      */
     private final @Nullable String vhdType;
 
-    @OutputCustomType.Constructor({"maxSizeMB","vhdId","vhdName","vhdType"})
+    @OutputCustomType.Constructor
     private DiskDetailsResponse(
-        @Nullable Double maxSizeMB,
-        @Nullable String vhdId,
-        @Nullable String vhdName,
-        @Nullable String vhdType) {
+        @OutputCustomType.Parameter("maxSizeMB") @Nullable Double maxSizeMB,
+        @OutputCustomType.Parameter("vhdId") @Nullable String vhdId,
+        @OutputCustomType.Parameter("vhdName") @Nullable String vhdName,
+        @OutputCustomType.Parameter("vhdType") @Nullable String vhdType) {
         this.maxSizeMB = maxSizeMB;
         this.vhdId = vhdId;
         this.vhdName = vhdName;

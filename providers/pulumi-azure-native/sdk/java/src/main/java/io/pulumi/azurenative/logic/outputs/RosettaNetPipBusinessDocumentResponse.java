@@ -27,11 +27,11 @@ public final class RosettaNetPipBusinessDocumentResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"description","name","version"})
+    @OutputCustomType.Constructor
     private RosettaNetPipBusinessDocumentResponse(
-        @Nullable String description,
-        String name,
-        String version) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("version") String version) {
         this.description = description;
         this.name = name;
         this.version = version;

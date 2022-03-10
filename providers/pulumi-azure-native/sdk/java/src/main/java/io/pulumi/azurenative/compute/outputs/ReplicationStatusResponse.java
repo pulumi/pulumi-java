@@ -22,10 +22,10 @@ public final class ReplicationStatusResponse {
      */
     private final List<RegionalReplicationStatusResponse> summary;
 
-    @OutputCustomType.Constructor({"aggregatedState","summary"})
+    @OutputCustomType.Constructor
     private ReplicationStatusResponse(
-        String aggregatedState,
-        List<RegionalReplicationStatusResponse> summary) {
+        @OutputCustomType.Parameter("aggregatedState") String aggregatedState,
+        @OutputCustomType.Parameter("summary") List<RegionalReplicationStatusResponse> summary) {
         this.aggregatedState = aggregatedState;
         this.summary = summary;
     }

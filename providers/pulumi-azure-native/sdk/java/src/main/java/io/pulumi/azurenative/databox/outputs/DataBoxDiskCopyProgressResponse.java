@@ -32,12 +32,12 @@ public final class DataBoxDiskCopyProgressResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"bytesCopied","percentComplete","serialNumber","status"})
+    @OutputCustomType.Constructor
     private DataBoxDiskCopyProgressResponse(
-        Double bytesCopied,
-        Integer percentComplete,
-        String serialNumber,
-        String status) {
+        @OutputCustomType.Parameter("bytesCopied") Double bytesCopied,
+        @OutputCustomType.Parameter("percentComplete") Integer percentComplete,
+        @OutputCustomType.Parameter("serialNumber") String serialNumber,
+        @OutputCustomType.Parameter("status") String status) {
         this.bytesCopied = bytesCopied;
         this.percentComplete = percentComplete;
         this.serialNumber = serialNumber;

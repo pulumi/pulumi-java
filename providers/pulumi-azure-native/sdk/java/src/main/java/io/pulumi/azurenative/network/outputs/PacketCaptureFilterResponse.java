@@ -37,13 +37,13 @@ public final class PacketCaptureFilterResponse {
      */
     private final @Nullable String remotePort;
 
-    @OutputCustomType.Constructor({"localIPAddress","localPort","protocol","remoteIPAddress","remotePort"})
+    @OutputCustomType.Constructor
     private PacketCaptureFilterResponse(
-        @Nullable String localIPAddress,
-        @Nullable String localPort,
-        @Nullable String protocol,
-        @Nullable String remoteIPAddress,
-        @Nullable String remotePort) {
+        @OutputCustomType.Parameter("localIPAddress") @Nullable String localIPAddress,
+        @OutputCustomType.Parameter("localPort") @Nullable String localPort,
+        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
+        @OutputCustomType.Parameter("remoteIPAddress") @Nullable String remoteIPAddress,
+        @OutputCustomType.Parameter("remotePort") @Nullable String remotePort) {
         this.localIPAddress = localIPAddress;
         this.localPort = localPort;
         this.protocol = protocol;

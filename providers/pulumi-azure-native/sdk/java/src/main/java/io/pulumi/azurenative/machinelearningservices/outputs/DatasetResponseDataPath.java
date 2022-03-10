@@ -62,17 +62,17 @@ public final class DatasetResponseDataPath {
      */
     private final @Nullable DatasetResponseSqlDataPath sqlDataPath;
 
-    @OutputCustomType.Constructor({"additionalProperties","azureFilePath","datastoreName","httpUrl","partitionFormat","partitionFormatIgnoreError","paths","relativePath","sqlDataPath"})
+    @OutputCustomType.Constructor
     private DatasetResponseDataPath(
-        @Nullable Map<String,Object> additionalProperties,
-        String azureFilePath,
-        String datastoreName,
-        String httpUrl,
-        String partitionFormat,
-        Boolean partitionFormatIgnoreError,
-        List<String> paths,
-        String relativePath,
-        @Nullable DatasetResponseSqlDataPath sqlDataPath) {
+        @OutputCustomType.Parameter("additionalProperties") @Nullable Map<String,Object> additionalProperties,
+        @OutputCustomType.Parameter("azureFilePath") String azureFilePath,
+        @OutputCustomType.Parameter("datastoreName") String datastoreName,
+        @OutputCustomType.Parameter("httpUrl") String httpUrl,
+        @OutputCustomType.Parameter("partitionFormat") String partitionFormat,
+        @OutputCustomType.Parameter("partitionFormatIgnoreError") Boolean partitionFormatIgnoreError,
+        @OutputCustomType.Parameter("paths") List<String> paths,
+        @OutputCustomType.Parameter("relativePath") String relativePath,
+        @OutputCustomType.Parameter("sqlDataPath") @Nullable DatasetResponseSqlDataPath sqlDataPath) {
         this.additionalProperties = additionalProperties;
         this.azureFilePath = azureFilePath;
         this.datastoreName = datastoreName;

@@ -63,18 +63,18 @@ public final class ServiceBusResponse {
      */
     private final @Nullable String secondaryConnectionString;
 
-    @OutputCustomType.Constructor({"authenticationType","createdTime","deadLetterSecret","deadLetterUri","endpointType","endpointUri","entityPath","primaryConnectionString","provisioningState","secondaryConnectionString"})
+    @OutputCustomType.Constructor
     private ServiceBusResponse(
-        @Nullable String authenticationType,
-        String createdTime,
-        @Nullable String deadLetterSecret,
-        @Nullable String deadLetterUri,
-        String endpointType,
-        @Nullable String endpointUri,
-        @Nullable String entityPath,
-        @Nullable String primaryConnectionString,
-        String provisioningState,
-        @Nullable String secondaryConnectionString) {
+        @OutputCustomType.Parameter("authenticationType") @Nullable String authenticationType,
+        @OutputCustomType.Parameter("createdTime") String createdTime,
+        @OutputCustomType.Parameter("deadLetterSecret") @Nullable String deadLetterSecret,
+        @OutputCustomType.Parameter("deadLetterUri") @Nullable String deadLetterUri,
+        @OutputCustomType.Parameter("endpointType") String endpointType,
+        @OutputCustomType.Parameter("endpointUri") @Nullable String endpointUri,
+        @OutputCustomType.Parameter("entityPath") @Nullable String entityPath,
+        @OutputCustomType.Parameter("primaryConnectionString") @Nullable String primaryConnectionString,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("secondaryConnectionString") @Nullable String secondaryConnectionString) {
         this.authenticationType = authenticationType;
         this.createdTime = createdTime;
         this.deadLetterSecret = deadLetterSecret;

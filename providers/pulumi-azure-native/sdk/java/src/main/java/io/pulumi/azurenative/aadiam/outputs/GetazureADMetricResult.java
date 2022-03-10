@@ -39,14 +39,14 @@ public final class GetazureADMetricResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","location","name","properties","tags","type"})
+    @OutputCustomType.Constructor
     private GetazureADMetricResult(
-        String id,
-        String location,
-        String name,
-        AzureADMetricsPropertiesFormatResponse properties,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") AzureADMetricsPropertiesFormatResponse properties,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.location = location;
         this.name = name;

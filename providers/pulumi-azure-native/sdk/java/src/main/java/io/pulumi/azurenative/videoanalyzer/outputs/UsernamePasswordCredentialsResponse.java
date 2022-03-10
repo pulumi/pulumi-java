@@ -26,11 +26,11 @@ public final class UsernamePasswordCredentialsResponse {
      */
     private final String username;
 
-    @OutputCustomType.Constructor({"password","type","username"})
+    @OutputCustomType.Constructor
     private UsernamePasswordCredentialsResponse(
-        String password,
-        String type,
-        String username) {
+        @OutputCustomType.Parameter("password") String password,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("username") String username) {
         this.password = password;
         this.type = type;
         this.username = username;

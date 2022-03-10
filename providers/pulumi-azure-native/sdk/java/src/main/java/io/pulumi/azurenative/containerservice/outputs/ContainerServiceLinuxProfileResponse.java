@@ -21,10 +21,10 @@ public final class ContainerServiceLinuxProfileResponse {
      */
     private final ContainerServiceSshConfigurationResponse ssh;
 
-    @OutputCustomType.Constructor({"adminUsername","ssh"})
+    @OutputCustomType.Constructor
     private ContainerServiceLinuxProfileResponse(
-        String adminUsername,
-        ContainerServiceSshConfigurationResponse ssh) {
+        @OutputCustomType.Parameter("adminUsername") String adminUsername,
+        @OutputCustomType.Parameter("ssh") ContainerServiceSshConfigurationResponse ssh) {
         this.adminUsername = adminUsername;
         this.ssh = ssh;
     }

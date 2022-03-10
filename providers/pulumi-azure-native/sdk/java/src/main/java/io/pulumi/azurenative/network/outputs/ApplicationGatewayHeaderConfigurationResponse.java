@@ -22,10 +22,10 @@ public final class ApplicationGatewayHeaderConfigurationResponse {
      */
     private final @Nullable String headerValue;
 
-    @OutputCustomType.Constructor({"headerName","headerValue"})
+    @OutputCustomType.Constructor
     private ApplicationGatewayHeaderConfigurationResponse(
-        @Nullable String headerName,
-        @Nullable String headerValue) {
+        @OutputCustomType.Parameter("headerName") @Nullable String headerName,
+        @OutputCustomType.Parameter("headerValue") @Nullable String headerValue) {
         this.headerName = headerName;
         this.headerValue = headerValue;
     }

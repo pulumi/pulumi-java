@@ -68,18 +68,18 @@ public final class GetDedicatedHostGroupResult {
      */
     private final @Nullable List<String> zones;
 
-    @OutputCustomType.Constructor({"hosts","id","instanceView","location","name","platformFaultDomainCount","supportAutomaticPlacement","tags","type","zones"})
+    @OutputCustomType.Constructor
     private GetDedicatedHostGroupResult(
-        List<SubResourceReadOnlyResponse> hosts,
-        String id,
-        DedicatedHostGroupInstanceViewResponse instanceView,
-        String location,
-        String name,
-        Integer platformFaultDomainCount,
-        @Nullable Boolean supportAutomaticPlacement,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable List<String> zones) {
+        @OutputCustomType.Parameter("hosts") List<SubResourceReadOnlyResponse> hosts,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instanceView") DedicatedHostGroupInstanceViewResponse instanceView,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("platformFaultDomainCount") Integer platformFaultDomainCount,
+        @OutputCustomType.Parameter("supportAutomaticPlacement") @Nullable Boolean supportAutomaticPlacement,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("zones") @Nullable List<String> zones) {
         this.hosts = hosts;
         this.id = id;
         this.instanceView = instanceView;

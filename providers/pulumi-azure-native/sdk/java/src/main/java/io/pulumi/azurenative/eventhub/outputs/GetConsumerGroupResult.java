@@ -42,14 +42,14 @@ public final class GetConsumerGroupResult {
      */
     private final @Nullable String userMetadata;
 
-    @OutputCustomType.Constructor({"createdAt","id","name","type","updatedAt","userMetadata"})
+    @OutputCustomType.Constructor
     private GetConsumerGroupResult(
-        String createdAt,
-        String id,
-        String name,
-        String type,
-        String updatedAt,
-        @Nullable String userMetadata) {
+        @OutputCustomType.Parameter("createdAt") String createdAt,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("updatedAt") String updatedAt,
+        @OutputCustomType.Parameter("userMetadata") @Nullable String userMetadata) {
         this.createdAt = createdAt;
         this.id = id;
         this.name = name;

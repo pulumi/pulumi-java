@@ -52,15 +52,15 @@ public final class AppendVariableActivityResponse {
      */
     private final @Nullable String variableName;
 
-    @OutputCustomType.Constructor({"dependsOn","description","name","type","userProperties","value","variableName"})
+    @OutputCustomType.Constructor
     private AppendVariableActivityResponse(
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        String name,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties,
-        @Nullable Object value,
-        @Nullable String variableName) {
+        @OutputCustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties,
+        @OutputCustomType.Parameter("value") @Nullable Object value,
+        @OutputCustomType.Parameter("variableName") @Nullable String variableName) {
         this.dependsOn = dependsOn;
         this.description = description;
         this.name = name;

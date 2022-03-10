@@ -39,13 +39,13 @@ public final class IpAddressResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"dnsNameLabel","fqdn","ip","ports","type"})
+    @OutputCustomType.Constructor
     private IpAddressResponse(
-        @Nullable String dnsNameLabel,
-        String fqdn,
-        @Nullable String ip,
-        List<PortResponse> ports,
-        String type) {
+        @OutputCustomType.Parameter("dnsNameLabel") @Nullable String dnsNameLabel,
+        @OutputCustomType.Parameter("fqdn") String fqdn,
+        @OutputCustomType.Parameter("ip") @Nullable String ip,
+        @OutputCustomType.Parameter("ports") List<PortResponse> ports,
+        @OutputCustomType.Parameter("type") String type) {
         this.dnsNameLabel = dnsNameLabel;
         this.fqdn = fqdn;
         this.ip = ip;

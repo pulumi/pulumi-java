@@ -17,12 +17,12 @@ public final class CollectorAgentPropertiesResponse {
     private final @Nullable CollectorBodyAgentSpnPropertiesResponse spnDetails;
     private final String version;
 
-    @OutputCustomType.Constructor({"id","lastHeartbeatUtc","spnDetails","version"})
+    @OutputCustomType.Constructor
     private CollectorAgentPropertiesResponse(
-        String id,
-        String lastHeartbeatUtc,
-        @Nullable CollectorBodyAgentSpnPropertiesResponse spnDetails,
-        String version) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastHeartbeatUtc") String lastHeartbeatUtc,
+        @OutputCustomType.Parameter("spnDetails") @Nullable CollectorBodyAgentSpnPropertiesResponse spnDetails,
+        @OutputCustomType.Parameter("version") String version) {
         this.id = id;
         this.lastHeartbeatUtc = lastHeartbeatUtc;
         this.spnDetails = spnDetails;

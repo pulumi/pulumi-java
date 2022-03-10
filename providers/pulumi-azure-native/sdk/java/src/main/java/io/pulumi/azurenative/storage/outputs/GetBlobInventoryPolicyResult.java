@@ -42,14 +42,14 @@ public final class GetBlobInventoryPolicyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","lastModifiedTime","name","policy","systemData","type"})
+    @OutputCustomType.Constructor
     private GetBlobInventoryPolicyResult(
-        String id,
-        String lastModifiedTime,
-        String name,
-        BlobInventoryPolicySchemaResponse policy,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("policy") BlobInventoryPolicySchemaResponse policy,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.lastModifiedTime = lastModifiedTime;
         this.name = name;

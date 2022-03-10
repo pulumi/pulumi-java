@@ -43,14 +43,14 @@ public final class PresentationTimeRangeResponse {
      */
     private final @Nullable Double timescale;
 
-    @OutputCustomType.Constructor({"endTimestamp","forceEndTimestamp","liveBackoffDuration","presentationWindowDuration","startTimestamp","timescale"})
+    @OutputCustomType.Constructor
     private PresentationTimeRangeResponse(
-        @Nullable Double endTimestamp,
-        @Nullable Boolean forceEndTimestamp,
-        @Nullable Double liveBackoffDuration,
-        @Nullable Double presentationWindowDuration,
-        @Nullable Double startTimestamp,
-        @Nullable Double timescale) {
+        @OutputCustomType.Parameter("endTimestamp") @Nullable Double endTimestamp,
+        @OutputCustomType.Parameter("forceEndTimestamp") @Nullable Boolean forceEndTimestamp,
+        @OutputCustomType.Parameter("liveBackoffDuration") @Nullable Double liveBackoffDuration,
+        @OutputCustomType.Parameter("presentationWindowDuration") @Nullable Double presentationWindowDuration,
+        @OutputCustomType.Parameter("startTimestamp") @Nullable Double startTimestamp,
+        @OutputCustomType.Parameter("timescale") @Nullable Double timescale) {
         this.endTimestamp = endTimestamp;
         this.forceEndTimestamp = forceEndTimestamp;
         this.liveBackoffDuration = liveBackoffDuration;

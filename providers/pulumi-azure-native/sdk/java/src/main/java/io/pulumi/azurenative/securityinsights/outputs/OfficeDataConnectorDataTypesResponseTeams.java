@@ -17,8 +17,8 @@ public final class OfficeDataConnectorDataTypesResponseTeams {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor({"state"})
-    private OfficeDataConnectorDataTypesResponseTeams(@Nullable String state) {
+    @OutputCustomType.Constructor
+    private OfficeDataConnectorDataTypesResponseTeams(@OutputCustomType.Parameter("state") @Nullable String state) {
         this.state = state;
     }
 

@@ -79,21 +79,21 @@ public final class GetSapMonitorResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"enableCustomerAnalytics","id","location","logAnalyticsWorkspaceArmId","logAnalyticsWorkspaceId","logAnalyticsWorkspaceSharedKey","managedResourceGroupName","monitorSubnet","name","provisioningState","sapMonitorCollectorVersion","tags","type"})
+    @OutputCustomType.Constructor
     private GetSapMonitorResult(
-        @Nullable Boolean enableCustomerAnalytics,
-        String id,
-        String location,
-        @Nullable String logAnalyticsWorkspaceArmId,
-        @Nullable String logAnalyticsWorkspaceId,
-        @Nullable String logAnalyticsWorkspaceSharedKey,
-        String managedResourceGroupName,
-        @Nullable String monitorSubnet,
-        String name,
-        String provisioningState,
-        String sapMonitorCollectorVersion,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("enableCustomerAnalytics") @Nullable Boolean enableCustomerAnalytics,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("logAnalyticsWorkspaceArmId") @Nullable String logAnalyticsWorkspaceArmId,
+        @OutputCustomType.Parameter("logAnalyticsWorkspaceId") @Nullable String logAnalyticsWorkspaceId,
+        @OutputCustomType.Parameter("logAnalyticsWorkspaceSharedKey") @Nullable String logAnalyticsWorkspaceSharedKey,
+        @OutputCustomType.Parameter("managedResourceGroupName") String managedResourceGroupName,
+        @OutputCustomType.Parameter("monitorSubnet") @Nullable String monitorSubnet,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("sapMonitorCollectorVersion") String sapMonitorCollectorVersion,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.enableCustomerAnalytics = enableCustomerAnalytics;
         this.id = id;
         this.location = location;

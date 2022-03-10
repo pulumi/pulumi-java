@@ -25,11 +25,11 @@ public final class HealthMonitorResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"details","id","name"})
+    @OutputCustomType.Constructor
     private HealthMonitorResponse(
-        String details,
-        String id,
-        String name) {
+        @OutputCustomType.Parameter("details") String details,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name) {
         this.details = details;
         this.id = id;
         this.name = name;

@@ -65,18 +65,18 @@ public final class ApplicationGatewayUrlPathMapResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"defaultBackendAddressPool","defaultBackendHttpSettings","defaultRedirectConfiguration","defaultRewriteRuleSet","etag","id","name","pathRules","provisioningState","type"})
+    @OutputCustomType.Constructor
     private ApplicationGatewayUrlPathMapResponse(
-        @Nullable SubResourceResponse defaultBackendAddressPool,
-        @Nullable SubResourceResponse defaultBackendHttpSettings,
-        @Nullable SubResourceResponse defaultRedirectConfiguration,
-        @Nullable SubResourceResponse defaultRewriteRuleSet,
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable List<ApplicationGatewayPathRuleResponse> pathRules,
-        String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("defaultBackendAddressPool") @Nullable SubResourceResponse defaultBackendAddressPool,
+        @OutputCustomType.Parameter("defaultBackendHttpSettings") @Nullable SubResourceResponse defaultBackendHttpSettings,
+        @OutputCustomType.Parameter("defaultRedirectConfiguration") @Nullable SubResourceResponse defaultRedirectConfiguration,
+        @OutputCustomType.Parameter("defaultRewriteRuleSet") @Nullable SubResourceResponse defaultRewriteRuleSet,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("pathRules") @Nullable List<ApplicationGatewayPathRuleResponse> pathRules,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.defaultBackendAddressPool = defaultBackendAddressPool;
         this.defaultBackendHttpSettings = defaultBackendHttpSettings;
         this.defaultRedirectConfiguration = defaultRedirectConfiguration;

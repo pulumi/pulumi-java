@@ -72,19 +72,19 @@ public final class ProtectionContainerMappingPropertiesResponse {
      */
     private final @Nullable String targetProtectionContainerId;
 
-    @OutputCustomType.Constructor({"health","healthErrorDetails","policyFriendlyName","policyId","providerSpecificDetails","sourceFabricFriendlyName","sourceProtectionContainerFriendlyName","state","targetFabricFriendlyName","targetProtectionContainerFriendlyName","targetProtectionContainerId"})
+    @OutputCustomType.Constructor
     private ProtectionContainerMappingPropertiesResponse(
-        @Nullable String health,
-        @Nullable List<HealthErrorResponse> healthErrorDetails,
-        @Nullable String policyFriendlyName,
-        @Nullable String policyId,
-        @Nullable Either<A2AProtectionContainerMappingDetailsResponse,VMwareCbtProtectionContainerMappingDetailsResponse> providerSpecificDetails,
-        @Nullable String sourceFabricFriendlyName,
-        @Nullable String sourceProtectionContainerFriendlyName,
-        @Nullable String state,
-        @Nullable String targetFabricFriendlyName,
-        @Nullable String targetProtectionContainerFriendlyName,
-        @Nullable String targetProtectionContainerId) {
+        @OutputCustomType.Parameter("health") @Nullable String health,
+        @OutputCustomType.Parameter("healthErrorDetails") @Nullable List<HealthErrorResponse> healthErrorDetails,
+        @OutputCustomType.Parameter("policyFriendlyName") @Nullable String policyFriendlyName,
+        @OutputCustomType.Parameter("policyId") @Nullable String policyId,
+        @OutputCustomType.Parameter("providerSpecificDetails") @Nullable Either<A2AProtectionContainerMappingDetailsResponse,VMwareCbtProtectionContainerMappingDetailsResponse> providerSpecificDetails,
+        @OutputCustomType.Parameter("sourceFabricFriendlyName") @Nullable String sourceFabricFriendlyName,
+        @OutputCustomType.Parameter("sourceProtectionContainerFriendlyName") @Nullable String sourceProtectionContainerFriendlyName,
+        @OutputCustomType.Parameter("state") @Nullable String state,
+        @OutputCustomType.Parameter("targetFabricFriendlyName") @Nullable String targetFabricFriendlyName,
+        @OutputCustomType.Parameter("targetProtectionContainerFriendlyName") @Nullable String targetProtectionContainerFriendlyName,
+        @OutputCustomType.Parameter("targetProtectionContainerId") @Nullable String targetProtectionContainerId) {
         this.health = health;
         this.healthErrorDetails = healthErrorDetails;
         this.policyFriendlyName = policyFriendlyName;

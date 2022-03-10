@@ -31,11 +31,11 @@ public final class GraphPackageResponse {
      */
     private final @Nullable Map<String,GraphNodeResponse> nodes;
 
-    @OutputCustomType.Constructor({"edges","graphParameters","nodes"})
+    @OutputCustomType.Constructor
     private GraphPackageResponse(
-        @Nullable List<GraphEdgeResponse> edges,
-        @Nullable Map<String,GraphParameterResponse> graphParameters,
-        @Nullable Map<String,GraphNodeResponse> nodes) {
+        @OutputCustomType.Parameter("edges") @Nullable List<GraphEdgeResponse> edges,
+        @OutputCustomType.Parameter("graphParameters") @Nullable Map<String,GraphParameterResponse> graphParameters,
+        @OutputCustomType.Parameter("nodes") @Nullable Map<String,GraphNodeResponse> nodes) {
         this.edges = edges;
         this.graphParameters = graphParameters;
         this.nodes = nodes;

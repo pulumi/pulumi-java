@@ -66,19 +66,19 @@ public final class GetAFDEndpointResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"deploymentStatus","enabledState","hostName","id","location","name","originResponseTimeoutSeconds","provisioningState","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetAFDEndpointResult(
-        String deploymentStatus,
-        @Nullable String enabledState,
-        String hostName,
-        String id,
-        String location,
-        String name,
-        @Nullable Integer originResponseTimeoutSeconds,
-        String provisioningState,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("deploymentStatus") String deploymentStatus,
+        @OutputCustomType.Parameter("enabledState") @Nullable String enabledState,
+        @OutputCustomType.Parameter("hostName") String hostName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("originResponseTimeoutSeconds") @Nullable Integer originResponseTimeoutSeconds,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.deploymentStatus = deploymentStatus;
         this.enabledState = enabledState;
         this.hostName = hostName;

@@ -17,8 +17,8 @@ public final class CosmosDbSettingsResponse {
      */
     private final @Nullable Integer collectionsThroughput;
 
-    @OutputCustomType.Constructor({"collectionsThroughput"})
-    private CosmosDbSettingsResponse(@Nullable Integer collectionsThroughput) {
+    @OutputCustomType.Constructor
+    private CosmosDbSettingsResponse(@OutputCustomType.Parameter("collectionsThroughput") @Nullable Integer collectionsThroughput) {
         this.collectionsThroughput = collectionsThroughput;
     }
 

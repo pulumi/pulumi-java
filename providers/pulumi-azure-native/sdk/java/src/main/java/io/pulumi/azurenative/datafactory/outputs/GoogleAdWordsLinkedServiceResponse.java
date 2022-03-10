@@ -106,25 +106,25 @@ public final class GoogleAdWordsLinkedServiceResponse {
      */
     private final @Nullable Object useSystemTrustStore;
 
-    @OutputCustomType.Constructor({"annotations","authenticationType","clientCustomerID","clientId","clientSecret","connectVia","connectionProperties","description","developerToken","email","encryptedCredential","keyFilePath","parameters","refreshToken","trustedCertPath","type","useSystemTrustStore"})
+    @OutputCustomType.Constructor
     private GoogleAdWordsLinkedServiceResponse(
-        @Nullable List<Object> annotations,
-        @Nullable String authenticationType,
-        @Nullable Object clientCustomerID,
-        @Nullable Object clientId,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable Object connectionProperties,
-        @Nullable String description,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> developerToken,
-        @Nullable Object email,
-        @Nullable Object encryptedCredential,
-        @Nullable Object keyFilePath,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> refreshToken,
-        @Nullable Object trustedCertPath,
-        String type,
-        @Nullable Object useSystemTrustStore) {
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("authenticationType") @Nullable String authenticationType,
+        @OutputCustomType.Parameter("clientCustomerID") @Nullable Object clientCustomerID,
+        @OutputCustomType.Parameter("clientId") @Nullable Object clientId,
+        @OutputCustomType.Parameter("clientSecret") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret,
+        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @OutputCustomType.Parameter("connectionProperties") @Nullable Object connectionProperties,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("developerToken") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> developerToken,
+        @OutputCustomType.Parameter("email") @Nullable Object email,
+        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @OutputCustomType.Parameter("keyFilePath") @Nullable Object keyFilePath,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("refreshToken") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> refreshToken,
+        @OutputCustomType.Parameter("trustedCertPath") @Nullable Object trustedCertPath,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("useSystemTrustStore") @Nullable Object useSystemTrustStore) {
         this.annotations = annotations;
         this.authenticationType = authenticationType;
         this.clientCustomerID = clientCustomerID;

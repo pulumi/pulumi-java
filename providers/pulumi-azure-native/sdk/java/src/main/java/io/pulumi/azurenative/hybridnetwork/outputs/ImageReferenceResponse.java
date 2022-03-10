@@ -37,13 +37,13 @@ public final class ImageReferenceResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"exactVersion","offer","publisher","sku","version"})
+    @OutputCustomType.Constructor
     private ImageReferenceResponse(
-        @Nullable String exactVersion,
-        @Nullable String offer,
-        @Nullable String publisher,
-        @Nullable String sku,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("exactVersion") @Nullable String exactVersion,
+        @OutputCustomType.Parameter("offer") @Nullable String offer,
+        @OutputCustomType.Parameter("publisher") @Nullable String publisher,
+        @OutputCustomType.Parameter("sku") @Nullable String sku,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.exactVersion = exactVersion;
         this.offer = offer;
         this.publisher = publisher;

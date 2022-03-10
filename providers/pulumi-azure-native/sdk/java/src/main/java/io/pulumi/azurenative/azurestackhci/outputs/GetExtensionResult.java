@@ -106,26 +106,26 @@ public final class GetExtensionResult {
      */
     private final @Nullable String typeHandlerVersion;
 
-    @OutputCustomType.Constructor({"aggregateState","autoUpgradeMinorVersion","createdAt","createdBy","createdByType","forceUpdateTag","id","lastModifiedAt","lastModifiedBy","lastModifiedByType","name","perNodeExtensionDetails","protectedSettings","provisioningState","publisher","settings","type","typeHandlerVersion"})
+    @OutputCustomType.Constructor
     private GetExtensionResult(
-        String aggregateState,
-        @Nullable Boolean autoUpgradeMinorVersion,
-        @Nullable String createdAt,
-        @Nullable String createdBy,
-        @Nullable String createdByType,
-        @Nullable String forceUpdateTag,
-        String id,
-        @Nullable String lastModifiedAt,
-        @Nullable String lastModifiedBy,
-        @Nullable String lastModifiedByType,
-        String name,
-        List<PerNodeExtensionStateResponse> perNodeExtensionDetails,
-        @Nullable Object protectedSettings,
-        String provisioningState,
-        @Nullable String publisher,
-        @Nullable Object settings,
-        String type,
-        @Nullable String typeHandlerVersion) {
+        @OutputCustomType.Parameter("aggregateState") String aggregateState,
+        @OutputCustomType.Parameter("autoUpgradeMinorVersion") @Nullable Boolean autoUpgradeMinorVersion,
+        @OutputCustomType.Parameter("createdAt") @Nullable String createdAt,
+        @OutputCustomType.Parameter("createdBy") @Nullable String createdBy,
+        @OutputCustomType.Parameter("createdByType") @Nullable String createdByType,
+        @OutputCustomType.Parameter("forceUpdateTag") @Nullable String forceUpdateTag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastModifiedAt") @Nullable String lastModifiedAt,
+        @OutputCustomType.Parameter("lastModifiedBy") @Nullable String lastModifiedBy,
+        @OutputCustomType.Parameter("lastModifiedByType") @Nullable String lastModifiedByType,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("perNodeExtensionDetails") List<PerNodeExtensionStateResponse> perNodeExtensionDetails,
+        @OutputCustomType.Parameter("protectedSettings") @Nullable Object protectedSettings,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publisher") @Nullable String publisher,
+        @OutputCustomType.Parameter("settings") @Nullable Object settings,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("typeHandlerVersion") @Nullable String typeHandlerVersion) {
         this.aggregateState = aggregateState;
         this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
         this.createdAt = createdAt;

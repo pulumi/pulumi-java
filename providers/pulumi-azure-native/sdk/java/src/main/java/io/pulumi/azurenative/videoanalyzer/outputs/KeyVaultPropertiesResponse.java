@@ -20,10 +20,10 @@ public final class KeyVaultPropertiesResponse {
      */
     private final String keyIdentifier;
 
-    @OutputCustomType.Constructor({"currentKeyIdentifier","keyIdentifier"})
+    @OutputCustomType.Constructor
     private KeyVaultPropertiesResponse(
-        String currentKeyIdentifier,
-        String keyIdentifier) {
+        @OutputCustomType.Parameter("currentKeyIdentifier") String currentKeyIdentifier,
+        @OutputCustomType.Parameter("keyIdentifier") String keyIdentifier) {
         this.currentKeyIdentifier = currentKeyIdentifier;
         this.keyIdentifier = keyIdentifier;
     }

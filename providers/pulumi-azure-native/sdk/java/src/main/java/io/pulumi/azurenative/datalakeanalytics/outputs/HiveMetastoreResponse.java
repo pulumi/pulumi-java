@@ -55,17 +55,17 @@ public final class HiveMetastoreResponse {
      */
     private final String userName;
 
-    @OutputCustomType.Constructor({"databaseName","id","name","nestedResourceProvisioningState","password","runtimeVersion","serverUri","type","userName"})
+    @OutputCustomType.Constructor
     private HiveMetastoreResponse(
-        String databaseName,
-        String id,
-        String name,
-        String nestedResourceProvisioningState,
-        String password,
-        String runtimeVersion,
-        String serverUri,
-        String type,
-        String userName) {
+        @OutputCustomType.Parameter("databaseName") String databaseName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nestedResourceProvisioningState") String nestedResourceProvisioningState,
+        @OutputCustomType.Parameter("password") String password,
+        @OutputCustomType.Parameter("runtimeVersion") String runtimeVersion,
+        @OutputCustomType.Parameter("serverUri") String serverUri,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userName") String userName) {
         this.databaseName = databaseName;
         this.id = id;
         this.name = name;

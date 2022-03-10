@@ -34,14 +34,14 @@ public final class AzureBlobFileSystemConfigurationResponse {
      */
     private final @Nullable String sasKey;
 
-    @OutputCustomType.Constructor({"accountKey","accountName","blobfuseOptions","containerName","relativeMountPath","sasKey"})
+    @OutputCustomType.Constructor
     private AzureBlobFileSystemConfigurationResponse(
-        @Nullable String accountKey,
-        String accountName,
-        @Nullable String blobfuseOptions,
-        String containerName,
-        String relativeMountPath,
-        @Nullable String sasKey) {
+        @OutputCustomType.Parameter("accountKey") @Nullable String accountKey,
+        @OutputCustomType.Parameter("accountName") String accountName,
+        @OutputCustomType.Parameter("blobfuseOptions") @Nullable String blobfuseOptions,
+        @OutputCustomType.Parameter("containerName") String containerName,
+        @OutputCustomType.Parameter("relativeMountPath") String relativeMountPath,
+        @OutputCustomType.Parameter("sasKey") @Nullable String sasKey) {
         this.accountKey = accountKey;
         this.accountName = accountName;
         this.blobfuseOptions = blobfuseOptions;

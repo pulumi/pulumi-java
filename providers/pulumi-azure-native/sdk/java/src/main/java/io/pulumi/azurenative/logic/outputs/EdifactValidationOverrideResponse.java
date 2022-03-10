@@ -46,15 +46,15 @@ public final class EdifactValidationOverrideResponse {
      */
     private final Boolean validateXSDTypes;
 
-    @OutputCustomType.Constructor({"allowLeadingAndTrailingSpacesAndZeroes","enforceCharacterSet","messageId","trailingSeparatorPolicy","trimLeadingAndTrailingSpacesAndZeroes","validateEDITypes","validateXSDTypes"})
+    @OutputCustomType.Constructor
     private EdifactValidationOverrideResponse(
-        Boolean allowLeadingAndTrailingSpacesAndZeroes,
-        Boolean enforceCharacterSet,
-        String messageId,
-        String trailingSeparatorPolicy,
-        Boolean trimLeadingAndTrailingSpacesAndZeroes,
-        Boolean validateEDITypes,
-        Boolean validateXSDTypes) {
+        @OutputCustomType.Parameter("allowLeadingAndTrailingSpacesAndZeroes") Boolean allowLeadingAndTrailingSpacesAndZeroes,
+        @OutputCustomType.Parameter("enforceCharacterSet") Boolean enforceCharacterSet,
+        @OutputCustomType.Parameter("messageId") String messageId,
+        @OutputCustomType.Parameter("trailingSeparatorPolicy") String trailingSeparatorPolicy,
+        @OutputCustomType.Parameter("trimLeadingAndTrailingSpacesAndZeroes") Boolean trimLeadingAndTrailingSpacesAndZeroes,
+        @OutputCustomType.Parameter("validateEDITypes") Boolean validateEDITypes,
+        @OutputCustomType.Parameter("validateXSDTypes") Boolean validateXSDTypes) {
         this.allowLeadingAndTrailingSpacesAndZeroes = allowLeadingAndTrailingSpacesAndZeroes;
         this.enforceCharacterSet = enforceCharacterSet;
         this.messageId = messageId;

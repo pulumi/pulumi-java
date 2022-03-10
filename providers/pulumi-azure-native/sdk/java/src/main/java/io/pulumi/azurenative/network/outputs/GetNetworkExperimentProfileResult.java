@@ -53,16 +53,16 @@ public final class GetNetworkExperimentProfileResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"enabledState","etag","id","location","name","resourceState","tags","type"})
+    @OutputCustomType.Constructor
     private GetNetworkExperimentProfileResult(
-        @Nullable String enabledState,
-        @Nullable String etag,
-        String id,
-        @Nullable String location,
-        String name,
-        String resourceState,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("enabledState") @Nullable String enabledState,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("resourceState") String resourceState,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.enabledState = enabledState;
         this.etag = etag;
         this.id = id;

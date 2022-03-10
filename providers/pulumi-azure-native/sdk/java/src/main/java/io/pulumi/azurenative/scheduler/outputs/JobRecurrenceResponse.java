@@ -35,13 +35,13 @@ public final class JobRecurrenceResponse {
     private final @Nullable Integer interval;
     private final @Nullable JobRecurrenceScheduleResponse schedule;
 
-    @OutputCustomType.Constructor({"count","endTime","frequency","interval","schedule"})
+    @OutputCustomType.Constructor
     private JobRecurrenceResponse(
-        @Nullable Integer count,
-        @Nullable String endTime,
-        @Nullable String frequency,
-        @Nullable Integer interval,
-        @Nullable JobRecurrenceScheduleResponse schedule) {
+        @OutputCustomType.Parameter("count") @Nullable Integer count,
+        @OutputCustomType.Parameter("endTime") @Nullable String endTime,
+        @OutputCustomType.Parameter("frequency") @Nullable String frequency,
+        @OutputCustomType.Parameter("interval") @Nullable Integer interval,
+        @OutputCustomType.Parameter("schedule") @Nullable JobRecurrenceScheduleResponse schedule) {
         this.count = count;
         this.endTime = endTime;
         this.frequency = frequency;

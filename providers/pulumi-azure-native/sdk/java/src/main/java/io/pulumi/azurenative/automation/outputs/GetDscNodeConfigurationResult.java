@@ -60,17 +60,17 @@ public final class GetDscNodeConfigurationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"configuration","creationTime","id","incrementNodeConfigurationBuild","lastModifiedTime","name","nodeCount","source","type"})
+    @OutputCustomType.Constructor
     private GetDscNodeConfigurationResult(
-        @Nullable DscConfigurationAssociationPropertyResponse configuration,
-        @Nullable String creationTime,
-        String id,
-        @Nullable Boolean incrementNodeConfigurationBuild,
-        @Nullable String lastModifiedTime,
-        String name,
-        @Nullable Double nodeCount,
-        @Nullable String source,
-        String type) {
+        @OutputCustomType.Parameter("configuration") @Nullable DscConfigurationAssociationPropertyResponse configuration,
+        @OutputCustomType.Parameter("creationTime") @Nullable String creationTime,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("incrementNodeConfigurationBuild") @Nullable Boolean incrementNodeConfigurationBuild,
+        @OutputCustomType.Parameter("lastModifiedTime") @Nullable String lastModifiedTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nodeCount") @Nullable Double nodeCount,
+        @OutputCustomType.Parameter("source") @Nullable String source,
+        @OutputCustomType.Parameter("type") String type) {
         this.configuration = configuration;
         this.creationTime = creationTime;
         this.id = id;

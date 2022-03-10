@@ -90,23 +90,23 @@ public final class ApplicationGatewayProbeResponse {
      */
     private final @Nullable Integer unhealthyThreshold;
 
-    @OutputCustomType.Constructor({"etag","host","id","interval","match","minServers","name","path","pickHostNameFromBackendHttpSettings","port","protocol","provisioningState","timeout","type","unhealthyThreshold"})
+    @OutputCustomType.Constructor
     private ApplicationGatewayProbeResponse(
-        String etag,
-        @Nullable String host,
-        @Nullable String id,
-        @Nullable Integer interval,
-        @Nullable ApplicationGatewayProbeHealthResponseMatchResponse match,
-        @Nullable Integer minServers,
-        @Nullable String name,
-        @Nullable String path,
-        @Nullable Boolean pickHostNameFromBackendHttpSettings,
-        @Nullable Integer port,
-        @Nullable String protocol,
-        String provisioningState,
-        @Nullable Integer timeout,
-        String type,
-        @Nullable Integer unhealthyThreshold) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("host") @Nullable String host,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("interval") @Nullable Integer interval,
+        @OutputCustomType.Parameter("match") @Nullable ApplicationGatewayProbeHealthResponseMatchResponse match,
+        @OutputCustomType.Parameter("minServers") @Nullable Integer minServers,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("pickHostNameFromBackendHttpSettings") @Nullable Boolean pickHostNameFromBackendHttpSettings,
+        @OutputCustomType.Parameter("port") @Nullable Integer port,
+        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("timeout") @Nullable Integer timeout,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("unhealthyThreshold") @Nullable Integer unhealthyThreshold) {
         this.etag = etag;
         this.host = host;
         this.id = id;

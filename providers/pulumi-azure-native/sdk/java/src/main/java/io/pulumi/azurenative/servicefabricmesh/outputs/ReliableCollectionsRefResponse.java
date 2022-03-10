@@ -23,10 +23,10 @@ public final class ReliableCollectionsRefResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"doNotPersistState","name"})
+    @OutputCustomType.Constructor
     private ReliableCollectionsRefResponse(
-        @Nullable Boolean doNotPersistState,
-        String name) {
+        @OutputCustomType.Parameter("doNotPersistState") @Nullable Boolean doNotPersistState,
+        @OutputCustomType.Parameter("name") String name) {
         this.doNotPersistState = doNotPersistState;
         this.name = name;
     }

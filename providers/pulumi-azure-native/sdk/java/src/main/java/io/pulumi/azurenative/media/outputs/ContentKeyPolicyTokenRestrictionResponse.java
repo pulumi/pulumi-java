@@ -59,16 +59,16 @@ public final class ContentKeyPolicyTokenRestrictionResponse {
      */
     private final String restrictionTokenType;
 
-    @OutputCustomType.Constructor({"alternateVerificationKeys","audience","issuer","odataType","openIdConnectDiscoveryDocument","primaryVerificationKey","requiredClaims","restrictionTokenType"})
+    @OutputCustomType.Constructor
     private ContentKeyPolicyTokenRestrictionResponse(
-        @Nullable List<Object> alternateVerificationKeys,
-        String audience,
-        String issuer,
-        String odataType,
-        @Nullable String openIdConnectDiscoveryDocument,
-        Object primaryVerificationKey,
-        @Nullable List<ContentKeyPolicyTokenClaimResponse> requiredClaims,
-        String restrictionTokenType) {
+        @OutputCustomType.Parameter("alternateVerificationKeys") @Nullable List<Object> alternateVerificationKeys,
+        @OutputCustomType.Parameter("audience") String audience,
+        @OutputCustomType.Parameter("issuer") String issuer,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("openIdConnectDiscoveryDocument") @Nullable String openIdConnectDiscoveryDocument,
+        @OutputCustomType.Parameter("primaryVerificationKey") Object primaryVerificationKey,
+        @OutputCustomType.Parameter("requiredClaims") @Nullable List<ContentKeyPolicyTokenClaimResponse> requiredClaims,
+        @OutputCustomType.Parameter("restrictionTokenType") String restrictionTokenType) {
         this.alternateVerificationKeys = alternateVerificationKeys;
         this.audience = audience;
         this.issuer = issuer;

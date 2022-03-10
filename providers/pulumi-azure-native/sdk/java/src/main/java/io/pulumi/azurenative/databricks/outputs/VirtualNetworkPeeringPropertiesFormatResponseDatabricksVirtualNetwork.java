@@ -17,8 +17,8 @@ public final class VirtualNetworkPeeringPropertiesFormatResponseDatabricksVirtua
      */
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor({"id"})
-    private VirtualNetworkPeeringPropertiesFormatResponseDatabricksVirtualNetwork(@Nullable String id) {
+    @OutputCustomType.Constructor
+    private VirtualNetworkPeeringPropertiesFormatResponseDatabricksVirtualNetwork(@OutputCustomType.Parameter("id") @Nullable String id) {
         this.id = id;
     }
 

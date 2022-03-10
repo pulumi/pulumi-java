@@ -74,20 +74,20 @@ public final class DriveStatusResponse {
      */
     private final @Nullable String verboseLogUri;
 
-    @OutputCustomType.Constructor({"bitLockerKey","bytesSucceeded","copyStatus","driveHeaderHash","driveId","errorLogUri","manifestFile","manifestHash","manifestUri","percentComplete","state","verboseLogUri"})
+    @OutputCustomType.Constructor
     private DriveStatusResponse(
-        @Nullable String bitLockerKey,
-        @Nullable Double bytesSucceeded,
-        @Nullable String copyStatus,
-        @Nullable String driveHeaderHash,
-        @Nullable String driveId,
-        @Nullable String errorLogUri,
-        @Nullable String manifestFile,
-        @Nullable String manifestHash,
-        @Nullable String manifestUri,
-        @Nullable Integer percentComplete,
-        @Nullable String state,
-        @Nullable String verboseLogUri) {
+        @OutputCustomType.Parameter("bitLockerKey") @Nullable String bitLockerKey,
+        @OutputCustomType.Parameter("bytesSucceeded") @Nullable Double bytesSucceeded,
+        @OutputCustomType.Parameter("copyStatus") @Nullable String copyStatus,
+        @OutputCustomType.Parameter("driveHeaderHash") @Nullable String driveHeaderHash,
+        @OutputCustomType.Parameter("driveId") @Nullable String driveId,
+        @OutputCustomType.Parameter("errorLogUri") @Nullable String errorLogUri,
+        @OutputCustomType.Parameter("manifestFile") @Nullable String manifestFile,
+        @OutputCustomType.Parameter("manifestHash") @Nullable String manifestHash,
+        @OutputCustomType.Parameter("manifestUri") @Nullable String manifestUri,
+        @OutputCustomType.Parameter("percentComplete") @Nullable Integer percentComplete,
+        @OutputCustomType.Parameter("state") @Nullable String state,
+        @OutputCustomType.Parameter("verboseLogUri") @Nullable String verboseLogUri) {
         this.bitLockerKey = bitLockerKey;
         this.bytesSucceeded = bytesSucceeded;
         this.copyStatus = copyStatus;

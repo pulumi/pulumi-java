@@ -17,8 +17,8 @@ public final class SharedPublicIpAddressConfigurationResponse {
      */
     private final @Nullable List<InboundNatRuleResponse> inboundNatRules;
 
-    @OutputCustomType.Constructor({"inboundNatRules"})
-    private SharedPublicIpAddressConfigurationResponse(@Nullable List<InboundNatRuleResponse> inboundNatRules) {
+    @OutputCustomType.Constructor
+    private SharedPublicIpAddressConfigurationResponse(@OutputCustomType.Parameter("inboundNatRules") @Nullable List<InboundNatRuleResponse> inboundNatRules) {
         this.inboundNatRules = inboundNatRules;
     }
 

@@ -41,13 +41,13 @@ public final class EncryptionResponse {
      */
     private final @Nullable EncryptionServicesResponse services;
 
-    @OutputCustomType.Constructor({"encryptionIdentity","keySource","keyVaultProperties","requireInfrastructureEncryption","services"})
+    @OutputCustomType.Constructor
     private EncryptionResponse(
-        @Nullable EncryptionIdentityResponse encryptionIdentity,
-        String keySource,
-        @Nullable KeyVaultPropertiesResponse keyVaultProperties,
-        @Nullable Boolean requireInfrastructureEncryption,
-        @Nullable EncryptionServicesResponse services) {
+        @OutputCustomType.Parameter("encryptionIdentity") @Nullable EncryptionIdentityResponse encryptionIdentity,
+        @OutputCustomType.Parameter("keySource") String keySource,
+        @OutputCustomType.Parameter("keyVaultProperties") @Nullable KeyVaultPropertiesResponse keyVaultProperties,
+        @OutputCustomType.Parameter("requireInfrastructureEncryption") @Nullable Boolean requireInfrastructureEncryption,
+        @OutputCustomType.Parameter("services") @Nullable EncryptionServicesResponse services) {
         this.encryptionIdentity = encryptionIdentity;
         this.keySource = keySource;
         this.keyVaultProperties = keyVaultProperties;

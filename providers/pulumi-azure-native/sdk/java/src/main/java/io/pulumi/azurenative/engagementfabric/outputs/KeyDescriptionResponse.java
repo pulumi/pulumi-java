@@ -25,11 +25,11 @@ public final class KeyDescriptionResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"name","rank","value"})
+    @OutputCustomType.Constructor
     private KeyDescriptionResponse(
-        String name,
-        String rank,
-        String value) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("rank") String rank,
+        @OutputCustomType.Parameter("value") String value) {
         this.name = name;
         this.rank = rank;
         this.value = value;

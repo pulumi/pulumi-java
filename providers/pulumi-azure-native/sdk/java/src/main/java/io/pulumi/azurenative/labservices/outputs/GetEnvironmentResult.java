@@ -102,25 +102,25 @@ public final class GetEnvironmentResult {
      */
     private final @Nullable String uniqueIdentifier;
 
-    @OutputCustomType.Constructor({"claimedByUserName","claimedByUserObjectId","claimedByUserPrincipalId","id","isClaimed","lastKnownPowerState","latestOperationResult","location","name","networkInterface","passwordLastReset","provisioningState","resourceSets","tags","totalUsage","type","uniqueIdentifier"})
+    @OutputCustomType.Constructor
     private GetEnvironmentResult(
-        String claimedByUserName,
-        String claimedByUserObjectId,
-        String claimedByUserPrincipalId,
-        String id,
-        Boolean isClaimed,
-        String lastKnownPowerState,
-        LatestOperationResultResponse latestOperationResult,
-        @Nullable String location,
-        String name,
-        NetworkInterfaceResponse networkInterface,
-        String passwordLastReset,
-        @Nullable String provisioningState,
-        @Nullable ResourceSetResponse resourceSets,
-        @Nullable Map<String,String> tags,
-        String totalUsage,
-        String type,
-        @Nullable String uniqueIdentifier) {
+        @OutputCustomType.Parameter("claimedByUserName") String claimedByUserName,
+        @OutputCustomType.Parameter("claimedByUserObjectId") String claimedByUserObjectId,
+        @OutputCustomType.Parameter("claimedByUserPrincipalId") String claimedByUserPrincipalId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isClaimed") Boolean isClaimed,
+        @OutputCustomType.Parameter("lastKnownPowerState") String lastKnownPowerState,
+        @OutputCustomType.Parameter("latestOperationResult") LatestOperationResultResponse latestOperationResult,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networkInterface") NetworkInterfaceResponse networkInterface,
+        @OutputCustomType.Parameter("passwordLastReset") String passwordLastReset,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("resourceSets") @Nullable ResourceSetResponse resourceSets,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("totalUsage") String totalUsage,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("uniqueIdentifier") @Nullable String uniqueIdentifier) {
         this.claimedByUserName = claimedByUserName;
         this.claimedByUserObjectId = claimedByUserObjectId;
         this.claimedByUserPrincipalId = claimedByUserPrincipalId;

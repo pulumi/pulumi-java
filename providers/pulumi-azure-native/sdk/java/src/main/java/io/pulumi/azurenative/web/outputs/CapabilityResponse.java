@@ -27,11 +27,11 @@ public final class CapabilityResponse {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"name","reason","value"})
+    @OutputCustomType.Constructor
     private CapabilityResponse(
-        @Nullable String name,
-        @Nullable String reason,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("reason") @Nullable String reason,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.name = name;
         this.reason = reason;
         this.value = value;

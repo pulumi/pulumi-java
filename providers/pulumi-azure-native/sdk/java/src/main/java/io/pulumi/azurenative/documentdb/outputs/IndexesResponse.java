@@ -28,11 +28,11 @@ public final class IndexesResponse {
      */
     private final @Nullable Integer precision;
 
-    @OutputCustomType.Constructor({"dataType","kind","precision"})
+    @OutputCustomType.Constructor
     private IndexesResponse(
-        @Nullable String dataType,
-        @Nullable String kind,
-        @Nullable Integer precision) {
+        @OutputCustomType.Parameter("dataType") @Nullable String dataType,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("precision") @Nullable Integer precision) {
         this.dataType = dataType;
         this.kind = kind;
         this.precision = precision;

@@ -28,11 +28,11 @@ public final class PredictionResponseSystemGeneratedEntities {
      */
     private final @Nullable List<String> generatedLinks;
 
-    @OutputCustomType.Constructor({"generatedInteractionTypes","generatedKpis","generatedLinks"})
+    @OutputCustomType.Constructor
     private PredictionResponseSystemGeneratedEntities(
-        @Nullable List<String> generatedInteractionTypes,
-        @Nullable Map<String,String> generatedKpis,
-        @Nullable List<String> generatedLinks) {
+        @OutputCustomType.Parameter("generatedInteractionTypes") @Nullable List<String> generatedInteractionTypes,
+        @OutputCustomType.Parameter("generatedKpis") @Nullable Map<String,String> generatedKpis,
+        @OutputCustomType.Parameter("generatedLinks") @Nullable List<String> generatedLinks) {
         this.generatedInteractionTypes = generatedInteractionTypes;
         this.generatedKpis = generatedKpis;
         this.generatedLinks = generatedLinks;

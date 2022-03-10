@@ -35,13 +35,13 @@ public final class ReverseShippingDetailsResponse {
      */
     private final String trackingUrl;
 
-    @OutputCustomType.Constructor({"carrierDisplayName","carrierName","sasKeyForLabel","trackingId","trackingUrl"})
+    @OutputCustomType.Constructor
     private ReverseShippingDetailsResponse(
-        String carrierDisplayName,
-        String carrierName,
-        String sasKeyForLabel,
-        String trackingId,
-        String trackingUrl) {
+        @OutputCustomType.Parameter("carrierDisplayName") String carrierDisplayName,
+        @OutputCustomType.Parameter("carrierName") String carrierName,
+        @OutputCustomType.Parameter("sasKeyForLabel") String sasKeyForLabel,
+        @OutputCustomType.Parameter("trackingId") String trackingId,
+        @OutputCustomType.Parameter("trackingUrl") String trackingUrl) {
         this.carrierDisplayName = carrierDisplayName;
         this.carrierName = carrierName;
         this.sasKeyForLabel = sasKeyForLabel;

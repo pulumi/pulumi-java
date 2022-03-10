@@ -22,10 +22,10 @@ public final class EventSubscriptionIdentityResponse {
      */
     private final @Nullable String userAssignedIdentity;
 
-    @OutputCustomType.Constructor({"type","userAssignedIdentity"})
+    @OutputCustomType.Constructor
     private EventSubscriptionIdentityResponse(
-        @Nullable String type,
-        @Nullable String userAssignedIdentity) {
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("userAssignedIdentity") @Nullable String userAssignedIdentity) {
         this.type = type;
         this.userAssignedIdentity = userAssignedIdentity;
     }

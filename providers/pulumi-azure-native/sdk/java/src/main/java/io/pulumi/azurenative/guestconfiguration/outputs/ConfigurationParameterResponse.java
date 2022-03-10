@@ -22,10 +22,10 @@ public final class ConfigurationParameterResponse {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"name","value"})
+    @OutputCustomType.Constructor
     private ConfigurationParameterResponse(
-        @Nullable String name,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.name = name;
         this.value = value;
     }

@@ -29,11 +29,11 @@ public final class EmailNotificationResponse {
      */
     private final @Nullable Boolean sendToSubscriptionCoAdministrators;
 
-    @OutputCustomType.Constructor({"customEmails","sendToSubscriptionAdministrator","sendToSubscriptionCoAdministrators"})
+    @OutputCustomType.Constructor
     private EmailNotificationResponse(
-        @Nullable List<String> customEmails,
-        @Nullable Boolean sendToSubscriptionAdministrator,
-        @Nullable Boolean sendToSubscriptionCoAdministrators) {
+        @OutputCustomType.Parameter("customEmails") @Nullable List<String> customEmails,
+        @OutputCustomType.Parameter("sendToSubscriptionAdministrator") @Nullable Boolean sendToSubscriptionAdministrator,
+        @OutputCustomType.Parameter("sendToSubscriptionCoAdministrators") @Nullable Boolean sendToSubscriptionCoAdministrators) {
         this.customEmails = customEmails;
         this.sendToSubscriptionAdministrator = sendToSubscriptionAdministrator;
         this.sendToSubscriptionCoAdministrators = sendToSubscriptionCoAdministrators;

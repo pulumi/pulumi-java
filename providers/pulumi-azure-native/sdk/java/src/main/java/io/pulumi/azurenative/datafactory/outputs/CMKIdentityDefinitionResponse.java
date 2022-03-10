@@ -17,8 +17,8 @@ public final class CMKIdentityDefinitionResponse {
      */
     private final @Nullable String userAssignedIdentity;
 
-    @OutputCustomType.Constructor({"userAssignedIdentity"})
-    private CMKIdentityDefinitionResponse(@Nullable String userAssignedIdentity) {
+    @OutputCustomType.Constructor
+    private CMKIdentityDefinitionResponse(@OutputCustomType.Parameter("userAssignedIdentity") @Nullable String userAssignedIdentity) {
         this.userAssignedIdentity = userAssignedIdentity;
     }
 

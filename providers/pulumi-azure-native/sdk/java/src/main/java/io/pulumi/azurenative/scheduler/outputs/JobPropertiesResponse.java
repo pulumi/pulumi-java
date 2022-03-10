@@ -40,13 +40,13 @@ public final class JobPropertiesResponse {
      */
     private final JobStatusResponse status;
 
-    @OutputCustomType.Constructor({"action","recurrence","startTime","state","status"})
+    @OutputCustomType.Constructor
     private JobPropertiesResponse(
-        @Nullable JobActionResponse action,
-        @Nullable JobRecurrenceResponse recurrence,
-        @Nullable String startTime,
-        @Nullable String state,
-        JobStatusResponse status) {
+        @OutputCustomType.Parameter("action") @Nullable JobActionResponse action,
+        @OutputCustomType.Parameter("recurrence") @Nullable JobRecurrenceResponse recurrence,
+        @OutputCustomType.Parameter("startTime") @Nullable String startTime,
+        @OutputCustomType.Parameter("state") @Nullable String state,
+        @OutputCustomType.Parameter("status") JobStatusResponse status) {
         this.action = action;
         this.recurrence = recurrence;
         this.startTime = startTime;

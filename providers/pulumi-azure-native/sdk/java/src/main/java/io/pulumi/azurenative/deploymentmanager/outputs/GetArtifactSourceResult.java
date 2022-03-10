@@ -54,16 +54,16 @@ public final class GetArtifactSourceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"artifactRoot","authentication","id","location","name","sourceType","tags","type"})
+    @OutputCustomType.Constructor
     private GetArtifactSourceResult(
-        @Nullable String artifactRoot,
-        SasAuthenticationResponse authentication,
-        String id,
-        String location,
-        String name,
-        String sourceType,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("artifactRoot") @Nullable String artifactRoot,
+        @OutputCustomType.Parameter("authentication") SasAuthenticationResponse authentication,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("sourceType") String sourceType,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.artifactRoot = artifactRoot;
         this.authentication = authentication;
         this.id = id;

@@ -40,16 +40,16 @@ public final class MonitorPropertiesResponse {
     private final String provisioningState;
     private final @Nullable UserInfoResponse userInfo;
 
-    @OutputCustomType.Constructor({"liftrResourceCategory","liftrResourcePreference","logzOrganizationProperties","marketplaceSubscriptionStatus","monitoringStatus","planData","provisioningState","userInfo"})
+    @OutputCustomType.Constructor
     private MonitorPropertiesResponse(
-        String liftrResourceCategory,
-        Integer liftrResourcePreference,
-        @Nullable LogzOrganizationPropertiesResponse logzOrganizationProperties,
-        @Nullable String marketplaceSubscriptionStatus,
-        @Nullable String monitoringStatus,
-        @Nullable PlanDataResponse planData,
-        String provisioningState,
-        @Nullable UserInfoResponse userInfo) {
+        @OutputCustomType.Parameter("liftrResourceCategory") String liftrResourceCategory,
+        @OutputCustomType.Parameter("liftrResourcePreference") Integer liftrResourcePreference,
+        @OutputCustomType.Parameter("logzOrganizationProperties") @Nullable LogzOrganizationPropertiesResponse logzOrganizationProperties,
+        @OutputCustomType.Parameter("marketplaceSubscriptionStatus") @Nullable String marketplaceSubscriptionStatus,
+        @OutputCustomType.Parameter("monitoringStatus") @Nullable String monitoringStatus,
+        @OutputCustomType.Parameter("planData") @Nullable PlanDataResponse planData,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("userInfo") @Nullable UserInfoResponse userInfo) {
         this.liftrResourceCategory = liftrResourceCategory;
         this.liftrResourcePreference = liftrResourcePreference;
         this.logzOrganizationProperties = logzOrganizationProperties;

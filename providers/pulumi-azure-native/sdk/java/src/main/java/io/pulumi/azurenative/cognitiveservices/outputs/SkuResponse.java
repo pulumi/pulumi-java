@@ -20,10 +20,10 @@ public final class SkuResponse {
      */
     private final String tier;
 
-    @OutputCustomType.Constructor({"name","tier"})
+    @OutputCustomType.Constructor
     private SkuResponse(
-        String name,
-        String tier) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("tier") String tier) {
         this.name = name;
         this.tier = tier;
     }

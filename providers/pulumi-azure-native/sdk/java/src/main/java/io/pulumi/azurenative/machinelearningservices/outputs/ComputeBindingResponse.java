@@ -23,10 +23,10 @@ public final class ComputeBindingResponse {
      */
     private final @Nullable Integer nodeCount;
 
-    @OutputCustomType.Constructor({"computeId","nodeCount"})
+    @OutputCustomType.Constructor
     private ComputeBindingResponse(
-        @Nullable String computeId,
-        @Nullable Integer nodeCount) {
+        @OutputCustomType.Parameter("computeId") @Nullable String computeId,
+        @OutputCustomType.Parameter("nodeCount") @Nullable Integer nodeCount) {
         this.computeId = computeId;
         this.nodeCount = nodeCount;
     }

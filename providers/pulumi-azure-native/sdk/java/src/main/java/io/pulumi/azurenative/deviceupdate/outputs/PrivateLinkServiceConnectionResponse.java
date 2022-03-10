@@ -28,11 +28,11 @@ public final class PrivateLinkServiceConnectionResponse {
      */
     private final @Nullable String requestMessage;
 
-    @OutputCustomType.Constructor({"groupIds","name","requestMessage"})
+    @OutputCustomType.Constructor
     private PrivateLinkServiceConnectionResponse(
-        @Nullable List<String> groupIds,
-        @Nullable String name,
-        @Nullable String requestMessage) {
+        @OutputCustomType.Parameter("groupIds") @Nullable List<String> groupIds,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("requestMessage") @Nullable String requestMessage) {
         this.groupIds = groupIds;
         this.name = name;
         this.requestMessage = requestMessage;

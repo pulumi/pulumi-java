@@ -74,20 +74,20 @@ public final class CacheUsernameDownloadSettingsResponse {
      */
     private final @Nullable String usernameSource;
 
-    @OutputCustomType.Constructor({"autoDownloadCertificate","caCertificateURI","credentials","encryptLdapConnection","extendedGroups","groupFileURI","ldapBaseDN","ldapServer","requireValidCertificate","userFileURI","usernameDownloaded","usernameSource"})
+    @OutputCustomType.Constructor
     private CacheUsernameDownloadSettingsResponse(
-        @Nullable Boolean autoDownloadCertificate,
-        @Nullable String caCertificateURI,
-        @Nullable CacheUsernameDownloadSettingsResponseCredentials credentials,
-        @Nullable Boolean encryptLdapConnection,
-        @Nullable Boolean extendedGroups,
-        @Nullable String groupFileURI,
-        @Nullable String ldapBaseDN,
-        @Nullable String ldapServer,
-        @Nullable Boolean requireValidCertificate,
-        @Nullable String userFileURI,
-        String usernameDownloaded,
-        @Nullable String usernameSource) {
+        @OutputCustomType.Parameter("autoDownloadCertificate") @Nullable Boolean autoDownloadCertificate,
+        @OutputCustomType.Parameter("caCertificateURI") @Nullable String caCertificateURI,
+        @OutputCustomType.Parameter("credentials") @Nullable CacheUsernameDownloadSettingsResponseCredentials credentials,
+        @OutputCustomType.Parameter("encryptLdapConnection") @Nullable Boolean encryptLdapConnection,
+        @OutputCustomType.Parameter("extendedGroups") @Nullable Boolean extendedGroups,
+        @OutputCustomType.Parameter("groupFileURI") @Nullable String groupFileURI,
+        @OutputCustomType.Parameter("ldapBaseDN") @Nullable String ldapBaseDN,
+        @OutputCustomType.Parameter("ldapServer") @Nullable String ldapServer,
+        @OutputCustomType.Parameter("requireValidCertificate") @Nullable Boolean requireValidCertificate,
+        @OutputCustomType.Parameter("userFileURI") @Nullable String userFileURI,
+        @OutputCustomType.Parameter("usernameDownloaded") String usernameDownloaded,
+        @OutputCustomType.Parameter("usernameSource") @Nullable String usernameSource) {
         this.autoDownloadCertificate = autoDownloadCertificate;
         this.caCertificateURI = caCertificateURI;
         this.credentials = credentials;

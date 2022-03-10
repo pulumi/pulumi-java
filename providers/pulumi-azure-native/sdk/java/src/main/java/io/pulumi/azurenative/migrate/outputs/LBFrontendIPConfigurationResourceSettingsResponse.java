@@ -39,13 +39,13 @@ public final class LBFrontendIPConfigurationResourceSettingsResponse {
      */
     private final @Nullable String zones;
 
-    @OutputCustomType.Constructor({"name","privateIpAddress","privateIpAllocationMethod","subnet","zones"})
+    @OutputCustomType.Constructor
     private LBFrontendIPConfigurationResourceSettingsResponse(
-        @Nullable String name,
-        @Nullable String privateIpAddress,
-        @Nullable String privateIpAllocationMethod,
-        @Nullable SubnetReferenceResponse subnet,
-        @Nullable String zones) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("privateIpAddress") @Nullable String privateIpAddress,
+        @OutputCustomType.Parameter("privateIpAllocationMethod") @Nullable String privateIpAllocationMethod,
+        @OutputCustomType.Parameter("subnet") @Nullable SubnetReferenceResponse subnet,
+        @OutputCustomType.Parameter("zones") @Nullable String zones) {
         this.name = name;
         this.privateIpAddress = privateIpAddress;
         this.privateIpAllocationMethod = privateIpAllocationMethod;

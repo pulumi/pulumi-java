@@ -20,10 +20,10 @@ public final class MetricDimensionResponse {
      */
     private final String sourceType;
 
-    @OutputCustomType.Constructor({"sourceName","sourceType"})
+    @OutputCustomType.Constructor
     private MetricDimensionResponse(
-        String sourceName,
-        String sourceType) {
+        @OutputCustomType.Parameter("sourceName") String sourceName,
+        @OutputCustomType.Parameter("sourceType") String sourceType) {
         this.sourceName = sourceName;
         this.sourceType = sourceType;
     }

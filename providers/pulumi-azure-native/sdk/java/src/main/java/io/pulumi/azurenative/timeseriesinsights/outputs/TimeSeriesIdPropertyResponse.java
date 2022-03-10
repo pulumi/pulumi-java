@@ -22,10 +22,10 @@ public final class TimeSeriesIdPropertyResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"name","type"})
+    @OutputCustomType.Constructor
     private TimeSeriesIdPropertyResponse(
-        @Nullable String name,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.name = name;
         this.type = type;
     }

@@ -74,20 +74,20 @@ public final class GetStorageAccountCredentialResult {
      */
     private final @Nullable String userName;
 
-    @OutputCustomType.Constructor({"accountKey","accountType","alias","blobDomainName","connectionString","id","name","sslStatus","storageAccountId","systemData","type","userName"})
+    @OutputCustomType.Constructor
     private GetStorageAccountCredentialResult(
-        @Nullable AsymmetricEncryptedSecretResponse accountKey,
-        String accountType,
-        String alias,
-        @Nullable String blobDomainName,
-        @Nullable String connectionString,
-        String id,
-        String name,
-        String sslStatus,
-        @Nullable String storageAccountId,
-        SystemDataResponse systemData,
-        String type,
-        @Nullable String userName) {
+        @OutputCustomType.Parameter("accountKey") @Nullable AsymmetricEncryptedSecretResponse accountKey,
+        @OutputCustomType.Parameter("accountType") String accountType,
+        @OutputCustomType.Parameter("alias") String alias,
+        @OutputCustomType.Parameter("blobDomainName") @Nullable String blobDomainName,
+        @OutputCustomType.Parameter("connectionString") @Nullable String connectionString,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("sslStatus") String sslStatus,
+        @OutputCustomType.Parameter("storageAccountId") @Nullable String storageAccountId,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userName") @Nullable String userName) {
         this.accountKey = accountKey;
         this.accountType = accountType;
         this.alias = alias;

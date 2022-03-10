@@ -14,10 +14,10 @@ public final class EventLogConfigurationResponse {
     private final @Nullable String filter;
     private final String logName;
 
-    @OutputCustomType.Constructor({"filter","logName"})
+    @OutputCustomType.Constructor
     private EventLogConfigurationResponse(
-        @Nullable String filter,
-        String logName) {
+        @OutputCustomType.Parameter("filter") @Nullable String filter,
+        @OutputCustomType.Parameter("logName") String logName) {
         this.filter = filter;
         this.logName = logName;
     }

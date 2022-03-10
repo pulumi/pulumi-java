@@ -46,14 +46,14 @@ public final class ExecutionStatisticsResponse {
      */
     private final @Nullable Map<String,WaitStatisticsResponse> waitStats;
 
-    @OutputCustomType.Constructor({"cpuTimeMs","elapsedTimeMs","executionCount","hasErrors","sqlErrors","waitStats"})
+    @OutputCustomType.Constructor
     private ExecutionStatisticsResponse(
-        Double cpuTimeMs,
-        Double elapsedTimeMs,
-        Double executionCount,
-        Boolean hasErrors,
-        List<String> sqlErrors,
-        @Nullable Map<String,WaitStatisticsResponse> waitStats) {
+        @OutputCustomType.Parameter("cpuTimeMs") Double cpuTimeMs,
+        @OutputCustomType.Parameter("elapsedTimeMs") Double elapsedTimeMs,
+        @OutputCustomType.Parameter("executionCount") Double executionCount,
+        @OutputCustomType.Parameter("hasErrors") Boolean hasErrors,
+        @OutputCustomType.Parameter("sqlErrors") List<String> sqlErrors,
+        @OutputCustomType.Parameter("waitStats") @Nullable Map<String,WaitStatisticsResponse> waitStats) {
         this.cpuTimeMs = cpuTimeMs;
         this.elapsedTimeMs = elapsedTimeMs;
         this.executionCount = executionCount;

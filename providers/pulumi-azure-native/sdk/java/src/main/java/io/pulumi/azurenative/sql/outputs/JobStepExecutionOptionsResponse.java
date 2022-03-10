@@ -38,13 +38,13 @@ public final class JobStepExecutionOptionsResponse {
      */
     private final @Nullable Integer timeoutSeconds;
 
-    @OutputCustomType.Constructor({"initialRetryIntervalSeconds","maximumRetryIntervalSeconds","retryAttempts","retryIntervalBackoffMultiplier","timeoutSeconds"})
+    @OutputCustomType.Constructor
     private JobStepExecutionOptionsResponse(
-        @Nullable Integer initialRetryIntervalSeconds,
-        @Nullable Integer maximumRetryIntervalSeconds,
-        @Nullable Integer retryAttempts,
-        @Nullable Double retryIntervalBackoffMultiplier,
-        @Nullable Integer timeoutSeconds) {
+        @OutputCustomType.Parameter("initialRetryIntervalSeconds") @Nullable Integer initialRetryIntervalSeconds,
+        @OutputCustomType.Parameter("maximumRetryIntervalSeconds") @Nullable Integer maximumRetryIntervalSeconds,
+        @OutputCustomType.Parameter("retryAttempts") @Nullable Integer retryAttempts,
+        @OutputCustomType.Parameter("retryIntervalBackoffMultiplier") @Nullable Double retryIntervalBackoffMultiplier,
+        @OutputCustomType.Parameter("timeoutSeconds") @Nullable Integer timeoutSeconds) {
         this.initialRetryIntervalSeconds = initialRetryIntervalSeconds;
         this.maximumRetryIntervalSeconds = maximumRetryIntervalSeconds;
         this.retryAttempts = retryAttempts;

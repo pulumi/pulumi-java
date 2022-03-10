@@ -26,11 +26,11 @@ public final class X12OneWayAgreementResponse {
      */
     private final BusinessIdentityResponse senderBusinessIdentity;
 
-    @OutputCustomType.Constructor({"protocolSettings","receiverBusinessIdentity","senderBusinessIdentity"})
+    @OutputCustomType.Constructor
     private X12OneWayAgreementResponse(
-        X12ProtocolSettingsResponse protocolSettings,
-        BusinessIdentityResponse receiverBusinessIdentity,
-        BusinessIdentityResponse senderBusinessIdentity) {
+        @OutputCustomType.Parameter("protocolSettings") X12ProtocolSettingsResponse protocolSettings,
+        @OutputCustomType.Parameter("receiverBusinessIdentity") BusinessIdentityResponse receiverBusinessIdentity,
+        @OutputCustomType.Parameter("senderBusinessIdentity") BusinessIdentityResponse senderBusinessIdentity) {
         this.protocolSettings = protocolSettings;
         this.receiverBusinessIdentity = receiverBusinessIdentity;
         this.senderBusinessIdentity = senderBusinessIdentity;

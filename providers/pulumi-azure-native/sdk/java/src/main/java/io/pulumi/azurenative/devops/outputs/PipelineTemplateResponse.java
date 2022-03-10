@@ -22,10 +22,10 @@ public final class PipelineTemplateResponse {
      */
     private final @Nullable Map<String,String> parameters;
 
-    @OutputCustomType.Constructor({"id","parameters"})
+    @OutputCustomType.Constructor
     private PipelineTemplateResponse(
-        String id,
-        @Nullable Map<String,String> parameters) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,String> parameters) {
         this.id = id;
         this.parameters = parameters;
     }

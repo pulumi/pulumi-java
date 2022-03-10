@@ -37,13 +37,13 @@ public final class InMageRcmPolicyDetailsResponse {
      */
     private final Integer recoveryPointHistoryInMinutes;
 
-    @OutputCustomType.Constructor({"appConsistentFrequencyInMinutes","crashConsistentFrequencyInMinutes","enableMultiVmSync","instanceType","recoveryPointHistoryInMinutes"})
+    @OutputCustomType.Constructor
     private InMageRcmPolicyDetailsResponse(
-        Integer appConsistentFrequencyInMinutes,
-        Integer crashConsistentFrequencyInMinutes,
-        String enableMultiVmSync,
-        String instanceType,
-        Integer recoveryPointHistoryInMinutes) {
+        @OutputCustomType.Parameter("appConsistentFrequencyInMinutes") Integer appConsistentFrequencyInMinutes,
+        @OutputCustomType.Parameter("crashConsistentFrequencyInMinutes") Integer crashConsistentFrequencyInMinutes,
+        @OutputCustomType.Parameter("enableMultiVmSync") String enableMultiVmSync,
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("recoveryPointHistoryInMinutes") Integer recoveryPointHistoryInMinutes) {
         this.appConsistentFrequencyInMinutes = appConsistentFrequencyInMinutes;
         this.crashConsistentFrequencyInMinutes = crashConsistentFrequencyInMinutes;
         this.enableMultiVmSync = enableMultiVmSync;

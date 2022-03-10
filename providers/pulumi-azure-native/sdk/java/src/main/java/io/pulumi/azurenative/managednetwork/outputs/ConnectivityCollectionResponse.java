@@ -22,10 +22,10 @@ public final class ConnectivityCollectionResponse {
      */
     private final List<ManagedNetworkPeeringPolicyResponse> peerings;
 
-    @OutputCustomType.Constructor({"groups","peerings"})
+    @OutputCustomType.Constructor
     private ConnectivityCollectionResponse(
-        List<ManagedNetworkGroupResponse> groups,
-        List<ManagedNetworkPeeringPolicyResponse> peerings) {
+        @OutputCustomType.Parameter("groups") List<ManagedNetworkGroupResponse> groups,
+        @OutputCustomType.Parameter("peerings") List<ManagedNetworkPeeringPolicyResponse> peerings) {
         this.groups = groups;
         this.peerings = peerings;
     }

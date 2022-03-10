@@ -25,11 +25,11 @@ public final class DiagnosticConditionResponse {
      */
     private final String since;
 
-    @OutputCustomType.Constructor({"code","message","since"})
+    @OutputCustomType.Constructor
     private DiagnosticConditionResponse(
-        String code,
-        String message,
-        String since) {
+        @OutputCustomType.Parameter("code") String code,
+        @OutputCustomType.Parameter("message") String message,
+        @OutputCustomType.Parameter("since") String since) {
         this.code = code;
         this.message = message;
         this.since = since;

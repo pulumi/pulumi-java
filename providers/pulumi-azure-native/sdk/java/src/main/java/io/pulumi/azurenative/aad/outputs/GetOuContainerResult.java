@@ -91,23 +91,23 @@ public final class GetOuContainerResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"accounts","containerId","deploymentId","distinguishedName","domainName","etag","id","location","name","provisioningState","serviceStatus","systemData","tags","tenantId","type"})
+    @OutputCustomType.Constructor
     private GetOuContainerResult(
-        @Nullable List<ContainerAccountResponse> accounts,
-        String containerId,
-        String deploymentId,
-        String distinguishedName,
-        String domainName,
-        @Nullable String etag,
-        String id,
-        @Nullable String location,
-        String name,
-        String provisioningState,
-        String serviceStatus,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String tenantId,
-        String type) {
+        @OutputCustomType.Parameter("accounts") @Nullable List<ContainerAccountResponse> accounts,
+        @OutputCustomType.Parameter("containerId") String containerId,
+        @OutputCustomType.Parameter("deploymentId") String deploymentId,
+        @OutputCustomType.Parameter("distinguishedName") String distinguishedName,
+        @OutputCustomType.Parameter("domainName") String domainName,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("serviceStatus") String serviceStatus,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("tenantId") String tenantId,
+        @OutputCustomType.Parameter("type") String type) {
         this.accounts = accounts;
         this.containerId = containerId;
         this.deploymentId = deploymentId;

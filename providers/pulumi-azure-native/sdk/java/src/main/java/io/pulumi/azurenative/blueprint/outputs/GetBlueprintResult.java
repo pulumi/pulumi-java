@@ -72,19 +72,19 @@ public final class GetBlueprintResult {
      */
     private final @Nullable Object versions;
 
-    @OutputCustomType.Constructor({"description","displayName","id","layout","name","parameters","resourceGroups","status","targetScope","type","versions"})
+    @OutputCustomType.Constructor
     private GetBlueprintResult(
-        @Nullable String description,
-        @Nullable String displayName,
-        String id,
-        Object layout,
-        String name,
-        @Nullable Map<String,ParameterDefinitionResponse> parameters,
-        @Nullable Map<String,ResourceGroupDefinitionResponse> resourceGroups,
-        BlueprintStatusResponse status,
-        String targetScope,
-        String type,
-        @Nullable Object versions) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("layout") Object layout,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterDefinitionResponse> parameters,
+        @OutputCustomType.Parameter("resourceGroups") @Nullable Map<String,ResourceGroupDefinitionResponse> resourceGroups,
+        @OutputCustomType.Parameter("status") BlueprintStatusResponse status,
+        @OutputCustomType.Parameter("targetScope") String targetScope,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("versions") @Nullable Object versions) {
         this.description = description;
         this.displayName = displayName;
         this.id = id;

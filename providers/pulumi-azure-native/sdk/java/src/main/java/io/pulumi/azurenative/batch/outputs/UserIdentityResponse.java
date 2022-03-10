@@ -23,10 +23,10 @@ public final class UserIdentityResponse {
      */
     private final @Nullable String userName;
 
-    @OutputCustomType.Constructor({"autoUser","userName"})
+    @OutputCustomType.Constructor
     private UserIdentityResponse(
-        @Nullable AutoUserSpecificationResponse autoUser,
-        @Nullable String userName) {
+        @OutputCustomType.Parameter("autoUser") @Nullable AutoUserSpecificationResponse autoUser,
+        @OutputCustomType.Parameter("userName") @Nullable String userName) {
         this.autoUser = autoUser;
         this.userName = userName;
     }

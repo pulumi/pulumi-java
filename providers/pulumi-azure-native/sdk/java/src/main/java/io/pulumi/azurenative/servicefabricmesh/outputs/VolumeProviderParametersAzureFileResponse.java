@@ -27,11 +27,11 @@ public final class VolumeProviderParametersAzureFileResponse {
      */
     private final String shareName;
 
-    @OutputCustomType.Constructor({"accountKey","accountName","shareName"})
+    @OutputCustomType.Constructor
     private VolumeProviderParametersAzureFileResponse(
-        @Nullable String accountKey,
-        String accountName,
-        String shareName) {
+        @OutputCustomType.Parameter("accountKey") @Nullable String accountKey,
+        @OutputCustomType.Parameter("accountName") String accountName,
+        @OutputCustomType.Parameter("shareName") String shareName) {
         this.accountKey = accountKey;
         this.accountName = accountName;
         this.shareName = shareName;

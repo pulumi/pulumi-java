@@ -108,26 +108,26 @@ public final class DatasetResponseLatest {
      */
     private final String versionId;
 
-    @OutputCustomType.Constructor({"createdBy","createdTime","dataPath","dataflow","datasetDefinitionState","datasetId","description","etag","fileType","modifiedTime","notes","partitionFormatInPath","properties","savedDatasetId","tags","telemetryInfo","useDescriptionTagsFromDefinition","versionId"})
+    @OutputCustomType.Constructor
     private DatasetResponseLatest(
-        @Nullable UserInfoResponse createdBy,
-        String createdTime,
-        @Nullable DatasetResponseDataPath dataPath,
-        String dataflow,
-        @Nullable DatasetStateResponse datasetDefinitionState,
-        String datasetId,
-        String description,
-        String etag,
-        String fileType,
-        String modifiedTime,
-        String notes,
-        Boolean partitionFormatInPath,
-        @Nullable Map<String,Object> properties,
-        String savedDatasetId,
-        Map<String,String> tags,
-        Map<String,String> telemetryInfo,
-        Boolean useDescriptionTagsFromDefinition,
-        String versionId) {
+        @OutputCustomType.Parameter("createdBy") @Nullable UserInfoResponse createdBy,
+        @OutputCustomType.Parameter("createdTime") String createdTime,
+        @OutputCustomType.Parameter("dataPath") @Nullable DatasetResponseDataPath dataPath,
+        @OutputCustomType.Parameter("dataflow") String dataflow,
+        @OutputCustomType.Parameter("datasetDefinitionState") @Nullable DatasetStateResponse datasetDefinitionState,
+        @OutputCustomType.Parameter("datasetId") String datasetId,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("fileType") String fileType,
+        @OutputCustomType.Parameter("modifiedTime") String modifiedTime,
+        @OutputCustomType.Parameter("notes") String notes,
+        @OutputCustomType.Parameter("partitionFormatInPath") Boolean partitionFormatInPath,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,Object> properties,
+        @OutputCustomType.Parameter("savedDatasetId") String savedDatasetId,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("telemetryInfo") Map<String,String> telemetryInfo,
+        @OutputCustomType.Parameter("useDescriptionTagsFromDefinition") Boolean useDescriptionTagsFromDefinition,
+        @OutputCustomType.Parameter("versionId") String versionId) {
         this.createdBy = createdBy;
         this.createdTime = createdTime;
         this.dataPath = dataPath;

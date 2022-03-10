@@ -60,17 +60,17 @@ public final class GetManagerResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"cisIntrinsicSettings","etag","id","location","name","provisioningState","sku","tags","type"})
+    @OutputCustomType.Constructor
     private GetManagerResult(
-        @Nullable ManagerIntrinsicSettingsResponse cisIntrinsicSettings,
-        @Nullable String etag,
-        String id,
-        String location,
-        String name,
-        @Nullable String provisioningState,
-        @Nullable ManagerSkuResponse sku,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("cisIntrinsicSettings") @Nullable ManagerIntrinsicSettingsResponse cisIntrinsicSettings,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("sku") @Nullable ManagerSkuResponse sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.cisIntrinsicSettings = cisIntrinsicSettings;
         this.etag = etag;
         this.id = id;

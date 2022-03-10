@@ -23,10 +23,10 @@ public final class SuppressionConfigResponse {
      */
     private final @Nullable SuppressionScheduleResponse schedule;
 
-    @OutputCustomType.Constructor({"recurrenceType","schedule"})
+    @OutputCustomType.Constructor
     private SuppressionConfigResponse(
-        String recurrenceType,
-        @Nullable SuppressionScheduleResponse schedule) {
+        @OutputCustomType.Parameter("recurrenceType") String recurrenceType,
+        @OutputCustomType.Parameter("schedule") @Nullable SuppressionScheduleResponse schedule) {
         this.recurrenceType = recurrenceType;
         this.schedule = schedule;
     }

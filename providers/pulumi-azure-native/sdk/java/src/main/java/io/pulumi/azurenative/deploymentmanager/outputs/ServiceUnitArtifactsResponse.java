@@ -32,12 +32,12 @@ public final class ServiceUnitArtifactsResponse {
      */
     private final @Nullable String templateUri;
 
-    @OutputCustomType.Constructor({"parametersArtifactSourceRelativePath","parametersUri","templateArtifactSourceRelativePath","templateUri"})
+    @OutputCustomType.Constructor
     private ServiceUnitArtifactsResponse(
-        @Nullable String parametersArtifactSourceRelativePath,
-        @Nullable String parametersUri,
-        @Nullable String templateArtifactSourceRelativePath,
-        @Nullable String templateUri) {
+        @OutputCustomType.Parameter("parametersArtifactSourceRelativePath") @Nullable String parametersArtifactSourceRelativePath,
+        @OutputCustomType.Parameter("parametersUri") @Nullable String parametersUri,
+        @OutputCustomType.Parameter("templateArtifactSourceRelativePath") @Nullable String templateArtifactSourceRelativePath,
+        @OutputCustomType.Parameter("templateUri") @Nullable String templateUri) {
         this.parametersArtifactSourceRelativePath = parametersArtifactSourceRelativePath;
         this.parametersUri = parametersUri;
         this.templateArtifactSourceRelativePath = templateArtifactSourceRelativePath;

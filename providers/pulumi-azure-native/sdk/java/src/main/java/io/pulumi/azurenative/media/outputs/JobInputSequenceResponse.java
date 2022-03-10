@@ -24,10 +24,10 @@ public final class JobInputSequenceResponse {
      */
     private final String odataType;
 
-    @OutputCustomType.Constructor({"inputs","odataType"})
+    @OutputCustomType.Constructor
     private JobInputSequenceResponse(
-        @Nullable List<JobInputClipResponse> inputs,
-        String odataType) {
+        @OutputCustomType.Parameter("inputs") @Nullable List<JobInputClipResponse> inputs,
+        @OutputCustomType.Parameter("odataType") String odataType) {
         this.inputs = inputs;
         this.odataType = odataType;
     }

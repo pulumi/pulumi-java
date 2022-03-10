@@ -26,11 +26,11 @@ public final class KpiThresholdsResponse {
      */
     private final Double upperLimit;
 
-    @OutputCustomType.Constructor({"increasingKpi","lowerLimit","upperLimit"})
+    @OutputCustomType.Constructor
     private KpiThresholdsResponse(
-        Boolean increasingKpi,
-        Double lowerLimit,
-        Double upperLimit) {
+        @OutputCustomType.Parameter("increasingKpi") Boolean increasingKpi,
+        @OutputCustomType.Parameter("lowerLimit") Double lowerLimit,
+        @OutputCustomType.Parameter("upperLimit") Double upperLimit) {
         this.increasingKpi = increasingKpi;
         this.lowerLimit = lowerLimit;
         this.upperLimit = upperLimit;

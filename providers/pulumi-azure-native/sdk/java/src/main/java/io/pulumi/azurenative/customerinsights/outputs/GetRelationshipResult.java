@@ -91,23 +91,23 @@ public final class GetRelationshipResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"cardinality","description","displayName","expiryDateTimeUtc","fields","id","lookupMappings","name","profileType","provisioningState","relatedProfileType","relationshipGuidId","relationshipName","tenantId","type"})
+    @OutputCustomType.Constructor
     private GetRelationshipResult(
-        @Nullable String cardinality,
-        @Nullable Map<String,String> description,
-        @Nullable Map<String,String> displayName,
-        @Nullable String expiryDateTimeUtc,
-        @Nullable List<PropertyDefinitionResponse> fields,
-        String id,
-        @Nullable List<RelationshipTypeMappingResponse> lookupMappings,
-        String name,
-        String profileType,
-        String provisioningState,
-        String relatedProfileType,
-        String relationshipGuidId,
-        String relationshipName,
-        String tenantId,
-        String type) {
+        @OutputCustomType.Parameter("cardinality") @Nullable String cardinality,
+        @OutputCustomType.Parameter("description") @Nullable Map<String,String> description,
+        @OutputCustomType.Parameter("displayName") @Nullable Map<String,String> displayName,
+        @OutputCustomType.Parameter("expiryDateTimeUtc") @Nullable String expiryDateTimeUtc,
+        @OutputCustomType.Parameter("fields") @Nullable List<PropertyDefinitionResponse> fields,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lookupMappings") @Nullable List<RelationshipTypeMappingResponse> lookupMappings,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("profileType") String profileType,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("relatedProfileType") String relatedProfileType,
+        @OutputCustomType.Parameter("relationshipGuidId") String relationshipGuidId,
+        @OutputCustomType.Parameter("relationshipName") String relationshipName,
+        @OutputCustomType.Parameter("tenantId") String tenantId,
+        @OutputCustomType.Parameter("type") String type) {
         this.cardinality = cardinality;
         this.description = description;
         this.displayName = displayName;

@@ -17,8 +17,8 @@ public final class SshProfileResponse {
      */
     private final @Nullable List<SshPublicKeyResponse> publicKeys;
 
-    @OutputCustomType.Constructor({"publicKeys"})
-    private SshProfileResponse(@Nullable List<SshPublicKeyResponse> publicKeys) {
+    @OutputCustomType.Constructor
+    private SshProfileResponse(@OutputCustomType.Parameter("publicKeys") @Nullable List<SshPublicKeyResponse> publicKeys) {
         this.publicKeys = publicKeys;
     }
 

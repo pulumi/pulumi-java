@@ -27,11 +27,11 @@ public final class TargetEligibilityErrorMessageResponse {
      */
     private final @Nullable String resultCode;
 
-    @OutputCustomType.Constructor({"message","resolution","resultCode"})
+    @OutputCustomType.Constructor
     private TargetEligibilityErrorMessageResponse(
-        @Nullable String message,
-        @Nullable String resolution,
-        @Nullable String resultCode) {
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("resolution") @Nullable String resolution,
+        @OutputCustomType.Parameter("resultCode") @Nullable String resultCode) {
         this.message = message;
         this.resolution = resolution;
         this.resultCode = resultCode;

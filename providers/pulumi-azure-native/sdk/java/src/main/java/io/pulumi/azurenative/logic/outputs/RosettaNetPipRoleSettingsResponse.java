@@ -48,15 +48,15 @@ public final class RosettaNetPipRoleSettingsResponse {
      */
     private final String serviceClassification;
 
-    @OutputCustomType.Constructor({"action","businessDocument","description","role","roleType","service","serviceClassification"})
+    @OutputCustomType.Constructor
     private RosettaNetPipRoleSettingsResponse(
-        String action,
-        RosettaNetPipBusinessDocumentResponse businessDocument,
-        @Nullable String description,
-        String role,
-        String roleType,
-        String service,
-        String serviceClassification) {
+        @OutputCustomType.Parameter("action") String action,
+        @OutputCustomType.Parameter("businessDocument") RosettaNetPipBusinessDocumentResponse businessDocument,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("role") String role,
+        @OutputCustomType.Parameter("roleType") String roleType,
+        @OutputCustomType.Parameter("service") String service,
+        @OutputCustomType.Parameter("serviceClassification") String serviceClassification) {
         this.action = action;
         this.businessDocument = businessDocument;
         this.description = description;

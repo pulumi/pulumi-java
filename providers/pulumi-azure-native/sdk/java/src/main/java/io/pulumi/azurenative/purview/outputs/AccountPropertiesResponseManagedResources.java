@@ -25,11 +25,11 @@ public final class AccountPropertiesResponseManagedResources {
      */
     private final String storageAccount;
 
-    @OutputCustomType.Constructor({"eventHubNamespace","resourceGroup","storageAccount"})
+    @OutputCustomType.Constructor
     private AccountPropertiesResponseManagedResources(
-        String eventHubNamespace,
-        String resourceGroup,
-        String storageAccount) {
+        @OutputCustomType.Parameter("eventHubNamespace") String eventHubNamespace,
+        @OutputCustomType.Parameter("resourceGroup") String resourceGroup,
+        @OutputCustomType.Parameter("storageAccount") String storageAccount) {
         this.eventHubNamespace = eventHubNamespace;
         this.resourceGroup = resourceGroup;
         this.storageAccount = storageAccount;

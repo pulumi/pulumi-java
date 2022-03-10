@@ -17,8 +17,8 @@ public final class AppliancePropertiesResponseInfrastructureConfig {
      */
     private final @Nullable String provider;
 
-    @OutputCustomType.Constructor({"provider"})
-    private AppliancePropertiesResponseInfrastructureConfig(@Nullable String provider) {
+    @OutputCustomType.Constructor
+    private AppliancePropertiesResponseInfrastructureConfig(@OutputCustomType.Parameter("provider") @Nullable String provider) {
         this.provider = provider;
     }
 

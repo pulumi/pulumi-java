@@ -22,10 +22,10 @@ public final class CustomRPValidationsResponse {
      */
     private final @Nullable String validationType;
 
-    @OutputCustomType.Constructor({"specification","validationType"})
+    @OutputCustomType.Constructor
     private CustomRPValidationsResponse(
-        String specification,
-        @Nullable String validationType) {
+        @OutputCustomType.Parameter("specification") String specification,
+        @OutputCustomType.Parameter("validationType") @Nullable String validationType) {
         this.specification = specification;
         this.validationType = validationType;
     }

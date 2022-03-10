@@ -68,19 +68,19 @@ public final class GetControllerResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"dataPlaneFqdn","hostSuffix","id","location","name","provisioningState","sku","tags","targetContainerHostApiServerFqdn","targetContainerHostResourceId","type"})
+    @OutputCustomType.Constructor
     private GetControllerResult(
-        String dataPlaneFqdn,
-        String hostSuffix,
-        String id,
-        String location,
-        String name,
-        String provisioningState,
-        SkuResponse sku,
-        @Nullable Map<String,String> tags,
-        String targetContainerHostApiServerFqdn,
-        String targetContainerHostResourceId,
-        String type) {
+        @OutputCustomType.Parameter("dataPlaneFqdn") String dataPlaneFqdn,
+        @OutputCustomType.Parameter("hostSuffix") String hostSuffix,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("sku") SkuResponse sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("targetContainerHostApiServerFqdn") String targetContainerHostApiServerFqdn,
+        @OutputCustomType.Parameter("targetContainerHostResourceId") String targetContainerHostResourceId,
+        @OutputCustomType.Parameter("type") String type) {
         this.dataPlaneFqdn = dataPlaneFqdn;
         this.hostSuffix = hostSuffix;
         this.id = id;

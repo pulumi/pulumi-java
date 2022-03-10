@@ -17,8 +17,8 @@ public final class AppInsightsPropertiesResponse {
      */
     private final @Nullable String resourceId;
 
-    @OutputCustomType.Constructor({"resourceId"})
-    private AppInsightsPropertiesResponse(@Nullable String resourceId) {
+    @OutputCustomType.Constructor
+    private AppInsightsPropertiesResponse(@OutputCustomType.Parameter("resourceId") @Nullable String resourceId) {
         this.resourceId = resourceId;
     }
 

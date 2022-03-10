@@ -38,13 +38,13 @@ public final class GetSaasSubscriptionLevelResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","properties","tags","type"})
+    @OutputCustomType.Constructor
     private GetSaasSubscriptionLevelResult(
-        String id,
-        String name,
-        SaasResourceResponseProperties properties,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") SaasResourceResponseProperties properties,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.properties = properties;

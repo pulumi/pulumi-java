@@ -128,28 +128,28 @@ public final class GetContainerGroupResult {
      */
     private final @Nullable List<VolumeResponse> volumes;
 
-    @OutputCustomType.Constructor({"containers","diagnostics","dnsConfig","encryptionProperties","id","identity","imageRegistryCredentials","initContainers","instanceView","ipAddress","location","name","networkProfile","osType","provisioningState","restartPolicy","sku","tags","type","volumes"})
+    @OutputCustomType.Constructor
     private GetContainerGroupResult(
-        List<ContainerResponse> containers,
-        @Nullable ContainerGroupDiagnosticsResponse diagnostics,
-        @Nullable DnsConfigurationResponse dnsConfig,
-        @Nullable EncryptionPropertiesResponse encryptionProperties,
-        String id,
-        @Nullable ContainerGroupIdentityResponse identity,
-        @Nullable List<ImageRegistryCredentialResponse> imageRegistryCredentials,
-        @Nullable List<InitContainerDefinitionResponse> initContainers,
-        ContainerGroupResponseInstanceView instanceView,
-        @Nullable IpAddressResponse ipAddress,
-        @Nullable String location,
-        String name,
-        @Nullable ContainerGroupNetworkProfileResponse networkProfile,
-        String osType,
-        String provisioningState,
-        @Nullable String restartPolicy,
-        @Nullable String sku,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable List<VolumeResponse> volumes) {
+        @OutputCustomType.Parameter("containers") List<ContainerResponse> containers,
+        @OutputCustomType.Parameter("diagnostics") @Nullable ContainerGroupDiagnosticsResponse diagnostics,
+        @OutputCustomType.Parameter("dnsConfig") @Nullable DnsConfigurationResponse dnsConfig,
+        @OutputCustomType.Parameter("encryptionProperties") @Nullable EncryptionPropertiesResponse encryptionProperties,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable ContainerGroupIdentityResponse identity,
+        @OutputCustomType.Parameter("imageRegistryCredentials") @Nullable List<ImageRegistryCredentialResponse> imageRegistryCredentials,
+        @OutputCustomType.Parameter("initContainers") @Nullable List<InitContainerDefinitionResponse> initContainers,
+        @OutputCustomType.Parameter("instanceView") ContainerGroupResponseInstanceView instanceView,
+        @OutputCustomType.Parameter("ipAddress") @Nullable IpAddressResponse ipAddress,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networkProfile") @Nullable ContainerGroupNetworkProfileResponse networkProfile,
+        @OutputCustomType.Parameter("osType") String osType,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("restartPolicy") @Nullable String restartPolicy,
+        @OutputCustomType.Parameter("sku") @Nullable String sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("volumes") @Nullable List<VolumeResponse> volumes) {
         this.containers = containers;
         this.diagnostics = diagnostics;
         this.dnsConfig = dnsConfig;

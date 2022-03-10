@@ -17,8 +17,8 @@ public final class UserAssignedPropertiesResponse {
      */
     private final @Nullable String resourceId;
 
-    @OutputCustomType.Constructor({"resourceId"})
-    private UserAssignedPropertiesResponse(@Nullable String resourceId) {
+    @OutputCustomType.Constructor
+    private UserAssignedPropertiesResponse(@OutputCustomType.Parameter("resourceId") @Nullable String resourceId) {
         this.resourceId = resourceId;
     }
 

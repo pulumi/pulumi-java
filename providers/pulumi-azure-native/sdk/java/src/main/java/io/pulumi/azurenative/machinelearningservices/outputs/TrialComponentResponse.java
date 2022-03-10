@@ -60,16 +60,16 @@ public final class TrialComponentResponse {
      */
     private final @Nullable String timeout;
 
-    @OutputCustomType.Constructor({"codeId","command","distribution","environmentId","environmentVariables","inputDataBindings","outputDataBindings","timeout"})
+    @OutputCustomType.Constructor
     private TrialComponentResponse(
-        @Nullable String codeId,
-        String command,
-        @Nullable Object distribution,
-        @Nullable String environmentId,
-        @Nullable Map<String,String> environmentVariables,
-        @Nullable Map<String,InputDataBindingResponse> inputDataBindings,
-        @Nullable Map<String,OutputDataBindingResponse> outputDataBindings,
-        @Nullable String timeout) {
+        @OutputCustomType.Parameter("codeId") @Nullable String codeId,
+        @OutputCustomType.Parameter("command") String command,
+        @OutputCustomType.Parameter("distribution") @Nullable Object distribution,
+        @OutputCustomType.Parameter("environmentId") @Nullable String environmentId,
+        @OutputCustomType.Parameter("environmentVariables") @Nullable Map<String,String> environmentVariables,
+        @OutputCustomType.Parameter("inputDataBindings") @Nullable Map<String,InputDataBindingResponse> inputDataBindings,
+        @OutputCustomType.Parameter("outputDataBindings") @Nullable Map<String,OutputDataBindingResponse> outputDataBindings,
+        @OutputCustomType.Parameter("timeout") @Nullable String timeout) {
         this.codeId = codeId;
         this.command = command;
         this.distribution = distribution;

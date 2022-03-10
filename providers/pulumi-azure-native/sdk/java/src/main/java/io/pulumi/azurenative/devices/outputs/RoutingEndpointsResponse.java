@@ -35,12 +35,12 @@ public final class RoutingEndpointsResponse {
      */
     private final @Nullable List<RoutingStorageContainerPropertiesResponse> storageContainers;
 
-    @OutputCustomType.Constructor({"eventHubs","serviceBusQueues","serviceBusTopics","storageContainers"})
+    @OutputCustomType.Constructor
     private RoutingEndpointsResponse(
-        @Nullable List<RoutingEventHubPropertiesResponse> eventHubs,
-        @Nullable List<RoutingServiceBusQueueEndpointPropertiesResponse> serviceBusQueues,
-        @Nullable List<RoutingServiceBusTopicEndpointPropertiesResponse> serviceBusTopics,
-        @Nullable List<RoutingStorageContainerPropertiesResponse> storageContainers) {
+        @OutputCustomType.Parameter("eventHubs") @Nullable List<RoutingEventHubPropertiesResponse> eventHubs,
+        @OutputCustomType.Parameter("serviceBusQueues") @Nullable List<RoutingServiceBusQueueEndpointPropertiesResponse> serviceBusQueues,
+        @OutputCustomType.Parameter("serviceBusTopics") @Nullable List<RoutingServiceBusTopicEndpointPropertiesResponse> serviceBusTopics,
+        @OutputCustomType.Parameter("storageContainers") @Nullable List<RoutingStorageContainerPropertiesResponse> storageContainers) {
         this.eventHubs = eventHubs;
         this.serviceBusQueues = serviceBusQueues;
         this.serviceBusTopics = serviceBusTopics;

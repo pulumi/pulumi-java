@@ -17,8 +17,8 @@ public final class AdhocBasedTaggingCriteriaResponse {
      */
     private final @Nullable RetentionTagResponse tagInfo;
 
-    @OutputCustomType.Constructor({"tagInfo"})
-    private AdhocBasedTaggingCriteriaResponse(@Nullable RetentionTagResponse tagInfo) {
+    @OutputCustomType.Constructor
+    private AdhocBasedTaggingCriteriaResponse(@OutputCustomType.Parameter("tagInfo") @Nullable RetentionTagResponse tagInfo) {
         this.tagInfo = tagInfo;
     }
 

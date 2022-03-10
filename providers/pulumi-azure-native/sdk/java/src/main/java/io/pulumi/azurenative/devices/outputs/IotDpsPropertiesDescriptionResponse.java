@@ -72,19 +72,19 @@ public final class IotDpsPropertiesDescriptionResponse {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor({"allocationPolicy","authorizationPolicies","deviceProvisioningHostName","idScope","iotHubs","ipFilterRules","privateEndpointConnections","provisioningState","publicNetworkAccess","serviceOperationsHostName","state"})
+    @OutputCustomType.Constructor
     private IotDpsPropertiesDescriptionResponse(
-        @Nullable String allocationPolicy,
-        @Nullable List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse> authorizationPolicies,
-        String deviceProvisioningHostName,
-        String idScope,
-        @Nullable List<IotHubDefinitionDescriptionResponse> iotHubs,
-        @Nullable List<TargetIpFilterRuleResponse> ipFilterRules,
-        @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections,
-        @Nullable String provisioningState,
-        @Nullable String publicNetworkAccess,
-        String serviceOperationsHostName,
-        @Nullable String state) {
+        @OutputCustomType.Parameter("allocationPolicy") @Nullable String allocationPolicy,
+        @OutputCustomType.Parameter("authorizationPolicies") @Nullable List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse> authorizationPolicies,
+        @OutputCustomType.Parameter("deviceProvisioningHostName") String deviceProvisioningHostName,
+        @OutputCustomType.Parameter("idScope") String idScope,
+        @OutputCustomType.Parameter("iotHubs") @Nullable List<IotHubDefinitionDescriptionResponse> iotHubs,
+        @OutputCustomType.Parameter("ipFilterRules") @Nullable List<TargetIpFilterRuleResponse> ipFilterRules,
+        @OutputCustomType.Parameter("privateEndpointConnections") @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess,
+        @OutputCustomType.Parameter("serviceOperationsHostName") String serviceOperationsHostName,
+        @OutputCustomType.Parameter("state") @Nullable String state) {
         this.allocationPolicy = allocationPolicy;
         this.authorizationPolicies = authorizationPolicies;
         this.deviceProvisioningHostName = deviceProvisioningHostName;

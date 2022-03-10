@@ -41,14 +41,14 @@ public final class ApiKeyResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"connectionString","id","lastModified","name","readOnly","value"})
+    @OutputCustomType.Constructor
     private ApiKeyResponse(
-        String connectionString,
-        String id,
-        String lastModified,
-        String name,
-        Boolean readOnly,
-        String value) {
+        @OutputCustomType.Parameter("connectionString") String connectionString,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastModified") String lastModified,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("readOnly") Boolean readOnly,
+        @OutputCustomType.Parameter("value") String value) {
         this.connectionString = connectionString;
         this.id = id;
         this.lastModified = lastModified;

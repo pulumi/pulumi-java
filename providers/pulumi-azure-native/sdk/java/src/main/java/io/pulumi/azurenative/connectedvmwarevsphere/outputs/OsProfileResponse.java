@@ -47,15 +47,15 @@ public final class OsProfileResponse {
      */
     private final String toolsVersionStatus;
 
-    @OutputCustomType.Constructor({"adminUsername","computerName","osName","osType","toolsRunningStatus","toolsVersion","toolsVersionStatus"})
+    @OutputCustomType.Constructor
     private OsProfileResponse(
-        @Nullable String adminUsername,
-        @Nullable String computerName,
-        String osName,
-        @Nullable String osType,
-        String toolsRunningStatus,
-        String toolsVersion,
-        String toolsVersionStatus) {
+        @OutputCustomType.Parameter("adminUsername") @Nullable String adminUsername,
+        @OutputCustomType.Parameter("computerName") @Nullable String computerName,
+        @OutputCustomType.Parameter("osName") String osName,
+        @OutputCustomType.Parameter("osType") @Nullable String osType,
+        @OutputCustomType.Parameter("toolsRunningStatus") String toolsRunningStatus,
+        @OutputCustomType.Parameter("toolsVersion") String toolsVersion,
+        @OutputCustomType.Parameter("toolsVersionStatus") String toolsVersionStatus) {
         this.adminUsername = adminUsername;
         this.computerName = computerName;
         this.osName = osName;

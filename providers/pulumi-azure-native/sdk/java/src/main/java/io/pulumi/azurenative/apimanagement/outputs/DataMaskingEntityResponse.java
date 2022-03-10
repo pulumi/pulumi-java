@@ -22,10 +22,10 @@ public final class DataMaskingEntityResponse {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"mode","value"})
+    @OutputCustomType.Constructor
     private DataMaskingEntityResponse(
-        @Nullable String mode,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("mode") @Nullable String mode,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.mode = mode;
         this.value = value;
     }

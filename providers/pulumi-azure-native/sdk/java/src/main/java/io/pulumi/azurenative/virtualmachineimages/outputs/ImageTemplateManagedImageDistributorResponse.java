@@ -38,13 +38,13 @@ public final class ImageTemplateManagedImageDistributorResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"artifactTags","imageId","location","runOutputName","type"})
+    @OutputCustomType.Constructor
     private ImageTemplateManagedImageDistributorResponse(
-        @Nullable Map<String,String> artifactTags,
-        String imageId,
-        String location,
-        String runOutputName,
-        String type) {
+        @OutputCustomType.Parameter("artifactTags") @Nullable Map<String,String> artifactTags,
+        @OutputCustomType.Parameter("imageId") String imageId,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("runOutputName") String runOutputName,
+        @OutputCustomType.Parameter("type") String type) {
         this.artifactTags = artifactTags;
         this.imageId = imageId;
         this.location = location;

@@ -25,11 +25,11 @@ public final class TimeResponse {
      */
     private final Integer seconds;
 
-    @OutputCustomType.Constructor({"hours","minutes","seconds"})
+    @OutputCustomType.Constructor
     private TimeResponse(
-        Integer hours,
-        Integer minutes,
-        Integer seconds) {
+        @OutputCustomType.Parameter("hours") Integer hours,
+        @OutputCustomType.Parameter("minutes") Integer minutes,
+        @OutputCustomType.Parameter("seconds") Integer seconds) {
         this.hours = hours;
         this.minutes = minutes;
         this.seconds = seconds;

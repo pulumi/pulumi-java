@@ -21,10 +21,10 @@ public final class TimelineAggregationResponse {
      */
     private final String kind;
 
-    @OutputCustomType.Constructor({"count","kind"})
+    @OutputCustomType.Constructor
     private TimelineAggregationResponse(
-        Integer count,
-        String kind) {
+        @OutputCustomType.Parameter("count") Integer count,
+        @OutputCustomType.Parameter("kind") String kind) {
         this.count = count;
         this.kind = kind;
     }

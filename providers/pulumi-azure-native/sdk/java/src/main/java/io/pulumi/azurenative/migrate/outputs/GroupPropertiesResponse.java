@@ -50,15 +50,15 @@ public final class GroupPropertiesResponse {
      */
     private final String updatedTimestamp;
 
-    @OutputCustomType.Constructor({"areAssessmentsRunning","assessments","createdTimestamp","groupStatus","groupType","machineCount","updatedTimestamp"})
+    @OutputCustomType.Constructor
     private GroupPropertiesResponse(
-        Boolean areAssessmentsRunning,
-        List<String> assessments,
-        String createdTimestamp,
-        String groupStatus,
-        @Nullable String groupType,
-        Integer machineCount,
-        String updatedTimestamp) {
+        @OutputCustomType.Parameter("areAssessmentsRunning") Boolean areAssessmentsRunning,
+        @OutputCustomType.Parameter("assessments") List<String> assessments,
+        @OutputCustomType.Parameter("createdTimestamp") String createdTimestamp,
+        @OutputCustomType.Parameter("groupStatus") String groupStatus,
+        @OutputCustomType.Parameter("groupType") @Nullable String groupType,
+        @OutputCustomType.Parameter("machineCount") Integer machineCount,
+        @OutputCustomType.Parameter("updatedTimestamp") String updatedTimestamp) {
         this.areAssessmentsRunning = areAssessmentsRunning;
         this.assessments = assessments;
         this.createdTimestamp = createdTimestamp;

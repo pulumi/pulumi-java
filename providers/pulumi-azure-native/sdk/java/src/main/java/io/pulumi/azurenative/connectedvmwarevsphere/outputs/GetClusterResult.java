@@ -107,26 +107,26 @@ public final class GetClusterResult {
      */
     private final @Nullable String vCenterId;
 
-    @OutputCustomType.Constructor({"customResourceName","datastoreIds","extendedLocation","id","inventoryItemId","kind","location","moName","moRefId","name","networkIds","provisioningState","statuses","systemData","tags","type","uuid","vCenterId"})
+    @OutputCustomType.Constructor
     private GetClusterResult(
-        String customResourceName,
-        List<String> datastoreIds,
-        @Nullable ExtendedLocationResponse extendedLocation,
-        String id,
-        @Nullable String inventoryItemId,
-        @Nullable String kind,
-        String location,
-        String moName,
-        @Nullable String moRefId,
-        String name,
-        List<String> networkIds,
-        String provisioningState,
-        List<ResourceStatusResponse> statuses,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type,
-        String uuid,
-        @Nullable String vCenterId) {
+        @OutputCustomType.Parameter("customResourceName") String customResourceName,
+        @OutputCustomType.Parameter("datastoreIds") List<String> datastoreIds,
+        @OutputCustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("inventoryItemId") @Nullable String inventoryItemId,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("moName") String moName,
+        @OutputCustomType.Parameter("moRefId") @Nullable String moRefId,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networkIds") List<String> networkIds,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("statuses") List<ResourceStatusResponse> statuses,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("uuid") String uuid,
+        @OutputCustomType.Parameter("vCenterId") @Nullable String vCenterId) {
         this.customResourceName = customResourceName;
         this.datastoreIds = datastoreIds;
         this.extendedLocation = extendedLocation;

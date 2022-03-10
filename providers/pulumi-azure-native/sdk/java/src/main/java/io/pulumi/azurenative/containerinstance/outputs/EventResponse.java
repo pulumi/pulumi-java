@@ -41,14 +41,14 @@ public final class EventResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"count","firstTimestamp","lastTimestamp","message","name","type"})
+    @OutputCustomType.Constructor
     private EventResponse(
-        Integer count,
-        String firstTimestamp,
-        String lastTimestamp,
-        String message,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("count") Integer count,
+        @OutputCustomType.Parameter("firstTimestamp") String firstTimestamp,
+        @OutputCustomType.Parameter("lastTimestamp") String lastTimestamp,
+        @OutputCustomType.Parameter("message") String message,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.count = count;
         this.firstTimestamp = firstTimestamp;
         this.lastTimestamp = lastTimestamp;

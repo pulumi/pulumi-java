@@ -72,20 +72,20 @@ public final class GetKeyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"attributes","curveName","id","keyOps","keySize","keyUri","keyUriWithVersion","kty","location","name","tags","type"})
+    @OutputCustomType.Constructor
     private GetKeyResult(
-        @Nullable KeyAttributesResponse attributes,
-        @Nullable String curveName,
-        String id,
-        @Nullable List<String> keyOps,
-        @Nullable Integer keySize,
-        String keyUri,
-        String keyUriWithVersion,
-        @Nullable String kty,
-        String location,
-        String name,
-        Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("attributes") @Nullable KeyAttributesResponse attributes,
+        @OutputCustomType.Parameter("curveName") @Nullable String curveName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("keyOps") @Nullable List<String> keyOps,
+        @OutputCustomType.Parameter("keySize") @Nullable Integer keySize,
+        @OutputCustomType.Parameter("keyUri") String keyUri,
+        @OutputCustomType.Parameter("keyUriWithVersion") String keyUriWithVersion,
+        @OutputCustomType.Parameter("kty") @Nullable String kty,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.attributes = attributes;
         this.curveName = curveName;
         this.id = id;

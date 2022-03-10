@@ -41,14 +41,14 @@ public final class WebChatSiteResponse {
      */
     private final String siteName;
 
-    @OutputCustomType.Constructor({"isEnabled","isWebchatPreviewEnabled","key","key2","siteId","siteName"})
+    @OutputCustomType.Constructor
     private WebChatSiteResponse(
-        Boolean isEnabled,
-        Boolean isWebchatPreviewEnabled,
-        String key,
-        String key2,
-        String siteId,
-        String siteName) {
+        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
+        @OutputCustomType.Parameter("isWebchatPreviewEnabled") Boolean isWebchatPreviewEnabled,
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("key2") String key2,
+        @OutputCustomType.Parameter("siteId") String siteId,
+        @OutputCustomType.Parameter("siteName") String siteName) {
         this.isEnabled = isEnabled;
         this.isWebchatPreviewEnabled = isWebchatPreviewEnabled;
         this.key = key;

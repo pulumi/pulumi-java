@@ -16,8 +16,8 @@ public final class ManagementPolicySchemaResponse {
      */
     private final List<ManagementPolicyRuleResponse> rules;
 
-    @OutputCustomType.Constructor({"rules"})
-    private ManagementPolicySchemaResponse(List<ManagementPolicyRuleResponse> rules) {
+    @OutputCustomType.Constructor
+    private ManagementPolicySchemaResponse(@OutputCustomType.Parameter("rules") List<ManagementPolicyRuleResponse> rules) {
         this.rules = rules;
     }
 

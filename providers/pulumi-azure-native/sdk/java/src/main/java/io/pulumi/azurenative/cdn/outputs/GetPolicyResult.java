@@ -92,23 +92,23 @@ public final class GetPolicyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"customRules","endpointLinks","etag","id","location","managedRules","name","policySettings","provisioningState","rateLimitRules","resourceState","sku","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetPolicyResult(
-        @Nullable CustomRuleListResponse customRules,
-        List<CdnEndpointResponse> endpointLinks,
-        @Nullable String etag,
-        String id,
-        String location,
-        @Nullable ManagedRuleSetListResponse managedRules,
-        String name,
-        @Nullable PolicySettingsResponse policySettings,
-        String provisioningState,
-        @Nullable RateLimitRuleListResponse rateLimitRules,
-        String resourceState,
-        SkuResponse sku,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("customRules") @Nullable CustomRuleListResponse customRules,
+        @OutputCustomType.Parameter("endpointLinks") List<CdnEndpointResponse> endpointLinks,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("managedRules") @Nullable ManagedRuleSetListResponse managedRules,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("policySettings") @Nullable PolicySettingsResponse policySettings,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("rateLimitRules") @Nullable RateLimitRuleListResponse rateLimitRules,
+        @OutputCustomType.Parameter("resourceState") String resourceState,
+        @OutputCustomType.Parameter("sku") SkuResponse sku,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.customRules = customRules;
         this.endpointLinks = endpointLinks;
         this.etag = etag;

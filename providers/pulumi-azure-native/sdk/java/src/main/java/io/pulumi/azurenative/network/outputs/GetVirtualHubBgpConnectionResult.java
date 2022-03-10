@@ -53,16 +53,16 @@ public final class GetVirtualHubBgpConnectionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"connectionState","etag","id","name","peerAsn","peerIp","provisioningState","type"})
+    @OutputCustomType.Constructor
     private GetVirtualHubBgpConnectionResult(
-        String connectionState,
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable Double peerAsn,
-        @Nullable String peerIp,
-        String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("connectionState") String connectionState,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("peerAsn") @Nullable Double peerAsn,
+        @OutputCustomType.Parameter("peerIp") @Nullable String peerIp,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.connectionState = connectionState;
         this.etag = etag;
         this.id = id;

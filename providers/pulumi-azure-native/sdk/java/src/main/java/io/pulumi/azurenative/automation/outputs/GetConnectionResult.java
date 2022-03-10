@@ -54,16 +54,16 @@ public final class GetConnectionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"connectionType","creationTime","description","fieldDefinitionValues","id","lastModifiedTime","name","type"})
+    @OutputCustomType.Constructor
     private GetConnectionResult(
-        @Nullable ConnectionTypeAssociationPropertyResponse connectionType,
-        String creationTime,
-        @Nullable String description,
-        Map<String,String> fieldDefinitionValues,
-        String id,
-        String lastModifiedTime,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("connectionType") @Nullable ConnectionTypeAssociationPropertyResponse connectionType,
+        @OutputCustomType.Parameter("creationTime") String creationTime,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("fieldDefinitionValues") Map<String,String> fieldDefinitionValues,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.connectionType = connectionType;
         this.creationTime = creationTime;
         this.description = description;

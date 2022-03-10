@@ -22,10 +22,10 @@ public final class ParameterDefinitionResponse {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"name","value"})
+    @OutputCustomType.Constructor
     private ParameterDefinitionResponse(
-        String name,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.name = name;
         this.value = value;
     }

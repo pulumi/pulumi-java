@@ -109,26 +109,26 @@ public final class GetScheduledQueryRuleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"action","autoMitigate","createdWithApiVersion","description","displayName","enabled","etag","id","isLegacyLogAnalyticsRule","kind","lastUpdatedTime","location","name","provisioningState","schedule","source","tags","type"})
+    @OutputCustomType.Constructor
     private GetScheduledQueryRuleResult(
-        Either<AlertingActionResponse,LogToMetricActionResponse> action,
-        @Nullable Boolean autoMitigate,
-        String createdWithApiVersion,
-        @Nullable String description,
-        @Nullable String displayName,
-        @Nullable String enabled,
-        String etag,
-        String id,
-        Boolean isLegacyLogAnalyticsRule,
-        String kind,
-        String lastUpdatedTime,
-        String location,
-        String name,
-        String provisioningState,
-        @Nullable ScheduleResponse schedule,
-        SourceResponse source,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("action") Either<AlertingActionResponse,LogToMetricActionResponse> action,
+        @OutputCustomType.Parameter("autoMitigate") @Nullable Boolean autoMitigate,
+        @OutputCustomType.Parameter("createdWithApiVersion") String createdWithApiVersion,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("enabled") @Nullable String enabled,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isLegacyLogAnalyticsRule") Boolean isLegacyLogAnalyticsRule,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("lastUpdatedTime") String lastUpdatedTime,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("schedule") @Nullable ScheduleResponse schedule,
+        @OutputCustomType.Parameter("source") SourceResponse source,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.action = action;
         this.autoMitigate = autoMitigate;
         this.createdWithApiVersion = createdWithApiVersion;

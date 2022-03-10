@@ -15,8 +15,8 @@ public final class ListMachineLearningComputeKeysResult {
      */
     private final String computeType;
 
-    @OutputCustomType.Constructor({"computeType"})
-    private ListMachineLearningComputeKeysResult(String computeType) {
+    @OutputCustomType.Constructor
+    private ListMachineLearningComputeKeysResult(@OutputCustomType.Parameter("computeType") String computeType) {
         this.computeType = computeType;
     }
 

@@ -42,14 +42,14 @@ public final class GetDeploymentResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"etag","id","name","properties","systemData","type"})
+    @OutputCustomType.Constructor
     private GetDeploymentResult(
-        String etag,
-        String id,
-        String name,
-        DeploymentPropertiesResponse properties,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") DeploymentPropertiesResponse properties,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.etag = etag;
         this.id = id;
         this.name = name;

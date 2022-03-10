@@ -82,24 +82,24 @@ public final class DatastoreResponse {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"azureDataLakeSection","azureMySqlSection","azurePostgreSqlSection","azureSqlDatabaseSection","azureStorageSection","createdBy","createdTime","dataStoreType","description","glusterFsSection","hasBeenValidated","linkedInfo","modifiedBy","modifiedTime","name","tags"})
+    @OutputCustomType.Constructor
     private DatastoreResponse(
-        @Nullable AzureDataLakeSectionResponse azureDataLakeSection,
-        @Nullable AzureMySqlSectionResponse azureMySqlSection,
-        @Nullable AzurePostgreSqlSectionResponse azurePostgreSqlSection,
-        @Nullable AzureSqlDatabaseSectionResponse azureSqlDatabaseSection,
-        @Nullable AzureStorageSectionResponse azureStorageSection,
-        UserInfoResponse createdBy,
-        String createdTime,
-        @Nullable String dataStoreType,
-        @Nullable String description,
-        @Nullable GlusterFsSectionResponse glusterFsSection,
-        @Nullable Boolean hasBeenValidated,
-        @Nullable LinkedInfoResponse linkedInfo,
-        UserInfoResponse modifiedBy,
-        String modifiedTime,
-        @Nullable String name,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("azureDataLakeSection") @Nullable AzureDataLakeSectionResponse azureDataLakeSection,
+        @OutputCustomType.Parameter("azureMySqlSection") @Nullable AzureMySqlSectionResponse azureMySqlSection,
+        @OutputCustomType.Parameter("azurePostgreSqlSection") @Nullable AzurePostgreSqlSectionResponse azurePostgreSqlSection,
+        @OutputCustomType.Parameter("azureSqlDatabaseSection") @Nullable AzureSqlDatabaseSectionResponse azureSqlDatabaseSection,
+        @OutputCustomType.Parameter("azureStorageSection") @Nullable AzureStorageSectionResponse azureStorageSection,
+        @OutputCustomType.Parameter("createdBy") UserInfoResponse createdBy,
+        @OutputCustomType.Parameter("createdTime") String createdTime,
+        @OutputCustomType.Parameter("dataStoreType") @Nullable String dataStoreType,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("glusterFsSection") @Nullable GlusterFsSectionResponse glusterFsSection,
+        @OutputCustomType.Parameter("hasBeenValidated") @Nullable Boolean hasBeenValidated,
+        @OutputCustomType.Parameter("linkedInfo") @Nullable LinkedInfoResponse linkedInfo,
+        @OutputCustomType.Parameter("modifiedBy") UserInfoResponse modifiedBy,
+        @OutputCustomType.Parameter("modifiedTime") String modifiedTime,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.azureDataLakeSection = azureDataLakeSection;
         this.azureMySqlSection = azureMySqlSection;
         this.azurePostgreSqlSection = azurePostgreSqlSection;

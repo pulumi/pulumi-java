@@ -44,14 +44,14 @@ public final class GetSqlResourceSqlRoleDefinitionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"assignableScopes","id","name","permissions","roleName","type"})
+    @OutputCustomType.Constructor
     private GetSqlResourceSqlRoleDefinitionResult(
-        @Nullable List<String> assignableScopes,
-        String id,
-        String name,
-        @Nullable List<PermissionResponse> permissions,
-        @Nullable String roleName,
-        String type) {
+        @OutputCustomType.Parameter("assignableScopes") @Nullable List<String> assignableScopes,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("permissions") @Nullable List<PermissionResponse> permissions,
+        @OutputCustomType.Parameter("roleName") @Nullable String roleName,
+        @OutputCustomType.Parameter("type") String type) {
         this.assignableScopes = assignableScopes;
         this.id = id;
         this.name = name;

@@ -20,10 +20,10 @@ public final class SkuResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"family","name"})
+    @OutputCustomType.Constructor
     private SkuResponse(
-        String family,
-        String name) {
+        @OutputCustomType.Parameter("family") String family,
+        @OutputCustomType.Parameter("name") String name) {
         this.family = family;
         this.name = name;
     }

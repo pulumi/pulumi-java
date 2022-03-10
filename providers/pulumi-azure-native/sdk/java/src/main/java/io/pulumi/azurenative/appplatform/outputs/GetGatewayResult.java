@@ -45,14 +45,14 @@ public final class GetGatewayResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","properties","sku","systemData","type"})
+    @OutputCustomType.Constructor
     private GetGatewayResult(
-        String id,
-        String name,
-        GatewayPropertiesResponse properties,
-        @Nullable SkuResponse sku,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") GatewayPropertiesResponse properties,
+        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.properties = properties;

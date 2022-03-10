@@ -80,21 +80,21 @@ public final class InboundNatPoolResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"backendPort","enableFloatingIP","enableTcpReset","etag","frontendIPConfiguration","frontendPortRangeEnd","frontendPortRangeStart","id","idleTimeoutInMinutes","name","protocol","provisioningState","type"})
+    @OutputCustomType.Constructor
     private InboundNatPoolResponse(
-        Integer backendPort,
-        @Nullable Boolean enableFloatingIP,
-        @Nullable Boolean enableTcpReset,
-        String etag,
-        @Nullable SubResourceResponse frontendIPConfiguration,
-        Integer frontendPortRangeEnd,
-        Integer frontendPortRangeStart,
-        @Nullable String id,
-        @Nullable Integer idleTimeoutInMinutes,
-        @Nullable String name,
-        String protocol,
-        String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("backendPort") Integer backendPort,
+        @OutputCustomType.Parameter("enableFloatingIP") @Nullable Boolean enableFloatingIP,
+        @OutputCustomType.Parameter("enableTcpReset") @Nullable Boolean enableTcpReset,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("frontendIPConfiguration") @Nullable SubResourceResponse frontendIPConfiguration,
+        @OutputCustomType.Parameter("frontendPortRangeEnd") Integer frontendPortRangeEnd,
+        @OutputCustomType.Parameter("frontendPortRangeStart") Integer frontendPortRangeStart,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("idleTimeoutInMinutes") @Nullable Integer idleTimeoutInMinutes,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("protocol") String protocol,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.backendPort = backendPort;
         this.enableFloatingIP = enableFloatingIP;
         this.enableTcpReset = enableTcpReset;

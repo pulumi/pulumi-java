@@ -59,17 +59,17 @@ public final class GetVirtualNetworkGatewayNatRuleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"etag","externalMappings","id","internalMappings","ipConfigurationId","mode","name","provisioningState","type"})
+    @OutputCustomType.Constructor
     private GetVirtualNetworkGatewayNatRuleResult(
-        String etag,
-        @Nullable List<VpnNatRuleMappingResponse> externalMappings,
-        @Nullable String id,
-        @Nullable List<VpnNatRuleMappingResponse> internalMappings,
-        @Nullable String ipConfigurationId,
-        @Nullable String mode,
-        @Nullable String name,
-        String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("externalMappings") @Nullable List<VpnNatRuleMappingResponse> externalMappings,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("internalMappings") @Nullable List<VpnNatRuleMappingResponse> internalMappings,
+        @OutputCustomType.Parameter("ipConfigurationId") @Nullable String ipConfigurationId,
+        @OutputCustomType.Parameter("mode") @Nullable String mode,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.etag = etag;
         this.externalMappings = externalMappings;
         this.id = id;

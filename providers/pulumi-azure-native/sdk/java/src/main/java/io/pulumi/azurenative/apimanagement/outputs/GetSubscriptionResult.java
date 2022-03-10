@@ -93,24 +93,24 @@ public final class GetSubscriptionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"allowTracing","createdDate","displayName","endDate","expirationDate","id","name","notificationDate","ownerId","primaryKey","scope","secondaryKey","startDate","state","stateComment","type"})
+    @OutputCustomType.Constructor
     private GetSubscriptionResult(
-        @Nullable Boolean allowTracing,
-        String createdDate,
-        @Nullable String displayName,
-        @Nullable String endDate,
-        @Nullable String expirationDate,
-        String id,
-        String name,
-        @Nullable String notificationDate,
-        @Nullable String ownerId,
-        @Nullable String primaryKey,
-        String scope,
-        @Nullable String secondaryKey,
-        @Nullable String startDate,
-        String state,
-        @Nullable String stateComment,
-        String type) {
+        @OutputCustomType.Parameter("allowTracing") @Nullable Boolean allowTracing,
+        @OutputCustomType.Parameter("createdDate") String createdDate,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("endDate") @Nullable String endDate,
+        @OutputCustomType.Parameter("expirationDate") @Nullable String expirationDate,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("notificationDate") @Nullable String notificationDate,
+        @OutputCustomType.Parameter("ownerId") @Nullable String ownerId,
+        @OutputCustomType.Parameter("primaryKey") @Nullable String primaryKey,
+        @OutputCustomType.Parameter("scope") String scope,
+        @OutputCustomType.Parameter("secondaryKey") @Nullable String secondaryKey,
+        @OutputCustomType.Parameter("startDate") @Nullable String startDate,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("stateComment") @Nullable String stateComment,
+        @OutputCustomType.Parameter("type") String type) {
         this.allowTracing = allowTracing;
         this.createdDate = createdDate;
         this.displayName = displayName;

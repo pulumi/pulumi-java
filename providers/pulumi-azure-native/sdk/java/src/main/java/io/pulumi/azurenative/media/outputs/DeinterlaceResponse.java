@@ -22,10 +22,10 @@ public final class DeinterlaceResponse {
      */
     private final @Nullable String parity;
 
-    @OutputCustomType.Constructor({"mode","parity"})
+    @OutputCustomType.Constructor
     private DeinterlaceResponse(
-        @Nullable String mode,
-        @Nullable String parity) {
+        @OutputCustomType.Parameter("mode") @Nullable String mode,
+        @OutputCustomType.Parameter("parity") @Nullable String parity) {
         this.mode = mode;
         this.parity = parity;
     }

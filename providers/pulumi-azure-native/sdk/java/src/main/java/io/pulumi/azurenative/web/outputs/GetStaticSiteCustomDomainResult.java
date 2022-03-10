@@ -53,17 +53,17 @@ public final class GetStaticSiteCustomDomainResult {
      */
     private final String validationToken;
 
-    @OutputCustomType.Constructor({"createdOn","domainName","errorMessage","id","kind","name","status","type","validationToken"})
+    @OutputCustomType.Constructor
     private GetStaticSiteCustomDomainResult(
-        String createdOn,
-        String domainName,
-        String errorMessage,
-        String id,
-        @Nullable String kind,
-        String name,
-        String status,
-        String type,
-        String validationToken) {
+        @OutputCustomType.Parameter("createdOn") String createdOn,
+        @OutputCustomType.Parameter("domainName") String domainName,
+        @OutputCustomType.Parameter("errorMessage") String errorMessage,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("validationToken") String validationToken) {
         this.createdOn = createdOn;
         this.domainName = domainName;
         this.errorMessage = errorMessage;

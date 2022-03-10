@@ -42,14 +42,14 @@ public final class SharedPrivateLinkResourcePropertiesResponse {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor({"groupId","privateLinkResourceId","provisioningState","requestMessage","resourceRegion","status"})
+    @OutputCustomType.Constructor
     private SharedPrivateLinkResourcePropertiesResponse(
-        @Nullable String groupId,
-        @Nullable String privateLinkResourceId,
-        @Nullable String provisioningState,
-        @Nullable String requestMessage,
-        @Nullable String resourceRegion,
-        @Nullable String status) {
+        @OutputCustomType.Parameter("groupId") @Nullable String groupId,
+        @OutputCustomType.Parameter("privateLinkResourceId") @Nullable String privateLinkResourceId,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("requestMessage") @Nullable String requestMessage,
+        @OutputCustomType.Parameter("resourceRegion") @Nullable String resourceRegion,
+        @OutputCustomType.Parameter("status") @Nullable String status) {
         this.groupId = groupId;
         this.privateLinkResourceId = privateLinkResourceId;
         this.provisioningState = provisioningState;

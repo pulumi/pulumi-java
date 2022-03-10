@@ -104,25 +104,25 @@ public final class GetWorkspaceResult {
      */
     private final String workspaceUrl;
 
-    @OutputCustomType.Constructor({"authorizations","createdBy","createdDateTime","id","location","managedResourceGroupId","name","parameters","provisioningState","sku","storageAccountIdentity","tags","type","uiDefinitionUri","updatedBy","workspaceId","workspaceUrl"})
+    @OutputCustomType.Constructor
     private GetWorkspaceResult(
-        @Nullable List<WorkspaceProviderAuthorizationResponse> authorizations,
-        @Nullable CreatedByResponse createdBy,
-        String createdDateTime,
-        String id,
-        String location,
-        String managedResourceGroupId,
-        String name,
-        @Nullable WorkspaceCustomParametersResponse parameters,
-        String provisioningState,
-        @Nullable SkuResponse sku,
-        @Nullable ManagedIdentityConfigurationResponse storageAccountIdentity,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable String uiDefinitionUri,
-        @Nullable CreatedByResponse updatedBy,
-        String workspaceId,
-        String workspaceUrl) {
+        @OutputCustomType.Parameter("authorizations") @Nullable List<WorkspaceProviderAuthorizationResponse> authorizations,
+        @OutputCustomType.Parameter("createdBy") @Nullable CreatedByResponse createdBy,
+        @OutputCustomType.Parameter("createdDateTime") String createdDateTime,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("managedResourceGroupId") String managedResourceGroupId,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") @Nullable WorkspaceCustomParametersResponse parameters,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @OutputCustomType.Parameter("storageAccountIdentity") @Nullable ManagedIdentityConfigurationResponse storageAccountIdentity,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("uiDefinitionUri") @Nullable String uiDefinitionUri,
+        @OutputCustomType.Parameter("updatedBy") @Nullable CreatedByResponse updatedBy,
+        @OutputCustomType.Parameter("workspaceId") String workspaceId,
+        @OutputCustomType.Parameter("workspaceUrl") String workspaceUrl) {
         this.authorizations = authorizations;
         this.createdBy = createdBy;
         this.createdDateTime = createdDateTime;

@@ -45,15 +45,15 @@ public final class MigrationValidationDatabaseSummaryResultResponse {
      */
     private final String targetDatabaseName;
 
-    @OutputCustomType.Constructor({"endedOn","id","migrationId","sourceDatabaseName","startedOn","status","targetDatabaseName"})
+    @OutputCustomType.Constructor
     private MigrationValidationDatabaseSummaryResultResponse(
-        String endedOn,
-        String id,
-        String migrationId,
-        String sourceDatabaseName,
-        String startedOn,
-        String status,
-        String targetDatabaseName) {
+        @OutputCustomType.Parameter("endedOn") String endedOn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("migrationId") String migrationId,
+        @OutputCustomType.Parameter("sourceDatabaseName") String sourceDatabaseName,
+        @OutputCustomType.Parameter("startedOn") String startedOn,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("targetDatabaseName") String targetDatabaseName) {
         this.endedOn = endedOn;
         this.id = id;
         this.migrationId = migrationId;

@@ -39,13 +39,13 @@ public final class ForwardingConfigurationResponse {
      */
     private final String odataType;
 
-    @OutputCustomType.Constructor({"backendPool","cacheConfiguration","customForwardingPath","forwardingProtocol","odataType"})
+    @OutputCustomType.Constructor
     private ForwardingConfigurationResponse(
-        @Nullable SubResourceResponse backendPool,
-        @Nullable CacheConfigurationResponse cacheConfiguration,
-        @Nullable String customForwardingPath,
-        @Nullable String forwardingProtocol,
-        String odataType) {
+        @OutputCustomType.Parameter("backendPool") @Nullable SubResourceResponse backendPool,
+        @OutputCustomType.Parameter("cacheConfiguration") @Nullable CacheConfigurationResponse cacheConfiguration,
+        @OutputCustomType.Parameter("customForwardingPath") @Nullable String customForwardingPath,
+        @OutputCustomType.Parameter("forwardingProtocol") @Nullable String forwardingProtocol,
+        @OutputCustomType.Parameter("odataType") String odataType) {
         this.backendPool = backendPool;
         this.cacheConfiguration = cacheConfiguration;
         this.customForwardingPath = customForwardingPath;

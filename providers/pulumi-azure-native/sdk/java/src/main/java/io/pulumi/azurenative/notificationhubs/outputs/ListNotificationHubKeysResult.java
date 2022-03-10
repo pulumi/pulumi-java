@@ -37,13 +37,13 @@ public final class ListNotificationHubKeysResult {
      */
     private final @Nullable String secondaryKey;
 
-    @OutputCustomType.Constructor({"keyName","primaryConnectionString","primaryKey","secondaryConnectionString","secondaryKey"})
+    @OutputCustomType.Constructor
     private ListNotificationHubKeysResult(
-        @Nullable String keyName,
-        @Nullable String primaryConnectionString,
-        @Nullable String primaryKey,
-        @Nullable String secondaryConnectionString,
-        @Nullable String secondaryKey) {
+        @OutputCustomType.Parameter("keyName") @Nullable String keyName,
+        @OutputCustomType.Parameter("primaryConnectionString") @Nullable String primaryConnectionString,
+        @OutputCustomType.Parameter("primaryKey") @Nullable String primaryKey,
+        @OutputCustomType.Parameter("secondaryConnectionString") @Nullable String secondaryConnectionString,
+        @OutputCustomType.Parameter("secondaryKey") @Nullable String secondaryKey) {
         this.keyName = keyName;
         this.primaryConnectionString = primaryConnectionString;
         this.primaryKey = primaryKey;

@@ -74,20 +74,20 @@ public final class RestSourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"additionalColumns","additionalHeaders","disableMetricsCollection","httpRequestTimeout","maxConcurrentConnections","paginationRules","requestBody","requestInterval","requestMethod","sourceRetryCount","sourceRetryWait","type"})
+    @OutputCustomType.Constructor
     private RestSourceResponse(
-        @Nullable Object additionalColumns,
-        @Nullable Object additionalHeaders,
-        @Nullable Object disableMetricsCollection,
-        @Nullable Object httpRequestTimeout,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable Object paginationRules,
-        @Nullable Object requestBody,
-        @Nullable Object requestInterval,
-        @Nullable Object requestMethod,
-        @Nullable Object sourceRetryCount,
-        @Nullable Object sourceRetryWait,
-        String type) {
+        @OutputCustomType.Parameter("additionalColumns") @Nullable Object additionalColumns,
+        @OutputCustomType.Parameter("additionalHeaders") @Nullable Object additionalHeaders,
+        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @OutputCustomType.Parameter("httpRequestTimeout") @Nullable Object httpRequestTimeout,
+        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @OutputCustomType.Parameter("paginationRules") @Nullable Object paginationRules,
+        @OutputCustomType.Parameter("requestBody") @Nullable Object requestBody,
+        @OutputCustomType.Parameter("requestInterval") @Nullable Object requestInterval,
+        @OutputCustomType.Parameter("requestMethod") @Nullable Object requestMethod,
+        @OutputCustomType.Parameter("sourceRetryCount") @Nullable Object sourceRetryCount,
+        @OutputCustomType.Parameter("sourceRetryWait") @Nullable Object sourceRetryWait,
+        @OutputCustomType.Parameter("type") String type) {
         this.additionalColumns = additionalColumns;
         this.additionalHeaders = additionalHeaders;
         this.disableMetricsCollection = disableMetricsCollection;

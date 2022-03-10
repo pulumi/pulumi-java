@@ -30,11 +30,11 @@ public final class AzureBlobStorageApplicationLogsConfigResponse {
      */
     private final @Nullable String sasUrl;
 
-    @OutputCustomType.Constructor({"level","retentionInDays","sasUrl"})
+    @OutputCustomType.Constructor
     private AzureBlobStorageApplicationLogsConfigResponse(
-        @Nullable String level,
-        @Nullable Integer retentionInDays,
-        @Nullable String sasUrl) {
+        @OutputCustomType.Parameter("level") @Nullable String level,
+        @OutputCustomType.Parameter("retentionInDays") @Nullable Integer retentionInDays,
+        @OutputCustomType.Parameter("sasUrl") @Nullable String sasUrl) {
         this.level = level;
         this.retentionInDays = retentionInDays;
         this.sasUrl = sasUrl;

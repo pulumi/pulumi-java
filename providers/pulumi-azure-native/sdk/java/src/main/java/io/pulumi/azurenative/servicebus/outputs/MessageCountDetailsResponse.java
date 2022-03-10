@@ -35,13 +35,13 @@ public final class MessageCountDetailsResponse {
      */
     private final Double transferMessageCount;
 
-    @OutputCustomType.Constructor({"activeMessageCount","deadLetterMessageCount","scheduledMessageCount","transferDeadLetterMessageCount","transferMessageCount"})
+    @OutputCustomType.Constructor
     private MessageCountDetailsResponse(
-        Double activeMessageCount,
-        Double deadLetterMessageCount,
-        Double scheduledMessageCount,
-        Double transferDeadLetterMessageCount,
-        Double transferMessageCount) {
+        @OutputCustomType.Parameter("activeMessageCount") Double activeMessageCount,
+        @OutputCustomType.Parameter("deadLetterMessageCount") Double deadLetterMessageCount,
+        @OutputCustomType.Parameter("scheduledMessageCount") Double scheduledMessageCount,
+        @OutputCustomType.Parameter("transferDeadLetterMessageCount") Double transferDeadLetterMessageCount,
+        @OutputCustomType.Parameter("transferMessageCount") Double transferMessageCount) {
         this.activeMessageCount = activeMessageCount;
         this.deadLetterMessageCount = deadLetterMessageCount;
         this.scheduledMessageCount = scheduledMessageCount;

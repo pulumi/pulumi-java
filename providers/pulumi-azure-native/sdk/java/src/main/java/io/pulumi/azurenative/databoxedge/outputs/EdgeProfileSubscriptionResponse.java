@@ -32,18 +32,18 @@ public final class EdgeProfileSubscriptionResponse {
     private final @Nullable String subscriptionId;
     private final @Nullable String tenantId;
 
-    @OutputCustomType.Constructor({"id","locationPlacementId","quotaId","registeredFeatures","registrationDate","registrationId","serializedDetails","state","subscriptionId","tenantId"})
+    @OutputCustomType.Constructor
     private EdgeProfileSubscriptionResponse(
-        @Nullable String id,
-        @Nullable String locationPlacementId,
-        @Nullable String quotaId,
-        @Nullable List<SubscriptionRegisteredFeaturesResponse> registeredFeatures,
-        @Nullable String registrationDate,
-        @Nullable String registrationId,
-        @Nullable String serializedDetails,
-        @Nullable String state,
-        @Nullable String subscriptionId,
-        @Nullable String tenantId) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("locationPlacementId") @Nullable String locationPlacementId,
+        @OutputCustomType.Parameter("quotaId") @Nullable String quotaId,
+        @OutputCustomType.Parameter("registeredFeatures") @Nullable List<SubscriptionRegisteredFeaturesResponse> registeredFeatures,
+        @OutputCustomType.Parameter("registrationDate") @Nullable String registrationDate,
+        @OutputCustomType.Parameter("registrationId") @Nullable String registrationId,
+        @OutputCustomType.Parameter("serializedDetails") @Nullable String serializedDetails,
+        @OutputCustomType.Parameter("state") @Nullable String state,
+        @OutputCustomType.Parameter("subscriptionId") @Nullable String subscriptionId,
+        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId) {
         this.id = id;
         this.locationPlacementId = locationPlacementId;
         this.quotaId = quotaId;

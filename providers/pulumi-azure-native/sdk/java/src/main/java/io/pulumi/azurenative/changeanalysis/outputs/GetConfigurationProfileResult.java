@@ -50,15 +50,15 @@ public final class GetConfigurationProfileResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","identity","location","name","properties","systemData","type"})
+    @OutputCustomType.Constructor
     private GetConfigurationProfileResult(
-        String id,
-        @Nullable ResourceIdentityResponse identity,
-        @Nullable String location,
-        String name,
-        ConfigurationProfileResourcePropertiesResponse properties,
-        @Nullable SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable ResourceIdentityResponse identity,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") ConfigurationProfileResourcePropertiesResponse properties,
+        @OutputCustomType.Parameter("systemData") @Nullable SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.identity = identity;
         this.location = location;

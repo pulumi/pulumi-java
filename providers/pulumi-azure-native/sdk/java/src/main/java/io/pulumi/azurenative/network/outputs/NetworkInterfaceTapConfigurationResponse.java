@@ -43,14 +43,14 @@ public final class NetworkInterfaceTapConfigurationResponse {
      */
     private final @Nullable VirtualNetworkTapResponse virtualNetworkTap;
 
-    @OutputCustomType.Constructor({"etag","id","name","provisioningState","type","virtualNetworkTap"})
+    @OutputCustomType.Constructor
     private NetworkInterfaceTapConfigurationResponse(
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        String provisioningState,
-        String type,
-        @Nullable VirtualNetworkTapResponse virtualNetworkTap) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("virtualNetworkTap") @Nullable VirtualNetworkTapResponse virtualNetworkTap) {
         this.etag = etag;
         this.id = id;
         this.name = name;

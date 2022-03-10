@@ -37,13 +37,13 @@ public final class ReplicationObjectResponse {
      */
     private final String replicationSchedule;
 
-    @OutputCustomType.Constructor({"endpointType","remoteVolumeRegion","remoteVolumeResourceId","replicationId","replicationSchedule"})
+    @OutputCustomType.Constructor
     private ReplicationObjectResponse(
-        @Nullable String endpointType,
-        @Nullable String remoteVolumeRegion,
-        String remoteVolumeResourceId,
-        @Nullable String replicationId,
-        String replicationSchedule) {
+        @OutputCustomType.Parameter("endpointType") @Nullable String endpointType,
+        @OutputCustomType.Parameter("remoteVolumeRegion") @Nullable String remoteVolumeRegion,
+        @OutputCustomType.Parameter("remoteVolumeResourceId") String remoteVolumeResourceId,
+        @OutputCustomType.Parameter("replicationId") @Nullable String replicationId,
+        @OutputCustomType.Parameter("replicationSchedule") String replicationSchedule) {
         this.endpointType = endpointType;
         this.remoteVolumeRegion = remoteVolumeRegion;
         this.remoteVolumeResourceId = remoteVolumeResourceId;

@@ -23,10 +23,10 @@ public final class RestResponseResponseRegex {
      */
     private final @Nullable List<String> matches;
 
-    @OutputCustomType.Constructor({"matchQuantifier","matches"})
+    @OutputCustomType.Constructor
     private RestResponseResponseRegex(
-        @Nullable String matchQuantifier,
-        @Nullable List<String> matches) {
+        @OutputCustomType.Parameter("matchQuantifier") @Nullable String matchQuantifier,
+        @OutputCustomType.Parameter("matches") @Nullable List<String> matches) {
         this.matchQuantifier = matchQuantifier;
         this.matches = matches;
     }

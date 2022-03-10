@@ -23,10 +23,10 @@ public final class ManagedRuleGroupOverrideResponse {
      */
     private final @Nullable List<ManagedRuleOverrideResponse> rules;
 
-    @OutputCustomType.Constructor({"ruleGroupName","rules"})
+    @OutputCustomType.Constructor
     private ManagedRuleGroupOverrideResponse(
-        String ruleGroupName,
-        @Nullable List<ManagedRuleOverrideResponse> rules) {
+        @OutputCustomType.Parameter("ruleGroupName") String ruleGroupName,
+        @OutputCustomType.Parameter("rules") @Nullable List<ManagedRuleOverrideResponse> rules) {
         this.ruleGroupName = ruleGroupName;
         this.rules = rules;
     }

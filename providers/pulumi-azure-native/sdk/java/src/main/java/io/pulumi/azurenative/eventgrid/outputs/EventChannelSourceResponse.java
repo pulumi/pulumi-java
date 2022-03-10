@@ -18,8 +18,8 @@ public final class EventChannelSourceResponse {
      */
     private final @Nullable String source;
 
-    @OutputCustomType.Constructor({"source"})
-    private EventChannelSourceResponse(@Nullable String source) {
+    @OutputCustomType.Constructor
+    private EventChannelSourceResponse(@OutputCustomType.Parameter("source") @Nullable String source) {
         this.source = source;
     }
 

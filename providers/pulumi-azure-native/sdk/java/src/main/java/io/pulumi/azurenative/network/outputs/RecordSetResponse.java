@@ -44,14 +44,14 @@ public final class RecordSetResponse {
      */
     private final @Nullable Integer ttl;
 
-    @OutputCustomType.Constructor({"fqdn","ipAddresses","provisioningState","recordSetName","recordType","ttl"})
+    @OutputCustomType.Constructor
     private RecordSetResponse(
-        @Nullable String fqdn,
-        @Nullable List<String> ipAddresses,
-        String provisioningState,
-        @Nullable String recordSetName,
-        @Nullable String recordType,
-        @Nullable Integer ttl) {
+        @OutputCustomType.Parameter("fqdn") @Nullable String fqdn,
+        @OutputCustomType.Parameter("ipAddresses") @Nullable List<String> ipAddresses,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("recordSetName") @Nullable String recordSetName,
+        @OutputCustomType.Parameter("recordType") @Nullable String recordType,
+        @OutputCustomType.Parameter("ttl") @Nullable Integer ttl) {
         this.fqdn = fqdn;
         this.ipAddresses = ipAddresses;
         this.provisioningState = provisioningState;

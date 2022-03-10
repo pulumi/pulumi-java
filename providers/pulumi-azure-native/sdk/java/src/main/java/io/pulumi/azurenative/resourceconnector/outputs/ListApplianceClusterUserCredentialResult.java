@@ -22,10 +22,10 @@ public final class ListApplianceClusterUserCredentialResult {
      */
     private final List<ApplianceCredentialKubeconfigResponse> kubeconfigs;
 
-    @OutputCustomType.Constructor({"hybridConnectionConfig","kubeconfigs"})
+    @OutputCustomType.Constructor
     private ListApplianceClusterUserCredentialResult(
-        HybridConnectionConfigResponse hybridConnectionConfig,
-        List<ApplianceCredentialKubeconfigResponse> kubeconfigs) {
+        @OutputCustomType.Parameter("hybridConnectionConfig") HybridConnectionConfigResponse hybridConnectionConfig,
+        @OutputCustomType.Parameter("kubeconfigs") List<ApplianceCredentialKubeconfigResponse> kubeconfigs) {
         this.hybridConnectionConfig = hybridConnectionConfig;
         this.kubeconfigs = kubeconfigs;
     }

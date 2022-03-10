@@ -42,14 +42,14 @@ public final class IngressResponse {
      */
     private final @Nullable String transport;
 
-    @OutputCustomType.Constructor({"allowInsecure","external","fqdn","targetPort","traffic","transport"})
+    @OutputCustomType.Constructor
     private IngressResponse(
-        @Nullable Boolean allowInsecure,
-        @Nullable Boolean external,
-        String fqdn,
-        @Nullable Integer targetPort,
-        @Nullable List<TrafficWeightResponse> traffic,
-        @Nullable String transport) {
+        @OutputCustomType.Parameter("allowInsecure") @Nullable Boolean allowInsecure,
+        @OutputCustomType.Parameter("external") @Nullable Boolean external,
+        @OutputCustomType.Parameter("fqdn") String fqdn,
+        @OutputCustomType.Parameter("targetPort") @Nullable Integer targetPort,
+        @OutputCustomType.Parameter("traffic") @Nullable List<TrafficWeightResponse> traffic,
+        @OutputCustomType.Parameter("transport") @Nullable String transport) {
         this.allowInsecure = allowInsecure;
         this.external = external;
         this.fqdn = fqdn;

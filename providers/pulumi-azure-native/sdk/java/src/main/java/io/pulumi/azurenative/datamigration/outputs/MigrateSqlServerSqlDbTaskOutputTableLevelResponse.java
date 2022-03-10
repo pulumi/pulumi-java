@@ -67,19 +67,19 @@ public final class MigrateSqlServerSqlDbTaskOutputTableLevelResponse {
      */
     private final String statusMessage;
 
-    @OutputCustomType.Constructor({"endedOn","errorPrefix","id","itemsCompletedCount","itemsCount","objectName","resultPrefix","resultType","startedOn","state","statusMessage"})
+    @OutputCustomType.Constructor
     private MigrateSqlServerSqlDbTaskOutputTableLevelResponse(
-        String endedOn,
-        String errorPrefix,
-        String id,
-        Double itemsCompletedCount,
-        Double itemsCount,
-        String objectName,
-        String resultPrefix,
-        String resultType,
-        String startedOn,
-        String state,
-        String statusMessage) {
+        @OutputCustomType.Parameter("endedOn") String endedOn,
+        @OutputCustomType.Parameter("errorPrefix") String errorPrefix,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("itemsCompletedCount") Double itemsCompletedCount,
+        @OutputCustomType.Parameter("itemsCount") Double itemsCount,
+        @OutputCustomType.Parameter("objectName") String objectName,
+        @OutputCustomType.Parameter("resultPrefix") String resultPrefix,
+        @OutputCustomType.Parameter("resultType") String resultType,
+        @OutputCustomType.Parameter("startedOn") String startedOn,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("statusMessage") String statusMessage) {
         this.endedOn = endedOn;
         this.errorPrefix = errorPrefix;
         this.id = id;

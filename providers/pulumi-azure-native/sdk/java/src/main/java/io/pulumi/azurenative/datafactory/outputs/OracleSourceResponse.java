@@ -65,18 +65,18 @@ public final class OracleSourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"additionalColumns","disableMetricsCollection","maxConcurrentConnections","oracleReaderQuery","partitionOption","partitionSettings","queryTimeout","sourceRetryCount","sourceRetryWait","type"})
+    @OutputCustomType.Constructor
     private OracleSourceResponse(
-        @Nullable Object additionalColumns,
-        @Nullable Object disableMetricsCollection,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable Object oracleReaderQuery,
-        @Nullable Object partitionOption,
-        @Nullable OraclePartitionSettingsResponse partitionSettings,
-        @Nullable Object queryTimeout,
-        @Nullable Object sourceRetryCount,
-        @Nullable Object sourceRetryWait,
-        String type) {
+        @OutputCustomType.Parameter("additionalColumns") @Nullable Object additionalColumns,
+        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @OutputCustomType.Parameter("oracleReaderQuery") @Nullable Object oracleReaderQuery,
+        @OutputCustomType.Parameter("partitionOption") @Nullable Object partitionOption,
+        @OutputCustomType.Parameter("partitionSettings") @Nullable OraclePartitionSettingsResponse partitionSettings,
+        @OutputCustomType.Parameter("queryTimeout") @Nullable Object queryTimeout,
+        @OutputCustomType.Parameter("sourceRetryCount") @Nullable Object sourceRetryCount,
+        @OutputCustomType.Parameter("sourceRetryWait") @Nullable Object sourceRetryWait,
+        @OutputCustomType.Parameter("type") String type) {
         this.additionalColumns = additionalColumns;
         this.disableMetricsCollection = disableMetricsCollection;
         this.maxConcurrentConnections = maxConcurrentConnections;

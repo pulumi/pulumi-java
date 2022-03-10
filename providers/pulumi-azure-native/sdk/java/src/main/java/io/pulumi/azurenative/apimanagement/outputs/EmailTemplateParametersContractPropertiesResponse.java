@@ -27,11 +27,11 @@ public final class EmailTemplateParametersContractPropertiesResponse {
      */
     private final @Nullable String title;
 
-    @OutputCustomType.Constructor({"description","name","title"})
+    @OutputCustomType.Constructor
     private EmailTemplateParametersContractPropertiesResponse(
-        @Nullable String description,
-        @Nullable String name,
-        @Nullable String title) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("title") @Nullable String title) {
         this.description = description;
         this.name = name;
         this.title = title;

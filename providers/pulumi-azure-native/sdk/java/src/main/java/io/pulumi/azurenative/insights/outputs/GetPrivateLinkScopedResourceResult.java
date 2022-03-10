@@ -37,13 +37,13 @@ public final class GetPrivateLinkScopedResourceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","linkedResourceId","name","provisioningState","type"})
+    @OutputCustomType.Constructor
     private GetPrivateLinkScopedResourceResult(
-        String id,
-        @Nullable String linkedResourceId,
-        String name,
-        String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("linkedResourceId") @Nullable String linkedResourceId,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.linkedResourceId = linkedResourceId;
         this.name = name;

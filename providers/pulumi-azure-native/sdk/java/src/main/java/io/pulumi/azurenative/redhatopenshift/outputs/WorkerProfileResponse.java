@@ -38,13 +38,13 @@ public final class WorkerProfileResponse {
      */
     private final @Nullable String vmSize;
 
-    @OutputCustomType.Constructor({"count","diskSizeGB","name","subnetId","vmSize"})
+    @OutputCustomType.Constructor
     private WorkerProfileResponse(
-        @Nullable Integer count,
-        @Nullable Integer diskSizeGB,
-        @Nullable String name,
-        @Nullable String subnetId,
-        @Nullable String vmSize) {
+        @OutputCustomType.Parameter("count") @Nullable Integer count,
+        @OutputCustomType.Parameter("diskSizeGB") @Nullable Integer diskSizeGB,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("subnetId") @Nullable String subnetId,
+        @OutputCustomType.Parameter("vmSize") @Nullable String vmSize) {
         this.count = count;
         this.diskSizeGB = diskSizeGB;
         this.name = name;

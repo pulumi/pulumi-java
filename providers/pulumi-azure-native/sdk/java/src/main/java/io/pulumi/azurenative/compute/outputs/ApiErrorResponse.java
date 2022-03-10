@@ -40,13 +40,13 @@ public final class ApiErrorResponse {
      */
     private final @Nullable String target;
 
-    @OutputCustomType.Constructor({"code","details","innererror","message","target"})
+    @OutputCustomType.Constructor
     private ApiErrorResponse(
-        @Nullable String code,
-        @Nullable List<ApiErrorBaseResponse> details,
-        @Nullable InnerErrorResponse innererror,
-        @Nullable String message,
-        @Nullable String target) {
+        @OutputCustomType.Parameter("code") @Nullable String code,
+        @OutputCustomType.Parameter("details") @Nullable List<ApiErrorBaseResponse> details,
+        @OutputCustomType.Parameter("innererror") @Nullable InnerErrorResponse innererror,
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("target") @Nullable String target) {
         this.code = code;
         this.details = details;
         this.innererror = innererror;

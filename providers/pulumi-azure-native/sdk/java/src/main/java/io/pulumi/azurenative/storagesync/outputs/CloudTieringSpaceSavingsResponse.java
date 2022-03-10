@@ -42,14 +42,14 @@ public final class CloudTieringSpaceSavingsResponse {
      */
     private final Double volumeSizeBytes;
 
-    @OutputCustomType.Constructor({"cachedSizeBytes","lastUpdatedTimestamp","spaceSavingsBytes","spaceSavingsPercent","totalSizeCloudBytes","volumeSizeBytes"})
+    @OutputCustomType.Constructor
     private CloudTieringSpaceSavingsResponse(
-        Double cachedSizeBytes,
-        String lastUpdatedTimestamp,
-        Double spaceSavingsBytes,
-        Integer spaceSavingsPercent,
-        Double totalSizeCloudBytes,
-        Double volumeSizeBytes) {
+        @OutputCustomType.Parameter("cachedSizeBytes") Double cachedSizeBytes,
+        @OutputCustomType.Parameter("lastUpdatedTimestamp") String lastUpdatedTimestamp,
+        @OutputCustomType.Parameter("spaceSavingsBytes") Double spaceSavingsBytes,
+        @OutputCustomType.Parameter("spaceSavingsPercent") Integer spaceSavingsPercent,
+        @OutputCustomType.Parameter("totalSizeCloudBytes") Double totalSizeCloudBytes,
+        @OutputCustomType.Parameter("volumeSizeBytes") Double volumeSizeBytes) {
         this.cachedSizeBytes = cachedSizeBytes;
         this.lastUpdatedTimestamp = lastUpdatedTimestamp;
         this.spaceSavingsBytes = spaceSavingsBytes;

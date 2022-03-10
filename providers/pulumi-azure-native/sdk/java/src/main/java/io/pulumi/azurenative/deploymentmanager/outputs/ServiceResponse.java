@@ -34,12 +34,12 @@ public final class ServiceResponse {
      */
     private final String targetSubscriptionId;
 
-    @OutputCustomType.Constructor({"name","serviceUnits","targetLocation","targetSubscriptionId"})
+    @OutputCustomType.Constructor
     private ServiceResponse(
-        @Nullable String name,
-        @Nullable List<ServiceUnitResponse> serviceUnits,
-        String targetLocation,
-        String targetSubscriptionId) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("serviceUnits") @Nullable List<ServiceUnitResponse> serviceUnits,
+        @OutputCustomType.Parameter("targetLocation") String targetLocation,
+        @OutputCustomType.Parameter("targetSubscriptionId") String targetSubscriptionId) {
         this.name = name;
         this.serviceUnits = serviceUnits;
         this.targetLocation = targetLocation;

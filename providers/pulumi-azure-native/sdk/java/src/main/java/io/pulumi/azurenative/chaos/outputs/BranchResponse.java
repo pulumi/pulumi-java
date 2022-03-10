@@ -25,10 +25,10 @@ public final class BranchResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"actions","name"})
+    @OutputCustomType.Constructor
     private BranchResponse(
-        List<Object> actions,
-        String name) {
+        @OutputCustomType.Parameter("actions") List<Object> actions,
+        @OutputCustomType.Parameter("name") String name) {
         this.actions = actions;
         this.name = name;
     }

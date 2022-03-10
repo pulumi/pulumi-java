@@ -34,12 +34,12 @@ public final class SourceTriggerResponse {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor({"name","sourceRepository","sourceTriggerEvents","status"})
+    @OutputCustomType.Constructor
     private SourceTriggerResponse(
-        String name,
-        SourcePropertiesResponse sourceRepository,
-        List<String> sourceTriggerEvents,
-        @Nullable String status) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("sourceRepository") SourcePropertiesResponse sourceRepository,
+        @OutputCustomType.Parameter("sourceTriggerEvents") List<String> sourceTriggerEvents,
+        @OutputCustomType.Parameter("status") @Nullable String status) {
         this.name = name;
         this.sourceRepository = sourceRepository;
         this.sourceTriggerEvents = sourceTriggerEvents;

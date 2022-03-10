@@ -36,13 +36,13 @@ public final class RsaTokenKeyResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"alg","e","kid","n","type"})
+    @OutputCustomType.Constructor
     private RsaTokenKeyResponse(
-        String alg,
-        String e,
-        String kid,
-        String n,
-        String type) {
+        @OutputCustomType.Parameter("alg") String alg,
+        @OutputCustomType.Parameter("e") String e,
+        @OutputCustomType.Parameter("kid") String kid,
+        @OutputCustomType.Parameter("n") String n,
+        @OutputCustomType.Parameter("type") String type) {
         this.alg = alg;
         this.e = e;
         this.kid = kid;

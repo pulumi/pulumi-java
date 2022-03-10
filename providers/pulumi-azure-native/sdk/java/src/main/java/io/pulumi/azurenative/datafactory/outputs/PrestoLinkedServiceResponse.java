@@ -116,27 +116,27 @@ public final class PrestoLinkedServiceResponse {
      */
     private final @Nullable Object username;
 
-    @OutputCustomType.Constructor({"allowHostNameCNMismatch","allowSelfSignedServerCert","annotations","authenticationType","catalog","connectVia","description","enableSsl","encryptedCredential","host","parameters","password","port","serverVersion","timeZoneID","trustedCertPath","type","useSystemTrustStore","username"})
+    @OutputCustomType.Constructor
     private PrestoLinkedServiceResponse(
-        @Nullable Object allowHostNameCNMismatch,
-        @Nullable Object allowSelfSignedServerCert,
-        @Nullable List<Object> annotations,
-        String authenticationType,
-        Object catalog,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable String description,
-        @Nullable Object enableSsl,
-        @Nullable Object encryptedCredential,
-        Object host,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        @Nullable Object port,
-        Object serverVersion,
-        @Nullable Object timeZoneID,
-        @Nullable Object trustedCertPath,
-        String type,
-        @Nullable Object useSystemTrustStore,
-        @Nullable Object username) {
+        @OutputCustomType.Parameter("allowHostNameCNMismatch") @Nullable Object allowHostNameCNMismatch,
+        @OutputCustomType.Parameter("allowSelfSignedServerCert") @Nullable Object allowSelfSignedServerCert,
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("authenticationType") String authenticationType,
+        @OutputCustomType.Parameter("catalog") Object catalog,
+        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("enableSsl") @Nullable Object enableSsl,
+        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @OutputCustomType.Parameter("host") Object host,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("password") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
+        @OutputCustomType.Parameter("port") @Nullable Object port,
+        @OutputCustomType.Parameter("serverVersion") Object serverVersion,
+        @OutputCustomType.Parameter("timeZoneID") @Nullable Object timeZoneID,
+        @OutputCustomType.Parameter("trustedCertPath") @Nullable Object trustedCertPath,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("useSystemTrustStore") @Nullable Object useSystemTrustStore,
+        @OutputCustomType.Parameter("username") @Nullable Object username) {
         this.allowHostNameCNMismatch = allowHostNameCNMismatch;
         this.allowSelfSignedServerCert = allowSelfSignedServerCert;
         this.annotations = annotations;

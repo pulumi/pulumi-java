@@ -68,19 +68,19 @@ public final class ExpressRouteLinkResponse {
      */
     private final String routerName;
 
-    @OutputCustomType.Constructor({"adminState","connectorType","etag","id","interfaceName","macSecConfig","name","patchPanelId","provisioningState","rackId","routerName"})
+    @OutputCustomType.Constructor
     private ExpressRouteLinkResponse(
-        @Nullable String adminState,
-        String connectorType,
-        String etag,
-        @Nullable String id,
-        String interfaceName,
-        @Nullable ExpressRouteLinkMacSecConfigResponse macSecConfig,
-        @Nullable String name,
-        String patchPanelId,
-        String provisioningState,
-        String rackId,
-        String routerName) {
+        @OutputCustomType.Parameter("adminState") @Nullable String adminState,
+        @OutputCustomType.Parameter("connectorType") String connectorType,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("interfaceName") String interfaceName,
+        @OutputCustomType.Parameter("macSecConfig") @Nullable ExpressRouteLinkMacSecConfigResponse macSecConfig,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("patchPanelId") String patchPanelId,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("rackId") String rackId,
+        @OutputCustomType.Parameter("routerName") String routerName) {
         this.adminState = adminState;
         this.connectorType = connectorType;
         this.etag = etag;

@@ -22,10 +22,10 @@ public final class ApiDeploymentParameterMetadataSetResponse {
      */
     private final @Nullable ApiDeploymentParameterMetadataResponse redisCacheConnectionString;
 
-    @OutputCustomType.Constructor({"packageContentLink","redisCacheConnectionString"})
+    @OutputCustomType.Constructor
     private ApiDeploymentParameterMetadataSetResponse(
-        @Nullable ApiDeploymentParameterMetadataResponse packageContentLink,
-        @Nullable ApiDeploymentParameterMetadataResponse redisCacheConnectionString) {
+        @OutputCustomType.Parameter("packageContentLink") @Nullable ApiDeploymentParameterMetadataResponse packageContentLink,
+        @OutputCustomType.Parameter("redisCacheConnectionString") @Nullable ApiDeploymentParameterMetadataResponse redisCacheConnectionString) {
         this.packageContentLink = packageContentLink;
         this.redisCacheConnectionString = redisCacheConnectionString;
     }

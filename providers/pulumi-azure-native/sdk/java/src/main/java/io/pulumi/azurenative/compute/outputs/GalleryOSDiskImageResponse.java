@@ -29,11 +29,11 @@ public final class GalleryOSDiskImageResponse {
      */
     private final @Nullable GalleryArtifactVersionSourceResponse source;
 
-    @OutputCustomType.Constructor({"hostCaching","sizeInGB","source"})
+    @OutputCustomType.Constructor
     private GalleryOSDiskImageResponse(
-        @Nullable String hostCaching,
-        Integer sizeInGB,
-        @Nullable GalleryArtifactVersionSourceResponse source) {
+        @OutputCustomType.Parameter("hostCaching") @Nullable String hostCaching,
+        @OutputCustomType.Parameter("sizeInGB") Integer sizeInGB,
+        @OutputCustomType.Parameter("source") @Nullable GalleryArtifactVersionSourceResponse source) {
         this.hostCaching = hostCaching;
         this.sizeInGB = sizeInGB;
         this.source = source;

@@ -42,14 +42,14 @@ public final class DiagnosticsStorageAccountConfigResponse {
      */
     private final String tableEndpoint;
 
-    @OutputCustomType.Constructor({"blobEndpoint","protectedAccountKeyName","protectedAccountKeyName2","queueEndpoint","storageAccountName","tableEndpoint"})
+    @OutputCustomType.Constructor
     private DiagnosticsStorageAccountConfigResponse(
-        String blobEndpoint,
-        String protectedAccountKeyName,
-        @Nullable String protectedAccountKeyName2,
-        String queueEndpoint,
-        String storageAccountName,
-        String tableEndpoint) {
+        @OutputCustomType.Parameter("blobEndpoint") String blobEndpoint,
+        @OutputCustomType.Parameter("protectedAccountKeyName") String protectedAccountKeyName,
+        @OutputCustomType.Parameter("protectedAccountKeyName2") @Nullable String protectedAccountKeyName2,
+        @OutputCustomType.Parameter("queueEndpoint") String queueEndpoint,
+        @OutputCustomType.Parameter("storageAccountName") String storageAccountName,
+        @OutputCustomType.Parameter("tableEndpoint") String tableEndpoint) {
         this.blobEndpoint = blobEndpoint;
         this.protectedAccountKeyName = protectedAccountKeyName;
         this.protectedAccountKeyName2 = protectedAccountKeyName2;

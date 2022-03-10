@@ -22,10 +22,10 @@ public final class ClientRegistrationResponse {
      */
     private final @Nullable String clientSecretSettingName;
 
-    @OutputCustomType.Constructor({"clientId","clientSecretSettingName"})
+    @OutputCustomType.Constructor
     private ClientRegistrationResponse(
-        @Nullable String clientId,
-        @Nullable String clientSecretSettingName) {
+        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
+        @OutputCustomType.Parameter("clientSecretSettingName") @Nullable String clientSecretSettingName) {
         this.clientId = clientId;
         this.clientSecretSettingName = clientSecretSettingName;
     }

@@ -22,10 +22,10 @@ public final class PartnerRegionInfoResponse {
      */
     private final String replicationRole;
 
-    @OutputCustomType.Constructor({"location","replicationRole"})
+    @OutputCustomType.Constructor
     private PartnerRegionInfoResponse(
-        @Nullable String location,
-        String replicationRole) {
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("replicationRole") String replicationRole) {
         this.location = location;
         this.replicationRole = replicationRole;
     }

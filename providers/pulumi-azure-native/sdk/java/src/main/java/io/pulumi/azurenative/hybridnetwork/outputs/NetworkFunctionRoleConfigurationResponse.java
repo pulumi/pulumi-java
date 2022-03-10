@@ -63,17 +63,17 @@ public final class NetworkFunctionRoleConfigurationResponse {
      */
     private final @Nullable String virtualMachineSize;
 
-    @OutputCustomType.Constructor({"customProfile","networkInterfaces","osProfile","roleName","roleType","storageProfile","userDataParameters","userDataTemplate","virtualMachineSize"})
+    @OutputCustomType.Constructor
     private NetworkFunctionRoleConfigurationResponse(
-        @Nullable CustomProfileResponse customProfile,
-        @Nullable List<NetworkInterfaceResponse> networkInterfaces,
-        @Nullable OsProfileResponse osProfile,
-        @Nullable String roleName,
-        @Nullable String roleType,
-        @Nullable StorageProfileResponse storageProfile,
-        @Nullable Object userDataParameters,
-        @Nullable Object userDataTemplate,
-        @Nullable String virtualMachineSize) {
+        @OutputCustomType.Parameter("customProfile") @Nullable CustomProfileResponse customProfile,
+        @OutputCustomType.Parameter("networkInterfaces") @Nullable List<NetworkInterfaceResponse> networkInterfaces,
+        @OutputCustomType.Parameter("osProfile") @Nullable OsProfileResponse osProfile,
+        @OutputCustomType.Parameter("roleName") @Nullable String roleName,
+        @OutputCustomType.Parameter("roleType") @Nullable String roleType,
+        @OutputCustomType.Parameter("storageProfile") @Nullable StorageProfileResponse storageProfile,
+        @OutputCustomType.Parameter("userDataParameters") @Nullable Object userDataParameters,
+        @OutputCustomType.Parameter("userDataTemplate") @Nullable Object userDataTemplate,
+        @OutputCustomType.Parameter("virtualMachineSize") @Nullable String virtualMachineSize) {
         this.customProfile = customProfile;
         this.networkInterfaces = networkInterfaces;
         this.osProfile = osProfile;

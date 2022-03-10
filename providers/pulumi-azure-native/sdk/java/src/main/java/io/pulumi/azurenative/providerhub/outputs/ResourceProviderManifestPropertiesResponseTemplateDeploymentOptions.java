@@ -16,10 +16,10 @@ public final class ResourceProviderManifestPropertiesResponseTemplateDeploymentO
     private final @Nullable List<String> preflightOptions;
     private final @Nullable Boolean preflightSupported;
 
-    @OutputCustomType.Constructor({"preflightOptions","preflightSupported"})
+    @OutputCustomType.Constructor
     private ResourceProviderManifestPropertiesResponseTemplateDeploymentOptions(
-        @Nullable List<String> preflightOptions,
-        @Nullable Boolean preflightSupported) {
+        @OutputCustomType.Parameter("preflightOptions") @Nullable List<String> preflightOptions,
+        @OutputCustomType.Parameter("preflightSupported") @Nullable Boolean preflightSupported) {
         this.preflightOptions = preflightOptions;
         this.preflightSupported = preflightSupported;
     }

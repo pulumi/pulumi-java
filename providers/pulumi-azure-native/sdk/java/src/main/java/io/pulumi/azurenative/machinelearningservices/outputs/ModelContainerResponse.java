@@ -28,11 +28,11 @@ public final class ModelContainerResponse {
      */
     private final @Nullable Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"description","properties","tags"})
+    @OutputCustomType.Constructor
     private ModelContainerResponse(
-        @Nullable String description,
-        @Nullable Map<String,String> properties,
-        @Nullable Map<String,String> tags) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags) {
         this.description = description;
         this.properties = properties;
         this.tags = tags;

@@ -136,30 +136,30 @@ public final class ClusterGetPropertiesResponse {
      */
     private final @Nullable String tier;
 
-    @OutputCustomType.Constructor({"clusterDefinition","clusterHdpVersion","clusterId","clusterState","clusterVersion","computeIsolationProperties","computeProfile","connectivityEndpoints","createdDate","diskEncryptionProperties","encryptionInTransitProperties","errors","excludedServicesConfig","kafkaRestProperties","minSupportedTlsVersion","networkProperties","osType","provisioningState","quotaInfo","securityProfile","storageProfile","tier"})
+    @OutputCustomType.Constructor
     private ClusterGetPropertiesResponse(
-        ClusterDefinitionResponse clusterDefinition,
-        @Nullable String clusterHdpVersion,
-        @Nullable String clusterId,
-        @Nullable String clusterState,
-        @Nullable String clusterVersion,
-        @Nullable ComputeIsolationPropertiesResponse computeIsolationProperties,
-        @Nullable ComputeProfileResponse computeProfile,
-        @Nullable List<ConnectivityEndpointResponse> connectivityEndpoints,
-        @Nullable String createdDate,
-        @Nullable DiskEncryptionPropertiesResponse diskEncryptionProperties,
-        @Nullable EncryptionInTransitPropertiesResponse encryptionInTransitProperties,
-        @Nullable List<ErrorsResponse> errors,
-        @Nullable ExcludedServicesConfigResponse excludedServicesConfig,
-        @Nullable KafkaRestPropertiesResponse kafkaRestProperties,
-        @Nullable String minSupportedTlsVersion,
-        @Nullable NetworkPropertiesResponse networkProperties,
-        @Nullable String osType,
-        @Nullable String provisioningState,
-        @Nullable QuotaInfoResponse quotaInfo,
-        @Nullable SecurityProfileResponse securityProfile,
-        @Nullable StorageProfileResponse storageProfile,
-        @Nullable String tier) {
+        @OutputCustomType.Parameter("clusterDefinition") ClusterDefinitionResponse clusterDefinition,
+        @OutputCustomType.Parameter("clusterHdpVersion") @Nullable String clusterHdpVersion,
+        @OutputCustomType.Parameter("clusterId") @Nullable String clusterId,
+        @OutputCustomType.Parameter("clusterState") @Nullable String clusterState,
+        @OutputCustomType.Parameter("clusterVersion") @Nullable String clusterVersion,
+        @OutputCustomType.Parameter("computeIsolationProperties") @Nullable ComputeIsolationPropertiesResponse computeIsolationProperties,
+        @OutputCustomType.Parameter("computeProfile") @Nullable ComputeProfileResponse computeProfile,
+        @OutputCustomType.Parameter("connectivityEndpoints") @Nullable List<ConnectivityEndpointResponse> connectivityEndpoints,
+        @OutputCustomType.Parameter("createdDate") @Nullable String createdDate,
+        @OutputCustomType.Parameter("diskEncryptionProperties") @Nullable DiskEncryptionPropertiesResponse diskEncryptionProperties,
+        @OutputCustomType.Parameter("encryptionInTransitProperties") @Nullable EncryptionInTransitPropertiesResponse encryptionInTransitProperties,
+        @OutputCustomType.Parameter("errors") @Nullable List<ErrorsResponse> errors,
+        @OutputCustomType.Parameter("excludedServicesConfig") @Nullable ExcludedServicesConfigResponse excludedServicesConfig,
+        @OutputCustomType.Parameter("kafkaRestProperties") @Nullable KafkaRestPropertiesResponse kafkaRestProperties,
+        @OutputCustomType.Parameter("minSupportedTlsVersion") @Nullable String minSupportedTlsVersion,
+        @OutputCustomType.Parameter("networkProperties") @Nullable NetworkPropertiesResponse networkProperties,
+        @OutputCustomType.Parameter("osType") @Nullable String osType,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("quotaInfo") @Nullable QuotaInfoResponse quotaInfo,
+        @OutputCustomType.Parameter("securityProfile") @Nullable SecurityProfileResponse securityProfile,
+        @OutputCustomType.Parameter("storageProfile") @Nullable StorageProfileResponse storageProfile,
+        @OutputCustomType.Parameter("tier") @Nullable String tier) {
         this.clusterDefinition = clusterDefinition;
         this.clusterHdpVersion = clusterHdpVersion;
         this.clusterId = clusterId;

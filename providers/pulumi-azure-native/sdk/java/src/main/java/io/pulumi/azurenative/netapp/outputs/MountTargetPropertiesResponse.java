@@ -32,12 +32,12 @@ public final class MountTargetPropertiesResponse {
      */
     private final @Nullable String smbServerFqdn;
 
-    @OutputCustomType.Constructor({"fileSystemId","ipAddress","mountTargetId","smbServerFqdn"})
+    @OutputCustomType.Constructor
     private MountTargetPropertiesResponse(
-        String fileSystemId,
-        String ipAddress,
-        String mountTargetId,
-        @Nullable String smbServerFqdn) {
+        @OutputCustomType.Parameter("fileSystemId") String fileSystemId,
+        @OutputCustomType.Parameter("ipAddress") String ipAddress,
+        @OutputCustomType.Parameter("mountTargetId") String mountTargetId,
+        @OutputCustomType.Parameter("smbServerFqdn") @Nullable String smbServerFqdn) {
         this.fileSystemId = fileSystemId;
         this.ipAddress = ipAddress;
         this.mountTargetId = mountTargetId;

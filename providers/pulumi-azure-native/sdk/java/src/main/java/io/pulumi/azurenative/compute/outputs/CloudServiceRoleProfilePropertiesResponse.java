@@ -23,10 +23,10 @@ public final class CloudServiceRoleProfilePropertiesResponse {
      */
     private final @Nullable CloudServiceRoleSkuResponse sku;
 
-    @OutputCustomType.Constructor({"name","sku"})
+    @OutputCustomType.Constructor
     private CloudServiceRoleProfilePropertiesResponse(
-        @Nullable String name,
-        @Nullable CloudServiceRoleSkuResponse sku) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("sku") @Nullable CloudServiceRoleSkuResponse sku) {
         this.name = name;
         this.sku = sku;
     }

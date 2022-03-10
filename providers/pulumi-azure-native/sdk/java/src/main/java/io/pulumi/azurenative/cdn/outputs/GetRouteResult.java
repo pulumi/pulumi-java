@@ -102,26 +102,26 @@ public final class GetRouteResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"compressionSettings","customDomains","deploymentStatus","enabledState","forwardingProtocol","httpsRedirect","id","linkToDefaultDomain","name","originGroup","originPath","patternsToMatch","provisioningState","queryStringCachingBehavior","ruleSets","supportedProtocols","systemData","type"})
+    @OutputCustomType.Constructor
     private GetRouteResult(
-        @Nullable CompressionSettingsResponse compressionSettings,
-        @Nullable List<ResourceReferenceResponse> customDomains,
-        String deploymentStatus,
-        @Nullable String enabledState,
-        @Nullable String forwardingProtocol,
-        @Nullable String httpsRedirect,
-        String id,
-        @Nullable String linkToDefaultDomain,
-        String name,
-        ResourceReferenceResponse originGroup,
-        @Nullable String originPath,
-        @Nullable List<String> patternsToMatch,
-        String provisioningState,
-        @Nullable String queryStringCachingBehavior,
-        @Nullable List<ResourceReferenceResponse> ruleSets,
-        @Nullable List<String> supportedProtocols,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("compressionSettings") @Nullable CompressionSettingsResponse compressionSettings,
+        @OutputCustomType.Parameter("customDomains") @Nullable List<ResourceReferenceResponse> customDomains,
+        @OutputCustomType.Parameter("deploymentStatus") String deploymentStatus,
+        @OutputCustomType.Parameter("enabledState") @Nullable String enabledState,
+        @OutputCustomType.Parameter("forwardingProtocol") @Nullable String forwardingProtocol,
+        @OutputCustomType.Parameter("httpsRedirect") @Nullable String httpsRedirect,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("linkToDefaultDomain") @Nullable String linkToDefaultDomain,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("originGroup") ResourceReferenceResponse originGroup,
+        @OutputCustomType.Parameter("originPath") @Nullable String originPath,
+        @OutputCustomType.Parameter("patternsToMatch") @Nullable List<String> patternsToMatch,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("queryStringCachingBehavior") @Nullable String queryStringCachingBehavior,
+        @OutputCustomType.Parameter("ruleSets") @Nullable List<ResourceReferenceResponse> ruleSets,
+        @OutputCustomType.Parameter("supportedProtocols") @Nullable List<String> supportedProtocols,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.compressionSettings = compressionSettings;
         this.customDomains = customDomains;
         this.deploymentStatus = deploymentStatus;

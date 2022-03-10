@@ -37,13 +37,13 @@ public final class CorsRuleResponse {
      */
     private final Integer maxAgeInSeconds;
 
-    @OutputCustomType.Constructor({"allowedHeaders","allowedMethods","allowedOrigins","exposedHeaders","maxAgeInSeconds"})
+    @OutputCustomType.Constructor
     private CorsRuleResponse(
-        List<String> allowedHeaders,
-        List<String> allowedMethods,
-        List<String> allowedOrigins,
-        List<String> exposedHeaders,
-        Integer maxAgeInSeconds) {
+        @OutputCustomType.Parameter("allowedHeaders") List<String> allowedHeaders,
+        @OutputCustomType.Parameter("allowedMethods") List<String> allowedMethods,
+        @OutputCustomType.Parameter("allowedOrigins") List<String> allowedOrigins,
+        @OutputCustomType.Parameter("exposedHeaders") List<String> exposedHeaders,
+        @OutputCustomType.Parameter("maxAgeInSeconds") Integer maxAgeInSeconds) {
         this.allowedHeaders = allowedHeaders;
         this.allowedMethods = allowedMethods;
         this.allowedOrigins = allowedOrigins;

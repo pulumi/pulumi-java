@@ -33,12 +33,12 @@ public final class FactoryIdentityResponse {
      */
     private final @Nullable Map<String,Object> userAssignedIdentities;
 
-    @OutputCustomType.Constructor({"principalId","tenantId","type","userAssignedIdentities"})
+    @OutputCustomType.Constructor
     private FactoryIdentityResponse(
-        String principalId,
-        String tenantId,
-        String type,
-        @Nullable Map<String,Object> userAssignedIdentities) {
+        @OutputCustomType.Parameter("principalId") String principalId,
+        @OutputCustomType.Parameter("tenantId") String tenantId,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userAssignedIdentities") @Nullable Map<String,Object> userAssignedIdentities) {
         this.principalId = principalId;
         this.tenantId = tenantId;
         this.type = type;

@@ -22,10 +22,10 @@ public final class NetworkInterfaceResponse {
      */
     private final @Nullable String privateIpAddress;
 
-    @OutputCustomType.Constructor({"id","privateIpAddress"})
+    @OutputCustomType.Constructor
     private NetworkInterfaceResponse(
-        String id,
-        @Nullable String privateIpAddress) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("privateIpAddress") @Nullable String privateIpAddress) {
         this.id = id;
         this.privateIpAddress = privateIpAddress;
     }

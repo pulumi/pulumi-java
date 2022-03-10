@@ -61,17 +61,17 @@ public final class GetPipelineResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"bootstrapConfiguration","id","location","name","pipelineId","pipelineType","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetPipelineResult(
-        BootstrapConfigurationResponse bootstrapConfiguration,
-        String id,
-        @Nullable String location,
-        String name,
-        Integer pipelineId,
-        String pipelineType,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("bootstrapConfiguration") BootstrapConfigurationResponse bootstrapConfiguration,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("pipelineId") Integer pipelineId,
+        @OutputCustomType.Parameter("pipelineType") String pipelineType,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.bootstrapConfiguration = bootstrapConfiguration;
         this.id = id;
         this.location = location;

@@ -26,11 +26,11 @@ public final class GeoReplicationStatsResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"canFailover","lastSyncTime","status"})
+    @OutputCustomType.Constructor
     private GeoReplicationStatsResponse(
-        Boolean canFailover,
-        String lastSyncTime,
-        String status) {
+        @OutputCustomType.Parameter("canFailover") Boolean canFailover,
+        @OutputCustomType.Parameter("lastSyncTime") String lastSyncTime,
+        @OutputCustomType.Parameter("status") String status) {
         this.canFailover = canFailover;
         this.lastSyncTime = lastSyncTime;
         this.status = status;

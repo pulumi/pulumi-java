@@ -17,8 +17,8 @@ public final class CapabilityResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private CapabilityResponse(@Nullable String name) {
+    @OutputCustomType.Constructor
+    private CapabilityResponse(@OutputCustomType.Parameter("name") @Nullable String name) {
         this.name = name;
     }
 

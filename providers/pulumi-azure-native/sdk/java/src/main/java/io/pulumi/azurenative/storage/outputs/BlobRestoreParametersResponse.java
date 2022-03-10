@@ -22,10 +22,10 @@ public final class BlobRestoreParametersResponse {
      */
     private final String timeToRestore;
 
-    @OutputCustomType.Constructor({"blobRanges","timeToRestore"})
+    @OutputCustomType.Constructor
     private BlobRestoreParametersResponse(
-        List<BlobRestoreRangeResponse> blobRanges,
-        String timeToRestore) {
+        @OutputCustomType.Parameter("blobRanges") List<BlobRestoreRangeResponse> blobRanges,
+        @OutputCustomType.Parameter("timeToRestore") String timeToRestore) {
         this.blobRanges = blobRanges;
         this.timeToRestore = timeToRestore;
     }

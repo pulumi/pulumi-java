@@ -27,11 +27,11 @@ public final class IdentityResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"principalId","tenantId","type"})
+    @OutputCustomType.Constructor
     private IdentityResponse(
-        @Nullable String principalId,
-        @Nullable String tenantId,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("principalId") @Nullable String principalId,
+        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.principalId = principalId;
         this.tenantId = tenantId;
         this.type = type;

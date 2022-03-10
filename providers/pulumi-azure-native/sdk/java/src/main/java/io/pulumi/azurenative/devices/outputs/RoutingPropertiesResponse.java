@@ -36,12 +36,12 @@ public final class RoutingPropertiesResponse {
      */
     private final @Nullable List<RoutePropertiesResponse> routes;
 
-    @OutputCustomType.Constructor({"endpoints","enrichments","fallbackRoute","routes"})
+    @OutputCustomType.Constructor
     private RoutingPropertiesResponse(
-        @Nullable RoutingEndpointsResponse endpoints,
-        @Nullable List<EnrichmentPropertiesResponse> enrichments,
-        @Nullable FallbackRoutePropertiesResponse fallbackRoute,
-        @Nullable List<RoutePropertiesResponse> routes) {
+        @OutputCustomType.Parameter("endpoints") @Nullable RoutingEndpointsResponse endpoints,
+        @OutputCustomType.Parameter("enrichments") @Nullable List<EnrichmentPropertiesResponse> enrichments,
+        @OutputCustomType.Parameter("fallbackRoute") @Nullable FallbackRoutePropertiesResponse fallbackRoute,
+        @OutputCustomType.Parameter("routes") @Nullable List<RoutePropertiesResponse> routes) {
         this.endpoints = endpoints;
         this.enrichments = enrichments;
         this.fallbackRoute = fallbackRoute;

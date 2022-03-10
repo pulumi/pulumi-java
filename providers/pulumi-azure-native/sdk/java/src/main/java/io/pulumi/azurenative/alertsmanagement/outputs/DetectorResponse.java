@@ -45,14 +45,14 @@ public final class DetectorResponse {
      */
     private final @Nullable List<String> supportedResourceTypes;
 
-    @OutputCustomType.Constructor({"description","id","imagePaths","name","parameters","supportedResourceTypes"})
+    @OutputCustomType.Constructor
     private DetectorResponse(
-        @Nullable String description,
-        String id,
-        @Nullable List<String> imagePaths,
-        @Nullable String name,
-        @Nullable Map<String,Object> parameters,
-        @Nullable List<String> supportedResourceTypes) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("imagePaths") @Nullable List<String> imagePaths,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,Object> parameters,
+        @OutputCustomType.Parameter("supportedResourceTypes") @Nullable List<String> supportedResourceTypes) {
         this.description = description;
         this.id = id;
         this.imagePaths = imagePaths;

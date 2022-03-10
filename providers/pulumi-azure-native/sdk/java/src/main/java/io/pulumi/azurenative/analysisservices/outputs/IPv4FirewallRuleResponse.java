@@ -27,11 +27,11 @@ public final class IPv4FirewallRuleResponse {
      */
     private final @Nullable String rangeStart;
 
-    @OutputCustomType.Constructor({"firewallRuleName","rangeEnd","rangeStart"})
+    @OutputCustomType.Constructor
     private IPv4FirewallRuleResponse(
-        @Nullable String firewallRuleName,
-        @Nullable String rangeEnd,
-        @Nullable String rangeStart) {
+        @OutputCustomType.Parameter("firewallRuleName") @Nullable String firewallRuleName,
+        @OutputCustomType.Parameter("rangeEnd") @Nullable String rangeEnd,
+        @OutputCustomType.Parameter("rangeStart") @Nullable String rangeStart) {
         this.firewallRuleName = firewallRuleName;
         this.rangeEnd = rangeEnd;
         this.rangeStart = rangeStart;

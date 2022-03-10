@@ -25,11 +25,11 @@ public final class PlatformImagePurchasePlanResponse {
      */
     private final String planPublisher;
 
-    @OutputCustomType.Constructor({"planName","planProduct","planPublisher"})
+    @OutputCustomType.Constructor
     private PlatformImagePurchasePlanResponse(
-        String planName,
-        String planProduct,
-        String planPublisher) {
+        @OutputCustomType.Parameter("planName") String planName,
+        @OutputCustomType.Parameter("planProduct") String planProduct,
+        @OutputCustomType.Parameter("planPublisher") String planPublisher) {
         this.planName = planName;
         this.planProduct = planProduct;
         this.planPublisher = planPublisher;

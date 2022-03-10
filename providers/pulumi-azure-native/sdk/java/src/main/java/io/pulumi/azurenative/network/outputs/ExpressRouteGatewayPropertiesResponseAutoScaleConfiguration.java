@@ -17,8 +17,8 @@ public final class ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration {
      */
     private final @Nullable ExpressRouteGatewayPropertiesResponseBounds bounds;
 
-    @OutputCustomType.Constructor({"bounds"})
-    private ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration(@Nullable ExpressRouteGatewayPropertiesResponseBounds bounds) {
+    @OutputCustomType.Constructor
+    private ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration(@OutputCustomType.Parameter("bounds") @Nullable ExpressRouteGatewayPropertiesResponseBounds bounds) {
         this.bounds = bounds;
     }
 

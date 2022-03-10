@@ -56,16 +56,16 @@ public final class SkuDescriptionResponse {
      */
     private final @Nullable String tier;
 
-    @OutputCustomType.Constructor({"capabilities","capacity","family","locations","name","size","skuCapacity","tier"})
+    @OutputCustomType.Constructor
     private SkuDescriptionResponse(
-        @Nullable List<CapabilityResponse> capabilities,
-        @Nullable Integer capacity,
-        @Nullable String family,
-        @Nullable List<String> locations,
-        @Nullable String name,
-        @Nullable String size,
-        @Nullable SkuCapacityResponse skuCapacity,
-        @Nullable String tier) {
+        @OutputCustomType.Parameter("capabilities") @Nullable List<CapabilityResponse> capabilities,
+        @OutputCustomType.Parameter("capacity") @Nullable Integer capacity,
+        @OutputCustomType.Parameter("family") @Nullable String family,
+        @OutputCustomType.Parameter("locations") @Nullable List<String> locations,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("size") @Nullable String size,
+        @OutputCustomType.Parameter("skuCapacity") @Nullable SkuCapacityResponse skuCapacity,
+        @OutputCustomType.Parameter("tier") @Nullable String tier) {
         this.capabilities = capabilities;
         this.capacity = capacity;
         this.family = family;

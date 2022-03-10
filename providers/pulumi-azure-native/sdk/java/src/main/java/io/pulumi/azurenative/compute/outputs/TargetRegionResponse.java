@@ -34,12 +34,12 @@ public final class TargetRegionResponse {
      */
     private final @Nullable String storageAccountType;
 
-    @OutputCustomType.Constructor({"encryption","name","regionalReplicaCount","storageAccountType"})
+    @OutputCustomType.Constructor
     private TargetRegionResponse(
-        @Nullable EncryptionImagesResponse encryption,
-        String name,
-        @Nullable Integer regionalReplicaCount,
-        @Nullable String storageAccountType) {
+        @OutputCustomType.Parameter("encryption") @Nullable EncryptionImagesResponse encryption,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("regionalReplicaCount") @Nullable Integer regionalReplicaCount,
+        @OutputCustomType.Parameter("storageAccountType") @Nullable String storageAccountType) {
         this.encryption = encryption;
         this.name = name;
         this.regionalReplicaCount = regionalReplicaCount;

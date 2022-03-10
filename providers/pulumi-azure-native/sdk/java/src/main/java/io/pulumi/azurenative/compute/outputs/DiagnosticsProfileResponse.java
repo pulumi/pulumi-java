@@ -17,8 +17,8 @@ public final class DiagnosticsProfileResponse {
      */
     private final @Nullable BootDiagnosticsResponse bootDiagnostics;
 
-    @OutputCustomType.Constructor({"bootDiagnostics"})
-    private DiagnosticsProfileResponse(@Nullable BootDiagnosticsResponse bootDiagnostics) {
+    @OutputCustomType.Constructor
+    private DiagnosticsProfileResponse(@OutputCustomType.Parameter("bootDiagnostics") @Nullable BootDiagnosticsResponse bootDiagnostics) {
         this.bootDiagnostics = bootDiagnostics;
     }
 

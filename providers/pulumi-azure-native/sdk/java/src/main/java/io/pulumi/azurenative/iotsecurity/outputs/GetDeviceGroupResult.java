@@ -31,12 +31,12 @@ public final class GetDeviceGroupResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","systemData","type"})
+    @OutputCustomType.Constructor
     private GetDeviceGroupResult(
-        String id,
-        String name,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.systemData = systemData;

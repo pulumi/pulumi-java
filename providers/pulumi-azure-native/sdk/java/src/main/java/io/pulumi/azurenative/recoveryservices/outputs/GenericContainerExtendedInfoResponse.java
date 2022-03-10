@@ -29,11 +29,11 @@ public final class GenericContainerExtendedInfoResponse {
      */
     private final @Nullable Map<String,String> serviceEndpoints;
 
-    @OutputCustomType.Constructor({"containerIdentityInfo","rawCertData","serviceEndpoints"})
+    @OutputCustomType.Constructor
     private GenericContainerExtendedInfoResponse(
-        @Nullable ContainerIdentityInfoResponse containerIdentityInfo,
-        @Nullable String rawCertData,
-        @Nullable Map<String,String> serviceEndpoints) {
+        @OutputCustomType.Parameter("containerIdentityInfo") @Nullable ContainerIdentityInfoResponse containerIdentityInfo,
+        @OutputCustomType.Parameter("rawCertData") @Nullable String rawCertData,
+        @OutputCustomType.Parameter("serviceEndpoints") @Nullable Map<String,String> serviceEndpoints) {
         this.containerIdentityInfo = containerIdentityInfo;
         this.rawCertData = rawCertData;
         this.serviceEndpoints = serviceEndpoints;

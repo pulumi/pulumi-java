@@ -24,10 +24,10 @@ public final class VirtualMachineScaleSetExtensionProfileResponse {
      */
     private final @Nullable String extensionsTimeBudget;
 
-    @OutputCustomType.Constructor({"extensions","extensionsTimeBudget"})
+    @OutputCustomType.Constructor
     private VirtualMachineScaleSetExtensionProfileResponse(
-        @Nullable List<VirtualMachineScaleSetExtensionResponse> extensions,
-        @Nullable String extensionsTimeBudget) {
+        @OutputCustomType.Parameter("extensions") @Nullable List<VirtualMachineScaleSetExtensionResponse> extensions,
+        @OutputCustomType.Parameter("extensionsTimeBudget") @Nullable String extensionsTimeBudget) {
         this.extensions = extensions;
         this.extensionsTimeBudget = extensionsTimeBudget;
     }

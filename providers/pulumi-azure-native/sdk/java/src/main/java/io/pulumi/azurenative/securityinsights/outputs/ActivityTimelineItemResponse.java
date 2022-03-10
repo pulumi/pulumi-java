@@ -51,16 +51,16 @@ public final class ActivityTimelineItemResponse {
      */
     private final String title;
 
-    @OutputCustomType.Constructor({"bucketEndTimeUTC","bucketStartTimeUTC","content","firstActivityTimeUTC","kind","lastActivityTimeUTC","queryId","title"})
+    @OutputCustomType.Constructor
     private ActivityTimelineItemResponse(
-        String bucketEndTimeUTC,
-        String bucketStartTimeUTC,
-        String content,
-        String firstActivityTimeUTC,
-        String kind,
-        String lastActivityTimeUTC,
-        String queryId,
-        String title) {
+        @OutputCustomType.Parameter("bucketEndTimeUTC") String bucketEndTimeUTC,
+        @OutputCustomType.Parameter("bucketStartTimeUTC") String bucketStartTimeUTC,
+        @OutputCustomType.Parameter("content") String content,
+        @OutputCustomType.Parameter("firstActivityTimeUTC") String firstActivityTimeUTC,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("lastActivityTimeUTC") String lastActivityTimeUTC,
+        @OutputCustomType.Parameter("queryId") String queryId,
+        @OutputCustomType.Parameter("title") String title) {
         this.bucketEndTimeUTC = bucketEndTimeUTC;
         this.bucketStartTimeUTC = bucketStartTimeUTC;
         this.content = content;

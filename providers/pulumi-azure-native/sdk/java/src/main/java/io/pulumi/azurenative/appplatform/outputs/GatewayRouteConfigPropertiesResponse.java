@@ -29,11 +29,11 @@ public final class GatewayRouteConfigPropertiesResponse {
      */
     private final @Nullable List<GatewayApiRouteResponse> routes;
 
-    @OutputCustomType.Constructor({"appResourceId","provisioningState","routes"})
+    @OutputCustomType.Constructor
     private GatewayRouteConfigPropertiesResponse(
-        @Nullable String appResourceId,
-        String provisioningState,
-        @Nullable List<GatewayApiRouteResponse> routes) {
+        @OutputCustomType.Parameter("appResourceId") @Nullable String appResourceId,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("routes") @Nullable List<GatewayApiRouteResponse> routes) {
         this.appResourceId = appResourceId;
         this.provisioningState = provisioningState;
         this.routes = routes;

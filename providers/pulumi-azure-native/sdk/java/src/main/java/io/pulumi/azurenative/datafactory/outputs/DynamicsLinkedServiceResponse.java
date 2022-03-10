@@ -112,26 +112,26 @@ public final class DynamicsLinkedServiceResponse {
      */
     private final @Nullable Object username;
 
-    @OutputCustomType.Constructor({"annotations","authenticationType","connectVia","credential","deploymentType","description","encryptedCredential","hostName","organizationName","parameters","password","port","servicePrincipalCredential","servicePrincipalCredentialType","servicePrincipalId","serviceUri","type","username"})
+    @OutputCustomType.Constructor
     private DynamicsLinkedServiceResponse(
-        @Nullable List<Object> annotations,
-        Object authenticationType,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable CredentialReferenceResponse credential,
-        Object deploymentType,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        @Nullable Object hostName,
-        @Nullable Object organizationName,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        @Nullable Object port,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalCredential,
-        @Nullable Object servicePrincipalCredentialType,
-        @Nullable Object servicePrincipalId,
-        @Nullable Object serviceUri,
-        String type,
-        @Nullable Object username) {
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("authenticationType") Object authenticationType,
+        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @OutputCustomType.Parameter("credential") @Nullable CredentialReferenceResponse credential,
+        @OutputCustomType.Parameter("deploymentType") Object deploymentType,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @OutputCustomType.Parameter("hostName") @Nullable Object hostName,
+        @OutputCustomType.Parameter("organizationName") @Nullable Object organizationName,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("password") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
+        @OutputCustomType.Parameter("port") @Nullable Object port,
+        @OutputCustomType.Parameter("servicePrincipalCredential") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalCredential,
+        @OutputCustomType.Parameter("servicePrincipalCredentialType") @Nullable Object servicePrincipalCredentialType,
+        @OutputCustomType.Parameter("servicePrincipalId") @Nullable Object servicePrincipalId,
+        @OutputCustomType.Parameter("serviceUri") @Nullable Object serviceUri,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("username") @Nullable Object username) {
         this.annotations = annotations;
         this.authenticationType = authenticationType;
         this.connectVia = connectVia;

@@ -22,10 +22,10 @@ public final class VpnServerConfigVpnClientRootCertificateResponse {
      */
     private final @Nullable String publicCertData;
 
-    @OutputCustomType.Constructor({"name","publicCertData"})
+    @OutputCustomType.Constructor
     private VpnServerConfigVpnClientRootCertificateResponse(
-        @Nullable String name,
-        @Nullable String publicCertData) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("publicCertData") @Nullable String publicCertData) {
         this.name = name;
         this.publicCertData = publicCertData;
     }

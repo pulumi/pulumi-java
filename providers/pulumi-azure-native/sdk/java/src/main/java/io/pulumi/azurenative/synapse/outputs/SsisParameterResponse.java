@@ -74,20 +74,20 @@ public final class SsisParameterResponse {
      */
     private final @Nullable String variable;
 
-    @OutputCustomType.Constructor({"dataType","defaultValue","description","designDefaultValue","id","name","required","sensitive","sensitiveDefaultValue","valueSet","valueType","variable"})
+    @OutputCustomType.Constructor
     private SsisParameterResponse(
-        @Nullable String dataType,
-        @Nullable String defaultValue,
-        @Nullable String description,
-        @Nullable String designDefaultValue,
-        @Nullable Double id,
-        @Nullable String name,
-        @Nullable Boolean required,
-        @Nullable Boolean sensitive,
-        @Nullable String sensitiveDefaultValue,
-        @Nullable Boolean valueSet,
-        @Nullable String valueType,
-        @Nullable String variable) {
+        @OutputCustomType.Parameter("dataType") @Nullable String dataType,
+        @OutputCustomType.Parameter("defaultValue") @Nullable String defaultValue,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("designDefaultValue") @Nullable String designDefaultValue,
+        @OutputCustomType.Parameter("id") @Nullable Double id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("required") @Nullable Boolean required,
+        @OutputCustomType.Parameter("sensitive") @Nullable Boolean sensitive,
+        @OutputCustomType.Parameter("sensitiveDefaultValue") @Nullable String sensitiveDefaultValue,
+        @OutputCustomType.Parameter("valueSet") @Nullable Boolean valueSet,
+        @OutputCustomType.Parameter("valueType") @Nullable String valueType,
+        @OutputCustomType.Parameter("variable") @Nullable String variable) {
         this.dataType = dataType;
         this.defaultValue = defaultValue;
         this.description = description;

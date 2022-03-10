@@ -17,8 +17,8 @@ public final class ConnectionTypeAssociationPropertyResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private ConnectionTypeAssociationPropertyResponse(@Nullable String name) {
+    @OutputCustomType.Constructor
+    private ConnectionTypeAssociationPropertyResponse(@OutputCustomType.Parameter("name") @Nullable String name) {
         this.name = name;
     }
 

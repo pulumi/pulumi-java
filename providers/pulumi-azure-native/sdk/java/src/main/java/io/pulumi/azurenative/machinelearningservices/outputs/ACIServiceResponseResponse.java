@@ -149,33 +149,33 @@ public final class ACIServiceResponseResponse {
      */
     private final @Nullable ACIServiceResponseResponseVnetConfiguration vnetConfiguration;
 
-    @OutputCustomType.Constructor({"appInsightsEnabled","authEnabled","cname","computeType","containerResourceRequirements","dataCollection","deploymentType","description","encryptionProperties","environmentImageRequest","error","kvTags","location","modelConfigMap","models","properties","publicFqdn","publicIp","scoringUri","sslCertificate","sslEnabled","sslKey","state","swaggerUri","vnetConfiguration"})
+    @OutputCustomType.Constructor
     private ACIServiceResponseResponse(
-        @Nullable Boolean appInsightsEnabled,
-        @Nullable Boolean authEnabled,
-        @Nullable String cname,
-        String computeType,
-        @Nullable ContainerResourceRequirementsResponse containerResourceRequirements,
-        @Nullable ACIServiceResponseResponseDataCollection dataCollection,
-        @Nullable String deploymentType,
-        @Nullable String description,
-        @Nullable ACIServiceResponseResponseEncryptionProperties encryptionProperties,
-        @Nullable ACIServiceResponseResponseEnvironmentImageRequest environmentImageRequest,
-        ServiceResponseBaseResponseError error,
-        @Nullable Map<String,String> kvTags,
-        @Nullable String location,
-        Map<String,Object> modelConfigMap,
-        @Nullable List<ModelResponse> models,
-        @Nullable Map<String,String> properties,
-        @Nullable String publicFqdn,
-        @Nullable String publicIp,
-        String scoringUri,
-        @Nullable String sslCertificate,
-        @Nullable Boolean sslEnabled,
-        @Nullable String sslKey,
-        String state,
-        String swaggerUri,
-        @Nullable ACIServiceResponseResponseVnetConfiguration vnetConfiguration) {
+        @OutputCustomType.Parameter("appInsightsEnabled") @Nullable Boolean appInsightsEnabled,
+        @OutputCustomType.Parameter("authEnabled") @Nullable Boolean authEnabled,
+        @OutputCustomType.Parameter("cname") @Nullable String cname,
+        @OutputCustomType.Parameter("computeType") String computeType,
+        @OutputCustomType.Parameter("containerResourceRequirements") @Nullable ContainerResourceRequirementsResponse containerResourceRequirements,
+        @OutputCustomType.Parameter("dataCollection") @Nullable ACIServiceResponseResponseDataCollection dataCollection,
+        @OutputCustomType.Parameter("deploymentType") @Nullable String deploymentType,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("encryptionProperties") @Nullable ACIServiceResponseResponseEncryptionProperties encryptionProperties,
+        @OutputCustomType.Parameter("environmentImageRequest") @Nullable ACIServiceResponseResponseEnvironmentImageRequest environmentImageRequest,
+        @OutputCustomType.Parameter("error") ServiceResponseBaseResponseError error,
+        @OutputCustomType.Parameter("kvTags") @Nullable Map<String,String> kvTags,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("modelConfigMap") Map<String,Object> modelConfigMap,
+        @OutputCustomType.Parameter("models") @Nullable List<ModelResponse> models,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @OutputCustomType.Parameter("publicFqdn") @Nullable String publicFqdn,
+        @OutputCustomType.Parameter("publicIp") @Nullable String publicIp,
+        @OutputCustomType.Parameter("scoringUri") String scoringUri,
+        @OutputCustomType.Parameter("sslCertificate") @Nullable String sslCertificate,
+        @OutputCustomType.Parameter("sslEnabled") @Nullable Boolean sslEnabled,
+        @OutputCustomType.Parameter("sslKey") @Nullable String sslKey,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("swaggerUri") String swaggerUri,
+        @OutputCustomType.Parameter("vnetConfiguration") @Nullable ACIServiceResponseResponseVnetConfiguration vnetConfiguration) {
         this.appInsightsEnabled = appInsightsEnabled;
         this.authEnabled = authEnabled;
         this.cname = cname;

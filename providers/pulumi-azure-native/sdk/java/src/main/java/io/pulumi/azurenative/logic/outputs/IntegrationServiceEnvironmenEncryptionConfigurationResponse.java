@@ -17,8 +17,8 @@ public final class IntegrationServiceEnvironmenEncryptionConfigurationResponse {
      */
     private final @Nullable IntegrationServiceEnvironmenEncryptionKeyReferenceResponse encryptionKeyReference;
 
-    @OutputCustomType.Constructor({"encryptionKeyReference"})
-    private IntegrationServiceEnvironmenEncryptionConfigurationResponse(@Nullable IntegrationServiceEnvironmenEncryptionKeyReferenceResponse encryptionKeyReference) {
+    @OutputCustomType.Constructor
+    private IntegrationServiceEnvironmenEncryptionConfigurationResponse(@OutputCustomType.Parameter("encryptionKeyReference") @Nullable IntegrationServiceEnvironmenEncryptionKeyReferenceResponse encryptionKeyReference) {
         this.encryptionKeyReference = encryptionKeyReference;
     }
 

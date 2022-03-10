@@ -43,14 +43,14 @@ public final class GetWebServiceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","location","name","properties","tags","type"})
+    @OutputCustomType.Constructor
     private GetWebServiceResult(
-        String id,
-        String location,
-        String name,
-        WebServicePropertiesForGraphResponse properties,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") WebServicePropertiesForGraphResponse properties,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.location = location;
         this.name = name;

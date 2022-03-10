@@ -22,10 +22,10 @@ public final class NetworkProfileResponse {
      */
     private final @Nullable String serviceCidr;
 
-    @OutputCustomType.Constructor({"podCidr","serviceCidr"})
+    @OutputCustomType.Constructor
     private NetworkProfileResponse(
-        @Nullable String podCidr,
-        @Nullable String serviceCidr) {
+        @OutputCustomType.Parameter("podCidr") @Nullable String podCidr,
+        @OutputCustomType.Parameter("serviceCidr") @Nullable String serviceCidr) {
         this.podCidr = podCidr;
         this.serviceCidr = serviceCidr;
     }

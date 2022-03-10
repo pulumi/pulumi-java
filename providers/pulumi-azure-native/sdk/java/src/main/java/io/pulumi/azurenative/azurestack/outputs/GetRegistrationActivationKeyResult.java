@@ -17,8 +17,8 @@ public final class GetRegistrationActivationKeyResult {
      */
     private final @Nullable String activationKey;
 
-    @OutputCustomType.Constructor({"activationKey"})
-    private GetRegistrationActivationKeyResult(@Nullable String activationKey) {
+    @OutputCustomType.Constructor
+    private GetRegistrationActivationKeyResult(@OutputCustomType.Parameter("activationKey") @Nullable String activationKey) {
         this.activationKey = activationKey;
     }
 

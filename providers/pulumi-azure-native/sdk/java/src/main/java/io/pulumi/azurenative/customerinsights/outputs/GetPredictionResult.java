@@ -118,28 +118,28 @@ public final class GetPredictionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"autoAnalyze","description","displayName","grades","id","involvedInteractionTypes","involvedKpiTypes","involvedRelationships","mappings","name","negativeOutcomeExpression","positiveOutcomeExpression","predictionName","primaryProfileType","provisioningState","scopeExpression","scoreLabel","systemGeneratedEntities","tenantId","type"})
+    @OutputCustomType.Constructor
     private GetPredictionResult(
-        Boolean autoAnalyze,
-        @Nullable Map<String,String> description,
-        @Nullable Map<String,String> displayName,
-        @Nullable List<PredictionResponseGrades> grades,
-        String id,
-        @Nullable List<String> involvedInteractionTypes,
-        @Nullable List<String> involvedKpiTypes,
-        @Nullable List<String> involvedRelationships,
-        PredictionResponseMappings mappings,
-        String name,
-        String negativeOutcomeExpression,
-        String positiveOutcomeExpression,
-        @Nullable String predictionName,
-        String primaryProfileType,
-        String provisioningState,
-        String scopeExpression,
-        String scoreLabel,
-        PredictionResponseSystemGeneratedEntities systemGeneratedEntities,
-        String tenantId,
-        String type) {
+        @OutputCustomType.Parameter("autoAnalyze") Boolean autoAnalyze,
+        @OutputCustomType.Parameter("description") @Nullable Map<String,String> description,
+        @OutputCustomType.Parameter("displayName") @Nullable Map<String,String> displayName,
+        @OutputCustomType.Parameter("grades") @Nullable List<PredictionResponseGrades> grades,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("involvedInteractionTypes") @Nullable List<String> involvedInteractionTypes,
+        @OutputCustomType.Parameter("involvedKpiTypes") @Nullable List<String> involvedKpiTypes,
+        @OutputCustomType.Parameter("involvedRelationships") @Nullable List<String> involvedRelationships,
+        @OutputCustomType.Parameter("mappings") PredictionResponseMappings mappings,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("negativeOutcomeExpression") String negativeOutcomeExpression,
+        @OutputCustomType.Parameter("positiveOutcomeExpression") String positiveOutcomeExpression,
+        @OutputCustomType.Parameter("predictionName") @Nullable String predictionName,
+        @OutputCustomType.Parameter("primaryProfileType") String primaryProfileType,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("scopeExpression") String scopeExpression,
+        @OutputCustomType.Parameter("scoreLabel") String scoreLabel,
+        @OutputCustomType.Parameter("systemGeneratedEntities") PredictionResponseSystemGeneratedEntities systemGeneratedEntities,
+        @OutputCustomType.Parameter("tenantId") String tenantId,
+        @OutputCustomType.Parameter("type") String type) {
         this.autoAnalyze = autoAnalyze;
         this.description = description;
         this.displayName = displayName;

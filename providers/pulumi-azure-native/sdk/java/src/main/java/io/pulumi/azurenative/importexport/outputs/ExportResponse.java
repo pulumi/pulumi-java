@@ -28,11 +28,11 @@ public final class ExportResponse {
      */
     private final @Nullable List<String> blobPathPrefix;
 
-    @OutputCustomType.Constructor({"blobListBlobPath","blobPath","blobPathPrefix"})
+    @OutputCustomType.Constructor
     private ExportResponse(
-        @Nullable String blobListBlobPath,
-        @Nullable List<String> blobPath,
-        @Nullable List<String> blobPathPrefix) {
+        @OutputCustomType.Parameter("blobListBlobPath") @Nullable String blobListBlobPath,
+        @OutputCustomType.Parameter("blobPath") @Nullable List<String> blobPath,
+        @OutputCustomType.Parameter("blobPathPrefix") @Nullable List<String> blobPathPrefix) {
         this.blobListBlobPath = blobListBlobPath;
         this.blobPath = blobPath;
         this.blobPathPrefix = blobPathPrefix;

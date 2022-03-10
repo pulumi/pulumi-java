@@ -17,8 +17,8 @@ public final class AzureStaticWebAppsRegistrationResponse {
      */
     private final @Nullable String clientId;
 
-    @OutputCustomType.Constructor({"clientId"})
-    private AzureStaticWebAppsRegistrationResponse(@Nullable String clientId) {
+    @OutputCustomType.Constructor
+    private AzureStaticWebAppsRegistrationResponse(@OutputCustomType.Parameter("clientId") @Nullable String clientId) {
         this.clientId = clientId;
     }
 

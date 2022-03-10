@@ -35,13 +35,13 @@ public final class AuthorizationProfileResponse {
      */
     private final String requesterObjectId;
 
-    @OutputCustomType.Constructor({"approvedTime","approver","requestedTime","requester","requesterObjectId"})
+    @OutputCustomType.Constructor
     private AuthorizationProfileResponse(
-        String approvedTime,
-        String approver,
-        String requestedTime,
-        String requester,
-        String requesterObjectId) {
+        @OutputCustomType.Parameter("approvedTime") String approvedTime,
+        @OutputCustomType.Parameter("approver") String approver,
+        @OutputCustomType.Parameter("requestedTime") String requestedTime,
+        @OutputCustomType.Parameter("requester") String requester,
+        @OutputCustomType.Parameter("requesterObjectId") String requesterObjectId) {
         this.approvedTime = approvedTime;
         this.approver = approver;
         this.requestedTime = requestedTime;

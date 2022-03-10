@@ -26,11 +26,11 @@ public final class ODataErrorResponse {
      */
     private final String message;
 
-    @OutputCustomType.Constructor({"code","details","message"})
+    @OutputCustomType.Constructor
     private ODataErrorResponse(
-        String code,
-        List<ODataErrorResponse> details,
-        String message) {
+        @OutputCustomType.Parameter("code") String code,
+        @OutputCustomType.Parameter("details") List<ODataErrorResponse> details,
+        @OutputCustomType.Parameter("message") String message) {
         this.code = code;
         this.details = details;
         this.message = message;

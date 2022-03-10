@@ -22,10 +22,10 @@ public final class AutoscaleCapacityResponse {
      */
     private final @Nullable Integer minInstanceCount;
 
-    @OutputCustomType.Constructor({"maxInstanceCount","minInstanceCount"})
+    @OutputCustomType.Constructor
     private AutoscaleCapacityResponse(
-        @Nullable Integer maxInstanceCount,
-        @Nullable Integer minInstanceCount) {
+        @OutputCustomType.Parameter("maxInstanceCount") @Nullable Integer maxInstanceCount,
+        @OutputCustomType.Parameter("minInstanceCount") @Nullable Integer minInstanceCount) {
         this.maxInstanceCount = maxInstanceCount;
         this.minInstanceCount = minInstanceCount;
     }

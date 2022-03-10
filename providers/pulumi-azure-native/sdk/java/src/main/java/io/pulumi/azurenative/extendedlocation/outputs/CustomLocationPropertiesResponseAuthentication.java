@@ -17,8 +17,8 @@ public final class CustomLocationPropertiesResponseAuthentication {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"type"})
-    private CustomLocationPropertiesResponseAuthentication(@Nullable String type) {
+    @OutputCustomType.Constructor
+    private CustomLocationPropertiesResponseAuthentication(@OutputCustomType.Parameter("type") @Nullable String type) {
         this.type = type;
     }
 

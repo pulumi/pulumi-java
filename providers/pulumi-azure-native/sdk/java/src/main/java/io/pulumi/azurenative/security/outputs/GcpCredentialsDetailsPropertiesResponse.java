@@ -82,22 +82,22 @@ public final class GcpCredentialsDetailsPropertiesResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"authProviderX509CertUrl","authUri","authenticationProvisioningState","authenticationType","clientEmail","clientId","clientX509CertUrl","grantedPermissions","organizationId","privateKey","privateKeyId","projectId","tokenUri","type"})
+    @OutputCustomType.Constructor
     private GcpCredentialsDetailsPropertiesResponse(
-        String authProviderX509CertUrl,
-        String authUri,
-        String authenticationProvisioningState,
-        String authenticationType,
-        String clientEmail,
-        String clientId,
-        String clientX509CertUrl,
-        List<String> grantedPermissions,
-        String organizationId,
-        String privateKey,
-        String privateKeyId,
-        String projectId,
-        String tokenUri,
-        String type) {
+        @OutputCustomType.Parameter("authProviderX509CertUrl") String authProviderX509CertUrl,
+        @OutputCustomType.Parameter("authUri") String authUri,
+        @OutputCustomType.Parameter("authenticationProvisioningState") String authenticationProvisioningState,
+        @OutputCustomType.Parameter("authenticationType") String authenticationType,
+        @OutputCustomType.Parameter("clientEmail") String clientEmail,
+        @OutputCustomType.Parameter("clientId") String clientId,
+        @OutputCustomType.Parameter("clientX509CertUrl") String clientX509CertUrl,
+        @OutputCustomType.Parameter("grantedPermissions") List<String> grantedPermissions,
+        @OutputCustomType.Parameter("organizationId") String organizationId,
+        @OutputCustomType.Parameter("privateKey") String privateKey,
+        @OutputCustomType.Parameter("privateKeyId") String privateKeyId,
+        @OutputCustomType.Parameter("projectId") String projectId,
+        @OutputCustomType.Parameter("tokenUri") String tokenUri,
+        @OutputCustomType.Parameter("type") String type) {
         this.authProviderX509CertUrl = authProviderX509CertUrl;
         this.authUri = authUri;
         this.authenticationProvisioningState = authenticationProvisioningState;

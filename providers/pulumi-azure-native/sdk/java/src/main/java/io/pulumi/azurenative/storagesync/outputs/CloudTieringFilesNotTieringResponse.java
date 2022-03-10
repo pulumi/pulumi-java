@@ -28,11 +28,11 @@ public final class CloudTieringFilesNotTieringResponse {
      */
     private final Double totalFileCount;
 
-    @OutputCustomType.Constructor({"errors","lastUpdatedTimestamp","totalFileCount"})
+    @OutputCustomType.Constructor
     private CloudTieringFilesNotTieringResponse(
-        List<FilesNotTieringErrorResponse> errors,
-        String lastUpdatedTimestamp,
-        Double totalFileCount) {
+        @OutputCustomType.Parameter("errors") List<FilesNotTieringErrorResponse> errors,
+        @OutputCustomType.Parameter("lastUpdatedTimestamp") String lastUpdatedTimestamp,
+        @OutputCustomType.Parameter("totalFileCount") Double totalFileCount) {
         this.errors = errors;
         this.lastUpdatedTimestamp = lastUpdatedTimestamp;
         this.totalFileCount = totalFileCount;

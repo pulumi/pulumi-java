@@ -22,10 +22,10 @@ public final class ResourceGroupValueResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"location","name"})
+    @OutputCustomType.Constructor
     private ResourceGroupValueResponse(
-        @Nullable String location,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.location = location;
         this.name = name;
     }

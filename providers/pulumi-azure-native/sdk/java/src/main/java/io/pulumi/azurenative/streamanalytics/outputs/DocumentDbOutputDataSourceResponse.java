@@ -48,15 +48,15 @@ public final class DocumentDbOutputDataSourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"accountId","accountKey","collectionNamePattern","database","documentId","partitionKey","type"})
+    @OutputCustomType.Constructor
     private DocumentDbOutputDataSourceResponse(
-        @Nullable String accountId,
-        @Nullable String accountKey,
-        @Nullable String collectionNamePattern,
-        @Nullable String database,
-        @Nullable String documentId,
-        @Nullable String partitionKey,
-        String type) {
+        @OutputCustomType.Parameter("accountId") @Nullable String accountId,
+        @OutputCustomType.Parameter("accountKey") @Nullable String accountKey,
+        @OutputCustomType.Parameter("collectionNamePattern") @Nullable String collectionNamePattern,
+        @OutputCustomType.Parameter("database") @Nullable String database,
+        @OutputCustomType.Parameter("documentId") @Nullable String documentId,
+        @OutputCustomType.Parameter("partitionKey") @Nullable String partitionKey,
+        @OutputCustomType.Parameter("type") String type) {
         this.accountId = accountId;
         this.accountKey = accountKey;
         this.collectionNamePattern = collectionNamePattern;

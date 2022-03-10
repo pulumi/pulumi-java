@@ -64,18 +64,18 @@ public final class CommonDataServiceForAppsSinkResponse {
      */
     private final String writeBehavior;
 
-    @OutputCustomType.Constructor({"alternateKeyName","disableMetricsCollection","ignoreNullValues","maxConcurrentConnections","sinkRetryCount","sinkRetryWait","type","writeBatchSize","writeBatchTimeout","writeBehavior"})
+    @OutputCustomType.Constructor
     private CommonDataServiceForAppsSinkResponse(
-        @Nullable Object alternateKeyName,
-        @Nullable Object disableMetricsCollection,
-        @Nullable Object ignoreNullValues,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable Object sinkRetryCount,
-        @Nullable Object sinkRetryWait,
-        String type,
-        @Nullable Object writeBatchSize,
-        @Nullable Object writeBatchTimeout,
-        String writeBehavior) {
+        @OutputCustomType.Parameter("alternateKeyName") @Nullable Object alternateKeyName,
+        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @OutputCustomType.Parameter("ignoreNullValues") @Nullable Object ignoreNullValues,
+        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @OutputCustomType.Parameter("sinkRetryCount") @Nullable Object sinkRetryCount,
+        @OutputCustomType.Parameter("sinkRetryWait") @Nullable Object sinkRetryWait,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("writeBatchSize") @Nullable Object writeBatchSize,
+        @OutputCustomType.Parameter("writeBatchTimeout") @Nullable Object writeBatchTimeout,
+        @OutputCustomType.Parameter("writeBehavior") String writeBehavior) {
         this.alternateKeyName = alternateKeyName;
         this.disableMetricsCollection = disableMetricsCollection;
         this.ignoreNullValues = ignoreNullValues;

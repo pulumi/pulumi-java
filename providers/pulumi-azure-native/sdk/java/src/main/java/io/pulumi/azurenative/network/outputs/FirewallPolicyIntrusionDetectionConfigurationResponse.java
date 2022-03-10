@@ -23,10 +23,10 @@ public final class FirewallPolicyIntrusionDetectionConfigurationResponse {
      */
     private final @Nullable List<FirewallPolicyIntrusionDetectionSignatureSpecificationResponse> signatureOverrides;
 
-    @OutputCustomType.Constructor({"bypassTrafficSettings","signatureOverrides"})
+    @OutputCustomType.Constructor
     private FirewallPolicyIntrusionDetectionConfigurationResponse(
-        @Nullable List<FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsResponse> bypassTrafficSettings,
-        @Nullable List<FirewallPolicyIntrusionDetectionSignatureSpecificationResponse> signatureOverrides) {
+        @OutputCustomType.Parameter("bypassTrafficSettings") @Nullable List<FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsResponse> bypassTrafficSettings,
+        @OutputCustomType.Parameter("signatureOverrides") @Nullable List<FirewallPolicyIntrusionDetectionSignatureSpecificationResponse> signatureOverrides) {
         this.bypassTrafficSettings = bypassTrafficSettings;
         this.signatureOverrides = signatureOverrides;
     }

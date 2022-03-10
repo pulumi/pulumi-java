@@ -17,8 +17,8 @@ public final class VirtualHardDiskResponse {
      */
     private final @Nullable String uri;
 
-    @OutputCustomType.Constructor({"uri"})
-    private VirtualHardDiskResponse(@Nullable String uri) {
+    @OutputCustomType.Constructor
+    private VirtualHardDiskResponse(@OutputCustomType.Parameter("uri") @Nullable String uri) {
         this.uri = uri;
     }
 

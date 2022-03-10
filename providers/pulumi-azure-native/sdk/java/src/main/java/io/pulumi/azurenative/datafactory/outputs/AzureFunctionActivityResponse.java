@@ -74,19 +74,19 @@ public final class AzureFunctionActivityResponse {
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
-    @OutputCustomType.Constructor({"body","dependsOn","description","functionName","headers","linkedServiceName","method","name","policy","type","userProperties"})
+    @OutputCustomType.Constructor
     private AzureFunctionActivityResponse(
-        @Nullable Object body,
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        Object functionName,
-        @Nullable Object headers,
-        @Nullable LinkedServiceReferenceResponse linkedServiceName,
-        String method,
-        String name,
-        @Nullable ActivityPolicyResponse policy,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties) {
+        @OutputCustomType.Parameter("body") @Nullable Object body,
+        @OutputCustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("functionName") Object functionName,
+        @OutputCustomType.Parameter("headers") @Nullable Object headers,
+        @OutputCustomType.Parameter("linkedServiceName") @Nullable LinkedServiceReferenceResponse linkedServiceName,
+        @OutputCustomType.Parameter("method") String method,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("policy") @Nullable ActivityPolicyResponse policy,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties) {
         this.body = body;
         this.dependsOn = dependsOn;
         this.description = description;

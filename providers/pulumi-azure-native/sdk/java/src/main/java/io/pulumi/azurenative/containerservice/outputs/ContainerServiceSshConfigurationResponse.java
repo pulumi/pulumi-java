@@ -16,8 +16,8 @@ public final class ContainerServiceSshConfigurationResponse {
      */
     private final List<ContainerServiceSshPublicKeyResponse> publicKeys;
 
-    @OutputCustomType.Constructor({"publicKeys"})
-    private ContainerServiceSshConfigurationResponse(List<ContainerServiceSshPublicKeyResponse> publicKeys) {
+    @OutputCustomType.Constructor
+    private ContainerServiceSshConfigurationResponse(@OutputCustomType.Parameter("publicKeys") List<ContainerServiceSshPublicKeyResponse> publicKeys) {
         this.publicKeys = publicKeys;
     }
 

@@ -26,11 +26,11 @@ public final class NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertie
      */
     private final String requiredMemberName;
 
-    @OutputCustomType.Constructor({"fqdns","groupId","requiredMemberName"})
+    @OutputCustomType.Constructor
     private NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertiesResponse(
-        List<String> fqdns,
-        String groupId,
-        String requiredMemberName) {
+        @OutputCustomType.Parameter("fqdns") List<String> fqdns,
+        @OutputCustomType.Parameter("groupId") String groupId,
+        @OutputCustomType.Parameter("requiredMemberName") String requiredMemberName) {
         this.fqdns = fqdns;
         this.groupId = groupId;
         this.requiredMemberName = requiredMemberName;

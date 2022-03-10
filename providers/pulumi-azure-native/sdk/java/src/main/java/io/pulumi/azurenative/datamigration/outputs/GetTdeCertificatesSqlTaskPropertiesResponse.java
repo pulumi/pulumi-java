@@ -50,14 +50,14 @@ public final class GetTdeCertificatesSqlTaskPropertiesResponse {
      */
     private final String taskType;
 
-    @OutputCustomType.Constructor({"commands","errors","input","output","state","taskType"})
+    @OutputCustomType.Constructor
     private GetTdeCertificatesSqlTaskPropertiesResponse(
-        List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands,
-        List<ODataErrorResponse> errors,
-        @Nullable GetTdeCertificatesSqlTaskInputResponse input,
-        List<GetTdeCertificatesSqlTaskOutputResponse> output,
-        String state,
-        String taskType) {
+        @OutputCustomType.Parameter("commands") List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands,
+        @OutputCustomType.Parameter("errors") List<ODataErrorResponse> errors,
+        @OutputCustomType.Parameter("input") @Nullable GetTdeCertificatesSqlTaskInputResponse input,
+        @OutputCustomType.Parameter("output") List<GetTdeCertificatesSqlTaskOutputResponse> output,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("taskType") String taskType) {
         this.commands = commands;
         this.errors = errors;
         this.input = input;

@@ -15,11 +15,11 @@ public final class ImportCollectorPropertiesResponse {
     private final @Nullable String discoverySiteId;
     private final String updatedTimestamp;
 
-    @OutputCustomType.Constructor({"createdTimestamp","discoverySiteId","updatedTimestamp"})
+    @OutputCustomType.Constructor
     private ImportCollectorPropertiesResponse(
-        String createdTimestamp,
-        @Nullable String discoverySiteId,
-        String updatedTimestamp) {
+        @OutputCustomType.Parameter("createdTimestamp") String createdTimestamp,
+        @OutputCustomType.Parameter("discoverySiteId") @Nullable String discoverySiteId,
+        @OutputCustomType.Parameter("updatedTimestamp") String updatedTimestamp) {
         this.createdTimestamp = createdTimestamp;
         this.discoverySiteId = discoverySiteId;
         this.updatedTimestamp = updatedTimestamp;

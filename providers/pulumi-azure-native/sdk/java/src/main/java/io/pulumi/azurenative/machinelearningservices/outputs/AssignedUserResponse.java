@@ -20,10 +20,10 @@ public final class AssignedUserResponse {
      */
     private final String tenantId;
 
-    @OutputCustomType.Constructor({"objectId","tenantId"})
+    @OutputCustomType.Constructor
     private AssignedUserResponse(
-        String objectId,
-        String tenantId) {
+        @OutputCustomType.Parameter("objectId") String objectId,
+        @OutputCustomType.Parameter("tenantId") String tenantId) {
         this.objectId = objectId;
         this.tenantId = tenantId;
     }

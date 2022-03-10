@@ -38,13 +38,13 @@ public final class AzureFunctionReceiverResponse {
      */
     private final @Nullable Boolean useCommonAlertSchema;
 
-    @OutputCustomType.Constructor({"functionAppResourceId","functionName","httpTriggerUrl","name","useCommonAlertSchema"})
+    @OutputCustomType.Constructor
     private AzureFunctionReceiverResponse(
-        String functionAppResourceId,
-        String functionName,
-        String httpTriggerUrl,
-        String name,
-        @Nullable Boolean useCommonAlertSchema) {
+        @OutputCustomType.Parameter("functionAppResourceId") String functionAppResourceId,
+        @OutputCustomType.Parameter("functionName") String functionName,
+        @OutputCustomType.Parameter("httpTriggerUrl") String httpTriggerUrl,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("useCommonAlertSchema") @Nullable Boolean useCommonAlertSchema) {
         this.functionAppResourceId = functionAppResourceId;
         this.functionName = functionName;
         this.httpTriggerUrl = httpTriggerUrl;

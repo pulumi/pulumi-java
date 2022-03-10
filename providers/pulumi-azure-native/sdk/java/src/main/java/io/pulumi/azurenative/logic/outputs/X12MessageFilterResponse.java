@@ -15,8 +15,8 @@ public final class X12MessageFilterResponse {
      */
     private final String messageFilterType;
 
-    @OutputCustomType.Constructor({"messageFilterType"})
-    private X12MessageFilterResponse(String messageFilterType) {
+    @OutputCustomType.Constructor
+    private X12MessageFilterResponse(@OutputCustomType.Parameter("messageFilterType") String messageFilterType) {
         this.messageFilterType = messageFilterType;
     }
 

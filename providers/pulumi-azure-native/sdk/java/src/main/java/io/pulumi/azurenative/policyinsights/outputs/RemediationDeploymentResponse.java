@@ -46,15 +46,15 @@ public final class RemediationDeploymentResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"createdOn","deploymentId","error","lastUpdatedOn","remediatedResourceId","resourceLocation","status"})
+    @OutputCustomType.Constructor
     private RemediationDeploymentResponse(
-        String createdOn,
-        String deploymentId,
-        ErrorDefinitionResponse error,
-        String lastUpdatedOn,
-        String remediatedResourceId,
-        String resourceLocation,
-        String status) {
+        @OutputCustomType.Parameter("createdOn") String createdOn,
+        @OutputCustomType.Parameter("deploymentId") String deploymentId,
+        @OutputCustomType.Parameter("error") ErrorDefinitionResponse error,
+        @OutputCustomType.Parameter("lastUpdatedOn") String lastUpdatedOn,
+        @OutputCustomType.Parameter("remediatedResourceId") String remediatedResourceId,
+        @OutputCustomType.Parameter("resourceLocation") String resourceLocation,
+        @OutputCustomType.Parameter("status") String status) {
         this.createdOn = createdOn;
         this.deploymentId = deploymentId;
         this.error = error;

@@ -37,13 +37,13 @@ public final class ErrorDefinitionResponse {
      */
     private final String target;
 
-    @OutputCustomType.Constructor({"additionalInfo","code","details","message","target"})
+    @OutputCustomType.Constructor
     private ErrorDefinitionResponse(
-        List<TypedErrorInfoResponse> additionalInfo,
-        String code,
-        List<ErrorDefinitionResponse> details,
-        String message,
-        String target) {
+        @OutputCustomType.Parameter("additionalInfo") List<TypedErrorInfoResponse> additionalInfo,
+        @OutputCustomType.Parameter("code") String code,
+        @OutputCustomType.Parameter("details") List<ErrorDefinitionResponse> details,
+        @OutputCustomType.Parameter("message") String message,
+        @OutputCustomType.Parameter("target") String target) {
         this.additionalInfo = additionalInfo;
         this.code = code;
         this.details = details;

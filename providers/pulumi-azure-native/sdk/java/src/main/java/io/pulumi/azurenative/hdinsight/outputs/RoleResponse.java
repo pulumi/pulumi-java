@@ -76,19 +76,19 @@ public final class RoleResponse {
      */
     private final @Nullable VirtualNetworkProfileResponse virtualNetworkProfile;
 
-    @OutputCustomType.Constructor({"autoscaleConfiguration","dataDisksGroups","encryptDataDisks","hardwareProfile","minInstanceCount","name","osProfile","scriptActions","targetInstanceCount","vMGroupName","virtualNetworkProfile"})
+    @OutputCustomType.Constructor
     private RoleResponse(
-        @Nullable AutoscaleResponse autoscaleConfiguration,
-        @Nullable List<DataDisksGroupsResponse> dataDisksGroups,
-        @Nullable Boolean encryptDataDisks,
-        @Nullable HardwareProfileResponse hardwareProfile,
-        @Nullable Integer minInstanceCount,
-        @Nullable String name,
-        @Nullable OsProfileResponse osProfile,
-        @Nullable List<ScriptActionResponse> scriptActions,
-        @Nullable Integer targetInstanceCount,
-        @Nullable String vMGroupName,
-        @Nullable VirtualNetworkProfileResponse virtualNetworkProfile) {
+        @OutputCustomType.Parameter("autoscaleConfiguration") @Nullable AutoscaleResponse autoscaleConfiguration,
+        @OutputCustomType.Parameter("dataDisksGroups") @Nullable List<DataDisksGroupsResponse> dataDisksGroups,
+        @OutputCustomType.Parameter("encryptDataDisks") @Nullable Boolean encryptDataDisks,
+        @OutputCustomType.Parameter("hardwareProfile") @Nullable HardwareProfileResponse hardwareProfile,
+        @OutputCustomType.Parameter("minInstanceCount") @Nullable Integer minInstanceCount,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("osProfile") @Nullable OsProfileResponse osProfile,
+        @OutputCustomType.Parameter("scriptActions") @Nullable List<ScriptActionResponse> scriptActions,
+        @OutputCustomType.Parameter("targetInstanceCount") @Nullable Integer targetInstanceCount,
+        @OutputCustomType.Parameter("vMGroupName") @Nullable String vMGroupName,
+        @OutputCustomType.Parameter("virtualNetworkProfile") @Nullable VirtualNetworkProfileResponse virtualNetworkProfile) {
         this.autoscaleConfiguration = autoscaleConfiguration;
         this.dataDisksGroups = dataDisksGroups;
         this.encryptDataDisks = encryptDataDisks;

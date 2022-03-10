@@ -66,18 +66,18 @@ public final class GetTemplateSpecResult {
      */
     private final Map<String,TemplateSpecVersionInfoResponse> versions;
 
-    @OutputCustomType.Constructor({"description","displayName","id","location","metadata","name","systemData","tags","type","versions"})
+    @OutputCustomType.Constructor
     private GetTemplateSpecResult(
-        @Nullable String description,
-        @Nullable String displayName,
-        String id,
-        String location,
-        @Nullable Object metadata,
-        String name,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type,
-        Map<String,TemplateSpecVersionInfoResponse> versions) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("metadata") @Nullable Object metadata,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("versions") Map<String,TemplateSpecVersionInfoResponse> versions) {
         this.description = description;
         this.displayName = displayName;
         this.id = id;

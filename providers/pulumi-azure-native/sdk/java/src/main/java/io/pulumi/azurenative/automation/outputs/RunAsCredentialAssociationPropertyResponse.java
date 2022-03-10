@@ -17,8 +17,8 @@ public final class RunAsCredentialAssociationPropertyResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private RunAsCredentialAssociationPropertyResponse(@Nullable String name) {
+    @OutputCustomType.Constructor
+    private RunAsCredentialAssociationPropertyResponse(@OutputCustomType.Parameter("name") @Nullable String name) {
         this.name = name;
     }
 

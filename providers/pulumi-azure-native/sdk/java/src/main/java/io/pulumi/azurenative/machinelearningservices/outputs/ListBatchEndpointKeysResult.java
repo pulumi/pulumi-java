@@ -22,10 +22,10 @@ public final class ListBatchEndpointKeysResult {
      */
     private final @Nullable String secondaryKey;
 
-    @OutputCustomType.Constructor({"primaryKey","secondaryKey"})
+    @OutputCustomType.Constructor
     private ListBatchEndpointKeysResult(
-        @Nullable String primaryKey,
-        @Nullable String secondaryKey) {
+        @OutputCustomType.Parameter("primaryKey") @Nullable String primaryKey,
+        @OutputCustomType.Parameter("secondaryKey") @Nullable String secondaryKey) {
         this.primaryKey = primaryKey;
         this.secondaryKey = secondaryKey;
     }

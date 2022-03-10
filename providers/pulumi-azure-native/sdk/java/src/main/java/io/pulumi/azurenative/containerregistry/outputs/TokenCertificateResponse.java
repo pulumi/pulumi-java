@@ -28,12 +28,12 @@ public final class TokenCertificateResponse {
      */
     private final @Nullable String thumbprint;
 
-    @OutputCustomType.Constructor({"encodedPemCertificate","expiry","name","thumbprint"})
+    @OutputCustomType.Constructor
     private TokenCertificateResponse(
-        @Nullable String encodedPemCertificate,
-        @Nullable String expiry,
-        @Nullable String name,
-        @Nullable String thumbprint) {
+        @OutputCustomType.Parameter("encodedPemCertificate") @Nullable String encodedPemCertificate,
+        @OutputCustomType.Parameter("expiry") @Nullable String expiry,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("thumbprint") @Nullable String thumbprint) {
         this.encodedPemCertificate = encodedPemCertificate;
         this.expiry = expiry;
         this.name = name;

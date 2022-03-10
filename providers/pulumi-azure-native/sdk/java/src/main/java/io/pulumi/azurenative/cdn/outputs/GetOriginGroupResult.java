@@ -68,18 +68,18 @@ public final class GetOriginGroupResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"healthProbeSettings","id","name","origins","provisioningState","resourceState","responseBasedOriginErrorDetectionSettings","systemData","trafficRestorationTimeToHealedOrNewEndpointsInMinutes","type"})
+    @OutputCustomType.Constructor
     private GetOriginGroupResult(
-        @Nullable HealthProbeParametersResponse healthProbeSettings,
-        String id,
-        String name,
-        List<ResourceReferenceResponse> origins,
-        String provisioningState,
-        String resourceState,
-        @Nullable ResponseBasedOriginErrorDetectionParametersResponse responseBasedOriginErrorDetectionSettings,
-        SystemDataResponse systemData,
-        @Nullable Integer trafficRestorationTimeToHealedOrNewEndpointsInMinutes,
-        String type) {
+        @OutputCustomType.Parameter("healthProbeSettings") @Nullable HealthProbeParametersResponse healthProbeSettings,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("origins") List<ResourceReferenceResponse> origins,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("resourceState") String resourceState,
+        @OutputCustomType.Parameter("responseBasedOriginErrorDetectionSettings") @Nullable ResponseBasedOriginErrorDetectionParametersResponse responseBasedOriginErrorDetectionSettings,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("trafficRestorationTimeToHealedOrNewEndpointsInMinutes") @Nullable Integer trafficRestorationTimeToHealedOrNewEndpointsInMinutes,
+        @OutputCustomType.Parameter("type") String type) {
         this.healthProbeSettings = healthProbeSettings;
         this.id = id;
         this.name = name;

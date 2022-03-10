@@ -86,22 +86,22 @@ public final class GetMSIXPackageResult {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"displayName","id","imagePath","isActive","isRegularRegistration","lastUpdated","name","packageApplications","packageDependencies","packageFamilyName","packageName","packageRelativePath","type","version"})
+    @OutputCustomType.Constructor
     private GetMSIXPackageResult(
-        @Nullable String displayName,
-        String id,
-        @Nullable String imagePath,
-        @Nullable Boolean isActive,
-        @Nullable Boolean isRegularRegistration,
-        @Nullable String lastUpdated,
-        String name,
-        @Nullable List<MsixPackageApplicationsResponse> packageApplications,
-        @Nullable List<MsixPackageDependenciesResponse> packageDependencies,
-        @Nullable String packageFamilyName,
-        @Nullable String packageName,
-        @Nullable String packageRelativePath,
-        String type,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("imagePath") @Nullable String imagePath,
+        @OutputCustomType.Parameter("isActive") @Nullable Boolean isActive,
+        @OutputCustomType.Parameter("isRegularRegistration") @Nullable Boolean isRegularRegistration,
+        @OutputCustomType.Parameter("lastUpdated") @Nullable String lastUpdated,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("packageApplications") @Nullable List<MsixPackageApplicationsResponse> packageApplications,
+        @OutputCustomType.Parameter("packageDependencies") @Nullable List<MsixPackageDependenciesResponse> packageDependencies,
+        @OutputCustomType.Parameter("packageFamilyName") @Nullable String packageFamilyName,
+        @OutputCustomType.Parameter("packageName") @Nullable String packageName,
+        @OutputCustomType.Parameter("packageRelativePath") @Nullable String packageRelativePath,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.displayName = displayName;
         this.id = id;
         this.imagePath = imagePath;

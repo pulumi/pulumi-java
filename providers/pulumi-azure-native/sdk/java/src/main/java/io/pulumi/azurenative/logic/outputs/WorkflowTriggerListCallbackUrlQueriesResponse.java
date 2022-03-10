@@ -37,13 +37,13 @@ public final class WorkflowTriggerListCallbackUrlQueriesResponse {
      */
     private final @Nullable String sv;
 
-    @OutputCustomType.Constructor({"apiVersion","se","sig","sp","sv"})
+    @OutputCustomType.Constructor
     private WorkflowTriggerListCallbackUrlQueriesResponse(
-        @Nullable String apiVersion,
-        @Nullable String se,
-        @Nullable String sig,
-        @Nullable String sp,
-        @Nullable String sv) {
+        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @OutputCustomType.Parameter("se") @Nullable String se,
+        @OutputCustomType.Parameter("sig") @Nullable String sig,
+        @OutputCustomType.Parameter("sp") @Nullable String sp,
+        @OutputCustomType.Parameter("sv") @Nullable String sv) {
         this.apiVersion = apiVersion;
         this.se = se;
         this.sig = sig;

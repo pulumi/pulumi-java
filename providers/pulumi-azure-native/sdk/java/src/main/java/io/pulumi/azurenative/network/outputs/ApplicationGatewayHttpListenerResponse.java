@@ -91,23 +91,23 @@ public final class ApplicationGatewayHttpListenerResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"customErrorConfigurations","etag","firewallPolicy","frontendIPConfiguration","frontendPort","hostName","hostNames","id","name","protocol","provisioningState","requireServerNameIndication","sslCertificate","sslProfile","type"})
+    @OutputCustomType.Constructor
     private ApplicationGatewayHttpListenerResponse(
-        @Nullable List<ApplicationGatewayCustomErrorResponse> customErrorConfigurations,
-        String etag,
-        @Nullable SubResourceResponse firewallPolicy,
-        @Nullable SubResourceResponse frontendIPConfiguration,
-        @Nullable SubResourceResponse frontendPort,
-        @Nullable String hostName,
-        @Nullable List<String> hostNames,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable String protocol,
-        String provisioningState,
-        @Nullable Boolean requireServerNameIndication,
-        @Nullable SubResourceResponse sslCertificate,
-        @Nullable SubResourceResponse sslProfile,
-        String type) {
+        @OutputCustomType.Parameter("customErrorConfigurations") @Nullable List<ApplicationGatewayCustomErrorResponse> customErrorConfigurations,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("firewallPolicy") @Nullable SubResourceResponse firewallPolicy,
+        @OutputCustomType.Parameter("frontendIPConfiguration") @Nullable SubResourceResponse frontendIPConfiguration,
+        @OutputCustomType.Parameter("frontendPort") @Nullable SubResourceResponse frontendPort,
+        @OutputCustomType.Parameter("hostName") @Nullable String hostName,
+        @OutputCustomType.Parameter("hostNames") @Nullable List<String> hostNames,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("requireServerNameIndication") @Nullable Boolean requireServerNameIndication,
+        @OutputCustomType.Parameter("sslCertificate") @Nullable SubResourceResponse sslCertificate,
+        @OutputCustomType.Parameter("sslProfile") @Nullable SubResourceResponse sslProfile,
+        @OutputCustomType.Parameter("type") String type) {
         this.customErrorConfigurations = customErrorConfigurations;
         this.etag = etag;
         this.firewallPolicy = firewallPolicy;

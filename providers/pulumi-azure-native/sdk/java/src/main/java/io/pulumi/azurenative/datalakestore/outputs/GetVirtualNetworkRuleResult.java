@@ -30,12 +30,12 @@ public final class GetVirtualNetworkRuleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","subnetId","type"})
+    @OutputCustomType.Constructor
     private GetVirtualNetworkRuleResult(
-        String id,
-        String name,
-        String subnetId,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("subnetId") String subnetId,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.subnetId = subnetId;

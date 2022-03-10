@@ -50,15 +50,15 @@ public final class HdfsSourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"disableMetricsCollection","distcpSettings","maxConcurrentConnections","recursive","sourceRetryCount","sourceRetryWait","type"})
+    @OutputCustomType.Constructor
     private HdfsSourceResponse(
-        @Nullable Object disableMetricsCollection,
-        @Nullable DistcpSettingsResponse distcpSettings,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable Object recursive,
-        @Nullable Object sourceRetryCount,
-        @Nullable Object sourceRetryWait,
-        String type) {
+        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @OutputCustomType.Parameter("distcpSettings") @Nullable DistcpSettingsResponse distcpSettings,
+        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @OutputCustomType.Parameter("recursive") @Nullable Object recursive,
+        @OutputCustomType.Parameter("sourceRetryCount") @Nullable Object sourceRetryCount,
+        @OutputCustomType.Parameter("sourceRetryWait") @Nullable Object sourceRetryWait,
+        @OutputCustomType.Parameter("type") String type) {
         this.disableMetricsCollection = disableMetricsCollection;
         this.distcpSettings = distcpSettings;
         this.maxConcurrentConnections = maxConcurrentConnections;

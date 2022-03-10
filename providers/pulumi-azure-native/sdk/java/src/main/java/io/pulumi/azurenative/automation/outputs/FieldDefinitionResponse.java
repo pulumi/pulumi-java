@@ -28,11 +28,11 @@ public final class FieldDefinitionResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"isEncrypted","isOptional","type"})
+    @OutputCustomType.Constructor
     private FieldDefinitionResponse(
-        @Nullable Boolean isEncrypted,
-        @Nullable Boolean isOptional,
-        String type) {
+        @OutputCustomType.Parameter("isEncrypted") @Nullable Boolean isEncrypted,
+        @OutputCustomType.Parameter("isOptional") @Nullable Boolean isOptional,
+        @OutputCustomType.Parameter("type") String type) {
         this.isEncrypted = isEncrypted;
         this.isOptional = isOptional;
         this.type = type;

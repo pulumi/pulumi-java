@@ -71,19 +71,19 @@ public final class NetworkInterfaceResponse {
      */
     private final @Nullable String powerOnBoot;
 
-    @OutputCustomType.Constructor({"deviceKey","ipAddresses","ipSettings","label","macAddress","name","networkId","networkMoName","networkMoRefId","nicType","powerOnBoot"})
+    @OutputCustomType.Constructor
     private NetworkInterfaceResponse(
-        @Nullable Integer deviceKey,
-        List<String> ipAddresses,
-        @Nullable NicIPSettingsResponse ipSettings,
-        String label,
-        String macAddress,
-        @Nullable String name,
-        @Nullable String networkId,
-        String networkMoName,
-        String networkMoRefId,
-        @Nullable String nicType,
-        @Nullable String powerOnBoot) {
+        @OutputCustomType.Parameter("deviceKey") @Nullable Integer deviceKey,
+        @OutputCustomType.Parameter("ipAddresses") List<String> ipAddresses,
+        @OutputCustomType.Parameter("ipSettings") @Nullable NicIPSettingsResponse ipSettings,
+        @OutputCustomType.Parameter("label") String label,
+        @OutputCustomType.Parameter("macAddress") String macAddress,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("networkId") @Nullable String networkId,
+        @OutputCustomType.Parameter("networkMoName") String networkMoName,
+        @OutputCustomType.Parameter("networkMoRefId") String networkMoRefId,
+        @OutputCustomType.Parameter("nicType") @Nullable String nicType,
+        @OutputCustomType.Parameter("powerOnBoot") @Nullable String powerOnBoot) {
         this.deviceKey = deviceKey;
         this.ipAddresses = ipAddresses;
         this.ipSettings = ipSettings;

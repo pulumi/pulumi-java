@@ -25,11 +25,11 @@ public final class KeyVaultMetaInfoResponse {
      */
     private final String keyVaultResourceId;
 
-    @OutputCustomType.Constructor({"encryptionKeyName","encryptionKeyVersion","keyVaultResourceId"})
+    @OutputCustomType.Constructor
     private KeyVaultMetaInfoResponse(
-        String encryptionKeyName,
-        String encryptionKeyVersion,
-        String keyVaultResourceId) {
+        @OutputCustomType.Parameter("encryptionKeyName") String encryptionKeyName,
+        @OutputCustomType.Parameter("encryptionKeyVersion") String encryptionKeyVersion,
+        @OutputCustomType.Parameter("keyVaultResourceId") String keyVaultResourceId) {
         this.encryptionKeyName = encryptionKeyName;
         this.encryptionKeyVersion = encryptionKeyVersion;
         this.keyVaultResourceId = keyVaultResourceId;

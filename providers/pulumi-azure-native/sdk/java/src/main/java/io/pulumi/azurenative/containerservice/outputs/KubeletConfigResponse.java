@@ -70,19 +70,19 @@ public final class KubeletConfigResponse {
      */
     private final @Nullable String topologyManagerPolicy;
 
-    @OutputCustomType.Constructor({"allowedUnsafeSysctls","containerLogMaxFiles","containerLogMaxSizeMB","cpuCfsQuota","cpuCfsQuotaPeriod","cpuManagerPolicy","failSwapOn","imageGcHighThreshold","imageGcLowThreshold","podMaxPids","topologyManagerPolicy"})
+    @OutputCustomType.Constructor
     private KubeletConfigResponse(
-        @Nullable List<String> allowedUnsafeSysctls,
-        @Nullable Integer containerLogMaxFiles,
-        @Nullable Integer containerLogMaxSizeMB,
-        @Nullable Boolean cpuCfsQuota,
-        @Nullable String cpuCfsQuotaPeriod,
-        @Nullable String cpuManagerPolicy,
-        @Nullable Boolean failSwapOn,
-        @Nullable Integer imageGcHighThreshold,
-        @Nullable Integer imageGcLowThreshold,
-        @Nullable Integer podMaxPids,
-        @Nullable String topologyManagerPolicy) {
+        @OutputCustomType.Parameter("allowedUnsafeSysctls") @Nullable List<String> allowedUnsafeSysctls,
+        @OutputCustomType.Parameter("containerLogMaxFiles") @Nullable Integer containerLogMaxFiles,
+        @OutputCustomType.Parameter("containerLogMaxSizeMB") @Nullable Integer containerLogMaxSizeMB,
+        @OutputCustomType.Parameter("cpuCfsQuota") @Nullable Boolean cpuCfsQuota,
+        @OutputCustomType.Parameter("cpuCfsQuotaPeriod") @Nullable String cpuCfsQuotaPeriod,
+        @OutputCustomType.Parameter("cpuManagerPolicy") @Nullable String cpuManagerPolicy,
+        @OutputCustomType.Parameter("failSwapOn") @Nullable Boolean failSwapOn,
+        @OutputCustomType.Parameter("imageGcHighThreshold") @Nullable Integer imageGcHighThreshold,
+        @OutputCustomType.Parameter("imageGcLowThreshold") @Nullable Integer imageGcLowThreshold,
+        @OutputCustomType.Parameter("podMaxPids") @Nullable Integer podMaxPids,
+        @OutputCustomType.Parameter("topologyManagerPolicy") @Nullable String topologyManagerPolicy) {
         this.allowedUnsafeSysctls = allowedUnsafeSysctls;
         this.containerLogMaxFiles = containerLogMaxFiles;
         this.containerLogMaxSizeMB = containerLogMaxSizeMB;

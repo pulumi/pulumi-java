@@ -42,14 +42,14 @@ public final class GetGuestDiagnosticsSettingsAssociationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"guestDiagnosticSettingsName","id","location","name","tags","type"})
+    @OutputCustomType.Constructor
     private GetGuestDiagnosticsSettingsAssociationResult(
-        String guestDiagnosticSettingsName,
-        String id,
-        String location,
-        String name,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("guestDiagnosticSettingsName") String guestDiagnosticSettingsName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.guestDiagnosticSettingsName = guestDiagnosticSettingsName;
         this.id = id;
         this.location = location;

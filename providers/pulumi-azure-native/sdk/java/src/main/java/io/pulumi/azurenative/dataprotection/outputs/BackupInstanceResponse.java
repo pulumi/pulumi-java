@@ -58,17 +58,17 @@ public final class BackupInstanceResponse {
      */
     private final String provisioningState;
 
-    @OutputCustomType.Constructor({"currentProtectionState","dataSourceInfo","dataSourceSetInfo","friendlyName","objectType","policyInfo","protectionErrorDetails","protectionStatus","provisioningState"})
+    @OutputCustomType.Constructor
     private BackupInstanceResponse(
-        String currentProtectionState,
-        DatasourceResponse dataSourceInfo,
-        @Nullable DatasourceSetResponse dataSourceSetInfo,
-        @Nullable String friendlyName,
-        String objectType,
-        PolicyInfoResponse policyInfo,
-        UserFacingErrorResponse protectionErrorDetails,
-        ProtectionStatusDetailsResponse protectionStatus,
-        String provisioningState) {
+        @OutputCustomType.Parameter("currentProtectionState") String currentProtectionState,
+        @OutputCustomType.Parameter("dataSourceInfo") DatasourceResponse dataSourceInfo,
+        @OutputCustomType.Parameter("dataSourceSetInfo") @Nullable DatasourceSetResponse dataSourceSetInfo,
+        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @OutputCustomType.Parameter("objectType") String objectType,
+        @OutputCustomType.Parameter("policyInfo") PolicyInfoResponse policyInfo,
+        @OutputCustomType.Parameter("protectionErrorDetails") UserFacingErrorResponse protectionErrorDetails,
+        @OutputCustomType.Parameter("protectionStatus") ProtectionStatusDetailsResponse protectionStatus,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState) {
         this.currentProtectionState = currentProtectionState;
         this.dataSourceInfo = dataSourceInfo;
         this.dataSourceSetInfo = dataSourceSetInfo;

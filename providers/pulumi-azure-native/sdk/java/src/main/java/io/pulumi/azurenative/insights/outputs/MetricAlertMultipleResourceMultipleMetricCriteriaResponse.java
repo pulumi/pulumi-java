@@ -26,10 +26,10 @@ public final class MetricAlertMultipleResourceMultipleMetricCriteriaResponse {
      */
     private final String odataType;
 
-    @OutputCustomType.Constructor({"allOf","odataType"})
+    @OutputCustomType.Constructor
     private MetricAlertMultipleResourceMultipleMetricCriteriaResponse(
-        @Nullable List<Either<DynamicMetricCriteriaResponse,MetricCriteriaResponse>> allOf,
-        String odataType) {
+        @OutputCustomType.Parameter("allOf") @Nullable List<Either<DynamicMetricCriteriaResponse,MetricCriteriaResponse>> allOf,
+        @OutputCustomType.Parameter("odataType") String odataType) {
         this.allOf = allOf;
         this.odataType = odataType;
     }

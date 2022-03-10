@@ -31,11 +31,11 @@ public final class DashboardLensResponse {
      */
     private final List<DashboardPartsResponse> parts;
 
-    @OutputCustomType.Constructor({"metadata","order","parts"})
+    @OutputCustomType.Constructor
     private DashboardLensResponse(
-        @Nullable Map<String,Object> metadata,
-        Integer order,
-        List<DashboardPartsResponse> parts) {
+        @OutputCustomType.Parameter("metadata") @Nullable Map<String,Object> metadata,
+        @OutputCustomType.Parameter("order") Integer order,
+        @OutputCustomType.Parameter("parts") List<DashboardPartsResponse> parts) {
         this.metadata = metadata;
         this.order = order;
         this.parts = parts;

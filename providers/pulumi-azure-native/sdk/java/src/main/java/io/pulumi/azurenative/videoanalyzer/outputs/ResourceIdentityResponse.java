@@ -15,8 +15,8 @@ public final class ResourceIdentityResponse {
      */
     private final String userAssignedIdentity;
 
-    @OutputCustomType.Constructor({"userAssignedIdentity"})
-    private ResourceIdentityResponse(String userAssignedIdentity) {
+    @OutputCustomType.Constructor
+    private ResourceIdentityResponse(@OutputCustomType.Parameter("userAssignedIdentity") String userAssignedIdentity) {
         this.userAssignedIdentity = userAssignedIdentity;
     }
 

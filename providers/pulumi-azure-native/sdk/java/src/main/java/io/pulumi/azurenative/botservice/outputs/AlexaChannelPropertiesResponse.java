@@ -31,12 +31,12 @@ public final class AlexaChannelPropertiesResponse {
      */
     private final String urlFragment;
 
-    @OutputCustomType.Constructor({"alexaSkillId","isEnabled","serviceEndpointUri","urlFragment"})
+    @OutputCustomType.Constructor
     private AlexaChannelPropertiesResponse(
-        String alexaSkillId,
-        Boolean isEnabled,
-        String serviceEndpointUri,
-        String urlFragment) {
+        @OutputCustomType.Parameter("alexaSkillId") String alexaSkillId,
+        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
+        @OutputCustomType.Parameter("serviceEndpointUri") String serviceEndpointUri,
+        @OutputCustomType.Parameter("urlFragment") String urlFragment) {
         this.alexaSkillId = alexaSkillId;
         this.isEnabled = isEnabled;
         this.serviceEndpointUri = serviceEndpointUri;

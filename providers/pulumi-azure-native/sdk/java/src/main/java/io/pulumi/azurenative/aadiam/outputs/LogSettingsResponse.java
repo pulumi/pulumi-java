@@ -29,11 +29,11 @@ public final class LogSettingsResponse {
      */
     private final @Nullable RetentionPolicyResponse retentionPolicy;
 
-    @OutputCustomType.Constructor({"category","enabled","retentionPolicy"})
+    @OutputCustomType.Constructor
     private LogSettingsResponse(
-        @Nullable String category,
-        Boolean enabled,
-        @Nullable RetentionPolicyResponse retentionPolicy) {
+        @OutputCustomType.Parameter("category") @Nullable String category,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("retentionPolicy") @Nullable RetentionPolicyResponse retentionPolicy) {
         this.category = category;
         this.enabled = enabled;
         this.retentionPolicy = retentionPolicy;

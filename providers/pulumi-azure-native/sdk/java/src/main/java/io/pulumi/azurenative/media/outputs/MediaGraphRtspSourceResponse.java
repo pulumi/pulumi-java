@@ -34,12 +34,12 @@ public final class MediaGraphRtspSourceResponse {
      */
     private final String transport;
 
-    @OutputCustomType.Constructor({"endpoint","name","odataType","transport"})
+    @OutputCustomType.Constructor
     private MediaGraphRtspSourceResponse(
-        Either<MediaGraphClearEndpointResponse,MediaGraphTlsEndpointResponse> endpoint,
-        String name,
-        String odataType,
-        String transport) {
+        @OutputCustomType.Parameter("endpoint") Either<MediaGraphClearEndpointResponse,MediaGraphTlsEndpointResponse> endpoint,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("transport") String transport) {
         this.endpoint = endpoint;
         this.name = name;
         this.odataType = odataType;

@@ -61,17 +61,17 @@ public final class GetStorageInsightConfigResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"containers","eTag","id","name","status","storageAccount","tables","tags","type"})
+    @OutputCustomType.Constructor
     private GetStorageInsightConfigResult(
-        @Nullable List<String> containers,
-        @Nullable String eTag,
-        String id,
-        String name,
-        StorageInsightStatusResponse status,
-        StorageAccountResponse storageAccount,
-        @Nullable List<String> tables,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("containers") @Nullable List<String> containers,
+        @OutputCustomType.Parameter("eTag") @Nullable String eTag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("status") StorageInsightStatusResponse status,
+        @OutputCustomType.Parameter("storageAccount") StorageAccountResponse storageAccount,
+        @OutputCustomType.Parameter("tables") @Nullable List<String> tables,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.containers = containers;
         this.eTag = eTag;
         this.id = id;

@@ -27,11 +27,11 @@ public final class VirtualMachineRunCommandScriptSourceResponse {
      */
     private final @Nullable String scriptUri;
 
-    @OutputCustomType.Constructor({"commandId","script","scriptUri"})
+    @OutputCustomType.Constructor
     private VirtualMachineRunCommandScriptSourceResponse(
-        @Nullable String commandId,
-        @Nullable String script,
-        @Nullable String scriptUri) {
+        @OutputCustomType.Parameter("commandId") @Nullable String commandId,
+        @OutputCustomType.Parameter("script") @Nullable String script,
+        @OutputCustomType.Parameter("scriptUri") @Nullable String scriptUri) {
         this.commandId = commandId;
         this.script = script;
         this.scriptUri = scriptUri;

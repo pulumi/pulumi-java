@@ -28,11 +28,11 @@ public final class ArmRoleReceiverResponse {
      */
     private final @Nullable Boolean useCommonAlertSchema;
 
-    @OutputCustomType.Constructor({"name","roleId","useCommonAlertSchema"})
+    @OutputCustomType.Constructor
     private ArmRoleReceiverResponse(
-        String name,
-        String roleId,
-        @Nullable Boolean useCommonAlertSchema) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("roleId") String roleId,
+        @OutputCustomType.Parameter("useCommonAlertSchema") @Nullable Boolean useCommonAlertSchema) {
         this.name = name;
         this.roleId = roleId;
         this.useCommonAlertSchema = useCommonAlertSchema;

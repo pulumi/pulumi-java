@@ -24,10 +24,10 @@ public final class GetAssetEncryptionKeyResult {
      */
     private final @Nullable String key;
 
-    @OutputCustomType.Constructor({"assetFileEncryptionMetadata","key"})
+    @OutputCustomType.Constructor
     private GetAssetEncryptionKeyResult(
-        @Nullable List<AssetFileEncryptionMetadataResponse> assetFileEncryptionMetadata,
-        @Nullable String key) {
+        @OutputCustomType.Parameter("assetFileEncryptionMetadata") @Nullable List<AssetFileEncryptionMetadataResponse> assetFileEncryptionMetadata,
+        @OutputCustomType.Parameter("key") @Nullable String key) {
         this.assetFileEncryptionMetadata = assetFileEncryptionMetadata;
         this.key = key;
     }

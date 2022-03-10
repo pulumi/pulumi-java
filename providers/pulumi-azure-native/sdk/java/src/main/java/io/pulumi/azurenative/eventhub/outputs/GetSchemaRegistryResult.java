@@ -61,19 +61,19 @@ public final class GetSchemaRegistryResult {
      */
     private final String updatedAtUtc;
 
-    @OutputCustomType.Constructor({"createdAtUtc","eTag","groupProperties","id","location","name","schemaCompatibility","schemaType","systemData","type","updatedAtUtc"})
+    @OutputCustomType.Constructor
     private GetSchemaRegistryResult(
-        String createdAtUtc,
-        String eTag,
-        @Nullable Map<String,String> groupProperties,
-        String id,
-        String location,
-        String name,
-        @Nullable String schemaCompatibility,
-        @Nullable String schemaType,
-        SystemDataResponse systemData,
-        String type,
-        String updatedAtUtc) {
+        @OutputCustomType.Parameter("createdAtUtc") String createdAtUtc,
+        @OutputCustomType.Parameter("eTag") String eTag,
+        @OutputCustomType.Parameter("groupProperties") @Nullable Map<String,String> groupProperties,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("schemaCompatibility") @Nullable String schemaCompatibility,
+        @OutputCustomType.Parameter("schemaType") @Nullable String schemaType,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("updatedAtUtc") String updatedAtUtc) {
         this.createdAtUtc = createdAtUtc;
         this.eTag = eTag;
         this.groupProperties = groupProperties;

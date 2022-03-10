@@ -16,8 +16,8 @@ public final class ListIngestionSettingConnectionStringsResult {
      */
     private final List<IngestionConnectionStringResponse> value;
 
-    @OutputCustomType.Constructor({"value"})
-    private ListIngestionSettingConnectionStringsResult(List<IngestionConnectionStringResponse> value) {
+    @OutputCustomType.Constructor
+    private ListIngestionSettingConnectionStringsResult(@OutputCustomType.Parameter("value") List<IngestionConnectionStringResponse> value) {
         this.value = value;
     }
 

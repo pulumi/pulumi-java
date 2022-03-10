@@ -32,12 +32,12 @@ public final class ParameterDeclarationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"$default","description","name","type"})
+    @OutputCustomType.Constructor
     private ParameterDeclarationResponse(
-        @Nullable String $default,
-        @Nullable String description,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("default") @Nullable String $default,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.$default = $default;
         this.description = description;
         this.name = name;

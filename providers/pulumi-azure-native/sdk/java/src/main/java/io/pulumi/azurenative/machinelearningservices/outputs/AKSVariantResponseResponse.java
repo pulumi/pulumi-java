@@ -67,18 +67,18 @@ public final class AKSVariantResponseResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"computeType","deploymentType","description","error","isDefault","kvTags","properties","state","trafficPercentile","type"})
+    @OutputCustomType.Constructor
     private AKSVariantResponseResponse(
-        String computeType,
-        @Nullable String deploymentType,
-        @Nullable String description,
-        ServiceResponseBaseResponseError error,
-        @Nullable Boolean isDefault,
-        @Nullable Map<String,String> kvTags,
-        @Nullable Map<String,String> properties,
-        String state,
-        @Nullable Double trafficPercentile,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("computeType") String computeType,
+        @OutputCustomType.Parameter("deploymentType") @Nullable String deploymentType,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("error") ServiceResponseBaseResponseError error,
+        @OutputCustomType.Parameter("isDefault") @Nullable Boolean isDefault,
+        @OutputCustomType.Parameter("kvTags") @Nullable Map<String,String> kvTags,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("trafficPercentile") @Nullable Double trafficPercentile,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.computeType = computeType;
         this.deploymentType = deploymentType;
         this.description = description;

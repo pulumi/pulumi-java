@@ -30,12 +30,12 @@ public final class ForwardShippingDetailsResponse {
      */
     private final String trackingUrl;
 
-    @OutputCustomType.Constructor({"carrierDisplayName","carrierName","trackingId","trackingUrl"})
+    @OutputCustomType.Constructor
     private ForwardShippingDetailsResponse(
-        String carrierDisplayName,
-        String carrierName,
-        String trackingId,
-        String trackingUrl) {
+        @OutputCustomType.Parameter("carrierDisplayName") String carrierDisplayName,
+        @OutputCustomType.Parameter("carrierName") String carrierName,
+        @OutputCustomType.Parameter("trackingId") String trackingId,
+        @OutputCustomType.Parameter("trackingUrl") String trackingUrl) {
         this.carrierDisplayName = carrierDisplayName;
         this.carrierName = carrierName;
         this.trackingId = trackingId;

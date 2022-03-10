@@ -56,15 +56,15 @@ public final class JobInputAssetResponse {
      */
     private final @Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> start;
 
-    @OutputCustomType.Constructor({"assetName","end","files","inputDefinitions","label","odataType","start"})
+    @OutputCustomType.Constructor
     private JobInputAssetResponse(
-        String assetName,
-        @Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> end,
-        @Nullable List<String> files,
-        @Nullable List<Object> inputDefinitions,
-        @Nullable String label,
-        String odataType,
-        @Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> start) {
+        @OutputCustomType.Parameter("assetName") String assetName,
+        @OutputCustomType.Parameter("end") @Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> end,
+        @OutputCustomType.Parameter("files") @Nullable List<String> files,
+        @OutputCustomType.Parameter("inputDefinitions") @Nullable List<Object> inputDefinitions,
+        @OutputCustomType.Parameter("label") @Nullable String label,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("start") @Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> start) {
         this.assetName = assetName;
         this.end = end;
         this.files = files;

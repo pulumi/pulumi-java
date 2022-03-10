@@ -48,15 +48,15 @@ public final class GetDataPoolResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"dataPoolId","id","locations","name","provisioningState","systemData","type"})
+    @OutputCustomType.Constructor
     private GetDataPoolResult(
-        String dataPoolId,
-        String id,
-        List<DataPoolLocationResponse> locations,
-        String name,
-        String provisioningState,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("dataPoolId") String dataPoolId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("locations") List<DataPoolLocationResponse> locations,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.dataPoolId = dataPoolId;
         this.id = id;
         this.locations = locations;

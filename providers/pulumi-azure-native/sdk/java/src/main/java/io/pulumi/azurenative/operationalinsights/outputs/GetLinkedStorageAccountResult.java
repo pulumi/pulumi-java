@@ -37,13 +37,13 @@ public final class GetLinkedStorageAccountResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"dataSourceType","id","name","storageAccountIds","type"})
+    @OutputCustomType.Constructor
     private GetLinkedStorageAccountResult(
-        String dataSourceType,
-        String id,
-        String name,
-        @Nullable List<String> storageAccountIds,
-        String type) {
+        @OutputCustomType.Parameter("dataSourceType") String dataSourceType,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("storageAccountIds") @Nullable List<String> storageAccountIds,
+        @OutputCustomType.Parameter("type") String type) {
         this.dataSourceType = dataSourceType;
         this.id = id;
         this.name = name;

@@ -60,17 +60,17 @@ public final class ApplicationRuleConditionResponse {
      */
     private final @Nullable List<String> targetFqdns;
 
-    @OutputCustomType.Constructor({"description","destinationAddresses","fqdnTags","name","protocols","ruleConditionType","sourceAddresses","sourceIpGroups","targetFqdns"})
+    @OutputCustomType.Constructor
     private ApplicationRuleConditionResponse(
-        @Nullable String description,
-        @Nullable List<String> destinationAddresses,
-        @Nullable List<String> fqdnTags,
-        @Nullable String name,
-        @Nullable List<FirewallPolicyRuleConditionApplicationProtocolResponse> protocols,
-        String ruleConditionType,
-        @Nullable List<String> sourceAddresses,
-        @Nullable List<String> sourceIpGroups,
-        @Nullable List<String> targetFqdns) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("destinationAddresses") @Nullable List<String> destinationAddresses,
+        @OutputCustomType.Parameter("fqdnTags") @Nullable List<String> fqdnTags,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("protocols") @Nullable List<FirewallPolicyRuleConditionApplicationProtocolResponse> protocols,
+        @OutputCustomType.Parameter("ruleConditionType") String ruleConditionType,
+        @OutputCustomType.Parameter("sourceAddresses") @Nullable List<String> sourceAddresses,
+        @OutputCustomType.Parameter("sourceIpGroups") @Nullable List<String> sourceIpGroups,
+        @OutputCustomType.Parameter("targetFqdns") @Nullable List<String> targetFqdns) {
         this.description = description;
         this.destinationAddresses = destinationAddresses;
         this.fqdnTags = fqdnTags;

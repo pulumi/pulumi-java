@@ -33,12 +33,12 @@ public final class DiscreteActionResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"name","parameters","selectorId","type"})
+    @OutputCustomType.Constructor
     private DiscreteActionResponse(
-        String name,
-        List<KeyValuePairResponse> parameters,
-        String selectorId,
-        String type) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") List<KeyValuePairResponse> parameters,
+        @OutputCustomType.Parameter("selectorId") String selectorId,
+        @OutputCustomType.Parameter("type") String type) {
         this.name = name;
         this.parameters = parameters;
         this.selectorId = selectorId;

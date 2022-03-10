@@ -76,20 +76,20 @@ public final class GetStorageSyncServiceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","incomingTrafficPolicy","lastOperationName","lastWorkflowId","location","name","privateEndpointConnections","provisioningState","storageSyncServiceStatus","storageSyncServiceUid","tags","type"})
+    @OutputCustomType.Constructor
     private GetStorageSyncServiceResult(
-        String id,
-        @Nullable String incomingTrafficPolicy,
-        String lastOperationName,
-        String lastWorkflowId,
-        String location,
-        String name,
-        List<PrivateEndpointConnectionResponse> privateEndpointConnections,
-        String provisioningState,
-        Integer storageSyncServiceStatus,
-        String storageSyncServiceUid,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("incomingTrafficPolicy") @Nullable String incomingTrafficPolicy,
+        @OutputCustomType.Parameter("lastOperationName") String lastOperationName,
+        @OutputCustomType.Parameter("lastWorkflowId") String lastWorkflowId,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("privateEndpointConnections") List<PrivateEndpointConnectionResponse> privateEndpointConnections,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("storageSyncServiceStatus") Integer storageSyncServiceStatus,
+        @OutputCustomType.Parameter("storageSyncServiceUid") String storageSyncServiceUid,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.incomingTrafficPolicy = incomingTrafficPolicy;
         this.lastOperationName = lastOperationName;

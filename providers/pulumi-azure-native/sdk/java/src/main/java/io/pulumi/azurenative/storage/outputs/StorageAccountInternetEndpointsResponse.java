@@ -30,12 +30,12 @@ public final class StorageAccountInternetEndpointsResponse {
      */
     private final String web;
 
-    @OutputCustomType.Constructor({"blob","dfs","file","web"})
+    @OutputCustomType.Constructor
     private StorageAccountInternetEndpointsResponse(
-        String blob,
-        String dfs,
-        String file,
-        String web) {
+        @OutputCustomType.Parameter("blob") String blob,
+        @OutputCustomType.Parameter("dfs") String dfs,
+        @OutputCustomType.Parameter("file") String file,
+        @OutputCustomType.Parameter("web") String web) {
         this.blob = blob;
         this.dfs = dfs;
         this.file = file;

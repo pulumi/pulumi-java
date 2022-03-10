@@ -16,8 +16,8 @@ public final class ApplicationNotificationPolicyResponse {
      */
     private final List<ApplicationNotificationEndpointResponse> notificationEndpoints;
 
-    @OutputCustomType.Constructor({"notificationEndpoints"})
-    private ApplicationNotificationPolicyResponse(List<ApplicationNotificationEndpointResponse> notificationEndpoints) {
+    @OutputCustomType.Constructor
+    private ApplicationNotificationPolicyResponse(@OutputCustomType.Parameter("notificationEndpoints") List<ApplicationNotificationEndpointResponse> notificationEndpoints) {
         this.notificationEndpoints = notificationEndpoints;
     }
 

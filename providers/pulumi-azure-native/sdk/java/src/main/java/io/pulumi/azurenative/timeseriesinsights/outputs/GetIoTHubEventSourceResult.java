@@ -90,23 +90,23 @@ public final class GetIoTHubEventSourceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"consumerGroupName","creationTime","eventSourceResourceId","id","iotHubName","keyName","kind","localTimestamp","location","name","provisioningState","tags","time","timestampPropertyName","type"})
+    @OutputCustomType.Constructor
     private GetIoTHubEventSourceResult(
-        String consumerGroupName,
-        String creationTime,
-        String eventSourceResourceId,
-        String id,
-        String iotHubName,
-        String keyName,
-        String kind,
-        @Nullable LocalTimestampResponse localTimestamp,
-        String location,
-        String name,
-        String provisioningState,
-        @Nullable Map<String,String> tags,
-        @Nullable String time,
-        @Nullable String timestampPropertyName,
-        String type) {
+        @OutputCustomType.Parameter("consumerGroupName") String consumerGroupName,
+        @OutputCustomType.Parameter("creationTime") String creationTime,
+        @OutputCustomType.Parameter("eventSourceResourceId") String eventSourceResourceId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("iotHubName") String iotHubName,
+        @OutputCustomType.Parameter("keyName") String keyName,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("localTimestamp") @Nullable LocalTimestampResponse localTimestamp,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("time") @Nullable String time,
+        @OutputCustomType.Parameter("timestampPropertyName") @Nullable String timestampPropertyName,
+        @OutputCustomType.Parameter("type") String type) {
         this.consumerGroupName = consumerGroupName;
         this.creationTime = creationTime;
         this.eventSourceResourceId = eventSourceResourceId;

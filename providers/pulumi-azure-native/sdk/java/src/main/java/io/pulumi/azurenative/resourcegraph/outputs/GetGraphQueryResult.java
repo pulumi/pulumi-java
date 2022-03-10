@@ -63,18 +63,18 @@ public final class GetGraphQueryResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"description","etag","id","location","name","query","resultKind","tags","timeModified","type"})
+    @OutputCustomType.Constructor
     private GetGraphQueryResult(
-        @Nullable String description,
-        @Nullable String etag,
-        String id,
-        @Nullable String location,
-        String name,
-        String query,
-        String resultKind,
-        @Nullable Map<String,String> tags,
-        String timeModified,
-        String type) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("query") String query,
+        @OutputCustomType.Parameter("resultKind") String resultKind,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("timeModified") String timeModified,
+        @OutputCustomType.Parameter("type") String type) {
         this.description = description;
         this.etag = etag;
         this.id = id;

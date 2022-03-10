@@ -17,8 +17,8 @@ public final class GetSolutionConfigResult {
      */
     private final @Nullable String publisherSasUri;
 
-    @OutputCustomType.Constructor({"publisherSasUri"})
-    private GetSolutionConfigResult(@Nullable String publisherSasUri) {
+    @OutputCustomType.Constructor
+    private GetSolutionConfigResult(@OutputCustomType.Parameter("publisherSasUri") @Nullable String publisherSasUri) {
         this.publisherSasUri = publisherSasUri;
     }
 

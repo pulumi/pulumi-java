@@ -17,8 +17,8 @@ public final class ServerAdministratorsResponse {
      */
     private final @Nullable List<String> members;
 
-    @OutputCustomType.Constructor({"members"})
-    private ServerAdministratorsResponse(@Nullable List<String> members) {
+    @OutputCustomType.Constructor
+    private ServerAdministratorsResponse(@OutputCustomType.Parameter("members") @Nullable List<String> members) {
         this.members = members;
     }
 

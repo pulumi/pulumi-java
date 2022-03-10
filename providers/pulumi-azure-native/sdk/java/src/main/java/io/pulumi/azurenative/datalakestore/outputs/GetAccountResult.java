@@ -137,32 +137,32 @@ public final class GetAccountResult {
      */
     private final List<VirtualNetworkRuleResponse> virtualNetworkRules;
 
-    @OutputCustomType.Constructor({"accountId","creationTime","currentTier","defaultGroup","encryptionConfig","encryptionProvisioningState","encryptionState","endpoint","firewallAllowAzureIps","firewallRules","firewallState","id","identity","lastModifiedTime","location","name","newTier","provisioningState","state","tags","trustedIdProviderState","trustedIdProviders","type","virtualNetworkRules"})
+    @OutputCustomType.Constructor
     private GetAccountResult(
-        String accountId,
-        String creationTime,
-        String currentTier,
-        String defaultGroup,
-        EncryptionConfigResponse encryptionConfig,
-        String encryptionProvisioningState,
-        String encryptionState,
-        String endpoint,
-        String firewallAllowAzureIps,
-        List<FirewallRuleResponse> firewallRules,
-        String firewallState,
-        String id,
-        EncryptionIdentityResponse identity,
-        String lastModifiedTime,
-        String location,
-        String name,
-        String newTier,
-        String provisioningState,
-        String state,
-        Map<String,String> tags,
-        String trustedIdProviderState,
-        List<TrustedIdProviderResponse> trustedIdProviders,
-        String type,
-        List<VirtualNetworkRuleResponse> virtualNetworkRules) {
+        @OutputCustomType.Parameter("accountId") String accountId,
+        @OutputCustomType.Parameter("creationTime") String creationTime,
+        @OutputCustomType.Parameter("currentTier") String currentTier,
+        @OutputCustomType.Parameter("defaultGroup") String defaultGroup,
+        @OutputCustomType.Parameter("encryptionConfig") EncryptionConfigResponse encryptionConfig,
+        @OutputCustomType.Parameter("encryptionProvisioningState") String encryptionProvisioningState,
+        @OutputCustomType.Parameter("encryptionState") String encryptionState,
+        @OutputCustomType.Parameter("endpoint") String endpoint,
+        @OutputCustomType.Parameter("firewallAllowAzureIps") String firewallAllowAzureIps,
+        @OutputCustomType.Parameter("firewallRules") List<FirewallRuleResponse> firewallRules,
+        @OutputCustomType.Parameter("firewallState") String firewallState,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") EncryptionIdentityResponse identity,
+        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("newTier") String newTier,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("trustedIdProviderState") String trustedIdProviderState,
+        @OutputCustomType.Parameter("trustedIdProviders") List<TrustedIdProviderResponse> trustedIdProviders,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("virtualNetworkRules") List<VirtualNetworkRuleResponse> virtualNetworkRules) {
         this.accountId = accountId;
         this.creationTime = creationTime;
         this.currentTier = currentTier;

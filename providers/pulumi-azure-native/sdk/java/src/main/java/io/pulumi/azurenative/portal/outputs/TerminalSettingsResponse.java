@@ -22,10 +22,10 @@ public final class TerminalSettingsResponse {
      */
     private final @Nullable String fontStyle;
 
-    @OutputCustomType.Constructor({"fontSize","fontStyle"})
+    @OutputCustomType.Constructor
     private TerminalSettingsResponse(
-        @Nullable String fontSize,
-        @Nullable String fontStyle) {
+        @OutputCustomType.Parameter("fontSize") @Nullable String fontSize,
+        @OutputCustomType.Parameter("fontStyle") @Nullable String fontStyle) {
         this.fontSize = fontSize;
         this.fontStyle = fontStyle;
     }

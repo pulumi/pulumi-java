@@ -17,8 +17,8 @@ public final class HourDetailsResponse {
      */
     private final @Nullable Integer minute;
 
-    @OutputCustomType.Constructor({"minute"})
-    private HourDetailsResponse(@Nullable Integer minute) {
+    @OutputCustomType.Constructor
+    private HourDetailsResponse(@OutputCustomType.Parameter("minute") @Nullable Integer minute) {
         this.minute = minute;
     }
 

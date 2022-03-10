@@ -22,10 +22,10 @@ public final class AutomaticOSUpgradePolicyResponse {
      */
     private final @Nullable Boolean enableAutomaticOSUpgrade;
 
-    @OutputCustomType.Constructor({"disableAutomaticRollback","enableAutomaticOSUpgrade"})
+    @OutputCustomType.Constructor
     private AutomaticOSUpgradePolicyResponse(
-        @Nullable Boolean disableAutomaticRollback,
-        @Nullable Boolean enableAutomaticOSUpgrade) {
+        @OutputCustomType.Parameter("disableAutomaticRollback") @Nullable Boolean disableAutomaticRollback,
+        @OutputCustomType.Parameter("enableAutomaticOSUpgrade") @Nullable Boolean enableAutomaticOSUpgrade) {
         this.disableAutomaticRollback = disableAutomaticRollback;
         this.enableAutomaticOSUpgrade = enableAutomaticOSUpgrade;
     }

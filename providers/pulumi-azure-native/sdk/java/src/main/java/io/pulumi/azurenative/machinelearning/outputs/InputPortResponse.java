@@ -17,8 +17,8 @@ public final class InputPortResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"type"})
-    private InputPortResponse(@Nullable String type) {
+    @OutputCustomType.Constructor
+    private InputPortResponse(@OutputCustomType.Parameter("type") @Nullable String type) {
         this.type = type;
     }
 

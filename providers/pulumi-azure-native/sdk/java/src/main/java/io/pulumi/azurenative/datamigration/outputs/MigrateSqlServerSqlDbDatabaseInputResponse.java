@@ -34,12 +34,12 @@ public final class MigrateSqlServerSqlDbDatabaseInputResponse {
      */
     private final @Nullable String targetDatabaseName;
 
-    @OutputCustomType.Constructor({"makeSourceDbReadOnly","name","tableMap","targetDatabaseName"})
+    @OutputCustomType.Constructor
     private MigrateSqlServerSqlDbDatabaseInputResponse(
-        @Nullable Boolean makeSourceDbReadOnly,
-        @Nullable String name,
-        @Nullable Map<String,String> tableMap,
-        @Nullable String targetDatabaseName) {
+        @OutputCustomType.Parameter("makeSourceDbReadOnly") @Nullable Boolean makeSourceDbReadOnly,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("tableMap") @Nullable Map<String,String> tableMap,
+        @OutputCustomType.Parameter("targetDatabaseName") @Nullable String targetDatabaseName) {
         this.makeSourceDbReadOnly = makeSourceDbReadOnly;
         this.name = name;
         this.tableMap = tableMap;

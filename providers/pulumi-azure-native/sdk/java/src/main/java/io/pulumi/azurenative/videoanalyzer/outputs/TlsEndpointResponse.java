@@ -47,14 +47,14 @@ public final class TlsEndpointResponse {
      */
     private final @Nullable TlsValidationOptionsResponse validationOptions;
 
-    @OutputCustomType.Constructor({"credentials","trustedCertificates","tunnel","type","url","validationOptions"})
+    @OutputCustomType.Constructor
     private TlsEndpointResponse(
-        UsernamePasswordCredentialsResponse credentials,
-        @Nullable PemCertificateListResponse trustedCertificates,
-        @Nullable SecureIotDeviceRemoteTunnelResponse tunnel,
-        String type,
-        String url,
-        @Nullable TlsValidationOptionsResponse validationOptions) {
+        @OutputCustomType.Parameter("credentials") UsernamePasswordCredentialsResponse credentials,
+        @OutputCustomType.Parameter("trustedCertificates") @Nullable PemCertificateListResponse trustedCertificates,
+        @OutputCustomType.Parameter("tunnel") @Nullable SecureIotDeviceRemoteTunnelResponse tunnel,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("url") String url,
+        @OutputCustomType.Parameter("validationOptions") @Nullable TlsValidationOptionsResponse validationOptions) {
         this.credentials = credentials;
         this.trustedCertificates = trustedCertificates;
         this.tunnel = tunnel;

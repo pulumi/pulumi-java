@@ -74,20 +74,20 @@ public final class HyperVReplicaBluePolicyDetailsResponse {
      */
     private final @Nullable Integer replicationPort;
 
-    @OutputCustomType.Constructor({"allowedAuthenticationType","applicationConsistentSnapshotFrequencyInHours","compression","initialReplicationMethod","instanceType","offlineReplicationExportPath","offlineReplicationImportPath","onlineReplicationStartTime","recoveryPoints","replicaDeletionOption","replicationFrequencyInSeconds","replicationPort"})
+    @OutputCustomType.Constructor
     private HyperVReplicaBluePolicyDetailsResponse(
-        @Nullable Integer allowedAuthenticationType,
-        @Nullable Integer applicationConsistentSnapshotFrequencyInHours,
-        @Nullable String compression,
-        @Nullable String initialReplicationMethod,
-        String instanceType,
-        @Nullable String offlineReplicationExportPath,
-        @Nullable String offlineReplicationImportPath,
-        @Nullable String onlineReplicationStartTime,
-        @Nullable Integer recoveryPoints,
-        @Nullable String replicaDeletionOption,
-        @Nullable Integer replicationFrequencyInSeconds,
-        @Nullable Integer replicationPort) {
+        @OutputCustomType.Parameter("allowedAuthenticationType") @Nullable Integer allowedAuthenticationType,
+        @OutputCustomType.Parameter("applicationConsistentSnapshotFrequencyInHours") @Nullable Integer applicationConsistentSnapshotFrequencyInHours,
+        @OutputCustomType.Parameter("compression") @Nullable String compression,
+        @OutputCustomType.Parameter("initialReplicationMethod") @Nullable String initialReplicationMethod,
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("offlineReplicationExportPath") @Nullable String offlineReplicationExportPath,
+        @OutputCustomType.Parameter("offlineReplicationImportPath") @Nullable String offlineReplicationImportPath,
+        @OutputCustomType.Parameter("onlineReplicationStartTime") @Nullable String onlineReplicationStartTime,
+        @OutputCustomType.Parameter("recoveryPoints") @Nullable Integer recoveryPoints,
+        @OutputCustomType.Parameter("replicaDeletionOption") @Nullable String replicaDeletionOption,
+        @OutputCustomType.Parameter("replicationFrequencyInSeconds") @Nullable Integer replicationFrequencyInSeconds,
+        @OutputCustomType.Parameter("replicationPort") @Nullable Integer replicationPort) {
         this.allowedAuthenticationType = allowedAuthenticationType;
         this.applicationConsistentSnapshotFrequencyInHours = applicationConsistentSnapshotFrequencyInHours;
         this.compression = compression;

@@ -22,10 +22,10 @@ public final class VirtualNetworkRuleResponse {
      */
     private final String virtualNetworkResourceId;
 
-    @OutputCustomType.Constructor({"action","virtualNetworkResourceId"})
+    @OutputCustomType.Constructor
     private VirtualNetworkRuleResponse(
-        @Nullable String action,
-        String virtualNetworkResourceId) {
+        @OutputCustomType.Parameter("action") @Nullable String action,
+        @OutputCustomType.Parameter("virtualNetworkResourceId") String virtualNetworkResourceId) {
         this.action = action;
         this.virtualNetworkResourceId = virtualNetworkResourceId;
     }

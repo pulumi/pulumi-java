@@ -33,12 +33,12 @@ public final class WsdlDefinitionResponse {
      */
     private final @Nullable String url;
 
-    @OutputCustomType.Constructor({"content","importMethod","service","url"})
+    @OutputCustomType.Constructor
     private WsdlDefinitionResponse(
-        @Nullable String content,
-        @Nullable String importMethod,
-        @Nullable WsdlServiceResponse service,
-        @Nullable String url) {
+        @OutputCustomType.Parameter("content") @Nullable String content,
+        @OutputCustomType.Parameter("importMethod") @Nullable String importMethod,
+        @OutputCustomType.Parameter("service") @Nullable WsdlServiceResponse service,
+        @OutputCustomType.Parameter("url") @Nullable String url) {
         this.content = content;
         this.importMethod = importMethod;
         this.service = service;

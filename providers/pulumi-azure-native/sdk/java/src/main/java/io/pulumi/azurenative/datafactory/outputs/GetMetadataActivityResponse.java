@@ -92,19 +92,19 @@ public final class GetMetadataActivityResponse {
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
-    @OutputCustomType.Constructor({"dataset","dependsOn","description","fieldList","formatSettings","linkedServiceName","name","policy","storeSettings","type","userProperties"})
+    @OutputCustomType.Constructor
     private GetMetadataActivityResponse(
-        DatasetReferenceResponse dataset,
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        @Nullable List<Object> fieldList,
-        @Nullable Object formatSettings,
-        @Nullable LinkedServiceReferenceResponse linkedServiceName,
-        String name,
-        @Nullable ActivityPolicyResponse policy,
-        @Nullable Object storeSettings,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties) {
+        @OutputCustomType.Parameter("dataset") DatasetReferenceResponse dataset,
+        @OutputCustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("fieldList") @Nullable List<Object> fieldList,
+        @OutputCustomType.Parameter("formatSettings") @Nullable Object formatSettings,
+        @OutputCustomType.Parameter("linkedServiceName") @Nullable LinkedServiceReferenceResponse linkedServiceName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("policy") @Nullable ActivityPolicyResponse policy,
+        @OutputCustomType.Parameter("storeSettings") @Nullable Object storeSettings,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties) {
         this.dataset = dataset;
         this.dependsOn = dependsOn;
         this.description = description;

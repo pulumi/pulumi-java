@@ -50,15 +50,15 @@ public final class CassandraTableGetPropertiesResponseResource {
      */
     private final Double ts;
 
-    @OutputCustomType.Constructor({"analyticalStorageTtl","defaultTtl","etag","id","rid","schema","ts"})
+    @OutputCustomType.Constructor
     private CassandraTableGetPropertiesResponseResource(
-        @Nullable Integer analyticalStorageTtl,
-        @Nullable Integer defaultTtl,
-        String etag,
-        String id,
-        String rid,
-        @Nullable CassandraSchemaResponse schema,
-        Double ts) {
+        @OutputCustomType.Parameter("analyticalStorageTtl") @Nullable Integer analyticalStorageTtl,
+        @OutputCustomType.Parameter("defaultTtl") @Nullable Integer defaultTtl,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("rid") String rid,
+        @OutputCustomType.Parameter("schema") @Nullable CassandraSchemaResponse schema,
+        @OutputCustomType.Parameter("ts") Double ts) {
         this.analyticalStorageTtl = analyticalStorageTtl;
         this.defaultTtl = defaultTtl;
         this.etag = etag;

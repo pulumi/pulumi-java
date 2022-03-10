@@ -58,17 +58,17 @@ public final class GetRegistrationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"billingModel","cloudId","etag","id","location","name","objectId","tags","type"})
+    @OutputCustomType.Constructor
     private GetRegistrationResult(
-        @Nullable String billingModel,
-        @Nullable String cloudId,
-        @Nullable String etag,
-        String id,
-        String location,
-        String name,
-        @Nullable String objectId,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("billingModel") @Nullable String billingModel,
+        @OutputCustomType.Parameter("cloudId") @Nullable String cloudId,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("objectId") @Nullable String objectId,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.billingModel = billingModel;
         this.cloudId = cloudId;
         this.etag = etag;

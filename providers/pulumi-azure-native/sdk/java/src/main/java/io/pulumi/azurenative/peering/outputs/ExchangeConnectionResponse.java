@@ -39,13 +39,13 @@ public final class ExchangeConnectionResponse {
      */
     private final @Nullable Integer peeringDBFacilityId;
 
-    @OutputCustomType.Constructor({"bgpSession","connectionIdentifier","connectionState","errorMessage","peeringDBFacilityId"})
+    @OutputCustomType.Constructor
     private ExchangeConnectionResponse(
-        @Nullable BgpSessionResponse bgpSession,
-        @Nullable String connectionIdentifier,
-        String connectionState,
-        String errorMessage,
-        @Nullable Integer peeringDBFacilityId) {
+        @OutputCustomType.Parameter("bgpSession") @Nullable BgpSessionResponse bgpSession,
+        @OutputCustomType.Parameter("connectionIdentifier") @Nullable String connectionIdentifier,
+        @OutputCustomType.Parameter("connectionState") String connectionState,
+        @OutputCustomType.Parameter("errorMessage") String errorMessage,
+        @OutputCustomType.Parameter("peeringDBFacilityId") @Nullable Integer peeringDBFacilityId) {
         this.bgpSession = bgpSession;
         this.connectionIdentifier = connectionIdentifier;
         this.connectionState = connectionState;

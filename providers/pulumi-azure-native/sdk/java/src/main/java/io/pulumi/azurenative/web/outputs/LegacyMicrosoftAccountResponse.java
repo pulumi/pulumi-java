@@ -35,12 +35,12 @@ public final class LegacyMicrosoftAccountResponse {
      */
     private final @Nullable AllowedAudiencesValidationResponse validation;
 
-    @OutputCustomType.Constructor({"enabled","login","registration","validation"})
+    @OutputCustomType.Constructor
     private LegacyMicrosoftAccountResponse(
-        @Nullable Boolean enabled,
-        @Nullable LoginScopesResponse login,
-        @Nullable ClientRegistrationResponse registration,
-        @Nullable AllowedAudiencesValidationResponse validation) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("login") @Nullable LoginScopesResponse login,
+        @OutputCustomType.Parameter("registration") @Nullable ClientRegistrationResponse registration,
+        @OutputCustomType.Parameter("validation") @Nullable AllowedAudiencesValidationResponse validation) {
         this.enabled = enabled;
         this.login = login;
         this.registration = registration;

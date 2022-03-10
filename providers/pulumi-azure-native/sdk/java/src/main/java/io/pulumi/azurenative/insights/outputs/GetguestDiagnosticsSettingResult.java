@@ -51,16 +51,16 @@ public final class GetguestDiagnosticsSettingResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"dataSources","id","location","name","osType","proxySetting","tags","type"})
+    @OutputCustomType.Constructor
     private GetguestDiagnosticsSettingResult(
-        @Nullable List<DataSourceResponse> dataSources,
-        String id,
-        String location,
-        String name,
-        @Nullable String osType,
-        @Nullable String proxySetting,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("dataSources") @Nullable List<DataSourceResponse> dataSources,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("osType") @Nullable String osType,
+        @OutputCustomType.Parameter("proxySetting") @Nullable String proxySetting,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.dataSources = dataSources;
         this.id = id;
         this.location = location;

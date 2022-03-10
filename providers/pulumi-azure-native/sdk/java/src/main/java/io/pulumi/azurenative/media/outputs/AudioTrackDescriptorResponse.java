@@ -23,10 +23,10 @@ public final class AudioTrackDescriptorResponse {
      */
     private final String odataType;
 
-    @OutputCustomType.Constructor({"channelMapping","odataType"})
+    @OutputCustomType.Constructor
     private AudioTrackDescriptorResponse(
-        @Nullable String channelMapping,
-        String odataType) {
+        @OutputCustomType.Parameter("channelMapping") @Nullable String channelMapping,
+        @OutputCustomType.Parameter("odataType") String odataType) {
         this.channelMapping = channelMapping;
         this.odataType = odataType;
     }

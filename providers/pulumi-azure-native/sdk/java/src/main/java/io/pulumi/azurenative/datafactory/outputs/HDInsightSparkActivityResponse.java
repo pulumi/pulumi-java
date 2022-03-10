@@ -95,23 +95,23 @@ public final class HDInsightSparkActivityResponse {
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
-    @OutputCustomType.Constructor({"arguments","className","dependsOn","description","entryFilePath","getDebugInfo","linkedServiceName","name","policy","proxyUser","rootPath","sparkConfig","sparkJobLinkedService","type","userProperties"})
+    @OutputCustomType.Constructor
     private HDInsightSparkActivityResponse(
-        @Nullable List<Object> arguments,
-        @Nullable String className,
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        Object entryFilePath,
-        @Nullable String getDebugInfo,
-        @Nullable LinkedServiceReferenceResponse linkedServiceName,
-        String name,
-        @Nullable ActivityPolicyResponse policy,
-        @Nullable Object proxyUser,
-        Object rootPath,
-        @Nullable Map<String,Object> sparkConfig,
-        @Nullable LinkedServiceReferenceResponse sparkJobLinkedService,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties) {
+        @OutputCustomType.Parameter("arguments") @Nullable List<Object> arguments,
+        @OutputCustomType.Parameter("className") @Nullable String className,
+        @OutputCustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("entryFilePath") Object entryFilePath,
+        @OutputCustomType.Parameter("getDebugInfo") @Nullable String getDebugInfo,
+        @OutputCustomType.Parameter("linkedServiceName") @Nullable LinkedServiceReferenceResponse linkedServiceName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("policy") @Nullable ActivityPolicyResponse policy,
+        @OutputCustomType.Parameter("proxyUser") @Nullable Object proxyUser,
+        @OutputCustomType.Parameter("rootPath") Object rootPath,
+        @OutputCustomType.Parameter("sparkConfig") @Nullable Map<String,Object> sparkConfig,
+        @OutputCustomType.Parameter("sparkJobLinkedService") @Nullable LinkedServiceReferenceResponse sparkJobLinkedService,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties) {
         this.arguments = arguments;
         this.className = className;
         this.dependsOn = dependsOn;

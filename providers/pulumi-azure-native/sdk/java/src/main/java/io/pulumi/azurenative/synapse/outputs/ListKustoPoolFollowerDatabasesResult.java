@@ -17,8 +17,8 @@ public final class ListKustoPoolFollowerDatabasesResult {
      */
     private final @Nullable List<FollowerDatabaseDefinitionResponse> value;
 
-    @OutputCustomType.Constructor({"value"})
-    private ListKustoPoolFollowerDatabasesResult(@Nullable List<FollowerDatabaseDefinitionResponse> value) {
+    @OutputCustomType.Constructor
+    private ListKustoPoolFollowerDatabasesResult(@OutputCustomType.Parameter("value") @Nullable List<FollowerDatabaseDefinitionResponse> value) {
         this.value = value;
     }
 

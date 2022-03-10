@@ -54,16 +54,16 @@ public final class ServerEndpointSyncSessionStatusResponse {
      */
     private final Double transientFilesNotSyncingCount;
 
-    @OutputCustomType.Constructor({"filesNotSyncingErrors","lastSyncMode","lastSyncPerItemErrorCount","lastSyncResult","lastSyncSuccessTimestamp","lastSyncTimestamp","persistentFilesNotSyncingCount","transientFilesNotSyncingCount"})
+    @OutputCustomType.Constructor
     private ServerEndpointSyncSessionStatusResponse(
-        List<ServerEndpointFilesNotSyncingErrorResponse> filesNotSyncingErrors,
-        String lastSyncMode,
-        Double lastSyncPerItemErrorCount,
-        Integer lastSyncResult,
-        String lastSyncSuccessTimestamp,
-        String lastSyncTimestamp,
-        Double persistentFilesNotSyncingCount,
-        Double transientFilesNotSyncingCount) {
+        @OutputCustomType.Parameter("filesNotSyncingErrors") List<ServerEndpointFilesNotSyncingErrorResponse> filesNotSyncingErrors,
+        @OutputCustomType.Parameter("lastSyncMode") String lastSyncMode,
+        @OutputCustomType.Parameter("lastSyncPerItemErrorCount") Double lastSyncPerItemErrorCount,
+        @OutputCustomType.Parameter("lastSyncResult") Integer lastSyncResult,
+        @OutputCustomType.Parameter("lastSyncSuccessTimestamp") String lastSyncSuccessTimestamp,
+        @OutputCustomType.Parameter("lastSyncTimestamp") String lastSyncTimestamp,
+        @OutputCustomType.Parameter("persistentFilesNotSyncingCount") Double persistentFilesNotSyncingCount,
+        @OutputCustomType.Parameter("transientFilesNotSyncingCount") Double transientFilesNotSyncingCount) {
         this.filesNotSyncingErrors = filesNotSyncingErrors;
         this.lastSyncMode = lastSyncMode;
         this.lastSyncPerItemErrorCount = lastSyncPerItemErrorCount;

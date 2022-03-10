@@ -45,12 +45,12 @@ public final class UpstreamTemplateResponse {
      */
     private final String urlTemplate;
 
-    @OutputCustomType.Constructor({"categoryPattern","eventPattern","hubPattern","urlTemplate"})
+    @OutputCustomType.Constructor
     private UpstreamTemplateResponse(
-        @Nullable String categoryPattern,
-        @Nullable String eventPattern,
-        @Nullable String hubPattern,
-        String urlTemplate) {
+        @OutputCustomType.Parameter("categoryPattern") @Nullable String categoryPattern,
+        @OutputCustomType.Parameter("eventPattern") @Nullable String eventPattern,
+        @OutputCustomType.Parameter("hubPattern") @Nullable String hubPattern,
+        @OutputCustomType.Parameter("urlTemplate") String urlTemplate) {
         this.categoryPattern = categoryPattern;
         this.eventPattern = eventPattern;
         this.hubPattern = hubPattern;

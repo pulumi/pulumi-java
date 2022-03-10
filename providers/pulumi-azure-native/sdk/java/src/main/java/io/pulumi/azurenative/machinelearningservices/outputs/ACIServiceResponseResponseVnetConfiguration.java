@@ -22,10 +22,10 @@ public final class ACIServiceResponseResponseVnetConfiguration {
      */
     private final @Nullable String vnetName;
 
-    @OutputCustomType.Constructor({"subnetName","vnetName"})
+    @OutputCustomType.Constructor
     private ACIServiceResponseResponseVnetConfiguration(
-        @Nullable String subnetName,
-        @Nullable String vnetName) {
+        @OutputCustomType.Parameter("subnetName") @Nullable String subnetName,
+        @OutputCustomType.Parameter("vnetName") @Nullable String vnetName) {
         this.subnetName = subnetName;
         this.vnetName = vnetName;
     }

@@ -95,23 +95,23 @@ public final class HDInsightMapReduceActivityResponse {
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
-    @OutputCustomType.Constructor({"arguments","className","defines","dependsOn","description","getDebugInfo","jarFilePath","jarLibs","jarLinkedService","linkedServiceName","name","policy","storageLinkedServices","type","userProperties"})
+    @OutputCustomType.Constructor
     private HDInsightMapReduceActivityResponse(
-        @Nullable List<Object> arguments,
-        Object className,
-        @Nullable Map<String,Object> defines,
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        @Nullable String getDebugInfo,
-        Object jarFilePath,
-        @Nullable List<Object> jarLibs,
-        @Nullable LinkedServiceReferenceResponse jarLinkedService,
-        @Nullable LinkedServiceReferenceResponse linkedServiceName,
-        String name,
-        @Nullable ActivityPolicyResponse policy,
-        @Nullable List<LinkedServiceReferenceResponse> storageLinkedServices,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties) {
+        @OutputCustomType.Parameter("arguments") @Nullable List<Object> arguments,
+        @OutputCustomType.Parameter("className") Object className,
+        @OutputCustomType.Parameter("defines") @Nullable Map<String,Object> defines,
+        @OutputCustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("getDebugInfo") @Nullable String getDebugInfo,
+        @OutputCustomType.Parameter("jarFilePath") Object jarFilePath,
+        @OutputCustomType.Parameter("jarLibs") @Nullable List<Object> jarLibs,
+        @OutputCustomType.Parameter("jarLinkedService") @Nullable LinkedServiceReferenceResponse jarLinkedService,
+        @OutputCustomType.Parameter("linkedServiceName") @Nullable LinkedServiceReferenceResponse linkedServiceName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("policy") @Nullable ActivityPolicyResponse policy,
+        @OutputCustomType.Parameter("storageLinkedServices") @Nullable List<LinkedServiceReferenceResponse> storageLinkedServices,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties) {
         this.arguments = arguments;
         this.className = className;
         this.defines = defines;

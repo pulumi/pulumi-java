@@ -23,10 +23,10 @@ public final class AutomationActionWorkspaceResponse {
      */
     private final @Nullable String workspaceResourceId;
 
-    @OutputCustomType.Constructor({"actionType","workspaceResourceId"})
+    @OutputCustomType.Constructor
     private AutomationActionWorkspaceResponse(
-        String actionType,
-        @Nullable String workspaceResourceId) {
+        @OutputCustomType.Parameter("actionType") String actionType,
+        @OutputCustomType.Parameter("workspaceResourceId") @Nullable String workspaceResourceId) {
         this.actionType = actionType;
         this.workspaceResourceId = workspaceResourceId;
     }

@@ -28,11 +28,11 @@ public final class ManagedIntegrationRuntimeNodeResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"errors","nodeId","status"})
+    @OutputCustomType.Constructor
     private ManagedIntegrationRuntimeNodeResponse(
-        @Nullable List<ManagedIntegrationRuntimeErrorResponse> errors,
-        String nodeId,
-        String status) {
+        @OutputCustomType.Parameter("errors") @Nullable List<ManagedIntegrationRuntimeErrorResponse> errors,
+        @OutputCustomType.Parameter("nodeId") String nodeId,
+        @OutputCustomType.Parameter("status") String status) {
         this.errors = errors;
         this.nodeId = nodeId;
         this.status = status;

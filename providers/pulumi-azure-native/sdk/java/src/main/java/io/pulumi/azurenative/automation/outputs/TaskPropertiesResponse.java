@@ -23,10 +23,10 @@ public final class TaskPropertiesResponse {
      */
     private final @Nullable String source;
 
-    @OutputCustomType.Constructor({"parameters","source"})
+    @OutputCustomType.Constructor
     private TaskPropertiesResponse(
-        @Nullable Map<String,String> parameters,
-        @Nullable String source) {
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,String> parameters,
+        @OutputCustomType.Parameter("source") @Nullable String source) {
         this.parameters = parameters;
         this.source = source;
     }

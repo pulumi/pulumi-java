@@ -20,10 +20,10 @@ public final class SasPolicyResponse {
      */
     private final String sasExpirationPeriod;
 
-    @OutputCustomType.Constructor({"expirationAction","sasExpirationPeriod"})
+    @OutputCustomType.Constructor
     private SasPolicyResponse(
-        String expirationAction,
-        String sasExpirationPeriod) {
+        @OutputCustomType.Parameter("expirationAction") String expirationAction,
+        @OutputCustomType.Parameter("sasExpirationPeriod") String sasExpirationPeriod) {
         this.expirationAction = expirationAction;
         this.sasExpirationPeriod = sasExpirationPeriod;
     }

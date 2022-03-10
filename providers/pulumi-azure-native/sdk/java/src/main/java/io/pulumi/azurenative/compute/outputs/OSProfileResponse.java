@@ -62,17 +62,17 @@ public final class OSProfileResponse {
      */
     private final @Nullable WindowsConfigurationResponse windowsConfiguration;
 
-    @OutputCustomType.Constructor({"adminPassword","adminUsername","allowExtensionOperations","computerName","customData","linuxConfiguration","requireGuestProvisionSignal","secrets","windowsConfiguration"})
+    @OutputCustomType.Constructor
     private OSProfileResponse(
-        @Nullable String adminPassword,
-        @Nullable String adminUsername,
-        @Nullable Boolean allowExtensionOperations,
-        @Nullable String computerName,
-        @Nullable String customData,
-        @Nullable LinuxConfigurationResponse linuxConfiguration,
-        @Nullable Boolean requireGuestProvisionSignal,
-        @Nullable List<VaultSecretGroupResponse> secrets,
-        @Nullable WindowsConfigurationResponse windowsConfiguration) {
+        @OutputCustomType.Parameter("adminPassword") @Nullable String adminPassword,
+        @OutputCustomType.Parameter("adminUsername") @Nullable String adminUsername,
+        @OutputCustomType.Parameter("allowExtensionOperations") @Nullable Boolean allowExtensionOperations,
+        @OutputCustomType.Parameter("computerName") @Nullable String computerName,
+        @OutputCustomType.Parameter("customData") @Nullable String customData,
+        @OutputCustomType.Parameter("linuxConfiguration") @Nullable LinuxConfigurationResponse linuxConfiguration,
+        @OutputCustomType.Parameter("requireGuestProvisionSignal") @Nullable Boolean requireGuestProvisionSignal,
+        @OutputCustomType.Parameter("secrets") @Nullable List<VaultSecretGroupResponse> secrets,
+        @OutputCustomType.Parameter("windowsConfiguration") @Nullable WindowsConfigurationResponse windowsConfiguration) {
         this.adminPassword = adminPassword;
         this.adminUsername = adminUsername;
         this.allowExtensionOperations = allowExtensionOperations;

@@ -67,18 +67,18 @@ public final class PipelineRunResponseResponse {
      */
     private final @Nullable PipelineTriggerDescriptorResponse trigger;
 
-    @OutputCustomType.Constructor({"catalogDigest","finishTime","importedArtifacts","pipelineRunErrorMessage","progress","source","startTime","status","target","trigger"})
+    @OutputCustomType.Constructor
     private PipelineRunResponseResponse(
-        @Nullable String catalogDigest,
-        @Nullable String finishTime,
-        @Nullable List<String> importedArtifacts,
-        @Nullable String pipelineRunErrorMessage,
-        @Nullable ProgressPropertiesResponse progress,
-        @Nullable ImportPipelineSourcePropertiesResponse source,
-        @Nullable String startTime,
-        @Nullable String status,
-        @Nullable ExportPipelineTargetPropertiesResponse target,
-        @Nullable PipelineTriggerDescriptorResponse trigger) {
+        @OutputCustomType.Parameter("catalogDigest") @Nullable String catalogDigest,
+        @OutputCustomType.Parameter("finishTime") @Nullable String finishTime,
+        @OutputCustomType.Parameter("importedArtifacts") @Nullable List<String> importedArtifacts,
+        @OutputCustomType.Parameter("pipelineRunErrorMessage") @Nullable String pipelineRunErrorMessage,
+        @OutputCustomType.Parameter("progress") @Nullable ProgressPropertiesResponse progress,
+        @OutputCustomType.Parameter("source") @Nullable ImportPipelineSourcePropertiesResponse source,
+        @OutputCustomType.Parameter("startTime") @Nullable String startTime,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("target") @Nullable ExportPipelineTargetPropertiesResponse target,
+        @OutputCustomType.Parameter("trigger") @Nullable PipelineTriggerDescriptorResponse trigger) {
         this.catalogDigest = catalogDigest;
         this.finishTime = finishTime;
         this.importedArtifacts = importedArtifacts;

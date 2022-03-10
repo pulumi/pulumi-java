@@ -55,16 +55,16 @@ public final class RestorePointResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"consistencyMode","excludeDisks","id","name","provisioningState","sourceMetadata","timeCreated","type"})
+    @OutputCustomType.Constructor
     private RestorePointResponse(
-        String consistencyMode,
-        @Nullable List<ApiEntityReferenceResponse> excludeDisks,
-        String id,
-        String name,
-        String provisioningState,
-        RestorePointSourceMetadataResponse sourceMetadata,
-        @Nullable String timeCreated,
-        String type) {
+        @OutputCustomType.Parameter("consistencyMode") String consistencyMode,
+        @OutputCustomType.Parameter("excludeDisks") @Nullable List<ApiEntityReferenceResponse> excludeDisks,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("sourceMetadata") RestorePointSourceMetadataResponse sourceMetadata,
+        @OutputCustomType.Parameter("timeCreated") @Nullable String timeCreated,
+        @OutputCustomType.Parameter("type") String type) {
         this.consistencyMode = consistencyMode;
         this.excludeDisks = excludeDisks;
         this.id = id;

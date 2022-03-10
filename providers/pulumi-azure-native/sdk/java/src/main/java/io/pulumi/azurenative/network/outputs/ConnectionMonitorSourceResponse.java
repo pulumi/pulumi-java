@@ -23,10 +23,10 @@ public final class ConnectionMonitorSourceResponse {
      */
     private final String resourceId;
 
-    @OutputCustomType.Constructor({"port","resourceId"})
+    @OutputCustomType.Constructor
     private ConnectionMonitorSourceResponse(
-        @Nullable Integer port,
-        String resourceId) {
+        @OutputCustomType.Parameter("port") @Nullable Integer port,
+        @OutputCustomType.Parameter("resourceId") String resourceId) {
         this.port = port;
         this.resourceId = resourceId;
     }

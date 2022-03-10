@@ -39,13 +39,13 @@ public final class GetPredictionTrainingResultsResult {
      */
     private final String tenantId;
 
-    @OutputCustomType.Constructor({"canonicalProfiles","predictionDistribution","primaryProfileInstanceCount","scoreName","tenantId"})
+    @OutputCustomType.Constructor
     private GetPredictionTrainingResultsResult(
-        List<CanonicalProfileDefinitionResponse> canonicalProfiles,
-        PredictionDistributionDefinitionResponse predictionDistribution,
-        Double primaryProfileInstanceCount,
-        String scoreName,
-        String tenantId) {
+        @OutputCustomType.Parameter("canonicalProfiles") List<CanonicalProfileDefinitionResponse> canonicalProfiles,
+        @OutputCustomType.Parameter("predictionDistribution") PredictionDistributionDefinitionResponse predictionDistribution,
+        @OutputCustomType.Parameter("primaryProfileInstanceCount") Double primaryProfileInstanceCount,
+        @OutputCustomType.Parameter("scoreName") String scoreName,
+        @OutputCustomType.Parameter("tenantId") String tenantId) {
         this.canonicalProfiles = canonicalProfiles;
         this.predictionDistribution = predictionDistribution;
         this.primaryProfileInstanceCount = primaryProfileInstanceCount;

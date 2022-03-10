@@ -71,19 +71,19 @@ public final class GetDatabaseResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"clientProtocol","clusteringPolicy","evictionPolicy","id","modules","name","persistence","port","provisioningState","resourceState","type"})
+    @OutputCustomType.Constructor
     private GetDatabaseResult(
-        @Nullable String clientProtocol,
-        @Nullable String clusteringPolicy,
-        @Nullable String evictionPolicy,
-        String id,
-        @Nullable List<ModuleResponse> modules,
-        String name,
-        @Nullable PersistenceResponse persistence,
-        @Nullable Integer port,
-        String provisioningState,
-        String resourceState,
-        String type) {
+        @OutputCustomType.Parameter("clientProtocol") @Nullable String clientProtocol,
+        @OutputCustomType.Parameter("clusteringPolicy") @Nullable String clusteringPolicy,
+        @OutputCustomType.Parameter("evictionPolicy") @Nullable String evictionPolicy,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("modules") @Nullable List<ModuleResponse> modules,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("persistence") @Nullable PersistenceResponse persistence,
+        @OutputCustomType.Parameter("port") @Nullable Integer port,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("resourceState") String resourceState,
+        @OutputCustomType.Parameter("type") String type) {
         this.clientProtocol = clientProtocol;
         this.clusteringPolicy = clusteringPolicy;
         this.evictionPolicy = evictionPolicy;

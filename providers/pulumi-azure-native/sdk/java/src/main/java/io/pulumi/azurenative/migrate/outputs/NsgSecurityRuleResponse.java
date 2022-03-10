@@ -74,18 +74,18 @@ public final class NsgSecurityRuleResponse {
      */
     private final @Nullable String sourcePortRange;
 
-    @OutputCustomType.Constructor({"access","description","destinationAddressPrefix","destinationPortRange","direction","name","priority","protocol","sourceAddressPrefix","sourcePortRange"})
+    @OutputCustomType.Constructor
     private NsgSecurityRuleResponse(
-        @Nullable String access,
-        @Nullable String description,
-        @Nullable String destinationAddressPrefix,
-        @Nullable String destinationPortRange,
-        @Nullable String direction,
-        @Nullable String name,
-        @Nullable Integer priority,
-        @Nullable String protocol,
-        @Nullable String sourceAddressPrefix,
-        @Nullable String sourcePortRange) {
+        @OutputCustomType.Parameter("access") @Nullable String access,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("destinationAddressPrefix") @Nullable String destinationAddressPrefix,
+        @OutputCustomType.Parameter("destinationPortRange") @Nullable String destinationPortRange,
+        @OutputCustomType.Parameter("direction") @Nullable String direction,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
+        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
+        @OutputCustomType.Parameter("sourceAddressPrefix") @Nullable String sourceAddressPrefix,
+        @OutputCustomType.Parameter("sourcePortRange") @Nullable String sourcePortRange) {
         this.access = access;
         this.description = description;
         this.destinationAddressPrefix = destinationAddressPrefix;

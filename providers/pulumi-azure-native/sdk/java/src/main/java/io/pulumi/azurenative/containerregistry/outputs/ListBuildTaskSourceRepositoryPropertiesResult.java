@@ -34,12 +34,12 @@ public final class ListBuildTaskSourceRepositoryPropertiesResult {
      */
     private final String sourceControlType;
 
-    @OutputCustomType.Constructor({"isCommitTriggerEnabled","repositoryUrl","sourceControlAuthProperties","sourceControlType"})
+    @OutputCustomType.Constructor
     private ListBuildTaskSourceRepositoryPropertiesResult(
-        @Nullable Boolean isCommitTriggerEnabled,
-        String repositoryUrl,
-        @Nullable SourceControlAuthInfoResponse sourceControlAuthProperties,
-        String sourceControlType) {
+        @OutputCustomType.Parameter("isCommitTriggerEnabled") @Nullable Boolean isCommitTriggerEnabled,
+        @OutputCustomType.Parameter("repositoryUrl") String repositoryUrl,
+        @OutputCustomType.Parameter("sourceControlAuthProperties") @Nullable SourceControlAuthInfoResponse sourceControlAuthProperties,
+        @OutputCustomType.Parameter("sourceControlType") String sourceControlType) {
         this.isCommitTriggerEnabled = isCommitTriggerEnabled;
         this.repositoryUrl = repositoryUrl;
         this.sourceControlAuthProperties = sourceControlAuthProperties;

@@ -65,18 +65,18 @@ public final class ReplicaSetResponse {
      */
     private final String vnetSiteId;
 
-    @OutputCustomType.Constructor({"domainControllerIpAddress","externalAccessIpAddress","healthAlerts","healthLastEvaluated","healthMonitors","location","replicaSetId","serviceStatus","subnetId","vnetSiteId"})
+    @OutputCustomType.Constructor
     private ReplicaSetResponse(
-        List<String> domainControllerIpAddress,
-        String externalAccessIpAddress,
-        List<HealthAlertResponse> healthAlerts,
-        String healthLastEvaluated,
-        List<HealthMonitorResponse> healthMonitors,
-        @Nullable String location,
-        String replicaSetId,
-        String serviceStatus,
-        @Nullable String subnetId,
-        String vnetSiteId) {
+        @OutputCustomType.Parameter("domainControllerIpAddress") List<String> domainControllerIpAddress,
+        @OutputCustomType.Parameter("externalAccessIpAddress") String externalAccessIpAddress,
+        @OutputCustomType.Parameter("healthAlerts") List<HealthAlertResponse> healthAlerts,
+        @OutputCustomType.Parameter("healthLastEvaluated") String healthLastEvaluated,
+        @OutputCustomType.Parameter("healthMonitors") List<HealthMonitorResponse> healthMonitors,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("replicaSetId") String replicaSetId,
+        @OutputCustomType.Parameter("serviceStatus") String serviceStatus,
+        @OutputCustomType.Parameter("subnetId") @Nullable String subnetId,
+        @OutputCustomType.Parameter("vnetSiteId") String vnetSiteId) {
         this.domainControllerIpAddress = domainControllerIpAddress;
         this.externalAccessIpAddress = externalAccessIpAddress;
         this.healthAlerts = healthAlerts;

@@ -17,13 +17,13 @@ public final class LinkedAccessCheckResponse {
     private final @Nullable String linkedProperty;
     private final @Nullable String linkedType;
 
-    @OutputCustomType.Constructor({"actionName","linkedAction","linkedActionVerb","linkedProperty","linkedType"})
+    @OutputCustomType.Constructor
     private LinkedAccessCheckResponse(
-        @Nullable String actionName,
-        @Nullable String linkedAction,
-        @Nullable String linkedActionVerb,
-        @Nullable String linkedProperty,
-        @Nullable String linkedType) {
+        @OutputCustomType.Parameter("actionName") @Nullable String actionName,
+        @OutputCustomType.Parameter("linkedAction") @Nullable String linkedAction,
+        @OutputCustomType.Parameter("linkedActionVerb") @Nullable String linkedActionVerb,
+        @OutputCustomType.Parameter("linkedProperty") @Nullable String linkedProperty,
+        @OutputCustomType.Parameter("linkedType") @Nullable String linkedType) {
         this.actionName = actionName;
         this.linkedAction = linkedAction;
         this.linkedActionVerb = linkedActionVerb;

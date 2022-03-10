@@ -94,23 +94,23 @@ public final class InMageRcmFabricSpecificDetailsResponse {
      */
     private final String vmwareSiteId;
 
-    @OutputCustomType.Constructor({"agentDetails","controlPlaneUri","dataPlaneUri","dras","instanceType","physicalSiteId","processServers","pushInstallers","rcmProxies","replicationAgents","reprotectAgents","serviceContainerId","serviceEndpoint","serviceResourceId","vmwareSiteId"})
+    @OutputCustomType.Constructor
     private InMageRcmFabricSpecificDetailsResponse(
-        List<AgentDetailsResponse> agentDetails,
-        String controlPlaneUri,
-        String dataPlaneUri,
-        List<DraDetailsResponse> dras,
-        String instanceType,
-        String physicalSiteId,
-        List<ProcessServerDetailsResponse> processServers,
-        List<PushInstallerDetailsResponse> pushInstallers,
-        List<RcmProxyDetailsResponse> rcmProxies,
-        List<ReplicationAgentDetailsResponse> replicationAgents,
-        List<ReprotectAgentDetailsResponse> reprotectAgents,
-        String serviceContainerId,
-        String serviceEndpoint,
-        String serviceResourceId,
-        String vmwareSiteId) {
+        @OutputCustomType.Parameter("agentDetails") List<AgentDetailsResponse> agentDetails,
+        @OutputCustomType.Parameter("controlPlaneUri") String controlPlaneUri,
+        @OutputCustomType.Parameter("dataPlaneUri") String dataPlaneUri,
+        @OutputCustomType.Parameter("dras") List<DraDetailsResponse> dras,
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("physicalSiteId") String physicalSiteId,
+        @OutputCustomType.Parameter("processServers") List<ProcessServerDetailsResponse> processServers,
+        @OutputCustomType.Parameter("pushInstallers") List<PushInstallerDetailsResponse> pushInstallers,
+        @OutputCustomType.Parameter("rcmProxies") List<RcmProxyDetailsResponse> rcmProxies,
+        @OutputCustomType.Parameter("replicationAgents") List<ReplicationAgentDetailsResponse> replicationAgents,
+        @OutputCustomType.Parameter("reprotectAgents") List<ReprotectAgentDetailsResponse> reprotectAgents,
+        @OutputCustomType.Parameter("serviceContainerId") String serviceContainerId,
+        @OutputCustomType.Parameter("serviceEndpoint") String serviceEndpoint,
+        @OutputCustomType.Parameter("serviceResourceId") String serviceResourceId,
+        @OutputCustomType.Parameter("vmwareSiteId") String vmwareSiteId) {
         this.agentDetails = agentDetails;
         this.controlPlaneUri = controlPlaneUri;
         this.dataPlaneUri = dataPlaneUri;

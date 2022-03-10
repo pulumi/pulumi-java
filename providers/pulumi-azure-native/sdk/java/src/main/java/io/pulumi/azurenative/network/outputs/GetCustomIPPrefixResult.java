@@ -81,21 +81,21 @@ public final class GetCustomIPPrefixResult {
      */
     private final @Nullable List<String> zones;
 
-    @OutputCustomType.Constructor({"cidr","commissionedState","etag","extendedLocation","id","location","name","provisioningState","publicIpPrefixes","resourceGuid","tags","type","zones"})
+    @OutputCustomType.Constructor
     private GetCustomIPPrefixResult(
-        @Nullable String cidr,
-        @Nullable String commissionedState,
-        String etag,
-        @Nullable ExtendedLocationResponse extendedLocation,
-        @Nullable String id,
-        @Nullable String location,
-        String name,
-        String provisioningState,
-        List<SubResourceResponse> publicIpPrefixes,
-        String resourceGuid,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable List<String> zones) {
+        @OutputCustomType.Parameter("cidr") @Nullable String cidr,
+        @OutputCustomType.Parameter("commissionedState") @Nullable String commissionedState,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicIpPrefixes") List<SubResourceResponse> publicIpPrefixes,
+        @OutputCustomType.Parameter("resourceGuid") String resourceGuid,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("zones") @Nullable List<String> zones) {
         this.cidr = cidr;
         this.commissionedState = commissionedState;
         this.etag = etag;

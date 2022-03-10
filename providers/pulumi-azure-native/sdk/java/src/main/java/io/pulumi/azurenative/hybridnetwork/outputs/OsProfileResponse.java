@@ -34,12 +34,12 @@ public final class OsProfileResponse {
      */
     private final @Nullable LinuxConfigurationResponse linuxConfiguration;
 
-    @OutputCustomType.Constructor({"adminUsername","customData","customDataRequired","linuxConfiguration"})
+    @OutputCustomType.Constructor
     private OsProfileResponse(
-        @Nullable String adminUsername,
-        @Nullable String customData,
-        @Nullable Boolean customDataRequired,
-        @Nullable LinuxConfigurationResponse linuxConfiguration) {
+        @OutputCustomType.Parameter("adminUsername") @Nullable String adminUsername,
+        @OutputCustomType.Parameter("customData") @Nullable String customData,
+        @OutputCustomType.Parameter("customDataRequired") @Nullable Boolean customDataRequired,
+        @OutputCustomType.Parameter("linuxConfiguration") @Nullable LinuxConfigurationResponse linuxConfiguration) {
         this.adminUsername = adminUsername;
         this.customData = customData;
         this.customDataRequired = customDataRequired;

@@ -49,15 +49,15 @@ public final class GetResourceGroupResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","location","managedBy","name","properties","tags","type"})
+    @OutputCustomType.Constructor
     private GetResourceGroupResult(
-        String id,
-        String location,
-        @Nullable String managedBy,
-        String name,
-        ResourceGroupPropertiesResponse properties,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("managedBy") @Nullable String managedBy,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") ResourceGroupPropertiesResponse properties,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.location = location;
         this.managedBy = managedBy;

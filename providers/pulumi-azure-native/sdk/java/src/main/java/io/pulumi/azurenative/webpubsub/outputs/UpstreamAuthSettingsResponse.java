@@ -23,10 +23,10 @@ public final class UpstreamAuthSettingsResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"managedIdentity","type"})
+    @OutputCustomType.Constructor
     private UpstreamAuthSettingsResponse(
-        @Nullable ManagedIdentitySettingsResponse managedIdentity,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("managedIdentity") @Nullable ManagedIdentitySettingsResponse managedIdentity,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.managedIdentity = managedIdentity;
         this.type = type;
     }

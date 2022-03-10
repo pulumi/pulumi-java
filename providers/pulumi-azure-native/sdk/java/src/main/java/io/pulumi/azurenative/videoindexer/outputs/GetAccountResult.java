@@ -76,20 +76,20 @@ public final class GetAccountResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"accountId","accountName","id","identity","location","mediaServices","name","provisioningState","systemData","tags","tenantId","type"})
+    @OutputCustomType.Constructor
     private GetAccountResult(
-        @Nullable String accountId,
-        String accountName,
-        String id,
-        @Nullable ManagedServiceIdentityResponse identity,
-        String location,
-        @Nullable MediaServicesForPutRequestResponse mediaServices,
-        String name,
-        String provisioningState,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String tenantId,
-        String type) {
+        @OutputCustomType.Parameter("accountId") @Nullable String accountId,
+        @OutputCustomType.Parameter("accountName") String accountName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable ManagedServiceIdentityResponse identity,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("mediaServices") @Nullable MediaServicesForPutRequestResponse mediaServices,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("tenantId") String tenantId,
+        @OutputCustomType.Parameter("type") String type) {
         this.accountId = accountId;
         this.accountName = accountName;
         this.id = id;

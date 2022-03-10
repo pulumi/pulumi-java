@@ -35,12 +35,12 @@ public final class WebClientCertificateAuthenticationResponse {
      */
     private final Object url;
 
-    @OutputCustomType.Constructor({"authenticationType","password","pfx","url"})
+    @OutputCustomType.Constructor
     private WebClientCertificateAuthenticationResponse(
-        String authenticationType,
-        Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> pfx,
-        Object url) {
+        @OutputCustomType.Parameter("authenticationType") String authenticationType,
+        @OutputCustomType.Parameter("password") Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
+        @OutputCustomType.Parameter("pfx") Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> pfx,
+        @OutputCustomType.Parameter("url") Object url) {
         this.authenticationType = authenticationType;
         this.password = password;
         this.pfx = pfx;

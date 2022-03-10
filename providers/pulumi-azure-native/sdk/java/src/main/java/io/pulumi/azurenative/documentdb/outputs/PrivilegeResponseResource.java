@@ -22,10 +22,10 @@ public final class PrivilegeResponseResource {
      */
     private final @Nullable String db;
 
-    @OutputCustomType.Constructor({"collection","db"})
+    @OutputCustomType.Constructor
     private PrivilegeResponseResource(
-        @Nullable String collection,
-        @Nullable String db) {
+        @OutputCustomType.Parameter("collection") @Nullable String collection,
+        @OutputCustomType.Parameter("db") @Nullable String db) {
         this.collection = collection;
         this.db = db;
     }

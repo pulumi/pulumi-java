@@ -48,15 +48,15 @@ public final class CacheActiveDirectorySettingsResponse {
      */
     private final @Nullable String secondaryDnsIpAddress;
 
-    @OutputCustomType.Constructor({"cacheNetBiosName","credentials","domainJoined","domainName","domainNetBiosName","primaryDnsIpAddress","secondaryDnsIpAddress"})
+    @OutputCustomType.Constructor
     private CacheActiveDirectorySettingsResponse(
-        String cacheNetBiosName,
-        @Nullable CacheActiveDirectorySettingsResponseCredentials credentials,
-        String domainJoined,
-        String domainName,
-        String domainNetBiosName,
-        String primaryDnsIpAddress,
-        @Nullable String secondaryDnsIpAddress) {
+        @OutputCustomType.Parameter("cacheNetBiosName") String cacheNetBiosName,
+        @OutputCustomType.Parameter("credentials") @Nullable CacheActiveDirectorySettingsResponseCredentials credentials,
+        @OutputCustomType.Parameter("domainJoined") String domainJoined,
+        @OutputCustomType.Parameter("domainName") String domainName,
+        @OutputCustomType.Parameter("domainNetBiosName") String domainNetBiosName,
+        @OutputCustomType.Parameter("primaryDnsIpAddress") String primaryDnsIpAddress,
+        @OutputCustomType.Parameter("secondaryDnsIpAddress") @Nullable String secondaryDnsIpAddress) {
         this.cacheNetBiosName = cacheNetBiosName;
         this.credentials = credentials;
         this.domainJoined = domainJoined;

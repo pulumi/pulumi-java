@@ -24,10 +24,10 @@ public final class PyTorchResponse {
      */
     private final @Nullable Integer processCount;
 
-    @OutputCustomType.Constructor({"distributionType","processCount"})
+    @OutputCustomType.Constructor
     private PyTorchResponse(
-        String distributionType,
-        @Nullable Integer processCount) {
+        @OutputCustomType.Parameter("distributionType") String distributionType,
+        @OutputCustomType.Parameter("processCount") @Nullable Integer processCount) {
         this.distributionType = distributionType;
         this.processCount = processCount;
     }

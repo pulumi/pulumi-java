@@ -22,10 +22,10 @@ public final class DatasetReferenceResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"id","name"})
+    @OutputCustomType.Constructor
     private DatasetReferenceResponse(
-        @Nullable String id,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.id = id;
         this.name = name;
     }

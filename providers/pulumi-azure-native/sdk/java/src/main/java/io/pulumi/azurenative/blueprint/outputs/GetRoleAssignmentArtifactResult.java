@@ -65,18 +65,18 @@ public final class GetRoleAssignmentArtifactResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"dependsOn","description","displayName","id","kind","name","principalIds","resourceGroup","roleDefinitionId","type"})
+    @OutputCustomType.Constructor
     private GetRoleAssignmentArtifactResult(
-        @Nullable List<String> dependsOn,
-        @Nullable String description,
-        @Nullable String displayName,
-        String id,
-        String kind,
-        String name,
-        Object principalIds,
-        @Nullable String resourceGroup,
-        String roleDefinitionId,
-        String type) {
+        @OutputCustomType.Parameter("dependsOn") @Nullable List<String> dependsOn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("principalIds") Object principalIds,
+        @OutputCustomType.Parameter("resourceGroup") @Nullable String resourceGroup,
+        @OutputCustomType.Parameter("roleDefinitionId") String roleDefinitionId,
+        @OutputCustomType.Parameter("type") String type) {
         this.dependsOn = dependsOn;
         this.description = description;
         this.displayName = displayName;

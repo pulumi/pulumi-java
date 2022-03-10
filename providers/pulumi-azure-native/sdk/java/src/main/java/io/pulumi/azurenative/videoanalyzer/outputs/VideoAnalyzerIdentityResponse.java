@@ -23,10 +23,10 @@ public final class VideoAnalyzerIdentityResponse {
      */
     private final @Nullable Map<String,UserAssignedManagedIdentityResponse> userAssignedIdentities;
 
-    @OutputCustomType.Constructor({"type","userAssignedIdentities"})
+    @OutputCustomType.Constructor
     private VideoAnalyzerIdentityResponse(
-        String type,
-        @Nullable Map<String,UserAssignedManagedIdentityResponse> userAssignedIdentities) {
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userAssignedIdentities") @Nullable Map<String,UserAssignedManagedIdentityResponse> userAssignedIdentities) {
         this.type = type;
         this.userAssignedIdentities = userAssignedIdentities;
     }

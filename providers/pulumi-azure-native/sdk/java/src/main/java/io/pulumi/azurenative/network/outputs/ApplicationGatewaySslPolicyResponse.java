@@ -38,13 +38,13 @@ public final class ApplicationGatewaySslPolicyResponse {
      */
     private final @Nullable String policyType;
 
-    @OutputCustomType.Constructor({"cipherSuites","disabledSslProtocols","minProtocolVersion","policyName","policyType"})
+    @OutputCustomType.Constructor
     private ApplicationGatewaySslPolicyResponse(
-        @Nullable List<String> cipherSuites,
-        @Nullable List<String> disabledSslProtocols,
-        @Nullable String minProtocolVersion,
-        @Nullable String policyName,
-        @Nullable String policyType) {
+        @OutputCustomType.Parameter("cipherSuites") @Nullable List<String> cipherSuites,
+        @OutputCustomType.Parameter("disabledSslProtocols") @Nullable List<String> disabledSslProtocols,
+        @OutputCustomType.Parameter("minProtocolVersion") @Nullable String minProtocolVersion,
+        @OutputCustomType.Parameter("policyName") @Nullable String policyName,
+        @OutputCustomType.Parameter("policyType") @Nullable String policyType) {
         this.cipherSuites = cipherSuites;
         this.disabledSslProtocols = disabledSslProtocols;
         this.minProtocolVersion = minProtocolVersion;

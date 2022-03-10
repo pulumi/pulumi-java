@@ -22,10 +22,10 @@ public final class ProxyServerPropertiesResponse {
      */
     private final @Nullable String port;
 
-    @OutputCustomType.Constructor({"ip","port"})
+    @OutputCustomType.Constructor
     private ProxyServerPropertiesResponse(
-        @Nullable String ip,
-        @Nullable String port) {
+        @OutputCustomType.Parameter("ip") @Nullable String ip,
+        @OutputCustomType.Parameter("port") @Nullable String port) {
         this.ip = ip;
         this.port = port;
     }

@@ -22,10 +22,10 @@ public final class ConsortiumResponse {
      */
     private final @Nullable String protocol;
 
-    @OutputCustomType.Constructor({"name","protocol"})
+    @OutputCustomType.Constructor
     private ConsortiumResponse(
-        @Nullable String name,
-        @Nullable String protocol) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("protocol") @Nullable String protocol) {
         this.name = name;
         this.protocol = protocol;
     }

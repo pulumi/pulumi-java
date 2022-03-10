@@ -23,10 +23,10 @@ public final class AzureFilesIdentityBasedAuthenticationResponse {
      */
     private final String directoryServiceOptions;
 
-    @OutputCustomType.Constructor({"activeDirectoryProperties","directoryServiceOptions"})
+    @OutputCustomType.Constructor
     private AzureFilesIdentityBasedAuthenticationResponse(
-        @Nullable ActiveDirectoryPropertiesResponse activeDirectoryProperties,
-        String directoryServiceOptions) {
+        @OutputCustomType.Parameter("activeDirectoryProperties") @Nullable ActiveDirectoryPropertiesResponse activeDirectoryProperties,
+        @OutputCustomType.Parameter("directoryServiceOptions") String directoryServiceOptions) {
         this.activeDirectoryProperties = activeDirectoryProperties;
         this.directoryServiceOptions = directoryServiceOptions;
     }

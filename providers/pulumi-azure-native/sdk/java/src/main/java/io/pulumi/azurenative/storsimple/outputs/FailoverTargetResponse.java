@@ -70,19 +70,19 @@ public final class FailoverTargetResponse {
      */
     private final @Nullable Integer volumesCount;
 
-    @OutputCustomType.Constructor({"availableLocalStorageInBytes","availableTieredStorageInBytes","dataContainersCount","deviceId","deviceLocation","deviceSoftwareVersion","deviceStatus","eligibilityResult","friendlyDeviceSoftwareVersion","modelDescription","volumesCount"})
+    @OutputCustomType.Constructor
     private FailoverTargetResponse(
-        @Nullable Double availableLocalStorageInBytes,
-        @Nullable Double availableTieredStorageInBytes,
-        @Nullable Integer dataContainersCount,
-        @Nullable String deviceId,
-        @Nullable String deviceLocation,
-        @Nullable String deviceSoftwareVersion,
-        @Nullable String deviceStatus,
-        @Nullable TargetEligibilityResultResponse eligibilityResult,
-        @Nullable String friendlyDeviceSoftwareVersion,
-        @Nullable String modelDescription,
-        @Nullable Integer volumesCount) {
+        @OutputCustomType.Parameter("availableLocalStorageInBytes") @Nullable Double availableLocalStorageInBytes,
+        @OutputCustomType.Parameter("availableTieredStorageInBytes") @Nullable Double availableTieredStorageInBytes,
+        @OutputCustomType.Parameter("dataContainersCount") @Nullable Integer dataContainersCount,
+        @OutputCustomType.Parameter("deviceId") @Nullable String deviceId,
+        @OutputCustomType.Parameter("deviceLocation") @Nullable String deviceLocation,
+        @OutputCustomType.Parameter("deviceSoftwareVersion") @Nullable String deviceSoftwareVersion,
+        @OutputCustomType.Parameter("deviceStatus") @Nullable String deviceStatus,
+        @OutputCustomType.Parameter("eligibilityResult") @Nullable TargetEligibilityResultResponse eligibilityResult,
+        @OutputCustomType.Parameter("friendlyDeviceSoftwareVersion") @Nullable String friendlyDeviceSoftwareVersion,
+        @OutputCustomType.Parameter("modelDescription") @Nullable String modelDescription,
+        @OutputCustomType.Parameter("volumesCount") @Nullable Integer volumesCount) {
         this.availableLocalStorageInBytes = availableLocalStorageInBytes;
         this.availableTieredStorageInBytes = availableTieredStorageInBytes;
         this.dataContainersCount = dataContainersCount;

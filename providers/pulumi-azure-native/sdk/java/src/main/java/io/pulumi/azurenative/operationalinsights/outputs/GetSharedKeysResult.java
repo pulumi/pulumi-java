@@ -22,10 +22,10 @@ public final class GetSharedKeysResult {
      */
     private final @Nullable String secondarySharedKey;
 
-    @OutputCustomType.Constructor({"primarySharedKey","secondarySharedKey"})
+    @OutputCustomType.Constructor
     private GetSharedKeysResult(
-        @Nullable String primarySharedKey,
-        @Nullable String secondarySharedKey) {
+        @OutputCustomType.Parameter("primarySharedKey") @Nullable String primarySharedKey,
+        @OutputCustomType.Parameter("secondarySharedKey") @Nullable String secondarySharedKey) {
         this.primarySharedKey = primarySharedKey;
         this.secondarySharedKey = secondarySharedKey;
     }

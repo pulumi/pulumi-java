@@ -17,8 +17,8 @@ public final class ListDelegationSettingSecretsResult {
      */
     private final @Nullable String validationKey;
 
-    @OutputCustomType.Constructor({"validationKey"})
-    private ListDelegationSettingSecretsResult(@Nullable String validationKey) {
+    @OutputCustomType.Constructor
+    private ListDelegationSettingSecretsResult(@OutputCustomType.Parameter("validationKey") @Nullable String validationKey) {
         this.validationKey = validationKey;
     }
 

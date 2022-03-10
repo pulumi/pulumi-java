@@ -61,17 +61,17 @@ public final class MonitorConfigResponse {
      */
     private final @Nullable Double toleratedNumberOfFailures;
 
-    @OutputCustomType.Constructor({"customHeaders","expectedStatusCodeRanges","intervalInSeconds","path","port","profileMonitorStatus","protocol","timeoutInSeconds","toleratedNumberOfFailures"})
+    @OutputCustomType.Constructor
     private MonitorConfigResponse(
-        @Nullable List<MonitorConfigResponseCustomHeaders> customHeaders,
-        @Nullable List<MonitorConfigResponseExpectedStatusCodeRanges> expectedStatusCodeRanges,
-        @Nullable Double intervalInSeconds,
-        @Nullable String path,
-        @Nullable Double port,
-        @Nullable String profileMonitorStatus,
-        @Nullable String protocol,
-        @Nullable Double timeoutInSeconds,
-        @Nullable Double toleratedNumberOfFailures) {
+        @OutputCustomType.Parameter("customHeaders") @Nullable List<MonitorConfigResponseCustomHeaders> customHeaders,
+        @OutputCustomType.Parameter("expectedStatusCodeRanges") @Nullable List<MonitorConfigResponseExpectedStatusCodeRanges> expectedStatusCodeRanges,
+        @OutputCustomType.Parameter("intervalInSeconds") @Nullable Double intervalInSeconds,
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("port") @Nullable Double port,
+        @OutputCustomType.Parameter("profileMonitorStatus") @Nullable String profileMonitorStatus,
+        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
+        @OutputCustomType.Parameter("timeoutInSeconds") @Nullable Double timeoutInSeconds,
+        @OutputCustomType.Parameter("toleratedNumberOfFailures") @Nullable Double toleratedNumberOfFailures) {
         this.customHeaders = customHeaders;
         this.expectedStatusCodeRanges = expectedStatusCodeRanges;
         this.intervalInSeconds = intervalInSeconds;

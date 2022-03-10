@@ -154,35 +154,35 @@ public final class GetAppServicePlanResult {
      */
     private final @Nullable String workerTierName;
 
-    @OutputCustomType.Constructor({"freeOfferExpirationTime","geoRegion","hostingEnvironmentProfile","hyperV","id","isSpot","isXenon","kind","kubeEnvironmentProfile","location","maximumElasticWorkerCount","maximumNumberOfWorkers","name","numberOfSites","perSiteScaling","provisioningState","reserved","resourceGroup","sku","spotExpirationTime","status","subscription","tags","targetWorkerCount","targetWorkerSizeId","type","workerTierName"})
+    @OutputCustomType.Constructor
     private GetAppServicePlanResult(
-        @Nullable String freeOfferExpirationTime,
-        String geoRegion,
-        @Nullable HostingEnvironmentProfileResponse hostingEnvironmentProfile,
-        @Nullable Boolean hyperV,
-        String id,
-        @Nullable Boolean isSpot,
-        @Nullable Boolean isXenon,
-        @Nullable String kind,
-        @Nullable KubeEnvironmentProfileResponse kubeEnvironmentProfile,
-        String location,
-        @Nullable Integer maximumElasticWorkerCount,
-        Integer maximumNumberOfWorkers,
-        String name,
-        Integer numberOfSites,
-        @Nullable Boolean perSiteScaling,
-        String provisioningState,
-        @Nullable Boolean reserved,
-        String resourceGroup,
-        @Nullable SkuDescriptionResponse sku,
-        @Nullable String spotExpirationTime,
-        String status,
-        String subscription,
-        @Nullable Map<String,String> tags,
-        @Nullable Integer targetWorkerCount,
-        @Nullable Integer targetWorkerSizeId,
-        String type,
-        @Nullable String workerTierName) {
+        @OutputCustomType.Parameter("freeOfferExpirationTime") @Nullable String freeOfferExpirationTime,
+        @OutputCustomType.Parameter("geoRegion") String geoRegion,
+        @OutputCustomType.Parameter("hostingEnvironmentProfile") @Nullable HostingEnvironmentProfileResponse hostingEnvironmentProfile,
+        @OutputCustomType.Parameter("hyperV") @Nullable Boolean hyperV,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isSpot") @Nullable Boolean isSpot,
+        @OutputCustomType.Parameter("isXenon") @Nullable Boolean isXenon,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("kubeEnvironmentProfile") @Nullable KubeEnvironmentProfileResponse kubeEnvironmentProfile,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("maximumElasticWorkerCount") @Nullable Integer maximumElasticWorkerCount,
+        @OutputCustomType.Parameter("maximumNumberOfWorkers") Integer maximumNumberOfWorkers,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("numberOfSites") Integer numberOfSites,
+        @OutputCustomType.Parameter("perSiteScaling") @Nullable Boolean perSiteScaling,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("reserved") @Nullable Boolean reserved,
+        @OutputCustomType.Parameter("resourceGroup") String resourceGroup,
+        @OutputCustomType.Parameter("sku") @Nullable SkuDescriptionResponse sku,
+        @OutputCustomType.Parameter("spotExpirationTime") @Nullable String spotExpirationTime,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("subscription") String subscription,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("targetWorkerCount") @Nullable Integer targetWorkerCount,
+        @OutputCustomType.Parameter("targetWorkerSizeId") @Nullable Integer targetWorkerSizeId,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("workerTierName") @Nullable String workerTierName) {
         this.freeOfferExpirationTime = freeOfferExpirationTime;
         this.geoRegion = geoRegion;
         this.hostingEnvironmentProfile = hostingEnvironmentProfile;

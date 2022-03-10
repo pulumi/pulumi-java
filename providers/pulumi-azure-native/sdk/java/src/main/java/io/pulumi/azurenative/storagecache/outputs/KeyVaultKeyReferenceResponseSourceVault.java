@@ -17,8 +17,8 @@ public final class KeyVaultKeyReferenceResponseSourceVault {
      */
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor({"id"})
-    private KeyVaultKeyReferenceResponseSourceVault(@Nullable String id) {
+    @OutputCustomType.Constructor
+    private KeyVaultKeyReferenceResponseSourceVault(@OutputCustomType.Parameter("id") @Nullable String id) {
         this.id = id;
     }
 

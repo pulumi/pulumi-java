@@ -35,13 +35,13 @@ public final class CacheUpgradeStatusResponse {
      */
     private final String pendingFirmwareVersion;
 
-    @OutputCustomType.Constructor({"currentFirmwareVersion","firmwareUpdateDeadline","firmwareUpdateStatus","lastFirmwareUpdate","pendingFirmwareVersion"})
+    @OutputCustomType.Constructor
     private CacheUpgradeStatusResponse(
-        String currentFirmwareVersion,
-        String firmwareUpdateDeadline,
-        String firmwareUpdateStatus,
-        String lastFirmwareUpdate,
-        String pendingFirmwareVersion) {
+        @OutputCustomType.Parameter("currentFirmwareVersion") String currentFirmwareVersion,
+        @OutputCustomType.Parameter("firmwareUpdateDeadline") String firmwareUpdateDeadline,
+        @OutputCustomType.Parameter("firmwareUpdateStatus") String firmwareUpdateStatus,
+        @OutputCustomType.Parameter("lastFirmwareUpdate") String lastFirmwareUpdate,
+        @OutputCustomType.Parameter("pendingFirmwareVersion") String pendingFirmwareVersion) {
         this.currentFirmwareVersion = currentFirmwareVersion;
         this.firmwareUpdateDeadline = firmwareUpdateDeadline;
         this.firmwareUpdateStatus = firmwareUpdateStatus;

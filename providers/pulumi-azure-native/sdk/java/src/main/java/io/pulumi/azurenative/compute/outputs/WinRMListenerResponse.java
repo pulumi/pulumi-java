@@ -22,10 +22,10 @@ public final class WinRMListenerResponse {
      */
     private final @Nullable String protocol;
 
-    @OutputCustomType.Constructor({"certificateUrl","protocol"})
+    @OutputCustomType.Constructor
     private WinRMListenerResponse(
-        @Nullable String certificateUrl,
-        @Nullable String protocol) {
+        @OutputCustomType.Parameter("certificateUrl") @Nullable String certificateUrl,
+        @OutputCustomType.Parameter("protocol") @Nullable String protocol) {
         this.certificateUrl = certificateUrl;
         this.protocol = protocol;
     }

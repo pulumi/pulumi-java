@@ -22,10 +22,10 @@ public final class BudgetFilterPropertiesResponse {
      */
     private final @Nullable BudgetComparisonExpressionResponse tags;
 
-    @OutputCustomType.Constructor({"dimensions","tags"})
+    @OutputCustomType.Constructor
     private BudgetFilterPropertiesResponse(
-        @Nullable BudgetComparisonExpressionResponse dimensions,
-        @Nullable BudgetComparisonExpressionResponse tags) {
+        @OutputCustomType.Parameter("dimensions") @Nullable BudgetComparisonExpressionResponse dimensions,
+        @OutputCustomType.Parameter("tags") @Nullable BudgetComparisonExpressionResponse tags) {
         this.dimensions = dimensions;
         this.tags = tags;
     }

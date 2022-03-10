@@ -17,8 +17,8 @@ public final class FhirServiceExportConfigurationResponse {
      */
     private final @Nullable String storageAccountName;
 
-    @OutputCustomType.Constructor({"storageAccountName"})
-    private FhirServiceExportConfigurationResponse(@Nullable String storageAccountName) {
+    @OutputCustomType.Constructor
+    private FhirServiceExportConfigurationResponse(@OutputCustomType.Parameter("storageAccountName") @Nullable String storageAccountName) {
         this.storageAccountName = storageAccountName;
     }
 

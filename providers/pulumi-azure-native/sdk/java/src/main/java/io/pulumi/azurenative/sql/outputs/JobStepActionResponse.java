@@ -27,11 +27,11 @@ public final class JobStepActionResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"source","type","value"})
+    @OutputCustomType.Constructor
     private JobStepActionResponse(
-        @Nullable String source,
-        @Nullable String type,
-        String value) {
+        @OutputCustomType.Parameter("source") @Nullable String source,
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("value") String value) {
         this.source = source;
         this.type = type;
         this.value = value;

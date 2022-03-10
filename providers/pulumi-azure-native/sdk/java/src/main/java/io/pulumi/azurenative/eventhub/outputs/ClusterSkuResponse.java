@@ -23,10 +23,10 @@ public final class ClusterSkuResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"capacity","name"})
+    @OutputCustomType.Constructor
     private ClusterSkuResponse(
-        @Nullable Integer capacity,
-        String name) {
+        @OutputCustomType.Parameter("capacity") @Nullable Integer capacity,
+        @OutputCustomType.Parameter("name") String name) {
         this.capacity = capacity;
         this.name = name;
     }

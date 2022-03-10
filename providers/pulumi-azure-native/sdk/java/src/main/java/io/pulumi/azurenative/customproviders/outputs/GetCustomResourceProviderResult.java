@@ -61,17 +61,17 @@ public final class GetCustomResourceProviderResult {
      */
     private final @Nullable List<CustomRPValidationsResponse> validations;
 
-    @OutputCustomType.Constructor({"actions","id","location","name","provisioningState","resourceTypes","tags","type","validations"})
+    @OutputCustomType.Constructor
     private GetCustomResourceProviderResult(
-        @Nullable List<CustomRPActionRouteDefinitionResponse> actions,
-        String id,
-        String location,
-        String name,
-        String provisioningState,
-        @Nullable List<CustomRPResourceTypeRouteDefinitionResponse> resourceTypes,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable List<CustomRPValidationsResponse> validations) {
+        @OutputCustomType.Parameter("actions") @Nullable List<CustomRPActionRouteDefinitionResponse> actions,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("resourceTypes") @Nullable List<CustomRPResourceTypeRouteDefinitionResponse> resourceTypes,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("validations") @Nullable List<CustomRPValidationsResponse> validations) {
         this.actions = actions;
         this.id = id;
         this.location = location;

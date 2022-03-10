@@ -30,11 +30,11 @@ public final class DiskInstanceViewResponse {
      */
     private final @Nullable List<InstanceViewStatusResponse> statuses;
 
-    @OutputCustomType.Constructor({"encryptionSettings","name","statuses"})
+    @OutputCustomType.Constructor
     private DiskInstanceViewResponse(
-        @Nullable List<DiskEncryptionSettingsResponse> encryptionSettings,
-        @Nullable String name,
-        @Nullable List<InstanceViewStatusResponse> statuses) {
+        @OutputCustomType.Parameter("encryptionSettings") @Nullable List<DiskEncryptionSettingsResponse> encryptionSettings,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("statuses") @Nullable List<InstanceViewStatusResponse> statuses) {
         this.encryptionSettings = encryptionSettings;
         this.name = name;
         this.statuses = statuses;

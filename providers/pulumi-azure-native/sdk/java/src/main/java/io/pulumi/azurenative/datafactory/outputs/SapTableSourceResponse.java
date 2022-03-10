@@ -95,24 +95,24 @@ public final class SapTableSourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"additionalColumns","batchSize","customRfcReadTableFunctionModule","disableMetricsCollection","maxConcurrentConnections","partitionOption","partitionSettings","queryTimeout","rfcTableFields","rfcTableOptions","rowCount","rowSkips","sapDataColumnDelimiter","sourceRetryCount","sourceRetryWait","type"})
+    @OutputCustomType.Constructor
     private SapTableSourceResponse(
-        @Nullable Object additionalColumns,
-        @Nullable Object batchSize,
-        @Nullable Object customRfcReadTableFunctionModule,
-        @Nullable Object disableMetricsCollection,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable Object partitionOption,
-        @Nullable SapTablePartitionSettingsResponse partitionSettings,
-        @Nullable Object queryTimeout,
-        @Nullable Object rfcTableFields,
-        @Nullable Object rfcTableOptions,
-        @Nullable Object rowCount,
-        @Nullable Object rowSkips,
-        @Nullable Object sapDataColumnDelimiter,
-        @Nullable Object sourceRetryCount,
-        @Nullable Object sourceRetryWait,
-        String type) {
+        @OutputCustomType.Parameter("additionalColumns") @Nullable Object additionalColumns,
+        @OutputCustomType.Parameter("batchSize") @Nullable Object batchSize,
+        @OutputCustomType.Parameter("customRfcReadTableFunctionModule") @Nullable Object customRfcReadTableFunctionModule,
+        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @OutputCustomType.Parameter("partitionOption") @Nullable Object partitionOption,
+        @OutputCustomType.Parameter("partitionSettings") @Nullable SapTablePartitionSettingsResponse partitionSettings,
+        @OutputCustomType.Parameter("queryTimeout") @Nullable Object queryTimeout,
+        @OutputCustomType.Parameter("rfcTableFields") @Nullable Object rfcTableFields,
+        @OutputCustomType.Parameter("rfcTableOptions") @Nullable Object rfcTableOptions,
+        @OutputCustomType.Parameter("rowCount") @Nullable Object rowCount,
+        @OutputCustomType.Parameter("rowSkips") @Nullable Object rowSkips,
+        @OutputCustomType.Parameter("sapDataColumnDelimiter") @Nullable Object sapDataColumnDelimiter,
+        @OutputCustomType.Parameter("sourceRetryCount") @Nullable Object sourceRetryCount,
+        @OutputCustomType.Parameter("sourceRetryWait") @Nullable Object sourceRetryWait,
+        @OutputCustomType.Parameter("type") String type) {
         this.additionalColumns = additionalColumns;
         this.batchSize = batchSize;
         this.customRfcReadTableFunctionModule = customRfcReadTableFunctionModule;

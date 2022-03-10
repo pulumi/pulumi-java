@@ -52,16 +52,16 @@ public final class GetGlobalReachConnectionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"addressPrefix","authorizationKey","circuitConnectionStatus","id","name","peerExpressRouteCircuit","provisioningState","type"})
+    @OutputCustomType.Constructor
     private GetGlobalReachConnectionResult(
-        String addressPrefix,
-        @Nullable String authorizationKey,
-        String circuitConnectionStatus,
-        String id,
-        String name,
-        @Nullable String peerExpressRouteCircuit,
-        String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("addressPrefix") String addressPrefix,
+        @OutputCustomType.Parameter("authorizationKey") @Nullable String authorizationKey,
+        @OutputCustomType.Parameter("circuitConnectionStatus") String circuitConnectionStatus,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("peerExpressRouteCircuit") @Nullable String peerExpressRouteCircuit,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.addressPrefix = addressPrefix;
         this.authorizationKey = authorizationKey;
         this.circuitConnectionStatus = circuitConnectionStatus;

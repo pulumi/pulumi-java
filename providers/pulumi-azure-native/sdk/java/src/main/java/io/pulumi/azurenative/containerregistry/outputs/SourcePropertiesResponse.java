@@ -34,12 +34,12 @@ public final class SourcePropertiesResponse {
      */
     private final String sourceControlType;
 
-    @OutputCustomType.Constructor({"branch","repositoryUrl","sourceControlAuthProperties","sourceControlType"})
+    @OutputCustomType.Constructor
     private SourcePropertiesResponse(
-        @Nullable String branch,
-        String repositoryUrl,
-        @Nullable AuthInfoResponse sourceControlAuthProperties,
-        String sourceControlType) {
+        @OutputCustomType.Parameter("branch") @Nullable String branch,
+        @OutputCustomType.Parameter("repositoryUrl") String repositoryUrl,
+        @OutputCustomType.Parameter("sourceControlAuthProperties") @Nullable AuthInfoResponse sourceControlAuthProperties,
+        @OutputCustomType.Parameter("sourceControlType") String sourceControlType) {
         this.branch = branch;
         this.repositoryUrl = repositoryUrl;
         this.sourceControlAuthProperties = sourceControlAuthProperties;

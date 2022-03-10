@@ -74,20 +74,20 @@ public final class GetSqlVirtualMachineGroupResult {
      */
     private final @Nullable WsfcDomainProfileResponse wsfcDomainProfile;
 
-    @OutputCustomType.Constructor({"clusterConfiguration","clusterManagerType","id","location","name","provisioningState","scaleType","sqlImageOffer","sqlImageSku","tags","type","wsfcDomainProfile"})
+    @OutputCustomType.Constructor
     private GetSqlVirtualMachineGroupResult(
-        String clusterConfiguration,
-        String clusterManagerType,
-        String id,
-        String location,
-        String name,
-        String provisioningState,
-        String scaleType,
-        @Nullable String sqlImageOffer,
-        @Nullable String sqlImageSku,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable WsfcDomainProfileResponse wsfcDomainProfile) {
+        @OutputCustomType.Parameter("clusterConfiguration") String clusterConfiguration,
+        @OutputCustomType.Parameter("clusterManagerType") String clusterManagerType,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("scaleType") String scaleType,
+        @OutputCustomType.Parameter("sqlImageOffer") @Nullable String sqlImageOffer,
+        @OutputCustomType.Parameter("sqlImageSku") @Nullable String sqlImageSku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("wsfcDomainProfile") @Nullable WsfcDomainProfileResponse wsfcDomainProfile) {
         this.clusterConfiguration = clusterConfiguration;
         this.clusterManagerType = clusterManagerType;
         this.id = id;

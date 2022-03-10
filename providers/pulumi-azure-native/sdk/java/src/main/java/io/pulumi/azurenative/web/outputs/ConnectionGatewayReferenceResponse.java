@@ -32,12 +32,12 @@ public final class ConnectionGatewayReferenceResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"id","location","name","type"})
+    @OutputCustomType.Constructor
     private ConnectionGatewayReferenceResponse(
-        @Nullable String id,
-        @Nullable String location,
-        @Nullable String name,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.id = id;
         this.location = location;
         this.name = name;

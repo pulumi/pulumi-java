@@ -68,18 +68,18 @@ public final class GetPolicySetDefinitionAtManagementGroupResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"description","displayName","id","metadata","name","parameters","policyDefinitionGroups","policyDefinitions","policyType","type"})
+    @OutputCustomType.Constructor
     private GetPolicySetDefinitionAtManagementGroupResult(
-        @Nullable String description,
-        @Nullable String displayName,
-        String id,
-        @Nullable Object metadata,
-        String name,
-        @Nullable Map<String,ParameterDefinitionsValueResponse> parameters,
-        @Nullable List<PolicyDefinitionGroupResponse> policyDefinitionGroups,
-        List<PolicyDefinitionReferenceResponse> policyDefinitions,
-        @Nullable String policyType,
-        String type) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("metadata") @Nullable Object metadata,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterDefinitionsValueResponse> parameters,
+        @OutputCustomType.Parameter("policyDefinitionGroups") @Nullable List<PolicyDefinitionGroupResponse> policyDefinitionGroups,
+        @OutputCustomType.Parameter("policyDefinitions") List<PolicyDefinitionReferenceResponse> policyDefinitions,
+        @OutputCustomType.Parameter("policyType") @Nullable String policyType,
+        @OutputCustomType.Parameter("type") String type) {
         this.description = description;
         this.displayName = displayName;
         this.id = id;

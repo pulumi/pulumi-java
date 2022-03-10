@@ -20,10 +20,10 @@ public final class AliasPathMetadataResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"attributes","type"})
+    @OutputCustomType.Constructor
     private AliasPathMetadataResponse(
-        String attributes,
-        String type) {
+        @OutputCustomType.Parameter("attributes") String attributes,
+        @OutputCustomType.Parameter("type") String type) {
         this.attributes = attributes;
         this.type = type;
     }

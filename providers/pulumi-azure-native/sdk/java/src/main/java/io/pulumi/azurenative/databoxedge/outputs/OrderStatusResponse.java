@@ -40,13 +40,13 @@ public final class OrderStatusResponse {
      */
     private final String updateDateTime;
 
-    @OutputCustomType.Constructor({"additionalOrderDetails","comments","status","trackingInformation","updateDateTime"})
+    @OutputCustomType.Constructor
     private OrderStatusResponse(
-        Map<String,String> additionalOrderDetails,
-        @Nullable String comments,
-        String status,
-        TrackingInfoResponse trackingInformation,
-        String updateDateTime) {
+        @OutputCustomType.Parameter("additionalOrderDetails") Map<String,String> additionalOrderDetails,
+        @OutputCustomType.Parameter("comments") @Nullable String comments,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("trackingInformation") TrackingInfoResponse trackingInformation,
+        @OutputCustomType.Parameter("updateDateTime") String updateDateTime) {
         this.additionalOrderDetails = additionalOrderDetails;
         this.comments = comments;
         this.status = status;

@@ -72,19 +72,19 @@ public final class GetLocalUserResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"hasSharedKey","hasSshKey","hasSshPassword","homeDirectory","id","name","permissionScopes","sid","sshAuthorizedKeys","systemData","type"})
+    @OutputCustomType.Constructor
     private GetLocalUserResult(
-        @Nullable Boolean hasSharedKey,
-        @Nullable Boolean hasSshKey,
-        @Nullable Boolean hasSshPassword,
-        @Nullable String homeDirectory,
-        String id,
-        String name,
-        @Nullable List<PermissionScopeResponse> permissionScopes,
-        String sid,
-        @Nullable List<SshPublicKeyResponse> sshAuthorizedKeys,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("hasSharedKey") @Nullable Boolean hasSharedKey,
+        @OutputCustomType.Parameter("hasSshKey") @Nullable Boolean hasSshKey,
+        @OutputCustomType.Parameter("hasSshPassword") @Nullable Boolean hasSshPassword,
+        @OutputCustomType.Parameter("homeDirectory") @Nullable String homeDirectory,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("permissionScopes") @Nullable List<PermissionScopeResponse> permissionScopes,
+        @OutputCustomType.Parameter("sid") String sid,
+        @OutputCustomType.Parameter("sshAuthorizedKeys") @Nullable List<SshPublicKeyResponse> sshAuthorizedKeys,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.hasSharedKey = hasSharedKey;
         this.hasSshKey = hasSshKey;
         this.hasSshPassword = hasSshPassword;

@@ -26,11 +26,11 @@ public final class GeoFilterResponse {
      */
     private final String relativePath;
 
-    @OutputCustomType.Constructor({"action","countryCodes","relativePath"})
+    @OutputCustomType.Constructor
     private GeoFilterResponse(
-        String action,
-        List<String> countryCodes,
-        String relativePath) {
+        @OutputCustomType.Parameter("action") String action,
+        @OutputCustomType.Parameter("countryCodes") List<String> countryCodes,
+        @OutputCustomType.Parameter("relativePath") String relativePath) {
         this.action = action;
         this.countryCodes = countryCodes;
         this.relativePath = relativePath;

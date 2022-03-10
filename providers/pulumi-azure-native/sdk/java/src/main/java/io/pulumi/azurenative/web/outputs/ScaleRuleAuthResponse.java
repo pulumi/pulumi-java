@@ -22,10 +22,10 @@ public final class ScaleRuleAuthResponse {
      */
     private final @Nullable String triggerParameter;
 
-    @OutputCustomType.Constructor({"secretRef","triggerParameter"})
+    @OutputCustomType.Constructor
     private ScaleRuleAuthResponse(
-        @Nullable String secretRef,
-        @Nullable String triggerParameter) {
+        @OutputCustomType.Parameter("secretRef") @Nullable String secretRef,
+        @OutputCustomType.Parameter("triggerParameter") @Nullable String triggerParameter) {
         this.secretRef = secretRef;
         this.triggerParameter = triggerParameter;
     }

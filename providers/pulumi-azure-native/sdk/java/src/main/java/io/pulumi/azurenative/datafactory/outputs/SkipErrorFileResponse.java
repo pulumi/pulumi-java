@@ -22,10 +22,10 @@ public final class SkipErrorFileResponse {
      */
     private final @Nullable Object fileMissing;
 
-    @OutputCustomType.Constructor({"dataInconsistency","fileMissing"})
+    @OutputCustomType.Constructor
     private SkipErrorFileResponse(
-        @Nullable Object dataInconsistency,
-        @Nullable Object fileMissing) {
+        @OutputCustomType.Parameter("dataInconsistency") @Nullable Object dataInconsistency,
+        @OutputCustomType.Parameter("fileMissing") @Nullable Object fileMissing) {
         this.dataInconsistency = dataInconsistency;
         this.fileMissing = fileMissing;
     }

@@ -39,13 +39,13 @@ public final class MonthlyScheduleResponse {
      */
     private final @Nullable Double usedBytes;
 
-    @OutputCustomType.Constructor({"daysOfMonth","hour","minute","snapshotsToKeep","usedBytes"})
+    @OutputCustomType.Constructor
     private MonthlyScheduleResponse(
-        @Nullable String daysOfMonth,
-        @Nullable Integer hour,
-        @Nullable Integer minute,
-        @Nullable Integer snapshotsToKeep,
-        @Nullable Double usedBytes) {
+        @OutputCustomType.Parameter("daysOfMonth") @Nullable String daysOfMonth,
+        @OutputCustomType.Parameter("hour") @Nullable Integer hour,
+        @OutputCustomType.Parameter("minute") @Nullable Integer minute,
+        @OutputCustomType.Parameter("snapshotsToKeep") @Nullable Integer snapshotsToKeep,
+        @OutputCustomType.Parameter("usedBytes") @Nullable Double usedBytes) {
         this.daysOfMonth = daysOfMonth;
         this.hour = hour;
         this.minute = minute;

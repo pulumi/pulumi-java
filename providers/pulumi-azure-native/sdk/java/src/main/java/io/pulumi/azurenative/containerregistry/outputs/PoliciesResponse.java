@@ -29,11 +29,11 @@ public final class PoliciesResponse {
      */
     private final @Nullable TrustPolicyResponse trustPolicy;
 
-    @OutputCustomType.Constructor({"quarantinePolicy","retentionPolicy","trustPolicy"})
+    @OutputCustomType.Constructor
     private PoliciesResponse(
-        @Nullable QuarantinePolicyResponse quarantinePolicy,
-        @Nullable RetentionPolicyResponse retentionPolicy,
-        @Nullable TrustPolicyResponse trustPolicy) {
+        @OutputCustomType.Parameter("quarantinePolicy") @Nullable QuarantinePolicyResponse quarantinePolicy,
+        @OutputCustomType.Parameter("retentionPolicy") @Nullable RetentionPolicyResponse retentionPolicy,
+        @OutputCustomType.Parameter("trustPolicy") @Nullable TrustPolicyResponse trustPolicy) {
         this.quarantinePolicy = quarantinePolicy;
         this.retentionPolicy = retentionPolicy;
         this.trustPolicy = trustPolicy;

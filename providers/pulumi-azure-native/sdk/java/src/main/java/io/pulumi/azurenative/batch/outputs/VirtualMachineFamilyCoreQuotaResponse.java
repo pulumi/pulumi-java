@@ -21,10 +21,10 @@ public final class VirtualMachineFamilyCoreQuotaResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"coreQuota","name"})
+    @OutputCustomType.Constructor
     private VirtualMachineFamilyCoreQuotaResponse(
-        Integer coreQuota,
-        String name) {
+        @OutputCustomType.Parameter("coreQuota") Integer coreQuota,
+        @OutputCustomType.Parameter("name") String name) {
         this.coreQuota = coreQuota;
         this.name = name;
     }

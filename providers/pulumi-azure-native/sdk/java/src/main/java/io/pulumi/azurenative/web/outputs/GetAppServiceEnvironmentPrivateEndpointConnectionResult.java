@@ -51,16 +51,16 @@ public final class GetAppServiceEnvironmentPrivateEndpointConnectionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","ipAddresses","kind","name","privateEndpoint","privateLinkServiceConnectionState","provisioningState","type"})
+    @OutputCustomType.Constructor
     private GetAppServiceEnvironmentPrivateEndpointConnectionResult(
-        String id,
-        @Nullable List<String> ipAddresses,
-        @Nullable String kind,
-        String name,
-        @Nullable ArmIdWrapperResponse privateEndpoint,
-        @Nullable PrivateLinkConnectionStateResponse privateLinkServiceConnectionState,
-        String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ipAddresses") @Nullable List<String> ipAddresses,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("privateEndpoint") @Nullable ArmIdWrapperResponse privateEndpoint,
+        @OutputCustomType.Parameter("privateLinkServiceConnectionState") @Nullable PrivateLinkConnectionStateResponse privateLinkServiceConnectionState,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.ipAddresses = ipAddresses;
         this.kind = kind;

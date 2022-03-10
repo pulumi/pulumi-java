@@ -17,8 +17,8 @@ public final class DedicatedHostGroupInstanceViewResponse {
      */
     private final @Nullable List<DedicatedHostInstanceViewWithNameResponse> hosts;
 
-    @OutputCustomType.Constructor({"hosts"})
-    private DedicatedHostGroupInstanceViewResponse(@Nullable List<DedicatedHostInstanceViewWithNameResponse> hosts) {
+    @OutputCustomType.Constructor
+    private DedicatedHostGroupInstanceViewResponse(@OutputCustomType.Parameter("hosts") @Nullable List<DedicatedHostInstanceViewWithNameResponse> hosts) {
         this.hosts = hosts;
     }
 

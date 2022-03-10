@@ -65,18 +65,18 @@ public final class GetIntegrationAccountPartnerResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"changedTime","content","createdTime","id","location","metadata","name","partnerType","tags","type"})
+    @OutputCustomType.Constructor
     private GetIntegrationAccountPartnerResult(
-        String changedTime,
-        PartnerContentResponse content,
-        String createdTime,
-        String id,
-        @Nullable String location,
-        @Nullable Object metadata,
-        String name,
-        String partnerType,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("changedTime") String changedTime,
+        @OutputCustomType.Parameter("content") PartnerContentResponse content,
+        @OutputCustomType.Parameter("createdTime") String createdTime,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("metadata") @Nullable Object metadata,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("partnerType") String partnerType,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.changedTime = changedTime;
         this.content = content;
         this.createdTime = createdTime;

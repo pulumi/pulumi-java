@@ -58,16 +58,16 @@ public final class CosmosDbMongoDbApiLinkedServiceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"annotations","connectVia","connectionString","database","description","isServerVersionAbove32","parameters","type"})
+    @OutputCustomType.Constructor
     private CosmosDbMongoDbApiLinkedServiceResponse(
-        @Nullable List<Object> annotations,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        Object connectionString,
-        Object database,
-        @Nullable String description,
-        @Nullable Object isServerVersionAbove32,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        String type) {
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @OutputCustomType.Parameter("connectionString") Object connectionString,
+        @OutputCustomType.Parameter("database") Object database,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("isServerVersionAbove32") @Nullable Object isServerVersionAbove32,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("type") String type) {
         this.annotations = annotations;
         this.connectVia = connectVia;
         this.connectionString = connectionString;

@@ -17,8 +17,8 @@ public final class ListLocationConsortiumsResult {
      */
     private final @Nullable List<ConsortiumResponse> value;
 
-    @OutputCustomType.Constructor({"value"})
-    private ListLocationConsortiumsResult(@Nullable List<ConsortiumResponse> value) {
+    @OutputCustomType.Constructor
+    private ListLocationConsortiumsResult(@OutputCustomType.Parameter("value") @Nullable List<ConsortiumResponse> value) {
         this.value = value;
     }
 

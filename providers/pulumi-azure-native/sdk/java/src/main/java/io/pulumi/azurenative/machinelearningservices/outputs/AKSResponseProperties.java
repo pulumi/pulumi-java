@@ -52,15 +52,15 @@ public final class AKSResponseProperties {
      */
     private final List<SystemServiceResponse> systemServices;
 
-    @OutputCustomType.Constructor({"agentCount","agentVmSize","aksNetworkingConfiguration","clusterFqdn","clusterPurpose","sslConfiguration","systemServices"})
+    @OutputCustomType.Constructor
     private AKSResponseProperties(
-        @Nullable Integer agentCount,
-        @Nullable String agentVmSize,
-        @Nullable AksNetworkingConfigurationResponse aksNetworkingConfiguration,
-        @Nullable String clusterFqdn,
-        @Nullable String clusterPurpose,
-        @Nullable SslConfigurationResponse sslConfiguration,
-        List<SystemServiceResponse> systemServices) {
+        @OutputCustomType.Parameter("agentCount") @Nullable Integer agentCount,
+        @OutputCustomType.Parameter("agentVmSize") @Nullable String agentVmSize,
+        @OutputCustomType.Parameter("aksNetworkingConfiguration") @Nullable AksNetworkingConfigurationResponse aksNetworkingConfiguration,
+        @OutputCustomType.Parameter("clusterFqdn") @Nullable String clusterFqdn,
+        @OutputCustomType.Parameter("clusterPurpose") @Nullable String clusterPurpose,
+        @OutputCustomType.Parameter("sslConfiguration") @Nullable SslConfigurationResponse sslConfiguration,
+        @OutputCustomType.Parameter("systemServices") List<SystemServiceResponse> systemServices) {
         this.agentCount = agentCount;
         this.agentVmSize = agentVmSize;
         this.aksNetworkingConfiguration = aksNetworkingConfiguration;

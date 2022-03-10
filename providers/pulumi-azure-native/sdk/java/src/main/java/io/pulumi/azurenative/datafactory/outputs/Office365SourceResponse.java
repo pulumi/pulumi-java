@@ -69,19 +69,19 @@ public final class Office365SourceResponse {
      */
     private final @Nullable Object userScopeFilterUri;
 
-    @OutputCustomType.Constructor({"allowedGroups","dateFilterColumn","disableMetricsCollection","endTime","maxConcurrentConnections","outputColumns","sourceRetryCount","sourceRetryWait","startTime","type","userScopeFilterUri"})
+    @OutputCustomType.Constructor
     private Office365SourceResponse(
-        @Nullable Object allowedGroups,
-        @Nullable Object dateFilterColumn,
-        @Nullable Object disableMetricsCollection,
-        @Nullable Object endTime,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable Object outputColumns,
-        @Nullable Object sourceRetryCount,
-        @Nullable Object sourceRetryWait,
-        @Nullable Object startTime,
-        String type,
-        @Nullable Object userScopeFilterUri) {
+        @OutputCustomType.Parameter("allowedGroups") @Nullable Object allowedGroups,
+        @OutputCustomType.Parameter("dateFilterColumn") @Nullable Object dateFilterColumn,
+        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @OutputCustomType.Parameter("endTime") @Nullable Object endTime,
+        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @OutputCustomType.Parameter("outputColumns") @Nullable Object outputColumns,
+        @OutputCustomType.Parameter("sourceRetryCount") @Nullable Object sourceRetryCount,
+        @OutputCustomType.Parameter("sourceRetryWait") @Nullable Object sourceRetryWait,
+        @OutputCustomType.Parameter("startTime") @Nullable Object startTime,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userScopeFilterUri") @Nullable Object userScopeFilterUri) {
         this.allowedGroups = allowedGroups;
         this.dateFilterColumn = dateFilterColumn;
         this.disableMetricsCollection = disableMetricsCollection;

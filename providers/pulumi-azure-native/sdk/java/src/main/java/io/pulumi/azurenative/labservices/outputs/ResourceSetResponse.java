@@ -22,10 +22,10 @@ public final class ResourceSetResponse {
      */
     private final @Nullable String vmResourceId;
 
-    @OutputCustomType.Constructor({"resourceSettingId","vmResourceId"})
+    @OutputCustomType.Constructor
     private ResourceSetResponse(
-        @Nullable String resourceSettingId,
-        @Nullable String vmResourceId) {
+        @OutputCustomType.Parameter("resourceSettingId") @Nullable String resourceSettingId,
+        @OutputCustomType.Parameter("vmResourceId") @Nullable String vmResourceId) {
         this.resourceSettingId = resourceSettingId;
         this.vmResourceId = vmResourceId;
     }

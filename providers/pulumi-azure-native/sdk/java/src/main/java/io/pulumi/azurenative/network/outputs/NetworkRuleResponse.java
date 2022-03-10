@@ -64,18 +64,18 @@ public final class NetworkRuleResponse {
      */
     private final @Nullable List<String> sourceIpGroups;
 
-    @OutputCustomType.Constructor({"description","destinationAddresses","destinationFqdns","destinationIpGroups","destinationPorts","ipProtocols","name","ruleType","sourceAddresses","sourceIpGroups"})
+    @OutputCustomType.Constructor
     private NetworkRuleResponse(
-        @Nullable String description,
-        @Nullable List<String> destinationAddresses,
-        @Nullable List<String> destinationFqdns,
-        @Nullable List<String> destinationIpGroups,
-        @Nullable List<String> destinationPorts,
-        @Nullable List<String> ipProtocols,
-        @Nullable String name,
-        String ruleType,
-        @Nullable List<String> sourceAddresses,
-        @Nullable List<String> sourceIpGroups) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("destinationAddresses") @Nullable List<String> destinationAddresses,
+        @OutputCustomType.Parameter("destinationFqdns") @Nullable List<String> destinationFqdns,
+        @OutputCustomType.Parameter("destinationIpGroups") @Nullable List<String> destinationIpGroups,
+        @OutputCustomType.Parameter("destinationPorts") @Nullable List<String> destinationPorts,
+        @OutputCustomType.Parameter("ipProtocols") @Nullable List<String> ipProtocols,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("ruleType") String ruleType,
+        @OutputCustomType.Parameter("sourceAddresses") @Nullable List<String> sourceAddresses,
+        @OutputCustomType.Parameter("sourceIpGroups") @Nullable List<String> sourceIpGroups) {
         this.description = description;
         this.destinationAddresses = destinationAddresses;
         this.destinationFqdns = destinationFqdns;

@@ -91,22 +91,22 @@ public final class HttpLinkedServiceResponse {
      */
     private final @Nullable Object userName;
 
-    @OutputCustomType.Constructor({"annotations","authHeaders","authenticationType","certThumbprint","connectVia","description","embeddedCertData","enableServerCertificateValidation","encryptedCredential","parameters","password","type","url","userName"})
+    @OutputCustomType.Constructor
     private HttpLinkedServiceResponse(
-        @Nullable List<Object> annotations,
-        @Nullable Object authHeaders,
-        @Nullable String authenticationType,
-        @Nullable Object certThumbprint,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable String description,
-        @Nullable Object embeddedCertData,
-        @Nullable Object enableServerCertificateValidation,
-        @Nullable Object encryptedCredential,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        String type,
-        Object url,
-        @Nullable Object userName) {
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("authHeaders") @Nullable Object authHeaders,
+        @OutputCustomType.Parameter("authenticationType") @Nullable String authenticationType,
+        @OutputCustomType.Parameter("certThumbprint") @Nullable Object certThumbprint,
+        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("embeddedCertData") @Nullable Object embeddedCertData,
+        @OutputCustomType.Parameter("enableServerCertificateValidation") @Nullable Object enableServerCertificateValidation,
+        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("password") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("url") Object url,
+        @OutputCustomType.Parameter("userName") @Nullable Object userName) {
         this.annotations = annotations;
         this.authHeaders = authHeaders;
         this.authenticationType = authenticationType;

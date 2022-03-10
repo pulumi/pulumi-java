@@ -157,35 +157,35 @@ public final class GetVirtualMachineTemplateResult {
      */
     private final @Nullable String vCenterId;
 
-    @OutputCustomType.Constructor({"customResourceName","disks","extendedLocation","firmwareType","folderPath","id","inventoryItemId","kind","location","memorySizeMB","moName","moRefId","name","networkInterfaces","numCPUs","numCoresPerSocket","osName","osType","provisioningState","statuses","systemData","tags","toolsVersion","toolsVersionStatus","type","uuid","vCenterId"})
+    @OutputCustomType.Constructor
     private GetVirtualMachineTemplateResult(
-        String customResourceName,
-        List<VirtualDiskResponse> disks,
-        @Nullable ExtendedLocationResponse extendedLocation,
-        String firmwareType,
-        String folderPath,
-        String id,
-        @Nullable String inventoryItemId,
-        @Nullable String kind,
-        String location,
-        Integer memorySizeMB,
-        String moName,
-        @Nullable String moRefId,
-        String name,
-        List<NetworkInterfaceResponse> networkInterfaces,
-        Integer numCPUs,
-        Integer numCoresPerSocket,
-        String osName,
-        String osType,
-        String provisioningState,
-        List<ResourceStatusResponse> statuses,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String toolsVersion,
-        String toolsVersionStatus,
-        String type,
-        String uuid,
-        @Nullable String vCenterId) {
+        @OutputCustomType.Parameter("customResourceName") String customResourceName,
+        @OutputCustomType.Parameter("disks") List<VirtualDiskResponse> disks,
+        @OutputCustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
+        @OutputCustomType.Parameter("firmwareType") String firmwareType,
+        @OutputCustomType.Parameter("folderPath") String folderPath,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("inventoryItemId") @Nullable String inventoryItemId,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("memorySizeMB") Integer memorySizeMB,
+        @OutputCustomType.Parameter("moName") String moName,
+        @OutputCustomType.Parameter("moRefId") @Nullable String moRefId,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networkInterfaces") List<NetworkInterfaceResponse> networkInterfaces,
+        @OutputCustomType.Parameter("numCPUs") Integer numCPUs,
+        @OutputCustomType.Parameter("numCoresPerSocket") Integer numCoresPerSocket,
+        @OutputCustomType.Parameter("osName") String osName,
+        @OutputCustomType.Parameter("osType") String osType,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("statuses") List<ResourceStatusResponse> statuses,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("toolsVersion") String toolsVersion,
+        @OutputCustomType.Parameter("toolsVersionStatus") String toolsVersionStatus,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("uuid") String uuid,
+        @OutputCustomType.Parameter("vCenterId") @Nullable String vCenterId) {
         this.customResourceName = customResourceName;
         this.disks = disks;
         this.extendedLocation = extendedLocation;

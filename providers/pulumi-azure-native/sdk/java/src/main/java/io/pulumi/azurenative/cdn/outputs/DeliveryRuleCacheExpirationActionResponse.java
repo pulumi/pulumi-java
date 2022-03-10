@@ -22,10 +22,10 @@ public final class DeliveryRuleCacheExpirationActionResponse {
      */
     private final CacheExpirationActionParametersResponse parameters;
 
-    @OutputCustomType.Constructor({"name","parameters"})
+    @OutputCustomType.Constructor
     private DeliveryRuleCacheExpirationActionResponse(
-        String name,
-        CacheExpirationActionParametersResponse parameters) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") CacheExpirationActionParametersResponse parameters) {
         this.name = name;
         this.parameters = parameters;
     }

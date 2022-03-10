@@ -17,8 +17,8 @@ public final class CacheSecuritySettingsResponse {
      */
     private final @Nullable List<NfsAccessPolicyResponse> accessPolicies;
 
-    @OutputCustomType.Constructor({"accessPolicies"})
-    private CacheSecuritySettingsResponse(@Nullable List<NfsAccessPolicyResponse> accessPolicies) {
+    @OutputCustomType.Constructor
+    private CacheSecuritySettingsResponse(@OutputCustomType.Parameter("accessPolicies") @Nullable List<NfsAccessPolicyResponse> accessPolicies) {
         this.accessPolicies = accessPolicies;
     }
 

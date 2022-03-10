@@ -22,10 +22,10 @@ public final class BlobNfsTargetResponse {
      */
     private final @Nullable String usageModel;
 
-    @OutputCustomType.Constructor({"target","usageModel"})
+    @OutputCustomType.Constructor
     private BlobNfsTargetResponse(
-        @Nullable String target,
-        @Nullable String usageModel) {
+        @OutputCustomType.Parameter("target") @Nullable String target,
+        @OutputCustomType.Parameter("usageModel") @Nullable String usageModel) {
         this.target = target;
         this.usageModel = usageModel;
     }

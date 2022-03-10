@@ -37,13 +37,13 @@ public final class GetCloudLinkResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","linkedCloud","name","status","type"})
+    @OutputCustomType.Constructor
     private GetCloudLinkResult(
-        String id,
-        @Nullable String linkedCloud,
-        String name,
-        String status,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("linkedCloud") @Nullable String linkedCloud,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.linkedCloud = linkedCloud;
         this.name = name;

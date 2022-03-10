@@ -33,12 +33,12 @@ public final class CloudErrorBodyResponse {
      */
     private final @Nullable String target;
 
-    @OutputCustomType.Constructor({"code","details","message","target"})
+    @OutputCustomType.Constructor
     private CloudErrorBodyResponse(
-        @Nullable String code,
-        @Nullable List<CloudErrorBodyResponse> details,
-        @Nullable String message,
-        @Nullable String target) {
+        @OutputCustomType.Parameter("code") @Nullable String code,
+        @OutputCustomType.Parameter("details") @Nullable List<CloudErrorBodyResponse> details,
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("target") @Nullable String target) {
         this.code = code;
         this.details = details;
         this.message = message;

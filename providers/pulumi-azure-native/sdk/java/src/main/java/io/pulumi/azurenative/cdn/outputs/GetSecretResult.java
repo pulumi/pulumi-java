@@ -48,15 +48,15 @@ public final class GetSecretResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"deploymentStatus","id","name","parameters","provisioningState","systemData","type"})
+    @OutputCustomType.Constructor
     private GetSecretResult(
-        String deploymentStatus,
-        String id,
-        String name,
-        @Nullable Object parameters,
-        String provisioningState,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("deploymentStatus") String deploymentStatus,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") @Nullable Object parameters,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.deploymentStatus = deploymentStatus;
         this.id = id;
         this.name = name;

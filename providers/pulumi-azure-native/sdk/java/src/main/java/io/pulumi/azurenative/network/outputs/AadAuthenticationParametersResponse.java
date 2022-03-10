@@ -27,11 +27,11 @@ public final class AadAuthenticationParametersResponse {
      */
     private final @Nullable String aadTenant;
 
-    @OutputCustomType.Constructor({"aadAudience","aadIssuer","aadTenant"})
+    @OutputCustomType.Constructor
     private AadAuthenticationParametersResponse(
-        @Nullable String aadAudience,
-        @Nullable String aadIssuer,
-        @Nullable String aadTenant) {
+        @OutputCustomType.Parameter("aadAudience") @Nullable String aadAudience,
+        @OutputCustomType.Parameter("aadIssuer") @Nullable String aadIssuer,
+        @OutputCustomType.Parameter("aadTenant") @Nullable String aadTenant) {
         this.aadAudience = aadAudience;
         this.aadIssuer = aadIssuer;
         this.aadTenant = aadTenant;

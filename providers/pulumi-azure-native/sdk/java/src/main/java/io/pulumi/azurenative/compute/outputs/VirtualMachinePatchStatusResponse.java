@@ -30,11 +30,11 @@ public final class VirtualMachinePatchStatusResponse {
      */
     private final @Nullable LastPatchInstallationSummaryResponse lastPatchInstallationSummary;
 
-    @OutputCustomType.Constructor({"availablePatchSummary","configurationStatuses","lastPatchInstallationSummary"})
+    @OutputCustomType.Constructor
     private VirtualMachinePatchStatusResponse(
-        @Nullable AvailablePatchSummaryResponse availablePatchSummary,
-        List<InstanceViewStatusResponse> configurationStatuses,
-        @Nullable LastPatchInstallationSummaryResponse lastPatchInstallationSummary) {
+        @OutputCustomType.Parameter("availablePatchSummary") @Nullable AvailablePatchSummaryResponse availablePatchSummary,
+        @OutputCustomType.Parameter("configurationStatuses") List<InstanceViewStatusResponse> configurationStatuses,
+        @OutputCustomType.Parameter("lastPatchInstallationSummary") @Nullable LastPatchInstallationSummaryResponse lastPatchInstallationSummary) {
         this.availablePatchSummary = availablePatchSummary;
         this.configurationStatuses = configurationStatuses;
         this.lastPatchInstallationSummary = lastPatchInstallationSummary;

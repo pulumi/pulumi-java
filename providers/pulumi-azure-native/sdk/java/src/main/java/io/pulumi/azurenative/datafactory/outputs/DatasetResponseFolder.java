@@ -17,8 +17,8 @@ public final class DatasetResponseFolder {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private DatasetResponseFolder(@Nullable String name) {
+    @OutputCustomType.Constructor
+    private DatasetResponseFolder(@OutputCustomType.Parameter("name") @Nullable String name) {
         this.name = name;
     }
 

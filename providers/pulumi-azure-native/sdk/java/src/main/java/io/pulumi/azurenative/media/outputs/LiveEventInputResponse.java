@@ -40,13 +40,13 @@ public final class LiveEventInputResponse {
      */
     private final String streamingProtocol;
 
-    @OutputCustomType.Constructor({"accessControl","accessToken","endpoints","keyFrameIntervalDuration","streamingProtocol"})
+    @OutputCustomType.Constructor
     private LiveEventInputResponse(
-        @Nullable LiveEventInputAccessControlResponse accessControl,
-        @Nullable String accessToken,
-        @Nullable List<LiveEventEndpointResponse> endpoints,
-        @Nullable String keyFrameIntervalDuration,
-        String streamingProtocol) {
+        @OutputCustomType.Parameter("accessControl") @Nullable LiveEventInputAccessControlResponse accessControl,
+        @OutputCustomType.Parameter("accessToken") @Nullable String accessToken,
+        @OutputCustomType.Parameter("endpoints") @Nullable List<LiveEventEndpointResponse> endpoints,
+        @OutputCustomType.Parameter("keyFrameIntervalDuration") @Nullable String keyFrameIntervalDuration,
+        @OutputCustomType.Parameter("streamingProtocol") String streamingProtocol) {
         this.accessControl = accessControl;
         this.accessToken = accessToken;
         this.endpoints = endpoints;

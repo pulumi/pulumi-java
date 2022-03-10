@@ -72,20 +72,20 @@ public final class InnerHealthErrorResponse {
      */
     private final @Nullable String summaryMessage;
 
-    @OutputCustomType.Constructor({"creationTimeUtc","entityId","errorCategory","errorCode","errorLevel","errorMessage","errorSource","errorType","possibleCauses","recommendedAction","recoveryProviderErrorMessage","summaryMessage"})
+    @OutputCustomType.Constructor
     private InnerHealthErrorResponse(
-        @Nullable String creationTimeUtc,
-        @Nullable String entityId,
-        @Nullable String errorCategory,
-        @Nullable String errorCode,
-        @Nullable String errorLevel,
-        @Nullable String errorMessage,
-        @Nullable String errorSource,
-        @Nullable String errorType,
-        @Nullable String possibleCauses,
-        @Nullable String recommendedAction,
-        @Nullable String recoveryProviderErrorMessage,
-        @Nullable String summaryMessage) {
+        @OutputCustomType.Parameter("creationTimeUtc") @Nullable String creationTimeUtc,
+        @OutputCustomType.Parameter("entityId") @Nullable String entityId,
+        @OutputCustomType.Parameter("errorCategory") @Nullable String errorCategory,
+        @OutputCustomType.Parameter("errorCode") @Nullable String errorCode,
+        @OutputCustomType.Parameter("errorLevel") @Nullable String errorLevel,
+        @OutputCustomType.Parameter("errorMessage") @Nullable String errorMessage,
+        @OutputCustomType.Parameter("errorSource") @Nullable String errorSource,
+        @OutputCustomType.Parameter("errorType") @Nullable String errorType,
+        @OutputCustomType.Parameter("possibleCauses") @Nullable String possibleCauses,
+        @OutputCustomType.Parameter("recommendedAction") @Nullable String recommendedAction,
+        @OutputCustomType.Parameter("recoveryProviderErrorMessage") @Nullable String recoveryProviderErrorMessage,
+        @OutputCustomType.Parameter("summaryMessage") @Nullable String summaryMessage) {
         this.creationTimeUtc = creationTimeUtc;
         this.entityId = entityId;
         this.errorCategory = errorCategory;

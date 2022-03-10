@@ -41,14 +41,14 @@ public final class UpdateHistoryPropertyResponse {
      */
     private final String upn;
 
-    @OutputCustomType.Constructor({"immutabilityPeriodSinceCreationInDays","objectIdentifier","tenantId","timestamp","update","upn"})
+    @OutputCustomType.Constructor
     private UpdateHistoryPropertyResponse(
-        Integer immutabilityPeriodSinceCreationInDays,
-        String objectIdentifier,
-        String tenantId,
-        String timestamp,
-        String update,
-        String upn) {
+        @OutputCustomType.Parameter("immutabilityPeriodSinceCreationInDays") Integer immutabilityPeriodSinceCreationInDays,
+        @OutputCustomType.Parameter("objectIdentifier") String objectIdentifier,
+        @OutputCustomType.Parameter("tenantId") String tenantId,
+        @OutputCustomType.Parameter("timestamp") String timestamp,
+        @OutputCustomType.Parameter("update") String update,
+        @OutputCustomType.Parameter("upn") String upn) {
         this.immutabilityPeriodSinceCreationInDays = immutabilityPeriodSinceCreationInDays;
         this.objectIdentifier = objectIdentifier;
         this.tenantId = tenantId;

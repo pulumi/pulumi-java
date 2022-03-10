@@ -26,11 +26,11 @@ public final class SecureIotDeviceRemoteTunnelResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"deviceId","iotHubName","type"})
+    @OutputCustomType.Constructor
     private SecureIotDeviceRemoteTunnelResponse(
-        String deviceId,
-        String iotHubName,
-        String type) {
+        @OutputCustomType.Parameter("deviceId") String deviceId,
+        @OutputCustomType.Parameter("iotHubName") String iotHubName,
+        @OutputCustomType.Parameter("type") String type) {
         this.deviceId = deviceId;
         this.iotHubName = iotHubName;
         this.type = type;

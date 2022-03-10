@@ -47,14 +47,14 @@ public final class ContainerResourceRequirementsResponse {
      */
     private final @Nullable Double memoryInGBLimit;
 
-    @OutputCustomType.Constructor({"cpu","cpuLimit","fpga","gpu","memoryInGB","memoryInGBLimit"})
+    @OutputCustomType.Constructor
     private ContainerResourceRequirementsResponse(
-        @Nullable Double cpu,
-        @Nullable Double cpuLimit,
-        @Nullable Integer fpga,
-        @Nullable Integer gpu,
-        @Nullable Double memoryInGB,
-        @Nullable Double memoryInGBLimit) {
+        @OutputCustomType.Parameter("cpu") @Nullable Double cpu,
+        @OutputCustomType.Parameter("cpuLimit") @Nullable Double cpuLimit,
+        @OutputCustomType.Parameter("fpga") @Nullable Integer fpga,
+        @OutputCustomType.Parameter("gpu") @Nullable Integer gpu,
+        @OutputCustomType.Parameter("memoryInGB") @Nullable Double memoryInGB,
+        @OutputCustomType.Parameter("memoryInGBLimit") @Nullable Double memoryInGBLimit) {
         this.cpu = cpu;
         this.cpuLimit = cpuLimit;
         this.fpga = fpga;

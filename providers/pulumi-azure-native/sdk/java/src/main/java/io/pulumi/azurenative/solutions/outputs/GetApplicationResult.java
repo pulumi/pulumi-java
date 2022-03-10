@@ -150,33 +150,33 @@ public final class GetApplicationResult {
      */
     private final ApplicationClientDetailsResponse updatedBy;
 
-    @OutputCustomType.Constructor({"applicationDefinitionId","artifacts","authorizations","billingDetails","createdBy","customerSupport","id","identity","jitAccessPolicy","kind","location","managedBy","managedResourceGroupId","managementMode","name","outputs","parameters","plan","provisioningState","publisherTenantId","sku","supportUrls","tags","type","updatedBy"})
+    @OutputCustomType.Constructor
     private GetApplicationResult(
-        @Nullable String applicationDefinitionId,
-        List<ApplicationArtifactResponse> artifacts,
-        List<ApplicationAuthorizationResponse> authorizations,
-        ApplicationBillingDetailsDefinitionResponse billingDetails,
-        ApplicationClientDetailsResponse createdBy,
-        ApplicationPackageContactResponse customerSupport,
-        String id,
-        @Nullable IdentityResponse identity,
-        @Nullable ApplicationJitAccessPolicyResponse jitAccessPolicy,
-        String kind,
-        @Nullable String location,
-        @Nullable String managedBy,
-        @Nullable String managedResourceGroupId,
-        String managementMode,
-        String name,
-        Object outputs,
-        @Nullable Object parameters,
-        @Nullable PlanResponse plan,
-        String provisioningState,
-        String publisherTenantId,
-        @Nullable SkuResponse sku,
-        ApplicationPackageSupportUrlsResponse supportUrls,
-        @Nullable Map<String,String> tags,
-        String type,
-        ApplicationClientDetailsResponse updatedBy) {
+        @OutputCustomType.Parameter("applicationDefinitionId") @Nullable String applicationDefinitionId,
+        @OutputCustomType.Parameter("artifacts") List<ApplicationArtifactResponse> artifacts,
+        @OutputCustomType.Parameter("authorizations") List<ApplicationAuthorizationResponse> authorizations,
+        @OutputCustomType.Parameter("billingDetails") ApplicationBillingDetailsDefinitionResponse billingDetails,
+        @OutputCustomType.Parameter("createdBy") ApplicationClientDetailsResponse createdBy,
+        @OutputCustomType.Parameter("customerSupport") ApplicationPackageContactResponse customerSupport,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable IdentityResponse identity,
+        @OutputCustomType.Parameter("jitAccessPolicy") @Nullable ApplicationJitAccessPolicyResponse jitAccessPolicy,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("managedBy") @Nullable String managedBy,
+        @OutputCustomType.Parameter("managedResourceGroupId") @Nullable String managedResourceGroupId,
+        @OutputCustomType.Parameter("managementMode") String managementMode,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("outputs") Object outputs,
+        @OutputCustomType.Parameter("parameters") @Nullable Object parameters,
+        @OutputCustomType.Parameter("plan") @Nullable PlanResponse plan,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publisherTenantId") String publisherTenantId,
+        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @OutputCustomType.Parameter("supportUrls") ApplicationPackageSupportUrlsResponse supportUrls,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("updatedBy") ApplicationClientDetailsResponse updatedBy) {
         this.applicationDefinitionId = applicationDefinitionId;
         this.artifacts = artifacts;
         this.authorizations = authorizations;

@@ -57,16 +57,16 @@ public final class RampUpRuleResponse {
      */
     private final @Nullable Double reroutePercentage;
 
-    @OutputCustomType.Constructor({"actionHostName","changeDecisionCallbackUrl","changeIntervalInMinutes","changeStep","maxReroutePercentage","minReroutePercentage","name","reroutePercentage"})
+    @OutputCustomType.Constructor
     private RampUpRuleResponse(
-        @Nullable String actionHostName,
-        @Nullable String changeDecisionCallbackUrl,
-        @Nullable Integer changeIntervalInMinutes,
-        @Nullable Double changeStep,
-        @Nullable Double maxReroutePercentage,
-        @Nullable Double minReroutePercentage,
-        @Nullable String name,
-        @Nullable Double reroutePercentage) {
+        @OutputCustomType.Parameter("actionHostName") @Nullable String actionHostName,
+        @OutputCustomType.Parameter("changeDecisionCallbackUrl") @Nullable String changeDecisionCallbackUrl,
+        @OutputCustomType.Parameter("changeIntervalInMinutes") @Nullable Integer changeIntervalInMinutes,
+        @OutputCustomType.Parameter("changeStep") @Nullable Double changeStep,
+        @OutputCustomType.Parameter("maxReroutePercentage") @Nullable Double maxReroutePercentage,
+        @OutputCustomType.Parameter("minReroutePercentage") @Nullable Double minReroutePercentage,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("reroutePercentage") @Nullable Double reroutePercentage) {
         this.actionHostName = actionHostName;
         this.changeDecisionCallbackUrl = changeDecisionCallbackUrl;
         this.changeIntervalInMinutes = changeIntervalInMinutes;

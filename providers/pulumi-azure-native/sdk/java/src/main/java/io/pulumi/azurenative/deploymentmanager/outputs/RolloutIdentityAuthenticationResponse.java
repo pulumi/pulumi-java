@@ -16,8 +16,8 @@ public final class RolloutIdentityAuthenticationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"type"})
-    private RolloutIdentityAuthenticationResponse(String type) {
+    @OutputCustomType.Constructor
+    private RolloutIdentityAuthenticationResponse(@OutputCustomType.Parameter("type") String type) {
         this.type = type;
     }
 

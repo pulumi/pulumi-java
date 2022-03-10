@@ -51,15 +51,15 @@ public final class VirtualMachineScaleSetOSProfileResponse {
      */
     private final @Nullable WindowsConfigurationResponse windowsConfiguration;
 
-    @OutputCustomType.Constructor({"adminPassword","adminUsername","computerNamePrefix","customData","linuxConfiguration","secrets","windowsConfiguration"})
+    @OutputCustomType.Constructor
     private VirtualMachineScaleSetOSProfileResponse(
-        @Nullable String adminPassword,
-        @Nullable String adminUsername,
-        @Nullable String computerNamePrefix,
-        @Nullable String customData,
-        @Nullable LinuxConfigurationResponse linuxConfiguration,
-        @Nullable List<VaultSecretGroupResponse> secrets,
-        @Nullable WindowsConfigurationResponse windowsConfiguration) {
+        @OutputCustomType.Parameter("adminPassword") @Nullable String adminPassword,
+        @OutputCustomType.Parameter("adminUsername") @Nullable String adminUsername,
+        @OutputCustomType.Parameter("computerNamePrefix") @Nullable String computerNamePrefix,
+        @OutputCustomType.Parameter("customData") @Nullable String customData,
+        @OutputCustomType.Parameter("linuxConfiguration") @Nullable LinuxConfigurationResponse linuxConfiguration,
+        @OutputCustomType.Parameter("secrets") @Nullable List<VaultSecretGroupResponse> secrets,
+        @OutputCustomType.Parameter("windowsConfiguration") @Nullable WindowsConfigurationResponse windowsConfiguration) {
         this.adminPassword = adminPassword;
         this.adminUsername = adminUsername;
         this.computerNamePrefix = computerNamePrefix;

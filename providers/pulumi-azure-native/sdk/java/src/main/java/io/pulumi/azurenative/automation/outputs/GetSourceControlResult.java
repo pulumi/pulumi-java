@@ -73,20 +73,20 @@ public final class GetSourceControlResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"autoSync","branch","creationTime","description","folderPath","id","lastModifiedTime","name","publishRunbook","repoUrl","sourceType","type"})
+    @OutputCustomType.Constructor
     private GetSourceControlResult(
-        @Nullable Boolean autoSync,
-        @Nullable String branch,
-        @Nullable String creationTime,
-        @Nullable String description,
-        @Nullable String folderPath,
-        String id,
-        @Nullable String lastModifiedTime,
-        String name,
-        @Nullable Boolean publishRunbook,
-        @Nullable String repoUrl,
-        @Nullable String sourceType,
-        String type) {
+        @OutputCustomType.Parameter("autoSync") @Nullable Boolean autoSync,
+        @OutputCustomType.Parameter("branch") @Nullable String branch,
+        @OutputCustomType.Parameter("creationTime") @Nullable String creationTime,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("folderPath") @Nullable String folderPath,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastModifiedTime") @Nullable String lastModifiedTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("publishRunbook") @Nullable Boolean publishRunbook,
+        @OutputCustomType.Parameter("repoUrl") @Nullable String repoUrl,
+        @OutputCustomType.Parameter("sourceType") @Nullable String sourceType,
+        @OutputCustomType.Parameter("type") String type) {
         this.autoSync = autoSync;
         this.branch = branch;
         this.creationTime = creationTime;

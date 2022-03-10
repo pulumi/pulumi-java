@@ -34,12 +34,12 @@ public final class ManagedServiceIdentityResponse {
      */
     private final @Nullable Map<String,UserAssignedIdentityResponse> userAssignedIdentities;
 
-    @OutputCustomType.Constructor({"principalId","tenantId","type","userAssignedIdentities"})
+    @OutputCustomType.Constructor
     private ManagedServiceIdentityResponse(
-        @Nullable String principalId,
-        @Nullable String tenantId,
-        String type,
-        @Nullable Map<String,UserAssignedIdentityResponse> userAssignedIdentities) {
+        @OutputCustomType.Parameter("principalId") @Nullable String principalId,
+        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userAssignedIdentities") @Nullable Map<String,UserAssignedIdentityResponse> userAssignedIdentities) {
         this.principalId = principalId;
         this.tenantId = tenantId;
         this.type = type;

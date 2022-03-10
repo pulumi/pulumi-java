@@ -42,14 +42,14 @@ public final class AzureStorageInfoValueResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"accessKey","accountName","mountPath","shareName","state","type"})
+    @OutputCustomType.Constructor
     private AzureStorageInfoValueResponse(
-        @Nullable String accessKey,
-        @Nullable String accountName,
-        @Nullable String mountPath,
-        @Nullable String shareName,
-        String state,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("accessKey") @Nullable String accessKey,
+        @OutputCustomType.Parameter("accountName") @Nullable String accountName,
+        @OutputCustomType.Parameter("mountPath") @Nullable String mountPath,
+        @OutputCustomType.Parameter("shareName") @Nullable String shareName,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.accessKey = accessKey;
         this.accountName = accountName;
         this.mountPath = mountPath;

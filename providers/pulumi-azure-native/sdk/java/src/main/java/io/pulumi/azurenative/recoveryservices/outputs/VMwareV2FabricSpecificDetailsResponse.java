@@ -36,13 +36,13 @@ public final class VMwareV2FabricSpecificDetailsResponse {
      */
     private final String vmwareSiteId;
 
-    @OutputCustomType.Constructor({"instanceType","migrationSolutionId","serviceEndpoint","serviceResourceId","vmwareSiteId"})
+    @OutputCustomType.Constructor
     private VMwareV2FabricSpecificDetailsResponse(
-        String instanceType,
-        String migrationSolutionId,
-        String serviceEndpoint,
-        String serviceResourceId,
-        String vmwareSiteId) {
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("migrationSolutionId") String migrationSolutionId,
+        @OutputCustomType.Parameter("serviceEndpoint") String serviceEndpoint,
+        @OutputCustomType.Parameter("serviceResourceId") String serviceResourceId,
+        @OutputCustomType.Parameter("vmwareSiteId") String vmwareSiteId) {
         this.instanceType = instanceType;
         this.migrationSolutionId = migrationSolutionId;
         this.serviceEndpoint = serviceEndpoint;

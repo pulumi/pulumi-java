@@ -62,18 +62,18 @@ public final class IdentitySourceResponse {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor({"alias","baseGroupDN","baseUserDN","domain","name","password","primaryServer","secondaryServer","ssl","username"})
+    @OutputCustomType.Constructor
     private IdentitySourceResponse(
-        @Nullable String alias,
-        @Nullable String baseGroupDN,
-        @Nullable String baseUserDN,
-        @Nullable String domain,
-        @Nullable String name,
-        @Nullable String password,
-        @Nullable String primaryServer,
-        @Nullable String secondaryServer,
-        @Nullable String ssl,
-        @Nullable String username) {
+        @OutputCustomType.Parameter("alias") @Nullable String alias,
+        @OutputCustomType.Parameter("baseGroupDN") @Nullable String baseGroupDN,
+        @OutputCustomType.Parameter("baseUserDN") @Nullable String baseUserDN,
+        @OutputCustomType.Parameter("domain") @Nullable String domain,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("password") @Nullable String password,
+        @OutputCustomType.Parameter("primaryServer") @Nullable String primaryServer,
+        @OutputCustomType.Parameter("secondaryServer") @Nullable String secondaryServer,
+        @OutputCustomType.Parameter("ssl") @Nullable String ssl,
+        @OutputCustomType.Parameter("username") @Nullable String username) {
         this.alias = alias;
         this.baseGroupDN = baseGroupDN;
         this.baseUserDN = baseUserDN;

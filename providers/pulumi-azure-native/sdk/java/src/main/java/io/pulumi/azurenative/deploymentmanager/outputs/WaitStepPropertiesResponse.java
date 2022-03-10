@@ -22,10 +22,10 @@ public final class WaitStepPropertiesResponse {
      */
     private final String stepType;
 
-    @OutputCustomType.Constructor({"attributes","stepType"})
+    @OutputCustomType.Constructor
     private WaitStepPropertiesResponse(
-        WaitStepAttributesResponse attributes,
-        String stepType) {
+        @OutputCustomType.Parameter("attributes") WaitStepAttributesResponse attributes,
+        @OutputCustomType.Parameter("stepType") String stepType) {
         this.attributes = attributes;
         this.stepType = stepType;
     }

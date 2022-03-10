@@ -38,13 +38,13 @@ public final class VirtualDiskResponse {
      */
     private final String virtualDiskName;
 
-    @OutputCustomType.Constructor({"controllerId","independenceMode","totalSize","virtualDiskId","virtualDiskName"})
+    @OutputCustomType.Constructor
     private VirtualDiskResponse(
-        String controllerId,
-        String independenceMode,
-        Integer totalSize,
-        @Nullable String virtualDiskId,
-        String virtualDiskName) {
+        @OutputCustomType.Parameter("controllerId") String controllerId,
+        @OutputCustomType.Parameter("independenceMode") String independenceMode,
+        @OutputCustomType.Parameter("totalSize") Integer totalSize,
+        @OutputCustomType.Parameter("virtualDiskId") @Nullable String virtualDiskId,
+        @OutputCustomType.Parameter("virtualDiskName") String virtualDiskName) {
         this.controllerId = controllerId;
         this.independenceMode = independenceMode;
         this.totalSize = totalSize;

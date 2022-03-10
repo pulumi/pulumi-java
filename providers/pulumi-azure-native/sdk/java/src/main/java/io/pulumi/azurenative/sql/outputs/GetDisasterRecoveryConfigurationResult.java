@@ -65,19 +65,19 @@ public final class GetDisasterRecoveryConfigurationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"autoFailover","failoverPolicy","id","location","logicalServerName","name","partnerLogicalServerName","partnerServerId","role","status","type"})
+    @OutputCustomType.Constructor
     private GetDisasterRecoveryConfigurationResult(
-        String autoFailover,
-        String failoverPolicy,
-        String id,
-        String location,
-        String logicalServerName,
-        String name,
-        String partnerLogicalServerName,
-        String partnerServerId,
-        String role,
-        String status,
-        String type) {
+        @OutputCustomType.Parameter("autoFailover") String autoFailover,
+        @OutputCustomType.Parameter("failoverPolicy") String failoverPolicy,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("logicalServerName") String logicalServerName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("partnerLogicalServerName") String partnerLogicalServerName,
+        @OutputCustomType.Parameter("partnerServerId") String partnerServerId,
+        @OutputCustomType.Parameter("role") String role,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("type") String type) {
         this.autoFailover = autoFailover;
         this.failoverPolicy = failoverPolicy;
         this.id = id;

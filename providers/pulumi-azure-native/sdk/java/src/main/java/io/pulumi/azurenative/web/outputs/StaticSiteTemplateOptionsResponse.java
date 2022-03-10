@@ -38,13 +38,13 @@ public final class StaticSiteTemplateOptionsResponse {
      */
     private final @Nullable String templateRepositoryUrl;
 
-    @OutputCustomType.Constructor({"description","isPrivate","owner","repositoryName","templateRepositoryUrl"})
+    @OutputCustomType.Constructor
     private StaticSiteTemplateOptionsResponse(
-        @Nullable String description,
-        @Nullable Boolean isPrivate,
-        @Nullable String owner,
-        @Nullable String repositoryName,
-        @Nullable String templateRepositoryUrl) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("isPrivate") @Nullable Boolean isPrivate,
+        @OutputCustomType.Parameter("owner") @Nullable String owner,
+        @OutputCustomType.Parameter("repositoryName") @Nullable String repositoryName,
+        @OutputCustomType.Parameter("templateRepositoryUrl") @Nullable String templateRepositoryUrl) {
         this.description = description;
         this.isPrivate = isPrivate;
         this.owner = owner;

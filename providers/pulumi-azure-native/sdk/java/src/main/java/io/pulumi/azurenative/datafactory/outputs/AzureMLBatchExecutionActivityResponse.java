@@ -71,18 +71,18 @@ public final class AzureMLBatchExecutionActivityResponse {
      */
     private final @Nullable Map<String,AzureMLWebServiceFileResponse> webServiceOutputs;
 
-    @OutputCustomType.Constructor({"dependsOn","description","globalParameters","linkedServiceName","name","policy","type","userProperties","webServiceInputs","webServiceOutputs"})
+    @OutputCustomType.Constructor
     private AzureMLBatchExecutionActivityResponse(
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        @Nullable Map<String,Object> globalParameters,
-        @Nullable LinkedServiceReferenceResponse linkedServiceName,
-        String name,
-        @Nullable ActivityPolicyResponse policy,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties,
-        @Nullable Map<String,AzureMLWebServiceFileResponse> webServiceInputs,
-        @Nullable Map<String,AzureMLWebServiceFileResponse> webServiceOutputs) {
+        @OutputCustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("globalParameters") @Nullable Map<String,Object> globalParameters,
+        @OutputCustomType.Parameter("linkedServiceName") @Nullable LinkedServiceReferenceResponse linkedServiceName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("policy") @Nullable ActivityPolicyResponse policy,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties,
+        @OutputCustomType.Parameter("webServiceInputs") @Nullable Map<String,AzureMLWebServiceFileResponse> webServiceInputs,
+        @OutputCustomType.Parameter("webServiceOutputs") @Nullable Map<String,AzureMLWebServiceFileResponse> webServiceOutputs) {
         this.dependsOn = dependsOn;
         this.description = description;
         this.globalParameters = globalParameters;

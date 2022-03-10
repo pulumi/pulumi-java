@@ -20,10 +20,10 @@ public final class ConditionResponse {
      */
     private final String timestamp;
 
-    @OutputCustomType.Constructor({"message","timestamp"})
+    @OutputCustomType.Constructor
     private ConditionResponse(
-        String message,
-        String timestamp) {
+        @OutputCustomType.Parameter("message") String message,
+        @OutputCustomType.Parameter("timestamp") String timestamp) {
         this.message = message;
         this.timestamp = timestamp;
     }

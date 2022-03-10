@@ -54,16 +54,16 @@ public final class GetTIDataConnectorResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"dataTypes","etag","id","kind","name","tenantId","tipLookbackPeriod","type"})
+    @OutputCustomType.Constructor
     private GetTIDataConnectorResult(
-        @Nullable TIDataConnectorDataTypesResponse dataTypes,
-        @Nullable String etag,
-        String id,
-        String kind,
-        String name,
-        @Nullable String tenantId,
-        @Nullable String tipLookbackPeriod,
-        String type) {
+        @OutputCustomType.Parameter("dataTypes") @Nullable TIDataConnectorDataTypesResponse dataTypes,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId,
+        @OutputCustomType.Parameter("tipLookbackPeriod") @Nullable String tipLookbackPeriod,
+        @OutputCustomType.Parameter("type") String type) {
         this.dataTypes = dataTypes;
         this.etag = etag;
         this.id = id;

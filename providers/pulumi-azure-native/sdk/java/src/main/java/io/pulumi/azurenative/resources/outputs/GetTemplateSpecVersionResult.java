@@ -72,19 +72,19 @@ public final class GetTemplateSpecVersionResult {
      */
     private final @Nullable Object uiFormDefinition;
 
-    @OutputCustomType.Constructor({"description","id","linkedTemplates","location","mainTemplate","metadata","name","systemData","tags","type","uiFormDefinition"})
+    @OutputCustomType.Constructor
     private GetTemplateSpecVersionResult(
-        @Nullable String description,
-        String id,
-        @Nullable List<LinkedTemplateArtifactResponse> linkedTemplates,
-        String location,
-        @Nullable Object mainTemplate,
-        @Nullable Object metadata,
-        String name,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable Object uiFormDefinition) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("linkedTemplates") @Nullable List<LinkedTemplateArtifactResponse> linkedTemplates,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("mainTemplate") @Nullable Object mainTemplate,
+        @OutputCustomType.Parameter("metadata") @Nullable Object metadata,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("uiFormDefinition") @Nullable Object uiFormDefinition) {
         this.description = description;
         this.id = id;
         this.linkedTemplates = linkedTemplates;

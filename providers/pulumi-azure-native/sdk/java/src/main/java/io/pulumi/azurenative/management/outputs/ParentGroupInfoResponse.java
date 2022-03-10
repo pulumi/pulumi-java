@@ -27,11 +27,11 @@ public final class ParentGroupInfoResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"displayName","id","name"})
+    @OutputCustomType.Constructor
     private ParentGroupInfoResponse(
-        @Nullable String displayName,
-        @Nullable String id,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.displayName = displayName;
         this.id = id;
         this.name = name;

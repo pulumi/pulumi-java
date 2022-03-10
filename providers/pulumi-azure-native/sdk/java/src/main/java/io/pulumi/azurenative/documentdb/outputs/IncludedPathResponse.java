@@ -24,10 +24,10 @@ public final class IncludedPathResponse {
      */
     private final @Nullable String path;
 
-    @OutputCustomType.Constructor({"indexes","path"})
+    @OutputCustomType.Constructor
     private IncludedPathResponse(
-        @Nullable List<IndexesResponse> indexes,
-        @Nullable String path) {
+        @OutputCustomType.Parameter("indexes") @Nullable List<IndexesResponse> indexes,
+        @OutputCustomType.Parameter("path") @Nullable String path) {
         this.indexes = indexes;
         this.path = path;
     }

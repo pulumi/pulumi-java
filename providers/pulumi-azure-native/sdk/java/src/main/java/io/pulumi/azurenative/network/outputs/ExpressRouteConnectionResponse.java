@@ -61,17 +61,17 @@ public final class ExpressRouteConnectionResponse {
      */
     private final @Nullable Integer routingWeight;
 
-    @OutputCustomType.Constructor({"authorizationKey","enableInternetSecurity","expressRouteCircuitPeering","expressRouteGatewayBypass","id","name","provisioningState","routingConfiguration","routingWeight"})
+    @OutputCustomType.Constructor
     private ExpressRouteConnectionResponse(
-        @Nullable String authorizationKey,
-        @Nullable Boolean enableInternetSecurity,
-        ExpressRouteCircuitPeeringIdResponse expressRouteCircuitPeering,
-        @Nullable Boolean expressRouteGatewayBypass,
-        @Nullable String id,
-        String name,
-        String provisioningState,
-        @Nullable RoutingConfigurationResponse routingConfiguration,
-        @Nullable Integer routingWeight) {
+        @OutputCustomType.Parameter("authorizationKey") @Nullable String authorizationKey,
+        @OutputCustomType.Parameter("enableInternetSecurity") @Nullable Boolean enableInternetSecurity,
+        @OutputCustomType.Parameter("expressRouteCircuitPeering") ExpressRouteCircuitPeeringIdResponse expressRouteCircuitPeering,
+        @OutputCustomType.Parameter("expressRouteGatewayBypass") @Nullable Boolean expressRouteGatewayBypass,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("routingConfiguration") @Nullable RoutingConfigurationResponse routingConfiguration,
+        @OutputCustomType.Parameter("routingWeight") @Nullable Integer routingWeight) {
         this.authorizationKey = authorizationKey;
         this.enableInternetSecurity = enableInternetSecurity;
         this.expressRouteCircuitPeering = expressRouteCircuitPeering;

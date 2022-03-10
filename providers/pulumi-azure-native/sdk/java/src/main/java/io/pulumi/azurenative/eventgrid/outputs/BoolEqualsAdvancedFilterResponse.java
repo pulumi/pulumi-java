@@ -29,11 +29,11 @@ public final class BoolEqualsAdvancedFilterResponse {
      */
     private final @Nullable Boolean value;
 
-    @OutputCustomType.Constructor({"key","operatorType","value"})
+    @OutputCustomType.Constructor
     private BoolEqualsAdvancedFilterResponse(
-        @Nullable String key,
-        String operatorType,
-        @Nullable Boolean value) {
+        @OutputCustomType.Parameter("key") @Nullable String key,
+        @OutputCustomType.Parameter("operatorType") String operatorType,
+        @OutputCustomType.Parameter("value") @Nullable Boolean value) {
         this.key = key;
         this.operatorType = operatorType;
         this.value = value;

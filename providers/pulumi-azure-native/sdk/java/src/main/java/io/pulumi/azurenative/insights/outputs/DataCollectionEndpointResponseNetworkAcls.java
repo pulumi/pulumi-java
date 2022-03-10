@@ -17,8 +17,8 @@ public final class DataCollectionEndpointResponseNetworkAcls {
      */
     private final @Nullable String publicNetworkAccess;
 
-    @OutputCustomType.Constructor({"publicNetworkAccess"})
-    private DataCollectionEndpointResponseNetworkAcls(@Nullable String publicNetworkAccess) {
+    @OutputCustomType.Constructor
+    private DataCollectionEndpointResponseNetworkAcls(@OutputCustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess) {
         this.publicNetworkAccess = publicNetworkAccess;
     }
 

@@ -22,10 +22,10 @@ public final class EndpointResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"endpointUrl","type"})
+    @OutputCustomType.Constructor
     private EndpointResponse(
-        @Nullable String endpointUrl,
-        String type) {
+        @OutputCustomType.Parameter("endpointUrl") @Nullable String endpointUrl,
+        @OutputCustomType.Parameter("type") String type) {
         this.endpointUrl = endpointUrl;
         this.type = type;
     }

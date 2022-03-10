@@ -50,14 +50,14 @@ public final class IntegrationRuntimeSsisPropertiesResponse {
      */
     private final @Nullable String licenseType;
 
-    @OutputCustomType.Constructor({"catalogInfo","customSetupScriptProperties","dataProxyProperties","edition","expressCustomSetupProperties","licenseType"})
+    @OutputCustomType.Constructor
     private IntegrationRuntimeSsisPropertiesResponse(
-        @Nullable IntegrationRuntimeSsisCatalogInfoResponse catalogInfo,
-        @Nullable IntegrationRuntimeCustomSetupScriptPropertiesResponse customSetupScriptProperties,
-        @Nullable IntegrationRuntimeDataProxyPropertiesResponse dataProxyProperties,
-        @Nullable String edition,
-        @Nullable List<Object> expressCustomSetupProperties,
-        @Nullable String licenseType) {
+        @OutputCustomType.Parameter("catalogInfo") @Nullable IntegrationRuntimeSsisCatalogInfoResponse catalogInfo,
+        @OutputCustomType.Parameter("customSetupScriptProperties") @Nullable IntegrationRuntimeCustomSetupScriptPropertiesResponse customSetupScriptProperties,
+        @OutputCustomType.Parameter("dataProxyProperties") @Nullable IntegrationRuntimeDataProxyPropertiesResponse dataProxyProperties,
+        @OutputCustomType.Parameter("edition") @Nullable String edition,
+        @OutputCustomType.Parameter("expressCustomSetupProperties") @Nullable List<Object> expressCustomSetupProperties,
+        @OutputCustomType.Parameter("licenseType") @Nullable String licenseType) {
         this.catalogInfo = catalogInfo;
         this.customSetupScriptProperties = customSetupScriptProperties;
         this.dataProxyProperties = dataProxyProperties;

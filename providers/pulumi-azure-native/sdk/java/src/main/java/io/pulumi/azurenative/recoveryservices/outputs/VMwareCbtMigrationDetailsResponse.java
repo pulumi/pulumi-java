@@ -101,25 +101,25 @@ public final class VMwareCbtMigrationDetailsResponse {
      */
     private final String vmwareMachineId;
 
-    @OutputCustomType.Constructor({"dataMoverRunAsAccountId","instanceType","lastRecoveryPointReceived","licenseType","migrationRecoveryPointId","osType","protectedDisks","snapshotRunAsAccountId","targetAvailabilitySetId","targetBootDiagnosticsStorageAccountId","targetLocation","targetNetworkId","targetResourceGroupId","targetVmName","targetVmSize","vmNics","vmwareMachineId"})
+    @OutputCustomType.Constructor
     private VMwareCbtMigrationDetailsResponse(
-        String dataMoverRunAsAccountId,
-        String instanceType,
-        String lastRecoveryPointReceived,
-        @Nullable String licenseType,
-        String migrationRecoveryPointId,
-        String osType,
-        @Nullable List<VMwareCbtProtectedDiskDetailsResponse> protectedDisks,
-        String snapshotRunAsAccountId,
-        @Nullable String targetAvailabilitySetId,
-        @Nullable String targetBootDiagnosticsStorageAccountId,
-        String targetLocation,
-        @Nullable String targetNetworkId,
-        @Nullable String targetResourceGroupId,
-        @Nullable String targetVmName,
-        @Nullable String targetVmSize,
-        @Nullable List<VMwareCbtNicDetailsResponse> vmNics,
-        String vmwareMachineId) {
+        @OutputCustomType.Parameter("dataMoverRunAsAccountId") String dataMoverRunAsAccountId,
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("lastRecoveryPointReceived") String lastRecoveryPointReceived,
+        @OutputCustomType.Parameter("licenseType") @Nullable String licenseType,
+        @OutputCustomType.Parameter("migrationRecoveryPointId") String migrationRecoveryPointId,
+        @OutputCustomType.Parameter("osType") String osType,
+        @OutputCustomType.Parameter("protectedDisks") @Nullable List<VMwareCbtProtectedDiskDetailsResponse> protectedDisks,
+        @OutputCustomType.Parameter("snapshotRunAsAccountId") String snapshotRunAsAccountId,
+        @OutputCustomType.Parameter("targetAvailabilitySetId") @Nullable String targetAvailabilitySetId,
+        @OutputCustomType.Parameter("targetBootDiagnosticsStorageAccountId") @Nullable String targetBootDiagnosticsStorageAccountId,
+        @OutputCustomType.Parameter("targetLocation") String targetLocation,
+        @OutputCustomType.Parameter("targetNetworkId") @Nullable String targetNetworkId,
+        @OutputCustomType.Parameter("targetResourceGroupId") @Nullable String targetResourceGroupId,
+        @OutputCustomType.Parameter("targetVmName") @Nullable String targetVmName,
+        @OutputCustomType.Parameter("targetVmSize") @Nullable String targetVmSize,
+        @OutputCustomType.Parameter("vmNics") @Nullable List<VMwareCbtNicDetailsResponse> vmNics,
+        @OutputCustomType.Parameter("vmwareMachineId") String vmwareMachineId) {
         this.dataMoverRunAsAccountId = dataMoverRunAsAccountId;
         this.instanceType = instanceType;
         this.lastRecoveryPointReceived = lastRecoveryPointReceived;

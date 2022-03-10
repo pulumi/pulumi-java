@@ -35,12 +35,12 @@ public final class AliasPathResponse {
      */
     private final @Nullable AliasPatternResponse pattern;
 
-    @OutputCustomType.Constructor({"apiVersions","metadata","path","pattern"})
+    @OutputCustomType.Constructor
     private AliasPathResponse(
-        @Nullable List<String> apiVersions,
-        AliasPathMetadataResponse metadata,
-        @Nullable String path,
-        @Nullable AliasPatternResponse pattern) {
+        @OutputCustomType.Parameter("apiVersions") @Nullable List<String> apiVersions,
+        @OutputCustomType.Parameter("metadata") AliasPathMetadataResponse metadata,
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("pattern") @Nullable AliasPatternResponse pattern) {
         this.apiVersions = apiVersions;
         this.metadata = metadata;
         this.path = path;

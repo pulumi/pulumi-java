@@ -89,22 +89,22 @@ public final class GetElasticPoolResult {
      */
     private final @Nullable Boolean zoneRedundant;
 
-    @OutputCustomType.Constructor({"creationDate","id","kind","licenseType","location","maintenanceConfigurationId","maxSizeBytes","name","perDatabaseSettings","sku","state","tags","type","zoneRedundant"})
+    @OutputCustomType.Constructor
     private GetElasticPoolResult(
-        String creationDate,
-        String id,
-        String kind,
-        @Nullable String licenseType,
-        String location,
-        @Nullable String maintenanceConfigurationId,
-        @Nullable Double maxSizeBytes,
-        String name,
-        @Nullable ElasticPoolPerDatabaseSettingsResponse perDatabaseSettings,
-        @Nullable SkuResponse sku,
-        String state,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable Boolean zoneRedundant) {
+        @OutputCustomType.Parameter("creationDate") String creationDate,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("licenseType") @Nullable String licenseType,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("maintenanceConfigurationId") @Nullable String maintenanceConfigurationId,
+        @OutputCustomType.Parameter("maxSizeBytes") @Nullable Double maxSizeBytes,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("perDatabaseSettings") @Nullable ElasticPoolPerDatabaseSettingsResponse perDatabaseSettings,
+        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("zoneRedundant") @Nullable Boolean zoneRedundant) {
         this.creationDate = creationDate;
         this.id = id;
         this.kind = kind;

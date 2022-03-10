@@ -47,15 +47,15 @@ public final class EdifactSchemaReferenceResponse {
      */
     private final @Nullable String senderApplicationQualifier;
 
-    @OutputCustomType.Constructor({"associationAssignedCode","messageId","messageRelease","messageVersion","schemaName","senderApplicationId","senderApplicationQualifier"})
+    @OutputCustomType.Constructor
     private EdifactSchemaReferenceResponse(
-        @Nullable String associationAssignedCode,
-        String messageId,
-        String messageRelease,
-        String messageVersion,
-        String schemaName,
-        @Nullable String senderApplicationId,
-        @Nullable String senderApplicationQualifier) {
+        @OutputCustomType.Parameter("associationAssignedCode") @Nullable String associationAssignedCode,
+        @OutputCustomType.Parameter("messageId") String messageId,
+        @OutputCustomType.Parameter("messageRelease") String messageRelease,
+        @OutputCustomType.Parameter("messageVersion") String messageVersion,
+        @OutputCustomType.Parameter("schemaName") String schemaName,
+        @OutputCustomType.Parameter("senderApplicationId") @Nullable String senderApplicationId,
+        @OutputCustomType.Parameter("senderApplicationQualifier") @Nullable String senderApplicationQualifier) {
         this.associationAssignedCode = associationAssignedCode;
         this.messageId = messageId;
         this.messageRelease = messageRelease;

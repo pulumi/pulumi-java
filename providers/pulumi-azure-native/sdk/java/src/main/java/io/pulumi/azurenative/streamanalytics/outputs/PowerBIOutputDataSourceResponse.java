@@ -53,16 +53,16 @@ public final class PowerBIOutputDataSourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"dataset","groupId","groupName","refreshToken","table","tokenUserDisplayName","tokenUserPrincipalName","type"})
+    @OutputCustomType.Constructor
     private PowerBIOutputDataSourceResponse(
-        @Nullable String dataset,
-        @Nullable String groupId,
-        @Nullable String groupName,
-        @Nullable String refreshToken,
-        @Nullable String table,
-        @Nullable String tokenUserDisplayName,
-        @Nullable String tokenUserPrincipalName,
-        String type) {
+        @OutputCustomType.Parameter("dataset") @Nullable String dataset,
+        @OutputCustomType.Parameter("groupId") @Nullable String groupId,
+        @OutputCustomType.Parameter("groupName") @Nullable String groupName,
+        @OutputCustomType.Parameter("refreshToken") @Nullable String refreshToken,
+        @OutputCustomType.Parameter("table") @Nullable String table,
+        @OutputCustomType.Parameter("tokenUserDisplayName") @Nullable String tokenUserDisplayName,
+        @OutputCustomType.Parameter("tokenUserPrincipalName") @Nullable String tokenUserPrincipalName,
+        @OutputCustomType.Parameter("type") String type) {
         this.dataset = dataset;
         this.groupId = groupId;
         this.groupName = groupName;

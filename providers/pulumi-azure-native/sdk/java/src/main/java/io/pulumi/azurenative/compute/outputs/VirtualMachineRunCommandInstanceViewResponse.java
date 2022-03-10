@@ -55,16 +55,16 @@ public final class VirtualMachineRunCommandInstanceViewResponse {
      */
     private final @Nullable List<InstanceViewStatusResponse> statuses;
 
-    @OutputCustomType.Constructor({"endTime","error","executionMessage","executionState","exitCode","output","startTime","statuses"})
+    @OutputCustomType.Constructor
     private VirtualMachineRunCommandInstanceViewResponse(
-        @Nullable String endTime,
-        @Nullable String error,
-        @Nullable String executionMessage,
-        @Nullable String executionState,
-        @Nullable Integer exitCode,
-        @Nullable String output,
-        @Nullable String startTime,
-        @Nullable List<InstanceViewStatusResponse> statuses) {
+        @OutputCustomType.Parameter("endTime") @Nullable String endTime,
+        @OutputCustomType.Parameter("error") @Nullable String error,
+        @OutputCustomType.Parameter("executionMessage") @Nullable String executionMessage,
+        @OutputCustomType.Parameter("executionState") @Nullable String executionState,
+        @OutputCustomType.Parameter("exitCode") @Nullable Integer exitCode,
+        @OutputCustomType.Parameter("output") @Nullable String output,
+        @OutputCustomType.Parameter("startTime") @Nullable String startTime,
+        @OutputCustomType.Parameter("statuses") @Nullable List<InstanceViewStatusResponse> statuses) {
         this.endTime = endTime;
         this.error = error;
         this.executionMessage = executionMessage;

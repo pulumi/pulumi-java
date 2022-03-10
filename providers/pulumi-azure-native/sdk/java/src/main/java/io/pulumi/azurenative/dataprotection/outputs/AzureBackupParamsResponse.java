@@ -21,10 +21,10 @@ public final class AzureBackupParamsResponse {
      */
     private final String objectType;
 
-    @OutputCustomType.Constructor({"backupType","objectType"})
+    @OutputCustomType.Constructor
     private AzureBackupParamsResponse(
-        String backupType,
-        String objectType) {
+        @OutputCustomType.Parameter("backupType") String backupType,
+        @OutputCustomType.Parameter("objectType") String objectType) {
         this.backupType = backupType;
         this.objectType = objectType;
     }

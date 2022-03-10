@@ -85,22 +85,22 @@ public final class GetRelationshipLinkResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"description","displayName","id","interactionType","linkName","mappings","name","profilePropertyReferences","provisioningState","relatedProfilePropertyReferences","relationshipGuidId","relationshipName","tenantId","type"})
+    @OutputCustomType.Constructor
     private GetRelationshipLinkResult(
-        @Nullable Map<String,String> description,
-        @Nullable Map<String,String> displayName,
-        String id,
-        String interactionType,
-        String linkName,
-        @Nullable List<RelationshipLinkFieldMappingResponse> mappings,
-        String name,
-        List<ParticipantProfilePropertyReferenceResponse> profilePropertyReferences,
-        String provisioningState,
-        List<ParticipantProfilePropertyReferenceResponse> relatedProfilePropertyReferences,
-        String relationshipGuidId,
-        String relationshipName,
-        String tenantId,
-        String type) {
+        @OutputCustomType.Parameter("description") @Nullable Map<String,String> description,
+        @OutputCustomType.Parameter("displayName") @Nullable Map<String,String> displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("interactionType") String interactionType,
+        @OutputCustomType.Parameter("linkName") String linkName,
+        @OutputCustomType.Parameter("mappings") @Nullable List<RelationshipLinkFieldMappingResponse> mappings,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("profilePropertyReferences") List<ParticipantProfilePropertyReferenceResponse> profilePropertyReferences,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("relatedProfilePropertyReferences") List<ParticipantProfilePropertyReferenceResponse> relatedProfilePropertyReferences,
+        @OutputCustomType.Parameter("relationshipGuidId") String relationshipGuidId,
+        @OutputCustomType.Parameter("relationshipName") String relationshipName,
+        @OutputCustomType.Parameter("tenantId") String tenantId,
+        @OutputCustomType.Parameter("type") String type) {
         this.description = description;
         this.displayName = displayName;
         this.id = id;

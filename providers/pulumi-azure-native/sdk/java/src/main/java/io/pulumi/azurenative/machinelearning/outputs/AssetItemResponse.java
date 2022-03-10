@@ -58,16 +58,16 @@ public final class AssetItemResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","inputPorts","locationInfo","metadata","name","outputPorts","parameters","type"})
+    @OutputCustomType.Constructor
     private AssetItemResponse(
-        @Nullable String id,
-        @Nullable Map<String,InputPortResponse> inputPorts,
-        BlobLocationResponse locationInfo,
-        @Nullable Map<String,String> metadata,
-        String name,
-        @Nullable Map<String,OutputPortResponse> outputPorts,
-        @Nullable List<ModuleAssetParameterResponse> parameters,
-        String type) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("inputPorts") @Nullable Map<String,InputPortResponse> inputPorts,
+        @OutputCustomType.Parameter("locationInfo") BlobLocationResponse locationInfo,
+        @OutputCustomType.Parameter("metadata") @Nullable Map<String,String> metadata,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("outputPorts") @Nullable Map<String,OutputPortResponse> outputPorts,
+        @OutputCustomType.Parameter("parameters") @Nullable List<ModuleAssetParameterResponse> parameters,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.inputPorts = inputPorts;
         this.locationInfo = locationInfo;

@@ -17,8 +17,8 @@ public final class ListServerGatewayStatusResult {
      */
     private final @Nullable Integer status;
 
-    @OutputCustomType.Constructor({"status"})
-    private ListServerGatewayStatusResult(@Nullable Integer status) {
+    @OutputCustomType.Constructor
+    private ListServerGatewayStatusResult(@OutputCustomType.Parameter("status") @Nullable Integer status) {
         this.status = status;
     }
 

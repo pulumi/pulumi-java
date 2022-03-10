@@ -77,20 +77,20 @@ public final class GetDiskEncryptionSetResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"activeKey","encryptionType","id","identity","lastKeyRotationTimestamp","location","name","previousKeys","provisioningState","rotationToLatestKeyVersionEnabled","tags","type"})
+    @OutputCustomType.Constructor
     private GetDiskEncryptionSetResult(
-        @Nullable KeyForDiskEncryptionSetResponse activeKey,
-        @Nullable String encryptionType,
-        String id,
-        @Nullable EncryptionSetIdentityResponse identity,
-        String lastKeyRotationTimestamp,
-        String location,
-        String name,
-        List<KeyForDiskEncryptionSetResponse> previousKeys,
-        String provisioningState,
-        @Nullable Boolean rotationToLatestKeyVersionEnabled,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("activeKey") @Nullable KeyForDiskEncryptionSetResponse activeKey,
+        @OutputCustomType.Parameter("encryptionType") @Nullable String encryptionType,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable EncryptionSetIdentityResponse identity,
+        @OutputCustomType.Parameter("lastKeyRotationTimestamp") String lastKeyRotationTimestamp,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("previousKeys") List<KeyForDiskEncryptionSetResponse> previousKeys,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("rotationToLatestKeyVersionEnabled") @Nullable Boolean rotationToLatestKeyVersionEnabled,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.activeKey = activeKey;
         this.encryptionType = encryptionType;
         this.id = id;

@@ -15,8 +15,8 @@ public final class DefenderSettingsPropertiesResponseMdeIntegration {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"status"})
-    private DefenderSettingsPropertiesResponseMdeIntegration(String status) {
+    @OutputCustomType.Constructor
+    private DefenderSettingsPropertiesResponseMdeIntegration(@OutputCustomType.Parameter("status") String status) {
         this.status = status;
     }
 

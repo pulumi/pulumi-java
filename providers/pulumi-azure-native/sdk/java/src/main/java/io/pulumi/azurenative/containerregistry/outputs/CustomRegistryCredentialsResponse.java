@@ -33,11 +33,11 @@ public final class CustomRegistryCredentialsResponse {
      */
     private final @Nullable SecretObjectResponse userName;
 
-    @OutputCustomType.Constructor({"identity","password","userName"})
+    @OutputCustomType.Constructor
     private CustomRegistryCredentialsResponse(
-        @Nullable String identity,
-        @Nullable SecretObjectResponse password,
-        @Nullable SecretObjectResponse userName) {
+        @OutputCustomType.Parameter("identity") @Nullable String identity,
+        @OutputCustomType.Parameter("password") @Nullable SecretObjectResponse password,
+        @OutputCustomType.Parameter("userName") @Nullable SecretObjectResponse userName) {
         this.identity = identity;
         this.password = password;
         this.userName = userName;

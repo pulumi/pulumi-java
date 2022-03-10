@@ -23,10 +23,10 @@ public final class AudioEncoderAacResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"bitrateKbps","type"})
+    @OutputCustomType.Constructor
     private AudioEncoderAacResponse(
-        @Nullable String bitrateKbps,
-        String type) {
+        @OutputCustomType.Parameter("bitrateKbps") @Nullable String bitrateKbps,
+        @OutputCustomType.Parameter("type") String type) {
         this.bitrateKbps = bitrateKbps;
         this.type = type;
     }

@@ -12,10 +12,10 @@ public final class SkuCapabilityResponse {
     private final String name;
     private final String value;
 
-    @OutputCustomType.Constructor({"name","value"})
+    @OutputCustomType.Constructor
     private SkuCapabilityResponse(
-        String name,
-        String value) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("value") String value) {
         this.name = name;
         this.value = value;
     }

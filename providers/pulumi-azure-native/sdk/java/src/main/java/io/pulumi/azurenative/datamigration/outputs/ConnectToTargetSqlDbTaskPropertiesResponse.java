@@ -50,14 +50,14 @@ public final class ConnectToTargetSqlDbTaskPropertiesResponse {
      */
     private final String taskType;
 
-    @OutputCustomType.Constructor({"commands","errors","input","output","state","taskType"})
+    @OutputCustomType.Constructor
     private ConnectToTargetSqlDbTaskPropertiesResponse(
-        List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands,
-        List<ODataErrorResponse> errors,
-        @Nullable ConnectToTargetSqlDbTaskInputResponse input,
-        List<ConnectToTargetSqlDbTaskOutputResponse> output,
-        String state,
-        String taskType) {
+        @OutputCustomType.Parameter("commands") List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands,
+        @OutputCustomType.Parameter("errors") List<ODataErrorResponse> errors,
+        @OutputCustomType.Parameter("input") @Nullable ConnectToTargetSqlDbTaskInputResponse input,
+        @OutputCustomType.Parameter("output") List<ConnectToTargetSqlDbTaskOutputResponse> output,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("taskType") String taskType) {
         this.commands = commands;
         this.errors = errors;
         this.input = input;

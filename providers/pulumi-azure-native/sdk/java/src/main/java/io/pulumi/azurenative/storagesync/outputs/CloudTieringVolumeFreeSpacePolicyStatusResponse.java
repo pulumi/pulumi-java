@@ -26,11 +26,11 @@ public final class CloudTieringVolumeFreeSpacePolicyStatusResponse {
      */
     private final String lastUpdatedTimestamp;
 
-    @OutputCustomType.Constructor({"currentVolumeFreeSpacePercent","effectiveVolumeFreeSpacePolicy","lastUpdatedTimestamp"})
+    @OutputCustomType.Constructor
     private CloudTieringVolumeFreeSpacePolicyStatusResponse(
-        Integer currentVolumeFreeSpacePercent,
-        Integer effectiveVolumeFreeSpacePolicy,
-        String lastUpdatedTimestamp) {
+        @OutputCustomType.Parameter("currentVolumeFreeSpacePercent") Integer currentVolumeFreeSpacePercent,
+        @OutputCustomType.Parameter("effectiveVolumeFreeSpacePolicy") Integer effectiveVolumeFreeSpacePolicy,
+        @OutputCustomType.Parameter("lastUpdatedTimestamp") String lastUpdatedTimestamp) {
         this.currentVolumeFreeSpacePercent = currentVolumeFreeSpacePercent;
         this.effectiveVolumeFreeSpacePolicy = effectiveVolumeFreeSpacePolicy;
         this.lastUpdatedTimestamp = lastUpdatedTimestamp;

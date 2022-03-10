@@ -65,18 +65,18 @@ public final class GetOrderItemByNameResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"addressDetails","id","location","name","orderId","orderItemDetails","startTime","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetOrderItemByNameResult(
-        AddressDetailsResponse addressDetails,
-        String id,
-        String location,
-        String name,
-        String orderId,
-        OrderItemDetailsResponse orderItemDetails,
-        String startTime,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("addressDetails") AddressDetailsResponse addressDetails,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("orderId") String orderId,
+        @OutputCustomType.Parameter("orderItemDetails") OrderItemDetailsResponse orderItemDetails,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.addressDetails = addressDetails;
         this.id = id;
         this.location = location;

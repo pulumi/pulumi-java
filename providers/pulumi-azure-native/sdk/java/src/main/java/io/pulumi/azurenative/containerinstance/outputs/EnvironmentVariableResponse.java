@@ -27,11 +27,11 @@ public final class EnvironmentVariableResponse {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"name","secureValue","value"})
+    @OutputCustomType.Constructor
     private EnvironmentVariableResponse(
-        String name,
-        @Nullable String secureValue,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("secureValue") @Nullable String secureValue,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.name = name;
         this.secureValue = secureValue;
         this.value = value;

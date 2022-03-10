@@ -27,11 +27,11 @@ public final class FileShareResponse {
      */
     private final @Nullable String userName;
 
-    @OutputCustomType.Constructor({"password","path","userName"})
+    @OutputCustomType.Constructor
     private FileShareResponse(
-        @Nullable String password,
-        String path,
-        @Nullable String userName) {
+        @OutputCustomType.Parameter("password") @Nullable String password,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("userName") @Nullable String userName) {
         this.password = password;
         this.path = path;
         this.userName = userName;

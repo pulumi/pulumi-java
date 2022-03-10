@@ -121,27 +121,27 @@ public final class ExecuteSSISPackageActivityResponse {
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
-    @OutputCustomType.Constructor({"connectVia","dependsOn","description","environmentPath","executionCredential","linkedServiceName","logLocation","loggingLevel","name","packageConnectionManagers","packageLocation","packageParameters","policy","projectConnectionManagers","projectParameters","propertyOverrides","runtime","type","userProperties"})
+    @OutputCustomType.Constructor
     private ExecuteSSISPackageActivityResponse(
-        IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        @Nullable Object environmentPath,
-        @Nullable SSISExecutionCredentialResponse executionCredential,
-        @Nullable LinkedServiceReferenceResponse linkedServiceName,
-        @Nullable SSISLogLocationResponse logLocation,
-        @Nullable Object loggingLevel,
-        String name,
-        @Nullable Map<String,Map<String,SSISExecutionParameterResponse>> packageConnectionManagers,
-        SSISPackageLocationResponse packageLocation,
-        @Nullable Map<String,SSISExecutionParameterResponse> packageParameters,
-        @Nullable ActivityPolicyResponse policy,
-        @Nullable Map<String,Map<String,SSISExecutionParameterResponse>> projectConnectionManagers,
-        @Nullable Map<String,SSISExecutionParameterResponse> projectParameters,
-        @Nullable Map<String,SSISPropertyOverrideResponse> propertyOverrides,
-        @Nullable Object runtime,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties) {
+        @OutputCustomType.Parameter("connectVia") IntegrationRuntimeReferenceResponse connectVia,
+        @OutputCustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("environmentPath") @Nullable Object environmentPath,
+        @OutputCustomType.Parameter("executionCredential") @Nullable SSISExecutionCredentialResponse executionCredential,
+        @OutputCustomType.Parameter("linkedServiceName") @Nullable LinkedServiceReferenceResponse linkedServiceName,
+        @OutputCustomType.Parameter("logLocation") @Nullable SSISLogLocationResponse logLocation,
+        @OutputCustomType.Parameter("loggingLevel") @Nullable Object loggingLevel,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("packageConnectionManagers") @Nullable Map<String,Map<String,SSISExecutionParameterResponse>> packageConnectionManagers,
+        @OutputCustomType.Parameter("packageLocation") SSISPackageLocationResponse packageLocation,
+        @OutputCustomType.Parameter("packageParameters") @Nullable Map<String,SSISExecutionParameterResponse> packageParameters,
+        @OutputCustomType.Parameter("policy") @Nullable ActivityPolicyResponse policy,
+        @OutputCustomType.Parameter("projectConnectionManagers") @Nullable Map<String,Map<String,SSISExecutionParameterResponse>> projectConnectionManagers,
+        @OutputCustomType.Parameter("projectParameters") @Nullable Map<String,SSISExecutionParameterResponse> projectParameters,
+        @OutputCustomType.Parameter("propertyOverrides") @Nullable Map<String,SSISPropertyOverrideResponse> propertyOverrides,
+        @OutputCustomType.Parameter("runtime") @Nullable Object runtime,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties) {
         this.connectVia = connectVia;
         this.dependsOn = dependsOn;
         this.description = description;

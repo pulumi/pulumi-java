@@ -142,32 +142,32 @@ public final class GetClusterResult {
      */
     private final @Nullable List<String> zones;
 
-    @OutputCustomType.Constructor({"dataIngestionUri","enableDiskEncryption","enableDoubleEncryption","enablePurge","enableStreamingIngest","engineType","etag","id","identity","keyVaultProperties","languageExtensions","location","name","optimizedAutoscale","provisioningState","sku","state","stateReason","tags","trustedExternalTenants","type","uri","virtualNetworkConfiguration","zones"})
+    @OutputCustomType.Constructor
     private GetClusterResult(
-        String dataIngestionUri,
-        @Nullable Boolean enableDiskEncryption,
-        @Nullable Boolean enableDoubleEncryption,
-        @Nullable Boolean enablePurge,
-        @Nullable Boolean enableStreamingIngest,
-        @Nullable String engineType,
-        String etag,
-        String id,
-        @Nullable IdentityResponse identity,
-        @Nullable KeyVaultPropertiesResponse keyVaultProperties,
-        LanguageExtensionsListResponse languageExtensions,
-        String location,
-        String name,
-        @Nullable OptimizedAutoscaleResponse optimizedAutoscale,
-        String provisioningState,
-        AzureSkuResponse sku,
-        String state,
-        String stateReason,
-        @Nullable Map<String,String> tags,
-        @Nullable List<TrustedExternalTenantResponse> trustedExternalTenants,
-        String type,
-        String uri,
-        @Nullable VirtualNetworkConfigurationResponse virtualNetworkConfiguration,
-        @Nullable List<String> zones) {
+        @OutputCustomType.Parameter("dataIngestionUri") String dataIngestionUri,
+        @OutputCustomType.Parameter("enableDiskEncryption") @Nullable Boolean enableDiskEncryption,
+        @OutputCustomType.Parameter("enableDoubleEncryption") @Nullable Boolean enableDoubleEncryption,
+        @OutputCustomType.Parameter("enablePurge") @Nullable Boolean enablePurge,
+        @OutputCustomType.Parameter("enableStreamingIngest") @Nullable Boolean enableStreamingIngest,
+        @OutputCustomType.Parameter("engineType") @Nullable String engineType,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable IdentityResponse identity,
+        @OutputCustomType.Parameter("keyVaultProperties") @Nullable KeyVaultPropertiesResponse keyVaultProperties,
+        @OutputCustomType.Parameter("languageExtensions") LanguageExtensionsListResponse languageExtensions,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("optimizedAutoscale") @Nullable OptimizedAutoscaleResponse optimizedAutoscale,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("sku") AzureSkuResponse sku,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("stateReason") String stateReason,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("trustedExternalTenants") @Nullable List<TrustedExternalTenantResponse> trustedExternalTenants,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("uri") String uri,
+        @OutputCustomType.Parameter("virtualNetworkConfiguration") @Nullable VirtualNetworkConfigurationResponse virtualNetworkConfiguration,
+        @OutputCustomType.Parameter("zones") @Nullable List<String> zones) {
         this.dataIngestionUri = dataIngestionUri;
         this.enableDiskEncryption = enableDiskEncryption;
         this.enableDoubleEncryption = enableDoubleEncryption;

@@ -81,21 +81,21 @@ public final class GetStandardResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"category","components","description","displayName","etag","id","kind","location","name","standardType","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetStandardResult(
-        @Nullable String category,
-        @Nullable List<StandardComponentPropertiesResponse> components,
-        @Nullable String description,
-        @Nullable String displayName,
-        @Nullable String etag,
-        String id,
-        @Nullable String kind,
-        @Nullable String location,
-        String name,
-        String standardType,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("category") @Nullable String category,
+        @OutputCustomType.Parameter("components") @Nullable List<StandardComponentPropertiesResponse> components,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("standardType") String standardType,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.category = category;
         this.components = components;
         this.description = description;

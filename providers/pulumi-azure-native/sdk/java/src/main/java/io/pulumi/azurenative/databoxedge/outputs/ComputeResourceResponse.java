@@ -21,10 +21,10 @@ public final class ComputeResourceResponse {
      */
     private final Integer processorCount;
 
-    @OutputCustomType.Constructor({"memoryInGB","processorCount"})
+    @OutputCustomType.Constructor
     private ComputeResourceResponse(
-        Double memoryInGB,
-        Integer processorCount) {
+        @OutputCustomType.Parameter("memoryInGB") Double memoryInGB,
+        @OutputCustomType.Parameter("processorCount") Integer processorCount) {
         this.memoryInGB = memoryInGB;
         this.processorCount = processorCount;
     }

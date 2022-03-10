@@ -40,12 +40,12 @@ public final class ClusterUpgradeDeltaHealthPolicyResponse {
      */
     private final Integer maxPercentUpgradeDomainDeltaUnhealthyNodes;
 
-    @OutputCustomType.Constructor({"applicationDeltaHealthPolicies","maxPercentDeltaUnhealthyApplications","maxPercentDeltaUnhealthyNodes","maxPercentUpgradeDomainDeltaUnhealthyNodes"})
+    @OutputCustomType.Constructor
     private ClusterUpgradeDeltaHealthPolicyResponse(
-        @Nullable Map<String,ApplicationDeltaHealthPolicyResponse> applicationDeltaHealthPolicies,
-        Integer maxPercentDeltaUnhealthyApplications,
-        Integer maxPercentDeltaUnhealthyNodes,
-        Integer maxPercentUpgradeDomainDeltaUnhealthyNodes) {
+        @OutputCustomType.Parameter("applicationDeltaHealthPolicies") @Nullable Map<String,ApplicationDeltaHealthPolicyResponse> applicationDeltaHealthPolicies,
+        @OutputCustomType.Parameter("maxPercentDeltaUnhealthyApplications") Integer maxPercentDeltaUnhealthyApplications,
+        @OutputCustomType.Parameter("maxPercentDeltaUnhealthyNodes") Integer maxPercentDeltaUnhealthyNodes,
+        @OutputCustomType.Parameter("maxPercentUpgradeDomainDeltaUnhealthyNodes") Integer maxPercentUpgradeDomainDeltaUnhealthyNodes) {
         this.applicationDeltaHealthPolicies = applicationDeltaHealthPolicies;
         this.maxPercentDeltaUnhealthyApplications = maxPercentDeltaUnhealthyApplications;
         this.maxPercentDeltaUnhealthyNodes = maxPercentDeltaUnhealthyNodes;

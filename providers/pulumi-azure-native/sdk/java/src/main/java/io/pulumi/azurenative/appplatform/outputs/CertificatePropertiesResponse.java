@@ -63,18 +63,18 @@ public final class CertificatePropertiesResponse {
      */
     private final String vaultUri;
 
-    @OutputCustomType.Constructor({"activateDate","certVersion","dnsNames","expirationDate","issuedDate","issuer","keyVaultCertName","subjectName","thumbprint","vaultUri"})
+    @OutputCustomType.Constructor
     private CertificatePropertiesResponse(
-        String activateDate,
-        @Nullable String certVersion,
-        List<String> dnsNames,
-        String expirationDate,
-        String issuedDate,
-        String issuer,
-        String keyVaultCertName,
-        String subjectName,
-        String thumbprint,
-        String vaultUri) {
+        @OutputCustomType.Parameter("activateDate") String activateDate,
+        @OutputCustomType.Parameter("certVersion") @Nullable String certVersion,
+        @OutputCustomType.Parameter("dnsNames") List<String> dnsNames,
+        @OutputCustomType.Parameter("expirationDate") String expirationDate,
+        @OutputCustomType.Parameter("issuedDate") String issuedDate,
+        @OutputCustomType.Parameter("issuer") String issuer,
+        @OutputCustomType.Parameter("keyVaultCertName") String keyVaultCertName,
+        @OutputCustomType.Parameter("subjectName") String subjectName,
+        @OutputCustomType.Parameter("thumbprint") String thumbprint,
+        @OutputCustomType.Parameter("vaultUri") String vaultUri) {
         this.activateDate = activateDate;
         this.certVersion = certVersion;
         this.dnsNames = dnsNames;

@@ -27,11 +27,11 @@ public final class WnsCredentialResponse {
      */
     private final @Nullable String windowsLiveEndpoint;
 
-    @OutputCustomType.Constructor({"packageSid","secretKey","windowsLiveEndpoint"})
+    @OutputCustomType.Constructor
     private WnsCredentialResponse(
-        @Nullable String packageSid,
-        @Nullable String secretKey,
-        @Nullable String windowsLiveEndpoint) {
+        @OutputCustomType.Parameter("packageSid") @Nullable String packageSid,
+        @OutputCustomType.Parameter("secretKey") @Nullable String secretKey,
+        @OutputCustomType.Parameter("windowsLiveEndpoint") @Nullable String windowsLiveEndpoint) {
         this.packageSid = packageSid;
         this.secretKey = secretKey;
         this.windowsLiveEndpoint = windowsLiveEndpoint;

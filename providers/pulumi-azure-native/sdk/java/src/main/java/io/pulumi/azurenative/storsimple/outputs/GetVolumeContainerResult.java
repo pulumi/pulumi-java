@@ -75,20 +75,20 @@ public final class GetVolumeContainerResult {
      */
     private final Integer volumeCount;
 
-    @OutputCustomType.Constructor({"bandWidthRateInMbps","bandwidthSettingId","encryptionKey","encryptionStatus","id","kind","name","ownerShipStatus","storageAccountCredentialId","totalCloudStorageUsageInBytes","type","volumeCount"})
+    @OutputCustomType.Constructor
     private GetVolumeContainerResult(
-        @Nullable Integer bandWidthRateInMbps,
-        @Nullable String bandwidthSettingId,
-        @Nullable AsymmetricEncryptedSecretResponse encryptionKey,
-        String encryptionStatus,
-        String id,
-        @Nullable String kind,
-        String name,
-        String ownerShipStatus,
-        String storageAccountCredentialId,
-        Double totalCloudStorageUsageInBytes,
-        String type,
-        Integer volumeCount) {
+        @OutputCustomType.Parameter("bandWidthRateInMbps") @Nullable Integer bandWidthRateInMbps,
+        @OutputCustomType.Parameter("bandwidthSettingId") @Nullable String bandwidthSettingId,
+        @OutputCustomType.Parameter("encryptionKey") @Nullable AsymmetricEncryptedSecretResponse encryptionKey,
+        @OutputCustomType.Parameter("encryptionStatus") String encryptionStatus,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("ownerShipStatus") String ownerShipStatus,
+        @OutputCustomType.Parameter("storageAccountCredentialId") String storageAccountCredentialId,
+        @OutputCustomType.Parameter("totalCloudStorageUsageInBytes") Double totalCloudStorageUsageInBytes,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("volumeCount") Integer volumeCount) {
         this.bandWidthRateInMbps = bandWidthRateInMbps;
         this.bandwidthSettingId = bandwidthSettingId;
         this.encryptionKey = encryptionKey;

@@ -27,11 +27,11 @@ public final class LineRegistrationResponse {
      */
     private final String generatedId;
 
-    @OutputCustomType.Constructor({"channelAccessToken","channelSecret","generatedId"})
+    @OutputCustomType.Constructor
     private LineRegistrationResponse(
-        @Nullable String channelAccessToken,
-        @Nullable String channelSecret,
-        String generatedId) {
+        @OutputCustomType.Parameter("channelAccessToken") @Nullable String channelAccessToken,
+        @OutputCustomType.Parameter("channelSecret") @Nullable String channelSecret,
+        @OutputCustomType.Parameter("generatedId") String generatedId) {
         this.channelAccessToken = channelAccessToken;
         this.channelSecret = channelSecret;
         this.generatedId = generatedId;

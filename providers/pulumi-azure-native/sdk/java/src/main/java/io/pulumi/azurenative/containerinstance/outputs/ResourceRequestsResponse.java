@@ -28,11 +28,11 @@ public final class ResourceRequestsResponse {
      */
     private final Double memoryInGB;
 
-    @OutputCustomType.Constructor({"cpu","gpu","memoryInGB"})
+    @OutputCustomType.Constructor
     private ResourceRequestsResponse(
-        Double cpu,
-        @Nullable GpuResourceResponse gpu,
-        Double memoryInGB) {
+        @OutputCustomType.Parameter("cpu") Double cpu,
+        @OutputCustomType.Parameter("gpu") @Nullable GpuResourceResponse gpu,
+        @OutputCustomType.Parameter("memoryInGB") Double memoryInGB) {
         this.cpu = cpu;
         this.gpu = gpu;
         this.memoryInGB = memoryInGB;

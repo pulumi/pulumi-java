@@ -56,16 +56,16 @@ public final class SsisPackageResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"description","folderId","id","name","parameters","projectId","projectVersion","type"})
+    @OutputCustomType.Constructor
     private SsisPackageResponse(
-        @Nullable String description,
-        @Nullable Double folderId,
-        @Nullable Double id,
-        @Nullable String name,
-        @Nullable List<SsisParameterResponse> parameters,
-        @Nullable Double projectId,
-        @Nullable Double projectVersion,
-        String type) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("folderId") @Nullable Double folderId,
+        @OutputCustomType.Parameter("id") @Nullable Double id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("parameters") @Nullable List<SsisParameterResponse> parameters,
+        @OutputCustomType.Parameter("projectId") @Nullable Double projectId,
+        @OutputCustomType.Parameter("projectVersion") @Nullable Double projectVersion,
+        @OutputCustomType.Parameter("type") String type) {
         this.description = description;
         this.folderId = folderId;
         this.id = id;

@@ -40,13 +40,13 @@ public final class ServiceUnitResponse {
      */
     private final String targetResourceGroup;
 
-    @OutputCustomType.Constructor({"artifacts","deploymentMode","name","steps","targetResourceGroup"})
+    @OutputCustomType.Constructor
     private ServiceUnitResponse(
-        @Nullable ServiceUnitArtifactsResponse artifacts,
-        String deploymentMode,
-        @Nullable String name,
-        @Nullable List<RolloutStepResponse> steps,
-        String targetResourceGroup) {
+        @OutputCustomType.Parameter("artifacts") @Nullable ServiceUnitArtifactsResponse artifacts,
+        @OutputCustomType.Parameter("deploymentMode") String deploymentMode,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("steps") @Nullable List<RolloutStepResponse> steps,
+        @OutputCustomType.Parameter("targetResourceGroup") String targetResourceGroup) {
         this.artifacts = artifacts;
         this.deploymentMode = deploymentMode;
         this.name = name;

@@ -63,18 +63,18 @@ public final class EventHubResponse {
      */
     private final String provisioningState;
 
-    @OutputCustomType.Constructor({"authenticationType","connectionStringPrimaryKey","connectionStringSecondaryKey","createdTime","deadLetterSecret","deadLetterUri","endpointType","endpointUri","entityPath","provisioningState"})
+    @OutputCustomType.Constructor
     private EventHubResponse(
-        @Nullable String authenticationType,
-        @Nullable String connectionStringPrimaryKey,
-        @Nullable String connectionStringSecondaryKey,
-        String createdTime,
-        @Nullable String deadLetterSecret,
-        @Nullable String deadLetterUri,
-        String endpointType,
-        @Nullable String endpointUri,
-        @Nullable String entityPath,
-        String provisioningState) {
+        @OutputCustomType.Parameter("authenticationType") @Nullable String authenticationType,
+        @OutputCustomType.Parameter("connectionStringPrimaryKey") @Nullable String connectionStringPrimaryKey,
+        @OutputCustomType.Parameter("connectionStringSecondaryKey") @Nullable String connectionStringSecondaryKey,
+        @OutputCustomType.Parameter("createdTime") String createdTime,
+        @OutputCustomType.Parameter("deadLetterSecret") @Nullable String deadLetterSecret,
+        @OutputCustomType.Parameter("deadLetterUri") @Nullable String deadLetterUri,
+        @OutputCustomType.Parameter("endpointType") String endpointType,
+        @OutputCustomType.Parameter("endpointUri") @Nullable String endpointUri,
+        @OutputCustomType.Parameter("entityPath") @Nullable String entityPath,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState) {
         this.authenticationType = authenticationType;
         this.connectionStringPrimaryKey = connectionStringPrimaryKey;
         this.connectionStringSecondaryKey = connectionStringSecondaryKey;

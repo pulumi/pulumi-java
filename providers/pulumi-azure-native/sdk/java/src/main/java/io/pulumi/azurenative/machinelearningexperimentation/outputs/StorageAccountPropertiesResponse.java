@@ -20,10 +20,10 @@ public final class StorageAccountPropertiesResponse {
      */
     private final String storageAccountId;
 
-    @OutputCustomType.Constructor({"accessKey","storageAccountId"})
+    @OutputCustomType.Constructor
     private StorageAccountPropertiesResponse(
-        String accessKey,
-        String storageAccountId) {
+        @OutputCustomType.Parameter("accessKey") String accessKey,
+        @OutputCustomType.Parameter("storageAccountId") String storageAccountId) {
         this.accessKey = accessKey;
         this.storageAccountId = storageAccountId;
     }

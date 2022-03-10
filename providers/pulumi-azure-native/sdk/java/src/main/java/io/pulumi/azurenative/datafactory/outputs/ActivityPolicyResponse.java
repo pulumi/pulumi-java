@@ -39,13 +39,13 @@ public final class ActivityPolicyResponse {
      */
     private final @Nullable Object timeout;
 
-    @OutputCustomType.Constructor({"retry","retryIntervalInSeconds","secureInput","secureOutput","timeout"})
+    @OutputCustomType.Constructor
     private ActivityPolicyResponse(
-        @Nullable Object retry,
-        @Nullable Integer retryIntervalInSeconds,
-        @Nullable Boolean secureInput,
-        @Nullable Boolean secureOutput,
-        @Nullable Object timeout) {
+        @OutputCustomType.Parameter("retry") @Nullable Object retry,
+        @OutputCustomType.Parameter("retryIntervalInSeconds") @Nullable Integer retryIntervalInSeconds,
+        @OutputCustomType.Parameter("secureInput") @Nullable Boolean secureInput,
+        @OutputCustomType.Parameter("secureOutput") @Nullable Boolean secureOutput,
+        @OutputCustomType.Parameter("timeout") @Nullable Object timeout) {
         this.retry = retry;
         this.retryIntervalInSeconds = retryIntervalInSeconds;
         this.secureInput = secureInput;

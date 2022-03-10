@@ -75,20 +75,20 @@ public final class ApplicationGatewayRedirectConfigurationResponse {
      */
     private final @Nullable List<SubResourceResponse> urlPathMaps;
 
-    @OutputCustomType.Constructor({"etag","id","includePath","includeQueryString","name","pathRules","redirectType","requestRoutingRules","targetListener","targetUrl","type","urlPathMaps"})
+    @OutputCustomType.Constructor
     private ApplicationGatewayRedirectConfigurationResponse(
-        String etag,
-        @Nullable String id,
-        @Nullable Boolean includePath,
-        @Nullable Boolean includeQueryString,
-        @Nullable String name,
-        @Nullable List<SubResourceResponse> pathRules,
-        @Nullable String redirectType,
-        @Nullable List<SubResourceResponse> requestRoutingRules,
-        @Nullable SubResourceResponse targetListener,
-        @Nullable String targetUrl,
-        String type,
-        @Nullable List<SubResourceResponse> urlPathMaps) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("includePath") @Nullable Boolean includePath,
+        @OutputCustomType.Parameter("includeQueryString") @Nullable Boolean includeQueryString,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("pathRules") @Nullable List<SubResourceResponse> pathRules,
+        @OutputCustomType.Parameter("redirectType") @Nullable String redirectType,
+        @OutputCustomType.Parameter("requestRoutingRules") @Nullable List<SubResourceResponse> requestRoutingRules,
+        @OutputCustomType.Parameter("targetListener") @Nullable SubResourceResponse targetListener,
+        @OutputCustomType.Parameter("targetUrl") @Nullable String targetUrl,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("urlPathMaps") @Nullable List<SubResourceResponse> urlPathMaps) {
         this.etag = etag;
         this.id = id;
         this.includePath = includePath;

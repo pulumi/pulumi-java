@@ -47,14 +47,14 @@ public final class ManagedClusterLoadBalancerProfileResponse {
      */
     private final @Nullable ManagedClusterLoadBalancerProfileResponseOutboundIPs outboundIPs;
 
-    @OutputCustomType.Constructor({"allocatedOutboundPorts","effectiveOutboundIPs","idleTimeoutInMinutes","managedOutboundIPs","outboundIPPrefixes","outboundIPs"})
+    @OutputCustomType.Constructor
     private ManagedClusterLoadBalancerProfileResponse(
-        @Nullable Integer allocatedOutboundPorts,
-        @Nullable List<ResourceReferenceResponse> effectiveOutboundIPs,
-        @Nullable Integer idleTimeoutInMinutes,
-        @Nullable ManagedClusterLoadBalancerProfileResponseManagedOutboundIPs managedOutboundIPs,
-        @Nullable ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes outboundIPPrefixes,
-        @Nullable ManagedClusterLoadBalancerProfileResponseOutboundIPs outboundIPs) {
+        @OutputCustomType.Parameter("allocatedOutboundPorts") @Nullable Integer allocatedOutboundPorts,
+        @OutputCustomType.Parameter("effectiveOutboundIPs") @Nullable List<ResourceReferenceResponse> effectiveOutboundIPs,
+        @OutputCustomType.Parameter("idleTimeoutInMinutes") @Nullable Integer idleTimeoutInMinutes,
+        @OutputCustomType.Parameter("managedOutboundIPs") @Nullable ManagedClusterLoadBalancerProfileResponseManagedOutboundIPs managedOutboundIPs,
+        @OutputCustomType.Parameter("outboundIPPrefixes") @Nullable ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes outboundIPPrefixes,
+        @OutputCustomType.Parameter("outboundIPs") @Nullable ManagedClusterLoadBalancerProfileResponseOutboundIPs outboundIPs) {
         this.allocatedOutboundPorts = allocatedOutboundPorts;
         this.effectiveOutboundIPs = effectiveOutboundIPs;
         this.idleTimeoutInMinutes = idleTimeoutInMinutes;

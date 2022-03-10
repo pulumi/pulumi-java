@@ -17,8 +17,8 @@ public final class GetVirtualNetworkGatewayVpnclientConnectionHealthResult {
      */
     private final @Nullable List<VpnClientConnectionHealthDetailResponse> value;
 
-    @OutputCustomType.Constructor({"value"})
-    private GetVirtualNetworkGatewayVpnclientConnectionHealthResult(@Nullable List<VpnClientConnectionHealthDetailResponse> value) {
+    @OutputCustomType.Constructor
+    private GetVirtualNetworkGatewayVpnclientConnectionHealthResult(@OutputCustomType.Parameter("value") @Nullable List<VpnClientConnectionHealthDetailResponse> value) {
         this.value = value;
     }
 

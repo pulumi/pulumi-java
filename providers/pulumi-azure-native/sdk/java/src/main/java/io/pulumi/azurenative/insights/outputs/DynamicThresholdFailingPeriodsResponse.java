@@ -20,10 +20,10 @@ public final class DynamicThresholdFailingPeriodsResponse {
      */
     private final Double numberOfEvaluationPeriods;
 
-    @OutputCustomType.Constructor({"minFailingPeriodsToAlert","numberOfEvaluationPeriods"})
+    @OutputCustomType.Constructor
     private DynamicThresholdFailingPeriodsResponse(
-        Double minFailingPeriodsToAlert,
-        Double numberOfEvaluationPeriods) {
+        @OutputCustomType.Parameter("minFailingPeriodsToAlert") Double minFailingPeriodsToAlert,
+        @OutputCustomType.Parameter("numberOfEvaluationPeriods") Double numberOfEvaluationPeriods) {
         this.minFailingPeriodsToAlert = minFailingPeriodsToAlert;
         this.numberOfEvaluationPeriods = numberOfEvaluationPeriods;
     }

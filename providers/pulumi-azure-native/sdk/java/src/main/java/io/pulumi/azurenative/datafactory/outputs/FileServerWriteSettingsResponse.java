@@ -34,12 +34,12 @@ public final class FileServerWriteSettingsResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"copyBehavior","disableMetricsCollection","maxConcurrentConnections","type"})
+    @OutputCustomType.Constructor
     private FileServerWriteSettingsResponse(
-        @Nullable Object copyBehavior,
-        @Nullable Object disableMetricsCollection,
-        @Nullable Object maxConcurrentConnections,
-        String type) {
+        @OutputCustomType.Parameter("copyBehavior") @Nullable Object copyBehavior,
+        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @OutputCustomType.Parameter("type") String type) {
         this.copyBehavior = copyBehavior;
         this.disableMetricsCollection = disableMetricsCollection;
         this.maxConcurrentConnections = maxConcurrentConnections;

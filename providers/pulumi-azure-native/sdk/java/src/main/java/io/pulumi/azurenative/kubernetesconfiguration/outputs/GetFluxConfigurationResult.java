@@ -109,26 +109,26 @@ public final class GetFluxConfigurationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"complianceState","configurationProtectedSettings","errorMessage","gitRepository","id","kustomizations","lastSourceSyncedAt","lastSourceSyncedCommitId","name","namespace","provisioningState","repositoryPublicKey","scope","sourceKind","statuses","suspend","systemData","type"})
+    @OutputCustomType.Constructor
     private GetFluxConfigurationResult(
-        String complianceState,
-        @Nullable Map<String,String> configurationProtectedSettings,
-        String errorMessage,
-        @Nullable GitRepositoryDefinitionResponse gitRepository,
-        String id,
-        @Nullable Map<String,KustomizationDefinitionResponse> kustomizations,
-        String lastSourceSyncedAt,
-        String lastSourceSyncedCommitId,
-        String name,
-        @Nullable String namespace,
-        String provisioningState,
-        String repositoryPublicKey,
-        @Nullable String scope,
-        @Nullable String sourceKind,
-        List<ObjectStatusDefinitionResponse> statuses,
-        @Nullable Boolean suspend,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("complianceState") String complianceState,
+        @OutputCustomType.Parameter("configurationProtectedSettings") @Nullable Map<String,String> configurationProtectedSettings,
+        @OutputCustomType.Parameter("errorMessage") String errorMessage,
+        @OutputCustomType.Parameter("gitRepository") @Nullable GitRepositoryDefinitionResponse gitRepository,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kustomizations") @Nullable Map<String,KustomizationDefinitionResponse> kustomizations,
+        @OutputCustomType.Parameter("lastSourceSyncedAt") String lastSourceSyncedAt,
+        @OutputCustomType.Parameter("lastSourceSyncedCommitId") String lastSourceSyncedCommitId,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("namespace") @Nullable String namespace,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("repositoryPublicKey") String repositoryPublicKey,
+        @OutputCustomType.Parameter("scope") @Nullable String scope,
+        @OutputCustomType.Parameter("sourceKind") @Nullable String sourceKind,
+        @OutputCustomType.Parameter("statuses") List<ObjectStatusDefinitionResponse> statuses,
+        @OutputCustomType.Parameter("suspend") @Nullable Boolean suspend,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.complianceState = complianceState;
         this.configurationProtectedSettings = configurationProtectedSettings;
         this.errorMessage = errorMessage;

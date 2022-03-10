@@ -53,16 +53,16 @@ public final class BastionHostIPConfigurationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"etag","id","name","privateIPAllocationMethod","provisioningState","publicIPAddress","subnet","type"})
+    @OutputCustomType.Constructor
     private BastionHostIPConfigurationResponse(
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable String privateIPAllocationMethod,
-        String provisioningState,
-        SubResourceResponse publicIPAddress,
-        SubResourceResponse subnet,
-        String type) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("privateIPAllocationMethod") @Nullable String privateIPAllocationMethod,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicIPAddress") SubResourceResponse publicIPAddress,
+        @OutputCustomType.Parameter("subnet") SubResourceResponse subnet,
+        @OutputCustomType.Parameter("type") String type) {
         this.etag = etag;
         this.id = id;
         this.name = name;

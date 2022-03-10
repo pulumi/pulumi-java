@@ -27,11 +27,11 @@ public final class AADBasedSecurityPrincipalResponse {
      */
     private final @Nullable String tenantId;
 
-    @OutputCustomType.Constructor({"ledgerRoleName","principalId","tenantId"})
+    @OutputCustomType.Constructor
     private AADBasedSecurityPrincipalResponse(
-        @Nullable String ledgerRoleName,
-        @Nullable String principalId,
-        @Nullable String tenantId) {
+        @OutputCustomType.Parameter("ledgerRoleName") @Nullable String ledgerRoleName,
+        @OutputCustomType.Parameter("principalId") @Nullable String principalId,
+        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId) {
         this.ledgerRoleName = ledgerRoleName;
         this.principalId = principalId;
         this.tenantId = tenantId;

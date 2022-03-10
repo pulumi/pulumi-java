@@ -36,12 +36,12 @@ public final class CommonEncryptionCbcsResponse {
      */
     private final @Nullable EnabledProtocolsResponse enabledProtocols;
 
-    @OutputCustomType.Constructor({"clearTracks","contentKeys","drm","enabledProtocols"})
+    @OutputCustomType.Constructor
     private CommonEncryptionCbcsResponse(
-        @Nullable List<TrackSelectionResponse> clearTracks,
-        @Nullable StreamingPolicyContentKeysResponse contentKeys,
-        @Nullable CbcsDrmConfigurationResponse drm,
-        @Nullable EnabledProtocolsResponse enabledProtocols) {
+        @OutputCustomType.Parameter("clearTracks") @Nullable List<TrackSelectionResponse> clearTracks,
+        @OutputCustomType.Parameter("contentKeys") @Nullable StreamingPolicyContentKeysResponse contentKeys,
+        @OutputCustomType.Parameter("drm") @Nullable CbcsDrmConfigurationResponse drm,
+        @OutputCustomType.Parameter("enabledProtocols") @Nullable EnabledProtocolsResponse enabledProtocols) {
         this.clearTracks = clearTracks;
         this.contentKeys = contentKeys;
         this.drm = drm;

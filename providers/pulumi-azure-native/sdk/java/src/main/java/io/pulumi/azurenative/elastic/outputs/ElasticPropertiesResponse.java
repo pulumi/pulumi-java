@@ -23,10 +23,10 @@ public final class ElasticPropertiesResponse {
      */
     private final @Nullable ElasticCloudUserResponse elasticCloudUser;
 
-    @OutputCustomType.Constructor({"elasticCloudDeployment","elasticCloudUser"})
+    @OutputCustomType.Constructor
     private ElasticPropertiesResponse(
-        @Nullable ElasticCloudDeploymentResponse elasticCloudDeployment,
-        @Nullable ElasticCloudUserResponse elasticCloudUser) {
+        @OutputCustomType.Parameter("elasticCloudDeployment") @Nullable ElasticCloudDeploymentResponse elasticCloudDeployment,
+        @OutputCustomType.Parameter("elasticCloudUser") @Nullable ElasticCloudUserResponse elasticCloudUser) {
         this.elasticCloudDeployment = elasticCloudDeployment;
         this.elasticCloudUser = elasticCloudUser;
     }

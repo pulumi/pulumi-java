@@ -21,10 +21,10 @@ public final class EnvironmentStatusResponse {
      */
     private final WarmStorageEnvironmentStatusResponse warmStorage;
 
-    @OutputCustomType.Constructor({"ingress","warmStorage"})
+    @OutputCustomType.Constructor
     private EnvironmentStatusResponse(
-        IngressEnvironmentStatusResponse ingress,
-        WarmStorageEnvironmentStatusResponse warmStorage) {
+        @OutputCustomType.Parameter("ingress") IngressEnvironmentStatusResponse ingress,
+        @OutputCustomType.Parameter("warmStorage") WarmStorageEnvironmentStatusResponse warmStorage) {
         this.ingress = ingress;
         this.warmStorage = warmStorage;
     }

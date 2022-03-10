@@ -32,12 +32,12 @@ public final class HybridRunbookWorkerLegacyResponse {
      */
     private final @Nullable String registrationTime;
 
-    @OutputCustomType.Constructor({"ip","lastSeenDateTime","name","registrationTime"})
+    @OutputCustomType.Constructor
     private HybridRunbookWorkerLegacyResponse(
-        @Nullable String ip,
-        @Nullable String lastSeenDateTime,
-        @Nullable String name,
-        @Nullable String registrationTime) {
+        @OutputCustomType.Parameter("ip") @Nullable String ip,
+        @OutputCustomType.Parameter("lastSeenDateTime") @Nullable String lastSeenDateTime,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("registrationTime") @Nullable String registrationTime) {
         this.ip = ip;
         this.lastSeenDateTime = lastSeenDateTime;
         this.name = name;

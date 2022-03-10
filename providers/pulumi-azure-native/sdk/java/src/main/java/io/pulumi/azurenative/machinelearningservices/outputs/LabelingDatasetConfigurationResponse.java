@@ -28,11 +28,11 @@ public final class LabelingDatasetConfigurationResponse {
      */
     private final @Nullable Boolean enableIncrementalDatasetRefresh;
 
-    @OutputCustomType.Constructor({"assetName","datasetVersion","enableIncrementalDatasetRefresh"})
+    @OutputCustomType.Constructor
     private LabelingDatasetConfigurationResponse(
-        String assetName,
-        String datasetVersion,
-        @Nullable Boolean enableIncrementalDatasetRefresh) {
+        @OutputCustomType.Parameter("assetName") String assetName,
+        @OutputCustomType.Parameter("datasetVersion") String datasetVersion,
+        @OutputCustomType.Parameter("enableIncrementalDatasetRefresh") @Nullable Boolean enableIncrementalDatasetRefresh) {
         this.assetName = assetName;
         this.datasetVersion = datasetVersion;
         this.enableIncrementalDatasetRefresh = enableIncrementalDatasetRefresh;

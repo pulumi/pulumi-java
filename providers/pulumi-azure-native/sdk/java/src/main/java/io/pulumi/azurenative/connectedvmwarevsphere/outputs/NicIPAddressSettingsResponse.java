@@ -25,11 +25,11 @@ public final class NicIPAddressSettingsResponse {
      */
     private final String subnetMask;
 
-    @OutputCustomType.Constructor({"allocationMethod","ipAddress","subnetMask"})
+    @OutputCustomType.Constructor
     private NicIPAddressSettingsResponse(
-        String allocationMethod,
-        String ipAddress,
-        String subnetMask) {
+        @OutputCustomType.Parameter("allocationMethod") String allocationMethod,
+        @OutputCustomType.Parameter("ipAddress") String ipAddress,
+        @OutputCustomType.Parameter("subnetMask") String subnetMask) {
         this.allocationMethod = allocationMethod;
         this.ipAddress = ipAddress;
         this.subnetMask = subnetMask;

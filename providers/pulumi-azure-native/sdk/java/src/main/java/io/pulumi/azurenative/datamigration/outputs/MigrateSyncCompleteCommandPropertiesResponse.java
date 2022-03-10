@@ -42,13 +42,13 @@ public final class MigrateSyncCompleteCommandPropertiesResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"commandType","errors","input","output","state"})
+    @OutputCustomType.Constructor
     private MigrateSyncCompleteCommandPropertiesResponse(
-        String commandType,
-        List<ODataErrorResponse> errors,
-        @Nullable MigrateSyncCompleteCommandInputResponse input,
-        MigrateSyncCompleteCommandOutputResponse output,
-        String state) {
+        @OutputCustomType.Parameter("commandType") String commandType,
+        @OutputCustomType.Parameter("errors") List<ODataErrorResponse> errors,
+        @OutputCustomType.Parameter("input") @Nullable MigrateSyncCompleteCommandInputResponse input,
+        @OutputCustomType.Parameter("output") MigrateSyncCompleteCommandOutputResponse output,
+        @OutputCustomType.Parameter("state") String state) {
         this.commandType = commandType;
         this.errors = errors;
         this.input = input;

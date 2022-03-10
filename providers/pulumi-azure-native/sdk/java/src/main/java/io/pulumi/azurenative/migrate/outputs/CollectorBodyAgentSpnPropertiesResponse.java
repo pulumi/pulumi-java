@@ -37,13 +37,13 @@ public final class CollectorBodyAgentSpnPropertiesResponse {
      */
     private final @Nullable String tenantId;
 
-    @OutputCustomType.Constructor({"applicationId","audience","authority","objectId","tenantId"})
+    @OutputCustomType.Constructor
     private CollectorBodyAgentSpnPropertiesResponse(
-        @Nullable String applicationId,
-        @Nullable String audience,
-        @Nullable String authority,
-        @Nullable String objectId,
-        @Nullable String tenantId) {
+        @OutputCustomType.Parameter("applicationId") @Nullable String applicationId,
+        @OutputCustomType.Parameter("audience") @Nullable String audience,
+        @OutputCustomType.Parameter("authority") @Nullable String authority,
+        @OutputCustomType.Parameter("objectId") @Nullable String objectId,
+        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId) {
         this.applicationId = applicationId;
         this.audience = audience;
         this.authority = authority;

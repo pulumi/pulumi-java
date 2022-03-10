@@ -50,15 +50,15 @@ public final class ConnectionGatewayDefinitionResponseProperties {
      */
     private final @Nullable Object status;
 
-    @OutputCustomType.Constructor({"backendUri","connectionGatewayInstallation","contactInformation","description","displayName","machineName","status"})
+    @OutputCustomType.Constructor
     private ConnectionGatewayDefinitionResponseProperties(
-        @Nullable String backendUri,
-        @Nullable ConnectionGatewayReferenceResponse connectionGatewayInstallation,
-        @Nullable List<String> contactInformation,
-        @Nullable String description,
-        @Nullable String displayName,
-        @Nullable String machineName,
-        @Nullable Object status) {
+        @OutputCustomType.Parameter("backendUri") @Nullable String backendUri,
+        @OutputCustomType.Parameter("connectionGatewayInstallation") @Nullable ConnectionGatewayReferenceResponse connectionGatewayInstallation,
+        @OutputCustomType.Parameter("contactInformation") @Nullable List<String> contactInformation,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("machineName") @Nullable String machineName,
+        @OutputCustomType.Parameter("status") @Nullable Object status) {
         this.backendUri = backendUri;
         this.connectionGatewayInstallation = connectionGatewayInstallation;
         this.contactInformation = contactInformation;

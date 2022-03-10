@@ -33,12 +33,12 @@ public final class HealthProbeParametersResponse {
      */
     private final @Nullable String probeRequestType;
 
-    @OutputCustomType.Constructor({"probeIntervalInSeconds","probePath","probeProtocol","probeRequestType"})
+    @OutputCustomType.Constructor
     private HealthProbeParametersResponse(
-        @Nullable Integer probeIntervalInSeconds,
-        @Nullable String probePath,
-        @Nullable String probeProtocol,
-        @Nullable String probeRequestType) {
+        @OutputCustomType.Parameter("probeIntervalInSeconds") @Nullable Integer probeIntervalInSeconds,
+        @OutputCustomType.Parameter("probePath") @Nullable String probePath,
+        @OutputCustomType.Parameter("probeProtocol") @Nullable String probeProtocol,
+        @OutputCustomType.Parameter("probeRequestType") @Nullable String probeRequestType) {
         this.probeIntervalInSeconds = probeIntervalInSeconds;
         this.probePath = probePath;
         this.probeProtocol = probeProtocol;

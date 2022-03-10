@@ -47,15 +47,15 @@ public final class GetCacheResult {
      */
     private final String useFromLocation;
 
-    @OutputCustomType.Constructor({"connectionString","description","id","name","resourceId","type","useFromLocation"})
+    @OutputCustomType.Constructor
     private GetCacheResult(
-        String connectionString,
-        @Nullable String description,
-        String id,
-        String name,
-        @Nullable String resourceId,
-        String type,
-        String useFromLocation) {
+        @OutputCustomType.Parameter("connectionString") String connectionString,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("useFromLocation") String useFromLocation) {
         this.connectionString = connectionString;
         this.description = description;
         this.id = id;

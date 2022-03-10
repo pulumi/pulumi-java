@@ -42,14 +42,14 @@ public final class AccessReviewInstanceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"endDateTime","id","name","startDateTime","status","type"})
+    @OutputCustomType.Constructor
     private AccessReviewInstanceResponse(
-        @Nullable String endDateTime,
-        String id,
-        String name,
-        @Nullable String startDateTime,
-        String status,
-        String type) {
+        @OutputCustomType.Parameter("endDateTime") @Nullable String endDateTime,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("startDateTime") @Nullable String startDateTime,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("type") String type) {
         this.endDateTime = endDateTime;
         this.id = id;
         this.name = name;

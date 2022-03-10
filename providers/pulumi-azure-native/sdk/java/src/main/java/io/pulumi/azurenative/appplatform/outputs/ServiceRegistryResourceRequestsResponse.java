@@ -26,11 +26,11 @@ public final class ServiceRegistryResourceRequestsResponse {
      */
     private final String memory;
 
-    @OutputCustomType.Constructor({"cpu","instanceCount","memory"})
+    @OutputCustomType.Constructor
     private ServiceRegistryResourceRequestsResponse(
-        String cpu,
-        Integer instanceCount,
-        String memory) {
+        @OutputCustomType.Parameter("cpu") String cpu,
+        @OutputCustomType.Parameter("instanceCount") Integer instanceCount,
+        @OutputCustomType.Parameter("memory") String memory) {
         this.cpu = cpu;
         this.instanceCount = instanceCount;
         this.memory = memory;

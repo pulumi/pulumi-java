@@ -22,10 +22,10 @@ public final class ContentKeyPolicyTokenClaimResponse {
      */
     private final @Nullable String claimValue;
 
-    @OutputCustomType.Constructor({"claimType","claimValue"})
+    @OutputCustomType.Constructor
     private ContentKeyPolicyTokenClaimResponse(
-        @Nullable String claimType,
-        @Nullable String claimValue) {
+        @OutputCustomType.Parameter("claimType") @Nullable String claimType,
+        @OutputCustomType.Parameter("claimValue") @Nullable String claimValue) {
         this.claimType = claimType;
         this.claimValue = claimValue;
     }

@@ -17,8 +17,8 @@ public final class RuleResultsPropertiesResponse {
      */
     private final @Nullable List<List<String>> results;
 
-    @OutputCustomType.Constructor({"results"})
-    private RuleResultsPropertiesResponse(@Nullable List<List<String>> results) {
+    @OutputCustomType.Constructor
+    private RuleResultsPropertiesResponse(@OutputCustomType.Parameter("results") @Nullable List<List<String>> results) {
         this.results = results;
     }
 

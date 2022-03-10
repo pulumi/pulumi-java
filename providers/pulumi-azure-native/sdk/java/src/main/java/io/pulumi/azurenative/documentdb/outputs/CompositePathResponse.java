@@ -22,10 +22,10 @@ public final class CompositePathResponse {
      */
     private final @Nullable String path;
 
-    @OutputCustomType.Constructor({"order","path"})
+    @OutputCustomType.Constructor
     private CompositePathResponse(
-        @Nullable String order,
-        @Nullable String path) {
+        @OutputCustomType.Parameter("order") @Nullable String order,
+        @OutputCustomType.Parameter("path") @Nullable String path) {
         this.order = order;
         this.path = path;
     }

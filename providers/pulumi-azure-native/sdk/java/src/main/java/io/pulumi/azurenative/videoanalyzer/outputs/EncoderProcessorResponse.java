@@ -36,12 +36,12 @@ public final class EncoderProcessorResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"inputs","name","preset","type"})
+    @OutputCustomType.Constructor
     private EncoderProcessorResponse(
-        List<NodeInputResponse> inputs,
-        String name,
-        Either<EncoderCustomPresetResponse,EncoderSystemPresetResponse> preset,
-        String type) {
+        @OutputCustomType.Parameter("inputs") List<NodeInputResponse> inputs,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("preset") Either<EncoderCustomPresetResponse,EncoderSystemPresetResponse> preset,
+        @OutputCustomType.Parameter("type") String type) {
         this.inputs = inputs;
         this.name = name;
         this.preset = preset;

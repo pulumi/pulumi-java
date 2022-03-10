@@ -23,10 +23,10 @@ public final class DedicatedHostAllocatableVMResponse {
      */
     private final @Nullable String vmSize;
 
-    @OutputCustomType.Constructor({"count","vmSize"})
+    @OutputCustomType.Constructor
     private DedicatedHostAllocatableVMResponse(
-        @Nullable Double count,
-        @Nullable String vmSize) {
+        @OutputCustomType.Parameter("count") @Nullable Double count,
+        @OutputCustomType.Parameter("vmSize") @Nullable String vmSize) {
         this.count = count;
         this.vmSize = vmSize;
     }

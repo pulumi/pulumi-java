@@ -32,12 +32,12 @@ public final class ExpressRouteCircuitStatsResponse {
      */
     private final @Nullable Double secondarybytesOut;
 
-    @OutputCustomType.Constructor({"primarybytesIn","primarybytesOut","secondarybytesIn","secondarybytesOut"})
+    @OutputCustomType.Constructor
     private ExpressRouteCircuitStatsResponse(
-        @Nullable Double primarybytesIn,
-        @Nullable Double primarybytesOut,
-        @Nullable Double secondarybytesIn,
-        @Nullable Double secondarybytesOut) {
+        @OutputCustomType.Parameter("primarybytesIn") @Nullable Double primarybytesIn,
+        @OutputCustomType.Parameter("primarybytesOut") @Nullable Double primarybytesOut,
+        @OutputCustomType.Parameter("secondarybytesIn") @Nullable Double secondarybytesIn,
+        @OutputCustomType.Parameter("secondarybytesOut") @Nullable Double secondarybytesOut) {
         this.primarybytesIn = primarybytesIn;
         this.primarybytesOut = primarybytesOut;
         this.secondarybytesIn = secondarybytesIn;

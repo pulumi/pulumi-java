@@ -36,13 +36,13 @@ public final class RecommendedActionImpactRecordResponse {
      */
     private final String unit;
 
-    @OutputCustomType.Constructor({"absoluteValue","changeValueAbsolute","changeValueRelative","dimensionName","unit"})
+    @OutputCustomType.Constructor
     private RecommendedActionImpactRecordResponse(
-        Double absoluteValue,
-        Double changeValueAbsolute,
-        Double changeValueRelative,
-        String dimensionName,
-        String unit) {
+        @OutputCustomType.Parameter("absoluteValue") Double absoluteValue,
+        @OutputCustomType.Parameter("changeValueAbsolute") Double changeValueAbsolute,
+        @OutputCustomType.Parameter("changeValueRelative") Double changeValueRelative,
+        @OutputCustomType.Parameter("dimensionName") String dimensionName,
+        @OutputCustomType.Parameter("unit") String unit) {
         this.absoluteValue = absoluteValue;
         this.changeValueAbsolute = changeValueAbsolute;
         this.changeValueRelative = changeValueRelative;

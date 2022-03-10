@@ -100,25 +100,25 @@ public final class GetBookmarkResult {
      */
     private final @Nullable UserInfoResponse updatedBy;
 
-    @OutputCustomType.Constructor({"created","createdBy","displayName","etag","eventTime","id","incidentInfo","labels","name","notes","query","queryEndTime","queryResult","queryStartTime","type","updated","updatedBy"})
+    @OutputCustomType.Constructor
     private GetBookmarkResult(
-        @Nullable String created,
-        @Nullable UserInfoResponse createdBy,
-        String displayName,
-        @Nullable String etag,
-        @Nullable String eventTime,
-        String id,
-        @Nullable IncidentInfoResponse incidentInfo,
-        @Nullable List<String> labels,
-        String name,
-        @Nullable String notes,
-        String query,
-        @Nullable String queryEndTime,
-        @Nullable String queryResult,
-        @Nullable String queryStartTime,
-        String type,
-        @Nullable String updated,
-        @Nullable UserInfoResponse updatedBy) {
+        @OutputCustomType.Parameter("created") @Nullable String created,
+        @OutputCustomType.Parameter("createdBy") @Nullable UserInfoResponse createdBy,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("eventTime") @Nullable String eventTime,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("incidentInfo") @Nullable IncidentInfoResponse incidentInfo,
+        @OutputCustomType.Parameter("labels") @Nullable List<String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("notes") @Nullable String notes,
+        @OutputCustomType.Parameter("query") String query,
+        @OutputCustomType.Parameter("queryEndTime") @Nullable String queryEndTime,
+        @OutputCustomType.Parameter("queryResult") @Nullable String queryResult,
+        @OutputCustomType.Parameter("queryStartTime") @Nullable String queryStartTime,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("updated") @Nullable String updated,
+        @OutputCustomType.Parameter("updatedBy") @Nullable UserInfoResponse updatedBy) {
         this.created = created;
         this.createdBy = createdBy;
         this.displayName = displayName;

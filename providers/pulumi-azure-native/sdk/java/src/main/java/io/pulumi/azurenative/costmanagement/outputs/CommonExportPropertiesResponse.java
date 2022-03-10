@@ -40,13 +40,13 @@ public final class CommonExportPropertiesResponse {
      */
     private final @Nullable ExportExecutionListResultResponse runHistory;
 
-    @OutputCustomType.Constructor({"definition","deliveryInfo","format","nextRunTimeEstimate","runHistory"})
+    @OutputCustomType.Constructor
     private CommonExportPropertiesResponse(
-        ExportDefinitionResponse definition,
-        ExportDeliveryInfoResponse deliveryInfo,
-        @Nullable String format,
-        String nextRunTimeEstimate,
-        @Nullable ExportExecutionListResultResponse runHistory) {
+        @OutputCustomType.Parameter("definition") ExportDefinitionResponse definition,
+        @OutputCustomType.Parameter("deliveryInfo") ExportDeliveryInfoResponse deliveryInfo,
+        @OutputCustomType.Parameter("format") @Nullable String format,
+        @OutputCustomType.Parameter("nextRunTimeEstimate") String nextRunTimeEstimate,
+        @OutputCustomType.Parameter("runHistory") @Nullable ExportExecutionListResultResponse runHistory) {
         this.definition = definition;
         this.deliveryInfo = deliveryInfo;
         this.format = format;

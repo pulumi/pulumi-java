@@ -28,12 +28,12 @@ public final class HeaderActionParametersResponse {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"headerAction","headerName","odataType","value"})
+    @OutputCustomType.Constructor
     private HeaderActionParametersResponse(
-        String headerAction,
-        String headerName,
-        String odataType,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("headerAction") String headerAction,
+        @OutputCustomType.Parameter("headerName") String headerName,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.headerAction = headerAction;
         this.headerName = headerName;
         this.odataType = odataType;

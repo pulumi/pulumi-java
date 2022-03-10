@@ -25,11 +25,11 @@ public final class ScaleCapacityResponse {
      */
     private final String minimum;
 
-    @OutputCustomType.Constructor({"$default","maximum","minimum"})
+    @OutputCustomType.Constructor
     private ScaleCapacityResponse(
-        String $default,
-        String maximum,
-        String minimum) {
+        @OutputCustomType.Parameter("default") String $default,
+        @OutputCustomType.Parameter("maximum") String maximum,
+        @OutputCustomType.Parameter("minimum") String minimum) {
         this.$default = $default;
         this.maximum = maximum;
         this.minimum = minimum;

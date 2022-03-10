@@ -23,10 +23,10 @@ public final class AutoscaleResponse {
      */
     private final @Nullable AutoscaleRecurrenceResponse recurrence;
 
-    @OutputCustomType.Constructor({"capacity","recurrence"})
+    @OutputCustomType.Constructor
     private AutoscaleResponse(
-        @Nullable AutoscaleCapacityResponse capacity,
-        @Nullable AutoscaleRecurrenceResponse recurrence) {
+        @OutputCustomType.Parameter("capacity") @Nullable AutoscaleCapacityResponse capacity,
+        @OutputCustomType.Parameter("recurrence") @Nullable AutoscaleRecurrenceResponse recurrence) {
         this.capacity = capacity;
         this.recurrence = recurrence;
     }

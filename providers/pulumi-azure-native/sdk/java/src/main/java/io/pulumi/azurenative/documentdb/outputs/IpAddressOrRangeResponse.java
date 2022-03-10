@@ -17,8 +17,8 @@ public final class IpAddressOrRangeResponse {
      */
     private final @Nullable String ipAddressOrRange;
 
-    @OutputCustomType.Constructor({"ipAddressOrRange"})
-    private IpAddressOrRangeResponse(@Nullable String ipAddressOrRange) {
+    @OutputCustomType.Constructor
+    private IpAddressOrRangeResponse(@OutputCustomType.Parameter("ipAddressOrRange") @Nullable String ipAddressOrRange) {
         this.ipAddressOrRange = ipAddressOrRange;
     }
 

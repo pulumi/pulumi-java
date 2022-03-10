@@ -15,8 +15,8 @@ public final class GetUserSettingsResult {
      */
     private final UserPropertiesResponse properties;
 
-    @OutputCustomType.Constructor({"properties"})
-    private GetUserSettingsResult(UserPropertiesResponse properties) {
+    @OutputCustomType.Constructor
+    private GetUserSettingsResult(@OutputCustomType.Parameter("properties") UserPropertiesResponse properties) {
         this.properties = properties;
     }
 

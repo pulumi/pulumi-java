@@ -66,18 +66,18 @@ public final class GetAttestationProviderResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"attestUri","id","location","name","privateEndpointConnections","status","systemData","tags","trustModel","type"})
+    @OutputCustomType.Constructor
     private GetAttestationProviderResult(
-        @Nullable String attestUri,
-        String id,
-        String location,
-        String name,
-        List<PrivateEndpointConnectionResponse> privateEndpointConnections,
-        @Nullable String status,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        @Nullable String trustModel,
-        String type) {
+        @OutputCustomType.Parameter("attestUri") @Nullable String attestUri,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("privateEndpointConnections") List<PrivateEndpointConnectionResponse> privateEndpointConnections,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("trustModel") @Nullable String trustModel,
+        @OutputCustomType.Parameter("type") String type) {
         this.attestUri = attestUri;
         this.id = id;
         this.location = location;

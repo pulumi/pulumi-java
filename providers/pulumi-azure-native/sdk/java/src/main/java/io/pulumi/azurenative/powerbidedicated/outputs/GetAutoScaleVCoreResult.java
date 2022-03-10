@@ -66,18 +66,18 @@ public final class GetAutoScaleVCoreResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"capacityLimit","capacityObjectId","id","location","name","provisioningState","sku","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetAutoScaleVCoreResult(
-        @Nullable Integer capacityLimit,
-        @Nullable String capacityObjectId,
-        String id,
-        String location,
-        String name,
-        String provisioningState,
-        AutoScaleVCoreSkuResponse sku,
-        @Nullable SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("capacityLimit") @Nullable Integer capacityLimit,
+        @OutputCustomType.Parameter("capacityObjectId") @Nullable String capacityObjectId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("sku") AutoScaleVCoreSkuResponse sku,
+        @OutputCustomType.Parameter("systemData") @Nullable SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.capacityLimit = capacityLimit;
         this.capacityObjectId = capacityObjectId;
         this.id = id;

@@ -69,18 +69,18 @@ public final class ContainerResponse {
      */
     private final @Nullable List<VolumeMountResponse> volumeMounts;
 
-    @OutputCustomType.Constructor({"command","environmentVariables","image","instanceView","livenessProbe","name","ports","readinessProbe","resources","volumeMounts"})
+    @OutputCustomType.Constructor
     private ContainerResponse(
-        @Nullable List<String> command,
-        @Nullable List<EnvironmentVariableResponse> environmentVariables,
-        String image,
-        ContainerPropertiesResponseInstanceView instanceView,
-        @Nullable ContainerProbeResponse livenessProbe,
-        String name,
-        @Nullable List<ContainerPortResponse> ports,
-        @Nullable ContainerProbeResponse readinessProbe,
-        ResourceRequirementsResponse resources,
-        @Nullable List<VolumeMountResponse> volumeMounts) {
+        @OutputCustomType.Parameter("command") @Nullable List<String> command,
+        @OutputCustomType.Parameter("environmentVariables") @Nullable List<EnvironmentVariableResponse> environmentVariables,
+        @OutputCustomType.Parameter("image") String image,
+        @OutputCustomType.Parameter("instanceView") ContainerPropertiesResponseInstanceView instanceView,
+        @OutputCustomType.Parameter("livenessProbe") @Nullable ContainerProbeResponse livenessProbe,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("ports") @Nullable List<ContainerPortResponse> ports,
+        @OutputCustomType.Parameter("readinessProbe") @Nullable ContainerProbeResponse readinessProbe,
+        @OutputCustomType.Parameter("resources") ResourceRequirementsResponse resources,
+        @OutputCustomType.Parameter("volumeMounts") @Nullable List<VolumeMountResponse> volumeMounts) {
         this.command = command;
         this.environmentVariables = environmentVariables;
         this.image = image;

@@ -20,10 +20,10 @@ public final class UserAccessRightResponse {
      */
     private final String userId;
 
-    @OutputCustomType.Constructor({"accessType","userId"})
+    @OutputCustomType.Constructor
     private UserAccessRightResponse(
-        String accessType,
-        String userId) {
+        @OutputCustomType.Parameter("accessType") String accessType,
+        @OutputCustomType.Parameter("userId") String userId) {
         this.accessType = accessType;
         this.userId = userId;
     }

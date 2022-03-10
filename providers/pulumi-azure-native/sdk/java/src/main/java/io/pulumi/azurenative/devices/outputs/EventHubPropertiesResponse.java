@@ -40,13 +40,13 @@ public final class EventHubPropertiesResponse {
      */
     private final @Nullable Double retentionTimeInDays;
 
-    @OutputCustomType.Constructor({"endpoint","partitionCount","partitionIds","path","retentionTimeInDays"})
+    @OutputCustomType.Constructor
     private EventHubPropertiesResponse(
-        String endpoint,
-        @Nullable Integer partitionCount,
-        List<String> partitionIds,
-        String path,
-        @Nullable Double retentionTimeInDays) {
+        @OutputCustomType.Parameter("endpoint") String endpoint,
+        @OutputCustomType.Parameter("partitionCount") @Nullable Integer partitionCount,
+        @OutputCustomType.Parameter("partitionIds") List<String> partitionIds,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("retentionTimeInDays") @Nullable Double retentionTimeInDays) {
         this.endpoint = endpoint;
         this.partitionCount = partitionCount;
         this.partitionIds = partitionIds;

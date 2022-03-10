@@ -65,20 +65,20 @@ public final class GetAdaptiveApplicationControlResult {
     private final String type;
     private final @Nullable List<VmRecommendationResponse> vmRecommendations;
 
-    @OutputCustomType.Constructor({"configurationStatus","enforcementMode","id","issues","location","name","pathRecommendations","protectionMode","recommendationStatus","sourceSystem","type","vmRecommendations"})
+    @OutputCustomType.Constructor
     private GetAdaptiveApplicationControlResult(
-        String configurationStatus,
-        @Nullable String enforcementMode,
-        String id,
-        List<AdaptiveApplicationControlIssueSummaryResponse> issues,
-        String location,
-        String name,
-        @Nullable List<PathRecommendationResponse> pathRecommendations,
-        @Nullable ProtectionModeResponse protectionMode,
-        String recommendationStatus,
-        String sourceSystem,
-        String type,
-        @Nullable List<VmRecommendationResponse> vmRecommendations) {
+        @OutputCustomType.Parameter("configurationStatus") String configurationStatus,
+        @OutputCustomType.Parameter("enforcementMode") @Nullable String enforcementMode,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("issues") List<AdaptiveApplicationControlIssueSummaryResponse> issues,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("pathRecommendations") @Nullable List<PathRecommendationResponse> pathRecommendations,
+        @OutputCustomType.Parameter("protectionMode") @Nullable ProtectionModeResponse protectionMode,
+        @OutputCustomType.Parameter("recommendationStatus") String recommendationStatus,
+        @OutputCustomType.Parameter("sourceSystem") String sourceSystem,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("vmRecommendations") @Nullable List<VmRecommendationResponse> vmRecommendations) {
         this.configurationStatus = configurationStatus;
         this.enforcementMode = enforcementMode;
         this.id = id;

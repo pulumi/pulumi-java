@@ -22,10 +22,10 @@ public final class ListDomainRecommendationsResult {
      */
     private final List<NameIdentifierResponse> value;
 
-    @OutputCustomType.Constructor({"nextLink","value"})
+    @OutputCustomType.Constructor
     private ListDomainRecommendationsResult(
-        String nextLink,
-        List<NameIdentifierResponse> value) {
+        @OutputCustomType.Parameter("nextLink") String nextLink,
+        @OutputCustomType.Parameter("value") List<NameIdentifierResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }

@@ -34,12 +34,12 @@ public final class ApplicationScopedVolumeResponse {
      */
     private final @Nullable Boolean readOnly;
 
-    @OutputCustomType.Constructor({"creationParameters","destinationPath","name","readOnly"})
+    @OutputCustomType.Constructor
     private ApplicationScopedVolumeResponse(
-        ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse creationParameters,
-        String destinationPath,
-        String name,
-        @Nullable Boolean readOnly) {
+        @OutputCustomType.Parameter("creationParameters") ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse creationParameters,
+        @OutputCustomType.Parameter("destinationPath") String destinationPath,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly) {
         this.creationParameters = creationParameters;
         this.destinationPath = destinationPath;
         this.name = name;

@@ -17,8 +17,8 @@ public final class CorsRulesResponse {
      */
     private final @Nullable List<CorsRuleResponse> corsRules;
 
-    @OutputCustomType.Constructor({"corsRules"})
-    private CorsRulesResponse(@Nullable List<CorsRuleResponse> corsRules) {
+    @OutputCustomType.Constructor
+    private CorsRulesResponse(@OutputCustomType.Parameter("corsRules") @Nullable List<CorsRuleResponse> corsRules) {
         this.corsRules = corsRules;
     }
 

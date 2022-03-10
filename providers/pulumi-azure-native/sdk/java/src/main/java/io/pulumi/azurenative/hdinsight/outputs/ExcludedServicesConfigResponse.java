@@ -22,10 +22,10 @@ public final class ExcludedServicesConfigResponse {
      */
     private final @Nullable String excludedServicesList;
 
-    @OutputCustomType.Constructor({"excludedServicesConfigId","excludedServicesList"})
+    @OutputCustomType.Constructor
     private ExcludedServicesConfigResponse(
-        @Nullable String excludedServicesConfigId,
-        @Nullable String excludedServicesList) {
+        @OutputCustomType.Parameter("excludedServicesConfigId") @Nullable String excludedServicesConfigId,
+        @OutputCustomType.Parameter("excludedServicesList") @Nullable String excludedServicesList) {
         this.excludedServicesConfigId = excludedServicesConfigId;
         this.excludedServicesList = excludedServicesList;
     }

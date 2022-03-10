@@ -43,14 +43,14 @@ public final class ErrorEntityResponse {
      */
     private final @Nullable List<String> parameters;
 
-    @OutputCustomType.Constructor({"code","extendedCode","innerErrors","message","messageTemplate","parameters"})
+    @OutputCustomType.Constructor
     private ErrorEntityResponse(
-        @Nullable String code,
-        @Nullable String extendedCode,
-        @Nullable List<ErrorEntityResponse> innerErrors,
-        @Nullable String message,
-        @Nullable String messageTemplate,
-        @Nullable List<String> parameters) {
+        @OutputCustomType.Parameter("code") @Nullable String code,
+        @OutputCustomType.Parameter("extendedCode") @Nullable String extendedCode,
+        @OutputCustomType.Parameter("innerErrors") @Nullable List<ErrorEntityResponse> innerErrors,
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("messageTemplate") @Nullable String messageTemplate,
+        @OutputCustomType.Parameter("parameters") @Nullable List<String> parameters) {
         this.code = code;
         this.extendedCode = extendedCode;
         this.innerErrors = innerErrors;

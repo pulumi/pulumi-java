@@ -22,10 +22,10 @@ public final class UrlRedirectActionResponse {
      */
     private final UrlRedirectActionParametersResponse parameters;
 
-    @OutputCustomType.Constructor({"name","parameters"})
+    @OutputCustomType.Constructor
     private UrlRedirectActionResponse(
-        String name,
-        UrlRedirectActionParametersResponse parameters) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") UrlRedirectActionParametersResponse parameters) {
         this.name = name;
         this.parameters = parameters;
     }

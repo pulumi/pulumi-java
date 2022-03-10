@@ -22,10 +22,10 @@ public final class TriggerDependencyReferenceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"referenceTrigger","type"})
+    @OutputCustomType.Constructor
     private TriggerDependencyReferenceResponse(
-        TriggerReferenceResponse referenceTrigger,
-        String type) {
+        @OutputCustomType.Parameter("referenceTrigger") TriggerReferenceResponse referenceTrigger,
+        @OutputCustomType.Parameter("type") String type) {
         this.referenceTrigger = referenceTrigger;
         this.type = type;
     }

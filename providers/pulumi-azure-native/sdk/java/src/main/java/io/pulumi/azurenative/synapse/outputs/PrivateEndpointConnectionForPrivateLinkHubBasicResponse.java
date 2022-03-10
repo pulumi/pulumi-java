@@ -34,12 +34,12 @@ public final class PrivateEndpointConnectionForPrivateLinkHubBasicResponse {
      */
     private final String provisioningState;
 
-    @OutputCustomType.Constructor({"id","privateEndpoint","privateLinkServiceConnectionState","provisioningState"})
+    @OutputCustomType.Constructor
     private PrivateEndpointConnectionForPrivateLinkHubBasicResponse(
-        String id,
-        @Nullable PrivateEndpointResponse privateEndpoint,
-        @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState,
-        String provisioningState) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("privateEndpoint") @Nullable PrivateEndpointResponse privateEndpoint,
+        @OutputCustomType.Parameter("privateLinkServiceConnectionState") @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState) {
         this.id = id;
         this.privateEndpoint = privateEndpoint;
         this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;

@@ -24,10 +24,10 @@ public final class JsonWriteSettingsResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"filePattern","type"})
+    @OutputCustomType.Constructor
     private JsonWriteSettingsResponse(
-        @Nullable Object filePattern,
-        String type) {
+        @OutputCustomType.Parameter("filePattern") @Nullable Object filePattern,
+        @OutputCustomType.Parameter("type") String type) {
         this.filePattern = filePattern;
         this.type = type;
     }

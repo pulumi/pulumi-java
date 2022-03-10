@@ -64,18 +64,18 @@ public final class GetTestBaseAccountResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"accessLevel","etag","id","location","name","provisioningState","sku","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetTestBaseAccountResult(
-        String accessLevel,
-        String etag,
-        String id,
-        String location,
-        String name,
-        String provisioningState,
-        TestBaseAccountSKUResponse sku,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("accessLevel") String accessLevel,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("sku") TestBaseAccountSKUResponse sku,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.accessLevel = accessLevel;
         this.etag = etag;
         this.id = id;

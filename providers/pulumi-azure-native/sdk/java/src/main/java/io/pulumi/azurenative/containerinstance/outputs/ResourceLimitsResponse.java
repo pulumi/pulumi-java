@@ -28,11 +28,11 @@ public final class ResourceLimitsResponse {
      */
     private final @Nullable Double memoryInGB;
 
-    @OutputCustomType.Constructor({"cpu","gpu","memoryInGB"})
+    @OutputCustomType.Constructor
     private ResourceLimitsResponse(
-        @Nullable Double cpu,
-        @Nullable GpuResourceResponse gpu,
-        @Nullable Double memoryInGB) {
+        @OutputCustomType.Parameter("cpu") @Nullable Double cpu,
+        @OutputCustomType.Parameter("gpu") @Nullable GpuResourceResponse gpu,
+        @OutputCustomType.Parameter("memoryInGB") @Nullable Double memoryInGB) {
         this.cpu = cpu;
         this.gpu = gpu;
         this.memoryInGB = memoryInGB;

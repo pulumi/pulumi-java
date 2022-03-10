@@ -34,12 +34,12 @@ public final class AudioAnalyzerPresetResponse {
      */
     private final String odataType;
 
-    @OutputCustomType.Constructor({"audioLanguage","experimentalOptions","mode","odataType"})
+    @OutputCustomType.Constructor
     private AudioAnalyzerPresetResponse(
-        @Nullable String audioLanguage,
-        @Nullable Map<String,String> experimentalOptions,
-        @Nullable String mode,
-        String odataType) {
+        @OutputCustomType.Parameter("audioLanguage") @Nullable String audioLanguage,
+        @OutputCustomType.Parameter("experimentalOptions") @Nullable Map<String,String> experimentalOptions,
+        @OutputCustomType.Parameter("mode") @Nullable String mode,
+        @OutputCustomType.Parameter("odataType") String odataType) {
         this.audioLanguage = audioLanguage;
         this.experimentalOptions = experimentalOptions;
         this.mode = mode;

@@ -22,10 +22,10 @@ public final class MetadataCategoriesResponse {
      */
     private final @Nullable List<String> verticals;
 
-    @OutputCustomType.Constructor({"domains","verticals"})
+    @OutputCustomType.Constructor
     private MetadataCategoriesResponse(
-        @Nullable List<String> domains,
-        @Nullable List<String> verticals) {
+        @OutputCustomType.Parameter("domains") @Nullable List<String> domains,
+        @OutputCustomType.Parameter("verticals") @Nullable List<String> verticals) {
         this.domains = domains;
         this.verticals = verticals;
     }

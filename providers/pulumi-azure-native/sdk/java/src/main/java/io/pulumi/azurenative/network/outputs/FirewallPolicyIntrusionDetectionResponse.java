@@ -23,10 +23,10 @@ public final class FirewallPolicyIntrusionDetectionResponse {
      */
     private final @Nullable String mode;
 
-    @OutputCustomType.Constructor({"configuration","mode"})
+    @OutputCustomType.Constructor
     private FirewallPolicyIntrusionDetectionResponse(
-        @Nullable FirewallPolicyIntrusionDetectionConfigurationResponse configuration,
-        @Nullable String mode) {
+        @OutputCustomType.Parameter("configuration") @Nullable FirewallPolicyIntrusionDetectionConfigurationResponse configuration,
+        @OutputCustomType.Parameter("mode") @Nullable String mode) {
         this.configuration = configuration;
         this.mode = mode;
     }

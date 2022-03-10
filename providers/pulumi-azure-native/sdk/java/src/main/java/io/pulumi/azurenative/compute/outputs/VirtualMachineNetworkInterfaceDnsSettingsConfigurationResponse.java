@@ -17,8 +17,8 @@ public final class VirtualMachineNetworkInterfaceDnsSettingsConfigurationRespons
      */
     private final @Nullable List<String> dnsServers;
 
-    @OutputCustomType.Constructor({"dnsServers"})
-    private VirtualMachineNetworkInterfaceDnsSettingsConfigurationResponse(@Nullable List<String> dnsServers) {
+    @OutputCustomType.Constructor
+    private VirtualMachineNetworkInterfaceDnsSettingsConfigurationResponse(@OutputCustomType.Parameter("dnsServers") @Nullable List<String> dnsServers) {
         this.dnsServers = dnsServers;
     }
 

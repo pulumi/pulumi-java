@@ -33,12 +33,12 @@ public final class BandwidthScheduleResponse {
      */
     private final TimeResponse stop;
 
-    @OutputCustomType.Constructor({"days","rateInMbps","start","stop"})
+    @OutputCustomType.Constructor
     private BandwidthScheduleResponse(
-        List<String> days,
-        Integer rateInMbps,
-        TimeResponse start,
-        TimeResponse stop) {
+        @OutputCustomType.Parameter("days") List<String> days,
+        @OutputCustomType.Parameter("rateInMbps") Integer rateInMbps,
+        @OutputCustomType.Parameter("start") TimeResponse start,
+        @OutputCustomType.Parameter("stop") TimeResponse stop) {
         this.days = days;
         this.rateInMbps = rateInMbps;
         this.start = start;

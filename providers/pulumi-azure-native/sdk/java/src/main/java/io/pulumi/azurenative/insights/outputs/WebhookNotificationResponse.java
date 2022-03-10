@@ -23,10 +23,10 @@ public final class WebhookNotificationResponse {
      */
     private final @Nullable String serviceUri;
 
-    @OutputCustomType.Constructor({"properties","serviceUri"})
+    @OutputCustomType.Constructor
     private WebhookNotificationResponse(
-        @Nullable Map<String,String> properties,
-        @Nullable String serviceUri) {
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @OutputCustomType.Parameter("serviceUri") @Nullable String serviceUri) {
         this.properties = properties;
         this.serviceUri = serviceUri;
     }

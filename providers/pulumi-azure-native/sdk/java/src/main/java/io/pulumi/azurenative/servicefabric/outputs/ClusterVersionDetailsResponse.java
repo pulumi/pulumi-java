@@ -27,11 +27,11 @@ public final class ClusterVersionDetailsResponse {
      */
     private final @Nullable String supportExpiryUtc;
 
-    @OutputCustomType.Constructor({"codeVersion","environment","supportExpiryUtc"})
+    @OutputCustomType.Constructor
     private ClusterVersionDetailsResponse(
-        @Nullable String codeVersion,
-        @Nullable String environment,
-        @Nullable String supportExpiryUtc) {
+        @OutputCustomType.Parameter("codeVersion") @Nullable String codeVersion,
+        @OutputCustomType.Parameter("environment") @Nullable String environment,
+        @OutputCustomType.Parameter("supportExpiryUtc") @Nullable String supportExpiryUtc) {
         this.codeVersion = codeVersion;
         this.environment = environment;
         this.supportExpiryUtc = supportExpiryUtc;

@@ -66,18 +66,18 @@ public final class GetLabAccountResult {
      */
     private final @Nullable String uniqueIdentifier;
 
-    @OutputCustomType.Constructor({"enabledRegionSelection","id","latestOperationResult","location","name","provisioningState","sizeConfiguration","tags","type","uniqueIdentifier"})
+    @OutputCustomType.Constructor
     private GetLabAccountResult(
-        @Nullable Boolean enabledRegionSelection,
-        String id,
-        LatestOperationResultResponse latestOperationResult,
-        @Nullable String location,
-        String name,
-        @Nullable String provisioningState,
-        SizeConfigurationPropertiesResponse sizeConfiguration,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable String uniqueIdentifier) {
+        @OutputCustomType.Parameter("enabledRegionSelection") @Nullable Boolean enabledRegionSelection,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("latestOperationResult") LatestOperationResultResponse latestOperationResult,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("sizeConfiguration") SizeConfigurationPropertiesResponse sizeConfiguration,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("uniqueIdentifier") @Nullable String uniqueIdentifier) {
         this.enabledRegionSelection = enabledRegionSelection;
         this.id = id;
         this.latestOperationResult = latestOperationResult;

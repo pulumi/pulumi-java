@@ -41,14 +41,14 @@ public final class GetUserRuleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"etag","id","kind","name","systemData","type"})
+    @OutputCustomType.Constructor
     private GetUserRuleResult(
-        String etag,
-        String id,
-        String kind,
-        String name,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.etag = etag;
         this.id = id;
         this.kind = kind;

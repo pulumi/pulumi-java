@@ -61,17 +61,17 @@ public final class AssignmentReportResponse {
      */
     private final @Nullable VMInfoResponse vm;
 
-    @OutputCustomType.Constructor({"assignment","complianceStatus","endTime","id","operationType","reportId","resources","startTime","vm"})
+    @OutputCustomType.Constructor
     private AssignmentReportResponse(
-        @Nullable AssignmentInfoResponse assignment,
-        String complianceStatus,
-        String endTime,
-        String id,
-        String operationType,
-        String reportId,
-        @Nullable List<AssignmentReportResourceResponse> resources,
-        String startTime,
-        @Nullable VMInfoResponse vm) {
+        @OutputCustomType.Parameter("assignment") @Nullable AssignmentInfoResponse assignment,
+        @OutputCustomType.Parameter("complianceStatus") String complianceStatus,
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("operationType") String operationType,
+        @OutputCustomType.Parameter("reportId") String reportId,
+        @OutputCustomType.Parameter("resources") @Nullable List<AssignmentReportResourceResponse> resources,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("vm") @Nullable VMInfoResponse vm) {
         this.assignment = assignment;
         this.complianceStatus = complianceStatus;
         this.endTime = endTime;

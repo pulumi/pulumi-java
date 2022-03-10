@@ -39,13 +39,13 @@ public final class DashboardPartsResponsePosition {
      */
     private final Integer y;
 
-    @OutputCustomType.Constructor({"colSpan","metadata","rowSpan","x","y"})
+    @OutputCustomType.Constructor
     private DashboardPartsResponsePosition(
-        Integer colSpan,
-        @Nullable Map<String,Object> metadata,
-        Integer rowSpan,
-        Integer x,
-        Integer y) {
+        @OutputCustomType.Parameter("colSpan") Integer colSpan,
+        @OutputCustomType.Parameter("metadata") @Nullable Map<String,Object> metadata,
+        @OutputCustomType.Parameter("rowSpan") Integer rowSpan,
+        @OutputCustomType.Parameter("x") Integer x,
+        @OutputCustomType.Parameter("y") Integer y) {
         this.colSpan = colSpan;
         this.metadata = metadata;
         this.rowSpan = rowSpan;

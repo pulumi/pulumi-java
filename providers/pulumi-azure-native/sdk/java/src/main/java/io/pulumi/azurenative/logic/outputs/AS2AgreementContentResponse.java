@@ -20,10 +20,10 @@ public final class AS2AgreementContentResponse {
      */
     private final AS2OneWayAgreementResponse sendAgreement;
 
-    @OutputCustomType.Constructor({"receiveAgreement","sendAgreement"})
+    @OutputCustomType.Constructor
     private AS2AgreementContentResponse(
-        AS2OneWayAgreementResponse receiveAgreement,
-        AS2OneWayAgreementResponse sendAgreement) {
+        @OutputCustomType.Parameter("receiveAgreement") AS2OneWayAgreementResponse receiveAgreement,
+        @OutputCustomType.Parameter("sendAgreement") AS2OneWayAgreementResponse sendAgreement) {
         this.receiveAgreement = receiveAgreement;
         this.sendAgreement = sendAgreement;
     }

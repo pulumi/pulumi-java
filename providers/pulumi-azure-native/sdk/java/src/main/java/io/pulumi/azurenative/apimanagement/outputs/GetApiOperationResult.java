@@ -71,19 +71,19 @@ public final class GetApiOperationResult {
      */
     private final String urlTemplate;
 
-    @OutputCustomType.Constructor({"description","displayName","id","method","name","policies","request","responses","templateParameters","type","urlTemplate"})
+    @OutputCustomType.Constructor
     private GetApiOperationResult(
-        @Nullable String description,
-        String displayName,
-        String id,
-        String method,
-        String name,
-        @Nullable String policies,
-        @Nullable RequestContractResponse request,
-        @Nullable List<ResponseContractResponse> responses,
-        @Nullable List<ParameterContractResponse> templateParameters,
-        String type,
-        String urlTemplate) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("method") String method,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("policies") @Nullable String policies,
+        @OutputCustomType.Parameter("request") @Nullable RequestContractResponse request,
+        @OutputCustomType.Parameter("responses") @Nullable List<ResponseContractResponse> responses,
+        @OutputCustomType.Parameter("templateParameters") @Nullable List<ParameterContractResponse> templateParameters,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("urlTemplate") String urlTemplate) {
         this.description = description;
         this.displayName = displayName;
         this.id = id;

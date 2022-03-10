@@ -70,19 +70,19 @@ public final class GetUserResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"email","firstName","groups","id","identities","lastName","name","note","registrationDate","state","type"})
+    @OutputCustomType.Constructor
     private GetUserResult(
-        @Nullable String email,
-        @Nullable String firstName,
-        List<GroupContractPropertiesResponse> groups,
-        String id,
-        @Nullable List<UserIdentityContractResponse> identities,
-        @Nullable String lastName,
-        String name,
-        @Nullable String note,
-        @Nullable String registrationDate,
-        @Nullable String state,
-        String type) {
+        @OutputCustomType.Parameter("email") @Nullable String email,
+        @OutputCustomType.Parameter("firstName") @Nullable String firstName,
+        @OutputCustomType.Parameter("groups") List<GroupContractPropertiesResponse> groups,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identities") @Nullable List<UserIdentityContractResponse> identities,
+        @OutputCustomType.Parameter("lastName") @Nullable String lastName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("note") @Nullable String note,
+        @OutputCustomType.Parameter("registrationDate") @Nullable String registrationDate,
+        @OutputCustomType.Parameter("state") @Nullable String state,
+        @OutputCustomType.Parameter("type") String type) {
         this.email = email;
         this.firstName = firstName;
         this.groups = groups;

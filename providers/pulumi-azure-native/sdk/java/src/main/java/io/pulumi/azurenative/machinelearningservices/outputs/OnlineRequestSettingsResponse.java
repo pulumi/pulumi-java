@@ -28,11 +28,11 @@ public final class OnlineRequestSettingsResponse {
      */
     private final @Nullable String requestTimeout;
 
-    @OutputCustomType.Constructor({"maxConcurrentRequestsPerInstance","maxQueueWait","requestTimeout"})
+    @OutputCustomType.Constructor
     private OnlineRequestSettingsResponse(
-        @Nullable Integer maxConcurrentRequestsPerInstance,
-        @Nullable String maxQueueWait,
-        @Nullable String requestTimeout) {
+        @OutputCustomType.Parameter("maxConcurrentRequestsPerInstance") @Nullable Integer maxConcurrentRequestsPerInstance,
+        @OutputCustomType.Parameter("maxQueueWait") @Nullable String maxQueueWait,
+        @OutputCustomType.Parameter("requestTimeout") @Nullable String requestTimeout) {
         this.maxConcurrentRequestsPerInstance = maxConcurrentRequestsPerInstance;
         this.maxQueueWait = maxQueueWait;
         this.requestTimeout = requestTimeout;

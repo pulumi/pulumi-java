@@ -16,11 +16,11 @@ public final class SkuCostResponse {
     private final String meterId;
     private final @Nullable Integer quantity;
 
-    @OutputCustomType.Constructor({"extendedUnit","meterId","quantity"})
+    @OutputCustomType.Constructor
     private SkuCostResponse(
-        @Nullable String extendedUnit,
-        String meterId,
-        @Nullable Integer quantity) {
+        @OutputCustomType.Parameter("extendedUnit") @Nullable String extendedUnit,
+        @OutputCustomType.Parameter("meterId") String meterId,
+        @OutputCustomType.Parameter("quantity") @Nullable Integer quantity) {
         this.extendedUnit = extendedUnit;
         this.meterId = meterId;
         this.quantity = quantity;

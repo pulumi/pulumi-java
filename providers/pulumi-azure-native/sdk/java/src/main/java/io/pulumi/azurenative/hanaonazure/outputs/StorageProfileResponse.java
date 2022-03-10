@@ -29,11 +29,11 @@ public final class StorageProfileResponse {
      */
     private final @Nullable List<DiskResponse> osDisks;
 
-    @OutputCustomType.Constructor({"hanaSids","nfsIpAddress","osDisks"})
+    @OutputCustomType.Constructor
     private StorageProfileResponse(
-        @Nullable List<SAPSystemIDResponse> hanaSids,
-        String nfsIpAddress,
-        @Nullable List<DiskResponse> osDisks) {
+        @OutputCustomType.Parameter("hanaSids") @Nullable List<SAPSystemIDResponse> hanaSids,
+        @OutputCustomType.Parameter("nfsIpAddress") String nfsIpAddress,
+        @OutputCustomType.Parameter("osDisks") @Nullable List<DiskResponse> osDisks) {
         this.hanaSids = hanaSids;
         this.nfsIpAddress = nfsIpAddress;
         this.osDisks = osDisks;

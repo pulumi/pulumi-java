@@ -27,11 +27,11 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse {
      */
     private final PostgreSqlConnectionInfoResponse targetConnectionInfo;
 
-    @OutputCustomType.Constructor({"selectedDatabases","sourceConnectionInfo","targetConnectionInfo"})
+    @OutputCustomType.Constructor
     private MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse(
-        List<MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputResponse> selectedDatabases,
-        PostgreSqlConnectionInfoResponse sourceConnectionInfo,
-        PostgreSqlConnectionInfoResponse targetConnectionInfo) {
+        @OutputCustomType.Parameter("selectedDatabases") List<MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputResponse> selectedDatabases,
+        @OutputCustomType.Parameter("sourceConnectionInfo") PostgreSqlConnectionInfoResponse sourceConnectionInfo,
+        @OutputCustomType.Parameter("targetConnectionInfo") PostgreSqlConnectionInfoResponse targetConnectionInfo) {
         this.selectedDatabases = selectedDatabases;
         this.sourceConnectionInfo = sourceConnectionInfo;
         this.targetConnectionInfo = targetConnectionInfo;

@@ -32,12 +32,12 @@ public final class TargetIpFilterRuleResponse {
      */
     private final @Nullable String target;
 
-    @OutputCustomType.Constructor({"action","filterName","ipMask","target"})
+    @OutputCustomType.Constructor
     private TargetIpFilterRuleResponse(
-        String action,
-        String filterName,
-        String ipMask,
-        @Nullable String target) {
+        @OutputCustomType.Parameter("action") String action,
+        @OutputCustomType.Parameter("filterName") String filterName,
+        @OutputCustomType.Parameter("ipMask") String ipMask,
+        @OutputCustomType.Parameter("target") @Nullable String target) {
         this.action = action;
         this.filterName = filterName;
         this.ipMask = ipMask;

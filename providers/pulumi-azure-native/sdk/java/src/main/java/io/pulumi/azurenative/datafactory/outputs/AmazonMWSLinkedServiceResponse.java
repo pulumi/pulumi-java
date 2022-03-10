@@ -96,23 +96,23 @@ public final class AmazonMWSLinkedServiceResponse {
      */
     private final @Nullable Object usePeerVerification;
 
-    @OutputCustomType.Constructor({"accessKeyId","annotations","connectVia","description","encryptedCredential","endpoint","marketplaceID","mwsAuthToken","parameters","secretKey","sellerID","type","useEncryptedEndpoints","useHostVerification","usePeerVerification"})
+    @OutputCustomType.Constructor
     private AmazonMWSLinkedServiceResponse(
-        Object accessKeyId,
-        @Nullable List<Object> annotations,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        Object endpoint,
-        Object marketplaceID,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> mwsAuthToken,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> secretKey,
-        Object sellerID,
-        String type,
-        @Nullable Object useEncryptedEndpoints,
-        @Nullable Object useHostVerification,
-        @Nullable Object usePeerVerification) {
+        @OutputCustomType.Parameter("accessKeyId") Object accessKeyId,
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @OutputCustomType.Parameter("endpoint") Object endpoint,
+        @OutputCustomType.Parameter("marketplaceID") Object marketplaceID,
+        @OutputCustomType.Parameter("mwsAuthToken") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> mwsAuthToken,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("secretKey") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> secretKey,
+        @OutputCustomType.Parameter("sellerID") Object sellerID,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("useEncryptedEndpoints") @Nullable Object useEncryptedEndpoints,
+        @OutputCustomType.Parameter("useHostVerification") @Nullable Object useHostVerification,
+        @OutputCustomType.Parameter("usePeerVerification") @Nullable Object usePeerVerification) {
         this.accessKeyId = accessKeyId;
         this.annotations = annotations;
         this.connectVia = connectVia;

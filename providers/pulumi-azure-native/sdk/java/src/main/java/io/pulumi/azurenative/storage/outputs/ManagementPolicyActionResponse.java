@@ -29,11 +29,11 @@ public final class ManagementPolicyActionResponse {
      */
     private final @Nullable ManagementPolicyVersionResponse version;
 
-    @OutputCustomType.Constructor({"baseBlob","snapshot","version"})
+    @OutputCustomType.Constructor
     private ManagementPolicyActionResponse(
-        @Nullable ManagementPolicyBaseBlobResponse baseBlob,
-        @Nullable ManagementPolicySnapShotResponse snapshot,
-        @Nullable ManagementPolicyVersionResponse version) {
+        @OutputCustomType.Parameter("baseBlob") @Nullable ManagementPolicyBaseBlobResponse baseBlob,
+        @OutputCustomType.Parameter("snapshot") @Nullable ManagementPolicySnapShotResponse snapshot,
+        @OutputCustomType.Parameter("version") @Nullable ManagementPolicyVersionResponse version) {
         this.baseBlob = baseBlob;
         this.snapshot = snapshot;
         this.version = version;

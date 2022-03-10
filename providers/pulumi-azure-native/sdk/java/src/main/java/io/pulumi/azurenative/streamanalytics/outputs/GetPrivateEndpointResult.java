@@ -36,13 +36,13 @@ public final class GetPrivateEndpointResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"etag","id","name","properties","type"})
+    @OutputCustomType.Constructor
     private GetPrivateEndpointResult(
-        String etag,
-        String id,
-        String name,
-        PrivateEndpointPropertiesResponse properties,
-        String type) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") PrivateEndpointPropertiesResponse properties,
+        @OutputCustomType.Parameter("type") String type) {
         this.etag = etag;
         this.id = id;
         this.name = name;

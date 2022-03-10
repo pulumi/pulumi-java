@@ -90,23 +90,23 @@ public final class GetOrchestratorInstanceServiceDetailsResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"apiServerEndpoint","clusterRootCA","controllerDetails","id","identity","kind","location","name","orchestratorAppId","orchestratorTenantId","privateLinkResourceId","provisioningState","resourceGuid","tags","type"})
+    @OutputCustomType.Constructor
     private GetOrchestratorInstanceServiceDetailsResult(
-        @Nullable String apiServerEndpoint,
-        @Nullable String clusterRootCA,
-        ControllerDetailsResponse controllerDetails,
-        String id,
-        @Nullable OrchestratorIdentityResponse identity,
-        String kind,
-        @Nullable String location,
-        String name,
-        @Nullable String orchestratorAppId,
-        @Nullable String orchestratorTenantId,
-        @Nullable String privateLinkResourceId,
-        String provisioningState,
-        String resourceGuid,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("apiServerEndpoint") @Nullable String apiServerEndpoint,
+        @OutputCustomType.Parameter("clusterRootCA") @Nullable String clusterRootCA,
+        @OutputCustomType.Parameter("controllerDetails") ControllerDetailsResponse controllerDetails,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable OrchestratorIdentityResponse identity,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("orchestratorAppId") @Nullable String orchestratorAppId,
+        @OutputCustomType.Parameter("orchestratorTenantId") @Nullable String orchestratorTenantId,
+        @OutputCustomType.Parameter("privateLinkResourceId") @Nullable String privateLinkResourceId,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("resourceGuid") String resourceGuid,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.apiServerEndpoint = apiServerEndpoint;
         this.clusterRootCA = clusterRootCA;
         this.controllerDetails = controllerDetails;

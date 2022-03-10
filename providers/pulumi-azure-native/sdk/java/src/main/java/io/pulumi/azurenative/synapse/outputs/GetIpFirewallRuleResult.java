@@ -42,14 +42,14 @@ public final class GetIpFirewallRuleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"endIpAddress","id","name","provisioningState","startIpAddress","type"})
+    @OutputCustomType.Constructor
     private GetIpFirewallRuleResult(
-        @Nullable String endIpAddress,
-        String id,
-        String name,
-        String provisioningState,
-        @Nullable String startIpAddress,
-        String type) {
+        @OutputCustomType.Parameter("endIpAddress") @Nullable String endIpAddress,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("startIpAddress") @Nullable String startIpAddress,
+        @OutputCustomType.Parameter("type") String type) {
         this.endIpAddress = endIpAddress;
         this.id = id;
         this.name = name;

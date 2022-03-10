@@ -24,10 +24,10 @@ public final class UnencryptedCredentialsResponse {
      */
     private final Object jobSecrets;
 
-    @OutputCustomType.Constructor({"jobName","jobSecrets"})
+    @OutputCustomType.Constructor
     private UnencryptedCredentialsResponse(
-        String jobName,
-        Object jobSecrets) {
+        @OutputCustomType.Parameter("jobName") String jobName,
+        @OutputCustomType.Parameter("jobSecrets") Object jobSecrets) {
         this.jobName = jobName;
         this.jobSecrets = jobSecrets;
     }

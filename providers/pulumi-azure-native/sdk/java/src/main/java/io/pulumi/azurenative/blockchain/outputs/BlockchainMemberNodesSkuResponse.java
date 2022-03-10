@@ -17,8 +17,8 @@ public final class BlockchainMemberNodesSkuResponse {
      */
     private final @Nullable Integer capacity;
 
-    @OutputCustomType.Constructor({"capacity"})
-    private BlockchainMemberNodesSkuResponse(@Nullable Integer capacity) {
+    @OutputCustomType.Constructor
+    private BlockchainMemberNodesSkuResponse(@OutputCustomType.Parameter("capacity") @Nullable Integer capacity) {
         this.capacity = capacity;
     }
 

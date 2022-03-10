@@ -17,8 +17,8 @@ public final class ContainerConfigurationResponse {
      */
     private final @Nullable String containerGroupName;
 
-    @OutputCustomType.Constructor({"containerGroupName"})
-    private ContainerConfigurationResponse(@Nullable String containerGroupName) {
+    @OutputCustomType.Constructor
+    private ContainerConfigurationResponse(@OutputCustomType.Parameter("containerGroupName") @Nullable String containerGroupName) {
         this.containerGroupName = containerGroupName;
     }
 

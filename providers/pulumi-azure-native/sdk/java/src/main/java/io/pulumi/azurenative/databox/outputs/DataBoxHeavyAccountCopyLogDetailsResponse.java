@@ -32,12 +32,12 @@ public final class DataBoxHeavyAccountCopyLogDetailsResponse {
      */
     private final List<String> copyVerboseLogLink;
 
-    @OutputCustomType.Constructor({"accountName","copyLogDetailsType","copyLogLink","copyVerboseLogLink"})
+    @OutputCustomType.Constructor
     private DataBoxHeavyAccountCopyLogDetailsResponse(
-        String accountName,
-        String copyLogDetailsType,
-        List<String> copyLogLink,
-        List<String> copyVerboseLogLink) {
+        @OutputCustomType.Parameter("accountName") String accountName,
+        @OutputCustomType.Parameter("copyLogDetailsType") String copyLogDetailsType,
+        @OutputCustomType.Parameter("copyLogLink") List<String> copyLogLink,
+        @OutputCustomType.Parameter("copyVerboseLogLink") List<String> copyVerboseLogLink) {
         this.accountName = accountName;
         this.copyLogDetailsType = copyLogDetailsType;
         this.copyLogLink = copyLogLink;

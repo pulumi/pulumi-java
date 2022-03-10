@@ -15,10 +15,10 @@ public final class SubscriptionStateRuleResponse {
     private final @Nullable List<String> allowedActions;
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor({"allowedActions","state"})
+    @OutputCustomType.Constructor
     private SubscriptionStateRuleResponse(
-        @Nullable List<String> allowedActions,
-        @Nullable String state) {
+        @OutputCustomType.Parameter("allowedActions") @Nullable List<String> allowedActions,
+        @OutputCustomType.Parameter("state") @Nullable String state) {
         this.allowedActions = allowedActions;
         this.state = state;
     }

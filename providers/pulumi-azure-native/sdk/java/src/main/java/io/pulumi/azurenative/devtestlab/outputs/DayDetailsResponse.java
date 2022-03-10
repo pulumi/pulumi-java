@@ -17,8 +17,8 @@ public final class DayDetailsResponse {
      */
     private final @Nullable String time;
 
-    @OutputCustomType.Constructor({"time"})
-    private DayDetailsResponse(@Nullable String time) {
+    @OutputCustomType.Constructor
+    private DayDetailsResponse(@OutputCustomType.Parameter("time") @Nullable String time) {
         this.time = time;
     }
 

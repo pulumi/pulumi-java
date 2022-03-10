@@ -85,22 +85,22 @@ public final class SUCSchedulePropertiesResponse {
      */
     private final @Nullable String timeZone;
 
-    @OutputCustomType.Constructor({"advancedSchedule","creationTime","description","expiryTime","expiryTimeOffsetMinutes","frequency","interval","isEnabled","lastModifiedTime","nextRun","nextRunOffsetMinutes","startTime","startTimeOffsetMinutes","timeZone"})
+    @OutputCustomType.Constructor
     private SUCSchedulePropertiesResponse(
-        @Nullable AdvancedScheduleResponse advancedSchedule,
-        @Nullable String creationTime,
-        @Nullable String description,
-        @Nullable String expiryTime,
-        @Nullable Double expiryTimeOffsetMinutes,
-        @Nullable String frequency,
-        @Nullable Double interval,
-        @Nullable Boolean isEnabled,
-        @Nullable String lastModifiedTime,
-        @Nullable String nextRun,
-        @Nullable Double nextRunOffsetMinutes,
-        @Nullable String startTime,
-        Double startTimeOffsetMinutes,
-        @Nullable String timeZone) {
+        @OutputCustomType.Parameter("advancedSchedule") @Nullable AdvancedScheduleResponse advancedSchedule,
+        @OutputCustomType.Parameter("creationTime") @Nullable String creationTime,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("expiryTime") @Nullable String expiryTime,
+        @OutputCustomType.Parameter("expiryTimeOffsetMinutes") @Nullable Double expiryTimeOffsetMinutes,
+        @OutputCustomType.Parameter("frequency") @Nullable String frequency,
+        @OutputCustomType.Parameter("interval") @Nullable Double interval,
+        @OutputCustomType.Parameter("isEnabled") @Nullable Boolean isEnabled,
+        @OutputCustomType.Parameter("lastModifiedTime") @Nullable String lastModifiedTime,
+        @OutputCustomType.Parameter("nextRun") @Nullable String nextRun,
+        @OutputCustomType.Parameter("nextRunOffsetMinutes") @Nullable Double nextRunOffsetMinutes,
+        @OutputCustomType.Parameter("startTime") @Nullable String startTime,
+        @OutputCustomType.Parameter("startTimeOffsetMinutes") Double startTimeOffsetMinutes,
+        @OutputCustomType.Parameter("timeZone") @Nullable String timeZone) {
         this.advancedSchedule = advancedSchedule;
         this.creationTime = creationTime;
         this.description = description;

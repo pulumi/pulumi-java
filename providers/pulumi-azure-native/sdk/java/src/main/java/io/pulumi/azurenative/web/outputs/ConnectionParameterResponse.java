@@ -23,10 +23,10 @@ public final class ConnectionParameterResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"oAuthSettings","type"})
+    @OutputCustomType.Constructor
     private ConnectionParameterResponse(
-        @Nullable ApiOAuthSettingsResponse oAuthSettings,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("oAuthSettings") @Nullable ApiOAuthSettingsResponse oAuthSettings,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.oAuthSettings = oAuthSettings;
         this.type = type;
     }

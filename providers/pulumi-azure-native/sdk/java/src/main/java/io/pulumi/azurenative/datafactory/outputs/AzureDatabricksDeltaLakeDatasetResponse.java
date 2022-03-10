@@ -69,18 +69,18 @@ public final class AzureDatabricksDeltaLakeDatasetResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"annotations","database","description","folder","linkedServiceName","parameters","schema","structure","table","type"})
+    @OutputCustomType.Constructor
     private AzureDatabricksDeltaLakeDatasetResponse(
-        @Nullable List<Object> annotations,
-        @Nullable Object database,
-        @Nullable String description,
-        @Nullable DatasetResponseFolder folder,
-        LinkedServiceReferenceResponse linkedServiceName,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Object schema,
-        @Nullable Object structure,
-        @Nullable Object table,
-        String type) {
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("database") @Nullable Object database,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("folder") @Nullable DatasetResponseFolder folder,
+        @OutputCustomType.Parameter("linkedServiceName") LinkedServiceReferenceResponse linkedServiceName,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("schema") @Nullable Object schema,
+        @OutputCustomType.Parameter("structure") @Nullable Object structure,
+        @OutputCustomType.Parameter("table") @Nullable Object table,
+        @OutputCustomType.Parameter("type") String type) {
         this.annotations = annotations;
         this.database = database;
         this.description = description;

@@ -15,8 +15,8 @@ public final class AKSReplicaStatusResponseError {
      */
     private final ErrorResponseResponse error;
 
-    @OutputCustomType.Constructor({"error"})
-    private AKSReplicaStatusResponseError(ErrorResponseResponse error) {
+    @OutputCustomType.Constructor
+    private AKSReplicaStatusResponseError(@OutputCustomType.Parameter("error") ErrorResponseResponse error) {
         this.error = error;
     }
 

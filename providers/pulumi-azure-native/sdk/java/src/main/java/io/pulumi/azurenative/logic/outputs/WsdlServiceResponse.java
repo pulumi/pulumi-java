@@ -23,10 +23,10 @@ public final class WsdlServiceResponse {
      */
     private final @Nullable String qualifiedName;
 
-    @OutputCustomType.Constructor({"endpointQualifiedNames","qualifiedName"})
+    @OutputCustomType.Constructor
     private WsdlServiceResponse(
-        @Nullable List<String> endpointQualifiedNames,
-        @Nullable String qualifiedName) {
+        @OutputCustomType.Parameter("endpointQualifiedNames") @Nullable List<String> endpointQualifiedNames,
+        @OutputCustomType.Parameter("qualifiedName") @Nullable String qualifiedName) {
         this.endpointQualifiedNames = endpointQualifiedNames;
         this.qualifiedName = qualifiedName;
     }

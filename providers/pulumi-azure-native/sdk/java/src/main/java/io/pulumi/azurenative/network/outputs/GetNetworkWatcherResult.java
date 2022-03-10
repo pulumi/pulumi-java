@@ -48,15 +48,15 @@ public final class GetNetworkWatcherResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"etag","id","location","name","provisioningState","tags","type"})
+    @OutputCustomType.Constructor
     private GetNetworkWatcherResult(
-        String etag,
-        @Nullable String id,
-        @Nullable String location,
-        String name,
-        String provisioningState,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.etag = etag;
         this.id = id;
         this.location = location;

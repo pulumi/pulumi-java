@@ -21,10 +21,10 @@ public final class UserPropertyResponse {
      */
     private final Object value;
 
-    @OutputCustomType.Constructor({"name","value"})
+    @OutputCustomType.Constructor
     private UserPropertyResponse(
-        String name,
-        Object value) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("value") Object value) {
         this.name = name;
         this.value = value;
     }

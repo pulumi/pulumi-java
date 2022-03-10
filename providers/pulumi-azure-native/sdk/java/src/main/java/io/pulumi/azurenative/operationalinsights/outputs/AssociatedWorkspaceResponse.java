@@ -30,12 +30,12 @@ public final class AssociatedWorkspaceResponse {
      */
     private final String workspaceName;
 
-    @OutputCustomType.Constructor({"associateDate","resourceId","workspaceId","workspaceName"})
+    @OutputCustomType.Constructor
     private AssociatedWorkspaceResponse(
-        String associateDate,
-        String resourceId,
-        String workspaceId,
-        String workspaceName) {
+        @OutputCustomType.Parameter("associateDate") String associateDate,
+        @OutputCustomType.Parameter("resourceId") String resourceId,
+        @OutputCustomType.Parameter("workspaceId") String workspaceId,
+        @OutputCustomType.Parameter("workspaceName") String workspaceName) {
         this.associateDate = associateDate;
         this.resourceId = resourceId;
         this.workspaceId = workspaceId;

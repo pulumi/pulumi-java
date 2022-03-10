@@ -31,11 +31,11 @@ public final class SelfHostedIntegrationRuntimeResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"description","linkedInfo","type"})
+    @OutputCustomType.Constructor
     private SelfHostedIntegrationRuntimeResponse(
-        @Nullable String description,
-        @Nullable Either<LinkedIntegrationRuntimeKeyAuthorizationResponse,LinkedIntegrationRuntimeRbacAuthorizationResponse> linkedInfo,
-        String type) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("linkedInfo") @Nullable Either<LinkedIntegrationRuntimeKeyAuthorizationResponse,LinkedIntegrationRuntimeRbacAuthorizationResponse> linkedInfo,
+        @OutputCustomType.Parameter("type") String type) {
         this.description = description;
         this.linkedInfo = linkedInfo;
         this.type = type;

@@ -45,14 +45,14 @@ public final class TaskRunRequestResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"agentPoolName","isArchiveEnabled","logTemplate","overrideTaskStepProperties","taskId","type"})
+    @OutputCustomType.Constructor
     private TaskRunRequestResponse(
-        @Nullable String agentPoolName,
-        @Nullable Boolean isArchiveEnabled,
-        @Nullable String logTemplate,
-        @Nullable OverrideTaskStepPropertiesResponse overrideTaskStepProperties,
-        String taskId,
-        String type) {
+        @OutputCustomType.Parameter("agentPoolName") @Nullable String agentPoolName,
+        @OutputCustomType.Parameter("isArchiveEnabled") @Nullable Boolean isArchiveEnabled,
+        @OutputCustomType.Parameter("logTemplate") @Nullable String logTemplate,
+        @OutputCustomType.Parameter("overrideTaskStepProperties") @Nullable OverrideTaskStepPropertiesResponse overrideTaskStepProperties,
+        @OutputCustomType.Parameter("taskId") String taskId,
+        @OutputCustomType.Parameter("type") String type) {
         this.agentPoolName = agentPoolName;
         this.isArchiveEnabled = isArchiveEnabled;
         this.logTemplate = logTemplate;

@@ -22,10 +22,10 @@ public final class VpnServerConfigVpnClientRevokedCertificateResponse {
      */
     private final @Nullable String thumbprint;
 
-    @OutputCustomType.Constructor({"name","thumbprint"})
+    @OutputCustomType.Constructor
     private VpnServerConfigVpnClientRevokedCertificateResponse(
-        @Nullable String name,
-        @Nullable String thumbprint) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("thumbprint") @Nullable String thumbprint) {
         this.name = name;
         this.thumbprint = thumbprint;
     }

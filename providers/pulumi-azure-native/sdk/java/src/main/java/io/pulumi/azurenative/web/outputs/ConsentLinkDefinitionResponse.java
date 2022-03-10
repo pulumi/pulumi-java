@@ -32,12 +32,12 @@ public final class ConsentLinkDefinitionResponse {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor({"displayName","firstPartyLoginUri","link","status"})
+    @OutputCustomType.Constructor
     private ConsentLinkDefinitionResponse(
-        @Nullable String displayName,
-        @Nullable String firstPartyLoginUri,
-        @Nullable String link,
-        @Nullable String status) {
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("firstPartyLoginUri") @Nullable String firstPartyLoginUri,
+        @OutputCustomType.Parameter("link") @Nullable String link,
+        @OutputCustomType.Parameter("status") @Nullable String status) {
         this.displayName = displayName;
         this.firstPartyLoginUri = firstPartyLoginUri;
         this.link = link;

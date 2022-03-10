@@ -17,8 +17,8 @@ public final class SapHanaPartitionSettingsResponse {
      */
     private final @Nullable Object partitionColumnName;
 
-    @OutputCustomType.Constructor({"partitionColumnName"})
-    private SapHanaPartitionSettingsResponse(@Nullable Object partitionColumnName) {
+    @OutputCustomType.Constructor
+    private SapHanaPartitionSettingsResponse(@OutputCustomType.Parameter("partitionColumnName") @Nullable Object partitionColumnName) {
         this.partitionColumnName = partitionColumnName;
     }
 

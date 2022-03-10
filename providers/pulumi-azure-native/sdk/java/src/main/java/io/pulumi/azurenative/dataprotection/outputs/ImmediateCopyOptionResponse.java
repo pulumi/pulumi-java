@@ -16,8 +16,8 @@ public final class ImmediateCopyOptionResponse {
      */
     private final String objectType;
 
-    @OutputCustomType.Constructor({"objectType"})
-    private ImmediateCopyOptionResponse(String objectType) {
+    @OutputCustomType.Constructor
+    private ImmediateCopyOptionResponse(@OutputCustomType.Parameter("objectType") String objectType) {
         this.objectType = objectType;
     }
 

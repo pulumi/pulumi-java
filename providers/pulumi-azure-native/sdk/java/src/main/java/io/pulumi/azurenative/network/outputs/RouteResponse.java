@@ -58,17 +58,17 @@ public final class RouteResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"addressPrefix","etag","hasBgpOverride","id","name","nextHopIpAddress","nextHopType","provisioningState","type"})
+    @OutputCustomType.Constructor
     private RouteResponse(
-        @Nullable String addressPrefix,
-        String etag,
-        @Nullable Boolean hasBgpOverride,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable String nextHopIpAddress,
-        String nextHopType,
-        String provisioningState,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("addressPrefix") @Nullable String addressPrefix,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("hasBgpOverride") @Nullable Boolean hasBgpOverride,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("nextHopIpAddress") @Nullable String nextHopIpAddress,
+        @OutputCustomType.Parameter("nextHopType") String nextHopType,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.addressPrefix = addressPrefix;
         this.etag = etag;
         this.hasBgpOverride = hasBgpOverride;

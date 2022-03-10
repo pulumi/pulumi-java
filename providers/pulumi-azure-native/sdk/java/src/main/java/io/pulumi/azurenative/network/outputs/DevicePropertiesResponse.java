@@ -28,11 +28,11 @@ public final class DevicePropertiesResponse {
      */
     private final @Nullable Integer linkSpeedInMbps;
 
-    @OutputCustomType.Constructor({"deviceModel","deviceVendor","linkSpeedInMbps"})
+    @OutputCustomType.Constructor
     private DevicePropertiesResponse(
-        @Nullable String deviceModel,
-        @Nullable String deviceVendor,
-        @Nullable Integer linkSpeedInMbps) {
+        @OutputCustomType.Parameter("deviceModel") @Nullable String deviceModel,
+        @OutputCustomType.Parameter("deviceVendor") @Nullable String deviceVendor,
+        @OutputCustomType.Parameter("linkSpeedInMbps") @Nullable Integer linkSpeedInMbps) {
         this.deviceModel = deviceModel;
         this.deviceVendor = deviceVendor;
         this.linkSpeedInMbps = linkSpeedInMbps;

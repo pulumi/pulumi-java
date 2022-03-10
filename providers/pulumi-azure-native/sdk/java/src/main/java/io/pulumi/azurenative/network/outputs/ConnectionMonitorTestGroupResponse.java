@@ -39,13 +39,13 @@ public final class ConnectionMonitorTestGroupResponse {
      */
     private final List<String> testConfigurations;
 
-    @OutputCustomType.Constructor({"destinations","disable","name","sources","testConfigurations"})
+    @OutputCustomType.Constructor
     private ConnectionMonitorTestGroupResponse(
-        List<String> destinations,
-        @Nullable Boolean disable,
-        String name,
-        List<String> sources,
-        List<String> testConfigurations) {
+        @OutputCustomType.Parameter("destinations") List<String> destinations,
+        @OutputCustomType.Parameter("disable") @Nullable Boolean disable,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("sources") List<String> sources,
+        @OutputCustomType.Parameter("testConfigurations") List<String> testConfigurations) {
         this.destinations = destinations;
         this.disable = disable;
         this.name = name;

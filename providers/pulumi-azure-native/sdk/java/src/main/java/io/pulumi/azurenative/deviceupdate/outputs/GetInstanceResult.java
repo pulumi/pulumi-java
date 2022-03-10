@@ -73,19 +73,19 @@ public final class GetInstanceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"accountName","diagnosticStorageProperties","enableDiagnostics","id","iotHubs","location","name","provisioningState","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetInstanceResult(
-        String accountName,
-        @Nullable DiagnosticStoragePropertiesResponse diagnosticStorageProperties,
-        @Nullable Boolean enableDiagnostics,
-        String id,
-        @Nullable List<IotHubSettingsResponse> iotHubs,
-        String location,
-        String name,
-        String provisioningState,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("accountName") String accountName,
+        @OutputCustomType.Parameter("diagnosticStorageProperties") @Nullable DiagnosticStoragePropertiesResponse diagnosticStorageProperties,
+        @OutputCustomType.Parameter("enableDiagnostics") @Nullable Boolean enableDiagnostics,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("iotHubs") @Nullable List<IotHubSettingsResponse> iotHubs,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.accountName = accountName;
         this.diagnosticStorageProperties = diagnosticStorageProperties;
         this.enableDiagnostics = enableDiagnostics;

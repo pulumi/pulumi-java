@@ -16,8 +16,8 @@ public final class VideoTrackDescriptorResponse {
      */
     private final String odataType;
 
-    @OutputCustomType.Constructor({"odataType"})
-    private VideoTrackDescriptorResponse(String odataType) {
+    @OutputCustomType.Constructor
+    private VideoTrackDescriptorResponse(@OutputCustomType.Parameter("odataType") String odataType) {
         this.odataType = odataType;
     }
 

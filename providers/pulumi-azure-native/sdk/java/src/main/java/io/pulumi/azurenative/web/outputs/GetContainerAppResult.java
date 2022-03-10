@@ -75,20 +75,20 @@ public final class GetContainerAppResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"configuration","id","kind","kubeEnvironmentId","latestRevisionFqdn","latestRevisionName","location","name","provisioningState","tags","template","type"})
+    @OutputCustomType.Constructor
     private GetContainerAppResult(
-        @Nullable ConfigurationResponse configuration,
-        String id,
-        @Nullable String kind,
-        @Nullable String kubeEnvironmentId,
-        String latestRevisionFqdn,
-        String latestRevisionName,
-        String location,
-        String name,
-        String provisioningState,
-        @Nullable Map<String,String> tags,
-        @Nullable TemplateResponse template,
-        String type) {
+        @OutputCustomType.Parameter("configuration") @Nullable ConfigurationResponse configuration,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("kubeEnvironmentId") @Nullable String kubeEnvironmentId,
+        @OutputCustomType.Parameter("latestRevisionFqdn") String latestRevisionFqdn,
+        @OutputCustomType.Parameter("latestRevisionName") String latestRevisionName,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("template") @Nullable TemplateResponse template,
+        @OutputCustomType.Parameter("type") String type) {
         this.configuration = configuration;
         this.id = id;
         this.kind = kind;

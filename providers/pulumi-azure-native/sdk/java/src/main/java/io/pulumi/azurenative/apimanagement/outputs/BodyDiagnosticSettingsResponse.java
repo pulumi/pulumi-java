@@ -17,8 +17,8 @@ public final class BodyDiagnosticSettingsResponse {
      */
     private final @Nullable Integer bytes;
 
-    @OutputCustomType.Constructor({"bytes"})
-    private BodyDiagnosticSettingsResponse(@Nullable Integer bytes) {
+    @OutputCustomType.Constructor
+    private BodyDiagnosticSettingsResponse(@OutputCustomType.Parameter("bytes") @Nullable Integer bytes) {
         this.bytes = bytes;
     }
 

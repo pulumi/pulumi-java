@@ -27,11 +27,11 @@ public final class TimerTriggerResponse {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor({"name","schedule","status"})
+    @OutputCustomType.Constructor
     private TimerTriggerResponse(
-        String name,
-        String schedule,
-        @Nullable String status) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("schedule") String schedule,
+        @OutputCustomType.Parameter("status") @Nullable String status) {
         this.name = name;
         this.schedule = schedule;
         this.status = status;

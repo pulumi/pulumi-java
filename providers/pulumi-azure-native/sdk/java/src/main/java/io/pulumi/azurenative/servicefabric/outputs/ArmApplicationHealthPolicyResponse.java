@@ -39,12 +39,12 @@ public final class ArmApplicationHealthPolicyResponse {
      */
     private final @Nullable Map<String,ArmServiceTypeHealthPolicyResponse> serviceTypeHealthPolicyMap;
 
-    @OutputCustomType.Constructor({"considerWarningAsError","defaultServiceTypeHealthPolicy","maxPercentUnhealthyDeployedApplications","serviceTypeHealthPolicyMap"})
+    @OutputCustomType.Constructor
     private ArmApplicationHealthPolicyResponse(
-        @Nullable Boolean considerWarningAsError,
-        @Nullable ArmServiceTypeHealthPolicyResponse defaultServiceTypeHealthPolicy,
-        @Nullable Integer maxPercentUnhealthyDeployedApplications,
-        @Nullable Map<String,ArmServiceTypeHealthPolicyResponse> serviceTypeHealthPolicyMap) {
+        @OutputCustomType.Parameter("considerWarningAsError") @Nullable Boolean considerWarningAsError,
+        @OutputCustomType.Parameter("defaultServiceTypeHealthPolicy") @Nullable ArmServiceTypeHealthPolicyResponse defaultServiceTypeHealthPolicy,
+        @OutputCustomType.Parameter("maxPercentUnhealthyDeployedApplications") @Nullable Integer maxPercentUnhealthyDeployedApplications,
+        @OutputCustomType.Parameter("serviceTypeHealthPolicyMap") @Nullable Map<String,ArmServiceTypeHealthPolicyResponse> serviceTypeHealthPolicyMap) {
         this.considerWarningAsError = considerWarningAsError;
         this.defaultServiceTypeHealthPolicy = defaultServiceTypeHealthPolicy;
         this.maxPercentUnhealthyDeployedApplications = maxPercentUnhealthyDeployedApplications;

@@ -34,12 +34,12 @@ public final class VmGuestHealthAlertCriterionResponse {
      */
     private final String namespace;
 
-    @OutputCustomType.Constructor({"healthStates","monitorNames","monitorTypes","namespace"})
+    @OutputCustomType.Constructor
     private VmGuestHealthAlertCriterionResponse(
-        List<HealthStateResponse> healthStates,
-        @Nullable List<String> monitorNames,
-        @Nullable List<String> monitorTypes,
-        String namespace) {
+        @OutputCustomType.Parameter("healthStates") List<HealthStateResponse> healthStates,
+        @OutputCustomType.Parameter("monitorNames") @Nullable List<String> monitorNames,
+        @OutputCustomType.Parameter("monitorTypes") @Nullable List<String> monitorTypes,
+        @OutputCustomType.Parameter("namespace") String namespace) {
         this.healthStates = healthStates;
         this.monitorNames = monitorNames;
         this.monitorTypes = monitorTypes;

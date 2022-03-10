@@ -35,12 +35,12 @@ public final class ScaleRuleResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"azureQueue","custom","http","name"})
+    @OutputCustomType.Constructor
     private ScaleRuleResponse(
-        @Nullable QueueScaleRuleResponse azureQueue,
-        @Nullable CustomScaleRuleResponse custom,
-        @Nullable HttpScaleRuleResponse http,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("azureQueue") @Nullable QueueScaleRuleResponse azureQueue,
+        @OutputCustomType.Parameter("custom") @Nullable CustomScaleRuleResponse custom,
+        @OutputCustomType.Parameter("http") @Nullable HttpScaleRuleResponse http,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.azureQueue = azureQueue;
         this.custom = custom;
         this.http = http;

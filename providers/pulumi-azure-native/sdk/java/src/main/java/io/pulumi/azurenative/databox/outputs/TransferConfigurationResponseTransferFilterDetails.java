@@ -17,8 +17,8 @@ public final class TransferConfigurationResponseTransferFilterDetails {
      */
     private final @Nullable TransferFilterDetailsResponse include;
 
-    @OutputCustomType.Constructor({"include"})
-    private TransferConfigurationResponseTransferFilterDetails(@Nullable TransferFilterDetailsResponse include) {
+    @OutputCustomType.Constructor
+    private TransferConfigurationResponseTransferFilterDetails(@OutputCustomType.Parameter("include") @Nullable TransferFilterDetailsResponse include) {
         this.include = include;
     }
 

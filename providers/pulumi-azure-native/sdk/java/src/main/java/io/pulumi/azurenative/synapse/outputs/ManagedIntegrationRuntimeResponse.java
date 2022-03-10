@@ -40,13 +40,13 @@ public final class ManagedIntegrationRuntimeResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"computeProperties","description","ssisProperties","state","type"})
+    @OutputCustomType.Constructor
     private ManagedIntegrationRuntimeResponse(
-        @Nullable IntegrationRuntimeComputePropertiesResponse computeProperties,
-        @Nullable String description,
-        @Nullable IntegrationRuntimeSsisPropertiesResponse ssisProperties,
-        String state,
-        String type) {
+        @OutputCustomType.Parameter("computeProperties") @Nullable IntegrationRuntimeComputePropertiesResponse computeProperties,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("ssisProperties") @Nullable IntegrationRuntimeSsisPropertiesResponse ssisProperties,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("type") String type) {
         this.computeProperties = computeProperties;
         this.description = description;
         this.ssisProperties = ssisProperties;

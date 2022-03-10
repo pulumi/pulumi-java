@@ -62,17 +62,17 @@ public final class AzureStorageContainerResponse {
      */
     private final @Nullable String storageAccountVersion;
 
-    @OutputCustomType.Constructor({"backupManagementType","containerType","friendlyName","healthStatus","protectedItemCount","registrationStatus","resourceGroup","sourceResourceId","storageAccountVersion"})
+    @OutputCustomType.Constructor
     private AzureStorageContainerResponse(
-        @Nullable String backupManagementType,
-        String containerType,
-        @Nullable String friendlyName,
-        @Nullable String healthStatus,
-        @Nullable Double protectedItemCount,
-        @Nullable String registrationStatus,
-        @Nullable String resourceGroup,
-        @Nullable String sourceResourceId,
-        @Nullable String storageAccountVersion) {
+        @OutputCustomType.Parameter("backupManagementType") @Nullable String backupManagementType,
+        @OutputCustomType.Parameter("containerType") String containerType,
+        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @OutputCustomType.Parameter("healthStatus") @Nullable String healthStatus,
+        @OutputCustomType.Parameter("protectedItemCount") @Nullable Double protectedItemCount,
+        @OutputCustomType.Parameter("registrationStatus") @Nullable String registrationStatus,
+        @OutputCustomType.Parameter("resourceGroup") @Nullable String resourceGroup,
+        @OutputCustomType.Parameter("sourceResourceId") @Nullable String sourceResourceId,
+        @OutputCustomType.Parameter("storageAccountVersion") @Nullable String storageAccountVersion) {
         this.backupManagementType = backupManagementType;
         this.containerType = containerType;
         this.friendlyName = friendlyName;

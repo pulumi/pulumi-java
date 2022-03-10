@@ -28,11 +28,11 @@ public final class EndpointPropertiesResponseSubnets {
      */
     private final @Nullable Integer scope;
 
-    @OutputCustomType.Constructor({"first","last","scope"})
+    @OutputCustomType.Constructor
     private EndpointPropertiesResponseSubnets(
-        @Nullable String first,
-        @Nullable String last,
-        @Nullable Integer scope) {
+        @OutputCustomType.Parameter("first") @Nullable String first,
+        @OutputCustomType.Parameter("last") @Nullable String last,
+        @OutputCustomType.Parameter("scope") @Nullable Integer scope) {
         this.first = first;
         this.last = last;
         this.scope = scope;

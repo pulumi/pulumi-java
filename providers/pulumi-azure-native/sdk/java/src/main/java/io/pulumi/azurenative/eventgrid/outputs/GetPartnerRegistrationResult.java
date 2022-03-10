@@ -118,27 +118,27 @@ public final class GetPartnerRegistrationResult {
      */
     private final @Nullable String visibilityState;
 
-    @OutputCustomType.Constructor({"authorizedAzureSubscriptionIds","customerServiceUri","id","location","logoUri","longDescription","name","partnerCustomerServiceExtension","partnerCustomerServiceNumber","partnerName","partnerResourceTypeDescription","partnerResourceTypeDisplayName","partnerResourceTypeName","provisioningState","setupUri","systemData","tags","type","visibilityState"})
+    @OutputCustomType.Constructor
     private GetPartnerRegistrationResult(
-        @Nullable List<String> authorizedAzureSubscriptionIds,
-        @Nullable String customerServiceUri,
-        String id,
-        String location,
-        @Nullable String logoUri,
-        @Nullable String longDescription,
-        String name,
-        @Nullable String partnerCustomerServiceExtension,
-        @Nullable String partnerCustomerServiceNumber,
-        @Nullable String partnerName,
-        @Nullable String partnerResourceTypeDescription,
-        @Nullable String partnerResourceTypeDisplayName,
-        @Nullable String partnerResourceTypeName,
-        String provisioningState,
-        @Nullable String setupUri,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable String visibilityState) {
+        @OutputCustomType.Parameter("authorizedAzureSubscriptionIds") @Nullable List<String> authorizedAzureSubscriptionIds,
+        @OutputCustomType.Parameter("customerServiceUri") @Nullable String customerServiceUri,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("logoUri") @Nullable String logoUri,
+        @OutputCustomType.Parameter("longDescription") @Nullable String longDescription,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("partnerCustomerServiceExtension") @Nullable String partnerCustomerServiceExtension,
+        @OutputCustomType.Parameter("partnerCustomerServiceNumber") @Nullable String partnerCustomerServiceNumber,
+        @OutputCustomType.Parameter("partnerName") @Nullable String partnerName,
+        @OutputCustomType.Parameter("partnerResourceTypeDescription") @Nullable String partnerResourceTypeDescription,
+        @OutputCustomType.Parameter("partnerResourceTypeDisplayName") @Nullable String partnerResourceTypeDisplayName,
+        @OutputCustomType.Parameter("partnerResourceTypeName") @Nullable String partnerResourceTypeName,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("setupUri") @Nullable String setupUri,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("visibilityState") @Nullable String visibilityState) {
         this.authorizedAzureSubscriptionIds = authorizedAzureSubscriptionIds;
         this.customerServiceUri = customerServiceUri;
         this.id = id;

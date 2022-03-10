@@ -77,20 +77,20 @@ public final class GetContactProfileResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"autoTrackingConfiguration","etag","eventHubUri","id","links","location","minimumElevationDegrees","minimumViableContactDuration","name","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetContactProfileResult(
-        @Nullable String autoTrackingConfiguration,
-        String etag,
-        @Nullable String eventHubUri,
-        String id,
-        List<ContactProfileLinkResponse> links,
-        String location,
-        @Nullable Double minimumElevationDegrees,
-        @Nullable String minimumViableContactDuration,
-        String name,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("autoTrackingConfiguration") @Nullable String autoTrackingConfiguration,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("eventHubUri") @Nullable String eventHubUri,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("links") List<ContactProfileLinkResponse> links,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("minimumElevationDegrees") @Nullable Double minimumElevationDegrees,
+        @OutputCustomType.Parameter("minimumViableContactDuration") @Nullable String minimumViableContactDuration,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.autoTrackingConfiguration = autoTrackingConfiguration;
         this.etag = etag;
         this.eventHubUri = eventHubUri;

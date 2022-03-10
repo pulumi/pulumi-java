@@ -23,10 +23,10 @@ public final class DiskPoolVolumeResponse {
      */
     private final @Nullable String lunName;
 
-    @OutputCustomType.Constructor({"endpoints","lunName"})
+    @OutputCustomType.Constructor
     private DiskPoolVolumeResponse(
-        @Nullable List<String> endpoints,
-        @Nullable String lunName) {
+        @OutputCustomType.Parameter("endpoints") @Nullable List<String> endpoints,
+        @OutputCustomType.Parameter("lunName") @Nullable String lunName) {
         this.endpoints = endpoints;
         this.lunName = lunName;
     }

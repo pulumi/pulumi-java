@@ -28,11 +28,11 @@ public final class CsvSerializationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"encoding","fieldDelimiter","type"})
+    @OutputCustomType.Constructor
     private CsvSerializationResponse(
-        @Nullable String encoding,
-        @Nullable String fieldDelimiter,
-        String type) {
+        @OutputCustomType.Parameter("encoding") @Nullable String encoding,
+        @OutputCustomType.Parameter("fieldDelimiter") @Nullable String fieldDelimiter,
+        @OutputCustomType.Parameter("type") String type) {
         this.encoding = encoding;
         this.fieldDelimiter = fieldDelimiter;
         this.type = type;

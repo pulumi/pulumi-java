@@ -17,8 +17,8 @@ public final class IpAddressResponse {
      */
     private final @Nullable String ipAddress;
 
-    @OutputCustomType.Constructor({"ipAddress"})
-    private IpAddressResponse(@Nullable String ipAddress) {
+    @OutputCustomType.Constructor
+    private IpAddressResponse(@OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress) {
         this.ipAddress = ipAddress;
     }
 

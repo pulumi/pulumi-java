@@ -23,10 +23,10 @@ public final class MongoIndexOptionsResponse {
      */
     private final @Nullable Boolean unique;
 
-    @OutputCustomType.Constructor({"expireAfterSeconds","unique"})
+    @OutputCustomType.Constructor
     private MongoIndexOptionsResponse(
-        @Nullable Integer expireAfterSeconds,
-        @Nullable Boolean unique) {
+        @OutputCustomType.Parameter("expireAfterSeconds") @Nullable Integer expireAfterSeconds,
+        @OutputCustomType.Parameter("unique") @Nullable Boolean unique) {
         this.expireAfterSeconds = expireAfterSeconds;
         this.unique = unique;
     }

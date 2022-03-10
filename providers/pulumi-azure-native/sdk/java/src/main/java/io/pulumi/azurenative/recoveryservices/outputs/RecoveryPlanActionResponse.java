@@ -35,12 +35,12 @@ public final class RecoveryPlanActionResponse {
      */
     private final List<String> failoverTypes;
 
-    @OutputCustomType.Constructor({"actionName","customDetails","failoverDirections","failoverTypes"})
+    @OutputCustomType.Constructor
     private RecoveryPlanActionResponse(
-        String actionName,
-        Object customDetails,
-        List<String> failoverDirections,
-        List<String> failoverTypes) {
+        @OutputCustomType.Parameter("actionName") String actionName,
+        @OutputCustomType.Parameter("customDetails") Object customDetails,
+        @OutputCustomType.Parameter("failoverDirections") List<String> failoverDirections,
+        @OutputCustomType.Parameter("failoverTypes") List<String> failoverTypes) {
         this.actionName = actionName;
         this.customDetails = customDetails;
         this.failoverDirections = failoverDirections;

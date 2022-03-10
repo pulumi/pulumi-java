@@ -57,16 +57,16 @@ public final class SsisProjectResponse {
      */
     private final @Nullable Double version;
 
-    @OutputCustomType.Constructor({"description","environmentRefs","folderId","id","name","parameters","type","version"})
+    @OutputCustomType.Constructor
     private SsisProjectResponse(
-        @Nullable String description,
-        @Nullable List<SsisEnvironmentReferenceResponse> environmentRefs,
-        @Nullable Double folderId,
-        @Nullable Double id,
-        @Nullable String name,
-        @Nullable List<SsisParameterResponse> parameters,
-        String type,
-        @Nullable Double version) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("environmentRefs") @Nullable List<SsisEnvironmentReferenceResponse> environmentRefs,
+        @OutputCustomType.Parameter("folderId") @Nullable Double folderId,
+        @OutputCustomType.Parameter("id") @Nullable Double id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("parameters") @Nullable List<SsisParameterResponse> parameters,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("version") @Nullable Double version) {
         this.description = description;
         this.environmentRefs = environmentRefs;
         this.folderId = folderId;

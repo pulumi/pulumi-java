@@ -22,10 +22,10 @@ public final class DeliveryRuleQueryStringConditionResponse {
      */
     private final QueryStringMatchConditionParametersResponse parameters;
 
-    @OutputCustomType.Constructor({"name","parameters"})
+    @OutputCustomType.Constructor
     private DeliveryRuleQueryStringConditionResponse(
-        String name,
-        QueryStringMatchConditionParametersResponse parameters) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") QueryStringMatchConditionParametersResponse parameters) {
         this.name = name;
         this.parameters = parameters;
     }

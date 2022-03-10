@@ -107,26 +107,26 @@ public final class GetDefaultAdminRuleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"access","description","destinationPortRanges","destinations","direction","displayName","etag","flag","id","kind","name","priority","protocol","provisioningState","sourcePortRanges","sources","systemData","type"})
+    @OutputCustomType.Constructor
     private GetDefaultAdminRuleResult(
-        String access,
-        String description,
-        List<String> destinationPortRanges,
-        List<AddressPrefixItemResponse> destinations,
-        String direction,
-        String displayName,
-        String etag,
-        @Nullable String flag,
-        String id,
-        String kind,
-        String name,
-        Integer priority,
-        String protocol,
-        String provisioningState,
-        List<String> sourcePortRanges,
-        List<AddressPrefixItemResponse> sources,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("access") String access,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("destinationPortRanges") List<String> destinationPortRanges,
+        @OutputCustomType.Parameter("destinations") List<AddressPrefixItemResponse> destinations,
+        @OutputCustomType.Parameter("direction") String direction,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("flag") @Nullable String flag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("protocol") String protocol,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("sourcePortRanges") List<String> sourcePortRanges,
+        @OutputCustomType.Parameter("sources") List<AddressPrefixItemResponse> sources,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.access = access;
         this.description = description;
         this.destinationPortRanges = destinationPortRanges;

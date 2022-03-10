@@ -132,30 +132,30 @@ public final class GetDomainServiceResult {
      */
     private final Integer version;
 
-    @OutputCustomType.Constructor({"deploymentId","domainConfigurationType","domainName","domainSecuritySettings","etag","filteredSync","id","ldapsSettings","location","migrationProperties","name","notificationSettings","provisioningState","replicaSets","resourceForestSettings","sku","syncOwner","systemData","tags","tenantId","type","version"})
+    @OutputCustomType.Constructor
     private GetDomainServiceResult(
-        String deploymentId,
-        @Nullable String domainConfigurationType,
-        @Nullable String domainName,
-        @Nullable DomainSecuritySettingsResponse domainSecuritySettings,
-        @Nullable String etag,
-        @Nullable String filteredSync,
-        String id,
-        @Nullable LdapsSettingsResponse ldapsSettings,
-        @Nullable String location,
-        MigrationPropertiesResponse migrationProperties,
-        String name,
-        @Nullable NotificationSettingsResponse notificationSettings,
-        String provisioningState,
-        @Nullable List<ReplicaSetResponse> replicaSets,
-        @Nullable ResourceForestSettingsResponse resourceForestSettings,
-        @Nullable String sku,
-        String syncOwner,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String tenantId,
-        String type,
-        Integer version) {
+        @OutputCustomType.Parameter("deploymentId") String deploymentId,
+        @OutputCustomType.Parameter("domainConfigurationType") @Nullable String domainConfigurationType,
+        @OutputCustomType.Parameter("domainName") @Nullable String domainName,
+        @OutputCustomType.Parameter("domainSecuritySettings") @Nullable DomainSecuritySettingsResponse domainSecuritySettings,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("filteredSync") @Nullable String filteredSync,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ldapsSettings") @Nullable LdapsSettingsResponse ldapsSettings,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("migrationProperties") MigrationPropertiesResponse migrationProperties,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("notificationSettings") @Nullable NotificationSettingsResponse notificationSettings,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("replicaSets") @Nullable List<ReplicaSetResponse> replicaSets,
+        @OutputCustomType.Parameter("resourceForestSettings") @Nullable ResourceForestSettingsResponse resourceForestSettings,
+        @OutputCustomType.Parameter("sku") @Nullable String sku,
+        @OutputCustomType.Parameter("syncOwner") String syncOwner,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("tenantId") String tenantId,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("version") Integer version) {
         this.deploymentId = deploymentId;
         this.domainConfigurationType = domainConfigurationType;
         this.domainName = domainName;

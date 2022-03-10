@@ -28,11 +28,11 @@ public final class AzureSkuResponse {
      */
     private final String tier;
 
-    @OutputCustomType.Constructor({"capacity","name","tier"})
+    @OutputCustomType.Constructor
     private AzureSkuResponse(
-        @Nullable Integer capacity,
-        String name,
-        String tier) {
+        @OutputCustomType.Parameter("capacity") @Nullable Integer capacity,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("tier") String tier) {
         this.capacity = capacity;
         this.name = name;
         this.tier = tier;

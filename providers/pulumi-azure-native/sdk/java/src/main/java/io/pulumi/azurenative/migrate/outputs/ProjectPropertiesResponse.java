@@ -90,23 +90,23 @@ public final class ProjectPropertiesResponse {
      */
     private final String updatedTimestamp;
 
-    @OutputCustomType.Constructor({"assessmentSolutionId","createdTimestamp","customerStorageAccountArmId","customerWorkspaceId","customerWorkspaceLocation","lastAssessmentTimestamp","numberOfAssessments","numberOfGroups","numberOfMachines","privateEndpointConnections","projectStatus","provisioningState","publicNetworkAccess","serviceEndpoint","updatedTimestamp"})
+    @OutputCustomType.Constructor
     private ProjectPropertiesResponse(
-        @Nullable String assessmentSolutionId,
-        String createdTimestamp,
-        @Nullable String customerStorageAccountArmId,
-        @Nullable String customerWorkspaceId,
-        @Nullable String customerWorkspaceLocation,
-        String lastAssessmentTimestamp,
-        Integer numberOfAssessments,
-        Integer numberOfGroups,
-        Integer numberOfMachines,
-        List<PrivateEndpointConnectionResponse> privateEndpointConnections,
-        @Nullable String projectStatus,
-        String provisioningState,
-        @Nullable String publicNetworkAccess,
-        String serviceEndpoint,
-        String updatedTimestamp) {
+        @OutputCustomType.Parameter("assessmentSolutionId") @Nullable String assessmentSolutionId,
+        @OutputCustomType.Parameter("createdTimestamp") String createdTimestamp,
+        @OutputCustomType.Parameter("customerStorageAccountArmId") @Nullable String customerStorageAccountArmId,
+        @OutputCustomType.Parameter("customerWorkspaceId") @Nullable String customerWorkspaceId,
+        @OutputCustomType.Parameter("customerWorkspaceLocation") @Nullable String customerWorkspaceLocation,
+        @OutputCustomType.Parameter("lastAssessmentTimestamp") String lastAssessmentTimestamp,
+        @OutputCustomType.Parameter("numberOfAssessments") Integer numberOfAssessments,
+        @OutputCustomType.Parameter("numberOfGroups") Integer numberOfGroups,
+        @OutputCustomType.Parameter("numberOfMachines") Integer numberOfMachines,
+        @OutputCustomType.Parameter("privateEndpointConnections") List<PrivateEndpointConnectionResponse> privateEndpointConnections,
+        @OutputCustomType.Parameter("projectStatus") @Nullable String projectStatus,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess,
+        @OutputCustomType.Parameter("serviceEndpoint") String serviceEndpoint,
+        @OutputCustomType.Parameter("updatedTimestamp") String updatedTimestamp) {
         this.assessmentSolutionId = assessmentSolutionId;
         this.createdTimestamp = createdTimestamp;
         this.customerStorageAccountArmId = customerStorageAccountArmId;

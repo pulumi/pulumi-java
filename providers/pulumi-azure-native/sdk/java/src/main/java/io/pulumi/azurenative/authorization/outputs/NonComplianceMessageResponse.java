@@ -22,10 +22,10 @@ public final class NonComplianceMessageResponse {
      */
     private final @Nullable String policyDefinitionReferenceId;
 
-    @OutputCustomType.Constructor({"message","policyDefinitionReferenceId"})
+    @OutputCustomType.Constructor
     private NonComplianceMessageResponse(
-        String message,
-        @Nullable String policyDefinitionReferenceId) {
+        @OutputCustomType.Parameter("message") String message,
+        @OutputCustomType.Parameter("policyDefinitionReferenceId") @Nullable String policyDefinitionReferenceId) {
         this.message = message;
         this.policyDefinitionReferenceId = policyDefinitionReferenceId;
     }

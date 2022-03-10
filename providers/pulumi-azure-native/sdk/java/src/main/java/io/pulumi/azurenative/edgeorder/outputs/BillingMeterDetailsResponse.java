@@ -33,12 +33,12 @@ public final class BillingMeterDetailsResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"frequency","meterDetails","meteringType","name"})
+    @OutputCustomType.Constructor
     private BillingMeterDetailsResponse(
-        String frequency,
-        Either<Pav2MeterDetailsResponse,PurchaseMeterDetailsResponse> meterDetails,
-        String meteringType,
-        String name) {
+        @OutputCustomType.Parameter("frequency") String frequency,
+        @OutputCustomType.Parameter("meterDetails") Either<Pav2MeterDetailsResponse,PurchaseMeterDetailsResponse> meterDetails,
+        @OutputCustomType.Parameter("meteringType") String meteringType,
+        @OutputCustomType.Parameter("name") String name) {
         this.frequency = frequency;
         this.meterDetails = meterDetails;
         this.meteringType = meteringType;

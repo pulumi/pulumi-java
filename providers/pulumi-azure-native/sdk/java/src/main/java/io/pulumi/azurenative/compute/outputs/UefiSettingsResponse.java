@@ -22,10 +22,10 @@ public final class UefiSettingsResponse {
      */
     private final @Nullable Boolean vTpmEnabled;
 
-    @OutputCustomType.Constructor({"secureBootEnabled","vTpmEnabled"})
+    @OutputCustomType.Constructor
     private UefiSettingsResponse(
-        @Nullable Boolean secureBootEnabled,
-        @Nullable Boolean vTpmEnabled) {
+        @OutputCustomType.Parameter("secureBootEnabled") @Nullable Boolean secureBootEnabled,
+        @OutputCustomType.Parameter("vTpmEnabled") @Nullable Boolean vTpmEnabled) {
         this.secureBootEnabled = secureBootEnabled;
         this.vTpmEnabled = vTpmEnabled;
     }

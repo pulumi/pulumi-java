@@ -48,15 +48,15 @@ public final class GetVirtualApplianceSiteResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"addressPrefix","etag","id","name","o365Policy","provisioningState","type"})
+    @OutputCustomType.Constructor
     private GetVirtualApplianceSiteResult(
-        @Nullable String addressPrefix,
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable Office365PolicyPropertiesResponse o365Policy,
-        String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("addressPrefix") @Nullable String addressPrefix,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("o365Policy") @Nullable Office365PolicyPropertiesResponse o365Policy,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.addressPrefix = addressPrefix;
         this.etag = etag;
         this.id = id;

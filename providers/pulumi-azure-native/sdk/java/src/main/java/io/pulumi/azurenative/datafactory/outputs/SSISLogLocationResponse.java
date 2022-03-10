@@ -34,12 +34,12 @@ public final class SSISLogLocationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"accessCredential","logPath","logRefreshInterval","type"})
+    @OutputCustomType.Constructor
     private SSISLogLocationResponse(
-        @Nullable SSISAccessCredentialResponse accessCredential,
-        Object logPath,
-        @Nullable Object logRefreshInterval,
-        String type) {
+        @OutputCustomType.Parameter("accessCredential") @Nullable SSISAccessCredentialResponse accessCredential,
+        @OutputCustomType.Parameter("logPath") Object logPath,
+        @OutputCustomType.Parameter("logRefreshInterval") @Nullable Object logRefreshInterval,
+        @OutputCustomType.Parameter("type") String type) {
         this.accessCredential = accessCredential;
         this.logPath = logPath;
         this.logRefreshInterval = logRefreshInterval;

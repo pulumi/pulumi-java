@@ -56,16 +56,16 @@ public final class GetIntegrationServiceEnvironmentResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","identity","location","name","properties","sku","tags","type"})
+    @OutputCustomType.Constructor
     private GetIntegrationServiceEnvironmentResult(
-        String id,
-        @Nullable ManagedServiceIdentityResponse identity,
-        @Nullable String location,
-        String name,
-        IntegrationServiceEnvironmentPropertiesResponse properties,
-        @Nullable IntegrationServiceEnvironmentSkuResponse sku,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable ManagedServiceIdentityResponse identity,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") IntegrationServiceEnvironmentPropertiesResponse properties,
+        @OutputCustomType.Parameter("sku") @Nullable IntegrationServiceEnvironmentSkuResponse sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.identity = identity;
         this.location = location;

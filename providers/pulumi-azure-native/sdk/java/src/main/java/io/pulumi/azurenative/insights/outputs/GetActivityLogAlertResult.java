@@ -67,18 +67,18 @@ public final class GetActivityLogAlertResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"actions","condition","description","enabled","id","location","name","scopes","tags","type"})
+    @OutputCustomType.Constructor
     private GetActivityLogAlertResult(
-        ActionListResponse actions,
-        AlertRuleAllOfConditionResponse condition,
-        @Nullable String description,
-        @Nullable Boolean enabled,
-        String id,
-        @Nullable String location,
-        String name,
-        List<String> scopes,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("actions") ActionListResponse actions,
+        @OutputCustomType.Parameter("condition") AlertRuleAllOfConditionResponse condition,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("scopes") List<String> scopes,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.actions = actions;
         this.condition = condition;
         this.description = description;

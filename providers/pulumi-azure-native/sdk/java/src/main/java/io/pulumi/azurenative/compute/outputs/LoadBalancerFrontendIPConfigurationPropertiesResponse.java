@@ -28,11 +28,11 @@ public final class LoadBalancerFrontendIPConfigurationPropertiesResponse {
      */
     private final @Nullable SubResourceResponse subnet;
 
-    @OutputCustomType.Constructor({"privateIPAddress","publicIPAddress","subnet"})
+    @OutputCustomType.Constructor
     private LoadBalancerFrontendIPConfigurationPropertiesResponse(
-        @Nullable String privateIPAddress,
-        @Nullable SubResourceResponse publicIPAddress,
-        @Nullable SubResourceResponse subnet) {
+        @OutputCustomType.Parameter("privateIPAddress") @Nullable String privateIPAddress,
+        @OutputCustomType.Parameter("publicIPAddress") @Nullable SubResourceResponse publicIPAddress,
+        @OutputCustomType.Parameter("subnet") @Nullable SubResourceResponse subnet) {
         this.privateIPAddress = privateIPAddress;
         this.publicIPAddress = publicIPAddress;
         this.subnet = subnet;

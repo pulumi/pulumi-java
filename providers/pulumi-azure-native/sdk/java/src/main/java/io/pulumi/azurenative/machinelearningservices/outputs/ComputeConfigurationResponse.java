@@ -45,14 +45,14 @@ public final class ComputeConfigurationResponse {
      */
     private final @Nullable String target;
 
-    @OutputCustomType.Constructor({"instanceCount","instanceType","isLocal","location","properties","target"})
+    @OutputCustomType.Constructor
     private ComputeConfigurationResponse(
-        @Nullable Integer instanceCount,
-        @Nullable String instanceType,
-        @Nullable Boolean isLocal,
-        @Nullable String location,
-        @Nullable Map<String,String> properties,
-        @Nullable String target) {
+        @OutputCustomType.Parameter("instanceCount") @Nullable Integer instanceCount,
+        @OutputCustomType.Parameter("instanceType") @Nullable String instanceType,
+        @OutputCustomType.Parameter("isLocal") @Nullable Boolean isLocal,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @OutputCustomType.Parameter("target") @Nullable String target) {
         this.instanceCount = instanceCount;
         this.instanceType = instanceType;
         this.isLocal = isLocal;

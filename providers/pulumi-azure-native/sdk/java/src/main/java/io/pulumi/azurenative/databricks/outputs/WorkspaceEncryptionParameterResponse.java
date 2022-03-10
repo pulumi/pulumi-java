@@ -23,10 +23,10 @@ public final class WorkspaceEncryptionParameterResponse {
      */
     private final @Nullable EncryptionResponse value;
 
-    @OutputCustomType.Constructor({"type","value"})
+    @OutputCustomType.Constructor
     private WorkspaceEncryptionParameterResponse(
-        String type,
-        @Nullable EncryptionResponse value) {
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("value") @Nullable EncryptionResponse value) {
         this.type = type;
         this.value = value;
     }

@@ -37,13 +37,13 @@ public final class GetDatabaseResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","kind","location","name","type"})
+    @OutputCustomType.Constructor
     private GetDatabaseResult(
-        String id,
-        String kind,
-        @Nullable String location,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.kind = kind;
         this.location = location;

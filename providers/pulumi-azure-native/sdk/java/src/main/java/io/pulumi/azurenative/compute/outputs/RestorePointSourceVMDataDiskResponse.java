@@ -45,14 +45,14 @@ public final class RestorePointSourceVMDataDiskResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"caching","diskRestorePoint","diskSizeGB","lun","managedDisk","name"})
+    @OutputCustomType.Constructor
     private RestorePointSourceVMDataDiskResponse(
-        @Nullable String caching,
-        @Nullable ApiEntityReferenceResponse diskRestorePoint,
-        @Nullable Integer diskSizeGB,
-        @Nullable Integer lun,
-        @Nullable ManagedDiskParametersResponse managedDisk,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("caching") @Nullable String caching,
+        @OutputCustomType.Parameter("diskRestorePoint") @Nullable ApiEntityReferenceResponse diskRestorePoint,
+        @OutputCustomType.Parameter("diskSizeGB") @Nullable Integer diskSizeGB,
+        @OutputCustomType.Parameter("lun") @Nullable Integer lun,
+        @OutputCustomType.Parameter("managedDisk") @Nullable ManagedDiskParametersResponse managedDisk,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.caching = caching;
         this.diskRestorePoint = diskRestorePoint;
         this.diskSizeGB = diskSizeGB;

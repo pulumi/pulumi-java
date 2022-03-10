@@ -279,32 +279,32 @@ public final class CopyActivityResponse {
      */
     private final @Nullable Object validateDataConsistency;
 
-    @OutputCustomType.Constructor({"dataIntegrationUnits","dependsOn","description","enableSkipIncompatibleRow","enableStaging","inputs","linkedServiceName","logSettings","logStorageSettings","name","outputs","parallelCopies","policy","preserve","preserveRules","redirectIncompatibleRowSettings","sink","skipErrorFile","source","stagingSettings","translator","type","userProperties","validateDataConsistency"})
+    @OutputCustomType.Constructor
     private CopyActivityResponse(
-        @Nullable Object dataIntegrationUnits,
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        @Nullable Object enableSkipIncompatibleRow,
-        @Nullable Object enableStaging,
-        @Nullable List<DatasetReferenceResponse> inputs,
-        @Nullable LinkedServiceReferenceResponse linkedServiceName,
-        @Nullable LogSettingsResponse logSettings,
-        @Nullable LogStorageSettingsResponse logStorageSettings,
-        String name,
-        @Nullable List<DatasetReferenceResponse> outputs,
-        @Nullable Object parallelCopies,
-        @Nullable ActivityPolicyResponse policy,
-        @Nullable List<Object> preserve,
-        @Nullable List<Object> preserveRules,
-        @Nullable RedirectIncompatibleRowSettingsResponse redirectIncompatibleRowSettings,
-        Object sink,
-        @Nullable SkipErrorFileResponse skipErrorFile,
-        Object source,
-        @Nullable StagingSettingsResponse stagingSettings,
-        @Nullable Object translator,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties,
-        @Nullable Object validateDataConsistency) {
+        @OutputCustomType.Parameter("dataIntegrationUnits") @Nullable Object dataIntegrationUnits,
+        @OutputCustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("enableSkipIncompatibleRow") @Nullable Object enableSkipIncompatibleRow,
+        @OutputCustomType.Parameter("enableStaging") @Nullable Object enableStaging,
+        @OutputCustomType.Parameter("inputs") @Nullable List<DatasetReferenceResponse> inputs,
+        @OutputCustomType.Parameter("linkedServiceName") @Nullable LinkedServiceReferenceResponse linkedServiceName,
+        @OutputCustomType.Parameter("logSettings") @Nullable LogSettingsResponse logSettings,
+        @OutputCustomType.Parameter("logStorageSettings") @Nullable LogStorageSettingsResponse logStorageSettings,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("outputs") @Nullable List<DatasetReferenceResponse> outputs,
+        @OutputCustomType.Parameter("parallelCopies") @Nullable Object parallelCopies,
+        @OutputCustomType.Parameter("policy") @Nullable ActivityPolicyResponse policy,
+        @OutputCustomType.Parameter("preserve") @Nullable List<Object> preserve,
+        @OutputCustomType.Parameter("preserveRules") @Nullable List<Object> preserveRules,
+        @OutputCustomType.Parameter("redirectIncompatibleRowSettings") @Nullable RedirectIncompatibleRowSettingsResponse redirectIncompatibleRowSettings,
+        @OutputCustomType.Parameter("sink") Object sink,
+        @OutputCustomType.Parameter("skipErrorFile") @Nullable SkipErrorFileResponse skipErrorFile,
+        @OutputCustomType.Parameter("source") Object source,
+        @OutputCustomType.Parameter("stagingSettings") @Nullable StagingSettingsResponse stagingSettings,
+        @OutputCustomType.Parameter("translator") @Nullable Object translator,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties,
+        @OutputCustomType.Parameter("validateDataConsistency") @Nullable Object validateDataConsistency) {
         this.dataIntegrationUnits = dataIntegrationUnits;
         this.dependsOn = dependsOn;
         this.description = description;

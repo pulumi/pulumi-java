@@ -17,8 +17,8 @@ public final class AddressSpaceResponse {
      */
     private final @Nullable List<String> addressPrefixes;
 
-    @OutputCustomType.Constructor({"addressPrefixes"})
-    private AddressSpaceResponse(@Nullable List<String> addressPrefixes) {
+    @OutputCustomType.Constructor
+    private AddressSpaceResponse(@OutputCustomType.Parameter("addressPrefixes") @Nullable List<String> addressPrefixes) {
         this.addressPrefixes = addressPrefixes;
     }
 

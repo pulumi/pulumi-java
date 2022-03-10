@@ -32,11 +32,11 @@ public final class AzureSqlProtectionPolicyResponse {
      */
     private final @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy;
 
-    @OutputCustomType.Constructor({"backupManagementType","protectedItemsCount","retentionPolicy"})
+    @OutputCustomType.Constructor
     private AzureSqlProtectionPolicyResponse(
-        String backupManagementType,
-        @Nullable Integer protectedItemsCount,
-        @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy) {
+        @OutputCustomType.Parameter("backupManagementType") String backupManagementType,
+        @OutputCustomType.Parameter("protectedItemsCount") @Nullable Integer protectedItemsCount,
+        @OutputCustomType.Parameter("retentionPolicy") @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy) {
         this.backupManagementType = backupManagementType;
         this.protectedItemsCount = protectedItemsCount;
         this.retentionPolicy = retentionPolicy;

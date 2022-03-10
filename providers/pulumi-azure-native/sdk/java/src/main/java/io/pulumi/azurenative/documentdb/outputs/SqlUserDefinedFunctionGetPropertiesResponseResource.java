@@ -38,13 +38,13 @@ public final class SqlUserDefinedFunctionGetPropertiesResponseResource {
      */
     private final Double ts;
 
-    @OutputCustomType.Constructor({"body","etag","id","rid","ts"})
+    @OutputCustomType.Constructor
     private SqlUserDefinedFunctionGetPropertiesResponseResource(
-        @Nullable String body,
-        String etag,
-        String id,
-        String rid,
-        Double ts) {
+        @OutputCustomType.Parameter("body") @Nullable String body,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("rid") String rid,
+        @OutputCustomType.Parameter("ts") Double ts) {
         this.body = body;
         this.etag = etag;
         this.id = id;

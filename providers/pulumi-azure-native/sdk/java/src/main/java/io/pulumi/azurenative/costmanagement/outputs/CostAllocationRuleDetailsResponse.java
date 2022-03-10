@@ -23,10 +23,10 @@ public final class CostAllocationRuleDetailsResponse {
      */
     private final @Nullable List<TargetCostAllocationResourceResponse> targetResources;
 
-    @OutputCustomType.Constructor({"sourceResources","targetResources"})
+    @OutputCustomType.Constructor
     private CostAllocationRuleDetailsResponse(
-        @Nullable List<SourceCostAllocationResourceResponse> sourceResources,
-        @Nullable List<TargetCostAllocationResourceResponse> targetResources) {
+        @OutputCustomType.Parameter("sourceResources") @Nullable List<SourceCostAllocationResourceResponse> sourceResources,
+        @OutputCustomType.Parameter("targetResources") @Nullable List<TargetCostAllocationResourceResponse> targetResources) {
         this.sourceResources = sourceResources;
         this.targetResources = targetResources;
     }

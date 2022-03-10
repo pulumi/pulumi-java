@@ -28,11 +28,11 @@ public final class TransferAllDetailsResponse {
      */
     private final @Nullable Boolean transferAllFiles;
 
-    @OutputCustomType.Constructor({"dataAccountType","transferAllBlobs","transferAllFiles"})
+    @OutputCustomType.Constructor
     private TransferAllDetailsResponse(
-        String dataAccountType,
-        @Nullable Boolean transferAllBlobs,
-        @Nullable Boolean transferAllFiles) {
+        @OutputCustomType.Parameter("dataAccountType") String dataAccountType,
+        @OutputCustomType.Parameter("transferAllBlobs") @Nullable Boolean transferAllBlobs,
+        @OutputCustomType.Parameter("transferAllFiles") @Nullable Boolean transferAllFiles) {
         this.dataAccountType = dataAccountType;
         this.transferAllBlobs = transferAllBlobs;
         this.transferAllFiles = transferAllFiles;

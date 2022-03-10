@@ -31,12 +31,12 @@ public final class GetManagedInstanceAzureADOnlyAuthenticationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"azureADOnlyAuthentication","id","name","type"})
+    @OutputCustomType.Constructor
     private GetManagedInstanceAzureADOnlyAuthenticationResult(
-        Boolean azureADOnlyAuthentication,
-        String id,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("azureADOnlyAuthentication") Boolean azureADOnlyAuthentication,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.azureADOnlyAuthentication = azureADOnlyAuthentication;
         this.id = id;
         this.name = name;

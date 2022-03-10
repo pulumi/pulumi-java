@@ -17,8 +17,8 @@ public final class DedicatedHostAvailableCapacityResponse {
      */
     private final @Nullable List<DedicatedHostAllocatableVMResponse> allocatableVMs;
 
-    @OutputCustomType.Constructor({"allocatableVMs"})
-    private DedicatedHostAvailableCapacityResponse(@Nullable List<DedicatedHostAllocatableVMResponse> allocatableVMs) {
+    @OutputCustomType.Constructor
+    private DedicatedHostAvailableCapacityResponse(@OutputCustomType.Parameter("allocatableVMs") @Nullable List<DedicatedHostAllocatableVMResponse> allocatableVMs) {
         this.allocatableVMs = allocatableVMs;
     }
 

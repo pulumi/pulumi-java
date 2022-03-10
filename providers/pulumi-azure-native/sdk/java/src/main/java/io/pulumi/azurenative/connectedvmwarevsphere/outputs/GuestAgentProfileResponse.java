@@ -37,13 +37,13 @@ public final class GuestAgentProfileResponse {
      */
     private final String vmUuid;
 
-    @OutputCustomType.Constructor({"agentVersion","errorDetails","lastStatusChange","status","vmUuid"})
+    @OutputCustomType.Constructor
     private GuestAgentProfileResponse(
-        String agentVersion,
-        List<ErrorDetailResponse> errorDetails,
-        String lastStatusChange,
-        String status,
-        String vmUuid) {
+        @OutputCustomType.Parameter("agentVersion") String agentVersion,
+        @OutputCustomType.Parameter("errorDetails") List<ErrorDetailResponse> errorDetails,
+        @OutputCustomType.Parameter("lastStatusChange") String lastStatusChange,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("vmUuid") String vmUuid) {
         this.agentVersion = agentVersion;
         this.errorDetails = errorDetails;
         this.lastStatusChange = lastStatusChange;

@@ -20,10 +20,10 @@ public final class ComputeInstanceConnectivityEndpointsResponse {
      */
     private final String publicIpAddress;
 
-    @OutputCustomType.Constructor({"privateIpAddress","publicIpAddress"})
+    @OutputCustomType.Constructor
     private ComputeInstanceConnectivityEndpointsResponse(
-        String privateIpAddress,
-        String publicIpAddress) {
+        @OutputCustomType.Parameter("privateIpAddress") String privateIpAddress,
+        @OutputCustomType.Parameter("publicIpAddress") String publicIpAddress) {
         this.privateIpAddress = privateIpAddress;
         this.publicIpAddress = publicIpAddress;
     }

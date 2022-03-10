@@ -34,12 +34,12 @@ public final class StaticDeliveryAttributeMappingResponse {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"isSecret","name","type","value"})
+    @OutputCustomType.Constructor
     private StaticDeliveryAttributeMappingResponse(
-        @Nullable Boolean isSecret,
-        @Nullable String name,
-        String type,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("isSecret") @Nullable Boolean isSecret,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.isSecret = isSecret;
         this.name = name;
         this.type = type;

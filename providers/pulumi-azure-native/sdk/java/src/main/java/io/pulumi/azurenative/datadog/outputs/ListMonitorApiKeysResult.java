@@ -24,10 +24,10 @@ public final class ListMonitorApiKeysResult {
      */
     private final @Nullable List<DatadogApiKeyResponse> value;
 
-    @OutputCustomType.Constructor({"nextLink","value"})
+    @OutputCustomType.Constructor
     private ListMonitorApiKeysResult(
-        @Nullable String nextLink,
-        @Nullable List<DatadogApiKeyResponse> value) {
+        @OutputCustomType.Parameter("nextLink") @Nullable String nextLink,
+        @OutputCustomType.Parameter("value") @Nullable List<DatadogApiKeyResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }

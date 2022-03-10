@@ -37,13 +37,13 @@ public final class GetEnvironmentSpecificationVersionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","properties","systemData","type"})
+    @OutputCustomType.Constructor
     private GetEnvironmentSpecificationVersionResult(
-        String id,
-        String name,
-        EnvironmentSpecificationVersionResponse properties,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") EnvironmentSpecificationVersionResponse properties,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.properties = properties;

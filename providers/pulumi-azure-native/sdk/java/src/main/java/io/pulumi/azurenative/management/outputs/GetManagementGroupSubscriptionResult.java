@@ -48,15 +48,15 @@ public final class GetManagementGroupSubscriptionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"displayName","id","name","parent","state","tenant","type"})
+    @OutputCustomType.Constructor
     private GetManagementGroupSubscriptionResult(
-        @Nullable String displayName,
-        String id,
-        String name,
-        @Nullable DescendantParentGroupInfoResponse parent,
-        @Nullable String state,
-        @Nullable String tenant,
-        String type) {
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parent") @Nullable DescendantParentGroupInfoResponse parent,
+        @OutputCustomType.Parameter("state") @Nullable String state,
+        @OutputCustomType.Parameter("tenant") @Nullable String tenant,
+        @OutputCustomType.Parameter("type") String type) {
         this.displayName = displayName;
         this.id = id;
         this.name = name;

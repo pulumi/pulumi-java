@@ -57,16 +57,16 @@ public final class EnvironmentImageResponseResponseEnvironment {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"docker","environmentVariables","inferencingStackVersion","name","python","r","spark","version"})
+    @OutputCustomType.Constructor
     private EnvironmentImageResponseResponseEnvironment(
-        @Nullable ModelEnvironmentDefinitionResponseResponseDocker docker,
-        @Nullable Map<String,String> environmentVariables,
-        @Nullable String inferencingStackVersion,
-        @Nullable String name,
-        @Nullable ModelEnvironmentDefinitionResponseResponsePython python,
-        @Nullable ModelEnvironmentDefinitionResponseResponseR r,
-        @Nullable ModelEnvironmentDefinitionResponseResponseSpark spark,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("docker") @Nullable ModelEnvironmentDefinitionResponseResponseDocker docker,
+        @OutputCustomType.Parameter("environmentVariables") @Nullable Map<String,String> environmentVariables,
+        @OutputCustomType.Parameter("inferencingStackVersion") @Nullable String inferencingStackVersion,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("python") @Nullable ModelEnvironmentDefinitionResponseResponsePython python,
+        @OutputCustomType.Parameter("r") @Nullable ModelEnvironmentDefinitionResponseResponseR r,
+        @OutputCustomType.Parameter("spark") @Nullable ModelEnvironmentDefinitionResponseResponseSpark spark,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.docker = docker;
         this.environmentVariables = environmentVariables;
         this.inferencingStackVersion = inferencingStackVersion;

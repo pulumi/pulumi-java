@@ -22,10 +22,10 @@ public final class DataDiskStorageTypeInfoResponse {
      */
     private final @Nullable String storageType;
 
-    @OutputCustomType.Constructor({"lun","storageType"})
+    @OutputCustomType.Constructor
     private DataDiskStorageTypeInfoResponse(
-        @Nullable String lun,
-        @Nullable String storageType) {
+        @OutputCustomType.Parameter("lun") @Nullable String lun,
+        @OutputCustomType.Parameter("storageType") @Nullable String storageType) {
         this.lun = lun;
         this.storageType = storageType;
     }

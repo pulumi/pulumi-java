@@ -124,29 +124,29 @@ public final class GetRunbookResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"creationTime","description","draft","etag","id","jobCount","lastModifiedBy","lastModifiedTime","location","logActivityTrace","logProgress","logVerbose","name","outputTypes","parameters","provisioningState","publishContentLink","runbookType","state","tags","type"})
+    @OutputCustomType.Constructor
     private GetRunbookResult(
-        @Nullable String creationTime,
-        @Nullable String description,
-        @Nullable RunbookDraftResponse draft,
-        @Nullable String etag,
-        String id,
-        @Nullable Integer jobCount,
-        @Nullable String lastModifiedBy,
-        @Nullable String lastModifiedTime,
-        @Nullable String location,
-        @Nullable Integer logActivityTrace,
-        @Nullable Boolean logProgress,
-        @Nullable Boolean logVerbose,
-        String name,
-        @Nullable List<String> outputTypes,
-        @Nullable Map<String,RunbookParameterResponse> parameters,
-        @Nullable String provisioningState,
-        @Nullable ContentLinkResponse publishContentLink,
-        @Nullable String runbookType,
-        @Nullable String state,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("creationTime") @Nullable String creationTime,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("draft") @Nullable RunbookDraftResponse draft,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("jobCount") @Nullable Integer jobCount,
+        @OutputCustomType.Parameter("lastModifiedBy") @Nullable String lastModifiedBy,
+        @OutputCustomType.Parameter("lastModifiedTime") @Nullable String lastModifiedTime,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("logActivityTrace") @Nullable Integer logActivityTrace,
+        @OutputCustomType.Parameter("logProgress") @Nullable Boolean logProgress,
+        @OutputCustomType.Parameter("logVerbose") @Nullable Boolean logVerbose,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("outputTypes") @Nullable List<String> outputTypes,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,RunbookParameterResponse> parameters,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("publishContentLink") @Nullable ContentLinkResponse publishContentLink,
+        @OutputCustomType.Parameter("runbookType") @Nullable String runbookType,
+        @OutputCustomType.Parameter("state") @Nullable String state,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.creationTime = creationTime;
         this.description = description;
         this.draft = draft;

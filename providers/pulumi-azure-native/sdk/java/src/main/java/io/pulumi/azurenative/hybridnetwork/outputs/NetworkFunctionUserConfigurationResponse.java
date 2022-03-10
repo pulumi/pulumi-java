@@ -36,12 +36,12 @@ public final class NetworkFunctionUserConfigurationResponse {
      */
     private final @Nullable Object userDataParameters;
 
-    @OutputCustomType.Constructor({"networkInterfaces","osProfile","roleName","userDataParameters"})
+    @OutputCustomType.Constructor
     private NetworkFunctionUserConfigurationResponse(
-        @Nullable List<NetworkInterfaceResponse> networkInterfaces,
-        @Nullable NetworkFunctionUserConfigurationResponseOsProfile osProfile,
-        @Nullable String roleName,
-        @Nullable Object userDataParameters) {
+        @OutputCustomType.Parameter("networkInterfaces") @Nullable List<NetworkInterfaceResponse> networkInterfaces,
+        @OutputCustomType.Parameter("osProfile") @Nullable NetworkFunctionUserConfigurationResponseOsProfile osProfile,
+        @OutputCustomType.Parameter("roleName") @Nullable String roleName,
+        @OutputCustomType.Parameter("userDataParameters") @Nullable Object userDataParameters) {
         this.networkInterfaces = networkInterfaces;
         this.osProfile = osProfile;
         this.roleName = roleName;

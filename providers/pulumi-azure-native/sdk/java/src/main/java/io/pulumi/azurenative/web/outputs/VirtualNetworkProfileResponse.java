@@ -32,12 +32,12 @@ public final class VirtualNetworkProfileResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","subnet","type"})
+    @OutputCustomType.Constructor
     private VirtualNetworkProfileResponse(
-        String id,
-        String name,
-        @Nullable String subnet,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("subnet") @Nullable String subnet,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.subnet = subnet;

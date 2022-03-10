@@ -33,12 +33,12 @@ public final class BuildArgumentResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"isSecret","name","type","value"})
+    @OutputCustomType.Constructor
     private BuildArgumentResponse(
-        @Nullable Boolean isSecret,
-        String name,
-        String type,
-        String value) {
+        @OutputCustomType.Parameter("isSecret") @Nullable Boolean isSecret,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("value") String value) {
         this.isSecret = isSecret;
         this.name = name;
         this.type = type;

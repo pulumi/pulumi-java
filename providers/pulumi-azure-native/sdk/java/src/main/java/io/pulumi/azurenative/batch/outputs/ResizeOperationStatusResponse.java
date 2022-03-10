@@ -33,14 +33,14 @@ public final class ResizeOperationStatusResponse {
     private final @Nullable Integer targetDedicatedNodes;
     private final @Nullable Integer targetLowPriorityNodes;
 
-    @OutputCustomType.Constructor({"errors","nodeDeallocationOption","resizeTimeout","startTime","targetDedicatedNodes","targetLowPriorityNodes"})
+    @OutputCustomType.Constructor
     private ResizeOperationStatusResponse(
-        @Nullable List<ResizeErrorResponse> errors,
-        @Nullable String nodeDeallocationOption,
-        @Nullable String resizeTimeout,
-        @Nullable String startTime,
-        @Nullable Integer targetDedicatedNodes,
-        @Nullable Integer targetLowPriorityNodes) {
+        @OutputCustomType.Parameter("errors") @Nullable List<ResizeErrorResponse> errors,
+        @OutputCustomType.Parameter("nodeDeallocationOption") @Nullable String nodeDeallocationOption,
+        @OutputCustomType.Parameter("resizeTimeout") @Nullable String resizeTimeout,
+        @OutputCustomType.Parameter("startTime") @Nullable String startTime,
+        @OutputCustomType.Parameter("targetDedicatedNodes") @Nullable Integer targetDedicatedNodes,
+        @OutputCustomType.Parameter("targetLowPriorityNodes") @Nullable Integer targetLowPriorityNodes) {
         this.errors = errors;
         this.nodeDeallocationOption = nodeDeallocationOption;
         this.resizeTimeout = resizeTimeout;

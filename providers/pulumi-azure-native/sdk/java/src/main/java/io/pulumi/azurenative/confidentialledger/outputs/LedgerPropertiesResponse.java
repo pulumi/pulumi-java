@@ -60,17 +60,17 @@ public final class LedgerPropertiesResponse {
      */
     private final String provisioningState;
 
-    @OutputCustomType.Constructor({"aadBasedSecurityPrincipals","certBasedSecurityPrincipals","identityServiceUri","ledgerInternalNamespace","ledgerName","ledgerStorageAccount","ledgerType","ledgerUri","provisioningState"})
+    @OutputCustomType.Constructor
     private LedgerPropertiesResponse(
-        @Nullable List<AADBasedSecurityPrincipalResponse> aadBasedSecurityPrincipals,
-        @Nullable List<CertBasedSecurityPrincipalResponse> certBasedSecurityPrincipals,
-        String identityServiceUri,
-        String ledgerInternalNamespace,
-        String ledgerName,
-        @Nullable String ledgerStorageAccount,
-        @Nullable String ledgerType,
-        String ledgerUri,
-        String provisioningState) {
+        @OutputCustomType.Parameter("aadBasedSecurityPrincipals") @Nullable List<AADBasedSecurityPrincipalResponse> aadBasedSecurityPrincipals,
+        @OutputCustomType.Parameter("certBasedSecurityPrincipals") @Nullable List<CertBasedSecurityPrincipalResponse> certBasedSecurityPrincipals,
+        @OutputCustomType.Parameter("identityServiceUri") String identityServiceUri,
+        @OutputCustomType.Parameter("ledgerInternalNamespace") String ledgerInternalNamespace,
+        @OutputCustomType.Parameter("ledgerName") String ledgerName,
+        @OutputCustomType.Parameter("ledgerStorageAccount") @Nullable String ledgerStorageAccount,
+        @OutputCustomType.Parameter("ledgerType") @Nullable String ledgerType,
+        @OutputCustomType.Parameter("ledgerUri") String ledgerUri,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState) {
         this.aadBasedSecurityPrincipals = aadBasedSecurityPrincipals;
         this.certBasedSecurityPrincipals = certBasedSecurityPrincipals;
         this.identityServiceUri = identityServiceUri;

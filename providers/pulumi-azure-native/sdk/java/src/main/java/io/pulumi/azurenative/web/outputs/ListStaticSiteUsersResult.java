@@ -22,10 +22,10 @@ public final class ListStaticSiteUsersResult {
      */
     private final List<StaticSiteUserARMResourceResponse> value;
 
-    @OutputCustomType.Constructor({"nextLink","value"})
+    @OutputCustomType.Constructor
     private ListStaticSiteUsersResult(
-        String nextLink,
-        List<StaticSiteUserARMResourceResponse> value) {
+        @OutputCustomType.Parameter("nextLink") String nextLink,
+        @OutputCustomType.Parameter("value") List<StaticSiteUserARMResourceResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }

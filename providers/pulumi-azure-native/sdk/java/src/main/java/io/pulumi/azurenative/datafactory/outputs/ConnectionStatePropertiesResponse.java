@@ -25,11 +25,11 @@ public final class ConnectionStatePropertiesResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"actionsRequired","description","status"})
+    @OutputCustomType.Constructor
     private ConnectionStatePropertiesResponse(
-        String actionsRequired,
-        String description,
-        String status) {
+        @OutputCustomType.Parameter("actionsRequired") String actionsRequired,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("status") String status) {
         this.actionsRequired = actionsRequired;
         this.description = description;
         this.status = status;

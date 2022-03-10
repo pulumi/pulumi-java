@@ -24,10 +24,10 @@ public final class VaultSecretGroupResponse {
      */
     private final @Nullable List<VaultCertificateResponse> vaultCertificates;
 
-    @OutputCustomType.Constructor({"sourceVault","vaultCertificates"})
+    @OutputCustomType.Constructor
     private VaultSecretGroupResponse(
-        @Nullable SubResourceResponse sourceVault,
-        @Nullable List<VaultCertificateResponse> vaultCertificates) {
+        @OutputCustomType.Parameter("sourceVault") @Nullable SubResourceResponse sourceVault,
+        @OutputCustomType.Parameter("vaultCertificates") @Nullable List<VaultCertificateResponse> vaultCertificates) {
         this.sourceVault = sourceVault;
         this.vaultCertificates = vaultCertificates;
     }

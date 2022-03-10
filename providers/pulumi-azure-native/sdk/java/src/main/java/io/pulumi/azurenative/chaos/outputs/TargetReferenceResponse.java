@@ -20,10 +20,10 @@ public final class TargetReferenceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","type"})
+    @OutputCustomType.Constructor
     private TargetReferenceResponse(
-        String id,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.type = type;
     }

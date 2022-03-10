@@ -81,21 +81,21 @@ public final class GetInboundNatRuleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"backendIPConfiguration","backendPort","enableFloatingIP","enableTcpReset","etag","frontendIPConfiguration","frontendPort","id","idleTimeoutInMinutes","name","protocol","provisioningState","type"})
+    @OutputCustomType.Constructor
     private GetInboundNatRuleResult(
-        NetworkInterfaceIPConfigurationResponse backendIPConfiguration,
-        @Nullable Integer backendPort,
-        @Nullable Boolean enableFloatingIP,
-        @Nullable Boolean enableTcpReset,
-        String etag,
-        @Nullable SubResourceResponse frontendIPConfiguration,
-        @Nullable Integer frontendPort,
-        @Nullable String id,
-        @Nullable Integer idleTimeoutInMinutes,
-        @Nullable String name,
-        @Nullable String protocol,
-        String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("backendIPConfiguration") NetworkInterfaceIPConfigurationResponse backendIPConfiguration,
+        @OutputCustomType.Parameter("backendPort") @Nullable Integer backendPort,
+        @OutputCustomType.Parameter("enableFloatingIP") @Nullable Boolean enableFloatingIP,
+        @OutputCustomType.Parameter("enableTcpReset") @Nullable Boolean enableTcpReset,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("frontendIPConfiguration") @Nullable SubResourceResponse frontendIPConfiguration,
+        @OutputCustomType.Parameter("frontendPort") @Nullable Integer frontendPort,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("idleTimeoutInMinutes") @Nullable Integer idleTimeoutInMinutes,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.backendIPConfiguration = backendIPConfiguration;
         this.backendPort = backendPort;
         this.enableFloatingIP = enableFloatingIP;

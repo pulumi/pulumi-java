@@ -25,11 +25,11 @@ public final class SourceLifeCycleResponse {
     private final DataStoreInfoBaseResponse sourceDataStore;
     private final @Nullable List<TargetCopySettingResponse> targetDataStoreCopySettings;
 
-    @OutputCustomType.Constructor({"deleteAfter","sourceDataStore","targetDataStoreCopySettings"})
+    @OutputCustomType.Constructor
     private SourceLifeCycleResponse(
-        AbsoluteDeleteOptionResponse deleteAfter,
-        DataStoreInfoBaseResponse sourceDataStore,
-        @Nullable List<TargetCopySettingResponse> targetDataStoreCopySettings) {
+        @OutputCustomType.Parameter("deleteAfter") AbsoluteDeleteOptionResponse deleteAfter,
+        @OutputCustomType.Parameter("sourceDataStore") DataStoreInfoBaseResponse sourceDataStore,
+        @OutputCustomType.Parameter("targetDataStoreCopySettings") @Nullable List<TargetCopySettingResponse> targetDataStoreCopySettings) {
         this.deleteAfter = deleteAfter;
         this.sourceDataStore = sourceDataStore;
         this.targetDataStoreCopySettings = targetDataStoreCopySettings;

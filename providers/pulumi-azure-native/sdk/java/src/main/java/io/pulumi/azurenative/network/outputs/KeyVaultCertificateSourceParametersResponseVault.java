@@ -17,8 +17,8 @@ public final class KeyVaultCertificateSourceParametersResponseVault {
      */
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor({"id"})
-    private KeyVaultCertificateSourceParametersResponseVault(@Nullable String id) {
+    @OutputCustomType.Constructor
+    private KeyVaultCertificateSourceParametersResponseVault(@OutputCustomType.Parameter("id") @Nullable String id) {
         this.id = id;
     }
 

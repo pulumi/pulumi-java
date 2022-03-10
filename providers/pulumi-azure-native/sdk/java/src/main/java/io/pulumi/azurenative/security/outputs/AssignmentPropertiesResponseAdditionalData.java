@@ -17,8 +17,8 @@ public final class AssignmentPropertiesResponseAdditionalData {
      */
     private final @Nullable String exemptionCategory;
 
-    @OutputCustomType.Constructor({"exemptionCategory"})
-    private AssignmentPropertiesResponseAdditionalData(@Nullable String exemptionCategory) {
+    @OutputCustomType.Constructor
+    private AssignmentPropertiesResponseAdditionalData(@OutputCustomType.Parameter("exemptionCategory") @Nullable String exemptionCategory) {
         this.exemptionCategory = exemptionCategory;
     }
 

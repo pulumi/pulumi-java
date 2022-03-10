@@ -48,15 +48,15 @@ public final class GetGroupResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"builtIn","description","displayName","externalId","id","name","type"})
+    @OutputCustomType.Constructor
     private GetGroupResult(
-        Boolean builtIn,
-        @Nullable String description,
-        String displayName,
-        @Nullable String externalId,
-        String id,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("builtIn") Boolean builtIn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("externalId") @Nullable String externalId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.builtIn = builtIn;
         this.description = description;
         this.displayName = displayName;

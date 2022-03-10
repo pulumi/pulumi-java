@@ -22,10 +22,10 @@ public final class OriginGroupOverrideActionResponse {
      */
     private final OriginGroupOverrideActionParametersResponse parameters;
 
-    @OutputCustomType.Constructor({"name","parameters"})
+    @OutputCustomType.Constructor
     private OriginGroupOverrideActionResponse(
-        String name,
-        OriginGroupOverrideActionParametersResponse parameters) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") OriginGroupOverrideActionParametersResponse parameters) {
         this.name = name;
         this.parameters = parameters;
     }

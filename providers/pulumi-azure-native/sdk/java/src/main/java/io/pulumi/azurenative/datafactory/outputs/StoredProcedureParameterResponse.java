@@ -23,10 +23,10 @@ public final class StoredProcedureParameterResponse {
      */
     private final @Nullable Object value;
 
-    @OutputCustomType.Constructor({"type","value"})
+    @OutputCustomType.Constructor
     private StoredProcedureParameterResponse(
-        @Nullable String type,
-        @Nullable Object value) {
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("value") @Nullable Object value) {
         this.type = type;
         this.value = value;
     }

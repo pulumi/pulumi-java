@@ -33,12 +33,12 @@ public final class PersistenceResponse {
      */
     private final @Nullable String rdbFrequency;
 
-    @OutputCustomType.Constructor({"aofEnabled","aofFrequency","rdbEnabled","rdbFrequency"})
+    @OutputCustomType.Constructor
     private PersistenceResponse(
-        @Nullable Boolean aofEnabled,
-        @Nullable String aofFrequency,
-        @Nullable Boolean rdbEnabled,
-        @Nullable String rdbFrequency) {
+        @OutputCustomType.Parameter("aofEnabled") @Nullable Boolean aofEnabled,
+        @OutputCustomType.Parameter("aofFrequency") @Nullable String aofFrequency,
+        @OutputCustomType.Parameter("rdbEnabled") @Nullable Boolean rdbEnabled,
+        @OutputCustomType.Parameter("rdbFrequency") @Nullable String rdbFrequency) {
         this.aofEnabled = aofEnabled;
         this.aofFrequency = aofFrequency;
         this.rdbEnabled = rdbEnabled;

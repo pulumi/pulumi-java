@@ -27,11 +27,11 @@ public final class AliasPatternResponse {
      */
     private final @Nullable String variable;
 
-    @OutputCustomType.Constructor({"phrase","type","variable"})
+    @OutputCustomType.Constructor
     private AliasPatternResponse(
-        @Nullable String phrase,
-        @Nullable String type,
-        @Nullable String variable) {
+        @OutputCustomType.Parameter("phrase") @Nullable String phrase,
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("variable") @Nullable String variable) {
         this.phrase = phrase;
         this.type = type;
         this.variable = variable;

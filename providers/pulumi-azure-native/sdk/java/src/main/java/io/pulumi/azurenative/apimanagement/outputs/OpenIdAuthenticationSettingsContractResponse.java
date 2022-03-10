@@ -23,10 +23,10 @@ public final class OpenIdAuthenticationSettingsContractResponse {
      */
     private final @Nullable String openidProviderId;
 
-    @OutputCustomType.Constructor({"bearerTokenSendingMethods","openidProviderId"})
+    @OutputCustomType.Constructor
     private OpenIdAuthenticationSettingsContractResponse(
-        @Nullable List<String> bearerTokenSendingMethods,
-        @Nullable String openidProviderId) {
+        @OutputCustomType.Parameter("bearerTokenSendingMethods") @Nullable List<String> bearerTokenSendingMethods,
+        @OutputCustomType.Parameter("openidProviderId") @Nullable String openidProviderId) {
         this.bearerTokenSendingMethods = bearerTokenSendingMethods;
         this.openidProviderId = openidProviderId;
     }

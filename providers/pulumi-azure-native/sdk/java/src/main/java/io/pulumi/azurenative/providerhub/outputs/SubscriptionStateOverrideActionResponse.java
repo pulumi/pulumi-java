@@ -12,10 +12,10 @@ public final class SubscriptionStateOverrideActionResponse {
     private final String action;
     private final String state;
 
-    @OutputCustomType.Constructor({"action","state"})
+    @OutputCustomType.Constructor
     private SubscriptionStateOverrideActionResponse(
-        String action,
-        String state) {
+        @OutputCustomType.Parameter("action") String action,
+        @OutputCustomType.Parameter("state") String state) {
         this.action = action;
         this.state = state;
     }

@@ -91,23 +91,23 @@ public final class GetNotificationHubAuthorizationRuleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"claimType","claimValue","createdTime","id","keyName","location","modifiedTime","name","primaryKey","revision","rights","secondaryKey","sku","tags","type"})
+    @OutputCustomType.Constructor
     private GetNotificationHubAuthorizationRuleResult(
-        String claimType,
-        String claimValue,
-        String createdTime,
-        String id,
-        String keyName,
-        @Nullable String location,
-        String modifiedTime,
-        String name,
-        String primaryKey,
-        Integer revision,
-        @Nullable List<String> rights,
-        String secondaryKey,
-        @Nullable SkuResponse sku,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("claimType") String claimType,
+        @OutputCustomType.Parameter("claimValue") String claimValue,
+        @OutputCustomType.Parameter("createdTime") String createdTime,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("keyName") String keyName,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("modifiedTime") String modifiedTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("primaryKey") String primaryKey,
+        @OutputCustomType.Parameter("revision") Integer revision,
+        @OutputCustomType.Parameter("rights") @Nullable List<String> rights,
+        @OutputCustomType.Parameter("secondaryKey") String secondaryKey,
+        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.claimType = claimType;
         this.claimValue = claimValue;
         this.createdTime = createdTime;

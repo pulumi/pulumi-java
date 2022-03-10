@@ -20,10 +20,10 @@ public final class StorageAccountResponse {
      */
     private final String key;
 
-    @OutputCustomType.Constructor({"id","key"})
+    @OutputCustomType.Constructor
     private StorageAccountResponse(
-        String id,
-        String key) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("key") String key) {
         this.id = id;
         this.key = key;
     }

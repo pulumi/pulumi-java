@@ -15,8 +15,8 @@ public final class BlobInventoryPolicyDefinitionResponse {
      */
     private final BlobInventoryPolicyFilterResponse filters;
 
-    @OutputCustomType.Constructor({"filters"})
-    private BlobInventoryPolicyDefinitionResponse(BlobInventoryPolicyFilterResponse filters) {
+    @OutputCustomType.Constructor
+    private BlobInventoryPolicyDefinitionResponse(@OutputCustomType.Parameter("filters") BlobInventoryPolicyFilterResponse filters) {
         this.filters = filters;
     }
 

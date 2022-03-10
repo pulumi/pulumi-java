@@ -38,13 +38,13 @@ public final class GetKeyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","isActiveCMK","keyVaultUrl","name","type"})
+    @OutputCustomType.Constructor
     private GetKeyResult(
-        String id,
-        @Nullable Boolean isActiveCMK,
-        @Nullable String keyVaultUrl,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isActiveCMK") @Nullable Boolean isActiveCMK,
+        @OutputCustomType.Parameter("keyVaultUrl") @Nullable String keyVaultUrl,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.isActiveCMK = isActiveCMK;
         this.keyVaultUrl = keyVaultUrl;

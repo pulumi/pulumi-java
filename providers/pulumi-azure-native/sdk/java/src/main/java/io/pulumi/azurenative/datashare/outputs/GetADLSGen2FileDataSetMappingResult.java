@@ -84,22 +84,22 @@ public final class GetADLSGen2FileDataSetMappingResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"dataSetId","dataSetMappingStatus","filePath","fileSystem","id","kind","name","outputType","provisioningState","resourceGroup","storageAccountName","subscriptionId","systemData","type"})
+    @OutputCustomType.Constructor
     private GetADLSGen2FileDataSetMappingResult(
-        String dataSetId,
-        String dataSetMappingStatus,
-        String filePath,
-        String fileSystem,
-        String id,
-        String kind,
-        String name,
-        @Nullable String outputType,
-        String provisioningState,
-        String resourceGroup,
-        String storageAccountName,
-        String subscriptionId,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("dataSetId") String dataSetId,
+        @OutputCustomType.Parameter("dataSetMappingStatus") String dataSetMappingStatus,
+        @OutputCustomType.Parameter("filePath") String filePath,
+        @OutputCustomType.Parameter("fileSystem") String fileSystem,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("outputType") @Nullable String outputType,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("resourceGroup") String resourceGroup,
+        @OutputCustomType.Parameter("storageAccountName") String storageAccountName,
+        @OutputCustomType.Parameter("subscriptionId") String subscriptionId,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.dataSetId = dataSetId;
         this.dataSetMappingStatus = dataSetMappingStatus;
         this.filePath = filePath;

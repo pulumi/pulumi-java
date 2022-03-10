@@ -28,11 +28,11 @@ public final class IntegrationRuntimeReferenceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"parameters","referenceName","type"})
+    @OutputCustomType.Constructor
     private IntegrationRuntimeReferenceResponse(
-        @Nullable Map<String,Object> parameters,
-        String referenceName,
-        String type) {
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,Object> parameters,
+        @OutputCustomType.Parameter("referenceName") String referenceName,
+        @OutputCustomType.Parameter("type") String type) {
         this.parameters = parameters;
         this.referenceName = referenceName;
         this.type = type;

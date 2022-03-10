@@ -32,12 +32,12 @@ public final class AccountCredentialDetailsResponse {
      */
     private final List<ShareCredentialDetailsResponse> shareCredentialDetails;
 
-    @OutputCustomType.Constructor({"accountConnectionString","accountName","dataAccountType","shareCredentialDetails"})
+    @OutputCustomType.Constructor
     private AccountCredentialDetailsResponse(
-        String accountConnectionString,
-        String accountName,
-        String dataAccountType,
-        List<ShareCredentialDetailsResponse> shareCredentialDetails) {
+        @OutputCustomType.Parameter("accountConnectionString") String accountConnectionString,
+        @OutputCustomType.Parameter("accountName") String accountName,
+        @OutputCustomType.Parameter("dataAccountType") String dataAccountType,
+        @OutputCustomType.Parameter("shareCredentialDetails") List<ShareCredentialDetailsResponse> shareCredentialDetails) {
         this.accountConnectionString = accountConnectionString;
         this.accountName = accountName;
         this.dataAccountType = dataAccountType;

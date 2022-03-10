@@ -35,12 +35,12 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputDatabaseErrorResponse {
      */
     private final String resultType;
 
-    @OutputCustomType.Constructor({"errorMessage","events","id","resultType"})
+    @OutputCustomType.Constructor
     private MigrateSqlServerSqlDbSyncTaskOutputDatabaseErrorResponse(
-        @Nullable String errorMessage,
-        @Nullable List<SyncMigrationDatabaseErrorEventResponse> events,
-        String id,
-        String resultType) {
+        @OutputCustomType.Parameter("errorMessage") @Nullable String errorMessage,
+        @OutputCustomType.Parameter("events") @Nullable List<SyncMigrationDatabaseErrorEventResponse> events,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("resultType") String resultType) {
         this.errorMessage = errorMessage;
         this.events = events;
         this.id = id;

@@ -17,8 +17,8 @@ public final class AaaaRecordResponse {
      */
     private final @Nullable String ipv6Address;
 
-    @OutputCustomType.Constructor({"ipv6Address"})
-    private AaaaRecordResponse(@Nullable String ipv6Address) {
+    @OutputCustomType.Constructor
+    private AaaaRecordResponse(@OutputCustomType.Parameter("ipv6Address") @Nullable String ipv6Address) {
         this.ipv6Address = ipv6Address;
     }
 

@@ -40,14 +40,14 @@ public final class SystemDataResponse {
      */
     private final String lastModifiedByType;
 
-    @OutputCustomType.Constructor({"createdAt","createdBy","createdByType","lastModifiedAt","lastModifiedBy","lastModifiedByType"})
+    @OutputCustomType.Constructor
     private SystemDataResponse(
-        String createdAt,
-        String createdBy,
-        String createdByType,
-        String lastModifiedAt,
-        String lastModifiedBy,
-        String lastModifiedByType) {
+        @OutputCustomType.Parameter("createdAt") String createdAt,
+        @OutputCustomType.Parameter("createdBy") String createdBy,
+        @OutputCustomType.Parameter("createdByType") String createdByType,
+        @OutputCustomType.Parameter("lastModifiedAt") String lastModifiedAt,
+        @OutputCustomType.Parameter("lastModifiedBy") String lastModifiedBy,
+        @OutputCustomType.Parameter("lastModifiedByType") String lastModifiedByType) {
         this.createdAt = createdAt;
         this.createdBy = createdBy;
         this.createdByType = createdByType;

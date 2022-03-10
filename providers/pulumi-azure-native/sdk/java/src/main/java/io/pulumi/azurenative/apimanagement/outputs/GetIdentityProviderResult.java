@@ -73,20 +73,20 @@ public final class GetIdentityProviderResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"allowedTenants","authority","clientId","clientSecret","id","name","passwordResetPolicyName","profileEditingPolicyName","signinPolicyName","signinTenant","signupPolicyName","type"})
+    @OutputCustomType.Constructor
     private GetIdentityProviderResult(
-        @Nullable List<String> allowedTenants,
-        @Nullable String authority,
-        String clientId,
-        @Nullable String clientSecret,
-        String id,
-        String name,
-        @Nullable String passwordResetPolicyName,
-        @Nullable String profileEditingPolicyName,
-        @Nullable String signinPolicyName,
-        @Nullable String signinTenant,
-        @Nullable String signupPolicyName,
-        String type) {
+        @OutputCustomType.Parameter("allowedTenants") @Nullable List<String> allowedTenants,
+        @OutputCustomType.Parameter("authority") @Nullable String authority,
+        @OutputCustomType.Parameter("clientId") String clientId,
+        @OutputCustomType.Parameter("clientSecret") @Nullable String clientSecret,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("passwordResetPolicyName") @Nullable String passwordResetPolicyName,
+        @OutputCustomType.Parameter("profileEditingPolicyName") @Nullable String profileEditingPolicyName,
+        @OutputCustomType.Parameter("signinPolicyName") @Nullable String signinPolicyName,
+        @OutputCustomType.Parameter("signinTenant") @Nullable String signinTenant,
+        @OutputCustomType.Parameter("signupPolicyName") @Nullable String signupPolicyName,
+        @OutputCustomType.Parameter("type") String type) {
         this.allowedTenants = allowedTenants;
         this.authority = authority;
         this.clientId = clientId;

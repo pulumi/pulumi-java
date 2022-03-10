@@ -33,12 +33,12 @@ public final class UserSourceInfoResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"artifactSelector","relativePath","type","version"})
+    @OutputCustomType.Constructor
     private UserSourceInfoResponse(
-        @Nullable String artifactSelector,
-        @Nullable String relativePath,
-        @Nullable String type,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("artifactSelector") @Nullable String artifactSelector,
+        @OutputCustomType.Parameter("relativePath") @Nullable String relativePath,
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.artifactSelector = artifactSelector;
         this.relativePath = relativePath;
         this.type = type;

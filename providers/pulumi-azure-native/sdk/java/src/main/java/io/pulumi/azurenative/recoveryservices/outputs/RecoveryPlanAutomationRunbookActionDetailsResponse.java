@@ -33,12 +33,12 @@ public final class RecoveryPlanAutomationRunbookActionDetailsResponse {
      */
     private final @Nullable String timeout;
 
-    @OutputCustomType.Constructor({"fabricLocation","instanceType","runbookId","timeout"})
+    @OutputCustomType.Constructor
     private RecoveryPlanAutomationRunbookActionDetailsResponse(
-        String fabricLocation,
-        String instanceType,
-        @Nullable String runbookId,
-        @Nullable String timeout) {
+        @OutputCustomType.Parameter("fabricLocation") String fabricLocation,
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("runbookId") @Nullable String runbookId,
+        @OutputCustomType.Parameter("timeout") @Nullable String timeout) {
         this.fabricLocation = fabricLocation;
         this.instanceType = instanceType;
         this.runbookId = runbookId;

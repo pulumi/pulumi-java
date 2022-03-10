@@ -20,10 +20,10 @@ public final class SelectedCertificateInputResponse {
      */
     private final String password;
 
-    @OutputCustomType.Constructor({"certificateName","password"})
+    @OutputCustomType.Constructor
     private SelectedCertificateInputResponse(
-        String certificateName,
-        String password) {
+        @OutputCustomType.Parameter("certificateName") String certificateName,
+        @OutputCustomType.Parameter("password") String password) {
         this.certificateName = certificateName;
         this.password = password;
     }

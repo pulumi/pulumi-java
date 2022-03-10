@@ -45,14 +45,14 @@ public final class GetMaintenanceConfigurationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","notAllowedTime","systemData","timeInWeek","type"})
+    @OutputCustomType.Constructor
     private GetMaintenanceConfigurationResult(
-        String id,
-        String name,
-        @Nullable List<TimeSpanResponse> notAllowedTime,
-        SystemDataResponse systemData,
-        @Nullable List<TimeInWeekResponse> timeInWeek,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("notAllowedTime") @Nullable List<TimeSpanResponse> notAllowedTime,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("timeInWeek") @Nullable List<TimeInWeekResponse> timeInWeek,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.notAllowedTime = notAllowedTime;

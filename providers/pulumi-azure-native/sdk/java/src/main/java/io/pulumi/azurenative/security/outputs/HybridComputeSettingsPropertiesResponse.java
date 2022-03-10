@@ -44,14 +44,14 @@ public final class HybridComputeSettingsPropertiesResponse {
      */
     private final @Nullable ServicePrincipalPropertiesResponse servicePrincipal;
 
-    @OutputCustomType.Constructor({"autoProvision","hybridComputeProvisioningState","proxyServer","region","resourceGroupName","servicePrincipal"})
+    @OutputCustomType.Constructor
     private HybridComputeSettingsPropertiesResponse(
-        String autoProvision,
-        String hybridComputeProvisioningState,
-        @Nullable ProxyServerPropertiesResponse proxyServer,
-        @Nullable String region,
-        @Nullable String resourceGroupName,
-        @Nullable ServicePrincipalPropertiesResponse servicePrincipal) {
+        @OutputCustomType.Parameter("autoProvision") String autoProvision,
+        @OutputCustomType.Parameter("hybridComputeProvisioningState") String hybridComputeProvisioningState,
+        @OutputCustomType.Parameter("proxyServer") @Nullable ProxyServerPropertiesResponse proxyServer,
+        @OutputCustomType.Parameter("region") @Nullable String region,
+        @OutputCustomType.Parameter("resourceGroupName") @Nullable String resourceGroupName,
+        @OutputCustomType.Parameter("servicePrincipal") @Nullable ServicePrincipalPropertiesResponse servicePrincipal) {
         this.autoProvision = autoProvision;
         this.hybridComputeProvisioningState = hybridComputeProvisioningState;
         this.proxyServer = proxyServer;

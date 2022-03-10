@@ -63,18 +63,18 @@ public final class AzureDataExplorerConnectionPropertiesResponse {
      */
     private final String provisioningState;
 
-    @OutputCustomType.Constructor({"adxDatabaseName","adxEndpointUri","adxResourceId","adxTableName","connectionType","eventHubConsumerGroup","eventHubEndpointUri","eventHubEntityPath","eventHubNamespaceResourceId","provisioningState"})
+    @OutputCustomType.Constructor
     private AzureDataExplorerConnectionPropertiesResponse(
-        String adxDatabaseName,
-        String adxEndpointUri,
-        String adxResourceId,
-        @Nullable String adxTableName,
-        String connectionType,
-        @Nullable String eventHubConsumerGroup,
-        String eventHubEndpointUri,
-        String eventHubEntityPath,
-        String eventHubNamespaceResourceId,
-        String provisioningState) {
+        @OutputCustomType.Parameter("adxDatabaseName") String adxDatabaseName,
+        @OutputCustomType.Parameter("adxEndpointUri") String adxEndpointUri,
+        @OutputCustomType.Parameter("adxResourceId") String adxResourceId,
+        @OutputCustomType.Parameter("adxTableName") @Nullable String adxTableName,
+        @OutputCustomType.Parameter("connectionType") String connectionType,
+        @OutputCustomType.Parameter("eventHubConsumerGroup") @Nullable String eventHubConsumerGroup,
+        @OutputCustomType.Parameter("eventHubEndpointUri") String eventHubEndpointUri,
+        @OutputCustomType.Parameter("eventHubEntityPath") String eventHubEntityPath,
+        @OutputCustomType.Parameter("eventHubNamespaceResourceId") String eventHubNamespaceResourceId,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState) {
         this.adxDatabaseName = adxDatabaseName;
         this.adxEndpointUri = adxEndpointUri;
         this.adxResourceId = adxResourceId;

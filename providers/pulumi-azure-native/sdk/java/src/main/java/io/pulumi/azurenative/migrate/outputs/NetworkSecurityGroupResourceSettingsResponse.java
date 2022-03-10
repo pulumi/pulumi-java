@@ -29,11 +29,11 @@ public final class NetworkSecurityGroupResourceSettingsResponse {
      */
     private final String targetResourceName;
 
-    @OutputCustomType.Constructor({"resourceType","securityRules","targetResourceName"})
+    @OutputCustomType.Constructor
     private NetworkSecurityGroupResourceSettingsResponse(
-        String resourceType,
-        @Nullable List<NsgSecurityRuleResponse> securityRules,
-        String targetResourceName) {
+        @OutputCustomType.Parameter("resourceType") String resourceType,
+        @OutputCustomType.Parameter("securityRules") @Nullable List<NsgSecurityRuleResponse> securityRules,
+        @OutputCustomType.Parameter("targetResourceName") String targetResourceName) {
         this.resourceType = resourceType;
         this.securityRules = securityRules;
         this.targetResourceName = targetResourceName;

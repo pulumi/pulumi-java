@@ -33,12 +33,12 @@ public final class IoTDeviceInfoResponse {
      */
     private final @Nullable String ioTHostHubId;
 
-    @OutputCustomType.Constructor({"authentication","deviceId","ioTHostHub","ioTHostHubId"})
+    @OutputCustomType.Constructor
     private IoTDeviceInfoResponse(
-        @Nullable AuthenticationResponse authentication,
-        String deviceId,
-        String ioTHostHub,
-        @Nullable String ioTHostHubId) {
+        @OutputCustomType.Parameter("authentication") @Nullable AuthenticationResponse authentication,
+        @OutputCustomType.Parameter("deviceId") String deviceId,
+        @OutputCustomType.Parameter("ioTHostHub") String ioTHostHub,
+        @OutputCustomType.Parameter("ioTHostHubId") @Nullable String ioTHostHubId) {
         this.authentication = authentication;
         this.deviceId = deviceId;
         this.ioTHostHub = ioTHostHub;

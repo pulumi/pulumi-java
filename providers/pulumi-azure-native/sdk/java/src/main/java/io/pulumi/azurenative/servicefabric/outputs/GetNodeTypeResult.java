@@ -114,27 +114,27 @@ public final class GetNodeTypeResult {
      */
     private final @Nullable String vmSize;
 
-    @OutputCustomType.Constructor({"applicationPorts","capacities","dataDiskSizeGB","ephemeralPorts","id","isPrimary","name","placementProperties","provisioningState","tags","type","vmExtensions","vmImageOffer","vmImagePublisher","vmImageSku","vmImageVersion","vmInstanceCount","vmSecrets","vmSize"})
+    @OutputCustomType.Constructor
     private GetNodeTypeResult(
-        @Nullable EndpointRangeDescriptionResponse applicationPorts,
-        @Nullable Map<String,String> capacities,
-        Integer dataDiskSizeGB,
-        @Nullable EndpointRangeDescriptionResponse ephemeralPorts,
-        String id,
-        Boolean isPrimary,
-        String name,
-        @Nullable Map<String,String> placementProperties,
-        String provisioningState,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable List<VMSSExtensionResponse> vmExtensions,
-        @Nullable String vmImageOffer,
-        @Nullable String vmImagePublisher,
-        @Nullable String vmImageSku,
-        @Nullable String vmImageVersion,
-        Integer vmInstanceCount,
-        @Nullable List<VaultSecretGroupResponse> vmSecrets,
-        @Nullable String vmSize) {
+        @OutputCustomType.Parameter("applicationPorts") @Nullable EndpointRangeDescriptionResponse applicationPorts,
+        @OutputCustomType.Parameter("capacities") @Nullable Map<String,String> capacities,
+        @OutputCustomType.Parameter("dataDiskSizeGB") Integer dataDiskSizeGB,
+        @OutputCustomType.Parameter("ephemeralPorts") @Nullable EndpointRangeDescriptionResponse ephemeralPorts,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isPrimary") Boolean isPrimary,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("placementProperties") @Nullable Map<String,String> placementProperties,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("vmExtensions") @Nullable List<VMSSExtensionResponse> vmExtensions,
+        @OutputCustomType.Parameter("vmImageOffer") @Nullable String vmImageOffer,
+        @OutputCustomType.Parameter("vmImagePublisher") @Nullable String vmImagePublisher,
+        @OutputCustomType.Parameter("vmImageSku") @Nullable String vmImageSku,
+        @OutputCustomType.Parameter("vmImageVersion") @Nullable String vmImageVersion,
+        @OutputCustomType.Parameter("vmInstanceCount") Integer vmInstanceCount,
+        @OutputCustomType.Parameter("vmSecrets") @Nullable List<VaultSecretGroupResponse> vmSecrets,
+        @OutputCustomType.Parameter("vmSize") @Nullable String vmSize) {
         this.applicationPorts = applicationPorts;
         this.capacities = capacities;
         this.dataDiskSizeGB = dataDiskSizeGB;

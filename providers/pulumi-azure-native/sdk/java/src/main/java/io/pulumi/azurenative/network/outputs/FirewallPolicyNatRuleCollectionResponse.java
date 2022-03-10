@@ -45,13 +45,13 @@ public final class FirewallPolicyNatRuleCollectionResponse {
      */
     private final @Nullable List<Object> rules;
 
-    @OutputCustomType.Constructor({"action","name","priority","ruleCollectionType","rules"})
+    @OutputCustomType.Constructor
     private FirewallPolicyNatRuleCollectionResponse(
-        @Nullable FirewallPolicyNatRuleCollectionActionResponse action,
-        @Nullable String name,
-        @Nullable Integer priority,
-        String ruleCollectionType,
-        @Nullable List<Object> rules) {
+        @OutputCustomType.Parameter("action") @Nullable FirewallPolicyNatRuleCollectionActionResponse action,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
+        @OutputCustomType.Parameter("ruleCollectionType") String ruleCollectionType,
+        @OutputCustomType.Parameter("rules") @Nullable List<Object> rules) {
         this.action = action;
         this.name = name;
         this.priority = priority;

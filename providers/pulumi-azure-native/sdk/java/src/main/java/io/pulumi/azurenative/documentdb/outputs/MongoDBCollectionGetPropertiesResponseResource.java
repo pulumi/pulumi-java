@@ -52,15 +52,15 @@ public final class MongoDBCollectionGetPropertiesResponseResource {
      */
     private final Double ts;
 
-    @OutputCustomType.Constructor({"analyticalStorageTtl","etag","id","indexes","rid","shardKey","ts"})
+    @OutputCustomType.Constructor
     private MongoDBCollectionGetPropertiesResponseResource(
-        @Nullable Integer analyticalStorageTtl,
-        String etag,
-        String id,
-        @Nullable List<MongoIndexResponse> indexes,
-        String rid,
-        @Nullable Map<String,String> shardKey,
-        Double ts) {
+        @OutputCustomType.Parameter("analyticalStorageTtl") @Nullable Integer analyticalStorageTtl,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("indexes") @Nullable List<MongoIndexResponse> indexes,
+        @OutputCustomType.Parameter("rid") String rid,
+        @OutputCustomType.Parameter("shardKey") @Nullable Map<String,String> shardKey,
+        @OutputCustomType.Parameter("ts") Double ts) {
         this.analyticalStorageTtl = analyticalStorageTtl;
         this.etag = etag;
         this.id = id;

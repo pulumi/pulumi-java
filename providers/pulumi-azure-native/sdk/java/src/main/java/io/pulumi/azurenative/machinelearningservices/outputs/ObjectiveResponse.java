@@ -20,10 +20,10 @@ public final class ObjectiveResponse {
      */
     private final String primaryMetric;
 
-    @OutputCustomType.Constructor({"goal","primaryMetric"})
+    @OutputCustomType.Constructor
     private ObjectiveResponse(
-        String goal,
-        String primaryMetric) {
+        @OutputCustomType.Parameter("goal") String goal,
+        @OutputCustomType.Parameter("primaryMetric") String primaryMetric) {
         this.goal = goal;
         this.primaryMetric = primaryMetric;
     }

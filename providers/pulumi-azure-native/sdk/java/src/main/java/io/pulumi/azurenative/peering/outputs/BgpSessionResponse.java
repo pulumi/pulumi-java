@@ -68,19 +68,19 @@ public final class BgpSessionResponse {
      */
     private final String sessionStateV6;
 
-    @OutputCustomType.Constructor({"maxPrefixesAdvertisedV4","maxPrefixesAdvertisedV6","md5AuthenticationKey","microsoftSessionIPv4Address","microsoftSessionIPv6Address","peerSessionIPv4Address","peerSessionIPv6Address","sessionPrefixV4","sessionPrefixV6","sessionStateV4","sessionStateV6"})
+    @OutputCustomType.Constructor
     private BgpSessionResponse(
-        @Nullable Integer maxPrefixesAdvertisedV4,
-        @Nullable Integer maxPrefixesAdvertisedV6,
-        @Nullable String md5AuthenticationKey,
-        @Nullable String microsoftSessionIPv4Address,
-        @Nullable String microsoftSessionIPv6Address,
-        @Nullable String peerSessionIPv4Address,
-        @Nullable String peerSessionIPv6Address,
-        @Nullable String sessionPrefixV4,
-        @Nullable String sessionPrefixV6,
-        String sessionStateV4,
-        String sessionStateV6) {
+        @OutputCustomType.Parameter("maxPrefixesAdvertisedV4") @Nullable Integer maxPrefixesAdvertisedV4,
+        @OutputCustomType.Parameter("maxPrefixesAdvertisedV6") @Nullable Integer maxPrefixesAdvertisedV6,
+        @OutputCustomType.Parameter("md5AuthenticationKey") @Nullable String md5AuthenticationKey,
+        @OutputCustomType.Parameter("microsoftSessionIPv4Address") @Nullable String microsoftSessionIPv4Address,
+        @OutputCustomType.Parameter("microsoftSessionIPv6Address") @Nullable String microsoftSessionIPv6Address,
+        @OutputCustomType.Parameter("peerSessionIPv4Address") @Nullable String peerSessionIPv4Address,
+        @OutputCustomType.Parameter("peerSessionIPv6Address") @Nullable String peerSessionIPv6Address,
+        @OutputCustomType.Parameter("sessionPrefixV4") @Nullable String sessionPrefixV4,
+        @OutputCustomType.Parameter("sessionPrefixV6") @Nullable String sessionPrefixV6,
+        @OutputCustomType.Parameter("sessionStateV4") String sessionStateV4,
+        @OutputCustomType.Parameter("sessionStateV6") String sessionStateV6) {
         this.maxPrefixesAdvertisedV4 = maxPrefixesAdvertisedV4;
         this.maxPrefixesAdvertisedV6 = maxPrefixesAdvertisedV6;
         this.md5AuthenticationKey = md5AuthenticationKey;

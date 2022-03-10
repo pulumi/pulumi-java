@@ -27,11 +27,11 @@ public final class StartMigrationScenarioServerRoleResultResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"exceptionsAndWarnings","name","state"})
+    @OutputCustomType.Constructor
     private StartMigrationScenarioServerRoleResultResponse(
-        List<ReportableExceptionResponse> exceptionsAndWarnings,
-        String name,
-        String state) {
+        @OutputCustomType.Parameter("exceptionsAndWarnings") List<ReportableExceptionResponse> exceptionsAndWarnings,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") String state) {
         this.exceptionsAndWarnings = exceptionsAndWarnings;
         this.name = name;
         this.state = state;

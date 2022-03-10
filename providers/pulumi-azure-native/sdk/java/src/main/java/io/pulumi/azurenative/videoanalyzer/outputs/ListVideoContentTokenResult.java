@@ -20,10 +20,10 @@ public final class ListVideoContentTokenResult {
      */
     private final String token;
 
-    @OutputCustomType.Constructor({"expirationDate","token"})
+    @OutputCustomType.Constructor
     private ListVideoContentTokenResult(
-        String expirationDate,
-        String token) {
+        @OutputCustomType.Parameter("expirationDate") String expirationDate,
+        @OutputCustomType.Parameter("token") String token) {
         this.expirationDate = expirationDate;
         this.token = token;
     }

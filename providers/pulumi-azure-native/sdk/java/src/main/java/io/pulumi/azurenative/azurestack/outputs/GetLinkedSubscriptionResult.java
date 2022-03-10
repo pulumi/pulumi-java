@@ -89,23 +89,23 @@ public final class GetLinkedSubscriptionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"deviceConnectionStatus","deviceId","deviceLinkState","deviceObjectId","etag","id","kind","lastConnectedTime","linkedSubscriptionId","location","name","registrationResourceId","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetLinkedSubscriptionResult(
-        String deviceConnectionStatus,
-        String deviceId,
-        String deviceLinkState,
-        String deviceObjectId,
-        @Nullable String etag,
-        String id,
-        String kind,
-        String lastConnectedTime,
-        @Nullable String linkedSubscriptionId,
-        String location,
-        String name,
-        @Nullable String registrationResourceId,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("deviceConnectionStatus") String deviceConnectionStatus,
+        @OutputCustomType.Parameter("deviceId") String deviceId,
+        @OutputCustomType.Parameter("deviceLinkState") String deviceLinkState,
+        @OutputCustomType.Parameter("deviceObjectId") String deviceObjectId,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("lastConnectedTime") String lastConnectedTime,
+        @OutputCustomType.Parameter("linkedSubscriptionId") @Nullable String linkedSubscriptionId,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("registrationResourceId") @Nullable String registrationResourceId,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.deviceConnectionStatus = deviceConnectionStatus;
         this.deviceId = deviceId;
         this.deviceLinkState = deviceLinkState;

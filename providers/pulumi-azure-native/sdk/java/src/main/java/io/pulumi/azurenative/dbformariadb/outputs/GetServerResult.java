@@ -113,27 +113,27 @@ public final class GetServerResult {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"administratorLogin","earliestRestoreDate","fullyQualifiedDomainName","id","location","masterServerId","minimalTlsVersion","name","privateEndpointConnections","publicNetworkAccess","replicaCapacity","replicationRole","sku","sslEnforcement","storageProfile","tags","type","userVisibleState","version"})
+    @OutputCustomType.Constructor
     private GetServerResult(
-        @Nullable String administratorLogin,
-        @Nullable String earliestRestoreDate,
-        @Nullable String fullyQualifiedDomainName,
-        String id,
-        String location,
-        @Nullable String masterServerId,
-        @Nullable String minimalTlsVersion,
-        String name,
-        List<ServerPrivateEndpointConnectionResponse> privateEndpointConnections,
-        @Nullable String publicNetworkAccess,
-        @Nullable Integer replicaCapacity,
-        @Nullable String replicationRole,
-        @Nullable SkuResponse sku,
-        @Nullable String sslEnforcement,
-        @Nullable StorageProfileResponse storageProfile,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable String userVisibleState,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("administratorLogin") @Nullable String administratorLogin,
+        @OutputCustomType.Parameter("earliestRestoreDate") @Nullable String earliestRestoreDate,
+        @OutputCustomType.Parameter("fullyQualifiedDomainName") @Nullable String fullyQualifiedDomainName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("masterServerId") @Nullable String masterServerId,
+        @OutputCustomType.Parameter("minimalTlsVersion") @Nullable String minimalTlsVersion,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("privateEndpointConnections") List<ServerPrivateEndpointConnectionResponse> privateEndpointConnections,
+        @OutputCustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess,
+        @OutputCustomType.Parameter("replicaCapacity") @Nullable Integer replicaCapacity,
+        @OutputCustomType.Parameter("replicationRole") @Nullable String replicationRole,
+        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @OutputCustomType.Parameter("sslEnforcement") @Nullable String sslEnforcement,
+        @OutputCustomType.Parameter("storageProfile") @Nullable StorageProfileResponse storageProfile,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userVisibleState") @Nullable String userVisibleState,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.administratorLogin = administratorLogin;
         this.earliestRestoreDate = earliestRestoreDate;
         this.fullyQualifiedDomainName = fullyQualifiedDomainName;

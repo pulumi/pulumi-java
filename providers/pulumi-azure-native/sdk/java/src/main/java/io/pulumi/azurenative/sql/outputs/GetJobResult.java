@@ -44,14 +44,14 @@ public final class GetJobResult {
      */
     private final Integer version;
 
-    @OutputCustomType.Constructor({"description","id","name","schedule","type","version"})
+    @OutputCustomType.Constructor
     private GetJobResult(
-        @Nullable String description,
-        String id,
-        String name,
-        @Nullable JobScheduleResponse schedule,
-        String type,
-        Integer version) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("schedule") @Nullable JobScheduleResponse schedule,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("version") Integer version) {
         this.description = description;
         this.id = id;
         this.name = name;

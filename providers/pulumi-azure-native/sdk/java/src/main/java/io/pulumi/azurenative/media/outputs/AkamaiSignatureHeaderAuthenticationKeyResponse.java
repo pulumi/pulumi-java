@@ -27,11 +27,11 @@ public final class AkamaiSignatureHeaderAuthenticationKeyResponse {
      */
     private final @Nullable String identifier;
 
-    @OutputCustomType.Constructor({"base64Key","expiration","identifier"})
+    @OutputCustomType.Constructor
     private AkamaiSignatureHeaderAuthenticationKeyResponse(
-        @Nullable String base64Key,
-        @Nullable String expiration,
-        @Nullable String identifier) {
+        @OutputCustomType.Parameter("base64Key") @Nullable String base64Key,
+        @OutputCustomType.Parameter("expiration") @Nullable String expiration,
+        @OutputCustomType.Parameter("identifier") @Nullable String identifier) {
         this.base64Key = base64Key;
         this.expiration = expiration;
         this.identifier = identifier;

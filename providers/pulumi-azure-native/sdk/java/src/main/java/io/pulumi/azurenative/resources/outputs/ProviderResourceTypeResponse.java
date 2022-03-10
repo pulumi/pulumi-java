@@ -64,18 +64,18 @@ public final class ProviderResourceTypeResponse {
     private final @Nullable String resourceType;
     private final @Nullable List<ZoneMappingResponse> zoneMappings;
 
-    @OutputCustomType.Constructor({"aliases","apiProfiles","apiVersions","capabilities","defaultApiVersion","locationMappings","locations","properties","resourceType","zoneMappings"})
+    @OutputCustomType.Constructor
     private ProviderResourceTypeResponse(
-        @Nullable List<AliasResponse> aliases,
-        List<ApiProfileResponse> apiProfiles,
-        @Nullable List<String> apiVersions,
-        @Nullable String capabilities,
-        String defaultApiVersion,
-        @Nullable List<ProviderExtendedLocationResponse> locationMappings,
-        @Nullable List<String> locations,
-        @Nullable Map<String,String> properties,
-        @Nullable String resourceType,
-        @Nullable List<ZoneMappingResponse> zoneMappings) {
+        @OutputCustomType.Parameter("aliases") @Nullable List<AliasResponse> aliases,
+        @OutputCustomType.Parameter("apiProfiles") List<ApiProfileResponse> apiProfiles,
+        @OutputCustomType.Parameter("apiVersions") @Nullable List<String> apiVersions,
+        @OutputCustomType.Parameter("capabilities") @Nullable String capabilities,
+        @OutputCustomType.Parameter("defaultApiVersion") String defaultApiVersion,
+        @OutputCustomType.Parameter("locationMappings") @Nullable List<ProviderExtendedLocationResponse> locationMappings,
+        @OutputCustomType.Parameter("locations") @Nullable List<String> locations,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @OutputCustomType.Parameter("resourceType") @Nullable String resourceType,
+        @OutputCustomType.Parameter("zoneMappings") @Nullable List<ZoneMappingResponse> zoneMappings) {
         this.aliases = aliases;
         this.apiProfiles = apiProfiles;
         this.apiVersions = apiVersions;

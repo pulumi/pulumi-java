@@ -22,10 +22,10 @@ public final class BackupVaultResponse {
      */
     private final List<StorageSettingResponse> storageSettings;
 
-    @OutputCustomType.Constructor({"provisioningState","storageSettings"})
+    @OutputCustomType.Constructor
     private BackupVaultResponse(
-        String provisioningState,
-        List<StorageSettingResponse> storageSettings) {
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("storageSettings") List<StorageSettingResponse> storageSettings) {
         this.provisioningState = provisioningState;
         this.storageSettings = storageSettings;
     }

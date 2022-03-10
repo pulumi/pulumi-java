@@ -15,8 +15,8 @@ public final class ServerInfoResponse {
      */
     private final String serverId;
 
-    @OutputCustomType.Constructor({"serverId"})
-    private ServerInfoResponse(String serverId) {
+    @OutputCustomType.Constructor
+    private ServerInfoResponse(@OutputCustomType.Parameter("serverId") String serverId) {
         this.serverId = serverId;
     }
 

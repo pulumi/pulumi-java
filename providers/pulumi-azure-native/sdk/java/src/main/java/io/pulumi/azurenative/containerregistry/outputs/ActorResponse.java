@@ -17,8 +17,8 @@ public final class ActorResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private ActorResponse(@Nullable String name) {
+    @OutputCustomType.Constructor
+    private ActorResponse(@OutputCustomType.Parameter("name") @Nullable String name) {
         this.name = name;
     }
 

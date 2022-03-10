@@ -44,14 +44,14 @@ public final class BatchEndpointResponse {
      */
     private final @Nullable Map<String,Integer> traffic;
 
-    @OutputCustomType.Constructor({"authMode","description","properties","scoringUri","swaggerUri","traffic"})
+    @OutputCustomType.Constructor
     private BatchEndpointResponse(
-        @Nullable String authMode,
-        @Nullable String description,
-        @Nullable Map<String,String> properties,
-        String scoringUri,
-        String swaggerUri,
-        @Nullable Map<String,Integer> traffic) {
+        @OutputCustomType.Parameter("authMode") @Nullable String authMode,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @OutputCustomType.Parameter("scoringUri") String scoringUri,
+        @OutputCustomType.Parameter("swaggerUri") String swaggerUri,
+        @OutputCustomType.Parameter("traffic") @Nullable Map<String,Integer> traffic) {
         this.authMode = authMode;
         this.description = description;
         this.properties = properties;

@@ -17,8 +17,8 @@ public final class CloudServiceExtensionProfileResponse {
      */
     private final @Nullable List<ExtensionResponse> extensions;
 
-    @OutputCustomType.Constructor({"extensions"})
-    private CloudServiceExtensionProfileResponse(@Nullable List<ExtensionResponse> extensions) {
+    @OutputCustomType.Constructor
+    private CloudServiceExtensionProfileResponse(@OutputCustomType.Parameter("extensions") @Nullable List<ExtensionResponse> extensions) {
         this.extensions = extensions;
     }
 

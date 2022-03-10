@@ -22,10 +22,10 @@ public final class EnvironmentImageResponseResponseEnvironmentReference {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"name","version"})
+    @OutputCustomType.Constructor
     private EnvironmentImageResponseResponseEnvironmentReference(
-        @Nullable String name,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.name = name;
         this.version = version;
     }

@@ -47,15 +47,15 @@ public final class SourceTriggerDescriptorResponse {
      */
     private final @Nullable String repositoryUrl;
 
-    @OutputCustomType.Constructor({"branchName","commitId","eventType","id","providerType","pullRequestId","repositoryUrl"})
+    @OutputCustomType.Constructor
     private SourceTriggerDescriptorResponse(
-        @Nullable String branchName,
-        @Nullable String commitId,
-        @Nullable String eventType,
-        @Nullable String id,
-        @Nullable String providerType,
-        @Nullable String pullRequestId,
-        @Nullable String repositoryUrl) {
+        @OutputCustomType.Parameter("branchName") @Nullable String branchName,
+        @OutputCustomType.Parameter("commitId") @Nullable String commitId,
+        @OutputCustomType.Parameter("eventType") @Nullable String eventType,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("providerType") @Nullable String providerType,
+        @OutputCustomType.Parameter("pullRequestId") @Nullable String pullRequestId,
+        @OutputCustomType.Parameter("repositoryUrl") @Nullable String repositoryUrl) {
         this.branchName = branchName;
         this.commitId = commitId;
         this.eventType = eventType;

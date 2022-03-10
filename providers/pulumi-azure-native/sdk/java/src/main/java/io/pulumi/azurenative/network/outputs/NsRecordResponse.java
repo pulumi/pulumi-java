@@ -17,8 +17,8 @@ public final class NsRecordResponse {
      */
     private final @Nullable String nsdname;
 
-    @OutputCustomType.Constructor({"nsdname"})
-    private NsRecordResponse(@Nullable String nsdname) {
+    @OutputCustomType.Constructor
+    private NsRecordResponse(@OutputCustomType.Parameter("nsdname") @Nullable String nsdname) {
         this.nsdname = nsdname;
     }
 

@@ -65,18 +65,18 @@ public final class GetVendorSkusResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"deploymentMode","id","managedApplicationParameters","managedApplicationTemplate","name","networkFunctionTemplate","preview","provisioningState","skuType","type"})
+    @OutputCustomType.Constructor
     private GetVendorSkusResult(
-        @Nullable String deploymentMode,
-        String id,
-        @Nullable Object managedApplicationParameters,
-        @Nullable Object managedApplicationTemplate,
-        String name,
-        @Nullable NetworkFunctionTemplateResponse networkFunctionTemplate,
-        @Nullable Boolean preview,
-        String provisioningState,
-        @Nullable String skuType,
-        String type) {
+        @OutputCustomType.Parameter("deploymentMode") @Nullable String deploymentMode,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("managedApplicationParameters") @Nullable Object managedApplicationParameters,
+        @OutputCustomType.Parameter("managedApplicationTemplate") @Nullable Object managedApplicationTemplate,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networkFunctionTemplate") @Nullable NetworkFunctionTemplateResponse networkFunctionTemplate,
+        @OutputCustomType.Parameter("preview") @Nullable Boolean preview,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("skuType") @Nullable String skuType,
+        @OutputCustomType.Parameter("type") String type) {
         this.deploymentMode = deploymentMode;
         this.id = id;
         this.managedApplicationParameters = managedApplicationParameters;

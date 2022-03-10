@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class DataPartitionNamesResponse {
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private DataPartitionNamesResponse(@Nullable String name) {
+    @OutputCustomType.Constructor
+    private DataPartitionNamesResponse(@OutputCustomType.Parameter("name") @Nullable String name) {
         this.name = name;
     }
 

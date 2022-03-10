@@ -67,18 +67,18 @@ public final class VirtualMachineScaleSetNetworkConfigurationResponse {
      */
     private final @Nullable Boolean primary;
 
-    @OutputCustomType.Constructor({"deleteOption","dnsSettings","enableAcceleratedNetworking","enableFpga","enableIPForwarding","id","ipConfigurations","name","networkSecurityGroup","primary"})
+    @OutputCustomType.Constructor
     private VirtualMachineScaleSetNetworkConfigurationResponse(
-        @Nullable String deleteOption,
-        @Nullable VirtualMachineScaleSetNetworkConfigurationDnsSettingsResponse dnsSettings,
-        @Nullable Boolean enableAcceleratedNetworking,
-        @Nullable Boolean enableFpga,
-        @Nullable Boolean enableIPForwarding,
-        @Nullable String id,
-        List<VirtualMachineScaleSetIPConfigurationResponse> ipConfigurations,
-        String name,
-        @Nullable SubResourceResponse networkSecurityGroup,
-        @Nullable Boolean primary) {
+        @OutputCustomType.Parameter("deleteOption") @Nullable String deleteOption,
+        @OutputCustomType.Parameter("dnsSettings") @Nullable VirtualMachineScaleSetNetworkConfigurationDnsSettingsResponse dnsSettings,
+        @OutputCustomType.Parameter("enableAcceleratedNetworking") @Nullable Boolean enableAcceleratedNetworking,
+        @OutputCustomType.Parameter("enableFpga") @Nullable Boolean enableFpga,
+        @OutputCustomType.Parameter("enableIPForwarding") @Nullable Boolean enableIPForwarding,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("ipConfigurations") List<VirtualMachineScaleSetIPConfigurationResponse> ipConfigurations,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networkSecurityGroup") @Nullable SubResourceResponse networkSecurityGroup,
+        @OutputCustomType.Parameter("primary") @Nullable Boolean primary) {
         this.deleteOption = deleteOption;
         this.dnsSettings = dnsSettings;
         this.enableAcceleratedNetworking = enableAcceleratedNetworking;

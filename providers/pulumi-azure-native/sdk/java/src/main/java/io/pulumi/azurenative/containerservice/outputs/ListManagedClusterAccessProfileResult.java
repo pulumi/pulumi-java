@@ -43,14 +43,14 @@ public final class ListManagedClusterAccessProfileResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","kubeConfig","location","name","tags","type"})
+    @OutputCustomType.Constructor
     private ListManagedClusterAccessProfileResult(
-        String id,
-        @Nullable String kubeConfig,
-        String location,
-        String name,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kubeConfig") @Nullable String kubeConfig,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.kubeConfig = kubeConfig;
         this.location = location;

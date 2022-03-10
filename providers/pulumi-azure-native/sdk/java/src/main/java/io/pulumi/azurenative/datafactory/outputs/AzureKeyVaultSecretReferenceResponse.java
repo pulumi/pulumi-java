@@ -35,12 +35,12 @@ public final class AzureKeyVaultSecretReferenceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"secretName","secretVersion","store","type"})
+    @OutputCustomType.Constructor
     private AzureKeyVaultSecretReferenceResponse(
-        Object secretName,
-        @Nullable Object secretVersion,
-        LinkedServiceReferenceResponse store,
-        String type) {
+        @OutputCustomType.Parameter("secretName") Object secretName,
+        @OutputCustomType.Parameter("secretVersion") @Nullable Object secretVersion,
+        @OutputCustomType.Parameter("store") LinkedServiceReferenceResponse store,
+        @OutputCustomType.Parameter("type") String type) {
         this.secretName = secretName;
         this.secretVersion = secretVersion;
         this.store = store;

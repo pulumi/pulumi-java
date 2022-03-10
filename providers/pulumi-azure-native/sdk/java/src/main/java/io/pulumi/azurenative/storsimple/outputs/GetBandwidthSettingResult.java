@@ -45,14 +45,14 @@ public final class GetBandwidthSettingResult {
      */
     private final Integer volumeCount;
 
-    @OutputCustomType.Constructor({"id","kind","name","schedules","type","volumeCount"})
+    @OutputCustomType.Constructor
     private GetBandwidthSettingResult(
-        String id,
-        @Nullable String kind,
-        String name,
-        List<BandwidthScheduleResponse> schedules,
-        String type,
-        Integer volumeCount) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("schedules") List<BandwidthScheduleResponse> schedules,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("volumeCount") Integer volumeCount) {
         this.id = id;
         this.kind = kind;
         this.name = name;

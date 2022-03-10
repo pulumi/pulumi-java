@@ -20,10 +20,10 @@ public final class CloudTieringDatePolicyStatusResponse {
      */
     private final String tieredFilesMostRecentAccessTimestamp;
 
-    @OutputCustomType.Constructor({"lastUpdatedTimestamp","tieredFilesMostRecentAccessTimestamp"})
+    @OutputCustomType.Constructor
     private CloudTieringDatePolicyStatusResponse(
-        String lastUpdatedTimestamp,
-        String tieredFilesMostRecentAccessTimestamp) {
+        @OutputCustomType.Parameter("lastUpdatedTimestamp") String lastUpdatedTimestamp,
+        @OutputCustomType.Parameter("tieredFilesMostRecentAccessTimestamp") String tieredFilesMostRecentAccessTimestamp) {
         this.lastUpdatedTimestamp = lastUpdatedTimestamp;
         this.tieredFilesMostRecentAccessTimestamp = tieredFilesMostRecentAccessTimestamp;
     }

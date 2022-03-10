@@ -28,11 +28,11 @@ public final class AFDDomainHttpsParametersResponse {
      */
     private final @Nullable ResourceReferenceResponse secret;
 
-    @OutputCustomType.Constructor({"certificateType","minimumTlsVersion","secret"})
+    @OutputCustomType.Constructor
     private AFDDomainHttpsParametersResponse(
-        String certificateType,
-        @Nullable String minimumTlsVersion,
-        @Nullable ResourceReferenceResponse secret) {
+        @OutputCustomType.Parameter("certificateType") String certificateType,
+        @OutputCustomType.Parameter("minimumTlsVersion") @Nullable String minimumTlsVersion,
+        @OutputCustomType.Parameter("secret") @Nullable ResourceReferenceResponse secret) {
         this.certificateType = certificateType;
         this.minimumTlsVersion = minimumTlsVersion;
         this.secret = secret;

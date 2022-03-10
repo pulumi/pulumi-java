@@ -34,12 +34,12 @@ public final class ClusterDefinitionResponse {
      */
     private final @Nullable String kind;
 
-    @OutputCustomType.Constructor({"blueprint","componentVersion","configurations","kind"})
+    @OutputCustomType.Constructor
     private ClusterDefinitionResponse(
-        @Nullable String blueprint,
-        @Nullable Map<String,String> componentVersion,
-        @Nullable Object configurations,
-        @Nullable String kind) {
+        @OutputCustomType.Parameter("blueprint") @Nullable String blueprint,
+        @OutputCustomType.Parameter("componentVersion") @Nullable Map<String,String> componentVersion,
+        @OutputCustomType.Parameter("configurations") @Nullable Object configurations,
+        @OutputCustomType.Parameter("kind") @Nullable String kind) {
         this.blueprint = blueprint;
         this.componentVersion = componentVersion;
         this.configurations = configurations;

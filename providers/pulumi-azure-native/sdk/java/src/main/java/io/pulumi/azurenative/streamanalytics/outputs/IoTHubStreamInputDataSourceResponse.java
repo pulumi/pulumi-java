@@ -43,14 +43,14 @@ public final class IoTHubStreamInputDataSourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"consumerGroupName","endpoint","iotHubNamespace","sharedAccessPolicyKey","sharedAccessPolicyName","type"})
+    @OutputCustomType.Constructor
     private IoTHubStreamInputDataSourceResponse(
-        @Nullable String consumerGroupName,
-        @Nullable String endpoint,
-        @Nullable String iotHubNamespace,
-        @Nullable String sharedAccessPolicyKey,
-        @Nullable String sharedAccessPolicyName,
-        String type) {
+        @OutputCustomType.Parameter("consumerGroupName") @Nullable String consumerGroupName,
+        @OutputCustomType.Parameter("endpoint") @Nullable String endpoint,
+        @OutputCustomType.Parameter("iotHubNamespace") @Nullable String iotHubNamespace,
+        @OutputCustomType.Parameter("sharedAccessPolicyKey") @Nullable String sharedAccessPolicyKey,
+        @OutputCustomType.Parameter("sharedAccessPolicyName") @Nullable String sharedAccessPolicyName,
+        @OutputCustomType.Parameter("type") String type) {
         this.consumerGroupName = consumerGroupName;
         this.endpoint = endpoint;
         this.iotHubNamespace = iotHubNamespace;

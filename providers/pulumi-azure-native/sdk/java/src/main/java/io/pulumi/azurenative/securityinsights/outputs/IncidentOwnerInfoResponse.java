@@ -32,12 +32,12 @@ public final class IncidentOwnerInfoResponse {
      */
     private final @Nullable String userPrincipalName;
 
-    @OutputCustomType.Constructor({"assignedTo","email","objectId","userPrincipalName"})
+    @OutputCustomType.Constructor
     private IncidentOwnerInfoResponse(
-        @Nullable String assignedTo,
-        @Nullable String email,
-        @Nullable String objectId,
-        @Nullable String userPrincipalName) {
+        @OutputCustomType.Parameter("assignedTo") @Nullable String assignedTo,
+        @OutputCustomType.Parameter("email") @Nullable String email,
+        @OutputCustomType.Parameter("objectId") @Nullable String objectId,
+        @OutputCustomType.Parameter("userPrincipalName") @Nullable String userPrincipalName) {
         this.assignedTo = assignedTo;
         this.email = email;
         this.objectId = objectId;

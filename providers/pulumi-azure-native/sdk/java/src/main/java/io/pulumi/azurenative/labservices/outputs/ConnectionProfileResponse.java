@@ -32,12 +32,12 @@ public final class ConnectionProfileResponse {
      */
     private final @Nullable String webSshAccess;
 
-    @OutputCustomType.Constructor({"clientRdpAccess","clientSshAccess","webRdpAccess","webSshAccess"})
+    @OutputCustomType.Constructor
     private ConnectionProfileResponse(
-        @Nullable String clientRdpAccess,
-        @Nullable String clientSshAccess,
-        @Nullable String webRdpAccess,
-        @Nullable String webSshAccess) {
+        @OutputCustomType.Parameter("clientRdpAccess") @Nullable String clientRdpAccess,
+        @OutputCustomType.Parameter("clientSshAccess") @Nullable String clientSshAccess,
+        @OutputCustomType.Parameter("webRdpAccess") @Nullable String webRdpAccess,
+        @OutputCustomType.Parameter("webSshAccess") @Nullable String webSshAccess) {
         this.clientRdpAccess = clientRdpAccess;
         this.clientSshAccess = clientSshAccess;
         this.webRdpAccess = webRdpAccess;

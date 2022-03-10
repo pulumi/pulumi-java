@@ -62,18 +62,18 @@ public final class GetSqlDBTableDataSetResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"dataSetId","databaseName","id","kind","name","schemaName","sqlServerResourceId","systemData","tableName","type"})
+    @OutputCustomType.Constructor
     private GetSqlDBTableDataSetResult(
-        String dataSetId,
-        String databaseName,
-        String id,
-        String kind,
-        String name,
-        String schemaName,
-        String sqlServerResourceId,
-        SystemDataResponse systemData,
-        String tableName,
-        String type) {
+        @OutputCustomType.Parameter("dataSetId") String dataSetId,
+        @OutputCustomType.Parameter("databaseName") String databaseName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("schemaName") String schemaName,
+        @OutputCustomType.Parameter("sqlServerResourceId") String sqlServerResourceId,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tableName") String tableName,
+        @OutputCustomType.Parameter("type") String type) {
         this.dataSetId = dataSetId;
         this.databaseName = databaseName;
         this.id = id;

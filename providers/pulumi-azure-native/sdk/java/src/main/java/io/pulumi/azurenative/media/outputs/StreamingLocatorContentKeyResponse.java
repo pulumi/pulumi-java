@@ -44,14 +44,14 @@ public final class StreamingLocatorContentKeyResponse {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"id","labelReferenceInStreamingPolicy","policyName","tracks","type","value"})
+    @OutputCustomType.Constructor
     private StreamingLocatorContentKeyResponse(
-        String id,
-        @Nullable String labelReferenceInStreamingPolicy,
-        String policyName,
-        List<TrackSelectionResponse> tracks,
-        String type,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("labelReferenceInStreamingPolicy") @Nullable String labelReferenceInStreamingPolicy,
+        @OutputCustomType.Parameter("policyName") String policyName,
+        @OutputCustomType.Parameter("tracks") List<TrackSelectionResponse> tracks,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.id = id;
         this.labelReferenceInStreamingPolicy = labelReferenceInStreamingPolicy;
         this.policyName = policyName;

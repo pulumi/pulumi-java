@@ -110,27 +110,27 @@ public final class GetAuthorizationServerResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"authorizationEndpoint","authorizationMethods","bearerTokenSendingMethods","clientAuthenticationMethod","clientId","clientRegistrationEndpoint","clientSecret","defaultScope","description","displayName","grantTypes","id","name","resourceOwnerPassword","resourceOwnerUsername","supportState","tokenBodyParameters","tokenEndpoint","type"})
+    @OutputCustomType.Constructor
     private GetAuthorizationServerResult(
-        String authorizationEndpoint,
-        @Nullable List<String> authorizationMethods,
-        @Nullable List<String> bearerTokenSendingMethods,
-        @Nullable List<String> clientAuthenticationMethod,
-        String clientId,
-        String clientRegistrationEndpoint,
-        @Nullable String clientSecret,
-        @Nullable String defaultScope,
-        @Nullable String description,
-        String displayName,
-        List<String> grantTypes,
-        String id,
-        String name,
-        @Nullable String resourceOwnerPassword,
-        @Nullable String resourceOwnerUsername,
-        @Nullable Boolean supportState,
-        @Nullable List<TokenBodyParameterContractResponse> tokenBodyParameters,
-        @Nullable String tokenEndpoint,
-        String type) {
+        @OutputCustomType.Parameter("authorizationEndpoint") String authorizationEndpoint,
+        @OutputCustomType.Parameter("authorizationMethods") @Nullable List<String> authorizationMethods,
+        @OutputCustomType.Parameter("bearerTokenSendingMethods") @Nullable List<String> bearerTokenSendingMethods,
+        @OutputCustomType.Parameter("clientAuthenticationMethod") @Nullable List<String> clientAuthenticationMethod,
+        @OutputCustomType.Parameter("clientId") String clientId,
+        @OutputCustomType.Parameter("clientRegistrationEndpoint") String clientRegistrationEndpoint,
+        @OutputCustomType.Parameter("clientSecret") @Nullable String clientSecret,
+        @OutputCustomType.Parameter("defaultScope") @Nullable String defaultScope,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("grantTypes") List<String> grantTypes,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("resourceOwnerPassword") @Nullable String resourceOwnerPassword,
+        @OutputCustomType.Parameter("resourceOwnerUsername") @Nullable String resourceOwnerUsername,
+        @OutputCustomType.Parameter("supportState") @Nullable Boolean supportState,
+        @OutputCustomType.Parameter("tokenBodyParameters") @Nullable List<TokenBodyParameterContractResponse> tokenBodyParameters,
+        @OutputCustomType.Parameter("tokenEndpoint") @Nullable String tokenEndpoint,
+        @OutputCustomType.Parameter("type") String type) {
         this.authorizationEndpoint = authorizationEndpoint;
         this.authorizationMethods = authorizationMethods;
         this.bearerTokenSendingMethods = bearerTokenSendingMethods;

@@ -28,11 +28,11 @@ public final class ConnectionMonitorDestinationResponse {
      */
     private final @Nullable String resourceId;
 
-    @OutputCustomType.Constructor({"address","port","resourceId"})
+    @OutputCustomType.Constructor
     private ConnectionMonitorDestinationResponse(
-        @Nullable String address,
-        @Nullable Integer port,
-        @Nullable String resourceId) {
+        @OutputCustomType.Parameter("address") @Nullable String address,
+        @OutputCustomType.Parameter("port") @Nullable Integer port,
+        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId) {
         this.address = address;
         this.port = port;
         this.resourceId = resourceId;

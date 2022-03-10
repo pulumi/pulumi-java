@@ -43,14 +43,14 @@ public final class NetworkManagerDeploymentStatusResponse {
      */
     private final @Nullable String region;
 
-    @OutputCustomType.Constructor({"commitTime","configurationIds","deploymentStatus","deploymentType","errorMessage","region"})
+    @OutputCustomType.Constructor
     private NetworkManagerDeploymentStatusResponse(
-        @Nullable String commitTime,
-        @Nullable List<String> configurationIds,
-        @Nullable String deploymentStatus,
-        @Nullable String deploymentType,
-        @Nullable String errorMessage,
-        @Nullable String region) {
+        @OutputCustomType.Parameter("commitTime") @Nullable String commitTime,
+        @OutputCustomType.Parameter("configurationIds") @Nullable List<String> configurationIds,
+        @OutputCustomType.Parameter("deploymentStatus") @Nullable String deploymentStatus,
+        @OutputCustomType.Parameter("deploymentType") @Nullable String deploymentType,
+        @OutputCustomType.Parameter("errorMessage") @Nullable String errorMessage,
+        @OutputCustomType.Parameter("region") @Nullable String region) {
         this.commitTime = commitTime;
         this.configurationIds = configurationIds;
         this.deploymentStatus = deploymentStatus;

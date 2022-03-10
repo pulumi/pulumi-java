@@ -33,12 +33,12 @@ public final class AccessPolicyEntryResponse {
      */
     private final String tenantId;
 
-    @OutputCustomType.Constructor({"applicationId","objectId","permissions","tenantId"})
+    @OutputCustomType.Constructor
     private AccessPolicyEntryResponse(
-        @Nullable String applicationId,
-        String objectId,
-        PermissionsResponse permissions,
-        String tenantId) {
+        @OutputCustomType.Parameter("applicationId") @Nullable String applicationId,
+        @OutputCustomType.Parameter("objectId") String objectId,
+        @OutputCustomType.Parameter("permissions") PermissionsResponse permissions,
+        @OutputCustomType.Parameter("tenantId") String tenantId) {
         this.applicationId = applicationId;
         this.objectId = objectId;
         this.permissions = permissions;

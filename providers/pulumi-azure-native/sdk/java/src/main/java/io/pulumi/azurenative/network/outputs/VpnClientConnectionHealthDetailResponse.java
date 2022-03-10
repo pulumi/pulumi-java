@@ -71,20 +71,20 @@ public final class VpnClientConnectionHealthDetailResponse {
      */
     private final String vpnUserName;
 
-    @OutputCustomType.Constructor({"egressBytesTransferred","egressPacketsTransferred","ingressBytesTransferred","ingressPacketsTransferred","maxBandwidth","maxPacketsPerSecond","privateIpAddress","publicIpAddress","vpnConnectionDuration","vpnConnectionId","vpnConnectionTime","vpnUserName"})
+    @OutputCustomType.Constructor
     private VpnClientConnectionHealthDetailResponse(
-        Double egressBytesTransferred,
-        Double egressPacketsTransferred,
-        Double ingressBytesTransferred,
-        Double ingressPacketsTransferred,
-        Double maxBandwidth,
-        Double maxPacketsPerSecond,
-        String privateIpAddress,
-        String publicIpAddress,
-        Double vpnConnectionDuration,
-        String vpnConnectionId,
-        String vpnConnectionTime,
-        String vpnUserName) {
+        @OutputCustomType.Parameter("egressBytesTransferred") Double egressBytesTransferred,
+        @OutputCustomType.Parameter("egressPacketsTransferred") Double egressPacketsTransferred,
+        @OutputCustomType.Parameter("ingressBytesTransferred") Double ingressBytesTransferred,
+        @OutputCustomType.Parameter("ingressPacketsTransferred") Double ingressPacketsTransferred,
+        @OutputCustomType.Parameter("maxBandwidth") Double maxBandwidth,
+        @OutputCustomType.Parameter("maxPacketsPerSecond") Double maxPacketsPerSecond,
+        @OutputCustomType.Parameter("privateIpAddress") String privateIpAddress,
+        @OutputCustomType.Parameter("publicIpAddress") String publicIpAddress,
+        @OutputCustomType.Parameter("vpnConnectionDuration") Double vpnConnectionDuration,
+        @OutputCustomType.Parameter("vpnConnectionId") String vpnConnectionId,
+        @OutputCustomType.Parameter("vpnConnectionTime") String vpnConnectionTime,
+        @OutputCustomType.Parameter("vpnUserName") String vpnUserName) {
         this.egressBytesTransferred = egressBytesTransferred;
         this.egressPacketsTransferred = egressPacketsTransferred;
         this.ingressBytesTransferred = ingressBytesTransferred;

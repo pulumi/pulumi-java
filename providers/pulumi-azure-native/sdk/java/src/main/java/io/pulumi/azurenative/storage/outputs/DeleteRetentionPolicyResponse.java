@@ -23,10 +23,10 @@ public final class DeleteRetentionPolicyResponse {
      */
     private final @Nullable Boolean enabled;
 
-    @OutputCustomType.Constructor({"days","enabled"})
+    @OutputCustomType.Constructor
     private DeleteRetentionPolicyResponse(
-        @Nullable Integer days,
-        @Nullable Boolean enabled) {
+        @OutputCustomType.Parameter("days") @Nullable Integer days,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled) {
         this.days = days;
         this.enabled = enabled;
     }

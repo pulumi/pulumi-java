@@ -64,17 +64,17 @@ public final class CosmosDbMongoDbApiCollectionDatasetResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"annotations","collection","description","folder","linkedServiceName","parameters","schema","structure","type"})
+    @OutputCustomType.Constructor
     private CosmosDbMongoDbApiCollectionDatasetResponse(
-        @Nullable List<Object> annotations,
-        Object collection,
-        @Nullable String description,
-        @Nullable DatasetResponseFolder folder,
-        LinkedServiceReferenceResponse linkedServiceName,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Object schema,
-        @Nullable Object structure,
-        String type) {
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("collection") Object collection,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("folder") @Nullable DatasetResponseFolder folder,
+        @OutputCustomType.Parameter("linkedServiceName") LinkedServiceReferenceResponse linkedServiceName,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("schema") @Nullable Object schema,
+        @OutputCustomType.Parameter("structure") @Nullable Object structure,
+        @OutputCustomType.Parameter("type") String type) {
         this.annotations = annotations;
         this.collection = collection;
         this.description = description;

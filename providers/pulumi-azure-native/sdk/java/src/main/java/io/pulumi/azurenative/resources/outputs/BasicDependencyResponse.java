@@ -27,11 +27,11 @@ public final class BasicDependencyResponse {
      */
     private final @Nullable String resourceType;
 
-    @OutputCustomType.Constructor({"id","resourceName","resourceType"})
+    @OutputCustomType.Constructor
     private BasicDependencyResponse(
-        @Nullable String id,
-        @Nullable String resourceName,
-        @Nullable String resourceType) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("resourceName") @Nullable String resourceName,
+        @OutputCustomType.Parameter("resourceType") @Nullable String resourceType) {
         this.id = id;
         this.resourceName = resourceName;
         this.resourceType = resourceType;

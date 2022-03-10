@@ -26,11 +26,11 @@ public final class WaitStatisticsResponse {
      */
     private final String waitType;
 
-    @OutputCustomType.Constructor({"waitCount","waitTimeMs","waitType"})
+    @OutputCustomType.Constructor
     private WaitStatisticsResponse(
-        Double waitCount,
-        Double waitTimeMs,
-        String waitType) {
+        @OutputCustomType.Parameter("waitCount") Double waitCount,
+        @OutputCustomType.Parameter("waitTimeMs") Double waitTimeMs,
+        @OutputCustomType.Parameter("waitType") String waitType) {
         this.waitCount = waitCount;
         this.waitTimeMs = waitTimeMs;
         this.waitType = waitType;

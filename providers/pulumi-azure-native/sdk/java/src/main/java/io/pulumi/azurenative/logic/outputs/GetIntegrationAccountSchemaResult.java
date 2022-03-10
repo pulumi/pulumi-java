@@ -90,23 +90,23 @@ public final class GetIntegrationAccountSchemaResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"changedTime","content","contentLink","contentType","createdTime","documentName","fileName","id","location","metadata","name","schemaType","tags","targetNamespace","type"})
+    @OutputCustomType.Constructor
     private GetIntegrationAccountSchemaResult(
-        String changedTime,
-        @Nullable String content,
-        ContentLinkResponse contentLink,
-        @Nullable String contentType,
-        String createdTime,
-        @Nullable String documentName,
-        @Nullable String fileName,
-        String id,
-        @Nullable String location,
-        @Nullable Object metadata,
-        String name,
-        String schemaType,
-        @Nullable Map<String,String> tags,
-        @Nullable String targetNamespace,
-        String type) {
+        @OutputCustomType.Parameter("changedTime") String changedTime,
+        @OutputCustomType.Parameter("content") @Nullable String content,
+        @OutputCustomType.Parameter("contentLink") ContentLinkResponse contentLink,
+        @OutputCustomType.Parameter("contentType") @Nullable String contentType,
+        @OutputCustomType.Parameter("createdTime") String createdTime,
+        @OutputCustomType.Parameter("documentName") @Nullable String documentName,
+        @OutputCustomType.Parameter("fileName") @Nullable String fileName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("metadata") @Nullable Object metadata,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("schemaType") String schemaType,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("targetNamespace") @Nullable String targetNamespace,
+        @OutputCustomType.Parameter("type") String type) {
         this.changedTime = changedTime;
         this.content = content;
         this.contentLink = contentLink;

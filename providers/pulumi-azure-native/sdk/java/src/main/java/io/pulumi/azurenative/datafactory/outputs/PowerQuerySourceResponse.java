@@ -50,15 +50,15 @@ public final class PowerQuerySourceResponse {
      */
     private final @Nullable String script;
 
-    @OutputCustomType.Constructor({"dataset","description","flowlet","linkedService","name","schemaLinkedService","script"})
+    @OutputCustomType.Constructor
     private PowerQuerySourceResponse(
-        @Nullable DatasetReferenceResponse dataset,
-        @Nullable String description,
-        @Nullable DataFlowReferenceResponse flowlet,
-        @Nullable LinkedServiceReferenceResponse linkedService,
-        String name,
-        @Nullable LinkedServiceReferenceResponse schemaLinkedService,
-        @Nullable String script) {
+        @OutputCustomType.Parameter("dataset") @Nullable DatasetReferenceResponse dataset,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("flowlet") @Nullable DataFlowReferenceResponse flowlet,
+        @OutputCustomType.Parameter("linkedService") @Nullable LinkedServiceReferenceResponse linkedService,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("schemaLinkedService") @Nullable LinkedServiceReferenceResponse schemaLinkedService,
+        @OutputCustomType.Parameter("script") @Nullable String script) {
         this.dataset = dataset;
         this.description = description;
         this.flowlet = flowlet;

@@ -121,27 +121,27 @@ public final class GetRecordSetResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"aRecords","aaaaRecords","caaRecords","cnameRecord","etag","fqdn","id","metadata","mxRecords","name","nsRecords","provisioningState","ptrRecords","soaRecord","srvRecords","targetResource","ttl","txtRecords","type"})
+    @OutputCustomType.Constructor
     private GetRecordSetResult(
-        @Nullable List<ARecordResponse> aRecords,
-        @Nullable List<AaaaRecordResponse> aaaaRecords,
-        @Nullable List<CaaRecordResponse> caaRecords,
-        @Nullable CnameRecordResponse cnameRecord,
-        @Nullable String etag,
-        String fqdn,
-        String id,
-        @Nullable Map<String,String> metadata,
-        @Nullable List<MxRecordResponse> mxRecords,
-        String name,
-        @Nullable List<NsRecordResponse> nsRecords,
-        String provisioningState,
-        @Nullable List<PtrRecordResponse> ptrRecords,
-        @Nullable SoaRecordResponse soaRecord,
-        @Nullable List<SrvRecordResponse> srvRecords,
-        @Nullable SubResourceResponse targetResource,
-        @Nullable Double ttl,
-        @Nullable List<TxtRecordResponse> txtRecords,
-        String type) {
+        @OutputCustomType.Parameter("aRecords") @Nullable List<ARecordResponse> aRecords,
+        @OutputCustomType.Parameter("aaaaRecords") @Nullable List<AaaaRecordResponse> aaaaRecords,
+        @OutputCustomType.Parameter("caaRecords") @Nullable List<CaaRecordResponse> caaRecords,
+        @OutputCustomType.Parameter("cnameRecord") @Nullable CnameRecordResponse cnameRecord,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("fqdn") String fqdn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("metadata") @Nullable Map<String,String> metadata,
+        @OutputCustomType.Parameter("mxRecords") @Nullable List<MxRecordResponse> mxRecords,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nsRecords") @Nullable List<NsRecordResponse> nsRecords,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("ptrRecords") @Nullable List<PtrRecordResponse> ptrRecords,
+        @OutputCustomType.Parameter("soaRecord") @Nullable SoaRecordResponse soaRecord,
+        @OutputCustomType.Parameter("srvRecords") @Nullable List<SrvRecordResponse> srvRecords,
+        @OutputCustomType.Parameter("targetResource") @Nullable SubResourceResponse targetResource,
+        @OutputCustomType.Parameter("ttl") @Nullable Double ttl,
+        @OutputCustomType.Parameter("txtRecords") @Nullable List<TxtRecordResponse> txtRecords,
+        @OutputCustomType.Parameter("type") String type) {
         this.aRecords = aRecords;
         this.aaaaRecords = aaaaRecords;
         this.caaRecords = caaRecords;

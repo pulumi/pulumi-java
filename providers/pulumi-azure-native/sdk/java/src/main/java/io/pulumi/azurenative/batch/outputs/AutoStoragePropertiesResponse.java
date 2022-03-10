@@ -20,10 +20,10 @@ public final class AutoStoragePropertiesResponse {
      */
     private final String storageAccountId;
 
-    @OutputCustomType.Constructor({"lastKeySync","storageAccountId"})
+    @OutputCustomType.Constructor
     private AutoStoragePropertiesResponse(
-        String lastKeySync,
-        String storageAccountId) {
+        @OutputCustomType.Parameter("lastKeySync") String lastKeySync,
+        @OutputCustomType.Parameter("storageAccountId") String storageAccountId) {
         this.lastKeySync = lastKeySync;
         this.storageAccountId = storageAccountId;
     }

@@ -54,15 +54,15 @@ public final class FirewallPolicyNatRuleResponse {
      */
     private final @Nullable String translatedPort;
 
-    @OutputCustomType.Constructor({"action","name","priority","ruleCondition","ruleType","translatedAddress","translatedPort"})
+    @OutputCustomType.Constructor
     private FirewallPolicyNatRuleResponse(
-        @Nullable FirewallPolicyNatRuleActionResponse action,
-        @Nullable String name,
-        @Nullable Integer priority,
-        @Nullable Object ruleCondition,
-        String ruleType,
-        @Nullable String translatedAddress,
-        @Nullable String translatedPort) {
+        @OutputCustomType.Parameter("action") @Nullable FirewallPolicyNatRuleActionResponse action,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
+        @OutputCustomType.Parameter("ruleCondition") @Nullable Object ruleCondition,
+        @OutputCustomType.Parameter("ruleType") String ruleType,
+        @OutputCustomType.Parameter("translatedAddress") @Nullable String translatedAddress,
+        @OutputCustomType.Parameter("translatedPort") @Nullable String translatedPort) {
         this.action = action;
         this.name = name;
         this.priority = priority;

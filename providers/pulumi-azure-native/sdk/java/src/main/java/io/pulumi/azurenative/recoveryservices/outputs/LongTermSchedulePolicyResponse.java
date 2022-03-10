@@ -16,8 +16,8 @@ public final class LongTermSchedulePolicyResponse {
      */
     private final String schedulePolicyType;
 
-    @OutputCustomType.Constructor({"schedulePolicyType"})
-    private LongTermSchedulePolicyResponse(String schedulePolicyType) {
+    @OutputCustomType.Constructor
+    private LongTermSchedulePolicyResponse(@OutputCustomType.Parameter("schedulePolicyType") String schedulePolicyType) {
         this.schedulePolicyType = schedulePolicyType;
     }
 

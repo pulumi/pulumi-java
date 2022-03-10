@@ -22,10 +22,10 @@ public final class ListWorkspaceKeysResult {
      */
     private final @Nullable String secondaryToken;
 
-    @OutputCustomType.Constructor({"primaryToken","secondaryToken"})
+    @OutputCustomType.Constructor
     private ListWorkspaceKeysResult(
-        @Nullable String primaryToken,
-        @Nullable String secondaryToken) {
+        @OutputCustomType.Parameter("primaryToken") @Nullable String primaryToken,
+        @OutputCustomType.Parameter("secondaryToken") @Nullable String secondaryToken) {
         this.primaryToken = primaryToken;
         this.secondaryToken = secondaryToken;
     }

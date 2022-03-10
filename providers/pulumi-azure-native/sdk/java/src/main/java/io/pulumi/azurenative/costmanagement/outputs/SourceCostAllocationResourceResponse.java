@@ -26,11 +26,11 @@ public final class SourceCostAllocationResourceResponse {
      */
     private final List<String> values;
 
-    @OutputCustomType.Constructor({"name","resourceType","values"})
+    @OutputCustomType.Constructor
     private SourceCostAllocationResourceResponse(
-        String name,
-        String resourceType,
-        List<String> values) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("resourceType") String resourceType,
+        @OutputCustomType.Parameter("values") List<String> values) {
         this.name = name;
         this.resourceType = resourceType;
         this.values = values;

@@ -42,14 +42,14 @@ public final class GetNamespaceIpFilterRuleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"action","filterName","id","ipMask","name","type"})
+    @OutputCustomType.Constructor
     private GetNamespaceIpFilterRuleResult(
-        @Nullable String action,
-        @Nullable String filterName,
-        String id,
-        @Nullable String ipMask,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("action") @Nullable String action,
+        @OutputCustomType.Parameter("filterName") @Nullable String filterName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ipMask") @Nullable String ipMask,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.action = action;
         this.filterName = filterName;
         this.id = id;

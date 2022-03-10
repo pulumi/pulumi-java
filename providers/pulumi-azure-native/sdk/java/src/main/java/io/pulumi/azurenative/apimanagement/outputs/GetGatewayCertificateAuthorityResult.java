@@ -33,12 +33,12 @@ public final class GetGatewayCertificateAuthorityResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","isTrusted","name","type"})
+    @OutputCustomType.Constructor
     private GetGatewayCertificateAuthorityResult(
-        String id,
-        @Nullable Boolean isTrusted,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isTrusted") @Nullable Boolean isTrusted,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.isTrusted = isTrusted;
         this.name = name;

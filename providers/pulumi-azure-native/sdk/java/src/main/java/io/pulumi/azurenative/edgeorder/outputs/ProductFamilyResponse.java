@@ -65,17 +65,17 @@ public final class ProductFamilyResponse {
      */
     private final @Nullable List<ResourceProviderDetailsResponse> resourceProviderDetails;
 
-    @OutputCustomType.Constructor({"availabilityInformation","costInformation","description","displayName","filterableProperties","hierarchyInformation","imageInformation","productLines","resourceProviderDetails"})
+    @OutputCustomType.Constructor
     private ProductFamilyResponse(
-        AvailabilityInformationResponse availabilityInformation,
-        CostInformationResponse costInformation,
-        DescriptionResponse description,
-        String displayName,
-        List<FilterablePropertyResponse> filterableProperties,
-        HierarchyInformationResponse hierarchyInformation,
-        List<ImageInformationResponse> imageInformation,
-        List<ProductLineResponse> productLines,
-        @Nullable List<ResourceProviderDetailsResponse> resourceProviderDetails) {
+        @OutputCustomType.Parameter("availabilityInformation") AvailabilityInformationResponse availabilityInformation,
+        @OutputCustomType.Parameter("costInformation") CostInformationResponse costInformation,
+        @OutputCustomType.Parameter("description") DescriptionResponse description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("filterableProperties") List<FilterablePropertyResponse> filterableProperties,
+        @OutputCustomType.Parameter("hierarchyInformation") HierarchyInformationResponse hierarchyInformation,
+        @OutputCustomType.Parameter("imageInformation") List<ImageInformationResponse> imageInformation,
+        @OutputCustomType.Parameter("productLines") List<ProductLineResponse> productLines,
+        @OutputCustomType.Parameter("resourceProviderDetails") @Nullable List<ResourceProviderDetailsResponse> resourceProviderDetails) {
         this.availabilityInformation = availabilityInformation;
         this.costInformation = costInformation;
         this.description = description;

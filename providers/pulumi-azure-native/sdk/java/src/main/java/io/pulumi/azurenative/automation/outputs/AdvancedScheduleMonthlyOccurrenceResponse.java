@@ -23,10 +23,10 @@ public final class AdvancedScheduleMonthlyOccurrenceResponse {
      */
     private final @Nullable Integer occurrence;
 
-    @OutputCustomType.Constructor({"day","occurrence"})
+    @OutputCustomType.Constructor
     private AdvancedScheduleMonthlyOccurrenceResponse(
-        @Nullable String day,
-        @Nullable Integer occurrence) {
+        @OutputCustomType.Parameter("day") @Nullable String day,
+        @OutputCustomType.Parameter("occurrence") @Nullable Integer occurrence) {
         this.day = day;
         this.occurrence = occurrence;
     }

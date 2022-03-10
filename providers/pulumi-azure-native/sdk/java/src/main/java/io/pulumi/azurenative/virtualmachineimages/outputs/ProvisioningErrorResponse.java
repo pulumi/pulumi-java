@@ -22,10 +22,10 @@ public final class ProvisioningErrorResponse {
      */
     private final @Nullable String provisioningErrorCode;
 
-    @OutputCustomType.Constructor({"message","provisioningErrorCode"})
+    @OutputCustomType.Constructor
     private ProvisioningErrorResponse(
-        @Nullable String message,
-        @Nullable String provisioningErrorCode) {
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("provisioningErrorCode") @Nullable String provisioningErrorCode) {
         this.message = message;
         this.provisioningErrorCode = provisioningErrorCode;
     }

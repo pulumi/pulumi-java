@@ -35,12 +35,12 @@ public final class WebBasicAuthenticationResponse {
      */
     private final Object username;
 
-    @OutputCustomType.Constructor({"authenticationType","password","url","username"})
+    @OutputCustomType.Constructor
     private WebBasicAuthenticationResponse(
-        String authenticationType,
-        Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        Object url,
-        Object username) {
+        @OutputCustomType.Parameter("authenticationType") String authenticationType,
+        @OutputCustomType.Parameter("password") Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
+        @OutputCustomType.Parameter("url") Object url,
+        @OutputCustomType.Parameter("username") Object username) {
         this.authenticationType = authenticationType;
         this.password = password;
         this.url = url;

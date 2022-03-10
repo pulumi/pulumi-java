@@ -41,14 +41,14 @@ public final class InMageRcmLastAgentUpgradeErrorDetailsResponse {
      */
     private final String recommendedAction;
 
-    @OutputCustomType.Constructor({"errorCode","errorMessage","errorMessageParameters","errorTags","possibleCauses","recommendedAction"})
+    @OutputCustomType.Constructor
     private InMageRcmLastAgentUpgradeErrorDetailsResponse(
-        String errorCode,
-        String errorMessage,
-        Map<String,String> errorMessageParameters,
-        Map<String,String> errorTags,
-        String possibleCauses,
-        String recommendedAction) {
+        @OutputCustomType.Parameter("errorCode") String errorCode,
+        @OutputCustomType.Parameter("errorMessage") String errorMessage,
+        @OutputCustomType.Parameter("errorMessageParameters") Map<String,String> errorMessageParameters,
+        @OutputCustomType.Parameter("errorTags") Map<String,String> errorTags,
+        @OutputCustomType.Parameter("possibleCauses") String possibleCauses,
+        @OutputCustomType.Parameter("recommendedAction") String recommendedAction) {
         this.errorCode = errorCode;
         this.errorMessage = errorMessage;
         this.errorMessageParameters = errorMessageParameters;

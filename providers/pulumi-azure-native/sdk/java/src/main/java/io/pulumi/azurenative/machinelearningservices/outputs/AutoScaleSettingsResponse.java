@@ -38,13 +38,13 @@ public final class AutoScaleSettingsResponse {
      */
     private final @Nullable Integer targetUtilizationPercentage;
 
-    @OutputCustomType.Constructor({"maxInstances","minInstances","pollingInterval","scaleType","targetUtilizationPercentage"})
+    @OutputCustomType.Constructor
     private AutoScaleSettingsResponse(
-        @Nullable Integer maxInstances,
-        @Nullable Integer minInstances,
-        @Nullable String pollingInterval,
-        String scaleType,
-        @Nullable Integer targetUtilizationPercentage) {
+        @OutputCustomType.Parameter("maxInstances") @Nullable Integer maxInstances,
+        @OutputCustomType.Parameter("minInstances") @Nullable Integer minInstances,
+        @OutputCustomType.Parameter("pollingInterval") @Nullable String pollingInterval,
+        @OutputCustomType.Parameter("scaleType") String scaleType,
+        @OutputCustomType.Parameter("targetUtilizationPercentage") @Nullable Integer targetUtilizationPercentage) {
         this.maxInstances = maxInstances;
         this.minInstances = minInstances;
         this.pollingInterval = pollingInterval;

@@ -58,17 +58,17 @@ public final class GetAnalyticsItemResult {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"content","id","name","properties","scope","timeCreated","timeModified","type","version"})
+    @OutputCustomType.Constructor
     private GetAnalyticsItemResult(
-        @Nullable String content,
-        @Nullable String id,
-        @Nullable String name,
-        ApplicationInsightsComponentAnalyticsItemPropertiesResponse properties,
-        @Nullable String scope,
-        String timeCreated,
-        String timeModified,
-        @Nullable String type,
-        String version) {
+        @OutputCustomType.Parameter("content") @Nullable String content,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("properties") ApplicationInsightsComponentAnalyticsItemPropertiesResponse properties,
+        @OutputCustomType.Parameter("scope") @Nullable String scope,
+        @OutputCustomType.Parameter("timeCreated") String timeCreated,
+        @OutputCustomType.Parameter("timeModified") String timeModified,
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("version") String version) {
         this.content = content;
         this.id = id;
         this.name = name;

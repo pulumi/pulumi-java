@@ -38,13 +38,13 @@ public final class GuestOSCustomizationResponse {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor({"dnsServers","hostName","password","policyId","username"})
+    @OutputCustomType.Constructor
     private GuestOSCustomizationResponse(
-        @Nullable List<String> dnsServers,
-        @Nullable String hostName,
-        @Nullable String password,
-        @Nullable String policyId,
-        @Nullable String username) {
+        @OutputCustomType.Parameter("dnsServers") @Nullable List<String> dnsServers,
+        @OutputCustomType.Parameter("hostName") @Nullable String hostName,
+        @OutputCustomType.Parameter("password") @Nullable String password,
+        @OutputCustomType.Parameter("policyId") @Nullable String policyId,
+        @OutputCustomType.Parameter("username") @Nullable String username) {
         this.dnsServers = dnsServers;
         this.hostName = hostName;
         this.password = password;

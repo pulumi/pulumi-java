@@ -47,14 +47,14 @@ public final class VideoSinkResponse {
      */
     private final @Nullable VideoPublishingOptionsResponse videoPublishingOptions;
 
-    @OutputCustomType.Constructor({"inputs","name","type","videoCreationProperties","videoName","videoPublishingOptions"})
+    @OutputCustomType.Constructor
     private VideoSinkResponse(
-        List<NodeInputResponse> inputs,
-        String name,
-        String type,
-        @Nullable VideoCreationPropertiesResponse videoCreationProperties,
-        String videoName,
-        @Nullable VideoPublishingOptionsResponse videoPublishingOptions) {
+        @OutputCustomType.Parameter("inputs") List<NodeInputResponse> inputs,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("videoCreationProperties") @Nullable VideoCreationPropertiesResponse videoCreationProperties,
+        @OutputCustomType.Parameter("videoName") String videoName,
+        @OutputCustomType.Parameter("videoPublishingOptions") @Nullable VideoPublishingOptionsResponse videoPublishingOptions) {
         this.inputs = inputs;
         this.name = name;
         this.type = type;

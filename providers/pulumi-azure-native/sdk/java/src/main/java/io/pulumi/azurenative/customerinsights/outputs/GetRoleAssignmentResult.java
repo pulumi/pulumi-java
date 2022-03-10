@@ -131,31 +131,31 @@ public final class GetRoleAssignmentResult {
      */
     private final @Nullable ResourceSetDescriptionResponse widgetTypes;
 
-    @OutputCustomType.Constructor({"assignmentName","conflationPolicies","connectors","description","displayName","id","interactions","kpis","links","name","principals","profiles","provisioningState","relationshipLinks","relationships","role","roleAssignments","sasPolicies","segments","tenantId","type","views","widgetTypes"})
+    @OutputCustomType.Constructor
     private GetRoleAssignmentResult(
-        String assignmentName,
-        @Nullable ResourceSetDescriptionResponse conflationPolicies,
-        @Nullable ResourceSetDescriptionResponse connectors,
-        @Nullable Map<String,String> description,
-        @Nullable Map<String,String> displayName,
-        String id,
-        @Nullable ResourceSetDescriptionResponse interactions,
-        @Nullable ResourceSetDescriptionResponse kpis,
-        @Nullable ResourceSetDescriptionResponse links,
-        String name,
-        List<AssignmentPrincipalResponse> principals,
-        @Nullable ResourceSetDescriptionResponse profiles,
-        String provisioningState,
-        @Nullable ResourceSetDescriptionResponse relationshipLinks,
-        @Nullable ResourceSetDescriptionResponse relationships,
-        String role,
-        @Nullable ResourceSetDescriptionResponse roleAssignments,
-        @Nullable ResourceSetDescriptionResponse sasPolicies,
-        @Nullable ResourceSetDescriptionResponse segments,
-        String tenantId,
-        String type,
-        @Nullable ResourceSetDescriptionResponse views,
-        @Nullable ResourceSetDescriptionResponse widgetTypes) {
+        @OutputCustomType.Parameter("assignmentName") String assignmentName,
+        @OutputCustomType.Parameter("conflationPolicies") @Nullable ResourceSetDescriptionResponse conflationPolicies,
+        @OutputCustomType.Parameter("connectors") @Nullable ResourceSetDescriptionResponse connectors,
+        @OutputCustomType.Parameter("description") @Nullable Map<String,String> description,
+        @OutputCustomType.Parameter("displayName") @Nullable Map<String,String> displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("interactions") @Nullable ResourceSetDescriptionResponse interactions,
+        @OutputCustomType.Parameter("kpis") @Nullable ResourceSetDescriptionResponse kpis,
+        @OutputCustomType.Parameter("links") @Nullable ResourceSetDescriptionResponse links,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("principals") List<AssignmentPrincipalResponse> principals,
+        @OutputCustomType.Parameter("profiles") @Nullable ResourceSetDescriptionResponse profiles,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("relationshipLinks") @Nullable ResourceSetDescriptionResponse relationshipLinks,
+        @OutputCustomType.Parameter("relationships") @Nullable ResourceSetDescriptionResponse relationships,
+        @OutputCustomType.Parameter("role") String role,
+        @OutputCustomType.Parameter("roleAssignments") @Nullable ResourceSetDescriptionResponse roleAssignments,
+        @OutputCustomType.Parameter("sasPolicies") @Nullable ResourceSetDescriptionResponse sasPolicies,
+        @OutputCustomType.Parameter("segments") @Nullable ResourceSetDescriptionResponse segments,
+        @OutputCustomType.Parameter("tenantId") String tenantId,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("views") @Nullable ResourceSetDescriptionResponse views,
+        @OutputCustomType.Parameter("widgetTypes") @Nullable ResourceSetDescriptionResponse widgetTypes) {
         this.assignmentName = assignmentName;
         this.conflationPolicies = conflationPolicies;
         this.connectors = connectors;

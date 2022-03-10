@@ -23,10 +23,10 @@ public final class MxRecordResponse {
      */
     private final @Nullable Integer preference;
 
-    @OutputCustomType.Constructor({"exchange","preference"})
+    @OutputCustomType.Constructor
     private MxRecordResponse(
-        @Nullable String exchange,
-        @Nullable Integer preference) {
+        @OutputCustomType.Parameter("exchange") @Nullable String exchange,
+        @OutputCustomType.Parameter("preference") @Nullable Integer preference) {
         this.exchange = exchange;
         this.preference = preference;
     }

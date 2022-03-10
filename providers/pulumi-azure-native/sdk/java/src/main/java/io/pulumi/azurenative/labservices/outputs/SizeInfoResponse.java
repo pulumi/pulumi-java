@@ -34,12 +34,12 @@ public final class SizeInfoResponse {
      */
     private final @Nullable Double price;
 
-    @OutputCustomType.Constructor({"computeSize","memory","numberOfCores","price"})
+    @OutputCustomType.Constructor
     private SizeInfoResponse(
-        @Nullable String computeSize,
-        @Nullable Double memory,
-        @Nullable Integer numberOfCores,
-        @Nullable Double price) {
+        @OutputCustomType.Parameter("computeSize") @Nullable String computeSize,
+        @OutputCustomType.Parameter("memory") @Nullable Double memory,
+        @OutputCustomType.Parameter("numberOfCores") @Nullable Integer numberOfCores,
+        @OutputCustomType.Parameter("price") @Nullable Double price) {
         this.computeSize = computeSize;
         this.memory = memory;
         this.numberOfCores = numberOfCores;

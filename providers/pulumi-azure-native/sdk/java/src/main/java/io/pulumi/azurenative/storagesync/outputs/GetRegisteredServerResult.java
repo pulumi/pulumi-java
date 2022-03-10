@@ -138,33 +138,33 @@ public final class GetRegisteredServerResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"agentVersion","agentVersionExpirationDate","agentVersionStatus","clusterId","clusterName","discoveryEndpointUri","friendlyName","id","lastHeartBeat","lastOperationName","lastWorkflowId","managementEndpointUri","monitoringConfiguration","monitoringEndpointUri","name","provisioningState","resourceLocation","serverCertificate","serverId","serverManagementErrorCode","serverOSVersion","serverRole","serviceLocation","storageSyncServiceUid","type"})
+    @OutputCustomType.Constructor
     private GetRegisteredServerResult(
-        @Nullable String agentVersion,
-        String agentVersionExpirationDate,
-        String agentVersionStatus,
-        @Nullable String clusterId,
-        @Nullable String clusterName,
-        @Nullable String discoveryEndpointUri,
-        @Nullable String friendlyName,
-        String id,
-        @Nullable String lastHeartBeat,
-        @Nullable String lastOperationName,
-        @Nullable String lastWorkflowId,
-        @Nullable String managementEndpointUri,
-        @Nullable String monitoringConfiguration,
-        @Nullable String monitoringEndpointUri,
-        String name,
-        @Nullable String provisioningState,
-        @Nullable String resourceLocation,
-        @Nullable String serverCertificate,
-        @Nullable String serverId,
-        @Nullable Integer serverManagementErrorCode,
-        @Nullable String serverOSVersion,
-        @Nullable String serverRole,
-        @Nullable String serviceLocation,
-        @Nullable String storageSyncServiceUid,
-        String type) {
+        @OutputCustomType.Parameter("agentVersion") @Nullable String agentVersion,
+        @OutputCustomType.Parameter("agentVersionExpirationDate") String agentVersionExpirationDate,
+        @OutputCustomType.Parameter("agentVersionStatus") String agentVersionStatus,
+        @OutputCustomType.Parameter("clusterId") @Nullable String clusterId,
+        @OutputCustomType.Parameter("clusterName") @Nullable String clusterName,
+        @OutputCustomType.Parameter("discoveryEndpointUri") @Nullable String discoveryEndpointUri,
+        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastHeartBeat") @Nullable String lastHeartBeat,
+        @OutputCustomType.Parameter("lastOperationName") @Nullable String lastOperationName,
+        @OutputCustomType.Parameter("lastWorkflowId") @Nullable String lastWorkflowId,
+        @OutputCustomType.Parameter("managementEndpointUri") @Nullable String managementEndpointUri,
+        @OutputCustomType.Parameter("monitoringConfiguration") @Nullable String monitoringConfiguration,
+        @OutputCustomType.Parameter("monitoringEndpointUri") @Nullable String monitoringEndpointUri,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("resourceLocation") @Nullable String resourceLocation,
+        @OutputCustomType.Parameter("serverCertificate") @Nullable String serverCertificate,
+        @OutputCustomType.Parameter("serverId") @Nullable String serverId,
+        @OutputCustomType.Parameter("serverManagementErrorCode") @Nullable Integer serverManagementErrorCode,
+        @OutputCustomType.Parameter("serverOSVersion") @Nullable String serverOSVersion,
+        @OutputCustomType.Parameter("serverRole") @Nullable String serverRole,
+        @OutputCustomType.Parameter("serviceLocation") @Nullable String serviceLocation,
+        @OutputCustomType.Parameter("storageSyncServiceUid") @Nullable String storageSyncServiceUid,
+        @OutputCustomType.Parameter("type") String type) {
         this.agentVersion = agentVersion;
         this.agentVersionExpirationDate = agentVersionExpirationDate;
         this.agentVersionStatus = agentVersionStatus;

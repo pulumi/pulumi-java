@@ -29,12 +29,12 @@ public final class DefaultRolloutSpecificationResponseProviderRegistration {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","properties","type"})
+    @OutputCustomType.Constructor
     private DefaultRolloutSpecificationResponseProviderRegistration(
-        String id,
-        String name,
-        @Nullable ProviderRegistrationResponseProperties properties,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") @Nullable ProviderRegistrationResponseProperties properties,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.properties = properties;

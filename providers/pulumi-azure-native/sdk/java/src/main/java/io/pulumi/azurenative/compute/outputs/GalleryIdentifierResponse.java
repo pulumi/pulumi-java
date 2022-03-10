@@ -15,8 +15,8 @@ public final class GalleryIdentifierResponse {
      */
     private final String uniqueName;
 
-    @OutputCustomType.Constructor({"uniqueName"})
-    private GalleryIdentifierResponse(String uniqueName) {
+    @OutputCustomType.Constructor
+    private GalleryIdentifierResponse(@OutputCustomType.Parameter("uniqueName") String uniqueName) {
         this.uniqueName = uniqueName;
     }
 

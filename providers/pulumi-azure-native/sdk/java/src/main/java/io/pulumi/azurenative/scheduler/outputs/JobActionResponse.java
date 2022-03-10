@@ -53,15 +53,15 @@ public final class JobActionResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"errorAction","queueMessage","request","retryPolicy","serviceBusQueueMessage","serviceBusTopicMessage","type"})
+    @OutputCustomType.Constructor
     private JobActionResponse(
-        @Nullable JobErrorActionResponse errorAction,
-        @Nullable StorageQueueMessageResponse queueMessage,
-        @Nullable HttpRequestResponse request,
-        @Nullable RetryPolicyResponse retryPolicy,
-        @Nullable ServiceBusQueueMessageResponse serviceBusQueueMessage,
-        @Nullable ServiceBusTopicMessageResponse serviceBusTopicMessage,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("errorAction") @Nullable JobErrorActionResponse errorAction,
+        @OutputCustomType.Parameter("queueMessage") @Nullable StorageQueueMessageResponse queueMessage,
+        @OutputCustomType.Parameter("request") @Nullable HttpRequestResponse request,
+        @OutputCustomType.Parameter("retryPolicy") @Nullable RetryPolicyResponse retryPolicy,
+        @OutputCustomType.Parameter("serviceBusQueueMessage") @Nullable ServiceBusQueueMessageResponse serviceBusQueueMessage,
+        @OutputCustomType.Parameter("serviceBusTopicMessage") @Nullable ServiceBusTopicMessageResponse serviceBusTopicMessage,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.errorAction = errorAction;
         this.queueMessage = queueMessage;
         this.request = request;

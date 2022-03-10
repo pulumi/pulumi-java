@@ -46,14 +46,14 @@ public final class OverrideTaskStepPropertiesResponse {
      */
     private final @Nullable List<SetValueResponse> values;
 
-    @OutputCustomType.Constructor({"arguments","contextPath","file","target","updateTriggerToken","values"})
+    @OutputCustomType.Constructor
     private OverrideTaskStepPropertiesResponse(
-        @Nullable List<ArgumentResponse> arguments,
-        @Nullable String contextPath,
-        @Nullable String file,
-        @Nullable String target,
-        @Nullable String updateTriggerToken,
-        @Nullable List<SetValueResponse> values) {
+        @OutputCustomType.Parameter("arguments") @Nullable List<ArgumentResponse> arguments,
+        @OutputCustomType.Parameter("contextPath") @Nullable String contextPath,
+        @OutputCustomType.Parameter("file") @Nullable String file,
+        @OutputCustomType.Parameter("target") @Nullable String target,
+        @OutputCustomType.Parameter("updateTriggerToken") @Nullable String updateTriggerToken,
+        @OutputCustomType.Parameter("values") @Nullable List<SetValueResponse> values) {
         this.arguments = arguments;
         this.contextPath = contextPath;
         this.file = file;

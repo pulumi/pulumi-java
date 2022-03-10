@@ -27,11 +27,11 @@ public final class MigrateSqlServerSqlMITaskOutputErrorResponse {
      */
     private final String resultType;
 
-    @OutputCustomType.Constructor({"error","id","resultType"})
+    @OutputCustomType.Constructor
     private MigrateSqlServerSqlMITaskOutputErrorResponse(
-        ReportableExceptionResponse error,
-        String id,
-        String resultType) {
+        @OutputCustomType.Parameter("error") ReportableExceptionResponse error,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("resultType") String resultType) {
         this.error = error;
         this.id = id;
         this.resultType = resultType;

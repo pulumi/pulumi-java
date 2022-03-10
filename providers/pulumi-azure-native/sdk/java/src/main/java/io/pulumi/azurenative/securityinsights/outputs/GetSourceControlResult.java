@@ -95,24 +95,24 @@ public final class GetSourceControlResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"contentTypes","createdAt","createdBy","createdByType","description","displayName","etag","id","lastModifiedAt","lastModifiedBy","lastModifiedByType","name","repoType","repository","systemData","type"})
+    @OutputCustomType.Constructor
     private GetSourceControlResult(
-        List<String> contentTypes,
-        @Nullable String createdAt,
-        @Nullable String createdBy,
-        @Nullable String createdByType,
-        @Nullable String description,
-        String displayName,
-        @Nullable String etag,
-        String id,
-        @Nullable String lastModifiedAt,
-        @Nullable String lastModifiedBy,
-        @Nullable String lastModifiedByType,
-        String name,
-        String repoType,
-        RepositoryResponse repository,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("contentTypes") List<String> contentTypes,
+        @OutputCustomType.Parameter("createdAt") @Nullable String createdAt,
+        @OutputCustomType.Parameter("createdBy") @Nullable String createdBy,
+        @OutputCustomType.Parameter("createdByType") @Nullable String createdByType,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastModifiedAt") @Nullable String lastModifiedAt,
+        @OutputCustomType.Parameter("lastModifiedBy") @Nullable String lastModifiedBy,
+        @OutputCustomType.Parameter("lastModifiedByType") @Nullable String lastModifiedByType,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("repoType") String repoType,
+        @OutputCustomType.Parameter("repository") RepositoryResponse repository,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.contentTypes = contentTypes;
         this.createdAt = createdAt;
         this.createdBy = createdBy;

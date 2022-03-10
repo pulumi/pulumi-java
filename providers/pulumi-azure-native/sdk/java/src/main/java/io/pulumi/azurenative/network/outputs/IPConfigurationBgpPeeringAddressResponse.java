@@ -33,12 +33,12 @@ public final class IPConfigurationBgpPeeringAddressResponse {
      */
     private final List<String> tunnelIpAddresses;
 
-    @OutputCustomType.Constructor({"customBgpIpAddresses","defaultBgpIpAddresses","ipconfigurationId","tunnelIpAddresses"})
+    @OutputCustomType.Constructor
     private IPConfigurationBgpPeeringAddressResponse(
-        @Nullable List<String> customBgpIpAddresses,
-        List<String> defaultBgpIpAddresses,
-        @Nullable String ipconfigurationId,
-        List<String> tunnelIpAddresses) {
+        @OutputCustomType.Parameter("customBgpIpAddresses") @Nullable List<String> customBgpIpAddresses,
+        @OutputCustomType.Parameter("defaultBgpIpAddresses") List<String> defaultBgpIpAddresses,
+        @OutputCustomType.Parameter("ipconfigurationId") @Nullable String ipconfigurationId,
+        @OutputCustomType.Parameter("tunnelIpAddresses") List<String> tunnelIpAddresses) {
         this.customBgpIpAddresses = customBgpIpAddresses;
         this.defaultBgpIpAddresses = defaultBgpIpAddresses;
         this.ipconfigurationId = ipconfigurationId;

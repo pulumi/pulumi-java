@@ -44,14 +44,14 @@ public final class ServiceBusTopicOutputDataSourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"propertyColumns","serviceBusNamespace","sharedAccessPolicyKey","sharedAccessPolicyName","topicName","type"})
+    @OutputCustomType.Constructor
     private ServiceBusTopicOutputDataSourceResponse(
-        @Nullable List<String> propertyColumns,
-        @Nullable String serviceBusNamespace,
-        @Nullable String sharedAccessPolicyKey,
-        @Nullable String sharedAccessPolicyName,
-        @Nullable String topicName,
-        String type) {
+        @OutputCustomType.Parameter("propertyColumns") @Nullable List<String> propertyColumns,
+        @OutputCustomType.Parameter("serviceBusNamespace") @Nullable String serviceBusNamespace,
+        @OutputCustomType.Parameter("sharedAccessPolicyKey") @Nullable String sharedAccessPolicyKey,
+        @OutputCustomType.Parameter("sharedAccessPolicyName") @Nullable String sharedAccessPolicyName,
+        @OutputCustomType.Parameter("topicName") @Nullable String topicName,
+        @OutputCustomType.Parameter("type") String type) {
         this.propertyColumns = propertyColumns;
         this.serviceBusNamespace = serviceBusNamespace;
         this.sharedAccessPolicyKey = sharedAccessPolicyKey;

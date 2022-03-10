@@ -48,15 +48,15 @@ public final class AutomationRunbookReceiverResponse {
      */
     private final String webhookResourceId;
 
-    @OutputCustomType.Constructor({"automationAccountId","isGlobalRunbook","name","runbookName","serviceUri","useCommonAlertSchema","webhookResourceId"})
+    @OutputCustomType.Constructor
     private AutomationRunbookReceiverResponse(
-        String automationAccountId,
-        Boolean isGlobalRunbook,
-        @Nullable String name,
-        String runbookName,
-        @Nullable String serviceUri,
-        @Nullable Boolean useCommonAlertSchema,
-        String webhookResourceId) {
+        @OutputCustomType.Parameter("automationAccountId") String automationAccountId,
+        @OutputCustomType.Parameter("isGlobalRunbook") Boolean isGlobalRunbook,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("runbookName") String runbookName,
+        @OutputCustomType.Parameter("serviceUri") @Nullable String serviceUri,
+        @OutputCustomType.Parameter("useCommonAlertSchema") @Nullable Boolean useCommonAlertSchema,
+        @OutputCustomType.Parameter("webhookResourceId") String webhookResourceId) {
         this.automationAccountId = automationAccountId;
         this.isGlobalRunbook = isGlobalRunbook;
         this.name = name;

@@ -20,10 +20,10 @@ public final class VirtualNetworkBgpCommunitiesResponse {
      */
     private final String virtualNetworkCommunity;
 
-    @OutputCustomType.Constructor({"regionalCommunity","virtualNetworkCommunity"})
+    @OutputCustomType.Constructor
     private VirtualNetworkBgpCommunitiesResponse(
-        String regionalCommunity,
-        String virtualNetworkCommunity) {
+        @OutputCustomType.Parameter("regionalCommunity") String regionalCommunity,
+        @OutputCustomType.Parameter("virtualNetworkCommunity") String virtualNetworkCommunity) {
         this.regionalCommunity = regionalCommunity;
         this.virtualNetworkCommunity = virtualNetworkCommunity;
     }

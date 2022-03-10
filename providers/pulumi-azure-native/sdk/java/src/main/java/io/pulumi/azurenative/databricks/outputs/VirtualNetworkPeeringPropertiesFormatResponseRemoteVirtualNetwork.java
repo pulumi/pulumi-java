@@ -17,8 +17,8 @@ public final class VirtualNetworkPeeringPropertiesFormatResponseRemoteVirtualNet
      */
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor({"id"})
-    private VirtualNetworkPeeringPropertiesFormatResponseRemoteVirtualNetwork(@Nullable String id) {
+    @OutputCustomType.Constructor
+    private VirtualNetworkPeeringPropertiesFormatResponseRemoteVirtualNetwork(@OutputCustomType.Parameter("id") @Nullable String id) {
         this.id = id;
     }
 

@@ -24,10 +24,10 @@ public final class IPv4FirewallSettingsResponse {
      */
     private final @Nullable List<IPv4FirewallRuleResponse> firewallRules;
 
-    @OutputCustomType.Constructor({"enablePowerBIService","firewallRules"})
+    @OutputCustomType.Constructor
     private IPv4FirewallSettingsResponse(
-        @Nullable Boolean enablePowerBIService,
-        @Nullable List<IPv4FirewallRuleResponse> firewallRules) {
+        @OutputCustomType.Parameter("enablePowerBIService") @Nullable Boolean enablePowerBIService,
+        @OutputCustomType.Parameter("firewallRules") @Nullable List<IPv4FirewallRuleResponse> firewallRules) {
         this.enablePowerBIService = enablePowerBIService;
         this.firewallRules = firewallRules;
     }

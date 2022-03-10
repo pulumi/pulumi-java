@@ -35,13 +35,13 @@ public final class GetNotebookWorkspaceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","notebookServerEndpoint","status","type"})
+    @OutputCustomType.Constructor
     private GetNotebookWorkspaceResult(
-        String id,
-        String name,
-        String notebookServerEndpoint,
-        String status,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("notebookServerEndpoint") String notebookServerEndpoint,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.notebookServerEndpoint = notebookServerEndpoint;

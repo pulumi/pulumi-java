@@ -28,11 +28,11 @@ public final class StorageAccountResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"id","identity","status"})
+    @OutputCustomType.Constructor
     private StorageAccountResponse(
-        @Nullable String id,
-        @Nullable ResourceIdentityResponse identity,
-        String status) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("identity") @Nullable ResourceIdentityResponse identity,
+        @OutputCustomType.Parameter("status") String status) {
         this.id = id;
         this.identity = identity;
         this.status = status;

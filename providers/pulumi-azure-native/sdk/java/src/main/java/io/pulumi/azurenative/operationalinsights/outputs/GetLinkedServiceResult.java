@@ -48,15 +48,15 @@ public final class GetLinkedServiceResult {
      */
     private final @Nullable String writeAccessResourceId;
 
-    @OutputCustomType.Constructor({"id","name","provisioningState","resourceId","tags","type","writeAccessResourceId"})
+    @OutputCustomType.Constructor
     private GetLinkedServiceResult(
-        String id,
-        String name,
-        @Nullable String provisioningState,
-        @Nullable String resourceId,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable String writeAccessResourceId) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("writeAccessResourceId") @Nullable String writeAccessResourceId) {
         this.id = id;
         this.name = name;
         this.provisioningState = provisioningState;

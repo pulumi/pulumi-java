@@ -83,20 +83,20 @@ public final class CloudServicePropertiesResponse {
      */
     private final @Nullable String upgradeMode;
 
-    @OutputCustomType.Constructor({"allowModelOverride","configuration","configurationUrl","extensionProfile","networkProfile","osProfile","packageUrl","provisioningState","roleProfile","startCloudService","uniqueId","upgradeMode"})
+    @OutputCustomType.Constructor
     private CloudServicePropertiesResponse(
-        @Nullable Boolean allowModelOverride,
-        @Nullable String configuration,
-        @Nullable String configurationUrl,
-        @Nullable CloudServiceExtensionProfileResponse extensionProfile,
-        @Nullable CloudServiceNetworkProfileResponse networkProfile,
-        @Nullable CloudServiceOsProfileResponse osProfile,
-        @Nullable String packageUrl,
-        String provisioningState,
-        @Nullable CloudServiceRoleProfileResponse roleProfile,
-        @Nullable Boolean startCloudService,
-        String uniqueId,
-        @Nullable String upgradeMode) {
+        @OutputCustomType.Parameter("allowModelOverride") @Nullable Boolean allowModelOverride,
+        @OutputCustomType.Parameter("configuration") @Nullable String configuration,
+        @OutputCustomType.Parameter("configurationUrl") @Nullable String configurationUrl,
+        @OutputCustomType.Parameter("extensionProfile") @Nullable CloudServiceExtensionProfileResponse extensionProfile,
+        @OutputCustomType.Parameter("networkProfile") @Nullable CloudServiceNetworkProfileResponse networkProfile,
+        @OutputCustomType.Parameter("osProfile") @Nullable CloudServiceOsProfileResponse osProfile,
+        @OutputCustomType.Parameter("packageUrl") @Nullable String packageUrl,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("roleProfile") @Nullable CloudServiceRoleProfileResponse roleProfile,
+        @OutputCustomType.Parameter("startCloudService") @Nullable Boolean startCloudService,
+        @OutputCustomType.Parameter("uniqueId") String uniqueId,
+        @OutputCustomType.Parameter("upgradeMode") @Nullable String upgradeMode) {
         this.allowModelOverride = allowModelOverride;
         this.configuration = configuration;
         this.configurationUrl = configurationUrl;

@@ -108,26 +108,26 @@ public final class MasterTargetServerResponse {
      */
     private final @Nullable String versionStatus;
 
-    @OutputCustomType.Constructor({"agentExpiryDate","agentVersion","agentVersionDetails","dataStores","diskCount","healthErrors","id","ipAddress","lastHeartbeat","marsAgentExpiryDate","marsAgentVersion","marsAgentVersionDetails","name","osType","osVersion","retentionVolumes","validationErrors","versionStatus"})
+    @OutputCustomType.Constructor
     private MasterTargetServerResponse(
-        @Nullable String agentExpiryDate,
-        @Nullable String agentVersion,
-        @Nullable VersionDetailsResponse agentVersionDetails,
-        @Nullable List<DataStoreResponse> dataStores,
-        @Nullable Integer diskCount,
-        @Nullable List<HealthErrorResponse> healthErrors,
-        @Nullable String id,
-        @Nullable String ipAddress,
-        @Nullable String lastHeartbeat,
-        @Nullable String marsAgentExpiryDate,
-        @Nullable String marsAgentVersion,
-        @Nullable VersionDetailsResponse marsAgentVersionDetails,
-        @Nullable String name,
-        @Nullable String osType,
-        @Nullable String osVersion,
-        @Nullable List<RetentionVolumeResponse> retentionVolumes,
-        @Nullable List<HealthErrorResponse> validationErrors,
-        @Nullable String versionStatus) {
+        @OutputCustomType.Parameter("agentExpiryDate") @Nullable String agentExpiryDate,
+        @OutputCustomType.Parameter("agentVersion") @Nullable String agentVersion,
+        @OutputCustomType.Parameter("agentVersionDetails") @Nullable VersionDetailsResponse agentVersionDetails,
+        @OutputCustomType.Parameter("dataStores") @Nullable List<DataStoreResponse> dataStores,
+        @OutputCustomType.Parameter("diskCount") @Nullable Integer diskCount,
+        @OutputCustomType.Parameter("healthErrors") @Nullable List<HealthErrorResponse> healthErrors,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress,
+        @OutputCustomType.Parameter("lastHeartbeat") @Nullable String lastHeartbeat,
+        @OutputCustomType.Parameter("marsAgentExpiryDate") @Nullable String marsAgentExpiryDate,
+        @OutputCustomType.Parameter("marsAgentVersion") @Nullable String marsAgentVersion,
+        @OutputCustomType.Parameter("marsAgentVersionDetails") @Nullable VersionDetailsResponse marsAgentVersionDetails,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("osType") @Nullable String osType,
+        @OutputCustomType.Parameter("osVersion") @Nullable String osVersion,
+        @OutputCustomType.Parameter("retentionVolumes") @Nullable List<RetentionVolumeResponse> retentionVolumes,
+        @OutputCustomType.Parameter("validationErrors") @Nullable List<HealthErrorResponse> validationErrors,
+        @OutputCustomType.Parameter("versionStatus") @Nullable String versionStatus) {
         this.agentExpiryDate = agentExpiryDate;
         this.agentVersion = agentVersion;
         this.agentVersionDetails = agentVersionDetails;

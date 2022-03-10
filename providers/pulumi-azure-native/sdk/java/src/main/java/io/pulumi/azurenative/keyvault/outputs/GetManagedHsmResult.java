@@ -56,16 +56,16 @@ public final class GetManagedHsmResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","location","name","properties","sku","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetManagedHsmResult(
-        String id,
-        @Nullable String location,
-        String name,
-        ManagedHsmPropertiesResponse properties,
-        @Nullable ManagedHsmSkuResponse sku,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") ManagedHsmPropertiesResponse properties,
+        @OutputCustomType.Parameter("sku") @Nullable ManagedHsmSkuResponse sku,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.location = location;
         this.name = name;

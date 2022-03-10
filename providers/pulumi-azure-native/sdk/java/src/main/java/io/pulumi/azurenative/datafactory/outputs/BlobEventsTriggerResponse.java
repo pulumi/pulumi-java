@@ -67,18 +67,18 @@ public final class BlobEventsTriggerResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"annotations","blobPathBeginsWith","blobPathEndsWith","description","events","ignoreEmptyBlobs","pipelines","runtimeState","scope","type"})
+    @OutputCustomType.Constructor
     private BlobEventsTriggerResponse(
-        @Nullable List<Object> annotations,
-        @Nullable String blobPathBeginsWith,
-        @Nullable String blobPathEndsWith,
-        @Nullable String description,
-        List<String> events,
-        @Nullable Boolean ignoreEmptyBlobs,
-        @Nullable List<TriggerPipelineReferenceResponse> pipelines,
-        String runtimeState,
-        String scope,
-        String type) {
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("blobPathBeginsWith") @Nullable String blobPathBeginsWith,
+        @OutputCustomType.Parameter("blobPathEndsWith") @Nullable String blobPathEndsWith,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("events") List<String> events,
+        @OutputCustomType.Parameter("ignoreEmptyBlobs") @Nullable Boolean ignoreEmptyBlobs,
+        @OutputCustomType.Parameter("pipelines") @Nullable List<TriggerPipelineReferenceResponse> pipelines,
+        @OutputCustomType.Parameter("runtimeState") String runtimeState,
+        @OutputCustomType.Parameter("scope") String scope,
+        @OutputCustomType.Parameter("type") String type) {
         this.annotations = annotations;
         this.blobPathBeginsWith = blobPathBeginsWith;
         this.blobPathEndsWith = blobPathEndsWith;

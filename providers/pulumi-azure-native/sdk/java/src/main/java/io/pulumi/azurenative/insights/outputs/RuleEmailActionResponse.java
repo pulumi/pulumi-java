@@ -30,11 +30,11 @@ public final class RuleEmailActionResponse {
      */
     private final @Nullable Boolean sendToServiceOwners;
 
-    @OutputCustomType.Constructor({"customEmails","odataType","sendToServiceOwners"})
+    @OutputCustomType.Constructor
     private RuleEmailActionResponse(
-        @Nullable List<String> customEmails,
-        String odataType,
-        @Nullable Boolean sendToServiceOwners) {
+        @OutputCustomType.Parameter("customEmails") @Nullable List<String> customEmails,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("sendToServiceOwners") @Nullable Boolean sendToServiceOwners) {
         this.customEmails = customEmails;
         this.odataType = odataType;
         this.sendToServiceOwners = sendToServiceOwners;

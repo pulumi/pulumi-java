@@ -24,10 +24,10 @@ public final class PeriodicModeBackupPolicyResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"periodicModeProperties","type"})
+    @OutputCustomType.Constructor
     private PeriodicModeBackupPolicyResponse(
-        @Nullable PeriodicModePropertiesResponse periodicModeProperties,
-        String type) {
+        @OutputCustomType.Parameter("periodicModeProperties") @Nullable PeriodicModePropertiesResponse periodicModeProperties,
+        @OutputCustomType.Parameter("type") String type) {
         this.periodicModeProperties = periodicModeProperties;
         this.type = type;
     }

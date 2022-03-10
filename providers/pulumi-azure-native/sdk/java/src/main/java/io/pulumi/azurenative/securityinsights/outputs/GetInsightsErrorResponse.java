@@ -27,11 +27,11 @@ public final class GetInsightsErrorResponse {
      */
     private final @Nullable String queryId;
 
-    @OutputCustomType.Constructor({"errorMessage","kind","queryId"})
+    @OutputCustomType.Constructor
     private GetInsightsErrorResponse(
-        String errorMessage,
-        String kind,
-        @Nullable String queryId) {
+        @OutputCustomType.Parameter("errorMessage") String errorMessage,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("queryId") @Nullable String queryId) {
         this.errorMessage = errorMessage;
         this.kind = kind;
         this.queryId = queryId;

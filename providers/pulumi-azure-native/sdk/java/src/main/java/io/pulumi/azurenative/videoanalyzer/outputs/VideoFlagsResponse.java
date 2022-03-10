@@ -25,11 +25,11 @@ public final class VideoFlagsResponse {
      */
     private final Boolean isRecording;
 
-    @OutputCustomType.Constructor({"canStream","hasData","isRecording"})
+    @OutputCustomType.Constructor
     private VideoFlagsResponse(
-        Boolean canStream,
-        Boolean hasData,
-        Boolean isRecording) {
+        @OutputCustomType.Parameter("canStream") Boolean canStream,
+        @OutputCustomType.Parameter("hasData") Boolean hasData,
+        @OutputCustomType.Parameter("isRecording") Boolean isRecording) {
         this.canStream = canStream;
         this.hasData = hasData;
         this.isRecording = isRecording;

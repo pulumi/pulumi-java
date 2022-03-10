@@ -55,17 +55,17 @@ public final class UpgradeDetailsResponse {
      */
     private final String upgradedResourceId;
 
-    @OutputCustomType.Constructor({"endTimeUtc","lastUpdatedTimeUtc","message","operationId","previousResourceId","startTimeUtc","status","triggerType","upgradedResourceId"})
+    @OutputCustomType.Constructor
     private UpgradeDetailsResponse(
-        String endTimeUtc,
-        String lastUpdatedTimeUtc,
-        String message,
-        String operationId,
-        String previousResourceId,
-        String startTimeUtc,
-        String status,
-        String triggerType,
-        String upgradedResourceId) {
+        @OutputCustomType.Parameter("endTimeUtc") String endTimeUtc,
+        @OutputCustomType.Parameter("lastUpdatedTimeUtc") String lastUpdatedTimeUtc,
+        @OutputCustomType.Parameter("message") String message,
+        @OutputCustomType.Parameter("operationId") String operationId,
+        @OutputCustomType.Parameter("previousResourceId") String previousResourceId,
+        @OutputCustomType.Parameter("startTimeUtc") String startTimeUtc,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("triggerType") String triggerType,
+        @OutputCustomType.Parameter("upgradedResourceId") String upgradedResourceId) {
         this.endTimeUtc = endTimeUtc;
         this.lastUpdatedTimeUtc = lastUpdatedTimeUtc;
         this.message = message;

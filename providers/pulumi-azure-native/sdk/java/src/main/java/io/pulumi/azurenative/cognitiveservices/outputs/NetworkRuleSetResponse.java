@@ -30,11 +30,11 @@ public final class NetworkRuleSetResponse {
      */
     private final @Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules;
 
-    @OutputCustomType.Constructor({"defaultAction","ipRules","virtualNetworkRules"})
+    @OutputCustomType.Constructor
     private NetworkRuleSetResponse(
-        @Nullable String defaultAction,
-        @Nullable List<IpRuleResponse> ipRules,
-        @Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules) {
+        @OutputCustomType.Parameter("defaultAction") @Nullable String defaultAction,
+        @OutputCustomType.Parameter("ipRules") @Nullable List<IpRuleResponse> ipRules,
+        @OutputCustomType.Parameter("virtualNetworkRules") @Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules) {
         this.defaultAction = defaultAction;
         this.ipRules = ipRules;
         this.virtualNetworkRules = virtualNetworkRules;

@@ -103,26 +103,26 @@ public final class SelfHostedIntegrationRuntimeNodeResponse {
      */
     private final String versionStatus;
 
-    @OutputCustomType.Constructor({"capabilities","concurrentJobsLimit","expiryTime","hostServiceUri","isActiveDispatcher","lastConnectTime","lastEndUpdateTime","lastStartTime","lastStartUpdateTime","lastStopTime","lastUpdateResult","machineName","maxConcurrentJobs","nodeName","registerTime","status","version","versionStatus"})
+    @OutputCustomType.Constructor
     private SelfHostedIntegrationRuntimeNodeResponse(
-        Map<String,String> capabilities,
-        Integer concurrentJobsLimit,
-        String expiryTime,
-        String hostServiceUri,
-        Boolean isActiveDispatcher,
-        String lastConnectTime,
-        String lastEndUpdateTime,
-        String lastStartTime,
-        String lastStartUpdateTime,
-        String lastStopTime,
-        String lastUpdateResult,
-        String machineName,
-        Integer maxConcurrentJobs,
-        String nodeName,
-        String registerTime,
-        String status,
-        String version,
-        String versionStatus) {
+        @OutputCustomType.Parameter("capabilities") Map<String,String> capabilities,
+        @OutputCustomType.Parameter("concurrentJobsLimit") Integer concurrentJobsLimit,
+        @OutputCustomType.Parameter("expiryTime") String expiryTime,
+        @OutputCustomType.Parameter("hostServiceUri") String hostServiceUri,
+        @OutputCustomType.Parameter("isActiveDispatcher") Boolean isActiveDispatcher,
+        @OutputCustomType.Parameter("lastConnectTime") String lastConnectTime,
+        @OutputCustomType.Parameter("lastEndUpdateTime") String lastEndUpdateTime,
+        @OutputCustomType.Parameter("lastStartTime") String lastStartTime,
+        @OutputCustomType.Parameter("lastStartUpdateTime") String lastStartUpdateTime,
+        @OutputCustomType.Parameter("lastStopTime") String lastStopTime,
+        @OutputCustomType.Parameter("lastUpdateResult") String lastUpdateResult,
+        @OutputCustomType.Parameter("machineName") String machineName,
+        @OutputCustomType.Parameter("maxConcurrentJobs") Integer maxConcurrentJobs,
+        @OutputCustomType.Parameter("nodeName") String nodeName,
+        @OutputCustomType.Parameter("registerTime") String registerTime,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("version") String version,
+        @OutputCustomType.Parameter("versionStatus") String versionStatus) {
         this.capabilities = capabilities;
         this.concurrentJobsLimit = concurrentJobsLimit;
         this.expiryTime = expiryTime;

@@ -20,10 +20,10 @@ public final class VMInfoResponse {
      */
     private final String uuid;
 
-    @OutputCustomType.Constructor({"id","uuid"})
+    @OutputCustomType.Constructor
     private VMInfoResponse(
-        String id,
-        String uuid) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("uuid") String uuid) {
         this.id = id;
         this.uuid = uuid;
     }

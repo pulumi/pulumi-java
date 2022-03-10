@@ -87,22 +87,22 @@ public final class GetDataCollectionEndpointResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"configurationAccess","description","etag","id","immutableId","kind","location","logsIngestion","name","networkAcls","provisioningState","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetDataCollectionEndpointResult(
-        @Nullable DataCollectionEndpointResponseConfigurationAccess configurationAccess,
-        @Nullable String description,
-        String etag,
-        String id,
-        @Nullable String immutableId,
-        @Nullable String kind,
-        String location,
-        @Nullable DataCollectionEndpointResponseLogsIngestion logsIngestion,
-        String name,
-        @Nullable DataCollectionEndpointResponseNetworkAcls networkAcls,
-        String provisioningState,
-        DataCollectionEndpointResourceResponseSystemData systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("configurationAccess") @Nullable DataCollectionEndpointResponseConfigurationAccess configurationAccess,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("immutableId") @Nullable String immutableId,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("logsIngestion") @Nullable DataCollectionEndpointResponseLogsIngestion logsIngestion,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networkAcls") @Nullable DataCollectionEndpointResponseNetworkAcls networkAcls,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("systemData") DataCollectionEndpointResourceResponseSystemData systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.configurationAccess = configurationAccess;
         this.description = description;
         this.etag = etag;

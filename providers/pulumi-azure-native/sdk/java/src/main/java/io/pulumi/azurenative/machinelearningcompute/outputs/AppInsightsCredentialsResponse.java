@@ -22,10 +22,10 @@ public final class AppInsightsCredentialsResponse {
      */
     private final @Nullable String instrumentationKey;
 
-    @OutputCustomType.Constructor({"appId","instrumentationKey"})
+    @OutputCustomType.Constructor
     private AppInsightsCredentialsResponse(
-        @Nullable String appId,
-        @Nullable String instrumentationKey) {
+        @OutputCustomType.Parameter("appId") @Nullable String appId,
+        @OutputCustomType.Parameter("instrumentationKey") @Nullable String instrumentationKey) {
         this.appId = appId;
         this.instrumentationKey = instrumentationKey;
     }

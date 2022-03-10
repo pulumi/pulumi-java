@@ -30,11 +30,11 @@ public final class NetworkConfigurationResponse {
      */
     private final @Nullable String virtualNetworkAddressSpace;
 
-    @OutputCustomType.Constructor({"accessEndpoint","subnets","virtualNetworkAddressSpace"})
+    @OutputCustomType.Constructor
     private NetworkConfigurationResponse(
-        @Nullable IntegrationServiceEnvironmentAccessEndpointResponse accessEndpoint,
-        @Nullable List<ResourceReferenceResponse> subnets,
-        @Nullable String virtualNetworkAddressSpace) {
+        @OutputCustomType.Parameter("accessEndpoint") @Nullable IntegrationServiceEnvironmentAccessEndpointResponse accessEndpoint,
+        @OutputCustomType.Parameter("subnets") @Nullable List<ResourceReferenceResponse> subnets,
+        @OutputCustomType.Parameter("virtualNetworkAddressSpace") @Nullable String virtualNetworkAddressSpace) {
         this.accessEndpoint = accessEndpoint;
         this.subnets = subnets;
         this.virtualNetworkAddressSpace = virtualNetworkAddressSpace;

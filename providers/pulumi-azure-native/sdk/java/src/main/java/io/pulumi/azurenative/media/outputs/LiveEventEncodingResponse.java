@@ -32,12 +32,12 @@ public final class LiveEventEncodingResponse {
      */
     private final @Nullable String stretchMode;
 
-    @OutputCustomType.Constructor({"encodingType","keyFrameInterval","presetName","stretchMode"})
+    @OutputCustomType.Constructor
     private LiveEventEncodingResponse(
-        @Nullable String encodingType,
-        @Nullable String keyFrameInterval,
-        @Nullable String presetName,
-        @Nullable String stretchMode) {
+        @OutputCustomType.Parameter("encodingType") @Nullable String encodingType,
+        @OutputCustomType.Parameter("keyFrameInterval") @Nullable String keyFrameInterval,
+        @OutputCustomType.Parameter("presetName") @Nullable String presetName,
+        @OutputCustomType.Parameter("stretchMode") @Nullable String stretchMode) {
         this.encodingType = encodingType;
         this.keyFrameInterval = keyFrameInterval;
         this.presetName = presetName;

@@ -21,11 +21,11 @@ public final class RecommendationConfigurationPropertiesResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"name","recommendationType","status"})
+    @OutputCustomType.Constructor
     private RecommendationConfigurationPropertiesResponse(
-        String name,
-        String recommendationType,
-        String status) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("recommendationType") String recommendationType,
+        @OutputCustomType.Parameter("status") String status) {
         this.name = name;
         this.recommendationType = recommendationType;
         this.status = status;

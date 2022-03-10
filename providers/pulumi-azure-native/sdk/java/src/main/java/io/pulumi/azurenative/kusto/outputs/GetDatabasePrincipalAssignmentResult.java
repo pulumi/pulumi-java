@@ -62,18 +62,18 @@ public final class GetDatabasePrincipalAssignmentResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","principalId","principalName","principalType","provisioningState","role","tenantId","tenantName","type"})
+    @OutputCustomType.Constructor
     private GetDatabasePrincipalAssignmentResult(
-        String id,
-        String name,
-        String principalId,
-        String principalName,
-        String principalType,
-        String provisioningState,
-        String role,
-        @Nullable String tenantId,
-        String tenantName,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("principalId") String principalId,
+        @OutputCustomType.Parameter("principalName") String principalName,
+        @OutputCustomType.Parameter("principalType") String principalType,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("role") String role,
+        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId,
+        @OutputCustomType.Parameter("tenantName") String tenantName,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.principalId = principalId;

@@ -53,16 +53,16 @@ public final class GetScopeConnectionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"description","etag","id","name","resourceId","systemData","tenantId","type"})
+    @OutputCustomType.Constructor
     private GetScopeConnectionResult(
-        @Nullable String description,
-        String etag,
-        String id,
-        String name,
-        @Nullable String resourceId,
-        SystemDataResponse systemData,
-        @Nullable String tenantId,
-        String type) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId,
+        @OutputCustomType.Parameter("type") String type) {
         this.description = description;
         this.etag = etag;
         this.id = id;

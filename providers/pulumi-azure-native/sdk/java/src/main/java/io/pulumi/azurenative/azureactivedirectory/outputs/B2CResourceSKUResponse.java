@@ -22,10 +22,10 @@ public final class B2CResourceSKUResponse {
      */
     private final @Nullable String tier;
 
-    @OutputCustomType.Constructor({"name","tier"})
+    @OutputCustomType.Constructor
     private B2CResourceSKUResponse(
-        @Nullable String name,
-        @Nullable String tier) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("tier") @Nullable String tier) {
         this.name = name;
         this.tier = tier;
     }

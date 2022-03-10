@@ -21,10 +21,10 @@ public final class AbsoluteClipTimeResponse {
      */
     private final String time;
 
-    @OutputCustomType.Constructor({"odataType","time"})
+    @OutputCustomType.Constructor
     private AbsoluteClipTimeResponse(
-        String odataType,
-        String time) {
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("time") String time) {
         this.odataType = odataType;
         this.time = time;
     }

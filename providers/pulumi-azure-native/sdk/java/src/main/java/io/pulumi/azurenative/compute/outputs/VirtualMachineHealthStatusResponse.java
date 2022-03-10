@@ -15,8 +15,8 @@ public final class VirtualMachineHealthStatusResponse {
      */
     private final InstanceViewStatusResponse status;
 
-    @OutputCustomType.Constructor({"status"})
-    private VirtualMachineHealthStatusResponse(InstanceViewStatusResponse status) {
+    @OutputCustomType.Constructor
+    private VirtualMachineHealthStatusResponse(@OutputCustomType.Parameter("status") InstanceViewStatusResponse status) {
         this.status = status;
     }
 

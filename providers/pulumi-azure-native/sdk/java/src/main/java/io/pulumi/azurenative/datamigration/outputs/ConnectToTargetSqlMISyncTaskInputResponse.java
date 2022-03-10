@@ -21,10 +21,10 @@ public final class ConnectToTargetSqlMISyncTaskInputResponse {
      */
     private final MiSqlConnectionInfoResponse targetConnectionInfo;
 
-    @OutputCustomType.Constructor({"azureApp","targetConnectionInfo"})
+    @OutputCustomType.Constructor
     private ConnectToTargetSqlMISyncTaskInputResponse(
-        AzureActiveDirectoryAppResponse azureApp,
-        MiSqlConnectionInfoResponse targetConnectionInfo) {
+        @OutputCustomType.Parameter("azureApp") AzureActiveDirectoryAppResponse azureApp,
+        @OutputCustomType.Parameter("targetConnectionInfo") MiSqlConnectionInfoResponse targetConnectionInfo) {
         this.azureApp = azureApp;
         this.targetConnectionInfo = targetConnectionInfo;
     }

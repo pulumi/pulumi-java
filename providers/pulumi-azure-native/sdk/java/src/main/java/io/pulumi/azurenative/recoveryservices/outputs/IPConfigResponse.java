@@ -28,11 +28,11 @@ public final class IPConfigResponse {
      */
     private final @Nullable String staticIPAddress;
 
-    @OutputCustomType.Constructor({"lBBackendAddressPoolIds","publicIpAddressId","staticIPAddress"})
+    @OutputCustomType.Constructor
     private IPConfigResponse(
-        @Nullable List<String> lBBackendAddressPoolIds,
-        @Nullable String publicIpAddressId,
-        @Nullable String staticIPAddress) {
+        @OutputCustomType.Parameter("lBBackendAddressPoolIds") @Nullable List<String> lBBackendAddressPoolIds,
+        @OutputCustomType.Parameter("publicIpAddressId") @Nullable String publicIpAddressId,
+        @OutputCustomType.Parameter("staticIPAddress") @Nullable String staticIPAddress) {
         this.lBBackendAddressPoolIds = lBBackendAddressPoolIds;
         this.publicIpAddressId = publicIpAddressId;
         this.staticIPAddress = staticIPAddress;

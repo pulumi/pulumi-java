@@ -20,10 +20,10 @@ public final class ResourceRequestsResponse {
      */
     private final Double memoryInGB;
 
-    @OutputCustomType.Constructor({"cpu","memoryInGB"})
+    @OutputCustomType.Constructor
     private ResourceRequestsResponse(
-        Double cpu,
-        Double memoryInGB) {
+        @OutputCustomType.Parameter("cpu") Double cpu,
+        @OutputCustomType.Parameter("memoryInGB") Double memoryInGB) {
         this.cpu = cpu;
         this.memoryInGB = memoryInGB;
     }

@@ -87,23 +87,23 @@ public final class EdifactEnvelopeOverrideResponse {
      */
     private final @Nullable String targetNamespace;
 
-    @OutputCustomType.Constructor({"applicationPassword","associationAssignedCode","controllingAgencyCode","functionalGroupId","groupHeaderMessageRelease","groupHeaderMessageVersion","messageAssociationAssignedCode","messageId","messageRelease","messageVersion","receiverApplicationId","receiverApplicationQualifier","senderApplicationId","senderApplicationQualifier","targetNamespace"})
+    @OutputCustomType.Constructor
     private EdifactEnvelopeOverrideResponse(
-        @Nullable String applicationPassword,
-        @Nullable String associationAssignedCode,
-        @Nullable String controllingAgencyCode,
-        @Nullable String functionalGroupId,
-        @Nullable String groupHeaderMessageRelease,
-        @Nullable String groupHeaderMessageVersion,
-        @Nullable String messageAssociationAssignedCode,
-        @Nullable String messageId,
-        @Nullable String messageRelease,
-        @Nullable String messageVersion,
-        @Nullable String receiverApplicationId,
-        @Nullable String receiverApplicationQualifier,
-        @Nullable String senderApplicationId,
-        @Nullable String senderApplicationQualifier,
-        @Nullable String targetNamespace) {
+        @OutputCustomType.Parameter("applicationPassword") @Nullable String applicationPassword,
+        @OutputCustomType.Parameter("associationAssignedCode") @Nullable String associationAssignedCode,
+        @OutputCustomType.Parameter("controllingAgencyCode") @Nullable String controllingAgencyCode,
+        @OutputCustomType.Parameter("functionalGroupId") @Nullable String functionalGroupId,
+        @OutputCustomType.Parameter("groupHeaderMessageRelease") @Nullable String groupHeaderMessageRelease,
+        @OutputCustomType.Parameter("groupHeaderMessageVersion") @Nullable String groupHeaderMessageVersion,
+        @OutputCustomType.Parameter("messageAssociationAssignedCode") @Nullable String messageAssociationAssignedCode,
+        @OutputCustomType.Parameter("messageId") @Nullable String messageId,
+        @OutputCustomType.Parameter("messageRelease") @Nullable String messageRelease,
+        @OutputCustomType.Parameter("messageVersion") @Nullable String messageVersion,
+        @OutputCustomType.Parameter("receiverApplicationId") @Nullable String receiverApplicationId,
+        @OutputCustomType.Parameter("receiverApplicationQualifier") @Nullable String receiverApplicationQualifier,
+        @OutputCustomType.Parameter("senderApplicationId") @Nullable String senderApplicationId,
+        @OutputCustomType.Parameter("senderApplicationQualifier") @Nullable String senderApplicationQualifier,
+        @OutputCustomType.Parameter("targetNamespace") @Nullable String targetNamespace) {
         this.applicationPassword = applicationPassword;
         this.associationAssignedCode = associationAssignedCode;
         this.controllingAgencyCode = controllingAgencyCode;

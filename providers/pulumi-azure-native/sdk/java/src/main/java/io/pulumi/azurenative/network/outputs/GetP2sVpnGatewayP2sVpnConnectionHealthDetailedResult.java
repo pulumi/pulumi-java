@@ -17,8 +17,8 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthDetailedResult {
      */
     private final @Nullable String sasUrl;
 
-    @OutputCustomType.Constructor({"sasUrl"})
-    private GetP2sVpnGatewayP2sVpnConnectionHealthDetailedResult(@Nullable String sasUrl) {
+    @OutputCustomType.Constructor
+    private GetP2sVpnGatewayP2sVpnConnectionHealthDetailedResult(@OutputCustomType.Parameter("sasUrl") @Nullable String sasUrl) {
         this.sasUrl = sasUrl;
     }
 

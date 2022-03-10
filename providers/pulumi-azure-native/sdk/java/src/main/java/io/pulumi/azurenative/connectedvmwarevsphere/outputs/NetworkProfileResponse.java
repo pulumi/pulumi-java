@@ -17,8 +17,8 @@ public final class NetworkProfileResponse {
      */
     private final @Nullable List<NetworkInterfaceResponse> networkInterfaces;
 
-    @OutputCustomType.Constructor({"networkInterfaces"})
-    private NetworkProfileResponse(@Nullable List<NetworkInterfaceResponse> networkInterfaces) {
+    @OutputCustomType.Constructor
+    private NetworkProfileResponse(@OutputCustomType.Parameter("networkInterfaces") @Nullable List<NetworkInterfaceResponse> networkInterfaces) {
         this.networkInterfaces = networkInterfaces;
     }
 

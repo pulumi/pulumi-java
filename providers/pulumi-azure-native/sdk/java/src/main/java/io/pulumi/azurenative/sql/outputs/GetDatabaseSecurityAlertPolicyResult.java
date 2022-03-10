@@ -76,20 +76,20 @@ public final class GetDatabaseSecurityAlertPolicyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"creationTime","disabledAlerts","emailAccountAdmins","emailAddresses","id","name","retentionDays","state","storageAccountAccessKey","storageEndpoint","systemData","type"})
+    @OutputCustomType.Constructor
     private GetDatabaseSecurityAlertPolicyResult(
-        String creationTime,
-        @Nullable List<String> disabledAlerts,
-        @Nullable Boolean emailAccountAdmins,
-        @Nullable List<String> emailAddresses,
-        String id,
-        String name,
-        @Nullable Integer retentionDays,
-        String state,
-        @Nullable String storageAccountAccessKey,
-        @Nullable String storageEndpoint,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("creationTime") String creationTime,
+        @OutputCustomType.Parameter("disabledAlerts") @Nullable List<String> disabledAlerts,
+        @OutputCustomType.Parameter("emailAccountAdmins") @Nullable Boolean emailAccountAdmins,
+        @OutputCustomType.Parameter("emailAddresses") @Nullable List<String> emailAddresses,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("retentionDays") @Nullable Integer retentionDays,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("storageAccountAccessKey") @Nullable String storageAccountAccessKey,
+        @OutputCustomType.Parameter("storageEndpoint") @Nullable String storageEndpoint,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.creationTime = creationTime;
         this.disabledAlerts = disabledAlerts;
         this.emailAccountAdmins = emailAccountAdmins;

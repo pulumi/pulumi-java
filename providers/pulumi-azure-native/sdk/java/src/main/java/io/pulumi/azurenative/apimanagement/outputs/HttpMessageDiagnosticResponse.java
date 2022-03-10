@@ -30,11 +30,11 @@ public final class HttpMessageDiagnosticResponse {
      */
     private final @Nullable List<String> headers;
 
-    @OutputCustomType.Constructor({"body","dataMasking","headers"})
+    @OutputCustomType.Constructor
     private HttpMessageDiagnosticResponse(
-        @Nullable BodyDiagnosticSettingsResponse body,
-        @Nullable DataMaskingResponse dataMasking,
-        @Nullable List<String> headers) {
+        @OutputCustomType.Parameter("body") @Nullable BodyDiagnosticSettingsResponse body,
+        @OutputCustomType.Parameter("dataMasking") @Nullable DataMaskingResponse dataMasking,
+        @OutputCustomType.Parameter("headers") @Nullable List<String> headers) {
         this.body = body;
         this.dataMasking = dataMasking;
         this.headers = headers;

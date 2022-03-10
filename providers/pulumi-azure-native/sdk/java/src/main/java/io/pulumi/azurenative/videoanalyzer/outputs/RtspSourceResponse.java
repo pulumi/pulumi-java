@@ -36,12 +36,12 @@ public final class RtspSourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"endpoint","name","transport","type"})
+    @OutputCustomType.Constructor
     private RtspSourceResponse(
-        Either<TlsEndpointResponse,UnsecuredEndpointResponse> endpoint,
-        String name,
-        @Nullable String transport,
-        String type) {
+        @OutputCustomType.Parameter("endpoint") Either<TlsEndpointResponse,UnsecuredEndpointResponse> endpoint,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("transport") @Nullable String transport,
+        @OutputCustomType.Parameter("type") String type) {
         this.endpoint = endpoint;
         this.name = name;
         this.transport = transport;

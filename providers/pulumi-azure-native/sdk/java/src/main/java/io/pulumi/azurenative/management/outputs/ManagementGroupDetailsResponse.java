@@ -41,13 +41,13 @@ public final class ManagementGroupDetailsResponse {
      */
     private final @Nullable Double version;
 
-    @OutputCustomType.Constructor({"parent","path","updatedBy","updatedTime","version"})
+    @OutputCustomType.Constructor
     private ManagementGroupDetailsResponse(
-        @Nullable ParentGroupInfoResponse parent,
-        @Nullable List<ManagementGroupPathElementResponse> path,
-        @Nullable String updatedBy,
-        @Nullable String updatedTime,
-        @Nullable Double version) {
+        @OutputCustomType.Parameter("parent") @Nullable ParentGroupInfoResponse parent,
+        @OutputCustomType.Parameter("path") @Nullable List<ManagementGroupPathElementResponse> path,
+        @OutputCustomType.Parameter("updatedBy") @Nullable String updatedBy,
+        @OutputCustomType.Parameter("updatedTime") @Nullable String updatedTime,
+        @OutputCustomType.Parameter("version") @Nullable Double version) {
         this.parent = parent;
         this.path = path;
         this.updatedBy = updatedBy;

@@ -23,10 +23,10 @@ public final class DashboardPartsResponse {
      */
     private final DashboardPartsResponsePosition position;
 
-    @OutputCustomType.Constructor({"metadata","position"})
+    @OutputCustomType.Constructor
     private DashboardPartsResponse(
-        @Nullable MarkdownPartMetadataResponse metadata,
-        DashboardPartsResponsePosition position) {
+        @OutputCustomType.Parameter("metadata") @Nullable MarkdownPartMetadataResponse metadata,
+        @OutputCustomType.Parameter("position") DashboardPartsResponsePosition position) {
         this.metadata = metadata;
         this.position = position;
     }

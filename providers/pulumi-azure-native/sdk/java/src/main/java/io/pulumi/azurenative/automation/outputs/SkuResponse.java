@@ -28,11 +28,11 @@ public final class SkuResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"capacity","family","name"})
+    @OutputCustomType.Constructor
     private SkuResponse(
-        @Nullable Integer capacity,
-        @Nullable String family,
-        String name) {
+        @OutputCustomType.Parameter("capacity") @Nullable Integer capacity,
+        @OutputCustomType.Parameter("family") @Nullable String family,
+        @OutputCustomType.Parameter("name") String name) {
         this.capacity = capacity;
         this.family = family;
         this.name = name;

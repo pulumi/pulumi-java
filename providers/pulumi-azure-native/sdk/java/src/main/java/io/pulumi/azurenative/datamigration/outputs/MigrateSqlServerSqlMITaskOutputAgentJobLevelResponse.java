@@ -59,17 +59,17 @@ public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"endedOn","exceptionsAndWarnings","id","isEnabled","message","name","resultType","startedOn","state"})
+    @OutputCustomType.Constructor
     private MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse(
-        String endedOn,
-        List<ReportableExceptionResponse> exceptionsAndWarnings,
-        String id,
-        Boolean isEnabled,
-        String message,
-        String name,
-        String resultType,
-        String startedOn,
-        String state) {
+        @OutputCustomType.Parameter("endedOn") String endedOn,
+        @OutputCustomType.Parameter("exceptionsAndWarnings") List<ReportableExceptionResponse> exceptionsAndWarnings,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
+        @OutputCustomType.Parameter("message") String message,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("resultType") String resultType,
+        @OutputCustomType.Parameter("startedOn") String startedOn,
+        @OutputCustomType.Parameter("state") String state) {
         this.endedOn = endedOn;
         this.exceptionsAndWarnings = exceptionsAndWarnings;
         this.id = id;

@@ -83,21 +83,21 @@ public final class NetworkSecurityGroupResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"defaultSecurityRules","etag","flowLogs","id","location","name","networkInterfaces","provisioningState","resourceGuid","securityRules","subnets","tags","type"})
+    @OutputCustomType.Constructor
     private NetworkSecurityGroupResponse(
-        List<SecurityRuleResponse> defaultSecurityRules,
-        String etag,
-        List<FlowLogResponse> flowLogs,
-        @Nullable String id,
-        @Nullable String location,
-        String name,
-        List<NetworkInterfaceResponse> networkInterfaces,
-        String provisioningState,
-        String resourceGuid,
-        @Nullable List<SecurityRuleResponse> securityRules,
-        List<SubnetResponse> subnets,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("defaultSecurityRules") List<SecurityRuleResponse> defaultSecurityRules,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("flowLogs") List<FlowLogResponse> flowLogs,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networkInterfaces") List<NetworkInterfaceResponse> networkInterfaces,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("resourceGuid") String resourceGuid,
+        @OutputCustomType.Parameter("securityRules") @Nullable List<SecurityRuleResponse> securityRules,
+        @OutputCustomType.Parameter("subnets") List<SubnetResponse> subnets,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.defaultSecurityRules = defaultSecurityRules;
         this.etag = etag;
         this.flowLogs = flowLogs;

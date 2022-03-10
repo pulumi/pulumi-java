@@ -17,8 +17,8 @@ public final class ListBitLockerKeyResult {
      */
     private final @Nullable List<DriveBitLockerKeyResponse> value;
 
-    @OutputCustomType.Constructor({"value"})
-    private ListBitLockerKeyResult(@Nullable List<DriveBitLockerKeyResponse> value) {
+    @OutputCustomType.Constructor
+    private ListBitLockerKeyResult(@OutputCustomType.Parameter("value") @Nullable List<DriveBitLockerKeyResponse> value) {
         this.value = value;
     }
 

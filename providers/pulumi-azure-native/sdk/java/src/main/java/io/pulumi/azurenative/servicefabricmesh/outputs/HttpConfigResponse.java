@@ -28,11 +28,11 @@ public final class HttpConfigResponse {
      */
     private final Integer port;
 
-    @OutputCustomType.Constructor({"hosts","name","port"})
+    @OutputCustomType.Constructor
     private HttpConfigResponse(
-        List<HttpHostConfigResponse> hosts,
-        String name,
-        Integer port) {
+        @OutputCustomType.Parameter("hosts") List<HttpHostConfigResponse> hosts,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("port") Integer port) {
         this.hosts = hosts;
         this.name = name;
         this.port = port;

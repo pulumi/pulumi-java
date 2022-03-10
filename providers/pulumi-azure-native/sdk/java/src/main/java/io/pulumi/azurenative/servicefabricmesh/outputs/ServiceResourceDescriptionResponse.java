@@ -93,23 +93,23 @@ public final class ServiceResourceDescriptionResponse {
      */
     private final String unhealthyEvaluation;
 
-    @OutputCustomType.Constructor({"autoScalingPolicies","codePackages","description","diagnostics","healthState","id","name","networkRefs","osType","provisioningState","replicaCount","status","statusDetails","type","unhealthyEvaluation"})
+    @OutputCustomType.Constructor
     private ServiceResourceDescriptionResponse(
-        @Nullable List<AutoScalingPolicyResponse> autoScalingPolicies,
-        List<ContainerCodePackagePropertiesResponse> codePackages,
-        @Nullable String description,
-        @Nullable DiagnosticsRefResponse diagnostics,
-        String healthState,
-        String id,
-        @Nullable String name,
-        @Nullable List<NetworkRefResponse> networkRefs,
-        String osType,
-        String provisioningState,
-        @Nullable Integer replicaCount,
-        String status,
-        String statusDetails,
-        String type,
-        String unhealthyEvaluation) {
+        @OutputCustomType.Parameter("autoScalingPolicies") @Nullable List<AutoScalingPolicyResponse> autoScalingPolicies,
+        @OutputCustomType.Parameter("codePackages") List<ContainerCodePackagePropertiesResponse> codePackages,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("diagnostics") @Nullable DiagnosticsRefResponse diagnostics,
+        @OutputCustomType.Parameter("healthState") String healthState,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("networkRefs") @Nullable List<NetworkRefResponse> networkRefs,
+        @OutputCustomType.Parameter("osType") String osType,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("replicaCount") @Nullable Integer replicaCount,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("statusDetails") String statusDetails,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("unhealthyEvaluation") String unhealthyEvaluation) {
         this.autoScalingPolicies = autoScalingPolicies;
         this.codePackages = codePackages;
         this.description = description;

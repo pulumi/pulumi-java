@@ -29,11 +29,11 @@ public final class CustomOpenIdConnectProviderResponse {
      */
     private final @Nullable OpenIdConnectRegistrationResponse registration;
 
-    @OutputCustomType.Constructor({"enabled","login","registration"})
+    @OutputCustomType.Constructor
     private CustomOpenIdConnectProviderResponse(
-        @Nullable Boolean enabled,
-        @Nullable OpenIdConnectLoginResponse login,
-        @Nullable OpenIdConnectRegistrationResponse registration) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("login") @Nullable OpenIdConnectLoginResponse login,
+        @OutputCustomType.Parameter("registration") @Nullable OpenIdConnectRegistrationResponse registration) {
         this.enabled = enabled;
         this.login = login;
         this.registration = registration;

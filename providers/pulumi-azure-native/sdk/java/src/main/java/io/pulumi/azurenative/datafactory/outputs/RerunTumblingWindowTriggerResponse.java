@@ -56,16 +56,16 @@ public final class RerunTumblingWindowTriggerResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"annotations","description","parentTrigger","requestedEndTime","requestedStartTime","rerunConcurrency","runtimeState","type"})
+    @OutputCustomType.Constructor
     private RerunTumblingWindowTriggerResponse(
-        @Nullable List<Object> annotations,
-        @Nullable String description,
-        Object parentTrigger,
-        String requestedEndTime,
-        String requestedStartTime,
-        Integer rerunConcurrency,
-        String runtimeState,
-        String type) {
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("parentTrigger") Object parentTrigger,
+        @OutputCustomType.Parameter("requestedEndTime") String requestedEndTime,
+        @OutputCustomType.Parameter("requestedStartTime") String requestedStartTime,
+        @OutputCustomType.Parameter("rerunConcurrency") Integer rerunConcurrency,
+        @OutputCustomType.Parameter("runtimeState") String runtimeState,
+        @OutputCustomType.Parameter("type") String type) {
         this.annotations = annotations;
         this.description = description;
         this.parentTrigger = parentTrigger;

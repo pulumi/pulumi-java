@@ -27,11 +27,11 @@ public final class ListAuthorizationServerSecretsResult {
      */
     private final @Nullable String resourceOwnerUsername;
 
-    @OutputCustomType.Constructor({"clientSecret","resourceOwnerPassword","resourceOwnerUsername"})
+    @OutputCustomType.Constructor
     private ListAuthorizationServerSecretsResult(
-        @Nullable String clientSecret,
-        @Nullable String resourceOwnerPassword,
-        @Nullable String resourceOwnerUsername) {
+        @OutputCustomType.Parameter("clientSecret") @Nullable String clientSecret,
+        @OutputCustomType.Parameter("resourceOwnerPassword") @Nullable String resourceOwnerPassword,
+        @OutputCustomType.Parameter("resourceOwnerUsername") @Nullable String resourceOwnerUsername) {
         this.clientSecret = clientSecret;
         this.resourceOwnerPassword = resourceOwnerPassword;
         this.resourceOwnerUsername = resourceOwnerUsername;

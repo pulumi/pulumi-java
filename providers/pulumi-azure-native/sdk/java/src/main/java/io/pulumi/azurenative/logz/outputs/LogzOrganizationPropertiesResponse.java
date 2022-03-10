@@ -32,12 +32,12 @@ public final class LogzOrganizationPropertiesResponse {
      */
     private final @Nullable String singleSignOnUrl;
 
-    @OutputCustomType.Constructor({"companyName","enterpriseAppId","id","singleSignOnUrl"})
+    @OutputCustomType.Constructor
     private LogzOrganizationPropertiesResponse(
-        @Nullable String companyName,
-        @Nullable String enterpriseAppId,
-        String id,
-        @Nullable String singleSignOnUrl) {
+        @OutputCustomType.Parameter("companyName") @Nullable String companyName,
+        @OutputCustomType.Parameter("enterpriseAppId") @Nullable String enterpriseAppId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("singleSignOnUrl") @Nullable String singleSignOnUrl) {
         this.companyName = companyName;
         this.enterpriseAppId = enterpriseAppId;
         this.id = id;

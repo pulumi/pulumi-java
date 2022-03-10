@@ -53,16 +53,16 @@ public final class ApiReferenceResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"brandColor","description","displayName","iconUri","id","name","swagger","type"})
+    @OutputCustomType.Constructor
     private ApiReferenceResponse(
-        @Nullable String brandColor,
-        @Nullable String description,
-        @Nullable String displayName,
-        @Nullable String iconUri,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable Object swagger,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("brandColor") @Nullable String brandColor,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("iconUri") @Nullable String iconUri,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("swagger") @Nullable Object swagger,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.brandColor = brandColor;
         this.description = description;
         this.displayName = displayName;

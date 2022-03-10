@@ -73,20 +73,20 @@ public final class GetAssetResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"alternateId","assetId","container","created","description","id","lastModified","name","storageAccountName","storageEncryptionFormat","systemData","type"})
+    @OutputCustomType.Constructor
     private GetAssetResult(
-        @Nullable String alternateId,
-        String assetId,
-        @Nullable String container,
-        String created,
-        @Nullable String description,
-        String id,
-        String lastModified,
-        String name,
-        @Nullable String storageAccountName,
-        String storageEncryptionFormat,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("alternateId") @Nullable String alternateId,
+        @OutputCustomType.Parameter("assetId") String assetId,
+        @OutputCustomType.Parameter("container") @Nullable String container,
+        @OutputCustomType.Parameter("created") String created,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastModified") String lastModified,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("storageAccountName") @Nullable String storageAccountName,
+        @OutputCustomType.Parameter("storageEncryptionFormat") String storageEncryptionFormat,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.alternateId = alternateId;
         this.assetId = assetId;
         this.container = container;

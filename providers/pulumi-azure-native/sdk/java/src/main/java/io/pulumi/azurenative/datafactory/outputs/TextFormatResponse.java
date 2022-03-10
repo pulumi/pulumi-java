@@ -74,20 +74,20 @@ public final class TextFormatResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"columnDelimiter","deserializer","encodingName","escapeChar","firstRowAsHeader","nullValue","quoteChar","rowDelimiter","serializer","skipLineCount","treatEmptyAsNull","type"})
+    @OutputCustomType.Constructor
     private TextFormatResponse(
-        @Nullable Object columnDelimiter,
-        @Nullable Object deserializer,
-        @Nullable Object encodingName,
-        @Nullable Object escapeChar,
-        @Nullable Object firstRowAsHeader,
-        @Nullable Object nullValue,
-        @Nullable Object quoteChar,
-        @Nullable Object rowDelimiter,
-        @Nullable Object serializer,
-        @Nullable Object skipLineCount,
-        @Nullable Object treatEmptyAsNull,
-        String type) {
+        @OutputCustomType.Parameter("columnDelimiter") @Nullable Object columnDelimiter,
+        @OutputCustomType.Parameter("deserializer") @Nullable Object deserializer,
+        @OutputCustomType.Parameter("encodingName") @Nullable Object encodingName,
+        @OutputCustomType.Parameter("escapeChar") @Nullable Object escapeChar,
+        @OutputCustomType.Parameter("firstRowAsHeader") @Nullable Object firstRowAsHeader,
+        @OutputCustomType.Parameter("nullValue") @Nullable Object nullValue,
+        @OutputCustomType.Parameter("quoteChar") @Nullable Object quoteChar,
+        @OutputCustomType.Parameter("rowDelimiter") @Nullable Object rowDelimiter,
+        @OutputCustomType.Parameter("serializer") @Nullable Object serializer,
+        @OutputCustomType.Parameter("skipLineCount") @Nullable Object skipLineCount,
+        @OutputCustomType.Parameter("treatEmptyAsNull") @Nullable Object treatEmptyAsNull,
+        @OutputCustomType.Parameter("type") String type) {
         this.columnDelimiter = columnDelimiter;
         this.deserializer = deserializer;
         this.encodingName = encodingName;

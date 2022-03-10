@@ -44,14 +44,14 @@ public final class GetAccessPolicyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"authentication","id","name","role","systemData","type"})
+    @OutputCustomType.Constructor
     private GetAccessPolicyResult(
-        @Nullable JwtAuthenticationResponse authentication,
-        String id,
-        String name,
-        @Nullable String role,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("authentication") @Nullable JwtAuthenticationResponse authentication,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("role") @Nullable String role,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.authentication = authentication;
         this.id = id;
         this.name = name;

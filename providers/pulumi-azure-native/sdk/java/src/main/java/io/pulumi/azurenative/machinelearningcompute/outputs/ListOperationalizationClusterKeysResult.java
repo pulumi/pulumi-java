@@ -47,14 +47,14 @@ public final class ListOperationalizationClusterKeysResult {
      */
     private final @Nullable StorageAccountCredentialsResponse storageAccount;
 
-    @OutputCustomType.Constructor({"appInsights","containerRegistry","containerService","serviceAuthConfiguration","sslConfiguration","storageAccount"})
+    @OutputCustomType.Constructor
     private ListOperationalizationClusterKeysResult(
-        @Nullable AppInsightsCredentialsResponse appInsights,
-        @Nullable ContainerRegistryCredentialsResponse containerRegistry,
-        @Nullable ContainerServiceCredentialsResponse containerService,
-        @Nullable ServiceAuthConfigurationResponse serviceAuthConfiguration,
-        @Nullable SslConfigurationResponse sslConfiguration,
-        @Nullable StorageAccountCredentialsResponse storageAccount) {
+        @OutputCustomType.Parameter("appInsights") @Nullable AppInsightsCredentialsResponse appInsights,
+        @OutputCustomType.Parameter("containerRegistry") @Nullable ContainerRegistryCredentialsResponse containerRegistry,
+        @OutputCustomType.Parameter("containerService") @Nullable ContainerServiceCredentialsResponse containerService,
+        @OutputCustomType.Parameter("serviceAuthConfiguration") @Nullable ServiceAuthConfigurationResponse serviceAuthConfiguration,
+        @OutputCustomType.Parameter("sslConfiguration") @Nullable SslConfigurationResponse sslConfiguration,
+        @OutputCustomType.Parameter("storageAccount") @Nullable StorageAccountCredentialsResponse storageAccount) {
         this.appInsights = appInsights;
         this.containerRegistry = containerRegistry;
         this.containerService = containerService;

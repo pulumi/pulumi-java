@@ -87,23 +87,23 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputTableLevelResponse {
      */
     private final Double totalChangesApplied;
 
-    @OutputCustomType.Constructor({"cdcDeleteCounter","cdcInsertCounter","cdcUpdateCounter","dataErrorsCounter","databaseName","fullLoadEndedOn","fullLoadEstFinishTime","fullLoadStartedOn","fullLoadTotalRows","id","lastModifiedTime","resultType","state","tableName","totalChangesApplied"})
+    @OutputCustomType.Constructor
     private MigrateSqlServerSqlDbSyncTaskOutputTableLevelResponse(
-        Double cdcDeleteCounter,
-        Double cdcInsertCounter,
-        Double cdcUpdateCounter,
-        Double dataErrorsCounter,
-        String databaseName,
-        String fullLoadEndedOn,
-        String fullLoadEstFinishTime,
-        String fullLoadStartedOn,
-        Double fullLoadTotalRows,
-        String id,
-        String lastModifiedTime,
-        String resultType,
-        String state,
-        String tableName,
-        Double totalChangesApplied) {
+        @OutputCustomType.Parameter("cdcDeleteCounter") Double cdcDeleteCounter,
+        @OutputCustomType.Parameter("cdcInsertCounter") Double cdcInsertCounter,
+        @OutputCustomType.Parameter("cdcUpdateCounter") Double cdcUpdateCounter,
+        @OutputCustomType.Parameter("dataErrorsCounter") Double dataErrorsCounter,
+        @OutputCustomType.Parameter("databaseName") String databaseName,
+        @OutputCustomType.Parameter("fullLoadEndedOn") String fullLoadEndedOn,
+        @OutputCustomType.Parameter("fullLoadEstFinishTime") String fullLoadEstFinishTime,
+        @OutputCustomType.Parameter("fullLoadStartedOn") String fullLoadStartedOn,
+        @OutputCustomType.Parameter("fullLoadTotalRows") Double fullLoadTotalRows,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @OutputCustomType.Parameter("resultType") String resultType,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("tableName") String tableName,
+        @OutputCustomType.Parameter("totalChangesApplied") Double totalChangesApplied) {
         this.cdcDeleteCounter = cdcDeleteCounter;
         this.cdcInsertCounter = cdcInsertCounter;
         this.cdcUpdateCounter = cdcUpdateCounter;

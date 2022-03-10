@@ -27,11 +27,11 @@ public final class OSDiskDetailsResponse {
      */
     private final @Nullable String vhdName;
 
-    @OutputCustomType.Constructor({"osType","osVhdId","vhdName"})
+    @OutputCustomType.Constructor
     private OSDiskDetailsResponse(
-        @Nullable String osType,
-        @Nullable String osVhdId,
-        @Nullable String vhdName) {
+        @OutputCustomType.Parameter("osType") @Nullable String osType,
+        @OutputCustomType.Parameter("osVhdId") @Nullable String osVhdId,
+        @OutputCustomType.Parameter("vhdName") @Nullable String vhdName) {
         this.osType = osType;
         this.osVhdId = osVhdId;
         this.vhdName = vhdName;

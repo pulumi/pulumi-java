@@ -27,11 +27,11 @@ public final class ValidateSyncMigrationInputSqlServerTaskInputResponse {
      */
     private final SqlConnectionInfoResponse targetConnectionInfo;
 
-    @OutputCustomType.Constructor({"selectedDatabases","sourceConnectionInfo","targetConnectionInfo"})
+    @OutputCustomType.Constructor
     private ValidateSyncMigrationInputSqlServerTaskInputResponse(
-        List<MigrateSqlServerSqlDbSyncDatabaseInputResponse> selectedDatabases,
-        SqlConnectionInfoResponse sourceConnectionInfo,
-        SqlConnectionInfoResponse targetConnectionInfo) {
+        @OutputCustomType.Parameter("selectedDatabases") List<MigrateSqlServerSqlDbSyncDatabaseInputResponse> selectedDatabases,
+        @OutputCustomType.Parameter("sourceConnectionInfo") SqlConnectionInfoResponse sourceConnectionInfo,
+        @OutputCustomType.Parameter("targetConnectionInfo") SqlConnectionInfoResponse targetConnectionInfo) {
         this.selectedDatabases = selectedDatabases;
         this.sourceConnectionInfo = sourceConnectionInfo;
         this.targetConnectionInfo = targetConnectionInfo;

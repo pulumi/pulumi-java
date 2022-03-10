@@ -65,18 +65,18 @@ public final class GetReadWriteDatabaseResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"hotCachePeriod","id","isFollowed","kind","location","name","provisioningState","softDeletePeriod","statistics","type"})
+    @OutputCustomType.Constructor
     private GetReadWriteDatabaseResult(
-        @Nullable String hotCachePeriod,
-        String id,
-        Boolean isFollowed,
-        String kind,
-        @Nullable String location,
-        String name,
-        String provisioningState,
-        @Nullable String softDeletePeriod,
-        DatabaseStatisticsResponse statistics,
-        String type) {
+        @OutputCustomType.Parameter("hotCachePeriod") @Nullable String hotCachePeriod,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isFollowed") Boolean isFollowed,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("softDeletePeriod") @Nullable String softDeletePeriod,
+        @OutputCustomType.Parameter("statistics") DatabaseStatisticsResponse statistics,
+        @OutputCustomType.Parameter("type") String type) {
         this.hotCachePeriod = hotCachePeriod;
         this.id = id;
         this.isFollowed = isFollowed;

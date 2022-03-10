@@ -28,11 +28,11 @@ public final class MessagingEndpointPropertiesResponse {
      */
     private final @Nullable String ttlAsIso8601;
 
-    @OutputCustomType.Constructor({"lockDurationAsIso8601","maxDeliveryCount","ttlAsIso8601"})
+    @OutputCustomType.Constructor
     private MessagingEndpointPropertiesResponse(
-        @Nullable String lockDurationAsIso8601,
-        @Nullable Integer maxDeliveryCount,
-        @Nullable String ttlAsIso8601) {
+        @OutputCustomType.Parameter("lockDurationAsIso8601") @Nullable String lockDurationAsIso8601,
+        @OutputCustomType.Parameter("maxDeliveryCount") @Nullable Integer maxDeliveryCount,
+        @OutputCustomType.Parameter("ttlAsIso8601") @Nullable String ttlAsIso8601) {
         this.lockDurationAsIso8601 = lockDurationAsIso8601;
         this.maxDeliveryCount = maxDeliveryCount;
         this.ttlAsIso8601 = ttlAsIso8601;

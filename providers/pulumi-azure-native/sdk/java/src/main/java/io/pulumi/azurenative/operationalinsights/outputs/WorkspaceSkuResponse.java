@@ -28,11 +28,11 @@ public final class WorkspaceSkuResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"capacityReservationLevel","lastSkuUpdate","name"})
+    @OutputCustomType.Constructor
     private WorkspaceSkuResponse(
-        @Nullable Integer capacityReservationLevel,
-        String lastSkuUpdate,
-        String name) {
+        @OutputCustomType.Parameter("capacityReservationLevel") @Nullable Integer capacityReservationLevel,
+        @OutputCustomType.Parameter("lastSkuUpdate") String lastSkuUpdate,
+        @OutputCustomType.Parameter("name") String name) {
         this.capacityReservationLevel = capacityReservationLevel;
         this.lastSkuUpdate = lastSkuUpdate;
         this.name = name;

@@ -58,16 +58,16 @@ public final class ProductLineResponse {
      */
     private final List<ProductResponse> products;
 
-    @OutputCustomType.Constructor({"availabilityInformation","costInformation","description","displayName","filterableProperties","hierarchyInformation","imageInformation","products"})
+    @OutputCustomType.Constructor
     private ProductLineResponse(
-        AvailabilityInformationResponse availabilityInformation,
-        CostInformationResponse costInformation,
-        DescriptionResponse description,
-        String displayName,
-        List<FilterablePropertyResponse> filterableProperties,
-        HierarchyInformationResponse hierarchyInformation,
-        List<ImageInformationResponse> imageInformation,
-        List<ProductResponse> products) {
+        @OutputCustomType.Parameter("availabilityInformation") AvailabilityInformationResponse availabilityInformation,
+        @OutputCustomType.Parameter("costInformation") CostInformationResponse costInformation,
+        @OutputCustomType.Parameter("description") DescriptionResponse description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("filterableProperties") List<FilterablePropertyResponse> filterableProperties,
+        @OutputCustomType.Parameter("hierarchyInformation") HierarchyInformationResponse hierarchyInformation,
+        @OutputCustomType.Parameter("imageInformation") List<ImageInformationResponse> imageInformation,
+        @OutputCustomType.Parameter("products") List<ProductResponse> products) {
         this.availabilityInformation = availabilityInformation;
         this.costInformation = costInformation;
         this.description = description;

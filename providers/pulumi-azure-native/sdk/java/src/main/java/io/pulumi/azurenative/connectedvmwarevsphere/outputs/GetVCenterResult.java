@@ -109,26 +109,26 @@ public final class GetVCenterResult {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"connectionStatus","credentials","customResourceName","extendedLocation","fqdn","id","instanceUuid","kind","location","name","port","provisioningState","statuses","systemData","tags","type","uuid","version"})
+    @OutputCustomType.Constructor
     private GetVCenterResult(
-        String connectionStatus,
-        @Nullable VICredentialResponse credentials,
-        String customResourceName,
-        @Nullable ExtendedLocationResponse extendedLocation,
-        String fqdn,
-        String id,
-        String instanceUuid,
-        @Nullable String kind,
-        String location,
-        String name,
-        @Nullable Integer port,
-        String provisioningState,
-        List<ResourceStatusResponse> statuses,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type,
-        String uuid,
-        String version) {
+        @OutputCustomType.Parameter("connectionStatus") String connectionStatus,
+        @OutputCustomType.Parameter("credentials") @Nullable VICredentialResponse credentials,
+        @OutputCustomType.Parameter("customResourceName") String customResourceName,
+        @OutputCustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
+        @OutputCustomType.Parameter("fqdn") String fqdn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instanceUuid") String instanceUuid,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("port") @Nullable Integer port,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("statuses") List<ResourceStatusResponse> statuses,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("uuid") String uuid,
+        @OutputCustomType.Parameter("version") String version) {
         this.connectionStatus = connectionStatus;
         this.credentials = credentials;
         this.customResourceName = customResourceName;

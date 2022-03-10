@@ -23,10 +23,10 @@ public final class ScaleSettingsResponse {
      */
     private final @Nullable FixedScaleSettingsResponse fixedScale;
 
-    @OutputCustomType.Constructor({"autoScale","fixedScale"})
+    @OutputCustomType.Constructor
     private ScaleSettingsResponse(
-        @Nullable AutoScaleSettingsResponse autoScale,
-        @Nullable FixedScaleSettingsResponse fixedScale) {
+        @OutputCustomType.Parameter("autoScale") @Nullable AutoScaleSettingsResponse autoScale,
+        @OutputCustomType.Parameter("fixedScale") @Nullable FixedScaleSettingsResponse fixedScale) {
         this.autoScale = autoScale;
         this.fixedScale = fixedScale;
     }

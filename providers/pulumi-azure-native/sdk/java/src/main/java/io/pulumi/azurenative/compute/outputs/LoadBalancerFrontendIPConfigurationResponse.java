@@ -21,10 +21,10 @@ public final class LoadBalancerFrontendIPConfigurationResponse {
      */
     private final LoadBalancerFrontendIPConfigurationPropertiesResponse properties;
 
-    @OutputCustomType.Constructor({"name","properties"})
+    @OutputCustomType.Constructor
     private LoadBalancerFrontendIPConfigurationResponse(
-        String name,
-        LoadBalancerFrontendIPConfigurationPropertiesResponse properties) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") LoadBalancerFrontendIPConfigurationPropertiesResponse properties) {
         this.name = name;
         this.properties = properties;
     }

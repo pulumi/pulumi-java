@@ -55,16 +55,16 @@ public final class GetWebAppDiagnosticLogsConfigurationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"applicationLogs","detailedErrorMessages","failedRequestsTracing","httpLogs","id","kind","name","type"})
+    @OutputCustomType.Constructor
     private GetWebAppDiagnosticLogsConfigurationResult(
-        @Nullable ApplicationLogsConfigResponse applicationLogs,
-        @Nullable EnabledConfigResponse detailedErrorMessages,
-        @Nullable EnabledConfigResponse failedRequestsTracing,
-        @Nullable HttpLogsConfigResponse httpLogs,
-        String id,
-        @Nullable String kind,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("applicationLogs") @Nullable ApplicationLogsConfigResponse applicationLogs,
+        @OutputCustomType.Parameter("detailedErrorMessages") @Nullable EnabledConfigResponse detailedErrorMessages,
+        @OutputCustomType.Parameter("failedRequestsTracing") @Nullable EnabledConfigResponse failedRequestsTracing,
+        @OutputCustomType.Parameter("httpLogs") @Nullable HttpLogsConfigResponse httpLogs,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.applicationLogs = applicationLogs;
         this.detailedErrorMessages = detailedErrorMessages;
         this.failedRequestsTracing = failedRequestsTracing;

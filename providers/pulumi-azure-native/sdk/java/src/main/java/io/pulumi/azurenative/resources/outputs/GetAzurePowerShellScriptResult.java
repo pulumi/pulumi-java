@@ -137,31 +137,31 @@ public final class GetAzurePowerShellScriptResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"arguments","azPowerShellVersion","cleanupPreference","containerSettings","environmentVariables","forceUpdateTag","id","identity","kind","location","name","outputs","primaryScriptUri","provisioningState","retentionInterval","scriptContent","status","storageAccountSettings","supportingScriptUris","systemData","tags","timeout","type"})
+    @OutputCustomType.Constructor
     private GetAzurePowerShellScriptResult(
-        @Nullable String arguments,
-        String azPowerShellVersion,
-        @Nullable String cleanupPreference,
-        @Nullable ContainerConfigurationResponse containerSettings,
-        @Nullable List<EnvironmentVariableResponse> environmentVariables,
-        @Nullable String forceUpdateTag,
-        String id,
-        @Nullable ManagedServiceIdentityResponse identity,
-        String kind,
-        String location,
-        String name,
-        Map<String,Object> outputs,
-        @Nullable String primaryScriptUri,
-        String provisioningState,
-        String retentionInterval,
-        @Nullable String scriptContent,
-        ScriptStatusResponse status,
-        @Nullable StorageAccountConfigurationResponse storageAccountSettings,
-        @Nullable List<String> supportingScriptUris,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        @Nullable String timeout,
-        String type) {
+        @OutputCustomType.Parameter("arguments") @Nullable String arguments,
+        @OutputCustomType.Parameter("azPowerShellVersion") String azPowerShellVersion,
+        @OutputCustomType.Parameter("cleanupPreference") @Nullable String cleanupPreference,
+        @OutputCustomType.Parameter("containerSettings") @Nullable ContainerConfigurationResponse containerSettings,
+        @OutputCustomType.Parameter("environmentVariables") @Nullable List<EnvironmentVariableResponse> environmentVariables,
+        @OutputCustomType.Parameter("forceUpdateTag") @Nullable String forceUpdateTag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable ManagedServiceIdentityResponse identity,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("outputs") Map<String,Object> outputs,
+        @OutputCustomType.Parameter("primaryScriptUri") @Nullable String primaryScriptUri,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("retentionInterval") String retentionInterval,
+        @OutputCustomType.Parameter("scriptContent") @Nullable String scriptContent,
+        @OutputCustomType.Parameter("status") ScriptStatusResponse status,
+        @OutputCustomType.Parameter("storageAccountSettings") @Nullable StorageAccountConfigurationResponse storageAccountSettings,
+        @OutputCustomType.Parameter("supportingScriptUris") @Nullable List<String> supportingScriptUris,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("timeout") @Nullable String timeout,
+        @OutputCustomType.Parameter("type") String type) {
         this.arguments = arguments;
         this.azPowerShellVersion = azPowerShellVersion;
         this.cleanupPreference = cleanupPreference;

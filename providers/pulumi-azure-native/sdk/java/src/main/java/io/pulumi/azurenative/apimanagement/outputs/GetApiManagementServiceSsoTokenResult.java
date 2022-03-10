@@ -17,8 +17,8 @@ public final class GetApiManagementServiceSsoTokenResult {
      */
     private final @Nullable String redirectUri;
 
-    @OutputCustomType.Constructor({"redirectUri"})
-    private GetApiManagementServiceSsoTokenResult(@Nullable String redirectUri) {
+    @OutputCustomType.Constructor
+    private GetApiManagementServiceSsoTokenResult(@OutputCustomType.Parameter("redirectUri") @Nullable String redirectUri) {
         this.redirectUri = redirectUri;
     }
 

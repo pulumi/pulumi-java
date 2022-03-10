@@ -58,17 +58,17 @@ public final class GetGatewayHostnameConfigurationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"certificateId","hostname","http2Enabled","id","name","negotiateClientCertificate","tls10Enabled","tls11Enabled","type"})
+    @OutputCustomType.Constructor
     private GetGatewayHostnameConfigurationResult(
-        @Nullable String certificateId,
-        @Nullable String hostname,
-        @Nullable Boolean http2Enabled,
-        String id,
-        String name,
-        @Nullable Boolean negotiateClientCertificate,
-        @Nullable Boolean tls10Enabled,
-        @Nullable Boolean tls11Enabled,
-        String type) {
+        @OutputCustomType.Parameter("certificateId") @Nullable String certificateId,
+        @OutputCustomType.Parameter("hostname") @Nullable String hostname,
+        @OutputCustomType.Parameter("http2Enabled") @Nullable Boolean http2Enabled,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("negotiateClientCertificate") @Nullable Boolean negotiateClientCertificate,
+        @OutputCustomType.Parameter("tls10Enabled") @Nullable Boolean tls10Enabled,
+        @OutputCustomType.Parameter("tls11Enabled") @Nullable Boolean tls11Enabled,
+        @OutputCustomType.Parameter("type") String type) {
         this.certificateId = certificateId;
         this.hostname = hostname;
         this.http2Enabled = http2Enabled;

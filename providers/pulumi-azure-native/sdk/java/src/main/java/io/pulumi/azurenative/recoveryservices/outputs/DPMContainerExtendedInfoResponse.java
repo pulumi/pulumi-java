@@ -17,8 +17,8 @@ public final class DPMContainerExtendedInfoResponse {
      */
     private final @Nullable String lastRefreshedAt;
 
-    @OutputCustomType.Constructor({"lastRefreshedAt"})
-    private DPMContainerExtendedInfoResponse(@Nullable String lastRefreshedAt) {
+    @OutputCustomType.Constructor
+    private DPMContainerExtendedInfoResponse(@OutputCustomType.Parameter("lastRefreshedAt") @Nullable String lastRefreshedAt) {
         this.lastRefreshedAt = lastRefreshedAt;
     }
 

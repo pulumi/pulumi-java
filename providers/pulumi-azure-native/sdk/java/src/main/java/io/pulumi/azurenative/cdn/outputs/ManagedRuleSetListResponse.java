@@ -17,8 +17,8 @@ public final class ManagedRuleSetListResponse {
      */
     private final @Nullable List<ManagedRuleSetResponse> managedRuleSets;
 
-    @OutputCustomType.Constructor({"managedRuleSets"})
-    private ManagedRuleSetListResponse(@Nullable List<ManagedRuleSetResponse> managedRuleSets) {
+    @OutputCustomType.Constructor
+    private ManagedRuleSetListResponse(@OutputCustomType.Parameter("managedRuleSets") @Nullable List<ManagedRuleSetResponse> managedRuleSets) {
         this.managedRuleSets = managedRuleSets;
     }
 

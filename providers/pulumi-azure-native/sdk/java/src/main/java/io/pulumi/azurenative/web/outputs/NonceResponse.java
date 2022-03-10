@@ -23,10 +23,10 @@ public final class NonceResponse {
      */
     private final @Nullable Boolean validateNonce;
 
-    @OutputCustomType.Constructor({"nonceExpirationInterval","validateNonce"})
+    @OutputCustomType.Constructor
     private NonceResponse(
-        @Nullable String nonceExpirationInterval,
-        @Nullable Boolean validateNonce) {
+        @OutputCustomType.Parameter("nonceExpirationInterval") @Nullable String nonceExpirationInterval,
+        @OutputCustomType.Parameter("validateNonce") @Nullable Boolean validateNonce) {
         this.nonceExpirationInterval = nonceExpirationInterval;
         this.validateNonce = validateNonce;
     }

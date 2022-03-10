@@ -67,18 +67,18 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationResponse
      */
     private final String ruleSetVersion;
 
-    @OutputCustomType.Constructor({"disabledRuleGroups","enabled","exclusions","fileUploadLimitInMb","firewallMode","maxRequestBodySize","maxRequestBodySizeInKb","requestBodyCheck","ruleSetType","ruleSetVersion"})
+    @OutputCustomType.Constructor
     private ApplicationGatewayWebApplicationFirewallConfigurationResponse(
-        @Nullable List<ApplicationGatewayFirewallDisabledRuleGroupResponse> disabledRuleGroups,
-        Boolean enabled,
-        @Nullable List<ApplicationGatewayFirewallExclusionResponse> exclusions,
-        @Nullable Integer fileUploadLimitInMb,
-        String firewallMode,
-        @Nullable Integer maxRequestBodySize,
-        @Nullable Integer maxRequestBodySizeInKb,
-        @Nullable Boolean requestBodyCheck,
-        String ruleSetType,
-        String ruleSetVersion) {
+        @OutputCustomType.Parameter("disabledRuleGroups") @Nullable List<ApplicationGatewayFirewallDisabledRuleGroupResponse> disabledRuleGroups,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("exclusions") @Nullable List<ApplicationGatewayFirewallExclusionResponse> exclusions,
+        @OutputCustomType.Parameter("fileUploadLimitInMb") @Nullable Integer fileUploadLimitInMb,
+        @OutputCustomType.Parameter("firewallMode") String firewallMode,
+        @OutputCustomType.Parameter("maxRequestBodySize") @Nullable Integer maxRequestBodySize,
+        @OutputCustomType.Parameter("maxRequestBodySizeInKb") @Nullable Integer maxRequestBodySizeInKb,
+        @OutputCustomType.Parameter("requestBodyCheck") @Nullable Boolean requestBodyCheck,
+        @OutputCustomType.Parameter("ruleSetType") String ruleSetType,
+        @OutputCustomType.Parameter("ruleSetVersion") String ruleSetVersion) {
         this.disabledRuleGroups = disabledRuleGroups;
         this.enabled = enabled;
         this.exclusions = exclusions;

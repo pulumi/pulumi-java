@@ -81,21 +81,21 @@ public final class GetSpatialAnchorsAccountResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"accountDomain","accountId","id","identity","kind","location","name","plan","sku","storageAccountName","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetSpatialAnchorsAccountResult(
-        String accountDomain,
-        String accountId,
-        String id,
-        @Nullable IdentityResponse identity,
-        @Nullable SkuResponse kind,
-        String location,
-        String name,
-        @Nullable IdentityResponse plan,
-        @Nullable SkuResponse sku,
-        @Nullable String storageAccountName,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("accountDomain") String accountDomain,
+        @OutputCustomType.Parameter("accountId") String accountId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable IdentityResponse identity,
+        @OutputCustomType.Parameter("kind") @Nullable SkuResponse kind,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("plan") @Nullable IdentityResponse plan,
+        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @OutputCustomType.Parameter("storageAccountName") @Nullable String storageAccountName,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.accountDomain = accountDomain;
         this.accountId = accountId;
         this.id = id;

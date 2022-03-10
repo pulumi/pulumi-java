@@ -22,10 +22,10 @@ public final class DeliveryRulePostArgsConditionResponse {
      */
     private final PostArgsMatchConditionParametersResponse parameters;
 
-    @OutputCustomType.Constructor({"name","parameters"})
+    @OutputCustomType.Constructor
     private DeliveryRulePostArgsConditionResponse(
-        String name,
-        PostArgsMatchConditionParametersResponse parameters) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") PostArgsMatchConditionParametersResponse parameters) {
         this.name = name;
         this.parameters = parameters;
     }

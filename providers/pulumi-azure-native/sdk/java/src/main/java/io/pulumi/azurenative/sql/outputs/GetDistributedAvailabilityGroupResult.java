@@ -77,21 +77,21 @@ public final class GetDistributedAvailabilityGroupResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"distributedAvailabilityGroupId","id","lastHardenedLsn","linkState","name","primaryAvailabilityGroupName","replicationMode","secondaryAvailabilityGroupName","sourceEndpoint","sourceReplicaId","targetDatabase","targetReplicaId","type"})
+    @OutputCustomType.Constructor
     private GetDistributedAvailabilityGroupResult(
-        String distributedAvailabilityGroupId,
-        String id,
-        String lastHardenedLsn,
-        String linkState,
-        String name,
-        @Nullable String primaryAvailabilityGroupName,
-        @Nullable String replicationMode,
-        @Nullable String secondaryAvailabilityGroupName,
-        @Nullable String sourceEndpoint,
-        String sourceReplicaId,
-        @Nullable String targetDatabase,
-        String targetReplicaId,
-        String type) {
+        @OutputCustomType.Parameter("distributedAvailabilityGroupId") String distributedAvailabilityGroupId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastHardenedLsn") String lastHardenedLsn,
+        @OutputCustomType.Parameter("linkState") String linkState,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("primaryAvailabilityGroupName") @Nullable String primaryAvailabilityGroupName,
+        @OutputCustomType.Parameter("replicationMode") @Nullable String replicationMode,
+        @OutputCustomType.Parameter("secondaryAvailabilityGroupName") @Nullable String secondaryAvailabilityGroupName,
+        @OutputCustomType.Parameter("sourceEndpoint") @Nullable String sourceEndpoint,
+        @OutputCustomType.Parameter("sourceReplicaId") String sourceReplicaId,
+        @OutputCustomType.Parameter("targetDatabase") @Nullable String targetDatabase,
+        @OutputCustomType.Parameter("targetReplicaId") String targetReplicaId,
+        @OutputCustomType.Parameter("type") String type) {
         this.distributedAvailabilityGroupId = distributedAvailabilityGroupId;
         this.id = id;
         this.lastHardenedLsn = lastHardenedLsn;

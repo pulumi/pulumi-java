@@ -30,11 +30,11 @@ public final class StorageProfileResponse {
      */
     private final @Nullable OSDiskResponse osDisk;
 
-    @OutputCustomType.Constructor({"dataDisks","imageReference","osDisk"})
+    @OutputCustomType.Constructor
     private StorageProfileResponse(
-        @Nullable List<DataDiskResponse> dataDisks,
-        @Nullable ImageReferenceResponse imageReference,
-        @Nullable OSDiskResponse osDisk) {
+        @OutputCustomType.Parameter("dataDisks") @Nullable List<DataDiskResponse> dataDisks,
+        @OutputCustomType.Parameter("imageReference") @Nullable ImageReferenceResponse imageReference,
+        @OutputCustomType.Parameter("osDisk") @Nullable OSDiskResponse osDisk) {
         this.dataDisks = dataDisks;
         this.imageReference = imageReference;
         this.osDisk = osDisk;

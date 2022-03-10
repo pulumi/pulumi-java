@@ -19,13 +19,13 @@ public final class NotificationRegistrationResponseProperties {
     private final @Nullable String notificationMode;
     private final @Nullable String provisioningState;
 
-    @OutputCustomType.Constructor({"includedEvents","messageScope","notificationEndpoints","notificationMode","provisioningState"})
+    @OutputCustomType.Constructor
     private NotificationRegistrationResponseProperties(
-        @Nullable List<String> includedEvents,
-        @Nullable String messageScope,
-        @Nullable List<NotificationEndpointResponse> notificationEndpoints,
-        @Nullable String notificationMode,
-        @Nullable String provisioningState) {
+        @OutputCustomType.Parameter("includedEvents") @Nullable List<String> includedEvents,
+        @OutputCustomType.Parameter("messageScope") @Nullable String messageScope,
+        @OutputCustomType.Parameter("notificationEndpoints") @Nullable List<NotificationEndpointResponse> notificationEndpoints,
+        @OutputCustomType.Parameter("notificationMode") @Nullable String notificationMode,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState) {
         this.includedEvents = includedEvents;
         this.messageScope = messageScope;
         this.notificationEndpoints = notificationEndpoints;

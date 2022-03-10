@@ -38,13 +38,13 @@ public final class SharedPrivateLinkResourcePropertiesResponse {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor({"groupId","privateLink","privateLinkLocation","requestMessage","status"})
+    @OutputCustomType.Constructor
     private SharedPrivateLinkResourcePropertiesResponse(
-        @Nullable String groupId,
-        @Nullable ResourceReferenceResponse privateLink,
-        @Nullable String privateLinkLocation,
-        @Nullable String requestMessage,
-        @Nullable String status) {
+        @OutputCustomType.Parameter("groupId") @Nullable String groupId,
+        @OutputCustomType.Parameter("privateLink") @Nullable ResourceReferenceResponse privateLink,
+        @OutputCustomType.Parameter("privateLinkLocation") @Nullable String privateLinkLocation,
+        @OutputCustomType.Parameter("requestMessage") @Nullable String requestMessage,
+        @OutputCustomType.Parameter("status") @Nullable String status) {
         this.groupId = groupId;
         this.privateLink = privateLink;
         this.privateLinkLocation = privateLinkLocation;

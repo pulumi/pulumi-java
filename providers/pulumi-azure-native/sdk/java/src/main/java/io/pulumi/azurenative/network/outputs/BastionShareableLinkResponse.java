@@ -31,12 +31,12 @@ public final class BastionShareableLinkResponse {
      */
     private final VMResponse vm;
 
-    @OutputCustomType.Constructor({"bsl","createdAt","message","vm"})
+    @OutputCustomType.Constructor
     private BastionShareableLinkResponse(
-        String bsl,
-        String createdAt,
-        String message,
-        VMResponse vm) {
+        @OutputCustomType.Parameter("bsl") String bsl,
+        @OutputCustomType.Parameter("createdAt") String createdAt,
+        @OutputCustomType.Parameter("message") String message,
+        @OutputCustomType.Parameter("vm") VMResponse vm) {
         this.bsl = bsl;
         this.createdAt = createdAt;
         this.message = message;

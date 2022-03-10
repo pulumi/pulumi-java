@@ -27,11 +27,11 @@ public final class BackendProxyContractResponse {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor({"password","url","username"})
+    @OutputCustomType.Constructor
     private BackendProxyContractResponse(
-        @Nullable String password,
-        String url,
-        @Nullable String username) {
+        @OutputCustomType.Parameter("password") @Nullable String password,
+        @OutputCustomType.Parameter("url") String url,
+        @OutputCustomType.Parameter("username") @Nullable String username) {
         this.password = password;
         this.url = url;
         this.username = username;

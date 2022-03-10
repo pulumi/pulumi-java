@@ -73,20 +73,20 @@ public final class EdifactDelimiterOverrideResponse {
      */
     private final @Nullable String targetNamespace;
 
-    @OutputCustomType.Constructor({"componentSeparator","dataElementSeparator","decimalPointIndicator","messageAssociationAssignedCode","messageId","messageRelease","messageVersion","releaseIndicator","repetitionSeparator","segmentTerminator","segmentTerminatorSuffix","targetNamespace"})
+    @OutputCustomType.Constructor
     private EdifactDelimiterOverrideResponse(
-        Integer componentSeparator,
-        Integer dataElementSeparator,
-        String decimalPointIndicator,
-        @Nullable String messageAssociationAssignedCode,
-        @Nullable String messageId,
-        @Nullable String messageRelease,
-        @Nullable String messageVersion,
-        Integer releaseIndicator,
-        Integer repetitionSeparator,
-        Integer segmentTerminator,
-        String segmentTerminatorSuffix,
-        @Nullable String targetNamespace) {
+        @OutputCustomType.Parameter("componentSeparator") Integer componentSeparator,
+        @OutputCustomType.Parameter("dataElementSeparator") Integer dataElementSeparator,
+        @OutputCustomType.Parameter("decimalPointIndicator") String decimalPointIndicator,
+        @OutputCustomType.Parameter("messageAssociationAssignedCode") @Nullable String messageAssociationAssignedCode,
+        @OutputCustomType.Parameter("messageId") @Nullable String messageId,
+        @OutputCustomType.Parameter("messageRelease") @Nullable String messageRelease,
+        @OutputCustomType.Parameter("messageVersion") @Nullable String messageVersion,
+        @OutputCustomType.Parameter("releaseIndicator") Integer releaseIndicator,
+        @OutputCustomType.Parameter("repetitionSeparator") Integer repetitionSeparator,
+        @OutputCustomType.Parameter("segmentTerminator") Integer segmentTerminator,
+        @OutputCustomType.Parameter("segmentTerminatorSuffix") String segmentTerminatorSuffix,
+        @OutputCustomType.Parameter("targetNamespace") @Nullable String targetNamespace) {
         this.componentSeparator = componentSeparator;
         this.dataElementSeparator = dataElementSeparator;
         this.decimalPointIndicator = decimalPointIndicator;

@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class ResourceTypeEndpointResponseFeaturesRule {
     private final String requiredFeaturesPolicy;
 
-    @OutputCustomType.Constructor({"requiredFeaturesPolicy"})
-    private ResourceTypeEndpointResponseFeaturesRule(String requiredFeaturesPolicy) {
+    @OutputCustomType.Constructor
+    private ResourceTypeEndpointResponseFeaturesRule(@OutputCustomType.Parameter("requiredFeaturesPolicy") String requiredFeaturesPolicy) {
         this.requiredFeaturesPolicy = requiredFeaturesPolicy;
     }
 

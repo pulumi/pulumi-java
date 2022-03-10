@@ -23,10 +23,10 @@ public final class SecurityContactPropertiesResponseNotificationsByRole {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor({"roles","state"})
+    @OutputCustomType.Constructor
     private SecurityContactPropertiesResponseNotificationsByRole(
-        @Nullable List<String> roles,
-        @Nullable String state) {
+        @OutputCustomType.Parameter("roles") @Nullable List<String> roles,
+        @OutputCustomType.Parameter("state") @Nullable String state) {
         this.roles = roles;
         this.state = state;
     }

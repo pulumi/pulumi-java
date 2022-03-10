@@ -28,11 +28,11 @@ public final class DatasetStateResponse {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor({"deprecatedBy","etag","state"})
+    @OutputCustomType.Constructor
     private DatasetStateResponse(
-        @Nullable DatasetStateResponseDeprecatedBy deprecatedBy,
-        String etag,
-        @Nullable String state) {
+        @OutputCustomType.Parameter("deprecatedBy") @Nullable DatasetStateResponseDeprecatedBy deprecatedBy,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("state") @Nullable String state) {
         this.deprecatedBy = deprecatedBy;
         this.etag = etag;
         this.state = state;

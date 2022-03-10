@@ -18,12 +18,12 @@ public final class EnergyServicePropertiesResponse {
     private final String dnsName;
     private final String provisioningState;
 
-    @OutputCustomType.Constructor({"authAppId","dataPartitionNames","dnsName","provisioningState"})
+    @OutputCustomType.Constructor
     private EnergyServicePropertiesResponse(
-        @Nullable String authAppId,
-        @Nullable List<DataPartitionNamesResponse> dataPartitionNames,
-        String dnsName,
-        String provisioningState) {
+        @OutputCustomType.Parameter("authAppId") @Nullable String authAppId,
+        @OutputCustomType.Parameter("dataPartitionNames") @Nullable List<DataPartitionNamesResponse> dataPartitionNames,
+        @OutputCustomType.Parameter("dnsName") String dnsName,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState) {
         this.authAppId = authAppId;
         this.dataPartitionNames = dataPartitionNames;
         this.dnsName = dnsName;

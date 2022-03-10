@@ -62,18 +62,18 @@ public final class X12ValidationSettingsResponse {
      */
     private final Boolean validateXSDTypes;
 
-    @OutputCustomType.Constructor({"allowLeadingAndTrailingSpacesAndZeroes","checkDuplicateGroupControlNumber","checkDuplicateInterchangeControlNumber","checkDuplicateTransactionSetControlNumber","interchangeControlNumberValidityDays","trailingSeparatorPolicy","trimLeadingAndTrailingSpacesAndZeroes","validateCharacterSet","validateEDITypes","validateXSDTypes"})
+    @OutputCustomType.Constructor
     private X12ValidationSettingsResponse(
-        Boolean allowLeadingAndTrailingSpacesAndZeroes,
-        Boolean checkDuplicateGroupControlNumber,
-        Boolean checkDuplicateInterchangeControlNumber,
-        Boolean checkDuplicateTransactionSetControlNumber,
-        Integer interchangeControlNumberValidityDays,
-        String trailingSeparatorPolicy,
-        Boolean trimLeadingAndTrailingSpacesAndZeroes,
-        Boolean validateCharacterSet,
-        Boolean validateEDITypes,
-        Boolean validateXSDTypes) {
+        @OutputCustomType.Parameter("allowLeadingAndTrailingSpacesAndZeroes") Boolean allowLeadingAndTrailingSpacesAndZeroes,
+        @OutputCustomType.Parameter("checkDuplicateGroupControlNumber") Boolean checkDuplicateGroupControlNumber,
+        @OutputCustomType.Parameter("checkDuplicateInterchangeControlNumber") Boolean checkDuplicateInterchangeControlNumber,
+        @OutputCustomType.Parameter("checkDuplicateTransactionSetControlNumber") Boolean checkDuplicateTransactionSetControlNumber,
+        @OutputCustomType.Parameter("interchangeControlNumberValidityDays") Integer interchangeControlNumberValidityDays,
+        @OutputCustomType.Parameter("trailingSeparatorPolicy") String trailingSeparatorPolicy,
+        @OutputCustomType.Parameter("trimLeadingAndTrailingSpacesAndZeroes") Boolean trimLeadingAndTrailingSpacesAndZeroes,
+        @OutputCustomType.Parameter("validateCharacterSet") Boolean validateCharacterSet,
+        @OutputCustomType.Parameter("validateEDITypes") Boolean validateEDITypes,
+        @OutputCustomType.Parameter("validateXSDTypes") Boolean validateXSDTypes) {
         this.allowLeadingAndTrailingSpacesAndZeroes = allowLeadingAndTrailingSpacesAndZeroes;
         this.checkDuplicateGroupControlNumber = checkDuplicateGroupControlNumber;
         this.checkDuplicateInterchangeControlNumber = checkDuplicateInterchangeControlNumber;

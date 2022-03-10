@@ -51,15 +51,15 @@ public final class SqlDedicatedGatewayServiceResourcePropertiesResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"creationTime","instanceCount","instanceSize","locations","serviceType","sqlDedicatedGatewayEndpoint","status"})
+    @OutputCustomType.Constructor
     private SqlDedicatedGatewayServiceResourcePropertiesResponse(
-        String creationTime,
-        @Nullable Integer instanceCount,
-        @Nullable String instanceSize,
-        List<SqlDedicatedGatewayRegionalServiceResourceResponse> locations,
-        String serviceType,
-        @Nullable String sqlDedicatedGatewayEndpoint,
-        String status) {
+        @OutputCustomType.Parameter("creationTime") String creationTime,
+        @OutputCustomType.Parameter("instanceCount") @Nullable Integer instanceCount,
+        @OutputCustomType.Parameter("instanceSize") @Nullable String instanceSize,
+        @OutputCustomType.Parameter("locations") List<SqlDedicatedGatewayRegionalServiceResourceResponse> locations,
+        @OutputCustomType.Parameter("serviceType") String serviceType,
+        @OutputCustomType.Parameter("sqlDedicatedGatewayEndpoint") @Nullable String sqlDedicatedGatewayEndpoint,
+        @OutputCustomType.Parameter("status") String status) {
         this.creationTime = creationTime;
         this.instanceCount = instanceCount;
         this.instanceSize = instanceSize;

@@ -63,18 +63,18 @@ public final class GetAlertsSuppressionRuleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"alertType","comment","expirationDateUtc","id","lastModifiedUtc","name","reason","state","suppressionAlertsScope","type"})
+    @OutputCustomType.Constructor
     private GetAlertsSuppressionRuleResult(
-        String alertType,
-        @Nullable String comment,
-        @Nullable String expirationDateUtc,
-        String id,
-        String lastModifiedUtc,
-        String name,
-        String reason,
-        String state,
-        @Nullable SuppressionAlertsScopeResponse suppressionAlertsScope,
-        String type) {
+        @OutputCustomType.Parameter("alertType") String alertType,
+        @OutputCustomType.Parameter("comment") @Nullable String comment,
+        @OutputCustomType.Parameter("expirationDateUtc") @Nullable String expirationDateUtc,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastModifiedUtc") String lastModifiedUtc,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("reason") String reason,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("suppressionAlertsScope") @Nullable SuppressionAlertsScopeResponse suppressionAlertsScope,
+        @OutputCustomType.Parameter("type") String type) {
         this.alertType = alertType;
         this.comment = comment;
         this.expirationDateUtc = expirationDateUtc;

@@ -38,13 +38,13 @@ public final class WorkbookTemplateGalleryResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"category","name","order","resourceType","type"})
+    @OutputCustomType.Constructor
     private WorkbookTemplateGalleryResponse(
-        @Nullable String category,
-        @Nullable String name,
-        @Nullable Integer order,
-        @Nullable String resourceType,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("category") @Nullable String category,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("order") @Nullable Integer order,
+        @OutputCustomType.Parameter("resourceType") @Nullable String resourceType,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.category = category;
         this.name = name;
         this.order = order;

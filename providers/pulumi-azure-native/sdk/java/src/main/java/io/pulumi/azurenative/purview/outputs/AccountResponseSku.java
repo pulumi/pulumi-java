@@ -23,10 +23,10 @@ public final class AccountResponseSku {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"capacity","name"})
+    @OutputCustomType.Constructor
     private AccountResponseSku(
-        @Nullable Integer capacity,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("capacity") @Nullable Integer capacity,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.capacity = capacity;
         this.name = name;
     }

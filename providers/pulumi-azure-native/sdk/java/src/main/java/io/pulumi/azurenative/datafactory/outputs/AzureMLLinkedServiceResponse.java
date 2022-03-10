@@ -86,21 +86,21 @@ public final class AzureMLLinkedServiceResponse {
      */
     private final @Nullable Object updateResourceEndpoint;
 
-    @OutputCustomType.Constructor({"annotations","apiKey","authentication","connectVia","description","encryptedCredential","mlEndpoint","parameters","servicePrincipalId","servicePrincipalKey","tenant","type","updateResourceEndpoint"})
+    @OutputCustomType.Constructor
     private AzureMLLinkedServiceResponse(
-        @Nullable List<Object> annotations,
-        Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> apiKey,
-        @Nullable Object authentication,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        Object mlEndpoint,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Object servicePrincipalId,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey,
-        @Nullable Object tenant,
-        String type,
-        @Nullable Object updateResourceEndpoint) {
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("apiKey") Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> apiKey,
+        @OutputCustomType.Parameter("authentication") @Nullable Object authentication,
+        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @OutputCustomType.Parameter("mlEndpoint") Object mlEndpoint,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("servicePrincipalId") @Nullable Object servicePrincipalId,
+        @OutputCustomType.Parameter("servicePrincipalKey") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey,
+        @OutputCustomType.Parameter("tenant") @Nullable Object tenant,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("updateResourceEndpoint") @Nullable Object updateResourceEndpoint) {
         this.annotations = annotations;
         this.apiKey = apiKey;
         this.authentication = authentication;

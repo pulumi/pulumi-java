@@ -20,10 +20,10 @@ public final class ContentHashResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"algorithm","value"})
+    @OutputCustomType.Constructor
     private ContentHashResponse(
-        String algorithm,
-        String value) {
+        @OutputCustomType.Parameter("algorithm") String algorithm,
+        @OutputCustomType.Parameter("value") String value) {
         this.algorithm = algorithm;
         this.value = value;
     }

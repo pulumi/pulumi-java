@@ -107,26 +107,26 @@ public final class GetServerResult {
      */
     private final String workspaceFeature;
 
-    @OutputCustomType.Constructor({"administratorLogin","administrators","fullyQualifiedDomainName","id","identity","keyId","kind","location","minimalTlsVersion","name","primaryUserAssignedIdentityId","privateEndpointConnections","publicNetworkAccess","state","tags","type","version","workspaceFeature"})
+    @OutputCustomType.Constructor
     private GetServerResult(
-        @Nullable String administratorLogin,
-        @Nullable ServerExternalAdministratorResponse administrators,
-        String fullyQualifiedDomainName,
-        String id,
-        @Nullable ResourceIdentityResponse identity,
-        @Nullable String keyId,
-        String kind,
-        String location,
-        @Nullable String minimalTlsVersion,
-        String name,
-        @Nullable String primaryUserAssignedIdentityId,
-        List<ServerPrivateEndpointConnectionResponse> privateEndpointConnections,
-        @Nullable String publicNetworkAccess,
-        String state,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable String version,
-        String workspaceFeature) {
+        @OutputCustomType.Parameter("administratorLogin") @Nullable String administratorLogin,
+        @OutputCustomType.Parameter("administrators") @Nullable ServerExternalAdministratorResponse administrators,
+        @OutputCustomType.Parameter("fullyQualifiedDomainName") String fullyQualifiedDomainName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable ResourceIdentityResponse identity,
+        @OutputCustomType.Parameter("keyId") @Nullable String keyId,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("minimalTlsVersion") @Nullable String minimalTlsVersion,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("primaryUserAssignedIdentityId") @Nullable String primaryUserAssignedIdentityId,
+        @OutputCustomType.Parameter("privateEndpointConnections") List<ServerPrivateEndpointConnectionResponse> privateEndpointConnections,
+        @OutputCustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("version") @Nullable String version,
+        @OutputCustomType.Parameter("workspaceFeature") String workspaceFeature) {
         this.administratorLogin = administratorLogin;
         this.administrators = administrators;
         this.fullyQualifiedDomainName = fullyQualifiedDomainName;

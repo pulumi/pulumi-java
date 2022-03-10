@@ -28,11 +28,11 @@ public final class TelegramChannelPropertiesResponse {
      */
     private final @Nullable Boolean isValidated;
 
-    @OutputCustomType.Constructor({"accessToken","isEnabled","isValidated"})
+    @OutputCustomType.Constructor
     private TelegramChannelPropertiesResponse(
-        @Nullable String accessToken,
-        Boolean isEnabled,
-        @Nullable Boolean isValidated) {
+        @OutputCustomType.Parameter("accessToken") @Nullable String accessToken,
+        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
+        @OutputCustomType.Parameter("isValidated") @Nullable Boolean isValidated) {
         this.accessToken = accessToken;
         this.isEnabled = isEnabled;
         this.isValidated = isValidated;

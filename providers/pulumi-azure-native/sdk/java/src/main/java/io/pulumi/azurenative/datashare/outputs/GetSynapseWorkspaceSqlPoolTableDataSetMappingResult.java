@@ -57,17 +57,17 @@ public final class GetSynapseWorkspaceSqlPoolTableDataSetMappingResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"dataSetId","dataSetMappingStatus","id","kind","name","provisioningState","synapseWorkspaceSqlPoolTableResourceId","systemData","type"})
+    @OutputCustomType.Constructor
     private GetSynapseWorkspaceSqlPoolTableDataSetMappingResult(
-        String dataSetId,
-        String dataSetMappingStatus,
-        String id,
-        String kind,
-        String name,
-        String provisioningState,
-        String synapseWorkspaceSqlPoolTableResourceId,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("dataSetId") String dataSetId,
+        @OutputCustomType.Parameter("dataSetMappingStatus") String dataSetMappingStatus,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("synapseWorkspaceSqlPoolTableResourceId") String synapseWorkspaceSqlPoolTableResourceId,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.dataSetId = dataSetId;
         this.dataSetMappingStatus = dataSetMappingStatus;
         this.id = id;

@@ -19,13 +19,13 @@ public final class ExtendedErrorInfoResponse {
     private final @Nullable String message;
     private final @Nullable String target;
 
-    @OutputCustomType.Constructor({"additionalInfo","code","details","message","target"})
+    @OutputCustomType.Constructor
     private ExtendedErrorInfoResponse(
-        @Nullable List<TypedErrorInfoResponse> additionalInfo,
-        @Nullable String code,
-        @Nullable List<ExtendedErrorInfoResponse> details,
-        @Nullable String message,
-        @Nullable String target) {
+        @OutputCustomType.Parameter("additionalInfo") @Nullable List<TypedErrorInfoResponse> additionalInfo,
+        @OutputCustomType.Parameter("code") @Nullable String code,
+        @OutputCustomType.Parameter("details") @Nullable List<ExtendedErrorInfoResponse> details,
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("target") @Nullable String target) {
         this.additionalInfo = additionalInfo;
         this.code = code;
         this.details = details;

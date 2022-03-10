@@ -46,15 +46,15 @@ public final class X12ValidationOverrideResponse {
      */
     private final Boolean validateXSDTypes;
 
-    @OutputCustomType.Constructor({"allowLeadingAndTrailingSpacesAndZeroes","messageId","trailingSeparatorPolicy","trimLeadingAndTrailingSpacesAndZeroes","validateCharacterSet","validateEDITypes","validateXSDTypes"})
+    @OutputCustomType.Constructor
     private X12ValidationOverrideResponse(
-        Boolean allowLeadingAndTrailingSpacesAndZeroes,
-        String messageId,
-        String trailingSeparatorPolicy,
-        Boolean trimLeadingAndTrailingSpacesAndZeroes,
-        Boolean validateCharacterSet,
-        Boolean validateEDITypes,
-        Boolean validateXSDTypes) {
+        @OutputCustomType.Parameter("allowLeadingAndTrailingSpacesAndZeroes") Boolean allowLeadingAndTrailingSpacesAndZeroes,
+        @OutputCustomType.Parameter("messageId") String messageId,
+        @OutputCustomType.Parameter("trailingSeparatorPolicy") String trailingSeparatorPolicy,
+        @OutputCustomType.Parameter("trimLeadingAndTrailingSpacesAndZeroes") Boolean trimLeadingAndTrailingSpacesAndZeroes,
+        @OutputCustomType.Parameter("validateCharacterSet") Boolean validateCharacterSet,
+        @OutputCustomType.Parameter("validateEDITypes") Boolean validateEDITypes,
+        @OutputCustomType.Parameter("validateXSDTypes") Boolean validateXSDTypes) {
         this.allowLeadingAndTrailingSpacesAndZeroes = allowLeadingAndTrailingSpacesAndZeroes;
         this.messageId = messageId;
         this.trailingSeparatorPolicy = trailingSeparatorPolicy;

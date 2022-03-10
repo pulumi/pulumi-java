@@ -22,10 +22,10 @@ public final class ApiConnectionTestLinkResponse {
      */
     private final @Nullable String requestUri;
 
-    @OutputCustomType.Constructor({"method","requestUri"})
+    @OutputCustomType.Constructor
     private ApiConnectionTestLinkResponse(
-        @Nullable String method,
-        @Nullable String requestUri) {
+        @OutputCustomType.Parameter("method") @Nullable String method,
+        @OutputCustomType.Parameter("requestUri") @Nullable String requestUri) {
         this.method = method;
         this.requestUri = requestUri;
     }

@@ -69,19 +69,19 @@ public final class GetExpressRouteCircuitConnectionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"addressPrefix","authorizationKey","circuitConnectionStatus","etag","expressRouteCircuitPeering","id","ipv6CircuitConnectionConfig","name","peerExpressRouteCircuitPeering","provisioningState","type"})
+    @OutputCustomType.Constructor
     private GetExpressRouteCircuitConnectionResult(
-        @Nullable String addressPrefix,
-        @Nullable String authorizationKey,
-        String circuitConnectionStatus,
-        String etag,
-        @Nullable SubResourceResponse expressRouteCircuitPeering,
-        @Nullable String id,
-        @Nullable Ipv6CircuitConnectionConfigResponse ipv6CircuitConnectionConfig,
-        @Nullable String name,
-        @Nullable SubResourceResponse peerExpressRouteCircuitPeering,
-        String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("addressPrefix") @Nullable String addressPrefix,
+        @OutputCustomType.Parameter("authorizationKey") @Nullable String authorizationKey,
+        @OutputCustomType.Parameter("circuitConnectionStatus") String circuitConnectionStatus,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("expressRouteCircuitPeering") @Nullable SubResourceResponse expressRouteCircuitPeering,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("ipv6CircuitConnectionConfig") @Nullable Ipv6CircuitConnectionConfigResponse ipv6CircuitConnectionConfig,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("peerExpressRouteCircuitPeering") @Nullable SubResourceResponse peerExpressRouteCircuitPeering,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.addressPrefix = addressPrefix;
         this.authorizationKey = authorizationKey;
         this.circuitConnectionStatus = circuitConnectionStatus;

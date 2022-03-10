@@ -28,11 +28,11 @@ public final class DataDisksGroupsResponse {
      */
     private final String storageAccountType;
 
-    @OutputCustomType.Constructor({"diskSizeGB","disksPerNode","storageAccountType"})
+    @OutputCustomType.Constructor
     private DataDisksGroupsResponse(
-        Integer diskSizeGB,
-        @Nullable Integer disksPerNode,
-        String storageAccountType) {
+        @OutputCustomType.Parameter("diskSizeGB") Integer diskSizeGB,
+        @OutputCustomType.Parameter("disksPerNode") @Nullable Integer disksPerNode,
+        @OutputCustomType.Parameter("storageAccountType") String storageAccountType) {
         this.diskSizeGB = diskSizeGB;
         this.disksPerNode = disksPerNode;
         this.storageAccountType = storageAccountType;

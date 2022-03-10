@@ -105,25 +105,25 @@ public final class DeploymentPropertiesExtendedResponse {
      */
     private final List<ResourceReferenceResponse> validatedResources;
 
-    @OutputCustomType.Constructor({"correlationId","debugSetting","dependencies","duration","error","mode","onErrorDeployment","outputResources","outputs","parameters","parametersLink","providers","provisioningState","templateHash","templateLink","timestamp","validatedResources"})
+    @OutputCustomType.Constructor
     private DeploymentPropertiesExtendedResponse(
-        String correlationId,
-        DebugSettingResponse debugSetting,
-        List<DependencyResponse> dependencies,
-        String duration,
-        ErrorResponseResponse error,
-        String mode,
-        OnErrorDeploymentExtendedResponse onErrorDeployment,
-        List<ResourceReferenceResponse> outputResources,
-        Object outputs,
-        Object parameters,
-        ParametersLinkResponse parametersLink,
-        List<ProviderResponse> providers,
-        String provisioningState,
-        String templateHash,
-        TemplateLinkResponse templateLink,
-        String timestamp,
-        List<ResourceReferenceResponse> validatedResources) {
+        @OutputCustomType.Parameter("correlationId") String correlationId,
+        @OutputCustomType.Parameter("debugSetting") DebugSettingResponse debugSetting,
+        @OutputCustomType.Parameter("dependencies") List<DependencyResponse> dependencies,
+        @OutputCustomType.Parameter("duration") String duration,
+        @OutputCustomType.Parameter("error") ErrorResponseResponse error,
+        @OutputCustomType.Parameter("mode") String mode,
+        @OutputCustomType.Parameter("onErrorDeployment") OnErrorDeploymentExtendedResponse onErrorDeployment,
+        @OutputCustomType.Parameter("outputResources") List<ResourceReferenceResponse> outputResources,
+        @OutputCustomType.Parameter("outputs") Object outputs,
+        @OutputCustomType.Parameter("parameters") Object parameters,
+        @OutputCustomType.Parameter("parametersLink") ParametersLinkResponse parametersLink,
+        @OutputCustomType.Parameter("providers") List<ProviderResponse> providers,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("templateHash") String templateHash,
+        @OutputCustomType.Parameter("templateLink") TemplateLinkResponse templateLink,
+        @OutputCustomType.Parameter("timestamp") String timestamp,
+        @OutputCustomType.Parameter("validatedResources") List<ResourceReferenceResponse> validatedResources) {
         this.correlationId = correlationId;
         this.debugSetting = debugSetting;
         this.dependencies = dependencies;

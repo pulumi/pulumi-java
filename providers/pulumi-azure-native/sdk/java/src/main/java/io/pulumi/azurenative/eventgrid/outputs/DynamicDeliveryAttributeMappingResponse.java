@@ -28,11 +28,11 @@ public final class DynamicDeliveryAttributeMappingResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"name","sourceField","type"})
+    @OutputCustomType.Constructor
     private DynamicDeliveryAttributeMappingResponse(
-        @Nullable String name,
-        @Nullable String sourceField,
-        String type) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("sourceField") @Nullable String sourceField,
+        @OutputCustomType.Parameter("type") String type) {
         this.name = name;
         this.sourceField = sourceField;
         this.type = type;

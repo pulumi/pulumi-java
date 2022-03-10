@@ -43,14 +43,14 @@ public final class AccessReviewScopeResponse {
      */
     private final String roleDefinitionId;
 
-    @OutputCustomType.Constructor({"assignmentState","expandNestedMemberships","inactiveDuration","principalType","resourceId","roleDefinitionId"})
+    @OutputCustomType.Constructor
     private AccessReviewScopeResponse(
-        String assignmentState,
-        @Nullable Boolean expandNestedMemberships,
-        @Nullable String inactiveDuration,
-        String principalType,
-        String resourceId,
-        String roleDefinitionId) {
+        @OutputCustomType.Parameter("assignmentState") String assignmentState,
+        @OutputCustomType.Parameter("expandNestedMemberships") @Nullable Boolean expandNestedMemberships,
+        @OutputCustomType.Parameter("inactiveDuration") @Nullable String inactiveDuration,
+        @OutputCustomType.Parameter("principalType") String principalType,
+        @OutputCustomType.Parameter("resourceId") String resourceId,
+        @OutputCustomType.Parameter("roleDefinitionId") String roleDefinitionId) {
         this.assignmentState = assignmentState;
         this.expandNestedMemberships = expandNestedMemberships;
         this.inactiveDuration = inactiveDuration;

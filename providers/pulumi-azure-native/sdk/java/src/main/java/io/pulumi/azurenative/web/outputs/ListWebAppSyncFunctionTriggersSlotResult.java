@@ -22,10 +22,10 @@ public final class ListWebAppSyncFunctionTriggersSlotResult {
      */
     private final @Nullable String triggerUrl;
 
-    @OutputCustomType.Constructor({"key","triggerUrl"})
+    @OutputCustomType.Constructor
     private ListWebAppSyncFunctionTriggersSlotResult(
-        @Nullable String key,
-        @Nullable String triggerUrl) {
+        @OutputCustomType.Parameter("key") @Nullable String key,
+        @OutputCustomType.Parameter("triggerUrl") @Nullable String triggerUrl) {
         this.key = key;
         this.triggerUrl = triggerUrl;
     }

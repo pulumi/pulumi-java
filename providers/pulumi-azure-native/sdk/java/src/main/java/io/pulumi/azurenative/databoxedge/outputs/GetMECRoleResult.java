@@ -50,15 +50,15 @@ public final class GetMECRoleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"connectionString","id","kind","name","roleStatus","systemData","type"})
+    @OutputCustomType.Constructor
     private GetMECRoleResult(
-        @Nullable AsymmetricEncryptedSecretResponse connectionString,
-        String id,
-        String kind,
-        String name,
-        String roleStatus,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("connectionString") @Nullable AsymmetricEncryptedSecretResponse connectionString,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("roleStatus") String roleStatus,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.connectionString = connectionString;
         this.id = id;
         this.kind = kind;

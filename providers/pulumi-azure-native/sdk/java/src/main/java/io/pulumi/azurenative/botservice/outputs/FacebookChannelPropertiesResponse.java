@@ -45,14 +45,14 @@ public final class FacebookChannelPropertiesResponse {
      */
     private final String verifyToken;
 
-    @OutputCustomType.Constructor({"appId","appSecret","callbackUrl","isEnabled","pages","verifyToken"})
+    @OutputCustomType.Constructor
     private FacebookChannelPropertiesResponse(
-        String appId,
-        @Nullable String appSecret,
-        String callbackUrl,
-        Boolean isEnabled,
-        @Nullable List<FacebookPageResponse> pages,
-        String verifyToken) {
+        @OutputCustomType.Parameter("appId") String appId,
+        @OutputCustomType.Parameter("appSecret") @Nullable String appSecret,
+        @OutputCustomType.Parameter("callbackUrl") String callbackUrl,
+        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
+        @OutputCustomType.Parameter("pages") @Nullable List<FacebookPageResponse> pages,
+        @OutputCustomType.Parameter("verifyToken") String verifyToken) {
         this.appId = appId;
         this.appSecret = appSecret;
         this.callbackUrl = callbackUrl;

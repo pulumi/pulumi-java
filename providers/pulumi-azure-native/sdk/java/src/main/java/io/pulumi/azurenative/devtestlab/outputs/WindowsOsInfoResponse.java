@@ -17,8 +17,8 @@ public final class WindowsOsInfoResponse {
      */
     private final @Nullable String windowsOsState;
 
-    @OutputCustomType.Constructor({"windowsOsState"})
-    private WindowsOsInfoResponse(@Nullable String windowsOsState) {
+    @OutputCustomType.Constructor
+    private WindowsOsInfoResponse(@OutputCustomType.Parameter("windowsOsState") @Nullable String windowsOsState) {
         this.windowsOsState = windowsOsState;
     }
 

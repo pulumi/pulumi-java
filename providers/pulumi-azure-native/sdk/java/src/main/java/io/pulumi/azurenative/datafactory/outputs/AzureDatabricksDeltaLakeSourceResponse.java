@@ -50,15 +50,15 @@ public final class AzureDatabricksDeltaLakeSourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"disableMetricsCollection","exportSettings","maxConcurrentConnections","query","sourceRetryCount","sourceRetryWait","type"})
+    @OutputCustomType.Constructor
     private AzureDatabricksDeltaLakeSourceResponse(
-        @Nullable Object disableMetricsCollection,
-        @Nullable AzureDatabricksDeltaLakeExportCommandResponse exportSettings,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable Object query,
-        @Nullable Object sourceRetryCount,
-        @Nullable Object sourceRetryWait,
-        String type) {
+        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @OutputCustomType.Parameter("exportSettings") @Nullable AzureDatabricksDeltaLakeExportCommandResponse exportSettings,
+        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @OutputCustomType.Parameter("query") @Nullable Object query,
+        @OutputCustomType.Parameter("sourceRetryCount") @Nullable Object sourceRetryCount,
+        @OutputCustomType.Parameter("sourceRetryWait") @Nullable Object sourceRetryWait,
+        @OutputCustomType.Parameter("type") String type) {
         this.disableMetricsCollection = disableMetricsCollection;
         this.exportSettings = exportSettings;
         this.maxConcurrentConnections = maxConcurrentConnections;

@@ -32,12 +32,12 @@ public final class ImageDescriptorResponse {
      */
     private final @Nullable String tag;
 
-    @OutputCustomType.Constructor({"digest","registry","repository","tag"})
+    @OutputCustomType.Constructor
     private ImageDescriptorResponse(
-        @Nullable String digest,
-        @Nullable String registry,
-        @Nullable String repository,
-        @Nullable String tag) {
+        @OutputCustomType.Parameter("digest") @Nullable String digest,
+        @OutputCustomType.Parameter("registry") @Nullable String registry,
+        @OutputCustomType.Parameter("repository") @Nullable String repository,
+        @OutputCustomType.Parameter("tag") @Nullable String tag) {
         this.digest = digest;
         this.registry = registry;
         this.repository = repository;

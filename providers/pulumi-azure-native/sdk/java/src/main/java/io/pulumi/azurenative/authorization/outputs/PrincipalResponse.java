@@ -32,12 +32,12 @@ public final class PrincipalResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"displayName","email","id","type"})
+    @OutputCustomType.Constructor
     private PrincipalResponse(
-        @Nullable String displayName,
-        @Nullable String email,
-        @Nullable String id,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("email") @Nullable String email,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.displayName = displayName;
         this.email = email;
         this.id = id;

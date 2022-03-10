@@ -28,11 +28,11 @@ public final class EncryptionServiceResponse {
      */
     private final String lastEnabledTime;
 
-    @OutputCustomType.Constructor({"enabled","keyType","lastEnabledTime"})
+    @OutputCustomType.Constructor
     private EncryptionServiceResponse(
-        @Nullable Boolean enabled,
-        @Nullable String keyType,
-        String lastEnabledTime) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("keyType") @Nullable String keyType,
+        @OutputCustomType.Parameter("lastEnabledTime") String lastEnabledTime) {
         this.enabled = enabled;
         this.keyType = keyType;
         this.lastEnabledTime = lastEnabledTime;

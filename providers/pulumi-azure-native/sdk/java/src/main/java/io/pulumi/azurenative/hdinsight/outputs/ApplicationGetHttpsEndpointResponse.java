@@ -50,15 +50,15 @@ public final class ApplicationGetHttpsEndpointResponse {
      */
     private final @Nullable String subDomainSuffix;
 
-    @OutputCustomType.Constructor({"accessModes","destinationPort","disableGatewayAuth","location","privateIPAddress","publicPort","subDomainSuffix"})
+    @OutputCustomType.Constructor
     private ApplicationGetHttpsEndpointResponse(
-        @Nullable List<String> accessModes,
-        @Nullable Integer destinationPort,
-        @Nullable Boolean disableGatewayAuth,
-        String location,
-        @Nullable String privateIPAddress,
-        Integer publicPort,
-        @Nullable String subDomainSuffix) {
+        @OutputCustomType.Parameter("accessModes") @Nullable List<String> accessModes,
+        @OutputCustomType.Parameter("destinationPort") @Nullable Integer destinationPort,
+        @OutputCustomType.Parameter("disableGatewayAuth") @Nullable Boolean disableGatewayAuth,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("privateIPAddress") @Nullable String privateIPAddress,
+        @OutputCustomType.Parameter("publicPort") Integer publicPort,
+        @OutputCustomType.Parameter("subDomainSuffix") @Nullable String subDomainSuffix) {
         this.accessModes = accessModes;
         this.destinationPort = destinationPort;
         this.disableGatewayAuth = disableGatewayAuth;

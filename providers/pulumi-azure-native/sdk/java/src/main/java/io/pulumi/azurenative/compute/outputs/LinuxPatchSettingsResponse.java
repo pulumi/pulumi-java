@@ -22,10 +22,10 @@ public final class LinuxPatchSettingsResponse {
      */
     private final @Nullable String patchMode;
 
-    @OutputCustomType.Constructor({"assessmentMode","patchMode"})
+    @OutputCustomType.Constructor
     private LinuxPatchSettingsResponse(
-        @Nullable String assessmentMode,
-        @Nullable String patchMode) {
+        @OutputCustomType.Parameter("assessmentMode") @Nullable String assessmentMode,
+        @OutputCustomType.Parameter("patchMode") @Nullable String patchMode) {
         this.assessmentMode = assessmentMode;
         this.patchMode = patchMode;
     }

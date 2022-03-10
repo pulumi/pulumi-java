@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class ResourceProviderManifestPropertiesResponseProviderAuthentication {
     private final List<String> allowedAudiences;
 
-    @OutputCustomType.Constructor({"allowedAudiences"})
-    private ResourceProviderManifestPropertiesResponseProviderAuthentication(List<String> allowedAudiences) {
+    @OutputCustomType.Constructor
+    private ResourceProviderManifestPropertiesResponseProviderAuthentication(@OutputCustomType.Parameter("allowedAudiences") List<String> allowedAudiences) {
         this.allowedAudiences = allowedAudiences;
     }
 

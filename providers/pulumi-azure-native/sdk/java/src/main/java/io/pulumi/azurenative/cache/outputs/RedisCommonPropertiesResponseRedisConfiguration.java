@@ -67,19 +67,19 @@ public final class RedisCommonPropertiesResponseRedisConfiguration {
      */
     private final @Nullable String rdbStorageConnectionString;
 
-    @OutputCustomType.Constructor({"aofStorageConnectionString0","aofStorageConnectionString1","maxclients","maxfragmentationmemoryReserved","maxmemoryDelta","maxmemoryPolicy","maxmemoryReserved","rdbBackupEnabled","rdbBackupFrequency","rdbBackupMaxSnapshotCount","rdbStorageConnectionString"})
+    @OutputCustomType.Constructor
     private RedisCommonPropertiesResponseRedisConfiguration(
-        @Nullable String aofStorageConnectionString0,
-        @Nullable String aofStorageConnectionString1,
-        String maxclients,
-        @Nullable String maxfragmentationmemoryReserved,
-        @Nullable String maxmemoryDelta,
-        @Nullable String maxmemoryPolicy,
-        @Nullable String maxmemoryReserved,
-        @Nullable String rdbBackupEnabled,
-        @Nullable String rdbBackupFrequency,
-        @Nullable String rdbBackupMaxSnapshotCount,
-        @Nullable String rdbStorageConnectionString) {
+        @OutputCustomType.Parameter("aofStorageConnectionString0") @Nullable String aofStorageConnectionString0,
+        @OutputCustomType.Parameter("aofStorageConnectionString1") @Nullable String aofStorageConnectionString1,
+        @OutputCustomType.Parameter("maxclients") String maxclients,
+        @OutputCustomType.Parameter("maxfragmentationmemoryReserved") @Nullable String maxfragmentationmemoryReserved,
+        @OutputCustomType.Parameter("maxmemoryDelta") @Nullable String maxmemoryDelta,
+        @OutputCustomType.Parameter("maxmemoryPolicy") @Nullable String maxmemoryPolicy,
+        @OutputCustomType.Parameter("maxmemoryReserved") @Nullable String maxmemoryReserved,
+        @OutputCustomType.Parameter("rdbBackupEnabled") @Nullable String rdbBackupEnabled,
+        @OutputCustomType.Parameter("rdbBackupFrequency") @Nullable String rdbBackupFrequency,
+        @OutputCustomType.Parameter("rdbBackupMaxSnapshotCount") @Nullable String rdbBackupMaxSnapshotCount,
+        @OutputCustomType.Parameter("rdbStorageConnectionString") @Nullable String rdbStorageConnectionString) {
         this.aofStorageConnectionString0 = aofStorageConnectionString0;
         this.aofStorageConnectionString1 = aofStorageConnectionString1;
         this.maxclients = maxclients;

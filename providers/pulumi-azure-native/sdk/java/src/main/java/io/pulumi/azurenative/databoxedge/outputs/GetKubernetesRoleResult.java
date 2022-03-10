@@ -69,19 +69,19 @@ public final class GetKubernetesRoleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"hostPlatform","hostPlatformType","id","kind","kubernetesClusterInfo","kubernetesRoleResources","name","provisioningState","roleStatus","systemData","type"})
+    @OutputCustomType.Constructor
     private GetKubernetesRoleResult(
-        String hostPlatform,
-        String hostPlatformType,
-        String id,
-        String kind,
-        KubernetesClusterInfoResponse kubernetesClusterInfo,
-        KubernetesRoleResourcesResponse kubernetesRoleResources,
-        String name,
-        String provisioningState,
-        String roleStatus,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("hostPlatform") String hostPlatform,
+        @OutputCustomType.Parameter("hostPlatformType") String hostPlatformType,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("kubernetesClusterInfo") KubernetesClusterInfoResponse kubernetesClusterInfo,
+        @OutputCustomType.Parameter("kubernetesRoleResources") KubernetesRoleResourcesResponse kubernetesRoleResources,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("roleStatus") String roleStatus,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.hostPlatform = hostPlatform;
         this.hostPlatformType = hostPlatformType;
         this.id = id;

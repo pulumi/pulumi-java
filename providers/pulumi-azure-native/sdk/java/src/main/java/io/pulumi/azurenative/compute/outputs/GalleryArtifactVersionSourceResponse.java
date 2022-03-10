@@ -22,10 +22,10 @@ public final class GalleryArtifactVersionSourceResponse {
      */
     private final @Nullable String uri;
 
-    @OutputCustomType.Constructor({"id","uri"})
+    @OutputCustomType.Constructor
     private GalleryArtifactVersionSourceResponse(
-        @Nullable String id,
-        @Nullable String uri) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("uri") @Nullable String uri) {
         this.id = id;
         this.uri = uri;
     }

@@ -71,19 +71,19 @@ public final class GetCustomDomainResult {
      */
     private final @Nullable String validationData;
 
-    @OutputCustomType.Constructor({"customHttpsParameters","customHttpsProvisioningState","customHttpsProvisioningSubstate","hostName","id","name","provisioningState","resourceState","systemData","type","validationData"})
+    @OutputCustomType.Constructor
     private GetCustomDomainResult(
-        @Nullable Either<CdnManagedHttpsParametersResponse,UserManagedHttpsParametersResponse> customHttpsParameters,
-        String customHttpsProvisioningState,
-        String customHttpsProvisioningSubstate,
-        String hostName,
-        String id,
-        String name,
-        String provisioningState,
-        String resourceState,
-        SystemDataResponse systemData,
-        String type,
-        @Nullable String validationData) {
+        @OutputCustomType.Parameter("customHttpsParameters") @Nullable Either<CdnManagedHttpsParametersResponse,UserManagedHttpsParametersResponse> customHttpsParameters,
+        @OutputCustomType.Parameter("customHttpsProvisioningState") String customHttpsProvisioningState,
+        @OutputCustomType.Parameter("customHttpsProvisioningSubstate") String customHttpsProvisioningSubstate,
+        @OutputCustomType.Parameter("hostName") String hostName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("resourceState") String resourceState,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("validationData") @Nullable String validationData) {
         this.customHttpsParameters = customHttpsParameters;
         this.customHttpsProvisioningState = customHttpsProvisioningState;
         this.customHttpsProvisioningSubstate = customHttpsProvisioningSubstate;

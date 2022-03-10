@@ -17,8 +17,8 @@ public final class SqlWorkloadTypeUpdateSettingsResponse {
      */
     private final @Nullable String sqlWorkloadType;
 
-    @OutputCustomType.Constructor({"sqlWorkloadType"})
-    private SqlWorkloadTypeUpdateSettingsResponse(@Nullable String sqlWorkloadType) {
+    @OutputCustomType.Constructor
+    private SqlWorkloadTypeUpdateSettingsResponse(@OutputCustomType.Parameter("sqlWorkloadType") @Nullable String sqlWorkloadType) {
         this.sqlWorkloadType = sqlWorkloadType;
     }
 

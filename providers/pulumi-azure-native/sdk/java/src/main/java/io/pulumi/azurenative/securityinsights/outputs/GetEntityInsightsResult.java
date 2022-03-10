@@ -24,10 +24,10 @@ public final class GetEntityInsightsResult {
      */
     private final @Nullable List<EntityInsightItemResponse> value;
 
-    @OutputCustomType.Constructor({"metaData","value"})
+    @OutputCustomType.Constructor
     private GetEntityInsightsResult(
-        @Nullable GetInsightsResultsMetadataResponse metaData,
-        @Nullable List<EntityInsightItemResponse> value) {
+        @OutputCustomType.Parameter("metaData") @Nullable GetInsightsResultsMetadataResponse metaData,
+        @OutputCustomType.Parameter("value") @Nullable List<EntityInsightItemResponse> value) {
         this.metaData = metaData;
         this.value = value;
     }

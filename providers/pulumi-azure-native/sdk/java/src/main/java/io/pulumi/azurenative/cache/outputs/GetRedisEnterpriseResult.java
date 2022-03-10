@@ -81,21 +81,21 @@ public final class GetRedisEnterpriseResult {
      */
     private final @Nullable List<String> zones;
 
-    @OutputCustomType.Constructor({"hostName","id","location","minimumTlsVersion","name","privateEndpointConnections","provisioningState","redisVersion","resourceState","sku","tags","type","zones"})
+    @OutputCustomType.Constructor
     private GetRedisEnterpriseResult(
-        String hostName,
-        String id,
-        String location,
-        @Nullable String minimumTlsVersion,
-        String name,
-        List<PrivateEndpointConnectionResponse> privateEndpointConnections,
-        String provisioningState,
-        String redisVersion,
-        String resourceState,
-        EnterpriseSkuResponse sku,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable List<String> zones) {
+        @OutputCustomType.Parameter("hostName") String hostName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("minimumTlsVersion") @Nullable String minimumTlsVersion,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("privateEndpointConnections") List<PrivateEndpointConnectionResponse> privateEndpointConnections,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("redisVersion") String redisVersion,
+        @OutputCustomType.Parameter("resourceState") String resourceState,
+        @OutputCustomType.Parameter("sku") EnterpriseSkuResponse sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("zones") @Nullable List<String> zones) {
         this.hostName = hostName;
         this.id = id;
         this.location = location;

@@ -17,8 +17,8 @@ public final class ScheduleAssociationPropertyResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private ScheduleAssociationPropertyResponse(@Nullable String name) {
+    @OutputCustomType.Constructor
+    private ScheduleAssociationPropertyResponse(@OutputCustomType.Parameter("name") @Nullable String name) {
         this.name = name;
     }
 

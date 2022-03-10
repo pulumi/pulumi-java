@@ -17,8 +17,8 @@ public final class LanguageExtensionResponse {
      */
     private final @Nullable String languageExtensionName;
 
-    @OutputCustomType.Constructor({"languageExtensionName"})
-    private LanguageExtensionResponse(@Nullable String languageExtensionName) {
+    @OutputCustomType.Constructor
+    private LanguageExtensionResponse(@OutputCustomType.Parameter("languageExtensionName") @Nullable String languageExtensionName) {
         this.languageExtensionName = languageExtensionName;
     }
 

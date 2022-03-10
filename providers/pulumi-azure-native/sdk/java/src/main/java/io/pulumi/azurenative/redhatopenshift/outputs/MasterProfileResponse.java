@@ -22,10 +22,10 @@ public final class MasterProfileResponse {
      */
     private final @Nullable String vmSize;
 
-    @OutputCustomType.Constructor({"subnetId","vmSize"})
+    @OutputCustomType.Constructor
     private MasterProfileResponse(
-        @Nullable String subnetId,
-        @Nullable String vmSize) {
+        @OutputCustomType.Parameter("subnetId") @Nullable String subnetId,
+        @OutputCustomType.Parameter("vmSize") @Nullable String vmSize) {
         this.subnetId = subnetId;
         this.vmSize = vmSize;
     }

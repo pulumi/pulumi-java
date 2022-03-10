@@ -52,16 +52,16 @@ public final class GetApiVersionSetResult {
      */
     private final String versioningScheme;
 
-    @OutputCustomType.Constructor({"description","displayName","id","name","type","versionHeaderName","versionQueryName","versioningScheme"})
+    @OutputCustomType.Constructor
     private GetApiVersionSetResult(
-        @Nullable String description,
-        String displayName,
-        String id,
-        String name,
-        String type,
-        @Nullable String versionHeaderName,
-        @Nullable String versionQueryName,
-        String versioningScheme) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("versionHeaderName") @Nullable String versionHeaderName,
+        @OutputCustomType.Parameter("versionQueryName") @Nullable String versionQueryName,
+        @OutputCustomType.Parameter("versioningScheme") String versioningScheme) {
         this.description = description;
         this.displayName = displayName;
         this.id = id;

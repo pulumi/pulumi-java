@@ -22,10 +22,10 @@ public final class AzureMachineLearningWebServiceOutputColumnResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"dataType","name"})
+    @OutputCustomType.Constructor
     private AzureMachineLearningWebServiceOutputColumnResponse(
-        @Nullable String dataType,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("dataType") @Nullable String dataType,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.dataType = dataType;
         this.name = name;
     }

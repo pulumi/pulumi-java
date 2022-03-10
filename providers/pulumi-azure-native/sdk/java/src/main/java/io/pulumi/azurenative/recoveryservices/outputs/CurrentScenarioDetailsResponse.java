@@ -27,11 +27,11 @@ public final class CurrentScenarioDetailsResponse {
      */
     private final @Nullable String startTime;
 
-    @OutputCustomType.Constructor({"jobId","scenarioName","startTime"})
+    @OutputCustomType.Constructor
     private CurrentScenarioDetailsResponse(
-        @Nullable String jobId,
-        @Nullable String scenarioName,
-        @Nullable String startTime) {
+        @OutputCustomType.Parameter("jobId") @Nullable String jobId,
+        @OutputCustomType.Parameter("scenarioName") @Nullable String scenarioName,
+        @OutputCustomType.Parameter("startTime") @Nullable String startTime) {
         this.jobId = jobId;
         this.scenarioName = scenarioName;
         this.startTime = startTime;

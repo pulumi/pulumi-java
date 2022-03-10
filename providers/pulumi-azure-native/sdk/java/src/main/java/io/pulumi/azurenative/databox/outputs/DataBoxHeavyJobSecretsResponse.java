@@ -35,12 +35,12 @@ public final class DataBoxHeavyJobSecretsResponse {
      */
     private final String jobSecretsType;
 
-    @OutputCustomType.Constructor({"cabinetPodSecrets","dcAccessSecurityCode","error","jobSecretsType"})
+    @OutputCustomType.Constructor
     private DataBoxHeavyJobSecretsResponse(
-        List<DataBoxHeavySecretResponse> cabinetPodSecrets,
-        DcAccessSecurityCodeResponse dcAccessSecurityCode,
-        CloudErrorResponse error,
-        String jobSecretsType) {
+        @OutputCustomType.Parameter("cabinetPodSecrets") List<DataBoxHeavySecretResponse> cabinetPodSecrets,
+        @OutputCustomType.Parameter("dcAccessSecurityCode") DcAccessSecurityCodeResponse dcAccessSecurityCode,
+        @OutputCustomType.Parameter("error") CloudErrorResponse error,
+        @OutputCustomType.Parameter("jobSecretsType") String jobSecretsType) {
         this.cabinetPodSecrets = cabinetPodSecrets;
         this.dcAccessSecurityCode = dcAccessSecurityCode;
         this.error = error;

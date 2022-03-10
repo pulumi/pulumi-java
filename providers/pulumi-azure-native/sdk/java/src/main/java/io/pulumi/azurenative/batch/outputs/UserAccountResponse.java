@@ -31,13 +31,13 @@ public final class UserAccountResponse {
      */
     private final @Nullable WindowsUserConfigurationResponse windowsUserConfiguration;
 
-    @OutputCustomType.Constructor({"elevationLevel","linuxUserConfiguration","name","password","windowsUserConfiguration"})
+    @OutputCustomType.Constructor
     private UserAccountResponse(
-        @Nullable String elevationLevel,
-        @Nullable LinuxUserConfigurationResponse linuxUserConfiguration,
-        String name,
-        String password,
-        @Nullable WindowsUserConfigurationResponse windowsUserConfiguration) {
+        @OutputCustomType.Parameter("elevationLevel") @Nullable String elevationLevel,
+        @OutputCustomType.Parameter("linuxUserConfiguration") @Nullable LinuxUserConfigurationResponse linuxUserConfiguration,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("password") String password,
+        @OutputCustomType.Parameter("windowsUserConfiguration") @Nullable WindowsUserConfigurationResponse windowsUserConfiguration) {
         this.elevationLevel = elevationLevel;
         this.linuxUserConfiguration = linuxUserConfiguration;
         this.name = name;

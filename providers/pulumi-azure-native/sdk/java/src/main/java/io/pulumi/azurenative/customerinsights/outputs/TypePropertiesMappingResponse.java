@@ -27,11 +27,11 @@ public final class TypePropertiesMappingResponse {
      */
     private final String targetPropertyName;
 
-    @OutputCustomType.Constructor({"linkType","sourcePropertyName","targetPropertyName"})
+    @OutputCustomType.Constructor
     private TypePropertiesMappingResponse(
-        @Nullable String linkType,
-        String sourcePropertyName,
-        String targetPropertyName) {
+        @OutputCustomType.Parameter("linkType") @Nullable String linkType,
+        @OutputCustomType.Parameter("sourcePropertyName") String sourcePropertyName,
+        @OutputCustomType.Parameter("targetPropertyName") String targetPropertyName) {
         this.linkType = linkType;
         this.sourcePropertyName = sourcePropertyName;
         this.targetPropertyName = targetPropertyName;

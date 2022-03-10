@@ -34,12 +34,12 @@ public final class UserManagedHttpsParametersResponse {
      */
     private final String protocolType;
 
-    @OutputCustomType.Constructor({"certificateSource","certificateSourceParameters","minimumTlsVersion","protocolType"})
+    @OutputCustomType.Constructor
     private UserManagedHttpsParametersResponse(
-        String certificateSource,
-        KeyVaultCertificateSourceParametersResponse certificateSourceParameters,
-        @Nullable String minimumTlsVersion,
-        String protocolType) {
+        @OutputCustomType.Parameter("certificateSource") String certificateSource,
+        @OutputCustomType.Parameter("certificateSourceParameters") KeyVaultCertificateSourceParametersResponse certificateSourceParameters,
+        @OutputCustomType.Parameter("minimumTlsVersion") @Nullable String minimumTlsVersion,
+        @OutputCustomType.Parameter("protocolType") String protocolType) {
         this.certificateSource = certificateSource;
         this.certificateSourceParameters = certificateSourceParameters;
         this.minimumTlsVersion = minimumTlsVersion;

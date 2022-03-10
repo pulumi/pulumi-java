@@ -17,8 +17,8 @@ public final class ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes {
      */
     private final @Nullable List<ResourceReferenceResponse> publicIPPrefixes;
 
-    @OutputCustomType.Constructor({"publicIPPrefixes"})
-    private ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes(@Nullable List<ResourceReferenceResponse> publicIPPrefixes) {
+    @OutputCustomType.Constructor
+    private ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes(@OutputCustomType.Parameter("publicIPPrefixes") @Nullable List<ResourceReferenceResponse> publicIPPrefixes) {
         this.publicIPPrefixes = publicIPPrefixes;
     }
 

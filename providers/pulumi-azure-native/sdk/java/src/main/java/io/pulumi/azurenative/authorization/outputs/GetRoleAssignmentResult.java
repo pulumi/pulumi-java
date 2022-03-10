@@ -87,23 +87,23 @@ public final class GetRoleAssignmentResult {
      */
     private final String updatedOn;
 
-    @OutputCustomType.Constructor({"condition","conditionVersion","createdBy","createdOn","delegatedManagedIdentityResourceId","description","id","name","principalId","principalType","roleDefinitionId","scope","type","updatedBy","updatedOn"})
+    @OutputCustomType.Constructor
     private GetRoleAssignmentResult(
-        @Nullable String condition,
-        @Nullable String conditionVersion,
-        String createdBy,
-        String createdOn,
-        @Nullable String delegatedManagedIdentityResourceId,
-        @Nullable String description,
-        String id,
-        String name,
-        String principalId,
-        @Nullable String principalType,
-        String roleDefinitionId,
-        String scope,
-        String type,
-        String updatedBy,
-        String updatedOn) {
+        @OutputCustomType.Parameter("condition") @Nullable String condition,
+        @OutputCustomType.Parameter("conditionVersion") @Nullable String conditionVersion,
+        @OutputCustomType.Parameter("createdBy") String createdBy,
+        @OutputCustomType.Parameter("createdOn") String createdOn,
+        @OutputCustomType.Parameter("delegatedManagedIdentityResourceId") @Nullable String delegatedManagedIdentityResourceId,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("principalId") String principalId,
+        @OutputCustomType.Parameter("principalType") @Nullable String principalType,
+        @OutputCustomType.Parameter("roleDefinitionId") String roleDefinitionId,
+        @OutputCustomType.Parameter("scope") String scope,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("updatedBy") String updatedBy,
+        @OutputCustomType.Parameter("updatedOn") String updatedOn) {
         this.condition = condition;
         this.conditionVersion = conditionVersion;
         this.createdBy = createdBy;

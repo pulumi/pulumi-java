@@ -16,8 +16,8 @@ public final class ContentKeyPolicyClearKeyConfigurationResponse {
      */
     private final String odataType;
 
-    @OutputCustomType.Constructor({"odataType"})
-    private ContentKeyPolicyClearKeyConfigurationResponse(String odataType) {
+    @OutputCustomType.Constructor
+    private ContentKeyPolicyClearKeyConfigurationResponse(@OutputCustomType.Parameter("odataType") String odataType) {
         this.odataType = odataType;
     }
 

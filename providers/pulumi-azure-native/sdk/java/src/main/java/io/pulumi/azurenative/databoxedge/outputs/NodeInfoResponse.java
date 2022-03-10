@@ -28,11 +28,11 @@ public final class NodeInfoResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"ipConfiguration","name","type"})
+    @OutputCustomType.Constructor
     private NodeInfoResponse(
-        @Nullable List<KubernetesIPConfigurationResponse> ipConfiguration,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("ipConfiguration") @Nullable List<KubernetesIPConfigurationResponse> ipConfiguration,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.ipConfiguration = ipConfiguration;
         this.name = name;
         this.type = type;

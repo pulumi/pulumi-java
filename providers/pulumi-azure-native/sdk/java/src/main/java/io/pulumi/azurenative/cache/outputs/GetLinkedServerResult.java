@@ -45,15 +45,15 @@ public final class GetLinkedServerResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","linkedRedisCacheId","linkedRedisCacheLocation","name","provisioningState","serverRole","type"})
+    @OutputCustomType.Constructor
     private GetLinkedServerResult(
-        String id,
-        String linkedRedisCacheId,
-        String linkedRedisCacheLocation,
-        String name,
-        String provisioningState,
-        String serverRole,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("linkedRedisCacheId") String linkedRedisCacheId,
+        @OutputCustomType.Parameter("linkedRedisCacheLocation") String linkedRedisCacheLocation,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("serverRole") String serverRole,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.linkedRedisCacheId = linkedRedisCacheId;
         this.linkedRedisCacheLocation = linkedRedisCacheLocation;

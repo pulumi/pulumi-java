@@ -27,11 +27,11 @@ public final class ConnectToTargetSqlMISyncTaskOutputResponse {
      */
     private final List<ReportableExceptionResponse> validationErrors;
 
-    @OutputCustomType.Constructor({"targetServerBrandVersion","targetServerVersion","validationErrors"})
+    @OutputCustomType.Constructor
     private ConnectToTargetSqlMISyncTaskOutputResponse(
-        String targetServerBrandVersion,
-        String targetServerVersion,
-        List<ReportableExceptionResponse> validationErrors) {
+        @OutputCustomType.Parameter("targetServerBrandVersion") String targetServerBrandVersion,
+        @OutputCustomType.Parameter("targetServerVersion") String targetServerVersion,
+        @OutputCustomType.Parameter("validationErrors") List<ReportableExceptionResponse> validationErrors) {
         this.targetServerBrandVersion = targetServerBrandVersion;
         this.targetServerVersion = targetServerVersion;
         this.validationErrors = validationErrors;

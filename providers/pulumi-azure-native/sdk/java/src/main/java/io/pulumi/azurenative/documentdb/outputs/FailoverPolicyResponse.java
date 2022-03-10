@@ -28,11 +28,11 @@ public final class FailoverPolicyResponse {
      */
     private final @Nullable String locationName;
 
-    @OutputCustomType.Constructor({"failoverPriority","id","locationName"})
+    @OutputCustomType.Constructor
     private FailoverPolicyResponse(
-        @Nullable Integer failoverPriority,
-        String id,
-        @Nullable String locationName) {
+        @OutputCustomType.Parameter("failoverPriority") @Nullable Integer failoverPriority,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("locationName") @Nullable String locationName) {
         this.failoverPriority = failoverPriority;
         this.id = id;
         this.locationName = locationName;

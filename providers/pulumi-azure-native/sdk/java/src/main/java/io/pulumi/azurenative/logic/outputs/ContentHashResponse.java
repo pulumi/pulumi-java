@@ -22,10 +22,10 @@ public final class ContentHashResponse {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"algorithm","value"})
+    @OutputCustomType.Constructor
     private ContentHashResponse(
-        @Nullable String algorithm,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("algorithm") @Nullable String algorithm,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.algorithm = algorithm;
         this.value = value;
     }

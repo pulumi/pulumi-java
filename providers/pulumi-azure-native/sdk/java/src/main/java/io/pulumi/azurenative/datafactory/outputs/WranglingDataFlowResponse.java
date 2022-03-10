@@ -52,15 +52,15 @@ public final class WranglingDataFlowResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"annotations","description","documentLocale","folder","script","sources","type"})
+    @OutputCustomType.Constructor
     private WranglingDataFlowResponse(
-        @Nullable List<Object> annotations,
-        @Nullable String description,
-        @Nullable String documentLocale,
-        @Nullable DataFlowResponseFolder folder,
-        @Nullable String script,
-        @Nullable List<PowerQuerySourceResponse> sources,
-        String type) {
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("documentLocale") @Nullable String documentLocale,
+        @OutputCustomType.Parameter("folder") @Nullable DataFlowResponseFolder folder,
+        @OutputCustomType.Parameter("script") @Nullable String script,
+        @OutputCustomType.Parameter("sources") @Nullable List<PowerQuerySourceResponse> sources,
+        @OutputCustomType.Parameter("type") String type) {
         this.annotations = annotations;
         this.description = description;
         this.documentLocale = documentLocale;

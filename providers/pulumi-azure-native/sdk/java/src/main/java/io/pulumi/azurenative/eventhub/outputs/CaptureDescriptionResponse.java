@@ -45,14 +45,14 @@ public final class CaptureDescriptionResponse {
      */
     private final @Nullable Boolean skipEmptyArchives;
 
-    @OutputCustomType.Constructor({"destination","enabled","encoding","intervalInSeconds","sizeLimitInBytes","skipEmptyArchives"})
+    @OutputCustomType.Constructor
     private CaptureDescriptionResponse(
-        @Nullable DestinationResponse destination,
-        @Nullable Boolean enabled,
-        @Nullable String encoding,
-        @Nullable Integer intervalInSeconds,
-        @Nullable Integer sizeLimitInBytes,
-        @Nullable Boolean skipEmptyArchives) {
+        @OutputCustomType.Parameter("destination") @Nullable DestinationResponse destination,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("encoding") @Nullable String encoding,
+        @OutputCustomType.Parameter("intervalInSeconds") @Nullable Integer intervalInSeconds,
+        @OutputCustomType.Parameter("sizeLimitInBytes") @Nullable Integer sizeLimitInBytes,
+        @OutputCustomType.Parameter("skipEmptyArchives") @Nullable Boolean skipEmptyArchives) {
         this.destination = destination;
         this.enabled = enabled;
         this.encoding = encoding;

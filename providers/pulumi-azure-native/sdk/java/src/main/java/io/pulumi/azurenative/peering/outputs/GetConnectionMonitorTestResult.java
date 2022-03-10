@@ -65,18 +65,18 @@ public final class GetConnectionMonitorTestResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"destination","destinationPort","id","isTestSuccessful","name","path","provisioningState","sourceAgent","testFrequencyInSec","type"})
+    @OutputCustomType.Constructor
     private GetConnectionMonitorTestResult(
-        @Nullable String destination,
-        @Nullable Integer destinationPort,
-        String id,
-        Boolean isTestSuccessful,
-        String name,
-        List<String> path,
-        String provisioningState,
-        @Nullable String sourceAgent,
-        @Nullable Integer testFrequencyInSec,
-        String type) {
+        @OutputCustomType.Parameter("destination") @Nullable String destination,
+        @OutputCustomType.Parameter("destinationPort") @Nullable Integer destinationPort,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isTestSuccessful") Boolean isTestSuccessful,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("path") List<String> path,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("sourceAgent") @Nullable String sourceAgent,
+        @OutputCustomType.Parameter("testFrequencyInSec") @Nullable Integer testFrequencyInSec,
+        @OutputCustomType.Parameter("type") String type) {
         this.destination = destination;
         this.destinationPort = destinationPort;
         this.id = id;

@@ -27,11 +27,11 @@ public final class BlobFilterDetailsResponse {
      */
     private final @Nullable List<String> containerList;
 
-    @OutputCustomType.Constructor({"blobPathList","blobPrefixList","containerList"})
+    @OutputCustomType.Constructor
     private BlobFilterDetailsResponse(
-        @Nullable List<String> blobPathList,
-        @Nullable List<String> blobPrefixList,
-        @Nullable List<String> containerList) {
+        @OutputCustomType.Parameter("blobPathList") @Nullable List<String> blobPathList,
+        @OutputCustomType.Parameter("blobPrefixList") @Nullable List<String> blobPrefixList,
+        @OutputCustomType.Parameter("containerList") @Nullable List<String> containerList) {
         this.blobPathList = blobPathList;
         this.blobPrefixList = blobPrefixList;
         this.containerList = containerList;

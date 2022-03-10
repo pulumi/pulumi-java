@@ -47,14 +47,14 @@ public final class RunbookDraftResponse {
      */
     private final @Nullable Map<String,RunbookParameterResponse> parameters;
 
-    @OutputCustomType.Constructor({"creationTime","draftContentLink","inEdit","lastModifiedTime","outputTypes","parameters"})
+    @OutputCustomType.Constructor
     private RunbookDraftResponse(
-        @Nullable String creationTime,
-        @Nullable ContentLinkResponse draftContentLink,
-        @Nullable Boolean inEdit,
-        @Nullable String lastModifiedTime,
-        @Nullable List<String> outputTypes,
-        @Nullable Map<String,RunbookParameterResponse> parameters) {
+        @OutputCustomType.Parameter("creationTime") @Nullable String creationTime,
+        @OutputCustomType.Parameter("draftContentLink") @Nullable ContentLinkResponse draftContentLink,
+        @OutputCustomType.Parameter("inEdit") @Nullable Boolean inEdit,
+        @OutputCustomType.Parameter("lastModifiedTime") @Nullable String lastModifiedTime,
+        @OutputCustomType.Parameter("outputTypes") @Nullable List<String> outputTypes,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,RunbookParameterResponse> parameters) {
         this.creationTime = creationTime;
         this.draftContentLink = draftContentLink;
         this.inEdit = inEdit;

@@ -86,23 +86,23 @@ public final class AzureStorageSectionResponse {
      */
     private final @Nullable String subscriptionId;
 
-    @OutputCustomType.Constructor({"accountKey","accountName","areWorkspaceManagedIdentitiesAllowed","blobCacheTimeout","clientCredentials","containerName","credential","credentialType","endpoint","isSas","protocol","resourceGroup","sasToken","serviceDataAccessAuthIdentity","subscriptionId"})
+    @OutputCustomType.Constructor
     private AzureStorageSectionResponse(
-        @Nullable String accountKey,
-        @Nullable String accountName,
-        @Nullable Boolean areWorkspaceManagedIdentitiesAllowed,
-        @Nullable Integer blobCacheTimeout,
-        @Nullable ClientCredentialsResponse clientCredentials,
-        @Nullable String containerName,
-        @Nullable String credential,
-        @Nullable String credentialType,
-        @Nullable String endpoint,
-        @Nullable Boolean isSas,
-        @Nullable String protocol,
-        @Nullable String resourceGroup,
-        @Nullable String sasToken,
-        @Nullable String serviceDataAccessAuthIdentity,
-        @Nullable String subscriptionId) {
+        @OutputCustomType.Parameter("accountKey") @Nullable String accountKey,
+        @OutputCustomType.Parameter("accountName") @Nullable String accountName,
+        @OutputCustomType.Parameter("areWorkspaceManagedIdentitiesAllowed") @Nullable Boolean areWorkspaceManagedIdentitiesAllowed,
+        @OutputCustomType.Parameter("blobCacheTimeout") @Nullable Integer blobCacheTimeout,
+        @OutputCustomType.Parameter("clientCredentials") @Nullable ClientCredentialsResponse clientCredentials,
+        @OutputCustomType.Parameter("containerName") @Nullable String containerName,
+        @OutputCustomType.Parameter("credential") @Nullable String credential,
+        @OutputCustomType.Parameter("credentialType") @Nullable String credentialType,
+        @OutputCustomType.Parameter("endpoint") @Nullable String endpoint,
+        @OutputCustomType.Parameter("isSas") @Nullable Boolean isSas,
+        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
+        @OutputCustomType.Parameter("resourceGroup") @Nullable String resourceGroup,
+        @OutputCustomType.Parameter("sasToken") @Nullable String sasToken,
+        @OutputCustomType.Parameter("serviceDataAccessAuthIdentity") @Nullable String serviceDataAccessAuthIdentity,
+        @OutputCustomType.Parameter("subscriptionId") @Nullable String subscriptionId) {
         this.accountKey = accountKey;
         this.accountName = accountName;
         this.areWorkspaceManagedIdentitiesAllowed = areWorkspaceManagedIdentitiesAllowed;

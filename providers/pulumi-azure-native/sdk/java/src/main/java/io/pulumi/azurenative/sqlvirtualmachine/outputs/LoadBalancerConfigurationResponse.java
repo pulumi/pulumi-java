@@ -40,13 +40,13 @@ public final class LoadBalancerConfigurationResponse {
      */
     private final @Nullable List<String> sqlVirtualMachineInstances;
 
-    @OutputCustomType.Constructor({"loadBalancerResourceId","privateIpAddress","probePort","publicIpAddressResourceId","sqlVirtualMachineInstances"})
+    @OutputCustomType.Constructor
     private LoadBalancerConfigurationResponse(
-        @Nullable String loadBalancerResourceId,
-        @Nullable PrivateIPAddressResponse privateIpAddress,
-        @Nullable Integer probePort,
-        @Nullable String publicIpAddressResourceId,
-        @Nullable List<String> sqlVirtualMachineInstances) {
+        @OutputCustomType.Parameter("loadBalancerResourceId") @Nullable String loadBalancerResourceId,
+        @OutputCustomType.Parameter("privateIpAddress") @Nullable PrivateIPAddressResponse privateIpAddress,
+        @OutputCustomType.Parameter("probePort") @Nullable Integer probePort,
+        @OutputCustomType.Parameter("publicIpAddressResourceId") @Nullable String publicIpAddressResourceId,
+        @OutputCustomType.Parameter("sqlVirtualMachineInstances") @Nullable List<String> sqlVirtualMachineInstances) {
         this.loadBalancerResourceId = loadBalancerResourceId;
         this.privateIpAddress = privateIpAddress;
         this.probePort = probePort;

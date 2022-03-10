@@ -43,14 +43,14 @@ public final class PrivateLinkResourceResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"groupId","id","name","privateLinkServiceID","requiredMembers","type"})
+    @OutputCustomType.Constructor
     private PrivateLinkResourceResponse(
-        @Nullable String groupId,
-        @Nullable String id,
-        @Nullable String name,
-        String privateLinkServiceID,
-        @Nullable List<String> requiredMembers,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("groupId") @Nullable String groupId,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("privateLinkServiceID") String privateLinkServiceID,
+        @OutputCustomType.Parameter("requiredMembers") @Nullable List<String> requiredMembers,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.groupId = groupId;
         this.id = id;
         this.name = name;

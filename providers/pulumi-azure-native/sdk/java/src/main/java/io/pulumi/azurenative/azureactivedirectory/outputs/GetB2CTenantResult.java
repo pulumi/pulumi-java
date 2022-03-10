@@ -55,16 +55,16 @@ public final class GetB2CTenantResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"billingConfig","id","location","name","sku","tags","tenantId","type"})
+    @OutputCustomType.Constructor
     private GetB2CTenantResult(
-        @Nullable B2CTenantResourcePropertiesResponseBillingConfig billingConfig,
-        String id,
-        String location,
-        String name,
-        B2CResourceSKUResponse sku,
-        @Nullable Map<String,String> tags,
-        @Nullable String tenantId,
-        String type) {
+        @OutputCustomType.Parameter("billingConfig") @Nullable B2CTenantResourcePropertiesResponseBillingConfig billingConfig,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("sku") B2CResourceSKUResponse sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId,
+        @OutputCustomType.Parameter("type") String type) {
         this.billingConfig = billingConfig;
         this.id = id;
         this.location = location;

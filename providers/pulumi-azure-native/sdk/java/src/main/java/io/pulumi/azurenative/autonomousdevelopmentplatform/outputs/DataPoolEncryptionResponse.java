@@ -32,12 +32,12 @@ public final class DataPoolEncryptionResponse {
      */
     private final String userAssignedIdentity;
 
-    @OutputCustomType.Constructor({"keyName","keyVaultUri","keyVersion","userAssignedIdentity"})
+    @OutputCustomType.Constructor
     private DataPoolEncryptionResponse(
-        String keyName,
-        String keyVaultUri,
-        @Nullable String keyVersion,
-        String userAssignedIdentity) {
+        @OutputCustomType.Parameter("keyName") String keyName,
+        @OutputCustomType.Parameter("keyVaultUri") String keyVaultUri,
+        @OutputCustomType.Parameter("keyVersion") @Nullable String keyVersion,
+        @OutputCustomType.Parameter("userAssignedIdentity") String userAssignedIdentity) {
         this.keyName = keyName;
         this.keyVaultUri = keyVaultUri;
         this.keyVersion = keyVersion;

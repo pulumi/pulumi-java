@@ -22,10 +22,10 @@ public final class PrivateLinkServiceConnectionStateResponse {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor({"description","status"})
+    @OutputCustomType.Constructor
     private PrivateLinkServiceConnectionStateResponse(
-        @Nullable String description,
-        @Nullable String status) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("status") @Nullable String status) {
         this.description = description;
         this.status = status;
     }

@@ -91,22 +91,22 @@ public final class GetVpnGatewayResult {
      */
     private final @Nullable Integer vpnGatewayScaleUnit;
 
-    @OutputCustomType.Constructor({"bgpSettings","connections","etag","id","ipConfigurations","isRoutingPreferenceInternet","location","name","natRules","provisioningState","tags","type","virtualHub","vpnGatewayScaleUnit"})
+    @OutputCustomType.Constructor
     private GetVpnGatewayResult(
-        @Nullable BgpSettingsResponse bgpSettings,
-        @Nullable List<VpnConnectionResponse> connections,
-        String etag,
-        @Nullable String id,
-        List<VpnGatewayIpConfigurationResponse> ipConfigurations,
-        @Nullable Boolean isRoutingPreferenceInternet,
-        String location,
-        String name,
-        @Nullable List<VpnGatewayNatRuleResponse> natRules,
-        String provisioningState,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable SubResourceResponse virtualHub,
-        @Nullable Integer vpnGatewayScaleUnit) {
+        @OutputCustomType.Parameter("bgpSettings") @Nullable BgpSettingsResponse bgpSettings,
+        @OutputCustomType.Parameter("connections") @Nullable List<VpnConnectionResponse> connections,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("ipConfigurations") List<VpnGatewayIpConfigurationResponse> ipConfigurations,
+        @OutputCustomType.Parameter("isRoutingPreferenceInternet") @Nullable Boolean isRoutingPreferenceInternet,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("natRules") @Nullable List<VpnGatewayNatRuleResponse> natRules,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("virtualHub") @Nullable SubResourceResponse virtualHub,
+        @OutputCustomType.Parameter("vpnGatewayScaleUnit") @Nullable Integer vpnGatewayScaleUnit) {
         this.bgpSettings = bgpSettings;
         this.connections = connections;
         this.etag = etag;

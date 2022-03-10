@@ -57,16 +57,16 @@ public final class RestorePointSourceMetadataResponse {
      */
     private final @Nullable String vmId;
 
-    @OutputCustomType.Constructor({"diagnosticsProfile","hardwareProfile","licenseType","location","osProfile","securityProfile","storageProfile","vmId"})
+    @OutputCustomType.Constructor
     private RestorePointSourceMetadataResponse(
-        @Nullable DiagnosticsProfileResponse diagnosticsProfile,
-        @Nullable HardwareProfileResponse hardwareProfile,
-        @Nullable String licenseType,
-        @Nullable String location,
-        @Nullable OSProfileResponse osProfile,
-        @Nullable SecurityProfileResponse securityProfile,
-        @Nullable RestorePointSourceVMStorageProfileResponse storageProfile,
-        @Nullable String vmId) {
+        @OutputCustomType.Parameter("diagnosticsProfile") @Nullable DiagnosticsProfileResponse diagnosticsProfile,
+        @OutputCustomType.Parameter("hardwareProfile") @Nullable HardwareProfileResponse hardwareProfile,
+        @OutputCustomType.Parameter("licenseType") @Nullable String licenseType,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("osProfile") @Nullable OSProfileResponse osProfile,
+        @OutputCustomType.Parameter("securityProfile") @Nullable SecurityProfileResponse securityProfile,
+        @OutputCustomType.Parameter("storageProfile") @Nullable RestorePointSourceVMStorageProfileResponse storageProfile,
+        @OutputCustomType.Parameter("vmId") @Nullable String vmId) {
         this.diagnosticsProfile = diagnosticsProfile;
         this.hardwareProfile = hardwareProfile;
         this.licenseType = licenseType;

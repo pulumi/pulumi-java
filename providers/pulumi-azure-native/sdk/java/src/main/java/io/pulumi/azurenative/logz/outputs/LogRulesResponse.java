@@ -34,12 +34,12 @@ public final class LogRulesResponse {
      */
     private final @Nullable Boolean sendSubscriptionLogs;
 
-    @OutputCustomType.Constructor({"filteringTags","sendAadLogs","sendActivityLogs","sendSubscriptionLogs"})
+    @OutputCustomType.Constructor
     private LogRulesResponse(
-        @Nullable List<FilteringTagResponse> filteringTags,
-        @Nullable Boolean sendAadLogs,
-        @Nullable Boolean sendActivityLogs,
-        @Nullable Boolean sendSubscriptionLogs) {
+        @OutputCustomType.Parameter("filteringTags") @Nullable List<FilteringTagResponse> filteringTags,
+        @OutputCustomType.Parameter("sendAadLogs") @Nullable Boolean sendAadLogs,
+        @OutputCustomType.Parameter("sendActivityLogs") @Nullable Boolean sendActivityLogs,
+        @OutputCustomType.Parameter("sendSubscriptionLogs") @Nullable Boolean sendSubscriptionLogs) {
         this.filteringTags = filteringTags;
         this.sendAadLogs = sendAadLogs;
         this.sendActivityLogs = sendActivityLogs;

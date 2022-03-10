@@ -95,24 +95,24 @@ public final class GetEventHubEventSourceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"consumerGroupName","creationTime","eventHubName","eventSourceResourceId","id","keyName","kind","localTimestamp","location","name","provisioningState","serviceBusNamespace","tags","time","timestampPropertyName","type"})
+    @OutputCustomType.Constructor
     private GetEventHubEventSourceResult(
-        String consumerGroupName,
-        String creationTime,
-        String eventHubName,
-        String eventSourceResourceId,
-        String id,
-        String keyName,
-        String kind,
-        @Nullable LocalTimestampResponse localTimestamp,
-        String location,
-        String name,
-        String provisioningState,
-        String serviceBusNamespace,
-        @Nullable Map<String,String> tags,
-        @Nullable String time,
-        @Nullable String timestampPropertyName,
-        String type) {
+        @OutputCustomType.Parameter("consumerGroupName") String consumerGroupName,
+        @OutputCustomType.Parameter("creationTime") String creationTime,
+        @OutputCustomType.Parameter("eventHubName") String eventHubName,
+        @OutputCustomType.Parameter("eventSourceResourceId") String eventSourceResourceId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("keyName") String keyName,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("localTimestamp") @Nullable LocalTimestampResponse localTimestamp,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("serviceBusNamespace") String serviceBusNamespace,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("time") @Nullable String time,
+        @OutputCustomType.Parameter("timestampPropertyName") @Nullable String timestampPropertyName,
+        @OutputCustomType.Parameter("type") String type) {
         this.consumerGroupName = consumerGroupName;
         this.creationTime = creationTime;
         this.eventHubName = eventHubName;

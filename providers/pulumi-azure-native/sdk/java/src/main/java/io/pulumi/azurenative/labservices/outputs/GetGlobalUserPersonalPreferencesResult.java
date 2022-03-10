@@ -23,10 +23,10 @@ public final class GetGlobalUserPersonalPreferencesResult {
      */
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor({"favoriteLabResourceIds","id"})
+    @OutputCustomType.Constructor
     private GetGlobalUserPersonalPreferencesResult(
-        @Nullable List<String> favoriteLabResourceIds,
-        @Nullable String id) {
+        @OutputCustomType.Parameter("favoriteLabResourceIds") @Nullable List<String> favoriteLabResourceIds,
+        @OutputCustomType.Parameter("id") @Nullable String id) {
         this.favoriteLabResourceIds = favoriteLabResourceIds;
         this.id = id;
     }

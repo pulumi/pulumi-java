@@ -33,12 +33,12 @@ public final class LogicAppReceiverResponse {
      */
     private final @Nullable Boolean useCommonAlertSchema;
 
-    @OutputCustomType.Constructor({"callbackUrl","name","resourceId","useCommonAlertSchema"})
+    @OutputCustomType.Constructor
     private LogicAppReceiverResponse(
-        String callbackUrl,
-        String name,
-        String resourceId,
-        @Nullable Boolean useCommonAlertSchema) {
+        @OutputCustomType.Parameter("callbackUrl") String callbackUrl,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("resourceId") String resourceId,
+        @OutputCustomType.Parameter("useCommonAlertSchema") @Nullable Boolean useCommonAlertSchema) {
         this.callbackUrl = callbackUrl;
         this.name = name;
         this.resourceId = resourceId;

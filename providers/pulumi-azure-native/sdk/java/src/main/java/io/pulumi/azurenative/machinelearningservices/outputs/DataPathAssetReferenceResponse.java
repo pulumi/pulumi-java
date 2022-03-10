@@ -28,11 +28,11 @@ public final class DataPathAssetReferenceResponse {
      */
     private final String referenceType;
 
-    @OutputCustomType.Constructor({"datastoreId","path","referenceType"})
+    @OutputCustomType.Constructor
     private DataPathAssetReferenceResponse(
-        @Nullable String datastoreId,
-        @Nullable String path,
-        String referenceType) {
+        @OutputCustomType.Parameter("datastoreId") @Nullable String datastoreId,
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("referenceType") String referenceType) {
         this.datastoreId = datastoreId;
         this.path = path;
         this.referenceType = referenceType;

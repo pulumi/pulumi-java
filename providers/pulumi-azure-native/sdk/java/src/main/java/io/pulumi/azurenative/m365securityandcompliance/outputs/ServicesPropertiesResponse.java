@@ -59,16 +59,16 @@ public final class ServicesPropertiesResponse {
      */
     private final @Nullable String publicNetworkAccess;
 
-    @OutputCustomType.Constructor({"accessPolicies","authenticationConfiguration","corsConfiguration","cosmosDbConfiguration","exportConfiguration","privateEndpointConnections","provisioningState","publicNetworkAccess"})
+    @OutputCustomType.Constructor
     private ServicesPropertiesResponse(
-        @Nullable List<ServiceAccessPolicyEntryResponse> accessPolicies,
-        @Nullable ServiceAuthenticationConfigurationInfoResponse authenticationConfiguration,
-        @Nullable ServiceCorsConfigurationInfoResponse corsConfiguration,
-        @Nullable ServiceCosmosDbConfigurationInfoResponse cosmosDbConfiguration,
-        @Nullable ServiceExportConfigurationInfoResponse exportConfiguration,
-        @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections,
-        String provisioningState,
-        @Nullable String publicNetworkAccess) {
+        @OutputCustomType.Parameter("accessPolicies") @Nullable List<ServiceAccessPolicyEntryResponse> accessPolicies,
+        @OutputCustomType.Parameter("authenticationConfiguration") @Nullable ServiceAuthenticationConfigurationInfoResponse authenticationConfiguration,
+        @OutputCustomType.Parameter("corsConfiguration") @Nullable ServiceCorsConfigurationInfoResponse corsConfiguration,
+        @OutputCustomType.Parameter("cosmosDbConfiguration") @Nullable ServiceCosmosDbConfigurationInfoResponse cosmosDbConfiguration,
+        @OutputCustomType.Parameter("exportConfiguration") @Nullable ServiceExportConfigurationInfoResponse exportConfiguration,
+        @OutputCustomType.Parameter("privateEndpointConnections") @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess) {
         this.accessPolicies = accessPolicies;
         this.authenticationConfiguration = authenticationConfiguration;
         this.corsConfiguration = corsConfiguration;

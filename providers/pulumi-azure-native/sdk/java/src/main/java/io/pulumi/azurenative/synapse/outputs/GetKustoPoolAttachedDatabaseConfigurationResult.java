@@ -70,19 +70,19 @@ public final class GetKustoPoolAttachedDatabaseConfigurationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"attachedDatabaseNames","databaseName","defaultPrincipalsModificationKind","id","kustoPoolResourceId","location","name","provisioningState","systemData","tableLevelSharingProperties","type"})
+    @OutputCustomType.Constructor
     private GetKustoPoolAttachedDatabaseConfigurationResult(
-        List<String> attachedDatabaseNames,
-        String databaseName,
-        String defaultPrincipalsModificationKind,
-        String id,
-        String kustoPoolResourceId,
-        @Nullable String location,
-        String name,
-        String provisioningState,
-        SystemDataResponse systemData,
-        @Nullable TableLevelSharingPropertiesResponse tableLevelSharingProperties,
-        String type) {
+        @OutputCustomType.Parameter("attachedDatabaseNames") List<String> attachedDatabaseNames,
+        @OutputCustomType.Parameter("databaseName") String databaseName,
+        @OutputCustomType.Parameter("defaultPrincipalsModificationKind") String defaultPrincipalsModificationKind,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kustoPoolResourceId") String kustoPoolResourceId,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tableLevelSharingProperties") @Nullable TableLevelSharingPropertiesResponse tableLevelSharingProperties,
+        @OutputCustomType.Parameter("type") String type) {
         this.attachedDatabaseNames = attachedDatabaseNames;
         this.databaseName = databaseName;
         this.defaultPrincipalsModificationKind = defaultPrincipalsModificationKind;

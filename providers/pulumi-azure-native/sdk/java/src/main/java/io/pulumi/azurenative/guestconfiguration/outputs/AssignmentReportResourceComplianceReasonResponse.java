@@ -20,10 +20,10 @@ public final class AssignmentReportResourceComplianceReasonResponse {
      */
     private final String phrase;
 
-    @OutputCustomType.Constructor({"code","phrase"})
+    @OutputCustomType.Constructor
     private AssignmentReportResourceComplianceReasonResponse(
-        String code,
-        String phrase) {
+        @OutputCustomType.Parameter("code") String code,
+        @OutputCustomType.Parameter("phrase") String phrase) {
         this.code = code;
         this.phrase = phrase;
     }

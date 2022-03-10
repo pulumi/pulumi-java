@@ -38,13 +38,13 @@ public final class ListTenantAccessSecretsResult {
      */
     private final @Nullable String secondaryKey;
 
-    @OutputCustomType.Constructor({"enabled","id","primaryKey","principalId","secondaryKey"})
+    @OutputCustomType.Constructor
     private ListTenantAccessSecretsResult(
-        @Nullable Boolean enabled,
-        @Nullable String id,
-        @Nullable String primaryKey,
-        @Nullable String principalId,
-        @Nullable String secondaryKey) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("primaryKey") @Nullable String primaryKey,
+        @OutputCustomType.Parameter("principalId") @Nullable String principalId,
+        @OutputCustomType.Parameter("secondaryKey") @Nullable String secondaryKey) {
         this.enabled = enabled;
         this.id = id;
         this.primaryKey = primaryKey;

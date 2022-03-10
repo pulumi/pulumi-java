@@ -22,10 +22,10 @@ public final class VMResourcesResponse {
      */
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor({"agentVersion","id"})
+    @OutputCustomType.Constructor
     private VMResourcesResponse(
-        @Nullable String agentVersion,
-        @Nullable String id) {
+        @OutputCustomType.Parameter("agentVersion") @Nullable String agentVersion,
+        @OutputCustomType.Parameter("id") @Nullable String id) {
         this.agentVersion = agentVersion;
         this.id = id;
     }

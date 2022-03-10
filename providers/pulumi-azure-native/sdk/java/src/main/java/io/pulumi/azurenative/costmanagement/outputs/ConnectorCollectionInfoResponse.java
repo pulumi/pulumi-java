@@ -33,12 +33,12 @@ public final class ConnectorCollectionInfoResponse {
      */
     private final String sourceLastUpdated;
 
-    @OutputCustomType.Constructor({"error","lastChecked","lastUpdated","sourceLastUpdated"})
+    @OutputCustomType.Constructor
     private ConnectorCollectionInfoResponse(
-        @Nullable ConnectorCollectionErrorInfoResponse error,
-        String lastChecked,
-        String lastUpdated,
-        String sourceLastUpdated) {
+        @OutputCustomType.Parameter("error") @Nullable ConnectorCollectionErrorInfoResponse error,
+        @OutputCustomType.Parameter("lastChecked") String lastChecked,
+        @OutputCustomType.Parameter("lastUpdated") String lastUpdated,
+        @OutputCustomType.Parameter("sourceLastUpdated") String sourceLastUpdated) {
         this.error = error;
         this.lastChecked = lastChecked;
         this.lastUpdated = lastUpdated;

@@ -34,12 +34,12 @@ public final class ManagementPolicyRuleResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"definition","enabled","name","type"})
+    @OutputCustomType.Constructor
     private ManagementPolicyRuleResponse(
-        ManagementPolicyDefinitionResponse definition,
-        @Nullable Boolean enabled,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("definition") ManagementPolicyDefinitionResponse definition,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.definition = definition;
         this.enabled = enabled;
         this.name = name;

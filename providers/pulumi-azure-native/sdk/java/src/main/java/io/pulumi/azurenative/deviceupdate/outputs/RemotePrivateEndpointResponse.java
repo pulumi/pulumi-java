@@ -46,14 +46,14 @@ public final class RemotePrivateEndpointResponse {
      */
     private final String vnetTrafficTag;
 
-    @OutputCustomType.Constructor({"connectionDetails","id","manualPrivateLinkServiceConnections","privateLinkServiceConnections","privateLinkServiceProxies","vnetTrafficTag"})
+    @OutputCustomType.Constructor
     private RemotePrivateEndpointResponse(
-        @Nullable List<ConnectionDetailsResponse> connectionDetails,
-        @Nullable String id,
-        @Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections,
-        @Nullable List<PrivateLinkServiceConnectionResponse> privateLinkServiceConnections,
-        @Nullable List<PrivateLinkServiceProxyResponse> privateLinkServiceProxies,
-        String vnetTrafficTag) {
+        @OutputCustomType.Parameter("connectionDetails") @Nullable List<ConnectionDetailsResponse> connectionDetails,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("manualPrivateLinkServiceConnections") @Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections,
+        @OutputCustomType.Parameter("privateLinkServiceConnections") @Nullable List<PrivateLinkServiceConnectionResponse> privateLinkServiceConnections,
+        @OutputCustomType.Parameter("privateLinkServiceProxies") @Nullable List<PrivateLinkServiceProxyResponse> privateLinkServiceProxies,
+        @OutputCustomType.Parameter("vnetTrafficTag") String vnetTrafficTag) {
         this.connectionDetails = connectionDetails;
         this.id = id;
         this.manualPrivateLinkServiceConnections = manualPrivateLinkServiceConnections;

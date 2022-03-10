@@ -64,18 +64,18 @@ public final class CommandResponse {
      */
     private final @Nullable Boolean runElevated;
 
-    @OutputCustomType.Constructor({"action","alwaysRun","applyUpdateBefore","content","contentType","maxRunTime","name","restartAfter","runAsInteractive","runElevated"})
+    @OutputCustomType.Constructor
     private CommandResponse(
-        String action,
-        @Nullable Boolean alwaysRun,
-        @Nullable Boolean applyUpdateBefore,
-        String content,
-        String contentType,
-        @Nullable Integer maxRunTime,
-        String name,
-        @Nullable Boolean restartAfter,
-        @Nullable Boolean runAsInteractive,
-        @Nullable Boolean runElevated) {
+        @OutputCustomType.Parameter("action") String action,
+        @OutputCustomType.Parameter("alwaysRun") @Nullable Boolean alwaysRun,
+        @OutputCustomType.Parameter("applyUpdateBefore") @Nullable Boolean applyUpdateBefore,
+        @OutputCustomType.Parameter("content") String content,
+        @OutputCustomType.Parameter("contentType") String contentType,
+        @OutputCustomType.Parameter("maxRunTime") @Nullable Integer maxRunTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("restartAfter") @Nullable Boolean restartAfter,
+        @OutputCustomType.Parameter("runAsInteractive") @Nullable Boolean runAsInteractive,
+        @OutputCustomType.Parameter("runElevated") @Nullable Boolean runElevated) {
         this.action = action;
         this.alwaysRun = alwaysRun;
         this.applyUpdateBefore = applyUpdateBefore;

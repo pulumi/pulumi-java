@@ -48,15 +48,15 @@ public final class GuestOSNICCustomizationResponse {
      */
     private final @Nullable String secondaryWinsServer;
 
-    @OutputCustomType.Constructor({"allocation","dnsServers","gateway","ipAddress","mask","primaryWinsServer","secondaryWinsServer"})
+    @OutputCustomType.Constructor
     private GuestOSNICCustomizationResponse(
-        @Nullable String allocation,
-        @Nullable List<String> dnsServers,
-        @Nullable List<String> gateway,
-        @Nullable String ipAddress,
-        @Nullable String mask,
-        @Nullable String primaryWinsServer,
-        @Nullable String secondaryWinsServer) {
+        @OutputCustomType.Parameter("allocation") @Nullable String allocation,
+        @OutputCustomType.Parameter("dnsServers") @Nullable List<String> dnsServers,
+        @OutputCustomType.Parameter("gateway") @Nullable List<String> gateway,
+        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress,
+        @OutputCustomType.Parameter("mask") @Nullable String mask,
+        @OutputCustomType.Parameter("primaryWinsServer") @Nullable String primaryWinsServer,
+        @OutputCustomType.Parameter("secondaryWinsServer") @Nullable String secondaryWinsServer) {
         this.allocation = allocation;
         this.dnsServers = dnsServers;
         this.gateway = gateway;

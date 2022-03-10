@@ -48,14 +48,14 @@ public final class VirtualNetworkResourceSettingsResponse {
      */
     private final String targetResourceName;
 
-    @OutputCustomType.Constructor({"addressSpace","dnsServers","enableDdosProtection","resourceType","subnets","targetResourceName"})
+    @OutputCustomType.Constructor
     private VirtualNetworkResourceSettingsResponse(
-        @Nullable List<String> addressSpace,
-        @Nullable List<String> dnsServers,
-        @Nullable Boolean enableDdosProtection,
-        String resourceType,
-        @Nullable List<SubnetResourceSettingsResponse> subnets,
-        String targetResourceName) {
+        @OutputCustomType.Parameter("addressSpace") @Nullable List<String> addressSpace,
+        @OutputCustomType.Parameter("dnsServers") @Nullable List<String> dnsServers,
+        @OutputCustomType.Parameter("enableDdosProtection") @Nullable Boolean enableDdosProtection,
+        @OutputCustomType.Parameter("resourceType") String resourceType,
+        @OutputCustomType.Parameter("subnets") @Nullable List<SubnetResourceSettingsResponse> subnets,
+        @OutputCustomType.Parameter("targetResourceName") String targetResourceName) {
         this.addressSpace = addressSpace;
         this.dnsServers = dnsServers;
         this.enableDdosProtection = enableDdosProtection;

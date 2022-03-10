@@ -23,10 +23,10 @@ public final class CustomDomainResponse {
      */
     private final @Nullable Boolean useSubDomainName;
 
-    @OutputCustomType.Constructor({"name","useSubDomainName"})
+    @OutputCustomType.Constructor
     private CustomDomainResponse(
-        String name,
-        @Nullable Boolean useSubDomainName) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("useSubDomainName") @Nullable Boolean useSubDomainName) {
         this.name = name;
         this.useSubDomainName = useSubDomainName;
     }

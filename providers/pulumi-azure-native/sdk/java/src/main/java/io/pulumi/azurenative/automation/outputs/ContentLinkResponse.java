@@ -28,11 +28,11 @@ public final class ContentLinkResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"contentHash","uri","version"})
+    @OutputCustomType.Constructor
     private ContentLinkResponse(
-        @Nullable ContentHashResponse contentHash,
-        @Nullable String uri,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("contentHash") @Nullable ContentHashResponse contentHash,
+        @OutputCustomType.Parameter("uri") @Nullable String uri,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.contentHash = contentHash;
         this.uri = uri;
         this.version = version;

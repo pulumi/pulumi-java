@@ -45,14 +45,14 @@ public final class DataCenterResourceResponseProperties {
      */
     private final List<SeedNodeResponse> seedNodes;
 
-    @OutputCustomType.Constructor({"base64EncodedCassandraYamlFragment","dataCenterLocation","delegatedSubnetId","nodeCount","provisioningState","seedNodes"})
+    @OutputCustomType.Constructor
     private DataCenterResourceResponseProperties(
-        @Nullable String base64EncodedCassandraYamlFragment,
-        @Nullable String dataCenterLocation,
-        @Nullable String delegatedSubnetId,
-        @Nullable Integer nodeCount,
-        @Nullable String provisioningState,
-        List<SeedNodeResponse> seedNodes) {
+        @OutputCustomType.Parameter("base64EncodedCassandraYamlFragment") @Nullable String base64EncodedCassandraYamlFragment,
+        @OutputCustomType.Parameter("dataCenterLocation") @Nullable String dataCenterLocation,
+        @OutputCustomType.Parameter("delegatedSubnetId") @Nullable String delegatedSubnetId,
+        @OutputCustomType.Parameter("nodeCount") @Nullable Integer nodeCount,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("seedNodes") List<SeedNodeResponse> seedNodes) {
         this.base64EncodedCassandraYamlFragment = base64EncodedCassandraYamlFragment;
         this.dataCenterLocation = dataCenterLocation;
         this.delegatedSubnetId = delegatedSubnetId;

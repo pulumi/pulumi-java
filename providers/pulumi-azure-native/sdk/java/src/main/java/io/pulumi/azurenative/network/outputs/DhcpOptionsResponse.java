@@ -17,8 +17,8 @@ public final class DhcpOptionsResponse {
      */
     private final @Nullable List<String> dnsServers;
 
-    @OutputCustomType.Constructor({"dnsServers"})
-    private DhcpOptionsResponse(@Nullable List<String> dnsServers) {
+    @OutputCustomType.Constructor
+    private DhcpOptionsResponse(@OutputCustomType.Parameter("dnsServers") @Nullable List<String> dnsServers) {
         this.dnsServers = dnsServers;
     }
 

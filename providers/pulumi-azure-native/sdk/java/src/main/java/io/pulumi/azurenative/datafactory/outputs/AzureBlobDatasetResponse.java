@@ -100,23 +100,23 @@ public final class AzureBlobDatasetResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"annotations","compression","description","fileName","folder","folderPath","format","linkedServiceName","modifiedDatetimeEnd","modifiedDatetimeStart","parameters","schema","structure","tableRootLocation","type"})
+    @OutputCustomType.Constructor
     private AzureBlobDatasetResponse(
-        @Nullable List<Object> annotations,
-        @Nullable DatasetCompressionResponse compression,
-        @Nullable String description,
-        @Nullable Object fileName,
-        @Nullable DatasetResponseFolder folder,
-        @Nullable Object folderPath,
-        @Nullable Object format,
-        LinkedServiceReferenceResponse linkedServiceName,
-        @Nullable Object modifiedDatetimeEnd,
-        @Nullable Object modifiedDatetimeStart,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Object schema,
-        @Nullable Object structure,
-        @Nullable Object tableRootLocation,
-        String type) {
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("compression") @Nullable DatasetCompressionResponse compression,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("fileName") @Nullable Object fileName,
+        @OutputCustomType.Parameter("folder") @Nullable DatasetResponseFolder folder,
+        @OutputCustomType.Parameter("folderPath") @Nullable Object folderPath,
+        @OutputCustomType.Parameter("format") @Nullable Object format,
+        @OutputCustomType.Parameter("linkedServiceName") LinkedServiceReferenceResponse linkedServiceName,
+        @OutputCustomType.Parameter("modifiedDatetimeEnd") @Nullable Object modifiedDatetimeEnd,
+        @OutputCustomType.Parameter("modifiedDatetimeStart") @Nullable Object modifiedDatetimeStart,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("schema") @Nullable Object schema,
+        @OutputCustomType.Parameter("structure") @Nullable Object structure,
+        @OutputCustomType.Parameter("tableRootLocation") @Nullable Object tableRootLocation,
+        @OutputCustomType.Parameter("type") String type) {
         this.annotations = annotations;
         this.compression = compression;
         this.description = description;

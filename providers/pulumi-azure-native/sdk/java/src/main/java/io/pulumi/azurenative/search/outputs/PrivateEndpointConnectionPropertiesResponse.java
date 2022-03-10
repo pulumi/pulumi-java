@@ -23,10 +23,10 @@ public final class PrivateEndpointConnectionPropertiesResponse {
      */
     private final @Nullable PrivateEndpointConnectionPropertiesResponsePrivateLinkServiceConnectionState privateLinkServiceConnectionState;
 
-    @OutputCustomType.Constructor({"privateEndpoint","privateLinkServiceConnectionState"})
+    @OutputCustomType.Constructor
     private PrivateEndpointConnectionPropertiesResponse(
-        @Nullable PrivateEndpointConnectionPropertiesResponsePrivateEndpoint privateEndpoint,
-        @Nullable PrivateEndpointConnectionPropertiesResponsePrivateLinkServiceConnectionState privateLinkServiceConnectionState) {
+        @OutputCustomType.Parameter("privateEndpoint") @Nullable PrivateEndpointConnectionPropertiesResponsePrivateEndpoint privateEndpoint,
+        @OutputCustomType.Parameter("privateLinkServiceConnectionState") @Nullable PrivateEndpointConnectionPropertiesResponsePrivateLinkServiceConnectionState privateLinkServiceConnectionState) {
         this.privateEndpoint = privateEndpoint;
         this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
     }

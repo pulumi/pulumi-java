@@ -17,8 +17,8 @@ public final class ContainerRegistryPropertiesResponse {
      */
     private final @Nullable String resourceId;
 
-    @OutputCustomType.Constructor({"resourceId"})
-    private ContainerRegistryPropertiesResponse(@Nullable String resourceId) {
+    @OutputCustomType.Constructor
+    private ContainerRegistryPropertiesResponse(@OutputCustomType.Parameter("resourceId") @Nullable String resourceId) {
         this.resourceId = resourceId;
     }
 

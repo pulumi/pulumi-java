@@ -32,12 +32,12 @@ public final class NamespaceJunctionResponse {
      */
     private final @Nullable String targetPath;
 
-    @OutputCustomType.Constructor({"namespacePath","nfsAccessPolicy","nfsExport","targetPath"})
+    @OutputCustomType.Constructor
     private NamespaceJunctionResponse(
-        @Nullable String namespacePath,
-        @Nullable String nfsAccessPolicy,
-        @Nullable String nfsExport,
-        @Nullable String targetPath) {
+        @OutputCustomType.Parameter("namespacePath") @Nullable String namespacePath,
+        @OutputCustomType.Parameter("nfsAccessPolicy") @Nullable String nfsAccessPolicy,
+        @OutputCustomType.Parameter("nfsExport") @Nullable String nfsExport,
+        @OutputCustomType.Parameter("targetPath") @Nullable String targetPath) {
         this.namespacePath = namespacePath;
         this.nfsAccessPolicy = nfsAccessPolicy;
         this.nfsExport = nfsExport;

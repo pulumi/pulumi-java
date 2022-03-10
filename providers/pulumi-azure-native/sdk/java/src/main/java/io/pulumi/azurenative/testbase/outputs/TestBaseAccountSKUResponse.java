@@ -39,13 +39,13 @@ public final class TestBaseAccountSKUResponse {
      */
     private final String tier;
 
-    @OutputCustomType.Constructor({"capabilities","locations","name","resourceType","tier"})
+    @OutputCustomType.Constructor
     private TestBaseAccountSKUResponse(
-        List<TestBaseAccountSKUCapabilityResponse> capabilities,
-        @Nullable List<String> locations,
-        String name,
-        @Nullable String resourceType,
-        String tier) {
+        @OutputCustomType.Parameter("capabilities") List<TestBaseAccountSKUCapabilityResponse> capabilities,
+        @OutputCustomType.Parameter("locations") @Nullable List<String> locations,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("resourceType") @Nullable String resourceType,
+        @OutputCustomType.Parameter("tier") String tier) {
         this.capabilities = capabilities;
         this.locations = locations;
         this.name = name;

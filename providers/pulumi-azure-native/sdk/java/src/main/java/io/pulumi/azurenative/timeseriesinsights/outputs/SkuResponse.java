@@ -21,10 +21,10 @@ public final class SkuResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"capacity","name"})
+    @OutputCustomType.Constructor
     private SkuResponse(
-        Integer capacity,
-        String name) {
+        @OutputCustomType.Parameter("capacity") Integer capacity,
+        @OutputCustomType.Parameter("name") String name) {
         this.capacity = capacity;
         this.name = name;
     }

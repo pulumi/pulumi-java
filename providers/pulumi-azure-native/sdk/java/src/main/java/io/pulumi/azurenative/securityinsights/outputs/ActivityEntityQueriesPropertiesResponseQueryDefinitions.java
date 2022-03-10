@@ -17,8 +17,8 @@ public final class ActivityEntityQueriesPropertiesResponseQueryDefinitions {
      */
     private final @Nullable String query;
 
-    @OutputCustomType.Constructor({"query"})
-    private ActivityEntityQueriesPropertiesResponseQueryDefinitions(@Nullable String query) {
+    @OutputCustomType.Constructor
+    private ActivityEntityQueriesPropertiesResponseQueryDefinitions(@OutputCustomType.Parameter("query") @Nullable String query) {
         this.query = query;
     }
 

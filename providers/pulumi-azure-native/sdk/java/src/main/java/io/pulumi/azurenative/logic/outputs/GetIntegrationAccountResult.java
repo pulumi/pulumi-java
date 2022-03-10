@@ -55,16 +55,16 @@ public final class GetIntegrationAccountResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","integrationServiceEnvironment","location","name","sku","state","tags","type"})
+    @OutputCustomType.Constructor
     private GetIntegrationAccountResult(
-        String id,
-        @Nullable ResourceReferenceResponse integrationServiceEnvironment,
-        @Nullable String location,
-        String name,
-        @Nullable IntegrationAccountSkuResponse sku,
-        @Nullable String state,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("integrationServiceEnvironment") @Nullable ResourceReferenceResponse integrationServiceEnvironment,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("sku") @Nullable IntegrationAccountSkuResponse sku,
+        @OutputCustomType.Parameter("state") @Nullable String state,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.integrationServiceEnvironment = integrationServiceEnvironment;
         this.location = location;

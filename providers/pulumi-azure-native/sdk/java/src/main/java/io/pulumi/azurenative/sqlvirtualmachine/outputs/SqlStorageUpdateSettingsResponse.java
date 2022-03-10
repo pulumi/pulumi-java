@@ -28,11 +28,11 @@ public final class SqlStorageUpdateSettingsResponse {
      */
     private final @Nullable Integer startingDeviceId;
 
-    @OutputCustomType.Constructor({"diskConfigurationType","diskCount","startingDeviceId"})
+    @OutputCustomType.Constructor
     private SqlStorageUpdateSettingsResponse(
-        @Nullable String diskConfigurationType,
-        @Nullable Integer diskCount,
-        @Nullable Integer startingDeviceId) {
+        @OutputCustomType.Parameter("diskConfigurationType") @Nullable String diskConfigurationType,
+        @OutputCustomType.Parameter("diskCount") @Nullable Integer diskCount,
+        @OutputCustomType.Parameter("startingDeviceId") @Nullable Integer startingDeviceId) {
         this.diskConfigurationType = diskConfigurationType;
         this.diskCount = diskCount;
         this.startingDeviceId = startingDeviceId;

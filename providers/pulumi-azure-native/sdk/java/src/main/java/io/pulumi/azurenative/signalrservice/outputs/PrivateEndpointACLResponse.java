@@ -27,11 +27,11 @@ public final class PrivateEndpointACLResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"allow","deny","name"})
+    @OutputCustomType.Constructor
     private PrivateEndpointACLResponse(
-        @Nullable List<String> allow,
-        @Nullable List<String> deny,
-        String name) {
+        @OutputCustomType.Parameter("allow") @Nullable List<String> allow,
+        @OutputCustomType.Parameter("deny") @Nullable List<String> deny,
+        @OutputCustomType.Parameter("name") String name) {
         this.allow = allow;
         this.deny = deny;
         this.name = name;

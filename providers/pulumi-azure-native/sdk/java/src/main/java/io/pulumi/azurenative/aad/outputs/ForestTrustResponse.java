@@ -37,13 +37,13 @@ public final class ForestTrustResponse {
      */
     private final @Nullable String trustedDomainFqdn;
 
-    @OutputCustomType.Constructor({"friendlyName","remoteDnsIps","trustDirection","trustPassword","trustedDomainFqdn"})
+    @OutputCustomType.Constructor
     private ForestTrustResponse(
-        @Nullable String friendlyName,
-        @Nullable String remoteDnsIps,
-        @Nullable String trustDirection,
-        @Nullable String trustPassword,
-        @Nullable String trustedDomainFqdn) {
+        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @OutputCustomType.Parameter("remoteDnsIps") @Nullable String remoteDnsIps,
+        @OutputCustomType.Parameter("trustDirection") @Nullable String trustDirection,
+        @OutputCustomType.Parameter("trustPassword") @Nullable String trustPassword,
+        @OutputCustomType.Parameter("trustedDomainFqdn") @Nullable String trustedDomainFqdn) {
         this.friendlyName = friendlyName;
         this.remoteDnsIps = remoteDnsIps;
         this.trustDirection = trustDirection;

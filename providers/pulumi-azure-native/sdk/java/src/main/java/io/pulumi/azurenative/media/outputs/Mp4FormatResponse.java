@@ -29,11 +29,11 @@ public final class Mp4FormatResponse {
      */
     private final @Nullable List<OutputFileResponse> outputFiles;
 
-    @OutputCustomType.Constructor({"filenamePattern","odataType","outputFiles"})
+    @OutputCustomType.Constructor
     private Mp4FormatResponse(
-        String filenamePattern,
-        String odataType,
-        @Nullable List<OutputFileResponse> outputFiles) {
+        @OutputCustomType.Parameter("filenamePattern") String filenamePattern,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("outputFiles") @Nullable List<OutputFileResponse> outputFiles) {
         this.filenamePattern = filenamePattern;
         this.odataType = odataType;
         this.outputFiles = outputFiles;

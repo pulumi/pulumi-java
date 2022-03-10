@@ -46,14 +46,14 @@ public final class RolloutStepResponse {
      */
     private final @Nullable String stepGroup;
 
-    @OutputCustomType.Constructor({"messages","name","operationInfo","resourceOperations","status","stepGroup"})
+    @OutputCustomType.Constructor
     private RolloutStepResponse(
-        List<MessageResponse> messages,
-        String name,
-        StepOperationInfoResponse operationInfo,
-        List<ResourceOperationResponse> resourceOperations,
-        String status,
-        @Nullable String stepGroup) {
+        @OutputCustomType.Parameter("messages") List<MessageResponse> messages,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("operationInfo") StepOperationInfoResponse operationInfo,
+        @OutputCustomType.Parameter("resourceOperations") List<ResourceOperationResponse> resourceOperations,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("stepGroup") @Nullable String stepGroup) {
         this.messages = messages;
         this.name = name;
         this.operationInfo = operationInfo;

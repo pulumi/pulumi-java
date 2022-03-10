@@ -15,8 +15,8 @@ public final class ExportDeliveryInfoResponse {
      */
     private final ExportDeliveryDestinationResponse destination;
 
-    @OutputCustomType.Constructor({"destination"})
-    private ExportDeliveryInfoResponse(ExportDeliveryDestinationResponse destination) {
+    @OutputCustomType.Constructor
+    private ExportDeliveryInfoResponse(@OutputCustomType.Parameter("destination") ExportDeliveryDestinationResponse destination) {
         this.destination = destination;
     }
 

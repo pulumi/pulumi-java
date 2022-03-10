@@ -51,15 +51,15 @@ public final class AcsClusterPropertiesResponse {
      */
     private final @Nullable List<SystemServiceResponse> systemServices;
 
-    @OutputCustomType.Constructor({"agentCount","agentVmSize","clusterFqdn","masterCount","orchestratorProperties","orchestratorType","systemServices"})
+    @OutputCustomType.Constructor
     private AcsClusterPropertiesResponse(
-        @Nullable Integer agentCount,
-        @Nullable String agentVmSize,
-        String clusterFqdn,
-        @Nullable Integer masterCount,
-        @Nullable KubernetesClusterPropertiesResponse orchestratorProperties,
-        String orchestratorType,
-        @Nullable List<SystemServiceResponse> systemServices) {
+        @OutputCustomType.Parameter("agentCount") @Nullable Integer agentCount,
+        @OutputCustomType.Parameter("agentVmSize") @Nullable String agentVmSize,
+        @OutputCustomType.Parameter("clusterFqdn") String clusterFqdn,
+        @OutputCustomType.Parameter("masterCount") @Nullable Integer masterCount,
+        @OutputCustomType.Parameter("orchestratorProperties") @Nullable KubernetesClusterPropertiesResponse orchestratorProperties,
+        @OutputCustomType.Parameter("orchestratorType") String orchestratorType,
+        @OutputCustomType.Parameter("systemServices") @Nullable List<SystemServiceResponse> systemServices) {
         this.agentCount = agentCount;
         this.agentVmSize = agentVmSize;
         this.clusterFqdn = clusterFqdn;

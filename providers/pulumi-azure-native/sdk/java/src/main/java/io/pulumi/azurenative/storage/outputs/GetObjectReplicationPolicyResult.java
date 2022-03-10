@@ -53,16 +53,16 @@ public final class GetObjectReplicationPolicyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"destinationAccount","enabledTime","id","name","policyId","rules","sourceAccount","type"})
+    @OutputCustomType.Constructor
     private GetObjectReplicationPolicyResult(
-        String destinationAccount,
-        String enabledTime,
-        String id,
-        String name,
-        String policyId,
-        @Nullable List<ObjectReplicationPolicyRuleResponse> rules,
-        String sourceAccount,
-        String type) {
+        @OutputCustomType.Parameter("destinationAccount") String destinationAccount,
+        @OutputCustomType.Parameter("enabledTime") String enabledTime,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("policyId") String policyId,
+        @OutputCustomType.Parameter("rules") @Nullable List<ObjectReplicationPolicyRuleResponse> rules,
+        @OutputCustomType.Parameter("sourceAccount") String sourceAccount,
+        @OutputCustomType.Parameter("type") String type) {
         this.destinationAccount = destinationAccount;
         this.enabledTime = enabledTime;
         this.id = id;

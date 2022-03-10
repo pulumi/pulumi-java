@@ -17,8 +17,8 @@ public final class ListOpenShiftClusterAdminCredentialsResult {
      */
     private final @Nullable String kubeconfig;
 
-    @OutputCustomType.Constructor({"kubeconfig"})
-    private ListOpenShiftClusterAdminCredentialsResult(@Nullable String kubeconfig) {
+    @OutputCustomType.Constructor
+    private ListOpenShiftClusterAdminCredentialsResult(@OutputCustomType.Parameter("kubeconfig") @Nullable String kubeconfig) {
         this.kubeconfig = kubeconfig;
     }
 

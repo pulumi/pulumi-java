@@ -66,18 +66,18 @@ public final class GetPipelineJobResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"description","error","expiration","id","name","parameters","state","systemData","topologyName","type"})
+    @OutputCustomType.Constructor
     private GetPipelineJobResult(
-        @Nullable String description,
-        PipelineJobErrorResponse error,
-        String expiration,
-        String id,
-        String name,
-        @Nullable List<ParameterDefinitionResponse> parameters,
-        String state,
-        SystemDataResponse systemData,
-        String topologyName,
-        String type) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("error") PipelineJobErrorResponse error,
+        @OutputCustomType.Parameter("expiration") String expiration,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") @Nullable List<ParameterDefinitionResponse> parameters,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("topologyName") String topologyName,
+        @OutputCustomType.Parameter("type") String type) {
         this.description = description;
         this.error = error;
         this.expiration = expiration;

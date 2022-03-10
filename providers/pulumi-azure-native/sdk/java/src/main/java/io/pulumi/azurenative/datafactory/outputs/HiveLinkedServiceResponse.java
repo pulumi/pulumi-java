@@ -131,30 +131,30 @@ public final class HiveLinkedServiceResponse {
      */
     private final @Nullable Object zooKeeperNameSpace;
 
-    @OutputCustomType.Constructor({"allowHostNameCNMismatch","allowSelfSignedServerCert","annotations","authenticationType","connectVia","description","enableSsl","encryptedCredential","host","httpPath","parameters","password","port","serverType","serviceDiscoveryMode","thriftTransportProtocol","trustedCertPath","type","useNativeQuery","useSystemTrustStore","username","zooKeeperNameSpace"})
+    @OutputCustomType.Constructor
     private HiveLinkedServiceResponse(
-        @Nullable Object allowHostNameCNMismatch,
-        @Nullable Object allowSelfSignedServerCert,
-        @Nullable List<Object> annotations,
-        String authenticationType,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable String description,
-        @Nullable Object enableSsl,
-        @Nullable Object encryptedCredential,
-        Object host,
-        @Nullable Object httpPath,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        @Nullable Object port,
-        @Nullable String serverType,
-        @Nullable Object serviceDiscoveryMode,
-        @Nullable String thriftTransportProtocol,
-        @Nullable Object trustedCertPath,
-        String type,
-        @Nullable Object useNativeQuery,
-        @Nullable Object useSystemTrustStore,
-        @Nullable Object username,
-        @Nullable Object zooKeeperNameSpace) {
+        @OutputCustomType.Parameter("allowHostNameCNMismatch") @Nullable Object allowHostNameCNMismatch,
+        @OutputCustomType.Parameter("allowSelfSignedServerCert") @Nullable Object allowSelfSignedServerCert,
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("authenticationType") String authenticationType,
+        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("enableSsl") @Nullable Object enableSsl,
+        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @OutputCustomType.Parameter("host") Object host,
+        @OutputCustomType.Parameter("httpPath") @Nullable Object httpPath,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("password") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
+        @OutputCustomType.Parameter("port") @Nullable Object port,
+        @OutputCustomType.Parameter("serverType") @Nullable String serverType,
+        @OutputCustomType.Parameter("serviceDiscoveryMode") @Nullable Object serviceDiscoveryMode,
+        @OutputCustomType.Parameter("thriftTransportProtocol") @Nullable String thriftTransportProtocol,
+        @OutputCustomType.Parameter("trustedCertPath") @Nullable Object trustedCertPath,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("useNativeQuery") @Nullable Object useNativeQuery,
+        @OutputCustomType.Parameter("useSystemTrustStore") @Nullable Object useSystemTrustStore,
+        @OutputCustomType.Parameter("username") @Nullable Object username,
+        @OutputCustomType.Parameter("zooKeeperNameSpace") @Nullable Object zooKeeperNameSpace) {
         this.allowHostNameCNMismatch = allowHostNameCNMismatch;
         this.allowSelfSignedServerCert = allowSelfSignedServerCert;
         this.annotations = annotations;

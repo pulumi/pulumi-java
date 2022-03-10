@@ -17,8 +17,8 @@ public final class UserOwnedStorageResponse {
      */
     private final @Nullable String resourceId;
 
-    @OutputCustomType.Constructor({"resourceId"})
-    private UserOwnedStorageResponse(@Nullable String resourceId) {
+    @OutputCustomType.Constructor
+    private UserOwnedStorageResponse(@OutputCustomType.Parameter("resourceId") @Nullable String resourceId) {
         this.resourceId = resourceId;
     }
 

@@ -16,8 +16,8 @@ public final class HyperVSiteDetailsResponse {
      */
     private final String instanceType;
 
-    @OutputCustomType.Constructor({"instanceType"})
-    private HyperVSiteDetailsResponse(String instanceType) {
+    @OutputCustomType.Constructor
+    private HyperVSiteDetailsResponse(@OutputCustomType.Parameter("instanceType") String instanceType) {
         this.instanceType = instanceType;
     }
 

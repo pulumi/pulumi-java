@@ -30,12 +30,12 @@ public final class CniConfigResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"podSubnet","serviceSubnet","type","version"})
+    @OutputCustomType.Constructor
     private CniConfigResponse(
-        String podSubnet,
-        String serviceSubnet,
-        String type,
-        String version) {
+        @OutputCustomType.Parameter("podSubnet") String podSubnet,
+        @OutputCustomType.Parameter("serviceSubnet") String serviceSubnet,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("version") String version) {
         this.podSubnet = podSubnet;
         this.serviceSubnet = serviceSubnet;
         this.type = type;

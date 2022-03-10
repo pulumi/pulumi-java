@@ -86,22 +86,22 @@ public final class GetIntegrationAccountAgreementResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"agreementType","changedTime","content","createdTime","guestIdentity","guestPartner","hostIdentity","hostPartner","id","location","metadata","name","tags","type"})
+    @OutputCustomType.Constructor
     private GetIntegrationAccountAgreementResult(
-        String agreementType,
-        String changedTime,
-        AgreementContentResponse content,
-        String createdTime,
-        BusinessIdentityResponse guestIdentity,
-        String guestPartner,
-        BusinessIdentityResponse hostIdentity,
-        String hostPartner,
-        String id,
-        @Nullable String location,
-        @Nullable Object metadata,
-        String name,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("agreementType") String agreementType,
+        @OutputCustomType.Parameter("changedTime") String changedTime,
+        @OutputCustomType.Parameter("content") AgreementContentResponse content,
+        @OutputCustomType.Parameter("createdTime") String createdTime,
+        @OutputCustomType.Parameter("guestIdentity") BusinessIdentityResponse guestIdentity,
+        @OutputCustomType.Parameter("guestPartner") String guestPartner,
+        @OutputCustomType.Parameter("hostIdentity") BusinessIdentityResponse hostIdentity,
+        @OutputCustomType.Parameter("hostPartner") String hostPartner,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("metadata") @Nullable Object metadata,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.agreementType = agreementType;
         this.changedTime = changedTime;
         this.content = content;

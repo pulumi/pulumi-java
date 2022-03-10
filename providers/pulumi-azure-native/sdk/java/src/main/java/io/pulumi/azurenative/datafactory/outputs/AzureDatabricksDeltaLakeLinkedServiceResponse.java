@@ -77,19 +77,19 @@ public final class AzureDatabricksDeltaLakeLinkedServiceResponse {
      */
     private final @Nullable Object workspaceResourceId;
 
-    @OutputCustomType.Constructor({"accessToken","annotations","clusterId","connectVia","credential","description","domain","encryptedCredential","parameters","type","workspaceResourceId"})
+    @OutputCustomType.Constructor
     private AzureDatabricksDeltaLakeLinkedServiceResponse(
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken,
-        @Nullable List<Object> annotations,
-        @Nullable Object clusterId,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable CredentialReferenceResponse credential,
-        @Nullable String description,
-        Object domain,
-        @Nullable Object encryptedCredential,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        String type,
-        @Nullable Object workspaceResourceId) {
+        @OutputCustomType.Parameter("accessToken") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken,
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("clusterId") @Nullable Object clusterId,
+        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @OutputCustomType.Parameter("credential") @Nullable CredentialReferenceResponse credential,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("domain") Object domain,
+        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("workspaceResourceId") @Nullable Object workspaceResourceId) {
         this.accessToken = accessToken;
         this.annotations = annotations;
         this.clusterId = clusterId;

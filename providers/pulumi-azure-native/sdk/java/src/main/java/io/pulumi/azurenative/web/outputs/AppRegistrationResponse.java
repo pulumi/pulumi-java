@@ -22,10 +22,10 @@ public final class AppRegistrationResponse {
      */
     private final @Nullable String appSecretSettingName;
 
-    @OutputCustomType.Constructor({"appId","appSecretSettingName"})
+    @OutputCustomType.Constructor
     private AppRegistrationResponse(
-        @Nullable String appId,
-        @Nullable String appSecretSettingName) {
+        @OutputCustomType.Parameter("appId") @Nullable String appId,
+        @OutputCustomType.Parameter("appSecretSettingName") @Nullable String appSecretSettingName) {
         this.appId = appId;
         this.appSecretSettingName = appSecretSettingName;
     }

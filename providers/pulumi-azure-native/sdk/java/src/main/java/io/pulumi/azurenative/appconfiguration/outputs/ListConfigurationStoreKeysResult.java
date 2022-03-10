@@ -24,10 +24,10 @@ public final class ListConfigurationStoreKeysResult {
      */
     private final @Nullable List<ApiKeyResponse> value;
 
-    @OutputCustomType.Constructor({"nextLink","value"})
+    @OutputCustomType.Constructor
     private ListConfigurationStoreKeysResult(
-        @Nullable String nextLink,
-        @Nullable List<ApiKeyResponse> value) {
+        @OutputCustomType.Parameter("nextLink") @Nullable String nextLink,
+        @OutputCustomType.Parameter("value") @Nullable List<ApiKeyResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }

@@ -15,8 +15,8 @@ public final class ManagerSkuResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private ManagerSkuResponse(String name) {
+    @OutputCustomType.Constructor
+    private ManagerSkuResponse(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

@@ -80,21 +80,21 @@ public final class GetIpAllocationResult {
      */
     private final SubResourceResponse virtualNetwork;
 
-    @OutputCustomType.Constructor({"allocationTags","etag","id","ipamAllocationId","location","name","prefix","prefixLength","prefixType","subnet","tags","type","virtualNetwork"})
+    @OutputCustomType.Constructor
     private GetIpAllocationResult(
-        @Nullable Map<String,String> allocationTags,
-        String etag,
-        @Nullable String id,
-        @Nullable String ipamAllocationId,
-        @Nullable String location,
-        String name,
-        @Nullable String prefix,
-        @Nullable Integer prefixLength,
-        @Nullable String prefixType,
-        SubResourceResponse subnet,
-        @Nullable Map<String,String> tags,
-        String type,
-        SubResourceResponse virtualNetwork) {
+        @OutputCustomType.Parameter("allocationTags") @Nullable Map<String,String> allocationTags,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("ipamAllocationId") @Nullable String ipamAllocationId,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
+        @OutputCustomType.Parameter("prefixLength") @Nullable Integer prefixLength,
+        @OutputCustomType.Parameter("prefixType") @Nullable String prefixType,
+        @OutputCustomType.Parameter("subnet") SubResourceResponse subnet,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("virtualNetwork") SubResourceResponse virtualNetwork) {
         this.allocationTags = allocationTags;
         this.etag = etag;
         this.id = id;

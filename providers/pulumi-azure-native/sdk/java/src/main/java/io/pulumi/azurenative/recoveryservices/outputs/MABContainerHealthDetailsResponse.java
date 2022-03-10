@@ -34,12 +34,12 @@ public final class MABContainerHealthDetailsResponse {
      */
     private final @Nullable String title;
 
-    @OutputCustomType.Constructor({"code","message","recommendations","title"})
+    @OutputCustomType.Constructor
     private MABContainerHealthDetailsResponse(
-        @Nullable Integer code,
-        @Nullable String message,
-        @Nullable List<String> recommendations,
-        @Nullable String title) {
+        @OutputCustomType.Parameter("code") @Nullable Integer code,
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("recommendations") @Nullable List<String> recommendations,
+        @OutputCustomType.Parameter("title") @Nullable String title) {
         this.code = code;
         this.message = message;
         this.recommendations = recommendations;

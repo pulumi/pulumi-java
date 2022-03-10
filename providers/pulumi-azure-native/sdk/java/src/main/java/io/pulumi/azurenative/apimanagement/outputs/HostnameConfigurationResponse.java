@@ -59,17 +59,17 @@ public final class HostnameConfigurationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"certificate","certificatePassword","defaultSslBinding","encodedCertificate","hostName","identityClientId","keyVaultId","negotiateClientCertificate","type"})
+    @OutputCustomType.Constructor
     private HostnameConfigurationResponse(
-        @Nullable CertificateInformationResponse certificate,
-        @Nullable String certificatePassword,
-        @Nullable Boolean defaultSslBinding,
-        @Nullable String encodedCertificate,
-        String hostName,
-        @Nullable String identityClientId,
-        @Nullable String keyVaultId,
-        @Nullable Boolean negotiateClientCertificate,
-        String type) {
+        @OutputCustomType.Parameter("certificate") @Nullable CertificateInformationResponse certificate,
+        @OutputCustomType.Parameter("certificatePassword") @Nullable String certificatePassword,
+        @OutputCustomType.Parameter("defaultSslBinding") @Nullable Boolean defaultSslBinding,
+        @OutputCustomType.Parameter("encodedCertificate") @Nullable String encodedCertificate,
+        @OutputCustomType.Parameter("hostName") String hostName,
+        @OutputCustomType.Parameter("identityClientId") @Nullable String identityClientId,
+        @OutputCustomType.Parameter("keyVaultId") @Nullable String keyVaultId,
+        @OutputCustomType.Parameter("negotiateClientCertificate") @Nullable Boolean negotiateClientCertificate,
+        @OutputCustomType.Parameter("type") String type) {
         this.certificate = certificate;
         this.certificatePassword = certificatePassword;
         this.defaultSslBinding = defaultSslBinding;

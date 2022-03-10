@@ -43,14 +43,14 @@ public final class HardwareProfileResponse {
      */
     private final @Nullable Integer numCoresPerSocket;
 
-    @OutputCustomType.Constructor({"cpuHotAddEnabled","cpuHotRemoveEnabled","memoryHotAddEnabled","memorySizeMB","numCPUs","numCoresPerSocket"})
+    @OutputCustomType.Constructor
     private HardwareProfileResponse(
-        Boolean cpuHotAddEnabled,
-        Boolean cpuHotRemoveEnabled,
-        Boolean memoryHotAddEnabled,
-        @Nullable Integer memorySizeMB,
-        @Nullable Integer numCPUs,
-        @Nullable Integer numCoresPerSocket) {
+        @OutputCustomType.Parameter("cpuHotAddEnabled") Boolean cpuHotAddEnabled,
+        @OutputCustomType.Parameter("cpuHotRemoveEnabled") Boolean cpuHotRemoveEnabled,
+        @OutputCustomType.Parameter("memoryHotAddEnabled") Boolean memoryHotAddEnabled,
+        @OutputCustomType.Parameter("memorySizeMB") @Nullable Integer memorySizeMB,
+        @OutputCustomType.Parameter("numCPUs") @Nullable Integer numCPUs,
+        @OutputCustomType.Parameter("numCoresPerSocket") @Nullable Integer numCoresPerSocket) {
         this.cpuHotAddEnabled = cpuHotAddEnabled;
         this.cpuHotRemoveEnabled = cpuHotRemoveEnabled;
         this.memoryHotAddEnabled = memoryHotAddEnabled;

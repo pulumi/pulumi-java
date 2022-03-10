@@ -45,14 +45,14 @@ public final class GatewayCorsPropertiesResponse {
      */
     private final @Nullable Integer maxAge;
 
-    @OutputCustomType.Constructor({"allowCredentials","allowedHeaders","allowedMethods","allowedOrigins","exposedHeaders","maxAge"})
+    @OutputCustomType.Constructor
     private GatewayCorsPropertiesResponse(
-        @Nullable Boolean allowCredentials,
-        @Nullable List<String> allowedHeaders,
-        @Nullable List<String> allowedMethods,
-        @Nullable List<String> allowedOrigins,
-        @Nullable List<String> exposedHeaders,
-        @Nullable Integer maxAge) {
+        @OutputCustomType.Parameter("allowCredentials") @Nullable Boolean allowCredentials,
+        @OutputCustomType.Parameter("allowedHeaders") @Nullable List<String> allowedHeaders,
+        @OutputCustomType.Parameter("allowedMethods") @Nullable List<String> allowedMethods,
+        @OutputCustomType.Parameter("allowedOrigins") @Nullable List<String> allowedOrigins,
+        @OutputCustomType.Parameter("exposedHeaders") @Nullable List<String> exposedHeaders,
+        @OutputCustomType.Parameter("maxAge") @Nullable Integer maxAge) {
         this.allowCredentials = allowCredentials;
         this.allowedHeaders = allowedHeaders;
         this.allowedMethods = allowedMethods;

@@ -67,18 +67,18 @@ public final class GetExpressRouteGatewayResult {
      */
     private final VirtualHubIdResponse virtualHub;
 
-    @OutputCustomType.Constructor({"autoScaleConfiguration","etag","expressRouteConnections","id","location","name","provisioningState","tags","type","virtualHub"})
+    @OutputCustomType.Constructor
     private GetExpressRouteGatewayResult(
-        @Nullable ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration autoScaleConfiguration,
-        String etag,
-        List<ExpressRouteConnectionResponse> expressRouteConnections,
-        @Nullable String id,
-        @Nullable String location,
-        String name,
-        String provisioningState,
-        @Nullable Map<String,String> tags,
-        String type,
-        VirtualHubIdResponse virtualHub) {
+        @OutputCustomType.Parameter("autoScaleConfiguration") @Nullable ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration autoScaleConfiguration,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("expressRouteConnections") List<ExpressRouteConnectionResponse> expressRouteConnections,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("virtualHub") VirtualHubIdResponse virtualHub) {
         this.autoScaleConfiguration = autoScaleConfiguration;
         this.etag = etag;
         this.expressRouteConnections = expressRouteConnections;

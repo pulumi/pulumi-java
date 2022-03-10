@@ -22,10 +22,10 @@ public final class ApiResourceDefinitionsResponse {
      */
     private final @Nullable String originalSwaggerUrl;
 
-    @OutputCustomType.Constructor({"modifiedSwaggerUrl","originalSwaggerUrl"})
+    @OutputCustomType.Constructor
     private ApiResourceDefinitionsResponse(
-        @Nullable String modifiedSwaggerUrl,
-        @Nullable String originalSwaggerUrl) {
+        @OutputCustomType.Parameter("modifiedSwaggerUrl") @Nullable String modifiedSwaggerUrl,
+        @OutputCustomType.Parameter("originalSwaggerUrl") @Nullable String originalSwaggerUrl) {
         this.modifiedSwaggerUrl = modifiedSwaggerUrl;
         this.originalSwaggerUrl = originalSwaggerUrl;
     }

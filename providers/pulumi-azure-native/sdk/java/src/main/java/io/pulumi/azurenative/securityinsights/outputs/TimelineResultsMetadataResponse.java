@@ -29,11 +29,11 @@ public final class TimelineResultsMetadataResponse {
      */
     private final Integer totalCount;
 
-    @OutputCustomType.Constructor({"aggregations","errors","totalCount"})
+    @OutputCustomType.Constructor
     private TimelineResultsMetadataResponse(
-        List<TimelineAggregationResponse> aggregations,
-        @Nullable List<TimelineErrorResponse> errors,
-        Integer totalCount) {
+        @OutputCustomType.Parameter("aggregations") List<TimelineAggregationResponse> aggregations,
+        @OutputCustomType.Parameter("errors") @Nullable List<TimelineErrorResponse> errors,
+        @OutputCustomType.Parameter("totalCount") Integer totalCount) {
         this.aggregations = aggregations;
         this.errors = errors;
         this.totalCount = totalCount;

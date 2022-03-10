@@ -38,13 +38,13 @@ public final class SourceControlAuthInfoResponse {
      */
     private final @Nullable String tokenType;
 
-    @OutputCustomType.Constructor({"expiresIn","refreshToken","scope","token","tokenType"})
+    @OutputCustomType.Constructor
     private SourceControlAuthInfoResponse(
-        @Nullable Integer expiresIn,
-        @Nullable String refreshToken,
-        @Nullable String scope,
-        String token,
-        @Nullable String tokenType) {
+        @OutputCustomType.Parameter("expiresIn") @Nullable Integer expiresIn,
+        @OutputCustomType.Parameter("refreshToken") @Nullable String refreshToken,
+        @OutputCustomType.Parameter("scope") @Nullable String scope,
+        @OutputCustomType.Parameter("token") String token,
+        @OutputCustomType.Parameter("tokenType") @Nullable String tokenType) {
         this.expiresIn = expiresIn;
         this.refreshToken = refreshToken;
         this.scope = scope;

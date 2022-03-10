@@ -22,10 +22,10 @@ public final class GatewayOperatorPropertiesResponse {
      */
     private final GatewayOperatorResourceRequestsResponse resourceRequests;
 
-    @OutputCustomType.Constructor({"instances","resourceRequests"})
+    @OutputCustomType.Constructor
     private GatewayOperatorPropertiesResponse(
-        List<GatewayInstanceResponse> instances,
-        GatewayOperatorResourceRequestsResponse resourceRequests) {
+        @OutputCustomType.Parameter("instances") List<GatewayInstanceResponse> instances,
+        @OutputCustomType.Parameter("resourceRequests") GatewayOperatorResourceRequestsResponse resourceRequests) {
         this.instances = instances;
         this.resourceRequests = resourceRequests;
     }

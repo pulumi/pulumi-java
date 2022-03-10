@@ -24,10 +24,10 @@ public final class CloudServiceNetworkProfileResponse {
      */
     private final @Nullable SubResourceResponse swappableCloudService;
 
-    @OutputCustomType.Constructor({"loadBalancerConfigurations","swappableCloudService"})
+    @OutputCustomType.Constructor
     private CloudServiceNetworkProfileResponse(
-        @Nullable List<LoadBalancerConfigurationResponse> loadBalancerConfigurations,
-        @Nullable SubResourceResponse swappableCloudService) {
+        @OutputCustomType.Parameter("loadBalancerConfigurations") @Nullable List<LoadBalancerConfigurationResponse> loadBalancerConfigurations,
+        @OutputCustomType.Parameter("swappableCloudService") @Nullable SubResourceResponse swappableCloudService) {
         this.loadBalancerConfigurations = loadBalancerConfigurations;
         this.swappableCloudService = swappableCloudService;
     }

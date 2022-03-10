@@ -29,11 +29,11 @@ public final class AlertRuleLeafConditionResponse {
      */
     private final @Nullable String field;
 
-    @OutputCustomType.Constructor({"containsAny","equals","field"})
+    @OutputCustomType.Constructor
     private AlertRuleLeafConditionResponse(
-        @Nullable List<String> containsAny,
-        @Nullable String equals,
-        @Nullable String field) {
+        @OutputCustomType.Parameter("containsAny") @Nullable List<String> containsAny,
+        @OutputCustomType.Parameter("equals") @Nullable String equals,
+        @OutputCustomType.Parameter("field") @Nullable String field) {
         this.containsAny = containsAny;
         this.equals = equals;
         this.field = field;

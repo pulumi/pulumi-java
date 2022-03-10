@@ -24,10 +24,10 @@ public final class DailyRetentionScheduleResponse {
      */
     private final @Nullable List<String> retentionTimes;
 
-    @OutputCustomType.Constructor({"retentionDuration","retentionTimes"})
+    @OutputCustomType.Constructor
     private DailyRetentionScheduleResponse(
-        @Nullable RetentionDurationResponse retentionDuration,
-        @Nullable List<String> retentionTimes) {
+        @OutputCustomType.Parameter("retentionDuration") @Nullable RetentionDurationResponse retentionDuration,
+        @OutputCustomType.Parameter("retentionTimes") @Nullable List<String> retentionTimes) {
         this.retentionDuration = retentionDuration;
         this.retentionTimes = retentionTimes;
     }

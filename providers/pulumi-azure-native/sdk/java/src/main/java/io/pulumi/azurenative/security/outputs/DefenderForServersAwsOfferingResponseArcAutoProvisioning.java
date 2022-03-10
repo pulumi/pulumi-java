@@ -23,10 +23,10 @@ public final class DefenderForServersAwsOfferingResponseArcAutoProvisioning {
      */
     private final @Nullable DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata servicePrincipalSecretMetadata;
 
-    @OutputCustomType.Constructor({"enabled","servicePrincipalSecretMetadata"})
+    @OutputCustomType.Constructor
     private DefenderForServersAwsOfferingResponseArcAutoProvisioning(
-        @Nullable Boolean enabled,
-        @Nullable DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata servicePrincipalSecretMetadata) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("servicePrincipalSecretMetadata") @Nullable DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata servicePrincipalSecretMetadata) {
         this.enabled = enabled;
         this.servicePrincipalSecretMetadata = servicePrincipalSecretMetadata;
     }

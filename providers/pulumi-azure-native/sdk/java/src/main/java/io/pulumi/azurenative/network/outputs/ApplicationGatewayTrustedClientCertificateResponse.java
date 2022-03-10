@@ -42,14 +42,14 @@ public final class ApplicationGatewayTrustedClientCertificateResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"data","etag","id","name","provisioningState","type"})
+    @OutputCustomType.Constructor
     private ApplicationGatewayTrustedClientCertificateResponse(
-        @Nullable String data,
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("data") @Nullable String data,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.data = data;
         this.etag = etag;
         this.id = id;

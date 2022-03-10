@@ -17,12 +17,12 @@ public final class LoggingRuleResponse {
     private final String direction;
     private final @Nullable LoggingRuleResponseHiddenPropertyPaths hiddenPropertyPaths;
 
-    @OutputCustomType.Constructor({"action","detailLevel","direction","hiddenPropertyPaths"})
+    @OutputCustomType.Constructor
     private LoggingRuleResponse(
-        String action,
-        String detailLevel,
-        String direction,
-        @Nullable LoggingRuleResponseHiddenPropertyPaths hiddenPropertyPaths) {
+        @OutputCustomType.Parameter("action") String action,
+        @OutputCustomType.Parameter("detailLevel") String detailLevel,
+        @OutputCustomType.Parameter("direction") String direction,
+        @OutputCustomType.Parameter("hiddenPropertyPaths") @Nullable LoggingRuleResponseHiddenPropertyPaths hiddenPropertyPaths) {
         this.action = action;
         this.detailLevel = detailLevel;
         this.direction = direction;

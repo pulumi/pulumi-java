@@ -23,10 +23,10 @@ public final class OpenIdConnectLoginResponse {
      */
     private final @Nullable List<String> scopes;
 
-    @OutputCustomType.Constructor({"nameClaimType","scopes"})
+    @OutputCustomType.Constructor
     private OpenIdConnectLoginResponse(
-        @Nullable String nameClaimType,
-        @Nullable List<String> scopes) {
+        @OutputCustomType.Parameter("nameClaimType") @Nullable String nameClaimType,
+        @OutputCustomType.Parameter("scopes") @Nullable List<String> scopes) {
         this.nameClaimType = nameClaimType;
         this.scopes = scopes;
     }

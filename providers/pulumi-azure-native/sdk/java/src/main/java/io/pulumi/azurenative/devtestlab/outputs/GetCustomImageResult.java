@@ -104,25 +104,25 @@ public final class GetCustomImageResult {
      */
     private final @Nullable CustomImagePropertiesFromVmResponse vm;
 
-    @OutputCustomType.Constructor({"author","creationDate","customImagePlan","dataDiskStorageInfo","description","id","isPlanAuthorized","location","managedImageId","managedSnapshotId","name","provisioningState","tags","type","uniqueIdentifier","vhd","vm"})
+    @OutputCustomType.Constructor
     private GetCustomImageResult(
-        @Nullable String author,
-        String creationDate,
-        @Nullable CustomImagePropertiesFromPlanResponse customImagePlan,
-        @Nullable List<DataDiskStorageTypeInfoResponse> dataDiskStorageInfo,
-        @Nullable String description,
-        String id,
-        @Nullable Boolean isPlanAuthorized,
-        @Nullable String location,
-        @Nullable String managedImageId,
-        @Nullable String managedSnapshotId,
-        String name,
-        String provisioningState,
-        @Nullable Map<String,String> tags,
-        String type,
-        String uniqueIdentifier,
-        @Nullable CustomImagePropertiesCustomResponse vhd,
-        @Nullable CustomImagePropertiesFromVmResponse vm) {
+        @OutputCustomType.Parameter("author") @Nullable String author,
+        @OutputCustomType.Parameter("creationDate") String creationDate,
+        @OutputCustomType.Parameter("customImagePlan") @Nullable CustomImagePropertiesFromPlanResponse customImagePlan,
+        @OutputCustomType.Parameter("dataDiskStorageInfo") @Nullable List<DataDiskStorageTypeInfoResponse> dataDiskStorageInfo,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isPlanAuthorized") @Nullable Boolean isPlanAuthorized,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("managedImageId") @Nullable String managedImageId,
+        @OutputCustomType.Parameter("managedSnapshotId") @Nullable String managedSnapshotId,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("uniqueIdentifier") String uniqueIdentifier,
+        @OutputCustomType.Parameter("vhd") @Nullable CustomImagePropertiesCustomResponse vhd,
+        @OutputCustomType.Parameter("vm") @Nullable CustomImagePropertiesFromVmResponse vm) {
         this.author = author;
         this.creationDate = creationDate;
         this.customImagePlan = customImagePlan;

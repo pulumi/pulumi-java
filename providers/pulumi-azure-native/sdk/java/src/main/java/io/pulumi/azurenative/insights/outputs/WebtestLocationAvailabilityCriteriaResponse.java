@@ -32,12 +32,12 @@ public final class WebtestLocationAvailabilityCriteriaResponse {
      */
     private final String webTestId;
 
-    @OutputCustomType.Constructor({"componentId","failedLocationCount","odataType","webTestId"})
+    @OutputCustomType.Constructor
     private WebtestLocationAvailabilityCriteriaResponse(
-        String componentId,
-        Double failedLocationCount,
-        String odataType,
-        String webTestId) {
+        @OutputCustomType.Parameter("componentId") String componentId,
+        @OutputCustomType.Parameter("failedLocationCount") Double failedLocationCount,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("webTestId") String webTestId) {
         this.componentId = componentId;
         this.failedLocationCount = failedLocationCount;
         this.odataType = odataType;

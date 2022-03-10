@@ -22,10 +22,10 @@ public final class ExperimentEndpointResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"endpoint","name"})
+    @OutputCustomType.Constructor
     private ExperimentEndpointResponse(
-        @Nullable String endpoint,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("endpoint") @Nullable String endpoint,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.endpoint = endpoint;
         this.name = name;
     }

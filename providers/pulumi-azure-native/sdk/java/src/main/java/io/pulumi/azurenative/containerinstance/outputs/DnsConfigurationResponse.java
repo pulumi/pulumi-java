@@ -28,11 +28,11 @@ public final class DnsConfigurationResponse {
      */
     private final @Nullable String searchDomains;
 
-    @OutputCustomType.Constructor({"nameServers","options","searchDomains"})
+    @OutputCustomType.Constructor
     private DnsConfigurationResponse(
-        List<String> nameServers,
-        @Nullable String options,
-        @Nullable String searchDomains) {
+        @OutputCustomType.Parameter("nameServers") List<String> nameServers,
+        @OutputCustomType.Parameter("options") @Nullable String options,
+        @OutputCustomType.Parameter("searchDomains") @Nullable String searchDomains) {
         this.nameServers = nameServers;
         this.options = options;
         this.searchDomains = searchDomains;

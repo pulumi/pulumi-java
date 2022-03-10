@@ -52,15 +52,15 @@ public final class ManagedIntegrationRuntimeResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"computeProperties","customerVirtualNetwork","description","managedVirtualNetwork","ssisProperties","state","type"})
+    @OutputCustomType.Constructor
     private ManagedIntegrationRuntimeResponse(
-        @Nullable IntegrationRuntimeComputePropertiesResponse computeProperties,
-        @Nullable IntegrationRuntimeCustomerVirtualNetworkResponse customerVirtualNetwork,
-        @Nullable String description,
-        @Nullable ManagedVirtualNetworkReferenceResponse managedVirtualNetwork,
-        @Nullable IntegrationRuntimeSsisPropertiesResponse ssisProperties,
-        String state,
-        String type) {
+        @OutputCustomType.Parameter("computeProperties") @Nullable IntegrationRuntimeComputePropertiesResponse computeProperties,
+        @OutputCustomType.Parameter("customerVirtualNetwork") @Nullable IntegrationRuntimeCustomerVirtualNetworkResponse customerVirtualNetwork,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("managedVirtualNetwork") @Nullable ManagedVirtualNetworkReferenceResponse managedVirtualNetwork,
+        @OutputCustomType.Parameter("ssisProperties") @Nullable IntegrationRuntimeSsisPropertiesResponse ssisProperties,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("type") String type) {
         this.computeProperties = computeProperties;
         this.customerVirtualNetwork = customerVirtualNetwork;
         this.description = description;

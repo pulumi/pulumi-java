@@ -30,11 +30,11 @@ public final class VirtualMachineScaleSetNetworkProfileResponse {
      */
     private final @Nullable List<VirtualMachineScaleSetNetworkConfigurationResponse> networkInterfaceConfigurations;
 
-    @OutputCustomType.Constructor({"healthProbe","networkApiVersion","networkInterfaceConfigurations"})
+    @OutputCustomType.Constructor
     private VirtualMachineScaleSetNetworkProfileResponse(
-        @Nullable ApiEntityReferenceResponse healthProbe,
-        @Nullable String networkApiVersion,
-        @Nullable List<VirtualMachineScaleSetNetworkConfigurationResponse> networkInterfaceConfigurations) {
+        @OutputCustomType.Parameter("healthProbe") @Nullable ApiEntityReferenceResponse healthProbe,
+        @OutputCustomType.Parameter("networkApiVersion") @Nullable String networkApiVersion,
+        @OutputCustomType.Parameter("networkInterfaceConfigurations") @Nullable List<VirtualMachineScaleSetNetworkConfigurationResponse> networkInterfaceConfigurations) {
         this.healthProbe = healthProbe;
         this.networkApiVersion = networkApiVersion;
         this.networkInterfaceConfigurations = networkInterfaceConfigurations;

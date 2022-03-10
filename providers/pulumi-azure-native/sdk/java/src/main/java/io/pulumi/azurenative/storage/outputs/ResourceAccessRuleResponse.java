@@ -22,10 +22,10 @@ public final class ResourceAccessRuleResponse {
      */
     private final @Nullable String tenantId;
 
-    @OutputCustomType.Constructor({"resourceId","tenantId"})
+    @OutputCustomType.Constructor
     private ResourceAccessRuleResponse(
-        @Nullable String resourceId,
-        @Nullable String tenantId) {
+        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId,
+        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId) {
         this.resourceId = resourceId;
         this.tenantId = tenantId;
     }

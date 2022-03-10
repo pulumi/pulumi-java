@@ -46,15 +46,15 @@ public final class StartTaskResponse {
      */
     private final @Nullable Boolean waitForSuccess;
 
-    @OutputCustomType.Constructor({"commandLine","containerSettings","environmentSettings","maxTaskRetryCount","resourceFiles","userIdentity","waitForSuccess"})
+    @OutputCustomType.Constructor
     private StartTaskResponse(
-        @Nullable String commandLine,
-        @Nullable TaskContainerSettingsResponse containerSettings,
-        @Nullable List<EnvironmentSettingResponse> environmentSettings,
-        @Nullable Integer maxTaskRetryCount,
-        @Nullable List<ResourceFileResponse> resourceFiles,
-        @Nullable UserIdentityResponse userIdentity,
-        @Nullable Boolean waitForSuccess) {
+        @OutputCustomType.Parameter("commandLine") @Nullable String commandLine,
+        @OutputCustomType.Parameter("containerSettings") @Nullable TaskContainerSettingsResponse containerSettings,
+        @OutputCustomType.Parameter("environmentSettings") @Nullable List<EnvironmentSettingResponse> environmentSettings,
+        @OutputCustomType.Parameter("maxTaskRetryCount") @Nullable Integer maxTaskRetryCount,
+        @OutputCustomType.Parameter("resourceFiles") @Nullable List<ResourceFileResponse> resourceFiles,
+        @OutputCustomType.Parameter("userIdentity") @Nullable UserIdentityResponse userIdentity,
+        @OutputCustomType.Parameter("waitForSuccess") @Nullable Boolean waitForSuccess) {
         this.commandLine = commandLine;
         this.containerSettings = containerSettings;
         this.environmentSettings = environmentSettings;

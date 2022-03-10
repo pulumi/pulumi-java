@@ -42,14 +42,14 @@ public final class GetCommitmentPlanResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"etag","id","name","properties","systemData","type"})
+    @OutputCustomType.Constructor
     private GetCommitmentPlanResult(
-        String etag,
-        String id,
-        String name,
-        CommitmentPlanPropertiesResponse properties,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") CommitmentPlanPropertiesResponse properties,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.etag = etag;
         this.id = id;
         this.name = name;

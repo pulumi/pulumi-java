@@ -17,8 +17,8 @@ public final class ListSecretValueResult {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"value"})
-    private ListSecretValueResult(@Nullable String value) {
+    @OutputCustomType.Constructor
+    private ListSecretValueResult(@OutputCustomType.Parameter("value") @Nullable String value) {
         this.value = value;
     }
 

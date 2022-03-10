@@ -54,16 +54,16 @@ public final class GetHybridIdentityMetadatumResult {
      */
     private final @Nullable String vmId;
 
-    @OutputCustomType.Constructor({"id","identity","name","provisioningState","publicKey","systemData","type","vmId"})
+    @OutputCustomType.Constructor
     private GetHybridIdentityMetadatumResult(
-        String id,
-        IdentityResponse identity,
-        String name,
-        String provisioningState,
-        @Nullable String publicKey,
-        SystemDataResponse systemData,
-        String type,
-        @Nullable String vmId) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") IdentityResponse identity,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicKey") @Nullable String publicKey,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("vmId") @Nullable String vmId) {
         this.id = id;
         this.identity = identity;
         this.name = name;

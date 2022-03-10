@@ -15,11 +15,11 @@ public final class PerformanceCounterConfigurationResponse {
     private final String name;
     private final String samplingPeriod;
 
-    @OutputCustomType.Constructor({"instance","name","samplingPeriod"})
+    @OutputCustomType.Constructor
     private PerformanceCounterConfigurationResponse(
-        @Nullable String instance,
-        String name,
-        String samplingPeriod) {
+        @OutputCustomType.Parameter("instance") @Nullable String instance,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("samplingPeriod") String samplingPeriod) {
         this.instance = instance;
         this.name = name;
         this.samplingPeriod = samplingPeriod;

@@ -105,25 +105,25 @@ public final class GetServiceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"hostingMode","id","identity","location","name","networkRuleSet","partitionCount","privateEndpointConnections","provisioningState","publicNetworkAccess","replicaCount","sharedPrivateLinkResources","sku","status","statusDetails","tags","type"})
+    @OutputCustomType.Constructor
     private GetServiceResult(
-        @Nullable String hostingMode,
-        String id,
-        @Nullable IdentityResponse identity,
-        String location,
-        String name,
-        @Nullable NetworkRuleSetResponse networkRuleSet,
-        @Nullable Integer partitionCount,
-        List<PrivateEndpointConnectionResponse> privateEndpointConnections,
-        String provisioningState,
-        @Nullable String publicNetworkAccess,
-        @Nullable Integer replicaCount,
-        List<SharedPrivateLinkResourceResponse> sharedPrivateLinkResources,
-        @Nullable SkuResponse sku,
-        String status,
-        String statusDetails,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("hostingMode") @Nullable String hostingMode,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable IdentityResponse identity,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networkRuleSet") @Nullable NetworkRuleSetResponse networkRuleSet,
+        @OutputCustomType.Parameter("partitionCount") @Nullable Integer partitionCount,
+        @OutputCustomType.Parameter("privateEndpointConnections") List<PrivateEndpointConnectionResponse> privateEndpointConnections,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess,
+        @OutputCustomType.Parameter("replicaCount") @Nullable Integer replicaCount,
+        @OutputCustomType.Parameter("sharedPrivateLinkResources") List<SharedPrivateLinkResourceResponse> sharedPrivateLinkResources,
+        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("statusDetails") String statusDetails,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.hostingMode = hostingMode;
         this.id = id;
         this.identity = identity;

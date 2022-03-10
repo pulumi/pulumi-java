@@ -16,8 +16,8 @@ public final class ContentKeyPolicyUnknownRestrictionResponse {
      */
     private final String odataType;
 
-    @OutputCustomType.Constructor({"odataType"})
-    private ContentKeyPolicyUnknownRestrictionResponse(String odataType) {
+    @OutputCustomType.Constructor
+    private ContentKeyPolicyUnknownRestrictionResponse(@OutputCustomType.Parameter("odataType") String odataType) {
         this.odataType = odataType;
     }
 

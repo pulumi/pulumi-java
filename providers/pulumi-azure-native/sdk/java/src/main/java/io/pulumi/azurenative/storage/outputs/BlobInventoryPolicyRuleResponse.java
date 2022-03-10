@@ -27,11 +27,11 @@ public final class BlobInventoryPolicyRuleResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"definition","enabled","name"})
+    @OutputCustomType.Constructor
     private BlobInventoryPolicyRuleResponse(
-        BlobInventoryPolicyDefinitionResponse definition,
-        Boolean enabled,
-        String name) {
+        @OutputCustomType.Parameter("definition") BlobInventoryPolicyDefinitionResponse definition,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("name") String name) {
         this.definition = definition;
         this.enabled = enabled;
         this.name = name;

@@ -72,19 +72,19 @@ public final class ScheduleCreationParameterResponse {
      */
     private final @Nullable WeekDetailsResponse weeklyRecurrence;
 
-    @OutputCustomType.Constructor({"dailyRecurrence","hourlyRecurrence","location","name","notificationSettings","status","tags","targetResourceId","taskType","timeZoneId","weeklyRecurrence"})
+    @OutputCustomType.Constructor
     private ScheduleCreationParameterResponse(
-        @Nullable DayDetailsResponse dailyRecurrence,
-        @Nullable HourDetailsResponse hourlyRecurrence,
-        String location,
-        @Nullable String name,
-        @Nullable NotificationSettingsResponse notificationSettings,
-        @Nullable String status,
-        @Nullable Map<String,String> tags,
-        @Nullable String targetResourceId,
-        @Nullable String taskType,
-        @Nullable String timeZoneId,
-        @Nullable WeekDetailsResponse weeklyRecurrence) {
+        @OutputCustomType.Parameter("dailyRecurrence") @Nullable DayDetailsResponse dailyRecurrence,
+        @OutputCustomType.Parameter("hourlyRecurrence") @Nullable HourDetailsResponse hourlyRecurrence,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("notificationSettings") @Nullable NotificationSettingsResponse notificationSettings,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("targetResourceId") @Nullable String targetResourceId,
+        @OutputCustomType.Parameter("taskType") @Nullable String taskType,
+        @OutputCustomType.Parameter("timeZoneId") @Nullable String timeZoneId,
+        @OutputCustomType.Parameter("weeklyRecurrence") @Nullable WeekDetailsResponse weeklyRecurrence) {
         this.dailyRecurrence = dailyRecurrence;
         this.hourlyRecurrence = hourlyRecurrence;
         this.location = location;

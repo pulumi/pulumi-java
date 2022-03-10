@@ -41,13 +41,13 @@ public final class MultiplePipelineTriggerResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"annotations","description","pipelines","runtimeState","type"})
+    @OutputCustomType.Constructor
     private MultiplePipelineTriggerResponse(
-        @Nullable List<Object> annotations,
-        @Nullable String description,
-        @Nullable List<TriggerPipelineReferenceResponse> pipelines,
-        String runtimeState,
-        String type) {
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("pipelines") @Nullable List<TriggerPipelineReferenceResponse> pipelines,
+        @OutputCustomType.Parameter("runtimeState") String runtimeState,
+        @OutputCustomType.Parameter("type") String type) {
         this.annotations = annotations;
         this.description = description;
         this.pipelines = pipelines;

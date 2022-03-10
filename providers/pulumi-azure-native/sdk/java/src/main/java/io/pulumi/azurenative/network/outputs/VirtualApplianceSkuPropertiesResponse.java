@@ -27,11 +27,11 @@ public final class VirtualApplianceSkuPropertiesResponse {
      */
     private final @Nullable String vendor;
 
-    @OutputCustomType.Constructor({"bundledScaleUnit","marketPlaceVersion","vendor"})
+    @OutputCustomType.Constructor
     private VirtualApplianceSkuPropertiesResponse(
-        @Nullable String bundledScaleUnit,
-        @Nullable String marketPlaceVersion,
-        @Nullable String vendor) {
+        @OutputCustomType.Parameter("bundledScaleUnit") @Nullable String bundledScaleUnit,
+        @OutputCustomType.Parameter("marketPlaceVersion") @Nullable String marketPlaceVersion,
+        @OutputCustomType.Parameter("vendor") @Nullable String vendor) {
         this.bundledScaleUnit = bundledScaleUnit;
         this.marketPlaceVersion = marketPlaceVersion;
         this.vendor = vendor;

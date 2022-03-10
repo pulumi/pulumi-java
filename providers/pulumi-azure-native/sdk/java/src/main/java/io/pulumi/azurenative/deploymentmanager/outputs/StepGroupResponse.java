@@ -38,13 +38,13 @@ public final class StepGroupResponse {
      */
     private final @Nullable List<PrePostStepResponse> preDeploymentSteps;
 
-    @OutputCustomType.Constructor({"dependsOnStepGroups","deploymentTargetId","name","postDeploymentSteps","preDeploymentSteps"})
+    @OutputCustomType.Constructor
     private StepGroupResponse(
-        @Nullable List<String> dependsOnStepGroups,
-        String deploymentTargetId,
-        String name,
-        @Nullable List<PrePostStepResponse> postDeploymentSteps,
-        @Nullable List<PrePostStepResponse> preDeploymentSteps) {
+        @OutputCustomType.Parameter("dependsOnStepGroups") @Nullable List<String> dependsOnStepGroups,
+        @OutputCustomType.Parameter("deploymentTargetId") String deploymentTargetId,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("postDeploymentSteps") @Nullable List<PrePostStepResponse> postDeploymentSteps,
+        @OutputCustomType.Parameter("preDeploymentSteps") @Nullable List<PrePostStepResponse> preDeploymentSteps) {
         this.dependsOnStepGroups = dependsOnStepGroups;
         this.deploymentTargetId = deploymentTargetId;
         this.name = name;

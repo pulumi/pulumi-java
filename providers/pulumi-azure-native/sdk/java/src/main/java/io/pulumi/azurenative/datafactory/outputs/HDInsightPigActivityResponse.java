@@ -85,21 +85,21 @@ public final class HDInsightPigActivityResponse {
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
-    @OutputCustomType.Constructor({"arguments","defines","dependsOn","description","getDebugInfo","linkedServiceName","name","policy","scriptLinkedService","scriptPath","storageLinkedServices","type","userProperties"})
+    @OutputCustomType.Constructor
     private HDInsightPigActivityResponse(
-        @Nullable Object arguments,
-        @Nullable Map<String,Object> defines,
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        @Nullable String getDebugInfo,
-        @Nullable LinkedServiceReferenceResponse linkedServiceName,
-        String name,
-        @Nullable ActivityPolicyResponse policy,
-        @Nullable LinkedServiceReferenceResponse scriptLinkedService,
-        @Nullable Object scriptPath,
-        @Nullable List<LinkedServiceReferenceResponse> storageLinkedServices,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties) {
+        @OutputCustomType.Parameter("arguments") @Nullable Object arguments,
+        @OutputCustomType.Parameter("defines") @Nullable Map<String,Object> defines,
+        @OutputCustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("getDebugInfo") @Nullable String getDebugInfo,
+        @OutputCustomType.Parameter("linkedServiceName") @Nullable LinkedServiceReferenceResponse linkedServiceName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("policy") @Nullable ActivityPolicyResponse policy,
+        @OutputCustomType.Parameter("scriptLinkedService") @Nullable LinkedServiceReferenceResponse scriptLinkedService,
+        @OutputCustomType.Parameter("scriptPath") @Nullable Object scriptPath,
+        @OutputCustomType.Parameter("storageLinkedServices") @Nullable List<LinkedServiceReferenceResponse> storageLinkedServices,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties) {
         this.arguments = arguments;
         this.defines = defines;
         this.dependsOn = dependsOn;

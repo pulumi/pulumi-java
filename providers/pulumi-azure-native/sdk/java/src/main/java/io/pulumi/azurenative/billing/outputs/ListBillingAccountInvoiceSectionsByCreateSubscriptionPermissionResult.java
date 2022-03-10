@@ -23,10 +23,10 @@ public final class ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissi
      */
     private final @Nullable List<InvoiceSectionWithCreateSubPermissionResponse> value;
 
-    @OutputCustomType.Constructor({"nextLink","value"})
+    @OutputCustomType.Constructor
     private ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionResult(
-        String nextLink,
-        @Nullable List<InvoiceSectionWithCreateSubPermissionResponse> value) {
+        @OutputCustomType.Parameter("nextLink") String nextLink,
+        @OutputCustomType.Parameter("value") @Nullable List<InvoiceSectionWithCreateSubPermissionResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }

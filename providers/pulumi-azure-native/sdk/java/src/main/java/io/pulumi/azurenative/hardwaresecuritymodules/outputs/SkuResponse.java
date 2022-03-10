@@ -17,8 +17,8 @@ public final class SkuResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private SkuResponse(@Nullable String name) {
+    @OutputCustomType.Constructor
+    private SkuResponse(@OutputCustomType.Parameter("name") @Nullable String name) {
         this.name = name;
     }
 

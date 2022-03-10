@@ -31,12 +31,12 @@ public final class PackageInformationResponse {
      */
     private final String trackingNumber;
 
-    @OutputCustomType.Constructor({"carrierName","driveCount","shipDate","trackingNumber"})
+    @OutputCustomType.Constructor
     private PackageInformationResponse(
-        String carrierName,
-        Double driveCount,
-        String shipDate,
-        String trackingNumber) {
+        @OutputCustomType.Parameter("carrierName") String carrierName,
+        @OutputCustomType.Parameter("driveCount") Double driveCount,
+        @OutputCustomType.Parameter("shipDate") String shipDate,
+        @OutputCustomType.Parameter("trackingNumber") String trackingNumber) {
         this.carrierName = carrierName;
         this.driveCount = driveCount;
         this.shipDate = shipDate;

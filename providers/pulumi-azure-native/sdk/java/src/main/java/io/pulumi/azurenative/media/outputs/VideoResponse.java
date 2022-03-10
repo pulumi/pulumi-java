@@ -38,13 +38,13 @@ public final class VideoResponse {
      */
     private final @Nullable String syncMode;
 
-    @OutputCustomType.Constructor({"keyFrameInterval","label","odataType","stretchMode","syncMode"})
+    @OutputCustomType.Constructor
     private VideoResponse(
-        @Nullable String keyFrameInterval,
-        @Nullable String label,
-        String odataType,
-        @Nullable String stretchMode,
-        @Nullable String syncMode) {
+        @OutputCustomType.Parameter("keyFrameInterval") @Nullable String keyFrameInterval,
+        @OutputCustomType.Parameter("label") @Nullable String label,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("stretchMode") @Nullable String stretchMode,
+        @OutputCustomType.Parameter("syncMode") @Nullable String syncMode) {
         this.keyFrameInterval = keyFrameInterval;
         this.label = label;
         this.odataType = odataType;

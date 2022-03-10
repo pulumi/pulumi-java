@@ -37,13 +37,13 @@ public final class AKSServiceResponseResponseLivenessProbeRequirements {
      */
     private final @Nullable Integer timeoutSeconds;
 
-    @OutputCustomType.Constructor({"failureThreshold","initialDelaySeconds","periodSeconds","successThreshold","timeoutSeconds"})
+    @OutputCustomType.Constructor
     private AKSServiceResponseResponseLivenessProbeRequirements(
-        @Nullable Integer failureThreshold,
-        @Nullable Integer initialDelaySeconds,
-        @Nullable Integer periodSeconds,
-        @Nullable Integer successThreshold,
-        @Nullable Integer timeoutSeconds) {
+        @OutputCustomType.Parameter("failureThreshold") @Nullable Integer failureThreshold,
+        @OutputCustomType.Parameter("initialDelaySeconds") @Nullable Integer initialDelaySeconds,
+        @OutputCustomType.Parameter("periodSeconds") @Nullable Integer periodSeconds,
+        @OutputCustomType.Parameter("successThreshold") @Nullable Integer successThreshold,
+        @OutputCustomType.Parameter("timeoutSeconds") @Nullable Integer timeoutSeconds) {
         this.failureThreshold = failureThreshold;
         this.initialDelaySeconds = initialDelaySeconds;
         this.periodSeconds = periodSeconds;

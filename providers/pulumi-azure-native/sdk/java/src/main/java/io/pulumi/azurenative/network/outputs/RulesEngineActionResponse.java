@@ -31,11 +31,11 @@ public final class RulesEngineActionResponse {
      */
     private final @Nullable Either<ForwardingConfigurationResponse,RedirectConfigurationResponse> routeConfigurationOverride;
 
-    @OutputCustomType.Constructor({"requestHeaderActions","responseHeaderActions","routeConfigurationOverride"})
+    @OutputCustomType.Constructor
     private RulesEngineActionResponse(
-        @Nullable List<HeaderActionResponse> requestHeaderActions,
-        @Nullable List<HeaderActionResponse> responseHeaderActions,
-        @Nullable Either<ForwardingConfigurationResponse,RedirectConfigurationResponse> routeConfigurationOverride) {
+        @OutputCustomType.Parameter("requestHeaderActions") @Nullable List<HeaderActionResponse> requestHeaderActions,
+        @OutputCustomType.Parameter("responseHeaderActions") @Nullable List<HeaderActionResponse> responseHeaderActions,
+        @OutputCustomType.Parameter("routeConfigurationOverride") @Nullable Either<ForwardingConfigurationResponse,RedirectConfigurationResponse> routeConfigurationOverride) {
         this.requestHeaderActions = requestHeaderActions;
         this.responseHeaderActions = responseHeaderActions;
         this.routeConfigurationOverride = routeConfigurationOverride;

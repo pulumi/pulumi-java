@@ -38,13 +38,13 @@ public final class CostAllocationRulePropertiesResponse {
      */
     private final String updatedDate;
 
-    @OutputCustomType.Constructor({"createdDate","description","details","status","updatedDate"})
+    @OutputCustomType.Constructor
     private CostAllocationRulePropertiesResponse(
-        String createdDate,
-        @Nullable String description,
-        CostAllocationRuleDetailsResponse details,
-        String status,
-        String updatedDate) {
+        @OutputCustomType.Parameter("createdDate") String createdDate,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("details") CostAllocationRuleDetailsResponse details,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("updatedDate") String updatedDate) {
         this.createdDate = createdDate;
         this.description = description;
         this.details = details;

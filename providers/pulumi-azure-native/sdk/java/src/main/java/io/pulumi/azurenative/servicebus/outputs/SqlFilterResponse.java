@@ -29,11 +29,11 @@ public final class SqlFilterResponse {
      */
     private final @Nullable String sqlExpression;
 
-    @OutputCustomType.Constructor({"compatibilityLevel","requiresPreprocessing","sqlExpression"})
+    @OutputCustomType.Constructor
     private SqlFilterResponse(
-        @Nullable Integer compatibilityLevel,
-        @Nullable Boolean requiresPreprocessing,
-        @Nullable String sqlExpression) {
+        @OutputCustomType.Parameter("compatibilityLevel") @Nullable Integer compatibilityLevel,
+        @OutputCustomType.Parameter("requiresPreprocessing") @Nullable Boolean requiresPreprocessing,
+        @OutputCustomType.Parameter("sqlExpression") @Nullable String sqlExpression) {
         this.compatibilityLevel = compatibilityLevel;
         this.requiresPreprocessing = requiresPreprocessing;
         this.sqlExpression = sqlExpression;

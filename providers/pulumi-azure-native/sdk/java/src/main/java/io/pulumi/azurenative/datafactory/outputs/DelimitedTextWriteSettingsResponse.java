@@ -39,13 +39,13 @@ public final class DelimitedTextWriteSettingsResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"fileExtension","fileNamePrefix","maxRowsPerFile","quoteAllText","type"})
+    @OutputCustomType.Constructor
     private DelimitedTextWriteSettingsResponse(
-        Object fileExtension,
-        @Nullable Object fileNamePrefix,
-        @Nullable Object maxRowsPerFile,
-        @Nullable Object quoteAllText,
-        String type) {
+        @OutputCustomType.Parameter("fileExtension") Object fileExtension,
+        @OutputCustomType.Parameter("fileNamePrefix") @Nullable Object fileNamePrefix,
+        @OutputCustomType.Parameter("maxRowsPerFile") @Nullable Object maxRowsPerFile,
+        @OutputCustomType.Parameter("quoteAllText") @Nullable Object quoteAllText,
+        @OutputCustomType.Parameter("type") String type) {
         this.fileExtension = fileExtension;
         this.fileNamePrefix = fileNamePrefix;
         this.maxRowsPerFile = maxRowsPerFile;

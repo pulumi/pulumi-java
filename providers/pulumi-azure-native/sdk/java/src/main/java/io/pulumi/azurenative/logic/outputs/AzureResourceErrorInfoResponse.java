@@ -27,11 +27,11 @@ public final class AzureResourceErrorInfoResponse {
      */
     private final String message;
 
-    @OutputCustomType.Constructor({"code","details","message"})
+    @OutputCustomType.Constructor
     private AzureResourceErrorInfoResponse(
-        String code,
-        @Nullable List<AzureResourceErrorInfoResponse> details,
-        String message) {
+        @OutputCustomType.Parameter("code") String code,
+        @OutputCustomType.Parameter("details") @Nullable List<AzureResourceErrorInfoResponse> details,
+        @OutputCustomType.Parameter("message") String message) {
         this.code = code;
         this.details = details;
         this.message = message;

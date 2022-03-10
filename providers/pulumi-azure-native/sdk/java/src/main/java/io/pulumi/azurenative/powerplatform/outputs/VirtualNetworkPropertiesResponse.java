@@ -23,10 +23,10 @@ public final class VirtualNetworkPropertiesResponse {
      */
     private final @Nullable SubnetPropertiesResponse subnet;
 
-    @OutputCustomType.Constructor({"id","subnet"})
+    @OutputCustomType.Constructor
     private VirtualNetworkPropertiesResponse(
-        @Nullable String id,
-        @Nullable SubnetPropertiesResponse subnet) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("subnet") @Nullable SubnetPropertiesResponse subnet) {
         this.id = id;
         this.subnet = subnet;
     }

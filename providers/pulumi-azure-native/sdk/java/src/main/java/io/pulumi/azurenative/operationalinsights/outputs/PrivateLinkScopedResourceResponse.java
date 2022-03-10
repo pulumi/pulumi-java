@@ -22,10 +22,10 @@ public final class PrivateLinkScopedResourceResponse {
      */
     private final @Nullable String scopeId;
 
-    @OutputCustomType.Constructor({"resourceId","scopeId"})
+    @OutputCustomType.Constructor
     private PrivateLinkScopedResourceResponse(
-        @Nullable String resourceId,
-        @Nullable String scopeId) {
+        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId,
+        @OutputCustomType.Parameter("scopeId") @Nullable String scopeId) {
         this.resourceId = resourceId;
         this.scopeId = scopeId;
     }

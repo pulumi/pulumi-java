@@ -17,8 +17,8 @@ public final class FhirServiceAcrConfigurationResponse {
      */
     private final @Nullable List<String> loginServers;
 
-    @OutputCustomType.Constructor({"loginServers"})
-    private FhirServiceAcrConfigurationResponse(@Nullable List<String> loginServers) {
+    @OutputCustomType.Constructor
+    private FhirServiceAcrConfigurationResponse(@OutputCustomType.Parameter("loginServers") @Nullable List<String> loginServers) {
         this.loginServers = loginServers;
     }
 

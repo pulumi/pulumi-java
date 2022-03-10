@@ -108,25 +108,25 @@ public final class GetLoadBalancerResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"backendAddressPools","etag","extendedLocation","frontendIPConfigurations","id","inboundNatPools","inboundNatRules","loadBalancingRules","location","name","outboundRules","probes","provisioningState","resourceGuid","sku","tags","type"})
+    @OutputCustomType.Constructor
     private GetLoadBalancerResult(
-        @Nullable List<BackendAddressPoolResponse> backendAddressPools,
-        String etag,
-        @Nullable ExtendedLocationResponse extendedLocation,
-        @Nullable List<FrontendIPConfigurationResponse> frontendIPConfigurations,
-        @Nullable String id,
-        @Nullable List<InboundNatPoolResponse> inboundNatPools,
-        @Nullable List<InboundNatRuleResponse> inboundNatRules,
-        @Nullable List<LoadBalancingRuleResponse> loadBalancingRules,
-        @Nullable String location,
-        String name,
-        @Nullable List<OutboundRuleResponse> outboundRules,
-        @Nullable List<ProbeResponse> probes,
-        String provisioningState,
-        String resourceGuid,
-        @Nullable LoadBalancerSkuResponse sku,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("backendAddressPools") @Nullable List<BackendAddressPoolResponse> backendAddressPools,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
+        @OutputCustomType.Parameter("frontendIPConfigurations") @Nullable List<FrontendIPConfigurationResponse> frontendIPConfigurations,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("inboundNatPools") @Nullable List<InboundNatPoolResponse> inboundNatPools,
+        @OutputCustomType.Parameter("inboundNatRules") @Nullable List<InboundNatRuleResponse> inboundNatRules,
+        @OutputCustomType.Parameter("loadBalancingRules") @Nullable List<LoadBalancingRuleResponse> loadBalancingRules,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("outboundRules") @Nullable List<OutboundRuleResponse> outboundRules,
+        @OutputCustomType.Parameter("probes") @Nullable List<ProbeResponse> probes,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("resourceGuid") String resourceGuid,
+        @OutputCustomType.Parameter("sku") @Nullable LoadBalancerSkuResponse sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.backendAddressPools = backendAddressPools;
         this.etag = etag;
         this.extendedLocation = extendedLocation;

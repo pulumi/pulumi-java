@@ -22,10 +22,10 @@ public final class LinkedWorkspacePropsResponse {
      */
     private final @Nullable String userAssignedIdentityResourceId;
 
-    @OutputCustomType.Constructor({"linkedWorkspaceResourceId","userAssignedIdentityResourceId"})
+    @OutputCustomType.Constructor
     private LinkedWorkspacePropsResponse(
-        @Nullable String linkedWorkspaceResourceId,
-        @Nullable String userAssignedIdentityResourceId) {
+        @OutputCustomType.Parameter("linkedWorkspaceResourceId") @Nullable String linkedWorkspaceResourceId,
+        @OutputCustomType.Parameter("userAssignedIdentityResourceId") @Nullable String userAssignedIdentityResourceId) {
         this.linkedWorkspaceResourceId = linkedWorkspaceResourceId;
         this.userAssignedIdentityResourceId = userAssignedIdentityResourceId;
     }

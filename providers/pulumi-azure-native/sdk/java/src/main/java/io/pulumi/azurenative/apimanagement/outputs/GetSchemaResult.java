@@ -42,14 +42,14 @@ public final class GetSchemaResult {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"description","id","name","schemaType","type","value"})
+    @OutputCustomType.Constructor
     private GetSchemaResult(
-        @Nullable String description,
-        String id,
-        String name,
-        String schemaType,
-        String type,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("schemaType") String schemaType,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.description = description;
         this.id = id;
         this.name = name;

@@ -45,15 +45,15 @@ public final class GetSecurityPolicyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"deploymentStatus","id","name","parameters","provisioningState","systemData","type"})
+    @OutputCustomType.Constructor
     private GetSecurityPolicyResult(
-        String deploymentStatus,
-        String id,
-        String name,
-        @Nullable SecurityPolicyWebApplicationFirewallParametersResponse parameters,
-        String provisioningState,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("deploymentStatus") String deploymentStatus,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") @Nullable SecurityPolicyWebApplicationFirewallParametersResponse parameters,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.deploymentStatus = deploymentStatus;
         this.id = id;
         this.name = name;

@@ -41,13 +41,13 @@ public final class ExtensionDataSourceResponse {
      */
     private final @Nullable List<String> streams;
 
-    @OutputCustomType.Constructor({"extensionName","extensionSettings","inputDataSources","name","streams"})
+    @OutputCustomType.Constructor
     private ExtensionDataSourceResponse(
-        String extensionName,
-        @Nullable Object extensionSettings,
-        @Nullable List<String> inputDataSources,
-        @Nullable String name,
-        @Nullable List<String> streams) {
+        @OutputCustomType.Parameter("extensionName") String extensionName,
+        @OutputCustomType.Parameter("extensionSettings") @Nullable Object extensionSettings,
+        @OutputCustomType.Parameter("inputDataSources") @Nullable List<String> inputDataSources,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("streams") @Nullable List<String> streams) {
         this.extensionName = extensionName;
         this.extensionSettings = extensionSettings;
         this.inputDataSources = inputDataSources;

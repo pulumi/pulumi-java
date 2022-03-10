@@ -22,10 +22,10 @@ public final class DiagnosticsConfigurationResponse {
      */
     private final String level;
 
-    @OutputCustomType.Constructor({"expiry","level"})
+    @OutputCustomType.Constructor
     private DiagnosticsConfigurationResponse(
-        @Nullable String expiry,
-        String level) {
+        @OutputCustomType.Parameter("expiry") @Nullable String expiry,
+        @OutputCustomType.Parameter("level") String level) {
         this.expiry = expiry;
         this.level = level;
     }

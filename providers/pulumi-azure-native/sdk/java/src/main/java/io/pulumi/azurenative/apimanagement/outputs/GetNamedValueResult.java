@@ -55,16 +55,16 @@ public final class GetNamedValueResult {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"displayName","id","keyVault","name","secret","tags","type","value"})
+    @OutputCustomType.Constructor
     private GetNamedValueResult(
-        String displayName,
-        String id,
-        @Nullable KeyVaultContractPropertiesResponse keyVault,
-        String name,
-        @Nullable Boolean secret,
-        @Nullable List<String> tags,
-        String type,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("keyVault") @Nullable KeyVaultContractPropertiesResponse keyVault,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("secret") @Nullable Boolean secret,
+        @OutputCustomType.Parameter("tags") @Nullable List<String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.displayName = displayName;
         this.id = id;
         this.keyVault = keyVault;

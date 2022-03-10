@@ -15,11 +15,11 @@ public final class SparkMavenPackageResponse {
     private final @Nullable String group;
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"artifact","group","version"})
+    @OutputCustomType.Constructor
     private SparkMavenPackageResponse(
-        @Nullable String artifact,
-        @Nullable String group,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("artifact") @Nullable String artifact,
+        @OutputCustomType.Parameter("group") @Nullable String group,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.artifact = artifact;
         this.group = group;
         this.version = version;

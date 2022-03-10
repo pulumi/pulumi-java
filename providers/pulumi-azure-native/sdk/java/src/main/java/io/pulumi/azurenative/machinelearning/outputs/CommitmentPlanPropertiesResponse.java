@@ -64,18 +64,18 @@ public final class CommitmentPlanPropertiesResponse {
      */
     private final Boolean suspendPlanOnOverage;
 
-    @OutputCustomType.Constructor({"chargeForOverage","chargeForPlan","creationDate","includedQuantities","maxAssociationLimit","maxCapacityLimit","minCapacityLimit","planMeter","refillFrequencyInDays","suspendPlanOnOverage"})
+    @OutputCustomType.Constructor
     private CommitmentPlanPropertiesResponse(
-        Boolean chargeForOverage,
-        Boolean chargeForPlan,
-        String creationDate,
-        Map<String,PlanQuantityResponse> includedQuantities,
-        Integer maxAssociationLimit,
-        Integer maxCapacityLimit,
-        Integer minCapacityLimit,
-        String planMeter,
-        Integer refillFrequencyInDays,
-        Boolean suspendPlanOnOverage) {
+        @OutputCustomType.Parameter("chargeForOverage") Boolean chargeForOverage,
+        @OutputCustomType.Parameter("chargeForPlan") Boolean chargeForPlan,
+        @OutputCustomType.Parameter("creationDate") String creationDate,
+        @OutputCustomType.Parameter("includedQuantities") Map<String,PlanQuantityResponse> includedQuantities,
+        @OutputCustomType.Parameter("maxAssociationLimit") Integer maxAssociationLimit,
+        @OutputCustomType.Parameter("maxCapacityLimit") Integer maxCapacityLimit,
+        @OutputCustomType.Parameter("minCapacityLimit") Integer minCapacityLimit,
+        @OutputCustomType.Parameter("planMeter") String planMeter,
+        @OutputCustomType.Parameter("refillFrequencyInDays") Integer refillFrequencyInDays,
+        @OutputCustomType.Parameter("suspendPlanOnOverage") Boolean suspendPlanOnOverage) {
         this.chargeForOverage = chargeForOverage;
         this.chargeForPlan = chargeForPlan;
         this.creationDate = creationDate;

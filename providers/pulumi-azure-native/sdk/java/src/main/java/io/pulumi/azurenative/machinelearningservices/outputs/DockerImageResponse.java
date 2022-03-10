@@ -30,11 +30,11 @@ public final class DockerImageResponse {
      */
     private final @Nullable DockerImagePlatformResponse platform;
 
-    @OutputCustomType.Constructor({"dockerImageUri","dockerSpecificationType","platform"})
+    @OutputCustomType.Constructor
     private DockerImageResponse(
-        String dockerImageUri,
-        String dockerSpecificationType,
-        @Nullable DockerImagePlatformResponse platform) {
+        @OutputCustomType.Parameter("dockerImageUri") String dockerImageUri,
+        @OutputCustomType.Parameter("dockerSpecificationType") String dockerSpecificationType,
+        @OutputCustomType.Parameter("platform") @Nullable DockerImagePlatformResponse platform) {
         this.dockerImageUri = dockerImageUri;
         this.dockerSpecificationType = dockerSpecificationType;
         this.platform = platform;

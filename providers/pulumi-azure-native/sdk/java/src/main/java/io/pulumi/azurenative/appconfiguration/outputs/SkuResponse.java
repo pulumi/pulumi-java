@@ -15,8 +15,8 @@ public final class SkuResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private SkuResponse(String name) {
+    @OutputCustomType.Constructor
+    private SkuResponse(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

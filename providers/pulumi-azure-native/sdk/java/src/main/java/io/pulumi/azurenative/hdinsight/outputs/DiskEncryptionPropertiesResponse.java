@@ -43,14 +43,14 @@ public final class DiskEncryptionPropertiesResponse {
      */
     private final @Nullable String vaultUri;
 
-    @OutputCustomType.Constructor({"encryptionAlgorithm","encryptionAtHost","keyName","keyVersion","msiResourceId","vaultUri"})
+    @OutputCustomType.Constructor
     private DiskEncryptionPropertiesResponse(
-        @Nullable String encryptionAlgorithm,
-        @Nullable Boolean encryptionAtHost,
-        @Nullable String keyName,
-        @Nullable String keyVersion,
-        @Nullable String msiResourceId,
-        @Nullable String vaultUri) {
+        @OutputCustomType.Parameter("encryptionAlgorithm") @Nullable String encryptionAlgorithm,
+        @OutputCustomType.Parameter("encryptionAtHost") @Nullable Boolean encryptionAtHost,
+        @OutputCustomType.Parameter("keyName") @Nullable String keyName,
+        @OutputCustomType.Parameter("keyVersion") @Nullable String keyVersion,
+        @OutputCustomType.Parameter("msiResourceId") @Nullable String msiResourceId,
+        @OutputCustomType.Parameter("vaultUri") @Nullable String vaultUri) {
         this.encryptionAlgorithm = encryptionAlgorithm;
         this.encryptionAtHost = encryptionAtHost;
         this.keyName = keyName;

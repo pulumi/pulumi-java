@@ -33,12 +33,12 @@ public final class ManagedIdentityResponse {
      */
     private final @Nullable String resourceId;
 
-    @OutputCustomType.Constructor({"clientId","identityType","objectId","resourceId"})
+    @OutputCustomType.Constructor
     private ManagedIdentityResponse(
-        @Nullable String clientId,
-        String identityType,
-        @Nullable String objectId,
-        @Nullable String resourceId) {
+        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
+        @OutputCustomType.Parameter("identityType") String identityType,
+        @OutputCustomType.Parameter("objectId") @Nullable String objectId,
+        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId) {
         this.clientId = clientId;
         this.identityType = identityType;
         this.objectId = objectId;

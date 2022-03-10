@@ -23,10 +23,10 @@ public final class GetInsightsResultsMetadataResponse {
      */
     private final Integer totalCount;
 
-    @OutputCustomType.Constructor({"errors","totalCount"})
+    @OutputCustomType.Constructor
     private GetInsightsResultsMetadataResponse(
-        @Nullable List<GetInsightsErrorResponse> errors,
-        Integer totalCount) {
+        @OutputCustomType.Parameter("errors") @Nullable List<GetInsightsErrorResponse> errors,
+        @OutputCustomType.Parameter("totalCount") Integer totalCount) {
         this.errors = errors;
         this.totalCount = totalCount;
     }

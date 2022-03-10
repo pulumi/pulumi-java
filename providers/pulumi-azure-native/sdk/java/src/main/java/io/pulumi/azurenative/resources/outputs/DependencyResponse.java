@@ -34,12 +34,12 @@ public final class DependencyResponse {
      */
     private final @Nullable String resourceType;
 
-    @OutputCustomType.Constructor({"dependsOn","id","resourceName","resourceType"})
+    @OutputCustomType.Constructor
     private DependencyResponse(
-        @Nullable List<BasicDependencyResponse> dependsOn,
-        @Nullable String id,
-        @Nullable String resourceName,
-        @Nullable String resourceType) {
+        @OutputCustomType.Parameter("dependsOn") @Nullable List<BasicDependencyResponse> dependsOn,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("resourceName") @Nullable String resourceName,
+        @OutputCustomType.Parameter("resourceType") @Nullable String resourceType) {
         this.dependsOn = dependsOn;
         this.id = id;
         this.resourceName = resourceName;

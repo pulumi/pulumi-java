@@ -24,10 +24,10 @@ public final class ListBuildStepBuildArgumentsResult {
      */
     private final @Nullable List<BuildArgumentResponse> value;
 
-    @OutputCustomType.Constructor({"nextLink","value"})
+    @OutputCustomType.Constructor
     private ListBuildStepBuildArgumentsResult(
-        @Nullable String nextLink,
-        @Nullable List<BuildArgumentResponse> value) {
+        @OutputCustomType.Parameter("nextLink") @Nullable String nextLink,
+        @OutputCustomType.Parameter("value") @Nullable List<BuildArgumentResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }

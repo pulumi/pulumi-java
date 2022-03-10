@@ -17,13 +17,13 @@ public final class ListWorkspaceKeysResult {
     private final String userStorageKey;
     private final String userStorageResourceId;
 
-    @OutputCustomType.Constructor({"appInsightsInstrumentationKey","containerRegistryCredentials","notebookAccessKeys","userStorageKey","userStorageResourceId"})
+    @OutputCustomType.Constructor
     private ListWorkspaceKeysResult(
-        String appInsightsInstrumentationKey,
-        RegistryListCredentialsResultResponse containerRegistryCredentials,
-        ListNotebookKeysResultResponse notebookAccessKeys,
-        String userStorageKey,
-        String userStorageResourceId) {
+        @OutputCustomType.Parameter("appInsightsInstrumentationKey") String appInsightsInstrumentationKey,
+        @OutputCustomType.Parameter("containerRegistryCredentials") RegistryListCredentialsResultResponse containerRegistryCredentials,
+        @OutputCustomType.Parameter("notebookAccessKeys") ListNotebookKeysResultResponse notebookAccessKeys,
+        @OutputCustomType.Parameter("userStorageKey") String userStorageKey,
+        @OutputCustomType.Parameter("userStorageResourceId") String userStorageResourceId) {
         this.appInsightsInstrumentationKey = appInsightsInstrumentationKey;
         this.containerRegistryCredentials = containerRegistryCredentials;
         this.notebookAccessKeys = notebookAccessKeys;

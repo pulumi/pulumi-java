@@ -27,11 +27,11 @@ public final class ComputeVmInstanceViewStatusResponse {
      */
     private final @Nullable String message;
 
-    @OutputCustomType.Constructor({"code","displayStatus","message"})
+    @OutputCustomType.Constructor
     private ComputeVmInstanceViewStatusResponse(
-        @Nullable String code,
-        @Nullable String displayStatus,
-        @Nullable String message) {
+        @OutputCustomType.Parameter("code") @Nullable String code,
+        @OutputCustomType.Parameter("displayStatus") @Nullable String displayStatus,
+        @OutputCustomType.Parameter("message") @Nullable String message) {
         this.code = code;
         this.displayStatus = displayStatus;
         this.message = message;

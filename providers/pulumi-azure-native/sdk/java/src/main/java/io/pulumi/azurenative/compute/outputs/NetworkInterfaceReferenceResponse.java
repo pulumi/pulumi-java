@@ -28,11 +28,11 @@ public final class NetworkInterfaceReferenceResponse {
      */
     private final @Nullable Boolean primary;
 
-    @OutputCustomType.Constructor({"deleteOption","id","primary"})
+    @OutputCustomType.Constructor
     private NetworkInterfaceReferenceResponse(
-        @Nullable String deleteOption,
-        @Nullable String id,
-        @Nullable Boolean primary) {
+        @OutputCustomType.Parameter("deleteOption") @Nullable String deleteOption,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("primary") @Nullable Boolean primary) {
         this.deleteOption = deleteOption;
         this.id = id;
         this.primary = primary;

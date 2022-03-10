@@ -39,13 +39,13 @@ public final class SuppressionScheduleResponse {
      */
     private final @Nullable String startTime;
 
-    @OutputCustomType.Constructor({"endDate","endTime","recurrenceValues","startDate","startTime"})
+    @OutputCustomType.Constructor
     private SuppressionScheduleResponse(
-        @Nullable String endDate,
-        @Nullable String endTime,
-        @Nullable List<Integer> recurrenceValues,
-        @Nullable String startDate,
-        @Nullable String startTime) {
+        @OutputCustomType.Parameter("endDate") @Nullable String endDate,
+        @OutputCustomType.Parameter("endTime") @Nullable String endTime,
+        @OutputCustomType.Parameter("recurrenceValues") @Nullable List<Integer> recurrenceValues,
+        @OutputCustomType.Parameter("startDate") @Nullable String startDate,
+        @OutputCustomType.Parameter("startTime") @Nullable String startTime) {
         this.endDate = endDate;
         this.endTime = endTime;
         this.recurrenceValues = recurrenceValues;

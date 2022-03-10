@@ -17,8 +17,8 @@ public final class ManagedClusterLoadBalancerProfileResponseManagedOutboundIPs {
      */
     private final @Nullable Integer count;
 
-    @OutputCustomType.Constructor({"count"})
-    private ManagedClusterLoadBalancerProfileResponseManagedOutboundIPs(@Nullable Integer count) {
+    @OutputCustomType.Constructor
+    private ManagedClusterLoadBalancerProfileResponseManagedOutboundIPs(@OutputCustomType.Parameter("count") @Nullable Integer count) {
         this.count = count;
     }
 

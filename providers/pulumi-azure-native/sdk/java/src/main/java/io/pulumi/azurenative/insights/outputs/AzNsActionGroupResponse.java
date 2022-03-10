@@ -28,11 +28,11 @@ public final class AzNsActionGroupResponse {
      */
     private final @Nullable String emailSubject;
 
-    @OutputCustomType.Constructor({"actionGroup","customWebhookPayload","emailSubject"})
+    @OutputCustomType.Constructor
     private AzNsActionGroupResponse(
-        @Nullable List<String> actionGroup,
-        @Nullable String customWebhookPayload,
-        @Nullable String emailSubject) {
+        @OutputCustomType.Parameter("actionGroup") @Nullable List<String> actionGroup,
+        @OutputCustomType.Parameter("customWebhookPayload") @Nullable String customWebhookPayload,
+        @OutputCustomType.Parameter("emailSubject") @Nullable String emailSubject) {
         this.actionGroup = actionGroup;
         this.customWebhookPayload = customWebhookPayload;
         this.emailSubject = emailSubject;

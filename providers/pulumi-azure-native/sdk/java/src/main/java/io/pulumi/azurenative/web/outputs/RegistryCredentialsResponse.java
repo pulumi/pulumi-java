@@ -27,11 +27,11 @@ public final class RegistryCredentialsResponse {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor({"passwordSecretRef","server","username"})
+    @OutputCustomType.Constructor
     private RegistryCredentialsResponse(
-        @Nullable String passwordSecretRef,
-        @Nullable String server,
-        @Nullable String username) {
+        @OutputCustomType.Parameter("passwordSecretRef") @Nullable String passwordSecretRef,
+        @OutputCustomType.Parameter("server") @Nullable String server,
+        @OutputCustomType.Parameter("username") @Nullable String username) {
         this.passwordSecretRef = passwordSecretRef;
         this.server = server;
         this.username = username;

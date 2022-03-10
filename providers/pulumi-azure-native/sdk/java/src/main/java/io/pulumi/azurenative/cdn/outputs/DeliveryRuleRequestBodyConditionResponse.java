@@ -22,10 +22,10 @@ public final class DeliveryRuleRequestBodyConditionResponse {
      */
     private final RequestBodyMatchConditionParametersResponse parameters;
 
-    @OutputCustomType.Constructor({"name","parameters"})
+    @OutputCustomType.Constructor
     private DeliveryRuleRequestBodyConditionResponse(
-        String name,
-        RequestBodyMatchConditionParametersResponse parameters) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") RequestBodyMatchConditionParametersResponse parameters) {
         this.name = name;
         this.parameters = parameters;
     }

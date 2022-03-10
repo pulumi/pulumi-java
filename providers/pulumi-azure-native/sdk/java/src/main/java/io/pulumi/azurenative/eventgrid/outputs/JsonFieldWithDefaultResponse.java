@@ -22,10 +22,10 @@ public final class JsonFieldWithDefaultResponse {
      */
     private final @Nullable String sourceField;
 
-    @OutputCustomType.Constructor({"defaultValue","sourceField"})
+    @OutputCustomType.Constructor
     private JsonFieldWithDefaultResponse(
-        @Nullable String defaultValue,
-        @Nullable String sourceField) {
+        @OutputCustomType.Parameter("defaultValue") @Nullable String defaultValue,
+        @OutputCustomType.Parameter("sourceField") @Nullable String sourceField) {
         this.defaultValue = defaultValue;
         this.sourceField = sourceField;
     }

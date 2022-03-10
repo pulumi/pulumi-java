@@ -20,10 +20,10 @@ public final class ResourceGuardOperationResponse {
      */
     private final String vaultCriticalOperation;
 
-    @OutputCustomType.Constructor({"requestResourceType","vaultCriticalOperation"})
+    @OutputCustomType.Constructor
     private ResourceGuardOperationResponse(
-        String requestResourceType,
-        String vaultCriticalOperation) {
+        @OutputCustomType.Parameter("requestResourceType") String requestResourceType,
+        @OutputCustomType.Parameter("vaultCriticalOperation") String vaultCriticalOperation) {
         this.requestResourceType = requestResourceType;
         this.vaultCriticalOperation = vaultCriticalOperation;
     }

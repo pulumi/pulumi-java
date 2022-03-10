@@ -36,12 +36,12 @@ public final class NetworkInterfaceResourceSettingsResponse {
      */
     private final String targetResourceName;
 
-    @OutputCustomType.Constructor({"enableAcceleratedNetworking","ipConfigurations","resourceType","targetResourceName"})
+    @OutputCustomType.Constructor
     private NetworkInterfaceResourceSettingsResponse(
-        @Nullable Boolean enableAcceleratedNetworking,
-        @Nullable List<NicIpConfigurationResourceSettingsResponse> ipConfigurations,
-        String resourceType,
-        String targetResourceName) {
+        @OutputCustomType.Parameter("enableAcceleratedNetworking") @Nullable Boolean enableAcceleratedNetworking,
+        @OutputCustomType.Parameter("ipConfigurations") @Nullable List<NicIpConfigurationResourceSettingsResponse> ipConfigurations,
+        @OutputCustomType.Parameter("resourceType") String resourceType,
+        @OutputCustomType.Parameter("targetResourceName") String targetResourceName) {
         this.enableAcceleratedNetworking = enableAcceleratedNetworking;
         this.ipConfigurations = ipConfigurations;
         this.resourceType = resourceType;

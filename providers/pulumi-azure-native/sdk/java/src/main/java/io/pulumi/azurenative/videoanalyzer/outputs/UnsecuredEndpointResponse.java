@@ -35,12 +35,12 @@ public final class UnsecuredEndpointResponse {
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"credentials","tunnel","type","url"})
+    @OutputCustomType.Constructor
     private UnsecuredEndpointResponse(
-        UsernamePasswordCredentialsResponse credentials,
-        @Nullable SecureIotDeviceRemoteTunnelResponse tunnel,
-        String type,
-        String url) {
+        @OutputCustomType.Parameter("credentials") UsernamePasswordCredentialsResponse credentials,
+        @OutputCustomType.Parameter("tunnel") @Nullable SecureIotDeviceRemoteTunnelResponse tunnel,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("url") String url) {
         this.credentials = credentials;
         this.tunnel = tunnel;
         this.type = type;

@@ -43,14 +43,14 @@ public final class SqlDatabaseGetPropertiesResponseResource {
      */
     private final @Nullable String users;
 
-    @OutputCustomType.Constructor({"colls","etag","id","rid","ts","users"})
+    @OutputCustomType.Constructor
     private SqlDatabaseGetPropertiesResponseResource(
-        @Nullable String colls,
-        String etag,
-        String id,
-        String rid,
-        Double ts,
-        @Nullable String users) {
+        @OutputCustomType.Parameter("colls") @Nullable String colls,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("rid") String rid,
+        @OutputCustomType.Parameter("ts") Double ts,
+        @OutputCustomType.Parameter("users") @Nullable String users) {
         this.colls = colls;
         this.etag = etag;
         this.id = id;

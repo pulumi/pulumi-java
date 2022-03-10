@@ -23,10 +23,10 @@ public final class JavaScriptFunctionBindingResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"script","type"})
+    @OutputCustomType.Constructor
     private JavaScriptFunctionBindingResponse(
-        @Nullable String script,
-        String type) {
+        @OutputCustomType.Parameter("script") @Nullable String script,
+        @OutputCustomType.Parameter("type") String type) {
         this.script = script;
         this.type = type;
     }

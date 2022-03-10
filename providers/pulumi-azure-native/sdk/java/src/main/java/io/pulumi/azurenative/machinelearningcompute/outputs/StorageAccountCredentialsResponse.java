@@ -25,11 +25,11 @@ public final class StorageAccountCredentialsResponse {
      */
     private final String secondaryKey;
 
-    @OutputCustomType.Constructor({"primaryKey","resourceId","secondaryKey"})
+    @OutputCustomType.Constructor
     private StorageAccountCredentialsResponse(
-        String primaryKey,
-        String resourceId,
-        String secondaryKey) {
+        @OutputCustomType.Parameter("primaryKey") String primaryKey,
+        @OutputCustomType.Parameter("resourceId") String resourceId,
+        @OutputCustomType.Parameter("secondaryKey") String secondaryKey) {
         this.primaryKey = primaryKey;
         this.resourceId = resourceId;
         this.secondaryKey = secondaryKey;

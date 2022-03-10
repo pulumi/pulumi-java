@@ -35,13 +35,13 @@ public final class MonitorPropertiesResponse {
      */
     private final @Nullable String provisioningState;
 
-    @OutputCustomType.Constructor({"elasticProperties","liftrResourceCategory","liftrResourcePreference","monitoringStatus","provisioningState"})
+    @OutputCustomType.Constructor
     private MonitorPropertiesResponse(
-        @Nullable ElasticPropertiesResponse elasticProperties,
-        String liftrResourceCategory,
-        Integer liftrResourcePreference,
-        @Nullable String monitoringStatus,
-        @Nullable String provisioningState) {
+        @OutputCustomType.Parameter("elasticProperties") @Nullable ElasticPropertiesResponse elasticProperties,
+        @OutputCustomType.Parameter("liftrResourceCategory") String liftrResourceCategory,
+        @OutputCustomType.Parameter("liftrResourcePreference") Integer liftrResourcePreference,
+        @OutputCustomType.Parameter("monitoringStatus") @Nullable String monitoringStatus,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState) {
         this.elasticProperties = elasticProperties;
         this.liftrResourceCategory = liftrResourceCategory;
         this.liftrResourcePreference = liftrResourcePreference;

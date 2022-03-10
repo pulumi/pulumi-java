@@ -15,8 +15,8 @@ public final class SasTokenInformationResponse {
      */
     private final String accessToken;
 
-    @OutputCustomType.Constructor({"accessToken"})
-    private SasTokenInformationResponse(String accessToken) {
+    @OutputCustomType.Constructor
+    private SasTokenInformationResponse(@OutputCustomType.Parameter("accessToken") String accessToken) {
         this.accessToken = accessToken;
     }
 

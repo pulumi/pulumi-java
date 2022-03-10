@@ -33,12 +33,12 @@ public final class StrongIdResponse {
      */
     private final String strongIdName;
 
-    @OutputCustomType.Constructor({"description","displayName","keyPropertyNames","strongIdName"})
+    @OutputCustomType.Constructor
     private StrongIdResponse(
-        @Nullable Map<String,String> description,
-        @Nullable Map<String,String> displayName,
-        List<String> keyPropertyNames,
-        String strongIdName) {
+        @OutputCustomType.Parameter("description") @Nullable Map<String,String> description,
+        @OutputCustomType.Parameter("displayName") @Nullable Map<String,String> displayName,
+        @OutputCustomType.Parameter("keyPropertyNames") List<String> keyPropertyNames,
+        @OutputCustomType.Parameter("strongIdName") String strongIdName) {
         this.description = description;
         this.displayName = displayName;
         this.keyPropertyNames = keyPropertyNames;

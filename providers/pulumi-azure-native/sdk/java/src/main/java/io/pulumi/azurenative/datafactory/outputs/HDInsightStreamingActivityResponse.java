@@ -115,27 +115,27 @@ public final class HDInsightStreamingActivityResponse {
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
-    @OutputCustomType.Constructor({"arguments","combiner","commandEnvironment","defines","dependsOn","description","fileLinkedService","filePaths","getDebugInfo","input","linkedServiceName","mapper","name","output","policy","reducer","storageLinkedServices","type","userProperties"})
+    @OutputCustomType.Constructor
     private HDInsightStreamingActivityResponse(
-        @Nullable List<Object> arguments,
-        @Nullable Object combiner,
-        @Nullable List<Object> commandEnvironment,
-        @Nullable Map<String,Object> defines,
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        @Nullable LinkedServiceReferenceResponse fileLinkedService,
-        List<Object> filePaths,
-        @Nullable String getDebugInfo,
-        Object input,
-        @Nullable LinkedServiceReferenceResponse linkedServiceName,
-        Object mapper,
-        String name,
-        Object output,
-        @Nullable ActivityPolicyResponse policy,
-        Object reducer,
-        @Nullable List<LinkedServiceReferenceResponse> storageLinkedServices,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties) {
+        @OutputCustomType.Parameter("arguments") @Nullable List<Object> arguments,
+        @OutputCustomType.Parameter("combiner") @Nullable Object combiner,
+        @OutputCustomType.Parameter("commandEnvironment") @Nullable List<Object> commandEnvironment,
+        @OutputCustomType.Parameter("defines") @Nullable Map<String,Object> defines,
+        @OutputCustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("fileLinkedService") @Nullable LinkedServiceReferenceResponse fileLinkedService,
+        @OutputCustomType.Parameter("filePaths") List<Object> filePaths,
+        @OutputCustomType.Parameter("getDebugInfo") @Nullable String getDebugInfo,
+        @OutputCustomType.Parameter("input") Object input,
+        @OutputCustomType.Parameter("linkedServiceName") @Nullable LinkedServiceReferenceResponse linkedServiceName,
+        @OutputCustomType.Parameter("mapper") Object mapper,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("output") Object output,
+        @OutputCustomType.Parameter("policy") @Nullable ActivityPolicyResponse policy,
+        @OutputCustomType.Parameter("reducer") Object reducer,
+        @OutputCustomType.Parameter("storageLinkedServices") @Nullable List<LinkedServiceReferenceResponse> storageLinkedServices,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties) {
         this.arguments = arguments;
         this.combiner = combiner;
         this.commandEnvironment = commandEnvironment;

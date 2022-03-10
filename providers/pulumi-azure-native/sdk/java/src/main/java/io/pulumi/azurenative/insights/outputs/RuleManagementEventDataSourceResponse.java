@@ -84,22 +84,22 @@ public final class RuleManagementEventDataSourceResponse {
      */
     private final @Nullable String subStatus;
 
-    @OutputCustomType.Constructor({"claims","eventName","eventSource","legacyResourceId","level","metricNamespace","odataType","operationName","resourceGroupName","resourceLocation","resourceProviderName","resourceUri","status","subStatus"})
+    @OutputCustomType.Constructor
     private RuleManagementEventDataSourceResponse(
-        @Nullable RuleManagementEventClaimsDataSourceResponse claims,
-        @Nullable String eventName,
-        @Nullable String eventSource,
-        @Nullable String legacyResourceId,
-        @Nullable String level,
-        @Nullable String metricNamespace,
-        String odataType,
-        @Nullable String operationName,
-        @Nullable String resourceGroupName,
-        @Nullable String resourceLocation,
-        @Nullable String resourceProviderName,
-        @Nullable String resourceUri,
-        @Nullable String status,
-        @Nullable String subStatus) {
+        @OutputCustomType.Parameter("claims") @Nullable RuleManagementEventClaimsDataSourceResponse claims,
+        @OutputCustomType.Parameter("eventName") @Nullable String eventName,
+        @OutputCustomType.Parameter("eventSource") @Nullable String eventSource,
+        @OutputCustomType.Parameter("legacyResourceId") @Nullable String legacyResourceId,
+        @OutputCustomType.Parameter("level") @Nullable String level,
+        @OutputCustomType.Parameter("metricNamespace") @Nullable String metricNamespace,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("operationName") @Nullable String operationName,
+        @OutputCustomType.Parameter("resourceGroupName") @Nullable String resourceGroupName,
+        @OutputCustomType.Parameter("resourceLocation") @Nullable String resourceLocation,
+        @OutputCustomType.Parameter("resourceProviderName") @Nullable String resourceProviderName,
+        @OutputCustomType.Parameter("resourceUri") @Nullable String resourceUri,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("subStatus") @Nullable String subStatus) {
         this.claims = claims;
         this.eventName = eventName;
         this.eventSource = eventSource;

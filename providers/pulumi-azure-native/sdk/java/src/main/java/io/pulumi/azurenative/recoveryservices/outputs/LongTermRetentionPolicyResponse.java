@@ -42,13 +42,13 @@ public final class LongTermRetentionPolicyResponse {
      */
     private final @Nullable YearlyRetentionScheduleResponse yearlySchedule;
 
-    @OutputCustomType.Constructor({"dailySchedule","monthlySchedule","retentionPolicyType","weeklySchedule","yearlySchedule"})
+    @OutputCustomType.Constructor
     private LongTermRetentionPolicyResponse(
-        @Nullable DailyRetentionScheduleResponse dailySchedule,
-        @Nullable MonthlyRetentionScheduleResponse monthlySchedule,
-        String retentionPolicyType,
-        @Nullable WeeklyRetentionScheduleResponse weeklySchedule,
-        @Nullable YearlyRetentionScheduleResponse yearlySchedule) {
+        @OutputCustomType.Parameter("dailySchedule") @Nullable DailyRetentionScheduleResponse dailySchedule,
+        @OutputCustomType.Parameter("monthlySchedule") @Nullable MonthlyRetentionScheduleResponse monthlySchedule,
+        @OutputCustomType.Parameter("retentionPolicyType") String retentionPolicyType,
+        @OutputCustomType.Parameter("weeklySchedule") @Nullable WeeklyRetentionScheduleResponse weeklySchedule,
+        @OutputCustomType.Parameter("yearlySchedule") @Nullable YearlyRetentionScheduleResponse yearlySchedule) {
         this.dailySchedule = dailySchedule;
         this.monthlySchedule = monthlySchedule;
         this.retentionPolicyType = retentionPolicyType;

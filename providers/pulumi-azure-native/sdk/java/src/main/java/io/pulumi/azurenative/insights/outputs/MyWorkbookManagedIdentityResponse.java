@@ -23,10 +23,10 @@ public final class MyWorkbookManagedIdentityResponse {
      */
     private final @Nullable MyWorkbookUserAssignedIdentitiesResponse userAssignedIdentities;
 
-    @OutputCustomType.Constructor({"type","userAssignedIdentities"})
+    @OutputCustomType.Constructor
     private MyWorkbookManagedIdentityResponse(
-        @Nullable String type,
-        @Nullable MyWorkbookUserAssignedIdentitiesResponse userAssignedIdentities) {
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("userAssignedIdentities") @Nullable MyWorkbookUserAssignedIdentitiesResponse userAssignedIdentities) {
         this.type = type;
         this.userAssignedIdentities = userAssignedIdentities;
     }

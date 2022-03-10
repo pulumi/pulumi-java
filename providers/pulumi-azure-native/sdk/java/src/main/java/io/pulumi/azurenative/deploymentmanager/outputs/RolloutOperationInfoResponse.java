@@ -38,13 +38,13 @@ public final class RolloutOperationInfoResponse {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor({"endTime","error","retryAttempt","skipSucceededOnRetry","startTime"})
+    @OutputCustomType.Constructor
     private RolloutOperationInfoResponse(
-        String endTime,
-        CloudErrorBodyResponse error,
-        Integer retryAttempt,
-        Boolean skipSucceededOnRetry,
-        String startTime) {
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("error") CloudErrorBodyResponse error,
+        @OutputCustomType.Parameter("retryAttempt") Integer retryAttempt,
+        @OutputCustomType.Parameter("skipSucceededOnRetry") Boolean skipSucceededOnRetry,
+        @OutputCustomType.Parameter("startTime") String startTime) {
         this.endTime = endTime;
         this.error = error;
         this.retryAttempt = retryAttempt;

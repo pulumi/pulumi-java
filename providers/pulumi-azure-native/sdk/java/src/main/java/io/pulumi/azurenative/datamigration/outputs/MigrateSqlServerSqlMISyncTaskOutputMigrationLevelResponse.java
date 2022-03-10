@@ -77,21 +77,21 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse {
      */
     private final String targetServerVersion;
 
-    @OutputCustomType.Constructor({"databaseCount","databaseErrorCount","endedOn","id","resultType","sourceServerBrandVersion","sourceServerName","sourceServerVersion","startedOn","state","targetServerBrandVersion","targetServerName","targetServerVersion"})
+    @OutputCustomType.Constructor
     private MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse(
-        Integer databaseCount,
-        Integer databaseErrorCount,
-        String endedOn,
-        String id,
-        String resultType,
-        String sourceServerBrandVersion,
-        String sourceServerName,
-        String sourceServerVersion,
-        String startedOn,
-        String state,
-        String targetServerBrandVersion,
-        String targetServerName,
-        String targetServerVersion) {
+        @OutputCustomType.Parameter("databaseCount") Integer databaseCount,
+        @OutputCustomType.Parameter("databaseErrorCount") Integer databaseErrorCount,
+        @OutputCustomType.Parameter("endedOn") String endedOn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("resultType") String resultType,
+        @OutputCustomType.Parameter("sourceServerBrandVersion") String sourceServerBrandVersion,
+        @OutputCustomType.Parameter("sourceServerName") String sourceServerName,
+        @OutputCustomType.Parameter("sourceServerVersion") String sourceServerVersion,
+        @OutputCustomType.Parameter("startedOn") String startedOn,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("targetServerBrandVersion") String targetServerBrandVersion,
+        @OutputCustomType.Parameter("targetServerName") String targetServerName,
+        @OutputCustomType.Parameter("targetServerVersion") String targetServerVersion) {
         this.databaseCount = databaseCount;
         this.databaseErrorCount = databaseErrorCount;
         this.endedOn = endedOn;

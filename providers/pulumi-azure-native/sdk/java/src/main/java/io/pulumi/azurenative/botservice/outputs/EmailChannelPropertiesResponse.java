@@ -28,11 +28,11 @@ public final class EmailChannelPropertiesResponse {
      */
     private final @Nullable String password;
 
-    @OutputCustomType.Constructor({"emailAddress","isEnabled","password"})
+    @OutputCustomType.Constructor
     private EmailChannelPropertiesResponse(
-        String emailAddress,
-        Boolean isEnabled,
-        @Nullable String password) {
+        @OutputCustomType.Parameter("emailAddress") String emailAddress,
+        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
+        @OutputCustomType.Parameter("password") @Nullable String password) {
         this.emailAddress = emailAddress;
         this.isEnabled = isEnabled;
         this.password = password;

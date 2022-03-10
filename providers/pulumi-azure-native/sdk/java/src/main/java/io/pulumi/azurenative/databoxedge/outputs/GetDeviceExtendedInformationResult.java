@@ -73,20 +73,20 @@ public final class GetDeviceExtendedInformationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"channelIntegrityKeyName","channelIntegrityKeyVersion","clientSecretStoreId","clientSecretStoreUrl","deviceSecrets","encryptionKey","encryptionKeyThumbprint","id","keyVaultSyncStatus","name","resourceKey","type"})
+    @OutputCustomType.Constructor
     private GetDeviceExtendedInformationResult(
-        @Nullable String channelIntegrityKeyName,
-        @Nullable String channelIntegrityKeyVersion,
-        @Nullable String clientSecretStoreId,
-        @Nullable String clientSecretStoreUrl,
-        DeviceSecretsResponse deviceSecrets,
-        @Nullable String encryptionKey,
-        @Nullable String encryptionKeyThumbprint,
-        String id,
-        @Nullable String keyVaultSyncStatus,
-        String name,
-        String resourceKey,
-        String type) {
+        @OutputCustomType.Parameter("channelIntegrityKeyName") @Nullable String channelIntegrityKeyName,
+        @OutputCustomType.Parameter("channelIntegrityKeyVersion") @Nullable String channelIntegrityKeyVersion,
+        @OutputCustomType.Parameter("clientSecretStoreId") @Nullable String clientSecretStoreId,
+        @OutputCustomType.Parameter("clientSecretStoreUrl") @Nullable String clientSecretStoreUrl,
+        @OutputCustomType.Parameter("deviceSecrets") DeviceSecretsResponse deviceSecrets,
+        @OutputCustomType.Parameter("encryptionKey") @Nullable String encryptionKey,
+        @OutputCustomType.Parameter("encryptionKeyThumbprint") @Nullable String encryptionKeyThumbprint,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("keyVaultSyncStatus") @Nullable String keyVaultSyncStatus,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("resourceKey") String resourceKey,
+        @OutputCustomType.Parameter("type") String type) {
         this.channelIntegrityKeyName = channelIntegrityKeyName;
         this.channelIntegrityKeyVersion = channelIntegrityKeyVersion;
         this.clientSecretStoreId = clientSecretStoreId;

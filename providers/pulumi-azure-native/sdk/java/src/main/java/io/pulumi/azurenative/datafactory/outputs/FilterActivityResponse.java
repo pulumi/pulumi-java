@@ -52,15 +52,15 @@ public final class FilterActivityResponse {
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
-    @OutputCustomType.Constructor({"condition","dependsOn","description","items","name","type","userProperties"})
+    @OutputCustomType.Constructor
     private FilterActivityResponse(
-        ExpressionResponse condition,
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        ExpressionResponse items,
-        String name,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties) {
+        @OutputCustomType.Parameter("condition") ExpressionResponse condition,
+        @OutputCustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("items") ExpressionResponse items,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties) {
         this.condition = condition;
         this.dependsOn = dependsOn;
         this.description = description;

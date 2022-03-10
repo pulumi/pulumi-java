@@ -28,11 +28,11 @@ public final class KeyVaultContractPropertiesResponse {
      */
     private final @Nullable String secretIdentifier;
 
-    @OutputCustomType.Constructor({"identityClientId","lastStatus","secretIdentifier"})
+    @OutputCustomType.Constructor
     private KeyVaultContractPropertiesResponse(
-        @Nullable String identityClientId,
-        @Nullable KeyVaultLastAccessStatusContractPropertiesResponse lastStatus,
-        @Nullable String secretIdentifier) {
+        @OutputCustomType.Parameter("identityClientId") @Nullable String identityClientId,
+        @OutputCustomType.Parameter("lastStatus") @Nullable KeyVaultLastAccessStatusContractPropertiesResponse lastStatus,
+        @OutputCustomType.Parameter("secretIdentifier") @Nullable String secretIdentifier) {
         this.identityClientId = identityClientId;
         this.lastStatus = lastStatus;
         this.secretIdentifier = secretIdentifier;

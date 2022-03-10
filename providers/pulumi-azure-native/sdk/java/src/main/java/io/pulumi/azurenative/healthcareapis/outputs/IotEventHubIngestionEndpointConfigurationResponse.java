@@ -27,11 +27,11 @@ public final class IotEventHubIngestionEndpointConfigurationResponse {
      */
     private final @Nullable String fullyQualifiedEventHubNamespace;
 
-    @OutputCustomType.Constructor({"consumerGroup","eventHubName","fullyQualifiedEventHubNamespace"})
+    @OutputCustomType.Constructor
     private IotEventHubIngestionEndpointConfigurationResponse(
-        @Nullable String consumerGroup,
-        @Nullable String eventHubName,
-        @Nullable String fullyQualifiedEventHubNamespace) {
+        @OutputCustomType.Parameter("consumerGroup") @Nullable String consumerGroup,
+        @OutputCustomType.Parameter("eventHubName") @Nullable String eventHubName,
+        @OutputCustomType.Parameter("fullyQualifiedEventHubNamespace") @Nullable String fullyQualifiedEventHubNamespace) {
         this.consumerGroup = consumerGroup;
         this.eventHubName = eventHubName;
         this.fullyQualifiedEventHubNamespace = fullyQualifiedEventHubNamespace;

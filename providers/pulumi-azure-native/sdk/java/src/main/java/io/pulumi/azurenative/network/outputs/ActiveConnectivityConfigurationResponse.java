@@ -76,20 +76,20 @@ public final class ActiveConnectivityConfigurationResponse {
      */
     private final @Nullable String region;
 
-    @OutputCustomType.Constructor({"appliesToGroups","commitTime","configurationGroups","connectivityTopology","deleteExistingPeering","description","displayName","hubs","id","isGlobal","provisioningState","region"})
+    @OutputCustomType.Constructor
     private ActiveConnectivityConfigurationResponse(
-        @Nullable List<ConnectivityGroupItemResponse> appliesToGroups,
-        @Nullable String commitTime,
-        @Nullable List<ConfigurationGroupResponse> configurationGroups,
-        String connectivityTopology,
-        @Nullable String deleteExistingPeering,
-        @Nullable String description,
-        @Nullable String displayName,
-        @Nullable List<HubResponse> hubs,
-        @Nullable String id,
-        @Nullable String isGlobal,
-        String provisioningState,
-        @Nullable String region) {
+        @OutputCustomType.Parameter("appliesToGroups") @Nullable List<ConnectivityGroupItemResponse> appliesToGroups,
+        @OutputCustomType.Parameter("commitTime") @Nullable String commitTime,
+        @OutputCustomType.Parameter("configurationGroups") @Nullable List<ConfigurationGroupResponse> configurationGroups,
+        @OutputCustomType.Parameter("connectivityTopology") String connectivityTopology,
+        @OutputCustomType.Parameter("deleteExistingPeering") @Nullable String deleteExistingPeering,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("hubs") @Nullable List<HubResponse> hubs,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("isGlobal") @Nullable String isGlobal,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("region") @Nullable String region) {
         this.appliesToGroups = appliesToGroups;
         this.commitTime = commitTime;
         this.configurationGroups = configurationGroups;

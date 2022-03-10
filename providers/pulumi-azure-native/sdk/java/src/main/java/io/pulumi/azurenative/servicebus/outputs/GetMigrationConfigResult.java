@@ -51,16 +51,16 @@ public final class GetMigrationConfigResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","migrationState","name","pendingReplicationOperationsCount","postMigrationName","provisioningState","targetNamespace","type"})
+    @OutputCustomType.Constructor
     private GetMigrationConfigResult(
-        String id,
-        String migrationState,
-        String name,
-        Double pendingReplicationOperationsCount,
-        String postMigrationName,
-        String provisioningState,
-        String targetNamespace,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("migrationState") String migrationState,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("pendingReplicationOperationsCount") Double pendingReplicationOperationsCount,
+        @OutputCustomType.Parameter("postMigrationName") String postMigrationName,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("targetNamespace") String targetNamespace,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.migrationState = migrationState;
         this.name = name;

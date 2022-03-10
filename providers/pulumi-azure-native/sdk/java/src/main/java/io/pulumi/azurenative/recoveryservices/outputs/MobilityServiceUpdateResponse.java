@@ -27,11 +27,11 @@ public final class MobilityServiceUpdateResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"osType","rebootStatus","version"})
+    @OutputCustomType.Constructor
     private MobilityServiceUpdateResponse(
-        @Nullable String osType,
-        @Nullable String rebootStatus,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("osType") @Nullable String osType,
+        @OutputCustomType.Parameter("rebootStatus") @Nullable String rebootStatus,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.osType = osType;
         this.rebootStatus = rebootStatus;
         this.version = version;

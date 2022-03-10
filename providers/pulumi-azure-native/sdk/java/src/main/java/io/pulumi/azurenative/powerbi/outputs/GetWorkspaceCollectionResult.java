@@ -42,15 +42,15 @@ public final class GetWorkspaceCollectionResult {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"id","location","name","properties","sku","tags","type"})
+    @OutputCustomType.Constructor
     private GetWorkspaceCollectionResult(
-        @Nullable String id,
-        @Nullable String location,
-        @Nullable String name,
-        Object properties,
-        @Nullable AzureSkuResponse sku,
-        @Nullable Map<String,String> tags,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("properties") Object properties,
+        @OutputCustomType.Parameter("sku") @Nullable AzureSkuResponse sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.id = id;
         this.location = location;
         this.name = name;

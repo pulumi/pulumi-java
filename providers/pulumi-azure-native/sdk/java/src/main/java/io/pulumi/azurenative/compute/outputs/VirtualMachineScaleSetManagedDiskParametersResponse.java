@@ -23,10 +23,10 @@ public final class VirtualMachineScaleSetManagedDiskParametersResponse {
      */
     private final @Nullable String storageAccountType;
 
-    @OutputCustomType.Constructor({"diskEncryptionSet","storageAccountType"})
+    @OutputCustomType.Constructor
     private VirtualMachineScaleSetManagedDiskParametersResponse(
-        @Nullable DiskEncryptionSetParametersResponse diskEncryptionSet,
-        @Nullable String storageAccountType) {
+        @OutputCustomType.Parameter("diskEncryptionSet") @Nullable DiskEncryptionSetParametersResponse diskEncryptionSet,
+        @OutputCustomType.Parameter("storageAccountType") @Nullable String storageAccountType) {
         this.diskEncryptionSet = diskEncryptionSet;
         this.storageAccountType = storageAccountType;
     }

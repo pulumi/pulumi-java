@@ -22,10 +22,10 @@ public final class SecurityContactPropertiesResponseAlertNotifications {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor({"minimalSeverity","state"})
+    @OutputCustomType.Constructor
     private SecurityContactPropertiesResponseAlertNotifications(
-        @Nullable String minimalSeverity,
-        @Nullable String state) {
+        @OutputCustomType.Parameter("minimalSeverity") @Nullable String minimalSeverity,
+        @OutputCustomType.Parameter("state") @Nullable String state) {
         this.minimalSeverity = minimalSeverity;
         this.state = state;
     }

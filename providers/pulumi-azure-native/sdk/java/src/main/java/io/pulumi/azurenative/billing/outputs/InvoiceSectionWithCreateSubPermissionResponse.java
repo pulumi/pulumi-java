@@ -63,18 +63,18 @@ public final class InvoiceSectionWithCreateSubPermissionResponse {
      */
     private final String invoiceSectionSystemId;
 
-    @OutputCustomType.Constructor({"billingProfileDisplayName","billingProfileId","billingProfileSpendingLimit","billingProfileStatus","billingProfileStatusReasonCode","billingProfileSystemId","enabledAzurePlans","invoiceSectionDisplayName","invoiceSectionId","invoiceSectionSystemId"})
+    @OutputCustomType.Constructor
     private InvoiceSectionWithCreateSubPermissionResponse(
-        String billingProfileDisplayName,
-        String billingProfileId,
-        String billingProfileSpendingLimit,
-        String billingProfileStatus,
-        String billingProfileStatusReasonCode,
-        String billingProfileSystemId,
-        @Nullable List<AzurePlanResponse> enabledAzurePlans,
-        String invoiceSectionDisplayName,
-        String invoiceSectionId,
-        String invoiceSectionSystemId) {
+        @OutputCustomType.Parameter("billingProfileDisplayName") String billingProfileDisplayName,
+        @OutputCustomType.Parameter("billingProfileId") String billingProfileId,
+        @OutputCustomType.Parameter("billingProfileSpendingLimit") String billingProfileSpendingLimit,
+        @OutputCustomType.Parameter("billingProfileStatus") String billingProfileStatus,
+        @OutputCustomType.Parameter("billingProfileStatusReasonCode") String billingProfileStatusReasonCode,
+        @OutputCustomType.Parameter("billingProfileSystemId") String billingProfileSystemId,
+        @OutputCustomType.Parameter("enabledAzurePlans") @Nullable List<AzurePlanResponse> enabledAzurePlans,
+        @OutputCustomType.Parameter("invoiceSectionDisplayName") String invoiceSectionDisplayName,
+        @OutputCustomType.Parameter("invoiceSectionId") String invoiceSectionId,
+        @OutputCustomType.Parameter("invoiceSectionSystemId") String invoiceSectionSystemId) {
         this.billingProfileDisplayName = billingProfileDisplayName;
         this.billingProfileId = billingProfileId;
         this.billingProfileSpendingLimit = billingProfileSpendingLimit;

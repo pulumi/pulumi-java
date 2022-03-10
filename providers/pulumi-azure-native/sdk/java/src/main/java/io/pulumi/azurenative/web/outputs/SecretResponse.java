@@ -17,8 +17,8 @@ public final class SecretResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private SecretResponse(@Nullable String name) {
+    @OutputCustomType.Constructor
+    private SecretResponse(@OutputCustomType.Parameter("name") @Nullable String name) {
         this.name = name;
     }
 

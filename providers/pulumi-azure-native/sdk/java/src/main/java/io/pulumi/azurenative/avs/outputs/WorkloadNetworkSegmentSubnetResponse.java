@@ -23,10 +23,10 @@ public final class WorkloadNetworkSegmentSubnetResponse {
      */
     private final @Nullable String gatewayAddress;
 
-    @OutputCustomType.Constructor({"dhcpRanges","gatewayAddress"})
+    @OutputCustomType.Constructor
     private WorkloadNetworkSegmentSubnetResponse(
-        @Nullable List<String> dhcpRanges,
-        @Nullable String gatewayAddress) {
+        @OutputCustomType.Parameter("dhcpRanges") @Nullable List<String> dhcpRanges,
+        @OutputCustomType.Parameter("gatewayAddress") @Nullable String gatewayAddress) {
         this.dhcpRanges = dhcpRanges;
         this.gatewayAddress = gatewayAddress;
     }

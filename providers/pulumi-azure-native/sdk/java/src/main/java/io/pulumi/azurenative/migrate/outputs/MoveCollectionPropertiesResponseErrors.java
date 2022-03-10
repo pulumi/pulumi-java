@@ -17,8 +17,8 @@ public final class MoveCollectionPropertiesResponseErrors {
      */
     private final @Nullable MoveResourceErrorBodyResponse properties;
 
-    @OutputCustomType.Constructor({"properties"})
-    private MoveCollectionPropertiesResponseErrors(@Nullable MoveResourceErrorBodyResponse properties) {
+    @OutputCustomType.Constructor
+    private MoveCollectionPropertiesResponseErrors(@OutputCustomType.Parameter("properties") @Nullable MoveResourceErrorBodyResponse properties) {
         this.properties = properties;
     }
 

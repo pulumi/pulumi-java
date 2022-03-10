@@ -42,14 +42,14 @@ public final class AwsCredsAuthenticationDetailsPropertiesResponse {
      */
     private final List<String> grantedPermissions;
 
-    @OutputCustomType.Constructor({"accountId","authenticationProvisioningState","authenticationType","awsAccessKeyId","awsSecretAccessKey","grantedPermissions"})
+    @OutputCustomType.Constructor
     private AwsCredsAuthenticationDetailsPropertiesResponse(
-        String accountId,
-        String authenticationProvisioningState,
-        String authenticationType,
-        String awsAccessKeyId,
-        String awsSecretAccessKey,
-        List<String> grantedPermissions) {
+        @OutputCustomType.Parameter("accountId") String accountId,
+        @OutputCustomType.Parameter("authenticationProvisioningState") String authenticationProvisioningState,
+        @OutputCustomType.Parameter("authenticationType") String authenticationType,
+        @OutputCustomType.Parameter("awsAccessKeyId") String awsAccessKeyId,
+        @OutputCustomType.Parameter("awsSecretAccessKey") String awsSecretAccessKey,
+        @OutputCustomType.Parameter("grantedPermissions") List<String> grantedPermissions) {
         this.accountId = accountId;
         this.authenticationProvisioningState = authenticationProvisioningState;
         this.authenticationType = authenticationType;

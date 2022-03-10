@@ -32,12 +32,12 @@ public final class InMageAgentDetailsResponse {
      */
     private final @Nullable String postUpdateRebootStatus;
 
-    @OutputCustomType.Constructor({"agentExpiryDate","agentUpdateStatus","agentVersion","postUpdateRebootStatus"})
+    @OutputCustomType.Constructor
     private InMageAgentDetailsResponse(
-        @Nullable String agentExpiryDate,
-        @Nullable String agentUpdateStatus,
-        @Nullable String agentVersion,
-        @Nullable String postUpdateRebootStatus) {
+        @OutputCustomType.Parameter("agentExpiryDate") @Nullable String agentExpiryDate,
+        @OutputCustomType.Parameter("agentUpdateStatus") @Nullable String agentUpdateStatus,
+        @OutputCustomType.Parameter("agentVersion") @Nullable String agentVersion,
+        @OutputCustomType.Parameter("postUpdateRebootStatus") @Nullable String postUpdateRebootStatus) {
         this.agentExpiryDate = agentExpiryDate;
         this.agentUpdateStatus = agentUpdateStatus;
         this.agentVersion = agentVersion;

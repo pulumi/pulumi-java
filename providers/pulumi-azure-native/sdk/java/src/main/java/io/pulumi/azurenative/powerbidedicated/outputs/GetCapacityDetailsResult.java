@@ -81,21 +81,21 @@ public final class GetCapacityDetailsResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"administration","friendlyName","id","location","mode","name","provisioningState","sku","state","systemData","tags","tenantId","type"})
+    @OutputCustomType.Constructor
     private GetCapacityDetailsResult(
-        @Nullable DedicatedCapacityAdministratorsResponse administration,
-        String friendlyName,
-        String id,
-        String location,
-        @Nullable String mode,
-        String name,
-        String provisioningState,
-        CapacitySkuResponse sku,
-        String state,
-        @Nullable SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String tenantId,
-        String type) {
+        @OutputCustomType.Parameter("administration") @Nullable DedicatedCapacityAdministratorsResponse administration,
+        @OutputCustomType.Parameter("friendlyName") String friendlyName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("mode") @Nullable String mode,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("sku") CapacitySkuResponse sku,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("systemData") @Nullable SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("tenantId") String tenantId,
+        @OutputCustomType.Parameter("type") String type) {
         this.administration = administration;
         this.friendlyName = friendlyName;
         this.id = id;

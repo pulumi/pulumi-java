@@ -43,14 +43,14 @@ public final class SecretResourcePropertiesResponse {
      */
     private final String statusDetails;
 
-    @OutputCustomType.Constructor({"contentType","description","kind","provisioningState","status","statusDetails"})
+    @OutputCustomType.Constructor
     private SecretResourcePropertiesResponse(
-        @Nullable String contentType,
-        @Nullable String description,
-        String kind,
-        String provisioningState,
-        String status,
-        String statusDetails) {
+        @OutputCustomType.Parameter("contentType") @Nullable String contentType,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("statusDetails") String statusDetails) {
         this.contentType = contentType;
         this.description = description;
         this.kind = kind;

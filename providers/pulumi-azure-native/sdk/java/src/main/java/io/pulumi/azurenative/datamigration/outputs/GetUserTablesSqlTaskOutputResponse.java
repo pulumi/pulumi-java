@@ -29,11 +29,11 @@ public final class GetUserTablesSqlTaskOutputResponse {
      */
     private final List<ReportableExceptionResponse> validationErrors;
 
-    @OutputCustomType.Constructor({"databasesToTables","id","validationErrors"})
+    @OutputCustomType.Constructor
     private GetUserTablesSqlTaskOutputResponse(
-        Map<String,List<DatabaseTableResponse>> databasesToTables,
-        String id,
-        List<ReportableExceptionResponse> validationErrors) {
+        @OutputCustomType.Parameter("databasesToTables") Map<String,List<DatabaseTableResponse>> databasesToTables,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("validationErrors") List<ReportableExceptionResponse> validationErrors) {
         this.databasesToTables = databasesToTables;
         this.id = id;
         this.validationErrors = validationErrors;

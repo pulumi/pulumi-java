@@ -23,10 +23,10 @@ public final class BootstrapConfigurationResponse {
      */
     private final PipelineTemplateResponse template;
 
-    @OutputCustomType.Constructor({"sourceRepository","template"})
+    @OutputCustomType.Constructor
     private BootstrapConfigurationResponse(
-        @Nullable CodeRepositoryResponse sourceRepository,
-        PipelineTemplateResponse template) {
+        @OutputCustomType.Parameter("sourceRepository") @Nullable CodeRepositoryResponse sourceRepository,
+        @OutputCustomType.Parameter("template") PipelineTemplateResponse template) {
         this.sourceRepository = sourceRepository;
         this.template = template;
     }

@@ -65,18 +65,18 @@ public final class BackupSetInfoResponse {
      */
     private final @Nullable List<BackupFileInfoResponse> listOfBackupFiles;
 
-    @OutputCustomType.Constructor({"backupFinishedDate","backupSetId","backupStartDate","backupType","databaseName","firstLsn","isBackupRestored","lastLsn","lastModifiedTime","listOfBackupFiles"})
+    @OutputCustomType.Constructor
     private BackupSetInfoResponse(
-        @Nullable String backupFinishedDate,
-        @Nullable String backupSetId,
-        @Nullable String backupStartDate,
-        @Nullable String backupType,
-        @Nullable String databaseName,
-        @Nullable String firstLsn,
-        @Nullable Boolean isBackupRestored,
-        @Nullable String lastLsn,
-        @Nullable String lastModifiedTime,
-        @Nullable List<BackupFileInfoResponse> listOfBackupFiles) {
+        @OutputCustomType.Parameter("backupFinishedDate") @Nullable String backupFinishedDate,
+        @OutputCustomType.Parameter("backupSetId") @Nullable String backupSetId,
+        @OutputCustomType.Parameter("backupStartDate") @Nullable String backupStartDate,
+        @OutputCustomType.Parameter("backupType") @Nullable String backupType,
+        @OutputCustomType.Parameter("databaseName") @Nullable String databaseName,
+        @OutputCustomType.Parameter("firstLsn") @Nullable String firstLsn,
+        @OutputCustomType.Parameter("isBackupRestored") @Nullable Boolean isBackupRestored,
+        @OutputCustomType.Parameter("lastLsn") @Nullable String lastLsn,
+        @OutputCustomType.Parameter("lastModifiedTime") @Nullable String lastModifiedTime,
+        @OutputCustomType.Parameter("listOfBackupFiles") @Nullable List<BackupFileInfoResponse> listOfBackupFiles) {
         this.backupFinishedDate = backupFinishedDate;
         this.backupSetId = backupSetId;
         this.backupStartDate = backupStartDate;

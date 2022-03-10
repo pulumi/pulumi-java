@@ -32,12 +32,12 @@ public final class VmRecommendationResponse {
      */
     private final @Nullable String resourceId;
 
-    @OutputCustomType.Constructor({"configurationStatus","enforcementSupport","recommendationAction","resourceId"})
+    @OutputCustomType.Constructor
     private VmRecommendationResponse(
-        @Nullable String configurationStatus,
-        @Nullable String enforcementSupport,
-        @Nullable String recommendationAction,
-        @Nullable String resourceId) {
+        @OutputCustomType.Parameter("configurationStatus") @Nullable String configurationStatus,
+        @OutputCustomType.Parameter("enforcementSupport") @Nullable String enforcementSupport,
+        @OutputCustomType.Parameter("recommendationAction") @Nullable String recommendationAction,
+        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId) {
         this.configurationStatus = configurationStatus;
         this.enforcementSupport = enforcementSupport;
         this.recommendationAction = recommendationAction;

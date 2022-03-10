@@ -24,10 +24,10 @@ public final class MetricRulesResponse {
      */
     private final @Nullable String subscriptionId;
 
-    @OutputCustomType.Constructor({"filteringTags","subscriptionId"})
+    @OutputCustomType.Constructor
     private MetricRulesResponse(
-        @Nullable List<FilteringTagResponse> filteringTags,
-        @Nullable String subscriptionId) {
+        @OutputCustomType.Parameter("filteringTags") @Nullable List<FilteringTagResponse> filteringTags,
+        @OutputCustomType.Parameter("subscriptionId") @Nullable String subscriptionId) {
         this.filteringTags = filteringTags;
         this.subscriptionId = subscriptionId;
     }

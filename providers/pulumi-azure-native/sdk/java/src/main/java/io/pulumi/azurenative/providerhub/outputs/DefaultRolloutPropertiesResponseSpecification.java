@@ -28,16 +28,16 @@ public final class DefaultRolloutPropertiesResponseSpecification {
     private final @Nullable DefaultRolloutSpecificationResponseRestOfTheWorldGroupOne restOfTheWorldGroupOne;
     private final @Nullable DefaultRolloutSpecificationResponseRestOfTheWorldGroupTwo restOfTheWorldGroupTwo;
 
-    @OutputCustomType.Constructor({"canary","highTraffic","lowTraffic","mediumTraffic","providerRegistration","resourceTypeRegistrations","restOfTheWorldGroupOne","restOfTheWorldGroupTwo"})
+    @OutputCustomType.Constructor
     private DefaultRolloutPropertiesResponseSpecification(
-        @Nullable DefaultRolloutSpecificationResponseCanary canary,
-        @Nullable DefaultRolloutSpecificationResponseHighTraffic highTraffic,
-        @Nullable DefaultRolloutSpecificationResponseLowTraffic lowTraffic,
-        @Nullable DefaultRolloutSpecificationResponseMediumTraffic mediumTraffic,
-        @Nullable DefaultRolloutSpecificationResponseProviderRegistration providerRegistration,
-        @Nullable List<ResourceTypeRegistrationResponse> resourceTypeRegistrations,
-        @Nullable DefaultRolloutSpecificationResponseRestOfTheWorldGroupOne restOfTheWorldGroupOne,
-        @Nullable DefaultRolloutSpecificationResponseRestOfTheWorldGroupTwo restOfTheWorldGroupTwo) {
+        @OutputCustomType.Parameter("canary") @Nullable DefaultRolloutSpecificationResponseCanary canary,
+        @OutputCustomType.Parameter("highTraffic") @Nullable DefaultRolloutSpecificationResponseHighTraffic highTraffic,
+        @OutputCustomType.Parameter("lowTraffic") @Nullable DefaultRolloutSpecificationResponseLowTraffic lowTraffic,
+        @OutputCustomType.Parameter("mediumTraffic") @Nullable DefaultRolloutSpecificationResponseMediumTraffic mediumTraffic,
+        @OutputCustomType.Parameter("providerRegistration") @Nullable DefaultRolloutSpecificationResponseProviderRegistration providerRegistration,
+        @OutputCustomType.Parameter("resourceTypeRegistrations") @Nullable List<ResourceTypeRegistrationResponse> resourceTypeRegistrations,
+        @OutputCustomType.Parameter("restOfTheWorldGroupOne") @Nullable DefaultRolloutSpecificationResponseRestOfTheWorldGroupOne restOfTheWorldGroupOne,
+        @OutputCustomType.Parameter("restOfTheWorldGroupTwo") @Nullable DefaultRolloutSpecificationResponseRestOfTheWorldGroupTwo restOfTheWorldGroupTwo) {
         this.canary = canary;
         this.highTraffic = highTraffic;
         this.lowTraffic = lowTraffic;

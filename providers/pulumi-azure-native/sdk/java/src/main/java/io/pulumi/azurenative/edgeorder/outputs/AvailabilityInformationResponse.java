@@ -25,11 +25,11 @@ public final class AvailabilityInformationResponse {
      */
     private final String disabledReasonMessage;
 
-    @OutputCustomType.Constructor({"availabilityStage","disabledReason","disabledReasonMessage"})
+    @OutputCustomType.Constructor
     private AvailabilityInformationResponse(
-        String availabilityStage,
-        String disabledReason,
-        String disabledReasonMessage) {
+        @OutputCustomType.Parameter("availabilityStage") String availabilityStage,
+        @OutputCustomType.Parameter("disabledReason") String disabledReason,
+        @OutputCustomType.Parameter("disabledReasonMessage") String disabledReasonMessage) {
         this.availabilityStage = availabilityStage;
         this.disabledReason = disabledReason;
         this.disabledReasonMessage = disabledReasonMessage;

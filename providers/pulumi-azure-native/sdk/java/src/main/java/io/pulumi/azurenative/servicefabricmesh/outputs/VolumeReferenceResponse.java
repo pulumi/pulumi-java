@@ -28,11 +28,11 @@ public final class VolumeReferenceResponse {
      */
     private final @Nullable Boolean readOnly;
 
-    @OutputCustomType.Constructor({"destinationPath","name","readOnly"})
+    @OutputCustomType.Constructor
     private VolumeReferenceResponse(
-        String destinationPath,
-        String name,
-        @Nullable Boolean readOnly) {
+        @OutputCustomType.Parameter("destinationPath") String destinationPath,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly) {
         this.destinationPath = destinationPath;
         this.name = name;
         this.readOnly = readOnly;

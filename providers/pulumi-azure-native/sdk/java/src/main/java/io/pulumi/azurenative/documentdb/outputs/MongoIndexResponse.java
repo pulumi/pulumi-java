@@ -23,10 +23,10 @@ public final class MongoIndexResponse {
      */
     private final @Nullable MongoIndexOptionsResponse options;
 
-    @OutputCustomType.Constructor({"key","options"})
+    @OutputCustomType.Constructor
     private MongoIndexResponse(
-        @Nullable MongoIndexKeysResponse key,
-        @Nullable MongoIndexOptionsResponse options) {
+        @OutputCustomType.Parameter("key") @Nullable MongoIndexKeysResponse key,
+        @OutputCustomType.Parameter("options") @Nullable MongoIndexOptionsResponse options) {
         this.key = key;
         this.options = options;
     }

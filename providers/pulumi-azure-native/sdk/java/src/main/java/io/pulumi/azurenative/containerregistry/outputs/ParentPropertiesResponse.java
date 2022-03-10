@@ -23,10 +23,10 @@ public final class ParentPropertiesResponse {
      */
     private final SyncPropertiesResponse syncProperties;
 
-    @OutputCustomType.Constructor({"id","syncProperties"})
+    @OutputCustomType.Constructor
     private ParentPropertiesResponse(
-        @Nullable String id,
-        SyncPropertiesResponse syncProperties) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("syncProperties") SyncPropertiesResponse syncProperties) {
         this.id = id;
         this.syncProperties = syncProperties;
     }

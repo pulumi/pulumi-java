@@ -55,16 +55,16 @@ public final class GetBotResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","location","name","properties","sku","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetBotResult(
-        String id,
-        String location,
-        String name,
-        HealthBotPropertiesResponse properties,
-        SkuResponse sku,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") HealthBotPropertiesResponse properties,
+        @OutputCustomType.Parameter("sku") SkuResponse sku,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.location = location;
         this.name = name;

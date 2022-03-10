@@ -32,12 +32,12 @@ public final class TargetCostAllocationResourceResponse {
      */
     private final List<CostAllocationProportionResponse> values;
 
-    @OutputCustomType.Constructor({"name","policyType","resourceType","values"})
+    @OutputCustomType.Constructor
     private TargetCostAllocationResourceResponse(
-        String name,
-        String policyType,
-        String resourceType,
-        List<CostAllocationProportionResponse> values) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("policyType") String policyType,
+        @OutputCustomType.Parameter("resourceType") String resourceType,
+        @OutputCustomType.Parameter("values") List<CostAllocationProportionResponse> values) {
         this.name = name;
         this.policyType = policyType;
         this.resourceType = resourceType;

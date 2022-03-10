@@ -21,10 +21,10 @@ public final class ContentKeyPolicyWidevineConfigurationResponse {
      */
     private final String widevineTemplate;
 
-    @OutputCustomType.Constructor({"odataType","widevineTemplate"})
+    @OutputCustomType.Constructor
     private ContentKeyPolicyWidevineConfigurationResponse(
-        String odataType,
-        String widevineTemplate) {
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("widevineTemplate") String widevineTemplate) {
         this.odataType = odataType;
         this.widevineTemplate = widevineTemplate;
     }

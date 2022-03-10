@@ -29,11 +29,11 @@ public final class ApplicationGatewayRewriteRuleActionSetResponse {
      */
     private final @Nullable ApplicationGatewayUrlConfigurationResponse urlConfiguration;
 
-    @OutputCustomType.Constructor({"requestHeaderConfigurations","responseHeaderConfigurations","urlConfiguration"})
+    @OutputCustomType.Constructor
     private ApplicationGatewayRewriteRuleActionSetResponse(
-        @Nullable List<ApplicationGatewayHeaderConfigurationResponse> requestHeaderConfigurations,
-        @Nullable List<ApplicationGatewayHeaderConfigurationResponse> responseHeaderConfigurations,
-        @Nullable ApplicationGatewayUrlConfigurationResponse urlConfiguration) {
+        @OutputCustomType.Parameter("requestHeaderConfigurations") @Nullable List<ApplicationGatewayHeaderConfigurationResponse> requestHeaderConfigurations,
+        @OutputCustomType.Parameter("responseHeaderConfigurations") @Nullable List<ApplicationGatewayHeaderConfigurationResponse> responseHeaderConfigurations,
+        @OutputCustomType.Parameter("urlConfiguration") @Nullable ApplicationGatewayUrlConfigurationResponse urlConfiguration) {
         this.requestHeaderConfigurations = requestHeaderConfigurations;
         this.responseHeaderConfigurations = responseHeaderConfigurations;
         this.urlConfiguration = urlConfiguration;

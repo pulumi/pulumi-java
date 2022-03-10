@@ -35,13 +35,13 @@ public final class GetWorkspaceSettingResult {
      */
     private final String workspaceId;
 
-    @OutputCustomType.Constructor({"id","name","scope","type","workspaceId"})
+    @OutputCustomType.Constructor
     private GetWorkspaceSettingResult(
-        String id,
-        String name,
-        String scope,
-        String type,
-        String workspaceId) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("scope") String scope,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("workspaceId") String workspaceId) {
         this.id = id;
         this.name = name;
         this.scope = scope;

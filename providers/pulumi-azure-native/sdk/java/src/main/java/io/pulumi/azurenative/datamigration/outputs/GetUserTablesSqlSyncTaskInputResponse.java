@@ -32,12 +32,12 @@ public final class GetUserTablesSqlSyncTaskInputResponse {
      */
     private final SqlConnectionInfoResponse targetConnectionInfo;
 
-    @OutputCustomType.Constructor({"selectedSourceDatabases","selectedTargetDatabases","sourceConnectionInfo","targetConnectionInfo"})
+    @OutputCustomType.Constructor
     private GetUserTablesSqlSyncTaskInputResponse(
-        List<String> selectedSourceDatabases,
-        List<String> selectedTargetDatabases,
-        SqlConnectionInfoResponse sourceConnectionInfo,
-        SqlConnectionInfoResponse targetConnectionInfo) {
+        @OutputCustomType.Parameter("selectedSourceDatabases") List<String> selectedSourceDatabases,
+        @OutputCustomType.Parameter("selectedTargetDatabases") List<String> selectedTargetDatabases,
+        @OutputCustomType.Parameter("sourceConnectionInfo") SqlConnectionInfoResponse sourceConnectionInfo,
+        @OutputCustomType.Parameter("targetConnectionInfo") SqlConnectionInfoResponse targetConnectionInfo) {
         this.selectedSourceDatabases = selectedSourceDatabases;
         this.selectedTargetDatabases = selectedTargetDatabases;
         this.sourceConnectionInfo = sourceConnectionInfo;

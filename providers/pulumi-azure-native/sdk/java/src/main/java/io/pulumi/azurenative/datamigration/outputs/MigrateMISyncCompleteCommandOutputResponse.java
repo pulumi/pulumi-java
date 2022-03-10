@@ -17,8 +17,8 @@ public final class MigrateMISyncCompleteCommandOutputResponse {
      */
     private final @Nullable List<ReportableExceptionResponse> errors;
 
-    @OutputCustomType.Constructor({"errors"})
-    private MigrateMISyncCompleteCommandOutputResponse(@Nullable List<ReportableExceptionResponse> errors) {
+    @OutputCustomType.Constructor
+    private MigrateMISyncCompleteCommandOutputResponse(@OutputCustomType.Parameter("errors") @Nullable List<ReportableExceptionResponse> errors) {
         this.errors = errors;
     }
 

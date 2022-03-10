@@ -48,15 +48,15 @@ public final class PublicIPAddressResourceSettingsResponse {
      */
     private final @Nullable String zones;
 
-    @OutputCustomType.Constructor({"domainNameLabel","fqdn","publicIpAllocationMethod","resourceType","sku","targetResourceName","zones"})
+    @OutputCustomType.Constructor
     private PublicIPAddressResourceSettingsResponse(
-        @Nullable String domainNameLabel,
-        @Nullable String fqdn,
-        @Nullable String publicIpAllocationMethod,
-        String resourceType,
-        @Nullable String sku,
-        String targetResourceName,
-        @Nullable String zones) {
+        @OutputCustomType.Parameter("domainNameLabel") @Nullable String domainNameLabel,
+        @OutputCustomType.Parameter("fqdn") @Nullable String fqdn,
+        @OutputCustomType.Parameter("publicIpAllocationMethod") @Nullable String publicIpAllocationMethod,
+        @OutputCustomType.Parameter("resourceType") String resourceType,
+        @OutputCustomType.Parameter("sku") @Nullable String sku,
+        @OutputCustomType.Parameter("targetResourceName") String targetResourceName,
+        @OutputCustomType.Parameter("zones") @Nullable String zones) {
         this.domainNameLabel = domainNameLabel;
         this.fqdn = fqdn;
         this.publicIpAllocationMethod = publicIpAllocationMethod;

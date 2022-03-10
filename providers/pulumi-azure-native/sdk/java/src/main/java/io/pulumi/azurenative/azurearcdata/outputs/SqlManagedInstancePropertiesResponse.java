@@ -50,16 +50,16 @@ public final class SqlManagedInstancePropertiesResponse {
      */
     private final @Nullable String startTime;
 
-    @OutputCustomType.Constructor({"admin","basicLoginInformation","dataControllerId","endTime","k8sRaw","lastUploadedDate","provisioningState","startTime"})
+    @OutputCustomType.Constructor
     private SqlManagedInstancePropertiesResponse(
-        @Nullable String admin,
-        @Nullable BasicLoginInformationResponse basicLoginInformation,
-        @Nullable String dataControllerId,
-        @Nullable String endTime,
-        @Nullable Object k8sRaw,
-        @Nullable String lastUploadedDate,
-        String provisioningState,
-        @Nullable String startTime) {
+        @OutputCustomType.Parameter("admin") @Nullable String admin,
+        @OutputCustomType.Parameter("basicLoginInformation") @Nullable BasicLoginInformationResponse basicLoginInformation,
+        @OutputCustomType.Parameter("dataControllerId") @Nullable String dataControllerId,
+        @OutputCustomType.Parameter("endTime") @Nullable String endTime,
+        @OutputCustomType.Parameter("k8sRaw") @Nullable Object k8sRaw,
+        @OutputCustomType.Parameter("lastUploadedDate") @Nullable String lastUploadedDate,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("startTime") @Nullable String startTime) {
         this.admin = admin;
         this.basicLoginInformation = basicLoginInformation;
         this.dataControllerId = dataControllerId;

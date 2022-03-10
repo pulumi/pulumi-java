@@ -17,8 +17,8 @@ public final class IntegrationServiceEnvironmentAccessEndpointResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"type"})
-    private IntegrationServiceEnvironmentAccessEndpointResponse(@Nullable String type) {
+    @OutputCustomType.Constructor
+    private IntegrationServiceEnvironmentAccessEndpointResponse(@OutputCustomType.Parameter("type") @Nullable String type) {
         this.type = type;
     }
 

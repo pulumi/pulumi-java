@@ -21,10 +21,10 @@ public final class ManagementGroupLogSettingsResponse {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"category","enabled"})
+    @OutputCustomType.Constructor
     private ManagementGroupLogSettingsResponse(
-        String category,
-        Boolean enabled) {
+        @OutputCustomType.Parameter("category") String category,
+        @OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.category = category;
         this.enabled = enabled;
     }

@@ -25,11 +25,11 @@ public final class VirtualApplianceNicPropertiesResponse {
      */
     private final String publicIpAddress;
 
-    @OutputCustomType.Constructor({"name","privateIpAddress","publicIpAddress"})
+    @OutputCustomType.Constructor
     private VirtualApplianceNicPropertiesResponse(
-        String name,
-        String privateIpAddress,
-        String publicIpAddress) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("privateIpAddress") String privateIpAddress,
+        @OutputCustomType.Parameter("publicIpAddress") String publicIpAddress) {
         this.name = name;
         this.privateIpAddress = privateIpAddress;
         this.publicIpAddress = publicIpAddress;

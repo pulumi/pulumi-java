@@ -51,15 +51,15 @@ public final class DataFactoryResponse {
      */
     private final @Nullable String resourceId;
 
-    @OutputCustomType.Constructor({"computeLocation","computeType","description","isAttachedCompute","provisioningErrors","provisioningState","resourceId"})
+    @OutputCustomType.Constructor
     private DataFactoryResponse(
-        @Nullable String computeLocation,
-        String computeType,
-        @Nullable String description,
-        Boolean isAttachedCompute,
-        List<MachineLearningServiceErrorResponse> provisioningErrors,
-        String provisioningState,
-        @Nullable String resourceId) {
+        @OutputCustomType.Parameter("computeLocation") @Nullable String computeLocation,
+        @OutputCustomType.Parameter("computeType") String computeType,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("isAttachedCompute") Boolean isAttachedCompute,
+        @OutputCustomType.Parameter("provisioningErrors") List<MachineLearningServiceErrorResponse> provisioningErrors,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId) {
         this.computeLocation = computeLocation;
         this.computeType = computeType;
         this.description = description;

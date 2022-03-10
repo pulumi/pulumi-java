@@ -38,13 +38,13 @@ public final class ListEndpointCredentialsResult {
      */
     private final String namespaceNameSuffix;
 
-    @OutputCustomType.Constructor({"accessKey","expiresOn","hybridConnectionName","namespaceName","namespaceNameSuffix"})
+    @OutputCustomType.Constructor
     private ListEndpointCredentialsResult(
-        String accessKey,
-        @Nullable Double expiresOn,
-        String hybridConnectionName,
-        String namespaceName,
-        String namespaceNameSuffix) {
+        @OutputCustomType.Parameter("accessKey") String accessKey,
+        @OutputCustomType.Parameter("expiresOn") @Nullable Double expiresOn,
+        @OutputCustomType.Parameter("hybridConnectionName") String hybridConnectionName,
+        @OutputCustomType.Parameter("namespaceName") String namespaceName,
+        @OutputCustomType.Parameter("namespaceNameSuffix") String namespaceNameSuffix) {
         this.accessKey = accessKey;
         this.expiresOn = expiresOn;
         this.hybridConnectionName = hybridConnectionName;

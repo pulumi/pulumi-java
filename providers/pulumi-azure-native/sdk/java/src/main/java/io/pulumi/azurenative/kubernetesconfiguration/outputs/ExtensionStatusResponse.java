@@ -37,13 +37,13 @@ public final class ExtensionStatusResponse {
      */
     private final @Nullable String time;
 
-    @OutputCustomType.Constructor({"code","displayStatus","level","message","time"})
+    @OutputCustomType.Constructor
     private ExtensionStatusResponse(
-        @Nullable String code,
-        @Nullable String displayStatus,
-        @Nullable String level,
-        @Nullable String message,
-        @Nullable String time) {
+        @OutputCustomType.Parameter("code") @Nullable String code,
+        @OutputCustomType.Parameter("displayStatus") @Nullable String displayStatus,
+        @OutputCustomType.Parameter("level") @Nullable String level,
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("time") @Nullable String time) {
         this.code = code;
         this.displayStatus = displayStatus;
         this.level = level;

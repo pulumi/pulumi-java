@@ -45,14 +45,14 @@ public final class GetApiPortalResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","properties","sku","systemData","type"})
+    @OutputCustomType.Constructor
     private GetApiPortalResult(
-        String id,
-        String name,
-        ApiPortalPropertiesResponse properties,
-        @Nullable SkuResponse sku,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") ApiPortalPropertiesResponse properties,
+        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.properties = properties;

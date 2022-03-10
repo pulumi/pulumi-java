@@ -65,18 +65,18 @@ public final class GetVirtualNetworkLinkResult {
      */
     private final String virtualNetworkLinkState;
 
-    @OutputCustomType.Constructor({"etag","id","location","name","provisioningState","registrationEnabled","tags","type","virtualNetwork","virtualNetworkLinkState"})
+    @OutputCustomType.Constructor
     private GetVirtualNetworkLinkResult(
-        @Nullable String etag,
-        String id,
-        @Nullable String location,
-        String name,
-        String provisioningState,
-        @Nullable Boolean registrationEnabled,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable SubResourceResponse virtualNetwork,
-        String virtualNetworkLinkState) {
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("registrationEnabled") @Nullable Boolean registrationEnabled,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("virtualNetwork") @Nullable SubResourceResponse virtualNetwork,
+        @OutputCustomType.Parameter("virtualNetworkLinkState") String virtualNetworkLinkState) {
         this.etag = etag;
         this.id = id;
         this.location = location;

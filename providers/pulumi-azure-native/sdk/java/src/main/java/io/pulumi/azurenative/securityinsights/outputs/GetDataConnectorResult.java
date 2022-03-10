@@ -37,13 +37,13 @@ public final class GetDataConnectorResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"etag","id","kind","name","type"})
+    @OutputCustomType.Constructor
     private GetDataConnectorResult(
-        @Nullable String etag,
-        String id,
-        String kind,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.etag = etag;
         this.id = id;
         this.kind = kind;

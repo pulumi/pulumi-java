@@ -23,10 +23,10 @@ public final class ConditionResponse {
      */
     private final @Nullable List<String> values;
 
-    @OutputCustomType.Constructor({"operator","values"})
+    @OutputCustomType.Constructor
     private ConditionResponse(
-        @Nullable String operator,
-        @Nullable List<String> values) {
+        @OutputCustomType.Parameter("operator") @Nullable String operator,
+        @OutputCustomType.Parameter("values") @Nullable List<String> values) {
         this.operator = operator;
         this.values = values;
     }

@@ -20,10 +20,10 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskInputResponse {
      */
     private final PostgreSqlConnectionInfoResponse targetConnectionInfo;
 
-    @OutputCustomType.Constructor({"sourceConnectionInfo","targetConnectionInfo"})
+    @OutputCustomType.Constructor
     private ConnectToTargetAzureDbForPostgreSqlSyncTaskInputResponse(
-        PostgreSqlConnectionInfoResponse sourceConnectionInfo,
-        PostgreSqlConnectionInfoResponse targetConnectionInfo) {
+        @OutputCustomType.Parameter("sourceConnectionInfo") PostgreSqlConnectionInfoResponse sourceConnectionInfo,
+        @OutputCustomType.Parameter("targetConnectionInfo") PostgreSqlConnectionInfoResponse targetConnectionInfo) {
         this.sourceConnectionInfo = sourceConnectionInfo;
         this.targetConnectionInfo = targetConnectionInfo;
     }

@@ -25,11 +25,11 @@ public final class DeviceDetailsResponse {
      */
     private final String serialNumber;
 
-    @OutputCustomType.Constructor({"managementResourceId","managementResourceTenantId","serialNumber"})
+    @OutputCustomType.Constructor
     private DeviceDetailsResponse(
-        String managementResourceId,
-        String managementResourceTenantId,
-        String serialNumber) {
+        @OutputCustomType.Parameter("managementResourceId") String managementResourceId,
+        @OutputCustomType.Parameter("managementResourceTenantId") String managementResourceTenantId,
+        @OutputCustomType.Parameter("serialNumber") String serialNumber) {
         this.managementResourceId = managementResourceId;
         this.managementResourceTenantId = managementResourceTenantId;
         this.serialNumber = serialNumber;

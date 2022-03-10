@@ -22,10 +22,10 @@ public final class ManagedClusterServicePrincipalProfileResponse {
      */
     private final @Nullable String secret;
 
-    @OutputCustomType.Constructor({"clientId","secret"})
+    @OutputCustomType.Constructor
     private ManagedClusterServicePrincipalProfileResponse(
-        String clientId,
-        @Nullable String secret) {
+        @OutputCustomType.Parameter("clientId") String clientId,
+        @OutputCustomType.Parameter("secret") @Nullable String secret) {
         this.clientId = clientId;
         this.secret = secret;
     }

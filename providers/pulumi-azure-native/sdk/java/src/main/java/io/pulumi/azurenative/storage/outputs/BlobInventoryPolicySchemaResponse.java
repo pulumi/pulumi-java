@@ -33,12 +33,12 @@ public final class BlobInventoryPolicySchemaResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"destination","enabled","rules","type"})
+    @OutputCustomType.Constructor
     private BlobInventoryPolicySchemaResponse(
-        String destination,
-        Boolean enabled,
-        List<BlobInventoryPolicyRuleResponse> rules,
-        String type) {
+        @OutputCustomType.Parameter("destination") String destination,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("rules") List<BlobInventoryPolicyRuleResponse> rules,
+        @OutputCustomType.Parameter("type") String type) {
         this.destination = destination;
         this.enabled = enabled;
         this.rules = rules;

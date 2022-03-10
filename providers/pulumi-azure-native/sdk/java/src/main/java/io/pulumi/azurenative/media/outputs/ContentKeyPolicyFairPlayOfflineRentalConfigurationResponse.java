@@ -20,10 +20,10 @@ public final class ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse {
      */
     private final Double storageDurationSeconds;
 
-    @OutputCustomType.Constructor({"playbackDurationSeconds","storageDurationSeconds"})
+    @OutputCustomType.Constructor
     private ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse(
-        Double playbackDurationSeconds,
-        Double storageDurationSeconds) {
+        @OutputCustomType.Parameter("playbackDurationSeconds") Double playbackDurationSeconds,
+        @OutputCustomType.Parameter("storageDurationSeconds") Double storageDurationSeconds) {
         this.playbackDurationSeconds = playbackDurationSeconds;
         this.storageDurationSeconds = storageDurationSeconds;
     }

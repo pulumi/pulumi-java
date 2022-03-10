@@ -64,17 +64,17 @@ public final class VirtualMachineConfigurationResponse {
      */
     private final @Nullable WindowsConfigurationResponse windowsConfiguration;
 
-    @OutputCustomType.Constructor({"containerConfiguration","dataDisks","diskEncryptionConfiguration","extensions","imageReference","licenseType","nodeAgentSkuId","nodePlacementConfiguration","windowsConfiguration"})
+    @OutputCustomType.Constructor
     private VirtualMachineConfigurationResponse(
-        @Nullable ContainerConfigurationResponse containerConfiguration,
-        @Nullable List<DataDiskResponse> dataDisks,
-        @Nullable DiskEncryptionConfigurationResponse diskEncryptionConfiguration,
-        @Nullable List<VMExtensionResponse> extensions,
-        ImageReferenceResponse imageReference,
-        @Nullable String licenseType,
-        String nodeAgentSkuId,
-        @Nullable NodePlacementConfigurationResponse nodePlacementConfiguration,
-        @Nullable WindowsConfigurationResponse windowsConfiguration) {
+        @OutputCustomType.Parameter("containerConfiguration") @Nullable ContainerConfigurationResponse containerConfiguration,
+        @OutputCustomType.Parameter("dataDisks") @Nullable List<DataDiskResponse> dataDisks,
+        @OutputCustomType.Parameter("diskEncryptionConfiguration") @Nullable DiskEncryptionConfigurationResponse diskEncryptionConfiguration,
+        @OutputCustomType.Parameter("extensions") @Nullable List<VMExtensionResponse> extensions,
+        @OutputCustomType.Parameter("imageReference") ImageReferenceResponse imageReference,
+        @OutputCustomType.Parameter("licenseType") @Nullable String licenseType,
+        @OutputCustomType.Parameter("nodeAgentSkuId") String nodeAgentSkuId,
+        @OutputCustomType.Parameter("nodePlacementConfiguration") @Nullable NodePlacementConfigurationResponse nodePlacementConfiguration,
+        @OutputCustomType.Parameter("windowsConfiguration") @Nullable WindowsConfigurationResponse windowsConfiguration) {
         this.containerConfiguration = containerConfiguration;
         this.dataDisks = dataDisks;
         this.diskEncryptionConfiguration = diskEncryptionConfiguration;

@@ -53,16 +53,16 @@ public final class AvailablePatchSummaryResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"assessmentActivityId","criticalAndSecurityPatchCount","error","lastModifiedTime","otherPatchCount","rebootPending","startTime","status"})
+    @OutputCustomType.Constructor
     private AvailablePatchSummaryResponse(
-        String assessmentActivityId,
-        Integer criticalAndSecurityPatchCount,
-        ApiErrorResponse error,
-        String lastModifiedTime,
-        Integer otherPatchCount,
-        Boolean rebootPending,
-        String startTime,
-        String status) {
+        @OutputCustomType.Parameter("assessmentActivityId") String assessmentActivityId,
+        @OutputCustomType.Parameter("criticalAndSecurityPatchCount") Integer criticalAndSecurityPatchCount,
+        @OutputCustomType.Parameter("error") ApiErrorResponse error,
+        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @OutputCustomType.Parameter("otherPatchCount") Integer otherPatchCount,
+        @OutputCustomType.Parameter("rebootPending") Boolean rebootPending,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("status") String status) {
         this.assessmentActivityId = assessmentActivityId;
         this.criticalAndSecurityPatchCount = criticalAndSecurityPatchCount;
         this.error = error;

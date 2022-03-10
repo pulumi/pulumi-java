@@ -27,11 +27,11 @@ public final class GatewayDetailsResponse {
      */
     private final @Nullable String gatewayResourceId;
 
-    @OutputCustomType.Constructor({"dmtsClusterUri","gatewayObjectId","gatewayResourceId"})
+    @OutputCustomType.Constructor
     private GatewayDetailsResponse(
-        String dmtsClusterUri,
-        String gatewayObjectId,
-        @Nullable String gatewayResourceId) {
+        @OutputCustomType.Parameter("dmtsClusterUri") String dmtsClusterUri,
+        @OutputCustomType.Parameter("gatewayObjectId") String gatewayObjectId,
+        @OutputCustomType.Parameter("gatewayResourceId") @Nullable String gatewayResourceId) {
         this.dmtsClusterUri = dmtsClusterUri;
         this.gatewayObjectId = gatewayObjectId;
         this.gatewayResourceId = gatewayResourceId;

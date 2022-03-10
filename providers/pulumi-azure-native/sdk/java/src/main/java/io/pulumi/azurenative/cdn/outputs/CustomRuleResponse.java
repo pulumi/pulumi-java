@@ -40,13 +40,13 @@ public final class CustomRuleResponse {
      */
     private final Integer priority;
 
-    @OutputCustomType.Constructor({"action","enabledState","matchConditions","name","priority"})
+    @OutputCustomType.Constructor
     private CustomRuleResponse(
-        String action,
-        @Nullable String enabledState,
-        List<MatchConditionResponse> matchConditions,
-        String name,
-        Integer priority) {
+        @OutputCustomType.Parameter("action") String action,
+        @OutputCustomType.Parameter("enabledState") @Nullable String enabledState,
+        @OutputCustomType.Parameter("matchConditions") List<MatchConditionResponse> matchConditions,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("priority") Integer priority) {
         this.action = action;
         this.enabledState = enabledState;
         this.matchConditions = matchConditions;

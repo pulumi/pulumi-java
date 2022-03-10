@@ -22,10 +22,10 @@ public final class ListWebAppSiteBackupsResult {
      */
     private final List<BackupItemResponse> value;
 
-    @OutputCustomType.Constructor({"nextLink","value"})
+    @OutputCustomType.Constructor
     private ListWebAppSiteBackupsResult(
-        String nextLink,
-        List<BackupItemResponse> value) {
+        @OutputCustomType.Parameter("nextLink") String nextLink,
+        @OutputCustomType.Parameter("value") List<BackupItemResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }

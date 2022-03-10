@@ -60,17 +60,17 @@ public final class ClusterUpgradePolicyResponse {
      */
     private final String upgradeTimeout;
 
-    @OutputCustomType.Constructor({"deltaHealthPolicy","forceRestart","healthCheckRetryTimeout","healthCheckStableDuration","healthCheckWaitDuration","healthPolicy","upgradeDomainTimeout","upgradeReplicaSetCheckTimeout","upgradeTimeout"})
+    @OutputCustomType.Constructor
     private ClusterUpgradePolicyResponse(
-        @Nullable ClusterUpgradeDeltaHealthPolicyResponse deltaHealthPolicy,
-        @Nullable Boolean forceRestart,
-        String healthCheckRetryTimeout,
-        String healthCheckStableDuration,
-        String healthCheckWaitDuration,
-        ClusterHealthPolicyResponse healthPolicy,
-        String upgradeDomainTimeout,
-        String upgradeReplicaSetCheckTimeout,
-        String upgradeTimeout) {
+        @OutputCustomType.Parameter("deltaHealthPolicy") @Nullable ClusterUpgradeDeltaHealthPolicyResponse deltaHealthPolicy,
+        @OutputCustomType.Parameter("forceRestart") @Nullable Boolean forceRestart,
+        @OutputCustomType.Parameter("healthCheckRetryTimeout") String healthCheckRetryTimeout,
+        @OutputCustomType.Parameter("healthCheckStableDuration") String healthCheckStableDuration,
+        @OutputCustomType.Parameter("healthCheckWaitDuration") String healthCheckWaitDuration,
+        @OutputCustomType.Parameter("healthPolicy") ClusterHealthPolicyResponse healthPolicy,
+        @OutputCustomType.Parameter("upgradeDomainTimeout") String upgradeDomainTimeout,
+        @OutputCustomType.Parameter("upgradeReplicaSetCheckTimeout") String upgradeReplicaSetCheckTimeout,
+        @OutputCustomType.Parameter("upgradeTimeout") String upgradeTimeout) {
         this.deltaHealthPolicy = deltaHealthPolicy;
         this.forceRestart = forceRestart;
         this.healthCheckRetryTimeout = healthCheckRetryTimeout;

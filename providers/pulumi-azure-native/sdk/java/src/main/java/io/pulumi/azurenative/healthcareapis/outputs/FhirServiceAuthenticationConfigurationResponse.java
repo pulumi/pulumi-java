@@ -28,11 +28,11 @@ public final class FhirServiceAuthenticationConfigurationResponse {
      */
     private final @Nullable Boolean smartProxyEnabled;
 
-    @OutputCustomType.Constructor({"audience","authority","smartProxyEnabled"})
+    @OutputCustomType.Constructor
     private FhirServiceAuthenticationConfigurationResponse(
-        @Nullable String audience,
-        @Nullable String authority,
-        @Nullable Boolean smartProxyEnabled) {
+        @OutputCustomType.Parameter("audience") @Nullable String audience,
+        @OutputCustomType.Parameter("authority") @Nullable String authority,
+        @OutputCustomType.Parameter("smartProxyEnabled") @Nullable Boolean smartProxyEnabled) {
         this.audience = audience;
         this.authority = authority;
         this.smartProxyEnabled = smartProxyEnabled;

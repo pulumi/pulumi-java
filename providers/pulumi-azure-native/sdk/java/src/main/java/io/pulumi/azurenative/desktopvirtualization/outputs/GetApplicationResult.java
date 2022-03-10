@@ -99,25 +99,25 @@ public final class GetApplicationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"applicationType","commandLineArguments","commandLineSetting","description","filePath","friendlyName","iconContent","iconHash","iconIndex","iconPath","id","msixPackageApplicationId","msixPackageFamilyName","name","objectId","showInPortal","type"})
+    @OutputCustomType.Constructor
     private GetApplicationResult(
-        @Nullable String applicationType,
-        @Nullable String commandLineArguments,
-        String commandLineSetting,
-        @Nullable String description,
-        @Nullable String filePath,
-        @Nullable String friendlyName,
-        String iconContent,
-        String iconHash,
-        @Nullable Integer iconIndex,
-        @Nullable String iconPath,
-        String id,
-        @Nullable String msixPackageApplicationId,
-        @Nullable String msixPackageFamilyName,
-        String name,
-        String objectId,
-        @Nullable Boolean showInPortal,
-        String type) {
+        @OutputCustomType.Parameter("applicationType") @Nullable String applicationType,
+        @OutputCustomType.Parameter("commandLineArguments") @Nullable String commandLineArguments,
+        @OutputCustomType.Parameter("commandLineSetting") String commandLineSetting,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("filePath") @Nullable String filePath,
+        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @OutputCustomType.Parameter("iconContent") String iconContent,
+        @OutputCustomType.Parameter("iconHash") String iconHash,
+        @OutputCustomType.Parameter("iconIndex") @Nullable Integer iconIndex,
+        @OutputCustomType.Parameter("iconPath") @Nullable String iconPath,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("msixPackageApplicationId") @Nullable String msixPackageApplicationId,
+        @OutputCustomType.Parameter("msixPackageFamilyName") @Nullable String msixPackageFamilyName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("objectId") String objectId,
+        @OutputCustomType.Parameter("showInPortal") @Nullable Boolean showInPortal,
+        @OutputCustomType.Parameter("type") String type) {
         this.applicationType = applicationType;
         this.commandLineArguments = commandLineArguments;
         this.commandLineSetting = commandLineSetting;

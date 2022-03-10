@@ -17,8 +17,8 @@ public final class AwsCloudTrailDataConnectorDataTypesResponse {
      */
     private final @Nullable AwsCloudTrailDataConnectorDataTypesResponseLogs logs;
 
-    @OutputCustomType.Constructor({"logs"})
-    private AwsCloudTrailDataConnectorDataTypesResponse(@Nullable AwsCloudTrailDataConnectorDataTypesResponseLogs logs) {
+    @OutputCustomType.Constructor
+    private AwsCloudTrailDataConnectorDataTypesResponse(@OutputCustomType.Parameter("logs") @Nullable AwsCloudTrailDataConnectorDataTypesResponseLogs logs) {
         this.logs = logs;
     }
 

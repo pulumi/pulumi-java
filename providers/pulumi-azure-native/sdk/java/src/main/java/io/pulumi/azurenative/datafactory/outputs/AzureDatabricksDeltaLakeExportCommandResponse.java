@@ -29,11 +29,11 @@ public final class AzureDatabricksDeltaLakeExportCommandResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"dateFormat","timestampFormat","type"})
+    @OutputCustomType.Constructor
     private AzureDatabricksDeltaLakeExportCommandResponse(
-        @Nullable Object dateFormat,
-        @Nullable Object timestampFormat,
-        String type) {
+        @OutputCustomType.Parameter("dateFormat") @Nullable Object dateFormat,
+        @OutputCustomType.Parameter("timestampFormat") @Nullable Object timestampFormat,
+        @OutputCustomType.Parameter("type") String type) {
         this.dateFormat = dateFormat;
         this.timestampFormat = timestampFormat;
         this.type = type;

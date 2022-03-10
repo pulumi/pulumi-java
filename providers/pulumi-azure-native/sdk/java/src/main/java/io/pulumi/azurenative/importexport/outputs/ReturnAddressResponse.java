@@ -57,17 +57,17 @@ public final class ReturnAddressResponse {
      */
     private final @Nullable String streetAddress2;
 
-    @OutputCustomType.Constructor({"city","countryOrRegion","email","phone","postalCode","recipientName","stateOrProvince","streetAddress1","streetAddress2"})
+    @OutputCustomType.Constructor
     private ReturnAddressResponse(
-        String city,
-        String countryOrRegion,
-        String email,
-        String phone,
-        String postalCode,
-        String recipientName,
-        @Nullable String stateOrProvince,
-        String streetAddress1,
-        @Nullable String streetAddress2) {
+        @OutputCustomType.Parameter("city") String city,
+        @OutputCustomType.Parameter("countryOrRegion") String countryOrRegion,
+        @OutputCustomType.Parameter("email") String email,
+        @OutputCustomType.Parameter("phone") String phone,
+        @OutputCustomType.Parameter("postalCode") String postalCode,
+        @OutputCustomType.Parameter("recipientName") String recipientName,
+        @OutputCustomType.Parameter("stateOrProvince") @Nullable String stateOrProvince,
+        @OutputCustomType.Parameter("streetAddress1") String streetAddress1,
+        @OutputCustomType.Parameter("streetAddress2") @Nullable String streetAddress2) {
         this.city = city;
         this.countryOrRegion = countryOrRegion;
         this.email = email;

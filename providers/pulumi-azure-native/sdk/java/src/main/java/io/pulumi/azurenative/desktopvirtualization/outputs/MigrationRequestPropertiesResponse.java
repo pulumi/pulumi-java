@@ -22,10 +22,10 @@ public final class MigrationRequestPropertiesResponse {
      */
     private final @Nullable String operation;
 
-    @OutputCustomType.Constructor({"migrationPath","operation"})
+    @OutputCustomType.Constructor
     private MigrationRequestPropertiesResponse(
-        @Nullable String migrationPath,
-        @Nullable String operation) {
+        @OutputCustomType.Parameter("migrationPath") @Nullable String migrationPath,
+        @OutputCustomType.Parameter("operation") @Nullable String operation) {
         this.migrationPath = migrationPath;
         this.operation = operation;
     }

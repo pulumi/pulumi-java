@@ -66,17 +66,17 @@ public final class GoogleCloudStorageLinkedServiceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"accessKeyId","annotations","connectVia","description","encryptedCredential","parameters","secretAccessKey","serviceUrl","type"})
+    @OutputCustomType.Constructor
     private GoogleCloudStorageLinkedServiceResponse(
-        @Nullable Object accessKeyId,
-        @Nullable List<Object> annotations,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> secretAccessKey,
-        @Nullable Object serviceUrl,
-        String type) {
+        @OutputCustomType.Parameter("accessKeyId") @Nullable Object accessKeyId,
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("secretAccessKey") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> secretAccessKey,
+        @OutputCustomType.Parameter("serviceUrl") @Nullable Object serviceUrl,
+        @OutputCustomType.Parameter("type") String type) {
         this.accessKeyId = accessKeyId;
         this.annotations = annotations;
         this.connectVia = connectVia;

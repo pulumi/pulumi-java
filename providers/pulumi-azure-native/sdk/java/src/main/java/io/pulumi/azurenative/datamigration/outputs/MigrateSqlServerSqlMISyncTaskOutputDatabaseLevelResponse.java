@@ -80,21 +80,21 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse {
      */
     private final String startedOn;
 
-    @OutputCustomType.Constructor({"activeBackupSets","containerName","endedOn","errorPrefix","exceptionsAndWarnings","fullBackupSetInfo","id","isFullBackupRestored","lastRestoredBackupSetInfo","migrationState","resultType","sourceDatabaseName","startedOn"})
+    @OutputCustomType.Constructor
     private MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse(
-        List<BackupSetInfoResponse> activeBackupSets,
-        String containerName,
-        String endedOn,
-        String errorPrefix,
-        List<ReportableExceptionResponse> exceptionsAndWarnings,
-        BackupSetInfoResponse fullBackupSetInfo,
-        String id,
-        Boolean isFullBackupRestored,
-        BackupSetInfoResponse lastRestoredBackupSetInfo,
-        String migrationState,
-        String resultType,
-        String sourceDatabaseName,
-        String startedOn) {
+        @OutputCustomType.Parameter("activeBackupSets") List<BackupSetInfoResponse> activeBackupSets,
+        @OutputCustomType.Parameter("containerName") String containerName,
+        @OutputCustomType.Parameter("endedOn") String endedOn,
+        @OutputCustomType.Parameter("errorPrefix") String errorPrefix,
+        @OutputCustomType.Parameter("exceptionsAndWarnings") List<ReportableExceptionResponse> exceptionsAndWarnings,
+        @OutputCustomType.Parameter("fullBackupSetInfo") BackupSetInfoResponse fullBackupSetInfo,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isFullBackupRestored") Boolean isFullBackupRestored,
+        @OutputCustomType.Parameter("lastRestoredBackupSetInfo") BackupSetInfoResponse lastRestoredBackupSetInfo,
+        @OutputCustomType.Parameter("migrationState") String migrationState,
+        @OutputCustomType.Parameter("resultType") String resultType,
+        @OutputCustomType.Parameter("sourceDatabaseName") String sourceDatabaseName,
+        @OutputCustomType.Parameter("startedOn") String startedOn) {
         this.activeBackupSets = activeBackupSets;
         this.containerName = containerName;
         this.endedOn = endedOn;

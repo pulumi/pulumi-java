@@ -30,11 +30,11 @@ public final class ContentKeyPolicyPlayReadyConfigurationResponse {
      */
     private final @Nullable String responseCustomData;
 
-    @OutputCustomType.Constructor({"licenses","odataType","responseCustomData"})
+    @OutputCustomType.Constructor
     private ContentKeyPolicyPlayReadyConfigurationResponse(
-        List<ContentKeyPolicyPlayReadyLicenseResponse> licenses,
-        String odataType,
-        @Nullable String responseCustomData) {
+        @OutputCustomType.Parameter("licenses") List<ContentKeyPolicyPlayReadyLicenseResponse> licenses,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("responseCustomData") @Nullable String responseCustomData) {
         this.licenses = licenses;
         this.odataType = odataType;
         this.responseCustomData = responseCustomData;

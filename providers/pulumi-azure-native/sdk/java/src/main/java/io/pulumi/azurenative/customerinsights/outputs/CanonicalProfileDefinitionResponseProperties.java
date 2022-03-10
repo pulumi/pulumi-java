@@ -38,13 +38,13 @@ public final class CanonicalProfileDefinitionResponseProperties {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"profileName","profilePropertyName","rank","type","value"})
+    @OutputCustomType.Constructor
     private CanonicalProfileDefinitionResponseProperties(
-        @Nullable String profileName,
-        @Nullable String profilePropertyName,
-        @Nullable Integer rank,
-        @Nullable String type,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("profileName") @Nullable String profileName,
+        @OutputCustomType.Parameter("profilePropertyName") @Nullable String profilePropertyName,
+        @OutputCustomType.Parameter("rank") @Nullable Integer rank,
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.profileName = profileName;
         this.profilePropertyName = profilePropertyName;
         this.rank = rank;

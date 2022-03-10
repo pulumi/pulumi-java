@@ -42,14 +42,14 @@ public final class GetSqlResourceSqlRoleAssignmentResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","principalId","roleDefinitionId","scope","type"})
+    @OutputCustomType.Constructor
     private GetSqlResourceSqlRoleAssignmentResult(
-        String id,
-        String name,
-        @Nullable String principalId,
-        @Nullable String roleDefinitionId,
-        @Nullable String scope,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("principalId") @Nullable String principalId,
+        @OutputCustomType.Parameter("roleDefinitionId") @Nullable String roleDefinitionId,
+        @OutputCustomType.Parameter("scope") @Nullable String scope,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.principalId = principalId;

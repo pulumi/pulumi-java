@@ -35,12 +35,12 @@ public final class AlertRuleAnyOfOrLeafConditionResponse {
      */
     private final @Nullable String field;
 
-    @OutputCustomType.Constructor({"anyOf","containsAny","equals","field"})
+    @OutputCustomType.Constructor
     private AlertRuleAnyOfOrLeafConditionResponse(
-        @Nullable List<AlertRuleLeafConditionResponse> anyOf,
-        @Nullable List<String> containsAny,
-        @Nullable String equals,
-        @Nullable String field) {
+        @OutputCustomType.Parameter("anyOf") @Nullable List<AlertRuleLeafConditionResponse> anyOf,
+        @OutputCustomType.Parameter("containsAny") @Nullable List<String> containsAny,
+        @OutputCustomType.Parameter("equals") @Nullable String equals,
+        @OutputCustomType.Parameter("field") @Nullable String field) {
         this.anyOf = anyOf;
         this.containsAny = containsAny;
         this.equals = equals;

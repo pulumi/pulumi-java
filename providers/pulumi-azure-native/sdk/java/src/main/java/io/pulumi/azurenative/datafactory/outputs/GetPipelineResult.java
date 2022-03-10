@@ -123,21 +123,21 @@ public final class GetPipelineResult {
      */
     private final @Nullable Map<String,VariableSpecificationResponse> variables;
 
-    @OutputCustomType.Constructor({"activities","annotations","concurrency","description","etag","folder","id","name","parameters","policy","runDimensions","type","variables"})
+    @OutputCustomType.Constructor
     private GetPipelineResult(
-        @Nullable List<Object> activities,
-        @Nullable List<Object> annotations,
-        @Nullable Integer concurrency,
-        @Nullable String description,
-        String etag,
-        @Nullable PipelineResponseFolder folder,
-        String id,
-        String name,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable PipelinePolicyResponse policy,
-        @Nullable Map<String,Object> runDimensions,
-        String type,
-        @Nullable Map<String,VariableSpecificationResponse> variables) {
+        @OutputCustomType.Parameter("activities") @Nullable List<Object> activities,
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("concurrency") @Nullable Integer concurrency,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("folder") @Nullable PipelineResponseFolder folder,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("policy") @Nullable PipelinePolicyResponse policy,
+        @OutputCustomType.Parameter("runDimensions") @Nullable Map<String,Object> runDimensions,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("variables") @Nullable Map<String,VariableSpecificationResponse> variables) {
         this.activities = activities;
         this.annotations = annotations;
         this.concurrency = concurrency;

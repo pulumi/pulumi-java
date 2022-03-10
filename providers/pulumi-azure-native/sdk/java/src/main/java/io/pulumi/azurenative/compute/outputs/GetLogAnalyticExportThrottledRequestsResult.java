@@ -15,8 +15,8 @@ public final class GetLogAnalyticExportThrottledRequestsResult {
      */
     private final LogAnalyticsOutputResponse properties;
 
-    @OutputCustomType.Constructor({"properties"})
-    private GetLogAnalyticExportThrottledRequestsResult(LogAnalyticsOutputResponse properties) {
+    @OutputCustomType.Constructor
+    private GetLogAnalyticExportThrottledRequestsResult(@OutputCustomType.Parameter("properties") LogAnalyticsOutputResponse properties) {
         this.properties = properties;
     }
 

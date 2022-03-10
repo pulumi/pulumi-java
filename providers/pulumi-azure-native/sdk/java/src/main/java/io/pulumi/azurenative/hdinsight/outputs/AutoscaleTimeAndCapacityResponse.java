@@ -28,11 +28,11 @@ public final class AutoscaleTimeAndCapacityResponse {
      */
     private final @Nullable String time;
 
-    @OutputCustomType.Constructor({"maxInstanceCount","minInstanceCount","time"})
+    @OutputCustomType.Constructor
     private AutoscaleTimeAndCapacityResponse(
-        @Nullable Integer maxInstanceCount,
-        @Nullable Integer minInstanceCount,
-        @Nullable String time) {
+        @OutputCustomType.Parameter("maxInstanceCount") @Nullable Integer maxInstanceCount,
+        @OutputCustomType.Parameter("minInstanceCount") @Nullable Integer minInstanceCount,
+        @OutputCustomType.Parameter("time") @Nullable String time) {
         this.maxInstanceCount = maxInstanceCount;
         this.minInstanceCount = minInstanceCount;
         this.time = time;

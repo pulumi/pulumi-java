@@ -25,11 +25,11 @@ public final class PerNodeExtensionStateResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"extension","name","state"})
+    @OutputCustomType.Constructor
     private PerNodeExtensionStateResponse(
-        String extension,
-        String name,
-        String state) {
+        @OutputCustomType.Parameter("extension") String extension,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") String state) {
         this.extension = extension;
         this.name = name;
         this.state = state;

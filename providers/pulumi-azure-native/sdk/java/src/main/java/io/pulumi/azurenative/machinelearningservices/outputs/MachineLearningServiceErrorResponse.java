@@ -15,8 +15,8 @@ public final class MachineLearningServiceErrorResponse {
      */
     private final ErrorResponseResponse error;
 
-    @OutputCustomType.Constructor({"error"})
-    private MachineLearningServiceErrorResponse(ErrorResponseResponse error) {
+    @OutputCustomType.Constructor
+    private MachineLearningServiceErrorResponse(@OutputCustomType.Parameter("error") ErrorResponseResponse error) {
         this.error = error;
     }
 

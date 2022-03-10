@@ -23,10 +23,10 @@ public final class NetworkProfileResponse {
      */
     private final @Nullable List<IpAddressResponse> networkInterfaces;
 
-    @OutputCustomType.Constructor({"circuitId","networkInterfaces"})
+    @OutputCustomType.Constructor
     private NetworkProfileResponse(
-        String circuitId,
-        @Nullable List<IpAddressResponse> networkInterfaces) {
+        @OutputCustomType.Parameter("circuitId") String circuitId,
+        @OutputCustomType.Parameter("networkInterfaces") @Nullable List<IpAddressResponse> networkInterfaces) {
         this.circuitId = circuitId;
         this.networkInterfaces = networkInterfaces;
     }

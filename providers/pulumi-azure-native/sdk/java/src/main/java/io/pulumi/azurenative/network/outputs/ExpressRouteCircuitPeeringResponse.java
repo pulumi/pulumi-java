@@ -142,32 +142,32 @@ public final class ExpressRouteCircuitPeeringResponse {
      */
     private final @Nullable Integer vlanId;
 
-    @OutputCustomType.Constructor({"azureASN","connections","etag","expressRouteConnection","gatewayManagerEtag","id","ipv6PeeringConfig","lastModifiedBy","microsoftPeeringConfig","name","peerASN","peeredConnections","peeringType","primaryAzurePort","primaryPeerAddressPrefix","provisioningState","routeFilter","secondaryAzurePort","secondaryPeerAddressPrefix","sharedKey","state","stats","type","vlanId"})
+    @OutputCustomType.Constructor
     private ExpressRouteCircuitPeeringResponse(
-        @Nullable Integer azureASN,
-        @Nullable List<ExpressRouteCircuitConnectionResponse> connections,
-        String etag,
-        @Nullable ExpressRouteConnectionIdResponse expressRouteConnection,
-        @Nullable String gatewayManagerEtag,
-        @Nullable String id,
-        @Nullable Ipv6ExpressRouteCircuitPeeringConfigResponse ipv6PeeringConfig,
-        String lastModifiedBy,
-        @Nullable ExpressRouteCircuitPeeringConfigResponse microsoftPeeringConfig,
-        @Nullable String name,
-        @Nullable Double peerASN,
-        List<PeerExpressRouteCircuitConnectionResponse> peeredConnections,
-        @Nullable String peeringType,
-        @Nullable String primaryAzurePort,
-        @Nullable String primaryPeerAddressPrefix,
-        String provisioningState,
-        @Nullable SubResourceResponse routeFilter,
-        @Nullable String secondaryAzurePort,
-        @Nullable String secondaryPeerAddressPrefix,
-        @Nullable String sharedKey,
-        @Nullable String state,
-        @Nullable ExpressRouteCircuitStatsResponse stats,
-        String type,
-        @Nullable Integer vlanId) {
+        @OutputCustomType.Parameter("azureASN") @Nullable Integer azureASN,
+        @OutputCustomType.Parameter("connections") @Nullable List<ExpressRouteCircuitConnectionResponse> connections,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("expressRouteConnection") @Nullable ExpressRouteConnectionIdResponse expressRouteConnection,
+        @OutputCustomType.Parameter("gatewayManagerEtag") @Nullable String gatewayManagerEtag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("ipv6PeeringConfig") @Nullable Ipv6ExpressRouteCircuitPeeringConfigResponse ipv6PeeringConfig,
+        @OutputCustomType.Parameter("lastModifiedBy") String lastModifiedBy,
+        @OutputCustomType.Parameter("microsoftPeeringConfig") @Nullable ExpressRouteCircuitPeeringConfigResponse microsoftPeeringConfig,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("peerASN") @Nullable Double peerASN,
+        @OutputCustomType.Parameter("peeredConnections") List<PeerExpressRouteCircuitConnectionResponse> peeredConnections,
+        @OutputCustomType.Parameter("peeringType") @Nullable String peeringType,
+        @OutputCustomType.Parameter("primaryAzurePort") @Nullable String primaryAzurePort,
+        @OutputCustomType.Parameter("primaryPeerAddressPrefix") @Nullable String primaryPeerAddressPrefix,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("routeFilter") @Nullable SubResourceResponse routeFilter,
+        @OutputCustomType.Parameter("secondaryAzurePort") @Nullable String secondaryAzurePort,
+        @OutputCustomType.Parameter("secondaryPeerAddressPrefix") @Nullable String secondaryPeerAddressPrefix,
+        @OutputCustomType.Parameter("sharedKey") @Nullable String sharedKey,
+        @OutputCustomType.Parameter("state") @Nullable String state,
+        @OutputCustomType.Parameter("stats") @Nullable ExpressRouteCircuitStatsResponse stats,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("vlanId") @Nullable Integer vlanId) {
         this.azureASN = azureASN;
         this.connections = connections;
         this.etag = etag;

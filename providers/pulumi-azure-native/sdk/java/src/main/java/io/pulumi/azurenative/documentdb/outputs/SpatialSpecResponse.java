@@ -23,10 +23,10 @@ public final class SpatialSpecResponse {
      */
     private final @Nullable List<String> types;
 
-    @OutputCustomType.Constructor({"path","types"})
+    @OutputCustomType.Constructor
     private SpatialSpecResponse(
-        @Nullable String path,
-        @Nullable List<String> types) {
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("types") @Nullable List<String> types) {
         this.path = path;
         this.types = types;
     }

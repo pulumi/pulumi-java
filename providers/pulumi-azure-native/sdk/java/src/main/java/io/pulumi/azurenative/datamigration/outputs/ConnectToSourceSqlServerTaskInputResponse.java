@@ -34,12 +34,12 @@ public final class ConnectToSourceSqlServerTaskInputResponse {
      */
     private final SqlConnectionInfoResponse sourceConnectionInfo;
 
-    @OutputCustomType.Constructor({"checkPermissionsGroup","collectAgentJobs","collectLogins","sourceConnectionInfo"})
+    @OutputCustomType.Constructor
     private ConnectToSourceSqlServerTaskInputResponse(
-        @Nullable String checkPermissionsGroup,
-        @Nullable Boolean collectAgentJobs,
-        @Nullable Boolean collectLogins,
-        SqlConnectionInfoResponse sourceConnectionInfo) {
+        @OutputCustomType.Parameter("checkPermissionsGroup") @Nullable String checkPermissionsGroup,
+        @OutputCustomType.Parameter("collectAgentJobs") @Nullable Boolean collectAgentJobs,
+        @OutputCustomType.Parameter("collectLogins") @Nullable Boolean collectLogins,
+        @OutputCustomType.Parameter("sourceConnectionInfo") SqlConnectionInfoResponse sourceConnectionInfo) {
         this.checkPermissionsGroup = checkPermissionsGroup;
         this.collectAgentJobs = collectAgentJobs;
         this.collectLogins = collectLogins;

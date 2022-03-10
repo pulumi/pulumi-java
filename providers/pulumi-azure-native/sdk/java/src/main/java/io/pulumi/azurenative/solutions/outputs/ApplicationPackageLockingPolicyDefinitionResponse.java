@@ -22,10 +22,10 @@ public final class ApplicationPackageLockingPolicyDefinitionResponse {
      */
     private final @Nullable List<String> allowedDataActions;
 
-    @OutputCustomType.Constructor({"allowedActions","allowedDataActions"})
+    @OutputCustomType.Constructor
     private ApplicationPackageLockingPolicyDefinitionResponse(
-        @Nullable List<String> allowedActions,
-        @Nullable List<String> allowedDataActions) {
+        @OutputCustomType.Parameter("allowedActions") @Nullable List<String> allowedActions,
+        @OutputCustomType.Parameter("allowedDataActions") @Nullable List<String> allowedDataActions) {
         this.allowedActions = allowedActions;
         this.allowedDataActions = allowedDataActions;
     }

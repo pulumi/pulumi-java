@@ -22,10 +22,10 @@ public final class InnerErrorResponse {
      */
     private final @Nullable String exceptiontype;
 
-    @OutputCustomType.Constructor({"errordetail","exceptiontype"})
+    @OutputCustomType.Constructor
     private InnerErrorResponse(
-        @Nullable String errordetail,
-        @Nullable String exceptiontype) {
+        @OutputCustomType.Parameter("errordetail") @Nullable String errordetail,
+        @OutputCustomType.Parameter("exceptiontype") @Nullable String exceptiontype) {
         this.errordetail = errordetail;
         this.exceptiontype = exceptiontype;
     }

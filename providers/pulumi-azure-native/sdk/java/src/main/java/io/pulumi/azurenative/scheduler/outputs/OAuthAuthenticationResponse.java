@@ -38,13 +38,13 @@ public final class OAuthAuthenticationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"audience","clientId","secret","tenant","type"})
+    @OutputCustomType.Constructor
     private OAuthAuthenticationResponse(
-        @Nullable String audience,
-        @Nullable String clientId,
-        @Nullable String secret,
-        @Nullable String tenant,
-        String type) {
+        @OutputCustomType.Parameter("audience") @Nullable String audience,
+        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
+        @OutputCustomType.Parameter("secret") @Nullable String secret,
+        @OutputCustomType.Parameter("tenant") @Nullable String tenant,
+        @OutputCustomType.Parameter("type") String type) {
         this.audience = audience;
         this.clientId = clientId;
         this.secret = secret;

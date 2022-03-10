@@ -32,12 +32,12 @@ public final class TrackingInfoResponse {
      */
     private final @Nullable String trackingUrl;
 
-    @OutputCustomType.Constructor({"carrierName","serialNumber","trackingId","trackingUrl"})
+    @OutputCustomType.Constructor
     private TrackingInfoResponse(
-        @Nullable String carrierName,
-        @Nullable String serialNumber,
-        @Nullable String trackingId,
-        @Nullable String trackingUrl) {
+        @OutputCustomType.Parameter("carrierName") @Nullable String carrierName,
+        @OutputCustomType.Parameter("serialNumber") @Nullable String serialNumber,
+        @OutputCustomType.Parameter("trackingId") @Nullable String trackingId,
+        @OutputCustomType.Parameter("trackingUrl") @Nullable String trackingUrl) {
         this.carrierName = carrierName;
         this.serialNumber = serialNumber;
         this.trackingId = trackingId;

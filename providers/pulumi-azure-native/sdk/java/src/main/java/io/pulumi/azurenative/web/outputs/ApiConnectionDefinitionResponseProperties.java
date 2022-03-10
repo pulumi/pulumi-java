@@ -58,17 +58,17 @@ public final class ApiConnectionDefinitionResponseProperties {
      */
     private final @Nullable List<ApiConnectionTestLinkResponse> testLinks;
 
-    @OutputCustomType.Constructor({"api","changedTime","createdTime","customParameterValues","displayName","nonSecretParameterValues","parameterValues","statuses","testLinks"})
+    @OutputCustomType.Constructor
     private ApiConnectionDefinitionResponseProperties(
-        @Nullable ApiReferenceResponse api,
-        @Nullable String changedTime,
-        @Nullable String createdTime,
-        @Nullable Map<String,String> customParameterValues,
-        @Nullable String displayName,
-        @Nullable Map<String,String> nonSecretParameterValues,
-        @Nullable Map<String,String> parameterValues,
-        @Nullable List<ConnectionStatusDefinitionResponse> statuses,
-        @Nullable List<ApiConnectionTestLinkResponse> testLinks) {
+        @OutputCustomType.Parameter("api") @Nullable ApiReferenceResponse api,
+        @OutputCustomType.Parameter("changedTime") @Nullable String changedTime,
+        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
+        @OutputCustomType.Parameter("customParameterValues") @Nullable Map<String,String> customParameterValues,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("nonSecretParameterValues") @Nullable Map<String,String> nonSecretParameterValues,
+        @OutputCustomType.Parameter("parameterValues") @Nullable Map<String,String> parameterValues,
+        @OutputCustomType.Parameter("statuses") @Nullable List<ConnectionStatusDefinitionResponse> statuses,
+        @OutputCustomType.Parameter("testLinks") @Nullable List<ApiConnectionTestLinkResponse> testLinks) {
         this.api = api;
         this.changedTime = changedTime;
         this.createdTime = createdTime;

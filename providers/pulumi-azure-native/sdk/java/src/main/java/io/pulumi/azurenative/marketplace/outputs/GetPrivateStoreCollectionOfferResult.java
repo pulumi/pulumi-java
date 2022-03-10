@@ -92,23 +92,23 @@ public final class GetPrivateStoreCollectionOfferResult {
      */
     private final @Nullable Boolean updateSuppressedDueIdempotence;
 
-    @OutputCustomType.Constructor({"createdAt","eTag","iconFileUris","id","modifiedAt","name","offerDisplayName","plans","privateStoreId","publisherDisplayName","specificPlanIdsLimitation","systemData","type","uniqueOfferId","updateSuppressedDueIdempotence"})
+    @OutputCustomType.Constructor
     private GetPrivateStoreCollectionOfferResult(
-        String createdAt,
-        @Nullable String eTag,
-        @Nullable Map<String,String> iconFileUris,
-        String id,
-        String modifiedAt,
-        String name,
-        String offerDisplayName,
-        @Nullable List<PlanResponse> plans,
-        String privateStoreId,
-        String publisherDisplayName,
-        @Nullable List<String> specificPlanIdsLimitation,
-        SystemDataResponse systemData,
-        String type,
-        String uniqueOfferId,
-        @Nullable Boolean updateSuppressedDueIdempotence) {
+        @OutputCustomType.Parameter("createdAt") String createdAt,
+        @OutputCustomType.Parameter("eTag") @Nullable String eTag,
+        @OutputCustomType.Parameter("iconFileUris") @Nullable Map<String,String> iconFileUris,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("modifiedAt") String modifiedAt,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("offerDisplayName") String offerDisplayName,
+        @OutputCustomType.Parameter("plans") @Nullable List<PlanResponse> plans,
+        @OutputCustomType.Parameter("privateStoreId") String privateStoreId,
+        @OutputCustomType.Parameter("publisherDisplayName") String publisherDisplayName,
+        @OutputCustomType.Parameter("specificPlanIdsLimitation") @Nullable List<String> specificPlanIdsLimitation,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("uniqueOfferId") String uniqueOfferId,
+        @OutputCustomType.Parameter("updateSuppressedDueIdempotence") @Nullable Boolean updateSuppressedDueIdempotence) {
         this.createdAt = createdAt;
         this.eTag = eTag;
         this.iconFileUris = iconFileUris;

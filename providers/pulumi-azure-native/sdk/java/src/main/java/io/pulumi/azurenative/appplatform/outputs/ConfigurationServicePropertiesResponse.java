@@ -36,12 +36,12 @@ public final class ConfigurationServicePropertiesResponse {
      */
     private final @Nullable ConfigurationServiceSettingsResponse settings;
 
-    @OutputCustomType.Constructor({"instances","provisioningState","resourceRequests","settings"})
+    @OutputCustomType.Constructor
     private ConfigurationServicePropertiesResponse(
-        List<ConfigurationServiceInstanceResponse> instances,
-        String provisioningState,
-        ConfigurationServiceResourceRequestsResponse resourceRequests,
-        @Nullable ConfigurationServiceSettingsResponse settings) {
+        @OutputCustomType.Parameter("instances") List<ConfigurationServiceInstanceResponse> instances,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("resourceRequests") ConfigurationServiceResourceRequestsResponse resourceRequests,
+        @OutputCustomType.Parameter("settings") @Nullable ConfigurationServiceSettingsResponse settings) {
         this.instances = instances;
         this.provisioningState = provisioningState;
         this.resourceRequests = resourceRequests;

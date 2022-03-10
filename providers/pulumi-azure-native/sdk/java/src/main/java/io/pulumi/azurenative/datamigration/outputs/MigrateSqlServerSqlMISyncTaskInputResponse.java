@@ -48,14 +48,14 @@ public final class MigrateSqlServerSqlMISyncTaskInputResponse {
      */
     private final MiSqlConnectionInfoResponse targetConnectionInfo;
 
-    @OutputCustomType.Constructor({"azureApp","backupFileShare","selectedDatabases","sourceConnectionInfo","storageResourceId","targetConnectionInfo"})
+    @OutputCustomType.Constructor
     private MigrateSqlServerSqlMISyncTaskInputResponse(
-        AzureActiveDirectoryAppResponse azureApp,
-        @Nullable FileShareResponse backupFileShare,
-        List<MigrateSqlServerSqlMIDatabaseInputResponse> selectedDatabases,
-        SqlConnectionInfoResponse sourceConnectionInfo,
-        String storageResourceId,
-        MiSqlConnectionInfoResponse targetConnectionInfo) {
+        @OutputCustomType.Parameter("azureApp") AzureActiveDirectoryAppResponse azureApp,
+        @OutputCustomType.Parameter("backupFileShare") @Nullable FileShareResponse backupFileShare,
+        @OutputCustomType.Parameter("selectedDatabases") List<MigrateSqlServerSqlMIDatabaseInputResponse> selectedDatabases,
+        @OutputCustomType.Parameter("sourceConnectionInfo") SqlConnectionInfoResponse sourceConnectionInfo,
+        @OutputCustomType.Parameter("storageResourceId") String storageResourceId,
+        @OutputCustomType.Parameter("targetConnectionInfo") MiSqlConnectionInfoResponse targetConnectionInfo) {
         this.azureApp = azureApp;
         this.backupFileShare = backupFileShare;
         this.selectedDatabases = selectedDatabases;

@@ -62,16 +62,16 @@ public final class FabricPropertiesResponse {
      */
     private final @Nullable EncryptionDetailsResponse rolloverEncryptionDetails;
 
-    @OutputCustomType.Constructor({"bcdrState","customDetails","encryptionDetails","friendlyName","health","healthErrorDetails","internalIdentifier","rolloverEncryptionDetails"})
+    @OutputCustomType.Constructor
     private FabricPropertiesResponse(
-        @Nullable String bcdrState,
-        @Nullable Object customDetails,
-        @Nullable EncryptionDetailsResponse encryptionDetails,
-        @Nullable String friendlyName,
-        @Nullable String health,
-        @Nullable List<HealthErrorResponse> healthErrorDetails,
-        @Nullable String internalIdentifier,
-        @Nullable EncryptionDetailsResponse rolloverEncryptionDetails) {
+        @OutputCustomType.Parameter("bcdrState") @Nullable String bcdrState,
+        @OutputCustomType.Parameter("customDetails") @Nullable Object customDetails,
+        @OutputCustomType.Parameter("encryptionDetails") @Nullable EncryptionDetailsResponse encryptionDetails,
+        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @OutputCustomType.Parameter("health") @Nullable String health,
+        @OutputCustomType.Parameter("healthErrorDetails") @Nullable List<HealthErrorResponse> healthErrorDetails,
+        @OutputCustomType.Parameter("internalIdentifier") @Nullable String internalIdentifier,
+        @OutputCustomType.Parameter("rolloverEncryptionDetails") @Nullable EncryptionDetailsResponse rolloverEncryptionDetails) {
         this.bcdrState = bcdrState;
         this.customDetails = customDetails;
         this.encryptionDetails = encryptionDetails;

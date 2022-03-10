@@ -20,10 +20,10 @@ public final class GetExposureControlFeatureValueByFactoryResult {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"featureName","value"})
+    @OutputCustomType.Constructor
     private GetExposureControlFeatureValueByFactoryResult(
-        String featureName,
-        String value) {
+        @OutputCustomType.Parameter("featureName") String featureName,
+        @OutputCustomType.Parameter("value") String value) {
         this.featureName = featureName;
         this.value = value;
     }

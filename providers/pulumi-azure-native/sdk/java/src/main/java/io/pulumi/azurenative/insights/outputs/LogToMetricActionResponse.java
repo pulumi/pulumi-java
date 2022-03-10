@@ -23,10 +23,10 @@ public final class LogToMetricActionResponse {
      */
     private final String odataType;
 
-    @OutputCustomType.Constructor({"criteria","odataType"})
+    @OutputCustomType.Constructor
     private LogToMetricActionResponse(
-        List<CriteriaResponse> criteria,
-        String odataType) {
+        @OutputCustomType.Parameter("criteria") List<CriteriaResponse> criteria,
+        @OutputCustomType.Parameter("odataType") String odataType) {
         this.criteria = criteria;
         this.odataType = odataType;
     }

@@ -31,12 +31,12 @@ public final class RegionalReplicationStatusResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"details","progress","region","state"})
+    @OutputCustomType.Constructor
     private RegionalReplicationStatusResponse(
-        String details,
-        Integer progress,
-        String region,
-        String state) {
+        @OutputCustomType.Parameter("details") String details,
+        @OutputCustomType.Parameter("progress") Integer progress,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("state") String state) {
         this.details = details;
         this.progress = progress;
         this.region = region;

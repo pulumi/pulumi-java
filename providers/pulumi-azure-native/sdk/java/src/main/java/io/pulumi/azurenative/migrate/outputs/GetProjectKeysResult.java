@@ -20,10 +20,10 @@ public final class GetProjectKeysResult {
      */
     private final String workspaceKey;
 
-    @OutputCustomType.Constructor({"workspaceId","workspaceKey"})
+    @OutputCustomType.Constructor
     private GetProjectKeysResult(
-        String workspaceId,
-        String workspaceKey) {
+        @OutputCustomType.Parameter("workspaceId") String workspaceId,
+        @OutputCustomType.Parameter("workspaceKey") String workspaceKey) {
         this.workspaceId = workspaceId;
         this.workspaceKey = workspaceKey;
     }

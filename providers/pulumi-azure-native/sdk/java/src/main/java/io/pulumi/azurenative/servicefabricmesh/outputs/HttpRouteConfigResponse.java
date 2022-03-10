@@ -27,11 +27,11 @@ public final class HttpRouteConfigResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"destination","match","name"})
+    @OutputCustomType.Constructor
     private HttpRouteConfigResponse(
-        GatewayDestinationResponse destination,
-        HttpRouteMatchRuleResponse match,
-        String name) {
+        @OutputCustomType.Parameter("destination") GatewayDestinationResponse destination,
+        @OutputCustomType.Parameter("match") HttpRouteMatchRuleResponse match,
+        @OutputCustomType.Parameter("name") String name) {
         this.destination = destination;
         this.match = match;
         this.name = name;

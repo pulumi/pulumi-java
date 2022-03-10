@@ -69,19 +69,19 @@ public final class NatRuleResponse {
      */
     private final @Nullable String translatedPort;
 
-    @OutputCustomType.Constructor({"description","destinationAddresses","destinationPorts","ipProtocols","name","ruleType","sourceAddresses","sourceIpGroups","translatedAddress","translatedFqdn","translatedPort"})
+    @OutputCustomType.Constructor
     private NatRuleResponse(
-        @Nullable String description,
-        @Nullable List<String> destinationAddresses,
-        @Nullable List<String> destinationPorts,
-        @Nullable List<String> ipProtocols,
-        @Nullable String name,
-        String ruleType,
-        @Nullable List<String> sourceAddresses,
-        @Nullable List<String> sourceIpGroups,
-        @Nullable String translatedAddress,
-        @Nullable String translatedFqdn,
-        @Nullable String translatedPort) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("destinationAddresses") @Nullable List<String> destinationAddresses,
+        @OutputCustomType.Parameter("destinationPorts") @Nullable List<String> destinationPorts,
+        @OutputCustomType.Parameter("ipProtocols") @Nullable List<String> ipProtocols,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("ruleType") String ruleType,
+        @OutputCustomType.Parameter("sourceAddresses") @Nullable List<String> sourceAddresses,
+        @OutputCustomType.Parameter("sourceIpGroups") @Nullable List<String> sourceIpGroups,
+        @OutputCustomType.Parameter("translatedAddress") @Nullable String translatedAddress,
+        @OutputCustomType.Parameter("translatedFqdn") @Nullable String translatedFqdn,
+        @OutputCustomType.Parameter("translatedPort") @Nullable String translatedPort) {
         this.description = description;
         this.destinationAddresses = destinationAddresses;
         this.destinationPorts = destinationPorts;

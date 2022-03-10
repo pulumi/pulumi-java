@@ -48,15 +48,15 @@ public final class GetManagementGroupNetworkManagerConnectionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"description","etag","id","name","networkManagerId","systemData","type"})
+    @OutputCustomType.Constructor
     private GetManagementGroupNetworkManagerConnectionResult(
-        @Nullable String description,
-        String etag,
-        String id,
-        String name,
-        @Nullable String networkManagerId,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networkManagerId") @Nullable String networkManagerId,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.description = description;
         this.etag = etag;
         this.id = id;

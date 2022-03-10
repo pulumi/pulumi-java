@@ -48,15 +48,15 @@ public final class TimeWindowCustomAlertRuleResponse {
      */
     private final String timeWindowSize;
 
-    @OutputCustomType.Constructor({"description","displayName","isEnabled","maxThreshold","minThreshold","ruleType","timeWindowSize"})
+    @OutputCustomType.Constructor
     private TimeWindowCustomAlertRuleResponse(
-        String description,
-        String displayName,
-        Boolean isEnabled,
-        Integer maxThreshold,
-        Integer minThreshold,
-        String ruleType,
-        String timeWindowSize) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
+        @OutputCustomType.Parameter("maxThreshold") Integer maxThreshold,
+        @OutputCustomType.Parameter("minThreshold") Integer minThreshold,
+        @OutputCustomType.Parameter("ruleType") String ruleType,
+        @OutputCustomType.Parameter("timeWindowSize") String timeWindowSize) {
         this.description = description;
         this.displayName = displayName;
         this.isEnabled = isEnabled;

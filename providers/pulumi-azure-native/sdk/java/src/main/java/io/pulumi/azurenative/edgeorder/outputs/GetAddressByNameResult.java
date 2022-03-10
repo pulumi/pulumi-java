@@ -61,17 +61,17 @@ public final class GetAddressByNameResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"addressValidationStatus","contactDetails","id","location","name","shippingAddress","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetAddressByNameResult(
-        String addressValidationStatus,
-        ContactDetailsResponse contactDetails,
-        String id,
-        String location,
-        String name,
-        @Nullable ShippingAddressResponse shippingAddress,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("addressValidationStatus") String addressValidationStatus,
+        @OutputCustomType.Parameter("contactDetails") ContactDetailsResponse contactDetails,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("shippingAddress") @Nullable ShippingAddressResponse shippingAddress,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.addressValidationStatus = addressValidationStatus;
         this.contactDetails = contactDetails;
         this.id = id;

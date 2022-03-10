@@ -27,11 +27,11 @@ public final class QuantumWorkspaceResponseIdentity {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"principalId","tenantId","type"})
+    @OutputCustomType.Constructor
     private QuantumWorkspaceResponseIdentity(
-        String principalId,
-        String tenantId,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("principalId") String principalId,
+        @OutputCustomType.Parameter("tenantId") String tenantId,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.principalId = principalId;
         this.tenantId = tenantId;
         this.type = type;

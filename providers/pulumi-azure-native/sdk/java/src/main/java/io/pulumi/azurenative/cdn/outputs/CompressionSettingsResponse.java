@@ -24,10 +24,10 @@ public final class CompressionSettingsResponse {
      */
     private final @Nullable Boolean isCompressionEnabled;
 
-    @OutputCustomType.Constructor({"contentTypesToCompress","isCompressionEnabled"})
+    @OutputCustomType.Constructor
     private CompressionSettingsResponse(
-        @Nullable List<String> contentTypesToCompress,
-        @Nullable Boolean isCompressionEnabled) {
+        @OutputCustomType.Parameter("contentTypesToCompress") @Nullable List<String> contentTypesToCompress,
+        @OutputCustomType.Parameter("isCompressionEnabled") @Nullable Boolean isCompressionEnabled) {
         this.contentTypesToCompress = contentTypesToCompress;
         this.isCompressionEnabled = isCompressionEnabled;
     }

@@ -29,13 +29,13 @@ public final class AzureFileShareConfigurationResponse {
      */
     private final String relativeMountPath;
 
-    @OutputCustomType.Constructor({"accountKey","accountName","azureFileUrl","mountOptions","relativeMountPath"})
+    @OutputCustomType.Constructor
     private AzureFileShareConfigurationResponse(
-        String accountKey,
-        String accountName,
-        String azureFileUrl,
-        @Nullable String mountOptions,
-        String relativeMountPath) {
+        @OutputCustomType.Parameter("accountKey") String accountKey,
+        @OutputCustomType.Parameter("accountName") String accountName,
+        @OutputCustomType.Parameter("azureFileUrl") String azureFileUrl,
+        @OutputCustomType.Parameter("mountOptions") @Nullable String mountOptions,
+        @OutputCustomType.Parameter("relativeMountPath") String relativeMountPath) {
         this.accountKey = accountKey;
         this.accountName = accountName;
         this.azureFileUrl = azureFileUrl;

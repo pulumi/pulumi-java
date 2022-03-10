@@ -17,8 +17,8 @@ public final class LanguageExtensionsListResponse {
      */
     private final @Nullable List<LanguageExtensionResponse> value;
 
-    @OutputCustomType.Constructor({"value"})
-    private LanguageExtensionsListResponse(@Nullable List<LanguageExtensionResponse> value) {
+    @OutputCustomType.Constructor
+    private LanguageExtensionsListResponse(@OutputCustomType.Parameter("value") @Nullable List<LanguageExtensionResponse> value) {
         this.value = value;
     }
 

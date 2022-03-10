@@ -78,20 +78,20 @@ public final class VpnClientConfigurationResponse {
      */
     private final @Nullable List<VpnClientRootCertificateResponse> vpnClientRootCertificates;
 
-    @OutputCustomType.Constructor({"aadAudience","aadIssuer","aadTenant","radiusServerAddress","radiusServerSecret","radiusServers","vpnAuthenticationTypes","vpnClientAddressPool","vpnClientIpsecPolicies","vpnClientProtocols","vpnClientRevokedCertificates","vpnClientRootCertificates"})
+    @OutputCustomType.Constructor
     private VpnClientConfigurationResponse(
-        @Nullable String aadAudience,
-        @Nullable String aadIssuer,
-        @Nullable String aadTenant,
-        @Nullable String radiusServerAddress,
-        @Nullable String radiusServerSecret,
-        @Nullable List<RadiusServerResponse> radiusServers,
-        @Nullable List<String> vpnAuthenticationTypes,
-        @Nullable AddressSpaceResponse vpnClientAddressPool,
-        @Nullable List<IpsecPolicyResponse> vpnClientIpsecPolicies,
-        @Nullable List<String> vpnClientProtocols,
-        @Nullable List<VpnClientRevokedCertificateResponse> vpnClientRevokedCertificates,
-        @Nullable List<VpnClientRootCertificateResponse> vpnClientRootCertificates) {
+        @OutputCustomType.Parameter("aadAudience") @Nullable String aadAudience,
+        @OutputCustomType.Parameter("aadIssuer") @Nullable String aadIssuer,
+        @OutputCustomType.Parameter("aadTenant") @Nullable String aadTenant,
+        @OutputCustomType.Parameter("radiusServerAddress") @Nullable String radiusServerAddress,
+        @OutputCustomType.Parameter("radiusServerSecret") @Nullable String radiusServerSecret,
+        @OutputCustomType.Parameter("radiusServers") @Nullable List<RadiusServerResponse> radiusServers,
+        @OutputCustomType.Parameter("vpnAuthenticationTypes") @Nullable List<String> vpnAuthenticationTypes,
+        @OutputCustomType.Parameter("vpnClientAddressPool") @Nullable AddressSpaceResponse vpnClientAddressPool,
+        @OutputCustomType.Parameter("vpnClientIpsecPolicies") @Nullable List<IpsecPolicyResponse> vpnClientIpsecPolicies,
+        @OutputCustomType.Parameter("vpnClientProtocols") @Nullable List<String> vpnClientProtocols,
+        @OutputCustomType.Parameter("vpnClientRevokedCertificates") @Nullable List<VpnClientRevokedCertificateResponse> vpnClientRevokedCertificates,
+        @OutputCustomType.Parameter("vpnClientRootCertificates") @Nullable List<VpnClientRootCertificateResponse> vpnClientRootCertificates) {
         this.aadAudience = aadAudience;
         this.aadIssuer = aadIssuer;
         this.aadTenant = aadTenant;

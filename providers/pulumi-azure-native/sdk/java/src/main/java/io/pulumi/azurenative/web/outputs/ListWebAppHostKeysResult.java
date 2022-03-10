@@ -28,11 +28,11 @@ public final class ListWebAppHostKeysResult {
      */
     private final @Nullable Map<String,String> systemKeys;
 
-    @OutputCustomType.Constructor({"functionKeys","masterKey","systemKeys"})
+    @OutputCustomType.Constructor
     private ListWebAppHostKeysResult(
-        @Nullable Map<String,String> functionKeys,
-        @Nullable String masterKey,
-        @Nullable Map<String,String> systemKeys) {
+        @OutputCustomType.Parameter("functionKeys") @Nullable Map<String,String> functionKeys,
+        @OutputCustomType.Parameter("masterKey") @Nullable String masterKey,
+        @OutputCustomType.Parameter("systemKeys") @Nullable Map<String,String> systemKeys) {
         this.functionKeys = functionKeys;
         this.masterKey = masterKey;
         this.systemKeys = systemKeys;

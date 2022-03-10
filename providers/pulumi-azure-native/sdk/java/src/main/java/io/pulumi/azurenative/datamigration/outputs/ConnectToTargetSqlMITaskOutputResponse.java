@@ -42,14 +42,14 @@ public final class ConnectToTargetSqlMITaskOutputResponse {
      */
     private final List<ReportableExceptionResponse> validationErrors;
 
-    @OutputCustomType.Constructor({"agentJobs","id","logins","targetServerBrandVersion","targetServerVersion","validationErrors"})
+    @OutputCustomType.Constructor
     private ConnectToTargetSqlMITaskOutputResponse(
-        List<String> agentJobs,
-        String id,
-        List<String> logins,
-        String targetServerBrandVersion,
-        String targetServerVersion,
-        List<ReportableExceptionResponse> validationErrors) {
+        @OutputCustomType.Parameter("agentJobs") List<String> agentJobs,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("logins") List<String> logins,
+        @OutputCustomType.Parameter("targetServerBrandVersion") String targetServerBrandVersion,
+        @OutputCustomType.Parameter("targetServerVersion") String targetServerVersion,
+        @OutputCustomType.Parameter("validationErrors") List<ReportableExceptionResponse> validationErrors) {
         this.agentJobs = agentJobs;
         this.id = id;
         this.logins = logins;

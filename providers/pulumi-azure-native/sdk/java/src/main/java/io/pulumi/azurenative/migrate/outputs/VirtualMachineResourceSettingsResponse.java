@@ -38,13 +38,13 @@ public final class VirtualMachineResourceSettingsResponse {
      */
     private final @Nullable String targetVmSize;
 
-    @OutputCustomType.Constructor({"resourceType","targetAvailabilitySetId","targetAvailabilityZone","targetResourceName","targetVmSize"})
+    @OutputCustomType.Constructor
     private VirtualMachineResourceSettingsResponse(
-        String resourceType,
-        @Nullable String targetAvailabilitySetId,
-        @Nullable String targetAvailabilityZone,
-        String targetResourceName,
-        @Nullable String targetVmSize) {
+        @OutputCustomType.Parameter("resourceType") String resourceType,
+        @OutputCustomType.Parameter("targetAvailabilitySetId") @Nullable String targetAvailabilitySetId,
+        @OutputCustomType.Parameter("targetAvailabilityZone") @Nullable String targetAvailabilityZone,
+        @OutputCustomType.Parameter("targetResourceName") String targetResourceName,
+        @OutputCustomType.Parameter("targetVmSize") @Nullable String targetVmSize) {
         this.resourceType = resourceType;
         this.targetAvailabilitySetId = targetAvailabilitySetId;
         this.targetAvailabilityZone = targetAvailabilityZone;

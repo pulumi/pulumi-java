@@ -32,12 +32,12 @@ public final class GetMonitorDefaultKeyResult {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"created","createdBy","key","name"})
+    @OutputCustomType.Constructor
     private GetMonitorDefaultKeyResult(
-        @Nullable String created,
-        @Nullable String createdBy,
-        String key,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("created") @Nullable String created,
+        @OutputCustomType.Parameter("createdBy") @Nullable String createdBy,
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.created = created;
         this.createdBy = createdBy;
         this.key = key;

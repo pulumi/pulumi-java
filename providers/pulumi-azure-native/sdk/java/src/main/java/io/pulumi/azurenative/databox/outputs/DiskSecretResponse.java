@@ -20,10 +20,10 @@ public final class DiskSecretResponse {
      */
     private final String diskSerialNumber;
 
-    @OutputCustomType.Constructor({"bitLockerKey","diskSerialNumber"})
+    @OutputCustomType.Constructor
     private DiskSecretResponse(
-        String bitLockerKey,
-        String diskSerialNumber) {
+        @OutputCustomType.Parameter("bitLockerKey") String bitLockerKey,
+        @OutputCustomType.Parameter("diskSerialNumber") String diskSerialNumber) {
         this.bitLockerKey = bitLockerKey;
         this.diskSerialNumber = diskSerialNumber;
     }

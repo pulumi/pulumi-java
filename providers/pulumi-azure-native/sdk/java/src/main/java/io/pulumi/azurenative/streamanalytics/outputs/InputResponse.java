@@ -35,12 +35,12 @@ public final class InputResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","properties","type"})
+    @OutputCustomType.Constructor
     private InputResponse(
-        String id,
-        @Nullable String name,
-        @Nullable Either<ReferenceInputPropertiesResponse,StreamInputPropertiesResponse> properties,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("properties") @Nullable Either<ReferenceInputPropertiesResponse,StreamInputPropertiesResponse> properties,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.properties = properties;

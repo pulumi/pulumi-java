@@ -17,8 +17,8 @@ public final class ScaleInPolicyResponse {
      */
     private final @Nullable List<String> rules;
 
-    @OutputCustomType.Constructor({"rules"})
-    private ScaleInPolicyResponse(@Nullable List<String> rules) {
+    @OutputCustomType.Constructor
+    private ScaleInPolicyResponse(@OutputCustomType.Parameter("rules") @Nullable List<String> rules) {
         this.rules = rules;
     }
 

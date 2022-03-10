@@ -96,23 +96,23 @@ public final class GetFhirServiceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"accessPolicies","acrConfiguration","authenticationConfiguration","corsConfiguration","etag","exportConfiguration","id","identity","kind","location","name","provisioningState","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetFhirServiceResult(
-        @Nullable List<FhirServiceAccessPolicyEntryResponse> accessPolicies,
-        @Nullable FhirServiceAcrConfigurationResponse acrConfiguration,
-        @Nullable FhirServiceAuthenticationConfigurationResponse authenticationConfiguration,
-        @Nullable FhirServiceCorsConfigurationResponse corsConfiguration,
-        @Nullable String etag,
-        @Nullable FhirServiceExportConfigurationResponse exportConfiguration,
-        String id,
-        @Nullable ServiceManagedIdentityResponseIdentity identity,
-        @Nullable String kind,
-        @Nullable String location,
-        String name,
-        String provisioningState,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("accessPolicies") @Nullable List<FhirServiceAccessPolicyEntryResponse> accessPolicies,
+        @OutputCustomType.Parameter("acrConfiguration") @Nullable FhirServiceAcrConfigurationResponse acrConfiguration,
+        @OutputCustomType.Parameter("authenticationConfiguration") @Nullable FhirServiceAuthenticationConfigurationResponse authenticationConfiguration,
+        @OutputCustomType.Parameter("corsConfiguration") @Nullable FhirServiceCorsConfigurationResponse corsConfiguration,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("exportConfiguration") @Nullable FhirServiceExportConfigurationResponse exportConfiguration,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable ServiceManagedIdentityResponseIdentity identity,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.accessPolicies = accessPolicies;
         this.acrConfiguration = acrConfiguration;
         this.authenticationConfiguration = authenticationConfiguration;

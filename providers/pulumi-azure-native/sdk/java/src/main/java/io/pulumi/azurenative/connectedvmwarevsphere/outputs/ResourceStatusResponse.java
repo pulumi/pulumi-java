@@ -40,14 +40,14 @@ public final class ResourceStatusResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"lastUpdatedAt","message","reason","severity","status","type"})
+    @OutputCustomType.Constructor
     private ResourceStatusResponse(
-        String lastUpdatedAt,
-        String message,
-        String reason,
-        String severity,
-        String status,
-        String type) {
+        @OutputCustomType.Parameter("lastUpdatedAt") String lastUpdatedAt,
+        @OutputCustomType.Parameter("message") String message,
+        @OutputCustomType.Parameter("reason") String reason,
+        @OutputCustomType.Parameter("severity") String severity,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("type") String type) {
         this.lastUpdatedAt = lastUpdatedAt;
         this.message = message;
         this.reason = reason;

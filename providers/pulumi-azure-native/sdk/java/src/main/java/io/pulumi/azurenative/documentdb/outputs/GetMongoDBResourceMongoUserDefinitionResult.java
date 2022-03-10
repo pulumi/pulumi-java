@@ -59,17 +59,17 @@ public final class GetMongoDBResourceMongoUserDefinitionResult {
      */
     private final @Nullable String userName;
 
-    @OutputCustomType.Constructor({"customData","databaseName","id","mechanisms","name","password","roles","type","userName"})
+    @OutputCustomType.Constructor
     private GetMongoDBResourceMongoUserDefinitionResult(
-        @Nullable String customData,
-        @Nullable String databaseName,
-        String id,
-        @Nullable String mechanisms,
-        String name,
-        @Nullable String password,
-        @Nullable List<RoleResponse> roles,
-        String type,
-        @Nullable String userName) {
+        @OutputCustomType.Parameter("customData") @Nullable String customData,
+        @OutputCustomType.Parameter("databaseName") @Nullable String databaseName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("mechanisms") @Nullable String mechanisms,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("password") @Nullable String password,
+        @OutputCustomType.Parameter("roles") @Nullable List<RoleResponse> roles,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userName") @Nullable String userName) {
         this.customData = customData;
         this.databaseName = databaseName;
         this.id = id;

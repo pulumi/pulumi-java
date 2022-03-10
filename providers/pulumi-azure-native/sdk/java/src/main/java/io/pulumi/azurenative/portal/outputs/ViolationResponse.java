@@ -25,11 +25,11 @@ public final class ViolationResponse {
      */
     private final String userId;
 
-    @OutputCustomType.Constructor({"errorMessage","id","userId"})
+    @OutputCustomType.Constructor
     private ViolationResponse(
-        String errorMessage,
-        String id,
-        String userId) {
+        @OutputCustomType.Parameter("errorMessage") String errorMessage,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("userId") String userId) {
         this.errorMessage = errorMessage;
         this.id = id;
         this.userId = userId;

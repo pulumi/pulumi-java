@@ -104,26 +104,26 @@ public final class GetCloudConnectorResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"billingModel","collectionInfo","createdOn","credentialsKey","daysTrialRemaining","defaultManagementGroupId","displayName","externalBillingAccountId","id","kind","modifiedOn","name","providerBillingAccountDisplayName","providerBillingAccountId","reportId","status","subscriptionId","type"})
+    @OutputCustomType.Constructor
     private GetCloudConnectorResult(
-        @Nullable String billingModel,
-        ConnectorCollectionInfoResponse collectionInfo,
-        String createdOn,
-        @Nullable String credentialsKey,
-        Integer daysTrialRemaining,
-        @Nullable String defaultManagementGroupId,
-        @Nullable String displayName,
-        String externalBillingAccountId,
-        String id,
-        @Nullable String kind,
-        String modifiedOn,
-        String name,
-        String providerBillingAccountDisplayName,
-        String providerBillingAccountId,
-        @Nullable String reportId,
-        String status,
-        @Nullable String subscriptionId,
-        String type) {
+        @OutputCustomType.Parameter("billingModel") @Nullable String billingModel,
+        @OutputCustomType.Parameter("collectionInfo") ConnectorCollectionInfoResponse collectionInfo,
+        @OutputCustomType.Parameter("createdOn") String createdOn,
+        @OutputCustomType.Parameter("credentialsKey") @Nullable String credentialsKey,
+        @OutputCustomType.Parameter("daysTrialRemaining") Integer daysTrialRemaining,
+        @OutputCustomType.Parameter("defaultManagementGroupId") @Nullable String defaultManagementGroupId,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("externalBillingAccountId") String externalBillingAccountId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("modifiedOn") String modifiedOn,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("providerBillingAccountDisplayName") String providerBillingAccountDisplayName,
+        @OutputCustomType.Parameter("providerBillingAccountId") String providerBillingAccountId,
+        @OutputCustomType.Parameter("reportId") @Nullable String reportId,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("subscriptionId") @Nullable String subscriptionId,
+        @OutputCustomType.Parameter("type") String type) {
         this.billingModel = billingModel;
         this.collectionInfo = collectionInfo;
         this.createdOn = createdOn;

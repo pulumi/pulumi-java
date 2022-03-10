@@ -60,17 +60,17 @@ public final class GetManagedNetworkResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"connectivity","etag","id","location","name","provisioningState","scope","tags","type"})
+    @OutputCustomType.Constructor
     private GetManagedNetworkResult(
-        ConnectivityCollectionResponse connectivity,
-        String etag,
-        String id,
-        String location,
-        String name,
-        String provisioningState,
-        @Nullable ScopeResponse scope,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("connectivity") ConnectivityCollectionResponse connectivity,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("scope") @Nullable ScopeResponse scope,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.connectivity = connectivity;
         this.etag = etag;
         this.id = id;

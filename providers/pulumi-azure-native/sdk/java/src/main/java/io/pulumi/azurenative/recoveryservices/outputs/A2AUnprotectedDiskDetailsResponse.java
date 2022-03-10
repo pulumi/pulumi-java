@@ -17,8 +17,8 @@ public final class A2AUnprotectedDiskDetailsResponse {
      */
     private final @Nullable Integer diskLunId;
 
-    @OutputCustomType.Constructor({"diskLunId"})
-    private A2AUnprotectedDiskDetailsResponse(@Nullable Integer diskLunId) {
+    @OutputCustomType.Constructor
+    private A2AUnprotectedDiskDetailsResponse(@OutputCustomType.Parameter("diskLunId") @Nullable Integer diskLunId) {
         this.diskLunId = diskLunId;
     }
 

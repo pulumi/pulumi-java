@@ -23,10 +23,10 @@ public final class ScopeResponse {
      */
     private final @Nullable List<String> values;
 
-    @OutputCustomType.Constructor({"scopeType","values"})
+    @OutputCustomType.Constructor
     private ScopeResponse(
-        @Nullable String scopeType,
-        @Nullable List<String> values) {
+        @OutputCustomType.Parameter("scopeType") @Nullable String scopeType,
+        @OutputCustomType.Parameter("values") @Nullable List<String> values) {
         this.scopeType = scopeType;
         this.values = values;
     }

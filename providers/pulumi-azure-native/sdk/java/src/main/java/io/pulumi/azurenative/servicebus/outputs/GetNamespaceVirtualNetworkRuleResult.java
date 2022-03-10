@@ -32,12 +32,12 @@ public final class GetNamespaceVirtualNetworkRuleResult {
      */
     private final @Nullable String virtualNetworkSubnetId;
 
-    @OutputCustomType.Constructor({"id","name","type","virtualNetworkSubnetId"})
+    @OutputCustomType.Constructor
     private GetNamespaceVirtualNetworkRuleResult(
-        String id,
-        String name,
-        String type,
-        @Nullable String virtualNetworkSubnetId) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("virtualNetworkSubnetId") @Nullable String virtualNetworkSubnetId) {
         this.id = id;
         this.name = name;
         this.type = type;

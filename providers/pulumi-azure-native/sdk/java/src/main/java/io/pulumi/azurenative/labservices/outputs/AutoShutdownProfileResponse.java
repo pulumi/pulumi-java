@@ -42,14 +42,14 @@ public final class AutoShutdownProfileResponse {
      */
     private final @Nullable String shutdownWhenNotConnected;
 
-    @OutputCustomType.Constructor({"disconnectDelay","idleDelay","noConnectDelay","shutdownOnDisconnect","shutdownOnIdle","shutdownWhenNotConnected"})
+    @OutputCustomType.Constructor
     private AutoShutdownProfileResponse(
-        @Nullable String disconnectDelay,
-        @Nullable String idleDelay,
-        @Nullable String noConnectDelay,
-        @Nullable String shutdownOnDisconnect,
-        @Nullable String shutdownOnIdle,
-        @Nullable String shutdownWhenNotConnected) {
+        @OutputCustomType.Parameter("disconnectDelay") @Nullable String disconnectDelay,
+        @OutputCustomType.Parameter("idleDelay") @Nullable String idleDelay,
+        @OutputCustomType.Parameter("noConnectDelay") @Nullable String noConnectDelay,
+        @OutputCustomType.Parameter("shutdownOnDisconnect") @Nullable String shutdownOnDisconnect,
+        @OutputCustomType.Parameter("shutdownOnIdle") @Nullable String shutdownOnIdle,
+        @OutputCustomType.Parameter("shutdownWhenNotConnected") @Nullable String shutdownWhenNotConnected) {
         this.disconnectDelay = disconnectDelay;
         this.idleDelay = idleDelay;
         this.noConnectDelay = noConnectDelay;

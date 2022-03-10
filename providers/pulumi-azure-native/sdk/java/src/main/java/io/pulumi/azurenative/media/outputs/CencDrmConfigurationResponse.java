@@ -23,10 +23,10 @@ public final class CencDrmConfigurationResponse {
      */
     private final @Nullable StreamingPolicyWidevineConfigurationResponse widevine;
 
-    @OutputCustomType.Constructor({"playReady","widevine"})
+    @OutputCustomType.Constructor
     private CencDrmConfigurationResponse(
-        @Nullable StreamingPolicyPlayReadyConfigurationResponse playReady,
-        @Nullable StreamingPolicyWidevineConfigurationResponse widevine) {
+        @OutputCustomType.Parameter("playReady") @Nullable StreamingPolicyPlayReadyConfigurationResponse playReady,
+        @OutputCustomType.Parameter("widevine") @Nullable StreamingPolicyWidevineConfigurationResponse widevine) {
         this.playReady = playReady;
         this.widevine = widevine;
     }

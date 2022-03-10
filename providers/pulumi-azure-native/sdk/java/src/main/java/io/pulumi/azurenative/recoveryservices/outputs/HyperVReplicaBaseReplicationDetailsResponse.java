@@ -57,16 +57,16 @@ public final class HyperVReplicaBaseReplicationDetailsResponse {
      */
     private final @Nullable String vmProtectionStateDescription;
 
-    @OutputCustomType.Constructor({"initialReplicationDetails","instanceType","lastReplicatedTime","vMDiskDetails","vmId","vmNics","vmProtectionState","vmProtectionStateDescription"})
+    @OutputCustomType.Constructor
     private HyperVReplicaBaseReplicationDetailsResponse(
-        @Nullable InitialReplicationDetailsResponse initialReplicationDetails,
-        String instanceType,
-        @Nullable String lastReplicatedTime,
-        @Nullable List<DiskDetailsResponse> vMDiskDetails,
-        @Nullable String vmId,
-        @Nullable List<VMNicDetailsResponse> vmNics,
-        @Nullable String vmProtectionState,
-        @Nullable String vmProtectionStateDescription) {
+        @OutputCustomType.Parameter("initialReplicationDetails") @Nullable InitialReplicationDetailsResponse initialReplicationDetails,
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("lastReplicatedTime") @Nullable String lastReplicatedTime,
+        @OutputCustomType.Parameter("vMDiskDetails") @Nullable List<DiskDetailsResponse> vMDiskDetails,
+        @OutputCustomType.Parameter("vmId") @Nullable String vmId,
+        @OutputCustomType.Parameter("vmNics") @Nullable List<VMNicDetailsResponse> vmNics,
+        @OutputCustomType.Parameter("vmProtectionState") @Nullable String vmProtectionState,
+        @OutputCustomType.Parameter("vmProtectionStateDescription") @Nullable String vmProtectionStateDescription) {
         this.initialReplicationDetails = initialReplicationDetails;
         this.instanceType = instanceType;
         this.lastReplicatedTime = lastReplicatedTime;

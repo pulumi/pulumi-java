@@ -69,18 +69,18 @@ public final class AzureMLUpdateResourceActivityResponse {
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
-    @OutputCustomType.Constructor({"dependsOn","description","linkedServiceName","name","policy","trainedModelFilePath","trainedModelLinkedServiceName","trainedModelName","type","userProperties"})
+    @OutputCustomType.Constructor
     private AzureMLUpdateResourceActivityResponse(
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        @Nullable LinkedServiceReferenceResponse linkedServiceName,
-        String name,
-        @Nullable ActivityPolicyResponse policy,
-        Object trainedModelFilePath,
-        LinkedServiceReferenceResponse trainedModelLinkedServiceName,
-        Object trainedModelName,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties) {
+        @OutputCustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("linkedServiceName") @Nullable LinkedServiceReferenceResponse linkedServiceName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("policy") @Nullable ActivityPolicyResponse policy,
+        @OutputCustomType.Parameter("trainedModelFilePath") Object trainedModelFilePath,
+        @OutputCustomType.Parameter("trainedModelLinkedServiceName") LinkedServiceReferenceResponse trainedModelLinkedServiceName,
+        @OutputCustomType.Parameter("trainedModelName") Object trainedModelName,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties) {
         this.dependsOn = dependsOn;
         this.description = description;
         this.linkedServiceName = linkedServiceName;

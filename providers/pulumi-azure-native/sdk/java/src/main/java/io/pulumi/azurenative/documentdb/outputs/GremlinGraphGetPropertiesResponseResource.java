@@ -63,17 +63,17 @@ public final class GremlinGraphGetPropertiesResponseResource {
      */
     private final @Nullable UniqueKeyPolicyResponse uniqueKeyPolicy;
 
-    @OutputCustomType.Constructor({"conflictResolutionPolicy","defaultTtl","etag","id","indexingPolicy","partitionKey","rid","ts","uniqueKeyPolicy"})
+    @OutputCustomType.Constructor
     private GremlinGraphGetPropertiesResponseResource(
-        @Nullable ConflictResolutionPolicyResponse conflictResolutionPolicy,
-        @Nullable Integer defaultTtl,
-        String etag,
-        String id,
-        @Nullable IndexingPolicyResponse indexingPolicy,
-        @Nullable ContainerPartitionKeyResponse partitionKey,
-        String rid,
-        Double ts,
-        @Nullable UniqueKeyPolicyResponse uniqueKeyPolicy) {
+        @OutputCustomType.Parameter("conflictResolutionPolicy") @Nullable ConflictResolutionPolicyResponse conflictResolutionPolicy,
+        @OutputCustomType.Parameter("defaultTtl") @Nullable Integer defaultTtl,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("indexingPolicy") @Nullable IndexingPolicyResponse indexingPolicy,
+        @OutputCustomType.Parameter("partitionKey") @Nullable ContainerPartitionKeyResponse partitionKey,
+        @OutputCustomType.Parameter("rid") String rid,
+        @OutputCustomType.Parameter("ts") Double ts,
+        @OutputCustomType.Parameter("uniqueKeyPolicy") @Nullable UniqueKeyPolicyResponse uniqueKeyPolicy) {
         this.conflictResolutionPolicy = conflictResolutionPolicy;
         this.defaultTtl = defaultTtl;
         this.etag = etag;

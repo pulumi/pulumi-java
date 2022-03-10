@@ -23,10 +23,10 @@ public final class PublicIPAddressConfigurationResponse {
      */
     private final @Nullable String provision;
 
-    @OutputCustomType.Constructor({"ipAddressIds","provision"})
+    @OutputCustomType.Constructor
     private PublicIPAddressConfigurationResponse(
-        @Nullable List<String> ipAddressIds,
-        @Nullable String provision) {
+        @OutputCustomType.Parameter("ipAddressIds") @Nullable List<String> ipAddressIds,
+        @OutputCustomType.Parameter("provision") @Nullable String provision) {
         this.ipAddressIds = ipAddressIds;
         this.provision = provision;
     }

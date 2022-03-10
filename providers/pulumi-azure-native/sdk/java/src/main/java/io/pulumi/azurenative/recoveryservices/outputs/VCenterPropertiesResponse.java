@@ -69,19 +69,19 @@ public final class VCenterPropertiesResponse {
      */
     private final @Nullable String runAsAccountId;
 
-    @OutputCustomType.Constructor({"discoveryStatus","fabricArmResourceName","friendlyName","healthErrors","infrastructureId","internalId","ipAddress","lastHeartbeat","port","processServerId","runAsAccountId"})
+    @OutputCustomType.Constructor
     private VCenterPropertiesResponse(
-        @Nullable String discoveryStatus,
-        @Nullable String fabricArmResourceName,
-        @Nullable String friendlyName,
-        @Nullable List<HealthErrorResponse> healthErrors,
-        @Nullable String infrastructureId,
-        @Nullable String internalId,
-        @Nullable String ipAddress,
-        @Nullable String lastHeartbeat,
-        @Nullable String port,
-        @Nullable String processServerId,
-        @Nullable String runAsAccountId) {
+        @OutputCustomType.Parameter("discoveryStatus") @Nullable String discoveryStatus,
+        @OutputCustomType.Parameter("fabricArmResourceName") @Nullable String fabricArmResourceName,
+        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @OutputCustomType.Parameter("healthErrors") @Nullable List<HealthErrorResponse> healthErrors,
+        @OutputCustomType.Parameter("infrastructureId") @Nullable String infrastructureId,
+        @OutputCustomType.Parameter("internalId") @Nullable String internalId,
+        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress,
+        @OutputCustomType.Parameter("lastHeartbeat") @Nullable String lastHeartbeat,
+        @OutputCustomType.Parameter("port") @Nullable String port,
+        @OutputCustomType.Parameter("processServerId") @Nullable String processServerId,
+        @OutputCustomType.Parameter("runAsAccountId") @Nullable String runAsAccountId) {
         this.discoveryStatus = discoveryStatus;
         this.fabricArmResourceName = fabricArmResourceName;
         this.friendlyName = friendlyName;

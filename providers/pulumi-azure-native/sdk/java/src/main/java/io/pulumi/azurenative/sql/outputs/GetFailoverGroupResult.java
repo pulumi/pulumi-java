@@ -72,19 +72,19 @@ public final class GetFailoverGroupResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"databases","id","location","name","partnerServers","readOnlyEndpoint","readWriteEndpoint","replicationRole","replicationState","tags","type"})
+    @OutputCustomType.Constructor
     private GetFailoverGroupResult(
-        @Nullable List<String> databases,
-        String id,
-        String location,
-        String name,
-        List<PartnerInfoResponse> partnerServers,
-        @Nullable FailoverGroupReadOnlyEndpointResponse readOnlyEndpoint,
-        FailoverGroupReadWriteEndpointResponse readWriteEndpoint,
-        String replicationRole,
-        String replicationState,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("databases") @Nullable List<String> databases,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("partnerServers") List<PartnerInfoResponse> partnerServers,
+        @OutputCustomType.Parameter("readOnlyEndpoint") @Nullable FailoverGroupReadOnlyEndpointResponse readOnlyEndpoint,
+        @OutputCustomType.Parameter("readWriteEndpoint") FailoverGroupReadWriteEndpointResponse readWriteEndpoint,
+        @OutputCustomType.Parameter("replicationRole") String replicationRole,
+        @OutputCustomType.Parameter("replicationState") String replicationState,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.databases = databases;
         this.id = id;
         this.location = location;

@@ -43,10 +43,10 @@ public final class EventChannelFilterResponse {
      */
     private final @Nullable Boolean enableAdvancedFilteringOnArrays;
 
-    @OutputCustomType.Constructor({"advancedFilters","enableAdvancedFilteringOnArrays"})
+    @OutputCustomType.Constructor
     private EventChannelFilterResponse(
-        @Nullable List<Object> advancedFilters,
-        @Nullable Boolean enableAdvancedFilteringOnArrays) {
+        @OutputCustomType.Parameter("advancedFilters") @Nullable List<Object> advancedFilters,
+        @OutputCustomType.Parameter("enableAdvancedFilteringOnArrays") @Nullable Boolean enableAdvancedFilteringOnArrays) {
         this.advancedFilters = advancedFilters;
         this.enableAdvancedFilteringOnArrays = enableAdvancedFilteringOnArrays;
     }

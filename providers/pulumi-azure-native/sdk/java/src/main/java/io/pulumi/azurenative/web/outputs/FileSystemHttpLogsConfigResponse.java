@@ -32,11 +32,11 @@ public final class FileSystemHttpLogsConfigResponse {
      */
     private final @Nullable Integer retentionInMb;
 
-    @OutputCustomType.Constructor({"enabled","retentionInDays","retentionInMb"})
+    @OutputCustomType.Constructor
     private FileSystemHttpLogsConfigResponse(
-        @Nullable Boolean enabled,
-        @Nullable Integer retentionInDays,
-        @Nullable Integer retentionInMb) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("retentionInDays") @Nullable Integer retentionInDays,
+        @OutputCustomType.Parameter("retentionInMb") @Nullable Integer retentionInMb) {
         this.enabled = enabled;
         this.retentionInDays = retentionInDays;
         this.retentionInMb = retentionInMb;

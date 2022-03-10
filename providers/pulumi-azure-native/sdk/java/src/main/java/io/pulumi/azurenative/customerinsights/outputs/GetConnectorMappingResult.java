@@ -103,26 +103,26 @@ public final class GetConnectorMappingResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"connectorMappingName","connectorName","connectorType","created","dataFormatId","description","displayName","entityType","entityTypeName","id","lastModified","mappingProperties","name","nextRunTime","runId","state","tenantId","type"})
+    @OutputCustomType.Constructor
     private GetConnectorMappingResult(
-        String connectorMappingName,
-        String connectorName,
-        @Nullable String connectorType,
-        String created,
-        String dataFormatId,
-        @Nullable String description,
-        @Nullable String displayName,
-        String entityType,
-        String entityTypeName,
-        String id,
-        String lastModified,
-        ConnectorMappingPropertiesResponse mappingProperties,
-        String name,
-        String nextRunTime,
-        String runId,
-        String state,
-        String tenantId,
-        String type) {
+        @OutputCustomType.Parameter("connectorMappingName") String connectorMappingName,
+        @OutputCustomType.Parameter("connectorName") String connectorName,
+        @OutputCustomType.Parameter("connectorType") @Nullable String connectorType,
+        @OutputCustomType.Parameter("created") String created,
+        @OutputCustomType.Parameter("dataFormatId") String dataFormatId,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("entityType") String entityType,
+        @OutputCustomType.Parameter("entityTypeName") String entityTypeName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastModified") String lastModified,
+        @OutputCustomType.Parameter("mappingProperties") ConnectorMappingPropertiesResponse mappingProperties,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nextRunTime") String nextRunTime,
+        @OutputCustomType.Parameter("runId") String runId,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("tenantId") String tenantId,
+        @OutputCustomType.Parameter("type") String type) {
         this.connectorMappingName = connectorMappingName;
         this.connectorName = connectorName;
         this.connectorType = connectorType;

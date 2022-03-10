@@ -35,13 +35,13 @@ public final class UrlFileNameMatchConditionParametersResponse {
      */
     private final @Nullable List<String> transforms;
 
-    @OutputCustomType.Constructor({"matchValues","negateCondition","odataType","operator","transforms"})
+    @OutputCustomType.Constructor
     private UrlFileNameMatchConditionParametersResponse(
-        @Nullable List<String> matchValues,
-        @Nullable Boolean negateCondition,
-        String odataType,
-        String operator,
-        @Nullable List<String> transforms) {
+        @OutputCustomType.Parameter("matchValues") @Nullable List<String> matchValues,
+        @OutputCustomType.Parameter("negateCondition") @Nullable Boolean negateCondition,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("operator") String operator,
+        @OutputCustomType.Parameter("transforms") @Nullable List<String> transforms) {
         this.matchValues = matchValues;
         this.negateCondition = negateCondition;
         this.odataType = odataType;

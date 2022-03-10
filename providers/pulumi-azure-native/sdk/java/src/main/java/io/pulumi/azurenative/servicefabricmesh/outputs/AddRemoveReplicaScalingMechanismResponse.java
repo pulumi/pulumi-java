@@ -32,12 +32,12 @@ public final class AddRemoveReplicaScalingMechanismResponse {
      */
     private final Integer scaleIncrement;
 
-    @OutputCustomType.Constructor({"kind","maxCount","minCount","scaleIncrement"})
+    @OutputCustomType.Constructor
     private AddRemoveReplicaScalingMechanismResponse(
-        String kind,
-        Integer maxCount,
-        Integer minCount,
-        Integer scaleIncrement) {
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("maxCount") Integer maxCount,
+        @OutputCustomType.Parameter("minCount") Integer minCount,
+        @OutputCustomType.Parameter("scaleIncrement") Integer scaleIncrement) {
         this.kind = kind;
         this.maxCount = maxCount;
         this.minCount = minCount;

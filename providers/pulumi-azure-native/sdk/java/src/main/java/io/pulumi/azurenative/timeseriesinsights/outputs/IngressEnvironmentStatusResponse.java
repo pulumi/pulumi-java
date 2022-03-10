@@ -23,10 +23,10 @@ public final class IngressEnvironmentStatusResponse {
      */
     private final EnvironmentStateDetailsResponse stateDetails;
 
-    @OutputCustomType.Constructor({"state","stateDetails"})
+    @OutputCustomType.Constructor
     private IngressEnvironmentStatusResponse(
-        @Nullable String state,
-        EnvironmentStateDetailsResponse stateDetails) {
+        @OutputCustomType.Parameter("state") @Nullable String state,
+        @OutputCustomType.Parameter("stateDetails") EnvironmentStateDetailsResponse stateDetails) {
         this.state = state;
         this.stateDetails = stateDetails;
     }

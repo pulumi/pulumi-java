@@ -20,10 +20,10 @@ public final class ServicePrincipalPropertiesResponse {
      */
     private final String secret;
 
-    @OutputCustomType.Constructor({"clientId","secret"})
+    @OutputCustomType.Constructor
     private ServicePrincipalPropertiesResponse(
-        String clientId,
-        String secret) {
+        @OutputCustomType.Parameter("clientId") String clientId,
+        @OutputCustomType.Parameter("secret") String secret) {
         this.clientId = clientId;
         this.secret = secret;
     }

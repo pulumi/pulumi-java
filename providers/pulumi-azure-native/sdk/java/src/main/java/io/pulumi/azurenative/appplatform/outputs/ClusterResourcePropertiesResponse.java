@@ -34,12 +34,12 @@ public final class ClusterResourcePropertiesResponse {
      */
     private final Integer version;
 
-    @OutputCustomType.Constructor({"networkProfile","provisioningState","serviceId","version"})
+    @OutputCustomType.Constructor
     private ClusterResourcePropertiesResponse(
-        @Nullable NetworkProfileResponse networkProfile,
-        String provisioningState,
-        String serviceId,
-        Integer version) {
+        @OutputCustomType.Parameter("networkProfile") @Nullable NetworkProfileResponse networkProfile,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("serviceId") String serviceId,
+        @OutputCustomType.Parameter("version") Integer version) {
         this.networkProfile = networkProfile;
         this.provisioningState = provisioningState;
         this.serviceId = serviceId;

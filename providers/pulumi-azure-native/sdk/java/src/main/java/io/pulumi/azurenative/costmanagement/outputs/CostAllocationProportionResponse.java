@@ -21,10 +21,10 @@ public final class CostAllocationProportionResponse {
      */
     private final Double percentage;
 
-    @OutputCustomType.Constructor({"name","percentage"})
+    @OutputCustomType.Constructor
     private CostAllocationProportionResponse(
-        String name,
-        Double percentage) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("percentage") Double percentage) {
         this.name = name;
         this.percentage = percentage;
     }

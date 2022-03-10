@@ -30,12 +30,12 @@ public final class NetworkInterfaceResponse {
      */
     private final String username;
 
-    @OutputCustomType.Constructor({"privateIpAddress","rdpAuthority","sshAuthority","username"})
+    @OutputCustomType.Constructor
     private NetworkInterfaceResponse(
-        String privateIpAddress,
-        String rdpAuthority,
-        String sshAuthority,
-        String username) {
+        @OutputCustomType.Parameter("privateIpAddress") String privateIpAddress,
+        @OutputCustomType.Parameter("rdpAuthority") String rdpAuthority,
+        @OutputCustomType.Parameter("sshAuthority") String sshAuthority,
+        @OutputCustomType.Parameter("username") String username) {
         this.privateIpAddress = privateIpAddress;
         this.rdpAuthority = rdpAuthority;
         this.sshAuthority = sshAuthority;

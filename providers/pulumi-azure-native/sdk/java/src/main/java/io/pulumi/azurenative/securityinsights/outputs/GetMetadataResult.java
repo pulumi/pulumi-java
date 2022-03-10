@@ -104,25 +104,25 @@ public final class GetMetadataResult {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"author","categories","contentId","dependencies","etag","firstPublishDate","id","kind","lastPublishDate","name","parentId","providers","source","support","systemData","type","version"})
+    @OutputCustomType.Constructor
     private GetMetadataResult(
-        @Nullable MetadataAuthorResponse author,
-        @Nullable MetadataCategoriesResponse categories,
-        @Nullable String contentId,
-        @Nullable MetadataDependenciesResponse dependencies,
-        @Nullable String etag,
-        @Nullable String firstPublishDate,
-        String id,
-        String kind,
-        @Nullable String lastPublishDate,
-        String name,
-        String parentId,
-        @Nullable List<String> providers,
-        @Nullable MetadataSourceResponse source,
-        @Nullable MetadataSupportResponse support,
-        SystemDataResponse systemData,
-        String type,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("author") @Nullable MetadataAuthorResponse author,
+        @OutputCustomType.Parameter("categories") @Nullable MetadataCategoriesResponse categories,
+        @OutputCustomType.Parameter("contentId") @Nullable String contentId,
+        @OutputCustomType.Parameter("dependencies") @Nullable MetadataDependenciesResponse dependencies,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("firstPublishDate") @Nullable String firstPublishDate,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("lastPublishDate") @Nullable String lastPublishDate,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parentId") String parentId,
+        @OutputCustomType.Parameter("providers") @Nullable List<String> providers,
+        @OutputCustomType.Parameter("source") @Nullable MetadataSourceResponse source,
+        @OutputCustomType.Parameter("support") @Nullable MetadataSupportResponse support,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.author = author;
         this.categories = categories;
         this.contentId = contentId;

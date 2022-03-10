@@ -22,10 +22,10 @@ public final class ListQueryKeyBySearchServiceResult {
      */
     private final List<QueryKeyResponse> value;
 
-    @OutputCustomType.Constructor({"nextLink","value"})
+    @OutputCustomType.Constructor
     private ListQueryKeyBySearchServiceResult(
-        String nextLink,
-        List<QueryKeyResponse> value) {
+        @OutputCustomType.Parameter("nextLink") String nextLink,
+        @OutputCustomType.Parameter("value") List<QueryKeyResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }

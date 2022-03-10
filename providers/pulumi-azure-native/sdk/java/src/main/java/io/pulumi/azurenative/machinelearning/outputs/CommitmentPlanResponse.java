@@ -15,8 +15,8 @@ public final class CommitmentPlanResponse {
      */
     private final String id;
 
-    @OutputCustomType.Constructor({"id"})
-    private CommitmentPlanResponse(String id) {
+    @OutputCustomType.Constructor
+    private CommitmentPlanResponse(@OutputCustomType.Parameter("id") String id) {
         this.id = id;
     }
 

@@ -15,8 +15,8 @@ public final class ListDeviceRegistrationKeyResult {
      */
     private final String registrationKey;
 
-    @OutputCustomType.Constructor({"registrationKey"})
-    private ListDeviceRegistrationKeyResult(String registrationKey) {
+    @OutputCustomType.Constructor
+    private ListDeviceRegistrationKeyResult(@OutputCustomType.Parameter("registrationKey") String registrationKey) {
         this.registrationKey = registrationKey;
     }
 

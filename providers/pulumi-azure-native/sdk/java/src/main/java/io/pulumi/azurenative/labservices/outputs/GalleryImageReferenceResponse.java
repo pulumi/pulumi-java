@@ -37,13 +37,13 @@ public final class GalleryImageReferenceResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"offer","osType","publisher","sku","version"})
+    @OutputCustomType.Constructor
     private GalleryImageReferenceResponse(
-        @Nullable String offer,
-        @Nullable String osType,
-        @Nullable String publisher,
-        @Nullable String sku,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("offer") @Nullable String offer,
+        @OutputCustomType.Parameter("osType") @Nullable String osType,
+        @OutputCustomType.Parameter("publisher") @Nullable String publisher,
+        @OutputCustomType.Parameter("sku") @Nullable String sku,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.offer = offer;
         this.osType = osType;
         this.publisher = publisher;

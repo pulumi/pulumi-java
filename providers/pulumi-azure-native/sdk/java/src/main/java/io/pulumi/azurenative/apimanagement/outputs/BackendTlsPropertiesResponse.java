@@ -22,10 +22,10 @@ public final class BackendTlsPropertiesResponse {
      */
     private final @Nullable Boolean validateCertificateName;
 
-    @OutputCustomType.Constructor({"validateCertificateChain","validateCertificateName"})
+    @OutputCustomType.Constructor
     private BackendTlsPropertiesResponse(
-        @Nullable Boolean validateCertificateChain,
-        @Nullable Boolean validateCertificateName) {
+        @OutputCustomType.Parameter("validateCertificateChain") @Nullable Boolean validateCertificateChain,
+        @OutputCustomType.Parameter("validateCertificateName") @Nullable Boolean validateCertificateName) {
         this.validateCertificateChain = validateCertificateChain;
         this.validateCertificateName = validateCertificateName;
     }

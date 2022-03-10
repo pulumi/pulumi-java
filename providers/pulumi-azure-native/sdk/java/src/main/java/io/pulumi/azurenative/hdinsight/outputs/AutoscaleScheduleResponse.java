@@ -24,10 +24,10 @@ public final class AutoscaleScheduleResponse {
      */
     private final @Nullable AutoscaleTimeAndCapacityResponse timeAndCapacity;
 
-    @OutputCustomType.Constructor({"days","timeAndCapacity"})
+    @OutputCustomType.Constructor
     private AutoscaleScheduleResponse(
-        @Nullable List<String> days,
-        @Nullable AutoscaleTimeAndCapacityResponse timeAndCapacity) {
+        @OutputCustomType.Parameter("days") @Nullable List<String> days,
+        @OutputCustomType.Parameter("timeAndCapacity") @Nullable AutoscaleTimeAndCapacityResponse timeAndCapacity) {
         this.days = days;
         this.timeAndCapacity = timeAndCapacity;
     }

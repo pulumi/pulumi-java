@@ -51,15 +51,15 @@ public final class GetDeviceSecurityGroupResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"allowlistRules","denylistRules","id","name","thresholdRules","timeWindowRules","type"})
+    @OutputCustomType.Constructor
     private GetDeviceSecurityGroupResult(
-        @Nullable List<AllowlistCustomAlertRuleResponse> allowlistRules,
-        @Nullable List<DenylistCustomAlertRuleResponse> denylistRules,
-        String id,
-        String name,
-        @Nullable List<ThresholdCustomAlertRuleResponse> thresholdRules,
-        @Nullable List<TimeWindowCustomAlertRuleResponse> timeWindowRules,
-        String type) {
+        @OutputCustomType.Parameter("allowlistRules") @Nullable List<AllowlistCustomAlertRuleResponse> allowlistRules,
+        @OutputCustomType.Parameter("denylistRules") @Nullable List<DenylistCustomAlertRuleResponse> denylistRules,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("thresholdRules") @Nullable List<ThresholdCustomAlertRuleResponse> thresholdRules,
+        @OutputCustomType.Parameter("timeWindowRules") @Nullable List<TimeWindowCustomAlertRuleResponse> timeWindowRules,
+        @OutputCustomType.Parameter("type") String type) {
         this.allowlistRules = allowlistRules;
         this.denylistRules = denylistRules;
         this.id = id;

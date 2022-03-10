@@ -89,22 +89,22 @@ public final class GetFactoryResult {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"createTime","eTag","encryption","globalParameters","id","identity","location","name","provisioningState","publicNetworkAccess","repoConfiguration","tags","type","version"})
+    @OutputCustomType.Constructor
     private GetFactoryResult(
-        String createTime,
-        String eTag,
-        @Nullable EncryptionConfigurationResponse encryption,
-        @Nullable Map<String,GlobalParameterSpecificationResponse> globalParameters,
-        String id,
-        @Nullable FactoryIdentityResponse identity,
-        @Nullable String location,
-        String name,
-        String provisioningState,
-        @Nullable String publicNetworkAccess,
-        @Nullable Either<FactoryGitHubConfigurationResponse,FactoryVSTSConfigurationResponse> repoConfiguration,
-        @Nullable Map<String,String> tags,
-        String type,
-        String version) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("eTag") String eTag,
+        @OutputCustomType.Parameter("encryption") @Nullable EncryptionConfigurationResponse encryption,
+        @OutputCustomType.Parameter("globalParameters") @Nullable Map<String,GlobalParameterSpecificationResponse> globalParameters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable FactoryIdentityResponse identity,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess,
+        @OutputCustomType.Parameter("repoConfiguration") @Nullable Either<FactoryGitHubConfigurationResponse,FactoryVSTSConfigurationResponse> repoConfiguration,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("version") String version) {
         this.createTime = createTime;
         this.eTag = eTag;
         this.encryption = encryption;

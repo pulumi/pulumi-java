@@ -22,10 +22,10 @@ public final class GetAppResourceUploadUrlResult {
      */
     private final @Nullable String uploadUrl;
 
-    @OutputCustomType.Constructor({"relativePath","uploadUrl"})
+    @OutputCustomType.Constructor
     private GetAppResourceUploadUrlResult(
-        @Nullable String relativePath,
-        @Nullable String uploadUrl) {
+        @OutputCustomType.Parameter("relativePath") @Nullable String relativePath,
+        @OutputCustomType.Parameter("uploadUrl") @Nullable String uploadUrl) {
         this.relativePath = relativePath;
         this.uploadUrl = uploadUrl;
     }

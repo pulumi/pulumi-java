@@ -38,13 +38,13 @@ public final class AuthInfoResponse {
      */
     private final String tokenType;
 
-    @OutputCustomType.Constructor({"expiresIn","refreshToken","scope","token","tokenType"})
+    @OutputCustomType.Constructor
     private AuthInfoResponse(
-        @Nullable Integer expiresIn,
-        @Nullable String refreshToken,
-        @Nullable String scope,
-        String token,
-        String tokenType) {
+        @OutputCustomType.Parameter("expiresIn") @Nullable Integer expiresIn,
+        @OutputCustomType.Parameter("refreshToken") @Nullable String refreshToken,
+        @OutputCustomType.Parameter("scope") @Nullable String scope,
+        @OutputCustomType.Parameter("token") String token,
+        @OutputCustomType.Parameter("tokenType") String tokenType) {
         this.expiresIn = expiresIn;
         this.refreshToken = refreshToken;
         this.scope = scope;

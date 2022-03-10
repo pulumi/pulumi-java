@@ -32,12 +32,12 @@ public final class GitHubActionContainerConfigurationResponse {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor({"imageName","password","serverUrl","username"})
+    @OutputCustomType.Constructor
     private GitHubActionContainerConfigurationResponse(
-        @Nullable String imageName,
-        @Nullable String password,
-        @Nullable String serverUrl,
-        @Nullable String username) {
+        @OutputCustomType.Parameter("imageName") @Nullable String imageName,
+        @OutputCustomType.Parameter("password") @Nullable String password,
+        @OutputCustomType.Parameter("serverUrl") @Nullable String serverUrl,
+        @OutputCustomType.Parameter("username") @Nullable String username) {
         this.imageName = imageName;
         this.password = password;
         this.serverUrl = serverUrl;

@@ -57,16 +57,16 @@ public final class ModelEnvironmentDefinitionResponseResponseR {
      */
     private final @Nullable Boolean userManaged;
 
-    @OutputCustomType.Constructor({"bioConductorPackages","cranPackages","customUrlPackages","gitHubPackages","rVersion","rscriptPath","snapshotDate","userManaged"})
+    @OutputCustomType.Constructor
     private ModelEnvironmentDefinitionResponseResponseR(
-        @Nullable List<String> bioConductorPackages,
-        @Nullable List<RCranPackageResponse> cranPackages,
-        @Nullable List<String> customUrlPackages,
-        @Nullable List<RGitHubPackageResponseResponse> gitHubPackages,
-        @Nullable String rVersion,
-        @Nullable String rscriptPath,
-        @Nullable String snapshotDate,
-        @Nullable Boolean userManaged) {
+        @OutputCustomType.Parameter("bioConductorPackages") @Nullable List<String> bioConductorPackages,
+        @OutputCustomType.Parameter("cranPackages") @Nullable List<RCranPackageResponse> cranPackages,
+        @OutputCustomType.Parameter("customUrlPackages") @Nullable List<String> customUrlPackages,
+        @OutputCustomType.Parameter("gitHubPackages") @Nullable List<RGitHubPackageResponseResponse> gitHubPackages,
+        @OutputCustomType.Parameter("rVersion") @Nullable String rVersion,
+        @OutputCustomType.Parameter("rscriptPath") @Nullable String rscriptPath,
+        @OutputCustomType.Parameter("snapshotDate") @Nullable String snapshotDate,
+        @OutputCustomType.Parameter("userManaged") @Nullable Boolean userManaged) {
         this.bioConductorPackages = bioConductorPackages;
         this.cranPackages = cranPackages;
         this.customUrlPackages = customUrlPackages;

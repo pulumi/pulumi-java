@@ -33,12 +33,12 @@ public final class WorkflowParameterResponse {
      */
     private final @Nullable Object value;
 
-    @OutputCustomType.Constructor({"description","metadata","type","value"})
+    @OutputCustomType.Constructor
     private WorkflowParameterResponse(
-        @Nullable String description,
-        @Nullable Object metadata,
-        @Nullable String type,
-        @Nullable Object value) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("metadata") @Nullable Object metadata,
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("value") @Nullable Object value) {
         this.description = description;
         this.metadata = metadata;
         this.type = type;

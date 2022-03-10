@@ -25,11 +25,11 @@ public final class RemotePrivateEndpointConnectionResponse {
     private final @Nullable PrivateLinkConnectionStateResponse privateLinkServiceConnectionState;
     private final String provisioningState;
 
-    @OutputCustomType.Constructor({"privateEndpoint","privateLinkServiceConnectionState","provisioningState"})
+    @OutputCustomType.Constructor
     private RemotePrivateEndpointConnectionResponse(
-        @Nullable ArmIdWrapperResponse privateEndpoint,
-        @Nullable PrivateLinkConnectionStateResponse privateLinkServiceConnectionState,
-        String provisioningState) {
+        @OutputCustomType.Parameter("privateEndpoint") @Nullable ArmIdWrapperResponse privateEndpoint,
+        @OutputCustomType.Parameter("privateLinkServiceConnectionState") @Nullable PrivateLinkConnectionStateResponse privateLinkServiceConnectionState,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState) {
         this.privateEndpoint = privateEndpoint;
         this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
         this.provisioningState = provisioningState;

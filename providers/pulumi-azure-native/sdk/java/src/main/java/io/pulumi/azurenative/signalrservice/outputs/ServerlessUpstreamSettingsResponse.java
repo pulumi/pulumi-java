@@ -17,8 +17,8 @@ public final class ServerlessUpstreamSettingsResponse {
      */
     private final @Nullable List<UpstreamTemplateResponse> templates;
 
-    @OutputCustomType.Constructor({"templates"})
-    private ServerlessUpstreamSettingsResponse(@Nullable List<UpstreamTemplateResponse> templates) {
+    @OutputCustomType.Constructor
+    private ServerlessUpstreamSettingsResponse(@OutputCustomType.Parameter("templates") @Nullable List<UpstreamTemplateResponse> templates) {
         this.templates = templates;
     }
 

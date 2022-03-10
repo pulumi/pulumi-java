@@ -40,14 +40,14 @@ public final class ResourcePoolResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"fullName","id","location","name","privateCloudId","type"})
+    @OutputCustomType.Constructor
     private ResourcePoolResponse(
-        String fullName,
-        String id,
-        String location,
-        String name,
-        String privateCloudId,
-        String type) {
+        @OutputCustomType.Parameter("fullName") String fullName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("privateCloudId") String privateCloudId,
+        @OutputCustomType.Parameter("type") String type) {
         this.fullName = fullName;
         this.id = id;
         this.location = location;

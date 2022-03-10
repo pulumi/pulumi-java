@@ -34,12 +34,12 @@ public final class UrlSigningKeyParametersResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"keyId","secretSource","secretVersion","type"})
+    @OutputCustomType.Constructor
     private UrlSigningKeyParametersResponse(
-        String keyId,
-        ResourceReferenceResponse secretSource,
-        @Nullable String secretVersion,
-        String type) {
+        @OutputCustomType.Parameter("keyId") String keyId,
+        @OutputCustomType.Parameter("secretSource") ResourceReferenceResponse secretSource,
+        @OutputCustomType.Parameter("secretVersion") @Nullable String secretVersion,
+        @OutputCustomType.Parameter("type") String type) {
         this.keyId = keyId;
         this.secretSource = secretSource;
         this.secretVersion = secretVersion;

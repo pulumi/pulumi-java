@@ -58,17 +58,17 @@ public final class StorageAccountResponse {
      */
     private final @Nullable String saskey;
 
-    @OutputCustomType.Constructor({"container","fileSystem","fileshare","isDefault","key","msiResourceId","name","resourceId","saskey"})
+    @OutputCustomType.Constructor
     private StorageAccountResponse(
-        @Nullable String container,
-        @Nullable String fileSystem,
-        @Nullable String fileshare,
-        @Nullable Boolean isDefault,
-        @Nullable String key,
-        @Nullable String msiResourceId,
-        @Nullable String name,
-        @Nullable String resourceId,
-        @Nullable String saskey) {
+        @OutputCustomType.Parameter("container") @Nullable String container,
+        @OutputCustomType.Parameter("fileSystem") @Nullable String fileSystem,
+        @OutputCustomType.Parameter("fileshare") @Nullable String fileshare,
+        @OutputCustomType.Parameter("isDefault") @Nullable Boolean isDefault,
+        @OutputCustomType.Parameter("key") @Nullable String key,
+        @OutputCustomType.Parameter("msiResourceId") @Nullable String msiResourceId,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId,
+        @OutputCustomType.Parameter("saskey") @Nullable String saskey) {
         this.container = container;
         this.fileSystem = fileSystem;
         this.fileshare = fileshare;

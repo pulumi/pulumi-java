@@ -101,24 +101,24 @@ public final class GetVpnSiteResult {
      */
     private final @Nullable List<VpnSiteLinkResponse> vpnSiteLinks;
 
-    @OutputCustomType.Constructor({"addressSpace","bgpProperties","deviceProperties","etag","id","ipAddress","isSecuritySite","location","name","o365Policy","provisioningState","siteKey","tags","type","virtualWan","vpnSiteLinks"})
+    @OutputCustomType.Constructor
     private GetVpnSiteResult(
-        @Nullable AddressSpaceResponse addressSpace,
-        @Nullable BgpSettingsResponse bgpProperties,
-        @Nullable DevicePropertiesResponse deviceProperties,
-        String etag,
-        @Nullable String id,
-        @Nullable String ipAddress,
-        @Nullable Boolean isSecuritySite,
-        String location,
-        String name,
-        @Nullable O365PolicyPropertiesResponse o365Policy,
-        String provisioningState,
-        @Nullable String siteKey,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable SubResourceResponse virtualWan,
-        @Nullable List<VpnSiteLinkResponse> vpnSiteLinks) {
+        @OutputCustomType.Parameter("addressSpace") @Nullable AddressSpaceResponse addressSpace,
+        @OutputCustomType.Parameter("bgpProperties") @Nullable BgpSettingsResponse bgpProperties,
+        @OutputCustomType.Parameter("deviceProperties") @Nullable DevicePropertiesResponse deviceProperties,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress,
+        @OutputCustomType.Parameter("isSecuritySite") @Nullable Boolean isSecuritySite,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("o365Policy") @Nullable O365PolicyPropertiesResponse o365Policy,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("siteKey") @Nullable String siteKey,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("virtualWan") @Nullable SubResourceResponse virtualWan,
+        @OutputCustomType.Parameter("vpnSiteLinks") @Nullable List<VpnSiteLinkResponse> vpnSiteLinks) {
         this.addressSpace = addressSpace;
         this.bgpProperties = bgpProperties;
         this.deviceProperties = deviceProperties;

@@ -27,11 +27,11 @@ public final class MsixPackageDependenciesResponse {
      */
     private final @Nullable String publisher;
 
-    @OutputCustomType.Constructor({"dependencyName","minVersion","publisher"})
+    @OutputCustomType.Constructor
     private MsixPackageDependenciesResponse(
-        @Nullable String dependencyName,
-        @Nullable String minVersion,
-        @Nullable String publisher) {
+        @OutputCustomType.Parameter("dependencyName") @Nullable String dependencyName,
+        @OutputCustomType.Parameter("minVersion") @Nullable String minVersion,
+        @OutputCustomType.Parameter("publisher") @Nullable String publisher) {
         this.dependencyName = dependencyName;
         this.minVersion = minVersion;
         this.publisher = publisher;

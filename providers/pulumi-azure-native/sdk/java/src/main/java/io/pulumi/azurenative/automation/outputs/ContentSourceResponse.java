@@ -33,12 +33,12 @@ public final class ContentSourceResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"hash","type","value","version"})
+    @OutputCustomType.Constructor
     private ContentSourceResponse(
-        @Nullable ContentHashResponse hash,
-        @Nullable String type,
-        @Nullable String value,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("hash") @Nullable ContentHashResponse hash,
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("value") @Nullable String value,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.hash = hash;
         this.type = type;
         this.value = value;

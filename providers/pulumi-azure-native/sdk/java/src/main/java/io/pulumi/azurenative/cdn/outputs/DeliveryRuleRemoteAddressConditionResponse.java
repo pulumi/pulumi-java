@@ -22,10 +22,10 @@ public final class DeliveryRuleRemoteAddressConditionResponse {
      */
     private final RemoteAddressMatchConditionParametersResponse parameters;
 
-    @OutputCustomType.Constructor({"name","parameters"})
+    @OutputCustomType.Constructor
     private DeliveryRuleRemoteAddressConditionResponse(
-        String name,
-        RemoteAddressMatchConditionParametersResponse parameters) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") RemoteAddressMatchConditionParametersResponse parameters) {
         this.name = name;
         this.parameters = parameters;
     }

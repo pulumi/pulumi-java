@@ -23,10 +23,10 @@ public final class PropertiesResponseEncryption {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor({"keyVault","state"})
+    @OutputCustomType.Constructor
     private PropertiesResponseEncryption(
-        @Nullable KeyVaultPropertiesResponse keyVault,
-        @Nullable String state) {
+        @OutputCustomType.Parameter("keyVault") @Nullable KeyVaultPropertiesResponse keyVault,
+        @OutputCustomType.Parameter("state") @Nullable String state) {
         this.keyVault = keyVault;
         this.state = state;
     }

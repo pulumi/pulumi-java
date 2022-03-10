@@ -27,11 +27,11 @@ public final class SubnetResponse {
      */
     private final @Nullable String resourceId;
 
-    @OutputCustomType.Constructor({"allowPublicIp","labSubnetName","resourceId"})
+    @OutputCustomType.Constructor
     private SubnetResponse(
-        @Nullable String allowPublicIp,
-        @Nullable String labSubnetName,
-        @Nullable String resourceId) {
+        @OutputCustomType.Parameter("allowPublicIp") @Nullable String allowPublicIp,
+        @OutputCustomType.Parameter("labSubnetName") @Nullable String labSubnetName,
+        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId) {
         this.allowPublicIp = allowPublicIp;
         this.labSubnetName = labSubnetName;
         this.resourceId = resourceId;

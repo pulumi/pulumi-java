@@ -54,16 +54,16 @@ public final class RegistrationAssignmentPropertiesResponseProperties {
      */
     private final @Nullable String registrationDefinitionName;
 
-    @OutputCustomType.Constructor({"authorizations","description","managedByTenantId","managedByTenantName","manageeTenantId","manageeTenantName","provisioningState","registrationDefinitionName"})
+    @OutputCustomType.Constructor
     private RegistrationAssignmentPropertiesResponseProperties(
-        @Nullable List<AuthorizationResponse> authorizations,
-        @Nullable String description,
-        @Nullable String managedByTenantId,
-        @Nullable String managedByTenantName,
-        @Nullable String manageeTenantId,
-        @Nullable String manageeTenantName,
-        @Nullable String provisioningState,
-        @Nullable String registrationDefinitionName) {
+        @OutputCustomType.Parameter("authorizations") @Nullable List<AuthorizationResponse> authorizations,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("managedByTenantId") @Nullable String managedByTenantId,
+        @OutputCustomType.Parameter("managedByTenantName") @Nullable String managedByTenantName,
+        @OutputCustomType.Parameter("manageeTenantId") @Nullable String manageeTenantId,
+        @OutputCustomType.Parameter("manageeTenantName") @Nullable String manageeTenantName,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("registrationDefinitionName") @Nullable String registrationDefinitionName) {
         this.authorizations = authorizations;
         this.description = description;
         this.managedByTenantId = managedByTenantId;

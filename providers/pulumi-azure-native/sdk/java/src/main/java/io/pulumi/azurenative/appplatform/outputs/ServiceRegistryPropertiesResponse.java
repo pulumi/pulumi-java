@@ -28,11 +28,11 @@ public final class ServiceRegistryPropertiesResponse {
      */
     private final ServiceRegistryResourceRequestsResponse resourceRequests;
 
-    @OutputCustomType.Constructor({"instances","provisioningState","resourceRequests"})
+    @OutputCustomType.Constructor
     private ServiceRegistryPropertiesResponse(
-        List<ServiceRegistryInstanceResponse> instances,
-        String provisioningState,
-        ServiceRegistryResourceRequestsResponse resourceRequests) {
+        @OutputCustomType.Parameter("instances") List<ServiceRegistryInstanceResponse> instances,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("resourceRequests") ServiceRegistryResourceRequestsResponse resourceRequests) {
         this.instances = instances;
         this.provisioningState = provisioningState;
         this.resourceRequests = resourceRequests;

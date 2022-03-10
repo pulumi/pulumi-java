@@ -76,21 +76,21 @@ public final class EntityInfoResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"displayName","id","inheritedPermissions","name","numberOfChildGroups","numberOfChildren","numberOfDescendants","parent","parentDisplayNameChain","parentNameChain","permissions","tenantId","type"})
+    @OutputCustomType.Constructor
     private EntityInfoResponse(
-        @Nullable String displayName,
-        String id,
-        @Nullable String inheritedPermissions,
-        String name,
-        @Nullable Integer numberOfChildGroups,
-        @Nullable Integer numberOfChildren,
-        @Nullable Integer numberOfDescendants,
-        @Nullable EntityParentGroupInfoResponse parent,
-        @Nullable List<String> parentDisplayNameChain,
-        @Nullable List<String> parentNameChain,
-        @Nullable String permissions,
-        @Nullable String tenantId,
-        String type) {
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("inheritedPermissions") @Nullable String inheritedPermissions,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("numberOfChildGroups") @Nullable Integer numberOfChildGroups,
+        @OutputCustomType.Parameter("numberOfChildren") @Nullable Integer numberOfChildren,
+        @OutputCustomType.Parameter("numberOfDescendants") @Nullable Integer numberOfDescendants,
+        @OutputCustomType.Parameter("parent") @Nullable EntityParentGroupInfoResponse parent,
+        @OutputCustomType.Parameter("parentDisplayNameChain") @Nullable List<String> parentDisplayNameChain,
+        @OutputCustomType.Parameter("parentNameChain") @Nullable List<String> parentNameChain,
+        @OutputCustomType.Parameter("permissions") @Nullable String permissions,
+        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId,
+        @OutputCustomType.Parameter("type") String type) {
         this.displayName = displayName;
         this.id = id;
         this.inheritedPermissions = inheritedPermissions;

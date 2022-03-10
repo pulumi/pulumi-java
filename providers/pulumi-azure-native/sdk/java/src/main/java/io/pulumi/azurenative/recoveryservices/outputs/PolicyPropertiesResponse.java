@@ -34,10 +34,10 @@ public final class PolicyPropertiesResponse {
      */
     private final @Nullable Object providerSpecificDetails;
 
-    @OutputCustomType.Constructor({"friendlyName","providerSpecificDetails"})
+    @OutputCustomType.Constructor
     private PolicyPropertiesResponse(
-        @Nullable String friendlyName,
-        @Nullable Object providerSpecificDetails) {
+        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @OutputCustomType.Parameter("providerSpecificDetails") @Nullable Object providerSpecificDetails) {
         this.friendlyName = friendlyName;
         this.providerSpecificDetails = providerSpecificDetails;
     }

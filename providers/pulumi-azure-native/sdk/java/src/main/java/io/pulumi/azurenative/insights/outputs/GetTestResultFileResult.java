@@ -22,10 +22,10 @@ public final class GetTestResultFileResult {
      */
     private final @Nullable String nextLink;
 
-    @OutputCustomType.Constructor({"data","nextLink"})
+    @OutputCustomType.Constructor
     private GetTestResultFileResult(
-        @Nullable String data,
-        @Nullable String nextLink) {
+        @OutputCustomType.Parameter("data") @Nullable String data,
+        @OutputCustomType.Parameter("nextLink") @Nullable String nextLink) {
         this.data = data;
         this.nextLink = nextLink;
     }

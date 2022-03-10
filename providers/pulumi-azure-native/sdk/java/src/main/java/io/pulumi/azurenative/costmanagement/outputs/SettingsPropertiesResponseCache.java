@@ -42,14 +42,14 @@ public final class SettingsPropertiesResponseCache {
      */
     private final String subchannel;
 
-    @OutputCustomType.Constructor({"channel","id","name","parent","status","subchannel"})
+    @OutputCustomType.Constructor
     private SettingsPropertiesResponseCache(
-        String channel,
-        String id,
-        String name,
-        @Nullable String parent,
-        @Nullable String status,
-        String subchannel) {
+        @OutputCustomType.Parameter("channel") String channel,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parent") @Nullable String parent,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("subchannel") String subchannel) {
         this.channel = channel;
         this.id = id;
         this.name = name;

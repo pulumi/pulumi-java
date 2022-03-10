@@ -47,15 +47,15 @@ public final class GetDataCollectionRuleAssociationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"dataCollectionRuleId","description","etag","id","name","provisioningState","type"})
+    @OutputCustomType.Constructor
     private GetDataCollectionRuleAssociationResult(
-        @Nullable String dataCollectionRuleId,
-        @Nullable String description,
-        String etag,
-        String id,
-        String name,
-        String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("dataCollectionRuleId") @Nullable String dataCollectionRuleId,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.dataCollectionRuleId = dataCollectionRuleId;
         this.description = description;
         this.etag = etag;

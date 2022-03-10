@@ -32,12 +32,12 @@ public final class CacheConfigurationResponse {
      */
     private final @Nullable String queryParameters;
 
-    @OutputCustomType.Constructor({"cacheDuration","dynamicCompression","queryParameterStripDirective","queryParameters"})
+    @OutputCustomType.Constructor
     private CacheConfigurationResponse(
-        @Nullable String cacheDuration,
-        @Nullable String dynamicCompression,
-        @Nullable String queryParameterStripDirective,
-        @Nullable String queryParameters) {
+        @OutputCustomType.Parameter("cacheDuration") @Nullable String cacheDuration,
+        @OutputCustomType.Parameter("dynamicCompression") @Nullable String dynamicCompression,
+        @OutputCustomType.Parameter("queryParameterStripDirective") @Nullable String queryParameterStripDirective,
+        @OutputCustomType.Parameter("queryParameters") @Nullable String queryParameters) {
         this.cacheDuration = cacheDuration;
         this.dynamicCompression = dynamicCompression;
         this.queryParameterStripDirective = queryParameterStripDirective;

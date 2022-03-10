@@ -35,12 +35,12 @@ public final class PolicyDefinitionReferenceResponse {
      */
     private final @Nullable String policyDefinitionReferenceId;
 
-    @OutputCustomType.Constructor({"groupNames","parameters","policyDefinitionId","policyDefinitionReferenceId"})
+    @OutputCustomType.Constructor
     private PolicyDefinitionReferenceResponse(
-        @Nullable List<String> groupNames,
-        @Nullable Map<String,ParameterValuesValueResponse> parameters,
-        String policyDefinitionId,
-        @Nullable String policyDefinitionReferenceId) {
+        @OutputCustomType.Parameter("groupNames") @Nullable List<String> groupNames,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterValuesValueResponse> parameters,
+        @OutputCustomType.Parameter("policyDefinitionId") String policyDefinitionId,
+        @OutputCustomType.Parameter("policyDefinitionReferenceId") @Nullable String policyDefinitionReferenceId) {
         this.groupNames = groupNames;
         this.parameters = parameters;
         this.policyDefinitionId = policyDefinitionId;

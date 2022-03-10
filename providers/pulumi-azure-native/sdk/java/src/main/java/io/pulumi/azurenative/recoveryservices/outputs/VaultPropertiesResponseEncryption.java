@@ -29,11 +29,11 @@ public final class VaultPropertiesResponseEncryption {
      */
     private final @Nullable CmkKeyVaultPropertiesResponse keyVaultProperties;
 
-    @OutputCustomType.Constructor({"infrastructureEncryption","kekIdentity","keyVaultProperties"})
+    @OutputCustomType.Constructor
     private VaultPropertiesResponseEncryption(
-        @Nullable String infrastructureEncryption,
-        @Nullable CmkKekIdentityResponse kekIdentity,
-        @Nullable CmkKeyVaultPropertiesResponse keyVaultProperties) {
+        @OutputCustomType.Parameter("infrastructureEncryption") @Nullable String infrastructureEncryption,
+        @OutputCustomType.Parameter("kekIdentity") @Nullable CmkKekIdentityResponse kekIdentity,
+        @OutputCustomType.Parameter("keyVaultProperties") @Nullable CmkKeyVaultPropertiesResponse keyVaultProperties) {
         this.infrastructureEncryption = infrastructureEncryption;
         this.kekIdentity = kekIdentity;
         this.keyVaultProperties = keyVaultProperties;

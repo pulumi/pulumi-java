@@ -60,17 +60,17 @@ public final class GetHubVirtualNetworkConnectionResult {
      */
     private final @Nullable RoutingConfigurationResponse routingConfiguration;
 
-    @OutputCustomType.Constructor({"allowHubToRemoteVnetTransit","allowRemoteVnetToUseHubVnetGateways","enableInternetSecurity","etag","id","name","provisioningState","remoteVirtualNetwork","routingConfiguration"})
+    @OutputCustomType.Constructor
     private GetHubVirtualNetworkConnectionResult(
-        @Nullable Boolean allowHubToRemoteVnetTransit,
-        @Nullable Boolean allowRemoteVnetToUseHubVnetGateways,
-        @Nullable Boolean enableInternetSecurity,
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        String provisioningState,
-        @Nullable SubResourceResponse remoteVirtualNetwork,
-        @Nullable RoutingConfigurationResponse routingConfiguration) {
+        @OutputCustomType.Parameter("allowHubToRemoteVnetTransit") @Nullable Boolean allowHubToRemoteVnetTransit,
+        @OutputCustomType.Parameter("allowRemoteVnetToUseHubVnetGateways") @Nullable Boolean allowRemoteVnetToUseHubVnetGateways,
+        @OutputCustomType.Parameter("enableInternetSecurity") @Nullable Boolean enableInternetSecurity,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("remoteVirtualNetwork") @Nullable SubResourceResponse remoteVirtualNetwork,
+        @OutputCustomType.Parameter("routingConfiguration") @Nullable RoutingConfigurationResponse routingConfiguration) {
         this.allowHubToRemoteVnetTransit = allowHubToRemoteVnetTransit;
         this.allowRemoteVnetToUseHubVnetGateways = allowRemoteVnetToUseHubVnetGateways;
         this.enableInternetSecurity = enableInternetSecurity;

@@ -40,13 +40,13 @@ public final class BackendCredentialsContractResponse {
      */
     private final @Nullable Map<String,List<String>> query;
 
-    @OutputCustomType.Constructor({"authorization","certificate","certificateIds","header","query"})
+    @OutputCustomType.Constructor
     private BackendCredentialsContractResponse(
-        @Nullable BackendAuthorizationHeaderCredentialsResponse authorization,
-        @Nullable List<String> certificate,
-        @Nullable List<String> certificateIds,
-        @Nullable Map<String,List<String>> header,
-        @Nullable Map<String,List<String>> query) {
+        @OutputCustomType.Parameter("authorization") @Nullable BackendAuthorizationHeaderCredentialsResponse authorization,
+        @OutputCustomType.Parameter("certificate") @Nullable List<String> certificate,
+        @OutputCustomType.Parameter("certificateIds") @Nullable List<String> certificateIds,
+        @OutputCustomType.Parameter("header") @Nullable Map<String,List<String>> header,
+        @OutputCustomType.Parameter("query") @Nullable Map<String,List<String>> query) {
         this.authorization = authorization;
         this.certificate = certificate;
         this.certificateIds = certificateIds;

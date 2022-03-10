@@ -22,10 +22,10 @@ public final class HealthCheckStepPropertiesResponse {
      */
     private final String stepType;
 
-    @OutputCustomType.Constructor({"attributes","stepType"})
+    @OutputCustomType.Constructor
     private HealthCheckStepPropertiesResponse(
-        RestHealthCheckStepAttributesResponse attributes,
-        String stepType) {
+        @OutputCustomType.Parameter("attributes") RestHealthCheckStepAttributesResponse attributes,
+        @OutputCustomType.Parameter("stepType") String stepType) {
         this.attributes = attributes;
         this.stepType = stepType;
     }

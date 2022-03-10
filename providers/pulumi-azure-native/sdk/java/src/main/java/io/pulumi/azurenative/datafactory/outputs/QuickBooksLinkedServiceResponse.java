@@ -91,22 +91,22 @@ public final class QuickBooksLinkedServiceResponse {
      */
     private final @Nullable Object useEncryptedEndpoints;
 
-    @OutputCustomType.Constructor({"accessToken","accessTokenSecret","annotations","companyId","connectVia","connectionProperties","consumerKey","consumerSecret","description","encryptedCredential","endpoint","parameters","type","useEncryptedEndpoints"})
+    @OutputCustomType.Constructor
     private QuickBooksLinkedServiceResponse(
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessTokenSecret,
-        @Nullable List<Object> annotations,
-        @Nullable Object companyId,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable Object connectionProperties,
-        @Nullable Object consumerKey,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> consumerSecret,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        @Nullable Object endpoint,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        String type,
-        @Nullable Object useEncryptedEndpoints) {
+        @OutputCustomType.Parameter("accessToken") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken,
+        @OutputCustomType.Parameter("accessTokenSecret") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessTokenSecret,
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("companyId") @Nullable Object companyId,
+        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @OutputCustomType.Parameter("connectionProperties") @Nullable Object connectionProperties,
+        @OutputCustomType.Parameter("consumerKey") @Nullable Object consumerKey,
+        @OutputCustomType.Parameter("consumerSecret") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> consumerSecret,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @OutputCustomType.Parameter("endpoint") @Nullable Object endpoint,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("useEncryptedEndpoints") @Nullable Object useEncryptedEndpoints) {
         this.accessToken = accessToken;
         this.accessTokenSecret = accessTokenSecret;
         this.annotations = annotations;

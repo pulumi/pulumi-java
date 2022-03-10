@@ -85,22 +85,22 @@ public final class GetIotHubDataConnectionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"consumerGroup","dataFormat","eventSystemProperties","id","iotHubResourceId","kind","location","mappingRuleName","name","provisioningState","sharedAccessPolicyName","systemData","tableName","type"})
+    @OutputCustomType.Constructor
     private GetIotHubDataConnectionResult(
-        String consumerGroup,
-        @Nullable String dataFormat,
-        @Nullable List<String> eventSystemProperties,
-        String id,
-        String iotHubResourceId,
-        String kind,
-        @Nullable String location,
-        @Nullable String mappingRuleName,
-        String name,
-        String provisioningState,
-        String sharedAccessPolicyName,
-        SystemDataResponse systemData,
-        @Nullable String tableName,
-        String type) {
+        @OutputCustomType.Parameter("consumerGroup") String consumerGroup,
+        @OutputCustomType.Parameter("dataFormat") @Nullable String dataFormat,
+        @OutputCustomType.Parameter("eventSystemProperties") @Nullable List<String> eventSystemProperties,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("iotHubResourceId") String iotHubResourceId,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("mappingRuleName") @Nullable String mappingRuleName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("sharedAccessPolicyName") String sharedAccessPolicyName,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tableName") @Nullable String tableName,
+        @OutputCustomType.Parameter("type") String type) {
         this.consumerGroup = consumerGroup;
         this.dataFormat = dataFormat;
         this.eventSystemProperties = eventSystemProperties;

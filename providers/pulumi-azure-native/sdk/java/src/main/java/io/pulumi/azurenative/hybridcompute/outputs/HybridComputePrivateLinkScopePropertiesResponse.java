@@ -27,11 +27,11 @@ public final class HybridComputePrivateLinkScopePropertiesResponse {
      */
     private final @Nullable String publicNetworkAccess;
 
-    @OutputCustomType.Constructor({"privateLinkScopeId","provisioningState","publicNetworkAccess"})
+    @OutputCustomType.Constructor
     private HybridComputePrivateLinkScopePropertiesResponse(
-        String privateLinkScopeId,
-        String provisioningState,
-        @Nullable String publicNetworkAccess) {
+        @OutputCustomType.Parameter("privateLinkScopeId") String privateLinkScopeId,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess) {
         this.privateLinkScopeId = privateLinkScopeId;
         this.provisioningState = provisioningState;
         this.publicNetworkAccess = publicNetworkAccess;

@@ -36,13 +36,13 @@ public final class OnPremiseResourceDetailsResponse {
      */
     private final String workspaceId;
 
-    @OutputCustomType.Constructor({"machineName","source","sourceComputerId","vmuuid","workspaceId"})
+    @OutputCustomType.Constructor
     private OnPremiseResourceDetailsResponse(
-        String machineName,
-        String source,
-        String sourceComputerId,
-        String vmuuid,
-        String workspaceId) {
+        @OutputCustomType.Parameter("machineName") String machineName,
+        @OutputCustomType.Parameter("source") String source,
+        @OutputCustomType.Parameter("sourceComputerId") String sourceComputerId,
+        @OutputCustomType.Parameter("vmuuid") String vmuuid,
+        @OutputCustomType.Parameter("workspaceId") String workspaceId) {
         this.machineName = machineName;
         this.source = source;
         this.sourceComputerId = sourceComputerId;

@@ -68,18 +68,18 @@ public final class SqlContainerGetPropertiesResponseResource {
      */
     private final @Nullable UniqueKeyPolicyResponse uniqueKeyPolicy;
 
-    @OutputCustomType.Constructor({"analyticalStorageTtl","conflictResolutionPolicy","defaultTtl","etag","id","indexingPolicy","partitionKey","rid","ts","uniqueKeyPolicy"})
+    @OutputCustomType.Constructor
     private SqlContainerGetPropertiesResponseResource(
-        @Nullable Double analyticalStorageTtl,
-        @Nullable ConflictResolutionPolicyResponse conflictResolutionPolicy,
-        @Nullable Integer defaultTtl,
-        String etag,
-        String id,
-        @Nullable IndexingPolicyResponse indexingPolicy,
-        @Nullable ContainerPartitionKeyResponse partitionKey,
-        String rid,
-        Double ts,
-        @Nullable UniqueKeyPolicyResponse uniqueKeyPolicy) {
+        @OutputCustomType.Parameter("analyticalStorageTtl") @Nullable Double analyticalStorageTtl,
+        @OutputCustomType.Parameter("conflictResolutionPolicy") @Nullable ConflictResolutionPolicyResponse conflictResolutionPolicy,
+        @OutputCustomType.Parameter("defaultTtl") @Nullable Integer defaultTtl,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("indexingPolicy") @Nullable IndexingPolicyResponse indexingPolicy,
+        @OutputCustomType.Parameter("partitionKey") @Nullable ContainerPartitionKeyResponse partitionKey,
+        @OutputCustomType.Parameter("rid") String rid,
+        @OutputCustomType.Parameter("ts") Double ts,
+        @OutputCustomType.Parameter("uniqueKeyPolicy") @Nullable UniqueKeyPolicyResponse uniqueKeyPolicy) {
         this.analyticalStorageTtl = analyticalStorageTtl;
         this.conflictResolutionPolicy = conflictResolutionPolicy;
         this.defaultTtl = defaultTtl;

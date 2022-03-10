@@ -24,10 +24,10 @@ public final class ListShareSubscriptionSourceShareSynchronizationSettingsResult
      */
     private final List<ScheduledSourceSynchronizationSettingResponse> value;
 
-    @OutputCustomType.Constructor({"nextLink","value"})
+    @OutputCustomType.Constructor
     private ListShareSubscriptionSourceShareSynchronizationSettingsResult(
-        @Nullable String nextLink,
-        List<ScheduledSourceSynchronizationSettingResponse> value) {
+        @OutputCustomType.Parameter("nextLink") @Nullable String nextLink,
+        @OutputCustomType.Parameter("value") List<ScheduledSourceSynchronizationSettingResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }

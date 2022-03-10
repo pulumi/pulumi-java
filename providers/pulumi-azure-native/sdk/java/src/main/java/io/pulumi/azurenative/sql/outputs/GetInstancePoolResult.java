@@ -60,17 +60,17 @@ public final class GetInstancePoolResult {
      */
     private final Integer vCores;
 
-    @OutputCustomType.Constructor({"id","licenseType","location","name","sku","subnetId","tags","type","vCores"})
+    @OutputCustomType.Constructor
     private GetInstancePoolResult(
-        String id,
-        String licenseType,
-        String location,
-        String name,
-        @Nullable SkuResponse sku,
-        String subnetId,
-        @Nullable Map<String,String> tags,
-        String type,
-        Integer vCores) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("licenseType") String licenseType,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @OutputCustomType.Parameter("subnetId") String subnetId,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("vCores") Integer vCores) {
         this.id = id;
         this.licenseType = licenseType;
         this.location = location;

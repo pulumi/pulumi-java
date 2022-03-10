@@ -50,15 +50,15 @@ public final class RateLimitRuleResponse {
      */
     private final Integer rateLimitThreshold;
 
-    @OutputCustomType.Constructor({"action","enabledState","matchConditions","name","priority","rateLimitDurationInMinutes","rateLimitThreshold"})
+    @OutputCustomType.Constructor
     private RateLimitRuleResponse(
-        String action,
-        @Nullable String enabledState,
-        List<MatchConditionResponse> matchConditions,
-        String name,
-        Integer priority,
-        Integer rateLimitDurationInMinutes,
-        Integer rateLimitThreshold) {
+        @OutputCustomType.Parameter("action") String action,
+        @OutputCustomType.Parameter("enabledState") @Nullable String enabledState,
+        @OutputCustomType.Parameter("matchConditions") List<MatchConditionResponse> matchConditions,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("rateLimitDurationInMinutes") Integer rateLimitDurationInMinutes,
+        @OutputCustomType.Parameter("rateLimitThreshold") Integer rateLimitThreshold) {
         this.action = action;
         this.enabledState = enabledState;
         this.matchConditions = matchConditions;

@@ -106,26 +106,26 @@ public final class GetFileShareResult {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"accessTier","accessTierChangeTime","accessTierStatus","deleted","deletedTime","enabledProtocols","etag","id","lastModifiedTime","metadata","name","remainingRetentionDays","rootSquash","shareQuota","shareUsageBytes","snapshotTime","type","version"})
+    @OutputCustomType.Constructor
     private GetFileShareResult(
-        @Nullable String accessTier,
-        String accessTierChangeTime,
-        String accessTierStatus,
-        Boolean deleted,
-        String deletedTime,
-        @Nullable String enabledProtocols,
-        String etag,
-        String id,
-        String lastModifiedTime,
-        @Nullable Map<String,String> metadata,
-        String name,
-        Integer remainingRetentionDays,
-        @Nullable String rootSquash,
-        @Nullable Integer shareQuota,
-        Double shareUsageBytes,
-        String snapshotTime,
-        String type,
-        String version) {
+        @OutputCustomType.Parameter("accessTier") @Nullable String accessTier,
+        @OutputCustomType.Parameter("accessTierChangeTime") String accessTierChangeTime,
+        @OutputCustomType.Parameter("accessTierStatus") String accessTierStatus,
+        @OutputCustomType.Parameter("deleted") Boolean deleted,
+        @OutputCustomType.Parameter("deletedTime") String deletedTime,
+        @OutputCustomType.Parameter("enabledProtocols") @Nullable String enabledProtocols,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @OutputCustomType.Parameter("metadata") @Nullable Map<String,String> metadata,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("remainingRetentionDays") Integer remainingRetentionDays,
+        @OutputCustomType.Parameter("rootSquash") @Nullable String rootSquash,
+        @OutputCustomType.Parameter("shareQuota") @Nullable Integer shareQuota,
+        @OutputCustomType.Parameter("shareUsageBytes") Double shareUsageBytes,
+        @OutputCustomType.Parameter("snapshotTime") String snapshotTime,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("version") String version) {
         this.accessTier = accessTier;
         this.accessTierChangeTime = accessTierChangeTime;
         this.accessTierStatus = accessTierStatus;

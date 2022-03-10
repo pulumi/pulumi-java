@@ -33,12 +33,12 @@ public final class ConfigurationProfilePreferenceVmBackupResponse {
      */
     private final @Nullable String timeZone;
 
-    @OutputCustomType.Constructor({"instantRpRetentionRangeInDays","retentionPolicy","schedulePolicy","timeZone"})
+    @OutputCustomType.Constructor
     private ConfigurationProfilePreferenceVmBackupResponse(
-        @Nullable Integer instantRpRetentionRangeInDays,
-        @Nullable String retentionPolicy,
-        @Nullable String schedulePolicy,
-        @Nullable String timeZone) {
+        @OutputCustomType.Parameter("instantRpRetentionRangeInDays") @Nullable Integer instantRpRetentionRangeInDays,
+        @OutputCustomType.Parameter("retentionPolicy") @Nullable String retentionPolicy,
+        @OutputCustomType.Parameter("schedulePolicy") @Nullable String schedulePolicy,
+        @OutputCustomType.Parameter("timeZone") @Nullable String timeZone) {
         this.instantRpRetentionRangeInDays = instantRpRetentionRangeInDays;
         this.retentionPolicy = retentionPolicy;
         this.schedulePolicy = schedulePolicy;

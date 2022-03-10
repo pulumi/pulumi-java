@@ -35,13 +35,13 @@ public final class VirtualNetworkRuleResponse {
      */
     private final String virtualNetworkRuleState;
 
-    @OutputCustomType.Constructor({"id","name","subnetId","type","virtualNetworkRuleState"})
+    @OutputCustomType.Constructor
     private VirtualNetworkRuleResponse(
-        String id,
-        String name,
-        String subnetId,
-        String type,
-        String virtualNetworkRuleState) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("subnetId") String subnetId,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("virtualNetworkRuleState") String virtualNetworkRuleState) {
         this.id = id;
         this.name = name;
         this.subnetId = subnetId;

@@ -56,17 +56,17 @@ public final class GetServerKeyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"autoRotationEnabled","creationDate","id","kind","location","name","subregion","thumbprint","type"})
+    @OutputCustomType.Constructor
     private GetServerKeyResult(
-        Boolean autoRotationEnabled,
-        String creationDate,
-        String id,
-        String kind,
-        String location,
-        String name,
-        String subregion,
-        String thumbprint,
-        String type) {
+        @OutputCustomType.Parameter("autoRotationEnabled") Boolean autoRotationEnabled,
+        @OutputCustomType.Parameter("creationDate") String creationDate,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("subregion") String subregion,
+        @OutputCustomType.Parameter("thumbprint") String thumbprint,
+        @OutputCustomType.Parameter("type") String type) {
         this.autoRotationEnabled = autoRotationEnabled;
         this.creationDate = creationDate;
         this.id = id;

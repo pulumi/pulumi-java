@@ -38,13 +38,13 @@ public final class MarkdownPartMetadataResponseSettingsSettings {
      */
     private final @Nullable String title;
 
-    @OutputCustomType.Constructor({"content","markdownSource","markdownUri","subtitle","title"})
+    @OutputCustomType.Constructor
     private MarkdownPartMetadataResponseSettingsSettings(
-        @Nullable String content,
-        @Nullable Integer markdownSource,
-        @Nullable String markdownUri,
-        @Nullable String subtitle,
-        @Nullable String title) {
+        @OutputCustomType.Parameter("content") @Nullable String content,
+        @OutputCustomType.Parameter("markdownSource") @Nullable Integer markdownSource,
+        @OutputCustomType.Parameter("markdownUri") @Nullable String markdownUri,
+        @OutputCustomType.Parameter("subtitle") @Nullable String subtitle,
+        @OutputCustomType.Parameter("title") @Nullable String title) {
         this.content = content;
         this.markdownSource = markdownSource;
         this.markdownUri = markdownUri;

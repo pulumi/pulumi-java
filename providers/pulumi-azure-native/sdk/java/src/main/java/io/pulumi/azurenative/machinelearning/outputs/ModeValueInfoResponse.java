@@ -24,10 +24,10 @@ public final class ModeValueInfoResponse {
      */
     private final @Nullable List<ModuleAssetParameterResponse> parameters;
 
-    @OutputCustomType.Constructor({"interfaceString","parameters"})
+    @OutputCustomType.Constructor
     private ModeValueInfoResponse(
-        @Nullable String interfaceString,
-        @Nullable List<ModuleAssetParameterResponse> parameters) {
+        @OutputCustomType.Parameter("interfaceString") @Nullable String interfaceString,
+        @OutputCustomType.Parameter("parameters") @Nullable List<ModuleAssetParameterResponse> parameters) {
         this.interfaceString = interfaceString;
         this.parameters = parameters;
     }

@@ -69,19 +69,19 @@ public final class GetFavoriteResult {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"category","config","favoriteId","favoriteType","isGeneratedFromTemplate","name","sourceType","tags","timeModified","userId","version"})
+    @OutputCustomType.Constructor
     private GetFavoriteResult(
-        @Nullable String category,
-        @Nullable String config,
-        String favoriteId,
-        @Nullable String favoriteType,
-        @Nullable Boolean isGeneratedFromTemplate,
-        @Nullable String name,
-        @Nullable String sourceType,
-        @Nullable List<String> tags,
-        String timeModified,
-        String userId,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("category") @Nullable String category,
+        @OutputCustomType.Parameter("config") @Nullable String config,
+        @OutputCustomType.Parameter("favoriteId") String favoriteId,
+        @OutputCustomType.Parameter("favoriteType") @Nullable String favoriteType,
+        @OutputCustomType.Parameter("isGeneratedFromTemplate") @Nullable Boolean isGeneratedFromTemplate,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("sourceType") @Nullable String sourceType,
+        @OutputCustomType.Parameter("tags") @Nullable List<String> tags,
+        @OutputCustomType.Parameter("timeModified") String timeModified,
+        @OutputCustomType.Parameter("userId") String userId,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.category = category;
         this.config = config;
         this.favoriteId = favoriteId;

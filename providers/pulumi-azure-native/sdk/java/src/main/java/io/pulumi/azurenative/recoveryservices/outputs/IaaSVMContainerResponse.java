@@ -56,16 +56,16 @@ public final class IaaSVMContainerResponse {
      */
     private final @Nullable String virtualMachineVersion;
 
-    @OutputCustomType.Constructor({"backupManagementType","containerType","friendlyName","healthStatus","registrationStatus","resourceGroup","virtualMachineId","virtualMachineVersion"})
+    @OutputCustomType.Constructor
     private IaaSVMContainerResponse(
-        @Nullable String backupManagementType,
-        String containerType,
-        @Nullable String friendlyName,
-        @Nullable String healthStatus,
-        @Nullable String registrationStatus,
-        @Nullable String resourceGroup,
-        @Nullable String virtualMachineId,
-        @Nullable String virtualMachineVersion) {
+        @OutputCustomType.Parameter("backupManagementType") @Nullable String backupManagementType,
+        @OutputCustomType.Parameter("containerType") String containerType,
+        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @OutputCustomType.Parameter("healthStatus") @Nullable String healthStatus,
+        @OutputCustomType.Parameter("registrationStatus") @Nullable String registrationStatus,
+        @OutputCustomType.Parameter("resourceGroup") @Nullable String resourceGroup,
+        @OutputCustomType.Parameter("virtualMachineId") @Nullable String virtualMachineId,
+        @OutputCustomType.Parameter("virtualMachineVersion") @Nullable String virtualMachineVersion) {
         this.backupManagementType = backupManagementType;
         this.containerType = containerType;
         this.friendlyName = friendlyName;

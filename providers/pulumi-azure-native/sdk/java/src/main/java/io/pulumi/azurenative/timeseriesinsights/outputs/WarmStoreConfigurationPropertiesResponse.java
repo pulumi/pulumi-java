@@ -15,8 +15,8 @@ public final class WarmStoreConfigurationPropertiesResponse {
      */
     private final String dataRetention;
 
-    @OutputCustomType.Constructor({"dataRetention"})
-    private WarmStoreConfigurationPropertiesResponse(String dataRetention) {
+    @OutputCustomType.Constructor
+    private WarmStoreConfigurationPropertiesResponse(@OutputCustomType.Parameter("dataRetention") String dataRetention) {
         this.dataRetention = dataRetention;
     }
 

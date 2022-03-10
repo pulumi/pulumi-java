@@ -17,8 +17,8 @@ public final class PersonalComputeInstanceSettingsResponse {
      */
     private final @Nullable AssignedUserResponse assignedUser;
 
-    @OutputCustomType.Constructor({"assignedUser"})
-    private PersonalComputeInstanceSettingsResponse(@Nullable AssignedUserResponse assignedUser) {
+    @OutputCustomType.Constructor
+    private PersonalComputeInstanceSettingsResponse(@OutputCustomType.Parameter("assignedUser") @Nullable AssignedUserResponse assignedUser) {
         this.assignedUser = assignedUser;
     }
 

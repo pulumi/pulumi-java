@@ -27,11 +27,11 @@ public final class PipelineReferenceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"name","referenceName","type"})
+    @OutputCustomType.Constructor
     private PipelineReferenceResponse(
-        @Nullable String name,
-        String referenceName,
-        String type) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("referenceName") String referenceName,
+        @OutputCustomType.Parameter("type") String type) {
         this.name = name;
         this.referenceName = referenceName;
         this.type = type;

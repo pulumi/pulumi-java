@@ -22,10 +22,10 @@ public final class DatasetStateResponseDeprecatedBy {
      */
     private final @Nullable String definitionVersion;
 
-    @OutputCustomType.Constructor({"datasetId","definitionVersion"})
+    @OutputCustomType.Constructor
     private DatasetStateResponseDeprecatedBy(
-        String datasetId,
-        @Nullable String definitionVersion) {
+        @OutputCustomType.Parameter("datasetId") String datasetId,
+        @OutputCustomType.Parameter("definitionVersion") @Nullable String definitionVersion) {
         this.datasetId = datasetId;
         this.definitionVersion = definitionVersion;
     }

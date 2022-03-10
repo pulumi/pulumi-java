@@ -34,12 +34,12 @@ public final class MetricCounterResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"additionalDimensions","dimensionFilter","instance","name"})
+    @OutputCustomType.Constructor
     private MetricCounterResponse(
-        @Nullable List<MetricDimensionResponse> additionalDimensions,
-        @Nullable List<MetricDimensionResponse> dimensionFilter,
-        @Nullable String instance,
-        String name) {
+        @OutputCustomType.Parameter("additionalDimensions") @Nullable List<MetricDimensionResponse> additionalDimensions,
+        @OutputCustomType.Parameter("dimensionFilter") @Nullable List<MetricDimensionResponse> dimensionFilter,
+        @OutputCustomType.Parameter("instance") @Nullable String instance,
+        @OutputCustomType.Parameter("name") String name) {
         this.additionalDimensions = additionalDimensions;
         this.dimensionFilter = dimensionFilter;
         this.instance = instance;

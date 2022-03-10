@@ -59,33 +59,33 @@ public final class GetIoMAMPolicyByNameResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"accessRecheckOfflineTimeout","accessRecheckOnlineTimeout","appSharingFromLevel","appSharingToLevel","authentication","clipboardSharingLevel","dataBackup","description","deviceCompliance","fileEncryptionLevel","fileSharingSaveAs","friendlyName","groupStatus","id","lastModifiedTime","location","managedBrowser","name","numOfApps","offlineWipeTimeout","pin","pinNumRetry","tags","touchId","type"})
+    @OutputCustomType.Constructor
     private GetIoMAMPolicyByNameResult(
-        @Nullable String accessRecheckOfflineTimeout,
-        @Nullable String accessRecheckOnlineTimeout,
-        @Nullable String appSharingFromLevel,
-        @Nullable String appSharingToLevel,
-        @Nullable String authentication,
-        @Nullable String clipboardSharingLevel,
-        @Nullable String dataBackup,
-        @Nullable String description,
-        @Nullable String deviceCompliance,
-        @Nullable String fileEncryptionLevel,
-        @Nullable String fileSharingSaveAs,
-        String friendlyName,
-        String groupStatus,
-        String id,
-        String lastModifiedTime,
-        @Nullable String location,
-        @Nullable String managedBrowser,
-        String name,
-        Integer numOfApps,
-        @Nullable String offlineWipeTimeout,
-        @Nullable String pin,
-        @Nullable Integer pinNumRetry,
-        @Nullable Map<String,String> tags,
-        @Nullable String touchId,
-        String type) {
+        @OutputCustomType.Parameter("accessRecheckOfflineTimeout") @Nullable String accessRecheckOfflineTimeout,
+        @OutputCustomType.Parameter("accessRecheckOnlineTimeout") @Nullable String accessRecheckOnlineTimeout,
+        @OutputCustomType.Parameter("appSharingFromLevel") @Nullable String appSharingFromLevel,
+        @OutputCustomType.Parameter("appSharingToLevel") @Nullable String appSharingToLevel,
+        @OutputCustomType.Parameter("authentication") @Nullable String authentication,
+        @OutputCustomType.Parameter("clipboardSharingLevel") @Nullable String clipboardSharingLevel,
+        @OutputCustomType.Parameter("dataBackup") @Nullable String dataBackup,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("deviceCompliance") @Nullable String deviceCompliance,
+        @OutputCustomType.Parameter("fileEncryptionLevel") @Nullable String fileEncryptionLevel,
+        @OutputCustomType.Parameter("fileSharingSaveAs") @Nullable String fileSharingSaveAs,
+        @OutputCustomType.Parameter("friendlyName") String friendlyName,
+        @OutputCustomType.Parameter("groupStatus") String groupStatus,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("managedBrowser") @Nullable String managedBrowser,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("numOfApps") Integer numOfApps,
+        @OutputCustomType.Parameter("offlineWipeTimeout") @Nullable String offlineWipeTimeout,
+        @OutputCustomType.Parameter("pin") @Nullable String pin,
+        @OutputCustomType.Parameter("pinNumRetry") @Nullable Integer pinNumRetry,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("touchId") @Nullable String touchId,
+        @OutputCustomType.Parameter("type") String type) {
         this.accessRecheckOfflineTimeout = accessRecheckOfflineTimeout;
         this.accessRecheckOnlineTimeout = accessRecheckOnlineTimeout;
         this.appSharingFromLevel = appSharingFromLevel;

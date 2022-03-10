@@ -44,14 +44,14 @@ public final class AzureDataLakeStoreSourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"disableMetricsCollection","maxConcurrentConnections","recursive","sourceRetryCount","sourceRetryWait","type"})
+    @OutputCustomType.Constructor
     private AzureDataLakeStoreSourceResponse(
-        @Nullable Object disableMetricsCollection,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable Object recursive,
-        @Nullable Object sourceRetryCount,
-        @Nullable Object sourceRetryWait,
-        String type) {
+        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @OutputCustomType.Parameter("recursive") @Nullable Object recursive,
+        @OutputCustomType.Parameter("sourceRetryCount") @Nullable Object sourceRetryCount,
+        @OutputCustomType.Parameter("sourceRetryWait") @Nullable Object sourceRetryWait,
+        @OutputCustomType.Parameter("type") String type) {
         this.disableMetricsCollection = disableMetricsCollection;
         this.maxConcurrentConnections = maxConcurrentConnections;
         this.recursive = recursive;

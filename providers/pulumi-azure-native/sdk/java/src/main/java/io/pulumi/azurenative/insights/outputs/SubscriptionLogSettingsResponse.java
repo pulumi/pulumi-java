@@ -23,10 +23,10 @@ public final class SubscriptionLogSettingsResponse {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"category","enabled"})
+    @OutputCustomType.Constructor
     private SubscriptionLogSettingsResponse(
-        @Nullable String category,
-        Boolean enabled) {
+        @OutputCustomType.Parameter("category") @Nullable String category,
+        @OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.category = category;
         this.enabled = enabled;
     }

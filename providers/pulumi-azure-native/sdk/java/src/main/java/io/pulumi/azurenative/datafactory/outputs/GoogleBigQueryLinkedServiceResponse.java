@@ -106,25 +106,25 @@ public final class GoogleBigQueryLinkedServiceResponse {
      */
     private final @Nullable Object useSystemTrustStore;
 
-    @OutputCustomType.Constructor({"additionalProjects","annotations","authenticationType","clientId","clientSecret","connectVia","description","email","encryptedCredential","keyFilePath","parameters","project","refreshToken","requestGoogleDriveScope","trustedCertPath","type","useSystemTrustStore"})
+    @OutputCustomType.Constructor
     private GoogleBigQueryLinkedServiceResponse(
-        @Nullable Object additionalProjects,
-        @Nullable List<Object> annotations,
-        String authenticationType,
-        @Nullable Object clientId,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable String description,
-        @Nullable Object email,
-        @Nullable Object encryptedCredential,
-        @Nullable Object keyFilePath,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        Object project,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> refreshToken,
-        @Nullable Object requestGoogleDriveScope,
-        @Nullable Object trustedCertPath,
-        String type,
-        @Nullable Object useSystemTrustStore) {
+        @OutputCustomType.Parameter("additionalProjects") @Nullable Object additionalProjects,
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("authenticationType") String authenticationType,
+        @OutputCustomType.Parameter("clientId") @Nullable Object clientId,
+        @OutputCustomType.Parameter("clientSecret") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret,
+        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("email") @Nullable Object email,
+        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @OutputCustomType.Parameter("keyFilePath") @Nullable Object keyFilePath,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("project") Object project,
+        @OutputCustomType.Parameter("refreshToken") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> refreshToken,
+        @OutputCustomType.Parameter("requestGoogleDriveScope") @Nullable Object requestGoogleDriveScope,
+        @OutputCustomType.Parameter("trustedCertPath") @Nullable Object trustedCertPath,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("useSystemTrustStore") @Nullable Object useSystemTrustStore) {
         this.additionalProjects = additionalProjects;
         this.annotations = annotations;
         this.authenticationType = authenticationType;

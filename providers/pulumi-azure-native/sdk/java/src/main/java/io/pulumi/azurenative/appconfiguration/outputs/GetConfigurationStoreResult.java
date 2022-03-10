@@ -83,21 +83,21 @@ public final class GetConfigurationStoreResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"creationDate","encryption","endpoint","id","identity","location","name","privateEndpointConnections","provisioningState","publicNetworkAccess","sku","tags","type"})
+    @OutputCustomType.Constructor
     private GetConfigurationStoreResult(
-        String creationDate,
-        @Nullable EncryptionPropertiesResponse encryption,
-        String endpoint,
-        String id,
-        @Nullable ResourceIdentityResponse identity,
-        String location,
-        String name,
-        List<PrivateEndpointConnectionReferenceResponse> privateEndpointConnections,
-        String provisioningState,
-        @Nullable String publicNetworkAccess,
-        SkuResponse sku,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("creationDate") String creationDate,
+        @OutputCustomType.Parameter("encryption") @Nullable EncryptionPropertiesResponse encryption,
+        @OutputCustomType.Parameter("endpoint") String endpoint,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable ResourceIdentityResponse identity,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("privateEndpointConnections") List<PrivateEndpointConnectionReferenceResponse> privateEndpointConnections,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess,
+        @OutputCustomType.Parameter("sku") SkuResponse sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.creationDate = creationDate;
         this.encryption = encryption;
         this.endpoint = endpoint;

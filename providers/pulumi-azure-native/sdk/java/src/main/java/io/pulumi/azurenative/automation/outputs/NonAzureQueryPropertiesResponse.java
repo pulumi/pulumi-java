@@ -22,10 +22,10 @@ public final class NonAzureQueryPropertiesResponse {
      */
     private final @Nullable String workspaceId;
 
-    @OutputCustomType.Constructor({"functionAlias","workspaceId"})
+    @OutputCustomType.Constructor
     private NonAzureQueryPropertiesResponse(
-        @Nullable String functionAlias,
-        @Nullable String workspaceId) {
+        @OutputCustomType.Parameter("functionAlias") @Nullable String functionAlias,
+        @OutputCustomType.Parameter("workspaceId") @Nullable String workspaceId) {
         this.functionAlias = functionAlias;
         this.workspaceId = workspaceId;
     }

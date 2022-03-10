@@ -33,12 +33,12 @@ public final class ManagementPolicyBaseBlobResponse {
      */
     private final @Nullable DateAfterModificationResponse tierToCool;
 
-    @OutputCustomType.Constructor({"delete","enableAutoTierToHotFromCool","tierToArchive","tierToCool"})
+    @OutputCustomType.Constructor
     private ManagementPolicyBaseBlobResponse(
-        @Nullable DateAfterModificationResponse delete,
-        @Nullable Boolean enableAutoTierToHotFromCool,
-        @Nullable DateAfterModificationResponse tierToArchive,
-        @Nullable DateAfterModificationResponse tierToCool) {
+        @OutputCustomType.Parameter("delete") @Nullable DateAfterModificationResponse delete,
+        @OutputCustomType.Parameter("enableAutoTierToHotFromCool") @Nullable Boolean enableAutoTierToHotFromCool,
+        @OutputCustomType.Parameter("tierToArchive") @Nullable DateAfterModificationResponse tierToArchive,
+        @OutputCustomType.Parameter("tierToCool") @Nullable DateAfterModificationResponse tierToCool) {
         this.delete = delete;
         this.enableAutoTierToHotFromCool = enableAutoTierToHotFromCool;
         this.tierToArchive = tierToArchive;

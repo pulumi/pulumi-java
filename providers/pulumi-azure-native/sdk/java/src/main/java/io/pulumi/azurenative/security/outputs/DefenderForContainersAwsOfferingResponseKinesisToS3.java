@@ -17,8 +17,8 @@ public final class DefenderForContainersAwsOfferingResponseKinesisToS3 {
      */
     private final @Nullable String cloudRoleArn;
 
-    @OutputCustomType.Constructor({"cloudRoleArn"})
-    private DefenderForContainersAwsOfferingResponseKinesisToS3(@Nullable String cloudRoleArn) {
+    @OutputCustomType.Constructor
+    private DefenderForContainersAwsOfferingResponseKinesisToS3(@OutputCustomType.Parameter("cloudRoleArn") @Nullable String cloudRoleArn) {
         this.cloudRoleArn = cloudRoleArn;
     }
 

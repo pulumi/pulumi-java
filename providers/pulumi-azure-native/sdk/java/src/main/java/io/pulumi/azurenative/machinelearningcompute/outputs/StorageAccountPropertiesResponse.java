@@ -17,8 +17,8 @@ public final class StorageAccountPropertiesResponse {
      */
     private final @Nullable String resourceId;
 
-    @OutputCustomType.Constructor({"resourceId"})
-    private StorageAccountPropertiesResponse(@Nullable String resourceId) {
+    @OutputCustomType.Constructor
+    private StorageAccountPropertiesResponse(@OutputCustomType.Parameter("resourceId") @Nullable String resourceId) {
         this.resourceId = resourceId;
     }
 

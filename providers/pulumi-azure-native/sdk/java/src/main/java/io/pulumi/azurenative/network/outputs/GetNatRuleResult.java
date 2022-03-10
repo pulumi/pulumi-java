@@ -70,19 +70,19 @@ public final class GetNatRuleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"egressVpnSiteLinkConnections","etag","externalMappings","id","ingressVpnSiteLinkConnections","internalMappings","ipConfigurationId","mode","name","provisioningState","type"})
+    @OutputCustomType.Constructor
     private GetNatRuleResult(
-        List<SubResourceResponse> egressVpnSiteLinkConnections,
-        String etag,
-        @Nullable List<VpnNatRuleMappingResponse> externalMappings,
-        @Nullable String id,
-        List<SubResourceResponse> ingressVpnSiteLinkConnections,
-        @Nullable List<VpnNatRuleMappingResponse> internalMappings,
-        @Nullable String ipConfigurationId,
-        @Nullable String mode,
-        @Nullable String name,
-        String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("egressVpnSiteLinkConnections") List<SubResourceResponse> egressVpnSiteLinkConnections,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("externalMappings") @Nullable List<VpnNatRuleMappingResponse> externalMappings,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("ingressVpnSiteLinkConnections") List<SubResourceResponse> ingressVpnSiteLinkConnections,
+        @OutputCustomType.Parameter("internalMappings") @Nullable List<VpnNatRuleMappingResponse> internalMappings,
+        @OutputCustomType.Parameter("ipConfigurationId") @Nullable String ipConfigurationId,
+        @OutputCustomType.Parameter("mode") @Nullable String mode,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.egressVpnSiteLinkConnections = egressVpnSiteLinkConnections;
         this.etag = etag;
         this.externalMappings = externalMappings;

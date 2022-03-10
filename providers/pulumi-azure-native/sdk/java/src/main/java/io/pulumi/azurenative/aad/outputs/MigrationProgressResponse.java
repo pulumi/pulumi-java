@@ -23,10 +23,10 @@ public final class MigrationProgressResponse {
      */
     private final @Nullable String progressMessage;
 
-    @OutputCustomType.Constructor({"completionPercentage","progressMessage"})
+    @OutputCustomType.Constructor
     private MigrationProgressResponse(
-        @Nullable Double completionPercentage,
-        @Nullable String progressMessage) {
+        @OutputCustomType.Parameter("completionPercentage") @Nullable Double completionPercentage,
+        @OutputCustomType.Parameter("progressMessage") @Nullable String progressMessage) {
         this.completionPercentage = completionPercentage;
         this.progressMessage = progressMessage;
     }

@@ -29,11 +29,11 @@ public final class MoveResourcePropertiesResponseMoveStatus {
      */
     private final String moveState;
 
-    @OutputCustomType.Constructor({"errors","jobStatus","moveState"})
+    @OutputCustomType.Constructor
     private MoveResourcePropertiesResponseMoveStatus(
-        @Nullable MoveResourceErrorResponse errors,
-        @Nullable JobStatusResponse jobStatus,
-        String moveState) {
+        @OutputCustomType.Parameter("errors") @Nullable MoveResourceErrorResponse errors,
+        @OutputCustomType.Parameter("jobStatus") @Nullable JobStatusResponse jobStatus,
+        @OutputCustomType.Parameter("moveState") String moveState) {
         this.errors = errors;
         this.jobStatus = jobStatus;
         this.moveState = moveState;
