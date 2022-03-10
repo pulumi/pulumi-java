@@ -15,8 +15,8 @@ public final class GlobalTableReplica {
      */
     private final String regionName;
 
-    @OutputCustomType.Constructor({"regionName"})
-    private GlobalTableReplica(String regionName) {
+    @OutputCustomType.Constructor
+    private GlobalTableReplica(@OutputCustomType.Parameter("regionName") String regionName) {
         this.regionName = regionName;
     }
 

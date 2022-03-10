@@ -43,14 +43,14 @@ public final class EventTargetRedshiftTarget {
      */
     private final @Nullable Boolean withEvent;
 
-    @OutputCustomType.Constructor({"database","dbUser","secretsManagerArn","sql","statementName","withEvent"})
+    @OutputCustomType.Constructor
     private EventTargetRedshiftTarget(
-        String database,
-        @Nullable String dbUser,
-        @Nullable String secretsManagerArn,
-        @Nullable String sql,
-        @Nullable String statementName,
-        @Nullable Boolean withEvent) {
+        @OutputCustomType.Parameter("database") String database,
+        @OutputCustomType.Parameter("dbUser") @Nullable String dbUser,
+        @OutputCustomType.Parameter("secretsManagerArn") @Nullable String secretsManagerArn,
+        @OutputCustomType.Parameter("sql") @Nullable String sql,
+        @OutputCustomType.Parameter("statementName") @Nullable String statementName,
+        @OutputCustomType.Parameter("withEvent") @Nullable Boolean withEvent) {
         this.database = database;
         this.dbUser = dbUser;
         this.secretsManagerArn = secretsManagerArn;

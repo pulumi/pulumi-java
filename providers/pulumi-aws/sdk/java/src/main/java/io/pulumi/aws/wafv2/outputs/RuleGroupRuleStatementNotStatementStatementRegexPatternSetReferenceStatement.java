@@ -30,11 +30,11 @@ public final class RuleGroupRuleStatementNotStatementStatementRegexPatternSetRef
      */
     private final List<RuleGroupRuleStatementNotStatementStatementRegexPatternSetReferenceStatementTextTransformation> textTransformations;
 
-    @OutputCustomType.Constructor({"arn","fieldToMatch","textTransformations"})
+    @OutputCustomType.Constructor
     private RuleGroupRuleStatementNotStatementStatementRegexPatternSetReferenceStatement(
-        String arn,
-        @Nullable RuleGroupRuleStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatch fieldToMatch,
-        List<RuleGroupRuleStatementNotStatementStatementRegexPatternSetReferenceStatementTextTransformation> textTransformations) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("fieldToMatch") @Nullable RuleGroupRuleStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatch fieldToMatch,
+        @OutputCustomType.Parameter("textTransformations") List<RuleGroupRuleStatementNotStatementStatementRegexPatternSetReferenceStatementTextTransformation> textTransformations) {
         this.arn = arn;
         this.fieldToMatch = fieldToMatch;
         this.textTransformations = textTransformations;

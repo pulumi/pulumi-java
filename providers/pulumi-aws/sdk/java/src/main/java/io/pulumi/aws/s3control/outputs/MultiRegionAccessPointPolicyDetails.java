@@ -20,10 +20,10 @@ public final class MultiRegionAccessPointPolicyDetails {
      */
     private final String policy;
 
-    @OutputCustomType.Constructor({"name","policy"})
+    @OutputCustomType.Constructor
     private MultiRegionAccessPointPolicyDetails(
-        String name,
-        String policy) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("policy") String policy) {
         this.name = name;
         this.policy = policy;
     }

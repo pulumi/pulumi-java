@@ -77,19 +77,19 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementNotSta
      */
     private final @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementXssMatchStatement xssMatchStatement;
 
-    @OutputCustomType.Constructor({"andStatement","byteMatchStatement","geoMatchStatement","ipSetReferenceStatement","labelMatchStatement","notStatement","orStatement","regexPatternSetReferenceStatement","sizeConstraintStatement","sqliMatchStatement","xssMatchStatement"})
+    @OutputCustomType.Constructor
     private WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatement(
-        @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementAndStatement andStatement,
-        @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementByteMatchStatement byteMatchStatement,
-        @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementGeoMatchStatement geoMatchStatement,
-        @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementIpSetReferenceStatement ipSetReferenceStatement,
-        @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementLabelMatchStatement labelMatchStatement,
-        @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementNotStatement notStatement,
-        @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementOrStatement orStatement,
-        @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementRegexPatternSetReferenceStatement regexPatternSetReferenceStatement,
-        @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementSizeConstraintStatement sizeConstraintStatement,
-        @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementSqliMatchStatement sqliMatchStatement,
-        @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementXssMatchStatement xssMatchStatement) {
+        @OutputCustomType.Parameter("andStatement") @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementAndStatement andStatement,
+        @OutputCustomType.Parameter("byteMatchStatement") @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementByteMatchStatement byteMatchStatement,
+        @OutputCustomType.Parameter("geoMatchStatement") @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementGeoMatchStatement geoMatchStatement,
+        @OutputCustomType.Parameter("ipSetReferenceStatement") @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementIpSetReferenceStatement ipSetReferenceStatement,
+        @OutputCustomType.Parameter("labelMatchStatement") @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementLabelMatchStatement labelMatchStatement,
+        @OutputCustomType.Parameter("notStatement") @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementNotStatement notStatement,
+        @OutputCustomType.Parameter("orStatement") @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementOrStatement orStatement,
+        @OutputCustomType.Parameter("regexPatternSetReferenceStatement") @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementRegexPatternSetReferenceStatement regexPatternSetReferenceStatement,
+        @OutputCustomType.Parameter("sizeConstraintStatement") @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementSizeConstraintStatement sizeConstraintStatement,
+        @OutputCustomType.Parameter("sqliMatchStatement") @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementSqliMatchStatement sqliMatchStatement,
+        @OutputCustomType.Parameter("xssMatchStatement") @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementXssMatchStatement xssMatchStatement) {
         this.andStatement = andStatement;
         this.byteMatchStatement = byteMatchStatement;
         this.geoMatchStatement = geoMatchStatement;

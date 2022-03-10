@@ -28,11 +28,11 @@ public final class SecurityGroupIngress {
      */
     private final @Nullable String securityGroupOwnerId;
 
-    @OutputCustomType.Constructor({"cidr","securityGroupName","securityGroupOwnerId"})
+    @OutputCustomType.Constructor
     private SecurityGroupIngress(
-        @Nullable String cidr,
-        @Nullable String securityGroupName,
-        @Nullable String securityGroupOwnerId) {
+        @OutputCustomType.Parameter("cidr") @Nullable String cidr,
+        @OutputCustomType.Parameter("securityGroupName") @Nullable String securityGroupName,
+        @OutputCustomType.Parameter("securityGroupOwnerId") @Nullable String securityGroupOwnerId) {
         this.cidr = cidr;
         this.securityGroupName = securityGroupName;
         this.securityGroupOwnerId = securityGroupOwnerId;

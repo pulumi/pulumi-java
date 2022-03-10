@@ -53,15 +53,15 @@ public final class RuleGroupRuleStatementAndStatementStatementSizeConstraintStat
      */
     private final @Nullable RuleGroupRuleStatementAndStatementStatementSizeConstraintStatementFieldToMatchUriPath uriPath;
 
-    @OutputCustomType.Constructor({"allQueryArguments","body","method","queryString","singleHeader","singleQueryArgument","uriPath"})
+    @OutputCustomType.Constructor
     private RuleGroupRuleStatementAndStatementStatementSizeConstraintStatementFieldToMatch(
-        @Nullable RuleGroupRuleStatementAndStatementStatementSizeConstraintStatementFieldToMatchAllQueryArguments allQueryArguments,
-        @Nullable RuleGroupRuleStatementAndStatementStatementSizeConstraintStatementFieldToMatchBody body,
-        @Nullable RuleGroupRuleStatementAndStatementStatementSizeConstraintStatementFieldToMatchMethod method,
-        @Nullable RuleGroupRuleStatementAndStatementStatementSizeConstraintStatementFieldToMatchQueryString queryString,
-        @Nullable RuleGroupRuleStatementAndStatementStatementSizeConstraintStatementFieldToMatchSingleHeader singleHeader,
-        @Nullable RuleGroupRuleStatementAndStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgument singleQueryArgument,
-        @Nullable RuleGroupRuleStatementAndStatementStatementSizeConstraintStatementFieldToMatchUriPath uriPath) {
+        @OutputCustomType.Parameter("allQueryArguments") @Nullable RuleGroupRuleStatementAndStatementStatementSizeConstraintStatementFieldToMatchAllQueryArguments allQueryArguments,
+        @OutputCustomType.Parameter("body") @Nullable RuleGroupRuleStatementAndStatementStatementSizeConstraintStatementFieldToMatchBody body,
+        @OutputCustomType.Parameter("method") @Nullable RuleGroupRuleStatementAndStatementStatementSizeConstraintStatementFieldToMatchMethod method,
+        @OutputCustomType.Parameter("queryString") @Nullable RuleGroupRuleStatementAndStatementStatementSizeConstraintStatementFieldToMatchQueryString queryString,
+        @OutputCustomType.Parameter("singleHeader") @Nullable RuleGroupRuleStatementAndStatementStatementSizeConstraintStatementFieldToMatchSingleHeader singleHeader,
+        @OutputCustomType.Parameter("singleQueryArgument") @Nullable RuleGroupRuleStatementAndStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgument singleQueryArgument,
+        @OutputCustomType.Parameter("uriPath") @Nullable RuleGroupRuleStatementAndStatementStatementSizeConstraintStatementFieldToMatchUriPath uriPath) {
         this.allQueryArguments = allQueryArguments;
         this.body = body;
         this.method = method;

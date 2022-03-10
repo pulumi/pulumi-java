@@ -25,13 +25,13 @@ public final class GetCipherTextResult {
     private final String keyId;
     private final String plaintext;
 
-    @OutputCustomType.Constructor({"ciphertextBlob","context","id","keyId","plaintext"})
+    @OutputCustomType.Constructor
     private GetCipherTextResult(
-        String ciphertextBlob,
-        @Nullable Map<String,String> context,
-        String id,
-        String keyId,
-        String plaintext) {
+        @OutputCustomType.Parameter("ciphertextBlob") String ciphertextBlob,
+        @OutputCustomType.Parameter("context") @Nullable Map<String,String> context,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("keyId") String keyId,
+        @OutputCustomType.Parameter("plaintext") String plaintext) {
         this.ciphertextBlob = ciphertextBlob;
         this.context = context;
         this.id = id;

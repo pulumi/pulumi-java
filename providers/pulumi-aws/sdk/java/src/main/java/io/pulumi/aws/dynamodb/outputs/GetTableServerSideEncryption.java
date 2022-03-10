@@ -13,10 +13,10 @@ public final class GetTableServerSideEncryption {
     private final Boolean enabled;
     private final String kmsKeyArn;
 
-    @OutputCustomType.Constructor({"enabled","kmsKeyArn"})
+    @OutputCustomType.Constructor
     private GetTableServerSideEncryption(
-        Boolean enabled,
-        String kmsKeyArn) {
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("kmsKeyArn") String kmsKeyArn) {
         this.enabled = enabled;
         this.kmsKeyArn = kmsKeyArn;
     }

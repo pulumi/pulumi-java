@@ -65,15 +65,15 @@ public final class WebAclLoggingConfigurationRedactedField {
      */
     private final @Nullable WebAclLoggingConfigurationRedactedFieldUriPath uriPath;
 
-    @OutputCustomType.Constructor({"allQueryArguments","body","method","queryString","singleHeader","singleQueryArgument","uriPath"})
+    @OutputCustomType.Constructor
     private WebAclLoggingConfigurationRedactedField(
-        @Nullable WebAclLoggingConfigurationRedactedFieldAllQueryArguments allQueryArguments,
-        @Nullable WebAclLoggingConfigurationRedactedFieldBody body,
-        @Nullable WebAclLoggingConfigurationRedactedFieldMethod method,
-        @Nullable WebAclLoggingConfigurationRedactedFieldQueryString queryString,
-        @Nullable WebAclLoggingConfigurationRedactedFieldSingleHeader singleHeader,
-        @Nullable WebAclLoggingConfigurationRedactedFieldSingleQueryArgument singleQueryArgument,
-        @Nullable WebAclLoggingConfigurationRedactedFieldUriPath uriPath) {
+        @OutputCustomType.Parameter("allQueryArguments") @Nullable WebAclLoggingConfigurationRedactedFieldAllQueryArguments allQueryArguments,
+        @OutputCustomType.Parameter("body") @Nullable WebAclLoggingConfigurationRedactedFieldBody body,
+        @OutputCustomType.Parameter("method") @Nullable WebAclLoggingConfigurationRedactedFieldMethod method,
+        @OutputCustomType.Parameter("queryString") @Nullable WebAclLoggingConfigurationRedactedFieldQueryString queryString,
+        @OutputCustomType.Parameter("singleHeader") @Nullable WebAclLoggingConfigurationRedactedFieldSingleHeader singleHeader,
+        @OutputCustomType.Parameter("singleQueryArgument") @Nullable WebAclLoggingConfigurationRedactedFieldSingleQueryArgument singleQueryArgument,
+        @OutputCustomType.Parameter("uriPath") @Nullable WebAclLoggingConfigurationRedactedFieldUriPath uriPath) {
         this.allQueryArguments = allQueryArguments;
         this.body = body;
         this.method = method;

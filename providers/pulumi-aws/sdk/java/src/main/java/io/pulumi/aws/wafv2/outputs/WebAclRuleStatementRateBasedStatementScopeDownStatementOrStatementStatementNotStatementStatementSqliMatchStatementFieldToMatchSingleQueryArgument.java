@@ -15,8 +15,8 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementOrStat
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgument(String name) {
+    @OutputCustomType.Constructor
+    private WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgument(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

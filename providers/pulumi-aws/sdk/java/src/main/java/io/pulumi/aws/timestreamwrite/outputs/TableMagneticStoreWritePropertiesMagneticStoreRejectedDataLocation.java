@@ -17,8 +17,8 @@ public final class TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLoc
      */
     private final @Nullable TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3Configuration s3Configuration;
 
-    @OutputCustomType.Constructor({"s3Configuration"})
-    private TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocation(@Nullable TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3Configuration s3Configuration) {
+    @OutputCustomType.Constructor
+    private TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocation(@OutputCustomType.Parameter("s3Configuration") @Nullable TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3Configuration s3Configuration) {
         this.s3Configuration = s3Configuration;
     }
 

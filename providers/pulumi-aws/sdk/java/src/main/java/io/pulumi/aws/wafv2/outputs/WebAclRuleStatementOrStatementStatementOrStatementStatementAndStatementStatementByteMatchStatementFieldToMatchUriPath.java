@@ -8,7 +8,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class WebAclRuleStatementOrStatementStatementOrStatementStatementAndStatementStatementByteMatchStatementFieldToMatchUriPath {
-    @OutputCustomType.Constructor({})
+    @OutputCustomType.Constructor
     private WebAclRuleStatementOrStatementStatementOrStatementStatementAndStatementStatementByteMatchStatementFieldToMatchUriPath() {
     }
 

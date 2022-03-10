@@ -24,10 +24,10 @@ public final class WebAclRuleStatementAndStatementStatementAndStatementStatement
      */
     private final List<WebAclRuleStatementAndStatementStatementAndStatementStatementAndStatementStatementXssMatchStatementTextTransformation> textTransformations;
 
-    @OutputCustomType.Constructor({"fieldToMatch","textTransformations"})
+    @OutputCustomType.Constructor
     private WebAclRuleStatementAndStatementStatementAndStatementStatementAndStatementStatementXssMatchStatement(
-        @Nullable WebAclRuleStatementAndStatementStatementAndStatementStatementAndStatementStatementXssMatchStatementFieldToMatch fieldToMatch,
-        List<WebAclRuleStatementAndStatementStatementAndStatementStatementAndStatementStatementXssMatchStatementTextTransformation> textTransformations) {
+        @OutputCustomType.Parameter("fieldToMatch") @Nullable WebAclRuleStatementAndStatementStatementAndStatementStatementAndStatementStatementXssMatchStatementFieldToMatch fieldToMatch,
+        @OutputCustomType.Parameter("textTransformations") List<WebAclRuleStatementAndStatementStatementAndStatementStatementAndStatementStatementXssMatchStatementTextTransformation> textTransformations) {
         this.fieldToMatch = fieldToMatch;
         this.textTransformations = textTransformations;
     }

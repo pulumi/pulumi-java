@@ -15,8 +15,8 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgument(String name) {
+    @OutputCustomType.Constructor
+    private WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgument(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

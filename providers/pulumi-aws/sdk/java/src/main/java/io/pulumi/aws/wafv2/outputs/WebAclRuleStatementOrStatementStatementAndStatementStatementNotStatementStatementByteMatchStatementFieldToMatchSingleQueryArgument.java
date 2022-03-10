@@ -15,8 +15,8 @@ public final class WebAclRuleStatementOrStatementStatementAndStatementStatementN
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private WebAclRuleStatementOrStatementStatementAndStatementStatementNotStatementStatementByteMatchStatementFieldToMatchSingleQueryArgument(String name) {
+    @OutputCustomType.Constructor
+    private WebAclRuleStatementOrStatementStatementAndStatementStatementNotStatementStatementByteMatchStatementFieldToMatchSingleQueryArgument(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

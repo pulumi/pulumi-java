@@ -15,8 +15,8 @@ public final class OrganizationConfigurationDatasourcesS3Logs {
      */
     private final Boolean autoEnable;
 
-    @OutputCustomType.Constructor({"autoEnable"})
-    private OrganizationConfigurationDatasourcesS3Logs(Boolean autoEnable) {
+    @OutputCustomType.Constructor
+    private OrganizationConfigurationDatasourcesS3Logs(@OutputCustomType.Parameter("autoEnable") Boolean autoEnable) {
         this.autoEnable = autoEnable;
     }
 

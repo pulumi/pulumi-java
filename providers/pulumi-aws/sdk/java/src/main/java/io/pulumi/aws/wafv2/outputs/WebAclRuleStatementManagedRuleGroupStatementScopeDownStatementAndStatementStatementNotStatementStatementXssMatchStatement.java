@@ -24,10 +24,10 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
      */
     private final List<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementNotStatementStatementXssMatchStatementTextTransformation> textTransformations;
 
-    @OutputCustomType.Constructor({"fieldToMatch","textTransformations"})
+    @OutputCustomType.Constructor
     private WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementNotStatementStatementXssMatchStatement(
-        @Nullable WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementNotStatementStatementXssMatchStatementFieldToMatch fieldToMatch,
-        List<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementNotStatementStatementXssMatchStatementTextTransformation> textTransformations) {
+        @OutputCustomType.Parameter("fieldToMatch") @Nullable WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementNotStatementStatementXssMatchStatementFieldToMatch fieldToMatch,
+        @OutputCustomType.Parameter("textTransformations") List<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementNotStatementStatementXssMatchStatementTextTransformation> textTransformations) {
         this.fieldToMatch = fieldToMatch;
         this.textTransformations = textTransformations;
     }

@@ -22,10 +22,10 @@ public final class UserPoolDeviceConfiguration {
      */
     private final @Nullable Boolean deviceOnlyRememberedOnUserPrompt;
 
-    @OutputCustomType.Constructor({"challengeRequiredOnNewDevice","deviceOnlyRememberedOnUserPrompt"})
+    @OutputCustomType.Constructor
     private UserPoolDeviceConfiguration(
-        @Nullable Boolean challengeRequiredOnNewDevice,
-        @Nullable Boolean deviceOnlyRememberedOnUserPrompt) {
+        @OutputCustomType.Parameter("challengeRequiredOnNewDevice") @Nullable Boolean challengeRequiredOnNewDevice,
+        @OutputCustomType.Parameter("deviceOnlyRememberedOnUserPrompt") @Nullable Boolean deviceOnlyRememberedOnUserPrompt) {
         this.challengeRequiredOnNewDevice = challengeRequiredOnNewDevice;
         this.deviceOnlyRememberedOnUserPrompt = deviceOnlyRememberedOnUserPrompt;
     }

@@ -27,13 +27,13 @@ public final class GetCertificateResult {
      */
     private final String id;
 
-    @OutputCustomType.Constructor({"arn","certificate","certificateAuthorityArn","certificateChain","id"})
+    @OutputCustomType.Constructor
     private GetCertificateResult(
-        String arn,
-        String certificate,
-        String certificateAuthorityArn,
-        String certificateChain,
-        String id) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("certificate") String certificate,
+        @OutputCustomType.Parameter("certificateAuthorityArn") String certificateAuthorityArn,
+        @OutputCustomType.Parameter("certificateChain") String certificateChain,
+        @OutputCustomType.Parameter("id") String id) {
         this.arn = arn;
         this.certificate = certificate;
         this.certificateAuthorityArn = certificateAuthorityArn;

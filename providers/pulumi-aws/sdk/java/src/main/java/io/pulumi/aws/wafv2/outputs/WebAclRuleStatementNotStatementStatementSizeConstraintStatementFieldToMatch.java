@@ -53,15 +53,15 @@ public final class WebAclRuleStatementNotStatementStatementSizeConstraintStateme
      */
     private final @Nullable WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchUriPath uriPath;
 
-    @OutputCustomType.Constructor({"allQueryArguments","body","method","queryString","singleHeader","singleQueryArgument","uriPath"})
+    @OutputCustomType.Constructor
     private WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatch(
-        @Nullable WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchAllQueryArguments allQueryArguments,
-        @Nullable WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchBody body,
-        @Nullable WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchMethod method,
-        @Nullable WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchQueryString queryString,
-        @Nullable WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleHeader singleHeader,
-        @Nullable WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgument singleQueryArgument,
-        @Nullable WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchUriPath uriPath) {
+        @OutputCustomType.Parameter("allQueryArguments") @Nullable WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchAllQueryArguments allQueryArguments,
+        @OutputCustomType.Parameter("body") @Nullable WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchBody body,
+        @OutputCustomType.Parameter("method") @Nullable WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchMethod method,
+        @OutputCustomType.Parameter("queryString") @Nullable WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchQueryString queryString,
+        @OutputCustomType.Parameter("singleHeader") @Nullable WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleHeader singleHeader,
+        @OutputCustomType.Parameter("singleQueryArgument") @Nullable WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgument singleQueryArgument,
+        @OutputCustomType.Parameter("uriPath") @Nullable WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchUriPath uriPath) {
         this.allQueryArguments = allQueryArguments;
         this.body = body;
         this.method = method;

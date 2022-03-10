@@ -38,12 +38,12 @@ public final class MultiRegionAccessPointDetailsPublicAccessBlock {
      */
     private final @Nullable Boolean restrictPublicBuckets;
 
-    @OutputCustomType.Constructor({"blockPublicAcls","blockPublicPolicy","ignorePublicAcls","restrictPublicBuckets"})
+    @OutputCustomType.Constructor
     private MultiRegionAccessPointDetailsPublicAccessBlock(
-        @Nullable Boolean blockPublicAcls,
-        @Nullable Boolean blockPublicPolicy,
-        @Nullable Boolean ignorePublicAcls,
-        @Nullable Boolean restrictPublicBuckets) {
+        @OutputCustomType.Parameter("blockPublicAcls") @Nullable Boolean blockPublicAcls,
+        @OutputCustomType.Parameter("blockPublicPolicy") @Nullable Boolean blockPublicPolicy,
+        @OutputCustomType.Parameter("ignorePublicAcls") @Nullable Boolean ignorePublicAcls,
+        @OutputCustomType.Parameter("restrictPublicBuckets") @Nullable Boolean restrictPublicBuckets) {
         this.blockPublicAcls = blockPublicAcls;
         this.blockPublicPolicy = blockPublicPolicy;
         this.ignorePublicAcls = ignorePublicAcls;

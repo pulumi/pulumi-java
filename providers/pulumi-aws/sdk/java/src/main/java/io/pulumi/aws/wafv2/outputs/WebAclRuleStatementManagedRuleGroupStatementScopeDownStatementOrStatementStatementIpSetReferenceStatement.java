@@ -23,10 +23,10 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
      */
     private final @Nullable WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig ipSetForwardedIpConfig;
 
-    @OutputCustomType.Constructor({"arn","ipSetForwardedIpConfig"})
+    @OutputCustomType.Constructor
     private WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementIpSetReferenceStatement(
-        String arn,
-        @Nullable WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig ipSetForwardedIpConfig) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("ipSetForwardedIpConfig") @Nullable WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig ipSetForwardedIpConfig) {
         this.arn = arn;
         this.ipSetForwardedIpConfig = ipSetForwardedIpConfig;
     }

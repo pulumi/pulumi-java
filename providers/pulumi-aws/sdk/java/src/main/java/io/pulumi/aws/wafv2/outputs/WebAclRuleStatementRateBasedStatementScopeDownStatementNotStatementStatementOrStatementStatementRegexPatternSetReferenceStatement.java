@@ -30,11 +30,11 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementNotSta
      */
     private final List<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementOrStatementStatementRegexPatternSetReferenceStatementTextTransformation> textTransformations;
 
-    @OutputCustomType.Constructor({"arn","fieldToMatch","textTransformations"})
+    @OutputCustomType.Constructor
     private WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementOrStatementStatementRegexPatternSetReferenceStatement(
-        String arn,
-        @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatch fieldToMatch,
-        List<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementOrStatementStatementRegexPatternSetReferenceStatementTextTransformation> textTransformations) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("fieldToMatch") @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatch fieldToMatch,
+        @OutputCustomType.Parameter("textTransformations") List<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementOrStatementStatementRegexPatternSetReferenceStatementTextTransformation> textTransformations) {
         this.arn = arn;
         this.fieldToMatch = fieldToMatch;
         this.textTransformations = textTransformations;

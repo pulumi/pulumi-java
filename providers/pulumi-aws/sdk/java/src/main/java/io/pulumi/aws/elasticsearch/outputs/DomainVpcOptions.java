@@ -25,12 +25,12 @@ public final class DomainVpcOptions {
     private final @Nullable List<String> subnetIds;
     private final @Nullable String vpcId;
 
-    @OutputCustomType.Constructor({"availabilityZones","securityGroupIds","subnetIds","vpcId"})
+    @OutputCustomType.Constructor
     private DomainVpcOptions(
-        @Nullable List<String> availabilityZones,
-        @Nullable List<String> securityGroupIds,
-        @Nullable List<String> subnetIds,
-        @Nullable String vpcId) {
+        @OutputCustomType.Parameter("availabilityZones") @Nullable List<String> availabilityZones,
+        @OutputCustomType.Parameter("securityGroupIds") @Nullable List<String> securityGroupIds,
+        @OutputCustomType.Parameter("subnetIds") @Nullable List<String> subnetIds,
+        @OutputCustomType.Parameter("vpcId") @Nullable String vpcId) {
         this.availabilityZones = availabilityZones;
         this.securityGroupIds = securityGroupIds;
         this.subnetIds = subnetIds;

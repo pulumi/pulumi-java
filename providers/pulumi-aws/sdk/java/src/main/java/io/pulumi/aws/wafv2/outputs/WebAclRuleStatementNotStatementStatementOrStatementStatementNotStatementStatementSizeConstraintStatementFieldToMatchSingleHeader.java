@@ -15,8 +15,8 @@ public final class WebAclRuleStatementNotStatementStatementOrStatementStatementN
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private WebAclRuleStatementNotStatementStatementOrStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleHeader(String name) {
+    @OutputCustomType.Constructor
+    private WebAclRuleStatementNotStatementStatementOrStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleHeader(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

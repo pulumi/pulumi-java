@@ -21,10 +21,10 @@ public final class DistributionOrderedCacheBehaviorFunctionAssociation {
      */
     private final String functionArn;
 
-    @OutputCustomType.Constructor({"eventType","functionArn"})
+    @OutputCustomType.Constructor
     private DistributionOrderedCacheBehaviorFunctionAssociation(
-        String eventType,
-        String functionArn) {
+        @OutputCustomType.Parameter("eventType") String eventType,
+        @OutputCustomType.Parameter("functionArn") String functionArn) {
         this.eventType = eventType;
         this.functionArn = functionArn;
     }

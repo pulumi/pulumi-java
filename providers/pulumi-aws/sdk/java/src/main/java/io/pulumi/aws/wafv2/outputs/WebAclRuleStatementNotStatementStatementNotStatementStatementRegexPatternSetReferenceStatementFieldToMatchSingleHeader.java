@@ -15,8 +15,8 @@ public final class WebAclRuleStatementNotStatementStatementNotStatementStatement
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private WebAclRuleStatementNotStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeader(String name) {
+    @OutputCustomType.Constructor
+    private WebAclRuleStatementNotStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeader(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

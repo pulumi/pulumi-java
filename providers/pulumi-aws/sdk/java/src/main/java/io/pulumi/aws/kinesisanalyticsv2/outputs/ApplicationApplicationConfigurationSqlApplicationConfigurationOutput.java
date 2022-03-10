@@ -42,14 +42,14 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     private final String name;
     private final @Nullable String outputId;
 
-    @OutputCustomType.Constructor({"destinationSchema","kinesisFirehoseOutput","kinesisStreamsOutput","lambdaOutput","name","outputId"})
+    @OutputCustomType.Constructor
     private ApplicationApplicationConfigurationSqlApplicationConfigurationOutput(
-        ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchema destinationSchema,
-        @Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutput kinesisFirehoseOutput,
-        @Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisStreamsOutput kinesisStreamsOutput,
-        @Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutput lambdaOutput,
-        String name,
-        @Nullable String outputId) {
+        @OutputCustomType.Parameter("destinationSchema") ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchema destinationSchema,
+        @OutputCustomType.Parameter("kinesisFirehoseOutput") @Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutput kinesisFirehoseOutput,
+        @OutputCustomType.Parameter("kinesisStreamsOutput") @Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisStreamsOutput kinesisStreamsOutput,
+        @OutputCustomType.Parameter("lambdaOutput") @Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutput lambdaOutput,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("outputId") @Nullable String outputId) {
         this.destinationSchema = destinationSchema;
         this.kinesisFirehoseOutput = kinesisFirehoseOutput;
         this.kinesisStreamsOutput = kinesisStreamsOutput;

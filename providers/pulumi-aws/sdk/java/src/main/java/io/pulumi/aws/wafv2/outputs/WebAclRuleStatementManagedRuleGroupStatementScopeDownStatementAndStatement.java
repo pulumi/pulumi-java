@@ -16,8 +16,8 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
      */
     private final List<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatement> statements;
 
-    @OutputCustomType.Constructor({"statements"})
-    private WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatement(List<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatement> statements) {
+    @OutputCustomType.Constructor
+    private WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatement(@OutputCustomType.Parameter("statements") List<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatement> statements) {
         this.statements = statements;
     }
 

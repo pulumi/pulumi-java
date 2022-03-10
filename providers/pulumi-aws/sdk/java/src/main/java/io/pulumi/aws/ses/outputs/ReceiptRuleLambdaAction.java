@@ -33,12 +33,12 @@ public final class ReceiptRuleLambdaAction {
      */
     private final @Nullable String topicArn;
 
-    @OutputCustomType.Constructor({"functionArn","invocationType","position","topicArn"})
+    @OutputCustomType.Constructor
     private ReceiptRuleLambdaAction(
-        String functionArn,
-        @Nullable String invocationType,
-        Integer position,
-        @Nullable String topicArn) {
+        @OutputCustomType.Parameter("functionArn") String functionArn,
+        @OutputCustomType.Parameter("invocationType") @Nullable String invocationType,
+        @OutputCustomType.Parameter("position") Integer position,
+        @OutputCustomType.Parameter("topicArn") @Nullable String topicArn) {
         this.functionArn = functionArn;
         this.invocationType = invocationType;
         this.position = position;

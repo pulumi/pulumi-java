@@ -43,15 +43,15 @@ public final class GetArnResult {
      */
     private final String service;
 
-    @OutputCustomType.Constructor({"account","arn","id","partition","region","resource","service"})
+    @OutputCustomType.Constructor
     private GetArnResult(
-        String account,
-        String arn,
-        String id,
-        String partition,
-        String region,
-        String resource,
-        String service) {
+        @OutputCustomType.Parameter("account") String account,
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("partition") String partition,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("resource") String resource,
+        @OutputCustomType.Parameter("service") String service) {
         this.account = account;
         this.arn = arn;
         this.id = id;

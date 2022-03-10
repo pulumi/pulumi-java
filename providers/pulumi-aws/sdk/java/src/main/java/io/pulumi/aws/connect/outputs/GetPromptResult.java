@@ -27,13 +27,13 @@ public final class GetPromptResult {
      */
     private final String promptId;
 
-    @OutputCustomType.Constructor({"arn","id","instanceId","name","promptId"})
+    @OutputCustomType.Constructor
     private GetPromptResult(
-        String arn,
-        String id,
-        String instanceId,
-        String name,
-        String promptId) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instanceId") String instanceId,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("promptId") String promptId) {
         this.arn = arn;
         this.id = id;
         this.instanceId = instanceId;

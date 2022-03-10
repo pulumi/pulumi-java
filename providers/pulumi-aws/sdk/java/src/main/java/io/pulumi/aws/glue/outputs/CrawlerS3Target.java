@@ -44,14 +44,14 @@ public final class CrawlerS3Target {
      */
     private final @Nullable Integer sampleSize;
 
-    @OutputCustomType.Constructor({"connectionName","dlqEventQueueArn","eventQueueArn","exclusions","path","sampleSize"})
+    @OutputCustomType.Constructor
     private CrawlerS3Target(
-        @Nullable String connectionName,
-        @Nullable String dlqEventQueueArn,
-        @Nullable String eventQueueArn,
-        @Nullable List<String> exclusions,
-        String path,
-        @Nullable Integer sampleSize) {
+        @OutputCustomType.Parameter("connectionName") @Nullable String connectionName,
+        @OutputCustomType.Parameter("dlqEventQueueArn") @Nullable String dlqEventQueueArn,
+        @OutputCustomType.Parameter("eventQueueArn") @Nullable String eventQueueArn,
+        @OutputCustomType.Parameter("exclusions") @Nullable List<String> exclusions,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("sampleSize") @Nullable Integer sampleSize) {
         this.connectionName = connectionName;
         this.dlqEventQueueArn = dlqEventQueueArn;
         this.eventQueueArn = eventQueueArn;

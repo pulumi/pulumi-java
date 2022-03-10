@@ -15,8 +15,8 @@ public final class VirtualNodeSpecListenerTlsValidationSubjectAlternativeNames {
      */
     private final VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesMatch match;
 
-    @OutputCustomType.Constructor({"match"})
-    private VirtualNodeSpecListenerTlsValidationSubjectAlternativeNames(VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesMatch match) {
+    @OutputCustomType.Constructor
+    private VirtualNodeSpecListenerTlsValidationSubjectAlternativeNames(@OutputCustomType.Parameter("match") VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesMatch match) {
         this.match = match;
     }
 

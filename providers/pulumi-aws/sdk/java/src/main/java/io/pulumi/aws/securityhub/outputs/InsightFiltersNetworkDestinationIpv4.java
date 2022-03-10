@@ -15,8 +15,8 @@ public final class InsightFiltersNetworkDestinationIpv4 {
      */
     private final String cidr;
 
-    @OutputCustomType.Constructor({"cidr"})
-    private InsightFiltersNetworkDestinationIpv4(String cidr) {
+    @OutputCustomType.Constructor
+    private InsightFiltersNetworkDestinationIpv4(@OutputCustomType.Parameter("cidr") String cidr) {
         this.cidr = cidr;
     }
 

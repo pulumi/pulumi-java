@@ -22,10 +22,10 @@ public final class PermissionsDataLocation {
      */
     private final @Nullable String catalogId;
 
-    @OutputCustomType.Constructor({"arn","catalogId"})
+    @OutputCustomType.Constructor
     private PermissionsDataLocation(
-        String arn,
-        @Nullable String catalogId) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("catalogId") @Nullable String catalogId) {
         this.arn = arn;
         this.catalogId = catalogId;
     }

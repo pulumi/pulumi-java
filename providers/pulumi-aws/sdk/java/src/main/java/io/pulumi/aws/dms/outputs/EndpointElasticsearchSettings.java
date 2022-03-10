@@ -33,12 +33,12 @@ public final class EndpointElasticsearchSettings {
      */
     private final String serviceAccessRoleArn;
 
-    @OutputCustomType.Constructor({"endpointUri","errorRetryDuration","fullLoadErrorPercentage","serviceAccessRoleArn"})
+    @OutputCustomType.Constructor
     private EndpointElasticsearchSettings(
-        String endpointUri,
-        @Nullable Integer errorRetryDuration,
-        @Nullable Integer fullLoadErrorPercentage,
-        String serviceAccessRoleArn) {
+        @OutputCustomType.Parameter("endpointUri") String endpointUri,
+        @OutputCustomType.Parameter("errorRetryDuration") @Nullable Integer errorRetryDuration,
+        @OutputCustomType.Parameter("fullLoadErrorPercentage") @Nullable Integer fullLoadErrorPercentage,
+        @OutputCustomType.Parameter("serviceAccessRoleArn") String serviceAccessRoleArn) {
         this.endpointUri = endpointUri;
         this.errorRetryDuration = errorRetryDuration;
         this.fullLoadErrorPercentage = fullLoadErrorPercentage;

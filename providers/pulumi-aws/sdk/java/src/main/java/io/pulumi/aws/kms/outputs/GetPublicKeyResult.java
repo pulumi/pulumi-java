@@ -49,17 +49,17 @@ public final class GetPublicKeyResult {
      */
     private final List<String> signingAlgorithms;
 
-    @OutputCustomType.Constructor({"arn","customerMasterKeySpec","encryptionAlgorithms","grantTokens","id","keyId","keyUsage","publicKey","signingAlgorithms"})
+    @OutputCustomType.Constructor
     private GetPublicKeyResult(
-        String arn,
-        String customerMasterKeySpec,
-        List<String> encryptionAlgorithms,
-        @Nullable List<String> grantTokens,
-        String id,
-        String keyId,
-        String keyUsage,
-        String publicKey,
-        List<String> signingAlgorithms) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("customerMasterKeySpec") String customerMasterKeySpec,
+        @OutputCustomType.Parameter("encryptionAlgorithms") List<String> encryptionAlgorithms,
+        @OutputCustomType.Parameter("grantTokens") @Nullable List<String> grantTokens,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("keyId") String keyId,
+        @OutputCustomType.Parameter("keyUsage") String keyUsage,
+        @OutputCustomType.Parameter("publicKey") String publicKey,
+        @OutputCustomType.Parameter("signingAlgorithms") List<String> signingAlgorithms) {
         this.arn = arn;
         this.customerMasterKeySpec = customerMasterKeySpec;
         this.encryptionAlgorithms = encryptionAlgorithms;

@@ -28,13 +28,13 @@ public final class GetDirectConnectGatewayAttachmentResult {
     private final Map<String,String> tags;
     private final @Nullable String transitGatewayId;
 
-    @OutputCustomType.Constructor({"dxGatewayId","filters","id","tags","transitGatewayId"})
+    @OutputCustomType.Constructor
     private GetDirectConnectGatewayAttachmentResult(
-        @Nullable String dxGatewayId,
-        @Nullable List<GetDirectConnectGatewayAttachmentFilter> filters,
-        String id,
-        Map<String,String> tags,
-        @Nullable String transitGatewayId) {
+        @OutputCustomType.Parameter("dxGatewayId") @Nullable String dxGatewayId,
+        @OutputCustomType.Parameter("filters") @Nullable List<GetDirectConnectGatewayAttachmentFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("transitGatewayId") @Nullable String transitGatewayId) {
         this.dxGatewayId = dxGatewayId;
         this.filters = filters;
         this.id = id;

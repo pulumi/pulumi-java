@@ -19,12 +19,12 @@ public final class GetTableLocalSecondaryIndex {
     private final String projectionType;
     private final String rangeKey;
 
-    @OutputCustomType.Constructor({"name","nonKeyAttributes","projectionType","rangeKey"})
+    @OutputCustomType.Constructor
     private GetTableLocalSecondaryIndex(
-        String name,
-        List<String> nonKeyAttributes,
-        String projectionType,
-        String rangeKey) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nonKeyAttributes") List<String> nonKeyAttributes,
+        @OutputCustomType.Parameter("projectionType") String projectionType,
+        @OutputCustomType.Parameter("rangeKey") String rangeKey) {
         this.name = name;
         this.nonKeyAttributes = nonKeyAttributes;
         this.projectionType = projectionType;

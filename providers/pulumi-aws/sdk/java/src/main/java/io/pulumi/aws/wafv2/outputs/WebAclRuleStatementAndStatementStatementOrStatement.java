@@ -16,8 +16,8 @@ public final class WebAclRuleStatementAndStatementStatementOrStatement {
      */
     private final List<WebAclRuleStatementAndStatementStatementOrStatementStatement> statements;
 
-    @OutputCustomType.Constructor({"statements"})
-    private WebAclRuleStatementAndStatementStatementOrStatement(List<WebAclRuleStatementAndStatementStatementOrStatementStatement> statements) {
+    @OutputCustomType.Constructor
+    private WebAclRuleStatementAndStatementStatementOrStatement(@OutputCustomType.Parameter("statements") List<WebAclRuleStatementAndStatementStatementOrStatementStatement> statements) {
         this.statements = statements;
     }
 

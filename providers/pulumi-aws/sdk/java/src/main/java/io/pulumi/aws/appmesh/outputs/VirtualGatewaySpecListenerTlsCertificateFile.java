@@ -20,10 +20,10 @@ public final class VirtualGatewaySpecListenerTlsCertificateFile {
      */
     private final String privateKey;
 
-    @OutputCustomType.Constructor({"certificateChain","privateKey"})
+    @OutputCustomType.Constructor
     private VirtualGatewaySpecListenerTlsCertificateFile(
-        String certificateChain,
-        String privateKey) {
+        @OutputCustomType.Parameter("certificateChain") String certificateChain,
+        @OutputCustomType.Parameter("privateKey") String privateKey) {
         this.certificateChain = certificateChain;
         this.privateKey = privateKey;
     }

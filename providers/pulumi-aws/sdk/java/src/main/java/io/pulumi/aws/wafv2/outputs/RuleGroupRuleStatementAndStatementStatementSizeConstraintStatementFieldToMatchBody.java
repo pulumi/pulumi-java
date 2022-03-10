@@ -8,7 +8,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class RuleGroupRuleStatementAndStatementStatementSizeConstraintStatementFieldToMatchBody {
-    @OutputCustomType.Constructor({})
+    @OutputCustomType.Constructor
     private RuleGroupRuleStatementAndStatementStatementSizeConstraintStatementFieldToMatchBody() {
     }
 

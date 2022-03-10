@@ -31,15 +31,15 @@ public final class GetPrebuiltEcrImageResult {
     private final String registryPath;
     private final String repositoryName;
 
-    @OutputCustomType.Constructor({"dnsSuffix","id","imageTag","region","registryId","registryPath","repositoryName"})
+    @OutputCustomType.Constructor
     private GetPrebuiltEcrImageResult(
-        @Nullable String dnsSuffix,
-        String id,
-        @Nullable String imageTag,
-        @Nullable String region,
-        String registryId,
-        String registryPath,
-        String repositoryName) {
+        @OutputCustomType.Parameter("dnsSuffix") @Nullable String dnsSuffix,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("imageTag") @Nullable String imageTag,
+        @OutputCustomType.Parameter("region") @Nullable String region,
+        @OutputCustomType.Parameter("registryId") String registryId,
+        @OutputCustomType.Parameter("registryPath") String registryPath,
+        @OutputCustomType.Parameter("repositoryName") String repositoryName) {
         this.dnsSuffix = dnsSuffix;
         this.id = id;
         this.imageTag = imageTag;

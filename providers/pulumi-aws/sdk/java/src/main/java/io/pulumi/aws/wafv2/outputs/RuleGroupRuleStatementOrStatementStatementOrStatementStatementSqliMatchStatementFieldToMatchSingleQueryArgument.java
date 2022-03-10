@@ -15,8 +15,8 @@ public final class RuleGroupRuleStatementOrStatementStatementOrStatementStatemen
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private RuleGroupRuleStatementOrStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgument(String name) {
+    @OutputCustomType.Constructor
+    private RuleGroupRuleStatementOrStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgument(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

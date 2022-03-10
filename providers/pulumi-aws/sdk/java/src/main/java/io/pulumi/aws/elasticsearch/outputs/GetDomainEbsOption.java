@@ -32,12 +32,12 @@ public final class GetDomainEbsOption {
      */
     private final String volumeType;
 
-    @OutputCustomType.Constructor({"ebsEnabled","iops","volumeSize","volumeType"})
+    @OutputCustomType.Constructor
     private GetDomainEbsOption(
-        Boolean ebsEnabled,
-        Integer iops,
-        Integer volumeSize,
-        String volumeType) {
+        @OutputCustomType.Parameter("ebsEnabled") Boolean ebsEnabled,
+        @OutputCustomType.Parameter("iops") Integer iops,
+        @OutputCustomType.Parameter("volumeSize") Integer volumeSize,
+        @OutputCustomType.Parameter("volumeType") String volumeType) {
         this.ebsEnabled = ebsEnabled;
         this.iops = iops;
         this.volumeSize = volumeSize;

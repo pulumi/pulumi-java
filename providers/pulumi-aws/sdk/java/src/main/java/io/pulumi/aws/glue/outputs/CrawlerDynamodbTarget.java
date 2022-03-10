@@ -29,11 +29,11 @@ public final class CrawlerDynamodbTarget {
      */
     private final @Nullable Double scanRate;
 
-    @OutputCustomType.Constructor({"path","scanAll","scanRate"})
+    @OutputCustomType.Constructor
     private CrawlerDynamodbTarget(
-        String path,
-        @Nullable Boolean scanAll,
-        @Nullable Double scanRate) {
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("scanAll") @Nullable Boolean scanAll,
+        @OutputCustomType.Parameter("scanRate") @Nullable Double scanRate) {
         this.path = path;
         this.scanAll = scanAll;
         this.scanRate = scanRate;

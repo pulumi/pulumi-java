@@ -15,8 +15,8 @@ public final class RuleGroupRuleStatementAndStatementStatementOrStatementStateme
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private RuleGroupRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleHeader(String name) {
+    @OutputCustomType.Constructor
+    private RuleGroupRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleHeader(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

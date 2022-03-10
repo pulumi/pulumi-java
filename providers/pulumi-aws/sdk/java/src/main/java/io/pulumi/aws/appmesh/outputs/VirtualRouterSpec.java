@@ -16,8 +16,8 @@ public final class VirtualRouterSpec {
      */
     private final VirtualRouterSpecListener listener;
 
-    @OutputCustomType.Constructor({"listener"})
-    private VirtualRouterSpec(VirtualRouterSpecListener listener) {
+    @OutputCustomType.Constructor
+    private VirtualRouterSpec(@OutputCustomType.Parameter("listener") VirtualRouterSpecListener listener) {
         this.listener = listener;
     }
 

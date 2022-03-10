@@ -22,10 +22,10 @@ public final class DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEnc
      */
     private final @Nullable String sseAwsKmsKeyId;
 
-    @OutputCustomType.Constructor({"catalogEncryptionMode","sseAwsKmsKeyId"})
+    @OutputCustomType.Constructor
     private DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRest(
-        String catalogEncryptionMode,
-        @Nullable String sseAwsKmsKeyId) {
+        @OutputCustomType.Parameter("catalogEncryptionMode") String catalogEncryptionMode,
+        @OutputCustomType.Parameter("sseAwsKmsKeyId") @Nullable String sseAwsKmsKeyId) {
         this.catalogEncryptionMode = catalogEncryptionMode;
         this.sseAwsKmsKeyId = sseAwsKmsKeyId;
     }

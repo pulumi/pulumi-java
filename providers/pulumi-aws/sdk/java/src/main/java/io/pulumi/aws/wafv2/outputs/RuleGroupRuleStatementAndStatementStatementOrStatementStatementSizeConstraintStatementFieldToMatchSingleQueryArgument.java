@@ -15,8 +15,8 @@ public final class RuleGroupRuleStatementAndStatementStatementOrStatementStateme
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private RuleGroupRuleStatementAndStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgument(String name) {
+    @OutputCustomType.Constructor
+    private RuleGroupRuleStatementAndStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgument(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

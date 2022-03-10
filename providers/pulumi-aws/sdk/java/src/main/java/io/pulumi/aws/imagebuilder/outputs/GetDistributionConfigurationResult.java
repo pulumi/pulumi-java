@@ -49,16 +49,16 @@ public final class GetDistributionConfigurationResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"arn","dateCreated","dateUpdated","description","distributions","id","name","tags"})
+    @OutputCustomType.Constructor
     private GetDistributionConfigurationResult(
-        String arn,
-        String dateCreated,
-        String dateUpdated,
-        String description,
-        List<GetDistributionConfigurationDistribution> distributions,
-        String id,
-        String name,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("dateCreated") String dateCreated,
+        @OutputCustomType.Parameter("dateUpdated") String dateUpdated,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("distributions") List<GetDistributionConfigurationDistribution> distributions,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
         this.dateCreated = dateCreated;
         this.dateUpdated = dateUpdated;

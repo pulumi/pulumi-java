@@ -17,8 +17,8 @@ public final class WebhookFilterGroup {
      */
     private final @Nullable List<WebhookFilterGroupFilter> filters;
 
-    @OutputCustomType.Constructor({"filters"})
-    private WebhookFilterGroup(@Nullable List<WebhookFilterGroupFilter> filters) {
+    @OutputCustomType.Constructor
+    private WebhookFilterGroup(@OutputCustomType.Parameter("filters") @Nullable List<WebhookFilterGroupFilter> filters) {
         this.filters = filters;
     }
 

@@ -55,17 +55,17 @@ public final class GetBotAliasResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"arn","botName","botVersion","checksum","createdDate","description","id","lastUpdatedDate","name"})
+    @OutputCustomType.Constructor
     private GetBotAliasResult(
-        String arn,
-        String botName,
-        String botVersion,
-        String checksum,
-        String createdDate,
-        String description,
-        String id,
-        String lastUpdatedDate,
-        String name) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("botName") String botName,
+        @OutputCustomType.Parameter("botVersion") String botVersion,
+        @OutputCustomType.Parameter("checksum") String checksum,
+        @OutputCustomType.Parameter("createdDate") String createdDate,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastUpdatedDate") String lastUpdatedDate,
+        @OutputCustomType.Parameter("name") String name) {
         this.arn = arn;
         this.botName = botName;
         this.botVersion = botVersion;

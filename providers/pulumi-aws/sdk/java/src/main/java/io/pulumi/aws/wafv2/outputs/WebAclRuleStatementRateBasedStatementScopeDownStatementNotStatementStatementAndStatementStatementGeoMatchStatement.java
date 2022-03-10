@@ -24,10 +24,10 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementNotSta
      */
     private final @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementAndStatementStatementGeoMatchStatementForwardedIpConfig forwardedIpConfig;
 
-    @OutputCustomType.Constructor({"countryCodes","forwardedIpConfig"})
+    @OutputCustomType.Constructor
     private WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementAndStatementStatementGeoMatchStatement(
-        List<String> countryCodes,
-        @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementAndStatementStatementGeoMatchStatementForwardedIpConfig forwardedIpConfig) {
+        @OutputCustomType.Parameter("countryCodes") List<String> countryCodes,
+        @OutputCustomType.Parameter("forwardedIpConfig") @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementAndStatementStatementGeoMatchStatementForwardedIpConfig forwardedIpConfig) {
         this.countryCodes = countryCodes;
         this.forwardedIpConfig = forwardedIpConfig;
     }

@@ -22,10 +22,10 @@ public final class BrokerLogs {
      */
     private final @Nullable Boolean general;
 
-    @OutputCustomType.Constructor({"audit","general"})
+    @OutputCustomType.Constructor
     private BrokerLogs(
-        @Nullable Boolean audit,
-        @Nullable Boolean general) {
+        @OutputCustomType.Parameter("audit") @Nullable Boolean audit,
+        @OutputCustomType.Parameter("general") @Nullable Boolean general) {
         this.audit = audit;
         this.general = general;
     }

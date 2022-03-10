@@ -21,10 +21,10 @@ public final class CatalogTableStorageDescriptorSortColumn {
      */
     private final Integer sortOrder;
 
-    @OutputCustomType.Constructor({"column","sortOrder"})
+    @OutputCustomType.Constructor
     private CatalogTableStorageDescriptorSortColumn(
-        String column,
-        Integer sortOrder) {
+        @OutputCustomType.Parameter("column") String column,
+        @OutputCustomType.Parameter("sortOrder") Integer sortOrder) {
         this.column = column;
         this.sortOrder = sortOrder;
     }

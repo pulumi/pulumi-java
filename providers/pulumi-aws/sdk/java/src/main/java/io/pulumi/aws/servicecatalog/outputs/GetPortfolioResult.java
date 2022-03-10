@@ -45,16 +45,16 @@ public final class GetPortfolioResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"acceptLanguage","arn","createdTime","description","id","name","providerName","tags"})
+    @OutputCustomType.Constructor
     private GetPortfolioResult(
-        @Nullable String acceptLanguage,
-        String arn,
-        String createdTime,
-        String description,
-        String id,
-        String name,
-        String providerName,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("acceptLanguage") @Nullable String acceptLanguage,
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("createdTime") String createdTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("providerName") String providerName,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.acceptLanguage = acceptLanguage;
         this.arn = arn;
         this.createdTime = createdTime;

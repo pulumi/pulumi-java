@@ -53,16 +53,16 @@ public final class IdentityProviderConfigOidc {
      */
     private final @Nullable String usernamePrefix;
 
-    @OutputCustomType.Constructor({"clientId","groupsClaim","groupsPrefix","identityProviderConfigName","issuerUrl","requiredClaims","usernameClaim","usernamePrefix"})
+    @OutputCustomType.Constructor
     private IdentityProviderConfigOidc(
-        String clientId,
-        @Nullable String groupsClaim,
-        @Nullable String groupsPrefix,
-        String identityProviderConfigName,
-        String issuerUrl,
-        @Nullable Map<String,String> requiredClaims,
-        @Nullable String usernameClaim,
-        @Nullable String usernamePrefix) {
+        @OutputCustomType.Parameter("clientId") String clientId,
+        @OutputCustomType.Parameter("groupsClaim") @Nullable String groupsClaim,
+        @OutputCustomType.Parameter("groupsPrefix") @Nullable String groupsPrefix,
+        @OutputCustomType.Parameter("identityProviderConfigName") String identityProviderConfigName,
+        @OutputCustomType.Parameter("issuerUrl") String issuerUrl,
+        @OutputCustomType.Parameter("requiredClaims") @Nullable Map<String,String> requiredClaims,
+        @OutputCustomType.Parameter("usernameClaim") @Nullable String usernameClaim,
+        @OutputCustomType.Parameter("usernamePrefix") @Nullable String usernamePrefix) {
         this.clientId = clientId;
         this.groupsClaim = groupsClaim;
         this.groupsPrefix = groupsPrefix;

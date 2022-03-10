@@ -23,10 +23,10 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation
      */
     private final VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrust trust;
 
-    @OutputCustomType.Constructor({"subjectAlternativeNames","trust"})
+    @OutputCustomType.Constructor
     private VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation(
-        @Nullable VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNames subjectAlternativeNames,
-        VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrust trust) {
+        @OutputCustomType.Parameter("subjectAlternativeNames") @Nullable VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNames subjectAlternativeNames,
+        @OutputCustomType.Parameter("trust") VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrust trust) {
         this.subjectAlternativeNames = subjectAlternativeNames;
         this.trust = trust;
     }

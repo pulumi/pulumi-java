@@ -15,8 +15,8 @@ public final class RuleGroupRuleStatementOrStatementStatementAndStatementStateme
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private RuleGroupRuleStatementOrStatementStatementAndStatementStatementXssMatchStatementFieldToMatchSingleHeader(String name) {
+    @OutputCustomType.Constructor
+    private RuleGroupRuleStatementOrStatementStatementAndStatementStatementXssMatchStatementFieldToMatchSingleHeader(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

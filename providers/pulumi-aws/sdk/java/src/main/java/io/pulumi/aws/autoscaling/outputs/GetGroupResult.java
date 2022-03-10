@@ -102,28 +102,28 @@ public final class GetGroupResult {
      */
     private final String vpcZoneIdentifier;
 
-    @OutputCustomType.Constructor({"arn","availabilityZones","defaultCooldown","desiredCapacity","healthCheckGracePeriod","healthCheckType","id","launchConfiguration","launchTemplates","loadBalancers","maxSize","minSize","name","newInstancesProtectedFromScaleIn","placementGroup","serviceLinkedRoleArn","status","targetGroupArns","terminationPolicies","vpcZoneIdentifier"})
+    @OutputCustomType.Constructor
     private GetGroupResult(
-        String arn,
-        List<String> availabilityZones,
-        Integer defaultCooldown,
-        Integer desiredCapacity,
-        Integer healthCheckGracePeriod,
-        String healthCheckType,
-        String id,
-        String launchConfiguration,
-        List<GetGroupLaunchTemplate> launchTemplates,
-        List<String> loadBalancers,
-        Integer maxSize,
-        Integer minSize,
-        String name,
-        Boolean newInstancesProtectedFromScaleIn,
-        String placementGroup,
-        String serviceLinkedRoleArn,
-        String status,
-        List<String> targetGroupArns,
-        List<String> terminationPolicies,
-        String vpcZoneIdentifier) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("availabilityZones") List<String> availabilityZones,
+        @OutputCustomType.Parameter("defaultCooldown") Integer defaultCooldown,
+        @OutputCustomType.Parameter("desiredCapacity") Integer desiredCapacity,
+        @OutputCustomType.Parameter("healthCheckGracePeriod") Integer healthCheckGracePeriod,
+        @OutputCustomType.Parameter("healthCheckType") String healthCheckType,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("launchConfiguration") String launchConfiguration,
+        @OutputCustomType.Parameter("launchTemplates") List<GetGroupLaunchTemplate> launchTemplates,
+        @OutputCustomType.Parameter("loadBalancers") List<String> loadBalancers,
+        @OutputCustomType.Parameter("maxSize") Integer maxSize,
+        @OutputCustomType.Parameter("minSize") Integer minSize,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("newInstancesProtectedFromScaleIn") Boolean newInstancesProtectedFromScaleIn,
+        @OutputCustomType.Parameter("placementGroup") String placementGroup,
+        @OutputCustomType.Parameter("serviceLinkedRoleArn") String serviceLinkedRoleArn,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("targetGroupArns") List<String> targetGroupArns,
+        @OutputCustomType.Parameter("terminationPolicies") List<String> terminationPolicies,
+        @OutputCustomType.Parameter("vpcZoneIdentifier") String vpcZoneIdentifier) {
         this.arn = arn;
         this.availabilityZones = availabilityZones;
         this.defaultCooldown = defaultCooldown;

@@ -17,8 +17,8 @@ public final class VirtualNodeSpecLoggingAccessLog {
      */
     private final @Nullable VirtualNodeSpecLoggingAccessLogFile file;
 
-    @OutputCustomType.Constructor({"file"})
-    private VirtualNodeSpecLoggingAccessLog(@Nullable VirtualNodeSpecLoggingAccessLogFile file) {
+    @OutputCustomType.Constructor
+    private VirtualNodeSpecLoggingAccessLog(@OutputCustomType.Parameter("file") @Nullable VirtualNodeSpecLoggingAccessLogFile file) {
         this.file = file;
     }
 

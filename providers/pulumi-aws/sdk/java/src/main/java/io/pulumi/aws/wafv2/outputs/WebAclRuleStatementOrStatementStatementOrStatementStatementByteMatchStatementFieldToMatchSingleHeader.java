@@ -15,8 +15,8 @@ public final class WebAclRuleStatementOrStatementStatementOrStatementStatementBy
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private WebAclRuleStatementOrStatementStatementOrStatementStatementByteMatchStatementFieldToMatchSingleHeader(String name) {
+    @OutputCustomType.Constructor
+    private WebAclRuleStatementOrStatementStatementOrStatementStatementByteMatchStatementFieldToMatchSingleHeader(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

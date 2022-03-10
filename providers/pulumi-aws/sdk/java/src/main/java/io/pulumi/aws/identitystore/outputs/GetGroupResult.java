@@ -25,13 +25,13 @@ public final class GetGroupResult {
     private final String id;
     private final String identityStoreId;
 
-    @OutputCustomType.Constructor({"displayName","filters","groupId","id","identityStoreId"})
+    @OutputCustomType.Constructor
     private GetGroupResult(
-        String displayName,
-        List<GetGroupFilter> filters,
-        String groupId,
-        String id,
-        String identityStoreId) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("filters") List<GetGroupFilter> filters,
+        @OutputCustomType.Parameter("groupId") String groupId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identityStoreId") String identityStoreId) {
         this.displayName = displayName;
         this.filters = filters;
         this.groupId = groupId;

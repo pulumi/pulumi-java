@@ -75,20 +75,20 @@ public final class GetCertificateAuthorityResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"arn","certificate","certificateChain","certificateSigningRequest","id","notAfter","notBefore","revocationConfigurations","serial","status","tags","type"})
+    @OutputCustomType.Constructor
     private GetCertificateAuthorityResult(
-        String arn,
-        String certificate,
-        String certificateChain,
-        String certificateSigningRequest,
-        String id,
-        String notAfter,
-        String notBefore,
-        List<GetCertificateAuthorityRevocationConfiguration> revocationConfigurations,
-        String serial,
-        String status,
-        Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("certificate") String certificate,
+        @OutputCustomType.Parameter("certificateChain") String certificateChain,
+        @OutputCustomType.Parameter("certificateSigningRequest") String certificateSigningRequest,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("notAfter") String notAfter,
+        @OutputCustomType.Parameter("notBefore") String notBefore,
+        @OutputCustomType.Parameter("revocationConfigurations") List<GetCertificateAuthorityRevocationConfiguration> revocationConfigurations,
+        @OutputCustomType.Parameter("serial") String serial,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.arn = arn;
         this.certificate = certificate;
         this.certificateChain = certificateChain;

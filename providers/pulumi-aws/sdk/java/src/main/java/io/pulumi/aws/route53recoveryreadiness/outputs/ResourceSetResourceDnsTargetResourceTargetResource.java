@@ -23,10 +23,10 @@ public final class ResourceSetResourceDnsTargetResourceTargetResource {
      */
     private final @Nullable ResourceSetResourceDnsTargetResourceTargetResourceR53Resource r53Resource;
 
-    @OutputCustomType.Constructor({"nlbResource","r53Resource"})
+    @OutputCustomType.Constructor
     private ResourceSetResourceDnsTargetResourceTargetResource(
-        @Nullable ResourceSetResourceDnsTargetResourceTargetResourceNlbResource nlbResource,
-        @Nullable ResourceSetResourceDnsTargetResourceTargetResourceR53Resource r53Resource) {
+        @OutputCustomType.Parameter("nlbResource") @Nullable ResourceSetResourceDnsTargetResourceTargetResourceNlbResource nlbResource,
+        @OutputCustomType.Parameter("r53Resource") @Nullable ResourceSetResourceDnsTargetResourceTargetResourceR53Resource r53Resource) {
         this.nlbResource = nlbResource;
         this.r53Resource = r53Resource;
     }

@@ -28,11 +28,11 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRule {
      */
     private final List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOption> ruleOptions;
 
-    @OutputCustomType.Constructor({"action","header","ruleOptions"})
+    @OutputCustomType.Constructor
     private RuleGroupRuleGroupRulesSourceStatefulRule(
-        String action,
-        RuleGroupRuleGroupRulesSourceStatefulRuleHeader header,
-        List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOption> ruleOptions) {
+        @OutputCustomType.Parameter("action") String action,
+        @OutputCustomType.Parameter("header") RuleGroupRuleGroupRulesSourceStatefulRuleHeader header,
+        @OutputCustomType.Parameter("ruleOptions") List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOption> ruleOptions) {
         this.action = action;
         this.header = header;
         this.ruleOptions = ruleOptions;

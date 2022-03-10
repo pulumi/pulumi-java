@@ -42,14 +42,14 @@ public final class ListenerDefaultActionRedirect {
      */
     private final String statusCode;
 
-    @OutputCustomType.Constructor({"host","path","port","protocol","query","statusCode"})
+    @OutputCustomType.Constructor
     private ListenerDefaultActionRedirect(
-        @Nullable String host,
-        @Nullable String path,
-        @Nullable String port,
-        @Nullable String protocol,
-        @Nullable String query,
-        String statusCode) {
+        @OutputCustomType.Parameter("host") @Nullable String host,
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("port") @Nullable String port,
+        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
+        @OutputCustomType.Parameter("query") @Nullable String query,
+        @OutputCustomType.Parameter("statusCode") String statusCode) {
         this.host = host;
         this.path = path;
         this.port = port;

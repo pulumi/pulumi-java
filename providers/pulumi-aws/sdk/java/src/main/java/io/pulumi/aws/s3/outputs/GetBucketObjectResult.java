@@ -133,34 +133,34 @@ public final class GetBucketObjectResult {
      */
     private final String websiteRedirectLocation;
 
-    @OutputCustomType.Constructor({"body","bucket","bucketKeyEnabled","cacheControl","contentDisposition","contentEncoding","contentLanguage","contentLength","contentType","etag","expiration","expires","id","key","lastModified","metadata","objectLockLegalHoldStatus","objectLockMode","objectLockRetainUntilDate","range","serverSideEncryption","sseKmsKeyId","storageClass","tags","versionId","websiteRedirectLocation"})
+    @OutputCustomType.Constructor
     private GetBucketObjectResult(
-        String body,
-        String bucket,
-        Boolean bucketKeyEnabled,
-        String cacheControl,
-        String contentDisposition,
-        String contentEncoding,
-        String contentLanguage,
-        Integer contentLength,
-        String contentType,
-        String etag,
-        String expiration,
-        String expires,
-        String id,
-        String key,
-        String lastModified,
-        Map<String,String> metadata,
-        String objectLockLegalHoldStatus,
-        String objectLockMode,
-        String objectLockRetainUntilDate,
-        @Nullable String range,
-        String serverSideEncryption,
-        String sseKmsKeyId,
-        String storageClass,
-        Map<String,String> tags,
-        String versionId,
-        String websiteRedirectLocation) {
+        @OutputCustomType.Parameter("body") String body,
+        @OutputCustomType.Parameter("bucket") String bucket,
+        @OutputCustomType.Parameter("bucketKeyEnabled") Boolean bucketKeyEnabled,
+        @OutputCustomType.Parameter("cacheControl") String cacheControl,
+        @OutputCustomType.Parameter("contentDisposition") String contentDisposition,
+        @OutputCustomType.Parameter("contentEncoding") String contentEncoding,
+        @OutputCustomType.Parameter("contentLanguage") String contentLanguage,
+        @OutputCustomType.Parameter("contentLength") Integer contentLength,
+        @OutputCustomType.Parameter("contentType") String contentType,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("expiration") String expiration,
+        @OutputCustomType.Parameter("expires") String expires,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("lastModified") String lastModified,
+        @OutputCustomType.Parameter("metadata") Map<String,String> metadata,
+        @OutputCustomType.Parameter("objectLockLegalHoldStatus") String objectLockLegalHoldStatus,
+        @OutputCustomType.Parameter("objectLockMode") String objectLockMode,
+        @OutputCustomType.Parameter("objectLockRetainUntilDate") String objectLockRetainUntilDate,
+        @OutputCustomType.Parameter("range") @Nullable String range,
+        @OutputCustomType.Parameter("serverSideEncryption") String serverSideEncryption,
+        @OutputCustomType.Parameter("sseKmsKeyId") String sseKmsKeyId,
+        @OutputCustomType.Parameter("storageClass") String storageClass,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("versionId") String versionId,
+        @OutputCustomType.Parameter("websiteRedirectLocation") String websiteRedirectLocation) {
         this.body = body;
         this.bucket = bucket;
         this.bucketKeyEnabled = bucketKeyEnabled;

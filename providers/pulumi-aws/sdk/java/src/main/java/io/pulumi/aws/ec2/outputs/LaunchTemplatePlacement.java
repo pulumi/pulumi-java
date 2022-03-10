@@ -53,16 +53,16 @@ public final class LaunchTemplatePlacement {
      */
     private final @Nullable String tenancy;
 
-    @OutputCustomType.Constructor({"affinity","availabilityZone","groupName","hostId","hostResourceGroupArn","partitionNumber","spreadDomain","tenancy"})
+    @OutputCustomType.Constructor
     private LaunchTemplatePlacement(
-        @Nullable String affinity,
-        @Nullable String availabilityZone,
-        @Nullable String groupName,
-        @Nullable String hostId,
-        @Nullable String hostResourceGroupArn,
-        @Nullable Integer partitionNumber,
-        @Nullable String spreadDomain,
-        @Nullable String tenancy) {
+        @OutputCustomType.Parameter("affinity") @Nullable String affinity,
+        @OutputCustomType.Parameter("availabilityZone") @Nullable String availabilityZone,
+        @OutputCustomType.Parameter("groupName") @Nullable String groupName,
+        @OutputCustomType.Parameter("hostId") @Nullable String hostId,
+        @OutputCustomType.Parameter("hostResourceGroupArn") @Nullable String hostResourceGroupArn,
+        @OutputCustomType.Parameter("partitionNumber") @Nullable Integer partitionNumber,
+        @OutputCustomType.Parameter("spreadDomain") @Nullable String spreadDomain,
+        @OutputCustomType.Parameter("tenancy") @Nullable String tenancy) {
         this.affinity = affinity;
         this.availabilityZone = availabilityZone;
         this.groupName = groupName;

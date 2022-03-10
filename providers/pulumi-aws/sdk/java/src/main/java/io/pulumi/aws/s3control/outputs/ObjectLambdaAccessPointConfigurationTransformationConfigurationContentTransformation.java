@@ -15,8 +15,8 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
      */
     private final ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambda awsLambda;
 
-    @OutputCustomType.Constructor({"awsLambda"})
-    private ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformation(ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambda awsLambda) {
+    @OutputCustomType.Constructor
+    private ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformation(@OutputCustomType.Parameter("awsLambda") ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambda awsLambda) {
         this.awsLambda = awsLambda;
     }
 

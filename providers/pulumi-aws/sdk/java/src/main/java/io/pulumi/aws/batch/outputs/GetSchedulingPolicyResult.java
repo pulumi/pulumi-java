@@ -30,13 +30,13 @@ public final class GetSchedulingPolicyResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"arn","fairSharePolicies","id","name","tags"})
+    @OutputCustomType.Constructor
     private GetSchedulingPolicyResult(
-        String arn,
-        List<GetSchedulingPolicyFairSharePolicy> fairSharePolicies,
-        String id,
-        String name,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("fairSharePolicies") List<GetSchedulingPolicyFairSharePolicy> fairSharePolicies,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
         this.fairSharePolicies = fairSharePolicies;
         this.id = id;

@@ -23,10 +23,10 @@ public final class DistributionTrustedKeyGroupItem {
      */
     private final @Nullable List<String> keyPairIds;
 
-    @OutputCustomType.Constructor({"keyGroupId","keyPairIds"})
+    @OutputCustomType.Constructor
     private DistributionTrustedKeyGroupItem(
-        @Nullable String keyGroupId,
-        @Nullable List<String> keyPairIds) {
+        @OutputCustomType.Parameter("keyGroupId") @Nullable String keyGroupId,
+        @OutputCustomType.Parameter("keyPairIds") @Nullable List<String> keyPairIds) {
         this.keyGroupId = keyGroupId;
         this.keyPairIds = keyPairIds;
     }

@@ -71,22 +71,22 @@ public final class GetMountTargetResult {
      */
     private final String subnetId;
 
-    @OutputCustomType.Constructor({"accessPointId","availabilityZoneId","availabilityZoneName","dnsName","fileSystemArn","fileSystemId","id","ipAddress","mountTargetDnsName","mountTargetId","networkInterfaceId","ownerId","securityGroups","subnetId"})
+    @OutputCustomType.Constructor
     private GetMountTargetResult(
-        @Nullable String accessPointId,
-        String availabilityZoneId,
-        String availabilityZoneName,
-        String dnsName,
-        String fileSystemArn,
-        String fileSystemId,
-        String id,
-        String ipAddress,
-        String mountTargetDnsName,
-        String mountTargetId,
-        String networkInterfaceId,
-        String ownerId,
-        List<String> securityGroups,
-        String subnetId) {
+        @OutputCustomType.Parameter("accessPointId") @Nullable String accessPointId,
+        @OutputCustomType.Parameter("availabilityZoneId") String availabilityZoneId,
+        @OutputCustomType.Parameter("availabilityZoneName") String availabilityZoneName,
+        @OutputCustomType.Parameter("dnsName") String dnsName,
+        @OutputCustomType.Parameter("fileSystemArn") String fileSystemArn,
+        @OutputCustomType.Parameter("fileSystemId") String fileSystemId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ipAddress") String ipAddress,
+        @OutputCustomType.Parameter("mountTargetDnsName") String mountTargetDnsName,
+        @OutputCustomType.Parameter("mountTargetId") String mountTargetId,
+        @OutputCustomType.Parameter("networkInterfaceId") String networkInterfaceId,
+        @OutputCustomType.Parameter("ownerId") String ownerId,
+        @OutputCustomType.Parameter("securityGroups") List<String> securityGroups,
+        @OutputCustomType.Parameter("subnetId") String subnetId) {
         this.accessPointId = accessPointId;
         this.availabilityZoneId = availabilityZoneId;
         this.availabilityZoneName = availabilityZoneName;

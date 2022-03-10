@@ -21,10 +21,10 @@ public final class WebAclRuleStatementNotStatementStatementOrStatementStatementO
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"priority","type"})
+    @OutputCustomType.Constructor
     private WebAclRuleStatementNotStatementStatementOrStatementStatementOrStatementStatementByteMatchStatementTextTransformation(
-        Integer priority,
-        String type) {
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("type") String type) {
         this.priority = priority;
         this.type = type;
     }

@@ -59,19 +59,19 @@ public final class GetRouteTableResult {
     private final Map<String,String> tags;
     private final String vpcId;
 
-    @OutputCustomType.Constructor({"arn","associations","filters","gatewayId","id","ownerId","routeTableId","routes","subnetId","tags","vpcId"})
+    @OutputCustomType.Constructor
     private GetRouteTableResult(
-        String arn,
-        List<GetRouteTableAssociation> associations,
-        @Nullable List<GetRouteTableFilter> filters,
-        String gatewayId,
-        String id,
-        String ownerId,
-        String routeTableId,
-        List<GetRouteTableRoute> routes,
-        String subnetId,
-        Map<String,String> tags,
-        String vpcId) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("associations") List<GetRouteTableAssociation> associations,
+        @OutputCustomType.Parameter("filters") @Nullable List<GetRouteTableFilter> filters,
+        @OutputCustomType.Parameter("gatewayId") String gatewayId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ownerId") String ownerId,
+        @OutputCustomType.Parameter("routeTableId") String routeTableId,
+        @OutputCustomType.Parameter("routes") List<GetRouteTableRoute> routes,
+        @OutputCustomType.Parameter("subnetId") String subnetId,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("vpcId") String vpcId) {
         this.arn = arn;
         this.associations = associations;
         this.filters = filters;

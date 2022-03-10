@@ -15,8 +15,8 @@ public final class FirewallSubnetMapping {
      */
     private final String subnetId;
 
-    @OutputCustomType.Constructor({"subnetId"})
-    private FirewallSubnetMapping(String subnetId) {
+    @OutputCustomType.Constructor
+    private FirewallSubnetMapping(@OutputCustomType.Parameter("subnetId") String subnetId) {
         this.subnetId = subnetId;
     }
 

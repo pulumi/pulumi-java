@@ -26,10 +26,10 @@ public final class DeploymentConfigMinimumHealthyHosts {
      */
     private final @Nullable Integer value;
 
-    @OutputCustomType.Constructor({"type","value"})
+    @OutputCustomType.Constructor
     private DeploymentConfigMinimumHealthyHosts(
-        @Nullable String type,
-        @Nullable Integer value) {
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("value") @Nullable Integer value) {
         this.type = type;
         this.value = value;
     }

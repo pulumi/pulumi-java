@@ -26,11 +26,11 @@ public final class WebAclVisibilityConfig {
      */
     private final Boolean sampledRequestsEnabled;
 
-    @OutputCustomType.Constructor({"cloudwatchMetricsEnabled","metricName","sampledRequestsEnabled"})
+    @OutputCustomType.Constructor
     private WebAclVisibilityConfig(
-        Boolean cloudwatchMetricsEnabled,
-        String metricName,
-        Boolean sampledRequestsEnabled) {
+        @OutputCustomType.Parameter("cloudwatchMetricsEnabled") Boolean cloudwatchMetricsEnabled,
+        @OutputCustomType.Parameter("metricName") String metricName,
+        @OutputCustomType.Parameter("sampledRequestsEnabled") Boolean sampledRequestsEnabled) {
         this.cloudwatchMetricsEnabled = cloudwatchMetricsEnabled;
         this.metricName = metricName;
         this.sampledRequestsEnabled = sampledRequestsEnabled;

@@ -28,11 +28,11 @@ public final class PolicyStepScalingPolicyConfigurationStepAdjustment {
      */
     private final Integer scalingAdjustment;
 
-    @OutputCustomType.Constructor({"metricIntervalLowerBound","metricIntervalUpperBound","scalingAdjustment"})
+    @OutputCustomType.Constructor
     private PolicyStepScalingPolicyConfigurationStepAdjustment(
-        @Nullable String metricIntervalLowerBound,
-        @Nullable String metricIntervalUpperBound,
-        Integer scalingAdjustment) {
+        @OutputCustomType.Parameter("metricIntervalLowerBound") @Nullable String metricIntervalLowerBound,
+        @OutputCustomType.Parameter("metricIntervalUpperBound") @Nullable String metricIntervalUpperBound,
+        @OutputCustomType.Parameter("scalingAdjustment") Integer scalingAdjustment) {
         this.metricIntervalLowerBound = metricIntervalLowerBound;
         this.metricIntervalUpperBound = metricIntervalUpperBound;
         this.scalingAdjustment = scalingAdjustment;

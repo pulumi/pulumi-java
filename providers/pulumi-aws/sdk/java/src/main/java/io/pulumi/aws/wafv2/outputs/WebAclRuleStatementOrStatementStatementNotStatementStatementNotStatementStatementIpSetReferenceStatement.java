@@ -23,10 +23,10 @@ public final class WebAclRuleStatementOrStatementStatementNotStatementStatementN
      */
     private final @Nullable WebAclRuleStatementOrStatementStatementNotStatementStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig ipSetForwardedIpConfig;
 
-    @OutputCustomType.Constructor({"arn","ipSetForwardedIpConfig"})
+    @OutputCustomType.Constructor
     private WebAclRuleStatementOrStatementStatementNotStatementStatementNotStatementStatementIpSetReferenceStatement(
-        String arn,
-        @Nullable WebAclRuleStatementOrStatementStatementNotStatementStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig ipSetForwardedIpConfig) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("ipSetForwardedIpConfig") @Nullable WebAclRuleStatementOrStatementStatementNotStatementStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig ipSetForwardedIpConfig) {
         this.arn = arn;
         this.ipSetForwardedIpConfig = ipSetForwardedIpConfig;
     }

@@ -22,11 +22,11 @@ public final class GetDirectoryVpcSetting {
      */
     private final String vpcId;
 
-    @OutputCustomType.Constructor({"availabilityZones","subnetIds","vpcId"})
+    @OutputCustomType.Constructor
     private GetDirectoryVpcSetting(
-        List<String> availabilityZones,
-        List<String> subnetIds,
-        String vpcId) {
+        @OutputCustomType.Parameter("availabilityZones") List<String> availabilityZones,
+        @OutputCustomType.Parameter("subnetIds") List<String> subnetIds,
+        @OutputCustomType.Parameter("vpcId") String vpcId) {
         this.availabilityZones = availabilityZones;
         this.subnetIds = subnetIds;
         this.vpcId = vpcId;

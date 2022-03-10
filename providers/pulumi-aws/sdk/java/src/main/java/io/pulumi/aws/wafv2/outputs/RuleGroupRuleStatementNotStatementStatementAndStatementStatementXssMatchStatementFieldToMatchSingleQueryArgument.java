@@ -15,8 +15,8 @@ public final class RuleGroupRuleStatementNotStatementStatementAndStatementStatem
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private RuleGroupRuleStatementNotStatementStatementAndStatementStatementXssMatchStatementFieldToMatchSingleQueryArgument(String name) {
+    @OutputCustomType.Constructor
+    private RuleGroupRuleStatementNotStatementStatementAndStatementStatementXssMatchStatementFieldToMatchSingleQueryArgument(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

@@ -25,11 +25,11 @@ public final class GetReleaseLabelsResult {
      */
     private final List<String> releaseLabels;
 
-    @OutputCustomType.Constructor({"filters","id","releaseLabels"})
+    @OutputCustomType.Constructor
     private GetReleaseLabelsResult(
-        @Nullable GetReleaseLabelsFilters filters,
-        String id,
-        List<String> releaseLabels) {
+        @OutputCustomType.Parameter("filters") @Nullable GetReleaseLabelsFilters filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("releaseLabels") List<String> releaseLabels) {
         this.filters = filters;
         this.id = id;
         this.releaseLabels = releaseLabels;

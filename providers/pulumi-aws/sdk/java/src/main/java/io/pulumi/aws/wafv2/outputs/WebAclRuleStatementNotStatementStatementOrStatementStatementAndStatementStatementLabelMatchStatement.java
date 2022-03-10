@@ -20,10 +20,10 @@ public final class WebAclRuleStatementNotStatementStatementOrStatementStatementA
      */
     private final String scope;
 
-    @OutputCustomType.Constructor({"key","scope"})
+    @OutputCustomType.Constructor
     private WebAclRuleStatementNotStatementStatementOrStatementStatementAndStatementStatementLabelMatchStatement(
-        String key,
-        String scope) {
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("scope") String scope) {
         this.key = key;
         this.scope = scope;
     }

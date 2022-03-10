@@ -17,8 +17,8 @@ public final class FlowDefinitionHumanLoopConfigPublicWorkforceTaskPrice {
      */
     private final @Nullable FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsd amountInUsd;
 
-    @OutputCustomType.Constructor({"amountInUsd"})
-    private FlowDefinitionHumanLoopConfigPublicWorkforceTaskPrice(@Nullable FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsd amountInUsd) {
+    @OutputCustomType.Constructor
+    private FlowDefinitionHumanLoopConfigPublicWorkforceTaskPrice(@OutputCustomType.Parameter("amountInUsd") @Nullable FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsd amountInUsd) {
         this.amountInUsd = amountInUsd;
     }
 

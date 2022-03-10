@@ -26,11 +26,11 @@ public final class CertificateAuthorityCertificateAuthorityConfiguration {
      */
     private final CertificateAuthorityCertificateAuthorityConfigurationSubject subject;
 
-    @OutputCustomType.Constructor({"keyAlgorithm","signingAlgorithm","subject"})
+    @OutputCustomType.Constructor
     private CertificateAuthorityCertificateAuthorityConfiguration(
-        String keyAlgorithm,
-        String signingAlgorithm,
-        CertificateAuthorityCertificateAuthorityConfigurationSubject subject) {
+        @OutputCustomType.Parameter("keyAlgorithm") String keyAlgorithm,
+        @OutputCustomType.Parameter("signingAlgorithm") String signingAlgorithm,
+        @OutputCustomType.Parameter("subject") CertificateAuthorityCertificateAuthorityConfigurationSubject subject) {
         this.keyAlgorithm = keyAlgorithm;
         this.signingAlgorithm = signingAlgorithm;
         this.subject = subject;

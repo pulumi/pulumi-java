@@ -38,13 +38,13 @@ public final class ServerEndpointDetails {
      */
     private final @Nullable String vpcId;
 
-    @OutputCustomType.Constructor({"addressAllocationIds","securityGroupIds","subnetIds","vpcEndpointId","vpcId"})
+    @OutputCustomType.Constructor
     private ServerEndpointDetails(
-        @Nullable List<String> addressAllocationIds,
-        @Nullable List<String> securityGroupIds,
-        @Nullable List<String> subnetIds,
-        @Nullable String vpcEndpointId,
-        @Nullable String vpcId) {
+        @OutputCustomType.Parameter("addressAllocationIds") @Nullable List<String> addressAllocationIds,
+        @OutputCustomType.Parameter("securityGroupIds") @Nullable List<String> securityGroupIds,
+        @OutputCustomType.Parameter("subnetIds") @Nullable List<String> subnetIds,
+        @OutputCustomType.Parameter("vpcEndpointId") @Nullable String vpcEndpointId,
+        @OutputCustomType.Parameter("vpcId") @Nullable String vpcId) {
         this.addressAllocationIds = addressAllocationIds;
         this.securityGroupIds = securityGroupIds;
         this.subnetIds = subnetIds;

@@ -17,8 +17,8 @@ public final class WebAclRuleActionCount {
      */
     private final @Nullable WebAclRuleActionCountCustomRequestHandling customRequestHandling;
 
-    @OutputCustomType.Constructor({"customRequestHandling"})
-    private WebAclRuleActionCount(@Nullable WebAclRuleActionCountCustomRequestHandling customRequestHandling) {
+    @OutputCustomType.Constructor
+    private WebAclRuleActionCount(@OutputCustomType.Parameter("customRequestHandling") @Nullable WebAclRuleActionCountCustomRequestHandling customRequestHandling) {
         this.customRequestHandling = customRequestHandling;
     }
 

@@ -15,8 +15,8 @@ public final class WebAclRuleStatementNotStatementStatementSizeConstraintStateme
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgument(String name) {
+    @OutputCustomType.Constructor
+    private WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgument(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

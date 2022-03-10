@@ -23,10 +23,10 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExport {
      */
     private final @Nullable String outputSchemaVersion;
 
-    @OutputCustomType.Constructor({"destination","outputSchemaVersion"})
+    @OutputCustomType.Constructor
     private AnalyticsConfigurationStorageClassAnalysisDataExport(
-        AnalyticsConfigurationStorageClassAnalysisDataExportDestination destination,
-        @Nullable String outputSchemaVersion) {
+        @OutputCustomType.Parameter("destination") AnalyticsConfigurationStorageClassAnalysisDataExportDestination destination,
+        @OutputCustomType.Parameter("outputSchemaVersion") @Nullable String outputSchemaVersion) {
         this.destination = destination;
         this.outputSchemaVersion = outputSchemaVersion;
     }

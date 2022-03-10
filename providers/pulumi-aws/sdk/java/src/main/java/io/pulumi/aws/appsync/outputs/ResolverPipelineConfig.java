@@ -17,8 +17,8 @@ public final class ResolverPipelineConfig {
      */
     private final @Nullable List<String> functions;
 
-    @OutputCustomType.Constructor({"functions"})
-    private ResolverPipelineConfig(@Nullable List<String> functions) {
+    @OutputCustomType.Constructor
+    private ResolverPipelineConfig(@OutputCustomType.Parameter("functions") @Nullable List<String> functions) {
         this.functions = functions;
     }
 

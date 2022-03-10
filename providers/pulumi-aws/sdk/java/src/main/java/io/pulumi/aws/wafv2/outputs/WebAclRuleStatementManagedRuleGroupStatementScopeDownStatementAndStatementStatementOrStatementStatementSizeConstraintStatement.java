@@ -36,12 +36,12 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
      */
     private final List<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementOrStatementStatementSizeConstraintStatementTextTransformation> textTransformations;
 
-    @OutputCustomType.Constructor({"comparisonOperator","fieldToMatch","size","textTransformations"})
+    @OutputCustomType.Constructor
     private WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementOrStatementStatementSizeConstraintStatement(
-        String comparisonOperator,
-        @Nullable WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatch fieldToMatch,
-        Integer size,
-        List<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementOrStatementStatementSizeConstraintStatementTextTransformation> textTransformations) {
+        @OutputCustomType.Parameter("comparisonOperator") String comparisonOperator,
+        @OutputCustomType.Parameter("fieldToMatch") @Nullable WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatch fieldToMatch,
+        @OutputCustomType.Parameter("size") Integer size,
+        @OutputCustomType.Parameter("textTransformations") List<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementOrStatementStatementSizeConstraintStatementTextTransformation> textTransformations) {
         this.comparisonOperator = comparisonOperator;
         this.fieldToMatch = fieldToMatch;
         this.size = size;

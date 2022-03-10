@@ -22,10 +22,10 @@ public final class ScalingPlanScalingInstructionPredefinedLoadMetricSpecificatio
      */
     private final @Nullable String resourceLabel;
 
-    @OutputCustomType.Constructor({"predefinedLoadMetricType","resourceLabel"})
+    @OutputCustomType.Constructor
     private ScalingPlanScalingInstructionPredefinedLoadMetricSpecification(
-        String predefinedLoadMetricType,
-        @Nullable String resourceLabel) {
+        @OutputCustomType.Parameter("predefinedLoadMetricType") String predefinedLoadMetricType,
+        @OutputCustomType.Parameter("resourceLabel") @Nullable String resourceLabel) {
         this.predefinedLoadMetricType = predefinedLoadMetricType;
         this.resourceLabel = resourceLabel;
     }

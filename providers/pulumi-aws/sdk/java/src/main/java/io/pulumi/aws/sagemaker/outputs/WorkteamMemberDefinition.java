@@ -23,10 +23,10 @@ public final class WorkteamMemberDefinition {
      */
     private final @Nullable WorkteamMemberDefinitionOidcMemberDefinition oidcMemberDefinition;
 
-    @OutputCustomType.Constructor({"cognitoMemberDefinition","oidcMemberDefinition"})
+    @OutputCustomType.Constructor
     private WorkteamMemberDefinition(
-        @Nullable WorkteamMemberDefinitionCognitoMemberDefinition cognitoMemberDefinition,
-        @Nullable WorkteamMemberDefinitionOidcMemberDefinition oidcMemberDefinition) {
+        @OutputCustomType.Parameter("cognitoMemberDefinition") @Nullable WorkteamMemberDefinitionCognitoMemberDefinition cognitoMemberDefinition,
+        @OutputCustomType.Parameter("oidcMemberDefinition") @Nullable WorkteamMemberDefinitionOidcMemberDefinition oidcMemberDefinition) {
         this.cognitoMemberDefinition = cognitoMemberDefinition;
         this.oidcMemberDefinition = oidcMemberDefinition;
     }

@@ -27,11 +27,11 @@ public final class UserPoolClientTokenValidityUnits {
      */
     private final @Nullable String refreshToken;
 
-    @OutputCustomType.Constructor({"accessToken","idToken","refreshToken"})
+    @OutputCustomType.Constructor
     private UserPoolClientTokenValidityUnits(
-        @Nullable String accessToken,
-        @Nullable String idToken,
-        @Nullable String refreshToken) {
+        @OutputCustomType.Parameter("accessToken") @Nullable String accessToken,
+        @OutputCustomType.Parameter("idToken") @Nullable String idToken,
+        @OutputCustomType.Parameter("refreshToken") @Nullable String refreshToken) {
         this.accessToken = accessToken;
         this.idToken = idToken;
         this.refreshToken = refreshToken;

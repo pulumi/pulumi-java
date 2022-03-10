@@ -21,10 +21,10 @@ public final class VaultNotification {
      */
     private final String snsTopic;
 
-    @OutputCustomType.Constructor({"events","snsTopic"})
+    @OutputCustomType.Constructor
     private VaultNotification(
-        List<String> events,
-        String snsTopic) {
+        @OutputCustomType.Parameter("events") List<String> events,
+        @OutputCustomType.Parameter("snsTopic") String snsTopic) {
         this.events = events;
         this.snsTopic = snsTopic;
     }

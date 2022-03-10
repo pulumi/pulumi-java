@@ -60,17 +60,17 @@ public final class SecurityGroupIngress {
      */
     private final Integer toPort;
 
-    @OutputCustomType.Constructor({"cidrBlocks","description","fromPort","ipv6CidrBlocks","prefixListIds","protocol","securityGroups","self","toPort"})
+    @OutputCustomType.Constructor
     private SecurityGroupIngress(
-        @Nullable List<String> cidrBlocks,
-        @Nullable String description,
-        Integer fromPort,
-        @Nullable List<String> ipv6CidrBlocks,
-        @Nullable List<String> prefixListIds,
-        String protocol,
-        @Nullable List<String> securityGroups,
-        @Nullable Boolean self,
-        Integer toPort) {
+        @OutputCustomType.Parameter("cidrBlocks") @Nullable List<String> cidrBlocks,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("fromPort") Integer fromPort,
+        @OutputCustomType.Parameter("ipv6CidrBlocks") @Nullable List<String> ipv6CidrBlocks,
+        @OutputCustomType.Parameter("prefixListIds") @Nullable List<String> prefixListIds,
+        @OutputCustomType.Parameter("protocol") String protocol,
+        @OutputCustomType.Parameter("securityGroups") @Nullable List<String> securityGroups,
+        @OutputCustomType.Parameter("self") @Nullable Boolean self,
+        @OutputCustomType.Parameter("toPort") Integer toPort) {
         this.cidrBlocks = cidrBlocks;
         this.description = description;
         this.fromPort = fromPort;

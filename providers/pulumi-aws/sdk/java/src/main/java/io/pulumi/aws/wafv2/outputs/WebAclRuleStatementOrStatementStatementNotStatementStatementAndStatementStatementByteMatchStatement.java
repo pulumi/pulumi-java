@@ -35,12 +35,12 @@ public final class WebAclRuleStatementOrStatementStatementNotStatementStatementA
      */
     private final List<WebAclRuleStatementOrStatementStatementNotStatementStatementAndStatementStatementByteMatchStatementTextTransformation> textTransformations;
 
-    @OutputCustomType.Constructor({"fieldToMatch","positionalConstraint","searchString","textTransformations"})
+    @OutputCustomType.Constructor
     private WebAclRuleStatementOrStatementStatementNotStatementStatementAndStatementStatementByteMatchStatement(
-        @Nullable WebAclRuleStatementOrStatementStatementNotStatementStatementAndStatementStatementByteMatchStatementFieldToMatch fieldToMatch,
-        String positionalConstraint,
-        String searchString,
-        List<WebAclRuleStatementOrStatementStatementNotStatementStatementAndStatementStatementByteMatchStatementTextTransformation> textTransformations) {
+        @OutputCustomType.Parameter("fieldToMatch") @Nullable WebAclRuleStatementOrStatementStatementNotStatementStatementAndStatementStatementByteMatchStatementFieldToMatch fieldToMatch,
+        @OutputCustomType.Parameter("positionalConstraint") String positionalConstraint,
+        @OutputCustomType.Parameter("searchString") String searchString,
+        @OutputCustomType.Parameter("textTransformations") List<WebAclRuleStatementOrStatementStatementNotStatementStatementAndStatementStatementByteMatchStatementTextTransformation> textTransformations) {
         this.fieldToMatch = fieldToMatch;
         this.positionalConstraint = positionalConstraint;
         this.searchString = searchString;

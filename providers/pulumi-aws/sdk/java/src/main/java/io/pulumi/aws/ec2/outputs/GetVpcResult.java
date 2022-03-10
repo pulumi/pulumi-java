@@ -73,24 +73,24 @@ public final class GetVpcResult {
     private final String state;
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"arn","cidrBlock","cidrBlockAssociations","$default","dhcpOptionsId","enableDnsHostnames","enableDnsSupport","filters","id","instanceTenancy","ipv6AssociationId","ipv6CidrBlock","mainRouteTableId","ownerId","state","tags"})
+    @OutputCustomType.Constructor
     private GetVpcResult(
-        String arn,
-        String cidrBlock,
-        List<GetVpcCidrBlockAssociation> cidrBlockAssociations,
-        Boolean $default,
-        String dhcpOptionsId,
-        Boolean enableDnsHostnames,
-        Boolean enableDnsSupport,
-        @Nullable List<GetVpcFilter> filters,
-        String id,
-        String instanceTenancy,
-        String ipv6AssociationId,
-        String ipv6CidrBlock,
-        String mainRouteTableId,
-        String ownerId,
-        String state,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("cidrBlock") String cidrBlock,
+        @OutputCustomType.Parameter("cidrBlockAssociations") List<GetVpcCidrBlockAssociation> cidrBlockAssociations,
+        @OutputCustomType.Parameter("default") Boolean $default,
+        @OutputCustomType.Parameter("dhcpOptionsId") String dhcpOptionsId,
+        @OutputCustomType.Parameter("enableDnsHostnames") Boolean enableDnsHostnames,
+        @OutputCustomType.Parameter("enableDnsSupport") Boolean enableDnsSupport,
+        @OutputCustomType.Parameter("filters") @Nullable List<GetVpcFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instanceTenancy") String instanceTenancy,
+        @OutputCustomType.Parameter("ipv6AssociationId") String ipv6AssociationId,
+        @OutputCustomType.Parameter("ipv6CidrBlock") String ipv6CidrBlock,
+        @OutputCustomType.Parameter("mainRouteTableId") String mainRouteTableId,
+        @OutputCustomType.Parameter("ownerId") String ownerId,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
         this.cidrBlock = cidrBlock;
         this.cidrBlockAssociations = cidrBlockAssociations;

@@ -32,12 +32,12 @@ public final class VpcEndpointServicePrivateDnsNameConfiguration {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"name","state","type","value"})
+    @OutputCustomType.Constructor
     private VpcEndpointServicePrivateDnsNameConfiguration(
-        @Nullable String name,
-        @Nullable String state,
-        @Nullable String type,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("state") @Nullable String state,
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.name = name;
         this.state = state;
         this.type = type;

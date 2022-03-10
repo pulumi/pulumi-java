@@ -76,20 +76,20 @@ public final class FirehoseDeliveryStreamRedshiftConfiguration {
      */
     private final String username;
 
-    @OutputCustomType.Constructor({"cloudwatchLoggingOptions","clusterJdbcurl","copyOptions","dataTableColumns","dataTableName","password","processingConfiguration","retryDuration","roleArn","s3BackupConfiguration","s3BackupMode","username"})
+    @OutputCustomType.Constructor
     private FirehoseDeliveryStreamRedshiftConfiguration(
-        @Nullable FirehoseDeliveryStreamRedshiftConfigurationCloudwatchLoggingOptions cloudwatchLoggingOptions,
-        String clusterJdbcurl,
-        @Nullable String copyOptions,
-        @Nullable String dataTableColumns,
-        String dataTableName,
-        String password,
-        @Nullable FirehoseDeliveryStreamRedshiftConfigurationProcessingConfiguration processingConfiguration,
-        @Nullable Integer retryDuration,
-        String roleArn,
-        @Nullable FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfiguration s3BackupConfiguration,
-        @Nullable String s3BackupMode,
-        String username) {
+        @OutputCustomType.Parameter("cloudwatchLoggingOptions") @Nullable FirehoseDeliveryStreamRedshiftConfigurationCloudwatchLoggingOptions cloudwatchLoggingOptions,
+        @OutputCustomType.Parameter("clusterJdbcurl") String clusterJdbcurl,
+        @OutputCustomType.Parameter("copyOptions") @Nullable String copyOptions,
+        @OutputCustomType.Parameter("dataTableColumns") @Nullable String dataTableColumns,
+        @OutputCustomType.Parameter("dataTableName") String dataTableName,
+        @OutputCustomType.Parameter("password") String password,
+        @OutputCustomType.Parameter("processingConfiguration") @Nullable FirehoseDeliveryStreamRedshiftConfigurationProcessingConfiguration processingConfiguration,
+        @OutputCustomType.Parameter("retryDuration") @Nullable Integer retryDuration,
+        @OutputCustomType.Parameter("roleArn") String roleArn,
+        @OutputCustomType.Parameter("s3BackupConfiguration") @Nullable FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfiguration s3BackupConfiguration,
+        @OutputCustomType.Parameter("s3BackupMode") @Nullable String s3BackupMode,
+        @OutputCustomType.Parameter("username") String username) {
         this.cloudwatchLoggingOptions = cloudwatchLoggingOptions;
         this.clusterJdbcurl = clusterJdbcurl;
         this.copyOptions = copyOptions;

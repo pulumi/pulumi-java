@@ -22,10 +22,10 @@ public final class GetAccessPointRootDirectory {
      */
     private final String path;
 
-    @OutputCustomType.Constructor({"creationInfos","path"})
+    @OutputCustomType.Constructor
     private GetAccessPointRootDirectory(
-        List<GetAccessPointRootDirectoryCreationInfo> creationInfos,
-        String path) {
+        @OutputCustomType.Parameter("creationInfos") List<GetAccessPointRootDirectoryCreationInfo> creationInfos,
+        @OutputCustomType.Parameter("path") String path) {
         this.creationInfos = creationInfos;
         this.path = path;
     }

@@ -27,11 +27,11 @@ public final class TopicRuleSns {
      */
     private final String targetArn;
 
-    @OutputCustomType.Constructor({"messageFormat","roleArn","targetArn"})
+    @OutputCustomType.Constructor
     private TopicRuleSns(
-        @Nullable String messageFormat,
-        String roleArn,
-        String targetArn) {
+        @OutputCustomType.Parameter("messageFormat") @Nullable String messageFormat,
+        @OutputCustomType.Parameter("roleArn") String roleArn,
+        @OutputCustomType.Parameter("targetArn") String targetArn) {
         this.messageFormat = messageFormat;
         this.roleArn = roleArn;
         this.targetArn = targetArn;

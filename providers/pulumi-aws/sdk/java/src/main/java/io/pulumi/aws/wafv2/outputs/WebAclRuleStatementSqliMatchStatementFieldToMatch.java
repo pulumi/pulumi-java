@@ -53,15 +53,15 @@ public final class WebAclRuleStatementSqliMatchStatementFieldToMatch {
      */
     private final @Nullable WebAclRuleStatementSqliMatchStatementFieldToMatchUriPath uriPath;
 
-    @OutputCustomType.Constructor({"allQueryArguments","body","method","queryString","singleHeader","singleQueryArgument","uriPath"})
+    @OutputCustomType.Constructor
     private WebAclRuleStatementSqliMatchStatementFieldToMatch(
-        @Nullable WebAclRuleStatementSqliMatchStatementFieldToMatchAllQueryArguments allQueryArguments,
-        @Nullable WebAclRuleStatementSqliMatchStatementFieldToMatchBody body,
-        @Nullable WebAclRuleStatementSqliMatchStatementFieldToMatchMethod method,
-        @Nullable WebAclRuleStatementSqliMatchStatementFieldToMatchQueryString queryString,
-        @Nullable WebAclRuleStatementSqliMatchStatementFieldToMatchSingleHeader singleHeader,
-        @Nullable WebAclRuleStatementSqliMatchStatementFieldToMatchSingleQueryArgument singleQueryArgument,
-        @Nullable WebAclRuleStatementSqliMatchStatementFieldToMatchUriPath uriPath) {
+        @OutputCustomType.Parameter("allQueryArguments") @Nullable WebAclRuleStatementSqliMatchStatementFieldToMatchAllQueryArguments allQueryArguments,
+        @OutputCustomType.Parameter("body") @Nullable WebAclRuleStatementSqliMatchStatementFieldToMatchBody body,
+        @OutputCustomType.Parameter("method") @Nullable WebAclRuleStatementSqliMatchStatementFieldToMatchMethod method,
+        @OutputCustomType.Parameter("queryString") @Nullable WebAclRuleStatementSqliMatchStatementFieldToMatchQueryString queryString,
+        @OutputCustomType.Parameter("singleHeader") @Nullable WebAclRuleStatementSqliMatchStatementFieldToMatchSingleHeader singleHeader,
+        @OutputCustomType.Parameter("singleQueryArgument") @Nullable WebAclRuleStatementSqliMatchStatementFieldToMatchSingleQueryArgument singleQueryArgument,
+        @OutputCustomType.Parameter("uriPath") @Nullable WebAclRuleStatementSqliMatchStatementFieldToMatchUriPath uriPath) {
         this.allQueryArguments = allQueryArguments;
         this.body = body;
         this.method = method;

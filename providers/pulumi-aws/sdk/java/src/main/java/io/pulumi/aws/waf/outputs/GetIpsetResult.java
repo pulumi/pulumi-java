@@ -16,10 +16,10 @@ public final class GetIpsetResult {
     private final String id;
     private final String name;
 
-    @OutputCustomType.Constructor({"id","name"})
+    @OutputCustomType.Constructor
     private GetIpsetResult(
-        String id,
-        String name) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name) {
         this.id = id;
         this.name = name;
     }

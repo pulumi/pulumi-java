@@ -29,11 +29,11 @@ public final class VirtualGatewaySpecListenerTls {
      */
     private final @Nullable VirtualGatewaySpecListenerTlsValidation validation;
 
-    @OutputCustomType.Constructor({"certificate","mode","validation"})
+    @OutputCustomType.Constructor
     private VirtualGatewaySpecListenerTls(
-        VirtualGatewaySpecListenerTlsCertificate certificate,
-        String mode,
-        @Nullable VirtualGatewaySpecListenerTlsValidation validation) {
+        @OutputCustomType.Parameter("certificate") VirtualGatewaySpecListenerTlsCertificate certificate,
+        @OutputCustomType.Parameter("mode") String mode,
+        @OutputCustomType.Parameter("validation") @Nullable VirtualGatewaySpecListenerTlsValidation validation) {
         this.certificate = certificate;
         this.mode = mode;
         this.validation = validation;

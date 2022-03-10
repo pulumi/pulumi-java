@@ -24,10 +24,10 @@ public final class RuleGroupRuleStatementNotStatementStatementNotStatementStatem
      */
     private final List<RuleGroupRuleStatementNotStatementStatementNotStatementStatementSqliMatchStatementTextTransformation> textTransformations;
 
-    @OutputCustomType.Constructor({"fieldToMatch","textTransformations"})
+    @OutputCustomType.Constructor
     private RuleGroupRuleStatementNotStatementStatementNotStatementStatementSqliMatchStatement(
-        @Nullable RuleGroupRuleStatementNotStatementStatementNotStatementStatementSqliMatchStatementFieldToMatch fieldToMatch,
-        List<RuleGroupRuleStatementNotStatementStatementNotStatementStatementSqliMatchStatementTextTransformation> textTransformations) {
+        @OutputCustomType.Parameter("fieldToMatch") @Nullable RuleGroupRuleStatementNotStatementStatementNotStatementStatementSqliMatchStatementFieldToMatch fieldToMatch,
+        @OutputCustomType.Parameter("textTransformations") List<RuleGroupRuleStatementNotStatementStatementNotStatementStatementSqliMatchStatementTextTransformation> textTransformations) {
         this.fieldToMatch = fieldToMatch;
         this.textTransformations = textTransformations;
     }

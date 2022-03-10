@@ -15,8 +15,8 @@ public final class RuleGroupRuleStatementOrStatementStatementByteMatchStatementF
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchSingleQueryArgument(String name) {
+    @OutputCustomType.Constructor
+    private RuleGroupRuleStatementOrStatementStatementByteMatchStatementFieldToMatchSingleQueryArgument(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

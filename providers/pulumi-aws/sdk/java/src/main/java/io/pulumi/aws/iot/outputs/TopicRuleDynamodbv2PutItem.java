@@ -15,8 +15,8 @@ public final class TopicRuleDynamodbv2PutItem {
      */
     private final String tableName;
 
-    @OutputCustomType.Constructor({"tableName"})
-    private TopicRuleDynamodbv2PutItem(String tableName) {
+    @OutputCustomType.Constructor
+    private TopicRuleDynamodbv2PutItem(@OutputCustomType.Parameter("tableName") String tableName) {
         this.tableName = tableName;
     }
 

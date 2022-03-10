@@ -15,8 +15,8 @@ public final class RecordFailoverRoutingPolicy {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"type"})
-    private RecordFailoverRoutingPolicy(String type) {
+    @OutputCustomType.Constructor
+    private RecordFailoverRoutingPolicy(@OutputCustomType.Parameter("type") String type) {
         this.type = type;
     }
 

@@ -16,8 +16,8 @@ public final class ListenerRuleConditionHostHeader {
      */
     private final List<String> values;
 
-    @OutputCustomType.Constructor({"values"})
-    private ListenerRuleConditionHostHeader(List<String> values) {
+    @OutputCustomType.Constructor
+    private ListenerRuleConditionHostHeader(@OutputCustomType.Parameter("values") List<String> values) {
         this.values = values;
     }
 

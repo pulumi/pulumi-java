@@ -24,15 +24,15 @@ public final class GroupInitialLifecycleHook {
     private final @Nullable String notificationTargetArn;
     private final @Nullable String roleArn;
 
-    @OutputCustomType.Constructor({"defaultResult","heartbeatTimeout","lifecycleTransition","name","notificationMetadata","notificationTargetArn","roleArn"})
+    @OutputCustomType.Constructor
     private GroupInitialLifecycleHook(
-        @Nullable String defaultResult,
-        @Nullable Integer heartbeatTimeout,
-        String lifecycleTransition,
-        String name,
-        @Nullable String notificationMetadata,
-        @Nullable String notificationTargetArn,
-        @Nullable String roleArn) {
+        @OutputCustomType.Parameter("defaultResult") @Nullable String defaultResult,
+        @OutputCustomType.Parameter("heartbeatTimeout") @Nullable Integer heartbeatTimeout,
+        @OutputCustomType.Parameter("lifecycleTransition") String lifecycleTransition,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("notificationMetadata") @Nullable String notificationMetadata,
+        @OutputCustomType.Parameter("notificationTargetArn") @Nullable String notificationTargetArn,
+        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn) {
         this.defaultResult = defaultResult;
         this.heartbeatTimeout = heartbeatTimeout;
         this.lifecycleTransition = lifecycleTransition;

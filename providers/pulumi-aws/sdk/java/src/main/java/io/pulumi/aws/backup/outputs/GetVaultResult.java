@@ -38,14 +38,14 @@ public final class GetVaultResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"arn","id","kmsKeyArn","name","recoveryPoints","tags"})
+    @OutputCustomType.Constructor
     private GetVaultResult(
-        String arn,
-        String id,
-        String kmsKeyArn,
-        String name,
-        Integer recoveryPoints,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kmsKeyArn") String kmsKeyArn,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("recoveryPoints") Integer recoveryPoints,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
         this.id = id;
         this.kmsKeyArn = kmsKeyArn;

@@ -26,11 +26,11 @@ public final class AccessPointRootDirectoryCreationInfo {
      */
     private final String permissions;
 
-    @OutputCustomType.Constructor({"ownerGid","ownerUid","permissions"})
+    @OutputCustomType.Constructor
     private AccessPointRootDirectoryCreationInfo(
-        Integer ownerGid,
-        Integer ownerUid,
-        String permissions) {
+        @OutputCustomType.Parameter("ownerGid") Integer ownerGid,
+        @OutputCustomType.Parameter("ownerUid") Integer ownerUid,
+        @OutputCustomType.Parameter("permissions") String permissions) {
         this.ownerGid = ownerGid;
         this.ownerUid = ownerUid;
         this.permissions = permissions;

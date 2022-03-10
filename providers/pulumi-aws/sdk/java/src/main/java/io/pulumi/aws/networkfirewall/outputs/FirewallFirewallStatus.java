@@ -17,8 +17,8 @@ public final class FirewallFirewallStatus {
      */
     private final @Nullable List<FirewallFirewallStatusSyncState> syncStates;
 
-    @OutputCustomType.Constructor({"syncStates"})
-    private FirewallFirewallStatus(@Nullable List<FirewallFirewallStatusSyncState> syncStates) {
+    @OutputCustomType.Constructor
+    private FirewallFirewallStatus(@OutputCustomType.Parameter("syncStates") @Nullable List<FirewallFirewallStatusSyncState> syncStates) {
         this.syncStates = syncStates;
     }
 

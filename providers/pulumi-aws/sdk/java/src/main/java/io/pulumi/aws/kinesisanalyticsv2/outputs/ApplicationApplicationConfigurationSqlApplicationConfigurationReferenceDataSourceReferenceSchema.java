@@ -30,11 +30,11 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      */
     private final ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormat recordFormat;
 
-    @OutputCustomType.Constructor({"recordColumns","recordEncoding","recordFormat"})
+    @OutputCustomType.Constructor
     private ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchema(
-        List<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordColumn> recordColumns,
-        @Nullable String recordEncoding,
-        ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormat recordFormat) {
+        @OutputCustomType.Parameter("recordColumns") List<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordColumn> recordColumns,
+        @OutputCustomType.Parameter("recordEncoding") @Nullable String recordEncoding,
+        @OutputCustomType.Parameter("recordFormat") ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormat recordFormat) {
         this.recordColumns = recordColumns;
         this.recordEncoding = recordEncoding;
         this.recordFormat = recordFormat;

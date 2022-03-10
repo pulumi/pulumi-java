@@ -36,12 +36,12 @@ public final class WebAclRuleStatementOrStatementStatementOrStatementStatementNo
      */
     private final List<WebAclRuleStatementOrStatementStatementOrStatementStatementNotStatementStatementSizeConstraintStatementTextTransformation> textTransformations;
 
-    @OutputCustomType.Constructor({"comparisonOperator","fieldToMatch","size","textTransformations"})
+    @OutputCustomType.Constructor
     private WebAclRuleStatementOrStatementStatementOrStatementStatementNotStatementStatementSizeConstraintStatement(
-        String comparisonOperator,
-        @Nullable WebAclRuleStatementOrStatementStatementOrStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatch fieldToMatch,
-        Integer size,
-        List<WebAclRuleStatementOrStatementStatementOrStatementStatementNotStatementStatementSizeConstraintStatementTextTransformation> textTransformations) {
+        @OutputCustomType.Parameter("comparisonOperator") String comparisonOperator,
+        @OutputCustomType.Parameter("fieldToMatch") @Nullable WebAclRuleStatementOrStatementStatementOrStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatch fieldToMatch,
+        @OutputCustomType.Parameter("size") Integer size,
+        @OutputCustomType.Parameter("textTransformations") List<WebAclRuleStatementOrStatementStatementOrStatementStatementNotStatementStatementSizeConstraintStatementTextTransformation> textTransformations) {
         this.comparisonOperator = comparisonOperator;
         this.fieldToMatch = fieldToMatch;
         this.size = size;

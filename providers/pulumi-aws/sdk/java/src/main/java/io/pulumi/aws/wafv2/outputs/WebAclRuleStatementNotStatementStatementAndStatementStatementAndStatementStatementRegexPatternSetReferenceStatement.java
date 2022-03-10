@@ -30,11 +30,11 @@ public final class WebAclRuleStatementNotStatementStatementAndStatementStatement
      */
     private final List<WebAclRuleStatementNotStatementStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementTextTransformation> textTransformations;
 
-    @OutputCustomType.Constructor({"arn","fieldToMatch","textTransformations"})
+    @OutputCustomType.Constructor
     private WebAclRuleStatementNotStatementStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatement(
-        String arn,
-        @Nullable WebAclRuleStatementNotStatementStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatch fieldToMatch,
-        List<WebAclRuleStatementNotStatementStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementTextTransformation> textTransformations) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("fieldToMatch") @Nullable WebAclRuleStatementNotStatementStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatch fieldToMatch,
+        @OutputCustomType.Parameter("textTransformations") List<WebAclRuleStatementNotStatementStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatementTextTransformation> textTransformations) {
         this.arn = arn;
         this.fieldToMatch = fieldToMatch;
         this.textTransformations = textTransformations;

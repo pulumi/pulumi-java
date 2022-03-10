@@ -15,8 +15,8 @@ public final class ModelContainerImageConfig {
      */
     private final String repositoryAccessMode;
 
-    @OutputCustomType.Constructor({"repositoryAccessMode"})
-    private ModelContainerImageConfig(String repositoryAccessMode) {
+    @OutputCustomType.Constructor
+    private ModelContainerImageConfig(@OutputCustomType.Parameter("repositoryAccessMode") String repositoryAccessMode) {
         this.repositoryAccessMode = repositoryAccessMode;
     }
 

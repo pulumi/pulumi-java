@@ -24,10 +24,10 @@ public final class TriggerPredicate {
      */
     private final @Nullable String logical;
 
-    @OutputCustomType.Constructor({"conditions","logical"})
+    @OutputCustomType.Constructor
     private TriggerPredicate(
-        List<TriggerPredicateCondition> conditions,
-        @Nullable String logical) {
+        @OutputCustomType.Parameter("conditions") List<TriggerPredicateCondition> conditions,
+        @OutputCustomType.Parameter("logical") @Nullable String logical) {
         this.conditions = conditions;
         this.logical = logical;
     }

@@ -15,8 +15,8 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNa
      */
     private final String labelName;
 
-    @OutputCustomType.Constructor({"labelName"})
-    private WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameCondition(String labelName) {
+    @OutputCustomType.Constructor
+    private WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameCondition(@OutputCustomType.Parameter("labelName") String labelName) {
         this.labelName = labelName;
     }
 

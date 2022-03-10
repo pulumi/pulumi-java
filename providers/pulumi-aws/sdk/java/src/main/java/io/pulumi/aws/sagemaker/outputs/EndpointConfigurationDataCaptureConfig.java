@@ -47,14 +47,14 @@ public final class EndpointConfigurationDataCaptureConfig {
      */
     private final @Nullable String kmsKeyId;
 
-    @OutputCustomType.Constructor({"captureContentTypeHeader","captureOptions","destinationS3Uri","enableCapture","initialSamplingPercentage","kmsKeyId"})
+    @OutputCustomType.Constructor
     private EndpointConfigurationDataCaptureConfig(
-        @Nullable EndpointConfigurationDataCaptureConfigCaptureContentTypeHeader captureContentTypeHeader,
-        List<EndpointConfigurationDataCaptureConfigCaptureOption> captureOptions,
-        String destinationS3Uri,
-        @Nullable Boolean enableCapture,
-        Integer initialSamplingPercentage,
-        @Nullable String kmsKeyId) {
+        @OutputCustomType.Parameter("captureContentTypeHeader") @Nullable EndpointConfigurationDataCaptureConfigCaptureContentTypeHeader captureContentTypeHeader,
+        @OutputCustomType.Parameter("captureOptions") List<EndpointConfigurationDataCaptureConfigCaptureOption> captureOptions,
+        @OutputCustomType.Parameter("destinationS3Uri") String destinationS3Uri,
+        @OutputCustomType.Parameter("enableCapture") @Nullable Boolean enableCapture,
+        @OutputCustomType.Parameter("initialSamplingPercentage") Integer initialSamplingPercentage,
+        @OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId) {
         this.captureContentTypeHeader = captureContentTypeHeader;
         this.captureOptions = captureOptions;
         this.destinationS3Uri = destinationS3Uri;

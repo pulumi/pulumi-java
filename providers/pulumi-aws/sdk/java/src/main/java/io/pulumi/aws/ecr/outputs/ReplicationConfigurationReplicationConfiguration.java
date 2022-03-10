@@ -15,8 +15,8 @@ public final class ReplicationConfigurationReplicationConfiguration {
      */
     private final ReplicationConfigurationReplicationConfigurationRule rule;
 
-    @OutputCustomType.Constructor({"rule"})
-    private ReplicationConfigurationReplicationConfiguration(ReplicationConfigurationReplicationConfigurationRule rule) {
+    @OutputCustomType.Constructor
+    private ReplicationConfigurationReplicationConfiguration(@OutputCustomType.Parameter("rule") ReplicationConfigurationReplicationConfigurationRule rule) {
         this.rule = rule;
     }
 

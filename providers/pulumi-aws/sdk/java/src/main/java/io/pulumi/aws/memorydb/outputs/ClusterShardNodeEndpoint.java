@@ -23,10 +23,10 @@ public final class ClusterShardNodeEndpoint {
      */
     private final @Nullable Integer port;
 
-    @OutputCustomType.Constructor({"address","port"})
+    @OutputCustomType.Constructor
     private ClusterShardNodeEndpoint(
-        @Nullable String address,
-        @Nullable Integer port) {
+        @OutputCustomType.Parameter("address") @Nullable String address,
+        @OutputCustomType.Parameter("port") @Nullable Integer port) {
         this.address = address;
         this.port = port;
     }

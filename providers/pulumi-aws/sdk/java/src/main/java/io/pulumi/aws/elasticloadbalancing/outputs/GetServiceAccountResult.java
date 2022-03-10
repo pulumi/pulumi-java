@@ -23,11 +23,11 @@ public final class GetServiceAccountResult {
     private final String id;
     private final @Nullable String region;
 
-    @OutputCustomType.Constructor({"arn","id","region"})
+    @OutputCustomType.Constructor
     private GetServiceAccountResult(
-        String arn,
-        String id,
-        @Nullable String region) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("region") @Nullable String region) {
         this.arn = arn;
         this.id = id;
         this.region = region;

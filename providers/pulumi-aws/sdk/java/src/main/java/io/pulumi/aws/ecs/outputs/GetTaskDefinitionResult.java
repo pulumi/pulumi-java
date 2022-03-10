@@ -47,16 +47,16 @@ public final class GetTaskDefinitionResult {
      */
     private final String taskRoleArn;
 
-    @OutputCustomType.Constructor({"arn","family","id","networkMode","revision","status","taskDefinition","taskRoleArn"})
+    @OutputCustomType.Constructor
     private GetTaskDefinitionResult(
-        String arn,
-        String family,
-        String id,
-        String networkMode,
-        Integer revision,
-        String status,
-        String taskDefinition,
-        String taskRoleArn) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("family") String family,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("networkMode") String networkMode,
+        @OutputCustomType.Parameter("revision") Integer revision,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("taskDefinition") String taskDefinition,
+        @OutputCustomType.Parameter("taskRoleArn") String taskRoleArn) {
         this.arn = arn;
         this.family = family;
         this.id = id;

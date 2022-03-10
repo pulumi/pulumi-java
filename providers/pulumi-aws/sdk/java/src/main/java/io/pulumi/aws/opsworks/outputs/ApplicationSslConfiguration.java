@@ -27,11 +27,11 @@ public final class ApplicationSslConfiguration {
      */
     private final String privateKey;
 
-    @OutputCustomType.Constructor({"certificate","chain","privateKey"})
+    @OutputCustomType.Constructor
     private ApplicationSslConfiguration(
-        String certificate,
-        @Nullable String chain,
-        String privateKey) {
+        @OutputCustomType.Parameter("certificate") String certificate,
+        @OutputCustomType.Parameter("chain") @Nullable String chain,
+        @OutputCustomType.Parameter("privateKey") String privateKey) {
         this.certificate = certificate;
         this.chain = chain;
         this.privateKey = privateKey;

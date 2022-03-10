@@ -22,10 +22,10 @@ public final class ClusterEncryptionConfig {
      */
     private final List<String> resources;
 
-    @OutputCustomType.Constructor({"provider","resources"})
+    @OutputCustomType.Constructor
     private ClusterEncryptionConfig(
-        ClusterEncryptionConfigProvider provider,
-        List<String> resources) {
+        @OutputCustomType.Parameter("provider") ClusterEncryptionConfigProvider provider,
+        @OutputCustomType.Parameter("resources") List<String> resources) {
         this.provider = provider;
         this.resources = resources;
     }

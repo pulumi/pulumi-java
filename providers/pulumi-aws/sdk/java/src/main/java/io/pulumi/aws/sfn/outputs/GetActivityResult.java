@@ -22,12 +22,12 @@ public final class GetActivityResult {
     private final String id;
     private final String name;
 
-    @OutputCustomType.Constructor({"arn","creationDate","id","name"})
+    @OutputCustomType.Constructor
     private GetActivityResult(
-        String arn,
-        String creationDate,
-        String id,
-        String name) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("creationDate") String creationDate,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name) {
         this.arn = arn;
         this.creationDate = creationDate;
         this.id = id;

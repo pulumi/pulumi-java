@@ -22,10 +22,10 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
      */
     private final ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformation contentTransformation;
 
-    @OutputCustomType.Constructor({"actions","contentTransformation"})
+    @OutputCustomType.Constructor
     private ObjectLambdaAccessPointConfigurationTransformationConfiguration(
-        List<String> actions,
-        ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformation contentTransformation) {
+        @OutputCustomType.Parameter("actions") List<String> actions,
+        @OutputCustomType.Parameter("contentTransformation") ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformation contentTransformation) {
         this.actions = actions;
         this.contentTransformation = contentTransformation;
     }

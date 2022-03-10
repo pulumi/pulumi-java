@@ -17,8 +17,8 @@ public final class VirtualServiceSpec {
      */
     private final @Nullable VirtualServiceSpecProvider provider;
 
-    @OutputCustomType.Constructor({"provider"})
-    private VirtualServiceSpec(@Nullable VirtualServiceSpecProvider provider) {
+    @OutputCustomType.Constructor
+    private VirtualServiceSpec(@OutputCustomType.Parameter("provider") @Nullable VirtualServiceSpecProvider provider) {
         this.provider = provider;
     }
 

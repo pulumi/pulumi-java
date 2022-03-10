@@ -15,11 +15,11 @@ public final class GetBrokerUser {
     private final List<String> groups;
     private final String username;
 
-    @OutputCustomType.Constructor({"consoleAccess","groups","username"})
+    @OutputCustomType.Constructor
     private GetBrokerUser(
-        Boolean consoleAccess,
-        List<String> groups,
-        String username) {
+        @OutputCustomType.Parameter("consoleAccess") Boolean consoleAccess,
+        @OutputCustomType.Parameter("groups") List<String> groups,
+        @OutputCustomType.Parameter("username") String username) {
         this.consoleAccess = consoleAccess;
         this.groups = groups;
         this.username = username;

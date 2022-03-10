@@ -20,10 +20,10 @@ public final class GetCloudFormationTypeLoggingConfig {
      */
     private final String logRoleArn;
 
-    @OutputCustomType.Constructor({"logGroupName","logRoleArn"})
+    @OutputCustomType.Constructor
     private GetCloudFormationTypeLoggingConfig(
-        String logGroupName,
-        String logRoleArn) {
+        @OutputCustomType.Parameter("logGroupName") String logGroupName,
+        @OutputCustomType.Parameter("logRoleArn") String logRoleArn) {
         this.logGroupName = logGroupName;
         this.logRoleArn = logRoleArn;
     }

@@ -17,8 +17,8 @@ public final class FunctionEnvironment {
      */
     private final @Nullable Map<String,String> variables;
 
-    @OutputCustomType.Constructor({"variables"})
-    private FunctionEnvironment(@Nullable Map<String,String> variables) {
+    @OutputCustomType.Constructor
+    private FunctionEnvironment(@OutputCustomType.Parameter("variables") @Nullable Map<String,String> variables) {
         this.variables = variables;
     }
 

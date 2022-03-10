@@ -36,12 +36,12 @@ public final class RuleGroupRuleStatementOrStatementStatementNotStatementStateme
      */
     private final List<RuleGroupRuleStatementOrStatementStatementNotStatementStatementSizeConstraintStatementTextTransformation> textTransformations;
 
-    @OutputCustomType.Constructor({"comparisonOperator","fieldToMatch","size","textTransformations"})
+    @OutputCustomType.Constructor
     private RuleGroupRuleStatementOrStatementStatementNotStatementStatementSizeConstraintStatement(
-        String comparisonOperator,
-        @Nullable RuleGroupRuleStatementOrStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatch fieldToMatch,
-        Integer size,
-        List<RuleGroupRuleStatementOrStatementStatementNotStatementStatementSizeConstraintStatementTextTransformation> textTransformations) {
+        @OutputCustomType.Parameter("comparisonOperator") String comparisonOperator,
+        @OutputCustomType.Parameter("fieldToMatch") @Nullable RuleGroupRuleStatementOrStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatch fieldToMatch,
+        @OutputCustomType.Parameter("size") Integer size,
+        @OutputCustomType.Parameter("textTransformations") List<RuleGroupRuleStatementOrStatementStatementNotStatementStatementSizeConstraintStatementTextTransformation> textTransformations) {
         this.comparisonOperator = comparisonOperator;
         this.fieldToMatch = fieldToMatch;
         this.size = size;

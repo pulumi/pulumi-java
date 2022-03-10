@@ -16,10 +16,10 @@ public final class GetClusterKubernetesNetworkConfig {
      */
     private final String serviceIpv4Cidr;
 
-    @OutputCustomType.Constructor({"ipFamily","serviceIpv4Cidr"})
+    @OutputCustomType.Constructor
     private GetClusterKubernetesNetworkConfig(
-        String ipFamily,
-        String serviceIpv4Cidr) {
+        @OutputCustomType.Parameter("ipFamily") String ipFamily,
+        @OutputCustomType.Parameter("serviceIpv4Cidr") String serviceIpv4Cidr) {
         this.ipFamily = ipFamily;
         this.serviceIpv4Cidr = serviceIpv4Cidr;
     }

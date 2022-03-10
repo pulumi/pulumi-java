@@ -33,15 +33,15 @@ public final class GetUserSshKeyResult {
     private final String status;
     private final String username;
 
-    @OutputCustomType.Constructor({"encoding","fingerprint","id","publicKey","sshPublicKeyId","status","username"})
+    @OutputCustomType.Constructor
     private GetUserSshKeyResult(
-        String encoding,
-        String fingerprint,
-        String id,
-        String publicKey,
-        String sshPublicKeyId,
-        String status,
-        String username) {
+        @OutputCustomType.Parameter("encoding") String encoding,
+        @OutputCustomType.Parameter("fingerprint") String fingerprint,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("publicKey") String publicKey,
+        @OutputCustomType.Parameter("sshPublicKeyId") String sshPublicKeyId,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("username") String username) {
         this.encoding = encoding;
         this.fingerprint = fingerprint;
         this.id = id;

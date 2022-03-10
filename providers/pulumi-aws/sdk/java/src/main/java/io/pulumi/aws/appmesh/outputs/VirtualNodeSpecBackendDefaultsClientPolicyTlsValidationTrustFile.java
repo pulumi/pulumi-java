@@ -15,8 +15,8 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustF
      */
     private final String certificateChain;
 
-    @OutputCustomType.Constructor({"certificateChain"})
-    private VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFile(String certificateChain) {
+    @OutputCustomType.Constructor
+    private VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFile(@OutputCustomType.Parameter("certificateChain") String certificateChain) {
         this.certificateChain = certificateChain;
     }
 

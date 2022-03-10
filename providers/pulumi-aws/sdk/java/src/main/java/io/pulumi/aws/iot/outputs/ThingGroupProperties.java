@@ -23,10 +23,10 @@ public final class ThingGroupProperties {
      */
     private final @Nullable String description;
 
-    @OutputCustomType.Constructor({"attributePayload","description"})
+    @OutputCustomType.Constructor
     private ThingGroupProperties(
-        @Nullable ThingGroupPropertiesAttributePayload attributePayload,
-        @Nullable String description) {
+        @OutputCustomType.Parameter("attributePayload") @Nullable ThingGroupPropertiesAttributePayload attributePayload,
+        @OutputCustomType.Parameter("description") @Nullable String description) {
         this.attributePayload = attributePayload;
         this.description = description;
     }

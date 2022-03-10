@@ -29,11 +29,11 @@ public final class FleetRuntimeConfiguration {
      */
     private final @Nullable List<FleetRuntimeConfigurationServerProcess> serverProcesses;
 
-    @OutputCustomType.Constructor({"gameSessionActivationTimeoutSeconds","maxConcurrentGameSessionActivations","serverProcesses"})
+    @OutputCustomType.Constructor
     private FleetRuntimeConfiguration(
-        @Nullable Integer gameSessionActivationTimeoutSeconds,
-        @Nullable Integer maxConcurrentGameSessionActivations,
-        @Nullable List<FleetRuntimeConfigurationServerProcess> serverProcesses) {
+        @OutputCustomType.Parameter("gameSessionActivationTimeoutSeconds") @Nullable Integer gameSessionActivationTimeoutSeconds,
+        @OutputCustomType.Parameter("maxConcurrentGameSessionActivations") @Nullable Integer maxConcurrentGameSessionActivations,
+        @OutputCustomType.Parameter("serverProcesses") @Nullable List<FleetRuntimeConfigurationServerProcess> serverProcesses) {
         this.gameSessionActivationTimeoutSeconds = gameSessionActivationTimeoutSeconds;
         this.maxConcurrentGameSessionActivations = maxConcurrentGameSessionActivations;
         this.serverProcesses = serverProcesses;

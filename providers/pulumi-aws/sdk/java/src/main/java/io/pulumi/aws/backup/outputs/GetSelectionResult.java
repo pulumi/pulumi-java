@@ -33,14 +33,14 @@ public final class GetSelectionResult {
     private final List<String> resources;
     private final String selectionId;
 
-    @OutputCustomType.Constructor({"iamRoleArn","id","name","planId","resources","selectionId"})
+    @OutputCustomType.Constructor
     private GetSelectionResult(
-        String iamRoleArn,
-        String id,
-        String name,
-        String planId,
-        List<String> resources,
-        String selectionId) {
+        @OutputCustomType.Parameter("iamRoleArn") String iamRoleArn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("planId") String planId,
+        @OutputCustomType.Parameter("resources") List<String> resources,
+        @OutputCustomType.Parameter("selectionId") String selectionId) {
         this.iamRoleArn = iamRoleArn;
         this.id = id;
         this.name = name;

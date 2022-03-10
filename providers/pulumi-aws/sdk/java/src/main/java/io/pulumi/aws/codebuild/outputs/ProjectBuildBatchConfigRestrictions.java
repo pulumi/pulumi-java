@@ -24,10 +24,10 @@ public final class ProjectBuildBatchConfigRestrictions {
      */
     private final @Nullable Integer maximumBuildsAllowed;
 
-    @OutputCustomType.Constructor({"computeTypesAlloweds","maximumBuildsAllowed"})
+    @OutputCustomType.Constructor
     private ProjectBuildBatchConfigRestrictions(
-        @Nullable List<String> computeTypesAlloweds,
-        @Nullable Integer maximumBuildsAllowed) {
+        @OutputCustomType.Parameter("computeTypesAlloweds") @Nullable List<String> computeTypesAlloweds,
+        @OutputCustomType.Parameter("maximumBuildsAllowed") @Nullable Integer maximumBuildsAllowed) {
         this.computeTypesAlloweds = computeTypesAlloweds;
         this.maximumBuildsAllowed = maximumBuildsAllowed;
     }

@@ -34,15 +34,15 @@ public final class GetInternetGatewayResult {
     private final String ownerId;
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"arn","attachments","filters","id","internetGatewayId","ownerId","tags"})
+    @OutputCustomType.Constructor
     private GetInternetGatewayResult(
-        String arn,
-        List<GetInternetGatewayAttachment> attachments,
-        @Nullable List<GetInternetGatewayFilter> filters,
-        String id,
-        String internetGatewayId,
-        String ownerId,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("attachments") List<GetInternetGatewayAttachment> attachments,
+        @OutputCustomType.Parameter("filters") @Nullable List<GetInternetGatewayFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("internetGatewayId") String internetGatewayId,
+        @OutputCustomType.Parameter("ownerId") String ownerId,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
         this.attachments = attachments;
         this.filters = filters;

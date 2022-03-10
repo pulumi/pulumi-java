@@ -41,13 +41,13 @@ public final class OpenZfsFileSystemRootVolumeConfiguration {
      */
     private final @Nullable List<OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuota> userAndGroupQuotas;
 
-    @OutputCustomType.Constructor({"copyTagsToSnapshots","dataCompressionType","nfsExports","readOnly","userAndGroupQuotas"})
+    @OutputCustomType.Constructor
     private OpenZfsFileSystemRootVolumeConfiguration(
-        @Nullable Boolean copyTagsToSnapshots,
-        @Nullable String dataCompressionType,
-        @Nullable OpenZfsFileSystemRootVolumeConfigurationNfsExports nfsExports,
-        @Nullable Boolean readOnly,
-        @Nullable List<OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuota> userAndGroupQuotas) {
+        @OutputCustomType.Parameter("copyTagsToSnapshots") @Nullable Boolean copyTagsToSnapshots,
+        @OutputCustomType.Parameter("dataCompressionType") @Nullable String dataCompressionType,
+        @OutputCustomType.Parameter("nfsExports") @Nullable OpenZfsFileSystemRootVolumeConfigurationNfsExports nfsExports,
+        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @OutputCustomType.Parameter("userAndGroupQuotas") @Nullable List<OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuota> userAndGroupQuotas) {
         this.copyTagsToSnapshots = copyTagsToSnapshots;
         this.dataCompressionType = dataCompressionType;
         this.nfsExports = nfsExports;

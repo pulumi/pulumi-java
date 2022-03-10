@@ -23,10 +23,10 @@ public final class VirtualNodeSpecListenerTimeoutHttp {
      */
     private final @Nullable VirtualNodeSpecListenerTimeoutHttpPerRequest perRequest;
 
-    @OutputCustomType.Constructor({"idle","perRequest"})
+    @OutputCustomType.Constructor
     private VirtualNodeSpecListenerTimeoutHttp(
-        @Nullable VirtualNodeSpecListenerTimeoutHttpIdle idle,
-        @Nullable VirtualNodeSpecListenerTimeoutHttpPerRequest perRequest) {
+        @OutputCustomType.Parameter("idle") @Nullable VirtualNodeSpecListenerTimeoutHttpIdle idle,
+        @OutputCustomType.Parameter("perRequest") @Nullable VirtualNodeSpecListenerTimeoutHttpPerRequest perRequest) {
         this.idle = idle;
         this.perRequest = perRequest;
     }

@@ -31,12 +31,12 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigStrictTransportS
      */
     private final Boolean preload;
 
-    @OutputCustomType.Constructor({"accessControlMaxAgeSec","includeSubdomains","override","preload"})
+    @OutputCustomType.Constructor
     private GetResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurity(
-        Integer accessControlMaxAgeSec,
-        Boolean includeSubdomains,
-        Boolean override,
-        Boolean preload) {
+        @OutputCustomType.Parameter("accessControlMaxAgeSec") Integer accessControlMaxAgeSec,
+        @OutputCustomType.Parameter("includeSubdomains") Boolean includeSubdomains,
+        @OutputCustomType.Parameter("override") Boolean override,
+        @OutputCustomType.Parameter("preload") Boolean preload) {
         this.accessControlMaxAgeSec = accessControlMaxAgeSec;
         this.includeSubdomains = includeSubdomains;
         this.override = override;

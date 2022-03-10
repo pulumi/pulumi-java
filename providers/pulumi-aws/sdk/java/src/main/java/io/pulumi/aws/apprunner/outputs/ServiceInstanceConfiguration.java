@@ -27,11 +27,11 @@ public final class ServiceInstanceConfiguration {
      */
     private final @Nullable String memory;
 
-    @OutputCustomType.Constructor({"cpu","instanceRoleArn","memory"})
+    @OutputCustomType.Constructor
     private ServiceInstanceConfiguration(
-        @Nullable String cpu,
-        @Nullable String instanceRoleArn,
-        @Nullable String memory) {
+        @OutputCustomType.Parameter("cpu") @Nullable String cpu,
+        @OutputCustomType.Parameter("instanceRoleArn") @Nullable String instanceRoleArn,
+        @OutputCustomType.Parameter("memory") @Nullable String memory) {
         this.cpu = cpu;
         this.instanceRoleArn = instanceRoleArn;
         this.memory = memory;

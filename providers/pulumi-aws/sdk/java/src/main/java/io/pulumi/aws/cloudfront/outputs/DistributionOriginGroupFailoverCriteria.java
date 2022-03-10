@@ -16,8 +16,8 @@ public final class DistributionOriginGroupFailoverCriteria {
      */
     private final List<Integer> statusCodes;
 
-    @OutputCustomType.Constructor({"statusCodes"})
-    private DistributionOriginGroupFailoverCriteria(List<Integer> statusCodes) {
+    @OutputCustomType.Constructor
+    private DistributionOriginGroupFailoverCriteria(@OutputCustomType.Parameter("statusCodes") List<Integer> statusCodes) {
         this.statusCodes = statusCodes;
     }
 

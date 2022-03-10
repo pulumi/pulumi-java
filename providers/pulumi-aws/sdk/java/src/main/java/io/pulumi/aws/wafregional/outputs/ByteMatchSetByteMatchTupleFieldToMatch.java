@@ -22,10 +22,10 @@ public final class ByteMatchSetByteMatchTupleFieldToMatch {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"data","type"})
+    @OutputCustomType.Constructor
     private ByteMatchSetByteMatchTupleFieldToMatch(
-        @Nullable String data,
-        String type) {
+        @OutputCustomType.Parameter("data") @Nullable String data,
+        @OutputCustomType.Parameter("type") String type) {
         this.data = data;
         this.type = type;
     }

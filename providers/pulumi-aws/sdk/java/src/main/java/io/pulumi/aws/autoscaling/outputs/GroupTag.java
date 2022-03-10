@@ -27,11 +27,11 @@ public final class GroupTag {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"key","propagateAtLaunch","value"})
+    @OutputCustomType.Constructor
     private GroupTag(
-        String key,
-        Boolean propagateAtLaunch,
-        String value) {
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("propagateAtLaunch") Boolean propagateAtLaunch,
+        @OutputCustomType.Parameter("value") String value) {
         this.key = key;
         this.propagateAtLaunch = propagateAtLaunch;
         this.value = value;

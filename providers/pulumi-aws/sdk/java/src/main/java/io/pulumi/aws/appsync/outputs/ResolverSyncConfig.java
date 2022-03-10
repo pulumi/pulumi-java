@@ -28,11 +28,11 @@ public final class ResolverSyncConfig {
      */
     private final @Nullable ResolverSyncConfigLambdaConflictHandlerConfig lambdaConflictHandlerConfig;
 
-    @OutputCustomType.Constructor({"conflictDetection","conflictHandler","lambdaConflictHandlerConfig"})
+    @OutputCustomType.Constructor
     private ResolverSyncConfig(
-        @Nullable String conflictDetection,
-        @Nullable String conflictHandler,
-        @Nullable ResolverSyncConfigLambdaConflictHandlerConfig lambdaConflictHandlerConfig) {
+        @OutputCustomType.Parameter("conflictDetection") @Nullable String conflictDetection,
+        @OutputCustomType.Parameter("conflictHandler") @Nullable String conflictHandler,
+        @OutputCustomType.Parameter("lambdaConflictHandlerConfig") @Nullable ResolverSyncConfigLambdaConflictHandlerConfig lambdaConflictHandlerConfig) {
         this.conflictDetection = conflictDetection;
         this.conflictHandler = conflictHandler;
         this.lambdaConflictHandlerConfig = lambdaConflictHandlerConfig;

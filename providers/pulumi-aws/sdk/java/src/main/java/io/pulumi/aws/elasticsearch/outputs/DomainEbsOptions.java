@@ -34,12 +34,12 @@ public final class DomainEbsOptions {
      */
     private final @Nullable String volumeType;
 
-    @OutputCustomType.Constructor({"ebsEnabled","iops","volumeSize","volumeType"})
+    @OutputCustomType.Constructor
     private DomainEbsOptions(
-        Boolean ebsEnabled,
-        @Nullable Integer iops,
-        @Nullable Integer volumeSize,
-        @Nullable String volumeType) {
+        @OutputCustomType.Parameter("ebsEnabled") Boolean ebsEnabled,
+        @OutputCustomType.Parameter("iops") @Nullable Integer iops,
+        @OutputCustomType.Parameter("volumeSize") @Nullable Integer volumeSize,
+        @OutputCustomType.Parameter("volumeType") @Nullable String volumeType) {
         this.ebsEnabled = ebsEnabled;
         this.iops = iops;
         this.volumeSize = volumeSize;

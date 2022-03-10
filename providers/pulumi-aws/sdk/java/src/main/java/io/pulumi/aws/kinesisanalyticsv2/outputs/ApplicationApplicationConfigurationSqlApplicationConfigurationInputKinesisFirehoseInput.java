@@ -15,8 +15,8 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      */
     private final String resourceArn;
 
-    @OutputCustomType.Constructor({"resourceArn"})
-    private ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisFirehoseInput(String resourceArn) {
+    @OutputCustomType.Constructor
+    private ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisFirehoseInput(@OutputCustomType.Parameter("resourceArn") String resourceArn) {
         this.resourceArn = resourceArn;
     }
 

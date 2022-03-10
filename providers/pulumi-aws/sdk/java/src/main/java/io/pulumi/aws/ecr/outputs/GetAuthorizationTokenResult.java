@@ -43,15 +43,15 @@ public final class GetAuthorizationTokenResult {
      */
     private final String userName;
 
-    @OutputCustomType.Constructor({"authorizationToken","expiresAt","id","password","proxyEndpoint","registryId","userName"})
+    @OutputCustomType.Constructor
     private GetAuthorizationTokenResult(
-        String authorizationToken,
-        String expiresAt,
-        String id,
-        String password,
-        String proxyEndpoint,
-        @Nullable String registryId,
-        String userName) {
+        @OutputCustomType.Parameter("authorizationToken") String authorizationToken,
+        @OutputCustomType.Parameter("expiresAt") String expiresAt,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("password") String password,
+        @OutputCustomType.Parameter("proxyEndpoint") String proxyEndpoint,
+        @OutputCustomType.Parameter("registryId") @Nullable String registryId,
+        @OutputCustomType.Parameter("userName") String userName) {
         this.authorizationToken = authorizationToken;
         this.expiresAt = expiresAt;
         this.id = id;

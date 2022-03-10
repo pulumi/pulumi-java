@@ -46,17 +46,17 @@ public final class GetPolicyResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"arn","description","id","name","path","pathPrefix","policy","policyId","tags"})
+    @OutputCustomType.Constructor
     private GetPolicyResult(
-        String arn,
-        String description,
-        String id,
-        String name,
-        String path,
-        @Nullable String pathPrefix,
-        String policy,
-        String policyId,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("pathPrefix") @Nullable String pathPrefix,
+        @OutputCustomType.Parameter("policy") String policy,
+        @OutputCustomType.Parameter("policyId") String policyId,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
         this.description = description;
         this.id = id;

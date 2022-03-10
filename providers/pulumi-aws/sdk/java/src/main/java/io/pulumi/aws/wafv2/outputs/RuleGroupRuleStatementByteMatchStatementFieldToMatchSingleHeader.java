@@ -15,8 +15,8 @@ public final class RuleGroupRuleStatementByteMatchStatementFieldToMatchSingleHea
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private RuleGroupRuleStatementByteMatchStatementFieldToMatchSingleHeader(String name) {
+    @OutputCustomType.Constructor
+    private RuleGroupRuleStatementByteMatchStatementFieldToMatchSingleHeader(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

@@ -21,10 +21,10 @@ public final class ResponseHeadersPolicySecurityHeadersConfigContentSecurityPoli
      */
     private final Boolean override;
 
-    @OutputCustomType.Constructor({"contentSecurityPolicy","override"})
+    @OutputCustomType.Constructor
     private ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicy(
-        String contentSecurityPolicy,
-        Boolean override) {
+        @OutputCustomType.Parameter("contentSecurityPolicy") String contentSecurityPolicy,
+        @OutputCustomType.Parameter("override") Boolean override) {
         this.contentSecurityPolicy = contentSecurityPolicy;
         this.override = override;
     }

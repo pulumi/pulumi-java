@@ -27,11 +27,11 @@ public final class NodeGroupLaunchTemplate {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"id","name","version"})
+    @OutputCustomType.Constructor
     private NodeGroupLaunchTemplate(
-        @Nullable String id,
-        @Nullable String name,
-        String version) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("version") String version) {
         this.id = id;
         this.name = name;
         this.version = version;

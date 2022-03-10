@@ -17,8 +17,8 @@ public final class AnalyticsApplicationInputsParallelism {
      */
     private final @Nullable Integer count;
 
-    @OutputCustomType.Constructor({"count"})
-    private AnalyticsApplicationInputsParallelism(@Nullable Integer count) {
+    @OutputCustomType.Constructor
+    private AnalyticsApplicationInputsParallelism(@OutputCustomType.Parameter("count") @Nullable Integer count) {
         this.count = count;
     }
 

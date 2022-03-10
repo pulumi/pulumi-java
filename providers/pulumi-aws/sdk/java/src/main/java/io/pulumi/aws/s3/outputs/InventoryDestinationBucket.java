@@ -38,13 +38,13 @@ public final class InventoryDestinationBucket {
      */
     private final @Nullable String prefix;
 
-    @OutputCustomType.Constructor({"accountId","bucketArn","encryption","format","prefix"})
+    @OutputCustomType.Constructor
     private InventoryDestinationBucket(
-        @Nullable String accountId,
-        String bucketArn,
-        @Nullable InventoryDestinationBucketEncryption encryption,
-        String format,
-        @Nullable String prefix) {
+        @OutputCustomType.Parameter("accountId") @Nullable String accountId,
+        @OutputCustomType.Parameter("bucketArn") String bucketArn,
+        @OutputCustomType.Parameter("encryption") @Nullable InventoryDestinationBucketEncryption encryption,
+        @OutputCustomType.Parameter("format") String format,
+        @OutputCustomType.Parameter("prefix") @Nullable String prefix) {
         this.accountId = accountId;
         this.bucketArn = bucketArn;
         this.encryption = encryption;

@@ -21,10 +21,10 @@ public final class XssMatchSetXssMatchTuple {
      */
     private final String textTransformation;
 
-    @OutputCustomType.Constructor({"fieldToMatch","textTransformation"})
+    @OutputCustomType.Constructor
     private XssMatchSetXssMatchTuple(
-        XssMatchSetXssMatchTupleFieldToMatch fieldToMatch,
-        String textTransformation) {
+        @OutputCustomType.Parameter("fieldToMatch") XssMatchSetXssMatchTupleFieldToMatch fieldToMatch,
+        @OutputCustomType.Parameter("textTransformation") String textTransformation) {
         this.fieldToMatch = fieldToMatch;
         this.textTransformation = textTransformation;
     }

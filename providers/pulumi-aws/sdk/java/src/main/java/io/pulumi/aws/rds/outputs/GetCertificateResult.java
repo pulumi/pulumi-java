@@ -50,17 +50,17 @@ public final class GetCertificateResult {
      */
     private final String validTill;
 
-    @OutputCustomType.Constructor({"arn","certificateType","customerOverride","customerOverrideValidTill","id","latestValidTill","thumbprint","validFrom","validTill"})
+    @OutputCustomType.Constructor
     private GetCertificateResult(
-        String arn,
-        String certificateType,
-        Boolean customerOverride,
-        String customerOverrideValidTill,
-        String id,
-        @Nullable Boolean latestValidTill,
-        String thumbprint,
-        String validFrom,
-        String validTill) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("certificateType") String certificateType,
+        @OutputCustomType.Parameter("customerOverride") Boolean customerOverride,
+        @OutputCustomType.Parameter("customerOverrideValidTill") String customerOverrideValidTill,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("latestValidTill") @Nullable Boolean latestValidTill,
+        @OutputCustomType.Parameter("thumbprint") String thumbprint,
+        @OutputCustomType.Parameter("validFrom") String validFrom,
+        @OutputCustomType.Parameter("validTill") String validTill) {
         this.arn = arn;
         this.certificateType = certificateType;
         this.customerOverride = customerOverride;

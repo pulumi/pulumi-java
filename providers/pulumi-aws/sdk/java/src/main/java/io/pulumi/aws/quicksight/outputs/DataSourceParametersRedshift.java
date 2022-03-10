@@ -33,12 +33,12 @@ public final class DataSourceParametersRedshift {
      */
     private final @Nullable Integer port;
 
-    @OutputCustomType.Constructor({"clusterId","database","host","port"})
+    @OutputCustomType.Constructor
     private DataSourceParametersRedshift(
-        @Nullable String clusterId,
-        String database,
-        @Nullable String host,
-        @Nullable Integer port) {
+        @OutputCustomType.Parameter("clusterId") @Nullable String clusterId,
+        @OutputCustomType.Parameter("database") String database,
+        @OutputCustomType.Parameter("host") @Nullable String host,
+        @OutputCustomType.Parameter("port") @Nullable Integer port) {
         this.clusterId = clusterId;
         this.database = database;
         this.host = host;

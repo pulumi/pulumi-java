@@ -23,10 +23,10 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActions {
      */
     private final List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRule> statelessRules;
 
-    @OutputCustomType.Constructor({"customActions","statelessRules"})
+    @OutputCustomType.Constructor
     private RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActions(
-        @Nullable List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomAction> customActions,
-        List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRule> statelessRules) {
+        @OutputCustomType.Parameter("customActions") @Nullable List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomAction> customActions,
+        @OutputCustomType.Parameter("statelessRules") List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRule> statelessRules) {
         this.customActions = customActions;
         this.statelessRules = statelessRules;
     }

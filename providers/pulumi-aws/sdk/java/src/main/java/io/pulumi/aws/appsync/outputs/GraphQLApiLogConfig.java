@@ -28,11 +28,11 @@ public final class GraphQLApiLogConfig {
      */
     private final String fieldLogLevel;
 
-    @OutputCustomType.Constructor({"cloudwatchLogsRoleArn","excludeVerboseContent","fieldLogLevel"})
+    @OutputCustomType.Constructor
     private GraphQLApiLogConfig(
-        String cloudwatchLogsRoleArn,
-        @Nullable Boolean excludeVerboseContent,
-        String fieldLogLevel) {
+        @OutputCustomType.Parameter("cloudwatchLogsRoleArn") String cloudwatchLogsRoleArn,
+        @OutputCustomType.Parameter("excludeVerboseContent") @Nullable Boolean excludeVerboseContent,
+        @OutputCustomType.Parameter("fieldLogLevel") String fieldLogLevel) {
         this.cloudwatchLogsRoleArn = cloudwatchLogsRoleArn;
         this.excludeVerboseContent = excludeVerboseContent;
         this.fieldLogLevel = fieldLogLevel;

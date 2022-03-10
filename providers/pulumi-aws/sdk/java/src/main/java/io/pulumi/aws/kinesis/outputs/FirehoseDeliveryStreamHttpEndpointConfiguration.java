@@ -71,19 +71,19 @@ public final class FirehoseDeliveryStreamHttpEndpointConfiguration {
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"accessKey","bufferingInterval","bufferingSize","cloudwatchLoggingOptions","name","processingConfiguration","requestConfiguration","retryDuration","roleArn","s3BackupMode","url"})
+    @OutputCustomType.Constructor
     private FirehoseDeliveryStreamHttpEndpointConfiguration(
-        @Nullable String accessKey,
-        @Nullable Integer bufferingInterval,
-        @Nullable Integer bufferingSize,
-        @Nullable FirehoseDeliveryStreamHttpEndpointConfigurationCloudwatchLoggingOptions cloudwatchLoggingOptions,
-        @Nullable String name,
-        @Nullable FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfiguration processingConfiguration,
-        @Nullable FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfiguration requestConfiguration,
-        @Nullable Integer retryDuration,
-        @Nullable String roleArn,
-        @Nullable String s3BackupMode,
-        String url) {
+        @OutputCustomType.Parameter("accessKey") @Nullable String accessKey,
+        @OutputCustomType.Parameter("bufferingInterval") @Nullable Integer bufferingInterval,
+        @OutputCustomType.Parameter("bufferingSize") @Nullable Integer bufferingSize,
+        @OutputCustomType.Parameter("cloudwatchLoggingOptions") @Nullable FirehoseDeliveryStreamHttpEndpointConfigurationCloudwatchLoggingOptions cloudwatchLoggingOptions,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("processingConfiguration") @Nullable FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfiguration processingConfiguration,
+        @OutputCustomType.Parameter("requestConfiguration") @Nullable FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfiguration requestConfiguration,
+        @OutputCustomType.Parameter("retryDuration") @Nullable Integer retryDuration,
+        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
+        @OutputCustomType.Parameter("s3BackupMode") @Nullable String s3BackupMode,
+        @OutputCustomType.Parameter("url") String url) {
         this.accessKey = accessKey;
         this.bufferingInterval = bufferingInterval;
         this.bufferingSize = bufferingSize;

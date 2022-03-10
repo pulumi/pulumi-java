@@ -27,11 +27,11 @@ public final class DeviceDevice {
      */
     private final @Nullable String iotThingName;
 
-    @OutputCustomType.Constructor({"description","deviceName","iotThingName"})
+    @OutputCustomType.Constructor
     private DeviceDevice(
-        @Nullable String description,
-        String deviceName,
-        @Nullable String iotThingName) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("deviceName") String deviceName,
+        @OutputCustomType.Parameter("iotThingName") @Nullable String iotThingName) {
         this.description = description;
         this.deviceName = deviceName;
         this.iotThingName = iotThingName;

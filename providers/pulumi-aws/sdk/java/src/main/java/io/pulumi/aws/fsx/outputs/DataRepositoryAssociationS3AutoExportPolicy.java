@@ -17,8 +17,8 @@ public final class DataRepositoryAssociationS3AutoExportPolicy {
      */
     private final @Nullable List<String> events;
 
-    @OutputCustomType.Constructor({"events"})
-    private DataRepositoryAssociationS3AutoExportPolicy(@Nullable List<String> events) {
+    @OutputCustomType.Constructor
+    private DataRepositoryAssociationS3AutoExportPolicy(@OutputCustomType.Parameter("events") @Nullable List<String> events) {
         this.events = events;
     }
 

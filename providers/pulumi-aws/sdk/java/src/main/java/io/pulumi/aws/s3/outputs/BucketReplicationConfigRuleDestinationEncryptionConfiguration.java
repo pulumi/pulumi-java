@@ -15,8 +15,8 @@ public final class BucketReplicationConfigRuleDestinationEncryptionConfiguration
      */
     private final String replicaKmsKeyId;
 
-    @OutputCustomType.Constructor({"replicaKmsKeyId"})
-    private BucketReplicationConfigRuleDestinationEncryptionConfiguration(String replicaKmsKeyId) {
+    @OutputCustomType.Constructor
+    private BucketReplicationConfigRuleDestinationEncryptionConfiguration(@OutputCustomType.Parameter("replicaKmsKeyId") String replicaKmsKeyId) {
         this.replicaKmsKeyId = replicaKmsKeyId;
     }
 

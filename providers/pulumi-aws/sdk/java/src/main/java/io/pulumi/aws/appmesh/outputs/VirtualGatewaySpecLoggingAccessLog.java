@@ -17,8 +17,8 @@ public final class VirtualGatewaySpecLoggingAccessLog {
      */
     private final @Nullable VirtualGatewaySpecLoggingAccessLogFile file;
 
-    @OutputCustomType.Constructor({"file"})
-    private VirtualGatewaySpecLoggingAccessLog(@Nullable VirtualGatewaySpecLoggingAccessLogFile file) {
+    @OutputCustomType.Constructor
+    private VirtualGatewaySpecLoggingAccessLog(@OutputCustomType.Parameter("file") @Nullable VirtualGatewaySpecLoggingAccessLogFile file) {
         this.file = file;
     }
 

@@ -77,19 +77,19 @@ public final class RuleGroupRuleStatementOrStatementStatement {
      */
     private final @Nullable RuleGroupRuleStatementOrStatementStatementXssMatchStatement xssMatchStatement;
 
-    @OutputCustomType.Constructor({"andStatement","byteMatchStatement","geoMatchStatement","ipSetReferenceStatement","labelMatchStatement","notStatement","orStatement","regexPatternSetReferenceStatement","sizeConstraintStatement","sqliMatchStatement","xssMatchStatement"})
+    @OutputCustomType.Constructor
     private RuleGroupRuleStatementOrStatementStatement(
-        @Nullable RuleGroupRuleStatementOrStatementStatementAndStatement andStatement,
-        @Nullable RuleGroupRuleStatementOrStatementStatementByteMatchStatement byteMatchStatement,
-        @Nullable RuleGroupRuleStatementOrStatementStatementGeoMatchStatement geoMatchStatement,
-        @Nullable RuleGroupRuleStatementOrStatementStatementIpSetReferenceStatement ipSetReferenceStatement,
-        @Nullable RuleGroupRuleStatementOrStatementStatementLabelMatchStatement labelMatchStatement,
-        @Nullable RuleGroupRuleStatementOrStatementStatementNotStatement notStatement,
-        @Nullable RuleGroupRuleStatementOrStatementStatementOrStatement orStatement,
-        @Nullable RuleGroupRuleStatementOrStatementStatementRegexPatternSetReferenceStatement regexPatternSetReferenceStatement,
-        @Nullable RuleGroupRuleStatementOrStatementStatementSizeConstraintStatement sizeConstraintStatement,
-        @Nullable RuleGroupRuleStatementOrStatementStatementSqliMatchStatement sqliMatchStatement,
-        @Nullable RuleGroupRuleStatementOrStatementStatementXssMatchStatement xssMatchStatement) {
+        @OutputCustomType.Parameter("andStatement") @Nullable RuleGroupRuleStatementOrStatementStatementAndStatement andStatement,
+        @OutputCustomType.Parameter("byteMatchStatement") @Nullable RuleGroupRuleStatementOrStatementStatementByteMatchStatement byteMatchStatement,
+        @OutputCustomType.Parameter("geoMatchStatement") @Nullable RuleGroupRuleStatementOrStatementStatementGeoMatchStatement geoMatchStatement,
+        @OutputCustomType.Parameter("ipSetReferenceStatement") @Nullable RuleGroupRuleStatementOrStatementStatementIpSetReferenceStatement ipSetReferenceStatement,
+        @OutputCustomType.Parameter("labelMatchStatement") @Nullable RuleGroupRuleStatementOrStatementStatementLabelMatchStatement labelMatchStatement,
+        @OutputCustomType.Parameter("notStatement") @Nullable RuleGroupRuleStatementOrStatementStatementNotStatement notStatement,
+        @OutputCustomType.Parameter("orStatement") @Nullable RuleGroupRuleStatementOrStatementStatementOrStatement orStatement,
+        @OutputCustomType.Parameter("regexPatternSetReferenceStatement") @Nullable RuleGroupRuleStatementOrStatementStatementRegexPatternSetReferenceStatement regexPatternSetReferenceStatement,
+        @OutputCustomType.Parameter("sizeConstraintStatement") @Nullable RuleGroupRuleStatementOrStatementStatementSizeConstraintStatement sizeConstraintStatement,
+        @OutputCustomType.Parameter("sqliMatchStatement") @Nullable RuleGroupRuleStatementOrStatementStatementSqliMatchStatement sqliMatchStatement,
+        @OutputCustomType.Parameter("xssMatchStatement") @Nullable RuleGroupRuleStatementOrStatementStatementXssMatchStatement xssMatchStatement) {
         this.andStatement = andStatement;
         this.byteMatchStatement = byteMatchStatement;
         this.geoMatchStatement = geoMatchStatement;

@@ -50,16 +50,16 @@ public final class GetDirectoryWorkspaceAccessProperty {
      */
     private final String deviceTypeZeroclient;
 
-    @OutputCustomType.Constructor({"deviceTypeAndroid","deviceTypeChromeos","deviceTypeIos","deviceTypeLinux","deviceTypeOsx","deviceTypeWeb","deviceTypeWindows","deviceTypeZeroclient"})
+    @OutputCustomType.Constructor
     private GetDirectoryWorkspaceAccessProperty(
-        String deviceTypeAndroid,
-        String deviceTypeChromeos,
-        String deviceTypeIos,
-        String deviceTypeLinux,
-        String deviceTypeOsx,
-        String deviceTypeWeb,
-        String deviceTypeWindows,
-        String deviceTypeZeroclient) {
+        @OutputCustomType.Parameter("deviceTypeAndroid") String deviceTypeAndroid,
+        @OutputCustomType.Parameter("deviceTypeChromeos") String deviceTypeChromeos,
+        @OutputCustomType.Parameter("deviceTypeIos") String deviceTypeIos,
+        @OutputCustomType.Parameter("deviceTypeLinux") String deviceTypeLinux,
+        @OutputCustomType.Parameter("deviceTypeOsx") String deviceTypeOsx,
+        @OutputCustomType.Parameter("deviceTypeWeb") String deviceTypeWeb,
+        @OutputCustomType.Parameter("deviceTypeWindows") String deviceTypeWindows,
+        @OutputCustomType.Parameter("deviceTypeZeroclient") String deviceTypeZeroclient) {
         this.deviceTypeAndroid = deviceTypeAndroid;
         this.deviceTypeChromeos = deviceTypeChromeos;
         this.deviceTypeIos = deviceTypeIos;

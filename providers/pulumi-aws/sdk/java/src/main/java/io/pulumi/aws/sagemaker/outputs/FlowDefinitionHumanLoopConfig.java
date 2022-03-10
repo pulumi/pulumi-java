@@ -60,17 +60,17 @@ public final class FlowDefinitionHumanLoopConfig {
      */
     private final String workteamArn;
 
-    @OutputCustomType.Constructor({"humanTaskUiArn","publicWorkforceTaskPrice","taskAvailabilityLifetimeInSeconds","taskCount","taskDescription","taskKeywords","taskTimeLimitInSeconds","taskTitle","workteamArn"})
+    @OutputCustomType.Constructor
     private FlowDefinitionHumanLoopConfig(
-        String humanTaskUiArn,
-        @Nullable FlowDefinitionHumanLoopConfigPublicWorkforceTaskPrice publicWorkforceTaskPrice,
-        @Nullable Integer taskAvailabilityLifetimeInSeconds,
-        Integer taskCount,
-        String taskDescription,
-        @Nullable List<String> taskKeywords,
-        @Nullable Integer taskTimeLimitInSeconds,
-        String taskTitle,
-        String workteamArn) {
+        @OutputCustomType.Parameter("humanTaskUiArn") String humanTaskUiArn,
+        @OutputCustomType.Parameter("publicWorkforceTaskPrice") @Nullable FlowDefinitionHumanLoopConfigPublicWorkforceTaskPrice publicWorkforceTaskPrice,
+        @OutputCustomType.Parameter("taskAvailabilityLifetimeInSeconds") @Nullable Integer taskAvailabilityLifetimeInSeconds,
+        @OutputCustomType.Parameter("taskCount") Integer taskCount,
+        @OutputCustomType.Parameter("taskDescription") String taskDescription,
+        @OutputCustomType.Parameter("taskKeywords") @Nullable List<String> taskKeywords,
+        @OutputCustomType.Parameter("taskTimeLimitInSeconds") @Nullable Integer taskTimeLimitInSeconds,
+        @OutputCustomType.Parameter("taskTitle") String taskTitle,
+        @OutputCustomType.Parameter("workteamArn") String workteamArn) {
         this.humanTaskUiArn = humanTaskUiArn;
         this.publicWorkforceTaskPrice = publicWorkforceTaskPrice;
         this.taskAvailabilityLifetimeInSeconds = taskAvailabilityLifetimeInSeconds;

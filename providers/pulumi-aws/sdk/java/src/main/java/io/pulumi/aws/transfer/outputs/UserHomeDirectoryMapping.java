@@ -20,10 +20,10 @@ public final class UserHomeDirectoryMapping {
      */
     private final String target;
 
-    @OutputCustomType.Constructor({"entry","target"})
+    @OutputCustomType.Constructor
     private UserHomeDirectoryMapping(
-        String entry,
-        String target) {
+        @OutputCustomType.Parameter("entry") String entry,
+        @OutputCustomType.Parameter("target") String target) {
         this.entry = entry;
         this.target = target;
     }

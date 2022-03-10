@@ -14,11 +14,11 @@ public final class GetLoadBalancerAccessLogs {
     private final Boolean enabled;
     private final String prefix;
 
-    @OutputCustomType.Constructor({"bucket","enabled","prefix"})
+    @OutputCustomType.Constructor
     private GetLoadBalancerAccessLogs(
-        String bucket,
-        Boolean enabled,
-        String prefix) {
+        @OutputCustomType.Parameter("bucket") String bucket,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("prefix") String prefix) {
         this.bucket = bucket;
         this.enabled = enabled;
         this.prefix = prefix;

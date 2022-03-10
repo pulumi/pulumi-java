@@ -79,23 +79,23 @@ public final class GetFileSystemResult {
      */
     private final String throughputMode;
 
-    @OutputCustomType.Constructor({"arn","availabilityZoneId","availabilityZoneName","creationToken","dnsName","encrypted","fileSystemId","id","kmsKeyId","lifecyclePolicy","performanceMode","provisionedThroughputInMibps","sizeInBytes","tags","throughputMode"})
+    @OutputCustomType.Constructor
     private GetFileSystemResult(
-        String arn,
-        String availabilityZoneId,
-        String availabilityZoneName,
-        String creationToken,
-        String dnsName,
-        Boolean encrypted,
-        String fileSystemId,
-        String id,
-        String kmsKeyId,
-        GetFileSystemLifecyclePolicy lifecyclePolicy,
-        String performanceMode,
-        Double provisionedThroughputInMibps,
-        Integer sizeInBytes,
-        Map<String,String> tags,
-        String throughputMode) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("availabilityZoneId") String availabilityZoneId,
+        @OutputCustomType.Parameter("availabilityZoneName") String availabilityZoneName,
+        @OutputCustomType.Parameter("creationToken") String creationToken,
+        @OutputCustomType.Parameter("dnsName") String dnsName,
+        @OutputCustomType.Parameter("encrypted") Boolean encrypted,
+        @OutputCustomType.Parameter("fileSystemId") String fileSystemId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kmsKeyId") String kmsKeyId,
+        @OutputCustomType.Parameter("lifecyclePolicy") GetFileSystemLifecyclePolicy lifecyclePolicy,
+        @OutputCustomType.Parameter("performanceMode") String performanceMode,
+        @OutputCustomType.Parameter("provisionedThroughputInMibps") Double provisionedThroughputInMibps,
+        @OutputCustomType.Parameter("sizeInBytes") Integer sizeInBytes,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("throughputMode") String throughputMode) {
         this.arn = arn;
         this.availabilityZoneId = availabilityZoneId;
         this.availabilityZoneName = availabilityZoneName;

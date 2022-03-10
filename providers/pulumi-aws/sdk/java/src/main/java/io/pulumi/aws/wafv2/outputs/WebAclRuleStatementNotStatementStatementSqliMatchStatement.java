@@ -24,10 +24,10 @@ public final class WebAclRuleStatementNotStatementStatementSqliMatchStatement {
      */
     private final List<WebAclRuleStatementNotStatementStatementSqliMatchStatementTextTransformation> textTransformations;
 
-    @OutputCustomType.Constructor({"fieldToMatch","textTransformations"})
+    @OutputCustomType.Constructor
     private WebAclRuleStatementNotStatementStatementSqliMatchStatement(
-        @Nullable WebAclRuleStatementNotStatementStatementSqliMatchStatementFieldToMatch fieldToMatch,
-        List<WebAclRuleStatementNotStatementStatementSqliMatchStatementTextTransformation> textTransformations) {
+        @OutputCustomType.Parameter("fieldToMatch") @Nullable WebAclRuleStatementNotStatementStatementSqliMatchStatementFieldToMatch fieldToMatch,
+        @OutputCustomType.Parameter("textTransformations") List<WebAclRuleStatementNotStatementStatementSqliMatchStatementTextTransformation> textTransformations) {
         this.fieldToMatch = fieldToMatch;
         this.textTransformations = textTransformations;
     }

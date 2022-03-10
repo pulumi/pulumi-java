@@ -13,10 +13,10 @@ public final class GetSigningProfileSignatureValidityPeriod {
     private final String type;
     private final Integer value;
 
-    @OutputCustomType.Constructor({"type","value"})
+    @OutputCustomType.Constructor
     private GetSigningProfileSignatureValidityPeriod(
-        String type,
-        Integer value) {
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("value") Integer value) {
         this.type = type;
         this.value = value;
     }

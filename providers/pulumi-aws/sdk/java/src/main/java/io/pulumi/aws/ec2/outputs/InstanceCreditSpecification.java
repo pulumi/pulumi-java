@@ -17,8 +17,8 @@ public final class InstanceCreditSpecification {
      */
     private final @Nullable String cpuCredits;
 
-    @OutputCustomType.Constructor({"cpuCredits"})
-    private InstanceCreditSpecification(@Nullable String cpuCredits) {
+    @OutputCustomType.Constructor
+    private InstanceCreditSpecification(@OutputCustomType.Parameter("cpuCredits") @Nullable String cpuCredits) {
         this.cpuCredits = cpuCredits;
     }
 

@@ -22,10 +22,10 @@ public final class LaunchTemplateIamInstanceProfile {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"arn","name"})
+    @OutputCustomType.Constructor
     private LaunchTemplateIamInstanceProfile(
-        @Nullable String arn,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.arn = arn;
         this.name = name;
     }

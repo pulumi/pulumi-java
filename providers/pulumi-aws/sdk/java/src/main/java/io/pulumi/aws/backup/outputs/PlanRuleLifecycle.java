@@ -22,10 +22,10 @@ public final class PlanRuleLifecycle {
      */
     private final @Nullable Integer deleteAfter;
 
-    @OutputCustomType.Constructor({"coldStorageAfter","deleteAfter"})
+    @OutputCustomType.Constructor
     private PlanRuleLifecycle(
-        @Nullable Integer coldStorageAfter,
-        @Nullable Integer deleteAfter) {
+        @OutputCustomType.Parameter("coldStorageAfter") @Nullable Integer coldStorageAfter,
+        @OutputCustomType.Parameter("deleteAfter") @Nullable Integer deleteAfter) {
         this.coldStorageAfter = coldStorageAfter;
         this.deleteAfter = deleteAfter;
     }

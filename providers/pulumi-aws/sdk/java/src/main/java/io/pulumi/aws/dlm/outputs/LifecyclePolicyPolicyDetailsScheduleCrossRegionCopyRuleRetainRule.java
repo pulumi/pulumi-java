@@ -21,10 +21,10 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetain
      */
     private final String intervalUnit;
 
-    @OutputCustomType.Constructor({"interval","intervalUnit"})
+    @OutputCustomType.Constructor
     private LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRule(
-        Integer interval,
-        String intervalUnit) {
+        @OutputCustomType.Parameter("interval") Integer interval,
+        @OutputCustomType.Parameter("intervalUnit") String intervalUnit) {
         this.interval = interval;
         this.intervalUnit = intervalUnit;
     }

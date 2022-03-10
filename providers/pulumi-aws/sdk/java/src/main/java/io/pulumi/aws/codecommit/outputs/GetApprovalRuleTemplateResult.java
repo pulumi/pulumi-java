@@ -51,17 +51,17 @@ public final class GetApprovalRuleTemplateResult {
      */
     private final String ruleContentSha256;
 
-    @OutputCustomType.Constructor({"approvalRuleTemplateId","content","creationDate","description","id","lastModifiedDate","lastModifiedUser","name","ruleContentSha256"})
+    @OutputCustomType.Constructor
     private GetApprovalRuleTemplateResult(
-        String approvalRuleTemplateId,
-        String content,
-        String creationDate,
-        String description,
-        String id,
-        String lastModifiedDate,
-        String lastModifiedUser,
-        String name,
-        String ruleContentSha256) {
+        @OutputCustomType.Parameter("approvalRuleTemplateId") String approvalRuleTemplateId,
+        @OutputCustomType.Parameter("content") String content,
+        @OutputCustomType.Parameter("creationDate") String creationDate,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastModifiedDate") String lastModifiedDate,
+        @OutputCustomType.Parameter("lastModifiedUser") String lastModifiedUser,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("ruleContentSha256") String ruleContentSha256) {
         this.approvalRuleTemplateId = approvalRuleTemplateId;
         this.content = content;
         this.creationDate = creationDate;

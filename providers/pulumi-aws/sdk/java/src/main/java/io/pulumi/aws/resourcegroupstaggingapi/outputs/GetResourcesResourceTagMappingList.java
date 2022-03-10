@@ -28,11 +28,11 @@ public final class GetResourcesResourceTagMappingList {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"complianceDetails","resourceArn","tags"})
+    @OutputCustomType.Constructor
     private GetResourcesResourceTagMappingList(
-        List<GetResourcesResourceTagMappingListComplianceDetail> complianceDetails,
-        String resourceArn,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("complianceDetails") List<GetResourcesResourceTagMappingListComplianceDetail> complianceDetails,
+        @OutputCustomType.Parameter("resourceArn") String resourceArn,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.complianceDetails = complianceDetails;
         this.resourceArn = resourceArn;
         this.tags = tags;

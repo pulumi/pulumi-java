@@ -35,12 +35,12 @@ public final class VirtualNodeSpecListenerConnectionPool {
      */
     private final @Nullable VirtualNodeSpecListenerConnectionPoolTcp tcp;
 
-    @OutputCustomType.Constructor({"grpc","http","http2","tcp"})
+    @OutputCustomType.Constructor
     private VirtualNodeSpecListenerConnectionPool(
-        @Nullable VirtualNodeSpecListenerConnectionPoolGrpc grpc,
-        @Nullable VirtualNodeSpecListenerConnectionPoolHttp http,
-        @Nullable VirtualNodeSpecListenerConnectionPoolHttp2 http2,
-        @Nullable VirtualNodeSpecListenerConnectionPoolTcp tcp) {
+        @OutputCustomType.Parameter("grpc") @Nullable VirtualNodeSpecListenerConnectionPoolGrpc grpc,
+        @OutputCustomType.Parameter("http") @Nullable VirtualNodeSpecListenerConnectionPoolHttp http,
+        @OutputCustomType.Parameter("http2") @Nullable VirtualNodeSpecListenerConnectionPoolHttp2 http2,
+        @OutputCustomType.Parameter("tcp") @Nullable VirtualNodeSpecListenerConnectionPoolTcp tcp) {
         this.grpc = grpc;
         this.http = http;
         this.http2 = http2;

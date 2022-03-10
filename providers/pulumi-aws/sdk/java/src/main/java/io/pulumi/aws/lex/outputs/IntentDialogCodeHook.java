@@ -22,10 +22,10 @@ public final class IntentDialogCodeHook {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"messageVersion","uri"})
+    @OutputCustomType.Constructor
     private IntentDialogCodeHook(
-        String messageVersion,
-        String uri) {
+        @OutputCustomType.Parameter("messageVersion") String messageVersion,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.messageVersion = messageVersion;
         this.uri = uri;
     }

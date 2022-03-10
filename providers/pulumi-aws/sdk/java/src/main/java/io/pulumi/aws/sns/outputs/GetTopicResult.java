@@ -21,11 +21,11 @@ public final class GetTopicResult {
     private final String id;
     private final String name;
 
-    @OutputCustomType.Constructor({"arn","id","name"})
+    @OutputCustomType.Constructor
     private GetTopicResult(
-        String arn,
-        String id,
-        String name) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name) {
         this.arn = arn;
         this.id = id;
         this.name = name;

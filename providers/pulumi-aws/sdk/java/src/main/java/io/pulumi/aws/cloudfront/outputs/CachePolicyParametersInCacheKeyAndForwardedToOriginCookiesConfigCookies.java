@@ -17,8 +17,8 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesCon
      */
     private final @Nullable List<String> items;
 
-    @OutputCustomType.Constructor({"items"})
-    private CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookies(@Nullable List<String> items) {
+    @OutputCustomType.Constructor
+    private CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookies(@OutputCustomType.Parameter("items") @Nullable List<String> items) {
         this.items = items;
     }
 

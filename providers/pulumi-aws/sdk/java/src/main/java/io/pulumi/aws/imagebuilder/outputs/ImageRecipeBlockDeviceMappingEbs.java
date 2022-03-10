@@ -48,15 +48,15 @@ public final class ImageRecipeBlockDeviceMappingEbs {
      */
     private final @Nullable String volumeType;
 
-    @OutputCustomType.Constructor({"deleteOnTermination","encrypted","iops","kmsKeyId","snapshotId","volumeSize","volumeType"})
+    @OutputCustomType.Constructor
     private ImageRecipeBlockDeviceMappingEbs(
-        @Nullable String deleteOnTermination,
-        @Nullable String encrypted,
-        @Nullable Integer iops,
-        @Nullable String kmsKeyId,
-        @Nullable String snapshotId,
-        @Nullable Integer volumeSize,
-        @Nullable String volumeType) {
+        @OutputCustomType.Parameter("deleteOnTermination") @Nullable String deleteOnTermination,
+        @OutputCustomType.Parameter("encrypted") @Nullable String encrypted,
+        @OutputCustomType.Parameter("iops") @Nullable Integer iops,
+        @OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
+        @OutputCustomType.Parameter("snapshotId") @Nullable String snapshotId,
+        @OutputCustomType.Parameter("volumeSize") @Nullable Integer volumeSize,
+        @OutputCustomType.Parameter("volumeType") @Nullable String volumeType) {
         this.deleteOnTermination = deleteOnTermination;
         this.encrypted = encrypted;
         this.iops = iops;

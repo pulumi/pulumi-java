@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class GetSigningJobSource {
     private final List<GetSigningJobSourceS3> s3s;
 
-    @OutputCustomType.Constructor({"s3s"})
-    private GetSigningJobSource(List<GetSigningJobSourceS3> s3s) {
+    @OutputCustomType.Constructor
+    private GetSigningJobSource(@OutputCustomType.Parameter("s3s") List<GetSigningJobSourceS3> s3s) {
         this.s3s = s3s;
     }
 

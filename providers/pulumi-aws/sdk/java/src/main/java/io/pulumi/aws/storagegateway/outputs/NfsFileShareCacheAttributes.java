@@ -19,8 +19,8 @@ public final class NfsFileShareCacheAttributes {
      */
     private final @Nullable Integer cacheStaleTimeoutInSeconds;
 
-    @OutputCustomType.Constructor({"cacheStaleTimeoutInSeconds"})
-    private NfsFileShareCacheAttributes(@Nullable Integer cacheStaleTimeoutInSeconds) {
+    @OutputCustomType.Constructor
+    private NfsFileShareCacheAttributes(@OutputCustomType.Parameter("cacheStaleTimeoutInSeconds") @Nullable Integer cacheStaleTimeoutInSeconds) {
         this.cacheStaleTimeoutInSeconds = cacheStaleTimeoutInSeconds;
     }
 

@@ -47,16 +47,16 @@ public final class GetInstanceProfileResult {
      */
     private final String roleName;
 
-    @OutputCustomType.Constructor({"arn","createDate","id","name","path","roleArn","roleId","roleName"})
+    @OutputCustomType.Constructor
     private GetInstanceProfileResult(
-        String arn,
-        String createDate,
-        String id,
-        String name,
-        String path,
-        String roleArn,
-        String roleId,
-        String roleName) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("createDate") String createDate,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("roleArn") String roleArn,
+        @OutputCustomType.Parameter("roleId") String roleId,
+        @OutputCustomType.Parameter("roleName") String roleName) {
         this.arn = arn;
         this.createDate = createDate;
         this.id = id;

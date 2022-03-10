@@ -41,13 +41,13 @@ public final class LoadBalancerListener {
      */
     private final @Nullable String sslCertificateId;
 
-    @OutputCustomType.Constructor({"instancePort","instanceProtocol","lbPort","lbProtocol","sslCertificateId"})
+    @OutputCustomType.Constructor
     private LoadBalancerListener(
-        Integer instancePort,
-        String instanceProtocol,
-        Integer lbPort,
-        String lbProtocol,
-        @Nullable String sslCertificateId) {
+        @OutputCustomType.Parameter("instancePort") Integer instancePort,
+        @OutputCustomType.Parameter("instanceProtocol") String instanceProtocol,
+        @OutputCustomType.Parameter("lbPort") Integer lbPort,
+        @OutputCustomType.Parameter("lbProtocol") String lbProtocol,
+        @OutputCustomType.Parameter("sslCertificateId") @Nullable String sslCertificateId) {
         this.instancePort = instancePort;
         this.instanceProtocol = instanceProtocol;
         this.lbPort = lbPort;

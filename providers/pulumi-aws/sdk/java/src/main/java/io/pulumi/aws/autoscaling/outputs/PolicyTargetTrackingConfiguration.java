@@ -35,12 +35,12 @@ public final class PolicyTargetTrackingConfiguration {
      */
     private final Double targetValue;
 
-    @OutputCustomType.Constructor({"customizedMetricSpecification","disableScaleIn","predefinedMetricSpecification","targetValue"})
+    @OutputCustomType.Constructor
     private PolicyTargetTrackingConfiguration(
-        @Nullable PolicyTargetTrackingConfigurationCustomizedMetricSpecification customizedMetricSpecification,
-        @Nullable Boolean disableScaleIn,
-        @Nullable PolicyTargetTrackingConfigurationPredefinedMetricSpecification predefinedMetricSpecification,
-        Double targetValue) {
+        @OutputCustomType.Parameter("customizedMetricSpecification") @Nullable PolicyTargetTrackingConfigurationCustomizedMetricSpecification customizedMetricSpecification,
+        @OutputCustomType.Parameter("disableScaleIn") @Nullable Boolean disableScaleIn,
+        @OutputCustomType.Parameter("predefinedMetricSpecification") @Nullable PolicyTargetTrackingConfigurationPredefinedMetricSpecification predefinedMetricSpecification,
+        @OutputCustomType.Parameter("targetValue") Double targetValue) {
         this.customizedMetricSpecification = customizedMetricSpecification;
         this.disableScaleIn = disableScaleIn;
         this.predefinedMetricSpecification = predefinedMetricSpecification;

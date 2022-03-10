@@ -16,8 +16,8 @@ public final class GetVirtualServiceSpec {
      */
     private final List<GetVirtualServiceSpecProvider> providers;
 
-    @OutputCustomType.Constructor({"providers"})
-    private GetVirtualServiceSpec(List<GetVirtualServiceSpecProvider> providers) {
+    @OutputCustomType.Constructor
+    private GetVirtualServiceSpec(@OutputCustomType.Parameter("providers") List<GetVirtualServiceSpecProvider> providers) {
         this.providers = providers;
     }
 

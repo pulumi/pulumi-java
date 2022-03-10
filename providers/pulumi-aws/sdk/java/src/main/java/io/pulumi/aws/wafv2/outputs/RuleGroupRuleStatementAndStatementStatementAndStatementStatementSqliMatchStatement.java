@@ -24,10 +24,10 @@ public final class RuleGroupRuleStatementAndStatementStatementAndStatementStatem
      */
     private final List<RuleGroupRuleStatementAndStatementStatementAndStatementStatementSqliMatchStatementTextTransformation> textTransformations;
 
-    @OutputCustomType.Constructor({"fieldToMatch","textTransformations"})
+    @OutputCustomType.Constructor
     private RuleGroupRuleStatementAndStatementStatementAndStatementStatementSqliMatchStatement(
-        @Nullable RuleGroupRuleStatementAndStatementStatementAndStatementStatementSqliMatchStatementFieldToMatch fieldToMatch,
-        List<RuleGroupRuleStatementAndStatementStatementAndStatementStatementSqliMatchStatementTextTransformation> textTransformations) {
+        @OutputCustomType.Parameter("fieldToMatch") @Nullable RuleGroupRuleStatementAndStatementStatementAndStatementStatementSqliMatchStatementFieldToMatch fieldToMatch,
+        @OutputCustomType.Parameter("textTransformations") List<RuleGroupRuleStatementAndStatementStatementAndStatementStatementSqliMatchStatementTextTransformation> textTransformations) {
         this.fieldToMatch = fieldToMatch;
         this.textTransformations = textTransformations;
     }

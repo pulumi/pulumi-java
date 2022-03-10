@@ -22,10 +22,10 @@ public final class DeploymentConfigTrafficRoutingConfigTimeBasedCanary {
      */
     private final @Nullable Integer percentage;
 
-    @OutputCustomType.Constructor({"interval","percentage"})
+    @OutputCustomType.Constructor
     private DeploymentConfigTrafficRoutingConfigTimeBasedCanary(
-        @Nullable Integer interval,
-        @Nullable Integer percentage) {
+        @OutputCustomType.Parameter("interval") @Nullable Integer interval,
+        @OutputCustomType.Parameter("percentage") @Nullable Integer percentage) {
         this.interval = interval;
         this.percentage = percentage;
     }

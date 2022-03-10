@@ -26,12 +26,12 @@ public final class GetVpcPeeringConnectionsResult {
     private final List<String> ids;
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"filters","id","ids","tags"})
+    @OutputCustomType.Constructor
     private GetVpcPeeringConnectionsResult(
-        @Nullable List<GetVpcPeeringConnectionsFilter> filters,
-        String id,
-        List<String> ids,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("filters") @Nullable List<GetVpcPeeringConnectionsFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ids") List<String> ids,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.filters = filters;
         this.id = id;
         this.ids = ids;

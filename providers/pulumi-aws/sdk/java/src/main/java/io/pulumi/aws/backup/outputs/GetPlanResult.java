@@ -37,14 +37,14 @@ public final class GetPlanResult {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"arn","id","name","planId","tags","version"})
+    @OutputCustomType.Constructor
     private GetPlanResult(
-        String arn,
-        String id,
-        String name,
-        String planId,
-        Map<String,String> tags,
-        String version) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("planId") String planId,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("version") String version) {
         this.arn = arn;
         this.id = id;
         this.name = name;

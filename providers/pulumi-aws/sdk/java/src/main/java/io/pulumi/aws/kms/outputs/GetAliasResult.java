@@ -31,13 +31,13 @@ public final class GetAliasResult {
      */
     private final String targetKeyId;
 
-    @OutputCustomType.Constructor({"arn","id","name","targetKeyArn","targetKeyId"})
+    @OutputCustomType.Constructor
     private GetAliasResult(
-        String arn,
-        String id,
-        String name,
-        String targetKeyArn,
-        String targetKeyId) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("targetKeyArn") String targetKeyArn,
+        @OutputCustomType.Parameter("targetKeyId") String targetKeyId) {
         this.arn = arn;
         this.id = id;
         this.name = name;

@@ -35,12 +35,12 @@ public final class WebAclRuleStatementRateBasedStatement {
      */
     private final @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatement scopeDownStatement;
 
-    @OutputCustomType.Constructor({"aggregateKeyType","forwardedIpConfig","limit","scopeDownStatement"})
+    @OutputCustomType.Constructor
     private WebAclRuleStatementRateBasedStatement(
-        @Nullable String aggregateKeyType,
-        @Nullable WebAclRuleStatementRateBasedStatementForwardedIpConfig forwardedIpConfig,
-        Integer limit,
-        @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatement scopeDownStatement) {
+        @OutputCustomType.Parameter("aggregateKeyType") @Nullable String aggregateKeyType,
+        @OutputCustomType.Parameter("forwardedIpConfig") @Nullable WebAclRuleStatementRateBasedStatementForwardedIpConfig forwardedIpConfig,
+        @OutputCustomType.Parameter("limit") Integer limit,
+        @OutputCustomType.Parameter("scopeDownStatement") @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatement scopeDownStatement) {
         this.aggregateKeyType = aggregateKeyType;
         this.forwardedIpConfig = forwardedIpConfig;
         this.limit = limit;

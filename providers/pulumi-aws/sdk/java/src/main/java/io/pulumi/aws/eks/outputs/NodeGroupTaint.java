@@ -27,11 +27,11 @@ public final class NodeGroupTaint {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"effect","key","value"})
+    @OutputCustomType.Constructor
     private NodeGroupTaint(
-        String effect,
-        String key,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("effect") String effect,
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.effect = effect;
         this.key = key;
         this.value = value;

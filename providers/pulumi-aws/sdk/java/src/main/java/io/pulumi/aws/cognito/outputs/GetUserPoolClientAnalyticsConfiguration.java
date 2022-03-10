@@ -33,13 +33,13 @@ public final class GetUserPoolClientAnalyticsConfiguration {
     private final String roleArn;
     private final Boolean userDataShared;
 
-    @OutputCustomType.Constructor({"applicationArn","applicationId","externalId","roleArn","userDataShared"})
+    @OutputCustomType.Constructor
     private GetUserPoolClientAnalyticsConfiguration(
-        String applicationArn,
-        String applicationId,
-        String externalId,
-        String roleArn,
-        Boolean userDataShared) {
+        @OutputCustomType.Parameter("applicationArn") String applicationArn,
+        @OutputCustomType.Parameter("applicationId") String applicationId,
+        @OutputCustomType.Parameter("externalId") String externalId,
+        @OutputCustomType.Parameter("roleArn") String roleArn,
+        @OutputCustomType.Parameter("userDataShared") Boolean userDataShared) {
         this.applicationArn = applicationArn;
         this.applicationId = applicationId;
         this.externalId = externalId;

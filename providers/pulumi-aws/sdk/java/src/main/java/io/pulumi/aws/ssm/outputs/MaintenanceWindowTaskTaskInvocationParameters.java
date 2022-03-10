@@ -35,12 +35,12 @@ public final class MaintenanceWindowTaskTaskInvocationParameters {
      */
     private final @Nullable MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParameters stepFunctionsParameters;
 
-    @OutputCustomType.Constructor({"automationParameters","lambdaParameters","runCommandParameters","stepFunctionsParameters"})
+    @OutputCustomType.Constructor
     private MaintenanceWindowTaskTaskInvocationParameters(
-        @Nullable MaintenanceWindowTaskTaskInvocationParametersAutomationParameters automationParameters,
-        @Nullable MaintenanceWindowTaskTaskInvocationParametersLambdaParameters lambdaParameters,
-        @Nullable MaintenanceWindowTaskTaskInvocationParametersRunCommandParameters runCommandParameters,
-        @Nullable MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParameters stepFunctionsParameters) {
+        @OutputCustomType.Parameter("automationParameters") @Nullable MaintenanceWindowTaskTaskInvocationParametersAutomationParameters automationParameters,
+        @OutputCustomType.Parameter("lambdaParameters") @Nullable MaintenanceWindowTaskTaskInvocationParametersLambdaParameters lambdaParameters,
+        @OutputCustomType.Parameter("runCommandParameters") @Nullable MaintenanceWindowTaskTaskInvocationParametersRunCommandParameters runCommandParameters,
+        @OutputCustomType.Parameter("stepFunctionsParameters") @Nullable MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParameters stepFunctionsParameters) {
         this.automationParameters = automationParameters;
         this.lambdaParameters = lambdaParameters;
         this.runCommandParameters = runCommandParameters;

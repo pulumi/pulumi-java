@@ -25,11 +25,11 @@ public final class AnalyticsApplicationReferenceDataSourcesS3 {
      */
     private final String roleArn;
 
-    @OutputCustomType.Constructor({"bucketArn","fileKey","roleArn"})
+    @OutputCustomType.Constructor
     private AnalyticsApplicationReferenceDataSourcesS3(
-        String bucketArn,
-        String fileKey,
-        String roleArn) {
+        @OutputCustomType.Parameter("bucketArn") String bucketArn,
+        @OutputCustomType.Parameter("fileKey") String fileKey,
+        @OutputCustomType.Parameter("roleArn") String roleArn) {
         this.bucketArn = bucketArn;
         this.fileKey = fileKey;
         this.roleArn = roleArn;

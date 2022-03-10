@@ -23,10 +23,10 @@ public final class VirtualNodeSpecListenerTlsValidationTrust {
      */
     private final @Nullable VirtualNodeSpecListenerTlsValidationTrustSds sds;
 
-    @OutputCustomType.Constructor({"file","sds"})
+    @OutputCustomType.Constructor
     private VirtualNodeSpecListenerTlsValidationTrust(
-        @Nullable VirtualNodeSpecListenerTlsValidationTrustFile file,
-        @Nullable VirtualNodeSpecListenerTlsValidationTrustSds sds) {
+        @OutputCustomType.Parameter("file") @Nullable VirtualNodeSpecListenerTlsValidationTrustFile file,
+        @OutputCustomType.Parameter("sds") @Nullable VirtualNodeSpecListenerTlsValidationTrustSds sds) {
         this.file = file;
         this.sds = sds;
     }

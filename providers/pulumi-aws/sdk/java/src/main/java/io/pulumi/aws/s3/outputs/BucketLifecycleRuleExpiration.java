@@ -29,11 +29,11 @@ public final class BucketLifecycleRuleExpiration {
      */
     private final @Nullable Boolean expiredObjectDeleteMarker;
 
-    @OutputCustomType.Constructor({"date","days","expiredObjectDeleteMarker"})
+    @OutputCustomType.Constructor
     private BucketLifecycleRuleExpiration(
-        @Nullable String date,
-        @Nullable Integer days,
-        @Nullable Boolean expiredObjectDeleteMarker) {
+        @OutputCustomType.Parameter("date") @Nullable String date,
+        @OutputCustomType.Parameter("days") @Nullable Integer days,
+        @OutputCustomType.Parameter("expiredObjectDeleteMarker") @Nullable Boolean expiredObjectDeleteMarker) {
         this.date = date;
         this.days = days;
         this.expiredObjectDeleteMarker = expiredObjectDeleteMarker;

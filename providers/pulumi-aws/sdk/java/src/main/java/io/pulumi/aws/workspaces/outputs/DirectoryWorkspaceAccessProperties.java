@@ -52,16 +52,16 @@ public final class DirectoryWorkspaceAccessProperties {
      */
     private final @Nullable String deviceTypeZeroclient;
 
-    @OutputCustomType.Constructor({"deviceTypeAndroid","deviceTypeChromeos","deviceTypeIos","deviceTypeLinux","deviceTypeOsx","deviceTypeWeb","deviceTypeWindows","deviceTypeZeroclient"})
+    @OutputCustomType.Constructor
     private DirectoryWorkspaceAccessProperties(
-        @Nullable String deviceTypeAndroid,
-        @Nullable String deviceTypeChromeos,
-        @Nullable String deviceTypeIos,
-        @Nullable String deviceTypeLinux,
-        @Nullable String deviceTypeOsx,
-        @Nullable String deviceTypeWeb,
-        @Nullable String deviceTypeWindows,
-        @Nullable String deviceTypeZeroclient) {
+        @OutputCustomType.Parameter("deviceTypeAndroid") @Nullable String deviceTypeAndroid,
+        @OutputCustomType.Parameter("deviceTypeChromeos") @Nullable String deviceTypeChromeos,
+        @OutputCustomType.Parameter("deviceTypeIos") @Nullable String deviceTypeIos,
+        @OutputCustomType.Parameter("deviceTypeLinux") @Nullable String deviceTypeLinux,
+        @OutputCustomType.Parameter("deviceTypeOsx") @Nullable String deviceTypeOsx,
+        @OutputCustomType.Parameter("deviceTypeWeb") @Nullable String deviceTypeWeb,
+        @OutputCustomType.Parameter("deviceTypeWindows") @Nullable String deviceTypeWindows,
+        @OutputCustomType.Parameter("deviceTypeZeroclient") @Nullable String deviceTypeZeroclient) {
         this.deviceTypeAndroid = deviceTypeAndroid;
         this.deviceTypeChromeos = deviceTypeChromeos;
         this.deviceTypeIos = deviceTypeIos;

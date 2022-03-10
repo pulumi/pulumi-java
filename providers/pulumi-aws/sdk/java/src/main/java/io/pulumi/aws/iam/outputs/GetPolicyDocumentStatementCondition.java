@@ -26,11 +26,11 @@ public final class GetPolicyDocumentStatementCondition {
      */
     private final String variable;
 
-    @OutputCustomType.Constructor({"test","values","variable"})
+    @OutputCustomType.Constructor
     private GetPolicyDocumentStatementCondition(
-        String test,
-        List<String> values,
-        String variable) {
+        @OutputCustomType.Parameter("test") String test,
+        @OutputCustomType.Parameter("values") List<String> values,
+        @OutputCustomType.Parameter("variable") String variable) {
         this.test = test;
         this.values = values;
         this.variable = variable;

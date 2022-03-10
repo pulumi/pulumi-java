@@ -29,12 +29,12 @@ public final class GetAutoscalingGroupsResult {
      */
     private final List<String> names;
 
-    @OutputCustomType.Constructor({"arns","filters","id","names"})
+    @OutputCustomType.Constructor
     private GetAutoscalingGroupsResult(
-        List<String> arns,
-        @Nullable List<GetAutoscalingGroupsFilter> filters,
-        String id,
-        List<String> names) {
+        @OutputCustomType.Parameter("arns") List<String> arns,
+        @OutputCustomType.Parameter("filters") @Nullable List<GetAutoscalingGroupsFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("names") List<String> names) {
         this.arns = arns;
         this.filters = filters;
         this.id = id;

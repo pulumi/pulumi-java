@@ -23,10 +23,10 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      */
     private final @Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParameters jsonMappingParameters;
 
-    @OutputCustomType.Constructor({"csvMappingParameters","jsonMappingParameters"})
+    @OutputCustomType.Constructor
     private ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParameters(
-        @Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParameters csvMappingParameters,
-        @Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParameters jsonMappingParameters) {
+        @OutputCustomType.Parameter("csvMappingParameters") @Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParameters csvMappingParameters,
+        @OutputCustomType.Parameter("jsonMappingParameters") @Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParameters jsonMappingParameters) {
         this.csvMappingParameters = csvMappingParameters;
         this.jsonMappingParameters = jsonMappingParameters;
     }

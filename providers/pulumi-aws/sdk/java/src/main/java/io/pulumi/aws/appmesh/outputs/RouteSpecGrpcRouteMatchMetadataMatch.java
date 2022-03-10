@@ -39,13 +39,13 @@ public final class RouteSpecGrpcRouteMatchMetadataMatch {
      */
     private final @Nullable String suffix;
 
-    @OutputCustomType.Constructor({"exact","prefix","range","regex","suffix"})
+    @OutputCustomType.Constructor
     private RouteSpecGrpcRouteMatchMetadataMatch(
-        @Nullable String exact,
-        @Nullable String prefix,
-        @Nullable RouteSpecGrpcRouteMatchMetadataMatchRange range,
-        @Nullable String regex,
-        @Nullable String suffix) {
+        @OutputCustomType.Parameter("exact") @Nullable String exact,
+        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
+        @OutputCustomType.Parameter("range") @Nullable RouteSpecGrpcRouteMatchMetadataMatchRange range,
+        @OutputCustomType.Parameter("regex") @Nullable String regex,
+        @OutputCustomType.Parameter("suffix") @Nullable String suffix) {
         this.exact = exact;
         this.prefix = prefix;
         this.range = range;

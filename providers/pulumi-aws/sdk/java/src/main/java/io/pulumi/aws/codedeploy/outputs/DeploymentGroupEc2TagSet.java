@@ -17,8 +17,8 @@ public final class DeploymentGroupEc2TagSet {
      */
     private final @Nullable List<DeploymentGroupEc2TagSetEc2TagFilter> ec2TagFilters;
 
-    @OutputCustomType.Constructor({"ec2TagFilters"})
-    private DeploymentGroupEc2TagSet(@Nullable List<DeploymentGroupEc2TagSetEc2TagFilter> ec2TagFilters) {
+    @OutputCustomType.Constructor
+    private DeploymentGroupEc2TagSet(@OutputCustomType.Parameter("ec2TagFilters") @Nullable List<DeploymentGroupEc2TagSetEc2TagFilter> ec2TagFilters) {
         this.ec2TagFilters = ec2TagFilters;
     }
 

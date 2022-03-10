@@ -31,11 +31,11 @@ public final class DeploymentGroupAlarmConfiguration {
      */
     private final @Nullable Boolean ignorePollAlarmFailure;
 
-    @OutputCustomType.Constructor({"alarms","enabled","ignorePollAlarmFailure"})
+    @OutputCustomType.Constructor
     private DeploymentGroupAlarmConfiguration(
-        @Nullable List<String> alarms,
-        @Nullable Boolean enabled,
-        @Nullable Boolean ignorePollAlarmFailure) {
+        @OutputCustomType.Parameter("alarms") @Nullable List<String> alarms,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("ignorePollAlarmFailure") @Nullable Boolean ignorePollAlarmFailure) {
         this.alarms = alarms;
         this.enabled = enabled;
         this.ignorePollAlarmFailure = ignorePollAlarmFailure;

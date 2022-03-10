@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class ResponseHeadersPolicyCorsConfigAccessControlExposeHeaders {
     private final @Nullable List<String> items;
 
-    @OutputCustomType.Constructor({"items"})
-    private ResponseHeadersPolicyCorsConfigAccessControlExposeHeaders(@Nullable List<String> items) {
+    @OutputCustomType.Constructor
+    private ResponseHeadersPolicyCorsConfigAccessControlExposeHeaders(@OutputCustomType.Parameter("items") @Nullable List<String> items) {
         this.items = items;
     }
 

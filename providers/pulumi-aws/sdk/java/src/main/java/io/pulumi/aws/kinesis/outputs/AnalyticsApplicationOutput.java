@@ -48,14 +48,14 @@ public final class AnalyticsApplicationOutput {
      */
     private final AnalyticsApplicationOutputSchema schema;
 
-    @OutputCustomType.Constructor({"id","kinesisFirehose","kinesisStream","lambda","name","schema"})
+    @OutputCustomType.Constructor
     private AnalyticsApplicationOutput(
-        @Nullable String id,
-        @Nullable AnalyticsApplicationOutputKinesisFirehose kinesisFirehose,
-        @Nullable AnalyticsApplicationOutputKinesisStream kinesisStream,
-        @Nullable AnalyticsApplicationOutputLambda lambda,
-        String name,
-        AnalyticsApplicationOutputSchema schema) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("kinesisFirehose") @Nullable AnalyticsApplicationOutputKinesisFirehose kinesisFirehose,
+        @OutputCustomType.Parameter("kinesisStream") @Nullable AnalyticsApplicationOutputKinesisStream kinesisStream,
+        @OutputCustomType.Parameter("lambda") @Nullable AnalyticsApplicationOutputLambda lambda,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("schema") AnalyticsApplicationOutputSchema schema) {
         this.id = id;
         this.kinesisFirehose = kinesisFirehose;
         this.kinesisStream = kinesisStream;

@@ -27,11 +27,11 @@ public final class ChannelHlsIngestIngestEndpoint {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor({"password","url","username"})
+    @OutputCustomType.Constructor
     private ChannelHlsIngestIngestEndpoint(
-        @Nullable String password,
-        @Nullable String url,
-        @Nullable String username) {
+        @OutputCustomType.Parameter("password") @Nullable String password,
+        @OutputCustomType.Parameter("url") @Nullable String url,
+        @OutputCustomType.Parameter("username") @Nullable String username) {
         this.password = password;
         this.url = url;
         this.username = username;

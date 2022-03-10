@@ -28,11 +28,11 @@ public final class GroupWarmPool {
      */
     private final @Nullable String poolState;
 
-    @OutputCustomType.Constructor({"maxGroupPreparedCapacity","minSize","poolState"})
+    @OutputCustomType.Constructor
     private GroupWarmPool(
-        @Nullable Integer maxGroupPreparedCapacity,
-        @Nullable Integer minSize,
-        @Nullable String poolState) {
+        @OutputCustomType.Parameter("maxGroupPreparedCapacity") @Nullable Integer maxGroupPreparedCapacity,
+        @OutputCustomType.Parameter("minSize") @Nullable Integer minSize,
+        @OutputCustomType.Parameter("poolState") @Nullable String poolState) {
         this.maxGroupPreparedCapacity = maxGroupPreparedCapacity;
         this.minSize = minSize;
         this.poolState = poolState;

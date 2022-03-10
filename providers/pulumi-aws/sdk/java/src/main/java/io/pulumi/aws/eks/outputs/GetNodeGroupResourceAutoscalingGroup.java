@@ -15,8 +15,8 @@ public final class GetNodeGroupResourceAutoscalingGroup {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private GetNodeGroupResourceAutoscalingGroup(String name) {
+    @OutputCustomType.Constructor
+    private GetNodeGroupResourceAutoscalingGroup(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

@@ -34,12 +34,12 @@ public final class ProjectServiceCatalogProvisioningDetails {
      */
     private final @Nullable List<ProjectServiceCatalogProvisioningDetailsProvisioningParameter> provisioningParameters;
 
-    @OutputCustomType.Constructor({"pathId","productId","provisioningArtifactId","provisioningParameters"})
+    @OutputCustomType.Constructor
     private ProjectServiceCatalogProvisioningDetails(
-        @Nullable String pathId,
-        String productId,
-        @Nullable String provisioningArtifactId,
-        @Nullable List<ProjectServiceCatalogProvisioningDetailsProvisioningParameter> provisioningParameters) {
+        @OutputCustomType.Parameter("pathId") @Nullable String pathId,
+        @OutputCustomType.Parameter("productId") String productId,
+        @OutputCustomType.Parameter("provisioningArtifactId") @Nullable String provisioningArtifactId,
+        @OutputCustomType.Parameter("provisioningParameters") @Nullable List<ProjectServiceCatalogProvisioningDetailsProvisioningParameter> provisioningParameters) {
         this.pathId = pathId;
         this.productId = productId;
         this.provisioningArtifactId = provisioningArtifactId;

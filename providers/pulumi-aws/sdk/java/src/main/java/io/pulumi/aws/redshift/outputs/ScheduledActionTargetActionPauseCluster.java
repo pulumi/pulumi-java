@@ -15,8 +15,8 @@ public final class ScheduledActionTargetActionPauseCluster {
      */
     private final String clusterIdentifier;
 
-    @OutputCustomType.Constructor({"clusterIdentifier"})
-    private ScheduledActionTargetActionPauseCluster(String clusterIdentifier) {
+    @OutputCustomType.Constructor
+    private ScheduledActionTargetActionPauseCluster(@OutputCustomType.Parameter("clusterIdentifier") String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
     }
 

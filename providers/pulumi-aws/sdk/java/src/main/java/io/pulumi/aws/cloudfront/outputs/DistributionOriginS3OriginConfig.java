@@ -16,8 +16,8 @@ public final class DistributionOriginS3OriginConfig {
      */
     private final String originAccessIdentity;
 
-    @OutputCustomType.Constructor({"originAccessIdentity"})
-    private DistributionOriginS3OriginConfig(String originAccessIdentity) {
+    @OutputCustomType.Constructor
+    private DistributionOriginS3OriginConfig(@OutputCustomType.Parameter("originAccessIdentity") String originAccessIdentity) {
         this.originAccessIdentity = originAccessIdentity;
     }
 

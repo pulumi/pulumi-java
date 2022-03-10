@@ -86,24 +86,24 @@ public final class GetInfrastructureConfigurationResult {
      */
     private final Boolean terminateInstanceOnFailure;
 
-    @OutputCustomType.Constructor({"arn","dateCreated","dateUpdated","description","id","instanceProfileName","instanceTypes","keyPair","loggings","name","resourceTags","securityGroupIds","snsTopicArn","subnetId","tags","terminateInstanceOnFailure"})
+    @OutputCustomType.Constructor
     private GetInfrastructureConfigurationResult(
-        String arn,
-        String dateCreated,
-        String dateUpdated,
-        String description,
-        String id,
-        String instanceProfileName,
-        List<String> instanceTypes,
-        String keyPair,
-        List<GetInfrastructureConfigurationLogging> loggings,
-        String name,
-        Map<String,String> resourceTags,
-        List<String> securityGroupIds,
-        String snsTopicArn,
-        String subnetId,
-        Map<String,String> tags,
-        Boolean terminateInstanceOnFailure) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("dateCreated") String dateCreated,
+        @OutputCustomType.Parameter("dateUpdated") String dateUpdated,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instanceProfileName") String instanceProfileName,
+        @OutputCustomType.Parameter("instanceTypes") List<String> instanceTypes,
+        @OutputCustomType.Parameter("keyPair") String keyPair,
+        @OutputCustomType.Parameter("loggings") List<GetInfrastructureConfigurationLogging> loggings,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("resourceTags") Map<String,String> resourceTags,
+        @OutputCustomType.Parameter("securityGroupIds") List<String> securityGroupIds,
+        @OutputCustomType.Parameter("snsTopicArn") String snsTopicArn,
+        @OutputCustomType.Parameter("subnetId") String subnetId,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("terminateInstanceOnFailure") Boolean terminateInstanceOnFailure) {
         this.arn = arn;
         this.dateCreated = dateCreated;
         this.dateUpdated = dateUpdated;

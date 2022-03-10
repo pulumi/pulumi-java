@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class ResponseHeadersPolicyCustomHeadersConfig {
     private final @Nullable List<ResponseHeadersPolicyCustomHeadersConfigItem> items;
 
-    @OutputCustomType.Constructor({"items"})
-    private ResponseHeadersPolicyCustomHeadersConfig(@Nullable List<ResponseHeadersPolicyCustomHeadersConfigItem> items) {
+    @OutputCustomType.Constructor
+    private ResponseHeadersPolicyCustomHeadersConfig(@OutputCustomType.Parameter("items") @Nullable List<ResponseHeadersPolicyCustomHeadersConfigItem> items) {
         this.items = items;
     }
 

@@ -27,11 +27,11 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaRecordColumn {
      */
     private final String sqlType;
 
-    @OutputCustomType.Constructor({"mapping","name","sqlType"})
+    @OutputCustomType.Constructor
     private AnalyticsApplicationReferenceDataSourcesSchemaRecordColumn(
-        @Nullable String mapping,
-        String name,
-        String sqlType) {
+        @OutputCustomType.Parameter("mapping") @Nullable String mapping,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("sqlType") String sqlType) {
         this.mapping = mapping;
         this.name = name;
         this.sqlType = sqlType;

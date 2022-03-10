@@ -13,10 +13,10 @@ public final class GetAcceleratorIpSet {
     private final List<String> ipAddresses;
     private final String ipFamily;
 
-    @OutputCustomType.Constructor({"ipAddresses","ipFamily"})
+    @OutputCustomType.Constructor
     private GetAcceleratorIpSet(
-        List<String> ipAddresses,
-        String ipFamily) {
+        @OutputCustomType.Parameter("ipAddresses") List<String> ipAddresses,
+        @OutputCustomType.Parameter("ipFamily") String ipFamily) {
         this.ipAddresses = ipAddresses;
         this.ipFamily = ipFamily;
     }

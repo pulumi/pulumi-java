@@ -20,10 +20,10 @@ public final class GetBillingServiceAccountResult {
      */
     private final String id;
 
-    @OutputCustomType.Constructor({"arn","id"})
+    @OutputCustomType.Constructor
     private GetBillingServiceAccountResult(
-        String arn,
-        String id) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("id") String id) {
         this.arn = arn;
         this.id = id;
     }

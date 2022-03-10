@@ -24,11 +24,11 @@ public final class EnvironmentLoggingConfigurationDagProcessingLogs {
      */
     private final @Nullable String logLevel;
 
-    @OutputCustomType.Constructor({"cloudWatchLogGroupArn","enabled","logLevel"})
+    @OutputCustomType.Constructor
     private EnvironmentLoggingConfigurationDagProcessingLogs(
-        @Nullable String cloudWatchLogGroupArn,
-        @Nullable Boolean enabled,
-        @Nullable String logLevel) {
+        @OutputCustomType.Parameter("cloudWatchLogGroupArn") @Nullable String cloudWatchLogGroupArn,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("logLevel") @Nullable String logLevel) {
         this.cloudWatchLogGroupArn = cloudWatchLogGroupArn;
         this.enabled = enabled;
         this.logLevel = logLevel;

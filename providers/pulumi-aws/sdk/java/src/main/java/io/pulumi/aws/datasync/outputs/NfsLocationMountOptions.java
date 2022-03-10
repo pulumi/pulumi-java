@@ -17,8 +17,8 @@ public final class NfsLocationMountOptions {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"version"})
-    private NfsLocationMountOptions(@Nullable String version) {
+    @OutputCustomType.Constructor
+    private NfsLocationMountOptions(@OutputCustomType.Parameter("version") @Nullable String version) {
         this.version = version;
     }
 

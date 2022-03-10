@@ -28,11 +28,11 @@ public final class GraphQLApiAdditionalAuthenticationProviderLambdaAuthorizerCon
      */
     private final @Nullable String identityValidationExpression;
 
-    @OutputCustomType.Constructor({"authorizerResultTtlInSeconds","authorizerUri","identityValidationExpression"})
+    @OutputCustomType.Constructor
     private GraphQLApiAdditionalAuthenticationProviderLambdaAuthorizerConfig(
-        @Nullable Integer authorizerResultTtlInSeconds,
-        String authorizerUri,
-        @Nullable String identityValidationExpression) {
+        @OutputCustomType.Parameter("authorizerResultTtlInSeconds") @Nullable Integer authorizerResultTtlInSeconds,
+        @OutputCustomType.Parameter("authorizerUri") String authorizerUri,
+        @OutputCustomType.Parameter("identityValidationExpression") @Nullable String identityValidationExpression) {
         this.authorizerResultTtlInSeconds = authorizerResultTtlInSeconds;
         this.authorizerUri = authorizerUri;
         this.identityValidationExpression = identityValidationExpression;

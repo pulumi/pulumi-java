@@ -21,11 +21,11 @@ public final class GetResourcesResourceTagMappingListComplianceDetail {
     private final List<String> keysWithNoncompliantValues;
     private final List<String> nonCompliantKeys;
 
-    @OutputCustomType.Constructor({"complianceStatus","keysWithNoncompliantValues","nonCompliantKeys"})
+    @OutputCustomType.Constructor
     private GetResourcesResourceTagMappingListComplianceDetail(
-        Boolean complianceStatus,
-        List<String> keysWithNoncompliantValues,
-        List<String> nonCompliantKeys) {
+        @OutputCustomType.Parameter("complianceStatus") Boolean complianceStatus,
+        @OutputCustomType.Parameter("keysWithNoncompliantValues") List<String> keysWithNoncompliantValues,
+        @OutputCustomType.Parameter("nonCompliantKeys") List<String> nonCompliantKeys) {
         this.complianceStatus = complianceStatus;
         this.keysWithNoncompliantValues = keysWithNoncompliantValues;
         this.nonCompliantKeys = nonCompliantKeys;

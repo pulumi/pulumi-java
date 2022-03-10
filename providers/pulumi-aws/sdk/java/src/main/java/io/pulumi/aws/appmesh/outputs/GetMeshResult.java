@@ -50,17 +50,17 @@ public final class GetMeshResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"arn","createdDate","id","lastUpdatedDate","meshOwner","name","resourceOwner","specs","tags"})
+    @OutputCustomType.Constructor
     private GetMeshResult(
-        String arn,
-        String createdDate,
-        String id,
-        String lastUpdatedDate,
-        String meshOwner,
-        String name,
-        String resourceOwner,
-        List<GetMeshSpec> specs,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("createdDate") String createdDate,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastUpdatedDate") String lastUpdatedDate,
+        @OutputCustomType.Parameter("meshOwner") String meshOwner,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("resourceOwner") String resourceOwner,
+        @OutputCustomType.Parameter("specs") List<GetMeshSpec> specs,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
         this.createdDate = createdDate;
         this.id = id;

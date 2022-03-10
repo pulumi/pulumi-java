@@ -17,8 +17,8 @@ public final class OrganizationConfigurationDatasources {
      */
     private final @Nullable OrganizationConfigurationDatasourcesS3Logs s3Logs;
 
-    @OutputCustomType.Constructor({"s3Logs"})
-    private OrganizationConfigurationDatasources(@Nullable OrganizationConfigurationDatasourcesS3Logs s3Logs) {
+    @OutputCustomType.Constructor
+    private OrganizationConfigurationDatasources(@OutputCustomType.Parameter("s3Logs") @Nullable OrganizationConfigurationDatasourcesS3Logs s3Logs) {
         this.s3Logs = s3Logs;
     }
 

@@ -95,22 +95,22 @@ public final class WebAclRuleStatement {
      */
     private final @Nullable WebAclRuleStatementXssMatchStatement xssMatchStatement;
 
-    @OutputCustomType.Constructor({"andStatement","byteMatchStatement","geoMatchStatement","ipSetReferenceStatement","labelMatchStatement","managedRuleGroupStatement","notStatement","orStatement","rateBasedStatement","regexPatternSetReferenceStatement","ruleGroupReferenceStatement","sizeConstraintStatement","sqliMatchStatement","xssMatchStatement"})
+    @OutputCustomType.Constructor
     private WebAclRuleStatement(
-        @Nullable WebAclRuleStatementAndStatement andStatement,
-        @Nullable WebAclRuleStatementByteMatchStatement byteMatchStatement,
-        @Nullable WebAclRuleStatementGeoMatchStatement geoMatchStatement,
-        @Nullable WebAclRuleStatementIpSetReferenceStatement ipSetReferenceStatement,
-        @Nullable WebAclRuleStatementLabelMatchStatement labelMatchStatement,
-        @Nullable WebAclRuleStatementManagedRuleGroupStatement managedRuleGroupStatement,
-        @Nullable WebAclRuleStatementNotStatement notStatement,
-        @Nullable WebAclRuleStatementOrStatement orStatement,
-        @Nullable WebAclRuleStatementRateBasedStatement rateBasedStatement,
-        @Nullable WebAclRuleStatementRegexPatternSetReferenceStatement regexPatternSetReferenceStatement,
-        @Nullable WebAclRuleStatementRuleGroupReferenceStatement ruleGroupReferenceStatement,
-        @Nullable WebAclRuleStatementSizeConstraintStatement sizeConstraintStatement,
-        @Nullable WebAclRuleStatementSqliMatchStatement sqliMatchStatement,
-        @Nullable WebAclRuleStatementXssMatchStatement xssMatchStatement) {
+        @OutputCustomType.Parameter("andStatement") @Nullable WebAclRuleStatementAndStatement andStatement,
+        @OutputCustomType.Parameter("byteMatchStatement") @Nullable WebAclRuleStatementByteMatchStatement byteMatchStatement,
+        @OutputCustomType.Parameter("geoMatchStatement") @Nullable WebAclRuleStatementGeoMatchStatement geoMatchStatement,
+        @OutputCustomType.Parameter("ipSetReferenceStatement") @Nullable WebAclRuleStatementIpSetReferenceStatement ipSetReferenceStatement,
+        @OutputCustomType.Parameter("labelMatchStatement") @Nullable WebAclRuleStatementLabelMatchStatement labelMatchStatement,
+        @OutputCustomType.Parameter("managedRuleGroupStatement") @Nullable WebAclRuleStatementManagedRuleGroupStatement managedRuleGroupStatement,
+        @OutputCustomType.Parameter("notStatement") @Nullable WebAclRuleStatementNotStatement notStatement,
+        @OutputCustomType.Parameter("orStatement") @Nullable WebAclRuleStatementOrStatement orStatement,
+        @OutputCustomType.Parameter("rateBasedStatement") @Nullable WebAclRuleStatementRateBasedStatement rateBasedStatement,
+        @OutputCustomType.Parameter("regexPatternSetReferenceStatement") @Nullable WebAclRuleStatementRegexPatternSetReferenceStatement regexPatternSetReferenceStatement,
+        @OutputCustomType.Parameter("ruleGroupReferenceStatement") @Nullable WebAclRuleStatementRuleGroupReferenceStatement ruleGroupReferenceStatement,
+        @OutputCustomType.Parameter("sizeConstraintStatement") @Nullable WebAclRuleStatementSizeConstraintStatement sizeConstraintStatement,
+        @OutputCustomType.Parameter("sqliMatchStatement") @Nullable WebAclRuleStatementSqliMatchStatement sqliMatchStatement,
+        @OutputCustomType.Parameter("xssMatchStatement") @Nullable WebAclRuleStatementXssMatchStatement xssMatchStatement) {
         this.andStatement = andStatement;
         this.byteMatchStatement = byteMatchStatement;
         this.geoMatchStatement = geoMatchStatement;

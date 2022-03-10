@@ -22,10 +22,10 @@ public final class ImageBuilderAccessEndpoint {
      */
     private final @Nullable String vpceId;
 
-    @OutputCustomType.Constructor({"endpointType","vpceId"})
+    @OutputCustomType.Constructor
     private ImageBuilderAccessEndpoint(
-        String endpointType,
-        @Nullable String vpceId) {
+        @OutputCustomType.Parameter("endpointType") String endpointType,
+        @OutputCustomType.Parameter("vpceId") @Nullable String vpceId) {
         this.endpointType = endpointType;
         this.vpceId = vpceId;
     }

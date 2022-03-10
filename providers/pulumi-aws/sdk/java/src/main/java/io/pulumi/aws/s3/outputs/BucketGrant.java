@@ -33,12 +33,12 @@ public final class BucketGrant {
      */
     private final @Nullable String uri;
 
-    @OutputCustomType.Constructor({"id","permissions","type","uri"})
+    @OutputCustomType.Constructor
     private BucketGrant(
-        @Nullable String id,
-        List<String> permissions,
-        String type,
-        @Nullable String uri) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("permissions") List<String> permissions,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("uri") @Nullable String uri) {
         this.id = id;
         this.permissions = permissions;
         this.type = type;

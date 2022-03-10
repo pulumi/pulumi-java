@@ -23,10 +23,10 @@ public final class ClusterEncryptionInfoEncryptionInTransit {
      */
     private final @Nullable Boolean inCluster;
 
-    @OutputCustomType.Constructor({"clientBroker","inCluster"})
+    @OutputCustomType.Constructor
     private ClusterEncryptionInfoEncryptionInTransit(
-        @Nullable String clientBroker,
-        @Nullable Boolean inCluster) {
+        @OutputCustomType.Parameter("clientBroker") @Nullable String clientBroker,
+        @OutputCustomType.Parameter("inCluster") @Nullable Boolean inCluster) {
         this.clientBroker = clientBroker;
         this.inCluster = inCluster;
     }

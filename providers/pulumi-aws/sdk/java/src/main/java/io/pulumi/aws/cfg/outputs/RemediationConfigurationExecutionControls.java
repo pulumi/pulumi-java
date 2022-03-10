@@ -17,8 +17,8 @@ public final class RemediationConfigurationExecutionControls {
      */
     private final @Nullable RemediationConfigurationExecutionControlsSsmControls ssmControls;
 
-    @OutputCustomType.Constructor({"ssmControls"})
-    private RemediationConfigurationExecutionControls(@Nullable RemediationConfigurationExecutionControlsSsmControls ssmControls) {
+    @OutputCustomType.Constructor
+    private RemediationConfigurationExecutionControls(@OutputCustomType.Parameter("ssmControls") @Nullable RemediationConfigurationExecutionControlsSsmControls ssmControls) {
         this.ssmControls = ssmControls;
     }
 

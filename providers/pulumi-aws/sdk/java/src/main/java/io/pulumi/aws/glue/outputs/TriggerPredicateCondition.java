@@ -37,13 +37,13 @@ public final class TriggerPredicateCondition {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor({"crawlState","crawlerName","jobName","logicalOperator","state"})
+    @OutputCustomType.Constructor
     private TriggerPredicateCondition(
-        @Nullable String crawlState,
-        @Nullable String crawlerName,
-        @Nullable String jobName,
-        @Nullable String logicalOperator,
-        @Nullable String state) {
+        @OutputCustomType.Parameter("crawlState") @Nullable String crawlState,
+        @OutputCustomType.Parameter("crawlerName") @Nullable String crawlerName,
+        @OutputCustomType.Parameter("jobName") @Nullable String jobName,
+        @OutputCustomType.Parameter("logicalOperator") @Nullable String logicalOperator,
+        @OutputCustomType.Parameter("state") @Nullable String state) {
         this.crawlState = crawlState;
         this.crawlerName = crawlerName;
         this.jobName = jobName;

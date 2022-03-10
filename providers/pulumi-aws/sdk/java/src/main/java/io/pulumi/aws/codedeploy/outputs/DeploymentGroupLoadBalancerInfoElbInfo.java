@@ -17,8 +17,8 @@ public final class DeploymentGroupLoadBalancerInfoElbInfo {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private DeploymentGroupLoadBalancerInfoElbInfo(@Nullable String name) {
+    @OutputCustomType.Constructor
+    private DeploymentGroupLoadBalancerInfoElbInfo(@OutputCustomType.Parameter("name") @Nullable String name) {
         this.name = name;
     }
 

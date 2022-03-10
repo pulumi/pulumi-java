@@ -42,18 +42,18 @@ public final class GetResolverRuleResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"arn","domainName","id","name","ownerId","resolverEndpointId","resolverRuleId","ruleType","shareStatus","tags"})
+    @OutputCustomType.Constructor
     private GetResolverRuleResult(
-        String arn,
-        String domainName,
-        String id,
-        String name,
-        String ownerId,
-        String resolverEndpointId,
-        String resolverRuleId,
-        String ruleType,
-        String shareStatus,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("domainName") String domainName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("ownerId") String ownerId,
+        @OutputCustomType.Parameter("resolverEndpointId") String resolverEndpointId,
+        @OutputCustomType.Parameter("resolverRuleId") String resolverRuleId,
+        @OutputCustomType.Parameter("ruleType") String ruleType,
+        @OutputCustomType.Parameter("shareStatus") String shareStatus,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
         this.domainName = domainName;
         this.id = id;

@@ -26,11 +26,11 @@ public final class ReceiptRuleAddHeaderAction {
      */
     private final Integer position;
 
-    @OutputCustomType.Constructor({"headerName","headerValue","position"})
+    @OutputCustomType.Constructor
     private ReceiptRuleAddHeaderAction(
-        String headerName,
-        String headerValue,
-        Integer position) {
+        @OutputCustomType.Parameter("headerName") String headerName,
+        @OutputCustomType.Parameter("headerValue") String headerValue,
+        @OutputCustomType.Parameter("position") Integer position) {
         this.headerName = headerName;
         this.headerValue = headerValue;
         this.position = position;

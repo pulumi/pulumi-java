@@ -28,11 +28,11 @@ public final class TopicRuleRepublish {
      */
     private final String topic;
 
-    @OutputCustomType.Constructor({"qos","roleArn","topic"})
+    @OutputCustomType.Constructor
     private TopicRuleRepublish(
-        @Nullable Integer qos,
-        String roleArn,
-        String topic) {
+        @OutputCustomType.Parameter("qos") @Nullable Integer qos,
+        @OutputCustomType.Parameter("roleArn") String roleArn,
+        @OutputCustomType.Parameter("topic") String topic) {
         this.qos = qos;
         this.roleArn = roleArn;
         this.topic = topic;

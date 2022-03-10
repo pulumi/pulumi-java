@@ -24,10 +24,10 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConf
      */
     private final @Nullable List<FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessor> processors;
 
-    @OutputCustomType.Constructor({"enabled","processors"})
+    @OutputCustomType.Constructor
     private FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfiguration(
-        @Nullable Boolean enabled,
-        @Nullable List<FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessor> processors) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("processors") @Nullable List<FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessor> processors) {
         this.enabled = enabled;
         this.processors = processors;
     }

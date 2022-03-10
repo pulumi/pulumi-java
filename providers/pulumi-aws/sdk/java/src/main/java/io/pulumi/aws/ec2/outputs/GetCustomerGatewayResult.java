@@ -52,17 +52,17 @@ public final class GetCustomerGatewayResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"arn","bgpAsn","certificateArn","deviceName","filters","id","ipAddress","tags","type"})
+    @OutputCustomType.Constructor
     private GetCustomerGatewayResult(
-        String arn,
-        Integer bgpAsn,
-        String certificateArn,
-        String deviceName,
-        @Nullable List<GetCustomerGatewayFilter> filters,
-        String id,
-        String ipAddress,
-        Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("bgpAsn") Integer bgpAsn,
+        @OutputCustomType.Parameter("certificateArn") String certificateArn,
+        @OutputCustomType.Parameter("deviceName") String deviceName,
+        @OutputCustomType.Parameter("filters") @Nullable List<GetCustomerGatewayFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ipAddress") String ipAddress,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.arn = arn;
         this.bgpAsn = bgpAsn;
         this.certificateArn = certificateArn;

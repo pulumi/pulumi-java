@@ -20,10 +20,10 @@ public final class TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAu
      */
     private final String domain;
 
-    @OutputCustomType.Constructor({"credentialsParameter","domain"})
+    @OutputCustomType.Constructor
     private TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfig(
-        String credentialsParameter,
-        String domain) {
+        @OutputCustomType.Parameter("credentialsParameter") String credentialsParameter,
+        @OutputCustomType.Parameter("domain") String domain) {
         this.credentialsParameter = credentialsParameter;
         this.domain = domain;
     }

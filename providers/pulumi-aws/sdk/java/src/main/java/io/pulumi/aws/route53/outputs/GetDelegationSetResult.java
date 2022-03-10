@@ -15,12 +15,12 @@ public final class GetDelegationSetResult {
     private final String id;
     private final List<String> nameServers;
 
-    @OutputCustomType.Constructor({"arn","callerReference","id","nameServers"})
+    @OutputCustomType.Constructor
     private GetDelegationSetResult(
-        String arn,
-        String callerReference,
-        String id,
-        List<String> nameServers) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("callerReference") String callerReference,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("nameServers") List<String> nameServers) {
         this.arn = arn;
         this.callerReference = callerReference;
         this.id = id;

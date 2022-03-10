@@ -73,22 +73,22 @@ public final class GetDedicatedHostResult {
      */
     private final Integer totalVcpus;
 
-    @OutputCustomType.Constructor({"arn","autoPlacement","availabilityZone","cores","filters","hostId","hostRecovery","id","instanceFamily","instanceType","ownerId","sockets","tags","totalVcpus"})
+    @OutputCustomType.Constructor
     private GetDedicatedHostResult(
-        String arn,
-        String autoPlacement,
-        String availabilityZone,
-        Integer cores,
-        @Nullable List<GetDedicatedHostFilter> filters,
-        String hostId,
-        String hostRecovery,
-        String id,
-        String instanceFamily,
-        String instanceType,
-        String ownerId,
-        Integer sockets,
-        Map<String,String> tags,
-        Integer totalVcpus) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("autoPlacement") String autoPlacement,
+        @OutputCustomType.Parameter("availabilityZone") String availabilityZone,
+        @OutputCustomType.Parameter("cores") Integer cores,
+        @OutputCustomType.Parameter("filters") @Nullable List<GetDedicatedHostFilter> filters,
+        @OutputCustomType.Parameter("hostId") String hostId,
+        @OutputCustomType.Parameter("hostRecovery") String hostRecovery,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instanceFamily") String instanceFamily,
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("ownerId") String ownerId,
+        @OutputCustomType.Parameter("sockets") Integer sockets,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("totalVcpus") Integer totalVcpus) {
         this.arn = arn;
         this.autoPlacement = autoPlacement;
         this.availabilityZone = availabilityZone;

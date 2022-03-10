@@ -26,11 +26,11 @@ public final class QueueReservationPlanSettings {
      */
     private final Integer reservedSlots;
 
-    @OutputCustomType.Constructor({"commitment","renewalType","reservedSlots"})
+    @OutputCustomType.Constructor
     private QueueReservationPlanSettings(
-        String commitment,
-        String renewalType,
-        Integer reservedSlots) {
+        @OutputCustomType.Parameter("commitment") String commitment,
+        @OutputCustomType.Parameter("renewalType") String renewalType,
+        @OutputCustomType.Parameter("reservedSlots") Integer reservedSlots) {
         this.commitment = commitment;
         this.renewalType = renewalType;
         this.reservedSlots = reservedSlots;

@@ -22,10 +22,10 @@ public final class EndpointConfigurationAsyncInferenceConfigOutputConfigNotifica
      */
     private final @Nullable String successTopic;
 
-    @OutputCustomType.Constructor({"errorTopic","successTopic"})
+    @OutputCustomType.Constructor
     private EndpointConfigurationAsyncInferenceConfigOutputConfigNotificationConfig(
-        @Nullable String errorTopic,
-        @Nullable String successTopic) {
+        @OutputCustomType.Parameter("errorTopic") @Nullable String errorTopic,
+        @OutputCustomType.Parameter("successTopic") @Nullable String successTopic) {
         this.errorTopic = errorTopic;
         this.successTopic = successTopic;
     }

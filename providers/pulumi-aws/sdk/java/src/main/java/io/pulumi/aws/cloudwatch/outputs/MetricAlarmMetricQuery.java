@@ -44,14 +44,14 @@ public final class MetricAlarmMetricQuery {
      */
     private final @Nullable Boolean returnData;
 
-    @OutputCustomType.Constructor({"accountId","expression","id","label","metric","returnData"})
+    @OutputCustomType.Constructor
     private MetricAlarmMetricQuery(
-        @Nullable String accountId,
-        @Nullable String expression,
-        String id,
-        @Nullable String label,
-        @Nullable MetricAlarmMetricQueryMetric metric,
-        @Nullable Boolean returnData) {
+        @OutputCustomType.Parameter("accountId") @Nullable String accountId,
+        @OutputCustomType.Parameter("expression") @Nullable String expression,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("label") @Nullable String label,
+        @OutputCustomType.Parameter("metric") @Nullable MetricAlarmMetricQueryMetric metric,
+        @OutputCustomType.Parameter("returnData") @Nullable Boolean returnData) {
         this.accountId = accountId;
         this.expression = expression;
         this.id = id;

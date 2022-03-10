@@ -28,11 +28,11 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicy {
      */
     private final EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfiguration trafficRoutingConfiguration;
 
-    @OutputCustomType.Constructor({"maximumExecutionTimeoutInSeconds","terminationWaitInSeconds","trafficRoutingConfiguration"})
+    @OutputCustomType.Constructor
     private EndpointDeploymentConfigBlueGreenUpdatePolicy(
-        @Nullable Integer maximumExecutionTimeoutInSeconds,
-        @Nullable Integer terminationWaitInSeconds,
-        EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfiguration trafficRoutingConfiguration) {
+        @OutputCustomType.Parameter("maximumExecutionTimeoutInSeconds") @Nullable Integer maximumExecutionTimeoutInSeconds,
+        @OutputCustomType.Parameter("terminationWaitInSeconds") @Nullable Integer terminationWaitInSeconds,
+        @OutputCustomType.Parameter("trafficRoutingConfiguration") EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfiguration trafficRoutingConfiguration) {
         this.maximumExecutionTimeoutInSeconds = maximumExecutionTimeoutInSeconds;
         this.terminationWaitInSeconds = terminationWaitInSeconds;
         this.trafficRoutingConfiguration = trafficRoutingConfiguration;

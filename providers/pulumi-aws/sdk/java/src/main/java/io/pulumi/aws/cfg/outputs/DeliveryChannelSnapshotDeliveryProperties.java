@@ -17,8 +17,8 @@ public final class DeliveryChannelSnapshotDeliveryProperties {
      */
     private final @Nullable String deliveryFrequency;
 
-    @OutputCustomType.Constructor({"deliveryFrequency"})
-    private DeliveryChannelSnapshotDeliveryProperties(@Nullable String deliveryFrequency) {
+    @OutputCustomType.Constructor
+    private DeliveryChannelSnapshotDeliveryProperties(@OutputCustomType.Parameter("deliveryFrequency") @Nullable String deliveryFrequency) {
         this.deliveryFrequency = deliveryFrequency;
     }
 

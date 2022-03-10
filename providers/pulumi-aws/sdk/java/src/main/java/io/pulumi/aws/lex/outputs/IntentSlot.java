@@ -69,17 +69,17 @@ public final class IntentSlot {
      */
     private final @Nullable IntentSlotValueElicitationPrompt valueElicitationPrompt;
 
-    @OutputCustomType.Constructor({"description","name","priority","responseCard","sampleUtterances","slotConstraint","slotType","slotTypeVersion","valueElicitationPrompt"})
+    @OutputCustomType.Constructor
     private IntentSlot(
-        @Nullable String description,
-        String name,
-        @Nullable Integer priority,
-        @Nullable String responseCard,
-        @Nullable List<String> sampleUtterances,
-        String slotConstraint,
-        String slotType,
-        @Nullable String slotTypeVersion,
-        @Nullable IntentSlotValueElicitationPrompt valueElicitationPrompt) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
+        @OutputCustomType.Parameter("responseCard") @Nullable String responseCard,
+        @OutputCustomType.Parameter("sampleUtterances") @Nullable List<String> sampleUtterances,
+        @OutputCustomType.Parameter("slotConstraint") String slotConstraint,
+        @OutputCustomType.Parameter("slotType") String slotType,
+        @OutputCustomType.Parameter("slotTypeVersion") @Nullable String slotTypeVersion,
+        @OutputCustomType.Parameter("valueElicitationPrompt") @Nullable IntentSlotValueElicitationPrompt valueElicitationPrompt) {
         this.description = description;
         this.name = name;
         this.priority = priority;

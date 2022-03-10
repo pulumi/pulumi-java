@@ -19,12 +19,12 @@ public final class GetInstanceTypeGpus {
     private final Integer memorySize;
     private final String name;
 
-    @OutputCustomType.Constructor({"count","manufacturer","memorySize","name"})
+    @OutputCustomType.Constructor
     private GetInstanceTypeGpus(
-        Integer count,
-        String manufacturer,
-        Integer memorySize,
-        String name) {
+        @OutputCustomType.Parameter("count") Integer count,
+        @OutputCustomType.Parameter("manufacturer") String manufacturer,
+        @OutputCustomType.Parameter("memorySize") Integer memorySize,
+        @OutputCustomType.Parameter("name") String name) {
         this.count = count;
         this.manufacturer = manufacturer;
         this.memorySize = memorySize;

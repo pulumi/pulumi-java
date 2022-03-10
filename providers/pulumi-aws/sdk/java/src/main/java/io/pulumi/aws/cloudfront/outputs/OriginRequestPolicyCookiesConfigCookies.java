@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class OriginRequestPolicyCookiesConfigCookies {
     private final @Nullable List<String> items;
 
-    @OutputCustomType.Constructor({"items"})
-    private OriginRequestPolicyCookiesConfigCookies(@Nullable List<String> items) {
+    @OutputCustomType.Constructor
+    private OriginRequestPolicyCookiesConfigCookies(@OutputCustomType.Parameter("items") @Nullable List<String> items) {
         this.items = items;
     }
 

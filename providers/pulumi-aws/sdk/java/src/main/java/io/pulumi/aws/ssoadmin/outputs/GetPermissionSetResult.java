@@ -40,17 +40,17 @@ public final class GetPermissionSetResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"arn","createdDate","description","id","instanceArn","name","relayState","sessionDuration","tags"})
+    @OutputCustomType.Constructor
     private GetPermissionSetResult(
-        String arn,
-        String createdDate,
-        String description,
-        String id,
-        String instanceArn,
-        String name,
-        String relayState,
-        String sessionDuration,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("createdDate") String createdDate,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instanceArn") String instanceArn,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("relayState") String relayState,
+        @OutputCustomType.Parameter("sessionDuration") String sessionDuration,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
         this.createdDate = createdDate;
         this.description = description;

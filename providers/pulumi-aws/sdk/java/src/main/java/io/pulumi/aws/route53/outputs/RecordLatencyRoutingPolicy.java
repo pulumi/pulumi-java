@@ -15,8 +15,8 @@ public final class RecordLatencyRoutingPolicy {
      */
     private final String region;
 
-    @OutputCustomType.Constructor({"region"})
-    private RecordLatencyRoutingPolicy(String region) {
+    @OutputCustomType.Constructor
+    private RecordLatencyRoutingPolicy(@OutputCustomType.Parameter("region") String region) {
         this.region = region;
     }
 

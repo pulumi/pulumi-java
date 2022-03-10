@@ -23,10 +23,10 @@ public final class BrokerEncryptionOptions {
      */
     private final @Nullable Boolean useAwsOwnedKey;
 
-    @OutputCustomType.Constructor({"kmsKeyId","useAwsOwnedKey"})
+    @OutputCustomType.Constructor
     private BrokerEncryptionOptions(
-        @Nullable String kmsKeyId,
-        @Nullable Boolean useAwsOwnedKey) {
+        @OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
+        @OutputCustomType.Parameter("useAwsOwnedKey") @Nullable Boolean useAwsOwnedKey) {
         this.kmsKeyId = kmsKeyId;
         this.useAwsOwnedKey = useAwsOwnedKey;
     }

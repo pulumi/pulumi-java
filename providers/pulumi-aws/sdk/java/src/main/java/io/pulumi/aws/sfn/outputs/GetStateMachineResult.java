@@ -41,15 +41,15 @@ public final class GetStateMachineResult {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"arn","creationDate","definition","id","name","roleArn","status"})
+    @OutputCustomType.Constructor
     private GetStateMachineResult(
-        String arn,
-        String creationDate,
-        String definition,
-        String id,
-        String name,
-        String roleArn,
-        String status) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("creationDate") String creationDate,
+        @OutputCustomType.Parameter("definition") String definition,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("roleArn") String roleArn,
+        @OutputCustomType.Parameter("status") String status) {
         this.arn = arn;
         this.creationDate = creationDate;
         this.definition = definition;

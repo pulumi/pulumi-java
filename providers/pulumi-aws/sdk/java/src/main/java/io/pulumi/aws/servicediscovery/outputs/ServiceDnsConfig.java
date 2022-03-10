@@ -29,11 +29,11 @@ public final class ServiceDnsConfig {
      */
     private final @Nullable String routingPolicy;
 
-    @OutputCustomType.Constructor({"dnsRecords","namespaceId","routingPolicy"})
+    @OutputCustomType.Constructor
     private ServiceDnsConfig(
-        List<ServiceDnsConfigDnsRecord> dnsRecords,
-        String namespaceId,
-        @Nullable String routingPolicy) {
+        @OutputCustomType.Parameter("dnsRecords") List<ServiceDnsConfigDnsRecord> dnsRecords,
+        @OutputCustomType.Parameter("namespaceId") String namespaceId,
+        @OutputCustomType.Parameter("routingPolicy") @Nullable String routingPolicy) {
         this.dnsRecords = dnsRecords;
         this.namespaceId = namespaceId;
         this.routingPolicy = routingPolicy;

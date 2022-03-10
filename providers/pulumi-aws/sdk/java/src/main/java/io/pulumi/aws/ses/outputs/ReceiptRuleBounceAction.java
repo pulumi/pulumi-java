@@ -43,14 +43,14 @@ public final class ReceiptRuleBounceAction {
      */
     private final @Nullable String topicArn;
 
-    @OutputCustomType.Constructor({"message","position","sender","smtpReplyCode","statusCode","topicArn"})
+    @OutputCustomType.Constructor
     private ReceiptRuleBounceAction(
-        String message,
-        Integer position,
-        String sender,
-        String smtpReplyCode,
-        @Nullable String statusCode,
-        @Nullable String topicArn) {
+        @OutputCustomType.Parameter("message") String message,
+        @OutputCustomType.Parameter("position") Integer position,
+        @OutputCustomType.Parameter("sender") String sender,
+        @OutputCustomType.Parameter("smtpReplyCode") String smtpReplyCode,
+        @OutputCustomType.Parameter("statusCode") @Nullable String statusCode,
+        @OutputCustomType.Parameter("topicArn") @Nullable String topicArn) {
         this.message = message;
         this.position = position;
         this.sender = sender;

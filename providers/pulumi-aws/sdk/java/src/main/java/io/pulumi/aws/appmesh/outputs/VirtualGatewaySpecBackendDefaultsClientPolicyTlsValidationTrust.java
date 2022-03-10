@@ -29,11 +29,11 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTru
      */
     private final @Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustSds sds;
 
-    @OutputCustomType.Constructor({"acm","file","sds"})
+    @OutputCustomType.Constructor
     private VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrust(
-        @Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustAcm acm,
-        @Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFile file,
-        @Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustSds sds) {
+        @OutputCustomType.Parameter("acm") @Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustAcm acm,
+        @OutputCustomType.Parameter("file") @Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFile file,
+        @OutputCustomType.Parameter("sds") @Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustSds sds) {
         this.acm = acm;
         this.file = file;
         this.sds = sds;

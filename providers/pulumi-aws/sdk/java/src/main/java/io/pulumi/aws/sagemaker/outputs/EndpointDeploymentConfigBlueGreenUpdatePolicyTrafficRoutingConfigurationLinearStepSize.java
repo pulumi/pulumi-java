@@ -21,10 +21,10 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingCo
      */
     private final Integer value;
 
-    @OutputCustomType.Constructor({"type","value"})
+    @OutputCustomType.Constructor
     private EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSize(
-        String type,
-        Integer value) {
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("value") Integer value) {
         this.type = type;
         this.value = value;
     }

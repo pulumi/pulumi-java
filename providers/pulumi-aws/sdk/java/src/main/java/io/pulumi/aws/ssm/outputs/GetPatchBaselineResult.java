@@ -32,15 +32,15 @@ public final class GetPatchBaselineResult {
     private final @Nullable String operatingSystem;
     private final String owner;
 
-    @OutputCustomType.Constructor({"defaultBaseline","description","id","name","namePrefix","operatingSystem","owner"})
+    @OutputCustomType.Constructor
     private GetPatchBaselineResult(
-        @Nullable Boolean defaultBaseline,
-        String description,
-        String id,
-        String name,
-        @Nullable String namePrefix,
-        @Nullable String operatingSystem,
-        String owner) {
+        @OutputCustomType.Parameter("defaultBaseline") @Nullable Boolean defaultBaseline,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("namePrefix") @Nullable String namePrefix,
+        @OutputCustomType.Parameter("operatingSystem") @Nullable String operatingSystem,
+        @OutputCustomType.Parameter("owner") String owner) {
         this.defaultBaseline = defaultBaseline;
         this.description = description;
         this.id = id;

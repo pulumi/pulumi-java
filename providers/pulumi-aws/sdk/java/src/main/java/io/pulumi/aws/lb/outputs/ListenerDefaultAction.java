@@ -58,16 +58,16 @@ public final class ListenerDefaultAction {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"authenticateCognito","authenticateOidc","fixedResponse","forward","order","redirect","targetGroupArn","type"})
+    @OutputCustomType.Constructor
     private ListenerDefaultAction(
-        @Nullable ListenerDefaultActionAuthenticateCognito authenticateCognito,
-        @Nullable ListenerDefaultActionAuthenticateOidc authenticateOidc,
-        @Nullable ListenerDefaultActionFixedResponse fixedResponse,
-        @Nullable ListenerDefaultActionForward forward,
-        @Nullable Integer order,
-        @Nullable ListenerDefaultActionRedirect redirect,
-        @Nullable String targetGroupArn,
-        String type) {
+        @OutputCustomType.Parameter("authenticateCognito") @Nullable ListenerDefaultActionAuthenticateCognito authenticateCognito,
+        @OutputCustomType.Parameter("authenticateOidc") @Nullable ListenerDefaultActionAuthenticateOidc authenticateOidc,
+        @OutputCustomType.Parameter("fixedResponse") @Nullable ListenerDefaultActionFixedResponse fixedResponse,
+        @OutputCustomType.Parameter("forward") @Nullable ListenerDefaultActionForward forward,
+        @OutputCustomType.Parameter("order") @Nullable Integer order,
+        @OutputCustomType.Parameter("redirect") @Nullable ListenerDefaultActionRedirect redirect,
+        @OutputCustomType.Parameter("targetGroupArn") @Nullable String targetGroupArn,
+        @OutputCustomType.Parameter("type") String type) {
         this.authenticateCognito = authenticateCognito;
         this.authenticateOidc = authenticateOidc;
         this.fixedResponse = fixedResponse;

@@ -30,12 +30,12 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      */
     private final String tableName;
 
-    @OutputCustomType.Constructor({"referenceId","referenceSchema","s3ReferenceDataSource","tableName"})
+    @OutputCustomType.Constructor
     private ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSource(
-        @Nullable String referenceId,
-        ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchema referenceSchema,
-        ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSource s3ReferenceDataSource,
-        String tableName) {
+        @OutputCustomType.Parameter("referenceId") @Nullable String referenceId,
+        @OutputCustomType.Parameter("referenceSchema") ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchema referenceSchema,
+        @OutputCustomType.Parameter("s3ReferenceDataSource") ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSource s3ReferenceDataSource,
+        @OutputCustomType.Parameter("tableName") String tableName) {
         this.referenceId = referenceId;
         this.referenceSchema = referenceSchema;
         this.s3ReferenceDataSource = s3ReferenceDataSource;

@@ -16,10 +16,10 @@ public final class NodejsAppLayerCloudwatchConfiguration {
     private final @Nullable Boolean enabled;
     private final @Nullable List<NodejsAppLayerCloudwatchConfigurationLogStream> logStreams;
 
-    @OutputCustomType.Constructor({"enabled","logStreams"})
+    @OutputCustomType.Constructor
     private NodejsAppLayerCloudwatchConfiguration(
-        @Nullable Boolean enabled,
-        @Nullable List<NodejsAppLayerCloudwatchConfigurationLogStream> logStreams) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("logStreams") @Nullable List<NodejsAppLayerCloudwatchConfigurationLogStream> logStreams) {
         this.enabled = enabled;
         this.logStreams = logStreams;
     }

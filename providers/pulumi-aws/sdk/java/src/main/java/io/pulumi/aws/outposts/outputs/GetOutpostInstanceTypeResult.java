@@ -20,12 +20,12 @@ public final class GetOutpostInstanceTypeResult {
     private final String instanceType;
     private final @Nullable List<String> preferredInstanceTypes;
 
-    @OutputCustomType.Constructor({"arn","id","instanceType","preferredInstanceTypes"})
+    @OutputCustomType.Constructor
     private GetOutpostInstanceTypeResult(
-        String arn,
-        String id,
-        String instanceType,
-        @Nullable List<String> preferredInstanceTypes) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("preferredInstanceTypes") @Nullable List<String> preferredInstanceTypes) {
         this.arn = arn;
         this.id = id;
         this.instanceType = instanceType;

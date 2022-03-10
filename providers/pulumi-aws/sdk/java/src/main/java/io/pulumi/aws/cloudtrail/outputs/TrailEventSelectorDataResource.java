@@ -21,10 +21,10 @@ public final class TrailEventSelectorDataResource {
      */
     private final List<String> values;
 
-    @OutputCustomType.Constructor({"type","values"})
+    @OutputCustomType.Constructor
     private TrailEventSelectorDataResource(
-        String type,
-        List<String> values) {
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("values") List<String> values) {
         this.type = type;
         this.values = values;
     }

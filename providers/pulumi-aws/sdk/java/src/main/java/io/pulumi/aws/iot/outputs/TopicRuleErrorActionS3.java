@@ -25,11 +25,11 @@ public final class TopicRuleErrorActionS3 {
      */
     private final String roleArn;
 
-    @OutputCustomType.Constructor({"bucketName","key","roleArn"})
+    @OutputCustomType.Constructor
     private TopicRuleErrorActionS3(
-        String bucketName,
-        String key,
-        String roleArn) {
+        @OutputCustomType.Parameter("bucketName") String bucketName,
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("roleArn") String roleArn) {
         this.bucketName = bucketName;
         this.key = key;
         this.roleArn = roleArn;

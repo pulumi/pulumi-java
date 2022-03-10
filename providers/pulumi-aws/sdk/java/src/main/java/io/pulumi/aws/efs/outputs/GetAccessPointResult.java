@@ -48,17 +48,17 @@ public final class GetAccessPointResult {
      */
     private final @Nullable Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"accessPointId","arn","fileSystemArn","fileSystemId","id","ownerId","posixUsers","rootDirectories","tags"})
+    @OutputCustomType.Constructor
     private GetAccessPointResult(
-        String accessPointId,
-        String arn,
-        String fileSystemArn,
-        String fileSystemId,
-        String id,
-        String ownerId,
-        List<GetAccessPointPosixUser> posixUsers,
-        List<GetAccessPointRootDirectory> rootDirectories,
-        @Nullable Map<String,String> tags) {
+        @OutputCustomType.Parameter("accessPointId") String accessPointId,
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("fileSystemArn") String fileSystemArn,
+        @OutputCustomType.Parameter("fileSystemId") String fileSystemId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ownerId") String ownerId,
+        @OutputCustomType.Parameter("posixUsers") List<GetAccessPointPosixUser> posixUsers,
+        @OutputCustomType.Parameter("rootDirectories") List<GetAccessPointRootDirectory> rootDirectories,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags) {
         this.accessPointId = accessPointId;
         this.arn = arn;
         this.fileSystemArn = fileSystemArn;

@@ -36,26 +36,26 @@ public final class GetKeyResult {
     private final String origin;
     private final String validTo;
 
-    @OutputCustomType.Constructor({"arn","awsAccountId","creationDate","customerMasterKeySpec","deletionDate","description","enabled","expirationModel","grantTokens","id","keyId","keyManager","keyState","keyUsage","multiRegion","multiRegionConfigurations","origin","validTo"})
+    @OutputCustomType.Constructor
     private GetKeyResult(
-        String arn,
-        String awsAccountId,
-        String creationDate,
-        String customerMasterKeySpec,
-        String deletionDate,
-        String description,
-        Boolean enabled,
-        String expirationModel,
-        @Nullable List<String> grantTokens,
-        String id,
-        String keyId,
-        String keyManager,
-        String keyState,
-        String keyUsage,
-        Boolean multiRegion,
-        List<GetKeyMultiRegionConfiguration> multiRegionConfigurations,
-        String origin,
-        String validTo) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("awsAccountId") String awsAccountId,
+        @OutputCustomType.Parameter("creationDate") String creationDate,
+        @OutputCustomType.Parameter("customerMasterKeySpec") String customerMasterKeySpec,
+        @OutputCustomType.Parameter("deletionDate") String deletionDate,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("expirationModel") String expirationModel,
+        @OutputCustomType.Parameter("grantTokens") @Nullable List<String> grantTokens,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("keyId") String keyId,
+        @OutputCustomType.Parameter("keyManager") String keyManager,
+        @OutputCustomType.Parameter("keyState") String keyState,
+        @OutputCustomType.Parameter("keyUsage") String keyUsage,
+        @OutputCustomType.Parameter("multiRegion") Boolean multiRegion,
+        @OutputCustomType.Parameter("multiRegionConfigurations") List<GetKeyMultiRegionConfiguration> multiRegionConfigurations,
+        @OutputCustomType.Parameter("origin") String origin,
+        @OutputCustomType.Parameter("validTo") String validTo) {
         this.arn = arn;
         this.awsAccountId = awsAccountId;
         this.creationDate = creationDate;

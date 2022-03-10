@@ -21,10 +21,10 @@ public final class UserPoolAccountRecoverySettingRecoveryMechanism {
      */
     private final Integer priority;
 
-    @OutputCustomType.Constructor({"name","priority"})
+    @OutputCustomType.Constructor
     private UserPoolAccountRecoverySettingRecoveryMechanism(
-        String name,
-        Integer priority) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("priority") Integer priority) {
         this.name = name;
         this.priority = priority;
     }

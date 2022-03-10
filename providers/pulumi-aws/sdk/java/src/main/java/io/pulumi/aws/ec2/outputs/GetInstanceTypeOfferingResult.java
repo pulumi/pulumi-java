@@ -27,13 +27,13 @@ public final class GetInstanceTypeOfferingResult {
     private final @Nullable String locationType;
     private final @Nullable List<String> preferredInstanceTypes;
 
-    @OutputCustomType.Constructor({"filters","id","instanceType","locationType","preferredInstanceTypes"})
+    @OutputCustomType.Constructor
     private GetInstanceTypeOfferingResult(
-        @Nullable List<GetInstanceTypeOfferingFilter> filters,
-        String id,
-        String instanceType,
-        @Nullable String locationType,
-        @Nullable List<String> preferredInstanceTypes) {
+        @OutputCustomType.Parameter("filters") @Nullable List<GetInstanceTypeOfferingFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("locationType") @Nullable String locationType,
+        @OutputCustomType.Parameter("preferredInstanceTypes") @Nullable List<String> preferredInstanceTypes) {
         this.filters = filters;
         this.id = id;
         this.instanceType = instanceType;

@@ -28,11 +28,11 @@ public final class ConnectionPhysicalConnectionRequirements {
      */
     private final @Nullable String subnetId;
 
-    @OutputCustomType.Constructor({"availabilityZone","securityGroupIdLists","subnetId"})
+    @OutputCustomType.Constructor
     private ConnectionPhysicalConnectionRequirements(
-        @Nullable String availabilityZone,
-        @Nullable List<String> securityGroupIdLists,
-        @Nullable String subnetId) {
+        @OutputCustomType.Parameter("availabilityZone") @Nullable String availabilityZone,
+        @OutputCustomType.Parameter("securityGroupIdLists") @Nullable List<String> securityGroupIdLists,
+        @OutputCustomType.Parameter("subnetId") @Nullable String subnetId) {
         this.availabilityZone = availabilityZone;
         this.securityGroupIdLists = securityGroupIdLists;
         this.subnetId = subnetId;

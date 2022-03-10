@@ -23,10 +23,10 @@ public final class OntapStorageVirtualMachineEndpointSmb {
      */
     private final @Nullable List<String> ipAddresses;
 
-    @OutputCustomType.Constructor({"dnsName","ipAddresses"})
+    @OutputCustomType.Constructor
     private OntapStorageVirtualMachineEndpointSmb(
-        @Nullable String dnsName,
-        @Nullable List<String> ipAddresses) {
+        @OutputCustomType.Parameter("dnsName") @Nullable String dnsName,
+        @OutputCustomType.Parameter("ipAddresses") @Nullable List<String> ipAddresses) {
         this.dnsName = dnsName;
         this.ipAddresses = ipAddresses;
     }

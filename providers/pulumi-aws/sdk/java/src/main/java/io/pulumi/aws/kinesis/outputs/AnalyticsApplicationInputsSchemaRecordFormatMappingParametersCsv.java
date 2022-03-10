@@ -20,10 +20,10 @@ public final class AnalyticsApplicationInputsSchemaRecordFormatMappingParameters
      */
     private final String recordRowDelimiter;
 
-    @OutputCustomType.Constructor({"recordColumnDelimiter","recordRowDelimiter"})
+    @OutputCustomType.Constructor
     private AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsv(
-        String recordColumnDelimiter,
-        String recordRowDelimiter) {
+        @OutputCustomType.Parameter("recordColumnDelimiter") String recordColumnDelimiter,
+        @OutputCustomType.Parameter("recordRowDelimiter") String recordRowDelimiter) {
         this.recordColumnDelimiter = recordColumnDelimiter;
         this.recordRowDelimiter = recordRowDelimiter;
     }

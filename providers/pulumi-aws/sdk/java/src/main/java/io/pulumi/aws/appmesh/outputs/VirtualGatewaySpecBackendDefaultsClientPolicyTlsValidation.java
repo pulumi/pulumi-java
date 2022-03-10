@@ -23,10 +23,10 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidation {
      */
     private final VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrust trust;
 
-    @OutputCustomType.Constructor({"subjectAlternativeNames","trust"})
+    @OutputCustomType.Constructor
     private VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidation(
-        @Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNames subjectAlternativeNames,
-        VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrust trust) {
+        @OutputCustomType.Parameter("subjectAlternativeNames") @Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNames subjectAlternativeNames,
+        @OutputCustomType.Parameter("trust") VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrust trust) {
         this.subjectAlternativeNames = subjectAlternativeNames;
         this.trust = trust;
     }

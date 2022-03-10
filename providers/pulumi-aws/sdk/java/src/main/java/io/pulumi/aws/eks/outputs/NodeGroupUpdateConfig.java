@@ -22,10 +22,10 @@ public final class NodeGroupUpdateConfig {
      */
     private final @Nullable Integer maxUnavailablePercentage;
 
-    @OutputCustomType.Constructor({"maxUnavailable","maxUnavailablePercentage"})
+    @OutputCustomType.Constructor
     private NodeGroupUpdateConfig(
-        @Nullable Integer maxUnavailable,
-        @Nullable Integer maxUnavailablePercentage) {
+        @OutputCustomType.Parameter("maxUnavailable") @Nullable Integer maxUnavailable,
+        @OutputCustomType.Parameter("maxUnavailablePercentage") @Nullable Integer maxUnavailablePercentage) {
         this.maxUnavailable = maxUnavailable;
         this.maxUnavailablePercentage = maxUnavailablePercentage;
     }

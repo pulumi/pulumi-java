@@ -34,12 +34,12 @@ public final class IdentityPoolRoleAttachmentRoleMapping {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"ambiguousRoleResolution","identityProvider","mappingRules","type"})
+    @OutputCustomType.Constructor
     private IdentityPoolRoleAttachmentRoleMapping(
-        @Nullable String ambiguousRoleResolution,
-        String identityProvider,
-        @Nullable List<IdentityPoolRoleAttachmentRoleMappingMappingRule> mappingRules,
-        String type) {
+        @OutputCustomType.Parameter("ambiguousRoleResolution") @Nullable String ambiguousRoleResolution,
+        @OutputCustomType.Parameter("identityProvider") String identityProvider,
+        @OutputCustomType.Parameter("mappingRules") @Nullable List<IdentityPoolRoleAttachmentRoleMappingMappingRule> mappingRules,
+        @OutputCustomType.Parameter("type") String type) {
         this.ambiguousRoleResolution = ambiguousRoleResolution;
         this.identityProvider = identityProvider;
         this.mappingRules = mappingRules;

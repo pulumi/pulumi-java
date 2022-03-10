@@ -18,10 +18,10 @@ public final class GetSecretResult {
     private final String id;
     private final List<GetSecretSecret> secrets;
 
-    @OutputCustomType.Constructor({"id","secrets"})
+    @OutputCustomType.Constructor
     private GetSecretResult(
-        String id,
-        List<GetSecretSecret> secrets) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("secrets") List<GetSecretSecret> secrets) {
         this.id = id;
         this.secrets = secrets;
     }

@@ -16,10 +16,10 @@ public final class MysqlLayerCloudwatchConfiguration {
     private final @Nullable Boolean enabled;
     private final @Nullable List<MysqlLayerCloudwatchConfigurationLogStream> logStreams;
 
-    @OutputCustomType.Constructor({"enabled","logStreams"})
+    @OutputCustomType.Constructor
     private MysqlLayerCloudwatchConfiguration(
-        @Nullable Boolean enabled,
-        @Nullable List<MysqlLayerCloudwatchConfigurationLogStream> logStreams) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("logStreams") @Nullable List<MysqlLayerCloudwatchConfigurationLogStream> logStreams) {
         this.enabled = enabled;
         this.logStreams = logStreams;
     }

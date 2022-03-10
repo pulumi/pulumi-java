@@ -32,14 +32,14 @@ public final class GetDnsNamespaceResult {
     private final String name;
     private final String type;
 
-    @OutputCustomType.Constructor({"arn","description","hostedZone","id","name","type"})
+    @OutputCustomType.Constructor
     private GetDnsNamespaceResult(
-        String arn,
-        String description,
-        String hostedZone,
-        String id,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("hostedZone") String hostedZone,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.arn = arn;
         this.description = description;
         this.hostedZone = hostedZone;

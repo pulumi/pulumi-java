@@ -28,11 +28,11 @@ public final class GetScriptDagNodeArg {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"name","param","value"})
+    @OutputCustomType.Constructor
     private GetScriptDagNodeArg(
-        String name,
-        @Nullable Boolean param,
-        String value) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("param") @Nullable Boolean param,
+        @OutputCustomType.Parameter("value") String value) {
         this.name = name;
         this.param = param;
         this.value = value;

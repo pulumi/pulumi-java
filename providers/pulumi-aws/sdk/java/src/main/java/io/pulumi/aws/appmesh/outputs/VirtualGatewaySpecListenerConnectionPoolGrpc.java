@@ -15,8 +15,8 @@ public final class VirtualGatewaySpecListenerConnectionPoolGrpc {
      */
     private final Integer maxRequests;
 
-    @OutputCustomType.Constructor({"maxRequests"})
-    private VirtualGatewaySpecListenerConnectionPoolGrpc(Integer maxRequests) {
+    @OutputCustomType.Constructor
+    private VirtualGatewaySpecListenerConnectionPoolGrpc(@OutputCustomType.Parameter("maxRequests") Integer maxRequests) {
         this.maxRequests = maxRequests;
     }
 

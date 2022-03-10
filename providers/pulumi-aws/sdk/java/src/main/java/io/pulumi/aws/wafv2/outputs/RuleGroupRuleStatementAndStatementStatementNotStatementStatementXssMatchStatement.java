@@ -24,10 +24,10 @@ public final class RuleGroupRuleStatementAndStatementStatementNotStatementStatem
      */
     private final List<RuleGroupRuleStatementAndStatementStatementNotStatementStatementXssMatchStatementTextTransformation> textTransformations;
 
-    @OutputCustomType.Constructor({"fieldToMatch","textTransformations"})
+    @OutputCustomType.Constructor
     private RuleGroupRuleStatementAndStatementStatementNotStatementStatementXssMatchStatement(
-        @Nullable RuleGroupRuleStatementAndStatementStatementNotStatementStatementXssMatchStatementFieldToMatch fieldToMatch,
-        List<RuleGroupRuleStatementAndStatementStatementNotStatementStatementXssMatchStatementTextTransformation> textTransformations) {
+        @OutputCustomType.Parameter("fieldToMatch") @Nullable RuleGroupRuleStatementAndStatementStatementNotStatementStatementXssMatchStatementFieldToMatch fieldToMatch,
+        @OutputCustomType.Parameter("textTransformations") List<RuleGroupRuleStatementAndStatementStatementNotStatementStatementXssMatchStatementTextTransformation> textTransformations) {
         this.fieldToMatch = fieldToMatch;
         this.textTransformations = textTransformations;
     }

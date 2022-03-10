@@ -41,16 +41,16 @@ public final class GetSecretVersionResult {
     private final @Nullable String versionStage;
     private final List<String> versionStages;
 
-    @OutputCustomType.Constructor({"arn","id","secretBinary","secretId","secretString","versionId","versionStage","versionStages"})
+    @OutputCustomType.Constructor
     private GetSecretVersionResult(
-        String arn,
-        String id,
-        String secretBinary,
-        String secretId,
-        String secretString,
-        String versionId,
-        @Nullable String versionStage,
-        List<String> versionStages) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("secretBinary") String secretBinary,
+        @OutputCustomType.Parameter("secretId") String secretId,
+        @OutputCustomType.Parameter("secretString") String secretString,
+        @OutputCustomType.Parameter("versionId") String versionId,
+        @OutputCustomType.Parameter("versionStage") @Nullable String versionStage,
+        @OutputCustomType.Parameter("versionStages") List<String> versionStages) {
         this.arn = arn;
         this.id = id;
         this.secretBinary = secretBinary;

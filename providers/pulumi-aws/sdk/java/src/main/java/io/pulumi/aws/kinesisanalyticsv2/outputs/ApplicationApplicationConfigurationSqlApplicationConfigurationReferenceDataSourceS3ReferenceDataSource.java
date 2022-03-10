@@ -20,10 +20,10 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      */
     private final String fileKey;
 
-    @OutputCustomType.Constructor({"bucketArn","fileKey"})
+    @OutputCustomType.Constructor
     private ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSource(
-        String bucketArn,
-        String fileKey) {
+        @OutputCustomType.Parameter("bucketArn") String bucketArn,
+        @OutputCustomType.Parameter("fileKey") String fileKey) {
         this.bucketArn = bucketArn;
         this.fileKey = fileKey;
     }

@@ -21,10 +21,10 @@ public final class ListenerRuleConditionHttpHeader {
      */
     private final List<String> values;
 
-    @OutputCustomType.Constructor({"httpHeaderName","values"})
+    @OutputCustomType.Constructor
     private ListenerRuleConditionHttpHeader(
-        String httpHeaderName,
-        List<String> values) {
+        @OutputCustomType.Parameter("httpHeaderName") String httpHeaderName,
+        @OutputCustomType.Parameter("values") List<String> values) {
         this.httpHeaderName = httpHeaderName;
         this.values = values;
     }

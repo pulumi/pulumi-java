@@ -33,12 +33,12 @@ public final class GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfig
      */
     private final String issuer;
 
-    @OutputCustomType.Constructor({"authTtl","clientId","iatTtl","issuer"})
+    @OutputCustomType.Constructor
     private GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfig(
-        @Nullable Integer authTtl,
-        @Nullable String clientId,
-        @Nullable Integer iatTtl,
-        String issuer) {
+        @OutputCustomType.Parameter("authTtl") @Nullable Integer authTtl,
+        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
+        @OutputCustomType.Parameter("iatTtl") @Nullable Integer iatTtl,
+        @OutputCustomType.Parameter("issuer") String issuer) {
         this.authTtl = authTtl;
         this.clientId = clientId;
         this.iatTtl = iatTtl;

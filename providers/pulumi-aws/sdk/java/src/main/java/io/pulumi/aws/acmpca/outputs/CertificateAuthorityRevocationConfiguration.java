@@ -17,8 +17,8 @@ public final class CertificateAuthorityRevocationConfiguration {
      */
     private final @Nullable CertificateAuthorityRevocationConfigurationCrlConfiguration crlConfiguration;
 
-    @OutputCustomType.Constructor({"crlConfiguration"})
-    private CertificateAuthorityRevocationConfiguration(@Nullable CertificateAuthorityRevocationConfigurationCrlConfiguration crlConfiguration) {
+    @OutputCustomType.Constructor
+    private CertificateAuthorityRevocationConfiguration(@OutputCustomType.Parameter("crlConfiguration") @Nullable CertificateAuthorityRevocationConfigurationCrlConfiguration crlConfiguration) {
         this.crlConfiguration = crlConfiguration;
     }
 

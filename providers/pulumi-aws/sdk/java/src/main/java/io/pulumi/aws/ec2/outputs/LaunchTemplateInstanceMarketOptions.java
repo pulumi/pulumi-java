@@ -23,10 +23,10 @@ public final class LaunchTemplateInstanceMarketOptions {
      */
     private final @Nullable LaunchTemplateInstanceMarketOptionsSpotOptions spotOptions;
 
-    @OutputCustomType.Constructor({"marketType","spotOptions"})
+    @OutputCustomType.Constructor
     private LaunchTemplateInstanceMarketOptions(
-        @Nullable String marketType,
-        @Nullable LaunchTemplateInstanceMarketOptionsSpotOptions spotOptions) {
+        @OutputCustomType.Parameter("marketType") @Nullable String marketType,
+        @OutputCustomType.Parameter("spotOptions") @Nullable LaunchTemplateInstanceMarketOptionsSpotOptions spotOptions) {
         this.marketType = marketType;
         this.spotOptions = spotOptions;
     }

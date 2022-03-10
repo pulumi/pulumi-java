@@ -28,11 +28,11 @@ public final class ProjectCache {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"location","modes","type"})
+    @OutputCustomType.Constructor
     private ProjectCache(
-        @Nullable String location,
-        @Nullable List<String> modes,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("modes") @Nullable List<String> modes,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.location = location;
         this.modes = modes;
         this.type = type;

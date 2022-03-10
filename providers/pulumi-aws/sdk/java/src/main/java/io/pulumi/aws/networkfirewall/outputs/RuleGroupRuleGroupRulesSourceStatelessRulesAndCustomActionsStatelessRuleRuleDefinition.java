@@ -22,10 +22,10 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
      */
     private final RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributes matchAttributes;
 
-    @OutputCustomType.Constructor({"actions","matchAttributes"})
+    @OutputCustomType.Constructor
     private RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinition(
-        List<String> actions,
-        RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributes matchAttributes) {
+        @OutputCustomType.Parameter("actions") List<String> actions,
+        @OutputCustomType.Parameter("matchAttributes") RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributes matchAttributes) {
         this.actions = actions;
         this.matchAttributes = matchAttributes;
     }

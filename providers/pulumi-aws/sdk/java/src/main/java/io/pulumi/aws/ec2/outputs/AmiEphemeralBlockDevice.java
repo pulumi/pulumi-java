@@ -21,10 +21,10 @@ public final class AmiEphemeralBlockDevice {
      */
     private final String virtualName;
 
-    @OutputCustomType.Constructor({"deviceName","virtualName"})
+    @OutputCustomType.Constructor
     private AmiEphemeralBlockDevice(
-        String deviceName,
-        String virtualName) {
+        @OutputCustomType.Parameter("deviceName") String deviceName,
+        @OutputCustomType.Parameter("virtualName") String virtualName) {
         this.deviceName = deviceName;
         this.virtualName = virtualName;
     }

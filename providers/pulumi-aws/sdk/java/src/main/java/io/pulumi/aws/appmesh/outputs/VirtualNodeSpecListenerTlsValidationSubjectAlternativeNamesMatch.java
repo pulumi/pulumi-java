@@ -16,8 +16,8 @@ public final class VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesMa
      */
     private final List<String> exacts;
 
-    @OutputCustomType.Constructor({"exacts"})
-    private VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesMatch(List<String> exacts) {
+    @OutputCustomType.Constructor
+    private VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesMatch(@OutputCustomType.Parameter("exacts") List<String> exacts) {
         this.exacts = exacts;
     }
 

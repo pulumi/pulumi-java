@@ -21,10 +21,10 @@ public final class DistributionOriginOriginShield {
      */
     private final String originShieldRegion;
 
-    @OutputCustomType.Constructor({"enabled","originShieldRegion"})
+    @OutputCustomType.Constructor
     private DistributionOriginOriginShield(
-        Boolean enabled,
-        String originShieldRegion) {
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("originShieldRegion") String originShieldRegion) {
         this.enabled = enabled;
         this.originShieldRegion = originShieldRegion;
     }

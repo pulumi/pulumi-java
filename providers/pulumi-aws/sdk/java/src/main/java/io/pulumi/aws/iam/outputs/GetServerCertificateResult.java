@@ -28,19 +28,19 @@ public final class GetServerCertificateResult {
     private final @Nullable String pathPrefix;
     private final String uploadDate;
 
-    @OutputCustomType.Constructor({"arn","certificateBody","certificateChain","expirationDate","id","latest","name","namePrefix","path","pathPrefix","uploadDate"})
+    @OutputCustomType.Constructor
     private GetServerCertificateResult(
-        String arn,
-        String certificateBody,
-        String certificateChain,
-        String expirationDate,
-        String id,
-        @Nullable Boolean latest,
-        String name,
-        @Nullable String namePrefix,
-        String path,
-        @Nullable String pathPrefix,
-        String uploadDate) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("certificateBody") String certificateBody,
+        @OutputCustomType.Parameter("certificateChain") String certificateChain,
+        @OutputCustomType.Parameter("expirationDate") String expirationDate,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("latest") @Nullable Boolean latest,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("namePrefix") @Nullable String namePrefix,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("pathPrefix") @Nullable String pathPrefix,
+        @OutputCustomType.Parameter("uploadDate") String uploadDate) {
         this.arn = arn;
         this.certificateBody = certificateBody;
         this.certificateChain = certificateChain;

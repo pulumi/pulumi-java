@@ -18,10 +18,10 @@ public final class GetPipelineDefinitionParameterObject {
      */
     private final String id;
 
-    @OutputCustomType.Constructor({"attributes","id"})
+    @OutputCustomType.Constructor
     private GetPipelineDefinitionParameterObject(
-        List<GetPipelineDefinitionParameterObjectAttribute> attributes,
-        String id) {
+        @OutputCustomType.Parameter("attributes") List<GetPipelineDefinitionParameterObjectAttribute> attributes,
+        @OutputCustomType.Parameter("id") String id) {
         this.attributes = attributes;
         this.id = id;
     }

@@ -27,10 +27,10 @@ public final class DistributionDefaultCacheBehaviorForwardedValuesCookies {
      */
     private final @Nullable List<String> whitelistedNames;
 
-    @OutputCustomType.Constructor({"forward","whitelistedNames"})
+    @OutputCustomType.Constructor
     private DistributionDefaultCacheBehaviorForwardedValuesCookies(
-        String forward,
-        @Nullable List<String> whitelistedNames) {
+        @OutputCustomType.Parameter("forward") String forward,
+        @OutputCustomType.Parameter("whitelistedNames") @Nullable List<String> whitelistedNames) {
         this.forward = forward;
         this.whitelistedNames = whitelistedNames;
     }

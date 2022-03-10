@@ -27,11 +27,11 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfigContentType
      */
     private final @Nullable String profileId;
 
-    @OutputCustomType.Constructor({"contentType","format","profileId"})
+    @OutputCustomType.Constructor
     private FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItem(
-        String contentType,
-        String format,
-        @Nullable String profileId) {
+        @OutputCustomType.Parameter("contentType") String contentType,
+        @OutputCustomType.Parameter("format") String format,
+        @OutputCustomType.Parameter("profileId") @Nullable String profileId) {
         this.contentType = contentType;
         this.format = format;
         this.profileId = profileId;

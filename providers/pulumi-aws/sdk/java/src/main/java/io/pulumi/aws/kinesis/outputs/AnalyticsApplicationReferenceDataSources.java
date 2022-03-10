@@ -34,12 +34,12 @@ public final class AnalyticsApplicationReferenceDataSources {
      */
     private final String tableName;
 
-    @OutputCustomType.Constructor({"id","s3","schema","tableName"})
+    @OutputCustomType.Constructor
     private AnalyticsApplicationReferenceDataSources(
-        @Nullable String id,
-        AnalyticsApplicationReferenceDataSourcesS3 s3,
-        AnalyticsApplicationReferenceDataSourcesSchema schema,
-        String tableName) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("s3") AnalyticsApplicationReferenceDataSourcesS3 s3,
+        @OutputCustomType.Parameter("schema") AnalyticsApplicationReferenceDataSourcesSchema schema,
+        @OutputCustomType.Parameter("tableName") String tableName) {
         this.id = id;
         this.s3 = s3;
         this.schema = schema;

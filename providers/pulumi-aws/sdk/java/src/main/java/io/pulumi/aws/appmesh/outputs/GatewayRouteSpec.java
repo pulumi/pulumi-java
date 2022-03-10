@@ -29,11 +29,11 @@ public final class GatewayRouteSpec {
      */
     private final @Nullable GatewayRouteSpecHttpRoute httpRoute;
 
-    @OutputCustomType.Constructor({"grpcRoute","http2Route","httpRoute"})
+    @OutputCustomType.Constructor
     private GatewayRouteSpec(
-        @Nullable GatewayRouteSpecGrpcRoute grpcRoute,
-        @Nullable GatewayRouteSpecHttp2Route http2Route,
-        @Nullable GatewayRouteSpecHttpRoute httpRoute) {
+        @OutputCustomType.Parameter("grpcRoute") @Nullable GatewayRouteSpecGrpcRoute grpcRoute,
+        @OutputCustomType.Parameter("http2Route") @Nullable GatewayRouteSpecHttp2Route http2Route,
+        @OutputCustomType.Parameter("httpRoute") @Nullable GatewayRouteSpecHttpRoute httpRoute) {
         this.grpcRoute = grpcRoute;
         this.http2Route = http2Route;
         this.httpRoute = httpRoute;

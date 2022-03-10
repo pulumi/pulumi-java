@@ -21,10 +21,10 @@ public final class VirtualNodeSpecListenerPortMapping {
      */
     private final String protocol;
 
-    @OutputCustomType.Constructor({"port","protocol"})
+    @OutputCustomType.Constructor
     private VirtualNodeSpecListenerPortMapping(
-        Integer port,
-        String protocol) {
+        @OutputCustomType.Parameter("port") Integer port,
+        @OutputCustomType.Parameter("protocol") String protocol) {
         this.port = port;
         this.protocol = protocol;
     }

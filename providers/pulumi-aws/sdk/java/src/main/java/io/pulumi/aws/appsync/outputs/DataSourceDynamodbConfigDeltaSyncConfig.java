@@ -16,11 +16,11 @@ public final class DataSourceDynamodbConfigDeltaSyncConfig {
     private final String deltaSyncTableName;
     private final @Nullable Integer deltaSyncTableTtl;
 
-    @OutputCustomType.Constructor({"baseTableTtl","deltaSyncTableName","deltaSyncTableTtl"})
+    @OutputCustomType.Constructor
     private DataSourceDynamodbConfigDeltaSyncConfig(
-        @Nullable Integer baseTableTtl,
-        String deltaSyncTableName,
-        @Nullable Integer deltaSyncTableTtl) {
+        @OutputCustomType.Parameter("baseTableTtl") @Nullable Integer baseTableTtl,
+        @OutputCustomType.Parameter("deltaSyncTableName") String deltaSyncTableName,
+        @OutputCustomType.Parameter("deltaSyncTableTtl") @Nullable Integer deltaSyncTableTtl) {
         this.baseTableTtl = baseTableTtl;
         this.deltaSyncTableName = deltaSyncTableName;
         this.deltaSyncTableTtl = deltaSyncTableTtl;

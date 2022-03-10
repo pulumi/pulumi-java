@@ -22,11 +22,11 @@ public final class GetOutpostInstanceTypesResult {
      */
     private final List<String> instanceTypes;
 
-    @OutputCustomType.Constructor({"arn","id","instanceTypes"})
+    @OutputCustomType.Constructor
     private GetOutpostInstanceTypesResult(
-        String arn,
-        String id,
-        List<String> instanceTypes) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instanceTypes") List<String> instanceTypes) {
         this.arn = arn;
         this.id = id;
         this.instanceTypes = instanceTypes;

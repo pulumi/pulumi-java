@@ -17,8 +17,8 @@ public final class VirtualNodeSpecListenerTimeoutTcp {
      */
     private final @Nullable VirtualNodeSpecListenerTimeoutTcpIdle idle;
 
-    @OutputCustomType.Constructor({"idle"})
-    private VirtualNodeSpecListenerTimeoutTcp(@Nullable VirtualNodeSpecListenerTimeoutTcpIdle idle) {
+    @OutputCustomType.Constructor
+    private VirtualNodeSpecListenerTimeoutTcp(@OutputCustomType.Parameter("idle") @Nullable VirtualNodeSpecListenerTimeoutTcpIdle idle) {
         this.idle = idle;
     }
 

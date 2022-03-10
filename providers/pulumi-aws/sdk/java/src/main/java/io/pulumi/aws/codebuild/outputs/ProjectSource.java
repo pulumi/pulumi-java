@@ -66,17 +66,17 @@ public final class ProjectSource {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"auth","buildStatusConfig","buildspec","gitCloneDepth","gitSubmodulesConfig","insecureSsl","location","reportBuildStatus","type"})
+    @OutputCustomType.Constructor
     private ProjectSource(
-        @Nullable ProjectSourceAuth auth,
-        @Nullable ProjectSourceBuildStatusConfig buildStatusConfig,
-        @Nullable String buildspec,
-        @Nullable Integer gitCloneDepth,
-        @Nullable ProjectSourceGitSubmodulesConfig gitSubmodulesConfig,
-        @Nullable Boolean insecureSsl,
-        @Nullable String location,
-        @Nullable Boolean reportBuildStatus,
-        String type) {
+        @OutputCustomType.Parameter("auth") @Nullable ProjectSourceAuth auth,
+        @OutputCustomType.Parameter("buildStatusConfig") @Nullable ProjectSourceBuildStatusConfig buildStatusConfig,
+        @OutputCustomType.Parameter("buildspec") @Nullable String buildspec,
+        @OutputCustomType.Parameter("gitCloneDepth") @Nullable Integer gitCloneDepth,
+        @OutputCustomType.Parameter("gitSubmodulesConfig") @Nullable ProjectSourceGitSubmodulesConfig gitSubmodulesConfig,
+        @OutputCustomType.Parameter("insecureSsl") @Nullable Boolean insecureSsl,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("reportBuildStatus") @Nullable Boolean reportBuildStatus,
+        @OutputCustomType.Parameter("type") String type) {
         this.auth = auth;
         this.buildStatusConfig = buildStatusConfig;
         this.buildspec = buildspec;

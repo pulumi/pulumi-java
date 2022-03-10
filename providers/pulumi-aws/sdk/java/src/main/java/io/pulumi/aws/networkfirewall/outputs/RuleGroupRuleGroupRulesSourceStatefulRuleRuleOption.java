@@ -23,10 +23,10 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleRuleOption {
      */
     private final @Nullable List<String> settings;
 
-    @OutputCustomType.Constructor({"keyword","settings"})
+    @OutputCustomType.Constructor
     private RuleGroupRuleGroupRulesSourceStatefulRuleRuleOption(
-        String keyword,
-        @Nullable List<String> settings) {
+        @OutputCustomType.Parameter("keyword") String keyword,
+        @OutputCustomType.Parameter("settings") @Nullable List<String> settings) {
         this.keyword = keyword;
         this.settings = settings;
     }

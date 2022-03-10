@@ -16,8 +16,8 @@ public final class RuleGroupRuleStatementAndStatementStatementAndStatement {
      */
     private final List<RuleGroupRuleStatementAndStatementStatementAndStatementStatement> statements;
 
-    @OutputCustomType.Constructor({"statements"})
-    private RuleGroupRuleStatementAndStatementStatementAndStatement(List<RuleGroupRuleStatementAndStatementStatementAndStatementStatement> statements) {
+    @OutputCustomType.Constructor
+    private RuleGroupRuleStatementAndStatementStatementAndStatement(@OutputCustomType.Parameter("statements") List<RuleGroupRuleStatementAndStatementStatementAndStatementStatement> statements) {
         this.statements = statements;
     }
 

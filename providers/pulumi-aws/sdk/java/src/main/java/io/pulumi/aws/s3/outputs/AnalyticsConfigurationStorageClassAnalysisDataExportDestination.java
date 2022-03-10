@@ -15,8 +15,8 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportDestinati
      */
     private final AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestination s3BucketDestination;
 
-    @OutputCustomType.Constructor({"s3BucketDestination"})
-    private AnalyticsConfigurationStorageClassAnalysisDataExportDestination(AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestination s3BucketDestination) {
+    @OutputCustomType.Constructor
+    private AnalyticsConfigurationStorageClassAnalysisDataExportDestination(@OutputCustomType.Parameter("s3BucketDestination") AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestination s3BucketDestination) {
         this.s3BucketDestination = s3BucketDestination;
     }
 

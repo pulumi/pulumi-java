@@ -23,10 +23,10 @@ public final class FieldLevelEncryptionConfigQueryArgProfileConfig {
      */
     private final @Nullable FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfiles queryArgProfiles;
 
-    @OutputCustomType.Constructor({"forwardWhenQueryArgProfileIsUnknown","queryArgProfiles"})
+    @OutputCustomType.Constructor
     private FieldLevelEncryptionConfigQueryArgProfileConfig(
-        Boolean forwardWhenQueryArgProfileIsUnknown,
-        @Nullable FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfiles queryArgProfiles) {
+        @OutputCustomType.Parameter("forwardWhenQueryArgProfileIsUnknown") Boolean forwardWhenQueryArgProfileIsUnknown,
+        @OutputCustomType.Parameter("queryArgProfiles") @Nullable FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfiles queryArgProfiles) {
         this.forwardWhenQueryArgProfileIsUnknown = forwardWhenQueryArgProfileIsUnknown;
         this.queryArgProfiles = queryArgProfiles;
     }

@@ -52,18 +52,18 @@ public final class GetFunctionResult {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"arn","code","comment","etag","id","lastModifiedTime","name","runtime","stage","status"})
+    @OutputCustomType.Constructor
     private GetFunctionResult(
-        String arn,
-        String code,
-        String comment,
-        String etag,
-        String id,
-        String lastModifiedTime,
-        String name,
-        String runtime,
-        String stage,
-        String status) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("code") String code,
+        @OutputCustomType.Parameter("comment") String comment,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("runtime") String runtime,
+        @OutputCustomType.Parameter("stage") String stage,
+        @OutputCustomType.Parameter("status") String status) {
         this.arn = arn;
         this.code = code;
         this.comment = comment;

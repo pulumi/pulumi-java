@@ -22,10 +22,10 @@ public final class SecurityConfigurationEncryptionConfigurationJobBookmarksEncry
      */
     private final @Nullable String kmsKeyArn;
 
-    @OutputCustomType.Constructor({"jobBookmarksEncryptionMode","kmsKeyArn"})
+    @OutputCustomType.Constructor
     private SecurityConfigurationEncryptionConfigurationJobBookmarksEncryption(
-        @Nullable String jobBookmarksEncryptionMode,
-        @Nullable String kmsKeyArn) {
+        @OutputCustomType.Parameter("jobBookmarksEncryptionMode") @Nullable String jobBookmarksEncryptionMode,
+        @OutputCustomType.Parameter("kmsKeyArn") @Nullable String kmsKeyArn) {
         this.jobBookmarksEncryptionMode = jobBookmarksEncryptionMode;
         this.kmsKeyArn = kmsKeyArn;
     }

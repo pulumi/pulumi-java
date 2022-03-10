@@ -27,11 +27,11 @@ public final class ParameterGroupParameter {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"applyMethod","name","value"})
+    @OutputCustomType.Constructor
     private ParameterGroupParameter(
-        @Nullable String applyMethod,
-        String name,
-        String value) {
+        @OutputCustomType.Parameter("applyMethod") @Nullable String applyMethod,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("value") String value) {
         this.applyMethod = applyMethod;
         this.name = name;
         this.value = value;

@@ -35,12 +35,12 @@ public final class RuleGroupRuleStatementNotStatementStatementNotStatementStatem
      */
     private final List<RuleGroupRuleStatementNotStatementStatementNotStatementStatementByteMatchStatementTextTransformation> textTransformations;
 
-    @OutputCustomType.Constructor({"fieldToMatch","positionalConstraint","searchString","textTransformations"})
+    @OutputCustomType.Constructor
     private RuleGroupRuleStatementNotStatementStatementNotStatementStatementByteMatchStatement(
-        @Nullable RuleGroupRuleStatementNotStatementStatementNotStatementStatementByteMatchStatementFieldToMatch fieldToMatch,
-        String positionalConstraint,
-        String searchString,
-        List<RuleGroupRuleStatementNotStatementStatementNotStatementStatementByteMatchStatementTextTransformation> textTransformations) {
+        @OutputCustomType.Parameter("fieldToMatch") @Nullable RuleGroupRuleStatementNotStatementStatementNotStatementStatementByteMatchStatementFieldToMatch fieldToMatch,
+        @OutputCustomType.Parameter("positionalConstraint") String positionalConstraint,
+        @OutputCustomType.Parameter("searchString") String searchString,
+        @OutputCustomType.Parameter("textTransformations") List<RuleGroupRuleStatementNotStatementStatementNotStatementStatementByteMatchStatementTextTransformation> textTransformations) {
         this.fieldToMatch = fieldToMatch;
         this.positionalConstraint = positionalConstraint;
         this.searchString = searchString;

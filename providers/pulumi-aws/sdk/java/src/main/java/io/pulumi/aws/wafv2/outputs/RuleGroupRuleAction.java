@@ -29,11 +29,11 @@ public final class RuleGroupRuleAction {
      */
     private final @Nullable RuleGroupRuleActionCount count;
 
-    @OutputCustomType.Constructor({"allow","block","count"})
+    @OutputCustomType.Constructor
     private RuleGroupRuleAction(
-        @Nullable RuleGroupRuleActionAllow allow,
-        @Nullable RuleGroupRuleActionBlock block,
-        @Nullable RuleGroupRuleActionCount count) {
+        @OutputCustomType.Parameter("allow") @Nullable RuleGroupRuleActionAllow allow,
+        @OutputCustomType.Parameter("block") @Nullable RuleGroupRuleActionBlock block,
+        @OutputCustomType.Parameter("count") @Nullable RuleGroupRuleActionCount count) {
         this.allow = allow;
         this.block = block;
         this.count = count;

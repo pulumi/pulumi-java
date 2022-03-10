@@ -42,30 +42,30 @@ public final class GetLoadBalancerResult {
     private final String vpcId;
     private final String zoneId;
 
-    @OutputCustomType.Constructor({"accessLogs","arn","arnSuffix","customerOwnedIpv4Pool","desyncMitigationMode","dnsName","dropInvalidHeaderFields","enableDeletionProtection","enableHttp2","enableWafFailOpen","id","idleTimeout","internal","ipAddressType","loadBalancerType","name","securityGroups","subnetMappings","subnets","tags","vpcId","zoneId"})
+    @OutputCustomType.Constructor
     private GetLoadBalancerResult(
-        GetLoadBalancerAccessLogs accessLogs,
-        String arn,
-        String arnSuffix,
-        String customerOwnedIpv4Pool,
-        String desyncMitigationMode,
-        String dnsName,
-        Boolean dropInvalidHeaderFields,
-        Boolean enableDeletionProtection,
-        Boolean enableHttp2,
-        Boolean enableWafFailOpen,
-        String id,
-        Integer idleTimeout,
-        Boolean internal,
-        String ipAddressType,
-        String loadBalancerType,
-        String name,
-        List<String> securityGroups,
-        List<GetLoadBalancerSubnetMapping> subnetMappings,
-        List<String> subnets,
-        Map<String,String> tags,
-        String vpcId,
-        String zoneId) {
+        @OutputCustomType.Parameter("accessLogs") GetLoadBalancerAccessLogs accessLogs,
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("arnSuffix") String arnSuffix,
+        @OutputCustomType.Parameter("customerOwnedIpv4Pool") String customerOwnedIpv4Pool,
+        @OutputCustomType.Parameter("desyncMitigationMode") String desyncMitigationMode,
+        @OutputCustomType.Parameter("dnsName") String dnsName,
+        @OutputCustomType.Parameter("dropInvalidHeaderFields") Boolean dropInvalidHeaderFields,
+        @OutputCustomType.Parameter("enableDeletionProtection") Boolean enableDeletionProtection,
+        @OutputCustomType.Parameter("enableHttp2") Boolean enableHttp2,
+        @OutputCustomType.Parameter("enableWafFailOpen") Boolean enableWafFailOpen,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("idleTimeout") Integer idleTimeout,
+        @OutputCustomType.Parameter("internal") Boolean internal,
+        @OutputCustomType.Parameter("ipAddressType") String ipAddressType,
+        @OutputCustomType.Parameter("loadBalancerType") String loadBalancerType,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("securityGroups") List<String> securityGroups,
+        @OutputCustomType.Parameter("subnetMappings") List<GetLoadBalancerSubnetMapping> subnetMappings,
+        @OutputCustomType.Parameter("subnets") List<String> subnets,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("vpcId") String vpcId,
+        @OutputCustomType.Parameter("zoneId") String zoneId) {
         this.accessLogs = accessLogs;
         this.arn = arn;
         this.arnSuffix = arnSuffix;

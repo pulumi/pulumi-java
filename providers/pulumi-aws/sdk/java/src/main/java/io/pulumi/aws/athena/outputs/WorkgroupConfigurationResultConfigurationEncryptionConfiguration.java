@@ -22,10 +22,10 @@ public final class WorkgroupConfigurationResultConfigurationEncryptionConfigurat
      */
     private final @Nullable String kmsKeyArn;
 
-    @OutputCustomType.Constructor({"encryptionOption","kmsKeyArn"})
+    @OutputCustomType.Constructor
     private WorkgroupConfigurationResultConfigurationEncryptionConfiguration(
-        @Nullable String encryptionOption,
-        @Nullable String kmsKeyArn) {
+        @OutputCustomType.Parameter("encryptionOption") @Nullable String encryptionOption,
+        @OutputCustomType.Parameter("kmsKeyArn") @Nullable String kmsKeyArn) {
         this.encryptionOption = encryptionOption;
         this.kmsKeyArn = kmsKeyArn;
     }

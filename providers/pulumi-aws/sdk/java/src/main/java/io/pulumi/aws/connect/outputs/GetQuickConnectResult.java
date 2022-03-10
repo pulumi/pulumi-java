@@ -45,16 +45,16 @@ public final class GetQuickConnectResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"arn","description","id","instanceId","name","quickConnectConfigs","quickConnectId","tags"})
+    @OutputCustomType.Constructor
     private GetQuickConnectResult(
-        String arn,
-        String description,
-        String id,
-        String instanceId,
-        String name,
-        List<GetQuickConnectQuickConnectConfig> quickConnectConfigs,
-        String quickConnectId,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instanceId") String instanceId,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("quickConnectConfigs") List<GetQuickConnectQuickConnectConfig> quickConnectConfigs,
+        @OutputCustomType.Parameter("quickConnectId") String quickConnectId,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
         this.description = description;
         this.id = id;

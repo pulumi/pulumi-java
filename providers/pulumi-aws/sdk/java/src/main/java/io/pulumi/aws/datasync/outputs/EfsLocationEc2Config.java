@@ -21,10 +21,10 @@ public final class EfsLocationEc2Config {
      */
     private final String subnetArn;
 
-    @OutputCustomType.Constructor({"securityGroupArns","subnetArn"})
+    @OutputCustomType.Constructor
     private EfsLocationEc2Config(
-        List<String> securityGroupArns,
-        String subnetArn) {
+        @OutputCustomType.Parameter("securityGroupArns") List<String> securityGroupArns,
+        @OutputCustomType.Parameter("subnetArn") String subnetArn) {
         this.securityGroupArns = securityGroupArns;
         this.subnetArn = subnetArn;
     }

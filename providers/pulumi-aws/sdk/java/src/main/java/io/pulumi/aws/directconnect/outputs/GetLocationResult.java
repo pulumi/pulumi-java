@@ -32,13 +32,13 @@ public final class GetLocationResult {
      */
     private final String locationName;
 
-    @OutputCustomType.Constructor({"availablePortSpeeds","availableProviders","id","locationCode","locationName"})
+    @OutputCustomType.Constructor
     private GetLocationResult(
-        List<String> availablePortSpeeds,
-        List<String> availableProviders,
-        String id,
-        String locationCode,
-        String locationName) {
+        @OutputCustomType.Parameter("availablePortSpeeds") List<String> availablePortSpeeds,
+        @OutputCustomType.Parameter("availableProviders") List<String> availableProviders,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("locationCode") String locationCode,
+        @OutputCustomType.Parameter("locationName") String locationName) {
         this.availablePortSpeeds = availablePortSpeeds;
         this.availableProviders = availableProviders;
         this.id = id;

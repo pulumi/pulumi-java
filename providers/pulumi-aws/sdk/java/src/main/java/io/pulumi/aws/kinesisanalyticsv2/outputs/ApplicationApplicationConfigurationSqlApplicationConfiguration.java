@@ -30,11 +30,11 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      */
     private final @Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSource referenceDataSource;
 
-    @OutputCustomType.Constructor({"input","outputs","referenceDataSource"})
+    @OutputCustomType.Constructor
     private ApplicationApplicationConfigurationSqlApplicationConfiguration(
-        @Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationInput input,
-        @Nullable List<ApplicationApplicationConfigurationSqlApplicationConfigurationOutput> outputs,
-        @Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSource referenceDataSource) {
+        @OutputCustomType.Parameter("input") @Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationInput input,
+        @OutputCustomType.Parameter("outputs") @Nullable List<ApplicationApplicationConfigurationSqlApplicationConfigurationOutput> outputs,
+        @OutputCustomType.Parameter("referenceDataSource") @Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSource referenceDataSource) {
         this.input = input;
         this.outputs = outputs;
         this.referenceDataSource = referenceDataSource;

@@ -12,10 +12,10 @@ public final class LaunchConfigurationEphemeralBlockDevice {
     private final String deviceName;
     private final String virtualName;
 
-    @OutputCustomType.Constructor({"deviceName","virtualName"})
+    @OutputCustomType.Constructor
     private LaunchConfigurationEphemeralBlockDevice(
-        String deviceName,
-        String virtualName) {
+        @OutputCustomType.Parameter("deviceName") String deviceName,
+        @OutputCustomType.Parameter("virtualName") String virtualName) {
         this.deviceName = deviceName;
         this.virtualName = virtualName;
     }

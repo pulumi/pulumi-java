@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class GetFunctionEnvironment {
     private final Map<String,String> variables;
 
-    @OutputCustomType.Constructor({"variables"})
-    private GetFunctionEnvironment(Map<String,String> variables) {
+    @OutputCustomType.Constructor
+    private GetFunctionEnvironment(@OutputCustomType.Parameter("variables") Map<String,String> variables) {
         this.variables = variables;
     }
 

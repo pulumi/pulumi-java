@@ -34,12 +34,12 @@ public final class BrokerUser {
      */
     private final String username;
 
-    @OutputCustomType.Constructor({"consoleAccess","groups","password","username"})
+    @OutputCustomType.Constructor
     private BrokerUser(
-        @Nullable Boolean consoleAccess,
-        @Nullable List<String> groups,
-        String password,
-        String username) {
+        @OutputCustomType.Parameter("consoleAccess") @Nullable Boolean consoleAccess,
+        @OutputCustomType.Parameter("groups") @Nullable List<String> groups,
+        @OutputCustomType.Parameter("password") String password,
+        @OutputCustomType.Parameter("username") String username) {
         this.consoleAccess = consoleAccess;
         this.groups = groups;
         this.password = password;

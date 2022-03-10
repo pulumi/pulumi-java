@@ -27,11 +27,11 @@ public final class AnalyticsApplicationCloudwatchLoggingOptions {
      */
     private final String roleArn;
 
-    @OutputCustomType.Constructor({"id","logStreamArn","roleArn"})
+    @OutputCustomType.Constructor
     private AnalyticsApplicationCloudwatchLoggingOptions(
-        @Nullable String id,
-        String logStreamArn,
-        String roleArn) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("logStreamArn") String logStreamArn,
+        @OutputCustomType.Parameter("roleArn") String roleArn) {
         this.id = id;
         this.logStreamArn = logStreamArn;
         this.roleArn = roleArn;

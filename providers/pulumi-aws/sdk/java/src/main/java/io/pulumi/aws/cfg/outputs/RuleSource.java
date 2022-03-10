@@ -28,11 +28,11 @@ public final class RuleSource {
      */
     private final String sourceIdentifier;
 
-    @OutputCustomType.Constructor({"owner","sourceDetails","sourceIdentifier"})
+    @OutputCustomType.Constructor
     private RuleSource(
-        String owner,
-        @Nullable List<RuleSourceSourceDetail> sourceDetails,
-        String sourceIdentifier) {
+        @OutputCustomType.Parameter("owner") String owner,
+        @OutputCustomType.Parameter("sourceDetails") @Nullable List<RuleSourceSourceDetail> sourceDetails,
+        @OutputCustomType.Parameter("sourceIdentifier") String sourceIdentifier) {
         this.owner = owner;
         this.sourceDetails = sourceDetails;
         this.sourceIdentifier = sourceIdentifier;

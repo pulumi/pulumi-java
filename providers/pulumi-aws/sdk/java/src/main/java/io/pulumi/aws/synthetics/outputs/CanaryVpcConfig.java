@@ -28,11 +28,11 @@ public final class CanaryVpcConfig {
      */
     private final @Nullable String vpcId;
 
-    @OutputCustomType.Constructor({"securityGroupIds","subnetIds","vpcId"})
+    @OutputCustomType.Constructor
     private CanaryVpcConfig(
-        @Nullable List<String> securityGroupIds,
-        @Nullable List<String> subnetIds,
-        @Nullable String vpcId) {
+        @OutputCustomType.Parameter("securityGroupIds") @Nullable List<String> securityGroupIds,
+        @OutputCustomType.Parameter("subnetIds") @Nullable List<String> subnetIds,
+        @OutputCustomType.Parameter("vpcId") @Nullable String vpcId) {
         this.securityGroupIds = securityGroupIds;
         this.subnetIds = subnetIds;
         this.vpcId = vpcId;

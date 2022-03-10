@@ -44,15 +44,15 @@ public final class GetCodeSigningConfigResult {
      */
     private final List<GetCodeSigningConfigPolicy> policies;
 
-    @OutputCustomType.Constructor({"allowedPublishers","arn","configId","description","id","lastModified","policies"})
+    @OutputCustomType.Constructor
     private GetCodeSigningConfigResult(
-        List<GetCodeSigningConfigAllowedPublisher> allowedPublishers,
-        String arn,
-        String configId,
-        String description,
-        String id,
-        String lastModified,
-        List<GetCodeSigningConfigPolicy> policies) {
+        @OutputCustomType.Parameter("allowedPublishers") List<GetCodeSigningConfigAllowedPublisher> allowedPublishers,
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("configId") String configId,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastModified") String lastModified,
+        @OutputCustomType.Parameter("policies") List<GetCodeSigningConfigPolicy> policies) {
         this.allowedPublishers = allowedPublishers;
         this.arn = arn;
         this.configId = configId;

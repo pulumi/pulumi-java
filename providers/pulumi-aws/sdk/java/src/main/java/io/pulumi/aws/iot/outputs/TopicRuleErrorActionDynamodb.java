@@ -62,18 +62,18 @@ public final class TopicRuleErrorActionDynamodb {
      */
     private final String tableName;
 
-    @OutputCustomType.Constructor({"hashKeyField","hashKeyType","hashKeyValue","operation","payloadField","rangeKeyField","rangeKeyType","rangeKeyValue","roleArn","tableName"})
+    @OutputCustomType.Constructor
     private TopicRuleErrorActionDynamodb(
-        String hashKeyField,
-        @Nullable String hashKeyType,
-        String hashKeyValue,
-        @Nullable String operation,
-        @Nullable String payloadField,
-        @Nullable String rangeKeyField,
-        @Nullable String rangeKeyType,
-        @Nullable String rangeKeyValue,
-        String roleArn,
-        String tableName) {
+        @OutputCustomType.Parameter("hashKeyField") String hashKeyField,
+        @OutputCustomType.Parameter("hashKeyType") @Nullable String hashKeyType,
+        @OutputCustomType.Parameter("hashKeyValue") String hashKeyValue,
+        @OutputCustomType.Parameter("operation") @Nullable String operation,
+        @OutputCustomType.Parameter("payloadField") @Nullable String payloadField,
+        @OutputCustomType.Parameter("rangeKeyField") @Nullable String rangeKeyField,
+        @OutputCustomType.Parameter("rangeKeyType") @Nullable String rangeKeyType,
+        @OutputCustomType.Parameter("rangeKeyValue") @Nullable String rangeKeyValue,
+        @OutputCustomType.Parameter("roleArn") String roleArn,
+        @OutputCustomType.Parameter("tableName") String tableName) {
         this.hashKeyField = hashKeyField;
         this.hashKeyType = hashKeyType;
         this.hashKeyValue = hashKeyValue;

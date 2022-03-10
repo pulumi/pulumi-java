@@ -60,19 +60,19 @@ public final class GetContainerDefinitionResult {
     private final Integer memoryReservation;
     private final String taskDefinition;
 
-    @OutputCustomType.Constructor({"containerName","cpu","disableNetworking","dockerLabels","environment","id","image","imageDigest","memory","memoryReservation","taskDefinition"})
+    @OutputCustomType.Constructor
     private GetContainerDefinitionResult(
-        String containerName,
-        Integer cpu,
-        Boolean disableNetworking,
-        Map<String,String> dockerLabels,
-        Map<String,String> environment,
-        String id,
-        String image,
-        String imageDigest,
-        Integer memory,
-        Integer memoryReservation,
-        String taskDefinition) {
+        @OutputCustomType.Parameter("containerName") String containerName,
+        @OutputCustomType.Parameter("cpu") Integer cpu,
+        @OutputCustomType.Parameter("disableNetworking") Boolean disableNetworking,
+        @OutputCustomType.Parameter("dockerLabels") Map<String,String> dockerLabels,
+        @OutputCustomType.Parameter("environment") Map<String,String> environment,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("image") String image,
+        @OutputCustomType.Parameter("imageDigest") String imageDigest,
+        @OutputCustomType.Parameter("memory") Integer memory,
+        @OutputCustomType.Parameter("memoryReservation") Integer memoryReservation,
+        @OutputCustomType.Parameter("taskDefinition") String taskDefinition) {
         this.containerName = containerName;
         this.cpu = cpu;
         this.disableNetworking = disableNetworking;

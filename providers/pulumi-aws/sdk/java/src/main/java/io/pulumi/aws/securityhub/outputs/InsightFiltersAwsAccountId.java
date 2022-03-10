@@ -20,10 +20,10 @@ public final class InsightFiltersAwsAccountId {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"comparison","value"})
+    @OutputCustomType.Constructor
     private InsightFiltersAwsAccountId(
-        String comparison,
-        String value) {
+        @OutputCustomType.Parameter("comparison") String comparison,
+        @OutputCustomType.Parameter("value") String value) {
         this.comparison = comparison;
         this.value = value;
     }

@@ -16,12 +16,12 @@ public final class GetLoadBalancerAccessLogs {
     private final Boolean enabled;
     private final Integer interval;
 
-    @OutputCustomType.Constructor({"bucket","bucketPrefix","enabled","interval"})
+    @OutputCustomType.Constructor
     private GetLoadBalancerAccessLogs(
-        String bucket,
-        String bucketPrefix,
-        Boolean enabled,
-        Integer interval) {
+        @OutputCustomType.Parameter("bucket") String bucket,
+        @OutputCustomType.Parameter("bucketPrefix") String bucketPrefix,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("interval") Integer interval) {
         this.bucket = bucket;
         this.bucketPrefix = bucketPrefix;
         this.enabled = enabled;

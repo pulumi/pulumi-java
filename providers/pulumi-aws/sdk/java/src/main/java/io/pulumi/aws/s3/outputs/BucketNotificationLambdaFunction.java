@@ -38,13 +38,13 @@ public final class BucketNotificationLambdaFunction {
      */
     private final @Nullable String lambdaFunctionArn;
 
-    @OutputCustomType.Constructor({"events","filterPrefix","filterSuffix","id","lambdaFunctionArn"})
+    @OutputCustomType.Constructor
     private BucketNotificationLambdaFunction(
-        List<String> events,
-        @Nullable String filterPrefix,
-        @Nullable String filterSuffix,
-        @Nullable String id,
-        @Nullable String lambdaFunctionArn) {
+        @OutputCustomType.Parameter("events") List<String> events,
+        @OutputCustomType.Parameter("filterPrefix") @Nullable String filterPrefix,
+        @OutputCustomType.Parameter("filterSuffix") @Nullable String filterSuffix,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("lambdaFunctionArn") @Nullable String lambdaFunctionArn) {
         this.events = events;
         this.filterPrefix = filterPrefix;
         this.filterSuffix = filterSuffix;

@@ -26,11 +26,11 @@ public final class BudgetActionDefinitionSsmActionDefinition {
      */
     private final String region;
 
-    @OutputCustomType.Constructor({"actionSubType","instanceIds","region"})
+    @OutputCustomType.Constructor
     private BudgetActionDefinitionSsmActionDefinition(
-        String actionSubType,
-        List<String> instanceIds,
-        String region) {
+        @OutputCustomType.Parameter("actionSubType") String actionSubType,
+        @OutputCustomType.Parameter("instanceIds") List<String> instanceIds,
+        @OutputCustomType.Parameter("region") String region) {
         this.actionSubType = actionSubType;
         this.instanceIds = instanceIds;
         this.region = region;

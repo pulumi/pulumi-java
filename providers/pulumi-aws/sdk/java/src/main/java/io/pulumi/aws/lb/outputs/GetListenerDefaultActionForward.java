@@ -14,10 +14,10 @@ public final class GetListenerDefaultActionForward {
     private final List<GetListenerDefaultActionForwardStickiness> stickinesses;
     private final List<GetListenerDefaultActionForwardTargetGroup> targetGroups;
 
-    @OutputCustomType.Constructor({"stickinesses","targetGroups"})
+    @OutputCustomType.Constructor
     private GetListenerDefaultActionForward(
-        List<GetListenerDefaultActionForwardStickiness> stickinesses,
-        List<GetListenerDefaultActionForwardTargetGroup> targetGroups) {
+        @OutputCustomType.Parameter("stickinesses") List<GetListenerDefaultActionForwardStickiness> stickinesses,
+        @OutputCustomType.Parameter("targetGroups") List<GetListenerDefaultActionForwardTargetGroup> targetGroups) {
         this.stickinesses = stickinesses;
         this.targetGroups = targetGroups;
     }

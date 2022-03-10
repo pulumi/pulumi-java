@@ -33,12 +33,12 @@ public final class InstanceFleetLaunchSpecificationsSpotSpecification {
      */
     private final Integer timeoutDurationMinutes;
 
-    @OutputCustomType.Constructor({"allocationStrategy","blockDurationMinutes","timeoutAction","timeoutDurationMinutes"})
+    @OutputCustomType.Constructor
     private InstanceFleetLaunchSpecificationsSpotSpecification(
-        String allocationStrategy,
-        @Nullable Integer blockDurationMinutes,
-        String timeoutAction,
-        Integer timeoutDurationMinutes) {
+        @OutputCustomType.Parameter("allocationStrategy") String allocationStrategy,
+        @OutputCustomType.Parameter("blockDurationMinutes") @Nullable Integer blockDurationMinutes,
+        @OutputCustomType.Parameter("timeoutAction") String timeoutAction,
+        @OutputCustomType.Parameter("timeoutDurationMinutes") Integer timeoutDurationMinutes) {
         this.allocationStrategy = allocationStrategy;
         this.blockDurationMinutes = blockDurationMinutes;
         this.timeoutAction = timeoutAction;

@@ -15,8 +15,8 @@ public final class DetectorDatasourcesS3Logs {
      */
     private final Boolean enable;
 
-    @OutputCustomType.Constructor({"enable"})
-    private DetectorDatasourcesS3Logs(Boolean enable) {
+    @OutputCustomType.Constructor
+    private DetectorDatasourcesS3Logs(@OutputCustomType.Parameter("enable") Boolean enable) {
         this.enable = enable;
     }
 

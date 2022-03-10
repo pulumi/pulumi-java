@@ -35,12 +35,12 @@ public final class GraphQLApiAdditionalAuthenticationProvider {
      */
     private final @Nullable GraphQLApiAdditionalAuthenticationProviderUserPoolConfig userPoolConfig;
 
-    @OutputCustomType.Constructor({"authenticationType","lambdaAuthorizerConfig","openidConnectConfig","userPoolConfig"})
+    @OutputCustomType.Constructor
     private GraphQLApiAdditionalAuthenticationProvider(
-        String authenticationType,
-        @Nullable GraphQLApiAdditionalAuthenticationProviderLambdaAuthorizerConfig lambdaAuthorizerConfig,
-        @Nullable GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfig openidConnectConfig,
-        @Nullable GraphQLApiAdditionalAuthenticationProviderUserPoolConfig userPoolConfig) {
+        @OutputCustomType.Parameter("authenticationType") String authenticationType,
+        @OutputCustomType.Parameter("lambdaAuthorizerConfig") @Nullable GraphQLApiAdditionalAuthenticationProviderLambdaAuthorizerConfig lambdaAuthorizerConfig,
+        @OutputCustomType.Parameter("openidConnectConfig") @Nullable GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfig openidConnectConfig,
+        @OutputCustomType.Parameter("userPoolConfig") @Nullable GraphQLApiAdditionalAuthenticationProviderUserPoolConfig userPoolConfig) {
         this.authenticationType = authenticationType;
         this.lambdaAuthorizerConfig = lambdaAuthorizerConfig;
         this.openidConnectConfig = openidConnectConfig;

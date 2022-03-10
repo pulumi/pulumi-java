@@ -20,10 +20,10 @@ public final class InsightFiltersResourceAwsS3BucketOwnerId {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"comparison","value"})
+    @OutputCustomType.Constructor
     private InsightFiltersResourceAwsS3BucketOwnerId(
-        String comparison,
-        String value) {
+        @OutputCustomType.Parameter("comparison") String comparison,
+        @OutputCustomType.Parameter("value") String value) {
         this.comparison = comparison;
         this.value = value;
     }

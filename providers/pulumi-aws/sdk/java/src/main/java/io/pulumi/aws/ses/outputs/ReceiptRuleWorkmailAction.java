@@ -28,11 +28,11 @@ public final class ReceiptRuleWorkmailAction {
      */
     private final @Nullable String topicArn;
 
-    @OutputCustomType.Constructor({"organizationArn","position","topicArn"})
+    @OutputCustomType.Constructor
     private ReceiptRuleWorkmailAction(
-        String organizationArn,
-        Integer position,
-        @Nullable String topicArn) {
+        @OutputCustomType.Parameter("organizationArn") String organizationArn,
+        @OutputCustomType.Parameter("position") Integer position,
+        @OutputCustomType.Parameter("topicArn") @Nullable String topicArn) {
         this.organizationArn = organizationArn;
         this.position = position;
         this.topicArn = topicArn;

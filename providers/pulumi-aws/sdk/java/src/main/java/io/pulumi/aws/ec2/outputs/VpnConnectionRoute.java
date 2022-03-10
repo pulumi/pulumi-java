@@ -27,11 +27,11 @@ public final class VpnConnectionRoute {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor({"destinationCidrBlock","source","state"})
+    @OutputCustomType.Constructor
     private VpnConnectionRoute(
-        @Nullable String destinationCidrBlock,
-        @Nullable String source,
-        @Nullable String state) {
+        @OutputCustomType.Parameter("destinationCidrBlock") @Nullable String destinationCidrBlock,
+        @OutputCustomType.Parameter("source") @Nullable String source,
+        @OutputCustomType.Parameter("state") @Nullable String state) {
         this.destinationCidrBlock = destinationCidrBlock;
         this.source = source;
         this.state = state;

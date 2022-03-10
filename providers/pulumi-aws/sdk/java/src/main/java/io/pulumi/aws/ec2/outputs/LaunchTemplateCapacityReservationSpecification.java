@@ -23,10 +23,10 @@ public final class LaunchTemplateCapacityReservationSpecification {
      */
     private final @Nullable LaunchTemplateCapacityReservationSpecificationCapacityReservationTarget capacityReservationTarget;
 
-    @OutputCustomType.Constructor({"capacityReservationPreference","capacityReservationTarget"})
+    @OutputCustomType.Constructor
     private LaunchTemplateCapacityReservationSpecification(
-        @Nullable String capacityReservationPreference,
-        @Nullable LaunchTemplateCapacityReservationSpecificationCapacityReservationTarget capacityReservationTarget) {
+        @OutputCustomType.Parameter("capacityReservationPreference") @Nullable String capacityReservationPreference,
+        @OutputCustomType.Parameter("capacityReservationTarget") @Nullable LaunchTemplateCapacityReservationSpecificationCapacityReservationTarget capacityReservationTarget) {
         this.capacityReservationPreference = capacityReservationPreference;
         this.capacityReservationTarget = capacityReservationTarget;
     }

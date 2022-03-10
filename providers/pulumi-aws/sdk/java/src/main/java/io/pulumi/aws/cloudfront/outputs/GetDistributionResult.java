@@ -69,19 +69,19 @@ public final class GetDistributionResult {
     private final String status;
     private final @Nullable Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"aliases","arn","domainName","enabled","etag","hostedZoneId","id","inProgressValidationBatches","lastModifiedTime","status","tags"})
+    @OutputCustomType.Constructor
     private GetDistributionResult(
-        List<String> aliases,
-        String arn,
-        String domainName,
-        Boolean enabled,
-        String etag,
-        String hostedZoneId,
-        String id,
-        Integer inProgressValidationBatches,
-        String lastModifiedTime,
-        String status,
-        @Nullable Map<String,String> tags) {
+        @OutputCustomType.Parameter("aliases") List<String> aliases,
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("domainName") String domainName,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("hostedZoneId") String hostedZoneId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("inProgressValidationBatches") Integer inProgressValidationBatches,
+        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags) {
         this.aliases = aliases;
         this.arn = arn;
         this.domainName = domainName;

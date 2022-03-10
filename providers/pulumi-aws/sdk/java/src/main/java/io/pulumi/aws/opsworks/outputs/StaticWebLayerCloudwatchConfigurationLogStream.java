@@ -24,19 +24,19 @@ public final class StaticWebLayerCloudwatchConfigurationLogStream {
     private final @Nullable String multilineStartPattern;
     private final @Nullable String timeZone;
 
-    @OutputCustomType.Constructor({"batchCount","batchSize","bufferDuration","datetimeFormat","encoding","file","fileFingerprintLines","initialPosition","logGroupName","multilineStartPattern","timeZone"})
+    @OutputCustomType.Constructor
     private StaticWebLayerCloudwatchConfigurationLogStream(
-        @Nullable Integer batchCount,
-        @Nullable Integer batchSize,
-        @Nullable Integer bufferDuration,
-        @Nullable String datetimeFormat,
-        @Nullable String encoding,
-        String file,
-        @Nullable String fileFingerprintLines,
-        @Nullable String initialPosition,
-        String logGroupName,
-        @Nullable String multilineStartPattern,
-        @Nullable String timeZone) {
+        @OutputCustomType.Parameter("batchCount") @Nullable Integer batchCount,
+        @OutputCustomType.Parameter("batchSize") @Nullable Integer batchSize,
+        @OutputCustomType.Parameter("bufferDuration") @Nullable Integer bufferDuration,
+        @OutputCustomType.Parameter("datetimeFormat") @Nullable String datetimeFormat,
+        @OutputCustomType.Parameter("encoding") @Nullable String encoding,
+        @OutputCustomType.Parameter("file") String file,
+        @OutputCustomType.Parameter("fileFingerprintLines") @Nullable String fileFingerprintLines,
+        @OutputCustomType.Parameter("initialPosition") @Nullable String initialPosition,
+        @OutputCustomType.Parameter("logGroupName") String logGroupName,
+        @OutputCustomType.Parameter("multilineStartPattern") @Nullable String multilineStartPattern,
+        @OutputCustomType.Parameter("timeZone") @Nullable String timeZone) {
         this.batchCount = batchCount;
         this.batchSize = batchSize;
         this.bufferDuration = bufferDuration;

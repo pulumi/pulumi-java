@@ -23,10 +23,10 @@ public final class RuleGroupRuleStatementAndStatementStatementIpSetReferenceStat
      */
     private final @Nullable RuleGroupRuleStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig ipSetForwardedIpConfig;
 
-    @OutputCustomType.Constructor({"arn","ipSetForwardedIpConfig"})
+    @OutputCustomType.Constructor
     private RuleGroupRuleStatementAndStatementStatementIpSetReferenceStatement(
-        String arn,
-        @Nullable RuleGroupRuleStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig ipSetForwardedIpConfig) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("ipSetForwardedIpConfig") @Nullable RuleGroupRuleStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig ipSetForwardedIpConfig) {
         this.arn = arn;
         this.ipSetForwardedIpConfig = ipSetForwardedIpConfig;
     }

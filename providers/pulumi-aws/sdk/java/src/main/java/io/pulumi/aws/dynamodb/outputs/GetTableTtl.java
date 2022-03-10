@@ -13,10 +13,10 @@ public final class GetTableTtl {
     private final String attributeName;
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"attributeName","enabled"})
+    @OutputCustomType.Constructor
     private GetTableTtl(
-        String attributeName,
-        Boolean enabled) {
+        @OutputCustomType.Parameter("attributeName") String attributeName,
+        @OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.attributeName = attributeName;
         this.enabled = enabled;
     }

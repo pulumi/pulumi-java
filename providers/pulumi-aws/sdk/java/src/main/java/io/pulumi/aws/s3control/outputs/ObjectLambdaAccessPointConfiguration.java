@@ -35,12 +35,12 @@ public final class ObjectLambdaAccessPointConfiguration {
      */
     private final List<ObjectLambdaAccessPointConfigurationTransformationConfiguration> transformationConfigurations;
 
-    @OutputCustomType.Constructor({"allowedFeatures","cloudWatchMetricsEnabled","supportingAccessPoint","transformationConfigurations"})
+    @OutputCustomType.Constructor
     private ObjectLambdaAccessPointConfiguration(
-        @Nullable List<String> allowedFeatures,
-        @Nullable Boolean cloudWatchMetricsEnabled,
-        String supportingAccessPoint,
-        List<ObjectLambdaAccessPointConfigurationTransformationConfiguration> transformationConfigurations) {
+        @OutputCustomType.Parameter("allowedFeatures") @Nullable List<String> allowedFeatures,
+        @OutputCustomType.Parameter("cloudWatchMetricsEnabled") @Nullable Boolean cloudWatchMetricsEnabled,
+        @OutputCustomType.Parameter("supportingAccessPoint") String supportingAccessPoint,
+        @OutputCustomType.Parameter("transformationConfigurations") List<ObjectLambdaAccessPointConfigurationTransformationConfiguration> transformationConfigurations) {
         this.allowedFeatures = allowedFeatures;
         this.cloudWatchMetricsEnabled = cloudWatchMetricsEnabled;
         this.supportingAccessPoint = supportingAccessPoint;

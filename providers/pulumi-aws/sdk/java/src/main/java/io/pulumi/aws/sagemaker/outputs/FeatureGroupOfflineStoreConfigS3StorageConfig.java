@@ -22,10 +22,10 @@ public final class FeatureGroupOfflineStoreConfigS3StorageConfig {
      */
     private final String s3Uri;
 
-    @OutputCustomType.Constructor({"kmsKeyId","s3Uri"})
+    @OutputCustomType.Constructor
     private FeatureGroupOfflineStoreConfigS3StorageConfig(
-        @Nullable String kmsKeyId,
-        String s3Uri) {
+        @OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
+        @OutputCustomType.Parameter("s3Uri") String s3Uri) {
         this.kmsKeyId = kmsKeyId;
         this.s3Uri = s3Uri;
     }

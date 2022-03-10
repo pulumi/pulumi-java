@@ -29,15 +29,15 @@ public final class GetSecurityGroupResult {
     private final Map<String,String> tags;
     private final String vpcId;
 
-    @OutputCustomType.Constructor({"arn","description","filters","id","name","tags","vpcId"})
+    @OutputCustomType.Constructor
     private GetSecurityGroupResult(
-        String arn,
-        String description,
-        @Nullable List<GetSecurityGroupFilter> filters,
-        String id,
-        String name,
-        Map<String,String> tags,
-        String vpcId) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("filters") @Nullable List<GetSecurityGroupFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("vpcId") String vpcId) {
         this.arn = arn;
         this.description = description;
         this.filters = filters;

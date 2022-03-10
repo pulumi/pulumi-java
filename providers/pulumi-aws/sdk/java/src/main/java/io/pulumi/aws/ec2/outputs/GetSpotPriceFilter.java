@@ -21,10 +21,10 @@ public final class GetSpotPriceFilter {
      */
     private final List<String> values;
 
-    @OutputCustomType.Constructor({"name","values"})
+    @OutputCustomType.Constructor
     private GetSpotPriceFilter(
-        String name,
-        List<String> values) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("values") List<String> values) {
         this.name = name;
         this.values = values;
     }

@@ -24,10 +24,10 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationProcessingCon
      */
     private final @Nullable List<FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessor> processors;
 
-    @OutputCustomType.Constructor({"enabled","processors"})
+    @OutputCustomType.Constructor
     private FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfiguration(
-        @Nullable Boolean enabled,
-        @Nullable List<FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessor> processors) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("processors") @Nullable List<FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessor> processors) {
         this.enabled = enabled;
         this.processors = processors;
     }

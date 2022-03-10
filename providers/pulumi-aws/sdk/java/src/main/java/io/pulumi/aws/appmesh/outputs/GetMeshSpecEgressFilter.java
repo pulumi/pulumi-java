@@ -15,8 +15,8 @@ public final class GetMeshSpecEgressFilter {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"type"})
-    private GetMeshSpecEgressFilter(String type) {
+    @OutputCustomType.Constructor
+    private GetMeshSpecEgressFilter(@OutputCustomType.Parameter("type") String type) {
         this.type = type;
     }
 

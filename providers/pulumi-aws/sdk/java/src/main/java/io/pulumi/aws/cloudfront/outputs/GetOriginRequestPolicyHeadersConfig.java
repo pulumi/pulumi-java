@@ -14,10 +14,10 @@ public final class GetOriginRequestPolicyHeadersConfig {
     private final String headerBehavior;
     private final List<GetOriginRequestPolicyHeadersConfigHeader> headers;
 
-    @OutputCustomType.Constructor({"headerBehavior","headers"})
+    @OutputCustomType.Constructor
     private GetOriginRequestPolicyHeadersConfig(
-        String headerBehavior,
-        List<GetOriginRequestPolicyHeadersConfigHeader> headers) {
+        @OutputCustomType.Parameter("headerBehavior") String headerBehavior,
+        @OutputCustomType.Parameter("headers") List<GetOriginRequestPolicyHeadersConfigHeader> headers) {
         this.headerBehavior = headerBehavior;
         this.headers = headers;
     }

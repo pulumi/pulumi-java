@@ -28,11 +28,11 @@ public final class PipelineDefinitionPipelineObject {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"fields","id","name"})
+    @OutputCustomType.Constructor
     private PipelineDefinitionPipelineObject(
-        @Nullable List<PipelineDefinitionPipelineObjectField> fields,
-        String id,
-        String name) {
+        @OutputCustomType.Parameter("fields") @Nullable List<PipelineDefinitionPipelineObjectField> fields,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name) {
         this.fields = fields;
         this.id = id;
         this.name = name;

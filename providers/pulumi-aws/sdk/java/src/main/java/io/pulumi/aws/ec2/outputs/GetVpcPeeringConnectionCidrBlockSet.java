@@ -15,8 +15,8 @@ public final class GetVpcPeeringConnectionCidrBlockSet {
      */
     private final String cidrBlock;
 
-    @OutputCustomType.Constructor({"cidrBlock"})
-    private GetVpcPeeringConnectionCidrBlockSet(String cidrBlock) {
+    @OutputCustomType.Constructor
+    private GetVpcPeeringConnectionCidrBlockSet(@OutputCustomType.Parameter("cidrBlock") String cidrBlock) {
         this.cidrBlock = cidrBlock;
     }
 

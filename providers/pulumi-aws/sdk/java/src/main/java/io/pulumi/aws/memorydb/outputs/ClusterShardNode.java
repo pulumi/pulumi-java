@@ -31,12 +31,12 @@ public final class ClusterShardNode {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"availabilityZone","createTime","endpoints","name"})
+    @OutputCustomType.Constructor
     private ClusterShardNode(
-        @Nullable String availabilityZone,
-        @Nullable String createTime,
-        @Nullable List<ClusterShardNodeEndpoint> endpoints,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("availabilityZone") @Nullable String availabilityZone,
+        @OutputCustomType.Parameter("createTime") @Nullable String createTime,
+        @OutputCustomType.Parameter("endpoints") @Nullable List<ClusterShardNodeEndpoint> endpoints,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.availabilityZone = availabilityZone;
         this.createTime = createTime;
         this.endpoints = endpoints;

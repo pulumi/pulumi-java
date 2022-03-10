@@ -21,10 +21,10 @@ public final class RuleGroupRuleStatementByteMatchStatementTextTransformation {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"priority","type"})
+    @OutputCustomType.Constructor
     private RuleGroupRuleStatementByteMatchStatementTextTransformation(
-        Integer priority,
-        String type) {
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("type") String type) {
         this.priority = priority;
         this.type = type;
     }

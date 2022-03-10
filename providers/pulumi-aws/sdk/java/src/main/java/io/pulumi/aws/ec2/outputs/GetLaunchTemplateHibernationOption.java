@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GetLaunchTemplateHibernationOption {
     private final Boolean configured;
 
-    @OutputCustomType.Constructor({"configured"})
-    private GetLaunchTemplateHibernationOption(Boolean configured) {
+    @OutputCustomType.Constructor
+    private GetLaunchTemplateHibernationOption(@OutputCustomType.Parameter("configured") Boolean configured) {
         this.configured = configured;
     }
 

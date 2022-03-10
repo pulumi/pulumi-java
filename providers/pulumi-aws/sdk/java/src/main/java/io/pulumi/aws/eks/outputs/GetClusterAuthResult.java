@@ -21,11 +21,11 @@ public final class GetClusterAuthResult {
      */
     private final String token;
 
-    @OutputCustomType.Constructor({"id","name","token"})
+    @OutputCustomType.Constructor
     private GetClusterAuthResult(
-        String id,
-        String name,
-        String token) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("token") String token) {
         this.id = id;
         this.name = name;
         this.token = token;

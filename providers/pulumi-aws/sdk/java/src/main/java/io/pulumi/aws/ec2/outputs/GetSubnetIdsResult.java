@@ -27,13 +27,13 @@ public final class GetSubnetIdsResult {
     private final Map<String,String> tags;
     private final String vpcId;
 
-    @OutputCustomType.Constructor({"filters","id","ids","tags","vpcId"})
+    @OutputCustomType.Constructor
     private GetSubnetIdsResult(
-        @Nullable List<GetSubnetIdsFilter> filters,
-        String id,
-        List<String> ids,
-        Map<String,String> tags,
-        String vpcId) {
+        @OutputCustomType.Parameter("filters") @Nullable List<GetSubnetIdsFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ids") List<String> ids,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("vpcId") String vpcId) {
         this.filters = filters;
         this.id = id;
         this.ids = ids;

@@ -15,8 +15,8 @@ public final class RuleGroupRuleGroupStatefulRuleOptions {
      */
     private final String ruleOrder;
 
-    @OutputCustomType.Constructor({"ruleOrder"})
-    private RuleGroupRuleGroupStatefulRuleOptions(String ruleOrder) {
+    @OutputCustomType.Constructor
+    private RuleGroupRuleGroupStatefulRuleOptions(@OutputCustomType.Parameter("ruleOrder") String ruleOrder) {
         this.ruleOrder = ruleOrder;
     }
 

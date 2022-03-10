@@ -24,12 +24,12 @@ public final class GetKafkaVersionResult {
     private final String status;
     private final String version;
 
-    @OutputCustomType.Constructor({"id","preferredVersions","status","version"})
+    @OutputCustomType.Constructor
     private GetKafkaVersionResult(
-        String id,
-        @Nullable List<String> preferredVersions,
-        String status,
-        String version) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("preferredVersions") @Nullable List<String> preferredVersions,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("version") String version) {
         this.id = id;
         this.preferredVersions = preferredVersions;
         this.status = status;

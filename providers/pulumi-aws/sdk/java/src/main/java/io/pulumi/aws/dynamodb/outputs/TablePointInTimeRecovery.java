@@ -15,8 +15,8 @@ public final class TablePointInTimeRecovery {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private TablePointInTimeRecovery(Boolean enabled) {
+    @OutputCustomType.Constructor
+    private TablePointInTimeRecovery(@OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

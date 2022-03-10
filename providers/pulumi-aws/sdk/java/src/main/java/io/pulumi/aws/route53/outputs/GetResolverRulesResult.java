@@ -27,14 +27,14 @@ public final class GetResolverRulesResult {
     private final @Nullable String ruleType;
     private final @Nullable String shareStatus;
 
-    @OutputCustomType.Constructor({"id","ownerId","resolverEndpointId","resolverRuleIds","ruleType","shareStatus"})
+    @OutputCustomType.Constructor
     private GetResolverRulesResult(
-        String id,
-        @Nullable String ownerId,
-        @Nullable String resolverEndpointId,
-        List<String> resolverRuleIds,
-        @Nullable String ruleType,
-        @Nullable String shareStatus) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ownerId") @Nullable String ownerId,
+        @OutputCustomType.Parameter("resolverEndpointId") @Nullable String resolverEndpointId,
+        @OutputCustomType.Parameter("resolverRuleIds") List<String> resolverRuleIds,
+        @OutputCustomType.Parameter("ruleType") @Nullable String ruleType,
+        @OutputCustomType.Parameter("shareStatus") @Nullable String shareStatus) {
         this.id = id;
         this.ownerId = ownerId;
         this.resolverEndpointId = resolverEndpointId;

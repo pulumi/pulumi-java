@@ -15,8 +15,8 @@ public final class VpcIpamOperatingRegion {
      */
     private final String regionName;
 
-    @OutputCustomType.Constructor({"regionName"})
-    private VpcIpamOperatingRegion(String regionName) {
+    @OutputCustomType.Constructor
+    private VpcIpamOperatingRegion(@OutputCustomType.Parameter("regionName") String regionName) {
         this.regionName = regionName;
     }
 

@@ -27,11 +27,11 @@ public final class CodeRepositoryGitConfig {
      */
     private final @Nullable String secretArn;
 
-    @OutputCustomType.Constructor({"branch","repositoryUrl","secretArn"})
+    @OutputCustomType.Constructor
     private CodeRepositoryGitConfig(
-        @Nullable String branch,
-        String repositoryUrl,
-        @Nullable String secretArn) {
+        @OutputCustomType.Parameter("branch") @Nullable String branch,
+        @OutputCustomType.Parameter("repositoryUrl") String repositoryUrl,
+        @OutputCustomType.Parameter("secretArn") @Nullable String secretArn) {
         this.branch = branch;
         this.repositoryUrl = repositoryUrl;
         this.secretArn = secretArn;

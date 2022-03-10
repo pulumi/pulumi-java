@@ -32,12 +32,12 @@ public final class CustomDomainAssociationCertificateValidationRecord {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"name","status","type","value"})
+    @OutputCustomType.Constructor
     private CustomDomainAssociationCertificateValidationRecord(
-        @Nullable String name,
-        @Nullable String status,
-        @Nullable String type,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.name = name;
         this.status = status;
         this.type = type;

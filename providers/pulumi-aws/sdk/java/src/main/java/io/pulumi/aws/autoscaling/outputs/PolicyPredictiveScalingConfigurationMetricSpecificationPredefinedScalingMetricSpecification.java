@@ -20,10 +20,10 @@ public final class PolicyPredictiveScalingConfigurationMetricSpecificationPredef
      */
     private final String resourceLabel;
 
-    @OutputCustomType.Constructor({"predefinedMetricType","resourceLabel"})
+    @OutputCustomType.Constructor
     private PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedScalingMetricSpecification(
-        String predefinedMetricType,
-        String resourceLabel) {
+        @OutputCustomType.Parameter("predefinedMetricType") String predefinedMetricType,
+        @OutputCustomType.Parameter("resourceLabel") String resourceLabel) {
         this.predefinedMetricType = predefinedMetricType;
         this.resourceLabel = resourceLabel;
     }

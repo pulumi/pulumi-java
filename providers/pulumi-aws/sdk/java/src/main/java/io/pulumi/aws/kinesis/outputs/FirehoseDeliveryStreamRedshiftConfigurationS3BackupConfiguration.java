@@ -61,17 +61,17 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurat
      */
     private final String roleArn;
 
-    @OutputCustomType.Constructor({"bucketArn","bufferInterval","bufferSize","cloudwatchLoggingOptions","compressionFormat","errorOutputPrefix","kmsKeyArn","prefix","roleArn"})
+    @OutputCustomType.Constructor
     private FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfiguration(
-        String bucketArn,
-        @Nullable Integer bufferInterval,
-        @Nullable Integer bufferSize,
-        @Nullable FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptions cloudwatchLoggingOptions,
-        @Nullable String compressionFormat,
-        @Nullable String errorOutputPrefix,
-        @Nullable String kmsKeyArn,
-        @Nullable String prefix,
-        String roleArn) {
+        @OutputCustomType.Parameter("bucketArn") String bucketArn,
+        @OutputCustomType.Parameter("bufferInterval") @Nullable Integer bufferInterval,
+        @OutputCustomType.Parameter("bufferSize") @Nullable Integer bufferSize,
+        @OutputCustomType.Parameter("cloudwatchLoggingOptions") @Nullable FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptions cloudwatchLoggingOptions,
+        @OutputCustomType.Parameter("compressionFormat") @Nullable String compressionFormat,
+        @OutputCustomType.Parameter("errorOutputPrefix") @Nullable String errorOutputPrefix,
+        @OutputCustomType.Parameter("kmsKeyArn") @Nullable String kmsKeyArn,
+        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
+        @OutputCustomType.Parameter("roleArn") String roleArn) {
         this.bucketArn = bucketArn;
         this.bufferInterval = bufferInterval;
         this.bufferSize = bufferSize;

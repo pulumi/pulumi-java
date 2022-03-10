@@ -23,10 +23,10 @@ public final class LaunchTemplateTagSpecification {
      */
     private final @Nullable Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"resourceType","tags"})
+    @OutputCustomType.Constructor
     private LaunchTemplateTagSpecification(
-        @Nullable String resourceType,
-        @Nullable Map<String,String> tags) {
+        @OutputCustomType.Parameter("resourceType") @Nullable String resourceType,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags) {
         this.resourceType = resourceType;
         this.tags = tags;
     }

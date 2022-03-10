@@ -27,12 +27,12 @@ public final class GetEbsVolumesResult {
     private final List<String> ids;
     private final @Nullable Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"filters","id","ids","tags"})
+    @OutputCustomType.Constructor
     private GetEbsVolumesResult(
-        @Nullable List<GetEbsVolumesFilter> filters,
-        String id,
-        List<String> ids,
-        @Nullable Map<String,String> tags) {
+        @OutputCustomType.Parameter("filters") @Nullable List<GetEbsVolumesFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ids") List<String> ids,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags) {
         this.filters = filters;
         this.id = id;
         this.ids = ids;

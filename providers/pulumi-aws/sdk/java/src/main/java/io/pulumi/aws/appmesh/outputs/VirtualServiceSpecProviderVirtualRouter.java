@@ -15,8 +15,8 @@ public final class VirtualServiceSpecProviderVirtualRouter {
      */
     private final String virtualRouterName;
 
-    @OutputCustomType.Constructor({"virtualRouterName"})
-    private VirtualServiceSpecProviderVirtualRouter(String virtualRouterName) {
+    @OutputCustomType.Constructor
+    private VirtualServiceSpecProviderVirtualRouter(@OutputCustomType.Parameter("virtualRouterName") String virtualRouterName) {
         this.virtualRouterName = virtualRouterName;
     }
 

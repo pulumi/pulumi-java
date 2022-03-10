@@ -29,11 +29,11 @@ public final class LoggingConfigurationLoggingConfigurationLogDestinationConfig 
      */
     private final String logType;
 
-    @OutputCustomType.Constructor({"logDestination","logDestinationType","logType"})
+    @OutputCustomType.Constructor
     private LoggingConfigurationLoggingConfigurationLogDestinationConfig(
-        Map<String,String> logDestination,
-        String logDestinationType,
-        String logType) {
+        @OutputCustomType.Parameter("logDestination") Map<String,String> logDestination,
+        @OutputCustomType.Parameter("logDestinationType") String logDestinationType,
+        @OutputCustomType.Parameter("logType") String logType) {
         this.logDestination = logDestination;
         this.logDestinationType = logDestinationType;
         this.logType = logType;

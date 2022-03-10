@@ -43,14 +43,14 @@ public final class GroupMixedInstancesPolicyInstancesDistribution {
      */
     private final @Nullable String spotMaxPrice;
 
-    @OutputCustomType.Constructor({"onDemandAllocationStrategy","onDemandBaseCapacity","onDemandPercentageAboveBaseCapacity","spotAllocationStrategy","spotInstancePools","spotMaxPrice"})
+    @OutputCustomType.Constructor
     private GroupMixedInstancesPolicyInstancesDistribution(
-        @Nullable String onDemandAllocationStrategy,
-        @Nullable Integer onDemandBaseCapacity,
-        @Nullable Integer onDemandPercentageAboveBaseCapacity,
-        @Nullable String spotAllocationStrategy,
-        @Nullable Integer spotInstancePools,
-        @Nullable String spotMaxPrice) {
+        @OutputCustomType.Parameter("onDemandAllocationStrategy") @Nullable String onDemandAllocationStrategy,
+        @OutputCustomType.Parameter("onDemandBaseCapacity") @Nullable Integer onDemandBaseCapacity,
+        @OutputCustomType.Parameter("onDemandPercentageAboveBaseCapacity") @Nullable Integer onDemandPercentageAboveBaseCapacity,
+        @OutputCustomType.Parameter("spotAllocationStrategy") @Nullable String spotAllocationStrategy,
+        @OutputCustomType.Parameter("spotInstancePools") @Nullable Integer spotInstancePools,
+        @OutputCustomType.Parameter("spotMaxPrice") @Nullable String spotMaxPrice) {
         this.onDemandAllocationStrategy = onDemandAllocationStrategy;
         this.onDemandBaseCapacity = onDemandBaseCapacity;
         this.onDemandPercentageAboveBaseCapacity = onDemandPercentageAboveBaseCapacity;

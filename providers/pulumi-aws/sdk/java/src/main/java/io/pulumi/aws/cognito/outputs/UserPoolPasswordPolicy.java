@@ -43,14 +43,14 @@ public final class UserPoolPasswordPolicy {
      */
     private final @Nullable Integer temporaryPasswordValidityDays;
 
-    @OutputCustomType.Constructor({"minimumLength","requireLowercase","requireNumbers","requireSymbols","requireUppercase","temporaryPasswordValidityDays"})
+    @OutputCustomType.Constructor
     private UserPoolPasswordPolicy(
-        @Nullable Integer minimumLength,
-        @Nullable Boolean requireLowercase,
-        @Nullable Boolean requireNumbers,
-        @Nullable Boolean requireSymbols,
-        @Nullable Boolean requireUppercase,
-        @Nullable Integer temporaryPasswordValidityDays) {
+        @OutputCustomType.Parameter("minimumLength") @Nullable Integer minimumLength,
+        @OutputCustomType.Parameter("requireLowercase") @Nullable Boolean requireLowercase,
+        @OutputCustomType.Parameter("requireNumbers") @Nullable Boolean requireNumbers,
+        @OutputCustomType.Parameter("requireSymbols") @Nullable Boolean requireSymbols,
+        @OutputCustomType.Parameter("requireUppercase") @Nullable Boolean requireUppercase,
+        @OutputCustomType.Parameter("temporaryPasswordValidityDays") @Nullable Integer temporaryPasswordValidityDays) {
         this.minimumLength = minimumLength;
         this.requireLowercase = requireLowercase;
         this.requireNumbers = requireNumbers;

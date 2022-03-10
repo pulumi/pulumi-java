@@ -32,12 +32,12 @@ public final class PipelineNotifications {
      */
     private final @Nullable String warning;
 
-    @OutputCustomType.Constructor({"completed","error","progressing","warning"})
+    @OutputCustomType.Constructor
     private PipelineNotifications(
-        @Nullable String completed,
-        @Nullable String error,
-        @Nullable String progressing,
-        @Nullable String warning) {
+        @OutputCustomType.Parameter("completed") @Nullable String completed,
+        @OutputCustomType.Parameter("error") @Nullable String error,
+        @OutputCustomType.Parameter("progressing") @Nullable String progressing,
+        @OutputCustomType.Parameter("warning") @Nullable String warning) {
         this.completed = completed;
         this.error = error;
         this.progressing = progressing;

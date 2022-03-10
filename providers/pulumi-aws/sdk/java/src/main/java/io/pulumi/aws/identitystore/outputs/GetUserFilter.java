@@ -20,10 +20,10 @@ public final class GetUserFilter {
      */
     private final String attributeValue;
 
-    @OutputCustomType.Constructor({"attributePath","attributeValue"})
+    @OutputCustomType.Constructor
     private GetUserFilter(
-        String attributePath,
-        String attributeValue) {
+        @OutputCustomType.Parameter("attributePath") String attributePath,
+        @OutputCustomType.Parameter("attributeValue") String attributeValue) {
         this.attributePath = attributePath;
         this.attributeValue = attributeValue;
     }

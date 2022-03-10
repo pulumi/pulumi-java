@@ -36,13 +36,13 @@ public final class GetPipelineDefinitionResult {
      */
     private final List<GetPipelineDefinitionPipelineObject> pipelineObjects;
 
-    @OutputCustomType.Constructor({"id","parameterObjects","parameterValues","pipelineId","pipelineObjects"})
+    @OutputCustomType.Constructor
     private GetPipelineDefinitionResult(
-        String id,
-        List<GetPipelineDefinitionParameterObject> parameterObjects,
-        @Nullable List<GetPipelineDefinitionParameterValue> parameterValues,
-        String pipelineId,
-        List<GetPipelineDefinitionPipelineObject> pipelineObjects) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("parameterObjects") List<GetPipelineDefinitionParameterObject> parameterObjects,
+        @OutputCustomType.Parameter("parameterValues") @Nullable List<GetPipelineDefinitionParameterValue> parameterValues,
+        @OutputCustomType.Parameter("pipelineId") String pipelineId,
+        @OutputCustomType.Parameter("pipelineObjects") List<GetPipelineDefinitionPipelineObject> pipelineObjects) {
         this.id = id;
         this.parameterObjects = parameterObjects;
         this.parameterValues = parameterValues;

@@ -25,11 +25,11 @@ public final class SchedulingPolicyFairSharePolicy {
      */
     private final @Nullable List<SchedulingPolicyFairSharePolicyShareDistribution> shareDistributions;
 
-    @OutputCustomType.Constructor({"computeReservation","shareDecaySeconds","shareDistributions"})
+    @OutputCustomType.Constructor
     private SchedulingPolicyFairSharePolicy(
-        @Nullable Integer computeReservation,
-        @Nullable Integer shareDecaySeconds,
-        @Nullable List<SchedulingPolicyFairSharePolicyShareDistribution> shareDistributions) {
+        @OutputCustomType.Parameter("computeReservation") @Nullable Integer computeReservation,
+        @OutputCustomType.Parameter("shareDecaySeconds") @Nullable Integer shareDecaySeconds,
+        @OutputCustomType.Parameter("shareDistributions") @Nullable List<SchedulingPolicyFairSharePolicyShareDistribution> shareDistributions) {
         this.computeReservation = computeReservation;
         this.shareDecaySeconds = shareDecaySeconds;
         this.shareDistributions = shareDistributions;

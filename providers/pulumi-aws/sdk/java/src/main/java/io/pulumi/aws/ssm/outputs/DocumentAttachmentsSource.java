@@ -28,11 +28,11 @@ public final class DocumentAttachmentsSource {
      */
     private final List<String> values;
 
-    @OutputCustomType.Constructor({"key","name","values"})
+    @OutputCustomType.Constructor
     private DocumentAttachmentsSource(
-        String key,
-        @Nullable String name,
-        List<String> values) {
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("values") List<String> values) {
         this.key = key;
         this.name = name;
         this.values = values;

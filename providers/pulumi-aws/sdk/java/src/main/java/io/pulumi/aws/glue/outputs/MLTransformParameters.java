@@ -21,10 +21,10 @@ public final class MLTransformParameters {
      */
     private final String transformType;
 
-    @OutputCustomType.Constructor({"findMatchesParameters","transformType"})
+    @OutputCustomType.Constructor
     private MLTransformParameters(
-        MLTransformParametersFindMatchesParameters findMatchesParameters,
-        String transformType) {
+        @OutputCustomType.Parameter("findMatchesParameters") MLTransformParametersFindMatchesParameters findMatchesParameters,
+        @OutputCustomType.Parameter("transformType") String transformType) {
         this.findMatchesParameters = findMatchesParameters;
         this.transformType = transformType;
     }

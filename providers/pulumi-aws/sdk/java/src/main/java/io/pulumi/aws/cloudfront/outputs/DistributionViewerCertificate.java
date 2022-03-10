@@ -52,13 +52,13 @@ public final class DistributionViewerCertificate {
     private final @Nullable String minimumProtocolVersion;
     private final @Nullable String sslSupportMethod;
 
-    @OutputCustomType.Constructor({"acmCertificateArn","cloudfrontDefaultCertificate","iamCertificateId","minimumProtocolVersion","sslSupportMethod"})
+    @OutputCustomType.Constructor
     private DistributionViewerCertificate(
-        @Nullable String acmCertificateArn,
-        @Nullable Boolean cloudfrontDefaultCertificate,
-        @Nullable String iamCertificateId,
-        @Nullable String minimumProtocolVersion,
-        @Nullable String sslSupportMethod) {
+        @OutputCustomType.Parameter("acmCertificateArn") @Nullable String acmCertificateArn,
+        @OutputCustomType.Parameter("cloudfrontDefaultCertificate") @Nullable Boolean cloudfrontDefaultCertificate,
+        @OutputCustomType.Parameter("iamCertificateId") @Nullable String iamCertificateId,
+        @OutputCustomType.Parameter("minimumProtocolVersion") @Nullable String minimumProtocolVersion,
+        @OutputCustomType.Parameter("sslSupportMethod") @Nullable String sslSupportMethod) {
         this.acmCertificateArn = acmCertificateArn;
         this.cloudfrontDefaultCertificate = cloudfrontDefaultCertificate;
         this.iamCertificateId = iamCertificateId;

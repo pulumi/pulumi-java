@@ -15,8 +15,8 @@ public final class WebAclDefaultAction {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"type"})
-    private WebAclDefaultAction(String type) {
+    @OutputCustomType.Constructor
+    private WebAclDefaultAction(@OutputCustomType.Parameter("type") String type) {
         this.type = type;
     }
 

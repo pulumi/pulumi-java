@@ -22,10 +22,10 @@ public final class WebhookAuthenticationConfiguration {
      */
     private final @Nullable String secretToken;
 
-    @OutputCustomType.Constructor({"allowedIpRange","secretToken"})
+    @OutputCustomType.Constructor
     private WebhookAuthenticationConfiguration(
-        @Nullable String allowedIpRange,
-        @Nullable String secretToken) {
+        @OutputCustomType.Parameter("allowedIpRange") @Nullable String allowedIpRange,
+        @OutputCustomType.Parameter("secretToken") @Nullable String secretToken) {
         this.allowedIpRange = allowedIpRange;
         this.secretToken = secretToken;
     }

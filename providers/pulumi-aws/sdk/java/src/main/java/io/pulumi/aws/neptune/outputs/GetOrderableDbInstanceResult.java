@@ -102,30 +102,30 @@ public final class GetOrderableDbInstanceResult {
     private final Boolean supportsStorageEncryption;
     private final Boolean vpc;
 
-    @OutputCustomType.Constructor({"availabilityZones","engine","engineVersion","id","instanceClass","licenseModel","maxIopsPerDbInstance","maxIopsPerGib","maxStorageSize","minIopsPerDbInstance","minIopsPerGib","minStorageSize","multiAzCapable","preferredInstanceClasses","readReplicaCapable","storageType","supportsEnhancedMonitoring","supportsIamDatabaseAuthentication","supportsIops","supportsPerformanceInsights","supportsStorageEncryption","vpc"})
+    @OutputCustomType.Constructor
     private GetOrderableDbInstanceResult(
-        List<String> availabilityZones,
-        @Nullable String engine,
-        String engineVersion,
-        String id,
-        String instanceClass,
-        @Nullable String licenseModel,
-        Integer maxIopsPerDbInstance,
-        Double maxIopsPerGib,
-        Integer maxStorageSize,
-        Integer minIopsPerDbInstance,
-        Double minIopsPerGib,
-        Integer minStorageSize,
-        Boolean multiAzCapable,
-        @Nullable List<String> preferredInstanceClasses,
-        Boolean readReplicaCapable,
-        String storageType,
-        Boolean supportsEnhancedMonitoring,
-        Boolean supportsIamDatabaseAuthentication,
-        Boolean supportsIops,
-        Boolean supportsPerformanceInsights,
-        Boolean supportsStorageEncryption,
-        Boolean vpc) {
+        @OutputCustomType.Parameter("availabilityZones") List<String> availabilityZones,
+        @OutputCustomType.Parameter("engine") @Nullable String engine,
+        @OutputCustomType.Parameter("engineVersion") String engineVersion,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instanceClass") String instanceClass,
+        @OutputCustomType.Parameter("licenseModel") @Nullable String licenseModel,
+        @OutputCustomType.Parameter("maxIopsPerDbInstance") Integer maxIopsPerDbInstance,
+        @OutputCustomType.Parameter("maxIopsPerGib") Double maxIopsPerGib,
+        @OutputCustomType.Parameter("maxStorageSize") Integer maxStorageSize,
+        @OutputCustomType.Parameter("minIopsPerDbInstance") Integer minIopsPerDbInstance,
+        @OutputCustomType.Parameter("minIopsPerGib") Double minIopsPerGib,
+        @OutputCustomType.Parameter("minStorageSize") Integer minStorageSize,
+        @OutputCustomType.Parameter("multiAzCapable") Boolean multiAzCapable,
+        @OutputCustomType.Parameter("preferredInstanceClasses") @Nullable List<String> preferredInstanceClasses,
+        @OutputCustomType.Parameter("readReplicaCapable") Boolean readReplicaCapable,
+        @OutputCustomType.Parameter("storageType") String storageType,
+        @OutputCustomType.Parameter("supportsEnhancedMonitoring") Boolean supportsEnhancedMonitoring,
+        @OutputCustomType.Parameter("supportsIamDatabaseAuthentication") Boolean supportsIamDatabaseAuthentication,
+        @OutputCustomType.Parameter("supportsIops") Boolean supportsIops,
+        @OutputCustomType.Parameter("supportsPerformanceInsights") Boolean supportsPerformanceInsights,
+        @OutputCustomType.Parameter("supportsStorageEncryption") Boolean supportsStorageEncryption,
+        @OutputCustomType.Parameter("vpc") Boolean vpc) {
         this.availabilityZones = availabilityZones;
         this.engine = engine;
         this.engineVersion = engineVersion;

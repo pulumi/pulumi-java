@@ -13,11 +13,11 @@ public final class GetSigningProfileRevocationRecord {
     private final String revokedAt;
     private final String revokedBy;
 
-    @OutputCustomType.Constructor({"revocationEffectiveFrom","revokedAt","revokedBy"})
+    @OutputCustomType.Constructor
     private GetSigningProfileRevocationRecord(
-        String revocationEffectiveFrom,
-        String revokedAt,
-        String revokedBy) {
+        @OutputCustomType.Parameter("revocationEffectiveFrom") String revocationEffectiveFrom,
+        @OutputCustomType.Parameter("revokedAt") String revokedAt,
+        @OutputCustomType.Parameter("revokedBy") String revokedBy) {
         this.revocationEffectiveFrom = revocationEffectiveFrom;
         this.revokedAt = revokedAt;
         this.revokedBy = revokedBy;

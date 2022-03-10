@@ -23,10 +23,10 @@ public final class DataRepositoryAssociationS3 {
      */
     private final @Nullable DataRepositoryAssociationS3AutoImportPolicy autoImportPolicy;
 
-    @OutputCustomType.Constructor({"autoExportPolicy","autoImportPolicy"})
+    @OutputCustomType.Constructor
     private DataRepositoryAssociationS3(
-        @Nullable DataRepositoryAssociationS3AutoExportPolicy autoExportPolicy,
-        @Nullable DataRepositoryAssociationS3AutoImportPolicy autoImportPolicy) {
+        @OutputCustomType.Parameter("autoExportPolicy") @Nullable DataRepositoryAssociationS3AutoExportPolicy autoExportPolicy,
+        @OutputCustomType.Parameter("autoImportPolicy") @Nullable DataRepositoryAssociationS3AutoImportPolicy autoImportPolicy) {
         this.autoExportPolicy = autoExportPolicy;
         this.autoImportPolicy = autoImportPolicy;
     }

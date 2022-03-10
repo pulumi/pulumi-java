@@ -36,13 +36,13 @@ public final class GetLaunchTemplateMetadataOption {
      */
     private final String instanceMetadataTags;
 
-    @OutputCustomType.Constructor({"httpEndpoint","httpProtocolIpv6","httpPutResponseHopLimit","httpTokens","instanceMetadataTags"})
+    @OutputCustomType.Constructor
     private GetLaunchTemplateMetadataOption(
-        String httpEndpoint,
-        String httpProtocolIpv6,
-        Integer httpPutResponseHopLimit,
-        String httpTokens,
-        String instanceMetadataTags) {
+        @OutputCustomType.Parameter("httpEndpoint") String httpEndpoint,
+        @OutputCustomType.Parameter("httpProtocolIpv6") String httpProtocolIpv6,
+        @OutputCustomType.Parameter("httpPutResponseHopLimit") Integer httpPutResponseHopLimit,
+        @OutputCustomType.Parameter("httpTokens") String httpTokens,
+        @OutputCustomType.Parameter("instanceMetadataTags") String instanceMetadataTags) {
         this.httpEndpoint = httpEndpoint;
         this.httpProtocolIpv6 = httpProtocolIpv6;
         this.httpPutResponseHopLimit = httpPutResponseHopLimit;

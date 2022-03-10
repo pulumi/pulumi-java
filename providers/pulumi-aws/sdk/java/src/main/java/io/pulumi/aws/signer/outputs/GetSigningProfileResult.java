@@ -65,19 +65,19 @@ public final class GetSigningProfileResult {
      */
     private final String versionArn;
 
-    @OutputCustomType.Constructor({"arn","id","name","platformDisplayName","platformId","revocationRecords","signatureValidityPeriods","status","tags","version","versionArn"})
+    @OutputCustomType.Constructor
     private GetSigningProfileResult(
-        String arn,
-        String id,
-        String name,
-        String platformDisplayName,
-        String platformId,
-        List<GetSigningProfileRevocationRecord> revocationRecords,
-        List<GetSigningProfileSignatureValidityPeriod> signatureValidityPeriods,
-        String status,
-        Map<String,String> tags,
-        String version,
-        String versionArn) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("platformDisplayName") String platformDisplayName,
+        @OutputCustomType.Parameter("platformId") String platformId,
+        @OutputCustomType.Parameter("revocationRecords") List<GetSigningProfileRevocationRecord> revocationRecords,
+        @OutputCustomType.Parameter("signatureValidityPeriods") List<GetSigningProfileSignatureValidityPeriod> signatureValidityPeriods,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("version") String version,
+        @OutputCustomType.Parameter("versionArn") String versionArn) {
         this.arn = arn;
         this.id = id;
         this.name = name;

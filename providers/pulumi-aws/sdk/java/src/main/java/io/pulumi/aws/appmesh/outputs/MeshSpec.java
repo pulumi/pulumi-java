@@ -17,8 +17,8 @@ public final class MeshSpec {
      */
     private final @Nullable MeshSpecEgressFilter egressFilter;
 
-    @OutputCustomType.Constructor({"egressFilter"})
-    private MeshSpec(@Nullable MeshSpecEgressFilter egressFilter) {
+    @OutputCustomType.Constructor
+    private MeshSpec(@OutputCustomType.Parameter("egressFilter") @Nullable MeshSpecEgressFilter egressFilter) {
         this.egressFilter = egressFilter;
     }
 

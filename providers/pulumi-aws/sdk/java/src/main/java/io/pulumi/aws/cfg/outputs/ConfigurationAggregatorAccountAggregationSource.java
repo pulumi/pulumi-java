@@ -29,11 +29,11 @@ public final class ConfigurationAggregatorAccountAggregationSource {
      */
     private final @Nullable List<String> regions;
 
-    @OutputCustomType.Constructor({"accountIds","allRegions","regions"})
+    @OutputCustomType.Constructor
     private ConfigurationAggregatorAccountAggregationSource(
-        List<String> accountIds,
-        @Nullable Boolean allRegions,
-        @Nullable List<String> regions) {
+        @OutputCustomType.Parameter("accountIds") List<String> accountIds,
+        @OutputCustomType.Parameter("allRegions") @Nullable Boolean allRegions,
+        @OutputCustomType.Parameter("regions") @Nullable List<String> regions) {
         this.accountIds = accountIds;
         this.allRegions = allRegions;
         this.regions = regions;

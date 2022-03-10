@@ -32,14 +32,14 @@ public final class GetSpotPriceResult {
      */
     private final String spotPriceTimestamp;
 
-    @OutputCustomType.Constructor({"availabilityZone","filters","id","instanceType","spotPrice","spotPriceTimestamp"})
+    @OutputCustomType.Constructor
     private GetSpotPriceResult(
-        @Nullable String availabilityZone,
-        @Nullable List<GetSpotPriceFilter> filters,
-        String id,
-        @Nullable String instanceType,
-        String spotPrice,
-        String spotPriceTimestamp) {
+        @OutputCustomType.Parameter("availabilityZone") @Nullable String availabilityZone,
+        @OutputCustomType.Parameter("filters") @Nullable List<GetSpotPriceFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instanceType") @Nullable String instanceType,
+        @OutputCustomType.Parameter("spotPrice") String spotPrice,
+        @OutputCustomType.Parameter("spotPriceTimestamp") String spotPriceTimestamp) {
         this.availabilityZone = availabilityZone;
         this.filters = filters;
         this.id = id;

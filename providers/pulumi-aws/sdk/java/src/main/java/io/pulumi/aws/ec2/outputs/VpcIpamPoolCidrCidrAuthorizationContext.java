@@ -22,10 +22,10 @@ public final class VpcIpamPoolCidrCidrAuthorizationContext {
      */
     private final @Nullable String signature;
 
-    @OutputCustomType.Constructor({"message","signature"})
+    @OutputCustomType.Constructor
     private VpcIpamPoolCidrCidrAuthorizationContext(
-        @Nullable String message,
-        @Nullable String signature) {
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("signature") @Nullable String signature) {
         this.message = message;
         this.signature = signature;
     }

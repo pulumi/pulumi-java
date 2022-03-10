@@ -42,14 +42,14 @@ public final class UserPoolVerificationMessageTemplate {
      */
     private final @Nullable String smsMessage;
 
-    @OutputCustomType.Constructor({"defaultEmailOption","emailMessage","emailMessageByLink","emailSubject","emailSubjectByLink","smsMessage"})
+    @OutputCustomType.Constructor
     private UserPoolVerificationMessageTemplate(
-        @Nullable String defaultEmailOption,
-        @Nullable String emailMessage,
-        @Nullable String emailMessageByLink,
-        @Nullable String emailSubject,
-        @Nullable String emailSubjectByLink,
-        @Nullable String smsMessage) {
+        @OutputCustomType.Parameter("defaultEmailOption") @Nullable String defaultEmailOption,
+        @OutputCustomType.Parameter("emailMessage") @Nullable String emailMessage,
+        @OutputCustomType.Parameter("emailMessageByLink") @Nullable String emailMessageByLink,
+        @OutputCustomType.Parameter("emailSubject") @Nullable String emailSubject,
+        @OutputCustomType.Parameter("emailSubjectByLink") @Nullable String emailSubjectByLink,
+        @OutputCustomType.Parameter("smsMessage") @Nullable String smsMessage) {
         this.defaultEmailOption = defaultEmailOption;
         this.emailMessage = emailMessage;
         this.emailMessageByLink = emailMessageByLink;

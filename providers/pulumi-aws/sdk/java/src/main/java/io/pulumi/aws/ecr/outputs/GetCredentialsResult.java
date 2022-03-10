@@ -19,13 +19,13 @@ public final class GetCredentialsResult {
     private final String proxyEndpoint;
     private final String registryId;
 
-    @OutputCustomType.Constructor({"authorizationToken","expiresAt","id","proxyEndpoint","registryId"})
+    @OutputCustomType.Constructor
     private GetCredentialsResult(
-        String authorizationToken,
-        String expiresAt,
-        String id,
-        String proxyEndpoint,
-        String registryId) {
+        @OutputCustomType.Parameter("authorizationToken") String authorizationToken,
+        @OutputCustomType.Parameter("expiresAt") String expiresAt,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("proxyEndpoint") String proxyEndpoint,
+        @OutputCustomType.Parameter("registryId") String registryId) {
         this.authorizationToken = authorizationToken;
         this.expiresAt = expiresAt;
         this.id = id;

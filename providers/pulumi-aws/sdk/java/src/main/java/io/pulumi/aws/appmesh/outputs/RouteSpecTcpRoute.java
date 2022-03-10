@@ -23,10 +23,10 @@ public final class RouteSpecTcpRoute {
      */
     private final @Nullable RouteSpecTcpRouteTimeout timeout;
 
-    @OutputCustomType.Constructor({"action","timeout"})
+    @OutputCustomType.Constructor
     private RouteSpecTcpRoute(
-        RouteSpecTcpRouteAction action,
-        @Nullable RouteSpecTcpRouteTimeout timeout) {
+        @OutputCustomType.Parameter("action") RouteSpecTcpRouteAction action,
+        @OutputCustomType.Parameter("timeout") @Nullable RouteSpecTcpRouteTimeout timeout) {
         this.action = action;
         this.timeout = timeout;
     }

@@ -57,18 +57,18 @@ public final class GetComputeEnvironmentResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"arn","computeEnvironmentName","ecsClusterArn","id","serviceRole","state","status","statusReason","tags","type"})
+    @OutputCustomType.Constructor
     private GetComputeEnvironmentResult(
-        String arn,
-        String computeEnvironmentName,
-        String ecsClusterArn,
-        String id,
-        String serviceRole,
-        String state,
-        String status,
-        String statusReason,
-        Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("computeEnvironmentName") String computeEnvironmentName,
+        @OutputCustomType.Parameter("ecsClusterArn") String ecsClusterArn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("serviceRole") String serviceRole,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("statusReason") String statusReason,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.arn = arn;
         this.computeEnvironmentName = computeEnvironmentName;
         this.ecsClusterArn = ecsClusterArn;

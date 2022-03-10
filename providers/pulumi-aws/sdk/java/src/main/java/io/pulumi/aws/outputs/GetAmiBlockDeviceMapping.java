@@ -31,12 +31,12 @@ public final class GetAmiBlockDeviceMapping {
      */
     private final String virtualName;
 
-    @OutputCustomType.Constructor({"deviceName","ebs","noDevice","virtualName"})
+    @OutputCustomType.Constructor
     private GetAmiBlockDeviceMapping(
-        String deviceName,
-        Map<String,String> ebs,
-        String noDevice,
-        String virtualName) {
+        @OutputCustomType.Parameter("deviceName") String deviceName,
+        @OutputCustomType.Parameter("ebs") Map<String,String> ebs,
+        @OutputCustomType.Parameter("noDevice") String noDevice,
+        @OutputCustomType.Parameter("virtualName") String virtualName) {
         this.deviceName = deviceName;
         this.ebs = ebs;
         this.noDevice = noDevice;

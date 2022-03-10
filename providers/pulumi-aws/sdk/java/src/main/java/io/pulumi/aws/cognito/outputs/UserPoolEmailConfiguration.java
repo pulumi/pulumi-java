@@ -37,13 +37,13 @@ public final class UserPoolEmailConfiguration {
      */
     private final @Nullable String sourceArn;
 
-    @OutputCustomType.Constructor({"configurationSet","emailSendingAccount","fromEmailAddress","replyToEmailAddress","sourceArn"})
+    @OutputCustomType.Constructor
     private UserPoolEmailConfiguration(
-        @Nullable String configurationSet,
-        @Nullable String emailSendingAccount,
-        @Nullable String fromEmailAddress,
-        @Nullable String replyToEmailAddress,
-        @Nullable String sourceArn) {
+        @OutputCustomType.Parameter("configurationSet") @Nullable String configurationSet,
+        @OutputCustomType.Parameter("emailSendingAccount") @Nullable String emailSendingAccount,
+        @OutputCustomType.Parameter("fromEmailAddress") @Nullable String fromEmailAddress,
+        @OutputCustomType.Parameter("replyToEmailAddress") @Nullable String replyToEmailAddress,
+        @OutputCustomType.Parameter("sourceArn") @Nullable String sourceArn) {
         this.configurationSet = configurationSet;
         this.emailSendingAccount = emailSendingAccount;
         this.fromEmailAddress = fromEmailAddress;

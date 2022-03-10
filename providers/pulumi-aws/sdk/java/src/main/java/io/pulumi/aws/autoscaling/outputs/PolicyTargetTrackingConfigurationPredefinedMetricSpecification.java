@@ -22,10 +22,10 @@ public final class PolicyTargetTrackingConfigurationPredefinedMetricSpecificatio
      */
     private final @Nullable String resourceLabel;
 
-    @OutputCustomType.Constructor({"predefinedMetricType","resourceLabel"})
+    @OutputCustomType.Constructor
     private PolicyTargetTrackingConfigurationPredefinedMetricSpecification(
-        String predefinedMetricType,
-        @Nullable String resourceLabel) {
+        @OutputCustomType.Parameter("predefinedMetricType") String predefinedMetricType,
+        @OutputCustomType.Parameter("resourceLabel") @Nullable String resourceLabel) {
         this.predefinedMetricType = predefinedMetricType;
         this.resourceLabel = resourceLabel;
     }

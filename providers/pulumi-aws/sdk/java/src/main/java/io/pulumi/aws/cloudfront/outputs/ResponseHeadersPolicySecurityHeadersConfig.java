@@ -47,14 +47,14 @@ public final class ResponseHeadersPolicySecurityHeadersConfig {
      */
     private final @Nullable ResponseHeadersPolicySecurityHeadersConfigXssProtection xssProtection;
 
-    @OutputCustomType.Constructor({"contentSecurityPolicy","contentTypeOptions","frameOptions","referrerPolicy","strictTransportSecurity","xssProtection"})
+    @OutputCustomType.Constructor
     private ResponseHeadersPolicySecurityHeadersConfig(
-        @Nullable ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicy contentSecurityPolicy,
-        @Nullable ResponseHeadersPolicySecurityHeadersConfigContentTypeOptions contentTypeOptions,
-        @Nullable ResponseHeadersPolicySecurityHeadersConfigFrameOptions frameOptions,
-        @Nullable ResponseHeadersPolicySecurityHeadersConfigReferrerPolicy referrerPolicy,
-        @Nullable ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurity strictTransportSecurity,
-        @Nullable ResponseHeadersPolicySecurityHeadersConfigXssProtection xssProtection) {
+        @OutputCustomType.Parameter("contentSecurityPolicy") @Nullable ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicy contentSecurityPolicy,
+        @OutputCustomType.Parameter("contentTypeOptions") @Nullable ResponseHeadersPolicySecurityHeadersConfigContentTypeOptions contentTypeOptions,
+        @OutputCustomType.Parameter("frameOptions") @Nullable ResponseHeadersPolicySecurityHeadersConfigFrameOptions frameOptions,
+        @OutputCustomType.Parameter("referrerPolicy") @Nullable ResponseHeadersPolicySecurityHeadersConfigReferrerPolicy referrerPolicy,
+        @OutputCustomType.Parameter("strictTransportSecurity") @Nullable ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurity strictTransportSecurity,
+        @OutputCustomType.Parameter("xssProtection") @Nullable ResponseHeadersPolicySecurityHeadersConfigXssProtection xssProtection) {
         this.contentSecurityPolicy = contentSecurityPolicy;
         this.contentTypeOptions = contentTypeOptions;
         this.frameOptions = frameOptions;

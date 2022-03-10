@@ -26,10 +26,10 @@ public final class SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatch {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"data","type"})
+    @OutputCustomType.Constructor
     private SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatch(
-        @Nullable String data,
-        String type) {
+        @OutputCustomType.Parameter("data") @Nullable String data,
+        @OutputCustomType.Parameter("type") String type) {
         this.data = data;
         this.type = type;
     }

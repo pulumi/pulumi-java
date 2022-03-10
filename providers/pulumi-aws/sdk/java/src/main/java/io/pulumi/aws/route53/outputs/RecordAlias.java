@@ -26,11 +26,11 @@ public final class RecordAlias {
      */
     private final String zoneId;
 
-    @OutputCustomType.Constructor({"evaluateTargetHealth","name","zoneId"})
+    @OutputCustomType.Constructor
     private RecordAlias(
-        Boolean evaluateTargetHealth,
-        String name,
-        String zoneId) {
+        @OutputCustomType.Parameter("evaluateTargetHealth") Boolean evaluateTargetHealth,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("zoneId") String zoneId) {
         this.evaluateTargetHealth = evaluateTargetHealth;
         this.name = name;
         this.zoneId = zoneId;

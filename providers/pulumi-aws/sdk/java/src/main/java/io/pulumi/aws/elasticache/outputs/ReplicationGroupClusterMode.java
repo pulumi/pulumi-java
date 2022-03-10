@@ -22,10 +22,10 @@ public final class ReplicationGroupClusterMode {
      */
     private final Integer replicasPerNodeGroup;
 
-    @OutputCustomType.Constructor({"numNodeGroups","replicasPerNodeGroup"})
+    @OutputCustomType.Constructor
     private ReplicationGroupClusterMode(
-        @Nullable Integer numNodeGroups,
-        Integer replicasPerNodeGroup) {
+        @OutputCustomType.Parameter("numNodeGroups") @Nullable Integer numNodeGroups,
+        @OutputCustomType.Parameter("replicasPerNodeGroup") Integer replicasPerNodeGroup) {
         this.numNodeGroups = numNodeGroups;
         this.replicasPerNodeGroup = replicasPerNodeGroup;
     }

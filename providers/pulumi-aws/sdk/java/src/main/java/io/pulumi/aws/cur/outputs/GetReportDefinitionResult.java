@@ -68,20 +68,20 @@ public final class GetReportDefinitionResult {
      */
     private final String timeUnit;
 
-    @OutputCustomType.Constructor({"additionalArtifacts","additionalSchemaElements","compression","format","id","refreshClosedReports","reportName","reportVersioning","s3Bucket","s3Prefix","s3Region","timeUnit"})
+    @OutputCustomType.Constructor
     private GetReportDefinitionResult(
-        List<String> additionalArtifacts,
-        List<String> additionalSchemaElements,
-        String compression,
-        String format,
-        String id,
-        Boolean refreshClosedReports,
-        String reportName,
-        String reportVersioning,
-        String s3Bucket,
-        String s3Prefix,
-        String s3Region,
-        String timeUnit) {
+        @OutputCustomType.Parameter("additionalArtifacts") List<String> additionalArtifacts,
+        @OutputCustomType.Parameter("additionalSchemaElements") List<String> additionalSchemaElements,
+        @OutputCustomType.Parameter("compression") String compression,
+        @OutputCustomType.Parameter("format") String format,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("refreshClosedReports") Boolean refreshClosedReports,
+        @OutputCustomType.Parameter("reportName") String reportName,
+        @OutputCustomType.Parameter("reportVersioning") String reportVersioning,
+        @OutputCustomType.Parameter("s3Bucket") String s3Bucket,
+        @OutputCustomType.Parameter("s3Prefix") String s3Prefix,
+        @OutputCustomType.Parameter("s3Region") String s3Region,
+        @OutputCustomType.Parameter("timeUnit") String timeUnit) {
         this.additionalArtifacts = additionalArtifacts;
         this.additionalSchemaElements = additionalSchemaElements;
         this.compression = compression;

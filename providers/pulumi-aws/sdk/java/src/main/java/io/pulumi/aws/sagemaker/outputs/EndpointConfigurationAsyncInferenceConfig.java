@@ -23,10 +23,10 @@ public final class EndpointConfigurationAsyncInferenceConfig {
      */
     private final EndpointConfigurationAsyncInferenceConfigOutputConfig outputConfig;
 
-    @OutputCustomType.Constructor({"clientConfig","outputConfig"})
+    @OutputCustomType.Constructor
     private EndpointConfigurationAsyncInferenceConfig(
-        @Nullable EndpointConfigurationAsyncInferenceConfigClientConfig clientConfig,
-        EndpointConfigurationAsyncInferenceConfigOutputConfig outputConfig) {
+        @OutputCustomType.Parameter("clientConfig") @Nullable EndpointConfigurationAsyncInferenceConfigClientConfig clientConfig,
+        @OutputCustomType.Parameter("outputConfig") EndpointConfigurationAsyncInferenceConfigOutputConfig outputConfig) {
         this.clientConfig = clientConfig;
         this.outputConfig = outputConfig;
     }

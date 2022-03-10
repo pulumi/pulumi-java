@@ -20,10 +20,10 @@ public final class UserPoolSmsConfiguration {
      */
     private final String snsCallerArn;
 
-    @OutputCustomType.Constructor({"externalId","snsCallerArn"})
+    @OutputCustomType.Constructor
     private UserPoolSmsConfiguration(
-        String externalId,
-        String snsCallerArn) {
+        @OutputCustomType.Parameter("externalId") String externalId,
+        @OutputCustomType.Parameter("snsCallerArn") String snsCallerArn) {
         this.externalId = externalId;
         this.snsCallerArn = snsCallerArn;
     }

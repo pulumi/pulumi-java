@@ -58,20 +58,20 @@ public final class GetEngineVersionResult {
      */
     private final String versionDescription;
 
-    @OutputCustomType.Constructor({"engine","engineDescription","exportableLogTypes","id","parameterGroupFamily","preferredVersions","supportedTimezones","supportsLogExportsToCloudwatch","supportsReadReplica","validUpgradeTargets","version","versionDescription"})
+    @OutputCustomType.Constructor
     private GetEngineVersionResult(
-        @Nullable String engine,
-        String engineDescription,
-        List<String> exportableLogTypes,
-        String id,
-        String parameterGroupFamily,
-        @Nullable List<String> preferredVersions,
-        List<String> supportedTimezones,
-        Boolean supportsLogExportsToCloudwatch,
-        Boolean supportsReadReplica,
-        List<String> validUpgradeTargets,
-        String version,
-        String versionDescription) {
+        @OutputCustomType.Parameter("engine") @Nullable String engine,
+        @OutputCustomType.Parameter("engineDescription") String engineDescription,
+        @OutputCustomType.Parameter("exportableLogTypes") List<String> exportableLogTypes,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("parameterGroupFamily") String parameterGroupFamily,
+        @OutputCustomType.Parameter("preferredVersions") @Nullable List<String> preferredVersions,
+        @OutputCustomType.Parameter("supportedTimezones") List<String> supportedTimezones,
+        @OutputCustomType.Parameter("supportsLogExportsToCloudwatch") Boolean supportsLogExportsToCloudwatch,
+        @OutputCustomType.Parameter("supportsReadReplica") Boolean supportsReadReplica,
+        @OutputCustomType.Parameter("validUpgradeTargets") List<String> validUpgradeTargets,
+        @OutputCustomType.Parameter("version") String version,
+        @OutputCustomType.Parameter("versionDescription") String versionDescription) {
         this.engine = engine;
         this.engineDescription = engineDescription;
         this.exportableLogTypes = exportableLogTypes;

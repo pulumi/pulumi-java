@@ -67,19 +67,19 @@ public final class DefaultRouteTableRoute {
      */
     private final @Nullable String vpcPeeringConnectionId;
 
-    @OutputCustomType.Constructor({"cidrBlock","destinationPrefixListId","egressOnlyGatewayId","gatewayId","instanceId","ipv6CidrBlock","natGatewayId","networkInterfaceId","transitGatewayId","vpcEndpointId","vpcPeeringConnectionId"})
+    @OutputCustomType.Constructor
     private DefaultRouteTableRoute(
-        @Nullable String cidrBlock,
-        @Nullable String destinationPrefixListId,
-        @Nullable String egressOnlyGatewayId,
-        @Nullable String gatewayId,
-        @Nullable String instanceId,
-        @Nullable String ipv6CidrBlock,
-        @Nullable String natGatewayId,
-        @Nullable String networkInterfaceId,
-        @Nullable String transitGatewayId,
-        @Nullable String vpcEndpointId,
-        @Nullable String vpcPeeringConnectionId) {
+        @OutputCustomType.Parameter("cidrBlock") @Nullable String cidrBlock,
+        @OutputCustomType.Parameter("destinationPrefixListId") @Nullable String destinationPrefixListId,
+        @OutputCustomType.Parameter("egressOnlyGatewayId") @Nullable String egressOnlyGatewayId,
+        @OutputCustomType.Parameter("gatewayId") @Nullable String gatewayId,
+        @OutputCustomType.Parameter("instanceId") @Nullable String instanceId,
+        @OutputCustomType.Parameter("ipv6CidrBlock") @Nullable String ipv6CidrBlock,
+        @OutputCustomType.Parameter("natGatewayId") @Nullable String natGatewayId,
+        @OutputCustomType.Parameter("networkInterfaceId") @Nullable String networkInterfaceId,
+        @OutputCustomType.Parameter("transitGatewayId") @Nullable String transitGatewayId,
+        @OutputCustomType.Parameter("vpcEndpointId") @Nullable String vpcEndpointId,
+        @OutputCustomType.Parameter("vpcPeeringConnectionId") @Nullable String vpcPeeringConnectionId) {
         this.cidrBlock = cidrBlock;
         this.destinationPrefixListId = destinationPrefixListId;
         this.egressOnlyGatewayId = egressOnlyGatewayId;

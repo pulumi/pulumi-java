@@ -13,10 +13,10 @@ public final class GetBrokerConfiguration {
     private final String id;
     private final Integer revision;
 
-    @OutputCustomType.Constructor({"id","revision"})
+    @OutputCustomType.Constructor
     private GetBrokerConfiguration(
-        String id,
-        Integer revision) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("revision") Integer revision) {
         this.id = id;
         this.revision = revision;
     }

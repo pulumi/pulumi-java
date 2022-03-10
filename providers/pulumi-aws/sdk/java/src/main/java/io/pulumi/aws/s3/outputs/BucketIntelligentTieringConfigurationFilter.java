@@ -23,10 +23,10 @@ public final class BucketIntelligentTieringConfigurationFilter {
      */
     private final @Nullable Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"prefix","tags"})
+    @OutputCustomType.Constructor
     private BucketIntelligentTieringConfigurationFilter(
-        @Nullable String prefix,
-        @Nullable Map<String,String> tags) {
+        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags) {
         this.prefix = prefix;
         this.tags = tags;
     }

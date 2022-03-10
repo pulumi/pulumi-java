@@ -38,13 +38,13 @@ public final class UserPoolClientAnalyticsConfiguration {
      */
     private final @Nullable Boolean userDataShared;
 
-    @OutputCustomType.Constructor({"applicationArn","applicationId","externalId","roleArn","userDataShared"})
+    @OutputCustomType.Constructor
     private UserPoolClientAnalyticsConfiguration(
-        @Nullable String applicationArn,
-        @Nullable String applicationId,
-        @Nullable String externalId,
-        @Nullable String roleArn,
-        @Nullable Boolean userDataShared) {
+        @OutputCustomType.Parameter("applicationArn") @Nullable String applicationArn,
+        @OutputCustomType.Parameter("applicationId") @Nullable String applicationId,
+        @OutputCustomType.Parameter("externalId") @Nullable String externalId,
+        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
+        @OutputCustomType.Parameter("userDataShared") @Nullable Boolean userDataShared) {
         this.applicationArn = applicationArn;
         this.applicationId = applicationId;
         this.externalId = externalId;

@@ -22,10 +22,10 @@ public final class PermissionsDatabase {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"catalogId","name"})
+    @OutputCustomType.Constructor
     private PermissionsDatabase(
-        @Nullable String catalogId,
-        String name) {
+        @OutputCustomType.Parameter("catalogId") @Nullable String catalogId,
+        @OutputCustomType.Parameter("name") String name) {
         this.catalogId = catalogId;
         this.name = name;
     }

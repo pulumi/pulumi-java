@@ -17,8 +17,8 @@ public final class DataSourceParametersAthena {
      */
     private final @Nullable String workGroup;
 
-    @OutputCustomType.Constructor({"workGroup"})
-    private DataSourceParametersAthena(@Nullable String workGroup) {
+    @OutputCustomType.Constructor
+    private DataSourceParametersAthena(@OutputCustomType.Parameter("workGroup") @Nullable String workGroup) {
         this.workGroup = workGroup;
     }
 

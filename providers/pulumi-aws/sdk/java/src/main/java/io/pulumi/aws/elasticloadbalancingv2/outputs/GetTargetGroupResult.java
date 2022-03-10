@@ -38,27 +38,27 @@ public final class GetTargetGroupResult {
     private final String targetType;
     private final String vpcId;
 
-    @OutputCustomType.Constructor({"arn","arnSuffix","connectionTermination","deregistrationDelay","healthCheck","id","lambdaMultiValueHeadersEnabled","loadBalancingAlgorithmType","name","port","preserveClientIp","protocol","protocolVersion","proxyProtocolV2","slowStart","stickiness","tags","targetType","vpcId"})
+    @OutputCustomType.Constructor
     private GetTargetGroupResult(
-        String arn,
-        String arnSuffix,
-        Boolean connectionTermination,
-        Integer deregistrationDelay,
-        GetTargetGroupHealthCheck healthCheck,
-        String id,
-        Boolean lambdaMultiValueHeadersEnabled,
-        String loadBalancingAlgorithmType,
-        String name,
-        Integer port,
-        String preserveClientIp,
-        String protocol,
-        String protocolVersion,
-        Boolean proxyProtocolV2,
-        Integer slowStart,
-        GetTargetGroupStickiness stickiness,
-        Map<String,String> tags,
-        String targetType,
-        String vpcId) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("arnSuffix") String arnSuffix,
+        @OutputCustomType.Parameter("connectionTermination") Boolean connectionTermination,
+        @OutputCustomType.Parameter("deregistrationDelay") Integer deregistrationDelay,
+        @OutputCustomType.Parameter("healthCheck") GetTargetGroupHealthCheck healthCheck,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lambdaMultiValueHeadersEnabled") Boolean lambdaMultiValueHeadersEnabled,
+        @OutputCustomType.Parameter("loadBalancingAlgorithmType") String loadBalancingAlgorithmType,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("port") Integer port,
+        @OutputCustomType.Parameter("preserveClientIp") String preserveClientIp,
+        @OutputCustomType.Parameter("protocol") String protocol,
+        @OutputCustomType.Parameter("protocolVersion") String protocolVersion,
+        @OutputCustomType.Parameter("proxyProtocolV2") Boolean proxyProtocolV2,
+        @OutputCustomType.Parameter("slowStart") Integer slowStart,
+        @OutputCustomType.Parameter("stickiness") GetTargetGroupStickiness stickiness,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("targetType") String targetType,
+        @OutputCustomType.Parameter("vpcId") String vpcId) {
         this.arn = arn;
         this.arnSuffix = arnSuffix;
         this.connectionTermination = connectionTermination;

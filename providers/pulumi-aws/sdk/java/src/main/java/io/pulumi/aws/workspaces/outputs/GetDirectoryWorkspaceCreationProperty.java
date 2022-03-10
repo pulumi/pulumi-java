@@ -36,13 +36,13 @@ public final class GetDirectoryWorkspaceCreationProperty {
      */
     private final Boolean userEnabledAsLocalAdministrator;
 
-    @OutputCustomType.Constructor({"customSecurityGroupId","defaultOu","enableInternetAccess","enableMaintenanceMode","userEnabledAsLocalAdministrator"})
+    @OutputCustomType.Constructor
     private GetDirectoryWorkspaceCreationProperty(
-        String customSecurityGroupId,
-        String defaultOu,
-        Boolean enableInternetAccess,
-        Boolean enableMaintenanceMode,
-        Boolean userEnabledAsLocalAdministrator) {
+        @OutputCustomType.Parameter("customSecurityGroupId") String customSecurityGroupId,
+        @OutputCustomType.Parameter("defaultOu") String defaultOu,
+        @OutputCustomType.Parameter("enableInternetAccess") Boolean enableInternetAccess,
+        @OutputCustomType.Parameter("enableMaintenanceMode") Boolean enableMaintenanceMode,
+        @OutputCustomType.Parameter("userEnabledAsLocalAdministrator") Boolean userEnabledAsLocalAdministrator) {
         this.customSecurityGroupId = customSecurityGroupId;
         this.defaultOu = defaultOu;
         this.enableInternetAccess = enableInternetAccess;

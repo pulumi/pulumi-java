@@ -28,11 +28,11 @@ public final class GroupMixedInstancesPolicyLaunchTemplateOverride {
      */
     private final @Nullable String weightedCapacity;
 
-    @OutputCustomType.Constructor({"instanceType","launchTemplateSpecification","weightedCapacity"})
+    @OutputCustomType.Constructor
     private GroupMixedInstancesPolicyLaunchTemplateOverride(
-        @Nullable String instanceType,
-        @Nullable GroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecification launchTemplateSpecification,
-        @Nullable String weightedCapacity) {
+        @OutputCustomType.Parameter("instanceType") @Nullable String instanceType,
+        @OutputCustomType.Parameter("launchTemplateSpecification") @Nullable GroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecification launchTemplateSpecification,
+        @OutputCustomType.Parameter("weightedCapacity") @Nullable String weightedCapacity) {
         this.instanceType = instanceType;
         this.launchTemplateSpecification = launchTemplateSpecification;
         this.weightedCapacity = weightedCapacity;

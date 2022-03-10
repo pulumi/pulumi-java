@@ -15,8 +15,8 @@ public final class VirtualNodeSpecListenerTlsCertificateSds {
      */
     private final String secretName;
 
-    @OutputCustomType.Constructor({"secretName"})
-    private VirtualNodeSpecListenerTlsCertificateSds(String secretName) {
+    @OutputCustomType.Constructor
+    private VirtualNodeSpecListenerTlsCertificateSds(@OutputCustomType.Parameter("secretName") String secretName) {
         this.secretName = secretName;
     }
 

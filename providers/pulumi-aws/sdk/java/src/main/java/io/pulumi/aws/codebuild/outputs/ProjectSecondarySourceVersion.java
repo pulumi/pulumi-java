@@ -20,10 +20,10 @@ public final class ProjectSecondarySourceVersion {
      */
     private final String sourceVersion;
 
-    @OutputCustomType.Constructor({"sourceIdentifier","sourceVersion"})
+    @OutputCustomType.Constructor
     private ProjectSecondarySourceVersion(
-        String sourceIdentifier,
-        String sourceVersion) {
+        @OutputCustomType.Parameter("sourceIdentifier") String sourceIdentifier,
+        @OutputCustomType.Parameter("sourceVersion") String sourceVersion) {
         this.sourceIdentifier = sourceIdentifier;
         this.sourceVersion = sourceVersion;
     }

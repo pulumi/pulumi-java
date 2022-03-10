@@ -36,12 +36,12 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTls {
      */
     private final VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidation validation;
 
-    @OutputCustomType.Constructor({"certificate","enforce","ports","validation"})
+    @OutputCustomType.Constructor
     private VirtualGatewaySpecBackendDefaultsClientPolicyTls(
-        @Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificate certificate,
-        @Nullable Boolean enforce,
-        @Nullable List<Integer> ports,
-        VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidation validation) {
+        @OutputCustomType.Parameter("certificate") @Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificate certificate,
+        @OutputCustomType.Parameter("enforce") @Nullable Boolean enforce,
+        @OutputCustomType.Parameter("ports") @Nullable List<Integer> ports,
+        @OutputCustomType.Parameter("validation") VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidation validation) {
         this.certificate = certificate;
         this.enforce = enforce;
         this.ports = ports;

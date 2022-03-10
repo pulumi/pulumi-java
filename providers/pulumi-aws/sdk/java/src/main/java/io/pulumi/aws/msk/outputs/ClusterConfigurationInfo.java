@@ -21,10 +21,10 @@ public final class ClusterConfigurationInfo {
      */
     private final Integer revision;
 
-    @OutputCustomType.Constructor({"arn","revision"})
+    @OutputCustomType.Constructor
     private ClusterConfigurationInfo(
-        String arn,
-        Integer revision) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("revision") Integer revision) {
         this.arn = arn;
         this.revision = revision;
     }

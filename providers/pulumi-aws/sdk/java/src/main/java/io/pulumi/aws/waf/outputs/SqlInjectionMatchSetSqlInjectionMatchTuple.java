@@ -25,10 +25,10 @@ public final class SqlInjectionMatchSetSqlInjectionMatchTuple {
      */
     private final String textTransformation;
 
-    @OutputCustomType.Constructor({"fieldToMatch","textTransformation"})
+    @OutputCustomType.Constructor
     private SqlInjectionMatchSetSqlInjectionMatchTuple(
-        SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatch fieldToMatch,
-        String textTransformation) {
+        @OutputCustomType.Parameter("fieldToMatch") SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatch fieldToMatch,
+        @OutputCustomType.Parameter("textTransformation") String textTransformation) {
         this.fieldToMatch = fieldToMatch;
         this.textTransformation = textTransformation;
     }

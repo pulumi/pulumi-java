@@ -20,10 +20,10 @@ public final class GetBotAssociationLexBot {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"lexRegion","name"})
+    @OutputCustomType.Constructor
     private GetBotAssociationLexBot(
-        String lexRegion,
-        String name) {
+        @OutputCustomType.Parameter("lexRegion") String lexRegion,
+        @OutputCustomType.Parameter("name") String name) {
         this.lexRegion = lexRegion;
         this.name = name;
     }

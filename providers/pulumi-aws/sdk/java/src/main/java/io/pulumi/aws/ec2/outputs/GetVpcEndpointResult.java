@@ -87,27 +87,27 @@ public final class GetVpcEndpointResult {
     private final String vpcEndpointType;
     private final String vpcId;
 
-    @OutputCustomType.Constructor({"arn","cidrBlocks","dnsEntries","filters","id","networkInterfaceIds","ownerId","policy","prefixListId","privateDnsEnabled","requesterManaged","routeTableIds","securityGroupIds","serviceName","state","subnetIds","tags","vpcEndpointType","vpcId"})
+    @OutputCustomType.Constructor
     private GetVpcEndpointResult(
-        String arn,
-        List<String> cidrBlocks,
-        List<GetVpcEndpointDnsEntry> dnsEntries,
-        @Nullable List<GetVpcEndpointFilter> filters,
-        String id,
-        List<String> networkInterfaceIds,
-        String ownerId,
-        String policy,
-        String prefixListId,
-        Boolean privateDnsEnabled,
-        Boolean requesterManaged,
-        List<String> routeTableIds,
-        List<String> securityGroupIds,
-        String serviceName,
-        String state,
-        List<String> subnetIds,
-        Map<String,String> tags,
-        String vpcEndpointType,
-        String vpcId) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("cidrBlocks") List<String> cidrBlocks,
+        @OutputCustomType.Parameter("dnsEntries") List<GetVpcEndpointDnsEntry> dnsEntries,
+        @OutputCustomType.Parameter("filters") @Nullable List<GetVpcEndpointFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("networkInterfaceIds") List<String> networkInterfaceIds,
+        @OutputCustomType.Parameter("ownerId") String ownerId,
+        @OutputCustomType.Parameter("policy") String policy,
+        @OutputCustomType.Parameter("prefixListId") String prefixListId,
+        @OutputCustomType.Parameter("privateDnsEnabled") Boolean privateDnsEnabled,
+        @OutputCustomType.Parameter("requesterManaged") Boolean requesterManaged,
+        @OutputCustomType.Parameter("routeTableIds") List<String> routeTableIds,
+        @OutputCustomType.Parameter("securityGroupIds") List<String> securityGroupIds,
+        @OutputCustomType.Parameter("serviceName") String serviceName,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("subnetIds") List<String> subnetIds,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("vpcEndpointType") String vpcEndpointType,
+        @OutputCustomType.Parameter("vpcId") String vpcId) {
         this.arn = arn;
         this.cidrBlocks = cidrBlocks;
         this.dnsEntries = dnsEntries;

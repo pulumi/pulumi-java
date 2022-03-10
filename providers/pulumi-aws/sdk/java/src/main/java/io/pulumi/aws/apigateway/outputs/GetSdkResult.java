@@ -36,16 +36,16 @@ public final class GetSdkResult {
     private final String sdkType;
     private final String stageName;
 
-    @OutputCustomType.Constructor({"body","contentDisposition","contentType","id","parameters","restApiId","sdkType","stageName"})
+    @OutputCustomType.Constructor
     private GetSdkResult(
-        String body,
-        String contentDisposition,
-        String contentType,
-        String id,
-        @Nullable Map<String,String> parameters,
-        String restApiId,
-        String sdkType,
-        String stageName) {
+        @OutputCustomType.Parameter("body") String body,
+        @OutputCustomType.Parameter("contentDisposition") String contentDisposition,
+        @OutputCustomType.Parameter("contentType") String contentType,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,String> parameters,
+        @OutputCustomType.Parameter("restApiId") String restApiId,
+        @OutputCustomType.Parameter("sdkType") String sdkType,
+        @OutputCustomType.Parameter("stageName") String stageName) {
         this.body = body;
         this.contentDisposition = contentDisposition;
         this.contentType = contentType;

@@ -21,10 +21,10 @@ public final class ServiceDnsConfigDnsRecord {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"ttl","type"})
+    @OutputCustomType.Constructor
     private ServiceDnsConfigDnsRecord(
-        Integer ttl,
-        String type) {
+        @OutputCustomType.Parameter("ttl") Integer ttl,
+        @OutputCustomType.Parameter("type") String type) {
         this.ttl = ttl;
         this.type = type;
     }

@@ -23,10 +23,10 @@ public final class InstanceCapacityReservationSpecification {
      */
     private final @Nullable InstanceCapacityReservationSpecificationCapacityReservationTarget capacityReservationTarget;
 
-    @OutputCustomType.Constructor({"capacityReservationPreference","capacityReservationTarget"})
+    @OutputCustomType.Constructor
     private InstanceCapacityReservationSpecification(
-        @Nullable String capacityReservationPreference,
-        @Nullable InstanceCapacityReservationSpecificationCapacityReservationTarget capacityReservationTarget) {
+        @OutputCustomType.Parameter("capacityReservationPreference") @Nullable String capacityReservationPreference,
+        @OutputCustomType.Parameter("capacityReservationTarget") @Nullable InstanceCapacityReservationSpecificationCapacityReservationTarget capacityReservationTarget) {
         this.capacityReservationPreference = capacityReservationPreference;
         this.capacityReservationTarget = capacityReservationTarget;
     }

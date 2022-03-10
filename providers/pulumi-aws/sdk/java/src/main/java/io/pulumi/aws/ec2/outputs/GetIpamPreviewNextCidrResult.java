@@ -27,13 +27,13 @@ public final class GetIpamPreviewNextCidrResult {
     private final String ipamPoolId;
     private final @Nullable Integer netmaskLength;
 
-    @OutputCustomType.Constructor({"cidr","disallowedCidrs","id","ipamPoolId","netmaskLength"})
+    @OutputCustomType.Constructor
     private GetIpamPreviewNextCidrResult(
-        String cidr,
-        @Nullable List<String> disallowedCidrs,
-        String id,
-        String ipamPoolId,
-        @Nullable Integer netmaskLength) {
+        @OutputCustomType.Parameter("cidr") String cidr,
+        @OutputCustomType.Parameter("disallowedCidrs") @Nullable List<String> disallowedCidrs,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ipamPoolId") String ipamPoolId,
+        @OutputCustomType.Parameter("netmaskLength") @Nullable Integer netmaskLength) {
         this.cidr = cidr;
         this.disallowedCidrs = disallowedCidrs;
         this.id = id;

@@ -34,12 +34,12 @@ public final class OrganizationRoot {
      */
     private final @Nullable List<OrganizationRootPolicyType> policyTypes;
 
-    @OutputCustomType.Constructor({"arn","id","name","policyTypes"})
+    @OutputCustomType.Constructor
     private OrganizationRoot(
-        @Nullable String arn,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable List<OrganizationRootPolicyType> policyTypes) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("policyTypes") @Nullable List<OrganizationRootPolicyType> policyTypes) {
         this.arn = arn;
         this.id = id;
         this.name = name;

@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class GetResponseHeadersPolicyCustomHeadersConfig {
     private final List<GetResponseHeadersPolicyCustomHeadersConfigItem> items;
 
-    @OutputCustomType.Constructor({"items"})
-    private GetResponseHeadersPolicyCustomHeadersConfig(List<GetResponseHeadersPolicyCustomHeadersConfigItem> items) {
+    @OutputCustomType.Constructor
+    private GetResponseHeadersPolicyCustomHeadersConfig(@OutputCustomType.Parameter("items") List<GetResponseHeadersPolicyCustomHeadersConfigItem> items) {
         this.items = items;
     }
 

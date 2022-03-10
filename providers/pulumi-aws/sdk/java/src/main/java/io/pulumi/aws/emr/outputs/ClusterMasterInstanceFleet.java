@@ -48,16 +48,16 @@ public final class ClusterMasterInstanceFleet {
      */
     private final @Nullable Integer targetSpotCapacity;
 
-    @OutputCustomType.Constructor({"id","instanceTypeConfigs","launchSpecifications","name","provisionedOnDemandCapacity","provisionedSpotCapacity","targetOnDemandCapacity","targetSpotCapacity"})
+    @OutputCustomType.Constructor
     private ClusterMasterInstanceFleet(
-        @Nullable String id,
-        @Nullable List<ClusterMasterInstanceFleetInstanceTypeConfig> instanceTypeConfigs,
-        @Nullable ClusterMasterInstanceFleetLaunchSpecifications launchSpecifications,
-        @Nullable String name,
-        @Nullable Integer provisionedOnDemandCapacity,
-        @Nullable Integer provisionedSpotCapacity,
-        @Nullable Integer targetOnDemandCapacity,
-        @Nullable Integer targetSpotCapacity) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("instanceTypeConfigs") @Nullable List<ClusterMasterInstanceFleetInstanceTypeConfig> instanceTypeConfigs,
+        @OutputCustomType.Parameter("launchSpecifications") @Nullable ClusterMasterInstanceFleetLaunchSpecifications launchSpecifications,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("provisionedOnDemandCapacity") @Nullable Integer provisionedOnDemandCapacity,
+        @OutputCustomType.Parameter("provisionedSpotCapacity") @Nullable Integer provisionedSpotCapacity,
+        @OutputCustomType.Parameter("targetOnDemandCapacity") @Nullable Integer targetOnDemandCapacity,
+        @OutputCustomType.Parameter("targetSpotCapacity") @Nullable Integer targetSpotCapacity) {
         this.id = id;
         this.instanceTypeConfigs = instanceTypeConfigs;
         this.launchSpecifications = launchSpecifications;

@@ -17,10 +17,10 @@ public final class GetListenerDefaultActionForwardTargetGroup {
     private final String arn;
     private final Integer weight;
 
-    @OutputCustomType.Constructor({"arn","weight"})
+    @OutputCustomType.Constructor
     private GetListenerDefaultActionForwardTargetGroup(
-        String arn,
-        Integer weight) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("weight") Integer weight) {
         this.arn = arn;
         this.weight = weight;
     }

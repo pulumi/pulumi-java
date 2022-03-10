@@ -35,12 +35,12 @@ public final class DistributionConfigurationDistribution {
      */
     private final String region;
 
-    @OutputCustomType.Constructor({"amiDistributionConfiguration","containerDistributionConfiguration","licenseConfigurationArns","region"})
+    @OutputCustomType.Constructor
     private DistributionConfigurationDistribution(
-        @Nullable DistributionConfigurationDistributionAmiDistributionConfiguration amiDistributionConfiguration,
-        @Nullable DistributionConfigurationDistributionContainerDistributionConfiguration containerDistributionConfiguration,
-        @Nullable List<String> licenseConfigurationArns,
-        String region) {
+        @OutputCustomType.Parameter("amiDistributionConfiguration") @Nullable DistributionConfigurationDistributionAmiDistributionConfiguration amiDistributionConfiguration,
+        @OutputCustomType.Parameter("containerDistributionConfiguration") @Nullable DistributionConfigurationDistributionContainerDistributionConfiguration containerDistributionConfiguration,
+        @OutputCustomType.Parameter("licenseConfigurationArns") @Nullable List<String> licenseConfigurationArns,
+        @OutputCustomType.Parameter("region") String region) {
         this.amiDistributionConfiguration = amiDistributionConfiguration;
         this.containerDistributionConfiguration = containerDistributionConfiguration;
         this.licenseConfigurationArns = licenseConfigurationArns;

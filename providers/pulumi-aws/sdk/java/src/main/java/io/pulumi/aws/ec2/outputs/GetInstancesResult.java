@@ -37,15 +37,15 @@ public final class GetInstancesResult {
      */
     private final List<String> publicIps;
 
-    @OutputCustomType.Constructor({"filters","id","ids","instanceStateNames","instanceTags","privateIps","publicIps"})
+    @OutputCustomType.Constructor
     private GetInstancesResult(
-        @Nullable List<GetInstancesFilter> filters,
-        String id,
-        List<String> ids,
-        @Nullable List<String> instanceStateNames,
-        Map<String,String> instanceTags,
-        List<String> privateIps,
-        List<String> publicIps) {
+        @OutputCustomType.Parameter("filters") @Nullable List<GetInstancesFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ids") List<String> ids,
+        @OutputCustomType.Parameter("instanceStateNames") @Nullable List<String> instanceStateNames,
+        @OutputCustomType.Parameter("instanceTags") Map<String,String> instanceTags,
+        @OutputCustomType.Parameter("privateIps") List<String> privateIps,
+        @OutputCustomType.Parameter("publicIps") List<String> publicIps) {
         this.filters = filters;
         this.id = id;
         this.ids = ids;

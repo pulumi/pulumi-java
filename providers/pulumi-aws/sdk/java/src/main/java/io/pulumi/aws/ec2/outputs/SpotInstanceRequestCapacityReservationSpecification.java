@@ -23,10 +23,10 @@ public final class SpotInstanceRequestCapacityReservationSpecification {
      */
     private final @Nullable SpotInstanceRequestCapacityReservationSpecificationCapacityReservationTarget capacityReservationTarget;
 
-    @OutputCustomType.Constructor({"capacityReservationPreference","capacityReservationTarget"})
+    @OutputCustomType.Constructor
     private SpotInstanceRequestCapacityReservationSpecification(
-        @Nullable String capacityReservationPreference,
-        @Nullable SpotInstanceRequestCapacityReservationSpecificationCapacityReservationTarget capacityReservationTarget) {
+        @OutputCustomType.Parameter("capacityReservationPreference") @Nullable String capacityReservationPreference,
+        @OutputCustomType.Parameter("capacityReservationTarget") @Nullable SpotInstanceRequestCapacityReservationSpecificationCapacityReservationTarget capacityReservationTarget) {
         this.capacityReservationPreference = capacityReservationPreference;
         this.capacityReservationTarget = capacityReservationTarget;
     }

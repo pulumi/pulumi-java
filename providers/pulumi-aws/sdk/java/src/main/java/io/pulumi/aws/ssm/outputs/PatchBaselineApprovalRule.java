@@ -41,13 +41,13 @@ public final class PatchBaselineApprovalRule {
      */
     private final List<PatchBaselineApprovalRulePatchFilter> patchFilters;
 
-    @OutputCustomType.Constructor({"approveAfterDays","approveUntilDate","complianceLevel","enableNonSecurity","patchFilters"})
+    @OutputCustomType.Constructor
     private PatchBaselineApprovalRule(
-        @Nullable Integer approveAfterDays,
-        @Nullable String approveUntilDate,
-        @Nullable String complianceLevel,
-        @Nullable Boolean enableNonSecurity,
-        List<PatchBaselineApprovalRulePatchFilter> patchFilters) {
+        @OutputCustomType.Parameter("approveAfterDays") @Nullable Integer approveAfterDays,
+        @OutputCustomType.Parameter("approveUntilDate") @Nullable String approveUntilDate,
+        @OutputCustomType.Parameter("complianceLevel") @Nullable String complianceLevel,
+        @OutputCustomType.Parameter("enableNonSecurity") @Nullable Boolean enableNonSecurity,
+        @OutputCustomType.Parameter("patchFilters") List<PatchBaselineApprovalRulePatchFilter> patchFilters) {
         this.approveAfterDays = approveAfterDays;
         this.approveUntilDate = approveUntilDate;
         this.complianceLevel = complianceLevel;

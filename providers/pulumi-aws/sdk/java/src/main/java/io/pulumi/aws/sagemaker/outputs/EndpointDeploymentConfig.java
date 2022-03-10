@@ -23,10 +23,10 @@ public final class EndpointDeploymentConfig {
      */
     private final EndpointDeploymentConfigBlueGreenUpdatePolicy blueGreenUpdatePolicy;
 
-    @OutputCustomType.Constructor({"autoRollbackConfiguration","blueGreenUpdatePolicy"})
+    @OutputCustomType.Constructor
     private EndpointDeploymentConfig(
-        @Nullable EndpointDeploymentConfigAutoRollbackConfiguration autoRollbackConfiguration,
-        EndpointDeploymentConfigBlueGreenUpdatePolicy blueGreenUpdatePolicy) {
+        @OutputCustomType.Parameter("autoRollbackConfiguration") @Nullable EndpointDeploymentConfigAutoRollbackConfiguration autoRollbackConfiguration,
+        @OutputCustomType.Parameter("blueGreenUpdatePolicy") EndpointDeploymentConfigBlueGreenUpdatePolicy blueGreenUpdatePolicy) {
         this.autoRollbackConfiguration = autoRollbackConfiguration;
         this.blueGreenUpdatePolicy = blueGreenUpdatePolicy;
     }

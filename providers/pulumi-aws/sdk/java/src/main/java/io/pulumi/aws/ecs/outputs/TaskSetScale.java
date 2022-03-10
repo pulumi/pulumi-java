@@ -23,10 +23,10 @@ public final class TaskSetScale {
      */
     private final @Nullable Double value;
 
-    @OutputCustomType.Constructor({"unit","value"})
+    @OutputCustomType.Constructor
     private TaskSetScale(
-        @Nullable String unit,
-        @Nullable Double value) {
+        @OutputCustomType.Parameter("unit") @Nullable String unit,
+        @OutputCustomType.Parameter("value") @Nullable Double value) {
         this.unit = unit;
         this.value = value;
     }

@@ -19,10 +19,10 @@ public final class OntapVolumeTieringPolicy {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"coolingPeriod","name"})
+    @OutputCustomType.Constructor
     private OntapVolumeTieringPolicy(
-        @Nullable Integer coolingPeriod,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("coolingPeriod") @Nullable Integer coolingPeriod,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.coolingPeriod = coolingPeriod;
         this.name = name;
     }

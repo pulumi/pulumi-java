@@ -48,15 +48,15 @@ public final class VirtualGatewaySpecListenerHealthCheck {
      */
     private final Integer unhealthyThreshold;
 
-    @OutputCustomType.Constructor({"healthyThreshold","intervalMillis","path","port","protocol","timeoutMillis","unhealthyThreshold"})
+    @OutputCustomType.Constructor
     private VirtualGatewaySpecListenerHealthCheck(
-        Integer healthyThreshold,
-        Integer intervalMillis,
-        @Nullable String path,
-        @Nullable Integer port,
-        String protocol,
-        Integer timeoutMillis,
-        Integer unhealthyThreshold) {
+        @OutputCustomType.Parameter("healthyThreshold") Integer healthyThreshold,
+        @OutputCustomType.Parameter("intervalMillis") Integer intervalMillis,
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("port") @Nullable Integer port,
+        @OutputCustomType.Parameter("protocol") String protocol,
+        @OutputCustomType.Parameter("timeoutMillis") Integer timeoutMillis,
+        @OutputCustomType.Parameter("unhealthyThreshold") Integer unhealthyThreshold) {
         this.healthyThreshold = healthyThreshold;
         this.intervalMillis = intervalMillis;
         this.path = path;

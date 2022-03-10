@@ -36,17 +36,17 @@ public final class GetAvailabilityZonesResult {
      */
     private final List<String> zoneIds;
 
-    @OutputCustomType.Constructor({"allAvailabilityZones","excludeNames","excludeZoneIds","filters","groupNames","id","names","state","zoneIds"})
+    @OutputCustomType.Constructor
     private GetAvailabilityZonesResult(
-        @Nullable Boolean allAvailabilityZones,
-        @Nullable List<String> excludeNames,
-        @Nullable List<String> excludeZoneIds,
-        @Nullable List<GetAvailabilityZonesFilter> filters,
-        List<String> groupNames,
-        String id,
-        List<String> names,
-        @Nullable String state,
-        List<String> zoneIds) {
+        @OutputCustomType.Parameter("allAvailabilityZones") @Nullable Boolean allAvailabilityZones,
+        @OutputCustomType.Parameter("excludeNames") @Nullable List<String> excludeNames,
+        @OutputCustomType.Parameter("excludeZoneIds") @Nullable List<String> excludeZoneIds,
+        @OutputCustomType.Parameter("filters") @Nullable List<GetAvailabilityZonesFilter> filters,
+        @OutputCustomType.Parameter("groupNames") List<String> groupNames,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("names") List<String> names,
+        @OutputCustomType.Parameter("state") @Nullable String state,
+        @OutputCustomType.Parameter("zoneIds") List<String> zoneIds) {
         this.allAvailabilityZones = allAvailabilityZones;
         this.excludeNames = excludeNames;
         this.excludeZoneIds = excludeZoneIds;

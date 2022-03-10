@@ -23,10 +23,10 @@ public final class SchedulingPolicyFairSharePolicyShareDistribution {
      */
     private final @Nullable Double weightFactor;
 
-    @OutputCustomType.Constructor({"shareIdentifier","weightFactor"})
+    @OutputCustomType.Constructor
     private SchedulingPolicyFairSharePolicyShareDistribution(
-        String shareIdentifier,
-        @Nullable Double weightFactor) {
+        @OutputCustomType.Parameter("shareIdentifier") String shareIdentifier,
+        @OutputCustomType.Parameter("weightFactor") @Nullable Double weightFactor) {
         this.shareIdentifier = shareIdentifier;
         this.weightFactor = weightFactor;
     }

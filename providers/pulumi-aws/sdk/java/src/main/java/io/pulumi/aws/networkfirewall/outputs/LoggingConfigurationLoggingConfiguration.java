@@ -16,8 +16,8 @@ public final class LoggingConfigurationLoggingConfiguration {
      */
     private final List<LoggingConfigurationLoggingConfigurationLogDestinationConfig> logDestinationConfigs;
 
-    @OutputCustomType.Constructor({"logDestinationConfigs"})
-    private LoggingConfigurationLoggingConfiguration(List<LoggingConfigurationLoggingConfigurationLogDestinationConfig> logDestinationConfigs) {
+    @OutputCustomType.Constructor
+    private LoggingConfigurationLoggingConfiguration(@OutputCustomType.Parameter("logDestinationConfigs") List<LoggingConfigurationLoggingConfigurationLogDestinationConfig> logDestinationConfigs) {
         this.logDestinationConfigs = logDestinationConfigs;
     }
 

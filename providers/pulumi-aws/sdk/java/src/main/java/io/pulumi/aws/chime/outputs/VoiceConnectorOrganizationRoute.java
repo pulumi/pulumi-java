@@ -38,13 +38,13 @@ public final class VoiceConnectorOrganizationRoute {
      */
     private final Integer weight;
 
-    @OutputCustomType.Constructor({"host","port","priority","protocol","weight"})
+    @OutputCustomType.Constructor
     private VoiceConnectorOrganizationRoute(
-        String host,
-        @Nullable Integer port,
-        Integer priority,
-        String protocol,
-        Integer weight) {
+        @OutputCustomType.Parameter("host") String host,
+        @OutputCustomType.Parameter("port") @Nullable Integer port,
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("protocol") String protocol,
+        @OutputCustomType.Parameter("weight") Integer weight) {
         this.host = host;
         this.port = port;
         this.priority = priority;

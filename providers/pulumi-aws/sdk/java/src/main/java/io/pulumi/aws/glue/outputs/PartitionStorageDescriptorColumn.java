@@ -27,11 +27,11 @@ public final class PartitionStorageDescriptorColumn {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"comment","name","type"})
+    @OutputCustomType.Constructor
     private PartitionStorageDescriptorColumn(
-        @Nullable String comment,
-        String name,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("comment") @Nullable String comment,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.comment = comment;
         this.name = name;
         this.type = type;

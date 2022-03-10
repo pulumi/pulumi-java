@@ -65,18 +65,18 @@ public final class GetJobQueueResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"arn","computeEnvironmentOrders","id","name","priority","schedulingPolicyArn","state","status","statusReason","tags"})
+    @OutputCustomType.Constructor
     private GetJobQueueResult(
-        String arn,
-        List<GetJobQueueComputeEnvironmentOrder> computeEnvironmentOrders,
-        String id,
-        String name,
-        Integer priority,
-        String schedulingPolicyArn,
-        String state,
-        String status,
-        String statusReason,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("computeEnvironmentOrders") List<GetJobQueueComputeEnvironmentOrder> computeEnvironmentOrders,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("schedulingPolicyArn") String schedulingPolicyArn,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("statusReason") String statusReason,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
         this.computeEnvironmentOrders = computeEnvironmentOrders;
         this.id = id;

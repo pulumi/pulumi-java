@@ -35,12 +35,12 @@ public final class ServiceSourceConfiguration {
      */
     private final @Nullable ServiceSourceConfigurationImageRepository imageRepository;
 
-    @OutputCustomType.Constructor({"authenticationConfiguration","autoDeploymentsEnabled","codeRepository","imageRepository"})
+    @OutputCustomType.Constructor
     private ServiceSourceConfiguration(
-        @Nullable ServiceSourceConfigurationAuthenticationConfiguration authenticationConfiguration,
-        @Nullable Boolean autoDeploymentsEnabled,
-        @Nullable ServiceSourceConfigurationCodeRepository codeRepository,
-        @Nullable ServiceSourceConfigurationImageRepository imageRepository) {
+        @OutputCustomType.Parameter("authenticationConfiguration") @Nullable ServiceSourceConfigurationAuthenticationConfiguration authenticationConfiguration,
+        @OutputCustomType.Parameter("autoDeploymentsEnabled") @Nullable Boolean autoDeploymentsEnabled,
+        @OutputCustomType.Parameter("codeRepository") @Nullable ServiceSourceConfigurationCodeRepository codeRepository,
+        @OutputCustomType.Parameter("imageRepository") @Nullable ServiceSourceConfigurationImageRepository imageRepository) {
         this.authenticationConfiguration = authenticationConfiguration;
         this.autoDeploymentsEnabled = autoDeploymentsEnabled;
         this.codeRepository = codeRepository;

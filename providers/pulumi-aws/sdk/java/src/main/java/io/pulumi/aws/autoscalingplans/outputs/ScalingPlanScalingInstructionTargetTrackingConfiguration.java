@@ -56,15 +56,15 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfiguration {
      */
     private final Double targetValue;
 
-    @OutputCustomType.Constructor({"customizedScalingMetricSpecification","disableScaleIn","estimatedInstanceWarmup","predefinedScalingMetricSpecification","scaleInCooldown","scaleOutCooldown","targetValue"})
+    @OutputCustomType.Constructor
     private ScalingPlanScalingInstructionTargetTrackingConfiguration(
-        @Nullable ScalingPlanScalingInstructionTargetTrackingConfigurationCustomizedScalingMetricSpecification customizedScalingMetricSpecification,
-        @Nullable Boolean disableScaleIn,
-        @Nullable Integer estimatedInstanceWarmup,
-        @Nullable ScalingPlanScalingInstructionTargetTrackingConfigurationPredefinedScalingMetricSpecification predefinedScalingMetricSpecification,
-        @Nullable Integer scaleInCooldown,
-        @Nullable Integer scaleOutCooldown,
-        Double targetValue) {
+        @OutputCustomType.Parameter("customizedScalingMetricSpecification") @Nullable ScalingPlanScalingInstructionTargetTrackingConfigurationCustomizedScalingMetricSpecification customizedScalingMetricSpecification,
+        @OutputCustomType.Parameter("disableScaleIn") @Nullable Boolean disableScaleIn,
+        @OutputCustomType.Parameter("estimatedInstanceWarmup") @Nullable Integer estimatedInstanceWarmup,
+        @OutputCustomType.Parameter("predefinedScalingMetricSpecification") @Nullable ScalingPlanScalingInstructionTargetTrackingConfigurationPredefinedScalingMetricSpecification predefinedScalingMetricSpecification,
+        @OutputCustomType.Parameter("scaleInCooldown") @Nullable Integer scaleInCooldown,
+        @OutputCustomType.Parameter("scaleOutCooldown") @Nullable Integer scaleOutCooldown,
+        @OutputCustomType.Parameter("targetValue") Double targetValue) {
         this.customizedScalingMetricSpecification = customizedScalingMetricSpecification;
         this.disableScaleIn = disableScaleIn;
         this.estimatedInstanceWarmup = estimatedInstanceWarmup;

@@ -59,17 +59,17 @@ public final class TargetGroupHealthCheck {
      */
     private final @Nullable Integer unhealthyThreshold;
 
-    @OutputCustomType.Constructor({"enabled","healthyThreshold","interval","matcher","path","port","protocol","timeout","unhealthyThreshold"})
+    @OutputCustomType.Constructor
     private TargetGroupHealthCheck(
-        @Nullable Boolean enabled,
-        @Nullable Integer healthyThreshold,
-        @Nullable Integer interval,
-        @Nullable String matcher,
-        @Nullable String path,
-        @Nullable String port,
-        @Nullable String protocol,
-        @Nullable Integer timeout,
-        @Nullable Integer unhealthyThreshold) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("healthyThreshold") @Nullable Integer healthyThreshold,
+        @OutputCustomType.Parameter("interval") @Nullable Integer interval,
+        @OutputCustomType.Parameter("matcher") @Nullable String matcher,
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("port") @Nullable String port,
+        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
+        @OutputCustomType.Parameter("timeout") @Nullable Integer timeout,
+        @OutputCustomType.Parameter("unhealthyThreshold") @Nullable Integer unhealthyThreshold) {
         this.enabled = enabled;
         this.healthyThreshold = healthyThreshold;
         this.interval = interval;

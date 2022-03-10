@@ -22,10 +22,10 @@ public final class SlotTypeEnumerationValue {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"synonyms","value"})
+    @OutputCustomType.Constructor
     private SlotTypeEnumerationValue(
-        @Nullable List<String> synonyms,
-        String value) {
+        @OutputCustomType.Parameter("synonyms") @Nullable List<String> synonyms,
+        @OutputCustomType.Parameter("value") String value) {
         this.synonyms = synonyms;
         this.value = value;
     }

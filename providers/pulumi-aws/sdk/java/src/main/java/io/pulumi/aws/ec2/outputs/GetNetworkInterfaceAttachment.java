@@ -15,12 +15,12 @@ public final class GetNetworkInterfaceAttachment {
     private final String instanceId;
     private final String instanceOwnerId;
 
-    @OutputCustomType.Constructor({"attachmentId","deviceIndex","instanceId","instanceOwnerId"})
+    @OutputCustomType.Constructor
     private GetNetworkInterfaceAttachment(
-        String attachmentId,
-        Integer deviceIndex,
-        String instanceId,
-        String instanceOwnerId) {
+        @OutputCustomType.Parameter("attachmentId") String attachmentId,
+        @OutputCustomType.Parameter("deviceIndex") Integer deviceIndex,
+        @OutputCustomType.Parameter("instanceId") String instanceId,
+        @OutputCustomType.Parameter("instanceOwnerId") String instanceOwnerId) {
         this.attachmentId = attachmentId;
         this.deviceIndex = deviceIndex;
         this.instanceId = instanceId;

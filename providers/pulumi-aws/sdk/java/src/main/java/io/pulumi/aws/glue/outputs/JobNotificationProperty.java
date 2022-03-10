@@ -17,8 +17,8 @@ public final class JobNotificationProperty {
      */
     private final @Nullable Integer notifyDelayAfter;
 
-    @OutputCustomType.Constructor({"notifyDelayAfter"})
-    private JobNotificationProperty(@Nullable Integer notifyDelayAfter) {
+    @OutputCustomType.Constructor
+    private JobNotificationProperty(@OutputCustomType.Parameter("notifyDelayAfter") @Nullable Integer notifyDelayAfter) {
         this.notifyDelayAfter = notifyDelayAfter;
     }
 

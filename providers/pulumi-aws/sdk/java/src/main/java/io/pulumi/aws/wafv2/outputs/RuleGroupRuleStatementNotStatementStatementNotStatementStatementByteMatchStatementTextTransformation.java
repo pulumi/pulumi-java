@@ -21,10 +21,10 @@ public final class RuleGroupRuleStatementNotStatementStatementNotStatementStatem
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"priority","type"})
+    @OutputCustomType.Constructor
     private RuleGroupRuleStatementNotStatementStatementNotStatementStatementByteMatchStatementTextTransformation(
-        Integer priority,
-        String type) {
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("type") String type) {
         this.priority = priority;
         this.type = type;
     }

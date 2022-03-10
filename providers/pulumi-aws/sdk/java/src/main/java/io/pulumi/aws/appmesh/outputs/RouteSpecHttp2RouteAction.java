@@ -17,8 +17,8 @@ public final class RouteSpecHttp2RouteAction {
      */
     private final List<RouteSpecHttp2RouteActionWeightedTarget> weightedTargets;
 
-    @OutputCustomType.Constructor({"weightedTargets"})
-    private RouteSpecHttp2RouteAction(List<RouteSpecHttp2RouteActionWeightedTarget> weightedTargets) {
+    @OutputCustomType.Constructor
+    private RouteSpecHttp2RouteAction(@OutputCustomType.Parameter("weightedTargets") List<RouteSpecHttp2RouteActionWeightedTarget> weightedTargets) {
         this.weightedTargets = weightedTargets;
     }
 

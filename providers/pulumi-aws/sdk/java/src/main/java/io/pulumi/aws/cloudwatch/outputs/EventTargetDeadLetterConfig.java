@@ -17,8 +17,8 @@ public final class EventTargetDeadLetterConfig {
      */
     private final @Nullable String arn;
 
-    @OutputCustomType.Constructor({"arn"})
-    private EventTargetDeadLetterConfig(@Nullable String arn) {
+    @OutputCustomType.Constructor
+    private EventTargetDeadLetterConfig(@OutputCustomType.Parameter("arn") @Nullable String arn) {
         this.arn = arn;
     }
 

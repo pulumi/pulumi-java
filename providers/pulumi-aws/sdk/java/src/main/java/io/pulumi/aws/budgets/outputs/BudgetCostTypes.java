@@ -67,19 +67,19 @@ public final class BudgetCostTypes {
      */
     private final @Nullable Boolean useBlended;
 
-    @OutputCustomType.Constructor({"includeCredit","includeDiscount","includeOtherSubscription","includeRecurring","includeRefund","includeSubscription","includeSupport","includeTax","includeUpfront","useAmortized","useBlended"})
+    @OutputCustomType.Constructor
     private BudgetCostTypes(
-        @Nullable Boolean includeCredit,
-        @Nullable Boolean includeDiscount,
-        @Nullable Boolean includeOtherSubscription,
-        @Nullable Boolean includeRecurring,
-        @Nullable Boolean includeRefund,
-        @Nullable Boolean includeSubscription,
-        @Nullable Boolean includeSupport,
-        @Nullable Boolean includeTax,
-        @Nullable Boolean includeUpfront,
-        @Nullable Boolean useAmortized,
-        @Nullable Boolean useBlended) {
+        @OutputCustomType.Parameter("includeCredit") @Nullable Boolean includeCredit,
+        @OutputCustomType.Parameter("includeDiscount") @Nullable Boolean includeDiscount,
+        @OutputCustomType.Parameter("includeOtherSubscription") @Nullable Boolean includeOtherSubscription,
+        @OutputCustomType.Parameter("includeRecurring") @Nullable Boolean includeRecurring,
+        @OutputCustomType.Parameter("includeRefund") @Nullable Boolean includeRefund,
+        @OutputCustomType.Parameter("includeSubscription") @Nullable Boolean includeSubscription,
+        @OutputCustomType.Parameter("includeSupport") @Nullable Boolean includeSupport,
+        @OutputCustomType.Parameter("includeTax") @Nullable Boolean includeTax,
+        @OutputCustomType.Parameter("includeUpfront") @Nullable Boolean includeUpfront,
+        @OutputCustomType.Parameter("useAmortized") @Nullable Boolean useAmortized,
+        @OutputCustomType.Parameter("useBlended") @Nullable Boolean useBlended) {
         this.includeCredit = includeCredit;
         this.includeDiscount = includeDiscount;
         this.includeOtherSubscription = includeOtherSubscription;

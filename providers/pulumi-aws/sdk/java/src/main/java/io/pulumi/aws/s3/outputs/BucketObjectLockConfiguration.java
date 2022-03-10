@@ -23,10 +23,10 @@ public final class BucketObjectLockConfiguration {
      */
     private final @Nullable BucketObjectLockConfigurationRule rule;
 
-    @OutputCustomType.Constructor({"objectLockEnabled","rule"})
+    @OutputCustomType.Constructor
     private BucketObjectLockConfiguration(
-        String objectLockEnabled,
-        @Nullable BucketObjectLockConfigurationRule rule) {
+        @OutputCustomType.Parameter("objectLockEnabled") String objectLockEnabled,
+        @OutputCustomType.Parameter("rule") @Nullable BucketObjectLockConfigurationRule rule) {
         this.objectLockEnabled = objectLockEnabled;
         this.rule = rule;
     }

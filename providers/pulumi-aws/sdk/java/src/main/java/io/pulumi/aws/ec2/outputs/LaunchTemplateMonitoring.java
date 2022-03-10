@@ -17,8 +17,8 @@ public final class LaunchTemplateMonitoring {
      */
     private final @Nullable Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private LaunchTemplateMonitoring(@Nullable Boolean enabled) {
+    @OutputCustomType.Constructor
+    private LaunchTemplateMonitoring(@OutputCustomType.Parameter("enabled") @Nullable Boolean enabled) {
         this.enabled = enabled;
     }
 

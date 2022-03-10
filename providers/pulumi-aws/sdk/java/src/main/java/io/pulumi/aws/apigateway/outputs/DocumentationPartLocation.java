@@ -37,13 +37,13 @@ public final class DocumentationPartLocation {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"method","name","path","statusCode","type"})
+    @OutputCustomType.Constructor
     private DocumentationPartLocation(
-        @Nullable String method,
-        @Nullable String name,
-        @Nullable String path,
-        @Nullable String statusCode,
-        String type) {
+        @OutputCustomType.Parameter("method") @Nullable String method,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("statusCode") @Nullable String statusCode,
+        @OutputCustomType.Parameter("type") String type) {
         this.method = method;
         this.name = name;
         this.path = path;

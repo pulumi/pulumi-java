@@ -15,8 +15,8 @@ public final class FirewallPolicyFirewallPolicyStatelessCustomActionActionDefini
      */
     private final FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricAction publishMetricAction;
 
-    @OutputCustomType.Constructor({"publishMetricAction"})
-    private FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinition(FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricAction publishMetricAction) {
+    @OutputCustomType.Constructor
+    private FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinition(@OutputCustomType.Parameter("publishMetricAction") FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricAction publishMetricAction) {
         this.publishMetricAction = publishMetricAction;
     }
 

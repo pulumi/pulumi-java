@@ -20,14 +20,14 @@ public final class InstanceEbsBlockDevice {
     private final @Nullable Integer volumeSize;
     private final @Nullable String volumeType;
 
-    @OutputCustomType.Constructor({"deleteOnTermination","deviceName","iops","snapshotId","volumeSize","volumeType"})
+    @OutputCustomType.Constructor
     private InstanceEbsBlockDevice(
-        @Nullable Boolean deleteOnTermination,
-        String deviceName,
-        @Nullable Integer iops,
-        @Nullable String snapshotId,
-        @Nullable Integer volumeSize,
-        @Nullable String volumeType) {
+        @OutputCustomType.Parameter("deleteOnTermination") @Nullable Boolean deleteOnTermination,
+        @OutputCustomType.Parameter("deviceName") String deviceName,
+        @OutputCustomType.Parameter("iops") @Nullable Integer iops,
+        @OutputCustomType.Parameter("snapshotId") @Nullable String snapshotId,
+        @OutputCustomType.Parameter("volumeSize") @Nullable Integer volumeSize,
+        @OutputCustomType.Parameter("volumeType") @Nullable String volumeType) {
         this.deleteOnTermination = deleteOnTermination;
         this.deviceName = deviceName;
         this.iops = iops;

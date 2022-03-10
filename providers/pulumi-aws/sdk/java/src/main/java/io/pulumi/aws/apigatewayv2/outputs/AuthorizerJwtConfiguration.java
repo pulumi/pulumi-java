@@ -23,10 +23,10 @@ public final class AuthorizerJwtConfiguration {
      */
     private final @Nullable String issuer;
 
-    @OutputCustomType.Constructor({"audiences","issuer"})
+    @OutputCustomType.Constructor
     private AuthorizerJwtConfiguration(
-        @Nullable List<String> audiences,
-        @Nullable String issuer) {
+        @OutputCustomType.Parameter("audiences") @Nullable List<String> audiences,
+        @OutputCustomType.Parameter("issuer") @Nullable String issuer) {
         this.audiences = audiences;
         this.issuer = issuer;
     }

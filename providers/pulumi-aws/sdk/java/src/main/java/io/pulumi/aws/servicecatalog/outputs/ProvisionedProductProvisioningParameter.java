@@ -28,11 +28,11 @@ public final class ProvisionedProductProvisioningParameter {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"key","usePreviousValue","value"})
+    @OutputCustomType.Constructor
     private ProvisionedProductProvisioningParameter(
-        String key,
-        @Nullable Boolean usePreviousValue,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("usePreviousValue") @Nullable Boolean usePreviousValue,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.key = key;
         this.usePreviousValue = usePreviousValue;
         this.value = value;

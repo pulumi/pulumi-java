@@ -33,12 +33,12 @@ public final class ServiceLoadBalancer {
      */
     private final @Nullable String targetGroupArn;
 
-    @OutputCustomType.Constructor({"containerName","containerPort","elbName","targetGroupArn"})
+    @OutputCustomType.Constructor
     private ServiceLoadBalancer(
-        String containerName,
-        Integer containerPort,
-        @Nullable String elbName,
-        @Nullable String targetGroupArn) {
+        @OutputCustomType.Parameter("containerName") String containerName,
+        @OutputCustomType.Parameter("containerPort") Integer containerPort,
+        @OutputCustomType.Parameter("elbName") @Nullable String elbName,
+        @OutputCustomType.Parameter("targetGroupArn") @Nullable String targetGroupArn) {
         this.containerName = containerName;
         this.containerPort = containerPort;
         this.elbName = elbName;

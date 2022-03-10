@@ -29,11 +29,11 @@ public final class DeploymentConfigTrafficRoutingConfig {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"timeBasedCanary","timeBasedLinear","type"})
+    @OutputCustomType.Constructor
     private DeploymentConfigTrafficRoutingConfig(
-        @Nullable DeploymentConfigTrafficRoutingConfigTimeBasedCanary timeBasedCanary,
-        @Nullable DeploymentConfigTrafficRoutingConfigTimeBasedLinear timeBasedLinear,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("timeBasedCanary") @Nullable DeploymentConfigTrafficRoutingConfigTimeBasedCanary timeBasedCanary,
+        @OutputCustomType.Parameter("timeBasedLinear") @Nullable DeploymentConfigTrafficRoutingConfigTimeBasedLinear timeBasedLinear,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.timeBasedCanary = timeBasedCanary;
         this.timeBasedLinear = timeBasedLinear;
         this.type = type;

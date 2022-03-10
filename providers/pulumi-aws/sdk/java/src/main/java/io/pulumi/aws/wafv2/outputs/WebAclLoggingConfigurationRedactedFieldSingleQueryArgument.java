@@ -19,8 +19,8 @@ public final class WebAclLoggingConfigurationRedactedFieldSingleQueryArgument {
         @Deprecated /* Not supported by WAFv2 API */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private WebAclLoggingConfigurationRedactedFieldSingleQueryArgument(String name) {
+    @OutputCustomType.Constructor
+    private WebAclLoggingConfigurationRedactedFieldSingleQueryArgument(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

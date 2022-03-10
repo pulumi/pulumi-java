@@ -15,13 +15,13 @@ public final class GetLoadBalancerSubnetMapping {
     private final String privateIpv4Address;
     private final String subnetId;
 
-    @OutputCustomType.Constructor({"allocationId","ipv6Address","outpostId","privateIpv4Address","subnetId"})
+    @OutputCustomType.Constructor
     private GetLoadBalancerSubnetMapping(
-        String allocationId,
-        String ipv6Address,
-        String outpostId,
-        String privateIpv4Address,
-        String subnetId) {
+        @OutputCustomType.Parameter("allocationId") String allocationId,
+        @OutputCustomType.Parameter("ipv6Address") String ipv6Address,
+        @OutputCustomType.Parameter("outpostId") String outpostId,
+        @OutputCustomType.Parameter("privateIpv4Address") String privateIpv4Address,
+        @OutputCustomType.Parameter("subnetId") String subnetId) {
         this.allocationId = allocationId;
         this.ipv6Address = ipv6Address;
         this.outpostId = outpostId;

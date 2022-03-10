@@ -14,10 +14,10 @@ public final class ThingGroupMetadataRootToParentGroup {
     private final @Nullable String groupArn;
     private final @Nullable String groupName;
 
-    @OutputCustomType.Constructor({"groupArn","groupName"})
+    @OutputCustomType.Constructor
     private ThingGroupMetadataRootToParentGroup(
-        @Nullable String groupArn,
-        @Nullable String groupName) {
+        @OutputCustomType.Parameter("groupArn") @Nullable String groupArn,
+        @OutputCustomType.Parameter("groupName") @Nullable String groupName) {
         this.groupArn = groupArn;
         this.groupName = groupName;
     }

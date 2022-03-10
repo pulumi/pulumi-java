@@ -43,15 +43,15 @@ public final class GetVpcLinkResult {
      */
     private final List<String> targetArns;
 
-    @OutputCustomType.Constructor({"description","id","name","status","statusMessage","tags","targetArns"})
+    @OutputCustomType.Constructor
     private GetVpcLinkResult(
-        String description,
-        String id,
-        String name,
-        String status,
-        String statusMessage,
-        Map<String,String> tags,
-        List<String> targetArns) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("statusMessage") String statusMessage,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("targetArns") List<String> targetArns) {
         this.description = description;
         this.id = id;
         this.name = name;

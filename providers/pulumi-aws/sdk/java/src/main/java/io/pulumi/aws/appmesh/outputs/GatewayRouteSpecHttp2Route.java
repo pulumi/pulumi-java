@@ -21,10 +21,10 @@ public final class GatewayRouteSpecHttp2Route {
      */
     private final GatewayRouteSpecHttp2RouteMatch match;
 
-    @OutputCustomType.Constructor({"action","match"})
+    @OutputCustomType.Constructor
     private GatewayRouteSpecHttp2Route(
-        GatewayRouteSpecHttp2RouteAction action,
-        GatewayRouteSpecHttp2RouteMatch match) {
+        @OutputCustomType.Parameter("action") GatewayRouteSpecHttp2RouteAction action,
+        @OutputCustomType.Parameter("match") GatewayRouteSpecHttp2RouteMatch match) {
         this.action = action;
         this.match = match;
     }

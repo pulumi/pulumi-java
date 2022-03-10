@@ -27,11 +27,11 @@ public final class DeploymentGroupOnPremisesInstanceTagFilter {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"key","type","value"})
+    @OutputCustomType.Constructor
     private DeploymentGroupOnPremisesInstanceTagFilter(
-        @Nullable String key,
-        @Nullable String type,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("key") @Nullable String key,
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.key = key;
         this.type = type;
         this.value = value;

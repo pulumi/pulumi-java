@@ -27,12 +27,12 @@ public final class GetRegionsResult {
      */
     private final List<String> names;
 
-    @OutputCustomType.Constructor({"allRegions","filters","id","names"})
+    @OutputCustomType.Constructor
     private GetRegionsResult(
-        @Nullable Boolean allRegions,
-        @Nullable List<GetRegionsFilter> filters,
-        String id,
-        List<String> names) {
+        @OutputCustomType.Parameter("allRegions") @Nullable Boolean allRegions,
+        @OutputCustomType.Parameter("filters") @Nullable List<GetRegionsFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("names") List<String> names) {
         this.allRegions = allRegions;
         this.filters = filters;
         this.id = id;

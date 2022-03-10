@@ -45,17 +45,17 @@ public final class GetAddonResult {
     private final String serviceAccountRoleArn;
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"addonName","addonVersion","arn","clusterName","createdAt","id","modifiedAt","serviceAccountRoleArn","tags"})
+    @OutputCustomType.Constructor
     private GetAddonResult(
-        String addonName,
-        String addonVersion,
-        String arn,
-        String clusterName,
-        String createdAt,
-        String id,
-        String modifiedAt,
-        String serviceAccountRoleArn,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("addonName") String addonName,
+        @OutputCustomType.Parameter("addonVersion") String addonVersion,
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("clusterName") String clusterName,
+        @OutputCustomType.Parameter("createdAt") String createdAt,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("modifiedAt") String modifiedAt,
+        @OutputCustomType.Parameter("serviceAccountRoleArn") String serviceAccountRoleArn,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.addonName = addonName;
         this.addonVersion = addonVersion;
         this.arn = arn;

@@ -15,8 +15,8 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      */
     private final String recordFormatType;
 
-    @OutputCustomType.Constructor({"recordFormatType"})
-    private ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchema(String recordFormatType) {
+    @OutputCustomType.Constructor
+    private ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchema(@OutputCustomType.Parameter("recordFormatType") String recordFormatType) {
         this.recordFormatType = recordFormatType;
     }
 

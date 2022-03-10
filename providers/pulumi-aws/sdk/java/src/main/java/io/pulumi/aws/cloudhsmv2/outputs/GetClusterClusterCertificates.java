@@ -15,13 +15,13 @@ public final class GetClusterClusterCertificates {
     private final String hsmCertificate;
     private final String manufacturerHardwareCertificate;
 
-    @OutputCustomType.Constructor({"awsHardwareCertificate","clusterCertificate","clusterCsr","hsmCertificate","manufacturerHardwareCertificate"})
+    @OutputCustomType.Constructor
     private GetClusterClusterCertificates(
-        String awsHardwareCertificate,
-        String clusterCertificate,
-        String clusterCsr,
-        String hsmCertificate,
-        String manufacturerHardwareCertificate) {
+        @OutputCustomType.Parameter("awsHardwareCertificate") String awsHardwareCertificate,
+        @OutputCustomType.Parameter("clusterCertificate") String clusterCertificate,
+        @OutputCustomType.Parameter("clusterCsr") String clusterCsr,
+        @OutputCustomType.Parameter("hsmCertificate") String hsmCertificate,
+        @OutputCustomType.Parameter("manufacturerHardwareCertificate") String manufacturerHardwareCertificate) {
         this.awsHardwareCertificate = awsHardwareCertificate;
         this.clusterCertificate = clusterCertificate;
         this.clusterCsr = clusterCsr;

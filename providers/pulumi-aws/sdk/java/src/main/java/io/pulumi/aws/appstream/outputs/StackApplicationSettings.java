@@ -15,10 +15,10 @@ public final class StackApplicationSettings {
     private final @Nullable Boolean enabled;
     private final @Nullable String settingsGroup;
 
-    @OutputCustomType.Constructor({"enabled","settingsGroup"})
+    @OutputCustomType.Constructor
     private StackApplicationSettings(
-        @Nullable Boolean enabled,
-        @Nullable String settingsGroup) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("settingsGroup") @Nullable String settingsGroup) {
         this.enabled = enabled;
         this.settingsGroup = settingsGroup;
     }

@@ -33,12 +33,12 @@ public final class InstanceRestoreToPointInTime {
      */
     private final @Nullable Boolean useLatestRestorableTime;
 
-    @OutputCustomType.Constructor({"restoreTime","sourceDbInstanceIdentifier","sourceDbiResourceId","useLatestRestorableTime"})
+    @OutputCustomType.Constructor
     private InstanceRestoreToPointInTime(
-        @Nullable String restoreTime,
-        @Nullable String sourceDbInstanceIdentifier,
-        @Nullable String sourceDbiResourceId,
-        @Nullable Boolean useLatestRestorableTime) {
+        @OutputCustomType.Parameter("restoreTime") @Nullable String restoreTime,
+        @OutputCustomType.Parameter("sourceDbInstanceIdentifier") @Nullable String sourceDbInstanceIdentifier,
+        @OutputCustomType.Parameter("sourceDbiResourceId") @Nullable String sourceDbiResourceId,
+        @OutputCustomType.Parameter("useLatestRestorableTime") @Nullable Boolean useLatestRestorableTime) {
         this.restoreTime = restoreTime;
         this.sourceDbInstanceIdentifier = sourceDbInstanceIdentifier;
         this.sourceDbiResourceId = sourceDbiResourceId;

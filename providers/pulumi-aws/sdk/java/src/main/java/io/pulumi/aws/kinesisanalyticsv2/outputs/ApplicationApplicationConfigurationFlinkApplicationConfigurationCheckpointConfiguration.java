@@ -37,12 +37,12 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
      */
     private final @Nullable Integer minPauseBetweenCheckpoints;
 
-    @OutputCustomType.Constructor({"checkpointInterval","checkpointingEnabled","configurationType","minPauseBetweenCheckpoints"})
+    @OutputCustomType.Constructor
     private ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfiguration(
-        @Nullable Integer checkpointInterval,
-        @Nullable Boolean checkpointingEnabled,
-        String configurationType,
-        @Nullable Integer minPauseBetweenCheckpoints) {
+        @OutputCustomType.Parameter("checkpointInterval") @Nullable Integer checkpointInterval,
+        @OutputCustomType.Parameter("checkpointingEnabled") @Nullable Boolean checkpointingEnabled,
+        @OutputCustomType.Parameter("configurationType") String configurationType,
+        @OutputCustomType.Parameter("minPauseBetweenCheckpoints") @Nullable Integer minPauseBetweenCheckpoints) {
         this.checkpointInterval = checkpointInterval;
         this.checkpointingEnabled = checkpointingEnabled;
         this.configurationType = configurationType;

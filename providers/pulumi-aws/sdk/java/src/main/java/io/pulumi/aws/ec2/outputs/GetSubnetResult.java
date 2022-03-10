@@ -96,32 +96,32 @@ public final class GetSubnetResult {
     private final Map<String,String> tags;
     private final String vpcId;
 
-    @OutputCustomType.Constructor({"arn","assignIpv6AddressOnCreation","availabilityZone","availabilityZoneId","availableIpAddressCount","cidrBlock","customerOwnedIpv4Pool","defaultForAz","enableDns64","enableResourceNameDnsARecordOnLaunch","enableResourceNameDnsAaaaRecordOnLaunch","filters","id","ipv6CidrBlock","ipv6CidrBlockAssociationId","ipv6Native","mapCustomerOwnedIpOnLaunch","mapPublicIpOnLaunch","outpostArn","ownerId","privateDnsHostnameTypeOnLaunch","state","tags","vpcId"})
+    @OutputCustomType.Constructor
     private GetSubnetResult(
-        String arn,
-        Boolean assignIpv6AddressOnCreation,
-        String availabilityZone,
-        String availabilityZoneId,
-        Integer availableIpAddressCount,
-        String cidrBlock,
-        String customerOwnedIpv4Pool,
-        Boolean defaultForAz,
-        Boolean enableDns64,
-        Boolean enableResourceNameDnsARecordOnLaunch,
-        Boolean enableResourceNameDnsAaaaRecordOnLaunch,
-        @Nullable List<GetSubnetFilter> filters,
-        String id,
-        String ipv6CidrBlock,
-        String ipv6CidrBlockAssociationId,
-        Boolean ipv6Native,
-        Boolean mapCustomerOwnedIpOnLaunch,
-        Boolean mapPublicIpOnLaunch,
-        String outpostArn,
-        String ownerId,
-        String privateDnsHostnameTypeOnLaunch,
-        String state,
-        Map<String,String> tags,
-        String vpcId) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("assignIpv6AddressOnCreation") Boolean assignIpv6AddressOnCreation,
+        @OutputCustomType.Parameter("availabilityZone") String availabilityZone,
+        @OutputCustomType.Parameter("availabilityZoneId") String availabilityZoneId,
+        @OutputCustomType.Parameter("availableIpAddressCount") Integer availableIpAddressCount,
+        @OutputCustomType.Parameter("cidrBlock") String cidrBlock,
+        @OutputCustomType.Parameter("customerOwnedIpv4Pool") String customerOwnedIpv4Pool,
+        @OutputCustomType.Parameter("defaultForAz") Boolean defaultForAz,
+        @OutputCustomType.Parameter("enableDns64") Boolean enableDns64,
+        @OutputCustomType.Parameter("enableResourceNameDnsARecordOnLaunch") Boolean enableResourceNameDnsARecordOnLaunch,
+        @OutputCustomType.Parameter("enableResourceNameDnsAaaaRecordOnLaunch") Boolean enableResourceNameDnsAaaaRecordOnLaunch,
+        @OutputCustomType.Parameter("filters") @Nullable List<GetSubnetFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ipv6CidrBlock") String ipv6CidrBlock,
+        @OutputCustomType.Parameter("ipv6CidrBlockAssociationId") String ipv6CidrBlockAssociationId,
+        @OutputCustomType.Parameter("ipv6Native") Boolean ipv6Native,
+        @OutputCustomType.Parameter("mapCustomerOwnedIpOnLaunch") Boolean mapCustomerOwnedIpOnLaunch,
+        @OutputCustomType.Parameter("mapPublicIpOnLaunch") Boolean mapPublicIpOnLaunch,
+        @OutputCustomType.Parameter("outpostArn") String outpostArn,
+        @OutputCustomType.Parameter("ownerId") String ownerId,
+        @OutputCustomType.Parameter("privateDnsHostnameTypeOnLaunch") String privateDnsHostnameTypeOnLaunch,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("vpcId") String vpcId) {
         this.arn = arn;
         this.assignIpv6AddressOnCreation = assignIpv6AddressOnCreation;
         this.availabilityZone = availabilityZone;

@@ -23,10 +23,10 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesCon
      */
     private final @Nullable CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookies cookies;
 
-    @OutputCustomType.Constructor({"cookieBehavior","cookies"})
+    @OutputCustomType.Constructor
     private CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfig(
-        String cookieBehavior,
-        @Nullable CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookies cookies) {
+        @OutputCustomType.Parameter("cookieBehavior") String cookieBehavior,
+        @OutputCustomType.Parameter("cookies") @Nullable CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookies cookies) {
         this.cookieBehavior = cookieBehavior;
         this.cookies = cookies;
     }

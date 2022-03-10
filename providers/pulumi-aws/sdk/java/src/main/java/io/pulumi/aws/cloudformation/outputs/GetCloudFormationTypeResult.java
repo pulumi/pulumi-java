@@ -80,25 +80,25 @@ public final class GetCloudFormationTypeResult {
      */
     private final String visibility;
 
-    @OutputCustomType.Constructor({"arn","defaultVersionId","deprecatedStatus","description","documentationUrl","executionRoleArn","id","isDefaultVersion","loggingConfigs","provisioningType","schema","sourceUrl","type","typeArn","typeName","versionId","visibility"})
+    @OutputCustomType.Constructor
     private GetCloudFormationTypeResult(
-        String arn,
-        String defaultVersionId,
-        String deprecatedStatus,
-        String description,
-        String documentationUrl,
-        String executionRoleArn,
-        String id,
-        Boolean isDefaultVersion,
-        List<GetCloudFormationTypeLoggingConfig> loggingConfigs,
-        String provisioningType,
-        String schema,
-        String sourceUrl,
-        String type,
-        String typeArn,
-        String typeName,
-        @Nullable String versionId,
-        String visibility) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("defaultVersionId") String defaultVersionId,
+        @OutputCustomType.Parameter("deprecatedStatus") String deprecatedStatus,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("documentationUrl") String documentationUrl,
+        @OutputCustomType.Parameter("executionRoleArn") String executionRoleArn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isDefaultVersion") Boolean isDefaultVersion,
+        @OutputCustomType.Parameter("loggingConfigs") List<GetCloudFormationTypeLoggingConfig> loggingConfigs,
+        @OutputCustomType.Parameter("provisioningType") String provisioningType,
+        @OutputCustomType.Parameter("schema") String schema,
+        @OutputCustomType.Parameter("sourceUrl") String sourceUrl,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("typeArn") String typeArn,
+        @OutputCustomType.Parameter("typeName") String typeName,
+        @OutputCustomType.Parameter("versionId") @Nullable String versionId,
+        @OutputCustomType.Parameter("visibility") String visibility) {
         this.arn = arn;
         this.defaultVersionId = defaultVersionId;
         this.deprecatedStatus = deprecatedStatus;

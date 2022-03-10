@@ -44,14 +44,14 @@ public final class ClassifierCsvClassifier {
      */
     private final @Nullable String quoteSymbol;
 
-    @OutputCustomType.Constructor({"allowSingleColumn","containsHeader","delimiter","disableValueTrimming","headers","quoteSymbol"})
+    @OutputCustomType.Constructor
     private ClassifierCsvClassifier(
-        @Nullable Boolean allowSingleColumn,
-        @Nullable String containsHeader,
-        @Nullable String delimiter,
-        @Nullable Boolean disableValueTrimming,
-        @Nullable List<String> headers,
-        @Nullable String quoteSymbol) {
+        @OutputCustomType.Parameter("allowSingleColumn") @Nullable Boolean allowSingleColumn,
+        @OutputCustomType.Parameter("containsHeader") @Nullable String containsHeader,
+        @OutputCustomType.Parameter("delimiter") @Nullable String delimiter,
+        @OutputCustomType.Parameter("disableValueTrimming") @Nullable Boolean disableValueTrimming,
+        @OutputCustomType.Parameter("headers") @Nullable List<String> headers,
+        @OutputCustomType.Parameter("quoteSymbol") @Nullable String quoteSymbol) {
         this.allowSingleColumn = allowSingleColumn;
         this.containsHeader = containsHeader;
         this.delimiter = delimiter;

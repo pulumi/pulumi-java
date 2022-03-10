@@ -27,11 +27,11 @@ public final class ProjectLogsConfigCloudwatchLogs {
      */
     private final @Nullable String streamName;
 
-    @OutputCustomType.Constructor({"groupName","status","streamName"})
+    @OutputCustomType.Constructor
     private ProjectLogsConfigCloudwatchLogs(
-        @Nullable String groupName,
-        @Nullable String status,
-        @Nullable String streamName) {
+        @OutputCustomType.Parameter("groupName") @Nullable String groupName,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("streamName") @Nullable String streamName) {
         this.groupName = groupName;
         this.status = status;
         this.streamName = streamName;

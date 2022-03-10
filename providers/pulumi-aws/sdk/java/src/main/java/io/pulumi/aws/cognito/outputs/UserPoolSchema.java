@@ -50,15 +50,15 @@ public final class UserPoolSchema {
      */
     private final @Nullable UserPoolSchemaStringAttributeConstraints stringAttributeConstraints;
 
-    @OutputCustomType.Constructor({"attributeDataType","developerOnlyAttribute","mutable","name","numberAttributeConstraints","required","stringAttributeConstraints"})
+    @OutputCustomType.Constructor
     private UserPoolSchema(
-        String attributeDataType,
-        @Nullable Boolean developerOnlyAttribute,
-        @Nullable Boolean mutable,
-        String name,
-        @Nullable UserPoolSchemaNumberAttributeConstraints numberAttributeConstraints,
-        @Nullable Boolean required,
-        @Nullable UserPoolSchemaStringAttributeConstraints stringAttributeConstraints) {
+        @OutputCustomType.Parameter("attributeDataType") String attributeDataType,
+        @OutputCustomType.Parameter("developerOnlyAttribute") @Nullable Boolean developerOnlyAttribute,
+        @OutputCustomType.Parameter("mutable") @Nullable Boolean mutable,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("numberAttributeConstraints") @Nullable UserPoolSchemaNumberAttributeConstraints numberAttributeConstraints,
+        @OutputCustomType.Parameter("required") @Nullable Boolean required,
+        @OutputCustomType.Parameter("stringAttributeConstraints") @Nullable UserPoolSchemaStringAttributeConstraints stringAttributeConstraints) {
         this.attributeDataType = attributeDataType;
         this.developerOnlyAttribute = developerOnlyAttribute;
         this.mutable = mutable;

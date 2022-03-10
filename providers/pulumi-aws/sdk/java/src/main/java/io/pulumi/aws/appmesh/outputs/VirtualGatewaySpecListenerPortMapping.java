@@ -21,10 +21,10 @@ public final class VirtualGatewaySpecListenerPortMapping {
      */
     private final String protocol;
 
-    @OutputCustomType.Constructor({"port","protocol"})
+    @OutputCustomType.Constructor
     private VirtualGatewaySpecListenerPortMapping(
-        Integer port,
-        String protocol) {
+        @OutputCustomType.Parameter("port") Integer port,
+        @OutputCustomType.Parameter("protocol") String protocol) {
         this.port = port;
         this.protocol = protocol;
     }

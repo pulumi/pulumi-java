@@ -34,11 +34,11 @@ public final class IntentSlotValueElicitationPrompt {
      */
     private final @Nullable String responseCard;
 
-    @OutputCustomType.Constructor({"maxAttempts","messages","responseCard"})
+    @OutputCustomType.Constructor
     private IntentSlotValueElicitationPrompt(
-        Integer maxAttempts,
-        List<IntentSlotValueElicitationPromptMessage> messages,
-        @Nullable String responseCard) {
+        @OutputCustomType.Parameter("maxAttempts") Integer maxAttempts,
+        @OutputCustomType.Parameter("messages") List<IntentSlotValueElicitationPromptMessage> messages,
+        @OutputCustomType.Parameter("responseCard") @Nullable String responseCard) {
         this.maxAttempts = maxAttempts;
         this.messages = messages;
         this.responseCard = responseCard;

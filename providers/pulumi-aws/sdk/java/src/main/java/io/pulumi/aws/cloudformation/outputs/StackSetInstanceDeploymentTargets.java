@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class StackSetInstanceDeploymentTargets {
     private final @Nullable List<String> organizationalUnitIds;
 
-    @OutputCustomType.Constructor({"organizationalUnitIds"})
-    private StackSetInstanceDeploymentTargets(@Nullable List<String> organizationalUnitIds) {
+    @OutputCustomType.Constructor
+    private StackSetInstanceDeploymentTargets(@OutputCustomType.Parameter("organizationalUnitIds") @Nullable List<String> organizationalUnitIds) {
         this.organizationalUnitIds = organizationalUnitIds;
     }
 

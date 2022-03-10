@@ -22,10 +22,10 @@ public final class GetReleaseLabelsFilters {
      */
     private final @Nullable String prefix;
 
-    @OutputCustomType.Constructor({"application","prefix"})
+    @OutputCustomType.Constructor
     private GetReleaseLabelsFilters(
-        @Nullable String application,
-        @Nullable String prefix) {
+        @OutputCustomType.Parameter("application") @Nullable String application,
+        @OutputCustomType.Parameter("prefix") @Nullable String prefix) {
         this.application = application;
         this.prefix = prefix;
     }

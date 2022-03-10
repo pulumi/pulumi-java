@@ -21,10 +21,10 @@ public final class BucketIntelligentTieringConfigurationTiering {
      */
     private final Integer days;
 
-    @OutputCustomType.Constructor({"accessTier","days"})
+    @OutputCustomType.Constructor
     private BucketIntelligentTieringConfigurationTiering(
-        String accessTier,
-        Integer days) {
+        @OutputCustomType.Parameter("accessTier") String accessTier,
+        @OutputCustomType.Parameter("days") Integer days) {
         this.accessTier = accessTier;
         this.days = days;
     }

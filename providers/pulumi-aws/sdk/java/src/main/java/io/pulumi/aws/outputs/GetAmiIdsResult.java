@@ -26,15 +26,15 @@ public final class GetAmiIdsResult {
     private final List<String> owners;
     private final @Nullable Boolean sortAscending;
 
-    @OutputCustomType.Constructor({"executableUsers","filters","id","ids","nameRegex","owners","sortAscending"})
+    @OutputCustomType.Constructor
     private GetAmiIdsResult(
-        @Nullable List<String> executableUsers,
-        @Nullable List<GetAmiIdsFilter> filters,
-        String id,
-        List<String> ids,
-        @Nullable String nameRegex,
-        List<String> owners,
-        @Nullable Boolean sortAscending) {
+        @OutputCustomType.Parameter("executableUsers") @Nullable List<String> executableUsers,
+        @OutputCustomType.Parameter("filters") @Nullable List<GetAmiIdsFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ids") List<String> ids,
+        @OutputCustomType.Parameter("nameRegex") @Nullable String nameRegex,
+        @OutputCustomType.Parameter("owners") List<String> owners,
+        @OutputCustomType.Parameter("sortAscending") @Nullable Boolean sortAscending) {
         this.executableUsers = executableUsers;
         this.filters = filters;
         this.id = id;

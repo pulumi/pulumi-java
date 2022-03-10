@@ -23,10 +23,10 @@ public final class VirtualServiceSpecProvider {
      */
     private final @Nullable VirtualServiceSpecProviderVirtualRouter virtualRouter;
 
-    @OutputCustomType.Constructor({"virtualNode","virtualRouter"})
+    @OutputCustomType.Constructor
     private VirtualServiceSpecProvider(
-        @Nullable VirtualServiceSpecProviderVirtualNode virtualNode,
-        @Nullable VirtualServiceSpecProviderVirtualRouter virtualRouter) {
+        @OutputCustomType.Parameter("virtualNode") @Nullable VirtualServiceSpecProviderVirtualNode virtualNode,
+        @OutputCustomType.Parameter("virtualRouter") @Nullable VirtualServiceSpecProviderVirtualRouter virtualRouter) {
         this.virtualNode = virtualNode;
         this.virtualRouter = virtualRouter;
     }

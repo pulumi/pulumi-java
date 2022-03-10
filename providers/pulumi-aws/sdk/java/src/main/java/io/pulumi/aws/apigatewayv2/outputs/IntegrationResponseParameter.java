@@ -22,10 +22,10 @@ public final class IntegrationResponseParameter {
      */
     private final String statusCode;
 
-    @OutputCustomType.Constructor({"mappings","statusCode"})
+    @OutputCustomType.Constructor
     private IntegrationResponseParameter(
-        Map<String,String> mappings,
-        String statusCode) {
+        @OutputCustomType.Parameter("mappings") Map<String,String> mappings,
+        @OutputCustomType.Parameter("statusCode") String statusCode) {
         this.mappings = mappings;
         this.statusCode = statusCode;
     }

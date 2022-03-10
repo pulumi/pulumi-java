@@ -33,12 +33,12 @@ public final class PipelineArtifactStore {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"encryptionKey","location","region","type"})
+    @OutputCustomType.Constructor
     private PipelineArtifactStore(
-        @Nullable PipelineArtifactStoreEncryptionKey encryptionKey,
-        String location,
-        @Nullable String region,
-        String type) {
+        @OutputCustomType.Parameter("encryptionKey") @Nullable PipelineArtifactStoreEncryptionKey encryptionKey,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("region") @Nullable String region,
+        @OutputCustomType.Parameter("type") String type) {
         this.encryptionKey = encryptionKey;
         this.location = location;
         this.region = region;

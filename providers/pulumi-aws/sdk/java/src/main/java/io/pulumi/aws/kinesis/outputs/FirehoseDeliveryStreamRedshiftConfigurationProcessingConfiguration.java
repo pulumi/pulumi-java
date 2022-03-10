@@ -24,10 +24,10 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigur
      */
     private final @Nullable List<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessor> processors;
 
-    @OutputCustomType.Constructor({"enabled","processors"})
+    @OutputCustomType.Constructor
     private FirehoseDeliveryStreamRedshiftConfigurationProcessingConfiguration(
-        @Nullable Boolean enabled,
-        @Nullable List<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessor> processors) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("processors") @Nullable List<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessor> processors) {
         this.enabled = enabled;
         this.processors = processors;
     }

@@ -37,13 +37,13 @@ public final class InstanceS3Import {
      */
     private final String sourceEngineVersion;
 
-    @OutputCustomType.Constructor({"bucketName","bucketPrefix","ingestionRole","sourceEngine","sourceEngineVersion"})
+    @OutputCustomType.Constructor
     private InstanceS3Import(
-        String bucketName,
-        @Nullable String bucketPrefix,
-        String ingestionRole,
-        String sourceEngine,
-        String sourceEngineVersion) {
+        @OutputCustomType.Parameter("bucketName") String bucketName,
+        @OutputCustomType.Parameter("bucketPrefix") @Nullable String bucketPrefix,
+        @OutputCustomType.Parameter("ingestionRole") String ingestionRole,
+        @OutputCustomType.Parameter("sourceEngine") String sourceEngine,
+        @OutputCustomType.Parameter("sourceEngineVersion") String sourceEngineVersion) {
         this.bucketName = bucketName;
         this.bucketPrefix = bucketPrefix;
         this.ingestionRole = ingestionRole;

@@ -16,13 +16,13 @@ public final class GetLoadBalancerHealthCheck {
     private final Integer timeout;
     private final Integer unhealthyThreshold;
 
-    @OutputCustomType.Constructor({"healthyThreshold","interval","target","timeout","unhealthyThreshold"})
+    @OutputCustomType.Constructor
     private GetLoadBalancerHealthCheck(
-        Integer healthyThreshold,
-        Integer interval,
-        String target,
-        Integer timeout,
-        Integer unhealthyThreshold) {
+        @OutputCustomType.Parameter("healthyThreshold") Integer healthyThreshold,
+        @OutputCustomType.Parameter("interval") Integer interval,
+        @OutputCustomType.Parameter("target") String target,
+        @OutputCustomType.Parameter("timeout") Integer timeout,
+        @OutputCustomType.Parameter("unhealthyThreshold") Integer unhealthyThreshold) {
         this.healthyThreshold = healthyThreshold;
         this.interval = interval;
         this.target = target;

@@ -34,16 +34,16 @@ public final class GetOutpostResult {
      */
     private final String siteId;
 
-    @OutputCustomType.Constructor({"arn","availabilityZone","availabilityZoneId","description","id","name","ownerId","siteId"})
+    @OutputCustomType.Constructor
     private GetOutpostResult(
-        String arn,
-        String availabilityZone,
-        String availabilityZoneId,
-        String description,
-        String id,
-        String name,
-        String ownerId,
-        String siteId) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("availabilityZone") String availabilityZone,
+        @OutputCustomType.Parameter("availabilityZoneId") String availabilityZoneId,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("ownerId") String ownerId,
+        @OutputCustomType.Parameter("siteId") String siteId) {
         this.arn = arn;
         this.availabilityZone = availabilityZone;
         this.availabilityZoneId = availabilityZoneId;

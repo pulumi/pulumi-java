@@ -43,14 +43,14 @@ public final class SpotFleetRequestLaunchTemplateConfigOverride {
      */
     private final @Nullable Double weightedCapacity;
 
-    @OutputCustomType.Constructor({"availabilityZone","instanceType","priority","spotPrice","subnetId","weightedCapacity"})
+    @OutputCustomType.Constructor
     private SpotFleetRequestLaunchTemplateConfigOverride(
-        @Nullable String availabilityZone,
-        @Nullable String instanceType,
-        @Nullable Double priority,
-        @Nullable String spotPrice,
-        @Nullable String subnetId,
-        @Nullable Double weightedCapacity) {
+        @OutputCustomType.Parameter("availabilityZone") @Nullable String availabilityZone,
+        @OutputCustomType.Parameter("instanceType") @Nullable String instanceType,
+        @OutputCustomType.Parameter("priority") @Nullable Double priority,
+        @OutputCustomType.Parameter("spotPrice") @Nullable String spotPrice,
+        @OutputCustomType.Parameter("subnetId") @Nullable String subnetId,
+        @OutputCustomType.Parameter("weightedCapacity") @Nullable Double weightedCapacity) {
         this.availabilityZone = availabilityZone;
         this.instanceType = instanceType;
         this.priority = priority;

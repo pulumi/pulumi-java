@@ -23,10 +23,10 @@ public final class WebAclLoggingConfiguration {
      */
     private final @Nullable WebAclLoggingConfigurationRedactedFields redactedFields;
 
-    @OutputCustomType.Constructor({"logDestination","redactedFields"})
+    @OutputCustomType.Constructor
     private WebAclLoggingConfiguration(
-        String logDestination,
-        @Nullable WebAclLoggingConfigurationRedactedFields redactedFields) {
+        @OutputCustomType.Parameter("logDestination") String logDestination,
+        @OutputCustomType.Parameter("redactedFields") @Nullable WebAclLoggingConfigurationRedactedFields redactedFields) {
         this.logDestination = logDestination;
         this.redactedFields = redactedFields;
     }

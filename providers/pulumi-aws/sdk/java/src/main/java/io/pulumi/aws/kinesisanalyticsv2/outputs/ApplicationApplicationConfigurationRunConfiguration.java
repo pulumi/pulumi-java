@@ -23,10 +23,10 @@ public final class ApplicationApplicationConfigurationRunConfiguration {
      */
     private final @Nullable ApplicationApplicationConfigurationRunConfigurationFlinkRunConfiguration flinkRunConfiguration;
 
-    @OutputCustomType.Constructor({"applicationRestoreConfiguration","flinkRunConfiguration"})
+    @OutputCustomType.Constructor
     private ApplicationApplicationConfigurationRunConfiguration(
-        @Nullable ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfiguration applicationRestoreConfiguration,
-        @Nullable ApplicationApplicationConfigurationRunConfigurationFlinkRunConfiguration flinkRunConfiguration) {
+        @OutputCustomType.Parameter("applicationRestoreConfiguration") @Nullable ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfiguration applicationRestoreConfiguration,
+        @OutputCustomType.Parameter("flinkRunConfiguration") @Nullable ApplicationApplicationConfigurationRunConfigurationFlinkRunConfiguration flinkRunConfiguration) {
         this.applicationRestoreConfiguration = applicationRestoreConfiguration;
         this.flinkRunConfiguration = flinkRunConfiguration;
     }

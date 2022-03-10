@@ -19,12 +19,12 @@ public final class SelectionCondition {
     private final @Nullable List<SelectionConditionStringNotEqual> stringNotEquals;
     private final @Nullable List<SelectionConditionStringNotLike> stringNotLikes;
 
-    @OutputCustomType.Constructor({"stringEquals","stringLikes","stringNotEquals","stringNotLikes"})
+    @OutputCustomType.Constructor
     private SelectionCondition(
-        @Nullable List<SelectionConditionStringEqual> stringEquals,
-        @Nullable List<SelectionConditionStringLike> stringLikes,
-        @Nullable List<SelectionConditionStringNotEqual> stringNotEquals,
-        @Nullable List<SelectionConditionStringNotLike> stringNotLikes) {
+        @OutputCustomType.Parameter("stringEquals") @Nullable List<SelectionConditionStringEqual> stringEquals,
+        @OutputCustomType.Parameter("stringLikes") @Nullable List<SelectionConditionStringLike> stringLikes,
+        @OutputCustomType.Parameter("stringNotEquals") @Nullable List<SelectionConditionStringNotEqual> stringNotEquals,
+        @OutputCustomType.Parameter("stringNotLikes") @Nullable List<SelectionConditionStringNotLike> stringNotLikes) {
         this.stringEquals = stringEquals;
         this.stringLikes = stringLikes;
         this.stringNotEquals = stringNotEquals;

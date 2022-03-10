@@ -38,13 +38,13 @@ public final class ServiceSourceConfigurationCodeRepositoryCodeConfigurationCode
      */
     private final @Nullable String startCommand;
 
-    @OutputCustomType.Constructor({"buildCommand","port","runtime","runtimeEnvironmentVariables","startCommand"})
+    @OutputCustomType.Constructor
     private ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValues(
-        @Nullable String buildCommand,
-        @Nullable String port,
-        String runtime,
-        @Nullable Map<String,String> runtimeEnvironmentVariables,
-        @Nullable String startCommand) {
+        @OutputCustomType.Parameter("buildCommand") @Nullable String buildCommand,
+        @OutputCustomType.Parameter("port") @Nullable String port,
+        @OutputCustomType.Parameter("runtime") String runtime,
+        @OutputCustomType.Parameter("runtimeEnvironmentVariables") @Nullable Map<String,String> runtimeEnvironmentVariables,
+        @OutputCustomType.Parameter("startCommand") @Nullable String startCommand) {
         this.buildCommand = buildCommand;
         this.port = port;
         this.runtime = runtime;

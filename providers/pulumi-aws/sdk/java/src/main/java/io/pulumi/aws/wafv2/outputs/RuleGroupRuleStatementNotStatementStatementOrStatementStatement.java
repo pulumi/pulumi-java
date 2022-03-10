@@ -59,16 +59,16 @@ public final class RuleGroupRuleStatementNotStatementStatementOrStatementStateme
      */
     private final @Nullable RuleGroupRuleStatementNotStatementStatementOrStatementStatementXssMatchStatement xssMatchStatement;
 
-    @OutputCustomType.Constructor({"byteMatchStatement","geoMatchStatement","ipSetReferenceStatement","labelMatchStatement","regexPatternSetReferenceStatement","sizeConstraintStatement","sqliMatchStatement","xssMatchStatement"})
+    @OutputCustomType.Constructor
     private RuleGroupRuleStatementNotStatementStatementOrStatementStatement(
-        @Nullable RuleGroupRuleStatementNotStatementStatementOrStatementStatementByteMatchStatement byteMatchStatement,
-        @Nullable RuleGroupRuleStatementNotStatementStatementOrStatementStatementGeoMatchStatement geoMatchStatement,
-        @Nullable RuleGroupRuleStatementNotStatementStatementOrStatementStatementIpSetReferenceStatement ipSetReferenceStatement,
-        @Nullable RuleGroupRuleStatementNotStatementStatementOrStatementStatementLabelMatchStatement labelMatchStatement,
-        @Nullable RuleGroupRuleStatementNotStatementStatementOrStatementStatementRegexPatternSetReferenceStatement regexPatternSetReferenceStatement,
-        @Nullable RuleGroupRuleStatementNotStatementStatementOrStatementStatementSizeConstraintStatement sizeConstraintStatement,
-        @Nullable RuleGroupRuleStatementNotStatementStatementOrStatementStatementSqliMatchStatement sqliMatchStatement,
-        @Nullable RuleGroupRuleStatementNotStatementStatementOrStatementStatementXssMatchStatement xssMatchStatement) {
+        @OutputCustomType.Parameter("byteMatchStatement") @Nullable RuleGroupRuleStatementNotStatementStatementOrStatementStatementByteMatchStatement byteMatchStatement,
+        @OutputCustomType.Parameter("geoMatchStatement") @Nullable RuleGroupRuleStatementNotStatementStatementOrStatementStatementGeoMatchStatement geoMatchStatement,
+        @OutputCustomType.Parameter("ipSetReferenceStatement") @Nullable RuleGroupRuleStatementNotStatementStatementOrStatementStatementIpSetReferenceStatement ipSetReferenceStatement,
+        @OutputCustomType.Parameter("labelMatchStatement") @Nullable RuleGroupRuleStatementNotStatementStatementOrStatementStatementLabelMatchStatement labelMatchStatement,
+        @OutputCustomType.Parameter("regexPatternSetReferenceStatement") @Nullable RuleGroupRuleStatementNotStatementStatementOrStatementStatementRegexPatternSetReferenceStatement regexPatternSetReferenceStatement,
+        @OutputCustomType.Parameter("sizeConstraintStatement") @Nullable RuleGroupRuleStatementNotStatementStatementOrStatementStatementSizeConstraintStatement sizeConstraintStatement,
+        @OutputCustomType.Parameter("sqliMatchStatement") @Nullable RuleGroupRuleStatementNotStatementStatementOrStatementStatementSqliMatchStatement sqliMatchStatement,
+        @OutputCustomType.Parameter("xssMatchStatement") @Nullable RuleGroupRuleStatementNotStatementStatementOrStatementStatementXssMatchStatement xssMatchStatement) {
         this.byteMatchStatement = byteMatchStatement;
         this.geoMatchStatement = geoMatchStatement;
         this.ipSetReferenceStatement = ipSetReferenceStatement;

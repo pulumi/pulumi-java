@@ -15,8 +15,8 @@ public final class FunctionDeadLetterConfig {
      */
     private final String targetArn;
 
-    @OutputCustomType.Constructor({"targetArn"})
-    private FunctionDeadLetterConfig(String targetArn) {
+    @OutputCustomType.Constructor
+    private FunctionDeadLetterConfig(@OutputCustomType.Parameter("targetArn") String targetArn) {
         this.targetArn = targetArn;
     }
 

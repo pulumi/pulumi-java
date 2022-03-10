@@ -37,14 +37,14 @@ public final class GetWorkerConfigurationResult {
      */
     private final String propertiesFileContent;
 
-    @OutputCustomType.Constructor({"arn","description","id","latestRevision","name","propertiesFileContent"})
+    @OutputCustomType.Constructor
     private GetWorkerConfigurationResult(
-        String arn,
-        String description,
-        String id,
-        Integer latestRevision,
-        String name,
-        String propertiesFileContent) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("latestRevision") Integer latestRevision,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("propertiesFileContent") String propertiesFileContent) {
         this.arn = arn;
         this.description = description;
         this.id = id;

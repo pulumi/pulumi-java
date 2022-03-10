@@ -27,12 +27,12 @@ public final class GetLogGroupsResult {
      */
     private final List<String> logGroupNames;
 
-    @OutputCustomType.Constructor({"arns","id","logGroupNamePrefix","logGroupNames"})
+    @OutputCustomType.Constructor
     private GetLogGroupsResult(
-        List<String> arns,
-        String id,
-        String logGroupNamePrefix,
-        List<String> logGroupNames) {
+        @OutputCustomType.Parameter("arns") List<String> arns,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("logGroupNamePrefix") String logGroupNamePrefix,
+        @OutputCustomType.Parameter("logGroupNames") List<String> logGroupNames) {
         this.arns = arns;
         this.id = id;
         this.logGroupNamePrefix = logGroupNamePrefix;

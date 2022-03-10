@@ -15,11 +15,11 @@ public final class ClassificationJobUserPausedDetail {
     private final @Nullable String jobImminentExpirationHealthEventArn;
     private final @Nullable String jobPausedAt;
 
-    @OutputCustomType.Constructor({"jobExpiresAt","jobImminentExpirationHealthEventArn","jobPausedAt"})
+    @OutputCustomType.Constructor
     private ClassificationJobUserPausedDetail(
-        @Nullable String jobExpiresAt,
-        @Nullable String jobImminentExpirationHealthEventArn,
-        @Nullable String jobPausedAt) {
+        @OutputCustomType.Parameter("jobExpiresAt") @Nullable String jobExpiresAt,
+        @OutputCustomType.Parameter("jobImminentExpirationHealthEventArn") @Nullable String jobImminentExpirationHealthEventArn,
+        @OutputCustomType.Parameter("jobPausedAt") @Nullable String jobPausedAt) {
         this.jobExpiresAt = jobExpiresAt;
         this.jobImminentExpirationHealthEventArn = jobImminentExpirationHealthEventArn;
         this.jobPausedAt = jobPausedAt;

@@ -32,12 +32,12 @@ public final class OrganizationalUnitAccount {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"arn","email","id","name"})
+    @OutputCustomType.Constructor
     private OrganizationalUnitAccount(
-        @Nullable String arn,
-        @Nullable String email,
-        @Nullable String id,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("email") @Nullable String email,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.arn = arn;
         this.email = email;
         this.id = id;

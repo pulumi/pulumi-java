@@ -32,13 +32,13 @@ public final class GetQueueResult {
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"arn","id","name","tags","url"})
+    @OutputCustomType.Constructor
     private GetQueueResult(
-        String arn,
-        String id,
-        String name,
-        Map<String,String> tags,
-        String url) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("url") String url) {
         this.arn = arn;
         this.id = id;
         this.name = name;

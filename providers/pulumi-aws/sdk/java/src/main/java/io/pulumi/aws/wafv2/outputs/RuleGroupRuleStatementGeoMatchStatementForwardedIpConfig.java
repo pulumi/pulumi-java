@@ -20,10 +20,10 @@ public final class RuleGroupRuleStatementGeoMatchStatementForwardedIpConfig {
      */
     private final String headerName;
 
-    @OutputCustomType.Constructor({"fallbackBehavior","headerName"})
+    @OutputCustomType.Constructor
     private RuleGroupRuleStatementGeoMatchStatementForwardedIpConfig(
-        String fallbackBehavior,
-        String headerName) {
+        @OutputCustomType.Parameter("fallbackBehavior") String fallbackBehavior,
+        @OutputCustomType.Parameter("headerName") String headerName) {
         this.fallbackBehavior = fallbackBehavior;
         this.headerName = headerName;
     }

@@ -23,10 +23,10 @@ public final class BucketReplicationConfigurationRuleDestinationMetrics {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor({"minutes","status"})
+    @OutputCustomType.Constructor
     private BucketReplicationConfigurationRuleDestinationMetrics(
-        @Nullable Integer minutes,
-        @Nullable String status) {
+        @OutputCustomType.Parameter("minutes") @Nullable Integer minutes,
+        @OutputCustomType.Parameter("status") @Nullable String status) {
         this.minutes = minutes;
         this.status = status;
     }

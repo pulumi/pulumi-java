@@ -17,8 +17,8 @@ public final class WebAclRuleActionAllow {
      */
     private final @Nullable WebAclRuleActionAllowCustomRequestHandling customRequestHandling;
 
-    @OutputCustomType.Constructor({"customRequestHandling"})
-    private WebAclRuleActionAllow(@Nullable WebAclRuleActionAllowCustomRequestHandling customRequestHandling) {
+    @OutputCustomType.Constructor
+    private WebAclRuleActionAllow(@OutputCustomType.Parameter("customRequestHandling") @Nullable WebAclRuleActionAllowCustomRequestHandling customRequestHandling) {
         this.customRequestHandling = customRequestHandling;
     }
 

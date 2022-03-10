@@ -35,12 +35,12 @@ public final class ProjectBuildBatchConfig {
      */
     private final @Nullable Integer timeoutInMins;
 
-    @OutputCustomType.Constructor({"combineArtifacts","restrictions","serviceRole","timeoutInMins"})
+    @OutputCustomType.Constructor
     private ProjectBuildBatchConfig(
-        @Nullable Boolean combineArtifacts,
-        @Nullable ProjectBuildBatchConfigRestrictions restrictions,
-        String serviceRole,
-        @Nullable Integer timeoutInMins) {
+        @OutputCustomType.Parameter("combineArtifacts") @Nullable Boolean combineArtifacts,
+        @OutputCustomType.Parameter("restrictions") @Nullable ProjectBuildBatchConfigRestrictions restrictions,
+        @OutputCustomType.Parameter("serviceRole") String serviceRole,
+        @OutputCustomType.Parameter("timeoutInMins") @Nullable Integer timeoutInMins) {
         this.combineArtifacts = combineArtifacts;
         this.restrictions = restrictions;
         this.serviceRole = serviceRole;

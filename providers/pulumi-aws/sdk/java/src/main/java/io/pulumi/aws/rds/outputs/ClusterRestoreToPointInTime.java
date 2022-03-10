@@ -34,12 +34,12 @@ public final class ClusterRestoreToPointInTime {
      */
     private final @Nullable Boolean useLatestRestorableTime;
 
-    @OutputCustomType.Constructor({"restoreToTime","restoreType","sourceClusterIdentifier","useLatestRestorableTime"})
+    @OutputCustomType.Constructor
     private ClusterRestoreToPointInTime(
-        @Nullable String restoreToTime,
-        @Nullable String restoreType,
-        String sourceClusterIdentifier,
-        @Nullable Boolean useLatestRestorableTime) {
+        @OutputCustomType.Parameter("restoreToTime") @Nullable String restoreToTime,
+        @OutputCustomType.Parameter("restoreType") @Nullable String restoreType,
+        @OutputCustomType.Parameter("sourceClusterIdentifier") String sourceClusterIdentifier,
+        @OutputCustomType.Parameter("useLatestRestorableTime") @Nullable Boolean useLatestRestorableTime) {
         this.restoreToTime = restoreToTime;
         this.restoreType = restoreType;
         this.sourceClusterIdentifier = sourceClusterIdentifier;

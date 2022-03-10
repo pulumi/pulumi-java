@@ -23,10 +23,10 @@ public final class PlanRuleCopyAction {
      */
     private final @Nullable PlanRuleCopyActionLifecycle lifecycle;
 
-    @OutputCustomType.Constructor({"destinationVaultArn","lifecycle"})
+    @OutputCustomType.Constructor
     private PlanRuleCopyAction(
-        String destinationVaultArn,
-        @Nullable PlanRuleCopyActionLifecycle lifecycle) {
+        @OutputCustomType.Parameter("destinationVaultArn") String destinationVaultArn,
+        @OutputCustomType.Parameter("lifecycle") @Nullable PlanRuleCopyActionLifecycle lifecycle) {
         this.destinationVaultArn = destinationVaultArn;
         this.lifecycle = lifecycle;
     }

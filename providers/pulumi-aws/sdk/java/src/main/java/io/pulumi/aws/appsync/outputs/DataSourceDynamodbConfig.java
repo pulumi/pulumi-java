@@ -31,13 +31,13 @@ public final class DataSourceDynamodbConfig {
     private final @Nullable Boolean useCallerCredentials;
     private final @Nullable Boolean versioned;
 
-    @OutputCustomType.Constructor({"deltaSyncConfig","region","tableName","useCallerCredentials","versioned"})
+    @OutputCustomType.Constructor
     private DataSourceDynamodbConfig(
-        @Nullable DataSourceDynamodbConfigDeltaSyncConfig deltaSyncConfig,
-        @Nullable String region,
-        String tableName,
-        @Nullable Boolean useCallerCredentials,
-        @Nullable Boolean versioned) {
+        @OutputCustomType.Parameter("deltaSyncConfig") @Nullable DataSourceDynamodbConfigDeltaSyncConfig deltaSyncConfig,
+        @OutputCustomType.Parameter("region") @Nullable String region,
+        @OutputCustomType.Parameter("tableName") String tableName,
+        @OutputCustomType.Parameter("useCallerCredentials") @Nullable Boolean useCallerCredentials,
+        @OutputCustomType.Parameter("versioned") @Nullable Boolean versioned) {
         this.deltaSyncConfig = deltaSyncConfig;
         this.region = region;
         this.tableName = tableName;

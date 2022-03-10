@@ -53,16 +53,16 @@ public final class FindingsFilterFindingCriteriaCriterion {
      */
     private final @Nullable List<String> neqs;
 
-    @OutputCustomType.Constructor({"eqExactMatches","eqs","field","gt","gte","lt","lte","neqs"})
+    @OutputCustomType.Constructor
     private FindingsFilterFindingCriteriaCriterion(
-        @Nullable List<String> eqExactMatches,
-        @Nullable List<String> eqs,
-        String field,
-        @Nullable String gt,
-        @Nullable String gte,
-        @Nullable String lt,
-        @Nullable String lte,
-        @Nullable List<String> neqs) {
+        @OutputCustomType.Parameter("eqExactMatches") @Nullable List<String> eqExactMatches,
+        @OutputCustomType.Parameter("eqs") @Nullable List<String> eqs,
+        @OutputCustomType.Parameter("field") String field,
+        @OutputCustomType.Parameter("gt") @Nullable String gt,
+        @OutputCustomType.Parameter("gte") @Nullable String gte,
+        @OutputCustomType.Parameter("lt") @Nullable String lt,
+        @OutputCustomType.Parameter("lte") @Nullable String lte,
+        @OutputCustomType.Parameter("neqs") @Nullable List<String> neqs) {
         this.eqExactMatches = eqExactMatches;
         this.eqs = eqs;
         this.field = field;
