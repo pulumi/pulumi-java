@@ -100,6 +100,25 @@ func TestCloudExamples(t *testing.T) {
 			})
 		integration.ProgramTest(t, &test)
 	})
+	t.Run("azure-java-appservice-sql", func(t *testing.T) {
+		// Skipping as the example uses 340+s; in addition it
+		// may require additional CI setup to access an Azure
+		// account.
+		t.Skip("Too slow")
+		test := getJvmBase(t, "azure-java-appservice-sql").
+			With(integration.ProgramTestOptions{
+				Config: map[string]string{
+					"azure-native:location": "westus",
+				},
+				Quick: true,
+				ExtraRuntimeValidation: func(t *testing.T, stackInfo integration.RuntimeValidationStackInfo) {
+					o := stackInfo.Outputs
+					endpoint := o["endpoint"].(string)
+					assert.True(t, strings.HasPrefix(endpoint, "https"))
+				},
+			})
+		integration.ProgramTest(t, &test)
+	})
 }
 
 func getJvmBase(t *testing.T, dir string) integration.ProgramTestOptions {
